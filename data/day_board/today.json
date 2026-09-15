@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T10:40:23.454385-04:00",
+  "generated_at": "2026-09-15T10:45:41.038517-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -11,82 +11,50 @@
   },
   "buy_1d": [
     {
-      "ticker": "AMGN",
-      "score": 0.09080014125288889
+      "ticker": "WEX",
+      "score": 0.5040713137553983
     },
     {
-      "ticker": "LLY",
-      "score": 0.35620503368166595
+      "ticker": "LFST",
+      "score": 0.386729538747364
     },
     {
-      "ticker": "S",
-      "score": 0.5383606939554906
-    },
-    {
-      "ticker": "FFIV",
-      "score": 0.19348888952122334
-    },
-    {
-      "ticker": "META",
-      "score": 0.3469506591337837
-    },
-    {
-      "ticker": "SNAP",
-      "score": 0.48958801256022805
-    },
-    {
-      "ticker": "ANGX",
-      "score": 0.5324899263792778
-    },
-    {
-      "ticker": "RPD",
-      "score": 0.5251915855613591
-    },
-    {
-      "ticker": "HITI",
-      "score": 0.2895286042792773
+      "ticker": "VRSK",
+      "score": 0.26021441998687833
     }
   ],
   "sell_1d": [
     {
-      "ticker": "METC",
-      "score": -0.6600195692423577
-    },
-    {
-      "ticker": "FLNC",
-      "score": -0.6059014779891931
-    },
-    {
-      "ticker": "FCEL",
-      "score": -0.5946383246876308
-    },
-    {
       "ticker": "OKLO",
-      "score": -0.4471021843609181
-    },
-    {
-      "ticker": "TLN",
-      "score": -0.619963013242493
-    },
-    {
-      "ticker": "TE",
-      "score": -0.44936729631534666
+      "score": -0.4609068195172936
     },
     {
       "ticker": "IONQ",
-      "score": -0.3829046741509327
-    },
-    {
-      "ticker": "LVWR",
-      "score": -0.5841307624748288
+      "score": -0.39059974142799925
     },
     {
       "ticker": "QBTS",
-      "score": -0.28547887599745464
+      "score": -0.25144340072426397
     },
     {
-      "ticker": "NRG",
-      "score": -0.34849244421389436
+      "ticker": "EOSE",
+      "score": -0.43378258027819
+    },
+    {
+      "ticker": "METC",
+      "score": -0.6258237009331186
+    },
+    {
+      "ticker": "FLNC",
+      "score": -0.592091523723564
+    },
+    {
+      "ticker": "FCEL",
+      "score": -0.581579576942252
+    },
+    {
+      "ticker": "HNRG",
+      "score": -0.188670121599966
     }
   ],
   "flatten": {
@@ -125,31 +93,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "ab",
-      "title": "AB checklist",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T10:03:16.094382-04:00",
-      "files": [
-        {
-          "path": "data/ab_checklist/2026-09-15_ab_checklist.csv",
-          "ok": true,
-          "reason": "",
-          "size": 7626799,
-          "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, WDS, SKM"
-        },
-        {
-          "path": "data/ab_checklist/2026-09-15_ab_checklist_enriched.csv",
-          "ok": true,
-          "reason": "",
-          "size": 8449403,
-          "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, CDNA, SM, AVT, WDS"
-        }
-      ],
-      "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, WDS, SKM \u00b7 2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, CDNA, SM, AVT, WDS"
-    },
     {
       "key": "stock_book",
       "title": "Stock book + green",
@@ -597,6 +540,31 @@
         }
       ],
       "preview": "2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T10:45:39.590760-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 87526,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11377,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T07:31:21.815244-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T07:31:21.815244-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T10:43:27.736676-04:00",
+  "generated_at": "2026-09-15T10:45:39.335092-04:00",
   "items": [
     {
       "ok": true,
@@ -62,7 +62,7 @@
       "kind": "finviz_digest",
       "path": "01_daily/news/2026-09-15_finviz_digest.json",
       "reason": "",
-      "size": 87969,
+      "size": 87526,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -73,7 +73,7 @@
       "kind": "finviz_market_digest",
       "path": "01_daily/news/2026-09-15_finviz_market_digest.json",
       "reason": "",
-      "size": 7656,
+      "size": 6662,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -95,7 +95,7 @@
       "kind": "map_heat",
       "path": "01_daily/map_heat/2026-09-15_map_heat.json",
       "reason": "",
-      "size": 269446,
+      "size": 269893,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -157,14 +157,14 @@
       "missing_markers": []
     },
     {
-      "ok": true,
+      "ok": false,
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-15/consumer_defensive_predict.md",
-      "reason": "",
-      "size": 17675,
+      "reason": "missing",
+      "size": 0,
       "carried": false,
       "timeout": false,
-      "empty": false,
+      "empty": true,
       "missing_markers": []
     },
     {
@@ -227,7 +227,7 @@
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-15/technology_predict.md",
       "reason": "",
-      "size": 19231,
+      "size": 17161,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -266,9 +266,9 @@
     },
     {
       "sector": "Consumer Defensive",
-      "ok": true,
-      "reason": "",
-      "size": 17675
+      "ok": false,
+      "reason": "missing",
+      "size": 0
     },
     {
       "sector": "Energy",
@@ -304,7 +304,7 @@
       "sector": "Technology",
       "ok": true,
       "reason": "",
-      "size": 19231
+      "size": 17161
     },
     {
       "sector": "Utilities",
@@ -313,7 +313,7 @@
       "size": 13006
     }
   ],
-  "sector_n_ok": 11,
+  "sector_n_ok": 10,
   "sector_n_total": 11,
   "all_ok": true
 }

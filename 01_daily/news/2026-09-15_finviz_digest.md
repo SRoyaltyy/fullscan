@@ -1,18 +1,18 @@
 # Finviz Daily Digest — 2026-09-15
 
-_Generated 2026-09-15T10:13:58.094916-04:00 · export=data/exports/finviz_2026-09-15.csv · ticker digests=400 · high-signal=400_
+_Generated 2026-09-15T07:31:21.815244-04:00 · export=data/exports/finviz_2026-09-15.csv · ticker digests=400 · high-signal=400_
 
 ## Major indices (live quote page)
 
-- **S&P 500 (SPY)**: AI, Fed And 5% Treasury Yield: Three Risks Putting Nasdaq, Dow Futures On Edge Ahead Of Wednesdays Rate Decision
-- **Nasdaq-100 (QQQ)**: AI, Fed And 5% Treasury Yield: Three Risks Putting Nasdaq, Dow Futures On Edge Ahead Of Wednesdays Rate Decision
+- **S&P 500 (SPY)**: Stock Market: Will S&P 500 Open Up or Down Today?
+- **Nasdaq-100 (QQQ)**: Stock Market: Will S&P 500 Open Up or Down Today?
 - **Dow Jones (DIA)**: S&P 500, Nasdaq, Dow Drop On Chipmaker Weakness, Treasury Yield Pressure  MSFT, NFLX, ORCL, CRWD, RBLX In Focus
 - **Russell 2000 (IWM)**: Investors worried about rising bond yields are keeping a close eye on this corner of the market
 
 ## High-signal ticker digests (ranked)
 
 - **ADBE** [Technology]: Adobe posts record Q3 revenue $6.76B and non-GAAP EPS $6.13, raises FY26 outlook and leans into AI-driven freemium strategy
-- **AJG** [Financial]: Arthur J. Gallagher & Co. announces acquisition of Colorado-based Innovise Business Consultants, expanding its commercial insurance and surety bonding capabilities in the Western U.S.
+- **AJG** [Financial]: Goldman Sachs AI productivity call fuels 5.4% surge in AJG shares
 - **AMD** [Technology]: AI leaders' call to slow frontier development sparks AMD's 5% premarket plunge
 - **AME** [Industrials]: AMETEK completes $5.0 billion all-cash acquisition of Indicor Instrumentation
 - **AMGN** [Healthcare]: Amgen gets FDA approval to update IMDELLTRA label to reduce monitoring for first two ES-SCLC doses
@@ -35,6 +35,8 @@ _Generated 2026-09-15T10:13:58.094916-04:00 · export=data/exports/finviz_2026-0
 - **BNY** [Financial]: BNY Raises Expense Growth Guidance to 6-7% at Barclays Conference
 - **BSX** [Healthcare]: Boston Scientific says cyberattack will materially hit Q3 and full-year 2026 results, no longer expects to meet sales and adjusted profit guidance
 - **CAH** [Healthcare]: Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.
+- **CAT** [Industrials]: Freedom Broker upgrades Caterpillar to Buy, lifts price target to $980 on U.S.-Canada tariff benefits
+- **CDNS** [Technology]: Cadence beats Q2 2026 estimates with EPS $2.11, revenue $1.6B, signs major Intel deal underpinning raised 2026 AI-driven outlook
 - **CI** [Healthcare]: Jefferies downgrades Cigna to Hold from Buy, cuts price target to $307 from $336 on concern consensus too high post EviCore sale, Centene prescription drug plan shrinkage
 - **CM** [Financial]: Canadian Imperial Bank Of Commerce reports fiscal Q3 2026 results with non-GAAP EPS $1.97 (+25% YoY) and revenue $6.0B (+14% YoY), beats EPS and revenue estimates
 - **CMI** [Industrials]: Cummins wins largest-ever BESS contract to supply storage systems for major U.S. data center project
@@ -45,21 +47,26 @@ _Generated 2026-09-15T10:13:58.094916-04:00 · export=data/exports/finviz_2026-0
 - **CSX** [Industrials]: CSX delivers record revenue, raises 2026 margin and free cash flow outlook
 - **CVE** [Energy]: Cenovus Energy Q2 2026 non-GAAP EPS $1.08 misses estimates, revenue $14.7B beats, company raises full-year production guidance
 - **D** [Utilities]: Dominion, NextEra enhance Virginia merger benefits with 1,000 new jobs, doubled bill credits and $1B-a-year supplier program
+- **DASH** [Consumer Cyclical]: Scotiabank initiated coverage of DoorDash with a Sector Outperform rating and a $275 price target, citing its scale, subscription-driven user lock-in and margin benefits.
 - **DDOG** [Technology]: Snowflake's stronger-than-expected quarterly revenue and earnings support cloud and AI-focused enterprise software peers including Datadog
 - **DUK** [Utilities]: Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year
 - **E** [Energy]: Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results
-- **ELV** [Healthcare]: Elevance Health disclosed in an SEC filing that it reaffirmed its 2026 guidance for at least $27.00 in adjusted EPS and a 90.2% benefit expense ratio.
-- **EOG** [Energy]: EOG posts record EPS and free cash flow, reiterates 2026 guidance and highlights strong UAE unconventional exploration results
-- **EQIX** [Real Estate]: Equinix, CPP Investments close US$4B atNorth acquisition with Equinix investing about US$895M for roughly 34% stake
 
 ## By sector (top signal)
 
 ### Financial (n=8)
-- AJG: Arthur J. Gallagher & Co. announces acquisition of Colorado-based Innovise Business Consultants, expanding its commercial insurance and surety bonding capabilities in the Western U.S.
+- AJG: Goldman Sachs AI productivity call fuels 5.4% surge in AJG shares
 - AON: Aon files audited and pro forma financials with SEC for pending USI Advantage merger
 - BAC: BAC CEO's soft Q3 outlook at Barclays conference drives 5% plunge
 - BBVA: BBVA posts record Q2 2026 net profit, upgrades Mexico and South America guidance, announces extraordinary â¬2 billion share buyback program
 - BCS: Strong H1 profits, guidance upgrade and Â£1bn buyback drive BCS 6.48% surge
+
+### Industrials (n=8)
+- AME: AMETEK completes $5.0 billion all-cash acquisition of Indicor Instrumentation
+- BE: Mizuho raises Bloom Energy price target to $351 from $242, reiterates Outperform on stronger pricing and demand signals
+- CAT: Freedom Broker upgrades Caterpillar to Buy, lifts price target to $980 on U.S.-Canada tariff benefits
+- CMI: Cummins wins largest-ever BESS contract to supply storage systems for major U.S. data center project
+- CNI: Canadian National Railway outlines conditions to U.S. regulators for proposed Union PacificâNorfolk Southern merger
 
 ### Healthcare (n=8)
 - AMGN: Amgen gets FDA approval to update IMDELLTRA label to reduce monitoring for first two ES-SCLC doses
@@ -68,19 +75,12 @@ _Generated 2026-09-15T10:13:58.094916-04:00 · export=data/exports/finviz_2026-0
 - BSX: Boston Scientific says cyberattack will materially hit Q3 and full-year 2026 results, no longer expects to meet sales and adjusted profit guidance
 - CAH: Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.
 
-### Industrials (n=8)
-- AME: AMETEK completes $5.0 billion all-cash acquisition of Indicor Instrumentation
-- BE: Mizuho raises Bloom Energy price target to $351 from $242, reiterates Outperform on stronger pricing and demand signals
-- CMI: Cummins wins largest-ever BESS contract to supply storage systems for major U.S. data center project
-- CNI: Canadian National Railway outlines conditions to U.S. regulators for proposed Union PacificâNorfolk Southern merger
-- CSX: CSX delivers record revenue, raises 2026 margin and free cash flow outlook
-
 ### Technology (n=6)
 - ADBE: Adobe posts record Q3 revenue $6.76B and non-GAAP EPS $6.13, raises FY26 outlook and leans into AI-driven freemium strategy
 - AMD: AI leaders' call to slow frontier development sparks AMD's 5% premarket plunge
 - APH: Fabrinet earnings weakness and rising yields spark 6.5% APH drop
 - ASML: ASML nearly sold out of 2027 EUV capacity amid very strong AI-driven demand, JPMorgan says
-- DDOG: Snowflake's stronger-than-expected quarterly revenue and earnings support cloud and AI-focused enterprise software peers including Datadog
+- CDNS: Cadence beats Q2 2026 estimates with EPS $2.11, revenue $1.6B, signs major Intel deal underpinning raised 2026 AI-driven outlook
 
 ### Basic Materials (n=6)
 - APD: Air Products beats fiscal Q3 2026 EPS with non-GAAP $3.47, raises FY26 EPS outlook, takes $2.9B clean energy exit charge
@@ -96,7 +96,8 @@ _Generated 2026-09-15T10:13:58.094916-04:00 · export=data/exports/finviz_2026-0
 - EOG: EOG posts record EPS and free cash flow, reiterates 2026 guidance and highlights strong UAE unconventional exploration results
 - KMI: KMI rebounds on pipeline project momentum and raised 2026 guidance
 
-### Consumer Cyclical (n=3)
+### Consumer Cyclical (n=4)
+- DASH: Scotiabank initiated coverage of DoorDash with a Sector Outperform rating and a $275 price target, citing its scale, subscription-driven user lock-in and margin benefits.
 - HD: Home Depot announces the nationwide rollout of its Magic Apron AI-powered in-store assistant with localized, personalized shopping guidance now live in all U.S. stores.
 - HLT: Deutsche Bank upgrades Hilton Worldwide to Buy from Hold, raises price target to $365
 - LOW: Bernstein cuts Loweâs price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery
