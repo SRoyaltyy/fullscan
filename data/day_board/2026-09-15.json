@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T07:30:09.687737-04:00",
+  "generated_at": "2026-09-15T07:30:29.489828-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -47,7 +47,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 268785
+          "size": 269893
         },
         {
           "key": "heat_md",
@@ -56,7 +56,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 16086
+          "size": 16943
         }
       ],
       "said": "tables on disk",
@@ -80,7 +80,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 88039
+          "size": 87542
         },
         {
           "key": "digest_md",
@@ -89,7 +89,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11565
+          "size": 11332
         },
         {
           "key": "market_digest_json",
@@ -98,7 +98,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 7048
+          "size": 6662
         },
         {
           "key": "market_digest_md",
@@ -107,7 +107,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 3090
+          "size": 2949
         },
         {
           "key": "market_digest_close_json",
@@ -137,7 +137,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 19,
+      "n_req_ok": 14,
       "n_req": 20,
       "n_opt_ok": 3,
       "n_opt": 3,
@@ -149,7 +149,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 88039
+          "size": 87542
         },
         {
           "key": "in_market_digest",
@@ -158,7 +158,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 7048
+          "size": 6662
         },
         {
           "key": "in_baseline",
@@ -176,7 +176,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 268785
+          "size": 269893
         },
         {
           "key": "parsed",
@@ -248,7 +248,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6954
+          "size": 6090
         },
         {
           "key": "qc",
@@ -256,8 +256,8 @@
           "path": "01_daily/2026-09-15_preopen_qc.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=True",
-          "size": 7194
+          "reason": "all_ok=False",
+          "size": 7229
         },
         {
           "key": "status",
@@ -265,8 +265,8 @@
           "path": "01_daily/2026-09-15_preopen_status.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=False",
-          "size": 7137
+          "reason": "all_ok=False missing=['sector_predict']",
+          "size": 7756
         },
         {
           "key": "review",
@@ -274,17 +274,17 @@
           "path": "01_daily/2026-09-15_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=False Grok returned an empty review",
-          "size": 309
+          "reason": "ok=False Only 5 of 11 sector essays exist (communication_services, consumer_cyclical, energy, financial, healthcare) \u2014 6 missing,",
+          "size": 1631
         },
         {
           "key": "sector_basic_materials",
           "name": "Sector predict \u2014 basic_materials",
           "path": "01_daily/sectors/2026-09-15/basic_materials_predict.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 16185
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "sector_communication_services",
@@ -345,46 +345,46 @@
           "name": "Sector predict \u2014 industrials",
           "path": "01_daily/sectors/2026-09-15/industrials_predict.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 17775
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "sector_real_estate",
           "name": "Sector predict \u2014 real_estate",
           "path": "01_daily/sectors/2026-09-15/real_estate_predict.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 14617
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "sector_technology",
           "name": "Sector predict \u2014 technology",
           "path": "01_daily/sectors/2026-09-15/technology_predict.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 17161
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "sector_utilities",
           "name": "Sector predict \u2014 utilities",
           "path": "01_daily/sectors/2026-09-15/utilities_predict.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 14255
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         }
       ],
-      "said": "general DOWN  -6.215 \u00b7 sectors 3 up / 7 down / 0 flat \u00b7 news 15 items",
+      "said": "general DOWN  -6.215 \u00b7 sectors 3 up / 2 down / 0 flat \u00b7 news 15 items",
       "bullets": [
         "bad: fresh Saudi pipeline outage + Houthi escalation, Brent $108",
         "bad: China Aug retail +0.4% / FAI -7.2% miss",
         "bad: FOMC Sep 16 hike odds ~81%",
         "good: ASML sold out of 2027 EUV capacity",
         "good: software rotation (NOW/INTU/ADBE/CRM) surges",
-        "XLB DOWN -7.6",
+        "XLB missing",
         "XLC UP +0.4",
         "XLY DOWN -4.7",
         "XLP missing",
@@ -409,7 +409,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 88039
+          "size": 87542
         },
         {
           "key": "weather",
@@ -489,7 +489,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 88039
+          "size": 87542
         },
         {
           "key": "dossiers",
@@ -531,7 +531,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 6954
+          "size": 6090
         },
         {
           "key": "in_actions",
@@ -549,7 +549,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 88039
+          "size": 87542
         },
         {
           "key": "in_judge",
@@ -594,7 +594,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5111",
-          "size": 819816
+          "size": 817895
         },
         {
           "key": "book_json",
@@ -603,7 +603,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=220",
-          "size": 1616142
+          "size": 1600584
         },
         {
           "key": "book_md",
@@ -612,7 +612,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 88494
+          "size": 88517
         },
         {
           "key": "green",
@@ -630,7 +630,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 1799
+          "size": 1803
         },
         {
           "key": "dashboard",
@@ -639,7 +639,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-09-15)",
-          "size": 6103082
+          "size": 5867646
         }
       ],
       "said": "215 rows",
@@ -665,7 +665,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=220",
-          "size": 1616142
+          "size": 1600584
         },
         {
           "key": "dash_html",
@@ -674,7 +674,7 @@
           "role": "required",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-09-15)",
-          "size": 6103082
+          "size": 5867646
         },
         {
           "key": "paper",
@@ -683,7 +683,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 1799
+          "size": 1803
         },
         {
           "key": "pages",
@@ -719,19 +719,19 @@
       },
       {
         "ticker": "WIX",
-        "score": 0.6463005173143059
+        "score": 0.6788005173143059
       },
       {
         "ticker": "VRSK",
-        "score": 0.28020786688577604
+        "score": 0.382707866885776
       },
       {
         "ticker": "EPAM",
-        "score": 0.6129870208378201
+        "score": 0.6454870208378202
       },
       {
         "ticker": "DLO",
-        "score": 0.5711132330742299
+        "score": 0.6036132330742299
       },
       {
         "ticker": "CARG",
@@ -745,52 +745,46 @@
     "sell_1d": [
       {
         "ticker": "FLNC",
-        "score": -0.6196283071916829
+        "score": -0.38712830719168295
       },
       {
         "ticker": "OKLO",
-        "score": -0.47913678572837526
+        "score": -0.24663678572837527
       },
       {
         "ticker": "EOSE",
-        "score": -0.4887325334936342
+        "score": -0.25623253349363423
       },
       {
         "ticker": "QBTS",
-        "score": -0.23275436275728906
+        "score": -0.20025436275728903
       },
       {
         "ticker": "SMR",
-        "score": -0.5586704105250774
+        "score": -0.3261704105250774
       },
       {
         "ticker": "METC",
-        "score": -0.6574659970788439
+        "score": -0.39246599707884383
       },
       {
         "ticker": "LUNR",
-        "score": -0.6142234041628993
+        "score": -0.38172340416289935
       },
       {
         "ticker": "TLN",
-        "score": -0.6260154354998333
+        "score": -0.4835154354998332
       },
       {
         "ticker": "TE",
-        "score": -0.49599482450987425
+        "score": -0.26349482450987427
       },
       {
         "ticker": "WULF",
         "score": -0.5635504946695946
       }
     ],
-    "flatten": {
-      "said": "0 priced buys \u00b7 cash $108,616.66",
-      "bullets": [
-        "0 priced buys",
-        "cash $108,616.66"
-      ]
-    },
+    "flatten": {},
     "general": {
       "said": "DOWN  -6.215",
       "bullets": [
@@ -804,19 +798,19 @@
       "direction": "down"
     },
     "sectors": {
-      "said": "3 up / 7 down / 0 flat",
+      "said": "3 up / 2 down / 0 flat",
       "bullets": [
-        "XLB DOWN -7.6",
+        "XLB missing",
         "XLC UP +0.4",
         "XLY DOWN -4.7",
         "XLP missing",
         "XLE UP +4.0",
         "XLF DOWN -4.1",
         "XLV UP +0.9",
-        "XLI DOWN -5.9",
-        "XLRE DOWN -8.5",
-        "XLK DOWN -7.5",
-        "XLU DOWN -8.2"
+        "XLI missing",
+        "XLRE missing",
+        "XLK missing",
+        "XLU missing"
       ]
     },
     "news": {
@@ -839,24 +833,6 @@
     }
   },
   "lands": [
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T04:25:19.965562-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-09-15_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1116884,
-          "preview": "5897 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5897 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "events",
       "title": "Event scanner (primary)",
@@ -3545,6 +3521,24 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T07:30:09.018767-04:00"
+    },
+    {
+      "key": "universe",
+      "title": "Universe labels",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T07:30:28.245618-04:00",
+      "files": [
+        {
+          "path": "data/universe/2026-09-15_membership.csv",
+          "ok": true,
+          "reason": "",
+          "size": 1116889,
+          "preview": "5897 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+        }
+      ],
+      "preview": "5897 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
     }
   ],
   "href": {
