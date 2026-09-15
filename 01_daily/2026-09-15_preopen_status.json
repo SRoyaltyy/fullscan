@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T10:45:55.437903-04:00",
+  "generated_at": "2026-09-15T10:47:06.453511-04:00",
   "all_ok": false,
   "qc_all_ok": true,
   "book_ok": true,
@@ -189,7 +189,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-09-15_parsed.json",
-        "size": 86287
+        "size": 98729
       },
       {
         "kind": "news_actions",
