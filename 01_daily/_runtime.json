@@ -1,8 +1,8 @@
 {
   "ok": false,
-  "n_fail": 1,
+  "n_fail": 2,
   "grok_busy": false,
-  "updated_at": "2026-09-02T09:35:35.331365-04:00",
+  "updated_at": "2026-09-15T03:43:40.344121-04:00",
   "source": "runtime_status",
   "doors": [
     {
@@ -47,7 +47,7 @@
       "group": "classroom",
       "status": "OK",
       "required": true,
-      "detail": "PONG model=openclaw/default",
+      "detail": "classroom live (Hey. I just came online.) model=openclaw/default",
       "action": "none"
     },
     {
@@ -72,10 +72,10 @@
       "id": "timeout",
       "name": "Grok turn timeout",
       "group": "classroom",
-      "status": "WARN",
-      "required": false,
-      "detail": "all 10800s yaml=preopen_all.yml:10800,preopen_all.yml:10800,map_heat_postclose.yml:10800,ecs_preopen.sh:10800,ecs_map_postclose.sh:10800 \u2014 last packet had 1800 (2026-09-03_map_post",
-      "action": "none"
+      "status": "FAIL",
+      "required": true,
+      "detail": "ecs_map_postclose.sh OPENCLAW_TIMEOUT=900 (900s too short, want 10800)",
+      "action": "heal"
     },
     {
       "id": "http401",
@@ -128,7 +128,7 @@
       "group": "preopen",
       "status": "WARN",
       "required": false,
-      "detail": "latest=cancelled",
+      "detail": "latest=success systemd=exit-code",
       "action": "none"
     },
     {
@@ -146,7 +146,7 @@
       "group": "postclose",
       "status": "WARN",
       "required": false,
-      "detail": "latest=cancelled",
+      "detail": "latest=success systemd=exit-code",
       "action": "none"
     },
     {
@@ -164,8 +164,11 @@
       "group": "postclose",
       "status": "WARN",
       "required": false,
-      "detail": "history \u2014 401 in 2026-08-31_preopen_status.json, 2026-09-02_predict.md; 1800/timeout in 2026-09-03_map_postclose_captains_technology.json; DeepSeek fallback in 2026-08-28_pipeline_",
+      "detail": "history \u2014 401 in 2026-09-14_map_heat.json; DeepSeek fallback in 2026-08-28_pipeline_health_postclose.json, 2026-09-14_pipeline_health.json (classroom live)",
       "action": "none"
     }
+  ],
+  "healed": [
+    "ensure_openclaw_timeouts.sh exit=0                PASSED  UNIT                   ACTIVATES | Tue 2026-09-15 17:55:00 CST 2h 12min left Mon 2026-09-14 17:55:04 CST 21h ago full"
   ]
 }
