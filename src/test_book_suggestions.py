@@ -487,6 +487,10 @@ def test_day_board_write_json_keeps_elite_when_news_parse_lands() -> None:
         assert strip["buy_1d"][0]["ticker"] == "MTCH"
         assert strip["buy_1d"][0]["px"] == 43.04
         assert strip["quote"]["src"] == "elite_live"
+        fm = root / "dashboard" / "factor-mine" / "today.json"
+        fm_strip = json.loads(fm.read_text(encoding="utf-8"))
+        assert fm_strip["buy_1d"][0]["px"] == 43.04
+        assert fm_strip["quote"]["src"] == "elite_live"
 
 
 def test_publish_keeps_elite_when_rebuild_is_session_export() -> None:
