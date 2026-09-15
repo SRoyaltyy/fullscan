@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T11:54:41.828497-04:00",
+  "generated_at": "2026-09-15T11:54:54.346829-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -93,24 +93,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T11:28:12.958970-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-09-15_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2260233,
-          "preview": "5897 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 RRC, AR, DVN, PBR, EXE"
-        }
-      ],
-      "preview": "5897 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 RRC, AR, DVN, PBR, EXE"
-    },
     {
       "key": "ab",
       "title": "AB checklist",
@@ -334,6 +316,31 @@
         }
       ],
       "preview": "5897 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T11:54:53.030029-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-15_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10566,
+          "preview": "weather sectors 11 \u00b7 Communication Services={'score': -4.058, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Consumer Cyclical={'score': -4.948, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Energy={'score': 7.35, 'dir': 'up', 'conf': 0.65, 'source': 'llm'}, Financial={'score': -3.429, 'dir': 'down', 'conf': 0.537, 'source': 'llm'}, Healthcare={'score': -1.505, 'dir': 'down', 'conf': 0.46, 'source': 'llm'}, Basic Materials={'score': -5.904, 'dir': 'down', 'conf': 0.636, 'source': 'llm'}, Industrials={'score': -0.813, 'dir': 'down', 'conf': 0.433, 'source': 'llm'}, Real Estate={'score': -4.931, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-15_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 6051,
+          "preview": "# Weather report \u2014 2026-09-15\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Communication Services={'score': -4.058, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Consumer Cyclical={'score': -4.948, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Energy={'score': 7.35, 'dir': 'up', 'conf': 0.65, 'source': 'llm'}, Financial={'score': -3.429, 'dir': 'down', 'conf': 0.537, 'source': 'llm'}, Healthcare={'score': -1.505, 'dir': 'down', 'conf': 0.46, 'source': 'llm'}, Basic Materials={'score': -5.904, 'dir': 'down', 'conf': 0.636, 'source': 'llm'}, Industrials={'score': -0.813, 'dir': 'down', 'conf': 0.433, 'source': 'llm'}, Real Estate={'score': -4.931, 'dir': 'down', 'conf': 0.65, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-15\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
