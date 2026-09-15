@@ -1,19 +1,18 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T04:24:33.159306-04:00",
+  "generated_at": "2026-09-15T04:24:33.973380-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-15_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-15/_board.json` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-09-15_actions.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-09-15_judge.md` \u2014 missing",
-    "MISSING AB checklist enriched `data/ab_checklist/2026-09-15_ab_checklist_enriched.csv` \u2014 missing"
+    "MISSING News judge MD `01_daily/news/2026-09-15_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 3,
-    "partial": 2,
-    "fail": 3,
+    "ok": 4,
+    "partial": 3,
+    "fail": 1,
     "n": 8
   },
   "processes": [
@@ -53,7 +52,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 268634
+          "size": 269906
         },
         {
           "key": "heat_md",
@@ -62,7 +61,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 16782
+          "size": 16934
         }
       ],
       "said": "tables on disk",
@@ -182,7 +181,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 268634
+          "size": 269906
         },
         {
           "key": "parsed",
@@ -426,11 +425,11 @@
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -438,22 +437,24 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-09-15_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=2653",
+          "size": 7626799
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-15_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=2653",
+          "size": 8469155
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "25 rows",
+      "bullets": [
+        "SM, WDS, PBR, SOBO, SHEL"
+      ]
     },
     {
       "key": "catalyst",
@@ -501,9 +502,9 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 0,
+      "n_req_ok": 2,
       "n_req": 4,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -567,27 +568,27 @@
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-15_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=2653",
+          "size": 8469155
         },
         {
           "key": "join",
           "name": "Join ranked CSV",
           "path": "data/join/2026-09-15_ranked.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=5897",
+          "size": 2248550
         },
         {
           "key": "peers",
           "name": "Peer RS CSV",
           "path": "data/peers/2026-09-15_peer_rs.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=5111",
+          "size": 817895
         },
         {
           "key": "book_json",
@@ -635,8 +636,10 @@
           "size": 5867646
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "229 rows",
+      "bullets": [
+        "RGA, SSB, MA, PLMR, SCHW"
+      ]
     },
     {
       "key": "publish",
@@ -1404,6 +1407,31 @@
         }
       ],
       "preview": "5897 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T04:24:33.312250-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-15_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7626799,
+          "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, WDS, SKM"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-15_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8469155,
+          "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SM, WDS, PBR, SOBO, SHEL"
+        }
+      ],
+      "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, WDS, SKM \u00b7 2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SM, WDS, PBR, SOBO, SHEL"
     }
   ],
   "href": {
