@@ -116,6 +116,7 @@ def test_factor_mine_template_paints_every_strategy() -> None:
     assert "loadLiveDay" in html
     assert "today_strategies.json" in html
     assert "function firstOk" in html
+    assert "ok ? {} : last" in html
     assert "function ticketsLookLive" in html
     assert "function stripLooksLive" in html
     assert "function sessionDate" in html
@@ -156,6 +157,7 @@ def test_day_board_falls_back_to_suggestions() -> None:
     assert "Every strategy" in html
     assert "stock_book_1d" in html
     assert "function firstOk" in html
+    assert "ok ? {} : last" in html
     assert "function ticketsLookLive" in html
     assert "function sessionDate" in html
     assert "afterBell() ? ticketsLookLive" in html
@@ -243,6 +245,7 @@ def test_open_pack_wired_when_skip_if_good() -> None:
     assert "factor-mine/today_strategies.json" in book_suggestions._POLLER_JS
     assert "afterBell() ? 20000 : 60000" in book_suggestions._POLLER_JS
     assert "function firstOk" in book_suggestions._POLLER_JS
+    assert "ok ? {} : last" in book_suggestions._POLLER_JS
     assert "function ticketsLookLive" in book_suggestions._POLLER_JS
     assert "function stripLooksLive" in book_suggestions._POLLER_JS
     assert "function sessionDate" in book_suggestions._POLLER_JS
