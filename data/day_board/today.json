@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T07:31:23.502831-04:00",
+  "generated_at": "2026-09-15T07:46:05.751753-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -28,19 +28,19 @@
     },
     {
       "ticker": "WIX",
-      "score": 0.6788005173143059
+      "score": 0.6463005173143059
     },
     {
       "ticker": "VRSK",
-      "score": 0.382707866885776
+      "score": 0.28020786688577604
     },
     {
       "ticker": "EPAM",
-      "score": 0.6454870208378202
+      "score": 0.6129870208378201
     },
     {
       "ticker": "DLO",
-      "score": 0.6036132330742299
+      "score": 0.5711132330742299
     },
     {
       "ticker": "CARG",
@@ -54,46 +54,52 @@
   "sell_1d": [
     {
       "ticker": "FLNC",
-      "score": -0.38712830719168295
+      "score": -0.6196283071916829
     },
     {
       "ticker": "OKLO",
-      "score": -0.24663678572837527
+      "score": -0.47913678572837526
     },
     {
       "ticker": "EOSE",
-      "score": -0.25623253349363423
+      "score": -0.4887325334936342
     },
     {
       "ticker": "QBTS",
-      "score": -0.20025436275728903
+      "score": -0.23275436275728906
     },
     {
       "ticker": "SMR",
-      "score": -0.3261704105250774
+      "score": -0.5586704105250774
     },
     {
       "ticker": "METC",
-      "score": -0.39246599707884383
+      "score": -0.6574659970788439
     },
     {
       "ticker": "LUNR",
-      "score": -0.38172340416289935
+      "score": -0.6142234041628993
     },
     {
       "ticker": "TLN",
-      "score": -0.4835154354998332
+      "score": -0.6260154354998333
     },
     {
       "ticker": "TE",
-      "score": -0.26349482450987427
+      "score": -0.49599482450987425
     },
     {
       "ticker": "WULF",
       "score": -0.5635504946695946
     }
   ],
-  "flatten": {},
+  "flatten": {
+    "said": "0 priced buys \u00b7 cash $108,616.66",
+    "bullets": [
+      "0 priced buys",
+      "cash $108,616.66"
+    ]
+  },
   "general": {
     "said": "DOWN  -6.215",
     "bullets": [
@@ -107,47 +113,22 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "3 up / 2 down / 0 flat",
+    "said": "3 up / 7 down / 0 flat",
     "bullets": [
-      "XLB missing",
+      "XLB DOWN -7.6",
       "XLC UP +0.4",
       "XLY DOWN -4.7",
       "XLP missing",
       "XLE UP +4.0",
       "XLF DOWN -4.1",
       "XLV UP +0.9",
-      "XLI missing",
-      "XLRE missing",
-      "XLK missing",
-      "XLU missing"
+      "XLI DOWN -5.9",
+      "XLRE DOWN -8.5",
+      "XLK DOWN -7.5",
+      "XLU DOWN -8.2"
     ]
   },
   "lands": [
-    {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T07:29:00.261565-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-15_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 7048,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-09-15_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 3090,
-          "preview": "# Finviz homepage market digest \u2014 2026-09-15\n**Generated:** 2026-09-15T07:29:00.251652-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a lower open as oil tops $102 and 10-year yield exceeds 5% ahead of FOMC decision\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** WTI crude $102.0\n**CPI/Fed:** \u2014\n**Leaders:** BDRX, VEEA, MYSZ, FTFT, FPS, COE, VRA\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** FPS, COE, VRA\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-15\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-15\n**Generated:** 2026-09-15T07:29:00.251652-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a lower open as oil tops $102 and 10-year yield exceeds 5% ahead of FOMC decision\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** WTI crude $102.0\n**CPI/Fed:** \u2014\n**Leaders:** BDRX, VEEA, MYSZ, FTFT, FPS, COE, VRA\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** FPS, COE, VRA\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-15\n**Clock use:** `same_morning`"
-    },
     {
       "key": "finviz",
       "title": "Finviz universe export",
@@ -322,6 +303,31 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T07:31:21.815244-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11634 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T07:46:05.128888-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-15_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 268371,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-15_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 17637,
+          "preview": "# MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T07:46:04.893541-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T07:46:04.893541-04:00"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
