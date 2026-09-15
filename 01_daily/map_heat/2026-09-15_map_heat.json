@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T03:43:42.081587-04:00",
+  "generated_at": "2026-09-15T03:46:32.145663-04:00",
   "phase": "morning_overlay",
   "export": "finviz_2026-09-15.csv",
   "n_tickers": 11608,
@@ -8673,25 +8673,25 @@
     {
       "ticker": "ES",
       "label": "S&P 500",
-      "last": 7665.75,
-      "change": -0.34
+      "last": 7665.0,
+      "change": -0.36
     },
     {
       "ticker": "NQ",
       "label": "Nasdaq 100",
-      "last": 29359.5,
-      "change": -0.29
+      "last": 29354.75,
+      "change": -0.32
     },
     {
       "ticker": "ER2",
       "label": "Russell 2000",
-      "last": 2902.1,
-      "change": -0.46
+      "last": 2901.9,
+      "change": -0.49
     },
     {
       "ticker": "YM",
       "label": "DJIA",
-      "last": 52606.0,
+      "last": 52598.0,
       "change": -0.5
     },
     {
@@ -8703,56 +8703,56 @@
     {
       "ticker": "CL",
       "label": "Crude Oil WTI",
-      "last": 103.08,
-      "change": 1.7
+      "last": 103.26,
+      "change": 1.79
     },
     {
       "ticker": "QA",
       "label": "Crude Oil Brent",
-      "last": 107.37,
-      "change": 1.63
+      "last": 107.49,
+      "change": 1.7
     },
     {
       "ticker": "NG",
       "label": "Natural Gas",
       "last": 2.897,
-      "change": 0.07
+      "change": 0.03
     },
     {
       "ticker": "HO",
       "label": "Heating Oil",
-      "last": 5.0734,
-      "change": 2.26
+      "last": 5.0804,
+      "change": 2.36
     },
     {
       "ticker": "RB",
       "label": "Gasoline RBOB",
-      "last": 3.39,
-      "change": 2.16
+      "last": 3.3949,
+      "change": 2.29
     },
     {
       "ticker": "GC",
       "label": "Gold",
-      "last": 4332.6,
-      "change": -0.44
+      "last": 4329.5,
+      "change": -0.51
     },
     {
       "ticker": "SI",
       "label": "Silver",
-      "last": 63.605,
-      "change": -0.82
+      "last": 63.485,
+      "change": -0.97
     },
     {
       "ticker": "HG",
       "label": "Copper",
-      "last": 6.386,
-      "change": -0.3
+      "last": 6.384,
+      "change": -0.34
     },
     {
       "ticker": "PL",
       "label": "Platinum",
-      "last": 1768.4,
-      "change": -0.65
+      "last": 1764.9,
+      "change": -0.83
     },
     {
       "ticker": "PA",
@@ -8763,62 +8763,62 @@
     {
       "ticker": "DX",
       "label": "USD",
-      "last": 99.325,
+      "last": 99.33,
       "change": 0.22
     },
     {
       "ticker": "6E",
       "label": "EUR",
-      "last": 1.15805,
+      "last": 1.158,
       "change": -0.16
     },
     {
       "ticker": "6J",
       "label": "JPY",
-      "last": 0.6505000000000001,
-      "change": -0.54
+      "last": 0.6504,
+      "change": -0.56
     },
     {
       "ticker": "6B",
       "label": "GBP",
-      "last": 1.3478,
+      "last": 1.3479,
       "change": -0.27
     },
     {
       "ticker": "6A",
       "label": "AUD",
-      "last": 0.71145,
-      "change": -0.29
+      "last": 0.7113,
+      "change": -0.3
     },
     {
       "ticker": "6C",
       "label": "CAD",
-      "last": 0.7224,
-      "change": -0.01
+      "last": 0.72245,
+      "change": 0.0
     },
     {
       "ticker": "6S",
       "label": "CHF",
-      "last": 1.23605,
-      "change": -0.15
+      "last": 1.23595,
+      "change": -0.16
     },
     {
       "ticker": "6N",
       "label": "NZD",
       "last": 0.57755,
-      "change": -0.45
+      "change": -0.44
     },
     {
       "ticker": "ZN",
       "label": "10 Year Note",
-      "last": 105.734375,
+      "last": 105.75,
       "change": -0.4
     },
     {
       "ticker": "ZF",
       "label": "5 Year Note",
       "last": 104.265625,
-      "change": -0.25
+      "change": -0.24
     },
     {
       "ticker": "ZT",
@@ -8830,7 +8830,7 @@
       "ticker": "ZB",
       "label": "30 Year Bond",
       "last": 106.1875,
-      "change": -0.82
+      "change": -0.79
     },
     {
       "ticker": "NKD",
@@ -8841,43 +8841,43 @@
     {
       "ticker": "DY",
       "label": "DAX",
-      "last": 25347.0,
-      "change": -0.33
+      "last": 25332.0,
+      "change": -0.36
     },
     {
       "ticker": "EX",
       "label": "Euro Stoxx 50",
-      "last": 6228.0,
-      "change": -0.48
+      "last": 6225.0,
+      "change": -0.54
     },
     {
       "ticker": "ZC",
       "label": "Corn",
-      "last": 532.25,
-      "change": -0.19
+      "last": 532.5,
+      "change": -0.14
     },
     {
       "ticker": "ZS",
       "label": "Soybeans",
-      "last": 1301.0,
-      "change": -0.27
+      "last": 1300.75,
+      "change": -0.25
     },
     {
       "ticker": "ZW",
       "label": "Wheat",
-      "last": 723.0,
-      "change": 0.17
+      "last": 721.75,
+      "change": -0.03
     },
     {
       "ticker": "ZL",
       "label": "Soybean oil",
-      "last": 69.98,
-      "change": 0.47
+      "last": 70.06,
+      "change": 0.52
     },
     {
       "ticker": "ZM",
       "label": "Soybean Meal",
-      "last": 348.5,
+      "last": 348.4,
       "change": -0.49
     },
     {
@@ -8901,14 +8901,14 @@
     {
       "ticker": "SB",
       "label": "Sugar",
-      "last": 18.2,
-      "change": 0.17
+      "last": 18.22,
+      "change": 0.33
     },
     {
       "ticker": "CT",
       "label": "Cotton",
-      "last": 84.85,
-      "change": 0.35
+      "last": 84.9,
+      "change": 0.41
     },
     {
       "ticker": "CC",
@@ -8949,8 +8949,8 @@
     {
       "ticker": "BTC",
       "label": "Bitcoin",
-      "last": 77255.0,
-      "change": -2.39
+      "last": 77120.0,
+      "change": -2.49
     },
     {
       "ticker": "SR3",
@@ -8973,7 +8973,7 @@
     {
       "ticker": "RS",
       "label": "Canola",
-      "last": 819.0,
+      "last": 819.3,
       "change": -0.47
     },
     {
@@ -8991,8 +8991,8 @@
     {
       "ticker": "G",
       "label": "Gasoil",
-      "last": 1501.5,
-      "change": 1.71
+      "last": 1503.25,
+      "change": 1.85
     },
     {
       "ticker": "TIO",
@@ -9009,14 +9009,14 @@
     {
       "ticker": "TN",
       "label": "Ultra 10 Year Note",
-      "last": 107.15625,
+      "last": 107.171875,
       "change": -0.54
     },
     {
       "ticker": "UB",
       "label": "Ultra Bond",
-      "last": 107.625,
-      "change": -0.95
+      "last": 107.59375,
+      "change": -0.98
     },
     {
       "ticker": "UX",
@@ -9027,7 +9027,7 @@
   ],
   "ticker_news": [
     {
-      "time": "13 min",
+      "time": "16 min",
       "title": "Fluke Expands iSee Mobile Series with New TC03A Thermal Camera and ii01 Acoustic Camera",
       "url": "/news/391903/fluke-expands-isee-mobile-series-with-new-tc03a-thermal-camera-and-ii01-acoustic-camera",
       "source": "GlobeNewswire",
@@ -9036,7 +9036,7 @@
       ]
     },
     {
-      "time": "27 min",
+      "time": "30 min",
       "title": "Industrial Occupancy Jumps as Big-Box Demand Returns",
       "url": "https://finance.yahoo.com/m/65218520-1f8a-3539-9c30-839ff3823814/industrial-occupancy-jumps-as.html",
       "source": "CRE Daily",
@@ -9045,7 +9045,7 @@
       ]
     },
     {
-      "time": "31 min",
+      "time": "34 min",
       "title": "GSK splashes up to $750m on experimental cancer therapy",
       "url": "https://finance.yahoo.com/healthcare/articles/gsk-splashes-750m-experimental-cancer-071200893.html",
       "source": "Proactive",
@@ -9054,35 +9054,35 @@
       ]
     },
     {
-      "time": "34 min",
+      "time": "37 min",
       "title": "Worldline launches UCP payment handler for agentic commerce payments",
       "url": "https://finance.yahoo.com/m/235da9f2-d06f-3527-95f6-d9015f971ec1/worldline-launches-ucp.html",
       "source": "Electronic Payments",
       "tickers": [
-        "GOOG",
+        "GOOG"
+      ]
+    },
+    {
+      "time": "37 min",
+      "title": "Worldline launches UCP payment handler for agentic commerce payments",
+      "url": "https://finance.yahoo.com/technology/ai/articles/worldline-launches-ucp-payment-handler-070835057.html",
+      "source": "Electronic Payments",
+      "tickers": [
         "GOOGL"
       ]
     },
     {
-      "time": "37 min",
+      "time": "40 min",
       "title": "Tesla, SpaceX Stocks Rise Overnight: Elon Musk Fuels Merger Speculation, Hints At Action Amid Close Collaboration",
       "url": "https://finance.yahoo.com/m/e760c2ac-fd44-3bb0-9d7d-251b160b45d2/tesla%2C-spacex-stocks-rise.html",
       "source": "Stocktwits",
       "tickers": [
+        "SPCX",
         "TSLA"
       ]
     },
     {
-      "time": "37 min",
-      "title": "Tesla, SpaceX Stocks Rise Overnight: Elon Musk Fuels Merger Speculation, Hints At Action Amid Close Collaboration",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/tesla-spacex-stocks-rise-overnight-070611962.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "SPCX"
-      ]
-    },
-    {
-      "time": "40 min",
+      "time": "42 min",
       "title": "GAP Stock Heads For Monthly Loss Despite CEO Optimism On Old Navy  Cardi B Campaign Fails To Lift Retail Mood",
       "url": "https://finance.yahoo.com/m/e10a3409-5fa4-36ec-a084-683cc9301678/gap-stock-heads-for-monthly.html",
       "source": "Stocktwits",
@@ -9091,7 +9091,7 @@
       ]
     },
     {
-      "time": "43 min",
+      "time": "45 min",
       "title": "Kestra Medical Technologies Ltd (KMTS) (Q1 2027) Earnings Call Highlights: Revenue Jumps 60% as ...",
       "url": "https://finance.yahoo.com/healthcare/articles/kestra-medical-technologies-ltd-kmts-070026354.html",
       "source": "GuruFocus.com",
@@ -9100,7 +9100,7 @@
       ]
     },
     {
-      "time": "43 min",
+      "time": "46 min",
       "title": "Markel International bolsters leadership in new Marine Transportation business with two key appointments",
       "url": "/news/391899/markel-international-bolsters-leadership-in-new-marine-transportation-business-with-two-key-appointments",
       "source": "PR Newswire",
@@ -9109,7 +9109,7 @@
       ]
     },
     {
-      "time": "43 min",
+      "time": "46 min",
       "title": "Willis: Power companies must strengthen resilience as electrification drives a new wave of industrial growth",
       "url": "/news/391900/willis-power-companies-must-strengthen-resilience-as-electrification-drives-a-new-wave-of-industrial-growth",
       "source": "GlobeNewswire",
@@ -9118,7 +9118,7 @@
       ]
     },
     {
-      "time": "43 min",
+      "time": "46 min",
       "title": "Eldorado Gold to Host Greek Asset Site Tour",
       "url": "/news/391901/eldorado-gold-to-host-greek-asset-site-tour",
       "source": "GlobeNewswire",
@@ -9127,7 +9127,7 @@
       ]
     },
     {
-      "time": "43 min",
+      "time": "46 min",
       "title": "Iron Mountain Partners with the Opera national de Paris to Preserve and Digitize its Visual Heritage",
       "url": "/news/391902/iron-mountain-partners-with-the-opera-national-de-paris-to-preserve-and-digitize-its-visual-heritage",
       "source": "Business Wire",
@@ -9136,7 +9136,7 @@
       ]
     },
     {
-      "time": "43 min",
+      "time": "46 min",
       "title": "Iron Mountain Partners with the Opra national de Paris to Preserve and Digitize its Visual Heritage",
       "url": "https://www.businesswire.com/news/home/20260915431263/en/",
       "source": "Business Wire",
@@ -9145,7 +9145,7 @@
       ]
     },
     {
-      "time": "46 min",
+      "time": "49 min",
       "title": "Tampa Multifamily Nears a Pricing Power Reset",
       "url": "https://finance.yahoo.com/m/852933bb-3ee2-3de0-9780-d9c6027ffd9e/tampa-multifamily-nears-a.html",
       "source": "CRE Daily",
@@ -9154,7 +9154,7 @@
       ]
     },
     {
-      "time": "53 min",
+      "time": "55 min",
       "title": "CryptoQuant Flags Volume Revival as Another Crack in Bear Market Downtrend",
       "url": "https://finance.yahoo.com/m/83c8b8ff-1557-3960-bba6-162b774475bf/cryptoquant-flags-volume.html",
       "source": "BeInCrypto",
@@ -9163,7 +9163,7 @@
       ]
     },
     {
-      "time": "56 min",
+      "time": "59 min",
       "title": "Realty Income and KKR Form 528M European JV",
       "url": "https://finance.yahoo.com/real-estate/articles/realty-income-kkr-form-528m-064649630.html",
       "source": "CRE Daily",
@@ -9332,18 +9332,10 @@
     {
       "time": "1 hour",
       "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
-      "url": "https://finance.yahoo.com/m/c11a3ffc-bee7-38ac-87b3-c7e8b05fd17f/stock-market%3A-will-s%26p-500.html",
-      "source": "Benzinga Prediction Markets",
-      "tickers": [
-        "QQQ"
-      ]
-    },
-    {
-      "time": "1 hour",
-      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
       "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-p-500-open-055802015.html",
       "source": "Benzinga Prediction Markets",
       "tickers": [
+        "QQQ",
         "SPY"
       ]
     },
@@ -9458,7 +9450,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "NOK Stock Rises Overnight: Analyst Calls Nokia AI Optical Dark Horse Trading At 'Conservative Valuation'",
       "url": "https://finance.yahoo.com/markets/stocks/articles/nok-stock-rises-overnight-analyst-044601054.html",
       "source": "Stocktwits",
@@ -9501,9 +9493,17 @@
       "tickers": [
         "COST",
         "CRWD",
-        "JNJ",
         "KMB",
         "LLY"
+      ]
+    },
+    {
+      "time": "3 hours",
+      "title": "AI Safety Fears Drive Investors to J&J, Costco, and CrowdStrike for Cybersecurity",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/ai-safety-fears-drive-investors-040856548.html",
+      "source": "BeInCrypto",
+      "tickers": [
+        "JNJ"
       ]
     },
     {
@@ -9518,13 +9518,21 @@
     {
       "time": "3 hours",
       "title": "SLS, IBRX, IOVA In Focus Amid Big Pharmas Early Cancer-Asset Hunt: J&J Flags M&A Sweet Spot, Pfizer Eyes Phase 1-2 Deals",
+      "url": "https://finance.yahoo.com/healthcare/articles/sls-ibrx-iova-focus-amid-040047202.html",
+      "source": "Stocktwits",
+      "tickers": [
+        "JNJ",
+        "PFE"
+      ]
+    },
+    {
+      "time": "3 hours",
+      "title": "SLS, IBRX, IOVA In Focus Amid Big Pharmas Early Cancer-Asset Hunt: J&J Flags M&A Sweet Spot, Pfizer Eyes Phase 1-2 Deals",
       "url": "https://finance.yahoo.com/m/7f936c59-0bc5-37a5-a5e7-5522c7722eea/sls%2C-ibrx%2C-iova-in-focus-amid.html",
       "source": "Stocktwits",
       "tickers": [
         "IBRX",
         "IOVA",
-        "JNJ",
-        "PFE",
         "SLS"
       ]
     },
@@ -9564,7 +9572,8 @@
       "source": "Stocktwits",
       "tickers": [
         "CRWD",
-        "AVGO"
+        "AVGO",
+        "SPCX"
       ]
     },
     {
@@ -9573,8 +9582,7 @@
       "url": "https://finance.yahoo.com/technology/ai/articles/ai-slowdown-debate-splits-tech-031631885.html",
       "source": "Stocktwits",
       "tickers": [
-        "NVDA",
-        "SPCX"
+        "NVDA"
       ]
     },
     {
@@ -9639,17 +9647,9 @@
       "source": "Stocktwits",
       "tickers": [
         "NOW",
+        "INTU",
         "ADBE",
         "CRM"
-      ]
-    },
-    {
-      "time": "Sep-14",
-      "title": "NOW, INTU, ADBE, CRM Stocks Surge As AI Pacing Debate Hammers Chips: Analyst Says Hardware Vs Software Trade Is Turned On Its Head",
-      "url": "https://finance.yahoo.com/technology/ai/articles/now-intu-adbe-crm-stocks-022524205.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "INTU"
       ]
     },
     {
@@ -9673,19 +9673,11 @@
     {
       "time": "Sep-14",
       "title": "Novo Nordisk Rebrands as Novo': Stock Falls as Company Aims GLP-1s at Consumers",
-      "url": "https://finance.yahoo.com/healthcare/articles/novo-nordisk-rebrands-novo-stock-020509678.html",
-      "source": "BeInCrypto",
-      "tickers": [
-        "NVO"
-      ]
-    },
-    {
-      "time": "Sep-14",
-      "title": "Novo Nordisk Rebrands as Novo': Stock Falls as Company Aims GLP-1s at Consumers",
       "url": "https://finance.yahoo.com/m/d713a714-5ca2-3372-b6ca-5fe5a117ed5e/novo-nordisk-rebrands-as.html",
       "source": "BeInCrypto",
       "tickers": [
-        "LLY"
+        "LLY",
+        "NVO"
       ]
     },
     {
@@ -9791,11 +9783,19 @@
     {
       "time": "Sep-14",
       "title": "BE Stock Falls Most In Nearly A Month: Why This Analyst Sees Over 36% Upside",
+      "url": "https://finance.yahoo.com/m/99eb6c72-cc4e-34c6-b488-70075624434c/be-stock-falls-most-in-nearly.html",
+      "source": "Stocktwits",
+      "tickers": [
+        "SPCX"
+      ]
+    },
+    {
+      "time": "Sep-14",
+      "title": "BE Stock Falls Most In Nearly A Month: Why This Analyst Sees Over 36% Upside",
       "url": "https://finance.yahoo.com/markets/stocks/articles/stock-falls-most-nearly-month-011328812.html",
       "source": "Stocktwits",
       "tickers": [
-        "BE",
-        "SPCX"
+        "BE"
       ]
     },
     {
@@ -9840,15 +9840,6 @@
     },
     {
       "time": "Sep-14",
-      "title": "Should You Buy Cirrus Logic Stock Because Its Buyback Got Cheaper?",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/buy-cirrus-logic-stock-because-005405849.html",
-      "source": "Trefis",
-      "tickers": [
-        "QCOM"
-      ]
-    },
-    {
-      "time": "Sep-14",
       "title": "XCF Global (NASDAQ:SAFX), DevvStream and Southern Energy Renewables Amend Business Combination Agreement, Increasing XCF Shareholder Ownership and Establishing Additional Capital Support; XCF Shareholder GL Also Investing $1.0 Million in XCF Through Warrants Exercisable at $2.50 Per Share",
       "url": "/news/391868/xcf-global-nasdaq-safx-devvstream-and-southern-energy-renewables-amend-business-combination-agreement-increasing-xcf-shareholder-ownership-and-establishing-additional-capital-support-xcf-shareholder-gl-also-investing-10-million-in-xcf-through-warrants-exercisable-at-250-per-share",
       "source": "ACCESSWIRE",
@@ -9865,7 +9856,17 @@
         "SOXX",
         "SMH",
         "VOO",
-        "IVV"
+        "IVV",
+        "TLT"
+      ]
+    },
+    {
+      "time": "Sep-14",
+      "title": "Daily ETF Flows: Investors Scoop Up TLT",
+      "url": "https://finance.yahoo.com/m/31891aec-c6ff-37ef-828d-869e3a26d6f1/daily-etf-flows%3A-investors.html",
+      "source": "etf.com",
+      "tickers": [
+        "TLT"
       ]
     }
   ],
@@ -10586,5 +10587,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 211,
   "earnings_window_count": 46,
-  "overlay_at": "2026-09-15T03:43:42.081587-04:00"
+  "overlay_at": "2026-09-15T03:46:32.145663-04:00"
 }
