@@ -1,0 +1,274 @@
+{
+  "date": "2026-09-15",
+  "generated_at": "2026-09-15T05:55:21.621141-04:00",
+  "max_n": 8,
+  "routing": "Grok \u2192 DeepSeek",
+  "grok": true,
+  "deepseek_fallback": true,
+  "gemini": false,
+  "n_targets": 8,
+  "n_ok": 3,
+  "targets": [
+    {
+      "ticker": "CENX",
+      "role": "override_captain",
+      "why": "OVERRIDE card Aluminum"
+    },
+    {
+      "ticker": "CSTM",
+      "role": "override_captain",
+      "why": "OVERRIDE card Aluminum"
+    },
+    {
+      "ticker": "SLVM",
+      "role": "override_captain",
+      "why": "OVERRIDE card Paper & Paper Products"
+    },
+    {
+      "ticker": "NMAX",
+      "role": "override_captain",
+      "why": "OVERRIDE card Broadcasting"
+    },
+    {
+      "ticker": "FUBO",
+      "role": "override_captain",
+      "why": "OVERRIDE card Broadcasting"
+    },
+    {
+      "ticker": "KSS",
+      "role": "override_captain",
+      "why": "OVERRIDE card Department Stores"
+    },
+    {
+      "ticker": "AIN",
+      "role": "override_captain",
+      "why": "OVERRIDE card Textile Manufacturing"
+    },
+    {
+      "ticker": "MPC",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Refining & Marketing"
+    }
+  ],
+  "dossiers": [
+    {
+      "ticker": "CENX",
+      "role": "override_captain",
+      "why": "OVERRIDE card Aluminum",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 CENX"
+    },
+    {
+      "ticker": "CSTM",
+      "role": "override_captain",
+      "why": "OVERRIDE card Aluminum",
+      "net_signal": "Bullish",
+      "conviction": 26,
+      "search_backend": "deepseek_fallback",
+      "catalyst_stack": "Constellium's fundamental momentum is anchored by a record Q1 2026 on 2026-04-29 (segment Adjusted EBITDA of $359M, revenue up 24%, net income of $196M) and an even stronger Q2 2026 on 2026-07-29 (revenue $2,748M, Adjusted EBITDA $439M), with full-year 2026 Adjusted EBITDA guidance raised to $980M-$1.02B and leverage cut to 1.8x. On 2026-04-21 the company deepened its aerospace franchise via a multi-year Airbus agreement for aluminum alloy extrusions, including Airware aluminum-lithium, from Issoire and Montreuil-Juign\u00e9. Deleveraging continued on 2026-06-29 with the sale of the Changchun, China automotive structures joint venture, while a 2026-07-15 10-year renewable solar power agreement for German facilities supports cost and ESG positioning. Offsetting these positives, CSTM fell 4.5% to $25.99 on 2026-09-10 and dropped about 6% on 2026-09-15 as easing aluminum supply concerns pressured the stock, leaving the shares near the low end of their 52-week range despite a $37.20 consensus target.",
+      "key_assumption": "The bullish thesis assumes Constellium's record 2026 EBITDA and raised guidance are sustainable and that the September 2026 aluminum price weakness is a temporary supply-driven pullback rather than the start of a demand-led downcycle; if aluminum prices keep falling or auto/aerospace demand softens, the earnings-beat and guidance-raise catalysts would be invalidated.",
+      "n_pos": 7,
+      "n_neg": 8,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+          "event_date": "2026-07-29",
+          "headline": "Revenue climbed to $2,748 million and Adjusted EBITDA to $439 million in Q2 2026 as Constellium raised full-year guidance",
+          "weight": 10,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-04-21",
+          "headline": "entered a multi-year agreement with Airbus for the supply of aluminum alloy extrusions, reinforcing our role as a trusted supplier",
+          "weight": 10,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings guidance raise",
+          "event_date": "2026-07-29",
+          "headline": "raised full-year 2026 adjusted EBITDA guidance to $980 million-$1.02 billion while cutting leverage to 1.8x",
+          "weight": 9,
+          "confidence": 95
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Unfavorable commodity price move (higher input costs)",
+          "event_date": "2026-09-15",
+          "headline": "Aluminum price drop on eased supply concerns drives 6% CSTM decline",
+          "weight": 8,
+          "confidence": 75
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Strategic partnership/alliance",
+          "event_date": "2026-07-15",
+          "headline": "Constellium to Source Local Renewable Energy for its German Facilities",
+          "weight": 7,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Customer concentration expansion (existing customer deepens relationship)",
+          "event_date": "2026-04-21",
+          "headline": "multi-year agreement with Airbus for the supply of aluminum alloy extrusions, including its Airware aluminum-lithium solution",
+          "weight": 6,
+          "confidence": 95
+        }
+      ],
+      "error": null
+    },
+    {
+      "ticker": "SLVM",
+      "role": "override_captain",
+      "why": "OVERRIDE card Paper & Paper Products",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP2 SLVM"
+    },
+    {
+      "ticker": "NMAX",
+      "role": "override_captain",
+      "why": "OVERRIDE card Broadcasting",
+      "net_signal": "Strong Bullish",
+      "conviction": 70,
+      "search_backend": "deepseek_fallback",
+      "catalyst_stack": "On 2026-07-28, Newsmax entered an AI content partnership with Meta Platforms, giving Meta access to Newsmax's current and archived digital news content \u2014 a strategic alliance that monetizes its archive and validates its content library. On 2026-08-06, the FCC voted to end the 39% local TV station ownership cap, a regulatory greenlight that expands Newsmax's broadcast strategy, though on 2026-08-11 CEO Christopher Ruddy said the company is preparing a lawsuit over the cap vote, adding legal uncertainty. On 2026-09-15, Newsmax posted its first quarterly net profit as a public company, beating Q2 estimates with non-GAAP EPS of $0.02 and record revenue of $54.1M, a milestone that confirms operating leverage. With short float at 11.31% and days-to-cover at 6.65, the positive catalyst cluster (Meta deal, FCC ruling, first profit, guidance raise) creates squeeze potential, though the stock remains far below its SMA50 of $16.78 and SMA200 of $38.38.",
+      "key_assumption": "The Meta AI content partnership and FCC ownership-cap ruling translate into durable revenue and distribution expansion, and the Q2 2026 first-profit milestone is repeatable rather than a one-time accounting event.",
+      "n_pos": 7,
+      "n_neg": 3,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Regulatory approval (FDA, FCC, FTC clearance)",
+          "event_date": "2026-08-06",
+          "headline": "\"FCC Votes to End 39% Local TV Station Ownership Cap\"",
+          "weight": 10,
+          "confidence": 85
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+          "event_date": "2026-09-15",
+          "headline": "Newsmax posts first quarterly net profit as public company, beats Q2 estimates with non-GAAP EPS $0.02 and record revenue $54.1M",
+          "weight": 10,
+          "confidence": 75
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings guidance raise",
+          "event_date": "2026-03-27",
+          "headline": "\"Newsmax Stock Climbs After Revenue Estimate Beat And Full Year Guidance Rise\"",
+          "weight": 10,
+          "confidence": 80
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Analyst upgrade/PT increase",
+          "event_date": "2026-05-15",
+          "headline": "\"Newsmax Earnings Call: Strong Growth, Analyst Sees $20 Share\"",
+          "weight": 8,
+          "confidence": 75
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Strategic partnership/alliance",
+          "event_date": "2026-07-28",
+          "headline": "\"the Company has entered into an AI content partnership with Meta Platforms\"",
+          "weight": 7,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Operational milestone (e.g., first patient dosed, satellite commissioned)",
+          "event_date": "2026-09-15",
+          "headline": "Newsmax posts first quarterly net profit as public company, beats Q2 estimates with non-GAAP EPS $0.02 and record revenue $54.1M",
+          "weight": 7,
+          "confidence": 75
+        }
+      ],
+      "error": null
+    },
+    {
+      "ticker": "FUBO",
+      "role": "override_captain",
+      "why": "OVERRIDE card Broadcasting",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP2 FUBO"
+    },
+    {
+      "ticker": "KSS",
+      "role": "override_captain",
+      "why": "OVERRIDE card Department Stores",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 KSS"
+    },
+    {
+      "ticker": "AIN",
+      "role": "override_captain",
+      "why": "OVERRIDE card Textile Manufacturing",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP2 AIN"
+    },
+    {
+      "ticker": "MPC",
+      "role": "override_captain",
+      "why": "OVERRIDE card Oil & Gas Refining & Marketing",
+      "net_signal": "Bullish",
+      "conviction": 34,
+      "search_backend": "deepseek_fallback",
+      "catalyst_stack": "On 2026-08-04, Marathon Petroleum reported Q2 2026 net income of $5.1B ($17.73/diluted share) versus $1.2B a year earlier, with revenue of $52.0B beating the $40.9B consensus by $11.1B and EPS beating by $3.46, alongside $8.5B adjusted EBITDA and a 112% capture rate. On 2026-05-05, the company beat Q1 estimates on Iran war-driven refining margins and raised its equity buyback authorization by $5,000M to $55,100M, while on 2026-07-29 the board declared a $1.00/share quarterly dividend payable Sept. 10, 2026. On 2026-08-20, the City of Carson reached a $370M settlement with Marathon resolving a yearslong local tax dispute tied to its West Coast refinery, removing a legal overhang. On 2026-09-15, Raymond James lifted its price target to $445 from $350 amid higher oil prices following a Saudi pipeline shutdown, with U.S. refiner margins spiking to record highs on 2026-07-18 as fuel shortage concerns grew.",
+      "key_assumption": "The bull case rests on sustained wide crack spreads and tight refined-product markets (reinforced by the Saudi pipeline shutdown and record U.S. refiner margins) continuing to drive outsized earnings and cash returns, even as the stock trades near 52-week highs with RSI at 80.42 and a consensus price target ($351.65) below the current price ($397.77).",
+      "n_pos": 10,
+      "n_neg": 10,
+      "top_hits": [
+        {
+          "type": "positive",
+          "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+          "event_date": "2026-08-04",
+          "headline": "Marathon Petroleum reported Q2 2026 net income attributable to MPC of $5.1 billion, or $17.73 per diluted share, versus $1.2 billion, or $3.96 per diluted share",
+          "weight": 9,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Favorable court ruling/patent grant",
+          "event_date": "2026-08-20",
+          "headline": "After years of legal dispute over local tax payments, Carson and Marathon Petroleum have reached a settlement in which the refinery will pay $370 million to the",
+          "weight": 9,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Commodity price move favorable to the company",
+          "event_date": "2026-07-18",
+          "headline": "U.S. refiner margins spiked to record highs this week as fuel shortage concerns grow.",
+          "weight": 8,
+          "confidence": 75
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Geopolitical event that boosts sector (e.g., defense spending surge)",
+          "event_date": "2026-05-05",
+          "headline": "Marathon Petroleum profit beats estimates as Iran war boosts refining margins.",
+          "weight": 8,
+          "confidence": 90
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Share repurchase program/increased dividend",
+          "event_date": "2026-05-05",
+          "headline": "The company increased its plan by $5,000 million, thereby bringing the total authorization to $55,100 million.",
+          "weight": 6,
+          "confidence": 90
+        },
+        {
+          "type": "negative",
+          "taxonomy": "Insider selling (especially by CEO/CFO, or clustered sales)",
+          "event_date": "2026-08-19",
+          "headline": "Marathon Petroleum (NYSE: MPC) CLO exercises options, sells stock under 10b5-1 plan; VP sells 570 shares; SVP sells near $376; EVP exercises options and sells 6",
+          "weight": 6,
+          "confidence": 80
+        }
+      ],
+      "error": null
+    }
+  ]
+}
