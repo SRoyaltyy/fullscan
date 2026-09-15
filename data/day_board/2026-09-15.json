@@ -1,10 +1,9 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T04:31:36.784659-04:00",
+  "generated_at": "2026-09-15T04:32:37.494355-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-09-15_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-15/_board.json` \u2014 missing"
   ],
   "counts": {
@@ -140,7 +139,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 5,
+      "n_req_ok": 6,
       "n_req": 20,
       "n_opt_ok": 2,
       "n_opt": 3,
@@ -240,9 +239,9 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-09-15_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 12880
         },
         {
           "key": "board",
@@ -260,7 +259,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7270
+          "size": 7267
         },
         {
           "key": "status",
@@ -380,8 +379,13 @@
           "size": 0
         }
       ],
-      "said": "news 5 items",
+      "said": "general DOWN  -6.215 \u00b7 news 5 items",
       "bullets": [
+        "bad: fresh Saudi pipeline outage + Houthi escalation, Brent $108",
+        "bad: China Aug retail +0.4% / FAI -7.2% miss",
+        "bad: FOMC Sep 16 hike odds ~81%",
+        "good: ASML sold out of 2027 EUV capacity",
+        "good: software rotation (NOW/INTU/ADBE/CRM) surges",
         "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
         "Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year",
         "Another rate hike, just for insurance: Five questions for the ECB",
@@ -517,9 +521,9 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-09-15_predict.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 12880
         },
         {
           "key": "in_board",
@@ -700,7 +704,18 @@
     "buy_1d": [],
     "sell_1d": [],
     "flatten": {},
-    "general": {},
+    "general": {
+      "said": "DOWN  -6.215",
+      "bullets": [
+        "bad: fresh Saudi pipeline outage + Houthi escalation, Brent $108",
+        "bad: China Aug retail +0.4% / FAI -7.2% miss",
+        "bad: FOMC Sep 16 hike odds ~81%",
+        "good: ASML sold out of 2027 EUV capacity",
+        "good: software rotation (NOW/INTU/ADBE/CRM) surges"
+      ],
+      "score": "-6.215",
+      "direction": "down"
+    },
     "sectors": {},
     "news": {
       "said": "5 items",
@@ -1680,6 +1695,24 @@
         }
       ],
       "preview": "# News Judge \u2014 2026-09-15 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T04:32:36.783266-04:00",
+      "files": [
+        {
+          "path": "01_daily/general/2026-09-15_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 12880,
+          "preview": "# Premarket Prediction \u2014 2026-09-15\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -6.215 (uncertainty multiplier \u00d71.1) | confidence 0.749\n>\n> **Good news vs bad news:** good +0 pts vs bad -14.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - ASML sold out of 2027 EUV capacity\n> - software rotation (NOW/INTU/ADBE/CRM) surges\n> - HY spread tight 2.65\n> - Adobe record Q3 + FY26 raise\n> - gold-miner bid (Barrick +8.2%)\n>\n> **Bad news driving this:**\n> - fresh Saudi pipeline outage + Houthi escalation, Brent $108\n> - China Aug retail +0.4% / FAI -7.2% miss\n> - FOMC Sep 16 hike odds ~81%\n> - VIX backwardation 1.142\n> - BAC soft Q3 outlook -5%\n>\n> **market uncertainty: **elevated** | VIX 17.87 | policy-uncertainty index 395.54 (1d +189.93)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = "
+        }
+      ],
+      "preview": "# Premarket Prediction \u2014 2026-09-15\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -6.215 (uncertainty multiplier \u00d71.1) | confidence 0.749\n>\n> **Good news vs bad news:** good +0 pts vs bad -14.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - ASML sold out of 2027 EUV capacity\n> - software rotation (NOW/INTU/ADBE/CRM) surges\n> - HY spread tight 2.65\n> - Adobe record Q3 + FY26 raise\n> - gold-miner bid (Barrick +8.2%)\n>\n> **Bad news driving this:**\n> - fresh Saudi pipeline outage + Houthi escalation, Brent $108\n> - China Aug retail +0.4% / FAI -7.2% miss\n> - FOMC Sep 16 hike odds ~81%\n> - VIX backwardation 1.142\n> - BAC soft Q3 outlook -5%\n>\n> **market uncertainty: **elevated** | VIX 17.87 | policy-uncertainty index 395.54 (1d +189.93)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = "
     }
   ],
   "href": {

@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T04:31:36.784659-04:00",
+  "generated_at": "2026-09-15T04:32:37.494355-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -12,34 +12,20 @@
   "buy_1d": [],
   "sell_1d": [],
   "flatten": {},
-  "general": {},
+  "general": {
+    "said": "DOWN  -6.215",
+    "bullets": [
+      "bad: fresh Saudi pipeline outage + Houthi escalation, Brent $108",
+      "bad: China Aug retail +0.4% / FAI -7.2% miss",
+      "bad: FOMC Sep 16 hike odds ~81%",
+      "good: ASML sold out of 2027 EUV capacity",
+      "good: software rotation (NOW/INTU/ADBE/CRM) surges"
+    ],
+    "score": "-6.215",
+    "direction": "down"
+  },
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T04:25:19.140864-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-15_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 269893,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-15_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 17316,
-          "preview": "# MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T04:25:19.101684-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T04:25:19.101684-04:00"
-    },
     {
       "key": "universe",
       "title": "Universe labels",
@@ -200,6 +186,24 @@
         }
       ],
       "preview": "# News Judge \u2014 2026-09-15 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T04:32:36.783266-04:00",
+      "files": [
+        {
+          "path": "01_daily/general/2026-09-15_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 12880,
+          "preview": "# Premarket Prediction \u2014 2026-09-15\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -6.215 (uncertainty multiplier \u00d71.1) | confidence 0.749\n>\n> **Good news vs bad news:** good +0 pts vs bad -14.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - ASML sold out of 2027 EUV capacity\n> - software rotation (NOW/INTU/ADBE/CRM) surges\n> - HY spread tight 2.65\n> - Adobe record Q3 + FY26 raise\n> - gold-miner bid (Barrick +8.2%)\n>\n> **Bad news driving this:**\n> - fresh Saudi pipeline outage + Houthi escalation, Brent $108\n> - China Aug retail +0.4% / FAI -7.2% miss\n> - FOMC Sep 16 hike odds ~81%\n> - VIX backwardation 1.142\n> - BAC soft Q3 outlook -5%\n>\n> **market uncertainty: **elevated** | VIX 17.87 | policy-uncertainty index 395.54 (1d +189.93)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = "
+        }
+      ],
+      "preview": "# Premarket Prediction \u2014 2026-09-15\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -6.215 (uncertainty multiplier \u00d71.1) | confidence 0.749\n>\n> **Good news vs bad news:** good +0 pts vs bad -14.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - ASML sold out of 2027 EUV capacity\n> - software rotation (NOW/INTU/ADBE/CRM) surges\n> - HY spread tight 2.65\n> - Adobe record Q3 + FY26 raise\n> - gold-miner bid (Barrick +8.2%)\n>\n> **Bad news driving this:**\n> - fresh Saudi pipeline outage + Houthi escalation, Brent $108\n> - China Aug retail +0.4% / FAI -7.2% miss\n> - FOMC Sep 16 hike odds ~81%\n> - VIX backwardation 1.142\n> - BAC soft Q3 outlook -5%\n>\n> **market uncertainty: **elevated** | VIX 17.87 | policy-uncertainty index 395.54 (1d +189.93)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = "
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
