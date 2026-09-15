@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T12:47:28.076337-04:00",
+  "generated_at": "2026-09-15T12:56:32.754031-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -47,7 +47,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 268950
+          "size": 269893
         },
         {
           "key": "heat_md",
@@ -56,7 +56,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 16932
+          "size": 16943
         }
       ],
       "said": "tables on disk",
@@ -89,7 +89,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11480
+          "size": 11332
         },
         {
           "key": "market_digest_json",
@@ -98,7 +98,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 7656
+          "size": 6662
         },
         {
           "key": "market_digest_md",
@@ -107,7 +107,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 3409
+          "size": 2949
         },
         {
           "key": "market_digest_close_json",
@@ -158,7 +158,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 7656
+          "size": 6662
         },
         {
           "key": "in_baseline",
@@ -176,7 +176,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 268950
+          "size": 269893
         },
         {
           "key": "parsed",
@@ -266,7 +266,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7134
+          "size": 7708
         },
         {
           "key": "review",
@@ -274,8 +274,8 @@
           "path": "01_daily/2026-09-15_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=False Grok returned an empty review",
-          "size": 309
+          "reason": "ok=False Only 5 of 11 sector essays exist (communication_services, consumer_cyclical, energy, financial, healthcare) \u2014 6 missing,",
+          "size": 1631
         },
         {
           "key": "sector_basic_materials",
@@ -417,14 +417,14 @@
           "path": "01_daily/weather/2026-09-15_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10590 vix=falling yields=flat",
-          "size": 10590
+          "reason": "sectors=11 bytes=10566 vix=falling yields=flat",
+          "size": 10566
         }
       ],
       "said": "favorable 1 \u00b7 hostile 7 \u00b7 neutral 3",
       "bullets": [
-        "hostile: Basic Materials, Consumer Cyclical, Consumer Defensive, Financial, Industrials, Real Estate, Utilities",
-        "events bull 4 / bear 14"
+        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Financial, Real Estate, Utilities",
+        "events bull 6 / bear 21"
       ]
     },
     {
@@ -454,12 +454,12 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=2653",
-          "size": 8482323
+          "size": 8469854
         }
       ],
       "said": "25 rows",
       "bullets": [
-        "SM, WDS, PBR, CDNA, SFL"
+        "SM, WDS, PBR, CDNA, CXW"
       ]
     },
     {
@@ -566,8 +566,8 @@
           "path": "01_daily/weather/2026-09-15_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10590 vix=falling yields=flat",
-          "size": 10590
+          "reason": "sectors=11 bytes=10566 vix=falling yields=flat",
+          "size": 10566
         },
         {
           "key": "in_ab",
@@ -576,7 +576,7 @@
           "role": "input",
           "status": "OK",
           "reason": "rows=2653",
-          "size": 8482323
+          "size": 8469854
         },
         {
           "key": "join",
@@ -585,7 +585,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5897",
-          "size": 2260143
+          "size": 2256902
         },
         {
           "key": "peers",
@@ -594,7 +594,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5111",
-          "size": 828889
+          "size": 822444
         },
         {
           "key": "book_json",
@@ -639,12 +639,12 @@
           "role": "optional",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-09-15)",
-          "size": 5954895
+          "size": 6103082
         }
       ],
-      "said": "215 rows",
+      "said": "217 rows",
       "bullets": [
-        "RRC, AR, DVN, PBR, EXE"
+        "DVN, PR, PBR, EQT, PBR-A"
       ]
     },
     {
@@ -674,7 +674,7 @@
           "role": "required",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-09-15)",
-          "size": 5954895
+          "size": 6103082
         },
         {
           "key": "paper",
@@ -761,10 +761,10 @@
       }
     ],
     "flatten": {
-      "said": "0 priced buys \u00b7 cash $107,448.18",
+      "said": "0 priced buys \u00b7 cash $108,616.66",
       "bullets": [
         "0 priced buys",
-        "cash $107,448.18"
+        "cash $108,616.66"
       ]
     },
     "general": {
@@ -809,37 +809,12 @@
     "weather": {
       "said": "favorable 1 \u00b7 hostile 7 \u00b7 neutral 3",
       "bullets": [
-        "hostile: Basic Materials, Consumer Cyclical, Consumer Defensive, Financial, Industrials, Real Estate, Utilities",
-        "events bull 4 / bear 14"
+        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Financial, Real Estate, Utilities",
+        "events bull 6 / bear 21"
       ]
     }
   },
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T08:15:41.106526-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-15_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 87526,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-09-15_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11377,
-          "preview": "# Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T07:31:21.815244-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T07:31:21.815244-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -3563,6 +3538,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T12:47:26.727438-04:00"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T12:56:31.299670-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 87526,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11377,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T07:31:21.815244-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T07:31:21.815244-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
     }
   ],
   "href": {
