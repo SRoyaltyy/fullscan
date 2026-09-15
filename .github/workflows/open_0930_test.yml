@@ -24,6 +24,7 @@ on:
       - "src/day_board.py"
       - "src/book_suggestions.py"
       - "src/test_book_suggestions.py"
+      - "src/overlay_live_strip.py"
       - "scripts/publish_open_pack.sh"
   push:
     branches: [main]

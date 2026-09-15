@@ -913,7 +913,6 @@ def write(date: str, payload: dict | None = None) -> list[Path]:
         DAY / f"{date}_strategy_tickets.json",
         FM_DIR / "strategy_tickets.json",
         DASH_FM / "strategy_tickets.json",
-        DASH_FM / "today_strategies.json",
     ]
     wrote = []
     for p in paths:
@@ -972,13 +971,15 @@ def write(date: str, payload: dict | None = None) -> list[Path]:
             for k, v in (payload.get("strategies") or {}).items()
         },
     }
-    slim_path = DAY / "today_strategies.json"
-    slim_path.write_text(json.dumps(slim, indent=2), encoding="utf-8")
-    wrote.append(slim_path)
-    dash_slim = ROOT / "dashboard" / "today_strategies.json"
-    dash_slim.parent.mkdir(parents=True, exist_ok=True)
-    dash_slim.write_text(json.dumps(slim, indent=2), encoding="utf-8")
-    wrote.append(dash_slim)
+    slim_text = json.dumps(slim, indent=2)
+    for slim_path in (
+        DAY / "today_strategies.json",
+        ROOT / "dashboard" / "today_strategies.json",
+        DASH_FM / "today_strategies.json",
+    ):
+        slim_path.parent.mkdir(parents=True, exist_ok=True)
+        slim_path.write_text(slim_text, encoding="utf-8")
+        wrote.append(slim_path)
     try:
         from . import hard_red_sit_research as hrs
         hrs.write_per_sleeve(hrs.per_sleeve_from_tickets(payload), write=True)

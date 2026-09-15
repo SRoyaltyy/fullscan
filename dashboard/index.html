@@ -1033,23 +1033,40 @@ document.getElementById('fees').textContent=
       return r.json();
     });
   }
-  function firstOk(urls){
+  function ticketsLookLive(st){
+    if(!st || typeof st !== "object") return false;
+    var q = st.quote || {};
+    return !!(q.after_open && String(q.src || "").indexOf("elite_live") === 0);
+  }
+  function stripLooksLive(d){
+    if(!d || typeof d !== "object") return false;
+    var q = d.quote || {};
+    var row = (d.buy_1d && d.buy_1d[0]) || {};
+    var src = String(row.px_src || q.src || "");
+    return !!(row.px != null && src.indexOf("elite_live") === 0);
+  }
+  function firstOk(urls, ok){
     var i = 0;
+    var last = {};
     function next(){
-      if(i >= urls.length) return Promise.resolve({});
-      return getJson(urls[i++]).catch(next);
+      if(i >= urls.length) return Promise.resolve(last);
+      return getJson(urls[i++]).then(function(d){
+        last = d;
+        if(!ok || ok(d)) return d;
+        return next();
+      }).catch(next);
     }
     return next();
   }
   function load(){
     Promise.all([
-      firstOk(["today.json", "../day-board/today.json", TODAY]),
+      firstOk(["today.json", "../day-board/today.json", TODAY], afterBell() ? stripLooksLive : null),
       firstOk([
         "today_strategies.json",
         "factor-mine/today_strategies.json",
         "../factor-mine/today_strategies.json",
         STRAT
-      ]),
+      ], afterBell() ? ticketsLookLive : null),
       firstOk(["latest_suggestions.json", SUG])
     ]).then(function(arr){
       var today = arr[0] || {}, strat = arr[1] || {}, sug = arr[2] || {};

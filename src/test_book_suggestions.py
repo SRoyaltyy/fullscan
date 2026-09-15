@@ -114,6 +114,8 @@ def test_factor_mine_template_paints_every_strategy() -> None:
     assert "loadLiveDay" in html
     assert "today_strategies.json" in html
     assert "function firstOk" in html
+    assert "function ticketsLookLive" in html
+    assert "function stripLooksLive" in html
     assert "function ticketRows" in html
     assert "function liveTicketsAreLive" in html
     assert "liveDate===date && liveTicketsAreLive()" in html
@@ -230,6 +232,9 @@ def test_open_pack_wired_when_skip_if_good() -> None:
     assert "factor-mine/today_strategies.json" in book_suggestions._POLLER_JS
     assert "afterBell() ? 20000 : 60000" in book_suggestions._POLLER_JS
     assert "function firstOk" in book_suggestions._POLLER_JS
+    assert "function ticketsLookLive" in book_suggestions._POLLER_JS
+    assert "function stripLooksLive" in book_suggestions._POLLER_JS
+    assert "src.overlay_live_strip" in dep
     assert "stock_book_1d" in book_suggestions._POLLER_JS
     assert "strat.buy_1d && strat.buy_1d.length" in book_suggestions._POLLER_JS
     assert 'cron: "32 13 * * 1-5"' in orch
@@ -607,6 +612,57 @@ def test_publish_keeps_elite_when_rebuild_is_session_export() -> None:
         assert out["buy_1d"] == ["AVAH"]
 
 
+def test_overlay_prefers_quoted_tickets_and_restamps_score_only_strip() -> None:
+    """Pages must not publish stripped factor-mine tickets over the slim."""
+    from src import overlay_live_strip as ols
+
+    with tempfile.TemporaryDirectory() as d:
+        repo = Path(d)
+        dest = repo / "pages_out"
+        day = repo / "data" / "day_board"
+        fm = repo / "dashboard" / "factor-mine"
+        day.mkdir(parents=True)
+        fm.mkdir(parents=True)
+        (day / "today_strategies.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "quote": {"src": "elite_live", "after_open": True},
+            "buy_1d": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+            "sell_1d": [{"ticker": "OKLO", "px": 36.14, "px_src": "elite_live"}],
+            "strategies": {"stock_book_1d": {
+                "buy": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+                "sell": [{"ticker": "OKLO", "px": 36.14, "px_src": "elite_live"}],
+            }},
+        }), encoding="utf-8")
+        (fm / "today_strategies.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "n": 327,
+            "families": ["excel"],
+            "strategies": {"stock_book_1d": {
+                "buy": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+            }},
+        }), encoding="utf-8")
+        (day / "today.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "buy_1d": [{"ticker": "MTCH", "score": 0.3}],
+        }), encoding="utf-8")
+        (fm / "today.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "buy_1d": [{"ticker": "MPC", "score": 0.9}],
+        }), encoding="utf-8")
+        wrote = ols.overlay(dest, repo=repo)
+        assert wrote
+        for rel in ("", "factor-mine", "strategy-board", "day-board"):
+            base = dest / rel if rel else dest
+            tickets = json.loads((base / "today_strategies.json").read_text())
+            strip = json.loads((base / "today.json").read_text())
+            assert tickets["quote"]["src"] == "elite_live"
+            assert tickets["buy_1d"][0]["px"] == 43.04
+            assert "families" not in tickets
+            assert strip["buy_1d"][0]["ticker"] == "MTCH"
+            assert strip["buy_1d"][0]["px"] == 43.04
+            assert strip["quote"]["src"] == "elite_live"
+
+
 def main() -> None:
     test_suggestions_from_book_lists_1d_names()
     test_write_skips_degraded_book()
@@ -627,6 +683,7 @@ def main() -> None:
     test_publish_keeps_elite_1d_when_tickets_rebuild_fails()
     test_publish_keeps_elite_when_rebuild_is_session_export()
     test_day_board_write_json_keeps_elite_when_news_parse_lands()
+    test_overlay_prefers_quoted_tickets_and_restamps_score_only_strip()
     print("ok")
 
 
