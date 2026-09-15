@@ -2,86 +2,72 @@
 
 
 
-**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (136,176 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
+**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (136,178 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
 
 
 
-**Step 1 — Research.** The model wanted to know: *"10-year Treasury yield 5% utilities XLU selloff September 15 2026"* → got 6 results (via gnews_rss)
+**Step 1 — Research.** The model wanted to know: *"10-year Treasury yield 5% September 15 2026 bond selloff"* → got 6 results (via ddg)
 
-  - After Years of Watching Volatility Spikes These Are the 3 Utility ETFs Built for Investors Who Want Income Without Sleepless Nights - 247wallst.com (https://news.google.com/rss/articles/CBMihgJBVV95cUxPQkl2cWZ0dVJqZUVtZy1IUWZydnFYSzZjMFZBNXloTDZuVmxTSjN4bHlUYXJ3YWp5SjlYZVFCT01HeXJndUpFN2xlZlNrZmFEQ2duZFgzV2xDM3J1MllnTDJVbEgzVVB4SmtnVHBsUnBRbFJLdldBY0hTQXU0SDFuaXM2OVhSYWZpWXUtaDNtWG95bXRwdkRMNkE2RkJQdldmY0pqaGFBZGttdFl5d0h0elA4ZEJxczBJeHlWMDBrbEl6VU94clhMdkFnbElnUjUzLXhvN2FsSjNvMm1BY1F2ZzJRSFV1dC1VenUweG9GRjgxTjNQMEZNMWpPTUs5R2xzTDRFN0ZR?oc=5)
+  - Treasury yields are above 5%. Here's what it means for stocks (https://www.cnbc.com/2026/09/15/treasury-yields-stocks-investors.html)
 
-  - Stock Market News for Sep 15, 2026 - Yahoo Finance UK (https://news.google.com/rss/articles/CBMifkFVX3lxTE5XcTVFcl85QmoxUm9OSGVhZ0xSYm82RmtpRnRyR1pCb0xwMzRKMkozZWhBWm5oLWdlM0ViendNTlFtMDl3OU9KTndKTkw3RU5DeTREQUFKNm0yclZoV1NCS1dUeUcyRkJkSFN2emFINkludU92VElkcU0yd0RWZw?oc=5)
+  - Global bond yields hit fresh highs, raising stakes for big ... (https://www.reuters.com/world/asia-pacific/bond-selloff-drives-us-benchmark-beyond-5-stocks-rattled-2026-09-15/)
 
-  - Utilities flash oversold signal as Treasury yields dim dividend appeal (XLU:NYSEARCA) - Seeking Alpha (https://news.google.com/rss/articles/CBMirAFBVV95cUxQWFQ2UThWS0REUmFxTDZINWFGQ19jNXlvZklvSVlocGtDTTdoeU9Ia0daWFlGLUVfak9GM09TaGtFMmlmRDg5N1ZLRGk4NlVMSjdFZzJSdE51dnVjVHpxRzNodEF0eV9Na0NPMnJSbFZSM1pQMENHNE9hQUpIN3pMcmJkNVgyakFnVnJ0bFhfYTBSTFM1MjN4Zkd5SWVZak9DUzctVzlaSTZCTlhH?oc=5)
+  - US 10-year Treasury yield breaches 5% as global bond sell-off ... (https://www.euronews.com/business/2026/09/15/us-10-year-treasury-yield-breaches-5-as-global-bond-sell-off-deepens)
 
-**Step 2 — Research.** The model wanted to know: *"utilities sector data center power demand news September 2026"* → got 6 results (via gnews_rss)
+**Step 2 — Research.** The model wanted to know: *"utilities XLU stocks September 15 2026 rate sensitive selloff"* → got 3 results (via gnews_rss)
 
-  - Power and utilities M&A 2026 midyear update: Deal activity reinforces scale, speed, and scarcity - Deloitte (https://news.google.com/rss/articles/CBMizwFBVV95cUxQSFBXRHVMOVpjU1NoT0oxRVhlaTZyRFhlUTBZbGZhcDNXcE1pNFFPUThPRXpSQ3V4ZUIxSVcwU3ZTZVBtYkY1NFVvY0VQR0dSeDNiTlpQTkZjcXk5TzFmU1FRcXJiN3k0M2hTNDRZUk5NaWVSTm1OX2RDSDBOUTdEYTUtY3B2emdQaWdrODdFQXRNakVQVXpWcVJGTVl0bGpTTld4T3BuT0F1RXpLZE1RcUdTTWVuaGNhOU1yMHFYR0dVbVVVVUhPNDdfa3RCOXM?oc=5)
+  - Oil Prices Jump After U.S. Strike; Stocks Slip as Energy Outperforms Broader Market - TechStock² (https://news.google.com/rss/articles/CBMihwFBVV95cUxNYlN4SFo0ZEZJbm1sNTVxMDI5UjNyUldsUndMUzdKNW5DeWN0Z1BsM0Faa1hpOWpZclR6WDc3c1Qwb3UzclJrUElYcFAzdTFVYU9MZE9oNGNhekZPdU9yc0pZc2NtN05HLUFwajQwMWJMN2Ffal9LUkZRQ1JXb01tUDBZaXhnZVU?oc=5)
 
-  - US Utilities Outlook: AI Power Demand Meets Grid Investment - Morningstar (https://news.google.com/rss/articles/CBMingFBVV95cUxNQ21ieEpvTjFPYUxuZzZiTFpWSlRONHBFVlJwdDMzRVdXS2xGREUyd1ZqdGhaNjRnMV9WaGd4T1VJUXhuTzdMYXNubjNVNm9DdWE2VElmN2dVRWxXT1ZMMzNqalpUYnZaM2haOU1XUXRXOE9OUjZPLXRzOFBSSTVMQ3JZd3ZiQkdLekJPZnctc1FqNFdWZmhIbGk1M29ZQQ?oc=5)
+  - FUTY Delivers 64% in Five Years While Charging Investors Next to Nothing - 247wallst.com (https://news.google.com/rss/articles/CBMitgFBVV95cUxPQUcwekg0UWN3SGFUN19EYjFYM0Zfc1J1RjJfM1gxcF9GMnYyUGpqdGtfUjlJWVpaVFdtcWd2T2ZNWHVWcUZxWlFXWDhqcXF1YkpGeHNPWm9VWHNWLXNwSk8zZ1YzZnVXRTFWZ3JzXzEzWU9naEstM3JsVkhPZ1JWdFFWUTE3RU5oQzhKV3J6b2dGZ1FFQ3hjMUxuRFRMVzI2V24tUTRQa1NidVRWMDU2N1FfRkx5dw?oc=5)
 
-  - Texas' halt on powering data centers reflects US reckoning over 'ghost' demand - Reuters (https://news.google.com/rss/articles/CBMiuAFBVV95cUxNX0JFMjBfWUxIY3p0OFNoc09iVWtIcXJOWkI4M2tkVFVFdkZ6bHZMeTJJLWc1UDZCVXNhbWc3MDF4QVBmaEREeWpoOHRJZTlad19NcGxBRFlVRmVpTFdSNDdnOEszUG43dW1VSUhSb0g0ekxOcUZadzY5dEdxM2ZhRHdPbTdzRnVHdWNXZHVvX25RN0c4WDJnSDN0eGNlTXR0Rl9HZllhU0RzUzdyaXZ5dWVCVk9oQk9v?oc=5)
+  - VPU Is Up 7% While the S&P 500 Falls, and the Data Center Story Makes It More Compelling - 247wallst.com (https://news.google.com/rss/articles/CBMiyAFBVV95cUxOcUFRczZQZHExVFktMnlaNkV3allWXzRCUnU2Tm1ia01vSG84enNjYXhoZmRFNG1yTElGMkZkcmdBTUlydGhMcnU5NkZfQW0xblowSXpDUzZoSTRMUkk1Yk04YTFBX25xTVBiX0pGTE9jUjE5eWVCOUtjRDZwb08yTENIUFFRY203Nk9YcURhT2tVVnc4YXZ6NG1KYlFXel9rajZmRnBXYWZnc1kyYi05aHJaeWxMOEgwU2dDZk4xY0hjTlkzU3c5OQ?oc=5)
 
-**Step 4 — Research.** The model wanted to know: *"XLU utilities ETF flows outflows September 2026 rate case"* → got 1 results (via gnews_rss)
+**Step 4 — Research.** The model wanted to know: *"utilities sector rotation defensive September 2026 data center power demand"* → got 6 results (via gnews_rss)
+
+  - Utilities stocks show early recovery as AI power demand grows - investingLive (https://news.google.com/rss/articles/CBMimwFBVV95cUxPVDFBbVdHdldUZlFkeHRBcXhWTHdLQmlwY1IwUmdoMjdSYmNWcUgtbDNSN3NrWGZpSGxZQlM5MHhzUEZCcWFXTjZWaUFtNlNSeGRzNG81TFJHQjlWS0c1TVphaG9yRVk0b1Rsb2lzNGMxVXNoTWgyVUlZU3h0ZF9SZG8zUEp0X3VTeF9aMURzdktJTUZfQloxY3o3cw?oc=5)
+
+  - Fortis Inc. offers a 3.40% yield—but can its stable cash flows keep rewarding income investors for the long haul? - kalkine.ca (https://news.google.com/rss/articles/CBMi2gFBVV95cUxPaV94UlZlNHVCLXMtNTBlWC14cklZLXN5QUhDdkp2bnlhbDYwNC1RdGxfLWZtRWtzVXJKLTFNeTdIRGJtZUJXZnNBMExlTGdCSGtTdHg1ODR2NU5pQnRmaHBiMnlTSnU2UVVndlYzcmJNY21LZTFfQ01tSXhGSGh6VTU1VXA3MmdzM0xYWF9lcy1welJEZzh2WjlrMzhHM09CX0RtYWVDOTN6MUJ1RklTSmNzM2dMeXc5SDlra1lCaVhfWW90RmZ1ZEQwZzFTbWlpN2RuZTdZSk9MZw?oc=5)
+
+  - Why is Southern Company (NYSE:SO) stock in focus today? - Kalkine Media (https://news.google.com/rss/articles/CBMimgFBVV95cUxQM0J4ZldTN1Q2T0JNRVFXdGVNM19yQ3VDelJmc3hFOHdKbkZleWc5elpOcERfZUQ0ZDFpZWJneUIwM21fUU1BXzhOUVBnakpFc1ZPQV82NzU0LVltT1B0alFYY3FMYUxjOW1sN1pyWGNsYXB6OGNLVEVfSlFPNWctMHdmZkwzQkE1dXhtTVBGZ2FRdk5KNS1tUVZn?oc=5)
+
+**Step 5 — Research.** The model wanted to know: *"FOMC September 16 2026 rate hike odds Warsh dot plot"* → got 6 results (via gnews_rss)
+
+  - Fed to hold rates steady in rest of 2026; rising number of analysts see at least one hike: Reuters poll - Reuters (https://news.google.com/rss/articles/CBMiugFBVV95cUxOZ0NreUFoTnFxX3ZzQnd3YU9FNFVkQmhfZlBrSVBUUm12Q0lCckxRTHdWcUVHbmJpcDZKbVhNZG5RektYQlpqaUZGMjl2TnJ0amhPMGJBWnB6OG9FVTB5dVJPTlc1ZjJaa2djUl9HR3VhYzIxODJjVEx1NUswdkVkblYxNVNSY1dYWlpUdzlEQU9UNTNzaUtVWXVtdXljVEUzSnVOQTV2bTJHSXN6Q2E3U0pzcVk5U19qUmc?oc=5)
+
+  - Kevin Warsh says there's still 'work to do' to fight inflation. Will the Fed hike rates at the September meeting? - Chase Bank (https://news.google.com/rss/articles/CBMi_AFBVV95cUxNdDFtUEd3b2lwSWhMTXNrODYwb1N5SThwZG5TYmV0bVpaTV9taVZJcTFmSTVLZUQtUDNRZmNzbzFyUENabENrbkNhZXNOMEZvalBZQmRrbjliN3VWTnlYZXZGSmN4WDhvRHNUN2k3RlFPYmdIUzF3WVprd0p3SUFpT1JzZDgtcGdHWFN3UE50TXByXzAxVGp3U0xoVldWVGdvT2E0amxjeFBxZHUwWno0MVVnVHJGbU8xeVBVRWFpSkEyc3p4R0xPcmZNOE9ZY3p6c05TRHFUUFV6N2VMV3pzY1NoQWtMdXRkVjhqOElDTGVaSVZmeVZLejIxb3Q?oc=5)
+
+  - Polymarket Puts Fed ‘No Change’ Odds at 18% as September Meeting Nears - tech-insider.org (https://news.google.com/rss/articles/CBMic0FVX3lxTE1IbEdtbkU5dXl6akY5MnYyRDdKY2ZNZmZpT0d0Y2tGYXlyOGhybDhFUmNBLXQ2cDRqTW8wM3FwVklZSXpiLV9SZDA4WTNfOW9EZDFITTN2TEVwYkhEZW1ha2ZkcldIWTlfM0I1N2NkVXJ6Qnc?oc=5)
+
+**Step 7 — Research.** The model wanted to know: *"XLU utilities ETF flows outflows September 2026"* → got 5 results (via gnews_rss)
+
+  - 09/08/2026 ValuEngine Weekly Commentary: Advancing Nuclear Energy and Evaluating Its Current Place within Dynamic Asset Strategies. CCJ - The Globe and Mail (https://news.google.com/rss/articles/CBMiugJBVV95cUxPUHE0V0FvUEpwQmN0TnhaWDdkSGdrRkxQTndDUFc4cm9GOS1vbURhNXQtenhLZVFLV08ydWZiY1YzbTZYMkZweVpvUm9nbkU3Mm1Hc2Nsc1VDMW1McVk5Z3BWUGViSjhFS2N3MEY0V2o0RHJnY2o2eFRfeHV6YWEzUU81eWZUQmt6aHdNTzlEbEpFc215UnZQLWpaY3FCYUVfZ2hrbFNpemg3cDhIUlR6QVFnWW1vUmQ0b1lMeDdsd3RjcEQ4ckZVYzNmTmVHTTJ4LXRibVpUVlRud3RBX281a1BRSHlHYi1nVnYyYW1ZVWZhS1RjZHZVQmlrVmF4Q0o4ZHpUbXV6M1p5cDlUaGVFdk81YW0xTlE0UnBMZ0lFMmpoV2tHNXNkZHdyc0x1UlJxT19Hd1oyUDZaQQ?oc=5)
 
   - Fed Rate Hike Fears: Rippling Through ETF Flows - ETF Database (https://news.google.com/rss/articles/CBMihAFBVV95cUxNQncyYVRDcFhUTDhxMXlnY0lReEtQWWRhOWNKTU9JX1Z3WklZMUo3alUwR29keDNUQURHenBsQTRMQS1fOFpLeXJpSHZjamEzUUpNbFctaWdKVlNKYllJcjdZaW5BRXNFOWpxZFJfTWNScmFjOTRpVjBEM0tiaFB2ZUt4dXA?oc=5)
 
-**Step 5 — Research.** The model wanted to know: *"FOMC September 16 2026 Warsh rate hike odds CME FedWatch"* → got 6 results (via ddg)
+  - ETF Fund Flows as of April 28, 2026 - ETF.com (https://news.google.com/rss/articles/CBMifkFVX3lxTE9wUTdCM2JCdmxCc2diUk1KdzgwcS1xOTZlTXpOYXdEV1dUTjMzT3JWMzk4aHc5WjJVaUplODVnZnNHOGFRUDc2OEx6aVdLUWVNZ19FVGpmLUs5cDQ2T21qMUI0QzBNUjg0dFJVRXRyQ015MG5QaGRrbElJeVRjZw?oc=5)
 
-  - FOMC September 2026 Odds for a Rate Hike Surpass 50% (https://finance.yahoo.com/economy/policy/articles/fomc-september-2026-odds-rate-201618784.html?fr=sycsrp_catchall)
+**Step 8 — Research.** The model wanted to know: *"utility stocks rate case data center load growth news September 2026"* → got 6 results (via gnews_rss)
 
-  - FOMC September 2026 Odds of Rate Hike Surge Over 60% (https://finance.yahoo.com/economy/policy/articles/fomc-september-2026-odds-rate-163505675.html?fr=sycsrp_catchall)
+  - 3 Utility Stocks With Big Exposure to New US Power Emissions Rules - simplywall.st (https://news.google.com/rss/articles/CBMixwFBVV95cUxNUERuWXBfdVdGVkJNOGdkbmMwR2g4NkNZR1Q3X3NMc1VxSy1iQUc3TjJ0azdxYnRGbDM1UXAtYjZWd0YwMTFJREczdEYzZXhTM1c4c1VtZ2pRV1c0TDFvOGlrcEQyMnI4ajdQcFpfbDI3eEVsa0ZRZDdTNGUzSXZHV3dzd3hHR3hFTWhQQlgwQVlobHJmSXhCNEY5NU5LdThUYWkyQmd5YTBLUXJaMUI1NWJBVUsxM1U4VllzdGtJbVJoZXJKY1Jn0gHHAUFVX3lxTE1QRG5ZcF91V0ZWQk04Z2RuYzBHaDg2Q1lHVDdfc0xzVXFLLWJBRzdOMnRrN3FidEZsMzVRcC1iNlZ3RjAxMUlERzN0RjNleFMzVzhzVW1nalFXVzRMMW84aWtwRDIycjhqN1BwWl9sMjd4RWxrRlFkN1M0ZTNJdkdXd3N3eEdHeEVNaFBCWDBBWWhscmZJeEI0Rjk1Tkt1OFRhaTJCZ3lhMEtRcloxQjU1YkFVSzEzVThWWXN0a0ltUmhlckpjUmc?oc=5)
 
-  - Fed Rate Hike Odds Climb to 65.9% for September, CME FedWatch ... (https://coinalertnews.com/news/2026/08/31/fed-rate-hike-odds-september)
+  - AI Data Centers Need Enormous Amounts of Power: These 5 Dividend Stocks Provide It - 247wallst.com (https://news.google.com/rss/articles/CBMiwwFBVV95cUxQR3lWM2hDUGxGWEhLQ0VCdGFPUDlzS3h2TktlRTBSRzV2bS1HRnpSY2JJaEYxVGNJMktEb3BHTEVPNUlXTDNJbVFZRUFTbmdSZ2owN201dGxFNHdWWFdseGE0U0otYm1oSXQ1SXVydHowbWd1LWctUnk5c25nNWZ2eGhoX2l5TlQzVlU3TWFrYV94eVJQeHVDWTlwT3NrQnJlTWIzZUs4RjVyMnY0UVZaVjBTY2NnaUlPczNBVFBFb05qZFk?oc=5)
 
-**Step 7 — Research.** The model wanted to know: *"utilities stocks September 15 2026 defensive dividend yields bond proxy"* → got 6 results (via ddg)
+  - American Electric Power Raises Guidance Again: What 69 Gigawatts of New Demand Means - TIKR.com (https://news.google.com/rss/articles/CBMirgFBVV95cUxPNHpjQklZa2k0bFZmaGJUSFd3TU5SWFZ1SHo3SXBVb1hLelItUzFQQkstU2lacUJMQWJSSHVtVW9pT2E1bkxjT2tNbWxRVkhqLTQzLXRucHRPOUdzVV9NMnZ2YUJ6eUtkcFlvVGt4TW9fTTQxRnZEV0NaMGtjR3hoTTRUaVZRU2lpRUdZQUdOQTJMaTFkT1otWDgxQWdsdGNqZGRfNFlQNkRuUENXY1E?oc=5)
 
-  - Utility Dividend Stocks — Defensive Income | Dividend Vision (https://www.dividendvision.com/lists/utility-dividend-stocks)
+**Step 10 — Research.** The model wanted to know: *""utilities" sector worst performer September 2026 bond proxy yields"* → got 6 results (via gnews_rss)
 
-  - Utility Stocks — Electric, Gas & Water Companies | StockTi (https://stockti.com/stocks/utility-stocks)
+  - Multi-Sector Fixed Income: Flexibility Is Only the Beginning - Lord, Abbett & Co LLC (https://news.google.com/rss/articles/CBMi7AFBVV95cUxOMWY4MHAzcEhFTFd0ZlZtUmxvMkcwYmh1Ui1YQk5rVlRwRmp3QjZoa1RKclNHcTB6azdWYkRLT3d4d3pMR05uZXN0S1BsQjNmTGFnLUMweFo1WURUTmEwVUFVMkVhSUFvRl9XRVQzRS1QdEpWbUJxUVRPR2dxMmJPZWFDRk1pUE1Rc2lZSWRkdU8weDFIMWNCa2E0MU4wa3dwM21JT1pYZzJsbE1mOVdlSEZvbEZJdWlDS1h5dmc1aTVUbGFDaE1tbk40RFBYQk1PZzBVQ0NLWHJNcnNndExzdVZINXVOckJFNGxheg?oc=5)
 
-  - NEE, SO, DUK & 100+ Utilities Stocks Screener (2026 ... (https://vcpscanner.com/sectors/utilities)
+  - Interest Rates and Stock Prices: An Old Debate Flares up! - Musings on Markets (https://news.google.com/rss/articles/CBMijgFBVV95cUxPa2R4NXVCUzY5MlBndHBJekpYbkYwd3FYbU9fQWNicU9WcV9MSFdFcTdYXzBOdVRaajU2TWpWMFVoc2VhU1Y3WjhZN3V4RXhpUG1MWS1rZDlpOEJlMjNHb3FreGtya01ESjMzWENpTWFvdndEaHF5MTYtS0czNnNYQ3RkTzJyU1FLbkNLaTdB?oc=5)
 
-**Step 8 — Research.** The model wanted to know: *""utilities" sector rotation September 2026 rate hike bond selloff"* → got 6 results (via gnews_rss)
+  - From Bond Proxy to Battleground: Why Utilities Are the Worst Hiding Spot in 2026 - 247wallst.com (https://news.google.com/rss/articles/CBMiwAFBVV95cUxQV0dMelgweTVKYkFvR1Y3a2FwRmVHZ1RMWDllU0tadnlUZHJkVU9jNjRQNGcxUlVobWx0QW9MN1k1cUdSam1vcFVYSWJTQ1ctUUF3dmhDUnhuZ1J0TE5EV2Y4c0FnbmNENFFtS1Nsa01YeVVndW9Fdzh1U19vczNKMjBMUXhVR082MHdTdDdkUERVYWxTdVNKUmNLaEZVcm04UzY2Q082S1UtQzZsck0zeXdVcVAyQURkYnctODhXN00?oc=5)
 
-  - Fair Value, Monday, August 31, 2026 - Buttondown (https://news.google.com/rss/articles/CBMif0FVX3lxTFBSN2txZTgybFlQRWtsMFowZWxQR1pkZTRnRHhMVk9tVWp5OVFtSzN5SEZ1ZkdjYlEtVTlTWDg5NVF3RC1TX3VkQjRac09qMEZpUjNBZkw5c1FzTjVpMmh4THhhaWtxdHFhak9DT3VLZzJlLWZFRmR3bkZUYnJ3Snc?oc=5)
+**Step 11 — Research.** The model wanted to know: *"stock market today September 15 2026 sector performance defensives"* → got 6 results (via gnews_rss)
 
-  - ASX Sector Performance: Financials Outperform as Materials and Resources Plunge - kalkine.com.au (https://news.google.com/rss/articles/CBMitAFBVV95cUxNZ3h1bFNXTXlSRDMtMFE0UmQ3NVJpT3RrbEdPSDVPY2NQSHpaOXgxZXhIdmhzMGFxMnhqRWQ4dDl2bjZ1Sjg1TXdTLVBQWlBhSERtNDBmNVFpYmdlNnhON2xfNFd3NTdhc3VtdUVIWnJZaHBQSWFtUG80bGhJMmtHdWcxM3MtdUNFSEZSTTJkWlg4emRHaTNRV3QwY1h4bmFFY2tzNFlXUkVTZG5BV2xrcWRMUzU?oc=5)
+  - Arrowhead Pharmaceuticals Inc Stock (ARWR) Moved Down by 8.93% on Sep 15: What Investors Need To Know - TradingKey (https://news.google.com/rss/articles/CBMiiwFBVV95cUxPTkl6ZGphdUxHQjJMaVJVUFlrYllJZUFRRTRVdHlnSnVzM3BpTFExa0pDaDNPenBqZEJPQjNwczFBbnRVTnM4STJQckhXVC1mb0dLS0hqSEl3bFZVMWduVW5JalFaZ1JiNUtPdnhxek9GTUlWbGZacWM3QkpmSGJxVmtSQktHTmJFWkFn?oc=5)
 
-  - Rising Oil Prices and Inflation Fears Rock Stock Market in September 2026 - Intellectia AI (https://news.google.com/rss/articles/CBMiiwFBVV95cUxQREpEY2t0NG0xNnR4QUgwbGVsUkpxa29vbk1jd21VZjcwVExRMW43RWxYbWR2bDI2eWhMSXpRMWt5RUpKenZZa09JSDVleTZlU2RCQmQxd24wbkI5ejkxd2RDZnp4aGNia2czdHVqVnFua29YUmJ1dmU1YXpRelBSN1JQREFWZW5OYTRJ?oc=5)
+  - PyroGenesis Signs First Contract Toward New Titanium Powder Supply Agreement with U.S. Materials Distributor - markets.businessinsider.com (https://news.google.com/rss/articles/CBMi-gFBVV95cUxQdjFJX21FRTFtTW1LbTJYOGF3TVg2djM3aldWX1owakprTnlQTGNUaFpGM2x0MjlFaFpBTWJFTWY5VUpRSHc2bU56akdmcEdIOXprMlhFWk1XbUZXZnJLY2JTYUlxdEpka1dSMGtqNHVTa0R0a1ctTW5KRUtGbnJHYTRYNE00M1d4Y0RSMlF2NDMxMkxwdnBySFJ5ZTJENTBPb2ZmdXllMS16VjlSQURzTUVjTk45ZjFhT05abXRzUWlUUGprc0kxdFdUdUF4dEVUWnhyNWtwYzEzWFlycWpLay1YMEVxZWVOT0hEOVR2eFJud25WeVFFRXNB?oc=5)
 
-**Step 10 — Research.** The model wanted to know: *""XLU" utilities ETF September 14 2026 close performance"* → got 6 results (via ddg)
+  - RTX Corporation stock falls as F135 engine upgrade milestone raises valuation questions - ad-hoc-news.de (https://news.google.com/rss/articles/CBMiygFBVV95cUxPZ2tVcS1NNkFqbWxNNEQ5SDd1dVBzZHItaHZ4bWx5SEhyQlVMS2F0SkF6ZThUTzRCeUw5TE5SMV90WlFJS09NUUFieGI4QWljZ0xxUHF6VHM1aDdUSndZSk44YUZ6ZjQtTk83dDV3cXNWN2ozRHZqWEw4TktsYlFwVk5oNWlscTF5RHVmQnZuZVZLUXFTOVUtSVRsUGktR1V5WFJ5Q1RYQnE0cm5IUlBRNkNuS2ViYzhhYVJJUTlSb0t1b1VLVmxad1JB?oc=5)
 
-  - XLU ETF Stock Price & OverviewXLU — Utilities Select Sector SPDR Fund stock price and chart ...State Street Utilities Select Sector SPDR ETF (XLU) ETF Price ...Utilities (XLU): $41.82 (Sep 14, 2026) | ConvexState Street Utilities Select Sector SPDR ETF (XLU)Utilities Select (XLU) ETF Forecast & Price Target (2026)State Street® Utilities Select Sector SPDR® ETF (https://stockanalysis.com/etf/xlu/)
-
-  - XLU — Utilities Select Sector SPDR Fund stock price and chart ... (https://chartrow.com/quote/xlu)
-
-  - State Street Utilities Select Sector SPDR ETF (XLU) ETF Price ... (https://stocknear.com/etf/XLU)
-
-**Step 11 — Research.** The model wanted to know: *"utilities rate case regulatory decision September 2026 allowed ROE"* → got 6 results (via ddg)
-
-  - Regulated Utilities: Rate Base, Rate Cases, and Allowed ROE (https://ibinterviewquestions.com/guides/energy-investment-banking/regulated-utilities-rate-base-rate-cases-allowed-roe)
-
-  - Halcyon Rate Case Tracker (https://halcyon.io/rate-case-tracker)
-
-  - Pennsylvania PUC to consider ratemaking, ROE and curtailment ... (https://www.utilitydive.com/news/pennsylvania-puc-to-consider-rates-and-curtailment-as-data-centers-grow/830174/)
-
-**Step 13 — Research.** The model wanted to know: *"utilities stocks news today September 15 2026 Vistra Constellation data center"* → got 6 results (via gnews_rss)
-
-  - If You'd Invested $10,000 in Vistra 5 Years Ago, Here's How Much You'd Have Today - The Motley Fool (https://news.google.com/rss/articles/CBMikAFBVV95cUxQYzk4NXA1ZngwcFVxWTFqbkNMR3h3R3ZBN0U1dmxFc091amJRRXpTa1JWUENKSWdMUkZqc1RqMF9mUkNRSDNEM2RZZVVYUVZJekxiS0JGUm1tRWV0eVYycHVVcUcwekFtaDljQmw0bk5qUHRrVTMxd2lodUM4dHdBOWNJU0NvU0JNYTM5bVRCRkc?oc=5)
-
-  - Data Center Stocks 2026: 50+ Companies - Stock Titan (https://news.google.com/rss/articles/CBMia0FVX3lxTE1rd3JnbmJXaTBQdHlBNC1tZXAzWmhzZnZpVmFwMDg4cHY5X3RxaXBEZmgwUHh0OFU2blRYQjFFNDVqamMtMjFrMW8tOExEWHF2bHdBSTRTQ2g0MThBTEotYUZabTBldVN5ODBr?oc=5)
-
-  - Best Nuclear Energy Stocks for 2026 and How to Invest - The Motley Fool (https://news.google.com/rss/articles/CBMif0FVX3lxTE81bnNyMVpOaHZTMDhmRUpTX3BvNkZsYjlObU9oSnNhMHRXRUlCR21HMGQ2Rm5yMjc3TUozckdtZ3lRNmo5UmRqODI1WFA5aEFxVGdMT3RvdzZSeVZONVl3d1VSTVNiN0w5dE9IeVBydUJ2RncwcldKUXRjbWcyMGs?oc=5)
-
-**Step 14 — Research.** The model wanted to know: *"stock market today September 15 2026 premarket bond yields 5%"* → got 6 results (via gnews_rss)
-
-  - Stocks Fall as Oil Rally Deepens Bond Selloff: Markets Wrap - bloomberg.com (https://news.google.com/rss/articles/CBMirwFBVV95cUxNcXlwLTZ3U29UZXBTS3BWSWh6R1BGQWxWcDdGZWR3cFpMUEUzeUIzcEsySHFITFR4emFONjgzLWtSNGNJMTUxcW1rSGFfZ1VBZDVDa21aUVY0WlFoRUlDZFlKakI1WTREdGszUkRCNjlrSUxEcVlab01PZTZoTUY0WnUtbEFOUk95b3VCWlRDOERON0EyLWhORk9pS296RThEWFpHOW5USnBZRl91bE5V?oc=5)
-
-  - Perk Brings Its Spend Platform to U.S.: NYSE Content Update - tradingview.com (https://news.google.com/rss/articles/CBMiugFBVV95cUxOV2wtQVEtM3dzTW5KdW12aWtKdi1RLUNwUVZxVlpZV2xLSEZzMzJTODNkS2dGaHlVeURNS2VHNnhQM1dsT3ItSEh5WnNEa0lZc0JjTUR0ZFItMHFwbUxSd0dhaDhuMkJBVEFpbEhnT093cXY5LXZBYkZHMDJaQ3F1NzU3U2tFdnZodWpMLTFCUVZVVXo1aTRicWpYS3hEM1UxeEVZa3c4czJwNGdBc19LQVhLZHNXUEZPbFE?oc=5)
-
-  - 【US Pre-Market】US Treasury Yields Top 5% as Stock Futures and Crypto Stocks Drop; ASML Gains Over 3% - tradingkey.com (https://news.google.com/rss/articles/CBMikAFBVV95cUxQYV9OaXlRdUZTaFpaSVRmYnB3aWw5NUhqWFI3UUp1Qlp3b05NblRRdTNfSG1ZNEhDU0Y3WHRhdVdNVXh3WEthLXFVQ2N5VWluQ1RmUWJkeWx1NXg4N1FyaDlSRks1S0FKR3o5Y3FLZHh0bXJPdkJneTNiSmJmdnk1Zl9ENk5UN3dyQnUwTUNVSkw?oc=5)
-
-**Step 16 — Research.** The model wanted to know: *"utilities XLU oversold RSI 34 September 2026 bounce"* → ❌ search failed (searxng#1: 404 Client Error: Not Found for url: https://searxng-production-f4dd.up.railway.app/search?q=utilities+XLU+ov)
-
-**Step 18 — Done researching.** The model stopped searching and wrote its full analysis (14,969 characters).
+**Step 13 — Done researching.** The model stopped searching and wrote its full analysis (14,139 characters).

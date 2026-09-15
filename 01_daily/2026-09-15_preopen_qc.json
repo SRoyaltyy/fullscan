@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T13:25:37.093635-04:00",
+  "generated_at": "2026-09-15T13:59:49.083873-04:00",
   "items": [
     {
       "ok": true,
@@ -124,14 +124,14 @@
       "missing_markers": []
     },
     {
-      "ok": true,
+      "ok": false,
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-15/basic_materials_predict.md",
-      "reason": "",
-      "size": 16404,
+      "reason": "missing",
+      "size": 0,
       "carried": false,
       "timeout": false,
-      "empty": false,
+      "empty": true,
       "missing_markers": []
     },
     {
@@ -139,7 +139,7 @@
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-15/communication_services_predict.md",
       "reason": "",
-      "size": 15325,
+      "size": 13559,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -150,7 +150,7 @@
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-15/consumer_cyclical_predict.md",
       "reason": "",
-      "size": 17810,
+      "size": 18574,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -161,7 +161,7 @@
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-15/consumer_defensive_predict.md",
       "reason": "",
-      "size": 20709,
+      "size": 17804,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -172,7 +172,7 @@
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-15/energy_predict.md",
       "reason": "",
-      "size": 15083,
+      "size": 16615,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -183,7 +183,7 @@
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-15/financial_predict.md",
       "reason": "",
-      "size": 13690,
+      "size": 13311,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -194,7 +194,7 @@
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-15/healthcare_predict.md",
       "reason": "",
-      "size": 14618,
+      "size": 16994,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -205,7 +205,7 @@
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-15/industrials_predict.md",
       "reason": "",
-      "size": 15883,
+      "size": 16239,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -216,7 +216,7 @@
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-15/real_estate_predict.md",
       "reason": "",
-      "size": 18003,
+      "size": 14640,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -227,7 +227,7 @@
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-15/technology_predict.md",
       "reason": "",
-      "size": 16602,
+      "size": 17826,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -238,7 +238,7 @@
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-15/utilities_predict.md",
       "reason": "",
-      "size": 16861,
+      "size": 16029,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -248,72 +248,72 @@
   "sectors": [
     {
       "sector": "Basic Materials",
-      "ok": true,
-      "reason": "",
-      "size": 16404
+      "ok": false,
+      "reason": "missing",
+      "size": 0
     },
     {
       "sector": "Communication Services",
       "ok": true,
       "reason": "",
-      "size": 15325
+      "size": 13559
     },
     {
       "sector": "Consumer Cyclical",
       "ok": true,
       "reason": "",
-      "size": 17810
+      "size": 18574
     },
     {
       "sector": "Consumer Defensive",
       "ok": true,
       "reason": "",
-      "size": 20709
+      "size": 17804
     },
     {
       "sector": "Energy",
       "ok": true,
       "reason": "",
-      "size": 15083
+      "size": 16615
     },
     {
       "sector": "Financial",
       "ok": true,
       "reason": "",
-      "size": 13690
+      "size": 13311
     },
     {
       "sector": "Healthcare",
       "ok": true,
       "reason": "",
-      "size": 14618
+      "size": 16994
     },
     {
       "sector": "Industrials",
       "ok": true,
       "reason": "",
-      "size": 15883
+      "size": 16239
     },
     {
       "sector": "Real Estate",
       "ok": true,
       "reason": "",
-      "size": 18003
+      "size": 14640
     },
     {
       "sector": "Technology",
       "ok": true,
       "reason": "",
-      "size": 16602
+      "size": 17826
     },
     {
       "sector": "Utilities",
       "ok": true,
       "reason": "",
-      "size": 16861
+      "size": 16029
     }
   ],
-  "sector_n_ok": 11,
+  "sector_n_ok": 10,
   "sector_n_total": 11,
   "all_ok": true
 }
