@@ -1,68 +1,68 @@
 # MAP HEAT — 2026-09-15
 
-Export `finviz_2026-09-15.csv` · 11616 names · generated 2026-09-15T04:25:19.101684-04:00
+Export `finviz_2026-09-15.csv` · 11616 names · generated 2026-09-15T06:04:17.985549-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
 |---|---:|---:|
-| S&P 500 (ES) | 7653.25 | -0.54% |
-| Nasdaq 100 (NQ) | 29276.5 | -0.62% |
-| Russell 2000 (ER2) | 2896.4 | -0.73% |
-| DJIA (YM) | 52489.0 | -0.71% |
-| VIX (VX) | 17.5 | +3.85% |
-| Crude Oil WTI (CL) | 103.79 | +2.37% |
-| Crude Oil Brent (QA) | 108.11 | +2.31% |
-| Natural Gas (NG) | 2.893 | -0.07% |
-| Heating Oil (HO) | 5.1167 | +3.09% |
-| Gasoline RBOB (RB) | 3.3807 | +1.92% |
-| Gold (GC) | 4307.7 | -1.01% |
-| Silver (SI) | 63.205 | -1.47% |
-| Copper (HG) | 6.359 | -0.76% |
-| Platinum (PL) | 1750.0 | -1.67% |
-| Palladium (PA) | 1284.5 | -1.85% |
-| USD (DX) | 99.36 | +0.25% |
-| EUR (6E) | 1.15795 | -0.16% |
-| JPY (6J) | 0.6494 | -0.73% |
-| GBP (6B) | 1.3477 | -0.29% |
-| AUD (6A) | 0.7114 | -0.32% |
-| CAD (6C) | 0.7226 | +0.02% |
-| CHF (6S) | 1.237 | -0.09% |
-| NZD (6N) | 0.578 | -0.38% |
-| 10 Year Note (ZN) | 105.6875 | -0.46% |
-| 5 Year Note (ZF) | 104.234375 | -0.28% |
-| 2 Year Note (ZT) | 101.99609375 | -0.09% |
-| 30 Year Bond (ZB) | 106.0625 | -0.93% |
-| Nikkei 225 (NKD) | 63140.0 | -0.11% |
-| DAX (DY) | 25194.0 | -0.91% |
-| Euro Stoxx 50 (EX) | 6200.0 | -0.96% |
-| Corn (ZC) | 531.75 | -0.28% |
-| Soybeans (ZS) | 1300.25 | -0.33% |
-| Wheat (ZW) | 721.0 | -0.17% |
-| Soybean oil (ZL) | 70.02 | +0.53% |
-| Soybean Meal (ZM) | 348.0 | -0.66% |
-| Oats (ZO) | 394.75 | +0.45% |
+| S&P 500 (ES) | 7664.0 | -0.37% |
+| Nasdaq 100 (NQ) | 29338.25 | -0.38% |
+| Russell 2000 (ER2) | 2902.6 | -0.47% |
+| DJIA (YM) | 52592.0 | -0.49% |
+| VIX (VX) | 17.25 | +2.37% |
+| Crude Oil WTI (CL) | 103.99 | +2.62% |
+| Crude Oil Brent (QA) | 107.83 | +2.12% |
+| Natural Gas (NG) | 2.886 | -0.35% |
+| Heating Oil (HO) | 5.1251 | +3.37% |
+| Gasoline RBOB (RB) | 3.3846 | +2.07% |
+| Gold (GC) | 4310.8 | -0.96% |
+| Silver (SI) | 63.52 | -1.02% |
+| Copper (HG) | 6.3905 | -0.27% |
+| Platinum (PL) | 1757.4 | -1.28% |
+| Palladium (PA) | 1294.0 | -1.01% |
+| USD (DX) | 99.355 | +0.25% |
+| EUR (6E) | 1.15775 | -0.18% |
+| JPY (6J) | 0.65005 | -0.62% |
+| GBP (6B) | 1.3482 | -0.24% |
+| AUD (6A) | 0.71195 | -0.23% |
+| CAD (6C) | 0.72235 | -0.01% |
+| CHF (6S) | 1.23545 | -0.21% |
+| NZD (6N) | 0.57825 | -0.31% |
+| 10 Year Note (ZN) | 105.78125 | -0.37% |
+| 5 Year Note (ZF) | 104.296875 | -0.22% |
+| 2 Year Note (ZT) | 102.02734375 | -0.05% |
+| 30 Year Bond (ZB) | 106.25 | -0.76% |
+| Nikkei 225 (NKD) | 63405.0 | +0.29% |
+| DAX (DY) | 25332.0 | -0.41% |
+| Euro Stoxx 50 (EX) | 6235.0 | -0.42% |
+| Corn (ZC) | 530.25 | -0.56% |
+| Soybeans (ZS) | 1298.75 | -0.40% |
+| Wheat (ZW) | 717.5 | -0.69% |
+| Soybean oil (ZL) | 70.05 | +0.57% |
+| Soybean Meal (ZM) | 347.4 | -0.83% |
+| Oats (ZO) | 394.5 | +0.38% |
 | Rough Rice (ZR) | 15.985 | -0.06% |
-| Coffee (KC) | 289.25 | +1.68% |
-| Sugar (SB) | 18.11 | -0.28% |
-| Cotton (CT) | 84.8 | +0.19% |
-| Cocoa (CC) | 6029.0 | +1.04% |
+| Coffee (KC) | 288.6 | -0.74% |
+| Sugar (SB) | 18.25 | +0.50% |
+| Cotton (CT) | 85.07 | +0.62% |
+| Cocoa (CC) | 5859.0 | -2.57% |
 | Orange Juice (JO) | 153.55 | +5.30% |
 | Lumber (LB) | 566.0 | +0.18% |
 | Live Cattle (LC) | 222.2 | +1.17% |
 | Lean Hogs (LH) | 79.725 | -2.36% |
 | Feeder Cattle (FC) | 337.9 | +1.61% |
-| Bitcoin (BTC) | 76765.0 | -3.01% |
-| 3 Month SOFR (SR3) | 96.015 | -0.01% |
-| 30 Day Fed Funds (ZQ) | 96.26 | +0.00% |
+| Bitcoin (BTC) | 77010.0 | -2.70% |
+| 3 Month SOFR (SR3) | 96.0225 | -0.00% |
+| 30 Day Fed Funds (ZQ) | 96.2625 | +0.00% |
 | Aluminum (ALI) | 3410.5 | -0.03% |
-| Canola (RS) | 818.9 | -0.49% |
+| Canola (RS) | 818.9 | -0.51% |
 | Coal Newcastle (NCF) | 146.85 | +0.07% |
 | Ethanol (ZK) | 2.055 | +0.00% |
-| Gasoil (G) | 1516.25 | +2.68% |
+| Gasoil (G) | 1516.5 | +2.69% |
 | Iron Ore (TIO) | 97.55 | -0.48% |
 | Steel HRC (HRC) | 1234.0 | +0.00% |
-| Ultra 10 Year Note (TN) | 107.09375 | -0.61% |
-| Ultra Bond (UB) | 107.5 | -1.09% |
+| Ultra 10 Year Note (TN) | 107.21875 | -0.49% |
+| Ultra Bond (UB) | 107.625 | -0.95% |
 | Uranium (UX) | 89.9 | -0.11% |
 
 ## CALENDAR
@@ -112,7 +112,7 @@ Econ (importance ≥ 2):
 
 Mega-cap earnings:
 - AMC **MU**  EPS est 31.141  (Micron Technology Inc)
-- AMC **COST**  EPS est 6.548  (Costco Wholesale Corp)
+- AMC **COST**  EPS est 6.5477  (Costco Wholesale Corp)
 - BMO **ACN**  EPS est 3.185  (Accenture plc)
 - BMO **CTAS**  EPS est 1.3481  (Cintas Corp)
 - AMC **NKE**  EPS est 0.4458  (Nike Inc)
@@ -255,31 +255,31 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 15 min **GNTA** Sophia High Tech Flight Hardware on Board VEGA-C VV30 as the European Launcher Carries Sentinel-3C and FLEX into Orbit (GlobeNewswire)
-- 25 min **JCI** Johnson Controls electrifies energy-intensive industries with new heat pumps that can triple energy efficiency and lower operating costs (PR Newswire)
-- 25 min **FICO** FICO European Fraud Map: UK Resilient as Other European Countries See Losses Climb by up to 21% (Business Wire)
-- 25 min **NTRS** Northern Trust Survey: Asset Managers Sharpen Focus on Core Capabilities to Drive Growth (Business Wire)
-- 33 min **LCO** FTSE 100 today: Stocks slip as oil surges, AI safety rift adds to unease (Investing.com)
-- 36 min **MU,SNDK,SKHY** Watch Out SKHY, MU, SNDK: Japans Kioxia Reportedly Eyes $10B US Listing To Ride AI Memory Boom (Stocktwits)
-- 41 min **NIO,BABA** NIO Stock Rises Overnight: Nio Capital Joins Sequoia China And SMIC-Linked Backers In Robot-Sensor Bet (Stocktwits)
-- 55 min **FTV** Fluke Expands iSee Mobile Series with New TC03A Thermal Camera and ii01 Acoustic Camera (GlobeNewswire)
-- 1 hour **CIGI** Industrial Occupancy Jumps as Big-Box Demand Returns (CRE Daily)
-- 1 hour **GSK** GSK splashes up to $750m on experimental cancer therapy (Proactive)
-- 1 hour **GOOGL,GOOG** Worldline launches UCP payment handler for agentic commerce payments (Electronic Payments)
-- 1 hour **SPCX** Tesla, SpaceX Stocks Rise Overnight: Elon Musk Fuels Merger Speculation, Hints At Action Amid Close Collaboration (Stocktwits)
-- 1 hour **TSLA** Tesla, SpaceX Stocks Rise Overnight: Elon Musk Fuels Merger Speculation, Hints At Action Amid Close Collaboration (Stocktwits)
-- 1 hour **GAP** GAP Stock Heads For Monthly Loss Despite CEO Optimism On Old Navy  Cardi B Campaign Fails To Lift Retail Mood (Stocktwits)
-- 1 hour **KMTS** Kestra Medical Technologies Ltd (KMTS) (Q1 2027) Earnings Call Highlights: Revenue Jumps 60% as ... (GuruFocus.com)
-- 1 hour **MKL** Markel International bolsters leadership in new Marine Transportation business with two key appointments (PR Newswire)
-- 1 hour **WTW** Willis: Power companies must strengthen resilience as electrification drives a new wave of industrial growth (GlobeNewswire)
-- 1 hour **EGO** Eldorado Gold to Host Greek Asset Site Tour (GlobeNewswire)
-- 1 hour **IRM** Iron Mountain Partners with the Opera national de Paris to Preserve and Digitize its Visual Heritage (Business Wire)
-- 1 hour **IRM** Iron Mountain Partners with the Opra national de Paris to Preserve and Digitize its Visual Heritage (Business Wire)
-- 1 hour **CIGI** Tampa Multifamily Nears a Pricing Power Reset (CRE Daily)
-- 1 hour **COIN** CryptoQuant Flags Volume Revival as Another Crack in Bear Market Downtrend (BeInCrypto)
-- 1 hour **O** Realty Income and KKR Form 528M European JV (CRE Daily)
-- 1 hour **ABNB** Airbnb Commits $250M to Housing Construction Fund (CRE Daily)
-- 2 hours **HUHU** NOTICE TO DISREGARD - HUHUTECH International Group Inc. (GlobeNewswire)
+- 4 min **TSEM** Tower Semiconductor to Highlight its High-Volume Silicon Photonics and SiGe Solutions for AI Infrastructure, Telecom and Emerging Applications at ECOC 2026 (GlobeNewswire)
+- 4 min **RKLB** Rocket Lab Fully Funds Iridium Acquisition, Including Completion of $1.94 Billion ATM (GlobeNewswire)
+- 4 min **STRW** Strawberry Fields REIT Announces Acquisition of Hospital Campus in Missouri (GlobeNewswire)
+- 4 min **XE** Centrica, X-energy Advance Nuclear Plans as UK Regulators to Begin Design Review for Xe-100 (GlobeNewswire)
+- 4 min **PFSA** Profusa, Inc. Receives Nasdaq Compliance Determination (GlobeNewswire)
+- 4 min **BLK** BlackRock Commits CAD$15 Million Over Three Years to Support The Next Generation of Canada's Skilled Trades Workers (GlobeNewswire)
+- 4 min **SPCX** Wall Street pushes back on Anthropic's warning as AI spending expected to roll on: Chart of the Day (Yahoo Finance)
+- 4 min **CRI** Carters Shines a New Light on Childhood with Evolved Brand Promise, Refreshed Identity and Watch Them Glow Campaign (Business Wire)
+- 4 min **SMMT** Updated HARMONi Data Presented at WCLC 2026 Demonstrate Consistent Overall Survival Results with Ivonescimab Plus Chemotherapy in Western and Asian Patients (Business Wire)
+- 4 min **INGM** Ingram Micro Outlines Long-term Strategy, Intelligence-led Transformation and Multi-year Financial Framework at Capital Markets Day (Business Wire)
+- 4 min **HIVE** RETRANSMISSION: HIVE's BUZZ HPC Appoints Capital Markets Veteran Hubert Marleau as Independent Director to Support Canadian AI Infrastructure Expansion (Newsfile)
+- 23 min **CRCL,COIN** CRCL, COIN Stocks Slip Premarket: Crypto Industry Makes Final Push For CLARITY Act Ahead Of Senate Vote Today (Stocktwits)
+- 49 min **AMZN** Amazon Now crosses $1bn in gross annualised sales  report (Retail Insight Network)
+- 53 min **ORCL** Why Is ORCL Stock Slipping Premarket? (Stocktwits)
+- 54 min **AAPL** Exclusive-Indian consumer regulator escalates probe into Apple's software warranty terms (Reuters)
+- 55 min **KR** Kroger trims 2026 sales outlook despite profit gains (Retail Insight Network)
+- 57 min **CCL** CCL Stock Heads For Third Month Of Loss: Wells Fargo Warns Of Caribbean Pricing Pressure But Remains Bullish On Growth (Stocktwits)
+- 57 min **WFC** CCL Stock Heads For Third Month Of Loss: Wells Fargo Warns Of Caribbean Pricing Pressure But Remains Bullish On Growth (Stocktwits)
+- 1 hour **ASST** Strive's Bitcoin Stash Hits an Even 25,000 BTC After $36.6 Million Buy (decrypt)
+- 1 hour **GOOGL,MSFT,GOOG,NVDA** Wall St futures slip as rising oil, Treasury yields compound AI anxiety (Reuters)
+- 1 hour **JPM** AI Trade Is in 'Digestion' Phase, JPMorgan's Sundar Says (Bloomberg)
+- 1 hour **QQQ** AI, Fed And 5% Treasury Yield: Three Risks Putting Nasdaq, Dow Futures On Edge Ahead Of Wednesdays Rate Decision (Stocktwits)
+- 1 hour **SPY** AI, Fed And 5% Treasury Yield: Three Risks Putting Nasdaq, Dow Futures On Edge Ahead Of Wednesdays Rate Decision (Stocktwits)
+- 1 hour **BAC** Stock Market Today: 10-Year Yield Forges Above 5% (The Wall Street Journal)
+- 1 hour **IQMX** TOYO Corporation Opens Its Quantum Computers to Japan's Ecosystem (Business Wire)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
