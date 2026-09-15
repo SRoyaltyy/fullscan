@@ -21234,18 +21234,119 @@
         "B7_OIL_DOLLAR": -1.0
       },
       "leading_sum": -10.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7612.3,
+      "actual_close": 7585.73,
+      "actual_pct_change": -0.45,
+      "actual_direction": "down",
+      "actual_magnitude_band": "mild",
+      "direction_hit": true,
+      "magnitude_hit": true,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": -0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": -0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": -2.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": -1.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": -1.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": -0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": -0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": -1.0,
+          "status": "hit"
+        }
+      ],
       "reflection_lesson_ref": null,
-      "sources_used": [],
+      "sources_used": [
+        {
+          "url": "https://www.cnbc.com/2026/09/14/stock-market-today-live-updates.html",
+          "date_accessed": "2026-09-15",
+          "summary": "Confirms the exact close figures used in Step 0.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.thestreet.com/stock-market-today/stock-market-today-sept-15-2026-dow-futures-slide-as-oil-prices-surge-and-treasury-yields-hit-2007-highs",
+          "date_accessed": "2026-09-15",
+          "summary": "Establishes the primary driver — a post-2007 high in the 10Y yield.",
+          "verification": "http_404"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/09/14/stock-market-today-live-updates.html",
+          "date_accessed": "2026-09-15",
+          "summary": "Confirms the rates driver was an overnight/pre-open event, not an intraday shock.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://apnews.com/article/wall-street-stocks-dow-nasdaq-b1b1bc9f943da62c6a639a8761b4eca3",
+          "date_accessed": "2026-09-15",
+          "summary": "AP's dual rates+oil attribution for the day.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://www.fool.com/investing/2026/09/15/chip-stocks-recovered-today-and-the-indexes-fell/",
+          "date_accessed": "2026-09-15",
+          "summary": "Documents the key divergence — chips bounced, rates drove the decline.",
+          "verification": "verified"
+        },
+        {
+          "url": "https://tradingeconomics.com/united-states/stock-market",
+          "date_accessed": "2026-09-15",
+          "summary": "Establishes the oil→inflation→yields amplification channel.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://tradingeconomics.com/commodity/crude-oil",
+          "date_accessed": "2026-09-15",
+          "summary": "Confirms the fresh oil-supply increment behind the crude spike.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.benzinga.com/markets/economic-data/26/09/61788155/fed-rate-hike-september-2026-dot-plot-projections-what-to-watch",
+          "date_accessed": "2026-09-15",
+          "summary": "Confirms the FOMC-eve positioning backdrop.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://tradingeconomics.com/united-states/stock-market",
+          "date_accessed": "2026-09-15",
+          "summary": "Explains the Dow's underperformance vs SPX via rate/oil-sensitive sectors.",
+          "verification": "quote_not_found"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -21275,7 +21376,14 @@
       "news_judge_present": true,
       "engine": "v2",
       "anchor_score": -0.215,
-      "overlay_score": -6.0
+      "overlay_score": -6.0,
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "10Y Treasury yield breached 5% (5.045% intraday, highest since 2007) compressing equity valuations on FOMC-eve",
+      "key_interaction": "Oil spike amplified the yield backup via the inflation channel (oil → breakevens → 5% 10Y → equity discount rates), while the intraday chip recovery MASKED how much worse the tape could have been — indices fell anyway",
+      "knowable_at_9am": "yes — the 10Y was already above 5% at 1:25am ET and oil was up pre-open; no genuine intraday shock",
+      "attribution_contested": "yes — CNBC/AP lead with dual oil+bonds; Trading Economics leads with yields; Motley Fool leads with AI (contradicted by its own chip-recovery headline); Benzinga leads with FOMC positioning",
+      "outlier_watch": "Chip stocks recovered intraday while indices fell (Motley Fool), and gold fell alongside equities — a real-yield/rates regime, not risk-off flight"
     },
     {
       "date": "2026-09-15",
