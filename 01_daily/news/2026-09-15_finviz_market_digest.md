@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-09-15
 
-**Generated:** 2026-09-15T07:09:52.750509-04:00 (America/New_York)
+**Generated:** 2026-09-15T07:29:00.251652-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US futures point to a lower open as oil tops $102 and 10-year yield exceeds 5% ahead of FOMC decision
 **Prior close:** SPX —  Nasdaq —  Dow —
