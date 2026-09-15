@@ -29,6 +29,10 @@ MIN_N_DISC = 200
 MIN_N_HOLD = 80
 MCAP_MIN_M = 50.0
 AVGVOL_MIN = 100_000.0
+# Last 30% of session dates = holdout. Name-split is not leak-free:
+# both sets share a calendar, so a discovery rule can peek later closes.
+HOLD_FRAC = 0.30
+SPLIT_KIND = "time"
 COMBO_TOP = 40
 COMBO_PARTNERS = 25
 FILL_LETTERS = list("ABCDEFGHIJKLMNO")
@@ -42,6 +46,66 @@ def _f(x):
         return float(x)
     except (TypeError, ValueError):
         return None
+
+
+def iso_date(v):
+    """Comparable YYYY-MM-DD. Excel serials, date objects, ISO strings.
+
+    Unparseable values are empty so a time-split fails closed.
+    """
+    if v is None or v == "":
+        return ""
+    if hasattr(v, "isoformat"):
+        try:
+            return v.isoformat()[:10]
+        except Exception:
+            return ""
+    if isinstance(v, (int, float)) and 20000 < float(v) < 90000:
+        from datetime import date, timedelta
+        try:
+            return (date(1899, 12, 30) + timedelta(days=int(v))).isoformat()
+        except Exception:
+            return ""
+    s = str(v).strip()
+    if len(s) >= 10 and s[4:5] == "-" and s[7:8] == "-":
+        return s[:10]
+    try:
+        n = float(s)
+    except (TypeError, ValueError):
+        return ""
+    if 20000 < n < 90000:
+        from datetime import date, timedelta
+        try:
+            return (date(1899, 12, 30) + timedelta(days=int(n))).isoformat()
+        except Exception:
+            return ""
+    return ""
+
+
+def all_session_dates(ticker_days):
+    dates = set()
+    for raw in (ticker_days or {}).values():
+        for d in raw or []:
+            if not isinstance(d, dict):
+                continue
+            iso = iso_date(d.get("date"))
+            if iso:
+                dates.add(iso)
+    return sorted(dates)
+
+
+def time_split_cutoff(ticker_days, hold_frac=HOLD_FRAC, locked=None):
+    """First holdout session date. A ckpt-locked cutoff is reused on resume."""
+    if locked:
+        return locked
+    dates = all_session_dates(ticker_days)
+    if not dates:
+        return None
+    if len(dates) == 1:
+        return dates[0]
+    idx = int(round(len(dates) * (1.0 - hold_frac)))
+    idx = min(max(idx, 1), len(dates) - 1)
+    return dates[idx]
 
 
 def _hi(days):
@@ -67,7 +131,7 @@ def _hi(days):
             fams.append(fam)
         vals = d.get("values") or d.get("cols") or {}
         out.append({
-            "date": d.get("date"), "o": o, "h": h, "l": l, "c": c, "v": v,
+            "date": iso_date(d.get("date")), "o": o, "h": h, "l": l, "c": c, "v": v,
             "H": H, "I": I, "fills": fills[:15], "fams": fams, "values": vals,
         })
         prev_c = c if c is not None else prev_c
@@ -120,7 +184,8 @@ def _fwd(days, t, hzn):
     return {"green": sum(1 for x in Is if x > 0) / n,
             "red": sum(1 for x in Is if x < 0) / n,
             "meanI": sum(Is) / n, "absI": sum(abs(x) for x in Is) / n,
-            "meanH": (sum(Hs) / len(Hs)) if Hs else None, "hold": hold}
+            "meanH": (sum(Hs) / len(Hs)) if Hs else None, "hold": hold,
+            "end_date": iso_date(sl[-1].get("date"))}
 
 
 def _hold_region(days, t, side):
@@ -150,7 +215,8 @@ def _hold_region(days, t, side):
             "meanI": sum(Is) / n, "absI": sum(abs(x) for x in Is) / n,
             "meanH": (sum(Hs) / len(Hs)) if Hs else None,
             "hold": (days[end]["c"] / days[t]["o"]) - 1.0,
-            "days": end - t + 1}
+            "days": end - t + 1,
+            "end_date": iso_date(days[end].get("date"))}
 
 
 def _count_fam(days, t, idx, window, fam):
@@ -282,18 +348,45 @@ def scan_ticker(days_raw):
         fw = {f"h{h}": _fwd(days, t, h) for h in HORIZONS}
         fw["holdG"] = _hold_region(days, t, +1)
         fw["holdR"] = _hold_region(days, t, -1)
-        rows.append((desc, fw))
+        rows.append((days[t].get("date") or "", desc, fw))
     return rows
 
 
-def mine(ticker_days, split_map, min_disc=MIN_N_DISC, min_hold=MIN_N_HOLD):
+def _time_slot(feat_date, cutoff):
+    if not cutoff or not feat_date:
+        return None
+    if feat_date >= cutoff:
+        return "hold"
+    return "disc"
+
+
+def _disc_outcome_ok(feat_date, outcome, cutoff):
+    """Discovery may use an outcome only if its last close is before cutoff."""
+    if not cutoff or not feat_date or feat_date >= cutoff:
+        return False
+    if not outcome:
+        return False
+    end = outcome.get("end_date") or ""
+    return bool(end) and end < cutoff
+
+
+def mine(ticker_days, split_map=None, min_disc=MIN_N_DISC, min_hold=MIN_N_HOLD,
+         cutoff=None):
+    # split_map is ignored. Name-split shares a calendar; only a date cutoff
+    # keeps discovery labels from peeking holdout closes.
+    if not cutoff:
+        cutoff = time_split_cutoff(ticker_days)
     cells = defaultdict(lambda: {"disc": _acc(), "hold": _acc()})
     n_tk = 0
     for tkr, raw in ticker_days.items():
-        slot = "disc" if split_map.get(tkr) == "discovery" else "hold"
-        for desc, fw in scan_ticker(raw):
+        for feat_date, desc, fw in scan_ticker(raw):
+            slot = _time_slot(feat_date, cutoff)
+            if not slot:
+                continue
             for name in [k for k, v in desc.items() if v]:
                 for b, o in fw.items():
+                    if slot == "disc" and not _disc_outcome_ok(feat_date, o, cutoff):
+                        continue
                     _add(cells[(name, b)][slot], o)
         n_tk += 1
         if n_tk % 200 == 0:
@@ -343,8 +436,10 @@ def mine(ticker_days, split_map, min_disc=MIN_N_DISC, min_hold=MIN_N_HOLD):
     combo_cells = defaultdict(lambda: {"disc": _acc(), "hold": _acc()})
     if seeds:
         for tkr, raw in ticker_days.items():
-            slot = "disc" if split_map.get(tkr) == "discovery" else "hold"
-            for desc, fw in scan_ticker(raw):
+            for feat_date, desc, fw in scan_ticker(raw):
+                slot = _time_slot(feat_date, cutoff)
+                if not slot:
+                    continue
                 on = [s for s in seeds if desc.get(s)]
                 if len(on) < 2:
                     continue
@@ -354,6 +449,8 @@ def mine(ticker_days, split_map, min_disc=MIN_N_DISC, min_hold=MIN_N_HOLD):
                             continue
                         key = f"{a}|{bname}"
                         for buck, o in fw.items():
+                            if slot == "disc" and not _disc_outcome_ok(feat_date, o, cutoff):
+                                continue
                             _add(combo_cells[(key, buck)][slot], o)
     combos = []
     for (name, b), acc in combo_cells.items():
@@ -379,7 +476,8 @@ def mine(ticker_days, split_map, min_disc=MIN_N_DISC, min_hold=MIN_N_HOLD):
     singles.sort(key=lambda r: (-(r.get("hold_lift_g") or 0), -r["disc_n"]))
     combos.sort(key=lambda r: (-(r.get("hold_lift_g") or 0), -r["disc_n"]))
     return {"base": bases, "singles": singles, "combos": combos,
-            "gate": gate_payload(), "n_tickers": len(ticker_days)}
+            "gate": gate_payload(), "n_tickers": len(ticker_days),
+            "split_kind": SPLIT_KIND, "cutoff": cutoff}
 
 
 def load_grids(paths, allow):
@@ -406,6 +504,8 @@ def write_md(result, path, meta):
              f"Universe: mcap > ${MCAP_MIN_M:.0f}M and avg vol > {AVGVOL_MIN:.0f} shares. "
              f"Tickers mined: {result['n_tickers']}. {meta}", "",
              "Clock: rows above T + 09:30-knowable atoms. H/I are labels. "
+             "TIME-SPLIT: discovery feature date AND the label window (I1/I5/I10 "
+             "or hold-region last close) must be strictly before the cutoff. "
              "A combo only counts if discovery and holdout lift green the same way.", "",
              "## Base", ""]
     for split in ("disc", "hold"):
@@ -483,16 +583,11 @@ def main():
     print(f"[grids] {len(files)} files", flush=True)
     ticker_days = load_grids(files, allow if allow else None)
     print(f"[grids] {len(ticker_days)} tickers after 50M/100k filter", flush=True)
-    split_path = args.split or next(
-        (p for p in ("excel_bot/engine/holdout_split.json",
-                     "engine/holdout_split.json") if os.path.isfile(p)), "")
-    split_map = {}
-    if split_path:
-        raw = json.load(open(split_path, encoding="utf-8"))
-        split_map = {t: "discovery" for t in raw.get("discovery", [])}
-        split_map.update({t: "holdout" for t in raw.get("holdout", [])})
-    result = mine(ticker_days, split_map, args.min_disc, args.min_hold)
-    meta = f"grids={len(files)} gate={result['gate']['gate']}"
+    cutoff = time_split_cutoff(ticker_days)
+    print(f"[split] kind=time cutoff={cutoff} (ticker split ignored)", flush=True)
+    result = mine(ticker_days, None, args.min_disc, args.min_hold, cutoff=cutoff)
+    meta = (f"grids={len(files)} TIME-SPLIT cutoff={cutoff} "
+            f"gate={result['gate']['gate']}")
     write_md(result, args.out_md, meta)
     write_csv(result["singles"] + result["combos"], args.out_csv)
     slim = {"n_tickers": result["n_tickers"], "base": result["base"],
@@ -501,7 +596,7 @@ def main():
             "n_sign_ok_combos": sum(1 for r in result["combos"] if r.get("sign_ok")),
             "top_singles": [r for r in result["singles"] if r.get("sign_ok")][:25],
             "top_combos": [r for r in result["combos"] if r.get("sign_ok")][:25],
-            "gate": result["gate"]}
+            "gate": result["gate"], "split_kind": SPLIT_KIND, "cutoff": cutoff}
     os.makedirs(os.path.dirname(args.out_json) or ".", exist_ok=True)
     json.dump(slim, open(args.out_json, "w"), indent=1, default=str)
     print(f"[out] {args.out_md}")

@@ -54,8 +54,16 @@ def load_ckpt(path):
         return None
     if not isinstance(raw, dict):
         return None
+    if raw.get("split_kind") != m.SPLIT_KIND or not raw.get("cutoff"):
+        print(
+            f"[ckpt] reject stale split_kind={raw.get('split_kind')!r} "
+            f"cutoff={raw.get('cutoff')!r} — remine time-split",
+            flush=True,
+        )
+        return None
     print(
         f"[ckpt] resume phase={raw.get('phase')} "
+        f"cutoff={raw.get('cutoff')} "
         f"tickers={len(raw.get('processed') or [])} "
         f"sessions={raw.get('n')} rules={len(raw.get('counts') or {})}",
         flush=True,
@@ -123,6 +131,9 @@ def _dump(state):
         "pair_hold_n": state.get("pair_hold_n", 0),
         "pair_hold_lab_n": state.get("pair_hold_lab_n", 0),
         "gate": m.gate_payload(),
+        "split_kind": m.SPLIT_KIND,
+        "cutoff": state.get("cutoff"),
+        "hold_frac": m.HOLD_FRAC,
         "flushed_unix": int(time.time()),
     }
     return _atomic_json(LIVE["ckpt"], payload)
@@ -139,6 +150,7 @@ def _board(state):
     pairs = state.get("pairs") or []
     meta = (
         f"status={status} phase={state.get('phase')} "
+        f"TIME-SPLIT cutoff={state.get('cutoff')} "
         f"tickers_done={len(state.get('processed') or [])} "
         f"sessions={n} letters={len(m.ALL_LETTERS)} "
         f"univ=mcap>${m.MCAP_MIN_M:.0f}M & vol>{m.AVGVOL_MIN:.0f}"
@@ -152,6 +164,7 @@ def _board(state):
         "n_rules": len(state.get("counts") or {}),
         "top_singles": shown[:30], "top_pairs": pairs[:20],
         "gate": m.gate_payload(), "partial": status != "DONE",
+        "split_kind": m.SPLIT_KIND, "cutoff": state.get("cutoff"),
     })
 
 
@@ -172,15 +185,11 @@ def flush_progress(state, reason="tick"):
     )
 
 
-def _sessions(ticker_days, split_map, quant, which, skip):
+def _sessions(ticker_days, cutoff, quant, which, skip, label_key="I1_green"):
     skip = set(skip or [])
+    hzn = m.label_horizon(label_key)
     for tkr in sorted(ticker_days):
         if tkr in skip:
-            continue
-        split = split_map.get(tkr, "discovery")
-        if which == "disc" and split == "holdout":
-            continue
-        if which == "hold" and split != "holdout":
             continue
         try:
             days = m.normalize_days(ticker_days[tkr])
@@ -194,8 +203,15 @@ def _sessions(ticker_days, split_map, quant, which, skip):
             for t in range(20, len(days)):
                 if not days[t]["o"]:
                     continue
+                feat = days[t].get("date") or ""
+                end = m.label_end_date(days, t, hzn)
+                if which == "disc":
+                    if not m.disc_label_ok(feat, end, cutoff):
+                        continue
+                elif not feat or feat < cutoff:
+                    continue
                 labs = m._labels(days, t)
-                if "I1_green" not in labs:
+                if label_key not in labs:
                     continue
                 batch.append((m.features_at(days, t, quant), labs))
         except Exception as exc:
@@ -213,7 +229,7 @@ def _maybe(state, since):
     return since
 
 
-def walk_uni(state, ticker_days, split_map, quant, which, label, key):
+def walk_uni(state, ticker_days, cutoff, quant, which, label, key):
     counts = defaultdict(lambda: [0, 0], {k: list(v) for k, v in (state.get(key) or {}).items()})
     processed = set(state.get("processed") or [])
     n_key = "n" if which == "disc" else "n_hold"
@@ -221,7 +237,7 @@ def walk_uni(state, ticker_days, split_map, quant, which, label, key):
     n = int(state.get(n_key) or 0)
     lab_n = int(state.get(lab_key) or 0)
     since = 0
-    for tkr, batch in _sessions(ticker_days, split_map, quant, which, processed):
+    for tkr, batch in _sessions(ticker_days, cutoff, quant, which, processed, label):
         for feats, lab in batch:
             n += 1
             y = 1 if lab.get(label) else 0
@@ -244,7 +260,7 @@ def walk_uni(state, ticker_days, split_map, quant, which, label, key):
     return counts, n, lab_n
 
 
-def walk_confirm(state, ticker_days, split_map, quant, which, rules, label, key):
+def walk_confirm(state, ticker_days, cutoff, quant, which, rules, label, key):
     want = list(rules)
     counts = defaultdict(lambda: [0, 0], {k: list(v) for k, v in (state.get(key) or {}).items()})
     processed = set(state.get("processed") or [])
@@ -253,7 +269,7 @@ def walk_confirm(state, ticker_days, split_map, quant, which, rules, label, key)
     n = int(state.get(n_key) or 0)
     lab_n = int(state.get(lab_key) or 0)
     since = 0
-    for tkr, batch in _sessions(ticker_days, split_map, quant, which, processed):
+    for tkr, batch in _sessions(ticker_days, cutoff, quant, which, processed, label):
         for feats, lab in batch:
             n += 1
             y = 1 if lab.get(label) else 0
@@ -283,7 +299,7 @@ def walk_confirm(state, ticker_days, split_map, quant, which, rules, label, key)
     return counts, n, lab_n
 
 
-def walk_pairs(state, ticker_days, split_map, quant, which, seeds, label, key):
+def walk_pairs(state, ticker_days, cutoff, quant, which, seeds, label, key):
     seed = list(seeds)
     counts = defaultdict(lambda: [0, 0], {k: list(v) for k, v in (state.get(key) or {}).items()})
     processed = set(state.get("processed") or [])
@@ -294,7 +310,7 @@ def walk_pairs(state, ticker_days, split_map, quant, which, seeds, label, key):
         n = int(state.get("pair_hold_n") or 0)
         lab_n = int(state.get("pair_hold_lab_n") or 0)
     since = 0
-    for tkr, batch in _sessions(ticker_days, split_map, quant, which, processed):
+    for tkr, batch in _sessions(ticker_days, cutoff, quant, which, processed, label):
         for feats, lab in batch:
             n += 1
             y = 1 if lab.get(label) else 0
@@ -387,20 +403,23 @@ def main():
         files = files[: args.limit]
     ticker_days = m.load_grids(files, allow if allow else None)
     print(f"[grids] {len(ticker_days)} tickers", flush=True)
-    split_path = args.split or next(
-        (p for p in ("excel_bot/engine/holdout_split.json",
-                     "engine/holdout_split.json") if os.path.isfile(p)), "")
-    split_map = {}
-    if split_path:
-        raw = json.load(open(split_path, encoding="utf-8"))
-        split_map = {t: "discovery" for t in raw.get("discovery", [])}
-        split_map.update({t: "holdout" for t in raw.get("holdout", [])})
-    quant = m.discovery_quantiles(ticker_days, split_map)
+    state = None if args.reset else load_ckpt(args.ckpt)
+    cutoff = m.time_split_cutoff(ticker_days, locked=(state or {}).get("cutoff"))
+    print(f"[split] kind=time cutoff={cutoff} hold_frac={m.HOLD_FRAC} "
+          f"(ticker split ignored)", flush=True)
+    if not cutoff:
+        raise SystemExit("no session dates — cannot time-split")
+    quant = m.discovery_quantiles(ticker_days, cutoff)
     print(f"[quant] {len(quant)} letters with discovery numeric bins", flush=True)
 
-    state = None if args.reset else load_ckpt(args.ckpt)
     if state is None:
-        state = {"phase": "disc_uni", "processed": [], "counts": {}, "n": 0, "lab_n": 0}
+        state = {
+            "phase": "disc_uni", "processed": [], "counts": {},
+            "n": 0, "lab_n": 0, "split_kind": m.SPLIT_KIND, "cutoff": cutoff,
+        }
+    else:
+        state["split_kind"] = m.SPLIT_KIND
+        state["cutoff"] = cutoff
     if state.get("done"):
         print("[ckpt] already done — rewriting board", flush=True)
         LIVE["state"] = state
@@ -413,7 +432,7 @@ def main():
         state["phase"] = "disc_uni"
         print("[walk] discovery univariate", flush=True)
         counts, n_d, lab_d = walk_uni(
-            state, ticker_days, split_map, quant, "disc", args.label, "counts")
+            state, ticker_days, cutoff, quant, "disc", args.label, "counts")
         uni = _ranked_from_counts(
             counts, n_d, lab_d, max(m.MIN_DISC_N, m.MIN_SUPPORT * max(n_d, 1)))
         keep = m.bh_keep(uni, m.FDR_Q)
@@ -432,7 +451,7 @@ def main():
     if state.get("phase") == "hold_uni":
         print("[walk] holdout confirm singles", flush=True)
         hold_counts, n_h, lab_h = walk_confirm(
-            state, ticker_days, split_map, quant, "hold",
+            state, ticker_days, cutoff, quant, "hold",
             [r["rule"] for r in uni_fdr], args.label, "hold_counts")
         base_h = (lab_h / n_h) if n_h else 0
         confirmed = []
@@ -464,7 +483,7 @@ def main():
         seeds = [r["rule"] for r in confirmed[:m.PAIR_MAX_SEEDS]]
         print(f"[walk] pairs discovery seeds={len(seeds)}", flush=True)
         pair_counts, n_p, lab_p = walk_pairs(
-            state, ticker_days, split_map, quant, "disc", seeds, args.label, "pair_counts")
+            state, ticker_days, cutoff, quant, "disc", seeds, args.label, "pair_counts")
         pairs_d = _ranked_from_counts(
             pair_counts, n_p, lab_p, max(m.MIN_HOLD_N, m.MIN_SUPPORT * max(n_p, 1) / 2))
         pair_keep = m.bh_keep(pairs_d, m.FDR_Q)
@@ -482,7 +501,7 @@ def main():
     if state.get("phase") == "pairs_hold":
         print("[walk] pairs holdout", flush=True)
         ph_counts, n_h, lab_h = walk_pairs(
-            state, ticker_days, split_map, quant, "hold",
+            state, ticker_days, cutoff, quant, "hold",
             [r["rule"] for r in pairs_fdr], args.label, "pair_hold_counts")
         base_h = (lab_h / n_h) if n_h else float(state.get("hold_base") or 0)
         pairs_ok = []
