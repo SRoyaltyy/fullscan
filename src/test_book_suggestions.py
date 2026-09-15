@@ -154,12 +154,16 @@ def test_preopen_and_book_publish_strip_without_paper() -> None:
     live_idx = pre.index("src.publish_live_boards")
     paper_idx = pre.index("src.paper_trade")
     assert live_idx < paper_idx
+    assert "timeout_s=420" in pre
     assert "src.publish_live_boards" in book
     pub_py = (root / "src" / "publish_live_boards.py").read_text(encoding="utf-8")
     assert "rewrite_today_strip" in pub_py
     assert "ticket_1d_rows" in pub_py
+    assert "load_live_ticket_payload" in pub_py
+    assert "keep 09:30 Elite 1d" in pub_py
     assert "skip extras (catalyst/backtest/paper/sleeve)" in book
-    assert "timeout_s=180" in book
+    assert "timeout_s=420" in book
+    assert book.count("timeout_s=420") >= 2
     assert "book_suggestions.write" in sb
     assert "ensure_dashboard_poller" in sb
 
@@ -351,6 +355,96 @@ def test_rewrite_today_strip_overwrites_reranked_names() -> None:
         assert fm_strip["buy_1d"][0]["ticker"] == "AVAH"
 
 
+def test_load_live_ticket_payload_requires_elite_live() -> None:
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        day = root / "data" / "day_board"
+        day.mkdir(parents=True)
+        (day / "today_strategies.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "clock_legal_for": "2026-09-15",
+            "quote": {"after_open": True, "src": "session_export"},
+            "buy_1d": [{"ticker": "AVAH", "px": 14.24}],
+        }), encoding="utf-8")
+        old_root = publish_live_boards.ROOT
+        old_day = publish_live_boards.DAY_BOARD
+        publish_live_boards.ROOT = root
+        publish_live_boards.DAY_BOARD = day
+        try:
+            assert publish_live_boards.load_live_ticket_payload("2026-09-15") == {}
+            payload = json.loads((day / "today_strategies.json").read_text())
+            payload["quote"]["src"] = "elite_live"
+            (day / "today_strategies.json").write_text(
+                json.dumps(payload), encoding="utf-8")
+            got = publish_live_boards.load_live_ticket_payload("2026-09-15")
+            assert got["buy_1d"][0]["ticker"] == "AVAH"
+        finally:
+            publish_live_boards.ROOT = old_root
+            publish_live_boards.DAY_BOARD = old_day
+
+
+def test_publish_keeps_elite_1d_when_tickets_rebuild_fails() -> None:
+    """Noon skip-if-good land must not leave MTCH on today.json."""
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        day = root / "data" / "day_board"
+        fm = root / "dashboard" / "factor-mine"
+        book = root / "data" / "stock_book"
+        day.mkdir(parents=True)
+        fm.mkdir(parents=True)
+        book.mkdir(parents=True)
+        (book / "2026-09-15_stock_book.json").write_text("{}", encoding="utf-8")
+        (day / "today_strategies.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "clock_legal_for": "2026-09-15",
+            "generated_at": "t",
+            "quote": {"src": "elite_live", "after_open": True},
+            "buy_1d": [{"ticker": "AVAH", "px": 14.24, "px_src": "elite_live"}],
+            "sell_1d": [{"ticker": "METC", "px": 9.98, "px_src": "elite_live"}],
+            "strategies": {"stock_book_1d": {
+                "buy": [{"ticker": "AVAH", "px": 14.24, "px_src": "elite_live"}],
+                "sell": [{"ticker": "METC", "px": 9.98, "px_src": "elite_live"}],
+            }},
+        }), encoding="utf-8")
+        board = {
+            "date": "2026-09-15",
+            "generated_at": "noon",
+            "overall": "ok",
+            "ranker_ready": True,
+            "counts": {},
+            "selections": {"buy_1d": [{"ticker": "MTCH", "score": 0.3}]},
+            "lands": [],
+        }
+        old = {
+            "ROOT": publish_live_boards.ROOT,
+            "DAY_BOARD": publish_live_boards.DAY_BOARD,
+            "FM_TODAY": publish_live_boards.FM_TODAY,
+            "BOOK": publish_live_boards.BOOK,
+        }
+        publish_live_boards.ROOT = root
+        publish_live_boards.DAY_BOARD = day
+        publish_live_boards.FM_TODAY = fm / "today.json"
+        publish_live_boards.BOOK = book
+        from unittest import mock
+        from src import day_board
+        try:
+            with mock.patch.object(day_board, "BOARD_DIR", day), \
+                    mock.patch.object(day_board, "build", return_value=board), \
+                    mock.patch.object(day_board, "write_html",
+                                     side_effect=RuntimeError("skip html")), \
+                    mock.patch("src.strategy_tickets.build",
+                               side_effect=RuntimeError("timeout")):
+                out = publish_live_boards.publish(
+                    "2026-09-15", write=True, extras=False)
+        finally:
+            for k, v in old.items():
+                setattr(publish_live_boards, k, v)
+        strip = json.loads((day / "today.json").read_text(encoding="utf-8"))
+        assert strip["buy_1d"][0]["ticker"] == "AVAH"
+        assert strip["buy_1d"][0]["px"] == 14.24
+        assert out["buy_1d"] == ["AVAH"]
+
+
 def main() -> None:
     test_suggestions_from_book_lists_1d_names()
     test_write_skips_degraded_book()
@@ -367,6 +461,8 @@ def main() -> None:
     test_ensure_poller_refreshes_old_uniform_strip()
     test_ticket_1d_rows_fall_back_to_stock_book()
     test_rewrite_today_strip_overwrites_reranked_names()
+    test_load_live_ticket_payload_requires_elite_live()
+    test_publish_keeps_elite_1d_when_tickets_rebuild_fails()
     print("ok")
 
 
