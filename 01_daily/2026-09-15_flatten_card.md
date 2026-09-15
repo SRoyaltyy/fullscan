@@ -1,14 +1,14 @@
 # flatten_robust card — 2026-09-15
 
-_Generated 2026-09-15T16:42:19 — live `flatten_robust`._
+_Generated 2026-09-15T16:45:58 — live `flatten_robust`._
 
 **S=-4.39; hard-red: no new buys; holds and due 1d exits stay**
 
 - Score **-4.39** (DOWN) · route **hold** · HARD-RED
-- Cash leftover **$107,448.18** (after 09:30 $107,448.18 · after 16:00 $107,448.18)
-- Prior close **$107,448.18** · 09:30 **$107,448.18** · overnight **$+0.00** · session **$+0.00** · 16:00 **$107,448.18**
+- Cash leftover **$108,616.66** (after 09:30 $108,616.66 · after 16:00 $108,616.66)
+- Prior close **$108,616.66** · 09:30 **$108,616.66** · overnight **$+0.00** · session **$+0.00** · 16:00 **$108,616.66**
 - Overnight lots **0** · priced mover BUYs **0** · prior book yes
-- Planned buy cost **$0.00** ≤ leftover after sells **$107,448.18**
+- Planned buy cost **$0.00** ≤ leftover after sells **$108,616.66**
 
 ## Overnight holds (into 09:30)
 
@@ -32,24 +32,20 @@ _Generated 2026-09-15T16:42:19 — live `flatten_robust`._
 
 | Clock | Ticker | Why |
 |---|---|---|
-| 16:00 ET | BIIB | hard-red: no new buys |
+| 16:00 ET | ICLR | hard-red: no new buys |
 | 16:00 ET | WAY | hard-red: no new buys |
-| 16:00 ET | JKHY | hard-red: no new buys |
-| 16:00 ET | FOX | hard-red: no new buys |
-| 16:00 ET | CARG | hard-red: no new buys |
-| 16:00 ET | PRDO | hard-red: no new buys |
+| 16:00 ET | ATRC | hard-red: no new buys |
+| 16:00 ET | AVAH | hard-red: no new buys |
 
 ## Would have bought — holdings disregarded
 
-Sized from marked equity **$107,448.18** as if the book were flat. `io 3d_size (holdings disregarded)`. Not live tickets.
+Sized from marked equity **$108,616.66** as if the book were flat. `io 3d_size (holdings disregarded)`. Not live tickets.
 
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
-| 16:00 ET | BIIB | io_core | 82 | $215.80 | $17,695.60 | hard-red |
-| 16:00 ET | WAY | io_core | 664 | $26.94 | $17,888.16 | hard-red |
-| 16:00 ET | JKHY | io_core | 108 | $165.62 | $17,886.96 | hard-red |
-| 16:00 ET | FOX | io_core | 297 | $60.16 | $17,867.52 | hard-red |
-| 16:00 ET | CARG | io_core | 512 | $34.91 | $17,873.92 | hard-red |
-| 16:00 ET | PRDO | io_core | 542 | $33.01 | $17,891.42 | hard-red |
+| 16:00 ET | ICLR | io_core | 158 | $171.75 | $27,136.50 | hard-red |
+| 16:00 ET | WAY | io_core | 1011 | $26.86 | $27,150.40 | hard-red |
+| 16:00 ET | ATRC | io_core | 480 | $56.48 | $27,112.80 | hard-red |
+| 16:00 ET | AVAH | io_core | 1914 | $14.18 | $27,140.71 | hard-red |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
