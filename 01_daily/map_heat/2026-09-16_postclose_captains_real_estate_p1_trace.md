@@ -8,11 +8,11 @@
 
 **Step 1 — Research.** The model wanted to know: *"EQIX Equinix news September 2026"* → got 6 results (via gnews_rss)
 
+  - EQIX: Accelerating data center investment and AI-driven demand reshape growth and strategy - TradingView (https://news.google.com/rss/articles/CBMihwJBVV95cUxQQ3o3RG1Hc3oxWDBsUEtOSmU3aDdWQUc0Mi1Id0RqVF95UjJ6VWFYMVZPSVRTR09ldWJ3bnJXZEhWMnA0VlJkeXV1RDQyUE5CMnkzN1NXQXRXRWtnUlp6NFhqaTMwNWlORlhKU1JtSHRkVW9YZjhyLW95LWxtZUFrWk4xS2x1QjNwT2ZrTkFtcmNBdWhEeVhBREJ4U2U4M1dVX0wzWXVLUDZDZ1c5RS1rSlZVZmJEZ3JTMk8yZlRCUDFJTEkzV1ZhQWl2elJ1RjhyWnQyRzJCM2ZfeWxUZHoxc0RHdThUbWtNRUp0TmJzMnZrdjA5S3JzUzZvV3AtSXp2d2NJYjRhaw?oc=5)
+
   - Is Equinix (EQIX) Undervalued As AI Expansion Lifts Expectations? - simplywall.st (https://news.google.com/rss/articles/CBMiyAFBVV95cUxOc3Y3eEpHVU42Z1Y2QjRhZFRWU0xjdXZGbHc2SzlFbGNVbmxMYU5NWmNUS2hKaFZqbmVHMEpGT3o5cUZzZ3dtd1ZNTEpHQV96Y1MyOF9GV2RzOWtyZWp2ZlpPYklJVnNYWGRrNDBTTDJpZlNMMmlSZ0h5Qm16a1NCcjFZRkJaTzBTanhxT3dvWXlEM0NpNm5QbXZNZ0IxNGthU1hMN1hzamZxNU9RMzloaWVRWGZsb0FfOEtTY1ZiYmxER2tmdzRlbNIBzgFBVV95cUxNRHZzRUxheXpYUzI4T2xVNnB1QnltQ0pvNEJQWV9Zem8tUHktMExWUDFGWU50Wk5UVk9HSlI1cnhEMnlodVljck4xUW5WLUNkeXJaQXlsWWphSFRyaGw5RTlsb29vUkkxYlNVNDFWRlluYmgzNF90M25udE1XNGUxU2laUHdsSmN4eUJmSmdqY1ZvcGpkYjFSMWRnNDlaN3NhRGVYellXUDBORTZJdFJFWm1ZUmFISGFmQXI2aFhvTXNhaXlrakQxMmFVNWZhdw?oc=5)
 
   - Equinix Names DD Dasgupta as Chief Marketing Officer - PR Newswire (https://news.google.com/rss/articles/CBMirAFBVV95cUxPU2JpcWZmWXlHODZRUEI4NzhYQkpHYmJmVldoX2F2SXAtVzV0YUVsV3liVUNDRkJZdTF0bVZWMU9SZm53WDMzaVRDY3FjSzdPWThUQlhiT2NLU3FkenpYM3h2ZjRiTjlTRVQ2M3dZczZGTkNIYlk2d2p5YTJBRnZ3RUY4bzN4Tmk0ZkdhV2tXUkxlbERfMW8tUFdHLUNhOERoU2FiT0xWRHhPaTdL?oc=5)
-
-  - A Look at Equinix Inc (EQIX) After 3.8% Decline -- GF Value $946 - GuruFocus (https://news.google.com/rss/articles/CBMisgFBVV95cUxPNHlzX1lsT1g1Mnh6QWFjNnNESWFMdWhZN3pPRlJlaVFnWlJybU51Qk52dVpnZzhhYzVfQTFxcTg4SGtNRmFuNkdLZDkzOHBqTHE1d3lDc1dCQm5QU3E1STc0UHV6bTdOREhXZlA1dlhSWi1zXzhsZ1Ffa2hFYzgtS3M4LWQtTGdxMzZTZnkyNm8tMzVsU3BSZm9sVmJrSWlnYmJTSF84cDVSSXlQZ2V1ZGd3?oc=5)
 
 **Step 2 — Research.** The model wanted to know: *"AMT American Tower news September 2026"* → got 6 results (via gnews_rss)
 

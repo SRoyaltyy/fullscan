@@ -8,7 +8,7 @@
 
 **Step 1 — Research.** The model wanted to know: *"GE Aerospace stock news September 2026"* → got 6 results (via gnews_rss)
 
-  - GE Aerospace Is Making a $12 Billion Acquisition. Here's What Investors Should Know. - currently.att.yahoo.com (https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSFVTeVdhcl9aV01ZSHUzZGRuR2p6R1hpUWxscVVyUzZLSl9mRFB3YVliMENpTmZieGxHVTNCTjBZYm9na1hDdmZMd0dvWmlOTUs3X2xuSWxGSFF5eUpZUEl0YTQ5YTRHUkE5QjVocmYxVFpKWWpkcVIwWUdSc1l0U0xRRUFsMVpV?oc=5)
+  - GE Aerospace Is Making a $12 Billion Acquisition. Here's What Investors Should Know. - Currently.com (https://news.google.com/rss/articles/CBMiiAFBVV95cUxPSFVTeVdhcl9aV01ZSHUzZGRuR2p6R1hpUWxscVVyUzZLSl9mRFB3YVliMENpTmZieGxHVTNCTjBZYm9na1hDdmZMd0dvWmlOTUs3X2xuSWxGSFF5eUpZUEl0YTQ5YTRHUkE5QjVocmYxVFpKWWpkcVIwWUdSc1l0U0xRRUFsMVpV?oc=5)
 
   - Cramer: GE Aerospace’s $12 Billion Acquisition Is ‘Going to Send This Stock Up’ - 24/7 Wall St. (https://news.google.com/rss/articles/CBMiugFBVV95cUxNaEdyYmRISm45dm5NS0F2NUo0MW9yQzZ1WnBTa3hWbTRfd3U0eVoyRVo4S1hMcGNQZWYzYjdJaThvUVkxenMwTFJhNk5nUks0dF9KUEg0eUo2TklyZkduWU9qdTd3U0xGamtRUlM2eEdlU1dUeVM5R0l0M2RjSHhQUjBIVmxabGtoUXg4R1Z6RzUyamllQnNRS0dXSi1udzdqVUtfUHdpSHdudTEzaGQ4eEh1NG1HNEVQb3c?oc=5)
 

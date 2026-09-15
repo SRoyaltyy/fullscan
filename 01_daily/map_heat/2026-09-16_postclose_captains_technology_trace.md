@@ -14,7 +14,7 @@
 
   - A Look at Cisco Systems Inc (CSCO) After 4.4% Gain -- GF Value $74.31 vs Price $112.13 - GuruFocus (https://news.google.com/rss/articles/CBMitAFBVV95cUxOckRYRzNKaTU0cW0wcXRaZGFRWnlKTzlQWmFBQVBOVDZ1b01xb3UtODY1NVJGVGczdThBaDN1czFHMlN4bXRXNUwzZXUxbHNKOUhYUHdJaFhaZE9NLWZuQTNGSThNaDFERlhaM0ZKTTZ5OUtWdmxiTXVlbllKTVNFZ1BZN28ycFhvd045OW0xellVQ2EzMWtlVkp0VUFpRU1aY2NwWmZmdVBoSHNINDNraXNBRzc?oc=5)
 
-**Step 2 — Research.** The model wanted to know: *"Motorola Solutions MSI news September 2026"* → got 6 results (via gnews_rss)
+**Step 2 — Research.** The model wanted to know: *"MSI Motorola Solutions news September 2026"* → got 6 results (via gnews_rss)
 
   - MSI: Strong execution, acquisitions, and ecosystem integration fuel growth in public safety and defense - TradingView (https://news.google.com/rss/articles/CBMilgJBVV95cUxNZDhZSnc0NUlNaloxeHBHQmtrZmhfN3NqdVVoNmQ5WmJkLUZPdTdfb2JTUXREUm9wamVvc1RXd1RYYWFxUDhiZjFHMF9YWVRXWmM0R2FHWlRTRk5rd2l5Z3RVcHFZcjFGczJCcEZjZjNaMlZEdHAyTE9PZEZPUnhOX0dZZHNlRllyRE5IdE1LQ0tFNXBzUlRURmRIRkpFazlDemI3X2hCUmY5MEN1NFBrTk5kNWlpeGI0UVVQeVU2d3FvR1I3ZFNHVjdJcWNMdFdmSENQbXlmYXVzUnE2TlNKZkVUeFNqRHRHVGtibXhWYU9iU1VRNV9HdzVSX08tQ3VBQWR3SVh4b3Ztc1BKaUs5eGd4QmJZUQ?oc=5)
 

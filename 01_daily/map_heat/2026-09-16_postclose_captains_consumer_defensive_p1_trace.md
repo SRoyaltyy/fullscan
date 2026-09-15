@@ -8,7 +8,7 @@
 
 **Step 1 — Research.** The model wanted to know: *"Kroger KR news September 2026"* → got 6 results (via gnews_rss)
 
-  - Why Kroger Co. (KR) Could Be a Consumer Staples Comeback Story - finance.yahoo.com (https://news.google.com/rss/articles/CBMikAFBVV95cUxQcDBpVDJ2WHo2VGdmQ01rYVg3S1NwWVZwZ0tfdzJMajNfRGpPTG9pZ1NaZTY2eERKWlVVTUNQZjlMY0FZdWM0Wi1xYWVfM2hJeHdocEN2VGpydTBCMTVWaWYyWFl3Q3BiaGJYdHJFMmJPd2xqTTh1OUxwRWNoaHlEVE5YTmY1OVJZdXVnZGpERVY?oc=5)
+  - Why Kroger Co. (KR) Could Be a Consumer Staples Comeback Story - Yahoo Finance (https://news.google.com/rss/articles/CBMikAFBVV95cUxQcDBpVDJ2WHo2VGdmQ01rYVg3S1NwWVZwZ0tfdzJMajNfRGpPTG9pZ1NaZTY2eERKWlVVTUNQZjlMY0FZdWM0Wi1xYWVfM2hJeHdocEN2VGpydTBCMTVWaWYyWFl3Q3BiaGJYdHJFMmJPd2xqTTh1OUxwRWNoaHlEVE5YTmY1OVJZdXVnZGpERVY?oc=5)
 
   - Kroger (KR) Stock Looks Hard To Call Despite Raised Profit Outlook - simplywall.st (https://news.google.com/rss/articles/CBMiywFBVV95cUxPYjZfelg2VVU2YUc1V21YdUZCU2pCVzZrRXVEMTBqTnJuUTloclFQSDlCUW55cVp6SE9kX1d4b0VUbkhJT0w0RGVMY1hJUjgzTWx0cXp3Qmk4LUhVZjRvY2JEVTVwNFNlbm9WU0dwSHdrLUlwd2ZUMGQwOGxla0VTU1VROVh3cDVOajhmeHo4aGRPUmdTVXdwSVRoazdBTVNVaG0zUFBRdHk0M2VScmZ4SUZSNVIzTGZYNE81MXFrZHNsQm9nbFBrT3hab9IB0AFBVV95cUxOWlowS0JlLWNCWFBBVjMzUUlKVG5BZkRERThBM2JQdENGc1dpWThZY2JjTlRQM0w1VzF6YTR4aFd2WnkwM25PUXBrejc2UlM0LWgyMkpCdHR4MXdrVm5FeS1xQURMSXB2bC1YYVdYVFdLblNxWkI1SFljdW1oZW9jRkFoOV84UDNSdGlZSjhfSGVZQWVsclI1bGJxeXVPWU40QkxsaEN6WGpIWXR2VGR1Y2tiRXNZNG94bHRGb3M2RDZJOVZZcDJsQ1Q2WmpxelFz?oc=5)
 

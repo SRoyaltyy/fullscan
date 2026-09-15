@@ -12,7 +12,7 @@
 
   - Polaris (NYSE: PII) CFO adds shares in small retirement-plan stock conversion - Stock Titan (https://news.google.com/rss/articles/CBMipwFBVV95cUxNdzFJMTVEaVlNZm9DcDhjbzNVT2U1TXpwZjN4ejlLM3EwMTBEc3l0RkQ0R3Rud3l0TGFEdzQtd2QzOC1Zdi1XY25uWkRlZmRSdWlGQ3pKTWtpWktfMUdFVTJ1NmRaWEdYU2YzTTJQMDcydUFjRVlmUFZLNGhkQkkwTFN1TkNYYTY5N3lsVVJrb3hQbFU0Y1NfZ3k4N2VXR1hXNFZaRjIxMA?oc=5)
 
-  - Did Polaris Just Turn Into a Drone Stock? - finance.yahoo.com (https://news.google.com/rss/articles/CBMilwFBVV95cUxPLVBtTnVUTHMyVEZNTk54cHZVQkw4WjZ5TWNzLUFTdmpST0xXUlRlVUpFd1poZ0lhZFY4ejNzLTdyREotRGZGRHZEYm5OTklZWWlZXzF5b3QyaktIVjlHSXduRkJiQlVxOC03NV9zLUc2THZKTGRFa3VLNjE4eVpzMU1feHNDdldLa2ItUGFLR2REeTQzMXJJ?oc=5)
+  - Did Polaris Just Turn Into a Drone Stock? - Yahoo Finance (https://news.google.com/rss/articles/CBMilwFBVV95cUxPLVBtTnVUTHMyVEZNTk54cHZVQkw4WjZ5TWNzLUFTdmpST0xXUlRlVUpFd1poZ0lhZFY4ejNzLTdyREotRGZGRHZEYm5OTklZWWlZXzF5b3QyaktIVjlHSXduRkJiQlVxOC03NV9zLUc2THZKTGRFa3VLNjE4eVpzMU1feHNDdldLa2ItUGFLR2REeTQzMXJJ?oc=5)
 
 **Step 2 — Research.** The model wanted to know: *"HOG Harley-Davidson news September 2026"* → got 6 results (via gnews_rss)
 

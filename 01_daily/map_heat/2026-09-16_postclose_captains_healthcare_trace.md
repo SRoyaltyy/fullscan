@@ -8,11 +8,11 @@
 
 **Step 1 — Research.** The model wanted to know: *"VRTX Vertex Pharmaceuticals news September 2026"* → got 6 results (via gnews_rss)
 
-  - After a serious Olympic crash, Lindsey Vonn shares her experience with a non-opioid pain medicine. - Stock Titan (https://news.google.com/rss/articles/CBMiugFBVV95cUxNaWFlc3o5ZlNCNlNFYkhnM3dxVG04Zl92b29KSy14VnpSRzdYSVVfU2lZVjJ6T09UYnY1T0tKeXBiLTZTaktQR3c1a1F2YmpXZDBoUjZZejFCRzRmdUZESEptcjlvbFI4X3E2S25Ld3R4dU90eHZncXhUem14STQweDJjcUlDQzJ5MElhQlVoajJMUVp4bmVmUFQxMXFDXzlSVVJLVDJTcmhoN2NQOExJTnEzSkxHV0hsdmc?oc=5)
+  - Vertex (NASDAQ: VRTX) executive listed as insider with no reported shares - Stock Titan (https://news.google.com/rss/articles/CBMiywFBVV95cUxPMXduOTFKRVptanQ0UENsbDB3YTVwTDVRVlNwQVpFd1BTNEM4bVVpS1RBTlZvUXd5dGtHYVJDdElnYzk4cEdwa2xDOXFwY0dicDRtWl9PNWVBaTNUanhSbUtwakZ6ekpHU1lrcWhhbU1xY0pjS1B5SEJqVHJWSzRnamZKb3VyY1cybmNGZzB2c1ZqejZfMFNCS0pMZ2RyZWJra0REemc1OXhCQjR3anJoWDdoS2kxR2lZcnd0aUhIcFM3VVh6M3BhTnMwYw?oc=5)
 
-  - Vertex Pharmaceuticals Highlights Catalyst-Rich Pipeline Beyond Cystic Fibrosis - TradingView (https://news.google.com/rss/articles/CBMi1gFBVV95cUxOdkh2cFdtTmRvLUs3bDkyeVR0ay1UYTVXUlhEQnVhajc0a081b2wzMUZmTXgxRVJrbWVXUmNYUGh0QW1NWHM3VU5aYU9pREF0WkRSTHVsaFZmbkVlTnhWaEhzeU03R09HeVJBNWZtbjVuMG5lMDVwVnFQc1pTS1E4Q29FM1VEYld1dVNJRmFrdW5rWElWNXEtemloeHJDaFJySUU3TDJRRlI2OUFPWWlZbEJxUHljT3ZXZFAzNXM4bzVURWQya0dEY1pOdXQ4dlFMSnFrU1Bn?oc=5)
+  - VRTX: Diversified pipeline advances with global CF launches, renal expansion, and pivotal readouts ahead - TradingView (https://news.google.com/rss/articles/CBMilwJBVV95cUxQUXFUUUtadnJHdXh3Qnk4bkF1NVpBOElHeW4xd3dkQVRoM3ByWmo1X29PNVlrMWtVWTdQVjc5SUtGNGkxMWV4NW10bkcyNW9jcEY0WWRiU1JjZ2NTaFVFTnY5U1FaR1hMYlF6c0dfdWxqVjVtNVJfY3NpZndLSUNjOGdaeDNiUEpqcU42UGltY0JBS2ZwOUhiVWhOS09fbmlwYjlieGg0N1pGQkk2WTgyb25vTGhWU2RWUmJRcDE5b25SWENsWHlmNXpuV1ZlbXZOTHJRMlRFejZ1dVhqakZKNDhmWjJqc2lUdzVLckstS21YalNtVTg1VGJITzFqYkRpWGxzdFJ5TFJUNEJZekZXanFMM2c3S2c?oc=5)
 
-  - Vertex to Participate in Upcoming September Investor Conferences - finance.yahoo.com (https://news.google.com/rss/articles/CBMiqwFBVV95cUxQOVJPWVE1YllyY1U4aXBSZThJRDVsVFF5N0lYdVdncWsxWEdYRl94UmlZa21zV201N3Jhbm5NNnRNbWE2ZXoxVmZxVW45dmdZTmFpZ1dFZU1yY2xLNkJiQmJ1NkF0RGlYcDExRk5sM1lXSHJxNkNaOFlvXzBMWVNTLXM5QkE2eE5JZEZ1bE5LT0drX1JaZjFrM1BEZ193MHY0T0gwaWdwQWRxaDA?oc=5)
+  - VRTX Looks 1.5% Undervalued on GF Value™ as Upgrades Highlight G - GuruFocus (https://news.google.com/rss/articles/CBMitgFBVV95cUxNTEQ3TEJ4TDlNcENKa3ZTSEtNZEx6V3RyakVKRWd2RWo2X0oyVVBvLXAwalNNcTV2UmdjRkdmUElFNGw0djNaSTNBdTd5RlRKQmltSHkxMzcwWGlaRDNPWmQwV3dPVFFSU0hwczhvVGZpOVI4OVFUNi14OGM3YklXaTFnUUo1OGJTTVdEMVA2dGdUVExhbVNXQTYyNW45WE9HdlNEWkVNX1pMTjNGckhLSEdtTmd2UQ?oc=5)
 
 **Step 2 — Research.** The model wanted to know: *"REGN Regeneron news September 2026"* → got 6 results (via gnews_rss)
 

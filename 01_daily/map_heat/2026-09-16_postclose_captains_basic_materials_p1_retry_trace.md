@@ -8,11 +8,11 @@
 
 **Step 1 — Research.** The model wanted to know: *"LIN Linde plc news September 2026"* → got 6 results (via ddg)
 
-  - Linde plc (LIN) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/LIN/)
+  - Investors - Linde (https://www.linde.com/investors)
 
-  - Linde (LIN) Stock Price & Overview (https://stockanalysis.com/stocks/lin/)
+  - Linde plc Declares Third Quarter 2026 Dividend, Payable on September 17 ... (https://www.marketscreener.com/news/linde-plc-declares-third-quarter-2026-dividend-payable-on-september-17-2026-ce7f51d2d880f622)
 
-  - Linde plc stock heads into the open after a 0.4 percent dip (https://www.ad-hoc-news.de/boerse/news/corporate-news/linde-plc-stock-heads-into-the-open-after-a-0-4-percent-dip/70084447)
+  - Linde Is Everywhere (https://www.linde.com/?newsType=Corporate+News)
 
 **Step 2 — Research.** The model wanted to know: *"SHW Sherwin-Williams news September 2026"* → got 6 results (via ddg)
 

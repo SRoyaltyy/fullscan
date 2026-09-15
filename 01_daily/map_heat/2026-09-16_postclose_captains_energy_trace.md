@@ -8,11 +8,11 @@
 
 **Step 1 — Research.** The model wanted to know: *"Noble Corporation NE news September 2026"* → got 6 results (via gnews_rss)
 
-  - Noble (NYSE:NE) Trading Up 4.4% - Should You Buy? - MarketBeat (https://news.google.com/rss/articles/CBMipAFBVV95cUxPZGtzRDA5S0tUZDNHMlhjWEhCZ1U0Tl9YTlBaMWY0Njd3NFlza2RoVFFza0JHSjF3dnlIVEZuamphaVlSMmtQWVRBM2ZzQVNEc3Z2anNBYXc2ZjBpTjk3dXhEaHM3UjFJMGhxSUdMXzJLdEMwSndfNFo3YWlBdWk3Q2hKX21nVlRzNjZORUVLeVZ0UjBQaElhVW41UlJpNkpNQkUyOQ?oc=5)
+  - Noble (NYSE:NE) Trading Up 4.4% - Should You Buy? - marketbeat.com (https://news.google.com/rss/articles/CBMipAFBVV95cUxPZGtzRDA5S0tUZDNHMlhjWEhCZ1U0Tl9YTlBaMWY0Njd3NFlza2RoVFFza0JHSjF3dnlIVEZuamphaVlSMmtQWVRBM2ZzQVNEc3Z2anNBYXc2ZjBpTjk3dXhEaHM3UjFJMGhxSUdMXzJLdEMwSndfNFo3YWlBdWk3Q2hKX21nVlRzNjZORUVLeVZ0UjBQaElhVW41UlJpNkpNQkUyOQ?oc=5)
 
   - 2 Small-Cap Stocks with Promising Prospects and 1 Facing Headwinds - StockStory (https://news.google.com/rss/articles/CBMixwFBVV95cUxNTlZrYTBtUE0tWFd1Rjlya0N0RW9ORkFlTl85NTFaOGtrWkttZXRoNXc3Z1VQTUc1cDZhMzg5YWgtR19wbFBmNUl6YUlhalZUSzVpeXlEMVhISjZrb3RIN25wTk4yOUZPSEZNa1B5QUpPVW5teW5qM2d5ajV5VEVXcXlZcnluNjVRZmx4QWlFZXdVOHhwNWVWSVNPcF9uUFFhMGtodFlEOW9iN2dHbU1uQTRaSFRZZGRvT1luSEt6NGVQOERWV2F3?oc=5)
 
-  - Noble Closing Purchase of North Bradshaw Property - Yahoo! Finance Canada (https://news.google.com/rss/articles/CBMijwFBVV95cUxPZDNfRGhza1VRMzRiMGswd2VHc0EwekxzZWFxd24xVW95XzBXWTRsdzVkSm9Ya01CcFVHNmFfSjlxY24zdmZqVV9FZmN5ZHZPbjhDSC00MkF4R3BoOVVDNTY0Ykd5YmZRcGk1Y2I1bzZseG9wQ0dCSEVhcFB3cDdlZ093cTZZeUVacE5QemtGRQ?oc=5)
+  - West Noble junior defensive lineman, running back Brogan Parks interview at NE Indiana High School Football Media Day 7/14/2026 - WANE 15 (https://news.google.com/rss/articles/CBMi8wFBVV95cUxOaVd1b0Myc3RvbS1SLVo4RlFJNE9CSE5RVWQ1a1ZUSGEwZmtYZnBkVUotYVpJRWo1a2dvTW9GY1Z6MUJCLVRhR3lnM2xGZWUybXJ3SGhydmw0cEljaHpSVUlHcEFGNVZ1NGpMNzhNVHZyeVV4dnJlRmpiVWk5ejNQVGFnU3JFeTNUMmQ4a0cyV2traU5nZmpvdGctLU54TjZfZDIzUlJobnVLMUhfYW9NV01UTmlNZXJkUENpSS1kdFNtVW5KNXlpbFNCRVJZMGZoMUt2eDAwSjJpQ3pPYkg2c2xUSEhQUkVwdHlvVnY4Y29Hcjg?oc=5)
 
 **Step 2 — Research.** The model wanted to know: *"Transocean RIG news September 2026"* → got 6 results (via gnews_rss)
 

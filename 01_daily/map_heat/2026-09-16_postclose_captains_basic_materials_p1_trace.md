@@ -8,18 +8,18 @@
 
 **Step 1 — Research.** The model wanted to know: *"USAR USA Rare Earth stock news September 2026"* → got 6 results (via ddg)
 
-  - News Releases - USA Rare Earth (https://investors.usare.com/news-events/news-releases)
+  - USAR Stock Quote Price and Forecast | CNN (https://www.cnn.com/markets/stocks/USAR)
 
-  - Investor Relations - USA Rare Earth (https://investors.usare.com/)
+  - USA Rare Earth, Inc. (USAR) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/USAR/)
 
-  - USAR News Today | Why did USA Rare Earth stock go down today? (https://www.marketbeat.com/stocks/NASDAQ/USAR/news/)
+  - USA Rare Earth Stock Is Down 60% -- Is September the Month to Buy the Dip? | The Motley Fool (https://www.fool.com/investing/2026/09/09/usa-rare-earth-stock-down-september-buy-dip/)
 
 **Step 2 — Research.** The model wanted to know: *"MTRN Materion stock news September 2026"* → got 6 results (via ddg)
 
-  - Materion Corporation (MTRN) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/MTRN/)
+  - Materion (MTRN) Stock Forecast & Analyst Price Targets (https://stockanalysis.com/stocks/mtrn/forecast/)
 
-  - MTRN Stock Quote Price and Forecast | CNN (https://www.cnn.com/markets/stocks/MTRN)
+  - Materion Corporation - Stock Info (https://investor.materion.com/stock-info/default.aspx)
 
-  - Materion Corporation (MTRN) Stock Price, Quote, News & Analysis | Seeking Alpha (https://seekingalpha.com/symbol/MTRN)
+  - Materion (MTRN) Stock Price & Overview (https://stockanalysis.com/stocks/mtrn/)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

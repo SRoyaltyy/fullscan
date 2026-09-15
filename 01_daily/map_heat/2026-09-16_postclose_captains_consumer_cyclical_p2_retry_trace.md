@@ -2,24 +2,24 @@
 
 
 
-**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (6,711 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
+**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (8,849 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
 
 
 
-**Step 1 — Research.** The model wanted to know: *"WSM Williams-Sonoma news September 2026"* → got 6 results (via gnews_rss)
+**Step 1 — Research.** The model wanted to know: *"DHI DR Horton news September 2026"* → got 6 results (via gnews_rss)
 
-  - A Look at Williams-Sonoma Inc (WSM) After 3.5% Decline -- GF Val - GuruFocus (https://news.google.com/rss/articles/CBMiugFBVV95cUxPVzZncXc0ekYwZ1B5OXFLdE84cmZQR0I4ZjAxbXB0OVN3dzJwLU1paFFfVWRUQzczSHlUNmlhZk0xQk9ocFFkaF9qMnF2UWdtbFFzZlg5RjFvRjhnTmg5ZVB1X21WOWpJYllRYk5kSXh6Vk9CV0ZJZzJFT1VjbHl6NkZkTEZ4ejZqcF9walpxYmFSLU1vVEFlWm1xNG0yZVAxYnpvcUpsQmJiOFZOcGdULS1US0hfWlNfRlE?oc=5)
+  - $5B buyback boost at D.R. Horton (NYSE: DHI) as it maps out 2026 repurchases - Stock Titan (https://news.google.com/rss/articles/CBMiqAFBVV95cUxNV3JTS1hIbUZac2Z0Z1lBUXF0WHFfRXFRWDA0TVNiWG1xNjhYaXZUWmloc3RYNlJOWEJ6R1FrSzJQS1EzS2VaSGRIWFZEWUtnNEhmcGNsRTlVbnQtYkNvOXBUQTh2TGJMSEMyN3dZZHZCM2RtU0tzY2haczhSS2pPLUhaQlpPUjhWMXY1ak5DZ1FrYnBndmk4NnF5RzJGaTRMMkswLVdEcXQ?oc=5)
 
-  - Why Williams-Sonoma (WSM) Is Getting Attention Again - simplywall.st (https://news.google.com/rss/articles/CBMiuwFBVV95cUxPZnNvUUdUbm9nVk1GcXR4cnpVZmpoeXRWSUNza1JXSlJIeFVJVTdWZHROTW5oTml2UC1lQU5DcUdya3QtV2h2RGgxMHBzVE1leUJrLWNwZ1BiaFhXb2dXNDFVX0lHWFpIMmI5Q3h5Y3gxWjlFMGhnME9td1ZPdHJERlV4cEJiRW9FUFBkU0Y3ajUwSEJQSzlKLXVoSkFvNi1Mc0tWVUtsQUlFME5zSkF5aGtyTzB4My04Yzdv0gHAAUFVX3lxTFBmSGpMZjVLd0tObnBpM0tZYWh3TmYxU25INUlHM2xsWHEzbUVmNGJ6ci1wT2xqcGRLSlNQODhSNGRZZFBPa2xsT3dtZUN0TjF5STBmV0huZzZVWWt3WTA1Z0hqSk10S3JZa3MyTFh4OXB0U1piZGZuaXhub01LXzJfNmNXRDg1Z2tGUFZWcF8zNFBMdk9ORTBXNzZWdWJ4V3AzWC1XN2FCUnJLOEI5emJ3V2gxM0RMcXROLUpuNFA3Rw?oc=5)
+  - D.R. Horton stock holds firm as Q3 revenue touches USD 9.23 billion - ad-hoc-news.de (https://news.google.com/rss/articles/CBMiyAFBVV95cUxOcnhRakMwdVpIaGxrV0QyUHM0VmsyLWZsb0pXaGZQZFFHYkZMcHZQQ3dKN2J2UGQ5VnZ4QVFCdUh1N2Job3BfOGU4aU14V2VlUkN2cnA4ZHozbkc5TEd6ai1tZzVLVW9LZnVDOGlGdUJuSUVONkJveVBxdDNKM2F5WmJYTlJwZ0hZU2J1MUtCZ0hSM2pEcjhCb3Fvb2hJaXQ3NnBLTUZMZmd2RmZrZ2ZDZUcwSDZlMENuOTRMT29ER3F1OE5yTUc2UQ?oc=5)
 
-  - 3 Reasons to Sell WSM and 1 Stock to Buy Instead - FinancialContent (https://news.google.com/rss/articles/CBMirwFBVV95cUxPelZlUDFtQ1BjRVlvTzdsQXNUSG5NSzJHdTVseUpoSGhUbGtlRG5tQm56ZDFhS1RXNDdRbi1WYjJ6UnFHQlRvQ3ZfTjRUZEFTQzROb2VZQlU5bnZaVFJtNTkwdjhPeElNX245TzNDdWVVY0ZiQk1FSGd0VDJYVUNPU192VGticTlLSXh0SVJsZjFyU1dtLWMyQmFRYkdMQmRVVXJoYl82NUxlQjNRXzNj?oc=5)
+  - Is D.R. Horton (DHI) Undervalued Following Its 2026 Results Date Announcement? - simplywall.st (https://news.google.com/rss/articles/CBMizwFBVV95cUxOb0toRFA0U1ItRHhWYWY5Mm5CcDVMOWVJamprSDdGelhHdUV0RUNUQWhPRHdGZ0ttZTNLVUlvZEgxSktaTmkxZGxEaXBObmM3M1oyMU1Sc1dxaVQwaFQ3VmF1UmoxRzhXQ2ZNOERJVEJqM3haaWQtSWs0REROYXZTWVZhWGEtZDJ6YVJvVzU4NkIwSFRsTGs2VGxaN1hDSW5SbUszUFgxcVMwT1NXM0RZSG12MXI3VThWRXFGSnd0Z0pvZXI2M29Ja3hCNllDdzjSAdQBQVVfeXFMTnJrb0VWek5uV0dJZGNLdXM0VHJyNHczZ1I2ai1jaFgwX29zakFvM1kzcWh4bEk0UHI2a2hUY0pDY1I3d05wcmQ1eDV4eF9iRHZLb2RmMFVfbGkxandxcDVqQVp0TWhJbnpLLXpPbWhLMVNLLTV5OGhIT001ZHc5NVZBeTdDa3lEaDFsT2FiRHlPUklMOGV6NGQySDdXaXdXaFZVYUVQSDRVWlZ3SkVpMGZFT1IwS3pYdW1hdXR3WnJfd29KcHRVbGdyNFBtMXJyQXBBOW0?oc=5)
 
-**Step 2 — Research.** The model wanted to know: *"ULTA Ulta Beauty news September 2026"* → got 6 results (via gnews_rss)
+**Step 2 — Research.** The model wanted to know: *"PHM PulteGroup news September 2026"* → got 6 results (via gnews_rss)
 
-  - A New Campaign Is Pushing Ulta Beauty to Drop Flock Cameras From Its Stores - Truthout (https://news.google.com/rss/articles/CBMiqgFBVV95cUxPZ25STHhPZElCLU5XeWtPdjMtSGFIaHpLVnJrQzhfSzZYR1FqcGNmWG1FYjZybHpoaUlQNFZKaUx2TGh5MTBYM29XZUJaOUcxT2hxMUF6RmhlMWNzcHF6UFhOcXVFclRuMUloNXhTOVdfOTZJc1d5akM4dmstbDRhQ1g0TGt1N0RUOFkyVkY0cDR2WGhiVkpYTTNJalF4S1E1TXU3Z1pWSTBQUQ?oc=5)
+  - Director shifts 15,278 PulteGroup (NYSE: PHM) shares via charitable gifts - Stock Titan (https://news.google.com/rss/articles/CBMirwFBVV95cUxOQW9WYUxuM3FPMU1OcUhib193TDdpR29uZkROVktScEE5bXA0Qzk1Qmp6U0NjbHZsemFlN2J6WS1hOERpVEliVjZtSEM5YmNVNDVqZzRNTUhobEFvTEZvV0FrYnUwOFBVWVhfT1FrOENoSkRjVzlkR0MzdzVxZWIzQ0hnaUhTRV81OWJYemZMMUdYd0dUNG9IUENqOXEtNTFRU2ZKdWw1b0ZERENwS0hV?oc=5)
 
-  - I’ve covered Ulta’s sales for over three years — these are the best deals from the fall 21 Days of Beauty Event - NBC News (https://news.google.com/rss/articles/CBMikgFBVV95cUxPeGRoVUtnVXFVdU8tUHExaG0xaUQ0T3liLWFyUUVkSlFlMlJ6U0xSWmJwSll6SkV4MUJocnpFTUMyTks1TmhiVXpLNXdEclhXVnVqTVpGaXI3bHFyNWxGZEh2Ylo2cFlXQXRCME13dGRPS1I5VmFmQWpoSHllQjRVN3FkcVVqRFh4SlhLaVRVTlAwQQ?oc=5)
+  - PulteGroup (PHM) Just Drew Fresh Attention, So What Is The Market Weighing? - simplywall.st (https://news.google.com/rss/articles/CBMi0AFBVV95cUxPZkNtUFpZTHhiQmNQTUFqU3YyQVI5WHhXU0dtck5SNWx0ZEFBVnZYeXRoSnFoZlBVZG96LW15bzZKbkhHc0tzV1lOMlJmSnJmc09pWE1lX0ROWG4zaWZXdFZVZXhGNnAwb3R3UUhlOGNWSWRGdnRHZEdzYkRqM3doLU5oUEdJT0dNdzZNOEw5b1NnVHJQVFJWd0xKd0tudkRuV05zSy1Gb0JieldtRDdmX3VTMmV5MkF1ZjNZT01lNEw0Xy1RelQxX0VwY2JSNTFC0gHWAUFVX3lxTE5WdU0tVHJ0aFlibF93R1NJTTRfeDVwRU1kQlV0aFZHT0dZd3hhRTJyeFFPU0hfNWpsUTk1cTlGSjNfOW9ZQ096UFdGRU5RY0s1dGs4WFRhS01CWnhsdXBYVFFRaXpKaE5mb2hkaFppeEdlMHpCc2tYNjdCemcwOEV2WXhUSzFub2huY0ZQN1VjdXlVVHFNS3BvR3hDdmhTbkhneGFiNEVFZFBKSWIzRElJWHJ2YnQzUWFka1NTd0o4OExHTEJkOWRRdTE5dE1yak5KeDFRbWc?oc=5)
 
-  - Best Cosmetic Stocks to Buy in 2026: Are They Right for Your Portfolio? - The Motley Fool (https://news.google.com/rss/articles/CBMilwFBVV95cUxORXJ6VjgxYkFSQTMtWXFrVHBMZEdFSHZXdmNUaEUwTGh4RkhaNjh2Sjh4UDlPQmFadjNjdUtrb1NCZEE0OHppYXd0TERzRGxDMkJmc042NmlMb0JXYUU4OWR6amxSZVZDSEVtQVM5Y2RnT1dNZjMtT0RzS2JsM2t4RXFYUklsMHA5VW9RV2xyTHJEdjhkMEI4?oc=5)
+  - PulteGroup Announces Quarterly Cash Dividend of $0.26 Per Share - Yahoo Finance (https://news.google.com/rss/articles/CBMirgFBVV95cUxOZS1YRHo5T1F6WGxOYW1VVEFuZjRWWllQOTFNa0lHQVIxQTdSUWF2SXJRUXJRV0VYY3U2VU9XNEZpNEd4UGlmaHpoWnRzTWFUUEtFbXJrd0hDRVhsWXk0c0JHRWJKN21IbG1RUXJrNU1SZFBEcGtST1RtQmtEY2FtWlNVdXF3a1J5VUdhWVM1QjduM24zcE04RU42RDl0U0JTYXNJaGNMWVBqUFhtV3c?oc=5)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

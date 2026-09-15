@@ -14,12 +14,12 @@
 
   - URI Looks 11.1% Overvalued on GF Value™ as Momentum and Profitab - GuruFocus (https://news.google.com/rss/articles/CBMisAFBVV95cUxPa09VbC1KMzJGcy14ZUdEdElWYS13ai1XWDJ4bFRCZzEyQjZWaHJweS1acXNQRGI3Z2J5YW9rYXpoOTdPamwwZnFQRWF6V2tGSHF6WkZjZEllQkI4R3RMb1dpWlpGSDBvU0J4Mm5CUnpsQ0JvQkt5ZTFTVzZNVEFIdzhyMXJDbXZqa2ZHaWk3WVJFMlVpbjdEZ1M1azZoVHRhaUxnLVhhdmE3NlZLUTMtYQ?oc=5)
 
-**Step 2 — Research.** The model wanted to know: *"GATX news September 2026"* → got 6 results (via gnews_rss)
+**Step 2 — Research.** The model wanted to know: *"GATX HRI rental leasing news September 2026"* → got 5 results (via gnews_rss)
 
-  - GATX Corp's Dividend Analysis - Yahoo Finance UK (https://news.google.com/rss/articles/CBMigwFBVV95cUxNeFNyTFE0c3NaV3FXQk9QdlEzLWQwdDQ1cmdNeV9SN1d1T2xTUDFNRkN6V2RmWU5SY2hsX0VZbklXOXNLNGhXYndxRmlHOHNmMV9rS0RMNTg4VGxFNHVWNEtOOWNya2VrcFRmelV2R2o0ZnYxVms1SnpzeEF6VG1JVWtlQQ?oc=5)
+  - Rented Fleets Are Winning the Infrastructure Buildout as Mega Projects Multiply - TradingView (https://news.google.com/rss/articles/CBMi1wFBVV95cUxOeVcyVm1JaGdsTmFGcTVoVVNSNkNaRTBEakMxelZjdjNQOC12dG1HUmp3eWdjX2pTTTFhTzU5STBqQjVWemZ6bXl3NHhjUDFDT0V6RUV5T1phQ0hiOXVqWWwwOVp6VG5ZVENsUWpWQzNUTUJwNW1jWlJTNzJfQnJNNGx4Mk5valFBd284bmppWjZldEl0RS1SdkJyeFI0RDJpaDdXeWhkajBfMEFuNkhMRUtFMnlISlpCVE10QzBVV2dWOHBoOHVKOE9EcGhMU2xfM0dLVFM3Yw?oc=5)
 
-  - GATX CORP (NYSE: GATX) SVP exercises options, then sells 2,500 shares - Stock Titan (https://news.google.com/rss/articles/CBMipgFBVV95cUxPbTFfQk52ZFNNZUhCZ2FqNnNOamwwX1RSWDVoVXBybDBVN0RNb0lxa1JWU2Q5eDFHVGNsYk9vcjhpODJ4cXhKNmx3MFdYMEs0MU9Ra2p1T3lBMWc5VU5VLUdUOGRQWkJ0cHBjTEtPNldlRTJ3clFGZE9lbHk1NThpZFNNcG5pQ2RKNEx2N2hhNlowLXp5LW1FMmJxNkhwb0I3SU9icWVR?oc=5)
+  - Herc Holdings (HRI) Stock Price, News & Analysis - Stock Titan (https://news.google.com/rss/articles/CBMiUkFVX3lxTE8yNTFvd1duVU5PMXpjU3kxR2dLbmplM0gtcy1sS2tCRjl5dWpTbW9nVmxRSUc5U0wwTUgwZW9TcVkxaWx3ZEw0V1JxNjFXY3c1YkE?oc=5)
 
-  - People News: HNTB, GATX - Railway Age (https://news.google.com/rss/articles/CBMiZEFVX3lxTE5QcUt3akhnTmd1ZFZVa1hBQTJwWVdEUU9pejR6SWtlVmFpTmpSUExtTzVQNmI2ai0teWJlMEt2R2tiWkF5emRnVVZaZ29EMU1ubW5UMkg0by1oRTBSa2VlVXY3X2s?oc=5)
+  - United Rentals (URI) Stock Price, News & Analysis - Stock Titan (https://news.google.com/rss/articles/CBMiUkFVX3lxTE4tVjhOWXM2ZjlsTE1NVGhycE1hdVE3ZXZXcUNkTTVDd29TaGtDM29TaVdQdXY4d0ZNV3pOYXJCSm5idmRoMmpjOGFkRFZqcVppdHc?oc=5)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.
