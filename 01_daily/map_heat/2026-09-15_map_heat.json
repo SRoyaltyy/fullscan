@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T06:04:17.985549-04:00",
+  "generated_at": "2026-09-15T07:11:00.729516-04:00",
   "phase": "morning_overlay",
   "export": "finviz_2026-09-15.csv",
   "n_tickers": 11616,
@@ -8581,212 +8581,212 @@
     {
       "ticker": "ES",
       "label": "S&P 500",
-      "last": 7664.0,
-      "change": -0.37
+      "last": 7676.25,
+      "change": -0.22
     },
     {
       "ticker": "NQ",
       "label": "Nasdaq 100",
-      "last": 29338.25,
-      "change": -0.38
+      "last": 29393.5,
+      "change": -0.21
     },
     {
       "ticker": "ER2",
       "label": "Russell 2000",
-      "last": 2902.6,
-      "change": -0.47
+      "last": 2908.1,
+      "change": -0.28
     },
     {
       "ticker": "YM",
       "label": "DJIA",
-      "last": 52592.0,
-      "change": -0.49
+      "last": 52709.0,
+      "change": -0.29
     },
     {
       "ticker": "VX",
       "label": "VIX",
-      "last": 17.25,
-      "change": 2.37
+      "last": 17.05,
+      "change": 1.18
     },
     {
       "ticker": "CL",
       "label": "Crude Oil WTI",
-      "last": 103.99,
-      "change": 2.62
+      "last": 102.58,
+      "change": 1.13
     },
     {
       "ticker": "QA",
       "label": "Crude Oil Brent",
-      "last": 107.83,
-      "change": 2.12
+      "last": 106.18,
+      "change": 0.46
     },
     {
       "ticker": "NG",
       "label": "Natural Gas",
-      "last": 2.886,
-      "change": -0.35
+      "last": 2.888,
+      "change": -0.28
     },
     {
       "ticker": "HO",
       "label": "Heating Oil",
-      "last": 5.1251,
-      "change": 3.37
+      "last": 5.0816,
+      "change": 2.42
     },
     {
       "ticker": "RB",
       "label": "Gasoline RBOB",
-      "last": 3.3846,
-      "change": 2.07
+      "last": 3.3549,
+      "change": 1.13
     },
     {
       "ticker": "GC",
       "label": "Gold",
-      "last": 4310.8,
-      "change": -0.96
+      "last": 4321.8,
+      "change": -0.7
     },
     {
       "ticker": "SI",
       "label": "Silver",
-      "last": 63.52,
-      "change": -1.02
+      "last": 63.64,
+      "change": -0.78
     },
     {
       "ticker": "HG",
       "label": "Copper",
-      "last": 6.3905,
-      "change": -0.27
+      "last": 6.402,
+      "change": -0.04
     },
     {
       "ticker": "PL",
       "label": "Platinum",
-      "last": 1757.4,
-      "change": -1.28
+      "last": 1768.2,
+      "change": -0.69
     },
     {
       "ticker": "PA",
       "label": "Palladium",
-      "last": 1294.0,
-      "change": -1.01
+      "last": 1303.5,
+      "change": -0.32
     },
     {
       "ticker": "DX",
       "label": "USD",
-      "last": 99.355,
-      "change": 0.25
+      "last": 99.365,
+      "change": 0.26
     },
     {
       "ticker": "6E",
       "label": "EUR",
-      "last": 1.15775,
-      "change": -0.18
+      "last": 1.15765,
+      "change": -0.19
     },
     {
       "ticker": "6J",
       "label": "JPY",
-      "last": 0.65005,
-      "change": -0.62
+      "last": 0.6505000000000001,
+      "change": -0.55
     },
     {
       "ticker": "6B",
       "label": "GBP",
-      "last": 1.3482,
-      "change": -0.24
+      "last": 1.3478,
+      "change": -0.27
     },
     {
       "ticker": "6A",
       "label": "AUD",
-      "last": 0.71195,
-      "change": -0.23
+      "last": 0.71175,
+      "change": -0.25
     },
     {
       "ticker": "6C",
       "label": "CAD",
-      "last": 0.72235,
-      "change": -0.01
+      "last": 0.7217,
+      "change": -0.1
     },
     {
       "ticker": "6S",
       "label": "CHF",
-      "last": 1.23545,
-      "change": -0.21
+      "last": 1.23495,
+      "change": -0.23
     },
     {
       "ticker": "6N",
       "label": "NZD",
-      "last": 0.57825,
-      "change": -0.31
+      "last": 0.57775,
+      "change": -0.41
     },
     {
       "ticker": "ZN",
       "label": "10 Year Note",
-      "last": 105.78125,
-      "change": -0.37
+      "last": 105.890625,
+      "change": -0.28
     },
     {
       "ticker": "ZF",
       "label": "5 Year Note",
-      "last": 104.296875,
-      "change": -0.22
+      "last": 104.3515625,
+      "change": -0.16
     },
     {
       "ticker": "ZT",
       "label": "2 Year Note",
-      "last": 102.02734375,
-      "change": -0.05
+      "last": 102.04296875,
+      "change": -0.04
     },
     {
       "ticker": "ZB",
       "label": "30 Year Bond",
-      "last": 106.25,
-      "change": -0.76
+      "last": 106.4375,
+      "change": -0.55
     },
     {
       "ticker": "NKD",
       "label": "Nikkei 225",
-      "last": 63405.0,
-      "change": 0.29
+      "last": 63730.0,
+      "change": 0.84
     },
     {
       "ticker": "DY",
       "label": "DAX",
-      "last": 25332.0,
-      "change": -0.41
+      "last": 25430.0,
+      "change": 0.01
     },
     {
       "ticker": "EX",
       "label": "Euro Stoxx 50",
-      "last": 6235.0,
-      "change": -0.42
+      "last": 6259.0,
+      "change": -0.02
     },
     {
       "ticker": "ZC",
       "label": "Corn",
-      "last": 530.25,
-      "change": -0.56
+      "last": 529.75,
+      "change": -0.66
     },
     {
       "ticker": "ZS",
       "label": "Soybeans",
-      "last": 1298.75,
-      "change": -0.4
+      "last": 1299.75,
+      "change": -0.33
     },
     {
       "ticker": "ZW",
       "label": "Wheat",
-      "last": 717.5,
-      "change": -0.69
+      "last": 716.5,
+      "change": -0.73
     },
     {
       "ticker": "ZL",
       "label": "Soybean oil",
-      "last": 70.05,
-      "change": 0.57
+      "last": 70.01,
+      "change": 0.47
     },
     {
       "ticker": "ZM",
       "label": "Soybean Meal",
-      "last": 347.4,
-      "change": -0.83
+      "last": 348.0,
+      "change": -0.63
     },
     {
       "ticker": "ZO",
@@ -8803,26 +8803,26 @@
     {
       "ticker": "KC",
       "label": "Coffee",
-      "last": 288.6,
-      "change": -0.74
+      "last": 289.75,
+      "change": -0.26
     },
     {
       "ticker": "SB",
       "label": "Sugar",
-      "last": 18.25,
-      "change": 0.5
+      "last": 18.28,
+      "change": 0.66
     },
     {
       "ticker": "CT",
       "label": "Cotton",
-      "last": 85.07,
-      "change": 0.62
+      "last": 84.92,
+      "change": 0.39
     },
     {
       "ticker": "CC",
       "label": "Cocoa",
-      "last": 5859.0,
-      "change": -2.57
+      "last": 5839.0,
+      "change": -3.2
     },
     {
       "ticker": "JO",
@@ -8857,7 +8857,7 @@
     {
       "ticker": "BTC",
       "label": "Bitcoin",
-      "last": 77010.0,
+      "last": 77025.0,
       "change": -2.7
     },
     {
@@ -8881,8 +8881,8 @@
     {
       "ticker": "RS",
       "label": "Canola",
-      "last": 818.9,
-      "change": -0.51
+      "last": 819.4,
+      "change": -0.43
     },
     {
       "ticker": "NCF",
@@ -8899,8 +8899,8 @@
     {
       "ticker": "G",
       "label": "Gasoil",
-      "last": 1516.5,
-      "change": 2.69
+      "last": 1500.5,
+      "change": 1.61
     },
     {
       "ticker": "TIO",
@@ -8917,14 +8917,14 @@
     {
       "ticker": "TN",
       "label": "Ultra 10 Year Note",
-      "last": 107.21875,
-      "change": -0.49
+      "last": 107.359375,
+      "change": -0.36
     },
     {
       "ticker": "UB",
       "label": "Ultra Bond",
-      "last": 107.625,
-      "change": -0.95
+      "last": 107.875,
+      "change": -0.75
     },
     {
       "ticker": "UX",
@@ -8935,849 +8935,850 @@
   ],
   "ticker_news": [
     {
-      "time": "4 min",
+      "time": "3 min",
+      "title": "T. Rowe Price Group Inc's Dividend Analysis",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/t-rowe-price-group-incs-110733825.html",
+      "source": "GuruFocus.com",
+      "tickers": [
+        "TROW"
+      ]
+    },
+    {
+      "time": "3 min",
+      "title": "Verisk Analytics Inc's Dividend Analysis",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/verisk-analytics-incs-dividend-analysis-110711708.html",
+      "source": "GuruFocus.com",
+      "tickers": [
+        "VRSK"
+      ]
+    },
+    {
+      "time": "5 min",
+      "title": "Crown Castle Inc's Dividend Analysis",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/crown-castle-incs-dividend-analysis-110538160.html",
+      "source": "GuruFocus.com",
+      "tickers": [
+        "CCI"
+      ]
+    },
+    {
+      "time": "5 min",
+      "title": "Axon Announces Proposed Offering of $1.0 Billion of 0% Convertible Senior Notes",
+      "url": "/news/391980/axon-announces-proposed-offering-of-10-billion-of-0-convertible-senior-notes",
+      "source": "PR Newswire",
+      "tickers": [
+        "AXON"
+      ]
+    },
+    {
+      "time": "6 min",
+      "title": "Xcel Energy Inc's Dividend Analysis",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/xcel-energy-incs-dividend-analysis-110411935.html",
+      "source": "GuruFocus.com",
+      "tickers": [
+        "XEL"
+      ]
+    },
+    {
+      "time": "6 min",
+      "title": "VEON and Beeline Kazakhstan Sign Payments Cooperation Memorandum with National Bank of Kazakhstan",
+      "url": "/news/391981/veon-and-beeline-kazakhstan-sign-payments-cooperation-memorandum-with-national-bank-of-kazakhstan",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "VEON"
+      ]
+    },
+    {
+      "time": "7 min",
+      "title": "Public Storage's Dividend Analysis",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/public-storages-dividend-analysis-110306297.html",
+      "source": "GuruFocus.com",
+      "tickers": [
+        "PSA"
+      ]
+    },
+    {
+      "time": "7 min",
+      "title": "Leading Biotech Selects Veeva Vault CRM Globally",
+      "url": "/news/391971/leading-biotech-selects-veeva-vault-crm-globally",
+      "source": "PR Newswire",
+      "tickers": [
+        "VEEV"
+      ]
+    },
+    {
+      "time": "8 min",
+      "title": "Cenovus Energy Inc's Dividend Analysis",
+      "url": "https://finance.yahoo.com/energy/articles/cenovus-energy-incs-dividend-analysis-110244284.html",
+      "source": "GuruFocus.com",
+      "tickers": [
+        "CVE"
+      ]
+    },
+    {
+      "time": "8 min",
+      "title": "Digital Realty Trust Inc's Dividend Analysis",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/digital-realty-trust-incs-dividend-110221379.html",
+      "source": "GuruFocus.com",
+      "tickers": [
+        "DLR"
+      ]
+    },
+    {
+      "time": "8 min",
+      "title": "Ecolab Inc's Dividend Analysis",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/ecolab-incs-dividend-analysis-110200714.html",
+      "source": "GuruFocus.com",
+      "tickers": [
+        "ECL"
+      ]
+    },
+    {
+      "time": "8 min",
+      "title": "Factory robots long posed a safety threat to human workers. One company says it's solved that problem.",
+      "url": "https://www.marketwatch.com/story/factory-robots-long-posed-a-safety-threat-to-human-workers-one-company-says-its-solved-that-problem-2db84297?mod=mw_FV",
+      "source": "MarketWatch",
+      "tickers": [
+        "AMZN",
+        "GXO"
+      ]
+    },
+    {
+      "time": "9 min",
+      "title": "Altria Group Inc's Dividend Analysis",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/altria-group-incs-dividend-analysis-110138194.html",
+      "source": "GuruFocus.com",
+      "tickers": [
+        "MO"
+      ]
+    },
+    {
+      "time": "9 min",
+      "title": "Gilead Sciences Inc's Dividend Analysis",
+      "url": "https://finance.yahoo.com/healthcare/articles/gilead-sciences-incs-dividend-analysis-110115529.html",
+      "source": "GuruFocus.com",
+      "tickers": [
+        "GILD"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "Merck & Co Inc's Dividend Analysis",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/merck-co-incs-dividend-analysis-110052740.html",
+      "source": "GuruFocus.com",
+      "tickers": [
+        "MRK"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "Coca-Cola Co's Dividend Analysis",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/coca-cola-cos-dividend-analysis-110030173.html",
+      "source": "GuruFocus.com",
+      "tickers": [
+        "KO"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "Agility Unveils Digit 5 Humanoid Robot Built for Cooperatively Safe Work at Scale",
+      "url": "/news/391950/agility-unveils-digit-5-humanoid-robot-built-for-cooperatively-safe-work-at-scale",
+      "source": "PR Newswire",
+      "tickers": [
+        "CCXI"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "Crock-Pot Brand and Valspar Team Up to Bring Color to the Heart of the Home",
+      "url": "/news/391951/crock-pot-brand-and-valspar-team-up-to-bring-color-to-the-heart-of-the-home",
+      "source": "PR Newswire",
+      "tickers": [
+        "NWL"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "Ceva Appoints Semiconductor Industry Veteran Ziv Hammer as Executive Vice President to Lead Connectivity & Sensing",
+      "url": "/news/391952/ceva-appoints-semiconductor-industry-veteran-ziv-hammer-as-executive-vice-president-to-lead-connectivity-sensing",
+      "source": "PR Newswire",
+      "tickers": [
+        "CEVA"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "RTX's Pratt & Whitney completes F135 Engine Core Upgrade Risk Reduction Design Review",
+      "url": "/news/391953/rtxs-pratt-whitney-completes-f135-engine-core-upgrade-risk-reduction-design-review",
+      "source": "PR Newswire",
+      "tickers": [
+        "RTX"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "New Decision Modeling Study Demonstrates TissueCypher Significantly Improves Risk-Aligned Management for Patients with Barrett's Esophagus",
+      "url": "/news/391954/new-decision-modeling-study-demonstrates-tissuecypher-significantly-improves-risk-aligned-management-for-patients-with-barretts-esophagus",
+      "source": "PR Newswire",
+      "tickers": [
+        "CSTL"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "LINDBLAD EXPEDITIONS HOLDINGS, INC. EXPANDS PORTFOLIO WITH THE ACQUISITION OF WHITE DESERT ANTARCTICA AND ECHO CHARLIE TO CREATE A LEADING FORCE IN EXPERIENTIAL TRAVEL",
+      "url": "/news/391955/lindblad-expeditions-holdings-inc-expands-portfolio-with-the-acquisition-of-white-desert-antarctica-and-echo-charlie-to-create-a-leading-force-in-experiential-travel",
+      "source": "PR Newswire",
+      "tickers": [
+        "LIND"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "Restaurant Brands International to Report Third Quarter 2026 Results on October 29, 2026",
+      "url": "/news/391956/restaurant-brands-international-to-report-third-quarter-2026-results-on-october-29-2026",
+      "source": "PR Newswire",
+      "tickers": [
+        "QSR"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "enCore Energy Provides Update on Distribution of Verdera Common Shares to its Shareholders",
+      "url": "/news/391957/encore-energy-provides-update-on-distribution-of-verdera-common-shares-to-its-shareholders",
+      "source": "PR Newswire",
+      "tickers": [
+        "EU"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "51Talk Online Education Group Announces Second Quarter 2026 Results",
+      "url": "/news/391958/51talk-online-education-group-announces-second-quarter-2026-results",
+      "source": "PR Newswire",
+      "tickers": [
+        "COE"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "Quantum-Si Announces Detection of 18 Amino Acids Using a Developmental Sequencing Kit on Proteus",
+      "url": "/news/391959/quantum-si-announces-detection-of-18-amino-acids-using-a-developmental-sequencing-kit-on-proteus",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "QSI"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "D-Wave to Showcase Unique Dual-Platform Quantum Computing at Quantum World Congress 2026",
+      "url": "/news/391961/d-wave-to-showcase-unique-dual-platform-quantum-computing-at-quantum-world-congress-2026",
+      "source": "Business Wire",
+      "tickers": [
+        "QBTS"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "Pebblebrook Hotel Trust Declares Dividends for Third Quarter 2026",
+      "url": "/news/391962/pebblebrook-hotel-trust-declares-dividends-for-third-quarter-2026",
+      "source": "Business Wire",
+      "tickers": [
+        "PEB"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "Rockwell Automation Joins Anthropic's Project Glasswing to Advance AI-Enabled Cyber Defense for Industrial Critical Infrastructure",
+      "url": "/news/391963/rockwell-automation-joins-anthropics-project-glasswing-to-advance-ai-enabled-cyber-defense-for-industrial-critical-infrastructure",
+      "source": "Business Wire",
+      "tickers": [
+        "ROK"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "Rocket Pharmaceuticals Announces FDA Alignment on Path to Complete Pivotal Phase 2 Trial of RP-A501 in Danon Disease",
+      "url": "/news/391964/rocket-pharmaceuticals-announces-fda-alignment-on-path-to-complete-pivotal-phase-2-trial-of-rp-a501-in-danon-disease",
+      "source": "Business Wire",
+      "tickers": [
+        "RCKT"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "Philadelphia Turns Up the Heat with its First-Ever Sweet Heat Cream Cheese in the United States in Partnership with Mike's Hot Honey",
+      "url": "/news/391965/philadelphia-turns-up-the-heat-with-its-first-ever-sweet-heat-cream-cheese-in-the-united-states-in-partnership-with-mikes-hot-honey",
+      "source": "Business Wire",
+      "tickers": [
+        "KHC"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "Pulse Biosciences Completes Enrollment in the PRECISE-BTN Clinical Study Evaluating the nPulse Vybrance Percutaneous Electrode System for Symptomatic Benign Thyroid Nodules",
+      "url": "/news/391966/pulse-biosciences-completes-enrollment-in-the-precise-btn-clinical-study-evaluating-the-npulse-vybrance-percutaneous-electrode-system-for-symptomatic-benign-thyroid-nodules",
+      "source": "Business Wire",
+      "tickers": [
+        "PLSE"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "BioHarvest Advances Botanical Synthesis Leadership as VINIA Daily Chews Unlock More Value from Its First Consumer Product",
+      "url": "/news/391969/bioharvest-advances-botanical-synthesis-leadership-as-vinia-daily-chews-unlock-more-value-from-its-first-consumer-product",
+      "source": "Newsfile Corp.",
+      "tickers": [
+        "BHST"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "Aeluma Executes Strategic Agreement with Sumitomo Chemical Advanced Technologies for Wafer Production for AI Datacom",
+      "url": "/news/391970/aeluma-executes-strategic-agreement-with-sumitomo-chemical-advanced-technologies-for-wafer-production-for-ai-datacom",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "ALMU"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "BlossomHill Therapeutics Presents Updated Data from Ongoing Phase 1/2 SOLARA Trial Demonstrating Encouraging Anti-Tumor Activity of OMNI-EGFR Inhibitor BH-30643 in EGFR C797S-Positive NSCLC at IASLC 2026 World Conference on Lung Cancer",
+      "url": "/news/391972/blossomhill-therapeutics-presents-updated-data-from-ongoing-phase-12-solara-trial-demonstrating-encouraging-anti-tumor-activity-of-omni-egfr-inhibitor-bh-30643-in-egfr-c797s-positive-nsclc-at-iaslc-2026-world-conference-on-lung-cancer",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "BLSM"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "Satellos to Present at the 31st Annual Congress of the World Muscle Society",
+      "url": "/news/391973/satellos-to-present-at-the-31st-annual-congress-of-the-world-muscle-society",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "MSLE"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "Art Meets Whiskey: Breckenridge Distillery Debuts Limited-Edition Collectors Series Release with Pat Milbery",
+      "url": "/news/391974/art-meets-whiskey-breckenridge-distillery-debuts-limited-edition-collectors-series-release-with-pat-milbery",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "TLRY"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "Village Farms Welcomes Initial Government Findings from the Netherlands Regulated Cannabis Program",
+      "url": "/news/391975/village-farms-welcomes-initial-government-findings-from-the-netherlands-regulated-cannabis-program",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "VFF"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "Connect Biopharma Announces Positive Preliminary Topline Data from its Global Phase 2 Study of Rademikibart as an Add-on Treatment for Acute Exacerbations in Adult and Adolescent Participants with Asthma and Type 2 Inflammation",
+      "url": "/news/391976/connect-biopharma-announces-positive-preliminary-topline-data-from-its-global-phase-2-study-of-rademikibart-as-an-add-on-treatment-for-acute-exacerbations-in-adult-and-adolescent-participants-with-asthma-and-type-2-inflammation",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "CNTB"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "GeoPark Limited Announces Commencement of Consent Solicitation with Respect to Its 8.750% Senior Notes Due 2030",
+      "url": "/news/391977/geopark-limited-announces-commencement-of-consent-solicitation-with-respect-to-its-8750-senior-notes-due-2030",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "GPRK"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "Ocular Therapeutix Announces Positive Pre-NDA Meeting with U.S. FDA for AXPAXLI in Wet AMD",
+      "url": "/news/391978/ocular-therapeutix-announces-positive-pre-nda-meeting-with-us-fda-for-axpaxli-in-wet-amd",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "OCUL"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "Anfield Energy Receives Colorado DRMS Completeness Determination and Staff Recommendation for Approval of JD-8 Mine Permit; Board Hearing Set for October 14-15, 2026",
+      "url": "/news/391979/anfield-energy-receives-colorado-drms-completeness-determination-and-staff-recommendation-for-approval-of-jd-8-mine-permit-board-hearing-set-for-october-14-15-2026",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "AEC"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "Blackrock Silver Announces Inclusion into the GDXJ",
+      "url": "https://finance.yahoo.com/markets/commodities/articles/blackrock-silver-announces-inclusion-gdxj-110000516.html",
+      "source": "TMX Newsfile",
+      "tickers": [
+        "BLK"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "CyberCatch Announces Mailing, Filing of Management Information Circular for Annual General and Special Meeting of Securityholders and Receipt of Interim Order in Connection with Previously Announced Acquisition by Datavault AI Inc.",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/cybercatch-announces-mailing-filing-management-110000314.html",
+      "source": "TMX Newsfile",
+      "tickers": [
+        "DVLT"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "This new tax law could save your business money",
+      "url": "https://finance.yahoo.com/video/tax-law-could-save-business-110000166.html",
+      "source": "Yahoo Finance Video",
+      "tickers": [
+        "HRB"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "Neuberger and KKR to Invest in Datavant Alongside New Mountain Capital",
+      "url": "https://www.businesswire.com/news/home/20260914276822/en/Datavant",
+      "source": "Business Wire",
+      "tickers": [
+        "KKR"
+      ]
+    },
+    {
+      "time": "10 min",
+      "title": "Elemental Royalty Completes the Acquisition of Vizsla Royalties and Its 2-3.5% NSR Royalties on the Panuco Project",
+      "url": "https://www.newsfilecorp.com/release/314367/Elemental-Royalty-Completes-the-Acquisition-of-Vizsla-Royalties-and-Its-23.5-NSR-Royalties-on-the-Panuco-Project",
+      "source": "Newsfile",
+      "tickers": [
+        "ELE"
+      ]
+    },
+    {
+      "time": "11 min",
+      "title": "Accenture to Announce Fourth-Quarter and Full-Year Fiscal 2026 Results",
+      "url": "/news/391967/accenture-to-announce-fourth-quarter-and-full-year-fiscal-2026-results",
+      "source": "Business Wire",
+      "tickers": [
+        "ACN"
+      ]
+    },
+    {
+      "time": "12 min",
+      "title": "Saipem wins $350m offshore contract from Azule Energy Angola",
+      "url": "https://finance.yahoo.com/m/44d856dd-4fae-3599-ab0a-d446203a8364/saipem-wins-%24350m-offshore.html",
+      "source": "Offshore Technology",
+      "tickers": [
+        "E"
+      ]
+    },
+    {
+      "time": "12 min",
+      "title": "Forgent Power: Fiscal Q4 Earnings Snapshot",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/forgent-power-fiscal-q4-earnings-105803286.html",
+      "source": "Associated Press",
+      "tickers": [
+        "FPS"
+      ]
+    },
+    {
+      "time": "14 min",
+      "title": "US Semiconductor Market Seen Nearly Doubling By 2030, BofA Says  Memory And AI To Drive The Next Leg: Report",
+      "url": "https://finance.yahoo.com/m/0a27840b-eebf-3d34-bc38-871b1bfe4122/us-semiconductor-market-seen.html",
+      "source": "Stocktwits",
+      "tickers": [
+        "BAC"
+      ]
+    },
+    {
+      "time": "15 min",
+      "title": "ScottsMiracle-Gro Announces Execution of Key Capital Allocation Initiatives",
+      "url": "/news/391946/scottsmiracle-gro-announces-execution-of-key-capital-allocation-initiatives",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "SMG"
+      ]
+    },
+    {
+      "time": "15 min",
+      "title": "Innovative Industrial Properties Declares Third Quarter 2026 Dividends",
+      "url": "/news/391968/innovative-industrial-properties-declares-third-quarter-2026-dividends",
+      "source": "Business Wire",
+      "tickers": [
+        "IIPR"
+      ]
+    },
+    {
+      "time": "20 min",
+      "title": "The Buckle, Inc. Reports Quarterly Dividend",
+      "url": "/news/391947/the-buckle-inc-reports-quarterly-dividend",
+      "source": "Business Wire",
+      "tickers": [
+        "BKE"
+      ]
+    },
+    {
+      "time": "20 min",
+      "title": "Genesco Launches Wrangler Footwear Collection",
+      "url": "/news/391948/genesco-launches-wrangler-footwear-collection",
+      "source": "Business Wire",
+      "tickers": [
+        "KTB",
+        "GCO"
+      ]
+    },
+    {
+      "time": "25 min",
+      "title": "Lilly to present new data on Foundayo, retatrutide, and eloraTZP at EASD 2026, as it strives to change the course of cardiometabolic health",
+      "url": "/news/391944/lilly-to-present-new-data-on-foundayo-retatrutide-and-eloratzp-at-easd-2026-as-it-strives-to-change-the-course-of-cardiometabolic-health",
+      "source": "PR Newswire",
+      "tickers": [
+        "LLY"
+      ]
+    },
+    {
+      "time": "25 min",
+      "title": "Onity Group to Host Its First Investor Day Event on November 19, 2026",
+      "url": "/news/391945/onity-group-to-host-its-first-investor-day-event-on-november-19-2026",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "ONIT"
+      ]
+    },
+    {
+      "time": "28 min",
+      "title": "Sysco Shares Fall 1.3% After Pricing $1 Billion Stock Offering",
+      "url": "/news/391943/sysco-shares-fall-13-after-pricing-1-billion-stock-offering",
+      "source": "InvestorsHub",
+      "tickers": [
+        "SYY"
+      ]
+    },
+    {
+      "time": "30 min",
+      "title": "Waystar Shares Rise 3.3% on Report Company Is Exploring Potential Sale",
+      "url": "/news/391942/waystar-shares-rise-33-on-report-company-is-exploring-potential-sale",
+      "source": "InvestorsHub",
+      "tickers": [
+        "WAY"
+      ]
+    },
+    {
+      "time": "33 min",
+      "title": "Energous Shares Rise 1.4% as Analyst Consensus Price Target Stands at $26.52",
+      "url": "/news/391941/energous-shares-rise-14-as-analyst-consensus-price-target-stands-at-2652",
+      "source": "InvestorsHub",
+      "tickers": [
+        "WATT"
+      ]
+    },
+    {
+      "time": "33 min",
+      "title": "Here's the best way to invest in bonds for the long term, according to these five-star portfolio managers",
+      "url": "https://www.marketwatch.com/story/heres-the-best-way-to-invest-in-bonds-for-the-long-term-according-to-these-five-star-portfolio-managers-bbf0d5e3?mod=mw_FV",
+      "source": "MarketWatch",
+      "tickers": [
+        "MS",
+        "EMLC"
+      ]
+    },
+    {
+      "time": "35 min",
+      "title": "Brunswick Corporation Demonstrates Strong Market Momentum at Cannes Yachting Festival 2026",
+      "url": "/news/391940/brunswick-corporation-demonstrates-strong-market-momentum-at-cannes-yachting-festival-2026",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "BC"
+      ]
+    },
+    {
+      "time": "37 min",
+      "title": "Bitcoin Drops Ahead of Clarity Act Vote. Why Cathie Wood's Dumping Crypto Stocks.",
+      "url": "https://www.barrons.com/articles/bitcoin-price-clarity-act-crypto-cathie-wood-c2471654?mod=bar_FV",
+      "source": "Barrons.com",
+      "tickers": [
+        "COIN",
+        "MSTR"
+      ]
+    },
+    {
+      "time": "38 min",
+      "title": "X-energy Xe-100 Reactor Accepted Into UK Nuclear Regulatory Review",
+      "url": "/news/391935/x-energy-xe-100-reactor-accepted-into-uk-nuclear-regulatory-review",
+      "source": "InvestorsHub",
+      "tickers": [
+        "XE"
+      ]
+    },
+    {
+      "time": "40 min",
+      "title": "Ducommun Incorporated Announces Follow-On Award of Significant Content Supporting PAC-3 MSE Missile Platform",
+      "url": "/news/391931/ducommun-incorporated-announces-follow-on-award-of-significant-content-supporting-pac-3-mse-missile-platform",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "DCO"
+      ]
+    },
+    {
+      "time": "40 min",
+      "title": "Vera Therapeutics Announces TRUTAKNA (atacicept-vymj) Stabilized eGFR and Prevented Kidney Disease Progression Through Two Years in ORIGIN 3 Final Efficacy Analysis in IgA Nephropathy",
+      "url": "/news/391932/vera-therapeutics-announces-trutakna-atacicept-vymj-stabilized-egfr-and-prevented-kidney-disease-progression-through-two-years-in-origin-3-final-efficacy-analysis-in-iga-nephropathy",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "VERA"
+      ]
+    },
+    {
+      "time": "40 min",
+      "title": "CGI Trade360 platform earns three global industry recognitions for trade finance technology leadership",
+      "url": "/news/391933/cgi-trade360-platform-earns-three-global-industry-recognitions-for-trade-finance-technology-leadership",
+      "source": "PR Newswire",
+      "tickers": [
+        "GIB"
+      ]
+    },
+    {
+      "time": "40 min",
+      "title": "Lithium Argentina Announces Closing of $180M Strategic Investment from Ganfeng",
+      "url": "/news/391934/lithium-argentina-announces-closing-of-180m-strategic-investment-from-ganfeng",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "LAR"
+      ]
+    },
+    {
+      "time": "40 min",
+      "title": "Surf Air Mobility Attends FAA's Project Nexus eIPP Event, Reinforcing Its Position as the Commercial Platform for Advanced Air Mobility",
+      "url": "/news/391936/surf-air-mobility-attends-faas-project-nexus-eipp-event-reinforcing-its-position-as-the-commercial-platform-for-advanced-air-mobility",
+      "source": "Business Wire",
+      "tickers": [
+        "SRFM"
+      ]
+    },
+    {
+      "time": "40 min",
+      "title": "CareTrust REIT Acquires Skilled Nursing Portfolio for $400 Million; Announces $600 Million Reloaded Pipeline",
+      "url": "/news/391937/caretrust-reit-acquires-skilled-nursing-portfolio-for-400-million-announces-600-million-reloaded-pipeline",
+      "source": "Business Wire",
+      "tickers": [
+        "CTRE"
+      ]
+    },
+    {
+      "time": "40 min",
+      "title": "Compass Pathways Launches 'Change the Tune in TRD' in the U.S. to Advance HCP Understanding of Treatment-Resistant Depression at Psych Congress 2026",
+      "url": "/news/391938/compass-pathways-launches-change-the-tune-in-trd-in-the-us-to-advance-hcp-understanding-of-treatment-resistant-depression-at-psych-congress-2026",
+      "source": "Business Wire",
+      "tickers": [
+        "CMPS"
+      ]
+    },
+    {
+      "time": "40 min",
+      "title": "Forgent Reports Record Fourth Quarter and Full Year 2026 Results, Exceeds High-End of Guidance and Enters Fiscal 2027 with All-Time High Backlog",
+      "url": "/news/391939/forgent-reports-record-fourth-quarter-and-full-year-2026-results-exceeds-high-end-of-guidance-and-enters-fiscal-2027-with-all-time-high-backlog",
+      "source": "Business Wire",
+      "tickers": [
+        "FPS"
+      ]
+    },
+    {
+      "time": "43 min",
+      "title": "Expanding Tick and Itch Season Supports Momentum in Elanco Innovation, Meeting Pet Owner Demand for Health and Wellness Care",
+      "url": "/news/391929/expanding-tick-and-itch-season-supports-momentum-in-elanco-innovation-meeting-pet-owner-demand-for-health-and-wellness-care",
+      "source": "PR Newswire",
+      "tickers": [
+        "ELAN"
+      ]
+    },
+    {
+      "time": "45 min",
+      "title": "BOXABL Appoints Larry King as Chief Financial Officer and Heather Clayton as Chief Accounting Officer",
+      "url": "/news/391927/boxabl-appoints-larry-king-as-chief-financial-officer-and-heather-clayton-as-chief-accounting-officer",
+      "source": "PR Newswire",
+      "tickers": [
+        "BXBL"
+      ]
+    },
+    {
+      "time": "45 min",
+      "title": "Transaction in Own Shares",
+      "url": "/news/391928/transaction-in-own-shares",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "SHEL"
+      ]
+    },
+    {
+      "time": "45 min",
+      "title": "Genworth Issues Statement on Court of Appeal Ruling Against AXA in UK Payment Protection Insurance Case",
+      "url": "/news/391930/genworth-issues-statement-on-court-of-appeal-ruling-against-axa-in-uk-payment-protection-insurance-case",
+      "source": "Business Wire",
+      "tickers": [
+        "GNW",
+        "ACT"
+      ]
+    },
+    {
+      "time": "50 min",
+      "title": "Mag 7 fund poised for breakout to record high, says Fundstrat",
+      "url": "https://www.marketwatch.com/livecoverage/stock-market-today-dow-s-p-500-nasdaq-10-year-treasury-yield-5-fed-begins-two-day-meeting/card/mag-7-fund-poised-for-breakout-to-record-high-says-fundstrat-uBmDn8zvqtqkxgpqKgcQ?mod=mw_FV",
+      "source": "MarketWatch",
+      "tickers": [
+        "MSFT",
+        "GOOGL",
+        "NVDA",
+        "AAPL",
+        "META"
+      ]
+    },
+    {
+      "time": "52 min",
+      "title": "TORM plc announces pricing of secondary public offering of its class A common shares",
+      "url": "/news/391926/torm-plc-announces-pricing-of-secondary-public-offering-of-its-class-a-common-shares",
+      "source": "PR Newswire",
+      "tickers": [
+        "TRMD"
+      ]
+    },
+    {
+      "time": "54 min",
+      "title": "What Nvidia CEO Huang Told Trump About the AI Doom Debate",
+      "url": "https://www.barrons.com/articles/nvidia-stock-price-huang-trump-ai-slowdown-97db392a?mod=bar_FV",
+      "source": "Barrons.com",
+      "tickers": [
+        "UBS",
+        "NVDA"
+      ]
+    },
+    {
+      "time": "55 min",
+      "title": "Cleveland Cavaliers Games Return to Free Over-the-Air Television  on Gray Media Stations",
+      "url": "/news/391925/cleveland-cavaliers-games-return-to-free-over-the-air-television-on-gray-media-stations",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "GTN"
+      ]
+    },
+    {
+      "time": "1 hour",
+      "title": "Transocean Ltd. Announces $80 Million Contract For Ultra-Deepwater Drillship",
+      "url": "/news/391920/transocean-ltd-announces-80-million-contract-for-ultra-deepwater-drillship",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "RIG"
+      ]
+    },
+    {
+      "time": "1 hour",
+      "title": "Cheplapharm to take over 20 medicines and three sites from Sanofi",
+      "url": "https://www.pharmaceutical-business-review.com/news/cheplapharm-20-medicines-three-sites-sanofi/",
+      "source": "Pharmaceutical Business Review",
+      "tickers": [
+        "SNY"
+      ]
+    },
+    {
+      "time": "1 hour",
+      "title": "FDA reduces monitoring time for Amgen's Imdelltra infusions",
+      "url": "https://www.pharmaceutical-business-review.com/news/fda-reduces-monitoring-time-amgens-imdelltra/",
+      "source": "Pharmaceutical Business Review",
+      "tickers": [
+        "AMGN"
+      ]
+    },
+    {
+      "time": "1 hour",
+      "title": "BofA Raises US Semiconductor Growth Forecast to 18% Through 2030",
+      "url": "https://finance.yahoo.com/m/e00bea76-bf57-3f4a-95e3-a52ce9389cfe/bofa-raises-us-semiconductor.html",
+      "source": "InvestorsHub",
+      "tickers": [
+        "BAC"
+      ]
+    },
+    {
+      "time": "1 hour",
+      "title": "Flex Announces Expected Flex CFO and Board Composition for Flex and Axiom Following Separation",
+      "url": "/news/391918/flex-announces-expected-flex-cfo-and-board-composition-for-flex-and-axiom-following-separation",
+      "source": "PR Newswire",
+      "tickers": [
+        "FLEX"
+      ]
+    },
+    {
+      "time": "1 hour",
+      "title": "Evercore Says AI Could Increase Scale and Complexity of Cybersecurity Threats",
+      "url": "https://finance.yahoo.com/m/5ff2cf3b-d11a-3e21-82ea-a4ea6c9f021e/evercore-says-ai-could.html",
+      "source": "InvestorsHub",
+      "tickers": [
+        "EVR"
+      ]
+    },
+    {
+      "time": "1 hour",
+      "title": "Flex Announces New Company Name for the Planned Cloud and Power Infrastructure Spin-Off and Files Form 10 Registration Statement",
+      "url": "/news/391919/flex-announces-new-company-name-for-the-planned-cloud-and-power-infrastructure-spin-off-and-files-form-10-registration-statement",
+      "source": "PR Newswire",
+      "tickers": [
+        "FLEX"
+      ]
+    },
+    {
+      "time": "1 hour",
+      "title": "Crypto Stocks Fall as Bitcoin Drops Ahead of Clarity Act Vote and Fed Decision",
+      "url": "https://finance.yahoo.com/m/9778d021-66d1-39c8-a946-9a6d68d22599/crypto-stocks-fall-as-bitcoin.html",
+      "source": "InvestorsHub",
+      "tickers": [
+        "COIN",
+        "RIOT",
+        "HUT",
+        "BTBT"
+      ]
+    },
+    {
+      "time": "1 hour",
+      "title": "Crypto Stocks Fall as Bitcoin Drops Ahead of Clarity Act Vote and Fed Decision",
+      "url": "https://finance.yahoo.com/markets/crypto/articles/crypto-stocks-fall-bitcoin-drops-100327801.html",
+      "source": "InvestorsHub",
+      "tickers": [
+        "MARA"
+      ]
+    },
+    {
+      "time": "1 hour",
       "title": "Tower Semiconductor to Highlight its High-Volume Silicon Photonics and SiGe Solutions for AI Infrastructure, Telecom and Emerging Applications at ECOC 2026",
       "url": "/news/391912/tower-semiconductor-to-highlight-its-high-volume-silicon-photonics-and-sige-solutions-for-ai-infrastructure-telecom-and-emerging-applications-at-ecoc-2026",
       "source": "GlobeNewswire",
       "tickers": [
         "TSEM"
       ]
-    },
-    {
-      "time": "4 min",
-      "title": "Rocket Lab Fully Funds Iridium Acquisition, Including Completion of $1.94 Billion ATM",
-      "url": "/news/391913/rocket-lab-fully-funds-iridium-acquisition-including-completion-of-194-billion-atm",
-      "source": "GlobeNewswire",
-      "tickers": [
-        "RKLB"
-      ]
-    },
-    {
-      "time": "4 min",
-      "title": "Strawberry Fields REIT Announces Acquisition of Hospital Campus in Missouri",
-      "url": "/news/391914/strawberry-fields-reit-announces-acquisition-of-hospital-campus-in-missouri",
-      "source": "GlobeNewswire",
-      "tickers": [
-        "STRW"
-      ]
-    },
-    {
-      "time": "4 min",
-      "title": "Centrica, X-energy Advance Nuclear Plans as UK Regulators to Begin Design Review for Xe-100",
-      "url": "/news/391915/centrica-x-energy-advance-nuclear-plans-as-uk-regulators-to-begin-design-review-for-xe-100",
-      "source": "GlobeNewswire",
-      "tickers": [
-        "XE"
-      ]
-    },
-    {
-      "time": "4 min",
-      "title": "Profusa, Inc. Receives Nasdaq Compliance Determination",
-      "url": "/news/391916/profusa-inc-receives-nasdaq-compliance-determination",
-      "source": "GlobeNewswire",
-      "tickers": [
-        "PFSA"
-      ]
-    },
-    {
-      "time": "4 min",
-      "title": "BlackRock Commits CAD$15 Million Over Three Years to Support The Next Generation of Canada's Skilled Trades Workers",
-      "url": "/news/391917/blackrock-commits-cad15-million-over-three-years-to-support-the-next-generation-of-canadas-skilled-trades-workers",
-      "source": "GlobeNewswire",
-      "tickers": [
-        "BLK"
-      ]
-    },
-    {
-      "time": "4 min",
-      "title": "Wall Street pushes back on Anthropic's warning as AI spending expected to roll on: Chart of the Day",
-      "url": "https://finance.yahoo.com/markets/article/wall-street-pushes-back-on-anthropics-warning-as-ai-spending-expected-to-roll-on-chart-of-the-day-100000270.html",
-      "source": "Yahoo Finance",
-      "tickers": [
-        "SPCX"
-      ]
-    },
-    {
-      "time": "4 min",
-      "title": "Carters Shines a New Light on Childhood with Evolved Brand Promise, Refreshed Identity and Watch Them Glow Campaign",
-      "url": "https://www.businesswire.com/news/home/20260915218747/en/The",
-      "source": "Business Wire",
-      "tickers": [
-        "CRI"
-      ]
-    },
-    {
-      "time": "4 min",
-      "title": "Updated HARMONi Data Presented at WCLC 2026 Demonstrate Consistent Overall Survival Results with Ivonescimab Plus Chemotherapy in Western and Asian Patients",
-      "url": "https://www.businesswire.com/news/home/20260915307340/en/",
-      "source": "Business Wire",
-      "tickers": [
-        "SMMT"
-      ]
-    },
-    {
-      "time": "4 min",
-      "title": "Ingram Micro Outlines Long-term Strategy, Intelligence-led Transformation and Multi-year Financial Framework at Capital Markets Day",
-      "url": "https://www.businesswire.com/news/home/20260915664310/en/",
-      "source": "Business Wire",
-      "tickers": [
-        "INGM"
-      ]
-    },
-    {
-      "time": "4 min",
-      "title": "RETRANSMISSION: HIVE's BUZZ HPC Appoints Capital Markets Veteran Hubert Marleau as Independent Director to Support Canadian AI Infrastructure Expansion",
-      "url": "https://www.newsfilecorp.com/release/314376/RETRANSMISSION-HIVEs-BUZZ-HPC-Appoints-Capital-Markets-Veteran-Hubert-Marleau-as-Independent-Director-to-Support-Canadian-AI-Infrastructure-Expansion",
-      "source": "Newsfile",
-      "tickers": [
-        "HIVE"
-      ]
-    },
-    {
-      "time": "23 min",
-      "title": "CRCL, COIN Stocks Slip Premarket: Crypto Industry Makes Final Push For CLARITY Act Ahead Of Senate Vote Today",
-      "url": "https://finance.yahoo.com/m/b4d2d009-c3ec-3502-9e2e-4439d66b64b0/crcl%2C-coin-stocks-slip.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "CRCL",
-        "COIN"
-      ]
-    },
-    {
-      "time": "49 min",
-      "title": "Amazon Now crosses $1bn in gross annualised sales  report",
-      "url": "https://finance.yahoo.com/m/5e5102f4-49f0-3f2d-a1f1-f831ba6e08d4/amazon-now-crosses-%241bn-in.html",
-      "source": "Retail Insight Network",
-      "tickers": [
-        "AMZN"
-      ]
-    },
-    {
-      "time": "53 min",
-      "title": "Why Is ORCL Stock Slipping Premarket?",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/why-orcl-stock-slipping-premarket-091054102.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "ORCL"
-      ]
-    },
-    {
-      "time": "54 min",
-      "title": "Exclusive-Indian consumer regulator escalates probe into Apple's software warranty terms",
-      "url": "https://finance.yahoo.com/news/exclusive-indian-consumer-regulator-escalates-091004769.html",
-      "source": "Reuters",
-      "tickers": [
-        "AAPL"
-      ]
-    },
-    {
-      "time": "55 min",
-      "title": "Kroger trims 2026 sales outlook despite profit gains",
-      "url": "https://finance.yahoo.com/m/0f1445f9-861b-3c64-ab20-5aa192770430/kroger-trims-2026-sales.html",
-      "source": "Retail Insight Network",
-      "tickers": [
-        "KR"
-      ]
-    },
-    {
-      "time": "57 min",
-      "title": "CCL Stock Heads For Third Month Of Loss: Wells Fargo Warns Of Caribbean Pricing Pressure But Remains Bullish On Growth",
-      "url": "https://finance.yahoo.com/m/448100f5-1f80-34a4-9f0b-235079244861/ccl-stock-heads-for-third.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "CCL"
-      ]
-    },
-    {
-      "time": "57 min",
-      "title": "CCL Stock Heads For Third Month Of Loss: Wells Fargo Warns Of Caribbean Pricing Pressure But Remains Bullish On Growth",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/ccl-stock-heads-third-month-090624193.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "WFC"
-      ]
-    },
-    {
-      "time": "1 hour",
-      "title": "Strive's Bitcoin Stash Hits an Even 25,000 BTC After $36.6 Million Buy",
-      "url": "https://finance.yahoo.com/m/8306c7e2-4958-31c2-adf6-8afa39c107bf/strive%27s-bitcoin-stash-hits.html",
-      "source": "decrypt",
-      "tickers": [
-        "ASST"
-      ]
-    },
-    {
-      "time": "1 hour",
-      "title": "Wall St futures slip as rising oil, Treasury yields compound AI anxiety",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/wall-st-futures-slip-rising-085541502.html",
-      "source": "Reuters",
-      "tickers": [
-        "GOOGL",
-        "MSFT",
-        "GOOG",
-        "NVDA"
-      ]
-    },
-    {
-      "time": "1 hour",
-      "title": "AI Trade Is in 'Digestion' Phase, JPMorgan's Sundar Says",
-      "url": "https://finance.yahoo.com/video/ai-trade-digestion-phase-jpmorgans-084509034.html",
-      "source": "Bloomberg",
-      "tickers": [
-        "JPM"
-      ]
-    },
-    {
-      "time": "1 hour",
-      "title": "AI, Fed And 5% Treasury Yield: Three Risks Putting Nasdaq, Dow Futures On Edge Ahead Of Wednesdays Rate Decision",
-      "url": "https://finance.yahoo.com/m/ec44df50-43d4-376b-9b44-b2a1b424a911/ai%2C-fed-and-5%25-treasury.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "QQQ"
-      ]
-    },
-    {
-      "time": "1 hour",
-      "title": "AI, Fed And 5% Treasury Yield: Three Risks Putting Nasdaq, Dow Futures On Edge Ahead Of Wednesdays Rate Decision",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/ai-fed-5-treasury-yield-084411097.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "SPY"
-      ]
-    },
-    {
-      "time": "1 hour",
-      "title": "Stock Market Today: 10-Year Yield Forges Above 5%",
-      "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-09-15-2026?mod=wsj_FV",
-      "source": "The Wall Street Journal",
-      "tickers": [
-        "BAC"
-      ]
-    },
-    {
-      "time": "1 hour",
-      "title": "TOYO Corporation Opens Its Quantum Computers to Japan's Ecosystem",
-      "url": "https://www.businesswire.com/news/home/20260915747723/en/TOYO",
-      "source": "Business Wire",
-      "tickers": [
-        "IQMX"
-      ]
-    },
-    {
-      "time": "1 hour",
-      "title": "Interview: Corning sees CPO, glass core as new semiconductor battlegrounds",
-      "url": "https://www.digitimes.com/news/a20260915PD233/corning-cpo-packaging-demand-auo.html",
-      "source": "DigiTimes",
-      "tickers": [
-        "GLW"
-      ]
-    },
-    {
-      "time": "1 hour",
-      "title": "CRML Stock In Focus: European Lithium Sets October Votes As Critical Metals Merger Clears Court Hurdle",
-      "url": "https://finance.yahoo.com/m/a4187a30-67e3-3b1c-b2b0-f2cf22773f2d/crml-stock-in-focus%3A-european.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "CRML"
-      ]
-    },
-    {
-      "time": "1 hour",
-      "title": "Springer Tungsten Complex secures $150m175m funding",
-      "url": "https://finance.yahoo.com/m/d1bfe19e-eb75-3ea4-ba0b-b2ea70f32929/springer-tungsten-complex.html",
-      "source": "Mining Technology",
-      "tickers": [
-        "BMM",
-        "ELMT"
-      ]
-    },
-    {
-      "time": "1 hour",
-      "title": "Sophia High Tech Flight Hardware on Board VEGA-C VV30 as the European Launcher Carries Sentinel-3C and FLEX into Orbit",
-      "url": "/news/391907/sophia-high-tech-flight-hardware-on-board-vega-c-vv30-as-the-european-launcher-carries-sentinel-3c-and-flex-into-orbit",
-      "source": "GlobeNewswire",
-      "tickers": [
-        "GNTA"
-      ]
-    },
-    {
-      "time": "1 hour",
-      "title": "South Korea updates AI safeguards as Microsoft sets shutdown rules",
-      "url": "https://www.digitimes.com/news/a20260915VL222/microsoft-security-guidance.html",
-      "source": "DigiTimes",
-      "tickers": [
-        "MSFT"
-      ]
-    },
-    {
-      "time": "2 hours",
-      "title": "Johnson Controls electrifies energy-intensive industries with new heat pumps that can triple energy efficiency and lower operating costs",
-      "url": "/news/391904/johnson-controls-electrifies-energy-intensive-industries-with-new-heat-pumps-that-can-triple-energy-efficiency-and-lower-operating-costs",
-      "source": "PR Newswire",
-      "tickers": [
-        "JCI"
-      ]
-    },
-    {
-      "time": "2 hours",
-      "title": "FICO European Fraud Map: UK Resilient as Other European Countries See Losses Climb by up to 21%",
-      "url": "/news/391905/fico-european-fraud-map-uk-resilient-as-other-european-countries-see-losses-climb-by-up-to-21",
-      "source": "Business Wire",
-      "tickers": [
-        "FICO"
-      ]
-    },
-    {
-      "time": "2 hours",
-      "title": "Northern Trust Survey: Asset Managers Sharpen Focus on Core Capabilities to Drive Growth",
-      "url": "/news/391906/northern-trust-survey-asset-managers-sharpen-focus-on-core-capabilities-to-drive-growth",
-      "source": "Business Wire",
-      "tickers": [
-        "NTRS"
-      ]
-    },
-    {
-      "time": "2 hours",
-      "title": "Bull of the Day: Caterpillar (CAT)",
-      "url": "/news/391909/bull-of-the-day-caterpillar-cat",
-      "source": "Zacks",
-      "tickers": [
-        "GOOGL",
-        "MSFT",
-        "META",
-        "NVDA",
-        "AMZN"
-      ]
-    },
-    {
-      "time": "2 hours",
-      "title": "Bear of the Day: The Campbell's Company (CPB)",
-      "url": "/news/391910/bear-of-the-day-the-campbells-company-cpb",
-      "source": "Zacks",
-      "tickers": [
-        "CPB"
-      ]
-    },
-    {
-      "time": "2 hours",
-      "title": "AI Slowdown Calls Wont Halt Fundraising, AllianceBernstein Says",
-      "url": "https://finance.yahoo.com/technology/ai/articles/ai-slowdown-calls-won-t-075550097.html",
-      "source": "Bloomberg",
-      "tickers": [
-        "AB"
-      ]
-    },
-    {
-      "time": "2 hours",
-      "title": "FTSE 100 today: Stocks slip as oil surges, AI safety rift adds to unease",
-      "url": "https://finance.yahoo.com/markets/world-indices/articles/ftse-100-today-stocks-slip-075124691.html",
-      "source": "Investing.com",
-      "tickers": [
-        "LCO"
-      ]
-    },
-    {
-      "time": "2 hours",
-      "title": "Watch Out SKHY, MU, SNDK: Japans Kioxia Reportedly Eyes $10B US Listing To Ride AI Memory Boom",
-      "url": "https://finance.yahoo.com/m/1e97f70b-3ecf-3625-a441-e1b8e529c5f2/watch-out-skhy%2C-mu%2C-sndk%3A.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "MU",
-        "SNDK",
-        "SKHY"
-      ]
-    },
-    {
-      "time": "2 hours",
-      "title": "NIO Stock Rises Overnight: Nio Capital Joins Sequoia China And SMIC-Linked Backers In Robot-Sensor Bet",
-      "url": "https://finance.yahoo.com/m/63ad46a5-2f62-3c39-ad25-91434eba2a20/nio-stock-rises-overnight%3A.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "NIO"
-      ]
-    },
-    {
-      "time": "2 hours",
-      "title": "NIO Stock Rises Overnight: Nio Capital Joins Sequoia China And SMIC-Linked Backers In Robot-Sensor Bet",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/nio-stock-rises-overnight-nio-074406824.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "BABA"
-      ]
-    },
-    {
-      "time": "2 hours",
-      "title": "Fluke Expands iSee Mobile Series with New TC03A Thermal Camera and ii01 Acoustic Camera",
-      "url": "/news/391903/fluke-expands-isee-mobile-series-with-new-tc03a-thermal-camera-and-ii01-acoustic-camera",
-      "source": "GlobeNewswire",
-      "tickers": [
-        "FTV"
-      ]
-    },
-    {
-      "time": "2 hours",
-      "title": "Industrial Occupancy Jumps as Big-Box Demand Returns",
-      "url": "https://finance.yahoo.com/m/65218520-1f8a-3539-9c30-839ff3823814/industrial-occupancy-jumps-as.html",
-      "source": "CRE Daily",
-      "tickers": [
-        "CIGI"
-      ]
-    },
-    {
-      "time": "2 hours",
-      "title": "GSK splashes up to $750m on experimental cancer therapy",
-      "url": "https://finance.yahoo.com/m/0828f07d-1656-3e33-a355-902b207b4285/gsk-splashes-up-to-%24750m-on.html",
-      "source": "Proactive",
-      "tickers": [
-        "GSK"
-      ]
-    },
-    {
-      "time": "2 hours",
-      "title": "Worldline launches UCP payment handler for agentic commerce payments",
-      "url": "https://finance.yahoo.com/m/235da9f2-d06f-3527-95f6-d9015f971ec1/worldline-launches-ucp.html",
-      "source": "Electronic Payments",
-      "tickers": [
-        "GOOG"
-      ]
-    },
-    {
-      "time": "2 hours",
-      "title": "Worldline launches UCP payment handler for agentic commerce payments",
-      "url": "https://finance.yahoo.com/technology/ai/articles/worldline-launches-ucp-payment-handler-070835057.html",
-      "source": "Electronic Payments",
-      "tickers": [
-        "GOOGL"
-      ]
-    },
-    {
-      "time": "2 hours",
-      "title": "Tesla, SpaceX Stocks Rise Overnight: Elon Musk Fuels Merger Speculation, Hints At Action Amid Close Collaboration",
-      "url": "https://finance.yahoo.com/m/e760c2ac-fd44-3bb0-9d7d-251b160b45d2/tesla%2C-spacex-stocks-rise.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "TSLA"
-      ]
-    },
-    {
-      "time": "2 hours",
-      "title": "Tesla, SpaceX Stocks Rise Overnight: Elon Musk Fuels Merger Speculation, Hints At Action Amid Close Collaboration",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/tesla-spacex-stocks-rise-overnight-070611962.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "SPCX"
-      ]
-    },
-    {
-      "time": "3 hours",
-      "title": "GAP Stock Heads For Monthly Loss Despite CEO Optimism On Old Navy  Cardi B Campaign Fails To Lift Retail Mood",
-      "url": "https://finance.yahoo.com/m/e10a3409-5fa4-36ec-a084-683cc9301678/gap-stock-heads-for-monthly.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "GAP"
-      ]
-    },
-    {
-      "time": "3 hours",
-      "title": "Kestra Medical Technologies Ltd (KMTS) (Q1 2027) Earnings Call Highlights: Revenue Jumps 60% as ...",
-      "url": "https://finance.yahoo.com/healthcare/articles/kestra-medical-technologies-ltd-kmts-070026354.html",
-      "source": "GuruFocus.com",
-      "tickers": [
-        "KMTS"
-      ]
-    },
-    {
-      "time": "3 hours",
-      "title": "Markel International bolsters leadership in new Marine Transportation business with two key appointments",
-      "url": "/news/391899/markel-international-bolsters-leadership-in-new-marine-transportation-business-with-two-key-appointments",
-      "source": "PR Newswire",
-      "tickers": [
-        "MKL"
-      ]
-    },
-    {
-      "time": "3 hours",
-      "title": "Willis: Power companies must strengthen resilience as electrification drives a new wave of industrial growth",
-      "url": "/news/391900/willis-power-companies-must-strengthen-resilience-as-electrification-drives-a-new-wave-of-industrial-growth",
-      "source": "GlobeNewswire",
-      "tickers": [
-        "WTW"
-      ]
-    },
-    {
-      "time": "3 hours",
-      "title": "Eldorado Gold to Host Greek Asset Site Tour",
-      "url": "/news/391901/eldorado-gold-to-host-greek-asset-site-tour",
-      "source": "GlobeNewswire",
-      "tickers": [
-        "EGO"
-      ]
-    },
-    {
-      "time": "3 hours",
-      "title": "Iron Mountain Partners with the Opera national de Paris to Preserve and Digitize its Visual Heritage",
-      "url": "/news/391902/iron-mountain-partners-with-the-opera-national-de-paris-to-preserve-and-digitize-its-visual-heritage",
-      "source": "Business Wire",
-      "tickers": [
-        "IRM"
-      ]
-    },
-    {
-      "time": "3 hours",
-      "title": "Iron Mountain Partners with the Opra national de Paris to Preserve and Digitize its Visual Heritage",
-      "url": "https://www.businesswire.com/news/home/20260915431263/en/",
-      "source": "Business Wire",
-      "tickers": [
-        "IRM"
-      ]
-    },
-    {
-      "time": "3 hours",
-      "title": "Tampa Multifamily Nears a Pricing Power Reset",
-      "url": "https://finance.yahoo.com/m/852933bb-3ee2-3de0-9780-d9c6027ffd9e/tampa-multifamily-nears-a.html",
-      "source": "CRE Daily",
-      "tickers": [
-        "CIGI"
-      ]
-    },
-    {
-      "time": "3 hours",
-      "title": "CryptoQuant Flags Volume Revival as Another Crack in Bear Market Downtrend",
-      "url": "https://finance.yahoo.com/m/83c8b8ff-1557-3960-bba6-162b774475bf/cryptoquant-flags-volume.html",
-      "source": "BeInCrypto",
-      "tickers": [
-        "COIN"
-      ]
-    },
-    {
-      "time": "3 hours",
-      "title": "Realty Income and KKR Form 528M European JV",
-      "url": "https://finance.yahoo.com/m/339922ee-a7d0-3e9a-a54c-92113f7f9f46/realty-income-and-kkr-form.html",
-      "source": "CRE Daily",
-      "tickers": [
-        "O"
-      ]
-    },
-    {
-      "time": "3 hours",
-      "title": "Airbnb Commits $250M to Housing Construction Fund",
-      "url": "https://finance.yahoo.com/m/89c5a385-8194-3f91-b363-ac1e1de19f5d/airbnb-commits-%24250m-to.html",
-      "source": "CRE Daily",
-      "tickers": [
-        "ABNB"
-      ]
-    },
-    {
-      "time": "3 hours",
-      "title": "NOTICE TO DISREGARD - HUHUTECH International Group Inc.",
-      "url": "/news/391897/notice-to-disregard-huhutech-international-group-inc",
-      "source": "GlobeNewswire",
-      "tickers": [
-        "HUHU"
-      ]
-    },
-    {
-      "time": "3 hours",
-      "title": "Borr Drilling Limited - Streamlines Mexico Operations",
-      "url": "/news/391888/borr-drilling-limited-streamlines-mexico-operations",
-      "source": "PR Newswire",
-      "tickers": [
-        "BORR"
-      ]
-    },
-    {
-      "time": "3 hours",
-      "title": "Chip Stocks Sink on AI Slowdown Calls, But Analysts Doubt a Crash Is Near",
-      "url": "https://finance.yahoo.com/m/6f149258-dafd-3f10-870a-cb16d919d980/chip-stocks-sink-on-ai.html",
-      "source": "BeInCrypto",
-      "tickers": [
-        "MU",
-        "SKHY",
-        "AVGO"
-      ]
-    },
-    {
-      "time": "3 hours",
-      "title": "Chip Stocks Sink on AI Slowdown Calls, But Analysts Doubt a Crash Is Near",
-      "url": "https://finance.yahoo.com/technology/ai/articles/chip-stocks-sink-ai-slowdown-060500112.html",
-      "source": "BeInCrypto",
-      "tickers": [
-        "NVDA",
-        "AMD"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "Can Viking Therapeutics Beat Big Pharma With Monthly Weight-Loss Shots? Heres The Risk CEO Says Could Derail It",
-      "url": "https://finance.yahoo.com/m/7458ce0d-eed2-3d31-a5bd-c976a9e7961c/can-viking-therapeutics-beat.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "VKTX"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "HawkEye 360 Establishes First European Subsidiary in Luxembourg",
-      "url": "/news/391883/hawkeye-360-establishes-first-european-subsidiary-in-luxembourg",
-      "source": "PR Newswire",
-      "tickers": [
-        "HAWK"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "HawkEye 360 and ERA Form Strategic Collaboration to Advance Defense Surveillance Capabilities",
-      "url": "/news/391884/hawkeye-360-and-era-form-strategic-collaboration-to-advance-defense-surveillance-capabilities",
-      "source": "PR Newswire",
-      "tickers": [
-        "HAWK"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "HawkEye 360 and Leonardo Sign MOU to Deliver Sovereign Signals Capability",
-      "url": "/news/391885/hawkeye-360-and-leonardo-sign-mou-to-deliver-sovereign-signals-capability",
-      "source": "PR Newswire",
-      "tickers": [
-        "HAWK"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "Micware and ESRI Japan Enter into a Business Alliance Agreement to Build Dynamic Space",
-      "url": "/news/391886/micware-and-esri-japan-enter-into-a-business-alliance-agreement-to-build-dynamic-space",
-      "source": "GlobeNewswire",
-      "tickers": [
-        "MWC"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "InterContinental Hotels Group PLC Announces Transaction in Own Shares - September 15",
-      "url": "/news/391887/intercontinental-hotels-group-plc-announces-transaction-in-own-shares-september-15",
-      "source": "ACCESSWIRE",
-      "tickers": [
-        "IHG"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "TotalEnergies SE UK Regulatory Announcement: TotalEnergies Announces a Partnership with Mistral to Develop Frontier AI Models for Reservoir Exploration and Engineering",
-      "url": "/news/391889/totalenergies-se-uk-regulatory-announcement-totalenergies-announces-a-partnership-with-mistral-to-develop-frontier-ai-models-for-reservoir-exploration-and-engineering",
-      "source": "Business Wire",
-      "tickers": [
-        "TTE"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "TotalEnergies SE UK Regulatory Announcement: Transactions in Own Shares",
-      "url": "/news/391890/totalenergies-se-uk-regulatory-announcement-transactions-in-own-shares",
-      "source": "Business Wire",
-      "tickers": [
-        "TTE"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "TotalEnergies Announces a Partnership with Mistral to Develop Frontier AI Models for Reservoir Exploration and Engineering",
-      "url": "/news/391891/totalenergies-announces-a-partnership-with-mistral-to-develop-frontier-ai-models-for-reservoir-exploration-and-engineering",
-      "source": "Business Wire",
-      "tickers": [
-        "TTE"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "TotalEnergies SE: Disclosure of Transactions in Own Shares",
-      "url": "/news/391892/totalenergies-se-disclosure-of-transactions-in-own-shares",
-      "source": "Business Wire",
-      "tickers": [
-        "TTE"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "Teledyne e2v Expands 3D Imaging Portfolio with New Perciva ToF Camera",
-      "url": "/news/391893/teledyne-e2v-expands-3d-imaging-portfolio-with-new-perciva-tof-camera",
-      "source": "Business Wire",
-      "tickers": [
-        "TDY"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "The Office Boom Is Back. Can REITs Be Far Behind?",
-      "url": "https://www.barrons.com/articles/office-boom-back-reits-commercial-real-estate-ff8627a2?mod=bar_FV",
-      "source": "Barrons.com",
-      "tickers": [
-        "BXP",
-        "HPP",
-        "SLG"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
-      "url": "https://finance.yahoo.com/m/c11a3ffc-bee7-38ac-87b3-c7e8b05fd17f/stock-market%3A-will-s%26p-500.html",
-      "source": "Benzinga Prediction Markets",
-      "tickers": [
-        "QQQ"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-p-500-open-055802015.html",
-      "source": "Benzinga Prediction Markets",
-      "tickers": [
-        "SPY"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "Cathie Woods ARK Invest Loads Up On AeroVironment Amid Fresh Defense Deals And Record Backlog",
-      "url": "https://finance.yahoo.com/m/b90b689e-2d28-318f-aaf5-546de01cc44a/cathie-wood%E2%80%99s-ark-invest.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "AVAV"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "Softbank Group shares rebound as data center unit SB Energy pushes ahead with IPO",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/softbank-group-shares-rebound-data-053630801.html",
-      "source": "Investing.com",
-      "tickers": [
-        "NVDA"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "Rocket Lab Expects Iridium Deal To Double Its Size Overnight  CFO Says More Space Deals May Follow",
-      "url": "https://finance.yahoo.com/m/77d8475d-d701-369d-b520-72535d8e2ee3/rocket-lab-expects-iridium.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "RKLB"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "Rocket Lab Expects Iridium Deal To Double Its Size Overnight  CFO Says More Space Deals May Follow",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/rocket-lab-expects-iridium-deal-052520819.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "IRDM"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "EQ Resources Takes Stake in U.S. Tungsten Processing JV",
-      "url": "https://finance.yahoo.com/energy/articles/eq-resources-takes-stake-u-052500932.html",
-      "source": "Oilprice.com",
-      "tickers": [
-        "BMM",
-        "ELMT"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "SpaceX's first Starfall customer is European mission integrator Space Cargo",
-      "url": "https://finance.yahoo.com/technology/articles/spacexs-first-starfall-customer-european-050826948.html",
-      "source": "Reuters",
-      "tickers": [
-        "SPCX"
-      ]
-    },
-    {
-      "time": "4 hours",
-      "title": "Stock-picking, multi-manager hedge funds attract more capital from investors in 2026, BofA says",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/stock-picking-multi-manager-hedge-050409637.html",
-      "source": "Reuters",
-      "tickers": [
-        "BAC"
-      ]
-    },
-    {
-      "time": "5 hours",
-      "title": "Prime Big Deal Days is Back October 6-7, Kicking Off the Season with Two Days of Exclusive Savings for Prime Members",
-      "url": "/news/391882/prime-big-deal-days-is-back-october-6-7-kicking-off-the-season-with-two-days-of-exclusive-savings-for-prime-members",
-      "source": "Business Wire",
-      "tickers": [
-        "AMZN"
-      ]
-    },
-    {
-      "time": "5 hours",
-      "title": "Radiant Logistics Inc (RLGT) (Q4 2026) Earnings Call Highlights: Record Quarterly Revenue and ...",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/radiant-logistics-inc-rlgt-q4-050033884.html",
-      "source": "GuruFocus.com",
-      "tickers": [
-        "RLGT"
-      ]
-    },
-    {
-      "time": "5 hours",
-      "title": "Coda Octopus Group Inc (CODA) (Q3 2026) Earnings Call Highlights: Defense Surge Offsets Marine ...",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/coda-octopus-group-inc-coda-050022278.html",
-      "source": "GuruFocus.com",
-      "tickers": [
-        "CODA"
-      ]
-    },
-    {
-      "time": "5 hours",
-      "title": "HIVE's BUZZ HPC Appoints Capital Markets Veteran Hubert Marleau as Independent Director to Support Canadian AI Infrastructure Expansion",
-      "url": "https://www.newsfilecorp.com/release/314374/HIVEs-BUZZ-HPC-Appoints-Capital-Markets-Veteran-Hubert-Marleau-as-Independent-Director-to-Support-Canadian-AI-Infrastructure-Expansion",
-      "source": "Newsfile",
-      "tickers": [
-        "HIVE"
-      ]
-    },
-    {
-      "time": "5 hours",
-      "title": "Australia's AI Regulation Debate",
-      "url": "https://finance.yahoo.com/video/australias-ai-regulation-debate-045117172.html",
-      "source": "Bloomberg",
-      "tickers": [
-        "MSFT"
-      ]
-    },
-    {
-      "time": "5 hours",
-      "title": "GEV Stock Plunges After New Sell Rating, But Retail Investors Smell A Buying Opportunity",
-      "url": "https://finance.yahoo.com/m/b4971fa0-14c7-3f5d-9235-50db54485c1d/gev-stock-plunges-after-new.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "GEV"
-      ]
-    },
-    {
-      "time": "5 hours",
-      "title": "NOK Stock Rises Overnight: Analyst Calls Nokia AI Optical Dark Horse Trading At 'Conservative Valuation'",
-      "url": "https://finance.yahoo.com/m/b8e2fc35-f51d-380d-9873-63d976a42176/nok-stock-rises-overnight%3A.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "NOK"
-      ]
     }
   ],
   "major_news_tickers": [
     "NVDA",
-    "SPCX",
-    "TTE",
-    "MU",
+    "AMZN",
     "MSFT",
-    "LCO",
-    "JNJ",
-    "HAWK",
     "GOOGL",
-    "FDX",
-    "ELMT",
-    "CRWD",
+    "SPCX",
     "BAC",
+    "META",
+    "TTE",
+    "COIN",
+    "CRWD",
     "AVGO",
-    "AMZN"
+    "BLK",
+    "XE",
+    "ELMT",
+    "GOOG",
+    "HAWK",
+    "JNJ",
+    "LLY",
+    "TSLA",
+    "AAPL"
   ],
   "event_options": [
     {
@@ -9795,7 +9796,7 @@
       "spot": 918.91,
       "atm_iv": 0.002,
       "implied_move_pct": 0.02,
-      "put_call_oi": null,
+      "put_call_oi": 2.844,
       "meaning": "event volatility only; not direction"
     },
     {
@@ -9804,7 +9805,7 @@
       "spot": 195.0,
       "atm_iv": 0.0001,
       "implied_move_pct": 0.0,
-      "put_call_oi": null,
+      "put_call_oi": 0.0,
       "meaning": "event volatility only; not direction"
     },
     {
@@ -9813,7 +9814,7 @@
       "spot": 200.82,
       "atm_iv": 0.0078,
       "implied_move_pct": 0.07,
-      "put_call_oi": null,
+      "put_call_oi": 0.494,
       "meaning": "event volatility only; not direction"
     },
     {
@@ -9831,7 +9832,7 @@
       "spot": 2965.52,
       "atm_iv": 0.002,
       "implied_move_pct": 0.02,
-      "put_call_oi": null,
+      "put_call_oi": 1.325,
       "meaning": "event volatility only; not direction"
     },
     {
@@ -9840,7 +9841,7 @@
       "spot": 118.51,
       "atm_iv": 0.0156,
       "implied_move_pct": 0.14,
-      "put_call_oi": null,
+      "put_call_oi": 0.677,
       "meaning": "event volatility only; not direction"
     },
     {
@@ -9849,7 +9850,7 @@
       "spot": 298.72,
       "atm_iv": 0.0156,
       "implied_move_pct": 0.14,
-      "put_call_oi": null,
+      "put_call_oi": 0.25,
       "meaning": "event volatility only; not direction"
     }
   ],
@@ -10301,7 +10302,7 @@
       "company": "Micron Technology Inc",
       "datetime": "2026-09-30T16:30:00",
       "session": "AMC",
-      "mcap": 1051126.14246449,
+      "mcap": 1052549.1887597921,
       "eps_est": 31.141
     },
     {
@@ -10309,7 +10310,7 @@
       "company": "Costco Wholesale Corp",
       "datetime": "2026-09-24T16:30:00",
       "session": "AMC",
-      "mcap": 405815.49281372863,
+      "mcap": 405783.119726084,
       "eps_est": 6.5477
     },
     {
@@ -10317,7 +10318,7 @@
       "company": "Accenture plc",
       "datetime": "2026-10-01T08:30:00",
       "session": "BMO",
-      "mcap": 117089.00947592397,
+      "mcap": 117419.4634679988,
       "eps_est": 3.185
     },
     {
@@ -10325,7 +10326,7 @@
       "company": "Cintas Corp",
       "datetime": "2026-09-23T08:30:00",
       "session": "BMO",
-      "mcap": 80145.95502885812,
+      "mcap": 79705.76609216364,
       "eps_est": 1.3481
     },
     {
@@ -10333,7 +10334,7 @@
       "company": "Nike Inc",
       "datetime": "2026-10-01T16:30:00",
       "session": "AMC",
-      "mcap": 54805.04507217397,
+      "mcap": 54874.623692864865,
       "eps_est": 0.4458
     },
     {
@@ -10342,7 +10343,7 @@
       "datetime": "2026-09-22T08:30:00",
       "session": "BMO",
       "mcap": 48338.15546753005,
-      "eps_est": 54.4154
+      "eps_est": 54.3478
     },
     {
       "ticker": "PAYX",
@@ -10357,7 +10358,7 @@
       "company": "Jabil Inc",
       "datetime": "2026-09-30T08:30:00",
       "session": "BMO",
-      "mcap": 31226.55316644901,
+      "mcap": 31237.03251513492,
       "eps_est": 4.0593
     },
     {
@@ -10365,7 +10366,7 @@
       "company": "Trip.com Group Ltd ADR",
       "datetime": "2026-09-15T16:30:00",
       "session": "AMC",
-      "mcap": 25697.38569206238,
+      "mcap": 25775.334598236084,
       "eps_est": 0.8855
     },
     {
@@ -10414,7 +10415,7 @@
       "datetime": "2026-09-28T16:30:00",
       "session": "AMC",
       "mcap": 11550.55464820862,
-      "eps_est": 0.938
+      "eps_est": 0.926
     }
   ],
   "econ_today": [
@@ -10461,5 +10462,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 211,
   "earnings_window_count": 46,
-  "overlay_at": "2026-09-15T06:04:17.985549-04:00"
+  "overlay_at": "2026-09-15T07:11:00.729516-04:00"
 }
