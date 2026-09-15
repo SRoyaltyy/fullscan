@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T08:30:04.805853-04:00",
+  "generated_at": "2026-09-15T08:50:54.126707-04:00",
   "export_used": "data/exports/finviz_2026-09-15.csv",
   "ticker_digest_count": 400,
   "signal_count": 400,
@@ -60,7 +60,7 @@
     {
       "ticker": "AMD",
       "digest": "AI leaders' call to slow frontier development sparks AMD's 5% premarket plunge",
-      "news_title": "Chip Stocks Sink on AI Slowdown Calls, But Analysts Doubt a Crash Is Near",
+      "news_title": "Hedge Fund That Nearly Collapsed Bets Big on AMD Again",
       "sector": "Technology",
       "industry": "Semiconductors",
       "is_dividend": false,
@@ -104,7 +104,7 @@
     {
       "ticker": "AMZN",
       "digest": "Amazon's India quick-commerce unit Amazon Now tops $1bn in gross annualised sales as volumes surge",
-      "news_title": "Factory robots long posed a safety threat to human workers. One company says it's solved that problem.",
+      "news_title": "Amazon Gains 1.6% as Its $53 Billion Anthropic Windfall Meets a Weapons Test",
       "sector": "Consumer Cyclical",
       "industry": "Internet Retail",
       "is_dividend": false,
@@ -575,6 +575,17 @@
       "source": "finviz_export"
     },
     {
+      "ticker": "HCA",
+      "digest": "HCA Healthcare announces it has completed the previously announced acquisition of The College of Health Care Professions, expanding its healthcare education platform.",
+      "news_title": "HCA Healthcare Completes Acquisition of the College of Health Care Professions",
+      "sector": "Healthcare",
+      "industry": "Medical Care Facilities",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
       "ticker": "HD",
       "digest": "Home Depot announces the nationwide rollout of its Magic Apron AI-powered in-store assistant with localized, personalized shopping guidance now live in all U.S. stores.",
       "news_title": "What Happens To Home Depot Stock If Shoppers Keep Visiting Less?",
@@ -679,17 +690,6 @@
       "news_title": "PYPL Stock Crash: Mizuho Highlights Three Key Risks For PayPal After Stripe, Advent Reportedly Abandon Takeover Bid",
       "sector": "Financial",
       "industry": "Banks - Regional",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "MNST",
-      "digest": "Q2 earnings momentum and recent stock split fuel MNST 4.09% gain",
-      "news_title": "KO Stock Near Highs: Has Momentum Outrun Value?",
-      "sector": "Consumer Defensive",
-      "industry": "Beverages - Non-Alcoholic",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -982,7 +982,7 @@
       {
         "ticker": "AMD",
         "digest": "AI leaders' call to slow frontier development sparks AMD's 5% premarket plunge",
-        "news_title": "Chip Stocks Sink on AI Slowdown Calls, But Analysts Doubt a Crash Is Near",
+        "news_title": "Hedge Fund That Nearly Collapsed Bets Big on AMD Again",
         "sector": "Technology",
         "industry": "Semiconductors",
         "is_dividend": false,
@@ -1107,7 +1107,7 @@
       {
         "ticker": "AMZN",
         "digest": "Amazon's India quick-commerce unit Amazon Now tops $1bn in gross annualised sales as volumes surge",
-        "news_title": "Factory robots long posed a safety threat to human workers. One company says it's solved that problem.",
+        "news_title": "Amazon Gains 1.6% as Its $53 Billion Anthropic Windfall Meets a Weapons Test",
         "sector": "Consumer Cyclical",
         "industry": "Internet Retail",
         "is_dividend": false,
@@ -1265,30 +1265,6 @@
         "source": "finviz_export"
       }
     ],
-    "Consumer Defensive": [
-      {
-        "ticker": "KO",
-        "digest": "Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the companyâs Q2 earnings beat.",
-        "news_title": "Coca-Cola Co's Dividend Analysis",
-        "sector": "Consumer Defensive",
-        "industry": "Beverages - Non-Alcoholic",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "MNST",
-        "digest": "Q2 earnings momentum and recent stock split fuel MNST 4.09% gain",
-        "news_title": "KO Stock Near Highs: Has Momentum Outrun Value?",
-        "sector": "Consumer Defensive",
-        "industry": "Beverages - Non-Alcoholic",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      }
-    ],
     "Real Estate": [
       {
         "ticker": "EQIX",
@@ -1296,6 +1272,19 @@
         "news_title": "CoreWeave Shares Sink After Bernstein Warns Of Slower AI Training",
         "sector": "Real Estate",
         "industry": "REIT - Specialty",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      }
+    ],
+    "Consumer Defensive": [
+      {
+        "ticker": "KO",
+        "digest": "Bank of America raises Coca-Cola price target to $100 from $95 and reiterates Buy following the companyâs Q2 earnings beat.",
+        "news_title": "Coca-Cola Co's Dividend Analysis",
+        "sector": "Consumer Defensive",
+        "industry": "Beverages - Non-Alcoholic",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
@@ -1329,7 +1318,7 @@
     {
       "ticker": "AMD",
       "digest": "AI leaders' call to slow frontier development sparks AMD's 5% premarket plunge",
-      "news_title": "Chip Stocks Sink on AI Slowdown Calls, But Analysts Doubt a Crash Is Near",
+      "news_title": "Hedge Fund That Nearly Collapsed Bets Big on AMD Again",
       "sector": "Technology",
       "industry": "Semiconductors",
       "is_dividend": false,
@@ -1373,7 +1362,7 @@
     {
       "ticker": "AMZN",
       "digest": "Amazon's India quick-commerce unit Amazon Now tops $1bn in gross annualised sales as volumes surge",
-      "news_title": "Factory robots long posed a safety threat to human workers. One company says it's solved that problem.",
+      "news_title": "Amazon Gains 1.6% as Its $53 Billion Anthropic Windfall Meets a Weapons Test",
       "sector": "Consumer Cyclical",
       "industry": "Internet Retail",
       "is_dividend": false,
@@ -1838,6 +1827,17 @@
       "news_title": "GSK splashes up to $750m on experimental cancer therapy",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
+      "ticker": "HCA",
+      "digest": "HCA Healthcare announces it has completed the previously announced acquisition of The College of Health Care Professions, expanding its healthcare education platform.",
+      "news_title": "HCA Healthcare Completes Acquisition of the College of Health Care Professions",
+      "sector": "Healthcare",
+      "industry": "Medical Care Facilities",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -2168,17 +2168,6 @@
       "news_title": "What off-price retailers are saying about tariff refunds",
       "sector": "Consumer Cyclical",
       "industry": "Apparel Retail",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "RSG",
-      "digest": "Republic Services beats Q2 estimates with non-GAAP EPS $1.85, revenue $4.43B, raises 2026 guidance on pricing strength, commodities and M&A",
-      "news_title": "Judge sets date for Colgate toothpaste tube recyclability trial",
-      "sector": "Industrials",
-      "industry": "Waste Management",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
