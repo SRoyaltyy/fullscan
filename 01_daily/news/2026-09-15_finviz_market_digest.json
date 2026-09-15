@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T04:04:00.548424-04:00",
+  "generated_at": "2026-09-15T04:24:12.283454-04:00",
   "timezone": "America/New_York",
   "source": "live",
   "source_url": "https://elite.finviz.com/",
@@ -15,95 +15,66 @@
   "kind": "finviz_homepage_market_digest",
   "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
   "error": null,
-  "headline": "US stocks closed lower as AI slowdown fears weighed on tech and chipmakers while surging oil and a near-5% 10-year yield sharpened focus on this week’s FOMC meeting",
-  "raw_text": "- The S&P 500 ($SPX) fell 0.48% to 7,619.98, the Dow ($DJI) slipped 0.29% to 52,421.20, and the Nasdaq ($COMP) lost 0.56%, marking the S&P’s fifth decline in six sessions and leaving it 2.3% below its August 13 record close of 7,798.99.\n- AI slowdown fears tied to AI safety calls from OpenAI CEO Sam Altman and Anthropic co-founder Dario Amodei pressured chipmakers and broader technology shares.\n- The 10-year Treasury yield briefly hit 5.012% intraday before easing to around 4.96% as rising oil prices added to inflation worries.\n- Communication Services led with a 2.8% gain, driven by Netflix (NFLX) after Evercore ISI upgraded the stock and raised its price target to $110 on live programming potential, while Health Care and Consumer Staples rose modestly and Information Technology lagged with a 1.6–1.7% decline.\n- Cybersecurity stocks rallied on the AI safety theme, with Zscaler (ZS) up 16.5%, Rubrik (RBRK) up 15.6%, SentinelOne (S) up 14.5%, Palo Alto Networks (PANW) up 13.3%, and CrowdStrike (CRWD) jumping 13.85% to $235.38.\n- Chip and AI infrastructure names weakened, with Corning (GLW) down 13.7%, Coherent (COHR) off 12.7%, and other chip-related stocks such as Teradyne (TER) and Nvidia (NVDA) lower, with Nvidia (NVDA) off roughly 3–3.4% on AI demand concerns.\n- Bank of America (BAC) slid about 5.1% to $59.47 after forecasting a more than 10% drop in third-quarter investment banking fees, raising concerns about softer deal-making revenue.\n- Oil prices climbed sharply, with Brent crude (@QA) above $105 and WTI (@CL) over $101 per barrel after Saudi Arabia shut a key pipeline that bypasses the Strait of Hormuz due to attacks, boosting inflation concerns and reinforcing expectations for tighter policy.\n- Few after-hours earnings, including small caps such as Dave & Buster’s (PLAY) and Radiant Logistics (RLGT), produced moves of more than 2%, as attention shifted to this week’s two-day FOMC meeting, where futures are pricing roughly a 90% chance of a 25-basis-point rate hike to 4.0% on Wednesday.",
-  "raw_summary_md": "- **The S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) **fell 0.48% to 7,619.98**, the **Dow** ([$DJI](https://finviz.com/index/DJI?p=d)) **slipped 0.29% to 52,421.20**, and the **Nasdaq** ([$COMP](https://finviz.com/index/COMP?p=d)) **lost 0.56%**, marking the S&P’s **fifth decline in six sessions** and leaving it **2.3% below its August 13 record close of 7,798.99**.\n- **AI slowdown fears** tied to **AI safety calls from OpenAI CEO Sam Altman and Anthropic co-founder Dario Amodei** pressured **chipmakers and broader technology shares**.\n- **The 10-year Treasury yield** briefly hit **5.012%** intraday before easing to around **4.96%** as **rising oil prices** added to **inflation worries**.\n- **Communication Services led with a 2.8% gain**, driven by **Netflix** ([NFLX](https://finviz.com/quote?t=NFLX)) after **Evercore ISI upgraded the stock and raised its price target to $110 on live programming potential**, while **Health Care and Consumer Staples rose modestly** and **Information Technology lagged with a 1.6–1.7% decline**.\n- **Cybersecurity stocks rallied on the AI safety theme**, with **Zscaler** ([ZS](https://finviz.com/quote?t=ZS)) **up 16.5%**, **Rubrik** ([RBRK](https://finviz.com/quote?t=RBRK)) **up 15.6%**, **SentinelOne** ([S](https://finviz.com/quote?t=S)) **up 14.5%**, **Palo Alto Networks** ([PANW](https://finviz.com/quote?t=PANW)) **up 13.3%**, and **CrowdStrike** ([CRWD](https://finviz.com/quote?t=CRWD)) **jumping 13.85% to $235.38**.\n- **Chip and AI infrastructure names weakened**, with **Corning** ([GLW](https://finviz.com/quote?t=GLW)) **down 13.7%**, **Coherent** ([COHR](https://finviz.com/quote?t=COHR)) **off 12.7%**, and other chip-related stocks such as **Teradyne** ([TER](https://finviz.com/quote?t=TER)) and **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) lower, with **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) **off roughly 3–3.4% on AI demand concerns**.\n- **Bank of America** ([BAC](https://finviz.com/quote?t=BAC)) **slid about 5.1% to $59.47** after forecasting a **more than 10% drop in third-quarter investment banking fees**, raising concerns about **softer deal-making revenue**.\n- **Oil prices climbed sharply**, with **Brent crude** ([@QA](https://finviz.com/futures_charts?t=QA)) **above $105** and **WTI** ([@CL](https://finviz.com/futures_charts?t=CL)) **over $101 per barrel** after **Saudi Arabia shut a key pipeline that bypasses the Strait of Hormuz due to attacks**, boosting **inflation concerns** and reinforcing **expectations for tighter policy**.\n- **Few after-hours earnings**, including small caps such as **Dave & Buster’s** ([PLAY](https://finviz.com/quote?t=PLAY)) and **Radiant Logistics** ([RLGT](https://finviz.com/quote?t=RLGT)), produced moves of more than **2%**, as attention shifted to this week’s **two-day FOMC meeting**, where futures are pricing roughly a **90% chance of a 25-basis-point rate hike to 4.0% on Wednesday**.",
-  "index_moves": [
-    {
-      "name": "S&P 500",
-      "code": "SPX",
-      "change_pct": -0.48,
-      "verb": "fell"
-    },
-    {
-      "name": "Dow",
-      "code": "DJI",
-      "change_pct": -0.29,
-      "verb": "slipped"
-    },
-    {
-      "name": "Nasdaq",
-      "code": "COMP",
-      "change_pct": -0.56,
-      "verb": "lost"
-    }
-  ],
+  "headline": "US futures point to a lower open as oil extends gains and bond yields rise ahead of the FOMC meeting",
+  "raw_text": "- S&P 500 Futures (@ES) fall 0.47%, Dow Jones Futures (@YM) fall 0.65%, Nasdaq 100 Futures (@NQ) fall 0.49%, and Russell 2000 Futures (@ER2) fall 0.68%, signaling a gap-down open\n- Micron Technology (MU), Marvell Technology (MRVL), Intel (INTC), and Vertiv Holdings (VRT) trade mixed to slightly lower pre-market amid ongoing AI slowdown worries in semiconductors and tech hardware\n- Small-cap and low-float names including VEEA (VEEA) (+67%), My Size (MYSZ) (+86%), SLGB (SLGB) (+20%), and RYDE (RYDE) post double-digit percentage gains on low volume\n- Overnight earnings remain light, with limited pre-market reactions ahead of reports from COE (COE), FPS (FPS), VRA (VRA), and other smaller names before the bell\n- WTI crude (@CL) gains over 2% to trade near $103.50 on Middle East supply risks tied to Saudi pipeline disruptions\n- Gold (@GC) prices trade lower as higher oil and rising bond yields stoke inflation concerns\n- The US economic calendar features the Empire State Manufacturing Index at 8:30 AM ET in an otherwise quiet data session\n- The Federal Reserve’s two-day FOMC meeting begins today, with rising bond yields underscoring market focus on inflation and policy guidance\n- Asian markets trade mixed with the Nikkei (@NKD) roughly flat and the Hang Seng modestly higher, while major European indices edge lower",
+  "raw_summary_md": "- S&P 500 Futures ([@ES](https://finviz.com/futures_charts?t=ES)) **fall 0.47%**, Dow Jones Futures ([@YM](https://finviz.com/futures_charts?t=YM)) **fall 0.65%**, Nasdaq 100 Futures ([@NQ](https://finviz.com/futures_charts?t=NQ)) **fall 0.49%**, and Russell 2000 Futures ([@ER2](https://finviz.com/futures_charts?t=ER2)) **fall 0.68%**, signaling a **gap-down open**\n- **Micron Technology ([MU](https://finviz.com/quote?t=MU)), Marvell Technology ([MRVL](https://finviz.com/quote?t=MRVL)), Intel ([INTC](https://finviz.com/quote?t=INTC)), and Vertiv Holdings ([VRT](https://finviz.com/quote?t=VRT))** trade **mixed to slightly lower pre-market** amid ongoing **AI slowdown worries** in semiconductors and tech hardware\n- **Small-cap and low-float names** including VEEA ([VEEA](https://finviz.com/quote?t=VEEA)) (**+67%**), My Size ([MYSZ](https://finviz.com/quote?t=MYSZ)) (**+86%**), SLGB ([SLGB](https://finviz.com/quote?t=SLGB)) (**+20%**), and RYDE ([RYDE](https://finviz.com/quote?t=RYDE)) post **double-digit percentage gains** on low volume\n- Overnight earnings **remain light**, with **limited pre-market reactions** ahead of reports from **COE ([COE](https://finviz.com/quote?t=COE)), FPS ([FPS](https://finviz.com/quote?t=FPS)), VRA ([VRA](https://finviz.com/quote?t=VRA))**, and other smaller names before the bell\n- WTI crude ([@CL](https://finviz.com/futures_charts?t=CL)) **gains over 2% to trade near $103.50** on **Middle East supply risks** tied to **Saudi pipeline disruptions**\n- Gold ([@GC](https://finviz.com/futures_charts?t=GC)) prices **trade lower** as **higher oil and rising bond yields** stoke **inflation concerns**\n- The US economic calendar features the **Empire State Manufacturing Index** at **8:30 AM ET** in an otherwise quiet data session\n- The Federal Reserve’s **two-day FOMC meeting begins today**, with **rising bond yields** underscoring market focus on **inflation and policy guidance**\n- Asian markets **trade mixed** with the Nikkei ([@NKD](https://finviz.com/futures_charts?t=NKD)) roughly **flat** and the Hang Seng **modestly higher**, while major European indices **edge lower**",
+  "index_moves": [],
   "oil": {
-    "name": "Brent crude",
-    "price": 105.0,
+    "name": "WTI crude",
+    "price": 103.5,
     "verb": null,
     "direction": null
   },
   "cpi": null,
-  "fed_odds": {
-    "pct": 90.0,
-    "action": "hike",
-    "text": "90% chance of a 25-basis-point rate hike"
-  },
+  "fed_odds": null,
   "named_tickers": [
-    "NFLX",
-    "ZS",
-    "RBRK",
-    "S",
-    "PANW",
-    "CRWD",
-    "GLW",
-    "COHR",
-    "TER",
-    "NVDA",
-    "BAC",
-    "PLAY",
-    "RLGT"
+    "MU",
+    "MRVL",
+    "INTC",
+    "VRT",
+    "VEEA",
+    "MYSZ",
+    "SLGB",
+    "RYDE",
+    "COE",
+    "FPS",
+    "VRA"
   ],
   "named_leaders": [
-    "NFLX",
-    "ZS",
-    "RBRK",
-    "S",
-    "PANW",
-    "CRWD",
-    "GLW",
-    "COHR",
-    "TER",
-    "NVDA",
-    "BAC",
-    "PLAY",
-    "RLGT"
+    "MU",
+    "MRVL",
+    "INTC",
+    "VRT",
+    "VEEA",
+    "MYSZ",
+    "SLGB",
+    "RYDE",
+    "COE",
+    "FPS",
+    "VRA"
   ],
   "calendar": [
-    "Few after-hours earnings, including small caps such as Dave & Buster’s (PLAY) and Radiant Logistics (RLGT), produced moves of more than 2%, as attention shifted to this week’s two-day FOMC meeting, where futures are pricing roughly a 90% chance of a 25-basis-point rate hike to 4.0% on Wednesday."
+    "The US economic calendar features the Empire State Manufacturing Index at 8:30 AM ET in an otherwise quiet data session",
+    "The Federal Reserve’s two-day FOMC meeting begins today, with rising bond yields underscoring market focus on inflation and policy guidance"
   ],
   "prior_close": {
-    "spx": -0.48,
-    "nasdaq": -0.56,
-    "dow": -0.29
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
   },
   "cpi_fed": {
     "cpi": null,
-    "fed_odds": {
-      "pct": 90.0,
-      "action": "hike",
-      "text": "90% chance of a 25-basis-point rate hike"
-    }
+    "fed_odds": null
   },
   "next_session_calendar": {
     "housing": false,
     "retail": false,
     "fed": true,
     "bullets": [
-      "Few after-hours earnings, including small caps such as Dave & Buster’s (PLAY) and Radiant Logistics (RLGT), produced moves of more than 2%, as attention shifted to this week’s two-day FOMC meeting, where futures are pricing roughly a 90% chance of a 25-basis-point rate hike to 4.0% on Wednesday."
+      "The US economic calendar features the Empire State Manufacturing Index at 8:30 AM ET in an otherwise quiet data session",
+      "The Federal Reserve’s two-day FOMC meeting begins today, with rising bond yields underscoring market focus on inflation and policy guidance"
     ],
-    "text": "Few after-hours earnings, including small caps such as Dave & Buster’s (PLAY) and Radiant Logistics (RLGT), produced moves of more than 2%, as attention shifted to this week’s two-day FOMC meeting, where futures are pricing roughly a 90% chance of a 25-basis-point rate hike to 4.0% on Wednesday."
+    "text": "The US economic calendar features the Empire State Manufacturing Index at 8:30 AM ET in an otherwise quiet data session The Federal Reserve’s two-day FOMC meeting begins today, with rising bond yields underscoring market focus on inflation and policy guidance"
   },
   "earnings_slate": {
     "tickers": [],
@@ -115,11 +86,11 @@
     "flags": [
       "geo"
     ],
-    "text": "Oil prices climbed sharply, with Brent crude (@QA) above $105 and WTI (@CL) over $101 per barrel after Saudi Arabia shut a key pipeline that bypasses the Strait of Hormuz due to attacks, boosting inflation concerns and reinforcing expectations for tighter policy."
+    "text": "WTI crude (@CL) gains over 2% to trade near $103.50 on Middle East supply risks tied to Saudi pipeline disruptions"
   },
-  "finviz_id": 285417,
+  "finviz_id": 285515,
   "finviz_ticker": "$MARKET",
-  "finviz_published_at": "2026-09-14T20:36:42.19",
+  "finviz_published_at": "2026-09-15T04:06:21.127",
   "finviz_source": "market_summary",
-  "finviz_sentiment": "neutral"
+  "finviz_sentiment": "bad"
 }
