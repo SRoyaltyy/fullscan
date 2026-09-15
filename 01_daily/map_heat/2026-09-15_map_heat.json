@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T03:46:32.145663-04:00",
+  "generated_at": "2026-09-15T04:05:09.244453-04:00",
   "phase": "morning_overlay",
   "export": "finviz_2026-09-15.csv",
   "n_tickers": 11608,
@@ -8673,134 +8673,134 @@
     {
       "ticker": "ES",
       "label": "S&P 500",
-      "last": 7665.0,
-      "change": -0.36
+      "last": 7656.5,
+      "change": -0.48
     },
     {
       "ticker": "NQ",
       "label": "Nasdaq 100",
-      "last": 29354.75,
-      "change": -0.32
+      "last": 29308.5,
+      "change": -0.46
     },
     {
       "ticker": "ER2",
       "label": "Russell 2000",
-      "last": 2901.9,
-      "change": -0.49
+      "last": 2896.3,
+      "change": -0.68
     },
     {
       "ticker": "YM",
       "label": "DJIA",
-      "last": 52598.0,
-      "change": -0.5
+      "last": 52517.0,
+      "change": -0.66
     },
     {
       "ticker": "VX",
       "label": "VIX",
-      "last": 17.2,
-      "change": 2.07
+      "last": 17.4,
+      "change": 3.26
     },
     {
       "ticker": "CL",
       "label": "Crude Oil WTI",
-      "last": 103.26,
-      "change": 1.79
+      "last": 103.51,
+      "change": 2.08
     },
     {
       "ticker": "QA",
       "label": "Crude Oil Brent",
-      "last": 107.49,
-      "change": 1.7
+      "last": 107.82,
+      "change": 2.02
     },
     {
       "ticker": "NG",
       "label": "Natural Gas",
-      "last": 2.897,
-      "change": 0.03
+      "last": 2.907,
+      "change": 0.35
     },
     {
       "ticker": "HO",
       "label": "Heating Oil",
-      "last": 5.0804,
-      "change": 2.36
+      "last": 5.1016,
+      "change": 2.83
     },
     {
       "ticker": "RB",
       "label": "Gasoline RBOB",
-      "last": 3.3949,
-      "change": 2.29
+      "last": 3.3932,
+      "change": 2.32
     },
     {
       "ticker": "GC",
       "label": "Gold",
-      "last": 4329.5,
-      "change": -0.51
+      "last": 4317.6,
+      "change": -0.79
     },
     {
       "ticker": "SI",
       "label": "Silver",
-      "last": 63.485,
-      "change": -0.97
+      "last": 63.23,
+      "change": -1.42
     },
     {
       "ticker": "HG",
       "label": "Copper",
-      "last": 6.384,
-      "change": -0.34
+      "last": 6.3655,
+      "change": -0.6
     },
     {
       "ticker": "PL",
       "label": "Platinum",
-      "last": 1764.9,
-      "change": -0.83
+      "last": 1752.2,
+      "change": -1.55
     },
     {
       "ticker": "PA",
       "label": "Palladium",
-      "last": 1297.5,
-      "change": -0.78
+      "last": 1287.0,
+      "change": -1.51
     },
     {
       "ticker": "DX",
       "label": "USD",
-      "last": 99.33,
-      "change": 0.22
+      "last": 99.34,
+      "change": 0.24
     },
     {
       "ticker": "6E",
       "label": "EUR",
-      "last": 1.158,
-      "change": -0.16
+      "last": 1.15785,
+      "change": -0.17
     },
     {
       "ticker": "6J",
       "label": "JPY",
-      "last": 0.6504,
-      "change": -0.56
+      "last": 0.6503,
+      "change": -0.58
     },
     {
       "ticker": "6B",
       "label": "GBP",
-      "last": 1.3479,
-      "change": -0.27
+      "last": 1.3477,
+      "change": -0.29
     },
     {
       "ticker": "6A",
       "label": "AUD",
-      "last": 0.7113,
-      "change": -0.3
+      "last": 0.7114,
+      "change": -0.31
     },
     {
       "ticker": "6C",
       "label": "CAD",
-      "last": 0.72245,
-      "change": 0.0
+      "last": 0.72235,
+      "change": -0.01
     },
     {
       "ticker": "6S",
       "label": "CHF",
-      "last": 1.23595,
-      "change": -0.16
+      "last": 1.23555,
+      "change": -0.19
     },
     {
       "ticker": "6N",
@@ -8811,80 +8811,80 @@
     {
       "ticker": "ZN",
       "label": "10 Year Note",
-      "last": 105.75,
-      "change": -0.4
+      "last": 105.671875,
+      "change": -0.46
     },
     {
       "ticker": "ZF",
       "label": "5 Year Note",
-      "last": 104.265625,
-      "change": -0.24
+      "last": 104.21875,
+      "change": -0.29
     },
     {
       "ticker": "ZT",
       "label": "2 Year Note",
-      "last": 102.0078125,
-      "change": -0.07
+      "last": 101.9921875,
+      "change": -0.08
     },
     {
       "ticker": "ZB",
       "label": "30 Year Bond",
-      "last": 106.1875,
-      "change": -0.79
+      "last": 106.0625,
+      "change": -0.91
     },
     {
       "ticker": "NKD",
       "label": "Nikkei 225",
-      "last": 63285.0,
-      "change": 0.19
+      "last": 63105.0,
+      "change": -0.12
     },
     {
       "ticker": "DY",
       "label": "DAX",
-      "last": 25332.0,
-      "change": -0.36
+      "last": 25233.0,
+      "change": -0.8
     },
     {
       "ticker": "EX",
       "label": "Euro Stoxx 50",
-      "last": 6225.0,
-      "change": -0.54
+      "last": 6206.0,
+      "change": -0.89
     },
     {
       "ticker": "ZC",
       "label": "Corn",
-      "last": 532.5,
-      "change": -0.14
+      "last": 532.0,
+      "change": -0.23
     },
     {
       "ticker": "ZS",
       "label": "Soybeans",
-      "last": 1300.75,
-      "change": -0.25
+      "last": 1300.5,
+      "change": -0.29
     },
     {
       "ticker": "ZW",
       "label": "Wheat",
-      "last": 721.75,
-      "change": -0.03
+      "last": 720.25,
+      "change": -0.24
     },
     {
       "ticker": "ZL",
       "label": "Soybean oil",
-      "last": 70.06,
-      "change": 0.52
+      "last": 69.99,
+      "change": 0.47
     },
     {
       "ticker": "ZM",
       "label": "Soybean Meal",
-      "last": 348.4,
-      "change": -0.49
+      "last": 348.5,
+      "change": -0.43
     },
     {
       "ticker": "ZO",
       "label": "Oats",
-      "last": 397.5,
-      "change": 1.02
+      "last": 394.75,
+      "change": 1.15
     },
     {
       "ticker": "ZR",
@@ -8901,14 +8901,14 @@
     {
       "ticker": "SB",
       "label": "Sugar",
-      "last": 18.22,
-      "change": 0.33
+      "last": 18.07,
+      "change": -0.5
     },
     {
       "ticker": "CT",
       "label": "Cotton",
-      "last": 84.9,
-      "change": 0.41
+      "last": 84.7,
+      "change": 0.18
     },
     {
       "ticker": "CC",
@@ -8949,13 +8949,13 @@
     {
       "ticker": "BTC",
       "label": "Bitcoin",
-      "last": 77120.0,
-      "change": -2.49
+      "last": 76900.0,
+      "change": -2.84
     },
     {
       "ticker": "SR3",
       "label": "3 Month SOFR",
-      "last": 96.02,
+      "last": 96.0175,
       "change": -0.01
     },
     {
@@ -8973,8 +8973,8 @@
     {
       "ticker": "RS",
       "label": "Canola",
-      "last": 819.3,
-      "change": -0.47
+      "last": 818.5,
+      "change": -0.55
     },
     {
       "ticker": "NCF",
@@ -8991,8 +8991,8 @@
     {
       "ticker": "G",
       "label": "Gasoil",
-      "last": 1503.25,
-      "change": 1.85
+      "last": 1511.5,
+      "change": 2.32
     },
     {
       "ticker": "TIO",
@@ -9009,14 +9009,14 @@
     {
       "ticker": "TN",
       "label": "Ultra 10 Year Note",
-      "last": 107.171875,
-      "change": -0.54
+      "last": 107.09375,
+      "change": -0.59
     },
     {
       "ticker": "UB",
       "label": "Ultra Bond",
-      "last": 107.59375,
-      "change": -0.98
+      "last": 107.46875,
+      "change": -1.09
     },
     {
       "ticker": "UX",
@@ -9027,7 +9027,46 @@
   ],
   "ticker_news": [
     {
+      "time": "4 min",
+      "title": "Johnson Controls electrifies energy-intensive industries with new heat pumps that can triple energy efficiency and lower operating costs",
+      "url": "/news/391904/johnson-controls-electrifies-energy-intensive-industries-with-new-heat-pumps-that-can-triple-energy-efficiency-and-lower-operating-costs",
+      "source": "PR Newswire",
+      "tickers": [
+        "JCI"
+      ]
+    },
+    {
+      "time": "13 min",
+      "title": "FTSE 100 today: Stocks slip as oil surges, AI safety rift adds to unease",
+      "url": "https://finance.yahoo.com/markets/world-indices/articles/ftse-100-today-stocks-slip-075124691.html",
+      "source": "Investing.com",
+      "tickers": [
+        "LCO"
+      ]
+    },
+    {
       "time": "16 min",
+      "title": "Watch Out SKHY, MU, SNDK: Japans Kioxia Reportedly Eyes $10B US Listing To Ride AI Memory Boom",
+      "url": "https://finance.yahoo.com/m/1e97f70b-3ecf-3625-a441-e1b8e529c5f2/watch-out-skhy%2C-mu%2C-sndk%3A.html",
+      "source": "Stocktwits",
+      "tickers": [
+        "MU",
+        "SNDK",
+        "SKHY"
+      ]
+    },
+    {
+      "time": "20 min",
+      "title": "NIO Stock Rises Overnight: Nio Capital Joins Sequoia China And SMIC-Linked Backers In Robot-Sensor Bet",
+      "url": "https://finance.yahoo.com/m/63ad46a5-2f62-3c39-ad25-91434eba2a20/nio-stock-rises-overnight%3A.html",
+      "source": "Stocktwits",
+      "tickers": [
+        "NIO",
+        "BABA"
+      ]
+    },
+    {
+      "time": "34 min",
       "title": "Fluke Expands iSee Mobile Series with New TC03A Thermal Camera and ii01 Acoustic Camera",
       "url": "/news/391903/fluke-expands-isee-mobile-series-with-new-tc03a-thermal-camera-and-ii01-acoustic-camera",
       "source": "GlobeNewswire",
@@ -9036,53 +9075,53 @@
       ]
     },
     {
-      "time": "30 min",
+      "time": "49 min",
       "title": "Industrial Occupancy Jumps as Big-Box Demand Returns",
-      "url": "https://finance.yahoo.com/m/65218520-1f8a-3539-9c30-839ff3823814/industrial-occupancy-jumps-as.html",
+      "url": "https://finance.yahoo.com/real-estate/articles/industrial-occupancy-jumps-big-box-071556996.html",
       "source": "CRE Daily",
       "tickers": [
         "CIGI"
       ]
     },
     {
-      "time": "34 min",
+      "time": "52 min",
       "title": "GSK splashes up to $750m on experimental cancer therapy",
-      "url": "https://finance.yahoo.com/healthcare/articles/gsk-splashes-750m-experimental-cancer-071200893.html",
+      "url": "https://finance.yahoo.com/m/0828f07d-1656-3e33-a355-902b207b4285/gsk-splashes-up-to-%24750m-on.html",
       "source": "Proactive",
       "tickers": [
         "GSK"
       ]
     },
     {
-      "time": "37 min",
+      "time": "56 min",
       "title": "Worldline launches UCP payment handler for agentic commerce payments",
       "url": "https://finance.yahoo.com/m/235da9f2-d06f-3527-95f6-d9015f971ec1/worldline-launches-ucp.html",
-      "source": "Electronic Payments",
-      "tickers": [
-        "GOOG"
-      ]
-    },
-    {
-      "time": "37 min",
-      "title": "Worldline launches UCP payment handler for agentic commerce payments",
-      "url": "https://finance.yahoo.com/technology/ai/articles/worldline-launches-ucp-payment-handler-070835057.html",
       "source": "Electronic Payments",
       "tickers": [
         "GOOGL"
       ]
     },
     {
-      "time": "40 min",
+      "time": "56 min",
+      "title": "Worldline launches UCP payment handler for agentic commerce payments",
+      "url": "https://finance.yahoo.com/technology/ai/articles/worldline-launches-ucp-payment-handler-070835057.html",
+      "source": "Electronic Payments",
+      "tickers": [
+        "GOOG"
+      ]
+    },
+    {
+      "time": "58 min",
       "title": "Tesla, SpaceX Stocks Rise Overnight: Elon Musk Fuels Merger Speculation, Hints At Action Amid Close Collaboration",
       "url": "https://finance.yahoo.com/m/e760c2ac-fd44-3bb0-9d7d-251b160b45d2/tesla%2C-spacex-stocks-rise.html",
       "source": "Stocktwits",
       "tickers": [
-        "SPCX",
-        "TSLA"
+        "TSLA",
+        "SPCX"
       ]
     },
     {
-      "time": "42 min",
+      "time": "1 hour",
       "title": "GAP Stock Heads For Monthly Loss Despite CEO Optimism On Old Navy  Cardi B Campaign Fails To Lift Retail Mood",
       "url": "https://finance.yahoo.com/m/e10a3409-5fa4-36ec-a084-683cc9301678/gap-stock-heads-for-monthly.html",
       "source": "Stocktwits",
@@ -9091,7 +9130,7 @@
       ]
     },
     {
-      "time": "45 min",
+      "time": "1 hour",
       "title": "Kestra Medical Technologies Ltd (KMTS) (Q1 2027) Earnings Call Highlights: Revenue Jumps 60% as ...",
       "url": "https://finance.yahoo.com/healthcare/articles/kestra-medical-technologies-ltd-kmts-070026354.html",
       "source": "GuruFocus.com",
@@ -9100,7 +9139,7 @@
       ]
     },
     {
-      "time": "46 min",
+      "time": "1 hour",
       "title": "Markel International bolsters leadership in new Marine Transportation business with two key appointments",
       "url": "/news/391899/markel-international-bolsters-leadership-in-new-marine-transportation-business-with-two-key-appointments",
       "source": "PR Newswire",
@@ -9109,7 +9148,7 @@
       ]
     },
     {
-      "time": "46 min",
+      "time": "1 hour",
       "title": "Willis: Power companies must strengthen resilience as electrification drives a new wave of industrial growth",
       "url": "/news/391900/willis-power-companies-must-strengthen-resilience-as-electrification-drives-a-new-wave-of-industrial-growth",
       "source": "GlobeNewswire",
@@ -9118,7 +9157,7 @@
       ]
     },
     {
-      "time": "46 min",
+      "time": "1 hour",
       "title": "Eldorado Gold to Host Greek Asset Site Tour",
       "url": "/news/391901/eldorado-gold-to-host-greek-asset-site-tour",
       "source": "GlobeNewswire",
@@ -9127,7 +9166,7 @@
       ]
     },
     {
-      "time": "46 min",
+      "time": "1 hour",
       "title": "Iron Mountain Partners with the Opera national de Paris to Preserve and Digitize its Visual Heritage",
       "url": "/news/391902/iron-mountain-partners-with-the-opera-national-de-paris-to-preserve-and-digitize-its-visual-heritage",
       "source": "Business Wire",
@@ -9136,7 +9175,7 @@
       ]
     },
     {
-      "time": "46 min",
+      "time": "1 hour",
       "title": "Iron Mountain Partners with the Opra national de Paris to Preserve and Digitize its Visual Heritage",
       "url": "https://www.businesswire.com/news/home/20260915431263/en/",
       "source": "Business Wire",
@@ -9145,27 +9184,27 @@
       ]
     },
     {
-      "time": "49 min",
+      "time": "1 hour",
       "title": "Tampa Multifamily Nears a Pricing Power Reset",
-      "url": "https://finance.yahoo.com/m/852933bb-3ee2-3de0-9780-d9c6027ffd9e/tampa-multifamily-nears-a.html",
+      "url": "https://finance.yahoo.com/real-estate/articles/tampa-multifamily-nears-pricing-power-065651614.html",
       "source": "CRE Daily",
       "tickers": [
         "CIGI"
       ]
     },
     {
-      "time": "55 min",
+      "time": "1 hour",
       "title": "CryptoQuant Flags Volume Revival as Another Crack in Bear Market Downtrend",
-      "url": "https://finance.yahoo.com/m/83c8b8ff-1557-3960-bba6-162b774475bf/cryptoquant-flags-volume.html",
+      "url": "https://finance.yahoo.com/markets/crypto/articles/cryptoquant-flags-volume-revival-another-065028599.html",
       "source": "BeInCrypto",
       "tickers": [
         "COIN"
       ]
     },
     {
-      "time": "59 min",
+      "time": "1 hour",
       "title": "Realty Income and KKR Form 528M European JV",
-      "url": "https://finance.yahoo.com/real-estate/articles/realty-income-kkr-form-528m-064649630.html",
+      "url": "https://finance.yahoo.com/m/339922ee-a7d0-3e9a-a54c-92113f7f9f46/realty-income-and-kkr-form.html",
       "source": "CRE Daily",
       "tickers": [
         "O"
@@ -9204,23 +9243,15 @@
       "url": "https://finance.yahoo.com/m/6f149258-dafd-3f10-870a-cb16d919d980/chip-stocks-sink-on-ai.html",
       "source": "BeInCrypto",
       "tickers": [
-        "AVGO",
+        "AMD",
         "MU",
         "NVDA",
+        "AVGO",
         "SKHY"
       ]
     },
     {
-      "time": "1 hour",
-      "title": "Chip Stocks Sink on AI Slowdown Calls, But Analysts Doubt a Crash Is Near",
-      "url": "https://finance.yahoo.com/technology/ai/articles/chip-stocks-sink-ai-slowdown-060500112.html",
-      "source": "BeInCrypto",
-      "tickers": [
-        "AMD"
-      ]
-    },
-    {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "Can Viking Therapeutics Beat Big Pharma With Monthly Weight-Loss Shots? Heres The Risk CEO Says Could Derail It",
       "url": "https://finance.yahoo.com/m/7458ce0d-eed2-3d31-a5bd-c976a9e7961c/can-viking-therapeutics-beat.html",
       "source": "Stocktwits",
@@ -9229,7 +9260,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "HawkEye 360 Establishes First European Subsidiary in Luxembourg",
       "url": "/news/391883/hawkeye-360-establishes-first-european-subsidiary-in-luxembourg",
       "source": "PR Newswire",
@@ -9238,7 +9269,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "HawkEye 360 and ERA Form Strategic Collaboration to Advance Defense Surveillance Capabilities",
       "url": "/news/391884/hawkeye-360-and-era-form-strategic-collaboration-to-advance-defense-surveillance-capabilities",
       "source": "PR Newswire",
@@ -9247,7 +9278,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "HawkEye 360 and Leonardo Sign MOU to Deliver Sovereign Signals Capability",
       "url": "/news/391885/hawkeye-360-and-leonardo-sign-mou-to-deliver-sovereign-signals-capability",
       "source": "PR Newswire",
@@ -9256,7 +9287,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "Micware and ESRI Japan Enter into a Business Alliance Agreement to Build Dynamic Space",
       "url": "/news/391886/micware-and-esri-japan-enter-into-a-business-alliance-agreement-to-build-dynamic-space",
       "source": "GlobeNewswire",
@@ -9265,7 +9296,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "InterContinental Hotels Group PLC Announces Transaction in Own Shares - September 15",
       "url": "/news/391887/intercontinental-hotels-group-plc-announces-transaction-in-own-shares-september-15",
       "source": "ACCESSWIRE",
@@ -9274,7 +9305,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "TotalEnergies SE UK Regulatory Announcement: TotalEnergies Announces a Partnership with Mistral to Develop Frontier AI Models for Reservoir Exploration and Engineering",
       "url": "/news/391889/totalenergies-se-uk-regulatory-announcement-totalenergies-announces-a-partnership-with-mistral-to-develop-frontier-ai-models-for-reservoir-exploration-and-engineering",
       "source": "Business Wire",
@@ -9283,7 +9314,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "TotalEnergies SE UK Regulatory Announcement: Transactions in Own Shares",
       "url": "/news/391890/totalenergies-se-uk-regulatory-announcement-transactions-in-own-shares",
       "source": "Business Wire",
@@ -9292,7 +9323,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "TotalEnergies Announces a Partnership with Mistral to Develop Frontier AI Models for Reservoir Exploration and Engineering",
       "url": "/news/391891/totalenergies-announces-a-partnership-with-mistral-to-develop-frontier-ai-models-for-reservoir-exploration-and-engineering",
       "source": "Business Wire",
@@ -9301,7 +9332,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "TotalEnergies SE: Disclosure of Transactions in Own Shares",
       "url": "/news/391892/totalenergies-se-disclosure-of-transactions-in-own-shares",
       "source": "Business Wire",
@@ -9310,7 +9341,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "Teledyne e2v Expands 3D Imaging Portfolio with New Perciva ToF Camera",
       "url": "/news/391893/teledyne-e2v-expands-3d-imaging-portfolio-with-new-perciva-tof-camera",
       "source": "Business Wire",
@@ -9319,7 +9350,7 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "The Office Boom Is Back. Can REITs Be Far Behind?",
       "url": "https://www.barrons.com/articles/office-boom-back-reits-commercial-real-estate-ff8627a2?mod=bar_FV",
       "source": "Barrons.com",
@@ -9330,17 +9361,25 @@
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
+      "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
+      "url": "https://finance.yahoo.com/m/c11a3ffc-bee7-38ac-87b3-c7e8b05fd17f/stock-market%3A-will-s%26p-500.html",
+      "source": "Benzinga Prediction Markets",
+      "tickers": [
+        "QQQ"
+      ]
+    },
+    {
+      "time": "2 hours",
       "title": "Stock Market: Will S&P 500 Open Up or Down Today?",
       "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-p-500-open-055802015.html",
       "source": "Benzinga Prediction Markets",
       "tickers": [
-        "QQQ",
         "SPY"
       ]
     },
     {
-      "time": "1 hour",
+      "time": "2 hours",
       "title": "Cathie Woods ARK Invest Loads Up On AeroVironment Amid Fresh Defense Deals And Record Backlog",
       "url": "https://finance.yahoo.com/m/b90b689e-2d28-318f-aaf5-546de01cc44a/cathie-wood%E2%80%99s-ark-invest.html",
       "source": "Stocktwits",
@@ -9360,7 +9399,7 @@
     {
       "time": "2 hours",
       "title": "Rocket Lab Expects Iridium Deal To Double Its Size Overnight  CFO Says More Space Deals May Follow",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/rocket-lab-expects-iridium-deal-052520819.html",
+      "url": "https://finance.yahoo.com/m/77d8475d-d701-369d-b520-72535d8e2ee3/rocket-lab-expects-iridium.html",
       "source": "Stocktwits",
       "tickers": [
         "IRDM",
@@ -9387,7 +9426,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "Stock-picking, multi-manager hedge funds attract more capital from investors in 2026, BofA says",
       "url": "https://finance.yahoo.com/markets/stocks/articles/stock-picking-multi-manager-hedge-050409637.html",
       "source": "Reuters",
@@ -9396,7 +9435,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "Prime Big Deal Days is Back October 6-7, Kicking Off the Season with Two Days of Exclusive Savings for Prime Members",
       "url": "/news/391882/prime-big-deal-days-is-back-october-6-7-kicking-off-the-season-with-two-days-of-exclusive-savings-for-prime-members",
       "source": "Business Wire",
@@ -9405,7 +9444,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "Radiant Logistics Inc (RLGT) (Q4 2026) Earnings Call Highlights: Record Quarterly Revenue and ...",
       "url": "https://finance.yahoo.com/markets/stocks/articles/radiant-logistics-inc-rlgt-q4-050033884.html",
       "source": "GuruFocus.com",
@@ -9414,7 +9453,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "Coda Octopus Group Inc (CODA) (Q3 2026) Earnings Call Highlights: Defense Surge Offsets Marine ...",
       "url": "https://finance.yahoo.com/markets/stocks/articles/coda-octopus-group-inc-coda-050022278.html",
       "source": "GuruFocus.com",
@@ -9423,7 +9462,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "HIVE's BUZZ HPC Appoints Capital Markets Veteran Hubert Marleau as Independent Director to Support Canadian AI Infrastructure Expansion",
       "url": "https://www.newsfilecorp.com/release/314374/HIVEs-BUZZ-HPC-Appoints-Capital-Markets-Veteran-Hubert-Marleau-as-Independent-Director-to-Support-Canadian-AI-Infrastructure-Expansion",
       "source": "Newsfile",
@@ -9432,7 +9471,7 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "Australia's AI Regulation Debate",
       "url": "https://finance.yahoo.com/video/australias-ai-regulation-debate-045117172.html",
       "source": "Bloomberg",
@@ -9441,9 +9480,9 @@
       ]
     },
     {
-      "time": "2 hours",
+      "time": "3 hours",
       "title": "GEV Stock Plunges After New Sell Rating, But Retail Investors Smell A Buying Opportunity",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/gev-stock-plunges-sell-rating-044852357.html",
+      "url": "https://finance.yahoo.com/m/b4971fa0-14c7-3f5d-9235-50db54485c1d/gev-stock-plunges-after-new.html",
       "source": "Stocktwits",
       "tickers": [
         "GEV"
@@ -9452,7 +9491,7 @@
     {
       "time": "3 hours",
       "title": "NOK Stock Rises Overnight: Analyst Calls Nokia AI Optical Dark Horse Trading At 'Conservative Valuation'",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/nok-stock-rises-overnight-analyst-044601054.html",
+      "url": "https://finance.yahoo.com/m/b8e2fc35-f51d-380d-9873-63d976a42176/nok-stock-rises-overnight%3A.html",
       "source": "Stocktwits",
       "tickers": [
         "NOK"
@@ -9491,23 +9530,15 @@
       "url": "https://finance.yahoo.com/m/a8ff88cb-d22c-3ce9-8516-96b70f30ecfc/ai-safety-fears-drive.html",
       "source": "BeInCrypto",
       "tickers": [
-        "COST",
         "CRWD",
+        "LLY",
+        "COST",
         "KMB",
-        "LLY"
-      ]
-    },
-    {
-      "time": "3 hours",
-      "title": "AI Safety Fears Drive Investors to J&J, Costco, and CrowdStrike for Cybersecurity",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/ai-safety-fears-drive-investors-040856548.html",
-      "source": "BeInCrypto",
-      "tickers": [
         "JNJ"
       ]
     },
     {
-      "time": "3 hours",
+      "time": "4 hours",
       "title": "Tripadvisor Announces 2026 Travelers' Choice Awards: Best of the Best Restaurants, Showcasing the World's Top Eateries & Experiences",
       "url": "/news/391878/tripadvisor-announces-2026-travelers-choice-awards-best-of-the-best-restaurants-showcasing-the-worlds-top-eateries-experiences",
       "source": "PR Newswire",
@@ -9516,28 +9547,28 @@
       ]
     },
     {
-      "time": "3 hours",
+      "time": "4 hours",
       "title": "SLS, IBRX, IOVA In Focus Amid Big Pharmas Early Cancer-Asset Hunt: J&J Flags M&A Sweet Spot, Pfizer Eyes Phase 1-2 Deals",
       "url": "https://finance.yahoo.com/healthcare/articles/sls-ibrx-iova-focus-amid-040047202.html",
       "source": "Stocktwits",
       "tickers": [
-        "JNJ",
-        "PFE"
-      ]
-    },
-    {
-      "time": "3 hours",
-      "title": "SLS, IBRX, IOVA In Focus Amid Big Pharmas Early Cancer-Asset Hunt: J&J Flags M&A Sweet Spot, Pfizer Eyes Phase 1-2 Deals",
-      "url": "https://finance.yahoo.com/m/7f936c59-0bc5-37a5-a5e7-5522c7722eea/sls%2C-ibrx%2C-iova-in-focus-amid.html",
-      "source": "Stocktwits",
-      "tickers": [
-        "IBRX",
-        "IOVA",
         "SLS"
       ]
     },
     {
-      "time": "3 hours",
+      "time": "4 hours",
+      "title": "SLS, IBRX, IOVA In Focus Amid Big Pharmas Early Cancer-Asset Hunt: J&J Flags M&A Sweet Spot, Pfizer Eyes Phase 1-2 Deals",
+      "url": "https://finance.yahoo.com/m/7f936c59-0bc5-37a5-a5e7-5522c7722eea/sls%2C-ibrx%2C-iova-in-focus-amid.html",
+      "source": "Stocktwits",
+      "tickers": [
+        "IOVA",
+        "IBRX",
+        "PFE",
+        "JNJ"
+      ]
+    },
+    {
+      "time": "4 hours",
       "title": "Einride and Lidl Launch First Autonomous Cab-less Truck on German Public Road",
       "url": "/news/391879/einride-and-lidl-launch-first-autonomous-cab-less-truck-on-german-public-road",
       "source": "GlobeNewswire",
@@ -9592,15 +9623,7 @@
       "source": "Stocktwits",
       "tickers": [
         "ELMT",
-        "CRWD"
-      ]
-    },
-    {
-      "time": "Sep-14",
-      "title": "Why Did CRWD, ELMT, OKTA Stocks Surge To 52-Week Highs Today?",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/why-did-crwd-elmt-okta-031416395.html",
-      "source": "Stocktwits",
-      "tickers": [
+        "CRWD",
         "OKTA"
       ]
     },
@@ -9647,8 +9670,16 @@
       "source": "Stocktwits",
       "tickers": [
         "NOW",
+        "ADBE"
+      ]
+    },
+    {
+      "time": "Sep-14",
+      "title": "NOW, INTU, ADBE, CRM Stocks Surge As AI Pacing Debate Hammers Chips: Analyst Says Hardware Vs Software Trade Is Turned On Its Head",
+      "url": "https://finance.yahoo.com/technology/ai/articles/now-intu-adbe-crm-stocks-022524205.html",
+      "source": "Stocktwits",
+      "tickers": [
         "INTU",
-        "ADBE",
         "CRM"
       ]
     },
@@ -9835,74 +9866,41 @@
         "ADI",
         "MCHP",
         "CRUS",
-        "TXN"
-      ]
-    },
-    {
-      "time": "Sep-14",
-      "title": "XCF Global (NASDAQ:SAFX), DevvStream and Southern Energy Renewables Amend Business Combination Agreement, Increasing XCF Shareholder Ownership and Establishing Additional Capital Support; XCF Shareholder GL Also Investing $1.0 Million in XCF Through Warrants Exercisable at $2.50 Per Share",
-      "url": "/news/391868/xcf-global-nasdaq-safx-devvstream-and-southern-energy-renewables-amend-business-combination-agreement-increasing-xcf-shareholder-ownership-and-establishing-additional-capital-support-xcf-shareholder-gl-also-investing-10-million-in-xcf-through-warrants-exercisable-at-250-per-share",
-      "source": "ACCESSWIRE",
-      "tickers": [
-        "SAFX"
-      ]
-    },
-    {
-      "time": "Sep-14",
-      "title": "Bond Yields Near 5% as ETF Investors Keep Buying",
-      "url": "https://finance.yahoo.com/m/d658fd86-da31-37e3-9f7b-cd6e6f2fd283/bond-yields-near-5%25-as-etf.html",
-      "source": "etf.com",
-      "tickers": [
-        "SOXX",
-        "SMH",
-        "VOO",
-        "IVV",
-        "TLT"
-      ]
-    },
-    {
-      "time": "Sep-14",
-      "title": "Daily ETF Flows: Investors Scoop Up TLT",
-      "url": "https://finance.yahoo.com/m/31891aec-c6ff-37ef-828d-869e3a26d6f1/daily-etf-flows%3A-investors.html",
-      "source": "etf.com",
-      "tickers": [
-        "TLT"
+        "QCOM"
       ]
     }
   ],
   "major_news_tickers": [
     "NVDA",
     "SPCX",
+    "MU",
     "MSFT",
     "JNJ",
-    "AVGO",
-    "MU",
     "AMD",
+    "AVGO",
     "CRWD",
-    "CVS",
-    "LLY",
+    "TTE",
     "AMZN",
     "BAC",
+    "CVS",
     "CVX",
     "INTC",
     "AAPL",
-    "TTE",
     "KEYS",
-    "UNH",
-    "TSLA",
-    "TER",
-    "RLGT",
-    "QQQ",
-    "PLAY",
-    "PFE",
-    "ELMT",
-    "FDX",
-    "GOOG",
-    "GOOGL",
-    "HAWK",
+    "LLY",
     "HPE",
-    "HUM",
+    "HAWK",
+    "GOOGL",
+    "GOOG",
+    "FDX",
+    "ELMT",
     "ORCL",
+    "PLAY",
+    "QQQ",
+    "RLGT",
+    "SNDK",
+    "TER",
+    "TSLA",
     "XOM"
   ],
   "event_options": [
@@ -10587,5 +10585,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 211,
   "earnings_window_count": 46,
-  "overlay_at": "2026-09-15T03:46:32.145663-04:00"
+  "overlay_at": "2026-09-15T04:05:09.244453-04:00"
 }

@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T04:04:00.702187-04:00",
+  "generated_at": "2026-09-15T04:05:09.423129-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -53,7 +53,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 272101
+          "size": 272015
         },
         {
           "key": "heat_md",
@@ -62,7 +62,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 16961
+          "size": 17083
         }
       ],
       "said": "tables on disk",
@@ -182,7 +182,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 272101
+          "size": 272015
         },
         {
           "key": "parsed",
@@ -965,6 +965,31 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-15\n**Generated:** 2026-09-15T04:04:00.548424-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed lower as AI slowdown fears weighed on tech and chipmakers while surging oil and a near-5% 10-year yield sharpened focus on this week\u2019s FOMC meeting\n**Prior close:** SPX -0.48%  Nasdaq -0.56%  Dow -0.29%\n**SPX:** -0.48%  **Nasdaq:** -0.56%  **Dow:** -0.29%\n**Oil:** Brent crude $105.0\n**CPI/Fed:** 90.0% hike (90% chance of a 25-basis-point rate hike)\n**Leaders:** NFLX, ZS, RBRK, S, PANW, CRWD, GLW, COHR, TER, NVDA, BAC, PLAY, RLGT\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-15\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T04:05:09.288863-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-15_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 272015,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-15_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 17446,
+          "preview": "# MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11608 names \u00b7 generated 2026-09-15T04:05:09.244453-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11608 names \u00b7 generated 2026-09-15T04:05:09.244453-04:00"
     }
   ],
   "href": {
