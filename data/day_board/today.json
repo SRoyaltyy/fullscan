@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T12:56:52.743094-04:00",
+  "generated_at": "2026-09-15T12:57:06.191030-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -105,59 +105,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T12:45:15.385844-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-09-15_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1593324,
-          "preview": "1d BUY MPC, DBX, OKTA, AVAH, S, APPN, SNAP, CRWD \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS"
-        },
-        {
-          "path": "data/stock_book/2026-09-15_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-09-15_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2371,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-09-15_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12725,
-          "preview": "2026-09-15 BUY MPC, DBX, OKTA, AVAH, S, APPN, SNAP, CRWD \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12725,
-          "preview": "2026-09-15 BUY MPC, DBX, OKTA, AVAH, S, APPN, SNAP, CRWD \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS"
-        },
-        {
-          "path": "01_daily/2026-09-15_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 83633,
-          "preview": "# Stock book \u2014 2026-09-15\n_Generated 2026-09-15T12:44:03.832024-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY MPC, DBX, OKTA, AVAH, S, APPN, SNAP, CRWD \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-15 BUY MPC, DBX, OKTA, AVAH, S, APPN, SNAP, CRWD \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS \u00b7 2026-09-15 BUY MPC, DBX, OKTA, AVAH, S, APPN, SNAP, CRWD \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS \u00b7 # Stock book \u2014 2026-09-15\n_Generated 2026-09-15T12:44:03.832024-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -437,6 +384,24 @@
         }
       ],
       "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-15\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
+    },
+    {
+      "key": "universe",
+      "title": "Universe labels",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T12:57:04.857740-04:00",
+      "files": [
+        {
+          "path": "data/universe/2026-09-15_membership.csv",
+          "ok": true,
+          "reason": "",
+          "size": 1119075,
+          "preview": "5897 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+        }
+      ],
+      "preview": "5897 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
