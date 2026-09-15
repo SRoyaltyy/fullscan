@@ -1,4 +1,4 @@
-# Improvement tracker — 2026-09-15T18:55:18-04:00
+# Improvement tracker — 2026-09-15T18:56:29-04:00
 
 Rolling direction/magnitude hit of the *shipped* prediction vs three naive baselines computed on the same graded runs (always up, always down, same direction as the previous graded session of that topic). `edge` = engine direction hit minus the best baseline over the same window. Sessions are dated by the predicted session; sectors are pooled (11 per day).
 
