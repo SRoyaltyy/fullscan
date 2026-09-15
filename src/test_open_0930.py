@@ -96,6 +96,7 @@ def test_open_0930_yml_owns_the_bell() -> None:
     assert "src.webull_exec" in yml
     assert "deploy-dashboard.yml" in yml
     assert "timeout-minutes: 90" in yml
+    assert "group: webull-paper" in yml
     assert "flatten_robust" not in yml.lower() or "does not change" in yml.lower()
 
 
@@ -107,6 +108,7 @@ def test_webull_backup_schedule_is_clock_gated() -> None:
     assert "workflow_dispatch" in yml
     assert "combo_sh_macd_5050_shared" in yml
     assert "github.event_name == 'schedule'" in yml
+    assert "group: webull-paper" in yml
 
 
 def test_tickets_install_requests() -> None:

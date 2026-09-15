@@ -111,6 +111,9 @@ jobs:
   paper:
     runs-on: ubuntu-latest
     timeout-minutes: 90
+    concurrency:
+      group: webull-paper
+      cancel-in-progress: false
     steps:
       - uses: actions/checkout@v4
         with:
