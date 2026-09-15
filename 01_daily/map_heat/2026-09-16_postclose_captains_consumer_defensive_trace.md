@@ -1,0 +1,25 @@
+# Reasoning trace — MAP POSTCLOSE captains_consumer_defensive 2026-09-16
+
+
+
+**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (11,722 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
+
+
+
+**Step 1 — Research.** The model wanted to know: *"STZ Constellation Brands news September 2026"* → got 6 results (via gnews_rss)
+
+  - Does Early Debt Payoff Change The Bull Case For Constellation Brands Stock (STZ)? - simplywall.st (https://news.google.com/rss/articles/CBMi4wFBVV95cUxNX2VUNUdObzFkb3pLVjNBbkF3MDJOQTFoOF9mbTdWaHd2YmdYbVc0OHdxSG1mQXJzRDJpRG9FQ3VZQWlxNDYzdl8zc043MnNkeGo5NU43a3kyYXQxbjJXM3pBMUlwaUkweExHa1dHaDREUmplNUZiNmozejJnUVRPX2dWR1FXT2NMTFp6UUFJWEZxdEwwQXM5d0JBMlZha0lidEVrM2tNeHJZTThVclpqd3FnUHB5OGVzWEtuOHB0SmRKc2N5cklMeEprajdrbVg4ang5UEFDQndWamZvanR3NGtsVdIB6AFBVV95cUxPbWJYMERJTHZ0V3prWmZNTEhvUjU1azRBRE14NmJCUU9RQ2syZHA1c0xOUlFZMnZuSFp3R1NhX0JjRnNIRDVsVC1TV2psdjB1T3pxTnpHSDZLWEF4QTNUUFcxOWgxRjJDOU5BcXh1d2d3T3Z3QnNrN041WmRuSURBSUZXd0lxd09ZeDRkWXpJbnV5bGd4dTZRTml0OUNqdXduNmlDTGNrWmljTEkzZzdsUk43cmN1Zkxhb1Bkam5pU1JGb0txQTdxZ0h1WDZzc3YwcUxkMFFtZXhGbU1UTmhFbWlmSVRlZzNV?oc=5)
+
+  - Constellation Brands Announces Delivery of Notice of Redemption for 4.350% Senior Notes Due 2027 - GlobeNewswire (https://news.google.com/rss/articles/CBMi-wFBVV95cUxObmxOWlpIM1RaZGxWZjVBX3p2cFhlQ3NMakZEUlAtaE9fdFVRRjVlSVVaXzM1UDd6a2lyaFVvdlpzR1MtaVM3RFRQVHhtU1NTdVRvd2NqZVVzT3g3a01NQXlubS1QZUNNNnFRRVoxMjg4SEZnaWpKTXdKZVZYaXVFSjNlZ1hiRHNZaGJZSi10ZlpxaF9VVnVFYUZYbVAyNnJEcUJiTzFsTjRSWHdhQkh2T2x2SEdEMVRGQzl2TU9fUC1iay10cmxjWXZmS3Z5dF9ZNkdkZ0l2VzFESTF0Q1FxYXRkb2xteTNwNEVRd3g0amo4YWl2c2RobnBRSQ?oc=5)
+
+  - Constellation Brands Announces Full Redemption of 4.350% Senior Notes Due 2027 - Quiver Quantitative (https://news.google.com/rss/articles/CBMiswFBVV95cUxQVmwtQ0l0aDNuUDFvbTA5SGs0QzYzaHFaTHl0eVVCMzZ1bThMUkpEQ2VHelpxMTEyX05MZDlKWUFTVE12ckdRYzRkTnZvaXA4dVBhSU84aE5CWU01SHlsS2lNZFhTQnNIUzEtMGs4NTVUQUdXM0JtcU1FcXRVV0N0WmtxcjVLMWhNaVJFZVRDZWhVaGZnSVZLMDk0VDFFb1RCaG82UjB3TXVramVLQUFhdk5XTQ?oc=5)
+
+**Step 2 — Research.** The model wanted to know: *"Molson Coors TAP news September 2026"* → got 6 results (via gnews_rss)
+
+  - Is Molson Coors Beverage (TAP) A Bargain Or Is The Upside Already Priced In? - simplywall.st (https://news.google.com/rss/articles/CBMi5AFBVV95cUxPZXVjeW8zbEswOFh5c05BSUw0bVhfbE5RWXB1Y3dXSnVFWW90SERJYUotNVBPMUNWS3RtcV9DRUJUUlV5RXVtNWg3ZjR6RDJIa0Q1TnVVUnlud1QwbGhjMGtYODlSV2JoMk1Tel9tdzkyejNSTlFtS2kwbF9uYnRkcTVLUnd2SktXdE1WbHlZNlctYUVHRWpjcU9CT0E5RHlYYndOSGUyNkppR2pMQ2hfVnpVSV9ZX3hEcGlKcENsLUNpVEZKU3VZOWYxbnVaREY5SXdidVRhQ2VIaWhGbnNxR3ZLNGPSAeoBQVVfeXFMUG9TYUF1TUd2M21kSEpEamNHTU9uUFVsc0lJUkNHQ2NsejZqY0tzOFF2RUU1bTdkRVNDbm9CTFNDUnR1aWZVbTJtWlNqam5XNFFQT2xSZWUzQi1aSnBnMVRVRE9qU3VOQlRleDA1WHRtZXlpTXVIbHpzOEk3M3M0WmlydHBBWWtaTkdNR194R1lXY0J1dXFNUlE2UFdzTFd5TmI3UHNfSGxqRnFzZTFlRWFrb3VZTVJMLWMwSEZxZmdKb0tYdERGWW9ld0tsTlZRTWVVNWVKNzhiRVdmMWtRaW1pbzkyal9vQWxR?oc=5)
+
+  - Engineers Gate Manager LP Buys 77,020 Shares of Molson Coors Beverage Company $TAP - MarketBeat (https://news.google.com/rss/articles/CBMi2AFBVV95cUxPM0wybEF3ekk4dVJYVzFBV3JZdEFVclYtbWlrbTI3Wi1fZVg4Mk1ra2JQbUplaUIzNUFxUndMWHRzMGpKWlZTblpmYnZ3YkdSNzNINU9UWWgwQ2RERWV5WVpmR1ZVS1ZtclBnTUI1VXNzN3RmVkc5dE5NLVJ1a3EzWHlJZlZiMnhXaUhZczBEQ0VlUWRvUGRUVndpRkdOdU9sbUpiaEJvZmRic3BuTFV5ZGh1RUJfcGF2OVFqTnpqRFg1VGJnLXpjdGZndUU5YUtQSzNPYWFMcWY?oc=5)
+
+  - Molson Coors stock edges lower as Jefferies trims price target to USD 44 - ad-hoc-news.de (https://news.google.com/rss/articles/CBMi0AFBVV95cUxOaTExSEFXRWhKMGxwOTZHQzBCeGFXdHl0eTU5M09Db19keFFJRV9ITjJieTBJRFlnUFhiXzRFVjlVSWtOcWgwXzcxbFIzV0FpX1FHNU9BLUg3ZjMxMWwzMFVaOE4wRFB1T1B6ekxGTlBCQ0wyRk9sWWhod05OZjJCZU51TnhZRVVwQkdfVm01ZTAtT0VxRy1YUzAycTgyMndybk9aVHpMNVNscmM5VjRtWVRrZjhOc0lRS3BzWldCdkZBMjREd1pJeEI5U0NleVc2?oc=5)
+
+**Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.
