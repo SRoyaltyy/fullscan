@@ -64,6 +64,7 @@ def test_paper_template_polls_raw_main() -> None:
     assert book_suggestions.TODAY_URL in html
     assert book_suggestions.SUG_URL in html
     assert book_suggestions.STRAT_URL in html
+    assert book_suggestions.HOLD_X_URL in html
     assert "every strategy" in html
     assert "id=\"liveBook\"" in html
     assert html.index("<h1>Paper Trading") < html.index('id="liveBook"')
@@ -72,6 +73,7 @@ def test_paper_template_polls_raw_main() -> None:
     assert book_suggestions.TODAY_URL in baked
     assert book_suggestions.SUG_URL in baked
     assert book_suggestions.STRAT_URL in baked
+    assert book_suggestions.HOLD_X_URL in baked
     assert "every strategy" in baked
     assert baked.index("<h1>Paper Trading") < baked.index('id="liveBook"')
     sleeve = (root / "dashboard" / "sleeve-merge" / "index.html").read_text(
@@ -80,8 +82,10 @@ def test_paper_template_polls_raw_main() -> None:
         encoding="utf-8")
     assert book_suggestions.POLLER_MARK in sleeve
     assert book_suggestions.STRAT_URL in sleeve
+    assert book_suggestions.HOLD_X_URL in sleeve
     assert book_suggestions.POLLER_MARK in strat
     assert book_suggestions.STRAT_URL in strat
+    assert book_suggestions.HOLD_X_URL in strat
 
 
 def test_factor_mine_template_paints_every_strategy() -> None:
@@ -93,6 +97,9 @@ def test_factor_mine_template_paints_every_strategy() -> None:
     assert "elite_live" in html
     assert "RESEARCH" in html
     assert "liveResearch" in html
+    assert "holdXBoard" in html
+    assert "hard_red_hold_x.json" in html
+    assert html.index("function paintHoldX") < html.index("if(!stamp||!pills) return")
     assert "(A) short-only" in html
     assert "(B) dip-scoop" in html
     assert "keep_bar" in html or "KEEP bar unchanged" in html
@@ -241,6 +248,7 @@ def test_ensure_poller_injects_into_main_sleeve_page() -> None:
         text = html.read_text(encoding="utf-8")
         assert book_suggestions.POLLER_MARK in text
         assert book_suggestions.STRAT_URL in text
+        assert book_suggestions.HOLD_X_URL in text
         assert "<main>" in text
         assert text.index("<main>") < text.index('id="liveBook"')
 
@@ -260,6 +268,7 @@ def test_ensure_poller_refreshes_old_uniform_strip() -> None:
         assert book_suggestions.ensure_dashboard_poller(html) is True
         text = html.read_text(encoding="utf-8")
         assert book_suggestions.STRAT_URL in text
+        assert book_suggestions.HOLD_X_URL in text
         assert "every strategy" in text
         assert "https://example/today.json" not in text
 

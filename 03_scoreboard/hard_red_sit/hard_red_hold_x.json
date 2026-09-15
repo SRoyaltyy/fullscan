@@ -1,0 +1,3992 @@
+{
+  "generated_at": "2026-09-15T03:58:39.554648-04:00",
+  "tag": "RESEARCH",
+  "live_sit": true,
+  "live_untouched": [
+    "flatten_robust",
+    "combo_sh_macd_5050_shared"
+  ],
+  "from_date": "2026-08-13",
+  "to_date": "2026-09-14",
+  "n_sessions": 22,
+  "hard_red_n": 10,
+  "hard_red_days": [
+    "2026-08-18",
+    "2026-08-19",
+    "2026-08-24",
+    "2026-08-31",
+    "2026-09-01",
+    "2026-09-02",
+    "2026-09-08",
+    "2026-09-09",
+    "2026-09-10",
+    "2026-09-14"
+  ],
+  "hold_grid": [
+    1,
+    2,
+    3,
+    5
+  ],
+  "dip_grid": [
+    0.5,
+    1.0,
+    1.5,
+    2.0,
+    3.0
+  ],
+  "keep_bar": {
+    "min_fires": 30,
+    "win": 0.55
+  },
+  "n_strategies": 25,
+  "n_keep": 0,
+  "n_watch": 1,
+  "keeps": [],
+  "watches": [
+    {
+      "name": "union_news_pack_h1",
+      "side": "long",
+      "family": "union",
+      "n_named_days": 9,
+      "picked": {
+        "mode": "dip_scoop",
+        "hold": 3,
+        "dip_pct": 1.5,
+        "n_fires": 10,
+        "n_graded": 8,
+        "n_wins": 7,
+        "win_rate": 0.875,
+        "pnl": 17.49,
+        "verdict": "WATCH",
+        "picked_by": "best WATCH (n\u226510, win>50%)"
+      },
+      "grid": [
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 0.5,
+          "n_fires": 12,
+          "win_rate": 0.0833,
+          "pnl": -23.28,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.0,
+          "n_fires": 10,
+          "win_rate": 0.1,
+          "pnl": -10.79,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.5,
+          "n_fires": 10,
+          "win_rate": 0.3,
+          "pnl": -1.78,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 2.0,
+          "n_fires": 5,
+          "win_rate": 0.4,
+          "pnl": -3.48,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 3.0,
+          "n_fires": 2,
+          "win_rate": 0.0,
+          "pnl": -4.11,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 0.5,
+          "n_fires": 12,
+          "win_rate": 0.5833,
+          "pnl": 3.17,
+          "verdict": "WATCH"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.0,
+          "n_fires": 10,
+          "win_rate": 0.6,
+          "pnl": 7.84,
+          "verdict": "WATCH"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.5,
+          "n_fires": 10,
+          "win_rate": 0.7,
+          "pnl": 16.86,
+          "verdict": "WATCH"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 2.0,
+          "n_fires": 5,
+          "win_rate": 1.0,
+          "pnl": 24.54,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 3.0,
+          "n_fires": 2,
+          "win_rate": 1.0,
+          "pnl": 11.07,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 0.5,
+          "n_fires": 12,
+          "win_rate": 0.7,
+          "pnl": 19.23,
+          "verdict": "WATCH"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.0,
+          "n_fires": 10,
+          "win_rate": 0.625,
+          "pnl": 12.04,
+          "verdict": "WATCH"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.5,
+          "n_fires": 10,
+          "win_rate": 0.875,
+          "pnl": 17.49,
+          "verdict": "WATCH"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 2.0,
+          "n_fires": 5,
+          "win_rate": 1.0,
+          "pnl": 20.82,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 3.0,
+          "n_fires": 2,
+          "win_rate": 1.0,
+          "pnl": 2.74,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 0.5,
+          "n_fires": 12,
+          "win_rate": 0.4444,
+          "pnl": -1.35,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.0,
+          "n_fires": 10,
+          "win_rate": 0.2857,
+          "pnl": -5.0,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.5,
+          "n_fires": 10,
+          "win_rate": 0.2857,
+          "pnl": -0.24,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 2.0,
+          "n_fires": 5,
+          "win_rate": 0.5,
+          "pnl": 14.55,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 3.0,
+          "n_fires": 2,
+          "win_rate": 0.0,
+          "pnl": -1.49,
+          "verdict": "KILL"
+        }
+      ],
+      "kids": null
+    }
+  ],
+  "strategies": [
+    {
+      "name": "combo_sh_macd_5050_shared",
+      "side": "mixed",
+      "family": "combo",
+      "n_named_days": null,
+      "picked": {
+        "mode": "short_and_scoop",
+        "hold": 2,
+        "dip_pct": 1.5,
+        "n_fires": 44,
+        "n_graded": 44,
+        "n_wins": 20,
+        "win_rate": 0.4545,
+        "pnl": -11.47,
+        "verdict": "KILL",
+        "picked_by": "best available (below bar)"
+      },
+      "grid": [
+        {
+          "mode": "short_and_scoop",
+          "hold": 1,
+          "dip_pct": 0.5,
+          "n_fires": 46,
+          "win_rate": 0.2826,
+          "pnl": -13.97,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_and_scoop",
+          "hold": 1,
+          "dip_pct": 1.0,
+          "n_fires": 46,
+          "win_rate": 0.3478,
+          "pnl": -10.03,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_and_scoop",
+          "hold": 1,
+          "dip_pct": 1.5,
+          "n_fires": 44,
+          "win_rate": 0.3182,
+          "pnl": -6.64,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_and_scoop",
+          "hold": 1,
+          "dip_pct": 2.0,
+          "n_fires": 41,
+          "win_rate": 0.2927,
+          "pnl": -16.48,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_and_scoop",
+          "hold": 1,
+          "dip_pct": 3.0,
+          "n_fires": 38,
+          "win_rate": 0.3158,
+          "pnl": -13.66,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_and_scoop",
+          "hold": 2,
+          "dip_pct": 0.5,
+          "n_fires": 46,
+          "win_rate": 0.413,
+          "pnl": -18.33,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_and_scoop",
+          "hold": 2,
+          "dip_pct": 1.0,
+          "n_fires": 46,
+          "win_rate": 0.4348,
+          "pnl": -14.39,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_and_scoop",
+          "hold": 2,
+          "dip_pct": 1.5,
+          "n_fires": 44,
+          "win_rate": 0.4545,
+          "pnl": -11.47,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_and_scoop",
+          "hold": 2,
+          "dip_pct": 2.0,
+          "n_fires": 41,
+          "win_rate": 0.439,
+          "pnl": -18.72,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_and_scoop",
+          "hold": 2,
+          "dip_pct": 3.0,
+          "n_fires": 38,
+          "win_rate": 0.4211,
+          "pnl": -19.23,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_and_scoop",
+          "hold": 3,
+          "dip_pct": 0.5,
+          "n_fires": 46,
+          "win_rate": 0.3659,
+          "pnl": -24.91,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_and_scoop",
+          "hold": 3,
+          "dip_pct": 1.0,
+          "n_fires": 46,
+          "win_rate": 0.3659,
+          "pnl": -21.53,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_and_scoop",
+          "hold": 3,
+          "dip_pct": 1.5,
+          "n_fires": 44,
+          "win_rate": 0.35,
+          "pnl": -18.57,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_and_scoop",
+          "hold": 3,
+          "dip_pct": 2.0,
+          "n_fires": 41,
+          "win_rate": 0.2973,
+          "pnl": -24.93,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_and_scoop",
+          "hold": 3,
+          "dip_pct": 3.0,
+          "n_fires": 38,
+          "win_rate": 0.2647,
+          "pnl": -24.38,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_and_scoop",
+          "hold": 5,
+          "dip_pct": 0.5,
+          "n_fires": 46,
+          "win_rate": 0.375,
+          "pnl": -26.35,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_and_scoop",
+          "hold": 5,
+          "dip_pct": 1.0,
+          "n_fires": 46,
+          "win_rate": 0.375,
+          "pnl": -23.72,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_and_scoop",
+          "hold": 5,
+          "dip_pct": 1.5,
+          "n_fires": 44,
+          "win_rate": 0.3548,
+          "pnl": -21.9,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_and_scoop",
+          "hold": 5,
+          "dip_pct": 2.0,
+          "n_fires": 41,
+          "win_rate": 0.3448,
+          "pnl": -21.77,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_and_scoop",
+          "hold": 5,
+          "dip_pct": 3.0,
+          "n_fires": 38,
+          "win_rate": 0.2963,
+          "pnl": -21.05,
+          "verdict": "KILL"
+        }
+      ],
+      "kids": [
+        {
+          "name": "short_news_r_macd_h3",
+          "side": "short",
+          "picked": {
+            "mode": "short_only",
+            "hold": 2,
+            "dip_pct": null,
+            "n_fires": 14,
+            "n_graded": 14,
+            "n_wins": 6,
+            "win_rate": 0.4286,
+            "pnl": -4.0,
+            "verdict": "KILL",
+            "picked_by": "best available (below bar)"
+          }
+        },
+        {
+          "name": "union_hot_n4_h1",
+          "side": "long",
+          "picked": {
+            "mode": "dip_scoop",
+            "hold": 2,
+            "dip_pct": 1.5,
+            "n_fires": 30,
+            "n_graded": 30,
+            "n_wins": 14,
+            "win_rate": 0.4667,
+            "pnl": -7.47,
+            "verdict": "KILL",
+            "picked_by": "best available (below bar)"
+          }
+        }
+      ]
+    },
+    {
+      "name": "flatten_io",
+      "side": "long",
+      "family": "flatten",
+      "n_named_days": 7,
+      "picked": {
+        "mode": "dip_scoop",
+        "hold": 3,
+        "dip_pct": 3.0,
+        "n_fires": 8,
+        "n_graded": 8,
+        "n_wins": 4,
+        "win_rate": 0.5,
+        "pnl": -1.81,
+        "verdict": "KILL",
+        "picked_by": "best available (below bar)"
+      },
+      "grid": [
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 0.5,
+          "n_fires": 34,
+          "win_rate": 0.0588,
+          "pnl": -31.97,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.0,
+          "n_fires": 29,
+          "win_rate": 0.0,
+          "pnl": -24.1,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.5,
+          "n_fires": 23,
+          "win_rate": 0.0435,
+          "pnl": -15.53,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 2.0,
+          "n_fires": 15,
+          "win_rate": 0.0667,
+          "pnl": -9.68,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 3.0,
+          "n_fires": 8,
+          "win_rate": 0.125,
+          "pnl": -3.99,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 0.5,
+          "n_fires": 34,
+          "win_rate": 0.2647,
+          "pnl": -24.63,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.0,
+          "n_fires": 29,
+          "win_rate": 0.3448,
+          "pnl": -18.64,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.5,
+          "n_fires": 23,
+          "win_rate": 0.3478,
+          "pnl": -10.46,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 2.0,
+          "n_fires": 15,
+          "win_rate": 0.3333,
+          "pnl": -7.1,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 3.0,
+          "n_fires": 8,
+          "win_rate": 0.5,
+          "pnl": -3.43,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 0.5,
+          "n_fires": 34,
+          "win_rate": 0.3235,
+          "pnl": -17.09,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.0,
+          "n_fires": 29,
+          "win_rate": 0.4483,
+          "pnl": -14.15,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.5,
+          "n_fires": 23,
+          "win_rate": 0.4348,
+          "pnl": -4.35,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 2.0,
+          "n_fires": 15,
+          "win_rate": 0.4,
+          "pnl": -3.2,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 3.0,
+          "n_fires": 8,
+          "win_rate": 0.5,
+          "pnl": -1.81,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 0.5,
+          "n_fires": 34,
+          "win_rate": 0.1562,
+          "pnl": -34.4,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.0,
+          "n_fires": 29,
+          "win_rate": 0.1481,
+          "pnl": -29.01,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.5,
+          "n_fires": 23,
+          "win_rate": 0.2381,
+          "pnl": -8.94,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 2.0,
+          "n_fires": 15,
+          "win_rate": 0.2857,
+          "pnl": -5.03,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 3.0,
+          "n_fires": 8,
+          "win_rate": 0.1429,
+          "pnl": -2.37,
+          "verdict": "KILL"
+        }
+      ],
+      "kids": null
+    },
+    {
+      "name": "short_news_r_macd_h3",
+      "side": "short",
+      "family": "union",
+      "n_named_days": 7,
+      "picked": {
+        "mode": "short_only",
+        "hold": 2,
+        "dip_pct": null,
+        "n_fires": 14,
+        "n_graded": 14,
+        "n_wins": 6,
+        "win_rate": 0.4286,
+        "pnl": -4.0,
+        "verdict": "KILL",
+        "picked_by": "best available (below bar)"
+      },
+      "grid": [
+        {
+          "mode": "short_only",
+          "hold": 1,
+          "dip_pct": null,
+          "n_fires": 14,
+          "win_rate": 0.2143,
+          "pnl": -3.11,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_only",
+          "hold": 2,
+          "dip_pct": null,
+          "n_fires": 14,
+          "win_rate": 0.4286,
+          "pnl": -4.0,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_only",
+          "hold": 3,
+          "dip_pct": null,
+          "n_fires": 14,
+          "win_rate": 0.3077,
+          "pnl": -2.51,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_only",
+          "hold": 5,
+          "dip_pct": null,
+          "n_fires": 14,
+          "win_rate": 0.2,
+          "pnl": -0.79,
+          "verdict": "KILL"
+        }
+      ],
+      "kids": null
+    },
+    {
+      "name": "union_hot_n4_h1",
+      "side": "long",
+      "family": "union",
+      "n_named_days": 10,
+      "picked": {
+        "mode": "dip_scoop",
+        "hold": 2,
+        "dip_pct": 1.5,
+        "n_fires": 30,
+        "n_graded": 30,
+        "n_wins": 14,
+        "win_rate": 0.4667,
+        "pnl": -7.47,
+        "verdict": "KILL",
+        "picked_by": "best available (below bar)"
+      },
+      "grid": [
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 0.5,
+          "n_fires": 32,
+          "win_rate": 0.3125,
+          "pnl": -10.86,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.0,
+          "n_fires": 32,
+          "win_rate": 0.4062,
+          "pnl": -6.92,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.5,
+          "n_fires": 30,
+          "win_rate": 0.3667,
+          "pnl": -3.53,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 2.0,
+          "n_fires": 27,
+          "win_rate": 0.3333,
+          "pnl": -13.36,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 3.0,
+          "n_fires": 24,
+          "win_rate": 0.375,
+          "pnl": -10.54,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 0.5,
+          "n_fires": 32,
+          "win_rate": 0.4062,
+          "pnl": -14.32,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.0,
+          "n_fires": 32,
+          "win_rate": 0.4375,
+          "pnl": -10.38,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.5,
+          "n_fires": 30,
+          "win_rate": 0.4667,
+          "pnl": -7.47,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 2.0,
+          "n_fires": 27,
+          "win_rate": 0.4444,
+          "pnl": -14.72,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 3.0,
+          "n_fires": 24,
+          "win_rate": 0.4167,
+          "pnl": -15.23,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 0.5,
+          "n_fires": 32,
+          "win_rate": 0.3929,
+          "pnl": -22.39,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.0,
+          "n_fires": 32,
+          "win_rate": 0.3929,
+          "pnl": -19.02,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.5,
+          "n_fires": 30,
+          "win_rate": 0.3704,
+          "pnl": -16.06,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 2.0,
+          "n_fires": 27,
+          "win_rate": 0.2917,
+          "pnl": -22.42,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 3.0,
+          "n_fires": 24,
+          "win_rate": 0.2381,
+          "pnl": -21.86,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 0.5,
+          "n_fires": 32,
+          "win_rate": 0.4545,
+          "pnl": -25.56,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.0,
+          "n_fires": 32,
+          "win_rate": 0.4545,
+          "pnl": -22.92,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.5,
+          "n_fires": 30,
+          "win_rate": 0.4286,
+          "pnl": -21.1,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 2.0,
+          "n_fires": 27,
+          "win_rate": 0.4211,
+          "pnl": -20.97,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 3.0,
+          "n_fires": 24,
+          "win_rate": 0.3529,
+          "pnl": -20.25,
+          "verdict": "KILL"
+        }
+      ],
+      "kids": null
+    },
+    {
+      "name": "short_news_r_h3",
+      "side": "short",
+      "family": "union",
+      "n_named_days": 8,
+      "picked": {
+        "mode": "short_only",
+        "hold": 2,
+        "dip_pct": null,
+        "n_fires": 19,
+        "n_graded": 19,
+        "n_wins": 6,
+        "win_rate": 0.3158,
+        "pnl": -9.17,
+        "verdict": "KILL",
+        "picked_by": "best available (below bar)"
+      },
+      "grid": [
+        {
+          "mode": "short_only",
+          "hold": 1,
+          "dip_pct": null,
+          "n_fires": 19,
+          "win_rate": 0.2105,
+          "pnl": -8.42,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_only",
+          "hold": 2,
+          "dip_pct": null,
+          "n_fires": 19,
+          "win_rate": 0.3158,
+          "pnl": -9.17,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_only",
+          "hold": 3,
+          "dip_pct": null,
+          "n_fires": 19,
+          "win_rate": 0.2222,
+          "pnl": -8.64,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_only",
+          "hold": 5,
+          "dip_pct": null,
+          "n_fires": 19,
+          "win_rate": 0.1429,
+          "pnl": -4.74,
+          "verdict": "KILL"
+        }
+      ],
+      "kids": null
+    },
+    {
+      "name": "short_news_or_h3",
+      "side": "short",
+      "family": "union",
+      "n_named_days": 8,
+      "picked": {
+        "mode": "short_only",
+        "hold": 2,
+        "dip_pct": null,
+        "n_fires": 19,
+        "n_graded": 19,
+        "n_wins": 6,
+        "win_rate": 0.3158,
+        "pnl": -9.17,
+        "verdict": "KILL",
+        "picked_by": "best available (below bar)"
+      },
+      "grid": [
+        {
+          "mode": "short_only",
+          "hold": 1,
+          "dip_pct": null,
+          "n_fires": 19,
+          "win_rate": 0.2105,
+          "pnl": -8.42,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_only",
+          "hold": 2,
+          "dip_pct": null,
+          "n_fires": 19,
+          "win_rate": 0.3158,
+          "pnl": -9.17,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_only",
+          "hold": 3,
+          "dip_pct": null,
+          "n_fires": 19,
+          "win_rate": 0.2222,
+          "pnl": -8.64,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_only",
+          "hold": 5,
+          "dip_pct": null,
+          "n_fires": 19,
+          "win_rate": 0.1429,
+          "pnl": -4.74,
+          "verdict": "KILL"
+        }
+      ],
+      "kids": null
+    },
+    {
+      "name": "short_alarm_h3",
+      "side": "short",
+      "family": "union",
+      "n_named_days": 10,
+      "picked": {
+        "mode": "short_only",
+        "hold": 5,
+        "dip_pct": null,
+        "n_fires": 66,
+        "n_graded": 44,
+        "n_wins": 16,
+        "win_rate": 0.3636,
+        "pnl": 391.04,
+        "verdict": "KILL",
+        "picked_by": "best available (below bar)"
+      },
+      "grid": [
+        {
+          "mode": "short_only",
+          "hold": 1,
+          "dip_pct": null,
+          "n_fires": 66,
+          "win_rate": 0.2576,
+          "pnl": 73.42,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_only",
+          "hold": 2,
+          "dip_pct": null,
+          "n_fires": 66,
+          "win_rate": 0.3636,
+          "pnl": 239.21,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_only",
+          "hold": 3,
+          "dip_pct": null,
+          "n_fires": 66,
+          "win_rate": 0.35,
+          "pnl": 136.71,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_only",
+          "hold": 5,
+          "dip_pct": null,
+          "n_fires": 66,
+          "win_rate": 0.3636,
+          "pnl": 391.04,
+          "verdict": "KILL"
+        }
+      ],
+      "kids": null
+    },
+    {
+      "name": "short_rsi_ob_h3",
+      "side": "short",
+      "family": "union",
+      "n_named_days": 10,
+      "picked": {
+        "mode": "short_only",
+        "hold": 3,
+        "dip_pct": null,
+        "n_fires": 69,
+        "n_graded": 61,
+        "n_wins": 20,
+        "win_rate": 0.3279,
+        "pnl": -70.36,
+        "verdict": "KILL",
+        "picked_by": "best available (below bar)"
+      },
+      "grid": [
+        {
+          "mode": "short_only",
+          "hold": 1,
+          "dip_pct": null,
+          "n_fires": 69,
+          "win_rate": 0.2029,
+          "pnl": -66.39,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_only",
+          "hold": 2,
+          "dip_pct": null,
+          "n_fires": 69,
+          "win_rate": 0.2754,
+          "pnl": -46.23,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_only",
+          "hold": 3,
+          "dip_pct": null,
+          "n_fires": 69,
+          "win_rate": 0.3279,
+          "pnl": -70.36,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_only",
+          "hold": 5,
+          "dip_pct": null,
+          "n_fires": 69,
+          "win_rate": 0.2083,
+          "pnl": -45.36,
+          "verdict": "KILL"
+        }
+      ],
+      "kids": null
+    },
+    {
+      "name": "short_macd_dn_h3",
+      "side": "short",
+      "family": "union",
+      "n_named_days": 10,
+      "picked": {
+        "mode": "short_only",
+        "hold": 5,
+        "dip_pct": null,
+        "n_fires": 66,
+        "n_graded": 44,
+        "n_wins": 15,
+        "win_rate": 0.3409,
+        "pnl": -3.93,
+        "verdict": "KILL",
+        "picked_by": "best available (below bar)"
+      },
+      "grid": [
+        {
+          "mode": "short_only",
+          "hold": 1,
+          "dip_pct": null,
+          "n_fires": 66,
+          "win_rate": 0.1364,
+          "pnl": -116.18,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_only",
+          "hold": 2,
+          "dip_pct": null,
+          "n_fires": 66,
+          "win_rate": 0.3182,
+          "pnl": -72.64,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_only",
+          "hold": 3,
+          "dip_pct": null,
+          "n_fires": 66,
+          "win_rate": 0.3,
+          "pnl": -10.27,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_only",
+          "hold": 5,
+          "dip_pct": null,
+          "n_fires": 66,
+          "win_rate": 0.3409,
+          "pnl": -3.93,
+          "verdict": "KILL"
+        }
+      ],
+      "kids": null
+    },
+    {
+      "name": "short_last_red_h3",
+      "side": "short",
+      "family": "union",
+      "n_named_days": 10,
+      "picked": {
+        "mode": "short_only",
+        "hold": 5,
+        "dip_pct": null,
+        "n_fires": 71,
+        "n_graded": 48,
+        "n_wins": 16,
+        "win_rate": 0.3333,
+        "pnl": -8.8,
+        "verdict": "KILL",
+        "picked_by": "best available (below bar)"
+      },
+      "grid": [
+        {
+          "mode": "short_only",
+          "hold": 1,
+          "dip_pct": null,
+          "n_fires": 71,
+          "win_rate": 0.1831,
+          "pnl": -88.21,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_only",
+          "hold": 2,
+          "dip_pct": null,
+          "n_fires": 71,
+          "win_rate": 0.2394,
+          "pnl": -74.0,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_only",
+          "hold": 3,
+          "dip_pct": null,
+          "n_fires": 71,
+          "win_rate": 0.2656,
+          "pnl": -27.57,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_only",
+          "hold": 5,
+          "dip_pct": null,
+          "n_fires": 71,
+          "win_rate": 0.3333,
+          "pnl": -8.8,
+          "verdict": "KILL"
+        }
+      ],
+      "kids": null
+    },
+    {
+      "name": "short_extended_h3",
+      "side": "short",
+      "family": "union",
+      "n_named_days": 10,
+      "picked": {
+        "mode": "short_only",
+        "hold": 2,
+        "dip_pct": null,
+        "n_fires": 65,
+        "n_graded": 65,
+        "n_wins": 30,
+        "win_rate": 0.4615,
+        "pnl": 126.4,
+        "verdict": "KILL",
+        "picked_by": "best available (below bar)"
+      },
+      "grid": [
+        {
+          "mode": "short_only",
+          "hold": 1,
+          "dip_pct": null,
+          "n_fires": 65,
+          "win_rate": 0.4308,
+          "pnl": 32.19,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_only",
+          "hold": 2,
+          "dip_pct": null,
+          "n_fires": 65,
+          "win_rate": 0.4615,
+          "pnl": 126.4,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_only",
+          "hold": 3,
+          "dip_pct": null,
+          "n_fires": 65,
+          "win_rate": 0.4035,
+          "pnl": 86.19,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_only",
+          "hold": 5,
+          "dip_pct": null,
+          "n_fires": 65,
+          "win_rate": 0.3902,
+          "pnl": 196.91,
+          "verdict": "KILL"
+        }
+      ],
+      "kids": null
+    },
+    {
+      "name": "short_r_down_h3",
+      "side": "short",
+      "family": "union",
+      "n_named_days": 0,
+      "picked": null,
+      "grid": [
+        {
+          "mode": "short_only",
+          "hold": 1,
+          "dip_pct": null,
+          "n_fires": 0,
+          "win_rate": null,
+          "pnl": 0,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_only",
+          "hold": 2,
+          "dip_pct": null,
+          "n_fires": 0,
+          "win_rate": null,
+          "pnl": 0,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_only",
+          "hold": 3,
+          "dip_pct": null,
+          "n_fires": 0,
+          "win_rate": null,
+          "pnl": 0,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "short_only",
+          "hold": 5,
+          "dip_pct": null,
+          "n_fires": 0,
+          "win_rate": null,
+          "pnl": 0,
+          "verdict": "KILL"
+        }
+      ],
+      "kids": null
+    },
+    {
+      "name": "union_e_fresh_h3",
+      "side": "long",
+      "family": "union",
+      "n_named_days": 9,
+      "picked": {
+        "mode": "dip_scoop",
+        "hold": 1,
+        "dip_pct": 3.0,
+        "n_fires": 27,
+        "n_graded": 27,
+        "n_wins": 8,
+        "win_rate": 0.2963,
+        "pnl": -77.22,
+        "verdict": "KILL",
+        "picked_by": "best available (below bar)"
+      },
+      "grid": [
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 0.5,
+          "n_fires": 40,
+          "win_rate": 0.125,
+          "pnl": -143.18,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.0,
+          "n_fires": 38,
+          "win_rate": 0.2105,
+          "pnl": -125.14,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.5,
+          "n_fires": 38,
+          "win_rate": 0.2368,
+          "pnl": -107.2,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 2.0,
+          "n_fires": 33,
+          "win_rate": 0.1818,
+          "pnl": -99.91,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 3.0,
+          "n_fires": 27,
+          "win_rate": 0.2963,
+          "pnl": -77.22,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 0.5,
+          "n_fires": 40,
+          "win_rate": 0.25,
+          "pnl": -151.69,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.0,
+          "n_fires": 38,
+          "win_rate": 0.2368,
+          "pnl": -133.29,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.5,
+          "n_fires": 38,
+          "win_rate": 0.2632,
+          "pnl": -115.34,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 2.0,
+          "n_fires": 33,
+          "win_rate": 0.2121,
+          "pnl": -116.81,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 3.0,
+          "n_fires": 27,
+          "win_rate": 0.1852,
+          "pnl": -101.75,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 0.5,
+          "n_fires": 40,
+          "win_rate": 0.1212,
+          "pnl": -175.46,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.0,
+          "n_fires": 38,
+          "win_rate": 0.1875,
+          "pnl": -158.66,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.5,
+          "n_fires": 38,
+          "win_rate": 0.2188,
+          "pnl": -142.5,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 2.0,
+          "n_fires": 33,
+          "win_rate": 0.1429,
+          "pnl": -135.92,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 3.0,
+          "n_fires": 27,
+          "win_rate": 0.1304,
+          "pnl": -110.43,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 0.5,
+          "n_fires": 40,
+          "win_rate": 0.16,
+          "pnl": -194.93,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.0,
+          "n_fires": 38,
+          "win_rate": 0.2083,
+          "pnl": -178.88,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.5,
+          "n_fires": 38,
+          "win_rate": 0.25,
+          "pnl": -164.05,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 2.0,
+          "n_fires": 33,
+          "win_rate": 0.1818,
+          "pnl": -154.25,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 3.0,
+          "n_fires": 27,
+          "win_rate": 0.1667,
+          "pnl": -120.15,
+          "verdict": "KILL"
+        }
+      ],
+      "kids": null
+    },
+    {
+      "name": "union_h3",
+      "side": "long",
+      "family": "union",
+      "n_named_days": 10,
+      "picked": {
+        "mode": "dip_scoop",
+        "hold": 5,
+        "dip_pct": 2.0,
+        "n_fires": 31,
+        "n_graded": 17,
+        "n_wins": 8,
+        "win_rate": 0.4706,
+        "pnl": -2.71,
+        "verdict": "KILL",
+        "picked_by": "best available (below bar)"
+      },
+      "grid": [
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 0.5,
+          "n_fires": 59,
+          "win_rate": 0.1186,
+          "pnl": -31.21,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.0,
+          "n_fires": 52,
+          "win_rate": 0.0769,
+          "pnl": -22.58,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.5,
+          "n_fires": 41,
+          "win_rate": 0.122,
+          "pnl": -12.66,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 2.0,
+          "n_fires": 31,
+          "win_rate": 0.1613,
+          "pnl": -5.83,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 3.0,
+          "n_fires": 20,
+          "win_rate": 0.15,
+          "pnl": -4.88,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 0.5,
+          "n_fires": 59,
+          "win_rate": 0.2373,
+          "pnl": -14.94,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.0,
+          "n_fires": 52,
+          "win_rate": 0.2692,
+          "pnl": -12.52,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.5,
+          "n_fires": 41,
+          "win_rate": 0.2927,
+          "pnl": -2.78,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 2.0,
+          "n_fires": 31,
+          "win_rate": 0.3226,
+          "pnl": 1.52,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 3.0,
+          "n_fires": 20,
+          "win_rate": 0.35,
+          "pnl": -3.51,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 0.5,
+          "n_fires": 59,
+          "win_rate": 0.2692,
+          "pnl": -20.05,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.0,
+          "n_fires": 52,
+          "win_rate": 0.3617,
+          "pnl": -16.77,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.5,
+          "n_fires": 41,
+          "win_rate": 0.3611,
+          "pnl": -4.33,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 2.0,
+          "n_fires": 31,
+          "win_rate": 0.3462,
+          "pnl": -2.16,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 3.0,
+          "n_fires": 20,
+          "win_rate": 0.4375,
+          "pnl": -1.51,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 0.5,
+          "n_fires": 59,
+          "win_rate": 0.2105,
+          "pnl": -35.26,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.0,
+          "n_fires": 52,
+          "win_rate": 0.2121,
+          "pnl": -30.03,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.5,
+          "n_fires": 41,
+          "win_rate": 0.3333,
+          "pnl": -6.3,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 2.0,
+          "n_fires": 31,
+          "win_rate": 0.4706,
+          "pnl": -2.71,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 3.0,
+          "n_fires": 20,
+          "win_rate": 0.3333,
+          "pnl": -0.96,
+          "verdict": "KILL"
+        }
+      ],
+      "kids": null
+    },
+    {
+      "name": "flatten_h3",
+      "side": "long",
+      "family": "flatten",
+      "n_named_days": 10,
+      "picked": {
+        "mode": "dip_scoop",
+        "hold": 3,
+        "dip_pct": 3.0,
+        "n_fires": 12,
+        "n_graded": 9,
+        "n_wins": 4,
+        "win_rate": 0.4444,
+        "pnl": -2.71,
+        "verdict": "KILL",
+        "picked_by": "best available (below bar)"
+      },
+      "grid": [
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 0.5,
+          "n_fires": 42,
+          "win_rate": 0.0476,
+          "pnl": -33.37,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.0,
+          "n_fires": 37,
+          "win_rate": 0.0,
+          "pnl": -25.36,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.5,
+          "n_fires": 29,
+          "win_rate": 0.0345,
+          "pnl": -16.59,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 2.0,
+          "n_fires": 19,
+          "win_rate": 0.0526,
+          "pnl": -10.44,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 3.0,
+          "n_fires": 12,
+          "win_rate": 0.0833,
+          "pnl": -6.06,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 0.5,
+          "n_fires": 42,
+          "win_rate": 0.2143,
+          "pnl": -26.01,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.0,
+          "n_fires": 37,
+          "win_rate": 0.2703,
+          "pnl": -19.87,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.5,
+          "n_fires": 29,
+          "win_rate": 0.2759,
+          "pnl": -11.64,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 2.0,
+          "n_fires": 19,
+          "win_rate": 0.2632,
+          "pnl": -8.02,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 3.0,
+          "n_fires": 12,
+          "win_rate": 0.3333,
+          "pnl": -5.39,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 0.5,
+          "n_fires": 42,
+          "win_rate": 0.2821,
+          "pnl": -17.02,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.0,
+          "n_fires": 37,
+          "win_rate": 0.3824,
+          "pnl": -14.17,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.5,
+          "n_fires": 29,
+          "win_rate": 0.3846,
+          "pnl": -4.26,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 2.0,
+          "n_fires": 19,
+          "win_rate": 0.375,
+          "pnl": -2.36,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 3.0,
+          "n_fires": 12,
+          "win_rate": 0.4444,
+          "pnl": -2.71,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 0.5,
+          "n_fires": 42,
+          "win_rate": 0.1613,
+          "pnl": -32.73,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.0,
+          "n_fires": 37,
+          "win_rate": 0.1538,
+          "pnl": -27.82,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.5,
+          "n_fires": 29,
+          "win_rate": 0.25,
+          "pnl": -8.25,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 2.0,
+          "n_fires": 19,
+          "win_rate": 0.3077,
+          "pnl": -4.84,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 3.0,
+          "n_fires": 12,
+          "win_rate": 0.1429,
+          "pnl": -2.37,
+          "verdict": "KILL"
+        }
+      ],
+      "kids": null
+    },
+    {
+      "name": "flatten_h5",
+      "side": "long",
+      "family": "flatten",
+      "n_named_days": 10,
+      "picked": {
+        "mode": "dip_scoop",
+        "hold": 3,
+        "dip_pct": 3.0,
+        "n_fires": 12,
+        "n_graded": 9,
+        "n_wins": 4,
+        "win_rate": 0.4444,
+        "pnl": -2.71,
+        "verdict": "KILL",
+        "picked_by": "best available (below bar)"
+      },
+      "grid": [
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 0.5,
+          "n_fires": 42,
+          "win_rate": 0.0476,
+          "pnl": -33.37,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.0,
+          "n_fires": 37,
+          "win_rate": 0.0,
+          "pnl": -25.36,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.5,
+          "n_fires": 29,
+          "win_rate": 0.0345,
+          "pnl": -16.59,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 2.0,
+          "n_fires": 19,
+          "win_rate": 0.0526,
+          "pnl": -10.44,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 3.0,
+          "n_fires": 12,
+          "win_rate": 0.0833,
+          "pnl": -6.06,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 0.5,
+          "n_fires": 42,
+          "win_rate": 0.2143,
+          "pnl": -26.01,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.0,
+          "n_fires": 37,
+          "win_rate": 0.2703,
+          "pnl": -19.87,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.5,
+          "n_fires": 29,
+          "win_rate": 0.2759,
+          "pnl": -11.64,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 2.0,
+          "n_fires": 19,
+          "win_rate": 0.2632,
+          "pnl": -8.02,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 3.0,
+          "n_fires": 12,
+          "win_rate": 0.3333,
+          "pnl": -5.39,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 0.5,
+          "n_fires": 42,
+          "win_rate": 0.2821,
+          "pnl": -17.02,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.0,
+          "n_fires": 37,
+          "win_rate": 0.3824,
+          "pnl": -14.17,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.5,
+          "n_fires": 29,
+          "win_rate": 0.3846,
+          "pnl": -4.26,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 2.0,
+          "n_fires": 19,
+          "win_rate": 0.375,
+          "pnl": -2.36,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 3.0,
+          "n_fires": 12,
+          "win_rate": 0.4444,
+          "pnl": -2.71,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 0.5,
+          "n_fires": 42,
+          "win_rate": 0.1613,
+          "pnl": -32.73,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.0,
+          "n_fires": 37,
+          "win_rate": 0.1538,
+          "pnl": -27.82,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.5,
+          "n_fires": 29,
+          "win_rate": 0.25,
+          "pnl": -8.25,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 2.0,
+          "n_fires": 19,
+          "win_rate": 0.3077,
+          "pnl": -4.84,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 3.0,
+          "n_fires": 12,
+          "win_rate": 0.1429,
+          "pnl": -2.37,
+          "verdict": "KILL"
+        }
+      ],
+      "kids": null
+    },
+    {
+      "name": "flatten_live_h1",
+      "side": "long",
+      "family": "flatten",
+      "n_named_days": 0,
+      "picked": null,
+      "grid": [
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 0.5,
+          "n_fires": 0,
+          "win_rate": null,
+          "pnl": 0,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.0,
+          "n_fires": 0,
+          "win_rate": null,
+          "pnl": 0,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.5,
+          "n_fires": 0,
+          "win_rate": null,
+          "pnl": 0,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 2.0,
+          "n_fires": 0,
+          "win_rate": null,
+          "pnl": 0,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 3.0,
+          "n_fires": 0,
+          "win_rate": null,
+          "pnl": 0,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 0.5,
+          "n_fires": 0,
+          "win_rate": null,
+          "pnl": 0,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.0,
+          "n_fires": 0,
+          "win_rate": null,
+          "pnl": 0,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.5,
+          "n_fires": 0,
+          "win_rate": null,
+          "pnl": 0,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 2.0,
+          "n_fires": 0,
+          "win_rate": null,
+          "pnl": 0,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 3.0,
+          "n_fires": 0,
+          "win_rate": null,
+          "pnl": 0,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 0.5,
+          "n_fires": 0,
+          "win_rate": null,
+          "pnl": 0,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.0,
+          "n_fires": 0,
+          "win_rate": null,
+          "pnl": 0,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.5,
+          "n_fires": 0,
+          "win_rate": null,
+          "pnl": 0,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 2.0,
+          "n_fires": 0,
+          "win_rate": null,
+          "pnl": 0,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 3.0,
+          "n_fires": 0,
+          "win_rate": null,
+          "pnl": 0,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 0.5,
+          "n_fires": 0,
+          "win_rate": null,
+          "pnl": 0,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.0,
+          "n_fires": 0,
+          "win_rate": null,
+          "pnl": 0,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.5,
+          "n_fires": 0,
+          "win_rate": null,
+          "pnl": 0,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 2.0,
+          "n_fires": 0,
+          "win_rate": null,
+          "pnl": 0,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 3.0,
+          "n_fires": 0,
+          "win_rate": null,
+          "pnl": 0,
+          "verdict": "KILL"
+        }
+      ],
+      "kids": null
+    },
+    {
+      "name": "ohlc_hot_h3",
+      "side": "long",
+      "family": "ohlc_hot",
+      "n_named_days": 10,
+      "picked": {
+        "mode": "dip_scoop",
+        "hold": 5,
+        "dip_pct": 3.0,
+        "n_fires": 36,
+        "n_graded": 27,
+        "n_wins": 11,
+        "win_rate": 0.4074,
+        "pnl": -143.58,
+        "verdict": "KILL",
+        "picked_by": "best available (below bar)"
+      },
+      "grid": [
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 0.5,
+          "n_fires": 61,
+          "win_rate": 0.2295,
+          "pnl": -135.59,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.0,
+          "n_fires": 56,
+          "win_rate": 0.2321,
+          "pnl": -111.06,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.5,
+          "n_fires": 51,
+          "win_rate": 0.1961,
+          "pnl": -87.35,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 2.0,
+          "n_fires": 42,
+          "win_rate": 0.2143,
+          "pnl": -74.98,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 3.0,
+          "n_fires": 36,
+          "win_rate": 0.1667,
+          "pnl": -57.89,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 0.5,
+          "n_fires": 61,
+          "win_rate": 0.377,
+          "pnl": -129.12,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.0,
+          "n_fires": 56,
+          "win_rate": 0.3571,
+          "pnl": -109.43,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.5,
+          "n_fires": 51,
+          "win_rate": 0.3529,
+          "pnl": -88.55,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 2.0,
+          "n_fires": 42,
+          "win_rate": 0.2857,
+          "pnl": -67.24,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 3.0,
+          "n_fires": 36,
+          "win_rate": 0.2778,
+          "pnl": -80.02,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 0.5,
+          "n_fires": 61,
+          "win_rate": 0.3704,
+          "pnl": -194.75,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.0,
+          "n_fires": 56,
+          "win_rate": 0.4,
+          "pnl": -171.6,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.5,
+          "n_fires": 51,
+          "win_rate": 0.4,
+          "pnl": -152.71,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 2.0,
+          "n_fires": 42,
+          "win_rate": 0.3333,
+          "pnl": -143.7,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 3.0,
+          "n_fires": 36,
+          "win_rate": 0.3235,
+          "pnl": -81.28,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 0.5,
+          "n_fires": 61,
+          "win_rate": 0.3333,
+          "pnl": -226.39,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.0,
+          "n_fires": 56,
+          "win_rate": 0.3947,
+          "pnl": -213.1,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.5,
+          "n_fires": 51,
+          "win_rate": 0.4,
+          "pnl": -182.86,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 2.0,
+          "n_fires": 42,
+          "win_rate": 0.3667,
+          "pnl": -168.12,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 3.0,
+          "n_fires": 36,
+          "win_rate": 0.4074,
+          "pnl": -143.58,
+          "verdict": "KILL"
+        }
+      ],
+      "kids": null
+    },
+    {
+      "name": "yday_gainer_h3",
+      "side": "long",
+      "family": "yday_gainer",
+      "n_named_days": 10,
+      "picked": {
+        "mode": "dip_scoop",
+        "hold": 5,
+        "dip_pct": 3.0,
+        "n_fires": 29,
+        "n_graded": 15,
+        "n_wins": 7,
+        "win_rate": 0.4667,
+        "pnl": -99.31,
+        "verdict": "KILL",
+        "picked_by": "best available (below bar)"
+      },
+      "grid": [
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 0.5,
+          "n_fires": 62,
+          "win_rate": 0.2742,
+          "pnl": -74.87,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.0,
+          "n_fires": 56,
+          "win_rate": 0.25,
+          "pnl": -62.96,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.5,
+          "n_fires": 48,
+          "win_rate": 0.1875,
+          "pnl": -53.75,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 2.0,
+          "n_fires": 44,
+          "win_rate": 0.1818,
+          "pnl": -42.18,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 3.0,
+          "n_fires": 29,
+          "win_rate": 0.1034,
+          "pnl": -37.19,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 0.5,
+          "n_fires": 62,
+          "win_rate": 0.3226,
+          "pnl": -90.21,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.0,
+          "n_fires": 56,
+          "win_rate": 0.3214,
+          "pnl": -82.35,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.5,
+          "n_fires": 48,
+          "win_rate": 0.3125,
+          "pnl": -71.4,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 2.0,
+          "n_fires": 44,
+          "win_rate": 0.2955,
+          "pnl": -62.3,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 3.0,
+          "n_fires": 29,
+          "win_rate": 0.3103,
+          "pnl": -51.45,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 0.5,
+          "n_fires": 62,
+          "win_rate": 0.2963,
+          "pnl": -105.07,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.0,
+          "n_fires": 56,
+          "win_rate": 0.32,
+          "pnl": -94.14,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.5,
+          "n_fires": 48,
+          "win_rate": 0.3095,
+          "pnl": -82.5,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 2.0,
+          "n_fires": 44,
+          "win_rate": 0.3158,
+          "pnl": -75.07,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 3.0,
+          "n_fires": 29,
+          "win_rate": 0.3333,
+          "pnl": -57.4,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 0.5,
+          "n_fires": 62,
+          "win_rate": 0.4211,
+          "pnl": -138.26,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.0,
+          "n_fires": 56,
+          "win_rate": 0.3889,
+          "pnl": -133.59,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.5,
+          "n_fires": 48,
+          "win_rate": 0.3793,
+          "pnl": -121.97,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 2.0,
+          "n_fires": 44,
+          "win_rate": 0.44,
+          "pnl": -118.81,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 3.0,
+          "n_fires": 29,
+          "win_rate": 0.4667,
+          "pnl": -99.31,
+          "verdict": "KILL"
+        }
+      ],
+      "kids": null
+    },
+    {
+      "name": "union_rsi_os_h3",
+      "side": "long",
+      "family": "union",
+      "n_named_days": 5,
+      "picked": {
+        "mode": "dip_scoop",
+        "hold": 5,
+        "dip_pct": 0.5,
+        "n_fires": 11,
+        "n_graded": 4,
+        "n_wins": 2,
+        "win_rate": 0.5,
+        "pnl": 0.1,
+        "verdict": "KILL",
+        "picked_by": "best available (below bar)"
+      },
+      "grid": [
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 0.5,
+          "n_fires": 11,
+          "win_rate": 0.3636,
+          "pnl": -2.89,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.0,
+          "n_fires": 9,
+          "win_rate": 0.4444,
+          "pnl": -1.47,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.5,
+          "n_fires": 8,
+          "win_rate": 0.5,
+          "pnl": -0.41,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 2.0,
+          "n_fires": 6,
+          "win_rate": 0.3333,
+          "pnl": -2.76,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 3.0,
+          "n_fires": 5,
+          "win_rate": 0.4,
+          "pnl": -2.22,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 0.5,
+          "n_fires": 11,
+          "win_rate": 0.2727,
+          "pnl": -6.37,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.0,
+          "n_fires": 9,
+          "win_rate": 0.2222,
+          "pnl": -4.45,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.5,
+          "n_fires": 8,
+          "win_rate": 0.25,
+          "pnl": -3.43,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 2.0,
+          "n_fires": 6,
+          "win_rate": 0.1667,
+          "pnl": -4.63,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 3.0,
+          "n_fires": 5,
+          "win_rate": 0.2,
+          "pnl": -3.32,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 0.5,
+          "n_fires": 11,
+          "win_rate": 0.3333,
+          "pnl": -4.12,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.0,
+          "n_fires": 9,
+          "win_rate": 0.2,
+          "pnl": -3.98,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.5,
+          "n_fires": 8,
+          "win_rate": 0.25,
+          "pnl": -3.2,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 2.0,
+          "n_fires": 6,
+          "win_rate": 0.0,
+          "pnl": -3.93,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 3.0,
+          "n_fires": 5,
+          "win_rate": 0.0,
+          "pnl": -2.49,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 0.5,
+          "n_fires": 11,
+          "win_rate": 0.5,
+          "pnl": 0.1,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.0,
+          "n_fires": 9,
+          "win_rate": 0.3333,
+          "pnl": 0.54,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.5,
+          "n_fires": 8,
+          "win_rate": 0.5,
+          "pnl": 1.02,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 2.0,
+          "n_fires": 6,
+          "win_rate": 0.0,
+          "pnl": -0.15,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 3.0,
+          "n_fires": 5,
+          "win_rate": 0.0,
+          "pnl": -0.14,
+          "verdict": "KILL"
+        }
+      ],
+      "kids": null
+    },
+    {
+      "name": "union_macd_up_h3",
+      "side": "long",
+      "family": "union",
+      "n_named_days": 10,
+      "picked": {
+        "mode": "dip_scoop",
+        "hold": 2,
+        "dip_pct": 3.0,
+        "n_fires": 28,
+        "n_graded": 28,
+        "n_wins": 11,
+        "win_rate": 0.3929,
+        "pnl": -5.21,
+        "verdict": "KILL",
+        "picked_by": "best available (below bar)"
+      },
+      "grid": [
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 0.5,
+          "n_fires": 62,
+          "win_rate": 0.2097,
+          "pnl": -39.07,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.0,
+          "n_fires": 57,
+          "win_rate": 0.193,
+          "pnl": -28.12,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.5,
+          "n_fires": 50,
+          "win_rate": 0.2,
+          "pnl": -17.0,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 2.0,
+          "n_fires": 40,
+          "win_rate": 0.225,
+          "pnl": -9.06,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 3.0,
+          "n_fires": 28,
+          "win_rate": 0.2143,
+          "pnl": -9.37,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 0.5,
+          "n_fires": 62,
+          "win_rate": 0.2581,
+          "pnl": -37.36,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.0,
+          "n_fires": 57,
+          "win_rate": 0.2982,
+          "pnl": -27.81,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.5,
+          "n_fires": 50,
+          "win_rate": 0.3,
+          "pnl": -15.92,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 2.0,
+          "n_fires": 40,
+          "win_rate": 0.3,
+          "pnl": -9.41,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 3.0,
+          "n_fires": 28,
+          "win_rate": 0.3929,
+          "pnl": -5.21,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 0.5,
+          "n_fires": 62,
+          "win_rate": 0.2727,
+          "pnl": -37.81,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.0,
+          "n_fires": 57,
+          "win_rate": 0.32,
+          "pnl": -33.79,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.5,
+          "n_fires": 50,
+          "win_rate": 0.3023,
+          "pnl": -20.03,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 2.0,
+          "n_fires": 40,
+          "win_rate": 0.2424,
+          "pnl": -15.37,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 3.0,
+          "n_fires": 28,
+          "win_rate": 0.3636,
+          "pnl": -4.13,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 0.5,
+          "n_fires": 62,
+          "win_rate": 0.3333,
+          "pnl": -52.86,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.0,
+          "n_fires": 57,
+          "win_rate": 0.3243,
+          "pnl": -47.58,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.5,
+          "n_fires": 50,
+          "win_rate": 0.2903,
+          "pnl": -24.13,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 2.0,
+          "n_fires": 40,
+          "win_rate": 0.36,
+          "pnl": -19.35,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 3.0,
+          "n_fires": 28,
+          "win_rate": 0.375,
+          "pnl": -5.36,
+          "verdict": "KILL"
+        }
+      ],
+      "kids": null
+    },
+    {
+      "name": "union_flow_in_h3",
+      "side": "long",
+      "family": "union",
+      "n_named_days": 8,
+      "picked": {
+        "mode": "dip_scoop",
+        "hold": 1,
+        "dip_pct": 3.0,
+        "n_fires": 8,
+        "n_graded": 8,
+        "n_wins": 5,
+        "win_rate": 0.625,
+        "pnl": -0.26,
+        "verdict": "KILL",
+        "picked_by": "best available (below bar)"
+      },
+      "grid": [
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 0.5,
+          "n_fires": 16,
+          "win_rate": 0.375,
+          "pnl": -6.54,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.0,
+          "n_fires": 14,
+          "win_rate": 0.4286,
+          "pnl": -4.29,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.5,
+          "n_fires": 12,
+          "win_rate": 0.4167,
+          "pnl": -2.4,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 2.0,
+          "n_fires": 9,
+          "win_rate": 0.4444,
+          "pnl": -1.34,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 3.0,
+          "n_fires": 8,
+          "win_rate": 0.625,
+          "pnl": -0.26,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 0.5,
+          "n_fires": 16,
+          "win_rate": 0.3125,
+          "pnl": -3.03,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.0,
+          "n_fires": 14,
+          "win_rate": 0.3571,
+          "pnl": -0.76,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.5,
+          "n_fires": 12,
+          "win_rate": 0.3333,
+          "pnl": 1.47,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 2.0,
+          "n_fires": 9,
+          "win_rate": 0.4444,
+          "pnl": -2.38,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 3.0,
+          "n_fires": 8,
+          "win_rate": 0.5,
+          "pnl": -0.8,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 0.5,
+          "n_fires": 16,
+          "win_rate": 0.2667,
+          "pnl": -2.74,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.0,
+          "n_fires": 14,
+          "win_rate": 0.3077,
+          "pnl": 0.05,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.5,
+          "n_fires": 12,
+          "win_rate": 0.2727,
+          "pnl": 2.32,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 2.0,
+          "n_fires": 9,
+          "win_rate": 0.25,
+          "pnl": -3.71,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 3.0,
+          "n_fires": 8,
+          "win_rate": 0.2857,
+          "pnl": -2.04,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 0.5,
+          "n_fires": 16,
+          "win_rate": 0.375,
+          "pnl": -3.76,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.0,
+          "n_fires": 14,
+          "win_rate": 0.3333,
+          "pnl": -1.53,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.5,
+          "n_fires": 12,
+          "win_rate": 0.5,
+          "pnl": -0.27,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 2.0,
+          "n_fires": 9,
+          "win_rate": 0.3333,
+          "pnl": -3.21,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 3.0,
+          "n_fires": 8,
+          "win_rate": 0.3333,
+          "pnl": -2.77,
+          "verdict": "KILL"
+        }
+      ],
+      "kids": null
+    },
+    {
+      "name": "union_news_pack_h1",
+      "side": "long",
+      "family": "union",
+      "n_named_days": 9,
+      "picked": {
+        "mode": "dip_scoop",
+        "hold": 3,
+        "dip_pct": 1.5,
+        "n_fires": 10,
+        "n_graded": 8,
+        "n_wins": 7,
+        "win_rate": 0.875,
+        "pnl": 17.49,
+        "verdict": "WATCH",
+        "picked_by": "best WATCH (n\u226510, win>50%)"
+      },
+      "grid": [
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 0.5,
+          "n_fires": 12,
+          "win_rate": 0.0833,
+          "pnl": -23.28,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.0,
+          "n_fires": 10,
+          "win_rate": 0.1,
+          "pnl": -10.79,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.5,
+          "n_fires": 10,
+          "win_rate": 0.3,
+          "pnl": -1.78,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 2.0,
+          "n_fires": 5,
+          "win_rate": 0.4,
+          "pnl": -3.48,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 3.0,
+          "n_fires": 2,
+          "win_rate": 0.0,
+          "pnl": -4.11,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 0.5,
+          "n_fires": 12,
+          "win_rate": 0.5833,
+          "pnl": 3.17,
+          "verdict": "WATCH"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.0,
+          "n_fires": 10,
+          "win_rate": 0.6,
+          "pnl": 7.84,
+          "verdict": "WATCH"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.5,
+          "n_fires": 10,
+          "win_rate": 0.7,
+          "pnl": 16.86,
+          "verdict": "WATCH"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 2.0,
+          "n_fires": 5,
+          "win_rate": 1.0,
+          "pnl": 24.54,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 3.0,
+          "n_fires": 2,
+          "win_rate": 1.0,
+          "pnl": 11.07,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 0.5,
+          "n_fires": 12,
+          "win_rate": 0.7,
+          "pnl": 19.23,
+          "verdict": "WATCH"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.0,
+          "n_fires": 10,
+          "win_rate": 0.625,
+          "pnl": 12.04,
+          "verdict": "WATCH"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.5,
+          "n_fires": 10,
+          "win_rate": 0.875,
+          "pnl": 17.49,
+          "verdict": "WATCH"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 2.0,
+          "n_fires": 5,
+          "win_rate": 1.0,
+          "pnl": 20.82,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 3.0,
+          "n_fires": 2,
+          "win_rate": 1.0,
+          "pnl": 2.74,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 0.5,
+          "n_fires": 12,
+          "win_rate": 0.4444,
+          "pnl": -1.35,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.0,
+          "n_fires": 10,
+          "win_rate": 0.2857,
+          "pnl": -5.0,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.5,
+          "n_fires": 10,
+          "win_rate": 0.2857,
+          "pnl": -0.24,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 2.0,
+          "n_fires": 5,
+          "win_rate": 0.5,
+          "pnl": 14.55,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 3.0,
+          "n_fires": 2,
+          "win_rate": 0.0,
+          "pnl": -1.49,
+          "verdict": "KILL"
+        }
+      ],
+      "kids": null
+    },
+    {
+      "name": "union_join_vol_green_h1",
+      "side": "long",
+      "family": "union",
+      "n_named_days": 5,
+      "picked": {
+        "mode": "dip_scoop",
+        "hold": 2,
+        "dip_pct": 3.0,
+        "n_fires": 16,
+        "n_graded": 16,
+        "n_wins": 8,
+        "win_rate": 0.5,
+        "pnl": -7.14,
+        "verdict": "KILL",
+        "picked_by": "best available (below bar)"
+      },
+      "grid": [
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 0.5,
+          "n_fires": 21,
+          "win_rate": 0.1905,
+          "pnl": -49.76,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.0,
+          "n_fires": 21,
+          "win_rate": 0.1905,
+          "pnl": -41.82,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.5,
+          "n_fires": 20,
+          "win_rate": 0.2,
+          "pnl": -34.41,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 2.0,
+          "n_fires": 19,
+          "win_rate": 0.2105,
+          "pnl": -26.23,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 3.0,
+          "n_fires": 16,
+          "win_rate": 0.3125,
+          "pnl": -16.89,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 0.5,
+          "n_fires": 21,
+          "win_rate": 0.2857,
+          "pnl": -33.29,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.0,
+          "n_fires": 21,
+          "win_rate": 0.2857,
+          "pnl": -25.35,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.5,
+          "n_fires": 20,
+          "win_rate": 0.35,
+          "pnl": -18.15,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 2.0,
+          "n_fires": 19,
+          "win_rate": 0.4211,
+          "pnl": -13.61,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 3.0,
+          "n_fires": 16,
+          "win_rate": 0.5,
+          "pnl": -7.14,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 0.5,
+          "n_fires": 21,
+          "win_rate": 0.1429,
+          "pnl": -45.08,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.0,
+          "n_fires": 21,
+          "win_rate": 0.1429,
+          "pnl": -40.88,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.5,
+          "n_fires": 20,
+          "win_rate": 0.2143,
+          "pnl": -36.68,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 2.0,
+          "n_fires": 19,
+          "win_rate": 0.2143,
+          "pnl": -32.49,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 3.0,
+          "n_fires": 16,
+          "win_rate": 0.3636,
+          "pnl": -24.63,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 0.5,
+          "n_fires": 21,
+          "win_rate": 0.125,
+          "pnl": -24.44,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.0,
+          "n_fires": 21,
+          "win_rate": 0.125,
+          "pnl": -22.06,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.5,
+          "n_fires": 20,
+          "win_rate": 0.125,
+          "pnl": -19.68,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 2.0,
+          "n_fires": 19,
+          "win_rate": 0.125,
+          "pnl": -17.29,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 3.0,
+          "n_fires": 16,
+          "win_rate": 0.1429,
+          "pnl": -11.39,
+          "verdict": "KILL"
+        }
+      ],
+      "kids": null
+    },
+    {
+      "name": "union_earn_react_h3",
+      "side": "long",
+      "family": "union",
+      "n_named_days": 9,
+      "picked": {
+        "mode": "dip_scoop",
+        "hold": 1,
+        "dip_pct": 3.0,
+        "n_fires": 25,
+        "n_graded": 25,
+        "n_wins": 8,
+        "win_rate": 0.32,
+        "pnl": -74.33,
+        "verdict": "KILL",
+        "picked_by": "best available (below bar)"
+      },
+      "grid": [
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 0.5,
+          "n_fires": 38,
+          "win_rate": 0.1842,
+          "pnl": -136.93,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.0,
+          "n_fires": 37,
+          "win_rate": 0.2703,
+          "pnl": -118.71,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 1.5,
+          "n_fires": 36,
+          "win_rate": 0.3056,
+          "pnl": -100.53,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 2.0,
+          "n_fires": 32,
+          "win_rate": 0.2812,
+          "pnl": -92.06,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 1,
+          "dip_pct": 3.0,
+          "n_fires": 25,
+          "win_rate": 0.32,
+          "pnl": -74.33,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 0.5,
+          "n_fires": 38,
+          "win_rate": 0.2632,
+          "pnl": -157.45,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.0,
+          "n_fires": 37,
+          "win_rate": 0.2432,
+          "pnl": -139.36,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 1.5,
+          "n_fires": 36,
+          "win_rate": 0.2778,
+          "pnl": -120.91,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 2.0,
+          "n_fires": 32,
+          "win_rate": 0.25,
+          "pnl": -122.09,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 2,
+          "dip_pct": 3.0,
+          "n_fires": 25,
+          "win_rate": 0.2,
+          "pnl": -108.25,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 0.5,
+          "n_fires": 38,
+          "win_rate": 0.0645,
+          "pnl": -193.6,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.0,
+          "n_fires": 37,
+          "win_rate": 0.1333,
+          "pnl": -176.08,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 1.5,
+          "n_fires": 36,
+          "win_rate": 0.1724,
+          "pnl": -159.03,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 2.0,
+          "n_fires": 32,
+          "win_rate": 0.1154,
+          "pnl": -150.47,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 3,
+          "dip_pct": 3.0,
+          "n_fires": 25,
+          "win_rate": 0.1429,
+          "pnl": -121.1,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 0.5,
+          "n_fires": 38,
+          "win_rate": 0.0833,
+          "pnl": -221.17,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.0,
+          "n_fires": 37,
+          "win_rate": 0.1304,
+          "pnl": -204.14,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 1.5,
+          "n_fires": 36,
+          "win_rate": 0.1364,
+          "pnl": -186.51,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 2.0,
+          "n_fires": 32,
+          "win_rate": 0.0952,
+          "pnl": -174.26,
+          "verdict": "KILL"
+        },
+        {
+          "mode": "dip_scoop",
+          "hold": 5,
+          "dip_pct": 3.0,
+          "n_fires": 25,
+          "win_rate": 0.1176,
+          "pnl": -135.17,
+          "verdict": "KILL"
+        }
+      ],
+      "kids": null
+    }
+  ],
+  "note": "Paper counterfactual. Live sit unchanged. (A) short-only at the 09:30 open. (B) long scoop at first touch of open\u2212X%. Hold H = close of the H-th session including entry. X and H are the tested winners on this window, not a guess."
+}

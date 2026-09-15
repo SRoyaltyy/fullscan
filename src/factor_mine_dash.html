@@ -120,6 +120,7 @@
  · <a href="../sleeve-merge/" style="color:#93c5fd">sleeve merge</a>
  · <a href="../flatten-lookback/" style="color:#93c5fd">flatten lookback</a>
  · <a href="../sleeve-combine/" style="color:#93c5fd">sleeve combine</a>
+ · <a href="../hard-red-sit/" style="color:#93c5fd">hard-red hold × X</a>
 </div>
 <div class="cards" id="cards"></div>
 <div class="bar" id="filterBar"></div>
@@ -188,6 +189,7 @@
   <div class="mut" id="liveDayStamp">loading day board…</div>
   <div class="pills" id="liveDayPills"></div>
   <div class="tbl-wrap" id="liveResearch" style="margin-top:8px"></div>
+  <div class="tbl-wrap" id="holdXBoard" style="margin-top:12px"></div>
   <div class="mut"><a href="../day-board/" style="color:#93c5fd">day board</a>
    — which processes ran, plus what was just pushed.</div>
 </div>
@@ -1690,6 +1692,38 @@ window.addEventListener('resize', draw);
   var STRAT='https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today_strategies.json';
   var stamp=document.getElementById('liveDayStamp');
   var pills=document.getElementById('liveDayPills');
+  function paintHoldX(H){
+    var hx=document.getElementById('holdXBoard');
+    if(!hx||!H) return;
+    var list=(H.strategies||[]).filter(function(s){ return s && s.picked; });
+    if(!list.length) list=(H.keeps||[]).concat(H.watches||[]);
+    function pct(v){ return v==null?'—':(100*Number(v)).toFixed(1)+'%'; }
+    function usd(v){ return v==null?'—':(Number(v)>=0?'+':'')+Number(v).toFixed(2); }
+    var tr=list.map(function(s){
+      var p=s.picked||{};
+      return '<tr><td>'+(s.name||'')+'</td><td>'+(s.side||'')+'</td><td>'+(p.mode||'—')+
+        '</td><td>'+(p.dip_pct==null?'—':p.dip_pct)+'</td><td>'+(p.hold||'—')+
+        '</td><td>'+(p.n_fires||0)+'</td><td>'+pct(p.win_rate)+'</td><td>'+usd(p.pnl)+
+        '</td><td>'+(p.verdict||'—')+'</td></tr>';
+    }).join('');
+    hx.innerHTML='<div class="mut" style="margin:6px 0 4px">Hard-red short + scoop — X and hold picked from the sweep. Research only; live sit stays.</div>'+
+      '<div class="mut">'+(H.from_date||'')+' → '+(H.to_date||'')+' · hard-red '+(H.hard_red_n||0)+
+      ' · KEEP '+(H.n_keep||0)+' · WATCH '+(H.n_watch||0)+
+      ' · <a href="../hard-red-sit/" style="color:#93c5fd">full board</a></div>'+
+      (tr?'<table><tr><th>Sleeve</th><th>Side</th><th>Mode</th><th>X%</th><th>Hold</th><th>n</th><th>Win</th><th>$</th><th>Verdict</th></tr>'+tr+'</table>':'');
+  }
+  var HOLDX_URLS=[
+    'hard_red_hold_x.json',
+    '../hard-red-sit/hard_red_hold_x.json',
+    'https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/dashboard/factor-mine/hard_red_hold_x.json',
+    'https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/03_scoreboard/hard_red_sit/hard_red_hold_x.json'
+  ];
+  (function loadHoldX(i){
+    if(i>=HOLDX_URLS.length) return;
+    fetch(HOLDX_URLS[i]+'?t='+Date.now(),{cache:'no-store'}).then(function(r){
+      return r.ok?r.json():Promise.reject();
+    }).then(paintHoldX).catch(function(){ loadHoldX(i+1); });
+  })(0);
   if(!stamp||!pills) return;
   function names(rows, preds){
     var by={};

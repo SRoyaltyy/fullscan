@@ -528,7 +528,8 @@ svg text{{fill:var(--muted)}}
 <a href="../mover-paper/">mover paper</a> ·
 <a href="../sleeve-combine/">sleeve combine</a> ·
 <a href="../book-paper/">book paper</a> ·
-<a href="../factor-mine/">factor mine</a>
+<a href="../factor-mine/">factor mine</a> ·
+<a href="../hard-red-sit/">hard-red hold × X</a>
 </p>
 <p class="muted">Window {win[0]} → {win[1]}. Live production book is
 <b>flatten_robust</b> (3d size book + flatten clock; S ≤ −3: no new buys). Returns are
