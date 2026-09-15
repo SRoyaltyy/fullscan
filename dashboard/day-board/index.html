@@ -98,6 +98,16 @@ function ticketsLookLive(st){
   if(today && d && d !== today) return false;
   return !!(q.after_open && String(q.src || "").indexOf("elite_live")===0);
 }
+function stripLooksLive(d){
+  if(!d || typeof d !== "object") return false;
+  const q = d.quote || {};
+  const row = (d.buy_1d && d.buy_1d[0]) || {};
+  const src = String(row.px_src || q.src || "");
+  const day = String(d.date || d.clock_legal_for || "");
+  const today = sessionDate();
+  if(today && day && day !== today) return false;
+  return !!(row.px != null && src.indexOf("elite_live")===0);
+}
 function firstOk(urls, ok){
   let i=0, last={};
   function next(){
@@ -137,8 +147,19 @@ function render(board){
     ["Fail / missing", c.fail??"—", "fail"],
   ].map(([k,v,cls]) => `<div class="card">${k}<b class="${cls}">${v}</b></div>`).join("");
   const sel = board.selections||{};
-  let buys = tickers(sel.buy_1d, "buy");
-  let sells = tickers(sel.sell_1d, "sell");
+  const today = sessionDate();
+  const viewingToday = !!(today && board.date === today);
+  const liveBoard = !!(board.quote && board.quote.after_open && String(board.quote.src||"").indexOf("elite_live")===0);
+  let buyRows = (board.buy_1d && board.buy_1d.length) ? board.buy_1d : (sel.buy_1d||[]);
+  let sellRows = (board.sell_1d && board.sell_1d.length) ? board.sell_1d : (sel.sell_1d||[]);
+  // After 09:30 the dated ranker file stays score-only MPC/DBX. Do not
+  // paint that as Today's book — wait for the live today.json strip.
+  if(viewingToday && afterBell() && !liveBoard){
+    buyRows = [];
+    sellRows = [];
+  }
+  let buys = tickers(buyRows, "buy");
+  let sells = tickers(sellRows, "sell");
   $("sels").innerHTML = (buys || sells)
     ? (buys + sells)
     : `<span class="mut">No 1d BUY/SELL on disk for ${board.date}.</span>`;
@@ -152,6 +173,21 @@ function render(board){
         const s = (d.sell_1d||[]).map(t => `<span class="pill sell">${t}</span>`).join("");
         if(b || s) $("sels").innerHTML = b + s;
       }).catch(()=>{});
+  }
+  if(viewingToday){
+    firstOk([
+      "today.json",
+      "./today.json",
+      RAW + "/today.json"
+    ], afterBell() ? stripLooksLive : null)
+      .then(strip => {
+        if(!strip || typeof strip !== "object") return;
+        const b = strip.buy_1d || [];
+        const s = strip.sell_1d || [];
+        if(b.length || s.length){
+          $("sels").innerHTML = tickers(b, "buy") + tickers(s, "sell");
+        }
+      });
   }
   firstOk([
     "today_strategies.json",
