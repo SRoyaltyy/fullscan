@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ catal_present, no 🚨
 
-Cash book **+0.13%** ($10,013) · signal-only (no cash/fees) was +2.62%. Starts YES **21/22**. Fills 5 · skips 7 · realized $-245.73.
+Cash book **-7.96%** ($9,204) · signal-only (no cash/fees) was -5.67%. Starts YES **0/23**. Fills 5 · skips 8 · realized $-245.73.
 
 ## How this sleeve decides (like you are 10)
 
@@ -90,6 +90,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-11 | `FUBO` | 843 | — | $11.55 | +0.00 | $11.53 | -16.86 | -16.86 | +0.00 | -16.86 |
 | 2026-09-14 | `FUBO` | 843 | $11.53 | $11.56 | +25.29 | $11.87 | +261.33 | +286.62 | +8.43 | +269.76 |
+| 2026-09-15 | `FUBO` | 843 | $11.87 | $11.70 | -143.31 | $10.91 | -665.97 | -809.28 | +126.45 | -539.52 |
 
 ## Each session (cash + holdings state)
 
@@ -117,6 +118,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 | -13.28 | $9,754.28 | — | $9,754.28 | -0.00 | +0.00 | — | — | $9,754.28 | $9,754.28 | — |
 | 2026-09-11 | +0.50 | $9,754.28 | — | $9,754.28 | -0.00 | -16.86 | FUBO | — | $6.75 | $9,726.54 | FUBO×843 |
 | 2026-09-14 | -11.00 | $6.75 | FUBO×843 | $9,751.83 | +25.29 | +261.33 | — | — | $6.75 | $10,013.16 | FUBO×843 |
+| 2026-09-15 | -3.84 | $6.75 | FUBO×843 | $9,869.85 | -143.31 | -665.97 | — | — | $6.75 | $9,203.88 | FUBO×843 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -171,6 +173,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.75 | ▼ close $9,726.54 vs 09:30 $9,754.28 (session -16.86) | 16:00 close · cash $6.75 · equity $9,726.54 vs 09:30 $9,754.28 (-27.74; session marks -16.86) · 1 name(s) marked open→close (per-name table). FUBO×843 09:30 $11.55 → close $11.53 -16.86 | — |
 | 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.75 | ▲ 09:30 equity $9,751.83 vs yday $9,726.54 (+25.29) | 09:30 open · cash $6.75 (unchanged overnight, no fees) · equity $9,751.83 vs prior close $9,726.54 (+25.29) · 1 name(s) re-marked at the open (per-name table). FUBO×843 yday $11.53 → 09:30 $11.56 +25.29 | — |
 | 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.75 | ▲ close $10,013.16 vs 09:30 $9,751.83 (session +261.33) | 16:00 close · cash $6.75 · equity $10,013.16 vs 09:30 $9,751.83 (+261.33; session marks +261.33) · 1 name(s) marked open→close (per-name table). FUBO×843 09:30 $11.56 → close $11.87 +261.33 | — |
+| 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.75 | ▼ 09:30 equity $9,869.85 vs yday $10,013.16 (-143.31) | 09:30 open · cash $6.75 (unchanged overnight, no fees) · equity $9,869.85 vs prior close $10,013.16 (-143.31) · 1 name(s) re-marked at the open (per-name table). FUBO×843 yday $11.87 → 09:30 $11.70 -143.31 | — |
+| 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.75 | ▼ close $9,203.88 vs 09:30 $9,869.85 (session -665.97) | 16:00 close · cash $6.75 · equity $9,203.88 vs 09:30 $9,869.85 (-665.97; session marks -665.97) · 1 name(s) marked open→close (per-name table). FUBO×843 09:30 $11.70 → close $10.91 -665.97 | — |
 
 ## Not taken
 
@@ -183,6 +187,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | `CF` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-08 | `CTVA` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-14 | `FUBO` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-15 | `FUBO` | min_hold | dropped but min-hold 2/3 sess — no sell |
 
 ## Still open (marked at last close)
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 and camera net ≥ 3
 
-Cash book **+19.12%** ($11,912) · signal-only (no cash/fees) was +16.40%. Starts YES **17/22**. Fills 54 · skips 16 · realized $+1911.65.
+Cash book **+19.12%** ($11,912) · signal-only (no cash/fees) was +17.01%. Starts YES **17/23**. Fills 54 · skips 16 · realized $+1911.65.
 
 ## How this sleeve decides (like you are 10)
 
@@ -128,6 +128,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-11 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-14 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-15 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -155,6 +156,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 | -13.28 | $11,911.66 | — | $11,911.66 | -0.00 | +0.00 | — | — | $11,911.66 | $11,911.66 | — |
 | 2026-09-11 | +0.50 | $11,911.66 | — | $11,911.66 | -0.00 | +0.00 | — | — | $11,911.66 | $11,911.66 | — |
 | 2026-09-14 | -11.00 | $11,911.66 | — | $11,911.66 | -0.00 | +0.00 | — | — | $11,911.66 | $11,911.66 | — |
+| 2026-09-15 | -3.84 | $11,911.66 | — | $11,911.66 | -0.00 | +0.00 | — | — | $11,911.66 | $11,911.66 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -171,9 +173,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-17 09:30 ET | **SELL** | `NRG` | 27 | $127.40 | $2.11 | $+195.62 | $3,721.28 | ▲ +195.62 after sell → book $10,318.34; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-17 09:30 ET | **SELL** | `TLN` | 9 | $367.88 | $2.05 | $+68.38 | $7,030.14 | ▲ +68.38 after sell → book $10,316.28; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-17 09:30 ET | **SELL** | `VST` | 22 | $149.37 | $2.09 | $+50.19 | $10,314.19 | ▲ +50.19 after sell → book $10,314.19; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
-| 2026-08-17 09:30 ET | **BUY** | `DVN` | 74 | $46.18 | $2.21 | — | $6,894.66 | — | packet🟢 and camera net ≥ 3; gate news_box=good,cam_net_min=3; rank cond; list flatten; 🔵; ret5=+6.7; leftover $3438.06 | join🟢 sector🟢 gen🟢 news🟢 judge🔴 vol🔴 buy🟢 |
-| 2026-08-17 09:30 ET | **BUY** | `EOG` | 24 | $142.77 | $2.06 | — | $3,466.12 | — | packet🟢 and camera net ≥ 3; gate news_box=good,cam_net_min=3; rank cond; list flatten; 🔵; ret5=+5.8; leftover $3438.06 | join🟢 sector🟢 gen🟢 news🟢 judge🔴 vol🔴 buy🟢 |
-| 2026-08-17 09:30 ET | **BUY** | `FANG` | 16 | $202.70 | $2.04 | — | $220.88 | — | packet🟢 and camera net ≥ 3; gate news_box=good,cam_net_min=3; rank cond; list flatten; 🔵; ret5=+8.3; leftover $3438.06 | join🟢 sector🟢 gen🟢 news🟢 judge🔴 vol🔴 buy🟢 |
+| 2026-08-17 09:30 ET | **BUY** | `DVN` | 74 | $46.18 | $2.21 | — | $6,894.66 | — | packet🟢 and camera net ≥ 3; gate news_box=good,cam_net_min=3; rank cond; list flatten; 🔵; ret5=+6.7; leftover $3438.06 | join🟢 sector🟢 gen🟢 news🟢 vol🔴 buy🟢 |
+| 2026-08-17 09:30 ET | **BUY** | `EOG` | 24 | $142.77 | $2.06 | — | $3,466.12 | — | packet🟢 and camera net ≥ 3; gate news_box=good,cam_net_min=3; rank cond; list flatten; 🔵; ret5=+5.8; leftover $3438.06 | join🟢 sector🟢 gen🟢 news🟢 vol🔴 buy🟢 |
+| 2026-08-17 09:30 ET | **BUY** | `FANG` | 16 | $202.70 | $2.04 | — | $220.88 | — | packet🟢 and camera net ≥ 3; gate news_box=good,cam_net_min=3; rank cond; list flatten; 🔵; ret5=+8.3; leftover $3438.06 | join🟢 sector🟢 gen🟢 news🟢 vol🔴 buy🟢 |
 | 2026-08-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $220.88 | ▲ close $10,549.30 vs 09:30 $10,320.45 (session +241.42) | 16:00 close · cash $220.88 · equity $10,549.30 vs 09:30 $10,320.45 (+228.85; session marks +241.42) · 3 name(s) marked open→close (per-name table). DVN×74 09:30 $46.18 → close $47.57 +102.86; EOG×24 09:30 $142.77 → close $146.15 +81.12; FANG×16 09:30 $202.70 → close $206.29 +57.44 | — |
 | 2026-08-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $220.88 | ▲ 09:30 equity $10,668.72 vs yday $10,549.30 (+119.42) | 09:30 open · cash $220.88 (unchanged overnight, no fees) · equity $10,668.72 vs prior close $10,549.30 (+119.42) · 3 name(s) re-marked at the open (per-name table). DVN×74 yday $47.57 → 09:30 $48.00 +31.82; EOG×24 yday $146.15 → 09:30 $148.04 +45.36; FANG×16 yday $206.29 → 09:30 $208.93 +42.24 | — |
 | 2026-08-18 09:30 ET | **SELL** | `DVN` | 74 | $48.00 | $2.25 | $+130.22 | $3,770.63 | ▲ +130.22 after sell → book $10,666.47; vs 09:30 mark -2.25 | dropped from list after 1 sess (min 1) | — |
@@ -258,6 +260,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,911.66 | ▲ close $11,911.66 vs 09:30 $11,911.66 (session +0.00) | 16:00 close · cash $11,911.66 · no lots left · equity $11,911.66. | — |
 | 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,911.66 | ▲ 09:30 equity $11,911.66 vs yday $11,911.66 (-0.00) | 09:30 open · cash $11,911.66 · no holdings · equity $11,911.66 vs prior close $11,911.66 (-0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,911.66 | ▲ close $11,911.66 vs 09:30 $11,911.66 (session +0.00) | 16:00 close · cash $11,911.66 · no lots left · equity $11,911.66. | — |
+| 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,911.66 | ▲ 09:30 equity $11,911.66 vs yday $11,911.66 (-0.00) | 09:30 open · cash $11,911.66 · no holdings · equity $11,911.66 vs prior close $11,911.66 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,911.66 | ▲ close $11,911.66 vs 09:30 $11,911.66 (session +0.00) | 16:00 close · cash $11,911.66 · no lots left · equity $11,911.66. | — |
 
 ## Not taken
 
@@ -277,5 +281,5 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | `LITE` | hard_red | hard-red S=-13.95 sit; no new buys |
 | 2026-09-10 | `HPE` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-10 | `META` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-14 | `BE` | hard_red | hard-red S=-11.00 sit; no new buys |
 | 2026-09-14 | `CVE` | hard_red | hard-red S=-11.00 sit; no new buys |
-| 2026-09-14 | `DELL` | hard_red | hard-red S=-11.00 sit; no new buys |

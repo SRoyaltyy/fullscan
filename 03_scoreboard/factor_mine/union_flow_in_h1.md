@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in, no 🚨
 
-Cash book **+7.02%** ($10,702) · signal-only (no cash/fees) was +16.17%. Starts YES **6/22**. Fills 64 · skips 18 · realized $+702.38.
+Cash book **+5.18%** ($10,518) · signal-only (no cash/fees) was +12.48%. Starts YES **6/23**. Fills 66 · skips 21 · realized $+518.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $10,702.35.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $10,518.05.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -132,8 +132,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | `XP` | 75 | $19.86 | $20.46 | +45.00 | — | +0.00 | +45.00 | +59.25 | — |
 | 2026-09-09 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-10 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-09-11 | `SSL` | 729 | — | $14.35 | +0.00 | $14.59 | +174.96 | +174.96 | +0.00 | +174.96 |
-| 2026-09-14 | `SSL` | 729 | $14.59 | $14.69 | +72.90 | — | +0.00 | +72.90 | +247.86 | — |
+| 2026-09-11 | `SSL` | 364 | — | $14.35 | +0.00 | $14.59 | +87.36 | +87.36 | +0.00 | +87.36 |
+| 2026-09-11 | `ARLO` | 396 | — | $13.22 | +0.00 | $13.19 | -11.88 | -11.88 | +0.00 | -11.88 |
+| 2026-09-14 | `SSL` | 364 | $14.59 | $14.69 | +36.40 | — | +0.00 | +36.40 | +123.76 | — |
+| 2026-09-14 | `ARLO` | 396 | $13.19 | $13.07 | -47.52 | — | +0.00 | -47.52 | -59.40 | — |
+| 2026-09-15 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -159,20 +162,21 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | -11.47 | $60.12 | ATRC×28, WNC×104, CRDO×9, ADCT×1136, HAFN×165, DOCU×21, XP×75 | $10,501.67 | -16.75 | +0.00 | — | ATRC, WNC, CRDO, ADCT, HAFN, DOCU, XP | $10,473.51 | $10,473.51 | — |
 | 2026-09-09 | -13.95 | $10,473.51 | — | $10,473.51 | -0.00 | +0.00 | — | — | $10,473.51 | $10,473.51 | — |
 | 2026-09-10 | -13.28 | $10,473.51 | — | $10,473.51 | -0.00 | +0.00 | — | — | $10,473.51 | $10,473.51 | — |
-| 2026-09-11 | +0.50 | $10,473.51 | — | $10,473.51 | -0.00 | +174.96 | SSL | — | $2.95 | $10,639.06 | SSL×729 |
-| 2026-09-14 | -11.00 | $2.95 | SSL×729 | $10,711.96 | +72.90 | +0.00 | — | SSL | $10,702.35 | $10,702.35 | — |
+| 2026-09-11 | +0.50 | $10,473.51 | — | $10,473.51 | -0.00 | +75.48 | SSL, ARLO | — | $5.18 | $10,539.18 | SSL×364, ARLO×396 |
+| 2026-09-14 | -11.00 | $5.18 | SSL×364, ARLO×396 | $10,528.06 | -11.12 | +0.00 | — | SSL, ARLO | $10,518.05 | $10,518.05 | — |
+| 2026-09-15 | -3.84 | $10,518.05 | — | $10,518.05 | -0.00 | +0.00 | — | — | $10,518.05 | $10,518.05 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
 | Date | Side | Ticker | Shares | Px | Fees | P/L | Cash after | Equity change (sells only) | Why | Cameras |
 |---|---|---|---:|---:|---:|---:|---:|---:|---|---|
 | 2026-08-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,000.00 | ▲ 09:30 equity $10,000.00 vs yday $10,000.00 (+0.00) | 09:30 open · cash $10,000.00 · no holdings · equity $10,000.00 vs prior close $10,000.00 (+0.00). Cash unchanged overnight; no fees. | — |
-| 2026-08-13 09:30 ET | **BUY** | `TPG` | 197 | $50.62 | $2.58 | — | $24.65 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list flatten; ⚪; ret5=+6.2; leftover $10000.00 | join🟢 sector🟢 gen🟢 |
+| 2026-08-13 09:30 ET | **BUY** | `TPG` | 197 | $50.62 | $2.58 | — | $24.65 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list flatten; ret5=+6.2; leftover $10000.00 | join🟢 sector🟢 gen🟢 judge🔴 |
 | 2026-08-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $24.65 | ▲ close $10,784.79 vs 09:30 $10,000.00 (session +787.37) | 16:00 close · cash $24.65 · equity $10,784.79 vs 09:30 $10,000.00 (+784.79; session marks +787.37) · 1 name(s) marked open→close (per-name table). TPG×197 09:30 $50.62 → close $54.62 +787.37 | — |
 | 2026-08-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $24.65 | ▲ 09:30 equity $10,916.78 vs yday $10,784.79 (+131.99) | 09:30 open · cash $24.65 (unchanged overnight, no fees) · equity $10,916.78 vs prior close $10,784.79 (+131.99) · 1 name(s) re-marked at the open (per-name table). TPG×197 yday $54.62 → 09:30 $55.29 +131.99 | — |
-| 2026-08-14 09:30 ET | **SELL** | `TPG` | 197 | $55.29 | $2.70 | $+914.08 | $10,914.08 | ▲ +914.08 after sell → book $10,914.08; vs 09:30 mark -2.70 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
+| 2026-08-14 09:30 ET | **SELL** | `TPG` | 197 | $55.29 | $2.70 | $+914.08 | $10,914.08 | ▲ +914.08 after sell → book $10,914.08; vs 09:30 mark -2.70 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 judge🔴 vol🟡 buy🟡 |
 | 2026-08-14 09:30 ET | **BUY** | `SPHR` | 15 | $176.68 | $2.04 | — | $8,261.84 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list ohlc_hot; 🔵; ⚪; ret5=+14.4; leftover $2728.52 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `KULR` | 1091 | $2.50 | $14.07 | — | $5,520.27 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list earn_react; 🔵; ⚪; ret5=+7.6; leftover $2728.52 | join🟢 sector🟢 gen🟢 news🟡 judge🟡 vol🟡 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `KULR` | 1091 | $2.50 | $14.07 | — | $5,520.27 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list earn_react; 🔵; ⚪; ret5=+7.6; leftover $2728.52 | join🟢 sector🟢 gen🟢 news🟡 judge🟢 vol🟡 buy🟡 |
 | 2026-08-14 09:30 ET | **BUY** | `NPWR` | 1749 | $1.56 | $22.56 | — | $2,769.27 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list earn_react; 🔵; ret5=+8.0; leftover $2728.52 | join🟢 sector🟢 gen🟢 news🟡 vol🔴 buy🟡 |
 | 2026-08-14 09:30 ET | **BUY** | `RLX` | 1474 | $1.85 | $19.01 | — | $23.35 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list earn_react; 🔵; ⚪; ret5=+0.5; leftover $2728.52 | join🟢 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
 | 2026-08-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $23.35 | ▲ close $11,693.70 vs 09:30 $10,916.78 (session +837.31) | 16:00 close · cash $23.35 · equity $11,693.70 vs 09:30 $10,916.78 (+776.92; session marks +837.31) · 4 name(s) marked open→close (per-name table). SPHR×15 09:30 $176.68 → close $168.00 -130.20; KULR×1091 09:30 $2.50 → close $2.64 +152.74; NPWR×1749 09:30 $1.56 → close $1.95 +682.11; RLX×1474 09:30 $1.85 → close $1.94 +132.66 | — |
@@ -269,11 +273,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,473.51 | ▲ 09:30 equity $10,473.51 vs yday $10,473.51 (-0.00) | 09:30 open · cash $10,473.51 · no holdings · equity $10,473.51 vs prior close $10,473.51 (-0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,473.51 | ▲ close $10,473.51 vs 09:30 $10,473.51 (session +0.00) | 16:00 close · cash $10,473.51 · no lots left · equity $10,473.51. | — |
 | 2026-09-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,473.51 | ▲ 09:30 equity $10,473.51 vs yday $10,473.51 (-0.00) | 09:30 open · cash $10,473.51 · no holdings · equity $10,473.51 vs prior close $10,473.51 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-11 09:30 ET | **BUY** | `SSL` | 729 | $14.35 | $9.40 | — | $2.95 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list ohlc_hot; 🔵; ret5=+15.5; leftover $10473.51 | join🟡 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.95 | ▲ close $10,639.06 vs 09:30 $10,473.51 (session +174.96) | 16:00 close · cash $2.95 · equity $10,639.06 vs 09:30 $10,473.51 (+165.55; session marks +174.96) · 1 name(s) marked open→close (per-name table). SSL×729 09:30 $14.35 → close $14.59 +174.96 | — |
-| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.95 | ▲ 09:30 equity $10,711.96 vs yday $10,639.06 (+72.90) | 09:30 open · cash $2.95 (unchanged overnight, no fees) · equity $10,711.96 vs prior close $10,639.06 (+72.90) · 1 name(s) re-marked at the open (per-name table). SSL×729 yday $14.59 → 09:30 $14.69 +72.90 | — |
-| 2026-09-14 09:30 ET | **SELL** | `SSL` | 729 | $14.69 | $9.61 | $+228.85 | $10,702.35 | ▲ +228.85 after sell → book $10,702.35; vs 09:30 mark -9.61 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,702.35 | ▲ close $10,702.35 vs 09:30 $10,711.96 (session +0.00) | 16:00 close · cash $10,702.35 · no lots left · equity $10,702.35. | — |
+| 2026-09-11 09:30 ET | **BUY** | `SSL` | 364 | $14.35 | $4.70 | — | $5,245.41 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list ohlc_hot; 🔵; ret5=+15.5; leftover $5236.75 | join🟡 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `ARLO` | 396 | $13.22 | $5.11 | — | $5.18 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list ohlc_hot; ret5=+7.3; leftover $5236.75 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5.18 | ▲ close $10,539.18 vs 09:30 $10,473.51 (session +75.48) | 16:00 close · cash $5.18 · equity $10,539.18 vs 09:30 $10,473.51 (+65.67; session marks +75.48) · 2 name(s) marked open→close (per-name table). SSL×364 09:30 $14.35 → close $14.59 +87.36; ARLO×396 09:30 $13.22 → close $13.19 -11.88 | — |
+| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5.18 | ▼ 09:30 equity $10,528.06 vs yday $10,539.18 (-11.12) | 09:30 open · cash $5.18 (unchanged overnight, no fees) · equity $10,528.06 vs prior close $10,539.18 (-11.12) · 2 name(s) re-marked at the open (per-name table). SSL×364 yday $14.59 → 09:30 $14.69 +36.40; ARLO×396 yday $13.19 → 09:30 $13.07 -47.52 | — |
+| 2026-09-14 09:30 ET | **SELL** | `SSL` | 364 | $14.69 | $4.80 | $+114.27 | $5,347.54 | ▲ +114.27 after sell → book $10,523.26; vs 09:30 mark -4.80 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 09:30 ET | **SELL** | `ARLO` | 396 | $13.07 | $5.22 | $-69.72 | $10,518.05 | ▼ -69.72 after sell → book $10,518.05; vs 09:30 mark -5.22 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,518.05 | ▲ close $10,518.05 vs 09:30 $10,528.06 (session +0.00) | 16:00 close · cash $10,518.05 · no lots left · equity $10,518.05. | — |
+| 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,518.05 | ▲ 09:30 equity $10,518.05 vs yday $10,518.05 (-0.00) | 09:30 open · cash $10,518.05 · no holdings · equity $10,518.05 vs prior close $10,518.05 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,518.05 | ▲ close $10,518.05 vs 09:30 $10,518.05 (session +0.00) | 16:00 close · cash $10,518.05 · no lots left · equity $10,518.05. | — |
 
 ## Not taken
 
@@ -297,3 +305,6 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | `OCC` | hard_red | hard-red S=-13.95 sit; no new buys |
 | 2026-09-10 | `ARLO` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-10 | `DBI` | hard_red | hard-red S=-13.28 sit; no new buys |
+| 2026-09-14 | `ANAB` | hard_red | hard-red S=-11.00 sit; no new buys |
+| 2026-09-15 | `LFMD` | hard_red | hard-red S=-3.84 sit; no new buys |
+| 2026-09-15 | `ARLO` | hard_red | hard-red S=-3.84 sit; no new buys |

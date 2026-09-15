@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-12.77%** ($8,723) · signal-only (no cash/fees) was -18.33%. Starts YES **5/22**. Fills 82 · skips 45 · realized $-1276.91.
+Cash book **-12.77%** ($8,723) · signal-only (no cash/fees) was -16.54%. Starts YES **5/23**. Fills 82 · skips 49 · realized $-1276.91.
 
 ## How this sleeve decides (like you are 10)
 
@@ -152,6 +152,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | `DBI` | 491 | $5.88 | $5.86 | -9.82 | — | +0.00 | -9.82 | -24.55 | — |
 | 2026-09-14 | `APPS` | 244 | $11.81 | $11.75 | -14.64 | — | +0.00 | -14.64 | -31.72 | — |
 | 2026-09-14 | `INSP` | 41 | $73.00 | $72.14 | -35.26 | — | +0.00 | -35.26 | +92.66 | — |
+| 2026-09-15 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -179,6 +180,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 | -13.28 | $8,710.07 | — | $8,710.07 | -0.00 | +0.00 | — | — | $8,710.07 | $8,710.07 | — |
 | 2026-09-11 | +0.50 | $8,710.07 | — | $8,710.07 | -0.00 | +96.11 | DBI, APPS, INSP | — | $32.86 | $8,794.58 | DBI×491, APPS×244, INSP×41 |
 | 2026-09-14 | -11.00 | $32.86 | DBI×491, APPS×244, INSP×41 | $8,734.86 | -59.72 | +0.00 | — | DBI, APPS, INSP | $8,723.07 | $8,723.07 | — |
+| 2026-09-15 | -3.84 | $8,723.07 | — | $8,723.07 | -0.00 | +0.00 | — | — | $8,723.07 | $8,723.07 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -187,7 +189,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,000.00 | ▲ 09:30 equity $10,000.00 vs yday $10,000.00 (+0.00) | 09:30 open · cash $10,000.00 · no holdings · equity $10,000.00 vs prior close $10,000.00 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-08-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,000.00 | ▲ close $10,000.00 vs 09:30 $10,000.00 (session +0.00) | 16:00 close · cash $10,000.00 · no lots left · equity $10,000.00. | — |
 | 2026-08-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,000.00 | ▲ 09:30 equity $10,000.00 vs yday $10,000.00 (+0.00) | 09:30 open · cash $10,000.00 · no holdings · equity $10,000.00 vs prior close $10,000.00 (+0.00). Cash unchanged overnight; no fees. | — |
-| 2026-08-14 09:30 ET | **BUY** | `BCAR` | 1638 | $6.09 | $21.13 | — | $3.45 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer; 🔵; ⚪; ret5=+27.6; leftover $10000.00 | join🟢 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `BCAR` | 1638 | $6.09 | $21.13 | — | $3.45 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer; 🔵; ret5=+27.6; leftover $10000.00 | join🟢 sector🟢 gen🟢 news🟡 judge🔴 vol🟡 buy🟡 |
 | 2026-08-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3.45 | ▼ close $9,552.99 vs 09:30 $10,000.00 (session -425.88) | 16:00 close · cash $3.45 · equity $9,552.99 vs 09:30 $10,000.00 (-447.01; session marks -425.88) · 1 name(s) marked open→close (per-name table). BCAR×1638 09:30 $6.09 → close $5.83 -425.88 | — |
 | 2026-08-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3.45 | ▲ 09:30 equity $9,815.07 vs yday $9,552.99 (+262.08) | 09:30 open · cash $3.45 (unchanged overnight, no fees) · equity $9,815.07 vs prior close $9,552.99 (+262.08) · 1 name(s) re-marked at the open (per-name table). BCAR×1638 yday $5.83 → 09:30 $5.99 +262.08 | — |
 | 2026-08-17 09:30 ET | **SELL** | `BCAR` | 1638 | $5.99 | $21.48 | $-206.41 | $9,793.59 | ▼ -206.41 after sell → book $9,793.59; vs 09:30 mark -21.48 | dropped from list after 1 sess (min 1) | — |
@@ -310,6 +312,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 09:30 ET | **SELL** | `APPS` | 244 | $11.75 | $3.21 | $-38.08 | $5,767.47 | ▼ -38.08 after sell → book $8,725.21; vs 09:30 mark -3.21 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-14 09:30 ET | **SELL** | `INSP` | 41 | $72.14 | $2.15 | $+88.40 | $8,723.07 | ▲ +88.40 after sell → book $8,723.07; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🔴 judge🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,723.07 | ▲ close $8,723.07 vs 09:30 $8,734.86 (session +0.00) | 16:00 close · cash $8,723.07 · no lots left · equity $8,723.07. | — |
+| 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,723.07 | ▲ 09:30 equity $8,723.07 vs yday $8,723.07 (-0.00) | 09:30 open · cash $8,723.07 · no holdings · equity $8,723.07 vs prior close $8,723.07 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,723.07 | ▲ close $8,723.07 vs 09:30 $8,723.07 (session +0.00) | 16:00 close · cash $8,723.07 · no lots left · equity $8,723.07. | — |
 
 ## Not taken
 
@@ -359,4 +363,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 | `COHU` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-10 | `HPE` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-14 | `VICR` | hard_red | hard-red S=-11.00 sit; no new buys |
+| 2026-09-14 | `RLMD` | hard_red | hard-red S=-11.00 sit; no new buys |
 | 2026-09-14 | `IMSR` | hard_red | hard-red S=-11.00 sit; no new buys |
+| 2026-09-15 | `INIO` | hard_red | hard-red S=-3.84 sit; no new buys |
+| 2026-09-15 | `TXG` | hard_red | hard-red S=-3.84 sit; no new buys |
+| 2026-09-15 | `PD` | hard_red | hard-red S=-3.84 sit; no new buys |

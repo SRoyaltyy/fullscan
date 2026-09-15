@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · flatten wish-list ∩ vol🟢
 
-Cash book **-21.76%** ($7,824) · signal-only (no cash/fees) was -21.88%. Starts YES **0/22**. Fills 49 · skips 56 · realized $-1113.54.
+Cash book **-24.16%** ($7,584) · signal-only (no cash/fees) was -18.45%. Starts YES **0/23**. Fills 49 · skips 58 · realized $-1113.54.
 
 ## How this sleeve decides (like you are 10)
 
@@ -168,6 +168,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 | `VIR` | 1 | $10.81 | $10.57 | -0.24 | — | +0.00 | -0.24 | -0.74 | — |
 | 2026-09-11 | `ORCL` | 54 | — | $164.43 | +0.00 | $150.28 | -764.10 | -764.10 | +0.00 | -764.10 |
 | 2026-09-14 | `ORCL` | 54 | $150.28 | $141.42 | -478.44 | $144.79 | +181.98 | -296.46 | -1242.54 | -1060.56 |
+| 2026-09-15 | `ORCL` | 54 | $144.79 | $143.46 | -71.82 | $140.35 | -167.94 | -239.76 | -1132.38 | -1300.32 |
 
 ## Each session (cash + holdings state)
 
@@ -195,6 +196,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 | -13.28 | $8,818.12 | CABA×3, ALEC×5, BHC×1, BMEA×7, OABI×2, OPK×8, VIR×1 | $8,887.34 | -1.09 | +0.00 | — | CABA, ALEC, BHC, BMEA, OABI, OPK, VIR | $8,886.43 | $8,886.43 | — |
 | 2026-09-11 | +0.50 | $8,886.43 | — | $8,886.43 | -0.00 | -764.10 | ORCL | — | $5.06 | $8,120.18 | ORCL×54 |
 | 2026-09-14 | -11.00 | $5.06 | ORCL×54 | $7,641.74 | -478.44 | +181.98 | — | — | $5.06 | $7,823.72 | ORCL×54 |
+| 2026-09-15 | -3.84 | $5.06 | ORCL×54 | $7,751.90 | -71.82 | -167.94 | — | — | $5.06 | $7,583.96 | ORCL×54 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -203,11 +205,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,000.00 | ▲ 09:30 equity $10,000.00 vs yday $10,000.00 (+0.00) | 09:30 open · cash $10,000.00 · no holdings · equity $10,000.00 vs prior close $10,000.00 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-08-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,000.00 | ▲ close $10,000.00 vs 09:30 $10,000.00 (session +0.00) | 16:00 close · cash $10,000.00 · no lots left · equity $10,000.00. | — |
 | 2026-08-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,000.00 | ▲ 09:30 equity $10,000.00 vs yday $10,000.00 (+0.00) | 09:30 open · cash $10,000.00 · no holdings · equity $10,000.00 vs prior close $10,000.00 (+0.00). Cash unchanged overnight; no fees. | — |
-| 2026-08-14 09:30 ET | **BUY** | `BTBT` | 3333 | $1.50 | $43.00 | — | $4,957.50 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+9.2; leftover $5000.00 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `BETR` | 334 | $14.80 | $4.31 | — | $10.00 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=-9.9; leftover $5000.00 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `BTBT` | 3333 | $1.50 | $43.00 | — | $4,957.50 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+9.2; leftover $5000.00 | join🟢 sector🟢 gen🟢 news🟡 judge🔴 vol🟢 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `BETR` | 334 | $14.80 | $4.31 | — | $10.00 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=-9.9; leftover $5000.00 | join🟢 sector🟢 gen🟢 news🟡 judge🔴 vol🟢 buy🟡 |
 | 2026-08-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10.00 | ▼ close $9,828.63 vs 09:30 $10,000.00 (session -124.07) | 16:00 close · cash $10.00 · equity $9,828.63 vs 09:30 $10,000.00 (-171.37; session marks -124.07) · 2 name(s) marked open→close (per-name table). BTBT×3333 09:30 $1.50 → close $1.57 +233.31; BETR×334 09:30 $14.80 → close $13.73 -357.38 | — |
 | 2026-08-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10.00 | ▼ 09:30 equity $9,641.94 vs yday $9,828.63 (-186.69) | 09:30 open · cash $10.00 (unchanged overnight, no fees) · equity $9,641.94 vs prior close $9,828.63 (-186.69) · 2 name(s) re-marked at the open (per-name table). BTBT×3333 yday $1.57 → 09:30 $1.52 -166.65; BETR×334 yday $13.73 → 09:30 $13.67 -20.04 | — |
-| 2026-08-17 09:30 ET | **BUY** | `TMC` | 2 | $4.05 | $0.09 | — | $1.81 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=-12.3; leftover $10.00 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
+| 2026-08-17 09:30 ET | **BUY** | `TMC` | 2 | $4.05 | $0.09 | — | $1.81 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=-12.3; leftover $10.00 | join🟢 sector🟢 gen🟢 news🟡 judge🔴 vol🟢 buy🟡 |
 | 2026-08-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.81 | ▲ close $9,864.51 vs 09:30 $9,641.94 (session +222.66) | 16:00 close · cash $1.81 · equity $9,864.51 vs 09:30 $9,641.94 (+222.57; session marks +222.66) · 3 name(s) marked open→close (per-name table). BTBT×3333 09:30 $1.52 → close $1.60 +266.64; BETR×334 09:30 $13.67 → close $13.54 -43.42; TMC×2 09:30 $4.05 → close $3.77 -0.56 | — |
 | 2026-08-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.81 | ▼ 09:30 equity $9,554.21 vs yday $9,864.51 (-310.30) | 09:30 open · cash $1.81 (unchanged overnight, no fees) · equity $9,554.21 vs prior close $9,864.51 (-310.30) · 3 name(s) re-marked at the open (per-name table). BTBT×3333 yday $1.60 → 09:30 $1.54 -199.98; BETR×334 yday $13.54 → 09:30 $13.21 -110.22; TMC×2 yday $3.77 → 09:30 $3.72 -0.10 | — |
 | 2026-08-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.81 | ▼ close $9,201.20 vs 09:30 $9,554.21 (session -353.01) | 16:00 close · cash $1.81 · equity $9,201.20 vs 09:30 $9,554.21 (-353.01; session marks -353.01) · 3 name(s) marked open→close (per-name table). BTBT×3333 09:30 $1.54 → close $1.45 -299.97; BETR×334 09:30 $13.21 → close $13.05 -53.44; TMC×2 09:30 $3.72 → close $3.92 +0.40 | — |
@@ -293,6 +295,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5.06 | ▼ close $8,120.18 vs 09:30 $8,886.43 (session -764.10) | 16:00 close · cash $5.06 · equity $8,120.18 vs 09:30 $8,886.43 (-766.25; session marks -764.10) · 1 name(s) marked open→close (per-name table). ORCL×54 09:30 $164.43 → close $150.28 -764.10 | — |
 | 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5.06 | ▼ 09:30 equity $7,641.74 vs yday $8,120.18 (-478.44) | 09:30 open · cash $5.06 (unchanged overnight, no fees) · equity $7,641.74 vs prior close $8,120.18 (-478.44) · 1 name(s) re-marked at the open (per-name table). ORCL×54 yday $150.28 → 09:30 $141.42 -478.44 | — |
 | 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5.06 | ▲ close $7,823.72 vs 09:30 $7,641.74 (session +181.98) | 16:00 close · cash $5.06 · equity $7,823.72 vs 09:30 $7,641.74 (+181.98; session marks +181.98) · 1 name(s) marked open→close (per-name table). ORCL×54 09:30 $141.42 → close $144.79 +181.98 | — |
+| 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5.06 | ▼ 09:30 equity $7,751.90 vs yday $7,823.72 (-71.82) | 09:30 open · cash $5.06 (unchanged overnight, no fees) · equity $7,751.90 vs prior close $7,823.72 (-71.82) · 1 name(s) re-marked at the open (per-name table). ORCL×54 yday $144.79 → 09:30 $143.46 -71.82 | — |
+| 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5.06 | ▼ close $7,583.96 vs 09:30 $7,751.90 (session -167.94) | 16:00 close · cash $5.06 · equity $7,583.96 vs 09:30 $7,751.90 (-167.94; session marks -167.94) · 1 name(s) marked open→close (per-name table). ORCL×54 09:30 $143.46 → close $140.35 -167.94 | — |
 
 ## Not taken
 
@@ -354,6 +358,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | `VIR` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-14 | `ORCL` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-14 | `DK` | hard_red | hard-red S=-11.00 sit; no new buys |
+| 2026-09-15 | `ORCL` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-15 | `ICLR` | hard_red | hard-red S=-3.84 sit; no new buys |
 
 ## Still open (marked at last close)
 

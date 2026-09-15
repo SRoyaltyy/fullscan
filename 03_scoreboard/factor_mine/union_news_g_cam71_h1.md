@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · merged news🟢 and cameras +7 −≤1
 
-Cash book **-10.46%** ($8,954) · signal-only (no cash/fees) was -4.11%. Starts YES **0/22**. Fills 50 · skips 2 · realized $-1046.31.
+Cash book **-10.46%** ($8,954) · signal-only (no cash/fees) was -4.11%. Starts YES **0/23**. Fills 50 · skips 2 · realized $-1046.31.
 
 ## How this sleeve decides (like you are 10)
 
@@ -126,6 +126,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-11 | `ORCL` | 63 | — | $164.43 | +0.00 | $150.28 | -891.45 | -891.45 | +0.00 | -891.45 |
 | 2026-09-14 | `ORCL` | 63 | $150.28 | $141.42 | -558.18 | — | +0.00 | -558.18 | -1449.63 | — |
+| 2026-09-15 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -153,6 +154,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 | -13.28 | $10,407.77 | — | $10,407.77 | +0.00 | +0.00 | — | — | $10,407.77 | $10,407.77 | — |
 | 2026-09-11 | +0.50 | $10,407.77 | — | $10,407.77 | +0.00 | -891.45 | ORCL | — | $46.50 | $9,514.14 | ORCL×63 |
 | 2026-09-14 | -11.00 | $46.50 | ORCL×63 | $8,955.96 | -558.18 | +0.00 | — | ORCL | $8,953.70 | $8,953.70 | — |
+| 2026-09-15 | -3.84 | $8,953.70 | — | $8,953.70 | +0.00 | +0.00 | — | — | $8,953.70 | $8,953.70 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -252,6 +254,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $46.50 | ▼ 09:30 equity $8,955.96 vs yday $9,514.14 (-558.18) | 09:30 open · cash $46.50 (unchanged overnight, no fees) · equity $8,955.96 vs prior close $9,514.14 (-558.18) · 1 name(s) re-marked at the open (per-name table). ORCL×63 yday $150.28 → 09:30 $141.42 -558.18 | — |
 | 2026-09-14 09:30 ET | **SELL** | `ORCL` | 63 | $141.42 | $2.26 | $-1454.07 | $8,953.70 | ▼ -1,454.07 after sell → book $8,953.70; vs 09:30 mark -2.26 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,953.70 | ▲ close $8,953.70 vs 09:30 $8,955.96 (session +0.00) | 16:00 close · cash $8,953.70 · no lots left · equity $8,953.70. | — |
+| 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,953.70 | ▲ 09:30 equity $8,953.70 vs yday $8,953.70 (+0.00) | 09:30 open · cash $8,953.70 · no holdings · equity $8,953.70 vs prior close $8,953.70 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,953.70 | ▲ close $8,953.70 vs 09:30 $8,953.70 (session +0.00) | 16:00 close · cash $8,953.70 · no lots left · equity $8,953.70. | — |
 
 ## Not taken
 

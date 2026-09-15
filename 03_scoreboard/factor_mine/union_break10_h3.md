@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ break10, no 🚨
 
-Cash book **-1.50%** ($9,850) · signal-only (no cash/fees) was +26.90%. Starts YES **10/22**. Fills 92 · skips 196 · realized $-500.78.
+Cash book **+0.72%** ($10,072) · signal-only (no cash/fees) was +35.31%. Starts YES **14/23**. Fills 92 · skips 206 · realized $-500.78.
 
 ## How this sleeve decides (like you are 10)
 
@@ -249,6 +249,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | `WLTH` | 108 | $10.38 | $10.29 | -9.72 | $10.65 | +38.88 | +29.16 | -71.28 | -32.40 |
 | 2026-09-14 | `DBI` | 200 | $5.88 | $5.86 | -4.00 | $6.53 | +134.00 | +130.00 | -10.00 | +124.00 |
 | 2026-09-14 | `SWKS` | 13 | $88.35 | $86.06 | -29.77 | $79.26 | -88.40 | -118.17 | +23.27 | -65.13 |
+| 2026-09-15 | `AMTX` | 582 | $1.95 | $1.93 | -11.64 | $1.91 | -11.64 | -23.28 | -64.02 | -75.66 |
+| 2026-09-15 | `CLOV` | 249 | $5.10 | $5.06 | -9.96 | $4.66 | -99.60 | -109.56 | +77.19 | -22.41 |
+| 2026-09-15 | `BAK` | 560 | $2.01 | $2.02 | +5.60 | $2.10 | +44.80 | +50.40 | -56.00 | -11.20 |
+| 2026-09-15 | `INDP` | 439 | $3.14 | $3.40 | +114.14 | $3.64 | +105.36 | +219.50 | +307.30 | +412.66 |
+| 2026-09-15 | `CMRC` | 379 | $3.64 | $3.64 | +0.00 | $3.58 | -22.74 | -22.74 | +193.29 | +170.55 |
+| 2026-09-15 | `WLTH` | 108 | $10.65 | $10.55 | -10.80 | $10.87 | +34.56 | +23.76 | -43.20 | -8.64 |
+| 2026-09-15 | `DBI` | 200 | $6.53 | $6.50 | -6.00 | $6.25 | -50.00 | -56.00 | +118.00 | +68.00 |
+| 2026-09-15 | `SWKS` | 13 | $79.26 | $80.54 | +16.64 | $90.00 | +122.98 | +139.62 | -48.49 | +74.49 |
 
 ## Each session (cash + holdings state)
 
@@ -276,13 +284,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 | -13.28 | $9,434.23 | IRD×3, BRR×6, LENZ×2, SCZM×1, DFDV×2 | $9,499.13 | -0.58 | +0.60 | — | BRR, LENZ, SCZM, DFDV | $9,480.94 | $9,499.15 | IRD×3 |
 | 2026-09-11 | +0.50 | $9,480.94 | IRD×3 | $9,499.42 | +0.27 | +135.90 | AMTX, CLOV, BAK, INDP, CMRC, WLTH, DBI, SWKS | IRD | $74.87 | $9,599.68 | AMTX×582, CLOV×249, BAK×560, INDP×439, CMRC×379, WLTH×108, DBI×200, SWKS×13 |
 | 2026-09-14 | -11.00 | $74.87 | AMTX×582, CLOV×249, BAK×560, INDP×439, CMRC×379, WLTH×108, DBI×200, SWKS×13 | $9,554.46 | -45.22 | +295.41 | — | — | $74.87 | $9,849.87 | AMTX×582, CLOV×249, BAK×560, INDP×439, CMRC×379, WLTH×108, DBI×200, SWKS×13 |
+| 2026-09-15 | -3.84 | $74.87 | AMTX×582, CLOV×249, BAK×560, INDP×439, CMRC×379, WLTH×108, DBI×200, SWKS×13 | $9,947.85 | +97.98 | +123.72 | — | — | $74.87 | $10,071.57 | AMTX×582, CLOV×249, BAK×560, INDP×439, CMRC×379, WLTH×108, DBI×200, SWKS×13 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
 | Date | Side | Ticker | Shares | Px | Fees | P/L | Cash after | Equity change (sells only) | Why | Cameras |
 |---|---|---|---:|---:|---:|---:|---:|---:|---|---|
 | 2026-08-13 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,000.00 | ▲ 09:30 equity $10,000.00 vs yday $10,000.00 (+0.00) | 09:30 open · cash $10,000.00 · no holdings · equity $10,000.00 vs prior close $10,000.00 (+0.00). Cash unchanged overnight; no fees. | — |
-| 2026-08-13 09:30 ET | **BUY** | `IREN` | 217 | $45.98 | $2.80 | — | $19.54 | — | union ∩ break10, no 🚨; gate break_10=True; list flatten; ⚪; ret5=+12.3; leftover $10000.00 | join🟢 sector🟢 gen🟢 |
+| 2026-08-13 09:30 ET | **BUY** | `IREN` | 217 | $45.98 | $2.80 | — | $19.54 | — | union ∩ break10, no 🚨; gate break_10=True; list flatten; ret5=+12.3; leftover $10000.00 | join🟢 sector🟢 gen🟢 judge🔴 |
 | 2026-08-13 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $19.54 | ▼ close $9,732.46 vs 09:30 $10,000.00 (session -264.74) | 16:00 close · cash $19.54 · equity $9,732.46 vs 09:30 $10,000.00 (-267.54; session marks -264.74) · 1 name(s) marked open→close (per-name table). IREN×217 09:30 $45.98 → close $44.76 -264.74 | — |
 | 2026-08-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $19.54 | ▼ 09:30 equity $9,587.07 vs yday $9,732.46 (-145.39) | 09:30 open · cash $19.54 (unchanged overnight, no fees) · equity $9,587.07 vs prior close $9,732.46 (-145.39) · 1 name(s) re-marked at the open (per-name table). IREN×217 yday $44.76 → 09:30 $44.09 -145.39 | — |
 | 2026-08-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $19.54 | ▼ close $9,580.56 vs 09:30 $9,587.07 (session -6.51) | 16:00 close · cash $19.54 · equity $9,580.56 vs 09:30 $9,587.07 (-6.51; session marks -6.51) · 1 name(s) marked open→close (per-name table). IREN×217 09:30 $44.09 → close $44.06 -6.51 | — |
@@ -417,6 +426,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $74.87 | ▲ close $9,599.68 vs 09:30 $9,499.42 (session +135.90) | 16:00 close · cash $74.87 · equity $9,599.68 vs 09:30 $9,499.42 (+100.26; session marks +135.90) · 8 name(s) marked open→close (per-name table). AMTX×582 09:30 $2.04 → close $2.01 -17.46; CLOV×249 09:30 $4.75 → close $4.82 +17.43; BAK×560 09:30 $2.12 → close $2.08 -22.40; INDP×439 09:30 $2.70 → close $2.77 +30.73; CMRC×379 09:30 $3.13 → close $3.50 +142.12; WLTH×108 09:30 $10.95 → close $10.38 -61.56; DBI×200 09:30 $5.91 → close $5.88 -6.00; SWKS×13 09:30 $84.27 → close $88.35 +53.04 | — |
 | 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $74.87 | ▼ 09:30 equity $9,554.46 vs yday $9,599.68 (-45.22) | 09:30 open · cash $74.87 (unchanged overnight, no fees) · equity $9,554.46 vs prior close $9,599.68 (-45.22) · 8 name(s) re-marked at the open (per-name table). AMTX×582 yday $2.01 → 09:30 $2.01 +0.00; CLOV×249 yday $4.82 → 09:30 $4.82 +0.00; BAK×560 yday $2.08 → 09:30 $2.05 -16.80; INDP×439 yday $2.77 → 09:30 $2.80 +13.17; CMRC×379 yday $3.50 → 09:30 $3.51 +1.89; WLTH×108 yday $10.38 → 09:30 $10.29 -9.72; DBI×200 yday $5.88 → 09:30 $5.86 -4.00; SWKS×13 yday $88.35 → 09:30 $86.06 -29.77 | — |
 | 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $74.87 | ▲ close $9,849.87 vs 09:30 $9,554.46 (session +295.41) | 16:00 close · cash $74.87 · equity $9,849.87 vs 09:30 $9,554.46 (+295.41; session marks +295.41) · 8 name(s) marked open→close (per-name table). AMTX×582 09:30 $2.01 → close $1.95 -34.92; CLOV×249 09:30 $4.82 → close $5.10 +69.72; BAK×560 09:30 $2.05 → close $2.01 -22.40; INDP×439 09:30 $2.80 → close $3.14 +149.26; CMRC×379 09:30 $3.51 → close $3.64 +49.27; WLTH×108 09:30 $10.29 → close $10.65 +38.88; DBI×200 09:30 $5.86 → close $6.53 +134.00; SWKS×13 09:30 $86.06 → close $79.26 -88.40 | — |
+| 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $74.87 | ▲ 09:30 equity $9,947.85 vs yday $9,849.87 (+97.98) | 09:30 open · cash $74.87 (unchanged overnight, no fees) · equity $9,947.85 vs prior close $9,849.87 (+97.98) · 8 name(s) re-marked at the open (per-name table). AMTX×582 yday $1.95 → 09:30 $1.93 -11.64; CLOV×249 yday $5.10 → 09:30 $5.06 -9.96; BAK×560 yday $2.01 → 09:30 $2.02 +5.60; INDP×439 yday $3.14 → 09:30 $3.40 +114.14; CMRC×379 yday $3.64 → 09:30 $3.64 +0.00; WLTH×108 yday $10.65 → 09:30 $10.55 -10.80; DBI×200 yday $6.53 → 09:30 $6.50 -6.00; SWKS×13 yday $79.26 → 09:30 $80.54 +16.64 | — |
+| 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $74.87 | ▲ close $10,071.57 vs 09:30 $9,947.85 (session +123.72) | 16:00 close · cash $74.87 · equity $10,071.57 vs 09:30 $9,947.85 (+123.72; session marks +123.72) · 8 name(s) marked open→close (per-name table). AMTX×582 09:30 $1.93 → close $1.91 -11.64; CLOV×249 09:30 $5.06 → close $4.66 -99.60; BAK×560 09:30 $2.02 → close $2.10 +44.80; INDP×439 09:30 $3.40 → close $3.64 +105.36; CMRC×379 09:30 $3.64 → close $3.58 -22.74; WLTH×108 09:30 $10.55 → close $10.87 +34.56; DBI×200 09:30 $6.50 → close $6.25 -50.00; SWKS×13 09:30 $80.54 → close $90.00 +122.98 | — |
 
 ## Not taken
 
@@ -607,7 +618,6 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | `AMTX` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-14 | `CLOV` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-14 | `BAK` | min_hold | dropped but min-hold 1/3 sess — no sell |
-| 2026-09-14 | `INDP` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-14 | `WLTH` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-14 | `DBI` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-14 | `SWKS` | min_hold | dropped but min-hold 1/3 sess — no sell |
@@ -617,7 +627,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | `HUT` | hard_red | hard-red S=-11.00 sit; no new buys |
 | 2026-09-14 | `NTAP` | hard_red | hard-red S=-11.00 sit; no new buys |
 | 2026-09-14 | `HPQ` | hard_red | hard-red S=-11.00 sit; no new buys |
-| 2026-09-14 | `SMR` | hard_red | hard-red S=-11.00 sit; no new buys |
+| 2026-09-15 | `AMTX` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-15 | `CLOV` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-15 | `BAK` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-15 | `CMRC` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-15 | `WLTH` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-15 | `SWKS` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-15 | `ATRC` | hard_red | hard-red S=-3.84 sit; no new buys |
+| 2026-09-15 | `SES` | hard_red | hard-red S=-3.84 sit; no new buys |
+| 2026-09-15 | `ZS` | hard_red | hard-red S=-3.84 sit; no new buys |
+| 2026-09-15 | `S` | hard_red | hard-red S=-3.84 sit; no new buys |
+| 2026-09-15 | `XHLD` | hard_red | hard-red S=-3.84 sit; no new buys |
+| 2026-09-15 | `SION` | hard_red | hard-red S=-3.84 sit; no new buys |
 
 ## Still open (marked at last close)
 
