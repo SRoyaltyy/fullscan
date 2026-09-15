@@ -1,14 +1,225 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T04:34:25.611755-04:00",
-  "overall": null,
-  "ranker_ready": null,
-  "counts": {},
+  "generated_at": "2026-09-15T05:00:37.354899-04:00",
+  "overall": "PARTIAL",
+  "ranker_ready": true,
+  "counts": {
+    "ok": 4,
+    "partial": 4,
+    "fail": 0,
+    "n": 8
+  },
   "buy_1d": [],
   "sell_1d": [],
   "flatten": {},
-  "general": {},
-  "sectors": {},
-  "lands": [],
+  "general": {
+    "said": "DOWN  -6.215",
+    "bullets": [
+      "bad: fresh Saudi pipeline outage + Houthi escalation, Brent $108",
+      "bad: China Aug retail +0.4% / FAI -7.2% miss",
+      "bad: FOMC Sep 16 hike odds ~81%",
+      "good: ASML sold out of 2027 EUV capacity",
+      "good: software rotation (NOW/INTU/ADBE/CRM) surges"
+    ],
+    "score": "-6.215",
+    "direction": "down"
+  },
+  "sectors": {
+    "said": "3 up / 2 down / 0 flat",
+    "bullets": [
+      "XLB missing",
+      "XLC UP +0.4",
+      "XLY DOWN -4.7",
+      "XLP missing",
+      "XLE UP +4.0",
+      "XLF DOWN -4.1",
+      "XLV UP +0.9",
+      "XLI missing",
+      "XLRE missing",
+      "XLK missing",
+      "XLU missing"
+    ]
+  },
+  "lands": [
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T04:27:37.594314-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-09-15_events.json",
+          "ok": true,
+          "reason": "",
+          "size": 30030,
+          "preview": "31 events \u00b7 FOMC decision, SEP/dot plot, Warsh press conference | August advance retail sales | 10-year Treasury yield breaches 5% \u2014 global bond selloff | August CPI \u2014 core surprise locks in September hike | August PCE inflation (Fed's preferred gauge) | Bank of Japan decision \u2014 hike to 1.25% widely expected"
+        },
+        {
+          "path": "01_daily/events/2026-09-15_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 11422,
+          "preview": "# Event Scan \u2014 2026-09-15\n- events tracked: **31** (via openclaw)\n- uncertainty: **?**\n- summary:"
+        }
+      ],
+      "preview": "31 events \u00b7 FOMC decision, SEP/dot plot, Warsh press conference | August advance retail sales | 10-year Treasury yield breaches 5% \u2014 global bond selloff | August CPI \u2014 core surprise locks in September hike | August PCE inflation (Fed's preferred gauge) | Bank of Japan decision \u2014 hike to 1.25% widely expected \u00b7 # Event Scan \u2014 2026-09-15\n- events tracked: **31** (via openclaw)\n- uncertainty: **?**\n- summary:"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T04:28:32.526136-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-09-15.csv",
+          "ok": true,
+          "reason": "",
+          "size": 10974945,
+          "preview": "11634 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11415288,
+          "preview": "11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11634 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "universe",
+      "title": "Universe labels",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T04:28:43.350772-04:00",
+      "files": [
+        {
+          "path": "data/universe/2026-09-15_membership.csv",
+          "ok": true,
+          "reason": "",
+          "size": 1116889,
+          "preview": "5897 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+        }
+      ],
+      "preview": "5897 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+    },
+    {
+      "key": "events_catcher",
+      "title": "Event catcher (gap hunt, no carry)",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T04:31:05.751067-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-09-15_events.json",
+          "ok": true,
+          "reason": "",
+          "size": 47025,
+          "preview": "45 events \u00b7 FOMC decision, SEP/dot plot, Warsh press conference | August advance retail sales | 10-year Treasury yield breaches 5% \u2014 global bond selloff | August CPI \u2014 core surprise locks in September hike | August PCE inflation (Fed's preferred gauge) | Bank of Japan decision \u2014 hike to 1.25% widely expected"
+        },
+        {
+          "path": "01_daily/events/2026-09-15_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 18611,
+          "preview": "# Event Scan \u2014 2026-09-15\n- events tracked: **31** (via openclaw)\n- uncertainty: **?**\n- summary:"
+        }
+      ],
+      "preview": "45 events \u00b7 FOMC decision, SEP/dot plot, Warsh press conference | August advance retail sales | 10-year Treasury yield breaches 5% \u2014 global bond selloff | August CPI \u2014 core surprise locks in September hike | August PCE inflation (Fed's preferred gauge) | Bank of Japan decision \u2014 hike to 1.25% widely expected \u00b7 # Event Scan \u2014 2026-09-15\n- events tracked: **31** (via openclaw)\n- uncertainty: **?**\n- summary:"
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T04:31:13.047550-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 30911,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 9756,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-09-15T04:31:09.819177-04:00\nraw=166 unique_events=4 tickers=52"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-15T04:31:09.819177-04:00\nraw=166 unique_events=4 tickers=52"
+    },
+    {
+      "key": "news_judge",
+      "title": "News judge",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T04:31:36.081030-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_judge.md",
+          "ok": true,
+          "reason": "",
+          "size": 13042,
+          "preview": "# News Judge \u2014 2026-09-15"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_judge.json",
+          "ok": true,
+          "reason": "",
+          "size": 1481,
+          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+        }
+      ],
+      "preview": "# News Judge \u2014 2026-09-15 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T04:32:36.783266-04:00",
+      "files": [
+        {
+          "path": "01_daily/general/2026-09-15_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 12880,
+          "preview": "# Premarket Prediction \u2014 2026-09-15\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -6.215 (uncertainty multiplier \u00d71.1) | confidence 0.749\n>\n> **Good news vs bad news:** good +0 pts vs bad -14.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - ASML sold out of 2027 EUV capacity\n> - software rotation (NOW/INTU/ADBE/CRM) surges\n> - HY spread tight 2.65\n> - Adobe record Q3 + FY26 raise\n> - gold-miner bid (Barrick +8.2%)\n>\n> **Bad news driving this:**\n> - fresh Saudi pipeline outage + Houthi escalation, Brent $108\n> - China Aug retail +0.4% / FAI -7.2% miss\n> - FOMC Sep 16 hike odds ~81%\n> - VIX backwardation 1.142\n> - BAC soft Q3 outlook -5%\n>\n> **market uncertainty: **elevated** | VIX 17.87 | policy-uncertainty index 395.54 (1d +189.93)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = "
+        }
+      ],
+      "preview": "# Premarket Prediction \u2014 2026-09-15\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -6.215 (uncertainty multiplier \u00d71.1) | confidence 0.749\n>\n> **Good news vs bad news:** good +0 pts vs bad -14.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - ASML sold out of 2027 EUV capacity\n> - software rotation (NOW/INTU/ADBE/CRM) surges\n> - HY spread tight 2.65\n> - Adobe record Q3 + FY26 raise\n> - gold-miner bid (Barrick +8.2%)\n>\n> **Bad news driving this:**\n> - fresh Saudi pipeline outage + Houthi escalation, Brent $108\n> - China Aug retail +0.4% / FAI -7.2% miss\n> - FOMC Sep 16 hike odds ~81%\n> - VIX backwardation 1.142\n> - BAC soft Q3 outlook -5%\n>\n> **market uncertainty: **elevated** | VIX 17.87 | policy-uncertainty index 395.54 (1d +189.93)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = "
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T05:00:36.615980-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-15/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 6090,
+          "preview": "keys: date, generated_at, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, sectors"
+    }
+  ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
 }
