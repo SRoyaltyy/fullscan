@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T13:45:56.417197-04:00",
+  "generated_at": "2026-09-15T13:49:30.706702-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -90,10 +90,10 @@
     }
   ],
   "flatten": {
-    "said": "0 priced buys \u00b7 cash $108,616.66",
+    "said": "0 priced buys \u00b7 cash $107,448.18",
     "bullets": [
       "0 priced buys",
-      "cash $108,616.66"
+      "cash $107,448.18"
     ]
   },
   "general": {
@@ -125,24 +125,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "general_predict",
-      "title": "General market predict",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T08:45:54.161614-04:00",
-      "files": [
-        {
-          "path": "01_daily/general/2026-09-15_predict.md",
-          "ok": true,
-          "reason": "",
-          "size": 15135,
-          "preview": "# Premarket Prediction \u2014 2026-09-15\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -2.865 (uncertainty multiplier \u00d71.0) | confidence 0.515\n>\n> **Good news vs bad news:** good +0.25 pts vs bad -8.25 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - ES/NQ green vs cash close\n> - HY tight 2.65\n> - AMD bounce after 09-14 dump\n> - China IP +5.2% beat\n> - software rotation leftover (ADBE paid)\n>\n> **Bad news driving this:**\n> - Brent ~$108 Hormuz/Saudi pipeline outage\n> - 1w 10Y +19bp / 5% handle\n> - FOMC-eve hike ~87-90%\n> - China retail/FAI miss\n> - Canada 50% tariff-list changes live\n>\n> **market uncertainty: **elevated** | VIX 17.04 | policy-uncertainty index 395.54 (1d +189.93)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight"
-        }
-      ],
-      "preview": "# Premarket Prediction \u2014 2026-09-15\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -2.865 (uncertainty multiplier \u00d71.0) | confidence 0.515\n>\n> **Good news vs bad news:** good +0.25 pts vs bad -8.25 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - ES/NQ green vs cash close\n> - HY tight 2.65\n> - AMD bounce after 09-14 dump\n> - China IP +5.2% beat\n> - software rotation leftover (ADBE paid)\n>\n> **Bad news driving this:**\n> - Brent ~$108 Hormuz/Saudi pipeline outage\n> - 1w 10Y +19bp / 5% handle\n> - FOMC-eve hike ~87-90%\n> - China retail/FAI miss\n> - Canada 50% tariff-list changes live\n>\n> **market uncertainty: **elevated** | VIX 17.04 | policy-uncertainty index 395.54 (1d +189.93)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -2866,6 +2848,101 @@
         }
       ],
       "preview": "# Premarket Prediction \u2014 2026-09-15\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -3.65 (uncertainty multiplier \u00d71.0) | confidence 0.546\n>\n> **Good news vs bad news:** good +0 pts vs bad -6.5 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - ES/NQ +0.4%/+0.38% not confirming\n> - HY contained 2.71\n> - VIX/VIX3M 0.90 contango\n> - China IP +5.2% beat\n> - AMD T+1 bounce not a fresh miss\n>\n> **Bad news driving this:**\n> - Asia -0.72% (Kospi -3.26%)\n> - 1w 10Y +19bp / 5% handle\n> - WTI +5% leftover Hormuz/Petroline\n> - FOMC-eve hike ~87-92% unprinted\n> - BAC/AI-chip hangover\n>\n> **market uncertainty: **elevated** | VIX 17.58 | policy-uncertainty index 215.48 (1d -202.54)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight news & cat"
+    },
+    {
+      "key": "live_boards",
+      "title": "live_boards",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T13:45:12.520706-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 17774,
+          "preview": "2026-09-15 BUY MPC, DBX, OKTA, AVAH, S, APPN, SNAP, CRWD \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 944,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-15.json",
+          "ok": true,
+          "reason": "",
+          "size": 187364,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-15_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 165953,
+          "preview": "2026-09-15 BUY MPC, DBX, OKTA, AVAH, S, APPN, SNAP, CRWD \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2526965,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-15_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2526965,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2884319,
+          "preview": "2026-09-15 BUY MPC, DBX, OKTA, AVAH, S, APPN, SNAP, CRWD \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2526965,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 165953,
+          "preview": "2026-09-15 BUY MPC, DBX, OKTA, AVAH, S, APPN, SNAP, CRWD \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2526965,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2526965,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2884319,
+          "preview": "2026-09-15 BUY MPC, DBX, OKTA, AVAH, S, APPN, SNAP, CRWD \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS"
+        }
+      ],
+      "preview": "2026-09-15 BUY MPC, DBX, OKTA, AVAH, S, APPN, SNAP, CRWD \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-15 BUY MPC, DBX, OKTA, AVAH, S, APPN, SNAP, CRWD \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY MPC, DBX, OKTA, AVAH, S, APPN, SNAP, CRWD \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY MPC, DBX, OKTA, AVAH, S, APPN, SNAP, CRWD \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock"
     }
   ],
   "source": "publish_live_boards"
