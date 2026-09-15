@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T12:24:52.681497-04:00",
+  "generated_at": "2026-09-15T12:46:13.585626-04:00",
   "export_used": "data/exports/finviz_2026-09-15.csv",
   "ticker_digest_count": 400,
   "signal_count": 400,
@@ -8,7 +8,7 @@
     {
       "ticker": "SPY",
       "index": "S&P 500",
-      "digest": "Gaming the Fed Odds for a Rate Hike Wednesday",
+      "digest": "12 Investment Must Reads for This Week (Sept. 15, 2026)",
       "source": "finviz_elite_news",
       "error": null
     },
@@ -170,7 +170,7 @@
     {
       "ticker": "AZN",
       "digest": "AstraZeneca late-stage SERENA-4 trial of breast cancer drug Etcamah as first-line therapy misses primary endpoint",
-      "news_title": "CLLS Stock Heads For 14-Month Low After 40% Rout: Citizens Flags Delayed Cellectis Catalysts After Cancer Pipeline Pivot",
+      "news_title": "WCLC 26: A new ADC era, China questions and AstraZenecas spotlight",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
@@ -192,7 +192,7 @@
     {
       "ticker": "BAC",
       "digest": "BAC CEO's soft Q3 outlook at Barclays conference drives 5% plunge",
-      "news_title": "Dow's drop reaches 500-point mark",
+      "news_title": "Carolina Panthers and Bank of America Launch 3rd & Goal",
       "sector": "Financial",
       "industry": "Banks - Diversified",
       "is_dividend": false,
@@ -723,7 +723,7 @@
       {
         "ticker": "AZN",
         "digest": "AstraZeneca late-stage SERENA-4 trial of breast cancer drug Etcamah as first-line therapy misses primary endpoint",
-        "news_title": "CLLS Stock Heads For 14-Month Low After 40% Rout: Citizens Flags Delayed Cellectis Catalysts After Cancer Pipeline Pivot",
+        "news_title": "WCLC 26: A new ADC era, China questions and AstraZenecas spotlight",
         "sector": "Healthcare",
         "industry": "Drug Manufacturers - General",
         "is_dividend": false,
@@ -813,7 +813,7 @@
       {
         "ticker": "BAC",
         "digest": "BAC CEO's soft Q3 outlook at Barclays conference drives 5% plunge",
-        "news_title": "Dow's drop reaches 500-point mark",
+        "news_title": "Carolina Panthers and Bank of America Launch 3rd & Goal",
         "sector": "Financial",
         "industry": "Banks - Diversified",
         "is_dividend": false,
@@ -1417,7 +1417,7 @@
     {
       "ticker": "AZN",
       "digest": "AstraZeneca late-stage SERENA-4 trial of breast cancer drug Etcamah as first-line therapy misses primary endpoint",
-      "news_title": "CLLS Stock Heads For 14-Month Low After 40% Rout: Citizens Flags Delayed Cellectis Catalysts After Cancer Pipeline Pivot",
+      "news_title": "WCLC 26: A new ADC era, China questions and AstraZenecas spotlight",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
@@ -1439,7 +1439,7 @@
     {
       "ticker": "BAC",
       "digest": "BAC CEO's soft Q3 outlook at Barclays conference drives 5% plunge",
-      "news_title": "Dow's drop reaches 500-point mark",
+      "news_title": "Carolina Panthers and Bank of America Launch 3rd & Goal",
       "sector": "Financial",
       "industry": "Banks - Diversified",
       "is_dividend": false,

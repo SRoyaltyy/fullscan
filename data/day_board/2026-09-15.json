@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T12:46:00.598886-04:00",
+  "generated_at": "2026-09-15T12:46:15.076370-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -80,7 +80,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 87612
+          "size": 87526
         },
         {
           "key": "digest_md",
@@ -89,7 +89,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11470
+          "size": 11480
         },
         {
           "key": "market_digest_json",
@@ -149,7 +149,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87612
+          "size": 87526
         },
         {
           "key": "in_market_digest",
@@ -266,7 +266,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7708
+          "size": 7134
         },
         {
           "key": "review",
@@ -409,7 +409,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87612
+          "size": 87526
         },
         {
           "key": "weather",
@@ -489,7 +489,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87612
+          "size": 87526
         },
         {
           "key": "dossiers",
@@ -549,7 +549,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87612
+          "size": 87526
         },
         {
           "key": "in_judge",
@@ -594,7 +594,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5111",
-          "size": 830871
+          "size": 828889
         },
         {
           "key": "book_json",
@@ -602,8 +602,8 @@
           "path": "data/stock_book/2026-09-15_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=210",
-          "size": 1593324
+          "reason": "horizons=5 names=214",
+          "size": 1570014
         },
         {
           "key": "book_md",
@@ -612,7 +612,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 82483
+          "size": 80165
         },
         {
           "key": "green",
@@ -639,7 +639,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-09-15)",
-          "size": 6103082
+          "size": 5954895
         }
       ],
       "said": "215 rows",
@@ -664,8 +664,8 @@
           "path": "data/stock_book/2026-09-15_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=210",
-          "size": 1593324
+          "reason": "horizons=5 names=214",
+          "size": 1570014
         },
         {
           "key": "dash_html",
@@ -674,7 +674,7 @@
           "role": "required",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-09-15)",
-          "size": 6103082
+          "size": 5954895
         },
         {
           "key": "paper",
@@ -702,89 +702,69 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "MPC",
-        "score": 0.29284159326632914
+        "ticker": "MTCH",
+        "score": 0.3436758177117344
       },
       {
-        "ticker": "DBX",
-        "score": 0.6659268308303405
+        "ticker": "FOX",
+        "score": 0.39741166482656987
       },
       {
-        "ticker": "OKTA",
-        "score": 0.3767281691284467
-      },
-      {
-        "ticker": "AVAH",
-        "score": 0.6742815729117086
-      },
-      {
-        "ticker": "S",
-        "score": 0.6681106306723062
-      },
-      {
-        "ticker": "APPN",
-        "score": 0.5726047806801684
+        "ticker": "CARG",
+        "score": 0.5780830455379207
       },
       {
         "ticker": "SNAP",
-        "score": 0.4293270119929244
-      },
-      {
-        "ticker": "CRWD",
-        "score": 0.14727221746579827
-      },
-      {
-        "ticker": "NXDR",
-        "score": 0.49772530846117596
+        "score": 0.4644227625704849
       }
     ],
     "sell_1d": [
       {
-        "ticker": "METC",
-        "score": -0.6570814025646101
-      },
-      {
-        "ticker": "FLNC",
-        "score": -0.6116762744053208
-      },
-      {
-        "ticker": "HNRG",
-        "score": -0.19834883629987568
-      },
-      {
-        "ticker": "FCEL",
-        "score": -0.6018274608984249
-      },
-      {
-        "ticker": "TLN",
-        "score": -0.6307310675693985
-      },
-      {
-        "ticker": "TE",
-        "score": -0.5031593493192514
-      },
-      {
         "ticker": "OKLO",
-        "score": -0.4621067662590356
+        "score": -0.4769299257081444
       },
       {
         "ticker": "QBTS",
-        "score": -0.28432953541578804
+        "score": -0.25501616507320635
       },
       {
-        "ticker": "NRG",
-        "score": -0.3810403735763207
+        "ticker": "IONQ",
+        "score": -0.3644584064447287
       },
       {
-        "ticker": "AMPX",
-        "score": -0.47440709139388143
+        "ticker": "EOSE",
+        "score": -0.4433263904578803
+      },
+      {
+        "ticker": "QUBT",
+        "score": -0.17704111275223555
+      },
+      {
+        "ticker": "RGTI",
+        "score": -0.13709147285058954
+      },
+      {
+        "ticker": "METC",
+        "score": -0.6516193539580212
+      },
+      {
+        "ticker": "FLNC",
+        "score": -0.6051818574612539
+      },
+      {
+        "ticker": "TE",
+        "score": -0.48409420520142854
+      },
+      {
+        "ticker": "TLN",
+        "score": -0.6166439695921102
       }
     ],
     "flatten": {
-      "said": "0 priced buys \u00b7 cash $108,616.66",
+      "said": "0 priced buys \u00b7 cash $107,448.18",
       "bullets": [
         "0 priced buys",
-        "cash $108,616.66"
+        "cash $107,448.18"
       ]
     },
     "general": {
@@ -835,31 +815,6 @@
     }
   },
   "lands": [
-    {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T08:10:15.533087-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-15_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 8155,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-09-15_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 3692,
-          "preview": "# Finviz homepage market digest \u2014 2026-09-15\n**Generated:** 2026-09-15T08:10:15.522085-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point lower as oil trades above $100 and 10-year yield hits 2007 high ahead of Fed meeting and Empire State data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** VEEA, BDRX, MYSZ, CNTB, FTFT, ENVA, PLAY, FPS, VRA, TCOM\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-15\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-15\n**Generated:** 2026-09-15T08:10:15.522085-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point lower as oil trades above $100 and 10-year yield hits 2007 high ahead of Fed meeting and Empire State data\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** VEEA, BDRX, MYSZ, CNTB, FTFT, ENVA, PLAY, FPS, VRA, TCOM\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-15\n**Clock use:** `same_morning`"
-    },
     {
       "key": "map_heat",
       "title": "Map heat morning overlay",
@@ -3569,6 +3524,45 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-09-15\n_Generated 2026-09-15T16:45:58 \u2014 live `flatten_robust`._\n**S=-4.39; hard-red: no new buys; holds and due 1d exits stay**\n- Score **-4.39** (DOWN) \u00b7 route **hold** \u00b7 HARD-RED\n- Cash leftover **$108,616.66** (after 09:30 $108,616.66 \u00b7 after 16:00 $108,616.66)\n- Prior close **$108,616.66** \u00b7 09:30 **$108,616.66** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$108,616.66**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$108,616.66** \u00b7 2026-09-15 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, "
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T12:46:14.073277-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 87526,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11528,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T12:46:13.585626-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+        },
+        {
+          "path": "data/exports/finviz_2026-09-15.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11101301,
+          "preview": "11634 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11415288,
+          "preview": "11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T12:46:13.585626-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11634 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
