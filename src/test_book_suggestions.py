@@ -154,6 +154,7 @@ def test_day_board_falls_back_to_suggestions() -> None:
     assert "function ticketsLookLive" in html
     assert "afterBell() ? ticketsLookLive" in html
     assert "earlyBuys" in html
+    assert "!buys && !sells && !afterBell()" in html
 
 
 def test_preopen_and_book_publish_strip_without_paper() -> None:

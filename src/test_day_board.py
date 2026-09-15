@@ -200,6 +200,7 @@ def test_day_board_html_has_raw_poll() -> None:
     assert "function ticketsLookLive" in html
     assert '"today_strategies.json"' in html
     assert "earlyBuys" in html
+    assert "!buys && !sells && !afterBell()" in html
 
 
 def test_should_not_push_locally() -> None:
