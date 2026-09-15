@@ -411,9 +411,9 @@ def render_md(payload: dict) -> str:
         "| Sleeve | Side | Mode | X% | Hold | n | Win | $ | Verdict |",
         "|---|---|---|---:|---:|---:|---:|---:|---|",
     ]
-    show = list(payload.get("keeps") or []) + list(payload.get("watches") or [])
+    show = [s for s in (payload.get("strategies") or []) if s.get("picked")]
     if not show:
-        show = list(payload.get("strategies") or [])[:24]
+        show = list(payload.get("keeps") or []) + list(payload.get("watches") or [])
     for s in show:
         p = s.get("picked") or {}
         x = p.get("dip_pct")
@@ -472,11 +472,11 @@ document.getElementById('note').textContent =
   (D.note||'') + '  ' + (D.from_date||'') + ' → ' + (D.to_date||'') +
   ' · hard-red ' + (D.hard_red_n||0) +
   ' · KEEP ' + (D.n_keep||0) + ' · WATCH ' + (D.n_watch||0);
-const rows = (D.keeps||[]).concat(D.watches||[]);
+const rows = (D.strategies||[]).filter(function(s){{ return s && s.picked; }});
 const tb = document.querySelector('#tbl tbody');
 function pct(v){{ return v==null ? '—' : (100*v).toFixed(1)+'%'; }}
 function usd(v){{ return v==null ? '—' : (v>=0?'+':'')+Number(v).toFixed(2); }}
-(rows.length?rows:(D.strategies||[]).slice(0,30)).forEach(function(s){{
+(rows.length?rows:(D.keeps||[]).concat(D.watches||[])).forEach(function(s){{
   const p = s.picked||{{}};
   const tr = document.createElement('tr');
   const v = p.verdict||'';

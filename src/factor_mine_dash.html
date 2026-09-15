@@ -1784,8 +1784,8 @@ window.addEventListener('resize', draw);
     function paintHoldX(H){
       var hx=document.getElementById('holdXBoard');
       if(!hx||!H) return;
-      var list=(H.keeps||[]).concat(H.watches||[]);
-      if(!list.length) list=(H.strategies||[]).slice(0,24);
+      var list=(H.strategies||[]).filter(function(s){ return s && s.picked; });
+      if(!list.length) list=(H.keeps||[]).concat(H.watches||[]);
       function pct(v){ return v==null?'—':(100*Number(v)).toFixed(1)+'%'; }
       function usd(v){ return v==null?'—':(Number(v)>=0?'+':'')+Number(v).toFixed(2); }
       var tr=list.map(function(s){

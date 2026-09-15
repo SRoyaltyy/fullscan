@@ -141,7 +141,28 @@ class HoldXSweep(unittest.TestCase):
                     "verdict": "WATCH",
                 },
             }],
-            "strategies": [],
+            "strategies": [{
+                "name": "union_hot_n4_h1", "side": "long",
+                "picked": {
+                    "mode": "dip_scoop", "hold": 2, "dip_pct": 1.5,
+                    "n_fires": 40, "win_rate": 0.56, "pnl": 1.2,
+                    "verdict": "KEEP",
+                },
+            }, {
+                "name": "short_news_r_macd_h3", "side": "short",
+                "picked": {
+                    "mode": "short_only", "hold": 1, "dip_pct": None,
+                    "n_fires": 12, "win_rate": 0.58, "pnl": 0.4,
+                    "verdict": "WATCH",
+                },
+            }, {
+                "name": "short_alarm_h3", "side": "short",
+                "picked": {
+                    "mode": "short_only", "hold": 5, "dip_pct": None,
+                    "n_fires": 66, "win_rate": 0.36, "pnl": 391.04,
+                    "verdict": "KILL",
+                },
+            }],
         }
         md = Path("03_scoreboard/HARD_RED_SIT.md")
         raw = md.read_text(encoding="utf-8")

@@ -358,3 +358,43 @@ This experiment adds opt-in `hard_red_mode` (`sit` / `short_only` / `dip_scoop` 
 **B dip-scoop X=1.0% (intraday): KILL.** KILL B dip-scoop X=1.0% (intraday): 55 fires but after-fee win 49.1% ≤ 55%. webull n=26 win=54%; flatten n=29 win=45%
 
 Do not merge a live policy change from this PR.
+
+<!-- HOLD_X_BEGIN -->
+
+## Hold × X sweep (research, not a wire)
+
+Paper counterfactual. Live sit unchanged. (A) short-only at the 09:30 open. (B) long scoop at first touch of open−X%. Hold H = close of the H-th session including entry. X and H are the tested winners on this window, not a guess.
+
+Window `2026-08-13` → `2026-09-14` · 10 hard-red sessions · hold grid [1, 2, 3, 5] · X grid [0.5, 1.0, 1.5, 2.0, 3.0].
+
+**KEEP** `0` · **WATCH** `1` · strategies `25`. Live sit stays.
+
+| Sleeve | Side | Mode | X% | Hold | n | Win | $ | Verdict |
+|---|---|---|---:|---:|---:|---:|---:|---|
+| `combo_sh_macd_5050_shared` | mixed | short_and_scoop | 1.5 | 2 | 44 | 45.5% | -11.47 | KILL |
+| `flatten_io` | long | dip_scoop | 3 | 3 | 8 | 50.0% | -1.81 | KILL |
+| `short_news_r_macd_h3` | short | short_only | — | 2 | 14 | 42.9% | -4.00 | KILL |
+| `union_hot_n4_h1` | long | dip_scoop | 1.5 | 2 | 30 | 46.7% | -7.47 | KILL |
+| `short_news_r_h3` | short | short_only | — | 2 | 19 | 31.6% | -9.17 | KILL |
+| `short_news_or_h3` | short | short_only | — | 2 | 19 | 31.6% | -9.17 | KILL |
+| `short_alarm_h3` | short | short_only | — | 5 | 66 | 36.4% | +391.04 | KILL |
+| `short_rsi_ob_h3` | short | short_only | — | 3 | 69 | 32.8% | -70.36 | KILL |
+| `short_macd_dn_h3` | short | short_only | — | 5 | 66 | 34.1% | -3.93 | KILL |
+| `short_last_red_h3` | short | short_only | — | 5 | 71 | 33.3% | -8.80 | KILL |
+| `short_extended_h3` | short | short_only | — | 2 | 65 | 46.2% | +126.40 | KILL |
+| `union_e_fresh_h3` | long | dip_scoop | 3 | 1 | 27 | 29.6% | -77.22 | KILL |
+| `union_h3` | long | dip_scoop | 2 | 5 | 31 | 47.1% | -2.71 | KILL |
+| `flatten_h3` | long | dip_scoop | 3 | 3 | 12 | 44.4% | -2.71 | KILL |
+| `flatten_h5` | long | dip_scoop | 3 | 3 | 12 | 44.4% | -2.71 | KILL |
+| `ohlc_hot_h3` | long | dip_scoop | 3 | 5 | 36 | 40.7% | -143.58 | KILL |
+| `yday_gainer_h3` | long | dip_scoop | 3 | 5 | 29 | 46.7% | -99.31 | KILL |
+| `union_rsi_os_h3` | long | dip_scoop | 0.5 | 5 | 11 | 50.0% | +0.10 | KILL |
+| `union_macd_up_h3` | long | dip_scoop | 3 | 2 | 28 | 39.3% | -5.21 | KILL |
+| `union_flow_in_h3` | long | dip_scoop | 3 | 1 | 8 | 62.5% | -0.26 | KILL |
+| `union_news_pack_h1` | long | dip_scoop | 1.5 | 3 | 10 | 87.5% | +17.49 | WATCH |
+| `union_join_vol_green_h1` | long | dip_scoop | 3 | 2 | 16 | 50.0% | -7.14 | KILL |
+| `union_earn_react_h3` | long | dip_scoop | 3 | 1 | 25 | 32.0% | -74.33 | KILL |
+
+KEEP needs ≥30 fires and >55% after Futubull fees. WATCH is n≥10 and win>50% — not a live wire. Close grades; it does not trigger the scoop.
+
+<!-- HOLD_X_END -->

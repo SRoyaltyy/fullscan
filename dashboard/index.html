@@ -1076,8 +1076,8 @@ document.getElementById('fees').textContent=
   function paintHoldX(D){
     var el = ensureHoldXBox();
     if(!el || !D) return;
-    var rows = (D.keeps||[]).concat(D.watches||[]);
-    if(!rows.length) rows = (D.strategies||[]).slice(0, 24);
+    var rows = (D.strategies||[]).filter(function(s){ return s && s.picked; });
+    if(!rows.length) rows = (D.keeps||[]).concat(D.watches||[]);
     var body = rows.map(function(s){
       var p = s.picked || {};
       var x = p.dip_pct;
