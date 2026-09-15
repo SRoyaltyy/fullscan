@@ -2216,6 +2216,205 @@
       "sources": [
         "https://ceo-na.com/news/strikes-averted-as-u-s-dockworkers-accept-six-year-contract/"
       ]
+    },
+    {
+      "title": "Commerce final AD/CVD on solar cells from India, Indonesia, Laos",
+      "category": "government",
+      "timing": "past",
+      "date_or_window": "2026-09-11",
+      "regions": [
+        "US",
+        "IN",
+        "ID",
+        "LA"
+      ],
+      "sectors": [
+        "Energy",
+        "Industrials",
+        "Utilities"
+      ],
+      "expected_direction": "mixed",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "Final dumping/subsidy margins are steep (India ~123% AD + 126% CVD; Indonesia AD 94% and CVD 73–174%; Laos AD 65% and CVD 82–154%), a supply-cost shock for US solar developers and a tailwind for domestic module makers if ITC affirms injury.",
+      "what_to_watch": "USITC final injury vote on 2026-10-14; if affirmative, Commerce issues orders around 2026-11-02 and cash deposits lock in.",
+      "status": "new",
+      "sources": [
+        "https://taiyangnews.info/markets/us-finalizes-solar-import-duties-india-indonesia-laos",
+        "https://www.trade.gov/final-affirmative-determinations-antidumping-duty-and-countervailing-duty-investigations-0",
+        "https://www.mercomindia.com/us-finalizes-steep-antidumping-countervailing-duties-for-indian-solar-cells"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "European Parliament adopts CBAM expansion / anti-circumvention mandate",
+      "category": "legislative",
+      "timing": "today",
+      "date_or_window": "2026-09-15",
+      "regions": [
+        "EU",
+        "CN"
+      ],
+      "sectors": [
+        "Industrials",
+        "Basic Materials",
+        "Energy"
+      ],
+      "expected_direction": "mixed",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "MEPs voted 464–50–159 to push CBAM from basic materials into hundreds of downstream steel/aluminium goods and to tighten China-linked resource-shuffling rules, raising carbon-cost risk for exporters into the EU.",
+      "what_to_watch": "Trilogue vs Council's narrower ~200-product list and whether a 2028 start for downstream extension survives; related Temporary Decarbonisation Fund also advanced.",
+      "status": "new",
+      "sources": [
+        "https://www.europarl.europa.eu/news/en/press-room/20260911IPR47450/strengthening-the-eu-carbon-border-adjustment-mechanism-and-closing-loopholes",
+        "https://eutoday.net/meps-vote-wider-cbam-eu-manufactured-imports/",
+        "https://www.esgtoday.com/eu-parliament-votes-to-expand-product-list-close-loopholes-in-cbam-carbon-import-tax/"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "MIIT/NDRC 15th Five-Year Plan for electronic information manufacturing",
+      "category": "government",
+      "timing": "today",
+      "date_or_window": "2026-09-15",
+      "regions": [
+        "CN"
+      ],
+      "sectors": [
+        "Technology",
+        "Industrials"
+      ],
+      "expected_direction": "mixed",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "Official plan targets scale-above electronics revenue above 30 trillion yuan by 2030, 3.5% R&D intensity, and full-chain IC/AI-hardware/advanced-computing catch-up — a state-capacity signal into semis, servers, and energy electronics.",
+      "what_to_watch": "Follow-through funding, equipment localization, and whether the plan hardens export-control retaliation risk around the Sept 24 Trump-Xi window.",
+      "status": "new",
+      "sources": [
+        "https://www.gov.cn/zhengce/202609/content_7081169.htm",
+        "http://www.china.org.cn/china/Off_the_Wire/2026-09/15/content_118696528.shtml"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "China State Council notice on SME overdue-payment governance",
+      "category": "government",
+      "timing": "past",
+      "date_or_window": "2026-09-10",
+      "regions": [
+        "CN"
+      ],
+      "sectors": [
+        "Industrials",
+        "Financial",
+        "Consumer Cyclical"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "high",
+      "why_it_matters": "Beijing is forcing large firms/SOEs toward cash payment within 60 days and capping commercial bills, a cash-flow transfer from big buyers to SMEs after industrial receivables hit ~28.9tn yuan.",
+      "what_to_watch": "SOE accounts-payable rundowns, commercial-bill issuance, and whether the squeeze hits listed SOE working capital into Q4.",
+      "status": "new",
+      "sources": [
+        "https://www.gov.cn/yaowen/liebiao/202609/content_7080631.htm",
+        "http://www.china.org.cn/2026-09/15/content_118697159.shtml",
+        "http://global.chinadaily.com.cn/a/202609/15/WS6aa89cb5e4b06d4aa055e085.html"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "FDA opens Expedited IND pilot under Operation TrialBlazer",
+      "category": "government",
+      "timing": "today",
+      "date_or_window": "2026-09-15",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Healthcare"
+      ],
+      "expected_direction": "bullish",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "FDA began taking paired sponsor/QRI applications for a pilot meant to shorten time-to-first-in-human studies, a deregulatory catalyst for early-stage biotech versus China/Australia trial venues.",
+      "what_to_watch": "Application cutoff 2026-10-30 and which 8–10 pairs FDA selects; this is process reform, not a PDUFA binary.",
+      "status": "new",
+      "sources": [
+        "https://www.statnews.com/2026/09/15/fda-launches-program-to-shorten-drug-approval-times/",
+        "https://www.hhs.gov/press-room/hhs-launches-clinical-trials-reform-initiative.html"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "Japan Q2 GDP revised up to 1.4% annualized",
+      "category": "macro_data",
+      "timing": "past",
+      "date_or_window": "2026-09-08",
+      "regions": [
+        "JP"
+      ],
+      "sectors": [
+        "BROAD",
+        "Financial",
+        "Consumer Cyclical"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "high",
+      "why_it_matters": "Second print lifted real GDP to +0.4% q/q / +1.4% annualized on a narrower capex drop, keeping a third straight expansion in place ahead of this week's BoJ hike decision — but consumption is still basically flat.",
+      "what_to_watch": "Whether the revision hardens the 1.25% hike call on 2026-09-17/18 or is dismissed as war-quarter noise.",
+      "status": "new",
+      "sources": [
+        "https://mainichi.jp/english/articles/20260908/p2g/00m/0bu/022000c"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "Treasury doubles long-end coupon buybacks; $6bn 10–20yr op",
+      "category": "government",
+      "timing": "past",
+      "date_or_window": "2026-09-09..2026-09-10",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Financial",
+        "BROAD"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "Liquidity buybacks in 10–30yr paper were lifted from $2bn to at least $4bn (first op sized at $6bn) just as the 10-year was breaking 5% — a duration-supply offset, not QE, and it did not stop the selloff.",
+      "what_to_watch": "Subsequent long-end ops through the Nov 4 refunding and whether dealers keep offering 8–18x the cap.",
+      "status": "new",
+      "sources": [
+        "https://home.treasury.gov/news/press-releases/sb0607",
+        "https://www.nytimes.com/2026/09/09/business/economy/treasury-repurchase-bessent.html"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "AutoZone Q4 FY2026 earnings",
+      "category": "earnings",
+      "timing": "upcoming",
+      "date_or_window": "2026-09-22",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Consumer Cyclical"
+      ],
+      "expected_direction": "unclear",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "High-multiple off-price auto-parts bellwether is a clean read on US DIY/DIFM demand and ticket inflation after the rate shock; it sits outside the primary's Sept 13–20 cluster.",
+      "what_to_watch": "SSS, gross margin vs oil/freight costs, and FY2027 guidance vs ~$54.3 EPS / ~$6.7bn sales consensus.",
+      "status": "new",
+      "sources": [
+        "https://www.marketbeat.com/instant-alerts/upcoming-autozone-azo-to-release-earnings-on-tuesday-2026-09-15/"
+      ],
+      "origin": "catcher"
     }
   ],
   "top_risks": [
@@ -2241,5 +2440,13 @@
   },
   "repaired": false,
   "provider": "openclaw",
-  "merged_with_prior_run": true
+  "merged_with_prior_run": true,
+  "catcher": {
+    "ran": true,
+    "replaced_primary": false,
+    "found": 8,
+    "duplicates_dropped": 0,
+    "coverage_assessment": "Primary was strong on the stacked tightening week (FOMC/BoE/BoJ, 5% 10-year, Hormuz/oil, US-Canada tariffs, several Trump EOs, EPA, OFAC, and FCC entity list) and already caught the obvious second-tier US data. It was blind on Commerce trade-remedy finals, today's EU CBAM vote, and China's industrial-policy drop (electronics FYP + SME payables), which are the classic government misses.",
+    "biggest_gap": "Commerce final AD/CVD determinations on solar cells/modules from India, Indonesia, and Laos (2026-09-11), with ITC injury still ahead on 2026-10-14."
+  }
 }
