@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T15:21:55.090242-04:00",
+  "generated_at": "2026-09-15T15:23:04.652851-04:00",
   "items": [
     {
       "ok": true,
@@ -40,7 +40,7 @@
       "kind": "news_parse",
       "path": "01_daily/news/2026-09-15_parsed.json",
       "reason": "",
-      "size": 109264,
+      "size": 124659,
       "carried": false,
       "timeout": false,
       "empty": false,

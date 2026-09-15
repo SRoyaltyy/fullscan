@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T15:22:45.938283-04:00",
+  "generated_at": "2026-09-15T15:23:06.342215-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -185,7 +185,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 109264
+          "size": 124659
         },
         {
           "key": "events",
@@ -377,7 +377,7 @@
           "size": 16029
         }
       ],
-      "said": "general DOWN  -3.65 \u00b7 sectors 1 up / 8 down / 2 flat \u00b7 news 21 items",
+      "said": "general DOWN  -3.65 \u00b7 sectors 1 up / 8 down / 2 flat \u00b7 news 27 items",
       "bullets": [
         "bad: Asia -0.72% (Kospi -3.26%)",
         "bad: 1w 10Y +19bp / 5% handle",
@@ -796,14 +796,14 @@
       ]
     },
     "news": {
-      "said": "21 items",
+      "said": "27 items",
       "bullets": [
         "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
         "OPEC+ holds October output quotas unchanged",
+        "OPEC+ holds October quotas unchanged",
         "Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comments boost September U.S. rate hike expectations",
         "Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year",
-        "Another rate hike, just for insurance: Five questions for the ECB",
-        "10-year Treasury yield breaches 5% \u2014 global bond selloff"
+        "Another rate hike, just for insurance: Five questions for the ECB"
       ]
     },
     "weather": {
@@ -815,31 +815,6 @@
     }
   },
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T09:12:19.350618-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-15_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 269446,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-15_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 17486,
-          "preview": "# MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T09:12:19.021750-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T09:12:19.021750-04:00"
-    },
     {
       "key": "sector_predict",
       "title": "Per-sector predict (all 11)",
@@ -3528,6 +3503,31 @@
         }
       ],
       "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, WDS, SKM \u00b7 2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 PBR, SM, WDS, CFFN, SFL"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T15:23:04.951709-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 124659,
+          "preview": "raw=252 usable=27 single=34 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | OPEC+ holds October output quotas unchanged | OPEC+ holds October quotas unchanged | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 5509,
+          "preview": "# News Parse v2 \u2014 2026-09-15T15:23:04.395304-04:00\nWindow\u224848h | raw=252 | usable=27 | single_name=34 | noise_dropped=191\nusable polarity={'+': 1, '-': 4, 'mixed': 0, 'neutral': 22}"
+        }
+      ],
+      "preview": "raw=252 usable=27 single=34 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | OPEC+ holds October output quotas unchanged | OPEC+ holds October quotas unchanged | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 \u00b7 # News Parse v2 \u2014 2026-09-15T15:23:04.395304-04:00\nWindow\u224848h | raw=252 | usable=27 | single_name=34 | noise_dropped=191\nusable polarity={'+': 1, '-': 4, 'mixed': 0, 'neutral': 22}"
     }
   ],
   "href": {
