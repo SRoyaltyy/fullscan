@@ -1,17 +1,39 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T07:11:00.905104-04:00",
+  "generated_at": "2026-09-15T07:24:58.865418-04:00",
   "all_ok": false,
-  "qc_all_ok": true,
-  "book_ok": true,
+  "qc_all_ok": false,
+  "book_ok": false,
   "grok_ok": false,
   "grok_fails": [
     {
-      "path": "(review)",
-      "reason": "empty_review_reply"
+      "path": "01_daily/sectors/2026-09-15/basic_materials_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-15/consumer_defensive_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-15/industrials_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-15/real_estate_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-15/technology_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-15/utilities_predict.md",
+      "reason": "missing"
     }
   ],
-  "missing_required": [],
+  "missing_required": [
+    "sector_predict"
+  ],
   "attempts": [
     {
       "key": "weather",
@@ -51,7 +73,7 @@
     {
       "key": "sector_predict",
       "title": "Per-sector predict (all 11)",
-      "returncode": 0
+      "returncode": 1
     },
     {
       "key": "map_heat_research",
@@ -67,13 +89,13 @@
   "github_runs": [
     {
       "workflow": "preopen_all.yml",
-      "n_today": 6,
+      "n_today": 4,
       "latest": {
-        "id": 34955668851,
-        "status": "queued",
-        "conclusion": null,
+        "id": 34946431321,
+        "status": "completed",
+        "conclusion": "failure",
         "event": "workflow_dispatch",
-        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/34955668851"
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/34946431321"
       }
     },
     {
@@ -140,7 +162,7 @@
     }
   ],
   "qc": {
-    "sector_n_ok": 10,
+    "sector_n_ok": 5,
     "sector_n_total": 11,
     "items": [
       {
@@ -183,14 +205,14 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-09-15_finviz_digest.json",
-        "size": 87841
+        "size": 87542
       },
       {
         "kind": "finviz_market_digest",
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-09-15_finviz_market_digest.json",
-        "size": 7048
+        "size": 6662
       },
       {
         "kind": "finviz_market_digest",
@@ -204,7 +226,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/map_heat/2026-09-15_map_heat.json",
-        "size": 270898
+        "size": 269893
       },
       {
         "kind": "map_heat_baseline",
@@ -222,10 +244,10 @@
       },
       {
         "kind": "sector_predict",
-        "ok": true,
-        "reason": "",
+        "ok": false,
+        "reason": "missing",
         "path": "01_daily/sectors/2026-09-15/basic_materials_predict.md",
-        "size": 16185
+        "size": 0
       },
       {
         "kind": "sector_predict",
@@ -271,31 +293,31 @@
       },
       {
         "kind": "sector_predict",
-        "ok": true,
-        "reason": "",
+        "ok": false,
+        "reason": "missing",
         "path": "01_daily/sectors/2026-09-15/industrials_predict.md",
-        "size": 17775
+        "size": 0
       },
       {
         "kind": "sector_predict",
-        "ok": true,
-        "reason": "",
+        "ok": false,
+        "reason": "missing",
         "path": "01_daily/sectors/2026-09-15/real_estate_predict.md",
-        "size": 14617
+        "size": 0
       },
       {
         "kind": "sector_predict",
-        "ok": true,
-        "reason": "",
+        "ok": false,
+        "reason": "missing",
         "path": "01_daily/sectors/2026-09-15/technology_predict.md",
-        "size": 17161
+        "size": 0
       },
       {
         "kind": "sector_predict",
-        "ok": true,
-        "reason": "",
+        "ok": false,
+        "reason": "missing",
         "path": "01_daily/sectors/2026-09-15/utilities_predict.md",
-        "size": 14255
+        "size": 0
       }
     ]
   }
