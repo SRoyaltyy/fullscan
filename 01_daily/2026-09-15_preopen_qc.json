@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T07:46:04.993420-04:00",
+  "generated_at": "2026-09-15T07:49:53.867647-04:00",
   "items": [
     {
       "ok": true,
@@ -40,7 +40,7 @@
       "kind": "news_parse",
       "path": "01_daily/news/2026-09-15_parsed.json",
       "reason": "",
-      "size": 61551,
+      "size": 86307,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -62,7 +62,7 @@
       "kind": "finviz_digest",
       "path": "01_daily/news/2026-09-15_finviz_digest.json",
       "reason": "",
-      "size": 87841,
+      "size": 87910,
       "carried": false,
       "timeout": false,
       "empty": false,
