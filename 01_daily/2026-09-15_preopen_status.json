@@ -1,14 +1,34 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T13:08:28.473193-04:00",
+  "generated_at": "2026-09-15T13:14:27.696740-04:00",
   "all_ok": false,
   "qc_all_ok": true,
   "book_ok": true,
   "grok_ok": false,
   "grok_fails": [
     {
-      "path": "(review)",
-      "reason": "empty_review_reply"
+      "path": "01_daily/sectors/2026-09-15/basic_materials_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-15/consumer_defensive_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-15/industrials_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-15/real_estate_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-15/technology_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-15/utilities_predict.md",
+      "reason": "missing"
     }
   ],
   "missing_required": [],
@@ -155,7 +175,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/events/2026-09-15_events.json",
-        "size": 101389
+        "size": 132003
       },
       {
         "kind": "news_judge",
@@ -183,14 +203,14 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-09-15_finviz_digest.json",
-        "size": 87547
+        "size": 87526
       },
       {
         "kind": "finviz_market_digest",
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-09-15_finviz_market_digest.json",
-        "size": 7656
+        "size": 6662
       },
       {
         "kind": "finviz_market_digest",
@@ -204,7 +224,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/map_heat/2026-09-15_map_heat.json",
-        "size": 269303
+        "size": 269893
       },
       {
         "kind": "map_heat_baseline",
