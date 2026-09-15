@@ -29,6 +29,10 @@ STRAT_URL = (
     "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main"
     "/data/day_board/today_strategies.json"
 )
+HOLD_X_URL = (
+    "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main"
+    "/dashboard/factor-mine/hard_red_hold_x.json"
+)
 
 _POLLER_HTML = """
 <div id="liveBook" class="live-book" data-live-book="1">
@@ -52,6 +56,7 @@ _POLLER_JS = r"""
   var TODAY = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today.json";
   var STRAT = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today_strategies.json";
   var SUG = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/stock_book/latest_suggestions.json";
+  var HOLDX = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/dashboard/factor-mine/hard_red_hold_x.json";
   function quoteLabel(q){
     if(!q) return "";
     var src = q.src || "";
@@ -181,8 +186,66 @@ _POLLER_JS = r"""
       paint(d);
     });
   }
+  function pct(v){ return v==null ? "—" : (100*Number(v)).toFixed(1)+"%"; }
+  function usd(v){ return v==null ? "—" : (Number(v)>=0?"+":"")+Number(v).toFixed(2); }
+  function ensureHoldXBox(){
+    var el = document.getElementById("holdXBoard");
+    if(el) return el;
+    el = document.createElement("div");
+    el.id = "holdXBoard";
+    el.className = "live-book";
+    el.setAttribute("data-hold-x", "1");
+    var host = document.getElementById("liveBook");
+    if(host && host.parentNode) host.parentNode.insertBefore(el, host.nextSibling);
+    else {
+      var wrap = document.querySelector(".wrap") || document.querySelector("main") || document.body;
+      wrap.insertBefore(el, wrap.firstChild);
+    }
+    return el;
+  }
+  function paintHoldX(D){
+    var el = ensureHoldXBox();
+    if(!el || !D) return;
+    var rows = (D.keeps||[]).concat(D.watches||[]);
+    if(!rows.length) rows = (D.strategies||[]).slice(0, 24);
+    var body = rows.map(function(s){
+      var p = s.picked || {};
+      var x = p.dip_pct;
+      return '<div class="live-book-row'+(p.verdict==="KILL"?" sell":"")+'"><b>'+
+        (s.name||"?")+'</b> '+(s.side||"")+' '+(p.mode||"—")+
+        ' X='+(x==null?"—":x)+'% hold='+(p.hold||"—")+
+        ' n='+(p.n_fires||0)+' win='+pct(p.win_rate)+
+        ' '+usd(p.pnl)+' '+(p.verdict||"")+'</div>';
+    }).join("");
+    el.innerHTML =
+      '<div class="live-book-kicker">Hard-red short + scoop — tested X and hold (research, not a wire)</div>'+
+      '<div class="live-book-date">'+(D.from_date||"")+' → '+(D.to_date||"")+
+        ' · hard-red '+(D.hard_red_n||0)+
+        ' · KEEP '+(D.n_keep||0)+' · WATCH '+(D.n_watch||0)+
+        ' · live sit stays</div>'+
+      (body || '<div class="live-book-row">no graded cells</div>')+
+      '<div class="live-book-date"><a href="/fullscan/dashboard/hard-red-sit/" style="color:#93c5fd">full hold × X board</a></div>';
+  }
+  function loadHoldX(){
+    var rels = [
+      "hard_red_hold_x.json",
+      "factor-mine/hard_red_hold_x.json",
+      "../factor-mine/hard_red_hold_x.json",
+      "../hard-red-sit/hard_red_hold_x.json"
+    ].map(function(u){
+      return fetch(u+"?t="+Date.now(), {cache:"no-store"}).then(function(r){ return r.ok ? r.json() : null; }).catch(function(){ return null; });
+    });
+    Promise.all([
+      fetch(HOLDX+"?t="+Date.now(), {cache:"no-store"}).then(function(r){ return r.ok ? r.json() : null; }).catch(function(){ return null; })
+    ].concat(rels)).then(function(arr){
+      var D = arr.filter(function(x){ return x && (x.strategies || x.keeps || x.n_strategies); })[0];
+      if(D) paintHoldX(D);
+    });
+  }
   load();
+  loadHoldX();
   setInterval(load, 60000);
+  setInterval(loadHoldX, 60000);
 })();
 </script>
 """
