@@ -722,6 +722,352 @@
     },
     {
       "title": "China-Taiwan tensions; Chinese defence forum and mobilization"
+    },
+    {
+      "title": "Trump signs two executive orders on livestock/meat processing competition",
+      "category": "government",
+      "timing": "past",
+      "date_or_window": "2026-09-04",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Consumer Defensive",
+        "Industrials"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "high",
+      "why_it_matters": "Directs USDA to widen State Meat & Poultry Inspection, Cooperative Interstate Shipment and Talmadge-Aiken pathways so ranchers can process and sell meat across state lines, plus antitrust scrutiny of the big four packers — a deregulatory/competition shock to meatpacking margins (Tyson, JBS, Cargill) and a tailwind for small processors.",
+      "what_to_watch": "USDA rulemaking timeline and whether the packer-concentration language converts into an FTC/DOJ action.",
+      "status": "new",
+      "sources": [
+        "https://www.whitehouse.gov/presidential-actions/2026/09/promoting-fair-competition-in-livestock-markets-and-expanding-market-access-for-american-meat-producers/",
+        "https://www.usda.gov/about-usda/news/press-releases/2026/09/04/president-trump-signs-executive-orders-cementing-status-most-pro-rancher-administration-history"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "Executive Order 14420/14421 — national emergency over foreign bulk-power system equipment",
+      "category": "government",
+      "timing": "past",
+      "date_or_window": "2026-08-26",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Utilities",
+        "Industrials",
+        "Technology",
+        "Energy"
+      ],
+      "expected_direction": "mixed",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "Invokes IEEPA to create a prohibition-and-licensing framework for foreign-produced grid equipment (utility-scale solar inverters, battery storage, transformers) — a supply-chain and cost shock for renewables/utilities and a tailwind for domestic manufacturers; published in the Federal Register Aug 31, inside the window's run-up.",
+      "what_to_watch": "Commerce/DOE implementing rules and which countries/components land on the prohibited list.",
+      "status": "new",
+      "sources": [
+        "https://www.whitehouse.gov/presidential-actions/2026/08/declaring-a-national-emergency-to-secure-the-united-states-bulk-power-system/",
+        "https://www.federalregister.gov/documents/2026/08/31/2026-17843/declaring-a-national-emergency-to-secure-the-united-states-bulk-power-system"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "Senate procedural vote on CLARITY Act crypto market-structure bill",
+      "category": "legislative",
+      "timing": "today",
+      "date_or_window": "2026-09-15",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Financial",
+        "Technology"
+      ],
+      "expected_direction": "mixed",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "Senate Republicans released a new version of the CLARITY Act on Sept 14 and the chamber votes Tuesday on advancing it; prediction-market odds surged and Bitcoin rallied — the single biggest US crypto-regulatory catalyst of the quarter, with direct read-through to COIN, exchanges, stablecoin issuers and miners.",
+      "what_to_watch": "Whether the motion to proceed clears 60 votes and which amendments (ethics, SEC/CFTC split) get attached.",
+      "status": "new",
+      "sources": [
+        "https://news.google.com/rss/articles/CBMijwFBVV95cUxPVm5vMEdSWGFJdDZlYkFVY3dJZ29XV0RzcFZFZ0VvVzFrR3dYbjgwS19lUG9aSTVXX2lSdTlwbGFpWFNlR294VmxubHJQdFVfSGtvZlhSX0syc2Y2UUpQYUtpVFk4UkRINWhOclRWcGk1d1luX0ZBbXhUQ0JuMHg3MHBxdjA4MkVtNldzRUlYbw?oc=5",
+        "https://news.google.com/rss/articles/CBMihAFBVV95cUxNSkpaMWFjbzJ3eUtOcmdMVHlwTWhRaUFTcjlRb21mZEdvLW81N0dieEVUMktFa0tXTVljNVEwamd6UFNKNmc0V25MV2llSENVdzB6Z0ExTmZDLTRtaFBqYzJ3QWNYTFcxaXF0VGQwZ01udUNiUjI3NDRKMlFWVGkxM01iQno?oc=5"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "OFAC designations — transnational criminal organizations and counter-terrorism; VTB Bank sanctioned for Iran evasion",
+      "category": "government",
+      "timing": "past",
+      "date_or_window": "2026-09-09..2026-09-14",
+      "regions": [
+        "US",
+        "Russia",
+        "Iran"
+      ],
+      "sectors": [
+        "Financial",
+        "Energy",
+        "BROAD"
+      ],
+      "expected_direction": "bearish",
+      "impact": 2,
+      "confidence": "high",
+      "why_it_matters": "OFAC designated TCO/counter-terrorism targets on Sept 9 and the State Department sanctioned Russia's VTB Bank on Sept 14 for aiding Iran's sanctions evasion — widening the financial perimeter around the Iran war and raising secondary-sanctions risk for banks and shippers.",
+      "what_to_watch": "Follow-on designations of Iranian oil buyers and any Treasury action on shadow-fleet tankers.",
+      "status": "new",
+      "sources": [
+        "https://ofac.treasury.gov/recent-actions/20260909",
+        "https://www.state.gov/policy-issues/sanctions-and-designations/"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "Commerce export controls targeting Chinese access to remote AI servers (AI diffusion rule successor)",
+      "category": "government",
+      "timing": "upcoming",
+      "date_or_window": "2026-09-16..2026-09-29",
+      "regions": [
+        "US",
+        "CN"
+      ],
+      "sectors": [
+        "Technology"
+      ],
+      "expected_direction": "mixed",
+      "impact": 3,
+      "confidence": "medium",
+      "why_it_matters": "The administration's cut-down AI diffusion rule, reportedly targeting Chinese access to remote AI compute, could be shared with industry as soon as September — a direct overhang on Nvidia/AMD China revenue and on cloud providers leasing compute to Chinese-linked entities.",
+      "what_to_watch": "BIS publication of the interim final rule and whether it captures third-country (Malaysia, Singapore) transshipment.",
+      "status": "new",
+      "sources": [
+        "https://news.google.com/rss/articles/CBMivgJBVV95cUxNV3RGYmw3MU9Ua3ltUW91dXBjSURjWlhYcnIxZ3A0Nkx5cVJJUEZtam1hak8zazhDeS1jRExGYzhvcHVTUmNRT3AzV2JnVjh1R09GdUlRaXgwbElHdHdxRWZ3RUREbDVHSVpYVjZOVXV3SENsWFpqSG9PQ1h0b1dVT19CaEdhbHpDSklSbmRmNC1KeWJ3Z1ZtaFhWekhpY0pBTGFPSGtmbDFqenFNVmF2NThpNm9lMWtDdmU0UHFtcEhFUnRjTmw4U1RvdVFDWVdsNTZmcmljdGlMbHB6bmM4QUJ6OXJ3VlNabU04MmVzMlUtck52ZlhFdF9CTFI0aTVTU0xNQXpKVmlwMVEzdy1pYUhBb2YyZmFBY2NTTHBaR1lfM0RwQ3gwY0NGZHc2TVBTbzFqRXdFaFgtclVpTUE?oc=5"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "EU prepares 'Buy European' public-procurement rules aimed at China",
+      "category": "geopolitical",
+      "timing": "upcoming",
+      "date_or_window": "2026-09-16..2026-09-29",
+      "regions": [
+        "EU",
+        "CN"
+      ],
+      "sectors": [
+        "Industrials",
+        "Technology",
+        "Basic Materials",
+        "BROAD"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "Brussels is expected to unveil procurement rules favouring European firms in public contracts, and EU/China trade chiefs hold a crunch videoconference Thursday — a fresh EU-China trade friction thread the primary did not carry.",
+      "what_to_watch": "Publication date of the procurement regulation and whether Beijing retaliates against EU exporters.",
+      "status": "new",
+      "sources": [
+        "https://europeanbusinessmagazine.com/eu-targets-china-with-buy-european/",
+        "https://www.politico.eu/article/eu-and-chinese-trade-chiefs-to-hold-videoconference-thursday/"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "University of Michigan September preliminary sentiment — 47.8, 1-yr inflation expectations jump to 4.6%",
+      "category": "macro_data",
+      "timing": "past",
+      "date_or_window": "2026-09-11",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD",
+        "Consumer Cyclical",
+        "Consumer Defensive"
+      ],
+      "expected_direction": "bearish",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "Sentiment fell 3.9 points to 47.8 (down 7.5% m/m) while year-ahead inflation expectations rose to 4.6%, the highest since June — the stagflation signal that sits directly behind the Fed's hike and is a core input to the SEP.",
+      "what_to_watch": "The final September print (Sept 26) and whether 5-10yr expectations also drift higher.",
+      "status": "new",
+      "sources": [
+        "https://www.sca.isr.umich.edu/",
+        "https://www.advisorperspectives.com/dshort/updates/2026/09/11/consumer-sentiment-falls-again-in-september"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "Initial jobless claims — 206k (week of Sept 10), matching expectations",
+      "category": "macro_data",
+      "timing": "past",
+      "date_or_window": "2026-09-10",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "BROAD"
+      ],
+      "expected_direction": "unclear",
+      "impact": 2,
+      "confidence": "high",
+      "why_it_matters": "Claims held at a low 206k, down 1k, keeping the labour market tight enough to validate the Fed's hike and undercut the 'Fed is hiking into a weakening economy' argument.",
+      "what_to_watch": "Next print Sept 17 and whether the insured-unemployment rate starts to drift up.",
+      "status": "new",
+      "sources": [
+        "https://fred.stlouisfed.org/series/ICSA",
+        "https://sigmanomics.com/us/initial-jobless-claims"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "30-year Treasury auction — $22bn stops at 5.308%, bid-to-cover 2.61x",
+      "category": "macro_data",
+      "timing": "past",
+      "date_or_window": "2026-09-10",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Financial",
+        "BROAD",
+        "Real Estate"
+      ],
+      "expected_direction": "mixed",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "Strong demand (2.61x vs 2.4x 12-month average, stopped 2.7bp through when-issued) at a 5.308% high yield — the key test of whether the 5% 10-year regime is a supply problem or a term-premium repricing, and it passed.",
+      "what_to_watch": "The 10-year and 20-year auctions later in September and whether foreign/indirect bid share holds.",
+      "status": "new",
+      "sources": [
+        "https://helious.io/auctions/30-year-bond",
+        "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-09-10-2026/card/auction-of-30-year-treasurys-meets-with-strong-demand-NIqqgThVejlk8F0DnOzw"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "EIA weekly petroleum and natural gas storage — crude -0.4mb, gas +40 Bcf to 3,254 Bcf",
+      "category": "macro_data",
+      "timing": "past",
+      "date_or_window": "2026-09-04..2026-09-10",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Energy"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "high",
+      "why_it_matters": "Refinery utilisation ran at 97.8% with crude stocks drawing modestly, while gas storage sits 79 Bcf below last year — the physical backdrop to the Brent spike and a live input for winter gas/power pricing.",
+      "what_to_watch": "Whether the Iran-war supply disruption starts showing up as a US crude build or a product-crack blowout.",
+      "status": "new",
+      "sources": [
+        "https://ir.eia.gov/wpsr/wpsrsummary.pdf",
+        "https://ir.eia.gov/ngs/ngs.html"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "Copper hits record $14,875/t on LME then crashes 4.7% on stalled US tariff decision",
+      "category": "macro_data",
+      "timing": "past",
+      "date_or_window": "2026-09-10",
+      "regions": [
+        "US",
+        "Global"
+      ],
+      "sectors": [
+        "Basic Materials",
+        "Industrials"
+      ],
+      "expected_direction": "bearish",
+      "impact": 3,
+      "confidence": "medium",
+      "why_it_matters": "A record intraday high followed by a 4.7% COMEX collapse on a stalled Section 232 copper tariff decision shows the metals complex is now trading policy risk rather than physical fundamentals — a warning for the whole tariff-sensitive commodity complex.",
+      "what_to_watch": "The timing of the copper tariff determination and whether the record-to-crash pattern repeats in aluminium or steel.",
+      "status": "new",
+      "sources": [
+        "https://discoveryalert.com/news/copper-prices-record-crash-tariff-september-2026/"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "Lennar FQ3 2026 earnings",
+      "category": "earnings",
+      "timing": "upcoming",
+      "date_or_window": "2026-09-16..2026-09-17",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Consumer Cyclical",
+        "Real Estate",
+        "Basic Materials",
+        "Financial"
+      ],
+      "expected_direction": "bearish",
+      "impact": 3,
+      "confidence": "high",
+      "why_it_matters": "EPS est. $1.30 on $8.37bn revenue, landing the same day as the Fed decision and one week after existing home sales hit a 14-month low — the cleanest read on whether 5%+ mortgage rates have broken the new-home order book and on builder incentive/margin compression.",
+      "what_to_watch": "New orders, cancellation rate and gross margin guidance versus the June quarter's -4% order decline.",
+      "status": "new",
+      "sources": [
+        "https://news.alphastreet.com/lennar-len-q3-2026-preview-eps-est-1-30-reports-september-17/",
+        "https://www.marketbeat.com/earnings/reports/2026-9-16-lennar-co-stock/"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "General Mills and the Sept 13-20 second-tier earnings cluster (26 companies)",
+      "category": "earnings",
+      "timing": "upcoming",
+      "date_or_window": "2026-09-16..2026-09-20",
+      "regions": [
+        "US"
+      ],
+      "sectors": [
+        "Consumer Defensive",
+        "Consumer Cyclical",
+        "Industrials"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "General Mills leads the packaged-food read on input costs and price elasticity at a moment when oil-driven freight and grain costs are rising and the consumer is deteriorating — a sector bellwether the primary skipped entirely.",
+      "what_to_watch": "Organic sales growth and any gross-margin guidance cut tied to freight/energy.",
+      "status": "new",
+      "sources": [
+        "https://finobird.com/calendar/earnings/",
+        "https://dividendatlas.com/earnings-calendar/"
+      ],
+      "origin": "catcher"
+    },
+    {
+      "title": "UK and Japan August inflation prints land alongside BoE/BoJ decisions",
+      "category": "macro_data",
+      "timing": "upcoming",
+      "date_or_window": "2026-09-16..2026-09-18",
+      "regions": [
+        "UK",
+        "JP"
+      ],
+      "sectors": [
+        "BROAD",
+        "Financial"
+      ],
+      "expected_direction": "mixed",
+      "impact": 2,
+      "confidence": "medium",
+      "why_it_matters": "UK CPI (~3.7% prior) and Japanese CPI publish in the same 48 hours as the BoE hold and the BoJ hike, so a hot UK print could flip the BoE to a hike and a hot Japan print would harden the yen-carry unwind case.",
+      "what_to_watch": "UK services CPI and Japan core-core; any BoJ language on the pace beyond 1.25%.",
+      "status": "new",
+      "sources": [
+        "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNRElkN05xS1V3dGh4c3d4Q0RFYVljQURqMlN1UDhsTENsNXhFM3ZsMDlkcmlkZG5fQmY5QldqT0FaOEJkeFRtQldwdnRuT1AxTVkzS3ptSE9lenQ1RFZDRFNWMkNfMk1UMkZYZzBzSklXZEdGVmc2VEFzbEN5REVMbTlPX3BvQWlRcjZSZDhBQXRrWjBDSGtFeUl1SVR1RERzUlhHS0s1RGpWVWJXcXZCUGdUYTQwOXFVNjVJLVBlUlY0cWcxS2pSRTlhcUJKV0VlcTF4V1Z3?oc=5"
+      ],
+      "origin": "catcher"
     }
   ],
   "windows": {
@@ -730,5 +1076,13 @@
     "upcoming": "2026-09-16..2026-09-29"
   },
   "repaired": false,
-  "provider": "openclaw"
+  "provider": "openclaw",
+  "catcher": {
+    "ran": true,
+    "replaced_primary": false,
+    "found": 14,
+    "duplicates_dropped": 0,
+    "coverage_assessment": "The primary was strong on the marquee macro/Fed complex, the Iran-oil shock, the China data dump and mega-cap AI earnings, and it correctly flagged the Section 338 Canada tariffs and the PDUFA cluster. Its blind spot was the government/regulatory layer: it missed two signed executive orders (livestock competition and the bulk-power-system national emergency), the CLARITY Act Senate vote happening today, the OFAC/VTB sanctions actions, and the pending AI-server export-control rule — plus the entire second-tier macro tape (Michigan sentiment, claims, the 30yr auction, EIA storage, copper's record-and-crash) and the Lennar/General Mills earnings tier.",
+    "biggest_gap": "Senate procedural vote on the CLARITY Act (2026-09-15) — a same-day, market-moving crypto market-structure catalyst with a new bill text released Sept 14 that the primary did not carry at all."
+  }
 }

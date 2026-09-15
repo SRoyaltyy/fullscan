@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T04:28:44.000354-04:00",
+  "generated_at": "2026-09-15T04:31:06.442561-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -85,7 +85,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 87542
+          "size": 87598
         },
         {
           "key": "digest_md",
@@ -94,7 +94,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11332
+          "size": 11324
         },
         {
           "key": "market_digest_json",
@@ -103,7 +103,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6662
+          "size": 9080
         },
         {
           "key": "market_digest_md",
@@ -112,7 +112,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 2949
+          "size": 3976
         },
         {
           "key": "market_digest_close_json",
@@ -142,7 +142,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 3,
+      "n_req_ok": 4,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -154,7 +154,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87542
+          "size": 87598
         },
         {
           "key": "in_market_digest",
@@ -163,7 +163,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6662
+          "size": 9080
         },
         {
           "key": "in_baseline",
@@ -197,9 +197,9 @@
           "name": "Events JSON",
           "path": "01_daily/events/2026-09-15_events.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 47025
         },
         {
           "key": "judge",
@@ -262,7 +262,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7282
+          "size": 7276
         },
         {
           "key": "status",
@@ -408,7 +408,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87542
+          "size": 87598
         },
         {
           "key": "weather",
@@ -416,8 +416,8 @@
           "path": "01_daily/weather/2026-09-15_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9375 vix=spiking yields=flat",
-          "size": 9375
+          "reason": "sectors=11 bytes=9373 vix=spiking yields=flat",
+          "size": 9373
         }
       ],
       "said": "hostile 9 \u00b7 neutral 2",
@@ -488,7 +488,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87542
+          "size": 87598
         },
         {
           "key": "dossiers",
@@ -548,7 +548,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87542
+          "size": 87598
         },
         {
           "key": "in_judge",
@@ -565,8 +565,8 @@
           "path": "01_daily/weather/2026-09-15_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9375 vix=spiking yields=flat",
-          "size": 9375
+          "reason": "sectors=11 bytes=9373 vix=spiking yields=flat",
+          "size": 9373
         },
         {
           "key": "in_ab",
@@ -1607,6 +1607,31 @@
         }
       ],
       "preview": "5897 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+    },
+    {
+      "key": "events_catcher",
+      "title": "Event catcher (gap hunt, no carry)",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T04:31:05.751067-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-09-15_events.json",
+          "ok": true,
+          "reason": "",
+          "size": 47025,
+          "preview": "45 events \u00b7 FOMC decision, SEP/dot plot, Warsh press conference | August advance retail sales | 10-year Treasury yield breaches 5% \u2014 global bond selloff | August CPI \u2014 core surprise locks in September hike | August PCE inflation (Fed's preferred gauge) | Bank of Japan decision \u2014 hike to 1.25% widely expected"
+        },
+        {
+          "path": "01_daily/events/2026-09-15_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 18611,
+          "preview": "# Event Scan \u2014 2026-09-15\n- events tracked: **31** (via openclaw)\n- uncertainty: **?**\n- summary:"
+        }
+      ],
+      "preview": "45 events \u00b7 FOMC decision, SEP/dot plot, Warsh press conference | August advance retail sales | 10-year Treasury yield breaches 5% \u2014 global bond selloff | August CPI \u2014 core surprise locks in September hike | August PCE inflation (Fed's preferred gauge) | Bank of Japan decision \u2014 hike to 1.25% widely expected \u00b7 # Event Scan \u2014 2026-09-15\n- events tracked: **31** (via openclaw)\n- uncertainty: **?**\n- summary:"
     }
   ],
   "href": {
