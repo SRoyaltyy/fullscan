@@ -1,11 +1,11 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T14:22:27.787439-04:00",
-  "overall": "PARTIAL",
+  "generated_at": "2026-09-15T14:28:29.335539-04:00",
+  "overall": "OK",
   "ranker_ready": true,
   "counts": {
-    "ok": 7,
-    "partial": 1,
+    "ok": 8,
+    "partial": 0,
     "fail": 0,
     "n": 8
   },
@@ -70,10 +70,10 @@
     }
   ],
   "flatten": {
-    "said": "0 priced buys \u00b7 cash $108,616.66",
+    "said": "0 priced buys \u00b7 cash $107,448.18",
     "bullets": [
       "0 priced buys",
-      "cash $108,616.66"
+      "cash $107,448.18"
     ]
   },
   "general": {
@@ -296,98 +296,98 @@
     },
     {
       "key": "live_boards",
-      "title": "Live 1d BUY/SELL strip",
+      "title": "live_boards",
       "date": "2026-09-15",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-15T14:22:26.430877-04:00",
+      "at": "2026-09-15T14:28:28.307577-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 12540,
+          "size": 16907,
           "preview": "2026-09-15 BUY DBX, APPN, META, SNAP \u00b7 SELL METC, FLNC, HNRG, OKLO, TLN, NRG, FCEL, LVWR"
         },
         {
           "path": "data/day_board/latest.json",
           "ok": true,
           "reason": "",
-          "size": 949,
+          "size": 944,
           "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
         },
         {
           "path": "data/day_board/2026-09-15.json",
           "ok": true,
           "reason": "",
-          "size": 183064,
+          "size": 186459,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
         },
         {
           "path": "data/day_board/2026-09-15_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 159628,
+          "size": 165070,
           "preview": "2026-09-15 BUY DBX, APPN, META, SNAP \u00b7 SELL METC, FLNC, HNRG, OKLO, TLN, NRG, FCEL, LVWR"
         },
         {
           "path": "data/day_board/strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 2506315,
+          "size": 2482681,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "data/day_board/2026-09-15_strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 2506330,
+          "size": 2482681,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "data/day_board/today_strategies.json",
           "ok": true,
           "reason": "",
-          "size": 2764040,
-          "preview": "2026-09-15 BUY AVAH, DBX, APPN, META \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS"
+          "size": 2757547,
+          "preview": "2026-09-15 BUY DBX, APPN, META, SNAP \u00b7 SELL METC, FLNC, HNRG, OKLO, TLN, NRG, FCEL, LVWR"
         },
         {
           "path": "data/factor_mine/strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 2506315,
+          "size": 2482681,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 159628,
+          "size": 165070,
           "preview": "2026-09-15 BUY DBX, APPN, META, SNAP \u00b7 SELL METC, FLNC, HNRG, OKLO, TLN, NRG, FCEL, LVWR"
         },
         {
           "path": "dashboard/factor-mine/strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 2506315,
+          "size": 2482681,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "dashboard/factor-mine/today_strategies.json",
           "ok": true,
           "reason": "",
-          "size": 2506315,
+          "size": 2482681,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "dashboard/today_strategies.json",
           "ok": true,
           "reason": "",
-          "size": 2764040,
-          "preview": "2026-09-15 BUY AVAH, DBX, APPN, META \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS"
+          "size": 2757547,
+          "preview": "2026-09-15 BUY DBX, APPN, META, SNAP \u00b7 SELL METC, FLNC, HNRG, OKLO, TLN, NRG, FCEL, LVWR"
         }
       ],
-      "preview": "2026-09-15 BUY DBX, APPN, META, SNAP \u00b7 SELL METC, FLNC, HNRG, OKLO, TLN, NRG, FCEL, LVWR \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-15 BUY DBX, APPN, META, SNAP \u00b7 SELL METC, FLNC, HNRG, OKLO, TLN, NRG, FCEL, LVWR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY AVAH, DBX, APPN, META \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY DBX, APPN, META, SNAP \u00b7 SELL METC, FLNC, HNRG, OKLO, TLN, NRG, FCEL, LVWR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY AVAH, DBX, APPN, META \u00b7 SELL METC, "
+      "preview": "2026-09-15 BUY DBX, APPN, META, SNAP \u00b7 SELL METC, FLNC, HNRG, OKLO, TLN, NRG, FCEL, LVWR \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-15 BUY DBX, APPN, META, SNAP \u00b7 SELL METC, FLNC, HNRG, OKLO, TLN, NRG, FCEL, LVWR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY DBX, APPN, META, SNAP \u00b7 SELL METC, FLNC, HNRG, OKLO, TLN, NRG, FCEL, LVWR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY DBX, APPN, META, SNAP \u00b7 SELL METC, FLNC, HNRG, OKLO, TLN, NRG, FCEL, LVWR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY DBX, APPN, META, SNAP \u00b7 SELL METC,"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
