@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T15:23:10.924743-04:00",
+  "generated_at": "2026-09-15T15:30:56.083498-04:00",
   "all_ok": false,
   "qc_all_ok": true,
   "book_ok": true,
@@ -175,7 +175,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/events/2026-09-15_events.json",
-        "size": 132003
+        "size": 145805
       },
       {
         "kind": "news_judge",

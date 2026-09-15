@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T15:23:12.330407-04:00",
+  "generated_at": "2026-09-15T15:30:57.486795-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -105,31 +105,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T15:21:40.637525-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-15_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 87526,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-09-15_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11377,
-          "preview": "# Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T07:31:21.815244-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T07:31:21.815244-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -290,6 +265,31 @@
         }
       ],
       "preview": "raw=252 usable=27 single=34 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | OPEC+ holds October output quotas unchanged | OPEC+ holds October quotas unchanged | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 \u00b7 # News Parse v2 \u2014 2026-09-15T15:23:04.395304-04:00\nWindow\u224848h | raw=252 | usable=27 | single_name=34 | noise_dropped=191\nusable polarity={'+': 1, '-': 4, 'mixed': 0, 'neutral': 22}"
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T15:30:56.155324-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-09-15_events.json",
+          "ok": true,
+          "reason": "",
+          "size": 145805,
+          "preview": "147 events \u00b7 10-year Treasury yield breaches 5% \u2014 global bond selloff | August CPI \u2014 core surprise locks in September hike | August PCE inflation (Fed's preferred gauge) | ECB 25bp hike delivered; hawkish forecast upgrade | China August credit/social financing \u2014 bond & equity share tops loans  | US existing home sales fall to 14-month low; mortgage rates up 3rd wee"
+        },
+        {
+          "path": "01_daily/events/2026-09-15_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 60260,
+          "preview": "# Event Scan \u2014 2026-09-15\n- events tracked: **147** (via openclaw) (merged with earlier same-day scan)\n- uncertainty: **high**\n- summary: The next 48 hours are a stacked global-tightening event: US retail sales then Warsh's first FOMC hike (highly priced), followed by BoE (hold expected) and a near-certain BoJ hike to 1.25%. Overlay is a still-hot Iran/Hormuz oil shock with Brent ~$105-108 and a 5% 10-year, then a Sept 24 Trump-Xi summit that is the last clean window to extend the Nov 10 tariff truce. China just confirmed the split (strong IP, dead credit/retail), so the market is pricing policy, war, and geopolitics \u2014 not a quiet data week."
+        }
+      ],
+      "preview": "147 events \u00b7 10-year Treasury yield breaches 5% \u2014 global bond selloff | August CPI \u2014 core surprise locks in September hike | August PCE inflation (Fed's preferred gauge) | ECB 25bp hike delivered; hawkish forecast upgrade | China August credit/social financing \u2014 bond & equity share tops loans  | US existing home sales fall to 14-month low; mortgage rates up 3rd wee \u00b7 # Event Scan \u2014 2026-09-15\n- events tracked: **147** (via openclaw) (merged with earlier same-day scan)\n- uncertainty: **high**\n- summary: The next 48 hours are a stacked global-tightening event: US retail sales then Warsh's first FOMC hike (highly priced), followed by BoE (hold expected) and a near-certain BoJ hike to 1.25%. Overlay is a still-hot Iran/Hormuz oil shock with Brent ~$105-108 and a 5% 10-year, then a Sept 24 Trump-Xi summit that is the last clean window to extend the Nov 10 tariff truce. China just confirmed the split (strong IP, dead credit/retail), so the market is pricing policy, war, and geopolitics \u2014 not a quiet data week."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
