@@ -1,67 +1,99 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T10:47:14.982428-04:00",
-  "overall": "PARTIAL",
+  "generated_at": "2026-09-15T10:51:05.187352-04:00",
+  "overall": "OK",
   "ranker_ready": true,
   "counts": {
-    "ok": 7,
-    "partial": 1,
+    "ok": 8,
+    "partial": 0,
     "fail": 0,
     "n": 8
   },
   "buy_1d": [
     {
-      "ticker": "WEX",
-      "score": 0.5040713137553983
+      "ticker": "AMGN",
+      "score": 0.09080014125288889
     },
     {
-      "ticker": "LFST",
-      "score": 0.386729538747364
+      "ticker": "LLY",
+      "score": 0.35620503368166595
     },
     {
-      "ticker": "VRSK",
-      "score": 0.26021441998687833
+      "ticker": "S",
+      "score": 0.5383606939554906
+    },
+    {
+      "ticker": "FFIV",
+      "score": 0.19348888952122334
+    },
+    {
+      "ticker": "META",
+      "score": 0.3469506591337837
+    },
+    {
+      "ticker": "SNAP",
+      "score": 0.48958801256022805
+    },
+    {
+      "ticker": "ANGX",
+      "score": 0.5324899263792778
+    },
+    {
+      "ticker": "RPD",
+      "score": 0.5251915855613591
+    },
+    {
+      "ticker": "HITI",
+      "score": 0.2895286042792773
     }
   ],
   "sell_1d": [
     {
-      "ticker": "OKLO",
-      "score": -0.4609068195172936
-    },
-    {
-      "ticker": "IONQ",
-      "score": -0.39059974142799925
-    },
-    {
-      "ticker": "QBTS",
-      "score": -0.25144340072426397
-    },
-    {
-      "ticker": "EOSE",
-      "score": -0.43378258027819
-    },
-    {
       "ticker": "METC",
-      "score": -0.6258237009331186
+      "score": -0.6600195692423577
     },
     {
       "ticker": "FLNC",
-      "score": -0.592091523723564
+      "score": -0.6059014779891931
     },
     {
       "ticker": "FCEL",
-      "score": -0.581579576942252
+      "score": -0.5946383246876308
     },
     {
-      "ticker": "HNRG",
-      "score": -0.188670121599966
+      "ticker": "OKLO",
+      "score": -0.4471021843609181
+    },
+    {
+      "ticker": "TLN",
+      "score": -0.619963013242493
+    },
+    {
+      "ticker": "TE",
+      "score": -0.44936729631534666
+    },
+    {
+      "ticker": "IONQ",
+      "score": -0.3829046741509327
+    },
+    {
+      "ticker": "LVWR",
+      "score": -0.5841307624748288
+    },
+    {
+      "ticker": "QBTS",
+      "score": -0.28547887599745464
+    },
+    {
+      "ticker": "NRG",
+      "score": -0.34849244421389436
     }
   ],
   "flatten": {
-    "said": "0 priced buys \u00b7 cash $108,616.66",
+    "said": "0 priced buys \u00b7 cash $107,448.18",
     "bullets": [
       "0 priced buys",
-      "cash $108,616.66"
+      "cash $107,448.18"
     ]
   },
   "general": {
@@ -77,19 +109,19 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "1 up / 8 down / 1 flat",
+    "said": "3 up / 7 down / 1 flat",
     "bullets": [
-      "XLB DOWN -3.7",
-      "XLC FLAT -2.7",
-      "XLY DOWN -2.3",
-      "XLP missing",
-      "XLE UP +6.8",
-      "XLF DOWN -3.9",
-      "XLV DOWN -3.3",
-      "XLI DOWN -3.3",
-      "XLRE DOWN -4.5",
-      "XLK DOWN -7.5",
-      "XLU DOWN -6.1"
+      "XLB DOWN -7.6",
+      "XLC UP +0.4",
+      "XLY DOWN -4.7",
+      "XLP FLAT -8.1",
+      "XLE UP +4.0",
+      "XLF DOWN -4.1",
+      "XLV UP +0.9",
+      "XLI DOWN -5.9",
+      "XLRE DOWN -8.5",
+      "XLK DOWN -1.5",
+      "XLU DOWN -8.2"
     ]
   },
   "lands": [
