@@ -1,6 +1,6 @@
 # flatten_robust card — 2026-09-15
 
-_Generated 2026-09-15T16:28:22 — live `flatten_robust`._
+_Generated 2026-09-15T16:42:19 — live `flatten_robust`._
 
 **S=-4.39; hard-red: no new buys; holds and due 1d exits stay**
 
@@ -45,11 +45,11 @@ Sized from marked equity **$107,448.18** as if the book were flat. `io 3d_size (
 
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
-| 16:00 ET | BIIB | io_core | 82 | $216.39 | $17,743.98 | hard-red |
-| 16:00 ET | WAY | io_core | 662 | $27.05 | $17,907.10 | hard-red |
-| 16:00 ET | JKHY | io_core | 107 | $166.19 | $17,782.87 | hard-red |
-| 16:00 ET | FOX | io_core | 297 | $60.25 | $17,894.25 | hard-red |
-| 16:00 ET | CARG | io_core | 511 | $34.99 | $17,879.89 | hard-red |
-| 16:00 ET | PRDO | io_core | 541 | $33.06 | $17,885.46 | hard-red |
+| 16:00 ET | BIIB | io_core | 82 | $215.80 | $17,695.60 | hard-red |
+| 16:00 ET | WAY | io_core | 664 | $26.94 | $17,888.16 | hard-red |
+| 16:00 ET | JKHY | io_core | 108 | $165.62 | $17,886.96 | hard-red |
+| 16:00 ET | FOX | io_core | 297 | $60.16 | $17,867.52 | hard-red |
+| 16:00 ET | CARG | io_core | 512 | $34.91 | $17,873.92 | hard-red |
+| 16:00 ET | PRDO | io_core | 542 | $33.01 | $17,891.42 | hard-red |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
