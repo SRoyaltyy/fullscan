@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T14:38:20.622000-04:00",
+  "generated_at": "2026-09-15T14:41:35.728554-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -70,59 +70,41 @@
     }
   ],
   "flatten": {
-    "said": "0 priced buys \u00b7 cash $107,448.18",
+    "said": "0 priced buys \u00b7 cash $108,616.66",
     "bullets": [
       "0 priced buys",
-      "cash $107,448.18"
+      "cash $108,616.66"
     ]
   },
   "general": {
-    "said": "DOWN  -3.65",
+    "said": "DOWN  -4.389",
     "bullets": [
-      "bad: Asia -0.72% (Kospi -3.26%)",
+      "bad: Asia -1.10% (Kospi -3.26%)",
       "bad: 1w 10Y +19bp / 5% handle",
-      "bad: WTI +5% leftover Hormuz/Petroline",
-      "good: ES/NQ +0.4%/+0.38% not confirming",
-      "good: HY contained 2.71"
+      "bad: WTI +3% leftover Hormuz/Petroline",
+      "good: ES/NQ +0.3% vs cash (not confirming)",
+      "good: HY still contained at 2.71"
     ],
-    "score": "-3.65",
+    "score": "-4.389",
     "direction": "down"
   },
   "sectors": {
     "said": "1 up / 8 down / 2 flat",
     "bullets": [
-      "XLB DOWN -7.6",
-      "XLC FLAT -3.8",
-      "XLY DOWN -3.3",
-      "XLP FLAT -5.0",
-      "XLE UP +6.8",
-      "XLF DOWN -3.8",
-      "XLV DOWN -2.9",
-      "XLI DOWN -0.5",
-      "XLRE DOWN -6.3",
-      "XLK DOWN -1.1",
-      "XLU DOWN -6.5"
+      "XLB DOWN -5.9",
+      "XLC FLAT -4.1",
+      "XLY DOWN -4.9",
+      "XLP FLAT -4.8",
+      "XLE UP +7.3",
+      "XLF DOWN -3.4",
+      "XLV DOWN -1.5",
+      "XLI DOWN -0.8",
+      "XLRE DOWN -4.9",
+      "XLK DOWN -2.0",
+      "XLU DOWN -6.7"
     ]
   },
   "lands": [
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T14:11:52.372597-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-09-15_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1119075,
-          "preview": "5897 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5897 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -458,6 +440,31 @@
         }
       ],
       "preview": "2026-09-15 BUY DBX, APPN, META, SNAP \u00b7 SELL METC, FLNC, HNRG, OKLO, TLN, NRG, FCEL, LVWR \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-15 BUY DBX, APPN, META, SNAP \u00b7 SELL METC, FLNC, HNRG, OKLO, TLN, NRG, FCEL, LVWR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY DBX, APPN, META, SNAP \u00b7 SELL METC, FLNC, HNRG, OKLO, TLN, NRG, FCEL, LVWR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY DBX, APPN, META, SNAP \u00b7 SELL METC, FLNC, HNRG, OKLO, TLN, NRG, FCEL, LVWR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY DBX, APPN, META, SNAP \u00b7 SELL METC,"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T14:41:35.158827-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-09-15.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11089030,
+          "preview": "11634 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11415288,
+          "preview": "11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11634 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
