@@ -1,12 +1,12 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T05:58:19.081352-04:00",
+  "generated_at": "2026-09-15T05:59:55.003356-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 5,
-    "partial": 3,
+    "ok": 7,
+    "partial": 1,
     "fail": 0,
     "n": 8
   },
@@ -508,11 +508,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -601,27 +601,27 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-15_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "horizons=5 names=220",
+          "size": 1600584
         },
         {
           "key": "book_md",
           "name": "Stock book MD",
           "path": "01_daily/2026-09-15_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 88517
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-09-15_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 585
         },
         {
           "key": "paper",
@@ -637,8 +637,8 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-09-15 not in dashboard dates (last=2026-09-14)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-15)",
           "size": 5867646
         }
       ],
@@ -651,9 +651,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -663,17 +663,17 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-15_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "horizons=5 names=220",
+          "size": 1600584
         },
         {
           "key": "dash_html",
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-09-15 not in dashboard dates (last=2026-09-14)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-15)",
           "size": 5867646
         },
         {
@@ -700,8 +700,90 @@
     }
   ],
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "AVAH",
+        "score": 0.6596608246322517
+      },
+      {
+        "ticker": "PACS",
+        "score": 0.665462301955157
+      },
+      {
+        "ticker": "ZIP",
+        "score": 0.615142908807446
+      },
+      {
+        "ticker": "ASTH",
+        "score": 0.5542742068005707
+      },
+      {
+        "ticker": "WIX",
+        "score": 0.6788005173143059
+      },
+      {
+        "ticker": "VRSK",
+        "score": 0.382707866885776
+      },
+      {
+        "ticker": "EPAM",
+        "score": 0.6454870208378202
+      },
+      {
+        "ticker": "DLO",
+        "score": 0.6036132330742299
+      },
+      {
+        "ticker": "CARG",
+        "score": 0.6687329343588724
+      },
+      {
+        "ticker": "LFST",
+        "score": 0.68320473670538
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "FLNC",
+        "score": -0.38712830719168295
+      },
+      {
+        "ticker": "OKLO",
+        "score": -0.24663678572837527
+      },
+      {
+        "ticker": "EOSE",
+        "score": -0.25623253349363423
+      },
+      {
+        "ticker": "QBTS",
+        "score": -0.20025436275728903
+      },
+      {
+        "ticker": "SMR",
+        "score": -0.3261704105250774
+      },
+      {
+        "ticker": "METC",
+        "score": -0.39246599707884383
+      },
+      {
+        "ticker": "LUNR",
+        "score": -0.38172340416289935
+      },
+      {
+        "ticker": "TLN",
+        "score": -0.4835154354998332
+      },
+      {
+        "ticker": "TE",
+        "score": -0.26349482450987427
+      },
+      {
+        "ticker": "WULF",
+        "score": -0.5635504946695946
+      }
+    ],
     "flatten": {},
     "general": {
       "said": "DOWN  -6.215",
@@ -1913,6 +1995,59 @@
         }
       ],
       "preview": "5897 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 DVN, SKHY, PR, MSFT, PBR"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T05:59:54.082787-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-15_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1600584,
+          "preview": "1d BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN"
+        },
+        {
+          "path": "data/stock_book/2026-09-15_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-15_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2453,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-15_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12811,
+          "preview": "2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12811,
+          "preview": "2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN"
+        },
+        {
+          "path": "01_daily/2026-09-15_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 89702,
+          "preview": "# Stock book \u2014 2026-09-15\n_Generated 2026-09-15T05:58:26.178461-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN \u00b7 2026-09-15 BUY AVAH, PACS, ZIP, ASTH, WIX, VRSK, EPAM, DLO \u00b7 SELL FLNC, OKLO, EOSE, QBTS, SMR, METC, LUNR, TLN \u00b7 # Stock book \u2014 2026-09-15\n_Generated 2026-09-15T05:58:26.178461-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
