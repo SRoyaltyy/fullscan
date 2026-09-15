@@ -1,0 +1,34 @@
+name: Workflow self-check
+
+# Never-again for #242: over-escaped fromJSON('[\"self-hosted\",\"ecs\"]')
+# is invalid JSON, so runner=ecs never spawned the predictive preopen job.
+# This job parses workflow YAML locally. No Actions API. No secrets.
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/**"
+      - "src/test_workflow_fromjson.py"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/**"
+      - "src/test_workflow_fromjson.py"
+
+permissions:
+  contents: read
+
+jobs:
+  fromjson:
+    name: fromJSON + preopen job
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: fromJSON + preopen contract
+        run: PYTHONPATH=. python3 -m src.test_workflow_fromjson
