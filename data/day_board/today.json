@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T05:00:37.354899-04:00",
+  "generated_at": "2026-09-15T05:08:10.778233-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -41,31 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "events",
-      "title": "Event scanner (primary)",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T04:27:37.594314-04:00",
-      "files": [
-        {
-          "path": "01_daily/events/2026-09-15_events.json",
-          "ok": true,
-          "reason": "",
-          "size": 30030,
-          "preview": "31 events \u00b7 FOMC decision, SEP/dot plot, Warsh press conference | August advance retail sales | 10-year Treasury yield breaches 5% \u2014 global bond selloff | August CPI \u2014 core surprise locks in September hike | August PCE inflation (Fed's preferred gauge) | Bank of Japan decision \u2014 hike to 1.25% widely expected"
-        },
-        {
-          "path": "01_daily/events/2026-09-15_events.md",
-          "ok": true,
-          "reason": "",
-          "size": 11422,
-          "preview": "# Event Scan \u2014 2026-09-15\n- events tracked: **31** (via openclaw)\n- uncertainty: **?**\n- summary:"
-        }
-      ],
-      "preview": "31 events \u00b7 FOMC decision, SEP/dot plot, Warsh press conference | August advance retail sales | 10-year Treasury yield breaches 5% \u2014 global bond selloff | August CPI \u2014 core surprise locks in September hike | August PCE inflation (Fed's preferred gauge) | Bank of Japan decision \u2014 hike to 1.25% widely expected \u00b7 # Event Scan \u2014 2026-09-15\n- events tracked: **31** (via openclaw)\n- uncertainty: **?**\n- summary:"
-    },
     {
       "key": "finviz",
       "title": "Finviz universe export",
@@ -219,6 +194,31 @@
         }
       ],
       "preview": "keys: date, generated_at, sectors"
+    },
+    {
+      "key": "map_heat_research",
+      "title": "Map heat morning delta refresh",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T05:08:09.884056-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-15_research.json",
+          "ok": true,
+          "reason": "",
+          "size": 43645,
+          "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-15_research.md",
+          "ok": true,
+          "reason": "",
+          "size": 43645,
+          "preview": "# MAP HEAT RESEARCH \u2014 2026-09-15\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+        }
+      ],
+      "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-15\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
