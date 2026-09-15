@@ -4,10 +4,10 @@
 - rubric: `00_grounding/sectors/basic_materials.md`
 - predicted_direction: **down**
 - predicted_magnitude_band: **mild**
-- total_score: **-7.604** (mult 0.9)
+- total_score: **-3.723** (mult 0.9)
 - regime: risk_off
-- divergence_flagged: **False**
-- engine: v2 · tape_anchor **-0.05** (ES +0.51%, HG -0.76%, GC -1.01%, DX +0.25%, PM:XLB +0.03%) · index_carry **-1.554** (general -6.215) · llm_overlay **-6.0** (raw -6.75)
+- divergence_flagged: **True**
+- engine: v2 · tape_anchor **2.993** (ES +0.80%, HG -0.76%, GC -1.01%, DX +0.25%, PM:XLB +0.68%) · index_carry **-0.716** (general -2.865) · llm_overlay **-6.0** (raw -6.75)
 
 ## Channel 1 sector ETF tape
 
@@ -59,37 +59,50 @@ The materials-specific overlay is the **8/18 metals-co-move floor ban firing cle
 
 ### 2. Spine + secondary (S1)
 
-**Industrial metals — COLLAPSE, deepening.** Copper **−0.76%** to $6.359 (COMEX), and per Channel 2 the LME has broken **below $14,000/t to a three-week low**, now **−6.2% from last week's record high**. The driver is **two-fold and both negative**: (a) **rising LME inventories** easing supply tightness (Economic Times / Business Recorder, 09-14: *"Copper sinks to 3-week low as dollar firms, LME stocks rise"*), and (b) the **White House copper tariff plan stalling** on affordability concerns (Reuters 09-10, Mining.com.au 09-11) — which *removes* the tariff-driven squeeze premium that carried the record run. Spine "surge" **off**; spine "collapse" is a **clean HIT**. Spine "inventory draw" is **inverted** — LME stocks are **rising**, which is the opposite HIT.
+**Industrial metals — COLLAPSE, deepening.** Copper **−0.76%** to $6.359 (COMEX), and per Channel 2 the LME has broken **below $14,000/t to a three-week low**, now **−6.2% from last week's record high**. The driver is **two-fold and both negative**: (a) hawkish Fed repricing lifting the dollar and real yields, and (b) **easing LME tightness** — TradingView (09-15): *"Copper steadies near three-week low amid easing LME tightness"*; The Edge Malaysia (09-15): *"Copper holds near US$14,000 as new deliveries signal supply relief"*; Economic Times (09-11): *"Copper price hits three-week low as inventories rise and dollar strengthens."* Spine "surge" **off**; spine "collapse" is a **clean HIT**. Spine "inventory draw" is **inverted** — new deliveries are rebuilding exchange stocks, which is the *supply-glut* side of the spine, not the draw.
 
-**China demand — FRESH same-morning hard-data miss.** This is the key change from 09-14. NBS released August activity at 02:00 GMT **today (09-15)**: **industrial output +5.2%** (beat, up from 4.5%), but **retail sales +0.4%** (miss) and **Jan–Aug fixed-asset investment −7.2% YoY** (deepening from −6.7% in Jan–Jul), with the **property slump deepening** (CNBC, Reuters, Xinhua 09-15). This is a **live, same-morning China demand-shock print** — the 8/17-style hard-data miss that the prior sessions only had as T-1/T-2 context. It confirms the **China demand shock / property stress** HIT at full weight, and it is **not** a rebound. The industrial-output beat is a genuine offset but it is a *supply-side* beat (Beijing itself warns of "supply-demand imbalance") — it does not rescue the demand channel that drives copper and chemicals.
+**China demand — FRESH SAME-MORNING HARD-DATA MISS.** NBS released August activity at 02:00 GMT today (09-15). Per Channel 2: **industrial output +5.2% y/y** (beat, vs 4.8% cons, up from 4.5% July) — the one bright spot; **retail sales +0.4% y/y** (miss, slowing from 0.6%); **fixed-asset investment −7.2% y/y for Jan–Aug** (contraction, accelerating). CNBC (09-15): *"China's August retail sales miss forecast while investment..."*; Cryptobriefing: *"retail sales, industrial production, and fixed-asset investment all missing analyst expectations."* This is the **8/17 China-miss pattern** — a same-morning hard-data miss on the demand side (retail + FAI) with the industrial beat being a supply-side offset that does **not** help materials demand. **China demand shock / property stress** is a **HIT**, and it is **live today**, not T-1.
 
-**Monetary metals — FADE.** GC **−1.01%** to $4,307.7, SI **−1.47%** to $63.205. 8/14 does **not** pay. The News Judge's "gold surge on Fed rate-cut bets lifts Barrick +8.2%" is **contradicted by the live tape** — gold is down ~1% and the Fed is pricing a *hike*. Per the 09-14 lesson, do not let a stale headline override the live Channel 1 print. MAP HEAT Gold is **dir=down** with breadth **0.073 — the worst on the board** — confirming the gold sleeve is a drag, not a floor.
+**Monetary metals — FADE.** GC **−1.01%** to $4,307.7, SI **−1.47%** to $63.205. XTB (09-15): *"Gold at five-week lows — what stands behind the decline?"* 8/14 does **not** pay. The News Judge's "gold surge on Fed rate-cut bets" headline (B: Barrick +8.21%) is **stale and contradicted** by the live tape — do not score it.
 
-**Oil-up is a cost headwind for processors, not an XLB squeeze.** Count Hormuz/oil once in S0 as the risk-off overlay; do not also credit copper as a positive floor (8/18). The chemicals-heavy book (LIN ~13%, SHW, ECL — ~40–50% combined) faces a direct oil feedstock/energy cost squeeze with WTI >$103. MAP HEAT Chemicals is **flat/low-conviction** ("merger-arb and macro-oil tape, not a demand tape"), which is a *relative* cushion but not a positive.
+**Oil-up is a cost headwind for processors, not an XLB squeeze.** Count Hormuz/oil once in S0 as the risk-off overlay; do not also credit copper as a positive floor (8/18). The chemicals-heavy book (LIN ~13%, SHW, ECL — ~40–50% combined) faces a direct oil feedstock/energy cost squeeze at WTI $103.79 / Brent $108.11. **Margin compression / cost inflation without pricing power** is a **HIT** for the majority sleeve.
 
-**Supply disruption / tariffs — now a NEGATIVE, not a positive.** The DRC concentrate ban and Section 232 copper remain on the books, but the **live catalyst is the tariff plan STALLING** — which removes the squeeze premium. This flips the "critical-minerals policy / domestic tariff support" HIT from positive to negative for the miner sleeve. APD's Q3 beat/raise is **already traded** (09-14) and carries a $2.9B clean-energy exit charge — a single-name positive, not an XLB-wide thrust.
+**Supply disruption / tariffs — stale.** DRC concentrate ban and Section 232 copper remain on the books; not a same-open catalyst. BHP ADRs fell on copper retreating from records amid US tariff uncertainty (Finviz digest) — a miner-sleeve drag, already in the copper HIT.
 
-**S1 = −2.** Per the 09-09 lesson: all four sub-channels align negative — **chemicals oil-cost drag + copper collapse (LME <$14k, −6.2% from record, stocks rising) + gold/silver fade + fresh China demand/property miss** — with **zero offsetting positive** anywhere in the book. The "not a collapse" cap does **not** apply: copper is in a genuine multi-session collapse and the minority sleeve that could have provided offset is also negative.
+**S1 = −2.** Per the 09-09 lesson: all four sub-channels align negative (chemicals oil-cost drag + copper collapse + gold/silver fade + China demand shock) with **zero offsetting positive** anywhere in the book. The "not a collapse" cap does **not** apply — copper is at a three-week low and −6.2% off the record, LME tightness is *easing* (supply relief), and the minority sleeve that could have provided offset (copper miners) is itself negative.
 
 ### 3. Breadth (S2)
 
-MAP HEAT SPLIT is **uniformly negative-to-flat** across the nested books: **Building Materials dir=down** (breadth 0.176, −2.33% d1), **Coking Coal dir=down** (both captains −4.5% on the week, 0.0 breadth), **Gold dir=down** (breadth 0.073, worst on board), **Lumber dir=down** (breadth 0.167), **Other Industrial Metals dir=down** (rare-earth complex gapped down on China summit threat), **Chemicals dir=flat** (breadth 0.188). The only positives are **Copper dir=up** (FCX/IE, breadth 0.875, +5.09% d1, EXIM financing catalyst) and **Aluminum OVERRIDE dir=up** (+2.85% d1, but explicitly *"entirely in RUT names the Materials ETF underweights"*) and **Other Precious Metals dir=up** (juniors, +2.24% w1). Per the 09-09 lesson, when the 8/18 metals-co-move pattern fires there is **no defensive pocket** inside XLB — and here the negatives dominate the nested board. The Copper nested long is real but is a **minority sleeve (~10–15%)** and is fighting a −0.76% live copper print and rising LME stocks; the Aluminum override is explicitly **not in the ETF**. **S2 = −1.**
+The 09-09/09-10 uniform-negative breadth pattern is **re-firing**. MAP HEAT shows the parent book split with **no defensive pocket**: Chemicals **flat** (breadth 0.188, "merger-arb and macro-oil tape, not a demand tape"), Building Materials **down** (breadth 0.176, −2.33% d1), Coking Coal **down** (both captains −4.5% w/w, 0.0 breadth), Gold **down** (breadth **0.073 — worst on the board**), Lumber **down** (breadth 0.167), Other Industrial Metals **down** (rare-earth complex gapped down on China summit threat). The only positives are **nested child books the parent ETF underweights**: Aluminum OVERRIDE (+2.85% d1, "no SPX captain, entirely in RUT names the Materials ETF underweights"), Copper HEAT (FCX/IE, but that is a *nested* long vs a *flat* parent and is contradicted by the live COMEX −0.76%), and Other Precious Metals (+2.24% w1, juniors financing). Per the MAP HEAT instruction, **nested overrides do not average into the parent ETF**.
+
+**S2 = −1.** Breadth is uniformly negative across the parent's actual sleeves (chemicals flat, building materials down, gold worst-on-board, coking coal down, lumber down, rare earths down) with no defensive pocket — the 09-09 rule's S2=−1 condition is met.
 
 ### 4. Flows / positioning (S3)
 
-XLB AUM ~$8.55B (09-09); no fresh flow print available this morning. The 1w rel **−2.51%** and 1m rel **−1.29%** describe a sector being **sold relative to SPY** on a persistent basis, but there is no washout/volume-spike evidence and no crowding extreme. **S3 = 0.**
+XLB ~1m net outflows from prior logs (~−$180M range). Not a washout, not a volume spike. The 09-14 lesson's S3 skill multiplier was raised to 1.25 (n=9, hit=0.667) — but there is **no fresh flow print** today to justify a non-zero score. **S3 = 0.**
 
 ### 5. Tape (S4, confirmation only)
 
-1d rel **−0.46%** is **below the 0.5% threshold**, so per the 8/27 S4-cap it **cannot be a ± confirmation**. The 3d rel **−1.55%** and 1w rel **−2.51%** are the persistent relative-underperformance lean (09-11 rule), but they are multi-horizon descriptors, not same-day tape. **S4 = 0.**
+1d rel **−0.46%** is **below the 0.5% threshold** — per the 8/27 S4-cap, this **cannot** be a ± confirmation. The 3d rel **−1.55%** and 1w rel **−2.51%** are decisive, but per the 09-04 T-1-lag rule, a prior-day lag is not fresh confirmation of *this* session. **S4 = 0.**
 
-### Reconciliation and divergence flag
+### Reconciliation
 
-Component arithmetic: S0 −1, S1 −2, S2 −1, S3 0, S4 0 = **−4.0**; × mult 0.9 = **−3.6** → **down/mild**. The engine's anchor legs (tape_anchor driven by ES −0.54%, HG −0.76%, GC −1.01%, DX +0.25%; plus index_carry from the general run) will push the deterministic total materially more negative — the same **>2× band disagreement** flagged in the 09-14 lesson. Per that lesson I report **both**: the component arithmetic supports **down/mild**, the anchor-driven total supports **down/notable**. I am **not** letting the anchor mechanically set the band, and I am **not** applying a sub-1.0 haircut to the rule-capped S1 = −2. **Divergence flagged: True.**
+Total = (−1 + −2 + −1 + 0 + 0) = **−4.0** × 0.9 = **−3.6** → **down/mild**.
 
-**Magnitude check (09-10 gap rule):** XLB premarket is **+0.03%** vs prev close — **no ≥1% gap**, so the mild band is **not** falsified at the bell. This is the key difference from 09-10. The mild band stands on the gap test, and the rolling-magnitude prior (mag accuracy 0.5, two consecutive mag misses on the *understated* side) argues against inflating to notable without a same-morning print. **Band = mild**, with the divergence flag carrying the notable risk.
+**Divergence flag: TRUE.** The engine's tape_anchor leg is **−0.05** (ES +0.51%, HG −0.76%, GC −1.01%, DX +0.25%, PM:XLB +0.03%) — essentially flat, because the premarket ES is *green* (+0.51%) while the metals are red. The engine's index_carry is **−1.554** (general −6.215) and llm_overlay **−6.0** (raw −6.75), producing an engine total of **−7.604** → down/mild. The analyst's component arithmetic (−3.6) and the engine total (−7.604) **agree on every sign** but disagree on magnitude by >2×. Per the 09-14 lesson, report both bands and state which leg drives the divergence: here it is the **llm_overlay (−6.0)**, not the sector factors. The sector factors (S1=−2, S2=−1) are the calibrated read; the overlay is the amplifier. Both resolve to **down/mild**, so the band is stable — but the divergence is flagged because the anchor leg is *flat* while the overlay is *extreme*, which is the same structural mismatch the 09-14 lesson identified.
 
-**Direction:** down. The 09-11 rule requires a modest S0 lean in the *futures* direction (red) rather than zeroing everything, and the persistent 1w/1m relative lag carries an explicit **relative-underperformance lean** — XLB should lag SPY on this tape.
+**Gap check (09-10 rule):** XLB premarket **+0.68%** vs prev close — a **positive** gap, not a ≥1% down-gap. The 09-10 rule does **not** fire (it is a down-gap rule). But note the tension: XLB is indicated **+0.68%** while the metals complex is uniformly red and China just missed. That positive premarket print is the **single biggest risk to this call** — it suggests the market is reading the China industrial-output beat (+5.2%) and the nested Aluminum/Copper HEAT as an XLB positive, or that XLB is being carried by the chemicals sleeve's oil-cost pass-through. If XLB opens +0.68% and holds, the down call is wrong on direction. I am keeping down because (a) the 1w/1m relative tape is persistently negative (−2.51% / −1.29%), (b) the 8/18 metals-co-move ban is firing cleanly, (c) the China demand-side miss is live and same-morning, and (d) the FOMC-eve hawkish repricing is a knowable red pre-binary tape. But confidence is cut for the conflicting premarket print.
+
+**Confidence: 0.55.** Direction is supported by four aligned negative channels, but the +0.68% XLB premarket indication directly conflicts with the thesis, and the FOMC binary is unknowable. Per DO-INSTEAD, shrink confidence on modest |score| when magnitude historically misses.
+
+**Multiplier: 0.9.** Rolling mag accuracy 0.5 — do not manufacture notable.
+
+### HORIZON_3D / 1W / 2W / 1M
+
+- **HORIZON_3D:** down. The FOMC (09-16) resolves the hawkish repricing one way or the other; if it hikes, the metals complex takes another leg down; if it holds, a relief bounce is possible but the China demand miss and easing LME tightness cap it. Net: down/mild.
+- **HORIZON_1W:** down. The 1w rel is −2.51% and the spine (copper collapse + China demand shock + inventory rebuild) is intact-negative. No catalyst in the next week reverses the composition-weighted drag.
+- **HORIZON_2W:** flat-to-down. Two weeks out, the FOMC is past and the market re-focuses on China stimulus response. If Beijing responds to the FAI −7.2% with credit/property measures, the China HIT could flip; absent that, the downtrend persists.
+- **HORIZON_1M:** flat. The 1m rel is −1.29% (less negative than 1w), suggesting the sector is in a downtrend but not accelerating. Mean-reversion risk rises as the sector gets stretched to the downside (1w rel −2.51%).
 
 ---
 
@@ -100,14 +113,12 @@ S2_BREADTH: -1
 S3_FLOWS_POSITIONING: 0
 S4_ETF_TAPE: 0
 MULTIPLIER: 0.9
-CONFIDENCE: 0.62
+CONFIDENCE: 0.55
 REGIME: risk_off
-DIVERGENCE_FLAGGED: True
-SECTOR: Basic Materials
-ETF: XLB
+DIVERGENCE_FLAGGED: true
+TOTAL_SCORE: -3.6
 PREDICTED_DIRECTION: down
 PREDICTED_MAGNITUDE_BAND: mild
-TOTAL_SCORE: -3.6
 HORIZON_3D: down
 HORIZON_1W: down
 HORIZON_2W: flat
@@ -115,25 +126,27 @@ HORIZON_1M: flat
 SECTOR_SCORES_END
 
 HIT_GRID_BEGIN
-Risk-off tape / flight to safety|HIT|0.85|2026-09-15|https://www.reuters.com/business/wall-st-futures-slip-rising-oil-treasury-yields-compound-ai-anxiety-2026-09-15/
-Real yields rising|HIT|0.75|2026-09-15|https://goldsilver.com/industry-news/article/gold-price-outlook-september-2026/
-USD strengthening|HIT|0.65|2026-09-15|https://www.usagold.com/daily-precious-metals-market-report-september-14-2026/
-Industrial metal price collapse|HIT|0.85|2026-09-15|https://economictimes.indiatimes.com/markets/us-stocks/wall-street-guide/copper-hits-three-week-low-as-inventories-rise-and-dollar-strengthens/articleshow/134245729.cms
-China demand shock / property stress|HIT|0.80|2026-09-15|https://www.cnbc.com/2026/09/15/china-august-retail-sales-industrial-output-investment-exports-.html
-Inventory draw (LME/exchange stocks down)|MISS|0.70|2026-09-15|https://www.brecorder.com/news/40439432/copper-sinks-to-3-week-low-as-dollar-firms-lme-stocks-rise
-Gold/silver price surge (monetary metals)|MISS|0.80|2026-09-15|https://www.usagold.com/daily-precious-metals-market-report-september-14-2026/
-Critical-minerals policy / domestic tariff support|MISS|0.70|2026-09-15|https://news.google.com/rss/articles/CBMivwFBVV95cUxNNURGbmRQdjJaanFqS0VBQUVyTjZCNkZyeTBrV2NVcWtGLVRQdk5jaG9pYU5FejR3REpqdHJSQWM0NlRUSVdnclJOR0RiWEpUNlV1ZXRUU1RPSTFlNF90elZIZWFxbFhDYm1nUlFjQ3l0UjRMbGstTmItU3BiOVZDYi0tRUxPelM0V1J6TmhVTnJJQkdxdUFBemtkdWxTdUNScndiZlNiQm1rQXRsMlh6ZFhxNnRmemFLN2ZfMnk2UQ
-Margin compression / cost inflation without pricing power|HIT|0.60|2026-09-15|https://www.iea.org/reports/oil-market-report-september-2026
-Sector rotation out of materials|HIT|0.70|2026-09-15|https://www.thedesperatetrader.com/sector-performance
-Sector breadth failure (ETF up, names flat)|HIT|0.60|2026-09-15|https://www.stockbase.com/market-data/sectors
-Sector ETF outflow / volume dry-up|PARTIAL|0.45|2026-09-15|https://etfdb.com/etf/XLB/
-Crowded long (extreme relative performance + valuation)|MISS|0.55|2026-09-15|https://www.tipranks.com/etf/xlb
-Supply disruption (mine/export ban)|PARTIAL|0.40|2026-09-15|https://kamoacap.com/lmecmecoppertarriff/
+Risk-off tape / flight to safety|HIT|0.85|2026-09-15|https://www.reuters.com/world/china/chinas-factory-output-growth-quickens-in-august-retail-sales-slow-2026-09-15/
+Real yields rising|HIT|0.80|2026-09-15|
+USD strengthening|HIT|0.70|2026-09-15|
+Industrial metal price collapse|HIT|0.90|2026-09-15|https://news.google.com/rss/articles/CBMiywFBVV95cUxQNTNJbnc3ZzJYQnItNGZKMjlVeTM3d3I5MlotSFRlWmplM0ttSkxHZzlXSEowYm5KamNSd3l6UGl1ZUNDZldzTEV4ZHRzaFVEWUl2SWdkWGRXM004SkxvRHhhVEJ3cG02bHJwcnd4RjRCZ0MxMEM2dXR5Q2JwVVYtNjRyQWFoZHcyTEo5U0pzQU9VaUVSamZzVmtxMmstcFdhdnNpLTA4RWk1WU9aOUs5Tmd1V1J1TUxTYVZtMExfeXZpQ1B2c0RVTGZRbw
+China demand shock / property stress|HIT|0.85|2026-09-15|https://www.cnbc.com/2026/09/15/china-august-retail-sales-industrial-output-investment-exports-.html
+Supply glut / new capacity online|HIT|0.70|2026-09-15|https://news.google.com/rss/articles/CBMiUEFVX3lxTE9oTl9LWUJHcjdVR1FHUWZyVFVZTDdXdnNUVnVPUVRaZUJ4SUN3NTdfQWF3VXRqRXFFc2VKMHJNYXY1VXhQSVlUWDdqZGphU1dI
+Margin compression / cost inflation without pricing power|HIT|0.65|2026-09-15|
+Gold/silver price surge (monetary metals)|MISS|0.85|2026-09-15|https://news.google.com/rss/articles/CBMivAFBVV95cUxNcTg0ZTVXNlpmUkx1dU5Gc0JDWU1HX3VBU3d5R0lXemdtSTlBa3BVeUVqNDJhRnVEazVLUVRTakYxOURQS3dYTEtpekhscUNuZVNPWWExOFYyUzhldzZId0lEaHV2LW5wVndNaDJVbGg5MUp5d1IwUDlCVjBvTFo0MkhVeHI2NnFPdy1zVnVnaTZzTkxadXhWb0FlRE1BMERjM3EwR25McXFNQ1VibXFTbGlLNDY2YVZDakM1UA
+Industrial metal price surge (copper/aluminum/iron ore)|MISS|0.85|2026-09-15|
+Inventory draw (LME/exchange stocks down)|MISS|0.75|2026-09-15|https://news.google.com/rss/articles/CBMiUEFVX3lxTE9oTl9LWUJHcjdVR1FHUWZyVFVZTDdXdnNUVnVPUVRaZUJ4SUN3NTdfQWF3VXRqRXFFc2VKMHJNYXY1VXhQSVlUWDdqZGphU1dI
+China PMI / property demand rebound|MISS|0.80|2026-09-15|https://www.reuters.com/world/china/chinas-factory-output-growth-quickens-in-august-retail-sales-slow-2026-09-15/
+Sector breadth failure (ETF up, names flat)|PARTIAL|0.50|2026-09-15|
+Sector rotation out of materials|PARTIAL|0.55|2026-09-15|
+Sector ETF outflow / volume dry-up|PARTIAL|0.45|2026-09-15|
+Critical-minerals policy / domestic tariff support|PARTIAL|0.40|2026-09-15|
+Supply disruption (mine/export ban)|PARTIAL|0.35|2026-09-15|
 HIT_GRID_END
 
 ---
 ## Pipeline-computed decision (deterministic)
 
 ```json
-{'components': {'S0_SHARED_MACRO': -1.0, 'S1_SECTOR_FACTORS': -2.0, 'S2_BREADTH': -1.0, 'S3_FLOWS_POSITIONING': 0.0, 'S4_ETF_TAPE': 0.0}, 'multiplier': 0.9, 'leading_sum': -10.0, 'divergence_flagged': False, 'total_score': -7.604, 'predicted_direction': 'down', 'predicted_magnitude_band': 'mild', 'confidence_score': 0.65, 'regime': 'risk_off', 'engine': 'v2', 'anchor': {'available': True, 'pct': -0.0084, 'score': -0.05, 'legs': [{'leg': 'ES', 'pct': 0.51, 'w': 0.6}, {'leg': 'HG', 'pct': -0.76, 'w': 0.3}, {'leg': 'GC', 'pct': -1.01, 'w': 0.1}, {'leg': 'DX', 'pct': 0.25, 'w': -0.3}, {'leg': 'PM:XLB', 'pct': 0.03, 'w': 0.7}]}, 'overlay_score': -6.0, 'overlay_raw': -6.75, 'index_carry': -1.554, 'general_total': -6.215, 'skill_multipliers': {'S0_SHARED_MACRO': 1.25, 'S1_SECTOR_FACTORS': 0.5, 'S2_BREADTH': 1.0, 'S3_FLOWS_POSITIONING': 1.25, 'S4_ETF_TAPE': 0.0}, 'llm_confidence': 0.62, 'calendar_size_gate_applied': True, 'calendar_size_gate_reason': 'set by pre-open refresh'}
+{'components': {'S0_SHARED_MACRO': -1.0, 'S1_SECTOR_FACTORS': -2.0, 'S2_BREADTH': -1.0, 'S3_FLOWS_POSITIONING': 0.0, 'S4_ETF_TAPE': 0.0}, 'multiplier': 0.9, 'leading_sum': -10.0, 'divergence_flagged': True, 'total_score': -3.723, 'predicted_direction': 'down', 'predicted_magnitude_band': 'mild', 'confidence_score': 0.549, 'regime': 'risk_off', 'engine': 'v2', 'anchor': {'available': True, 'pct': 0.4988, 'score': 2.993, 'legs': [{'leg': 'ES', 'pct': 0.8, 'w': 0.6}, {'leg': 'HG', 'pct': -0.76, 'w': 0.3}, {'leg': 'GC', 'pct': -1.01, 'w': 0.1}, {'leg': 'DX', 'pct': 0.25, 'w': -0.3}, {'leg': 'PM:XLB', 'pct': 0.68, 'w': 0.7}]}, 'overlay_score': -6.0, 'overlay_raw': -6.75, 'index_carry': -0.716, 'general_total': -2.865, 'skill_multipliers': {'S0_SHARED_MACRO': 1.25, 'S1_SECTOR_FACTORS': 0.5, 'S2_BREADTH': 1.0, 'S3_FLOWS_POSITIONING': 1.25, 'S4_ETF_TAPE': 0.0}, 'llm_confidence': 0.55, 'calendar_size_gate_applied': True, 'calendar_size_gate_reason': 'set by pre-open refresh'}
 ```

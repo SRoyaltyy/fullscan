@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T09:12:20.301824-04:00",
+  "generated_at": "2026-09-15T09:19:21.104603-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -47,7 +47,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 269446
+          "size": 269893
         },
         {
           "key": "heat_md",
@@ -56,7 +56,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 17135
+          "size": 16943
         }
       ],
       "said": "tables on disk",
@@ -80,7 +80,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 87969
+          "size": 87526
         },
         {
           "key": "digest_md",
@@ -89,7 +89,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11788
+          "size": 11332
         },
         {
           "key": "market_digest_json",
@@ -98,7 +98,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 7656
+          "size": 6662
         },
         {
           "key": "market_digest_md",
@@ -107,7 +107,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 3409
+          "size": 2949
         },
         {
           "key": "market_digest_close_json",
@@ -137,7 +137,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 19,
+      "n_req_ok": 18,
       "n_req": 20,
       "n_opt_ok": 3,
       "n_opt": 3,
@@ -149,7 +149,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87969
+          "size": 87526
         },
         {
           "key": "in_market_digest",
@@ -158,7 +158,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 7656
+          "size": 6662
         },
         {
           "key": "in_baseline",
@@ -176,7 +176,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 269446
+          "size": 269893
         },
         {
           "key": "parsed",
@@ -248,7 +248,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6954
+          "size": 6090
         },
         {
           "key": "qc",
@@ -257,7 +257,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=True",
-          "size": 7194
+          "size": 7200
         },
         {
           "key": "status",
@@ -266,7 +266,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7137
+          "size": 7715
         },
         {
           "key": "review",
@@ -274,8 +274,8 @@
           "path": "01_daily/2026-09-15_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=False Grok returned an empty review",
-          "size": 309
+          "reason": "ok=False Only 5 of 11 sector essays exist (communication_services, consumer_cyclical, energy, financial, healthcare) \u2014 6 missing,",
+          "size": 1631
         },
         {
           "key": "sector_basic_materials",
@@ -284,7 +284,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 16185
+          "size": 17985
         },
         {
           "key": "sector_communication_services",
@@ -293,7 +293,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 13149
+          "size": 13778
         },
         {
           "key": "sector_consumer_cyclical",
@@ -302,7 +302,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 21914
+          "size": 18472
         },
         {
           "key": "sector_consumer_defensive",
@@ -320,7 +320,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 15111
+          "size": 14356
         },
         {
           "key": "sector_financial",
@@ -329,7 +329,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 12125
+          "size": 15174
         },
         {
           "key": "sector_healthcare",
@@ -338,7 +338,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 15924
+          "size": 13639
         },
         {
           "key": "sector_industrials",
@@ -347,7 +347,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 17775
+          "size": 16836
         },
         {
           "key": "sector_real_estate",
@@ -356,16 +356,16 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 14617
+          "size": 15340
         },
         {
           "key": "sector_technology",
           "name": "Sector predict \u2014 technology",
           "path": "01_daily/sectors/2026-09-15/technology_predict.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 17161
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "sector_utilities",
@@ -374,17 +374,17 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 14255
+          "size": 13006
         }
       ],
-      "said": "general DOWN  -2.865 \u00b7 sectors 3 up / 7 down / 0 flat \u00b7 news 15 items",
+      "said": "general DOWN  -2.865 \u00b7 sectors 3 up / 2 down / 0 flat \u00b7 news 15 items",
       "bullets": [
         "bad: Brent ~$108 Hormuz/Saudi pipeline outage",
         "bad: 1w 10Y +19bp / 5% handle",
         "bad: FOMC-eve hike ~87-90%",
         "good: ES/NQ green vs cash close",
         "good: HY tight 2.65",
-        "XLB DOWN -7.6",
+        "XLB missing",
         "XLC UP +0.4",
         "XLY DOWN -4.7",
         "XLP missing",
@@ -409,7 +409,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87969
+          "size": 87526
         },
         {
           "key": "weather",
@@ -489,7 +489,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87969
+          "size": 87526
         },
         {
           "key": "dossiers",
@@ -531,7 +531,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 6954
+          "size": 6090
         },
         {
           "key": "in_actions",
@@ -549,7 +549,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87969
+          "size": 87526
         },
         {
           "key": "in_judge",
@@ -594,7 +594,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5111",
-          "size": 822145
+          "size": 821087
         },
         {
           "key": "book_json",
@@ -602,8 +602,8 @@
           "path": "data/stock_book/2026-09-15_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=210",
-          "size": 1560341
+          "reason": "horizons=5 names=220",
+          "size": 1598950
         },
         {
           "key": "book_md",
@@ -612,7 +612,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 77529
+          "size": 88569
         },
         {
           "key": "green",
@@ -664,8 +664,8 @@
           "path": "data/stock_book/2026-09-15_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=210",
-          "size": 1560341
+          "reason": "horizons=5 names=220",
+          "size": 1598950
         },
         {
           "key": "dash_html",
@@ -702,62 +702,86 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "HITI",
-        "score": 0.3044362933651129
+        "ticker": "AVAH",
+        "score": 0.6813331956326887
       },
       {
-        "ticker": "MTCH",
-        "score": 0.5625355999916293
+        "ticker": "PACS",
+        "score": 0.6523856876658092
+      },
+      {
+        "ticker": "ZIP",
+        "score": 0.577269780484581
+      },
+      {
+        "ticker": "ASTH",
+        "score": 0.5858855076926901
+      },
+      {
+        "ticker": "WIX",
+        "score": 0.6981351189634262
+      },
+      {
+        "ticker": "VRSK",
+        "score": 0.4115313887726531
+      },
+      {
+        "ticker": "EPAM",
+        "score": 0.6486544512584855
+      },
+      {
+        "ticker": "DLO",
+        "score": 0.6220470253321195
       },
       {
         "ticker": "CARG",
-        "score": 0.7164691865201616
+        "score": 0.6859220972462057
       },
       {
-        "ticker": "FOX",
-        "score": 0.46246499218332093
+        "ticker": "AMN",
+        "score": 0.6227441834609622
       }
     ],
     "sell_1d": [
       {
+        "ticker": "FLNC",
+        "score": -0.38082232091807483
+      },
+      {
         "ticker": "OKLO",
-        "score": -0.4709917547759548
+        "score": -0.2189446768861193
       },
       {
         "ticker": "EOSE",
-        "score": -0.47634579173599406
+        "score": -0.23520754591436616
+      },
+      {
+        "ticker": "SMR",
+        "score": -0.30306987421833825
       },
       {
         "ticker": "QBTS",
-        "score": -0.21963178703680925
-      },
-      {
-        "ticker": "FUN",
-        "score": -0.6122755003348219
-      },
-      {
-        "ticker": "FLNC",
-        "score": -0.6150820569929332
+        "score": -0.1748534220136116
       },
       {
         "ticker": "METC",
-        "score": -0.6549472286273187
+        "score": -0.3861356085806234
       },
       {
-        "ticker": "FCEL",
-        "score": -0.60016714719896
+        "ticker": "LUNR",
+        "score": -0.3704877449128859
       },
       {
-        "ticker": "TE",
-        "score": -0.5004896009883154
+        "ticker": "BEPC",
+        "score": -0.1359649975397636
       },
       {
         "ticker": "TLN",
-        "score": -0.6230187099899102
+        "score": -0.4806656652691894
       },
       {
-        "ticker": "HNRG",
-        "score": -0.18088669874039975
+        "ticker": "LWLG",
+        "score": -0.3373330980484878
       }
     ],
     "flatten": {
@@ -780,19 +804,19 @@
       "direction": "down"
     },
     "sectors": {
-      "said": "3 up / 7 down / 0 flat",
+      "said": "3 up / 2 down / 0 flat",
       "bullets": [
-        "XLB DOWN -7.6",
+        "XLB missing",
         "XLC UP +0.4",
         "XLY DOWN -4.7",
         "XLP missing",
         "XLE UP +4.0",
         "XLF DOWN -4.1",
         "XLV UP +0.9",
-        "XLI DOWN -5.9",
-        "XLRE DOWN -8.5",
-        "XLK DOWN -7.5",
-        "XLU DOWN -8.2"
+        "XLI missing",
+        "XLRE missing",
+        "XLK missing",
+        "XLU missing"
       ]
     },
     "news": {
@@ -815,31 +839,6 @@
     }
   },
   "lands": [
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T06:09:40.165686-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-09-15_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 10508,
-          "preview": "weather sectors 11 \u00b7 Communication Services={'score': 0.396, 'dir': 'up', 'conf': 0.416, 'source': 'llm'}, Consumer Cyclical={'score': -4.704, 'dir': 'down', 'conf': 0.588, 'source': 'llm'}, Energy={'score': 4.023, 'dir': 'up', 'conf': 0.661, 'source': 'llm'}, Financial={'score': -4.063, 'dir': 'down', 'conf': 0.563, 'source': 'llm'}, Healthcare={'score': 0.93, 'dir': 'up', 'conf': 0.537, 'source': 'llm'}, Basic Materials={'score': -5.0, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.1550000000000002, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -3.57, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-09-15_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5951,
-          "preview": "# Weather report \u2014 2026-09-15\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Communication Services={'score': 0.396, 'dir': 'up', 'conf': 0.416, 'source': 'llm'}, Consumer Cyclical={'score': -4.704, 'dir': 'down', 'conf': 0.588, 'source': 'llm'}, Energy={'score': 4.023, 'dir': 'up', 'conf': 0.661, 'source': 'llm'}, Financial={'score': -4.063, 'dir': 'down', 'conf': 0.563, 'source': 'llm'}, Healthcare={'score': 0.93, 'dir': 'up', 'conf': 0.537, 'source': 'llm'}, Basic Materials={'score': -5.0, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.1550000000000002, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -3.57, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-15\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
     {
       "key": "join",
       "title": "Join / match rank",
@@ -3479,6 +3478,24 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T09:12:19.021750-04:00"
+    },
+    {
+      "key": "sector_predict",
+      "title": "Per-sector predict (all 11)",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T09:19:19.810198-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-15",
+          "ok": true,
+          "reason": "",
+          "size": 4096,
+          "preview": "9/9 sector predicts ok: basic_materials, communication_services, consumer_cyclical, energy, financial, healthcare, industrials, real_estate"
+        }
+      ],
+      "preview": "9/9 sector predicts ok: basic_materials, communication_services, consumer_cyclical, energy, financial, healthcare, industrials, real_estate"
     }
   ],
   "href": {

@@ -1,14 +1,34 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T09:12:19.306059-04:00",
+  "generated_at": "2026-09-15T09:19:19.769085-04:00",
   "all_ok": false,
   "qc_all_ok": true,
-  "book_ok": true,
+  "book_ok": false,
   "grok_ok": false,
   "grok_fails": [
     {
-      "path": "(review)",
-      "reason": "empty_review_reply"
+      "path": "01_daily/sectors/2026-09-15/basic_materials_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-15/consumer_defensive_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-15/industrials_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-15/real_estate_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-15/technology_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-15/utilities_predict.md",
+      "reason": "missing"
     }
   ],
   "missing_required": [],
@@ -140,7 +160,7 @@
     }
   ],
   "qc": {
-    "sector_n_ok": 10,
+    "sector_n_ok": 9,
     "sector_n_total": 11,
     "items": [
       {
@@ -183,14 +203,14 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-09-15_finviz_digest.json",
-        "size": 87969
+        "size": 87526
       },
       {
         "kind": "finviz_market_digest",
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-09-15_finviz_market_digest.json",
-        "size": 7656
+        "size": 6662
       },
       {
         "kind": "finviz_market_digest",
@@ -204,7 +224,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/map_heat/2026-09-15_map_heat.json",
-        "size": 269446
+        "size": 269893
       },
       {
         "kind": "map_heat_baseline",
@@ -225,21 +245,21 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-15/basic_materials_predict.md",
-        "size": 16185
+        "size": 17985
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-15/communication_services_predict.md",
-        "size": 13149
+        "size": 13778
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-15/consumer_cyclical_predict.md",
-        "size": 21914
+        "size": 18472
       },
       {
         "kind": "sector_predict",
@@ -253,49 +273,49 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-15/energy_predict.md",
-        "size": 15111
+        "size": 14356
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-15/financial_predict.md",
-        "size": 12125
+        "size": 15174
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-15/healthcare_predict.md",
-        "size": 15924
+        "size": 13639
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-15/industrials_predict.md",
-        "size": 17775
+        "size": 16836
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-15/real_estate_predict.md",
-        "size": 14617
+        "size": 15340
       },
       {
         "kind": "sector_predict",
-        "ok": true,
-        "reason": "",
+        "ok": false,
+        "reason": "missing",
         "path": "01_daily/sectors/2026-09-15/technology_predict.md",
-        "size": 17161
+        "size": 0
       },
       {
         "kind": "sector_predict",
         "ok": true,
         "reason": "",
         "path": "01_daily/sectors/2026-09-15/utilities_predict.md",
-        "size": 14255
+        "size": 13006
       }
     ]
   }

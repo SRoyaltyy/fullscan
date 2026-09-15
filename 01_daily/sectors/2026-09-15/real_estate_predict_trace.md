@@ -2,72 +2,40 @@
 
 
 
-**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (147,085 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
+**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (152,962 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
 
 
 
-**Step 1 — Research.** The model wanted to know: *"10 year Treasury yield 30 year yield today September 15 2026"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"10-year Treasury yield 5% global bond selloff September 15 2026"* → got 6 results (via gnews_rss)
 
-  - 10-year Treasury yield rises to highest since 2007 as Fed ... (https://www.cnbc.com/2026/09/15/10-year-treasury-yield-rises-to-highest-since-2007.html)
+  - Global bond yields hit 2008 highs, raising stakes for big borrowers - Reuters (https://news.google.com/rss/articles/CBMisAFBVV95cUxNeThNUUotQTJlelBLMUoySDNIZnR5dlBReWhadGo3VWF6YTBDMG9aYW5JREJhMG9OdXFmMC1OQ1F1VGs5bkxxeXAwY0gweVFkZmpkMHYxelhsbVAta1AyUEk0bEluNWc0UnVTQ0JIZVVuTS1oQVZQdjNqazFKREV2b2RRU3dQanl0N2JvY052QTVSczVVck1YZW1uY1RVem1iNDJzQ1FEbXZwc3UzamZmTA?oc=5)
 
-  - Daily Treasury Rates - U.S. Department of the Treasury (https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?field_tdr_date_value=2026&type=daily_treasury_yield_curve)
+  - US 10-year Treasury yield breaches 5% as global bond sell-off deepens - Yahoo Finance Australia (https://news.google.com/rss/articles/CBMihAFBVV95cUxQbmpYd0ktWGt5bnp2RlRSRURMNHZFSmNTLXl1MXZBOEN5eWNSd0pkVUxTaUdPdHphS3pHeElZUkdnQnZQY1dRSEZzNW5VU0sxVlpHR2ZDUWMta0ZHSWRpdmh6R3k2ckViR0hkT2xvT2JHdXd4SW1mS3RzdG1vaHB4MGhRMUc?oc=5)
 
-  - Treasury Yield Curve Today: September 15, 2026 │ Rates ... (https://primerates.com/primerate/treasury-yield-curve/)
+  - Global Bond Yields Rise as US 10-Year Treasury Yield Surpasses 5% | Ukraine news - #Mezha - Межа. Новини України. (https://news.google.com/rss/articles/CBMiZkFVX3lxTE9CeGRHT295TGNpSm41MDctN01VZHJsajZEMnpzLWdJR1YzRmpoZ1ZkM1oyVWZyRWQwdDVuV2NDeWNoS25KUEg2clJXT3h0ZVpKWjFZVl9ZUnI1T2RXSUVkcGpxZ2FGUQ?oc=5)
 
-**Step 2 — Research.** The model wanted to know: *"XLRE real estate ETF September 15 2026 premarket"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"FOMC September 2026 rate hike odds FedWatch Warsh"* → got 6 results (via gnews_rss)
 
-  - XLRE Stock Premarket (https://stockmarketwatch.com/stock/XLRE/premarket)
+  - Markets see Warsh endorsing a rate hike in September. Not everyone is convinced - CNBC (https://news.google.com/rss/articles/CBMitgFBVV95cUxNd1ZnbDVGTERQNngxeERKWW5PWUdJa2xhVGJFSkoxLUhqYzV2ZHpMVllqeC1jdGc2ZFh0Tlhka1V5ajRvaXFndk1INkhDTUNnTU9Ydk01RGhiNjRrTDZXdDNESzFSaXdQeFBCeG1ndXpvX01mczUwQVo3N0stbDBJcjNsZG1TWTg0Ql9zYUFhSF9MbzUzakRrcHBVZWlYd3l0eEFIV0ZRczRpaTVRbVV6QklKd3kyQdIBuwFBVV95cUxOMGl2dW1jTnM4bjlTY1JGcWk2RFI5alpkQzZsS1hwUy1hSFlqUDJzb0NEekx3VWxPVmVkQ1F6NVNraDdGX0ZWdExVb3VjbW80OFB5TFBZMkt6RjllRVQzMHhIR3pQYkc3QUFTR2QydHNuVXg4cjdUUkJXeUxzbzcwdnM4ZlFKU0ZwLWtfejVyeEJSeG9vM1A2QmZrMGROVjdiaXJqWXJlNFZYZkx2VU8yTVlXblkzSG5TRVJr?oc=5)
 
-  - XLRE | State Street Real Estate Select Sector SPDR ETF Stock ... (https://www.wsj.com/market-data/quotes/etf/XLRE)
+  - White House ups pressure on Kevin Warsh's Fed as Wall Street expects hike - Fortune (https://news.google.com/rss/articles/CBMiiwFBVV95cUxQa1ZYZkI5azJEanM2elFUMDFVbFdUVmcwd0ducFRZT2c5SlEwZnhBcVpkZlo5bl80ZS1xVUlmYjdLSlRIQXBCMVBwbW5lQzhPN2E3dllKRkZ1eVVVeGxKMDVFUEY5VUp2QVFWNWY1ODUyVFRvMGRVU25BZVptQjNGeW12bVZrV3RVMVFz?oc=5)
 
-  - XLRE: State Street® Real Estate Select Sector SPDR® ETF - SSGAXLRE Latest Pre Market Trades - NasdaqReal Estate Select Sector SPDR Fund (The) (XLRE) - NasdaqXLRE^State Street Real Estate Select Sector SPDR ETF | VanguardFinancialContent - State Street Real Estate Select Sector ... (https://www.ssga.com/us/en/intermediary/etfs/state-street-real-estate-select-sector-spdr-etf-xlre)
+  - With Just 5 Days to Next FOMC Meeting, Odds of Fed Rate Hike Surge to Over 85% - 24/7 Wall St. (https://news.google.com/rss/articles/CBMivAFBVV95cUxPY2tpRWt1OFJHaEE3QUI5TDhRZjJLS2EzNlMzU0NMX1ZaMkxrSU9BOWpwTkR5TkpnQlJZa3JaQW1ROFh1QWZ6WUxhX3NNMGRiWEJ5WXI1cDZDX3dfamM0T215TVhLb0NKT05JSWZ3NFV4VndNOWZPYnVRNE8xeE52bVRXd1U0YkkxYjFYeHRoZ2t3X19kM0NWM0M4LS0yVEV3UGZEV3Vhd01pY2xmVE5qTHhoN1VFcFdhdnNIZA?oc=5)
 
-**Step 4 — Research.** The model wanted to know: *""10-year Treasury" yield 5% highest since 2007 Fed rate hike September 2026"* → got 6 results (via gnews_rss)
+**Step 4 — Research.** The model wanted to know: *"XLRE real estate REIT ETF September 2026 rate hike pressure"* → got 6 results (via gnews_rss)
 
-  - 10-year Treasury yield rises to highest since 2007 as Fed rate-hike expectations rise - CNBC (https://news.google.com/rss/articles/CBMikAFBVV95cUxNaTYxSFZ2NnctamhZYXdkVTNPUi1QcEczSmZuV1YzOTlXVjd0ZUZEZFllOGNsbk9jMTVMU1dKcVdyX1dRUmo1QzBhSS14UFd3UlBEQVczZjhVdDFrZHFKWG1hQ1Uwc2hKY3hYWjh1X1VUX3lYNE1HNzRuWG1OalhYandaYWlBSXN3X0NiTkd5V0XSAZYBQVVfeXFMTkFSczFpQXVBNVp4OU5LNXZGU0sxU201bVNyV29jY3FWa0V6ZjZsNDhET0lVbWw1eFo1bkd6aVhxSGZYaTZFUjVjOHRYQXptbHR6STBycGZiX2QtdjA1aGwzU2gyd0NxbE04WFRCVnRVV1AwOTJzaFZKWDRqYVVMRExuRGpleGhLR3dMT1ZJUkl0dW9FbWNB?oc=5)
+  - Hike Comes Into Sight - Seeking Alpha (https://news.google.com/rss/articles/CBMib0FVX3lxTFBabUl5b3BaX3dlczVnWFBqX09vUFEwclh1RDI4dDhZR0lyb2h4T3pLX3NTT1hjdHVqQXk1ck9rRFFaWG1lYlJKZk1xVHQxdmJMNXhHaGRKVkV6cTVZc0VSZGkydGhJWWloblBXM21XMA?oc=5)
 
-  - FOREX Dollar ticks higher as oil prices climb, Fed rate hike chances firm - Reuters (https://news.google.com/rss/articles/CBMisAFBVV95cUxOeGtqRlJ4LWF3TVM5VklxS09fMU16eHE3bWRLZ3lRS3NuS18wWGcyY3cwRWg2eEtzS3dFRVZGWHB6Z21NNGpzUUcydm10VXpIU29Ca3RnRDRrRUxsVWlNbE5yV0x6ejVQUTZXR1FHRHgtTUExOC1VazhaaGo0b3p0dTNVcDJ5YWdjeWkyQVZRRlhOUUZYUkpmdWsyeHJjNTF6QjlYdEtRcy1NVUg2RWNmOA?oc=5)
+  - Buy on the Dip Prospects: September 9 Edition - ETF Database (https://news.google.com/rss/articles/CBMieEFVX3lxTFAtc2RoS1dCQXV2TC00cm9kYVNsNmFlSGNwc0s5YjVYbm9iX0U1V1laYVRnenQ5RFlKeWtBemlJSGZ2VTFWWHNJNDcwbU0xUDVVallkdUtmZmZsVHF6OFQ3Q0xKb0dtaS1qcFF2OWNMSEcyc25XRWx5Sw?oc=5)
 
-  - 10-year Treasury yield hits 5%, critical threshold for US economy and markets - CNN (https://news.google.com/rss/articles/CBMidkFVX3lxTE91dmcwS01EcUI0YWxEZ3JjZFJKSXlPUXVVNE12b3NMd0FtX0p5ckVmRHhEdTNYMUpNSVVfT0ZqVjNkZUhkTWVrSGloV2dJY3JhYWw5bEtrZy0xd3NXTVdJbXR0RFllMEJCbWRyOHFkOXdpR0Fzb0E?oc=5)
+  - Real estate stocks post losses in August amid surging rate hike odds (XLRE:NYSEARCA) - Seeking Alpha (https://news.google.com/rss/articles/CBMiqgFBVV95cUxQeVVUU3YxN0hod3p0YXhiSFVMV3NaZktzZUNDRjlXNVdpR29vZW00RlYxYUt5Ykl5QXBQcFdUcm9IV1FuMGxqcjVoLVVyQVl6enJLYzBneW52VkF0RURPUWxjRk9WeG1jeWN1M0hDRkRJeGwwY21QZnY4bmVPLS05OWRXbXVYQThxbFN1V3lIZUJtYWJGcWxjNDVMMHh1TzhVUEhKekhFZ0R6Zw?oc=5)
 
-**Step 5 — Research.** The model wanted to know: *"REITs selloff rising yields office data center September 2026"* → got 6 results (via ddg)
+**Step 5 — Research.** The model wanted to know: *"REIT sector data center office vacancy September 2026 outlook"* → got 6 results (via gnews_rss)
 
-  - Best Data Center REITs to Invest in 2026: EQIX, DLR, IRM ... (https://www.coradvisors.net/2026/08/best-data-center-reits-invest-2026.html)
+  - Global real estate outlook mid-year update - JLL (https://news.google.com/rss/articles/CBMid0FVX3lxTE5ydVh3SWtfU0xjRmp5MDh6bExYZnEtNkNDcEZlTzdCX0VfVW14UGh2RTVVR0UxdHR6a3hId1FHalhDeUVoMzRMWllkUU9VeF8zQzFBZG9VM250RlZ2RVRfUE9CX2hJc0JhUXJkakxiWFVCdks1OE13?oc=5)
 
-  - 2026 REITs List | See All 200+ Now | Yields Up To 13.3%Data Center REITs in 2026: Growth Drivers, Structural Risks ...REIT resilience extends beyond interest rates | State StreetData Center REITs 2026: 39-45% AI Infrastructure ReturnsREIT Data & Research: Market Trends & Analytical Insights ...10 Best Data Center REITs to Watch in 2026: Proven AI ... (https://www.suredividend.com/reit-list/)
+  - Alexandria Real Estate stock edges higher as investors weigh dividend yield and FFO outlook - ad-hoc-news.de (https://news.google.com/rss/articles/CBMizAFBVV95cUxOWGdnNWd5ZWFxdW1UbzhqTzMzX0M4TWplajJrMlNYLWlRd2RpcExzMm1NVHlaVW04MDVUdW4xOU8zSHlvUWpqa0Q0WFM5bWxwVFk3cktfd0lUMmRzOGdjXzktQ1ZZSnd3azFOLXlTdFB2T1o5RENBaTR5Y1NZQ2RZY05sVW1NLVdkQXJub0JHdHpSOFdFWTFoWXB1WktRVFRYX0lmS2dLZTg1OXY1ck9hYWhVUjFHS1E4ejY1MThPNDNPSmN4VkE5a0ZBajE?oc=5)
 
-  - Data Center REITs in 2026: Growth Drivers, Structural Risks ... (https://www.computeforecast.com/long-reads/data-center-reits-2026/)
+  - The Best REITs to Buy While Real Estate Outperforms the Market - Morningstar (https://news.google.com/rss/articles/CBMijwFBVV95cUxQRExmVWp5Mk85aklYdlQ2bDV0eWY5Q1lrM1VxVExjOTFvdlgtQ3VwQ0pWSEhIdXBHaVdJeF9ISTY4WjF5a2wtRnJpNlBFTG5pR05VNExabmJ2NGlFS0lDUFdKdmdqS1kxbXI1cmllODRjb0lJZ1ppb0pyc25JR0ljR2h4VGVCWXMxdS02bGNOOA?oc=5)
 
-**Step 7 — Research.** The model wanted to know: *"CME FedWatch September 2026 rate hike odds FOMC decision"* → got 6 results (via gnews_rss)
-
-  - Why the Odds of a US Fed Interest Rate Hike Just Shot Higher - Morningstar (https://news.google.com/rss/articles/CBMinAFBVV95cUxNTzBZZlkwZWhpeGhFSmpPNzc3eGVJdl90Zk1PTXVmV3VpM1lwcFpnZTY5ckV3NmhrekJGendHSEpTYzNkZlMyUXF1M21jTHNUNWhIV3c3U1hHcnF0X3ZNSkNZSnBiV200b3R5WVZVb3A2NkN5N19lUWpjUTVGNF9vVjczNmlQQ1BVVUpiSXNIYUV0R3R3SDVxZXdUbng?oc=5)
-
-  - Silver Price Outlook September 2026: The Hike Is Priced In. The Positioning Isn’t. - GoldSilver (https://news.google.com/rss/articles/CBMiiAFBVV95cUxQUmxQYkVKbVVkeUxzTDNHMXVEbGRxU053TFVhTDJEdl91b2JnOExwYkZ3d1dvQkE3R2dNdXF0WmpvS2kxaF85SFYtLTJYOVFfOUdDSmdscEpXVUdUQW9tb2dpYzNxMUZZajl6Wjh0OTRjWUJLUmVtN2VQWVMyYi1nTjFIS2U3UHdS?oc=5)
-
-  - Fed rate hike in September is all but guaranteed after CPI report, economists say - CBS News (https://news.google.com/rss/articles/CBMid0FVX3lxTE9Ud29Ta19GLUJlYVVyaGlnRTJoUHlRenFfQUhkNjBGZVBDR25hbWNMU0l1UXdlcXRvREJpbVdwSmQ3dUpaZk9IWWJCMk5QQXZZT21UM2diLWFSX19wQktyVkNOeFo4VHV1bkR1Mk1jdTNFekhmbzUw?oc=5)
-
-**Step 8 — Research.** The model wanted to know: *"XLRE fund flows September 2026 real estate sector rotation"* → got 6 results (via ddg)
-
-  - XLRE: Real Estate Select Sector SPDR Fund - Fund Chart ... (https://www.zacks.com/funds/etf/XLRE/chart)
-
-  - Real Estate Select Sector SPDR Fund | ETF | MacroMicro (https://en.macromicro.me/series/9080/etf-xlre-fund-flow)
-
-  - XLRE — Real Estate Select Sector SPDR Fund stock price and ... (https://chartrow.com/quote/xlre)
-
-**Step 10 — Research.** The model wanted to know: *"FOMC meeting September 15 16 2026 rate decision hike Warsh"* → got 6 results (via ddg)
-
-  - September Fed Meeting: Live Updates and Commentary (https://www.kiplinger.com/investing/live/fed-meeting-updates-and-commentary-september-2026)
-
-  - Kevin Warsh Says There's Still 'Work to Do' to Fight ... (https://www.chase.com/personal/investments/learning-and-insights/article/kevin-warsh-work-to-do-fighting-inflation-what-to-expect-september-2026-federal-reserve-meeting)
-
-  - September Fed decision now a coin flip as rate hike odds ... (https://www.cnbc.com/2026/08/28/-september-fed-decision-now-a-coin-flip-as-rate-hike-odds-increase.html)
-
-**Step 11 — Research.** The model wanted to know: *"real estate REIT news September 15 2026 Welltower Prologis Equinix"* → got 6 results (via ddg)
-
-  - The Largest Real Estate Companies by Market Cap in September 2026 (https://www.fool.com/research/largest-real-estate-companies/)
-
-  - Largest Real Estate Companies by Market Cap (2026) (https://www.marketcaplens.com/sectors/real-estate)
-
-  - Are REITs Still a Buy After Their 2026 Runup? - Morningstar (https://www.morningstar.com/stocks/are-reits-still-buy-after-their-2026-runup)
-
-**Step 13 — Done researching.** The model stopped searching and wrote its full analysis (12,725 characters).
+**Step 7 — Search budget exhausted.** Forced to conclude with what it already gathered.
