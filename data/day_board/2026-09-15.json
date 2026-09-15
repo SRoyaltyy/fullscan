@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T06:09:08.029029-04:00",
+  "generated_at": "2026-09-15T06:09:30.146334-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -417,8 +417,8 @@
           "path": "01_daily/weather/2026-09-15_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10483 vix=spiking yields=flat",
-          "size": 10483
+          "reason": "sectors=11 bytes=10550 vix=spiking yields=flat",
+          "size": 10550
         }
       ],
       "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
@@ -566,8 +566,8 @@
           "path": "01_daily/weather/2026-09-15_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10483 vix=spiking yields=flat",
-          "size": 10483
+          "reason": "sectors=11 bytes=10550 vix=spiking yields=flat",
+          "size": 10550
         },
         {
           "key": "in_ab",
@@ -585,7 +585,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5897",
-          "size": 2258871
+          "size": 2258733
         },
         {
           "key": "peers",
@@ -644,7 +644,7 @@
       ],
       "said": "214 rows",
       "bullets": [
-        "DVN, SKHY, PR, KSPI, MSFT"
+        "SKHY, DVN, PR, KSPI, MSFT"
       ]
     },
     {
@@ -2928,6 +2928,24 @@
         }
       ],
       "preview": "5897 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 DVN, SKHY, PR, KSPI, MSFT"
+    },
+    {
+      "key": "universe",
+      "title": "Universe labels",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T06:09:29.246259-04:00",
+      "files": [
+        {
+          "path": "data/universe/2026-09-15_membership.csv",
+          "ok": true,
+          "reason": "",
+          "size": 1117095,
+          "preview": "5897 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+        }
+      ],
+      "preview": "5897 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
     }
   ],
   "href": {
