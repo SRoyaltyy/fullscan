@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T13:25:38.739750-04:00",
+  "generated_at": "2026-09-15T13:45:13.517945-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -11,62 +11,82 @@
   },
   "buy_1d": [
     {
-      "ticker": "MTCH",
-      "score": 0.3436758177117344
+      "ticker": "MPC",
+      "score": 0.29284159326632914
     },
     {
-      "ticker": "FOX",
-      "score": 0.39741166482656987
+      "ticker": "DBX",
+      "score": 0.6659268308303405
     },
     {
-      "ticker": "CARG",
-      "score": 0.5780830455379207
+      "ticker": "OKTA",
+      "score": 0.3767281691284467
+    },
+    {
+      "ticker": "AVAH",
+      "score": 0.6742815729117086
+    },
+    {
+      "ticker": "S",
+      "score": 0.6681106306723062
+    },
+    {
+      "ticker": "APPN",
+      "score": 0.5726047806801684
     },
     {
       "ticker": "SNAP",
-      "score": 0.4644227625704849
+      "score": 0.4293270119929244
+    },
+    {
+      "ticker": "CRWD",
+      "score": 0.14727221746579827
+    },
+    {
+      "ticker": "NXDR",
+      "score": 0.49772530846117596
     }
   ],
   "sell_1d": [
     {
-      "ticker": "OKLO",
-      "score": -0.4769299257081444
-    },
-    {
-      "ticker": "QBTS",
-      "score": -0.25501616507320635
-    },
-    {
-      "ticker": "IONQ",
-      "score": -0.3644584064447287
-    },
-    {
-      "ticker": "EOSE",
-      "score": -0.4433263904578803
-    },
-    {
-      "ticker": "QUBT",
-      "score": -0.17704111275223555
-    },
-    {
-      "ticker": "RGTI",
-      "score": -0.13709147285058954
-    },
-    {
       "ticker": "METC",
-      "score": -0.6516193539580212
+      "score": -0.6570814025646101
     },
     {
       "ticker": "FLNC",
-      "score": -0.6051818574612539
+      "score": -0.6116762744053208
     },
     {
-      "ticker": "TE",
-      "score": -0.48409420520142854
+      "ticker": "HNRG",
+      "score": -0.19834883629987568
+    },
+    {
+      "ticker": "FCEL",
+      "score": -0.6018274608984249
     },
     {
       "ticker": "TLN",
-      "score": -0.6166439695921102
+      "score": -0.6307310675693985
+    },
+    {
+      "ticker": "TE",
+      "score": -0.5031593493192514
+    },
+    {
+      "ticker": "OKLO",
+      "score": -0.4621067662590356
+    },
+    {
+      "ticker": "QBTS",
+      "score": -0.28432953541578804
+    },
+    {
+      "ticker": "NRG",
+      "score": -0.3810403735763207
+    },
+    {
+      "ticker": "AMPX",
+      "score": -0.47440709139388143
     }
   ],
   "flatten": {
@@ -105,31 +125,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T12:59:21.353124-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-15_parsed.json",
-          "ok": true,
-          "reason": "",
-          "size": 109264,
-          "preview": "raw=221 usable=21 single=29 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | OPEC+ holds October output quotas unchanged | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB"
-        },
-        {
-          "path": "01_daily/news/2026-09-15_parsed.md",
-          "ok": true,
-          "reason": "",
-          "size": 5058,
-          "preview": "# News Parse v2 \u2014 2026-09-15T12:59:14.736000-04:00\nWindow\u224848h | raw=221 | usable=21 | single_name=29 | noise_dropped=171\nusable polarity={'+': 1, '-': 5, 'mixed': 0, 'neutral': 15}"
-        }
-      ],
-      "preview": "raw=221 usable=21 single=29 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | OPEC+ holds October output quotas unchanged | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB \u00b7 # News Parse v2 \u2014 2026-09-15T12:59:14.736000-04:00\nWindow\u224848h | raw=221 | usable=21 | single_name=29 | noise_dropped=171\nusable polarity={'+': 1, '-': 5, 'mixed': 0, 'neutral': 15}"
-    },
     {
       "key": "events",
       "title": "Event scanner (primary)",
@@ -311,6 +306,101 @@
         }
       ],
       "preview": "# Premarket Prediction \u2014 2026-09-15\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -3.65 (uncertainty multiplier \u00d71.0) | confidence 0.546\n>\n> **Good news vs bad news:** good +0 pts vs bad -6.5 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - ES/NQ +0.4%/+0.38% not confirming\n> - HY contained 2.71\n> - VIX/VIX3M 0.90 contango\n> - China IP +5.2% beat\n> - AMD T+1 bounce not a fresh miss\n>\n> **Bad news driving this:**\n> - Asia -0.72% (Kospi -3.26%)\n> - 1w 10Y +19bp / 5% handle\n> - WTI +5% leftover Hormuz/Petroline\n> - FOMC-eve hike ~87-92% unprinted\n> - BAC/AI-chip hangover\n>\n> **market uncertainty: **elevated** | VIX 17.58 | policy-uncertainty index 215.48 (1d -202.54)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udd34 Asia overnight session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight news & cat"
+    },
+    {
+      "key": "live_boards",
+      "title": "live_boards",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T13:45:12.520706-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 17774,
+          "preview": "2026-09-15 BUY MPC, DBX, OKTA, AVAH, S, APPN, SNAP, CRWD \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 944,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-15.json",
+          "ok": true,
+          "reason": "",
+          "size": 187364,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-15_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 165953,
+          "preview": "2026-09-15 BUY MPC, DBX, OKTA, AVAH, S, APPN, SNAP, CRWD \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2526965,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-15_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2526965,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2884319,
+          "preview": "2026-09-15 BUY MPC, DBX, OKTA, AVAH, S, APPN, SNAP, CRWD \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2526965,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 165953,
+          "preview": "2026-09-15 BUY MPC, DBX, OKTA, AVAH, S, APPN, SNAP, CRWD \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2526965,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2526965,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2884319,
+          "preview": "2026-09-15 BUY MPC, DBX, OKTA, AVAH, S, APPN, SNAP, CRWD \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS"
+        }
+      ],
+      "preview": "2026-09-15 BUY MPC, DBX, OKTA, AVAH, S, APPN, SNAP, CRWD \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-15 BUY MPC, DBX, OKTA, AVAH, S, APPN, SNAP, CRWD \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY MPC, DBX, OKTA, AVAH, S, APPN, SNAP, CRWD \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY MPC, DBX, OKTA, AVAH, S, APPN, SNAP, CRWD \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, QBTS \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
