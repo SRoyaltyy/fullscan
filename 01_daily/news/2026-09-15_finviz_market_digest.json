@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T08:30:12.060640-04:00",
+  "generated_at": "2026-09-15T08:51:02.246339-04:00",
   "timezone": "America/New_York",
   "source": "live",
   "source_url": "https://elite.finviz.com/",
@@ -15,40 +15,44 @@
   "kind": "finviz_homepage_market_digest",
   "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
   "error": null,
-  "headline": "US equity futures point lower as oil trades above $100 and 10-year yield hits 2007 high ahead of Fed meeting and Empire State data",
-  "raw_text": "- S&P 500, Dow, Nasdaq 100 (@NQ), and Russell 2000 futures (@ER2) are set for a weaker open, down -0.18%, -0.29%, -0.14%, and -0.22% respectively, ahead of a Fed meeting that begins today with a decision and projections due Wednesday\n- The 10-year Treasury yield reaches its highest level since 2007 and oil (@CL) trades above $100, pressuring rate-sensitive and growth stocks while supporting some energy names and reinforcing a yield- and oil (@CL)-driven pre-market tone\n- VEEA (VEEA) jumps 75–82% pre-market after signing a term sheet to combine with NovaGen and securing a $10M cornerstone investment\n- BDRX (BDRX) gains about 22% on Phase 3 FAP trial enrollment momentum\n- MYSZ (MYSZ) rises about 50% pre-market—after earlier trading up into the high-60% range—after announcing a pivot to a defense-tech acquisition strategy\n- CNTB (CNTB) falls around 38% pre-market after earlier losses in the mid-30s to mid-40s range, while FTFT (FTFT) is off roughly 24% after earlier declines near 19–28%\n- ENVA (ENVA) slips about 17% and PLAY (PLAY) drops about 14% after PLAY (PLAY) reported a Q2 earnings miss that included an adjusted loss and weak comparable sales\n- FPS (FPS) reported a pre-market earnings beat after options had implied roughly a 16% move in the stock\n- VRA (VRA) trades ahead of results with implied volatility pointing to about a 20% move, while high-profile name TCOM (TCOM) is scheduled to report after the close\n- Overnight, the Nikkei (@NKD) edged higher while broader Asian indices slipped on elevated oil (@CL), rising yields, and AI slowdown concerns, and European equities traded cautiously lower amid the global bond selloff, with the NY Empire State Manufacturing Index due at 8:30 AM ET on a relatively light US calendar",
-  "raw_summary_md": "- S&P 500, **Dow**, Nasdaq 100 ([@NQ](https://finviz.com/futures_charts?t=NQ)), and Russell 2000 futures ([@ER2](https://finviz.com/futures_charts?t=ER2)) are set for a **weaker open, down -0.18%, -0.29%, -0.14%, and -0.22%** respectively, ahead of a **Fed meeting** that begins today with a decision and projections due Wednesday\n- The **10-year Treasury yield reaches its highest level since 2007** and oil ([@CL](https://finviz.com/futures_charts?t=CL)) **trades above $100**, pressuring rate-sensitive and growth stocks while supporting some energy names and reinforcing a yield- and oil ([@CL](https://finviz.com/futures_charts?t=CL))-driven pre-market tone\n- **VEEA** ([VEEA](https://finviz.com/quote?t=VEEA)) **jumps 75–82% pre-market** after signing a term sheet to combine with NovaGen and securing a **$10M cornerstone investment**\n- **BDRX** ([BDRX](https://finviz.com/quote?t=BDRX)) **gains about 22%** on Phase 3 FAP trial enrollment momentum\n- **MYSZ** ([MYSZ](https://finviz.com/quote?t=MYSZ)) **rises about 50% pre-market**—after earlier trading up into the high-60% range—after announcing a pivot to a **defense-tech acquisition strategy**\n- **CNTB** ([CNTB](https://finviz.com/quote?t=CNTB)) **falls around 38% pre-market** after earlier losses in the mid-30s to mid-40s range, while **FTFT** ([FTFT](https://finviz.com/quote?t=FTFT)) is off **roughly 24%** after earlier declines near 19–28%\n- **ENVA** ([ENVA](https://finviz.com/quote?t=ENVA)) slips about **17%** and **PLAY** ([PLAY](https://finviz.com/quote?t=PLAY)) drops about **14%** after PLAY ([PLAY](https://finviz.com/quote?t=PLAY)) reported a **Q2 earnings miss** that included an **adjusted loss** and **weak comparable sales**\n- **FPS** ([FPS](https://finviz.com/quote?t=FPS)) reported a pre-market **earnings beat** after options had implied roughly a **16% move** in the stock\n- **VRA** ([VRA](https://finviz.com/quote?t=VRA)) trades ahead of results with implied volatility pointing to about a **20% move**, while high-profile name **TCOM** ([TCOM](https://finviz.com/quote?t=TCOM)) is scheduled to report **after the close**\n- Overnight, the **Nikkei** ([@NKD](https://finviz.com/futures_charts?t=NKD)) edged higher while **broader Asian indices slipped** on elevated oil ([@CL](https://finviz.com/futures_charts?t=CL)), rising yields, and AI slowdown concerns, and **European equities traded cautiously lower** amid the global bond selloff, with the **NY Empire State Manufacturing Index** due at **8:30 AM ET** on a relatively light US calendar",
+  "headline": "US stock futures point to a lower open as 10-year yield tops 5% and oil holds above $100 ahead of Fed meeting",
+  "raw_text": "- VEEA (VEEA) rises around 75% pre-market after announcing a $750M merger agreement with NovaGen to create an Edge AI health platform.\n- BDRX (BDRX) trades higher on heavy speculative volume after entering a warrant exercise agreement to raise approximately $2.3M, while MYSZ (MYSZ) gains more than 40% after pivoting to a defense-technology acquisition strategy and VERA (VERA) climbs about 17% on positive trial data.\n- FTFT (FTFT) slides roughly 23% in pre-market trading on profit-taking after its recent surge amid sharp moves in select small-cap names.\n- VRA (VRA) rises about 25% after Q2 revenue of $71.6M, up 1.1% YoY, a return to profitability, and maintained guidance, while FPS (FPS) advances after reporting an earnings beat.\n- ENVA (ENVA) drops about 20% after withdrawing regulatory applications for its proposed Grasshopper Bancorp acquisition even as it reaffirmed 2026 guidance, and PLAY (PLAY) falls roughly 13% after an earnings miss that included an unexpected adjusted loss.\n- CNTB (CNTB) falls more than 29% on a sell-the-news reaction to positive Phase 2 asthma trial data.\n- S&P 500 (@ES), Dow (@YM), Nasdaq 100 (@NQ), and Russell 2000 (@ER2) futures are down 0.15%, 0.28%, 0.12%, and 0.19%, respectively, as WTI crude (@CL) hovers near $103 and the 10-year Treasury yield moves above 5% for the first time since 2007 ahead of the Fed’s two-day policy meeting.\n- Today’s U.S. calendar features the NY Empire State Manufacturing Index at 8:30 AM ET as investors position for tomorrow’s Fed decision and updated projections.\n- Asian equity markets trade mixed, with the Nikkei (@NKD) slightly higher and most other indices lower amid elevated oil and bond yields and lingering AI-related caution.\n- European shares trade lower in early action ahead of the Federal Reserve meeting.",
+  "raw_summary_md": "- **VEEA** ([VEEA](https://finviz.com/quote?t=VEEA)) rises around **75%** pre-market after announcing a **$750M** merger agreement with **NovaGen** to create an Edge AI health platform.\n- **BDRX** ([BDRX](https://finviz.com/quote?t=BDRX)) trades higher on heavy speculative volume after entering a warrant exercise agreement to raise approximately **$2.3M**, while **MYSZ** ([MYSZ](https://finviz.com/quote?t=MYSZ)) gains more than **40%** after pivoting to a defense-technology acquisition strategy and **VERA** ([VERA](https://finviz.com/quote?t=VERA)) climbs about **17%** on positive trial data.\n- **FTFT** ([FTFT](https://finviz.com/quote?t=FTFT)) slides roughly **23%** in pre-market trading on profit-taking after its recent surge amid sharp moves in select small-cap names.\n- **VRA** ([VRA](https://finviz.com/quote?t=VRA)) rises about **25%** after **Q2 revenue of $71.6M, up 1.1% YoY, a return to profitability, and maintained guidance**, while **FPS** ([FPS](https://finviz.com/quote?t=FPS)) advances after reporting an **earnings beat**.\n- **ENVA** ([ENVA](https://finviz.com/quote?t=ENVA)) drops about **20%** after withdrawing regulatory applications for its proposed **Grasshopper Bancorp** acquisition even as it **reaffirmed 2026 guidance**, and **PLAY** ([PLAY](https://finviz.com/quote?t=PLAY)) falls roughly **13%** after an **earnings miss** that included an **unexpected adjusted loss**.\n- **CNTB** ([CNTB](https://finviz.com/quote?t=CNTB)) falls more than **29%** on a **sell-the-news reaction** to **positive Phase 2 asthma trial data**.\n- **S&P 500** ([@ES](https://finviz.com/futures_charts?t=ES)), **Dow** ([@YM](https://finviz.com/futures_charts?t=YM)), **Nasdaq 100** ([@NQ](https://finviz.com/futures_charts?t=NQ)), and **Russell 2000** ([@ER2](https://finviz.com/futures_charts?t=ER2)) futures are down **0.15%**, **0.28%**, **0.12%**, and **0.19%**, respectively, as **WTI crude** ([@CL](https://finviz.com/futures_charts?t=CL)) hovers near **$103** and the **10-year Treasury yield** moves above **5%** for the first time since **2007** ahead of the Fed’s two-day policy meeting.\n- **Today’s U.S. calendar** features the **NY Empire State Manufacturing Index** at **8:30 AM ET** as investors position for **tomorrow’s Fed decision** and updated projections.\n- **Asian equity markets** trade **mixed**, with the **Nikkei** ([@NKD](https://finviz.com/futures_charts?t=NKD)) slightly higher and **most other indices lower** amid **elevated oil and bond yields** and lingering AI-related caution.\n- **European shares** trade **lower** in early action ahead of the **Federal Reserve meeting**.",
   "index_moves": [],
-  "oil": null,
+  "oil": {
+    "name": "WTI crude",
+    "price": 103.0,
+    "verb": null,
+    "direction": null
+  },
   "cpi": null,
   "fed_odds": null,
   "named_tickers": [
     "VEEA",
     "BDRX",
     "MYSZ",
-    "CNTB",
+    "VERA",
     "FTFT",
+    "VRA",
+    "FPS",
     "ENVA",
     "PLAY",
-    "FPS",
-    "VRA",
-    "TCOM"
+    "CNTB"
   ],
   "named_leaders": [
     "VEEA",
     "BDRX",
     "MYSZ",
-    "CNTB",
+    "VERA",
     "FTFT",
+    "VRA",
+    "FPS",
     "ENVA",
     "PLAY",
-    "FPS",
-    "VRA",
-    "TCOM"
+    "CNTB"
   ],
   "calendar": [
-    "S&P 500, Dow, Nasdaq 100 (@NQ), and Russell 2000 futures (@ER2) are set for a weaker open, down -0.18%, -0.29%, -0.14%, and -0.22% respectively, ahead of a Fed meeting that begins today with a decision and projections due Wednesday",
-    "Overnight, the Nikkei (@NKD) edged higher while broader Asian indices slipped on elevated oil (@CL), rising yields, and AI slowdown concerns, and European equities traded cautiously lower amid the global bond selloff, with the NY Empire State Manufacturing Index due at 8:30 AM ET on a relatively light US calendar"
+    "Today’s U.S. calendar features the NY Empire State Manufacturing Index at 8:30 AM ET as investors position for tomorrow’s Fed decision and updated projections."
   ],
   "prior_close": {
     "spx": null,
@@ -64,10 +68,10 @@
     "retail": false,
     "fed": true,
     "bullets": [
-      "S&P 500, Dow, Nasdaq 100 (@NQ), and Russell 2000 futures (@ER2) are set for a weaker open, down -0.18%, -0.29%, -0.14%, and -0.22% respectively, ahead of a Fed meeting that begins today with a decision and projections due Wednesday",
-      "Overnight, the Nikkei (@NKD) edged higher while broader Asian indices slipped on elevated oil (@CL), rising yields, and AI slowdown concerns, and European equities traded cautiously lower amid the global bond selloff, with the NY Empire State Manufacturing Index due at 8:30 AM ET on a relatively light US calendar"
+      "Today’s U.S. calendar features the NY Empire State Manufacturing Index at 8:30 AM ET as investors position for tomorrow’s Fed decision and updated projections.",
+      "European shares trade lower in early action ahead of the Federal Reserve meeting."
     ],
-    "text": "S&P 500, Dow, Nasdaq 100 (@NQ), and Russell 2000 futures (@ER2) are set for a weaker open, down -0.18%, -0.29%, -0.14%, and -0.22% respectively, ahead of a Fed meeting that begins today with a decision and projections due Wednesday Overnight, the Nikkei (@NKD) edged higher while broader Asian indices slipped on elevated oil (@CL), rising yields, and AI slowdown concerns, and European equities traded cautiously lower amid the global bond selloff, with the NY Empire State Manufacturing Index due at 8:30 AM ET on a relatively light US calendar"
+    "text": "Today’s U.S. calendar features the NY Empire State Manufacturing Index at 8:30 AM ET as investors position for tomorrow’s Fed decision and updated projections. European shares trade lower in early action ahead of the Federal Reserve meeting."
   },
   "earnings_slate": {
     "tickers": [],
@@ -79,9 +83,9 @@
     "flags": [],
     "text": ""
   },
-  "finviz_id": 285669,
+  "finviz_id": 285731,
   "finviz_ticker": "$MARKET",
-  "finviz_published_at": "2026-09-15T08:06:41.393",
+  "finviz_published_at": "2026-09-15T08:37:05.58",
   "finviz_source": "market_summary",
   "finviz_sentiment": "bad"
 }
