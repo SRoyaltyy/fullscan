@@ -99,6 +99,7 @@ def test_factor_mine_template_paints_every_strategy() -> None:
     assert "liveResearch" in html
     assert "holdXBoard" in html
     assert "hard_red_hold_x.json" in html
+    assert html.index("function paintHoldX") < html.index("if(!stamp||!pills) return")
     assert "(A) short-only" in html
     assert "(B) dip-scoop" in html
     assert "keep_bar" in html or "KEEP bar unchanged" in html
