@@ -1,14 +1,324 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T14:44:43.726982-04:00",
-  "overall": null,
-  "ranker_ready": null,
-  "counts": {},
-  "buy_1d": [],
-  "sell_1d": [],
-  "flatten": {},
-  "general": {},
-  "sectors": {},
-  "lands": [],
+  "generated_at": "2026-09-15T15:21:42.132041-04:00",
+  "overall": "OK",
+  "ranker_ready": true,
+  "counts": {
+    "ok": 8,
+    "partial": 0,
+    "fail": 0,
+    "n": 8
+  },
+  "buy_1d": [
+    {
+      "ticker": "DBX",
+      "score": 0.6703885201679096
+    },
+    {
+      "ticker": "APPN",
+      "score": 0.6208283227234574
+    },
+    {
+      "ticker": "META",
+      "score": 0.10004151018196517
+    },
+    {
+      "ticker": "SNAP",
+      "score": 0.47600973989817624
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "METC",
+      "score": -0.6494356220511095
+    },
+    {
+      "ticker": "FLNC",
+      "score": -0.6024996110643821
+    },
+    {
+      "ticker": "HNRG",
+      "score": -0.19711615145848124
+    },
+    {
+      "ticker": "OKLO",
+      "score": -0.46637075466845285
+    },
+    {
+      "ticker": "TLN",
+      "score": -0.6051731507994839
+    },
+    {
+      "ticker": "NRG",
+      "score": -0.36939077442765333
+    },
+    {
+      "ticker": "FCEL",
+      "score": -0.5278310717430196
+    },
+    {
+      "ticker": "LVWR",
+      "score": -0.5513448523029841
+    },
+    {
+      "ticker": "TE",
+      "score": -0.39871432694503406
+    },
+    {
+      "ticker": "AG",
+      "score": -0.47515655686471775
+    }
+  ],
+  "flatten": {
+    "said": "0 priced buys \u00b7 cash $108,616.66",
+    "bullets": [
+      "0 priced buys",
+      "cash $108,616.66"
+    ]
+  },
+  "general": {
+    "said": "DOWN  -3.65",
+    "bullets": [
+      "bad: Asia -0.72% (Kospi -3.26%)",
+      "bad: 1w 10Y +19bp / 5% handle",
+      "bad: WTI +5% leftover Hormuz/Petroline",
+      "good: ES/NQ +0.4%/+0.38% not confirming",
+      "good: HY contained 2.71"
+    ],
+    "score": "-3.65",
+    "direction": "down"
+  },
+  "sectors": {
+    "said": "1 up / 8 down / 2 flat",
+    "bullets": [
+      "XLB DOWN -7.6",
+      "XLC FLAT -3.8",
+      "XLY DOWN -3.3",
+      "XLP FLAT -5.0",
+      "XLE UP +6.8",
+      "XLF DOWN -3.8",
+      "XLV DOWN -2.9",
+      "XLI DOWN -0.5",
+      "XLRE DOWN -6.3",
+      "XLK DOWN -1.1",
+      "XLU DOWN -6.5"
+    ]
+  },
+  "lands": [
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T12:59:21.353124-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 109264,
+          "preview": "raw=221 usable=21 single=29 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | OPEC+ holds October output quotas unchanged | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 5058,
+          "preview": "# News Parse v2 \u2014 2026-09-15T12:59:14.736000-04:00\nWindow\u224848h | raw=221 | usable=21 | single_name=29 | noise_dropped=171\nusable polarity={'+': 1, '-': 5, 'mixed': 0, 'neutral': 15}"
+        }
+      ],
+      "preview": "raw=221 usable=21 single=29 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | OPEC+ holds October output quotas unchanged | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB \u00b7 # News Parse v2 \u2014 2026-09-15T12:59:14.736000-04:00\nWindow\u224848h | raw=221 | usable=21 | single_name=29 | noise_dropped=171\nusable polarity={'+': 1, '-': 5, 'mixed': 0, 'neutral': 15}"
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T13:07:06.447948-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-09-15_events.json",
+          "ok": true,
+          "reason": "",
+          "size": 117993,
+          "preview": "119 events \u00b7 10-year Treasury yield breaches 5% \u2014 global bond selloff | August CPI \u2014 core surprise locks in September hike | August PCE inflation (Fed's preferred gauge) | ECB 25bp hike delivered; hawkish forecast upgrade | China August credit/social financing \u2014 bond & equity share tops loans  | US existing home sales fall to 14-month low; mortgage rates up 3rd wee"
+        },
+        {
+          "path": "01_daily/events/2026-09-15_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 52371,
+          "preview": "# Event Scan \u2014 2026-09-15\n- events tracked: **119** (via openclaw) (merged with earlier same-day scan)\n- uncertainty: **high**\n- summary: The next 48 hours are a stacked macro gauntlet: August retail sales and UK CPI tomorrow morning, then Chair Warsh's first hike decision with a full SEP, followed by BoE (hold expected) and a near-certain BoJ hike to 1.25%. That lands on a market already dealing with Brent ~$107-109, a shut Saudi East-West pipeline, a 10-year above 5%, and a Trump-Xi summit on Sept 24 that is the last clean shot at extending the Nov 10 US-China tariff truce. Shutdown risk is off the table until December; the live left tails are oil logistics, a hawkish dots/press conference, and a failed Washington summit."
+        }
+      ],
+      "preview": "119 events \u00b7 10-year Treasury yield breaches 5% \u2014 global bond selloff | August CPI \u2014 core surprise locks in September hike | August PCE inflation (Fed's preferred gauge) | ECB 25bp hike delivered; hawkish forecast upgrade | China August credit/social financing \u2014 bond & equity share tops loans  | US existing home sales fall to 14-month low; mortgage rates up 3rd wee \u00b7 # Event Scan \u2014 2026-09-15\n- events tracked: **119** (via openclaw) (merged with earlier same-day scan)\n- uncertainty: **high**\n- summary: The next 48 hours are a stacked macro gauntlet: August retail sales and UK CPI tomorrow morning, then Chair Warsh's first hike decision with a full SEP, followed by BoE (hold expected) and a near-certain BoJ hike to 1.25%. That lands on a market already dealing with Brent ~$107-109, a shut Saudi East-West pipeline, a 10-year above 5%, and a Trump-Xi summit on Sept 24 that is the last clean shot at extending the Nov 10 US-China tariff truce. Shutdown risk is off the table until December; the live left tails are oil logistics, a hawkish dots/press conference, and a failed Washington summit."
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T13:07:07.171437-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 87547,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11528,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T13:07:06.772040-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+        },
+        {
+          "path": "data/exports/finviz_2026-09-15.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11109598,
+          "preview": "11634 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11415288,
+          "preview": "11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T13:07:06.772040-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11634 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11617 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T13:08:28.515555-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-15_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 269303,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-15_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 17281,
+          "preview": "# MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T13:08:28.205962-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T13:08:28.205962-04:00"
+    },
+    {
+      "key": "events_catcher",
+      "title": "Event catcher (gap hunt, no carry)",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T13:14:27.773257-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-09-15_events.json",
+          "ok": true,
+          "reason": "",
+          "size": 132003,
+          "preview": "131 events \u00b7 10-year Treasury yield breaches 5% \u2014 global bond selloff | August CPI \u2014 core surprise locks in September hike | August PCE inflation (Fed's preferred gauge) | ECB 25bp hike delivered; hawkish forecast upgrade | China August credit/social financing \u2014 bond & equity share tops loans  | US existing home sales fall to 14-month low; mortgage rates up 3rd wee"
+        },
+        {
+          "path": "01_daily/events/2026-09-15_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 57726,
+          "preview": "# Event Scan \u2014 2026-09-15\n- events tracked: **119** (via openclaw) (merged with earlier same-day scan)\n- uncertainty: **high**\n- summary: The next 48 hours are a stacked macro gauntlet: August retail sales and UK CPI tomorrow morning, then Chair Warsh's first hike decision with a full SEP, followed by BoE (hold expected) and a near-certain BoJ hike to 1.25%. That lands on a market already dealing with Brent ~$107-109, a shut Saudi East-West pipeline, a 10-year above 5%, and a Trump-Xi summit on Sept 24 that is the last clean shot at extending the Nov 10 US-China tariff truce. Shutdown risk is off the table until December; the live left tails are oil logistics, a hawkish dots/press conference, and a failed Washington summit."
+        }
+      ],
+      "preview": "131 events \u00b7 10-year Treasury yield breaches 5% \u2014 global bond selloff | August CPI \u2014 core surprise locks in September hike | August PCE inflation (Fed's preferred gauge) | ECB 25bp hike delivered; hawkish forecast upgrade | China August credit/social financing \u2014 bond & equity share tops loans  | US existing home sales fall to 14-month low; mortgage rates up 3rd wee \u00b7 # Event Scan \u2014 2026-09-15\n- events tracked: **119** (via openclaw) (merged with earlier same-day scan)\n- uncertainty: **high**\n- summary: The next 48 hours are a stacked macro gauntlet: August retail sales and UK CPI tomorrow morning, then Chair Warsh's first hike decision with a full SEP, followed by BoE (hold expected) and a near-certain BoJ hike to 1.25%. That lands on a market already dealing with Brent ~$107-109, a shut Saudi East-West pipeline, a 10-year above 5%, and a Trump-Xi summit on Sept 24 that is the last clean shot at extending the Nov 10 US-China tariff truce. Shutdown risk is off the table until December; the live left tails are oil logistics, a hawkish dots/press conference, and a failed Washington summit."
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T13:17:58.615036-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 32252,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 9831,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-09-15T13:17:52.676841-04:00\nraw=252 unique_events=4 tickers=54"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-15T13:17:52.676841-04:00\nraw=252 unique_events=4 tickers=54"
+    },
+    {
+      "key": "news_judge",
+      "title": "News judge",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T13:20:13.919114-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_judge.md",
+          "ok": true,
+          "reason": "",
+          "size": 11802,
+          "preview": "# News Judge \u2014 2026-09-15"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_judge.json",
+          "ok": true,
+          "reason": "",
+          "size": 1083,
+          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+        }
+      ],
+      "preview": "# News Judge \u2014 2026-09-15 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T15:21:40.637525-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 87526,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11377,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T07:31:21.815244-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-15T07:31:21.815244-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+    }
+  ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
 }
