@@ -33,6 +33,7 @@ OUT_JSON = OUT_DIR / "hard_red_flip.json"
 OUT_MD = ROOT / "03_scoreboard" / "HARD_RED_SIT.md"
 DASH_FM = ROOT / "dashboard" / "factor-mine" / "hard_red_flip.json"
 DASH_SB = ROOT / "dashboard" / "strategy-board" / "hard_red_flip.json"
+DASH_HR = ROOT / "dashboard" / "hard-red-sit" / "hard_red_flip.json"
 DASH_PAGE = ROOT / "dashboard" / "hard-red-sit" / "index.html"
 MARK_B = "<!-- FLIP_BEGIN -->"
 MARK_E = "<!-- FLIP_END -->"
@@ -322,6 +323,8 @@ def write_payload(payload: dict) -> None:
     DASH_SB.parent.mkdir(parents=True, exist_ok=True)
     DASH_FM.write_text(text, encoding="utf-8")
     DASH_SB.write_text(text, encoding="utf-8")
+    DASH_HR.parent.mkdir(parents=True, exist_ok=True)
+    DASH_HR.write_text(text, encoding="utf-8")
     section = render_md(payload)
     if OUT_MD.is_file():
         raw = OUT_MD.read_text(encoding="utf-8")
@@ -339,16 +342,19 @@ def write_payload(payload: dict) -> None:
 
 
 def _splice_dash(payload: dict) -> None:
-    """Keep the hold×X page and append a flip table."""
+    """Keep the hold×X page and append a flip table before </body>."""
     DASH_PAGE.parent.mkdir(parents=True, exist_ok=True)
     extra = json.dumps(payload)
-    block = f"""
+    marker = "<!-- FLIP_BOARD -->"
+    block = f"""{marker}
+<div class="wrap">
 <h2>Polarity flip — intended side reversed at the open</h2>
 <p class="mut" id="flipNote"></p>
 <table id="flip"><thead><tr>
 <th>Sleeve</th><th>Intended</th><th>Fired</th><th>Hold</th>
 <th>n</th><th>Win</th><th>$</th><th>Verdict</th></tr></thead>
 <tbody></tbody></table>
+</div>
 <script>
 const F = {extra};
 (function(){{
@@ -375,26 +381,16 @@ const F = {extra};
 """
     if DASH_PAGE.is_file():
         raw = DASH_PAGE.read_text(encoding="utf-8")
-        if "id=\"flip\"" in raw:
-            # replace from the flip heading to last script before </div></body>
-            start = raw.find("<h2>Polarity flip")
-            if start < 0:
-                raw = raw.replace("</div>\n<script>", block + "</div>\n<script>", 1)
-            else:
-                end = raw.rfind("</body>")
-                # keep hold-x scripts; append before </div></body> of wrap
-                wrap_end = raw.rfind("</div></body>")
-                if wrap_end < 0:
-                    wrap_end = raw.rfind("</body>")
-                head = raw[:start] if start >= 0 else raw[:wrap_end]
-                raw = head.rstrip() + "\n" + block + "\n</div></body></html>\n"
+        if marker in raw:
+            raw = raw.split(marker, 1)[0]
+        if "</body>" in raw:
+            raw = raw.replace("</body>", block + "</body>", 1)
         else:
-            raw = raw.replace("</div>\n</body>", block + "</div>\n</body>", 1)
+            raw = raw.rstrip() + "\n" + block
         DASH_PAGE.write_text(raw, encoding="utf-8")
     else:
         DASH_PAGE.write_text(
-            "<!DOCTYPE html><html><body><div class=\"wrap\">"
-            + block + "</div></body></html>",
+            "<!DOCTYPE html><html><body>" + block + "</body></html>",
             encoding="utf-8")
 
 

@@ -398,3 +398,45 @@ Window `2026-08-13` → `2026-09-14` · 10 hard-red sessions · hold grid [1, 2,
 KEEP needs ≥30 fires and >55% after Futubull fees. WATCH is n≥10 and win>50% — not a live wire. Close grades; it does not trigger the scoop.
 
 <!-- HOLD_X_END -->
+
+<!-- FLIP_BEGIN -->
+
+## Polarity flip (research, not a wire)
+
+Paper counterfactual. On hard-red, flip the intended side at the 09:30 open (long→short, short→long). No scoop. Live sit unchanged. X is not used.
+
+Window `2026-08-13` → `2026-09-14` · 10 hard-red sessions · hold grid [1, 2, 3, 5].
+
+**KEEP** `3` · **WATCH** `3` · strategies `27`. Live sit stays.
+
+| Sleeve | Intended | Fired | Hold | n | Win | $ | Verdict |
+|---|---|---|---:|---:|---:|---:|---|
+| `combo_sh_5050_shared` | mixed | flipped | 3 | 55 | 40.0% | -15.82 | KILL |
+| `combo_sh_macd_5050_shared` | mixed | flipped | 5 | 50 | 38.2% | -0.36 | KILL |
+| `flatten_io` | long | short | 5 | 48 | 25.0% | -37.79 | KILL |
+| `short_news_r_macd_h3` | short | long | 5 | 14 | 30.0% | -6.27 | KILL |
+| `union_hot_n4_h1` | long | short | 3 | 36 | 46.9% | -4.74 | KILL |
+| `short_news_r_h3` | short | long | 5 | 19 | 35.7% | -6.56 | KILL |
+| `short_news_or_h3` | short | long | 5 | 19 | 35.7% | -6.56 | KILL |
+| `short_alarm_h3` | short | long | 1 | 66 | 31.8% | -182.41 | KILL |
+| `short_rsi_ob_h3` | short | long | 5 | 69 | 60.4% | -33.60 | KEEP |
+| `short_macd_dn_h3` | short | long | 3 | 66 | 31.7% | -117.31 | KILL |
+| `short_last_red_h3` | short | long | 3 | 71 | 31.2% | -76.99 | KILL |
+| `short_extended_h3` | short | long | 5 | 65 | 41.5% | -261.17 | KILL |
+| `union_e_fresh_h3` | long | short | 5 | 43 | 72.0% | +133.83 | KEEP |
+| `union_h3` | long | short | 5 | 72 | 27.1% | -35.35 | KILL |
+| `flatten_h3` | long | short | 5 | 55 | 26.8% | -35.25 | KILL |
+| `flatten_h5` | long | short | 5 | 55 | 26.8% | -35.25 | KILL |
+| `ohlc_hot_h3` | long | short | 5 | 72 | 45.8% | +115.05 | KILL |
+| `yday_gainer_h3` | long | short | 5 | 72 | 33.3% | +89.72 | KILL |
+| `union_rsi_os_h3` | long | short | 2 | 11 | 54.5% | -3.22 | WATCH |
+| `union_macd_up_h3` | long | short | 5 | 72 | 33.3% | +7.65 | KILL |
+| `union_flow_in_h3` | long | short | 5 | 17 | 44.4% | -4.40 | KILL |
+| `union_news_pack_h1` | long | short | 5 | 19 | 42.9% | +17.27 | KILL |
+| `union_join_vol_green_h1` | long | short | 5 | 24 | 60.0% | -3.15 | WATCH |
+| `union_earn_react_h3` | long | short | 5 | 41 | 79.2% | +154.44 | KEEP |
+| `union_news_pack_net2_h1` | long | short | 5 | 14 | 60.0% | +30.37 | WATCH |
+
+KEEP needs ≥30 fires and >55% after Futubull fees. This is the opposite-side open fill, not a scoop.
+
+<!-- FLIP_END -->

@@ -69,6 +69,51 @@ class FlipSweep(unittest.TestCase):
             self.assertIn(short["picked"]["hold"], hf.HOLD_GRID)
             self.assertEqual(short["picked"]["mode"], "polarity_flip")
 
+    def test_write_splices_flip_table_before_body_end(self):
+        from pathlib import Path
+        from tempfile import TemporaryDirectory
+        payload = {
+            "note": "flip test",
+            "n_keep": 1,
+            "n_watch": 0,
+            "from_date": "2026-08-13",
+            "to_date": "2026-09-14",
+            "hard_red_n": 1,
+            "hold_grid": [1, 5],
+            "n_strategies": 1,
+            "keeps": [],
+            "watches": [],
+            "strategies": [{
+                "name": "union_earn_react_h3",
+                "side": "long",
+                "fired_side": "short",
+                "picked": {"hold": 5, "n_fires": 41, "win_rate": 0.79,
+                           "pnl": 154.44, "verdict": "KEEP"},
+            }],
+        }
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            page = root / "dashboard" / "hard-red-sit" / "index.html"
+            page.parent.mkdir(parents=True)
+            page.write_text(
+                "<html><body><div class=\"wrap\">holdx</div>"
+                "</body></html>", encoding="utf-8")
+            md = root / "03_scoreboard" / "HARD_RED_SIT.md"
+            md.parent.mkdir(parents=True)
+            md.write_text("# sit\n", encoding="utf-8")
+            with patch.object(hf, "OUT_JSON", root / "flip.json"), \
+                 patch.object(hf, "OUT_MD", md), \
+                 patch.object(hf, "DASH_FM", root / "fm.json"), \
+                 patch.object(hf, "DASH_SB", root / "sb.json"), \
+                 patch.object(hf, "DASH_HR", page.parent / "hard_red_flip.json"), \
+                 patch.object(hf, "DASH_PAGE", page):
+                hf.write_payload(payload)
+            html = page.read_text(encoding="utf-8")
+            self.assertIn('id="flip"', html)
+            self.assertIn("union_earn_react_h3", html)
+            self.assertTrue(html.index("id=\"flip\"") < html.index("</body>"))
+            self.assertTrue((page.parent / "hard_red_flip.json").is_file())
+
 
 if __name__ == "__main__":
     unittest.main()
