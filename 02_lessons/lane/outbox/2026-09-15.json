@@ -1,0 +1,86 @@
+{
+  "generated_at": "2026-09-15T14:22:07.164390Z",
+  "count": 4,
+  "ok": 3,
+  "results": [
+    {
+      "ok": false,
+      "ticker": "NVDA",
+      "template": "key_people",
+      "question": "key_people",
+      "error": "all direct lanes failed",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "ticker": "NVDA",
+      "template": "key_products",
+      "question": "key_products",
+      "lane": "openrouter",
+      "model": "openrouter/free",
+      "json": {},
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "ticker": "NVDA",
+      "template": "revenue_mix",
+      "question": "revenue_mix",
+      "lane": "openrouter",
+      "model": "z-ai/glm-5.2:free",
+      "json": {
+        "ticker": "NVDA",
+        "segment_revenue": [
+          {
+            "segment": "Data Center",
+            "revenue": null,
+            "currency": "USD",
+            "period": null,
+            "share_pct": null
+          },
+          {
+            "segment": "Gaming",
+            "revenue": null,
+            "currency": "USD",
+            "period": null,
+            "share_pct": null
+          },
+          {
+            "segment": "Professional Visualization",
+            "revenue": null,
+            "currency": "USD",
+            "period": null,
+            "share_pct": null
+          },
+          {
+            "segment": "Automotive",
+            "revenue": null,
+            "currency": "USD",
+            "period": null,
+            "share_pct": null
+          }
+        ],
+        "unknowns": [
+          "segment_revenue.revenue",
+          "segment_revenue.period",
+          "segment_revenue.share_pct"
+        ]
+      },
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "ticker": "NVDA",
+      "template": "custom",
+      "question": "Who is the CEO?",
+      "lane": "openrouter",
+      "model": "google/gemma-4-26b-a4b-it:free",
+      "json": {
+        "ticker": "NVDA",
+        "ceo": "Jensen Huang",
+        "unknowns": []
+      },
+      "via": "direct"
+    }
+  ]
+}
