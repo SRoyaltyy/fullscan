@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T16:27:23.966681-04:00",
+  "generated_at": "2026-09-15T16:28:05.492048-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -70,7 +70,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 3,
+      "n_opt_ok": 5,
       "n_opt": 5,
       "files": [
         {
@@ -98,7 +98,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6662
+          "size": 7656
         },
         {
           "key": "market_digest_md",
@@ -107,25 +107,25 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 2949
+          "size": 3409
         },
         {
           "key": "market_digest_close_json",
           "name": "Close answer-key JSON (*_finviz_market_digest_close)",
           "path": "01_daily/news/2026-09-15_finviz_market_digest_close.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 8189
         },
         {
           "key": "market_digest_close_md",
           "name": "Close answer-key MD (*_finviz_market_digest_close)",
           "path": "01_daily/news/2026-09-15_finviz_market_digest_close.md",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 3747
         }
       ],
       "said": "",
@@ -158,7 +158,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6662
+          "size": 7656
         },
         {
           "key": "in_baseline",
@@ -274,8 +274,8 @@
           "path": "01_daily/2026-09-15_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=False Only 5 of 11 sector essays exist (communication_services, consumer_cyclical, energy, financial, healthcare) \u2014 6 missing,",
-          "size": 1631
+          "reason": "ok=False Grok returned an empty review",
+          "size": 309
         },
         {
           "key": "sector_basic_materials",
@@ -417,14 +417,14 @@
           "path": "01_daily/weather/2026-09-15_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9755 vix=falling yields=flat",
-          "size": 9755
+          "reason": "sectors=11 bytes=10561 vix=falling yields=flat",
+          "size": 10561
         }
       ],
-      "said": "favorable 1 \u00b7 hostile 9 \u00b7 neutral 1",
+      "said": "favorable 1 \u00b7 hostile 7 \u00b7 neutral 3",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Financial, Healthcare, Real Estate, Technology, Utilities",
-        "events bull 10 / bear 29"
+        "hostile: Basic Materials, Consumer Cyclical, Consumer Defensive, Financial, Industrials, Real Estate, Utilities",
+        "events bull 4 / bear 14"
       ]
     },
     {
@@ -454,12 +454,12 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=2653",
-          "size": 8478333
+          "size": 8478400
         }
       ],
       "said": "25 rows",
       "bullets": [
-        "SM, WDS, SFL, CFFN, CDNA"
+        "PBR, SM, WDS, CFFN, SFL"
       ]
     },
     {
@@ -566,8 +566,8 @@
           "path": "01_daily/weather/2026-09-15_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9755 vix=falling yields=flat",
-          "size": 9755
+          "reason": "sectors=11 bytes=10561 vix=falling yields=flat",
+          "size": 10561
         },
         {
           "key": "in_ab",
@@ -576,7 +576,7 @@
           "role": "input",
           "status": "OK",
           "reason": "rows=2653",
-          "size": 8478333
+          "size": 8478400
         },
         {
           "key": "join",
@@ -585,7 +585,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5897",
-          "size": 2282919
+          "size": 2259846
         },
         {
           "key": "peers",
@@ -594,7 +594,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5111",
-          "size": 827865
+          "size": 827894
         },
         {
           "key": "book_json",
@@ -602,8 +602,8 @@
           "path": "data/stock_book/2026-09-15_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=189",
-          "size": 1500924
+          "reason": "horizons=5 names=214",
+          "size": 1600177
         },
         {
           "key": "book_md",
@@ -612,7 +612,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 66974
+          "size": 82881
         },
         {
           "key": "green",
@@ -642,9 +642,9 @@
           "size": 5954895
         }
       ],
-      "said": "210 rows",
+      "said": "215 rows",
       "bullets": [
-        "RRC, SM, DVN, PR, EXE"
+        "RRC, AR, DVN, PBR, EXE"
       ]
     },
     {
@@ -664,8 +664,8 @@
           "path": "data/stock_book/2026-09-15_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=189",
-          "size": 1500924
+          "reason": "horizons=5 names=214",
+          "size": 1600177
         },
         {
           "key": "dash_html",
@@ -702,62 +702,78 @@
   "selections": {
     "buy_1d": [
       {
+        "ticker": "MPC",
+        "score": 0.29209191309625154
+      },
+      {
+        "ticker": "ZD",
+        "score": 0.5589167166768818
+      },
+      {
         "ticker": "DBX",
-        "score": 0.6703885201679096
+        "score": 0.6655696991736344
       },
       {
-        "ticker": "APPN",
-        "score": 0.6208283227234574
+        "ticker": "OKTA",
+        "score": 0.3171949408503709
       },
       {
-        "ticker": "META",
-        "score": 0.10004151018196517
+        "ticker": "S",
+        "score": 0.6756555447512882
       },
       {
-        "ticker": "SNAP",
-        "score": 0.47600973989817624
+        "ticker": "MTCH",
+        "score": 0.2507798001669761
+      },
+      {
+        "ticker": "TWLO",
+        "score": 0.2344131255187727
+      },
+      {
+        "ticker": "AVAH",
+        "score": 0.6530342269261553
       }
     ],
     "sell_1d": [
       {
         "ticker": "METC",
-        "score": -0.6494356220511095
+        "score": -0.6641762679092023
       },
       {
         "ticker": "FLNC",
-        "score": -0.6024996110643821
+        "score": -0.6103319363103141
       },
       {
         "ticker": "HNRG",
-        "score": -0.19711615145848124
-      },
-      {
-        "ticker": "OKLO",
-        "score": -0.46637075466845285
-      },
-      {
-        "ticker": "TLN",
-        "score": -0.6051731507994839
-      },
-      {
-        "ticker": "NRG",
-        "score": -0.36939077442765333
+        "score": -0.19924177908326396
       },
       {
         "ticker": "FCEL",
-        "score": -0.5278310717430196
+        "score": -0.6033423724534289
       },
       {
-        "ticker": "LVWR",
-        "score": -0.5513448523029841
+        "ticker": "TLN",
+        "score": -0.6297909817709133
       },
       {
         "ticker": "TE",
-        "score": -0.39871432694503406
+        "score": -0.49727484901676977
       },
       {
-        "ticker": "AG",
-        "score": -0.47515655686471775
+        "ticker": "OKLO",
+        "score": -0.4664643178825578
+      },
+      {
+        "ticker": "NRG",
+        "score": -0.3840146345488047
+      },
+      {
+        "ticker": "QBTS",
+        "score": -0.28103494195941975
+      },
+      {
+        "ticker": "LVWR",
+        "score": -0.5557584204822905
       }
     ],
     "flatten": {
@@ -807,109 +823,14 @@
       ]
     },
     "weather": {
-      "said": "favorable 1 \u00b7 hostile 9 \u00b7 neutral 1",
+      "said": "favorable 1 \u00b7 hostile 7 \u00b7 neutral 3",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Financial, Healthcare, Real Estate, Technology, Utilities",
-        "events bull 10 / bear 29"
+        "hostile: Basic Materials, Consumer Cyclical, Consumer Defensive, Financial, Industrials, Real Estate, Utilities",
+        "events bull 4 / bear 14"
       ]
     }
   },
   "lands": [
-    {
-      "key": "live_boards",
-      "title": "live_boards",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T10:40:22.477187-04:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 29812,
-          "preview": "2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 949,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-09-15.json",
-          "ok": true,
-          "reason": "",
-          "size": 194263,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-09-15_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 172827,
-          "preview": "2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 827750,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-09-15_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 827750,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 1208454,
-          "preview": "2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 827750,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 172827,
-          "preview": "2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 827750,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 827750,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 1208454,
-          "preview": "2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR"
-        }
-      ],
-      "preview": "2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY AMGN, LLY, S, FFIV, META, SNAP, ANGX, RPD \u00b7 SELL METC, FLNC, FCEL, OKLO, TLN, TE, IONQ, LVWR \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -3318,6 +3239,31 @@
         }
       ],
       "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, WDS, SKM \u00b7 2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SM, WDS, SFL, CFFN, CDNA"
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T16:28:04.353293-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 8189,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 3747,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-09-15\n**Generated:** 2026-09-15T16:28:04.327568-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks fell as the 10-year yield hit a 19-year high and Brent hovered near $108 ahead of Fed rate decision\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow -0.80%\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** -0.80%\n**Oil:** Brent crude $108.0\n**CPI/Fed:** 90.0% hike (90% chance of a 25-basis-point rate hike)\n**Leaders:** PLAY, INTC, QCOM, AMD, NVDA, MU, GS, JPM, COIN, HOOD, TCOM\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-16\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-15\n**Generated:** 2026-09-15T16:28:04.327568-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks fell as the 10-year yield hit a 19-year high and Brent hovered near $108 ahead of Fed rate decision\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow -0.80%\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** -0.80%\n**Oil:** Brent crude $108.0\n**CPI/Fed:** 90.0% hike (90% chance of a 25-basis-point rate hike)\n**Leaders:** PLAY, INTC, QCOM, AMD, NVDA, MU, GS, JPM, COIN, HOOD, TCOM\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-16\n**Clock use:** `next_open`"
     }
   ],
   "href": {

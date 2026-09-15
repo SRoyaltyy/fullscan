@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T16:27:23.966681-04:00",
+  "generated_at": "2026-09-15T16:28:05.492048-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -11,62 +11,78 @@
   },
   "buy_1d": [
     {
+      "ticker": "MPC",
+      "score": 0.29209191309625154
+    },
+    {
+      "ticker": "ZD",
+      "score": 0.5589167166768818
+    },
+    {
       "ticker": "DBX",
-      "score": 0.6703885201679096
+      "score": 0.6655696991736344
     },
     {
-      "ticker": "APPN",
-      "score": 0.6208283227234574
+      "ticker": "OKTA",
+      "score": 0.3171949408503709
     },
     {
-      "ticker": "META",
-      "score": 0.10004151018196517
+      "ticker": "S",
+      "score": 0.6756555447512882
     },
     {
-      "ticker": "SNAP",
-      "score": 0.47600973989817624
+      "ticker": "MTCH",
+      "score": 0.2507798001669761
+    },
+    {
+      "ticker": "TWLO",
+      "score": 0.2344131255187727
+    },
+    {
+      "ticker": "AVAH",
+      "score": 0.6530342269261553
     }
   ],
   "sell_1d": [
     {
       "ticker": "METC",
-      "score": -0.6494356220511095
+      "score": -0.6641762679092023
     },
     {
       "ticker": "FLNC",
-      "score": -0.6024996110643821
+      "score": -0.6103319363103141
     },
     {
       "ticker": "HNRG",
-      "score": -0.19711615145848124
-    },
-    {
-      "ticker": "OKLO",
-      "score": -0.46637075466845285
-    },
-    {
-      "ticker": "TLN",
-      "score": -0.6051731507994839
-    },
-    {
-      "ticker": "NRG",
-      "score": -0.36939077442765333
+      "score": -0.19924177908326396
     },
     {
       "ticker": "FCEL",
-      "score": -0.5278310717430196
+      "score": -0.6033423724534289
     },
     {
-      "ticker": "LVWR",
-      "score": -0.5513448523029841
+      "ticker": "TLN",
+      "score": -0.6297909817709133
     },
     {
       "ticker": "TE",
-      "score": -0.39871432694503406
+      "score": -0.49727484901676977
     },
     {
-      "ticker": "AG",
-      "score": -0.47515655686471775
+      "ticker": "OKLO",
+      "score": -0.4664643178825578
+    },
+    {
+      "ticker": "NRG",
+      "score": -0.3840146345488047
+    },
+    {
+      "ticker": "QBTS",
+      "score": -0.28103494195941975
+    },
+    {
+      "ticker": "LVWR",
+      "score": -0.5557584204822905
     }
   ],
   "flatten": {
@@ -105,24 +121,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "sector_predict",
-      "title": "Per-sector predict (all 11)",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T16:14:40.498778-04:00",
-      "files": [
-        {
-          "path": "01_daily/sectors/2026-09-15",
-          "ok": true,
-          "reason": "",
-          "size": 4096,
-          "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
-        }
-      ],
-      "preview": "11/11 sector predicts ok: basic_materials, communication_services, consumer_cyclical, consumer_defensive, energy, financial, healthcare, industrials"
-    },
     {
       "key": "sector_board",
       "title": "Sector board",
@@ -276,6 +274,31 @@
         }
       ],
       "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, WDS, SKM \u00b7 2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SM, WDS, SFL, CFFN, CDNA"
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T16:28:04.353293-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 8189,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 3747,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-09-15\n**Generated:** 2026-09-15T16:28:04.327568-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks fell as the 10-year yield hit a 19-year high and Brent hovered near $108 ahead of Fed rate decision\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow -0.80%\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** -0.80%\n**Oil:** Brent crude $108.0\n**CPI/Fed:** 90.0% hike (90% chance of a 25-basis-point rate hike)\n**Leaders:** PLAY, INTC, QCOM, AMD, NVDA, MU, GS, JPM, COIN, HOOD, TCOM\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-16\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-15\n**Generated:** 2026-09-15T16:28:04.327568-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks fell as the 10-year yield hit a 19-year high and Brent hovered near $108 ahead of Fed rate decision\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow -0.80%\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** -0.80%\n**Oil:** Brent crude $108.0\n**CPI/Fed:** 90.0% hike (90% chance of a 25-basis-point rate hike)\n**Leaders:** PLAY, INTC, QCOM, AMD, NVDA, MU, GS, JPM, COIN, HOOD, TCOM\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-16\n**Clock use:** `next_open`"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

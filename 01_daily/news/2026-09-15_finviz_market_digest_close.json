@@ -1,0 +1,116 @@
+{
+  "date": "2026-09-15",
+  "generated_at": "2026-09-15T16:28:04.327568-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-09-16",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-09-16) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks fell as the 10-year yield hit a 19-year high and Brent hovered near $108 ahead of Fed rate decision",
+  "raw_text": "- The S&P 500 ($SPX) closed at 7,581 (-0.51%), the Dow ($DJI) at 52,069 (-0.67%), while the Nasdaq ($COMP) fell 0.8% and the Russell 2000 (IWM) lost 1.09%, marking a second straight decline for US equities.\n- The 10-year Treasury yield rose to 5.04%, its highest level since 2007, as Treasury Secretary Scott Bessent defended recent bond-market actions amid the move.\n- Brent crude (@QA) traded near/above $108 per barrel on Saudi Arabia’s East-West pipeline shutdown and attacks, Strait of Hormuz risks, and broader Middle East supply tensions.\n- Energy was the only S&P 500 ($SPX) sector to finish higher, up roughly 1.9%, while consumer discretionary underperformed, dragged by Dave & Buster’s (PLAY) 17% drop after missing Q2 revenue estimates.\n- Dave & Buster’s (PLAY) shares tumbled 17% after the company reported Q2 revenue below expectations.\n- AI-related chip names advanced as Intel (INTC) traded flat, Qualcomm (QCOM) gained 4%, AMD (AMD) added 2.3%, and Nvidia (NVDA) and Micron Technology (MU) also climbed on positive developments including Micron’s new memory validation, Intel (INTC)’s Altera IPO filing, and Nvidia (NVDA) AI partnerships.\n- Financials weakened as Goldman Sachs (GS) fell 2.9% while JPMorgan Chase (JPM) rose 1%, with mixed moves amid higher borrowing costs from rising yields.\n- Crypto-related stocks Coinbase Global (COIN) and Robinhood Markets (HOOD) declined after the Senate moved to block a key cryptocurrency bill.\n- Ahead of Wednesday’s Federal Reserve decision, markets priced in roughly a 90% chance of a 25-basis-point rate hike, which would be the first increase in three years under Chair Kevin Warsh, with attention on the rate decision, dot plot, and Warsh’s commentary.\n- In after-hours trading, Trip.com Group (TCOM) reported earnings with no immediate stock reaction exceeding 2%.",
+  "raw_summary_md": "- The **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) closed at 7,581 (-0.51%), the **Dow** ([$DJI](https://finviz.com/index/DJI?p=d)) at 52,069 (-0.67%), while the **Nasdaq** ([$COMP](https://finviz.com/index/COMP?p=d)) fell 0.8% and the **Russell 2000** ([IWM](https://finviz.com/quote?t=IWM)) lost 1.09%, marking a **second straight decline for US equities**.\n- The **10-year Treasury yield** rose to **5.04%**, its **highest level since 2007**, as Treasury Secretary Scott Bessent defended recent bond-market actions amid the move.\n- **Brent crude** ([@QA](https://finviz.com/futures_charts?t=QA)) traded near/above **$108 per barrel** on **Saudi Arabia’s East-West pipeline shutdown and attacks**, **Strait of Hormuz risks**, and broader **Middle East supply tensions**.\n- **Energy** was the only S&P 500 ([$SPX](https://finviz.com/index/SPX?p=d)) sector to finish higher, up roughly **1.9%**, while **consumer discretionary underperformed**, dragged by Dave & Buster’s ([PLAY](https://finviz.com/quote?t=PLAY)) **17% drop** after missing Q2 revenue estimates.\n- **Dave & Buster’s** ([PLAY](https://finviz.com/quote?t=PLAY)) shares **tumbled 17%** after the company reported **Q2 revenue below expectations**.\n- **AI-related chip names advanced** as Intel ([INTC](https://finviz.com/quote?t=INTC)) traded flat, Qualcomm ([QCOM](https://finviz.com/quote?t=QCOM)) gained **4%**, AMD ([AMD](https://finviz.com/quote?t=AMD)) added **2.3%**, and Nvidia ([NVDA](https://finviz.com/quote?t=NVDA)) and Micron Technology ([MU](https://finviz.com/quote?t=MU)) also climbed on positive developments including **Micron’s new memory validation**, Intel ([INTC](https://finviz.com/quote?t=INTC))’s **Altera IPO filing**, and Nvidia ([NVDA](https://finviz.com/quote?t=NVDA)) **AI partnerships**.\n- **Financials weakened** as Goldman Sachs ([GS](https://finviz.com/quote?t=GS)) **fell 2.9%** while JPMorgan Chase ([JPM](https://finviz.com/quote?t=JPM)) **rose 1%**, with mixed moves amid **higher borrowing costs from rising yields**.\n- Crypto-related stocks **Coinbase Global** ([COIN](https://finviz.com/quote?t=COIN)) and **Robinhood Markets** ([HOOD](https://finviz.com/quote?t=HOOD)) **declined** after **the Senate moved to block a key cryptocurrency bill**.\n- Ahead of **Wednesday’s Federal Reserve decision**, markets priced in roughly a **90% chance of a 25-basis-point rate hike**, which would be the **first increase in three years** under **Chair Kevin Warsh**, with attention on the **rate decision, dot plot, and Warsh’s commentary**.\n- In **after-hours trading**, Trip.com Group ([TCOM](https://finviz.com/quote?t=TCOM)) reported earnings with **no immediate stock reaction exceeding 2%**.",
+  "index_moves": [
+    {
+      "name": "Dow",
+      "code": "DJI",
+      "change_pct": -0.8,
+      "verb": "fell"
+    },
+    {
+      "name": "Russell 2000",
+      "code": "RUT",
+      "change_pct": -1.09,
+      "verb": "lost"
+    }
+  ],
+  "oil": {
+    "name": "Brent crude",
+    "price": 108.0,
+    "verb": null,
+    "direction": null
+  },
+  "cpi": null,
+  "fed_odds": {
+    "pct": 90.0,
+    "action": "hike",
+    "text": "90% chance of a 25-basis-point rate hike"
+  },
+  "named_tickers": [
+    "PLAY",
+    "INTC",
+    "QCOM",
+    "AMD",
+    "NVDA",
+    "MU",
+    "GS",
+    "JPM",
+    "COIN",
+    "HOOD",
+    "TCOM"
+  ],
+  "named_leaders": [
+    "PLAY",
+    "INTC",
+    "QCOM",
+    "AMD",
+    "NVDA",
+    "MU",
+    "GS",
+    "JPM",
+    "COIN",
+    "HOOD",
+    "TCOM"
+  ],
+  "calendar": [
+    "Ahead of Wednesday’s Federal Reserve decision, markets priced in roughly a 90% chance of a 25-basis-point rate hike, which would be the first increase in three years under Chair Kevin Warsh, with attention on the rate decision, dot plot, and Warsh’s commentary."
+  ],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": -0.8
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": {
+      "pct": 90.0,
+      "action": "hike",
+      "text": "90% chance of a 25-basis-point rate hike"
+    }
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "Ahead of Wednesday’s Federal Reserve decision, markets priced in roughly a 90% chance of a 25-basis-point rate hike, which would be the first increase in three years under Chair Kevin Warsh, with attention on the rate decision, dot plot, and Warsh’s commentary."
+    ],
+    "text": "Ahead of Wednesday’s Federal Reserve decision, markets priced in roughly a 90% chance of a 25-basis-point rate hike, which would be the first increase in three years under Chair Kevin Warsh, with attention on the rate decision, dot plot, and Warsh’s commentary."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Brent crude (@QA) traded near/above $108 per barrel on Saudi Arabia’s East-West pipeline shutdown and attacks, Strait of Hormuz risks, and broader Middle East supply tensions."
+  },
+  "finviz_id": 286194,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-09-15T16:07:10.8",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}
