@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T07:51:26.239047-04:00",
+  "generated_at": "2026-09-15T07:51:41.024248-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -454,12 +454,12 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=2653",
-          "size": 8456501
+          "size": 8473084
         }
       ],
       "said": "25 rows",
       "bullets": [
-        "SM, WDS, LFST, AMN, PBR"
+        "SM, WDS, LFST, DSGX, PBR"
       ]
     },
     {
@@ -576,7 +576,7 @@
           "role": "input",
           "status": "OK",
           "reason": "rows=2653",
-          "size": 8456501
+          "size": 8473084
         },
         {
           "key": "join",
@@ -594,7 +594,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5111",
-          "size": 819816
+          "size": 822145
         },
         {
           "key": "book_json",
@@ -839,31 +839,6 @@
     }
   },
   "lands": [
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T05:58:14.190949-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-09-15_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 10497,
-          "preview": "weather sectors 11 \u00b7 Communication Services={'score': 0.396, 'dir': 'up', 'conf': 0.416, 'source': 'llm'}, Consumer Cyclical={'score': -4.704, 'dir': 'down', 'conf': 0.588, 'source': 'llm'}, Energy={'score': 4.023, 'dir': 'up', 'conf': 0.661, 'source': 'llm'}, Financial={'score': -4.063, 'dir': 'down', 'conf': 0.563, 'source': 'llm'}, Healthcare={'score': 0.93, 'dir': 'up', 'conf': 0.537, 'source': 'llm'}, Basic Materials={'score': -5.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.13, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -3.435, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-09-15_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5951,
-          "preview": "# Weather report \u2014 2026-09-15\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Communication Services={'score': 0.396, 'dir': 'up', 'conf': 0.416, 'source': 'llm'}, Consumer Cyclical={'score': -4.704, 'dir': 'down', 'conf': 0.588, 'source': 'llm'}, Energy={'score': 4.023, 'dir': 'up', 'conf': 0.661, 'source': 'llm'}, Financial={'score': -4.063, 'dir': 'down', 'conf': 0.563, 'source': 'llm'}, Healthcare={'score': 0.93, 'dir': 'up', 'conf': 0.537, 'source': 'llm'}, Basic Materials={'score': -5.16, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -2.13, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -3.435, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-15\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
     {
       "key": "join",
       "title": "Join / match rank",
@@ -3643,6 +3618,31 @@
         }
       ],
       "preview": "5897 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 SKHY, DVN, PR, KSPI, MSFT"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-15T07:51:40.107214-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-15_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7626799,
+          "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, WDS, SKM"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-15_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8473084,
+          "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SM, WDS, LFST, DSGX, PBR"
+        }
+      ],
+      "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, WDS, SKM \u00b7 2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 SM, WDS, LFST, DSGX, PBR"
     }
   ],
   "href": {
