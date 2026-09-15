@@ -206,6 +206,9 @@ def test_day_board_html_has_raw_poll() -> None:
     assert "RAW + \"/today.json\"" in html
     assert "afterBell() ? stripLooksLive" in html
     assert "viewingToday && afterBell() && !liveBoard" in html
+    assert "afterBell() && dates.indexOf(today) < 0" in html
+    assert "today && afterBell() && dates.includes(today)" in html
+    assert 'board = {date: date, overall: "—", counts: {}, lands: [], processes: []}' in html
     assert "earlyBuys" in html
     assert "!buys && !sells && !afterBell()" in html
 

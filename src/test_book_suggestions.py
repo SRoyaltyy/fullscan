@@ -113,6 +113,9 @@ def test_factor_mine_template_paints_every_strategy() -> None:
     assert "liveStartRow" in html
     assert "pending — not 0%" in html
     assert "attachLiveSessionDate" in html
+    assert "let d=liveTicketsDate();" in html
+    assert "h>9 || (h===9 && m>=30)" in html
+    assert "D._closedDate" in html
     assert "loadLiveDay" in html
     assert "today_strategies.json" in html
     assert "function firstOk" in html
@@ -165,6 +168,8 @@ def test_day_board_falls_back_to_suggestions() -> None:
     assert "afterBell() ? stripLooksLive" in html
     assert '"today.json"' in html
     assert "viewingToday && afterBell() && !liveBoard" in html
+    assert "afterBell() && dates.indexOf(today) < 0" in html
+    assert "today && afterBell() && dates.includes(today)" in html
     assert "earlyBuys" in html
     assert "!buys && !sells && !afterBell()" in html
 

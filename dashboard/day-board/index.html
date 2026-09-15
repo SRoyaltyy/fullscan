@@ -296,7 +296,9 @@ function esc(s){
   return String(s||"").replace(/[&<>]/g, ch => ({'&':'&','<':'<','>':'>'}[ch]));
 }
 async function loadDate(date){
-  const board = await fetchJson(`${RAW}/${date}.json`);
+  let board;
+  try { board = await fetchJson(`${RAW}/${date}.json`); }
+  catch(e){ board = {date: date, overall: "—", counts: {}, lands: [], processes: []}; }
   render(board);
 }
 async function boot(){
@@ -304,10 +306,14 @@ async function boot(){
   try { latest = await fetchJson(`${RAW}/latest.json`); }
   catch(e){ $("stamp").textContent = "Could not reach main JSON: "+e; return; }
   const dates = latest.dates || [latest.date];
+  const today = sessionDate();
+  // After 09:30 open on today's session, not last night's latest.date.
+  if(today && afterBell() && dates.indexOf(today) < 0) dates.unshift(today);
   const sel = $("dateSel");
   sel.innerHTML = dates.map(d => `<option value="${d}">${d}</option>`).join("");
   const q = new URLSearchParams(location.search).get("date");
-  const want = q && dates.includes(q) ? q : (latest.date || dates[0]);
+  const want = (q && dates.includes(q)) ? q
+    : ((today && afterBell() && dates.includes(today)) ? today : (latest.date || dates[0]));
   sel.value = want;
   await loadDate(want);
   sel.onchange = () => loadDate(sel.value);
