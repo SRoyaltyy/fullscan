@@ -3,11 +3,12 @@ name: Open 09:30 pack
 # Owner of the bell. Publishes session-open tickets, restamps .io, and
 # submits union_hot_n4_h1 (hot4, long-only MARKET) to Webull paper at 09:30 ET.
 # Does not wait on Pre-Open / Stock Book / sleeve-merge / 09:35 orch.
-# GH cron is UTC and often late or skipped (2026-09-15 13:30 never
-# queued). Pin extra minutes so at least one fire lands: 13:25 waits
-# 5 min to the bell; 13:30/13:33/13:40/13:50 run immediately if late.
-# EST pair is 14:25–14:50. Clock still skip-holds before 08:00 / after
-# 16:00 / weekend / holiday. A 10:30 EDT heal is skip-held on paper.
+# GH cron is UTC and often late or skipped (2026-09-15 13:30 queued
+# at 17:42 UTC, then 14:30-ish at 18:22 — ~4h late). Early 09–12 UTC
+# crons skip before 08:00 ET when on time, and become the 09:30 bell
+# when GH is hours late. 13:25 waits 5 min; 13:30/33/40/50 run if late.
+# EST pair is 14:25–14:50. Clock skip-holds before 08:00 / after 16:00
+# / weekend / holiday.
 # workflow_run from morning packs restamps after the bell when those
 # jobs finish late (today Pre-Open was still running at 09:30).
 # CLOCK: a main push that touches this file starts the job (workflow_dispatch
@@ -15,6 +16,13 @@ name: Open 09:30 pack
 
 on:
   schedule:
+    - cron: "25 9 * * 1-5"    # 05:25 ET — skip on time; ~09:25 if GH ~4h late
+    - cron: "30 9 * * 1-5"    # 05:30 ET — skip on time; ~09:30 if GH ~4h late
+    - cron: "33 9 * * 1-5"
+    - cron: "0 10 * * 1-5"
+    - cron: "30 10 * * 1-5"
+    - cron: "0 11 * * 1-5"
+    - cron: "0 12 * * 1-5"    # 08:00 ET on time (wait/skip); ~12:00 if ~4h late
     - cron: "25 13 * * 1-5"   # 09:25 ET EDT — wait to the bell
     - cron: "30 13 * * 1-5"   # 09:30 ET EDT
     - cron: "33 13 * * 1-5"   # GH-cron miss heal
