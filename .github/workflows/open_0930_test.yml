@@ -25,6 +25,7 @@ on:
       - ".github/workflows/webull_paper.yml"
       - "src/open_0930_clock.py"
       - "src/test_open_0930.py"
+      - "scripts/publish_open_pack.sh"
 
 permissions:
   contents: read

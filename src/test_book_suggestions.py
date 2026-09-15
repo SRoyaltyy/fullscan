@@ -156,6 +156,8 @@ def test_open_pack_wired_when_skip_if_good() -> None:
     assert 'env.skip == \'yes\'' in book
     assert "skip_python == 'yes'" in pre
     assert "src.strategy_tickets" in script
+    assert "set -euo pipefail" in script
+    assert "clock_legal_for" in script
     assert "src.land_file" in script
     assert "publish_dashboard.sh" in script
     assert "src.sleeve_merge" not in script
