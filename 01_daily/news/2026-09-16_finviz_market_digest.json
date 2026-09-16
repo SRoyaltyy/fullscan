@@ -1,0 +1,131 @@
+{
+  "date": "2026-09-16",
+  "generated_at": "2026-09-16T04:02:55.775516-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-09-16",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed lower as 10-year yield touched 5% and oil jumped on Saudi pipeline closure ahead of Fed decision",
+  "raw_text": "- S&P 500 ($SPX) fell 0.45% to 7,585.73, Dow Jones Industrial Average ($DJI) lost 0.63% to 52,093.11, Nasdaq Composite ($COMP) declined 0.78% to 25,981.57, and Russell 2000 (IWM) slipped 0.8% to 2,870.29, marking six losses in the past seven sessions\n- The 10-year Treasury yield hit an intraday high of 5.041%, its highest level since 2007, before ending near 5.006%\n- Brent crude (@QA) rose to around $108–109 and settled near $109, while WTI (@CL) jumped more than 4% to $105.53 after Saudi Arabia closed a key East–West pipeline that bypasses the Strait of Hormuz amid Iran-related tensions\n- Energy led S&P 500 ($SPX) sectors with a 2.26% gain on the oil spike, with APA (APA), Valero Energy (VLO), Marathon Petroleum (MPC), Devon Energy (DVN), and Phillips 66 (PSX) rallying, while technology and consumer discretionary each fell roughly 1.7%\n- Communication services advanced more than 2.8%, while eight of 11 S&P 500 ($SPX) sectors finished lower and industrials showed additional weakness\n- Goldman Sachs (GS) slid about 1.2% to lead Dow decliners amid the bond selloff\n- Chip stocks partially recovered from Monday’s AI-driven rout, with Qualcomm (QCOM) up about 4%, Advanced Micro Devices (AMD) gaining 2.3%, and Nvidia (NVDA), Intel (INTC), and Micron (MU) also advancing\n- Enova International (ENVA) plunged 23.4% after withdrawing its proposed acquisition applications for Grasshopper Bancorp, citing regulatory uncertainty, while Dave & Buster’s fell after missing Q2 revenue estimates\n- The US Senate voted to block the CLARITY Act crypto market structure bill, sending Bitcoin (@BTC) lower and weighing on Coinbase Global (COIN) shares\n- After the bell, Forgent Power Solutions (FPS) beat Q4 EPS estimates by 5.15% and gained more than 9% in extended trading, while Vera Bradley (VRA) also beat expectations and advanced, and Trip.com Group (TCOM) reported earnings with initial after-hours moves as investors look ahead to Wednesday’s Federal Reserve rate decision, projections, dot plot, and Chair Kevin Warsh’s press conference",
+  "raw_summary_md": "- **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) **fell 0.45% to 7,585.73**, **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) **lost 0.63% to 52,093.11**, **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) **declined 0.78% to 25,981.57**, and **Russell 2000** ([IWM](https://finviz.com/quote?t=IWM)) **slipped 0.8% to 2,870.29**, marking **six losses in the past seven sessions**\n- The **10-year Treasury yield** hit an **intraday high of 5.041%**, its **highest level since 2007**, before ending near **5.006%**\n- **Brent crude** ([@QA](https://finviz.com/futures_charts?t=QA)) rose to around **$108–109** and settled near **$109**, while **WTI** ([@CL](https://finviz.com/futures_charts?t=CL)) **jumped more than 4% to $105.53** after **Saudi Arabia closed a key East–West pipeline that bypasses the Strait of Hormuz** amid Iran-related tensions\n- **Energy led S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) **sectors with a 2.26% gain** on the oil spike, with **APA** ([APA](https://finviz.com/quote?t=APA)), **Valero Energy** ([VLO](https://finviz.com/quote?t=VLO)), **Marathon Petroleum** ([MPC](https://finviz.com/quote?t=MPC)), **Devon Energy** ([DVN](https://finviz.com/quote?t=DVN)), and **Phillips 66** ([PSX](https://finviz.com/quote?t=PSX)) rallying, while **technology and consumer discretionary each fell roughly 1.7%**\n- **Communication services advanced more than 2.8%**, while **eight of 11 S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) **sectors finished lower** and **industrials showed additional weakness**\n- **Goldman Sachs** ([GS](https://finviz.com/quote?t=GS)) **slid about 1.2%** to **lead Dow decliners** amid the bond selloff\n- **Chip stocks partially recovered** from Monday’s AI-driven rout, with **Qualcomm** ([QCOM](https://finviz.com/quote?t=QCOM)) **up about 4%**, **Advanced Micro Devices** ([AMD](https://finviz.com/quote?t=AMD)) **gaining 2.3%**, and **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)), **Intel** ([INTC](https://finviz.com/quote?t=INTC)), and **Micron** ([MU](https://finviz.com/quote?t=MU)) also advancing\n- **Enova International** ([ENVA](https://finviz.com/quote?t=ENVA)) **plunged 23.4%** after withdrawing its proposed acquisition applications for Grasshopper Bancorp, citing regulatory uncertainty, while **Dave & Buster’s fell after missing Q2 revenue estimates**\n- The **US Senate voted to block the CLARITY Act crypto market structure bill**, sending **Bitcoin** ([@BTC](https://finviz.com/futures_charts?t=BTC)) lower and weighing on **Coinbase Global** ([COIN](https://finviz.com/quote?t=COIN)) shares\n- After the bell, **Forgent Power Solutions** ([FPS](https://finviz.com/quote?t=FPS)) **beat Q4 EPS estimates by 5.15% and gained more than 9% in extended trading**, while **Vera Bradley** ([VRA](https://finviz.com/quote?t=VRA)) also **beat expectations and advanced**, and **Trip.com Group** ([TCOM](https://finviz.com/quote?t=TCOM)) reported earnings with initial after-hours moves as investors look ahead to **Wednesday’s Federal Reserve rate decision, projections, dot plot, and Chair Kevin Warsh’s press conference**",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": -0.45,
+      "verb": "fell"
+    },
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": -0.63,
+      "verb": "lost"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": -0.78,
+      "verb": "declined"
+    },
+    {
+      "name": "Russell 2000",
+      "code": "RUT",
+      "change_pct": -0.8,
+      "verb": "slipped"
+    }
+  ],
+  "oil": {
+    "name": "Brent crude",
+    "price": 108.0,
+    "verb": "rose",
+    "direction": "up"
+  },
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "APA",
+    "VLO",
+    "MPC",
+    "DVN",
+    "PSX",
+    "GS",
+    "QCOM",
+    "AMD",
+    "NVDA",
+    "INTC",
+    "MU",
+    "ENVA",
+    "COIN",
+    "FPS",
+    "VRA",
+    "TCOM"
+  ],
+  "named_leaders": [
+    "APA",
+    "VLO",
+    "MPC",
+    "DVN",
+    "PSX",
+    "GS",
+    "QCOM",
+    "AMD",
+    "NVDA",
+    "INTC",
+    "MU",
+    "ENVA",
+    "COIN",
+    "FPS",
+    "VRA",
+    "TCOM"
+  ],
+  "calendar": [
+    "Chip stocks partially recovered from Monday’s AI-driven rout, with Qualcomm (QCOM) up about 4%, Advanced Micro Devices (AMD) gaining 2.3%, and Nvidia (NVDA), Intel (INTC), and Micron (MU) also advancing",
+    "After the bell, Forgent Power Solutions (FPS) beat Q4 EPS estimates by 5.15% and gained more than 9% in extended trading, while Vera Bradley (VRA) also beat expectations and advanced, and Trip.com Group (TCOM) reported earnings with initial after-hours moves as investors look ahead to Wednesday’s Federal Reserve rate decision, projections, dot plot, and Chair Kevin Warsh’s press conference"
+  ],
+  "prior_close": {
+    "spx": -0.45,
+    "nasdaq": -0.78,
+    "dow": -0.63
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "Chip stocks partially recovered from Monday’s AI-driven rout, with Qualcomm (QCOM) up about 4%, Advanced Micro Devices (AMD) gaining 2.3%, and Nvidia (NVDA), Intel (INTC), and Micron (MU) also advancing",
+      "After the bell, Forgent Power Solutions (FPS) beat Q4 EPS estimates by 5.15% and gained more than 9% in extended trading, while Vera Bradley (VRA) also beat expectations and advanced, and Trip.com Group (TCOM) reported earnings with initial after-hours moves as investors look ahead to Wednesday’s Federal Reserve rate decision, projections, dot plot, and Chair Kevin Warsh’s press conference"
+    ],
+    "text": "Chip stocks partially recovered from Monday’s AI-driven rout, with Qualcomm (QCOM) up about 4%, Advanced Micro Devices (AMD) gaining 2.3%, and Nvidia (NVDA), Intel (INTC), and Micron (MU) also advancing After the bell, Forgent Power Solutions (FPS) beat Q4 EPS estimates by 5.15% and gained more than 9% in extended trading, while Vera Bradley (VRA) also beat expectations and advanced, and Trip.com Group (TCOM) reported earnings with initial after-hours moves as investors look ahead to Wednesday’s Federal Reserve rate decision, projections, dot plot, and Chair Kevin Warsh’s press conference"
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Brent crude (@QA) rose to around $108–109 and settled near $109, while WTI (@CL) jumped more than 4% to $105.53 after Saudi Arabia closed a key East–West pipeline that bypasses the Strait of Hormuz amid Iran-related tensions"
+  },
+  "finviz_id": 286435,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-09-15T20:36:45.383",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "neutral"
+}
