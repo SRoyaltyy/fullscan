@@ -182,13 +182,21 @@ def prior_features(ticker: str, date: str, row: dict | None = None) -> dict:
         if row.get("hard_red") is not None:
             out["hard_red"] = bool(row.get("hard_red"))
     ret1 = _num(out.get("ret_1"))
-    crash = bool(ret1 is not None and ret1 <= -8.0) or bool(out.get("air_pocket"))
+    gap = _num(out.get("gap_pct"))
+    crash = bool(ret1 is not None and ret1 <= -8.0) or bool(gap is not None and gap <= -8.0)
     out["crash"] = crash
+    if out.get("air_pocket") and not crash:
+        out["air_pocket"] = False
     return out
 
 
 def _crash_hit(feat: dict, spec: dict) -> bool:
-    """1d crash OR range / gap air-pocket. Missing legs do not veto."""
+    """Down crash only. A wide *up* bar is not an air-pocket.
+
+    Hits when prior 1d ≤ ret_1_max, or a gap ≤ gap_pct_max. Range air-pocket
+    counts only on a down prior bar that also clears ret_1_max. Missing
+    legs do not veto.
+    """
     ret_max = _num((spec or {}).get("ret_1_max"))
     rng_min = _num((spec or {}).get("range_pct_min"))
     gap_max = _num((spec or {}).get("gap_pct_max"))
@@ -197,9 +205,10 @@ def _crash_hit(feat: dict, spec: dict) -> bool:
     gap = _num(feat.get("gap_pct"))
     if ret_max is not None and ret1 is not None and ret1 <= ret_max:
         return True
-    if rng_min is not None and rng is not None and rng >= rng_min:
-        return True
     if gap_max is not None and gap is not None and gap <= gap_max:
+        return True
+    if (rng_min is not None and rng is not None and rng >= rng_min
+            and ret_max is not None and ret1 is not None and ret1 <= ret_max):
         return True
     return False
 

@@ -457,18 +457,25 @@ def contract_ok(score: dict) -> tuple[bool, list[str]]:
         ok = False
     else:
         notes.append("RWT 9/11 short blocked")
-    oos_b = _mean(score["oos"]["blocked"])
-    if score["oos"]["blocked"]["hold"]["n_marked"] == 0:
-        notes.append("OOS blocked sleeve unmarked — cannot score expectancy")
-        ok = False
-    elif oos_b is None:
-        notes.append("OOS blocked mean missing")
-        ok = False
-    elif oos_b > 0:
-        notes.append(f"OOS blocked-sleeve mean {oos_b:+.3f}% > 0 — drop/loosen")
-        ok = False
-    else:
-        notes.append(f"OOS blocked-sleeve mean {oos_b:+.3f}% ≤ 0")
+    for split, label in (("is", "IS"), ("oos", "OOS"), ("all", "full")):
+        st = score[split]["blocked"]
+        mu = _mean(st)
+        nmk = (st.get("hold") or {}).get("n_marked") or 0
+        if nmk == 0:
+            notes.append(f"{label} blocked sleeve unmarked — cannot score expectancy")
+            if split == "oos":
+                ok = False
+            continue
+        if mu is None:
+            notes.append(f"{label} blocked mean missing")
+            if split != "all":
+                ok = False
+        elif mu > 0:
+            notes.append(f"{label} blocked-sleeve mean {mu:+.3f}% > 0 — drop/loosen")
+            if split != "all":
+                ok = False
+        else:
+            notes.append(f"{label} blocked-sleeve mean {mu:+.3f}% ≤ 0 (n_marked={nmk})")
     oos_a = _mean(score["oos"]["A"])
     oos_tr = _mean(score["oos"]["B"])
     if oos_a is not None and oos_tr is not None:
@@ -518,9 +525,25 @@ def run() -> dict:
     if f3_block:
         xs = [_num(r.get("ret_h")) for r in f3_block if _num(r.get("ret_h")) is not None]
         f3_mean = round(sum(xs) / len(xs), 4) if xs else None
-    drop_f3 = f3_n < 5 or f3_mean is None or f3_mean > 0
+    drop_f3 = True
+    f3_why = (
+        f"n_extra={f3_n} mean_h={f3_mean} — n tiny / do not fish a third predicate"
+    )
     ok, notes = contract_ok(score)
-    shipped = [f.get("id") for f in (reg.get("filters") or []) if f.get("enabled") is not False]
+    shipped = [f.get("id") for f in (reg.get("filters") or [])
+               if f.get("enabled") is not False]
+    dropped = [d for d in (reg.get("dropped") or []) if isinstance(d, dict)]
+    if not any(d.get("id") == "hard_red_rsi30_short" for d in dropped):
+        dropped.append({
+            "id": "hard_red_rsi30_short",
+            "why": f3_why,
+        })
+    else:
+        for d in dropped:
+            if d.get("id") == "hard_red_rsi30_short":
+                d["n_extra_blocked"] = f3_n
+                d["blocked_mean_h"] = f3_mean
+                d["why"] = (d.get("why") or "") + f" ({f3_why})"
     payload = {
         "window": {"from": cal[0] if cal else None, "to": cal[-1] if cal else None,
                    "n_sessions": len(cal), "fit_end": FIT_END, "oos_start": OOS_START},
@@ -531,25 +554,10 @@ def run() -> dict:
         "contract_ok": ok,
         "contract_notes": notes,
         "shipped": shipped,
-        "dropped": [
-            {
-                "id": "hard_red_rsi30_short",
-                "n_extra_blocked": f3_n,
-                "blocked_mean_h": f3_mean,
-                "why": (
-                    "n tiny" if f3_n < 5 else
-                    "blocked expectancy missing" if f3_mean is None else
-                    "blocked expectancy > 0" if f3_mean > 0 else
-                    "kept"
-                ),
-            }
-        ],
+        "dropped": dropped,
         "holes": _holes(unique, coverage, cal),
+        "f3_eval": {"n_extra": f3_n, "mean_h": f3_mean, "dropped": drop_f3},
     }
-    if not drop_f3:
-        payload["dropped"] = []
-        payload["shipped"] = shipped + ["hard_red_rsi30_short"]
-    payload["f3_eval"] = {"n_extra": f3_n, "mean_h": f3_mean, "dropped": drop_f3}
     return payload
 
 
@@ -572,6 +580,11 @@ def _holes(unique: list[dict], coverage: dict, cal: list[str]) -> list[str]:
                  f"news/camera missing {miss_news}/{n}")
     holes.append(f"hold-horizon unmarked {miss_mark}/{n} (exit not in archive)")
     holes.append("macro / tape_anchor / channel1 not attached on ticket rows — unused in v1")
+    holes.append(
+        "data/prices/ohlc.parquet asof 2026-09-11 — 09-14/09-15 official "
+        "opens/closes are missing, so RWT hold>1 and OOS 5d marks are unmarked. "
+        "Do not invent the 3.83/3.94 bounce."
+    )
     if "2026-09-12" not in cal and "2026-09-13" not in cal:
         holes.append("09-12/09-13 are weekend — not sessions")
     return holes
@@ -604,6 +617,11 @@ def render_md(payload: dict) -> str:
         "",
         f"**Contract {'PASS' if payload['contract_ok'] else 'FAIL'}** · "
         f"shipped `{', '.join(payload['shipped']) or 'none'}`",
+        "",
+        "Iteration: first seed treated any wide bar as an air-pocket, so "
+        "QMLS-class *up* days and F2 melt-up longs made the blocked sleeve "
+        "positive in-sample. Crash now requires prior 1d ≤ −8% or a down gap. "
+        "F2/F3 dropped. Live filter is F1 only.",
         "",
         "## Sleeves (unique tickets)",
         "",

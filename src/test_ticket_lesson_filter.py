@@ -83,6 +83,10 @@ def test_f1_needs_rsi_and_crash() -> None:
     mid = {"ticker": "FOO", "date": "2026-09-11", "rsi": 40.0, "ret_1": -16.0,
            "air_pocket": True, "crash": True}
     assert tlf.evaluate("short", mid, registry=_reg())["action"] == "pass"
+    # wide UP bar is not a crash even with RSI 18
+    up_air = {"ticker": "FOO", "date": "2026-09-11", "rsi": 18.0, "ret_1": 14.9,
+              "range_pct": 20.0, "gap_pct": 2.0, "air_pocket": True, "crash": True}
+    assert tlf.evaluate("short", up_air, registry=_reg())["action"] == "pass"
 
 
 def test_f2_meltup_without_support() -> None:
@@ -158,6 +162,13 @@ def test_entry_hook_blocks_short_and_tags_blotter() -> None:
     assert any(x.get("ticker") == "RWT" for x in (flat.get("sell") or []))
 
 
+def test_live_registry_ships_only_f1() -> None:
+    tlf.reset_caches()
+    reg = tlf.load_registry()
+    live = [f["id"] for f in (reg.get("filters") or []) if f.get("enabled") is not False]
+    assert live == ["oversold_crash_pause"], live
+
+
 def test_strategy_tickets_build_calls_filter() -> None:
     src = __import__("pathlib").Path(st.__file__).read_text(encoding="utf-8")
     assert "ticket_lesson_filter" in src
@@ -202,6 +213,7 @@ def main() -> None:
     test_f2_meltup_without_support()
     test_rwt_911_short_is_blocked_without_allowlist()
     test_entry_hook_blocks_short_and_tags_blotter()
+    test_live_registry_ships_only_f1()
     test_strategy_tickets_build_calls_filter()
     test_combo_broker_skips_filtered_short()
     print("ok")

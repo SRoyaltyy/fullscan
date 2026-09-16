@@ -30,7 +30,7 @@
       "lesson_id": "overbought_meltup_pause",
       "side": "long",
       "action": "block",
-      "enabled": true,
+      "enabled": false,
       "new_only": true,
       "require": {
         "rsi_min": 75.0,
@@ -42,10 +42,14 @@
   ],
   "dropped": [
     {
+      "id": "overbought_meltup_pause",
+      "why": "IS blocked-sleeve mean > 0 (HTFL/FDMT/OABI melt-up longs kept paying). Symmetric seed failed the falsifier — do not ship."
+    },
+    {
       "id": "hard_red_rsi30_short",
       "lesson_id": "hard_red_rsi30_short",
       "side": "short",
-      "why": "F3 candidate — keep disabled until BT says n is large and blocked-sleeve expectancy < 0"
+      "why": "F3 n is tiny and overlaps F1. Dropped — do not fish a third predicate."
     }
   ]
 }

@@ -1,0 +1,493 @@
+{
+  "window": {
+    "from": "2026-08-13",
+    "to": "2026-09-15",
+    "n_sessions": 23,
+    "fit_end": "2026-09-04",
+    "oos_start": "2026-09-05"
+  },
+  "coverage": {
+    "dated_tickets": [
+      "2026-09-10",
+      "2026-09-11",
+      "2026-09-14",
+      "2026-09-15"
+    ],
+    "reconstructed": [
+      "2026-08-13",
+      "2026-08-14",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-24",
+      "2026-08-25",
+      "2026-08-26",
+      "2026-08-27",
+      "2026-08-28",
+      "2026-08-31",
+      "2026-09-01",
+      "2026-09-02",
+      "2026-09-03",
+      "2026-09-04",
+      "2026-09-08",
+      "2026-09-09"
+    ],
+    "missing": []
+  },
+  "n_proposed_rows": 45149,
+  "n_unique": 2764,
+  "score": {
+    "all": {
+      "A": {
+        "hold": {
+          "n": 2764,
+          "n_marked": 2279,
+          "mean": -0.0168,
+          "hit": 0.4857,
+          "sum": -38.392
+        },
+        "d1": {
+          "n": 2764,
+          "n_marked": 2380,
+          "mean": -0.0297,
+          "hit": 0.4874,
+          "sum": -70.5994
+        },
+        "d5": {
+          "n": 2764,
+          "n_marked": 1924,
+          "mean": -1.0823,
+          "hit": 0.4631,
+          "sum": -2082.3694
+        },
+        "n": 2764,
+        "n_long": 1688,
+        "n_short": 1076
+      },
+      "B": {
+        "hold": {
+          "n": 2759,
+          "n_marked": 2274,
+          "mean": -0.0131,
+          "hit": 0.4864,
+          "sum": -29.6815
+        },
+        "d1": {
+          "n": 2759,
+          "n_marked": 2375,
+          "mean": -0.0301,
+          "hit": 0.4876,
+          "sum": -71.3862
+        },
+        "d5": {
+          "n": 2759,
+          "n_marked": 1920,
+          "mean": -1.0793,
+          "hit": 0.4641,
+          "sum": -2072.1914
+        },
+        "n": 2759,
+        "n_long": 1688,
+        "n_short": 1071
+      },
+      "blocked": {
+        "hold": {
+          "n": 5,
+          "n_marked": 5,
+          "mean": -1.7421,
+          "hit": 0.2,
+          "sum": -8.7105
+        },
+        "d1": {
+          "n": 5,
+          "n_marked": 5,
+          "mean": 0.1574,
+          "hit": 0.4,
+          "sum": 0.7868
+        },
+        "d5": {
+          "n": 5,
+          "n_marked": 4,
+          "mean": -2.5445,
+          "hit": 0.0,
+          "sum": -10.178
+        },
+        "n": 5,
+        "n_long": 0,
+        "n_short": 5
+      }
+    },
+    "is": {
+      "A": {
+        "hold": {
+          "n": 2008,
+          "n_marked": 1938,
+          "mean": -0.0322,
+          "hit": 0.4943,
+          "sum": -62.4439
+        },
+        "d1": {
+          "n": 2008,
+          "n_marked": 1991,
+          "mean": -0.0221,
+          "hit": 0.4977,
+          "sum": -44.0236
+        },
+        "d5": {
+          "n": 2008,
+          "n_marked": 1924,
+          "mean": -1.0823,
+          "hit": 0.4631,
+          "sum": -2082.3694
+        },
+        "n": 2008,
+        "n_long": 1194,
+        "n_short": 814
+      },
+      "B": {
+        "hold": {
+          "n": 2004,
+          "n_marked": 1934,
+          "mean": -0.0282,
+          "hit": 0.4948,
+          "sum": -54.5857
+        },
+        "d1": {
+          "n": 2004,
+          "n_marked": 1987,
+          "mean": -0.023,
+          "hit": 0.4977,
+          "sum": -45.6627
+        },
+        "d5": {
+          "n": 2004,
+          "n_marked": 1920,
+          "mean": -1.0793,
+          "hit": 0.4641,
+          "sum": -2072.1914
+        },
+        "n": 2004,
+        "n_long": 1194,
+        "n_short": 810
+      },
+      "blocked": {
+        "hold": {
+          "n": 4,
+          "n_marked": 4,
+          "mean": -1.9645,
+          "hit": 0.25,
+          "sum": -7.8582
+        },
+        "d1": {
+          "n": 4,
+          "n_marked": 4,
+          "mean": 0.4098,
+          "hit": 0.5,
+          "sum": 1.6391
+        },
+        "d5": {
+          "n": 4,
+          "n_marked": 4,
+          "mean": -2.5445,
+          "hit": 0.0,
+          "sum": -10.178
+        },
+        "n": 4,
+        "n_long": 0,
+        "n_short": 4
+      }
+    },
+    "oos": {
+      "A": {
+        "hold": {
+          "n": 756,
+          "n_marked": 341,
+          "mean": 0.0705,
+          "hit": 0.437,
+          "sum": 24.0519
+        },
+        "d1": {
+          "n": 756,
+          "n_marked": 389,
+          "mean": -0.0683,
+          "hit": 0.4344,
+          "sum": -26.5758
+        },
+        "d5": {
+          "n": 0,
+          "n_marked": 0,
+          "mean": null,
+          "hit": null,
+          "sum": null
+        },
+        "n": 756,
+        "n_long": 494,
+        "n_short": 262
+      },
+      "B": {
+        "hold": {
+          "n": 755,
+          "n_marked": 340,
+          "mean": 0.0732,
+          "hit": 0.4382,
+          "sum": 24.9042
+        },
+        "d1": {
+          "n": 755,
+          "n_marked": 388,
+          "mean": -0.0663,
+          "hit": 0.4356,
+          "sum": -25.7235
+        },
+        "d5": {
+          "n": 0,
+          "n_marked": 0,
+          "mean": null,
+          "hit": null,
+          "sum": null
+        },
+        "n": 755,
+        "n_long": 494,
+        "n_short": 261
+      },
+      "blocked": {
+        "hold": {
+          "n": 1,
+          "n_marked": 1,
+          "mean": -0.8523,
+          "hit": 0.0,
+          "sum": -0.8523
+        },
+        "d1": {
+          "n": 1,
+          "n_marked": 1,
+          "mean": -0.8523,
+          "hit": 0.0,
+          "sum": -0.8523
+        },
+        "d5": {
+          "n": 0,
+          "n_marked": 0,
+          "mean": null,
+          "hit": null,
+          "sum": null
+        },
+        "n": 1,
+        "n_long": 0,
+        "n_short": 1
+      }
+    },
+    "n_blocked": 5,
+    "blocked_rows": [
+      {
+        "date": "2026-08-17",
+        "ticker": "KLC",
+        "side": "short",
+        "hold": 1,
+        "ret_h": 2.2901,
+        "ret_1d": 2.2901,
+        "rsi": 19.93,
+        "ret_1": -46.16977338091569,
+        "lesson_id": "oversold_crash_pause",
+        "reason": "KLC SHORT 2026-08-17 BLOCKED by oversold_crash_pause (rsi=19.93, 1d=-46.16977338091569, rule=rsi<=25 & crash)",
+        "strategies": [
+          "short_macd_dn_h1",
+          "short_macd_dn_h3"
+        ]
+      },
+      {
+        "date": "2026-08-18",
+        "ticker": "INV",
+        "side": "short",
+        "hold": 1,
+        "ret_h": -0.0,
+        "ret_1d": -0.0,
+        "rsi": 24.02,
+        "ret_1": -14.241487165034815,
+        "lesson_id": "oversold_crash_pause",
+        "reason": "INV SHORT 2026-08-18 BLOCKED by oversold_crash_pause (rsi=24.02, 1d=-14.241487165034815, rule=rsi<=25 & crash)",
+        "strategies": [
+          "short_alarm_h1",
+          "short_alarm_h3",
+          "short_last_red_h1",
+          "short_last_red_h3"
+        ]
+      },
+      {
+        "date": "2026-08-19",
+        "ticker": "BIDU",
+        "side": "short",
+        "hold": 1,
+        "ret_h": -1.2097,
+        "ret_1d": -1.2097,
+        "rsi": 23.05,
+        "ret_1": -12.72570077840779,
+        "lesson_id": "oversold_crash_pause",
+        "reason": "BIDU SHORT 2026-08-19 BLOCKED by oversold_crash_pause (rsi=23.05, 1d=-12.72570077840779, rule=rsi<=25 & crash)",
+        "strategies": [
+          "short_news_r_h1",
+          "short_news_r_h3",
+          "combo_seh_333_shared",
+          "combo_seh_333_split",
+          "combo_seh_502525_shared",
+          "combo_seh_502525_split",
+          "combo_seh_404020_shared",
+          "combo_seh_403525_shared",
+          "combo_seh_451540_shared",
+          "combo_seh_601525_shared",
+          "combo_se_5050_shared",
+          "combo_se_7030_shared",
+          "combo_sh_5050_shared",
+          "combo_seh_333_weather",
+          "combo_se_5050_weather",
+          "combo_se_5050_split",
+          "combo_ps_5050_shared",
+          "combo_ps_7030_shared",
+          "combo_p2s_5050_shared",
+          "combo_sn_5050_shared",
+          "combo_sj_5050_shared",
+          "combo_sf_5050_shared",
+          "combo_snj_333_shared",
+          "combo_nse_333_shared",
+          "combo_jse_333_shared",
+          "combo_fse_333_shared",
+          "combo_ers_7030_shared",
+          "combo_se1_5050_shared",
+          "combo_ser_5050_shared",
+          "combo_se_3070_shared",
+          "combo_sh_7030_shared",
+          "combo_sh_3070_shared",
+          "combo_sn_7030_shared",
+          "combo_sn_3070_shared",
+          "combo_sj_7030_shared",
+          "combo_sj_3070_shared",
+          "combo_sf_7030_shared",
+          "combo_sf_3070_shared"
+        ]
+      },
+      {
+        "date": "2026-09-03",
+        "ticker": "AIIO",
+        "side": "short",
+        "hold": 3,
+        "ret_h": -8.9386,
+        "ret_1d": 0.5587,
+        "rsi": 24.86,
+        "ret_1": -17.0731664767653,
+        "lesson_id": "oversold_crash_pause",
+        "reason": "AIIO SHORT 2026-09-03 BLOCKED by oversold_crash_pause (rsi=24.86, 1d=-17.0731664767653, rule=rsi<=25 & crash)",
+        "strategies": [
+          "stock_book_3d",
+          "stock_book_1w",
+          "stock_book_2w",
+          "stock_book_1m"
+        ]
+      },
+      {
+        "date": "2026-09-11",
+        "ticker": "RWT",
+        "side": "short",
+        "hold": 1,
+        "ret_h": -0.8523,
+        "ret_1d": -0.8523,
+        "rsi": 18.36,
+        "ret_1": -14.788734286201677,
+        "lesson_id": "oversold_crash_pause",
+        "reason": "RWT SHORT 2026-09-11 BLOCKED by oversold_crash_pause (rsi=18.36, 1d=-14.788734286201677, rule=rsi<=25 & crash)",
+        "strategies": [
+          "stock_book_1d",
+          "1d_top",
+          "stock_book_3d",
+          "3d_top",
+          "stock_book_1w",
+          "1w_top",
+          "stock_book_2w",
+          "2w_top"
+        ]
+      }
+    ],
+    "rwt": {
+      "present": true,
+      "blocked": true,
+      "decision": {
+        "action": "block",
+        "reason": "RWT SHORT 2026-09-11 BLOCKED by oversold_crash_pause (rsi=18.36, 1d=-14.788734286201677, rule=rsi<=25 & crash)",
+        "features_used": {
+          "rsi": 18.36,
+          "ret_1": -14.788734286201677,
+          "range_pct": 15.426995182499892,
+          "gap_pct": -17.13615535846288,
+          "crash": true
+        },
+        "lesson_id": "oversold_crash_pause",
+        "filter_id": "oversold_crash_pause",
+        "audit": "rsi<=25 & crash"
+      },
+      "features": {
+        "ticker": "RWT",
+        "date": "2026-09-11",
+        "rsi": 18.36,
+        "ret_1": -14.788734286201677,
+        "rvol": 12.573968312854408,
+        "range_pct": 15.426995182499892,
+        "gap_pct": -17.13615535846288,
+        "air_pocket": true,
+        "crash": true,
+        "news": "bad",
+        "sector": "bad",
+        "camera_net": -4,
+        "camera_support": true,
+        "hard_red": false,
+        "src": [
+          "ohlc_prior",
+          "row_rsi",
+          "row_ret1"
+        ]
+      },
+      "ret_h": -0.8523,
+      "ret_1d": -0.8523,
+      "ret_5d": null
+    },
+    "crash_shorts_blocked": 5
+  },
+  "contract_ok": true,
+  "contract_notes": [
+    "RWT 9/11 short blocked",
+    "IS blocked-sleeve mean -1.964% \u2264 0 (n_marked=4)",
+    "OOS blocked-sleeve mean -0.852% \u2264 0 (n_marked=1)",
+    "full blocked-sleeve mean -1.742% \u2264 0 (n_marked=5)",
+    "OOS traded +0.073% vs baseline +0.070%"
+  ],
+  "shipped": [
+    "oversold_crash_pause"
+  ],
+  "dropped": [
+    {
+      "id": "overbought_meltup_pause",
+      "why": "IS blocked-sleeve mean > 0 (HTFL/FDMT/OABI melt-up longs kept paying). Symmetric seed failed the falsifier \u2014 do not ship."
+    },
+    {
+      "id": "hard_red_rsi30_short",
+      "lesson_id": "hard_red_rsi30_short",
+      "side": "short",
+      "why": "F3 n is tiny and overlaps F1. Dropped \u2014 do not fish a third predicate. (n_extra=6 mean_h=-0.9994 \u2014 n tiny / do not fish a third predicate)",
+      "n_extra_blocked": 6,
+      "blocked_mean_h": -0.9994
+    }
+  ],
+  "holes": [
+    "dated strategy_tickets missing 2026-08-13\u21922026-09-09 \u2014 reconstructed from panel pick_day + stock-book files",
+    "rsi missing 29/2764; ret_1 missing 18/2764; news/camera missing 961/2764",
+    "hold-horizon unmarked 485/2764 (exit not in archive)",
+    "macro / tape_anchor / channel1 not attached on ticket rows \u2014 unused in v1",
+    "data/prices/ohlc.parquet asof 2026-09-11 \u2014 09-14/09-15 official opens/closes are missing, so RWT hold>1 and OOS 5d marks are unmarked. Do not invent the 3.83/3.94 bounce.",
+    "09-12/09-13 are weekend \u2014 not sessions"
+  ],
+  "f3_eval": {
+    "n_extra": 6,
+    "mean_h": -0.9994,
+    "dropped": true
+  }
+}
