@@ -1952,13 +1952,38 @@
   "RS",
   "RSG",
   "RSI",
-  "RSKD"
+  "RSKD",
+  "RTX",
+  "RUM",
+  "RUN",
+  "RUSHA",
+  "RVI",
+  "RVMD",
+  "RVTY",
+  "RWAY",
+  "RWT",
+  "RXRX",
+  "RXST",
+  "RY",
+  "RYAN",
+  "RYN",
+  "RYZ",
+  "S",
+  "SA",
+  "SABS",
+  "SAFX",
+  "SAIA",
+  "SAIC",
+  "SAN",
+  "SANA",
+  "SANM",
+  "SAP"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 101225,
- "hold_lab_n": 47622,
- "hold_base": 0.4704569029389973,
+ "n_hold": 102525,
+ "hold_lab_n": 48255,
+ "hold_base": 0.4706656912948061,
  "counts": {
   "A@L0_g": [
    60160,
@@ -109830,8 +109855,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 101225,
- "pair_hold_lab_n": 47622,
+ "pair_hold_n": 102525,
+ "pair_hold_lab_n": 48255,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -109940,5 +109965,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789568204
+ "flushed_unix": 1789568393
 }
