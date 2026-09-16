@@ -1,7 +1,7 @@
 {
-  "version": 13,
-  "updated": "2026-09-11T07:49:16.608448-04:00",
-  "asof": "2026-09-11",
+  "version": 14,
+  "updated": "2026-09-16T09:53:22.730849-04:00",
+  "asof": "2026-09-16",
   "weights": {
     "1d": [
       0.12,
@@ -235,6 +235,20 @@
       "sell": "core=-1.852pp full=-0.894pp \u2192 sell_excludes_addons=False",
       "risk": "book loses -0.37% on risk-off days \u2192 keep entry scale 0.5",
       "heat": "hold 0.25 \u2014 best 0.00, improvement 0.082pp, wins 29%"
+    },
+    {
+      "version": 14,
+      "asof": "2026-09-16",
+      "decisions": {
+        "1d": "hold \u2014 wins only 25% of dates (< 60%)",
+        "3d": "hold \u2014 improvement 0.047pp < 0.05pp",
+        "1w": "hold \u2014 wins only 22% of dates (< 60%)",
+        "2w": "hold \u2014 wins only 27% of dates (< 60%)",
+        "1m": "observe \u2014 only 3 realized dates (< 5)"
+      },
+      "sell": "core=0.174pp full=0.700pp \u2192 sell_excludes_addons=False",
+      "risk": "book loses -0.32% on risk-off days \u2192 keep entry scale 0.5",
+      "heat": "hold 0.25 \u2014 best 0.00, improvement 0.048pp, wins 25%"
     }
   ]
 }

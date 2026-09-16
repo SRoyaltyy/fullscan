@@ -31,16 +31,16 @@
   "stats": {
     "n_trades": 78,
     "n_skipped": 5,
-    "hit": 0.436,
-    "total_pnl": 2076.79,
-    "total_ret_pct": 2.08,
-    "final_equity": 102076.75,
-    "max_dd_pct": 12.71,
+    "hit": 0.423,
+    "total_pnl": 2600.48,
+    "total_ret_pct": 2.6,
+    "final_equity": 102600.45,
+    "max_dd_pct": 12.62,
     "by_side": {
       "BUY": {
         "n": 78,
-        "hit": 0.436,
-        "pnl": 2076.79
+        "hit": 0.423,
+        "pnl": 2600.48
       },
       "SELL": {
         "n": 0,
@@ -49,18 +49,18 @@
       }
     },
     "n_days": 24,
-    "min_rolling_2w": -12.71,
+    "min_rolling_2w": -12.26,
     "min_block_2w": -2.0,
     "min_fortnight": -2.0,
     "hit_every_rolling_2w": false,
     "hit_every_block_2w": false,
     "hit_every_fortnight": false,
     "beat_io_top": false,
-    "io_top_pct": 9.78,
+    "io_top_pct": 9.49,
     "passed": false,
     "fees_in": 1396.38,
-    "fees_out": 1431.14,
-    "fees_total": 2827.52
+    "fees_out": 1431.15,
+    "fees_total": 2827.53
   },
   "rolling_2w": [
     {
@@ -180,8 +180,8 @@
       "end": "2026-09-16",
       "n": 10,
       "start_eq": 116939.41,
-      "end_eq": 102076.75,
-      "ret_pct": -12.71
+      "end_eq": 102600.45,
+      "ret_pct": -12.26
     }
   ],
   "blocks_2w": [
@@ -206,8 +206,8 @@
       "end": "2026-09-16",
       "n": 4,
       "start_eq": 108515.0,
-      "end_eq": 102076.75,
-      "ret_pct": -5.93,
+      "end_eq": 102600.45,
+      "ret_pct": -5.45,
       "partial": true
     }
   ],
@@ -239,10 +239,10 @@
       "cal_start": "2026-09-10",
       "cal_end": "2026-09-23",
       "start_eq": 108616.66,
-      "end_eq": 102076.75,
-      "ret_pct": -6.02,
+      "end_eq": 102600.45,
+      "ret_pct": -5.54,
       "partial": true
     }
   ],
-  "generated": "2026-09-16T11:29:13"
+  "generated": "2026-09-16T13:38:29"
 }

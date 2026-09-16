@@ -17,8 +17,8 @@
         "TNDM",
         "VOR"
       ],
-      "return_pct": 2.08,
-      "final_equity": 102076.75,
+      "return_pct": 2.6,
+      "final_equity": 102600.45,
       "max_dd_pct": 0.17,
       "n_sessions": 24,
       "n_trades": 78,
@@ -40,8 +40,8 @@
         "ANGX",
         "WWW"
       ],
-      "return_pct": -3.27,
-      "final_equity": 96729.16,
+      "return_pct": -2.77,
+      "final_equity": 97226.02,
       "max_dd_pct": 3.38,
       "n_sessions": 23,
       "n_trades": 69,
@@ -63,12 +63,12 @@
         "CDNL",
         "ABX"
       ],
-      "return_pct": -0.48,
-      "final_equity": 99518.09,
+      "return_pct": 0.03,
+      "final_equity": 100027.36,
       "max_dd_pct": 0.54,
       "n_sessions": 22,
       "n_trades": 66,
-      "made_money": false
+      "made_money": true
     },
     {
       "start": "2026-08-18",
@@ -86,9 +86,9 @@
         "JLHL",
         "CBRS"
       ],
-      "return_pct": -1.42,
-      "final_equity": 98577.54,
-      "max_dd_pct": 1.42,
+      "return_pct": -0.92,
+      "final_equity": 99080.46,
+      "max_dd_pct": 1.32,
       "n_sessions": 21,
       "n_trades": 57,
       "made_money": false
@@ -109,9 +109,9 @@
         "GUTS",
         "DUOL"
       ],
-      "return_pct": -1.42,
-      "final_equity": 98577.54,
-      "max_dd_pct": 1.42,
+      "return_pct": -0.92,
+      "final_equity": 99080.46,
+      "max_dd_pct": 1.32,
       "n_sessions": 20,
       "n_trades": 57,
       "made_money": false
@@ -133,9 +133,9 @@
         "MRVI",
         "DNA"
       ],
-      "return_pct": -1.42,
-      "final_equity": 98577.54,
-      "max_dd_pct": 1.42,
+      "return_pct": -0.92,
+      "final_equity": 99080.46,
+      "max_dd_pct": 1.32,
       "n_sessions": 19,
       "n_trades": 57,
       "made_money": false
@@ -157,9 +157,9 @@
         "BTBT",
         "ENHA"
       ],
-      "return_pct": -6.08,
-      "final_equity": 93916.23,
-      "max_dd_pct": 6.08,
+      "return_pct": -5.6,
+      "final_equity": 94398.11,
+      "max_dd_pct": 5.99,
       "n_sessions": 18,
       "n_trades": 47,
       "made_money": false
@@ -177,9 +177,9 @@
         "CRML",
         "SAFX"
       ],
-      "return_pct": -9.3,
-      "final_equity": 90699.3,
-      "max_dd_pct": 9.3,
+      "return_pct": -8.83,
+      "final_equity": 91165.89,
+      "max_dd_pct": 9.21,
       "n_sessions": 17,
       "n_trades": 36,
       "made_money": false
@@ -197,9 +197,9 @@
         "CAPR",
         "SAFX"
       ],
-      "return_pct": -9.3,
-      "final_equity": 90699.3,
-      "max_dd_pct": 9.3,
+      "return_pct": -8.83,
+      "final_equity": 91165.89,
+      "max_dd_pct": 9.21,
       "n_sessions": 16,
       "n_trades": 36,
       "made_money": false
@@ -217,9 +217,9 @@
         "AVBP",
         "FLNC"
       ],
-      "return_pct": -14.4,
-      "final_equity": 85603.53,
-      "max_dd_pct": 14.4,
+      "return_pct": -13.96,
+      "final_equity": 86043.85,
+      "max_dd_pct": 14.31,
       "n_sessions": 15,
       "n_trades": 32,
       "made_money": false
@@ -233,9 +233,9 @@
         "MOS",
         "SLI"
       ],
-      "return_pct": -11.2,
-      "final_equity": 88804.54,
-      "max_dd_pct": 11.2,
+      "return_pct": -10.74,
+      "final_equity": 89259.38,
+      "max_dd_pct": 11.1,
       "n_sessions": 14,
       "n_trades": 29,
       "made_money": false
@@ -251,9 +251,9 @@
         "SEDG",
         "GRRR"
       ],
-      "return_pct": -10.03,
-      "final_equity": 89967.92,
-      "max_dd_pct": 10.03,
+      "return_pct": -9.57,
+      "final_equity": 90428.79,
+      "max_dd_pct": 9.94,
       "n_sessions": 13,
       "n_trades": 27,
       "made_money": false
@@ -269,9 +269,9 @@
         "USDE",
         "ACDC"
       ],
-      "return_pct": -12.69,
-      "final_equity": 87305.09,
-      "max_dd_pct": 12.69,
+      "return_pct": -12.25,
+      "final_equity": 87751.69,
+      "max_dd_pct": 12.61,
       "n_sessions": 12,
       "n_trades": 22,
       "made_money": false
@@ -292,9 +292,9 @@
         "TRGP",
         "AME"
       ],
-      "return_pct": -12.69,
-      "final_equity": 87305.09,
-      "max_dd_pct": 12.69,
+      "return_pct": -12.25,
+      "final_equity": 87751.69,
+      "max_dd_pct": 12.61,
       "n_sessions": 11,
       "n_trades": 22,
       "made_money": false
@@ -313,9 +313,9 @@
         "PRQR",
         "FATE"
       ],
-      "return_pct": -12.69,
-      "final_equity": 87305.09,
-      "max_dd_pct": 12.69,
+      "return_pct": -12.25,
+      "final_equity": 87751.69,
+      "max_dd_pct": 12.61,
       "n_sessions": 10,
       "n_trades": 22,
       "made_money": false
@@ -332,9 +332,9 @@
         "CRK",
         "MRNA"
       ],
-      "return_pct": -12.69,
-      "final_equity": 87305.09,
-      "max_dd_pct": 12.69,
+      "return_pct": -12.25,
+      "final_equity": 87751.69,
+      "max_dd_pct": 12.61,
       "n_sessions": 9,
       "n_trades": 22,
       "made_money": false
@@ -356,9 +356,9 @@
         "HQ",
         "EOSE"
       ],
-      "return_pct": -11.95,
-      "final_equity": 88045.27,
-      "max_dd_pct": 11.95,
+      "return_pct": -11.5,
+      "final_equity": 88497.6,
+      "max_dd_pct": 11.86,
       "n_sessions": 8,
       "n_trades": 17,
       "made_money": false
@@ -374,9 +374,9 @@
         "CAN",
         "ABTC"
       ],
-      "return_pct": -6.01,
-      "final_equity": 93987.31,
-      "max_dd_pct": 6.01,
+      "return_pct": -5.53,
+      "final_equity": 94469.09,
+      "max_dd_pct": 5.92,
       "n_sessions": 7,
       "n_trades": 6,
       "made_money": false
@@ -394,9 +394,9 @@
         "VENU",
         "CABA"
       ],
-      "return_pct": -6.01,
-      "final_equity": 93987.31,
-      "max_dd_pct": 6.01,
+      "return_pct": -5.53,
+      "final_equity": 94469.09,
+      "max_dd_pct": 5.92,
       "n_sessions": 6,
       "n_trades": 6,
       "made_money": false
@@ -412,9 +412,9 @@
         "BAND",
         "DDOG"
       ],
-      "return_pct": -6.01,
-      "final_equity": 93987.31,
-      "max_dd_pct": 6.01,
+      "return_pct": -5.53,
+      "final_equity": 94469.09,
+      "max_dd_pct": 5.92,
       "n_sessions": 5,
       "n_trades": 6,
       "made_money": false
@@ -432,9 +432,9 @@
         "AMTX",
         "CLOV"
       ],
-      "return_pct": -6.01,
-      "final_equity": 93987.31,
-      "max_dd_pct": 6.01,
+      "return_pct": -5.53,
+      "final_equity": 94469.09,
+      "max_dd_pct": 5.92,
       "n_sessions": 4,
       "n_trades": 6,
       "made_money": false
@@ -479,12 +479,10 @@
       "start": "2026-09-16",
       "first_route": "io",
       "would_buy": [
-        "IT",
-        "IOT",
-        "CDW",
-        "SAIC",
-        "DBX",
-        "DSGX",
+        "IQV",
+        "RDNT",
+        "AVAH",
+        "BLFS",
         "HQ",
         "HLP"
       ],
@@ -496,12 +494,12 @@
       "made_money": false
     }
   ],
-  "mean_pct": -6.37,
-  "mean_pct_ge5": -7.35,
+  "mean_pct": -5.96,
+  "mean_pct_ge5": -6.88,
   "n": 24,
   "n_ge5": 20,
-  "n_green": 1,
-  "min_pct": -14.4,
-  "min_pct_ge5": -14.4,
+  "n_green": 2,
+  "min_pct": -13.96,
+  "min_pct_ge5": -13.96,
   "hit_mean_5": false
 }

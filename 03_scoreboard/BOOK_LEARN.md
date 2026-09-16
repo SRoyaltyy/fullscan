@@ -1,6 +1,6 @@
-# Book learn — weight tuner ledger (v13)
+# Book learn — weight tuner ledger (v14)
 
-Updated: **2026-09-11T07:49:16.608448-04:00** · evaluation as of **2026-09-11**
+Updated: **2026-09-16T09:53:22.730849-04:00** · evaluation as of **2026-09-16**
 
 Objective: mean forward return of the top-10 buy book **in excess of the
 liquid-universe median**, walk-forward on fully-realized dates only.
@@ -8,11 +8,11 @@ Guardrails: ≥5 dates, ≥0.05pp improvement, wins on ≥60% of dates, half-ste
 
 | Horizon | dates | incumbent excess | best excess | decision |
 |---------|-------|------------------|-------------|----------|
-| 1d | 18 | -0.2795 | -0.1646 | hold — wins only 33% of dates (< 60%) |
-| 3d | 14 | -0.689 | -0.6368 | hold — wins only 21% of dates (< 60%) |
-| 1w | 12 | -0.8278 | -0.5745 | hold — wins only 33% of dates (< 60%) |
-| 2w | 7 | 0.7909 | 1.014 | hold — wins only 43% of dates (< 60%) |
-| 1m | 0 | — | — | observe — only 0 realized dates (< 5) |
+| 1d | 24 | -0.1958 | -0.1267 | hold — wins only 25% of dates (< 60%) |
+| 3d | 20 | -0.5515 | -0.5049 | hold — improvement 0.047pp < 0.05pp |
+| 1w | 18 | -0.4529 | -0.1837 | hold — wins only 22% of dates (< 60%) |
+| 2w | 11 | 0.7776 | 0.9419 | hold — wins only 27% of dates (< 60%) |
+| 1m | 3 | — | — | observe — only 3 realized dates (< 5) |
 
 ## Adopted weights (join / sector / general / news / AB / peer)
 
@@ -26,18 +26,19 @@ Guardrails: ≥5 dates, ≥0.05pp improvement, wins on ≥60% of dates, half-ste
 
 ## Sell-book construction
 
-- core=-1.852pp full=-0.894pp → sell_excludes_addons=False (n=12)
+- core=0.174pp full=0.700pp → sell_excludes_addons=False (n=18)
 
 ## Risk-off entry scaling (LLM weather call → sizing action)
 
-- scale: **0.5** (effective 2026-08-25) — book loses -0.37% on risk-off days → keep entry scale 0.5
+- scale: **0.5** (effective 2026-08-25) — book loses -0.32% on risk-off days → keep entry scale 0.5
 
 ## Map/captain heat scale (realized 1d excess return)
 
-- scale: **0.25** — hold 0.25 — best 0.00, improvement 0.082pp, wins 29%
+- scale: **0.25** — hold 0.25 — best 0.00, improvement 0.048pp, wins 25%
 
 ## History
 
+- v14 @ 2026-09-16: 1d: hold — wins only 25% of dates (< 60%); 3d: hold — improvement 0.047pp < 0.05pp; 1w: hold — wins only 22% of dates (< 60%); 2w: hold — wins only 27% of dates (< 60%); 1m: observe — only 3 realized dates (< 5)
 - v13 @ 2026-09-11: 1d: hold — wins only 33% of dates (< 60%); 3d: hold — wins only 21% of dates (< 60%); 1w: hold — wins only 33% of dates (< 60%); 2w: hold — wins only 43% of dates (< 60%); 1m: observe — only 0 realized dates (< 5)
 - v12 @ 2026-09-10: 1d: hold — wins only 29% of dates (< 60%); 3d: hold — wins only 23% of dates (< 60%); 1w: hold — wins only 36% of dates (< 60%); 2w: hold — wins only 43% of dates (< 60%); 1m: observe — only 0 realized dates (< 5)
 - v11 @ 2026-09-03: 1d: hold — wins only 33% of dates (< 60%); 3d: hold — wins only 10% of dates (< 60%); 1w: hold — wins only 38% of dates (< 60%); 2w: hold — wins only 50% of dates (< 60%); 1m: observe — only 0 realized dates (< 5)
@@ -47,4 +48,3 @@ Guardrails: ≥5 dates, ≥0.05pp improvement, wins on ≥60% of dates, half-ste
 - v7 @ 2026-09-01: 1d: hold — wins only 30% of dates (< 60%); 3d: hold — improvement 0.042pp < 0.05pp; 1w: hold — wins only 29% of dates (< 60%); 2w: observe — only 4 realized dates (< 5); 1m: observe — only 0 realized dates (< 5)
 - v6 @ 2026-08-31: 1d: hold — wins only 43% of dates (< 60%); 3d: hold — wins only 14% of dates (< 60%); 1w: hold — wins only 33% of dates (< 60%); 2w: observe — only 2 realized dates (< 5); 1m: observe — only 0 realized dates (< 5)
 - v5 @ 2026-08-31: 1d: hold — wins only 43% of dates (< 60%); 3d: hold — wins only 29% of dates (< 60%); 1w: hold — wins only 17% of dates (< 60%); 2w: observe — only 1 realized dates (< 5); 1m: observe — only 0 realized dates (< 5)
-- v4 @ 2026-08-30: 1d: hold — wins only 43% of dates (< 60%); 3d: hold — wins only 29% of dates (< 60%); 1w: hold — wins only 17% of dates (< 60%); 2w: observe — only 1 realized dates (< 5); 1m: observe — only 0 realized dates (< 5)
