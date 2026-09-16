@@ -1,6 +1,6 @@
 {
   "date": "2026-09-16",
-  "generated_at": "2026-09-16T10:29:37.404199-04:00",
+  "generated_at": "2026-09-16T10:34:08.042560-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -520,13 +520,13 @@
       "date": "2026-09-16",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-16T10:29:36.445445-04:00",
+      "at": "2026-09-16T10:34:07.129991-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 24618,
+          "size": 31466,
           "preview": "2026-09-16 BUY DBX, BLFS, RDNT, FOXA, NYT, SPT, AVAH, TENB \u00b7 SELL EU, ACDC, PUMP, TLN, UUUU, BTU, UEC, AESI"
         },
         {
@@ -540,14 +540,14 @@
           "path": "data/day_board/2026-09-16.json",
           "ok": true,
           "reason": "",
-          "size": 113031,
+          "size": 122867,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
         },
         {
           "path": "data/day_board/2026-09-16_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 91598,
+          "size": 101434,
           "preview": "2026-09-16 BUY DBX, BLFS, RDNT, FOXA, NYT, SPT, AVAH, TENB \u00b7 SELL EU, ACDC, PUMP, TLN, UUUU, BTU, UEC, AESI"
         },
         {
@@ -582,7 +582,7 @@
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 91598,
+          "size": 101434,
           "preview": "2026-09-16 BUY DBX, BLFS, RDNT, FOXA, NYT, SPT, AVAH, TENB \u00b7 SELL EU, ACDC, PUMP, TLN, UUUU, BTU, UEC, AESI"
         },
         {
