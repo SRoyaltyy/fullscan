@@ -193,6 +193,24 @@ def size_combo_tickets(rows: list[dict], recs: list[dict],
                     ),
                 })
                 continue
+            try:
+                from src import ticket_lesson_filter as tlf
+                feat = tlf.prior_features(t, date, r)
+                dec = tlf.evaluate(
+                    rec_side, feat, extra={"hard_red": hard_red, "new_entry": True})
+                if dec.get("action") in ("block", "pause"):
+                    skips.append({
+                        "date": date, "ticker": t, "kind": "lesson_filter",
+                        "lesson_id": dec.get("lesson_id"),
+                        "filter_id": dec.get("filter_id"),
+                        "features_used": dec.get("features_used"),
+                        "reason": dec.get("reason") or (
+                            f"{t} {rec_side} BLOCKED by {dec.get('lesson_id')}"
+                        ),
+                    })
+                    continue
+            except Exception:
+                pass
             if t in held:
                 skips.append({
                     "date": date, "ticker": t, "kind": "held",
@@ -330,14 +348,31 @@ def plan_combo_for_broker(date: str, snap: BrokerSnap,
     )
     would = []
     for rec in recs:
+        rec_side = rec.get("side") or "long"
         for r in fm.pick_day(rows, rec):
             t = str(r.get("ticker") or "").upper()
             if not t:
                 continue
+            try:
+                from src import ticket_lesson_filter as tlf
+                feat = tlf.prior_features(t, use_date, r)
+                dec = tlf.evaluate(
+                    rec_side, feat,
+                    extra={"hard_red": s is not None and float(s) <= float(fmb.HARD_RED),
+                           "new_entry": True})
+                if dec.get("action") in ("block", "pause"):
+                    skips.append({
+                        "date": use_date, "ticker": t, "kind": "lesson_filter",
+                        "lesson_id": dec.get("lesson_id"),
+                        "reason": dec.get("reason"),
+                    })
+                    continue
+            except Exception:
+                pass
             would.append({
                 "ticker": t,
                 "sleeve": rec["name"],
-                "kid_side": rec.get("side") or "long",
+                "kid_side": rec_side,
                 "clock": "09:30 ET",
             })
     stale = bool(looked.get("stale"))

@@ -817,6 +817,12 @@ def build(date: str) -> dict:
         )
         print(f"[strategy-tickets] WARN: {warn}", flush=True)
         payload["errors"] = list(payload["errors"] or []) + [warn]
+    try:
+        from . import ticket_lesson_filter as tlf
+        payload = tlf.apply_to_payload(payload)
+    except Exception as e:  # noqa: BLE001 — filter is never a ship-blocker
+        errors.append(f"lesson_filter:{e}")
+        payload["errors"] = errors
     return payload
 
 
@@ -884,6 +890,9 @@ def write(date: str, payload: dict | None = None) -> list[Path]:
                     for x in (v.get("sell") or []) if isinstance(x, dict) and x.get("ticker")
                 ],
                 "research": v.get("research"),
+                "blocked": v.get("blocked"),
+                "blocked_n": v.get("blocked_n"),
+                "blocked_audit": v.get("blocked_audit"),
             }
             for k, v in (payload.get("strategies") or {}).items()
         },
