@@ -347,6 +347,39 @@ def test_polarity_flip_and_fee_dead_zone() -> None:
     assert day["long_win"] == 1.0 and day["short_win"] == 0.0
 
 
+def test_intraday_scoop_and_fade() -> None:
+    rec = fm.make_recipe("t_hot", universe="ohlc_hot", hold=1)
+    rows = [_row("2026-08-18", "AAA", sources=["ohlc_hot"])]
+    # Open 100, low 98.4 (hits 1.5% = 98.5), high 100.4 (misses +1.5%).
+    # Close 99.0 grades a scoop win and is not a fade trigger.
+    bars = {("AAA", "2026-08-18"): {
+        "open": 100.0, "high": 100.4, "low": 98.4, "close": 99.0}}
+    panel = _panel(rows, dates=DATES)
+    scoop = hrm.intraday_fires(
+        panel, rec, ["2026-08-18"], DATES, bars=bars, fees=ZERO_FEES,
+        hold=1, x_pct=1.5, trigger="scoop")
+    assert len(scoop) == 1
+    assert scoop[0]["side"] == "long"
+    assert abs(scoop[0]["entry"] - 98.5) < 1e-9
+    assert scoop[0]["win"] is True
+    fade = hrm.intraday_fires(
+        panel, rec, ["2026-08-18"], DATES, bars=bars, fees=ZERO_FEES,
+        hold=1, x_pct=1.5, trigger="fade")
+    assert fade == []
+    # High 102 hits +1.5%; close 100.2 is a short win.
+    bars[("AAA", "2026-08-18")]["high"] = 102.0
+    bars[("AAA", "2026-08-18")]["close"] = 100.2
+    fade = hrm.intraday_fires(
+        panel, rec, ["2026-08-18"], DATES, bars=bars, fees=ZERO_FEES,
+        hold=1, x_pct=1.5, trigger="fade")
+    assert len(fade) == 1 and fade[0]["side"] == "short"
+    assert abs(fade[0]["entry"] - 101.5) < 1e-9
+    assert fade[0]["win"] is True
+    import inspect
+    assert "close" not in inspect.signature(fmc.dip_limit_px).parameters
+    assert "close" not in inspect.signature(fmc.rally_limit_px).parameters
+
+
 def test_default_callers_still_sit() -> None:
     import inspect
     sig = inspect.signature(fmc.simulate_shared)
@@ -369,8 +402,9 @@ def main() -> None:
     test_research_survivor_and_live_keep()
     test_run_synthetic_picks_holdout_not_full_sample()
     test_polarity_flip_and_fee_dead_zone()
+    test_intraday_scoop_and_fade()
     test_default_callers_still_sit()
-    print("test_hard_red_strategy_mine: 12 ok")
+    print("test_hard_red_strategy_mine: 13 ok")
 
 
 if __name__ == "__main__":

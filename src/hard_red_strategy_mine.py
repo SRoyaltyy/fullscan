@@ -43,6 +43,7 @@ OUT_JSON = OUT_DIR / "hard_red_mine.json"
 
 HOLD_FRAC = 0.30
 HORIZONS = (1, 2, 3, 5)
+X_GRID = fmc.DIP_GRID
 # Published KEEP — same bar as HARD_RED_SIT. Thin n is KILL.
 KEEP_MIN_FIRES = 30
 KEEP_WIN = 0.55
@@ -144,6 +145,104 @@ def name_day_fires(panel: dict, rec: dict, red_dates: list[str],
                 "recipe": rec.get("name"),
             })
     return out
+
+
+def _ohlc_open_ext(ticker: str, date: str, bars) -> tuple:
+    """Official open / high / low. Close is never returned."""
+    o = fmb._px(ticker, date, "open", bars)
+    high = fmb._px(ticker, date, "high", bars)
+    low = fmb._px(ticker, date, "low", bars)
+    if o is None or high is None or low is None:
+        store = hrs.clock_bar(ticker, date, None)
+        if o is None:
+            o = store.get("open")
+        if high is None:
+            high = store.get("high")
+        if low is None:
+            low = store.get("low")
+    return o, high, low
+
+
+def _horizon_px(cal: list[str], date: str, hold: int, ticker: str, bars):
+    exit_px, exit_d, how = hrs.horizon_exit(cal, date, hold, ticker, bars)
+    if exit_px is None and exit_d:
+        store = hrs.clock_bar(ticker, exit_d, None)
+        exit_px = store.get("close")
+        if exit_px is None:
+            exit_px = store.get("open")
+            how = "horizon_open_store" if exit_px is not None else how
+        else:
+            how = "horizon_close_store"
+    return exit_px, exit_d, how
+
+
+def intraday_fires(panel: dict, rec: dict, red_dates: list[str],
+                   cal: list[str], *, bars=None, fees=None,
+                   hold: int, x_pct: float, trigger: str) -> list[dict]:
+    """Limit entry after 09:30. ``scoop`` = long open−X%; ``fade`` = short open+X%.
+
+    Trigger uses session low / high only. Close grades. A miss is not a fire.
+    Daily OHLC is a first-hit proxy — slightly optimistic vs a live monitor.
+    """
+    fees = fees if fees is not None else pt.load_fees()
+    trigger = "fade" if trigger == "fade" else "scoop"
+    side = "short" if trigger == "fade" else "long"
+    by_date = panel.get("by_date") or {}
+    out = []
+    for date in red_dates:
+        for r in fm.pick_day(by_date.get(date) or [], rec):
+            t = fm._tick(r.get("ticker"))
+            if not t:
+                continue
+            o, high, low = _ohlc_open_ext(t, date, bars)
+            if trigger == "scoop":
+                fill, kind = fmc.dip_limit_px(o, low, x_pct)
+            else:
+                fill, kind = fmc.rally_limit_px(o, high, x_pct)
+            if fill is None:
+                continue
+            exit_px, exit_d, how = _horizon_px(cal, date, hold, t, bars)
+            pnl = None
+            if exit_px is not None:
+                pnl = round(hrs.after_fee_pnl(
+                    1, float(fill), float(exit_px), side=side, fees=fees), 4)
+            out.append({
+                "date": date, "ticker": t, "side": side,
+                "hold": hold, "x_pct": x_pct, "trigger": trigger,
+                "entry": round(float(fill), 4),
+                "open": None if o is None else round(float(o), 4),
+                "exit": None if exit_px is None else round(float(exit_px), 4),
+                "exit_date": exit_d, "exit_how": how,
+                "kind": kind,
+                "pnl": pnl,
+                "win": None if pnl is None else bool(pnl > 0),
+                "recipe": rec.get("name"),
+            })
+    return out
+
+
+def score_intraday(panel: dict, rec: dict, red_dates: list[str],
+                   cal: list[str], cutoff: str | None, *,
+                   bars=None, fees=None,
+                   holds: tuple[int, ...] = HORIZONS,
+                   xs: tuple = X_GRID) -> list[dict]:
+    rows = []
+    for trigger in ("scoop", "fade"):
+        side = "short" if trigger == "fade" else "long"
+        for x in xs:
+            for hold in holds:
+                fires = intraday_fires(
+                    panel, rec, red_dates, cal, bars=bars, fees=fees,
+                    hold=hold, x_pct=x, trigger=trigger)
+                rows.append(score_flip_row(
+                    fires, cutoff,
+                    name=f"{rec.get('name')}_{trigger}_x{x:g}_h{hold}",
+                    hold=hold, side=side, kind=trigger))
+                rows[-1]["x_pct"] = x
+                rows[-1]["trigger"] = trigger
+                rows[-1]["parent"] = f"{rec.get('name')}:{trigger}"
+                rows[-1]["list"] = rec.get("name")
+    return rows
 
 
 def combo_name_day_fires(panel: dict, recs: list[dict], red_dates: list[str],
@@ -312,6 +411,58 @@ def tape_split(panel: dict, cal: list[str], red_dates: list[str],
         "holdout_red": _pool(hold_red),
         "days": days,
     }
+
+
+def panel_intraday_tape(panel: dict, red_dates: list[str], cal: list[str],
+                        cutoff: str | None, *, bars=None, fees=None,
+                        xs: tuple = X_GRID) -> dict:
+    """Whole-panel scoop / fade, same-day close. Not a recipe list."""
+    fees = fees if fees is not None else pt.load_fees()
+    by_date = panel.get("by_date") or {}
+    out = {}
+    for x in xs:
+        scoop, fade = [], []
+        for date in red_dates:
+            seen: set[str] = set()
+            for r in by_date.get(date) or []:
+                t = fm._tick(r.get("ticker"))
+                if not t or t in seen:
+                    continue
+                seen.add(t)
+                o, high, low = _ohlc_open_ext(t, date, bars)
+                c = fmb._px(t, date, "close", bars)
+                if c is None:
+                    c = hrs.clock_bar(t, date, None).get("close")
+                for trigger, fill, side, bucket in (
+                    ("scoop", fmc.dip_limit_px(o, low, x)[0], "long", scoop),
+                    ("fade", fmc.rally_limit_px(o, high, x)[0], "short", fade),
+                ):
+                    if fill is None or c is None:
+                        continue
+                    pnl = round(hrs.after_fee_pnl(
+                        1, float(fill), float(c), side=side, fees=fees), 4)
+                    bucket.append({
+                        "date": date, "ticker": t, "side": side,
+                        "hold": 1, "entry": fill, "exit": c,
+                        "exit_date": date, "pnl": pnl,
+                        "win": pnl > 0,
+                    })
+        parts_s = split_fires(scoop, cutoff)
+        parts_f = split_fires(fade, cutoff)
+        out[str(x)] = {
+            "x_pct": x,
+            "scoop": {
+                "all": slim_stats(hrs.fire_stats(scoop)),
+                "disc": slim_stats(hrs.fire_stats(parts_s["disc"])),
+                "holdout": slim_stats(hrs.fire_stats(parts_s["hold"])),
+            },
+            "fade": {
+                "all": slim_stats(hrs.fire_stats(fade)),
+                "disc": slim_stats(hrs.fire_stats(parts_f["disc"])),
+                "holdout": slim_stats(hrs.fire_stats(parts_f["hold"])),
+            },
+        }
+    return out
 
 
 def score_flip_row(fires: list[dict], cutoff: str | None, *,
@@ -800,6 +951,94 @@ def render_md(payload: dict) -> str:
         lines.append(_row_md(r))
     lines += [
         "",
+        "## After the open: dip-scoop and rally-fade",
+        "",
+        "Assume we watch the official print in real time. "
+        "**Scoop** = long the first touch of open−X% (session low as "
+        "the daily first-hit proxy). **Fade** = short the first touch "
+        "of open+X% (session high). Close / last never trigger; they "
+        "only grade. Daily OHLC cannot prove the print was after 09:30, "
+        "so these fills are slightly optimistic vs a live monitor. "
+        "A name that never tags X% is a skip, not a fire.",
+        "",
+        "Whole-panel same-day (every 09:30 name, not a recipe filter):",
+        "",
+        "| X | Scoop n/win disc | Scoop n/win holdout | "
+        "Fade n/win disc | Fade n/win holdout |",
+        "|---:|---:|---:|---:|---:|",
+    ]
+    for x in X_GRID:
+        rec = (payload.get("intraday_tape") or {}).get(str(x)) or {}
+        sc, fd = rec.get("scoop") or {}, rec.get("fade") or {}
+        lines.append(
+            f"| {x:g}% | "
+            f"{(sc.get('disc') or {}).get('n_graded') or 0}/"
+            f"{_pct((sc.get('disc') or {}).get('win_rate'))} | "
+            f"{(sc.get('holdout') or {}).get('n_graded') or 0}/"
+            f"{_pct((sc.get('holdout') or {}).get('win_rate'))} | "
+            f"{(fd.get('disc') or {}).get('n_graded') or 0}/"
+            f"{_pct((fd.get('disc') or {}).get('win_rate'))} | "
+            f"{(fd.get('holdout') or {}).get('n_graded') or 0}/"
+            f"{_pct((fd.get('holdout') or {}).get('win_rate'))} |"
+        )
+    n_in = payload.get("n_intraday_ok") or 0
+    lines += [
+        "",
+        f"**Intraday recipe survivors: {n_in}.** "
+        "Same KEEP / research bars. Recipe lists are the 09:30 names; "
+        "the trigger is the limit after the open.",
+        "",
+    ]
+    if payload.get("intraday_survivors"):
+        lines += [
+            "| Sleeve | Side | Hold | Disc n/win | Holdout n/win | "
+            "All-red n/win | All-red $ | Research | Live KEEP |",
+            "|---|---|---:|---:|---:|---:|---:|---|---|",
+        ]
+        for r in payload.get("intraday_survivors") or []:
+            lines.append(_row_md(r))
+        lines.append("")
+    lines += [
+        "Scoop discovery leaders:",
+        "",
+        "| Sleeve | Side | Hold | Disc n/win | Holdout n/win | "
+        "All-red n/win | All-red $ | Research | Live KEEP |",
+        "|---|---|---:|---:|---:|---:|---:|---|---|",
+    ]
+    for r in payload.get("scoop_disc_leaders") or []:
+        lines.append(_row_md(r))
+    lines += [
+        "",
+        "Scoop holdout leaders:",
+        "",
+        "| Sleeve | Side | Hold | Disc n/win | Holdout n/win | "
+        "All-red n/win | All-red $ | Research | Live KEEP |",
+        "|---|---|---:|---:|---:|---:|---:|---|---|",
+    ]
+    for r in payload.get("scoop_holdout_leaders") or []:
+        lines.append(_row_md(r))
+    lines += [
+        "",
+        "Fade discovery leaders:",
+        "",
+        "| Sleeve | Side | Hold | Disc n/win | Holdout n/win | "
+        "All-red n/win | All-red $ | Research | Live KEEP |",
+        "|---|---|---:|---:|---:|---:|---:|---|---|",
+    ]
+    for r in payload.get("fade_disc_leaders") or []:
+        lines.append(_row_md(r))
+    lines += [
+        "",
+        "Fade holdout leaders:",
+        "",
+        "| Sleeve | Side | Hold | Disc n/win | Holdout n/win | "
+        "All-red n/win | All-red $ | Research | Live KEEP |",
+        "|---|---|---:|---:|---:|---:|---:|---|---|",
+    ]
+    for r in payload.get("fade_holdout_leaders") or []:
+        lines.append(_row_md(r))
+    lines += [
+        "",
         "## Live combo vs all-day sit book",
         "",
         f"`{LIVE_COMBO}` is the Webull paper sleeve. Sit is the "
@@ -927,6 +1166,25 @@ def run(*, from_date: str = book_era.DASHBOARD_START,
             panel, spec, recs, red_dates, cal, cutoff,
             bars=bars, fees=fees))
 
+    intra: list[dict] = []
+    for rec in recipes:
+        intra.extend(score_intraday(
+            panel, rec, red_dates, cal, cutoff,
+            bars=bars, fees=fees))
+    intra_tape = panel_intraday_tape(
+        panel, red_dates, cal, cutoff, bars=bars, fees=fees)
+    intra_survivors = [r for r in intra if r.get("research_ok")]
+    intra_survivors.sort(key=lambda r: (
+        _rank_key(r.get("holdout") or {}),
+        _rank_key(r.get("disc") or {}),
+    ), reverse=True)
+    scoop_rows = [r for r in intra if r.get("trigger") == "scoop"]
+    fade_rows = [r for r in intra if r.get("trigger") == "fade"]
+    scoop_disc = pick_disc_leaders(scoop_rows, side=None, limit=TOP_DISC)
+    scoop_hold = pick_holdout_leaders(scoop_rows, limit=TOP_DISC)
+    fade_disc = pick_disc_leaders(fade_rows, side=None, limit=TOP_DISC)
+    fade_hold = pick_holdout_leaders(fade_rows, limit=TOP_DISC)
+
     tape = tape_split(
         panel, cal, red_dates, cutoff, bars=bars, fees=fees)
     flip_rows = [
@@ -937,7 +1195,7 @@ def run(*, from_date: str = book_era.DASHBOARD_START,
     flip_survivors = [r for r in flip_rows if r.get("research_ok")]
     flip_leaders = pick_disc_leaders(flip_rows, side=None, limit=TOP_DISC)
     flip_hold_leaders = pick_holdout_leaders(flip_rows, limit=TOP_DISC)
-    survivors = [r for r in rows if r.get("research_ok")]
+    survivors = [r for r in list(rows) + intra if r.get("research_ok")]
     survivors.sort(key=lambda r: (
         _rank_key(r.get("holdout") or {}),
         _rank_key(r.get("disc") or {}),
@@ -999,9 +1257,9 @@ def run(*, from_date: str = book_era.DASHBOARD_START,
         )
     else:
         why = (
-            "No holdout survivor — including polarity flips and the "
-            "existing shorts. Discovery teases that miss the hidden "
-            "red window stay KILL. Live sit stands."
+            "No holdout survivor — including polarity flips, existing "
+            "shorts, dip-scoops, and rally-fades. Discovery teases that "
+            "miss the hidden red window stay KILL. Live sit stands."
         )
     payload = {
         "generated_at": datetime.now(tl.ET).isoformat(),
@@ -1031,6 +1289,14 @@ def run(*, from_date: str = book_era.DASHBOARD_START,
         "flip_disc_leaders": flip_leaders,
         "flip_holdout_leaders": flip_hold_leaders,
         "tape": tape,
+        "intraday_n": len(intra),
+        "intraday_survivors": intra_survivors,
+        "n_intraday_ok": len(intra_survivors),
+        "scoop_disc_leaders": scoop_disc,
+        "scoop_holdout_leaders": scoop_hold,
+        "fade_disc_leaders": fade_disc,
+        "fade_holdout_leaders": fade_hold,
+        "intraday_tape": intra_tape,
         "disc_leaders": leaders,
         "holdout_leaders": hold_leaders,
         "live_combo": live_books,
@@ -1070,7 +1336,8 @@ def main(argv=None) -> int:
         f"cutoff={payload.get('cutoff')} "
         f"rows={payload.get('n_rows')} "
         f"survivors={payload.get('n_research_ok')} "
-        f"live_keep={payload.get('n_live_keep')}",
+        f"live_keep={payload.get('n_live_keep')} "
+        f"intraday_ok={payload.get('n_intraday_ok')}",
         flush=True,
     )
     return 0

@@ -490,6 +490,37 @@ def dip_limit_px(open_px, low_px, dip_pct):
     return target, "scoop"
 
 
+def rally_limit_px(open_px, high_px, rally_pct):
+    """Intraday first-touch of open+X%. Close is never an input.
+
+    Mirror of ``dip_limit_px`` for a short fade: official 09:30 open
+    plus session high as the daily first-hit proxy. Do **not** pass
+    close, last, Gap, or Finviz Price. Returns ``(fill, kind)`` =
+    ``fade`` / ``no_rally`` / ``no_open`` / ``no_high``. Slightly
+    optimistic — OHLC cannot prove the print happened after 09:30.
+    """
+    try:
+        o = float(open_px)
+    except (TypeError, ValueError):
+        return None, "no_open"
+    if o <= 0:
+        return None, "no_open"
+    try:
+        x = float(rally_pct)
+    except (TypeError, ValueError):
+        return None, "no_rally"
+    if x <= 0:
+        return o, "fade"
+    target = o * (1.0 + x / 100.0)
+    try:
+        high = float(high_px)
+    except (TypeError, ValueError):
+        return None, "no_high"
+    if high < target - 1e-9:
+        return None, "no_rally"
+    return target, "fade"
+
+
 def _choose_intents(intents: list[dict], *, net: str, s) -> list[dict]:
     """One ticker, one side. ``intents`` already carry claim_rank."""
     by: dict[str, list[dict]] = {}
