@@ -41,7 +41,7 @@
 </style></head><body><div class="wrap">
 <h1>Investigator history</h1>
 <div class="sub">Every looker since <b>2026-08-13</b>. Search a ticker for cameras (+N −N), 09:30 open, close, same-day % and hold-1/3/5 with actual prices.
-Live sit on S≤−3 is untouched.
+Days not on the shopping lists still get a reconstructed 09:30 card from join / weather / Finviz / news. Live sit on S≤−3 is untouched.
  · <a href="../factor-mine/">factor mine</a>
  · <a href="../day-board/">day board</a></div>
 <div class="search">
@@ -88,25 +88,30 @@ function renderHistory(doc){
   const order = doc.cam_order || [];
   const short = doc.cam_short || {};
   const on = rows.filter(r=>r.on_list).length;
-  const sit = rows.filter(r=>r.hard_red && r.on_list).length;
+  const recon = rows.filter(r=>r.reconstructed && !r.on_list).length;
+  const sit = rows.filter(r=>r.hard_red).length;
   const h1s = rows.map(r=>r.h1).filter(v=>v!=null);
   const win = h1s.filter(v=>v>0).length;
   document.getElementById('sum').innerHTML = [
     ['Ticker', doc.ticker, 'gold'],
     ['Sessions', rows.length, ''],
     ['On list', on, ''],
-    ['Sit days on list', sit, 'neg'],
+    ['Reconstructed', recon, 'gold'],
+    ['Sit mornings', sit, 'neg'],
     ['H1 green', h1s.length?(win+'/'+h1s.length):'—', win>h1s.length/2?'pos':'neg'],
   ].map(([k,v,c])=>`<div class="card">${k}<b class="${c}">${esc(v)}</b></div>`).join('');
 
   const body = rows.map((r,i)=>{
-    const trCls = r.hard_red?'sit':(r.on_list?'':'off');
+    const painted = r.on_list || r.reconstructed || (r.boxes && Object.keys(r.boxes).length);
+    const trCls = r.hard_red?'sit':(painted?'':'off');
+    const listCell = r.on_list?'list':(r.reconstructed?'<span class="gold">recon</span>':'<span class="mut">—</span>');
+    const camCell = painted?dots(r.boxes, order, short):'<span class="mut">no 09:30 files</span>';
     return `<tr class="${trCls}" data-i="${i}">
       <td>${esc(r.date)}${r.hard_red?' <span class="neg">SIT</span>':''}</td>
       <td>${r.s==null?'—':Number(r.s).toFixed(2)}</td>
-      <td>${r.on_list?'yes':'no'}</td>
+      <td>${listCell}</td>
       <td>${tally(r)}</td>
-      <td style="text-align:left">${r.on_list?dots(r.boxes, order, short):'<span class="mut">not on 09:30 lists</span>'}</td>
+      <td style="text-align:left">${camCell}</td>
       <td>${esc(r.e_pol||'—')}</td>
       <td>${px(r.open)}</td>
       <td>${px(r.close)}</td>
@@ -130,7 +135,8 @@ function renderHistory(doc){
     </td></tr>`;
   }).join('');
   document.getElementById('hist').innerHTML = `
-    <div class="mut" style="margin:0 0 6px">Click a row for the investigator card (cameras, files, why). SIT rows are weather S≤−3. Dim rows = not on that morning’s lists.</div>
+    <div class="mut" style="margin:0 0 6px">Click a row for the investigator card (cameras, files, why). SIT rows are weather S≤−3.
+      <b>list</b> = on that morning's shopping lists. <b>recon</b> = same 09:30 files, reconstructed even though the name was not on the lists.</div>
     <div class="tbl-wrap"><table>
       <thead><tr>
         <th>Date</th><th>S</th><th>List</th><th>Cams</th><th>Cameras</th><th>E</th>

@@ -408,9 +408,201 @@ def backtest(days: list[dict]) -> dict:
     return out
 
 
+def _tally_boxes(boxes: dict) -> tuple[int, int]:
+    good = sum(1 for v in (boxes or {}).values() if str(v).lower() == "good")
+    bad = sum(1 for v in (boxes or {}).values() if str(v).lower() == "bad")
+    return good, bad
+
+
+def row_from_lookback(day: dict) -> dict:
+    """Paint cameras from ticker-lookback artifacts (join/weather/Finviz/news)."""
+    boxes = dict(day.get("boxes") or {})
+    cond = day.get("condition") or {}
+    n_pos = int(cond.get("good") or 0)
+    n_neg = int(cond.get("bad") or 0)
+    if not n_pos and not n_neg:
+        n_pos, n_neg = _tally_boxes(boxes)
+    srcs = [str(x) for x in (day.get("sources") or []) if x]
+    arts = day.get("artifacts_that_day")
+    if isinstance(arts, dict):
+        srcs.extend(str(k) for k, v in arts.items() if v)
+    elif isinstance(arts, list):
+        srcs.extend(str(x) for x in arts if x)
+    news = day.get("news") if isinstance(day.get("news"), dict) else {}
+    title = (
+        (news or {}).get("title")
+        or day.get("headline")
+        or day.get("news_title")
+        or ""
+    )
+    return {
+        "n_pos": n_pos,
+        "n_neg": n_neg,
+        "cams": f"+{n_pos} −{n_neg}",
+        "boxes": boxes,
+        "e_pol": day.get("e_pol") or "missing",
+        "e_label": day.get("e_label") or "",
+        "r_pol": day.get("r_pol") or "missing",
+        "r_label": day.get("r_label") or "",
+        "news": title,
+        "news_tone": (news or {}).get("tone") or day.get("headline_tone")
+        or fm._tone(boxes, "news"),
+        "sources": srcs,
+        "files": srcs,
+        "rsi": day.get("rsi") or (
+            (day.get("finviz") or {}).get("RSI")
+            if isinstance(day.get("finviz"), dict) else None
+        ),
+        "macd_hist": day.get("macd_hist"),
+        "reconstructed": True,
+    }
+
+
+def _csv_wanted(path: Path, wanted: set[str], tick_keys=("Ticker", "ticker")) -> dict:
+    out: dict[str, dict] = {}
+    if not path.is_file() or not wanted:
+        return out
+    import csv
+    with path.open(newline="", encoding="utf-8", errors="replace") as fh:
+        for rec in csv.DictReader(fh):
+            t = ""
+            for k in tick_keys:
+                t = (rec.get(k) or "").strip().upper()
+                if t:
+                    break
+            if t in wanted:
+                out[t] = rec
+    return out
+
+
+def _tone_num(v, band: float = 0.0) -> str:
+    x = fm._finite(v)
+    if x is None:
+        return "missing"
+    if abs(float(x)) <= band:
+        return "neutral"
+    return "good" if float(x) > 0 else "bad"
+
+
+def _stance_tone(st: str) -> str:
+    s = str(st or "").strip().lower()
+    if s in ("favorable", "good", "up", "bull", "green"):
+        return "good"
+    if s in ("hostile", "bad", "down", "bear", "red"):
+        return "bad"
+    if s in ("neutral", "flat", "yellow"):
+        return "neutral"
+    return "missing"
+
+
+def _weather_pack(date: str) -> dict:
+    path = ROOT / "01_daily" / "weather" / f"{date}_weather.json"
+    if not path.is_file():
+        return {}
+    try:
+        doc = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    signals = doc.get("signals") or {}
+    sectors = {}
+    for name, blob in ((doc.get("stances") or {}).get("sector") or {}).items():
+        if isinstance(blob, dict):
+            sectors[str(name)] = _stance_tone(blob.get("stance"))
+        else:
+            sectors[str(name)] = _stance_tone(blob)
+    gen_dir = str(signals.get("general_direction") or "").lower()
+    gen = _stance_tone(gen_dir) if gen_dir else _tone_num(signals.get("general_score"), 0.5)
+    return {
+        "s": fm._finite(signals.get("general_score")),
+        "gen": gen,
+        "sectors": sectors,
+        "file": str(path.relative_to(ROOT)),
+    }
+
+
+def load_lookback(tickers: list[str], from_date: str | None,
+                  to_date: str | None, cal: list[str] | None = None) -> dict:
+    """Reconstruct 09:30 cameras for every session from join/weather/Finviz.
+
+    Does not load ticker-lookback's full index (that OOMs on 11k Finviz
+    dumps). Streams only the names we already track.
+    """
+    wanted = {fm._tick(t) for t in tickers if fm._tick(t)}
+    dates = list(cal or [])
+    if not dates:
+        weather_dir = ROOT / "01_daily" / "weather"
+        if weather_dir.is_dir():
+            dates = sorted(
+                p.name[:10] for p in weather_dir.glob("*_weather.json")
+                if (not from_date or p.name[:10] >= from_date)
+                and (not to_date or p.name[:10] <= to_date)
+            )
+    out: dict[tuple[str, str], dict] = {}
+    prior_fv: dict[str, dict] = {}
+    for date in dates:
+        wx = _weather_pack(date)
+        join_path = ROOT / "data" / "join" / f"{date}_ranked.csv"
+        joins = _csv_wanted(join_path, wanted)
+        fv_path = ROOT / "data" / "exports" / f"finviz_{date}.csv"
+        fvs = _csv_wanted(fv_path, wanted)
+        for t in wanted:
+            boxes = {k: "missing" for k in CAM_ORDER}
+            srcs: list[str] = []
+            if wx:
+                boxes["gen"] = wx.get("gen") or "missing"
+                srcs.append(wx.get("file") or "01_daily/weather")
+            fv = fvs.get(t) or {}
+            sector = (fv.get("Sector") or fv.get("sector") or
+                      (joins.get(t) or {}).get("sector") or "")
+            if sector and wx.get("sectors"):
+                boxes["sector"] = wx["sectors"].get(sector) or "missing"
+            j = joins.get(t)
+            if j:
+                srcs.append(f"data/join/{date}_ranked.csv")
+                boxes["join"] = _tone_num(j.get("total_score") or j.get("score_norm"))
+            if fv:
+                srcs.append(f"data/exports/finviz_{date}.csv")
+                rel = fm._finite(fv.get("Relative Volume") or fv.get("Rel Volume"))
+                if rel is not None:
+                    boxes["vol"] = _tone_num(float(rel) - 1.0, 0.3)
+                title = (fv.get("News Title") or "").strip()
+            else:
+                title = ""
+            prev = prior_fv.get(t) or {}
+            ch = prev.get("Change") or prev.get("Change from Open")
+            if ch not in (None, ""):
+                try:
+                    boxes["yday"] = _tone_num(float(str(ch).replace("%", "").replace(",", "")))
+                except (TypeError, ValueError):
+                    pass
+            news_tone = "missing"
+            if title:
+                news_tone = "neutral"
+                boxes["news"] = "neutral"
+            rsi = None
+            try:
+                rsi = float(str(fv.get("RSI (14)") or fv.get("RSI") or "").replace(",", ""))
+            except (TypeError, ValueError):
+                rsi = None
+            n_pos, n_neg = _tally_boxes(boxes)
+            out[(date, t)] = {
+                "date": date,
+                "boxes": boxes,
+                "condition": {"good": n_pos, "bad": n_neg},
+                "sources": srcs,
+                "e_pol": "missing",
+                "headline": title,
+                "news": {"title": title, "tone": news_tone} if title else {},
+                "rsi": rsi,
+            }
+        prior_fv = fvs or prior_fv
+    return out
+
+
 def build_history(probe: dict, mornings: dict, cal: list[str],
-                  px_book: dict) -> dict[str, list]:
-    """Every session since 8/13, per ticker: cameras + prices + horizons."""
+                  px_book: dict, lookback: dict | None = None) -> dict[str, list]:
+    """Every session since 8/13. Off-list days still get reconstructed cameras."""
+    lookback = lookback or {}
     tickers = sorted({
         t for m in (probe or {}).values() for t in (m or {})
     })
@@ -426,12 +618,14 @@ def build_history(probe: dict, mornings: dict, cal: list[str],
         cards = probe.get(date) or {}
         for t in tickers:
             card = cards.get(t)
+            recon = None if card else lookback.get((date, t))
             move = day_move(px_book, t, date)
             row = {
                 "date": date,
                 "s": s,
                 "hard_red": hard,
                 "on_list": bool(card),
+                "reconstructed": bool(recon) and not card,
                 "n_pos": int((card or {}).get("cond_good") or 0) if card else None,
                 "n_neg": int((card or {}).get("cond_bad") or (card or {}).get("n_neg") or 0) if card else None,
                 "cams": None,
@@ -455,6 +649,26 @@ def build_history(probe: dict, mornings: dict, cal: list[str],
                 pack = idio_score(card)
                 row["idio"] = pack["score"]
                 row["why"] = why_still(card, pack, side="long", hard=hard, s=s)
+            elif recon:
+                fill = row_from_lookback(recon)
+                for k in ("n_pos", "n_neg", "cams", "boxes", "e_pol", "e_label",
+                          "r_pol", "r_label", "news", "news_tone", "sources",
+                          "files", "rsi", "macd_hist", "reconstructed"):
+                    row[k] = fill.get(k)
+                mini = {
+                    "cond_good": row["n_pos"] or 0,
+                    "cond_bad": row["n_neg"] or 0,
+                    "boxes": row["boxes"],
+                    "e_pol": row.get("e_pol") or "missing",
+                    "news": {"tone": row.get("news_tone") or "missing"},
+                    "on_list": False,
+                }
+                pack = idio_score(mini)
+                row["idio"] = pack["score"]
+                row["why"] = [
+                    "Reconstructed 09:30 state from join / weather / Finviz / news "
+                    "(name was not on that morning's shopping lists).",
+                ] + why_still(mini, pack, side="long", hard=hard, s=s)
             for h in HOLDS:
                 hp = horizon_pack(px_book, cal, t, date, h, "long")
                 row[f"h{h}"] = hp.get("pct")
@@ -465,7 +679,8 @@ def build_history(probe: dict, mornings: dict, cal: list[str],
 
 
 def run(*, panel: dict | None = None, probe: dict | None = None,
-        mornings: dict | None = None, yahoo: bool = True) -> dict:
+        mornings: dict | None = None, yahoo: bool = True,
+        lookback: bool = True) -> dict:
     if panel is None:
         if not fm.PANEL_PATH.is_file():
             return {"ok": False, "error": "no panel.json"}
@@ -479,6 +694,9 @@ def run(*, panel: dict | None = None, probe: dict | None = None,
     })
     if yahoo and cal:
         px_book = fill_yahoo(px_book, tickers, cal[0], cal[-1])
+    lb_map = {}
+    if lookback and cal:
+        lb_map = load_lookback(tickers, cal[0], cal[-1], cal=cal)
     days = []
     for date in cal or sorted(probe):
         morn = mornings.get(date) or {}
@@ -494,7 +712,7 @@ def run(*, panel: dict | None = None, probe: dict | None = None,
         ))
     bt = backtest(days)
     latest = next((d for d in reversed(days) if d.get("n_cards")), None)
-    history = build_history(probe, mornings, cal, px_book)
+    history = build_history(probe, mornings, cal, px_book, lookback=lb_map)
     return {
         "ok": True,
         "generated_at": datetime.now(tl.ET).isoformat(),
@@ -640,8 +858,9 @@ def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser()
     p.add_argument("--write", action="store_true")
     p.add_argument("--no-yahoo", action="store_true")
+    p.add_argument("--no-lookback", action="store_true")
     args = p.parse_args(argv)
-    doc = run(yahoo=not args.no_yahoo)
+    doc = run(yahoo=not args.no_yahoo, lookback=not args.no_lookback)
     if args.write and doc.get("ok"):
         write_json(doc)
         write_md(doc)
