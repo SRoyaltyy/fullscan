@@ -34,6 +34,9 @@ def test_render_marks_integrity() -> None:
     assert "Excel" in html or "excel" in html
     assert "Open-bell slip" in html
     assert "flatten_robust" in html
+    assert "fill-scenarios.js" in html
+    assert "Market buy" in html
+    assert "data-sleeve=" in html
 
 
 def test_md_names_live_method() -> None:

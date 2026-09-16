@@ -172,6 +172,7 @@
   <li><b>Stock investigator.</b> Dropdown = names that sleeve actually bought. Date buttons = 09:30 that morning. A big BUY / SIT / NO badge says whether this recipe would take the name, plus the gates that fired or failed. E / R dots are beat-miss / upgrade-downgrade from the session-morning Finviz EPS Surprise when the print is already public (yday AMC / today BMO). A date-only stamp with no surprise number stays unknown — not green. Today's AMC is not used. Horizon % is hold-H from the 09:30 open. Cameras / coaches / news are quoted from repo files — never same-day Change%.</li>
   <li><b>Morning board.</b> Every name this recipe looked at that 09:30, ranked by its own rank key, plus would-be horizon % if bought here. <b>Side</b> is the sleeve's intended trade (LONG or SHORT). <b>Buy</b> is the 09:30 open (the fill). <b>Sell</b> / cover is the exit print — horizon close, or a later 09:30 open if 🚨 / last-red / news🔴 fired, or if <b>sell%</b> take/stop is on and that 09:30 open hit the bracket. Sell is green when that exit locked a profit for the sleeve's side (long: sell &gt; buy; short: cover &lt; buy), else red. <b>E</b> is the leak-free morning-export EPS surprise (beat / miss / unknown) — same number as the investigator chip. <b>Cams</b> is +green −red camera counts (e.g. +5 −1). <b>Yday</b> is yesterday's close-to-close % — never today's tape. <b>RSI</b> / <b>MACD</b> / <b>Flow</b> are prior-session only: RSI OS/OB (≤30 / ≥70), MACD hist + or X+ (just crossed up), FLOW IN when volume arrived and price barely moved. Hit-rate tally covers BUY / LOOK / NO / SIT, polarity hits vs the actual price move, and the ≤2 vs ≥3 red-camera split. The white+yday toggle keeps this looker list but buys only 0-red names that were up yesterday, ranked by +G−R. <b>sell%</b> in the filter bar replays every single recipe with a 09:30 take and/or stop (open vs our fill, even inside min-hold). Cards, table Book%, and curves switch to the replay; each Book% shows was / Δ vs the baked hold. Combos stay on the baked shared-pile book. The morning-board take/stop box is the same control. Marks chips, blotter BUY rows, and the session bought list also print that E so a beat like INO +67.7% is visible without opening the investigator.</li>
   <li><b>Open-bell slip / no-fill.</b> Research overlay only. Same 09:30 shopping lists, three fill realities: ideal official open, MARKET-like delay + adverse slip (α from prior OHLC, this session’s high/low is the path after the order), LIMIT at the intended open or prior close (fill or miss). KEEP bar ≥30 filled fires and &gt;55% after-fee hit rate vs the zero-slip baseline. Does <em>not</em> change live flatten_robust, hard-red sit, or Webull paper.</li>
+  <li><b>Market-buy / limit-buy messiness.</b> Same strategy cards and table (Strategy · Side · H · Win% · $ days · Starts · Book% · Signal% · Audit). The filter expands every sleeve into leftover-cash fill realities: wrong price (market mid / worst / best), partial 50%, and missed fill (gap ≥8% or a limit that never trades through). Signal% stays on the published equal-weight path. Live flatten_robust, hard-red sit, and Webull paper stay sit.</li>
   <li><b>−N / burst / green-news sweep.</b> Research overlays on the current cash-book leaders. A new gate is kept only if it beats flatten_h5 on the $10k book. If none do, current methods stay. Live flatten_robust is never changed.</li>
   <li><b>News packet / headline / cameras.</b> Green is <em>OR</em> for the looker: packet🟢 or headline🟢 — both are not required, and +9 −1 was only an example. On 08-13→09-11 $10k the OR set itself does not beat <code>flatten_h5</code> (<code>union_news_or_h1</code> +4.98); adding a camera-net floor to that OR set also lost. What printed is packet-green hold-1 with a mild positive net: <code>union_news_pack_net2_h1</code> (+G −R ≥ 2) +16.53. Packet with no net floor is +12.49. +9 −1 all-in and leftover conviction still lose. A gate stays only if the $10k book beats <code>flatten_h5</code>.</li>
   <li><b>RSI / MACD / flow-in.</b> Oversold (RSI≤30), overbought (RSI≥70), MACD histogram &gt; 0 or a fresh cross up, and flow-in (volume without a matching price move) are 09:30 gates on the same looker list. Shorts use overbought / MACD down. Rankers <code>rsi</code> (more oversold first) and <code>macd_hist</code> sit next to the existing hot / cond ranks. Same leak rule: prior Finviz export + prior bars only.</li>
@@ -196,6 +197,17 @@ This is not a change to <code>flatten_robust</code> or sit policy.</p>
 <div id="openBellSlipBody" class="mut">loading open-bell slip…</div>
 <p class="mut"><a href="open-bell-slip.html" style="color:#93c5fd">full overlay</a>
  · <a href="https://github.com/SRoyaltyy/fullscan/blob/main/03_scoreboard/OPEN_BELL_SLIP.md" style="color:#93c5fd">OPEN_BELL_SLIP.md</a></p>
+</details>
+<details id="bookFillReality" class="how" open>
+<summary>$10k butterfly fill realities — research (not a wire)</summary>
+<p class="mut">Same strategy table as above, with Market-buy and Limit-buy
+tabs (wrong price, partial, missed fill). Use the filter on the main
+table to expand every sleeve. Live <code>flatten_robust</code>, hard-red sit,
+and Webull paper are untouched. Starts YES is a start-date chip, not a
+daily win rate.</p>
+<div id="bookFillRealityBody" class="mut">loading book-fill reality…</div>
+<p class="mut"><a href="book-fill-reality.html" style="color:#93c5fd">full overlay</a>
+ · <a href="https://github.com/SRoyaltyy/fullscan/blob/main/03_scoreboard/BOOK_FILL_REALITY.md" style="color:#93c5fd">BOOK_FILL_REALITY.md</a></p>
 </details>
 <div id="liveDay" class="audit" style="margin:16px 0 10px">
   <b>Today’s packet</b>
@@ -1864,6 +1876,40 @@ window.addEventListener('resize', draw);
 })();
 </script>
 <script>
+(function(){
+  var host = document.getElementById('bookFillRealityBody');
+  if(!host) return;
+  var urls = ['book_fill_reality.json','./book_fill_reality.json'];
+  function pct(v){ return v==null ? '—' : ((v>=0?'+':'')+Number(v).toFixed(2)+'%'); }
+  function paint(d){
+    var reps = d.reports || {};
+    var names = d.sleeves || Object.keys(reps);
+    var html = '<p>'+ (d.headline || d.note || '') +'</p>';
+    html += '<div class="tbl-wrap"><table><tr><th>Strategy</th><th>WORST</th>'
+      +'<th>mid</th><th>ideal</th><th>BEST</th></tr>';
+    names.forEach(function(name){
+      var cols = (reps[name] || {}).columns || {};
+      html += '<tr><td>'+name+'</td><td>'+pct((cols.market_adverse||{}).book_pct)
+        +'</td><td>'+pct((cols.market_mid||{}).book_pct)
+        +'</td><td>'+pct((cols.ideal||{}).book_pct)
+        +'</td><td>'+pct((cols.market_favorable||{}).book_pct)+'</td></tr>';
+    });
+    html += '</table></div>';
+    host.innerHTML = html;
+  }
+  function tryFetch(i){
+    if(i>=urls.length){
+      host.textContent = 'book-fill reality JSON not on this deploy yet. Run python -m src.book_fill_reality --write.';
+      return;
+    }
+    fetch(urls[i], {cache:'no-store'}).then(function(r){
+      if(!r.ok) throw 0; return r.json();
+    }).then(paint).catch(function(){ tryFetch(i+1); });
+  }
+  tryFetch(0);
+})();
+</script>
+<script>
 (async function(){
   const el = document.getElementById('fm-main');
   const B64 = "__DATA__";
@@ -1885,4 +1931,6 @@ window.addEventListener('resize', draw);
       + '(Chrome 80+, Edge 80+, Safari 16.4+, Firefox 113+). ' + String(e) + '</p>');
   }
 })();
-</script></body></html>
+</script>
+<script src="fill-scenarios.js"></script>
+</body></html>

@@ -511,11 +511,13 @@ def simulate_shared(panel: dict, recs: list[dict], weights: list[float],
                     *, bars=None, fees=None, regime=None, start=None,
                     net: str = "priority", name: str = "combo",
                     hard_red_mode: str = HARD_RED_SIT,
-                    dip_pct: float | None = None) -> dict:
+                    dip_pct: float | None = None,
+                    exec_fill=None) -> dict:
     """One cash pile. Lots remember the owner recipe's hold / sell / side.
 
     ``hard_red_mode`` defaults to live sit. Research-only overrides do
-    not change flatten_robust or Webull live policy.
+    not change flatten_robust or Webull live policy. ``exec_fill`` is
+    the same unused-by-default research hook as ``simulate_book``.
     """
     fees = fees if fees is not None else pt.load_fees()
     cal_all = list(panel.get("session_dates") or [])
@@ -593,29 +595,64 @@ def simulate_shared(panel: dict, recs: list[dict], weights: list[float],
                               "reason": "no 09:30 open — carry"})
                 held_names.append(t)
                 continue
+            fill = fmb.resolve_exec_fill(
+                exec_fill, ticker=t, date=date, side=side, action="exit",
+                official_px=px, intended_shares=lot["shares"], bars=bars)
+            if fill["miss"]:
+                skips.append({
+                    "date": date, "ticker": t,
+                    "kind": fill["kind"] or "fill_miss",
+                    "reason": fill["reason"],
+                })
+                held_names.append(t)
+                continue
+            px = float(fill["px"])
+            old_shares = int(lot["shares"])
+            shares = min(int(fill["shares"]), old_shares)
+            if shares < 1:
+                skips.append({
+                    "date": date, "ticker": t, "kind": "fill_miss",
+                    "reason": "fill miss — carry",
+                })
+                held_names.append(t)
+                continue
             reason = fmb.why_sell(t, held, min_hold, early,
                                   owner.get("exit_when"), dropped, kind)
             reason = f"{lot['owner']}: {reason}"
+            if fill["how"] and fill["how"] != "ideal_open":
+                reason = f"{reason}; fill {fill['how']}"
             eq_before = cash + _mark_mixed(pos, date, "open", bars)
-            fee = pt.order_fees(lot["shares"], px,
+            fee = pt.order_fees(shares, px,
                                 "sell" if side == "long" else "buy", fees)
+            frac = shares / old_shares
+            cost_sold = float(lot["cost"]) * frac
+            fee_in_sold = float(lot.get("fee_in") or 0) * frac
             if side == "long":
-                proceeds = lot["shares"] * px - fee
+                proceeds = shares * px - fee
                 cash += proceeds
-                pnl = proceeds - lot["cost"]
+                pnl = proceeds - cost_sold
             else:
-                cost_cover = lot["shares"] * px + fee
+                cost_cover = shares * px + fee
                 cash -= cost_cover
-                pnl = lot["notional"] - cost_cover - lot.get("fee_in", 0)
-            pos.pop(t)
+                pnl = float(lot["notional"]) * frac - cost_cover - fee_in_sold
+            if shares < old_shares:
+                lot["shares"] = old_shares - shares
+                lot["cost"] = float(lot["cost"]) - cost_sold
+                lot["notional"] = lot["shares"] * float(lot["entry_px"])
+                lot["fee_in"] = float(lot.get("fee_in") or 0) - fee_in_sold
+                held_names.append(t)
+            else:
+                pos.pop(t)
             rec_t = {
                 "date": date, "ticker": t,
                 "side": "SELL" if side == "long" else "COVER",
-                "shares": lot["shares"], "price": round(px, 4), "fees": fee,
+                "shares": shares, "price": round(px, 4), "fees": fee,
                 "cash_after": round(cash, 2), "pnl": round(pnl, 2),
                 "reason": reason, "held": held,
                 "cameras": fmb.camera_stamp(row.get("boxes")),
                 "owner": lot["owner"],
+                "fill_how": fill["how"],
+                "partial": bool(fill["partial"] or shares < old_shares),
             }
             _stamp_mixed(rec_t, cash, pos, date, bars, CAPITAL)
             rec_t["equity_before"] = round(eq_before, 2)
@@ -737,6 +774,26 @@ def simulate_shared(panel: dict, recs: list[dict], weights: list[float],
                         "reason": f"leftover split {per:.2f} < 1 share @ {px:.2f}",
                     })
                     continue
+                fill = fmb.resolve_exec_fill(
+                    exec_fill, ticker=t, date=date, side=side, action="entry",
+                    official_px=px, intended_shares=shares, bars=bars)
+                if fill["miss"]:
+                    skips.append({
+                        "date": date, "ticker": t,
+                        "kind": fill["kind"] or "fill_miss",
+                        "reason": fill["reason"],
+                    })
+                    continue
+                px = float(fill["px"])
+                shares = int(fill["shares"])
+                if shares < 1:
+                    skips.append({
+                        "date": date, "ticker": t, "kind": "fill_miss",
+                        "reason": fill["reason"] or "fill miss — leftover stays",
+                    })
+                    continue
+                if fill["how"] and fill["how"] != "ideal_open":
+                    reason = f"{reason}; fill {fill['how']}"
                 fee_side = "buy" if side == "long" else "sell"
                 fee = pt.order_fees(shares, px, fee_side, fees)
                 if side == "long":
@@ -787,6 +844,8 @@ def simulate_shared(panel: dict, recs: list[dict], weights: list[float],
                     "reason": reason, "held": 0,
                     "cameras": fmb.camera_stamp(row.get("boxes")),
                     "owner": rec["name"],
+                    "fill_how": fill["how"],
+                    "partial": bool(fill["partial"]),
                 }
                 _stamp_mixed(rec_t, cash, pos, date, bars, CAPITAL)
                 trades.append(rec_t)
@@ -918,7 +977,7 @@ def _daily_on(book: dict, date: str) -> dict | None:
 
 def simulate_split(panel: dict, recs: list[dict], weights: list[float],
                    *, bars=None, fees=None, regime=None, start=None,
-                   name: str = "combo") -> dict:
+                   name: str = "combo", exec_fill=None) -> dict:
     """Independent audited books at the weights, then sum equity / cash."""
     ws = _norm_w(weights)
     books = []
@@ -927,7 +986,7 @@ def simulate_split(panel: dict, recs: list[dict], weights: list[float],
         rules["capital"] = CAPITAL * w
         books.append(fmb.simulate_book(
             panel, rec, bars=bars, fees=fees, regime=regime,
-            rules=rules, start=start))
+            rules=rules, start=start, exec_fill=exec_fill))
     full_cal = [d for d in (panel.get("session_dates") or [])
                 if not start or d >= start]
     last_closed = fm.last_closed_session(
