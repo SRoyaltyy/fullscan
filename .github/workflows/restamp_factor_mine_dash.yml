@@ -32,6 +32,7 @@ jobs:
         run: pip install pandas pyarrow
       - name: Restamp Pages HTML from template
         run: |
+          set -euo pipefail
           python - <<'PY'
           from src.factor_mine import load_dash_payload, write_dash_html
           payload = load_dash_payload()
@@ -39,6 +40,13 @@ jobs:
           print("wrote", dest, "recipes", payload.get("n_recipes"), "to", payload.get("to_date"))
           PY
           test -s dashboard/factor-mine/index.html
+          echo "--- template markers ---"
+          grep -c "function chartPool" src/factor_mine_dash.html || true
+          grep -c "height:168px" src/factor_mine_dash.html || true
+          grep -c "slice(0,8)" src/factor_mine_dash.html || true
+          echo "--- baked markers ---"
+          grep -c "function chartPool" dashboard/factor-mine/index.html || true
+          grep -c "height:168px" dashboard/factor-mine/index.html || true
       - name: Publish restamped dash
         run: |
           bash scripts/safe_git_push.sh \
