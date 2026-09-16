@@ -2327,13 +2327,38 @@
   "URG",
   "URGN",
   "UROY",
-  "USAS"
+  "USAS",
+  "USAU",
+  "USB",
+  "USFD",
+  "USNA",
+  "USPH",
+  "UTF",
+  "UTG",
+  "UTI",
+  "UTZ",
+  "UUUU",
+  "UVE",
+  "UVSP",
+  "UVV",
+  "V",
+  "VAC",
+  "VANI",
+  "VC",
+  "VCEL",
+  "VCX",
+  "VECO",
+  "VEEV",
+  "VENU",
+  "VERI",
+  "VFC",
+  "VFF"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 120683,
- "hold_lab_n": 56863,
- "hold_base": 0.47117655344994736,
+ "n_hold": 121983,
+ "hold_lab_n": 57474,
+ "hold_base": 0.4711640146577802,
  "counts": {
   "A@L0_g": [
    60160,
@@ -110205,8 +110230,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 120683,
- "pair_hold_lab_n": 56863,
+ "pair_hold_n": 121983,
+ "pair_hold_lab_n": 57474,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -110315,5 +110340,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789571029
+ "flushed_unix": 1789571223
 }
