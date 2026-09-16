@@ -1,7 +1,7 @@
 {
   "date": "2026-09-16",
-  "generated_at": "2026-09-16T04:03:20.892454-04:00",
-  "export_used": "data/exports/finviz_2026-09-16.csv",
+  "generated_at": "2026-09-16T04:03:24.131505-04:00",
+  "export_used": "data/exports/finviz_2026-09-15.csv",
   "ticker_digest_count": 400,
   "signal_count": 400,
   "index_digests": [
@@ -158,7 +158,7 @@
     },
     {
       "ticker": "AU",
-      "digest": "Gold prices slide more than 3% after Fed Chair Kevin Warshâs Jackson Hole comments boost September U.S. rate hike expectations",
+      "digest": "Gold prices slide more than 3% after Fed Chair Kevin Warsh’s Jackson Hole comments boost September U.S. rate hike expectations",
       "news_title": "Kavango appoints Jasper Musadaidzwa as CEO and executive director",
       "sector": "Basic Materials",
       "industry": "Gold",
@@ -202,7 +202,7 @@
     },
     {
       "ticker": "BBVA",
-      "digest": "BBVA posts record Q2 2026 net profit, upgrades Mexico and South America guidance, announces extraordinary â¬2 billion share buyback program",
+      "digest": "BBVA posts record Q2 2026 net profit, upgrades Mexico and South America guidance, announces extraordinary €2 billion share buyback program",
       "news_title": "Grenergy finalises $475m sale of Gabriela energy project to CVC DIF",
       "sector": "Financial",
       "industry": "Banks - Diversified",
@@ -213,7 +213,7 @@
     },
     {
       "ticker": "BCS",
-      "digest": "Strong H1 profits, guidance upgrade and Â£1bn buyback drive BCS 6.48% surge",
+      "digest": "Strong H1 profits, guidance upgrade and £1bn buyback drive BCS 6.48% surge",
       "news_title": "The high-end card changes that are challenging banks",
       "sector": "Financial",
       "industry": "Banks - Diversified",
@@ -224,7 +224,7 @@
     },
     {
       "ticker": "BDX",
-      "digest": "Becton Dickinson beats Q3 2026 estimates with EPS $3.23 on $5.0B revenue, raises FY26 EPS guidance to $12.62â$12.72",
+      "digest": "Becton Dickinson beats Q3 2026 estimates with EPS $3.23 on $5.0B revenue, raises FY26 EPS guidance to $12.62–$12.72",
       "news_title": "Has BSX Stock Finally Hit Bottom?",
       "sector": "Healthcare",
       "industry": "Medical Instruments & Supplies",
@@ -290,7 +290,7 @@
     },
     {
       "ticker": "CAH",
-      "digest": "Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
+      "digest": "Barron’s reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
       "news_title": "Cardinal Health CEO Sells $29 Million in Stock After Earnings Send Shares to Record",
       "sector": "Healthcare",
       "industry": "Medical Distribution",
@@ -334,7 +334,7 @@
     },
     {
       "ticker": "CNI",
-      "digest": "Canadian National Railway outlines conditions to U.S. regulators for proposed Union PacificâNorfolk Southern merger",
+      "digest": "Canadian National Railway outlines conditions to U.S. regulators for proposed Union Pacific–Norfolk Southern merger",
       "news_title": "CN Files Description of Anticipated Requested Conditions to Preserve Rail Competition and Expand Customer Options in the Midwest",
       "sector": "Industrials",
       "industry": "Railroads",
@@ -433,7 +433,7 @@
     },
     {
       "ticker": "E",
-      "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results",
+      "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to €3.4B on stronger Q2 results",
       "news_title": "Saipem wins $350m offshore contract from Azule Energy Angola",
       "sector": "Energy",
       "industry": "Oil & Gas Integrated",
@@ -511,7 +511,7 @@
     {
       "ticker": "GS",
       "digest": "Goldman Sachs raises $11.7B for new private equity funds, including $9.6B for West Street Capital Partners IX",
-      "news_title": "What We Learned From a Volatile Walmart Trade",
+      "news_title": "Goldman Drops as $11.7 Billion Fundraise Tests Its Private-Market Scale",
       "sector": "Financial",
       "industry": "Capital Markets",
       "is_dividend": false,
@@ -620,7 +620,7 @@
     },
     {
       "ticker": "LOW",
-      "digest": "Bernstein cuts Loweâs price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery",
+      "digest": "Bernstein cuts Lowe’s price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery",
       "news_title": "Why Lowes CMO Jen Wilson added digital commerce to her portfolio",
       "sector": "Consumer Cyclical",
       "industry": "Home Improvement Retail",
@@ -642,7 +642,7 @@
     },
     {
       "ticker": "MCD",
-      "digest": "Jefferies cuts McDonaldâs price target to $325 from $350 while reiterating its Buy rating on the stock.",
+      "digest": "Jefferies cuts McDonald’s price target to $325 from $350 while reiterating its Buy rating on the stock.",
       "news_title": "WEN, CMG, SBUX, MCD, CAVA Stocks: Seaport Sees One Stock Stand Out Amid Restaurant Traffic Weakness, Valuation Risks",
       "sector": "Consumer Cyclical",
       "industry": "Restaurants",
@@ -733,7 +733,7 @@
       },
       {
         "ticker": "BBVA",
-        "digest": "BBVA posts record Q2 2026 net profit, upgrades Mexico and South America guidance, announces extraordinary â¬2 billion share buyback program",
+        "digest": "BBVA posts record Q2 2026 net profit, upgrades Mexico and South America guidance, announces extraordinary €2 billion share buyback program",
         "news_title": "Grenergy finalises $475m sale of Gabriela energy project to CVC DIF",
         "sector": "Financial",
         "industry": "Banks - Diversified",
@@ -744,7 +744,7 @@
       },
       {
         "ticker": "BCS",
-        "digest": "Strong H1 profits, guidance upgrade and Â£1bn buyback drive BCS 6.48% surge",
+        "digest": "Strong H1 profits, guidance upgrade and £1bn buyback drive BCS 6.48% surge",
         "news_title": "The high-end card changes that are challenging banks",
         "sector": "Financial",
         "industry": "Banks - Diversified",
@@ -823,7 +823,7 @@
       },
       {
         "ticker": "BDX",
-        "digest": "Becton Dickinson beats Q3 2026 estimates with EPS $3.23 on $5.0B revenue, raises FY26 EPS guidance to $12.62â$12.72",
+        "digest": "Becton Dickinson beats Q3 2026 estimates with EPS $3.23 on $5.0B revenue, raises FY26 EPS guidance to $12.62–$12.72",
         "news_title": "Has BSX Stock Finally Hit Bottom?",
         "sector": "Healthcare",
         "industry": "Medical Instruments & Supplies",
@@ -845,7 +845,7 @@
       },
       {
         "ticker": "CAH",
-        "digest": "Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
+        "digest": "Barron’s reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
         "news_title": "Cardinal Health CEO Sells $29 Million in Stock After Earnings Send Shares to Record",
         "sector": "Healthcare",
         "industry": "Medical Distribution",
@@ -913,7 +913,7 @@
       },
       {
         "ticker": "CNI",
-        "digest": "Canadian National Railway outlines conditions to U.S. regulators for proposed Union PacificâNorfolk Southern merger",
+        "digest": "Canadian National Railway outlines conditions to U.S. regulators for proposed Union Pacific–Norfolk Southern merger",
         "news_title": "CN Files Description of Anticipated Requested Conditions to Preserve Rail Competition and Expand Customer Options in the Midwest",
         "sector": "Industrials",
         "industry": "Railroads",
@@ -981,7 +981,7 @@
       },
       {
         "ticker": "AU",
-        "digest": "Gold prices slide more than 3% after Fed Chair Kevin Warshâs Jackson Hole comments boost September U.S. rate hike expectations",
+        "digest": "Gold prices slide more than 3% after Fed Chair Kevin Warsh’s Jackson Hole comments boost September U.S. rate hike expectations",
         "news_title": "Kavango appoints Jasper Musadaidzwa as CEO and executive director",
         "sector": "Basic Materials",
         "industry": "Gold",
@@ -1117,7 +1117,7 @@
       },
       {
         "ticker": "E",
-        "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results",
+        "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to €3.4B on stronger Q2 results",
         "news_title": "Saipem wins $350m offshore contract from Azule Energy Angola",
         "sector": "Energy",
         "industry": "Oil & Gas Integrated",
@@ -1163,7 +1163,7 @@
       },
       {
         "ticker": "LOW",
-        "digest": "Bernstein cuts Loweâs price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery",
+        "digest": "Bernstein cuts Lowe’s price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery",
         "news_title": "Why Lowes CMO Jen Wilson added digital commerce to her portfolio",
         "sector": "Consumer Cyclical",
         "industry": "Home Improvement Retail",
@@ -1174,7 +1174,7 @@
       },
       {
         "ticker": "MCD",
-        "digest": "Jefferies cuts McDonaldâs price target to $325 from $350 while reiterating its Buy rating on the stock.",
+        "digest": "Jefferies cuts McDonald’s price target to $325 from $350 while reiterating its Buy rating on the stock.",
         "news_title": "WEN, CMG, SBUX, MCD, CAVA Stocks: Seaport Sees One Stock Stand Out Amid Restaurant Traffic Weakness, Valuation Risks",
         "sector": "Consumer Cyclical",
         "industry": "Restaurants",
@@ -1394,7 +1394,7 @@
     },
     {
       "ticker": "AU",
-      "digest": "Gold prices slide more than 3% after Fed Chair Kevin Warshâs Jackson Hole comments boost September U.S. rate hike expectations",
+      "digest": "Gold prices slide more than 3% after Fed Chair Kevin Warsh’s Jackson Hole comments boost September U.S. rate hike expectations",
       "news_title": "Kavango appoints Jasper Musadaidzwa as CEO and executive director",
       "sector": "Basic Materials",
       "industry": "Gold",
@@ -1438,7 +1438,7 @@
     },
     {
       "ticker": "BBVA",
-      "digest": "BBVA posts record Q2 2026 net profit, upgrades Mexico and South America guidance, announces extraordinary â¬2 billion share buyback program",
+      "digest": "BBVA posts record Q2 2026 net profit, upgrades Mexico and South America guidance, announces extraordinary €2 billion share buyback program",
       "news_title": "Grenergy finalises $475m sale of Gabriela energy project to CVC DIF",
       "sector": "Financial",
       "industry": "Banks - Diversified",
@@ -1449,7 +1449,7 @@
     },
     {
       "ticker": "BCS",
-      "digest": "Strong H1 profits, guidance upgrade and Â£1bn buyback drive BCS 6.48% surge",
+      "digest": "Strong H1 profits, guidance upgrade and £1bn buyback drive BCS 6.48% surge",
       "news_title": "The high-end card changes that are challenging banks",
       "sector": "Financial",
       "industry": "Banks - Diversified",
@@ -1460,7 +1460,7 @@
     },
     {
       "ticker": "BDX",
-      "digest": "Becton Dickinson beats Q3 2026 estimates with EPS $3.23 on $5.0B revenue, raises FY26 EPS guidance to $12.62â$12.72",
+      "digest": "Becton Dickinson beats Q3 2026 estimates with EPS $3.23 on $5.0B revenue, raises FY26 EPS guidance to $12.62–$12.72",
       "news_title": "Has BSX Stock Finally Hit Bottom?",
       "sector": "Healthcare",
       "industry": "Medical Instruments & Supplies",
@@ -1526,7 +1526,7 @@
     },
     {
       "ticker": "CAH",
-      "digest": "Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
+      "digest": "Barron’s reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
       "news_title": "Cardinal Health CEO Sells $29 Million in Stock After Earnings Send Shares to Record",
       "sector": "Healthcare",
       "industry": "Medical Distribution",
@@ -1570,7 +1570,7 @@
     },
     {
       "ticker": "CNI",
-      "digest": "Canadian National Railway outlines conditions to U.S. regulators for proposed Union PacificâNorfolk Southern merger",
+      "digest": "Canadian National Railway outlines conditions to U.S. regulators for proposed Union Pacific–Norfolk Southern merger",
       "news_title": "CN Files Description of Anticipated Requested Conditions to Preserve Rail Competition and Expand Customer Options in the Midwest",
       "sector": "Industrials",
       "industry": "Railroads",
@@ -1669,7 +1669,7 @@
     },
     {
       "ticker": "E",
-      "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results",
+      "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to €3.4B on stronger Q2 results",
       "news_title": "Saipem wins $350m offshore contract from Azule Energy Angola",
       "sector": "Energy",
       "industry": "Oil & Gas Integrated",
@@ -1747,7 +1747,7 @@
     {
       "ticker": "GS",
       "digest": "Goldman Sachs raises $11.7B for new private equity funds, including $9.6B for West Street Capital Partners IX",
-      "news_title": "What We Learned From a Volatile Walmart Trade",
+      "news_title": "Goldman Drops as $11.7 Billion Fundraise Tests Its Private-Market Scale",
       "sector": "Financial",
       "industry": "Capital Markets",
       "is_dividend": false,
@@ -1856,7 +1856,7 @@
     },
     {
       "ticker": "LOW",
-      "digest": "Bernstein cuts Loweâs price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery",
+      "digest": "Bernstein cuts Lowe’s price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery",
       "news_title": "Why Lowes CMO Jen Wilson added digital commerce to her portfolio",
       "sector": "Consumer Cyclical",
       "industry": "Home Improvement Retail",
@@ -1878,7 +1878,7 @@
     },
     {
       "ticker": "MCD",
-      "digest": "Jefferies cuts McDonaldâs price target to $325 from $350 while reiterating its Buy rating on the stock.",
+      "digest": "Jefferies cuts McDonald’s price target to $325 from $350 while reiterating its Buy rating on the stock.",
       "news_title": "WEN, CMG, SBUX, MCD, CAVA Stocks: Seaport Sees One Stock Stand Out Amid Restaurant Traffic Weakness, Valuation Risks",
       "sector": "Consumer Cyclical",
       "industry": "Restaurants",
@@ -1955,7 +1955,7 @@
     },
     {
       "ticker": "NSC",
-      "digest": "South Carolina Gov. McMaster backs proposed Union PacificâNorfolk Southern merger in letter to Surface Transportation Board",
+      "digest": "South Carolina Gov. McMaster backs proposed Union Pacific–Norfolk Southern merger in letter to Surface Transportation Board",
       "news_title": "SC Gov. Henry McMaster Voices Support for Union Pacific-Norfolk Southern Merger",
       "sector": "Industrials",
       "industry": "Railroads",
@@ -2032,7 +2032,7 @@
     },
     {
       "ticker": "PH",
-      "digest": "Parker-Hannifin prices $2.4B U.S. dollar and â¬2.025B euro senior notes to repay acquisition-related debt",
+      "digest": "Parker-Hannifin prices $2.4B U.S. dollar and €2.025B euro senior notes to repay acquisition-related debt",
       "news_title": "Should You Get Paid While Eaton Finishes Its Factories?",
       "sector": "Industrials",
       "industry": "Specialty Industrial Machinery",
@@ -2044,7 +2044,7 @@
     {
       "ticker": "PLTR",
       "digest": "UBS raises Palantir price target to $250 from $220, reiterates Buy rating on robust AI software demand",
-      "news_title": "Dan Ives Reignites Palantirs $1 Trillion Thesis  But Retail Sentiment Remains Bearish",
+      "news_title": "Palantir Looks Cheap Among AI Software Stocks, UBS Says  Why PLTR Could Have More Room To Run",
       "sector": "Technology",
       "industry": "Software - Infrastructure",
       "is_dividend": false,
@@ -2076,7 +2076,7 @@
     },
     {
       "ticker": "RACE",
-      "digest": "Ferrari completes â¬250 million second tranche of buyback, launches up to â¬250 million third tranche",
+      "digest": "Ferrari completes €250 million second tranche of buyback, launches up to €250 million third tranche",
       "news_title": "FERRARI N.V.: PERIODIC REPORT ON THE BUYBACK PROGRAM",
       "sector": "Consumer Cyclical",
       "industry": "Auto Manufacturers",
