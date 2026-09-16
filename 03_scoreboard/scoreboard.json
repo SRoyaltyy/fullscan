@@ -6577,6 +6577,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-09-16",
+          "actual_pct": -1.82,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       },
       "lesson_schema_ok": true
@@ -14417,6 +14429,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.48
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-16",
+          "actual_pct": -1.04,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": true,
+          "magnitude_hit": true,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       },
       "lesson_schema_ok": true
@@ -19682,6 +19706,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.6
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-16",
+          "actual_pct": -1.11,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": true,
+          "magnitude_hit": true,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.55
         }
       },
       "lesson_schema_ok": true
@@ -20489,7 +20525,20 @@
       "knowable_at_9am": "partially — the release was scheduled and the oil/AI catalysts were known, but the CPI content (in-line headline, hot core) and the magnitude of the hawkish repricing were genuine intraday information",
       "attribution_contested": "yes — AP/Investopedia/Yahoo/Schwab lead with oil; Reuters leads with the CPI report; Bloomberg/TheStreet lead with the Fed rate-hike repricing",
       "outlier_watch": "Equities rose on a hot core CPI that pushed 2Y yields to a 2-year high and hike odds to ~70–90% — bonds priced a hawkish Fed while equities ignored it; also Seagate −3.4% (worst S&P performer) fell while tech rallied, and the week still closed lower despite Friday's bounce",
-      "horizon_grades": {},
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-09-16",
+          "actual_pct": -1.37,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
+        }
+      },
       "lesson_schema_ok": true
     },
     {
@@ -22192,7 +22241,7 @@
           "status": "miss"
         }
       ],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-09-16_lesson.md",
       "sources_used": [
         {
           "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
@@ -22279,7 +22328,9 @@
       "key_interaction": "Overnight ES/NQ bid was conditional on a non-hawkish SEP/presser; hot retail sales + Warsh “economy strong / inflation not improved” invalidated that condition and amplified each other",
       "knowable_at_9am": "partially",
       "attribution_contested": "yes",
-      "outlier_watch": "NDX -0.01% vs Dow -1.21% (tech held, energy/rate-sensitives ate the hawkish fade); oil down the same day Fed hiked on energy inflation"
+      "outlier_watch": "NDX -0.01% vs Dow -1.21% (tech held, energy/rate-sensitives ate the hawkish fade); oil down the same day Fed hiked on energy inflation",
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-09-16",
