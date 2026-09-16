@@ -872,9 +872,9 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
 
     for date in cal:
         s = morning_s(regime, date)
-        hard_red = (rules.get("hard_red_no_new")
-                    and s is not None and float(s) <= float(rules["hard_red"]))
-        good_s = (s is not None and float(s) >= GOOD_S and not hard_red)
+        weather_red = (s is not None and float(s) <= float(rules["hard_red"]))
+        hard_red = bool(rules.get("hard_red_no_new")) and weather_red
+        good_s = (s is not None and float(s) >= GOOD_S and not weather_red)
         rec_day = rec
         if good_s and s_boost in ("more_names", "both"):
             rec_day = dict(rec, top_n=int(rec["top_n"]) + MORE_NAMES)
@@ -1091,7 +1091,7 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
         daily.append({
             "date": date,
             "s": None if s is None else round(s, 2),
-            "hard_red": hard_red,
+            "hard_red": weather_red,
             "route": plan.get("route") or "",
             "flatten_ok": bool(plan.get("flatten_ok")),
             "n": len(chosen),

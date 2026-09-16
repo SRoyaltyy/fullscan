@@ -118,6 +118,16 @@ def name_day_fires(panel: dict, rec: dict, red_dates: list[str],
                 continue
             exit_px, exit_d, how = hrs.horizon_exit(
                 cal, date, hold, t, bars)
+            if exit_px is None and exit_d:
+                # Exit session may not be a panel name-day. Official
+                # parquet print still grades; missing print fails closed.
+                store = hrs.clock_bar(t, exit_d, None)
+                exit_px = store.get("close")
+                if exit_px is None:
+                    exit_px = store.get("open")
+                    how = "horizon_open_store" if exit_px is not None else how
+                else:
+                    how = "horizon_close_store"
             pnl = None
             if exit_px is not None:
                 pnl = round(hrs.after_fee_pnl(

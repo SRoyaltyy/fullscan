@@ -127,6 +127,28 @@ def test_horizons_use_different_exits() -> None:
     assert h5[0]["pnl"] < 0
 
 
+def test_exit_off_panel_still_grades() -> None:
+    """Hold-3 close can sit on a session where the name is not on the 09:30 list."""
+    rec = fm.make_recipe("t_hot", universe="ohlc_hot", hold=1)
+    rows = [_row("2026-08-18", "AAA", sources=["ohlc_hot"])]
+    # Only the entry bar is in the injected dict — the exit is off-panel.
+    bars = {("AAA", "2026-08-18"): {"open": 10.0, "close": 10.5}}
+    panel = _panel(rows, dates=DATES)
+    from unittest import mock
+    with mock.patch.object(hrm.hrs, "clock_bar", side_effect=lambda t, d, bars=None: (
+            {"open": 10.0, "close": 10.5} if d == "2026-08-18" and bars is not None
+            else ({"open": 11.0, "close": 12.0} if d == "2026-08-20" and bars is None
+                  else {"open": None, "close": None})
+    )):
+        fires = hrm.name_day_fires(
+            panel, rec, ["2026-08-18"], DATES, bars=bars,
+            fees=ZERO_FEES, hold=3)
+    assert len(fires) == 1
+    assert fires[0]["exit_date"] == "2026-08-20"
+    assert fires[0]["pnl"] is not None and fires[0]["pnl"] > 0
+    assert fires[0]["exit_how"] == "horizon_close_store"
+
+
 def test_allow_mode_takes_open_on_red() -> None:
     rec = fm.make_recipe(
         "t_long", universe="ohlc_hot", hold=1)
@@ -177,6 +199,8 @@ def test_allow_mode_takes_open_on_red() -> None:
     assert any(
         t.get("side") == "BUY" and t["date"] == DATES[0]
         for t in thru["trades"])
+    d0 = next(d for d in thru["daily"] if d["date"] == DATES[0])
+    assert d0.get("hard_red") is True
 
 
 def test_research_survivor_and_live_keep() -> None:
@@ -246,11 +270,12 @@ def main() -> None:
     test_disc_label_ok_blocks_horizon_spill()
     test_split_fires_hold_region()
     test_horizons_use_different_exits()
+    test_exit_off_panel_still_grades()
     test_allow_mode_takes_open_on_red()
     test_research_survivor_and_live_keep()
     test_run_synthetic_picks_holdout_not_full_sample()
     test_default_callers_still_sit()
-    print("test_hard_red_strategy_mine: 8 ok")
+    print("test_hard_red_strategy_mine: 9 ok")
 
 
 if __name__ == "__main__":
