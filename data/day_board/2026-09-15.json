@@ -1,6 +1,6 @@
 {
   "date": "2026-09-15",
-  "generated_at": "2026-09-15T16:43:34.005178-04:00",
+  "generated_at": "2026-09-16T02:00:00.019930-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "blockers": [],
@@ -80,7 +80,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 87526
+          "size": 86672
         },
         {
           "key": "digest_md",
@@ -89,7 +89,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11332
+          "size": 11526
         },
         {
           "key": "market_digest_json",
@@ -149,7 +149,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87526
+          "size": 86672
         },
         {
           "key": "in_market_digest",
@@ -248,7 +248,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 7135
+          "size": 7272
         },
         {
           "key": "qc",
@@ -257,7 +257,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=True",
-          "size": 7189
+          "size": 7185
         },
         {
           "key": "status",
@@ -266,7 +266,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7709
+          "size": 7130
         },
         {
           "key": "review",
@@ -377,18 +377,18 @@
           "size": 16686
         }
       ],
-      "said": "general DOWN  -3.836 \u00b7 sectors 1 up / 8 down / 2 flat \u00b7 news 27 items",
+      "said": "general DOWN  -3.836 \u00b7 sectors 3 up / 7 down / 1 flat \u00b7 news 27 items",
       "bullets": [
         "bad: Asia -0.72% (Kospi -3.26%)",
         "bad: 1w 10Y +19bp / 5% handle",
         "bad: WTI +4% leftover Hormuz",
         "good: ES/NQ not independently weak",
         "good: HY contained 2.71",
-        "XLB DOWN -5.7",
-        "XLC FLAT -4.6",
-        "XLY DOWN -7.2",
-        "XLP FLAT -5.8",
-        "XLE UP +5.8"
+        "XLB DOWN -7.6",
+        "XLC UP +0.4",
+        "XLY DOWN -4.7",
+        "XLP FLAT -8.1",
+        "XLE UP +4.0"
       ]
     },
     {
@@ -409,7 +409,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87526
+          "size": 86672
         },
         {
           "key": "weather",
@@ -489,7 +489,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87526
+          "size": 86672
         },
         {
           "key": "dossiers",
@@ -531,7 +531,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 7135
+          "size": 7272
         },
         {
           "key": "in_actions",
@@ -549,7 +549,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87526
+          "size": 86672
         },
         {
           "key": "in_judge",
@@ -777,10 +777,10 @@
       }
     ],
     "flatten": {
-      "said": "0 priced buys \u00b7 cash $108,616.66",
+      "said": "0 priced buys \u00b7 cash $107,448.18",
       "bullets": [
         "0 priced buys",
-        "cash $108,616.66"
+        "cash $107,448.18"
       ]
     },
     "general": {
@@ -796,19 +796,19 @@
       "direction": "down"
     },
     "sectors": {
-      "said": "1 up / 8 down / 2 flat",
+      "said": "3 up / 7 down / 1 flat",
       "bullets": [
-        "XLB DOWN -5.7",
-        "XLC FLAT -4.6",
-        "XLY DOWN -7.2",
-        "XLP FLAT -5.8",
-        "XLE UP +5.8",
+        "XLB DOWN -7.6",
+        "XLC UP +0.4",
+        "XLY DOWN -4.7",
+        "XLP FLAT -8.1",
+        "XLE UP +4.0",
         "XLF DOWN -4.1",
-        "XLV DOWN -4.1",
-        "XLI DOWN -0.6",
-        "XLRE DOWN -7.3",
-        "XLK DOWN -2.6",
-        "XLU DOWN -6.6"
+        "XLV UP +0.9",
+        "XLI DOWN -5.9",
+        "XLRE DOWN -8.5",
+        "XLK DOWN -1.5",
+        "XLU DOWN -8.2"
       ]
     },
     "news": {
@@ -831,31 +831,6 @@
     }
   },
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat tables",
-      "date": "2026-09-15",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-15T10:45:55.514767-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-15_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 269893,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-15_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 17316,
-          "preview": "# MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T04:25:19.101684-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-15\nExport `finviz_2026-09-15.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T04:25:19.101684-04:00"
-    },
     {
       "key": "map_heat_baseline",
       "title": "Map heat night baseline",
@@ -3334,6 +3309,45 @@
         }
       ],
       "preview": "2026-09-15 BUY MPC, ZD, DBX, OKTA, S, MTCH, TWLO, AVAH \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, NRG \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-15 BUY MPC, ZD, DBX, OKTA, S, MTCH, TWLO, AVAH \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, NRG \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY MPC, ZD, DBX, OKTA, S, MTCH, TWLO, AVAH \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, NRG \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-15 BUY MPC, ZD, DBX, OKTA, S, MTCH, TWLO, AVAH \u00b7 SELL METC, FLNC, HNRG, FCEL, TLN, TE, OKLO, NRG \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, "
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-15",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-16T01:59:58.956598-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-15_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 86672,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-15_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11559,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-16T01:59:58.372108-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+        },
+        {
+          "path": "data/exports/finviz_2026-09-15.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11428811,
+          "preview": "11634 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11428811,
+          "preview": "11634 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-15\n_Generated 2026-09-16T01:59:58.372108-04:00 \u00b7 export=data/exports/finviz_2026-09-15.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11634 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 11634 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
