@@ -377,8 +377,8 @@
       }
     }
   },
-  "version": 10,
-  "updated": "2026-09-16T18:57:06-04:00",
+  "version": 11,
+  "updated": "2026-09-16T18:58:46-04:00",
   "rules": {
     "min_n": 8,
     "mute_below": 0.45,
@@ -510,6 +510,12 @@
         "Technology.S2_BREADTH: 1.0 -> 1.25 (n=9, hit=0.667)",
         "Utilities.S1_SECTOR_FACTORS: 1.25 -> 1.0 (n=13, hit=0.615)",
         "Utilities.S4_ETF_TAPE: 1.25 -> 1.0 (n=13, hit=0.615)"
+      ]
+    },
+    {
+      "at": "2026-09-16T18:58:46-04:00",
+      "changes": [
+        "hold"
       ]
     }
   ]

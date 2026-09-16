@@ -1,6 +1,6 @@
 # Learnings report — 2026-09-16
 
-Generated: **2026-09-16T18:57:06.338680-04:00** by `src/learn_cycle.py`.
+Generated: **2026-09-16T18:58:46.388188-04:00** by `src/learn_cycle.py`.
 
 This is the human-readable digest of what the bot **actually learned** this cycle: graded evidence, hypotheses (wins and losses), promoted standing rules, and **how that changes every daily workflow**.
 
@@ -15,10 +15,10 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 | Graded runs mined | 180 |
 | Hypotheses written | 181 (wins=77, losses=104) |
 | News hypotheses | 1 |
-| Lessons promoted to active | 4 |
+| Lessons promoted to active | 0 |
 | Lessons retired (efficacy-gated) | 10 |
 | Active lesson files now | 196 |
-| Engine policy version | 10 |
+| Engine policy version | 11 |
 
 ## 2. Accuracy by topic (evidence this cycle learned from)
 
@@ -496,10 +496,7 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 
 ## 4. Promoted standing rules (this cycle)
 
-- `a-two-name-duration-growth-communications-etf-xlc-like-meta.md`
-- `a-mega-cap-duration-heavy-consumer-cyclical-etf-xly-like-amz.md`
-- `a-bond-proxy-defensive-xlp-xlu-xlre-like-has-a-net-negative.md`
-- `a-low-beta-defensive-healthcare-etf-xlv-like-posts-a-net-non.md`
+_No new promotions this cycle (candidates incomplete, not yet recurring, or already active)._
 
 Full text lives in `02_lessons/active/`. Summaries also feed `mutable_policy.md`.
 
@@ -536,7 +533,7 @@ Sectors (pooled S0–S4; per-sector overrides in engine_policy.json):
 - S2_BREADTH: n=129 sign-hit=0.60 → ×1.0
 - S3_FLOWS_POSITIONING: n=93 sign-hit=0.49 → ×0.5
 - S4_ETF_TAPE: n=135 sign-hit=0.62 → ×1.0
-Last change: general.B0_ASIA: 0.5 -> 0.0 (n=16, hit=0.438); Consumer Cyclical.S2_BREADTH: 1.0 -> 1.25 (n=9, hit=0.667); Consumer Defensive.S0_SHARED_MACRO: 1.0 -> 1.25 (n=9, hit=0.667); Consumer Defensive.S1_SECTOR_FACTORS: 0.5 -> 1.0 (n=18, hit=0.556); Energy.S0_SHARED_MACRO: 1.25 -> 1.0 (n=10, hit=0.6); Technology.S0_SHARED_MACRO: 1.0 -> 1.25 (n=15, hit=0.667)
+Last change: hold
 
 Progress vs baselines: `03_scoreboard/IMPROVEMENT_TRACKER.md`.
 
