@@ -752,13 +752,38 @@
   "EIM",
   "EIX",
   "EL",
-  "ELA"
+  "ELA",
+  "ELAN",
+  "ELDN",
+  "ELE",
+  "ELS",
+  "ELTX",
+  "ELV",
+  "ELVA",
+  "ELVN",
+  "EMAT",
+  "EMBJ",
+  "EMD",
+  "EME",
+  "EMN",
+  "EMR",
+  "ENGN",
+  "ENLT",
+  "ENLV",
+  "ENOV",
+  "ENPH",
+  "ENS",
+  "ENTA",
+  "ENTG",
+  "ENTX",
+  "ENVA",
+  "EOLS"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 38957,
- "hold_lab_n": 18446,
- "hold_base": 0.47349641912878304,
+ "n_hold": 40257,
+ "hold_lab_n": 19036,
+ "hold_base": 0.47286186253322404,
  "counts": {
   "A@L0_g": [
    60160,
@@ -108630,8 +108655,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 38957,
- "pair_hold_lab_n": 18446,
+ "pair_hold_n": 40257,
+ "pair_hold_lab_n": 19036,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -108740,5 +108765,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789556908
+ "flushed_unix": 1789557110
 }
