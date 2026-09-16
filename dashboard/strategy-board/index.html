@@ -306,6 +306,17 @@ machine data/strategy_board/catalog.json · write-up 03_scoreboard/STRATEGY_BOAR
     if(today && day && day !== today) return false;
     return !!(row.px != null && src.indexOf("elite_live") === 0);
   }
+  function elitePx(d){
+    if(!d || typeof d !== "object") return false;
+    var q = d.quote || {};
+    var row = (d.buy_1d && d.buy_1d[0]) || {};
+    if(!row.ticker){
+      var sb = (d.strategies && d.strategies.stock_book_1d) || {};
+      row = (sb.buy && sb.buy[0]) || {};
+    }
+    var src = String(row.px_src || q.src || "");
+    return !!(row.px != null && src.indexOf("elite_live") === 0);
+  }
   function firstOk(urls, ok){
     var i = 0;
     var last = {};
@@ -340,8 +351,11 @@ machine data/strategy_board/catalog.json · write-up 03_scoreboard/STRATEGY_BOAR
       var sb = (strat && strat.strategies && strat.strategies.stock_book_1d) || {};
       var buys = (strat && strat.buy_1d && strat.buy_1d.length) ? strat.buy_1d : (sb.buy || []);
       var sells = (strat && strat.sell_1d && strat.sell_1d.length) ? strat.sell_1d : (sb.sell || []);
-      if(buys.length) d.buy_1d = buys;
-      if(sells.length) d.sell_1d = sells;
+      var ticketsToday = !sessionDate() || !String(strat.date || strat.clock_legal_for || "") || String(strat.date || strat.clock_legal_for || "") === sessionDate();
+      if(afterBell() || !elitePx(d) || (elitePx(strat) && ticketsToday)){
+        if(buys.length) d.buy_1d = buys;
+        if(sells.length) d.sell_1d = sells;
+      }
       if(!afterBell()){
         if(!d.buy_1d && sug.buy_1d) d.buy_1d = sug.buy_1d;
         if(!d.sell_1d && sug.sell_1d) d.sell_1d = sug.sell_1d;

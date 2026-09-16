@@ -122,6 +122,8 @@ def test_factor_mine_template_paints_every_strategy() -> None:
     assert "ok ? {} : last" in html
     assert "function ticketsLookLive" in html
     assert "function stripLooksLive" in html
+    assert "function elitePx" in html
+    assert "elitePx(st)&&ticketsToday" in html
     assert "function sessionDate" in html
     assert "d!==today" in html or "d !== today" in html
     assert "function ticketRows" in html
@@ -260,6 +262,8 @@ def test_open_pack_wired_when_skip_if_good() -> None:
     assert "if(!afterBell())" in book_suggestions._POLLER_JS
     assert "function ticketsLookLive" in book_suggestions._POLLER_JS
     assert "function stripLooksLive" in book_suggestions._POLLER_JS
+    assert "function elitePx" in book_suggestions._POLLER_JS
+    assert "elitePx(strat) && ticketsToday" in book_suggestions._POLLER_JS
     assert "function sessionDate" in book_suggestions._POLLER_JS
     assert "src.overlay_live_strip" in dep
     assert "stock_book_1d" in book_suggestions._POLLER_JS
