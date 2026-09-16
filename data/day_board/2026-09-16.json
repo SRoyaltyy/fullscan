@@ -1,18 +1,17 @@
 {
   "date": "2026-09-16",
-  "generated_at": "2026-09-16T04:20:03.798417-04:00",
+  "generated_at": "2026-09-16T04:20:10.890979-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-16_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-16/_board.json` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-09-16_actions.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-09-16_judge.md` \u2014 missing"
   ],
   "counts": {
     "ok": 4,
-    "partial": 3,
-    "fail": 1,
+    "partial": 4,
+    "fail": 0,
     "n": 8
   },
   "processes": [
@@ -144,7 +143,7 @@
       "inputs_ready": true,
       "n_req_ok": 3,
       "n_req": 20,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 3,
       "files": [
         {
@@ -233,9 +232,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-16_actions.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 32014
         },
         {
           "key": "general",
@@ -465,8 +464,8 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "FAIL",
-      "inputs_ready": false,
+      "status": "PARTIAL",
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
       "n_opt_ok": 0,
@@ -477,9 +476,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-16_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 32014
         },
         {
           "key": "in_digest",
@@ -537,9 +536,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-16_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 32014
         },
         {
           "key": "in_digest",
@@ -1141,6 +1140,31 @@
         }
       ],
       "preview": "36 events \u00b7 FOMC decision, SEP/dot plot, Warsh press conference | August advance retail sales rebound +0.6% MoM | Japan August trade deficit widens on oil imports | Lennar Q3 earnings (housing bellwether) | US-China talks on targeted tariff cuts ahead of Xi visit | Bank of England decision \u2014 hold at 3.75% expected \u00b7 # Event Scan \u2014 2026-09-16\n- events tracked: **36** (via openclaw)\n- uncertainty: **elevated**\n- summary: Today is a regime day: retail sales already rebounded +0.6%, but the 2pm ET FOMC/SEP/Warsh presser is still ~90%+ priced as the first hike of the Warsh Fed, with BoE Thursday and a widely expected BoJ hike to 1.25% Friday. The overlay is stagflationary \u2014 Brent still ~$107 on the US-Iran tanker war, the 10-year pinned near 5%, and China demand remaining weak \u2014 while the Sept 24 Trump-Xi summit is the main two-way event for tariffs and risk appetite."
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-09-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-16T04:20:10.323295-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-16_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 32014,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-09-16_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 9706,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-09-16T04:20:10.313578-04:00\nraw=156 unique_events=4 tickers=54"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-16T04:20:10.313578-04:00\nraw=156 unique_events=4 tickers=54"
     }
   ],
   "href": {
