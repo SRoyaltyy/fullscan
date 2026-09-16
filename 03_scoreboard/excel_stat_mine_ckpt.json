@@ -652,13 +652,38 @@
   "DEA",
   "DEC",
   "DEFT",
-  "DEI"
+  "DEI",
+  "DELL",
+  "DEO",
+  "DFDV",
+  "DFH",
+  "DFIN",
+  "DFTX",
+  "DG",
+  "DGICA",
+  "DGII",
+  "DGX",
+  "DGXX",
+  "DH",
+  "DHC",
+  "DHF",
+  "DHI",
+  "DHR",
+  "DHX",
+  "DIBS",
+  "DIOD",
+  "DIS",
+  "DJT",
+  "DK",
+  "DLB",
+  "DLO",
+  "DLR"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 33782,
- "hold_lab_n": 15994,
- "hold_base": 0.4734473980226156,
+ "n_hold": 35082,
+ "hold_lab_n": 16636,
+ "hold_base": 0.47420329513710735,
  "counts": {
   "A@L0_g": [
    60160,
@@ -108530,8 +108555,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 33782,
- "pair_hold_lab_n": 15994,
+ "pair_hold_n": 35082,
+ "pair_hold_lab_n": 16636,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -108640,5 +108665,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789556165
+ "flushed_unix": 1789556354
 }
