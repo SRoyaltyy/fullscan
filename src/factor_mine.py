@@ -2690,6 +2690,39 @@ def attach_live_session(payload: dict) -> dict:
         rows.append(stub)
         starts[name] = rows
     payload["starts"] = starts
+    # Keep series / daily aligned with dates so a length check is not 23
+    # after the live session is on the calendar. Sit day: last mark carried,
+    # +0% / $ days 0/1 lives on the cash-start stub, not the 8-13 curve.
+    series = dict(payload.get("series") or {})
+    daily = dict(payload.get("daily") or {})
+    for name in set(list(series) + list(daily) + list(starts)):
+        eq = list(series.get(name) or [])
+        if eq and len(eq) < len(dates):
+            last = eq[-1]
+            while len(eq) < len(dates):
+                eq.append(last)
+            series[name] = eq
+        days = list(daily.get(name) or [])
+        if days and not any(d.get("date") == date for d in days):
+            prev = days[-1] if days else {}
+            days.append({
+                "date": date,
+                "s": morning.get("s"),
+                "hard_red": bool(morning.get("hard_red")),
+                "open_cash": prev.get("cash") if prev.get("cash") is not None else CAPITAL,
+                "cash": prev.get("cash") if prev.get("cash") is not None else CAPITAL,
+                "equity": prev.get("equity") if prev.get("equity") is not None else CAPITAL,
+                "bought": [],
+                "sold": [],
+                "made_money": False,
+                "open_held": list(prev.get("held") or prev.get("open_held") or []),
+                "live": True,
+            })
+            daily[name] = days
+    if series:
+        payload["series"] = series
+    if daily:
+        payload["daily"] = daily
     sim = dict(payload.get("sim") or {})
     sim_dates = list(sim.get("dates") or [])
     if date not in sim_dates:

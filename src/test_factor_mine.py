@@ -2232,6 +2232,11 @@ def test_attach_live_session_adds_open_day_without_changing_to_date() -> None:
         },
         "sim": {"dates": ["2026-09-14", "2026-09-15"], "s": {"2026-09-15": -4.0}},
         "mornings": {"2026-09-15": {"s": -4.0, "hard_red": True}},
+        "series": {"combo_sh_5050_shared": [10000, 10000]},
+        "daily": {"combo_sh_5050_shared": [
+            {"date": "2026-09-14", "cash": 10000, "equity": 10000},
+            {"date": "2026-09-15", "cash": 10000, "equity": 10000, "hard_red": True},
+        ]},
     }
     with mock.patch.object(fm, "live_session_date", return_value="2026-09-16"), \
             mock.patch.object(fm, "live_session_morning",
@@ -2241,6 +2246,7 @@ def test_attach_live_session_adds_open_day_without_changing_to_date() -> None:
     assert out["to_date"] == "2026-09-15"
     assert "2026-09-16" in out["dates"]
     assert out["live_session"] == "2026-09-16"
+    assert len(out["dates"]) == 3
     paths = out["starts"]["combo_sh_5050_shared"]
     live = next(p for p in paths if p["start"] == "2026-09-16")
     assert live["live"] is True
@@ -2251,6 +2257,8 @@ def test_attach_live_session_adds_open_day_without_changing_to_date() -> None:
     assert live["open_cash"] == 10_000
     assert not live.get("buys")
     assert "2026-09-16" in (out["sim"]["dates"] or [])
+    assert len(out["series"]["combo_sh_5050_shared"]) == 3
+    assert out["daily"]["combo_sh_5050_shared"][-1]["date"] == "2026-09-16"
     assert fm.last_closed_session(
         "2026-08-13", cal=["2026-09-15", "2026-09-16"]
     ) in ("2026-09-15", "2026-09-16")
