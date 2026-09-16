@@ -46,23 +46,8 @@ def patch(text: str) -> str:
     )
     text = sub(
         text,
-        """function visibleKeys(){\n  if(sleeveFilter!=='all') return [sleeveFilter];\n  const prefer=[...(D.featured||[])];\n  statsList().slice().sort((a,b)=>Number(b.total_ret_pct)-Number(a.total_ret_pct))\n    .forEach(s=>{ if(!prefer.includes(s.name)) prefer.push(s.name); });\n  return prefer.filter(k=>!hidden.has(k) && (seriesOf(k)||[]).some(v=>v!=null)).slice(0,8);\n}\n\nfunction draw(){\n  const cv=document.getElementById('chart'),ctx=cv.getContext('2d');\n  const W=cv.width=cv.clientWidth*2,H=cv.height=Math.max(280, Math.round(cv.clientHeight*2));\n  ctx.clearRect(0,0,W,H);\n  const vis=visibleKeys();\n  let lo=Infinity,hi=-Infinity;\n  vis.forEach(k=>seriesOf(k).forEach(v=>{if(v!=null){lo=Math.min(lo,v);hi=Math.max(hi,v);}}));\n  if(lo===Infinity)return;\n  const pad=(hi-lo)*0.06||1; lo-=pad; hi+=pad;\n  const dates=D.dates||[];\n  const X=i=>40+i/(Math.max(1,dates.length-1))*(W-70);\n  const Y=v=>H-30-(v-lo)/(hi-lo)*(H-60);\n  ctx.strokeStyle='#2a3450';ctx.fillStyle='#66708a';ctx.font='20px sans-serif';\n  for(let g=0;g<=4;g++){\n    const v=lo+(hi-lo)*g/4;\n    ctx.beginPath();ctx.moveTo(40,Y(v));ctx.lineTo(W-30,Y(v));ctx.stroke();\n    ctx.fillText('$'+ (v/1000).toFixed(1)+'k',2,Y(v)+6);\n  }\n  dates.forEach((d,i)=>{if(i%Math.ceil(dates.length/6)===0)ctx.fillText(String(d).slice(5),X(i)-18,H-8);});\n  vis.forEach((k,ii)=>{\n    ctx.strokeStyle=COLORS[ii%COLORS.length];\n    ctx.lineWidth=sleeveFilter===k?3:1.8;\n    ctx.beginPath(); let started=false;\n    seriesOf(k).forEach((v,j)=>{if(v==null)return; started?ctx.lineTo(X(j),Y(v)):ctx.moveTo(X(j),Y(v)); started=true;});\n    ctx.stroke();\n  });\n}\n\nfunction renderLegend(){\n  const vis=visibleKeys();\n  const leg=document.getElementById('legend');\n  leg.innerHTML=\"\";\n  vis.forEach((k,ii)=>{\n    const s=document.createElement('span');\n    s.textContent=k;\n    s.style.borderColor=COLORS[ii%COLORS.length];\n    s.style.color=COLORS[ii%COLORS.length];\n    s.onclick=()=>{hidden.has(k)?hidden.delete(k):hidden.add(k); renderAll();};\n    s.style.opacity=hidden.has(k)?0.3:1;\n    leg.appendChild(s);\n  });\n}""",
-        "PLACEHOLDER_CHART_JS_OLD",
-        "chart js placeholder",
+        Path("/home/workdir/artifacts/patch_factor_mine_dash_ui.py").read_text().split('text = sub(\n        text,\n        """function visibleKeys')[1] if False else OPEN_VISIBLE,
+        NEW_VISIBLE,
+        "chart js",
     )
     return text
-
-
-def main() -> int:
-    raw = TPL.read_text(encoding="utf-8")
-    new = patch(raw)
-    if new != raw:
-        TPL.write_text(new, encoding="utf-8")
-        print(f"patched {TPL} ({len(raw)} -> {len(new)})")
-    else:
-        print(f"unchanged {TPL}")
-    return 0
-
-
-if __name__ == "__main__":
-    raise SystemExit(main())
