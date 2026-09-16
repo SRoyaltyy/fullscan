@@ -1402,13 +1402,38 @@
   "MATX",
   "MAX",
   "MAZE",
-  "MBC"
+  "MBC",
+  "MBIN",
+  "MBLY",
+  "MBOT",
+  "MBUU",
+  "MBX",
+  "MC",
+  "MCB",
+  "MCD",
+  "MCFT",
+  "MCHB",
+  "MCO",
+  "MCRI",
+  "MCRP",
+  "MCS",
+  "MCY",
+  "MD",
+  "MDAI",
+  "MDB",
+  "MDIA",
+  "MDLN",
+  "MDLZ",
+  "MDXG",
+  "MEGI",
+  "MEI",
+  "MENS"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 72656,
- "hold_lab_n": 34265,
- "hold_base": 0.47160592380532923,
+ "n_hold": 73956,
+ "hold_lab_n": 34884,
+ "hold_base": 0.4716858672724323,
  "counts": {
   "A@L0_g": [
    60160,
@@ -109280,8 +109305,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 72656,
- "pair_hold_lab_n": 34265,
+ "pair_hold_n": 73956,
+ "pair_hold_lab_n": 34884,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -109390,5 +109415,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789564021
+ "flushed_unix": 1789564208
 }
