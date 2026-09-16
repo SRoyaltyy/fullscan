@@ -22136,18 +22136,113 @@
         "B7_OIL_DOLLAR": 0.5
       },
       "leading_sum": -1.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7601.25,
+      "actual_close": 7551.81,
+      "actual_pct_change": -0.45,
+      "actual_direction": "down",
+      "actual_magnitude_band": "mild",
+      "direction_hit": false,
+      "magnitude_hit": true,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": -1.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 0.5,
+          "status": "miss"
+        }
+      ],
       "reflection_lesson_ref": null,
-      "sources_used": [],
+      "sources_used": [
+        {
+          "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+          "date_accessed": "2026-09-16",
+          "summary": "The priced hike printed unanimously at 2:00 p.m. ET.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm",
+          "date_accessed": "2026-09-16",
+          "summary": "The committee’s median path moved up 30 bp for year-end 2026, i.e. another hike in the dots.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/09/16/fed-rate-decision-september-2026.html",
+          "date_accessed": "2026-09-16",
+          "summary": "The presser framed the hike as evidence that the inflation test failed, not as a one-and-done checkbox.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://wtop.com/national/2026/09/how-major-us-stock-indexes-fared-wednesday-9-16-2026/",
+          "date_accessed": "2026-09-16",
+          "summary": "Independent close tape matches Channel 1: mild SPX red, notable Dow red, Nasdaq/NDX flat.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://economics.td.com/us-retail-sales",
+          "date_accessed": "2026-09-16",
+          "summary": "The 8:30 print was a hawkish growth surprise the morning note scored as mixed/not a shock.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/09/16/treasury-yield-bond-market-fed-decision.html",
+          "date_accessed": "2026-09-16",
+          "summary": "Front-end hawkish repricing; 10Y reclaimed the 5% handle the morning B2 spine had flagged.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/09/16/fed-rate-decision-september-2026.html",
+          "date_accessed": "2026-09-16",
+          "summary": "The unpriced part of 2pm was “not one-and-done,” not the 25 bp step.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://wtop.com/national/2026/09/lennar-fiscal-q3-earnings-snapshot/",
+          "date_accessed": "2026-09-16",
+          "summary": "Housing stress is real into 7%+ mortgages, but it is an AMC footnote for this session.",
+          "verification": "quote_not_found"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -22177,7 +22272,14 @@
       "news_judge_present": true,
       "engine": "v2",
       "anchor_score": 4.672,
-      "overlay_score": 0.625
+      "overlay_score": 0.625,
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "Hawkish SEP + Warsh presser (dots median 4.1%, 16/18 another hike; inflation “too high too long”), not the priced 25bp hike",
+      "key_interaction": "Overnight ES/NQ bid was conditional on a non-hawkish SEP/presser; hot retail sales + Warsh “economy strong / inflation not improved” invalidated that condition and amplified each other",
+      "knowable_at_9am": "partially",
+      "attribution_contested": "yes",
+      "outlier_watch": "NDX -0.01% vs Dow -1.21% (tech held, energy/rate-sensitives ate the hawkish fade); oil down the same day Fed hiked on energy inflation"
     },
     {
       "date": "2026-09-16",
