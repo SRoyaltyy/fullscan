@@ -15,6 +15,7 @@ REGISTRY = ROOT / "00_grounding" / "ticket_filters.json"
 
 _REG_CACHE: dict | None = None
 _FEAT_CACHE: dict[tuple[str, str], dict] = {}
+_RECIPE_INDEX: dict[str, dict] | None = None
 
 
 def _tick(v) -> str:
@@ -56,9 +57,83 @@ def load_registry(path: Path | None = None) -> dict:
 
 
 def reset_caches() -> None:
-    global _REG_CACHE, _FEAT_CACHE
+    global _REG_CACHE, _FEAT_CACHE, _RECIPE_INDEX
     _REG_CACHE = None
     _FEAT_CACHE = {}
+    _RECIPE_INDEX = None
+
+
+def recipe_index() -> dict[str, dict]:
+    """factor-mine + combo recipes. Empty on import failure."""
+    global _RECIPE_INDEX
+    if _RECIPE_INDEX is not None:
+        return _RECIPE_INDEX
+    out: dict[str, dict] = {}
+    try:
+        from . import factor_mine as fm
+        for rec in fm.build_recipes():
+            if rec.get("name"):
+                out[rec["name"]] = rec
+        try:
+            from . import factor_mine_combo as fmc
+            for spec in fmc.combo_specs():
+                if spec.get("name") and spec["name"] not in out:
+                    out[spec["name"]] = fmc.combo_recipe(spec)
+        except Exception:
+            pass
+    except Exception:
+        out = {}
+    _RECIPE_INDEX = out
+    return out
+
+
+def advertised_ob_short(require, name) -> str | bool | None:
+    """Does this recipe advertise the RSI≥70 / overbought / MACD-down short gate?
+
+    None = no recipe info (missing → pass). False = recipe known, no such
+    gate. str = which gate.
+    """
+    try:
+        req = require if isinstance(require, dict) else {}
+        n = str(name or "").lower()
+        if not req and not n:
+            return None
+        rsi_min = _num(req.get("rsi_min"))
+        if req.get("rsi_ob") or (rsi_min is not None and rsi_min >= 70):
+            return "rsi_ob"
+        if req.get("macd_down"):
+            return "macd_down"
+        if any(x in n for x in ("rsi_ob", "overbought", "short_rsi_ob")):
+            return "name_rsi_ob"
+        if any(x in n for x in ("macd_dn", "macd_down", "short_macd_dn")):
+            return "name_macd_dn"
+        return False
+    except Exception:
+        return None
+
+
+def recipe_extra(strategy: str | None = None, src: str | None = None,
+                 require: dict | None = None) -> dict:
+    """Attach recipe require for C1. Never raise."""
+    extra = {"strategy": strategy, "src": src, "recipe_require": require or {}}
+    try:
+        names = []
+        if src:
+            names.append(str(src).split(",")[0].strip())
+        if strategy:
+            names.append(str(strategy).strip())
+        idx = recipe_index()
+        for name in names:
+            kid = idx.get(name) or {}
+            if kid.get("require") is not None:
+                extra["recipe_require"] = kid.get("require") or {}
+                extra["strategy"] = kid.get("name") or name
+                break
+            if kid:
+                extra["strategy"] = kid.get("name") or name
+    except Exception:
+        pass
+    return extra
 
 
 def _pass(reason: str = "pass", **extra) -> dict:
@@ -290,15 +365,58 @@ def evaluate(side: str, features: dict | None,
                 if hr is not True:
                     continue
                 used["hard_red"] = True
-            if req.get("sector_against"):
+            if req.get("sector_against") or req.get("sector_good"):
                 sector = str(feat.get("sector") or "").lower()
                 if not sector:
                     continue
-                against = (want == "short" and sector == "good") or (
-                    want == "long" and sector == "bad")
-                if not against:
+                if req.get("sector_good") and sector != "good":
                     continue
+                if req.get("sector_against"):
+                    against = (want == "short" and sector == "good") or (
+                        want == "long" and sector == "bad")
+                    if not against:
+                        continue
                 used["sector"] = sector
+            if req.get("recipe_ob_or_macd_dn"):
+                gate = advertised_ob_short(
+                    extra.get("recipe_require") or feat.get("recipe_require"),
+                    extra.get("strategy") or extra.get("src") or feat.get("strategy"),
+                )
+                if not gate:
+                    continue
+                used["recipe_gate"] = gate
+            if req.get("camera_net_min") is not None:
+                net = feat.get("camera_net")
+                if net is None:
+                    continue
+                try:
+                    need = float(req["camera_net_min"])
+                except (TypeError, ValueError):
+                    continue
+                if float(net) < need:
+                    continue
+                if req.get("camera_support_and_net") and _camera_support(feat) is not True:
+                    continue
+                if req.get("unless_news_bad") and str(feat.get("news") or "") == "bad":
+                    continue
+                used["camera_net"] = net
+            if req.get("news_bad"):
+                news = feat.get("news")
+                if news in (None, "", "missing"):
+                    continue
+                if str(news).lower() != "bad":
+                    continue
+                used["news"] = str(news).lower()
+            if req.get("tape_against"):
+                tape = feat.get("tape_anchor")
+                if tape in (None, ""):
+                    continue
+                tl = str(tape).lower()
+                if want == "short" and tl not in ("good", "up", "constructive"):
+                    continue
+                if want == "long" and tl not in ("bad", "down", "hostile"):
+                    continue
+                used["tape_anchor"] = tl
             action = str(spec.get("action") or "block").lower()
             if action not in ("block", "pause"):
                 action = "block"
@@ -339,7 +457,13 @@ def decide_row(row: dict, date: str, default_side: str = "long",
         feat["ticker"] = t
         feat["date"] = str(date or "")[:10]
         feat["side"] = side
-        return evaluate(side, feat, registry=registry, extra=extra)
+        merged = dict(extra or {})
+        merged.update(recipe_extra(
+            merged.get("strategy"),
+            row.get("src") or merged.get("src"),
+            merged.get("recipe_require"),
+        ))
+        return evaluate(side, feat, registry=registry, extra=merged)
     except Exception as e:  # noqa: BLE001
         return _pass(reason=f"filter_error:{type(e).__name__}")
 
@@ -381,7 +505,11 @@ def stamp_strategy(rec: dict, date: str | None = None,
         d = str(date or rec.get("date") or rec.get("session_open") or "")[:10]
         family = str(rec.get("family") or "")
         default = _side(rec.get("side") or "long")
-        extra = {"hard_red": bool(rec.get("hard_red") or rec.get("sit"))}
+        extra = {
+            "hard_red": bool(rec.get("hard_red") or rec.get("sit")),
+            "new_entry": True,
+        }
+        extra.update(recipe_extra(rec.get("name"), None, rec.get("require")))
         buys, b_block = filter_rows(
             rec.get("buy") or [], d, default, registry, panel_by_ticker, extra)
         if family == "flatten":

@@ -196,8 +196,10 @@ def size_combo_tickets(rows: list[dict], recs: list[dict],
             try:
                 from src import ticket_lesson_filter as tlf
                 feat = tlf.prior_features(t, date, r)
-                dec = tlf.evaluate(
-                    rec_side, feat, extra={"hard_red": hard_red, "new_entry": True})
+                extra = {"hard_red": hard_red, "new_entry": True}
+                extra.update(tlf.recipe_extra(rec.get("name"), rec.get("name"),
+                                              rec.get("require")))
+                dec = tlf.evaluate(rec_side, feat, extra=extra)
                 if dec.get("action") in ("block", "pause"):
                     skips.append({
                         "date": date, "ticker": t, "kind": "lesson_filter",
@@ -356,10 +358,13 @@ def plan_combo_for_broker(date: str, snap: BrokerSnap,
             try:
                 from src import ticket_lesson_filter as tlf
                 feat = tlf.prior_features(t, use_date, r)
-                dec = tlf.evaluate(
-                    rec_side, feat,
-                    extra={"hard_red": s is not None and float(s) <= float(fmb.HARD_RED),
-                           "new_entry": True})
+                extra = {
+                    "hard_red": s is not None and float(s) <= float(fmb.HARD_RED),
+                    "new_entry": True,
+                }
+                extra.update(tlf.recipe_extra(rec.get("name"), rec.get("name"),
+                                              rec.get("require")))
+                dec = tlf.evaluate(rec_side, feat, extra=extra)
                 if dec.get("action") in ("block", "pause"):
                     skips.append({
                         "date": use_date, "ticker": t, "kind": "lesson_filter",

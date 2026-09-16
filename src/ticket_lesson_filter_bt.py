@@ -290,6 +290,11 @@ def collect_proposed(panel: dict) -> tuple[list[dict], dict]:
             prow = by_ticker.get((date, row["ticker"]))
             feat = tlf.prior_features(row["ticker"], date, prow)
             feat["hard_red"] = bool(row.get("hard_red"))
+            extra = tlf.recipe_extra(row.get("strategy"), row.get("src"))
+            row["recipe_require"] = extra.get("recipe_require") or {}
+            row["recipe_name"] = extra.get("strategy") or row.get("strategy")
+            feat["strategy"] = row["recipe_name"]
+            feat["recipe_require"] = row["recipe_require"]
             row["features"] = feat
             marks = fwd_marks(row["ticker"], date, row["hold"], row["side"], cal)
             row.update(marks)
@@ -314,10 +319,29 @@ def unique_entries(rows: list[dict]) -> list[dict]:
     return sorted(best.values(), key=lambda r: (r["date"], r["ticker"], r["side"]))
 
 
-def decide(row: dict, registry: dict) -> dict:
+def _row_recipe_extra(row: dict) -> dict:
     extra = {"hard_red": bool(row.get("hard_red")), "new_entry": True}
+    names = list(row.get("strategies") or [])
+    if row.get("strategy"):
+        names.append(row["strategy"])
+    if row.get("src"):
+        names.append(str(row["src"]).split(",")[0])
+    picked_req = row.get("recipe_require") or {}
+    picked_name = row.get("recipe_name") or row.get("strategy")
+    for name in names:
+        kid = tlf.recipe_index().get(name) or {}
+        gate = tlf.advertised_ob_short(kid.get("require"), name)
+        if gate:
+            picked_req = kid.get("require") or {}
+            picked_name = name
+            break
+    extra.update(tlf.recipe_extra(picked_name, row.get("src"), picked_req))
+    return extra
+
+
+def decide(row: dict, registry: dict) -> dict:
     return tlf.evaluate(row["side"], row.get("features") or {},
-                        registry=registry, extra=extra)
+                        registry=registry, extra=_row_recipe_extra(row))
 
 
 def _stats(rows: list[dict], key: str = "ret_h") -> dict:
@@ -701,7 +725,531 @@ def write(payload: dict | None = None) -> list[Path]:
     return [OUT_MD, OUT_JSON]
 
 
+OUT_V2_MD = ROOT / "03_scoreboard" / "TICKET_FILTER_V2_BT.md"
+OUT_V2_JSON = ROOT / "03_scoreboard" / "ticket_filter_v2_bt.json"
+MIN_STRAT_N = 8
+
+F1_SPEC = {
+    "id": "oversold_crash_pause",
+    "lesson_id": "oversold_crash_pause",
+    "side": "short",
+    "action": "block",
+    "enabled": True,
+    "require": {"rsi_max": 25.0, "crash": True},
+    "crash": {"ret_1_max": -8.0, "range_pct_min": 8.0, "gap_pct_max": -8.0},
+    "audit": "rsi<=25 & crash",
+}
+C_SPECS = {
+    "short_vs_own_recipe": {
+        "id": "short_vs_own_recipe",
+        "lesson_id": "short_vs_own_recipe",
+        "side": "short",
+        "action": "block",
+        "enabled": True,
+        "require": {"recipe_ob_or_macd_dn": True, "rsi_max": 49.99},
+        "audit": "recipe OB/MACD-dn gate & rsi<50",
+    },
+    "short_vs_green_cameras": {
+        "id": "short_vs_green_cameras",
+        "lesson_id": "short_vs_green_cameras",
+        "side": "short",
+        "action": "block",
+        "enabled": True,
+        "require": {"camera_net_min": 2, "unless_news_bad": True},
+        "audit": "camera_net>=+2 unless news bad",
+    },
+    "long_vs_hard_red_news": {
+        "id": "long_vs_hard_red_news",
+        "lesson_id": "long_vs_hard_red_news",
+        "side": "long",
+        "action": "block",
+        "enabled": True,
+        "require": {"news_bad": True, "no_camera_support": True},
+        "audit": "news bad & no camera support",
+    },
+    "short_vs_sector_or_tape": {
+        "id": "short_vs_sector_or_tape",
+        "lesson_id": "short_vs_sector_or_tape",
+        "side": "short",
+        "action": "block",
+        "enabled": True,
+        "require": {"crash": True, "sector_good": True},
+        "crash": {"ret_1_max": -8.0, "gap_pct_max": -8.0},
+        "audit": "oversold-crash & sector good",
+    },
+}
+F3_SPEC = {
+    "id": "hard_red_rsi30_short",
+    "lesson_id": "hard_red_rsi30_short",
+    "side": "short",
+    "action": "block",
+    "enabled": True,
+    "require": {"rsi_max": 30.0, "hard_red": True},
+    "audit": "hard-red & rsi<30",
+}
+F2_TIGHT = {
+    "id": "overbought_meltup_pause",
+    "lesson_id": "overbought_meltup_pause",
+    "side": "long",
+    "action": "block",
+    "enabled": True,
+    "require": {"rsi_min": 75.0, "ret_1_min": 8.0, "no_camera_support": True,
+                "news_bad": False},
+    "audit": "rsi>=75 & 1d>=+8 & no camera (news missing ok)",
+}
+
+
+def _reg(*specs) -> dict:
+    return {"filters": [json.loads(json.dumps(s)) for s in specs]}
+
+
+def per_strat_means(rows: list[dict], registry: dict | None,
+                    names: list[str] | None = None) -> dict[str, dict]:
+    """meanH of kept trades per strategy. registry=None → take-all."""
+    by: dict[str, list] = {}
+    for r in rows:
+        by.setdefault(r["strategy"], []).append(r)
+    want = names if names is not None else sorted(by)
+    out = {}
+    for name in want:
+        rs = by.get(name) or []
+        if registry is None:
+            kept = rs
+            blocked: list = []
+        else:
+            kept, blocked = split_filter(rs, registry)
+        st = _stats(kept, "ret_h")
+        out[name] = {
+            "n": len(rs),
+            "n_marked": st["n_marked"],
+            "meanH": st["mean"],
+            "n_blocked": len(blocked),
+            "blocked_meanH": _stats(blocked, "ret_h")["mean"],
+        }
+    return out
+
+
+def ew_avg(per: dict[str, dict], names: list[str]) -> dict:
+    xs = []
+    empty = 0
+    for n in names:
+        mu = (per.get(n) or {}).get("meanH")
+        if mu is None:
+            empty += 1
+            continue
+        xs.append(mu)
+    if not xs:
+        return {"n_strats": len(names), "n_in_avg": 0, "n_empty": empty,
+                "mean": None, "mean_empty0": 0.0 if names else None}
+    filled = []
+    for n in names:
+        mu = (per.get(n) or {}).get("meanH")
+        filled.append(0.0 if mu is None else mu)
+    return {
+        "n_strats": len(names),
+        "n_in_avg": len(xs),
+        "n_empty": empty,
+        "mean": round(sum(xs) / len(xs), 4),
+        "mean_empty0": round(sum(filled) / len(filled), 4),
+    }
+
+
+def strat_set(rows: list[dict], min_n: int = MIN_STRAT_N) -> list[str]:
+    by: dict[str, list] = {}
+    for r in rows:
+        by.setdefault(r["strategy"], []).append(r)
+    names = []
+    for name, rs in by.items():
+        if _stats(rs, "ret_h")["n_marked"] >= min_n:
+            names.append(name)
+    return sorted(names)
+
+
+def rule_blocked_ok(rows: list[dict], registry: dict) -> tuple[bool, dict]:
+    _kept, blocked = split_filter(rows, registry)
+    st = _stats(blocked, "ret_h")
+    mu = st["mean"]
+    ok = st["n_marked"] == 0 or (mu is not None and mu <= 0)
+    return ok, {"n": len(blocked), "n_marked": st["n_marked"], "meanH": mu}
+
+
+def apply_mute(rows: list[dict], registry: dict,
+               mute_families: set[str]) -> tuple[list[dict], list[dict]]:
+    """One-day mute of a family when a contradiction already fires that day."""
+    kept, blocked = split_filter(rows, registry)
+    fire_days = {(r["date"], r["family"]) for r in blocked
+                 if r.get("family") in mute_families}
+    if not fire_days:
+        return kept, blocked
+    extra = []
+    still = []
+    for r in kept:
+        if (r["date"], r.get("family")) in fire_days:
+            item = dict(r)
+            item["decision"] = {
+                "action": "block", "lesson_id": "recipe_mute",
+                "filter_id": "recipe_mute",
+                "reason": f"{r.get('strategy')} {r['date']} MUTE",
+            }
+            extra.append(item)
+        else:
+            still.append(r)
+    return still, blocked + extra
+
+
+def run_v2() -> dict:
+    tlf.reset_caches()
+    panel = _panel()
+    cal = list(panel.get("session_dates") or [])
+    rows, coverage = collect_proposed(panel)
+    unique = unique_entries(rows)
+    is_rows = _window(rows, None, FIT_END)
+    oos_rows = _window(rows, OOS_START, None)
+    is_u = _window(unique, None, FIT_END)
+    oos_u = _window(unique, OOS_START, None)
+    names = strat_set(is_rows, MIN_STRAT_N)
+    # also include OOS-only strats that clear N on full window
+    names_full = strat_set(rows, MIN_STRAT_N)
+    names_oos_set = strat_set(oos_rows, max(3, MIN_STRAT_N // 2))
+
+    baseline = _reg()
+    f1 = _reg(F1_SPEC)
+    candidates = [("C1", C_SPECS["short_vs_own_recipe"]),
+                  ("C2", C_SPECS["short_vs_green_cameras"]),
+                  ("C3", C_SPECS["long_vs_hard_red_news"]),
+                  ("C4", C_SPECS["short_vs_sector_or_tape"]),
+                  ("F3", F3_SPEC)]
+    # tighter C2: require camera_support AND net>=2
+    c2b = dict(C_SPECS["short_vs_green_cameras"])
+    c2b = json.loads(json.dumps(c2b))
+    c2b["id"] = "short_vs_green_cameras_and"
+    c2b["require"] = {**c2b["require"], "camera_support_and_net": True,
+                      "camera_net_min": 2}
+    candidates.append(("C2b", c2b))
+
+    ablations = []
+    keep = [F1_SPEC]
+    dropped = []
+    for tag, spec in candidates:
+        trial = _reg(F1_SPEC, spec)
+        only = _reg(spec)
+        is_ok, is_bl = rule_blocked_ok(is_u, only)
+        oos_ok, oos_bl = rule_blocked_ok(oos_u, only)
+        f1_oos = ew_avg(per_strat_means(oos_rows, f1, names_full), names_full)
+        tr_oos = ew_avg(per_strat_means(oos_rows, trial, names_full), names_full)
+        f1_m = f1_oos.get("mean")
+        tr_m = tr_oos.get("mean")
+        helps = (tr_m is not None and f1_m is not None and tr_m + 1e-12 >= f1_m)
+        ship = bool(is_ok and oos_ok and helps and (is_bl["n_marked"] or oos_bl["n_marked"]))
+        # empty rule (n=0 both) is not meat
+        if (is_bl["n_marked"] or 0) + (oos_bl["n_marked"] or 0) == 0:
+            ship = False
+            why = "no hits — not meat"
+        elif not is_ok:
+            ship = False
+            why = f"IS blocked meanH {is_bl['meanH']} > 0"
+        elif not oos_ok:
+            ship = False
+            why = f"OOS blocked meanH {oos_bl['meanH']} > 0"
+        elif not helps:
+            ship = False
+            why = f"OOS EW {tr_m} < F1 {f1_m}"
+        else:
+            why = (f"IS blocked {is_bl['meanH']} OOS blocked {oos_bl['meanH']} "
+                   f"OOS EW {tr_m} ≥ F1 {f1_m}")
+        rec = {
+            "tag": tag, "id": spec["id"], "ship": ship, "why": why,
+            "is_blocked": is_bl, "oos_blocked": oos_bl,
+            "oos_ew_f1": f1_m, "oos_ew_trial": tr_m,
+        }
+        ablations.append(rec)
+        if ship:
+            keep.append(spec)
+        else:
+            dropped.append({"id": spec["id"], "why": why})
+
+    v2 = _reg(*keep)
+    # Layer 3: mute families whose IS blocked-by-v2 days had meanH <= 0
+    is_k, is_b = split_filter(is_rows, v2)
+    fam_skip: dict[str, list] = {}
+    for r in is_b:
+        fam_skip.setdefault(r.get("family") or "", []).append(r)
+    mute_fams = set()
+    for fam, rs in fam_skip.items():
+        if not fam:
+            continue
+        mu = _stats(rs, "ret_h")["mean"]
+        nmk = _stats(rs, "ret_h")["n_marked"]
+        if nmk >= 3 and mu is not None and mu <= 0:
+            mute_fams.add(fam)
+    mute_oos_k, mute_oos_b = apply_mute(oos_rows, v2, mute_fams)
+    mute_ew = ew_avg(
+        {n: {"meanH": _stats([r for r in mute_oos_k if r["strategy"] == n], "ret_h")["mean"]}
+         for n in names_full},
+        names_full,
+    )
+    v2_oos_ew = ew_avg(per_strat_means(oos_rows, v2, names_full), names_full)
+    mute_helps = (mute_ew.get("mean") is not None and v2_oos_ew.get("mean") is not None
+                  and mute_ew["mean"] + 1e-12 >= v2_oos_ew["mean"] and mute_fams)
+    mute_info = {
+        "families": sorted(mute_fams),
+        "oos_ew": mute_ew.get("mean"),
+        "v2_oos_ew": v2_oos_ew.get("mean"),
+        "ship": bool(mute_helps),
+        "why": (
+            "OOS EW improved" if mute_helps else
+            "hurts or no families" if not mute_fams else
+            f"OOS EW {mute_ew.get('mean')} < v2 {v2_oos_ew.get('mean')}"
+        ),
+    }
+
+    sleeves = {
+        "baseline": baseline,
+        "f1": f1,
+        "v2": v2,
+    }
+    unique_scores = {k: evaluate_registry(unique, reg) for k, reg in sleeves.items()}
+    # per-strat tables on FULL window (and OOS)
+    per = {
+        split: {
+            k: per_strat_means(rs, None if k == "baseline" else sleeves[k], names_full)
+            for k in ("baseline", "f1", "v2")
+        }
+        for split, rs in (("all", rows), ("is", is_rows), ("oos", oos_rows))
+    }
+    ews = {
+        split: {k: ew_avg(per[split][k], names_full) for k in ("baseline", "f1", "v2")}
+        for split in ("all", "is", "oos")
+    }
+
+    rwt = unique_scores["v2"]["rwt"]
+    oos_ew_ok = (
+        ews["oos"]["v2"]["mean"] is not None
+        and ews["oos"]["f1"]["mean"] is not None
+        and ews["oos"]["baseline"]["mean"] is not None
+        and ews["oos"]["v2"]["mean"] + 1e-12 >= ews["oos"]["f1"]["mean"]
+        and ews["oos"]["v2"]["mean"] + 1e-12 >= ews["oos"]["baseline"]["mean"]
+    )
+    contract = {
+        "rwt_blocked": bool(rwt.get("blocked")),
+        "oos_ew_ge_f1_and_baseline": oos_ew_ok,
+        "ok": bool(rwt.get("blocked") and oos_ew_ok),
+        "notes": [
+            f"RWT 9/11 blocked={rwt.get('blocked')}",
+            f"OOS EW baseline={ews['oos']['baseline']['mean']} "
+            f"F1={ews['oos']['f1']['mean']} v2={ews['oos']['v2']['mean']}",
+            f"N={MIN_STRAT_N} strats in EW (IS-or-full marked≥N): {len(names_full)}",
+        ],
+    }
+    table = []
+    for name in names_full:
+        b = per["all"]["baseline"][name]
+        f = per["all"]["f1"][name]
+        v = per["all"]["v2"][name]
+        delta = None
+        if v["meanH"] is not None and b["meanH"] is not None:
+            delta = round(v["meanH"] - b["meanH"], 4)
+        table.append({
+            "strategy": name,
+            "n": b["n"],
+            "n_marked": b["n_marked"],
+            "baseline_meanH": b["meanH"],
+            "f1_meanH": f["meanH"],
+            "v2_meanH": v["meanH"],
+            "delta_v2_base": delta,
+            "oos_baseline": (per["oos"]["baseline"].get(name) or {}).get("meanH"),
+            "oos_f1": (per["oos"]["f1"].get(name) or {}).get("meanH"),
+            "oos_v2": (per["oos"]["v2"].get(name) or {}).get("meanH"),
+        })
+
+    holes = _holes(unique, coverage, cal)
+    payload = {
+        "window": {"from": cal[0] if cal else None, "to": cal[-1] if cal else None,
+                   "n_sessions": len(cal), "fit_end": FIT_END, "oos_start": OOS_START,
+                   "min_strat_n": MIN_STRAT_N},
+        "coverage": coverage,
+        "n_proposed_rows": len(rows),
+        "n_unique": len(unique),
+        "n_strats_ew": len(names_full),
+        "strat_names": names_full,
+        "unique": {k: unique_scores[k] for k in ("baseline", "f1", "v2")},
+        "ew": ews,
+        "table": table,
+        "ablations": ablations,
+        "shipped": [s["id"] for s in keep],
+        "dropped": dropped,
+        "mute": mute_info,
+        "rwt": rwt,
+        "contract": contract,
+        "holes": holes,
+        "names_is": names,
+        "names_oos_loose": names_oos_set,
+    }
+    return payload
+
+
+def render_v2(payload: dict) -> str:
+    w = payload["window"]
+    ew = payload["ew"]
+    lines = [
+        "# Ticket filter v2 — contradiction gates + cross-strat backtest",
+        "",
+        f"Window **{w['from']} → {w['to']}** · {w['n_sessions']} sessions · "
+        f"fit `{w['fit_end']}` / OOS `{w['oos_start']}`→latest.",
+        "",
+        f"Per-strategy EW set = strategies with **≥{w['min_strat_n']}** "
+        f"marked hold-horizon trades on the full window (N chosen so tiny "
+        f"sleeves do not dominate). {payload['n_strats_ew']} strategies qualify. "
+        f"Proposed rows {payload['n_proposed_rows']} · unique "
+        f"{payload['n_unique']}.",
+        "",
+        "## Contract",
+        "",
+    ]
+    for n in payload["contract"]["notes"]:
+        lines.append(f"- {n}")
+    lines += [
+        f"- mute Layer 3: {payload['mute']}",
+        "",
+        f"**Contract {'PASS' if payload['contract']['ok'] else 'FAIL'}** · "
+        f"shipped `{', '.join(payload['shipped'])}`",
+        "",
+        "## Equal-weight average across strats (meanH %)",
+        "",
+        "| Split | baseline | F1-only | v2 | n_in_avg / n_strats |",
+        "|---|---:|---:|---:|---|",
+    ]
+    for split, label in (("all", "Full"), ("is", "IS"), ("oos", "OOS")):
+        e = ew[split]
+        lines.append(
+            f"| {label} | {e['baseline']['mean']} | {e['f1']['mean']} | "
+            f"{e['v2']['mean']} | {e['v2']['n_in_avg']}/{e['v2']['n_strats']} "
+            f"(empty {e['v2']['n_empty']}) |"
+        )
+    lines += [
+        "",
+        "EW uses defined means only (emptied sleeves excluded). "
+        "`mean_empty0` treats empty as 0: "
+        f"OOS baseline={ew['oos']['baseline'].get('mean_empty0')} "
+        f"F1={ew['oos']['f1'].get('mean_empty0')} "
+        f"v2={ew['oos']['v2'].get('mean_empty0')}.",
+        "",
+        "## Unique (date, ticker, side) — same as #252",
+        "",
+        "| Split | baseline | F1 | v2 | v2 blocked |",
+        "|---|---|---|---|---|",
+    ]
+    for split, label in (("all", "Full"), ("is", "IS"), ("oos", "OOS")):
+        u = payload["unique"]
+        lines.append(
+            f"| {label} | {_fmt(u['baseline'][split]['A'])} | "
+            f"{_fmt(u['f1'][split]['B'])} | {_fmt(u['v2'][split]['B'])} | "
+            f"{_fmt(u['v2'][split]['blocked'])} |"
+        )
+    rwt = payload.get("rwt") or {}
+    feat = rwt.get("features") or {}
+    lines += [
+        "",
+        "## RWT 2026-09-11 short",
+        "",
+        f"- blocked={rwt.get('blocked')} rsi={feat.get('rsi')} "
+        f"1d={feat.get('ret_1')} ret_h={rwt.get('ret_h')}",
+        f"- audit: `{(rwt.get('decision') or {}).get('reason')}`",
+        "",
+        "## Ablations (add one rule on top of F1)",
+        "",
+        "| Tag | Ship | IS blocked meanH | OOS blocked meanH | OOS EW trial vs F1 | Why |",
+        "|---|---|---:|---:|---|---|",
+    ]
+    for a in payload.get("ablations") or []:
+        lines.append(
+            f"| {a['tag']} `{a['id']}` | {a['ship']} | "
+            f"{(a['is_blocked'] or {}).get('meanH')} n={(a['is_blocked'] or {}).get('n_marked')} | "
+            f"{(a['oos_blocked'] or {}).get('meanH')} n={(a['oos_blocked'] or {}).get('n_marked')} | "
+            f"{a.get('oos_ew_trial')} vs {a.get('oos_ew_f1')} | {a['why']} |"
+        )
+    lines += [
+        "",
+        "## Per-strategy meanH (full window, n_marked ≥ N)",
+        "",
+        "| Strategy | n | n_marked | baseline | F1 | v2 | Δ v2−base | OOS v2 |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|",
+    ]
+    ew_row = payload["ew"]["all"]
+    lines.append(
+        f"| **EW avg** | {payload['n_strats_ew']} | — | "
+        f"{ew_row['baseline']['mean']} | {ew_row['f1']['mean']} | "
+        f"{ew_row['v2']['mean']} | "
+        f"{round((ew_row['v2']['mean'] or 0) - (ew_row['baseline']['mean'] or 0), 4)} | "
+        f"{payload['ew']['oos']['v2']['mean']} |"
+    )
+    for r in payload.get("table") or []:
+        lines.append(
+            f"| `{r['strategy']}` | {r['n']} | {r['n_marked']} | "
+            f"{r['baseline_meanH']} | {r['f1_meanH']} | {r['v2_meanH']} | "
+            f"{r['delta_v2_base']} | {r['oos_v2']} |"
+        )
+    lines += [
+        "",
+        "## Blocked blotter (v2 unique)",
+        "",
+        "| Date | Ticker | Side | RSI | 1d | H% | Lesson |",
+        "|---|---|---|---:|---:|---:|---|",
+    ]
+    for r in (payload["unique"]["v2"].get("blocked_rows") or []):
+        lines.append(
+            f"| {r['date']} | {r['ticker']} | {r['side']} | "
+            f"{r.get('rsi')} | {r.get('ret_1')} | {r.get('ret_h')} | "
+            f"{r.get('lesson_id')} |"
+        )
+    if not payload["unique"]["v2"].get("blocked_rows"):
+        lines.append("| — | — | — | — | — | — | none |")
+    lines += [
+        "",
+        "## Shipped vs dropped",
+        "",
+        f"- shipped: {payload['shipped']}",
+        f"- dropped: {payload['dropped']}",
+        f"- Layer 3 mute: {payload['mute']}",
+        "",
+        "## Coverage holes",
+        "",
+    ]
+    for h in payload.get("holes") or []:
+        lines.append(f"- {h}")
+    lines += [
+        "",
+        "These are archive marks, not a 60% claim. North star ~2%/day after fees.",
+        "",
+    ]
+    return "\n".join(lines) + "\n"
+
+
+def write_v2(payload: dict | None = None) -> list[Path]:
+    payload = payload or run_v2()
+    OUT_V2_MD.parent.mkdir(parents=True, exist_ok=True)
+    OUT_V2_MD.write_text(render_v2(payload), encoding="utf-8")
+    OUT_V2_JSON.write_text(json.dumps(payload, indent=2, default=str), encoding="utf-8")
+    return [OUT_V2_MD, OUT_V2_JSON]
+
+
 def main(argv=None) -> int:
+    import sys
+    args = list(sys.argv[1:] if argv is None else argv)
+    if "--v2" in args or "v2" in args:
+        payload = run_v2()
+        write_v2(payload)
+        print(json.dumps({
+            "mode": "v2",
+            "contract": payload["contract"],
+            "shipped": payload["shipped"],
+            "dropped": payload["dropped"],
+            "mute": payload["mute"],
+            "ew_oos": payload["ew"]["oos"],
+            "rwt_blocked": payload["rwt"].get("blocked"),
+            "wrote": [str(OUT_V2_MD), str(OUT_V2_JSON)],
+        }, indent=2, default=str))
+        return 0 if payload["contract"]["ok"] else 1
     payload = run()
     write(payload)
     print(json.dumps({

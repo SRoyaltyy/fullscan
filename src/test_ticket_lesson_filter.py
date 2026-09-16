@@ -162,11 +162,83 @@ def test_entry_hook_blocks_short_and_tags_blotter() -> None:
     assert any(x.get("ticker") == "RWT" for x in (flat.get("sell") or []))
 
 
-def test_live_registry_ships_only_f1() -> None:
+def test_live_registry_keeps_f1() -> None:
     tlf.reset_caches()
     reg = tlf.load_registry()
     live = [f["id"] for f in (reg.get("filters") or []) if f.get("enabled") is not False]
-    assert live == ["oversold_crash_pause"], live
+    assert "oversold_crash_pause" in live, live
+    assert "RWT" not in __import__("pathlib").Path(tlf.__file__).read_text(encoding="utf-8")
+
+
+def test_c1_blocks_ob_recipe_with_low_rsi() -> None:
+    spec = {
+        "filters": [{
+            "id": "short_vs_own_recipe",
+            "lesson_id": "short_vs_own_recipe",
+            "side": "short",
+            "action": "block",
+            "enabled": True,
+            "require": {"recipe_ob_or_macd_dn": True, "rsi_max": 49.99},
+            "audit": "recipe OB/MACD-dn gate & rsi<50",
+        }]
+    }
+    feat = {"ticker": "FOO", "date": "2026-09-11", "rsi": 18.0, "ret_1": -2.0}
+    # advertised gate + RSI 18 → block
+    dec = tlf.evaluate("short", feat, registry=spec,
+                       extra={"recipe_require": {"rsi_ob": True},
+                              "strategy": "short_rsi_ob_h3"})
+    assert dec["action"] == "block", dec
+    # no recipe info → pass
+    assert tlf.evaluate("short", feat, registry=spec, extra={})["action"] == "pass"
+    # recipe without that gate → pass
+    dec = tlf.evaluate("short", feat, registry=spec,
+                       extra={"recipe_require": {"news": "bad"},
+                              "strategy": "short_news_r_h3"})
+    assert dec["action"] == "pass", dec
+    # RSI 72 on an OB recipe → pass
+    dec = tlf.evaluate("short", dict(feat, rsi=72.0), registry=spec,
+                       extra={"recipe_require": {"macd_down": True},
+                              "strategy": "short_macd_dn_h1"})
+    assert dec["action"] == "pass", dec
+
+
+def test_c2_c3_c4_missing_is_pass() -> None:
+    specs = {
+        "filters": [
+            {
+                "id": "short_vs_green_cameras",
+                "side": "short", "action": "block", "enabled": True,
+                "require": {"camera_net_min": 2, "unless_news_bad": True},
+            },
+            {
+                "id": "long_vs_hard_red_news",
+                "side": "long", "action": "block", "enabled": True,
+                "require": {"news_bad": True, "no_camera_support": True},
+            },
+            {
+                "id": "short_vs_sector_or_tape",
+                "side": "short", "action": "block", "enabled": True,
+                "require": {"crash": True, "sector_good": True},
+                "crash": {"ret_1_max": -8.0, "gap_pct_max": -8.0},
+            },
+        ]
+    }
+    empty = {"ticker": "FOO", "date": "2026-09-11", "rsi": 18.0}
+    assert tlf.evaluate("short", empty, registry=specs)["action"] == "pass"
+    assert tlf.evaluate("long", empty, registry=specs)["action"] == "pass"
+    green = dict(empty, camera_net=3, camera_support=True, news="neutral")
+    assert tlf.evaluate("short", green, registry=specs)["action"] == "block"
+    news_red = dict(empty, camera_net=3, news="bad")
+    assert tlf.evaluate("short", news_red, registry=specs)["action"] == "pass"
+    long_bad = {"ticker": "FOO", "date": "2026-09-11", "news": "bad",
+                "camera_support": False}
+    assert tlf.evaluate("long", long_bad, registry=specs)["action"] == "block"
+    crash_good = {"ticker": "FOO", "date": "2026-09-11", "rsi": 18.0,
+                  "ret_1": -16.0, "crash": True, "sector": "good"}
+    assert tlf.evaluate("short", crash_good, registry=specs)["action"] == "block"
+    crash_miss = {"ticker": "FOO", "date": "2026-09-11", "rsi": 18.0,
+                  "ret_1": -16.0, "crash": True}
+    assert tlf.evaluate("short", crash_miss, registry=specs)["action"] == "pass"
 
 
 def test_strategy_tickets_build_calls_filter() -> None:
@@ -213,7 +285,9 @@ def main() -> None:
     test_f2_meltup_without_support()
     test_rwt_911_short_is_blocked_without_allowlist()
     test_entry_hook_blocks_short_and_tags_blotter()
-    test_live_registry_ships_only_f1()
+    test_live_registry_keeps_f1()
+    test_c1_blocks_ob_recipe_with_low_rsi()
+    test_c2_c3_c4_missing_is_pass()
     test_strategy_tickets_build_calls_filter()
     test_combo_broker_skips_filtered_short()
     print("ok")
