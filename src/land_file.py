@@ -16,6 +16,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import subprocess
 from datetime import datetime
 from pathlib import Path
@@ -349,14 +350,16 @@ def _push(msg: str, paths: list[Path]) -> bool:
 
 def land(date: str, key: str, title: str = "",
          extra_paths: list[Path] | None = None,
-         require_qc: bool = True) -> dict:
+         require_qc: bool = True,
+         commit_msg: str = "") -> dict:
     """QC this step's files, refresh the day board, push QC-ok paths.
 
     Never raises. A failed push does not stop the next step.
     """
     title = title or key
     try:
-        return _land_body(date, key, title, extra_paths, require_qc)
+        return _land_body(date, key, title, extra_paths, require_qc,
+                          commit_msg)
     except Exception as e:  # noqa: BLE001 — packet must continue
         print(f"[land] WARN: {key} crashed: {e}")
         return {
@@ -368,8 +371,118 @@ def land(date: str, key: str, title: str = "",
         }
 
 
+def _sector_slug(sector: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "_", sector.lower()).strip("_")
+
+
+def sector_predict_paths(date: str, sector: str) -> list[Path]:
+    """Files one successful sector predict owns (essay + trace + transcript)."""
+    slug = _sector_slug(sector)
+    sec = ROOT / "01_daily" / "sectors" / date
+    return [
+        sec / f"{slug}_predict.md",
+        sec / f"{slug}_predict_trace.md",
+        ROOT / "01_daily" / "_transcripts" / f"{date}_sector_{slug}_predict.json",
+    ]
+
+
+def refresh_sector_progress(date: str) -> list[Path]:
+    """Rewrite cheap N/11 sidecars. No LLM. Does not touch sector essays."""
+    out: list[Path] = []
+    try:
+        qc_path = Path(output_qc.write_preopen_report(date))
+        if qc_path.exists():
+            out.append(qc_path)
+        sidecar = ROOT / "01_daily" / "sectors" / date / "_qc.json"
+        if sidecar.exists():
+            out.append(sidecar)
+    except Exception as e:  # noqa: BLE001 — land the essay even if QC stamp fails
+        print(f"[land] WARN: sector qc sidecar failed: {e}", flush=True)
+    try:
+        from . import sector_board
+        md_path, js_path = sector_board.write(date)
+        out.extend(Path(p) for p in (md_path, js_path) if Path(p).exists())
+    except Exception as e:  # noqa: BLE001
+        print(f"[land] WARN: sector board sidecar failed: {e}", flush=True)
+    return out
+
+
+def _sector_n_ok(date: str) -> int:
+    sidecar = ROOT / "01_daily" / "sectors" / date / "_qc.json"
+    if sidecar.is_file():
+        try:
+            return int(json.loads(sidecar.read_text(encoding="utf-8")).get(
+                "n_ok") or 0)
+        except (OSError, ValueError, TypeError, json.JSONDecodeError):
+            pass
+    return 0
+
+
+def land_one_sector(date: str, sector: str) -> dict:
+    """Mid-commit one QC-ok sector predict so main shows N/11 live.
+
+    Used by run_sector_predict after a fresh write (not skip-if-good).
+    Pushes that sector's predict.md + trace + transcript, cheap _qc.json /
+    board / preopen_qc, and scoreboard via safe_git_push. Never raises.
+    """
+    title = f"Sector predict {sector}"
+    try:
+        return _land_one_sector_body(date, sector)
+    except Exception as e:  # noqa: BLE001 — next sector must still run
+        print(f"[land] WARN: sector_one {sector} crashed: {e}", flush=True)
+        return {
+            "key": "sector_one", "title": title, "date": date,
+            "ok": False, "pushed": False,
+            "at": datetime.now(ET).isoformat(),
+            "files": [],
+            "preview": f"land crashed: {e}",
+        }
+
+
+def _land_one_sector_body(date: str, sector: str) -> dict:
+    owned = [p for p in sector_predict_paths(date, sector) if p.exists()]
+    predict = next((p for p in owned if p.name.endswith("_predict.md")
+                    and "trace" not in p.name), None)
+    if predict is None:
+        print(f"[land] skip sector {sector} — missing predict.md", flush=True)
+        return {
+            "key": "sector_one", "title": f"Sector predict {sector}",
+            "date": date, "ok": False, "pushed": False,
+            "at": datetime.now(ET).isoformat(),
+            "files": [], "preview": "missing predict.md",
+        }
+    qc = output_qc.qc_sector_predict(predict)
+    if not qc.ok:
+        print(f"[land] skip sector {sector} — not QC-ok ({qc.reason})",
+              flush=True)
+        return {
+            "key": "sector_one", "title": f"Sector predict {sector}",
+            "date": date, "ok": False, "pushed": False,
+            "at": datetime.now(ET).isoformat(),
+            "files": [], "preview": qc.reason or "qc_failed",
+        }
+    extra = list(owned)
+    extra.extend(refresh_sector_progress(date))
+    sb = ROOT / "03_scoreboard" / "scoreboard.json"
+    if sb.exists():
+        extra.append(sb)
+    n_ok = _sector_n_ok(date)
+    title = f"Sector predict {sector} ({n_ok}/11)"
+    rec = land(
+        date, "sector_one", title=title, extra_paths=extra, require_qc=True,
+        commit_msg=f"auto: sector predict {sector} [{date}] {n_ok}/11")
+    print(f"[land] sector_one {sector}: {n_ok}/11 pushed={rec.get('pushed')}",
+          flush=True)
+    if (os.environ.get("GITHUB_ACTIONS") or "").lower() == "true":
+        print(f"::notice title=sector {sector} {n_ok}/11::"
+              f"{predict} on main — heal can skip-if-good",
+              flush=True)
+    return rec
+
+
 def _land_body(date: str, key: str, title: str,
-               extra_paths: list[Path] | None, require_qc: bool) -> dict:
+               extra_paths: list[Path] | None, require_qc: bool,
+               commit_msg: str = "") -> dict:
     paths = [p for p in (step_paths(date, key) + list(extra_paths or []))
              if p.exists()]
     checks: list[dict] = []
@@ -428,7 +541,9 @@ def _land_body(date: str, key: str, title: str,
     }
     board_paths = _write_board_payload(
         date, key, title, checks, pushed=True, preview=preview, land=record)
-    pushed = _push(f"auto: land {key} [{date}]", list(ok_paths) + board_paths)
+    pushed = _push(
+        commit_msg or f"auto: land {key} [{date}]",
+        list(ok_paths) + board_paths)
     record["pushed"] = pushed
     if not pushed:
         _write_board_payload(

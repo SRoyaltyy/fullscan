@@ -82,6 +82,9 @@ jobs:
           fi
 
       - name: Sector PREDICT (sequential, skip-if-good, QC+retry)
+        # run_sector_predict mid-commits each QC-ok sector (land_one_sector +
+        # safe_git_push) so main shows N/11 live. This step still calls the
+        # one Python runner — no second sector loop.
         if: steps.stage.outputs.plan == 'predict' || steps.stage.outputs.plan == 'all'
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}

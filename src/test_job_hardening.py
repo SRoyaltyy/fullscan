@@ -1148,6 +1148,22 @@ def test_catalyst_runtime_splits_ticker_slice_by_phase() -> None:
         assert step_deadline.remaining_s() > 350
 
 
+def test_sector_predict_mid_commits_via_one_helper() -> None:
+    """11 sequential predicts must land each QC-ok sector before the next."""
+    src = (ROOT / "src" / "run_sector_predict.py").read_text(encoding="utf-8")
+    assert "land_file.land_one_sector" in src
+    assert "_should_mid_commit" in src
+    land = (ROOT / "src" / "land_file.py").read_text(encoding="utf-8")
+    assert "def land_one_sector" in land
+    assert "def sector_predict_paths" in land
+    assert "safe_git_push.sh" in land
+    for name in ("sector_daily.yml", "sector_predict.yml", "sector_pipeline.yml"):
+        text = (WF / name).read_text(encoding="utf-8")
+        assert "src.run_sector_predict" in text, name
+        assert "scripts/safe_git_push.sh" in text, name
+        assert "git pull --rebase origin main" not in text, name
+
+
 def test_no_job_commits_workflow_files_from_actions() -> None:
     """GITHUB_TOKEN may not create or update `.github/workflows/*`.
 
@@ -1229,6 +1245,7 @@ def main() -> None:
         test_last_closed_sidecar_does_not_share_ubuntu_concurrency,
         test_search_and_sector_rounds_are_bounded,
         test_no_job_commits_workflow_files_from_actions,
+        test_sector_predict_mid_commits_via_one_helper,
     ]
     failed = 0
     for fn in tests:
