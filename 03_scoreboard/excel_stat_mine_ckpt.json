@@ -2127,13 +2127,38 @@
   "STIM",
   "STLA",
   "STLD",
-  "STM"
+  "STM",
+  "STN",
+  "STNE",
+  "STNG",
+  "STOK",
+  "STRA",
+  "STRL",
+  "STT",
+  "STTK",
+  "STUB",
+  "STVN",
+  "STZ",
+  "SU",
+  "SUIG",
+  "SUNS",
+  "SUPN",
+  "SUPX",
+  "SVC",
+  "SVCO",
+  "SVM",
+  "SVRA",
+  "SVV",
+  "SW",
+  "SWIM",
+  "SWX",
+  "SXC"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 110298,
- "hold_lab_n": 51920,
- "hold_base": 0.4707247638216468,
+ "n_hold": 111598,
+ "hold_lab_n": 52525,
+ "hold_base": 0.470662556676643,
  "counts": {
   "A@L0_g": [
    60160,
@@ -110005,8 +110030,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 110298,
- "pair_hold_lab_n": 51920,
+ "pair_hold_n": 111598,
+ "pair_hold_lab_n": 52525,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -110115,5 +110140,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789569528
+ "flushed_unix": 1789569715
 }
