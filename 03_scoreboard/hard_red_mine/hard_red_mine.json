@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-16T04:52:52.437654-04:00",
+  "generated_at": "2026-09-16T05:11:13.993731-04:00",
   "live_untouched": [
     "flatten_robust",
     "combo_sh_macd_5050_shared"
@@ -56,7 +56,7 @@
   ],
   "cutoff": "2026-09-04",
   "hold_frac": 0.3,
-  "yahoo_overlay_n": 1208,
+  "yahoo_overlay_n": 1212,
   "yahoo_overlay_dates": [
     "2026-09-14",
     "2026-09-15"
@@ -77,559 +77,1917 @@
   },
   "n_recipes": 233,
   "n_combos": 78,
-  "n_rows": 1322,
+  "n_rows": 2644,
   "n_research_ok": 0,
-  "n_live_keep": 0,
+  "n_flip_ok": 0,
+  "n_live_keep": 4,
   "survivors": [],
+  "flip_survivors": [],
+  "flip_disc_leaders": [
+    {
+      "name": "union_news_pack_net3_h1_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 2,
+        "n_graded": 2,
+        "n_wins": 2,
+        "win_rate": 1.0,
+        "pnl": 0.82
+      },
+      "holdout": {
+        "n_fires": 6,
+        "n_graded": 6,
+        "n_wins": 3,
+        "win_rate": 0.5,
+        "pnl": 114.25
+      },
+      "all_red": {
+        "n_fires": 16,
+        "n_graded": 16,
+        "n_wins": 9,
+        "win_rate": 0.5625,
+        "pnl": 144.62
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): thin n=16 fires (bar \u226530). After-fee win 56.2%. name_day n=16 win=56%. Do not change live sit on this sample.",
+        "n_fires": 16,
+        "win_rate": 0.5625,
+        "thin": true,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 16,
+            "win_rate": 0.5625
+          }
+        }
+      }
+    },
+    {
+      "name": "union_news_pack_net3_h3_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 2,
+        "n_graded": 2,
+        "n_wins": 2,
+        "win_rate": 1.0,
+        "pnl": 0.82
+      },
+      "holdout": {
+        "n_fires": 6,
+        "n_graded": 6,
+        "n_wins": 3,
+        "win_rate": 0.5,
+        "pnl": 114.25
+      },
+      "all_red": {
+        "n_fires": 16,
+        "n_graded": 16,
+        "n_wins": 9,
+        "win_rate": 0.5625,
+        "pnl": 144.62
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): thin n=16 fires (bar \u226530). After-fee win 56.2%. name_day n=16 win=56%. Do not change live sit on this sample.",
+        "n_fires": 16,
+        "win_rate": 0.5625,
+        "thin": true,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 16,
+            "win_rate": 0.5625
+          }
+        }
+      }
+    },
+    {
+      "name": "flatten_vol_g_h3_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 2,
+        "n_graded": 2,
+        "n_wins": 2,
+        "win_rate": 1.0,
+        "pnl": 0.77
+      },
+      "holdout": {
+        "n_fires": 3,
+        "n_graded": 3,
+        "n_wins": 1,
+        "win_rate": 0.3333,
+        "pnl": -8.92
+      },
+      "all_red": {
+        "n_fires": 5,
+        "n_graded": 5,
+        "n_wins": 3,
+        "win_rate": 0.6,
+        "pnl": -8.15
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): thin n=5 fires (bar \u226530). After-fee win 60.0%. name_day n=5 win=60%. Do not change live sit on this sample.",
+        "n_fires": 5,
+        "win_rate": 0.6,
+        "thin": true,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 5,
+            "win_rate": 0.6
+          }
+        }
+      }
+    },
+    {
+      "name": "union_macd_hist_h1_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 24,
+        "n_graded": 24,
+        "n_wins": 21,
+        "win_rate": 0.875,
+        "pnl": 404.15
+      },
+      "holdout": {
+        "n_fires": 40,
+        "n_graded": 38,
+        "n_wins": 20,
+        "win_rate": 0.5263,
+        "pnl": 182.3
+      },
+      "all_red": {
+        "n_fires": 88,
+        "n_graded": 86,
+        "n_wins": 50,
+        "win_rate": 0.5814,
+        "pnl": 595.7
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KEEP",
+        "keep": true,
+        "why": "KEEP hard-red name-day (any horizon): 88 fires, after-fee win 58.1% (>55%). name_day n=88 win=58%",
+        "n_fires": 88,
+        "win_rate": 0.5814,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 88,
+            "win_rate": 0.5814
+          }
+        }
+      }
+    },
+    {
+      "name": "union_macd_hist_h3_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 24,
+        "n_graded": 24,
+        "n_wins": 21,
+        "win_rate": 0.875,
+        "pnl": 404.15
+      },
+      "holdout": {
+        "n_fires": 40,
+        "n_graded": 38,
+        "n_wins": 20,
+        "win_rate": 0.5263,
+        "pnl": 182.3
+      },
+      "all_red": {
+        "n_fires": 88,
+        "n_graded": 86,
+        "n_wins": 50,
+        "win_rate": 0.5814,
+        "pnl": 595.7
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KEEP",
+        "keep": true,
+        "why": "KEEP hard-red name-day (any horizon): 88 fires, after-fee win 58.1% (>55%). name_day n=88 win=58%",
+        "n_fires": 88,
+        "win_rate": 0.5814,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 88,
+            "win_rate": 0.5814
+          }
+        }
+      }
+    },
+    {
+      "name": "union_earn_react_h1_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 16,
+        "n_graded": 16,
+        "n_wins": 12,
+        "win_rate": 0.75,
+        "pnl": 121.84
+      },
+      "holdout": {
+        "n_fires": 21,
+        "n_graded": 21,
+        "n_wins": 6,
+        "win_rate": 0.2857,
+        "pnl": -29.19
+      },
+      "all_red": {
+        "n_fires": 45,
+        "n_graded": 45,
+        "n_wins": 25,
+        "win_rate": 0.5556,
+        "pnl": 125.25
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KEEP",
+        "keep": true,
+        "why": "KEEP hard-red name-day (any horizon): 45 fires, after-fee win 55.6% (>55%). name_day n=45 win=56%",
+        "n_fires": 45,
+        "win_rate": 0.5556,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 45,
+            "win_rate": 0.5556
+          }
+        }
+      }
+    },
+    {
+      "name": "union_earn_react_h3_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 16,
+        "n_graded": 16,
+        "n_wins": 12,
+        "win_rate": 0.75,
+        "pnl": 121.84
+      },
+      "holdout": {
+        "n_fires": 21,
+        "n_graded": 21,
+        "n_wins": 6,
+        "win_rate": 0.2857,
+        "pnl": -29.19
+      },
+      "all_red": {
+        "n_fires": 45,
+        "n_graded": 45,
+        "n_wins": 25,
+        "win_rate": 0.5556,
+        "pnl": 125.25
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KEEP",
+        "keep": true,
+        "why": "KEEP hard-red name-day (any horizon): 45 fires, after-fee win 55.6% (>55%). name_day n=45 win=56%",
+        "n_fires": 45,
+        "win_rate": 0.5556,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 45,
+            "win_rate": 0.5556
+          }
+        }
+      }
+    },
+    {
+      "name": "union_ab_g_h1_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 8,
+        "n_graded": 8,
+        "n_wins": 6,
+        "win_rate": 0.75,
+        "pnl": 16.31
+      },
+      "holdout": {
+        "n_fires": 40,
+        "n_graded": 40,
+        "n_wins": 13,
+        "win_rate": 0.325,
+        "pnl": -78.67
+      },
+      "all_red": {
+        "n_fires": 72,
+        "n_graded": 72,
+        "n_wins": 27,
+        "win_rate": 0.375,
+        "pnl": -25.69
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): 72 fires but after-fee win 37.5% \u2264 55%. name_day n=72 win=38%",
+        "n_fires": 72,
+        "win_rate": 0.375,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 72,
+            "win_rate": 0.375
+          }
+        }
+      }
+    },
+    {
+      "name": "union_ab_g_h3_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 8,
+        "n_graded": 8,
+        "n_wins": 6,
+        "win_rate": 0.75,
+        "pnl": 16.31
+      },
+      "holdout": {
+        "n_fires": 40,
+        "n_graded": 40,
+        "n_wins": 13,
+        "win_rate": 0.325,
+        "pnl": -78.67
+      },
+      "all_red": {
+        "n_fires": 72,
+        "n_graded": 72,
+        "n_wins": 27,
+        "win_rate": 0.375,
+        "pnl": -25.69
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): 72 fires but after-fee win 37.5% \u2264 55%. name_day n=72 win=38%",
+        "n_fires": 72,
+        "win_rate": 0.375,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 72,
+            "win_rate": 0.375
+          }
+        }
+      }
+    },
+    {
+      "name": "combo_jer_5050_shared_h5_flip",
+      "side": "mix",
+      "hold": 5,
+      "kind": "combo_flip",
+      "disc": {
+        "n_fires": 24,
+        "n_graded": 24,
+        "n_wins": 17,
+        "win_rate": 0.7083,
+        "pnl": 130.26
+      },
+      "holdout": {
+        "n_fires": 48,
+        "n_graded": 48,
+        "n_wins": 17,
+        "win_rate": 0.3542,
+        "pnl": -61.63
+      },
+      "all_red": {
+        "n_fires": 82,
+        "n_graded": 82,
+        "n_wins": 42,
+        "win_rate": 0.5122,
+        "pnl": 89.66
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): 82 fires but after-fee win 51.2% \u2264 55%. name_day n=82 win=51%",
+        "n_fires": 82,
+        "win_rate": 0.5122,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 82,
+            "win_rate": 0.5122
+          }
+        }
+      }
+    },
+    {
+      "name": "union_e_fresh_h1_flip",
+      "side": "short",
+      "hold": 3,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 19,
+        "n_graded": 19,
+        "n_wins": 13,
+        "win_rate": 0.6842,
+        "pnl": 88.27
+      },
+      "holdout": {
+        "n_fires": 22,
+        "n_graded": 22,
+        "n_wins": 7,
+        "win_rate": 0.3182,
+        "pnl": -29.5
+      },
+      "all_red": {
+        "n_fires": 47,
+        "n_graded": 47,
+        "n_wins": 24,
+        "win_rate": 0.5106,
+        "pnl": 75.87
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): 47 fires but after-fee win 51.1% \u2264 55%. name_day n=47 win=51%",
+        "n_fires": 47,
+        "win_rate": 0.5106,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 47,
+            "win_rate": 0.5106
+          }
+        }
+      }
+    },
+    {
+      "name": "union_e_fresh_h3_flip",
+      "side": "short",
+      "hold": 3,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 19,
+        "n_graded": 19,
+        "n_wins": 13,
+        "win_rate": 0.6842,
+        "pnl": 88.27
+      },
+      "holdout": {
+        "n_fires": 22,
+        "n_graded": 22,
+        "n_wins": 7,
+        "win_rate": 0.3182,
+        "pnl": -29.5
+      },
+      "all_red": {
+        "n_fires": 47,
+        "n_graded": 47,
+        "n_wins": 24,
+        "win_rate": 0.5106,
+        "pnl": 75.87
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): 47 fires but after-fee win 51.1% \u2264 55%. name_day n=47 win=51%",
+        "n_fires": 47,
+        "win_rate": 0.5106,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 47,
+            "win_rate": 0.5106
+          }
+        }
+      }
+    }
+  ],
+  "flip_holdout_leaders": [
+    {
+      "name": "union_macd_xup_h1_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 12,
+        "n_graded": 12,
+        "n_wins": 4,
+        "win_rate": 0.3333,
+        "pnl": 0.37
+      },
+      "holdout": {
+        "n_fires": 25,
+        "n_graded": 25,
+        "n_wins": 16,
+        "win_rate": 0.64,
+        "pnl": 25.75
+      },
+      "all_red": {
+        "n_fires": 49,
+        "n_graded": 49,
+        "n_wins": 26,
+        "win_rate": 0.5306,
+        "pnl": 50.51
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): 49 fires but after-fee win 53.1% \u2264 55%. name_day n=49 win=53%",
+        "n_fires": 49,
+        "win_rate": 0.5306,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 49,
+            "win_rate": 0.5306
+          }
+        }
+      }
+    },
+    {
+      "name": "union_macd_xup_h3_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 12,
+        "n_graded": 12,
+        "n_wins": 4,
+        "win_rate": 0.3333,
+        "pnl": 0.37
+      },
+      "holdout": {
+        "n_fires": 25,
+        "n_graded": 25,
+        "n_wins": 16,
+        "win_rate": 0.64,
+        "pnl": 25.75
+      },
+      "all_red": {
+        "n_fires": 49,
+        "n_graded": 49,
+        "n_wins": 26,
+        "win_rate": 0.5306,
+        "pnl": 50.51
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): 49 fires but after-fee win 53.1% \u2264 55%. name_day n=49 win=53%",
+        "n_fires": 49,
+        "win_rate": 0.5306,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 49,
+            "win_rate": 0.5306
+          }
+        }
+      }
+    },
+    {
+      "name": "union_macd_hist_h1_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 24,
+        "n_graded": 24,
+        "n_wins": 21,
+        "win_rate": 0.875,
+        "pnl": 404.15
+      },
+      "holdout": {
+        "n_fires": 40,
+        "n_graded": 38,
+        "n_wins": 20,
+        "win_rate": 0.5263,
+        "pnl": 182.3
+      },
+      "all_red": {
+        "n_fires": 88,
+        "n_graded": 86,
+        "n_wins": 50,
+        "win_rate": 0.5814,
+        "pnl": 595.7
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KEEP",
+        "keep": true,
+        "why": "KEEP hard-red name-day (any horizon): 88 fires, after-fee win 58.1% (>55%). name_day n=88 win=58%",
+        "n_fires": 88,
+        "win_rate": 0.5814,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 88,
+            "win_rate": 0.5814
+          }
+        }
+      }
+    },
+    {
+      "name": "union_macd_hist_h3_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 24,
+        "n_graded": 24,
+        "n_wins": 21,
+        "win_rate": 0.875,
+        "pnl": 404.15
+      },
+      "holdout": {
+        "n_fires": 40,
+        "n_graded": 38,
+        "n_wins": 20,
+        "win_rate": 0.5263,
+        "pnl": 182.3
+      },
+      "all_red": {
+        "n_fires": 88,
+        "n_graded": 86,
+        "n_wins": 50,
+        "win_rate": 0.5814,
+        "pnl": 595.7
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KEEP",
+        "keep": true,
+        "why": "KEEP hard-red name-day (any horizon): 88 fires, after-fee win 58.1% (>55%). name_day n=88 win=58%",
+        "n_fires": 88,
+        "win_rate": 0.5814,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 88,
+            "win_rate": 0.5814
+          }
+        }
+      }
+    },
+    {
+      "name": "ohlc_hot_h1_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 24,
+        "n_graded": 24,
+        "n_wins": 14,
+        "win_rate": 0.5833,
+        "pnl": 109.61
+      },
+      "holdout": {
+        "n_fires": 40,
+        "n_graded": 40,
+        "n_wins": 21,
+        "win_rate": 0.525,
+        "pnl": 180.1
+      },
+      "all_red": {
+        "n_fires": 88,
+        "n_graded": 88,
+        "n_wins": 43,
+        "win_rate": 0.4886,
+        "pnl": 295.15
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): 88 fires but after-fee win 48.9% \u2264 55%. name_day n=88 win=49%",
+        "n_fires": 88,
+        "win_rate": 0.4886,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 88,
+            "win_rate": 0.4886
+          }
+        }
+      }
+    },
+    {
+      "name": "ohlc_hot_h3_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 24,
+        "n_graded": 24,
+        "n_wins": 14,
+        "win_rate": 0.5833,
+        "pnl": 109.61
+      },
+      "holdout": {
+        "n_fires": 40,
+        "n_graded": 40,
+        "n_wins": 21,
+        "win_rate": 0.525,
+        "pnl": 180.1
+      },
+      "all_red": {
+        "n_fires": 88,
+        "n_graded": 88,
+        "n_wins": 43,
+        "win_rate": 0.4886,
+        "pnl": 295.15
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): 88 fires but after-fee win 48.9% \u2264 55%. name_day n=88 win=49%",
+        "n_fires": 88,
+        "win_rate": 0.4886,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 88,
+            "win_rate": 0.4886
+          }
+        }
+      }
+    },
+    {
+      "name": "ohlc_hot_h5_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 24,
+        "n_graded": 24,
+        "n_wins": 14,
+        "win_rate": 0.5833,
+        "pnl": 109.61
+      },
+      "holdout": {
+        "n_fires": 40,
+        "n_graded": 40,
+        "n_wins": 21,
+        "win_rate": 0.525,
+        "pnl": 180.1
+      },
+      "all_red": {
+        "n_fires": 88,
+        "n_graded": 88,
+        "n_wins": 43,
+        "win_rate": 0.4886,
+        "pnl": 295.15
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): 88 fires but after-fee win 48.9% \u2264 55%. name_day n=88 win=49%",
+        "n_fires": 88,
+        "win_rate": 0.4886,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 88,
+            "win_rate": 0.4886
+          }
+        }
+      }
+    },
+    {
+      "name": "union_ret_5_h1_flip",
+      "side": "short",
+      "hold": 3,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 40,
+        "n_graded": 40,
+        "n_wins": 13,
+        "win_rate": 0.325,
+        "pnl": 1.67
+      },
+      "holdout": {
+        "n_fires": 40,
+        "n_graded": 40,
+        "n_wins": 21,
+        "win_rate": 0.525,
+        "pnl": 17.73
+      },
+      "all_red": {
+        "n_fires": 88,
+        "n_graded": 88,
+        "n_wins": 34,
+        "win_rate": 0.3864,
+        "pnl": 11.61
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): 88 fires but after-fee win 38.6% \u2264 55%. name_day n=88 win=39%",
+        "n_fires": 88,
+        "win_rate": 0.3864,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 88,
+            "win_rate": 0.3864
+          }
+        }
+      }
+    },
+    {
+      "name": "union_ret_5_h3_flip",
+      "side": "short",
+      "hold": 3,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 40,
+        "n_graded": 40,
+        "n_wins": 13,
+        "win_rate": 0.325,
+        "pnl": 1.67
+      },
+      "holdout": {
+        "n_fires": 40,
+        "n_graded": 40,
+        "n_wins": 21,
+        "win_rate": 0.525,
+        "pnl": 17.73
+      },
+      "all_red": {
+        "n_fires": 88,
+        "n_graded": 88,
+        "n_wins": 34,
+        "win_rate": 0.3864,
+        "pnl": 11.61
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): 88 fires but after-fee win 38.6% \u2264 55%. name_day n=88 win=39%",
+        "n_fires": 88,
+        "win_rate": 0.3864,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 88,
+            "win_rate": 0.3864
+          }
+        }
+      }
+    },
+    {
+      "name": "union_join_vol_green_h1_flip",
+      "side": "short",
+      "hold": 3,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 10,
+        "n_graded": 10,
+        "n_wins": 2,
+        "win_rate": 0.2,
+        "pnl": -32.51
+      },
+      "holdout": {
+        "n_fires": 29,
+        "n_graded": 29,
+        "n_wins": 15,
+        "win_rate": 0.5172,
+        "pnl": -20.26
+      },
+      "all_red": {
+        "n_fires": 39,
+        "n_graded": 39,
+        "n_wins": 17,
+        "win_rate": 0.4359,
+        "pnl": -52.77
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): 39 fires but after-fee win 43.6% \u2264 55%. name_day n=39 win=44%",
+        "n_fires": 39,
+        "win_rate": 0.4359,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 39,
+            "win_rate": 0.4359
+          }
+        }
+      }
+    },
+    {
+      "name": "union_join_vol_green_h3_flip",
+      "side": "short",
+      "hold": 3,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 10,
+        "n_graded": 10,
+        "n_wins": 2,
+        "win_rate": 0.2,
+        "pnl": -32.51
+      },
+      "holdout": {
+        "n_fires": 29,
+        "n_graded": 29,
+        "n_wins": 15,
+        "win_rate": 0.5172,
+        "pnl": -20.26
+      },
+      "all_red": {
+        "n_fires": 39,
+        "n_graded": 39,
+        "n_wins": 17,
+        "win_rate": 0.4359,
+        "pnl": -52.77
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): 39 fires but after-fee win 43.6% \u2264 55%. name_day n=39 win=44%",
+        "n_fires": 39,
+        "win_rate": 0.4359,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 39,
+            "win_rate": 0.4359
+          }
+        }
+      }
+    },
+    {
+      "name": "union_w_hot_candle_h1_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 24,
+        "n_graded": 24,
+        "n_wins": 8,
+        "win_rate": 0.3333,
+        "pnl": -36.82
+      },
+      "holdout": {
+        "n_fires": 40,
+        "n_graded": 40,
+        "n_wins": 20,
+        "win_rate": 0.5,
+        "pnl": 16.74
+      },
+      "all_red": {
+        "n_fires": 88,
+        "n_graded": 88,
+        "n_wins": 39,
+        "win_rate": 0.4432,
+        "pnl": -24.3
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): 88 fires but after-fee win 44.3% \u2264 55%. name_day n=88 win=44%",
+        "n_fires": 88,
+        "win_rate": 0.4432,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 88,
+            "win_rate": 0.4432
+          }
+        }
+      }
+    }
+  ],
+  "tape": {
+    "hard_red": {
+      "n_days": 11,
+      "median_of_medians": -0.2233,
+      "mean_pct_up": 0.4757,
+      "mean_long_win": 0.2419,
+      "mean_short_win": 0.2729,
+      "mean_dead_zone": 0.4853,
+      "days_up": 5,
+      "days_down": 6
+    },
+    "other": {
+      "n_days": 12,
+      "median_of_medians": 0.0639,
+      "mean_pct_up": 0.4839,
+      "mean_long_win": 0.2675,
+      "mean_short_win": 0.276,
+      "mean_dead_zone": 0.4565,
+      "days_up": 7,
+      "days_down": 5
+    },
+    "disc_red": {
+      "n_days": 6,
+      "median_of_medians": -0.0897,
+      "mean_pct_up": 0.5032,
+      "mean_long_win": 0.2334,
+      "mean_short_win": 0.2316,
+      "mean_dead_zone": 0.5349,
+      "days_up": 3,
+      "days_down": 3
+    },
+    "holdout_red": {
+      "n_days": 5,
+      "median_of_medians": -0.2233,
+      "mean_pct_up": 0.4428,
+      "mean_long_win": 0.252,
+      "mean_short_win": 0.3223,
+      "mean_dead_zone": 0.4257,
+      "days_up": 2,
+      "days_down": 3
+    },
+    "days": [
+      {
+        "date": "2026-08-13",
+        "n": 9,
+        "median_oc": 0.7191,
+        "mean_oc": 2.3187,
+        "pct_up": 0.5556,
+        "n_graded": 9,
+        "long_win": 0.4444,
+        "short_win": 0.3333,
+        "dead_zone": 0.2222,
+        "n_dead": 2
+      },
+      {
+        "date": "2026-08-14",
+        "n": 107,
+        "median_oc": -1.097,
+        "mean_oc": -0.821,
+        "pct_up": 0.4299,
+        "n_graded": 107,
+        "long_win": 0.2336,
+        "short_win": 0.3925,
+        "dead_zone": 0.3738,
+        "n_dead": 40
+      },
+      {
+        "date": "2026-08-17",
+        "n": 75,
+        "median_oc": -0.6763,
+        "mean_oc": -0.9319,
+        "pct_up": 0.4,
+        "n_graded": 75,
+        "long_win": 0.24,
+        "short_win": 0.3333,
+        "dead_zone": 0.4267,
+        "n_dead": 32
+      },
+      {
+        "date": "2026-08-18",
+        "n": 99,
+        "median_oc": -0.7967,
+        "mean_oc": -0.4878,
+        "pct_up": 0.4343,
+        "n_graded": 99,
+        "long_win": 0.2222,
+        "short_win": 0.3535,
+        "dead_zone": 0.4242,
+        "n_dead": 42
+      },
+      {
+        "date": "2026-08-19",
+        "n": 100,
+        "median_oc": 0.1053,
+        "mean_oc": -0.064,
+        "pct_up": 0.52,
+        "n_graded": 100,
+        "long_win": 0.31,
+        "short_win": 0.22,
+        "dead_zone": 0.47,
+        "n_dead": 47
+      },
+      {
+        "date": "2026-08-20",
+        "n": 87,
+        "median_oc": 0.1182,
+        "mean_oc": 0.3599,
+        "pct_up": 0.5057,
+        "n_graded": 87,
+        "long_win": 0.3103,
+        "short_win": 0.2184,
+        "dead_zone": 0.4713,
+        "n_dead": 41
+      },
+      {
+        "date": "2026-08-21",
+        "n": 79,
+        "median_oc": 0.0096,
+        "mean_oc": 0.3222,
+        "pct_up": 0.5063,
+        "n_graded": 79,
+        "long_win": 0.2152,
+        "short_win": 0.2658,
+        "dead_zone": 0.519,
+        "n_dead": 41
+      },
+      {
+        "date": "2026-08-24",
+        "n": 69,
+        "median_oc": -1.0317,
+        "mean_oc": -1.6143,
+        "pct_up": 0.3188,
+        "n_graded": 69,
+        "long_win": 0.058,
+        "short_win": 0.4058,
+        "dead_zone": 0.5362,
+        "n_dead": 37
+      },
+      {
+        "date": "2026-08-25",
+        "n": 91,
+        "median_oc": 1.2632,
+        "mean_oc": 1.6426,
+        "pct_up": 0.6703,
+        "n_graded": 91,
+        "long_win": 0.4176,
+        "short_win": 0.1209,
+        "dead_zone": 0.4615,
+        "n_dead": 42
+      },
+      {
+        "date": "2026-08-26",
+        "n": 84,
+        "median_oc": -0.1888,
+        "mean_oc": 0.3981,
+        "pct_up": 0.4524,
+        "n_graded": 84,
+        "long_win": 0.2976,
+        "short_win": 0.2381,
+        "dead_zone": 0.4643,
+        "n_dead": 39
+      },
+      {
+        "date": "2026-08-27",
+        "n": 19,
+        "median_oc": 0.1468,
+        "mean_oc": 0.1484,
+        "pct_up": 0.5789,
+        "n_graded": 19,
+        "long_win": 0.2105,
+        "short_win": 0.2105,
+        "dead_zone": 0.5789,
+        "n_dead": 11
+      },
+      {
+        "date": "2026-08-28",
+        "n": 99,
+        "median_oc": -2.7586,
+        "mean_oc": -2.4493,
+        "pct_up": 0.1919,
+        "n_graded": 99,
+        "long_win": 0.0909,
+        "short_win": 0.5455,
+        "dead_zone": 0.3636,
+        "n_dead": 36
+      },
+      {
+        "date": "2026-08-31",
+        "n": 68,
+        "median_oc": 0.5115,
+        "mean_oc": 1.0295,
+        "pct_up": 0.6471,
+        "n_graded": 68,
+        "long_win": 0.3529,
+        "short_win": 0.1324,
+        "dead_zone": 0.5147,
+        "n_dead": 35
+      },
+      {
+        "date": "2026-09-01",
+        "n": 85,
+        "median_oc": -0.2847,
+        "mean_oc": 0.2871,
+        "pct_up": 0.4471,
+        "n_graded": 85,
+        "long_win": 0.1765,
+        "short_win": 0.1882,
+        "dead_zone": 0.6353,
+        "n_dead": 54
+      },
+      {
+        "date": "2026-09-02",
+        "n": 89,
+        "median_oc": 0.8624,
+        "mean_oc": 1.5371,
+        "pct_up": 0.6517,
+        "n_graded": 89,
+        "long_win": 0.2809,
+        "short_win": 0.0899,
+        "dead_zone": 0.6292,
+        "n_dead": 56
+      },
+      {
+        "date": "2026-09-03",
+        "n": 91,
+        "median_oc": -0.8513,
+        "mean_oc": -1.4925,
+        "pct_up": 0.3516,
+        "n_graded": 91,
+        "long_win": 0.1758,
+        "short_win": 0.3736,
+        "dead_zone": 0.4505,
+        "n_dead": 41
+      },
+      {
+        "date": "2026-09-04",
+        "n": 80,
+        "median_oc": 0.7817,
+        "mean_oc": 0.815,
+        "pct_up": 0.625,
+        "n_graded": 80,
+        "long_win": 0.3375,
+        "short_win": 0.1875,
+        "dead_zone": 0.475,
+        "n_dead": 38
+      },
+      {
+        "date": "2026-09-08",
+        "n": 77,
+        "median_oc": -1.0918,
+        "mean_oc": -0.9494,
+        "pct_up": 0.3506,
+        "n_graded": 77,
+        "long_win": 0.1429,
+        "short_win": 0.3247,
+        "dead_zone": 0.5325,
+        "n_dead": 41
+      },
+      {
+        "date": "2026-09-09",
+        "n": 84,
+        "median_oc": -1.0593,
+        "mean_oc": -1.1599,
+        "pct_up": 0.3333,
+        "n_graded": 84,
+        "long_win": 0.1905,
+        "short_win": 0.4048,
+        "dead_zone": 0.4048,
+        "n_dead": 34
+      },
+      {
+        "date": "2026-09-10",
+        "n": 64,
+        "median_oc": 0.0982,
+        "mean_oc": 0.9951,
+        "pct_up": 0.5156,
+        "n_graded": 64,
+        "long_win": 0.2969,
+        "short_win": 0.3125,
+        "dead_zone": 0.3906,
+        "n_dead": 25
+      },
+      {
+        "date": "2026-09-11",
+        "n": 76,
+        "median_oc": 0.5239,
+        "mean_oc": 0.8198,
+        "pct_up": 0.5395,
+        "n_graded": 76,
+        "long_win": 0.2368,
+        "short_win": 0.0921,
+        "dead_zone": 0.6711,
+        "n_dead": 51
+      },
+      {
+        "date": "2026-09-14",
+        "n": 64,
+        "median_oc": -0.2233,
+        "mean_oc": -0.8196,
+        "pct_up": 0.4688,
+        "n_graded": 64,
+        "long_win": 0.2812,
+        "short_win": 0.2969,
+        "dead_zone": 0.4219,
+        "n_dead": 27
+      },
+      {
+        "date": "2026-09-15",
+        "n": 66,
+        "median_oc": 0.5675,
+        "mean_oc": 1.0006,
+        "pct_up": 0.5455,
+        "n_graded": 66,
+        "long_win": 0.3485,
+        "short_win": 0.2727,
+        "dead_zone": 0.3788,
+        "n_dead": 25
+      }
+    ]
+  },
   "disc_leaders": [
     {
-      "name": "union_news_head_h1",
-      "side": "long",
+      "name": "union_news_pack_net3_h1_flip",
+      "side": "short",
       "hold": 5,
-      "baked_hold": 1,
-      "kind": "recipe",
-      "note": "prior-export headline\ud83d\udfe2 only",
+      "kind": "flip",
       "disc": {
-        "n_fires": 15,
-        "n_graded": 15,
+        "n_fires": 2,
+        "n_graded": 2,
+        "n_wins": 2,
+        "win_rate": 1.0,
+        "pnl": 0.82
+      },
+      "holdout": {
+        "n_fires": 6,
+        "n_graded": 6,
+        "n_wins": 3,
+        "win_rate": 0.5,
+        "pnl": 114.25
+      },
+      "all_red": {
+        "n_fires": 16,
+        "n_graded": 16,
         "n_wins": 9,
-        "win_rate": 0.6,
-        "pnl": 22.1
-      },
-      "holdout": {
-        "n_fires": 19,
-        "n_graded": 18,
-        "n_wins": 8,
-        "win_rate": 0.4444,
-        "pnl": -13.24
-      },
-      "all_red": {
-        "n_fires": 53,
-        "n_graded": 52,
-        "n_wins": 22,
-        "win_rate": 0.4231,
-        "pnl": -1.02
+        "win_rate": 0.5625,
+        "pnl": 144.62
       },
       "research_ok": false,
       "live_keep": {
         "label": "KILL",
         "keep": false,
-        "why": "KILL hard-red name-day (any horizon): 53 fires but after-fee win 42.3% \u2264 55%. name_day n=53 win=42%",
-        "n_fires": 53,
-        "win_rate": 0.4231,
-        "thin": false,
+        "why": "KILL hard-red name-day (any horizon): thin n=16 fires (bar \u226530). After-fee win 56.2%. name_day n=16 win=56%. Do not change live sit on this sample.",
+        "n_fires": 16,
+        "win_rate": 0.5625,
+        "thin": true,
         "both_tapes": false,
         "wf_ok": null,
         "tapes": {
           "name_day": {
-            "n_fires": 53,
-            "win_rate": 0.4231
+            "n_fires": 16,
+            "win_rate": 0.5625
           }
         }
       }
     },
     {
-      "name": "union_news_head_h3",
-      "side": "long",
+      "name": "union_news_pack_net3_h3_flip",
+      "side": "short",
       "hold": 5,
-      "baked_hold": 3,
-      "kind": "recipe",
-      "note": "prior-export headline\ud83d\udfe2 only",
+      "kind": "flip",
       "disc": {
-        "n_fires": 15,
-        "n_graded": 15,
+        "n_fires": 2,
+        "n_graded": 2,
+        "n_wins": 2,
+        "win_rate": 1.0,
+        "pnl": 0.82
+      },
+      "holdout": {
+        "n_fires": 6,
+        "n_graded": 6,
+        "n_wins": 3,
+        "win_rate": 0.5,
+        "pnl": 114.25
+      },
+      "all_red": {
+        "n_fires": 16,
+        "n_graded": 16,
         "n_wins": 9,
+        "win_rate": 0.5625,
+        "pnl": 144.62
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): thin n=16 fires (bar \u226530). After-fee win 56.2%. name_day n=16 win=56%. Do not change live sit on this sample.",
+        "n_fires": 16,
+        "win_rate": 0.5625,
+        "thin": true,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 16,
+            "win_rate": 0.5625
+          }
+        }
+      }
+    },
+    {
+      "name": "flatten_vol_g_h3_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 2,
+        "n_graded": 2,
+        "n_wins": 2,
+        "win_rate": 1.0,
+        "pnl": 0.77
+      },
+      "holdout": {
+        "n_fires": 3,
+        "n_graded": 3,
+        "n_wins": 1,
+        "win_rate": 0.3333,
+        "pnl": -8.92
+      },
+      "all_red": {
+        "n_fires": 5,
+        "n_graded": 5,
+        "n_wins": 3,
         "win_rate": 0.6,
-        "pnl": 22.1
-      },
-      "holdout": {
-        "n_fires": 19,
-        "n_graded": 18,
-        "n_wins": 8,
-        "win_rate": 0.4444,
-        "pnl": -13.24
-      },
-      "all_red": {
-        "n_fires": 53,
-        "n_graded": 52,
-        "n_wins": 22,
-        "win_rate": 0.4231,
-        "pnl": -1.02
+        "pnl": -8.15
       },
       "research_ok": false,
       "live_keep": {
         "label": "KILL",
         "keep": false,
-        "why": "KILL hard-red name-day (any horizon): 53 fires but after-fee win 42.3% \u2264 55%. name_day n=53 win=42%",
-        "n_fires": 53,
-        "win_rate": 0.4231,
-        "thin": false,
+        "why": "KILL hard-red name-day (any horizon): thin n=5 fires (bar \u226530). After-fee win 60.0%. name_day n=5 win=60%. Do not change live sit on this sample.",
+        "n_fires": 5,
+        "win_rate": 0.6,
+        "thin": true,
         "both_tapes": false,
         "wf_ok": null,
         "tapes": {
           "name_day": {
-            "n_fires": 53,
-            "win_rate": 0.4231
+            "n_fires": 5,
+            "win_rate": 0.6
           }
         }
       }
     },
     {
-      "name": "union_news_or_h1",
-      "side": "long",
+      "name": "union_macd_hist_h1_flip",
+      "side": "short",
       "hold": 5,
-      "baked_hold": 1,
-      "kind": "recipe",
-      "note": "packet\ud83d\udfe2 OR headline\ud83d\udfe2",
-      "disc": {
-        "n_fires": 19,
-        "n_graded": 19,
-        "n_wins": 11,
-        "win_rate": 0.5789,
-        "pnl": 14.9
-      },
-      "holdout": {
-        "n_fires": 23,
-        "n_graded": 22,
-        "n_wins": 8,
-        "win_rate": 0.3636,
-        "pnl": -161.47
-      },
-      "all_red": {
-        "n_fires": 66,
-        "n_graded": 65,
-        "n_wins": 25,
-        "win_rate": 0.3846,
-        "pnl": -253.05
-      },
-      "research_ok": false,
-      "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): 66 fires but after-fee win 38.5% \u2264 55%. name_day n=66 win=38%",
-        "n_fires": 66,
-        "win_rate": 0.3846,
-        "thin": false,
-        "both_tapes": false,
-        "wf_ok": null,
-        "tapes": {
-          "name_day": {
-            "n_fires": 66,
-            "win_rate": 0.3846
-          }
-        }
-      }
-    },
-    {
-      "name": "union_news_g_cond_h1",
-      "side": "long",
-      "hold": 5,
-      "baked_hold": 1,
-      "kind": "recipe",
-      "note": "merged news\ud83d\udfe2, rank +G\u2212R",
-      "disc": {
-        "n_fires": 19,
-        "n_graded": 19,
-        "n_wins": 11,
-        "win_rate": 0.5789,
-        "pnl": 14.9
-      },
-      "holdout": {
-        "n_fires": 23,
-        "n_graded": 22,
-        "n_wins": 8,
-        "win_rate": 0.3636,
-        "pnl": -161.47
-      },
-      "all_red": {
-        "n_fires": 66,
-        "n_graded": 65,
-        "n_wins": 25,
-        "win_rate": 0.3846,
-        "pnl": -253.05
-      },
-      "research_ok": false,
-      "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): 66 fires but after-fee win 38.5% \u2264 55%. name_day n=66 win=38%",
-        "n_fires": 66,
-        "win_rate": 0.3846,
-        "thin": false,
-        "both_tapes": false,
-        "wf_ok": null,
-        "tapes": {
-          "name_day": {
-            "n_fires": 66,
-            "win_rate": 0.3846
-          }
-        }
-      }
-    },
-    {
-      "name": "union_news_or_h3",
-      "side": "long",
-      "hold": 5,
-      "baked_hold": 3,
-      "kind": "recipe",
-      "note": "packet\ud83d\udfe2 OR headline\ud83d\udfe2",
-      "disc": {
-        "n_fires": 19,
-        "n_graded": 19,
-        "n_wins": 11,
-        "win_rate": 0.5789,
-        "pnl": 14.9
-      },
-      "holdout": {
-        "n_fires": 23,
-        "n_graded": 22,
-        "n_wins": 8,
-        "win_rate": 0.3636,
-        "pnl": -161.47
-      },
-      "all_red": {
-        "n_fires": 66,
-        "n_graded": 65,
-        "n_wins": 25,
-        "win_rate": 0.3846,
-        "pnl": -253.05
-      },
-      "research_ok": false,
-      "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): 66 fires but after-fee win 38.5% \u2264 55%. name_day n=66 win=38%",
-        "n_fires": 66,
-        "win_rate": 0.3846,
-        "thin": false,
-        "both_tapes": false,
-        "wf_ok": null,
-        "tapes": {
-          "name_day": {
-            "n_fires": 66,
-            "win_rate": 0.3846
-          }
-        }
-      }
-    },
-    {
-      "name": "union_news_g_cond_h3",
-      "side": "long",
-      "hold": 5,
-      "baked_hold": 3,
-      "kind": "recipe",
-      "note": "merged news\ud83d\udfe2, rank +G\u2212R",
-      "disc": {
-        "n_fires": 19,
-        "n_graded": 19,
-        "n_wins": 11,
-        "win_rate": 0.5789,
-        "pnl": 14.9
-      },
-      "holdout": {
-        "n_fires": 23,
-        "n_graded": 22,
-        "n_wins": 8,
-        "win_rate": 0.3636,
-        "pnl": -161.47
-      },
-      "all_red": {
-        "n_fires": 66,
-        "n_graded": 65,
-        "n_wins": 25,
-        "win_rate": 0.3846,
-        "pnl": -253.05
-      },
-      "research_ok": false,
-      "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): 66 fires but after-fee win 38.5% \u2264 55%. name_day n=66 win=38%",
-        "n_fires": 66,
-        "win_rate": 0.3846,
-        "thin": false,
-        "both_tapes": false,
-        "wf_ok": null,
-        "tapes": {
-          "name_day": {
-            "n_fires": 66,
-            "win_rate": 0.3846
-          }
-        }
-      }
-    },
-    {
-      "name": "union_hot_score_h1",
-      "side": "long",
-      "hold": 5,
-      "baked_hold": 1,
-      "kind": "recipe",
-      "note": "rank by hot_score",
+      "kind": "flip",
       "disc": {
         "n_fires": 24,
         "n_graded": 24,
-        "n_wins": 13,
-        "win_rate": 0.5417,
-        "pnl": -0.75
+        "n_wins": 21,
+        "win_rate": 0.875,
+        "pnl": 404.15
       },
       "holdout": {
         "n_fires": 40,
-        "n_graded": 40,
-        "n_wins": 13,
-        "win_rate": 0.325,
-        "pnl": -107.61
+        "n_graded": 38,
+        "n_wins": 20,
+        "win_rate": 0.5263,
+        "pnl": 182.3
       },
       "all_red": {
         "n_fires": 88,
-        "n_graded": 88,
-        "n_wins": 37,
-        "win_rate": 0.4205,
-        "pnl": -136.58
+        "n_graded": 86,
+        "n_wins": 50,
+        "win_rate": 0.5814,
+        "pnl": 595.7
       },
       "research_ok": false,
       "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): 88 fires but after-fee win 42.0% \u2264 55%. name_day n=88 win=42%",
+        "label": "KEEP",
+        "keep": true,
+        "why": "KEEP hard-red name-day (any horizon): 88 fires, after-fee win 58.1% (>55%). name_day n=88 win=58%",
         "n_fires": 88,
-        "win_rate": 0.4205,
+        "win_rate": 0.5814,
         "thin": false,
         "both_tapes": false,
         "wf_ok": null,
         "tapes": {
           "name_day": {
             "n_fires": 88,
-            "win_rate": 0.4205
+            "win_rate": 0.5814
           }
         }
       }
     },
     {
-      "name": "union_hot_score_h3",
-      "side": "long",
+      "name": "union_macd_hist_h3_flip",
+      "side": "short",
       "hold": 5,
-      "baked_hold": 3,
-      "kind": "recipe",
-      "note": "rank by hot_score",
+      "kind": "flip",
       "disc": {
         "n_fires": 24,
         "n_graded": 24,
-        "n_wins": 13,
-        "win_rate": 0.5417,
-        "pnl": -0.75
+        "n_wins": 21,
+        "win_rate": 0.875,
+        "pnl": 404.15
       },
       "holdout": {
         "n_fires": 40,
-        "n_graded": 40,
-        "n_wins": 13,
-        "win_rate": 0.325,
-        "pnl": -107.61
+        "n_graded": 38,
+        "n_wins": 20,
+        "win_rate": 0.5263,
+        "pnl": 182.3
       },
       "all_red": {
         "n_fires": 88,
-        "n_graded": 88,
-        "n_wins": 37,
-        "win_rate": 0.4205,
-        "pnl": -136.58
+        "n_graded": 86,
+        "n_wins": 50,
+        "win_rate": 0.5814,
+        "pnl": 595.7
       },
       "research_ok": false,
       "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): 88 fires but after-fee win 42.0% \u2264 55%. name_day n=88 win=42%",
+        "label": "KEEP",
+        "keep": true,
+        "why": "KEEP hard-red name-day (any horizon): 88 fires, after-fee win 58.1% (>55%). name_day n=88 win=58%",
         "n_fires": 88,
-        "win_rate": 0.4205,
+        "win_rate": 0.5814,
         "thin": false,
         "both_tapes": false,
         "wf_ok": null,
         "tapes": {
           "name_day": {
             "n_fires": 88,
-            "win_rate": 0.4205
+            "win_rate": 0.5814
           }
         }
       }
     },
     {
-      "name": "probable_probable_ok_h1",
-      "side": "long",
+      "name": "union_earn_react_h1_flip",
+      "side": "short",
       "hold": 5,
-      "baked_hold": 1,
-      "kind": "recipe",
-      "note": "combo gate",
+      "kind": "flip",
       "disc": {
-        "n_fires": 15,
-        "n_graded": 15,
-        "n_wins": 8,
-        "win_rate": 0.5333,
-        "pnl": 5.01
+        "n_fires": 16,
+        "n_graded": 16,
+        "n_wins": 12,
+        "win_rate": 0.75,
+        "pnl": 121.84
       },
       "holdout": {
-        "n_fires": 17,
-        "n_graded": 16,
-        "n_wins": 7,
-        "win_rate": 0.4375,
-        "pnl": 22.77
+        "n_fires": 21,
+        "n_graded": 21,
+        "n_wins": 6,
+        "win_rate": 0.2857,
+        "pnl": -29.19
       },
       "all_red": {
-        "n_fires": 38,
-        "n_graded": 37,
-        "n_wins": 18,
-        "win_rate": 0.4865,
-        "pnl": 21.12
+        "n_fires": 45,
+        "n_graded": 45,
+        "n_wins": 25,
+        "win_rate": 0.5556,
+        "pnl": 125.25
       },
       "research_ok": false,
       "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): 38 fires but after-fee win 48.6% \u2264 55%. name_day n=38 win=49%",
-        "n_fires": 38,
-        "win_rate": 0.4865,
+        "label": "KEEP",
+        "keep": true,
+        "why": "KEEP hard-red name-day (any horizon): 45 fires, after-fee win 55.6% (>55%). name_day n=45 win=56%",
+        "n_fires": 45,
+        "win_rate": 0.5556,
         "thin": false,
         "both_tapes": false,
         "wf_ok": null,
         "tapes": {
           "name_day": {
-            "n_fires": 38,
-            "win_rate": 0.4865
+            "n_fires": 45,
+            "win_rate": 0.5556
           }
         }
       }
     },
     {
-      "name": "probable_probable_ok_h3",
-      "side": "long",
+      "name": "union_earn_react_h3_flip",
+      "side": "short",
       "hold": 5,
-      "baked_hold": 3,
-      "kind": "recipe",
-      "note": "combo gate",
+      "kind": "flip",
       "disc": {
-        "n_fires": 15,
-        "n_graded": 15,
-        "n_wins": 8,
-        "win_rate": 0.5333,
-        "pnl": 5.01
+        "n_fires": 16,
+        "n_graded": 16,
+        "n_wins": 12,
+        "win_rate": 0.75,
+        "pnl": 121.84
       },
       "holdout": {
-        "n_fires": 17,
-        "n_graded": 16,
-        "n_wins": 7,
-        "win_rate": 0.4375,
-        "pnl": 22.77
+        "n_fires": 21,
+        "n_graded": 21,
+        "n_wins": 6,
+        "win_rate": 0.2857,
+        "pnl": -29.19
       },
       "all_red": {
-        "n_fires": 38,
-        "n_graded": 37,
-        "n_wins": 18,
-        "win_rate": 0.4865,
-        "pnl": 21.12
+        "n_fires": 45,
+        "n_graded": 45,
+        "n_wins": 25,
+        "win_rate": 0.5556,
+        "pnl": 125.25
       },
       "research_ok": false,
       "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): 38 fires but after-fee win 48.6% \u2264 55%. name_day n=38 win=49%",
-        "n_fires": 38,
-        "win_rate": 0.4865,
+        "label": "KEEP",
+        "keep": true,
+        "why": "KEEP hard-red name-day (any horizon): 45 fires, after-fee win 55.6% (>55%). name_day n=45 win=56%",
+        "n_fires": 45,
+        "win_rate": 0.5556,
         "thin": false,
         "both_tapes": false,
         "wf_ok": null,
         "tapes": {
           "name_day": {
-            "n_fires": 38,
-            "win_rate": 0.4865
+            "n_fires": 45,
+            "win_rate": 0.5556
           }
         }
       }
     },
     {
-      "name": "union_news_g_h1",
-      "side": "long",
+      "name": "union_ab_g_h1_flip",
+      "side": "short",
       "hold": 5,
-      "baked_hold": 1,
-      "kind": "recipe",
-      "note": "union \u2229 news_g, no \ud83d\udea8",
+      "kind": "flip",
+      "disc": {
+        "n_fires": 8,
+        "n_graded": 8,
+        "n_wins": 6,
+        "win_rate": 0.75,
+        "pnl": 16.31
+      },
+      "holdout": {
+        "n_fires": 40,
+        "n_graded": 40,
+        "n_wins": 13,
+        "win_rate": 0.325,
+        "pnl": -78.67
+      },
+      "all_red": {
+        "n_fires": 72,
+        "n_graded": 72,
+        "n_wins": 27,
+        "win_rate": 0.375,
+        "pnl": -25.69
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): 72 fires but after-fee win 37.5% \u2264 55%. name_day n=72 win=38%",
+        "n_fires": 72,
+        "win_rate": 0.375,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 72,
+            "win_rate": 0.375
+          }
+        }
+      }
+    },
+    {
+      "name": "union_ab_g_h3_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 8,
+        "n_graded": 8,
+        "n_wins": 6,
+        "win_rate": 0.75,
+        "pnl": 16.31
+      },
+      "holdout": {
+        "n_fires": 40,
+        "n_graded": 40,
+        "n_wins": 13,
+        "win_rate": 0.325,
+        "pnl": -78.67
+      },
+      "all_red": {
+        "n_fires": 72,
+        "n_graded": 72,
+        "n_wins": 27,
+        "win_rate": 0.375,
+        "pnl": -25.69
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): 72 fires but after-fee win 37.5% \u2264 55%. name_day n=72 win=38%",
+        "n_fires": 72,
+        "win_rate": 0.375,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 72,
+            "win_rate": 0.375
+          }
+        }
+      }
+    },
+    {
+      "name": "combo_jer_5050_shared_h5_flip",
+      "side": "mix",
+      "hold": 5,
+      "kind": "combo_flip",
+      "disc": {
+        "n_fires": 24,
+        "n_graded": 24,
+        "n_wins": 17,
+        "win_rate": 0.7083,
+        "pnl": 130.26
+      },
+      "holdout": {
+        "n_fires": 48,
+        "n_graded": 48,
+        "n_wins": 17,
+        "win_rate": 0.3542,
+        "pnl": -61.63
+      },
+      "all_red": {
+        "n_fires": 82,
+        "n_graded": 82,
+        "n_wins": 42,
+        "win_rate": 0.5122,
+        "pnl": 89.66
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): 82 fires but after-fee win 51.2% \u2264 55%. name_day n=82 win=51%",
+        "n_fires": 82,
+        "win_rate": 0.5122,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 82,
+            "win_rate": 0.5122
+          }
+        }
+      }
+    },
+    {
+      "name": "union_e_fresh_h1_flip",
+      "side": "short",
+      "hold": 3,
+      "kind": "flip",
       "disc": {
         "n_fires": 19,
         "n_graded": 19,
-        "n_wins": 10,
-        "win_rate": 0.5263,
-        "pnl": 14.52
+        "n_wins": 13,
+        "win_rate": 0.6842,
+        "pnl": 88.27
       },
       "holdout": {
-        "n_fires": 23,
+        "n_fires": 22,
         "n_graded": 22,
         "n_wins": 7,
         "win_rate": 0.3182,
-        "pnl": -162.76
+        "pnl": -29.5
       },
       "all_red": {
-        "n_fires": 66,
-        "n_graded": 65,
+        "n_fires": 47,
+        "n_graded": 47,
         "n_wins": 24,
-        "win_rate": 0.3692,
-        "pnl": -202.79
+        "win_rate": 0.5106,
+        "pnl": 75.87
       },
       "research_ok": false,
       "live_keep": {
         "label": "KILL",
         "keep": false,
-        "why": "KILL hard-red name-day (any horizon): 66 fires but after-fee win 36.9% \u2264 55%. name_day n=66 win=37%",
-        "n_fires": 66,
-        "win_rate": 0.3692,
+        "why": "KILL hard-red name-day (any horizon): 47 fires but after-fee win 51.1% \u2264 55%. name_day n=47 win=51%",
+        "n_fires": 47,
+        "win_rate": 0.5106,
         "thin": false,
         "both_tapes": false,
         "wf_ok": null,
         "tapes": {
           "name_day": {
-            "n_fires": 66,
-            "win_rate": 0.3692
+            "n_fires": 47,
+            "win_rate": 0.5106
           }
         }
       }
     },
     {
-      "name": "union_news_g_h3",
-      "side": "long",
-      "hold": 5,
-      "baked_hold": 3,
-      "kind": "recipe",
-      "note": "union \u2229 news_g, no \ud83d\udea8",
+      "name": "union_e_fresh_h3_flip",
+      "side": "short",
+      "hold": 3,
+      "kind": "flip",
       "disc": {
         "n_fires": 19,
         "n_graded": 19,
-        "n_wins": 10,
-        "win_rate": 0.5263,
-        "pnl": 14.52
+        "n_wins": 13,
+        "win_rate": 0.6842,
+        "pnl": 88.27
       },
       "holdout": {
-        "n_fires": 23,
+        "n_fires": 22,
         "n_graded": 22,
         "n_wins": 7,
         "win_rate": 0.3182,
-        "pnl": -162.76
+        "pnl": -29.5
       },
       "all_red": {
-        "n_fires": 66,
-        "n_graded": 65,
+        "n_fires": 47,
+        "n_graded": 47,
         "n_wins": 24,
-        "win_rate": 0.3692,
-        "pnl": -202.79
+        "win_rate": 0.5106,
+        "pnl": 75.87
       },
       "research_ok": false,
       "live_keep": {
         "label": "KILL",
         "keep": false,
-        "why": "KILL hard-red name-day (any horizon): 66 fires but after-fee win 36.9% \u2264 55%. name_day n=66 win=37%",
-        "n_fires": 66,
-        "win_rate": 0.3692,
+        "why": "KILL hard-red name-day (any horizon): 47 fires but after-fee win 51.1% \u2264 55%. name_day n=47 win=51%",
+        "n_fires": 47,
+        "win_rate": 0.5106,
         "thin": false,
         "both_tapes": false,
         "wf_ok": null,
         "tapes": {
           "name_day": {
-            "n_fires": 66,
-            "win_rate": 0.3692
+            "n_fires": 47,
+            "win_rate": 0.5106
           }
         }
       }
@@ -729,6 +2087,94 @@
       }
     },
     {
+      "name": "union_macd_xup_h1_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 12,
+        "n_graded": 12,
+        "n_wins": 4,
+        "win_rate": 0.3333,
+        "pnl": 0.37
+      },
+      "holdout": {
+        "n_fires": 25,
+        "n_graded": 25,
+        "n_wins": 16,
+        "win_rate": 0.64,
+        "pnl": 25.75
+      },
+      "all_red": {
+        "n_fires": 49,
+        "n_graded": 49,
+        "n_wins": 26,
+        "win_rate": 0.5306,
+        "pnl": 50.51
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): 49 fires but after-fee win 53.1% \u2264 55%. name_day n=49 win=53%",
+        "n_fires": 49,
+        "win_rate": 0.5306,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 49,
+            "win_rate": 0.5306
+          }
+        }
+      }
+    },
+    {
+      "name": "union_macd_xup_h3_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 12,
+        "n_graded": 12,
+        "n_wins": 4,
+        "win_rate": 0.3333,
+        "pnl": 0.37
+      },
+      "holdout": {
+        "n_fires": 25,
+        "n_graded": 25,
+        "n_wins": 16,
+        "win_rate": 0.64,
+        "pnl": 25.75
+      },
+      "all_red": {
+        "n_fires": 49,
+        "n_graded": 49,
+        "n_wins": 26,
+        "win_rate": 0.5306,
+        "pnl": 50.51
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): 49 fires but after-fee win 53.1% \u2264 55%. name_day n=49 win=53%",
+        "n_fires": 49,
+        "win_rate": 0.5306,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 49,
+            "win_rate": 0.5306
+          }
+        }
+      }
+    },
+    {
       "name": "combo_sh_macd_5050_shared",
       "side": "mix",
       "hold": "baked",
@@ -777,421 +2223,309 @@
       }
     },
     {
-      "name": "short_extended_h1",
+      "name": "union_macd_hist_h1_flip",
       "side": "short",
       "hold": 5,
-      "baked_hold": 1,
-      "kind": "recipe",
-      "note": "ret_5>15",
+      "kind": "flip",
       "disc": {
         "n_fires": 24,
         "n_graded": 24,
-        "n_wins": 9,
-        "win_rate": 0.375,
-        "pnl": 210.88
+        "n_wins": 21,
+        "win_rate": 0.875,
+        "pnl": 404.15
       },
       "holdout": {
-        "n_fires": 37,
-        "n_graded": 37,
-        "n_wins": 19,
-        "win_rate": 0.5135,
-        "pnl": 40.75
+        "n_fires": 40,
+        "n_graded": 38,
+        "n_wins": 20,
+        "win_rate": 0.5263,
+        "pnl": 182.3
       },
       "all_red": {
-        "n_fires": 78,
-        "n_graded": 78,
-        "n_wins": 35,
-        "win_rate": 0.4487,
-        "pnl": 237.66
+        "n_fires": 88,
+        "n_graded": 86,
+        "n_wins": 50,
+        "win_rate": 0.5814,
+        "pnl": 595.7
       },
       "research_ok": false,
       "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): 78 fires but after-fee win 44.9% \u2264 55%. name_day n=78 win=45%",
-        "n_fires": 78,
-        "win_rate": 0.4487,
+        "label": "KEEP",
+        "keep": true,
+        "why": "KEEP hard-red name-day (any horizon): 88 fires, after-fee win 58.1% (>55%). name_day n=88 win=58%",
+        "n_fires": 88,
+        "win_rate": 0.5814,
         "thin": false,
         "both_tapes": false,
         "wf_ok": null,
         "tapes": {
           "name_day": {
-            "n_fires": 78,
-            "win_rate": 0.4487
+            "n_fires": 88,
+            "win_rate": 0.5814
           }
         }
       }
     },
     {
-      "name": "short_extended_h3",
+      "name": "union_macd_hist_h3_flip",
       "side": "short",
       "hold": 5,
-      "baked_hold": 3,
-      "kind": "recipe",
-      "note": "ret_5>15",
+      "kind": "flip",
       "disc": {
         "n_fires": 24,
         "n_graded": 24,
-        "n_wins": 9,
-        "win_rate": 0.375,
-        "pnl": 210.88
+        "n_wins": 21,
+        "win_rate": 0.875,
+        "pnl": 404.15
       },
       "holdout": {
-        "n_fires": 37,
-        "n_graded": 37,
-        "n_wins": 19,
-        "win_rate": 0.5135,
-        "pnl": 40.75
+        "n_fires": 40,
+        "n_graded": 38,
+        "n_wins": 20,
+        "win_rate": 0.5263,
+        "pnl": 182.3
       },
       "all_red": {
-        "n_fires": 78,
-        "n_graded": 78,
-        "n_wins": 35,
-        "win_rate": 0.4487,
-        "pnl": 237.66
+        "n_fires": 88,
+        "n_graded": 86,
+        "n_wins": 50,
+        "win_rate": 0.5814,
+        "pnl": 595.7
       },
       "research_ok": false,
       "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): 78 fires but after-fee win 44.9% \u2264 55%. name_day n=78 win=45%",
-        "n_fires": 78,
-        "win_rate": 0.4487,
+        "label": "KEEP",
+        "keep": true,
+        "why": "KEEP hard-red name-day (any horizon): 88 fires, after-fee win 58.1% (>55%). name_day n=88 win=58%",
+        "n_fires": 88,
+        "win_rate": 0.5814,
         "thin": false,
         "both_tapes": false,
         "wf_ok": null,
         "tapes": {
           "name_day": {
-            "n_fires": 78,
-            "win_rate": 0.4487
+            "n_fires": 88,
+            "win_rate": 0.5814
           }
         }
       }
     },
     {
-      "name": "combo_sh_5050_shared",
-      "side": "mix",
-      "hold": "baked",
-      "kind": "combo",
-      "members": [
-        "short_news_r_h3",
-        "union_hot_n4_h1"
-      ],
-      "disc": {
-        "n_fires": 36,
-        "n_graded": 36,
-        "n_wins": 9,
-        "win_rate": 0.25,
-        "pnl": -3.68
-      },
-      "holdout": {
-        "n_fires": 28,
-        "n_graded": 28,
-        "n_wins": 14,
-        "win_rate": 0.5,
-        "pnl": -23.38
-      },
-      "all_red": {
-        "n_fires": 66,
-        "n_graded": 66,
-        "n_wins": 23,
-        "win_rate": 0.3485,
-        "pnl": -28.37
-      },
-      "research_ok": false,
-      "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): 66 fires but after-fee win 34.8% \u2264 55%. name_day n=66 win=35%",
-        "n_fires": 66,
-        "win_rate": 0.3485,
-        "thin": false,
-        "both_tapes": false,
-        "wf_ok": null,
-        "tapes": {
-          "name_day": {
-            "n_fires": 66,
-            "win_rate": 0.3485
-          }
-        }
-      }
-    },
-    {
-      "name": "combo_sh_7030_shared",
-      "side": "mix",
-      "hold": "baked",
-      "kind": "combo",
-      "members": [
-        "short_news_r_h3",
-        "union_hot_n4_h1"
-      ],
-      "disc": {
-        "n_fires": 36,
-        "n_graded": 36,
-        "n_wins": 9,
-        "win_rate": 0.25,
-        "pnl": -3.68
-      },
-      "holdout": {
-        "n_fires": 28,
-        "n_graded": 28,
-        "n_wins": 14,
-        "win_rate": 0.5,
-        "pnl": -23.38
-      },
-      "all_red": {
-        "n_fires": 66,
-        "n_graded": 66,
-        "n_wins": 23,
-        "win_rate": 0.3485,
-        "pnl": -28.37
-      },
-      "research_ok": false,
-      "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): 66 fires but after-fee win 34.8% \u2264 55%. name_day n=66 win=35%",
-        "n_fires": 66,
-        "win_rate": 0.3485,
-        "thin": false,
-        "both_tapes": false,
-        "wf_ok": null,
-        "tapes": {
-          "name_day": {
-            "n_fires": 66,
-            "win_rate": 0.3485
-          }
-        }
-      }
-    },
-    {
-      "name": "combo_sh_3070_shared",
-      "side": "mix",
-      "hold": "baked",
-      "kind": "combo",
-      "members": [
-        "short_news_r_h3",
-        "union_hot_n4_h1"
-      ],
-      "disc": {
-        "n_fires": 36,
-        "n_graded": 36,
-        "n_wins": 9,
-        "win_rate": 0.25,
-        "pnl": -3.68
-      },
-      "holdout": {
-        "n_fires": 28,
-        "n_graded": 28,
-        "n_wins": 14,
-        "win_rate": 0.5,
-        "pnl": -23.38
-      },
-      "all_red": {
-        "n_fires": 66,
-        "n_graded": 66,
-        "n_wins": 23,
-        "win_rate": 0.3485,
-        "pnl": -28.37
-      },
-      "research_ok": false,
-      "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): 66 fires but after-fee win 34.8% \u2264 55%. name_day n=66 win=35%",
-        "n_fires": 66,
-        "win_rate": 0.3485,
-        "thin": false,
-        "both_tapes": false,
-        "wf_ok": null,
-        "tapes": {
-          "name_day": {
-            "n_fires": 66,
-            "win_rate": 0.3485
-          }
-        }
-      }
-    },
-    {
-      "name": "union_hot_n4_h1",
-      "side": "long",
-      "hold": 1,
-      "baked_hold": 1,
-      "kind": "recipe",
-      "note": "top 4 by hot",
+      "name": "ohlc_hot_h1_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
       "disc": {
         "n_fires": 24,
         "n_graded": 24,
-        "n_wins": 7,
-        "win_rate": 0.2917,
-        "pnl": 1.38
+        "n_wins": 14,
+        "win_rate": 0.5833,
+        "pnl": 109.61
       },
       "holdout": {
-        "n_fires": 20,
-        "n_graded": 20,
-        "n_wins": 10,
-        "win_rate": 0.5,
-        "pnl": -14.61
+        "n_fires": 40,
+        "n_graded": 40,
+        "n_wins": 21,
+        "win_rate": 0.525,
+        "pnl": 180.1
       },
       "all_red": {
-        "n_fires": 44,
-        "n_graded": 44,
-        "n_wins": 17,
+        "n_fires": 88,
+        "n_graded": 88,
+        "n_wins": 43,
+        "win_rate": 0.4886,
+        "pnl": 295.15
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): 88 fires but after-fee win 48.9% \u2264 55%. name_day n=88 win=49%",
+        "n_fires": 88,
+        "win_rate": 0.4886,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 88,
+            "win_rate": 0.4886
+          }
+        }
+      }
+    },
+    {
+      "name": "ohlc_hot_h3_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 24,
+        "n_graded": 24,
+        "n_wins": 14,
+        "win_rate": 0.5833,
+        "pnl": 109.61
+      },
+      "holdout": {
+        "n_fires": 40,
+        "n_graded": 40,
+        "n_wins": 21,
+        "win_rate": 0.525,
+        "pnl": 180.1
+      },
+      "all_red": {
+        "n_fires": 88,
+        "n_graded": 88,
+        "n_wins": 43,
+        "win_rate": 0.4886,
+        "pnl": 295.15
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): 88 fires but after-fee win 48.9% \u2264 55%. name_day n=88 win=49%",
+        "n_fires": 88,
+        "win_rate": 0.4886,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 88,
+            "win_rate": 0.4886
+          }
+        }
+      }
+    },
+    {
+      "name": "ohlc_hot_h5_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 24,
+        "n_graded": 24,
+        "n_wins": 14,
+        "win_rate": 0.5833,
+        "pnl": 109.61
+      },
+      "holdout": {
+        "n_fires": 40,
+        "n_graded": 40,
+        "n_wins": 21,
+        "win_rate": 0.525,
+        "pnl": 180.1
+      },
+      "all_red": {
+        "n_fires": 88,
+        "n_graded": 88,
+        "n_wins": 43,
+        "win_rate": 0.4886,
+        "pnl": 295.15
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): 88 fires but after-fee win 48.9% \u2264 55%. name_day n=88 win=49%",
+        "n_fires": 88,
+        "win_rate": 0.4886,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 88,
+            "win_rate": 0.4886
+          }
+        }
+      }
+    },
+    {
+      "name": "union_ret_5_h1_flip",
+      "side": "short",
+      "hold": 3,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 40,
+        "n_graded": 40,
+        "n_wins": 13,
+        "win_rate": 0.325,
+        "pnl": 1.67
+      },
+      "holdout": {
+        "n_fires": 40,
+        "n_graded": 40,
+        "n_wins": 21,
+        "win_rate": 0.525,
+        "pnl": 17.73
+      },
+      "all_red": {
+        "n_fires": 88,
+        "n_graded": 88,
+        "n_wins": 34,
         "win_rate": 0.3864,
-        "pnl": -13.22
+        "pnl": 11.61
       },
       "research_ok": false,
       "live_keep": {
         "label": "KILL",
         "keep": false,
-        "why": "KILL hard-red name-day (any horizon): 44 fires but after-fee win 38.6% \u2264 55%. name_day n=44 win=39%",
-        "n_fires": 44,
+        "why": "KILL hard-red name-day (any horizon): 88 fires but after-fee win 38.6% \u2264 55%. name_day n=88 win=39%",
+        "n_fires": 88,
         "win_rate": 0.3864,
         "thin": false,
         "both_tapes": false,
         "wf_ok": null,
         "tapes": {
           "name_day": {
-            "n_fires": 44,
+            "n_fires": 88,
             "win_rate": 0.3864
           }
         }
       }
     },
     {
-      "name": "short_news_or_h3",
+      "name": "union_ret_5_h3_flip",
       "side": "short",
-      "hold": 5,
-      "baked_hold": 3,
-      "kind": "recipe",
-      "note": "short packet\ud83d\udd34 OR headline\ud83d\udd34",
+      "hold": 3,
+      "kind": "flip",
       "disc": {
-        "n_fires": 12,
-        "n_graded": 12,
-        "n_wins": 2,
-        "win_rate": 0.1667,
-        "pnl": -4.05
+        "n_fires": 40,
+        "n_graded": 40,
+        "n_wins": 13,
+        "win_rate": 0.325,
+        "pnl": 1.67
       },
       "holdout": {
-        "n_fires": 8,
-        "n_graded": 8,
-        "n_wins": 4,
-        "win_rate": 0.5,
-        "pnl": -8.7
+        "n_fires": 40,
+        "n_graded": 40,
+        "n_wins": 21,
+        "win_rate": 0.525,
+        "pnl": 17.73
       },
       "all_red": {
-        "n_fires": 22,
-        "n_graded": 22,
-        "n_wins": 6,
-        "win_rate": 0.2727,
-        "pnl": -13.44
+        "n_fires": 88,
+        "n_graded": 88,
+        "n_wins": 34,
+        "win_rate": 0.3864,
+        "pnl": 11.61
       },
       "research_ok": false,
       "live_keep": {
         "label": "KILL",
         "keep": false,
-        "why": "KILL hard-red name-day (any horizon): thin n=22 fires (bar \u226530). After-fee win 27.3%. name_day n=22 win=27%. Do not change live sit on this sample.",
-        "n_fires": 22,
-        "win_rate": 0.2727,
-        "thin": true,
+        "why": "KILL hard-red name-day (any horizon): 88 fires but after-fee win 38.6% \u2264 55%. name_day n=88 win=39%",
+        "n_fires": 88,
+        "win_rate": 0.3864,
+        "thin": false,
         "both_tapes": false,
         "wf_ok": null,
         "tapes": {
           "name_day": {
-            "n_fires": 22,
-            "win_rate": 0.2727
-          }
-        }
-      }
-    },
-    {
-      "name": "short_news_r_h1",
-      "side": "short",
-      "hold": 5,
-      "baked_hold": 1,
-      "kind": "recipe",
-      "note": "news\ud83d\udd34",
-      "disc": {
-        "n_fires": 12,
-        "n_graded": 12,
-        "n_wins": 2,
-        "win_rate": 0.1667,
-        "pnl": -4.05
-      },
-      "holdout": {
-        "n_fires": 8,
-        "n_graded": 8,
-        "n_wins": 4,
-        "win_rate": 0.5,
-        "pnl": -8.7
-      },
-      "all_red": {
-        "n_fires": 22,
-        "n_graded": 22,
-        "n_wins": 6,
-        "win_rate": 0.2727,
-        "pnl": -13.44
-      },
-      "research_ok": false,
-      "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): thin n=22 fires (bar \u226530). After-fee win 27.3%. name_day n=22 win=27%. Do not change live sit on this sample.",
-        "n_fires": 22,
-        "win_rate": 0.2727,
-        "thin": true,
-        "both_tapes": false,
-        "wf_ok": null,
-        "tapes": {
-          "name_day": {
-            "n_fires": 22,
-            "win_rate": 0.2727
-          }
-        }
-      }
-    },
-    {
-      "name": "short_news_r_h3",
-      "side": "short",
-      "hold": 5,
-      "baked_hold": 3,
-      "kind": "recipe",
-      "note": "news\ud83d\udd34",
-      "disc": {
-        "n_fires": 12,
-        "n_graded": 12,
-        "n_wins": 2,
-        "win_rate": 0.1667,
-        "pnl": -4.05
-      },
-      "holdout": {
-        "n_fires": 8,
-        "n_graded": 8,
-        "n_wins": 4,
-        "win_rate": 0.5,
-        "pnl": -8.7
-      },
-      "all_red": {
-        "n_fires": 22,
-        "n_graded": 22,
-        "n_wins": 6,
-        "win_rate": 0.2727,
-        "pnl": -13.44
-      },
-      "research_ok": false,
-      "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): thin n=22 fires (bar \u226530). After-fee win 27.3%. name_day n=22 win=27%. Do not change live sit on this sample.",
-        "n_fires": 22,
-        "win_rate": 0.2727,
-        "thin": true,
-        "both_tapes": false,
-        "wf_ok": null,
-        "tapes": {
-          "name_day": {
-            "n_fires": 22,
-            "win_rate": 0.2727
+            "n_fires": 88,
+            "win_rate": 0.3864
           }
         }
       }
@@ -1232,216 +2566,6 @@
     }
   },
   "cash_books": [
-    {
-      "sit": {
-        "name": "union_news_head_h1",
-        "book_pct": -4.828,
-        "win_rate": 0.42,
-        "n_trades": 104,
-        "n_closed": 50,
-        "final_equity": 9517.17,
-        "audit_ok": true,
-        "hard_red": {
-          "n_fires": 0,
-          "n_graded": 0,
-          "n_wins": 0,
-          "win_rate": null,
-          "pnl": 0
-        }
-      },
-      "allow": {
-        "name": "union_news_head_h1",
-        "book_pct": 198.408,
-        "win_rate": 0.5368,
-        "n_trades": 196,
-        "n_closed": 95,
-        "final_equity": 29840.78,
-        "audit_ok": true,
-        "hard_red": {
-          "n_fires": 49,
-          "n_graded": 49,
-          "n_wins": 31,
-          "win_rate": 0.6327,
-          "pnl": 20474.89
-        }
-      },
-      "name": "union_news_head_h1"
-    },
-    {
-      "sit": {
-        "name": "union_news_head_h3",
-        "book_pct": -14.991,
-        "win_rate": 0.2045,
-        "n_trades": 93,
-        "n_closed": 44,
-        "final_equity": 8500.94,
-        "audit_ok": true,
-        "hard_red": {
-          "n_fires": 0,
-          "n_graded": 0,
-          "n_wins": 0,
-          "win_rate": null,
-          "pnl": 0
-        }
-      },
-      "allow": {
-        "name": "union_news_head_h3",
-        "book_pct": 122.918,
-        "win_rate": 0.2714,
-        "n_trades": 147,
-        "n_closed": 70,
-        "final_equity": 22291.83,
-        "audit_ok": true,
-        "hard_red": {
-          "n_fires": 32,
-          "n_graded": 32,
-          "n_wins": 15,
-          "win_rate": 0.4688,
-          "pnl": 15025.54
-        }
-      },
-      "name": "union_news_head_h3"
-    },
-    {
-      "sit": {
-        "name": "union_news_or_h1",
-        "book_pct": 3.696,
-        "win_rate": 0.4923,
-        "n_trades": 134,
-        "n_closed": 65,
-        "final_equity": 10369.57,
-        "audit_ok": true,
-        "hard_red": {
-          "n_fires": 0,
-          "n_graded": 0,
-          "n_wins": 0,
-          "win_rate": null,
-          "pnl": 0
-        }
-      },
-      "allow": {
-        "name": "union_news_or_h1",
-        "book_pct": 212.799,
-        "win_rate": 0.5447,
-        "n_trades": 252,
-        "n_closed": 123,
-        "final_equity": 31279.86,
-        "audit_ok": true,
-        "hard_red": {
-          "n_fires": 62,
-          "n_graded": 62,
-          "n_wins": 37,
-          "win_rate": 0.5968,
-          "pnl": 20538.3
-        }
-      },
-      "name": "union_news_or_h1"
-    },
-    {
-      "sit": {
-        "name": "union_news_g_cond_h1",
-        "book_pct": 2.84,
-        "win_rate": 0.5,
-        "n_trades": 132,
-        "n_closed": 64,
-        "final_equity": 10283.99,
-        "audit_ok": true,
-        "hard_red": {
-          "n_fires": 0,
-          "n_graded": 0,
-          "n_wins": 0,
-          "win_rate": null,
-          "pnl": 0
-        }
-      },
-      "allow": {
-        "name": "union_news_g_cond_h1",
-        "book_pct": 209.692,
-        "win_rate": 0.5366,
-        "n_trades": 252,
-        "n_closed": 123,
-        "final_equity": 30969.19,
-        "audit_ok": true,
-        "hard_red": {
-          "n_fires": 62,
-          "n_graded": 62,
-          "n_wins": 37,
-          "win_rate": 0.5968,
-          "pnl": 20540.74
-        }
-      },
-      "name": "union_news_g_cond_h1"
-    },
-    {
-      "sit": {
-        "name": "union_news_or_h3",
-        "book_pct": -7.723,
-        "win_rate": 0.3077,
-        "n_trades": 109,
-        "n_closed": 52,
-        "final_equity": 9227.71,
-        "audit_ok": true,
-        "hard_red": {
-          "n_fires": 0,
-          "n_graded": 0,
-          "n_wins": 0,
-          "win_rate": null,
-          "pnl": 0
-        }
-      },
-      "allow": {
-        "name": "union_news_or_h3",
-        "book_pct": 168.523,
-        "win_rate": 0.3646,
-        "n_trades": 202,
-        "n_closed": 96,
-        "final_equity": 26852.33,
-        "audit_ok": true,
-        "hard_red": {
-          "n_fires": 50,
-          "n_graded": 50,
-          "n_wins": 26,
-          "win_rate": 0.52,
-          "pnl": 18634.51
-        }
-      },
-      "name": "union_news_or_h3"
-    },
-    {
-      "sit": {
-        "name": "union_news_g_cond_h3",
-        "book_pct": -8.556,
-        "win_rate": 0.3077,
-        "n_trades": 109,
-        "n_closed": 52,
-        "final_equity": 9144.4,
-        "audit_ok": true,
-        "hard_red": {
-          "n_fires": 0,
-          "n_graded": 0,
-          "n_wins": 0,
-          "win_rate": null,
-          "pnl": 0
-        }
-      },
-      "allow": {
-        "name": "union_news_g_cond_h3",
-        "book_pct": 168.243,
-        "win_rate": 0.3646,
-        "n_trades": 202,
-        "n_closed": 96,
-        "final_equity": 26824.29,
-        "audit_ok": true,
-        "hard_red": {
-          "n_fires": 50,
-          "n_graded": 50,
-          "n_wins": 26,
-          "win_rate": 0.52,
-          "pnl": 18629.89
-        }
-      },
-      "name": "union_news_g_cond_h3"
-    },
     {
       "sit": {
         "name": "short_alarm_h1",
@@ -1511,79 +2635,9 @@
         }
       },
       "name": "short_alarm_h3"
-    },
-    {
-      "sit": {
-        "name": "combo_sh_macd_5050_shared",
-        "book_pct": 42.155,
-        "win_rate": 0.6143,
-        "n_trades": 143,
-        "n_closed": 70,
-        "final_equity": 14215.52,
-        "audit_ok": true,
-        "hard_red": {
-          "n_fires": 0,
-          "n_graded": 0,
-          "n_wins": 0,
-          "win_rate": null,
-          "pnl": 0
-        }
-      },
-      "allow": {
-        "name": "combo_sh_macd_5050_shared:allow",
-        "book_pct": 126.302,
-        "win_rate": 0.6,
-        "n_trades": 214,
-        "n_closed": 105,
-        "final_equity": 22630.22,
-        "audit_ok": true,
-        "hard_red": {
-          "n_fires": 43,
-          "n_graded": 43,
-          "n_wins": 21,
-          "win_rate": 0.4884,
-          "pnl": 5776.88
-        }
-      },
-      "name": "combo_sh_macd_5050_shared"
-    },
-    {
-      "sit": {
-        "name": "short_extended_h1",
-        "book_pct": -11.165,
-        "win_rate": 0.4267,
-        "n_trades": 152,
-        "n_closed": 75,
-        "final_equity": 8883.48,
-        "audit_ok": true,
-        "hard_red": {
-          "n_fires": 0,
-          "n_graded": 0,
-          "n_wins": 0,
-          "win_rate": null,
-          "pnl": 0
-        }
-      },
-      "allow": {
-        "name": "short_extended_h1",
-        "book_pct": -11.399,
-        "win_rate": 0.4706,
-        "n_trades": 278,
-        "n_closed": 136,
-        "final_equity": 8860.15,
-        "audit_ok": true,
-        "hard_red": {
-          "n_fires": 69,
-          "n_graded": 69,
-          "n_wins": 38,
-          "win_rate": 0.5507,
-          "pnl": -103.2
-        }
-      },
-      "name": "short_extended_h1"
     }
   ],
-  "verdict_why": "No holdout survivor. Discovery teases that miss the hidden red window stay KILL. Live sit stands.",
+  "verdict_why": "No holdout survivor \u2014 including polarity flips and the existing shorts. Discovery teases that miss the hidden red window stay KILL. Live sit stands.",
   "top_all_red": [
     {
       "name": "union_catal_present_h1",
@@ -1678,829 +2732,793 @@
       }
     },
     {
-      "name": "union_news_or_net5_h1",
-      "side": "long",
-      "hold": 2,
-      "baked_hold": 1,
-      "kind": "recipe",
-      "note": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 5",
+      "name": "union_news_both_h1_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
       "disc": {
-        "n_fires": 10,
-        "n_graded": 10,
-        "n_wins": 4,
-        "win_rate": 0.4,
-        "pnl": -19.5
-      },
-      "holdout": {
-        "n_fires": 2,
-        "n_graded": 2,
-        "n_wins": 2,
-        "win_rate": 1.0,
-        "pnl": 5.08
-      },
-      "all_red": {
-        "n_fires": 12,
-        "n_graded": 12,
-        "n_wins": 6,
-        "win_rate": 0.5,
-        "pnl": -14.42
-      },
-      "research_ok": false,
-      "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): thin n=12 fires (bar \u226530). After-fee win 50.0%. name_day n=12 win=50%. Do not change live sit on this sample.",
-        "n_fires": 12,
-        "win_rate": 0.5,
-        "thin": true,
-        "both_tapes": false,
-        "wf_ok": null,
-        "tapes": {
-          "name_day": {
-            "n_fires": 12,
-            "win_rate": 0.5
-          }
-        }
-      }
-    },
-    {
-      "name": "union_news_or_net5_h3",
-      "side": "long",
-      "hold": 2,
-      "baked_hold": 3,
-      "kind": "recipe",
-      "note": "packet\ud83d\udfe2 OR headline\ud83d\udfe2 and camera net \u2265 5",
-      "disc": {
-        "n_fires": 10,
-        "n_graded": 10,
-        "n_wins": 4,
-        "win_rate": 0.4,
-        "pnl": -19.5
-      },
-      "holdout": {
-        "n_fires": 2,
-        "n_graded": 2,
-        "n_wins": 2,
-        "win_rate": 1.0,
-        "pnl": 5.08
-      },
-      "all_red": {
-        "n_fires": 12,
-        "n_graded": 12,
-        "n_wins": 6,
-        "win_rate": 0.5,
-        "pnl": -14.42
-      },
-      "research_ok": false,
-      "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): thin n=12 fires (bar \u226530). After-fee win 50.0%. name_day n=12 win=50%. Do not change live sit on this sample.",
-        "n_fires": 12,
-        "win_rate": 0.5,
-        "thin": true,
-        "both_tapes": false,
-        "wf_ok": null,
-        "tapes": {
-          "name_day": {
-            "n_fires": 12,
-            "win_rate": 0.5
-          }
-        }
-      }
-    },
-    {
-      "name": "union_news_g_cam61_h1",
-      "side": "long",
-      "hold": 2,
-      "baked_hold": 1,
-      "kind": "recipe",
-      "note": "merged news\ud83d\udfe2 and cameras +6 \u2212\u22641",
-      "disc": {
-        "n_fires": 7,
-        "n_graded": 7,
-        "n_wins": 3,
-        "win_rate": 0.4286,
-        "pnl": -21.9
+        "n_fires": 0,
+        "n_graded": 0,
+        "n_wins": 0,
+        "win_rate": null,
+        "pnl": 0
       },
       "holdout": {
         "n_fires": 1,
         "n_graded": 1,
         "n_wins": 1,
         "win_rate": 1.0,
-        "pnl": 1.59
+        "pnl": 4.88
       },
       "all_red": {
-        "n_fires": 8,
-        "n_graded": 8,
-        "n_wins": 4,
-        "win_rate": 0.5,
-        "pnl": -20.3
+        "n_fires": 1,
+        "n_graded": 1,
+        "n_wins": 1,
+        "win_rate": 1.0,
+        "pnl": 4.88
       },
       "research_ok": false,
       "live_keep": {
         "label": "KILL",
         "keep": false,
-        "why": "KILL hard-red name-day (any horizon): thin n=8 fires (bar \u226530). After-fee win 50.0%. name_day n=8 win=50%. Do not change live sit on this sample.",
-        "n_fires": 8,
-        "win_rate": 0.5,
+        "why": "KILL hard-red name-day (any horizon): thin n=1 fires (bar \u226530). After-fee win 100.0%. name_day n=1 win=100%. Do not change live sit on this sample.",
+        "n_fires": 1,
+        "win_rate": 1.0,
         "thin": true,
         "both_tapes": false,
         "wf_ok": null,
         "tapes": {
           "name_day": {
-            "n_fires": 8,
-            "win_rate": 0.5
+            "n_fires": 1,
+            "win_rate": 1.0
           }
         }
       }
     },
     {
-      "name": "union_news_g_cam61_h3",
-      "side": "long",
-      "hold": 2,
-      "baked_hold": 3,
-      "kind": "recipe",
-      "note": "merged news\ud83d\udfe2 and cameras +6 \u2212\u22641",
+      "name": "union_news_both_h3_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
       "disc": {
-        "n_fires": 7,
-        "n_graded": 7,
-        "n_wins": 3,
-        "win_rate": 0.4286,
-        "pnl": -21.9
+        "n_fires": 0,
+        "n_graded": 0,
+        "n_wins": 0,
+        "win_rate": null,
+        "pnl": 0
       },
       "holdout": {
         "n_fires": 1,
         "n_graded": 1,
         "n_wins": 1,
         "win_rate": 1.0,
-        "pnl": 1.59
+        "pnl": 4.88
       },
       "all_red": {
-        "n_fires": 8,
-        "n_graded": 8,
-        "n_wins": 4,
-        "win_rate": 0.5,
-        "pnl": -20.3
+        "n_fires": 1,
+        "n_graded": 1,
+        "n_wins": 1,
+        "win_rate": 1.0,
+        "pnl": 4.88
       },
       "research_ok": false,
       "live_keep": {
         "label": "KILL",
         "keep": false,
-        "why": "KILL hard-red name-day (any horizon): thin n=8 fires (bar \u226530). After-fee win 50.0%. name_day n=8 win=50%. Do not change live sit on this sample.",
-        "n_fires": 8,
-        "win_rate": 0.5,
+        "why": "KILL hard-red name-day (any horizon): thin n=1 fires (bar \u226530). After-fee win 100.0%. name_day n=1 win=100%. Do not change live sit on this sample.",
+        "n_fires": 1,
+        "win_rate": 1.0,
         "thin": true,
         "both_tapes": false,
         "wf_ok": null,
         "tapes": {
           "name_day": {
-            "n_fires": 8,
-            "win_rate": 0.5
+            "n_fires": 1,
+            "win_rate": 1.0
           }
         }
       }
     },
     {
-      "name": "union_news_g_cam71_h1",
-      "side": "long",
-      "hold": 3,
-      "baked_hold": 1,
-      "kind": "recipe",
-      "note": "merged news\ud83d\udfe2 and cameras +7 \u2212\u22641",
-      "disc": {
-        "n_fires": 2,
-        "n_graded": 2,
-        "n_wins": 1,
-        "win_rate": 0.5,
-        "pnl": 7.76
-      },
-      "holdout": {
-        "n_fires": 0,
-        "n_graded": 0,
-        "n_wins": 0,
-        "win_rate": null,
-        "pnl": 0
-      },
-      "all_red": {
-        "n_fires": 2,
-        "n_graded": 2,
-        "n_wins": 1,
-        "win_rate": 0.5,
-        "pnl": 7.76
-      },
-      "research_ok": false,
-      "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): thin n=2 fires (bar \u226530). After-fee win 50.0%. name_day n=2 win=50%. Do not change live sit on this sample.",
-        "n_fires": 2,
-        "win_rate": 0.5,
-        "thin": true,
-        "both_tapes": false,
-        "wf_ok": null,
-        "tapes": {
-          "name_day": {
-            "n_fires": 2,
-            "win_rate": 0.5
-          }
-        }
-      }
-    },
-    {
-      "name": "union_news_g_cam71_h3",
-      "side": "long",
-      "hold": 3,
-      "baked_hold": 3,
-      "kind": "recipe",
-      "note": "merged news\ud83d\udfe2 and cameras +7 \u2212\u22641",
-      "disc": {
-        "n_fires": 2,
-        "n_graded": 2,
-        "n_wins": 1,
-        "win_rate": 0.5,
-        "pnl": 7.76
-      },
-      "holdout": {
-        "n_fires": 0,
-        "n_graded": 0,
-        "n_wins": 0,
-        "win_rate": null,
-        "pnl": 0
-      },
-      "all_red": {
-        "n_fires": 2,
-        "n_graded": 2,
-        "n_wins": 1,
-        "win_rate": 0.5,
-        "pnl": 7.76
-      },
-      "research_ok": false,
-      "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): thin n=2 fires (bar \u226530). After-fee win 50.0%. name_day n=2 win=50%. Do not change live sit on this sample.",
-        "n_fires": 2,
-        "win_rate": 0.5,
-        "thin": true,
-        "both_tapes": false,
-        "wf_ok": null,
-        "tapes": {
-          "name_day": {
-            "n_fires": 2,
-            "win_rate": 0.5
-          }
-        }
-      }
-    },
-    {
-      "name": "union_news_g_cam71_n2_h1",
-      "side": "long",
-      "hold": 3,
-      "baked_hold": 1,
-      "kind": "recipe",
-      "note": "topheavy leftover on news\ud83d\udfe2 +7 \u2212\u22641",
-      "disc": {
-        "n_fires": 2,
-        "n_graded": 2,
-        "n_wins": 1,
-        "win_rate": 0.5,
-        "pnl": 7.76
-      },
-      "holdout": {
-        "n_fires": 0,
-        "n_graded": 0,
-        "n_wins": 0,
-        "win_rate": null,
-        "pnl": 0
-      },
-      "all_red": {
-        "n_fires": 2,
-        "n_graded": 2,
-        "n_wins": 1,
-        "win_rate": 0.5,
-        "pnl": 7.76
-      },
-      "research_ok": false,
-      "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): thin n=2 fires (bar \u226530). After-fee win 50.0%. name_day n=2 win=50%. Do not change live sit on this sample.",
-        "n_fires": 2,
-        "win_rate": 0.5,
-        "thin": true,
-        "both_tapes": false,
-        "wf_ok": null,
-        "tapes": {
-          "name_day": {
-            "n_fires": 2,
-            "win_rate": 0.5
-          }
-        }
-      }
-    },
-    {
-      "name": "union_news_g_cam71_conv_h1",
-      "side": "long",
-      "hold": 3,
-      "baked_hold": 1,
-      "kind": "recipe",
-      "note": "news\ud83d\udfe2 +7 \u2212\u22641; 70% leftover if #1 net \u2265 5",
-      "disc": {
-        "n_fires": 2,
-        "n_graded": 2,
-        "n_wins": 1,
-        "win_rate": 0.5,
-        "pnl": 7.76
-      },
-      "holdout": {
-        "n_fires": 0,
-        "n_graded": 0,
-        "n_wins": 0,
-        "win_rate": null,
-        "pnl": 0
-      },
-      "all_red": {
-        "n_fires": 2,
-        "n_graded": 2,
-        "n_wins": 1,
-        "win_rate": 0.5,
-        "pnl": 7.76
-      },
-      "research_ok": false,
-      "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): thin n=2 fires (bar \u226530). After-fee win 50.0%. name_day n=2 win=50%. Do not change live sit on this sample.",
-        "n_fires": 2,
-        "win_rate": 0.5,
-        "thin": true,
-        "both_tapes": false,
-        "wf_ok": null,
-        "tapes": {
-          "name_day": {
-            "n_fires": 2,
-            "win_rate": 0.5
-          }
-        }
-      }
-    },
-    {
-      "name": "short_alarm_h1",
+      "name": "flatten_vol_g_h3_flip",
       "side": "short",
       "hold": 5,
-      "baked_hold": 1,
-      "kind": "recipe",
-      "note": "alarm",
+      "kind": "flip",
       "disc": {
-        "n_fires": 24,
-        "n_graded": 24,
-        "n_wins": 12,
-        "win_rate": 0.5,
-        "pnl": 402.2
+        "n_fires": 2,
+        "n_graded": 2,
+        "n_wins": 2,
+        "win_rate": 1.0,
+        "pnl": 0.77
       },
       "holdout": {
-        "n_fires": 33,
-        "n_graded": 32,
-        "n_wins": 21,
-        "win_rate": 0.6562,
-        "pnl": 24.69
+        "n_fires": 3,
+        "n_graded": 3,
+        "n_wins": 1,
+        "win_rate": 0.3333,
+        "pnl": -8.92
       },
       "all_red": {
-        "n_fires": 77,
-        "n_graded": 76,
-        "n_wins": 37,
-        "win_rate": 0.4868,
-        "pnl": 415.74
-      },
-      "research_ok": false,
-      "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): 77 fires but after-fee win 48.7% \u2264 55%. name_day n=77 win=49%",
-        "n_fires": 77,
-        "win_rate": 0.4868,
-        "thin": false,
-        "both_tapes": false,
-        "wf_ok": null,
-        "tapes": {
-          "name_day": {
-            "n_fires": 77,
-            "win_rate": 0.4868
-          }
-        }
-      }
-    },
-    {
-      "name": "short_alarm_h3",
-      "side": "short",
-      "hold": 5,
-      "baked_hold": 3,
-      "kind": "recipe",
-      "note": "alarm",
-      "disc": {
-        "n_fires": 24,
-        "n_graded": 24,
-        "n_wins": 12,
-        "win_rate": 0.5,
-        "pnl": 402.2
-      },
-      "holdout": {
-        "n_fires": 33,
-        "n_graded": 32,
-        "n_wins": 21,
-        "win_rate": 0.6562,
-        "pnl": 24.69
-      },
-      "all_red": {
-        "n_fires": 77,
-        "n_graded": 76,
-        "n_wins": 37,
-        "win_rate": 0.4868,
-        "pnl": 415.74
-      },
-      "research_ok": false,
-      "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): 77 fires but after-fee win 48.7% \u2264 55%. name_day n=77 win=49%",
-        "n_fires": 77,
-        "win_rate": 0.4868,
-        "thin": false,
-        "both_tapes": false,
-        "wf_ok": null,
-        "tapes": {
-          "name_day": {
-            "n_fires": 77,
-            "win_rate": 0.4868
-          }
-        }
-      }
-    },
-    {
-      "name": "probable_probable_ok_h1",
-      "side": "long",
-      "hold": 5,
-      "baked_hold": 1,
-      "kind": "recipe",
-      "note": "combo gate",
-      "disc": {
-        "n_fires": 15,
-        "n_graded": 15,
-        "n_wins": 8,
-        "win_rate": 0.5333,
-        "pnl": 5.01
-      },
-      "holdout": {
-        "n_fires": 17,
-        "n_graded": 16,
-        "n_wins": 7,
-        "win_rate": 0.4375,
-        "pnl": 22.77
-      },
-      "all_red": {
-        "n_fires": 38,
-        "n_graded": 37,
-        "n_wins": 18,
-        "win_rate": 0.4865,
-        "pnl": 21.12
-      },
-      "research_ok": false,
-      "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): 38 fires but after-fee win 48.6% \u2264 55%. name_day n=38 win=49%",
-        "n_fires": 38,
-        "win_rate": 0.4865,
-        "thin": false,
-        "both_tapes": false,
-        "wf_ok": null,
-        "tapes": {
-          "name_day": {
-            "n_fires": 38,
-            "win_rate": 0.4865
-          }
-        }
-      }
-    },
-    {
-      "name": "probable_probable_ok_h3",
-      "side": "long",
-      "hold": 5,
-      "baked_hold": 3,
-      "kind": "recipe",
-      "note": "combo gate",
-      "disc": {
-        "n_fires": 15,
-        "n_graded": 15,
-        "n_wins": 8,
-        "win_rate": 0.5333,
-        "pnl": 5.01
-      },
-      "holdout": {
-        "n_fires": 17,
-        "n_graded": 16,
-        "n_wins": 7,
-        "win_rate": 0.4375,
-        "pnl": 22.77
-      },
-      "all_red": {
-        "n_fires": 38,
-        "n_graded": 37,
-        "n_wins": 18,
-        "win_rate": 0.4865,
-        "pnl": 21.12
-      },
-      "research_ok": false,
-      "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): 38 fires but after-fee win 48.6% \u2264 55%. name_day n=38 win=49%",
-        "n_fires": 38,
-        "win_rate": 0.4865,
-        "thin": false,
-        "both_tapes": false,
-        "wf_ok": null,
-        "tapes": {
-          "name_day": {
-            "n_fires": 38,
-            "win_rate": 0.4865
-          }
-        }
-      }
-    },
-    {
-      "name": "short_news_r_macd_h3",
-      "side": "short",
-      "hold": 2,
-      "baked_hold": 3,
-      "kind": "recipe",
-      "note": "short news\ud83d\udd34 \u2229 prior MACD histogram > 0",
-      "disc": {
-        "n_fires": 10,
-        "n_graded": 10,
-        "n_wins": 3,
-        "win_rate": 0.3,
-        "pnl": -3.7
-      },
-      "holdout": {
         "n_fires": 5,
         "n_graded": 5,
-        "n_wins": 4,
-        "win_rate": 0.8,
-        "pnl": 1.71
-      },
-      "all_red": {
-        "n_fires": 15,
-        "n_graded": 15,
-        "n_wins": 7,
-        "win_rate": 0.4667,
-        "pnl": -1.99
+        "n_wins": 3,
+        "win_rate": 0.6,
+        "pnl": -8.15
       },
       "research_ok": false,
       "live_keep": {
         "label": "KILL",
         "keep": false,
-        "why": "KILL hard-red name-day (any horizon): thin n=15 fires (bar \u226530). After-fee win 46.7%. name_day n=15 win=47%. Do not change live sit on this sample.",
-        "n_fires": 15,
-        "win_rate": 0.4667,
+        "why": "KILL hard-red name-day (any horizon): thin n=5 fires (bar \u226530). After-fee win 60.0%. name_day n=5 win=60%. Do not change live sit on this sample.",
+        "n_fires": 5,
+        "win_rate": 0.6,
         "thin": true,
         "both_tapes": false,
         "wf_ok": null,
         "tapes": {
           "name_day": {
-            "n_fires": 15,
-            "win_rate": 0.4667
+            "n_fires": 5,
+            "win_rate": 0.6
           }
         }
       }
     },
     {
-      "name": "union_vol_ab_h1",
-      "side": "long",
-      "hold": 1,
-      "baked_hold": 1,
-      "kind": "recipe",
-      "note": "combo gate",
-      "disc": {
-        "n_fires": 17,
-        "n_graded": 17,
-        "n_wins": 7,
-        "win_rate": 0.4118,
-        "pnl": 1.45
-      },
-      "holdout": {
-        "n_fires": 33,
-        "n_graded": 33,
-        "n_wins": 16,
-        "win_rate": 0.4848,
-        "pnl": -31.94
-      },
-      "all_red": {
-        "n_fires": 50,
-        "n_graded": 50,
-        "n_wins": 23,
-        "win_rate": 0.46,
-        "pnl": -30.49
-      },
-      "research_ok": false,
-      "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): 50 fires but after-fee win 46.0% \u2264 55%. name_day n=50 win=46%",
-        "n_fires": 50,
-        "win_rate": 0.46,
-        "thin": false,
-        "both_tapes": false,
-        "wf_ok": null,
-        "tapes": {
-          "name_day": {
-            "n_fires": 50,
-            "win_rate": 0.46
-          }
-        }
-      }
-    },
-    {
-      "name": "union_vol_ab_h3",
-      "side": "long",
-      "hold": 1,
-      "baked_hold": 3,
-      "kind": "recipe",
-      "note": "combo gate",
-      "disc": {
-        "n_fires": 17,
-        "n_graded": 17,
-        "n_wins": 7,
-        "win_rate": 0.4118,
-        "pnl": 1.45
-      },
-      "holdout": {
-        "n_fires": 33,
-        "n_graded": 33,
-        "n_wins": 16,
-        "win_rate": 0.4848,
-        "pnl": -31.94
-      },
-      "all_red": {
-        "n_fires": 50,
-        "n_graded": 50,
-        "n_wins": 23,
-        "win_rate": 0.46,
-        "pnl": -30.49
-      },
-      "research_ok": false,
-      "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): 50 fires but after-fee win 46.0% \u2264 55%. name_day n=50 win=46%",
-        "n_fires": 50,
-        "win_rate": 0.46,
-        "thin": false,
-        "both_tapes": false,
-        "wf_ok": null,
-        "tapes": {
-          "name_day": {
-            "n_fires": 50,
-            "win_rate": 0.46
-          }
-        }
-      }
-    },
-    {
-      "name": "union_news_vol_h1",
-      "side": "long",
-      "hold": 2,
-      "baked_hold": 1,
-      "kind": "recipe",
-      "note": "combo gate",
-      "disc": {
-        "n_fires": 19,
-        "n_graded": 19,
-        "n_wins": 9,
-        "win_rate": 0.4737,
-        "pnl": 29.06
-      },
-      "holdout": {
-        "n_fires": 14,
-        "n_graded": 14,
-        "n_wins": 6,
-        "win_rate": 0.4286,
-        "pnl": -20.31
-      },
-      "all_red": {
-        "n_fires": 33,
-        "n_graded": 33,
-        "n_wins": 15,
-        "win_rate": 0.4545,
-        "pnl": 8.75
-      },
-      "research_ok": false,
-      "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): 33 fires but after-fee win 45.5% \u2264 55%. name_day n=33 win=45%",
-        "n_fires": 33,
-        "win_rate": 0.4545,
-        "thin": false,
-        "both_tapes": false,
-        "wf_ok": null,
-        "tapes": {
-          "name_day": {
-            "n_fires": 33,
-            "win_rate": 0.4545
-          }
-        }
-      }
-    },
-    {
-      "name": "union_news_vol_h3",
-      "side": "long",
-      "hold": 2,
-      "baked_hold": 3,
-      "kind": "recipe",
-      "note": "combo gate",
-      "disc": {
-        "n_fires": 19,
-        "n_graded": 19,
-        "n_wins": 9,
-        "win_rate": 0.4737,
-        "pnl": 29.06
-      },
-      "holdout": {
-        "n_fires": 14,
-        "n_graded": 14,
-        "n_wins": 6,
-        "win_rate": 0.4286,
-        "pnl": -20.31
-      },
-      "all_red": {
-        "n_fires": 33,
-        "n_graded": 33,
-        "n_wins": 15,
-        "win_rate": 0.4545,
-        "pnl": 8.75
-      },
-      "research_ok": false,
-      "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): 33 fires but after-fee win 45.5% \u2264 55%. name_day n=33 win=45%",
-        "n_fires": 33,
-        "win_rate": 0.4545,
-        "thin": false,
-        "both_tapes": false,
-        "wf_ok": null,
-        "tapes": {
-          "name_day": {
-            "n_fires": 33,
-            "win_rate": 0.4545
-          }
-        }
-      }
-    },
-    {
-      "name": "union_news_head_h1",
-      "side": "long",
+      "name": "union_macd_hist_h1_flip",
+      "side": "short",
       "hold": 5,
-      "baked_hold": 1,
-      "kind": "recipe",
-      "note": "prior-export headline\ud83d\udfe2 only",
+      "kind": "flip",
       "disc": {
-        "n_fires": 15,
-        "n_graded": 15,
-        "n_wins": 9,
-        "win_rate": 0.6,
-        "pnl": 22.1
+        "n_fires": 24,
+        "n_graded": 24,
+        "n_wins": 21,
+        "win_rate": 0.875,
+        "pnl": 404.15
       },
       "holdout": {
-        "n_fires": 19,
-        "n_graded": 18,
-        "n_wins": 8,
-        "win_rate": 0.4444,
-        "pnl": -13.24
+        "n_fires": 40,
+        "n_graded": 38,
+        "n_wins": 20,
+        "win_rate": 0.5263,
+        "pnl": 182.3
       },
       "all_red": {
-        "n_fires": 53,
-        "n_graded": 52,
-        "n_wins": 22,
-        "win_rate": 0.4231,
-        "pnl": -1.02
+        "n_fires": 88,
+        "n_graded": 86,
+        "n_wins": 50,
+        "win_rate": 0.5814,
+        "pnl": 595.7
       },
       "research_ok": false,
       "live_keep": {
-        "label": "KILL",
-        "keep": false,
-        "why": "KILL hard-red name-day (any horizon): 53 fires but after-fee win 42.3% \u2264 55%. name_day n=53 win=42%",
-        "n_fires": 53,
-        "win_rate": 0.4231,
+        "label": "KEEP",
+        "keep": true,
+        "why": "KEEP hard-red name-day (any horizon): 88 fires, after-fee win 58.1% (>55%). name_day n=88 win=58%",
+        "n_fires": 88,
+        "win_rate": 0.5814,
         "thin": false,
         "both_tapes": false,
         "wf_ok": null,
         "tapes": {
           "name_day": {
-            "n_fires": 53,
-            "win_rate": 0.4231
+            "n_fires": 88,
+            "win_rate": 0.5814
+          }
+        }
+      }
+    },
+    {
+      "name": "union_macd_hist_h3_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 24,
+        "n_graded": 24,
+        "n_wins": 21,
+        "win_rate": 0.875,
+        "pnl": 404.15
+      },
+      "holdout": {
+        "n_fires": 40,
+        "n_graded": 38,
+        "n_wins": 20,
+        "win_rate": 0.5263,
+        "pnl": 182.3
+      },
+      "all_red": {
+        "n_fires": 88,
+        "n_graded": 86,
+        "n_wins": 50,
+        "win_rate": 0.5814,
+        "pnl": 595.7
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KEEP",
+        "keep": true,
+        "why": "KEEP hard-red name-day (any horizon): 88 fires, after-fee win 58.1% (>55%). name_day n=88 win=58%",
+        "n_fires": 88,
+        "win_rate": 0.5814,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 88,
+            "win_rate": 0.5814
+          }
+        }
+      }
+    },
+    {
+      "name": "union_news_pack_net3_h1_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 2,
+        "n_graded": 2,
+        "n_wins": 2,
+        "win_rate": 1.0,
+        "pnl": 0.82
+      },
+      "holdout": {
+        "n_fires": 6,
+        "n_graded": 6,
+        "n_wins": 3,
+        "win_rate": 0.5,
+        "pnl": 114.25
+      },
+      "all_red": {
+        "n_fires": 16,
+        "n_graded": 16,
+        "n_wins": 9,
+        "win_rate": 0.5625,
+        "pnl": 144.62
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): thin n=16 fires (bar \u226530). After-fee win 56.2%. name_day n=16 win=56%. Do not change live sit on this sample.",
+        "n_fires": 16,
+        "win_rate": 0.5625,
+        "thin": true,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 16,
+            "win_rate": 0.5625
+          }
+        }
+      }
+    },
+    {
+      "name": "union_news_pack_net3_h3_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 2,
+        "n_graded": 2,
+        "n_wins": 2,
+        "win_rate": 1.0,
+        "pnl": 0.82
+      },
+      "holdout": {
+        "n_fires": 6,
+        "n_graded": 6,
+        "n_wins": 3,
+        "win_rate": 0.5,
+        "pnl": 114.25
+      },
+      "all_red": {
+        "n_fires": 16,
+        "n_graded": 16,
+        "n_wins": 9,
+        "win_rate": 0.5625,
+        "pnl": 144.62
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): thin n=16 fires (bar \u226530). After-fee win 56.2%. name_day n=16 win=56%. Do not change live sit on this sample.",
+        "n_fires": 16,
+        "win_rate": 0.5625,
+        "thin": true,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 16,
+            "win_rate": 0.5625
+          }
+        }
+      }
+    },
+    {
+      "name": "union_earn_react_h1_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 16,
+        "n_graded": 16,
+        "n_wins": 12,
+        "win_rate": 0.75,
+        "pnl": 121.84
+      },
+      "holdout": {
+        "n_fires": 21,
+        "n_graded": 21,
+        "n_wins": 6,
+        "win_rate": 0.2857,
+        "pnl": -29.19
+      },
+      "all_red": {
+        "n_fires": 45,
+        "n_graded": 45,
+        "n_wins": 25,
+        "win_rate": 0.5556,
+        "pnl": 125.25
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KEEP",
+        "keep": true,
+        "why": "KEEP hard-red name-day (any horizon): 45 fires, after-fee win 55.6% (>55%). name_day n=45 win=56%",
+        "n_fires": 45,
+        "win_rate": 0.5556,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 45,
+            "win_rate": 0.5556
+          }
+        }
+      }
+    },
+    {
+      "name": "union_earn_react_h3_flip",
+      "side": "short",
+      "hold": 5,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 16,
+        "n_graded": 16,
+        "n_wins": 12,
+        "win_rate": 0.75,
+        "pnl": 121.84
+      },
+      "holdout": {
+        "n_fires": 21,
+        "n_graded": 21,
+        "n_wins": 6,
+        "win_rate": 0.2857,
+        "pnl": -29.19
+      },
+      "all_red": {
+        "n_fires": 45,
+        "n_graded": 45,
+        "n_wins": 25,
+        "win_rate": 0.5556,
+        "pnl": 125.25
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KEEP",
+        "keep": true,
+        "why": "KEEP hard-red name-day (any horizon): 45 fires, after-fee win 55.6% (>55%). name_day n=45 win=56%",
+        "n_fires": 45,
+        "win_rate": 0.5556,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 45,
+            "win_rate": 0.5556
+          }
+        }
+      }
+    },
+    {
+      "name": "union_rsi_os_h1_flip",
+      "side": "short",
+      "hold": 2,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 4,
+        "n_graded": 4,
+        "n_wins": 1,
+        "win_rate": 0.25,
+        "pnl": -3.77
+      },
+      "holdout": {
+        "n_fires": 7,
+        "n_graded": 7,
+        "n_wins": 5,
+        "win_rate": 0.7143,
+        "pnl": 0.55
+      },
+      "all_red": {
+        "n_fires": 11,
+        "n_graded": 11,
+        "n_wins": 6,
+        "win_rate": 0.5455,
+        "pnl": -3.22
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): thin n=11 fires (bar \u226530). After-fee win 54.5%. name_day n=11 win=55%. Do not change live sit on this sample.",
+        "n_fires": 11,
+        "win_rate": 0.5455,
+        "thin": true,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 11,
+            "win_rate": 0.5455
+          }
+        }
+      }
+    },
+    {
+      "name": "union_rsi_os_h3_flip",
+      "side": "short",
+      "hold": 2,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 4,
+        "n_graded": 4,
+        "n_wins": 1,
+        "win_rate": 0.25,
+        "pnl": -3.77
+      },
+      "holdout": {
+        "n_fires": 7,
+        "n_graded": 7,
+        "n_wins": 5,
+        "win_rate": 0.7143,
+        "pnl": 0.55
+      },
+      "all_red": {
+        "n_fires": 11,
+        "n_graded": 11,
+        "n_wins": 6,
+        "win_rate": 0.5455,
+        "pnl": -3.22
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): thin n=11 fires (bar \u226530). After-fee win 54.5%. name_day n=11 win=55%. Do not change live sit on this sample.",
+        "n_fires": 11,
+        "win_rate": 0.5455,
+        "thin": true,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 11,
+            "win_rate": 0.5455
+          }
+        }
+      }
+    },
+    {
+      "name": "union_rsi_os_h5_flip",
+      "side": "short",
+      "hold": 2,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 4,
+        "n_graded": 4,
+        "n_wins": 1,
+        "win_rate": 0.25,
+        "pnl": -3.77
+      },
+      "holdout": {
+        "n_fires": 7,
+        "n_graded": 7,
+        "n_wins": 5,
+        "win_rate": 0.7143,
+        "pnl": 0.55
+      },
+      "all_red": {
+        "n_fires": 11,
+        "n_graded": 11,
+        "n_wins": 6,
+        "win_rate": 0.5455,
+        "pnl": -3.22
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): thin n=11 fires (bar \u226530). After-fee win 54.5%. name_day n=11 win=55%. Do not change live sit on this sample.",
+        "n_fires": 11,
+        "win_rate": 0.5455,
+        "thin": true,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 11,
+            "win_rate": 0.5455
+          }
+        }
+      }
+    },
+    {
+      "name": "combo_ee1_5050_shared_h5_flip",
+      "side": "mix",
+      "hold": 5,
+      "kind": "combo_flip",
+      "disc": {
+        "n_fires": 17,
+        "n_graded": 17,
+        "n_wins": 11,
+        "win_rate": 0.6471,
+        "pnl": 101.23
+      },
+      "holdout": {
+        "n_fires": 22,
+        "n_graded": 22,
+        "n_wins": 7,
+        "win_rate": 0.3182,
+        "pnl": -23.7
+      },
+      "all_red": {
+        "n_fires": 47,
+        "n_graded": 47,
+        "n_wins": 25,
+        "win_rate": 0.5319,
+        "pnl": 110.13
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): 47 fires but after-fee win 53.2% \u2264 55%. name_day n=47 win=53%",
+        "n_fires": 47,
+        "win_rate": 0.5319,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 47,
+            "win_rate": 0.5319
+          }
+        }
+      }
+    },
+    {
+      "name": "combo_ee1_7030_shared_h5_flip",
+      "side": "mix",
+      "hold": 5,
+      "kind": "combo_flip",
+      "disc": {
+        "n_fires": 17,
+        "n_graded": 17,
+        "n_wins": 11,
+        "win_rate": 0.6471,
+        "pnl": 101.23
+      },
+      "holdout": {
+        "n_fires": 22,
+        "n_graded": 22,
+        "n_wins": 7,
+        "win_rate": 0.3182,
+        "pnl": -23.7
+      },
+      "all_red": {
+        "n_fires": 47,
+        "n_graded": 47,
+        "n_wins": 25,
+        "win_rate": 0.5319,
+        "pnl": 110.13
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): 47 fires but after-fee win 53.2% \u2264 55%. name_day n=47 win=53%",
+        "n_fires": 47,
+        "win_rate": 0.5319,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 47,
+            "win_rate": 0.5319
+          }
+        }
+      }
+    },
+    {
+      "name": "combo_ee1_3070_shared_h5_flip",
+      "side": "mix",
+      "hold": 5,
+      "kind": "combo_flip",
+      "disc": {
+        "n_fires": 17,
+        "n_graded": 17,
+        "n_wins": 11,
+        "win_rate": 0.6471,
+        "pnl": 101.23
+      },
+      "holdout": {
+        "n_fires": 22,
+        "n_graded": 22,
+        "n_wins": 7,
+        "win_rate": 0.3182,
+        "pnl": -23.7
+      },
+      "all_red": {
+        "n_fires": 47,
+        "n_graded": 47,
+        "n_wins": 25,
+        "win_rate": 0.5319,
+        "pnl": 110.13
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): 47 fires but after-fee win 53.2% \u2264 55%. name_day n=47 win=53%",
+        "n_fires": 47,
+        "win_rate": 0.5319,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 47,
+            "win_rate": 0.5319
+          }
+        }
+      }
+    },
+    {
+      "name": "combo_jer_5050_shared_h5_flip",
+      "side": "mix",
+      "hold": 5,
+      "kind": "combo_flip",
+      "disc": {
+        "n_fires": 24,
+        "n_graded": 24,
+        "n_wins": 17,
+        "win_rate": 0.7083,
+        "pnl": 130.26
+      },
+      "holdout": {
+        "n_fires": 48,
+        "n_graded": 48,
+        "n_wins": 17,
+        "win_rate": 0.3542,
+        "pnl": -61.63
+      },
+      "all_red": {
+        "n_fires": 82,
+        "n_graded": 82,
+        "n_wins": 42,
+        "win_rate": 0.5122,
+        "pnl": 89.66
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): 82 fires but after-fee win 51.2% \u2264 55%. name_day n=82 win=51%",
+        "n_fires": 82,
+        "win_rate": 0.5122,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 82,
+            "win_rate": 0.5122
+          }
+        }
+      }
+    },
+    {
+      "name": "union_e_fresh_h1_flip",
+      "side": "short",
+      "hold": 3,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 19,
+        "n_graded": 19,
+        "n_wins": 13,
+        "win_rate": 0.6842,
+        "pnl": 88.27
+      },
+      "holdout": {
+        "n_fires": 22,
+        "n_graded": 22,
+        "n_wins": 7,
+        "win_rate": 0.3182,
+        "pnl": -29.5
+      },
+      "all_red": {
+        "n_fires": 47,
+        "n_graded": 47,
+        "n_wins": 24,
+        "win_rate": 0.5106,
+        "pnl": 75.87
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): 47 fires but after-fee win 51.1% \u2264 55%. name_day n=47 win=51%",
+        "n_fires": 47,
+        "win_rate": 0.5106,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 47,
+            "win_rate": 0.5106
+          }
+        }
+      }
+    },
+    {
+      "name": "union_e_fresh_h3_flip",
+      "side": "short",
+      "hold": 3,
+      "kind": "flip",
+      "disc": {
+        "n_fires": 19,
+        "n_graded": 19,
+        "n_wins": 13,
+        "win_rate": 0.6842,
+        "pnl": 88.27
+      },
+      "holdout": {
+        "n_fires": 22,
+        "n_graded": 22,
+        "n_wins": 7,
+        "win_rate": 0.3182,
+        "pnl": -29.5
+      },
+      "all_red": {
+        "n_fires": 47,
+        "n_graded": 47,
+        "n_wins": 24,
+        "win_rate": 0.5106,
+        "pnl": 75.87
+      },
+      "research_ok": false,
+      "live_keep": {
+        "label": "KILL",
+        "keep": false,
+        "why": "KILL hard-red name-day (any horizon): 47 fires but after-fee win 51.1% \u2264 55%. name_day n=47 win=51%",
+        "n_fires": 47,
+        "win_rate": 0.5106,
+        "thin": false,
+        "both_tapes": false,
+        "wf_ok": null,
+        "tapes": {
+          "name_day": {
+            "n_fires": 47,
+            "win_rate": 0.5106
           }
         }
       }
