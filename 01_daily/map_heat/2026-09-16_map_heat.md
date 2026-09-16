@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-09-16
 
-Export `finviz_2026-09-16.csv` · 11616 names · generated 2026-09-16T04:04:41.100715-04:00
+Export `finviz_2026-09-15.csv` · 11616 names · generated 2026-09-16T04:04:49.319252-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -11,7 +11,7 @@ Export `finviz_2026-09-16.csv` · 11616 names · generated 2026-09-16T04:04:41.1
 | DJIA (YM) | 52580.0 | +0.11% |
 | VIX (VX) | 18.4 | -0.52% |
 | Crude Oil WTI (CL) | 104.16 | -1.59% |
-| Crude Oil Brent (QA) | 107.67 | -1.05% |
+| Crude Oil Brent (QA) | 107.67 | -1.02% |
 | Natural Gas (NG) | 2.902 | -0.51% |
 | Heating Oil (HO) | 5.2714 | +0.18% |
 | Gasoline RBOB (RB) | 3.4464 | -0.54% |
@@ -58,7 +58,7 @@ Export `finviz_2026-09-16.csv` · 11616 names · generated 2026-09-16T04:04:41.1
 | Canola (RS) | 834.0 | +0.57% |
 | Coal Newcastle (NCF) | 144.6 | -1.53% |
 | Ethanol (ZK) | 2.08 | +1.22% |
-| Gasoil (G) | 1564.5 | -0.24% |
+| Gasoil (G) | 1564.75 | -0.26% |
 | Iron Ore (TIO) | 97.41 | -0.14% |
 | Steel HRC (HRC) | 1230.0 | -0.16% |
 | Ultra 10 Year Note (TN) | 107.40625 | -0.04% |

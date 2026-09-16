@@ -1,8 +1,8 @@
 {
   "date": "2026-09-16",
-  "generated_at": "2026-09-16T04:04:41.100715-04:00",
+  "generated_at": "2026-09-16T04:04:49.319252-04:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-09-16.csv",
+  "export": "finviz_2026-09-15.csv",
   "n_tickers": 11616,
   "sectors": [
     {
@@ -8618,7 +8618,7 @@
       "ticker": "QA",
       "label": "Crude Oil Brent",
       "last": 107.67,
-      "change": -1.05
+      "change": -1.02
     },
     {
       "ticker": "NG",
@@ -8899,8 +8899,8 @@
     {
       "ticker": "G",
       "label": "Gasoil",
-      "last": 1564.5,
-      "change": -0.24
+      "last": 1564.75,
+      "change": -0.26
     },
     {
       "ticker": "TIO",
@@ -9848,8 +9848,8 @@
   ],
   "major_news_tickers": [
     "NVDA",
-    "AAPL",
     "META",
+    "AAPL",
     "MU",
     "AMZN",
     "JPM",
@@ -10690,5 +10690,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 219,
   "earnings_window_count": 45,
-  "overlay_at": "2026-09-16T04:04:41.100715-04:00"
+  "overlay_at": "2026-09-16T04:04:49.319252-04:00"
 }
