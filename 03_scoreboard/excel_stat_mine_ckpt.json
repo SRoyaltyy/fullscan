@@ -2252,13 +2252,38 @@
   "TRDA",
   "TREE",
   "TRGP",
-  "TRIP"
+  "TRIP",
+  "TRMB",
+  "TRMD",
+  "TRMK",
+  "TRN",
+  "TRNO",
+  "TRNS",
+  "TRON",
+  "TROX",
+  "TRS",
+  "TRST",
+  "TRT",
+  "TRTX",
+  "TRUP",
+  "TRVI",
+  "TRX",
+  "TSAT",
+  "TSCO",
+  "TSEM",
+  "TSI",
+  "TSLA",
+  "TSM",
+  "TSN",
+  "TSQ",
+  "TSSI",
+  "TT"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 116798,
- "hold_lab_n": 55070,
- "hold_base": 0.4714977996198565,
+ "n_hold": 118098,
+ "hold_lab_n": 55676,
+ "hold_base": 0.47143897441108235,
  "counts": {
   "A@L0_g": [
    60160,
@@ -110130,8 +110155,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 116798,
- "pair_hold_lab_n": 55070,
+ "pair_hold_n": 118098,
+ "pair_hold_lab_n": 55676,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -110240,5 +110265,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789570468
+ "flushed_unix": 1789570655
 }
