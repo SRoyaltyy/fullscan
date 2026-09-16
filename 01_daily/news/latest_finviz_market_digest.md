@@ -1,47 +1,48 @@
-# Finviz homepage market digest — 2026-09-15
+# Finviz homepage market digest — 2026-09-16
 
-**Generated:** 2026-09-15T09:11:09.116832-04:00 (America/New_York)
+**Generated:** 2026-09-16T04:02:55.775516-04:00 (America/New_York)
 **Source:** `live`
-**Banner:** US futures trade flat as 10-year yield tops 5% and oil stays above $100 ahead of Fed meeting and Empire State manufacturing data
-**Prior close:** SPX —  Nasdaq —  Dow —
-**SPX:** —  **Nasdaq:** —  **Dow:** —
-**Oil:** WTI crude $103.0
+**Banner:** US stocks closed lower as 10-year yield touched 5% and oil jumped on Saudi pipeline closure ahead of Fed decision
+**Prior close:** SPX -0.45%  Nasdaq -0.78%  Dow -0.63%
+**SPX:** -0.45%  **Nasdaq:** -0.78%  **Dow:** -0.63%
+**Oil:** Brent crude $108.0 up (rose)
 **CPI/Fed:** —
-**Leaders:** VEEA, MYSZ, SUGP, VERA, VRA, FPS, ENVA, CNTB, PLAY
+**Leaders:** APA, VLO, MPC, DVN, PSX, GS, QCOM, AMD, NVDA, INTC, MU, ENVA, COIN, FPS, VRA, TCOM
 **Next session:** housing no · retail no · Fed yes
 **Earnings slate:** —
 **Geo/grain:** geo
-**Clock legal for:** 2026-09-15
+**Clock legal for:** 2026-09-16
 **Clock use:** `same_morning`
 
 ## Clock
 
-Capture is **before 09:30 ET on this date**, so it is legal for that morning's Pre-Open (`clock_legal_for` = 2026-09-15).
+Capture is **before 09:30 ET on this date**, so it is legal for that morning's Pre-Open (`clock_legal_for` = 2026-09-16).
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
 ## Theme Radar
 
-- **Prior close:** SPX — · Nasdaq — · Dow —
-- **Oil:** WTI crude $103.0
+- **Prior close:** SPX -0.45% · Nasdaq -0.78% · Dow -0.63%
+- **Oil:** Brent crude $108.0 up (rose)
 - **CPI / Fed-odds:** —
-- **Named leaders:** VEEA, MYSZ, SUGP, VERA, VRA, FPS, ENVA, CNTB, PLAY
+- **Named leaders:** APA, VLO, MPC, DVN, PSX, GS, QCOM, AMD, NVDA, INTC, MU, ENVA, COIN, FPS, VRA, TCOM
 - **Next-session calendar:** housing no · retail no · Fed yes
-  - Asian markets are mixed, with the Nikkei (@NKD) modestly higher and most other regional indices lower, while European shares retreat ahead of the NY Empire State Manufacturing Index at 8:30 AM ET and the Fed’s rate decision and projections scheduled for tomorrow.
+  - Chip stocks partially recovered from Monday’s AI-driven rout, with Qualcomm (QCOM) up about 4%, Advanced Micro Devices (AMD) gaining 2.3%, and Nvidia (NVDA), Intel (INTC), and Micron (MU) also advancing
+  - After the bell, Forgent Power Solutions (FPS) beat Q4 EPS estimates by 5.15% and gained more than 9% in extended trading, while Vera Bradley (VRA) also beat expectations and advanced, and Trip.com Group (TCOM) reported earnings with initial after-hours moves as investors look ahead to Wednesday’s Federal Reserve rate decision, projections, dot plot, and Chair Kevin Warsh’s press conference
 - **Earnings slate:** —
 - **Geo / grain:** geo
 
 ## Narrative
 
-**US futures trade flat as 10-year yield tops 5% and oil stays above $100 ahead of Fed meeting and Empire State manufacturing data**
+**US stocks closed lower as 10-year yield touched 5% and oil jumped on Saudi pipeline closure ahead of Fed decision**
 
-- VEEA (VEEA) jumps about 80% pre-market after agreeing to a $750M merger to create an Edge AI health platform.
-- MYSZ (MYSZ) gains roughly 48% after outlining an acquisition-led pivot toward defense technology.
-- SUGP (SUGP) rises more than 50% on news of new exclusive distribution rights and a small acquisition.
-- VERA (VERA) climbs around 18% on positive data or momentum following recent updates.
-- VRA (VRA) earlier spiked about 17% after reporting Q2 revenue of $71.6M (up 1.1% YoY), a return to profitability, and maintained guidance, but major coverage now flags limited immediate reaction even as options imply an expected move of roughly 20%; FPS (FPS) also reports pre-market with options implying a ~16% move and a similarly muted initial response.
-- ENVA (ENVA) sinks about 20% after withdrawing its regulatory application to acquire Grasshopper Bancorp, even as the company reaffirms its 2026 guidance.
-- CNTB (CNTB) slides roughly 29–36% on a sell-the-news reaction to Phase 2 asthma data.
-- PLAY (PLAY) is off about 14% after posting an unexpected adjusted loss.
-- US index futures are roughly flat, with S&P 500 futures (@ES) +0.04%, Dow (@YM) -0.07%, Nasdaq 100 (@NQ) +0.07% and Russell 2000 (@ER2) -0.03%, as the 10-year Treasury yield moves above 5% for the first time since 2007 and WTI crude (@CL) trades near $103 amid Middle East pipeline disruptions and multi-year-high bond yields reinforcing rate-hike expectations ahead of the Fed’s two-day meeting.
-- Asian markets are mixed, with the Nikkei (@NKD) modestly higher and most other regional indices lower, while European shares retreat ahead of the NY Empire State Manufacturing Index at 8:30 AM ET and the Fed’s rate decision and projections scheduled for tomorrow.
+- S&P 500 ($SPX) fell 0.45% to 7,585.73, Dow Jones Industrial Average ($DJI) lost 0.63% to 52,093.11, Nasdaq Composite ($COMP) declined 0.78% to 25,981.57, and Russell 2000 (IWM) slipped 0.8% to 2,870.29, marking six losses in the past seven sessions
+- The 10-year Treasury yield hit an intraday high of 5.041%, its highest level since 2007, before ending near 5.006%
+- Brent crude (@QA) rose to around $108–109 and settled near $109, while WTI (@CL) jumped more than 4% to $105.53 after Saudi Arabia closed a key East–West pipeline that bypasses the Strait of Hormuz amid Iran-related tensions
+- Energy led S&P 500 ($SPX) sectors with a 2.26% gain on the oil spike, with APA (APA), Valero Energy (VLO), Marathon Petroleum (MPC), Devon Energy (DVN), and Phillips 66 (PSX) rallying, while technology and consumer discretionary each fell roughly 1.7%
+- Communication services advanced more than 2.8%, while eight of 11 S&P 500 ($SPX) sectors finished lower and industrials showed additional weakness
+- Goldman Sachs (GS) slid about 1.2% to lead Dow decliners amid the bond selloff
+- Chip stocks partially recovered from Monday’s AI-driven rout, with Qualcomm (QCOM) up about 4%, Advanced Micro Devices (AMD) gaining 2.3%, and Nvidia (NVDA), Intel (INTC), and Micron (MU) also advancing
+- Enova International (ENVA) plunged 23.4% after withdrawing its proposed acquisition applications for Grasshopper Bancorp, citing regulatory uncertainty, while Dave & Buster’s fell after missing Q2 revenue estimates
+- The US Senate voted to block the CLARITY Act crypto market structure bill, sending Bitcoin (@BTC) lower and weighing on Coinbase Global (COIN) shares
+- After the bell, Forgent Power Solutions (FPS) beat Q4 EPS estimates by 5.15% and gained more than 9% in extended trading, while Vera Bradley (VRA) also beat expectations and advanced, and Trip.com Group (TCOM) reported earnings with initial after-hours moves as investors look ahead to Wednesday’s Federal Reserve rate decision, projections, dot plot, and Chair Kevin Warsh’s press conference
