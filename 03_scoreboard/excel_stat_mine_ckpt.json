@@ -2402,13 +2402,38 @@
   "VWAV",
   "VYX",
   "VZ",
-  "VZLA"
+  "VZLA",
+  "W",
+  "WAB",
+  "WAFD",
+  "WAL",
+  "WALD",
+  "WAT",
+  "WATT",
+  "WAY",
+  "WBD",
+  "WBI",
+  "WBX",
+  "WCC",
+  "WD",
+  "WDAY",
+  "WDC",
+  "WDFC",
+  "WEC",
+  "WEN",
+  "WERN",
+  "WEST",
+  "WETO",
+  "WEX",
+  "WFC",
+  "WFG",
+  "WGS"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 124583,
- "hold_lab_n": 58713,
- "hold_base": 0.47127617732756477,
+ "n_hold": 125883,
+ "hold_lab_n": 59305,
+ "hold_base": 0.4711120643772392,
  "counts": {
   "A@L0_g": [
    60160,
@@ -110280,8 +110305,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 124583,
- "pair_hold_lab_n": 58713,
+ "pair_hold_n": 125883,
+ "pair_hold_lab_n": 59305,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -110390,5 +110415,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789571599
+ "flushed_unix": 1789571787
 }
