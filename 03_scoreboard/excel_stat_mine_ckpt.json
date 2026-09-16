@@ -352,13 +352,38 @@
   "BMRC",
   "BMRN",
   "BN",
-  "BNC"
+  "BNC",
+  "BNL",
+  "BOBS",
+  "BOC",
+  "BOE",
+  "BOH",
+  "BOKF",
+  "BOOT",
+  "BORR",
+  "BOW",
+  "BOX",
+  "BP",
+  "BPOP",
+  "BR",
+  "BRAI",
+  "BRBS",
+  "BRC",
+  "BRCB",
+  "BRKR",
+  "BRO",
+  "BRR",
+  "BRUN",
+  "BRX",
+  "BSAC",
+  "BSIN",
+  "BSTZ"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 18190,
- "hold_lab_n": 8549,
- "hold_base": 0.46998350742166023,
+ "n_hold": 19490,
+ "hold_lab_n": 9175,
+ "hold_base": 0.4707542329399692,
  "counts": {
   "A@L0_g": [
    60160,
@@ -108230,8 +108255,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 18190,
- "pair_hold_lab_n": 8549,
+ "pair_hold_n": 19490,
+ "pair_hold_lab_n": 9175,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -108340,5 +108365,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789553912
+ "flushed_unix": 1789554095
 }
