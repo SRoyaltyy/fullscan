@@ -1,15 +1,59 @@
 {
   "date": "2026-09-16",
-  "generated_at": "2026-09-16T04:04:49.358150-04:00",
+  "generated_at": "2026-09-16T05:02:50.954916-04:00",
   "ok": false,
   "fails": [
     {
-      "path": "(review)",
-      "reason": "empty_review_reply"
+      "path": "01_daily/sectors/2026-09-16/basic_materials_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-16/communication_services_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-16/consumer_cyclical_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-16/consumer_defensive_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-16/energy_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-16/financial_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-16/healthcare_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-16/industrials_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-16/real_estate_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-16/technology_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-16/utilities_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/map_heat/2026-09-16_research.md",
+      "reason": "phase=morning_refresh but refresh failed: coverage 0/26, n_refreshed=0, passthrough of last-night post-close cards, overnight not re-scored, many honest-none cards"
     }
   ],
-  "notes": "Grok returned an empty review",
-  "prompt_chars": 44881,
-  "reply_chars": 0,
+  "notes": "Core same-day files otherwise look real (general UP/mild with MEMORY_CONFIRM/SCORES, events scan_date 2026-09-16 as a live scan not a whole-file carry, news judge/parse, finviz digest, usable map-heat futures tape), but 0/11 sector essays exist so the 8-of-11 bar fails; research claimed morning_refresh while dumping last night's baseline, and the close market digest is absent.",
+  "prompt_chars": 119577,
+  "reply_chars": 1599,
   "reviewer": "grok-4.6-text"
 }

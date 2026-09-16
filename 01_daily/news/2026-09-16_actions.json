@@ -1266,5 +1266,7 @@
     "GDX": 4.0,
     "JPM": 3.0,
     "GS": 1.5
-  }
+  },
+  "catalyst_tickers": 0,
+  "catalyst_date": "2026-09-16"
 }
