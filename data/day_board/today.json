@@ -1,6 +1,6 @@
 {
   "date": "2026-09-16",
-  "generated_at": "2026-09-16T14:22:19.136846-04:00",
+  "generated_at": "2026-09-16T17:00:49.979131-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -265,6 +265,31 @@
         }
       ],
       "preview": "2026-09-16 BUY DBX, BLFS, RDNT, FOXA, NYT, SPT, AVAH, TENB \u00b7 SELL EU, ACDC, PUMP, TLN, UUUU, BTU, UEC, AESI \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-16 BUY DBX, BLFS, RDNT, FOXA, NYT, SPT, AVAH, TENB \u00b7 SELL EU, ACDC, PUMP, TLN, UUUU, BTU, UEC, AESI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-16 BUY DBX, BLFS, RDNT, FOXA, NYT, SPT, AVAH, TENB \u00b7 SELL EU, ACDC, PUMP, TLN, UUUU, BTU, UEC, AESI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-16 BUY DBX, BLFS, RDNT, FOXA, NYT, SPT, AVAH, TENB \u00b7 SELL EU, ACDC, PUMP, TLN, UUUU, BTU, UEC, AESI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock"
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-09-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-16T17:00:48.967693-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-16_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 7944,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-09-16_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 3888,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-09-16\n**Generated:** 2026-09-16T17:00:48.927704-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed lower as Fed delivered first rate hike since 2023 and signaled further tightening amid stubborn inflation while Dow futures fall over 1% ahead of data and earnings\n**Prior close:** SPX \u2014  Nasdaq -0.78%  Dow -0.45%\n**SPX:** \u2014  **Nasdaq:** -0.78%  **Dow:** -0.45%\n**Oil:** \u2014\n**CPI/Fed:** 4.0% hike (4.00% target range, its first hike)\n**Leaders:** INTC, SKHY, F, FANG, UAL, AAL, LEN\n**Next session:** housing no \u00b7 retail yes \u00b7 Fed yes\n**Earnings slate:** LEN\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-17\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-16\n**Generated:** 2026-09-16T17:00:48.927704-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed lower as Fed delivered first rate hike since 2023 and signaled further tightening amid stubborn inflation while Dow futures fall over 1% ahead of data and earnings\n**Prior close:** SPX \u2014  Nasdaq -0.78%  Dow -0.45%\n**SPX:** \u2014  **Nasdaq:** -0.78%  **Dow:** -0.45%\n**Oil:** \u2014\n**CPI/Fed:** 4.0% hike (4.00% target range, its first hike)\n**Leaders:** INTC, SKHY, F, FANG, UAL, AAL, LEN\n**Next session:** housing no \u00b7 retail yes \u00b7 Fed yes\n**Earnings slate:** LEN\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-17\n**Clock use:** `next_open`"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

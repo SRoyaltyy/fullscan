@@ -1,0 +1,106 @@
+{
+  "date": "2026-09-16",
+  "generated_at": "2026-09-16T17:00:48.927704-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-09-17",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-09-17) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed lower as Fed delivered first rate hike since 2023 and signaled further tightening amid stubborn inflation while Dow futures fall over 1% ahead of data and earnings",
+  "raw_text": "- The Federal Reserve unanimously raised the federal funds rate by 25 bp to a 3.75%-4.00% target range, its first hike since 2023, and signaled at least one additional increase through 2027 amid persistent inflation pressures\n- The Dow Jones Industrial Average ($DJI) fell 631 points to 51,462, the S&P 500 ($SPX) declined 0.45% to 7,585.73, and the Nasdaq Composite ($COMP) lost 0.78% to 25,981.57, with losses reportedly accelerating in the final hour after Fed comments\n- Fed Chair Kevin Warsh highlighted inflation risks in his press conference, and remarks from Warsh and Cleveland Fed President Loretta Mester were cited as drivers of intraday volatility\n- Nine of the 11 S&P 500 ($SPX) sectors finished lower, led by consumer discretionary down 1.76% and utilities off 1.2%, while energy gained 2.26% and materials added 0.37% even as oil (@CL) slipped on increased Saudi supply via Oman\n- Intel (INTC) advanced as chip stocks including SK Hynix (SKHY) rebounded from a recent sell-off\n- Ford Motor (F) shares fell after the company unveiled a comprehensively refreshed 2027 F-150 with BlueCruise hands-free towing and expanded V8 engine availability\n- Diamondback Energy (FANG) dropped about 7–9% amid an energy sector rotation and fuel-cost pressures flagged by United Airlines (UAL) and American Airlines (AAL)\n- August retail sales rose 1.2%, beating forecasts and adding to the macro backdrop the Fed is monitoring\n- Lennar Corporation (LEN) is scheduled to report its Q3 earnings after the closing bell\n- After-hours Dow (@YM) futures traded more than 1% lower as investors looked ahead to Thursday’s economic data and further earnings for additional clues on Fed policy",
+  "raw_summary_md": "- The **Federal Reserve** unanimously **raised the federal funds rate by 25 bp to a 3.75%-4.00% target range**, its **first hike since 2023**, and signaled at least one additional increase through 2027 amid persistent inflation pressures\n- The **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) **fell 631 points to 51,462**, the **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) **declined 0.45% to 7,585.73**, and the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) **lost 0.78% to 25,981.57**, with losses reportedly accelerating in the final hour after Fed comments\n- **Fed Chair Kevin Warsh** highlighted **inflation risks** in his press conference, and remarks from Warsh and **Cleveland Fed President Loretta Mester** were cited as drivers of **intraday volatility**\n- **Nine of the 11 S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) sectors finished **lower**, led by **consumer discretionary down 1.76%** and **utilities off 1.2%**, while **energy gained 2.26%** and **materials added 0.37%** even as **oil** ([@CL](https://finviz.com/futures_charts?t=CL)) slipped on increased Saudi supply via Oman\n- **Intel** ([INTC](https://finviz.com/quote?t=INTC)) **advanced** as **chip stocks including SK Hynix** ([SKHY](https://finviz.com/quote?t=SKHY)) rebounded from a recent sell-off\n- **Ford Motor** ([F](https://finviz.com/quote?t=F)) **shares fell** after the company unveiled a comprehensively refreshed **2027 F-150** with **BlueCruise hands-free towing** and expanded V8 engine availability\n- **Diamondback Energy** ([FANG](https://finviz.com/quote?t=FANG)) **dropped about 7–9%** amid an **energy sector rotation** and **fuel-cost pressures** flagged by **United Airlines** ([UAL](https://finviz.com/quote?t=UAL)) and **American Airlines** ([AAL](https://finviz.com/quote?t=AAL))\n- **August retail sales rose 1.2%**, beating forecasts and adding to the macro backdrop the Fed is monitoring\n- **Lennar Corporation** ([LEN](https://finviz.com/quote?t=LEN)) is scheduled to report its **Q3 earnings** after the closing bell\n- **After-hours Dow** ([@YM](https://finviz.com/futures_charts?t=YM)) **futures traded more than 1% lower** as investors looked ahead to **Thursday’s economic data** and further earnings for additional clues on **Fed policy**",
+  "index_moves": [
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": -0.45,
+      "verb": "declined"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": -0.78,
+      "verb": "lost"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": {
+    "pct": 4.0,
+    "action": "hike",
+    "text": "4.00% target range, its first hike"
+  },
+  "named_tickers": [
+    "INTC",
+    "SKHY",
+    "F",
+    "FANG",
+    "UAL",
+    "AAL",
+    "LEN"
+  ],
+  "named_leaders": [
+    "INTC",
+    "SKHY",
+    "F",
+    "FANG",
+    "UAL",
+    "AAL",
+    "LEN"
+  ],
+  "calendar": [
+    "August retail sales rose 1.2%, beating forecasts and adding to the macro backdrop the Fed is monitoring",
+    "After-hours Dow (@YM) futures traded more than 1% lower as investors looked ahead to Thursday’s economic data and further earnings for additional clues on Fed policy"
+  ],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": -0.78,
+    "dow": -0.45
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": {
+      "pct": 4.0,
+      "action": "hike",
+      "text": "4.00% target range, its first hike"
+    }
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": true,
+    "fed": true,
+    "bullets": [
+      "The Federal Reserve unanimously raised the federal funds rate by 25 bp to a 3.75%-4.00% target range, its first hike since 2023, and signaled at least one additional increase through 2027 amid persistent inflation pressures",
+      "August retail sales rose 1.2%, beating forecasts and adding to the macro backdrop the Fed is monitoring",
+      "After-hours Dow (@YM) futures traded more than 1% lower as investors looked ahead to Thursday’s economic data and further earnings for additional clues on Fed policy"
+    ],
+    "text": "The Federal Reserve unanimously raised the federal funds rate by 25 bp to a 3.75%-4.00% target range, its first hike since 2023, and signaled at least one additional increase through 2027 amid persistent inflation pressures August retail sales rose 1.2%, beating forecasts and adding to the macro backdrop the Fed is monitoring After-hours Dow (@YM) futures traded more than 1% lower as investors looked ahead to Thursday’s economic data and further earnings for additional clues on Fed policy"
+  },
+  "earnings_slate": {
+    "tickers": [
+      "LEN"
+    ],
+    "text": "Lennar Corporation (LEN) is scheduled to report its Q3 earnings after the closing bell"
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 287164,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-09-16T16:36:49.377",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}
