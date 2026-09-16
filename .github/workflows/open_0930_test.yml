@@ -26,6 +26,15 @@ on:
       - "src/book_suggestions.py"
       - "src/test_book_suggestions.py"
       - "src/overlay_live_strip.py"
+      - "src/factor_mine_dash.html"
+      - "src/paper_dash.html"
+      - "dashboard/index.html"
+      - "dashboard/day-board/index.html"
+      - "dashboard/factor-mine/index.html"
+      - "dashboard/strategy-board/index.html"
+      - "data/day_board/today.json"
+      - "data/day_board/today_strategies.json"
+      - "data/day_board/*_open_0930.json"
       - "scripts/publish_open_pack.sh"
   push:
     branches: [main]
