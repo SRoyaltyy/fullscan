@@ -34,10 +34,18 @@ jobs:
         run: |
           set -euo pipefail
           python - <<'PY'
-          from src.factor_mine import load_dash_payload, write_dash_html
+          from src.factor_mine import (
+              load_dash_payload, write_dash_html, ticket_session_date,
+          )
           payload = load_dash_payload()
+          print("ticket", ticket_session_date(),
+                "dates", (payload.get("dates") or [])[-3:],
+                "to", payload.get("to_date"))
           dest = write_dash_html(payload)
-          print("wrote", dest, "recipes", payload.get("n_recipes"), "to", payload.get("to_date"))
+          baked = load_dash_payload()
+          print("wrote", dest, "recipes", baked.get("n_recipes"),
+                "to", baked.get("to_date"),
+                "dates", (baked.get("dates") or [])[-3:])
           PY
           test -s dashboard/factor-mine/index.html
           echo "--- template markers ---"

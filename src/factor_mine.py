@@ -2525,12 +2525,17 @@ def write_outputs(payload: dict, stats: list[dict] | None = None,
 
 
 def write_dash_html(payload: dict) -> Path:
-    """Bake the current template + sim.js + payload into Pages HTML."""
+    """Bake the current template + sim.js + payload into Pages HTML.
+
+    If today.json / strategy tickets exist for a session the cash book
+    has not closed, that date is appended to ``dates`` / cash-start
+    (pending) so combo_sh can select it. Books stay last close.
+    """
     from . import factor_mine_combo as fmc
     payload = fmc.enrich_payload_legs(payload)
-    payload = dict(payload)
-    # Pack to_date / generated_at stay with the cash book. Pages built
-    # is this bake so a 9/15 cash-start is not read as a missing pack.
+    payload = apply_ticket_date(dict(payload))
+    # generated_at stays with the cash book. Pages built is this bake
+    # so a 9/15 close is not read as a missing pack after a 9/16 restamp.
     payload["pages_built_at"] = datetime.now(tl.ET).isoformat()
     DASH_DIR.mkdir(parents=True, exist_ok=True)
     dest = DASH_DIR / "index.html"
@@ -2914,6 +2919,22 @@ def ticket_session_date() -> str | None:
     return None
 
 
+def apply_ticket_date(payload: dict | None) -> dict:
+    """Append today.json / ticket session to ``dates`` when the bake omitted it.
+
+    Unclosed / SIT mornings still get a pending cash-start chip. Does not
+    remine. No-op when tickets are missing or the date is already listed.
+    """
+    if not payload:
+        return payload or {}
+    ticket = ticket_session_date()
+    if not ticket:
+        return payload
+    if ticket in (payload.get("dates") or []):
+        return payload
+    return stamp_pending_session(payload, ticket, write=False)
+
+
 def stamp_pending_session(payload: dict, date: str, *,
                           write: bool = False) -> dict:
     """Put ``date`` on the cash-start calendar without remine.
@@ -2995,13 +3016,22 @@ def land_closed(from_date: str = START, write: bool = False,
             want = to_date
         elif ticket and (not closed or ticket > closed):
             want = ticket
-        if want and want not in (doc.get("dates") or []):
+        try:
+            dash = load_dash_payload()
+        except FileNotFoundError:
+            dash = doc
+        if want:
+            dash = stamp_pending_session(dash, want, write=False)
+        dash = apply_ticket_date(dash)
+        if write:
             try:
-                dash = load_dash_payload()
-            except FileNotFoundError:
-                dash = doc
-            return stamp_pending_session(dash, want, write=write)
-        return doc
+                write_dash_html(dash)
+                print(f"[factor-mine] cash-start calendar "
+                      f"dates={((dash.get('dates') or [])[-3:])} "
+                      f"to={dash.get('to_date')}", flush=True)
+            except Exception as e:  # noqa: BLE001
+                print(f"[factor-mine] stamp-open dash: {e}", flush=True)
+        return dash
 
     if closed and not rebuild_panel and payload_covers_session(payload, closed):
         print(f"[factor-mine] land-closed: {closed} already on the board — skip",

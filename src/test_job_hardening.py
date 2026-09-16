@@ -969,6 +969,10 @@ def test_factor_mine_lands_closed_after_postclose() -> None:
     assert "def payload_covers_session(" in src
     assert "def stamp_pending_session(" in src
     assert "def ticket_session_date(" in src
+    assert "def apply_ticket_date(" in src
+    assert "payload = apply_ticket_date(dict(payload))" in src
+    restamp = (WF / "restamp_factor_mine_dash.yml").read_text(encoding="utf-8")
+    assert "ticket_session_date" in restamp
     live = (WF / "live_px.yml").read_text(encoding="utf-8")
     assert "src.hold_live_px" in live
     assert "never block deploy" in live or "Soft-fail" in live

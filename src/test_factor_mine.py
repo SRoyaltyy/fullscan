@@ -1088,6 +1088,50 @@ def test_stamp_pending_session_lists_ticket_date() -> None:
     assert sit["n_sessions"] == 1
 
 
+def test_write_dash_html_appends_ticket_date() -> None:
+    """Restamp / bake must list today.json's session even if unclosed / SIT."""
+    import tempfile
+    from pathlib import Path
+    from unittest import mock
+
+    payload = {
+        "to_date": "2026-09-15",
+        "n_sessions": 2,
+        "dates": ["2026-09-14", "2026-09-15"],
+        "starts": {
+            "combo_sh_5050_shared": [
+                {"start": "2026-09-15", "pending": False, "return_pct": 0.0,
+                 "made_money": False, "n_sessions": 1, "hard_red": True},
+            ],
+        },
+        "daily": {"combo_sh_5050_shared": [{"date": "2026-09-15"}]},
+        "recipes": [],
+        "stats": [],
+    }
+    with tempfile.TemporaryDirectory() as d:
+        tmp = Path(d)
+        dash = tmp / "dash"
+        dash.mkdir()
+        today = tmp / "today.json"
+        today.write_text(json.dumps({"date": "2026-09-16"}), encoding="utf-8")
+        with mock.patch.object(fm, "DASH_DIR", dash), \
+                mock.patch.object(fm, "TICKET_DATE_PATHS", (today,)):
+            dest = fm.write_dash_html(payload)
+        text = dest.read_text(encoding="utf-8")
+        marker = 'const B64 = "'
+        start = text.find(marker) + len(marker)
+        end = text.find('"', start)
+        baked = fm.decode_payload(text[start:end])
+    assert "2026-09-16" in baked["dates"]
+    assert baked["to_date"] == "2026-09-16"
+    row = next(r for r in baked["starts"]["combo_sh_5050_shared"]
+               if r["start"] == "2026-09-16")
+    assert row["pending"] is True
+    sit = next(r for r in baked["starts"]["combo_sh_5050_shared"]
+               if r["start"] == "2026-09-15")
+    assert sit["return_pct"] == 0.0
+
+
 def test_land_closed_honors_open_to_date_as_pending() -> None:
     import tempfile
     from pathlib import Path
@@ -1129,12 +1173,17 @@ def test_land_closed_honors_open_to_date_as_pending() -> None:
                 mock.patch.object(fm, "session_has_closed",
                                   lambda d, now=None: d <= "2026-09-15"), \
                 mock.patch.object(fm, "run", boom):
-            out = fm.land_closed("2026-08-13", write=False, to_date="2026-09-16")
-    assert ran["n"] == 0
-    assert "2026-09-16" in (out.get("dates") or [])
-    row = next(r for r in out["starts"]["combo_sh_5050_shared"]
-               if r["start"] == "2026-09-16")
-    assert row["pending"] is True
+            out = fm.land_closed("2026-08-13", write=True, to_date="2026-09-16")
+        assert ran["n"] == 0
+        assert "2026-09-16" in (out.get("dates") or [])
+        row = next(r for r in out["starts"]["combo_sh_5050_shared"]
+                   if r["start"] == "2026-09-16")
+        assert row["pending"] is True
+        text = (dash / "index.html").read_text(encoding="utf-8")
+        marker = 'const B64 = "'
+        start = text.find(marker) + len(marker)
+        baked = fm.decode_payload(text[start:text.find('"', start)])
+        assert "2026-09-16" in baked["dates"]
 
 
 def test_payload_covers_session_and_land_closed_skips() -> None:
@@ -2333,6 +2382,7 @@ if __name__ == "__main__":
     test_build_mornings_covers_closed_session_past_lookback()
     test_payload_covers_session_and_land_closed_skips()
     test_stamp_pending_session_lists_ticket_date()
+    test_write_dash_html_appends_ticket_date()
     test_land_closed_honors_open_to_date_as_pending()
     test_yahoo_day_strips_iso_time()
     test_simulate_split_indexes_daily_by_date()
