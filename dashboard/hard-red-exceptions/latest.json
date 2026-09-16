@@ -1,6 +1,6 @@
 {
   "ok": true,
-  "generated_at": "2026-09-16T13:57:52.061693-04:00",
+  "generated_at": "2026-09-16T14:04:13.251803-04:00",
   "from_date": "2026-08-13",
   "to_date": "2026-09-15",
   "n_days": 23,
@@ -1286,24 +1286,24 @@
   "backtest": {
     "n_hard_red": 11,
     "long_h1": {
-      "n": 80,
-      "win": 0.5375,
-      "mean": 0.567
+      "n": 88,
+      "win": 0.5682,
+      "mean": 0.686
     },
     "long_h3": {
       "n": 72,
       "win": 0.4028,
-      "mean": -1.356
+      "mean": -1.301
     },
     "short_h1": {
-      "n": 80,
-      "win": 0.5375,
-      "mean": 0.88
+      "n": 88,
+      "win": 0.5341,
+      "mean": 0.401
     },
     "short_h3": {
-      "n": 72,
-      "win": 0.5556,
-      "mean": 0.628
+      "n": 71,
+      "win": 0.5352,
+      "mean": 0.485
     }
   },
   "latest": {
@@ -1398,7 +1398,7 @@
           "gen bad",
           "sector good"
         ],
-        "h1": null,
+        "h1": 3.07,
         "h3": null,
         "h5": null,
         "side": "long",
@@ -1416,8 +1416,8 @@
           "Tape RSI 68 \u00b7 MACD hist 1.109",
           "Side lean: long \u00b7 idio +20"
         ],
-        "h1_px": null,
-        "h1_date": null,
+        "h1_px": 188.83,
+        "h1_date": "2026-09-16",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -1506,7 +1506,7 @@
           "gen bad",
           "sector good"
         ],
-        "h1": null,
+        "h1": 3.77,
         "h3": null,
         "h5": null,
         "side": "long",
@@ -1524,8 +1524,8 @@
           "Tape RSI 61 \u00b7 MACD hist -0.0648",
           "Side lean: long \u00b7 idio +20"
         ],
-        "h1_px": null,
-        "h1_date": null,
+        "h1_px": 23.11,
+        "h1_date": "2026-09-16",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -1607,7 +1607,7 @@
           "gen bad",
           "sector good"
         ],
-        "h1": null,
+        "h1": 2.77,
         "h3": null,
         "h5": null,
         "side": "long",
@@ -1625,8 +1625,8 @@
           "Tape RSI 62 \u00b7 MACD hist -0.8503",
           "Side lean: long \u00b7 idio +17"
         ],
-        "h1_px": null,
-        "h1_date": null,
+        "h1_px": 239.45,
+        "h1_date": "2026-09-16",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -1655,7 +1655,7 @@
         ],
         "open": 368.13,
         "close": 375.09,
-        "day_pct": 1.89,
+        "day_pct": 1.81,
         "boxes": {
           "join": "good",
           "sector": "good",
@@ -1708,7 +1708,7 @@
           "gen bad",
           "sector good"
         ],
-        "h1": null,
+        "h1": 1.02,
         "h3": null,
         "h5": null,
         "side": "long",
@@ -1726,8 +1726,8 @@
           "Tape RSI 58 \u00b7 MACD hist -4.0365",
           "Side lean: long \u00b7 idio +17"
         ],
-        "h1_px": null,
-        "h1_date": null,
+        "h1_px": 372.2,
+        "h1_date": "2026-09-16",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -1814,7 +1814,7 @@
           "gen bad",
           "sector good"
         ],
-        "h1": null,
+        "h1": -0.82,
         "h3": null,
         "h5": null,
         "side": "long",
@@ -1832,8 +1832,8 @@
           "Tape RSI 57 \u00b7 MACD hist 0.235",
           "Side lean: long \u00b7 idio +16"
         ],
-        "h1_px": null,
-        "h1_date": null,
+        "h1_px": 27.65,
+        "h1_date": "2026-09-16",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -1862,7 +1862,7 @@
         ],
         "open": 2.62,
         "close": 2.54,
-        "day_pct": -3.05,
+        "day_pct": -3.79,
         "boxes": {
           "join": "good",
           "sector": "good",
@@ -1920,7 +1920,7 @@
           "gen bad",
           "sector good"
         ],
-        "h1": null,
+        "h1": -3.41,
         "h3": null,
         "h5": null,
         "side": "long",
@@ -1938,8 +1938,8 @@
           "Tape RSI 63 \u00b7 MACD hist -0.0011",
           "Side lean: long \u00b7 idio +15"
         ],
-        "h1_px": null,
-        "h1_date": null,
+        "h1_px": 2.55,
+        "h1_date": "2026-09-16",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2018,7 +2018,7 @@
           "gen bad",
           "sector good"
         ],
-        "h1": null,
+        "h1": 4.21,
         "h3": null,
         "h5": null,
         "side": "long",
@@ -2035,8 +2035,8 @@
           "Tape RSI 66 \u00b7 MACD hist -0.0658",
           "Side lean: long \u00b7 idio +14"
         ],
-        "h1_px": null,
-        "h1_date": null,
+        "h1_px": 17.33,
+        "h1_date": "2026-09-16",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2115,7 +2115,7 @@
           "gen bad",
           "sector good"
         ],
-        "h1": null,
+        "h1": 2.48,
         "h3": null,
         "h5": null,
         "side": "long",
@@ -2132,8 +2132,8 @@
           "Tape RSI 58 \u00b7 MACD hist -0.3526",
           "Side lean: long \u00b7 idio +14"
         ],
-        "h1_px": null,
-        "h1_date": null,
+        "h1_px": 19.82,
+        "h1_date": "2026-09-16",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2214,7 +2214,7 @@
           "gen bad",
           "sector bad"
         ],
-        "h1": null,
+        "h1": -25.35,
         "h3": null,
         "h5": null,
         "side": "short",
@@ -2231,8 +2231,8 @@
           "Tape RSI 65 \u00b7 MACD hist 0.0023",
           "Side lean: short \u00b7 idio -10"
         ],
-        "h1_px": null,
-        "h1_date": null,
+        "h1_px": 1.78,
+        "h1_date": "2026-09-16",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2261,7 +2261,7 @@
         ],
         "open": 1.34,
         "close": 1.32,
-        "day_pct": -1.49,
+        "day_pct": -2.22,
         "boxes": {
           "join": "bad",
           "sector": "good",
@@ -2314,7 +2314,7 @@
           "gen bad",
           "sector good"
         ],
-        "h1": null,
+        "h1": 3.7,
         "h3": null,
         "h5": null,
         "side": "short",
@@ -2332,8 +2332,8 @@
           "Tape RSI 61 \u00b7 MACD hist 0.0414",
           "Side lean: short \u00b7 idio -10"
         ],
-        "h1_px": null,
-        "h1_date": null,
+        "h1_px": 1.3,
+        "h1_date": "2026-09-16",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2420,7 +2420,7 @@
           "gen bad",
           "sector good"
         ],
-        "h1": null,
+        "h1": -5.22,
         "h3": null,
         "h5": null,
         "side": "short",
@@ -2438,8 +2438,8 @@
           "Tape RSI 47 \u00b7 MACD hist -0.063",
           "Side lean: short \u00b7 idio -9"
         ],
-        "h1_px": null,
-        "h1_date": null,
+        "h1_px": 26.0,
+        "h1_date": "2026-09-16",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2521,7 +2521,7 @@
           "gen bad",
           "sector good"
         ],
-        "h1": null,
+        "h1": 10.8,
         "h3": null,
         "h5": null,
         "side": "short",
@@ -2539,8 +2539,8 @@
           "Tape RSI 34 \u00b7 MACD hist 1.5568",
           "Side lean: short \u00b7 idio -8"
         ],
-        "h1_px": null,
-        "h1_date": null,
+        "h1_px": 7.02,
+        "h1_date": "2026-09-16",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2622,7 +2622,7 @@
           "gen bad",
           "sector good"
         ],
-        "h1": null,
+        "h1": 4.35,
         "h3": null,
         "h5": null,
         "side": "short",
@@ -2640,8 +2640,8 @@
           "Tape RSI 87 OB \u00b7 MACD hist 0.2527",
           "Side lean: short \u00b7 idio -6"
         ],
-        "h1_px": null,
-        "h1_date": null,
+        "h1_px": 10.77,
+        "h1_date": "2026-09-16",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2670,7 +2670,7 @@
         ],
         "open": 0.88,
         "close": 0.83,
-        "day_pct": -5.69,
+        "day_pct": -5.68,
         "boxes": {
           "join": "bad",
           "sector": "good",
@@ -2718,7 +2718,7 @@
           "gen bad",
           "sector good"
         ],
-        "h1": null,
+        "h1": 5.68,
         "h3": null,
         "h5": null,
         "side": "short",
@@ -2735,8 +2735,8 @@
           "Tape RSI 56 \u00b7 MACD hist -0.0187",
           "Side lean: short \u00b7 idio -6"
         ],
-        "h1_px": null,
-        "h1_date": null,
+        "h1_px": 0.83,
+        "h1_date": "2026-09-16",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2764,8 +2764,8 @@
           "yday_mover"
         ],
         "open": 0.92,
-        "close": 0.9254,
-        "day_pct": 0.59,
+        "close": 0.93,
+        "day_pct": 1.09,
         "boxes": {
           "join": "good",
           "sector": "bad",
@@ -2818,7 +2818,7 @@
           "gen bad",
           "sector bad"
         ],
-        "h1": null,
+        "h1": -1.09,
         "h3": null,
         "h5": null,
         "side": "short",
@@ -2836,8 +2836,8 @@
           "Tape RSI 32 \u00b7 MACD hist -0.027",
           "Side lean: short \u00b7 idio -5"
         ],
-        "h1_px": null,
-        "h1_date": null,
+        "h1_px": 0.93,
+        "h1_date": "2026-09-16",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -2914,7 +2914,7 @@
           "gen bad",
           "sector good"
         ],
-        "h1": null,
+        "h1": -26.21,
         "h3": null,
         "h5": null,
         "side": "short",
@@ -2931,8 +2931,8 @@
           "Tape RSI 32 \u00b7 MACD hist -0.3455",
           "Side lean: short \u00b7 idio -4"
         ],
-        "h1_px": null,
-        "h1_date": null,
+        "h1_px": 13.0,
+        "h1_date": "2026-09-16",
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -3222,7 +3222,7 @@
         ],
         "open": 368.13,
         "close": 375.09,
-        "day_pct": 1.89,
+        "day_pct": 1.81,
         "boxes": {
           "join": "good",
           "sector": "good",
@@ -3387,7 +3387,7 @@
         ],
         "open": 2.62,
         "close": 2.54,
-        "day_pct": -3.05,
+        "day_pct": -3.79,
         "boxes": {
           "join": "good",
           "sector": "good",
@@ -3558,7 +3558,7 @@
         ],
         "open": 55.0,
         "close": 56.22,
-        "day_pct": 2.22,
+        "day_pct": 0.39,
         "boxes": {
           "join": "good",
           "sector": "good",
@@ -4137,7 +4137,7 @@
         ],
         "open": 1.28,
         "close": 1.17,
-        "day_pct": -8.59,
+        "day_pct": -7.87,
         "boxes": {
           "join": "neutral",
           "sector": "good",
@@ -4467,7 +4467,7 @@
         ],
         "open": 33.76,
         "close": 33.82,
-        "day_pct": 0.19,
+        "day_pct": 0.18,
         "boxes": {
           "join": "good",
           "sector": "good",
@@ -4716,8 +4716,8 @@
           "ohlc_hot"
         ],
         "open": 0.96,
-        "close": 0.903,
-        "day_pct": -6.1,
+        "close": 0.9,
+        "day_pct": -6.25,
         "boxes": {
           "join": "bad",
           "sector": "good",
@@ -4897,7 +4897,7 @@
         ],
         "open": 12.34,
         "close": 11.65,
-        "day_pct": -5.55,
+        "day_pct": -5.59,
         "boxes": {
           "join": "good",
           "sector": "good",
@@ -5064,7 +5064,7 @@
         ],
         "open": 2.4,
         "close": 2.22,
-        "day_pct": -7.5,
+        "day_pct": -7.88,
         "boxes": {
           "join": "bad",
           "sector": "good",
@@ -5716,7 +5716,7 @@
         ],
         "open": 70.12,
         "close": 74.39,
-        "day_pct": 6.09,
+        "day_pct": 6.07,
         "boxes": {
           "join": "bad",
           "sector": "good",
@@ -6055,7 +6055,7 @@
         ],
         "open": 26.88,
         "close": 26.67,
-        "day_pct": -0.78,
+        "day_pct": -1.33,
         "boxes": {
           "join": "good",
           "sector": "good",
@@ -6303,7 +6303,7 @@
             "flatten"
           ],
           "open": 0.81,
-          "close": 0.9,
+          "close": 0.8999999761581421,
           "day_pct": 11.11,
           "boxes": {
             "join": "good",
@@ -6411,7 +6411,7 @@
             "flatten"
           ],
           "open": 59.8,
-          "close": 60.23,
+          "close": 60.22999954223633,
           "day_pct": 0.72,
           "boxes": {
             "join": "good",
@@ -6619,7 +6619,7 @@
             "flatten"
           ],
           "open": 23.33,
-          "close": 23.13,
+          "close": 23.1299991607666,
           "day_pct": -0.86,
           "boxes": {
             "join": "good",
@@ -6825,7 +6825,7 @@
             "flatten"
           ],
           "open": 50.62,
-          "close": 54.62,
+          "close": 54.619998931884766,
           "day_pct": 7.9,
           "boxes": {
             "join": "good",
@@ -7123,7 +7123,7 @@
             "yday_mover"
           ],
           "open": 1646.93,
-          "close": 1641.11,
+          "close": 1641.1099853515625,
           "day_pct": -0.35,
           "boxes": {
             "join": "good",
@@ -7246,7 +7246,7 @@
             "yday_gainer"
           ],
           "open": 13.18,
-          "close": 13.92,
+          "close": 13.920000076293945,
           "day_pct": 5.61,
           "boxes": {
             "join": "good",
@@ -7484,7 +7484,7 @@
             "yday_mover"
           ],
           "open": 4.31,
-          "close": 4.37,
+          "close": 4.369999885559082,
           "day_pct": 1.39,
           "boxes": {
             "join": "good",
@@ -7552,7 +7552,7 @@
           ],
           "h1": 9.28,
           "h3": 6.73,
-          "h5": -0.0,
+          "h5": 0.0,
           "side": "long",
           "why": [
             "Weather S=5.5. Not a sit morning \u2014 still ranked.",
@@ -7597,7 +7597,7 @@
             "yday_gainer"
           ],
           "open": 13.55,
-          "close": 13.1,
+          "close": 13.100000381469727,
           "day_pct": -3.32,
           "boxes": {
             "join": "good",
@@ -7726,7 +7726,7 @@
             "ohlc_hot"
           ],
           "open": 16.5,
-          "close": 16.17,
+          "close": 16.170000076293945,
           "day_pct": -2.0,
           "boxes": {
             "join": "good",
@@ -7839,7 +7839,7 @@
             "yday_gainer"
           ],
           "open": 169.32,
-          "close": 166.33,
+          "close": 166.3300018310547,
           "day_pct": -1.77,
           "boxes": {
             "join": "good",
@@ -7953,7 +7953,7 @@
             "earn_react"
           ],
           "open": 9.89,
-          "close": 10.87,
+          "close": 10.869999885559082,
           "day_pct": 9.85,
           "boxes": {
             "join": "good",
@@ -8073,7 +8073,7 @@
             "probable"
           ],
           "open": 3.37,
-          "close": 3.43,
+          "close": 3.430000066757202,
           "day_pct": 1.78,
           "boxes": {
             "join": "good",
@@ -8185,7 +8185,7 @@
             "flatten"
           ],
           "open": 46.18,
-          "close": 47.57,
+          "close": 47.56999969482422,
           "day_pct": 3.01,
           "boxes": {
             "join": "good",
@@ -8251,9 +8251,9 @@
             "gen good",
             "sector good"
           ],
-          "h1": 2.91,
-          "h3": 6.07,
-          "h5": 3.77,
+          "h1": 3.57,
+          "h3": 6.76,
+          "h5": 4.44,
           "side": "long",
           "why": [
             "Weather S=2.25. Not a sit morning \u2014 still ranked.",
@@ -8269,11 +8269,11 @@
             "Tape RSI 56 \u00b7 MACD hist 0.1618",
             "Side lean: long \u00b7 idio +19"
           ],
-          "h1_px": 47.5222,
+          "h1_px": 47.83,
           "h1_date": "2026-08-18",
-          "h3_px": 48.9828,
+          "h3_px": 49.3,
           "h3_date": "2026-08-20",
-          "h5_px": 47.9197,
+          "h5_px": 48.23,
           "h5_date": "2026-08-24"
         },
         {
@@ -8298,7 +8298,7 @@
             "flatten"
           ],
           "open": 202.7,
-          "close": 206.29,
+          "close": 206.2899932861328,
           "day_pct": 1.77,
           "boxes": {
             "join": "good",
@@ -8411,7 +8411,7 @@
             "ohlc_hot"
           ],
           "open": 4.65,
-          "close": 4.71,
+          "close": 4.710000038146973,
           "day_pct": 1.29,
           "boxes": {
             "join": "neutral",
@@ -8526,7 +8526,7 @@
             "ohlc_hot"
           ],
           "open": 152.64,
-          "close": 154.89,
+          "close": 154.88999938964844,
           "day_pct": 1.47,
           "boxes": {
             "join": "neutral",
@@ -8634,7 +8634,7 @@
             "yday_gainer"
           ],
           "open": 5.43,
-          "close": 5.32,
+          "close": 5.320000171661377,
           "day_pct": -2.03,
           "boxes": {
             "join": "neutral",
@@ -8742,7 +8742,7 @@
             "yday_gainer"
           ],
           "open": 49.0,
-          "close": 48.13,
+          "close": 48.130001068115234,
           "day_pct": -1.78,
           "boxes": {
             "join": "neutral",
@@ -8855,7 +8855,7 @@
             "ohlc_hot"
           ],
           "open": 86.67,
-          "close": 84.76,
+          "close": 84.76000213623047,
           "day_pct": -2.2,
           "boxes": {
             "join": "neutral",
@@ -8968,7 +8968,7 @@
             "flatten"
           ],
           "open": 142.77,
-          "close": 146.15,
+          "close": 146.14999389648438,
           "day_pct": 2.37,
           "boxes": {
             "join": "good",
@@ -9072,7 +9072,7 @@
             "ohlc_hot"
           ],
           "open": 11.92,
-          "close": 11.57,
+          "close": 11.569999694824219,
           "day_pct": -2.94,
           "boxes": {
             "join": "neutral",
@@ -9303,7 +9303,7 @@
             "ohlc_hot"
           ],
           "open": 12.2,
-          "close": 14.545,
+          "close": 14.545000076293945,
           "day_pct": 19.22,
           "boxes": {
             "join": "neutral",
@@ -9416,7 +9416,7 @@
             "ohlc_hot"
           ],
           "open": 31.7,
-          "close": 32.55,
+          "close": 32.54999923706055,
           "day_pct": 2.68,
           "boxes": {
             "join": "neutral",
@@ -9517,7 +9517,7 @@
             "yday_mover"
           ],
           "open": 3.56,
-          "close": 3.705,
+          "close": 3.7049999237060547,
           "day_pct": 4.07,
           "boxes": {
             "join": "neutral",
@@ -9629,7 +9629,7 @@
             "flatten"
           ],
           "open": 129.0,
-          "close": 129.72,
+          "close": 129.72000122070312,
           "day_pct": 0.56,
           "boxes": {
             "join": "good",
@@ -9742,7 +9742,7 @@
             "flatten"
           ],
           "open": 59.97,
-          "close": 59.8,
+          "close": 59.79999923706055,
           "day_pct": -0.28,
           "boxes": {
             "join": "good",
@@ -9803,9 +9803,9 @@
             "gen bad",
             "sector good"
           ],
-          "h1": -0.26,
-          "h3": 1.75,
-          "h5": -3.05,
+          "h1": 0.2,
+          "h3": 2.22,
+          "h5": -2.6,
           "side": "long",
           "why": [
             "Weather S=-6.2 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
@@ -9821,11 +9821,11 @@
             "Tape RSI 58 \u00b7 MACD hist 0.2465",
             "Side lean: long \u00b7 idio +13"
           ],
-          "h1_px": 59.8155,
+          "h1_px": 60.09,
           "h1_date": "2026-08-19",
-          "h3_px": 61.02,
+          "h3_px": 61.3,
           "h3_date": "2026-08-21",
-          "h5_px": 58.1432,
+          "h5_px": 58.41,
           "h5_date": "2026-08-25"
         },
         {
@@ -9851,7 +9851,7 @@
             "yday_gainer"
           ],
           "open": 10.56,
-          "close": 10.26,
+          "close": 10.260000228881836,
           "day_pct": -2.84,
           "boxes": {
             "join": "neutral",
@@ -9953,7 +9953,7 @@
             "mover_buy"
           ],
           "open": 10.5,
-          "close": 11.01,
+          "close": 11.010000228881836,
           "day_pct": 4.86,
           "boxes": {
             "join": "neutral",
@@ -10055,7 +10055,7 @@
             "flatten"
           ],
           "open": 42.02,
-          "close": 42.37,
+          "close": 42.369998931884766,
           "day_pct": 0.83,
           "boxes": {
             "join": "good",
@@ -10157,7 +10157,7 @@
             "mover_buy"
           ],
           "open": 2.25,
-          "close": 2.29,
+          "close": 2.2899999618530273,
           "day_pct": 1.78,
           "boxes": {
             "join": "bad",
@@ -10270,7 +10270,7 @@
             "ohlc_hot"
           ],
           "open": 957.1,
-          "close": 940.76,
+          "close": 940.760009765625,
           "day_pct": -1.71,
           "boxes": {
             "join": "neutral",
@@ -10378,7 +10378,7 @@
             "flatten"
           ],
           "open": 11.74,
-          "close": 11.61,
+          "close": 11.609999656677246,
           "day_pct": -1.11,
           "boxes": {
             "join": "good",
@@ -10482,7 +10482,7 @@
             "earn_react"
           ],
           "open": 1.27,
-          "close": 1.23,
+          "close": 1.2300000190734863,
           "day_pct": -3.15,
           "boxes": {
             "join": "bad",
@@ -10590,7 +10590,7 @@
             "yday_mover"
           ],
           "open": 3.58,
-          "close": 3.54,
+          "close": 3.5399999618530273,
           "day_pct": -1.12,
           "boxes": {
             "join": "bad",
@@ -10811,7 +10811,7 @@
             "earn_react"
           ],
           "open": 15.77,
-          "close": 17.11,
+          "close": 17.110000610351562,
           "day_pct": 8.53,
           "boxes": {
             "join": "bad",
@@ -10929,7 +10929,7 @@
             "yday_mover"
           ],
           "open": 1.32,
-          "close": 1.325,
+          "close": 1.3250000476837158,
           "day_pct": 0.0,
           "boxes": {
             "join": "bad",
@@ -11042,7 +11042,7 @@
             "ohlc_hot"
           ],
           "open": 13.31,
-          "close": 12.2,
+          "close": 12.199999809265137,
           "day_pct": -8.34,
           "boxes": {
             "join": "bad",
@@ -11138,7 +11138,7 @@
             "ohlc_hot"
           ],
           "open": 12.47,
-          "close": 12.13,
+          "close": 12.130000114440918,
           "day_pct": -2.73,
           "boxes": {
             "join": "bad",
@@ -11199,9 +11199,9 @@
             "gen bad",
             "sector good"
           ],
-          "h1": 4.05,
-          "h3": 1.83,
-          "h5": 8.35,
+          "h1": 3.29,
+          "h3": 1.04,
+          "h5": 7.62,
           "side": "short",
           "why": [
             "Weather S=-6.2 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
@@ -11217,11 +11217,11 @@
             "Tape RSI 65 \u00b7 MACD hist 0.2223",
             "Side lean: short \u00b7 idio -10"
           ],
-          "h1_px": 11.9646,
+          "h1_px": 12.06,
           "h1_date": "2026-08-19",
-          "h3_px": 12.2424,
+          "h3_px": 12.34,
           "h3_date": "2026-08-21",
-          "h5_px": 11.4289,
+          "h5_px": 11.52,
           "h5_date": "2026-08-25"
         },
         {
@@ -11246,7 +11246,7 @@
             "yday_mover"
           ],
           "open": 7.01,
-          "close": 7.13,
+          "close": 7.130000114440918,
           "day_pct": 1.71,
           "boxes": {
             "join": "bad",
@@ -11354,7 +11354,7 @@
             "mover_buy"
           ],
           "open": 11.75,
-          "close": 11.7,
+          "close": 11.699999809265137,
           "day_pct": -0.43,
           "boxes": {
             "join": "good",
@@ -11461,7 +11461,7 @@
             "earn_react"
           ],
           "open": 378.55,
-          "close": 373.26,
+          "close": 373.260009765625,
           "day_pct": -1.4,
           "boxes": {
             "join": "good",
@@ -11531,9 +11531,9 @@
           "weather": [
             "gen bad"
           ],
-          "h1": -2.49,
-          "h3": -2.25,
-          "h5": -2.08,
+          "h1": -2.2,
+          "h3": -1.95,
+          "h5": -1.78,
           "side": "long",
           "why": [
             "Weather S=-7.2 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
@@ -11549,11 +11549,11 @@
             "Tape RSI 45 \u00b7 MACD hist 1.8617",
             "Side lean: long \u00b7 idio +12"
           ],
-          "h1_px": 369.1154,
+          "h1_px": 370.24,
           "h1_date": "2026-08-20",
-          "h3_px": 370.0426,
+          "h3_px": 371.17,
           "h3_date": "2026-08-24",
-          "h5_px": 370.6707,
+          "h5_px": 371.8,
           "h5_date": "2026-08-26"
         },
         {
@@ -11580,7 +11580,7 @@
             "mover_buy"
           ],
           "open": 298.3,
-          "close": 297.09,
+          "close": 297.0899963378906,
           "day_pct": -0.41,
           "boxes": {
             "join": "neutral",
@@ -11692,7 +11692,7 @@
             "mover_buy"
           ],
           "open": 33.93,
-          "close": 34.02,
+          "close": 34.02000045776367,
           "day_pct": 0.27,
           "boxes": {
             "join": "bad",
@@ -11804,7 +11804,7 @@
             "mover_buy"
           ],
           "open": 92.67,
-          "close": 92.29,
+          "close": 92.29000091552734,
           "day_pct": -0.41,
           "boxes": {
             "join": "neutral",
@@ -11860,8 +11860,8 @@
             "gen bad"
           ],
           "h1": 1.04,
-          "h3": 2.57,
-          "h5": 1.73,
+          "h3": 4.81,
+          "h5": 3.95,
           "side": "long",
           "why": [
             "Weather S=-7.2 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
@@ -11878,9 +11878,9 @@
           ],
           "h1_px": 93.63,
           "h1_date": "2026-08-20",
-          "h3_px": 95.0556,
+          "h3_px": 97.13,
           "h3_date": "2026-08-24",
-          "h5_px": 94.2727,
+          "h5_px": 96.33,
           "h5_date": "2026-08-26"
         },
         {
@@ -12227,7 +12227,7 @@
             "flatten"
           ],
           "open": 16.96,
-          "close": 16.99,
+          "close": 16.989999771118164,
           "day_pct": 0.18,
           "boxes": {
             "join": "neutral",
@@ -12427,7 +12427,7 @@
             "flatten"
           ],
           "open": 27.46,
-          "close": 26.95,
+          "close": 26.950000762939453,
           "day_pct": -1.86,
           "boxes": {
             "join": "bad",
@@ -12539,7 +12539,7 @@
             "ohlc_hot"
           ],
           "open": 11.5,
-          "close": 12.01,
+          "close": 12.010000228881836,
           "day_pct": 4.43,
           "boxes": {
             "join": "bad",
@@ -12666,7 +12666,7 @@
             "flatten"
           ],
           "open": 35.58,
-          "close": 36.87,
+          "close": 36.869998931884766,
           "day_pct": 3.63,
           "boxes": {
             "join": "neutral",
@@ -12767,7 +12767,7 @@
             "yday_mover"
           ],
           "open": 91.76,
-          "close": 92.87,
+          "close": 92.87000274658203,
           "day_pct": 1.21,
           "boxes": {
             "join": "bad",
@@ -12884,7 +12884,7 @@
             "yday_mover"
           ],
           "open": 6.83,
-          "close": 6.8,
+          "close": 6.800000190734863,
           "day_pct": -0.44,
           "boxes": {
             "join": "bad",
@@ -13001,7 +13001,7 @@
             "ohlc_hot"
           ],
           "open": 18.98,
-          "close": 18.52,
+          "close": 18.520000457763672,
           "day_pct": -2.42,
           "boxes": {
             "join": "bad",
@@ -13134,7 +13134,7 @@
             "mover_buy"
           ],
           "open": 91.01,
-          "close": 93.63,
+          "close": 93.62999725341797,
           "day_pct": 2.88,
           "boxes": {
             "join": "good",
@@ -13204,9 +13204,9 @@
           "weather": [
             "gen good"
           ],
-          "h1": 4.34,
-          "h3": 6.12,
-          "h5": 3.63,
+          "h1": 6.61,
+          "h3": 8.44,
+          "h5": 5.89,
           "side": "long",
           "why": [
             "Weather S=1.125. Not a sit morning \u2014 still ranked.",
@@ -13222,11 +13222,11 @@
             "Tape RSI 65 \u00b7 MACD hist 0.3156",
             "Side lean: long \u00b7 idio +26"
           ],
-          "h1_px": 94.9577,
+          "h1_px": 97.03,
           "h1_date": "2026-08-21",
-          "h3_px": 96.5823,
+          "h3_px": 98.69,
           "h3_date": "2026-08-25",
-          "h5_px": 94.3118,
+          "h5_px": 96.37,
           "h5_date": "2026-08-27"
         },
         {
@@ -13251,7 +13251,7 @@
             "ohlc_hot"
           ],
           "open": 58.73,
-          "close": 58.12,
+          "close": 58.119998931884766,
           "day_pct": -1.04,
           "boxes": {
             "join": "good",
@@ -13373,7 +13373,7 @@
             "mover_buy"
           ],
           "open": 2.47,
-          "close": 2.46,
+          "close": 2.4600000381469727,
           "day_pct": -0.4,
           "boxes": {
             "join": "good",
@@ -13506,7 +13506,7 @@
             "mover_buy"
           ],
           "open": 29.63,
-          "close": 31.43,
+          "close": 31.43000030517578,
           "day_pct": 6.07,
           "boxes": {
             "join": "good",
@@ -13751,7 +13751,7 @@
             "mover_buy"
           ],
           "open": 3.04,
-          "close": 3.19,
+          "close": 3.190000057220459,
           "day_pct": 4.93,
           "boxes": {
             "join": "good",
@@ -13868,7 +13868,7 @@
             "ohlc_hot"
           ],
           "open": 3.43,
-          "close": 3.24,
+          "close": 3.240000009536743,
           "day_pct": -5.54,
           "boxes": {
             "join": "good",
@@ -13986,7 +13986,7 @@
             "yday_mover"
           ],
           "open": 1.15,
-          "close": 1.19,
+          "close": 1.190000057220459,
           "day_pct": 3.48,
           "boxes": {
             "join": "good",
@@ -14115,7 +14115,7 @@
             "yday_mover"
           ],
           "open": 33.61,
-          "close": 33.65,
+          "close": 33.650001525878906,
           "day_pct": 0.12,
           "boxes": {
             "join": "bad",
@@ -14181,9 +14181,9 @@
             "gen good",
             "sector bad"
           ],
-          "h1": 0.46,
-          "h3": 5.36,
-          "h5": 3.36,
+          "h1": -0.3,
+          "h3": 4.64,
+          "h5": 2.62,
           "side": "short",
           "why": [
             "Weather S=1.125. Not a sit morning \u2014 still ranked.",
@@ -14199,11 +14199,11 @@
             "Tape RSI 27 OS \u00b7 MACD hist -0.5547",
             "Side lean: short \u00b7 idio -6"
           ],
-          "h1_px": 33.4545,
+          "h1_px": 33.71,
           "h1_date": "2026-08-21",
-          "h3_px": 31.8071,
+          "h3_px": 32.05,
           "h3_date": "2026-08-25",
-          "h5_px": 32.4819,
+          "h5_px": 32.73,
           "h5_date": "2026-08-27"
         },
         {
@@ -14228,7 +14228,7 @@
             "yday_mover"
           ],
           "open": 4.43,
-          "close": 4.515,
+          "close": 4.514999866485596,
           "day_pct": 1.92,
           "boxes": {
             "join": "bad",
@@ -14346,7 +14346,7 @@
             "yday_mover"
           ],
           "open": 0.35,
-          "close": 0.343,
+          "close": 0.34299999475479126,
           "day_pct": -3.11,
           "boxes": {
             "join": "bad",
@@ -14536,7 +14536,7 @@
             "mover_buy"
           ],
           "open": 17.2,
-          "close": 16.65,
+          "close": 16.649999618530273,
           "day_pct": -3.2,
           "boxes": {
             "join": "good",
@@ -14660,7 +14660,7 @@
             "mover_buy"
           ],
           "open": 115.18,
-          "close": 123.64,
+          "close": 123.63999938964844,
           "day_pct": 7.35,
           "boxes": {
             "join": "good",
@@ -14785,7 +14785,7 @@
             "mover_buy"
           ],
           "open": 78.88,
-          "close": 79.54,
+          "close": 79.54000091552734,
           "day_pct": 0.84,
           "boxes": {
             "join": "good",
@@ -14909,7 +14909,7 @@
             "mover_buy"
           ],
           "open": 2.47,
-          "close": 2.41,
+          "close": 2.4100000858306885,
           "day_pct": -2.43,
           "boxes": {
             "join": "good",
@@ -15158,7 +15158,7 @@
             "mover_buy"
           ],
           "open": 1.32,
-          "close": 1.42,
+          "close": 1.4199999570846558,
           "day_pct": 7.58,
           "boxes": {
             "join": "good",
@@ -15286,7 +15286,7 @@
             "mover_buy"
           ],
           "open": 2.43,
-          "close": 2.45,
+          "close": 2.450000047683716,
           "day_pct": 0.82,
           "boxes": {
             "join": "good",
@@ -15410,7 +15410,7 @@
             "yday_mover"
           ],
           "open": 8.28,
-          "close": 8.64,
+          "close": 8.640000343322754,
           "day_pct": 4.35,
           "boxes": {
             "join": "good",
@@ -15540,7 +15540,7 @@
             "earn_react"
           ],
           "open": 6.9,
-          "close": 6.95,
+          "close": 6.949999809265137,
           "day_pct": 0.72,
           "boxes": {
             "join": "bad",
@@ -15611,9 +15611,9 @@
             "gen good",
             "sector bad"
           ],
-          "h1": -3.35,
-          "h3": -1.79,
-          "h5": -0.79,
+          "h1": -5.51,
+          "h3": -3.91,
+          "h5": -2.9,
           "side": "short",
           "why": [
             "Weather S=3.25. Not a sit morning \u2014 still ranked.",
@@ -15629,11 +15629,11 @@
             "Tape RSI 46 \u00b7 MACD hist 0.0135",
             "Side lean: short \u00b7 idio -11"
           ],
-          "h1_px": 7.1311,
+          "h1_px": 7.28,
           "h1_date": "2026-08-24",
-          "h3_px": 7.0233,
+          "h3_px": 7.17,
           "h3_date": "2026-08-26",
-          "h5_px": 6.9547,
+          "h5_px": 7.1,
           "h5_date": "2026-08-28"
         },
         {
@@ -15658,7 +15658,7 @@
             "yday_mover"
           ],
           "open": 3.54,
-          "close": 3.81,
+          "close": 3.809999942779541,
           "day_pct": 7.63,
           "boxes": {
             "join": "bad",
@@ -15766,7 +15766,7 @@
             "yday_mover"
           ],
           "open": 9.26,
-          "close": 9.32,
+          "close": 9.319999694824219,
           "day_pct": 0.65,
           "boxes": {
             "join": "bad",
@@ -16024,7 +16024,7 @@
             "yday_mover"
           ],
           "open": 1.71,
-          "close": 1.72,
+          "close": 1.7200000286102295,
           "day_pct": 0.58,
           "boxes": {
             "join": "bad",
@@ -16126,7 +16126,7 @@
             "yday_mover"
           ],
           "open": 61.46,
-          "close": 59.07,
+          "close": 59.06999969482422,
           "day_pct": -3.89,
           "boxes": {
             "join": "bad",
@@ -16245,7 +16245,7 @@
             "mover_buy"
           ],
           "open": 78.39,
-          "close": 77.8,
+          "close": 77.80000305175781,
           "day_pct": -0.75,
           "boxes": {
             "join": "good",
@@ -16371,7 +16371,7 @@
             "mover_buy"
           ],
           "open": 106.86,
-          "close": 103.62,
+          "close": 103.62000274658203,
           "day_pct": -3.03,
           "boxes": {
             "join": "good",
@@ -16494,7 +16494,7 @@
             "mover_buy"
           ],
           "open": 39.54,
-          "close": 38.55,
+          "close": 38.54999923706055,
           "day_pct": -2.5,
           "boxes": {
             "join": "good",
@@ -16617,7 +16617,7 @@
             "mover_buy"
           ],
           "open": 18.7,
-          "close": 18.28,
+          "close": 18.280000686645508,
           "day_pct": -2.25,
           "boxes": {
             "join": "good",
@@ -16730,7 +16730,7 @@
             "mover_buy"
           ],
           "open": 33.03,
-          "close": 32.98,
+          "close": 32.97999954223633,
           "day_pct": -0.15,
           "boxes": {
             "join": "good",
@@ -16921,7 +16921,7 @@
           ],
           "h1": -1.42,
           "h3": -3.49,
-          "h5": -2.85,
+          "h5": -2.03,
           "side": "long",
           "why": [
             "Weather S=-5.175 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
@@ -16941,7 +16941,7 @@
           "h1_date": "2026-08-25",
           "h3_px": 23.76,
           "h3_date": "2026-08-27",
-          "h5_px": 23.9175,
+          "h5_px": 24.12,
           "h5_date": "2026-08-31"
         },
         {
@@ -16966,7 +16966,7 @@
             "flatten"
           ],
           "open": 5.03,
-          "close": 5.01,
+          "close": 5.010000228881836,
           "day_pct": -0.4,
           "boxes": {
             "join": "good",
@@ -17199,7 +17199,7 @@
             "yday_gainer"
           ],
           "open": 1.2,
-          "close": 1.24,
+          "close": 1.2400000095367432,
           "day_pct": 3.33,
           "boxes": {
             "join": "bad",
@@ -17319,7 +17319,7 @@
             "yday_mover"
           ],
           "open": 0.35,
-          "close": 0.367,
+          "close": 0.367000013589859,
           "day_pct": 5.46,
           "boxes": {
             "join": "bad",
@@ -17427,7 +17427,7 @@
             "ohlc_hot"
           ],
           "open": 8.83,
-          "close": 9.45,
+          "close": 9.449999809265137,
           "day_pct": 7.02,
           "boxes": {
             "join": "bad",
@@ -17614,7 +17614,7 @@
             "yday_mover"
           ],
           "open": 13.62,
-          "close": 13.05,
+          "close": 13.050000190734863,
           "day_pct": -4.19,
           "boxes": {
             "join": "bad",
@@ -17722,7 +17722,7 @@
             "yday_gainer"
           ],
           "open": 2.56,
-          "close": 2.4,
+          "close": 2.4000000953674316,
           "day_pct": -6.25,
           "boxes": {
             "join": "bad",
@@ -17949,7 +17949,7 @@
             "yday_mover"
           ],
           "open": 0.38,
-          "close": 0.36,
+          "close": 0.36000001430511475,
           "day_pct": -6.01,
           "boxes": {
             "join": "bad",
@@ -18087,7 +18087,7 @@
             "mover_buy"
           ],
           "open": 77.13,
-          "close": 79.91,
+          "close": 79.91000366210938,
           "day_pct": 3.6,
           "boxes": {
             "join": "good",
@@ -18207,7 +18207,7 @@
             "mover_buy"
           ],
           "open": 8.98,
-          "close": 9.03,
+          "close": 9.029999732971191,
           "day_pct": 0.56,
           "boxes": {
             "join": "good",
@@ -18326,7 +18326,7 @@
             "yday_gainer"
           ],
           "open": 35.05,
-          "close": 35.23,
+          "close": 35.22999954223633,
           "day_pct": 0.51,
           "boxes": {
             "join": "good",
@@ -18450,7 +18450,7 @@
             "mover_buy"
           ],
           "open": 38.01,
-          "close": 40.4,
+          "close": 40.400001525878906,
           "day_pct": 6.29,
           "boxes": {
             "join": "good",
@@ -18564,7 +18564,7 @@
             "mover_buy"
           ],
           "open": 43.76,
-          "close": 44.9,
+          "close": 44.900001525878906,
           "day_pct": 2.61,
           "boxes": {
             "join": "good",
@@ -18682,7 +18682,7 @@
             "mover_buy"
           ],
           "open": 156.51,
-          "close": 163.72,
+          "close": 163.72000122070312,
           "day_pct": 4.61,
           "boxes": {
             "join": "good",
@@ -18806,7 +18806,7 @@
             "mover_buy"
           ],
           "open": 11.9,
-          "close": 11.56,
+          "close": 11.5600004196167,
           "day_pct": -2.86,
           "boxes": {
             "join": "good",
@@ -18918,7 +18918,7 @@
             "flatten"
           ],
           "open": 23.77,
-          "close": 24.27,
+          "close": 24.270000457763672,
           "day_pct": 2.1,
           "boxes": {
             "join": "good",
@@ -18983,7 +18983,7 @@
           "weather": [],
           "h1": 1.64,
           "h3": -0.72,
-          "h5": 3.37,
+          "h5": 4.25,
           "side": "long",
           "why": [
             "Weather S=1.8. Not a sit morning \u2014 still ranked.",
@@ -19002,7 +19002,7 @@
           "h1_date": "2026-08-26",
           "h3_px": 23.6,
           "h3_date": "2026-08-28",
-          "h5_px": 24.572,
+          "h5_px": 24.78,
           "h5_date": "2026-09-01"
         }
       ],
@@ -19030,7 +19030,7 @@
             "yday_gainer"
           ],
           "open": 0.36,
-          "close": 0.354,
+          "close": 0.3540000021457672,
           "day_pct": -1.12,
           "boxes": {
             "join": "bad",
@@ -19131,7 +19131,7 @@
             "ohlc_hot"
           ],
           "open": 7.25,
-          "close": 8.29,
+          "close": 8.289999961853027,
           "day_pct": 14.34,
           "boxes": {
             "join": "bad",
@@ -19523,7 +19523,7 @@
             "ohlc_hot"
           ],
           "open": 54.51,
-          "close": 52.9,
+          "close": 52.900001525878906,
           "day_pct": -2.95,
           "boxes": {
             "join": "bad",
@@ -19719,7 +19719,7 @@
             "ohlc_hot"
           ],
           "open": 124.67,
-          "close": 127.34,
+          "close": 127.33999633789062,
           "day_pct": 2.14,
           "boxes": {
             "join": "good",
@@ -19837,7 +19837,7 @@
             "ohlc_hot"
           ],
           "open": 40.5,
-          "close": 37.08,
+          "close": 37.08000183105469,
           "day_pct": -8.44,
           "boxes": {
             "join": "good",
@@ -20043,7 +20043,7 @@
             "flatten"
           ],
           "open": 24.84,
-          "close": 24.16,
+          "close": 24.15999984741211,
           "day_pct": -2.74,
           "boxes": {
             "join": "good",
@@ -20105,8 +20105,8 @@
             "sector good"
           ],
           "h1": -4.35,
-          "h3": -3.71,
-          "h5": 2.91,
+          "h3": -2.9,
+          "h5": 3.78,
           "side": "long",
           "why": [
             "Weather S=2.025. Not a sit morning \u2014 still ranked.",
@@ -20124,9 +20124,9 @@
           ],
           "h1_px": 23.76,
           "h1_date": "2026-08-27",
-          "h3_px": 23.9175,
+          "h3_px": 24.12,
           "h3_date": "2026-08-31",
-          "h5_px": 25.5636,
+          "h5_px": 25.78,
           "h5_date": "2026-09-02"
         },
         {
@@ -20344,7 +20344,7 @@
             "yday_mover"
           ],
           "open": 0.58,
-          "close": 0.55,
+          "close": 0.550000011920929,
           "day_pct": -5.66,
           "boxes": {
             "join": "good",
@@ -20453,7 +20453,7 @@
             "yday_mover"
           ],
           "open": 16.77,
-          "close": 18.84,
+          "close": 18.84000015258789,
           "day_pct": 12.34,
           "boxes": {
             "join": "good",
@@ -20562,7 +20562,7 @@
             "yday_gainer"
           ],
           "open": 24.94,
-          "close": 24.68,
+          "close": 24.68000030517578,
           "day_pct": -1.04,
           "boxes": {
             "join": "bad",
@@ -20670,7 +20670,7 @@
             "yday_mover"
           ],
           "open": 17.41,
-          "close": 17.63,
+          "close": 17.6299991607666,
           "day_pct": 1.26,
           "boxes": {
             "join": "bad",
@@ -20778,7 +20778,7 @@
             "ohlc_hot"
           ],
           "open": 12.22,
-          "close": 12.24,
+          "close": 12.239999771118164,
           "day_pct": 0.16,
           "boxes": {
             "join": "bad",
@@ -20893,7 +20893,7 @@
             "yday_gainer"
           ],
           "open": 5.2,
-          "close": 5.19,
+          "close": 5.190000057220459,
           "day_pct": -0.19,
           "boxes": {
             "join": "bad",
@@ -20997,7 +20997,7 @@
             "yday_mover"
           ],
           "open": 11.12,
-          "close": 11.08,
+          "close": 11.079999923706055,
           "day_pct": -0.36,
           "boxes": {
             "join": "bad",
@@ -21385,7 +21385,7 @@
             "mover_buy"
           ],
           "open": 967.01,
-          "close": 935.39,
+          "close": 935.3900146484375,
           "day_pct": -3.27,
           "boxes": {
             "join": "good",
@@ -21503,7 +21503,7 @@
             "flatten"
           ],
           "open": 2.6,
-          "close": 2.64,
+          "close": 2.640000104904175,
           "day_pct": 1.54,
           "boxes": {
             "join": "good",
@@ -21621,7 +21621,7 @@
             "mover_buy"
           ],
           "open": 81.65,
-          "close": 80.49,
+          "close": 80.48999786376953,
           "day_pct": -1.42,
           "boxes": {
             "join": "good",
@@ -21739,7 +21739,7 @@
             "mover_buy"
           ],
           "open": 1746.53,
-          "close": 1735.01,
+          "close": 1735.010009765625,
           "day_pct": -0.66,
           "boxes": {
             "join": "neutral",
@@ -21847,7 +21847,7 @@
             "mover_buy"
           ],
           "open": 222.86,
-          "close": 227.98,
+          "close": 227.97999572753906,
           "day_pct": 2.3,
           "boxes": {
             "join": "good",
@@ -21913,9 +21913,9 @@
             "gen good",
             "sector good"
           ],
-          "h1": -2.49,
+          "h1": -2.38,
           "h3": -2.43,
-          "h5": 2.39,
+          "h5": 2.51,
           "side": "long",
           "why": [
             "Weather S=None. Not a sit morning \u2014 still ranked.",
@@ -21931,11 +21931,11 @@
             "Tape RSI 46 \u00b7 MACD hist -1.4879",
             "Side lean: long \u00b7 idio +22"
           ],
-          "h1_px": 217.3068,
+          "h1_px": 217.55,
           "h1_date": "2026-08-28",
           "h3_px": 217.44,
           "h3_date": "2026-09-01",
-          "h5_px": 228.1947,
+          "h5_px": 228.45,
           "h5_date": "2026-09-03"
         },
         {
@@ -21960,7 +21960,7 @@
             "mover_buy"
           ],
           "open": 22.93,
-          "close": 23.26,
+          "close": 23.260000228881836,
           "day_pct": 1.44,
           "boxes": {
             "join": "good",
@@ -22073,7 +22073,7 @@
             "mover_buy"
           ],
           "open": 74.54,
-          "close": 74.63,
+          "close": 74.62999725341797,
           "day_pct": 0.12,
           "boxes": {
             "join": "good",
@@ -22175,7 +22175,7 @@
             "mover_buy"
           ],
           "open": 55.25,
-          "close": 55.83,
+          "close": 55.83000183105469,
           "day_pct": 1.05,
           "boxes": {
             "join": "good",
@@ -22612,7 +22612,7 @@
             "mover_buy"
           ],
           "open": 141.76,
-          "close": 131.17,
+          "close": 131.1699981689453,
           "day_pct": -7.47,
           "boxes": {
             "join": "good",
@@ -22734,7 +22734,7 @@
             "mover_buy"
           ],
           "open": 324.41,
-          "close": 319.97,
+          "close": 319.9700012207031,
           "day_pct": -1.37,
           "boxes": {
             "join": "good",
@@ -22852,7 +22852,7 @@
             "mover_buy"
           ],
           "open": 122.81,
-          "close": 118.65,
+          "close": 118.6500015258789,
           "day_pct": -3.39,
           "boxes": {
             "join": "good",
@@ -22969,7 +22969,7 @@
             "mover_buy"
           ],
           "open": 1306.03,
-          "close": 1256.26,
+          "close": 1256.260009765625,
           "day_pct": -3.81,
           "boxes": {
             "join": "good",
@@ -23081,7 +23081,7 @@
             "mover_buy"
           ],
           "open": 62.82,
-          "close": 60.46,
+          "close": 60.459999084472656,
           "day_pct": -3.76,
           "boxes": {
             "join": "good",
@@ -23193,7 +23193,7 @@
             "mover_buy"
           ],
           "open": 289.44,
-          "close": 279.2,
+          "close": 279.20001220703125,
           "day_pct": -3.54,
           "boxes": {
             "join": "good",
@@ -23305,7 +23305,7 @@
             "mover_buy"
           ],
           "open": 119.76,
-          "close": 114.4,
+          "close": 114.4000015258789,
           "day_pct": -4.48,
           "boxes": {
             "join": "good",
@@ -23417,7 +23417,7 @@
             "mover_buy"
           ],
           "open": 275.2,
-          "close": 265.27,
+          "close": 265.2699890136719,
           "day_pct": -3.61,
           "boxes": {
             "join": "good",
@@ -23531,7 +23531,7 @@
             "yday_gainer"
           ],
           "open": 1.0,
-          "close": 1.02,
+          "close": 1.0199999809265137,
           "day_pct": 2.0,
           "boxes": {
             "join": "bad",
@@ -23644,7 +23644,7 @@
             "yday_gainer"
           ],
           "open": 3.32,
-          "close": 3.23,
+          "close": 3.2300000190734863,
           "day_pct": -2.71,
           "boxes": {
             "join": "bad",
@@ -23752,7 +23752,7 @@
             "yday_gainer"
           ],
           "open": 0.36,
-          "close": 0.359,
+          "close": 0.35899999737739563,
           "day_pct": -1.64,
           "boxes": {
             "join": "bad",
@@ -24213,7 +24213,7 @@
             "ohlc_hot"
           ],
           "open": 29.72,
-          "close": 28.92,
+          "close": 28.920000076293945,
           "day_pct": -2.69,
           "boxes": {
             "join": "bad",
@@ -24340,7 +24340,7 @@
             "mover_buy"
           ],
           "open": 374.24,
-          "close": 373.32,
+          "close": 373.32000732421875,
           "day_pct": -0.25,
           "boxes": {
             "join": "good",
@@ -24452,7 +24452,7 @@
             "mover_buy"
           ],
           "open": 37.3,
-          "close": 36.85,
+          "close": 36.849998474121094,
           "day_pct": -1.21,
           "boxes": {
             "join": "good",
@@ -24570,7 +24570,7 @@
             "mover_buy"
           ],
           "open": 142.08,
-          "close": 147.99,
+          "close": 147.99000549316406,
           "day_pct": 4.16,
           "boxes": {
             "join": "neutral",
@@ -24689,7 +24689,7 @@
             "mover_buy"
           ],
           "open": 370.73,
-          "close": 372.22,
+          "close": 372.2200012207031,
           "day_pct": 0.4,
           "boxes": {
             "join": "good",
@@ -24808,7 +24808,7 @@
             "mover_buy"
           ],
           "open": 58.19,
-          "close": 60.1,
+          "close": 60.099998474121094,
           "day_pct": 3.28,
           "boxes": {
             "join": "good",
@@ -24922,7 +24922,7 @@
             "mover_buy"
           ],
           "open": 254.39,
-          "close": 257.54,
+          "close": 257.5400085449219,
           "day_pct": 1.24,
           "boxes": {
             "join": "bad",
@@ -25050,7 +25050,7 @@
             "mover_buy"
           ],
           "open": 336.22,
-          "close": 338.78,
+          "close": 338.7799987792969,
           "day_pct": 0.76,
           "boxes": {
             "join": "neutral",
@@ -25163,7 +25163,7 @@
             "mover_buy"
           ],
           "open": 13.9,
-          "close": 13.92,
+          "close": 13.920000076293945,
           "day_pct": 0.14,
           "boxes": {
             "join": "good",
@@ -25366,7 +25366,7 @@
             "ohlc_hot"
           ],
           "open": 5.83,
-          "close": 5.54,
+          "close": 5.539999961853027,
           "day_pct": -4.97,
           "boxes": {
             "join": "bad",
@@ -25553,7 +25553,7 @@
             "yday_gainer"
           ],
           "open": 1.61,
-          "close": 1.63,
+          "close": 1.6299999952316284,
           "day_pct": 1.24,
           "boxes": {
             "join": "bad",
@@ -25995,7 +25995,7 @@
             "mover_buy"
           ],
           "open": 216.75,
-          "close": 217.44,
+          "close": 217.44000244140625,
           "day_pct": 0.32,
           "boxes": {
             "join": "good",
@@ -26061,9 +26061,9 @@
             "gen bad",
             "sector good"
           ],
-          "h1": 3.42,
-          "h3": 6.16,
-          "h5": 3.08,
+          "h1": 3.53,
+          "h3": 6.28,
+          "h5": 3.19,
           "side": "long",
           "why": [
             "Weather S=-6.3 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
@@ -26079,11 +26079,11 @@
             "Tape RSI 53 \u00b7 MACD hist -0.3244",
             "Side lean: long \u00b7 idio +21"
           ],
-          "h1_px": 224.1592,
+          "h1_px": 224.41,
           "h1_date": "2026-09-02",
-          "h3_px": 230.1025,
+          "h3_px": 230.36,
           "h3_date": "2026-09-04",
-          "h5_px": 223.42,
+          "h5_px": 223.67,
           "h5_date": "2026-09-09"
         },
         {
@@ -26108,7 +26108,7 @@
             "mover_buy"
           ],
           "open": 49.23,
-          "close": 49.05,
+          "close": 49.04999923706055,
           "day_pct": -0.37,
           "boxes": {
             "join": "good",
@@ -26179,9 +26179,9 @@
             "gen bad",
             "sector good"
           ],
-          "h1": -1.05,
-          "h3": -3.0,
-          "h5": -1.15,
+          "h1": -0.41,
+          "h3": -2.38,
+          "h5": -0.51,
           "side": "long",
           "why": [
             "Weather S=-6.3 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
@@ -26197,11 +26197,11 @@
             "Tape RSI 60 \u00b7 MACD hist 0.0235",
             "Side lean: long \u00b7 idio +20"
           ],
-          "h1_px": 48.7145,
+          "h1_px": 49.03,
           "h1_date": "2026-09-02",
-          "h3_px": 47.7507,
+          "h3_px": 48.06,
           "h3_date": "2026-09-04",
-          "h5_px": 48.6648,
+          "h5_px": 48.98,
           "h5_date": "2026-09-09"
         },
         {
@@ -26226,7 +26226,7 @@
             "ohlc_hot"
           ],
           "open": 144.55,
-          "close": 142.9,
+          "close": 142.89999389648438,
           "day_pct": -1.14,
           "boxes": {
             "join": "good",
@@ -26342,7 +26342,7 @@
             "mover_buy"
           ],
           "open": 21.58,
-          "close": 21.36,
+          "close": 21.360000610351562,
           "day_pct": -1.02,
           "boxes": {
             "join": "good",
@@ -26403,9 +26403,9 @@
             "gen bad",
             "sector good"
           ],
-          "h1": 0.18,
-          "h3": -1.3,
-          "h5": -0.7,
+          "h1": 0.6,
+          "h3": -0.88,
+          "h5": -0.28,
           "side": "long",
           "why": [
             "Weather S=-6.3 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
@@ -26421,11 +26421,11 @@
             "Tape RSI 59 \u00b7 MACD hist 0.0223",
             "Side lean: long \u00b7 idio +18"
           ],
-          "h1_px": 21.6184,
+          "h1_px": 21.71,
           "h1_date": "2026-09-02",
-          "h3_px": 21.2997,
+          "h3_px": 21.39,
           "h3_date": "2026-09-04",
-          "h5_px": 21.4292,
+          "h5_px": 21.52,
           "h5_date": "2026-09-09"
         },
         {
@@ -26450,7 +26450,7 @@
             "mover_buy"
           ],
           "open": 287.35,
-          "close": 279.91,
+          "close": 279.9100036621094,
           "day_pct": -2.59,
           "boxes": {
             "join": "good",
@@ -26563,7 +26563,7 @@
             "mover_buy"
           ],
           "open": 37.04,
-          "close": 36.8,
+          "close": 36.79999923706055,
           "day_pct": -0.65,
           "boxes": {
             "join": "good",
@@ -26676,7 +26676,7 @@
             "mover_buy"
           ],
           "open": 49.39,
-          "close": 49.13,
+          "close": 49.130001068115234,
           "day_pct": -0.53,
           "boxes": {
             "join": "good",
@@ -26789,7 +26789,7 @@
             "captured"
           ],
           "open": null,
-          "close": 32.9726676940918,
+          "close": 33.130001068115234,
           "day_pct": 1.59,
           "boxes": {
             "join": "good",
@@ -26860,11 +26860,11 @@
             "News: good \u2014 Big Oil Is Betting Billions On Nuclear Fusion",
             "Side lean: long \u00b7 idio +17"
           ],
-          "h1_px": 32.6542,
+          "h1_px": 32.81,
           "h1_date": "2026-09-02",
-          "h3_px": 32.2163,
+          "h3_px": 32.37,
           "h3_date": "2026-09-04",
-          "h5_px": 33.3011,
+          "h5_px": 33.46,
           "h5_date": "2026-09-09"
         }
       ],
@@ -26891,7 +26891,7 @@
             "ohlc_hot"
           ],
           "open": 18.7,
-          "close": 18.07,
+          "close": 18.06999969482422,
           "day_pct": -3.37,
           "boxes": {
             "join": "bad",
@@ -27002,7 +27002,7 @@
             "yday_mover"
           ],
           "open": 9.39,
-          "close": 9.56,
+          "close": 9.5600004196167,
           "day_pct": 1.81,
           "boxes": {
             "join": "bad",
@@ -27484,7 +27484,7 @@
             "ohlc_hot"
           ],
           "open": 40.8,
-          "close": 40.67,
+          "close": 40.66999816894531,
           "day_pct": -0.32,
           "boxes": {
             "join": "bad",
@@ -27694,7 +27694,7 @@
             "yday_gainer"
           ],
           "open": 160.8,
-          "close": 162.46,
+          "close": 162.4600067138672,
           "day_pct": 1.03,
           "boxes": {
             "join": "good",
@@ -27806,7 +27806,7 @@
             "mover_buy"
           ],
           "open": 10.0,
-          "close": 10.17,
+          "close": 10.170000076293945,
           "day_pct": 1.7,
           "boxes": {
             "join": "good",
@@ -27918,7 +27918,7 @@
             "mover_buy"
           ],
           "open": 38.71,
-          "close": 38.57,
+          "close": 38.56999969482422,
           "day_pct": -0.36,
           "boxes": {
             "join": "good",
@@ -28030,7 +28030,7 @@
             "mover_buy"
           ],
           "open": 120.2,
-          "close": 122.86,
+          "close": 122.86000061035156,
           "day_pct": 2.21,
           "boxes": {
             "join": "good",
@@ -28143,7 +28143,7 @@
             "mover_buy"
           ],
           "open": 2.16,
-          "close": 2.17,
+          "close": 2.1700000762939453,
           "day_pct": 0.46,
           "boxes": {
             "join": "good",
@@ -28255,7 +28255,7 @@
             "flatten"
           ],
           "open": 41.31,
-          "close": 42.86,
+          "close": 42.86000061035156,
           "day_pct": 3.75,
           "boxes": {
             "join": "good",
@@ -28479,7 +28479,7 @@
             "mover_buy"
           ],
           "open": 115.67,
-          "close": 113.43,
+          "close": 113.43000030517578,
           "day_pct": -1.94,
           "boxes": {
             "join": "good",
@@ -28589,7 +28589,7 @@
             "ohlc_hot"
           ],
           "open": 18.28,
-          "close": 18.03,
+          "close": 18.030000686645508,
           "day_pct": -1.37,
           "boxes": {
             "join": "bad",
@@ -28695,7 +28695,7 @@
             "earn_react"
           ],
           "open": 15.3,
-          "close": 14.4,
+          "close": 14.399999618530273,
           "day_pct": -5.88,
           "boxes": {
             "join": "bad",
@@ -28803,7 +28803,7 @@
             "ohlc_hot"
           ],
           "open": 9.6,
-          "close": 9.7,
+          "close": 9.699999809265137,
           "day_pct": 1.04,
           "boxes": {
             "join": "bad",
@@ -28909,7 +28909,7 @@
             "yday_gainer"
           ],
           "open": 2.81,
-          "close": 2.85,
+          "close": 2.8499999046325684,
           "day_pct": 1.24,
           "boxes": {
             "join": "bad",
@@ -29380,7 +29380,7 @@
             "mover_buy"
           ],
           "open": 42.93,
-          "close": 41.86,
+          "close": 41.86000061035156,
           "day_pct": -2.49,
           "boxes": {
             "join": "good",
@@ -29496,7 +29496,7 @@
             "mover_buy"
           ],
           "open": 8.03,
-          "close": 7.98,
+          "close": 7.980000019073486,
           "day_pct": -0.62,
           "boxes": {
             "join": "good",
@@ -29612,7 +29612,7 @@
             "mover_buy"
           ],
           "open": 1.93,
-          "close": 1.91,
+          "close": 1.909999966621399,
           "day_pct": -1.04,
           "boxes": {
             "join": "good",
@@ -29736,7 +29736,7 @@
             "mover_buy"
           ],
           "open": 53.45,
-          "close": 52.56,
+          "close": 52.560001373291016,
           "day_pct": -1.67,
           "boxes": {
             "join": "good",
@@ -29847,7 +29847,7 @@
             "mover_buy"
           ],
           "open": 2.18,
-          "close": 2.16,
+          "close": 2.1600000858306885,
           "day_pct": -0.92,
           "boxes": {
             "join": "good",
@@ -29966,7 +29966,7 @@
             "mover_buy"
           ],
           "open": 26.74,
-          "close": 26.6,
+          "close": 26.600000381469727,
           "day_pct": -0.52,
           "boxes": {
             "join": "good",
@@ -30076,7 +30076,7 @@
             "mover_buy"
           ],
           "open": 132.45,
-          "close": 130.63,
+          "close": 130.6300048828125,
           "day_pct": -1.37,
           "boxes": {
             "join": "good",
@@ -30186,7 +30186,7 @@
             "ohlc_hot"
           ],
           "open": 3.63,
-          "close": 3.48,
+          "close": 3.4800000190734863,
           "day_pct": -4.13,
           "boxes": {
             "join": "good",
@@ -30302,7 +30302,7 @@
             "yday_mover"
           ],
           "open": 0.64,
-          "close": 0.6,
+          "close": 0.6000000238418579,
           "day_pct": -6.25,
           "boxes": {
             "join": "bad",
@@ -30411,7 +30411,7 @@
             "ohlc_hot"
           ],
           "open": 18.4,
-          "close": 18.4,
+          "close": 18.399999618530273,
           "day_pct": 0.0,
           "boxes": {
             "join": "bad",
@@ -30700,7 +30700,7 @@
             "yday_gainer"
           ],
           "open": 0.38,
-          "close": 0.379,
+          "close": 0.3790000081062317,
           "day_pct": 0.53,
           "boxes": {
             "join": "bad",
@@ -31058,7 +31058,7 @@
             "mover_buy"
           ],
           "open": 3.46,
-          "close": 3.47,
+          "close": 3.4700000286102295,
           "day_pct": 0.29,
           "boxes": {
             "join": "good",
@@ -31177,7 +31177,7 @@
             "mover_buy"
           ],
           "open": 11.31,
-          "close": 11.385,
+          "close": 11.385000228881836,
           "day_pct": 0.66,
           "boxes": {
             "join": "good",
@@ -31243,7 +31243,7 @@
           ],
           "h1": -1.15,
           "h3": -6.45,
-          "h5": -4.82,
+          "h5": -4.77,
           "side": "long",
           "why": [
             "Weather S=2.25. Not a sit morning \u2014 still ranked.",
@@ -31263,7 +31263,7 @@
           "h1_date": "2026-09-08",
           "h3_px": 10.58,
           "h3_date": "2026-09-10",
-          "h5_px": 10.765,
+          "h5_px": 10.77,
           "h5_date": "2026-09-14"
         },
         {
@@ -31292,7 +31292,7 @@
             "mover_buy"
           ],
           "open": 513.78,
-          "close": 524.14,
+          "close": 524.1400146484375,
           "day_pct": 2.02,
           "boxes": {
             "join": "good",
@@ -31410,7 +31410,7 @@
             "yday_gainer"
           ],
           "open": 5.75,
-          "close": 5.96,
+          "close": 5.960000038146973,
           "day_pct": 3.65,
           "boxes": {
             "join": "good",
@@ -31528,7 +31528,7 @@
             "ohlc_hot"
           ],
           "open": 75.65,
-          "close": 78.27,
+          "close": 78.2699966430664,
           "day_pct": 3.46,
           "boxes": {
             "join": "good",
@@ -31644,7 +31644,7 @@
             "yday_mover"
           ],
           "open": 4.53,
-          "close": 4.67,
+          "close": 4.670000076293945,
           "day_pct": 3.09,
           "boxes": {
             "join": "good",
@@ -31757,7 +31757,7 @@
             "ohlc_hot"
           ],
           "open": 37.44,
-          "close": 37.83,
+          "close": 37.83000183105469,
           "day_pct": 1.04,
           "boxes": {
             "join": "good",
@@ -31821,9 +31821,9 @@
             "gen good",
             "sector good"
           ],
-          "h1": 1.2,
-          "h3": -0.11,
-          "h5": 0.61,
+          "h1": 1.31,
+          "h3": 0.0,
+          "h5": 0.72,
           "side": "long",
           "why": [
             "Weather S=2.25. Not a sit morning \u2014 still ranked.",
@@ -31839,11 +31839,11 @@
             "Tape RSI 60 \u00b7 MACD hist 0.3932",
             "Side lean: long \u00b7 idio +27"
           ],
-          "h1_px": 37.8898,
+          "h1_px": 37.93,
           "h1_date": "2026-09-08",
-          "h3_px": 37.4003,
+          "h3_px": 37.44,
           "h3_date": "2026-09-10",
-          "h5_px": 37.67,
+          "h5_px": 37.71,
           "h5_date": "2026-09-14"
         },
         {
@@ -31868,7 +31868,7 @@
             "mover_buy"
           ],
           "open": 19.67,
-          "close": 19.86,
+          "close": 19.860000610351562,
           "day_pct": 0.97,
           "boxes": {
             "join": "good",
@@ -31943,7 +31943,7 @@
           ],
           "h1": 1.63,
           "h3": 1.53,
-          "h5": -0.38,
+          "h5": -0.41,
           "side": "long",
           "why": [
             "Weather S=2.25. Not a sit morning \u2014 still ranked.",
@@ -31963,7 +31963,7 @@
           "h1_date": "2026-09-08",
           "h3_px": 19.97,
           "h3_date": "2026-09-10",
-          "h5_px": 19.595,
+          "h5_px": 19.59,
           "h5_date": "2026-09-14"
         }
       ],
@@ -31990,7 +31990,7 @@
             "yday_mover"
           ],
           "open": 14.52,
-          "close": 14.95,
+          "close": 14.949999809265137,
           "day_pct": 2.96,
           "boxes": {
             "join": "bad",
@@ -32294,7 +32294,7 @@
             "yday_mover"
           ],
           "open": 15.9,
-          "close": 15.56,
+          "close": 15.5600004196167,
           "day_pct": -2.14,
           "boxes": {
             "join": "bad",
@@ -32500,7 +32500,7 @@
             "ohlc_hot"
           ],
           "open": 78.84,
-          "close": 76.71,
+          "close": 76.70999908447266,
           "day_pct": -2.7,
           "boxes": {
             "join": "good",
@@ -32611,7 +32611,7 @@
             "mover_buy"
           ],
           "open": 33.25,
-          "close": 32.57,
+          "close": 32.56999969482422,
           "day_pct": -2.05,
           "boxes": {
             "join": "good",
@@ -32712,7 +32712,7 @@
             "mover_buy"
           ],
           "open": 100.11,
-          "close": 98.51,
+          "close": 98.51000213623047,
           "day_pct": -1.6,
           "boxes": {
             "join": "good",
@@ -32813,7 +32813,7 @@
             "mover_buy"
           ],
           "open": 145.5,
-          "close": 146.37,
+          "close": 146.3699951171875,
           "day_pct": 0.6,
           "boxes": {
             "join": "good",
@@ -32914,7 +32914,7 @@
             "yday_mover"
           ],
           "open": 125.07,
-          "close": 117.34,
+          "close": 117.33999633789062,
           "day_pct": -6.18,
           "boxes": {
             "join": "good",
@@ -33027,7 +33027,7 @@
             "mover_buy"
           ],
           "open": 39.67,
-          "close": 40.26,
+          "close": 40.2599983215332,
           "day_pct": 1.49,
           "boxes": {
             "join": "good",
@@ -33122,7 +33122,7 @@
             "ohlc_hot"
           ],
           "open": 7.46,
-          "close": 7.45,
+          "close": 7.449999809265137,
           "day_pct": -0.13,
           "boxes": {
             "join": "good",
@@ -33238,7 +33238,7 @@
             "flatten"
           ],
           "open": 58.03,
-          "close": 58.1,
+          "close": 58.099998474121094,
           "day_pct": 0.12,
           "boxes": {
             "join": "good",
@@ -33564,7 +33564,7 @@
             "earn_react"
           ],
           "open": 45.21,
-          "close": 44.93,
+          "close": 44.93000030517578,
           "day_pct": -0.62,
           "boxes": {
             "join": "bad",
@@ -33676,7 +33676,7 @@
             "yday_gainer"
           ],
           "open": 4.63,
-          "close": 4.68,
+          "close": 4.679999828338623,
           "day_pct": 1.08,
           "boxes": {
             "join": "bad",
@@ -33732,7 +33732,7 @@
           ],
           "h1": 3.89,
           "h3": 3.67,
-          "h5": 5.94,
+          "h5": 5.83,
           "side": "short",
           "why": [
             "Weather S=-11.475 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
@@ -33752,7 +33752,7 @@
           "h1_date": "2026-09-09",
           "h3_px": 4.46,
           "h3_date": "2026-09-11",
-          "h5_px": 4.355,
+          "h5_px": 4.36,
           "h5_date": "2026-09-15"
         },
         {
@@ -33779,7 +33779,7 @@
             "yday_mover"
           ],
           "open": 3.38,
-          "close": 3.39,
+          "close": 3.390000104904175,
           "day_pct": 0.3,
           "boxes": {
             "join": "bad",
@@ -33881,7 +33881,7 @@
             "yday_mover"
           ],
           "open": 4.34,
-          "close": 4.485,
+          "close": 4.485000133514404,
           "day_pct": 3.34,
           "boxes": {
             "join": "bad",
@@ -33972,7 +33972,7 @@
             "ohlc_hot"
           ],
           "open": 5.81,
-          "close": 5.99,
+          "close": 5.989999771118164,
           "day_pct": 3.1,
           "boxes": {
             "join": "bad",
@@ -34088,7 +34088,7 @@
             "ohlc_hot"
           ],
           "open": 9.86,
-          "close": 9.63,
+          "close": 9.630000114440918,
           "day_pct": -2.33,
           "boxes": {
             "join": "bad",
@@ -34204,7 +34204,7 @@
             "ohlc_hot"
           ],
           "open": 168.0,
-          "close": 168.46,
+          "close": 168.4600067138672,
           "day_pct": 0.27,
           "boxes": {
             "join": "good",
@@ -34265,7 +34265,7 @@
           ],
           "h1": -2.9,
           "h3": -14.52,
-          "h5": null,
+          "h5": -12.58,
           "side": "long",
           "why": [
             "Weather S=-13.95 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
@@ -34285,8 +34285,8 @@
           "h1_date": "2026-09-10",
           "h3_px": 143.6,
           "h3_date": "2026-09-14",
-          "h5_px": null,
-          "h5_date": null
+          "h5_px": 146.86,
+          "h5_date": "2026-09-16"
         },
         {
           "ticker": "SWKS",
@@ -34310,7 +34310,7 @@
             "ohlc_hot"
           ],
           "open": 75.27,
-          "close": 76.54,
+          "close": 76.54000091552734,
           "day_pct": 1.69,
           "boxes": {
             "join": "good",
@@ -34371,7 +34371,7 @@
           ],
           "h1": 11.64,
           "h3": 5.3,
-          "h5": null,
+          "h5": 20.39,
           "side": "long",
           "why": [
             "Weather S=-13.95 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
@@ -34391,8 +34391,8 @@
           "h1_date": "2026-09-10",
           "h3_px": 79.26,
           "h3_date": "2026-09-14",
-          "h5_px": null,
-          "h5_date": null
+          "h5_px": 90.62,
+          "h5_date": "2026-09-16"
         },
         {
           "ticker": "OCC",
@@ -34416,7 +34416,7 @@
             "earn_react"
           ],
           "open": 12.19,
-          "close": 13.7,
+          "close": 13.699999809265137,
           "day_pct": 12.39,
           "boxes": {
             "join": "good",
@@ -34481,7 +34481,7 @@
           ],
           "h1": 17.15,
           "h3": 8.29,
-          "h5": null,
+          "h5": 1.07,
           "side": "long",
           "why": [
             "Weather S=-13.95 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
@@ -34501,8 +34501,8 @@
           "h1_date": "2026-09-10",
           "h3_px": 13.2,
           "h3_date": "2026-09-14",
-          "h5_px": null,
-          "h5_date": null
+          "h5_px": 12.32,
+          "h5_date": "2026-09-16"
         },
         {
           "ticker": "LITE",
@@ -34526,7 +34526,7 @@
             "ohlc_hot"
           ],
           "open": 980.05,
-          "close": 988.98,
+          "close": 988.97998046875,
           "day_pct": 0.91,
           "boxes": {
             "join": "good",
@@ -34592,7 +34592,7 @@
           ],
           "h1": -4.53,
           "h3": -14.8,
-          "h5": null,
+          "h5": -12.33,
           "side": "long",
           "why": [
             "Weather S=-13.95 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
@@ -34612,8 +34612,8 @@
           "h1_date": "2026-09-10",
           "h3_px": 835.03,
           "h3_date": "2026-09-14",
-          "h5_px": null,
-          "h5_date": null
+          "h5_px": 859.19,
+          "h5_date": "2026-09-16"
         },
         {
           "ticker": "SKHY",
@@ -34637,7 +34637,7 @@
             "ohlc_hot"
           ],
           "open": 188.08,
-          "close": 198.63,
+          "close": 198.6300048828125,
           "day_pct": 5.61,
           "boxes": {
             "join": "good",
@@ -34698,7 +34698,7 @@
           ],
           "h1": 0.12,
           "h3": -6.62,
-          "h5": null,
+          "h5": -4.03,
           "side": "long",
           "why": [
             "Weather S=-13.95 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
@@ -34718,8 +34718,8 @@
           "h1_date": "2026-09-10",
           "h3_px": 175.63,
           "h3_date": "2026-09-14",
-          "h5_px": null,
-          "h5_date": null
+          "h5_px": 180.5,
+          "h5_date": "2026-09-16"
         },
         {
           "ticker": "DOCN",
@@ -34743,7 +34743,7 @@
             "ohlc_hot"
           ],
           "open": 125.86,
-          "close": 132.67,
+          "close": 132.6699981689453,
           "day_pct": 5.41,
           "boxes": {
             "join": "good",
@@ -34809,7 +34809,7 @@
           ],
           "h1": 4.12,
           "h3": -4.49,
-          "h5": null,
+          "h5": -6.83,
           "side": "long",
           "why": [
             "Weather S=-13.95 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
@@ -34829,8 +34829,8 @@
           "h1_date": "2026-09-10",
           "h3_px": 120.21,
           "h3_date": "2026-09-14",
-          "h5_px": null,
-          "h5_date": null
+          "h5_px": 117.26,
+          "h5_date": "2026-09-16"
         },
         {
           "ticker": "INTC",
@@ -34854,7 +34854,7 @@
             "ohlc_hot"
           ],
           "open": 102.7,
-          "close": 106.24,
+          "close": 106.23999786376953,
           "day_pct": 3.45,
           "boxes": {
             "join": "neutral",
@@ -34910,7 +34910,7 @@
           ],
           "h1": -2.32,
           "h3": -5.37,
-          "h5": null,
+          "h5": -1.9,
           "side": "long",
           "why": [
             "Weather S=-13.95 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
@@ -34930,8 +34930,8 @@
           "h1_date": "2026-09-10",
           "h3_px": 97.19,
           "h3_date": "2026-09-14",
-          "h5_px": null,
-          "h5_date": null
+          "h5_px": 100.75,
+          "h5_date": "2026-09-16"
         },
         {
           "ticker": "UGP",
@@ -34955,7 +34955,7 @@
             "flatten"
           ],
           "open": 7.46,
-          "close": 7.43,
+          "close": 7.429999828338623,
           "day_pct": -0.4,
           "boxes": {
             "join": "good",
@@ -35020,7 +35020,7 @@
           ],
           "h1": 1.34,
           "h3": -0.27,
-          "h5": null,
+          "h5": 0.13,
           "side": "long",
           "why": [
             "Weather S=-13.95 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
@@ -35040,8 +35040,8 @@
           "h1_date": "2026-09-10",
           "h3_px": 7.44,
           "h3_date": "2026-09-14",
-          "h5_px": null,
-          "h5_date": null
+          "h5_px": 7.47,
+          "h5_date": "2026-09-16"
         }
       ],
       "shorts": [
@@ -35067,7 +35067,7 @@
             "ohlc_hot"
           ],
           "open": 13.73,
-          "close": 13.28,
+          "close": 13.279999732971191,
           "day_pct": -3.28,
           "boxes": {
             "join": "bad",
@@ -35138,7 +35138,7 @@
           ],
           "h1": 6.77,
           "h3": 3.35,
-          "h5": null,
+          "h5": 6.34,
           "side": "short",
           "why": [
             "Weather S=-13.95 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
@@ -35158,8 +35158,8 @@
           "h1_date": "2026-09-10",
           "h3_px": 13.27,
           "h3_date": "2026-09-14",
-          "h5_px": null,
-          "h5_date": null
+          "h5_px": 12.86,
+          "h5_date": "2026-09-16"
         },
         {
           "ticker": "TGB",
@@ -35183,7 +35183,7 @@
             "yday_gainer"
           ],
           "open": 8.93,
-          "close": 8.93,
+          "close": 8.930000305175781,
           "day_pct": 0.0,
           "boxes": {
             "join": "bad",
@@ -35244,7 +35244,7 @@
           ],
           "h1": 10.19,
           "h3": 12.21,
-          "h5": null,
+          "h5": 9.29,
           "side": "short",
           "why": [
             "Weather S=-13.95 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
@@ -35264,8 +35264,8 @@
           "h1_date": "2026-09-10",
           "h3_px": 7.84,
           "h3_date": "2026-09-14",
-          "h5_px": null,
-          "h5_date": null
+          "h5_px": 8.1,
+          "h5_date": "2026-09-16"
         },
         {
           "ticker": "SGML",
@@ -35289,7 +35289,7 @@
             "yday_mover"
           ],
           "open": 10.41,
-          "close": 10.57,
+          "close": 10.569999694824219,
           "day_pct": 1.54,
           "boxes": {
             "join": "bad",
@@ -35344,7 +35344,7 @@
           ],
           "h1": 3.27,
           "h3": 14.41,
-          "h5": null,
+          "h5": 12.39,
           "side": "short",
           "why": [
             "Weather S=-13.95 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
@@ -35364,8 +35364,8 @@
           "h1_date": "2026-09-10",
           "h3_px": 8.91,
           "h3_date": "2026-09-14",
-          "h5_px": null,
-          "h5_date": null
+          "h5_px": 9.12,
+          "h5_date": "2026-09-16"
         },
         {
           "ticker": "VENU",
@@ -35391,7 +35391,7 @@
             "yday_mover"
           ],
           "open": 1.9,
-          "close": 1.8,
+          "close": 1.7999999523162842,
           "day_pct": -5.26,
           "boxes": {
             "join": "bad",
@@ -35447,7 +35447,7 @@
           ],
           "h1": 7.89,
           "h3": 7.89,
-          "h5": null,
+          "h5": 3.68,
           "side": "short",
           "why": [
             "Weather S=-13.95 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
@@ -35467,8 +35467,8 @@
           "h1_date": "2026-09-10",
           "h3_px": 1.75,
           "h3_date": "2026-09-14",
-          "h5_px": null,
-          "h5_date": null
+          "h5_px": 1.83,
+          "h5_date": "2026-09-16"
         },
         {
           "ticker": "SRPT",
@@ -35492,7 +35492,7 @@
             "yday_mover"
           ],
           "open": 20.81,
-          "close": 22.02,
+          "close": 22.020000457763672,
           "day_pct": 5.81,
           "boxes": {
             "join": "good",
@@ -35547,7 +35547,7 @@
           ],
           "h1": 1.39,
           "h3": -0.53,
-          "h5": null,
+          "h5": 0.19,
           "side": "short",
           "why": [
             "Weather S=-13.95 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
@@ -35567,8 +35567,8 @@
           "h1_date": "2026-09-10",
           "h3_px": 20.92,
           "h3_date": "2026-09-14",
-          "h5_px": null,
-          "h5_date": null
+          "h5_px": 20.77,
+          "h5_date": "2026-09-16"
         },
         {
           "ticker": "TRBG",
@@ -35592,7 +35592,7 @@
             "yday_mover"
           ],
           "open": 4.63,
-          "close": 4.45,
+          "close": 4.449999809265137,
           "day_pct": -3.89,
           "boxes": {
             "join": "bad",
@@ -35632,8 +35632,8 @@
             "sector bad"
           ],
           "h1": 3.46,
-          "h3": 8.21,
-          "h5": null,
+          "h3": null,
+          "h5": 7.56,
           "side": "short",
           "why": [
             "Weather S=-13.95 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
@@ -35647,10 +35647,10 @@
           ],
           "h1_px": 4.47,
           "h1_date": "2026-09-10",
-          "h3_px": 4.25,
+          "h3_px": null,
           "h3_date": "2026-09-14",
-          "h5_px": null,
-          "h5_date": null
+          "h5_px": 4.28,
+          "h5_date": "2026-09-16"
         },
         {
           "ticker": "DYN",
@@ -35674,7 +35674,7 @@
             "yday_mover"
           ],
           "open": 19.38,
-          "close": 19.19,
+          "close": 19.190000534057617,
           "day_pct": -0.98,
           "boxes": {
             "join": "good",
@@ -35735,7 +35735,7 @@
           ],
           "h1": 4.95,
           "h3": 4.44,
-          "h5": null,
+          "h5": 7.33,
           "side": "short",
           "why": [
             "Weather S=-13.95 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
@@ -35755,8 +35755,8 @@
           "h1_date": "2026-09-10",
           "h3_px": 18.52,
           "h3_date": "2026-09-14",
-          "h5_px": null,
-          "h5_date": null
+          "h5_px": 17.96,
+          "h5_date": "2026-09-16"
         },
         {
           "ticker": "EYPT",
@@ -35780,7 +35780,7 @@
             "yday_gainer"
           ],
           "open": 4.5,
-          "close": 4.34,
+          "close": 4.340000152587891,
           "day_pct": -3.56,
           "boxes": {
             "join": "bad",
@@ -35841,7 +35841,7 @@
           ],
           "h1": 5.56,
           "h3": 5.56,
-          "h5": null,
+          "h5": 18.0,
           "side": "short",
           "why": [
             "Weather S=-13.95 \u2264 -3 \u2014 live sleeve SITS. This name is ranked anyway so idiosyncratic green is not invisible.",
@@ -35861,8 +35861,8 @@
           "h1_date": "2026-09-10",
           "h3_px": 4.25,
           "h3_date": "2026-09-14",
-          "h5_px": null,
-          "h5_date": null
+          "h5_px": 3.69,
+          "h5_date": "2026-09-16"
         }
       ],
       "n_long_ok": 37,
@@ -35897,7 +35897,7 @@
             "ohlc_hot"
           ],
           "open": 60.66,
-          "close": 60.66,
+          "close": 60.65999984741211,
           "day_pct": 0.0,
           "boxes": {
             "join": "good",
@@ -36117,7 +36117,7 @@
             "ohlc_hot"
           ],
           "open": 57.8,
-          "close": 55.22,
+          "close": 55.220001220703125,
           "day_pct": -4.46,
           "boxes": {
             "join": "good",
@@ -36232,7 +36232,7 @@
             "yday_gainer"
           ],
           "open": 68.31,
-          "close": 69.34,
+          "close": 69.33999633789062,
           "day_pct": 1.51,
           "boxes": {
             "join": "good",
@@ -36452,7 +36452,7 @@
             "yday_gainer"
           ],
           "open": 0.79,
-          "close": 0.759,
+          "close": 0.7590000033378601,
           "day_pct": -4.41,
           "boxes": {
             "join": "good",
@@ -36516,7 +36516,7 @@
             "gen bad"
           ],
           "h1": -1.26,
-          "h3": -12.85,
+          "h3": -13.1,
           "h5": null,
           "side": "long",
           "why": [
@@ -36535,7 +36535,7 @@
           ],
           "h1_px": 0.784,
           "h1_date": "2026-09-11",
-          "h3_px": 0.692,
+          "h3_px": 0.69,
           "h3_date": "2026-09-15",
           "h5_px": null,
           "h5_date": null
@@ -36562,7 +36562,7 @@
             "flatten"
           ],
           "open": 7.44,
-          "close": 7.56,
+          "close": 7.559999942779541,
           "day_pct": 1.61,
           "boxes": {
             "join": "good",
@@ -36627,7 +36627,7 @@
             "sector good"
           ],
           "h1": 0.13,
-          "h3": 0.0,
+          "h3": -0.0,
           "h5": null,
           "side": "long",
           "why": [
@@ -36780,7 +36780,7 @@
             "yday_mover"
           ],
           "open": 3.43,
-          "close": 3.27,
+          "close": 3.2699999809265137,
           "day_pct": -4.66,
           "boxes": {
             "join": "bad",
@@ -36830,7 +36830,7 @@
             "sector bad"
           ],
           "h1": 2.04,
-          "h3": -1.46,
+          "h3": -1.17,
           "h5": null,
           "side": "short",
           "why": [
@@ -36848,7 +36848,7 @@
           ],
           "h1_px": 3.36,
           "h1_date": "2026-09-11",
-          "h3_px": 3.48,
+          "h3_px": 3.47,
           "h3_date": "2026-09-15",
           "h5_px": null,
           "h5_date": null
@@ -36875,7 +36875,7 @@
             "yday_mover"
           ],
           "open": 4.2,
-          "close": 4.47,
+          "close": 4.46999979019165,
           "day_pct": 6.43,
           "boxes": {
             "join": "bad",
@@ -36914,8 +36914,8 @@
             "gen bad",
             "sector bad"
           ],
-          "h1": -3.1,
-          "h3": 1.19,
+          "h1": -1.19,
+          "h3": -1.19,
           "h5": null,
           "side": "short",
           "why": [
@@ -36928,9 +36928,9 @@
             "no earnings date on the morning export",
             "Side lean: short \u00b7 idio -14"
           ],
-          "h1_px": 4.33,
+          "h1_px": 4.25,
           "h1_date": "2026-09-11",
-          "h3_px": 4.15,
+          "h3_px": 4.25,
           "h3_date": "2026-09-15",
           "h5_px": null,
           "h5_date": null
@@ -36957,7 +36957,7 @@
             "yday_mover"
           ],
           "open": 3.9,
-          "close": 4.04,
+          "close": 4.039999961853027,
           "day_pct": 3.59,
           "boxes": {
             "join": "bad",
@@ -37058,7 +37058,7 @@
             "probable"
           ],
           "open": 3.15,
-          "close": 3.14,
+          "close": 3.140000104904175,
           "day_pct": -0.32,
           "boxes": {
             "join": "bad",
@@ -37159,7 +37159,7 @@
             "ohlc_hot"
           ],
           "open": 56.14,
-          "close": 56.44,
+          "close": 56.439998626708984,
           "day_pct": 0.53,
           "boxes": {
             "join": "bad",
@@ -37265,7 +37265,7 @@
             "yday_mover"
           ],
           "open": 10.5,
-          "close": 10.56,
+          "close": 10.5600004196167,
           "day_pct": 0.57,
           "boxes": {
             "join": "neutral",
@@ -37354,7 +37354,7 @@
             "earn_react"
           ],
           "open": 4.0,
-          "close": 3.81,
+          "close": 3.809999942779541,
           "day_pct": -4.75,
           "boxes": {
             "join": "bad",
@@ -37455,7 +37455,7 @@
             "yday_mover"
           ],
           "open": 1.09,
-          "close": 1.025,
+          "close": 1.024999976158142,
           "day_pct": -6.39,
           "boxes": {
             "join": "bad",
@@ -37520,7 +37520,7 @@
             "sector bad"
           ],
           "h1": 6.85,
-          "h3": 9.22,
+          "h3": 9.59,
           "h5": null,
           "side": "short",
           "why": [
@@ -37539,7 +37539,7 @@
           ],
           "h1_px": 1.02,
           "h1_date": "2026-09-11",
-          "h3_px": 0.994,
+          "h3_px": 0.99,
           "h3_date": "2026-09-15",
           "h5_px": null,
           "h5_date": null
@@ -37577,7 +37577,7 @@
             "earn_react"
           ],
           "open": 164.43,
-          "close": 150.28,
+          "close": 150.27999877929688,
           "day_pct": -8.61,
           "boxes": {
             "join": "good",
@@ -37651,7 +37651,7 @@
             "sector good"
           ],
           "h1": -11.94,
-          "h3": null,
+          "h3": -14.59,
           "h5": null,
           "side": "long",
           "why": [
@@ -37670,8 +37670,8 @@
           ],
           "h1_px": 144.79,
           "h1_date": "2026-09-14",
-          "h3_px": null,
-          "h3_date": null,
+          "h3_px": 140.44,
+          "h3_date": "2026-09-16",
           "h5_px": null,
           "h5_date": null
         },
@@ -37698,7 +37698,7 @@
             "yday_gainer"
           ],
           "open": 52.55,
-          "close": 56.87,
+          "close": 56.869998931884766,
           "day_pct": 8.22,
           "boxes": {
             "join": "good",
@@ -37762,7 +37762,7 @@
             "sector good"
           ],
           "h1": -6.81,
-          "h3": null,
+          "h3": -4.09,
           "h5": null,
           "side": "long",
           "why": [
@@ -37781,8 +37781,8 @@
           ],
           "h1_px": 48.97,
           "h1_date": "2026-09-14",
-          "h3_px": null,
-          "h3_date": null,
+          "h3_px": 50.4,
+          "h3_date": "2026-09-16",
           "h5_px": null,
           "h5_date": null
         },
@@ -37808,7 +37808,7 @@
             "ohlc_hot"
           ],
           "open": 18.3,
-          "close": 18.45,
+          "close": 18.450000762939453,
           "day_pct": 0.82,
           "boxes": {
             "join": "good",
@@ -37872,7 +37872,7 @@
             "sector good"
           ],
           "h1": 2.08,
-          "h3": null,
+          "h3": -3.11,
           "h5": null,
           "side": "long",
           "why": [
@@ -37891,8 +37891,8 @@
           ],
           "h1_px": 18.68,
           "h1_date": "2026-09-14",
-          "h3_px": null,
-          "h3_date": null,
+          "h3_px": 17.73,
+          "h3_date": "2026-09-16",
           "h5_px": null,
           "h5_date": null
         },
@@ -37918,7 +37918,7 @@
             "yday_gainer"
           ],
           "open": 11.88,
-          "close": 11.81,
+          "close": 11.8100004196167,
           "day_pct": -0.59,
           "boxes": {
             "join": "good",
@@ -37982,7 +37982,7 @@
             "sector good"
           ],
           "h1": -1.26,
-          "h3": null,
+          "h3": -3.79,
           "h5": null,
           "side": "long",
           "why": [
@@ -38001,8 +38001,8 @@
           ],
           "h1_px": 11.73,
           "h1_date": "2026-09-14",
-          "h3_px": null,
-          "h3_date": null,
+          "h3_px": 11.43,
+          "h3_date": "2026-09-16",
           "h5_px": null,
           "h5_date": null
         },
@@ -38087,7 +38087,7 @@
             "sector good"
           ],
           "h1": -6.29,
-          "h3": null,
+          "h3": -3.84,
           "h5": null,
           "side": "long",
           "why": [
@@ -38106,8 +38106,8 @@
           ],
           "h1_px": 37.08,
           "h1_date": "2026-09-14",
-          "h3_px": null,
-          "h3_date": null,
+          "h3_px": 38.05,
+          "h3_date": "2026-09-16",
           "h5_px": null,
           "h5_date": null
         },
@@ -38133,7 +38133,7 @@
             "flatten"
           ],
           "open": 56.09,
-          "close": 57.08,
+          "close": 57.08000183105469,
           "day_pct": 1.77,
           "boxes": {
             "join": "good",
@@ -38192,7 +38192,7 @@
             "sector good"
           ],
           "h1": -10.91,
-          "h3": null,
+          "h3": -8.72,
           "h5": null,
           "side": "long",
           "why": [
@@ -38211,8 +38211,8 @@
           ],
           "h1_px": 49.97,
           "h1_date": "2026-09-14",
-          "h3_px": null,
-          "h3_date": null,
+          "h3_px": 51.2,
+          "h3_date": "2026-09-16",
           "h5_px": null,
           "h5_date": null
         },
@@ -38239,7 +38239,7 @@
             "yday_mover"
           ],
           "open": 10.95,
-          "close": 10.38,
+          "close": 10.380000114440918,
           "day_pct": -5.21,
           "boxes": {
             "join": "good",
@@ -38303,7 +38303,7 @@
             "sector good"
           ],
           "h1": -2.74,
-          "h3": null,
+          "h3": -5.57,
           "h5": null,
           "side": "long",
           "why": [
@@ -38322,8 +38322,8 @@
           ],
           "h1_px": 10.65,
           "h1_date": "2026-09-14",
-          "h3_px": null,
-          "h3_date": null,
+          "h3_px": 10.34,
+          "h3_date": "2026-09-16",
           "h5_px": null,
           "h5_date": null
         },
@@ -38351,7 +38351,7 @@
             "ohlc_hot"
           ],
           "open": 4.75,
-          "close": 4.82,
+          "close": 4.820000171661377,
           "day_pct": 1.47,
           "boxes": {
             "join": "good",
@@ -38408,7 +38408,7 @@
           ],
           "weather": [],
           "h1": 7.37,
-          "h3": null,
+          "h3": -1.05,
           "h5": null,
           "side": "long",
           "why": [
@@ -38426,8 +38426,8 @@
           ],
           "h1_px": 5.1,
           "h1_date": "2026-09-14",
-          "h3_px": null,
-          "h3_date": null,
+          "h3_px": 4.7,
+          "h3_date": "2026-09-16",
           "h5_px": null,
           "h5_date": null
         }
@@ -38455,7 +38455,7 @@
             "yday_gainer"
           ],
           "open": 0.85,
-          "close": 0.835,
+          "close": 0.8349999785423279,
           "day_pct": -1.76,
           "boxes": {
             "join": "bad",
@@ -38508,8 +38508,8 @@
           "weather": [
             "sector bad"
           ],
-          "h1": 2.0,
-          "h3": null,
+          "h1": null,
+          "h3": 10.59,
           "h5": null,
           "side": "short",
           "why": [
@@ -38526,10 +38526,10 @@
             "Tape RSI 41 \u00b7 MACD hist -0.0041",
             "Side lean: short \u00b7 idio -13"
           ],
-          "h1_px": 0.833,
+          "h1_px": null,
           "h1_date": "2026-09-14",
-          "h3_px": null,
-          "h3_date": null,
+          "h3_px": 0.76,
+          "h3_date": "2026-09-16",
           "h5_px": null,
           "h5_date": null
         },
@@ -38555,7 +38555,7 @@
             "yday_mover"
           ],
           "open": 18.56,
-          "close": 20.28,
+          "close": 20.280000686645508,
           "day_pct": 9.27,
           "boxes": {
             "join": "bad",
@@ -38609,7 +38609,7 @@
             "sector bad"
           ],
           "h1": -6.73,
-          "h3": null,
+          "h3": -3.83,
           "h5": null,
           "side": "short",
           "why": [
@@ -38628,8 +38628,8 @@
           ],
           "h1_px": 19.81,
           "h1_date": "2026-09-14",
-          "h3_px": null,
-          "h3_date": null,
+          "h3_px": 19.27,
+          "h3_date": "2026-09-16",
           "h5_px": null,
           "h5_date": null
         },
@@ -38655,7 +38655,7 @@
             "yday_mover"
           ],
           "open": 2.09,
-          "close": 2.06,
+          "close": 2.059999942779541,
           "day_pct": -1.44,
           "boxes": {
             "join": "bad",
@@ -38697,7 +38697,7 @@
           ],
           "weather": [],
           "h1": 0.96,
-          "h3": null,
+          "h3": 5.74,
           "h5": null,
           "side": "short",
           "why": [
@@ -38713,8 +38713,8 @@
           ],
           "h1_px": 2.07,
           "h1_date": "2026-09-14",
-          "h3_px": null,
-          "h3_date": null,
+          "h3_px": 1.97,
+          "h3_date": "2026-09-16",
           "h5_px": null,
           "h5_date": null
         },
@@ -38740,7 +38740,7 @@
             "yday_mover"
           ],
           "open": 13.03,
-          "close": 12.71,
+          "close": 12.710000038146973,
           "day_pct": -2.46,
           "boxes": {
             "join": "neutral",
@@ -38787,7 +38787,7 @@
           ],
           "weather": [],
           "h1": 2.99,
-          "h3": null,
+          "h3": 5.6,
           "h5": null,
           "side": "short",
           "why": [
@@ -38804,8 +38804,8 @@
           ],
           "h1_px": 12.64,
           "h1_date": "2026-09-14",
-          "h3_px": null,
-          "h3_date": null,
+          "h3_px": 12.3,
+          "h3_date": "2026-09-16",
           "h5_px": null,
           "h5_date": null
         },
@@ -38831,7 +38831,7 @@
             "ohlc_hot"
           ],
           "open": 55.98,
-          "close": 56.8,
+          "close": 56.79999923706055,
           "day_pct": 1.46,
           "boxes": {
             "join": "bad",
@@ -38890,7 +38890,7 @@
             "sector bad"
           ],
           "h1": -1.02,
-          "h3": null,
+          "h3": -3.84,
           "h5": null,
           "side": "short",
           "why": [
@@ -38909,8 +38909,8 @@
           ],
           "h1_px": 56.55,
           "h1_date": "2026-09-14",
-          "h3_px": null,
-          "h3_date": null,
+          "h3_px": 58.13,
+          "h3_date": "2026-09-16",
           "h5_px": null,
           "h5_date": null
         },
@@ -38936,7 +38936,7 @@
             "yday_mover"
           ],
           "open": 8.02,
-          "close": 8.14,
+          "close": 8.140000343322754,
           "day_pct": 1.5,
           "boxes": {
             "join": "bad",
@@ -38985,7 +38985,7 @@
             "sector bad"
           ],
           "h1": 2.24,
-          "h3": null,
+          "h3": -1.0,
           "h5": null,
           "side": "short",
           "why": [
@@ -39003,8 +39003,8 @@
           ],
           "h1_px": 7.84,
           "h1_date": "2026-09-14",
-          "h3_px": null,
-          "h3_date": null,
+          "h3_px": 8.1,
+          "h3_date": "2026-09-16",
           "h5_px": null,
           "h5_date": null
         },
@@ -39030,7 +39030,7 @@
             "ohlc_hot"
           ],
           "open": 3.37,
-          "close": 3.42,
+          "close": 3.4200000762939453,
           "day_pct": 1.48,
           "boxes": {
             "join": "bad",
@@ -39087,7 +39087,7 @@
           ],
           "weather": [],
           "h1": -12.46,
-          "h3": null,
+          "h3": -14.54,
           "h5": null,
           "side": "short",
           "why": [
@@ -39105,8 +39105,8 @@
           ],
           "h1_px": 3.79,
           "h1_date": "2026-09-14",
-          "h3_px": null,
-          "h3_date": null,
+          "h3_px": 3.86,
+          "h3_date": "2026-09-16",
           "h5_px": null,
           "h5_date": null
         },
@@ -39132,7 +39132,7 @@
             "yday_mover"
           ],
           "open": 3.52,
-          "close": 3.55,
+          "close": 3.549999952316284,
           "day_pct": 0.85,
           "boxes": {
             "join": "bad",
@@ -39196,7 +39196,7 @@
             "sector bad"
           ],
           "h1": -8.81,
-          "h3": null,
+          "h3": -14.2,
           "h5": null,
           "side": "short",
           "why": [
@@ -39215,8 +39215,8 @@
           ],
           "h1_px": 3.83,
           "h1_date": "2026-09-14",
-          "h3_px": null,
-          "h3_date": null,
+          "h3_px": 4.02,
+          "h3_date": "2026-09-16",
           "h5_px": null,
           "h5_date": null
         }
@@ -39255,7 +39255,7 @@
           ],
           "open": 55.6,
           "close": 55.41,
-          "day_pct": -0.35,
+          "day_pct": -0.34,
           "boxes": {
             "join": "good",
             "sector": "bad",
@@ -39318,7 +39318,7 @@
             "gen bad",
             "sector bad"
           ],
-          "h1": 0.49,
+          "h1": 0.5,
           "h3": null,
           "h5": null,
           "side": "long",
@@ -40207,8 +40207,8 @@
             "yday_gainer"
           ],
           "open": 0.34,
-          "close": 0.346,
-          "day_pct": 2.98,
+          "close": 0.35,
+          "day_pct": 2.94,
           "boxes": {
             "join": "bad",
             "sector": "bad",
@@ -40261,7 +40261,7 @@
             "gen bad",
             "sector bad"
           ],
-          "h1": 8.63,
+          "h1": 8.82,
           "h3": null,
           "h5": null,
           "side": "short",
@@ -40279,7 +40279,7 @@
             "Tape RSI 53 \u00b7 MACD hist -0.0056",
             "Side lean: short \u00b7 idio -9"
           ],
-          "h1_px": 0.307,
+          "h1_px": 0.31,
           "h1_date": "2026-09-15",
           "h3_px": null,
           "h3_date": null,
@@ -40309,7 +40309,7 @@
           ],
           "open": 0.21,
           "close": 0.1,
-          "day_pct": -52.38,
+          "day_pct": -50.0,
           "boxes": {
             "join": "neutral",
             "sector": "bad",
@@ -40342,7 +40342,7 @@
             "gen bad",
             "sector bad"
           ],
-          "h1": 38.1,
+          "h1": 35.0,
           "h3": null,
           "h5": null,
           "side": "short",
@@ -40971,7 +40971,7 @@
             "gen bad",
             "sector good"
           ],
-          "h1": null,
+          "h1": 3.07,
           "h3": null,
           "h5": null,
           "side": "long",
@@ -40989,8 +40989,8 @@
             "Tape RSI 68 \u00b7 MACD hist 1.109",
             "Side lean: long \u00b7 idio +20"
           ],
-          "h1_px": null,
-          "h1_date": null,
+          "h1_px": 188.83,
+          "h1_date": "2026-09-16",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -41079,7 +41079,7 @@
             "gen bad",
             "sector good"
           ],
-          "h1": null,
+          "h1": 3.77,
           "h3": null,
           "h5": null,
           "side": "long",
@@ -41097,8 +41097,8 @@
             "Tape RSI 61 \u00b7 MACD hist -0.0648",
             "Side lean: long \u00b7 idio +20"
           ],
-          "h1_px": null,
-          "h1_date": null,
+          "h1_px": 23.11,
+          "h1_date": "2026-09-16",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -41180,7 +41180,7 @@
             "gen bad",
             "sector good"
           ],
-          "h1": null,
+          "h1": 2.77,
           "h3": null,
           "h5": null,
           "side": "long",
@@ -41198,8 +41198,8 @@
             "Tape RSI 62 \u00b7 MACD hist -0.8503",
             "Side lean: long \u00b7 idio +17"
           ],
-          "h1_px": null,
-          "h1_date": null,
+          "h1_px": 239.45,
+          "h1_date": "2026-09-16",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -41228,7 +41228,7 @@
           ],
           "open": 368.13,
           "close": 375.09,
-          "day_pct": 1.89,
+          "day_pct": 1.81,
           "boxes": {
             "join": "good",
             "sector": "good",
@@ -41281,7 +41281,7 @@
             "gen bad",
             "sector good"
           ],
-          "h1": null,
+          "h1": 1.02,
           "h3": null,
           "h5": null,
           "side": "long",
@@ -41299,8 +41299,8 @@
             "Tape RSI 58 \u00b7 MACD hist -4.0365",
             "Side lean: long \u00b7 idio +17"
           ],
-          "h1_px": null,
-          "h1_date": null,
+          "h1_px": 372.2,
+          "h1_date": "2026-09-16",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -41387,7 +41387,7 @@
             "gen bad",
             "sector good"
           ],
-          "h1": null,
+          "h1": -0.82,
           "h3": null,
           "h5": null,
           "side": "long",
@@ -41405,8 +41405,8 @@
             "Tape RSI 57 \u00b7 MACD hist 0.235",
             "Side lean: long \u00b7 idio +16"
           ],
-          "h1_px": null,
-          "h1_date": null,
+          "h1_px": 27.65,
+          "h1_date": "2026-09-16",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -41435,7 +41435,7 @@
           ],
           "open": 2.62,
           "close": 2.54,
-          "day_pct": -3.05,
+          "day_pct": -3.79,
           "boxes": {
             "join": "good",
             "sector": "good",
@@ -41493,7 +41493,7 @@
             "gen bad",
             "sector good"
           ],
-          "h1": null,
+          "h1": -3.41,
           "h3": null,
           "h5": null,
           "side": "long",
@@ -41511,8 +41511,8 @@
             "Tape RSI 63 \u00b7 MACD hist -0.0011",
             "Side lean: long \u00b7 idio +15"
           ],
-          "h1_px": null,
-          "h1_date": null,
+          "h1_px": 2.55,
+          "h1_date": "2026-09-16",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -41591,7 +41591,7 @@
             "gen bad",
             "sector good"
           ],
-          "h1": null,
+          "h1": 4.21,
           "h3": null,
           "h5": null,
           "side": "long",
@@ -41608,8 +41608,8 @@
             "Tape RSI 66 \u00b7 MACD hist -0.0658",
             "Side lean: long \u00b7 idio +14"
           ],
-          "h1_px": null,
-          "h1_date": null,
+          "h1_px": 17.33,
+          "h1_date": "2026-09-16",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -41688,7 +41688,7 @@
             "gen bad",
             "sector good"
           ],
-          "h1": null,
+          "h1": 2.48,
           "h3": null,
           "h5": null,
           "side": "long",
@@ -41705,8 +41705,8 @@
             "Tape RSI 58 \u00b7 MACD hist -0.3526",
             "Side lean: long \u00b7 idio +14"
           ],
-          "h1_px": null,
-          "h1_date": null,
+          "h1_px": 19.82,
+          "h1_date": "2026-09-16",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -41787,7 +41787,7 @@
             "gen bad",
             "sector bad"
           ],
-          "h1": null,
+          "h1": -25.35,
           "h3": null,
           "h5": null,
           "side": "short",
@@ -41804,8 +41804,8 @@
             "Tape RSI 65 \u00b7 MACD hist 0.0023",
             "Side lean: short \u00b7 idio -10"
           ],
-          "h1_px": null,
-          "h1_date": null,
+          "h1_px": 1.78,
+          "h1_date": "2026-09-16",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -41834,7 +41834,7 @@
           ],
           "open": 1.34,
           "close": 1.32,
-          "day_pct": -1.49,
+          "day_pct": -2.22,
           "boxes": {
             "join": "bad",
             "sector": "good",
@@ -41887,7 +41887,7 @@
             "gen bad",
             "sector good"
           ],
-          "h1": null,
+          "h1": 3.7,
           "h3": null,
           "h5": null,
           "side": "short",
@@ -41905,8 +41905,8 @@
             "Tape RSI 61 \u00b7 MACD hist 0.0414",
             "Side lean: short \u00b7 idio -10"
           ],
-          "h1_px": null,
-          "h1_date": null,
+          "h1_px": 1.3,
+          "h1_date": "2026-09-16",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -41993,7 +41993,7 @@
             "gen bad",
             "sector good"
           ],
-          "h1": null,
+          "h1": -5.22,
           "h3": null,
           "h5": null,
           "side": "short",
@@ -42011,8 +42011,8 @@
             "Tape RSI 47 \u00b7 MACD hist -0.063",
             "Side lean: short \u00b7 idio -9"
           ],
-          "h1_px": null,
-          "h1_date": null,
+          "h1_px": 26.0,
+          "h1_date": "2026-09-16",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -42094,7 +42094,7 @@
             "gen bad",
             "sector good"
           ],
-          "h1": null,
+          "h1": 10.8,
           "h3": null,
           "h5": null,
           "side": "short",
@@ -42112,8 +42112,8 @@
             "Tape RSI 34 \u00b7 MACD hist 1.5568",
             "Side lean: short \u00b7 idio -8"
           ],
-          "h1_px": null,
-          "h1_date": null,
+          "h1_px": 7.02,
+          "h1_date": "2026-09-16",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -42195,7 +42195,7 @@
             "gen bad",
             "sector good"
           ],
-          "h1": null,
+          "h1": 4.35,
           "h3": null,
           "h5": null,
           "side": "short",
@@ -42213,8 +42213,8 @@
             "Tape RSI 87 OB \u00b7 MACD hist 0.2527",
             "Side lean: short \u00b7 idio -6"
           ],
-          "h1_px": null,
-          "h1_date": null,
+          "h1_px": 10.77,
+          "h1_date": "2026-09-16",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -42243,7 +42243,7 @@
           ],
           "open": 0.88,
           "close": 0.83,
-          "day_pct": -5.69,
+          "day_pct": -5.68,
           "boxes": {
             "join": "bad",
             "sector": "good",
@@ -42291,7 +42291,7 @@
             "gen bad",
             "sector good"
           ],
-          "h1": null,
+          "h1": 5.68,
           "h3": null,
           "h5": null,
           "side": "short",
@@ -42308,8 +42308,8 @@
             "Tape RSI 56 \u00b7 MACD hist -0.0187",
             "Side lean: short \u00b7 idio -6"
           ],
-          "h1_px": null,
-          "h1_date": null,
+          "h1_px": 0.83,
+          "h1_date": "2026-09-16",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -42337,8 +42337,8 @@
             "yday_mover"
           ],
           "open": 0.92,
-          "close": 0.9254,
-          "day_pct": 0.59,
+          "close": 0.93,
+          "day_pct": 1.09,
           "boxes": {
             "join": "good",
             "sector": "bad",
@@ -42391,7 +42391,7 @@
             "gen bad",
             "sector bad"
           ],
-          "h1": null,
+          "h1": -1.09,
           "h3": null,
           "h5": null,
           "side": "short",
@@ -42409,8 +42409,8 @@
             "Tape RSI 32 \u00b7 MACD hist -0.027",
             "Side lean: short \u00b7 idio -5"
           ],
-          "h1_px": null,
-          "h1_date": null,
+          "h1_px": 0.93,
+          "h1_date": "2026-09-16",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -42487,7 +42487,7 @@
             "gen bad",
             "sector good"
           ],
-          "h1": null,
+          "h1": -26.21,
           "h3": null,
           "h5": null,
           "side": "short",
@@ -42504,8 +42504,8 @@
             "Tape RSI 32 \u00b7 MACD hist -0.3455",
             "Side lean: short \u00b7 idio -4"
           ],
-          "h1_px": null,
-          "h1_date": null,
+          "h1_px": 13.0,
+          "h1_date": "2026-09-16",
           "h3_px": null,
           "h3_date": null,
           "h5_px": null,
@@ -42795,7 +42795,7 @@
           ],
           "open": 368.13,
           "close": 375.09,
-          "day_pct": 1.89,
+          "day_pct": 1.81,
           "boxes": {
             "join": "good",
             "sector": "good",
@@ -42960,7 +42960,7 @@
           ],
           "open": 2.62,
           "close": 2.54,
-          "day_pct": -3.05,
+          "day_pct": -3.79,
           "boxes": {
             "join": "good",
             "sector": "good",
@@ -43131,7 +43131,7 @@
           ],
           "open": 55.0,
           "close": 56.22,
-          "day_pct": 2.22,
+          "day_pct": 0.39,
           "boxes": {
             "join": "good",
             "sector": "good",
@@ -43710,7 +43710,7 @@
           ],
           "open": 1.28,
           "close": 1.17,
-          "day_pct": -8.59,
+          "day_pct": -7.87,
           "boxes": {
             "join": "neutral",
             "sector": "good",
@@ -44040,7 +44040,7 @@
           ],
           "open": 33.76,
           "close": 33.82,
-          "day_pct": 0.19,
+          "day_pct": 0.18,
           "boxes": {
             "join": "good",
             "sector": "good",
@@ -44289,8 +44289,8 @@
             "ohlc_hot"
           ],
           "open": 0.96,
-          "close": 0.903,
-          "day_pct": -6.1,
+          "close": 0.9,
+          "day_pct": -6.25,
           "boxes": {
             "join": "bad",
             "sector": "good",
@@ -44470,7 +44470,7 @@
           ],
           "open": 12.34,
           "close": 11.65,
-          "day_pct": -5.55,
+          "day_pct": -5.59,
           "boxes": {
             "join": "good",
             "sector": "good",
@@ -44637,7 +44637,7 @@
           ],
           "open": 2.4,
           "close": 2.22,
-          "day_pct": -7.5,
+          "day_pct": -7.88,
           "boxes": {
             "join": "bad",
             "sector": "good",
@@ -45289,7 +45289,7 @@
           ],
           "open": 70.12,
           "close": 74.39,
-          "day_pct": 6.09,
+          "day_pct": 6.07,
           "boxes": {
             "join": "bad",
             "sector": "good",
@@ -45628,7 +45628,7 @@
           ],
           "open": 26.88,
           "close": 26.67,
-          "day_pct": -0.78,
+          "day_pct": -1.33,
           "boxes": {
             "join": "good",
             "sector": "good",
