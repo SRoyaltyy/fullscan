@@ -1552,13 +1552,38 @@
   "NEA",
   "NEE",
   "NEM",
-  "NEO"
+  "NEO",
+  "NEOG",
+  "NET",
+  "NEWP",
+  "NEWT",
+  "NEXA",
+  "NEXT",
+  "NFE",
+  "NFGC",
+  "NFJ",
+  "NFLX",
+  "NG",
+  "NGNE",
+  "NGS",
+  "NGVC",
+  "NGVT",
+  "NHIC",
+  "NHP",
+  "NHS",
+  "NI",
+  "NIC",
+  "NIQ",
+  "NKE",
+  "NKLR",
+  "NKTX",
+  "NKX"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 80456,
- "hold_lab_n": 37957,
- "hold_base": 0.47177339166749527,
+ "n_hold": 81756,
+ "hold_lab_n": 38560,
+ "hold_base": 0.4716473408679485,
  "counts": {
   "A@L0_g": [
    60160,
@@ -109430,8 +109455,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 80456,
- "pair_hold_lab_n": 37957,
+ "pair_hold_n": 81756,
+ "pair_hold_lab_n": 38560,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -109540,5 +109565,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789565169
+ "flushed_unix": 1789565359
 }
