@@ -66,9 +66,13 @@ jobs:
           PYTHONPATH=. python3 -c "
           from src.test_day_board import (
               test_write_json_keeps_open_0930_lock_over_ranker_scores,
+              test_write_json_keeps_last_closed_elite_before_next_bell,
+              test_write_json_drops_yesterday_lock_after_bell,
               test_day_board_html_has_raw_poll,
           )
           test_write_json_keeps_open_0930_lock_over_ranker_scores()
+          test_write_json_keeps_last_closed_elite_before_next_bell()
+          test_write_json_drops_yesterday_lock_after_bell()
           test_day_board_html_has_raw_poll()
           print('day_board lock+html ok')
           "

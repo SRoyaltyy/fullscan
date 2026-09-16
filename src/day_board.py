@@ -262,6 +262,22 @@ def merge_ours_dir(ours_dir: str) -> None:
         print(f"[day-board] merged {ours_dir} -> {newest_date} ({n} lands)")
 
 
+def _elite_1d_rows(data: dict) -> tuple[list, list, dict] | None:
+    from . import elite_live_px as elp
+
+    if not data:
+        return None
+    quote = data.get("quote") or {}
+    if not elp.quote_is_elite_live(quote):
+        return None
+    sb = (data.get("strategies") or {}).get("stock_book_1d") or {}
+    buys = list(data.get("buy_1d") or sb.get("buy") or [])
+    sells = list(data.get("sell_1d") or sb.get("sell") or [])
+    if not (buys or sells):
+        return None
+    return buys, sells, quote
+
+
 def elite_ticket_1d(date: str) -> tuple[list, list, dict] | None:
     """On-disk 09:30 Elite 1d rows, or None.
 
@@ -269,8 +285,6 @@ def elite_ticket_1d(date: str) -> tuple[list, list, dict] | None:
     the live strip with ranker scores (no px). Prefer today's elite_live
     tickets when they exist.
     """
-    from . import elite_live_px as elp
-
     paths = (
         BOARD_DIR / f"{date}_open_0930.json",
         BOARD_DIR / "today_strategies.json",
@@ -280,23 +294,44 @@ def elite_ticket_1d(date: str) -> tuple[list, list, dict] | None:
     )
     for path in paths:
         data = _load_json(path)
-        if not data:
-            continue
         legal = str(data.get("clock_legal_for") or data.get("date") or "")
         if legal and legal != date:
             continue
-        quote = data.get("quote") or {}
-        if not elp.quote_is_elite_live(quote):
-            continue
-        sb = (data.get("strategies") or {}).get("stock_book_1d") or {}
-        buys = list(data.get("buy_1d") or sb.get("buy") or [])
-        sells = list(data.get("sell_1d") or sb.get("sell") or [])
-        if buys or sells:
-            return buys, sells, quote
+        live = _elite_1d_rows(data)
+        if live:
+            return live
     return None
 
 
-def write_json(board: dict) -> list[Path]:
+def last_closed_elite_1d(date: str) -> tuple[list, list, dict, str] | None:
+    """Last finished Elite book — used only before the next session bell.
+
+    Pre-open news_parse / join lands write date=today with empty 1d. Those
+    must not replace yesterday's after-open today.json, or RAW firstOk
+    paints an empty stub until 09:30. After the bell this returns None so
+    yesterday's lock cannot win.
+    """
+    paths = [BOARD_DIR / "today.json"]
+    paths.extend(sorted(BOARD_DIR.glob("*_open_0930.json"), reverse=True))
+    paths.extend((
+        BOARD_DIR / "today_strategies.json",
+        ROOT / "dashboard" / "today_strategies.json",
+    ))
+    for path in paths:
+        data = _load_json(path)
+        legal = str(data.get("clock_legal_for") or data.get("date") or "")
+        if not legal or legal == date:
+            continue
+        live = _elite_1d_rows(data)
+        if live:
+            buys, sells, quote = live
+            return buys, sells, quote, legal
+    return None
+
+
+def write_json(board: dict, when: datetime | None = None) -> list[Path]:
+    from .overlay_live_strip import after_bell
+
     BOARD_DIR.mkdir(parents=True, exist_ok=True)
     date = str(board.get("date") or _today())
     day_p = BOARD_DIR / f"{date}.json"
@@ -306,6 +341,7 @@ def write_json(board: dict) -> list[Path]:
     buys = list(sel.get("buy_1d") or [])
     sells = list(sel.get("sell_1d") or [])
     quote = dict(board.get("quote") or {})
+    strip_date = date
     live = elite_ticket_1d(date)
     if live:
         buys, sells, quote = live
@@ -319,6 +355,16 @@ def write_json(board: dict) -> list[Path]:
             f"buy={[r.get('ticker') for r in buys[:6] if isinstance(r, dict)]}",
             flush=True,
         )
+    elif not after_bell(when):
+        closed = last_closed_elite_1d(date)
+        if closed:
+            buys, sells, quote, strip_date = closed
+            print(
+                "[day-board] keep last-closed Elite 1d "
+                f"date={strip_date} "
+                f"buy={[r.get('ticker') for r in buys[:6] if isinstance(r, dict)]}",
+                flush=True,
+            )
     day_p.write_text(json.dumps(board, indent=2), encoding="utf-8")
     latest = {
         "date": date,
@@ -332,7 +378,7 @@ def write_json(board: dict) -> list[Path]:
     }
     latest_p.write_text(json.dumps(latest, indent=2), encoding="utf-8")
     today_payload = {
-        "date": date,
+        "date": strip_date,
         "generated_at": board.get("generated_at"),
         "overall": board.get("overall"),
         "ranker_ready": board.get("ranker_ready"),
