@@ -1,6 +1,6 @@
 {
   "date": "2026-09-16",
-  "generated_at": "2026-09-16T09:26:56.665348-04:00",
+  "generated_at": "2026-09-16T09:27:00.494136-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -2051,6 +2051,101 @@
         }
       ],
       "preview": "1d BUY DBX, BLFS, RDNT, FOXA, NYT, SPT, AVAH, TENB \u00b7 SELL EU, ACDC, PUMP, TLN, UUUU, BTU, UEC, AESI \u00b7 green 60 \u00b7 DELL, CRSR, WMG, STGW, FRSH, PRGS, FOXA, SAIC, FOX, DBX \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-16 BUY DBX, BLFS, RDNT, FOXA, NYT, SPT, AVAH, TENB \u00b7 SELL EU, ACDC, PUMP, TLN, UUUU, BTU, UEC, AESI \u00b7 2026-09-16 BUY DBX, BLFS, RDNT, FOXA, NYT, SPT, AVAH, TENB \u00b7 SELL EU, ACDC, PUMP, TLN, UUUU, BTU, UEC, AESI \u00b7 # Stock book \u2014 2026-09-16\n_Generated 2026-09-16T09:25:24.144452-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-09-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-16T09:26:59.532871-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 15045,
+          "preview": "2026-09-16 BUY DBX, BLFS, RDNT, FOXA, NYT, SPT, AVAH, TENB \u00b7 SELL EU, ACDC, PUMP, TLN, UUUU, BTU, UEC, AESI"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 1028,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-16.json",
+          "ok": true,
+          "reason": "",
+          "size": 99134,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-16_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 75061,
+          "preview": "2026-09-16 BUY DBX, BLFS, RDNT, FOXA, NYT, SPT, AVAH, TENB \u00b7 SELL EU, ACDC, PUMP, TLN, UUUU, BTU, UEC, AESI"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 688102,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-16_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 688102,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 951874,
+          "preview": "2026-09-16 BUY DBX, BLFS, RDNT, FOXA, NYT, SPT, AVAH, TENB \u00b7 SELL EU, ACDC, PUMP, TLN, UUUU, BTU, UEC, AESI"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 688102,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 75061,
+          "preview": "2026-09-16 BUY DBX, BLFS, RDNT, FOXA, NYT, SPT, AVAH, TENB \u00b7 SELL EU, ACDC, PUMP, TLN, UUUU, BTU, UEC, AESI"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 688102,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 688102,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 951874,
+          "preview": "2026-09-16 BUY DBX, BLFS, RDNT, FOXA, NYT, SPT, AVAH, TENB \u00b7 SELL EU, ACDC, PUMP, TLN, UUUU, BTU, UEC, AESI"
+        }
+      ],
+      "preview": "2026-09-16 BUY DBX, BLFS, RDNT, FOXA, NYT, SPT, AVAH, TENB \u00b7 SELL EU, ACDC, PUMP, TLN, UUUU, BTU, UEC, AESI \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-16 BUY DBX, BLFS, RDNT, FOXA, NYT, SPT, AVAH, TENB \u00b7 SELL EU, ACDC, PUMP, TLN, UUUU, BTU, UEC, AESI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-16 BUY DBX, BLFS, RDNT, FOXA, NYT, SPT, AVAH, TENB \u00b7 SELL EU, ACDC, PUMP, TLN, UUUU, BTU, UEC, AESI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-16 BUY DBX, BLFS, RDNT, FOXA, NYT, SPT, AVAH, TENB \u00b7 SELL EU, ACDC, PUMP, TLN, UUUU, BTU, UEC, AESI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock"
     }
   ],
   "href": {
