@@ -340,4 +340,4 @@ Integrity: **fill** = one Futubull cash account. **stitch** = daily mark overlay
 
 Dashboard: `dashboard/strategy-board/index.html`.
 
-Research overlay (not a wire): open-bell MARKET / LIMIT fills vs ideal 09:30 open live on [OPEN_BELL_SLIP.md](OPEN_BELL_SLIP.md). Does not change live `flatten_robust`, hard-red sit, or Webull paper.
+Research overlay (not a wire): open-bell MARKET / LIMIT fills vs ideal 09:30 open live on [OPEN_BELL_SLIP.md](OPEN_BELL_SLIP.md). $10k leftover-cash butterfly under messy fills: [BOOK_FILL_REALITY.md](BOOK_FILL_REALITY.md). Does not change live `flatten_robust`, hard-red sit, or Webull paper.

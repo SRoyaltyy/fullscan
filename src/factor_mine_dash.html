@@ -197,6 +197,15 @@ This is not a change to <code>flatten_robust</code> or sit policy.</p>
 <p class="mut"><a href="open-bell-slip.html" style="color:#93c5fd">full overlay</a>
  · <a href="https://github.com/SRoyaltyy/fullscan/blob/main/03_scoreboard/OPEN_BELL_SLIP.md" style="color:#93c5fd">OPEN_BELL_SLIP.md</a></p>
 </details>
+<details id="bookFillReality" class="how" open>
+<summary>$10k butterfly fill realities — research (not a wire)</summary>
+<p class="mut">Official-open cash book vs limit / market / partial / gap
+messiness. Live <code>flatten_robust</code>, hard-red sit, and Webull paper
+are untouched. Starts YES is a start-date chip, not a daily win rate.</p>
+<div id="bookFillRealityBody" class="mut">loading book-fill reality…</div>
+<p class="mut"><a href="book-fill-reality.html" style="color:#93c5fd">full overlay</a>
+ · <a href="https://github.com/SRoyaltyy/fullscan/blob/main/03_scoreboard/BOOK_FILL_REALITY.md" style="color:#93c5fd">BOOK_FILL_REALITY.md</a></p>
+</details>
 <div id="liveDay" class="audit" style="margin:16px 0 10px">
   <b>Today’s packet</b>
   <div class="mut" id="liveDayStamp">loading day board…</div>
@@ -1854,6 +1863,40 @@ window.addEventListener('resize', draw);
   function tryFetch(i){
     if(i>=urls.length){
       host.textContent = 'open-bell slip JSON not on this deploy yet. Run python -m src.open_bell_slip --write.';
+      return;
+    }
+    fetch(urls[i], {cache:'no-store'}).then(function(r){
+      if(!r.ok) throw 0; return r.json();
+    }).then(paint).catch(function(){ tryFetch(i+1); });
+  }
+  tryFetch(0);
+})();
+</script>
+<script>
+(function(){
+  var host = document.getElementById('bookFillRealityBody');
+  if(!host) return;
+  var urls = ['book_fill_reality.json','./book_fill_reality.json'];
+  function pct(v){ return v==null ? '—' : ((v>=0?'+':'')+Number(v).toFixed(2)+'%'); }
+  function paint(d){
+    var reps = d.reports || {};
+    var names = d.sleeves || Object.keys(reps);
+    var html = '<p>'+ (d.headline || d.note || '') +'</p>';
+    html += '<div class="tbl-wrap"><table><tr><th>Strategy</th><th>WORST</th>'
+      +'<th>mid</th><th>ideal</th><th>BEST</th></tr>';
+    names.forEach(function(name){
+      var cols = (reps[name] || {}).columns || {};
+      html += '<tr><td>'+name+'</td><td>'+pct((cols.market_adverse||{}).book_pct)
+        +'</td><td>'+pct((cols.market_mid||{}).book_pct)
+        +'</td><td>'+pct((cols.ideal||{}).book_pct)
+        +'</td><td>'+pct((cols.market_favorable||{}).book_pct)+'</td></tr>';
+    });
+    html += '</table></div>';
+    host.innerHTML = html;
+  }
+  function tryFetch(i){
+    if(i>=urls.length){
+      host.textContent = 'book-fill reality JSON not on this deploy yet. Run python -m src.book_fill_reality --write.';
       return;
     }
     fetch(urls[i], {cache:'no-store'}).then(function(r){

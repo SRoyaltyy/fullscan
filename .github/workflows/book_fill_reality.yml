@@ -1,0 +1,49 @@
+name: Book fill reality research
+
+# Research overlay: $10k leftover-cash butterfly under limit / market /
+# partial / gap fills. Does not change flatten_robust, hard-red sit, or
+# Webull paper. Regenerates 03_scoreboard/BOOK_FILL_REALITY.md and the
+# factor-mine / strategy-board overlay.
+
+on:
+  workflow_dispatch:
+    inputs:
+      from_date:
+        description: "First session YYYY-MM-DD"
+        required: false
+        default: "2026-08-13"
+      to_date:
+        description: "Last session YYYY-MM-DD (empty = panel end)"
+        required: false
+        default: ""
+  pull_request:
+    paths:
+      - "src/book_fill_reality.py"
+      - "src/test_book_fill_reality.py"
+      - ".github/workflows/book_fill_reality.yml"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: book-fill-reality
+  cancel-in-progress: true
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install pandas pyarrow
+      - name: Unit tests
+        run: PYTHONPATH=. python3 -m src.test_book_fill_reality
+      - name: Default book tests still pass
+        run: |
+          PYTHONPATH=. python3 -m src.test_open_bell_slip
+          PYTHONPATH=. python3 -c "from src.test_factor_mine import test_cash_book_whole_shares_fees_and_hard_red; test_cash_book_whole_shares_fees_and_hard_red()"

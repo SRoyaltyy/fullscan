@@ -582,6 +582,43 @@ Webull paper are untouched.</p>
     }});
 }})();
 </script>
+<details class="card" style="margin:12px 0" open>
+<summary>$10k butterfly fill realities — research (not a wire)</summary>
+<p class="muted">Official-open cash book vs limit / market / partial / gap
+messiness. Live <b>flatten_robust</b>, hard-red sit, and Webull paper are
+untouched. Starts YES is a start-date chip, not a daily win rate.</p>
+<div id="bookFillRealityBody" class="muted">loading book-fill reality…</div>
+<p class="muted"><a href="../factor-mine/book-fill-reality.html">full overlay</a></p>
+</details>
+<script>
+(function(){{
+  var host = document.getElementById('bookFillRealityBody');
+  if(!host) return;
+  function pct(v){{ return v==null ? '—' : ((v>=0?'+':'')+Number(v).toFixed(2)+'%'); }}
+  fetch('../factor-mine/book_fill_reality.json', {{cache:'no-store'}})
+    .then(function(r){{ if(!r.ok) throw 0; return r.json(); }})
+    .then(function(d){{
+      var reps = d.reports || {{}};
+      var names = d.sleeves || Object.keys(reps);
+      var html = '<p>'+ (d.headline || d.note || '') +'</p><div class="sheet"><table><tr>'
+        +'<th>Strategy</th><th>WORST</th><th>mid</th><th>ideal</th><th>BEST</th></tr>';
+      names.forEach(function(name){{
+        var cols = (reps[name] || {{}}).columns || {{}};
+        html += '<tr><td class="name">'+name+'</td><td>'
+          +pct((cols.market_adverse||{{}}).book_pct)+'</td><td>'
+          +pct((cols.market_mid||{{}}).book_pct)+'</td><td>'
+          +pct((cols.ideal||{{}}).book_pct)+'</td><td>'
+          +pct((cols.market_favorable||{{}}).book_pct)+'</td></tr>';
+      }});
+      html += '</table></div>';
+      host.innerHTML = html;
+    }})
+    .catch(function(){{
+      host.textContent = 'book-fill reality JSON not on this deploy yet. '
+        + 'Run python -m src.book_fill_reality --write.';
+    }});
+}})();
+</script>
 <div class="cards">
 <div class="card">Live method<b>flatten_robust</b></div>
 <div class="card">Live return<b>{live_ret}</b></div>
@@ -700,6 +737,8 @@ def write_md(rows: list[dict]) -> str:
         "Research overlay (not a wire): open-bell MARKET / LIMIT fills vs "
         "ideal 09:30 open live on "
         "[OPEN_BELL_SLIP.md](OPEN_BELL_SLIP.md). "
+        "$10k leftover-cash butterfly under messy fills: "
+        "[BOOK_FILL_REALITY.md](BOOK_FILL_REALITY.md). "
         "Does not change live `flatten_robust`, hard-red sit, or Webull paper.",
         "",
     ]
