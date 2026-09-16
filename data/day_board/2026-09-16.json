@@ -1,12 +1,12 @@
 {
   "date": "2026-09-16",
-  "generated_at": "2026-09-16T07:18:07.633125-04:00",
+  "generated_at": "2026-09-16T07:19:36.897540-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
@@ -508,11 +508,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -601,27 +601,27 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-16_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "horizons=5 names=185",
+          "size": 1395166
         },
         {
           "key": "book_md",
           "name": "Stock book MD",
           "path": "01_daily/2026-09-16_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 66258
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-09-16_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 1865
         },
         {
           "key": "paper",
@@ -637,8 +637,8 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-09-16 not in dashboard dates (last=2026-09-15)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-16)",
           "size": 5954895
         }
       ],
@@ -651,9 +651,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -663,17 +663,17 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-16_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "horizons=5 names=185",
+          "size": 1395166
         },
         {
           "key": "dash_html",
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-09-16 not in dashboard dates (last=2026-09-15)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-16)",
           "size": 5954895
         },
         {
@@ -700,8 +700,118 @@
     }
   ],
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "IT",
+        "score": 0.6395506423391805
+      },
+      {
+        "ticker": "IOT",
+        "score": 0.5820384201928585
+      },
+      {
+        "ticker": "CDW",
+        "score": 0.5476256573206599
+      },
+      {
+        "ticker": "SAIC",
+        "score": 0.7702633731157242
+      },
+      {
+        "ticker": "CARG",
+        "score": 0.8059014209891224
+      },
+      {
+        "ticker": "FOXA",
+        "score": 0.49146446458615833
+      },
+      {
+        "ticker": "AVAH",
+        "score": 0.7505101920948605
+      },
+      {
+        "ticker": "WAY",
+        "score": 0.7018334540202686
+      },
+      {
+        "ticker": "IMAX",
+        "score": 0.7199797437383761
+      },
+      {
+        "ticker": "TWST",
+        "score": 0.710870544837455
+      },
+      {
+        "ticker": "BLFS",
+        "score": 0.7106149196422884
+      },
+      {
+        "ticker": "ZD",
+        "score": 0.6941669934293841
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "AXSM",
+        "score": -0.4169815770164829
+      },
+      {
+        "ticker": "ROIV",
+        "score": -0.40844728382690987
+      },
+      {
+        "ticker": "SEER",
+        "score": -0.35040996133939967
+      },
+      {
+        "ticker": "MIST",
+        "score": -0.34906707481082133
+      },
+      {
+        "ticker": "TLSA",
+        "score": -0.3485483649111386
+      },
+      {
+        "ticker": "ALMS",
+        "score": -0.34646668966950317
+      },
+      {
+        "ticker": "EQ",
+        "score": -0.34142377879180635
+      },
+      {
+        "ticker": "BBIO",
+        "score": -0.3327470101813207
+      },
+      {
+        "ticker": "NAUT",
+        "score": -0.32653471777915966
+      },
+      {
+        "ticker": "ARWR",
+        "score": -0.32283219588808487
+      },
+      {
+        "ticker": "TLN",
+        "score": -0.32232203606804494
+      },
+      {
+        "ticker": "CELC",
+        "score": -0.30826755020941526
+      },
+      {
+        "ticker": "SNDX",
+        "score": -0.30770799370915164
+      },
+      {
+        "ticker": "BNTX",
+        "score": -0.30741147917259365
+      },
+      {
+        "ticker": "ALNY",
+        "score": -0.30720327841342665
+      }
+    ],
     "flatten": {},
     "general": {
       "said": "UP  5.297",
@@ -1511,6 +1621,59 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-16\n_Generated 2026-09-16T07:18:03.992550-04:00 \u00b7 export=data/exports/finviz_2026-09-16.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11641 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11634 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-16T07:19:36.207590-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-16_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1395166,
+          "preview": "1d BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO"
+        },
+        {
+          "path": "data/stock_book/2026-09-16_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 1865,
+          "preview": "green 104 \u00b7 NTAP, CRSR, IOT, KEYS, SONO, FRSH, NTNX, DT, WEX, BILL"
+        },
+        {
+          "path": "data/stock_book/2026-09-16_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2384,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-16_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12507,
+          "preview": "2026-09-16 BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12507,
+          "preview": "2026-09-16 BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO"
+        },
+        {
+          "path": "01_daily/2026-09-16_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 67349,
+          "preview": "# Stock book \u2014 2026-09-16\n_Generated 2026-09-16T07:18:24.686372-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO \u00b7 green 104 \u00b7 NTAP, CRSR, IOT, KEYS, SONO, FRSH, NTNX, DT, WEX, BILL \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-16 BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO \u00b7 2026-09-16 BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO \u00b7 # Stock book \u2014 2026-09-16\n_Generated 2026-09-16T07:18:24.686372-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
