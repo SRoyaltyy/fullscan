@@ -2201,6 +2201,7 @@ def test_restamp_dash_rewrites_current_template(tmp_path, monkeypatch) -> None:
     out = fm.restamp_dash()
     text = baked.read_text(encoding="utf-8")
     assert out["to_date"] == "2026-09-11"
+    assert out.get("pages_built_at")
     assert "NEW Cams Yday" in text
     assert "var FMSim={}" in text
     assert "OLD −N next to a name" not in text
