@@ -4,11 +4,11 @@
     {
       "name": "flatten_switch",
       "live": false,
-      "total_ret_pct": 9.97,
+      "total_ret_pct": 9.99,
       "max_dd_pct": 4.82,
       "n_trades": 44,
       "hit": 0.568,
-      "final_equity": 109966.41,
+      "final_equity": 109990.59,
       "min_fortnight": -1.2,
       "passed": false,
       "fees_total": 1704.53
@@ -16,11 +16,11 @@
     {
       "name": "flatten_3d",
       "live": false,
-      "total_ret_pct": 6.39,
+      "total_ret_pct": 6.42,
       "max_dd_pct": 4.82,
       "n_trades": 37,
       "hit": 0.514,
-      "final_equity": 106394.23,
+      "final_equity": 106417.63,
       "min_fortnight": -1.2,
       "passed": false,
       "fees_total": 1642.41
@@ -28,11 +28,11 @@
     {
       "name": "flatten_switch_60",
       "live": false,
-      "total_ret_pct": 9.18,
+      "total_ret_pct": 9.21,
       "max_dd_pct": 5.53,
       "n_trades": 42,
       "hit": 0.548,
-      "final_equity": 109184.25,
+      "final_equity": 109208.25,
       "min_fortnight": -1.93,
       "passed": false,
       "fees_total": 1724.88
@@ -40,11 +40,11 @@
     {
       "name": "flatten_overlap_55",
       "live": false,
-      "total_ret_pct": 9.53,
+      "total_ret_pct": 9.55,
       "max_dd_pct": 5.55,
       "n_trades": 45,
       "hit": 0.556,
-      "final_equity": 109526.44,
+      "final_equity": 109550.56,
       "min_fortnight": -1.96,
       "passed": false,
       "fees_total": 1747.4
@@ -52,35 +52,35 @@
     {
       "name": "flatten_robust",
       "live": true,
-      "total_ret_pct": 8.62,
-      "max_dd_pct": 7.12,
-      "n_trades": 72,
-      "hit": 0.458,
-      "final_equity": 108616.66,
+      "total_ret_pct": 2.08,
+      "max_dd_pct": 12.71,
+      "n_trades": 78,
+      "hit": 0.436,
+      "final_equity": 102076.75,
       "min_fortnight": -2.0,
       "passed": false,
-      "fees_total": 2622.22
+      "fees_total": 2827.52
     },
     {
       "name": "flatten_robust_ripper",
       "live": false,
-      "total_ret_pct": 8.62,
-      "max_dd_pct": 7.12,
-      "n_trades": 72,
-      "hit": 0.458,
-      "final_equity": 108616.66,
+      "total_ret_pct": 2.08,
+      "max_dd_pct": 12.71,
+      "n_trades": 78,
+      "hit": 0.436,
+      "final_equity": 102076.75,
       "min_fortnight": -2.0,
       "passed": false,
-      "fees_total": 2622.22
+      "fees_total": 2827.52
     },
     {
       "name": "flatten_overlap",
       "live": false,
-      "total_ret_pct": 9.54,
+      "total_ret_pct": 9.56,
       "max_dd_pct": 5.61,
       "n_trades": 45,
       "hit": 0.556,
-      "final_equity": 109539.57,
+      "final_equity": 109563.69,
       "min_fortnight": -2.02,
       "passed": false,
       "fees_total": 1672.97
@@ -88,11 +88,11 @@
     {
       "name": "flatten_rich",
       "live": false,
-      "total_ret_pct": 9.61,
+      "total_ret_pct": 9.63,
       "max_dd_pct": 6.04,
       "n_trades": 47,
       "hit": 0.553,
-      "final_equity": 109605.57,
+      "final_equity": 109629.69,
       "min_fortnight": -2.47,
       "passed": false,
       "fees_total": 1766.79
@@ -103,8 +103,8 @@
       "total_ret_pct": 4.13,
       "max_dd_pct": 5.7,
       "n_trades": 217,
-      "hit": 0.438,
-      "final_equity": 104126.16,
+      "hit": 0.442,
+      "final_equity": 104126.3,
       "min_fortnight": -2.68,
       "passed": false,
       "fees_total": 2998.01
@@ -112,14 +112,14 @@
     {
       "name": "core_switch",
       "live": false,
-      "total_ret_pct": 4.03,
+      "total_ret_pct": 4.04,
       "max_dd_pct": 5.02,
       "n_trades": 222,
-      "hit": 0.441,
-      "final_equity": 104034.84,
+      "hit": 0.446,
+      "final_equity": 104035.68,
       "min_fortnight": -2.87,
       "passed": false,
-      "fees_total": 3497.62
+      "fees_total": 3497.63
     },
     {
       "name": "hard_red_shorts",
@@ -127,20 +127,20 @@
       "total_ret_pct": 0.98,
       "max_dd_pct": 7.23,
       "n_trades": 223,
-      "hit": 0.444,
-      "final_equity": 100980.22,
+      "hit": 0.448,
+      "final_equity": 100981.2,
       "min_fortnight": -3.36,
       "passed": false,
-      "fees_total": 3754.58
+      "fees_total": 3754.59
     },
     {
       "name": "flatten_rotate",
       "live": false,
-      "total_ret_pct": 15.06,
+      "total_ret_pct": 15.09,
       "max_dd_pct": 7.34,
       "n_trades": 64,
       "hit": 0.547,
-      "final_equity": 115064.67,
+      "final_equity": 115089.99,
       "min_fortnight": -3.82,
       "passed": false,
       "fees_total": 2789.53
@@ -148,11 +148,11 @@
     {
       "name": "flatten_switch_full",
       "live": false,
-      "total_ret_pct": 11.13,
+      "total_ret_pct": 11.16,
       "max_dd_pct": 7.34,
       "n_trades": 57,
       "hit": 0.526,
-      "final_equity": 111133.64,
+      "final_equity": 111158.06,
       "min_fortnight": -3.82,
       "passed": false,
       "fees_total": 2169.21
@@ -160,11 +160,11 @@
     {
       "name": "flatten_cash_mover",
       "live": false,
-      "total_ret_pct": 10.7,
+      "total_ret_pct": 10.72,
       "max_dd_pct": 7.34,
       "n_trades": 69,
       "hit": 0.493,
-      "final_equity": 110695.26,
+      "final_equity": 110719.62,
       "min_fortnight": -3.82,
       "passed": false,
       "fees_total": 2345.3
@@ -172,11 +172,11 @@
     {
       "name": "flatten_switch_70",
       "live": false,
-      "total_ret_pct": 8.88,
+      "total_ret_pct": 8.9,
       "max_dd_pct": 7.42,
       "n_trades": 47,
       "hit": 0.553,
-      "final_equity": 108878.43,
+      "final_equity": 108902.37,
       "min_fortnight": -3.89,
       "passed": false,
       "fees_total": 1947.82
@@ -187,11 +187,11 @@
       "total_ret_pct": 3.04,
       "max_dd_pct": 5.84,
       "n_trades": 213,
-      "hit": 0.437,
-      "final_equity": 103037.41,
+      "hit": 0.441,
+      "final_equity": 103037.97,
       "min_fortnight": -4.01,
       "passed": false,
-      "fees_total": 3574.45
+      "fees_total": 3574.46
     },
     {
       "name": "switch_80",
@@ -199,20 +199,20 @@
       "total_ret_pct": 2.72,
       "max_dd_pct": 6.13,
       "n_trades": 216,
-      "hit": 0.44,
-      "final_equity": 102718.7,
+      "hit": 0.444,
+      "final_equity": 102719.26,
       "min_fortnight": -4.36,
       "passed": false,
-      "fees_total": 3958.99
+      "fees_total": 3959.0
     },
     {
       "name": "flatten_skip_blank_io",
       "live": false,
-      "total_ret_pct": 10.56,
+      "total_ret_pct": 10.58,
       "max_dd_pct": 6.74,
       "n_trades": 54,
       "hit": 0.556,
-      "final_equity": 110557.09,
+      "final_equity": 110581.39,
       "min_fortnight": -4.43,
       "passed": false,
       "fees_total": 2072.0
@@ -223,8 +223,8 @@
       "total_ret_pct": 0.96,
       "max_dd_pct": 6.48,
       "n_trades": 221,
-      "hit": 0.443,
-      "final_equity": 100957.98,
+      "hit": 0.448,
+      "final_equity": 100958.68,
       "min_fortnight": -4.68,
       "passed": false,
       "fees_total": 4174.26
@@ -235,8 +235,8 @@
       "total_ret_pct": 2.6,
       "max_dd_pct": 6.85,
       "n_trades": 213,
-      "hit": 0.432,
-      "final_equity": 102602.88,
+      "hit": 0.437,
+      "final_equity": 102603.3,
       "min_fortnight": -4.89,
       "passed": false,
       "fees_total": 3504.11
@@ -268,11 +268,11 @@
     {
       "name": "flatten_carry_book",
       "live": false,
-      "total_ret_pct": 9.94,
+      "total_ret_pct": 9.96,
       "max_dd_pct": 8.03,
       "n_trades": 66,
       "hit": 0.5,
-      "final_equity": 109938.9,
+      "final_equity": 109963.08,
       "min_fortnight": -5.4,
       "passed": false,
       "fees_total": 2071.68
@@ -280,11 +280,11 @@
     {
       "name": "flatten_switch_recycle",
       "live": false,
-      "total_ret_pct": 13.82,
+      "total_ret_pct": 13.85,
       "max_dd_pct": 8.03,
       "n_trades": 71,
       "hit": 0.521,
-      "final_equity": 113824.59,
+      "final_equity": 113849.61,
       "min_fortnight": -5.41,
       "passed": false,
       "fees_total": 2688.75
@@ -292,14 +292,14 @@
     {
       "name": "flatten_hard_red",
       "live": false,
-      "total_ret_pct": 10.73,
-      "max_dd_pct": 7.9,
+      "total_ret_pct": 7.91,
+      "max_dd_pct": 10.25,
       "n_trades": 73,
       "hit": 0.411,
-      "final_equity": 110733.51,
+      "final_equity": 107906.17,
       "min_fortnight": -5.53,
       "passed": false,
-      "fees_total": 2376.76
+      "fees_total": 2376.74
     },
     {
       "name": "switch_80_overlap",
@@ -316,11 +316,11 @@
     {
       "name": "flatten_blank_cash",
       "live": false,
-      "total_ret_pct": 9.37,
+      "total_ret_pct": 9.4,
       "max_dd_pct": 7.08,
       "n_trades": 76,
       "hit": 0.5,
-      "final_equity": 109373.29,
+      "final_equity": 109397.35,
       "min_fortnight": -6.5,
       "passed": false,
       "fees_total": 2368.92
@@ -331,12 +331,12 @@
       "total_ret_pct": -1.1,
       "max_dd_pct": 8.32,
       "n_trades": 187,
-      "hit": 0.422,
-      "final_equity": 98904.32,
+      "hit": 0.428,
+      "final_equity": 98904.46,
       "min_fortnight": -6.97,
       "passed": false,
       "fees_total": 3756.14
     }
   ],
-  "generated": "2026-09-14T10:04:20"
+  "generated": "2026-09-16T11:29:13"
 }

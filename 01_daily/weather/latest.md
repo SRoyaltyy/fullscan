@@ -5,7 +5,7 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 ## Snapshot
 
 - **Risk state:** ON (general predict up score +5.3, conf 0.712)
-- **Yields:** flat (fred_dgs10) | **Dollar:** flat (dxy) | **Oil:** falling | **VIX:** falling (ratio 0.88 via vix/vix3m) spot 17.1
+- **Yields:** flat (fred_dgs10) | **Dollar:** flat (dxy) | **Oil:** falling | **VIX:** falling (ratio 0.87 via vix/vix3m) spot 16.83
 - **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.15
 - **High-impact events:** 2 bullish vs 12 bearish
 
@@ -13,17 +13,17 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| sector:Basic Materials | 🌧️ hostile | medium | finviz sector median week -5.06% [tape] |
-| sector:Communication Services | ⛅ neutral | medium | finviz sector median week -0.35% [tape] |
-| sector:Consumer Cyclical | 🌧️ hostile | medium | finviz sector median week -3.25% [tape] |
-| sector:Consumer Defensive | 🌧️ hostile | medium | finviz sector median week -2.12% [tape] |
-| sector:Energy | ⛅ neutral | medium | finviz sector median week -0.10% [tape] |
-| sector:Financial | ⛅ neutral | medium | finviz sector median week -1.26% [tape] |
-| sector:Healthcare | 🌧️ hostile | medium | finviz sector median week -4.36% [tape] |
-| sector:Industrials | 🌧️ hostile | medium | finviz sector median week -3.30% [tape] |
-| sector:Real Estate | 🌧️ hostile | medium | finviz sector median week -2.62% [tape] |
+| sector:Basic Materials | 🌧️ hostile | medium | finviz sector median week -4.71% [tape] |
+| sector:Communication Services | ⛅ neutral | medium | finviz sector median week +0.11% [tape] |
+| sector:Consumer Cyclical | 🌧️ hostile | medium | finviz sector median week -2.27% [tape] |
+| sector:Consumer Defensive | 🌧️ hostile | medium | finviz sector median week -1.57% [tape] |
+| sector:Energy | ⛅ neutral | medium | finviz sector median week -0.05% [tape] |
+| sector:Financial | ⛅ neutral | medium | finviz sector median week -1.20% [tape] |
+| sector:Healthcare | 🌧️ hostile | medium | finviz sector median week -3.06% [tape] |
+| sector:Industrials | 🌧️ hostile | medium | finviz sector median week -2.38% [tape] |
+| sector:Real Estate | 🌧️ hostile | medium | finviz sector median week -2.10% [tape] |
 | sector:Technology | 🌤️ favorable | medium | news_judge SECTOR Technology [bullish] |
-| sector:Utilities | 🌧️ hostile | medium | finviz sector median week -3.75% [tape] |
+| sector:Utilities | 🌧️ hostile | medium | finviz sector median week -3.55% [tape] |
 
 ## Size
 

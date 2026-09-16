@@ -1,9 +1,9 @@
 # AB enriched — 2026-09-16
 
-- Base checklist: `stub/export`
+- Base checklist: `2026-09-16_ab_checklist.csv`
 - Peer map: `data/peers/correlations.csv` or `Correlations.xlsx` (5,511 names)
-- Peer RS: `2026-09-15_peer_rs.csv`
-- Export: `finviz_2026-09-15.csv`
+- Peer RS: `2026-09-16_peer_rs.csv`
+- Export: `finviz_2026-09-16.csv`
 
 ## Flag legend
 
@@ -18,28 +18,28 @@
 
 | Ticker | enr | base | ctx | rs_w | beat% | ind_med_w | sector | board | label |
 |--------|----:|-----:|----:|-----:|------:|----------:|--------|-------|-------|
-| A | +11 | +7 | +4 | +1.1 | 62% | +2.5 | Healthcare | up | LEAD,peers↑,ind↑,sec↑ |
-| CON | +11 | +7 | +4 | +3.3 | 90% | +0.7 | Healthcare | up | LEAD,peers↑,ind↑,sec↑ |
-| NUTX | +11 | +7 | +4 | +11.7 | 100% | +0.7 | Healthcare | up | LEAD,peers↑,ind↑,sec↑ |
-| DVN | +10 | +6 | +4 | +0.5 | 83% | +2.9 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
-| RSVR | +10 | +6 | +4 | +0.4 | 60% | +0.5 | Communication Serv | up | LEAD,peers↑,ind↑,sec↑ |
-| BTE | +10 | +6 | +4 | +0.2 | 50% | +2.9 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
-| WAY | +10 | +7 | +3 | +9.9 | 100% | +0.0 | Healthcare | up | LEAD,peers↑,sec↑ |
-| KGEI | +10 | +6 | +4 | +2.6 | 88% | +2.9 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
-| FOX | +10 | +6 | +4 | +2.2 | 88% | +0.5 | Communication Serv | up | LEAD,peers↑,ind↑,sec↑ |
-| OBE | +10 | +6 | +4 | +0.5 | 88% | +2.9 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
-| MVBF | +10 | +8 | +2 | +2.8 | 100% | +0.1 | Financial | down | LEAD,peers↑,ind↑,sec↓ |
-| CURI | +10 | +6 | +4 | +4.4 | 100% | +0.1 | Communication Serv | up | LEAD,peers↑,ind↑,sec↑ |
-| RDNT | +10 | +6 | +4 | +4.3 | 100% | +2.5 | Healthcare | up | LEAD,peers↑,ind↑,sec↑ |
-| FANG | +10 | +6 | +4 | +0.2 | 60% | +2.9 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
-| FOXA | +10 | +6 | +4 | +2.1 | 86% | +0.5 | Communication Serv | up | LEAD,peers↑,ind↑,sec↑ |
-| TMO | +10 | +6 | +4 | +5.2 | 100% | +2.5 | Healthcare | up | LEAD,peers↑,ind↑,sec↑ |
-| CLOV | +10 | +6 | +4 | +6.5 | 100% | +2.2 | Healthcare | up | LEAD,peers↑,ind↑,sec↑ |
-| ILMN | +10 | +6 | +4 | +3.8 | 56% | +2.5 | Healthcare | up | LEAD,peers↑,ind↑,sec↑ |
-| SU | +10 | +6 | +4 | +1.3 | 89% | +3.6 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
-| WMG | +10 | +6 | +4 | +2.1 | 80% | +0.5 | Communication Serv | up | LEAD,peers↑,ind↑,sec↑ |
-| VAL | +10 | +6 | +4 | +3.0 | 88% | +0.9 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
-| SM | +10 | +6 | +4 | +3.6 | 100% | +2.9 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
-| YPF | +10 | +6 | +4 | +4.8 | 100% | +3.6 | Energy | up | LEAD,peers↑,ind↑,sec↑ |
-| PNTG | +9 | +5 | +4 | +1.0 | 86% | +0.7 | Healthcare | up | LEAD,peers↑,ind↑,sec↑ |
-| PDEX | +9 | +7 | +2 | +0.7 | 67% | -1.5 | Healthcare | up | LEAD,peers↑,ind↓,sec↑ |
+| DSGX | +18 | +15 | +3 | +3.6 | 80% | +0.4 | Technology | — | LEAD,peers↑,ind↑ |
+| CFFN | +18 | +17 | +1 | -0.0 | 44% | +0.4 | Financial | — | LAG,peers↑,ind↑ |
+| SFL | +18 | +15 | +3 | +4.4 | 90% | +1.0 | Industrials | — | LEAD,peers↑,ind↑ |
+| PBR | +18 | +15 | +3 | +1.2 | 62% | +1.8 | Energy | — | LEAD,peers↑,ind↑ |
+| AVT | +18 | +15 | +3 | +0.7 | 78% | +1.8 | Technology | — | LEAD,peers↑,ind↑ |
+| SM | +18 | +15 | +3 | +4.0 | 100% | +2.7 | Energy | — | LEAD,peers↑,ind↑ |
+| NWBI | +18 | +15 | +3 | +0.1 | 50% | +0.4 | Financial | — | LEAD,peers↑,ind↑ |
+| LFST | +17 | +14 | +3 | +1.0 | 60% | +0.5 | Healthcare | — | LEAD,peers↑,ind↑ |
+| ADSK | +17 | +14 | +3 | +6.7 | 89% | +0.4 | Technology | — | LEAD,peers↑,ind↑ |
+| SHEL | +17 | +14 | +3 | +0.5 | 78% | +1.8 | Energy | — | LEAD,peers↑,ind↑ |
+| UHS | +17 | +14 | +3 | +1.2 | 83% | +0.5 | Healthcare | — | LEAD,peers↑,ind↑ |
+| WDS | +17 | +16 | +1 | -3.2 | 0% | +2.7 | Energy | — | LAG,peers↑,ind↑ |
+| CRM | +16 | +13 | +3 | +2.3 | 70% | +0.4 | Technology | — | LEAD,peers↑,ind↑ |
+| FOX | +16 | +13 | +3 | +1.2 | 75% | +0.9 | Communication Serv | — | LEAD,peers↑,ind↑ |
+| EC | +16 | +15 | +1 | -0.3 | 33% | +1.8 | Energy | — | LAG,peers↑,ind↑ |
+| CDNA | +16 | +15 | +1 | -1.8 | 33% | +2.3 | Healthcare | — | LAG,peers↑,ind↑ |
+| ANET | +16 | +17 | -1 | -1.9 | 44% | -3.5 | Technology | — | LAG,peers↑,ind↓ |
+| WWW | +16 | +17 | -1 | +0.4 | 57% | -1.4 | Consumer Cyclical | — | LEAD,peers↓,ind↓ |
+| ILMN | +16 | +13 | +3 | +5.9 | 67% | +2.3 | Healthcare | — | LEAD,peers↑,ind↑ |
+| IMAX | +16 | +13 | +3 | +2.4 | 88% | +0.9 | Communication Serv | — | LEAD,peers↑,ind↑ |
+| SLDE | +16 | +15 | +1 | — | — | +1.2 | Financial | — | ind↑ |
+| CON | +15 | +12 | +3 | +4.1 | 80% | +0.5 | Healthcare | — | LEAD,peers↑,ind↑ |
+| FUBO | +15 | +12 | +3 | +1.9 | 67% | +1.1 | Communication Serv | — | LEAD,peers↑,ind↑ |
+| MNDY | +15 | +12 | +3 | +9.0 | 100% | +0.4 | Technology | — | LEAD,peers↑,ind↑ |
+| MD | +15 | +14 | +1 | -1.4 | 22% | +0.5 | Healthcare | — | LAG,peers↑,ind↑ |
