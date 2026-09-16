@@ -1052,13 +1052,38 @@
   "HCKT",
   "HCSG",
   "HD",
-  "HDRN"
+  "HDRN",
+  "HDSN",
+  "HE",
+  "HEI",
+  "HESM",
+  "HG",
+  "HGTY",
+  "HGV",
+  "HHH",
+  "HIG",
+  "HIMS",
+  "HIPO",
+  "HIT",
+  "HITI",
+  "HIVE",
+  "HIW",
+  "HIX",
+  "HL",
+  "HLF",
+  "HLIO",
+  "HLIT",
+  "HLLY",
+  "HLNE",
+  "HLT",
+  "HLX",
+  "HMH"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 54529,
- "hold_lab_n": 25732,
- "hold_base": 0.47189568853270736,
+ "n_hold": 55820,
+ "hold_lab_n": 26323,
+ "hold_base": 0.47156932998925116,
  "counts": {
   "A@L0_g": [
    60160,
@@ -108930,8 +108955,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 54529,
- "pair_hold_lab_n": 25732,
+ "pair_hold_n": 55820,
+ "pair_hold_lab_n": 26323,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -109040,5 +109065,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789561394
+ "flushed_unix": 1789561581
 }
