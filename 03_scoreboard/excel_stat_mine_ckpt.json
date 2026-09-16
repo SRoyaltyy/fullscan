@@ -1277,13 +1277,38 @@
   "KRG",
   "KRMD",
   "KRMN",
-  "KRNT"
+  "KRNT",
+  "KRNY",
+  "KRO",
+  "KROS",
+  "KSS",
+  "KTB",
+  "KTF",
+  "KTOS",
+  "KURA",
+  "KVHI",
+  "KVUE",
+  "KVYO",
+  "KYIV",
+  "KYMR",
+  "KYTX",
+  "L",
+  "LAC",
+  "LAES",
+  "LAKE",
+  "LAMR",
+  "LASE",
+  "LAW",
+  "LAZ",
+  "LBRDA",
+  "LBRT",
+  "LBRX"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 66197,
- "hold_lab_n": 31215,
- "hold_base": 0.47154704895992267,
+ "n_hold": 67475,
+ "hold_lab_n": 31824,
+ "hold_base": 0.4716413486476473,
  "counts": {
   "A@L0_g": [
    60160,
@@ -109155,8 +109180,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 66197,
- "pair_hold_lab_n": 31215,
+ "pair_hold_n": 67475,
+ "pair_hold_lab_n": 31824,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -109265,5 +109290,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789563086
+ "flushed_unix": 1789563273
 }
