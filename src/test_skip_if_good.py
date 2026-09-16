@@ -414,7 +414,9 @@ def test_score_only_today_json_is_not_open_0930_good() -> None:
         with mock.patch.object(skip_if_good, "ROOT", root):
             assert skip_if_good.today_strip_is_live_open(
                 "2026-09-15", after) is False
-            assert skip_if_good.check_open_0930("2026-09-15") is False
+            # Freeze the session clock — after midnight ET a live now()
+            # treats 09-15 as "other date" and would skip the strip judge.
+            assert skip_if_good.check_open_0930("2026-09-15", after) is False
             (day / "today.json").write_text(json.dumps({
                 "date": "2026-09-15",
                 "quote": {"src": "elite_live", "after_open": True},
@@ -423,7 +425,7 @@ def test_score_only_today_json_is_not_open_0930_good() -> None:
             }), encoding="utf-8")
             assert skip_if_good.today_strip_is_live_open(
                 "2026-09-15", after) is True
-            assert skip_if_good.check_open_0930("2026-09-15") is True
+            assert skip_if_good.check_open_0930("2026-09-15", after) is True
 
 
 def test_yesterday_elite_tickets_are_not_todays_open() -> None:

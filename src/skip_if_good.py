@@ -650,20 +650,21 @@ def today_strip_is_live_open(date: str, when: datetime | None = None) -> bool:
     return elp.quote_is_elite_live(quote) or src.startswith("elite_live")
 
 
-def check_open_0930(date: str) -> bool:
+def check_open_0930(date: str, when: datetime | None = None) -> bool:
     """09:30 pack landed: live after-open tickets + connected paper snapshot.
 
     A 401 / missing last file must not skip — 09:35 orch should heal.
     A 07:47 session_open stamp without after_open is not done.
     Hard-red sit (0 tickets) still counts when the sandbox connected.
+    ``when`` is the session clock (tests freeze it). Live Actions uses now.
     Does not change flatten_robust.
     """
     if not check_strategy_tickets(date):
         return _log(False, "open_0930", date, "tickets not session-open")
-    if not tickets_are_live_open(date):
+    if not tickets_are_live_open(date, when):
         return _log(False, "open_0930", date,
                     "tickets not after-open live px")
-    if not today_strip_is_live_open(date):
+    if not today_strip_is_live_open(date, when):
         return _log(False, "open_0930", date,
                     "today.json 1d strip not Elite live px")
     path = ROOT / "data" / "sleeve_merge" / "webull_last.json"
