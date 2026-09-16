@@ -1,6 +1,6 @@
 {
   "date": "2026-09-16",
-  "generated_at": "2026-09-16T07:16:14.246103-04:00",
+  "generated_at": "2026-09-16T07:16:26.529994-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -41,24 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "general_predict",
-      "title": "General market predict",
-      "date": "2026-09-16",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-16T04:32:06.161175-04:00",
-      "files": [
-        {
-          "path": "01_daily/general/2026-09-16_predict.md",
-          "ok": true,
-          "reason": "",
-          "size": 15755,
-          "preview": "# Premarket Prediction \u2014 2026-09-16\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 5.297 (uncertainty multiplier \u00d71.0) | confidence 0.712\n>\n> **Good news vs bad news:** good +1.75 pts vs bad -2.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - Asia composite +0.64%\n> - ES/NQ +1.01%/+1.35% vs cash\n> - WTI/Brent overnight dip\n> - US-China ~$30bn tariff-cut talks\n> - HY contained 2.71\n>\n> **Bad news driving this:**\n> - FOMC/SEP/Warsh 2pm unprinted ~92% hike\n> - 1w 10Y +19bp near 5%\n> - leftover Hormuz Brent ~$108\n> - BoJ hike-to-1.25% Friday\n> - China credit still collapsing\n>\n> **market uncertainty: **elevated** | VIX 17.11 | policy-uncertainty index 215.48 (1d -202.54)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udfe2 Asia overnight session: +0.5 \u00d7 2.0 = +1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Overnight news & c"
-        }
-      ],
-      "preview": "# Premarket Prediction \u2014 2026-09-16\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 5.297 (uncertainty multiplier \u00d71.0) | confidence 0.712\n>\n> **Good news vs bad news:** good +1.75 pts vs bad -2.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - Asia composite +0.64%\n> - ES/NQ +1.01%/+1.35% vs cash\n> - WTI/Brent overnight dip\n> - US-China ~$30bn tariff-cut talks\n> - HY contained 2.71\n>\n> **Bad news driving this:**\n> - FOMC/SEP/Warsh 2pm unprinted ~92% hike\n> - 1w 10Y +19bp near 5%\n> - leftover Hormuz Brent ~$108\n> - BoJ hike-to-1.25% Friday\n> - China credit still collapsing\n>\n> **market uncertainty: **elevated** | VIX 17.11 | policy-uncertainty index 215.48 (1d -202.54)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udfe2 Asia overnight session: +0.5 \u00d7 2.0 = +1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Overnight news & c"
-    },
     {
       "key": "sector_board",
       "title": "Sector board",
@@ -226,6 +208,31 @@
         }
       ],
       "preview": "5900 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-16T07:16:26.158255-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-16_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9960,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.71, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 0.11, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.27, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.57, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -0.05, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.2, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -3.06, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -2.385, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-16_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5495,
+          "preview": "# Weather report \u2014 2026-09-16\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.71, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 0.11, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.27, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.57, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -0.05, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.2, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -3.06, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -2.385, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-16\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
