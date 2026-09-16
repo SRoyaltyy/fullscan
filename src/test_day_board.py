@@ -214,6 +214,10 @@ def test_day_board_html_has_raw_poll() -> None:
     assert "today && afterBell() && dates.includes(today)" in html
     assert 'board = {date: date, overall: "—", counts: {}, lands: [], processes: []}' in html
     assert "earlyBuys" in html
+    assert "function elitePx" in html
+    assert "elitePx(d) && ticketsToday" in html
+    assert "takeTicket1d && (earlyBuys.length || earlySells.length)" in html
+    assert "takeTicket1d && (liveBuys.length || liveSells.length)" in html
     assert "!buys && !sells && !afterBell()" in html
 
 

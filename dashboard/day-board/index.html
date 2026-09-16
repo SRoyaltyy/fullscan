@@ -108,6 +108,17 @@ function stripLooksLive(d){
   if(today && day && day !== today) return false;
   return !!(row.px != null && src.indexOf("elite_live")===0);
 }
+function elitePx(d){
+  if(!d || typeof d !== "object") return false;
+  const q = d.quote || {};
+  let row = (d.buy_1d && d.buy_1d[0]) || {};
+  if(!row.ticker){
+    const sb = (d.strategies && d.strategies.stock_book_1d) || {};
+    row = (sb.buy && sb.buy[0]) || {};
+  }
+  const src = String(row.px_src || q.src || "");
+  return !!(row.px != null && src.indexOf("elite_live")===0);
+}
 function firstOk(urls, ok){
   let i=0, last={};
   function next(){
@@ -200,7 +211,9 @@ function render(board){
       const sb0 = (d && d.strategies && d.strategies.stock_book_1d) || {};
       const earlyBuys = (d && d.buy_1d && d.buy_1d.length) ? d.buy_1d : (sb0.buy || []);
       const earlySells = (d && d.sell_1d && d.sell_1d.length) ? d.sell_1d : (sb0.sell || []);
-      if(earlyBuys.length || earlySells.length){
+      const ticketsToday = !sessionDate() || !String(d.date || d.clock_legal_for || "") || String(d.date || d.clock_legal_for || "") === sessionDate();
+      const takeTicket1d = afterBell() ? ticketsLookLive(d) : (elitePx(d) && ticketsToday);
+      if(takeTicket1d && (earlyBuys.length || earlySells.length)){
         $("sels").innerHTML = tickers(earlyBuys, "buy") + tickers(earlySells, "sell");
       }
       if(!d || !d.strategies) { box.textContent = "No today_strategies.json on main."; return; }
@@ -231,7 +244,7 @@ function render(board){
       const sb = (d.strategies && d.strategies.stock_book_1d) || {};
       const liveBuys = (d.buy_1d && d.buy_1d.length) ? d.buy_1d : (sb.buy || []);
       const liveSells = (d.sell_1d && d.sell_1d.length) ? d.sell_1d : (sb.sell || []);
-      if(liveBuys.length || liveSells.length){
+      if(takeTicket1d && (liveBuys.length || liveSells.length)){
         $("sels").innerHTML = tickers(liveBuys, "buy") + tickers(liveSells, "sell");
       }
       const keys = Object.keys(d.strategies);
