@@ -25,6 +25,7 @@ import argparse
 import json
 from datetime import datetime
 from pathlib import Path
+from statistics import median
 
 from . import book_era
 from . import factor_mine as fm
@@ -190,6 +191,150 @@ def research_survivor(*, disc: dict, hold: dict) -> bool:
     )
 
 
+def flip_recipe(rec: dict) -> dict:
+    """Same 09:30 list, opposite side. Research only — not a live recipe."""
+    base = dict(rec)
+    side = str(base.get("side") or "long")
+    base["side"] = "short" if side != "short" else "long"
+    name = str(base.get("name") or "rec")
+    if not name.endswith("_flip"):
+        base["name"] = f"{name}_flip"
+    base["note"] = f"polarity flip of {rec.get('name')} (research)"
+    base["flipped_from"] = rec.get("name")
+    return base
+
+
+def flip_fires(fires: list[dict], *, fees=None) -> list[dict]:
+    """Re-grade the same name-days on the opposite side. Fees re-applied."""
+    fees = fees if fees is not None else pt.load_fees()
+    out = []
+    for f in fires or []:
+        rec = dict(f)
+        side = "short" if (f.get("side") or "long") != "short" else "long"
+        rec["side"] = side
+        rec["recipe"] = f"{f.get('recipe') or ''}_flip"
+        entry, exit_px = f.get("entry"), f.get("exit")
+        pnl = None
+        if entry is not None and exit_px is not None:
+            pnl = round(hrs.after_fee_pnl(
+                1, float(entry), float(exit_px), side=side, fees=fees), 4)
+        rec["pnl"] = pnl
+        rec["win"] = None if pnl is None else bool(pnl > 0)
+        out.append(rec)
+    return out
+
+
+def both_lose(entry, exit_px, *, fees) -> bool | None:
+    """True when the move is inside the Futubull round-trip — both sides lose."""
+    if entry is None or exit_px is None:
+        return None
+    long_pnl = hrs.after_fee_pnl(
+        1, float(entry), float(exit_px), side="long", fees=fees)
+    short_pnl = hrs.after_fee_pnl(
+        1, float(entry), float(exit_px), side="short", fees=fees)
+    return bool(long_pnl <= 0 and short_pnl <= 0)
+
+
+def session_tape(panel: dict, date: str, *, bars=None, fees=None) -> dict:
+    """Median 09:30→16:00 of names on that morning's panel, plus fee dead-zone."""
+    fees = fees if fees is not None else pt.load_fees()
+    rows = (panel.get("by_date") or {}).get(date) or []
+    xs, longs, shorts, dead, graded = [], 0, 0, 0, 0
+    seen: set[str] = set()
+    for r in rows:
+        t = fm._tick(r.get("ticker"))
+        if not t or t in seen:
+            continue
+        seen.add(t)
+        o = fmb._px(t, date, "open", bars)
+        c = fmb._px(t, date, "close", bars)
+        if o is None or c is None or o <= 0:
+            if o is None or c is None:
+                store = hrs.clock_bar(t, date, None)
+                o = o if o is not None else store.get("open")
+                c = c if c is not None else store.get("close")
+            if o is None or c is None or o <= 0:
+                continue
+        xs.append(100.0 * (float(c) / float(o) - 1.0))
+        lp = hrs.after_fee_pnl(1, float(o), float(c), side="long", fees=fees)
+        sp = hrs.after_fee_pnl(1, float(o), float(c), side="short", fees=fees)
+        graded += 1
+        if lp > 0:
+            longs += 1
+        if sp > 0:
+            shorts += 1
+        if lp <= 0 and sp <= 0:
+            dead += 1
+    return {
+        "date": date,
+        "n": len(xs),
+        "median_oc": None if not xs else round(float(median(xs)), 4),
+        "mean_oc": None if not xs else round(sum(xs) / len(xs), 4),
+        "pct_up": None if not xs else round(
+            sum(1 for x in xs if x > 0) / len(xs), 4),
+        "n_graded": graded,
+        "long_win": None if not graded else round(longs / graded, 4),
+        "short_win": None if not graded else round(shorts / graded, 4),
+        "dead_zone": None if not graded else round(dead / graded, 4),
+        "n_dead": dead,
+    }
+
+
+def tape_split(panel: dict, cal: list[str], red_dates: list[str],
+               cutoff: str | None, *, bars=None, fees=None) -> dict:
+    """Hard-red vs other mornings, discovery vs holdout."""
+    red_set = set(red_dates)
+    days = [session_tape(panel, d, bars=bars, fees=fees) for d in cal]
+    def _pool(dates: list[str]) -> dict:
+        recs = [d for d in days if d["date"] in dates and d.get("n")]
+        meds = [d["median_oc"] for d in recs if d.get("median_oc") is not None]
+        ups = [d["pct_up"] for d in recs if d.get("pct_up") is not None]
+        dead = [d["dead_zone"] for d in recs if d.get("dead_zone") is not None]
+        lw = [d["long_win"] for d in recs if d.get("long_win") is not None]
+        sw = [d["short_win"] for d in recs if d.get("short_win") is not None]
+        return {
+            "n_days": len(recs),
+            "median_of_medians": None if not meds else round(float(median(meds)), 4),
+            "mean_pct_up": None if not ups else round(sum(ups) / len(ups), 4),
+            "mean_long_win": None if not lw else round(sum(lw) / len(lw), 4),
+            "mean_short_win": None if not sw else round(sum(sw) / len(sw), 4),
+            "mean_dead_zone": None if not dead else round(sum(dead) / len(dead), 4),
+            "days_up": sum(1 for m in meds if m > 0),
+            "days_down": sum(1 for m in meds if m < 0),
+        }
+    other = [d for d in cal if d not in red_set]
+    disc_red = [d for d in red_dates if cutoff and d < cutoff]
+    hold_red = [d for d in red_dates if cutoff and d >= cutoff]
+    return {
+        "hard_red": _pool(red_dates),
+        "other": _pool(other),
+        "disc_red": _pool(disc_red),
+        "holdout_red": _pool(hold_red),
+        "days": days,
+    }
+
+
+def score_flip_row(fires: list[dict], cutoff: str | None, *,
+                   name: str, hold, side: str, kind: str = "flip") -> dict:
+    parts = split_fires(fires, cutoff)
+    disc = hrs.fire_stats(parts["disc"])
+    hold_st = hrs.fire_stats(parts["hold"])
+    all_st = hrs.fire_stats(fires)
+    return {
+        "name": name,
+        "side": side,
+        "hold": hold,
+        "kind": kind,
+        "disc": slim_stats(disc),
+        "holdout": slim_stats(hold_st),
+        "all_red": slim_stats(all_st),
+        "research_ok": research_survivor(disc=disc, hold=hold_st),
+        "live_keep": live_keep(
+            n_fires=all_st.get("n_fires") or 0,
+            win_rate=all_st.get("win_rate")),
+    }
+
+
 def live_keep(*, n_fires: int, win_rate) -> dict:
     """Same published bar as HARD_RED_SIT. Does not change live sit."""
     return hrs.decide_verdict(
@@ -226,6 +371,12 @@ def score_horizons(panel: dict, rec: dict, red_dates: list[str],
                 n_fires=all_st.get("n_fires") or 0,
                 win_rate=all_st.get("win_rate")),
         })
+        flipped = flip_fires(fires, fees=fees)
+        flip_side = "short" if (rec.get("side") or "long") != "short" else "long"
+        rows.append(score_flip_row(
+            flipped, cutoff,
+            name=f"{rec.get('name')}_flip",
+            hold=hold, side=flip_side, kind="flip"))
     return rows
 
 
@@ -254,6 +405,10 @@ def score_combo_horizons(panel: dict, spec: dict, recs: list[dict],
             n_fires=all_st.get("n_fires") or 0,
             win_rate=all_st.get("win_rate")),
     })
+    rows.append(score_flip_row(
+        flip_fires(baked, fees=fees), cutoff,
+        name=f"{spec['name']}_flip", hold="baked",
+        side="mix", kind="combo_flip"))
     for hold in holds:
         fires = combo_name_day_fires(
             panel, recs, red_dates, cal, bars=bars, fees=fees, hold=hold)
@@ -276,6 +431,10 @@ def score_combo_horizons(panel: dict, spec: dict, recs: list[dict],
                 n_fires=all_st.get("n_fires") or 0,
                 win_rate=all_st.get("win_rate")),
         })
+        rows.append(score_flip_row(
+            flip_fires(fires, fees=fees), cutoff,
+            name=f"{spec['name']}_h{hold}_flip", hold=hold,
+            side="mix", kind="combo_flip"))
     return rows
 
 
@@ -426,6 +585,49 @@ def _n(v) -> str:
     return "—" if v is None else f"{float(v):+.2f}"
 
 
+def _render_tape(tape: dict, red: list[dict]) -> list[str]:
+    hr = tape.get("hard_red") or {}
+    ot = tape.get("other") or {}
+    dr = tape.get("disc_red") or {}
+    ho = tape.get("holdout_red") or {}
+    by_day = {d.get("date"): d for d in (tape.get("days") or [])}
+    lines = [
+        "| Window | Days | Median OC | Days up/down | Long win | Short win | Both lose (fees) |",
+        "|---|---:|---:|---:|---:|---:|---:|",
+        f"| Hard-red | {hr.get('n_days') or 0} | {_n(hr.get('median_of_medians'))}% | "
+        f"{hr.get('days_up') or 0}/{hr.get('days_down') or 0} | "
+        f"{_pct(hr.get('mean_long_win'))} | {_pct(hr.get('mean_short_win'))} | "
+        f"{_pct(hr.get('mean_dead_zone'))} |",
+        f"| Discovery red | {dr.get('n_days') or 0} | {_n(dr.get('median_of_medians'))}% | "
+        f"{dr.get('days_up') or 0}/{dr.get('days_down') or 0} | "
+        f"{_pct(dr.get('mean_long_win'))} | {_pct(dr.get('mean_short_win'))} | "
+        f"{_pct(dr.get('mean_dead_zone'))} |",
+        f"| Holdout red | {ho.get('n_days') or 0} | {_n(ho.get('median_of_medians'))}% | "
+        f"{ho.get('days_up') or 0}/{ho.get('days_down') or 0} | "
+        f"{_pct(ho.get('mean_long_win'))} | {_pct(ho.get('mean_short_win'))} | "
+        f"{_pct(ho.get('mean_dead_zone'))} |",
+        f"| Other mornings | {ot.get('n_days') or 0} | {_n(ot.get('median_of_medians'))}% | "
+        f"{ot.get('days_up') or 0}/{ot.get('days_down') or 0} | "
+        f"{_pct(ot.get('mean_long_win'))} | {_pct(ot.get('mean_short_win'))} | "
+        f"{_pct(ot.get('mean_dead_zone'))} |",
+        "",
+        "Per hard-red morning (panel names, 1-share after fees, same-day close):",
+        "",
+        "| Date | S | Median OC | % up | Long win | Short win | Both lose | n |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|",
+    ]
+    for r in red:
+        d = by_day.get(r.get("date")) or {}
+        lines.append(
+            f"| `{r.get('date')}` | {r.get('s')} | {_n(d.get('median_oc'))}% | "
+            f"{_pct(d.get('pct_up'))} | {_pct(d.get('long_win'))} | "
+            f"{_pct(d.get('short_win'))} | {_pct(d.get('dead_zone'))} | "
+            f"{d.get('n') or 0} |"
+        )
+    lines += ["", ""]
+    return lines
+
+
 def _row_md(r: dict) -> str:
     d = r.get("disc") or {}
     h = r.get("holdout") or {}
@@ -489,8 +691,21 @@ def render_md(payload: dict) -> str:
         "",
         f"Recipes scored: **{payload.get('n_recipes')}**. "
         f"Combo specs: **{payload.get('n_combos')}**. "
-        f"Name-day rows: **{payload.get('n_rows')}**.",
+        f"Name-day rows: **{payload.get('n_rows')}** "
+        f"(includes polarity flips).",
         "",
+        "## Why the lists lose",
+        "",
+        "Morning S is already known at 09:30. The gap has printed. "
+        "These books grade the **residual** (official open → horizon close), "
+        "not the overnight. That residual is not one-way: some hard-red "
+        "mornings bounce after the open, some keep dumping. The 09:30 "
+        "lists are yesterday-hot / camera-green names — buying yesterday's "
+        "winners into a red weather print. Fees eat the small moves: "
+        "when the open→close is inside the Futubull round-trip, "
+        "**long and short both lose**.",
+        "",
+        *_render_tape(payload.get("tape") or {}, red),
         "## Holdout survivors",
         "",
     ]
@@ -534,6 +749,54 @@ def render_md(payload: dict) -> str:
         "|---|---|---:|---:|---:|---:|---:|---|---|",
     ]
     for r in leaders:
+        lines.append(_row_md(r))
+    lines += [
+        "",
+        "## Polarity flips (fade the same 09:30 list)",
+        "",
+        "Same names, opposite side, same fees and time-split. "
+        "A long that lost 60% of the time is **not** automatically a "
+        "40% short — the fee dead-zone makes both sides lose on small "
+        "moves. Flip survivors still need discovery **and** holdout "
+        f">{100 * RESEARCH_WIN:.0f}% on ≥{RESEARCH_MIN_FIRES} fires.",
+        "",
+    ]
+    flips = payload.get("flip_survivors") or []
+    if not flips:
+        lines += [
+            f"**Flip survivors: {payload.get('n_flip_ok') or 0}.** "
+            "No polarity flip cleared both windows.",
+            "",
+        ]
+    else:
+        lines += [
+            f"**Flip survivors: {len(flips)}.**",
+            "",
+            "| Sleeve | Side | Hold | Disc n/win | Holdout n/win | "
+            "All-red n/win | All-red $ | Research | Live KEEP |",
+            "|---|---|---:|---:|---:|---:|---:|---|---|",
+        ]
+        for r in flips:
+            lines.append(_row_md(r))
+        lines.append("")
+    lines += [
+        "Flip discovery leaders (not confirmed):",
+        "",
+        "| Sleeve | Side | Hold | Disc n/win | Holdout n/win | "
+        "All-red n/win | All-red $ | Research | Live KEEP |",
+        "|---|---|---:|---:|---:|---:|---:|---|---|",
+    ]
+    for r in payload.get("flip_disc_leaders") or []:
+        lines.append(_row_md(r))
+    lines += [
+        "",
+        "Flip holdout leaders (hidden window, not a KEEP):",
+        "",
+        "| Sleeve | Side | Hold | Disc n/win | Holdout n/win | "
+        "All-red n/win | All-red $ | Research | Live KEEP |",
+        "|---|---|---:|---:|---:|---:|---:|---|---|",
+    ]
+    for r in payload.get("flip_holdout_leaders") or []:
         lines.append(_row_md(r))
     lines += [
         "",
@@ -664,6 +927,16 @@ def run(*, from_date: str = book_era.DASHBOARD_START,
             panel, spec, recs, red_dates, cal, cutoff,
             bars=bars, fees=fees))
 
+    tape = tape_split(
+        panel, cal, red_dates, cutoff, bars=bars, fees=fees)
+    flip_rows = [
+        r for r in rows
+        if str(r.get("kind") or "") in ("flip", "combo_flip")
+        or str(r.get("name") or "").endswith("_flip")
+    ]
+    flip_survivors = [r for r in flip_rows if r.get("research_ok")]
+    flip_leaders = pick_disc_leaders(flip_rows, side=None, limit=TOP_DISC)
+    flip_hold_leaders = pick_holdout_leaders(flip_rows, limit=TOP_DISC)
     survivors = [r for r in rows if r.get("research_ok")]
     survivors.sort(key=lambda r: (
         _rank_key(r.get("holdout") or {}),
@@ -726,7 +999,8 @@ def run(*, from_date: str = book_era.DASHBOARD_START,
         )
     else:
         why = (
-            "No holdout survivor. Discovery teases that miss the hidden "
+            "No holdout survivor — including polarity flips and the "
+            "existing shorts. Discovery teases that miss the hidden "
             "red window stay KILL. Live sit stands."
         )
     payload = {
@@ -750,8 +1024,13 @@ def run(*, from_date: str = book_era.DASHBOARD_START,
         "n_combos": len(specs),
         "n_rows": len(rows),
         "n_research_ok": len(survivors),
+        "n_flip_ok": len(flip_survivors),
         "n_live_keep": n_keep,
         "survivors": survivors,
+        "flip_survivors": flip_survivors,
+        "flip_disc_leaders": flip_leaders,
+        "flip_holdout_leaders": flip_hold_leaders,
+        "tape": tape,
         "disc_leaders": leaders,
         "holdout_leaders": hold_leaders,
         "live_combo": live_books,

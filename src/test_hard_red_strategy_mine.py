@@ -297,6 +297,54 @@ def test_run_synthetic_picks_holdout_not_full_sample() -> None:
     assert scored["disc"]["win_rate"] == 1.0
     assert scored["holdout"]["win_rate"] == 0.0
     assert scored["research_ok"] is False
+    # Fade of the same list wins the hidden window and loses discovery.
+    flips = [r for r in (payload.get("flip_survivors") or [])
+             if r["name"] == "t_hot_flip"]
+    assert flips == []
+    tape = payload.get("tape") or {}
+    assert (tape.get("hard_red") or {}).get("n_days") == 8
+    assert (tape.get("holdout_red") or {}).get("days_down", 0) >= 1
+
+
+def test_polarity_flip_and_fee_dead_zone() -> None:
+    rec = fm.make_recipe("t_long", universe="ohlc_hot", hold=1)
+    flipped = hrm.flip_recipe(rec)
+    assert flipped["side"] == "short"
+    assert flipped["name"] == "t_long_flip"
+    assert hrm.flip_recipe(flipped)["side"] == "long"
+    fires = [{
+        "date": "2026-08-18", "ticker": "AAA", "side": "long",
+        "hold": 1, "entry": 10.0, "exit": 8.0, "exit_date": "2026-08-18",
+        "pnl": -2.0, "win": False, "recipe": "t_long",
+    }]
+    opp = hrm.flip_fires(fires, fees=ZERO_FEES)
+    assert opp[0]["side"] == "short"
+    assert opp[0]["pnl"] > 0 and opp[0]["win"] is True
+    # Tiny move: both sides lose once Futubull fees apply.
+    fat = {
+        "commission_per_share": 0.5,
+        "commission_min_per_order": 0.5,
+        "commission_max_pct_of_amount": 1.0,
+        "platform_per_share": 0.5,
+        "platform_min_per_order": 0.5,
+        "platform_max_pct_of_amount": 1.0,
+        "settlement_per_share": 0.0,
+        "regulatory_pct_of_amount_sell_only": 0.0,
+        "regulatory_min_per_order": 0.0,
+        "taf_per_share_sell_only": 0.0,
+        "taf_min_per_order": 0.0,
+        "taf_max_per_order": 0.0,
+    }
+    assert hrm.both_lose(10.0, 10.05, fees=fat) is True
+    assert hrm.both_lose(10.0, 10.05, fees=ZERO_FEES) is False
+    day = hrm.session_tape(
+        _panel([_row("2026-08-18", "AAA", sources=["ohlc_hot"])],
+               dates=["2026-08-18"]),
+        "2026-08-18",
+        bars={("AAA", "2026-08-18"): {"open": 10.0, "close": 11.0}},
+        fees=ZERO_FEES)
+    assert day["median_oc"] == 10.0
+    assert day["long_win"] == 1.0 and day["short_win"] == 0.0
 
 
 def test_default_callers_still_sit() -> None:
@@ -320,8 +368,9 @@ def main() -> None:
     test_allow_mode_takes_open_on_red()
     test_research_survivor_and_live_keep()
     test_run_synthetic_picks_holdout_not_full_sample()
+    test_polarity_flip_and_fee_dead_zone()
     test_default_callers_still_sit()
-    print("test_hard_red_strategy_mine: 11 ok")
+    print("test_hard_red_strategy_mine: 12 ok")
 
 
 if __name__ == "__main__":
