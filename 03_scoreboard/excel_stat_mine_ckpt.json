@@ -1652,13 +1652,38 @@
   "OABI",
   "OBDC",
   "OBE",
-  "OBIO"
+  "OBIO",
+  "OBK",
+  "OC",
+  "OCFC",
+  "OCGN",
+  "OCSL",
+  "OCUL",
+  "ODTX",
+  "OEC",
+  "OFIX",
+  "OFRM",
+  "OGC",
+  "OGI",
+  "OGN",
+  "OHI",
+  "OI",
+  "OII",
+  "OKLO",
+  "OKTA",
+  "OKUR",
+  "OLLI",
+  "OLMA",
+  "OM",
+  "OMCL",
+  "OMDA",
+  "OMER"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 85656,
- "hold_lab_n": 40412,
- "hold_base": 0.4717941533576165,
+ "n_hold": 86956,
+ "hold_lab_n": 41014,
+ "hold_base": 0.4716638299829799,
  "counts": {
   "A@L0_g": [
    60160,
@@ -109530,8 +109555,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 85656,
- "pair_hold_lab_n": 40412,
+ "pair_hold_n": 86956,
+ "pair_hold_lab_n": 41014,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -109640,5 +109665,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789565929
+ "flushed_unix": 1789566121
 }
