@@ -1686,7 +1686,7 @@ function pagesBuiltDate(){
   return String(raw).slice(0,10);
 }
 function sessionDate(){
-  return window.__FM_SESSION || '';
+  return window.__FM_SESSION || D.session_date || '';
 }
 function packStampText(){
   return 'pack is '+(packDate()||'?')+', Pages built '+(pagesBuiltDate()||'?');

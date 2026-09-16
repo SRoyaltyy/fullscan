@@ -146,6 +146,7 @@ def test_dash_template_has_session_and_pack_stamp() -> None:
     assert "pack is " in html
     assert "Pages built " in html
     assert "paintSessionStamps" in html
+    assert "D.session_date" in html
     assert "Six effectiveness metrics (cash book) · " in html
 
 

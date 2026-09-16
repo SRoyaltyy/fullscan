@@ -2532,6 +2532,15 @@ def write_dash_html(payload: dict) -> Path:
     # Pack to_date / generated_at stay with the cash book. Pages built
     # is this bake so a 9/15 cash-start is not read as a missing pack.
     payload["pages_built_at"] = datetime.now(tl.ET).isoformat()
+    today_p = DASH_DIR / "today.json"
+    if today_p.is_file():
+        try:
+            td = json.loads(today_p.read_text(encoding="utf-8"))
+        except (OSError, ValueError, json.JSONDecodeError):
+            td = {}
+        sess = str((td or {}).get("date") or "")
+        if sess:
+            payload["session_date"] = sess
     DASH_DIR.mkdir(parents=True, exist_ok=True)
     dest = DASH_DIR / "index.html"
     if not TEMPLATE.is_file():
