@@ -219,6 +219,11 @@
 <div id="liveBook" class="live-book" data-live-book="1">
   <div class="live-book-kicker">Today's book (live from main)</div>
   <div class="live-book-body">Loading book…</div>
+<div id="holdLive" class="live-book" data-hold-live="1">
+  <div class="live-book-kicker" id="holdLiveBanner">Elite Overview as of —</div>
+  <div class="live-book-date" id="holdLiveStamp">open lots on the $10k butterfly — not the looker list</div>
+  <div id="holdLiveBody">Loading hold marks…</div>
+</div>
 </div>
 <div class="note" id="fees"></div>
 </div>
@@ -925,6 +930,7 @@ document.getElementById('fees').textContent=
   var TODAY = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today.json";
   var STRAT = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today_strategies.json";
   var SUG = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/stock_book/latest_suggestions.json";
+  var HOLD = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/hold_live_px.json";
   function quoteLabel(q){
     if(!q) return "";
     var src = q.src || "";
@@ -1080,6 +1086,67 @@ document.getElementById('fees').textContent=
     }
     return next();
   }
+  function holdPxLive(src){
+    if(!src) return false;
+    if(/theme|radar|_close|yesterday/i.test(src)) return false;
+    var head=String(src).split("+")[0];
+    return head==="elite_live" || head==="elite_live_file";
+  }
+  function fmtHoldClock(at){
+    if(!at) return "";
+    try{
+      return new Date(at).toLocaleTimeString("en-US",{timeZone:"America/New_York",hour:"2-digit",minute:"2-digit",hour12:false})+" ET";
+    }catch(e){ return String(at).slice(11,16)+" ET"; }
+  }
+  function holdNum(v,d){
+    if(v==null||v==="") return "—";
+    var n=Number(v);
+    if(!isFinite(n)) return "—";
+    return d==null?String(n):n.toFixed(d);
+  }
+  function paintHold(d){
+    var el=document.getElementById("holdLive");
+    if(!el||!d) return;
+    var q=d.quote||{};
+    var clock=fmtHoldClock(q.at||d.generated_at);
+    var banner=d.banner||(holdPxLive(q.src)?("Elite Overview as of "+clock):("Elite export as of "+(clock||"?")+" (not live)"));
+    var sleeves=d.sleeves||{};
+    var names=[];
+    if(sleeves.combo_sh_5050_shared) names.push("combo_sh_5050_shared");
+    ["combo_jse_333_shared","combo_ej_5050_shared","union_hot_n4_h1"].forEach(function(n){
+      if(names.indexOf(n)<0 && sleeves[n] && (sleeves[n].lots||[]).length) names.push(n);
+    });
+    var html='<div class="live-book-kicker">'+banner+'</div>';
+    html+='<div class="live-book-date">open lots on the $10k butterfly — ticker / side / shares / entry. Not the looker list. Closed lots omitted'
+      +(q.src?(" · px "+q.src+(holdPxLive(q.src)?" (now)":" (not live)")):"")+"</div>";
+    names.forEach(function(name){
+      var s=sleeves[name]||{};
+      var lots=s.lots||[];
+      html+='<div class="live-book-row"><b>'+name+"</b> "+lots.length+" open</div>";
+      lots.forEach(function(lot){
+        var vsO=lot.vs_open_pct==null?"—":((Number(lot.vs_open_pct)>0?"+":"")+holdNum(lot.vs_open_pct,2)+"%");
+        var vsE=lot.vs_entry_pct==null?"—":((Number(lot.vs_entry_pct)>0?"+":"")+holdNum(lot.vs_entry_pct,2)+"%");
+        var pnl=lot.pnl==null?"—":((Number(lot.pnl)>0?"+":"")+holdNum(lot.pnl,2));
+        html+='<div class="live-book-row">'+(lot.ticker||"")+" "+(lot.side||"")+" ×"+(lot.shares||"")
+          +" entry "+holdNum(lot.entry,2)+" · Elite "+holdNum(lot.px,2)
+          +" · vs 09:30 "+vsO+" · vs entry "+vsE+" · $ P/L "+pnl
+          +" · "+(fmtHoldClock(lot.px_asof||q.at)||"—")+"</div>";
+      });
+      if(!lots.length) html+='<div class="live-book-date">no open lots</div>';
+    });
+    el.innerHTML=html;
+  }
+  function loadHold(){
+    var rels=["hold_live_px.json","factor-mine/hold_live_px.json","../factor-mine/hold_live_px.json"].map(function(u){
+      return fetch(u+"?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});
+    });
+    Promise.all([
+      fetch(HOLD+"?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;})
+    ].concat(rels)).then(function(arr){
+      var d=arr.filter(function(x){return x&&(x.sleeves||x.banner);})[0];
+      if(d) paintHold(d);
+    });
+  }
   function load(){
     Promise.all([
       firstOk(["today.json", "../day-board/today.json", TODAY], afterBell() ? stripLooksLive : null),
@@ -1128,7 +1195,9 @@ document.getElementById('fees').textContent=
     }catch(e){ return true; }
   }
   load();
+  loadHold();
   setInterval(load, afterBell() ? 20000 : 60000);
+  setInterval(loadHold, 60000);
 })();
 </script>
 </body></html>

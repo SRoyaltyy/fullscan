@@ -54,6 +54,8 @@ def test_land_stock_book_includes_suggestions() -> None:
     assert "dashboard/today_strategies.json" in live_rel
     assert "dashboard/factor-mine/strategy_tickets.json" in live_rel
     assert "dashboard/factor-mine/today_strategies.json" in live_rel
+    assert "data/day_board/hold_live_px.json" in live_rel
+    assert "dashboard/factor-mine/hold_live_px.json" in live_rel
 
 
 def test_preview_suggestions_lists_names() -> None:
@@ -74,6 +76,8 @@ def test_paper_template_polls_raw_main() -> None:
     assert book_suggestions.STRAT_URL in html
     assert "every strategy" in html
     assert "id=\"liveBook\"" in html
+    assert "id=\"holdLive\"" in html
+    assert "hold_live_px.json" in html
     assert html.index("<h1>Paper Trading") < html.index('id="liveBook"')
     assert "stock_book_1d" in html
     assert "strat.buy_1d && strat.buy_1d.length" in html
@@ -113,6 +117,9 @@ def test_factor_mine_template_paints_every_strategy() -> None:
     assert "liveStartRow" in html
     assert "pending — not 0%" in html
     assert "attachLiveSessionDate" in html
+    assert "id=\"holdLive\"" in html
+    assert "hold_live_px.json" in html
+    assert "paintHoldMarks" in html
     assert "if(liveTicketsAreLive()) d=liveTicketsDate();" in html
     assert "h>9 || (h===9 && m>=30)" in html
     assert "D._closedDate" in html

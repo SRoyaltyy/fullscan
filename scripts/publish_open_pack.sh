@@ -19,6 +19,7 @@ fi
 python3 -c "import requests" 2>/dev/null || pip install requests
 echo "[open-pack] date=$DATE"
 python3 -m src.strategy_tickets --date "$DATE" --write
+python3 -m src.hold_live_px --date "$DATE" --write || true
 python3 - "$DATE" "$ET_HM" <<'PY'
 import json
 import sys
