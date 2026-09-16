@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `rank_w` · sell `list` · S-boost `none` · rank-weighted leftover
 
-Cash book **-4.72%** ($9,528) · signal-only (no cash/fees) was +21.01%. Starts YES **0/23**. Fills 114 · skips 328 · realized $-35.05.
+Cash book **-3.82%** ($9,618) · signal-only (no cash/fees) was +18.87%. Starts YES **0/24**. Fills 118 · skips 336 · realized $-35.05.
 
 ## How this sleeve decides (like you are 10)
 
@@ -50,7 +50,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $2,529.05.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $294.57.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -403,6 +403,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `COHU` | 11 | $49.97 | $51.07 | +12.10 | $49.97 | -12.10 | +0.00 | -55.22 | -67.32 |
 | 2026-09-15 | `AMTX` | 206 | $1.95 | $1.93 | -4.12 | $1.91 | -4.12 | -8.24 | -22.66 | -26.78 |
 | 2026-09-15 | `CLOV` | 44 | $5.10 | $5.06 | -1.76 | $4.66 | -17.60 | -19.36 | +13.64 | -3.96 |
+| 2026-09-16 | `AUPH` | 103 | $16.13 | $16.16 | +3.09 | $16.96 | +82.40 | +85.49 | -12.36 | +70.04 |
+| 2026-09-16 | `OVID` | 540 | $2.71 | $2.72 | +5.40 | $2.68 | -21.60 | -16.20 | -5.40 | -27.00 |
+| 2026-09-16 | `SANM` | 6 | $191.61 | $195.79 | +25.08 | $195.75 | -0.24 | +24.84 | -66.30 | -66.54 |
+| 2026-09-16 | `ORCL` | 6 | $140.35 | $140.03 | -1.92 | $143.16 | +18.78 | +16.86 | -146.40 | -127.62 |
+| 2026-09-16 | `NVT` | 5 | $146.80 | $147.79 | +4.95 | $147.65 | -0.70 | +4.25 | -49.95 | -50.65 |
+| 2026-09-16 | `COHU` | 11 | $49.97 | $51.43 | +16.06 | $51.06 | -4.07 | +11.99 | -51.26 | -55.33 |
+| 2026-09-16 | `AMTX` | 206 | $1.91 | $1.89 | -4.12 | $1.90 | +2.06 | -2.06 | -30.90 | -28.84 |
+| 2026-09-16 | `CLOV` | 44 | $4.66 | $4.73 | +3.08 | $4.56 | -7.48 | -4.40 | -0.88 | -8.36 |
+| 2026-09-16 | `IQV` | 3 | — | $270.89 | +0.00 | $268.82 | -6.21 | -6.21 | +0.00 | -6.21 |
+| 2026-09-16 | `RDNT` | 9 | — | $77.12 | +0.00 | $75.78 | -12.06 | -12.06 | +0.00 | -12.06 |
+| 2026-09-16 | `AVAH` | 35 | — | $14.31 | +0.00 | $14.26 | -1.75 | -1.75 | +0.00 | -1.75 |
+| 2026-09-16 | `BLFS` | 6 | — | $36.46 | +0.00 | $36.11 | -2.10 | -2.10 | +0.00 | -2.10 |
 
 ## Each session (cash + holdings state)
 
@@ -431,6 +443,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | +0.50 | $6.43 | ATRC×39, HRMY×41, CABA×413, VSTM×149, RVTY×6, MRNA×4, ARCT×17, ALEC×307, BHC×96, BMEA×272, OABI×81, OPK×162, VIR×10 | $10,004.31 | +101.33 | -56.82 | AUPH, OVID, SANM, ORCL, NVT, COHU, AMTX, CLOV | ATRC, HRMY, CABA, VSTM, RVTY, MRNA, ARCT | $149.61 | $9,907.14 | ALEC×307, BHC×96, BMEA×272, OABI×81, OPK×162, VIR×10, AUPH×103, OVID×540, SANM×6, ORCL×6, NVT×5, COHU×11, AMTX×206, CLOV×44 |
 | 2026-09-14 | -11.00 | $149.61 | ALEC×307, BHC×96, BMEA×272, OABI×81, OPK×162, VIR×10, AUPH×103, OVID×540, SANM×6, ORCL×6, NVT×5, COHU×11, AMTX×206, CLOV×44 | $9,721.81 | -185.33 | -53.20 | — | ALEC, BHC, BMEA, OABI, OPK, VIR | $2,529.05 | $9,652.83 | AUPH×103, OVID×540, SANM×6, ORCL×6, NVT×5, COHU×11, AMTX×206, CLOV×44 |
 | 2026-09-15 | -3.84 | $2,529.05 | AUPH×103, OVID×540, SANM×6, ORCL×6, NVT×5, COHU×11, AMTX×206, CLOV×44 | $9,675.57 | +22.74 | -147.80 | — | — | $2,529.05 | $9,527.77 | AUPH×103, OVID×540, SANM×6, ORCL×6, NVT×5, COHU×11, AMTX×206, CLOV×44 |
+| 2026-09-16 | +5.30 | $2,529.05 | AUPH×103, OVID×540, SANM×6, ORCL×6, NVT×5, COHU×11, AMTX×206, CLOV×44 | $9,579.38 | +51.61 | +47.03 | IQV, RDNT, AVAH, BLFS | — | $294.57 | $9,618.30 | AUPH×103, OVID×540, SANM×6, ORCL×6, NVT×5, COHU×11, AMTX×206, CLOV×44, IQV×3, RDNT×9, AVAH×35, BLFS×6 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -596,6 +609,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,529.05 | ▼ close $9,652.83 vs 09:30 $9,721.81 (session -53.20) | 16:00 close · cash $2,529.05 · equity $9,652.83 vs 09:30 $9,721.81 (-68.98; session marks -53.20) · 8 name(s) marked open→close (per-name table). AUPH×103 09:30 $16.03 → close $16.41 +39.14; OVID×540 09:30 $2.75 → close $2.74 -8.10; SANM×6 09:30 $206.50 → close $196.04 -62.76; ORCL×6 09:30 $141.42 → close $144.79 +20.22; NVT×5 09:30 $150.00 → close $146.64 -16.80; COHU×11 09:30 $52.23 → close $49.97 -24.86; AMTX×206 09:30 $2.01 → close $1.95 -12.36; CLOV×44 09:30 $4.82 → close $5.10 +12.32 | — |
 | 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2,529.05 | ▲ 09:30 equity $9,675.57 vs yday $9,652.83 (+22.74) | 09:30 open · cash $2,529.05 (unchanged overnight, no fees) · equity $9,675.57 vs prior close $9,652.83 (+22.74) · 8 name(s) re-marked at the open (per-name table). AUPH×103 yday $16.41 → 09:30 $16.35 -6.18; OVID×540 yday $2.74 → 09:30 $2.73 -5.40; SANM×6 yday $196.04 → 09:30 $198.32 +13.68; ORCL×6 yday $144.79 → 09:30 $143.46 -7.98; NVT×5 yday $146.64 → 09:30 $151.12 +22.40; COHU×11 yday $49.97 → 09:30 $51.07 +12.10; AMTX×206 yday $1.95 → 09:30 $1.93 -4.12; CLOV×44 yday $5.10 → 09:30 $5.06 -1.76 | — |
 | 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2,529.05 | ▼ close $9,527.77 vs 09:30 $9,675.57 (session -147.80) | 16:00 close · cash $2,529.05 · equity $9,527.77 vs 09:30 $9,675.57 (-147.80; session marks -147.80) · 8 name(s) marked open→close (per-name table). AUPH×103 09:30 $16.35 → close $16.13 -22.66; OVID×540 09:30 $2.73 → close $2.71 -10.80; SANM×6 09:30 $198.32 → close $191.61 -40.26; ORCL×6 09:30 $143.46 → close $140.35 -18.66; NVT×5 09:30 $151.12 → close $146.80 -21.60; COHU×11 09:30 $51.07 → close $49.97 -12.10; AMTX×206 09:30 $1.93 → close $1.91 -4.12; CLOV×44 09:30 $5.06 → close $4.66 -17.60 | — |
+| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2,529.05 | ▲ 09:30 equity $9,579.38 vs yday $9,527.77 (+51.61) | 09:30 open · cash $2,529.05 (unchanged overnight, no fees) · equity $9,579.38 vs prior close $9,527.77 (+51.61) · 8 name(s) re-marked at the open (per-name table). AUPH×103 yday $16.13 → 09:30 $16.16 +3.09; OVID×540 yday $2.71 → 09:30 $2.72 +5.40; SANM×6 yday $191.61 → 09:30 $195.79 +25.08; ORCL×6 yday $140.35 → 09:30 $140.03 -1.92; NVT×5 yday $146.80 → 09:30 $147.79 +4.95; COHU×11 yday $49.97 → 09:30 $51.43 +16.06; AMTX×206 yday $1.91 → 09:30 $1.89 -4.12; CLOV×44 yday $4.66 → 09:30 $4.73 +3.08 | — |
+| 2026-09-16 09:30 ET | **BUY** | `IQV` | 3 | $270.89 | $2.00 | — | $1,714.38 | — | rank-weighted leftover; list flatten; ⚪; ret5=-0.8; leftover $1011.62 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `RDNT` | 9 | $77.12 | $2.02 | — | $1,018.28 | — | rank-weighted leftover; list flatten; ⚪; ret5=-5.1; leftover $758.71 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `AVAH` | 35 | $14.31 | $2.10 | — | $515.34 | — | rank-weighted leftover; list flatten; ⚪; ret5=+3.2; leftover $505.81 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-09-16 09:30 ET | **BUY** | `BLFS` | 6 | $36.46 | $2.01 | — | $294.57 | — | rank-weighted leftover; list flatten; ⚪; ret5=-4.6; leftover $252.90 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $294.57 | ▲ close $9,618.30 vs 09:30 $9,579.38 (session +47.03) | 16:00 close · cash $294.57 · equity $9,618.30 vs 09:30 $9,579.38 (+38.92; session marks +47.03) · 12 name(s) marked open→close (per-name table). AUPH×103 09:30 $16.16 → close $16.96 +82.40; OVID×540 09:30 $2.72 → close $2.68 -21.60; SANM×6 09:30 $195.79 → close $195.75 -0.24; ORCL×6 09:30 $140.03 → close $143.16 +18.78; NVT×5 09:30 $147.79 → close $147.65 -0.70; COHU×11 09:30 $51.43 → close $51.06 -4.07; AMTX×206 09:30 $1.89 → close $1.90 +2.06; CLOV×44 09:30 $4.73 → close $4.56 -7.48; IQV×3 09:30 $270.89 → close $268.82 -6.21; RDNT×9 09:30 $77.12 → close $75.78 -12.06; AVAH×35 09:30 $14.31 → close $14.26 -1.75; BLFS×6 09:30 $36.46 → close $36.11 -2.10 | — |
 
 ## Not taken
 
@@ -929,6 +948,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `RPD` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `SES` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `NTSK` | hard_red | hard-red S=-3.84 sit; no new buys |
+| 2026-09-16 | `AUPH` | min_hold | dropped but min-hold 3/5 sess — no sell |
+| 2026-09-16 | `OVID` | min_hold | dropped but min-hold 3/5 sess — no sell |
+| 2026-09-16 | `SANM` | min_hold | dropped but min-hold 3/5 sess — no sell |
+| 2026-09-16 | `ORCL` | min_hold | dropped but min-hold 3/5 sess — no sell |
+| 2026-09-16 | `NVT` | min_hold | dropped but min-hold 3/5 sess — no sell |
+| 2026-09-16 | `COHU` | min_hold | dropped but min-hold 3/5 sess — no sell |
+| 2026-09-16 | `AMTX` | min_hold | dropped but min-hold 3/5 sess — no sell |
+| 2026-09-16 | `CLOV` | min_hold | dropped but min-hold 3/5 sess — no sell |
 
 ## Still open (marked at last close)
 
@@ -942,3 +969,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | `COHU` | 11 | 2026-09-11 @ $56.09 | rank-weighted leftover; list flatten; 🔵; ret5=+19.6; leftover $632.12 |
 | `AMTX` | 206 | 2026-09-11 @ $2.04 | rank-weighted leftover; list probable,yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+6.8; leftover $421.42 |
 | `CLOV` | 44 | 2026-09-11 @ $4.75 | rank-weighted leftover; list probable,yday_gainer,ohlc_hot; 🔵; ret5=+9.5; leftover $210.71 |
+| `IQV` | 3 | 2026-09-16 @ $270.89 | rank-weighted leftover; list flatten; ⚪; ret5=-0.8; leftover $1011.62 |
+| `RDNT` | 9 | 2026-09-16 @ $77.12 | rank-weighted leftover; list flatten; ⚪; ret5=-5.1; leftover $758.71 |
+| `AVAH` | 35 | 2026-09-16 @ $14.31 | rank-weighted leftover; list flatten; ⚪; ret5=+3.2; leftover $505.81 |
+| `BLFS` | 6 | 2026-09-16 @ $36.46 | rank-weighted leftover; list flatten; ⚪; ret5=-4.6; leftover $252.90 |

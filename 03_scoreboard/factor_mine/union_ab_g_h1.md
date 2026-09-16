@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ ab_g, no 🚨
 
-Cash book **-0.49%** ($9,951) · signal-only (no cash/fees) was -0.65%. Starts YES **0/23**. Fills 118 · skips 71 · realized $-48.59.
+Cash book **-1.51%** ($9,849) · signal-only (no cash/fees) was -1.95%. Starts YES **0/24**. Fills 122 · skips 71 · realized $-48.59.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,951.43.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $81.86.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -205,6 +205,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | `AMTX` | 632 | $2.01 | $2.01 | +0.00 | — | +0.00 | +0.00 | -18.96 | — |
 | 2026-09-14 | `CLOV` | 271 | $4.82 | $4.82 | +0.00 | — | +0.00 | +0.00 | +18.97 | — |
 | 2026-09-15 | `NVT` | 8 | $146.64 | $151.12 | +35.84 | — | +0.00 | +35.84 | -53.28 | — |
+| 2026-09-16 | `IQV` | 9 | — | $270.89 | +0.00 | $268.82 | -18.63 | -18.63 | +0.00 | -18.63 |
+| 2026-09-16 | `RDNT` | 32 | — | $77.12 | +0.00 | $75.78 | -42.88 | -42.88 | +0.00 | -42.88 |
+| 2026-09-16 | `AVAH` | 173 | — | $14.31 | +0.00 | $14.26 | -8.65 | -8.65 | +0.00 | -8.65 |
+| 2026-09-16 | `BLFS` | 68 | — | $36.46 | +0.00 | $36.11 | -23.80 | -23.80 | +0.00 | -23.80 |
 
 ## Each session (cash + holdings state)
 
@@ -233,6 +237,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | +0.50 | $10,321.01 | — | $10,321.01 | +0.00 | -17.61 | AUPH, OVID, SANM, ORCL, NVT, COHU, AMTX, CLOV | — | $197.38 | $10,275.34 | AUPH×79, OVID×472, SANM×6, ORCL×7, NVT×8, COHU×23, AMTX×632, CLOV×271 |
 | 2026-09-14 | -11.00 | $197.38 | AUPH×79, OVID×472, SANM×6, ORCL×7, NVT×8, COHU×23, AMTX×632, CLOV×271 | $9,970.88 | -304.46 | -26.88 | — | AUPH, OVID, SANM, ORCL, COHU, AMTX, CLOV | $8,744.50 | $9,917.62 | NVT×8 |
 | 2026-09-15 | -3.84 | $8,744.50 | NVT×8 | $9,953.46 | +35.84 | +0.00 | — | NVT | $9,951.43 | $9,951.43 | — |
+| 2026-09-16 | +5.30 | $9,951.43 | — | $9,951.43 | -0.00 | -93.96 | IQV, RDNT, AVAH, BLFS | — | $81.86 | $9,848.66 | IQV×9, RDNT×32, AVAH×173, BLFS×68 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -402,6 +407,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,744.50 | ▲ 09:30 equity $9,953.46 vs yday $9,917.62 (+35.84) | 09:30 open · cash $8,744.50 (unchanged overnight, no fees) · equity $9,953.46 vs prior close $9,917.62 (+35.84) · 1 name(s) re-marked at the open (per-name table). NVT×8 yday $146.64 → 09:30 $151.12 +35.84 | — |
 | 2026-09-15 09:30 ET | **SELL** | `NVT` | 8 | $151.12 | $2.03 | $-57.33 | $9,951.43 | ▼ -57.33 after sell → book $9,951.43; vs 09:30 mark -2.03 | dropped from list after 2 sess (min 1) | — |
 | 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,951.43 | ▲ close $9,951.43 vs 09:30 $9,953.46 (session +0.00) | 16:00 close · cash $9,951.43 · no lots left · equity $9,951.43. | — |
+| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,951.43 | ▲ 09:30 equity $9,951.43 vs yday $9,951.43 (-0.00) | 09:30 open · cash $9,951.43 · no holdings · equity $9,951.43 vs prior close $9,951.43 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-16 09:30 ET | **BUY** | `IQV` | 9 | $270.89 | $2.02 | — | $7,511.40 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ⚪; ret5=-0.8; leftover $2487.86 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `RDNT` | 32 | $77.12 | $2.09 | — | $5,041.47 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ⚪; ret5=-5.1; leftover $2487.86 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `AVAH` | 173 | $14.31 | $2.51 | — | $2,563.33 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ⚪; ret5=+3.2; leftover $2487.86 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-09-16 09:30 ET | **BUY** | `BLFS` | 68 | $36.46 | $2.19 | — | $81.86 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ⚪; ret5=-4.6; leftover $2487.86 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $81.86 | ▼ close $9,848.66 vs 09:30 $9,951.43 (session -93.96) | 16:00 close · cash $81.86 · equity $9,848.66 vs 09:30 $9,951.43 (-102.77; session marks -93.96) · 4 name(s) marked open→close (per-name table). IQV×9 09:30 $270.89 → close $268.82 -18.63; RDNT×32 09:30 $77.12 → close $75.78 -42.88; AVAH×173 09:30 $14.31 → close $14.26 -8.65; BLFS×68 09:30 $36.46 → close $36.11 -23.80 | — |
 
 ## Not taken
 
@@ -478,3 +489,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `NTSK` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `SAIL` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `QLYS` | hard_red | hard-red S=-3.84 sit; no new buys |
+
+## Still open (marked at last close)
+
+| Ticker | Shares | Entry | Why |
+|---|---:|---|---|
+| `IQV` | 9 | 2026-09-16 @ $270.89 | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ⚪; ret5=-0.8; leftover $2487.86 |
+| `RDNT` | 32 | 2026-09-16 @ $77.12 | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ⚪; ret5=-5.1; leftover $2487.86 |
+| `AVAH` | 173 | 2026-09-16 @ $14.31 | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ⚪; ret5=+3.2; leftover $2487.86 |
+| `BLFS` | 68 | 2026-09-16 @ $36.46 | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ⚪; ret5=-4.6; leftover $2487.86 |

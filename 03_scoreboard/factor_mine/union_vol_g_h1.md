@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ vol_g, no 🚨
 
-Cash book **-1.15%** ($9,885) · signal-only (no cash/fees) was +15.90%. Starts YES **5/23**. Fills 150 · skips 69 · realized $-114.65.
+Cash book **-2.88%** ($9,711) · signal-only (no cash/fees) was +13.81%. Starts YES **3/24**. Fills 151 · skips 69 · realized $-114.65.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,885.35.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $11.61.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -221,6 +221,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | `DBI` | 210 | $5.88 | $5.86 | -4.20 | — | +0.00 | -4.20 | -10.50 | — |
 | 2026-09-14 | `BNC` | 252 | $4.80 | $5.03 | +57.96 | — | +0.00 | +57.96 | +30.24 | — |
 | 2026-09-15 | `CMRC` | 396 | $3.64 | $3.64 | +0.00 | — | +0.00 | +0.00 | +201.96 | — |
+| 2026-09-16 | `RDNT` | 128 | — | $77.12 | +0.00 | $75.78 | -171.52 | -171.52 | +0.00 | -171.52 |
 
 ## Each session (cash + holdings state)
 
@@ -249,6 +250,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | +0.50 | $9,930.81 | — | $9,930.81 | +0.00 | -117.01 | ORCL, TYRA, VIST, INDP, CMRC, WLTH, DBI, BNC | — | $93.70 | $9,788.29 | ORCL×7, TYRA×52, VIST×16, INDP×459, CMRC×396, WLTH×113, DBI×210, BNC×252 |
 | 2026-09-14 | -11.00 | $93.70 | ORCL×7, TYRA×52, VIST×16, INDP×459, CMRC×396, WLTH×113, DBI×210, BNC×252 | $9,859.73 | +71.44 | +51.48 | — | ORCL, TYRA, VIST, INDP, WLTH, DBI, BNC | $8,449.09 | $9,890.53 | CMRC×396 |
 | 2026-09-15 | -3.84 | $8,449.09 | CMRC×396 | $9,890.53 | +0.00 | +0.00 | — | CMRC | $9,885.35 | $9,885.35 | — |
+| 2026-09-16 | +5.30 | $9,885.35 | — | $9,885.35 | -0.00 | -171.52 | RDNT | — | $11.61 | $9,711.45 | RDNT×128 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -450,6 +452,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,449.09 | ▲ 09:30 equity $9,890.53 vs yday $9,890.53 (+0.00) | 09:30 open · cash $8,449.09 (unchanged overnight, no fees) · equity $9,890.53 vs prior close $9,890.53 (+0.00) · 1 name(s) re-marked at the open (per-name table). CMRC×396 yday $3.64 → 09:30 $3.64 +0.00 | — |
 | 2026-09-15 09:30 ET | **SELL** | `CMRC` | 396 | $3.64 | $5.19 | $+191.67 | $9,885.35 | ▲ +191.67 after sell → book $9,885.35; vs 09:30 mark -5.18 | dropped from list after 2 sess (min 1) | — |
 | 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,885.35 | ▲ close $9,885.35 vs 09:30 $9,890.53 (session +0.00) | 16:00 close · cash $9,885.35 · no lots left · equity $9,885.35. | — |
+| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,885.35 | ▲ 09:30 equity $9,885.35 vs yday $9,885.35 (-0.00) | 09:30 open · cash $9,885.35 · no holdings · equity $9,885.35 vs prior close $9,885.35 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-16 09:30 ET | **BUY** | `RDNT` | 128 | $77.12 | $2.37 | — | $11.61 | — | union ∩ vol_g, no 🚨; gate vol=good; list flatten; ⚪; ret5=-5.1; leftover $9885.35 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11.61 | ▼ close $9,711.45 vs 09:30 $9,885.35 (session -171.52) | 16:00 close · cash $11.61 · equity $9,711.45 vs 09:30 $9,885.35 (-173.90; session marks -171.52) · 1 name(s) marked open→close (per-name table). RDNT×128 09:30 $77.12 → close $75.78 -171.52 | — |
 
 ## Not taken
 
@@ -524,3 +529,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `SAIL` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `TRX` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `ZS` | hard_red | hard-red S=-3.84 sit; no new buys |
+
+## Still open (marked at last close)
+
+| Ticker | Shares | Entry | Why |
+|---|---:|---|---|
+| `RDNT` | 128 | 2026-09-16 @ $77.12 | union ∩ vol_g, no 🚨; gate vol=good; list flatten; ⚪; ret5=-5.1; leftover $9885.35 |

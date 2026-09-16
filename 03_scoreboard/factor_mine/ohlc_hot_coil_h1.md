@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hot list ∩ not exploded
 
-Cash book **-18.58%** ($8,142) · signal-only (no cash/fees) was -5.34%. Starts YES **5/23**. Fills 82 · skips 60 · realized $-1943.06.
+Cash book **-18.41%** ($8,159) · signal-only (no cash/fees) was -5.60%. Starts YES **5/24**. Fills 84 · skips 60 · realized $-1841.38.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $6,102.89.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8,158.63.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -159,6 +159,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | `GME` | 47 | $21.15 | $21.00 | -7.05 | $21.62 | +29.14 | +22.09 | -1.88 | +27.26 |
 | 2026-09-15 | `FRO` | 20 | $50.52 | $51.21 | +13.80 | $51.59 | +7.60 | +21.40 | +63.20 | +70.80 |
 | 2026-09-15 | `GME` | 47 | $21.62 | $21.51 | -5.17 | $21.44 | -3.29 | -8.46 | +22.09 | +18.80 |
+| 2026-09-16 | `FRO` | 20 | $51.59 | $52.52 | +18.60 | — | +0.00 | +18.60 | +89.40 | — |
+| 2026-09-16 | `GME` | 47 | $21.44 | $21.48 | +1.88 | — | +0.00 | +1.88 | +20.68 | — |
 
 ## Each session (cash + holdings state)
 
@@ -187,6 +189,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | +0.50 | $8,043.24 | — | $8,043.24 | -0.00 | +110.28 | AMTX, CLOV, BAK, TJGC, HAFN, INSP, FRO, GME | — | $79.91 | $8,127.54 | AMTX×492, CLOV×211, BAK×474, TJGC×94, HAFN×107, INSP×14, FRO×20, GME×47 |
 | 2026-09-14 | -11.00 | $79.91 | AMTX×492, CLOV×211, BAK×474, TJGC×94, HAFN×107, INSP×14, FRO×20, GME×47 | $8,116.99 | -10.55 | +34.54 | — | AMTX, CLOV, BAK, TJGC, HAFN, INSP | $6,102.89 | $8,129.43 | FRO×20, GME×47 |
 | 2026-09-15 | -3.84 | $6,102.89 | FRO×20, GME×47 | $8,138.06 | +8.63 | +4.31 | — | — | $6,102.89 | $8,142.37 | FRO×20, GME×47 |
+| 2026-09-16 | +5.30 | $6,102.89 | FRO×20, GME×47 | $8,162.85 | +20.48 | +0.00 | — | FRO, GME | $8,158.63 | $8,158.63 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -320,6 +323,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,102.89 | ▲ close $8,129.43 vs 09:30 $8,116.99 (session +34.54) | 16:00 close · cash $6,102.89 · equity $8,129.43 vs 09:30 $8,116.99 (+12.44; session marks +34.54) · 2 name(s) marked open→close (per-name table). FRO×20 09:30 $50.25 → close $50.52 +5.40; GME×47 09:30 $21.00 → close $21.62 +29.14 | — |
 | 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,102.89 | ▲ 09:30 equity $8,138.06 vs yday $8,129.43 (+8.63) | 09:30 open · cash $6,102.89 (unchanged overnight, no fees) · equity $8,138.06 vs prior close $8,129.43 (+8.63) · 2 name(s) re-marked at the open (per-name table). FRO×20 yday $50.52 → 09:30 $51.21 +13.80; GME×47 yday $21.62 → 09:30 $21.51 -5.17 | — |
 | 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6,102.89 | ▲ close $8,142.37 vs 09:30 $8,138.06 (session +4.31) | 16:00 close · cash $6,102.89 · equity $8,142.37 vs 09:30 $8,138.06 (+4.31; session marks +4.31) · 2 name(s) marked open→close (per-name table). FRO×20 09:30 $51.21 → close $51.59 +7.60; GME×47 09:30 $21.51 → close $21.44 -3.29 | — |
+| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,102.89 | ▲ 09:30 equity $8,162.85 vs yday $8,142.37 (+20.48) | 09:30 open · cash $6,102.89 (unchanged overnight, no fees) · equity $8,162.85 vs prior close $8,142.37 (+20.48) · 2 name(s) re-marked at the open (per-name table). FRO×20 yday $51.59 → 09:30 $52.52 +18.60; GME×47 yday $21.44 → 09:30 $21.48 +1.88 | — |
+| 2026-09-16 09:30 ET | **SELL** | `FRO` | 20 | $52.52 | $2.07 | $+85.28 | $7,151.22 | ▲ +85.28 after sell → book $8,160.78; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 1) | — |
+| 2026-09-16 09:30 ET | **SELL** | `GME` | 47 | $21.48 | $2.15 | $+16.40 | $8,158.63 | ▲ +16.40 after sell → book $8,158.63; vs 09:30 mark -2.15 | dropped from list after 3 sess (min 1) | — |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,158.63 | ▲ close $8,158.63 vs 09:30 $8,162.85 (session +0.00) | 16:00 close · cash $8,158.63 · no lots left · equity $8,158.63. | — |
 
 ## Not taken
 
@@ -385,10 +392,3 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `DHT` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `VSTS` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `AESI` | hard_red | hard-red S=-3.84 sit; no new buys |
-
-## Still open (marked at last close)
-
-| Ticker | Shares | Entry | Why |
-|---|---:|---|---|
-| `FRO` | 20 | 2026-09-11 @ $48.05 | hot list ∩ not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; ret5=+6.6; leftover $1005.40 |
-| `GME` | 47 | 2026-09-11 @ $21.04 | hot list ∩ not exploded; gate ret_5_min=0.0,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; 🔵; ret5=+7.5; leftover $1005.40 |

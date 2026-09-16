@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-7.33%** ($9,267) · signal-only (no cash/fees) was -19.79%. Starts YES **10/23**. Fills 35 · skips 54 · realized $-1223.08.
+Cash book **-6.53%** ($9,347) · signal-only (no cash/fees) was -19.79%. Starts YES **13/24**. Fills 38 · skips 54 · realized $-652.93.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $33.54.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,347.07.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -140,6 +140,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `NAVN` | 141 | $21.37 | $21.32 | -7.05 | $22.42 | +155.10 | +148.05 | +100.11 | +255.21 |
 | 2026-09-15 | `RWT` | 831 | $3.83 | $3.80 | -24.93 | $3.91 | +91.41 | +66.48 | +232.68 | +324.09 |
 | 2026-09-15 | `COO` | 53 | $54.22 | $54.40 | +9.54 | $53.27 | -59.89 | -50.35 | -13.78 | -73.67 |
+| 2026-09-16 | `NAVN` | 141 | $22.42 | $22.27 | -21.15 | — | +0.00 | -21.15 | +234.06 | — |
+| 2026-09-16 | `RWT` | 831 | $3.91 | $3.98 | +58.17 | — | +0.00 | +58.17 | +382.26 | — |
+| 2026-09-16 | `COO` | 53 | $53.27 | $54.37 | +58.30 | — | +0.00 | +58.30 | -15.37 | — |
 
 ## Each session (cash + holdings state)
 
@@ -168,6 +171,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | +0.50 | $8,776.93 | — | $8,776.93 | -0.00 | +42.99 | NAVN, RWT, COO | — | $33.54 | $8,804.64 | NAVN×141, RWT×831, COO×53 |
 | 2026-09-14 | -11.00 | $33.54 | NAVN×141, RWT×831, COO×53 | $8,845.41 | +40.77 | +257.69 | — | — | $33.54 | $9,103.10 | NAVN×141, RWT×831, COO×53 |
 | 2026-09-15 | -3.84 | $33.54 | NAVN×141, RWT×831, COO×53 | $9,080.66 | -22.44 | +186.62 | — | — | $33.54 | $9,267.28 | NAVN×141, RWT×831, COO×53 |
+| 2026-09-16 | +5.30 | $33.54 | NAVN×141, RWT×831, COO×53 | $9,362.60 | +95.32 | +0.00 | — | NAVN, RWT, COO | $9,347.07 | $9,347.07 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -254,6 +258,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $33.54 | ▲ close $9,103.10 vs 09:30 $8,845.41 (session +257.69) | 16:00 close · cash $33.54 · equity $9,103.10 vs 09:30 $8,845.41 (+257.69; session marks +257.69) · 3 name(s) marked open→close (per-name table). NAVN×141 09:30 $21.10 → close $21.37 +38.07; RWT×831 09:30 $3.53 → close $3.83 +249.30; COO×53 09:30 $54.78 → close $54.22 -29.68 | — |
 | 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $33.54 | ▼ 09:30 equity $9,080.66 vs yday $9,103.10 (-22.44) | 09:30 open · cash $33.54 (unchanged overnight, no fees) · equity $9,080.66 vs prior close $9,103.10 (-22.44) · 3 name(s) re-marked at the open (per-name table). NAVN×141 yday $21.37 → 09:30 $21.32 -7.05; RWT×831 yday $3.83 → 09:30 $3.80 -24.93; COO×53 yday $54.22 → 09:30 $54.40 +9.54 | — |
 | 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $33.54 | ▲ close $9,267.28 vs 09:30 $9,080.66 (session +186.62) | 16:00 close · cash $33.54 · equity $9,267.28 vs 09:30 $9,080.66 (+186.62; session marks +186.62) · 3 name(s) marked open→close (per-name table). NAVN×141 09:30 $21.32 → close $22.42 +155.10; RWT×831 09:30 $3.80 → close $3.91 +91.41; COO×53 09:30 $54.40 → close $53.27 -59.89 | — |
+| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $33.54 | ▲ 09:30 equity $9,362.60 vs yday $9,267.28 (+95.32) | 09:30 open · cash $33.54 (unchanged overnight, no fees) · equity $9,362.60 vs prior close $9,267.28 (+95.32) · 3 name(s) re-marked at the open (per-name table). NAVN×141 yday $22.42 → 09:30 $22.27 -21.15; RWT×831 yday $3.91 → 09:30 $3.98 +58.17; COO×53 yday $53.27 → 09:30 $54.37 +58.30 | — |
+| 2026-09-16 09:30 ET | **SELL** | `NAVN` | 141 | $22.27 | $2.46 | $+229.19 | $3,171.14 | ▲ +229.19 after sell → book $9,360.13; vs 09:30 mark -2.47 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `RWT` | 831 | $3.98 | $10.88 | $+360.66 | $6,467.64 | ▲ +360.66 after sell → book $9,349.25; vs 09:30 mark -10.88 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `COO` | 53 | $54.37 | $2.18 | $-19.70 | $9,347.07 | ▼ -19.70 after sell → book $9,347.07; vs 09:30 mark -2.18 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,347.07 | ▲ close $9,347.07 vs 09:30 $9,362.60 (session +0.00) | 16:00 close · cash $9,347.07 · no lots left · equity $9,347.07. | — |
 
 ## Not taken
 
@@ -313,11 +322,3 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `NAVN` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-15 | `RWT` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-15 | `COO` | min_hold | dropped but min-hold 2/3 sess — no sell |
-
-## Still open (marked at last close)
-
-| Ticker | Shares | Entry | Why |
-|---|---:|---|---|
-| `NAVN` | 141 | 2026-09-11 @ $20.61 | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-24.7; leftover $2925.64 |
-| `RWT` | 831 | 2026-09-11 @ $3.52 | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-19.2; leftover $2925.64 |
-| `COO` | 53 | 2026-09-11 @ $54.66 | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-22.3; leftover $2925.64 |

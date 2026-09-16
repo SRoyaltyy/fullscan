@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_green, no 🚨
 
-Cash book **+2.76%** ($10,276) · signal-only (no cash/fees) was +13.27%. Starts YES **5/23**. Fills 180 · skips 88 · realized $+276.32.
+Cash book **+2.02%** ($10,202) · signal-only (no cash/fees) was +12.23%. Starts YES **5/24**. Fills 182 · skips 88 · realized $+276.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $10,276.37.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $27.64.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -253,6 +253,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | `FUBO` | 113 | $11.53 | $11.56 | +3.39 | — | +0.00 | +3.39 | +1.13 | — |
 | 2026-09-14 | `RDDT` | 8 | $157.77 | $160.00 | +17.84 | — | +0.00 | +17.84 | +19.60 | — |
 | 2026-09-15 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-16 | `AVAH` | 359 | — | $14.31 | +0.00 | $14.26 | -17.95 | -17.95 | +0.00 | -17.95 |
+| 2026-09-16 | `BLFS` | 140 | — | $36.46 | +0.00 | $36.11 | -49.00 | -49.00 | +0.00 | -49.00 |
 
 ## Each session (cash + holdings state)
 
@@ -281,6 +283,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | +0.50 | $10,474.36 | — | $10,474.36 | -0.00 | -35.43 | SANM, COHU, AMTX, CLOV, BAK, TYRA, FUBO, RDDT | — | $125.78 | $10,408.59 | SANM×6, COHU×23, AMTX×641, CLOV×275, BAK×617, TYRA×55, FUBO×113, RDDT×8 |
 | 2026-09-14 | -11.00 | $125.78 | SANM×6, COHU×23, AMTX×641, CLOV×275, BAK×617, TYRA×55, FUBO×113, RDDT×8 | $10,307.11 | -101.48 | +0.00 | — | SANM, COHU, AMTX, CLOV, BAK, TYRA, FUBO, RDDT | $10,276.37 | $10,276.37 | — |
 | 2026-09-15 | -3.84 | $10,276.37 | — | $10,276.37 | -0.00 | +0.00 | — | — | $10,276.37 | $10,276.37 | — |
+| 2026-09-16 | +5.30 | $10,276.37 | — | $10,276.37 | -0.00 | -66.95 | AVAH, BLFS | — | $27.64 | $10,202.38 | AVAH×359, BLFS×140 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -512,6 +515,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,276.37 | ▲ close $10,276.37 vs 09:30 $10,307.11 (session +0.00) | 16:00 close · cash $10,276.37 · no lots left · equity $10,276.37. | — |
 | 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,276.37 | ▲ 09:30 equity $10,276.37 vs yday $10,276.37 (-0.00) | 09:30 open · cash $10,276.37 · no holdings · equity $10,276.37 vs prior close $10,276.37 (-0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,276.37 | ▲ close $10,276.37 vs 09:30 $10,276.37 (session +0.00) | 16:00 close · cash $10,276.37 · no lots left · equity $10,276.37. | — |
+| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,276.37 | ▲ 09:30 equity $10,276.37 vs yday $10,276.37 (-0.00) | 09:30 open · cash $10,276.37 · no holdings · equity $10,276.37 vs prior close $10,276.37 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-16 09:30 ET | **BUY** | `AVAH` | 359 | $14.31 | $4.63 | — | $5,134.45 | — | union ∩ last_green, no 🚨; gate last_green=True; list flatten; ⚪; ret5=+3.2; leftover $5138.18 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-09-16 09:30 ET | **BUY** | `BLFS` | 140 | $36.46 | $2.41 | — | $27.64 | — | union ∩ last_green, no 🚨; gate last_green=True; list flatten; ⚪; ret5=-4.6; leftover $5138.18 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $27.64 | ▼ close $10,202.38 vs 09:30 $10,276.37 (session -66.95) | 16:00 close · cash $27.64 · equity $10,202.38 vs 09:30 $10,276.37 (-73.99; session marks -66.95) · 2 name(s) marked open→close (per-name table). AVAH×359 09:30 $14.31 → close $14.26 -17.95; BLFS×140 09:30 $36.46 → close $36.11 -49.00 | — |
 
 ## Not taken
 
@@ -605,3 +612,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `ZS` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `S` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `CYPH` | hard_red | hard-red S=-3.84 sit; no new buys |
+
+## Still open (marked at last close)
+
+| Ticker | Shares | Entry | Why |
+|---|---:|---|---|
+| `AVAH` | 359 | 2026-09-16 @ $14.31 | union ∩ last_green, no 🚨; gate last_green=True; list flatten; ⚪; ret5=+3.2; leftover $5138.18 |
+| `BLFS` | 140 | 2026-09-16 @ $36.46 | union ∩ last_green, no 🚨; gate last_green=True; list flatten; ⚪; ret5=-4.6; leftover $5138.18 |

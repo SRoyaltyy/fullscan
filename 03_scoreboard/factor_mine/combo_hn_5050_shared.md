@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_hot_n4_h1/union_news_g_h1 w=0.5,0.5 net=priority
 
-Cash book **+18.62%** ($11,863) · signal-only (no cash/fees) was —. Starts YES **21/23**. Fills 213 · skips 104 · realized $+1376.76.
+Cash book **+17.42%** ($11,742) · signal-only (no cash/fees) was —. Starts YES **21/24**. Fills 218 · skips 104 · realized $+1860.94.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,955.19.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $297.01.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -292,6 +292,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `INDP` | 524 | $3.14 | $3.40 | +136.24 | $3.64 | +125.76 | +262.00 | +366.80 | +492.56 |
 | 2026-09-15 | `BNC` | 288 | $5.27 | $5.11 | -46.08 | — | +0.00 | -46.08 | +57.60 | — |
 | 2026-09-15 | `CMRC` | 452 | $3.64 | $3.64 | +0.00 | — | +0.00 | +0.00 | +230.52 | — |
+| 2026-09-16 | `INDP` | 524 | $3.64 | $3.65 | +5.24 | — | +0.00 | +5.24 | +497.80 | — |
+| 2026-09-16 | `AVAH` | 207 | — | $14.31 | +0.00 | $14.26 | -10.35 | -10.35 | +0.00 | -10.35 |
+| 2026-09-16 | `BLFS` | 81 | — | $36.46 | +0.00 | $36.11 | -28.35 | -28.35 | +0.00 | -28.35 |
+| 2026-09-16 | `IQV` | 10 | — | $270.89 | +0.00 | $268.82 | -20.70 | -20.70 | +0.00 | -20.70 |
+| 2026-09-16 | `RDNT` | 38 | — | $77.12 | +0.00 | $75.78 | -50.92 | -50.92 | +0.00 | -50.92 |
 
 ## Each session (cash + holdings state)
 
@@ -320,6 +325,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | +0.50 | $11,335.52 | — | $11,335.52 | -0.00 | +51.18 | INDP, BNC, IRD, CMRC, ORCL, AMTX, BAK, ADBE, RH | — | $334.70 | $11,347.38 | INDP×524, BNC×288, IRD×230, CMRC×452, ORCL×6, AMTX×554, BAK×533, ADBE×4, RH×8 |
 | 2026-09-14 | -11.00 | $334.70 | INDP×524, BNC×288, IRD×230, CMRC×452, ORCL×6, AMTX×554, BAK×533, ADBE×4, RH×8 | $11,373.61 | +26.23 | +306.04 | — | IRD, ORCL, AMTX, BAK, ADBE, RH | $6,847.92 | $11,656.32 | INDP×524, BNC×288, CMRC×452 |
 | 2026-09-15 | -3.84 | $6,847.92 | INDP×524, BNC×288, CMRC×452 | $11,746.48 | +90.16 | +125.76 | — | BNC, CMRC | $9,955.19 | $11,862.55 | INDP×524 |
+| 2026-09-16 | +5.30 | $9,955.19 | INDP×524 | $11,867.79 | +5.24 | -110.32 | AVAH, BLFS, IQV, RDNT | INDP | $297.01 | $11,741.58 | AVAH×207, BLFS×81, IQV×10, RDNT×38 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -584,6 +590,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 09:30 ET | **SELL** | `BNC` | 288 | $5.11 | $3.77 | $+50.11 | $8,315.83 | ▲ +50.11 after sell → book $11,742.71; vs 09:30 mark -3.77 | union_hot_n4_h1: dropped from list after 2 sess (min 1) | — |
 | 2026-09-15 09:30 ET | **SELL** | `CMRC` | 452 | $3.64 | $5.92 | $+218.77 | $9,955.19 | ▲ +218.77 after sell → book $11,736.79; vs 09:30 mark -5.92 | union_hot_n4_h1: dropped from list after 2 sess (min 1) | — |
 | 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,955.19 | ▲ close $11,862.55 vs 09:30 $11,746.48 (session +125.76) | 16:00 close · cash $9,955.19 · equity $11,862.55 vs 09:30 $11,746.48 (+116.07; session marks +125.76) · 1 name(s) marked open→close (per-name table). INDP×524 09:30 $3.40 → close $3.64 +125.76 | — |
+| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,955.19 | ▲ 09:30 equity $11,867.79 vs yday $11,862.55 (+5.24) | 09:30 open · cash $9,955.19 (unchanged overnight, no fees) · equity $11,867.79 vs prior close $11,862.55 (+5.24) | — |
+| 2026-09-16 09:30 ET | **SELL** | `INDP` | 524 | $3.65 | $6.86 | $+484.18 | $11,860.93 | ▲ +484.18 after sell → book $11,860.93; vs 09:30 mark -6.86 | union_hot_n4_h1: dropped from list after 3 sess (min 1) | — |
+| 2026-09-16 09:30 ET | **BUY** | `AVAH` | 207 | $14.31 | $2.67 | — | $8,896.09 | — | top 4 by hot; rank hot_score; list flatten; ⚪; ret5=+3.2; combo leftover $2965.23; owner union_hot_n4_h1 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-09-16 09:30 ET | **BUY** | `BLFS` | 81 | $36.46 | $2.23 | — | $5,940.60 | — | top 4 by hot; rank hot_score; list flatten; ⚪; ret5=-4.6; combo leftover $2965.23; owner union_hot_n4_h1 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `IQV` | 10 | $270.89 | $2.02 | — | $3,229.68 | — | top 4 by hot; rank hot_score; list flatten; ⚪; ret5=-0.8; combo leftover $2965.23; owner union_hot_n4_h1 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `RDNT` | 38 | $77.12 | $2.10 | — | $297.01 | — | top 4 by hot; rank hot_score; list flatten; ⚪; ret5=-5.1; combo leftover $2965.23; owner union_hot_n4_h1 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $297.01 | ▼ close $11,741.58 vs 09:30 $11,867.79 (session -110.32) | 16:00 close · cash $297.01 · equity $11,741.58 vs 09:30 $11,867.79 (-126.21; session marks -110.32) · 4 name(s) marked open→close (per-name table). AVAH×207 09:30 $14.31 → close $14.26 -10.35; BLFS×81 09:30 $36.46 → close $36.11 -28.35; IQV×10 09:30 $270.89 → close $268.82 -20.70; RDNT×38 09:30 $77.12 → close $75.78 -50.92 | — |
 
 ## Not taken
 
@@ -698,4 +711,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `INDP` | 524 | 2026-09-11 @ $2.70 | top 4 by hot; rank hot_score; list yday_gainer,yday_mover; 🔵; ret5=+118.8; combo leftover $1416.94; owner union_hot_n4_h1 |
+| `AVAH` | 207 | 2026-09-16 @ $14.31 | top 4 by hot; rank hot_score; list flatten; ⚪; ret5=+3.2; combo leftover $2965.23; owner union_hot_n4_h1 |
+| `BLFS` | 81 | 2026-09-16 @ $36.46 | top 4 by hot; rank hot_score; list flatten; ⚪; ret5=-4.6; combo leftover $2965.23; owner union_hot_n4_h1 |
+| `IQV` | 10 | 2026-09-16 @ $270.89 | top 4 by hot; rank hot_score; list flatten; ⚪; ret5=-0.8; combo leftover $2965.23; owner union_hot_n4_h1 |
+| `RDNT` | 38 | 2026-09-16 @ $77.12 | top 4 by hot; rank hot_score; list flatten; ⚪; ret5=-5.1; combo leftover $2965.23; owner union_hot_n4_h1 |

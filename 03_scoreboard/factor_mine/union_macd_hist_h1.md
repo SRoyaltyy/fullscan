@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-6.79%** ($9,321) · signal-only (no cash/fees) was -5.17%. Starts YES **0/23**. Fills 173 · skips 78 · realized $-535.99.
+Cash book **-7.66%** ($9,234) · signal-only (no cash/fees) was -6.07%. Starts YES **0/24**. Fills 178 · skips 78 · realized $-670.25.
 
 ## How this sleeve decides (like you are 10)
 
@@ -53,7 +53,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8,261.90.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $225.08.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -255,8 +255,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | `ORCL` | 7 | $150.28 | $141.42 | -62.02 | — | +0.00 | -62.02 | -161.07 | — |
 | 2026-09-14 | `CVI` | 24 | $49.66 | $50.25 | +14.16 | — | +0.00 | +14.16 | +45.36 | — |
 | 2026-09-15 | `SION` | 154 | $8.26 | $7.87 | -60.06 | $6.88 | -152.46 | -212.52 | +12.32 | -140.14 |
-| 2026-09-15 | `SPCX` | 8 | $148.15 | $148.44 | +2.36 | — | +0.00 | +2.36 | -12.52 | — |
+| 2026-09-15 | `SPCX` | 8 | $148.15 | $148.45 | +2.40 | — | +0.00 | +2.40 | -12.48 | — |
 | 2026-09-15 | `QRVO` | 10 | $107.98 | $108.40 | +4.20 | — | +0.00 | +4.20 | -44.35 | — |
+| 2026-09-16 | `SION` | 154 | $6.88 | $6.95 | +10.78 | — | +0.00 | +10.78 | -129.36 | — |
+| 2026-09-16 | `AVAH` | 162 | — | $14.31 | +0.00 | $14.26 | -8.10 | -8.10 | +0.00 | -8.10 |
+| 2026-09-16 | `BLFS` | 63 | — | $36.46 | +0.00 | $36.11 | -22.05 | -22.05 | +0.00 | -22.05 |
+| 2026-09-16 | `RDNT` | 30 | — | $77.12 | +0.00 | $75.78 | -40.20 | -40.20 | +0.00 | -40.20 |
+| 2026-09-16 | `IQV` | 8 | — | $270.89 | +0.00 | $268.82 | -16.56 | -16.56 | +0.00 | -16.56 |
 
 ## Each session (cash + holdings state)
 
@@ -284,7 +289,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 | -13.28 | $9,645.12 | — | $9,645.12 | +0.00 | +0.00 | — | — | $9,645.12 | $9,645.12 | — |
 | 2026-09-11 | +0.50 | $9,645.12 | — | $9,645.12 | +0.00 | +101.51 | SANM, SION, SPCX, SWKS, QRVO, ASO, ORCL, CVI | — | $421.64 | $9,729.98 | SANM×5, SION×154, SPCX×8, SWKS×14, QRVO×10, ASO×21, ORCL×7, CVI×24 |
 | 2026-09-14 | -11.00 | $421.64 | SANM×5, SION×154, SPCX×8, SWKS×14, QRVO×10, ASO×21, ORCL×7, CVI×24 | $9,531.77 | -198.21 | +9.94 | — | SANM, SWKS, ASO, ORCL, CVI | $5,994.41 | $9,531.45 | SION×154, SPCX×8, QRVO×10 |
-| 2026-09-15 | -3.84 | $5,994.41 | SION×154, SPCX×8, QRVO×10 | $9,477.95 | -53.50 | -152.46 | — | SPCX, QRVO | $8,261.90 | $9,321.42 | SION×154 |
+| 2026-09-15 | -3.84 | $5,994.41 | SION×154, SPCX×8, QRVO×10 | $9,477.99 | -53.46 | -152.46 | — | SPCX, QRVO | $8,261.94 | $9,321.46 | SION×154 |
+| 2026-09-16 | +5.30 | $8,261.94 | SION×154 | $9,332.24 | +10.78 | -86.91 | AVAH, BLFS, RDNT, IQV | SION | $225.08 | $9,234.09 | AVAH×162, BLFS×63, RDNT×30, IQV×8 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -505,10 +511,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 09:30 ET | **SELL** | `ORCL` | 7 | $141.42 | $2.03 | $-165.11 | $4,790.49 | ▼ -165.11 after sell → book $9,523.59; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-14 09:30 ET | **SELL** | `CVI` | 24 | $50.25 | $2.08 | $+41.22 | $5,994.41 | ▲ +41.22 after sell → book $9,521.51; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,994.41 | ▲ close $9,531.45 vs 09:30 $9,531.77 (session +9.94) | 16:00 close · cash $5,994.41 · equity $9,531.45 vs 09:30 $9,531.77 (-0.32; session marks +9.94) · 3 name(s) marked open→close (per-name table). SION×154 09:30 $7.84 → close $8.26 +64.68; SPCX×8 09:30 $147.33 → close $148.15 +6.56; QRVO×10 09:30 $114.11 → close $107.98 -61.30 | — |
-| 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,994.41 | ▼ 09:30 equity $9,477.95 vs yday $9,531.45 (-53.50) | 09:30 open · cash $5,994.41 (unchanged overnight, no fees) · equity $9,477.95 vs prior close $9,531.45 (-53.50) · 3 name(s) re-marked at the open (per-name table). SION×154 yday $8.26 → 09:30 $7.87 -60.06; SPCX×8 yday $148.15 → 09:30 $148.44 +2.36; QRVO×10 yday $107.98 → 09:30 $108.40 +4.20 | — |
-| 2026-09-15 09:30 ET | **SELL** | `SPCX` | 8 | $148.44 | $2.03 | $-16.57 | $7,179.94 | ▼ -16.57 after sell → book $9,475.92; vs 09:30 mark -2.03 | dropped from list after 2 sess (min 1) | join🟢 sector🔴 gen🔴 news🔴 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
-| 2026-09-15 09:30 ET | **SELL** | `QRVO` | 10 | $108.40 | $2.04 | $-48.41 | $8,261.90 | ▼ -48.41 after sell → book $9,473.88; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 1) | — |
-| 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,261.90 | ▼ close $9,321.42 vs 09:30 $9,477.95 (session -152.46) | 16:00 close · cash $8,261.90 · equity $9,321.42 vs 09:30 $9,477.95 (-156.53; session marks -152.46) · 1 name(s) marked open→close (per-name table). SION×154 09:30 $7.87 → close $6.88 -152.46 | — |
+| 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,994.41 | ▼ 09:30 equity $9,477.99 vs yday $9,531.45 (-53.46) | 09:30 open · cash $5,994.41 (unchanged overnight, no fees) · equity $9,477.99 vs prior close $9,531.45 (-53.46) · 3 name(s) re-marked at the open (per-name table). SION×154 yday $8.26 → 09:30 $7.87 -60.06; SPCX×8 yday $148.15 → 09:30 $148.45 +2.40; QRVO×10 yday $107.98 → 09:30 $108.40 +4.20 | — |
+| 2026-09-15 09:30 ET | **SELL** | `SPCX` | 8 | $148.45 | $2.03 | $-16.53 | $7,179.98 | ▼ -16.53 after sell → book $9,475.96; vs 09:30 mark -2.03 | dropped from list after 2 sess (min 1) | join🟢 sector🔴 gen🔴 news🔴 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-09-15 09:30 ET | **SELL** | `QRVO` | 10 | $108.40 | $2.04 | $-48.41 | $8,261.94 | ▼ -48.41 after sell → book $9,473.92; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 1) | — |
+| 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,261.94 | ▼ close $9,321.46 vs 09:30 $9,477.99 (session -152.46) | 16:00 close · cash $8,261.94 · equity $9,321.46 vs 09:30 $9,477.99 (-156.53; session marks -152.46) · 1 name(s) marked open→close (per-name table). SION×154 09:30 $7.87 → close $6.88 -152.46 | — |
+| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,261.94 | ▲ 09:30 equity $9,332.24 vs yday $9,321.46 (+10.78) | 09:30 open · cash $8,261.94 (unchanged overnight, no fees) · equity $9,332.24 vs prior close $9,321.46 (+10.78) · 1 name(s) re-marked at the open (per-name table). SION×154 yday $6.88 → 09:30 $6.95 +10.78 | — |
+| 2026-09-16 09:30 ET | **SELL** | `SION` | 154 | $6.95 | $2.49 | $-134.30 | $9,329.75 | ▼ -134.30 after sell → book $9,329.75; vs 09:30 mark -2.49 | dropped from list after 3 sess (min 1) | — |
+| 2026-09-16 09:30 ET | **BUY** | `AVAH` | 162 | $14.31 | $2.48 | — | $7,009.05 | — | rank by macd_hist; rank macd_hist; list flatten; ⚪; ret5=+3.2; leftover $2332.44 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-09-16 09:30 ET | **BUY** | `BLFS` | 63 | $36.46 | $2.18 | — | $4,709.89 | — | rank by macd_hist; rank macd_hist; list flatten; ⚪; ret5=-4.6; leftover $2332.44 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `RDNT` | 30 | $77.12 | $2.08 | — | $2,394.21 | — | rank by macd_hist; rank macd_hist; list flatten; ⚪; ret5=-5.1; leftover $2332.44 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `IQV` | 8 | $270.89 | $2.01 | — | $225.08 | — | rank by macd_hist; rank macd_hist; list flatten; ⚪; ret5=-0.8; leftover $2332.44 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $225.08 | ▼ close $9,234.09 vs 09:30 $9,332.24 (session -86.91) | 16:00 close · cash $225.08 · equity $9,234.09 vs 09:30 $9,332.24 (-98.15; session marks -86.91) · 4 name(s) marked open→close (per-name table). AVAH×162 09:30 $14.31 → close $14.26 -8.10; BLFS×63 09:30 $36.46 → close $36.11 -22.05; RDNT×30 09:30 $77.12 → close $75.78 -40.20; IQV×8 09:30 $270.89 → close $268.82 -16.56 | — |
 
 ## Not taken
 
@@ -597,4 +610,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `SION` | 154 | 2026-09-11 @ $7.79 | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+4.2; leftover $1205.64 |
+| `AVAH` | 162 | 2026-09-16 @ $14.31 | rank by macd_hist; rank macd_hist; list flatten; ⚪; ret5=+3.2; leftover $2332.44 |
+| `BLFS` | 63 | 2026-09-16 @ $36.46 | rank by macd_hist; rank macd_hist; list flatten; ⚪; ret5=-4.6; leftover $2332.44 |
+| `RDNT` | 30 | 2026-09-16 @ $77.12 | rank by macd_hist; rank macd_hist; list flatten; ⚪; ret5=-5.1; leftover $2332.44 |
+| `IQV` | 8 | 2026-09-16 @ $270.89 | rank by macd_hist; rank macd_hist; list flatten; ⚪; ret5=-0.8; leftover $2332.44 |

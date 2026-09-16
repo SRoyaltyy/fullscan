@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-0.34%** ($9,966) · signal-only (no cash/fees) was -19.21%. Starts YES **11/23**. Fills 65 · skips 98 · realized $-1028.28.
+Cash book **-0.88%** ($9,912) · signal-only (no cash/fees) was -14.65%. Starts YES **11/24**. Fills 66 · skips 98 · realized $-87.73.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $6.01.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,912.24.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -198,6 +198,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | `KR` | 160 | — | $56.02 | +0.00 | $58.49 | +395.20 | +395.20 | +0.00 | +395.20 |
 | 2026-09-14 | `KR` | 160 | $58.49 | $59.31 | +131.20 | $60.91 | +256.00 | +387.20 | +526.40 | +782.40 |
 | 2026-09-15 | `KR` | 160 | $60.91 | $60.77 | -22.40 | $62.25 | +236.80 | +214.40 | +760.00 | +996.80 |
+| 2026-09-16 | `KR` | 160 | $62.25 | $61.93 | -51.20 | — | +0.00 | -51.20 | +945.60 | — |
 
 ## Each session (cash + holdings state)
 
@@ -226,6 +227,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | +0.50 | $8,971.68 | — | $8,971.68 | +0.00 | +395.20 | KR | — | $6.01 | $9,364.41 | KR×160 |
 | 2026-09-14 | -11.00 | $6.01 | KR×160 | $9,495.61 | +131.20 | +256.00 | — | — | $6.01 | $9,751.61 | KR×160 |
 | 2026-09-15 | -3.84 | $6.01 | KR×160 | $9,729.21 | -22.40 | +236.80 | — | — | $6.01 | $9,966.01 | KR×160 |
+| 2026-09-16 | +5.30 | $6.01 | KR×160 | $9,914.81 | -51.20 | +0.00 | — | KR | $9,912.24 | $9,912.24 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -342,6 +344,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.01 | ▲ close $9,751.61 vs 09:30 $9,495.61 (session +256.00) | 16:00 close · cash $6.01 · equity $9,751.61 vs 09:30 $9,495.61 (+256.00; session marks +256.00) · 1 name(s) marked open→close (per-name table). KR×160 09:30 $59.31 → close $60.91 +256.00 | — |
 | 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.01 | ▼ 09:30 equity $9,729.21 vs yday $9,751.61 (-22.40) | 09:30 open · cash $6.01 (unchanged overnight, no fees) · equity $9,729.21 vs prior close $9,751.61 (-22.40) · 1 name(s) re-marked at the open (per-name table). KR×160 yday $60.91 → 09:30 $60.77 -22.40 | — |
 | 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.01 | ▲ close $9,966.01 vs 09:30 $9,729.21 (session +236.80) | 16:00 close · cash $6.01 · equity $9,966.01 vs 09:30 $9,729.21 (+236.80; session marks +236.80) · 1 name(s) marked open→close (per-name table). KR×160 09:30 $60.77 → close $62.25 +236.80 | — |
+| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.01 | ▼ 09:30 equity $9,914.81 vs yday $9,966.01 (-51.20) | 09:30 open · cash $6.01 (unchanged overnight, no fees) · equity $9,914.81 vs prior close $9,966.01 (-51.20) · 1 name(s) re-marked at the open (per-name table). KR×160 yday $62.25 → 09:30 $61.93 -51.20 | — |
+| 2026-09-16 09:30 ET | **SELL** | `KR` | 160 | $61.93 | $2.58 | $+940.55 | $9,912.24 | ▲ +940.55 after sell → book $9,912.24; vs 09:30 mark -2.57 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,912.24 | ▲ close $9,912.24 vs 09:30 $9,914.81 (session +0.00) | 16:00 close · cash $9,912.24 · no lots left · equity $9,912.24. | — |
 
 ## Not taken
 
@@ -445,9 +450,3 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `FPS` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `HITI` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `PLAY` | hard_red | hard-red S=-3.84 sit; no new buys |
-
-## Still open (marked at last close)
-
-| Ticker | Shares | Entry | Why |
-|---|---:|---|---|
-| `KR` | 160 | 2026-09-11 @ $56.02 | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=-2.2; leftover $8971.68 |

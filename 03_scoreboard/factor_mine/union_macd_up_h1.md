@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_up, no 🚨
 
-Cash book **-2.04%** ($9,796) · signal-only (no cash/fees) was +10.10%. Starts YES **3/23**. Fills 162 · skips 87 · realized $-203.86.
+Cash book **-2.04%** ($9,796) · signal-only (no cash/fees) was +9.81%. Starts YES **3/24**. Fills 162 · skips 87 · realized $-203.86.
 
 ## How this sleeve decides (like you are 10)
 
@@ -244,6 +244,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | `FUBO` | 109 | $11.53 | $11.56 | +3.27 | — | +0.00 | +3.27 | +1.09 | — |
 | 2026-09-14 | `RDDT` | 8 | $157.77 | $160.00 | +17.84 | — | +0.00 | +17.84 | +19.60 | — |
 | 2026-09-15 | `NVT` | 8 | $146.64 | $151.12 | +35.84 | — | +0.00 | +35.84 | -53.28 | — |
+| 2026-09-16 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -272,6 +273,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | +0.50 | $10,147.40 | — | $10,147.40 | -0.00 | +8.84 | SANM, ORCL, NVT, COHU, CLOV, BAK, FUBO, RDDT | — | $180.19 | $10,132.66 | SANM×6, ORCL×7, NVT×8, COHU×22, CLOV×267, BAK×598, FUBO×109, RDDT×8 |
 | 2026-09-14 | -11.00 | $180.19 | SANM×6, ORCL×7, NVT×8, COHU×22, CLOV×267, BAK×598, FUBO×109, RDDT×8 | $9,811.07 | -321.59 | -26.88 | — | SANM, ORCL, COHU, CLOV, BAK, FUBO, RDDT | $8,589.23 | $9,762.35 | NVT×8 |
 | 2026-09-15 | -3.84 | $8,589.23 | NVT×8 | $9,798.19 | +35.84 | +0.00 | — | NVT | $9,796.16 | $9,796.16 | — |
+| 2026-09-16 | +5.30 | $9,796.16 | — | $9,796.16 | +0.00 | +0.00 | — | — | $9,796.16 | $9,796.16 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -485,6 +487,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,589.23 | ▲ 09:30 equity $9,798.19 vs yday $9,762.35 (+35.84) | 09:30 open · cash $8,589.23 (unchanged overnight, no fees) · equity $9,798.19 vs prior close $9,762.35 (+35.84) · 1 name(s) re-marked at the open (per-name table). NVT×8 yday $146.64 → 09:30 $151.12 +35.84 | — |
 | 2026-09-15 09:30 ET | **SELL** | `NVT` | 8 | $151.12 | $2.03 | $-57.33 | $9,796.16 | ▼ -57.33 after sell → book $9,796.16; vs 09:30 mark -2.03 | dropped from list after 2 sess (min 1) | — |
 | 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,796.16 | ▲ close $9,796.16 vs 09:30 $9,798.19 (session +0.00) | 16:00 close · cash $9,796.16 · no lots left · equity $9,796.16. | — |
+| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,796.16 | ▲ 09:30 equity $9,796.16 vs yday $9,796.16 (+0.00) | 09:30 open · cash $9,796.16 · no holdings · equity $9,796.16 vs prior close $9,796.16 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,796.16 | ▲ close $9,796.16 vs 09:30 $9,796.16 (session +0.00) | 16:00 close · cash $9,796.16 · no lots left · equity $9,796.16. | — |
 
 ## Not taken
 

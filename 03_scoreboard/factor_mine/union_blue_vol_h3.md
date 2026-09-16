@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-7.96%** ($9,203) · signal-only (no cash/fees) was +7.57%. Starts YES **1/23**. Fills 106 · skips 173 · realized $-708.20.
+Cash book **-8.53%** ($9,147) · signal-only (no cash/fees) was +10.29%. Starts YES **1/24**. Fills 114 · skips 173 · realized $-853.13.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $6.04.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,146.86.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -284,9 +284,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `BNC` | 236 | $5.27 | $5.11 | -37.76 | $4.91 | -47.20 | -84.96 | +47.20 | +0.00 |
 | 2026-09-15 | `ANGX` | 215 | $5.48 | $5.47 | -2.15 | $5.27 | -43.00 | -45.15 | +19.35 | -23.65 |
 | 2026-09-15 | `TSSI` | 129 | $8.45 | $8.43 | -2.58 | $8.16 | -34.83 | -37.41 | -70.95 | -105.78 |
-| 2026-09-15 | `LDI` | 1366 | $0.83 | $0.82 | -17.62 | $0.73 | -120.62 | -138.24 | -40.84 | -161.46 |
+| 2026-09-15 | `LDI` | 1366 | $0.83 | $0.82 | -17.76 | $0.73 | -120.21 | -137.97 | -40.98 | -161.19 |
 | 2026-09-15 | `ASO` | 21 | $54.25 | $53.60 | -13.65 | $50.44 | -66.36 | -80.01 | -27.51 | -93.87 |
 | 2026-09-15 | `IRD` | 185 | $5.97 | $5.94 | -5.55 | $5.82 | -22.20 | -27.75 | -40.70 | -62.90 |
+| 2026-09-16 | `INDP` | 430 | $3.64 | $3.65 | +4.30 | — | +0.00 | +4.30 | +408.50 | — |
+| 2026-09-16 | `WLTH` | 106 | $10.87 | $10.82 | -5.30 | — | +0.00 | -5.30 | -13.78 | — |
+| 2026-09-16 | `BNC` | 236 | $4.91 | $4.77 | -33.04 | — | +0.00 | -33.04 | -33.04 | — |
+| 2026-09-16 | `ANGX` | 215 | $5.27 | $5.30 | +6.45 | — | +0.00 | +6.45 | -17.20 | — |
+| 2026-09-16 | `TSSI` | 129 | $8.16 | $8.21 | +6.45 | — | +0.00 | +6.45 | -99.33 | — |
+| 2026-09-16 | `LDI` | 1366 | $0.73 | $0.73 | -2.05 | — | +0.00 | -2.05 | -163.24 | — |
+| 2026-09-16 | `ASO` | 21 | $50.44 | $50.69 | +5.25 | — | +0.00 | +5.25 | -88.62 | — |
+| 2026-09-16 | `IRD` | 185 | $5.82 | $5.80 | -3.70 | — | +0.00 | -3.70 | -66.60 | — |
 
 ## Each session (cash + holdings state)
 
@@ -314,7 +322,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 | -13.28 | $9,273.26 | CABA×1, ALEC×2, BMEA×2, OABI×1, EOSE×1 | $9,292.09 | -0.47 | +0.00 | — | CABA, ALEC, BMEA, OABI, EOSE | $9,291.78 | $9,291.78 | — |
 | 2026-09-11 | +0.50 | $9,291.78 | — | $9,291.78 | +0.00 | -80.92 | INDP, WLTH, BNC, ANGX, TSSI, LDI, ASO, IRD | — | $6.04 | $9,174.51 | INDP×430, WLTH×106, BNC×236, ANGX×215, TSSI×129, LDI×1366, ASO×21, IRD×185 |
 | 2026-09-14 | -11.00 | $6.04 | INDP×430, WLTH×106, BNC×236, ANGX×215, TSSI×129, LDI×1366, ASO×21, IRD×185 | $9,199.09 | +24.58 | +179.59 | — | — | $6.04 | $9,378.68 | INDP×430, WLTH×106, BNC×236, ANGX×215, TSSI×129, LDI×1366, ASO×21, IRD×185 |
-| 2026-09-15 | -3.84 | $6.04 | INDP×430, WLTH×106, BNC×236, ANGX×215, TSSI×129, LDI×1366, ASO×21, IRD×185 | $9,400.57 | +21.89 | -197.09 | — | — | $6.04 | $9,203.49 | INDP×430, WLTH×106, BNC×236, ANGX×215, TSSI×129, LDI×1366, ASO×21, IRD×185 |
+| 2026-09-15 | -3.84 | $6.04 | INDP×430, WLTH×106, BNC×236, ANGX×215, TSSI×129, LDI×1366, ASO×21, IRD×185 | $9,400.44 | +21.76 | -196.68 | — | — | $6.04 | $9,203.76 | INDP×430, WLTH×106, BNC×236, ANGX×215, TSSI×129, LDI×1366, ASO×21, IRD×185 |
+| 2026-09-16 | +5.30 | $6.04 | INDP×430, WLTH×106, BNC×236, ANGX×215, TSSI×129, LDI×1366, ASO×21, IRD×185 | $9,182.12 | -21.64 | +0.00 | — | INDP, WLTH, BNC, ANGX, TSSI, LDI, ASO, IRD | $9,146.86 | $9,146.86 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -470,8 +479,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.04 | ▼ close $9,174.51 vs 09:30 $9,291.78 (session -80.92) | 16:00 close · cash $6.04 · equity $9,174.51 vs 09:30 $9,291.78 (-117.27; session marks -80.92) · 8 name(s) marked open→close (per-name table). INDP×430 09:30 $2.70 → close $2.77 +30.10; WLTH×106 09:30 $10.95 → close $10.38 -60.42; BNC×236 09:30 $4.91 → close $4.80 -25.96; ANGX×215 09:30 $5.38 → close $5.45 +15.05; TSSI×129 09:30 $8.98 → close $8.93 -6.45; LDI×1366 09:30 $0.85 → close $0.83 -20.49; ASO×21 09:30 $54.91 → close $55.36 +9.45; IRD×185 09:30 $6.16 → close $6.04 -22.20 | — |
 | 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.04 | ▲ 09:30 equity $9,199.09 vs yday $9,174.51 (+24.58) | 09:30 open · cash $6.04 (unchanged overnight, no fees) · equity $9,199.09 vs prior close $9,174.51 (+24.58) · 8 name(s) re-marked at the open (per-name table). INDP×430 yday $2.77 → 09:30 $2.80 +12.90; WLTH×106 yday $10.38 → 09:30 $10.29 -9.54; BNC×236 yday $4.80 → 09:30 $5.03 +54.28; ANGX×215 yday $5.45 → 09:30 $5.57 +25.80; TSSI×129 yday $8.93 → 09:30 $8.57 -46.44; LDI×1366 yday $0.83 → 09:30 $0.84 +4.10; ASO×21 yday $55.36 → 09:30 $54.75 -12.81; IRD×185 yday $6.04 → 09:30 $6.02 -3.70 | — |
 | 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.04 | ▲ close $9,378.68 vs 09:30 $9,199.09 (session +179.59) | 16:00 close · cash $6.04 · equity $9,378.68 vs 09:30 $9,199.09 (+179.59; session marks +179.59) · 8 name(s) marked open→close (per-name table). INDP×430 09:30 $2.80 → close $3.14 +146.20; WLTH×106 09:30 $10.29 → close $10.65 +38.16; BNC×236 09:30 $5.03 → close $5.27 +56.64; ANGX×215 09:30 $5.57 → close $5.48 -19.35; TSSI×129 09:30 $8.57 → close $8.45 -15.48; LDI×1366 09:30 $0.84 → close $0.83 -6.83; ASO×21 09:30 $54.75 → close $54.25 -10.50; IRD×185 09:30 $6.02 → close $5.97 -9.25 | — |
-| 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.04 | ▲ 09:30 equity $9,400.57 vs yday $9,378.68 (+21.89) | 09:30 open · cash $6.04 (unchanged overnight, no fees) · equity $9,400.57 vs prior close $9,378.68 (+21.89) · 8 name(s) re-marked at the open (per-name table). INDP×430 yday $3.14 → 09:30 $3.40 +111.80; WLTH×106 yday $10.65 → 09:30 $10.55 -10.60; BNC×236 yday $5.27 → 09:30 $5.11 -37.76; ANGX×215 yday $5.48 → 09:30 $5.47 -2.15; TSSI×129 yday $8.45 → 09:30 $8.43 -2.58; LDI×1366 yday $0.83 → 09:30 $0.82 -17.62; ASO×21 yday $54.25 → 09:30 $53.60 -13.65; IRD×185 yday $5.97 → 09:30 $5.94 -5.55 | — |
-| 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.04 | ▼ close $9,203.49 vs 09:30 $9,400.57 (session -197.09) | 16:00 close · cash $6.04 · equity $9,203.49 vs 09:30 $9,400.57 (-197.08; session marks -197.09) · 8 name(s) marked open→close (per-name table). INDP×430 09:30 $3.40 → close $3.64 +103.20; WLTH×106 09:30 $10.55 → close $10.87 +33.92; BNC×236 09:30 $5.11 → close $4.91 -47.20; ANGX×215 09:30 $5.47 → close $5.27 -43.00; TSSI×129 09:30 $8.43 → close $8.16 -34.83; LDI×1366 09:30 $0.82 → close $0.73 -120.62; ASO×21 09:30 $53.60 → close $50.44 -66.36; IRD×185 09:30 $5.94 → close $5.82 -22.20 | — |
+| 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.04 | ▲ 09:30 equity $9,400.44 vs yday $9,378.68 (+21.76) | 09:30 open · cash $6.04 (unchanged overnight, no fees) · equity $9,400.44 vs prior close $9,378.68 (+21.76) · 8 name(s) re-marked at the open (per-name table). INDP×430 yday $3.14 → 09:30 $3.40 +111.80; WLTH×106 yday $10.65 → 09:30 $10.55 -10.60; BNC×236 yday $5.27 → 09:30 $5.11 -37.76; ANGX×215 yday $5.48 → 09:30 $5.47 -2.15; TSSI×129 yday $8.45 → 09:30 $8.43 -2.58; LDI×1366 yday $0.83 → 09:30 $0.82 -17.76; ASO×21 yday $54.25 → 09:30 $53.60 -13.65; IRD×185 yday $5.97 → 09:30 $5.94 -5.55 | — |
+| 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.04 | ▼ close $9,203.76 vs 09:30 $9,400.44 (session -196.68) | 16:00 close · cash $6.04 · equity $9,203.76 vs 09:30 $9,400.44 (-196.68; session marks -196.68) · 8 name(s) marked open→close (per-name table). INDP×430 09:30 $3.40 → close $3.64 +103.20; WLTH×106 09:30 $10.55 → close $10.87 +33.92; BNC×236 09:30 $5.11 → close $4.91 -47.20; ANGX×215 09:30 $5.47 → close $5.27 -43.00; TSSI×129 09:30 $8.43 → close $8.16 -34.83; LDI×1366 09:30 $0.82 → close $0.73 -120.21; ASO×21 09:30 $53.60 → close $50.44 -66.36; IRD×185 09:30 $5.94 → close $5.82 -22.20 | — |
+| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.04 | ▼ 09:30 equity $9,182.12 vs yday $9,203.76 (-21.64) | 09:30 open · cash $6.04 (unchanged overnight, no fees) · equity $9,182.12 vs prior close $9,203.76 (-21.64) · 8 name(s) re-marked at the open (per-name table). INDP×430 yday $3.64 → 09:30 $3.65 +4.30; WLTH×106 yday $10.87 → 09:30 $10.82 -5.30; BNC×236 yday $4.91 → 09:30 $4.77 -33.04; ANGX×215 yday $5.27 → 09:30 $5.30 +6.45; TSSI×129 yday $8.16 → 09:30 $8.21 +6.45; LDI×1366 yday $0.73 → 09:30 $0.73 -2.05; ASO×21 yday $50.44 → 09:30 $50.69 +5.25; IRD×185 yday $5.82 → 09:30 $5.80 -3.70 | — |
+| 2026-09-16 09:30 ET | **SELL** | `INDP` | 430 | $3.65 | $5.63 | $+397.32 | $1,569.91 | ▲ +397.32 after sell → book $9,176.49; vs 09:30 mark -5.63 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `WLTH` | 106 | $10.82 | $2.34 | $-18.42 | $2,714.49 | ▼ -18.42 after sell → book $9,174.15; vs 09:30 mark -2.34 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `BNC` | 236 | $4.77 | $3.09 | $-39.18 | $3,837.12 | ▼ -39.18 after sell → book $9,171.06; vs 09:30 mark -3.09 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `ANGX` | 215 | $5.30 | $2.82 | $-22.79 | $4,973.80 | ▼ -22.79 after sell → book $9,168.24; vs 09:30 mark -2.82 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `TSSI` | 129 | $8.21 | $2.41 | $-104.12 | $6,030.48 | ▼ -104.12 after sell → book $9,165.83; vs 09:30 mark -2.41 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `LDI` | 1366 | $0.73 | $14.31 | $-193.26 | $7,014.03 | ▼ -193.26 after sell → book $9,151.52; vs 09:30 mark -14.31 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `ASO` | 21 | $50.69 | $2.07 | $-92.75 | $8,076.45 | ▼ -92.75 after sell → book $9,149.45; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `IRD` | 185 | $5.80 | $2.59 | $-71.73 | $9,146.86 | ▼ -71.73 after sell → book $9,146.86; vs 09:30 mark -2.59 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,146.86 | ▲ close $9,146.86 vs 09:30 $9,182.12 (session +0.00) | 16:00 close · cash $9,146.86 · no lots left · equity $9,146.86. | — |
 
 ## Not taken
 
@@ -650,16 +669,3 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `LFMD` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `RBLX` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `RUM` | hard_red | hard-red S=-3.84 sit; no new buys |
-
-## Still open (marked at last close)
-
-| Ticker | Shares | Entry | Why |
-|---|---:|---|---|
-| `INDP` | 430 | 2026-09-11 @ $2.70 | combo gate; gate vol=good,blue=True; list yday_gainer,yday_mover; 🔵; ret5=+118.8; leftover $1161.47 |
-| `WLTH` | 106 | 2026-09-11 @ $10.95 | combo gate; gate vol=good,blue=True; list yday_gainer,yday_mover; 🔵; ret5=+20.8; leftover $1161.47 |
-| `BNC` | 236 | 2026-09-11 @ $4.91 | combo gate; gate vol=good,blue=True; list yday_gainer,yday_mover; 🔵; ret5=+76.3; leftover $1161.47 |
-| `ANGX` | 215 | 2026-09-11 @ $5.38 | combo gate; gate vol=good,blue=True; list yday_gainer; 🔵; ret5=+19.8; leftover $1161.47 |
-| `TSSI` | 129 | 2026-09-11 @ $8.98 | combo gate; gate vol=good,blue=True; list yday_gainer; 🔵; ret5=+14.1; leftover $1161.47 |
-| `LDI` | 1366 | 2026-09-11 @ $0.85 | combo gate; gate vol=good,blue=True; list yday_gainer; 🔵; ret5=-7.8; leftover $1161.47 |
-| `ASO` | 21 | 2026-09-11 @ $54.91 | combo gate; gate vol=good,blue=True; list yday_gainer; 🔵; ret5=+24.3; leftover $1161.47 |
-| `IRD` | 185 | 2026-09-11 @ $6.16 | combo gate; gate vol=good,blue=True; list yday_gainer; 🔵; ret5=+36.4; leftover $1161.47 |

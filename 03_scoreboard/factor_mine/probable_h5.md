@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-18.67%** ($8,133) · signal-only (no cash/fees) was -11.14%. Starts YES **0/23**. Fills 121 · skips 343 · realized $-1841.27.
+Cash book **-19.16%** ($8,084) · signal-only (no cash/fees) was -15.73%. Starts YES **0/24**. Fills 121 · skips 350 · realized $-1841.27.
 
 ## How this sleeve decides (like you are 10)
 
@@ -425,6 +425,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `FUBO` | 13 | $11.87 | $11.70 | -2.21 | $10.91 | -10.27 | -12.48 | +1.95 | -8.32 |
 | 2026-09-15 | `VIST` | 2 | $76.41 | $76.74 | +0.66 | $78.36 | +3.24 | +3.90 | -1.18 | +2.06 |
 | 2026-09-15 | `BAND` | 2 | $48.97 | $49.51 | +1.08 | $50.08 | +1.14 | +2.22 | -6.08 | -4.94 |
+| 2026-09-16 | `AMTX` | 76 | $1.91 | $1.89 | -1.52 | $1.90 | +0.76 | -0.76 | -11.40 | -10.64 |
+| 2026-09-16 | `CLOV` | 32 | $4.66 | $4.73 | +2.24 | $4.56 | -5.44 | -3.20 | -0.64 | -6.08 |
+| 2026-09-16 | `BAK` | 73 | $2.10 | $1.84 | -18.98 | $1.77 | -5.11 | -24.09 | -20.44 | -25.55 |
+| 2026-09-16 | `TYRA` | 6 | $25.43 | $25.58 | +0.90 | $24.35 | -7.38 | -6.48 | +11.70 | +4.32 |
+| 2026-09-16 | `FUBO` | 13 | $10.91 | $10.75 | -2.08 | $10.60 | -1.95 | -4.03 | -10.40 | -12.35 |
+| 2026-09-16 | `VIST` | 2 | $78.36 | $76.75 | -3.22 | $74.26 | -4.98 | -8.20 | -1.16 | -6.14 |
+| 2026-09-16 | `BAND` | 2 | $50.08 | $48.60 | -2.96 | $48.93 | +0.66 | -2.30 | -7.90 | -7.24 |
 
 ## Each session (cash + holdings state)
 
@@ -453,6 +460,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | +0.50 | $466.17 | CRK×7, ARCT×7, SLN×8, EIX×2, CRDL×55, CLYM×8, SAFX×318, ALEC×389, OABI×205, HQ×61, EOSE×279, DELL×1, MLYS×35, CCOI×98, UAMY×187 | $8,382.00 | +88.47 | -55.44 | AMTX, CLOV, BAK, TYRA, FUBO, VIST, BAND | CRK, ARCT, SLN, EIX, CRDL, CLYM, SAFX | $222.72 | $8,306.51 | ALEC×389, OABI×205, HQ×61, EOSE×279, DELL×1, MLYS×35, CCOI×98, UAMY×187, AMTX×76, CLOV×32, BAK×73, TYRA×6, FUBO×13, VIST×2, BAND×2 |
 | 2026-09-14 | -11.00 | $222.72 | ALEC×389, OABI×205, HQ×61, EOSE×279, DELL×1, MLYS×35, CCOI×98, UAMY×187, AMTX×76, CLOV×32, BAK×73, TYRA×6, FUBO×13, VIST×2, BAND×2 | $8,168.29 | -138.22 | -4.80 | — | ALEC, OABI, HQ, EOSE, MLYS, CCOI, UAMY | $6,594.94 | $8,142.84 | DELL×1, AMTX×76, CLOV×32, BAK×73, TYRA×6, FUBO×13, VIST×2, BAND×2 |
 | 2026-09-15 | -3.84 | $6,594.94 | DELL×1, AMTX×76, CLOV×32, BAK×73, TYRA×6, FUBO×13, VIST×2, BAND×2 | $8,145.41 | +2.57 | -10.05 | — | DELL | $7,134.48 | $8,133.35 | AMTX×76, CLOV×32, BAK×73, TYRA×6, FUBO×13, VIST×2, BAND×2 |
+| 2026-09-16 | +5.30 | $7,134.48 | AMTX×76, CLOV×32, BAK×73, TYRA×6, FUBO×13, VIST×2, BAND×2 | $8,107.73 | -25.62 | -23.44 | — | — | $7,134.48 | $8,084.29 | AMTX×76, CLOV×32, BAK×73, TYRA×6, FUBO×13, VIST×2, BAND×2 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -625,6 +633,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,594.94 | ▲ 09:30 equity $8,145.41 vs yday $8,142.84 (+2.57) | 09:30 open · cash $6,594.94 (unchanged overnight, no fees) · equity $8,145.41 vs prior close $8,142.84 (+2.57) · 8 name(s) re-marked at the open (per-name table). DELL×1 yday $534.28 → 09:30 $541.55 +7.27; AMTX×76 yday $1.95 → 09:30 $1.93 -1.52; CLOV×32 yday $5.10 → 09:30 $5.06 -1.28; BAK×73 yday $2.01 → 09:30 $2.02 +0.73; TYRA×6 yday $25.07 → 09:30 $24.71 -2.16; FUBO×13 yday $11.87 → 09:30 $11.70 -2.21; VIST×2 yday $76.41 → 09:30 $76.74 +0.66; BAND×2 yday $48.97 → 09:30 $49.51 +1.08 | — |
 | 2026-09-15 09:30 ET | **SELL** | `DELL` | 1 | $541.55 | $2.01 | $+23.76 | $7,134.48 | ▲ +23.76 after sell → book $8,143.40; vs 09:30 mark -2.01 | dropped from list after 6 sess (min 5) | — |
 | 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,134.48 | ▼ close $8,133.35 vs 09:30 $8,145.41 (session -10.05) | 16:00 close · cash $7,134.48 · equity $8,133.35 vs 09:30 $8,145.41 (-12.06; session marks -10.05) · 7 name(s) marked open→close (per-name table). AMTX×76 09:30 $1.93 → close $1.91 -1.52; CLOV×32 09:30 $5.06 → close $4.66 -12.80; BAK×73 09:30 $2.02 → close $2.10 +5.84; TYRA×6 09:30 $24.71 → close $25.43 +4.32; FUBO×13 09:30 $11.70 → close $10.91 -10.27; VIST×2 09:30 $76.74 → close $78.36 +3.24; BAND×2 09:30 $49.51 → close $50.08 +1.14 | — |
+| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,134.48 | ▼ 09:30 equity $8,107.73 vs yday $8,133.35 (-25.62) | 09:30 open · cash $7,134.48 (unchanged overnight, no fees) · equity $8,107.73 vs prior close $8,133.35 (-25.62) · 7 name(s) re-marked at the open (per-name table). AMTX×76 yday $1.91 → 09:30 $1.89 -1.52; CLOV×32 yday $4.66 → 09:30 $4.73 +2.24; BAK×73 yday $2.10 → 09:30 $1.84 -18.98; TYRA×6 yday $25.43 → 09:30 $25.58 +0.90; FUBO×13 yday $10.91 → 09:30 $10.75 -2.08; VIST×2 yday $78.36 → 09:30 $76.75 -3.22; BAND×2 yday $50.08 → 09:30 $48.60 -2.96 | — |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,134.48 | ▼ close $8,084.29 vs 09:30 $8,107.73 (session -23.44) | 16:00 close · cash $7,134.48 · equity $8,084.29 vs 09:30 $8,107.73 (-23.44; session marks -23.44) · 7 name(s) marked open→close (per-name table). AMTX×76 09:30 $1.89 → close $1.90 +0.76; CLOV×32 09:30 $4.73 → close $4.56 -5.44; BAK×73 09:30 $1.84 → close $1.77 -5.11; TYRA×6 09:30 $25.58 → close $24.35 -7.38; FUBO×13 09:30 $10.75 → close $10.60 -1.95; VIST×2 09:30 $76.75 → close $74.26 -4.98; BAND×2 09:30 $48.60 → close $48.93 +0.66 | — |
 
 ## Not taken
 
@@ -973,6 +983,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `SAIL` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `QLYS` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `TRX` | hard_red | hard-red S=-3.84 sit; no new buys |
+| 2026-09-16 | `AMTX` | min_hold | dropped but min-hold 3/5 sess — no sell |
+| 2026-09-16 | `CLOV` | min_hold | dropped but min-hold 3/5 sess — no sell |
+| 2026-09-16 | `BAK` | min_hold | dropped but min-hold 3/5 sess — no sell |
+| 2026-09-16 | `TYRA` | min_hold | dropped but min-hold 3/5 sess — no sell |
+| 2026-09-16 | `FUBO` | min_hold | dropped but min-hold 3/5 sess — no sell |
+| 2026-09-16 | `VIST` | min_hold | dropped but min-hold 3/5 sess — no sell |
+| 2026-09-16 | `BAND` | min_hold | dropped but min-hold 3/5 sess — no sell |
 
 ## Still open (marked at last close)
 
