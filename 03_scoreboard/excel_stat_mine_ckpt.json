@@ -452,13 +452,38 @@
   "CCC",
   "CCCC",
   "CCL",
-  "CCU"
+  "CCU",
+  "CD",
+  "CDE",
+  "CDNS",
+  "CDP",
+  "CDRE",
+  "CDW",
+  "CDXS",
+  "CECO",
+  "CEG",
+  "CELC",
+  "CENX",
+  "CERS",
+  "CERT",
+  "CEVA",
+  "CFG",
+  "CFR",
+  "CG",
+  "CGAU",
+  "CGEM",
+  "CGEN",
+  "CGNT",
+  "CGNX",
+  "CGON",
+  "CGTX",
+  "CHD"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 23390,
- "hold_lab_n": 11026,
- "hold_base": 0.47139803334758446,
+ "n_hold": 24690,
+ "hold_lab_n": 11642,
+ "hold_base": 0.47152693398136897,
  "counts": {
   "A@L0_g": [
    60160,
@@ -108330,8 +108355,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 23390,
- "pair_hold_lab_n": 11026,
+ "pair_hold_n": 24690,
+ "pair_hold_lab_n": 11642,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -108440,5 +108465,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789554657
+ "flushed_unix": 1789554840
 }
