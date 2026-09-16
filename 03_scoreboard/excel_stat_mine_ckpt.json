@@ -1077,13 +1077,38 @@
   "HLNE",
   "HLT",
   "HLX",
-  "HMH"
+  "HMH",
+  "HMN",
+  "HNGE",
+  "HNI",
+  "HNRG",
+  "HNST",
+  "HOMB",
+  "HP",
+  "HPP",
+  "HPQ",
+  "HQH",
+  "HQL",
+  "HQY",
+  "HRB",
+  "HRI",
+  "HRMY",
+  "HROW",
+  "HRTG",
+  "HRZN",
+  "HSBC",
+  "HSDT",
+  "HSHP",
+  "HSLV",
+  "HSTM",
+  "HSY",
+  "HTFL"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 55820,
- "hold_lab_n": 26323,
- "hold_base": 0.47156932998925116,
+ "n_hold": 57120,
+ "hold_lab_n": 26990,
+ "hold_base": 0.4725140056022409,
  "counts": {
   "A@L0_g": [
    60160,
@@ -108955,8 +108980,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 55820,
- "pair_hold_lab_n": 26323,
+ "pair_hold_n": 57120,
+ "pair_hold_lab_n": 26990,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -109065,5 +109090,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789561581
+ "flushed_unix": 1789561768
 }
