@@ -34,6 +34,9 @@ def test_render_marks_integrity() -> None:
     assert "Excel" in html or "excel" in html
     assert "Open-bell slip" in html
     assert "flatten_robust" in html
+    assert "holdLive" in html
+    assert "Elite Overview" in html
+    assert "not the looker list" in html
 
 
 def test_md_names_live_method() -> None:

@@ -1062,6 +1062,77 @@ def test_build_mornings_covers_closed_session_past_lookback() -> None:
     assert morn["2026-09-11"]["hard_red"] is False
 
 
+def test_live_panel_end_honors_explicit_open_to_date() -> None:
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+    from unittest import mock
+    open_morning = datetime(2026, 9, 16, 12, 0, tzinfo=ZoneInfo("America/New_York"))
+    real_closed = fm.session_has_closed
+    with mock.patch.object(
+            fm, "session_has_closed",
+            side_effect=lambda d, now=None: real_closed(d, now=open_morning)):
+        assert fm.session_has_closed("2026-09-16") is False
+        assert fm.live_panel_end("2026-08-13", "2026-09-16") == "2026-09-16"
+        assert fm.live_panel_end("2026-08-13", None) == "2026-09-15"
+
+
+def test_extend_pack_through_adds_pending_start() -> None:
+    import tempfile
+    from pathlib import Path
+    from unittest import mock
+    extra = {
+        "from_date": "2026-09-16",
+        "to_date": "2026-09-16",
+        "session_dates": ["2026-09-16"],
+        "n_sessions": 1,
+        "n_rows": 1,
+        "rows": [{"date": "2026-09-16", "ticker": "BBB"}],
+        "by_date": {"2026-09-16": [{"date": "2026-09-16", "ticker": "BBB"}]},
+    }
+    payload = {
+        "to_date": "2026-09-15",
+        "dates": ["2026-08-13", "2026-09-15"],
+        "n_sessions": 2,
+        "starts": {
+            "combo_sh_5050_shared": [
+                {"start": "2026-08-13", "pending": False},
+                {"start": "2026-09-15", "pending": False, "hard_red": True},
+            ],
+        },
+        "series": {"combo_sh_5050_shared": [10000, 10000]},
+        "stats": [],
+    }
+    with tempfile.TemporaryDirectory() as d:
+        tmp = Path(d)
+        (tmp / "panel.json").write_text(json.dumps({
+            "from_date": "2026-08-13",
+            "to_date": "2026-09-15",
+            "session_dates": ["2026-08-13", "2026-09-15"],
+            "n_sessions": 2,
+            "n_rows": 1,
+            "rows": [{"date": "2026-09-15", "ticker": "AAA"}],
+            "by_date": {},
+        }), encoding="utf-8")
+        (tmp / "out.json").write_text(json.dumps(payload), encoding="utf-8")
+        orig = (fm.PANEL_PATH, fm.OUT_JSON)
+        fm.PANEL_PATH = tmp / "panel.json"
+        fm.OUT_JSON = tmp / "out.json"
+        try:
+            with mock.patch.object(fm, "build_panel", return_value=extra), \
+                    mock.patch.object(fm, "last_closed_session",
+                                      return_value="2026-09-15"):
+                out = fm.extend_pack_through("2026-09-16", write=False)
+        finally:
+            fm.PANEL_PATH, fm.OUT_JSON = orig
+    assert out["to_date"] == "2026-09-16"
+    assert out["dates"][-1] == "2026-09-16"
+    assert "2026-09-16" in out["dates"]
+    last = out["starts"]["combo_sh_5050_shared"][-1]
+    assert last["start"] == "2026-09-16"
+    assert last["pending"] is True
+    assert last["return_pct"] is None
+
+
 def test_payload_covers_session_and_land_closed_skips() -> None:
     payload = {
         "from_date": "2026-08-13",
@@ -1147,6 +1218,7 @@ def test_factor_mine_workflow_lands_after_close() -> None:
                encoding="utf-8")
     assert "Post-Close ALL (grade + learn + next captains)" in yml
     assert "--land-closed" in yml
+    assert '--to-date "$TO_DATE"' in yml
     assert 'cron: "25 20 * * 1-5"' in yml
     assert 'cron: "0 12 * * 6"' in yml
     assert "data/factor_mine/panel.json" in yml
@@ -2255,6 +2327,8 @@ if __name__ == "__main__":
     test_morning_s_falls_back_to_predict_file()
     test_morning_s_falls_back_to_weather_when_predict_missing()
     test_build_mornings_covers_closed_session_past_lookback()
+    test_live_panel_end_honors_explicit_open_to_date()
+    test_extend_pack_through_adds_pending_start()
     test_payload_covers_session_and_land_closed_skips()
     test_yahoo_day_strips_iso_time()
     test_simulate_split_indexes_daily_by_date()

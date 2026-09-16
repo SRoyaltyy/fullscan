@@ -140,6 +140,8 @@ def step_paths(date: str, key: str) -> list[Path]:
             ROOT / "dashboard" / "factor-mine" / "strategy_tickets.json",
             ROOT / "dashboard" / "factor-mine" / "today_strategies.json",
             ROOT / "dashboard" / "today_strategies.json",
+            ROOT / "data" / "day_board" / "hold_live_px.json",
+            ROOT / "dashboard" / "factor-mine" / "hold_live_px.json",
         ],
         "flatten": [
             ROOT / "01_daily" / f"{date}_flatten_card.md",

@@ -958,6 +958,7 @@ def test_factor_mine_lands_closed_after_postclose() -> None:
     yml = (WF / "factor_mine.yml").read_text(encoding="utf-8")
     assert "Post-Close ALL (grade + learn + next captains)" in yml
     assert "--land-closed" in yml
+    assert '[ -n "${TO_DATE:-}" ] && ARGS+=(--to-date "$TO_DATE")' in yml
     assert 'cron: "25 20 * * 1-5"' in yml
     assert 'cron: "0 12 * * 6"' in yml
     assert "data/factor_mine/panel.json" in yml
@@ -966,6 +967,10 @@ def test_factor_mine_lands_closed_after_postclose() -> None:
     src = (ROOT / "src" / "factor_mine.py").read_text(encoding="utf-8")
     assert "def land_closed(" in src
     assert "def payload_covers_session(" in src
+    assert "def extend_pack_through(" in src
+    assert "def pending_start_row(" in src
+    live = (WF / "live_px.yml").read_text(encoding="utf-8")
+    assert "src.hold_live_px" in live
 
 
 def test_last_closed_sidecar_does_not_share_ubuntu_concurrency() -> None:
