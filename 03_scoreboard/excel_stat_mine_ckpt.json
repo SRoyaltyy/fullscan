@@ -402,13 +402,38 @@
   "BWMN",
   "BWXT",
   "BX",
-  "BXC"
+  "BXC",
+  "BXMT",
+  "BXP",
+  "BXSL",
+  "BYD",
+  "BYND",
+  "BYRN",
+  "BZ",
+  "BZAI",
+  "BZFD",
+  "BZH",
+  "C",
+  "CAAP",
+  "CABO",
+  "CACI",
+  "CADL",
+  "CAE",
+  "CAG",
+  "CAI",
+  "CAKE",
+  "CAL",
+  "CALM",
+  "CALY",
+  "CAMT",
+  "CANG",
+  "CAR"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 20790,
- "hold_lab_n": 9804,
- "hold_base": 0.4715728715728716,
+ "n_hold": 22090,
+ "hold_lab_n": 10402,
+ "hold_base": 0.47089180624717064,
  "counts": {
   "A@L0_g": [
    60160,
@@ -108280,8 +108305,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 20790,
- "pair_hold_lab_n": 9804,
+ "pair_hold_n": 22090,
+ "pair_hold_lab_n": 10402,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -108390,5 +108415,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789554292
+ "flushed_unix": 1789554477
 }
