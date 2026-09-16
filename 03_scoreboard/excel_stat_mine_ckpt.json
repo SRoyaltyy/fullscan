@@ -252,13 +252,38 @@
   "AVNT",
   "AVNW",
   "AVPT",
-  "AVR"
+  "AVR",
+  "AVT",
+  "AVTX",
+  "AVXL",
+  "AWF",
+  "AWI",
+  "AWP",
+  "AX",
+  "AXG",
+  "AXGN",
+  "AXON",
+  "AXP",
+  "AXSM",
+  "AXTA",
+  "AXTI",
+  "AYA",
+  "AYI",
+  "AZ",
+  "AZN",
+  "B",
+  "BAC",
+  "BAH",
+  "BALL",
+  "BANC",
+  "BAND",
+  "BANR"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 12991,
- "hold_lab_n": 6126,
- "hold_base": 0.47155723192979754,
+ "n_hold": 14291,
+ "hold_lab_n": 6749,
+ "hold_base": 0.47225526555174585,
  "counts": {
   "A@L0_g": [
    60160,
@@ -108130,8 +108155,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 12991,
- "pair_hold_lab_n": 6126,
+ "pair_hold_n": 14291,
+ "pair_hold_lab_n": 6749,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -108240,5 +108265,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789553191
+ "flushed_unix": 1789553374
 }
