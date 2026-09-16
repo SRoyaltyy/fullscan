@@ -6,6 +6,10 @@ User prompt   = sector memory + full Channel 1 (same as general) + ETF tape + se
 CLI:
   python -m src.run_sector_predict [--date YYYY-MM-DD] [--sectors Technology,Energy]
                                    [--force] [--retries 1]
+
+After each fresh QC-ok write, mid-commits that sector via land_file.land_one_sector
+(safe_git_push) so main shows N/11 during the ~70–90m loop. Skip-if-good does not
+rewrite or re-land a quality-ok essay.
 """
 from __future__ import annotations
 
@@ -16,7 +20,8 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 
 from . import (compute_scores, compute_sector_scores, config, deepseek_client,
-               fetch_channel1, output_qc, preopen, scoreboard, step_deadline)
+               fetch_channel1, land_file, output_qc, preopen, scoreboard,
+               step_deadline)
 from .sector_engine import etf_relative_snapshot, search_query_bundle
 from .sector_memory import prediction_context, topic_for
 from .sector_taxonomy import FINVIZ_SECTORS, SECTOR_ETFS, amp_damp_table, taxonomy_list, validate
@@ -243,6 +248,15 @@ def run_one(sector: str, date_str: str, ch1_md: str,
             "reason": getattr(last_qc, "reason", "qc_failed"), "path": path}
 
 
+def _should_mid_commit(result: dict) -> bool:
+    """True only after a fresh QC-ok write. Skip-if-good / fail / cutoff stay off."""
+    if result.get("skipped"):
+        return False
+    if result.get("quality") == "fail":
+        return False
+    return bool(result.get("predicted_direction"))
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default=None)
@@ -300,6 +314,11 @@ def main() -> None:
         with step_deadline.narrowed(budget):
             result = run_one(sector, date_str, ch1_md,
                              retries=args.retries, force=args.force)
+        if _should_mid_commit(result):
+            rec = land_file.land_one_sector(date_str, sector)
+            print(f"[sector-predict] {sector}: mid-commit "
+                  f"pushed={rec.get('pushed')} ok={rec.get('ok')}",
+                  flush=True)
         if result.get("quality") == "ok" or (
                 result.get("skipped") and result.get("quality") == "ok"):
             n_skip += 1

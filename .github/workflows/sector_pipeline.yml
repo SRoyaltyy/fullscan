@@ -44,6 +44,8 @@ jobs:
           pip install yfinance pandas requests ddgs openai || true
 
       - name: Predict (one sector at a time)
+        # Same runner as sector_daily / sector_predict: mid-commit lives in
+        # src.run_sector_predict (land_file.land_one_sector), not a 2nd loop.
         if: ${{ github.event.inputs.stage == 'predict' || github.event.inputs.stage == 'all' }}
         env:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
@@ -97,9 +99,7 @@ jobs:
 
       - name: Commit
         run: |
-          git config user.name "Market-Bot-Automaton"
-          git config user.email "bot@users.noreply.github.com"
-          git add 01_daily/sectors/ 01_daily/_transcripts/ 02_lessons/ 03_scoreboard/ || true
-          git commit -m "auto: sector pipeline ${{ github.event.inputs.stage }}" || echo "No changes"
-          git pull --rebase origin main || true
-          git push origin main
+          bash scripts/safe_git_push.sh \
+            "auto: sector pipeline ${{ github.event.inputs.stage }}" \
+            01_daily/sectors/ 01_daily/_transcripts/ 02_lessons/ 03_scoreboard/ \
+            01_daily/*_preopen_qc.json
