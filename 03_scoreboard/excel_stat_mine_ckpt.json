@@ -27,13 +27,38 @@
   "ACB",
   "ACCO",
   "ACDC",
-  "ACEL"
+  "ACEL",
+  "ACET",
+  "ACGL",
+  "ACH",
+  "ACHC",
+  "ACHR",
+  "ACHV",
+  "ACI",
+  "ACIU",
+  "ACM",
+  "ACMR",
+  "ACN",
+  "ACP",
+  "ACRE",
+  "ACRV",
+  "ACT",
+  "ACTG",
+  "ACVA",
+  "AD",
+  "ADAG",
+  "ADAM",
+  "ADBE",
+  "ADCT",
+  "ADEA",
+  "ADI",
+  "ADM"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 1300,
- "hold_lab_n": 610,
- "hold_base": 0.46923076923076923,
+ "n_hold": 2600,
+ "hold_lab_n": 1236,
+ "hold_base": 0.4753846153846154,
  "counts": {
   "A@L0_g": [
    60160,
@@ -107905,8 +107930,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 1300,
- "pair_hold_lab_n": 610,
+ "pair_hold_n": 2600,
+ "pair_hold_lab_n": 1236,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -108015,5 +108040,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789551527
+ "flushed_unix": 1789551714
 }
