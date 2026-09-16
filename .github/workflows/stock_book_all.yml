@@ -75,6 +75,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
   pages: write
   id-token: write
 
@@ -165,6 +166,21 @@ jobs:
           pip install pandas pyarrow openpyxl || pip install pandas || true
           chmod +x scripts/publish_open_pack.sh
           bash scripts/publish_open_pack.sh "$DATE"
+
+      - name: Deploy Pages if day-board required files are present
+        if: env.skip == 'yes'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          # Skip path: book_ok may be False / ranker not rerun, but tickets +
+          # factor-mine today.json on main are enough. Deploy checks out main.
+          if python3 -m src.pages_publish_gate --date "$DATE"; then
+            gh workflow run deploy-dashboard.yml --ref main || true
+          else
+            echo "skip deploy — day-board required roles not OK yet (catalyst FAIL is ignored)"
+          fi
 
       - name: Install
         if: env.skip != 'yes'

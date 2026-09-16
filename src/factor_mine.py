@@ -2528,6 +2528,10 @@ def write_dash_html(payload: dict) -> Path:
     """Bake the current template + sim.js + payload into Pages HTML."""
     from . import factor_mine_combo as fmc
     payload = fmc.enrich_payload_legs(payload)
+    payload = dict(payload)
+    # Pack to_date / generated_at stay with the cash book. Pages built
+    # is this bake so a 9/15 cash-start is not read as a missing pack.
+    payload["pages_built_at"] = datetime.now(tl.ET).isoformat()
     DASH_DIR.mkdir(parents=True, exist_ok=True)
     dest = DASH_DIR / "index.html"
     if not TEMPLATE.is_file():

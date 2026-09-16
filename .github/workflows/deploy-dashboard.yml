@@ -1,8 +1,10 @@
 name: Deploy dashboard to GitHub Pages
 
-# Backup path: when Stock Book ALL finishes, republish the uploaded
-# "dashboard" artifact to gh-pages. Primary publish is now inside
-# stock_book_all.yml itself; this remains for resilience.
+# Backup path: when Stock Book ALL / Pre-Open / tickets / Open 09:30 /
+# Factor mine finish, republish to gh-pages if day-board required roles
+# for stock_book + publish + factor-mine today.json / tickets are OK.
+# Catalyst FAIL / sector LLM / OpenClaw do not block. Primary publish
+# is often inside stock_book_all.yml; this remains for resilience.
 # Always overlay dashboard/boring-winners and dashboard/ticker-lookback
 # from main so force-orphan deploys cannot 404 those pages.
 
@@ -13,6 +15,7 @@ on:
       - "Pre-Open ALL (predictive one-shot)"
       - "Publish strategy tickets"
       - "Open 09:30 pack"
+      - "Factor strategy mine"
     types: [completed]
   push:
     branches: [main]
@@ -21,6 +24,15 @@ on:
       - "data/stock_book/**"
       - "01_daily/*_stock_book.md"
   workflow_dispatch:
+    inputs:
+      session_date:
+        description: "YYYY-MM-DD (empty = today ET)"
+        required: false
+        default: ""
+      force:
+        description: "Publish even if day-board required-files gate fails"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -46,7 +58,31 @@ jobs:
           ref: main
           fetch-depth: 0
 
+      - name: Day-board required-files gate
+        id: pages_gate
+        env:
+          SESSION_DATE: ${{ github.event.inputs.session_date }}
+          FORCE: ${{ github.event.inputs.force }}
+        run: |
+          set -euo pipefail
+          DATE="${SESSION_DATE:-}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          if [ "${FORCE}" = "true" ]; then
+            echo "ready=yes" >> "$GITHUB_OUTPUT"
+            echo "force=true — publish even if required roles are missing"
+            exit 0
+          fi
+          # stock_book + publish required roles + factor-mine today.json / tickets.
+          # catalyst FAIL / sector LLM / OpenClaw do not block.
+          if python3 -m src.pages_publish_gate --date "$DATE"; then
+            echo "ready=yes" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=no" >> "$GITHUB_OUTPUT"
+            echo "required files not OK — skip Pages (catalyst FAIL alone is not a blocker)"
+          fi
+
       - name: Download dashboard artifact (from triggering run or latest on main)
+        if: steps.pages_gate.outputs.ready == 'yes'
         env:
           RUN_ID: ${{ github.event.workflow_run.id }}
           REPO: ${{ github.repository }}
@@ -169,6 +205,7 @@ jobs:
           ls -la pages_out/dashboard/boring-winners 2>/dev/null || echo "WARN: boring-winners still missing"
 
       - name: Publish to GitHub Pages (gh-pages, retried)
+        if: steps.pages_gate.outputs.ready == 'yes'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PAGES_OUT_DIR: pages_out
@@ -177,6 +214,7 @@ jobs:
           bash scripts/publish_dashboard.sh
 
       - name: Show Pages URL
+        if: steps.pages_gate.outputs.ready == 'yes'
         run: |
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/boring-winners/"

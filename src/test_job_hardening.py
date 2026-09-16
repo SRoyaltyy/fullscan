@@ -150,10 +150,15 @@ def test_deploy_dashboard_follows_preopen_and_book() -> None:
     assert "Stock Book ALL (one-shot)" in text
     assert "Publish strategy tickets" in text
     assert "Open 09:30 pack" in text
+    assert "Factor strategy mine" in text
+    assert "src.pages_publish_gate" in text
     assert "dashboard/**" in text
     assert "github.event_name == 'push'" in text
     assert "Root copy pages_out/${sub}" in text
     assert "sleeve-merge" in text
+    book = (WF / "stock_book_all.yml").read_text(encoding="utf-8")
+    assert "src.pages_publish_gate" in book
+    assert "gh workflow run deploy-dashboard.yml" in book
 
 
 def test_jobs_publish_dashboard_in_place() -> None:

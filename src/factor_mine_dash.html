@@ -113,7 +113,8 @@
    h1{font-size:16px}
  }
 </style></head><body><div class="wrap">
-<h1>Factor strategy mine</h1>
+<h1>Factor strategy mine <span class="mut" id="sessionHead"></span></h1>
+<div class="sub" id="packStamp"></div>
 <div class="sub" id="gen"></div>
 <div class="sub">Books:
  <a href="../" style="color:#93c5fd">paper book</a>
@@ -1677,10 +1678,32 @@ function renderStarts(){
   });
 }
 
+function packDate(){
+  return D.to_date || ((D.dates||[]).length ? D.dates[D.dates.length-1] : '');
+}
+function pagesBuiltDate(){
+  const raw = D.pages_built_at || D.generated_at || '';
+  return String(raw).slice(0,10);
+}
+function sessionDate(){
+  return window.__FM_SESSION || '';
+}
+function packStampText(){
+  return 'pack is '+(packDate()||'?')+', Pages built '+(pagesBuiltDate()||'?');
+}
+function paintSessionStamps(){
+  const sess = sessionDate() || packDate();
+  const head = document.getElementById('sessionHead');
+  if(head) head.textContent = sess ? ('· session '+sess) : '';
+  const pack = document.getElementById('packStamp');
+  if(pack) pack.textContent = packStampText();
+}
+
 function renderAll(){
   if(bracketOn()) ensureLiveBooks();
   const sellEl=document.getElementById('fmSellStatus');
   if(sellEl) sellEl.textContent=sellStatusText();
+  paintSessionStamps();
   document.getElementById('gen').textContent =
     "Generated "+String(D.generated_at||'').slice(0,16).replace('T',' ')+
     " · "+(D.n_sessions||0)+" sessions "+(D.from_date||'')+" → "+(D.to_date||'')+
@@ -1695,15 +1718,16 @@ function renderAll(){
     "Loser cut = Change% < "+(D.loser_cut)+" · live policy untouched: "+(D.live_untouched||"flatten_robust");
   const curve=document.getElementById('curveTitle');
   const met=document.getElementById('metricsTitle');
+  const stamp = packStampText();
   if(sleeveFilter==='all'){
     if(curve) curve.textContent='Equity curves ($10k) — every recipe in this filter (legend chip hides that sleeve only)';
-    if(met) met.textContent='Six effectiveness metrics (cash book)';
+    if(met) met.textContent='Six effectiveness metrics (cash book) · '+stamp;
   } else {
     const sp=startPath();
     if(curve) curve.textContent=(!isCanon() && sp)
       ? sleeveFilter+' — cash-start '+sp.start+' ($10k, no lots)'
       : sleeveFilter+' — equity only';
-    if(met) met.textContent=sleeveFilter+' — six metrics (this sleeve only)';
+    if(met) met.textContent=sleeveFilter+' — six metrics (this sleeve only) · cash-start '+(sp&&sp.start?sp.start:'—')+' · '+stamp;
   }
   renderCards();
   renderChips();
@@ -1756,8 +1780,18 @@ window.addEventListener('resize', draw);
   ]).then(function(arr){
     var d=arr[0]||{}, st=arr[1]||{};
     window.__TODAY_STRATS=st;
+    window.__FM_SESSION=st.date||d.date||'';
+    var head=document.getElementById('sessionHead');
+    if(head && window.__FM_SESSION) head.textContent='· session '+window.__FM_SESSION;
+    if(typeof paintSessionStamps==='function') try{ paintSessionStamps(); }catch(e){}
     var c=d.counts||{};
-    stamp.textContent=(st.date||d.date||'')+' · '+(d.overall||'?')+' · ranker '+(d.ranker_ready?'READY':'BLOCKED')+' · processes ok '+(c.ok||0)+'/'+(c.n||'?')
+    var packBit='';
+    if(typeof packStampText==='function') packBit=packStampText()+' · ';
+    else if(window.__FM_D){
+      var D0=window.__FM_D;
+      packBit='pack is '+(D0.to_date||'?')+', Pages built '+String(D0.pages_built_at||D0.generated_at||'').slice(0,10)+' · ';
+    }
+    stamp.textContent=(st.date||d.date||'')+' · '+packBit+(d.overall||'?')+' · ranker '+(d.ranker_ready?'READY':'BLOCKED')+' · processes ok '+(c.ok||0)+'/'+(c.n||'?')
       +(st.n?(' · '+st.n+' strategies ('+(st.n_ok||0)+' with tickets)'):'')
       +(st.quote&&st.quote.src?(' · px '+st.quote.src+(st.quote.src==='elite_live'||st.quote.src==='elite_live_file'?' (now)':' (not live)')):'');
     var html='';
