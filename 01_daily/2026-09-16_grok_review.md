@@ -2,18 +2,8 @@
 
 ok=False
 
-Core same-day files otherwise look real (general UP/mild with MEMORY_CONFIRM/SCORES, events scan_date 2026-09-16 as a live scan not a whole-file carry, news judge/parse, finviz digest, usable map-heat futures tape), but 0/11 sector essays exist so the 8-of-11 bar fails; research claimed morning_refresh while dumping last night's baseline, and the close market digest is absent.
+Core general predict, events JSON, news judge, news parse, finviz digest, and map-heat tables are same-day and usable (events carries some 'carried' statuses but scan_date is today and content is real). The day fails on two counts: every one of the 11 sector predicts is missing (0/11, far below the 8-of-11 floor), and the map-heat research file self-declares a failed morning refresh that fell back to last night's post-close cards, so it is not a genuine same-day refresh. Baseline is present and not the issue.
 
 ## Fails
-- `01_daily/sectors/2026-09-16/basic_materials_predict.md`: missing
-- `01_daily/sectors/2026-09-16/communication_services_predict.md`: missing
-- `01_daily/sectors/2026-09-16/consumer_cyclical_predict.md`: missing
-- `01_daily/sectors/2026-09-16/consumer_defensive_predict.md`: missing
-- `01_daily/sectors/2026-09-16/energy_predict.md`: missing
-- `01_daily/sectors/2026-09-16/financial_predict.md`: missing
-- `01_daily/sectors/2026-09-16/healthcare_predict.md`: missing
-- `01_daily/sectors/2026-09-16/industrials_predict.md`: missing
-- `01_daily/sectors/2026-09-16/real_estate_predict.md`: missing
-- `01_daily/sectors/2026-09-16/technology_predict.md`: missing
-- `01_daily/sectors/2026-09-16/utilities_predict.md`: missing
-- `01_daily/map_heat/2026-09-16_research.md`: phase=morning_refresh but refresh failed: coverage 0/26, n_refreshed=0, passthrough of last-night post-close cards, overnight not re-scored, many honest-none cards
+- `01_daily/sectors/2026-09-16/*_predict.md`: all 11 sector predicts missing (0/11); requirement is at least 8 of 11 quality sector essays — zero present
+- `01_daily/map_heat/2026-09-16_research.md`: claims phase=morning_refresh but synthesis admits 'Morning delta refresh failed captain-evidence QC (coverage:0/26<required:21). Using last night's post-close captain cards' — a carried-forward, non-refreshed research artifact with unsupported sentiment and no fresh evidence
