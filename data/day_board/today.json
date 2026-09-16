@@ -1,6 +1,6 @@
 {
   "date": "2026-09-16",
-  "generated_at": "2026-09-16T04:57:28.923569-04:00",
+  "generated_at": "2026-09-16T05:03:05.774648-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -41,31 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "events",
-      "title": "Event scanner (primary)",
-      "date": "2026-09-16",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-16T04:20:03.208126-04:00",
-      "files": [
-        {
-          "path": "01_daily/events/2026-09-16_events.json",
-          "ok": true,
-          "reason": "",
-          "size": 36019,
-          "preview": "36 events \u00b7 FOMC decision, SEP/dot plot, Warsh press conference | August advance retail sales rebound +0.6% MoM | Japan August trade deficit widens on oil imports | Lennar Q3 earnings (housing bellwether) | US-China talks on targeted tariff cuts ahead of Xi visit | Bank of England decision \u2014 hold at 3.75% expected"
-        },
-        {
-          "path": "01_daily/events/2026-09-16_events.md",
-          "ok": true,
-          "reason": "",
-          "size": 22479,
-          "preview": "# Event Scan \u2014 2026-09-16\n- events tracked: **36** (via openclaw)\n- uncertainty: **elevated**\n- summary: Today is a regime day: retail sales already rebounded +0.6%, but the 2pm ET FOMC/SEP/Warsh presser is still ~90%+ priced as the first hike of the Warsh Fed, with BoE Thursday and a widely expected BoJ hike to 1.25% Friday. The overlay is stagflationary \u2014 Brent still ~$107 on the US-Iran tanker war, the 10-year pinned near 5%, and China demand remaining weak \u2014 while the Sept 24 Trump-Xi summit is the main two-way event for tariffs and risk appetite."
-        }
-      ],
-      "preview": "36 events \u00b7 FOMC decision, SEP/dot plot, Warsh press conference | August advance retail sales rebound +0.6% MoM | Japan August trade deficit widens on oil imports | Lennar Q3 earnings (housing bellwether) | US-China talks on targeted tariff cuts ahead of Xi visit | Bank of England decision \u2014 hold at 3.75% expected \u00b7 # Event Scan \u2014 2026-09-16\n- events tracked: **36** (via openclaw)\n- uncertainty: **elevated**\n- summary: Today is a regime day: retail sales already rebounded +0.6%, but the 2pm ET FOMC/SEP/Warsh presser is still ~90%+ priced as the first hike of the Warsh Fed, with BoE Thursday and a widely expected BoJ hike to 1.25% Friday. The overlay is stagflationary \u2014 Brent still ~$107 on the US-Iran tanker war, the 10-year pinned near 5%, and China demand remaining weak \u2014 while the Sept 24 Trump-Xi summit is the main two-way event for tariffs and risk appetite."
-    },
     {
       "key": "news_actions",
       "title": "News actions",
@@ -226,6 +201,38 @@
         }
       ],
       "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-09-16\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
+    },
+    {
+      "key": "status",
+      "title": "Pre-open status packet",
+      "date": "2026-09-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-16T05:03:05.066616-04:00",
+      "files": [
+        {
+          "path": "01_daily/2026-09-16_preopen_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 7264,
+          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
+        },
+        {
+          "path": "01_daily/2026-09-16_preopen_status.json",
+          "ok": true,
+          "reason": "",
+          "size": 8349,
+          "preview": "keys: date, generated_at, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs, qc"
+        },
+        {
+          "path": "01_daily/2026-09-16_preopen_status.md",
+          "ok": true,
+          "reason": "",
+          "size": 576,
+          "preview": "# Pre-open ALL status \u2014 2026-09-16\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
+        }
+      ],
+      "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs, qc \u00b7 # Pre-open ALL status \u2014 2026-09-16\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
