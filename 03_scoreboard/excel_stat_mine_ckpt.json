@@ -877,13 +877,38 @@
   "FIGS",
   "FIP",
   "FIS",
-  "FISI"
+  "FISI",
+  "FITB",
+  "FIX",
+  "FIZZ",
+  "FLEX",
+  "FLNA",
+  "FLNC",
+  "FLNG",
+  "FLO",
+  "FLOC",
+  "FLYX",
+  "FMBH",
+  "FMNB",
+  "FN",
+  "FNB",
+  "FNF",
+  "FNKO",
+  "FNV",
+  "FOR",
+  "FORM",
+  "FOUR",
+  "FOX",
+  "FPH",
+  "FPI",
+  "FRA",
+  "FRHC"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 45429,
- "hold_lab_n": 21444,
- "hold_base": 0.47203328270488015,
+ "n_hold": 46729,
+ "hold_lab_n": 22069,
+ "hold_base": 0.47227631663421005,
  "counts": {
   "A@L0_g": [
    60160,
@@ -108755,8 +108780,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 45429,
- "pair_hold_lab_n": 21444,
+ "pair_hold_n": 46729,
+ "pair_hold_lab_n": 22069,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -108865,5 +108890,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789560046
+ "flushed_unix": 1789560240
 }
