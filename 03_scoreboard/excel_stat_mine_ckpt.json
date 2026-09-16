@@ -202,13 +202,38 @@
   "ARIS",
   "ARLO",
   "ARMK",
-  "AROC"
+  "AROC",
+  "ARQ",
+  "ARQQ",
+  "ARR",
+  "ARVN",
+  "ARX",
+  "AS",
+  "ASAN",
+  "ASB",
+  "ASG",
+  "ASGI",
+  "ASIX",
+  "ASLE",
+  "ASM",
+  "ASMB",
+  "ASML",
+  "ASND",
+  "ASO",
+  "ASPI",
+  "ASPN",
+  "ASTE",
+  "ASTH",
+  "ASTI",
+  "ASTL",
+  "ASYS",
+  "ATAI"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 10393,
- "hold_lab_n": 4902,
- "hold_base": 0.4716636197440585,
+ "n_hold": 11691,
+ "hold_lab_n": 5495,
+ "hold_base": 0.4700196732529296,
  "counts": {
   "A@L0_g": [
    60160,
@@ -108080,8 +108105,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 10393,
- "pair_hold_lab_n": 4902,
+ "pair_hold_n": 11691,
+ "pair_hold_lab_n": 5495,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -108190,5 +108215,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789552815
+ "flushed_unix": 1789552994
 }
