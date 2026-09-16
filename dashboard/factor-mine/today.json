@@ -1,6 +1,6 @@
 {
   "date": "2026-09-16",
-  "generated_at": "2026-09-16T07:18:27.030958-04:00",
+  "generated_at": "2026-09-16T07:48:25.745819-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -121,7 +121,13 @@
       "score": -0.30720327841342665
     }
   ],
-  "flatten": {},
+  "flatten": {
+    "said": "0 priced buys \u00b7 cash $11,011.22",
+    "bullets": [
+      "0 priced buys",
+      "cash $11,011.22"
+    ]
+  },
   "general": {
     "said": "UP  5.297",
     "bullets": [
@@ -911,6 +917,225 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-16\n_Generated 2026-09-16T07:18:03.992550-04:00 \u00b7 export=data/exports/finviz_2026-09-16.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11641 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11634 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-16T07:19:36.207590-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-16_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1395166,
+          "preview": "1d BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO"
+        },
+        {
+          "path": "data/stock_book/2026-09-16_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 1865,
+          "preview": "green 104 \u00b7 NTAP, CRSR, IOT, KEYS, SONO, FRSH, NTNX, DT, WEX, BILL"
+        },
+        {
+          "path": "data/stock_book/2026-09-16_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2384,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-16_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12507,
+          "preview": "2026-09-16 BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12507,
+          "preview": "2026-09-16 BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO"
+        },
+        {
+          "path": "01_daily/2026-09-16_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 67349,
+          "preview": "# Stock book \u2014 2026-09-16\n_Generated 2026-09-16T07:18:24.686372-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO \u00b7 green 104 \u00b7 NTAP, CRSR, IOT, KEYS, SONO, FRSH, NTNX, DT, WEX, BILL \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-16 BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO \u00b7 2026-09-16 BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO \u00b7 # Stock book \u2014 2026-09-16\n_Generated 2026-09-16T07:18:24.686372-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-09-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-16T07:19:39.704924-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 16732,
+          "preview": "2026-09-16 BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 1028,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-16.json",
+          "ok": true,
+          "reason": "",
+          "size": 73454,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-16_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 49023,
+          "preview": "2026-09-16 BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 720345,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-16_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 720345,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1010941,
+          "preview": "2026-09-16 BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 720345,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 49023,
+          "preview": "2026-09-16 BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 720345,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 720345,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1010941,
+          "preview": "2026-09-16 BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO"
+        }
+      ],
+      "preview": "2026-09-16 BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-16 BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-16 BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-16 BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, c"
+    },
+    {
+      "key": "flatten",
+      "title": "Flatten live card",
+      "date": "2026-09-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-16T07:24:43.129562-04:00",
+      "files": [
+        {
+          "path": "01_daily/2026-09-16_flatten_card.md",
+          "ok": true,
+          "reason": "",
+          "size": 3703,
+          "preview": "# flatten_robust card \u2014 2026-09-16\n_Generated 2026-09-16T11:24:42 \u2014 live `flatten_robust`._\n**S=+5.30; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **+5.30** (UP) \u00b7 route **io**\n- Cash leftover **$11,011.22** (after 09:30 $1.78 \u00b7 after 16:00 $91,067.32)\n- Prior close **$108,515.00** \u00b7 09:30 **$102,180.41** \u00b7 overnight **$-6,334.59** \u00b7 session **$-11,113.09** \u00b7 16:00 **$91,067.32**\n- Overnight lots **6** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$11,009.43** \u2264 leftover after sells **$102,076.76**"
+        },
+        {
+          "path": "data/sleeve_merge/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 13433,
+          "preview": "2026-09-16 BUY \u2014 \u00b7 SELL \u2014"
+        },
+        {
+          "path": "data/sleeve_merge/daily_marks.json",
+          "ok": true,
+          "reason": "",
+          "size": 141233,
+          "preview": "[{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\": \"IREN\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 223, \"shares\": 223, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 45.98, \"close_px\": 44.76, \"entry_px\": 44.76, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": -272.06, \"day\": -272.06, \"pct_overnight\""
+        },
+        {
+          "path": "data/sleeve_merge/equity_curve.csv",
+          "ok": true,
+          "reason": "",
+          "size": 3540,
+          "preview": "22 rows \u00b7 date,equity,cash,core_n,tac_io_n,tac_n,core_mv,tac_mv,route,score,predict,open_held,open_cash,open_equity,yday_equity,ov \u00b7 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19"
+        },
+        {
+          "path": "dashboard/sleeve-merge/index.html",
+          "ok": true,
+          "reason": "",
+          "size": 48410,
+          "preview": "<!doctype html>\n<html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Combined sleeve \u2014 .io \u00d7 mover</title>\n<style>\n:root{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9}\n*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui}\nmain{max-width:1240px;margin:auto;padding:16px}h1,h2{margin:.4em 0}\n.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:14px 0}\n.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}\n.card b{display:block;font-size:22px;margin-top:4px}\n.muted{color:var(--muted)}a{color:#93c5fd}\n.sheet{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0}\ntable{border-collapse:separate;border-spacing:0;width:100%;background:var(--card)}\nth,td{padding:7px 8"
+        }
+      ],
+      "preview": "# flatten_robust card \u2014 2026-09-16\n_Generated 2026-09-16T11:24:42 \u2014 live `flatten_robust`._\n**S=+5.30; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **+5.30** (UP) \u00b7 route **io**\n- Cash leftover **$11,011.22** (after 09:30 $1.78 \u00b7 after 16:00 $91,067.32)\n- Prior close **$108,515.00** \u00b7 09:30 **$102,180.41** \u00b7 overnight **$-6,334.59** \u00b7 session **$-11,113.09** \u00b7 16:00 **$91,067.32**\n- Overnight lots **6** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$11,009.43** \u2264 leftover after sells **$102,076.76** \u00b7 2026-09-16 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_over"
+    },
+    {
+      "key": "paper",
+      "title": "Paper dashboard",
+      "date": "2026-09-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-16T07:24:46.609468-04:00",
+      "files": [
+        {
+          "path": "03_scoreboard/PAPER_TRADING.md",
+          "ok": true,
+          "reason": "",
+          "size": 1845,
+          "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-09-16** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-09-16** ranker: **green pile** (100 liquid names). Paper buys the pile 15, not the old weighted 15.\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $9,620.38 | -3.80% | $2,482.20 | 6 | 262 | $573.99 | $-361.40 | $-18.21 | 34.4% | 0.0% |\n| 1d_size | $10,028"
+        },
+        {
+          "path": "dashboard/index.html",
+          "ok": true,
+          "reason": "",
+          "size": 6059939,
+          "preview": "<!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#66708a; --pos:#4ade80; --neg:#f87171;\n--chip:#2a3450; --day:#121826; --gold:#fbbf24;\n}\n*{box-sizing:border-box}\nhtml,body{overflow-x:hidden}\nbody{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif}\n.wrap{max-width:1180px;margin:0 auto;padding:16px 16px 48px;width:100%}\nh1{font-size:20px;margin:0 0 4px}\n.sub{color:var(--mut);font-size:12px;margin:0 0 12px}\n.merge-hero{display:block;margin:0 0 14px;padding:14px 16px;border-radius:12px;\nbackground:linear-gradient(180deg,#1a2744,#171e2e);border:1px solid #3b4d78;\ncolor:var(--fg);text-decoration:none}\n."
+        }
+      ],
+      "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-09-16** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-09-16** ranker: **green pile** (100 liquid names). Paper buys the pile 15, not the old weighted 15.\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $9,620.38 | -3.80% | $2,482.20 | 6 | 262 | $573.99 | $-361.40 | $-18.21 | 34.4% | 0.0% |\n| 1d_size | $10,028 \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
     }
   ],
   "source": "publish_live_boards"
