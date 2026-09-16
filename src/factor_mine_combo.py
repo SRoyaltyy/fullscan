@@ -38,11 +38,15 @@ HARD_RED_SIT = "sit"
 HARD_RED_SHORT_ONLY = "short_only"
 HARD_RED_DIP_SCOOP = "dip_scoop"
 HARD_RED_SHORT_AND_SCOOP = "short_and_scoop"
+# Research-only: take the recipe's normal 09:30 open fill even on
+# hard-red. Not a live policy. No dip-scoop rewrite.
+HARD_RED_ALLOW = "allow"
 HARD_RED_MODES = (
     HARD_RED_SIT,
     HARD_RED_SHORT_ONLY,
     HARD_RED_DIP_SCOOP,
     HARD_RED_SHORT_AND_SCOOP,
+    HARD_RED_ALLOW,
 )
 DIP_GRID = (0.5, 1.0, 1.5, 2.0, 3.0)
 OUTPERFORM_RULE = (
@@ -437,6 +441,7 @@ def hard_red_skip_new(side: str | None, mode: str | None = HARD_RED_SIT) -> bool
       * ``short_only`` — shorts may fire; longs sit
       * ``dip_scoop`` — longs may limit-buy after open−X%; shorts sit
       * ``short_and_scoop`` — shorts fire and longs may scoop
+      * ``allow`` — both sides take the normal 09:30 open (research)
     """
     mode = str(mode or HARD_RED_SIT)
     side = str(side or "long")
@@ -447,6 +452,8 @@ def hard_red_skip_new(side: str | None, mode: str | None = HARD_RED_SIT) -> bool
     if mode == HARD_RED_DIP_SCOOP:
         return side == "short"
     if mode == HARD_RED_SHORT_AND_SCOOP:
+        return False
+    if mode == HARD_RED_ALLOW:
         return False
     return True
 

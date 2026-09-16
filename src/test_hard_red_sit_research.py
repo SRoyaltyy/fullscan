@@ -169,6 +169,11 @@ def test_hard_red_skip_modes() -> None:
     assert fmc.hard_red_skip_new("short", "dip_scoop") is True
     assert fmc.hard_red_skip_new("long", "short_and_scoop") is False
     assert fmc.hard_red_skip_new("short", "short_and_scoop") is False
+    assert fmc.hard_red_skip_new("long", "allow") is False
+    assert fmc.hard_red_skip_new("short", "allow") is False
+    # Unknown / missing mode stays live sit.
+    assert fmc.hard_red_skip_new("long", "nope") is True
+    assert fmc.hard_red_skip_new("short", None) is True
 
 
 def test_default_sit_still_blocks_long_and_short() -> None:
