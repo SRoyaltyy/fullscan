@@ -1,6 +1,6 @@
 {
  "date": "2026-09-16",
- "generated_at": "2026-09-16T04:06:54.613406-04:00",
+ "generated_at": "2026-09-16T04:10:43.428425-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -20,97 +20,97 @@
   "dgs10_current": 4.97,
   "dollar": "flat",
   "dollar_source": "dxy",
-  "dxy_pct_1d": -0.06,
-  "vix_ratio": 0.877,
-  "vix_spot": 16.97,
-  "vix_delta_1d": -0.23,
+  "dxy_pct_1d": -0.05,
+  "vix_ratio": 0.878,
+  "vix_spot": 16.99,
+  "vix_delta_1d": -0.21,
   "vix_ratio_source": "vix/vix3m",
   "vix": "falling",
-  "oil_pct_1d": -1.53,
+  "oil_pct_1d": -1.45,
   "oil": "falling",
   "fear_greed": null,
   "fear_greed_label": null,
   "regime_corr": -0.155,
   "sectors": {
    "Basic Materials": {
-    "score": -4.94,
+    "score": -4.92,
     "dir": "down",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Communication Services": {
-    "score": 0.0,
+    "score": -0.38,
     "dir": "flat",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Consumer Cyclical": {
-    "score": -2.7,
+    "score": -3.55,
     "dir": "down",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Consumer Defensive": {
-    "score": -1.93,
+    "score": -2.465,
     "dir": "down",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Energy": {
-    "score": -0.23,
+    "score": -0.27,
     "dir": "flat",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Financial": {
-    "score": -1.24,
+    "score": -1.31,
     "dir": "flat",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Healthcare": {
-    "score": -3.76,
+    "score": -4.44,
     "dir": "down",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Industrials": {
-    "score": -2.9,
+    "score": -3.5700000000000003,
     "dir": "down",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Real Estate": {
-    "score": -2.45,
+    "score": -2.65,
     "dir": "down",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Technology": {
-    "score": -2.24,
+    "score": -3.325,
     "dir": "down",
     "conf": 0.4,
     "source": "finviz_week"
    },
    "Utilities": {
-    "score": -3.78,
+    "score": -4.01,
     "dir": "down",
     "conf": 0.4,
     "source": "finviz_week"
    }
   },
   "sector_tape": {
-   "Basic Materials": -4.94,
-   "Communication Services": 0.0,
-   "Consumer Cyclical": -2.7,
-   "Consumer Defensive": -1.93,
-   "Energy": -0.23,
-   "Financial": -1.24,
-   "Healthcare": -3.76,
-   "Industrials": -2.9,
-   "Real Estate": -2.45,
-   "Technology": -2.24,
-   "Utilities": -3.78
+   "Basic Materials": -4.92,
+   "Communication Services": -0.38,
+   "Consumer Cyclical": -3.55,
+   "Consumer Defensive": -2.465,
+   "Energy": -0.27,
+   "Financial": -1.31,
+   "Healthcare": -4.44,
+   "Industrials": -3.5700000000000003,
+   "Real Estate": -2.65,
+   "Technology": -3.325,
+   "Utilities": -4.01
   },
   "events_bull": 4,
   "events_bear": 14,
@@ -126,22 +126,22 @@
    "Communication Services": {
     "stance": "neutral",
     "confidence": "medium",
-    "why": "finviz sector median week +0.00% [tape]"
+    "why": "finviz sector median week -0.38% [tape]"
    },
    "Consumer Cyclical": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "finviz sector median week -2.70% [tape]"
+    "why": "finviz sector median week -3.55% [tape]"
    },
    "Consumer Defensive": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "finviz sector median week -1.93% [tape]"
+    "why": "finviz sector median week -2.46% [tape]"
    },
    "Energy": {
     "stance": "neutral",
     "confidence": "medium",
-    "why": "finviz sector median week -0.23% [tape]"
+    "why": "finviz sector median week -0.27% [tape]"
    },
    "Financial": {
     "stance": "hostile",
@@ -151,17 +151,17 @@
    "Healthcare": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "finviz sector median week -3.76% [tape]"
+    "why": "finviz sector median week -4.44% [tape]"
    },
    "Industrials": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "finviz sector median week -2.90% [tape]"
+    "why": "finviz sector median week -3.57% [tape]"
    },
    "Real Estate": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "finviz sector median week -2.45% [tape]"
+    "why": "finviz sector median week -2.65% [tape]"
    },
    "Technology": {
     "stance": "favorable",
@@ -171,7 +171,7 @@
    "Utilities": {
     "stance": "hostile",
     "confidence": "medium",
-    "why": "finviz sector median week -3.78% [tape]"
+    "why": "finviz sector median week -4.01% [tape]"
    }
   },
   "size": {
