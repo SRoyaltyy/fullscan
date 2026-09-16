@@ -175,7 +175,136 @@ def why_still(card: dict, pack: dict, *, side: str, hard: bool, s) -> list[str]:
     return lines
 
 
-def _grade(ticker: str, date: str, hold: int, side: str, cal: list[str], bars):
+CAM_ORDER = (
+    "join", "sector", "gen", "news", "digest", "judge", "ab",
+    "peer", "heat", "vol", "catal", "buy", "yday",
+)
+CAM_SHORT = {
+    "join": "join", "sector": "sect", "gen": "gen", "news": "news",
+    "digest": "dig", "judge": "jdg", "ab": "AB", "peer": "peer",
+    "heat": "heat", "vol": "vol", "catal": "cat", "buy": "buy", "yday": "yd",
+}
+
+
+def px_book_from_panel(panel: dict) -> dict:
+    """ticker → date → {o, c} from leak-free panel open/close."""
+    book: dict[str, dict] = {}
+    for r in panel.get("rows") or []:
+        t = fm._tick(r.get("ticker"))
+        d = str(r.get("date") or "")[:10]
+        if not t or not d:
+            continue
+        slot = book.setdefault(t, {}).setdefault(d, {})
+        o = fm._finite(r.get("open"))
+        c = fm._finite(r.get("close"))
+        if o is not None:
+            slot["o"] = float(o)
+        if c is not None:
+            slot["c"] = float(c)
+    return book
+
+
+def fill_yahoo(book: dict, tickers: list[str], start: str, end: str) -> dict:
+    """Fill missing session OHLC. Soft-fail if yfinance is missing."""
+    names = sorted({fm._tick(t) for t in tickers if fm._tick(t)})
+    if not names or not start:
+        return book
+    try:
+        import pandas as pd
+        import yfinance as yf
+    except ImportError:
+        return book
+    from datetime import date as _date, timedelta
+    try:
+        y, m, d = (int(x) for x in end.split("-"))
+        end_excl = (_date(y, m, d) + timedelta(days=3)).isoformat()
+    except Exception:
+        end_excl = end
+    for i in range(0, len(names), 60):
+        chunk = names[i:i + 60]
+        try:
+            df = yf.download(
+                chunk, start=start, end=end_excl, auto_adjust=True,
+                progress=False, threads=True, group_by="ticker",
+            )
+        except Exception:
+            continue
+        if df is None or getattr(df, "empty", True):
+            continue
+        cols = getattr(df, "columns", None)
+        if cols is None:
+            continue
+        multi = getattr(cols, "nlevels", 1) == 2
+        for t in chunk:
+            try:
+                sub = df[t] if multi else df
+            except Exception:
+                continue
+            if sub is None or getattr(sub, "empty", True):
+                continue
+            try:
+                recs = sub.reset_index().to_dict("records")
+            except Exception:
+                continue
+            for rec in recs:
+                dt = rec.get("Date") or rec.get("index")
+                ds = str(pd.Timestamp(dt).date()) if dt is not None else ""
+                if not ds:
+                    continue
+                o = fm._finite(rec.get("Open"))
+                c = fm._finite(rec.get("Close"))
+                slot = book.setdefault(t, {}).setdefault(ds, {})
+                if o is not None and slot.get("o") is None:
+                    slot["o"] = float(o)
+                if c is not None and slot.get("c") is None:
+                    slot["c"] = float(c)
+    return book
+
+
+def horizon_pack(px_book: dict, cal: list[str], ticker: str, date: str,
+                 hold: int, side: str = "long") -> dict:
+    """09:30 open → close hold sessions later. Prices + %."""
+    out = {"pct": None, "px": None, "date": None, "open": None}
+    if not date or date not in cal:
+        return out
+    i = cal.index(date)
+    j = i + int(hold)
+    entry = (px_book.get(ticker) or {}).get(date) or {}
+    o = fm._finite(entry.get("o"))
+    out["open"] = None if o is None else round(float(o), 4)
+    if o is None or o == 0 or j >= len(cal):
+        return out
+    exd = cal[j]
+    px = fm._finite(((px_book.get(ticker) or {}).get(exd) or {}).get("c"))
+    out["date"] = exd
+    if px is None:
+        return out
+    pct = 100.0 * (float(px) / float(o) - 1.0)
+    if side == "short":
+        pct = -pct
+    out["px"] = round(float(px), 4)
+    out["pct"] = round(pct, 2)
+    return out
+
+
+def day_move(px_book: dict, ticker: str, date: str) -> dict:
+    slot = (px_book.get(ticker) or {}).get(date) or {}
+    o = fm._finite(slot.get("o"))
+    c = fm._finite(slot.get("c"))
+    pct = None
+    if o and c is not None and o != 0:
+        pct = round(100.0 * (float(c) / float(o) - 1.0), 2)
+    return {
+        "open": None if o is None else round(float(o), 4),
+        "close": None if c is None else round(float(c), 4),
+        "day_pct": pct,
+    }
+
+
+def _grade(ticker: str, date: str, hold: int, side: str, cal: list[str],
+           bars, px_book: dict | None = None):
+    if px_book:
+        return horizon_pack(px_book, cal, ticker, date, hold, side).get("pct")
     try:
         return fm.hold_return(ticker, date, hold, cal, side, None, {}, bars)
     except Exception:
@@ -183,7 +312,7 @@ def _grade(ticker: str, date: str, hold: int, side: str, cal: list[str], bars):
 
 
 def rank_day(date: str, cards: dict, *, s, hard: bool,
-             cal: list[str], bars) -> dict:
+             cal: list[str], bars, px_book: dict | None = None) -> dict:
     longs, shorts, all_rows = [], [], []
     for ticker, card in (cards or {}).items():
         pack = idio_score(card)
@@ -207,6 +336,8 @@ def rank_day(date: str, cards: dict, *, s, hard: bool,
             "on_list": bool(card.get("on_list")),
             "sources": card.get("sources") or [],
             "open": card.get("open"),
+            "close": ((px_book or {}).get(ticker) or {}).get(date, {}).get("c"),
+            "day_pct": day_move(px_book or {}, ticker, date).get("day_pct"),
             "boxes": card.get("boxes") or {},
             "domains": card.get("domains"),
             "parts": pack["parts"],
@@ -218,13 +349,21 @@ def rank_day(date: str, cards: dict, *, s, hard: bool,
             rec_l = dict(rec, side="long",
                          why=why_still(card, pack, side="long", hard=hard, s=s))
             for h in HOLDS:
-                rec_l[f"h{h}"] = _grade(ticker, date, h, "long", cal, bars)
+                rec_l[f"h{h}"] = _grade(
+                    ticker, date, h, "long", cal, bars, px_book)
+                pack_h = horizon_pack(px_book or {}, cal, ticker, date, h, "long")
+                rec_l[f"h{h}_px"] = pack_h.get("px")
+                rec_l[f"h{h}_date"] = pack_h.get("date")
             longs.append(rec_l)
         if short_ok(card, pack):
             rec_s = dict(rec, side="short",
                          why=why_still(card, pack, side="short", hard=hard, s=s))
             for h in HOLDS:
-                rec_s[f"h{h}"] = _grade(ticker, date, h, "short", cal, bars)
+                rec_s[f"h{h}"] = _grade(
+                    ticker, date, h, "short", cal, bars, px_book)
+                pack_h = horizon_pack(px_book or {}, cal, ticker, date, h, "short")
+                rec_s[f"h{h}_px"] = pack_h.get("px")
+                rec_s[f"h{h}_date"] = pack_h.get("date")
             shorts.append(rec_s)
     longs.sort(key=lambda r: (-r["idio"], -r["n_pos"], r["ticker"]))
     shorts.sort(key=lambda r: (r["idio"], r["n_neg"], r["ticker"]))
@@ -269,8 +408,64 @@ def backtest(days: list[dict]) -> dict:
     return out
 
 
+def build_history(probe: dict, mornings: dict, cal: list[str],
+                  px_book: dict) -> dict[str, list]:
+    """Every session since 8/13, per ticker: cameras + prices + horizons."""
+    tickers = sorted({
+        t for m in (probe or {}).values() for t in (m or {})
+    })
+    out: dict[str, list] = {t: [] for t in tickers}
+    for date in cal:
+        morn = mornings.get(date) or {}
+        s = morn.get("s")
+        try:
+            hard = bool(morn.get("hard_red") or (
+                s is not None and float(s) <= float(fmb.HARD_RED)))
+        except (TypeError, ValueError):
+            hard = False
+        cards = probe.get(date) or {}
+        for t in tickers:
+            card = cards.get(t)
+            move = day_move(px_book, t, date)
+            row = {
+                "date": date,
+                "s": s,
+                "hard_red": hard,
+                "on_list": bool(card),
+                "n_pos": int((card or {}).get("cond_good") or 0) if card else None,
+                "n_neg": int((card or {}).get("cond_bad") or (card or {}).get("n_neg") or 0) if card else None,
+                "cams": None,
+                "boxes": (card or {}).get("boxes") or {},
+                "e_pol": (card or {}).get("e_pol"),
+                "e_label": (card or {}).get("e_label"),
+                "r_pol": (card or {}).get("r_pol"),
+                "r_label": (card or {}).get("r_label"),
+                "news": ((card or {}).get("news") or {}).get("title") or (card or {}).get("headline"),
+                "news_tone": ((card or {}).get("news") or {}).get("tone"),
+                "sources": (card or {}).get("sources") or [],
+                "files": (card or {}).get("files") or [],
+                "rsi": (card or {}).get("rsi"),
+                "macd_hist": (card or {}).get("macd_hist"),
+                "open": move["open"],
+                "close": move["close"],
+                "day_pct": move["day_pct"],
+            }
+            if card:
+                row["cams"] = f"+{row['n_pos']} −{row['n_neg']}"
+                pack = idio_score(card)
+                row["idio"] = pack["score"]
+                row["why"] = why_still(card, pack, side="long", hard=hard, s=s)
+            for h in HOLDS:
+                hp = horizon_pack(px_book, cal, t, date, h, "long")
+                row[f"h{h}"] = hp.get("pct")
+                row[f"h{h}_px"] = hp.get("px")
+                row[f"h{h}_date"] = hp.get("date")
+            out[t].append(row)
+    return out
+
+
 def run(*, panel: dict | None = None, probe: dict | None = None,
-        mornings: dict | None = None) -> dict:
+        mornings: dict | None = None, yahoo: bool = True) -> dict:
     if panel is None:
         if not fm.PANEL_PATH.is_file():
             return {"ok": False, "error": "no panel.json"}
@@ -278,11 +473,12 @@ def run(*, panel: dict | None = None, probe: dict | None = None,
     probe = probe if probe is not None else fmp.build_probe(panel)
     mornings = mornings if mornings is not None else fmp.build_mornings()
     cal = list(panel.get("session_dates") or [])
-    bars = None
-    try:
-        bars = fm._load_bars() if hasattr(fm, "_load_bars") else None
-    except Exception:
-        bars = None
+    px_book = px_book_from_panel(panel)
+    tickers = sorted({
+        t for m in (probe or {}).values() for t in (m or {})
+    })
+    if yahoo and cal:
+        px_book = fill_yahoo(px_book, tickers, cal[0], cal[-1])
     days = []
     for date in cal or sorted(probe):
         morn = mornings.get(date) or {}
@@ -293,9 +489,12 @@ def run(*, panel: dict | None = None, probe: dict | None = None,
         except (TypeError, ValueError):
             hard = False
         cards = probe.get(date) or {}
-        days.append(rank_day(date, cards, s=s, hard=hard, cal=cal, bars=bars))
+        days.append(rank_day(
+            date, cards, s=s, hard=hard, cal=cal, bars=None, px_book=px_book,
+        ))
     bt = backtest(days)
     latest = next((d for d in reversed(days) if d.get("n_cards")), None)
+    history = build_history(probe, mornings, cal, px_book)
     return {
         "ok": True,
         "generated_at": datetime.now(tl.ET).isoformat(),
@@ -303,16 +502,21 @@ def run(*, panel: dict | None = None, probe: dict | None = None,
         "to_date": cal[-1] if cal else None,
         "n_days": len(days),
         "top_n": TOP_N,
+        "cam_order": list(CAM_ORDER),
+        "cam_short": dict(CAM_SHORT),
+        "tickers": tickers,
         "live_sit_untouched": True,
         "backtest": bt,
         "latest": latest,
         "days": days,
+        "history": history,
         "note": (
-            "Live sleeves still SIT on S≤−3. This list is the investigator "
-            "card for every looker that morning, ranked by idiosyncratic "
-            "score so hard-red does not hide E-beats / green cameras."
+            "Live sleeves still SIT on S≤−3. Search a ticker for every "
+            "session since 8/13: cameras (+N −N), 09:30 open, close, "
+            "same-day % and hold-1/3/5 with actual prices."
         ),
     }
+
 
 
 def write_md(doc: dict) -> Path:
@@ -384,8 +588,23 @@ def write_md(doc: dict) -> Path:
 
 def write_json(doc: dict) -> Path:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    slim = dict(doc)
-    # Keep days but drop all_top bulk from archived days except latest.
+    DASH_DIR.mkdir(parents=True, exist_ok=True)
+    hist = doc.get("history") or {}
+    tick_dir = DASH_DIR / "t"
+    tick_dir.mkdir(parents=True, exist_ok=True)
+    for t, rows in hist.items():
+        (tick_dir / f"{t}.json").write_text(
+            json.dumps({
+                "ticker": t,
+                "from_date": doc.get("from_date"),
+                "to_date": doc.get("to_date"),
+                "cam_order": doc.get("cam_order") or list(CAM_ORDER),
+                "cam_short": doc.get("cam_short") or dict(CAM_SHORT),
+                "rows": rows,
+            }, default=str),
+            encoding="utf-8",
+        )
+    slim = {k: v for k, v in doc.items() if k != "history"}
     days = []
     latest_date = (doc.get("latest") or {}).get("date")
     for d in doc.get("days") or []:
@@ -395,142 +614,34 @@ def write_json(doc: dict) -> Path:
         days.append(row)
     slim["days"] = days
     path = OUT_DIR / "latest.json"
-    path.write_text(json.dumps(slim, indent=2, default=str), encoding="utf-8")
-    DASH_DIR.mkdir(parents=True, exist_ok=True)
-    (DASH_DIR / "latest.json").write_text(path.read_text(encoding="utf-8"),
-                                          encoding="utf-8")
+    text = json.dumps(slim, indent=2, default=str)
+    path.write_text(text, encoding="utf-8")
+    (DASH_DIR / "latest.json").write_text(text, encoding="utf-8")
+    (DASH_DIR / "tickers.json").write_text(json.dumps({
+        "tickers": doc.get("tickers") or [],
+        "from_date": doc.get("from_date"),
+        "to_date": doc.get("to_date"),
+        "n_days": doc.get("n_days"),
+        "cam_order": doc.get("cam_order") or list(CAM_ORDER),
+        "cam_short": doc.get("cam_short") or dict(CAM_SHORT),
+    }), encoding="utf-8")
     return path
 
 
+
 def write_html() -> Path:
+    """HTML is the checked-in dashboard file. Do not clobber it."""
     DASH_DIR.mkdir(parents=True, exist_ok=True)
     dest = DASH_DIR / "index.html"
-    dest.write_text(DASH_HTML, encoding="utf-8")
     return dest
-
-
-DASH_HTML = r"""<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Hard-red exceptions — daily investigator list</title>
-<meta http-equiv="refresh" content="120">
-<style>
- :root{--bg:#0f1420;--card:#171e2e;--line:#262f45;--fg:#dfe6f2;--mut:#8b96ab;
-  --pos:#4ade80;--neg:#f87171;--gold:#fbbf24;--day:#121826}
- *{box-sizing:border-box}
- html,body{margin:0;background:var(--bg);color:var(--fg);
-   font:14px/1.45 -apple-system,Segoe UI,Roboto,sans-serif}
- .wrap{max-width:1100px;margin:0 auto;padding:16px 14px 48px}
- h1{font-size:20px;margin:0 0 4px}
- .sub{color:var(--mut);font-size:12px;margin:0 0 12px}
- .sub a{color:#93c5fd}
- .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin:0 0 14px}
- .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
- .card b{display:block;font-size:18px;margin-top:2px;font-variant-numeric:tabular-nums}
- .pos{color:var(--pos)}.neg{color:var(--neg)}.mut{color:var(--mut)}.gold{color:var(--gold)}
- .name{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;margin:0 0 10px}
- .name h3{margin:0 0 6px;font:800 18px/1.2 ui-monospace,Menlo,monospace}
- .why{margin:0;padding-left:18px;color:#c5d0e6;font-size:13px}
- .cam{display:inline-block;margin:2px 4px 2px 0;padding:2px 8px;border:1px solid var(--line);border-radius:999px;font:11px ui-monospace,Menlo,monospace}
- .banner{font:800 22px/1.2 system-ui;text-align:center;padding:10px;border-radius:10px;margin:0 0 8px}
- .banner.sit{background:#7f1d1d;color:#fecaca}
- .banner.ok{background:#14532d;color:#86efac}
- .cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
- @media(max-width:800px){.cols{grid-template-columns:1fr}}
-</style></head><body><div class="wrap">
-<h1>Daily investigator list</h1>
-<div class="sub">Same card as the stock investigator, for <b>every looker</b> that morning — not one click.
-Hard-red sit still blocks live buys. This page ranks who had enough idiosyncratic green (E / cameras / news / peer)
-that sitting on the whole tape may have been the miss. Live flatten_robust untouched.
- · <a href="../factor-mine/">factor mine</a>
- · <a href="../day-board/">day board</a></div>
-<div class="cards" id="cards"></div>
-<div id="banner"></div>
-<div class="cols">
-  <div><h2>Longs sit hid</h2><div id="longs"></div></div>
-  <div><h2>Shorts sit hid</h2><div id="shorts"></div></div>
-</div>
-<h2>Top 40 by idio score (this morning)</h2>
-<div id="all"></div>
-<p class="mut" id="note"></p>
-</div>
-<script>
-const RAW = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/hard_red_exceptions/latest.json";
-function esc(s){return String(s||"").replace(/[&<>]/g,c=>({'&':'&','<':'<','>':'>'}[c]));}
-function cls(n){return n==null?'mut':(Number(n)>0?'pos':(Number(n)<0?'neg':'mut'));}
-function hcell(v){return v==null?'—':((v>=0?'+':'')+Number(v).toFixed(2)+'%');}
-function boxpills(boxes){
-  return Object.entries(boxes||{}).map(([k,v])=>{
-    const t=String(v||'missing');
-    const c=t==='good'?'pos':(t==='bad'?'neg':'mut');
-    return `<span class="cam ${c}">${esc(k)} ${esc(t)}</span>`;
-  }).join('');
-}
-function nameCard(r){
-  const side=r.side||'';
-  return `<div class="name">
-    <h3>${esc(r.ticker)} <span class="${cls(r.idio)}">${r.idio>=0?'+':''}${esc(r.idio)}</span>
-      <span class="mut">${esc(side)}</span></h3>
-    <div class="mut">+${esc(r.n_pos)} −${esc(r.n_neg)} · E ${esc(r.e_pol)} · RSI ${esc(r.rsi??'—')}
-      · H1 <span class="${cls(r.h1)}">${hcell(r.h1)}</span>
-      · H3 <span class="${cls(r.h3)}">${hcell(r.h3)}</span>
-      · H5 <span class="${cls(r.h5)}">${hcell(r.h5)}</span></div>
-    <div style="margin:6px 0">${boxpills(r.boxes)}</div>
-    <ul class="why">${(r.why||[]).slice(0,10).map(x=>'<li>'+esc(x)+'</li>').join('')}</ul>
-    ${r.headline?`<div class="mut">${esc(r.headline)}</div>`:''}
-  </div>`;
-}
-function rowLine(r){
-  return `<div class="name" style="padding:8px 10px">
-    <b>${esc(r.ticker)}</b>
-    <span class="${cls(r.idio)}"> idio ${r.idio>=0?'+':''}${esc(r.idio)}</span>
-    · +${esc(r.n_pos)} −${esc(r.n_neg)} · E ${esc(r.e_pol)}
-    · yday ${esc(r.yday_ret??'—')} · RSI ${esc(r.rsi??'—')}
-    ${r.headline?(' · '+esc(r.headline).slice(0,80)):''}
-  </div>`;
-}
-async function boot(){
-  let d;
-  try{
-    const r=await fetch(RAW+'?t='+Date.now(),{cache:'no-store'});
-    if(!r.ok) throw new Error(r.status);
-    d=await r.json();
-  }catch(e){
-    document.getElementById('banner').innerHTML='<div class="mut">No latest.json yet — wait for the daily job.</div>';
-    return;
-  }
-  const L=d.latest||{};
-  const bt=d.backtest||{};
-  document.getElementById('cards').innerHTML=[
-    ['Session', L.date||'—', ''],
-    ['Weather S', L.s==null?'—':L.s, Number(L.s)<=-3?'neg':'pos'],
-    ['Cards', L.n_cards??'—', ''],
-    ['Long-ok', L.n_long_ok??'—', 'pos'],
-    ['Short-ok', L.n_short_ok??'—', 'neg'],
-    ['Hard-red days', bt.n_hard_red??'—', ''],
-  ].map(([k,v,c])=>`<div class="card">${k}<b class="${c}">${esc(v)}</b></div>`).join('');
-  document.getElementById('banner').innerHTML = L.hard_red
-    ? `<div class="banner sit">SIT morning — live book bought nobody. Names below still had idiosyncratic green.</div>`
-    : `<div class="banner ok">Not a sit morning. List is still the full investigator rank.</div>`;
-  document.getElementById('longs').innerHTML=(L.longs||[]).map(nameCard).join('')||'<div class="mut">No long-ok names.</div>';
-  document.getElementById('shorts').innerHTML=(L.shorts||[]).map(nameCard).join('')||'<div class="mut">No short-ok names.</div>';
-  document.getElementById('all').innerHTML=(L.all_top||[]).map(rowLine).join('');
-  const lh=bt.long_h1||{};
-  document.getElementById('note').textContent =
-    (d.note||'') + ' Research long hold-1 on sit days: n='+(lh.n||0)+
-    ' win='+(lh.win==null?'—':Math.round(100*lh.win)+'%')+
-    ' mean='+(lh.mean==null?'—':lh.mean+'%')+'. Not a live wire.';
-}
-boot();
-</script></body></html>
-"""
 
 
 def main(argv: list[str] | None = None) -> int:
     p = argparse.ArgumentParser()
     p.add_argument("--write", action="store_true")
+    p.add_argument("--no-yahoo", action="store_true")
     args = p.parse_args(argv)
-    doc = run()
+    doc = run(yahoo=not args.no_yahoo)
     if args.write and doc.get("ok"):
         write_json(doc)
         write_md(doc)

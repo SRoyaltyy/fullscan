@@ -30,7 +30,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install
-        run: pip install pandas pyarrow pytest
+        run: pip install pandas pyarrow pytest yfinance
       - name: Test
         run: python -m pytest -q src/test_hard_red_exceptions.py
       - name: Rank lookers
@@ -39,6 +39,7 @@ jobs:
           PYTHONPATH=. python3 -m src.hard_red_exceptions --write
           test -s data/hard_red_exceptions/latest.json
           test -s dashboard/hard-red-exceptions/index.html
+          test -s dashboard/hard-red-exceptions/tickers.json
       - name: Commit
         run: |
           bash scripts/safe_git_push.sh \
@@ -46,6 +47,8 @@ jobs:
             data/hard_red_exceptions/latest.json \
             dashboard/hard-red-exceptions/index.html \
             dashboard/hard-red-exceptions/latest.json \
+            dashboard/hard-red-exceptions/tickers.json \
+            dashboard/hard-red-exceptions/t \
             03_scoreboard/HARD_RED_EXCEPTIONS.md
       - name: Refresh Pages
         env:

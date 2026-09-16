@@ -1,114 +1,216 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Hard-red exceptions — daily investigator list</title>
-<meta http-equiv="refresh" content="120">
+<title>Investigator history — cameras + prices since 8/13</title>
 <style>
  :root{--bg:#0f1420;--card:#171e2e;--line:#262f45;--fg:#dfe6f2;--mut:#8b96ab;
   --pos:#4ade80;--neg:#f87171;--gold:#fbbf24;--day:#121826}
  *{box-sizing:border-box}
  html,body{margin:0;background:var(--bg);color:var(--fg);
-   font:14px/1.45 -apple-system,Segoe UI,Roboto,sans-serif}
- .wrap{max-width:1100px;margin:0 auto;padding:16px 14px 48px}
+   font:13px/1.4 -apple-system,Segoe UI,Roboto,sans-serif}
+ .wrap{max-width:1400px;margin:0 auto;padding:14px 12px 48px}
  h1{font-size:20px;margin:0 0 4px}
  .sub{color:var(--mut);font-size:12px;margin:0 0 12px}
  .sub a{color:#93c5fd}
- .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin:0 0 14px}
- .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
- .card b{display:block;font-size:18px;margin-top:2px;font-variant-numeric:tabular-nums}
+ .search{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px}
+ .search input,.search select{background:var(--card);color:var(--fg);border:1px solid var(--line);
+   border-radius:8px;padding:9px 12px;font:15px/1.2 ui-monospace,Menlo,monospace;min-width:160px}
+ .search button{background:#fbbf24;color:#111;border:0;border-radius:8px;padding:9px 14px;font-weight:800;cursor:pointer}
+ .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin:0 0 12px}
+ .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 10px}
+ .card b{display:block;font-size:16px;margin-top:2px;font-variant-numeric:tabular-nums}
  .pos{color:var(--pos)}.neg{color:var(--neg)}.mut{color:var(--mut)}.gold{color:var(--gold)}
- .name{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;margin:0 0 10px}
- .name h3{margin:0 0 6px;font:800 18px/1.2 ui-monospace,Menlo,monospace}
- .why{margin:0;padding-left:18px;color:#c5d0e6;font-size:13px}
- .cam{display:inline-block;margin:2px 4px 2px 0;padding:2px 8px;border:1px solid var(--line);border-radius:999px;font:11px ui-monospace,Menlo,monospace}
- .banner{font:800 22px/1.2 system-ui;text-align:center;padding:10px;border-radius:10px;margin:0 0 8px}
+ .banner{font:800 18px/1.2 system-ui;text-align:center;padding:10px;border-radius:10px;margin:0 0 10px}
  .banner.sit{background:#7f1d1d;color:#fecaca}
- .banner.ok{background:#14532d;color:#86efac}
- .cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
- @media(max-width:800px){.cols{grid-template-columns:1fr}}
+ .tbl-wrap{width:100%;overflow-x:auto}
+ table{width:100%;border-collapse:collapse;font:12px/1.35 ui-monospace,Menlo,monospace}
+ th,td{padding:5px 6px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+ th{color:var(--mut);font-weight:600} td:first-child,th:first-child{text-align:left}
+ tr.sit{background:rgba(127,29,29,.25)}
+ tr.off{opacity:.55}
+ .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin:0 1px;vertical-align:middle;
+   background:#3a445c}
+ .dot.good{background:#4ade80}.dot.bad{background:#f87171}.dot.neutral{background:#fbbf24}
+ .dot.missing{background:#3a445c}
+ .why{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:10px 0}
+ .why ul{margin:0;padding-left:18px}
+ .cam{display:inline-block;margin:1px 3px 1px 0;padding:1px 6px;border:1px solid var(--line);border-radius:999px;font-size:11px}
+ .name{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;margin:0 0 8px;cursor:pointer}
+ .cols{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+ @media(max-width:900px){.cols{grid-template-columns:1fr}}
 </style></head><body><div class="wrap">
-<h1>Daily investigator list</h1>
-<div class="sub">Same card as the stock investigator, for <b>every looker</b> that morning — not one click.
-Hard-red sit still blocks live buys. This page ranks who had enough idiosyncratic green (E / cameras / news / peer)
-that sitting on the whole tape may have been the miss. Live flatten_robust untouched.
+<h1>Investigator history</h1>
+<div class="sub">Every looker since <b>2026-08-13</b>. Search a ticker for cameras (+N −N), 09:30 open, close, same-day % and hold-1/3/5 with actual prices.
+Live sit on S≤−3 is untouched.
  · <a href="../factor-mine/">factor mine</a>
  · <a href="../day-board/">day board</a></div>
-<div class="cards" id="cards"></div>
-<div id="banner"></div>
-<div class="cols">
-  <div><h2>Longs sit hid</h2><div id="longs"></div></div>
-  <div><h2>Shorts sit hid</h2><div id="shorts"></div></div>
+<div class="search">
+  <input id="q" list="ticklist" placeholder="Search ticker — OKTA, ZS, CRWD…" autocomplete="on" spellcheck="false">
+  <datalist id="ticklist"></datalist>
+  <select id="dateSel" aria-label="Morning"></select>
+  <button type="button" id="go">Show</button>
 </div>
-<h2>Top 40 by idio score (this morning)</h2>
-<div id="all"></div>
-<p class="mut" id="note"></p>
+<div class="cards" id="sum"></div>
+<div id="hist"></div>
+<div id="home"></div>
 </div>
 <script>
-const RAW = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/hard_red_exceptions/latest.json";
-function esc(s){return String(s||"").replace(/[&<>]/g,c=>({'&':'&','<':'<','>':'>'}[c]));}
-function cls(n){return n==null?'mut':(Number(n)>0?'pos':(Number(n)<0?'neg':'mut'));}
-function hcell(v){return v==null?'—':((v>=0?'+':'')+Number(v).toFixed(2)+'%');}
-function boxpills(boxes){
-  return Object.entries(boxes||{}).map(([k,v])=>{
-    const t=String(v||'missing');
-    const c=t==='good'?'pos':(t==='bad'?'neg':'mut');
-    return `<span class="cam ${c}">${esc(k)} ${esc(t)}</span>`;
+const BASE = new URL('.', location.href).href;
+function esc(s){return String(s??'').replace(/[&<>"]/g,c=>({'&':'&','<':'<','>':'>','"':'"'}[c]));}
+function cls(n){return n==null||n==='—'?'mut':(Number(n)>0?'pos':(Number(n)<0?'neg':'mut'));}
+function pct(v){return v==null?'—':((Number(v)>=0?'+':'')+Number(v).toFixed(2)+'%');}
+function px(v){return v==null?'—':Number(v).toFixed(2);}
+function dots(boxes, order, short){
+  order = order || Object.keys(boxes||{});
+  short = short || {};
+  return order.map(k=>{
+    const t=String((boxes||{})[k]||'missing');
+    return `<span class="dot ${esc(t)}" title="${esc(k)} ${esc(t)}"></span>`;
+  }).join('') + ' ' + order.map(k=>{
+    const t=String((boxes||{})[k]||'');
+    if(t!=='good'&&t!=='bad') return '';
+    return `<span class="cam ${t==='good'?'pos':'neg'}">${esc(short[k]||k)}</span>`;
   }).join('');
 }
-function nameCard(r){
-  const side=r.side||'';
-  return `<div class="name">
-    <h3>${esc(r.ticker)} <span class="${cls(r.idio)}">${r.idio>=0?'+':''}${esc(r.idio)}</span>
-      <span class="mut">${esc(side)}</span></h3>
-    <div class="mut">+${esc(r.n_pos)} −${esc(r.n_neg)} · E ${esc(r.e_pol)} · RSI ${esc(r.rsi??'—')}
-      · H1 <span class="${cls(r.h1)}">${hcell(r.h1)}</span>
-      · H3 <span class="${cls(r.h3)}">${hcell(r.h3)}</span>
-      · H5 <span class="${cls(r.h5)}">${hcell(r.h5)}</span></div>
-    <div style="margin:6px 0">${boxpills(r.boxes)}</div>
-    <ul class="why">${(r.why||[]).slice(0,10).map(x=>'<li>'+esc(x)+'</li>').join('')}</ul>
-    ${r.headline?`<div class="mut">${esc(r.headline)}</div>`:''}
-  </div>`;
+function tally(r){
+  if(r.n_pos==null && r.n_neg==null) return '<span class="mut">—</span>';
+  return `<span class="pos">+${esc(r.n_pos||0)}</span> <span class="neg">−${esc(r.n_neg||0)}</span>`;
 }
-function rowLine(r){
-  return `<div class="name" style="padding:8px 10px">
-    <b>${esc(r.ticker)}</b>
-    <span class="${cls(r.idio)}"> idio ${r.idio>=0?'+':''}${esc(r.idio)}</span>
-    · +${esc(r.n_pos)} −${esc(r.n_neg)} · E ${esc(r.e_pol)}
-    · yday ${esc(r.yday_ret??'—')} · RSI ${esc(r.rsi??'—')}
-    ${r.headline?(' · '+esc(r.headline).slice(0,80)):''}
-  </div>`;
+
+async function loadJSON(path){
+  const r = await fetch(BASE+path+'?t='+Date.now(), {cache:'no-store'});
+  if(!r.ok) throw new Error(path+' '+r.status);
+  return r.json();
 }
-async function boot(){
-  let d;
-  try{
-    const r=await fetch(RAW+'?t='+Date.now(),{cache:'no-store'});
-    if(!r.ok) throw new Error(r.status);
-    d=await r.json();
-  }catch(e){
-    document.getElementById('banner').innerHTML='<div class="mut">No latest.json yet — wait for the daily job.</div>';
-    return;
-  }
-  const L=d.latest||{};
-  const bt=d.backtest||{};
-  document.getElementById('cards').innerHTML=[
-    ['Session', L.date||'—', ''],
-    ['Weather S', L.s==null?'—':L.s, Number(L.s)<=-3?'neg':'pos'],
-    ['Cards', L.n_cards??'—', ''],
-    ['Long-ok', L.n_long_ok??'—', 'pos'],
-    ['Short-ok', L.n_short_ok??'—', 'neg'],
-    ['Hard-red days', bt.n_hard_red??'—', ''],
+
+function renderHistory(doc){
+  const rows = doc.rows || [];
+  const order = doc.cam_order || [];
+  const short = doc.cam_short || {};
+  const on = rows.filter(r=>r.on_list).length;
+  const sit = rows.filter(r=>r.hard_red && r.on_list).length;
+  const h1s = rows.map(r=>r.h1).filter(v=>v!=null);
+  const win = h1s.filter(v=>v>0).length;
+  document.getElementById('sum').innerHTML = [
+    ['Ticker', doc.ticker, 'gold'],
+    ['Sessions', rows.length, ''],
+    ['On list', on, ''],
+    ['Sit days on list', sit, 'neg'],
+    ['H1 green', h1s.length?(win+'/'+h1s.length):'—', win>h1s.length/2?'pos':'neg'],
   ].map(([k,v,c])=>`<div class="card">${k}<b class="${c}">${esc(v)}</b></div>`).join('');
-  document.getElementById('banner').innerHTML = L.hard_red
-    ? `<div class="banner sit">SIT morning — live book bought nobody. Names below still had idiosyncratic green.</div>`
-    : `<div class="banner ok">Not a sit morning. List is still the full investigator rank.</div>`;
-  document.getElementById('longs').innerHTML=(L.longs||[]).map(nameCard).join('')||'<div class="mut">No long-ok names.</div>';
-  document.getElementById('shorts').innerHTML=(L.shorts||[]).map(nameCard).join('')||'<div class="mut">No short-ok names.</div>';
-  document.getElementById('all').innerHTML=(L.all_top||[]).map(rowLine).join('');
-  const lh=bt.long_h1||{};
-  document.getElementById('note').textContent =
-    (d.note||'') + ' Research long hold-1 on sit days: n='+(lh.n||0)+
-    ' win='+(lh.win==null?'—':Math.round(100*lh.win)+'%')+
-    ' mean='+(lh.mean==null?'—':lh.mean+'%')+'. Not a live wire.';
+
+  const body = rows.map((r,i)=>{
+    const trCls = r.hard_red?'sit':(r.on_list?'':'off');
+    return `<tr class="${trCls}" data-i="${i}">
+      <td>${esc(r.date)}${r.hard_red?' <span class="neg">SIT</span>':''}</td>
+      <td>${r.s==null?'—':Number(r.s).toFixed(2)}</td>
+      <td>${r.on_list?'yes':'no'}</td>
+      <td>${tally(r)}</td>
+      <td style="text-align:left">${r.on_list?dots(r.boxes, order, short):'<span class="mut">not on 09:30 lists</span>'}</td>
+      <td>${esc(r.e_pol||'—')}</td>
+      <td>${px(r.open)}</td>
+      <td>${px(r.close)}</td>
+      <td class="${cls(r.day_pct)}">${pct(r.day_pct)}</td>
+      <td class="${cls(r.h1)}">${pct(r.h1)}${r.h1_px!=null?' <span class="mut">@'+px(r.h1_px)+'</span>':''}</td>
+      <td class="${cls(r.h3)}">${pct(r.h3)}${r.h3_px!=null?' <span class="mut">@'+px(r.h3_px)+'</span>':''}</td>
+      <td class="${cls(r.h5)}">${pct(r.h5)}${r.h5_px!=null?' <span class="mut">@'+px(r.h5_px)+'</span>':''}</td>
+    </tr>
+    <tr class="detail" data-for="${i}" hidden><td colspan="12">
+      <div class="why">
+        <b>${esc(doc.ticker)} ${esc(r.date)} 09:30</b>
+        · files: ${esc((r.files||[]).join(' · ')||'—')}
+        · sources: ${esc((r.sources||[]).join(', ')||'—')}
+        · RSI ${esc(r.rsi??'—')} · MACD ${esc(r.macd_hist??'—')}
+        · E ${esc(r.e_label||r.e_pol||'—')} · R ${esc(r.r_label||r.r_pol||'—')}
+        ${r.news?('<div>'+esc(r.news_tone)+' — '+esc(r.news)+'</div>'):''}
+        <ul>${(r.why||[]).map(x=>'<li>'+esc(x)+'</li>').join('')}</ul>
+        <div class="mut">Open ${px(r.open)} → close ${px(r.close)} (${pct(r.day_pct)}).
+          H1 ${esc(r.h1_date||'')} ${px(r.h1_px)} · H3 ${esc(r.h3_date||'')} ${px(r.h3_px)} · H5 ${esc(r.h5_date||'')} ${px(r.h5_px)}</div>
+      </div>
+    </td></tr>`;
+  }).join('');
+  document.getElementById('hist').innerHTML = `
+    <div class="mut" style="margin:0 0 6px">Click a row for the investigator card (cameras, files, why). SIT rows are weather S≤−3. Dim rows = not on that morning’s lists.</div>
+    <div class="tbl-wrap"><table>
+      <thead><tr>
+        <th>Date</th><th>S</th><th>List</th><th>Cams</th><th>Cameras</th><th>E</th>
+        <th>Open</th><th>Close</th><th>Day %</th><th>H1</th><th>H3</th><th>H5</th>
+      </tr></thead>
+      <tbody>${body}</tbody>
+    </table></div>`;
+  document.getElementById('hist').querySelectorAll('tr[data-i]').forEach(tr=>{
+    tr.onclick=()=>{
+      const d=document.querySelector('tr.detail[data-for="'+tr.dataset.i+'"]');
+      if(d) d.hidden=!d.hidden;
+    };
+  });
+  document.getElementById('home').innerHTML='';
+}
+
+function nameCard(r){
+  return `<div class="name" data-t="${esc(r.ticker)}">
+    <b>${esc(r.ticker)}</b>
+    <span class="${cls(r.idio)}">idio ${r.idio>=0?'+':''}${esc(r.idio)}</span>
+    · ${tally(r)} · E ${esc(r.e_pol)}
+    · day <span class="${cls(r.day_pct)}">${pct(r.day_pct)}</span>
+    · H1 <span class="${cls(r.h1)}">${pct(r.h1)}</span>
+    · H3 <span class="${cls(r.h3)}">${pct(r.h3)}</span>
+  </div>`;
+}
+
+function renderHome(latest){
+  const L=latest.latest||{};
+  document.getElementById('sum').innerHTML=[
+    ['Session', L.date||'—',''],
+    ['Weather S', L.s==null?'—':L.s, Number(L.s)<=-3?'neg':'pos'],
+    ['Cards', L.n_cards??'—',''],
+    ['Long-ok', L.n_long_ok??'—','pos'],
+    ['Short-ok', L.n_short_ok??'—','neg'],
+  ].map(([k,v,c])=>`<div class="card">${k}<b class="${c}">${esc(v)}</b></div>`).join('');
+  document.getElementById('hist').innerHTML = L.hard_red
+    ? `<div class="banner sit">SIT morning — live book bought nobody. Search a ticker for the full camera history.</div>`
+    : `<div class="banner">Latest morning ${esc(L.date)}. Search a ticker for every session since 8/13.</div>`;
+  document.getElementById('home').innerHTML = `<div class="cols">
+    <div><h2>Longs sit hid</h2>${(L.longs||[]).map(nameCard).join('')||'<div class="mut">none</div>'}</div>
+    <div><h2>Shorts sit hid</h2>${(L.shorts||[]).map(nameCard).join('')||'<div class="mut">none</div>'}</div>
+  </div>
+  <h2>Top 40 by idio</h2>
+  ${(L.all_top||[]).map(nameCard).join('')}`;
+  document.querySelectorAll('.name[data-t]').forEach(el=>{
+    el.onclick=()=>go(el.dataset.t);
+  });
+}
+
+async function go(raw){
+  const t=String(raw||document.getElementById('q').value||'').trim().toUpperCase();
+  if(!t){ location.hash=''; const latest=await loadJSON('latest.json'); renderHome(latest); return; }
+  document.getElementById('q').value=t;
+  location.hash=t;
+  try{
+    const doc=await loadJSON('t/'+encodeURIComponent(t)+'.json');
+    renderHistory(doc);
+  }catch(e){
+    document.getElementById('hist').innerHTML='<div class="mut">No history for '+esc(t)+' — not on any 09:30 looker list since 8/13.</div>';
+    document.getElementById('home').innerHTML='';
+  }
+}
+
+async function boot(){
+  let meta={}, latest={};
+  try{ meta=await loadJSON('tickers.json'); }catch(e){ meta={tickers:[]}; }
+  try{ latest=await loadJSON('latest.json'); }catch(e){}
+  const dl=document.getElementById('ticklist');
+  (meta.tickers||[]).forEach(t=>{
+    const o=document.createElement('option'); o.value=t; dl.appendChild(o);
+  });
+  const ds=document.getElementById('dateSel');
+  const cal=(latest.days||[]).map(d=>d.date);
+  ds.innerHTML='<option value="">latest morning</option>'+cal.map(d=>`<option>${esc(d)}</option>`).join('');
+  document.getElementById('go').onclick=()=>go();
+  document.getElementById('q').addEventListener('keydown',e=>{ if(e.key==='Enter') go(); });
+  ds.onchange=()=>{ /* date filter is the morning list; ticker search is the history */ };
+  const want=(location.hash||'').replace('#','').toUpperCase();
+  if(want) go(want); else renderHome(latest);
 }
 boot();
 </script></body></html>
