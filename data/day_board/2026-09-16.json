@@ -1,6 +1,6 @@
 {
   "date": "2026-09-16",
-  "generated_at": "2026-09-16T07:16:26.529994-04:00",
+  "generated_at": "2026-09-16T07:16:29.991621-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -584,8 +584,8 @@
           "path": "data/join/2026-09-16_ranked.csv",
           "role": "required",
           "status": "OK",
-          "reason": "rows=5899",
-          "size": 2272781
+          "reason": "rows=5900",
+          "size": 2269804
         },
         {
           "key": "peers",
@@ -642,9 +642,9 @@
           "size": 5954895
         }
       ],
-      "said": "203 rows",
+      "said": "204 rows",
       "bullets": [
-        "RDVT, GCT, HPE, DELL, PGY"
+        "RDVT, GCT, SMTC, HPE, DELL"
       ]
     },
     {
@@ -1429,6 +1429,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -4.71, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': 0.11, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.27, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.57, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -0.05, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.2, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -3.06, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -2.385, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-16\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-16T07:16:29.622093-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-16_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2269804,
+          "preview": "5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 RDVT, GCT, SMTC, HPE, DELL"
+        }
+      ],
+      "preview": "5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 RDVT, GCT, SMTC, HPE, DELL"
     }
   ],
   "href": {
