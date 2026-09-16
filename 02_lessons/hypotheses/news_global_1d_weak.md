@@ -8,7 +8,7 @@ status: open
 # Hypothesis — news / LOSS news
 
 ## WHEN
-[news] Global 1d close win rate 54.5% (n=1118).
+[news] Global 1d close win rate 54.5% (n=1053).
 
 ## ASK (counterfactual)
 Entry timing, side mix, or event taxonomy noise?
