@@ -702,13 +702,38 @@
   "DRI",
   "DSGN",
   "DSGR",
-  "DSGX"
+  "DSGX",
+  "DSL",
+  "DSP",
+  "DSU",
+  "DSX",
+  "DTCX",
+  "DTE",
+  "DTIL",
+  "DTM",
+  "DUK",
+  "DUOL",
+  "DV",
+  "DVA",
+  "DWSN",
+  "DX",
+  "DXC",
+  "DXCM",
+  "DYN",
+  "E",
+  "EA",
+  "EAF",
+  "EARN",
+  "EBC",
+  "EBF",
+  "EBS",
+  "ECC"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 36382,
- "hold_lab_n": 17253,
- "hold_base": 0.47421801989995055,
+ "n_hold": 37657,
+ "hold_lab_n": 17854,
+ "hold_base": 0.4741216772446026,
  "counts": {
   "A@L0_g": [
    60160,
@@ -108580,8 +108605,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 36382,
- "pair_hold_lab_n": 17253,
+ "pair_hold_n": 37657,
+ "pair_hold_lab_n": 17854,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -108690,5 +108715,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789556539
+ "flushed_unix": 1789556717
 }
