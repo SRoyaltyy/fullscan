@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-09-16
 
-**Generated:** 2026-09-16T04:03:28.506341-04:00 (America/New_York)
+**Generated:** 2026-09-16T04:03:36.232554-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US stocks closed lower as 10-year yield touched 5% and oil jumped on Saudi pipeline closure ahead of Fed decision
 **Prior close:** SPX -0.45%  Nasdaq -0.78%  Dow -0.63%
