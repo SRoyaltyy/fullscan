@@ -1752,13 +1752,38 @@
   "PDM",
   "PDS",
   "PDSB",
-  "PDT"
+  "PDT",
+  "PDYN",
+  "PEB",
+  "PECO",
+  "PEG",
+  "PENN",
+  "PEP",
+  "PEPG",
+  "PERF",
+  "PESI",
+  "PFE",
+  "PFG",
+  "PFL",
+  "PFS",
+  "PFSI",
+  "PGC",
+  "PGEN",
+  "PGNY",
+  "PH",
+  "PHI",
+  "PHIN",
+  "PHK",
+  "PHM",
+  "PHR",
+  "PHVS",
+  "PI"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 90825,
- "hold_lab_n": 42834,
- "hold_base": 0.47161023947151115,
+ "n_hold": 92125,
+ "hold_lab_n": 43442,
+ "hold_base": 0.4715549525101764,
  "counts": {
   "A@L0_g": [
    60160,
@@ -109630,8 +109655,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 90825,
- "pair_hold_lab_n": 42834,
+ "pair_hold_n": 92125,
+ "pair_hold_lab_n": 43442,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -109740,5 +109765,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789566690
+ "flushed_unix": 1789566881
 }
