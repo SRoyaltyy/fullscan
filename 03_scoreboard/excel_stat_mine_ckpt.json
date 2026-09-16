@@ -602,13 +602,38 @@
   "CTRI",
   "CTRN",
   "CTSH",
-  "CTVA"
+  "CTVA",
+  "CUB",
+  "CUBE",
+  "CUBI",
+  "CUE",
+  "CURB",
+  "CURR",
+  "CURV",
+  "CUZ",
+  "CV",
+  "CVBF",
+  "CVCO",
+  "CVE",
+  "CVLT",
+  "CVSA",
+  "CVX",
+  "CWCO",
+  "CWEN",
+  "CWK",
+  "CWST",
+  "CWT",
+  "CX",
+  "CXDO",
+  "CXM",
+  "CXT",
+  "CXW"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 31182,
- "hold_lab_n": 14722,
- "hold_base": 0.4721313578346482,
+ "n_hold": 32482,
+ "hold_lab_n": 15373,
+ "hold_base": 0.473277507542639,
  "counts": {
   "A@L0_g": [
    60160,
@@ -108480,8 +108505,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 31182,
- "pair_hold_lab_n": 14722,
+ "pair_hold_n": 32482,
+ "pair_hold_lab_n": 15373,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -108590,5 +108615,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789555789
+ "flushed_unix": 1789555978
 }
