@@ -1,6 +1,6 @@
 # OpenClaw live probe
 
-- generated: 2026-09-16T11:10:43Z UTC / 2026-09-16 07:10 EDT / 2026-09-16 19:10 CST
+- generated: 2026-09-16T13:25:54Z UTC / 2026-09-16 09:25 EDT / 2026-09-16 21:25 CST
 - uid=0 user=root home=/home/gha
 - gateway_url=http://127.0.0.1:18789
 - token_set=yes
@@ -15,22 +15,22 @@ LISTEN 0      511            [::1]:18789         [::]:*    users:(("openclaw-gat
 ### GET http://127.0.0.1:18789/health
 ```
 {"ok":true,"status":"live"}
-HTTP 200 time=0.158369s
+HTTP 200 time=0.115131s
 ```
 ### GET http://127.0.0.1:18789/healthz
 ```
 {"ok":true,"status":"live"}
-HTTP 200 time=0.002992s
+HTTP 200 time=0.001360s
 ```
 ### GET http://127.0.0.1:18789/ready
 ```
-{"ready":true,"failing":[],"uptimeMs":1358974738,"eventLoop":{"degraded":false,"reasons":[],"intervalMs":20170,"delayP99Ms":36.1,"delayMaxMs":577.2,"utilization":0.134,"cpuCoreRatio":0.067}}
-HTTP 200 time=0.008045s
+{"ready":true,"failing":[],"uptimeMs":1367086079,"eventLoop":{"degraded":true,"reasons":["event_loop_delay"],"intervalMs":24515,"delayP99Ms":36.9,"delayMaxMs":1592.8,"utilization":0.182,"cpuCoreRatio":0.059}}
+HTTP 200 time=0.008899s
 ```
 ### GET http://127.0.0.1:18789/readyz
 ```
-{"ready":true,"failing":[],"uptimeMs":1358974762,"eventLoop":{"degraded":false,"reasons":[],"intervalMs":20170,"delayP99Ms":36.1,"delayMaxMs":577.2,"utilization":0.134,"cpuCoreRatio":0.067}}
-HTTP 200 time=0.002146s
+{"ready":true,"failing":[],"uptimeMs":1367086106,"eventLoop":{"degraded":true,"reasons":["event_loop_delay"],"intervalMs":24515,"delayP99Ms":36.9,"delayMaxMs":1592.8,"utilization":0.182,"cpuCoreRatio":0.059}}
+HTTP 200 time=0.002911s
 ```
 ### GET http://127.0.0.1:18789/startup
 ```
@@ -58,7 +58,7 @@ HTTP 200 time=0.002146s
 ### GET http://127.0.0.1:18789/v1/models (Accept: application/json)
 ```
 {"error":{"message":"Unauthorized","type":"unauthorized"}}
-HTTP 401 time=0.004140s
+HTTP 401 time=0.005001s
 ```
 
 ## 2. Live timeoutSeconds (CLI talks to the running gateway)
@@ -215,7 +215,7 @@ Tip: if the gateway is remote, mDNS won’t cross networks; use Wide-Area Bonjou
 
 Targets
 Local loopback ws://127.0.0.1:18789
-  Connect: ok (48ms) · Capability: connect-only · Read probe: limited - missing scope: operator.read
+  Connect: ok (53ms) · Capability: connect-only · Read probe: limited - missing scope: operator.read
 
 [exit 0]
 ```
@@ -292,7 +292,7 @@ ls: cannot access '/home/gha/.openclaw/cron': No such file or directory
 enabled
 active
 NEXT                        LEFT     LAST                        PASSED       UNIT                   ACTIVATES
-Thu 2026-09-17 17:55:00 CST 22h left Wed 2026-09-16 17:55:04 CST 1h 17min ago fullscan-preopen.timer fullscan-preopen.service
+Thu 2026-09-17 17:55:00 CST 20h left Wed 2026-09-16 17:55:04 CST 3h 32min ago fullscan-preopen.timer fullscan-preopen.service
 
 1 timers listed.
 
@@ -335,28 +335,28 @@ active
      Active: active (running) since Tue 2026-09-01 01:40:55 CST; 2 weeks 1 day ago
    Main PID: 417604 (openclaw-gatewa)
       Tasks: 12 (limit: 1789)
-     Memory: 460.7M
-        CPU: 13h 10min 876ms
+     Memory: 439.1M
+        CPU: 13h 19min 14.400s
      CGroup: /system.slice/fullscan-openclaw-gateway.service
              └─417604 openclaw-gateway "" "" "" "" "" "" "" "" "" "" "" "" "" ""
 
-Sep 16 19:11:43 iZt4nagf215582ts0wf5jcZ openclaw[417604]: 2026-09-16T19:11:43.132+08:00 [ws] closed before connect conn=a674d788-119a-4e67-8522-ae67bceef06f peer=127.0.0.1:52742->127.0.0.1:18789 remote=127.0.0.1 fwd=n/a origin=n/a host=127.0.0.1:18789 ua=n/a code=1008 reason=unauthorized: gateway token mismatch (provide gateway auth token) phase=auth_credentials_received
-Sep 16 19:11:54 iZt4nagf215582ts0wf5jcZ openclaw[417604]: 2026-09-16T19:11:54.986+08:00 [ws] ⇄ res ✗ status 2ms errorCode=INVALID_REQUEST errorMessage=missing scope: operator.read conn=20eeb7be…223a id=d8cef965…5334
-Sep 16 19:11:55 iZt4nagf215582ts0wf5jcZ openclaw[417604]: 2026-09-16T19:11:55.000+08:00 [ws] ⇄ res ✗ system-presence 20ms errorCode=INVALID_REQUEST errorMessage=missing scope: operator.read conn=20eeb7be…223a id=9cc98972…1434
-Sep 16 19:11:55 iZt4nagf215582ts0wf5jcZ openclaw[417604]: 2026-09-16T19:11:55.008+08:00 [ws] ⇄ res ✗ config.get 29ms errorCode=INVALID_REQUEST errorMessage=missing scope: operator.read conn=20eeb7be…223a id=3128b690…e9b1
-Sep 16 19:12:13 iZt4nagf215582ts0wf5jcZ openclaw[417604]: 2026-09-16T19:12:13.400+08:00 [ws] unauthorized conn=c856424c-48de-4259-8616-fa6cc34d6c80 peer=127.0.0.1:34424->127.0.0.1:18789 remote=127.0.0.1 client=cli cli v2026.7.1-2 role=operator scopes=0 auth=token device=no platform=linux instance=d74b9723-6006-4097-89ae-855695a4fcdd host=127.0.0.1:18789 origin=n/a ua=n/a reason=token_mismatch
-Sep 16 19:12:13 iZt4nagf215582ts0wf5jcZ openclaw[417604]: 2026-09-16T19:12:13.484+08:00 [ws] closed before connect conn=c856424c-48de-4259-8616-fa6cc34d6c80 peer=127.0.0.1:34424->127.0.0.1:18789 remote=127.0.0.1 fwd=n/a origin=n/a host=127.0.0.1:18789 ua=n/a code=1008 reason=unauthorized: gateway token mismatch (set gateway.remote.token to match gateway.auth.token) phase=auth_credentials_received
-Sep 16 19:12:17 iZt4nagf215582ts0wf5jcZ openclaw[417604]: 2026-09-16T19:12:17.772+08:00 [ws] unauthorized conn=95bea352-5d1e-4ead-aab8-36527b566e33 peer=127.0.0.1:34432->127.0.0.1:18789 remote=127.0.0.1 client=cli cli v2026.7.1-2 role=operator scopes=0 auth=token device=no platform=linux instance=a22f7067-81e3-4d31-a0e4-0aedebe16cfc host=127.0.0.1:18789 origin=n/a ua=n/a reason=token_mismatch
-Sep 16 19:12:17 iZt4nagf215582ts0wf5jcZ openclaw[417604]: 2026-09-16T19:12:17.857+08:00 [ws] closed before connect conn=95bea352-5d1e-4ead-aab8-36527b566e33 peer=127.0.0.1:34432->127.0.0.1:18789 remote=127.0.0.1 fwd=n/a origin=n/a host=127.0.0.1:18789 ua=n/a code=1008 reason=unauthorized: gateway token mismatch (set gateway.remote.token to match gateway.auth.token) phase=auth_credentials_received
-Sep 16 19:12:22 iZt4nagf215582ts0wf5jcZ openclaw[417604]: 2026-09-16T19:12:22.277+08:00 [ws] unauthorized conn=a23534b4-d4e0-46a4-8d9c-83907bc242fc peer=127.0.0.1:41412->127.0.0.1:18789 remote=127.0.0.1 client=cli cli v2026.7.1-2 role=operator scopes=0 auth=token device=no platform=linux instance=a93dacf6-2ad9-491d-bd79-0fb99471fb62 host=127.0.0.1:18789 origin=n/a ua=n/a reason=token_mismatch
-Sep 16 19:12:22 iZt4nagf215582ts0wf5jcZ openclaw[417604]: 2026-09-16T19:12:22.368+08:00 [ws] closed before connect conn=a23534b4-d4e0-46a4-8d9c-83907bc242fc peer=127.0.0.1:41412->127.0.0.1:18789 remote=127.0.0.1 fwd=n/a origin=n/a host=127.0.0.1:18789 ua=n/a code=1008 reason=unauthorized: gateway token mismatch (set gateway.remote.token to match gateway.auth.token) phase=auth_credentials_received
+Sep 16 21:26:53 iZt4nagf215582ts0wf5jcZ openclaw[417604]: 2026-09-16T21:26:53.657+08:00 [ws] closed before connect conn=cefea123-4198-4f5b-bedc-02f665b8b967 peer=127.0.0.1:55166->127.0.0.1:18789 remote=127.0.0.1 fwd=n/a origin=n/a host=127.0.0.1:18789 ua=n/a code=1008 reason=unauthorized: gateway token mismatch (provide gateway auth token) phase=auth_credentials_received
+Sep 16 21:27:05 iZt4nagf215582ts0wf5jcZ openclaw[417604]: 2026-09-16T21:27:05.178+08:00 [ws] ⇄ res ✗ status 8ms errorCode=INVALID_REQUEST errorMessage=missing scope: operator.read conn=a0c2cdc4…d964 id=9fbcae2a…9d63
+Sep 16 21:27:05 iZt4nagf215582ts0wf5jcZ openclaw[417604]: 2026-09-16T21:27:05.183+08:00 [ws] ⇄ res ✗ system-presence 27ms errorCode=INVALID_REQUEST errorMessage=missing scope: operator.read conn=a0c2cdc4…d964 id=5a7dc39c…59a6
+Sep 16 21:27:05 iZt4nagf215582ts0wf5jcZ openclaw[417604]: 2026-09-16T21:27:05.188+08:00 [ws] ⇄ res ✗ config.get 32ms errorCode=INVALID_REQUEST errorMessage=missing scope: operator.read conn=a0c2cdc4…d964 id=8c00cc51…e426
+Sep 16 21:27:23 iZt4nagf215582ts0wf5jcZ openclaw[417604]: 2026-09-16T21:27:23.682+08:00 [ws] unauthorized conn=f33375d8-db12-47f2-9aaf-b79f8842f238 peer=127.0.0.1:51340->127.0.0.1:18789 remote=127.0.0.1 client=cli cli v2026.7.1-2 role=operator scopes=0 auth=token device=no platform=linux instance=411aced7-208a-4dba-8e7c-d4f73f3351f7 host=127.0.0.1:18789 origin=n/a ua=n/a reason=token_mismatch
+Sep 16 21:27:23 iZt4nagf215582ts0wf5jcZ openclaw[417604]: 2026-09-16T21:27:23.843+08:00 [ws] closed before connect conn=f33375d8-db12-47f2-9aaf-b79f8842f238 peer=127.0.0.1:51340->127.0.0.1:18789 remote=127.0.0.1 fwd=n/a origin=n/a host=127.0.0.1:18789 ua=n/a code=1008 reason=connect failed phase=auth_credentials_received
+Sep 16 21:27:28 iZt4nagf215582ts0wf5jcZ openclaw[417604]: 2026-09-16T21:27:28.193+08:00 [ws] unauthorized conn=8eb91908-ae03-4995-bff8-9cb33e08196c peer=127.0.0.1:51348->127.0.0.1:18789 remote=127.0.0.1 client=cli cli v2026.7.1-2 role=operator scopes=0 auth=token device=no platform=linux instance=9da688d4-cdbc-49b6-8d7c-4587f64d4b41 host=127.0.0.1:18789 origin=n/a ua=n/a reason=token_mismatch
+Sep 16 21:27:28 iZt4nagf215582ts0wf5jcZ openclaw[417604]: 2026-09-16T21:27:28.276+08:00 [ws] closed before connect conn=8eb91908-ae03-4995-bff8-9cb33e08196c peer=127.0.0.1:51348->127.0.0.1:18789 remote=127.0.0.1 fwd=n/a origin=n/a host=127.0.0.1:18789 ua=n/a code=1008 reason=unauthorized: gateway token mismatch (set gateway.remote.token to match gateway.auth.token) phase=auth_credentials_received
+Sep 16 21:27:33 iZt4nagf215582ts0wf5jcZ openclaw[417604]: 2026-09-16T21:27:33.146+08:00 [ws] unauthorized conn=8e25160e-6bf3-4b7c-9dbf-86f9ba0f5456 peer=127.0.0.1:36966->127.0.0.1:18789 remote=127.0.0.1 client=cli cli v2026.7.1-2 role=operator scopes=0 auth=token device=no platform=linux instance=c7f988fe-62ac-42ce-a0e0-8b1b3e102199 host=127.0.0.1:18789 origin=n/a ua=n/a reason=token_mismatch
+Sep 16 21:27:33 iZt4nagf215582ts0wf5jcZ openclaw[417604]: 2026-09-16T21:27:33.233+08:00 [ws] closed before connect conn=8e25160e-6bf3-4b7c-9dbf-86f9ba0f5456 peer=127.0.0.1:36966->127.0.0.1:18789 remote=127.0.0.1 fwd=n/a origin=n/a host=127.0.0.1:18789 ua=n/a code=1008 reason=unauthorized: gateway token mismatch (set gateway.remote.token to match gateway.auth.token) phase=auth_credentials_received
 ```
 ### expected next 05:55 America/New_York vs systemd Next
 ```
-now ET: 2026-09-16T07:12:22.567083-04:00
+now ET: 2026-09-16T09:27:33.406127-04:00
 next weekday 05:55 ET: 2026-09-17T05:55:00-04:00
 next as CST: 2026-09-17T17:55:00+08:00
-hours until: 22.71
+hours until: 20.46
 ```
 
 ## 6. Live chat ping (gateway actually answers)
@@ -378,7 +378,7 @@ systemd NextElapseUSecRealtime: Thu 2026-09-17 17:55:00 CST
 systemd TimersCalendar: { OnCalendar=Mon..Fri *-*-* 05:55:00 America/New_York ; next_elapse=Thu 2026-09-17 17:55:00 CST }
 systemd Persistent: yes
 expect next 05:55 ET: 2026-09-17T05:55:00-04:00
-now ET: 2026-09-16T07:12:22.855624-04:00
+now ET: 2026-09-16T09:27:33.681880-04:00
 fullscan-openclaw-gateway: active
 
 OK:
