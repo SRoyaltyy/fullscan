@@ -173,6 +173,9 @@ def test_day_board_falls_back_to_suggestions() -> None:
     assert "afterBell() && dates.indexOf(today) < 0" in html
     assert "today && afterBell() && dates.includes(today)" in html
     assert "earlyBuys" in html
+    assert "function elitePx" in html
+    assert "elitePx(d) && ticketsToday" in html
+    assert "takeTicket1d && (earlyBuys.length || earlySells.length)" in html
     assert "!buys && !sells && !afterBell()" in html
 
 
