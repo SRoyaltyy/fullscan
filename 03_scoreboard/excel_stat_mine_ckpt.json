@@ -327,13 +327,38 @@
   "BJ",
   "BJRI",
   "BKD",
-  "BKE"
+  "BKE",
+  "BKH",
+  "BKKT",
+  "BKNG",
+  "BKR",
+  "BKSY",
+  "BKV",
+  "BL",
+  "BLCO",
+  "BLDP",
+  "BLFS",
+  "BLLN",
+  "BLMN",
+  "BLND",
+  "BLNK",
+  "BLSH",
+  "BLW",
+  "BLZE",
+  "BMA",
+  "BMEZ",
+  "BMM",
+  "BMO",
+  "BMRC",
+  "BMRN",
+  "BN",
+  "BNC"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 16890,
- "hold_lab_n": 7952,
- "hold_base": 0.4708111308466548,
+ "n_hold": 18190,
+ "hold_lab_n": 8549,
+ "hold_base": 0.46998350742166023,
  "counts": {
   "A@L0_g": [
    60160,
@@ -108205,8 +108230,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 16890,
- "pair_hold_lab_n": 7952,
+ "pair_hold_n": 18190,
+ "pair_hold_lab_n": 8549,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -108315,5 +108340,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789553731
+ "flushed_unix": 1789553912
 }
