@@ -393,6 +393,31 @@ def pick_disc_leaders(rows: list[dict], *, side: str | None,
     return out
 
 
+def pick_holdout_leaders(rows: list[dict], *,
+                         limit: int = TOP_DISC) -> list[dict]:
+    """Best hidden-window win% among rows that actually graded holdout."""
+    usable = [
+        r for r in rows
+        if int((r.get("holdout") or {}).get("n_graded") or 0) >= 1
+    ]
+    usable.sort(key=lambda r: (
+        1 if int((r.get("holdout") or {}).get("n_graded") or 0)
+        >= RESEARCH_MIN_FIRES else 0,
+        _rank_key(r.get("holdout") or {}),
+    ), reverse=True)
+    seen = set()
+    out = []
+    for r in usable:
+        base = r.get("parent") or r.get("name")
+        if base in seen:
+            continue
+        seen.add(base)
+        out.append(r)
+        if len(out) >= limit:
+            break
+    return out
+
+
 def _pct(v) -> str:
     return "—" if v is None else f"{100.0 * float(v):.1f}%"
 
@@ -485,6 +510,20 @@ def render_md(payload: dict) -> str:
             lines.append(_row_md(r))
         lines.append("")
     lines += [
+        "## Holdout leaders (hidden window, not a KEEP)",
+        "",
+        "Best after-fee win% on hard-red entries on/after cutoff. "
+        "A holdout tease that missed discovery is still KILL — we "
+        "would not have picked it with the earlier tape only.",
+        "",
+        "| Sleeve | Side | Hold | Disc n/win | Holdout n/win | "
+        "All-red n/win | All-red $ | Research | Live KEEP |",
+        "|---|---|---:|---:|---:|---:|---:|---|---|",
+    ]
+    for r in payload.get("holdout_leaders") or []:
+        lines.append(_row_md(r))
+    lines += [
+        "",
         "## Discovery leaders (not confirmed)",
         "",
         "Best discovery win% at each recipe's best hold. Holdout is "
@@ -631,6 +670,7 @@ def run(*, from_date: str = book_era.DASHBOARD_START,
         _rank_key(r.get("disc") or {}),
     ), reverse=True)
     leaders = pick_disc_leaders(rows, side=None, limit=TOP_DISC)
+    hold_leaders = pick_holdout_leaders(rows, limit=TOP_DISC)
     live_books = {}
     cash_books = []
     if cash:
@@ -645,7 +685,7 @@ def run(*, from_date: str = book_era.DASHBOARD_START,
                 live_books = {"error": str(e)}
         want = []
         seen = set()
-        for r in survivors[:TOP_COMBOS] + leaders[:6]:
+        for r in survivors[:TOP_COMBOS] + leaders[:6] + hold_leaders[:4]:
             name = r.get("parent") or r.get("name")
             if name in seen:
                 continue
@@ -713,6 +753,7 @@ def run(*, from_date: str = book_era.DASHBOARD_START,
         "n_live_keep": n_keep,
         "survivors": survivors,
         "disc_leaders": leaders,
+        "holdout_leaders": hold_leaders,
         "live_combo": live_books,
         "cash_books": cash_books,
         "verdict_why": why,

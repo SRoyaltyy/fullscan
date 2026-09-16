@@ -162,6 +162,20 @@ def test_pick_leaders_prefers_graded_holdout() -> None:
     }
     picked = hrm.pick_disc_leaders([blank, real], side=None, limit=4)
     assert picked and picked[0]["hold"] == 1
+    hold_p = hrm.pick_holdout_leaders([blank, real], limit=4)
+    assert hold_p and hold_p[0]["hold"] == 1
+    fat = {
+        "name": "alarm_h5", "side": "short", "hold": 5, "parent": "alarm",
+        "disc": {"n_graded": 24, "win_rate": 0.5, "pnl": 1},
+        "holdout": {"n_graded": 30, "win_rate": 0.667, "pnl": 4},
+    }
+    thin = {
+        "name": "net5_h2", "side": "long", "hold": 2, "parent": "net5",
+        "disc": {"n_graded": 10, "win_rate": 0.4, "pnl": -1},
+        "holdout": {"n_graded": 2, "win_rate": 1.0, "pnl": 1},
+    }
+    hold_p = hrm.pick_holdout_leaders([thin, fat], limit=4)
+    assert hold_p[0]["parent"] == "alarm"
 
 
 def test_fill_horizon_bars_does_not_clobber_open() -> None:
