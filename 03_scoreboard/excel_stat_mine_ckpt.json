@@ -1352,13 +1352,38 @@
   "LNTH",
   "LOAR",
   "LOMA",
-  "LOPE"
+  "LOPE",
+  "LOVE",
+  "LPG",
+  "LPX",
+  "LQDA",
+  "LQDT",
+  "LRMR",
+  "LSAK",
+  "LSPD",
+  "LSTR",
+  "LTC",
+  "LTH",
+  "LUCD",
+  "LULU",
+  "LUMN",
+  "LUNG",
+  "LUNR",
+  "LUV",
+  "LVS",
+  "LVWR",
+  "LW",
+  "LWAY",
+  "LWLG",
+  "LXFR",
+  "LXP",
+  "LXRX"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 70056,
- "hold_lab_n": 33020,
- "hold_base": 0.4713372159415325,
+ "n_hold": 71356,
+ "hold_lab_n": 33641,
+ "hold_base": 0.4714529962441841,
  "counts": {
   "A@L0_g": [
    60160,
@@ -109230,8 +109255,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 70056,
- "pair_hold_lab_n": 33020,
+ "pair_hold_n": 71356,
+ "pair_hold_lab_n": 33641,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -109340,5 +109365,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789563646
+ "flushed_unix": 1789563833
 }
