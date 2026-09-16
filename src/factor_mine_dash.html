@@ -134,6 +134,8 @@
 </details>
 <h2 id="metricsTitle">Six effectiveness metrics (cash book)</h2>
 <p class="mut">Book % is the $10k sleeve after whole shares, Futubull fees, leftover split, sell-first, min-hold, and hard-red sit. Each morning opens at yesterday's leftover cash and the lots still held. Signal-only is the old equal-weight path — not a fill. Click a card, chip, or table row to open <b>only that sleeve</b>.</p>
+<div id="heldLiveBanner" class="sub"></div>
+<div id="heldLive"></div>
 <div id="tools" class="tools" hidden></div>
 <div id="explain" class="explain" hidden></div>
 <div id="burstBox" class="explain" hidden></div>
@@ -650,13 +652,35 @@ function listHtml(items){
 function lastClosed(){
   if(typeof FMSim!=='undefined' && D.sim) return FMSim.lastClosedDate(D.sim);
   const ds=D.dates||[];
+  const live=D.live_session||'';
+  for(let i=ds.length-1;i>=0;i--){
+    if(live && ds[i]===live) continue;
+    return ds[i];
+  }
   return ds.length?ds[ds.length-1]:null;
+}
+function isLiveSession(date){
+  return !!(date && (date===(D.live_session||'') || ((D.starts&&Object.values(D.starts).some(rows=>(rows||[]).some(r=>r.start===date&&r.live))))));
+}
+function liveStartStub(date){
+  const morn=(D.mornings||{})[date]||{};
+  return {
+    start:date, return_pct:0, made_money:false, live:true, pending:false,
+    hard_red:!!morn.hard_red, s:morn.s, n_sessions:1, n_up_days:0,
+    open_cash:10000, cash:10000, buys:[], bought:[], skips:[],
+    days:[{date, s:morn.s, hard_red:!!morn.hard_red, bought:[], cash:10000,
+           equity:10000, open_cash:10000, made_money:false}]
+  };
 }
 function liveStartRow(name, date){
   const baked=((D.starts||{})[name]||[]).find(r=>r.start===date);
   const closed=lastClosed();
-  if(closed && date>closed){
+  const live=!!((baked&&baked.live) || isLiveSession(date));
+  if(closed && date>closed && !live){
     return Object.assign({}, baked||{}, {start:date, pending:true, prelim:false, return_pct:null, made_money:false});
+  }
+  if(live && !baked){
+    return liveStartStub(date);
   }
   let row=baked?Object.assign({},baked):{start:date};
   if(typeof FMSim!=='undefined' && D.sim && name){
@@ -680,8 +704,13 @@ function startRows(){
   return (D.starts||{})[pickedName()] || [];
 }
 function startPath(){
+  const ds=D.dates||[];
+  const date=ds[startIdx]||'';
   const rows=startRows();
-  if(!rows.length) return null;
+  const hit=rows.find(r=>r.start===date);
+  if(hit) return hit;
+  if(date && isLiveSession(date)) return liveStartStub(date);
+  if(!rows.length) return date?liveStartStub(date):null;
   return rows[Math.max(0, Math.min(startIdx, rows.length-1))] || rows[0];
 }
 function isCanon(){
@@ -1045,7 +1074,7 @@ function renderTools(){
   box.hidden=false;
   const ds=D.dates||[];
   const rows=startRows();
-  if(startIdx>=rows.length) startIdx=0;
+  if(startIdx>=ds.length) startIdx=Math.max(0, ds.length-1);
   const sp=startPath();
   if(probeIdx>=ds.length) probeIdx=0;
   const startDate=sp?sp.start:(ds[startIdx]||'');
@@ -1058,7 +1087,8 @@ function renderTools(){
   box.innerHTML = `
     <div class="tool">
       <h2>Cash-start date</h2>
-      <p class="mut">Wake the sleeve on this morning with $10k cash and no lots. Same rules: hard-red sit, leftover split, min-hold, 09:30 open. Marks and the blotter match the 8-13 ledger. These buttons also move the investigator date and pick the first BUY that morning.</p>
+      <p class="mut">Wake the sleeve on this morning with $10k cash and no lots. Same rules: hard-red sit, leftover split, min-hold, 09:30 open. Marks and the blotter match the 8-13 ledger. These buttons also move the investigator date and pick the first BUY that morning. The live session is selectable even before the close.</p>
+      <select id="startDate" aria-label="Cash-start date">${(ds).map(d=>`<option value="${esc(d)}" ${d===startDate?'selected':''}>${esc(d)}${isLiveSession(d)?' · live':''}</option>`).join('')}</select>
       ${navButtons('start', startDate)}
       <div id="startLabel">${sp&&sp.hard_red?'<span class="neg">hard-red sit</span>':'cash $10,000'}</div>
       <div id="cashStart"></div>
@@ -1114,6 +1144,11 @@ function renderTools(){
       renderAll();
     };
   });
+  const sd=document.getElementById('startDate');
+  if(sd) sd.onchange=e=>{
+    const i=ds.indexOf(e.target.value);
+    if(i>=0){ startIdx=i; probeIdx=i; _simKey=''; _simBook=null; syncProbeTickToBuys(ds[i]); renderAll(); }
+  };
   box.querySelectorAll('[data-nav="probe"] button').forEach(b=>{
     b.onclick=()=>{
       probeIdx=stepDate(b.dataset.step, probeIdx, Math.max(0,ds.length-1));
@@ -1657,12 +1692,13 @@ function renderStarts(){
     const by = Object.fromEntries(rows.map(r=>[r.start,r]));
     const chips = dates.map(d=>{
       const r=liveStartRow(s.name, d);
-      if(r.pending || r.return_pct==null && !r.n_sessions){
-        return `<span class="pill mut" title="session not closed">${esc(String(d).slice(5))} pending</span>`;
+      const live=!!(r.live || isLiveSession(d));
+      if(!live && (r.pending || r.return_pct==null && !r.n_sessions)){
+        return `<span class="pill mut" data-start="${esc(d)}" title="session not closed" style="cursor:pointer">${esc(String(d).slice(5))} pending</span>`;
       }
       const on=sp&&sp.start===d?'on':'';
-      const tag=r.prelim?' prelim':'';
-      const label=r.made_money?'YES':'no';
+      const tag=r.prelim?' prelim':(live?' live':'');
+      const label=r.made_money?'YES':(live?'sit':'no');
       return `<span class="pill ${on} ${r.made_money?'pos':'neg'}" data-start="${esc(d)}" style="cursor:pointer">${esc(String(d).slice(5))} ${label} ${num(r.return_pct,1)}${tag}</span>`;
     }).join('');
     const scored=dates.map(d=>liveStartRow(s.name,d)).filter(r=>!r.pending && r.return_pct!=null);
@@ -1688,8 +1724,21 @@ function pagesBuiltDate(){
 function sessionDate(){
   return window.__FM_SESSION || '';
 }
+function pxStampBit(q){
+  q = q || (D.held_live||D.quote||{});
+  if(!q || (!q.src && !q.at)) return '';
+  const src=q.src||'?';
+  const banned=/theme|radar|_close|yesterday/i.test(src);
+  const live=!banned && (src==='elite_live' || src==='elite_live_file');
+  let bit=' · px '+src+(live?' (now)':' (not live)');
+  if(q.at){
+    const clock=String(q.at).slice(11,16);
+    if(clock) bit+=' @ '+clock+' ET';
+  }
+  return bit;
+}
 function packStampText(){
-  return 'pack is '+(packDate()||'?')+', Pages built '+(pagesBuiltDate()||'?');
+  return 'pack is '+(packDate()||'?')+', Pages built '+(pagesBuiltDate()||'?')+pxStampBit();
 }
 function paintSessionStamps(){
   const sess = sessionDate() || packDate();
@@ -1699,11 +1748,58 @@ function paintSessionStamps(){
   if(pack) pack.textContent = packStampText();
 }
 
+function heldLiveBlob(){
+  return window.__HELD_LIVE || D.held_live || {};
+}
+function heldLiveLots(name){
+  const blob=heldLiveBlob();
+  const sleeves=blob.sleeves||{};
+  if(name && sleeves[name]) return sleeves[name];
+  if(name) return [];
+  const feat=D.featured||Object.keys(sleeves);
+  let rows=[];
+  feat.forEach(n=>{ (sleeves[n]||[]).forEach(r=>rows.push(Object.assign({sleeve:n},r))); });
+  return rows;
+}
+function renderHeldLive(){
+  const banner=document.getElementById('heldLiveBanner');
+  const el=document.getElementById('heldLive');
+  if(!banner||!el) return;
+  const blob=heldLiveBlob();
+  const name=pickedName();
+  const lots=heldLiveLots(name);
+  const src=blob.src|| (D.quote&&D.quote.src) || '';
+  banner.textContent = blob.banner || (src ? ('Elite Overview as of '+(pxStampBit(blob).replace(' · px ','')||'?')) : 'Elite Overview as of — ET');
+  if(!name){
+    if(!lots.length){ el.innerHTML='<div class="mut">Open lots now — pick a featured sleeve ($10k butterfly / combo_sh). Not the looker list.</div>'; return; }
+  }
+  if(!lots.length){
+    el.innerHTML='<div class="mut">Open lots now — none held on this cash-start (fresh $10k, or sit / no leftover lots).</div>';
+    return;
+  }
+  const head='<tr><th>Ticker</th><th>Side</th><th>Shares</th><th>Entry</th><th>Elite last</th><th>vs 09:30 open</th><th>vs entry</th><th>$ P/L</th><th>as-of</th></tr>';
+  el.innerHTML = '<div class="tbl-wrap"><table>'+head+lots.map(r=>{
+    const px=r.px, op=r.open_px, en=r.entry, pnl=r.pnl;
+    const asof=r.px_asof?String(r.px_asof).slice(11,16)+' ET':'—';
+    return `<tr>
+      <td class="tick"><b>${esc(r.ticker||'')}</b>${r.sleeve?(' <span class="mut">'+esc(r.sleeve)+'</span>'):''}</td>
+      <td>${esc(r.side||'long')}</td>
+      <td class="num">${r.shares==null?'—':r.shares}</td>
+      <td class="num">${en==null?'—':('$'+(+en).toFixed(2))}</td>
+      <td class="num">${px==null?'—':('$'+(+px).toFixed(2))}</td>
+      <td class="num ${cls(r.vs_open)}">${r.vs_open==null?'—':((r.vs_open>=0?'+':'')+(+r.vs_open).toFixed(2))}</td>
+      <td class="num ${cls(r.vs_entry)}">${r.vs_entry==null?'—':((r.vs_entry>=0?'+':'')+(+r.vs_entry).toFixed(2))}</td>
+      <td class="num ${cls(pnl)}">${pnl==null?'—':('$'+(pnl>=0?'+':'')+(+pnl).toFixed(2))}</td>
+      <td class="mut">${esc(asof)}</td>
+    </tr>`;
+  }).join('')+'</table></div>';
+}
 function renderAll(){
   if(bracketOn()) ensureLiveBooks();
   const sellEl=document.getElementById('fmSellStatus');
   if(sellEl) sellEl.textContent=sellStatusText();
   paintSessionStamps();
+  renderHeldLive();
   document.getElementById('gen').textContent =
     "Generated "+String(D.generated_at||'').slice(0,16).replace('T',' ')+
     " · "+(D.n_sessions||0)+" sessions "+(D.from_date||'')+" → "+(D.to_date||'')+
@@ -1853,6 +1949,25 @@ window.addEventListener('resize', draw);
     }
     if(typeof renderTable==='function') try{ renderTable(); }catch(e){}
   }).catch(function(){ stamp.textContent='day board JSON not on main yet'; });
+})();
+(function(){
+  var HELD='https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/factor_mine/held_live.json';
+  function load(){
+    fetch(HELD+'?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;}).then(function(h){
+      if(!h){
+        return fetch('held_live.json?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});
+      }
+      return h;
+    }).then(function(h){
+      if(!h) return;
+      window.__HELD_LIVE=h;
+      if(window.__FM_D) window.__FM_D.held_live=h;
+      if(typeof renderHeldLive==='function') try{ renderHeldLive(); }catch(e){}
+      if(typeof paintSessionStamps==='function') try{ paintSessionStamps(); }catch(e){}
+    });
+  }
+  load();
+  setInterval(load, 180000);
 })();
 </script>
 <script>

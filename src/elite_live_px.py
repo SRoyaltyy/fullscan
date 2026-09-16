@@ -212,3 +212,101 @@ def official_opens(tickers: list[str], date: str) -> dict[str, float]:
         if px is not None:
             out[t] = float(px)
     return out
+
+
+def is_live_src(src: str | None) -> bool:
+    s = str(src or "")
+    if any(m in s.lower() for m in THEME_RADAR_MARKS):
+        return False
+    return s.startswith("elite_live") and "preopen" not in s and "session_export" not in s
+
+
+def clock_et(asof: str | None = None) -> str:
+    """HH:MM ET from an ISO stamp, else now."""
+    if asof:
+        try:
+            dt = datetime.fromisoformat(str(asof).replace("Z", "+00:00"))
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=ET)
+            return dt.astimezone(ET).strftime("%H:%M")
+        except (TypeError, ValueError):
+            pass
+    return now_et().strftime("%H:%M")
+
+
+def banner_text(book: dict | None = None) -> str:
+    """Never implies a tick-by-tick feed."""
+    book = book or {}
+    src = str(book.get("src") or "")
+    hhmm = clock_et(book.get("at"))
+    if is_live_src(src):
+        return f"Elite Overview as of {hhmm} ET"
+    if "preopen" in src:
+        return f"Elite Overview (preopen) as of {hhmm} ET"
+    if "session_export" in src or "elite_live_file" in src:
+        return f"Elite Overview (session export) as of {hhmm} ET"
+    return f"Elite Overview as of {hhmm} ET — not live"
+
+
+def lot_pnl(shares, last, basis, side: str = "long") -> float | None:
+    if last is None or basis is None:
+        return None
+    try:
+        raw = float(shares or 0) * (float(last) - float(basis))
+    except (TypeError, ValueError):
+        return None
+    return round(raw if (side or "long") != "short" else -raw, 2)
+
+
+def stamp_held_lots(lots: list[dict], book: dict,
+                    opens: dict | None = None) -> list[dict]:
+    """Elite last + vs official 09:30 open + vs entry + $ P/L on held shares."""
+    stamped = stamp_rows(lots, book, opens=opens)
+    src = book.get("src") or "missing"
+    asof = book.get("at")
+    out = []
+    for row in stamped:
+        item = dict(row)
+        t = str(item.get("ticker") or "").upper()
+        item["ticker"] = t
+        side = str(item.get("side") or "long").lower()
+        if side not in ("long", "short"):
+            side = "short" if side in ("cover", "sell_short") else "long"
+        item["side"] = side
+        shares = item.get("shares")
+        try:
+            shares = int(shares) if shares is not None else 0
+        except (TypeError, ValueError):
+            shares = 0
+        item["shares"] = shares
+        entry = item.get("entry")
+        if entry is None:
+            entry = item.get("entry_px") or item.get("buy_px")
+        if entry is not None:
+            try:
+                entry = float(entry)
+            except (TypeError, ValueError):
+                entry = None
+        item["entry"] = entry
+        px = item.get("px")
+        open_px = item.get("open_px")
+        if px is not None and open_px is not None:
+            try:
+                item["vs_open"] = round(float(px) - float(open_px), 4)
+            except (TypeError, ValueError):
+                item["vs_open"] = None
+        else:
+            item["vs_open"] = None
+        if px is not None and entry is not None:
+            try:
+                item["vs_entry"] = round(float(px) - float(entry), 4)
+            except (TypeError, ValueError):
+                item["vs_entry"] = None
+        else:
+            item["vs_entry"] = None
+        item["pnl"] = lot_pnl(shares, px, entry, side)
+        item["pnl_vs_open"] = lot_pnl(shares, px, open_px, side)
+        item.setdefault("px_src", src if px is not None else None)
+        item.setdefault("px_asof", asof if px is not None else None)
+        out.append(item)
+    return out

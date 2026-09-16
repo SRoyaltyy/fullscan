@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+from unittest import mock
 
 from src import factor_mine as fm
 from src import ohlc_ripper as ohlc
@@ -847,6 +848,13 @@ def test_template_has_data_slot() -> None:
     assert "outperform" in text.lower()
     assert "kindPick" in text
     assert "This is not a new shopping list" in text or "not a mashed shopping list" in text.lower() or "Combinations." in text
+    assert "heldLive" in text
+    assert "Elite Overview as of" in text
+    assert "open lots now" in text.lower()
+    assert 'id="startDate"' in text
+    assert "function startPath" in text
+    assert "isLiveSession" in text
+    assert "pxStampBit" in text
 
 
 def test_write_outputs_injects_payload(tmp_path=None) -> None:
@@ -2198,6 +2206,8 @@ def test_restamp_dash_rewrites_current_template(tmp_path, monkeypatch) -> None:
     monkeypatch.setattr(fm, "TEMPLATE", tmp_path / "factor_mine_dash.html")
     monkeypatch.setattr(fm, "SIM_JS", tmp_path / "factor_mine_sim.js")
     monkeypatch.setattr(fm, "DASH_DIR", dest)
+    monkeypatch.setattr(fm, "HELD_LIVE_PATH", tmp_path / "held_live.json")
+    monkeypatch.setattr(fm, "TICKET_DATE_PATHS", ())
     out = fm.restamp_dash()
     text = baked.read_text(encoding="utf-8")
     assert out["to_date"] == "2026-09-11"
@@ -2205,6 +2215,58 @@ def test_restamp_dash_rewrites_current_template(tmp_path, monkeypatch) -> None:
     assert "NEW Cams Yday" in text
     assert "var FMSim={}" in text
     assert "OLD −N next to a name" not in text
+
+
+def test_attach_live_session_adds_open_day_without_changing_to_date() -> None:
+    """Cash-start calendar includes the live session even with no close."""
+    payload = {
+        "from_date": "2026-08-13",
+        "to_date": "2026-09-15",
+        "dates": ["2026-09-14", "2026-09-15"],
+        "starts": {
+            "combo_sh_5050_shared": [
+                {"start": "2026-09-14", "return_pct": 1.2, "n_sessions": 2},
+                {"start": "2026-09-15", "return_pct": 0.0, "n_sessions": 1,
+                 "hard_red": True, "n_up_days": 0},
+            ]
+        },
+        "sim": {"dates": ["2026-09-14", "2026-09-15"], "s": {"2026-09-15": -4.0}},
+        "mornings": {"2026-09-15": {"s": -4.0, "hard_red": True}},
+    }
+    with mock.patch.object(fm, "live_session_date", return_value="2026-09-16"), \
+            mock.patch.object(fm, "live_session_morning",
+                              return_value={"s": 5.3, "hard_red": False,
+                                            "date": "2026-09-16"}):
+        out = fm.attach_live_session(payload)
+    assert out["to_date"] == "2026-09-15"
+    assert "2026-09-16" in out["dates"]
+    assert out["live_session"] == "2026-09-16"
+    paths = out["starts"]["combo_sh_5050_shared"]
+    live = next(p for p in paths if p["start"] == "2026-09-16")
+    assert live["live"] is True
+    assert live["pending"] is False
+    assert live["return_pct"] == 0.0
+    assert live["n_sessions"] == 1
+    assert live["n_up_days"] == 0
+    assert live["open_cash"] == 10_000
+    assert not live.get("buys")
+    assert "2026-09-16" in (out["sim"]["dates"] or [])
+    assert fm.last_closed_session(
+        "2026-08-13", cal=["2026-09-15", "2026-09-16"]
+    ) in ("2026-09-15", "2026-09-16")
+
+
+def test_live_session_date_reads_today_json() -> None:
+    import tempfile
+    from pathlib import Path
+    with tempfile.TemporaryDirectory() as d:
+        tmp = Path(d)
+        today = tmp / "today.json"
+        today.write_text('{"date":"2026-09-16","overall":"PARTIAL"}', encoding="utf-8")
+        tickets = tmp / "strategy_tickets.json"
+        tickets.write_text('{"date":"2026-09-16","n":1}', encoding="utf-8")
+        with mock.patch.object(fm, "TICKET_DATE_PATHS", (today, tickets)):
+            assert fm.live_session_date() == "2026-09-16"
 
 
 def test_action_filters_size_sell_boost() -> None:
@@ -2285,4 +2347,6 @@ if __name__ == "__main__":
     test_js_look_day_cams_and_white_yday()
     test_js_white_horizon_pool_then_score()
     test_js_bracket_take_inside_min_hold()
-    print("60 factor-mine tests passed")
+    test_attach_live_session_adds_open_day_without_changing_to_date()
+    test_live_session_date_reads_today_json()
+    print("62 factor-mine tests passed")

@@ -169,6 +169,9 @@ def test_open_pack_wired_when_skip_if_good() -> None:
     assert "quoteLabel" in book_suggestions._POLLER_JS
     assert "elite_live" in book_suggestions._POLLER_JS
     assert "px_src" in book_suggestions._POLLER_JS or "open_px" in book_suggestions._POLLER_JS
+    assert "held_live.json" in book_suggestions._POLLER_JS
+    assert "open lots now" in book_suggestions._POLLER_JS
+    assert book_suggestions.HELD_URL.endswith("held_live.json")
     assert "publish_strategy_tickets.yml" in orch
     assert "open_0930.yml" in orch
     assert "past 09:30 ET" in orch
