@@ -1152,13 +1152,38 @@
   "IMAX",
   "IMKTA",
   "IMMX",
-  "IMNM"
+  "IMNM",
+  "IMSR",
+  "IMTX",
+  "IMUX",
+  "IMVT",
+  "INBX",
+  "INDB",
+  "INDP",
+  "INDV",
+  "INFQ",
+  "INFU",
+  "ING",
+  "INGM",
+  "INGN",
+  "INHD",
+  "INMD",
+  "INNV",
+  "INO",
+  "INOD",
+  "INR",
+  "INSE",
+  "INSM",
+  "INTC",
+  "INTT",
+  "INV",
+  "INVA"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 59720,
- "hold_lab_n": 28199,
- "hold_base": 0.4721868720696584,
+ "n_hold": 61020,
+ "hold_lab_n": 28774,
+ "hold_base": 0.4715503113733202,
  "counts": {
   "A@L0_g": [
    60160,
@@ -109030,8 +109055,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 59720,
- "pair_hold_lab_n": 28199,
+ "pair_hold_n": 61020,
+ "pair_hold_lab_n": 28774,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -109140,5 +109165,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789562150
+ "flushed_unix": 1789562339
 }
