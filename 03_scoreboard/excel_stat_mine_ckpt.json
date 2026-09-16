@@ -1602,13 +1602,38 @@
   "NRC",
   "NRDS",
   "NRDY",
-  "NRG"
+  "NRG",
+  "NRGV",
+  "NRIM",
+  "NRK",
+  "NRXP",
+  "NRXS",
+  "NSC",
+  "NSIT",
+  "NTAP",
+  "NTB",
+  "NTCT",
+  "NTR",
+  "NTRA",
+  "NTRS",
+  "NTSK",
+  "NU",
+  "NUAI",
+  "NUS",
+  "NUTX",
+  "NUV",
+  "NUVB",
+  "NVAX",
+  "NVCR",
+  "NVDA",
+  "NVEC",
+  "NVMI"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 83056,
- "hold_lab_n": 39188,
- "hold_base": 0.47182623771912924,
+ "n_hold": 84356,
+ "hold_lab_n": 39816,
+ "hold_base": 0.4719996206553179,
  "counts": {
   "A@L0_g": [
    60160,
@@ -109480,8 +109505,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 83056,
- "pair_hold_lab_n": 39188,
+ "pair_hold_n": 84356,
+ "pair_hold_lab_n": 39816,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -109590,5 +109615,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789565549
+ "flushed_unix": 1789565739
 }
