@@ -2352,13 +2352,38 @@
   "VENU",
   "VERI",
   "VFC",
-  "VFF"
+  "VFF",
+  "VFS",
+  "VG",
+  "VGNT",
+  "VHUB",
+  "VIA",
+  "VICI",
+  "VIK",
+  "VIRT",
+  "VISN",
+  "VITL",
+  "VIVO",
+  "VKI",
+  "VKQ",
+  "VKTX",
+  "VLO",
+  "VLY",
+  "VMC",
+  "VMET",
+  "VMI",
+  "VNCE",
+  "VNDA",
+  "VNT",
+  "VOR",
+  "VOXR",
+  "VOYA"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 121983,
- "hold_lab_n": 57474,
- "hold_base": 0.4711640146577802,
+ "n_hold": 123283,
+ "hold_lab_n": 58097,
+ "hold_base": 0.471249077326152,
  "counts": {
   "A@L0_g": [
    60160,
@@ -110230,8 +110255,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 121983,
- "pair_hold_lab_n": 57474,
+ "pair_hold_n": 123283,
+ "pair_hold_lab_n": 58097,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -110340,5 +110365,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789571223
+ "flushed_unix": 1789571411
 }
