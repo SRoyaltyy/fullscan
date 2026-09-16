@@ -277,13 +277,38 @@
   "BALL",
   "BANC",
   "BAND",
-  "BANR"
+  "BANR",
+  "BAP",
+  "BBAI",
+  "BBAR",
+  "BBBY",
+  "BBIO",
+  "BBN",
+  "BBNX",
+  "BBOT",
+  "BBSI",
+  "BBT",
+  "BBUC",
+  "BBW",
+  "BBY",
+  "BCAT",
+  "BCAX",
+  "BCE",
+  "BCHT",
+  "BCIC",
+  "BCO",
+  "BCRX",
+  "BCX",
+  "BDC",
+  "BDMD",
+  "BDTX",
+  "BEAM"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 14291,
- "hold_lab_n": 6749,
- "hold_base": 0.47225526555174585,
+ "n_hold": 15590,
+ "hold_lab_n": 7345,
+ "hold_base": 0.4711353431686979,
  "counts": {
   "A@L0_g": [
    60160,
@@ -108155,8 +108180,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 14291,
- "pair_hold_lab_n": 6749,
+ "pair_hold_n": 15590,
+ "pair_hold_lab_n": 7345,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -108265,5 +108290,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789553374
+ "flushed_unix": 1789553553
 }
