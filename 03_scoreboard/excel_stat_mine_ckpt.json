@@ -1452,13 +1452,38 @@
   "MITT",
   "MKC",
   "MKSI",
-  "MKTX"
+  "MKTX",
+  "MLGO",
+  "MLI",
+  "MLKN",
+  "MLM",
+  "MLTX",
+  "MLYS",
+  "MMED",
+  "MMI",
+  "MMM",
+  "MMS",
+  "MMSI",
+  "MMU",
+  "MMYT",
+  "MNDY",
+  "MNKD",
+  "MNPR",
+  "MNST",
+  "MNTK",
+  "MNTN",
+  "MNTS",
+  "MOB",
+  "MOBI",
+  "MOD",
+  "MOH",
+  "MORN"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 75256,
- "hold_lab_n": 35494,
- "hold_base": 0.4716434570001063,
+ "n_hold": 76556,
+ "hold_lab_n": 36104,
+ "hold_base": 0.4716024870682899,
  "counts": {
   "A@L0_g": [
    60160,
@@ -109330,8 +109355,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 75256,
- "pair_hold_lab_n": 35494,
+ "pair_hold_n": 76556,
+ "pair_hold_lab_n": 36104,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -109440,5 +109465,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789564400
+ "flushed_unix": 1789564593
 }
