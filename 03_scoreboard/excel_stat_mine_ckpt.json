@@ -302,13 +302,38 @@
   "BDC",
   "BDMD",
   "BDTX",
-  "BEAM"
+  "BEAM",
+  "BELFB",
+  "BEPC",
+  "BETA",
+  "BFLY",
+  "BFST",
+  "BG",
+  "BGC",
+  "BGM",
+  "BGR",
+  "BGS",
+  "BGT",
+  "BGY",
+  "BHB",
+  "BHC",
+  "BHK",
+  "BHR",
+  "BHRB",
+  "BHVN",
+  "BILL",
+  "BIPC",
+  "BIRK",
+  "BJ",
+  "BJRI",
+  "BKD",
+  "BKE"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 15590,
- "hold_lab_n": 7345,
- "hold_base": 0.4711353431686979,
+ "n_hold": 16890,
+ "hold_lab_n": 7952,
+ "hold_base": 0.4708111308466548,
  "counts": {
   "A@L0_g": [
    60160,
@@ -108180,8 +108205,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 15590,
- "pair_hold_lab_n": 7345,
+ "pair_hold_n": 16890,
+ "pair_hold_lab_n": 7952,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -108290,5 +108315,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789553553
+ "flushed_unix": 1789553731
 }
