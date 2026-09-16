@@ -1981,13 +1981,13 @@ window.addEventListener('resize', draw);
       packBit='pack is '+(D0.to_date||'?')+', Pages built '+String(D0.pages_built_at||D0.generated_at||'').slice(0,10)+' · ';
     }
     stamp.textContent=(d.date||'')+' · '+packBit+(d.overall||'?')+' · ranker '+(d.ranker_ready?'READY':'BLOCKED')+' · processes ok '+(c.ok||0)+'/'+(c.n||'?')
-      +(st.n?(' · '+st.n+' strategies ('+(st.n_ok||0)+' with tickets)'):'')
+      +(takeTicket1d&&st.n?(' · '+st.n+' strategies ('+(st.n_ok||0)+' with tickets)'):'')
       +(d.quote&&d.quote.after_open?' · after 09:30 live':' · not after-open')
       +(d.quote&&d.quote.src?(' · px '+d.quote.src+(String(d.quote.src).indexOf('elite_live')===0?' (now)':' (not live)')):'');
     var html='';
     (d.buy_1d||[]).forEach(function(x){if(x.ticker) html+='<span class="pill on">BUY '+x.ticker+(x.px!=null?(' '+x.px):'')+'</span>';});
     (d.sell_1d||[]).forEach(function(x){if(x.ticker) html+='<span class="pill">SELL '+x.ticker+(x.px!=null?(' '+x.px):'')+'</span>';});
-    var strats=st.strategies||{};
+    var strats=takeTicket1d?(st.strategies||{}):{};
     var keys=Object.keys(strats);
     if(keys.length){
       html+='<details style="margin-top:8px"><summary class="mut">every strategy — own BUY/SELL, not the 1d book</summary>';

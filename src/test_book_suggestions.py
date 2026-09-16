@@ -125,6 +125,7 @@ def test_factor_mine_template_paints_every_strategy() -> None:
     assert "function elitePx" in html
     assert "elitePx(st)&&ticketsToday" in html
     assert "takeTicket1d" in html
+    assert "var strats=takeTicket1d?(st.strategies||{}):{}" in html
     assert "function sessionDate" in html
     assert "d!==today" in html or "d !== today" in html
     assert "function ticketRows" in html
