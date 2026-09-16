@@ -1,0 +1,51 @@
+name: Restamp factor-mine dash
+
+# Rebuild dashboard/factor-mine/index.html from src/factor_mine_dash.html
+# using the already-baked payload. No remine.
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "src/factor_mine_dash.html"
+      - ".github/workflows/restamp_factor_mine_dash.yml"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: restamp-factor-mine-dash
+  cancel-in-progress: true
+
+jobs:
+  restamp:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install pandas pyarrow
+      - name: Restamp Pages HTML from template
+        run: |
+          python - <<'PY'
+          from src.factor_mine import load_dash_payload, write_dash_html
+          payload = load_dash_payload()
+          dest = write_dash_html(payload)
+          print("wrote", dest, "recipes", payload.get("n_recipes"), "to", payload.get("to_date"))
+          PY
+          test -s dashboard/factor-mine/index.html
+      - name: Publish restamped dash
+        run: |
+          bash scripts/safe_git_push.sh \
+            "fix: factor-mine chart size and sleeve toggles" \
+            dashboard/factor-mine/index.html \
+            src/factor_mine_dash.html
+      - name: Refresh GitHub Pages
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy-dashboard.yml --ref main || true
