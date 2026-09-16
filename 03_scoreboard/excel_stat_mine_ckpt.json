@@ -802,13 +802,38 @@
   "ES",
   "ESAB",
   "ESI",
-  "ESNT"
+  "ESNT",
+  "ESQ",
+  "ESRT",
+  "ESS",
+  "ESTA",
+  "ETD",
+  "ETJ",
+  "ETN",
+  "ETOR",
+  "ETR",
+  "ETSY",
+  "EVC",
+  "EVCM",
+  "EVEX",
+  "EVGO",
+  "EVH",
+  "EVLV",
+  "EVMN",
+  "EVR",
+  "EVRG",
+  "EVTC",
+  "EVV",
+  "EW",
+  "EWBC",
+  "EWTX",
+  "EXC"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 41541,
- "hold_lab_n": 19656,
- "hold_base": 0.4731710839893118,
+ "n_hold": 42841,
+ "hold_lab_n": 20245,
+ "hold_base": 0.47256133143484047,
  "counts": {
   "A@L0_g": [
    60160,
@@ -108680,8 +108705,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 41541,
- "pair_hold_lab_n": 19656,
+ "pair_hold_n": 42841,
+ "pair_hold_lab_n": 20245,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -108790,5 +108815,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789557294
+ "flushed_unix": 1789557482
 }
