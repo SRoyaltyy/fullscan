@@ -1677,13 +1677,38 @@
   "OM",
   "OMCL",
   "OMDA",
-  "OMER"
+  "OMER",
+  "OMEX",
+  "ON",
+  "ONB",
+  "ONDS",
+  "ONL",
+  "ONON",
+  "ONT",
+  "ONTO",
+  "OPAL",
+  "OPCH",
+  "OPEN",
+  "OPFI",
+  "OPK",
+  "OPLN",
+  "OPRT",
+  "OPTT",
+  "OPTU",
+  "ORA",
+  "ORBS",
+  "ORCL",
+  "ORI",
+  "ORIC",
+  "ORKA",
+  "ORLA",
+  "ORMP"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 86956,
- "hold_lab_n": 41014,
- "hold_base": 0.4716638299829799,
+ "n_hold": 88225,
+ "hold_lab_n": 41567,
+ "hold_base": 0.4711476338906206,
  "counts": {
   "A@L0_g": [
    60160,
@@ -109555,8 +109580,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 86956,
- "pair_hold_lab_n": 41014,
+ "pair_hold_n": 88225,
+ "pair_hold_lab_n": 41567,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -109665,5 +109690,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789566121
+ "flushed_unix": 1789566308
 }
