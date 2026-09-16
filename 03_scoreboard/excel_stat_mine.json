@@ -1,7 +1,7 @@
 {
  "status": "PARTIAL",
  "phase": "pairs_disc",
- "n_tickers_done": 575,
+ "n_tickers_done": 600,
  "n_disc_rows": 167163,
  "n_hold_rows": 129968,
  "n_rules": 8525,
