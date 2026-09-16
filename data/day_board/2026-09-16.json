@@ -1,6 +1,6 @@
 {
   "date": "2026-09-16",
-  "generated_at": "2026-09-16T09:23:36.660425-04:00",
+  "generated_at": "2026-09-16T09:23:49.487197-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -453,12 +453,12 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=2657",
-          "size": 8431154
+          "size": 8473940
         }
       ],
       "said": "25 rows",
       "bullets": [
-        "DSGX, CFFN, SFL, PBR, AVT"
+        "ANET, SFL, CFFN, AVT, CXW"
       ]
     },
     {
@@ -575,7 +575,7 @@
           "role": "input",
           "status": "OK",
           "reason": "rows=2657",
-          "size": 8431154
+          "size": 8473940
         },
         {
           "key": "join",
@@ -593,7 +593,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5111",
-          "size": 817738
+          "size": 817685
         },
         {
           "key": "book_json",
@@ -1973,6 +1973,31 @@
         }
       ],
       "preview": "5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GCT, RDVT, SMTC, HPE, AMD"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-16T09:23:48.527579-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-16_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7638352,
+          "preview": "2657 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, ANET, CFFN, BMRN, HSBC"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-16_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8473940,
+          "preview": "2657 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, SFL, CFFN, AVT, CXW"
+        }
+      ],
+      "preview": "2657 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, ANET, CFFN, BMRN, HSBC \u00b7 2657 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, SFL, CFFN, AVT, CXW"
     }
   ],
   "href": {
