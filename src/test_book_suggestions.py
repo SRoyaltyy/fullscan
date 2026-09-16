@@ -79,6 +79,8 @@ def test_paper_template_polls_raw_main() -> None:
     assert "id=\"holdLive\"" in html
     assert "hold_live_px.json" in html
     assert html.index("<h1>Paper Trading") < html.index('id="liveBook"')
+    live_end = book_suggestions._div_block_end(html, "liveBook")[1]
+    assert html.index('id="holdLive"') >= live_end
     assert "stock_book_1d" in html
     assert "strat.buy_1d && strat.buy_1d.length" in html
     baked = (root / "dashboard" / "index.html").read_text(encoding="utf-8")
@@ -88,6 +90,9 @@ def test_paper_template_polls_raw_main() -> None:
     assert book_suggestions.STRAT_URL in baked
     assert "every strategy" in baked
     assert baked.index("<h1>Paper Trading") < baked.index('id="liveBook"')
+    assert "id=\"holdLive\"" in baked
+    baked_live_end = book_suggestions._div_block_end(baked, "liveBook")[1]
+    assert baked.index('id="holdLive"') >= baked_live_end
     assert "stock_book_1d" in baked
     sleeve = (root / "dashboard" / "sleeve-merge" / "index.html").read_text(
         encoding="utf-8")
@@ -98,7 +103,23 @@ def test_paper_template_polls_raw_main() -> None:
     assert book_suggestions.POLLER_MARK in strat
     assert book_suggestions.STRAT_URL in strat
     assert "stock_book_1d" in strat
+    assert "id=\"holdLive\"" in strat
+    strat_live_end = book_suggestions._div_block_end(strat, "liveBook")[1]
+    assert strat.index('id="holdLive"') >= strat_live_end
     assert (root / "src" / "paper_dash.html") in book_suggestions.LIVE_BOARD_HTML
+
+
+def test_place_hold_live_moves_nested_strip_after_livebook() -> None:
+    nested = (
+        '<div id="liveBook" class="live-book">\n'
+        '  <div class="live-book-body">Loading book…</div>\n'
+        '<div id="holdLive" class="live-book">hold</div>\n'
+        '</div>\n'
+    )
+    out = book_suggestions.place_hold_live(nested)
+    live_end = book_suggestions._div_block_end(out, "liveBook")[1]
+    assert out.index('id="holdLive"') >= live_end
+    assert out.count('id="holdLive"') == 1
 
 
 def test_factor_mine_template_paints_every_strategy() -> None:
@@ -943,6 +964,7 @@ def main() -> None:
     test_land_stock_book_includes_suggestions()
     test_preview_suggestions_lists_names()
     test_paper_template_polls_raw_main()
+    test_place_hold_live_moves_nested_strip_after_livebook()
     test_factor_mine_template_paints_every_strategy()
     test_day_board_falls_back_to_suggestions()
     test_preopen_and_book_publish_strip_without_paper()

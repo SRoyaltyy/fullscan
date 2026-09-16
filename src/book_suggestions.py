@@ -401,6 +401,72 @@ LIVE_BOARD_HTML = (
 )
 
 
+def _div_block_end(html: str, id_attr: str) -> tuple[int, int] | None:
+    """Start/end of the outer <div id="..."> ... </div> (nested divs counted)."""
+    needle = f'id="{id_attr}"'
+    loc = html.find(needle)
+    if loc < 0:
+        return None
+    start = html.rfind("<div", 0, loc)
+    if start < 0:
+        return None
+    i = start
+    depth = 0
+    n = len(html)
+    while i < n:
+        if html.startswith("<div", i) and (i + 4 == n or not html[i + 4].isalnum()):
+            depth += 1
+            gt = html.find(">", i)
+            i = n if gt < 0 else gt + 1
+            continue
+        if html.startswith("</div>", i):
+            depth -= 1
+            i += 6
+            if depth == 0:
+                return start, i
+            continue
+        i += 1
+    return None
+
+
+_HOLD_ONLY_HTML = (
+    '<div id="holdLive" class="live-book" data-hold-live="1">\n'
+    '  <div class="live-book-kicker" id="holdLiveBanner">Elite Overview as of —</div>\n'
+    '  <div class="live-book-date" id="holdLiveStamp">open lots on the $10k butterfly — not the looker list</div>\n'
+    '  <div id="holdLiveBody">Loading hold marks…</div>\n'
+    '</div>\n'
+)
+
+
+def place_hold_live(html: str) -> str:
+    """Keep #holdLive a sibling after #liveBook.
+
+    paint() writes liveBook.innerHTML; a nested hold strip is wiped.
+    """
+    live = _div_block_end(html, "liveBook")
+    hold = _div_block_end(html, "holdLive")
+    if live is None:
+        if hold is None and '<div class="wrap">' in html:
+            return html.replace(
+                '<div class="wrap">',
+                '<div class="wrap">' + _HOLD_ONLY_HTML,
+                1,
+            )
+        return html
+    live_start, live_end = live
+    if hold is None:
+        return html[:live_end] + "\n" + _HOLD_ONLY_HTML + html[live_end:]
+    hold_start, hold_end = hold
+    if live_end <= hold_start:
+        return html
+    block = html[hold_start:hold_end]
+    without = html[:hold_start] + html[hold_end:]
+    live2 = _div_block_end(without, "liveBook")
+    if live2 is None:
+        return html
+    return without[: live2[1]] + "\n" + block + "\n" + without[live2[1]:]
+
+
 def ensure_dashboard_poller(html_path: Path | None = None) -> bool:
     """Inject the live-book poller into baked paper HTML if missing.
 
@@ -419,24 +485,7 @@ def ensure_dashboard_poller(html_path: Path | None = None) -> bool:
             text,
             count=1,
         )
-        if 'id="holdLive"' not in nxt:
-            hold_only = (
-                '<div id="holdLive" class="live-book" data-hold-live="1">\n'
-                '  <div class="live-book-kicker" id="holdLiveBanner">Elite Overview as of —</div>\n'
-                '  <div class="live-book-date" id="holdLiveStamp">open lots on the $10k butterfly — not the looker list</div>\n'
-                '  <div id="holdLiveBody">Loading hold marks…</div>\n'
-                '</div>\n'
-            )
-            if 'id="liveBook"' in nxt:
-                # insert after the liveBook block's closing </div>
-                loc = nxt.find('id="liveBook"')
-                close = nxt.find('</div>', loc)
-                # liveBook has nested divs; find the wrapper close after body
-                close = nxt.find('</div>\n', nxt.find('live-book-body', loc))
-                if close > 0:
-                    nxt = nxt[: close + 7] + hold_only + nxt[close + 7 :]
-            else:
-                nxt = nxt.replace('<div class="wrap">', '<div class="wrap">' + hold_only, 1)
+        nxt = place_hold_live(nxt)
         if nxt != text:
             path.write_text(nxt, encoding="utf-8")
             print(f"  refreshed live-book poller → {path}", flush=True)
