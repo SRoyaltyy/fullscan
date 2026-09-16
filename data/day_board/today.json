@@ -1,6 +1,6 @@
 {
   "date": "2026-09-16",
-  "generated_at": "2026-09-16T09:23:32.557921-04:00",
+  "generated_at": "2026-09-16T09:23:36.660425-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -157,101 +157,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "live_boards",
-      "title": "Live 1d BUY/SELL strip",
-      "date": "2026-09-16",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-16T07:19:39.704924-04:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 16732,
-          "preview": "2026-09-16 BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 1028,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-09-16.json",
-          "ok": true,
-          "reason": "",
-          "size": 73454,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-09-16_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 49023,
-          "preview": "2026-09-16 BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 720345,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-09-16_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 720345,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 1010941,
-          "preview": "2026-09-16 BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 720345,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 49023,
-          "preview": "2026-09-16 BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 720345,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 720345,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 1010941,
-          "preview": "2026-09-16 BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO"
-        }
-      ],
-      "preview": "2026-09-16 BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-16 BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-16 BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-16 BUY IT, IOT, CDW, SAIC, CARG, FOXA, AVAH, WAY \u00b7 SELL AXSM, ROIV, SEER, MIST, TLSA, ALMS, EQ, BBIO \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, c"
-    },
     {
       "key": "flatten",
       "title": "Flatten live card",
@@ -433,6 +338,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 9.667, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': 9.244, 'dir': 'up', 'conf': 0.65, 'source': 'llm'}, Consumer Cyclical={'score': 2.692, 'dir': 'flat', 'conf': 0.508, 'source': 'llm'}, Consumer Defensive={'score': -0.417, 'dir': 'flat', 'conf': 0.417, 'source': 'llm'}, Energy={'score': -2.88, 'dir': 'down', 'conf': 0.615, 'source': 'llm'}, Financial={'score': 2.998, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Healthcare={'score': 2.995, 'dir': 'up', 'conf': 0.52, 'source': 'llm'}, Industrials={'score': 7.288, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-16\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-16T09:23:35.713607-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-16_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2239250,
+          "preview": "5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GCT, RDVT, SMTC, HPE, AMD"
+        }
+      ],
+      "preview": "5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GCT, RDVT, SMTC, HPE, AMD"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
