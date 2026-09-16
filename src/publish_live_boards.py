@@ -124,6 +124,14 @@ def publish(date: str, *, write: bool = True, extras: bool = True) -> dict:
 
     if write:
         try:
+            from . import hold_live_px as hlp
+            for path in hlp.write(date=date):
+                out["wrote"].append(str(path.relative_to(ROOT)))
+        except Exception as e:  # noqa: BLE001
+            print(f"[live-boards] WARN: hold live px: {e}", flush=True)
+
+    if write:
+        try:
             from . import book_suggestions
             sug = book_suggestions.write(date=date)
             if sug is not None:

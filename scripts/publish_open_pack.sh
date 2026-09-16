@@ -15,6 +15,7 @@ if [ "$ET_HM" -ge 930 ]; then
 fi
 echo "[open-pack] date=$DATE"
 python3 -m src.strategy_tickets --date "$DATE" --write
+python3 -m src.hold_live_px --date "$DATE" --write || true
 python3 - "$DATE" <<'PY'
 import json
 import sys

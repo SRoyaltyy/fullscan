@@ -84,6 +84,8 @@ jobs:
             dashboard/factor-mine/today_strategies.json \
             dashboard/today_strategies.json \
             dashboard/factor-mine/today.json \
+            data/day_board/hold_live_px.json \
+            dashboard/factor-mine/hold_live_px.json \
             dashboard/sleeve-merge/index.html \
             dashboard/strategy-board/index.html \
             dashboard/index.html \

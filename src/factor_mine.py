@@ -2889,16 +2889,92 @@ def payload_covers_session(payload: dict | None, date: str) -> bool:
     return True
 
 
+TICKET_DATE_PATHS = (
+    ROOT / "data" / "day_board" / "today.json",
+    ROOT / "data" / "day_board" / "today_strategies.json",
+    ROOT / "data" / "factor_mine" / "strategy_tickets.json",
+    DASH_DIR / "today.json",
+    DASH_DIR / "today_strategies.json",
+    DASH_DIR / "strategy_tickets.json",
+)
+
+
+def ticket_session_date() -> str | None:
+    """Session date from today.json / strategy tickets when they exist."""
+    for path in TICKET_DATE_PATHS:
+        if not path.is_file():
+            continue
+        try:
+            doc = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        date = str(doc.get("date") or doc.get("clock_legal_for") or "").strip()
+        if date and len(date) >= 10:
+            return date[:10]
+    return None
+
+
+def stamp_pending_session(payload: dict, date: str, *,
+                          write: bool = False) -> dict:
+    """Put ``date`` on the cash-start calendar without remine.
+
+    Used when today.json / tickets exist for an open session the bake
+    omitted. Books stay clipped to last close (pending chip, not 0%).
+    Hard-red sit on a closed start (+0% / 0/1 days) is unchanged.
+    """
+    if not payload or not date:
+        return payload
+    payload = dict(payload)
+    dates = list(payload.get("dates") or [])
+    if date not in dates:
+        dates.append(date)
+        dates.sort()
+        payload["dates"] = dates
+    if str(payload.get("to_date") or "") < date:
+        payload["to_date"] = date
+        payload["n_sessions"] = len(dates)
+    starts = dict(payload.get("starts") or {})
+    for name, rows in list(starts.items()):
+        rows = list(rows or [])
+        if any(r.get("start") == date for r in rows):
+            starts[name] = rows
+            continue
+        rows.append({
+            "start": date,
+            "pending": True,
+            "return_pct": None,
+            "made_money": False,
+            "n_sessions": 0,
+            "prelim": False,
+        })
+        starts[name] = rows
+    payload["starts"] = starts
+    if write:
+        try:
+            write_dash_html(payload)
+        except Exception as e:  # noqa: BLE001
+            print(f"[factor-mine] stamp-pending dash: {e}", flush=True)
+        print(f"[factor-mine] cash-start calendar +{date} (pending, no remine)",
+              flush=True)
+    return payload
+
+
 def land_closed(from_date: str = START, write: bool = False,
-                rebuild_panel: bool = False) -> dict:
+                rebuild_panel: bool = False,
+                to_date: str | None = None) -> dict:
     """Roll the existing recipe set through the last closed session.
+
+    ``--to-date`` is honored when that session has closed. An *open*
+    ticket session (today.json / strategy tickets) is stamped onto the
+    cash-start calendar as pending — books stay last close.
 
     Does not rediscover the cartesian grid. Morning Pre-Open / Stock Book
     triggers become a no-op once yesterday is already on the board;
     post-close / 16:25 ET schedule lands today.
     """
-    closed = last_closed_session(from_date)
-    if not closed:
+    ticket = ticket_session_date()
+    closed = last_closed_session(from_date, to_date)
+    if not closed and not (to_date or ticket):
         print("[factor-mine] land-closed: no closed session yet", flush=True)
         return {}
     payload = {}
@@ -2907,21 +2983,49 @@ def land_closed(from_date: str = START, write: bool = False,
             payload = json.loads(OUT_JSON.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError):
             payload = {}
-    if not rebuild_panel and payload_covers_session(payload, closed):
+    if not payload:
+        try:
+            payload = load_dash_payload()
+        except FileNotFoundError:
+            payload = {}
+
+    def _stamp_open(doc: dict) -> dict:
+        want = None
+        if to_date and not session_has_closed(to_date):
+            want = to_date
+        elif ticket and (not closed or ticket > closed):
+            want = ticket
+        if want and want not in (doc.get("dates") or []):
+            try:
+                dash = load_dash_payload()
+            except FileNotFoundError:
+                dash = doc
+            return stamp_pending_session(dash, want, write=write)
+        return doc
+
+    if closed and not rebuild_panel and payload_covers_session(payload, closed):
         print(f"[factor-mine] land-closed: {closed} already on the board — skip",
               flush=True)
-        return payload
+        return _stamp_open(payload)
+    mine_end = closed
+    if to_date and session_has_closed(to_date):
+        mine_end = to_date
+    if not mine_end:
+        print("[factor-mine] land-closed: no closed session to mine — stamp only",
+              flush=True)
+        return _stamp_open(payload)
     recs = existing_single_recipes(payload)
     if not recs:
         from . import factor_mine_book as fmb
         recs = fmb.recipes_from_action(auto_tweak=False)
-    print(f"[factor-mine] land-closed → {closed} recipes={len(recs)}",
+    print(f"[factor-mine] land-closed → {mine_end} recipes={len(recs)}",
           flush=True)
-    return run(
-        from_date, closed, write=write, recipes=recs,
+    out = run(
+        from_date, mine_end, write=write, recipes=recs,
         rebuild_panel=rebuild_panel, persist_panel=write,
         book=True, combos=True,
     )
+    return _stamp_open(out)
 
 
 def sweep_white_horizon(panel: dict, *, bars=None, fees=None,
@@ -3129,6 +3233,7 @@ def main(argv=None) -> int:
         payload = land_closed(
             args.from_date, write=args.write,
             rebuild_panel=args.rebuild_panel,
+            to_date=args.to_date or None,
         )
     else:
         recipes = fmb.recipes_from_action(

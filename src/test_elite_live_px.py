@@ -14,10 +14,13 @@ from src import strategy_tickets as st
 
 
 def test_parse_elite_overview_prices() -> None:
-    text = "Ticker,Company,Price\nINDP,Indaptus,2.89\nBKV,BKV,24.31\n"
+    text = "Ticker,Company,Price,Open\nINDP,Indaptus,2.89,2.80\nBKV,BKV,24.31,24.26\n"
     got = elp.parse_elite_price_csv(text)
     assert got["INDP"] == 2.89
     assert got["BKV"] == 24.31
+    opens = elp.parse_elite_open_csv(text)
+    assert opens["INDP"] == 2.80
+    assert opens["BKV"] == 24.26
 
 
 def test_theme_radar_close_is_never_live() -> None:

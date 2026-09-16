@@ -961,11 +961,18 @@ def test_factor_mine_lands_closed_after_postclose() -> None:
     assert 'cron: "25 20 * * 1-5"' in yml
     assert 'cron: "0 12 * * 6"' in yml
     assert "data/factor_mine/panel.json" in yml
+    assert '[ -n "${TO_DATE:-}" ] && ARGS+=(--to-date "$TO_DATE")' in yml
     assert "Stock Book ALL (one-shot)" in yml
     assert "Pre-Open ALL (predictive one-shot)" in yml
     src = (ROOT / "src" / "factor_mine.py").read_text(encoding="utf-8")
     assert "def land_closed(" in src
     assert "def payload_covers_session(" in src
+    assert "def stamp_pending_session(" in src
+    assert "def ticket_session_date(" in src
+    live = (WF / "live_px.yml").read_text(encoding="utf-8")
+    assert "src.hold_live_px" in live
+    assert "never block deploy" in live or "Soft-fail" in live
+    assert "flatten_robust" in live
 
 
 def test_last_closed_sidecar_does_not_share_ubuntu_concurrency() -> None:
