@@ -8,11 +8,11 @@
 
 **Step 1 — Research.** The model wanted to know: *"APP AppLovin stock news September 17 2026"* → got 6 results (via ddg)
 
-  - AppLovin Corp - Investor Relations (https://investors.applovin.com/)
+  - AppLovin Corporation (APP) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/APP/)
 
-  - AppLovin Corporation (APP) Latest Stock News & Headlines ... (https://finance.yahoo.com/quote/APP/news/?fr=sycsrp_catchall)
+  - APP: AppLovin Corporation - Stock Price, Quote and News - CNBC (https://www.cnbc.com/quotes/APP)
 
-  - AppLovin Corporation (APP) Latest Stock News | Seeking Alpha (https://seekingalpha.com/symbol/APP/news)
+  - Applovin Corp (APP) Stock Price & News - Google Finance (https://www.google.com/finance/quote/APP:NASDAQ)
 
 **Step 2 — Research.** The model wanted to know: *"OMC Omnicom news September 2026 CEO Robertson Ruhanen"* → got 6 results (via ddg)
 

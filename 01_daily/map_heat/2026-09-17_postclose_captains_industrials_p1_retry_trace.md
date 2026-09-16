@@ -14,7 +14,7 @@
 
   - Veralto Signs Agreement to Acquire Cleanwater1 | Veralto ... (https://fiscal.ai/company/NYSE-VLTO/news/2026-08-19/veralto-signs-agreement-to-acquire-cleanwater1/)
 
-**Step 2 — Research.** The model wanted to know: *"ZWS Zurn Elkay Water Solutions news September 2026"* → got 6 results (via gnews_rss)
+**Step 2 — Research.** The model wanted to know: *"Zurn Elkay Water Solutions ZWS news September 2026"* → got 6 results (via gnews_rss)
 
   - Zurn Elkay Water Solutions Named One of America’s Greatest Companies 2026 by Newsweek - Business Wire (https://news.google.com/rss/articles/CBMi2AFBVV95cUxNam1BTlRHNWhIMVN2YWVYM0pyUE1iRkhZb1UwWE5zT3pCYmx5NTRiemVrTGgwU3BBcmtkVHdMdHQ1cTB2MWxVZ05QQnNSaGNYM0JveDAtZVM2WUY5NncyVWVuS0Zlek1ZdXJveHotcFlIdk1DWDVqeWg0bWo0MGFmeWtock85ZHhSYTRDWVE0QkVxYUNEZlN2dVV4SjNveFlTNUtuNHlWbkw3N0lMM2s1OVhCeGZNNnByVWcwZGx2dzZQSmpOUVIycnZsQlVjM1d3VzZOMlVKR1A?oc=5)
 

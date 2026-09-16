@@ -10,9 +10,9 @@
 
   - Newsroom - CBRE (https://www.cbre.com/about-us/newsroom)
 
-  - CBRE Inc. - The Business Journals (https://www.bizjournals.com/organization/cbre)
-
   - Press Releases - CBRE Group, Inc. (https://ir.cbre.com/press-releases)
+
+  - CBRE Inc. - The Business Journals (https://www.bizjournals.com/organization/cbre)
 
 **Step 2 — Research.** The model wanted to know: *"CoStar Group CSGP news September 2026"* → got 6 results (via ddg)
 

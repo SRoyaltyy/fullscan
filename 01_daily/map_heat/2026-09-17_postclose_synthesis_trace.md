@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"CENX Century Aluminum news September 2026"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"HCA Healthcare stock news September 17 2026"* → got 6 results (via ddg)
 
-  - Century Aluminum Company - Investor Relations (https://investors.centuryaluminum.com/overview/default.aspx)
+  - HCA Healthcare (HCA) Stock Price & OverviewTop StoriesHCA Healthcare - NewsHCA Healthcare, Inc. (HCA) Stock Price, News, Quote & History ...HCA Healthcare - Stock InformationHCA Healthcare, Inc. (HCA) Stock Historical Prices & Data ...HCA Healthcare, Inc.: Official Announcements - Stock Market NewsHCA Healthcare (HCA) Stock Price, News & Analysis - MarketBeat (https://stockanalysis.com/stocks/hca/)
 
-  - Century Aluminum (CENX) Earnings Date and Reports 2026 (https://www.marketbeat.com/stocks/NASDAQ/CENX/earnings/)
+  - HCA Healthcare - News (https://investor.hcahealthcare.com/news/default.aspx)
 
-  - Century Aluminum Company Reports Second Quarter 2026 Results (https://centuryaluminum.com/insights/century-aluminum-company-reports-second-quarter-2026-results/)
+  - HCA Healthcare, Inc. (HCA) Stock Price, News, Quote & History ... (https://finance.yahoo.com/quote/HCA/latest-news/?fr=sycsrp_catchall)
 
-**Step 2 — Research.** The model wanted to know: *"CSTM Constellium stock news September 2026"* → got 6 results (via gnews_rss)
+**Step 2 — Research.** The model wanted to know: *"Philip Morris PM Zyn news September 2026"* → got 6 results (via ddg)
 
-  - Constellium SE (CSTM) Shares Fall 4.5% -- What GF Score of 76 Te - GuruFocus (https://news.google.com/rss/articles/CBMirgFBVV95cUxOTXQ5VGxlc1pfT3EyeWxLSUxralJoSE9GXzk0MmhBZlBCdlZnZWpoa2VMc1VlY19iRUV2RW50TC1HNHMtTFMwLWhieVZ6R0lYUjJoeVFiOFp2bThnQlpnTTNfMnI2MWY1b3dJQzNEZ3NmVEcyNUNQcU1ObFBDVDRIM2V6OUpmS01TRnRianI2XzBwalVMQnlEQ3Z0Y1NOaEVMOXpUazZFUnJOV0FFVnc?oc=5)
+  - PM Press Releases Philip Morris Intl - marketchameleon.com (https://marketchameleon.com/Overview/PM/PressReleases/)
 
-  - What Does Constellium (NYSE:CSTM) Mean for NYSE Metal Stocks? - Kalkine Media (https://news.google.com/rss/articles/CBMirgFBVV95cUxNLV9nYTIyZDNXLUN1VzIxUHNUcWFycmtpUE9MeEItaFAxVDRaRlU4V1JsNjFDNnVqRHd1QVJXbkRFeE1XaFA1bVdYVm92eGJTam5YdGpaSk5za0pTYTBrWmVCUGw1RHJtTXh0YldFMzR4TThoS2tTWS1aYW1PN05CQkNaOWFwMUZxQnhPS0RFVmJJYzNBc2NQRWJfYXpiSjZrT3d3VE9KUlIwNmlER2c?oc=5)
+  - ZYN USA - Tobacco Insider (https://tobaccoinsider.com/zyn-in-usa/)
 
-  - New Strong Buy Stocks for September 8th - Yahoo Finance (https://news.google.com/rss/articles/CBMinAFBVV95cUxNQUdmaGNvTTQ3MDBwa1A5NmhfMzFKSU9BUktGcDhDQlpsV215dmltNkZLMnVMMjVxRXUzSFJWNlk0N3ZodE1DTERHamVsdzFoQlQ0UGh2U0Y5T21VSXlSR1JhYzZJTThQSnBObC1YejNnSFhpMzJ1Rl84cDZDcGhMWjN2M2tqRW9SSm9NbmJxVV9lMUxLSGUwQUgza3E?oc=5)
+  - PMI U.S. Expands ZYN Portfolio to Offer Adults More Smoke ... (https://www.prnewswire.com/news-releases/pmi-us-expands-zyn-portfolio-to-offer-adults-more-smoke-free-choices-302874306.html)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

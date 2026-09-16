@@ -6,13 +6,13 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"MCK McKesson news September 2026 cyberattack data theft"* → got 6 results (via gnews_rss)
+**Step 1 — Research.** The model wanted to know: *"MCK McKesson news September 2026 cyberattack data theft"* → got 6 results (via ddg)
 
-  - McKesson confirms data theft in cyberattack involving third-party apps - Healthcare Dive (https://news.google.com/rss/articles/CBMisAFBVV95cUxNMWUwMjdpS0ZvZk1iWVFoLTgxUzNhOXFsTXlySmdhS0l2eHB6RC1jZWF2elF0X0Z1RXE2cE41ZDJRVVFtNjM3NWxTcnB3aHlqbHJrN3J5WXEtRFFxSkp5N1hkV09QVHF6eWZfWVp0cl9RYkRycFRLZFcxeW9kdDl4azQxVHNxNERCaHNINm1LMlRxOWdjVU92N3NtWjRHUDBLNExIXzFkMm5zQ1h1cDJZOQ?oc=5)
+  - Notice of Data Breach - McKesson (https://www.mckesson.com/utility/cybersecurity/notice-of-data-breach/)
 
-  - McKesson confirms cyber incident after ShinyHunters claims patient-data theft - Malwarebytes (https://news.google.com/rss/articles/CBMiwgFBVV95cUxNRWJ2NFltMUhZMEliNEFJMDhDajVjRFBCUHFlWnlPQ2dfRDlkTUZxSnB5RlhPOWp0YXBhdXpJX0NpMzVWcFRNQ05tYVR3YUNyZ09zbjdMYjc0bTNwTENqU2d1TTRqWjM5cExvWkoxSE94YnRLakNKb01oWUVUN0NHelNrMXZpZDlIYUthS0xhMW9zajlja2UtaVhVQzlzaHdBamVTOUZoMk9uZVJUbk9wSjBkazVsOE5sSGFINklVT0lfdw?oc=5)
+  - McKesson Vishing Breach Lawsuits (Sep 2026) | EmailMeNow (https://emailmenow.com/news/mckesson-vishing-lawsuits-sep-2026)
 
-  - Hackers claim millions of patient records stolen during data breach at healthcare giant McKesson - TechCrunch (https://news.google.com/rss/articles/CBMiywFBVV95cUxQamJrNGdlbjJ4bk9QSXl5c1NDNHFQR2c3OWpid2xtaXVfSkNubHBZNWE2QXVxTFFyeGQwWWplbzlubXJuRmU3MklNTVZsdENKMUhFWmdzdWZGdjZMRUlJQUJOQ2JyTWp1UFJDcDgtMnRtX085U2pZdTdZU2hYZ0JuUzJvbHVZWFBEdzA1WUR0azNHZ080eVVyQ0NTSU95aC1fSWc2ZGF3bnVaNkhOWUlmV0daTzc1SDFZSmpxSElEYnJtektxdFE5Qi1FMA?oc=5)
+  - ShinyHunters Claims Theft of 284M Records from Healthcare ... (https://www.hipaajournal.com/mckesson-data-breach/)
 
 **Step 2 — Research.** The model wanted to know: *"COR Cencora news September 2026"* → got 6 results (via gnews_rss)
 

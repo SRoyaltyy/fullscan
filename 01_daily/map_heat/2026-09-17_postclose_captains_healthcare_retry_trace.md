@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"ABT Abbott settlement baby formula plant closure September 2026"* → got 6 results (via gnews_rss)
+**Step 1 — Research.** The model wanted to know: *"ABT Abbott settlement baby formula plant closure news"* → got 6 results (via ddg)
 
-  - Abbott agrees to settlement over closure of largest baby formula plant in the US - ABC News - Breaking News, Latest News and Videos (https://news.google.com/rss/articles/CBMipAFBVV95cUxNd3FmcVgwVnJMTUxSYlNlMzJqOWVfZTBZbm5aLXVkdmNWYVkxZEszc3hqTEZJdUNncjMxZWRRR2JNV0VsMEExY3o0a1Vfd19iVmgyZnNNbGNTbDA2SGhnWXBZRjJoZHMtcmxWVFdteXJlb3dOUE1Eb2ZDMmJkOThYVFdfaUNvamVYOVVLYW9yQ0JxU2hLTlVZV2VmZWVBSUpBSHpTWNIBqgFBVV95cUxONHNsVWlaWjZIamRENVVma2dfV3Q4UFZfN3U0eENCYmlpWnEtbGFOT0s5YW01TTJwNEVMbzc3Ujk2WGVES3BOQlBtSnNDQ05rTV9pQ0xmNXFxZ3ZSS2dINGFUUWExcGhRaEdMdFJDaDdQZ2J6VTVUYXN3dy1WR0QwbGhfN2dibUJheTEyUUdocWowaHBzLU0wMzNrVXRGRlg2bmp5OEtvUmQ2dw?oc=5)
+  - Office of Public Affairs | Abbott Agrees to Pay Over $384M to ... (https://www.justice.gov/opa/pr/abbott-agrees-pay-over-384m-settle-allegations-related-contaminated-infant-formula)
 
-  - Abbott to pay $384 million over contaminated infant formula allegations, US Justice Dept says - Reuters (https://news.google.com/rss/articles/CBMizAFBVV95cUxOT012UDV6cVRyZE0wVHBHQ1g5SXk1M1Q5ZF9xMmh4T1RpVDhkQ0tkTnZ3MDNwOGI2LTFSZV9OVTNXc3l5RHNndkVEX2daaTRXUGdXaXFWeTU2bm9MaDUyRTFwX1ZXLUJETmtlRXNRSThiVWFkcjJvUGVxSnFFNDhwV0RQbFJfZVh6MjVmQy01cW1qN1g1NXVScDBNOGFwS2tqdWpScnI0Q2lRdmk0UGFiVzZpYTNvenIzOG1hWEVrck94THFnVkM1cmxSMHA?oc=5)
+  - Abbott agrees to settlement over closure of largest baby ... (https://apnews.com/article/abbott-infant-formula-justice-michigan-recall-23b355c26f6347a7e07565aba76d0e4f)
 
-  - Abbott agrees to settlement over closure of largest baby formula plant in the US - Times Union (https://news.google.com/rss/articles/CBMiogFBVV95cUxNVVRFczBmaXN2V1Y5Z1hRN0R3b1l1a3lMTVc1dHNLM2RUZEFvWC04eFEyT1JzUkhHOUVxWnVCNTVPVkVnNEp1dzdJTEUzd05jRVF2V29tOVEzbkliNFQ3R2RCLXpHaHI4ajRQd20yb2UxR0FqaUdpbEtNN0pyNHdxYzAzWEFLUHRvQUYzUkxPckc0OUczeW1TMWNFQ0ZUQm1wS0E?oc=5)
+  - Abbott Laboratories (ABT) Agrees To $385 Million Infant ... (https://finance.yahoo.com/healthcare/articles/abbott-laboratories-abt-agrees-385-011647489.html?fr=sycsrp_catchall)
 
-**Step 2 — Research.** The model wanted to know: *"MDT Medtronic news September 2026"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"MDT Medtronic stock news September 2026"* → got 6 results (via gnews_rss)
 
-  - Press releases - Medtronic News (https://news.medtronic.com/press-releases?l=100)
+  - Medtronic (NYSE: MDT) accounting chief gives 600 shares, holds 16,398 after gift - Stock Titan (https://news.google.com/rss/articles/CBMiqgFBVV95cUxNVWpwVVJRRWlRNjY5Yzl2NFpqOWNEckcxSVI4ZlpWOGRFS19QWGZoUWp0cGJiMUlxTWY3QXhFUy1hVjI4MnQ0endBMUZfbUhqQVF2cExkVEt6dzhaZlpleDY1OGhTVWxCb1RQc2dSb0xRY0RBLU81dXVsaWlBQjRtUGVnWFpTUlFzQ0l3QWUwanZEVnpLR3lmU3pZRG9HTmFCdDdveVNTaWhVZw?oc=5)
 
-  - Investor Relations | Medtronic - Events & Presentations (https://investorrelations.medtronic.com/events-presentations)
+  - Medtronic Launches Exchange Offer to Complete Separation of MiniMed Group, Inc. - Medtronic (https://news.google.com/rss/articles/CBMitwFBVV95cUxPRGFwTnJZck9tVEVIYnpzazIxQjN5OGZqVkxlUlhaLWNJTGdtQWI1SWV1ZFVQdE1xalBMVEtwQmVBcWNUVEd0amJ6cnlaYXpZcURLeTNZTWRXa2MzNWtlM0FOU2VjM3NYTndITjNITGQyaDZYYUJQSTEwdnJnbGN5ZTBRWjVVT2RFMk80T2hBLXpnS2NJdDZHYm9GSHZhdVl6NUlWa1RCbTExaW1RUHRCNjZkdDE3UDg?oc=5)
 
-  - Medtronic reports first quarter fiscal 2027 results; delivers ... (https://news.medtronic.com/2026-09-01-Medtronic-reports-first-quarter-fiscal-2027-results-delivers-broad-based-portfolio-performance-and-raises-fiscal-2027-guidance)
+  - Medtronic (MDT) Launches Exchange Offer To Complete Diabetes Business Separation - simplywall.st (https://news.google.com/rss/articles/CBMixgFBVV95cUxQSURrY2hDdVJoR0ltanBwNGk0OGhmZ1ZpWTNYR21VaFFxRHJRMU1yaG95ZEIxWEFLSFFGNHJ4SHZCVUhNM3pCMVpQRkZKUG15eWYtSHJpclF3eHRISHhHYWx2d0RndVI2LW53T1JFaDE1YVp6amcyQ3J0OUp0ZzdpWHplX1hLWXdGdXh5Q2lkLWtKTUJUcXBDOEE3TzVRQkFVQ2pIVFhaVUFjSzd0a0ZOXzJCM2tLYlh4cW5nZG8tY1FyMUtSVGfSAcsBQVVfeXFMTzQ0T2hyMXE1LUF0WEJDc3hZTnJEeDJjc1BvMU93S0dXUHlnNHVWenE4UmVOSmpVT2EtYWNwRXE2NXdkaGs3TF9yaGd2am4tdzlOeTlPRlNiS0lwRGo1WERYbnE2eElLVTZSajZLRHlMQ2hVWjdoWFlkSU4zMk9zMXNoX0tsMTFMd05nckRnWDBoR0RkUzdhTzc5MllfbmNBY01TZEZsd0pSOWE2bm9nczN1dEM3R3VYOHRkQ2Vxd1ZQanhId1YxaVo1ZEk?oc=5)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

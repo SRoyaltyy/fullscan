@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"CTVA Corteva news September 2026"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"Corteva CTVA news September 2026 state attorneys general allegations"* → got 6 results (via ddg)
 
-  - News Releases | Corteva Agriscience (https://investors.corteva.com/news-events/news-releases)
+  - Corteva Categorically Rejects Unfounded, Unprecedented Allegations by ... (https://www.prnewswire.com/news-releases/corteva-categorically-rejects-unfounded-unprecedented-allegations-by-state-attorneys-general-302878200.html)
 
-  - Corteva Approves Vylor Separation; Oct. 1 Expected | CTVA Stock News (https://www.stocktitan.net/news/CTVA/corteva-board-of-directors-approves-vylor-nv8hcfj0g0ua.html)
+  - Corteva Categorically Rejects Unfounded, Unprecedented Allegations by ... (https://www.corteva.com/resources/media-center/corteva-rejects-allegations-by-state-attorneys-general.html.)
 
-  - Corteva Advances Vylor Spin-Off and Investor Day Plans - TipRanks.com (https://www.tipranks.com/news/company-announcements/corteva-advances-vylor-spin-off-and-investor-day-plans)
+  - Corteva Categorically Rejects Unfounded, Unprecedented Allegations by ... (https://www.global-agriculture.com/crop-protection/corteva-categorically-rejects-unfounded-unprecedented-allegations-by-state-attorneys-general/)
 
-**Step 2 — Research.** The model wanted to know: *"CF Industries news September 2026"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"CF Industries CF news September 2026"* → got 6 results (via ddg)
 
-  - CF Industries Holdings, Inc. (CF) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/CF/)
+  - Newsroom - CF Industries (https://www.cfindustries.com/newsroom)
 
-  - Newsroom | CF Industries (https://www.cfindustries.com/newsroom)
+  - CF Industries - Investors - News (https://investors.cfindustries.com/Investors/news/default.aspx)
 
-  - CF Industries Holdings Inc (CF) Shares Surge 3.3% -- What GF Score of 73 Tells Investors (https://www.gurufocus.com/news/9082764/cf-industries-holdings-inc-cf-shares-surge-33-what-gf-score-of-73-tells-investors)
+  - CF Industries - CF Industries Holdings, Inc. Reports First ... (https://ir.cfindustries.com/Investors/news/news-details/2026/CF-Industries-Holdings-Inc--Reports-First-Half-2026-Net-Earnings-of-1-34-Billion-Adjusted-EBITDA-of-2-18-Billion/default.aspx)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

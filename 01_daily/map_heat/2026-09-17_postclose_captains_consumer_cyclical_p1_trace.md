@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"SGHC Super Group earnings news September 2026"* → got 6 results (via gnews_rss)
+**Step 1 — Research.** The model wanted to know: *"SGHC Super Group Q2 2026 earnings record revenue"* → got 6 results (via ddg)
 
-  - Engineers Gate Manager LP Trims Position in Super Group (SGHC) Limited $SGHC - MarketBeat (https://news.google.com/rss/articles/CBMizwFBVV95cUxPVGtwODdZOWNPZkdmMm5FLUtZblMtN2ZNTFJUSFhYZkdPZkZJU2s3OFBmR1A0UkVoclhvZUlxRl84OVVVUzZVY0VQNTNhdlc2cE9XdFlSdFNyYi1peTRfZW5aWXg5QzRLMFdYMGoxMVJUaHUtY2prY3J5N0VZMlA1cTlRazZSaGh3YTlydDhNZ2llT01oalRlV3NxMnUzUEtQTi1ucVRqaGRjRFg4c050bGdERzlkc1hHQWh3YmhSWjhmRldId3VibmtCNWpXcG8?oc=5)
+  - Super Group (SGHC) Limited - Financials - Quarterly Results (https://investors.supergroup.com/financials/quarterly-results/default.aspx)
 
-  - Super Group Reports Financial Results for Second Quarter of 2026 - Business Wire (https://news.google.com/rss/articles/CBMivgFBVV95cUxNeVNRcVJHTGdIZVY5ZEJlOElzS3RlTUFfekVhd01tb1NXeG1sVnN4S182S1gyOGlJMnRuV0xQSFY5RGVIdTZaWkFtQ1JvbkVmck55ZXptQS1UZjJTMnpXb2k3N0ZiNzRabHI0NnhJbFFSM29fcTRxSGdKYll1dU5jeV9TU21qeU1WdzE3R1VqYWZreVk1OWxaV3hycGRYOVluUGJMUzJwQ2l5Sk9KVTdUaG1ReVBYbUJfNVhyRVJn?oc=5)
+  - Super Group (SGHC) Limited (SGHC) Q2 FY2026 earnings call ... (https://finance.yahoo.com/quote/SGHC/earnings/SGHC-Q2-2026-earnings_call-651543.html?fr=sycsrp_catchall)
 
-  - Super Group (NYSE: SGHC) officer plans $560k stock sale - Stock Titan (https://news.google.com/rss/articles/CBMingFBVV95cUxOMk9IRDRSU2hYNDBnaUpBeEk0NE5keklBUnFsWnFqZXVsR0FHWHVqRGEtYkExVTQ2R3g4TEZIM294S0NHWWVHRDZCY3d3TThKcVN0T2d3NjRhSENKU05Dd25JdmtiN3ZMYnc3RV9jU0JJSXJPZFRGOXRFZmxFcFVUUFpqNGRQRTNWMTRFUzUxYVRYRnp1aFFITmpPXzBRQQ?oc=5)
+  - Super Group (SGHC) Ltd (SGHC) (Q2 2026) Earnings Call ... (https://finance.yahoo.com/markets/stocks/articles/super-group-sghc-ltd-sghc-190035914.html?fr=sycsrp_catchall)
 
-**Step 2 — Research.** The model wanted to know: *"Rush Street Interactive RSI news September 2026"* → got 6 results (via gnews_rss)
+**Step 2 — Research.** The model wanted to know: *"Rush Street Interactive RSI news September 2026"* → got 6 results (via ddg)
 
-  - Rush Street Interactive (NYSE:RSI) Stock Rating Upgraded by Wall Street Zen - MarketBeat (https://news.google.com/rss/articles/CBMi0AFBVV95cUxOVDRFWk82Sk9aY2FTSmd4ckNtbG41czk3UWpieTBFUUJ4TjJaYlZiZXFPbGtUTUFNNVFHcWZWaWhVTm91V3ktZjB5cTZISGlpNGFTaFFtRjVoTkpBM18zNDlCd1NHTHJmN1k0Z3RmbUstQ2lnR1RGampjb0M2Qmg4N1dDTER2U0txTmMxZk45Q2FVZUQydjlkQm5zSElZa3NNOWxsUGthWG1raDR6X29fbXo4QVpiRi1hcnB2ODhTWTd4Ylg5MXVzeGwxUl9XZ1pF?oc=5)
+  - Rush Street Interactive Inc. - News (https://ir.rushstreetinteractive.com/news/default.aspx)
 
-  - 3 Russell 2000 Stocks We Find Risky - StockStory (https://news.google.com/rss/articles/CBMimgFBVV95cUxOUnd0TkZjTmFRaFZNRC1GRjNXSlcybVRMZ0F1LWlEQlloVGFIWVYxU2Z6d2tmNzViOWZtZGROMm4tOW1laE9XVzR0UmZFOGhUQnp2SGFhX3dyS0VEY25OTWF2S3JIQjBsd3FCT0FPc1Y4RUltT3lVUTMyQmZLYlB1YkZLbjZ6RzJKdFdEMmNWRF9NOUsxQjlfbjhn?oc=5)
+  - Rush Street Interactive Inc. - Investor Relations (https://ir.rushstreetinteractive.com/home/default.aspx)
 
-  - Rush Street Interactive (RSI) CFO sells 23,000 shares - Stock Titan (https://news.google.com/rss/articles/CBMivAFBVV95cUxOa2JQNklmNDlac3JMOE05Rl9XSGdyM2tGVmE0ZWtpZkhyN1BMcWFiUTkyeWZTZ1ZzSk9HMUFFQWhOZllUVGlNYWx2Y2psYm80Y3pmUENBLW9SZGhKQW9rNmFZSk93a3RidFNuU1RZdmQzR05aX2lxS1gxUllDVnJDZ0Iwc0NlUEVXZU45MzY5VTljbERCd3RQV1FuWW1UdXNQNDhmRXFIWl9wZ2lzRThaVFRIMnFhTXFUZllRVA?oc=5)
+  - RSI Technical Analysis, Signals & Chart | Rush - SwingTradeBot (https://swingtradebot.com/equities/RSI)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

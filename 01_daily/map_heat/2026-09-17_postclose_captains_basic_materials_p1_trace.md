@@ -8,11 +8,11 @@
 
 **Step 1 — Research.** The model wanted to know: *"USAR USA Rare Earth stock news September 2026"* → got 6 results (via ddg)
 
-  - News Releases - USA Rare Earth (https://investors.usare.com/news-events/news-releases)
+  - USAR Stock Quote Price and Forecast | CNN (https://www.cnn.com/markets/stocks/USAR)
 
-  - USA Rare Earth Inc (USAR) Stock Price & Latest News ... (https://www.insidearbitrage.com/symbol-metrics/USAR)
+  - USA Rare Earth, Inc. (USAR) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/USAR/)
 
-  - Investor Relations - USA Rare Earth (https://investors.usare.com/)
+  - USA Rare Earth (USAR) Stock Price & Overview (https://stockanalysis.com/stocks/usar/)
 
 **Step 2 — Research.** The model wanted to know: *"MTRN Materion stock news September 2026"* → got 6 results (via ddg)
 

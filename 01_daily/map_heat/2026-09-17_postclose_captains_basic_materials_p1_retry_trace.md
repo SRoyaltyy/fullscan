@@ -8,18 +8,18 @@
 
 **Step 1 — Research.** The model wanted to know: *"LIN Linde plc news September 2026"* → got 6 results (via ddg)
 
-  - Linde plc (LIN) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/LIN/)
+  - Linde plc (LIN) Stock Price & Latest News - September 2026 (https://www.insidearbitrage.com/symbol-metrics/LIN)
 
-  - Linde (LIN) Stock Price & Overview (https://stockanalysis.com/stocks/lin/)
+  - Investors - Linde (https://www.linde.com/investors)
 
-  - Linde plc stock gains support as analysts highlight guidance and cash returns (https://www.ad-hoc-news.de/boerse/news/corporate-news/linde-plc-stock-gains-support-as-analysts-highlight-guidance-and-cash/70111121)
+  - Linde plc Declares Third Quarter 2026 Dividend, Payable on ... (https://www.marketscreener.com/news/linde-plc-declares-third-quarter-2026-dividend-payable-on-september-17-2026-ce7f51d2d880f622)
 
 **Step 2 — Research.** The model wanted to know: *"SHW Sherwin-Williams news September 2026"* → got 6 results (via ddg)
 
-  - Sherwin-Williams - Press Releases (https://investors.sherwin-williams.com/press-releases/default.aspx)
+  - The Sherwin-Williams Company to Hold Financial Community Presentation on September 24, 2026 (https://www.prnewswire.com/news-releases/the-sherwin-williams-company-to-hold-financial-community-presentation-on-september-24-2026-302711234.html)
 
-  - Sherwin-Williams - Investor Relations (https://investors.sherwin-williams.com/investor-home/default.aspx?LanguageId=1)
+  - KeyBanc initiates coverage of Sherwin-Williams with sector weight (https://www.msn.com/en-us/news/other/keybanc-initiates-coverage-of-sherwin-williams-with-sector-weight/ar-AA2c2Eaq)
 
-  - Sherwin-Williams [NYSE:SHW] Stock Price September 5 2026 ... (https://easternherald.com/market/sherwin-williams-shw-stock-september-5-2026/)
+  - Sherwin-Williams - Investor Relations (https://investors.sherwin-williams.com/investor-home/default.aspx)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

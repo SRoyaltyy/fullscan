@@ -12,7 +12,7 @@
 
   - URI Looks 11.1% Overvalued on GF Value™ as Momentum and Profitab - GuruFocus (https://news.google.com/rss/articles/CBMisAFBVV95cUxPa09VbC1KMzJGcy14ZUdEdElWYS13ai1XWDJ4bFRCZzEyQjZWaHJweS1acXNQRGI3Z2J5YW9rYXpoOTdPamwwZnFQRWF6V2tGSHF6WkZjZEllQkI4R3RMb1dpWlpGSDBvU0J4Mm5CUnpsQ0JvQkt5ZTFTVzZNVEFIdzhyMXJDbXZqa2ZHaWk3WVJFMlVpbjdEZ1M1azZoVHRhaUxnLVhhdmE3NlZLUTMtYQ?oc=5)
 
-  - 2 Reasons to Watch URI and 1 to Stay Cautious - financialcontent.com (https://news.google.com/rss/articles/CBMiqwFBVV95cUxObnRUa0E3QWx1LTRvcml1dVJOZ1lybTNMUlotMXRoaEtCWF9DRl84RHdNRGVIZFZEYjJSbERLdEdWakpJQjVMTlUxUVhnWVdGWGRnUlpfVkxqMzQ2VGlYVERvUmtISktPcG9TODZCeDI0Y3NMbGFTR0M4OUJSUDJzZUFCbDhiVk4tWWI5aXVodjVQUnFQLTRwbVB4Qjgzdm1seTdyMDBYWUwzdGs?oc=5)
+  - 2 Reasons to Watch URI and 1 to Stay Cautious - FinancialContent (https://news.google.com/rss/articles/CBMiqwFBVV95cUxObnRUa0E3QWx1LTRvcml1dVJOZ1lybTNMUlotMXRoaEtCWF9DRl84RHdNRGVIZFZEYjJSbERLdEdWakpJQjVMTlUxUVhnWVdGWGRnUlpfVkxqMzQ2VGlYVERvUmtISktPcG9TODZCeDI0Y3NMbGFTR0M4OUJSUDJzZUFCbDhiVk4tWWI5aXVodjVQUnFQLTRwbVB4Qjgzdm1seTdyMDBYWUwzdGs?oc=5)
 
 **Step 2 — Research.** The model wanted to know: *"GATX news September 2026"* → got 6 results (via ddg)
 
@@ -20,6 +20,6 @@
 
   - GATX Corporation - Investor Relations (https://ir.gatx.com/overview/default.aspx)
 
-  - GATX Corp's Dividend Analysis - Yahoo Finance (https://finance.yahoo.com/markets/stocks/articles/gatx-corps-dividend-analysis-111724352.html?fr=sycsrp_catchall)
+  - GATX Corporation Announces Quarterly Dividend, Payable ... (https://www.marketscreener.com/news/gatx-corporation-announces-quarterly-dividend-payable-september-30-2026-ce7f50d8d888f02d)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.
