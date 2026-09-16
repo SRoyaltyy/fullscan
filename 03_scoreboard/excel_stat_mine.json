@@ -1,9 +1,9 @@
 {
  "status": "PARTIAL",
  "phase": "pairs_hold",
- "n_tickers_done": 1925,
+ "n_tickers_done": 1950,
  "n_disc_rows": 167163,
- "n_hold_rows": 99925,
+ "n_hold_rows": 101225,
  "n_rules": 8525,
  "top_singles": [
   {

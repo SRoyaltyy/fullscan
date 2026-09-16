@@ -1927,13 +1927,38 @@
   "RMBS",
   "RMD",
   "RMIX",
-  "RMR"
+  "RMR",
+  "RMT",
+  "RNAC",
+  "RNG",
+  "RNR",
+  "RNST",
+  "RNTX",
+  "RNW",
+  "ROG",
+  "ROIV",
+  "ROK",
+  "ROKU",
+  "ROLR",
+  "ROMA",
+  "ROOT",
+  "ROST",
+  "RPAY",
+  "RPD",
+  "RPID",
+  "RQI",
+  "RR",
+  "RRX",
+  "RS",
+  "RSG",
+  "RSI",
+  "RSKD"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 99925,
- "hold_lab_n": 47007,
- "hold_base": 0.4704228171128346,
+ "n_hold": 101225,
+ "hold_lab_n": 47622,
+ "hold_base": 0.4704569029389973,
  "counts": {
   "A@L0_g": [
    60160,
@@ -109805,8 +109830,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 99925,
- "pair_hold_lab_n": 47007,
+ "pair_hold_n": 101225,
+ "pair_hold_lab_n": 47622,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -109915,5 +109940,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789568016
+ "flushed_unix": 1789568204
 }
