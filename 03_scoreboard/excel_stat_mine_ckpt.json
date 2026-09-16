@@ -1252,13 +1252,38 @@
   "KGEI",
   "KGS",
   "KHC",
-  "KIDS"
+  "KIDS",
+  "KINS",
+  "KKR",
+  "KLAC",
+  "KLAR",
+  "KLIC",
+  "KLXE",
+  "KMI",
+  "KMPR",
+  "KMTS",
+  "KMX",
+  "KNDI",
+  "KNF",
+  "KNTK",
+  "KNX",
+  "KO",
+  "KOD",
+  "KODK",
+  "KOPN",
+  "KOS",
+  "KR",
+  "KRC",
+  "KRG",
+  "KRMD",
+  "KRMN",
+  "KRNT"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 64897,
- "hold_lab_n": 30613,
- "hold_base": 0.47171672034146417,
+ "n_hold": 66197,
+ "hold_lab_n": 31215,
+ "hold_base": 0.47154704895992267,
  "counts": {
   "A@L0_g": [
    60160,
@@ -109130,8 +109155,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 64897,
- "pair_hold_lab_n": 30613,
+ "pair_hold_n": 66197,
+ "pair_hold_lab_n": 31215,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -109240,5 +109265,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789562900
+ "flushed_unix": 1789563086
 }
