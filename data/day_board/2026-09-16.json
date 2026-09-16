@@ -1,6 +1,6 @@
 {
   "date": "2026-09-16",
-  "generated_at": "2026-09-16T07:16:29.991621-04:00",
+  "generated_at": "2026-09-16T07:16:54.300615-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -435,7 +435,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -443,9 +443,9 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-09-16_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=2657",
+          "size": 7638352
         },
         {
           "key": "ab_enriched",
@@ -453,13 +453,13 @@
           "path": "data/ab_checklist/2026-09-16_ab_checklist_enriched.csv",
           "role": "required",
           "status": "OK",
-          "reason": "rows=11634",
-          "size": 3367741
+          "reason": "rows=2657",
+          "size": 8431154
         }
       ],
-      "said": "216 rows",
+      "said": "25 rows",
       "bullets": [
-        "A, CON, NUTX, DVN, RSVR"
+        "DSGX, CFFN, SFL, PBR, AVT"
       ]
     },
     {
@@ -510,7 +510,7 @@
       "yaml": "stock_book_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 4,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -575,8 +575,8 @@
           "path": "data/ab_checklist/2026-09-16_ab_checklist_enriched.csv",
           "role": "input",
           "status": "OK",
-          "reason": "rows=11634",
-          "size": 3367741
+          "reason": "rows=2657",
+          "size": 8431154
         },
         {
           "key": "join",
@@ -592,9 +592,9 @@
           "name": "Peer RS CSV",
           "path": "data/peers/2026-09-16_peer_rs.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=5111",
+          "size": 817738
         },
         {
           "key": "book_json",
@@ -1447,6 +1447,31 @@
         }
       ],
       "preview": "5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 RDVT, GCT, SMTC, HPE, DELL"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-16T07:16:53.634282-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-16_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7638352,
+          "preview": "2657 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, ANET, CFFN, BMRN, HSBC"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-16_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8431154,
+          "preview": "2657 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 DSGX, CFFN, SFL, PBR, AVT"
+        }
+      ],
+      "preview": "2657 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, ANET, CFFN, BMRN, HSBC \u00b7 2657 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 DSGX, CFFN, SFL, PBR, AVT"
     }
   ],
   "href": {

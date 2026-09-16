@@ -1,6 +1,6 @@
 {
   "date": "2026-09-16",
-  "generated_at": "2026-09-16T07:16:29.991621-04:00",
+  "generated_at": "2026-09-16T07:16:54.300615-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -41,31 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "map_heat_research",
-      "title": "Map heat morning delta refresh",
-      "date": "2026-09-16",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-16T04:49:47.883980-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-16_research.json",
-          "ok": true,
-          "reason": "",
-          "size": 37575,
-          "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-16_research.md",
-          "ok": true,
-          "reason": "",
-          "size": 37575,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-09-16\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-16\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
-    },
     {
       "key": "finviz",
       "title": "Finviz universe export",
@@ -233,6 +208,31 @@
         }
       ],
       "preview": "5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 RDVT, GCT, SMTC, HPE, DELL"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-16T07:16:53.634282-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-16_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7638352,
+          "preview": "2657 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, ANET, CFFN, BMRN, HSBC"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-16_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8431154,
+          "preview": "2657 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 DSGX, CFFN, SFL, PBR, AVT"
+        }
+      ],
+      "preview": "2657 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, ANET, CFFN, BMRN, HSBC \u00b7 2657 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 DSGX, CFFN, SFL, PBR, AVT"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
