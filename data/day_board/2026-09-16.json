@@ -1,12 +1,12 @@
 {
   "date": "2026-09-16",
-  "generated_at": "2026-09-16T07:24:47.303078-04:00",
+  "generated_at": "2026-09-16T08:52:55.528142-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 6,
-    "partial": 1,
+    "ok": 7,
+    "partial": 0,
     "fail": 1,
     "n": 8
   },
@@ -135,9 +135,9 @@
       "key": "preopen",
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 9,
+      "n_req_ok": 20,
       "n_req": 20,
       "n_opt_ok": 3,
       "n_opt": 3,
@@ -248,7 +248,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 5243
+          "size": 7102
         },
         {
           "key": "qc",
@@ -256,8 +256,8 @@
           "path": "01_daily/2026-09-16_preopen_qc.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=False",
-          "size": 7264
+          "reason": "all_ok=True",
+          "size": 7187
         },
         {
           "key": "status",
@@ -282,113 +282,113 @@
           "name": "Sector predict \u2014 basic_materials",
           "path": "01_daily/sectors/2026-09-16/basic_materials_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 19445
         },
         {
           "key": "sector_communication_services",
           "name": "Sector predict \u2014 communication_services",
           "path": "01_daily/sectors/2026-09-16/communication_services_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 18536
         },
         {
           "key": "sector_consumer_cyclical",
           "name": "Sector predict \u2014 consumer_cyclical",
           "path": "01_daily/sectors/2026-09-16/consumer_cyclical_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 20968
         },
         {
           "key": "sector_consumer_defensive",
           "name": "Sector predict \u2014 consumer_defensive",
           "path": "01_daily/sectors/2026-09-16/consumer_defensive_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 18549
         },
         {
           "key": "sector_energy",
           "name": "Sector predict \u2014 energy",
           "path": "01_daily/sectors/2026-09-16/energy_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 17584
         },
         {
           "key": "sector_financial",
           "name": "Sector predict \u2014 financial",
           "path": "01_daily/sectors/2026-09-16/financial_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 15411
         },
         {
           "key": "sector_healthcare",
           "name": "Sector predict \u2014 healthcare",
           "path": "01_daily/sectors/2026-09-16/healthcare_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 16657
         },
         {
           "key": "sector_industrials",
           "name": "Sector predict \u2014 industrials",
           "path": "01_daily/sectors/2026-09-16/industrials_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 20368
         },
         {
           "key": "sector_real_estate",
           "name": "Sector predict \u2014 real_estate",
           "path": "01_daily/sectors/2026-09-16/real_estate_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 18440
         },
         {
           "key": "sector_technology",
           "name": "Sector predict \u2014 technology",
           "path": "01_daily/sectors/2026-09-16/technology_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 17117
         },
         {
           "key": "sector_utilities",
           "name": "Sector predict \u2014 utilities",
           "path": "01_daily/sectors/2026-09-16/utilities_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 17657
         }
       ],
-      "said": "general UP  5.297 \u00b7 sectors 0 up / 0 down / 0 flat \u00b7 news 6 items",
+      "said": "general UP  5.297 \u00b7 sectors 2 up / 2 down / 7 flat \u00b7 news 6 items",
       "bullets": [
         "bad: FOMC/SEP/Warsh 2pm unprinted ~92% hike",
         "bad: 1w 10Y +19bp near 5%",
         "bad: leftover Hormuz Brent ~$108",
         "good: Asia composite +0.64%",
         "good: ES/NQ +1.01%/+1.35% vs cash",
-        "XLB missing",
-        "XLC missing",
-        "XLY missing",
-        "XLP missing",
-        "XLE missing"
+        "XLB FLAT +9.7",
+        "XLC UP +9.2",
+        "XLY FLAT +2.7",
+        "XLP FLAT -0.4",
+        "XLE DOWN -2.9"
       ]
     },
     {
@@ -417,13 +417,12 @@
           "path": "01_daily/weather/2026-09-16_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9960 vix=falling yields=flat",
-          "size": 9960
+          "reason": "sectors=11 bytes=10070 vix=falling yields=flat",
+          "size": 10070
         }
       ],
-      "said": "favorable 1 \u00b7 hostile 7 \u00b7 neutral 3",
+      "said": "favorable 4 \u00b7 neutral 7",
       "bullets": [
-        "hostile: Basic Materials, Consumer Cyclical, Consumer Defensive, Healthcare, Industrials, Real Estate, Utilities",
         "events bull 2 / bear 12"
       ]
     },
@@ -531,7 +530,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 5243
+          "size": 7102
         },
         {
           "key": "in_actions",
@@ -566,8 +565,8 @@
           "path": "01_daily/weather/2026-09-16_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9960 vix=falling yields=flat",
-          "size": 9960
+          "reason": "sectors=11 bytes=10070 vix=falling yields=flat",
+          "size": 10070
         },
         {
           "key": "in_ab",
@@ -639,7 +638,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-09-16)",
-          "size": 6059762
+          "size": 6063075
         }
       ],
       "said": "204 rows",
@@ -674,7 +673,7 @@
           "role": "required",
           "status": "OK",
           "reason": "live-book poller + today.json (2026-09-16)",
-          "size": 6059762
+          "size": 6063075
         },
         {
           "key": "paper",
@@ -832,19 +831,19 @@
       "direction": "up"
     },
     "sectors": {
-      "said": "0 up / 0 down / 0 flat",
+      "said": "2 up / 2 down / 7 flat",
       "bullets": [
-        "XLB missing",
-        "XLC missing",
-        "XLY missing",
-        "XLP missing",
-        "XLE missing",
-        "XLF missing",
-        "XLV missing",
-        "XLI missing",
-        "XLRE missing",
-        "XLK missing",
-        "XLU missing"
+        "XLB FLAT +9.7",
+        "XLC UP +9.2",
+        "XLY FLAT +2.7",
+        "XLP FLAT -0.4",
+        "XLE DOWN -2.9",
+        "XLF FLAT +3.0",
+        "XLV UP +3.0",
+        "XLI FLAT +7.3",
+        "XLRE FLAT +2.5",
+        "XLK FLAT +10.2",
+        "XLU DOWN -0.5"
       ]
     },
     "news": {
@@ -859,9 +858,8 @@
       ]
     },
     "weather": {
-      "said": "favorable 1 \u00b7 hostile 7 \u00b7 neutral 3",
+      "said": "favorable 4 \u00b7 neutral 7",
       "bullets": [
-        "hostile: Basic Materials, Consumer Cyclical, Consumer Defensive, Healthcare, Industrials, Real Estate, Utilities",
         "events bull 2 / bear 12"
       ]
     }
@@ -1846,6 +1844,31 @@
         }
       ],
       "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-09-16** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-09-16** ranker: **green pile** (100 liquid names). Paper buys the pile 15, not the old weighted 15.\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $9,620.38 | -3.80% | $2,482.20 | 6 | 262 | $573.99 | $-361.40 | $-18.21 | 34.4% | 0.0% |\n| 1d_size | $10,028 \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-16T08:52:54.041752-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-16_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10070,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 9.667, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': 9.244, 'dir': 'up', 'conf': 0.65, 'source': 'llm'}, Consumer Cyclical={'score': 2.692, 'dir': 'flat', 'conf': 0.508, 'source': 'llm'}, Consumer Defensive={'score': -0.417, 'dir': 'flat', 'conf': 0.417, 'source': 'llm'}, Energy={'score': -2.88, 'dir': 'down', 'conf': 0.615, 'source': 'llm'}, Financial={'score': 2.998, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Healthcare={'score': 2.995, 'dir': 'up', 'conf': 0.52, 'source': 'llm'}, Industrials={'score': 7.288, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-16_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5665,
+          "preview": "# Weather report \u2014 2026-09-16\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 9.667, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': 9.244, 'dir': 'up', 'conf': 0.65, 'source': 'llm'}, Consumer Cyclical={'score': 2.692, 'dir': 'flat', 'conf': 0.508, 'source': 'llm'}, Consumer Defensive={'score': -0.417, 'dir': 'flat', 'conf': 0.417, 'source': 'llm'}, Energy={'score': -2.88, 'dir': 'down', 'conf': 0.615, 'source': 'llm'}, Financial={'score': 2.998, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Healthcare={'score': 2.995, 'dir': 'up', 'conf': 0.52, 'source': 'llm'}, Industrials={'score': 7.288, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-16\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "href": {
