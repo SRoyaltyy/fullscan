@@ -1,0 +1,555 @@
+{
+  "job": "preopen",
+  "date": "2026-09-16",
+  "source_date": "2026-09-15",
+  "target_date": "2026-09-16",
+  "book_date": "2026-09-16",
+  "generated_at": "2026-09-16T08:47:15.711583-04:00",
+  "ok": false,
+  "n_fail": 17,
+  "n_warn": 7,
+  "round": 1,
+  "fix_actions": null,
+  "checks": [
+    {
+      "step": "runtime.home",
+      "name": "HOME is /home/gha on ECS",
+      "group": "runtime",
+      "status": "OK",
+      "required": false,
+      "detail": "HOME='/home/gha'",
+      "path": ""
+    },
+    {
+      "step": "runtime.token",
+      "name": "OpenClaw token (48 json vs 64 secret)",
+      "group": "runtime",
+      "status": "OK",
+      "required": true,
+      "detail": "live_len=48 tail=864c",
+      "path": ""
+    },
+    {
+      "step": "runtime.port",
+      "name": "OpenClaw port 18789 listening",
+      "group": "runtime",
+      "status": "OK",
+      "required": true,
+      "detail": "http://127.0.0.1:18789",
+      "path": ""
+    },
+    {
+      "step": "runtime.pong",
+      "name": "OpenClaw PONG",
+      "group": "runtime",
+      "status": "OK",
+      "required": true,
+      "detail": "model=openclaw/default",
+      "path": ""
+    },
+    {
+      "step": "runtime.model",
+      "name": "Classroom model is Grok not DeepSeek",
+      "group": "runtime",
+      "status": "OK",
+      "required": true,
+      "detail": "model=openclaw/default",
+      "path": ""
+    },
+    {
+      "step": "runtime.oauth",
+      "name": "xAI auth (OAuth or API key)",
+      "group": "runtime",
+      "status": "WARN",
+      "required": false,
+      "detail": "xAI token expiring but still usable | Config        : ~/.openclaw/openclaw.json Agent dir     : ~/.openclaw/agents/main/agent Default       : xai/grok-4.6 Fal",
+      "path": ""
+    },
+    {
+      "step": "runtime.api_key",
+      "name": "XAI_API_KEY on this box (permanent)",
+      "group": "runtime",
+      "status": "WARN",
+      "required": false,
+      "detail": "missing \u2014 OAuth dies ~6h. Put a console.x.ai key in ~/.openclaw/.env",
+      "path": ""
+    },
+    {
+      "step": "runtime.grok_only",
+      "name": "GROK_ONLY (this health process)",
+      "group": "runtime",
+      "status": "WARN",
+      "required": false,
+      "detail": "off here \u2014 heal exports GROK_ONLY=1",
+      "path": ""
+    },
+    {
+      "step": "clock.fullscan-preopen.timer",
+      "name": "systemd pre-open timer enabled",
+      "group": "clock",
+      "status": "OK",
+      "required": true,
+      "detail": "enabled",
+      "path": ""
+    },
+    {
+      "step": "clock.fullscan-preopen.service",
+      "name": "systemd pre-open service (now)",
+      "group": "clock",
+      "status": "WARN",
+      "required": false,
+      "detail": "failed",
+      "path": ""
+    },
+    {
+      "step": "clock.fullscan-map-postclose.timer",
+      "name": "systemd post-close timer enabled",
+      "group": "clock",
+      "status": "OK",
+      "required": false,
+      "detail": "enabled",
+      "path": ""
+    },
+    {
+      "step": "clock.fullscan-openclaw-gateway.service",
+      "name": "OpenClaw gateway unit",
+      "group": "clock",
+      "status": "OK",
+      "required": false,
+      "detail": "active",
+      "path": ""
+    },
+    {
+      "step": "clock.ecs_clock",
+      "name": "ECS clock file written",
+      "group": "clock",
+      "status": "OK",
+      "required": false,
+      "detail": "556 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/_ecs_clock.md"
+    },
+    {
+      "step": "clock.finviz_preopen_scrape.yml",
+      "name": "Finviz pre-open scrape (GH-hosted Elite) ran on 2026-09-16",
+      "group": "clock",
+      "status": "OK",
+      "required": false,
+      "detail": "n=1 latest=success event=workflow_dispatch",
+      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/35071527193"
+    },
+    {
+      "step": "clock.map_heat_postclose.yml",
+      "name": "Map heat captain research (post-close) ran on 2026-09-15",
+      "group": "clock",
+      "status": "WARN",
+      "required": false,
+      "detail": "n=10 latest=cancelled event=workflow_dispatch",
+      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/35000147305"
+    },
+    {
+      "step": "clock.preopen_all.yml",
+      "name": "Pre-Open ALL ran on 2026-09-16",
+      "group": "clock",
+      "status": "OK",
+      "required": false,
+      "detail": "n=1 latest=success event=workflow_dispatch",
+      "path": "https://github.com/SRoyaltyy/fullscan/actions/runs/35071543058"
+    },
+    {
+      "step": "scrape.digest_json",
+      "name": "Quote-page digest JSON (*_finviz_digest)",
+      "group": "scrape",
+      "status": "OK",
+      "required": true,
+      "detail": "86348 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/news/2026-09-16_finviz_digest.json"
+    },
+    {
+      "step": "scrape.digest_md",
+      "name": "Quote-page digest MD (*_finviz_digest)",
+      "group": "scrape",
+      "status": "OK",
+      "required": false,
+      "detail": "11281 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/news/2026-09-16_finviz_digest.md"
+    },
+    {
+      "step": "scrape.market_digest_json",
+      "name": "Homepage warm-up JSON (*_finviz_market_digest)",
+      "group": "scrape",
+      "status": "OK",
+      "required": false,
+      "detail": "10165 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/news/2026-09-16_finviz_market_digest.json"
+    },
+    {
+      "step": "scrape.market_digest_md",
+      "name": "Homepage warm-up MD (*_finviz_market_digest)",
+      "group": "scrape",
+      "status": "OK",
+      "required": false,
+      "detail": "4142 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/news/2026-09-16_finviz_market_digest.md"
+    },
+    {
+      "step": "scrape.market_digest_close_json",
+      "name": "Close answer-key JSON (*_finviz_market_digest_close)",
+      "group": "scrape",
+      "status": "WARN",
+      "required": false,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/news/2026-09-16_finviz_market_digest_close.json"
+    },
+    {
+      "step": "scrape.market_digest_close_md",
+      "name": "Close answer-key MD (*_finviz_market_digest_close)",
+      "group": "scrape",
+      "status": "WARN",
+      "required": false,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/news/2026-09-16_finviz_market_digest_close.md"
+    },
+    {
+      "step": "scrape.map_heat",
+      "name": "Map heat JSON (groups + morning overlay)",
+      "group": "scrape",
+      "status": "OK",
+      "required": true,
+      "detail": "phase=morning_overlay 272533 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-09-16_map_heat.json"
+    },
+    {
+      "step": "scrape.tape",
+      "name": "Futures tape + overlay_at today",
+      "group": "scrape",
+      "status": "OK",
+      "required": true,
+      "detail": "overlay_at=2026-09-16T04:04:49.319252-04:00 tape_n=59",
+      "path": ""
+    },
+    {
+      "step": "postclose.map_heat_json",
+      "name": "2026-09-16_map_heat.json (industry groups + captains)",
+      "group": "postclose",
+      "status": "OK",
+      "required": true,
+      "detail": "phase=morning_overlay 272533 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-09-16_map_heat.json"
+    },
+    {
+      "step": "postclose.map_heat_md",
+      "name": "2026-09-16_map_heat.md",
+      "group": "postclose",
+      "status": "OK",
+      "required": false,
+      "detail": "17369 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-09-16_map_heat.md"
+    },
+    {
+      "step": "postclose.baseline_json",
+      "name": "2026-09-16_research_baseline.json (captain cards)",
+      "group": "postclose",
+      "status": "FAIL",
+      "required": true,
+      "detail": "PASS-OVER from source_heat_date=2026-09-15 (want 2026-09-16)",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-09-16_research_baseline.json"
+    },
+    {
+      "step": "postclose.baseline_md",
+      "name": "2026-09-16_research_baseline.md",
+      "group": "postclose",
+      "status": "OK",
+      "required": true,
+      "detail": "37373 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-09-16_research_baseline.md"
+    },
+    {
+      "step": "postclose.coverage",
+      "name": "Captain coverage \u2265 90%",
+      "group": "postclose",
+      "status": "OK",
+      "required": true,
+      "detail": "cards=142 coverage=1.0",
+      "path": ""
+    },
+    {
+      "step": "postclose.transcripts",
+      "name": "Post-close LLM transcripts",
+      "group": "postclose",
+      "status": "OK",
+      "required": false,
+      "detail": "n=34",
+      "path": ""
+    },
+    {
+      "step": "preopen.in_digest",
+      "name": "INPUT: Quote-page digest (*_finviz_digest)",
+      "group": "preopen",
+      "status": "OK",
+      "required": true,
+      "detail": "86348 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/news/2026-09-16_finviz_digest.json"
+    },
+    {
+      "step": "preopen.in_market_digest",
+      "name": "INPUT: Homepage warm-up (*_finviz_market_digest)",
+      "group": "preopen",
+      "status": "OK",
+      "required": false,
+      "detail": "10165 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/news/2026-09-16_finviz_market_digest.json"
+    },
+    {
+      "step": "preopen.in_baseline",
+      "name": "INPUT: last-night captain baseline",
+      "group": "preopen",
+      "status": "FAIL",
+      "required": true,
+      "detail": "PASS-OVER from source_heat_date=2026-09-15 (want 2026-09-16)",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-09-16_research_baseline.json"
+    },
+    {
+      "step": "preopen.news_parse_json",
+      "name": "News parse JSON",
+      "group": "preopen",
+      "status": "OK",
+      "required": true,
+      "detail": "61986 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/news/2026-09-16_parsed.json"
+    },
+    {
+      "step": "preopen.events",
+      "name": "Event scanner (primary, NOT carry)",
+      "group": "preopen",
+      "status": "OK",
+      "required": true,
+      "detail": "36019 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/events/2026-09-16_events.json"
+    },
+    {
+      "step": "preopen.catcher",
+      "name": "Event catcher second pass ran",
+      "group": "preopen",
+      "status": "FAIL",
+      "required": true,
+      "detail": "catcher key missing \u2014 second pass DID NOT RUN",
+      "path": ""
+    },
+    {
+      "step": "preopen.judge_md",
+      "name": "News judge MD",
+      "group": "preopen",
+      "status": "OK",
+      "required": true,
+      "detail": "9689 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/news/2026-09-16_judge.md"
+    },
+    {
+      "step": "preopen.research_json",
+      "name": "Map-heat morning refresh JSON",
+      "group": "preopen",
+      "status": "OK",
+      "required": true,
+      "detail": "phase=morning_refresh 393212 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-09-16_research.json"
+    },
+    {
+      "step": "preopen.research_md",
+      "name": "Map-heat morning refresh MD",
+      "group": "preopen",
+      "status": "OK",
+      "required": true,
+      "detail": "37575 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/map_heat/2026-09-16_research.md"
+    },
+    {
+      "step": "preopen.actions",
+      "name": "News actions JSON",
+      "group": "preopen",
+      "status": "OK",
+      "required": false,
+      "detail": "32072 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/news/2026-09-16_actions.json"
+    },
+    {
+      "step": "preopen.catalyst_json",
+      "name": "Catalyst dossiers JSON",
+      "group": "preopen",
+      "status": "OK",
+      "required": false,
+      "detail": "2887 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/catalyst/2026-09-16_dossiers.json"
+    },
+    {
+      "step": "preopen.general",
+      "name": "General market predict",
+      "group": "preopen",
+      "status": "OK",
+      "required": true,
+      "detail": "15755 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/general/2026-09-16_predict.md"
+    },
+    {
+      "step": "preopen.sector.basic_materials",
+      "name": "Sector predict \u2014 Basic Materials",
+      "group": "preopen",
+      "status": "FAIL",
+      "required": true,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/sectors/2026-09-16/basic_materials_predict.md"
+    },
+    {
+      "step": "preopen.sector.communication_services",
+      "name": "Sector predict \u2014 Communication Services",
+      "group": "preopen",
+      "status": "FAIL",
+      "required": true,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/sectors/2026-09-16/communication_services_predict.md"
+    },
+    {
+      "step": "preopen.sector.consumer_cyclical",
+      "name": "Sector predict \u2014 Consumer Cyclical",
+      "group": "preopen",
+      "status": "FAIL",
+      "required": true,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/sectors/2026-09-16/consumer_cyclical_predict.md"
+    },
+    {
+      "step": "preopen.sector.consumer_defensive",
+      "name": "Sector predict \u2014 Consumer Defensive",
+      "group": "preopen",
+      "status": "FAIL",
+      "required": true,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/sectors/2026-09-16/consumer_defensive_predict.md"
+    },
+    {
+      "step": "preopen.sector.energy",
+      "name": "Sector predict \u2014 Energy",
+      "group": "preopen",
+      "status": "FAIL",
+      "required": true,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/sectors/2026-09-16/energy_predict.md"
+    },
+    {
+      "step": "preopen.sector.financial",
+      "name": "Sector predict \u2014 Financial",
+      "group": "preopen",
+      "status": "FAIL",
+      "required": true,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/sectors/2026-09-16/financial_predict.md"
+    },
+    {
+      "step": "preopen.sector.healthcare",
+      "name": "Sector predict \u2014 Healthcare",
+      "group": "preopen",
+      "status": "FAIL",
+      "required": true,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/sectors/2026-09-16/healthcare_predict.md"
+    },
+    {
+      "step": "preopen.sector.industrials",
+      "name": "Sector predict \u2014 Industrials",
+      "group": "preopen",
+      "status": "FAIL",
+      "required": true,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/sectors/2026-09-16/industrials_predict.md"
+    },
+    {
+      "step": "preopen.sector.real_estate",
+      "name": "Sector predict \u2014 Real Estate",
+      "group": "preopen",
+      "status": "FAIL",
+      "required": true,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/sectors/2026-09-16/real_estate_predict.md"
+    },
+    {
+      "step": "preopen.sector.technology",
+      "name": "Sector predict \u2014 Technology",
+      "group": "preopen",
+      "status": "FAIL",
+      "required": true,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/sectors/2026-09-16/technology_predict.md"
+    },
+    {
+      "step": "preopen.sector.utilities",
+      "name": "Sector predict \u2014 Utilities",
+      "group": "preopen",
+      "status": "FAIL",
+      "required": true,
+      "detail": "DID NOT RUN \u2014 file missing",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/sectors/2026-09-16/utilities_predict.md"
+    },
+    {
+      "step": "preopen.sector_count",
+      "name": "\u22658/11 quality sector predicts",
+      "group": "preopen",
+      "status": "FAIL",
+      "required": true,
+      "detail": "0/11",
+      "path": ""
+    },
+    {
+      "step": "preopen.board",
+      "name": "Sector board JSON",
+      "group": "preopen",
+      "status": "OK",
+      "required": false,
+      "detail": "5243 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/sectors/2026-09-16/_board.json"
+    },
+    {
+      "step": "preopen.qc",
+      "name": "Pre-open QC JSON",
+      "group": "preopen",
+      "status": "OK",
+      "required": true,
+      "detail": "7264 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/2026-09-16_preopen_qc.json"
+    },
+    {
+      "step": "preopen.status_json",
+      "name": "Pre-open status JSON",
+      "group": "preopen",
+      "status": "OK",
+      "required": true,
+      "detail": "8349 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/2026-09-16_preopen_status.json"
+    },
+    {
+      "step": "preopen.status_all_ok",
+      "name": "preopen_status.all_ok true",
+      "group": "preopen",
+      "status": "FAIL",
+      "required": true,
+      "detail": "all_ok=False grok_ok=False",
+      "path": ""
+    },
+    {
+      "step": "preopen.grok_review_json",
+      "name": "Grok text review JSON",
+      "group": "preopen",
+      "status": "OK",
+      "required": true,
+      "detail": "2033 bytes",
+      "path": "/home/gha/actions-runner/_work/fullscan/fullscan/01_daily/2026-09-16_grok_review.json"
+    },
+    {
+      "step": "preopen.grok_review_ok",
+      "name": "Grok text review ok=true",
+      "group": "preopen",
+      "status": "FAIL",
+      "required": true,
+      "detail": "Core same-day files otherwise look real (general UP/mild with MEMORY_CONFIRM/SCORES, events scan_date 2026-09-16 as a live scan not a whole-file carry, news jud",
+      "path": ""
+    }
+  ]
+}
