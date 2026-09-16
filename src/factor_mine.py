@@ -1804,8 +1804,15 @@ def last_closed_session(from_date: str, to_date: str | None = None,
 
 
 def live_panel_end(from_date: str, to_date: str | None = None) -> str | None:
-    """Last NYSE session we can mark — not a pre-open stub for tomorrow."""
-    if to_date and session_has_closed(to_date):
+    """Last session in the requested window.
+
+    An explicit ``to_date`` is honored even if that session is still
+    open (land-closed --to-date). Cash books still clip to
+    ``last_closed_session``; the extra day is a pending start so the
+    pack is not stuck on yesterday. Empty ``to_date`` stays last closed
+    so a morning trigger does not ingest today's pre-open stub.
+    """
+    if to_date:
         return to_date
     return last_closed_session(from_date, to_date)
 
@@ -2898,16 +2905,130 @@ def payload_covers_session(payload: dict | None, date: str) -> bool:
     return True
 
 
+def pending_start_row(date: str, last_closed: str | None) -> dict:
+    """Cash-start chip for a session the books have not marked yet."""
+    return {
+        "start": date,
+        "return_pct": None,
+        "made_money": False,
+        "prelim": False,
+        "pending": True,
+        "last_closed": last_closed,
+        "n_sessions": 0,
+        "final_equity": None,
+        "s": None,
+        "hard_red": False,
+        "open_cash": None,
+        "cash": None,
+        "bought": [],
+        "buys": [],
+        "skips": [],
+        "n_up_days": 0,
+        "equity": [],
+        "days": [],
+    }
+
+
+def extend_pack_through(date: str, *, write: bool = False) -> dict:
+    """Add an open session to the published pack without remine.
+
+    Books stay clipped at last_closed (no mid-day close). dates[] /
+    starts get ``date`` as pending so Pages is not yesterday's pack.
+    """
+    closed = last_closed_session(START)
+    extra = build_panel(date, date)
+    raw: dict = {}
+    if PANEL_PATH.is_file():
+        try:
+            raw = json.loads(PANEL_PATH.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            raw = {}
+    cal: list[str] = []
+    seen: set[str] = set()
+    for d in list(raw.get("session_dates") or []) + list(
+            extra.get("session_dates") or [date]):
+        if d and d not in seen:
+            seen.add(d)
+            cal.append(d)
+    cal.sort()
+    rows = [r for r in (raw.get("rows") or []) if r.get("date") != date]
+    rows.extend(extra.get("rows") or [])
+    by_date = dict(raw.get("by_date") or {})
+    by_date.update(extra.get("by_date") or {})
+    panel = dict(raw)
+    panel.update({
+        "from_date": raw.get("from_date") or extra.get("from_date") or START,
+        "to_date": cal[-1] if cal else date,
+        "session_dates": cal,
+        "n_sessions": len(cal),
+        "n_rows": len(rows),
+        "rows": rows,
+        "by_date": by_date,
+    })
+    payload: dict = {}
+    if OUT_JSON.is_file():
+        try:
+            payload = json.loads(OUT_JSON.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            payload = {}
+    if not payload:
+        try:
+            payload = load_dash_payload()
+        except FileNotFoundError:
+            payload = {}
+    payload["dates"] = cal
+    payload["to_date"] = panel["to_date"]
+    payload["n_sessions"] = len(cal)
+    payload["n_rows"] = panel["n_rows"]
+    payload["generated_at"] = datetime.now(tl.ET).isoformat()
+    starts = dict(payload.get("starts") or {})
+    for name, paths in list(starts.items()):
+        paths = list(paths or [])
+        if not any(p.get("start") == date for p in paths):
+            paths.append(pending_start_row(date, closed))
+        starts[name] = paths
+    payload["starts"] = starts
+    series = dict(payload.get("series") or {})
+    for name, eq in list(series.items()):
+        if isinstance(eq, list) and eq and len(eq) < len(cal):
+            series[name] = list(eq) + [eq[-1]] * (len(cal) - len(eq))
+    payload["series"] = series
+    from . import factor_mine_probe as fmp
+    try:
+        payload["mornings"] = fmp.build_mornings()
+        payload.update(fmp.probe_meta())
+    except Exception as e:  # noqa: BLE001
+        print(f"[factor-mine] mornings extend skipped: {e}", flush=True)
+    print(
+        f"[factor-mine] extend-pack → {date} dates={len(cal)} "
+        f"to={payload.get('to_date')} pending starts "
+        f"(books stay {closed or 'last closed'})",
+        flush=True,
+    )
+    if write:
+        PANEL_PATH.parent.mkdir(parents=True, exist_ok=True)
+        slim = {k: v for k, v in panel.items() if k != "by_date"}
+        slim["by_date"] = None
+        PANEL_PATH.write_text(json.dumps(slim, indent=2), encoding="utf-8")
+        write_outputs(payload, stats=payload.get("stats") or [], books=None)
+    return payload
+
+
 def land_closed(from_date: str = START, write: bool = False,
-                rebuild_panel: bool = False) -> dict:
+                rebuild_panel: bool = False,
+                to_date: str | None = None) -> dict:
     """Roll the existing recipe set through the last closed session.
 
     Does not rediscover the cartesian grid. Morning Pre-Open / Stock Book
     triggers become a no-op once yesterday is already on the board;
     post-close / 16:25 ET schedule lands today.
+
+    An explicit ``to_date`` past last_closed extends the pack with a
+    pending start (no mid-day close mark) so Pages shows today's session.
     """
     closed = last_closed_session(from_date)
-    if not closed:
+    target = to_date or closed
+    if not target:
         print("[factor-mine] land-closed: no closed session yet", flush=True)
         return {}
     payload = {}
@@ -2916,18 +3037,25 @@ def land_closed(from_date: str = START, write: bool = False,
             payload = json.loads(OUT_JSON.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError):
             payload = {}
-    if not rebuild_panel and payload_covers_session(payload, closed):
-        print(f"[factor-mine] land-closed: {closed} already on the board — skip",
+    if not rebuild_panel and payload_covers_session(payload, target):
+        print(f"[factor-mine] land-closed: {target} already on the board — skip",
               flush=True)
         return payload
     recs = existing_single_recipes(payload)
     if not recs:
         from . import factor_mine_book as fmb
         recs = fmb.recipes_from_action(auto_tweak=False)
-    print(f"[factor-mine] land-closed → {closed} recipes={len(recs)}",
+    if closed and target > closed:
+        print(
+            f"[factor-mine] land-closed: {target} still open — "
+            f"extend pack (books stay {closed})",
+            flush=True,
+        )
+        return extend_pack_through(target, write=write)
+    print(f"[factor-mine] land-closed → {target} recipes={len(recs)}",
           flush=True)
     return run(
-        from_date, closed, write=write, recipes=recs,
+        from_date, target, write=write, recipes=recs,
         rebuild_panel=rebuild_panel, persist_panel=write,
         book=True, combos=True,
     )
@@ -3138,6 +3266,7 @@ def main(argv=None) -> int:
         payload = land_closed(
             args.from_date, write=args.write,
             rebuild_panel=args.rebuild_panel,
+            to_date=args.to_date or None,
         )
     else:
         recipes = fmb.recipes_from_action(

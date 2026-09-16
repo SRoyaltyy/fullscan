@@ -161,6 +161,7 @@ jobs:
              || [ "${GITHUB_EVENT_NAME}" = "workflow_run" ] \
              || [ "${LAND_CLOSED:-false}" = "true" ]; then
             ARGS=(--from-date "${FROM_DATE:-2026-08-13}" --write --land-closed)
+            [ -n "${TO_DATE:-}" ] && ARGS+=(--to-date "$TO_DATE")
             [ "${REBUILD:-false}" = "true" ] && ARGS+=(--rebuild-panel)
             python -m src.factor_mine "${ARGS[@]}"
           else
