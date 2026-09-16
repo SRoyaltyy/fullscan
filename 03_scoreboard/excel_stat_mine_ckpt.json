@@ -1852,13 +1852,38 @@
   "PUBM",
   "PUSA",
   "PVH",
-  "PWR"
+  "PWR",
+  "PXED",
+  "PZG",
+  "PZZA",
+  "QBTS",
+  "QCOM",
+  "QCRH",
+  "QDEL",
+  "QLYS",
+  "QMCO",
+  "QNST",
+  "QQQX",
+  "QS",
+  "QSI",
+  "QSR",
+  "QTEX",
+  "QTRX",
+  "QTTB",
+  "QUAD",
+  "QUBT",
+  "QUIK",
+  "QURE",
+  "QXO",
+  "RA",
+  "RACE",
+  "RAIL"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 96025,
- "hold_lab_n": 45223,
- "hold_base": 0.47095027336631085,
+ "n_hold": 97325,
+ "hold_lab_n": 45808,
+ "hold_base": 0.47067043411250964,
  "counts": {
   "A@L0_g": [
    60160,
@@ -109730,8 +109755,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 96025,
- "pair_hold_lab_n": 45223,
+ "pair_hold_n": 97325,
+ "pair_hold_lab_n": 45808,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -109840,5 +109865,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789567449
+ "flushed_unix": 1789567638
 }
