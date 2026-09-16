@@ -1302,13 +1302,38 @@
   "LAZ",
   "LBRDA",
   "LBRT",
-  "LBRX"
+  "LBRX",
+  "LBTYA",
+  "LBTYK",
+  "LCID",
+  "LCII",
+  "LCTX",
+  "LDI",
+  "LDOS",
+  "LEA",
+  "LECO",
+  "LEG",
+  "LEN",
+  "LEO",
+  "LEVI",
+  "LFCR",
+  "LFMD",
+  "LFST",
+  "LFT",
+  "LFUS",
+  "LFVN",
+  "LGIH",
+  "LGN",
+  "LGND",
+  "LGO",
+  "LH",
+  "LHX"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 67475,
- "hold_lab_n": 31824,
- "hold_base": 0.4716413486476473,
+ "n_hold": 68756,
+ "hold_lab_n": 32389,
+ "hold_base": 0.4710716155680959,
  "counts": {
   "A@L0_g": [
    60160,
@@ -109180,8 +109205,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 67475,
- "pair_hold_lab_n": 31824,
+ "pair_hold_n": 68756,
+ "pair_hold_lab_n": 32389,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -109290,5 +109315,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789563273
+ "flushed_unix": 1789563458
 }
