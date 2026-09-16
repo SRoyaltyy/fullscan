@@ -1,6 +1,6 @@
 {
   "date": "2026-09-16",
-  "generated_at": "2026-09-16T04:03:28.657982-04:00",
+  "generated_at": "2026-09-16T04:03:36.388347-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -87,7 +87,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 86631
+          "size": 86601
         },
         {
           "key": "digest_md",
@@ -96,7 +96,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11483
+          "size": 11455
         },
         {
           "key": "market_digest_json",
@@ -156,7 +156,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 86631
+          "size": 86601
         },
         {
           "key": "in_market_digest",
@@ -405,7 +405,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 86631
+          "size": 86601
         },
         {
           "key": "weather",
@@ -480,7 +480,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 86631
+          "size": 86601
         },
         {
           "key": "dossiers",
@@ -540,7 +540,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 86631
+          "size": 86601
         },
         {
           "key": "in_judge",
@@ -800,7 +800,7 @@
       "date": "2026-09-16",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-16T04:03:28.524816-04:00",
+      "at": "2026-09-16T04:03:36.251339-04:00",
       "files": [
         {
           "path": "01_daily/news/2026-09-16_finviz_market_digest.json",
@@ -814,10 +814,10 @@
           "ok": true,
           "reason": "",
           "size": 4142,
-          "preview": "# Finviz homepage market digest \u2014 2026-09-16\n**Generated:** 2026-09-16T04:03:28.506341-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed lower as 10-year yield touched 5% and oil jumped on Saudi pipeline closure ahead of Fed decision\n**Prior close:** SPX -0.45%  Nasdaq -0.78%  Dow -0.63%\n**SPX:** -0.45%  **Nasdaq:** -0.78%  **Dow:** -0.63%\n**Oil:** Brent crude $108.0 up (rose)\n**CPI/Fed:** \u2014\n**Leaders:** APA, VLO, MPC, DVN, PSX, GS, QCOM, AMD, NVDA, INTC, MU, ENVA, COIN, FPS, VRA, TCOM\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-16\n**Clock use:** `same_morning`"
+          "preview": "# Finviz homepage market digest \u2014 2026-09-16\n**Generated:** 2026-09-16T04:03:36.232554-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed lower as 10-year yield touched 5% and oil jumped on Saudi pipeline closure ahead of Fed decision\n**Prior close:** SPX -0.45%  Nasdaq -0.78%  Dow -0.63%\n**SPX:** -0.45%  **Nasdaq:** -0.78%  **Dow:** -0.63%\n**Oil:** Brent crude $108.0 up (rose)\n**CPI/Fed:** \u2014\n**Leaders:** APA, VLO, MPC, DVN, PSX, GS, QCOM, AMD, NVDA, INTC, MU, ENVA, COIN, FPS, VRA, TCOM\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-16\n**Clock use:** `same_morning`"
         }
       ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-16\n**Generated:** 2026-09-16T04:03:28.506341-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed lower as 10-year yield touched 5% and oil jumped on Saudi pipeline closure ahead of Fed decision\n**Prior close:** SPX -0.45%  Nasdaq -0.78%  Dow -0.63%\n**SPX:** -0.45%  **Nasdaq:** -0.78%  **Dow:** -0.63%\n**Oil:** Brent crude $108.0 up (rose)\n**CPI/Fed:** \u2014\n**Leaders:** APA, VLO, MPC, DVN, PSX, GS, QCOM, AMD, NVDA, INTC, MU, ENVA, COIN, FPS, VRA, TCOM\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-16\n**Clock use:** `same_morning`"
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-16\n**Generated:** 2026-09-16T04:03:36.232554-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed lower as 10-year yield touched 5% and oil jumped on Saudi pipeline closure ahead of Fed decision\n**Prior close:** SPX -0.45%  Nasdaq -0.78%  Dow -0.63%\n**SPX:** -0.45%  **Nasdaq:** -0.78%  **Dow:** -0.63%\n**Oil:** Brent crude $108.0 up (rose)\n**CPI/Fed:** \u2014\n**Leaders:** APA, VLO, MPC, DVN, PSX, GS, QCOM, AMD, NVDA, INTC, MU, ENVA, COIN, FPS, VRA, TCOM\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-16\n**Clock use:** `same_morning`"
     }
   ],
   "href": {
