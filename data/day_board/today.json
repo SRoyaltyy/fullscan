@@ -1,6 +1,6 @@
 {
   "date": "2026-09-16",
-  "generated_at": "2026-09-16T04:12:33.831291-04:00",
+  "generated_at": "2026-09-16T04:12:52.796291-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,24 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-09-16",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-16T04:06:43.970106-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-09-16_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1118794,
-          "preview": "5899 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5899 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -186,6 +168,31 @@
         }
       ],
       "preview": "11634 rows \u00b7 Ticker,score,score_source,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month, \u00b7 A, CON, NUTX, DVN, RSVR"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-09-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-16T04:12:52.168856-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-16_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 61986,
+          "preview": "raw=120 usable=6 single=17 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | S&P 500, Nasdaq, Dow End Lower As Investors Price In Rate Hike Ahead Of Fed Meet | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u2019s Jackson Hole commen | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB"
+        },
+        {
+          "path": "01_daily/news/2026-09-16_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 3760,
+          "preview": "# News Parse v2 \u2014 2026-09-16T04:12:52.091774-04:00\nWindow\u224848h | raw=120 | usable=6 | single_name=17 | noise_dropped=97\nusable polarity={'+': 1, '-': 4, 'mixed': 0, 'neutral': 1}"
+        }
+      ],
+      "preview": "raw=120 usable=6 single=17 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | S&P 500, Nasdaq, Dow End Lower As Investors Price In Rate Hike Ahead Of Fed Meet | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u2019s Jackson Hole commen | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB \u00b7 # News Parse v2 \u2014 2026-09-16T04:12:52.091774-04:00\nWindow\u224848h | raw=120 | usable=6 | single_name=17 | noise_dropped=97\nusable polarity={'+': 1, '-': 4, 'mixed': 0, 'neutral': 1}"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
