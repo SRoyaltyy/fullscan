@@ -157,6 +157,34 @@ def test_research_uses_scoreboard_open_when_parquet_missing() -> None:
     assert indp["scoops"]["3.0"]["kind"] == "no_dip"
 
 
+def test_stamp_held_lots_marks_vs_open_and_entry() -> None:
+    book = {
+        "prices": {"INDP": 3.18},
+        "src": "elite_live",
+        "at": "2026-09-16T12:22:00-04:00",
+    }
+    rows = elp.stamp_held_lots(
+        [{"ticker": "INDP", "side": "long", "shares": 10, "entry": 2.80}],
+        book, opens={"INDP": 3.00},
+    )
+    assert rows[0]["px"] == 3.18
+    assert rows[0]["open_px"] == 3.00
+    assert rows[0]["vs_open"] == 0.18
+    assert rows[0]["vs_entry"] == 0.38
+    assert rows[0]["pnl"] == 3.80
+    assert "Elite Overview as of 12:22 ET" == elp.banner_text(book)
+    assert elp.is_live_src("elite_live") is True
+    assert elp.is_live_src("preopen_export") is False
+    assert elp.is_live_src("theme radar") is False
+
+
+def test_banner_never_says_live_on_preopen() -> None:
+    text = elp.banner_text({"src": "preopen_export", "at": "2026-09-16T09:10:00-04:00"})
+    assert "preopen" in text
+    assert "(now)" not in text
+    assert "tick" not in text.lower()
+
+
 def test_research_scoop_ignores_close_and_stale_last() -> None:
     payload = {
         "quote": {"src": "session_export"},
@@ -194,6 +222,8 @@ def main() -> None:
     test_hard_red_research_is_tagged_not_a_wire()
     test_research_uses_scoreboard_open_when_parquet_missing()
     test_research_scoop_ignores_close_and_stale_last()
+    test_stamp_held_lots_marks_vs_open_and_entry()
+    test_banner_never_says_live_on_preopen()
     print("ok")
 
 

@@ -435,15 +435,36 @@ function closedTable(rows){
   }).join('')+'</table>';
 }
 
+function eliteMark(ticker){
+  const h=window.__HELD_LIVE||{};
+  const pxmap=h.prices||{};
+  const opmap=h.opens||{};
+  const t=String(ticker||'').toUpperCase();
+  let hit=null;
+  const sleeves=h.sleeves||{};
+  Object.keys(sleeves).forEach(n=>{
+    (sleeves[n]||[]).forEach(r=>{ if(r&&String(r.ticker||'').toUpperCase()===t) hit=r; });
+  });
+  const last=hit&&hit.px!=null?hit.px:pxmap[t];
+  const open=hit&&hit.open_px!=null?hit.open_px:opmap[t];
+  return {last, open, src:h.src, at:h.at, banner:h.banner};
+}
 function openTable(rows){
   const list=rows.filter(r=>r.status==='open')
     .sort((a,b)=>(b.buy_date||'').localeCompare(a.buy_date||'') || a.ticker.localeCompare(b.ticker));
-  const head='<tr><th>Ticker</th><th class="sector">Sector</th><th>AB</th><th class="ctx">Context</th><th>Shares</th><th>Bought</th><th>Last</th><th>Unrealized P/L</th><th>Status</th></tr>';
+  const head='<tr><th>Ticker</th><th class="sector">Sector</th><th>AB</th><th class="ctx">Context</th><th>Shares</th><th>Bought</th><th>Elite last</th><th>vs 09:30 open</th><th>vs entry</th><th>$ P/L</th><th>as-of</th><th>Status</th></tr>';
   if(!list.length){
     return '<p class="mut" style="margin:4px 0 10px">No open lots in this view.</p>';
   }
-  return '<table>'+head+list.map(r=>{
-    const pnl=r.unrealized_pnl;
+  const banner=(window.__HELD_LIVE&&window.__HELD_LIVE.banner)||'Elite Overview as of — ET';
+  return '<p class="mut" style="margin:4px 0 6px">'+esc(banner)+' — OPEN lots only (not the looker list, not closed lots).</p><table>'+head+list.map(r=>{
+    const mk=eliteMark(r.ticker);
+    const last=mk.last!=null?mk.last:r.last;
+    const entry=r.buy_px;
+    const vsOpen=(last!=null&&mk.open!=null)?(last-mk.open):null;
+    const vsEntry=(last!=null&&entry!=null)?(last-entry):null;
+    const pnl=(last!=null&&entry!=null&&r.shares!=null)?(r.shares*(last-entry)):r.unrealized_pnl;
+    const asof=mk.at?String(mk.at).slice(11,16)+' ET':'—';
     return `<tr>
       <td class="tick"><b>${esc(r.ticker)}</b></td>
       <td class="sector">${esc(r.sector||'—')}</td>
@@ -451,8 +472,11 @@ function openTable(rows){
       <td class="ctx">${esc(r.ab_context||'—')}</td>
       <td>${r.shares}</td>
       <td class="left">${r.buy_date} @ ${px(r.buy_px)}</td>
-      <td>${px(r.last)}</td>
+      <td>${last==null?'—':px(last)}</td>
+      <td class="${vsOpen==null?'mut':(vsOpen>=0?'pos':'neg')}">${vsOpen==null?'—':((vsOpen>=0?'+':'')+Number(vsOpen).toFixed(2))}</td>
+      <td class="${vsEntry==null?'mut':(vsEntry>=0?'pos':'neg')}">${vsEntry==null?'—':((vsEntry>=0?'+':'')+Number(vsEntry).toFixed(2))}</td>
       <td class="${pnl>=0?'pos':'neg'}">${money(pnl)}</td>
+      <td class="mut">${esc(asof)}</td>
       <td class="mut">${heldSess(r)!=null?sessLabel(heldSess(r))+' held':'still holding'}</td>
     </tr>`;
   }).join('')+'</table>';
@@ -925,6 +949,7 @@ document.getElementById('fees').textContent=
   var TODAY = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today.json";
   var STRAT = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today_strategies.json";
   var SUG = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/stock_book/latest_suggestions.json";
+  var HELD = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/factor_mine/held_live.json";
   function quoteLabel(q){
     if(!q) return "";
     var src = q.src || "";
@@ -1027,6 +1052,34 @@ document.getElementById('fees').textContent=
       '<div class="live-book-row"><b>BUY 1d</b> ' + (buys.join(" · ") || "—") + '</div>' +
       '<div class="live-book-row sell"><b>SELL 1d</b> ' + (sells.join(" · ") || "—") + '</div>' + extra;
   }
+  function paintHolds(h){
+    if(!h) return;
+    window.__HELD_LIVE = h;
+    var el = document.getElementById("liveBook");
+    if(!el) return;
+    var sleeves = h.sleeves || {};
+    var keys = Object.keys(sleeves);
+    if(!keys.length && !(h.prices)) return;
+    var box = document.getElementById("heldLiveStrip");
+    if(!box){
+      box = document.createElement("div");
+      box.id = "heldLiveStrip";
+      box.className = "live-book-date";
+      el.appendChild(box);
+    }
+    var bits = [];
+    keys.forEach(function(name){
+      (sleeves[name] || []).forEach(function(r){
+        if(!r || !r.ticker) return;
+        var bit = r.ticker + " " + (r.side || "long") + " ×" + (r.shares || "?");
+        if(r.px != null) bit += " @" + r.px;
+        if(r.pnl != null) bit += " P/L $" + r.pnl;
+        bits.push(bit);
+      });
+    });
+    box.textContent = (h.banner || "Elite Overview") +
+      (bits.length ? (" — open lots now: " + bits.join(" · ")) : " — no open lots now");
+  }
   function load(){
     var rels = [
       "today_strategies.json",
@@ -1038,10 +1091,11 @@ document.getElementById('fees').textContent=
     Promise.all([
       fetch(TODAY + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; }),
       fetch(STRAT + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; }),
-      fetch(SUG + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; })
+      fetch(SUG + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; }),
+      fetch(HELD + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : null; }).catch(function(){ return null; })
     ].concat(rels)).then(function(arr){
-      var today = arr[0] || {}, strat = arr[1] || {}, sug = arr[2] || {};
-      var local = arr.slice(3).filter(function(x){ return x && x.strategies && Object.keys(x.strategies).length; })[0];
+      var today = arr[0] || {}, strat = arr[1] || {}, sug = arr[2] || {}, held = arr[3];
+      var local = arr.slice(4).filter(function(x){ return x && x.strategies && Object.keys(x.strategies).length; })[0];
       if(local && local.strategies) strat = local;
       var d = Object.assign({}, sug, today);
       if(strat && strat.strategies) d.strategies = strat.strategies;
@@ -1052,6 +1106,7 @@ document.getElementById('fees').textContent=
       if(!d.buy_1d && sug.buy_1d) d.buy_1d = sug.buy_1d;
       if(!d.sell_1d && sug.sell_1d) d.sell_1d = sug.sell_1d;
       paint(d);
+      paintHolds(held);
     });
   }
   load();

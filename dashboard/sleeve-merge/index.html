@@ -137,6 +137,7 @@ across 24 starts.
   var TODAY = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today.json";
   var STRAT = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today_strategies.json";
   var SUG = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/stock_book/latest_suggestions.json";
+  var HELD = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/factor_mine/held_live.json";
   function quoteLabel(q){
     if(!q) return "";
     var src = q.src || "";
@@ -239,6 +240,34 @@ across 24 starts.
       '<div class="live-book-row"><b>BUY 1d</b> ' + (buys.join(" · ") || "—") + '</div>' +
       '<div class="live-book-row sell"><b>SELL 1d</b> ' + (sells.join(" · ") || "—") + '</div>' + extra;
   }
+  function paintHolds(h){
+    if(!h) return;
+    window.__HELD_LIVE = h;
+    var el = document.getElementById("liveBook");
+    if(!el) return;
+    var sleeves = h.sleeves || {};
+    var keys = Object.keys(sleeves);
+    if(!keys.length && !(h.prices)) return;
+    var box = document.getElementById("heldLiveStrip");
+    if(!box){
+      box = document.createElement("div");
+      box.id = "heldLiveStrip";
+      box.className = "live-book-date";
+      el.appendChild(box);
+    }
+    var bits = [];
+    keys.forEach(function(name){
+      (sleeves[name] || []).forEach(function(r){
+        if(!r || !r.ticker) return;
+        var bit = r.ticker + " " + (r.side || "long") + " ×" + (r.shares || "?");
+        if(r.px != null) bit += " @" + r.px;
+        if(r.pnl != null) bit += " P/L $" + r.pnl;
+        bits.push(bit);
+      });
+    });
+    box.textContent = (h.banner || "Elite Overview") +
+      (bits.length ? (" — open lots now: " + bits.join(" · ")) : " — no open lots now");
+  }
   function load(){
     var rels = [
       "today_strategies.json",
@@ -250,10 +279,11 @@ across 24 starts.
     Promise.all([
       fetch(TODAY + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; }),
       fetch(STRAT + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; }),
-      fetch(SUG + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; })
+      fetch(SUG + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; }),
+      fetch(HELD + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : null; }).catch(function(){ return null; })
     ].concat(rels)).then(function(arr){
-      var today = arr[0] || {}, strat = arr[1] || {}, sug = arr[2] || {};
-      var local = arr.slice(3).filter(function(x){ return x && x.strategies && Object.keys(x.strategies).length; })[0];
+      var today = arr[0] || {}, strat = arr[1] || {}, sug = arr[2] || {}, held = arr[3];
+      var local = arr.slice(4).filter(function(x){ return x && x.strategies && Object.keys(x.strategies).length; })[0];
       if(local && local.strategies) strat = local;
       var d = Object.assign({}, sug, today);
       if(strat && strat.strategies) d.strategies = strat.strategies;
@@ -264,6 +294,7 @@ across 24 starts.
       if(!d.buy_1d && sug.buy_1d) d.buy_1d = sug.buy_1d;
       if(!d.sell_1d && sug.sell_1d) d.sell_1d = sug.sell_1d;
       paint(d);
+      paintHolds(held);
     });
   }
   load();

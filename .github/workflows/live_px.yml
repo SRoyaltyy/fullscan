@@ -1,0 +1,62 @@
+name: Elite live px (held lots)
+
+# Poll Finviz Elite Overview during RTH so six-metrics / paper book can
+# mark OPEN held lots. Overview CSV, not a websocket. Soft-fail if Elite
+# auth is missing. Never blocks deploy. Does not remine and does not
+# touch flatten_robust / Webull / hard-red sit.
+
+on:
+  schedule:
+    # ~15–20 min while the US cash session is open (EDT 09:07–15:47).
+    - cron: "7,27,47 13-19 * * 1-5"
+  workflow_dispatch:
+  workflow_run:
+    workflows:
+      - "Open 09:30 pack"
+    types: [completed]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: elite-live-px
+  cancel-in-progress: true
+
+jobs:
+  marks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Stamp OPEN held lots from Elite Overview
+        env:
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
+        run: |
+          set +e
+          pip install requests pandas pyarrow || true
+          python3 -m src.held_live --write
+          rc=$?
+          if [ $rc -ne 0 ]; then
+            echo "[held-live] soft-fail rc=$rc — Elite auth missing or pull empty"
+          fi
+          if [ ! -s data/factor_mine/held_live.json ]; then
+            mkdir -p data/factor_mine dashboard/factor-mine
+            printf '%s\n' '{"src":"missing","error":"no_elite_auth","banner":"Elite Overview as of — ET — not live","sleeves":{}}' > data/factor_mine/held_live.json
+            cp data/factor_mine/held_live.json dashboard/factor-mine/held_live.json
+          fi
+          exit 0
+      - name: Push marks
+        run: |
+          bash scripts/safe_git_push.sh \
+            "auto: elite live marks $(TZ=America/New_York date +%F)" \
+            data/factor_mine/held_live.json \
+            dashboard/factor-mine/held_live.json \
+            || true

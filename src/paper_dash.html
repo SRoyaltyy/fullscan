@@ -435,15 +435,36 @@ function closedTable(rows){
   }).join('')+'</table>';
 }
 
+function eliteMark(ticker){
+  const h=window.__HELD_LIVE||{};
+  const pxmap=h.prices||{};
+  const opmap=h.opens||{};
+  const t=String(ticker||'').toUpperCase();
+  let hit=null;
+  const sleeves=h.sleeves||{};
+  Object.keys(sleeves).forEach(n=>{
+    (sleeves[n]||[]).forEach(r=>{ if(r&&String(r.ticker||'').toUpperCase()===t) hit=r; });
+  });
+  const last=hit&&hit.px!=null?hit.px:pxmap[t];
+  const open=hit&&hit.open_px!=null?hit.open_px:opmap[t];
+  return {last, open, src:h.src, at:h.at, banner:h.banner};
+}
 function openTable(rows){
   const list=rows.filter(r=>r.status==='open')
     .sort((a,b)=>(b.buy_date||'').localeCompare(a.buy_date||'') || a.ticker.localeCompare(b.ticker));
-  const head='<tr><th>Ticker</th><th class="sector">Sector</th><th>AB</th><th class="ctx">Context</th><th>Shares</th><th>Bought</th><th>Last</th><th>Unrealized P/L</th><th>Status</th></tr>';
+  const head='<tr><th>Ticker</th><th class="sector">Sector</th><th>AB</th><th class="ctx">Context</th><th>Shares</th><th>Bought</th><th>Elite last</th><th>vs 09:30 open</th><th>vs entry</th><th>$ P/L</th><th>as-of</th><th>Status</th></tr>';
   if(!list.length){
     return '<p class="mut" style="margin:4px 0 10px">No open lots in this view.</p>';
   }
-  return '<table>'+head+list.map(r=>{
-    const pnl=r.unrealized_pnl;
+  const banner=(window.__HELD_LIVE&&window.__HELD_LIVE.banner)||'Elite Overview as of — ET';
+  return '<p class="mut" style="margin:4px 0 6px">'+esc(banner)+' — OPEN lots only (not the looker list, not closed lots).</p><table>'+head+list.map(r=>{
+    const mk=eliteMark(r.ticker);
+    const last=mk.last!=null?mk.last:r.last;
+    const entry=r.buy_px;
+    const vsOpen=(last!=null&&mk.open!=null)?(last-mk.open):null;
+    const vsEntry=(last!=null&&entry!=null)?(last-entry):null;
+    const pnl=(last!=null&&entry!=null&&r.shares!=null)?(r.shares*(last-entry)):r.unrealized_pnl;
+    const asof=mk.at?String(mk.at).slice(11,16)+' ET':'—';
     return `<tr>
       <td class="tick"><b>${esc(r.ticker)}</b></td>
       <td class="sector">${esc(r.sector||'—')}</td>
@@ -451,8 +472,11 @@ function openTable(rows){
       <td class="ctx">${esc(r.ab_context||'—')}</td>
       <td>${r.shares}</td>
       <td class="left">${r.buy_date} @ ${px(r.buy_px)}</td>
-      <td>${px(r.last)}</td>
+      <td>${last==null?'—':px(last)}</td>
+      <td class="${vsOpen==null?'mut':(vsOpen>=0?'pos':'neg')}">${vsOpen==null?'—':((vsOpen>=0?'+':'')+Number(vsOpen).toFixed(2))}</td>
+      <td class="${vsEntry==null?'mut':(vsEntry>=0?'pos':'neg')}">${vsEntry==null?'—':((vsEntry>=0?'+':'')+Number(vsEntry).toFixed(2))}</td>
       <td class="${pnl>=0?'pos':'neg'}">${money(pnl)}</td>
+      <td class="mut">${esc(asof)}</td>
       <td class="mut">${heldSess(r)!=null?sessLabel(heldSess(r))+' held':'still holding'}</td>
     </tr>`;
   }).join('')+'</table>';
@@ -925,11 +949,41 @@ document.getElementById('fees').textContent=
   var TODAY = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today.json";
   var STRAT = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today_strategies.json";
   var SUG = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/stock_book/latest_suggestions.json";
-  function names(rows){
-    if(!rows) return [];
-    return rows.map(function(x){
-      if(typeof x === "string") return x;
-      return (x && (x.ticker || x.symbol)) || "";
+  var HELD = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/factor_mine/held_live.json";
+  function quoteLabel(q){
+    if(!q) return "";
+    var src = q.src || "";
+    if(!src && !q.at) return "";
+    var banned = /theme|radar|_close|yesterday/i.test(src);
+    var live = !banned && (src === "elite_live" || src === "elite_live_file");
+    var bit = " · px " + (src || "?") + (live ? " (now)" : " (not live)");
+    if(banned) bit += " — Theme Radar/close refused";
+    if(q.at) bit += " @ " + q.at;
+    return bit;
+  }
+  function names(rows, preds){
+    var by = {};
+    (preds || []).forEach(function(p){
+      if(p && p.ticker) by[String(p.ticker).toUpperCase()] = p;
+    });
+    return (rows || []).map(function(x){
+      var t, px, op;
+      if(typeof x === "string"){
+        t = x;
+        var p = by[t.toUpperCase()] || {};
+        px = p.px; op = p.open_px;
+      } else {
+        t = (x && (x.ticker || x.symbol)) || "";
+        px = x && x.px; op = x && x.open_px;
+        var hit = t ? by[String(t).toUpperCase()] : null;
+        if(px == null && hit) px = hit.px;
+        if(op == null && hit) op = hit.open_px;
+      }
+      if(!t) return "";
+      var bit = t;
+      if(px != null) bit += " " + px;
+      if(op != null && op !== px) bit += " (open " + op + ")";
+      return bit;
     }).filter(Boolean);
   }
   function paint(d){
@@ -944,38 +998,115 @@ document.getElementById('fees').textContent=
       extra += '<div class="live-book-date">' + keys.length + ' strategies</div>';
       keys.forEach(function(name){
         var s = strats[name] || {};
-        var b = names(s.buy);
-        var sl = names(s.sell);
-        var tag = s.sit ? "SIT" : (s.status || "");
+        var b = names(s.buy, s.predict);
+        var sl = names(s.sell, s.predict);
+        var sit = !!(s.sit || s.would_have || s.status === "sit");
         extra += '<div class="live-book-row' + (sl.length && !b.length ? " sell" : "") + '"><b>' + name + '</b> ';
-        if(tag && tag !== "ok") extra += tag + " ";
-        extra += (b.length ? "BUY " + b.join(" · ") : "");
+        var side = String(s.side || "").toUpperCase();
+        if(side) extra += side + " ";
+        if(sit) extra += "SIT would-have ";
+        else if(s.status && s.status !== "ok") extra += s.status + " ";
+        extra += (b.length ? (sit ? "" : "BUY ") + b.join(" · ") : "");
         extra += (b.length && sl.length ? " · " : "");
-        extra += (sl.length ? "SELL " + sl.join(" · ") : "");
-        if(!b.length && !sl.length) extra += (tag === "SIT" || s.sit ? "sit" : "—");
+        extra += (sl.length ? (sit ? "would-sell " : "SELL ") + sl.join(" · ") : "");
+        if(!b.length && !sl.length) extra += (sit ? "sit" : "—");
+        var res = s.research;
+        if(res && res.tag){
+          extra += ' <span class="live-book-date">RESEARCH';
+          var so = res.short_only || [];
+          var dp = res.dip_scoop || [];
+          if(so.length){
+            extra += " (A) short-only " + so.map(function(r){
+              return (r.ticker || "") + (r.open != null ? (" @" + r.open) : "");
+            }).filter(Boolean).join(" · ");
+          }
+          if(dp.length){
+            extra += " (B) dip-scoop " + dp.map(function(r){
+              var hits = [];
+              var sc = r.scoops || {};
+              Object.keys(sc).forEach(function(x){
+                if((sc[x] || {}).kind === "scoop") hits.push(x + "%");
+              });
+              return (r.ticker || "") + (hits.length ? (" scoop " + hits.join(",")) : " miss");
+            }).filter(Boolean).join(" · ");
+          }
+          extra += " — not a wire</span>";
+        }
+        var preds = s.predict || [];
+        if(preds.length){
+          extra += " · ";
+          extra += preds.map(function(p){
+            var t = (p && p.ticker) || "";
+            var dir = (p && p.predict) || "";
+            return t ? (t + " " + dir) : "";
+          }).filter(Boolean).join(" · ");
+        }
         extra += "</div>";
       });
     }
     el.innerHTML =
-      '<div class="live-book-kicker">Today\'s tickets (every strategy)</div>' +
-      '<div class="live-book-date">' + (d.date || "") + '</div>' +
+      '<div class="live-book-kicker">Today\'s tickets (every strategy) — SIT = paper would-have, not a wire. Elite px after 09:30 only; Theme Radar close never live</div>' +
+      '<div class="live-book-date">' + (d.date || "") +
+        (d.clock_legal_for ? (" · open " + d.clock_legal_for) : "") +
+        quoteLabel(d.quote) + '</div>' +
       '<div class="live-book-row"><b>BUY 1d</b> ' + (buys.join(" · ") || "—") + '</div>' +
       '<div class="live-book-row sell"><b>SELL 1d</b> ' + (sells.join(" · ") || "—") + '</div>' + extra;
   }
+  function paintHolds(h){
+    if(!h) return;
+    window.__HELD_LIVE = h;
+    var el = document.getElementById("liveBook");
+    if(!el) return;
+    var sleeves = h.sleeves || {};
+    var keys = Object.keys(sleeves);
+    if(!keys.length && !(h.prices)) return;
+    var box = document.getElementById("heldLiveStrip");
+    if(!box){
+      box = document.createElement("div");
+      box.id = "heldLiveStrip";
+      box.className = "live-book-date";
+      el.appendChild(box);
+    }
+    var bits = [];
+    keys.forEach(function(name){
+      (sleeves[name] || []).forEach(function(r){
+        if(!r || !r.ticker) return;
+        var bit = r.ticker + " " + (r.side || "long") + " ×" + (r.shares || "?");
+        if(r.px != null) bit += " @" + r.px;
+        if(r.pnl != null) bit += " P/L $" + r.pnl;
+        bits.push(bit);
+      });
+    });
+    box.textContent = (h.banner || "Elite Overview") +
+      (bits.length ? (" — open lots now: " + bits.join(" · ")) : " — no open lots now");
+  }
   function load(){
+    var rels = [
+      "today_strategies.json",
+      "factor-mine/today_strategies.json",
+      "../factor-mine/today_strategies.json"
+    ].map(function(u){
+      return fetch(u + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; });
+    });
     Promise.all([
       fetch(TODAY + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; }),
       fetch(STRAT + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; }),
-      fetch(SUG + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; })
-    ]).then(function(arr){
-      var today = arr[0] || {}, strat = arr[1] || {}, sug = arr[2] || {};
+      fetch(SUG + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; }),
+      fetch(HELD + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : null; }).catch(function(){ return null; })
+    ].concat(rels)).then(function(arr){
+      var today = arr[0] || {}, strat = arr[1] || {}, sug = arr[2] || {}, held = arr[3];
+      var local = arr.slice(4).filter(function(x){ return x && x.strategies && Object.keys(x.strategies).length; })[0];
+      if(local && local.strategies) strat = local;
       var d = Object.assign({}, sug, today);
       if(strat && strat.strategies) d.strategies = strat.strategies;
       if(strat && strat.date) d.date = strat.date;
       if(strat && strat.n) d.n_strategies = strat.n;
+      if(strat && strat.quote) d.quote = strat.quote;
+      if(strat && strat.clock_legal_for) d.clock_legal_for = strat.clock_legal_for;
       if(!d.buy_1d && sug.buy_1d) d.buy_1d = sug.buy_1d;
       if(!d.sell_1d && sug.sell_1d) d.sell_1d = sug.sell_1d;
       paint(d);
+      paintHolds(held);
     });
   }
   load();

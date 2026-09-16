@@ -53,6 +53,7 @@ OUT_MD = ROOT / "03_scoreboard" / "FACTOR_MINE.md"
 OUT_START = ROOT / "data" / "factor_mine" / "start_dates.json"
 PANEL_PATH = ROOT / "data" / "factor_mine" / "panel.json"
 DASH_DIR = ROOT / "dashboard" / "factor-mine"
+HELD_LIVE_PATH = ROOT / "data" / "factor_mine" / "held_live.json"
 TEMPLATE = Path(__file__).with_name("factor_mine_dash.html")
 SIM_JS = Path(__file__).with_name("factor_mine_sim.js")
 START = book_era.DASHBOARD_START
@@ -2426,6 +2427,7 @@ def _slim_dash_book(bk: dict) -> dict:
         "n_skips": bk.get("n_skips"),
         "realized": bk.get("realized"),
         "cash": bk.get("cash"),
+        "open": bk.get("open"),
         "total_ret_pct": bk.get("total_ret_pct"),
         "audit": bk.get("audit"),
         "size": bk.get("size"),
@@ -2524,11 +2526,226 @@ def write_outputs(payload: dict, stats: list[dict] | None = None,
         fmb.write_action_mds(payload, stats or [], books, featured)
 
 
+TICKET_DATE_PATHS = (
+    DASH_DIR / "today.json",
+    DASH_DIR / "strategy_tickets.json",
+    DASH_DIR / "today_strategies.json",
+    ROOT / "data" / "day_board" / "today.json",
+    ROOT / "data" / "day_board" / "today_strategies.json",
+    ROOT / "data" / "day_board" / "strategy_tickets.json",
+    ROOT / "data" / "factor_mine" / "strategy_tickets.json",
+)
+
+
+def live_session_date(payload: dict | None = None) -> str | None:
+    """Live session from today.json / strategy tickets — even before the close.
+
+    last_closed_session stays yesterday during RTH. Cash-start still needs
+    today's date on the calendar so combo_sh can select it.
+    """
+    for path in TICKET_DATE_PATHS:
+        if not path.is_file():
+            continue
+        try:
+            doc = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        date = str(doc.get("date") or "").strip()
+        if len(date) == 10 and date[4] == "-" and date[7] == "-":
+            return date
+    if payload:
+        date = str(payload.get("live_session") or "").strip()
+        if len(date) == 10:
+            return date
+    return None
+
+
+def _ticket_doc() -> dict:
+    for path in TICKET_DATE_PATHS:
+        if not path.is_file():
+            continue
+        try:
+            doc = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        if doc.get("strategies") or doc.get("date"):
+            return doc
+    return {}
+
+
+def live_session_morning(date: str) -> dict:
+    """S / sit from tickets or baked mornings. Soft-fail. No remine."""
+    doc = _ticket_doc()
+    s = None
+    sit = False
+    for rec in (doc.get("strategies") or {}).values():
+        if not isinstance(rec, dict):
+            continue
+        if rec.get("s") is not None and s is None:
+            try:
+                s = float(rec["s"])
+            except (TypeError, ValueError):
+                pass
+        if rec.get("sit") or rec.get("hard_red"):
+            sit = True
+    if s is None:
+        try:
+            from . import factor_mine_book as fmb
+            s = fmb.morning_s(fmb.load_regime(), date)
+        except Exception:
+            s = None
+    if s is not None:
+        try:
+            from . import factor_mine_book as fmb
+            sit = sit or float(s) <= float(fmb.HARD_RED)
+        except Exception:
+            pass
+    return {"s": None if s is None else round(float(s), 3), "hard_red": bool(sit),
+            "date": date}
+
+
+def live_start_stub(date: str, cal: list[str], morning: dict | None = None,
+                    sleeve: str | None = None) -> dict:
+    """$10k, no lots, live session. Sit P/L is +0% and $ days 0/1.
+
+    Does not remine fills. last_closed stays the prior finished session.
+    """
+    morning = morning or live_session_morning(date)
+    rec = {}
+    if sleeve:
+        rec = ((_ticket_doc().get("strategies") or {}).get(sleeve) or {})
+    s = rec.get("s") if rec.get("s") is not None else morning.get("s")
+    hard = bool(rec.get("sit") or rec.get("hard_red") or morning.get("hard_red"))
+    closed = last_closed_session(cal[0] if cal else date, cal=cal) if cal else None
+    days = [{
+        "date": date, "s": s, "hard_red": hard, "bought": [], "sold": [],
+        "cash": CAPITAL, "equity": CAPITAL, "open_cash": CAPITAL,
+        "made_money": False,
+    }]
+    equity = [None] * max(0, len(cal) - 1) + [CAPITAL]
+    return {
+        "start": date,
+        "return_pct": 0.0,
+        "made_money": False,
+        "prelim": False,
+        "pending": False,
+        "live": True,
+        "last_closed": closed,
+        "n_sessions": 1,
+        "n_up_days": 0,
+        "final_equity": CAPITAL,
+        "s": s,
+        "hard_red": hard,
+        "open_cash": CAPITAL,
+        "cash": CAPITAL,
+        "bought": [],
+        "buys": [],
+        "skips": [],
+        "equity": equity,
+        "days": days,
+    }
+
+
+def attach_live_session(payload: dict) -> dict:
+    """Put the live session on cash-start dates even when tape has no close.
+
+    to_date / last_closed stay on the finished session. No remine.
+    """
+    if not payload:
+        return payload
+    date = live_session_date(payload)
+    if not date:
+        return payload
+    dates = list(payload.get("dates") or [])
+    if date not in dates:
+        dates.append(date)
+        dates = sorted({d for d in dates if d})
+        payload["dates"] = dates
+    payload["live_session"] = date
+    morning = live_session_morning(date)
+    mornings = dict(payload.get("mornings") or {})
+    if date not in mornings:
+        mornings[date] = {
+            "s": morning.get("s"),
+            "hard_red": bool(morning.get("hard_red")),
+        }
+        payload["mornings"] = mornings
+    starts = dict(payload.get("starts") or {})
+    for name, paths in list(starts.items()):
+        rows = list(paths or [])
+        if any(p.get("start") == date for p in rows):
+            for p in rows:
+                if p.get("start") == date:
+                    p["live"] = True
+                    p["pending"] = False
+            starts[name] = rows
+            continue
+        stub = live_start_stub(date, dates, morning, sleeve=name)
+        if rows and isinstance(rows[-1].get("equity"), list):
+            eq = list(rows[-1]["equity"])
+            while len(eq) < len(dates) - 1:
+                eq.append(None)
+            eq.append(CAPITAL)
+            stub["equity"] = eq
+        rows.append(stub)
+        starts[name] = rows
+    payload["starts"] = starts
+    # Keep series / daily aligned with dates so a length check is not 23
+    # after the live session is on the calendar. Sit day: last mark carried,
+    # +0% / $ days 0/1 lives on the cash-start stub, not the 8-13 curve.
+    series = dict(payload.get("series") or {})
+    daily = dict(payload.get("daily") or {})
+    for name in set(list(series) + list(daily) + list(starts)):
+        eq = list(series.get(name) or [])
+        if eq and len(eq) < len(dates):
+            last = eq[-1]
+            while len(eq) < len(dates):
+                eq.append(last)
+            series[name] = eq
+        days = list(daily.get(name) or [])
+        if days and not any(d.get("date") == date for d in days):
+            prev = days[-1] if days else {}
+            days.append({
+                "date": date,
+                "s": morning.get("s"),
+                "hard_red": bool(morning.get("hard_red")),
+                "open_cash": prev.get("cash") if prev.get("cash") is not None else CAPITAL,
+                "cash": prev.get("cash") if prev.get("cash") is not None else CAPITAL,
+                "equity": prev.get("equity") if prev.get("equity") is not None else CAPITAL,
+                "bought": [],
+                "sold": [],
+                "made_money": False,
+                "open_held": list(prev.get("held") or prev.get("open_held") or []),
+                "live": True,
+            })
+            daily[name] = days
+    if series:
+        payload["series"] = series
+    if daily:
+        payload["daily"] = daily
+    sim = dict(payload.get("sim") or {})
+    sim_dates = list(sim.get("dates") or [])
+    if date not in sim_dates:
+        sim_dates.append(date)
+        sim["dates"] = sorted({d for d in sim_dates if d})
+        scores = dict(sim.get("s") or {})
+        if morning.get("s") is not None:
+            scores[date] = morning["s"]
+        sim["s"] = scores
+        payload["sim"] = sim
+    return payload
+
+
 def write_dash_html(payload: dict) -> Path:
     """Bake the current template + sim.js + payload into Pages HTML."""
     from . import factor_mine_combo as fmc
     payload = fmc.enrich_payload_legs(payload)
-    payload = dict(payload)
+    payload = attach_live_session(dict(payload))
+    try:
+        from . import held_live as hl
+        hl.stamp_payload_holds(payload, pull_live=None)
+    except Exception as e:  # noqa: BLE001 — Elite auth must never block bake
+        print(f"[factor-mine] held-live stamp skipped: {e}", flush=True)
     # Pack to_date / generated_at stay with the cash book. Pages built
     # is this bake so a 9/15 cash-start is not read as a missing pack.
     payload["pages_built_at"] = datetime.now(tl.ET).isoformat()
@@ -2541,6 +2758,15 @@ def write_dash_html(payload: dict) -> Path:
         html = html.replace("__SIM_JS__", SIM_JS.read_text(encoding="utf-8"))
     html = html.replace("__DATA__", encode_payload(payload))
     dest.write_text(html, encoding="utf-8")
+    blob = payload.get("held_live")
+    if blob:
+        text = json.dumps(blob, indent=2) + "\n"
+        for path in (HELD_LIVE_PATH, DASH_DIR / "held_live.json"):
+            try:
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text(text, encoding="utf-8")
+            except OSError:
+                pass
     return dest
 
 
