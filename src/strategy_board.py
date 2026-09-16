@@ -521,6 +521,11 @@ td.good{{color:#4ade80}}td.bad{{color:#f87171}}
 svg text{{fill:var(--muted)}}
 </style></head><body><main>
 <h1>Strategy board</h1>
+<div id="holdLive" class="card" style="margin:12px 0">
+<div class="muted" id="holdLiveBanner">Elite Overview as of —</div>
+<div class="muted" id="holdLiveStamp">open lots on the $10k butterfly — not the looker list</div>
+<div id="holdLiveBody">Loading hold marks…</div>
+</div>
 <p class="muted">
 <a href="../">.io paper</a> ·
 <a href="../sleeve-merge/">live combine</a> ·

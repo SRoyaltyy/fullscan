@@ -46,6 +46,8 @@ def test_land_stock_book_includes_suggestions() -> None:
     assert "dashboard/today_strategies.json" in live_rel
     assert "dashboard/factor-mine/strategy_tickets.json" in live_rel
     assert "dashboard/factor-mine/today_strategies.json" in live_rel
+    assert "data/day_board/hold_live_px.json" in live_rel
+    assert "dashboard/factor-mine/hold_live_px.json" in live_rel
 
 
 def test_preview_suggestions_lists_names() -> None:
@@ -66,6 +68,10 @@ def test_paper_template_polls_raw_main() -> None:
     assert book_suggestions.STRAT_URL in html
     assert "every strategy" in html
     assert "id=\"liveBook\"" in html
+    assert "id=\"holdLive\"" in html
+    assert "hold_live_px.json" in html
+    assert "Elite Overview" in html
+    assert "not the looker list" in html
     assert html.index("<h1>Paper Trading") < html.index('id="liveBook"')
     baked = (root / "dashboard" / "index.html").read_text(encoding="utf-8")
     assert book_suggestions.POLLER_MARK in baked
@@ -99,6 +105,13 @@ def test_factor_mine_template_paints_every_strategy() -> None:
     assert "SIT would-have" in html
     assert "liveStartRow" in html
     assert "pending — not 0%" in html
+    assert "id=\"holdLive\"" in html
+    assert "hold_live_px.json" in html
+    assert "Elite Overview" in html
+    assert "ensureTicketDate" in html
+    assert "paintHoldMarks" in html
+    assert "not the looker list" in html
+    assert "cash-start selectable" in html
     assert html.index("<h1>Factor strategy mine") < html.index('id="liveDay"')
     assert 'id="bracketOn"' in html
     assert 'id="takePct"' in html
@@ -186,6 +199,11 @@ def test_open_pack_wired_when_skip_if_good() -> None:
     assert "SIT would-have" in book_suggestions._POLLER_JS
     assert "Theme Radar" in book_suggestions._POLLER_JS
     assert "factor-mine/today_strategies.json" in book_suggestions._POLLER_JS
+    assert "hold_live_px.json" in book_suggestions._POLLER_JS
+    assert "paintHold" in book_suggestions._POLLER_JS
+    assert "Elite Overview" in book_suggestions._POLLER_JS
+    assert "looker list" in book_suggestions._POLLER_JS
+    assert "src.hold_live_px" in script
 
 
 def test_inspect_html_ok_when_poller_and_sidecar() -> None:

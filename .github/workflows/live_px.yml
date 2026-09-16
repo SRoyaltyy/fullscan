@@ -1,0 +1,104 @@
+name: Elite live hold marks
+
+# Thin RTH refresh of Finviz Elite Overview marks for names the
+# $10k butterfly CURRENTLY HOLDS. Soft-fail missing Elite auth —
+# never block deploy. Does not remine factor-mine. Does not change
+# flatten_robust / Webull / hard-red sit.
+
+on:
+  schedule:
+    # ~15–20 min during RTH. UTC: 14:00–19:40 = 10:00–15:40 ET (EDT).
+    # 13:45 = 09:45 ET first post-open tick; 20:00 = 16:00 ET last.
+    - cron: "45 13 * * 1-5"
+    - cron: "0,20,40 14-19 * * 1-5"
+    - cron: "0 20 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      run_date:
+        description: "YYYY-MM-DD (empty = today ET)"
+        required: false
+        default: ""
+  workflow_run:
+    workflows:
+      - "Open 09:30 pack"
+      - "Publish strategy tickets"
+    types: [completed]
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: elite-hold-live-px
+  cancel-in-progress: true
+
+jobs:
+  marks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Clock (RTH or dispatch)
+        id: clock
+        run: |
+          set -euo pipefail
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          echo "date=$DATE" >> "$GITHUB_OUTPUT"
+          HM=$((10#$(TZ=America/New_York date +%H%M)))
+          DOW=$(TZ=America/New_York date +%u)
+          if [ "${GITHUB_EVENT_NAME}" = "workflow_dispatch" ]; then
+            echo "go=yes" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [ "$DOW" -ge 6 ]; then
+            echo "go=no" >> "$GITHUB_OUTPUT"
+            echo "weekend — skip"
+            exit 0
+          fi
+          if [ "$HM" -lt 930 ] || [ "$HM" -gt 1605 ]; then
+            echo "go=no" >> "$GITHUB_OUTPUT"
+            echo "outside RTH ($HM ET) — skip"
+            exit 0
+          fi
+          echo "go=yes" >> "$GITHUB_OUTPUT"
+
+      - name: Unit tests
+        if: steps.clock.outputs.go == 'yes'
+        run: python3 -m src.test_hold_live_px && python3 -m src.test_elite_live_px
+
+      - name: Install (thin)
+        if: steps.clock.outputs.go == 'yes'
+        run: pip install requests
+
+      - name: Quote open lots (soft-fail Elite)
+        if: steps.clock.outputs.go == 'yes'
+        env:
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
+          FINVIZ_EXPORT: ${{ secrets.FINVIZ_EXPORT }}
+        run: |
+          set +e
+          python3 -m src.hold_live_px --date "${{ steps.clock.outputs.date }}" --write
+          echo "hold_rc=$?" >> "$GITHUB_OUTPUT"
+          exit 0
+
+      - name: Push hold marks
+        if: steps.clock.outputs.go == 'yes'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          bash scripts/safe_git_push.sh \
+            "auto: elite hold marks ${{ steps.clock.outputs.date }}" \
+            data/day_board/hold_live_px.json \
+            dashboard/factor-mine/hold_live_px.json || true
+          gh workflow run deploy-dashboard.yml --ref main || true

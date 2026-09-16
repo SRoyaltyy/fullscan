@@ -58,6 +58,27 @@ def _is_theme_radar(path: Path) -> bool:
 def parse_elite_price_csv(text: str) -> dict[str, float]:
     """Ticker → Price from an Elite Overview (or merged) export."""
     out: dict[str, float] = {}
+    for t, rec in parse_elite_overview_fields(text).items():
+        if rec.get("px") is not None:
+            out[t] = rec["px"]
+    return out
+
+
+def parse_elite_open_csv(text: str) -> dict[str, float]:
+    """Ticker → official session Open from the same Elite export.
+
+    Uses the Open column, never Price / Gap / last.
+    """
+    out: dict[str, float] = {}
+    for t, rec in parse_elite_overview_fields(text).items():
+        if rec.get("open_px") is not None:
+            out[t] = rec["open_px"]
+    return out
+
+
+def parse_elite_overview_fields(text: str) -> dict[str, dict]:
+    """Ticker → {px, open_px} from an Elite Overview (or merged) export."""
+    out: dict[str, dict] = {}
     if not text or text.lstrip().startswith("<!"):
         return out
     try:
@@ -66,9 +87,17 @@ def parse_elite_price_csv(text: str) -> dict[str, float]:
         return out
     for row in rows:
         t = str(row.get("Ticker") or row.get("ticker") or "").strip().upper()
+        if not t:
+            continue
+        rec: dict = {}
         px = _num(row.get("Price") or row.get("price"))
-        if t and px is not None:
-            out[t] = px
+        opx = _num(row.get("Open") or row.get("open"))
+        if px is not None:
+            rec["px"] = px
+        if opx is not None:
+            rec["open_px"] = opx
+        if rec:
+            out[t] = rec
     return out
 
 
@@ -77,6 +106,15 @@ def load_csv_prices(path: Path) -> dict[str, float]:
         return {}
     try:
         return parse_elite_price_csv(path.read_text(encoding="utf-8", errors="replace"))
+    except OSError:
+        return {}
+
+
+def load_csv_opens(path: Path) -> dict[str, float]:
+    if not path.is_file() or _is_theme_radar(path):
+        return {}
+    try:
+        return parse_elite_open_csv(path.read_text(encoding="utf-8", errors="replace"))
     except OSError:
         return {}
 
@@ -129,6 +167,14 @@ def fallback_export(date: str) -> tuple[Path | None, str]:
                 src = "session_export"
             return path, src
     return None, "missing"
+
+
+def fallback_opens(date: str) -> dict[str, float]:
+    """Official session Open from the same fallback CSV as quote_book."""
+    path, _src = fallback_export(date)
+    if path is None:
+        return {}
+    return load_csv_opens(path)
 
 
 def quote_book(date: str, *, pull_live: bool | None = None) -> dict:
