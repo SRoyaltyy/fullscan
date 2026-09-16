@@ -1,6 +1,6 @@
 {
   "date": "2026-09-16",
-  "generated_at": "2026-09-16T05:03:05.774648-04:00",
+  "generated_at": "2026-09-16T07:16:05.819439-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -10,6 +10,7 @@
     "n": 8
   },
   "dates": [
+    "2026-09-16_strategy_tickets",
     "2026-09-16",
     "2026-09-15_tickets",
     "2026-09-15_strategy_tickets",
