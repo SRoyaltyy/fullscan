@@ -2202,13 +2202,38 @@
   "TFC",
   "TFPM",
   "TFSL",
-  "TFX"
+  "TFX",
+  "TGEN",
+  "TGS",
+  "TGT",
+  "TGTX",
+  "TH",
+  "THG",
+  "THM",
+  "THO",
+  "THRM",
+  "THRY",
+  "TIC",
+  "TIGO",
+  "TILE",
+  "TIPT",
+  "TJX",
+  "TK",
+  "TKNO",
+  "TKO",
+  "TLK",
+  "TLN",
+  "TLRY",
+  "TLS",
+  "TLSA",
+  "TLSI",
+  "TLYS"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 114198,
- "hold_lab_n": 53808,
- "hold_base": 0.47118163190248513,
+ "n_hold": 115498,
+ "hold_lab_n": 54425,
+ "hold_base": 0.4712202808706644,
  "counts": {
   "A@L0_g": [
    60160,
@@ -110080,8 +110105,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 114198,
- "pair_hold_lab_n": 53808,
+ "pair_hold_n": 115498,
+ "pair_hold_lab_n": 54425,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -110190,5 +110215,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789570091
+ "flushed_unix": 1789570279
 }
