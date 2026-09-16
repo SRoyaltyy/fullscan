@@ -2377,13 +2377,38 @@
   "VNT",
   "VOR",
   "VOXR",
-  "VOYA"
+  "VOYA",
+  "VOYG",
+  "VPG",
+  "VRA",
+  "VREX",
+  "VRNS",
+  "VRSN",
+  "VRT",
+  "VRTS",
+  "VSAT",
+  "VSEC",
+  "VSNT",
+  "VSTM",
+  "VSTS",
+  "VSXY",
+  "VTEX",
+  "VTIX",
+  "VTOL",
+  "VTRS",
+  "VTS",
+  "VUZI",
+  "VVR",
+  "VWAV",
+  "VYX",
+  "VZ",
+  "VZLA"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 123283,
- "hold_lab_n": 58097,
- "hold_base": 0.471249077326152,
+ "n_hold": 124583,
+ "hold_lab_n": 58713,
+ "hold_base": 0.47127617732756477,
  "counts": {
   "A@L0_g": [
    60160,
@@ -110255,8 +110280,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 123283,
- "pair_hold_lab_n": 58097,
+ "pair_hold_n": 124583,
+ "pair_hold_lab_n": 58713,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -110365,5 +110390,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789571411
+ "flushed_unix": 1789571599
 }
