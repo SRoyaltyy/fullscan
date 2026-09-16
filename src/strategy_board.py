@@ -454,9 +454,13 @@ def render(rows: list[dict]) -> str:
         dd = f"{r['max_dd_pct']:.2f}%" if isinstance(r.get("max_dd_pct"), (int, float)) else "—"
         trades = r.get("trades") if r.get("trades") is not None else "—"
         cap = (f"${r['capital']:,.0f}" if r.get("capital") else "—")
+        sleeve = str(r.get("id") or "")
+        if sleeve.startswith("fm_"):
+            sleeve = sleeve[3:]
         table.append(
             f"<tr data-family='{_esc(r.get('family'))}' "
-            f"data-integrity='{_esc(r.get('integrity'))}'>"
+            f"data-integrity='{_esc(r.get('integrity'))}' "
+            f"data-sleeve='{_esc(sleeve)}'>"
             f"<td class='name'>{name}<span class='live'>{live_tag}</span></td>"
             f"<td>{_esc(r.get('family'))}</td>"
             f"<td>{pr}</td>"
@@ -469,7 +473,8 @@ def render(rows: list[dict]) -> str:
             f"<td class='why'>{_esc(r.get('note'))}</td></tr>"
             if isinstance(ret, (int, float)) else
             f"<tr data-family='{_esc(r.get('family'))}' "
-            f"data-integrity='{_esc(r.get('integrity'))}'>"
+            f"data-integrity='{_esc(r.get('integrity'))}' "
+            f"data-sleeve='{_esc(sleeve)}'>"
             f"<td class='name'>{name}</td>"
             f"<td>{_esc(r.get('family'))}</td><td>{pr}</td>"
             f"<td class='tag {_esc(r.get('integrity'))}'>{_esc(r.get('integrity'))}</td>"
@@ -584,9 +589,11 @@ Webull paper are untouched.</p>
 </script>
 <details class="card" style="margin:12px 0" open>
 <summary>$10k butterfly fill realities — research (not a wire)</summary>
-<p class="muted">Official-open cash book vs limit / market / partial / gap
-messiness. Live <b>flatten_robust</b>, hard-red sit, and Webull paper are
-untouched. Starts YES is a start-date chip, not a daily win rate.</p>
+<p class="muted">Same columns as the shipped-book table. Use
+<b>Market buy</b> / <b>Limit buy</b> under the family chips to add
+wrong-price, partial, and missed-fill rows. Live <b>flatten_robust</b>,
+hard-red sit, and Webull paper are untouched. Starts YES is a start-date
+chip, not a daily win rate.</p>
 <div id="bookFillRealityBody" class="muted">loading book-fill reality…</div>
 <p class="muted"><a href="../factor-mine/book-fill-reality.html">full overlay</a></p>
 </details>
@@ -686,6 +693,7 @@ function draw() {{
 }}
 draw();
 </script>
+<script src="../factor-mine/fill-scenarios.js"></script>
 <p class="muted">Generated {datetime.now().isoformat(timespec='seconds')} ·
 machine data/strategy_board/catalog.json · write-up 03_scoreboard/STRATEGY_BOARD.md</p>
 </main></body></html>
@@ -737,7 +745,8 @@ def write_md(rows: list[dict]) -> str:
         "Research overlay (not a wire): open-bell MARKET / LIMIT fills vs "
         "ideal 09:30 open live on "
         "[OPEN_BELL_SLIP.md](OPEN_BELL_SLIP.md). "
-        "$10k leftover-cash butterfly under messy fills: "
+        "$10k leftover-cash butterfly under messy fills "
+        "(Market buy / Limit buy rows on this board): "
         "[BOOK_FILL_REALITY.md](BOOK_FILL_REALITY.md). "
         "Does not change live `flatten_robust`, hard-red sit, or Webull paper.",
         "",

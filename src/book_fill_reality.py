@@ -1092,6 +1092,102 @@ def _range_bar(rep: dict) -> str:
     )
 
 
+MARKET_KEYS = (
+    "ideal", "market_mid", "market_adverse", "market_favorable",
+    "partial_50", "gap_miss",
+)
+LIMIT_KEYS = ("ideal", "limit_open", "limit_prior", "gap_miss")
+MARKET_LABEL = {
+    "ideal": "published 09:30",
+    "market_mid": "market · wrong price (α delay)",
+    "market_adverse": "market · worst print",
+    "market_favorable": "market · best print (unlikely)",
+    "partial_50": "market · partial 50%",
+    "gap_miss": "market · missed fill (gap ≥8%)",
+}
+LIMIT_LABEL = {
+    "ideal": "published 09:30",
+    "limit_open": "limit @ open (fill or miss)",
+    "limit_prior": "limit @ prior close (fill or miss)",
+    "gap_miss": "limit · missed fill (gap ≥8%)",
+}
+
+
+def _sleeve_meta(name: str) -> tuple[str, str]:
+    hold = "—"
+    m = re.search(r"_h(\d+)\b", str(name or ""))
+    if m:
+        hold = m.group(1)
+    side = "long"
+    if str(name).startswith("short_") or "_short" in str(name):
+        side = "short"
+    if str(name).startswith("combo_"):
+        side = "mix"
+    return side, hold
+
+
+def _win_frac(st: dict):
+    if st.get("win_session_pct") is None:
+        return None
+    return float(st["win_session_pct"]) / 100.0
+
+
+def _day_frac(st: dict):
+    n = st.get("n_sessions") or 0
+    if not n:
+        return None
+    return float(st.get("n_sessions_green") or 0) / float(n)
+
+
+def strategy_format_rows(payload: dict, keys: tuple[str, ...],
+                         labels: dict[str, str]) -> str:
+    """Same columns as the factor-mine strategy table."""
+    reports = payload.get("reports") or {}
+    out = [
+        "<tr><th class='tick'>Strategy</th><th>Side</th><th>H</th>"
+        "<th>Win%</th><th>$ days</th><th>Starts</th><th>Book%</th>"
+        "<th>Signal%</th><th>Audit</th></tr>"
+    ]
+    for name in payload.get("sleeves") or []:
+        cols = (reports.get(name) or {}).get("columns") or {}
+        side, hold = _sleeve_meta(name)
+        for i, key in enumerate(keys):
+            st = cols.get(key) or {}
+            if not st:
+                continue
+            win = _win_frac(st)
+            days = _day_frac(st)
+            book = st.get("book_pct")
+            sg, sn = st.get("start_green"), st.get("start_n")
+            starts = "—" if sg is None or sn is None else f"{sg}/{sn}"
+            lab = labels.get(key, key)
+            counts = (
+                f"{st.get('n_fills') or 0} fills · "
+                f"{st.get('n_miss') or 0} miss · "
+                f"{st.get('n_partial') or 0} partial"
+            )
+            wcls = "pos" if (win or 0) >= 0 else "neg"
+            dcls = "pos" if (days or 0) >= 0 else "neg"
+            bcls = "pos" if (book or 0) >= 0 else "neg"
+            child = " class='scen'" if i else ""
+            out.append(
+                f"<tr{child}><td class='tick'>{_esc(name)}"
+                f"<div class='scen-lab'>{_esc(lab)}</div>"
+                f"<div class='mut'>{_esc(counts)}</div></td>"
+                f"<td>{_esc(side)}</td><td class='num'>{_esc(hold)}</td>"
+                f"<td class='num {wcls}'>"
+                f"{'—' if win is None else f'{100 * win:.0f}%'}</td>"
+                f"<td class='num {dcls}'>"
+                f"{'—' if days is None else f'{100 * days:.0f}%'}</td>"
+                f"<td class='num'>{starts}</td>"
+                f"<td class='num {bcls}'>{_esc(_pct(book))}</td>"
+                f"<td class='num mut'>—</td>"
+                f"<td class='{'pos' if st.get('audit_ok') else 'neg'}'>"
+                f"{'PASS' if st.get('audit_ok') else 'FAIL'}</td></tr>"
+            )
+    return "".join(out)
+
+
 def render_html(payload: dict) -> str:
     reports = payload.get("reports") or {}
     sleeves = payload.get("sleeves") or []
@@ -1187,6 +1283,12 @@ margin:0 0 4px;min-width:140px}}
 transform:translateX(-50%)}}
 .mk.worst{{background:var(--neg)}}.mk.mid{{background:var(--mid)}}
 .mk.ideal{{background:var(--gold)}}.mk.best{{background:var(--best)}}
+.cards{{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));gap:6px;margin:0 0 12px}}
+.cards .card{{margin:0;cursor:default}}
+.cards .card b{{display:block;font-size:16px;margin-top:2px}}
+.scen-lab{{color:var(--mut);font-size:11px;margin-top:2px}}
+tr.scen td.tick{{padding-left:16px}}
+.fill-tabs{{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}}
 </style></head><body><div class="wrap">
 <h1>$10k butterfly fill realities</h1>
 <p class="mut">Research overlay · leftover-cash book · orders sent
@@ -1216,9 +1318,29 @@ All four equally “could happen”; extremes are labeled.</p>
 <tr><th>Strategy</th><th>Range</th></tr>
 { "".join(range_rows) }
 </table></div>
-<h2>Every strategy × reality</h2>
-<p class="mut">Starts YES = wake $10k on each date and run to the end
-(not a daily win rate). Sess &lt; $10k = close equity under the start cash.</p>
+<h2>Strategy display — Market buy / Limit buy</h2>
+<p class="mut">Same columns as the factor-mine strategy table
+(Strategy · Side · H · Win% · $ days · Starts · Book% · Signal% · Audit).
+Market = wrong-price / partial / missed. Limit = fill or miss at the
+open or prior close. Signal% is the published equal-weight path and
+stays blank on messy fills. Starts YES is a start-date chip, not a
+daily win rate.</p>
+<div id="fillScenarioRoot">
+<div class="fill-tabs">
+<button type="button" data-fill-mode="market" class="on">Market buy</button>
+<button type="button" data-fill-mode="limit">Limit buy</button>
+</div>
+<h3 style="font-size:13px;color:#aeb9cf">Market buy</h3>
+<div style="overflow-x:auto"><table>
+{ strategy_format_rows(payload, MARKET_KEYS, MARKET_LABEL) }
+</table></div>
+<h3 style="font-size:13px;color:#aeb9cf">Limit buy</h3>
+<div style="overflow-x:auto"><table>
+{ strategy_format_rows(payload, LIMIT_KEYS, LIMIT_LABEL) }
+</table></div>
+</div>
+<h2>Every strategy × reality (ledger detail)</h2>
+<p class="mut">Close $ / max DD / miss / partial for audit. Same leftover-cash butterfly.</p>
 <div style="overflow-x:auto"><table>
 <tr><th>Strategy</th><th>Reality</th><th>Book%</th><th>Close $</th>
 <th>Max DD vs $10k</th><th>&lt;$10k</th><th>Starts YES</th>
@@ -1252,7 +1374,9 @@ room, α from prior sessions only.</li>
 <p class="mut">Code: <code>src/book_fill_reality.py</code>.
 Regenerate with <code>python -m src.book_fill_reality --write</code>.
 Elapsed { payload.get("elapsed_sec") }s.</p>
-</div></body></html>
+</div>
+<script src="fill-scenarios.js"></script>
+</body></html>
 """
 
 
@@ -1260,8 +1384,9 @@ def overlay_snippet() -> str:
     return """
 <details id="bookFillReality" class="how" open>
 <summary>$10k butterfly fill realities — research (not a wire)</summary>
-<p class="mut">Official-open cash book vs limit / market / partial / gap
-messiness. Live <code>flatten_robust</code>, hard-red sit, and Webull paper
+<p class="mut">Same strategy columns (Win% · $ days · Starts · Book%).
+Market-buy = wrong price / partial / missed. Limit-buy = fill or miss.
+Live <code>flatten_robust</code>, hard-red sit, and Webull paper
 are untouched. Starts YES is a start-date chip, not a daily win rate.</p>
 <div id="bookFillRealityBody" class="mut">loading book-fill reality…</div>
 <p class="mut"><a href="book-fill-reality.html" style="color:#93c5fd">full overlay</a>

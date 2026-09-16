@@ -257,6 +257,8 @@ def test_source_policy_research_only() -> None:
     })
     assert "flatten_robust" in html
     assert "Research only" in html
+    assert "Market buy" in html and "Limit buy" in html
+    assert "Win%" in html and "Book%" in html
 
 
 def test_empty_build_does_not_crash() -> None:
