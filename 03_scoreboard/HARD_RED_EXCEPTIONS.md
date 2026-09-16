@@ -1,8 +1,8 @@
 # Hard-red exceptions — daily investigator list
 
-Live sleeves still SIT on S≤−3. This list is the investigator card for every looker that morning, ranked by idiosyncratic score so hard-red does not hide E-beats / green cameras.
+Live sleeves still SIT on S≤−3. Search a ticker for every session since 8/13: cameras (+N −N), 09:30 open, close, same-day % and hold-1/3/5 with actual prices.
 
-Generated 2026-09-16T12:53:23.064566-04:00 · 2026-08-13 → 2026-09-15 · live sit **untouched**.
+Generated 2026-09-16T13:07:44.246690-04:00 · 2026-08-13 → 2026-09-15 · live sit **untouched**.
 
 ## Latest morning
 
@@ -33,10 +33,10 @@ Generated 2026-09-16T12:53:23.064566-04:00 · 2026-08-13 → 2026-09-15 · live 
 ## If we had taken them on hard-red sits (research)
 
 - Hard-red mornings in window: 11
-- long hold-1: n=70 win=47.1% mean 0.133%
-- long hold-3: n=64 win=46.9% mean 0.261%
-- short hold-1: n=72 win=52.8% mean 0.294%
-- short hold-3: n=65 win=55.4% mean 0.325%
+- long hold-1: n=80 win=52.5% mean 0.658%
+- long hold-3: n=72 win=45.8% mean -0.902%
+- short hold-1: n=80 win=52.5% mean 0.799%
+- short hold-3: n=72 win=51.4% mean 0.627%
 
 KEEP still wants >55% after fees and n≥30. Thin n is not a wire.
 

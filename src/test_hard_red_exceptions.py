@@ -1,6 +1,6 @@
 """Idiosyncratic ranker for hard-red sit mornings."""
 from src.hard_red_exceptions import (
-    idio_score, long_ok, rank_day, run, short_ok,
+    build_history, horizon_pack, idio_score, long_ok, rank_day, run, short_ok,
 )
 
 
@@ -68,3 +68,46 @@ def test_run_without_panel_is_ok_false(tmp_path, monkeypatch):
     monkeypatch.setattr(fm, "PANEL_PATH", tmp_path / "missing.json")
     doc = run()
     assert doc["ok"] is False
+
+
+def test_horizon_pack_uses_open_to_later_close():
+    cal = ["2026-08-13", "2026-08-14", "2026-08-17"]
+    book = {"AAA": {
+        "2026-08-13": {"o": 10.0, "c": 11.0},
+        "2026-08-14": {"o": 11.0, "c": 12.0},
+        "2026-08-17": {"o": 12.0, "c": 9.0},
+    }}
+    h1 = horizon_pack(book, cal, "AAA", "2026-08-13", 1, "long")
+    assert h1["pct"] == 20.0
+    assert h1["px"] == 12.0
+    assert h1["date"] == "2026-08-14"
+    h3 = horizon_pack(book, cal, "AAA", "2026-08-13", 2, "long")
+    assert h3["pct"] == -10.0
+    sh = horizon_pack(book, cal, "AAA", "2026-08-13", 1, "short")
+    assert sh["pct"] == -20.0
+
+
+def test_history_has_camera_tally_every_session():
+    cal = ["2026-08-13", "2026-08-14"]
+    probe = {
+        "2026-08-13": {
+            "AAA": _card(cond_good=5, cond_bad=2, e_pol="good",
+                         boxes={"join": "good", "gen": "bad"},
+                         files=["data/factor_mine/panel.json"]),
+        },
+    }
+    mornings = {"2026-08-13": {"s": -3.8, "hard_red": True},
+                "2026-08-14": {"s": 1.0, "hard_red": False}}
+    px = {"AAA": {
+        "2026-08-13": {"o": 10, "c": 10.5},
+        "2026-08-14": {"o": 10.5, "c": 11},
+    }}
+    hist = build_history(probe, mornings, cal, px)
+    rows = hist["AAA"]
+    assert len(rows) == 2
+    assert rows[0]["cams"] == "+5 −2"
+    assert rows[0]["hard_red"] is True
+    assert rows[0]["n_pos"] == 5
+    assert rows[1]["on_list"] is False
+    assert rows[0]["day_pct"] == 5.0
+    assert rows[0]["h1"] == 10.0
