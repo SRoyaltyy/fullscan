@@ -475,134 +475,219 @@ def _csv_wanted(path: Path, wanted: set[str], tick_keys=("Ticker", "ticker")) ->
     return out
 
 
-def _tone_num(v, band: float = 0.0) -> str:
-    x = fm._finite(v)
-    if x is None:
-        return "missing"
-    if abs(float(x)) <= band:
-        return "neutral"
-    return "good" if float(x) > 0 else "bad"
+def _ab_path(date: str) -> Path:
+    for name in (f"{date}_ab_slim.csv", f"{date}_ab_checklist_enriched.csv",
+                 f"{date}_ab_checklist.csv"):
+        p = ROOT / "data" / "ab_checklist" / name
+        if p.is_file():
+            return p
+    return ROOT / "data" / "ab_checklist" / f"{date}_ab_slim.csv"
 
 
-def _stance_tone(st: str) -> str:
-    s = str(st or "").strip().lower()
-    if s in ("favorable", "good", "up", "bull", "green"):
-        return "good"
-    if s in ("hostile", "bad", "down", "bear", "red"):
-        return "bad"
-    if s in ("neutral", "flat", "yellow"):
-        return "neutral"
-    return "missing"
+def build_skinny_index(wanted: set[str], cal: list[str]) -> dict:
+    """Same session objects ticker-lookback paints, without 11k-row Finviz maps."""
+    sessions = []
+    for d in cal:
+        book_json = {}
+        pjson = ROOT / "data" / "stock_book" / f"{d}_stock_book.json"
+        if pjson.is_file():
+            try:
+                book_json = json.loads(pjson.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError):
+                book_json = {}
+        buys, sells = {}, {}
+        for _h, entry in (book_json.get("books") or {}).items():
+            for i, r in enumerate(entry.get("buy") or [], 1):
+                t = fm._tick(r.get("ticker"))
+                if t in wanted:
+                    buys.setdefault(t, {})[_h] = {
+                        "rank": i, "score": r.get("score"), "reasons": r.get("reasons"),
+                    }
+            for i, r in enumerate(entry.get("sell") or [], 1):
+                t = fm._tick(r.get("ticker"))
+                if t in wanted:
+                    sells.setdefault(t, {})[_h] = {"rank": i, "score": r.get("score")}
+        join_map = _csv_wanted(ROOT / "data" / "join" / f"{d}_ranked.csv", wanted)
+        fv_map = _csv_wanted(ROOT / "data" / "exports" / f"finviz_{d}.csv", wanted)
+        ab_map = _csv_wanted(_ab_path(d), wanted)
+        peer_map = _csv_wanted(ROOT / "data" / "peers" / f"{d}_peer_rs.csv", wanted)
+        univ_map = _csv_wanted(ROOT / "data" / "universe" / f"{d}_membership.csv", wanted)
+        book_map = _csv_wanted(ROOT / "data" / "stock_book" / f"{d}_stock_book.csv", wanted)
+        cat_path = ROOT / "01_daily" / "catalyst" / f"{d}_dossiers.json"
+        catalyst_map = {}
+        if cat_path.is_file():
+            try:
+                payload = json.loads(cat_path.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError):
+                payload = {}
+            for r in payload.get("dossiers") or []:
+                t = fm._tick((r or {}).get("ticker"))
+                if t in wanted:
+                    catalyst_map[t] = r
+        sessions.append({
+            "date": d,
+            "has": {
+                "book": bool(book_map), "join": bool(join_map),
+                "finviz": bool(fv_map), "ab": bool(ab_map),
+                "peer": bool(peer_map), "universe": bool(univ_map),
+                "quote_colors": False, "catalyst": bool(catalyst_map),
+                "green": False,
+            },
+            "n_book": len(book_map), "n_join": len(join_map),
+            "n_finviz": len(fv_map), "n_ab": len(ab_map), "n_peer": len(peer_map),
+            "book": book_map, "join": join_map, "finviz": fv_map, "ab": ab_map,
+            "peer": peer_map, "universe": univ_map, "quote_colors": {},
+            "catalyst": catalyst_map, "buys": buys, "sells": sells,
+            "green_buy": set(), "live_buy": set(),
+            "green_meta": {},
+        })
+    for i, sess in enumerate(sessions):
+        sess["prior"] = sessions[i - 1] if i else None
+        sess["prior_date"] = sessions[i - 1]["date"] if i else None
+    return {"sessions": sessions, "paper": {}, "dates": list(cal), "preopen": {}}
 
 
-def _weather_pack(date: str) -> dict:
-    path = ROOT / "01_daily" / "weather" / f"{date}_weather.json"
-    if not path.is_file():
-        return {}
+def px_book_official(tickers: list[str], cal: list[str]) -> dict:
+    """09:30 open / 16:00 close from ohlc.parquet, then same-dated Finviz
+    only when Prev Close matches the prior official close (completed tape).
+    Never loads the 11k-row Finviz maps into ticker_lookback's cache.
+    """
+    names = [fm._tick(t) for t in tickers if fm._tick(t)]
+    wanted = set(names)
+    book: dict[str, dict] = {}
     try:
-        doc = json.loads(path.read_text(encoding="utf-8"))
-    except (OSError, json.JSONDecodeError):
-        return {}
-    signals = doc.get("signals") or {}
-    sectors = {}
-    for name, blob in ((doc.get("stances") or {}).get("sector") or {}).items():
-        if isinstance(blob, dict):
-            sectors[str(name)] = _stance_tone(blob.get("stance"))
-        else:
-            sectors[str(name)] = _stance_tone(blob)
-    gen_dir = str(signals.get("general_direction") or "").lower()
-    gen = _stance_tone(gen_dir) if gen_dir else _tone_num(signals.get("general_score"), 0.5)
-    return {
-        "s": fm._finite(signals.get("general_score")),
-        "gen": gen,
-        "sectors": sectors,
-        "file": str(path.relative_to(ROOT)),
-    }
+        bars = tl._ohlc_bars()
+    except Exception:
+        bars = None
+    prior_c: dict[str, float] = {}
+    for d in cal:
+        fvs = _csv_wanted(ROOT / "data" / "exports" / f"finviz_{d}.csv", wanted)
+        for t in names:
+            o = c = None
+            if bars is not None and not getattr(bars, "empty", True):
+                try:
+                    off = tl._official_ohlc(t, d, bars)
+                    o, c = off.get("open"), off.get("close")
+                except Exception:
+                    pass
+            fv = fvs.get(t) or {}
+            if o is None or c is None:
+                prev = tl._num(fv.get("Prev Close") or fv.get("Previous Close"))
+                fo = tl._num(fv.get("Open"))
+                fc = tl._num(fv.get("Price"))
+                if prev is not None and t in prior_c and tl._px_matches(prev, prior_c[t]):
+                    o = o if o is not None else fo
+                    c = c if c is not None else fc
+            if o is None and c is None:
+                continue
+            slot = book.setdefault(t, {}).setdefault(d, {})
+            if o is not None:
+                slot["o"] = float(o)
+            if c is not None:
+                slot["c"] = float(c)
+                prior_c[t] = float(c)
+    return book
+
+
+def extend_cal(cal: list[str]) -> list[str]:
+    """Panel sessions plus later trading days we can price (H1/H5 tails)."""
+    extra: list[str] = []
+    try:
+        extra = list(tl.session_dates() or [])
+    except Exception:
+        extra = []
+    try:
+        bars = tl._ohlc_bars()
+        if bars is not None and not getattr(bars, "empty", True):
+            idx = bars.index
+            if getattr(idx, "nlevels", 1) >= 1:
+                extra.extend(str(x) for x in idx.get_level_values(0).unique())
+    except Exception:
+        pass
+    start = cal[0] if cal else "2026-08-13"
+    out = sorted({d for d in list(cal) + extra if d and str(d) >= start and tl.is_trading_date(d)})
+    return out or list(cal)
+
+
+def merge_px(base: dict, extra: dict) -> dict:
+    for t, days in (extra or {}).items():
+        for d, slot in (days or {}).items():
+            dst = base.setdefault(t, {}).setdefault(d, {})
+            if slot.get("o") is not None:
+                dst["o"] = float(slot["o"])
+            if slot.get("c") is not None:
+                dst["c"] = float(slot["c"])
+    return base
 
 
 def load_lookback(tickers: list[str], from_date: str | None,
                   to_date: str | None, cal: list[str] | None = None) -> dict:
-    """Reconstruct 09:30 cameras for every session from join/weather/Finviz.
+    """Real 09:30 cameras via ticker_lookback_cli._scan_session.
 
-    Does not load ticker-lookback's full index (that OOMs on 11k Finviz
-    dumps). Streams only the names we already track.
+    Skinny index keeps only tracked names so we do not load 11k-row
+    Finviz dumps the way build_index() does.
     """
+    from . import ticker_lookback_cli as scan
     wanted = {fm._tick(t) for t in tickers if fm._tick(t)}
     dates = list(cal or [])
     if not dates:
-        weather_dir = ROOT / "01_daily" / "weather"
-        if weather_dir.is_dir():
-            dates = sorted(
-                p.name[:10] for p in weather_dir.glob("*_weather.json")
-                if (not from_date or p.name[:10] >= from_date)
-                and (not to_date or p.name[:10] <= to_date)
-            )
+        return {}
+    skinny = build_skinny_index(wanted, dates)
+    tl._INDEX = skinny
     out: dict[tuple[str, str], dict] = {}
-    prior_fv: dict[str, dict] = {}
+    by_date = {s["date"]: s for s in skinny["sessions"]}
     for date in dates:
-        wx = _weather_pack(date)
-        join_path = ROOT / "data" / "join" / f"{date}_ranked.csv"
-        joins = _csv_wanted(join_path, wanted)
-        fv_path = ROOT / "data" / "exports" / f"finviz_{date}.csv"
-        fvs = _csv_wanted(fv_path, wanted)
+        sess = by_date.get(date)
+        if not sess:
+            continue
         for t in wanted:
-            boxes = {k: "missing" for k in CAM_ORDER}
-            srcs: list[str] = []
-            if wx:
-                boxes["gen"] = wx.get("gen") or "missing"
-                srcs.append(wx.get("file") or "01_daily/weather")
-            fv = fvs.get(t) or {}
-            sector = (fv.get("Sector") or fv.get("sector") or
-                      (joins.get(t) or {}).get("sector") or "")
-            if sector and wx.get("sectors"):
-                boxes["sector"] = wx["sectors"].get(sector) or "missing"
-            j = joins.get(t)
-            if j:
-                srcs.append(f"data/join/{date}_ranked.csv")
-                boxes["join"] = _tone_num(j.get("total_score") or j.get("score_norm"))
-            if fv:
-                srcs.append(f"data/exports/finviz_{date}.csv")
-                rel = fm._finite(fv.get("Relative Volume") or fv.get("Rel Volume"))
-                if rel is not None:
-                    boxes["vol"] = _tone_num(float(rel) - 1.0, 0.3)
-                title = (fv.get("News Title") or "").strip()
-            else:
-                title = ""
-            prev = prior_fv.get(t) or {}
-            ch = prev.get("Change") or prev.get("Change from Open")
-            if ch not in (None, ""):
-                try:
-                    boxes["yday"] = _tone_num(float(str(ch).replace("%", "").replace(",", "")))
-                except (TypeError, ValueError):
-                    pass
-            news_tone = "missing"
-            if title:
-                news_tone = "neutral"
-                boxes["news"] = "neutral"
-            rsi = None
             try:
-                rsi = float(str(fv.get("RSI (14)") or fv.get("RSI") or "").replace(",", ""))
-            except (TypeError, ValueError):
-                rsi = None
+                card = scan._scan_session(sess, t)
+            except Exception:
+                card = None
+            if not card:
+                continue
+            boxes = dict(card.get("boxes") or {})
+            ch = ((card.get("finviz") or {}).get("change_pct"))
+            if ch is not None and boxes.get("yday") in (None, "missing"):
+                boxes["yday"] = tl._polarity(ch)
             n_pos, n_neg = _tally_boxes(boxes)
+            cond = tl.general_condition(boxes) if hasattr(tl, "general_condition") else {}
+            if cond:
+                n_pos = int(cond.get("good") or n_pos)
+                n_neg = int(cond.get("bad") or n_neg)
+            srcs = list(card.get("sources") or [])
+            arts = card.get("artifacts_that_day") or {}
+            if isinstance(arts, dict):
+                srcs.extend(k for k, v in arts.items() if v)
+            news = (tl.preopen_packet(date, prior_date=sess.get("prior_date")).get("news") or {}).get(t) or {}
+            title = ""
+            if isinstance(news, dict):
+                ev = news.get("events") or []
+                if ev:
+                    title = str((ev[0] if isinstance(ev[0], dict) else {"t": ev[0]}).get("title") or ev[0])[:160]
+            headline = card.get("reasons") or title
             out[(date, t)] = {
                 "date": date,
                 "boxes": boxes,
                 "condition": {"good": n_pos, "bad": n_neg},
                 "sources": srcs,
                 "e_pol": "missing",
-                "headline": title,
-                "news": {"title": title, "tone": news_tone} if title else {},
-                "rsi": rsi,
+                "headline": headline,
+                "news": {"title": headline, "tone": boxes.get("news") or "missing"},
+                "rsi": None,
+                "signals": card.get("signals") or {},
+                "class": card.get("class"),
             }
-        prior_fv = fvs or prior_fv
     return out
 
 
 def build_history(probe: dict, mornings: dict, cal: list[str],
-                  px_book: dict, lookback: dict | None = None) -> dict[str, list]:
+                  px_book: dict, lookback: dict | None = None,
+                  px_cal: list[str] | None = None) -> dict[str, list]:
     """Every session since 8/13. Off-list days still get reconstructed cameras."""
     lookback = lookback or {}
+    px_cal = list(px_cal or cal)
     tickers = sorted({
         t for m in (probe or {}).values() for t in (m or {})
     })
@@ -666,11 +751,11 @@ def build_history(probe: dict, mornings: dict, cal: list[str],
                 pack = idio_score(mini)
                 row["idio"] = pack["score"]
                 row["why"] = [
-                    "Reconstructed 09:30 state from join / weather / Finviz / news "
-                    "(name was not on that morning's shopping lists).",
+                    "Reconstructed 09:30 state from ticker-lookback cameras "
+                    "(join / predict / AB / peer / news / digest — not on shopping lists).",
                 ] + why_still(mini, pack, side="long", hard=hard, s=s)
             for h in HOLDS:
-                hp = horizon_pack(px_book, cal, t, date, h, "long")
+                hp = horizon_pack(px_book, px_cal, t, date, h, "long")
                 row[f"h{h}"] = hp.get("pct")
                 row[f"h{h}_px"] = hp.get("px")
                 row[f"h{h}_date"] = hp.get("date")
@@ -692,8 +777,10 @@ def run(*, panel: dict | None = None, probe: dict | None = None,
     tickers = sorted({
         t for m in (probe or {}).values() for t in (m or {})
     })
-    if yahoo and cal:
-        px_book = fill_yahoo(px_book, tickers, cal[0], cal[-1])
+    px_cal = extend_cal(cal)
+    px_book = merge_px(px_book, px_book_official(tickers, px_cal))
+    if yahoo and px_cal:
+        px_book = fill_yahoo(px_book, tickers, px_cal[0], px_cal[-1])
     lb_map = {}
     if lookback and cal:
         lb_map = load_lookback(tickers, cal[0], cal[-1], cal=cal)
@@ -708,11 +795,13 @@ def run(*, panel: dict | None = None, probe: dict | None = None,
             hard = False
         cards = probe.get(date) or {}
         days.append(rank_day(
-            date, cards, s=s, hard=hard, cal=cal, bars=None, px_book=px_book,
+            date, cards, s=s, hard=hard, cal=px_cal, bars=None, px_book=px_book,
         ))
     bt = backtest(days)
     latest = next((d for d in reversed(days) if d.get("n_cards")), None)
-    history = build_history(probe, mornings, cal, px_book, lookback=lb_map)
+    history = build_history(
+        probe, mornings, cal, px_book, lookback=lb_map, px_cal=px_cal,
+    )
     return {
         "ok": True,
         "generated_at": datetime.now(tl.ET).isoformat(),

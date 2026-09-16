@@ -1,0 +1,15 @@
+{
+ "risk_tilt": null,
+ "macros": [],
+ "sector_tilts": {
+  "Technology": "bullish",
+  "Cyber": "bullish",
+  "Metals": "bearish"
+ },
+ "tickers": {
+  "SMH": 4.0,
+  "XME": -4.0
+ },
+ "b1_inject": "NEWS_JUDGE: n=7 rescued=5\nMACRO Fed hike path: [hawkish] Warsh JH + cash close priced a September hike; gold sold (session/1d-1w)\nMACRO yields/breadth: [bearish] Rising yields hitting IWM; Mag7/AI names were the down-tape beta (SPX/IWM)\nSECTOR semis: [bullish] ASML 2027 EUV sold out on AI demand \u2014 SOX only, not SPX risk-on (SMH)\nSECTOR software: [mixed] ADBE beat/raise into hawkish multiples \u2014 do not buy IGV on the print (IGV)\nSECTOR cyber: [bullish] CRWD/PANW AI-security outrunning broad software (cyber basket)\nSECTOR metals: [bearish] Copper off records on US refined-copper tariff uncertainty (XME)\nINTERACTION: one hawkish-Fed cluster + AI-semi bid = mixed QQQ; yields-up/IWM is the breadth channel\nWATCH: fade Barrick/gold-up vs Warsh gold-down; FOMC is \u201cahead,\u201d not a same-session unresolved binary \u2014 do not pre-score B3",
+ "date": "2026-07-31"
+}
