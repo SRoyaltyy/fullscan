@@ -1,6 +1,6 @@
 {
   "date": "2026-09-16",
-  "generated_at": "2026-09-16T04:49:49.089619-04:00",
+  "generated_at": "2026-09-16T04:53:05.525553-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -417,14 +417,14 @@
           "path": "01_daily/weather/2026-09-16_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9313 vix=falling yields=flat",
-          "size": 9313
+          "reason": "sectors=11 bytes=9995 vix=falling yields=flat",
+          "size": 9995
         }
       ],
-      "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+      "said": "favorable 1 \u00b7 hostile 7 \u00b7 neutral 3",
       "bullets": [
-        "hostile: Basic Materials, Consumer Cyclical, Consumer Defensive, Financial, Healthcare, Industrials, Real Estate, Utilities",
-        "events bull 4 / bear 14"
+        "hostile: Basic Materials, Consumer Cyclical, Consumer Defensive, Healthcare, Industrials, Real Estate, Utilities",
+        "events bull 2 / bear 12"
       ]
     },
     {
@@ -566,8 +566,8 @@
           "path": "01_daily/weather/2026-09-16_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9313 vix=falling yields=flat",
-          "size": 9313
+          "reason": "sectors=11 bytes=9995 vix=falling yields=flat",
+          "size": 9995
         },
         {
           "key": "in_ab",
@@ -585,7 +585,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5899",
-          "size": 2238775
+          "size": 2272781
         },
         {
           "key": "peers",
@@ -642,9 +642,9 @@
           "size": 5954895
         }
       ],
-      "said": "206 rows",
+      "said": "203 rows",
       "bullets": [
-        "MNDY, SKHY, AVPT, NTNX, P"
+        "RDVT, GCT, HPE, DELL, PGY"
       ]
     },
     {
@@ -743,10 +743,10 @@
       ]
     },
     "weather": {
-      "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
+      "said": "favorable 1 \u00b7 hostile 7 \u00b7 neutral 3",
       "bullets": [
-        "hostile: Basic Materials, Consumer Cyclical, Consumer Defensive, Financial, Healthcare, Industrials, Real Estate, Utilities",
-        "events bull 4 / bear 14"
+        "hostile: Basic Materials, Consumer Cyclical, Consumer Defensive, Healthcare, Industrials, Real Estate, Utilities",
+        "events bull 2 / bear 12"
       ]
     }
   },
@@ -1279,6 +1279,31 @@
         }
       ],
       "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-16\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-09-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-16T04:53:04.711525-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-09-16.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11089030,
+          "preview": "11634 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11428811,
+          "preview": "11634 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11634 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11634 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
