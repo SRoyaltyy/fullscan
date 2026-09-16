@@ -7,7 +7,7 @@ error_category: "D"
 falsifier: "If leftover Finviz 1d AND 1w RS stay positive, PM is non-haven, Channel 1 1d rel ≤0, leading S0–S3 net negative, veto is suppressed, and XLP still closes flat or up, leftover RS was the bounce — revise rather than defend."
 sector: "Consumer Defensive"
 date: "2026-09-16"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Defensive — 2026-09-16

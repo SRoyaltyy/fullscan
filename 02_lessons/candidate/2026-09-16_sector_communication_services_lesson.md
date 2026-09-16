@@ -7,7 +7,7 @@ error_category: "D"
 falsifier: "Live XLC PM is actually green and on the sector board, and META and GOOGL are both bid together — then NQ/ES tape_anchor agreeing with S4>0 is real participation, not a mapping error. Also falsified if FOMC+SEP+presser is already printed and XLC is catching a known risk-on, or if the two-name book is printing a same-morning ad/AI HIT that S1 should pay."
 sector: "Communication Services"
 date: "2026-09-16"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Communication Services — 2026-09-16

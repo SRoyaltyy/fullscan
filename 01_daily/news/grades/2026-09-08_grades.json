@@ -12,14 +12,15 @@
       ],
       "entry_date": "2026-09-09",
       "entry_open": 393.07,
-      "window_through": "2026-09-14",
-      "trading_days_elapsed": 3,
+      "window_through": "2026-09-16",
+      "trading_days_elapsed": 5,
       "complete": false,
-      "latest_close": 381.5,
-      "current_return_pct": -2.94,
+      "latest_close": 376.35,
+      "current_return_pct": -4.25,
       "horizon_returns_pct": {
         "1d": -2.7,
-        "3d": -2.94
+        "3d": -2.94,
+        "5d": -4.25
       },
       "mfe_pct": 0.63,
       "mfe_day": "2026-09-09",
@@ -37,17 +38,18 @@
       ],
       "entry_date": "2026-09-09",
       "entry_open": 43.4,
-      "window_through": "2026-09-14",
-      "trading_days_elapsed": 3,
+      "window_through": "2026-09-16",
+      "trading_days_elapsed": 5,
       "complete": false,
-      "latest_close": 41.82,
-      "current_return_pct": 3.78,
+      "latest_close": 41.32,
+      "current_return_pct": 5.03,
       "horizon_returns_pct": {
         "1d": 2.07,
-        "3d": 3.78
+        "3d": 3.78,
+        "5d": 5.03
       },
-      "mfe_pct": 3.95,
-      "mfe_day": "2026-09-14",
+      "mfe_pct": 5.47,
+      "mfe_day": "2026-09-16",
       "ever_profitable": true,
       "first_profitable_day": "2026-09-09"
     }
@@ -71,7 +73,12 @@
       "win_rate": 50.0,
       "avg": 0.42
     },
-    "close_5d": null,
+    "close_5d": {
+      "n": 2,
+      "wins": 1,
+      "win_rate": 50.0,
+      "avg": 0.39
+    },
     "close_10d": null,
     "close_14d": null,
     "side_buy": {
@@ -82,7 +89,12 @@
         "win_rate": 100.0,
         "avg": 0.63
       },
-      "close_5d": null
+      "close_5d": {
+        "n": 1,
+        "wins": 0,
+        "win_rate": 0.0,
+        "avg": -4.25
+      }
     },
     "side_sell": {
       "n": 1,
@@ -90,9 +102,14 @@
         "n": 1,
         "wins": 1,
         "win_rate": 100.0,
-        "avg": 3.95
+        "avg": 5.47
       },
-      "close_5d": null
+      "close_5d": {
+        "n": 1,
+        "wins": 1,
+        "win_rate": 100.0,
+        "avg": 5.03
+      }
     }
   }
 }

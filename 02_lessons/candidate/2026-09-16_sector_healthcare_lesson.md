@@ -7,7 +7,7 @@ error_category: "D"
 falsifier: "If this trigger recurs, official direction is forced flat instead of tape_anchor up, and XLV still closes ≥ +0.3% absolute, revise the follow-the-factor-card rule rather than defend it."
 sector: "Healthcare"
 date: "2026-09-16"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Healthcare — 2026-09-16

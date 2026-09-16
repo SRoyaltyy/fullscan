@@ -7,7 +7,7 @@ error_category: "D"
 falsifier: "Next FOMC/path-binary morning with live Finviz ES/NQ inside ±0.5%, net-negative XLY card, confirming 1d rel, official kept down — and cash XLY finishes up because the unprinted spend beat plus a non-hawkish Chair actually bid the book. Also falsified if yfinance ES/NQ vs prior close matches live Finviz (no stale-anchor split) and the only flatten is a pure size-gate, yet cash is still down — then the object is the gate, not the futures series."
 sector: "Consumer Cyclical"
 date: "2026-09-16"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Cyclical — 2026-09-16
