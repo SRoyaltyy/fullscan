@@ -184,12 +184,17 @@ jobs:
             cp -a dashboard/day-board/. pages_out/dashboard/day-board/
             echo "Overlayed dashboard/day-board from main"
           fi
+          if [ -f dashboard/hard-red-exceptions/index.html ]; then
+            mkdir -p pages_out/dashboard/hard-red-exceptions
+            cp -a dashboard/hard-red-exceptions/. pages_out/dashboard/hard-red-exceptions/
+            echo "Overlayed dashboard/hard-red-exceptions from main"
+          fi
 
           # The paper book is also copied to the site root. Mirror every
           # sub-dash there so homepage links like sleeve-merge/ resolve.
           for sub in boring-winners ticker-lookback gainer-lookback flatten-lookback \
                      mover-lookback sleeve-combine sleeve-merge mover-paper book-paper \
-                     strategy-board factor-mine day-board down-day-mine; do
+                     strategy-board factor-mine day-board down-day-mine hard-red-exceptions; do
             if [ -d "pages_out/dashboard/${sub}" ]; then
               mkdir -p "pages_out/${sub}"
               cp -a "pages_out/dashboard/${sub}/." "pages_out/${sub}/"
@@ -228,6 +233,7 @@ jobs:
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/strategy-board/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/factor-mine/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/day-board/"
+          echo "https://SRoyaltyy.github.io/fullscan/dashboard/hard-red-exceptions/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/down-day-mine/"
           echo "https://SRoyaltyy.github.io/fullscan/"
           echo "If 404: Settings → Pages → Deploy from branch → gh-pages / root"

@@ -1,0 +1,53 @@
+name: Hard-red exceptions (daily investigator list)
+
+# Rank every 09:30 looker with the investigator card, even on S≤−3 sit
+# mornings. Live flatten_robust / Webull sit is untouched.
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows:
+      - "Factor strategy mine"
+      - "Pre-Open ALL (predictive one-shot)"
+    types: [completed]
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: hard-red-exceptions
+  cancel-in-progress: true
+
+jobs:
+  rank:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install pandas pyarrow pytest
+      - name: Test
+        run: python -m pytest -q src/test_hard_red_exceptions.py
+      - name: Rank lookers
+        run: |
+          set -euo pipefail
+          PYTHONPATH=. python3 -m src.hard_red_exceptions --write
+          test -s data/hard_red_exceptions/latest.json
+          test -s dashboard/hard-red-exceptions/index.html
+      - name: Commit
+        run: |
+          bash scripts/safe_git_push.sh \
+            "auto: hard-red exception investigator list" \
+            data/hard_red_exceptions/latest.json \
+            dashboard/hard-red-exceptions/index.html \
+            dashboard/hard-red-exceptions/latest.json \
+            03_scoreboard/HARD_RED_EXCEPTIONS.md
+      - name: Refresh Pages
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy-dashboard.yml --ref main || true
