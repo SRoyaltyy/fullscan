@@ -1377,13 +1377,38 @@
   "LWLG",
   "LXFR",
   "LXP",
-  "LXRX"
+  "LXRX",
+  "LYB",
+  "LYTS",
+  "LYV",
+  "LZB",
+  "LZM",
+  "M",
+  "MA",
+  "MAAS",
+  "MAC",
+  "MAGN",
+  "MAIA",
+  "MAIN",
+  "MAKO",
+  "MAN",
+  "MANE",
+  "MANH",
+  "MAR",
+  "MARA",
+  "MAS",
+  "MATV",
+  "MATW",
+  "MATX",
+  "MAX",
+  "MAZE",
+  "MBC"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 71356,
- "hold_lab_n": 33641,
- "hold_base": 0.4714529962441841,
+ "n_hold": 72656,
+ "hold_lab_n": 34265,
+ "hold_base": 0.47160592380532923,
  "counts": {
   "A@L0_g": [
    60160,
@@ -109255,8 +109280,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 71356,
- "pair_hold_lab_n": 33641,
+ "pair_hold_n": 72656,
+ "pair_hold_lab_n": 34265,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -109365,5 +109390,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789563833
+ "flushed_unix": 1789564021
 }
