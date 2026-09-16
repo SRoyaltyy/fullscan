@@ -591,6 +591,8 @@ def _holes(unique: list[dict], coverage: dict, cal: list[str]) -> list[str]:
     miss_rsi = sum(1 for r in unique if (r.get("features") or {}).get("rsi") is None)
     miss_ret = sum(1 for r in unique if (r.get("features") or {}).get("ret_1") is None)
     miss_news = sum(1 for r in unique if (r.get("features") or {}).get("news") is None)
+    miss_cam = sum(1 for r in unique if (r.get("features") or {}).get("camera_net") is None)
+    miss_sec = sum(1 for r in unique if (r.get("features") or {}).get("sector") is None)
     miss_mark = sum(1 for r in unique if r.get("ret_h") is None)
     if coverage.get("reconstructed"):
         holes.append(
@@ -600,8 +602,11 @@ def _holes(unique: list[dict], coverage: dict, cal: list[str]) -> list[str]:
         )
     if coverage.get("missing"):
         holes.append(f"no proposed tickets: {coverage['missing']}")
-    holes.append(f"rsi missing {miss_rsi}/{n}; ret_1 missing {miss_ret}/{n}; "
-                 f"news/camera missing {miss_news}/{n}")
+    holes.append(
+        f"rsi missing {miss_rsi}/{n}; ret_1 missing {miss_ret}/{n}; "
+        f"news missing {miss_news}/{n}; camera_net missing {miss_cam}/{n}; "
+        f"sector missing {miss_sec}/{n}"
+    )
     holes.append(f"hold-horizon unmarked {miss_mark}/{n} (exit not in archive)")
     holes.append("macro / tape_anchor / channel1 not attached on ticket rows — unused in v1")
     holes.append(
@@ -758,6 +763,15 @@ C_SPECS = {
         "require": {"camera_net_min": 2, "unless_news_bad": True},
         "audit": "camera_net>=+2 unless news bad",
     },
+    "short_vs_green_cameras_net4": {
+        "id": "short_vs_green_cameras",
+        "lesson_id": "short_vs_green_cameras",
+        "side": "short",
+        "action": "block",
+        "enabled": True,
+        "require": {"camera_net_min": 4, "unless_news_bad": True},
+        "audit": "camera_net>=+4 unless news bad (IS-tuned)",
+    },
     "long_vs_hard_red_news": {
         "id": "long_vs_hard_red_news",
         "lesson_id": "long_vs_hard_red_news",
@@ -794,8 +808,8 @@ F2_TIGHT = {
     "action": "block",
     "enabled": True,
     "require": {"rsi_min": 75.0, "ret_1_min": 8.0, "no_camera_support": True,
-                "news_bad": False},
-    "audit": "rsi>=75 & 1d>=+8 & no camera (news missing ok)",
+                "no_news_support": True},
+    "audit": "rsi>=75 & 1d>=+8 & no camera & no news support",
 }
 
 
@@ -916,16 +930,21 @@ def run_v2() -> dict:
     f1 = _reg(F1_SPEC)
     candidates = [("C1", C_SPECS["short_vs_own_recipe"]),
                   ("C2", C_SPECS["short_vs_green_cameras"]),
+                  ("C2t", C_SPECS["short_vs_green_cameras_net4"]),
                   ("C3", C_SPECS["long_vs_hard_red_news"]),
                   ("C4", C_SPECS["short_vs_sector_or_tape"]),
-                  ("F3", F3_SPEC)]
+                  ("F3", F3_SPEC),
+                  ("F2t", F2_TIGHT)]
     # tighter C2: require camera_support AND net>=2
-    c2b = dict(C_SPECS["short_vs_green_cameras"])
-    c2b = json.loads(json.dumps(c2b))
+    c2b = json.loads(json.dumps(C_SPECS["short_vs_green_cameras"]))
     c2b["id"] = "short_vs_green_cameras_and"
     c2b["require"] = {**c2b["require"], "camera_support_and_net": True,
                       "camera_net_min": 2}
     candidates.append(("C2b", c2b))
+    c2t_and = json.loads(json.dumps(C_SPECS["short_vs_green_cameras_net4"]))
+    c2t_and["id"] = "short_vs_green_cameras_net4_and"
+    c2t_and["require"] = {**c2t_and["require"], "camera_support_and_net": True}
+    candidates.append(("C2t_and", c2t_and))
 
     ablations = []
     keep = [F1_SPEC]
@@ -990,15 +1009,17 @@ def run_v2() -> dict:
     )
     v2_oos_ew = ew_avg(per_strat_means(oos_rows, v2, names_full), names_full)
     mute_helps = (mute_ew.get("mean") is not None and v2_oos_ew.get("mean") is not None
-                  and mute_ew["mean"] + 1e-12 >= v2_oos_ew["mean"] and mute_fams)
+                  and mute_ew["mean"] > v2_oos_ew["mean"] + 1e-12 and mute_fams)
     mute_info = {
         "families": sorted(mute_fams),
         "oos_ew": mute_ew.get("mean"),
         "v2_oos_ew": v2_oos_ew.get("mean"),
         "ship": bool(mute_helps),
         "why": (
-            "OOS EW improved" if mute_helps else
-            "hurts or no families" if not mute_fams else
+            "OOS EW strictly improved" if mute_helps else
+            "no mute families" if not mute_fams else
+            "OOS EW unchanged — drop Layer 3"
+            if mute_ew.get("mean") == v2_oos_ew.get("mean") else
             f"OOS EW {mute_ew.get('mean')} < v2 {v2_oos_ew.get('mean')}"
         ),
     }

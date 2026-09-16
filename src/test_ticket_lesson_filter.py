@@ -239,6 +239,36 @@ def test_c2_c3_c4_missing_is_pass() -> None:
     crash_miss = {"ticker": "FOO", "date": "2026-09-11", "rsi": 18.0,
                   "ret_1": -16.0, "crash": True}
     assert tlf.evaluate("short", crash_miss, registry=specs)["action"] == "pass"
+    net4 = {
+        "filters": [{
+            "id": "short_vs_green_cameras",
+            "side": "short", "action": "block", "enabled": True,
+            "require": {"camera_net_min": 4, "unless_news_bad": True},
+        }]
+    }
+    mid = dict(empty, camera_net=3, news="neutral")
+    strong = dict(empty, camera_net=4, news="neutral")
+    assert tlf.evaluate("short", mid, registry=net4)["action"] == "pass"
+    assert tlf.evaluate("short", strong, registry=net4)["action"] == "block"
+    assert tlf.evaluate("short", dict(strong, news="bad"), registry=net4)["action"] == "pass"
+
+
+def test_f2_tight_needs_no_camera_and_no_news_support() -> None:
+    spec = {
+        "filters": [{
+            "id": "overbought_meltup_pause",
+            "side": "long", "action": "block", "enabled": True,
+            "require": {"rsi_min": 75.0, "ret_1_min": 8.0,
+                        "no_camera_support": True, "no_news_support": True},
+        }]
+    }
+    melt = {"ticker": "FOO", "date": "2026-09-11", "rsi": 82.0, "ret_1": 11.0,
+            "camera_support": False, "news": None}
+    assert tlf.evaluate("long", melt, registry=spec)["action"] == "block"
+    assert tlf.evaluate("long", dict(melt, news="bad"), registry=spec)["action"] == "block"
+    assert tlf.evaluate("long", dict(melt, news="good"), registry=spec)["action"] == "pass"
+    assert tlf.evaluate("long", dict(melt, camera_support=True),
+                       registry=spec)["action"] == "pass"
 
 
 def test_strategy_tickets_build_calls_filter() -> None:
@@ -288,6 +318,7 @@ def main() -> None:
     test_live_registry_keeps_f1()
     test_c1_blocks_ob_recipe_with_low_rsi()
     test_c2_c3_c4_missing_is_pass()
+    test_f2_tight_needs_no_camera_and_no_news_support()
     test_strategy_tickets_build_calls_filter()
     test_combo_broker_skips_filtered_short()
     print("ok")

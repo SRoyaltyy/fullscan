@@ -358,6 +358,14 @@ def evaluate(side: str, features: dict | None,
                     continue
                 if support is not None:
                     used["camera_support"] = support
+            if req.get("no_news_support"):
+                news = feat.get("news")
+                if news in (None, "", "missing"):
+                    used["news"] = "missing"
+                elif str(news).lower() == "good":
+                    continue
+                else:
+                    used["news"] = str(news).lower()
             if req.get("hard_red"):
                 hr = feat.get("hard_red")
                 if extra.get("hard_red") is not None:
