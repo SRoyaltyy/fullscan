@@ -2,7 +2,7 @@
   "ok": false,
   "n_fail": 2,
   "grok_busy": true,
-  "updated_at": "2026-09-15T04:05:04.069438-04:00",
+  "updated_at": "2026-09-16T04:05:17.758502-04:00",
   "source": "runtime_status",
   "doors": [
     {
@@ -83,7 +83,7 @@
       "group": "classroom",
       "status": "WARN",
       "required": false,
-      "detail": "401 in last packet 2026-09-14_map_heat.json \u2014 not live",
+      "detail": "401 in last packet 2026-09-16_map_heat.json \u2014 not live",
       "action": "none"
     },
     {
@@ -146,7 +146,7 @@
       "group": "postclose",
       "status": "WARN",
       "required": false,
-      "detail": "latest=success systemd=exit-code",
+      "detail": "latest=cancelled",
       "action": "none"
     },
     {
@@ -164,7 +164,7 @@
       "group": "postclose",
       "status": "WARN",
       "required": false,
-      "detail": "history \u2014 401 in 2026-09-14_map_heat.json; DeepSeek fallback in 2026-08-28_pipeline_health_postclose.json, 2026-09-14_pipeline_health.json (classroom live)",
+      "detail": "history \u2014 401 in 2026-09-16_map_heat.json; DeepSeek fallback in 2026-08-28_pipeline_health_postclose.json, 2026-09-14_pipeline_health.json (classroom live)",
       "action": "none"
     }
   ],
