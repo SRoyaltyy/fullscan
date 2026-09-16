@@ -149,6 +149,36 @@ def test_exit_off_panel_still_grades() -> None:
     assert fires[0]["exit_how"] == "horizon_close_store"
 
 
+def test_pick_leaders_prefers_graded_holdout() -> None:
+    blank = {
+        "name": "tease_h5", "side": "long", "hold": 5, "parent": "tease",
+        "disc": {"n_graded": 20, "win_rate": 0.9, "pnl": 10},
+        "holdout": {"n_graded": 0, "win_rate": None, "pnl": 0},
+    }
+    real = {
+        "name": "tease_h1", "side": "long", "hold": 1, "parent": "tease",
+        "disc": {"n_graded": 12, "win_rate": 0.58, "pnl": 2},
+        "holdout": {"n_graded": 10, "win_rate": 0.4, "pnl": -1},
+    }
+    picked = hrm.pick_disc_leaders([blank, real], side=None, limit=4)
+    assert picked and picked[0]["hold"] == 1
+
+
+def test_fill_horizon_bars_does_not_clobber_open() -> None:
+    rec = fm.make_recipe("t_hot", universe="ohlc_hot", hold=1)
+    rows = [_row("2026-08-18", "AAA", sources=["ohlc_hot"])]
+    panel = _panel(rows, dates=["2026-08-18", "2026-08-19"])
+    bars = {("AAA", "2026-08-18"): {"open": 10.0, "close": 10.2}}
+    from unittest import mock
+    fake = {("AAA", "2026-08-19"): {
+        "open": 9.0, "close": 8.0, "src": "yahoo_session"}}
+    with mock.patch.object(hrm.hrs, "yahoo_session_overlay", return_value=fake):
+        out = hrm.fill_horizon_bars(
+            panel, bars, ["2026-08-18", "2026-08-19"], ["2026-08-18"])
+    assert out[("AAA", "2026-08-18")]["open"] == 10.0
+    assert out[("AAA", "2026-08-19")]["close"] == 8.0
+
+
 def test_allow_mode_takes_open_on_red() -> None:
     rec = fm.make_recipe(
         "t_long", universe="ohlc_hot", hold=1)
@@ -271,11 +301,13 @@ def main() -> None:
     test_split_fires_hold_region()
     test_horizons_use_different_exits()
     test_exit_off_panel_still_grades()
+    test_pick_leaders_prefers_graded_holdout()
+    test_fill_horizon_bars_does_not_clobber_open()
     test_allow_mode_takes_open_on_red()
     test_research_survivor_and_live_keep()
     test_run_synthetic_picks_holdout_not_full_sample()
     test_default_callers_still_sit()
-    print("test_hard_red_strategy_mine: 9 ok")
+    print("test_hard_red_strategy_mine: 11 ok")
 
 
 if __name__ == "__main__":

@@ -323,6 +323,47 @@ def cash_compare_combo(panel: dict, recs: list[dict], spec: dict, *,
     }
 
 
+def fill_horizon_bars(panel: dict, bars: dict, cal: list[str],
+                      red_dates: list[str]) -> dict:
+    """Yahoo regular-session prints for red-day names whose exit is off parquet.
+
+    Research overlay only. Does not write ``data/prices/ohlc.parquet``.
+    Existing official opens are not overwritten.
+    """
+    bars = dict(bars or {})
+    by_date = panel.get("by_date") or {}
+    names = set()
+    for d in red_dates:
+        for r in by_date.get(d) or []:
+            t = fm._tick(r.get("ticker"))
+            if t:
+                names.add(t)
+    if not names or not cal:
+        return bars
+    need_dates = []
+    for d in cal:
+        n_close = sum(1 for t in names
+                      if fm._finite((bars.get((t, d)) or {}).get("close"))
+                      is not None)
+        if n_close < max(3, len(names) // 8):
+            need_dates.append(d)
+    overlay_n = 0
+    for d in need_dates:
+        extra = hrs.yahoo_session_overlay(sorted(names), d)
+        for key, bar in (extra or {}).items():
+            cur = bars.get(key) or {}
+            if fm._finite(cur.get("open")) is None or fm._finite(cur.get("close")) is None:
+                merged = dict(cur)
+                for k, v in bar.items():
+                    if merged.get(k) is None:
+                        merged[k] = v
+                bars[key] = merged
+                overlay_n += 1
+    bars["_yahoo_overlay_n"] = overlay_n
+    bars["_yahoo_overlay_dates"] = list(need_dates)
+    return bars
+
+
 def pick_disc_leaders(rows: list[dict], *, side: str | None,
                       limit: int = TOP_DISC) -> list[dict]:
     usable = []
@@ -332,11 +373,16 @@ def pick_disc_leaders(rows: list[dict], *, side: str | None,
         if int((r.get("disc") or {}).get("n_graded") or 0) < 1:
             continue
         usable.append(r)
-    usable.sort(key=lambda r: _rank_key(r.get("disc") or {}), reverse=True)
+    # Prefer rows whose holdout actually graded — a hold-5 tease with
+    # a blank hidden window is not a leader.
+    graded = [r for r in usable
+              if int((r.get("holdout") or {}).get("n_graded") or 0) >= 1]
+    pool = graded or usable
+    pool.sort(key=lambda r: _rank_key(r.get("disc") or {}), reverse=True)
     # One row per recipe name (best hold).
     seen = set()
     out = []
-    for r in usable:
+    for r in pool:
         base = r.get("parent") or r.get("name")
         if base in seen:
             continue
@@ -392,7 +438,13 @@ def render_md(payload: dict) -> str:
         f"Calendar time-split: cutoff `{payload.get('cutoff')}` "
         f"(hold_frac={payload.get('hold_frac')}). Discovery fires need "
         "the entry **and** the horizon close strictly before cutoff. "
-        "Holdout = entry on/after cutoff. Missing open/exit fail closed.",
+        "Holdout = entry on/after cutoff. Missing open/exit fail closed."
+        + (
+            f" Yahoo regular-session overlay filled `{payload.get('yahoo_overlay_n') or 0}` "
+            f"holes on {payload.get('yahoo_overlay_dates') or []} "
+            "(research only — parquet was not written)."
+            if payload.get("yahoo_overlay_n") else ""
+        ),
         "",
         "## What this is grading",
         "",
@@ -540,8 +592,11 @@ def run(*, from_date: str = book_era.DASHBOARD_START,
         panel = fm.load_or_build_panel(from_date, to_date)
     cal = [d for d in (panel.get("session_dates") or [])
            if d >= from_date and (not to_date or d <= to_date)]
+    built_bars = bars is None
     if bars is None:
         bars = wf.preload_bars(panel)
+    overlay_n = 0
+    overlay_dates = []
     fees = fees if fees is not None else pt.load_fees()
     if regime is None:
         try:
@@ -549,6 +604,11 @@ def run(*, from_date: str = book_era.DASHBOARD_START,
         except Exception:
             regime = {}
     red = hrs.hard_red_dates(cal, regime)
+    if built_bars:
+        bars = fill_horizon_bars(
+            panel, bars, cal, [r["date"] for r in red])
+        overlay_n = int((bars or {}).pop("_yahoo_overlay_n", 0) or 0)
+        overlay_dates = list((bars or {}).pop("_yahoo_overlay_dates", []) or [])
     red_dates = [r["date"] for r in red]
     cutoff = time_split_cutoff(cal)
     rows: list[dict] = []
@@ -639,6 +699,8 @@ def run(*, from_date: str = book_era.DASHBOARD_START,
         "hard_red_days": red,
         "cutoff": cutoff,
         "hold_frac": HOLD_FRAC,
+        "yahoo_overlay_n": overlay_n,
+        "yahoo_overlay_dates": overlay_dates,
         "horizons": list(HORIZONS),
         "keep_bar": {"min_fires": KEEP_MIN_FIRES, "win": KEEP_WIN},
         "research_bar": {
