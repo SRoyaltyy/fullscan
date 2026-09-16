@@ -1,6 +1,6 @@
 {
   "date": "2026-09-16",
-  "generated_at": "2026-09-16T08:52:55.528142-04:00",
+  "generated_at": "2026-09-16T08:53:02.024133-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -584,7 +584,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5900",
-          "size": 2269804
+          "size": 2241245
         },
         {
           "key": "peers",
@@ -1869,6 +1869,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 9.667, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': 9.244, 'dir': 'up', 'conf': 0.65, 'source': 'llm'}, Consumer Cyclical={'score': 2.692, 'dir': 'flat', 'conf': 0.508, 'source': 'llm'}, Consumer Defensive={'score': -0.417, 'dir': 'flat', 'conf': 0.417, 'source': 'llm'}, Energy={'score': -2.88, 'dir': 'down', 'conf': 0.615, 'source': 'llm'}, Financial={'score': 2.998, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Healthcare={'score': 2.995, 'dir': 'up', 'conf': 0.52, 'source': 'llm'}, Industrials={'score': 7.288, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-16\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-16T08:53:00.719632-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-16_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2241245,
+          "preview": "5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 RDVT, GCT, SMTC, HPE, DELL"
+        }
+      ],
+      "preview": "5900 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 RDVT, GCT, SMTC, HPE, DELL"
     }
   ],
   "href": {
