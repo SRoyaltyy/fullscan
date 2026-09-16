@@ -1,11 +1,9 @@
 {
   "date": "2026-09-16",
-  "generated_at": "2026-09-16T04:32:06.759170-04:00",
+  "generated_at": "2026-09-16T04:41:42.517641-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
-  "blockers": [
-    "MISSING Sector board JSON `01_daily/sectors/2026-09-16/_board.json` \u2014 missing"
-  ],
+  "ranker_ready": true,
+  "blockers": [],
   "counts": {
     "ok": 4,
     "partial": 4,
@@ -141,7 +139,7 @@
       "inputs_ready": true,
       "n_req_ok": 5,
       "n_req": 20,
-      "n_opt_ok": 2,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -248,9 +246,9 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-09-16/_board.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 5243
         },
         {
           "key": "qc",
@@ -379,17 +377,18 @@
           "size": 0
         }
       ],
-      "said": "general UP  5.297 \u00b7 news 6 items",
+      "said": "general UP  5.297 \u00b7 sectors 0 up / 0 down / 0 flat \u00b7 news 6 items",
       "bullets": [
         "bad: FOMC/SEP/Warsh 2pm unprinted ~92% hike",
         "bad: 1w 10Y +19bp near 5%",
         "bad: leftover Hormuz Brent ~$108",
         "good: Asia composite +0.64%",
         "good: ES/NQ +1.01%/+1.35% vs cash",
-        "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
-        "S&P 500, Nasdaq, Dow End Lower As Investors Price In Rate Hike Ahead Of Fed Meeting  AMZN, META, MU, TSLA, PLTR In Focus",
-        "Gold prices slide more than 3% after Fed Chair Kevin Warsh\u2019s Jackson Hole comments boost September U.S. rate hike expectations",
-        "Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year"
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing"
       ]
     },
     {
@@ -510,7 +509,7 @@
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
       "status": "PARTIAL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 4,
       "n_opt_ok": 1,
@@ -530,9 +529,9 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-09-16/_board.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 5243
         },
         {
           "key": "in_actions",
@@ -716,7 +715,22 @@
       "score": "5.297",
       "direction": "up"
     },
-    "sectors": {},
+    "sectors": {
+      "said": "0 up / 0 down / 0 flat",
+      "bullets": [
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing",
+        "XLF missing",
+        "XLV missing",
+        "XLI missing",
+        "XLRE missing",
+        "XLK missing",
+        "XLU missing"
+      ]
+    },
     "news": {
       "said": "6 items",
       "bullets": [
@@ -1222,6 +1236,24 @@
         }
       ],
       "preview": "# Premarket Prediction \u2014 2026-09-16\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 5.297 (uncertainty multiplier \u00d71.0) | confidence 0.712\n>\n> **Good news vs bad news:** good +1.75 pts vs bad -2.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - Asia composite +0.64%\n> - ES/NQ +1.01%/+1.35% vs cash\n> - WTI/Brent overnight dip\n> - US-China ~$30bn tariff-cut talks\n> - HY contained 2.71\n>\n> **Bad news driving this:**\n> - FOMC/SEP/Warsh 2pm unprinted ~92% hike\n> - 1w 10Y +19bp near 5%\n> - leftover Hormuz Brent ~$108\n> - BoJ hike-to-1.25% Friday\n> - China credit still collapsing\n>\n> **market uncertainty: **elevated** | VIX 17.11 | policy-uncertainty index 215.48 (1d -202.54)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udfe2 Asia overnight session: +0.5 \u00d7 2.0 = +1.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Overnight news & c"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-09-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-16T04:41:41.984524-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-16/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 5243,
+          "preview": "keys: date, generated_at, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, sectors"
     }
   ],
   "href": {
