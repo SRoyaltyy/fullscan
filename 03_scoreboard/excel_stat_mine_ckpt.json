@@ -77,13 +77,38 @@
   "AGBK",
   "AGCC",
   "AGCO",
-  "AGI"
+  "AGI",
+  "AGIG",
+  "AGIO",
+  "AGL",
+  "AGMB",
+  "AGNC",
+  "AGNT",
+  "AGO",
+  "AGPU",
+  "AGRO",
+  "AGX",
+  "AGYS",
+  "AHCO",
+  "AHR",
+  "AHRT",
+  "AI",
+  "AIB",
+  "AIG",
+  "AII",
+  "AIIO",
+  "AIN",
+  "AIOT",
+  "AIRG",
+  "AIRO",
+  "AIRS",
+  "AISP"
  ],
  "n": 167163,
  "lab_n": 85672,
- "n_hold": 3900,
- "hold_lab_n": 1848,
- "hold_base": 0.47384615384615386,
+ "n_hold": 5200,
+ "hold_lab_n": 2433,
+ "hold_base": 0.4678846153846154,
  "counts": {
   "A@L0_g": [
    60160,
@@ -107955,8 +107980,8 @@
  "pairs": [],
  "pair_n": 164696,
  "pair_lab_n": 84863,
- "pair_hold_n": 3900,
- "pair_hold_lab_n": 1848,
+ "pair_hold_n": 5200,
+ "pair_hold_lab_n": 2433,
  "gate": {
   "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
   "fill_open": [
@@ -108065,5 +108090,5 @@
  "split_kind": "time",
  "cutoff": "2026-07-02",
  "hold_frac": 0.3,
- "flushed_unix": 1789551893
+ "flushed_unix": 1789552074
 }
