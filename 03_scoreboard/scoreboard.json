@@ -22436,7 +22436,7 @@
       "divergence_flagged": true,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-09-16_sector_consumer_cyclical_lesson.md",
       "sources_used": [],
       "horizon_calls": {},
       "sector": "Consumer Cyclical",
