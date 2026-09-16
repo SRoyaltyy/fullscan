@@ -113,7 +113,7 @@ def test_factor_mine_template_paints_every_strategy() -> None:
     assert "liveStartRow" in html
     assert "pending — not 0%" in html
     assert "attachLiveSessionDate" in html
-    assert "let d=liveTicketsDate();" in html
+    assert "if(liveTicketsAreLive()) d=liveTicketsDate();" in html
     assert "h>9 || (h===9 && m>=30)" in html
     assert "D._closedDate" in html
     assert "loadLiveDay" in html
@@ -124,6 +124,7 @@ def test_factor_mine_template_paints_every_strategy() -> None:
     assert "function stripLooksLive" in html
     assert "function elitePx" in html
     assert "elitePx(st)&&ticketsToday" in html
+    assert "takeTicket1d" in html
     assert "function sessionDate" in html
     assert "d!==today" in html or "d !== today" in html
     assert "function ticketRows" in html
@@ -267,6 +268,8 @@ def test_open_pack_wired_when_skip_if_good() -> None:
     assert "function stripLooksLive" in book_suggestions._POLLER_JS
     assert "function elitePx" in book_suggestions._POLLER_JS
     assert "elitePx(strat) && ticketsToday" in book_suggestions._POLLER_JS
+    assert "var takeTicket1d" in book_suggestions._POLLER_JS
+    assert "if(takeTicket1d)" in book_suggestions._POLLER_JS
     assert "function sessionDate" in book_suggestions._POLLER_JS
     assert "src.overlay_live_strip" in dep
     assert "stock_book_1d" in book_suggestions._POLLER_JS

@@ -677,7 +677,8 @@ function liveTicketsAreLive(){
   return !!(st.quote && st.quote.after_open && src.indexOf('elite_live')===0);
 }
 function attachLiveSessionDate(){
-  let d=liveTicketsDate();
+  let d='';
+  if(liveTicketsAreLive()) d=liveTicketsDate();
   if(!d){
     try{
       const parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
@@ -1958,12 +1959,16 @@ window.addEventListener('resize', draw);
     var d=arr[0]||{}, st=arr[1]||{};
     var buys=ticketRows(st,'buy_1d'), sells=ticketRows(st,'sell_1d');
     var ticketsToday=!sessionDate()||!String(st.date||st.clock_legal_for||'')||String(st.date||st.clock_legal_for||'')===sessionDate();
-    if(afterBell()||!elitePx(d)||(elitePx(st)&&ticketsToday)){
+    var takeTicket1d=!!(elitePx(st)&&ticketsToday&&(!afterBell()||ticketsLookLive(st)));
+    if(takeTicket1d){
+      if(st.date) d.date=st.date;
+      if(st.quote) d.quote=st.quote;
+      if(st.clock_legal_for) d.clock_legal_for=st.clock_legal_for;
       if(buys.length) d.buy_1d=buys;
       if(sells.length) d.sell_1d=sells;
     }
-    window.__TODAY_STRATS=st;
-    window.__FM_SESSION=st.date||d.date||'';
+    window.__TODAY_STRATS=takeTicket1d?st:{};
+    window.__FM_SESSION=takeTicket1d?(st.date||d.date||''):(d.date||'');
     var head=document.getElementById('sessionHead');
     if(head && window.__FM_SESSION) head.textContent='· session '+window.__FM_SESSION;
     if(typeof paintSessionStamps==='function') try{ paintSessionStamps(); }catch(e){}
@@ -1975,10 +1980,10 @@ window.addEventListener('resize', draw);
       var D0=window.__FM_D;
       packBit='pack is '+(D0.to_date||'?')+', Pages built '+String(D0.pages_built_at||D0.generated_at||'').slice(0,10)+' · ';
     }
-    stamp.textContent=(st.date||d.date||'')+' · '+packBit+(d.overall||'?')+' · ranker '+(d.ranker_ready?'READY':'BLOCKED')+' · processes ok '+(c.ok||0)+'/'+(c.n||'?')
+    stamp.textContent=(d.date||'')+' · '+packBit+(d.overall||'?')+' · ranker '+(d.ranker_ready?'READY':'BLOCKED')+' · processes ok '+(c.ok||0)+'/'+(c.n||'?')
       +(st.n?(' · '+st.n+' strategies ('+(st.n_ok||0)+' with tickets)'):'')
-      +(st.quote&&st.quote.after_open?' · after 09:30 live':' · not after-open')
-      +(st.quote&&st.quote.src?(' · px '+st.quote.src+(String(st.quote.src).indexOf('elite_live')===0?' (now)':' (not live)')):'');
+      +(d.quote&&d.quote.after_open?' · after 09:30 live':' · not after-open')
+      +(d.quote&&d.quote.src?(' · px '+d.quote.src+(String(d.quote.src).indexOf('elite_live')===0?' (now)':' (not live)')):'');
     var html='';
     (d.buy_1d||[]).forEach(function(x){if(x.ticker) html+='<span class="pill on">BUY '+x.ticker+(x.px!=null?(' '+x.px):'')+'</span>';});
     (d.sell_1d||[]).forEach(function(x){if(x.ticker) html+='<span class="pill">SELL '+x.ticker+(x.px!=null?(' '+x.px):'')+'</span>';});
