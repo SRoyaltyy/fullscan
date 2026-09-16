@@ -976,6 +976,9 @@ def run_v2() -> dict:
         else:
             why = (f"IS blocked {is_bl['meanH']} OOS blocked {oos_bl['meanH']} "
                    f"OOS EW {tr_m} ≥ F1 {f1_m}")
+        drop_id = spec["id"]
+        if tag == "C2":
+            drop_id = "short_vs_green_cameras@net2"
         rec = {
             "tag": tag, "id": spec["id"], "ship": ship, "why": why,
             "is_blocked": is_bl, "oos_blocked": oos_bl,
@@ -985,7 +988,26 @@ def run_v2() -> dict:
         if ship:
             keep.append(spec)
         else:
-            dropped.append({"id": spec["id"], "why": why})
+            dropped.append({"id": drop_id, "why": why, "tag": tag})
+
+    # One live rule per lesson_id — C2t_and is the same unique sleeve as C2t.
+    seen_lessons: set[str] = set()
+    deduped = []
+    for spec in keep:
+        lid = str(spec.get("lesson_id") or spec.get("id"))
+        if lid in seen_lessons:
+            dropped.append({
+                "id": spec.get("id"),
+                "why": f"duplicate sleeve of shipped {lid}",
+            })
+            for rec in ablations:
+                if rec.get("id") == spec.get("id") and rec.get("ship"):
+                    rec["ship"] = False
+                    rec["why"] = f"duplicate sleeve of shipped {lid}"
+            continue
+        seen_lessons.add(lid)
+        deduped.append(spec)
+    keep = deduped
 
     v2 = _reg(*keep)
     # Layer 3: mute families whose IS blocked-by-v2 days had meanH <= 0
@@ -1001,27 +1023,62 @@ def run_v2() -> dict:
         nmk = _stats(rs, "ret_h")["n_marked"]
         if nmk >= 3 and mu is not None and mu <= 0:
             mute_fams.add(fam)
+    mute_is_k, mute_is_b = apply_mute(is_rows, v2, mute_fams)
     mute_oos_k, mute_oos_b = apply_mute(oos_rows, v2, mute_fams)
+    extra_is = [r for r in mute_is_b
+                if (r.get("decision") or {}).get("lesson_id") == "recipe_mute"]
+    extra_oos = [r for r in mute_oos_b
+                 if (r.get("decision") or {}).get("lesson_id") == "recipe_mute"]
+    extra_is_st = _stats(extra_is, "ret_h")
+    extra_oos_st = _stats(extra_oos, "ret_h")
+    extra_is_ok = extra_is_st["n_marked"] == 0 or (
+        extra_is_st["mean"] is not None and extra_is_st["mean"] <= 0)
+    extra_oos_ok = extra_oos_st["n_marked"] == 0 or (
+        extra_oos_st["mean"] is not None and extra_oos_st["mean"] <= 0)
     mute_ew = ew_avg(
         {n: {"meanH": _stats([r for r in mute_oos_k if r["strategy"] == n], "ret_h")["mean"]}
          for n in names_full},
         names_full,
     )
     v2_oos_ew = ew_avg(per_strat_means(oos_rows, v2, names_full), names_full)
-    mute_helps = (mute_ew.get("mean") is not None and v2_oos_ew.get("mean") is not None
-                  and mute_ew["mean"] > v2_oos_ew["mean"] + 1e-12 and mute_fams)
-    mute_info = {
-        "families": sorted(mute_fams),
-        "oos_ew": mute_ew.get("mean"),
-        "v2_oos_ew": v2_oos_ew.get("mean"),
-        "ship": bool(mute_helps),
-        "why": (
-            "OOS EW strictly improved" if mute_helps else
-            "no mute families" if not mute_fams else
+    same_n = mute_ew.get("n_in_avg") == v2_oos_ew.get("n_in_avg")
+    mute_helps = (
+        extra_is_ok and extra_oos_ok and same_n and mute_fams
+        and mute_ew.get("mean") is not None and v2_oos_ew.get("mean") is not None
+        and mute_ew["mean"] > v2_oos_ew["mean"] + 1e-12
+    )
+    if not extra_is_ok:
+        mute_why = (
+            f"mute-extra IS meanH {extra_is_st['mean']} > 0 "
+            f"(n={extra_is_st['n_marked']}; mostly family-wide longs) — drop Layer 3"
+        )
+    elif not extra_oos_ok:
+        mute_why = f"mute-extra OOS meanH {extra_oos_st['mean']} > 0 — drop Layer 3"
+    elif not same_n:
+        mute_why = (
+            f"OOS n_in_avg {mute_ew.get('n_in_avg')} vs v2 "
+            f"{v2_oos_ew.get('n_in_avg')} — empty-sleeve bias, drop Layer 3"
+        )
+    elif not mute_fams:
+        mute_why = "no mute families"
+    elif not mute_helps:
+        mute_why = (
             "OOS EW unchanged — drop Layer 3"
             if mute_ew.get("mean") == v2_oos_ew.get("mean") else
             f"OOS EW {mute_ew.get('mean')} < v2 {v2_oos_ew.get('mean')}"
-        ),
+        )
+    else:
+        mute_why = "OOS EW strictly improved on the same sleeve set"
+    mute_info = {
+        "families": sorted(mute_fams),
+        "oos_ew": mute_ew.get("mean"),
+        "oos_n_in_avg": mute_ew.get("n_in_avg"),
+        "v2_oos_ew": v2_oos_ew.get("mean"),
+        "v2_oos_n_in_avg": v2_oos_ew.get("n_in_avg"),
+        "extra_is": extra_is_st,
+        "extra_oos": extra_oos_st,
+        "ship": bool(mute_helps),
+        "why": mute_why,
     }
 
     sleeves = {
@@ -1127,10 +1184,11 @@ def render_v2(payload: dict) -> str:
         "## Contract",
         "",
     ]
+    mute = payload.get("mute") or {}
     for n in payload["contract"]["notes"]:
         lines.append(f"- {n}")
     lines += [
-        f"- mute Layer 3: {payload['mute']}",
+        f"- mute Layer 3: ship={mute.get('ship')} — {mute.get('why')}",
         "",
         f"**Contract {'PASS' if payload['contract']['ok'] else 'FAIL'}** · "
         f"shipped `{', '.join(payload['shipped'])}`",
@@ -1225,13 +1283,20 @@ def render_v2(payload: dict) -> str:
         )
     if not payload["unique"]["v2"].get("blocked_rows"):
         lines.append("| — | — | — | — | — | — | none |")
+    mute = payload.get("mute") or {}
     lines += [
         "",
         "## Shipped vs dropped",
         "",
-        f"- shipped: {payload['shipped']}",
-        f"- dropped: {payload['dropped']}",
-        f"- Layer 3 mute: {payload['mute']}",
+        f"- **shipped:** {payload['shipped']}",
+    ]
+    for d in payload.get("dropped") or []:
+        lines.append(f"- dropped `{d.get('tag') or ''} {d.get('id')}`: {d.get('why')}")
+    lines += [
+        f"- Layer 3 mute **off**: {mute.get('why')}",
+        f"  extra IS meanH={((mute.get('extra_is') or {}).get('mean'))} "
+        f"n={((mute.get('extra_is') or {}).get('n_marked'))}; "
+        f"OOS n_in_avg mute={mute.get('oos_n_in_avg')} vs v2={mute.get('v2_oos_n_in_avg')}.",
         "",
         "## Coverage holes",
         "",
@@ -1246,12 +1311,71 @@ def render_v2(payload: dict) -> str:
     return "\n".join(lines) + "\n"
 
 
+def sync_live_registry(payload: dict) -> Path:
+    """Write 00_grounding/ticket_filters.json from the walk-forward keep set."""
+    shipped_ids = list(payload.get("shipped") or [])
+    by_id = {F1_SPEC["id"]: F1_SPEC}
+    by_id["short_vs_green_cameras"] = C_SPECS["short_vs_green_cameras_net4"]
+    for spec in C_SPECS.values():
+        by_id.setdefault(spec["id"], spec)
+    filters = []
+    for fid in shipped_ids:
+        spec = json.loads(json.dumps(by_id.get(fid) or {}))
+        if not spec:
+            continue
+        spec["enabled"] = True
+        filters.append(spec)
+    # document specified C* that stayed off
+    off = [
+        C_SPECS["short_vs_own_recipe"],
+        C_SPECS["long_vs_hard_red_news"],
+        C_SPECS["short_vs_sector_or_tape"],
+        F2_TIGHT,
+        F3_SPEC,
+    ]
+    have = {f["id"] for f in filters}
+    for spec in off:
+        if spec["id"] in have:
+            continue
+        item = json.loads(json.dumps(spec))
+        item["enabled"] = False
+        filters.append(item)
+    dropped = list(payload.get("dropped") or [])
+    mute = payload.get("mute") or {}
+    if not mute.get("ship"):
+        dropped.append({
+            "id": "recipe_mute",
+            "why": mute.get("why") or "Layer 3 off",
+        })
+    live = {
+        "version": 2,
+        "asof": "2026-09-16",
+        "note": (
+            "Ticket-level lesson FILTER. One key per (situation, side, action). "
+            "Predicates are tape-checkable from files already in the repo as-of "
+            "the buy date. Missing features = pass, never veto. Do not dump "
+            "markdown lessons into if-statements."
+        ),
+        "walkforward": {
+            "fit": ["2026-08-13", "2026-09-04"],
+            "oos": ["2026-09-05", "latest"],
+        },
+        "filters": filters,
+        "dropped": dropped,
+    }
+    path = ROOT / "00_grounding" / "ticket_filters.json"
+    path.write_text(json.dumps(live, indent=2) + "\n", encoding="utf-8")
+    tlf.reset_caches()
+    return path
+
+
 def write_v2(payload: dict | None = None) -> list[Path]:
     payload = payload or run_v2()
     OUT_V2_MD.parent.mkdir(parents=True, exist_ok=True)
     OUT_V2_MD.write_text(render_v2(payload), encoding="utf-8")
     OUT_V2_JSON.write_text(json.dumps(payload, indent=2, default=str), encoding="utf-8")
-    return [OUT_V2_MD, OUT_V2_JSON]
+    live = sync_live_registry(payload)
+    return [OUT_V2_MD, OUT_V2_JSON, live]
 
 
 def main(argv=None) -> int:

@@ -165,9 +165,21 @@ def test_entry_hook_blocks_short_and_tags_blotter() -> None:
 def test_live_registry_keeps_f1() -> None:
     tlf.reset_caches()
     reg = tlf.load_registry()
-    live = [f["id"] for f in (reg.get("filters") or []) if f.get("enabled") is not False]
+    enabled = [f for f in (reg.get("filters") or []) if f.get("enabled") is not False]
+    live = [f["id"] for f in enabled]
     assert "oversold_crash_pause" in live, live
+    # C2 ships only at the IS-tuned net>=4 gate (specified net>=2 failed OOS).
+    c2 = next((f for f in enabled if f["id"] == "short_vs_green_cameras"), None)
+    assert c2 is not None, live
+    assert float((c2.get("require") or {}).get("camera_net_min")) == 4.0
+    assert "short_vs_own_recipe" not in live
+    assert "long_vs_hard_red_news" not in live
+    assert "short_vs_sector_or_tape" not in live
+    assert "hard_red_rsi30_short" not in live
+    assert "overbought_meltup_pause" not in live
     assert "RWT" not in __import__("pathlib").Path(tlf.__file__).read_text(encoding="utf-8")
+    src = __import__("pathlib").Path(tlf.__file__).read_text(encoding="utf-8")
+    assert "allowlist" not in src.lower()
 
 
 def test_c1_blocks_ob_recipe_with_low_rsi() -> None:

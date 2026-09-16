@@ -1,10 +1,16 @@
 {
-  "version": 1,
+  "version": 2,
   "asof": "2026-09-16",
   "note": "Ticket-level lesson FILTER. One key per (situation, side, action). Predicates are tape-checkable from files already in the repo as-of the buy date. Missing features = pass, never veto. Do not dump markdown lessons into if-statements.",
   "walkforward": {
-    "fit": ["2026-08-13", "2026-09-04"],
-    "oos": ["2026-09-05", "latest"]
+    "fit": [
+      "2026-08-13",
+      "2026-09-04"
+    ],
+    "oos": [
+      "2026-09-05",
+      "latest"
+    ]
   },
   "filters": [
     {
@@ -13,7 +19,6 @@
       "side": "short",
       "action": "block",
       "enabled": true,
-      "new_only": true,
       "require": {
         "rsi_max": 25.0,
         "crash": true
@@ -26,30 +31,127 @@
       "audit": "rsi<=25 & crash"
     },
     {
+      "id": "short_vs_green_cameras",
+      "lesson_id": "short_vs_green_cameras",
+      "side": "short",
+      "action": "block",
+      "enabled": true,
+      "require": {
+        "camera_net_min": 4,
+        "unless_news_bad": true
+      },
+      "audit": "camera_net>=+4 unless news bad (IS-tuned)"
+    },
+    {
+      "id": "short_vs_own_recipe",
+      "lesson_id": "short_vs_own_recipe",
+      "side": "short",
+      "action": "block",
+      "enabled": false,
+      "require": {
+        "recipe_ob_or_macd_dn": true,
+        "rsi_max": 49.99
+      },
+      "audit": "recipe OB/MACD-dn gate & rsi<50"
+    },
+    {
+      "id": "long_vs_hard_red_news",
+      "lesson_id": "long_vs_hard_red_news",
+      "side": "long",
+      "action": "block",
+      "enabled": false,
+      "require": {
+        "news_bad": true,
+        "no_camera_support": true
+      },
+      "audit": "news bad & no camera support"
+    },
+    {
+      "id": "short_vs_sector_or_tape",
+      "lesson_id": "short_vs_sector_or_tape",
+      "side": "short",
+      "action": "block",
+      "enabled": false,
+      "require": {
+        "crash": true,
+        "sector_good": true
+      },
+      "crash": {
+        "ret_1_max": -8.0,
+        "gap_pct_max": -8.0
+      },
+      "audit": "oversold-crash & sector good"
+    },
+    {
       "id": "overbought_meltup_pause",
       "lesson_id": "overbought_meltup_pause",
       "side": "long",
       "action": "block",
       "enabled": false,
-      "new_only": true,
       "require": {
         "rsi_min": 75.0,
         "ret_1_min": 8.0,
-        "no_camera_support": true
+        "no_camera_support": true,
+        "no_news_support": true
       },
-      "audit": "rsi>=75 & 1d>=+8 & no support"
-    }
-  ],
-  "dropped": [
-    {
-      "id": "overbought_meltup_pause",
-      "why": "IS blocked-sleeve mean > 0 (HTFL/FDMT/OABI melt-up longs kept paying). Symmetric seed failed the falsifier — do not ship."
+      "audit": "rsi>=75 & 1d>=+8 & no camera & no news support"
     },
     {
       "id": "hard_red_rsi30_short",
       "lesson_id": "hard_red_rsi30_short",
       "side": "short",
-      "why": "F3 n is tiny and overlaps F1. Dropped — do not fish a third predicate."
+      "action": "block",
+      "enabled": false,
+      "require": {
+        "rsi_max": 30.0,
+        "hard_red": true
+      },
+      "audit": "hard-red & rsi<30"
+    }
+  ],
+  "dropped": [
+    {
+      "id": "short_vs_own_recipe",
+      "why": "OOS blocked meanH 0.6203 > 0",
+      "tag": "C1"
+    },
+    {
+      "id": "short_vs_green_cameras@net2",
+      "why": "OOS blocked meanH 0.5478 > 0",
+      "tag": "C2"
+    },
+    {
+      "id": "long_vs_hard_red_news",
+      "why": "IS blocked meanH 0.5985 > 0",
+      "tag": "C3"
+    },
+    {
+      "id": "short_vs_sector_or_tape",
+      "why": "OOS EW -1.3009 < F1 -1.3005",
+      "tag": "C4"
+    },
+    {
+      "id": "hard_red_rsi30_short",
+      "why": "OOS blocked meanH 1.4374 > 0",
+      "tag": "F3"
+    },
+    {
+      "id": "overbought_meltup_pause",
+      "why": "IS blocked meanH 2.3678 > 0",
+      "tag": "F2t"
+    },
+    {
+      "id": "short_vs_green_cameras_and",
+      "why": "OOS blocked meanH 0.5478 > 0",
+      "tag": "C2b"
+    },
+    {
+      "id": "short_vs_green_cameras_net4_and",
+      "why": "duplicate sleeve of shipped short_vs_green_cameras"
+    },
+    {
+      "id": "recipe_mute",
+      "why": "mute-extra IS meanH 1.0158 > 0 (n=31539; mostly family-wide longs) \u2014 drop Layer 3"
     }
   ]
 }
