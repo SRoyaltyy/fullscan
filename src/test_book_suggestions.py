@@ -520,6 +520,76 @@ def test_publish_keeps_elite_1d_when_tickets_rebuild_fails() -> None:
         assert out["buy_1d"] == ["AVAH"]
 
 
+def test_publish_does_not_clobber_last_closed_fm_today_before_bell() -> None:
+    """Pre-open live_boards must not empty factor-mine today.json."""
+    from datetime import datetime
+    from unittest import mock
+    from zoneinfo import ZoneInfo
+    from src import day_board
+
+    et = ZoneInfo("America/New_York")
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        day = root / "data" / "day_board"
+        fm = root / "dashboard" / "factor-mine"
+        book = root / "data" / "stock_book"
+        day.mkdir(parents=True)
+        fm.mkdir(parents=True)
+        book.mkdir(parents=True)
+        lock = {
+            "date": "2026-09-15",
+            "clock_legal_for": "2026-09-15",
+            "quote": {"src": "elite_live", "after_open": True},
+            "buy_1d": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+            "sell_1d": [{"ticker": "OKLO", "px": 36.14, "px_src": "elite_live"}],
+        }
+        (day / "2026-09-15_open_0930.json").write_text(
+            json.dumps(lock), encoding="utf-8")
+        (fm / "today.json").write_text(json.dumps(lock), encoding="utf-8")
+        (book / "2026-09-16_stock_book.json").write_text("{}", encoding="utf-8")
+        board = {
+            "date": "2026-09-16",
+            "generated_at": "preopen",
+            "overall": "—",
+            "ranker_ready": False,
+            "counts": {},
+            "selections": {"buy_1d": [], "sell_1d": []},
+            "lands": [{"key": "news_parse"}],
+        }
+        old = {
+            "ROOT": publish_live_boards.ROOT,
+            "DAY_BOARD": publish_live_boards.DAY_BOARD,
+            "FM_TODAY": publish_live_boards.FM_TODAY,
+            "BOOK": publish_live_boards.BOOK,
+        }
+        publish_live_boards.ROOT = root
+        publish_live_boards.DAY_BOARD = day
+        publish_live_boards.FM_TODAY = fm / "today.json"
+        publish_live_boards.BOOK = book
+        before = datetime(2026, 9, 16, 4, 16, tzinfo=et)
+        try:
+            with mock.patch.object(day_board, "ROOT", root), \
+                    mock.patch.object(day_board, "BOARD_DIR", day), \
+                    mock.patch.object(day_board, "build", return_value=board), \
+                    mock.patch.object(day_board, "write_html",
+                                     side_effect=RuntimeError("skip html")), \
+                    mock.patch("src.strategy_tickets.build",
+                               side_effect=RuntimeError("skip tickets")):
+                publish_live_boards.publish(
+                    "2026-09-16", write=True, extras=False, when=before)
+        finally:
+            for k, v in old.items():
+                setattr(publish_live_boards, k, v)
+        today = json.loads((day / "today.json").read_text(encoding="utf-8"))
+        assert today["date"] == "2026-09-15"
+        assert today["buy_1d"][0]["ticker"] == "MTCH"
+        assert today["buy_1d"][0]["px"] == 43.04
+        fm_today = json.loads((fm / "today.json").read_text(encoding="utf-8"))
+        assert fm_today["date"] == "2026-09-15"
+        assert fm_today["buy_1d"][0]["ticker"] == "MTCH"
+        assert fm_today["buy_1d"][0]["px"] == 43.04
+
+
 def test_day_board_write_json_keeps_elite_when_news_parse_lands() -> None:
     """note_land / write_json must not drop Elite px for a ranker restamp."""
     import tempfile
@@ -818,6 +888,7 @@ def main() -> None:
     test_load_live_ticket_payload_prefers_open_0930_lock()
     test_publish_keeps_elite_1d_when_tickets_rebuild_fails()
     test_publish_keeps_elite_when_rebuild_is_session_export()
+    test_publish_does_not_clobber_last_closed_fm_today_before_bell()
     test_day_board_write_json_keeps_elite_when_news_parse_lands()
     test_overlay_prefers_quoted_tickets_and_restamps_score_only_strip()
     test_overlay_restamps_empty_today_from_open_0930_lock()

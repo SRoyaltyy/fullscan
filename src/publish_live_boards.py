@@ -138,7 +138,18 @@ def _run(argv: list[str], timeout_s: int = 180) -> int:
     return r.returncode
 
 
-def publish(date: str, *, write: bool = True, extras: bool = True) -> dict:
+def _todays_elite_strip(payload: dict, date: str) -> bool:
+    from . import elite_live_px as elp
+
+    legal = str(payload.get("date") or "")
+    quote = payload.get("quote") or {}
+    if legal != date or not elp.quote_is_elite_live(quote):
+        return False
+    return bool(payload.get("buy_1d") or payload.get("sell_1d"))
+
+
+def publish(date: str, *, write: bool = True, extras: bool = True,
+            when: datetime | None = None) -> dict:
     """Rewrite day-board + optional live HTML. Soft-fail everything."""
     out: dict = {"date": date, "book_ok": _book_ok(date), "wrote": []}
     if not out["book_ok"]:
@@ -160,7 +171,7 @@ def publish(date: str, *, write: bool = True, extras: bool = True) -> dict:
                 flush=True,
             )
         if write:
-            paths = day_board.write_json(board)
+            paths = day_board.write_json(board, when=when)
             out["wrote"].extend(str(p.relative_to(ROOT)) for p in paths)
             try:
                 hp = day_board.write_html()
@@ -188,8 +199,15 @@ def publish(date: str, *, write: bool = True, extras: bool = True) -> dict:
                 "lands": board.get("lands") or [],
                 "source": "publish_live_boards",
             }
-            FM_TODAY.write_text(json.dumps(payload, indent=2), encoding="utf-8")
-            out["wrote"].append("dashboard/factor-mine/today.json")
+            if _todays_elite_strip(payload, date):
+                FM_TODAY.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+                out["wrote"].append("dashboard/factor-mine/today.json")
+            else:
+                print(
+                    "[live-boards] skip FM today.json — "
+                    "not today's elite_live strip",
+                    flush=True,
+                )
             dated = DAY_BOARD / f"{date}_tickets.json"
             dated.write_text(json.dumps(payload, indent=2), encoding="utf-8")
             out["wrote"].append(str(dated.relative_to(ROOT)))
