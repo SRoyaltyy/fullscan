@@ -218,6 +218,8 @@ def test_day_board_html_has_raw_poll() -> None:
     assert "elitePx(d) && ticketsToday" in html
     assert "takeTicket1d && (earlyBuys.length || earlySells.length)" in html
     assert "takeTicket1d && (liveBuys.length || liveSells.length)" in html
+    assert "if(!takeTicket1d)" in html
+    assert "waiting for today's elite_live tickets" in html
     assert "!buys && !sells && !afterBell()" in html
 
 

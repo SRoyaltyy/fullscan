@@ -216,6 +216,12 @@ function render(board){
       if(takeTicket1d && (earlyBuys.length || earlySells.length)){
         $("sels").innerHTML = tickers(earlyBuys, "buy") + tickers(earlySells, "sell");
       }
+      if(!takeTicket1d){
+        box.textContent = afterBell()
+          ? "waiting for today's elite_live tickets"
+          : "pre-open tickets are not live Elite px";
+        return;
+      }
       if(!d || !d.strategies) { box.textContent = "No today_strategies.json on main."; return; }
       if(d.date && board.date && d.date !== board.date) {
         box.textContent = "strategies file is " + d.date + " (board is " + board.date + ")";
