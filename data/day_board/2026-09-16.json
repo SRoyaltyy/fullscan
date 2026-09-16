@@ -1,6 +1,6 @@
 {
   "date": "2026-09-16",
-  "generated_at": "2026-09-16T04:12:58.298781-04:00",
+  "generated_at": "2026-09-16T04:20:03.798417-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -142,7 +142,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 3,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -197,9 +197,9 @@
           "name": "Events JSON",
           "path": "01_daily/events/2026-09-16_events.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 36019
         },
         {
           "key": "judge",
@@ -262,7 +262,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7280
+          "size": 7277
         },
         {
           "key": "status",
@@ -1116,6 +1116,31 @@
         }
       ],
       "preview": "raw=120 usable=6 single=17 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | S&P 500, Nasdaq, Dow End Lower As Investors Price In Rate Hike Ahead Of Fed Meet | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u2019s Jackson Hole commen | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Another rate hike, just for insurance: Five questions for the ECB \u00b7 # News Parse v2 \u2014 2026-09-16T04:12:52.091774-04:00\nWindow\u224848h | raw=120 | usable=6 | single_name=17 | noise_dropped=97\nusable polarity={'+': 1, '-': 4, 'mixed': 0, 'neutral': 1}"
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-09-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-16T04:20:03.208126-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-09-16_events.json",
+          "ok": true,
+          "reason": "",
+          "size": 36019,
+          "preview": "36 events \u00b7 FOMC decision, SEP/dot plot, Warsh press conference | August advance retail sales rebound +0.6% MoM | Japan August trade deficit widens on oil imports | Lennar Q3 earnings (housing bellwether) | US-China talks on targeted tariff cuts ahead of Xi visit | Bank of England decision \u2014 hold at 3.75% expected"
+        },
+        {
+          "path": "01_daily/events/2026-09-16_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 22479,
+          "preview": "# Event Scan \u2014 2026-09-16\n- events tracked: **36** (via openclaw)\n- uncertainty: **elevated**\n- summary: Today is a regime day: retail sales already rebounded +0.6%, but the 2pm ET FOMC/SEP/Warsh presser is still ~90%+ priced as the first hike of the Warsh Fed, with BoE Thursday and a widely expected BoJ hike to 1.25% Friday. The overlay is stagflationary \u2014 Brent still ~$107 on the US-Iran tanker war, the 10-year pinned near 5%, and China demand remaining weak \u2014 while the Sept 24 Trump-Xi summit is the main two-way event for tariffs and risk appetite."
+        }
+      ],
+      "preview": "36 events \u00b7 FOMC decision, SEP/dot plot, Warsh press conference | August advance retail sales rebound +0.6% MoM | Japan August trade deficit widens on oil imports | Lennar Q3 earnings (housing bellwether) | US-China talks on targeted tariff cuts ahead of Xi visit | Bank of England decision \u2014 hold at 3.75% expected \u00b7 # Event Scan \u2014 2026-09-16\n- events tracked: **36** (via openclaw)\n- uncertainty: **elevated**\n- summary: Today is a regime day: retail sales already rebounded +0.6%, but the 2pm ET FOMC/SEP/Warsh presser is still ~90%+ priced as the first hike of the Warsh Fed, with BoE Thursday and a widely expected BoJ hike to 1.25% Friday. The overlay is stagflationary \u2014 Brent still ~$107 on the US-Iran tanker war, the 10-year pinned near 5%, and China demand remaining weak \u2014 while the Sept 24 Trump-Xi summit is the main two-way event for tariffs and risk appetite."
     }
   ],
   "href": {
