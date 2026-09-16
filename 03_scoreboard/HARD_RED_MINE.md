@@ -46,7 +46,10 @@ Per hard-red morning (panel names, 1-share after fees, same-day close):
 
 ## Holdout survivors
 
-None. No recipe or combo cleared the research survivor bar on the hidden hard-red window. Live sit stays.
+| Sleeve | Side | Hold | Disc n/win | Holdout n/win | All-red n/win | All-red $ | Research | Live KEEP |
+|---|---|---:|---:|---:|---:|---:|---|---|
+| `union_macd_hist_h1_fade_x1.5_h5` | short | 5 | 8/75.0% | 21/61.9% | 50/58.0% | +411.22 | YES | KEEP |
+| `union_macd_hist_h3_fade_x1.5_h5` | short | 5 | 8/75.0% | 21/61.9% | 50/58.0% | +411.22 | YES | KEEP |
 
 ## Holdout leaders (hidden window, not a KEEP)
 
@@ -126,6 +129,95 @@ Flip holdout leaders (hidden window, not a KEEP):
 | `union_join_vol_green_h3_flip` | short | 3 | 10/20.0% | 29/51.7% | 39/43.6% | -52.77 | no | KILL |
 | `union_w_hot_candle_h1_flip` | short | 5 | 24/33.3% | 40/50.0% | 88/44.3% | -24.30 | no | KILL |
 
+## After the open: dip-scoop and rally-fade
+
+Assume we watch the official print in real time. **Scoop** = long the first touch of open−X% (session low as the daily first-hit proxy). **Fade** = short the first touch of open+X% (session high). Close / last never trigger; they only grade. Daily OHLC cannot prove the print was after 09:30, so these fills are slightly optimistic vs a live monitor. A name that never tags X% is a skip, not a fire.
+
+Whole-panel same-day (every 09:30 name, not a recipe filter):
+
+| X | Scoop n/win disc | Scoop n/win holdout | Fade n/win disc | Fade n/win holdout |
+|---:|---:|---:|---:|---:|
+| 0.5% | 418/18.9% | 308/20.1% | 457/23.6% | 298/28.5% |
+| 1% | 360/19.7% | 279/21.1% | 393/25.7% | 258/27.1% |
+| 1.5% | 310/20.6% | 249/20.1% | 339/25.7% | 213/25.8% |
+| 2% | 265/21.5% | 207/21.3% | 284/25.4% | 183/24.6% |
+| 3% | 200/25.5% | 149/14.1% | 207/22.7% | 139/23.7% |
+
+**Intraday recipe survivors: 2.** Same KEEP / research bars. Recipe lists are the 09:30 names; the trigger is the limit after the open.
+
+| Sleeve | Side | Hold | Disc n/win | Holdout n/win | All-red n/win | All-red $ | Research | Live KEEP |
+|---|---|---:|---:|---:|---:|---:|---|---|
+| `union_macd_hist_h1_fade_x1.5_h5` | short | 5 | 8/75.0% | 21/61.9% | 50/58.0% | +411.22 | YES | KEEP |
+| `union_macd_hist_h3_fade_x1.5_h5` | short | 5 | 8/75.0% | 21/61.9% | 50/58.0% | +411.22 | YES | KEEP |
+
+Scoop discovery leaders:
+
+| Sleeve | Side | Hold | Disc n/win | Holdout n/win | All-red n/win | All-red $ | Research | Live KEEP |
+|---|---|---:|---:|---:|---:|---:|---|---|
+| `union_news_pack_h1_scoop_x1.5_h3` | long | 3 | 7/100.0% | 5/60.0% | 12/83.3% | +35.39 | no | KILL |
+| `union_news_pack_h3_scoop_x1.5_h3` | long | 3 | 7/100.0% | 5/60.0% | 12/83.3% | +35.39 | no | KILL |
+| `union_news_pack_net2_h1_scoop_x1.5_h3` | long | 3 | 6/100.0% | 4/75.0% | 10/90.0% | +37.23 | no | KILL |
+| `union_news_pack_net2_h3_scoop_x1.5_h3` | long | 3 | 6/100.0% | 4/75.0% | 10/90.0% | +37.23 | no | KILL |
+| `union_news_or_net3_h1_scoop_x2_h3` | long | 3 | 5/100.0% | 4/25.0% | 9/66.7% | +15.76 | no | KILL |
+| `union_news_or_net4_h1_scoop_x2_h3` | long | 3 | 5/100.0% | 4/25.0% | 9/66.7% | +15.76 | no | KILL |
+| `union_news_or_net3_h3_scoop_x2_h3` | long | 3 | 5/100.0% | 4/25.0% | 9/66.7% | +15.76 | no | KILL |
+| `union_news_or_net4_h3_scoop_x2_h3` | long | 3 | 5/100.0% | 4/25.0% | 9/66.7% | +15.76 | no | KILL |
+| `union_news_or_net4_rw_h1_scoop_x2_h3` | long | 3 | 5/100.0% | 4/25.0% | 9/66.7% | +15.76 | no | KILL |
+| `union_news_or_net4_conv_h1_scoop_x2_h3` | long | 3 | 5/100.0% | 4/25.0% | 9/66.7% | +15.76 | no | KILL |
+| `union_news_pack_net3_h1_scoop_x1.5_h3` | long | 3 | 4/100.0% | 4/75.0% | 8/87.5% | +33.89 | no | KILL |
+| `union_news_pack_net3_h3_scoop_x1.5_h3` | long | 3 | 4/100.0% | 4/75.0% | 8/87.5% | +33.89 | no | KILL |
+
+Scoop holdout leaders:
+
+| Sleeve | Side | Hold | Disc n/win | Holdout n/win | All-red n/win | All-red $ | Research | Live KEEP |
+|---|---|---:|---:|---:|---:|---:|---|---|
+| `union_earn_react_h1_scoop_x2_h5` | long | 5 | 14/7.1% | 15/60.0% | 36/30.6% | -171.22 | no | KILL |
+| `union_earn_react_h3_scoop_x2_h5` | long | 5 | 14/7.1% | 15/60.0% | 36/30.6% | -171.22 | no | KILL |
+| `union_w_hot_cond_h1_scoop_x1_h2` | long | 2 | 38/50.0% | 30/50.0% | 68/50.0% | +0.41 | no | KILL |
+| `union_w_hot_cond_h3_scoop_x1_h2` | long | 2 | 38/50.0% | 30/50.0% | 68/50.0% | +0.41 | no | KILL |
+| `union_hot_n4_h1_scoop_x1_h1` | long | 1 | 22/40.9% | 18/50.0% | 40/45.0% | -5.89 | no | KILL |
+| `union_flow_in_h1_scoop_x1.5_h5` | long | 5 | 3/33.3% | 10/50.0% | 14/50.0% | -3.30 | no | KILL |
+| `union_flow_in_h3_scoop_x1.5_h5` | long | 5 | 3/33.3% | 10/50.0% | 14/50.0% | -3.30 | no | KILL |
+| `union_flow_in_h5_scoop_x1.5_h5` | long | 5 | 3/33.3% | 10/50.0% | 14/50.0% | -3.30 | no | KILL |
+| `union_news_or_net2_h1_scoop_x1.5_h5` | long | 5 | 6/33.3% | 8/50.0% | 23/34.8% | +9.63 | no | KILL |
+| `union_news_or_net2_h3_scoop_x1.5_h5` | long | 5 | 6/33.3% | 8/50.0% | 23/34.8% | +9.63 | no | KILL |
+| `union_cond_n4_h3_scoop_x2_h5` | long | 5 | 8/25.0% | 8/50.0% | 18/44.4% | -1.95 | no | KILL |
+| `union_e_fresh_h1_scoop_x2_h5` | long | 5 | 15/20.0% | 15/46.7% | 37/29.7% | -158.56 | no | KILL |
+
+Fade discovery leaders:
+
+| Sleeve | Side | Hold | Disc n/win | Holdout n/win | All-red n/win | All-red $ | Research | Live KEEP |
+|---|---|---:|---:|---:|---:|---:|---|---|
+| `union_news_or_net2_h1_fade_x3_h3` | short | 3 | 3/100.0% | 4/75.0% | 7/85.7% | +104.45 | no | KILL |
+| `union_news_or_net3_h1_fade_x3_h3` | short | 3 | 3/100.0% | 3/66.7% | 6/83.3% | +103.39 | no | KILL |
+| `union_news_pack_net3_h1_fade_x3_h3` | short | 3 | 3/100.0% | 1/100.0% | 4/100.0% | +107.34 | no | KILL |
+| `union_news_pack_net2_h1_fade_x3_h3` | short | 3 | 3/100.0% | 1/100.0% | 4/100.0% | +107.34 | no | KILL |
+| `union_news_or_net2_h3_fade_x3_h3` | short | 3 | 3/100.0% | 4/75.0% | 7/85.7% | +104.45 | no | KILL |
+| `union_news_or_net3_h3_fade_x3_h3` | short | 3 | 3/100.0% | 3/66.7% | 6/83.3% | +103.39 | no | KILL |
+| `union_news_pack_net3_h3_fade_x3_h3` | short | 3 | 3/100.0% | 1/100.0% | 4/100.0% | +107.34 | no | KILL |
+| `union_news_pack_net2_h3_fade_x3_h3` | short | 3 | 3/100.0% | 1/100.0% | 4/100.0% | +107.34 | no | KILL |
+| `union_cond_n4_h3_fade_x3_h1` | short | 1 | 3/100.0% | 8/50.0% | 11/63.6% | +9.59 | no | KILL |
+| `union_news_or_net4_h1_fade_x0.5_h5` | short | 5 | 3/100.0% | 7/28.6% | 19/47.4% | +140.02 | no | KILL |
+| `union_news_or_net4_h3_fade_x0.5_h5` | short | 5 | 3/100.0% | 7/28.6% | 19/47.4% | +140.02 | no | KILL |
+| `union_news_or_net4_rw_h1_fade_x0.5_h5` | short | 5 | 3/100.0% | 7/28.6% | 18/50.0% | +141.35 | no | KILL |
+
+Fade holdout leaders:
+
+| Sleeve | Side | Hold | Disc n/win | Holdout n/win | All-red n/win | All-red $ | Research | Live KEEP |
+|---|---|---:|---:|---:|---:|---:|---|---|
+| `short_alarm_h1_fade_x1.5_h5` | short | 5 | 16/50.0% | 21/76.2% | 49/53.1% | +375.42 | no | KILL |
+| `short_alarm_h3_fade_x1.5_h5` | short | 5 | 16/50.0% | 21/76.2% | 49/53.1% | +375.42 | no | KILL |
+| `union_macd_hist_h1_fade_x3_h5` | short | 5 | 1/100.0% | 10/70.0% | 26/57.7% | +59.35 | no | KILL |
+| `union_macd_hist_h3_fade_x3_h5` | short | 5 | 1/100.0% | 10/70.0% | 26/57.7% | +59.35 | no | KILL |
+| `ohlc_hot_h1_fade_x3_h5` | short | 5 | 11/27.3% | 21/66.7% | 46/47.8% | +29.44 | no | KILL |
+| `ohlc_hot_h3_fade_x3_h5` | short | 5 | 11/27.3% | 21/66.7% | 46/47.8% | +29.44 | no | KILL |
+| `ohlc_hot_h5_fade_x3_h5` | short | 5 | 11/27.3% | 21/66.7% | 46/47.8% | +29.44 | no | KILL |
+| `union_news_or_net2_h1_fade_x1_h3` | short | 3 | 12/25.0% | 8/62.5% | 23/39.1% | +64.47 | no | KILL |
+| `union_news_or_net2_h3_fade_x1_h3` | short | 3 | 12/25.0% | 8/62.5% | 23/39.1% | +64.47 | no | KILL |
+| `short_rsi_ob_h1_fade_x3_h3` | short | 3 | 23/21.7% | 17/58.8% | 47/34.0% | -44.13 | no | KILL |
+| `short_rsi_ob_h3_fade_x3_h3` | short | 3 | 23/21.7% | 17/58.8% | 47/34.0% | -44.13 | no | KILL |
+| `union_macd_xup_h1_fade_x0.5_h5` | short | 5 | 11/36.4% | 21/57.1% | 43/53.5% | +60.31 | no | KILL |
+
 ## Live combo vs all-day sit book
 
 `combo_sh_macd_5050_shared` is the Webull paper sleeve. Sit is the published all-day cash book (red mornings take no new lots). Allow is the research counterfactual: same leftover book, 09:30 fills on hard-red too.
@@ -148,4 +240,4 @@ Sit = published all-day path. Allow = trade through red at the 09:30 open. Hard-
 
 Hard-red S≤−3 still blocks new lots in `combo_broker.size_combo_tickets`, `simulate_shared` (default sit), and `simulate_book` / `flatten_robust`. This mine adds opt-in `hard_red_mode=allow` for research books only.
 
-**Survivors: 0.** No holdout survivor — including polarity flips and the existing shorts. Discovery teases that miss the hidden red window stay KILL. Live sit stands.
+**Survivors: 2.** 2 research survivor(s) on the hidden hard-red window. Published KEEP still hit (≥30 fires, >55%). Do not change live sit from this board.
