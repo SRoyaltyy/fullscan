@@ -151,6 +151,36 @@ def pick_best(paths: list[Path], score_fn) -> tuple[Path | None, dict]:
     return best_path, best
 
 
+_SLIM_TICKET_KEYS = (
+    "date",
+    "clock_legal_for",
+    "clock_use",
+    "session_open",
+    "generated_at",
+    "n",
+    "n_ok",
+    "quote",
+    "buy_1d",
+    "sell_1d",
+)
+
+
+def slim_pages_tickets(data: dict) -> dict:
+    """Same-origin Pages tickets: date / quote / 1d only.
+
+    The fat ``today_strategies`` book (~900K, hundreds of families) is
+    not what firstOk fetches. deploy-dashboard overlay must not copy
+    that blob onto day-board / strategy-board / paper.
+    """
+    if not data:
+        return {}
+    out = {k: data[k] for k in _SLIM_TICKET_KEYS if k in data}
+    sb = (data.get("strategies") or {}).get("stock_book_1d")
+    if sb:
+        out["strategies"] = {"stock_book_1d": sb}
+    return out or dict(data)
+
+
 def ticket_1d(data: dict) -> tuple[list, list, dict]:
     sb = (data.get("strategies") or {}).get("stock_book_1d") or {}
     buys = list(data.get("buy_1d") or sb.get("buy") or [])
@@ -217,14 +247,12 @@ def overlay(dest_root: Path, repo: Path | None = None,
     for rel in DEST_REL:
         dest = dest_root / rel if rel != "." else dest_root
         dest.mkdir(parents=True, exist_ok=True)
-        if tickets:
+        pages_tickets = slim_pages_tickets(tickets) if tickets else (
+            slim_pages_tickets(_load(t_path)) if t_path else {}
+        )
+        if pages_tickets:
             out = dest / "today_strategies.json"
-            out.write_text(json.dumps(tickets, indent=2), encoding="utf-8")
-            wrote.append(str(out))
-            print(f"Overlayed live strip {out}", flush=True)
-        elif t_path and t_path.is_file():
-            out = dest / "today_strategies.json"
-            shutil.copy2(t_path, out)
+            out.write_text(json.dumps(pages_tickets, indent=2), encoding="utf-8")
             wrote.append(str(out))
             print(f"Overlayed live strip {out}", flush=True)
         if strip:

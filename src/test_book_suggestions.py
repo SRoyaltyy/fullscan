@@ -835,6 +835,54 @@ def test_overlay_restamps_empty_today_from_open_0930_lock() -> None:
         assert strip["quote"]["src"] == "elite_live"
 
 
+def test_overlay_slims_fat_same_origin_tickets() -> None:
+    """deploy-dashboard must not copy the ~900K book onto Pages firstOk."""
+    from src import overlay_live_strip as ols
+
+    fat_strats = {
+        "stock_book_1d": {
+            "buy": [{"ticker": "MPC", "px": 411.65, "px_src": "session_export"}],
+            "sell": [{"ticker": "OKLO", "px": 35.98, "px_src": "session_export"}],
+        },
+        **{f"family_{i}": {"family": "factor_mine", "rows": [0] * 20}
+           for i in range(80)},
+    }
+    with tempfile.TemporaryDirectory() as d:
+        repo = Path(d)
+        dest = repo / "pages_out"
+        day = repo / "data" / "day_board"
+        day.mkdir(parents=True)
+        (day / "today_strategies.json").write_text(json.dumps({
+            "date": "2026-09-16",
+            "clock_legal_for": "2026-09-16",
+            "quote": {"src": "session_export", "after_open": False},
+            "buy_1d": [{"ticker": "MPC", "px": 411.65,
+                        "px_src": "session_export"}],
+            "sell_1d": [{"ticker": "OKLO", "px": 35.98,
+                         "px_src": "session_export"}],
+            "families": ["excel", "factor_mine"],
+            "strategies": fat_strats,
+        }), encoding="utf-8")
+        (day / "today.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "quote": {"src": "elite_live", "after_open": True},
+            "buy_1d": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+        }), encoding="utf-8")
+        ols.overlay(
+            dest, repo=repo, date="2026-09-16",
+            when=datetime(2026, 9, 16, 5, 30, tzinfo=ZoneInfo("America/New_York")),
+        )
+        for rel in ("day-board", "strategy-board", "factor-mine", ""):
+            base = dest / rel if rel else dest
+            raw = (base / "today_strategies.json").read_text()
+            tickets = json.loads(raw)
+            assert tickets["buy_1d"][0]["ticker"] == "MPC"
+            assert tickets["quote"]["src"] == "session_export"
+            assert "families" not in tickets
+            assert set((tickets.get("strategies") or {})) == {"stock_book_1d"}
+            assert len(raw) < 20_000
+
+
 def test_overlay_ignores_yesterdays_open_0930_lock() -> None:
     """A 09-15 lock must not keep Pages on MTCH after the 09-16 bell."""
     from src import overlay_live_strip as ols
@@ -896,6 +944,7 @@ def main() -> None:
     test_day_board_write_json_keeps_elite_when_news_parse_lands()
     test_overlay_prefers_quoted_tickets_and_restamps_score_only_strip()
     test_overlay_restamps_empty_today_from_open_0930_lock()
+    test_overlay_slims_fat_same_origin_tickets()
     test_overlay_ignores_yesterdays_open_0930_lock()
     print("ok")
 
