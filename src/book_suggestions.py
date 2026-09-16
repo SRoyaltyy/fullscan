@@ -220,14 +220,14 @@ _POLLER_JS = r"""
     ]).then(function(arr){
       var today = arr[0] || {}, strat = arr[1] || {}, sug = arr[2] || {};
       var d = afterBell() ? Object.assign({}, today) : Object.assign({}, sug, today);
-      if(strat && strat.strategies) d.strategies = strat.strategies;
-      if(strat && strat.n) d.n_strategies = strat.n;
       var sb = (strat && strat.strategies && strat.strategies.stock_book_1d) || {};
       var buys = (strat && strat.buy_1d && strat.buy_1d.length) ? strat.buy_1d : (sb.buy || []);
       var sells = (strat && strat.sell_1d && strat.sell_1d.length) ? strat.sell_1d : (sb.sell || []);
       var ticketsToday = !sessionDate() || !String(strat.date || strat.clock_legal_for || "") || String(strat.date || strat.clock_legal_for || "") === sessionDate();
       var takeTicket1d = !!(elitePx(strat) && ticketsToday && (!afterBell() || ticketsLookLive(strat)));
       if(takeTicket1d){
+        if(strat && strat.strategies) d.strategies = strat.strategies;
+        if(strat && strat.n) d.n_strategies = strat.n;
         if(strat && strat.date) d.date = strat.date;
         if(strat && strat.quote) d.quote = strat.quote;
         if(strat && strat.clock_legal_for) d.clock_legal_for = strat.clock_legal_for;

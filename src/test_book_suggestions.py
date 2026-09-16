@@ -270,6 +270,8 @@ def test_open_pack_wired_when_skip_if_good() -> None:
     assert "elitePx(strat) && ticketsToday" in book_suggestions._POLLER_JS
     assert "var takeTicket1d" in book_suggestions._POLLER_JS
     assert "if(takeTicket1d)" in book_suggestions._POLLER_JS
+    js = book_suggestions._POLLER_JS
+    assert js.index("if(takeTicket1d){") < js.index("if(strat && strat.strategies)")
     assert "function sessionDate" in book_suggestions._POLLER_JS
     assert "src.overlay_live_strip" in dep
     assert "stock_book_1d" in book_suggestions._POLLER_JS
