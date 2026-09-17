@@ -1,10 +1,9 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T04:30:10.399230-04:00",
+  "generated_at": "2026-09-17T04:38:35.601924-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-09-17_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-17/_board.json` \u2014 missing"
   ],
   "counts": {
@@ -140,7 +139,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 4,
+      "n_req_ok": 5,
       "n_req": 20,
       "n_opt_ok": 2,
       "n_opt": 3,
@@ -240,9 +239,9 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-09-17_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 13641
         },
         {
           "key": "board",
@@ -260,7 +259,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7270
+          "size": 7267
         },
         {
           "key": "status",
@@ -380,8 +379,13 @@
           "size": 0
         }
       ],
-      "said": "news 8 items",
+      "said": "general UP  7.383 \u00b7 news 8 items",
       "bullets": [
+        "bad: 1w 10Y +20bp at 5.00 handle",
+        "bad: hawkish SEP 16/18 another hike",
+        "bad: leftover Hormuz oil ~$104-108",
+        "good: ES/NQ gap-repair vs cash",
+        "good: WTI/Brent overnight dip",
         "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
         "Retail Sales, Imports Come In Warm Ahead of FOMC Decision",
         "Gold prices slide more than 3% after Fed Chair Kevin Warsh\u2019s Jackson Hole comments boost September U.S. rate hike expectations",
@@ -517,9 +521,9 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-09-17_predict.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 13641
         },
         {
           "key": "in_board",
@@ -700,7 +704,18 @@
     "buy_1d": [],
     "sell_1d": [],
     "flatten": {},
-    "general": {},
+    "general": {
+      "said": "UP  7.383",
+      "bullets": [
+        "bad: 1w 10Y +20bp at 5.00 handle",
+        "bad: hawkish SEP 16/18 another hike",
+        "bad: leftover Hormuz oil ~$104-108",
+        "good: ES/NQ gap-repair vs cash",
+        "good: WTI/Brent overnight dip"
+      ],
+      "score": "7.383",
+      "direction": "up"
+    },
     "sectors": {},
     "news": {
       "said": "8 items",
@@ -1189,6 +1204,24 @@
         }
       ],
       "preview": "# News Judge \u2014 2026-09-17 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "date": "2026-09-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T04:38:34.995009-04:00",
+      "files": [
+        {
+          "path": "01_daily/general/2026-09-17_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 13641,
+          "preview": "# Premarket Prediction \u2014 2026-09-17\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 NOTABLE** | total score 7.383 (uncertainty multiplier \u00d71.0) | confidence 0.795\n>\n> **Good news vs bad news:** good +0.75 pts vs bad -3.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - ES/NQ gap-repair vs cash\n> - WTI/Brent overnight dip\n> - DXY soft\n> - HY still contained 2.76\n> - VIX contango 0.82\n>\n> **Bad news driving this:**\n> - 1w 10Y +20bp at 5.00 handle\n> - hawkish SEP 16/18 another hike\n> - leftover Hormuz oil ~$104-108\n> - BoJ hike-to-1.25% Friday\n> - housing still cracking (Lennar)\n>\n> **market uncertainty: **elevated** | VIX 16.24 | policy-uncertainty index 147.41 (1d -45.39)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \u26aa Asia overnight session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Overnight news & catalysts: +0.0 \u00d7 3.0"
+        }
+      ],
+      "preview": "# Premarket Prediction \u2014 2026-09-17\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 NOTABLE** | total score 7.383 (uncertainty multiplier \u00d71.0) | confidence 0.795\n>\n> **Good news vs bad news:** good +0.75 pts vs bad -3.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - ES/NQ gap-repair vs cash\n> - WTI/Brent overnight dip\n> - DXY soft\n> - HY still contained 2.76\n> - VIX contango 0.82\n>\n> **Bad news driving this:**\n> - 1w 10Y +20bp at 5.00 handle\n> - hawkish SEP 16/18 another hike\n> - leftover Hormuz oil ~$104-108\n> - BoJ hike-to-1.25% Friday\n> - housing still cracking (Lennar)\n>\n> **market uncertainty: **elevated** | VIX 16.24 | policy-uncertainty index 147.41 (1d -45.39)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \u26aa Asia overnight session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Overnight news & catalysts: +0.0 \u00d7 3.0"
     }
   ],
   "href": {
