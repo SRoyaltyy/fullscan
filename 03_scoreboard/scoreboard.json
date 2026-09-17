@@ -12707,18 +12707,6 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
-        },
-        "HORIZON_2W": {
-          "label": "2w",
-          "target_date": "2026-09-17",
-          "actual_pct": -4.64,
-          "actual_direction": "down",
-          "actual_magnitude_band": "notable",
-          "direction_hit": false,
-          "magnitude_hit": false,
-          "predicted_direction": "flat",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.4
         }
       }
     },
@@ -23658,13 +23646,13 @@
         "S4_ETF_TAPE": 0.0
       },
       "leading_sum": 4.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 187.3000030517578,
+      "actual_close": 188.05999755859375,
+      "actual_pct_change": 2.2454221971794253,
+      "actual_direction": "up",
+      "actual_magnitude_band": "severe",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
@@ -23677,7 +23665,9 @@
       "engine": "v2",
       "anchor_score": 9.323,
       "overlay_score": 4.5,
-      "index_carry": 1.846
+      "index_carry": 1.846,
+      "spy_pct_change": 1.1338754633487547,
+      "rel_pct_change": 1.1115467338306706
     },
     {
       "date": "2026-09-17",
