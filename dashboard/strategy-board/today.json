@@ -9,121 +9,121 @@
       "ticker": "FIVN",
       "side": "long",
       "predict": "UP",
-      "px": 34.89,
+      "px": 34.47,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     },
     {
       "ticker": "RVTY",
       "side": "long",
       "predict": "UP",
-      "px": 148.46,
+      "px": 148.32,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     },
     {
       "ticker": "WAY",
       "side": "long",
       "predict": "UP",
-      "px": 26.47,
+      "px": 26.93,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     },
     {
       "ticker": "IT",
       "side": "long",
       "predict": "UP",
-      "px": 190.25,
+      "px": 190.14,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     },
     {
       "ticker": "IOT",
       "side": "long",
       "predict": "UP",
-      "px": 40.68,
+      "px": 40.22,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     },
     {
       "ticker": "CARG",
       "side": "long",
       "predict": "UP",
-      "px": 34.58,
+      "px": 34.62,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     },
     {
       "ticker": "ATRC",
       "side": "long",
       "predict": "UP",
-      "px": 58.96,
+      "px": 58.72,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     },
     {
       "ticker": "AMRX",
       "side": "long",
       "predict": "UP",
-      "px": 18.85,
+      "px": 18.74,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     },
     {
       "ticker": "FRSH",
       "side": "long",
       "predict": "UP",
-      "px": 12.75,
+      "px": 12.74,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     },
     {
       "ticker": "M",
       "side": "long",
       "predict": "UP",
-      "px": 21.72,
+      "px": 21.67,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     },
     {
       "ticker": "LIND",
       "side": "long",
       "predict": "UP",
-      "px": 28.56,
+      "px": 27.91,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     },
     {
       "ticker": "NYT",
       "side": "long",
       "predict": "UP",
-      "px": 71.7,
+      "px": 71.18,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     },
     {
       "ticker": "IMAX",
       "side": "long",
       "predict": "UP",
-      "px": 52.03,
+      "px": 52.12,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     },
     {
       "ticker": "ZD",
       "side": "long",
       "predict": "UP",
-      "px": 58.76,
+      "px": 59.09,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     },
     {
       "ticker": "TILE",
       "side": "long",
       "predict": "UP",
-      "px": 35.01,
+      "px": 34.8,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     }
   ],
   "sell_1d": [
@@ -131,25 +131,25 @@
       "ticker": "TLN",
       "side": "short",
       "predict": "DOWN",
-      "px": 293.8,
+      "px": 295.56,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     },
     {
       "ticker": "JKS",
       "side": "short",
       "predict": "DOWN",
-      "px": 10.44,
+      "px": 10.56,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     },
     {
       "ticker": "CMTG",
       "side": "short",
       "predict": "DOWN",
-      "px": 1.48,
+      "px": 1.49,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     },
     {
       "ticker": "DVLT",
@@ -157,7 +157,7 @@
       "predict": "DOWN",
       "px": 0.17,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     },
     {
       "ticker": "MIST",
@@ -165,15 +165,15 @@
       "predict": "DOWN",
       "px": 0.93,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     },
     {
       "ticker": "NUS",
       "side": "short",
       "predict": "DOWN",
-      "px": 4.67,
+      "px": 4.64,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     },
     {
       "ticker": "GETY",
@@ -181,71 +181,71 @@
       "predict": "DOWN",
       "px": 0.23,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     },
     {
       "ticker": "TLSA",
       "side": "short",
       "predict": "DOWN",
-      "px": 0.9,
+      "px": 0.94,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     },
     {
       "ticker": "CDZI",
       "side": "short",
       "predict": "DOWN",
-      "px": 3.6,
+      "px": 3.57,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     },
     {
       "ticker": "LODE",
       "side": "short",
       "predict": "DOWN",
-      "px": 2.59,
+      "px": 2.61,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     },
     {
       "ticker": "EU",
       "side": "short",
       "predict": "DOWN",
-      "px": 0.91,
+      "px": 0.92,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     },
     {
       "ticker": "STLA",
       "side": "short",
       "predict": "DOWN",
-      "px": 5.12,
+      "px": 5.13,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     },
     {
       "ticker": "AIRJ",
       "side": "short",
       "predict": "DOWN",
-      "px": 4.2,
+      "px": 4.21,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     },
     {
       "ticker": "SGML",
       "side": "short",
       "predict": "DOWN",
-      "px": 9.09,
+      "px": 9.25,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     },
     {
       "ticker": "OSG",
       "side": "short",
       "predict": "DOWN",
-      "px": 4.69,
+      "px": 4.68,
       "px_src": "elite_live",
-      "px_asof": "2026-09-17T10:04:11.605804-04:00"
+      "px_asof": "2026-09-17T10:38:47.704130-04:00"
     }
   ],
   "flatten": {},
@@ -255,7 +255,7 @@
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/",
   "quote": {
     "src": "elite_live",
-    "at": "2026-09-17T10:04:11.605804-04:00",
+    "at": "2026-09-17T10:38:47.704130-04:00",
     "after_open": true,
     "n": 11637,
     "error": null,
