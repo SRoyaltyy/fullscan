@@ -1,63 +1,12 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T05:06:31.775753-04:00",
+  "generated_at": "2026-09-17T06:50:22.369105-04:00",
   "all_ok": false,
-  "qc_all_ok": false,
+  "qc_all_ok": true,
   "book_ok": false,
-  "grok_ok": false,
-  "grok_fails": [
-    {
-      "path": "01_daily/news/2026-09-17_judge.md",
-      "reason": "Wrong-session / stale FOMC-eve packet labeled 2026-09-17: treats FOMC as unprinted, ranks warm retail and Jackson Hole hike-odds as live, and keeps B1/B3 unsigned; general predict itself flags this as 09-16 copy."
-    },
-    {
-      "path": "01_daily/sectors/2026-09-17/basic_materials_predict.md",
-      "reason": "missing"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-17/communication_services_predict.md",
-      "reason": "missing"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-17/consumer_cyclical_predict.md",
-      "reason": "missing"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-17/consumer_defensive_predict.md",
-      "reason": "missing"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-17/energy_predict.md",
-      "reason": "missing"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-17/financial_predict.md",
-      "reason": "missing"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-17/healthcare_predict.md",
-      "reason": "missing"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-17/industrials_predict.md",
-      "reason": "missing"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-17/real_estate_predict.md",
-      "reason": "missing"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-17/technology_predict.md",
-      "reason": "missing"
-    },
-    {
-      "path": "01_daily/sectors/2026-09-17/utilities_predict.md",
-      "reason": "missing"
-    }
-  ],
-  "missing_required": [
-    "sector_predict"
-  ],
+  "grok_ok": true,
+  "grok_fails": [],
+  "missing_required": [],
   "attempts": [
     {
       "key": "weather",
@@ -180,7 +129,7 @@
     }
   ],
   "qc": {
-    "sector_n_ok": 0,
+    "sector_n_ok": 11,
     "sector_n_total": 11,
     "items": [
       {
@@ -223,7 +172,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-09-17_finviz_digest.json",
-        "size": 86288
+        "size": 86597
       },
       {
         "kind": "finviz_market_digest",
@@ -262,80 +211,80 @@
       },
       {
         "kind": "sector_predict",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/sectors/2026-09-17/basic_materials_predict.md",
-        "size": 0
+        "size": 17513
       },
       {
         "kind": "sector_predict",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/sectors/2026-09-17/communication_services_predict.md",
-        "size": 0
+        "size": 17944
       },
       {
         "kind": "sector_predict",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/sectors/2026-09-17/consumer_cyclical_predict.md",
-        "size": 0
+        "size": 19159
       },
       {
         "kind": "sector_predict",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/sectors/2026-09-17/consumer_defensive_predict.md",
-        "size": 0
+        "size": 16895
       },
       {
         "kind": "sector_predict",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/sectors/2026-09-17/energy_predict.md",
-        "size": 0
+        "size": 18297
       },
       {
         "kind": "sector_predict",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/sectors/2026-09-17/financial_predict.md",
-        "size": 0
+        "size": 16980
       },
       {
         "kind": "sector_predict",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/sectors/2026-09-17/healthcare_predict.md",
-        "size": 0
+        "size": 15479
       },
       {
         "kind": "sector_predict",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/sectors/2026-09-17/industrials_predict.md",
-        "size": 0
+        "size": 22232
       },
       {
         "kind": "sector_predict",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/sectors/2026-09-17/real_estate_predict.md",
-        "size": 0
+        "size": 18465
       },
       {
         "kind": "sector_predict",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/sectors/2026-09-17/technology_predict.md",
-        "size": 0
+        "size": 18375
       },
       {
         "kind": "sector_predict",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/sectors/2026-09-17/utilities_predict.md",
-        "size": 0
+        "size": 18381
       }
     ]
   }

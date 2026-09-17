@@ -1,51 +1,40 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T04:08:54.304136-04:00",
-  "export_used": "data/exports/finviz_2026-09-16.csv",
+  "generated_at": "2026-09-17T06:50:18.348492-04:00",
+  "export_used": "data/exports/finviz_2026-09-17.csv",
   "ticker_digest_count": 400,
   "signal_count": 400,
   "index_digests": [
     {
       "ticker": "SPY",
       "index": "S&P 500",
-      "digest": "Oil Surges, Tanker Rates Soar: ETFs in Play",
-      "source": "finviz_elite_news",
+      "digest": "Nasdaq, S&P 500 Futures Rebound After Fed Rate Hike: NVDA, NBIS, SNAP, SPCX, BE, GNRC Stocks In Focus",
+      "source": "finviz_export",
       "error": null
     },
     {
       "ticker": "QQQ",
       "index": "Nasdaq-100",
       "digest": "Oil Prices Send Fresh Signal After Surprise Inventory Data",
-      "source": "finviz_elite_news",
+      "source": "finviz_export",
       "error": null
     },
     {
       "ticker": "DIA",
       "index": "Dow Jones",
       "digest": "Retail Sales, Imports Come In Warm Ahead of FOMC Decision",
-      "source": "finviz_elite_news",
+      "source": "finviz_export",
       "error": null
     },
     {
       "ticker": "IWM",
       "index": "Russell 2000",
       "digest": "Investors worried about rising bond yields are keeping a close eye on this corner of the market",
-      "source": "finviz_elite_news",
+      "source": "finviz_export",
       "error": null
     }
   ],
   "top_signal": [
-    {
-      "ticker": "ADBE",
-      "digest": "Adobe posts record Q3 revenue $6.76B and non-GAAP EPS $6.13, raises FY26 outlook and leans into AI-driven freemium strategy",
-      "news_title": "Did Salesforce Telegraph Its Own Massive Rally?",
-      "sector": "Technology",
-      "industry": "Software - Application",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
     {
       "ticker": "AJG",
       "digest": "Arthur J. Gallagher & Co. announces acquisition of Colorado-based Innovise Business Consultants, expanding its commercial insurance and surety bonding capabilities in the Western U.S.",
@@ -137,7 +126,7 @@
     {
       "ticker": "ASML",
       "digest": "ASML nearly sold out of 2027 EUV capacity amid very strong AI-driven demand, JPMorgan says",
-      "news_title": "ASML Gains 1.4% as EUV Capacity Chases a 110-Tool Threshold",
+      "news_title": "Modi pitches India as global chipmaking hub",
       "sector": "Technology",
       "industry": "Semiconductor Equipment & Materials",
       "is_dividend": false,
@@ -147,7 +136,7 @@
     },
     {
       "ticker": "AU",
-      "digest": "Gold prices slide more than 3% after Fed Chair Kevin Warsh’s Jackson Hole comments boost September U.S. rate hike expectations",
+      "digest": "Gold prices slide more than 3% after Fed Chair Kevin Warshâs Jackson Hole comments boost September U.S. rate hike expectations",
       "news_title": "Kavango appoints Jasper Musadaidzwa as CEO and executive director",
       "sector": "Basic Materials",
       "industry": "Gold",
@@ -159,7 +148,7 @@
     {
       "ticker": "AZN",
       "digest": "UBS cuts AstraZeneca price target to 15,200p from 17,600p but reiterates buy rating",
-      "news_title": "AstraZeneca Shares Rise as J.P. Morgan Stays Overweight",
+      "news_title": "The West is hooked on Chinese drugs but they could save your life",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
@@ -181,7 +170,7 @@
     {
       "ticker": "BAC",
       "digest": "BAC CEO's soft Q3 outlook at Barclays conference drives 5% plunge",
-      "news_title": "Bank of America Falls 1.4% as Fee Guidance Drops 10%--20%",
+      "news_title": "Utility bills are rising faster than inflation, BofA says. Expect higher prices long-term.",
       "sector": "Financial",
       "industry": "Banks - Diversified",
       "is_dividend": false,
@@ -191,7 +180,7 @@
     },
     {
       "ticker": "BBVA",
-      "digest": "BBVA posts record Q2 2026 net profit, upgrades Mexico and South America guidance, announces extraordinary €2 billion share buyback program",
+      "digest": "BBVA posts record Q2 2026 net profit, upgrades Mexico and South America guidance, announces extraordinary â¬2 billion share buyback program",
       "news_title": "Grenergy finalises $475m sale of Gabriela energy project to CVC DIF",
       "sector": "Financial",
       "industry": "Banks - Diversified",
@@ -202,7 +191,7 @@
     },
     {
       "ticker": "BCS",
-      "digest": "Strong H1 profits, guidance upgrade and £1bn buyback drive BCS 6.48% surge",
+      "digest": "Strong H1 profits, guidance upgrade and Â£1bn buyback drive BCS 6.48% surge",
       "news_title": "FTAI Stocks Recent Pullback Is A Favorable Entry Point, Says Barclays  Sees Up To 60% Earnings Growth In 2027",
       "sector": "Financial",
       "industry": "Banks - Diversified",
@@ -268,7 +257,7 @@
     },
     {
       "ticker": "CAH",
-      "digest": "Barron’s reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
+      "digest": "Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
       "news_title": "Cardinal Health CEO Sells $29 Million in Stock After Earnings Send Shares to Record",
       "sector": "Healthcare",
       "industry": "Medical Distribution",
@@ -327,17 +316,6 @@
       "news_title": "The Realities of Managing Enterprise AI",
       "sector": "Healthcare",
       "industry": "Medical Distribution",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "COST",
-      "digest": "Bank of America cuts Costco price target to $1,095 from $1,200 on rising supply chain cost pressures, reiterates Buy rating",
-      "news_title": "What Has Home Depot Stopped Telling You About Where Its Goods Come From?",
-      "sector": "Consumer Defensive",
-      "industry": "Discount Stores",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -422,7 +400,7 @@
     },
     {
       "ticker": "E",
-      "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to €3.4B on stronger Q2 results",
+      "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results",
       "news_title": "Billionaire Harold Hamm Makes Deal to Explore for Venezuela Oil",
       "sector": "Energy",
       "industry": "Oil & Gas Integrated",
@@ -500,7 +478,7 @@
     {
       "ticker": "GEV",
       "digest": "GE Vernova settles over $300 million Vineyard Wind payment dispute, withdraws contract-termination notice and legal claims on Massachusetts offshore project",
-      "news_title": "GE Vernova and Vineyard Wind Settle $300M-Plus Offshore Wind Dispute",
+      "news_title": "Vineyard Wind, GE Vernova end legal conflict over Massachusetts wind farm",
       "sector": "Industrials",
       "industry": "Specialty Industrial Machinery",
       "is_dividend": false,
@@ -566,7 +544,7 @@
     {
       "ticker": "IBM",
       "digest": "IBM unit Anderon finalizes $1B U.S. CHIPS Act award to fund scaling of U.S. quantum wafer foundry",
-      "news_title": "Did AI Servers Really Quadruple Dell Stock?",
+      "news_title": "IBMs Anderon finalises $1bn agreement for quantum foundry R&D",
       "sector": "Technology",
       "industry": "Information Technology Services",
       "is_dividend": false,
@@ -610,7 +588,7 @@
     {
       "ticker": "LITE",
       "digest": "ECOC 2026 AI optics showcase drives Lumentum's 8.5% surge",
-      "news_title": "Is Ciena's Pricing Power Real, Or Just A Parts Shortage?",
+      "news_title": "OpenAI Reveals 6 'Concerning' Incidents. Why AI Stocks Are Rising Anyway.",
       "sector": "Technology",
       "industry": "Communication Equipment",
       "is_dividend": false,
@@ -631,7 +609,7 @@
     },
     {
       "ticker": "LOW",
-      "digest": "Bernstein cuts Lowe’s price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery",
+      "digest": "Bernstein cuts Loweâs price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery",
       "news_title": "What Has Home Depot Stopped Telling You About Where Its Goods Come From?",
       "sector": "Consumer Cyclical",
       "industry": "Home Improvement Retail",
@@ -653,7 +631,7 @@
     },
     {
       "ticker": "MCD",
-      "digest": "Jefferies cuts McDonald’s price target to $325 from $350 while reiterating its Buy rating on the stock.",
+      "digest": "Jefferies cuts McDonaldâs price target to $325 from $350 while reiterating its Buy rating on the stock.",
       "news_title": "Chipotle Stock Looks Expensive Until You Price The New Restaurants",
       "sector": "Consumer Cyclical",
       "industry": "Restaurants",
@@ -694,6 +672,28 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export"
+    },
+    {
+      "ticker": "MSI",
+      "digest": "Motorola Solutions wins $139 million 10-year public safety technology contract from State of Louisiana",
+      "news_title": "Why Did Axon Stock Fall Ten Percent On A Convertible That Pays No Interest?",
+      "sector": "Technology",
+      "industry": "Communication Equipment",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
+      "ticker": "NBIS",
+      "digest": "Nebius raises NVIDIA GPU prices on strong AI demand, surging 8.6% premarket",
+      "news_title": "Nvidia Stock Still Looks Like a Bargain Based on This Metric",
+      "sector": "Technology",
+      "industry": "Software - Infrastructure",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
     }
   ],
   "by_sector": {
@@ -723,7 +723,7 @@
       {
         "ticker": "BAC",
         "digest": "BAC CEO's soft Q3 outlook at Barclays conference drives 5% plunge",
-        "news_title": "Bank of America Falls 1.4% as Fee Guidance Drops 10%--20%",
+        "news_title": "Utility bills are rising faster than inflation, BofA says. Expect higher prices long-term.",
         "sector": "Financial",
         "industry": "Banks - Diversified",
         "is_dividend": false,
@@ -733,7 +733,7 @@
       },
       {
         "ticker": "BBVA",
-        "digest": "BBVA posts record Q2 2026 net profit, upgrades Mexico and South America guidance, announces extraordinary €2 billion share buyback program",
+        "digest": "BBVA posts record Q2 2026 net profit, upgrades Mexico and South America guidance, announces extraordinary â¬2 billion share buyback program",
         "news_title": "Grenergy finalises $475m sale of Gabriela energy project to CVC DIF",
         "sector": "Financial",
         "industry": "Banks - Diversified",
@@ -744,7 +744,7 @@
       },
       {
         "ticker": "BCS",
-        "digest": "Strong H1 profits, guidance upgrade and £1bn buyback drive BCS 6.48% surge",
+        "digest": "Strong H1 profits, guidance upgrade and Â£1bn buyback drive BCS 6.48% surge",
         "news_title": "FTAI Stocks Recent Pullback Is A Favorable Entry Point, Says Barclays  Sees Up To 60% Earnings Growth In 2027",
         "sector": "Financial",
         "industry": "Banks - Diversified",
@@ -813,7 +813,7 @@
       {
         "ticker": "AZN",
         "digest": "UBS cuts AstraZeneca price target to 15,200p from 17,600p but reiterates buy rating",
-        "news_title": "AstraZeneca Shares Rise as J.P. Morgan Stays Overweight",
+        "news_title": "The West is hooked on Chinese drugs but they could save your life",
         "sector": "Healthcare",
         "industry": "Drug Manufacturers - General",
         "is_dividend": false,
@@ -834,7 +834,7 @@
       },
       {
         "ticker": "CAH",
-        "digest": "Barron’s reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
+        "digest": "Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
         "news_title": "Cardinal Health CEO Sells $29 Million in Stock After Earnings Send Shares to Record",
         "sector": "Healthcare",
         "industry": "Medical Distribution",
@@ -958,7 +958,7 @@
       {
         "ticker": "GEV",
         "digest": "GE Vernova settles over $300 million Vineyard Wind payment dispute, withdraws contract-termination notice and legal claims on Massachusetts offshore project",
-        "news_title": "GE Vernova and Vineyard Wind Settle $300M-Plus Offshore Wind Dispute",
+        "news_title": "Vineyard Wind, GE Vernova end legal conflict over Massachusetts wind farm",
         "sector": "Industrials",
         "industry": "Specialty Industrial Machinery",
         "is_dividend": false,
@@ -968,17 +968,6 @@
       }
     ],
     "Technology": [
-      {
-        "ticker": "ADBE",
-        "digest": "Adobe posts record Q3 revenue $6.76B and non-GAAP EPS $6.13, raises FY26 outlook and leans into AI-driven freemium strategy",
-        "news_title": "Did Salesforce Telegraph Its Own Massive Rally?",
-        "sector": "Technology",
-        "industry": "Software - Application",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
       {
         "ticker": "APH",
         "digest": "Fabrinet earnings weakness and rising yields spark 6.5% APH drop",
@@ -993,7 +982,7 @@
       {
         "ticker": "ASML",
         "digest": "ASML nearly sold out of 2027 EUV capacity amid very strong AI-driven demand, JPMorgan says",
-        "news_title": "ASML Gains 1.4% as EUV Capacity Chases a 110-Tool Threshold",
+        "news_title": "Modi pitches India as global chipmaking hub",
         "sector": "Technology",
         "industry": "Semiconductor Equipment & Materials",
         "is_dividend": false,
@@ -1015,7 +1004,7 @@
       {
         "ticker": "IBM",
         "digest": "IBM unit Anderon finalizes $1B U.S. CHIPS Act award to fund scaling of U.S. quantum wafer foundry",
-        "news_title": "Did AI Servers Really Quadruple Dell Stock?",
+        "news_title": "IBMs Anderon finalises $1bn agreement for quantum foundry R&D",
         "sector": "Technology",
         "industry": "Information Technology Services",
         "is_dividend": false,
@@ -1026,9 +1015,31 @@
       {
         "ticker": "LITE",
         "digest": "ECOC 2026 AI optics showcase drives Lumentum's 8.5% surge",
-        "news_title": "Is Ciena's Pricing Power Real, Or Just A Parts Shortage?",
+        "news_title": "OpenAI Reveals 6 'Concerning' Incidents. Why AI Stocks Are Rising Anyway.",
         "sector": "Technology",
         "industry": "Communication Equipment",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "MSI",
+        "digest": "Motorola Solutions wins $139 million 10-year public safety technology contract from State of Louisiana",
+        "news_title": "Why Did Axon Stock Fall Ten Percent On A Convertible That Pays No Interest?",
+        "sector": "Technology",
+        "industry": "Communication Equipment",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "NBIS",
+        "digest": "Nebius raises NVIDIA GPU prices on strong AI demand, surging 8.6% premarket",
+        "news_title": "Nvidia Stock Still Looks Like a Bargain Based on This Metric",
+        "sector": "Technology",
+        "industry": "Software - Infrastructure",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
@@ -1038,7 +1049,7 @@
     "Basic Materials": [
       {
         "ticker": "AU",
-        "digest": "Gold prices slide more than 3% after Fed Chair Kevin Warsh’s Jackson Hole comments boost September U.S. rate hike expectations",
+        "digest": "Gold prices slide more than 3% after Fed Chair Kevin Warshâs Jackson Hole comments boost September U.S. rate hike expectations",
         "news_title": "Kavango appoints Jasper Musadaidzwa as CEO and executive director",
         "sector": "Basic Materials",
         "industry": "Gold",
@@ -1128,7 +1139,7 @@
       },
       {
         "ticker": "E",
-        "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to €3.4B on stronger Q2 results",
+        "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results",
         "news_title": "Billionaire Harold Hamm Makes Deal to Explore for Venezuela Oil",
         "sector": "Energy",
         "industry": "Oil & Gas Integrated",
@@ -1174,7 +1185,7 @@
       },
       {
         "ticker": "LOW",
-        "digest": "Bernstein cuts Lowe’s price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery",
+        "digest": "Bernstein cuts Loweâs price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery",
         "news_title": "What Has Home Depot Stopped Telling You About Where Its Goods Come From?",
         "sector": "Consumer Cyclical",
         "industry": "Home Improvement Retail",
@@ -1185,7 +1196,7 @@
       },
       {
         "ticker": "MCD",
-        "digest": "Jefferies cuts McDonald’s price target to $325 from $350 while reiterating its Buy rating on the stock.",
+        "digest": "Jefferies cuts McDonaldâs price target to $325 from $350 while reiterating its Buy rating on the stock.",
         "news_title": "Chipotle Stock Looks Expensive Until You Price The New Restaurants",
         "sector": "Consumer Cyclical",
         "industry": "Restaurants",
@@ -1213,30 +1224,6 @@
         "news_title": "What Does AppLovin Stock Do On Your Worst Days?",
         "sector": "Communication Services",
         "industry": "Advertising Agencies",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      }
-    ],
-    "Consumer Defensive": [
-      {
-        "ticker": "COST",
-        "digest": "Bank of America cuts Costco price target to $1,095 from $1,200 on rising supply chain cost pressures, reiterates Buy rating",
-        "news_title": "What Has Home Depot Stopped Telling You About Where Its Goods Come From?",
-        "sector": "Consumer Defensive",
-        "industry": "Discount Stores",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "MNST",
-        "digest": "Q2 earnings momentum and recent stock split fuel MNST 4.09% gain",
-        "news_title": "Is PepsiCo Stock Cheap Enough To Live With Slow Growth?",
-        "sector": "Consumer Defensive",
-        "industry": "Beverages - Non-Alcoholic",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
@@ -1279,20 +1266,22 @@
         "rank": 2.8,
         "source": "finviz_export"
       }
+    ],
+    "Consumer Defensive": [
+      {
+        "ticker": "MNST",
+        "digest": "Q2 earnings momentum and recent stock split fuel MNST 4.09% gain",
+        "news_title": "Is PepsiCo Stock Cheap Enough To Live With Slow Growth?",
+        "sector": "Consumer Defensive",
+        "industry": "Beverages - Non-Alcoholic",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      }
     ]
   },
   "all_ticker_digests_sample": [
-    {
-      "ticker": "ADBE",
-      "digest": "Adobe posts record Q3 revenue $6.76B and non-GAAP EPS $6.13, raises FY26 outlook and leans into AI-driven freemium strategy",
-      "news_title": "Did Salesforce Telegraph Its Own Massive Rally?",
-      "sector": "Technology",
-      "industry": "Software - Application",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
     {
       "ticker": "AJG",
       "digest": "Arthur J. Gallagher & Co. announces acquisition of Colorado-based Innovise Business Consultants, expanding its commercial insurance and surety bonding capabilities in the Western U.S.",
@@ -1384,7 +1373,7 @@
     {
       "ticker": "ASML",
       "digest": "ASML nearly sold out of 2027 EUV capacity amid very strong AI-driven demand, JPMorgan says",
-      "news_title": "ASML Gains 1.4% as EUV Capacity Chases a 110-Tool Threshold",
+      "news_title": "Modi pitches India as global chipmaking hub",
       "sector": "Technology",
       "industry": "Semiconductor Equipment & Materials",
       "is_dividend": false,
@@ -1394,7 +1383,7 @@
     },
     {
       "ticker": "AU",
-      "digest": "Gold prices slide more than 3% after Fed Chair Kevin Warsh’s Jackson Hole comments boost September U.S. rate hike expectations",
+      "digest": "Gold prices slide more than 3% after Fed Chair Kevin Warshâs Jackson Hole comments boost September U.S. rate hike expectations",
       "news_title": "Kavango appoints Jasper Musadaidzwa as CEO and executive director",
       "sector": "Basic Materials",
       "industry": "Gold",
@@ -1406,7 +1395,7 @@
     {
       "ticker": "AZN",
       "digest": "UBS cuts AstraZeneca price target to 15,200p from 17,600p but reiterates buy rating",
-      "news_title": "AstraZeneca Shares Rise as J.P. Morgan Stays Overweight",
+      "news_title": "The West is hooked on Chinese drugs but they could save your life",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
       "is_dividend": false,
@@ -1428,7 +1417,7 @@
     {
       "ticker": "BAC",
       "digest": "BAC CEO's soft Q3 outlook at Barclays conference drives 5% plunge",
-      "news_title": "Bank of America Falls 1.4% as Fee Guidance Drops 10%--20%",
+      "news_title": "Utility bills are rising faster than inflation, BofA says. Expect higher prices long-term.",
       "sector": "Financial",
       "industry": "Banks - Diversified",
       "is_dividend": false,
@@ -1438,7 +1427,7 @@
     },
     {
       "ticker": "BBVA",
-      "digest": "BBVA posts record Q2 2026 net profit, upgrades Mexico and South America guidance, announces extraordinary €2 billion share buyback program",
+      "digest": "BBVA posts record Q2 2026 net profit, upgrades Mexico and South America guidance, announces extraordinary â¬2 billion share buyback program",
       "news_title": "Grenergy finalises $475m sale of Gabriela energy project to CVC DIF",
       "sector": "Financial",
       "industry": "Banks - Diversified",
@@ -1449,7 +1438,7 @@
     },
     {
       "ticker": "BCS",
-      "digest": "Strong H1 profits, guidance upgrade and £1bn buyback drive BCS 6.48% surge",
+      "digest": "Strong H1 profits, guidance upgrade and Â£1bn buyback drive BCS 6.48% surge",
       "news_title": "FTAI Stocks Recent Pullback Is A Favorable Entry Point, Says Barclays  Sees Up To 60% Earnings Growth In 2027",
       "sector": "Financial",
       "industry": "Banks - Diversified",
@@ -1515,7 +1504,7 @@
     },
     {
       "ticker": "CAH",
-      "digest": "Barron’s reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
+      "digest": "Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
       "news_title": "Cardinal Health CEO Sells $29 Million in Stock After Earnings Send Shares to Record",
       "sector": "Healthcare",
       "industry": "Medical Distribution",
@@ -1574,17 +1563,6 @@
       "news_title": "The Realities of Managing Enterprise AI",
       "sector": "Healthcare",
       "industry": "Medical Distribution",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "COST",
-      "digest": "Bank of America cuts Costco price target to $1,095 from $1,200 on rising supply chain cost pressures, reiterates Buy rating",
-      "news_title": "What Has Home Depot Stopped Telling You About Where Its Goods Come From?",
-      "sector": "Consumer Defensive",
-      "industry": "Discount Stores",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -1669,7 +1647,7 @@
     },
     {
       "ticker": "E",
-      "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to €3.4B on stronger Q2 results",
+      "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results",
       "news_title": "Billionaire Harold Hamm Makes Deal to Explore for Venezuela Oil",
       "sector": "Energy",
       "industry": "Oil & Gas Integrated",
@@ -1747,7 +1725,7 @@
     {
       "ticker": "GEV",
       "digest": "GE Vernova settles over $300 million Vineyard Wind payment dispute, withdraws contract-termination notice and legal claims on Massachusetts offshore project",
-      "news_title": "GE Vernova and Vineyard Wind Settle $300M-Plus Offshore Wind Dispute",
+      "news_title": "Vineyard Wind, GE Vernova end legal conflict over Massachusetts wind farm",
       "sector": "Industrials",
       "industry": "Specialty Industrial Machinery",
       "is_dividend": false,
@@ -1813,7 +1791,7 @@
     {
       "ticker": "IBM",
       "digest": "IBM unit Anderon finalizes $1B U.S. CHIPS Act award to fund scaling of U.S. quantum wafer foundry",
-      "news_title": "Did AI Servers Really Quadruple Dell Stock?",
+      "news_title": "IBMs Anderon finalises $1bn agreement for quantum foundry R&D",
       "sector": "Technology",
       "industry": "Information Technology Services",
       "is_dividend": false,
@@ -1857,7 +1835,7 @@
     {
       "ticker": "LITE",
       "digest": "ECOC 2026 AI optics showcase drives Lumentum's 8.5% surge",
-      "news_title": "Is Ciena's Pricing Power Real, Or Just A Parts Shortage?",
+      "news_title": "OpenAI Reveals 6 'Concerning' Incidents. Why AI Stocks Are Rising Anyway.",
       "sector": "Technology",
       "industry": "Communication Equipment",
       "is_dividend": false,
@@ -1878,7 +1856,7 @@
     },
     {
       "ticker": "LOW",
-      "digest": "Bernstein cuts Lowe’s price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery",
+      "digest": "Bernstein cuts Loweâs price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery",
       "news_title": "What Has Home Depot Stopped Telling You About Where Its Goods Come From?",
       "sector": "Consumer Cyclical",
       "industry": "Home Improvement Retail",
@@ -1900,7 +1878,7 @@
     },
     {
       "ticker": "MCD",
-      "digest": "Jefferies cuts McDonald’s price target to $325 from $350 while reiterating its Buy rating on the stock.",
+      "digest": "Jefferies cuts McDonaldâs price target to $325 from $350 while reiterating its Buy rating on the stock.",
       "news_title": "Chipotle Stock Looks Expensive Until You Price The New Restaurants",
       "sector": "Consumer Cyclical",
       "industry": "Restaurants",
@@ -1954,6 +1932,17 @@
       "source": "finviz_export"
     },
     {
+      "ticker": "NBIS",
+      "digest": "Nebius raises NVIDIA GPU prices on strong AI demand, surging 8.6% premarket",
+      "news_title": "Nvidia Stock Still Looks Like a Bargain Based on This Metric",
+      "sector": "Technology",
+      "industry": "Software - Infrastructure",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
       "ticker": "NEE",
       "digest": "NextEra and Dominion unveil expanded Virginia benefits package for proposed merger, doubling bill credits and adding major investments",
       "news_title": "How a Trade Deal With Japan Could Change the Face of U.S. Energy",
@@ -1977,7 +1966,7 @@
     },
     {
       "ticker": "NSC",
-      "digest": "Norfolk Southern says over 500 stakeholders filed STB support letters for proposed Union Pacific merger, targets closing in Q3–Q4 2027",
+      "digest": "Norfolk Southern says over 500 stakeholders filed STB support letters for proposed Union Pacific merger, targets closing in Q3âQ4 2027",
       "news_title": "More Than 500 Customers Back Union Pacific-Norfolk Southern Combination as a Catalyst for American Growth",
       "sector": "Industrials",
       "industry": "Railroads",
@@ -1999,7 +1988,7 @@
     },
     {
       "ticker": "NU",
-      "digest": "Itau BBA downgrades Nu Holdings (Nubank) to Market Perform from Outperform, cuts target to $18 from $20 on increased uncertainty in the company’s medium-term outlook",
+      "digest": "Itau BBA downgrades Nu Holdings (Nubank) to Market Perform from Outperform, cuts target to $18 from $20 on increased uncertainty in the companyâs medium-term outlook",
       "news_title": "Nu Holdings Cut to Market Perform on Brazil Credit Risk",
       "sector": "Financial",
       "industry": "Banks - Regional",
@@ -2054,7 +2043,7 @@
     },
     {
       "ticker": "PH",
-      "digest": "Parker-Hannifin prices $2.4B U.S. dollar and €2.025B euro senior notes to repay acquisition-related debt",
+      "digest": "Parker-Hannifin prices $2.4B U.S. dollar and â¬2.025B euro senior notes to repay acquisition-related debt",
       "news_title": "Should You Get Paid While Eaton Finishes Its Factories?",
       "sector": "Industrials",
       "industry": "Specialty Industrial Machinery",
@@ -2066,7 +2055,7 @@
     {
       "ticker": "PLTR",
       "digest": "UBS raises Palantir price target to $250 from $220, reiterates Buy rating on robust AI software demand",
-      "news_title": "CMG Stock Ticks Up On AI Food Safety Bet With Palantir: Retail Bullish On Ontological Burritos'",
+      "news_title": "Surf Air Mobility Signs First OperatorOS Contract with Sprintbach Aviation",
       "sector": "Technology",
       "industry": "Software - Infrastructure",
       "is_dividend": false,
@@ -2098,7 +2087,7 @@
     },
     {
       "ticker": "RACE",
-      "digest": "Ferrari completes €250 million second tranche of buyback, launches up to €250 million third tranche",
+      "digest": "Ferrari completes â¬250 million second tranche of buyback, launches up to â¬250 million third tranche",
       "news_title": "FERRARI TO PARTNER WITH RAKUTEN",
       "sector": "Consumer Cyclical",
       "industry": "Auto Manufacturers",
@@ -2155,6 +2144,17 @@
       "ticker": "RY",
       "digest": "Royal Bank of Canada beats fiscal Q3 2026 estimates and outlines U.S. expansion plans for City National Bank",
       "news_title": "Royal Bank of Canada (RY) (Q3 2026) Earnings Call Highlights: Record Earnings and Strategic ...",
+      "sector": "Financial",
+      "industry": "Banks - Diversified",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
+      "ticker": "SAN",
+      "digest": "Banco Santander completes Webster Financial acquisition, creating leading U.S. retail and commercial bank with about $327B assets, targets 18% RoTE in U.S. by 2028",
+      "news_title": "Santander Holdings USA, Inc. Announces Redemption of All Outstanding Depositary Shares Representing Interests in Its Fixed-Rate Reset Non-Cumulative Perpetual Preferred Stock, Series I",
       "sector": "Financial",
       "industry": "Banks - Diversified",
       "is_dividend": false,
