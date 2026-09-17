@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T06:38:39.986493-04:00",
+  "generated_at": "2026-09-17T06:47:33.989607-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -1428,6 +1428,31 @@
         }
       ],
       "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-09-17\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **1.751** (mult 0.9)\n- regime: risk_on\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **2.605** (ES +1.71%, ZN -0.03%, PM:XLU +0.41%) \u00b7 index_carry **1.846** (general 7.383) \u00b7 llm_overlay **-2.7** (raw -2.7) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-09-17\n**Step 0 \u2014 Setup.** Loaded 140,645 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (16,456 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-17\nGenerated: **2026-09-17T06:38:38.979813-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_at, sectors"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-09-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T06:47:33.393370-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-09-17.csv",
+          "ok": true,
+          "reason": "",
+          "size": 10988976,
+          "preview": "11651 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11429254,
+          "preview": "11641 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11651 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11641 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
