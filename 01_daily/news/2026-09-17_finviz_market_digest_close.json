@@ -1,0 +1,116 @@
+{
+  "date": "2026-09-17",
+  "generated_at": "2026-09-17T16:34:29.476431-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-09-18",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-09-18) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed higher as falling Treasury yields and oil prices eased post-Fed pressures after jobless claims data and Bank of England follow-through",
+  "raw_text": "- The S&P 500 ($SPX) rose 1.15% to 7,638.40, the Dow Jones Industrial Average ($DJI) gained 0.61% to 51,778.04, the Nasdaq Composite ($COMP) climbed 1.69% to 26,418.30, the Nasdaq 100 ($NDX) added 1.73%, and the Russell 2000 (IWM) advanced about 0.5%, rebounding from the prior day’s Fed-driven selloff\n- The 10-year US Treasury yield slipped back below 5% to around 4.95%, helping support equities after the Federal Reserve’s quarter-point hike to a 3.75%–4.00% target range under Chair Kevin Warsh\n- Technology led the advance as the PHLX Semiconductor Index jumped 3.21%, with Nvidia (NVDA) up 2.5% and Advanced Micro Devices (AMD) gaining 6.4% amid an AI-related rebound, even as OpenAI reported additional concerning AI model behavior\n- Amazon (AMZN) shares advanced after the company signed a long-term Generac deal for data-center backup generators worth up to $8 billion that supported broader tech and infrastructure sentiment\n- Generac Holdings (GNRC) surged 18.3% after securing a long-term supply agreement with Amazon (AMZN) for data-center backup generators valued at up to $8 billion, including $2.4 billion in initial deliveries for 2027–2028\n- Nebius (NBIS) climbed about 4% after raising on-demand GPU prices by up to 21% effective October 1, reflecting strong demand for compute capacity\n- Securitize (SECZ) jumped more than 15% after the US securities regulator granted a five-year exemption allowing tokenized US stock trading on its platform\n- Oil fell about 1.7% to around $104 per barrel after Saudi Arabia offered additional cargoes, pressuring energy stocks\n- Lennar (LEN) gained about 1.7% after initially falling on weaker-than-expected quarterly profit and revenue, while D.R. Horton (DHI) and PulteGroup (PHM) also advanced as lower yields aided homebuilders\n- US housing starts unexpectedly declined in August, led by multifamily weakness, though the release had limited market impact, and investors looked ahead to US jobless claims and follow-through from Bank of England policy decisions",
+  "raw_summary_md": "- The **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) **rose 1.15% to 7,638.40**, the **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) **gained 0.61% to 51,778.04**, the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) **climbed 1.69% to 26,418.30**, the **Nasdaq 100** ([$NDX](https://finviz.com/index/NDX?p=d)) **added 1.73%**, and the **Russell 2000** ([IWM](https://finviz.com/quote?t=IWM)) **advanced about 0.5%, rebounding from the prior day’s Fed-driven selloff**\n- The **10-year US Treasury yield slipped back below 5% to around 4.95%**, helping support equities after the **Federal Reserve’s quarter-point hike to a 3.75%–4.00% target range under Chair Kevin Warsh**\n- **Technology led the advance** as the **PHLX Semiconductor Index jumped 3.21%**, with **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) **up 2.5%** and **Advanced Micro Devices** ([AMD](https://finviz.com/quote?t=AMD)) **gaining 6.4% amid an AI-related rebound**, even as **OpenAI reported additional concerning AI model behavior**\n- **Amazon** ([AMZN](https://finviz.com/quote?t=AMZN)) **shares advanced** after the company signed a **long-term Generac deal for data-center backup generators worth up to $8 billion** that supported broader tech and infrastructure sentiment\n- **Generac Holdings** ([GNRC](https://finviz.com/quote?t=GNRC)) **surged 18.3%** after securing a **long-term supply agreement with Amazon** ([AMZN](https://finviz.com/quote?t=AMZN)) for data-center backup generators **valued at up to $8 billion, including $2.4 billion in initial deliveries for 2027–2028**\n- **Nebius** ([NBIS](https://finviz.com/quote?t=NBIS)) **climbed about 4% after raising on-demand GPU prices by up to 21% effective October 1**, reflecting **strong demand for compute capacity**\n- **Securitize** ([SECZ](https://finviz.com/quote?t=SECZ)) **jumped more than 15%** after the US securities regulator granted a **five-year exemption allowing tokenized US stock trading on its platform**\n- **Oil fell about 1.7% to around $104 per barrel** after **Saudi Arabia offered additional cargoes, pressuring energy stocks**\n- **Lennar** ([LEN](https://finviz.com/quote?t=LEN)) **gained about 1.7% after initially falling on weaker-than-expected quarterly profit and revenue**, while **D.R. Horton** ([DHI](https://finviz.com/quote?t=DHI)) **and PulteGroup** ([PHM](https://finviz.com/quote?t=PHM)) **also advanced as lower yields aided homebuilders**\n- **US housing starts unexpectedly declined in August, led by multifamily weakness, though the release had limited market impact, and investors looked ahead to US jobless claims and follow-through from Bank of England policy decisions**",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": 1.15,
+      "verb": "rose"
+    },
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": 0.61,
+      "verb": "gained"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": 1.69,
+      "verb": "climbed"
+    },
+    {
+      "name": "Russell 2000",
+      "code": "RUT",
+      "change_pct": 0.5,
+      "verb": "advanced"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": {
+    "pct": 4.95,
+    "action": "hike",
+    "text": "around 4.95%, helping support equities after the Federal Reserve’s quarter-point hike"
+  },
+  "named_tickers": [
+    "NVDA",
+    "AMD",
+    "AMZN",
+    "GNRC",
+    "NBIS",
+    "SECZ",
+    "LEN",
+    "DHI",
+    "PHM"
+  ],
+  "named_leaders": [
+    "NVDA",
+    "AMD",
+    "AMZN",
+    "GNRC",
+    "NBIS",
+    "SECZ",
+    "LEN",
+    "DHI",
+    "PHM"
+  ],
+  "calendar": [],
+  "prior_close": {
+    "spx": 1.15,
+    "nasdaq": 1.69,
+    "dow": 0.61
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": {
+      "pct": 4.95,
+      "action": "hike",
+      "text": "around 4.95%, helping support equities after the Federal Reserve’s quarter-point hike"
+    }
+  },
+  "next_session_calendar": {
+    "housing": true,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "The 10-year US Treasury yield slipped back below 5% to around 4.95%, helping support equities after the Federal Reserve’s quarter-point hike to a 3.75%–4.00% target range under Chair Kevin Warsh",
+      "US housing starts unexpectedly declined in August, led by multifamily weakness, though the release had limited market impact, and investors looked ahead to US jobless claims and follow-through from Bank of England policy decisions"
+    ],
+    "text": "The 10-year US Treasury yield slipped back below 5% to around 4.95%, helping support equities after the Federal Reserve’s quarter-point hike to a 3.75%–4.00% target range under Chair Kevin Warsh US housing starts unexpectedly declined in August, led by multifamily weakness, though the release had limited market impact, and investors looked ahead to US jobless claims and follow-through from Bank of England policy decisions"
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 288126,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-09-17T16:06:55.853",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}
