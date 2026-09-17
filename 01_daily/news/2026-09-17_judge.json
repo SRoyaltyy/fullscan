@@ -1,0 +1,22 @@
+{
+ "risk_tilt": "off",
+ "macros": [
+  "bearish",
+  "mixed",
+  "bearish",
+  "mixed"
+ ],
+ "sector_tilts": {
+  "Energy": "bearish",
+  "Semis/Ai": "bullish",
+  "Technology": "bullish",
+  "Financial": "mixed"
+ },
+ "tickers": {
+  "XLE": -9.5,
+  "IGV": 4.0,
+  "ADBE": 5.5
+ },
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=4\nMACRO rates/FOMC: [hawkish] Warm retail/imports + paid Warsh hike-odds; FOMC still unresolved \u2014 do not sign SPX (session/1d)\nMACRO yields: [bearish] Backup hitting IWM/duration; BNY prime 7.00% confirms administered hike path (session/1d-1w)\nMACRO oil: [mixed] Tanker-rate/oil spike vs surprise crude build \u2014 not a fresh Hormuz kinetic (session/1d)\nSECTOR energy: [bearish] Inventory + hike path; DVN-style E&P hit (XLE)\nSECTOR semis/AI: [bullish] ASML 2027 EUV sold out; FIX data-center backlog sympathy (SMH/SOXX)\nSECTOR software: [bullish] ADBE beat/raise \u2014 IGV fundamental, not a dovish-multiple buy (IGV)\nSECTOR banks: [mixed] BAC soft Q3 vs prime-rate up (XLF)\nINTERACTION: One hawkish-rates cluster (retail+Warsh+FOMC+yields); oil mixed; SaaS beat \u2260 buy-duration; no kinetic B1=-3\nWATCH: Barrick \u201ccut bets\u201d gold tape is false-negative trap \u2014 fade it vs Warsh/gold-down",
+ "date": "2026-09-17"
+}
