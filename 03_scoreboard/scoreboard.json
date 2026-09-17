@@ -22962,18 +22962,113 @@
         "B7_OIL_DOLLAR": 0.5
       },
       "leading_sum": -2.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7631.44,
+      "actual_close": 7637.76,
+      "actual_pct_change": 1.14,
+      "actual_direction": "up",
+      "actual_magnitude_band": "notable",
+      "direction_hit": true,
+      "magnitude_hit": true,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": -1.0,
+          "status": "miss"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 0.5,
+          "status": "hit"
+        }
+      ],
       "reflection_lesson_ref": null,
-      "sources_used": [],
+      "sources_used": [
+        {
+          "url": "https://www.morningstar.com/news/dow-jones/202609177386/sp-500-rises-114-to-763776-data-talk",
+          "date_accessed": "2026-09-17",
+          "summary": "Hard close print matching Channel 1; this was a notable up day, not a grind from unchanged.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.morningstar.com/news/dow-jones/202609176772/10-year-treasury-yield-falls-to-4946-data-talk",
+          "date_accessed": "2026-09-17",
+          "summary": "The morning 5.00-handle B2 headwind reversed intraday; duration relief is a primary fingerprint of the equity bounce.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.fool.com/coverage/stock-market-today/2026/09/17/stock-market-midday-sept-17-stocks-rebound-from-post-fed-selloff-generac-soars-20/",
+          "date_accessed": "2026-09-17",
+          "summary": "Independent midday attribution matches the close: oil+yields relief, not a new hawkish shock, with energy as the sector outlier.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.straitstimes.com/business/companies-markets/tech-leads-us-stocks-to-higher-close-as-oil-eases-treasury-yields-dip",
+          "date_accessed": "2026-09-17",
+          "summary": "Cross-checks Channel 1 NDX>SPX>Dow and flags financials/staples as the breadth outlier versus the headline rally.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.nahb.org/news-and-economics/press-releases/2026/09/single-family-starts-rebound-but-market-challenges-persist",
+          "date_accessed": "2026-09-17",
+          "summary": "Same-morning housing print was mixed, not a shock, and does not explain the index PATH (gap already in before 8:30 news was fully digested).",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/september-2026",
+          "date_accessed": "2026-09-17",
+          "summary": "Expected hold with a hawkish inflation overlay; background for the global energy regime, not the US cash-session driver.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.straitstimes.com/business/companies-markets/tech-leads-us-stocks-to-higher-close-as-oil-eases-treasury-yields-dip",
+          "date_accessed": "2026-09-17",
+          "summary": "Confirms the shared-root oil→vol→equities chain and that Hormuz risk eased on workarounds, not on a peace deal.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.straitstimes.com/business/companies-markets/tech-leads-us-stocks-to-higher-close-as-oil-eases-treasury-yields-dip",
+          "date_accessed": "2026-09-17",
+          "summary": "Claims were a same-morning modifier (strong labor + still-hawkish path), not the primary price driver of the gap.",
+          "verification": "verified"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -23003,7 +23098,14 @@
       "news_judge_present": true,
       "engine": "v2",
       "anchor_score": 7.258,
-      "overlay_score": 0.125
+      "overlay_score": 0.125,
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "T+1 post-FOMC gap-repair that held as oil and the 10Y eased together (disinflation-relief after the Warsh hike)",
+      "key_interaction": "overnight B6 gap was the price, oil↓×yields↓ was the permission structure that stopped the gap from filling (hawkish SEP vs oil-relief offset after the open)",
+      "knowable_at_9am": "partially",
+      "attribution_contested": "yes",
+      "outlier_watch": "energy lagged and financials/staples finished red on a +1.14% SPX day; Boeing/CoreWeave/Fluence sold off inside “tech led”; NYSE/Nasdaq new lows still exceeded new highs"
     },
     {
       "date": "2026-09-17",
