@@ -16,13 +16,13 @@
       "mult": 1.25
     },
     "B2_BONDS": {
-      "n": 27,
-      "hit": 0.407,
+      "n": 28,
+      "hit": 0.393,
       "mult": 0.0
     },
     "B3_FEDPATH": {
-      "n": 25,
-      "hit": 0.52,
+      "n": 26,
+      "hit": 0.5,
       "mult": 0.5
     },
     "B4_VIX": {
@@ -36,13 +36,13 @@
       "mult": 0.0
     },
     "B6_FUTURES": {
-      "n": 18,
-      "hit": 0.722,
+      "n": 19,
+      "hit": 0.737,
       "mult": 1.25
     },
     "B7_OIL_DOLLAR": {
-      "n": 24,
-      "hit": 0.667,
+      "n": 25,
+      "hit": 0.68,
       "mult": 1.25
     }
   },
@@ -53,8 +53,8 @@
       "mult": 1.0
     },
     "S1_SECTOR_FACTORS": {
-      "n": 164,
-      "hit": 0.555,
+      "n": 165,
+      "hit": 0.552,
       "mult": 1.0
     },
     "S2_BREADTH": {
@@ -68,8 +68,8 @@
       "mult": 0.5
     },
     "S4_ETF_TAPE": {
-      "n": 135,
-      "hit": 0.622,
+      "n": 136,
+      "hit": 0.618,
       "mult": 1.0
     }
   },
@@ -108,8 +108,8 @@
         "mult": 0.5
       },
       "S1_SECTOR_FACTORS": {
-        "n": 164,
-        "hit": 0.555,
+        "n": 165,
+        "hit": 0.552,
         "mult": 1.0,
         "pooled": true
       },
@@ -191,8 +191,8 @@
         "mult": 1.0
       },
       "S1_SECTOR_FACTORS": {
-        "n": 20,
-        "hit": 0.6,
+        "n": 21,
+        "hit": 0.571,
         "mult": 1.0
       },
       "S2_BREADTH": {
@@ -206,8 +206,8 @@
         "mult": 0.5
       },
       "S4_ETF_TAPE": {
-        "n": 11,
-        "hit": 0.636,
+        "n": 12,
+        "hit": 0.583,
         "mult": 1.0
       }
     },
@@ -377,8 +377,8 @@
       }
     }
   },
-  "version": 12,
-  "updated": "2026-09-17T17:37:14-04:00",
+  "version": 13,
+  "updated": "2026-09-17T18:41:32-04:00",
   "rules": {
     "min_n": 8,
     "mute_below": 0.45,
@@ -524,6 +524,12 @@
         "Consumer Defensive.S0_SHARED_MACRO: 1.25 -> 1.0 (n=10, hit=0.6)",
         "Consumer Defensive.S1_SECTOR_FACTORS: 1.0 -> 0.5 (n=19, hit=0.526)",
         "Healthcare.S0_SHARED_MACRO: 0.5 -> 0.0 (n=12, hit=0.417)"
+      ]
+    },
+    {
+      "at": "2026-09-17T18:41:32-04:00",
+      "changes": [
+        "hold"
       ]
     }
   ]

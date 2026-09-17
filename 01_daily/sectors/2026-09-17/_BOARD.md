@@ -1,14 +1,14 @@
 # Sector Board — 2026-09-17
 
-Generated: **2026-09-17T17:37:00.169869-04:00** (America/New_York)
+Generated: **2026-09-17T18:41:19.805745-04:00** (America/New_York)
 
 Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.).
 
 ## Summary
 
 - Predicts present: **11/11**
-- Outcomes graded: **5/11**
-- Direction hits (when graded): **2/5**
+- Outcomes graded: **7/11**
+- Direction hits (when graded): **4/7**
 - Predicted up / down / flat-or-missing: **4** / **0** / **7**
 
 ## Full table
@@ -19,8 +19,8 @@ Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file 
 | Communication Services | XLC | up | mild | 5.28 | 0.65 | — | — | — | P |
 | Consumer Cyclical | XLY | flat | flat | 7.66 | 0.55 | — | — | — | P |
 | Consumer Defensive | XLP | up | mild | 0.77 | 0.43 | 0.19 | HIT | MISS | PO |
-| Energy | XLE | up | mild | 0.20 | 0.41 | — | — | — | P |
-| Financial | XLF | flat | flat | 6.15 | 0.55 | — | — | — | P |
+| Energy | XLE | up | mild | 0.20 | 0.41 | 0.70 | HIT | HIT | PO |
+| Financial | XLF | flat | flat | 6.15 | 0.55 | -0.09 | HIT | HIT | PO |
 | Healthcare | XLV | up | mild | 4.85 | 0.59 | 0.62 | HIT | HIT | PO |
 | Industrials | XLI | flat | flat | 6.26 | 0.55 | 0.18 | MISS | HIT | PO |
 | Real Estate | XLRE | flat | flat | 4.90 | 0.55 | 0.30 | MISS | MISS | PO |
@@ -41,6 +41,8 @@ _None_
 ## Graded calls (post-outcome)
 
 - **Consumer Defensive**: pred up → actual 0.19% (up) — dir HIT, mag MISS
+- **Energy**: pred up → actual 0.70% (up) — dir HIT, mag HIT
+- **Financial**: pred flat → actual -0.09% (flat) — dir HIT, mag HIT
 - **Healthcare**: pred up → actual 0.62% (up) — dir HIT, mag HIT
 - **Industrials**: pred flat → actual 0.18% (up) — dir MISS, mag HIT
 - **Real Estate**: pred flat → actual 0.30% (up) — dir MISS, mag MISS

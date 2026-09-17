@@ -1,14 +1,9 @@
 {
-  "updated": "2026-09-17T17:37:14.399538-04:00",
+  "updated": "2026-09-17T18:41:32.708516-04:00",
   "window_n": 15,
-  "direction_acc": 0.4666666666666667,
-  "notes": [
-    "General accuracy <50%: propose wider neutral band on risk thresholds."
-  ],
-  "threshold_deltas": {
-    "risk_on_score": 1.0,
-    "risk_off_score": -1.0
-  },
+  "direction_acc": 0.5333333333333333,
+  "notes": [],
+  "threshold_deltas": {},
   "sector_notes": [
     "sector:Communication Services weak (27%): review sector taxonomy weights / search templates.",
     "sector:Utilities weak (33%): review sector taxonomy weights / search templates."

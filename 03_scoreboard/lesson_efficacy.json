@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-09-17T17:37:14.364562-04:00",
+  "generated_at": "2026-09-17T18:41:32.672601-04:00",
   "window": 7,
   "summary": {
     "n_active": 207,
-    "n_judged": 156,
-    "improved": 66,
+    "n_judged": 157,
+    "improved": 67,
     "flat": 19,
     "worse": 71,
-    "mean_delta": -0.011
+    "mean_delta": -0.004
   },
   "lessons": [
     {
@@ -496,10 +496,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.5,
-        "n": 4
+        "hit": 0.6,
+        "n": 5
       },
-      "delta": 0.071,
+      "delta": 0.171,
       "verdict": "improved"
     },
     {
@@ -669,10 +669,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.5,
-        "n": 4
+        "hit": 0.6,
+        "n": 5
       },
-      "delta": 0.214,
+      "delta": 0.314,
       "verdict": "improved"
     },
     {
@@ -701,10 +701,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.5,
-        "n": 4
+        "hit": 0.6,
+        "n": 5
       },
-      "delta": 0.214,
+      "delta": 0.314,
       "verdict": "improved"
     },
     {
@@ -1118,10 +1118,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.667,
-        "n": 3
+        "hit": 0.75,
+        "n": 4
       },
-      "verdict": "insufficient"
+      "delta": 0.179,
+      "verdict": "improved"
     },
     {
       "lesson": "a-scheduled-high-impact-macro-release-nfp-cpi-fomc-is-the-do.md",
@@ -1277,10 +1278,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.5,
-        "n": 4
+        "hit": 0.6,
+        "n": 5
       },
-      "delta": 0.071,
+      "delta": 0.171,
       "verdict": "improved"
     },
     {
@@ -1370,10 +1371,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.5,
-        "n": 4
+        "hit": 0.6,
+        "n": 5
       },
-      "delta": 0.071,
+      "delta": 0.171,
       "verdict": "improved"
     },
     {
@@ -2010,10 +2011,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.6,
-        "n": 5
+        "hit": 0.667,
+        "n": 6
       },
-      "delta": 0.314,
+      "delta": 0.381,
       "verdict": "improved"
     },
     {
@@ -2026,10 +2027,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.667,
-        "n": 6
+        "hit": 0.714,
+        "n": 7
       },
-      "delta": 0.381,
+      "delta": 0.428,
       "verdict": "improved"
     },
     {
@@ -2647,10 +2648,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.4,
-        "n": 5
+        "hit": 0.5,
+        "n": 6
       },
-      "delta": 0.114,
+      "delta": 0.214,
       "verdict": "improved"
     },
     {
@@ -2710,10 +2711,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.6,
-        "n": 5
+        "hit": 0.667,
+        "n": 6
       },
-      "delta": 0.457,
+      "delta": 0.524,
       "verdict": "improved"
     },
     {
@@ -2886,10 +2887,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.5,
-        "n": 6
+        "hit": 0.571,
+        "n": 7
       },
-      "delta": 0.357,
+      "delta": 0.428,
       "verdict": "improved"
     },
     {
@@ -3180,11 +3181,11 @@
     {
       "topic": "general",
       "last10": {
-        "hit": 0.5,
+        "hit": 0.6,
         "n": 10
       },
       "prev10": {
-        "hit": 0.4,
+        "hit": 0.3,
         "n": 10
       }
     },
@@ -3235,7 +3236,7 @@
     {
       "topic": "sector:Energy",
       "last10": {
-        "hit": 0.4,
+        "hit": 0.5,
         "n": 10
       },
       "prev10": {
@@ -3246,7 +3247,7 @@
     {
       "topic": "sector:Financial",
       "last10": {
-        "hit": 0.5,
+        "hit": 0.6,
         "n": 10
       },
       "prev10": {

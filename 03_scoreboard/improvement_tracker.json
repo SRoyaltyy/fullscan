@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-17T17:37:14-04:00",
+ "generated": "2026-09-17T18:41:32-04:00",
  "replay_reference": {
   "general": {
    "n": 28,
@@ -16,16 +16,16 @@
  },
  "scopes": {
   "general": {
-   "n_runs": 29,
-   "n_sessions": 29,
+   "n_runs": 30,
+   "n_sessions": 30,
    "all": {
-    "n": 29,
-    "dir": 0.552,
-    "mag": 0.517,
-    "always_up": 0.414,
-    "always_down": 0.552,
-    "same_as_yesterday": 0.5,
-    "edge_vs_best_baseline": 0.0
+    "n": 30,
+    "dir": 0.567,
+    "mag": 0.533,
+    "always_up": 0.433,
+    "always_down": 0.533,
+    "same_as_yesterday": 0.483,
+    "edge_vs_best_baseline": 0.034
    },
    "legacy_era": {
     "n": 26,
@@ -39,13 +39,13 @@
    "since_v2": {
     "live": true,
     "since": "2026-09-14",
-    "n": 3,
-    "dir": 0.667,
+    "n": 4,
+    "dir": 0.75,
     "mag": 1.0,
-    "always_up": 0.0,
-    "always_down": 1.0,
-    "same_as_yesterday": 0.667,
-    "edge_vs_best_baseline": -0.333,
+    "always_up": 0.25,
+    "always_down": 0.75,
+    "same_as_yesterday": 0.5,
+    "edge_vs_best_baseline": 0.0,
     "cumulative": [
      {
       "date": "2026-09-14",
@@ -66,6 +66,13 @@
       "topic": "general",
       "n": 3,
       "cum_dir": 0.667,
+      "cum_mag": 1.0
+     },
+     {
+      "date": "2026-09-17",
+      "topic": "general",
+      "n": 4,
+      "cum_dir": 0.75,
       "cum_mag": 1.0
      }
     ]
@@ -737,22 +744,45 @@
       "same_as_yesterday": 0.55
      },
      "edge_20": -0.2
+    },
+    {
+     "date": "2026-09-17",
+     "n": 1,
+     "engine": "v2",
+     "session_dir": 1.0,
+     "session_mag": 1.0,
+     "dir_10": 0.6,
+     "mag_10": 0.6,
+     "base_10": {
+      "always_up": 0.3,
+      "always_down": 0.7,
+      "same_as_yesterday": 0.6
+     },
+     "edge_10": -0.1,
+     "dir_20": 0.45,
+     "mag_20": 0.55,
+     "base_20": {
+      "always_up": 0.35,
+      "always_down": 0.65,
+      "same_as_yesterday": 0.5
+     },
+     "edge_20": -0.2
     }
    ],
    "by_sector": {},
-   "verdict": "improving; not beating best baseline by -20% (last 10 sessions)"
+   "verdict": "improving; not beating best baseline by -10% (last 10 sessions)"
   },
   "sectors": {
-   "n_runs": 218,
+   "n_runs": 220,
    "n_sessions": 21,
    "all": {
-    "n": 218,
-    "dir": 0.459,
-    "mag": 0.321,
-    "always_up": 0.404,
-    "always_down": 0.523,
-    "same_as_yesterday": 0.44,
-    "edge_vs_best_baseline": -0.064
+    "n": 220,
+    "dir": 0.464,
+    "mag": 0.327,
+    "always_up": 0.405,
+    "always_down": 0.518,
+    "same_as_yesterday": 0.435,
+    "edge_vs_best_baseline": -0.054
    },
    "legacy_era": {
     "n": 183,
@@ -766,13 +796,13 @@
    "since_v2": {
     "live": true,
     "since": "2026-09-14",
-    "n": 35,
-    "dir": 0.457,
-    "mag": 0.371,
-    "always_up": 0.286,
-    "always_down": 0.571,
-    "same_as_yesterday": 0.314,
-    "edge_vs_best_baseline": -0.114,
+    "n": 37,
+    "dir": 0.486,
+    "mag": 0.405,
+    "always_up": 0.297,
+    "always_down": 0.541,
+    "same_as_yesterday": 0.297,
+    "edge_vs_best_baseline": -0.055,
     "cumulative": [
      {
       "date": "2026-09-14",
@@ -993,31 +1023,45 @@
      },
      {
       "date": "2026-09-17",
-      "topic": "sector:Healthcare",
+      "topic": "sector:Energy",
       "n": 32,
       "cum_dir": 0.5,
       "cum_mag": 0.375
      },
      {
       "date": "2026-09-17",
-      "topic": "sector:Industrials",
+      "topic": "sector:Financial",
       "n": 33,
-      "cum_dir": 0.485,
+      "cum_dir": 0.515,
       "cum_mag": 0.394
      },
      {
       "date": "2026-09-17",
-      "topic": "sector:Real Estate",
+      "topic": "sector:Healthcare",
       "n": 34,
-      "cum_dir": 0.471,
-      "cum_mag": 0.382
+      "cum_dir": 0.529,
+      "cum_mag": 0.412
+     },
+     {
+      "date": "2026-09-17",
+      "topic": "sector:Industrials",
+      "n": 35,
+      "cum_dir": 0.514,
+      "cum_mag": 0.429
+     },
+     {
+      "date": "2026-09-17",
+      "topic": "sector:Real Estate",
+      "n": 36,
+      "cum_dir": 0.5,
+      "cum_mag": 0.417
      },
      {
       "date": "2026-09-17",
       "topic": "sector:Utilities",
-      "n": 35,
-      "cum_dir": 0.457,
-      "cum_mag": 0.371
+      "n": 37,
+      "cum_dir": 0.486,
+      "cum_mag": 0.405
      }
     ]
    },
@@ -1484,26 +1528,26 @@
     },
     {
      "date": "2026-09-17",
-     "n": 5,
+     "n": 7,
      "engine": "v2",
-     "session_dir": 0.4,
-     "session_mag": 0.4,
-     "dir_10": 0.434,
-     "mag_10": 0.354,
+     "session_dir": 0.571,
+     "session_mag": 0.571,
+     "dir_10": 0.446,
+     "mag_10": 0.366,
      "base_10": {
-      "always_up": 0.333,
-      "always_down": 0.586,
-      "same_as_yesterday": 0.444
+      "always_up": 0.337,
+      "always_down": 0.574,
+      "same_as_yesterday": 0.436
      },
-     "edge_10": -0.152,
-     "dir_20": 0.444,
-     "mag_20": 0.319,
+     "edge_10": -0.128,
+     "dir_20": 0.45,
+     "mag_20": 0.325,
      "base_20": {
-      "always_up": 0.401,
-      "always_down": 0.522,
-      "same_as_yesterday": 0.44
+      "always_up": 0.402,
+      "always_down": 0.517,
+      "same_as_yesterday": 0.435
      },
-     "edge_20": -0.078
+     "edge_20": -0.067
     }
    ],
    "by_sector": {
@@ -1544,22 +1588,22 @@
      "edge_vs_best_baseline": -0.048
     },
     "Energy": {
-     "n": 20,
-     "dir": 0.5,
-     "mag": 0.35,
-     "always_up": 0.6,
-     "always_down": 0.35,
-     "same_as_yesterday": 0.316,
-     "edge_vs_best_baseline": -0.1
+     "n": 21,
+     "dir": 0.524,
+     "mag": 0.381,
+     "always_up": 0.619,
+     "always_down": 0.333,
+     "same_as_yesterday": 0.3,
+     "edge_vs_best_baseline": -0.095
     },
     "Financial": {
-     "n": 20,
-     "dir": 0.45,
-     "mag": 0.3,
-     "always_up": 0.4,
-     "always_down": 0.5,
-     "same_as_yesterday": 0.474,
-     "edge_vs_best_baseline": -0.05
+     "n": 21,
+     "dir": 0.476,
+     "mag": 0.333,
+     "always_up": 0.381,
+     "always_down": 0.476,
+     "same_as_yesterday": 0.45,
+     "edge_vs_best_baseline": 0.0
     },
     "Healthcare": {
      "n": 19,
@@ -1607,7 +1651,7 @@
      "edge_vs_best_baseline": -0.135
     }
    },
-   "verdict": "steady; not beating best baseline by -15% (last 10 sessions)"
+   "verdict": "steady; not beating best baseline by -13% (last 10 sessions)"
   }
  }
 }

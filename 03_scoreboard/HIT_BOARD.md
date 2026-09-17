@@ -1,6 +1,6 @@
 # HIT Board — general + sectors (all dates)
 
-Generated: **2026-09-17T17:37:13.414090-04:00**
+Generated: **2026-09-17T18:41:31.730695-04:00**
 
 Source: `03_scoreboard/scoreboard.json`.
 
@@ -10,14 +10,14 @@ Source: `03_scoreboard/scoreboard.json`.
 
 | Book | Direction HIT% | hits / graded | Mag HIT% | n mag |
 |------|----------------|---------------|----------|-------|
-| **General (SPX-style)** | **55.2%** | 16/29 | 51.7% | 29 |
-| **All sector calls** | **45.9%** | 100/218 | 32.1% | 218 |
+| **General (SPX-style)** | **56.7%** | 17/30 | 53.3% | 30 |
+| **All sector calls** | **46.4%** | 102/220 | 32.7% | 220 |
 
 ### Pipeline blanks (general) — excluded from HIT%
 
 - No `predicted_direction`: **2026-08-02, 2026-08-08, 2026-08-09, 2026-08-15, 2026-08-16, 2026-08-22, 2026-08-25, 2026-08-27, 2026-08-29, 2026-08-30** (n=10)
 - Of those, legacy scoreboard still marked direction_hit=false: **2026-08-02, 2026-08-08, 2026-08-09** — ops failure, not model error
-- If blanks were counted as MISS (old method): **50.0%** (16/32)
+- If blanks were counted as MISS (old method): **51.5%** (17/33)
 
 ## General market — by date
 
@@ -65,7 +65,7 @@ Source: `03_scoreboard/scoreboard.json`.
 | 2026-09-14 | down | mild | -11.002 | -0.48 | down | HIT | HIT |
 | 2026-09-15 | down | mild | -6.215 | -0.45 | down | HIT | HIT |
 | 2026-09-16 | up | mild | 5.297 | -0.45 | down | MISS | HIT |
-| 2026-09-17 | up | notable | 7.383 | — | — | — | — |
+| 2026-09-17 | up | notable | 7.383 | 1.14 | up | HIT | HIT |
 
 ## Sectors — HIT% by date (model calls only)
 
@@ -113,7 +113,7 @@ Source: `03_scoreboard/scoreboard.json`.
 | 2026-09-14 | 10 | **70.0%** | 7/10 | 40.0% |
 | 2026-09-15 | 11 | **55.6%** | 5/9 | 44.4% |
 | 2026-09-16 | 11 | **18.2%** | 2/11 | 27.3% |
-| 2026-09-17 | 11 | **40.0%** | 2/5 | 40.0% |
+| 2026-09-17 | 11 | **57.1%** | 4/7 | 57.1% |
 
 ## Sectors — HIT% by sector (across dates)
 
@@ -123,8 +123,8 @@ Source: `03_scoreboard/scoreboard.json`.
 | Communication Services | XLC | **26.3%** | 5/19 | 31.6% |
 | Consumer Cyclical | XLY | **60.0%** | 12/20 | 20.0% |
 | Consumer Defensive | XLP | **47.6%** | 10/21 | 33.3% |
-| Energy | XLE | **50.0%** | 10/20 | 35.0% |
-| Financial | XLF | **45.0%** | 9/20 | 30.0% |
+| Energy | XLE | **52.4%** | 11/21 | 38.1% |
+| Financial | XLF | **47.6%** | 10/21 | 33.3% |
 | Healthcare | XLV | **52.6%** | 10/19 | 26.3% |
 | Industrials | XLI | **38.1%** | 8/21 | 28.6% |
 | Real Estate | XLRE | **47.6%** | 10/21 | 28.6% |
@@ -141,8 +141,8 @@ HIT / MISS / NO_PRED / — . Actual % when graded.
 | Communication Services | MISS (+0.9%) | MISS (-1.2%) | HIT (-0.5%) | MISS (-0.6%) | MISS (+0.6%) | HIT (+1.0%) | NO_PRED | MISS (-0.9%) | MISS (-0.9%) | up |
 | Consumer Cyclical | MISS (+1.4%) | HIT (-1.3%) | HIT (-0.8%) | HIT (-1.3%) | HIT (-0.4%) | MISS (+0.9%) | MISS (-0.1%) | HIT (-1.7%) | MISS (-0.6%) | flat |
 | Consumer Defensive | MISS (-0.3%) | HIT (-0.8%) | MISS (-0.7%) | HIT (-1.2%) | MISS (+0.0%) | HIT (+0.3%) | HIT (+1.2%) | MISS (-0.8%) | MISS (-0.5%) | HIT (+0.2%) |
-| Energy | MISS (-0.7%) | MISS (-0.9%) | HIT (+1.1%) | HIT (+0.8%) | MISS (-0.6%) | MISS (+0.3%) | MISS (-0.9%) | HIT (+2.2%) | HIT (-2.9%) | up |
-| Financial | MISS (+1.6%) | MISS (-0.8%) | HIT (-1.4%) | HIT (-0.4%) | HIT (-0.3%) | MISS (+0.7%) | HIT (-0.4%) | HIT (-0.3%) | MISS (-1.6%) | flat |
+| Energy | MISS (-0.7%) | MISS (-0.9%) | HIT (+1.1%) | HIT (+0.8%) | MISS (-0.6%) | MISS (+0.3%) | MISS (-0.9%) | HIT (+2.2%) | HIT (-2.9%) | HIT (+0.7%) |
+| Financial | MISS (+1.6%) | MISS (-0.8%) | HIT (-1.4%) | HIT (-0.4%) | HIT (-0.3%) | MISS (+0.7%) | HIT (-0.4%) | HIT (-0.3%) | MISS (-1.6%) | HIT (-0.1%) |
 | Healthcare | MISS (+0.2%) | MISS (-1.0%) | MISS (-2.5%) | HIT (-0.3%) | HIT (-0.6%) | MISS (-0.2%) | MISS (+1.4%) | MISS (-0.1%) | MISS (+0.1%) | HIT (+0.6%) |
 | Industrials | MISS (+1.0%) | MISS (+0.4%) | MISS (-0.5%) | MISS (-1.5%) | HIT (-0.7%) | HIT (+1.1%) | HIT (-1.4%) | HIT (-0.6%) | HIT (-0.1%) | MISS (+0.2%) |
 | Real Estate | MISS (+1.2%) | MISS (-0.7%) | MISS (-0.1%) | HIT (-1.1%) | HIT (-0.8%) | MISS (+0.9%) | HIT (-0.7%) | HIT (-0.1%) | MISS (-0.6%) | MISS (+0.3%) |
