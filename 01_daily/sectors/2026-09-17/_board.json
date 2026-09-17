@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T05:44:27.731043-04:00",
+  "generated_at": "2026-09-17T05:50:39.653162-04:00",
   "sectors": [
     {
       "sector": "Basic Materials",
@@ -97,19 +97,25 @@
     {
       "sector": "Energy",
       "etf": "XLE",
-      "predicted_direction": null,
-      "predicted_magnitude_band": null,
-      "total_score": null,
-      "confidence_score": null,
-      "multiplier": null,
-      "divergence_flagged": null,
+      "predicted_direction": "up",
+      "predicted_magnitude_band": "mild",
+      "total_score": 0.202,
+      "confidence_score": 0.408,
+      "multiplier": 0.85,
+      "divergence_flagged": true,
       "actual_pct_change": null,
       "actual_direction": null,
       "direction_hit": null,
       "magnitude_hit": null,
-      "has_predict_md": false,
+      "has_predict_md": true,
       "has_outcome_md": false,
-      "components": {}
+      "components": {
+        "S0_SHARED_MACRO": 0.0,
+        "S1_SECTOR_FACTORS": -1.0,
+        "S2_BREADTH": 0.0,
+        "S3_FLOWS_POSITIONING": 0.0,
+        "S4_ETF_TAPE": -1.0
+      }
     },
     {
       "sector": "Financial",
