@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T04:48:12.638787-04:00",
+  "generated_at": "2026-09-17T04:56:19.337781-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -41,24 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-09-17",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-17T04:15:49.504151-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-09-17_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2261880,
-          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 SKHY, AVPT, NICE, DFIN, SONO"
-        }
-      ],
-      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 SKHY, AVPT, NICE, DFIN, SONO"
-    },
     {
       "key": "ab",
       "title": "AB checklist",
@@ -212,6 +194,31 @@
         }
       ],
       "preview": "keys: date, generated_at, sectors"
+    },
+    {
+      "key": "map_heat_research",
+      "title": "Map heat morning delta refresh",
+      "date": "2026-09-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T04:56:18.127474-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-17_research.json",
+          "ok": true,
+          "reason": "",
+          "size": 37753,
+          "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-17_research.md",
+          "ok": true,
+          "reason": "",
+          "size": 37753,
+          "preview": "# MAP HEAT RESEARCH \u2014 2026-09-17\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+        }
+      ],
+      "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-17\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
