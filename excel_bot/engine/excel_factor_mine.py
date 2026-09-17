@@ -700,7 +700,9 @@ def headline_from(scored, cutoff):
                 f"(cutoff {cutoff}): " + "; ".join(bits) + "."
             ),
         }
-    ranked = [r for r in scored if r["hold"]["n"]]
+    # Prefer material n (≥30). A thin 100% print is not the FAIL card.
+    material = [r for r in scored if (r.get("hold") or {}).get("n", 0) >= MIN_FIRES]
+    ranked = material or [r for r in scored if (r.get("hold") or {}).get("n")]
     best = max(ranked, key=lambda r: ((r["hold"]["wr"] or 0), r["hold"]["n"])) if ranked else None
     if not best:
         text = (
@@ -709,10 +711,18 @@ def headline_from(scored, cutoff):
         )
         return {"verdict": "FAIL", "n_keep": 0, "text": text, "best": None}
     h = best["hold"]
+    hypo = next((r for r in scored if r.get("rule") == "J_ge0|ER_m1"), None)
+    extra = ""
+    if hypo and (hypo.get("hold") or {}).get("n"):
+        hh = hypo["hold"]
+        extra = (
+            f" Hypothesis `J_ge0|ER_m1` prove n={hh['n']} "
+            f"after-fee WR {_pct(hh['wr'])}."
+        )
     text = (
         f"FAIL. No open-knowable combo cleared the Cyrus KEEP bar on holdout "
-        f"(cutoff {cutoff}). Best prove after-fee WR: `{best['rule']}` "
-        f"n={h['n']} after-fee WR {_pct(h['wr'])}. Lift-only is not KEEP."
+        f"(cutoff {cutoff}). Best material prove after-fee WR: `{best['rule']}` "
+        f"n={h['n']} after-fee WR {_pct(h['wr'])}.{extra} Lift-only is not KEEP."
     )
     return {
         "verdict": "FAIL", "n_keep": 0, "text": text,

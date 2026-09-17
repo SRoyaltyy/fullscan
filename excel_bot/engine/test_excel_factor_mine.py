@@ -163,6 +163,35 @@ def test_grid_only_not_in_seeds():
         assert a not in OPEN_SEEDS
 
 
+def test_fail_headline_prefers_material_n():
+    """Thin 100% must not be the FAIL card when a ≥30 near-miss exists."""
+    from excel_factor_mine import headline_from
+    scored = [
+        {
+            "rule": "J_ge0|ER_m1|prior_hanging",
+            "hold": {"n": 3, "wr": 1.0, "why": "thin n=3, after-fee WR 100.0%"},
+            "verdict": "FAIL",
+        },
+        {
+            "rule": "FQ|J_lt0",
+            "hold": {"n": 432, "wr": 0.549, "why": "n=432, after-fee WR 54.9% ≤ 55%"},
+            "verdict": "FAIL",
+        },
+        {
+            "rule": "J_ge0|ER_m1",
+            "hold": {"n": 602, "wr": 0.452, "why": "n=602, after-fee WR 45.2% ≤ 55%"},
+            "verdict": "FAIL",
+        },
+    ]
+    hl = headline_from(scored, "2026-07-06")
+    assert hl["verdict"] == "FAIL"
+    assert hl["best"]["rule"] == "FQ|J_lt0"
+    assert hl["best"]["n"] == 432
+    assert "54.9%" in hl["text"]
+    assert "J_ge0|ER_m1" in hl["text"]
+    assert "n=602" in hl["text"]
+
+
 def test_board_says_fail_plainly():
     scored = [{
         "rule": "J_ge0|ER_m1", "kind": "combo2", "atoms": ["J_ge0", "ER_m1"],
@@ -226,6 +255,7 @@ if __name__ == "__main__":
     test_expand_is_systematic()
     test_no_flatten_import()
     test_grid_only_not_in_seeds()
+    test_fail_headline_prefers_material_n()
     test_board_says_fail_plainly()
     test_open_features_ignore_today_hlc()
     print("ok")
