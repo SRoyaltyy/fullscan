@@ -2901,7 +2901,7 @@
   },
   "per_sleeve": {
     "tag": "RESEARCH",
-    "date": "2026-09-16",
+    "date": "2026-09-17",
     "live_sit": true,
     "keep_bar_unchanged": true,
     "n_sit": 1,
@@ -2925,10 +2925,10 @@
         "short_only": [],
         "dip_scoop": [
           {
-            "ticker": "HQ",
+            "ticker": "IQV",
             "side": "long",
             "open": null,
-            "px": 13.0,
+            "px": 268.82,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -2961,10 +2961,82 @@
             "tag": "RESEARCH"
           },
           {
-            "ticker": "HLP",
+            "ticker": "RDNT",
             "side": "long",
             "open": null,
-            "px": 1.78,
+            "px": 75.78,
+            "px_src": "session_export",
+            "low": null,
+            "scoops": {
+              "0.5": {
+                "kind": "no_open",
+                "x": 0.5,
+                "fill": null
+              },
+              "1.0": {
+                "kind": "no_open",
+                "x": 1.0,
+                "fill": null
+              },
+              "1.5": {
+                "kind": "no_open",
+                "x": 1.5,
+                "fill": null
+              },
+              "2.0": {
+                "kind": "no_open",
+                "x": 2.0,
+                "fill": null
+              },
+              "3.0": {
+                "kind": "no_open",
+                "x": 3.0,
+                "fill": null
+              }
+            },
+            "tag": "RESEARCH"
+          },
+          {
+            "ticker": "AVAH",
+            "side": "long",
+            "open": null,
+            "px": 14.26,
+            "px_src": "session_export",
+            "low": null,
+            "scoops": {
+              "0.5": {
+                "kind": "no_open",
+                "x": 0.5,
+                "fill": null
+              },
+              "1.0": {
+                "kind": "no_open",
+                "x": 1.0,
+                "fill": null
+              },
+              "1.5": {
+                "kind": "no_open",
+                "x": 1.5,
+                "fill": null
+              },
+              "2.0": {
+                "kind": "no_open",
+                "x": 2.0,
+                "fill": null
+              },
+              "3.0": {
+                "kind": "no_open",
+                "x": 3.0,
+                "fill": null
+              }
+            },
+            "tag": "RESEARCH"
+          },
+          {
+            "ticker": "BLFS",
+            "side": "long",
+            "open": null,
+            "px": 36.11,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -3000,7 +3072,7 @@
             "ticker": "AUPH",
             "side": "long",
             "open": null,
-            "px": 16.29,
+            "px": 17.06,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -3036,7 +3108,7 @@
             "ticker": "OVID",
             "side": "long",
             "open": null,
-            "px": 2.75,
+            "px": 2.68,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -3072,7 +3144,7 @@
             "ticker": "SANM",
             "side": "long",
             "open": null,
-            "px": 193.0,
+            "px": 198.0,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -3108,7 +3180,7 @@
             "ticker": "ORCL",
             "side": "long",
             "open": null,
-            "px": 140.44,
+            "px": 146.64,
             "px_src": "session_export",
             "low": null,
             "scoops": {
@@ -3180,7 +3252,7 @@
             "ticker": "COHU",
             "side": "long",
             "open": null,
-            "px": 51.2,
+            "px": 52.5,
             "px_src": "session_export",
             "low": null,
             "scoops": {

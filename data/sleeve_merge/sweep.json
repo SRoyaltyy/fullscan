@@ -4,11 +4,11 @@
     {
       "name": "flatten_switch",
       "live": false,
-      "total_ret_pct": 9.97,
+      "total_ret_pct": 9.87,
       "max_dd_pct": 4.82,
       "n_trades": 44,
       "hit": 0.568,
-      "final_equity": 109970.44,
+      "final_equity": 109869.69,
       "min_fortnight": -1.2,
       "passed": false,
       "fees_total": 1704.53
@@ -16,11 +16,11 @@
     {
       "name": "flatten_3d",
       "live": false,
-      "total_ret_pct": 6.4,
+      "total_ret_pct": 6.3,
       "max_dd_pct": 4.82,
       "n_trades": 37,
       "hit": 0.514,
-      "final_equity": 106398.13,
+      "final_equity": 106300.63,
       "min_fortnight": -1.2,
       "passed": false,
       "fees_total": 1642.41
@@ -28,11 +28,11 @@
     {
       "name": "flatten_switch_60",
       "live": false,
-      "total_ret_pct": 9.19,
+      "total_ret_pct": 9.09,
       "max_dd_pct": 5.53,
       "n_trades": 42,
       "hit": 0.548,
-      "final_equity": 109188.25,
+      "final_equity": 109088.25,
       "min_fortnight": -1.93,
       "passed": false,
       "fees_total": 1724.88
@@ -40,11 +40,11 @@
     {
       "name": "flatten_overlap_55",
       "live": false,
-      "total_ret_pct": 9.53,
+      "total_ret_pct": 9.43,
       "max_dd_pct": 5.55,
       "n_trades": 45,
       "hit": 0.556,
-      "final_equity": 109530.46,
+      "final_equity": 109429.96,
       "min_fortnight": -1.96,
       "passed": false,
       "fees_total": 1747.4
@@ -52,35 +52,35 @@
     {
       "name": "flatten_robust",
       "live": true,
-      "total_ret_pct": 2.6,
+      "total_ret_pct": 2.57,
       "max_dd_pct": 12.62,
-      "n_trades": 78,
-      "hit": 0.423,
-      "final_equity": 102600.45,
+      "n_trades": 80,
+      "hit": 0.412,
+      "final_equity": 102571.54,
       "min_fortnight": -2.0,
       "passed": false,
-      "fees_total": 2827.53
+      "fees_total": 2856.44
     },
     {
       "name": "flatten_robust_ripper",
       "live": false,
-      "total_ret_pct": 2.6,
+      "total_ret_pct": 2.57,
       "max_dd_pct": 12.62,
-      "n_trades": 78,
-      "hit": 0.423,
-      "final_equity": 102600.45,
+      "n_trades": 80,
+      "hit": 0.412,
+      "final_equity": 102571.54,
       "min_fortnight": -2.0,
       "passed": false,
-      "fees_total": 2827.53
+      "fees_total": 2856.44
     },
     {
       "name": "flatten_overlap",
       "live": false,
-      "total_ret_pct": 9.54,
+      "total_ret_pct": 9.44,
       "max_dd_pct": 5.61,
       "n_trades": 45,
       "hit": 0.556,
-      "final_equity": 109543.59,
+      "final_equity": 109443.09,
       "min_fortnight": -2.02,
       "passed": false,
       "fees_total": 1672.97
@@ -88,11 +88,11 @@
     {
       "name": "flatten_rich",
       "live": false,
-      "total_ret_pct": 9.61,
+      "total_ret_pct": 9.51,
       "max_dd_pct": 6.04,
       "n_trades": 47,
       "hit": 0.553,
-      "final_equity": 109609.59,
+      "final_equity": 109509.09,
       "min_fortnight": -2.47,
       "passed": false,
       "fees_total": 1766.79
@@ -136,11 +136,11 @@
     {
       "name": "flatten_rotate",
       "live": false,
-      "total_ret_pct": 15.07,
+      "total_ret_pct": 14.96,
       "max_dd_pct": 7.34,
       "n_trades": 64,
       "hit": 0.547,
-      "final_equity": 115068.89,
+      "final_equity": 114963.39,
       "min_fortnight": -3.82,
       "passed": false,
       "fees_total": 2789.53
@@ -148,11 +148,11 @@
     {
       "name": "flatten_switch_full",
       "live": false,
-      "total_ret_pct": 11.14,
+      "total_ret_pct": 11.04,
       "max_dd_pct": 7.34,
       "n_trades": 57,
       "hit": 0.526,
-      "final_equity": 111137.71,
+      "final_equity": 111035.96,
       "min_fortnight": -3.82,
       "passed": false,
       "fees_total": 2169.21
@@ -160,11 +160,11 @@
     {
       "name": "flatten_cash_mover",
       "live": false,
-      "total_ret_pct": 10.7,
+      "total_ret_pct": 10.6,
       "max_dd_pct": 7.34,
       "n_trades": 69,
       "hit": 0.493,
-      "final_equity": 110699.32,
+      "final_equity": 110597.82,
       "min_fortnight": -3.82,
       "passed": false,
       "fees_total": 2345.3
@@ -172,11 +172,11 @@
     {
       "name": "flatten_switch_70",
       "live": false,
-      "total_ret_pct": 8.88,
+      "total_ret_pct": 8.78,
       "max_dd_pct": 7.42,
       "n_trades": 47,
       "hit": 0.553,
-      "final_equity": 108882.42,
+      "final_equity": 108782.67,
       "min_fortnight": -3.89,
       "passed": false,
       "fees_total": 1947.82
@@ -208,11 +208,11 @@
     {
       "name": "flatten_skip_blank_io",
       "live": false,
-      "total_ret_pct": 10.56,
+      "total_ret_pct": 10.46,
       "max_dd_pct": 6.74,
       "n_trades": 54,
       "hit": 0.556,
-      "final_equity": 110561.14,
+      "final_equity": 110459.89,
       "min_fortnight": -4.43,
       "passed": false,
       "fees_total": 2072.0
@@ -268,11 +268,11 @@
     {
       "name": "flatten_carry_book",
       "live": false,
-      "total_ret_pct": 9.94,
+      "total_ret_pct": 9.84,
       "max_dd_pct": 8.03,
       "n_trades": 66,
       "hit": 0.5,
-      "final_equity": 109942.93,
+      "final_equity": 109842.18,
       "min_fortnight": -5.4,
       "passed": false,
       "fees_total": 2071.68
@@ -280,11 +280,11 @@
     {
       "name": "flatten_switch_recycle",
       "live": false,
-      "total_ret_pct": 13.83,
+      "total_ret_pct": 13.72,
       "max_dd_pct": 8.03,
       "n_trades": 71,
       "hit": 0.521,
-      "final_equity": 113828.76,
+      "final_equity": 113724.51,
       "min_fortnight": -5.41,
       "passed": false,
       "fees_total": 2688.75
@@ -316,11 +316,11 @@
     {
       "name": "flatten_blank_cash",
       "live": false,
-      "total_ret_pct": 9.38,
+      "total_ret_pct": 9.28,
       "max_dd_pct": 7.08,
       "n_trades": 76,
       "hit": 0.5,
-      "final_equity": 109377.3,
+      "final_equity": 109277.05,
       "min_fortnight": -6.5,
       "passed": false,
       "fees_total": 2368.92
@@ -338,5 +338,5 @@
       "fees_total": 3756.14
     }
   ],
-  "generated": "2026-09-16T13:38:29"
+  "generated": "2026-09-17T11:03:23"
 }
