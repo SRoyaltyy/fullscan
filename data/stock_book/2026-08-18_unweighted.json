@@ -1314,7 +1314,7 @@
         "1w": 15.82
       },
       "rank_standalone_raw": 1874,
-      "rank_tape_raw": 1384,
+      "rank_tape_raw": 1243,
       "mcap": 7914.31,
       "gated": false
     },
@@ -1364,7 +1364,7 @@
         "1w": 9.48
       },
       "rank_standalone_raw": 920,
-      "rank_tape_raw": 2201,
+      "rank_tape_raw": 2200,
       "mcap": 2036.96,
       "gated": false
     }

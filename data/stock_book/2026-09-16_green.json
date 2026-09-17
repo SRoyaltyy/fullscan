@@ -16,7 +16,7 @@
       "sector": "Technology",
       "in_pile": true,
       "fwd": {
-        "1d": null,
+        "1d": -0.34,
         "2d": null,
         "3d": null,
         "1w": null
@@ -34,7 +34,7 @@
       "sector": "Healthcare",
       "in_pile": true,
       "fwd": {
-        "1d": null,
+        "1d": 2.05,
         "2d": null,
         "3d": null,
         "1w": null
@@ -52,7 +52,7 @@
       "sector": "Healthcare",
       "in_pile": true,
       "fwd": {
-        "1d": null,
+        "1d": 2.64,
         "2d": null,
         "3d": null,
         "1w": null
@@ -70,7 +70,7 @@
       "sector": "Communication Services",
       "in_pile": true,
       "fwd": {
-        "1d": null,
+        "1d": -1.78,
         "2d": null,
         "3d": null,
         "1w": null
@@ -88,7 +88,7 @@
       "sector": "Communication Services",
       "in_pile": true,
       "fwd": {
-        "1d": null,
+        "1d": -3.41,
         "2d": null,
         "3d": null,
         "1w": null
@@ -106,7 +106,7 @@
       "sector": "Technology",
       "in_pile": true,
       "fwd": {
-        "1d": null,
+        "1d": -3.99,
         "2d": null,
         "3d": null,
         "1w": null
@@ -124,7 +124,7 @@
       "sector": "Healthcare",
       "in_pile": true,
       "fwd": {
-        "1d": null,
+        "1d": -2.03,
         "2d": null,
         "3d": null,
         "1w": null
@@ -142,7 +142,7 @@
       "sector": "Technology",
       "in_pile": true,
       "fwd": {
-        "1d": null,
+        "1d": -0.85,
         "2d": null,
         "3d": null,
         "1w": null
@@ -160,7 +160,7 @@
       "sector": "Technology",
       "in_pile": true,
       "fwd": {
-        "1d": null,
+        "1d": 0.78,
         "2d": null,
         "3d": null,
         "1w": null
@@ -178,7 +178,7 @@
       "sector": "Healthcare",
       "in_pile": true,
       "fwd": {
-        "1d": null,
+        "1d": 0.23,
         "2d": null,
         "3d": null,
         "1w": null
@@ -196,7 +196,7 @@
       "sector": "Communication Services",
       "in_pile": true,
       "fwd": {
-        "1d": null,
+        "1d": -1.22,
         "2d": null,
         "3d": null,
         "1w": null
@@ -214,7 +214,7 @@
       "sector": "Communication Services",
       "in_pile": true,
       "fwd": {
-        "1d": null,
+        "1d": -0.24,
         "2d": null,
         "3d": null,
         "1w": null
@@ -234,7 +234,7 @@
       "sector": "Technology",
       "in_pile": true,
       "fwd": {
-        "1d": null,
+        "1d": -0.34,
         "2d": null,
         "3d": null,
         "1w": null
@@ -252,7 +252,7 @@
       "sector": "Healthcare",
       "in_pile": true,
       "fwd": {
-        "1d": null,
+        "1d": 2.05,
         "2d": null,
         "3d": null,
         "1w": null
@@ -270,7 +270,7 @@
       "sector": "Healthcare",
       "in_pile": true,
       "fwd": {
-        "1d": null,
+        "1d": 2.64,
         "2d": null,
         "3d": null,
         "1w": null
@@ -288,7 +288,7 @@
       "sector": "Communication Services",
       "in_pile": true,
       "fwd": {
-        "1d": null,
+        "1d": -1.78,
         "2d": null,
         "3d": null,
         "1w": null
@@ -306,7 +306,7 @@
       "sector": "Communication Services",
       "in_pile": true,
       "fwd": {
-        "1d": null,
+        "1d": -3.41,
         "2d": null,
         "3d": null,
         "1w": null
@@ -324,7 +324,7 @@
       "sector": "Technology",
       "in_pile": true,
       "fwd": {
-        "1d": null,
+        "1d": -3.99,
         "2d": null,
         "3d": null,
         "1w": null
@@ -342,7 +342,7 @@
       "sector": "Healthcare",
       "in_pile": true,
       "fwd": {
-        "1d": null,
+        "1d": -2.03,
         "2d": null,
         "3d": null,
         "1w": null
@@ -360,7 +360,7 @@
       "sector": "Technology",
       "in_pile": true,
       "fwd": {
-        "1d": null,
+        "1d": -0.85,
         "2d": null,
         "3d": null,
         "1w": null
@@ -378,7 +378,7 @@
       "sector": "Technology",
       "in_pile": true,
       "fwd": {
-        "1d": null,
+        "1d": 0.78,
         "2d": null,
         "3d": null,
         "1w": null
@@ -396,7 +396,7 @@
       "sector": "Healthcare",
       "in_pile": true,
       "fwd": {
-        "1d": null,
+        "1d": 0.23,
         "2d": null,
         "3d": null,
         "1w": null
@@ -414,7 +414,7 @@
       "sector": "Communication Services",
       "in_pile": true,
       "fwd": {
-        "1d": null,
+        "1d": -1.22,
         "2d": null,
         "3d": null,
         "1w": null
@@ -432,7 +432,7 @@
       "sector": "Communication Services",
       "in_pile": true,
       "fwd": {
-        "1d": null,
+        "1d": -0.24,
         "2d": null,
         "3d": null,
         "1w": null
@@ -457,13 +457,13 @@
   "dropped": [],
   "avg_fwd": {
     "live": {
-      "1d": null,
+      "1d": -0.68,
       "2d": null,
       "3d": null,
       "1w": null
     },
     "green": {
-      "1d": null,
+      "1d": -0.68,
       "2d": null,
       "3d": null,
       "1w": null

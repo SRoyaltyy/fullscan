@@ -17,8 +17,8 @@
       "in_pile": false,
       "fwd": {
         "1d": 2.44,
-        "2d": null,
-        "3d": null,
+        "2d": -1.79,
+        "3d": -0.61,
         "1w": null
       }
     }
@@ -32,8 +32,8 @@
   "avg_fwd": {
     "live": {
       "1d": 2.44,
-      "2d": null,
-      "3d": null,
+      "2d": -1.79,
+      "3d": -0.61,
       "1w": null
     },
     "green": {

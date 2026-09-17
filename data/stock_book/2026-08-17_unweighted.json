@@ -619,7 +619,7 @@
       }
     },
     {
-      "ticker": "NEXT",
+      "ticker": "EFXT",
       "standalone": 0.23,
       "tape": 0.0,
       "book": 0.2154,
@@ -629,14 +629,14 @@
       "s_news": 0.0,
       "s_ab": 0.0,
       "s_peer": 0.0,
-      "s_opp": 0.48000000000000004,
-      "size": "small",
+      "s_opp": 0.4,
+      "size": "mid",
       "sector": "Energy",
       "fwd": {
-        "1d": -0.43,
-        "2d": -3.31,
-        "3d": 0.72,
-        "1w": 5.76
+        "1d": -3.43,
+        "2d": -8.37,
+        "3d": -10.5,
+        "1w": -12.15
       }
     },
     {
@@ -661,27 +661,6 @@
       }
     },
     {
-      "ticker": "CSTM",
-      "standalone": 0.225,
-      "tape": 0.0,
-      "book": 0.2109,
-      "s_join": 0.1798232246988538,
-      "s_sector": 0.62,
-      "s_general": 0.55,
-      "s_news": 0.0,
-      "s_ab": 0.0,
-      "s_peer": 0.0,
-      "s_opp": 0.52,
-      "size": "mid",
-      "sector": "Basic Materials",
-      "fwd": {
-        "1d": -6.45,
-        "2d": -11.3,
-        "3d": -11.33,
-        "1w": -11.0
-      }
-    },
-    {
       "ticker": "VZLA",
       "standalone": 0.225,
       "tape": 0.0,
@@ -700,6 +679,27 @@
         "2d": 6.58,
         "3d": 6.03,
         "1w": 7.67
+      }
+    },
+    {
+      "ticker": "CSTM",
+      "standalone": 0.225,
+      "tape": 0.0,
+      "book": 0.2109,
+      "s_join": 0.1798232246988538,
+      "s_sector": 0.62,
+      "s_general": 0.55,
+      "s_news": 0.0,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": 0.52,
+      "size": "mid",
+      "sector": "Basic Materials",
+      "fwd": {
+        "1d": -6.45,
+        "2d": -11.3,
+        "3d": -11.33,
+        "1w": -11.0
       }
     },
     {
@@ -787,7 +787,7 @@
       }
     },
     {
-      "ticker": "HAPN",
+      "ticker": "MC",
       "standalone": 0.2109,
       "tape": 0.0,
       "book": 0.1953,
@@ -797,18 +797,18 @@
       "s_news": 0.0,
       "s_ab": 0.0,
       "s_peer": 0.0,
-      "s_opp": 0.52,
+      "s_opp": 0.4,
       "size": "mid",
       "sector": "Financial",
       "fwd": {
-        "1d": -3.23,
-        "2d": -3.28,
-        "3d": -6.36,
-        "1w": -4.9
+        "1d": -0.24,
+        "2d": 2.74,
+        "3d": 0.21,
+        "1w": 2.65
       }
     },
     {
-      "ticker": "PRCH",
+      "ticker": "GSHD",
       "standalone": 0.2109,
       "tape": 0.0,
       "book": 0.1953,
@@ -818,18 +818,18 @@
       "s_news": 0.0,
       "s_ab": 0.0,
       "s_peer": 0.0,
-      "s_opp": 0.24,
-      "size": "small",
+      "s_opp": 0.6000000000000001,
+      "size": "mid",
       "sector": "Financial",
       "fwd": {
-        "1d": -0.48,
-        "2d": 1.67,
-        "3d": 1.91,
-        "1w": 1.79
+        "1d": 0.59,
+        "2d": 6.2,
+        "3d": 9.78,
+        "1w": 13.35
       }
     },
     {
-      "ticker": "PWP",
+      "ticker": "SUPV",
       "standalone": 0.2109,
       "tape": 0.0,
       "book": 0.1953,
@@ -839,14 +839,14 @@
       "s_news": 0.0,
       "s_ab": 0.0,
       "s_peer": 0.0,
-      "s_opp": 0.48000000000000004,
+      "s_opp": 0.32,
       "size": "small",
       "sector": "Financial",
       "fwd": {
-        "1d": -3.64,
-        "2d": -0.89,
-        "3d": -4.83,
-        "1w": -1.91
+        "1d": -3.26,
+        "2d": -4.14,
+        "3d": -4.14,
+        "1w": 7.14
       }
     }
   ],
@@ -1188,7 +1188,7 @@
         "3d": 3.08,
         "1w": 10.23
       },
-      "rank_standalone_raw": 1927,
+      "rank_standalone_raw": 1915,
       "rank_tape_raw": 1660,
       "mcap": 2604.09,
       "gated": false
@@ -1213,7 +1213,7 @@
         "3d": 22.2,
         "1w": 49.47
       },
-      "rank_standalone_raw": 107,
+      "rank_standalone_raw": 120,
       "rank_tape_raw": 190,
       "mcap": 1091.95,
       "gated": false
@@ -1238,7 +1238,7 @@
         "3d": 11.08,
         "1w": 16.19
       },
-      "rank_standalone_raw": 450,
+      "rank_standalone_raw": 453,
       "rank_tape_raw": 489,
       "mcap": 2535.73,
       "gated": false
@@ -1263,7 +1263,7 @@
         "3d": 2.84,
         "1w": 11.41
       },
-      "rank_standalone_raw": 1100,
+      "rank_standalone_raw": 1108,
       "rank_tape_raw": 39,
       "mcap": 9347.65,
       "gated": false
@@ -1288,7 +1288,7 @@
         "3d": 0.85,
         "1w": 8.07
       },
-      "rank_standalone_raw": 395,
+      "rank_standalone_raw": 396,
       "rank_tape_raw": 16,
       "mcap": 7571.41,
       "gated": false
@@ -1313,7 +1313,7 @@
         "3d": 5.12,
         "1w": 13.12
       },
-      "rank_standalone_raw": 69,
+      "rank_standalone_raw": 68,
       "rank_tape_raw": 49,
       "mcap": 5496.0,
       "gated": false
@@ -1338,7 +1338,7 @@
         "3d": 12.95,
         "1w": 8.37
       },
-      "rank_standalone_raw": 1929,
+      "rank_standalone_raw": 1936,
       "rank_tape_raw": 458,
       "mcap": 2035.68,
       "gated": false
@@ -1355,11 +1355,11 @@
   "entered_standalone": [
     "CHEF",
     "CSTM",
-    "HAPN",
-    "NEXT",
+    "EFXT",
+    "GSHD",
+    "MC",
     "ODD",
-    "PRCH",
-    "PWP",
+    "SUPV",
     "TMQ",
     "VZLA"
   ],
@@ -1436,10 +1436,10 @@
       "1w": 2.114
     },
     "standalone": {
-      "1d": -1.6246666666666667,
-      "2d": 0.05399999999999995,
-      "3d": -0.33799999999999997,
-      "1w": 2.7993333333333337
+      "1d": -1.5286666666666666,
+      "2d": 0.20333333333333345,
+      "3d": -0.07733333333333323,
+      "1w": 3.482666666666667
     },
     "tape": {
       "1d": -0.28533333333333327,
@@ -1456,10 +1456,10 @@
       "1w": 0.6
     },
     "standalone": {
-      "1d": 0.3333333333333333,
-      "2d": 0.5333333333333333,
+      "1d": 0.4,
+      "2d": 0.6,
       "3d": 0.6,
-      "1w": 0.6666666666666666
+      "1w": 0.7333333333333333
     },
     "tape": {
       "1d": 0.4,

@@ -23,9 +23,9 @@
       "sector": "Energy",
       "fwd": {
         "1d": 2.44,
-        "2d": null,
-        "3d": null,
-        "1w": 2.44
+        "2d": -1.79,
+        "3d": -0.61,
+        "1w": -0.61
       }
     }
   ],
@@ -46,9 +46,9 @@
       "sector": "Energy",
       "fwd": {
         "1d": 2.44,
-        "2d": null,
-        "3d": null,
-        "1w": 2.44
+        "2d": -1.79,
+        "3d": -0.61,
+        "1w": -0.61
       }
     },
     {
@@ -67,9 +67,9 @@
       "sector": "Consumer Defensive",
       "fwd": {
         "1d": 0.44,
-        "2d": null,
-        "3d": null,
-        "1w": 0.44
+        "2d": -3.38,
+        "3d": -1.58,
+        "1w": -1.58
       }
     },
     {
@@ -88,9 +88,9 @@
       "sector": "Energy",
       "fwd": {
         "1d": 4.93,
-        "2d": null,
-        "3d": null,
-        "1w": 4.93
+        "2d": 6.3,
+        "3d": 9.51,
+        "1w": 9.51
       }
     },
     {
@@ -109,9 +109,9 @@
       "sector": "Industrials",
       "fwd": {
         "1d": 0.11,
-        "2d": null,
-        "3d": null,
-        "1w": 0.11
+        "2d": 0.69,
+        "3d": 3.2,
+        "1w": 3.2
       }
     },
     {
@@ -130,9 +130,9 @@
       "sector": "Industrials",
       "fwd": {
         "1d": -1.49,
-        "2d": null,
-        "3d": null,
-        "1w": -1.49
+        "2d": -0.84,
+        "3d": 0.03,
+        "1w": 0.03
       }
     }
   ],
@@ -153,9 +153,9 @@
       "sector": "Consumer Defensive",
       "fwd": {
         "1d": 0.44,
-        "2d": null,
-        "3d": null,
-        "1w": 0.44
+        "2d": -3.38,
+        "3d": -1.58,
+        "1w": -1.58
       }
     },
     {
@@ -174,9 +174,9 @@
       "sector": "Energy",
       "fwd": {
         "1d": 4.93,
-        "2d": null,
-        "3d": null,
-        "1w": 4.93
+        "2d": 6.3,
+        "3d": 9.51,
+        "1w": 9.51
       }
     },
     {
@@ -195,9 +195,9 @@
       "sector": "Industrials",
       "fwd": {
         "1d": 0.11,
-        "2d": null,
-        "3d": null,
-        "1w": 0.11
+        "2d": 0.69,
+        "3d": 3.2,
+        "1w": 3.2
       }
     },
     {
@@ -216,9 +216,9 @@
       "sector": "Energy",
       "fwd": {
         "1d": 2.44,
-        "2d": null,
-        "3d": null,
-        "1w": 2.44
+        "2d": -1.79,
+        "3d": -0.61,
+        "1w": -0.61
       }
     },
     {
@@ -237,9 +237,9 @@
       "sector": "Industrials",
       "fwd": {
         "1d": -1.49,
-        "2d": null,
-        "3d": null,
-        "1w": -1.49
+        "2d": -0.84,
+        "3d": 0.03,
+        "1w": 0.03
       }
     }
   ],
@@ -260,9 +260,9 @@
       "sector": "Healthcare",
       "fwd": {
         "1d": -3.75,
-        "2d": null,
-        "3d": null,
-        "1w": -3.75
+        "2d": -0.6,
+        "3d": -1.71,
+        "1w": -1.71
       },
       "rank_standalone_raw": 2034,
       "rank_tape_raw": 2011,
@@ -285,9 +285,9 @@
       "sector": "Healthcare",
       "fwd": {
         "1d": 3.6,
-        "2d": null,
-        "3d": null,
-        "1w": 3.6
+        "2d": 2.03,
+        "3d": 10.73,
+        "1w": 10.73
       },
       "rank_standalone_raw": 1509,
       "rank_tape_raw": 1360,
@@ -310,9 +310,9 @@
       "sector": "Healthcare",
       "fwd": {
         "1d": -13.95,
-        "2d": null,
-        "3d": null,
-        "1w": -13.95
+        "2d": -5.43,
+        "3d": 18.99,
+        "1w": 18.99
       },
       "rank_standalone_raw": 1020,
       "rank_tape_raw": 723,
@@ -335,9 +335,9 @@
       "sector": "Financial",
       "fwd": {
         "1d": -5.03,
-        "2d": null,
-        "3d": null,
-        "1w": -5.03
+        "2d": -5.58,
+        "3d": -2.58,
+        "1w": -2.58
       },
       "rank_standalone_raw": 1121,
       "rank_tape_raw": 863,
@@ -360,9 +360,9 @@
       "sector": "Technology",
       "fwd": {
         "1d": -6.43,
-        "2d": null,
-        "3d": null,
-        "1w": -6.43
+        "2d": -5.4,
+        "3d": -3.6,
+        "1w": -3.6
       },
       "rank_standalone_raw": 1884,
       "rank_tape_raw": 1865,
@@ -385,9 +385,9 @@
       "sector": "Financial",
       "fwd": {
         "1d": -3.32,
-        "2d": null,
-        "3d": null,
-        "1w": -3.32
+        "2d": -4.47,
+        "3d": -4.46,
+        "1w": -4.46
       },
       "rank_standalone_raw": 849,
       "rank_tape_raw": 1305,
@@ -410,12 +410,12 @@
       "sector": "Financial",
       "fwd": {
         "1d": -6.65,
-        "2d": null,
-        "3d": null,
-        "1w": -6.65
+        "2d": -6.62,
+        "3d": -5.44,
+        "1w": -5.44
       },
       "rank_standalone_raw": 338,
-      "rank_tape_raw": 598,
+      "rank_tape_raw": 596,
       "mcap": 7645.93,
       "gated": false
     },
@@ -435,9 +435,9 @@
       "sector": "Consumer Defensive",
       "fwd": {
         "1d": -1.33,
-        "2d": null,
-        "3d": null,
-        "1w": -1.33
+        "2d": -3.46,
+        "3d": -3.56,
+        "1w": -3.56
       },
       "rank_standalone_raw": 496,
       "rank_tape_raw": 1188,
@@ -460,9 +460,9 @@
       "sector": "Healthcare",
       "fwd": {
         "1d": -1.71,
-        "2d": null,
-        "3d": null,
-        "1w": -1.71
+        "2d": 3.35,
+        "3d": 3.35,
+        "1w": 3.35
       },
       "rank_standalone_raw": 296,
       "rank_tape_raw": 71,
@@ -493,41 +493,41 @@
   "avg_fwd": {
     "live": {
       "1d": 2.44,
-      "2d": null,
-      "3d": null,
-      "1w": 2.44
+      "2d": -1.79,
+      "3d": -0.61,
+      "1w": -0.61
     },
     "standalone": {
       "1d": 1.286,
-      "2d": null,
-      "3d": null,
-      "1w": 1.286
+      "2d": 0.19599999999999998,
+      "3d": 2.11,
+      "1w": 2.11
     },
     "tape": {
       "1d": 1.286,
-      "2d": null,
-      "3d": null,
-      "1w": 1.286
+      "2d": 0.19599999999999998,
+      "3d": 2.11,
+      "1w": 2.11
     }
   },
   "hit_rate": {
     "live": {
       "1d": 1.0,
-      "2d": null,
-      "3d": null,
-      "1w": 1.0
+      "2d": 0.0,
+      "3d": 0.0,
+      "1w": 0.0
     },
     "standalone": {
       "1d": 0.8,
-      "2d": null,
-      "3d": null,
-      "1w": 0.8
+      "2d": 0.4,
+      "3d": 0.6,
+      "1w": 0.6
     },
     "tape": {
       "1d": 0.8,
-      "2d": null,
-      "3d": null,
-      "1w": 0.8
+      "2d": 0.4,
+      "3d": 0.6,
+      "1w": 0.6
     }
   }
 }

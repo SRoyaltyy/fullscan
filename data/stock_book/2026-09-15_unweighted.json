@@ -22,10 +22,10 @@
       "size": "large",
       "sector": "Energy",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": 0.75,
+        "2d": 2.71,
         "3d": null,
-        "1w": null
+        "1w": 2.71
       }
     },
     {
@@ -43,10 +43,10 @@
       "size": "mid",
       "sector": "Communication Services",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": -0.78,
+        "2d": -0.14,
         "3d": null,
-        "1w": null
+        "1w": -0.14
       }
     },
     {
@@ -64,10 +64,10 @@
       "size": "mid",
       "sector": "Technology",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": 0.29,
+        "2d": -0.05,
         "3d": null,
-        "1w": null
+        "1w": -0.05
       }
     },
     {
@@ -85,10 +85,10 @@
       "size": "large",
       "sector": "Technology",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": -1.22,
+        "2d": -0.23,
         "3d": null,
-        "1w": null
+        "1w": -0.23
       }
     },
     {
@@ -106,10 +106,10 @@
       "size": "mid",
       "sector": "Technology",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": -1.32,
+        "2d": -1.24,
         "3d": null,
-        "1w": null
+        "1w": -1.24
       }
     },
     {
@@ -127,10 +127,10 @@
       "size": "large",
       "sector": "Communication Services",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": -1.85,
+        "2d": -1.42,
         "3d": null,
-        "1w": null
+        "1w": -1.42
       }
     },
     {
@@ -148,10 +148,10 @@
       "size": "large",
       "sector": "Technology",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": -1.35,
+        "2d": 1.68,
         "3d": null,
-        "1w": null
+        "1w": 1.68
       }
     },
     {
@@ -169,10 +169,10 @@
       "size": "mid",
       "sector": "Healthcare",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": -0.35,
+        "2d": -2.38,
         "3d": null,
-        "1w": null
+        "1w": -2.38
       }
     }
   ],
@@ -192,10 +192,10 @@
       "size": "mid",
       "sector": "Healthcare",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": -0.3,
+        "2d": -0.6,
         "3d": null,
-        "1w": null
+        "1w": -0.6
       }
     },
     {
@@ -213,10 +213,10 @@
       "size": "large",
       "sector": "Healthcare",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": 0.86,
+        "2d": -1.61,
         "3d": null,
-        "1w": null
+        "1w": -1.61
       }
     },
     {
@@ -234,10 +234,10 @@
       "size": "large",
       "sector": "Healthcare",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": 3.95,
+        "2d": 4.67,
         "3d": null,
-        "1w": null
+        "1w": 4.67
       }
     },
     {
@@ -255,10 +255,10 @@
       "size": "large",
       "sector": "Technology",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": -1.22,
+        "2d": -0.23,
         "3d": null,
-        "1w": null
+        "1w": -0.23
       }
     },
     {
@@ -276,10 +276,10 @@
       "size": "mid",
       "sector": "Healthcare",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": 4.04,
+        "2d": 4.17,
         "3d": null,
-        "1w": null
+        "1w": 4.17
       }
     },
     {
@@ -297,10 +297,10 @@
       "size": "large",
       "sector": "Technology",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": -2.02,
+        "2d": -1.68,
         "3d": null,
-        "1w": null
+        "1w": -1.68
       }
     },
     {
@@ -318,10 +318,10 @@
       "size": "mid",
       "sector": "Technology",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": -1.32,
+        "2d": -1.24,
         "3d": null,
-        "1w": null
+        "1w": -1.24
       }
     },
     {
@@ -339,10 +339,10 @@
       "size": "mid",
       "sector": "Technology",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": -0.93,
+        "2d": -0.19,
         "3d": null,
-        "1w": null
+        "1w": -0.19
       }
     },
     {
@@ -360,10 +360,10 @@
       "size": "mid",
       "sector": "Industrials",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": 2.43,
+        "2d": 4.32,
         "3d": null,
-        "1w": null
+        "1w": 4.32
       }
     },
     {
@@ -381,10 +381,10 @@
       "size": "mid",
       "sector": "Communication Services",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": -2.01,
+        "2d": -4.65,
         "3d": null,
-        "1w": null
+        "1w": -4.65
       }
     },
     {
@@ -402,10 +402,10 @@
       "size": "small",
       "sector": "Communication Services",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": 0.57,
+        "2d": -7.02,
         "3d": null,
-        "1w": null
+        "1w": -7.02
       }
     },
     {
@@ -423,10 +423,10 @@
       "size": "mid",
       "sector": "Communication Services",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": -0.78,
+        "2d": -0.14,
         "3d": null,
-        "1w": null
+        "1w": -0.14
       }
     },
     {
@@ -444,10 +444,10 @@
       "size": "small",
       "sector": "Communication Services",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": 0.81,
+        "2d": 0.81,
         "3d": null,
-        "1w": null
+        "1w": 0.81
       }
     },
     {
@@ -465,10 +465,10 @@
       "size": "mid",
       "sector": "Consumer Defensive",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": 1.06,
+        "2d": 0.82,
         "3d": null,
-        "1w": null
+        "1w": 0.82
       }
     },
     {
@@ -486,10 +486,10 @@
       "size": "mid",
       "sector": "Consumer Cyclical",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": 3.07,
+        "2d": 1.58,
         "3d": null,
-        "1w": null
+        "1w": 1.58
       }
     }
   ],
@@ -509,10 +509,10 @@
       "size": "mid",
       "sector": "Industrials",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": 2.43,
+        "2d": 4.32,
         "3d": null,
-        "1w": null
+        "1w": 4.32
       }
     },
     {
@@ -530,10 +530,10 @@
       "size": "large",
       "sector": "Healthcare",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": 0.86,
+        "2d": -1.61,
         "3d": null,
-        "1w": null
+        "1w": -1.61
       }
     },
     {
@@ -551,10 +551,10 @@
       "size": "mid",
       "sector": "Healthcare",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": -0.3,
+        "2d": -0.6,
         "3d": null,
-        "1w": null
+        "1w": -0.6
       }
     },
     {
@@ -572,10 +572,10 @@
       "size": "large",
       "sector": "Technology",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": -2.02,
+        "2d": -1.68,
         "3d": null,
-        "1w": null
+        "1w": -1.68
       }
     },
     {
@@ -593,10 +593,10 @@
       "size": "large",
       "sector": "Healthcare",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": 3.95,
+        "2d": 4.67,
         "3d": null,
-        "1w": null
+        "1w": 4.67
       }
     },
     {
@@ -614,10 +614,10 @@
       "size": "mid",
       "sector": "Technology",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": -3.74,
+        "2d": -4.43,
         "3d": null,
-        "1w": null
+        "1w": -4.43
       }
     },
     {
@@ -635,10 +635,10 @@
       "size": "large",
       "sector": "Technology",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": -2.73,
+        "2d": -3.47,
         "3d": null,
-        "1w": null
+        "1w": -3.47
       }
     },
     {
@@ -656,10 +656,10 @@
       "size": "mid",
       "sector": "Technology",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": 0.29,
+        "2d": -0.05,
         "3d": null,
-        "1w": null
+        "1w": -0.05
       }
     },
     {
@@ -677,10 +677,10 @@
       "size": "mid",
       "sector": "Healthcare",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": -2.15,
+        "2d": -2.58,
         "3d": null,
-        "1w": null
+        "1w": -2.58
       }
     },
     {
@@ -698,10 +698,10 @@
       "size": "mid",
       "sector": "Communication Services",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": -0.78,
+        "2d": -0.14,
         "3d": null,
-        "1w": null
+        "1w": -0.14
       }
     },
     {
@@ -719,10 +719,10 @@
       "size": "mid",
       "sector": "Financial",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": -1.39,
+        "2d": -1.66,
         "3d": null,
-        "1w": null
+        "1w": -1.66
       }
     },
     {
@@ -740,10 +740,10 @@
       "size": "small",
       "sector": "Communication Services",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": 0.81,
+        "2d": 0.81,
         "3d": null,
-        "1w": null
+        "1w": 0.81
       }
     },
     {
@@ -761,10 +761,10 @@
       "size": "mid",
       "sector": "Consumer Cyclical",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": 3.07,
+        "2d": 1.58,
         "3d": null,
-        "1w": null
+        "1w": 1.58
       }
     },
     {
@@ -782,20 +782,20 @@
       "size": "mid",
       "sector": "Consumer Defensive",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": 1.06,
+        "2d": 0.82,
         "3d": null,
-        "1w": null
+        "1w": 0.82
       }
     },
     {
-      "ticker": "ANGX",
-      "standalone": 0.2554,
+      "ticker": "NMAX",
+      "standalone": 0.124,
       "tape": 0.3808,
-      "book": 0.5285,
-      "s_join": 0.4582548485681166,
+      "book": 0.5046,
+      "s_join": 0.2111741662726952,
       "s_sector": 0.408,
-      "s_general": -0.0954974999999999,
+      "s_general": -0.6366499999999999,
       "s_news": 0.0,
       "s_ab": 0.7615941559557649,
       "s_peer": 0.0,
@@ -803,10 +803,10 @@
       "size": "small",
       "sector": "Communication Services",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": -3.06,
+        "2d": -4.74,
         "3d": null,
-        "1w": null
+        "1w": -4.74
       }
     }
   ],
@@ -826,10 +826,10 @@
       "size": "mid",
       "sector": "Healthcare",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": 3.28,
+        "2d": 2.13,
         "3d": null,
-        "1w": null
+        "1w": 2.13
       },
       "rank_standalone_raw": 1512,
       "rank_tape_raw": 1984,
@@ -851,10 +851,10 @@
       "size": "small",
       "sector": "Healthcare",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": -1.52,
+        "2d": 6.88,
         "3d": null,
-        "1w": null
+        "1w": 6.88
       },
       "rank_standalone_raw": 627,
       "rank_tape_raw": 569,
@@ -876,10 +876,10 @@
       "size": "micro",
       "sector": "Healthcare",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": 9.91,
+        "2d": 38.29,
         "3d": null,
-        "1w": null
+        "1w": 38.29
       },
       "rank_standalone_raw": 1146,
       "rank_tape_raw": 1802,
@@ -901,10 +901,10 @@
       "size": "mid",
       "sector": "Financial",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": -0.58,
+        "2d": 2.58,
         "3d": null,
-        "1w": null
+        "1w": 2.58
       },
       "rank_standalone_raw": 1610,
       "rank_tape_raw": 1341,
@@ -926,10 +926,10 @@
       "size": "mid",
       "sector": "Technology",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": 1.1,
+        "2d": 3.02,
         "3d": null,
-        "1w": null
+        "1w": 3.02
       },
       "rank_standalone_raw": 1967,
       "rank_tape_raw": 1933,
@@ -951,10 +951,10 @@
       "size": "mid",
       "sector": "Financial",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": -1.19,
+        "2d": -1.17,
         "3d": null,
-        "1w": null
+        "1w": -1.17
       },
       "rank_standalone_raw": 1066,
       "rank_tape_raw": 1304,
@@ -976,13 +976,13 @@
       "size": "mid",
       "sector": "Financial",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": 0.03,
+        "2d": 1.29,
         "3d": null,
-        "1w": null
+        "1w": 1.29
       },
       "rank_standalone_raw": 638,
-      "rank_tape_raw": 584,
+      "rank_tape_raw": 588,
       "mcap": 7471.55,
       "gated": false
     },
@@ -1001,10 +1001,10 @@
       "size": "mid",
       "sector": "Consumer Defensive",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": -2.16,
+        "2d": -2.25,
         "3d": null,
-        "1w": null
+        "1w": -2.25
       },
       "rank_standalone_raw": 1202,
       "rank_tape_raw": 960,
@@ -1026,10 +1026,10 @@
       "size": "mid",
       "sector": "Healthcare",
       "fwd": {
-        "1d": null,
-        "2d": null,
+        "1d": 5.15,
+        "2d": 5.15,
         "3d": null,
-        "1w": null
+        "1w": 5.15
       },
       "rank_standalone_raw": 98,
       "rank_tape_raw": 165,
@@ -1069,7 +1069,6 @@
   ],
   "entered_tape": [
     "ADSK",
-    "ANGX",
     "BWIN",
     "CLOV",
     "COCO",
@@ -1077,6 +1076,7 @@
     "DUOL",
     "ECO",
     "ICLR",
+    "NMAX",
     "NXDR",
     "RVTY",
     "SIG",
@@ -1092,42 +1092,42 @@
   ],
   "avg_fwd": {
     "live": {
-      "1d": null,
-      "2d": null,
+      "1d": -0.72875,
+      "2d": -0.13375000000000004,
       "3d": null,
-      "1w": null
+      "1w": -0.13375000000000004
     },
     "standalone": {
-      "1d": null,
-      "2d": null,
+      "1d": 0.5473333333333333,
+      "2d": -0.06599999999999996,
       "3d": null,
-      "1w": null
+      "1w": -0.06599999999999996
     },
     "tape": {
-      "1d": null,
-      "2d": null,
+      "1d": -0.24666666666666665,
+      "2d": -0.584,
       "3d": null,
-      "1w": null
+      "1w": -0.584
     }
   },
   "hit_rate": {
     "live": {
-      "1d": null,
-      "2d": null,
+      "1d": 0.25,
+      "2d": 0.25,
       "3d": null,
-      "1w": null
+      "1w": 0.25
     },
     "standalone": {
-      "1d": null,
-      "2d": null,
+      "1d": 0.5333333333333333,
+      "2d": 0.4,
       "3d": null,
-      "1w": null
+      "1w": 0.4
     },
     "tape": {
-      "1d": null,
-      "2d": null,
+      "1d": 0.4666666666666667,
+      "2d": 0.3333333333333333,
       "3d": null,
-      "1w": null
+      "1w": 0.3333333333333333
     }
   }
 }

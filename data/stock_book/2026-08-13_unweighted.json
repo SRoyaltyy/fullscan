@@ -346,7 +346,7 @@
       }
     },
     {
-      "ticker": "NVAX",
+      "ticker": "AQST",
       "standalone": 0.2958,
       "tape": 0.0,
       "book": 0.3413,
@@ -356,14 +356,14 @@
       "s_news": 0.0,
       "s_ab": 0.0,
       "s_peer": 0.0,
-      "s_opp": 0.48000000000000004,
+      "s_opp": 0.36000000000000004,
       "size": "small",
       "sector": "Healthcare",
       "fwd": {
-        "1d": -1.11,
-        "2d": -0.86,
-        "3d": -2.58,
-        "1w": 3.44
+        "1d": 0.0,
+        "2d": 0.94,
+        "3d": 1.65,
+        "1w": 5.76
       }
     },
     {
@@ -388,7 +388,7 @@
       }
     },
     {
-      "ticker": "HIVE",
+      "ticker": "BTBT",
       "standalone": 0.2736,
       "tape": 0.0,
       "book": 0.3146,
@@ -402,10 +402,10 @@
       "size": "small",
       "sector": "Financial",
       "fwd": {
-        "1d": 4.26,
-        "2d": 18.99,
-        "3d": 7.75,
-        "1w": 21.32
+        "1d": 5.37,
+        "2d": 7.38,
+        "3d": -2.68,
+        "1w": 7.05
       }
     },
     {
@@ -451,27 +451,6 @@
       }
     },
     {
-      "ticker": "IVR",
-      "standalone": 0.2719,
-      "tape": 0.0,
-      "book": 0.301,
-      "s_join": 0.4313059636577863,
-      "s_sector": 0.6,
-      "s_general": 0.6,
-      "s_news": 0.0,
-      "s_ab": 0.0,
-      "s_peer": 0.0,
-      "s_opp": 0.4,
-      "size": "small",
-      "sector": "Real Estate",
-      "fwd": {
-        "1d": 0.0,
-        "2d": 0.53,
-        "3d": -0.13,
-        "1w": 0.94
-      }
-    },
-    {
       "ticker": "OPEN",
       "standalone": 0.2719,
       "tape": 0.0,
@@ -490,6 +469,27 @@
         "2d": -3.01,
         "3d": -7.95,
         "1w": -4.93
+      }
+    },
+    {
+      "ticker": "IVR",
+      "standalone": 0.2719,
+      "tape": 0.0,
+      "book": 0.301,
+      "s_join": 0.4313059636577863,
+      "s_sector": 0.6,
+      "s_general": 0.6,
+      "s_news": 0.0,
+      "s_ab": 0.0,
+      "s_peer": 0.0,
+      "s_opp": 0.4,
+      "size": "small",
+      "sector": "Real Estate",
+      "fwd": {
+        "1d": 0.0,
+        "2d": 0.53,
+        "3d": -0.13,
+        "1w": 0.94
       }
     },
     {
@@ -514,7 +514,7 @@
       }
     },
     {
-      "ticker": "MAC",
+      "ticker": "AGNC",
       "standalone": 0.2611,
       "tape": 0.0,
       "book": 0.2783,
@@ -524,14 +524,14 @@
       "s_news": 0.0,
       "s_ab": 0.0,
       "s_peer": 0.0,
-      "s_opp": 0.28,
-      "size": "mid",
+      "s_opp": 0.03,
+      "size": "large",
       "sector": "Real Estate",
       "fwd": {
-        "1d": 0.24,
-        "2d": 0.04,
-        "3d": -0.89,
-        "1w": 0.16
+        "1d": 0.0,
+        "2d": -0.09,
+        "3d": -0.36,
+        "1w": -0.36
       }
     },
     {
@@ -936,7 +936,7 @@
         "3d": 5.99,
         "1w": 8.41
       },
-      "rank_standalone_raw": 19,
+      "rank_standalone_raw": 18,
       "rank_tape_raw": 197,
       "mcap": 2401.13,
       "gated": false
@@ -961,7 +961,7 @@
         "3d": 1.75,
         "1w": 28.22
       },
-      "rank_standalone_raw": 144,
+      "rank_standalone_raw": 137,
       "rank_tape_raw": 13,
       "mcap": 1054.36,
       "gated": false
@@ -986,7 +986,7 @@
         "3d": 2.74,
         "1w": 19.06
       },
-      "rank_standalone_raw": 388,
+      "rank_standalone_raw": 391,
       "rank_tape_raw": 225,
       "mcap": 2425.66,
       "gated": false
@@ -1011,7 +1011,7 @@
         "3d": 6.73,
         "1w": 6.98
       },
-      "rank_standalone_raw": 1325,
+      "rank_standalone_raw": 1327,
       "rank_tape_raw": 554,
       "mcap": 8884.72,
       "gated": false
@@ -1061,7 +1061,7 @@
         "3d": 0.5,
         "1w": 6.96
       },
-      "rank_standalone_raw": 948,
+      "rank_standalone_raw": 962,
       "rank_tape_raw": 1208,
       "mcap": 5436.41,
       "gated": false
@@ -1098,12 +1098,12 @@
   ],
   "entered_standalone": [
     "ADNT",
+    "AGNC",
+    "AQST",
+    "BTBT",
     "CERS",
-    "HIVE",
     "IVR",
-    "MAC",
     "MARA",
-    "NVAX",
     "OPEN",
     "RQI",
     "SLG",
@@ -1189,10 +1189,10 @@
       "1w": 6.703076923076922
     },
     "standalone": {
-      "1d": 0.6433333333333333,
-      "2d": 1.0146666666666666,
-      "3d": -2.176,
-      "1w": 3.693333333333333
+      "1d": 0.7753333333333333,
+      "2d": 0.352,
+      "3d": -2.5540000000000003,
+      "1w": 2.8619999999999997
     },
     "tape": {
       "1d": 1.296,
@@ -1209,10 +1209,10 @@
       "1w": 0.6923076923076923
     },
     "standalone": {
-      "1d": 0.4,
+      "1d": 0.3333333333333333,
       "2d": 0.5333333333333333,
       "3d": 0.13333333333333333,
-      "1w": 0.6
+      "1w": 0.5333333333333333
     },
     "tape": {
       "1d": 0.4666666666666667,
