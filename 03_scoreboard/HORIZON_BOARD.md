@@ -24,10 +24,10 @@ Updated: 2026-09-17. Calls are graded at T+h trading days using the scoreboard's
 | sector:Consumer Defensive | 2w | 8 | 0% (0/8) | 100% (8/8) | -2.40% |
 | sector:Energy | 3d | 11 | 18% (2/11) | 45% (5/11) | +1.35% |
 | sector:Energy | 1w | 11 | 27% (3/11) | 45% (5/11) | +1.59% |
-| sector:Energy | 2w | 7 | 43% (3/7) | 43% (3/7) | +3.80% |
-| sector:Financial | 3d | 14 | 36% (5/14) | 43% (6/14) | -0.49% |
-| sector:Financial | 1w | 12 | 50% (6/12) | 58% (7/12) | -0.75% |
-| sector:Financial | 2w | 7 | 0% (0/7) | 29% (2/7) | -1.50% |
+| sector:Energy | 2w | 8 | 38% (3/8) | 50% (4/8) | +3.69% |
+| sector:Financial | 3d | 15 | 33% (5/15) | 40% (6/15) | -0.59% |
+| sector:Financial | 1w | 13 | 54% (7/13) | 62% (8/13) | -0.82% |
+| sector:Financial | 2w | 8 | 0% (0/8) | 25% (2/8) | -1.79% |
 | sector:Healthcare | 3d | 10 | 30% (3/10) | 30% (3/10) | -0.21% |
 | sector:Healthcare | 1w | 10 | 10% (1/10) | 30% (3/10) | -0.72% |
 | sector:Healthcare | 2w | 6 | 0% (0/6) | 50% (3/6) | -1.49% |
@@ -48,13 +48,17 @@ Updated: 2026-09-17. Calls are graded at T+h trading days using the scoreboard's
 
 | Date | Topic | Horizon | Call | Actual | Dir | Mag |
 |---|---|---|---|---|---|---|
+| 2026-09-14 | sector:Financial | 3d | flat/mild | -2.02% (down/notable) | ❌ | ❌ |
 | 2026-09-14 | general | 3d | down/mild | +0.23% (flat/flat) | ❌ | ❌ |
+| 2026-09-10 | sector:Financial | 1w | down/mild | -1.74% (down/mild) | ✅ | ✅ |
 | 2026-09-10 | general | 1w | down/mild | +0.61% (up/flat) | ❌ | ❌ |
 | 2026-09-09 | sector:Utilities | 1w | flat/mild | -2.91% (down/notable) | ❌ | ❌ |
 | 2026-09-02 | general | 2w | down/mild | -0.38% (down/flat) | ✅ | ❌ |
 | 2026-08-28 | sector:Real Estate | 2w | down/mild | -3.46% (down/notable) | ✅ | ❌ |
 | 2026-08-28 | sector:Industrials | 2w | flat/mild | -4.59% (down/notable) | ❌ | ❌ |
 | 2026-08-28 | sector:Healthcare | 2w | flat/mild | -1.37% (down/mild) | ❌ | ✅ |
+| 2026-08-28 | sector:Financial | 2w | flat/mild | -3.82% (down/notable) | ❌ | ❌ |
+| 2026-08-28 | sector:Energy | 2w | flat/mild | +2.87% (up/mild) | ❌ | ✅ |
 | 2026-08-28 | sector:Consumer Defensive | 2w | flat/mild | -2.29% (down/mild) | ❌ | ✅ |
 | 2026-08-26 | sector:Utilities | 2w | down/mild | -4.18% (down/notable) | ✅ | ❌ |
 | 2026-08-19 | general | 1m | flat/mild | -0.91% (down/flat) | ❌ | ❌ |
@@ -69,10 +73,6 @@ Updated: 2026-09-17. Calls are graded at T+h trading days using the scoreboard's
 | 2026-09-01 | general | 2w | down/mild | -1.04% (down/mild) | ✅ | ✅ |
 | 2026-08-27 | sector:Real Estate | 2w | flat/mild | -4.14% (down/notable) | ❌ | ❌ |
 | 2026-08-27 | sector:Industrials | 2w | flat/mild | -5.64% (down/notable) | ❌ | ❌ |
-| 2026-08-27 | sector:Financial | 2w | up/mild | -3.37% (down/notable) | ❌ | ❌ |
-| 2026-08-27 | sector:Energy | 2w | flat/mild | +2.79% (up/mild) | ❌ | ✅ |
-| 2026-08-27 | sector:Consumer Defensive | 2w | flat/mild | -2.06% (down/mild) | ❌ | ✅ |
-| 2026-08-27 | sector:Consumer Cyclical | 2w | flat/mild | -4.92% (down/notable) | ❌ | ❌ |
 
-*384 calls still maturing (T+h close not recorded yet).*
+*380 calls still maturing (T+h close not recorded yet).*
 
