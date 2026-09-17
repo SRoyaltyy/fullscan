@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T06:15:34.219302-04:00",
+  "generated_at": "2026-09-17T06:22:25.283695-04:00",
   "items": [
     {
       "ok": true,
@@ -212,14 +212,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-17/real_estate_predict.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 18465,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
@@ -296,9 +296,9 @@
     },
     {
       "sector": "Real Estate",
-      "ok": false,
-      "reason": "missing",
-      "size": 0
+      "ok": true,
+      "reason": "",
+      "size": 18465
     },
     {
       "sector": "Technology",
@@ -313,7 +313,7 @@
       "size": 0
     }
   ],
-  "sector_n_ok": 8,
+  "sector_n_ok": 9,
   "sector_n_total": 11,
   "all_ok": true
 }

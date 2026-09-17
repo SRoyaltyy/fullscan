@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T06:15:35.062464-04:00",
+  "generated_at": "2026-09-17T06:22:26.151001-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -25,7 +25,7 @@
     "direction": "up"
   },
   "sectors": {
-    "said": "4 up / 0 down / 4 flat",
+    "said": "4 up / 0 down / 5 flat",
     "bullets": [
       "XLB FLAT +4.9",
       "XLC UP +5.3",
@@ -35,7 +35,7 @@
       "XLF FLAT +6.1",
       "XLV UP +4.8",
       "XLI FLAT +6.3",
-      "XLRE missing",
+      "XLRE FLAT +4.9",
       "XLK missing",
       "XLU missing"
     ]
@@ -211,70 +211,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Industrials (8/11)",
+      "title": "Sector predict Real Estate (9/11)",
       "date": "2026-09-17",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-17T06:15:34.257625-04:00",
+      "at": "2026-09-17T06:22:25.355907-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-09-17/industrials_predict.md",
+          "path": "01_daily/sectors/2026-09-17/real_estate_predict.md",
           "ok": true,
           "reason": "",
-          "size": 22232,
-          "preview": "# Sector Prediction \u2014 Industrials \u2014 2026-09-17\n- ETF: **XLI**\n- rubric: `00_grounding/sectors/industrials.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **6.262** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **4.416** (ES +1.71%, ER2 +0.08%, HG +0.66%, PM:XLI +0.43%) \u00b7 index_carry **1.846** (general 7.383) \u00b7 llm_overlay **0.0** (raw 0.0)"
+          "size": 18465,
+          "preview": "# Sector Prediction \u2014 Real Estate \u2014 2026-09-17\n- ETF: **XLRE**\n- rubric: `00_grounding/sectors/real_estate.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **4.899** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **3.053** (ES +1.71%, ZN -0.03%, PM:XLRE +0.37%) \u00b7 index_carry **1.846** (general 7.383) \u00b7 llm_overlay **0.0** (raw 0.0)"
         },
         {
-          "path": "01_daily/sectors/2026-09-17/industrials_predict_trace.md",
+          "path": "01_daily/sectors/2026-09-17/real_estate_predict_trace.md",
           "ok": true,
           "reason": "",
           "size": 392,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Industrials 2026-09-17\n**Step 0 \u2014 Setup.** Loaded 159,936 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (20,147 characters)."
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Real Estate 2026-09-17\n**Step 0 \u2014 Setup.** Loaded 155,237 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (16,500 characters)."
         },
         {
-          "path": "01_daily/_transcripts/2026-09-17_sector_industrials_predict.json",
+          "path": "01_daily/_transcripts/2026-09-17_sector_real_estate_predict.json",
           "ok": true,
           "reason": "",
-          "size": 184377,
+          "size": 175852,
           "preview": "keys: provider, agent, backend_model, messages"
         },
         {
           "path": "01_daily/2026-09-17_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 7207,
+          "size": 7200,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-09-17/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 1226,
+          "size": 1222,
           "preview": "keys: date, n_ok, n_total, sectors"
         },
         {
           "path": "01_daily/sectors/2026-09-17/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1806,
-          "preview": "# Sector Board \u2014 2026-09-17\nGenerated: **2026-09-17T06:15:34.231271-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1808,
+          "preview": "# Sector Board \u2014 2026-09-17\nGenerated: **2026-09-17T06:22:25.308452-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-09-17/_board.json",
           "ok": true,
           "reason": "",
-          "size": 6586,
+          "size": 6754,
           "preview": "keys: date, generated_at, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 744520,
+          "size": 745597,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Industrials \u2014 2026-09-17\n- ETF: **XLI**\n- rubric: `00_grounding/sectors/industrials.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **6.262** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **4.416** (ES +1.71%, ER2 +0.08%, HG +0.66%, PM:XLI +0.43%) \u00b7 index_carry **1.846** (general 7.383) \u00b7 llm_overlay **0.0** (raw 0.0) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Industrials 2026-09-17\n**Step 0 \u2014 Setup.** Loaded 159,936 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (20,147 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-17\nGenerated: **2026-09-17T06:15:34.231271-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, genera"
+      "preview": "# Sector Prediction \u2014 Real Estate \u2014 2026-09-17\n- ETF: **XLRE**\n- rubric: `00_grounding/sectors/real_estate.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **4.899** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **3.053** (ES +1.71%, ZN -0.03%, PM:XLRE +0.37%) \u00b7 index_carry **1.846** (general 7.383) \u00b7 llm_overlay **0.0** (raw 0.0) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Real Estate 2026-09-17\n**Step 0 \u2014 Setup.** Loaded 155,237 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (16,500 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-17\nGenerated: **2026-09-17T06:22:25.308452-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_at, se"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
