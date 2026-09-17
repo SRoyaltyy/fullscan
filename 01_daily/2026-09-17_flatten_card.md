@@ -1,6 +1,6 @@
 # flatten_robust card — 2026-09-17
 
-_Generated 2026-09-17T17:41:17 — live `flatten_robust`._
+_Generated 2026-09-17T17:43:37 — live `flatten_robust`._
 
 **S=+7.38; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
 
@@ -40,11 +40,11 @@ Sized from marked equity **$101,497.51** as if the book were flat. `io 3d_size (
 
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
-| 16:00 ET | RVTY | io_core | 113 | $148.71 | $16,804.23 | cash tied |
-| 16:00 ET | WAY | io_core | 636 | $26.59 | $16,911.24 | cash tied |
+| 16:00 ET | RVTY | io_core | 113 | $148.74 | $16,807.62 | cash tied |
+| 16:00 ET | WAY | io_core | 635 | $26.63 | $16,910.05 | cash tied |
 | 16:00 ET | AZTA | io_core | 503 | $33.60 | $16,900.80 | cash tied |
-| 16:00 ET | IT | io_core | 89 | $189.58 | $16,872.62 | cash tied |
-| 16:00 ET | IOT | io_core | 424 | $39.84 | $16,892.16 | cash tied |
-| 16:00 ET | FIVN | io_core | 502 | $33.64 | $16,887.28 | cash tied |
+| 16:00 ET | IT | io_core | 89 | $189.75 | $16,887.75 | cash tied |
+| 16:00 ET | IOT | io_core | 423 | $39.90 | $16,877.70 | cash tied |
+| 16:00 ET | FIVN | io_core | 501 | $33.70 | $16,883.15 | cash tied |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
