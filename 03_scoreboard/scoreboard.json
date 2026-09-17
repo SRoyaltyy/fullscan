@@ -23132,13 +23132,13 @@
         "S4_ETF_TAPE": 0.0
       },
       "leading_sum": -3.5,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 83.51000213623047,
+      "actual_close": 83.48999786376953,
+      "actual_pct_change": 0.19200291515559798,
+      "actual_direction": "up",
+      "actual_magnitude_band": "flat",
+      "direction_hit": true,
+      "magnitude_hit": false,
       "divergence_flagged": true,
       "divergence_verdict": null,
       "per_factor_breakdown": [],
@@ -23151,7 +23151,9 @@
       "engine": "v2",
       "anchor_score": 2.119,
       "overlay_score": -3.2,
-      "index_carry": 1.846
+      "index_carry": 1.846,
+      "spy_pct_change": 1.1338754633487547,
+      "rel_pct_change": -0.9418725481931567
     },
     {
       "date": "2026-09-17",
