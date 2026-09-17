@@ -181,13 +181,13 @@ def test_open_camera_setup_clean_long_and_tight():
         _hist_row(11, 1, 1),
         _hist_row(13, 1, 1),
         _hist_row(14, 1, 1),
-        _hist_row(10, 4, 1),  # n_pos up, n_neg same, net +2, lowest
+        _hist_row(10, 4, 1),  # n_pos up, n_neg same, net 0→+3, lowest
     ]
     s = open_camera_setup(rows, 4)
     assert s["side"] == "long"
     assert s["quality"] == "clean"
     assert s["open_rank"] == "lowest"
-    assert s["net_delta"] == 2
+    assert s["net_delta"] == 3
     assert s["tight_long"] is True
 
 
