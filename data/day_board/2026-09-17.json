@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T04:15:37.224186-04:00",
+  "generated_at": "2026-09-17T04:15:43.979891-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -1015,11 +1015,11 @@
     },
     {
       "key": "weather",
-      "title": "Weather / regime",
+      "title": "Weather / regime (offline retry)",
       "date": "2026-09-17",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-17T04:15:36.960938-04:00",
+      "at": "2026-09-17T04:15:43.721822-04:00",
       "files": [
         {
           "path": "01_daily/weather/2026-09-17_weather.json",
