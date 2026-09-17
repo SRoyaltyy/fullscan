@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T05:02:16.565763-04:00",
+  "generated_at": "2026-09-17T05:06:32.814246-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -137,7 +137,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 7,
+      "n_req_ok": 9,
       "n_req": 20,
       "n_opt_ok": 3,
       "n_opt": 3,
@@ -257,25 +257,25 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7267
+          "size": 7264
         },
         {
           "key": "status",
           "name": "Pre-open status JSON",
           "path": "01_daily/2026-09-17_preopen_status.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "all_ok=False missing=['sector_predict']",
+          "size": 8391
         },
         {
           "key": "review",
           "name": "Grok review JSON",
           "path": "01_daily/2026-09-17_grok_review.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "ok=False Core dies on 0/11 sector predicts (need \u22658) plus a same-day news judge that is still the 09-16 FOMC-eve tape. General pr",
+          "size": 2082
         },
         {
           "key": "sector_basic_materials",
@@ -1329,6 +1329,38 @@
         }
       ],
       "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-09-17\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
+    },
+    {
+      "key": "status",
+      "title": "Pre-open status packet",
+      "date": "2026-09-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T05:06:31.971105-04:00",
+      "files": [
+        {
+          "path": "01_daily/2026-09-17_preopen_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 7264,
+          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
+        },
+        {
+          "path": "01_daily/2026-09-17_preopen_status.json",
+          "ok": true,
+          "reason": "",
+          "size": 8391,
+          "preview": "keys: date, generated_at, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs, qc"
+        },
+        {
+          "path": "01_daily/2026-09-17_preopen_status.md",
+          "ok": true,
+          "reason": "",
+          "size": 576,
+          "preview": "# Pre-open ALL status \u2014 2026-09-17\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
+        }
+      ],
+      "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs, qc \u00b7 # Pre-open ALL status \u2014 2026-09-17\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
     }
   ],
   "href": {

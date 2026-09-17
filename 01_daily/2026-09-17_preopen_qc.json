@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T04:38:34.904585-04:00",
+  "generated_at": "2026-09-17T05:02:21.218415-04:00",
   "items": [
     {
       "ok": true,
@@ -51,7 +51,7 @@
       "kind": "news_actions",
       "path": "01_daily/news/2026-09-17_actions.json",
       "reason": "",
-      "size": 31371,
+      "size": 31429,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -113,14 +113,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "map_heat_research",
       "path": "01_daily/map_heat/2026-09-17_research.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 37753,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
