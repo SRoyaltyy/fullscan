@@ -1,5 +1,5 @@
 {
-  "date": "2026-09-16",
+  "date": "2026-09-17",
   "env": "paper",
   "submit": true,
   "connected": true,
@@ -9,12 +9,41 @@
   "n_tickets": 0,
   "n_would": 4,
   "sent": [],
-  "generated": "2026-09-16T21:03:33",
+  "generated": "2026-09-17T13:54:16",
   "host": "api.sandbox.webull.com",
   "account_id": "83GO0SKCO4C521H2KQ8FS57MNA",
-  "source": "combo",
-  "combo": "combo_sh_macd_5050_shared",
+  "source": "hot4",
+  "combo": "",
   "stale": false,
-  "policy": "combo_sh_macd_5050_shared",
-  "why": "combo_sh_macd_5050_shared shared 50/50 \u00b7 short=short_news_r_macd_h3 long=union_hot_n4_h1 \u00b7 rows via panel"
+  "policy": "union_hot_n4_h1",
+  "why": "union_hot_n4_h1 long-only leftover cash \u00b7 MARKET \u00b7 rows via today_strategies \u00b7 leftover cash $0.00 cannot buy 1 share",
+  "skipped": [
+    {
+      "date": "2026-09-17",
+      "ticker": "INDP",
+      "kind": "cash",
+      "reason": "leftover cash 0.00 cannot buy 1 share"
+    },
+    {
+      "date": "2026-09-17",
+      "ticker": "GPRO",
+      "kind": "cash",
+      "reason": "leftover cash 0.00 cannot buy 1 share"
+    },
+    {
+      "date": "2026-09-17",
+      "ticker": "INSP",
+      "kind": "cash",
+      "reason": "leftover cash 0.00 cannot buy 1 share"
+    },
+    {
+      "date": "2026-09-17",
+      "ticker": "TJGC",
+      "kind": "cash",
+      "reason": "leftover cash 0.00 cannot buy 1 share"
+    }
+  ],
+  "score": 7.383,
+  "hard_red": false,
+  "order_type": "MARKET"
 }
