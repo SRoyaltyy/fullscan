@@ -24,6 +24,7 @@ import math
 from itertools import combinations
 from pathlib import Path
 
+from . import portfolio_risk as pr
 from . import factor_mine as fm
 from . import factor_mine_book as fmb
 from . import paper_trade as pt
@@ -304,7 +305,7 @@ def _claim_rank(name: str) -> int:
     try:
         return CLAIM.index(name)
     except ValueError:
-        return 100 + hash(name) % 50
+        return 100  # stable tie-break by recipe name
 
 
 def _mark_mixed(pos: dict, date: str, which: str, bars) -> float:
@@ -511,15 +512,20 @@ def simulate_shared(panel: dict, recs: list[dict], weights: list[float],
                     *, bars=None, fees=None, regime=None, start=None,
                     net: str = "priority", name: str = "combo",
                     hard_red_mode: str = HARD_RED_SIT,
-                    dip_pct: float | None = None) -> dict:
+                    dip_pct: float | None = None,
+                    exec_fill=None, risk=None) -> dict:
     """One cash pile. Lots remember the owner recipe's hold / sell / side.
 
     ``hard_red_mode`` defaults to live sit. Research-only overrides do
-    not change flatten_robust or Webull live policy.
+    not change flatten_robust or Webull live policy. ``exec_fill`` is
+    the same unused-by-default research hook as ``simulate_book``.
     """
+    risk = pr.policy(risk)
     fees = fees if fees is not None else pt.load_fees()
     cal_all = list(panel.get("session_dates") or [])
-    cal = [d for d in cal_all if not start or d >= start]
+    last_closed = fm.last_closed_session(start or (cal_all[0] if cal_all else ""), cal=cal_all)
+    cal = [d for d in cal_all if (not start or d >= start)
+           and (not last_closed or d <= last_closed)]
     by_date = panel.get("by_date") or {}
     row_index = {(r["date"], r["ticker"]): r for r in (panel.get("rows") or [])}
     ws = _norm_w(weights)
@@ -558,6 +564,9 @@ def simulate_shared(panel: dict, recs: list[dict], weights: list[float],
             "held": 0, "cameras": "",
         })
 
+        cash = pr.accrue(cash, pos, date,
+            lambda t, lot: fmb._lot_px(lot, date, "open", bars), trades, "long")
+
         for t in list(pos):
             lot = pos[t]
             owner = rec_by[lot["owner"]]
@@ -593,29 +602,64 @@ def simulate_shared(panel: dict, recs: list[dict], weights: list[float],
                               "reason": "no 09:30 open — carry"})
                 held_names.append(t)
                 continue
+            fill = fmb.resolve_exec_fill(
+                exec_fill, ticker=t, date=date, side=side, action="exit",
+                official_px=px, intended_shares=lot["shares"], bars=bars)
+            if fill["miss"]:
+                skips.append({
+                    "date": date, "ticker": t,
+                    "kind": fill["kind"] or "fill_miss",
+                    "reason": fill["reason"],
+                })
+                held_names.append(t)
+                continue
+            px = float(fill["px"])
+            old_shares = int(lot["shares"])
+            shares = min(int(fill["shares"]), old_shares)
+            if shares < 1:
+                skips.append({
+                    "date": date, "ticker": t, "kind": "fill_miss",
+                    "reason": "fill miss — carry",
+                })
+                held_names.append(t)
+                continue
             reason = fmb.why_sell(t, held, min_hold, early,
                                   owner.get("exit_when"), dropped, kind)
             reason = f"{lot['owner']}: {reason}"
+            if fill["how"] and fill["how"] != "ideal_open":
+                reason = f"{reason}; fill {fill['how']}"
             eq_before = cash + _mark_mixed(pos, date, "open", bars)
-            fee = pt.order_fees(lot["shares"], px,
+            fee = pt.order_fees(shares, px,
                                 "sell" if side == "long" else "buy", fees)
+            frac = shares / old_shares
+            cost_sold = float(lot["cost"]) * frac
+            fee_in_sold = float(lot.get("fee_in") or 0) * frac
             if side == "long":
-                proceeds = lot["shares"] * px - fee
+                proceeds = shares * px - fee
                 cash += proceeds
-                pnl = proceeds - lot["cost"]
+                pnl = proceeds - cost_sold
             else:
-                cost_cover = lot["shares"] * px + fee
+                cost_cover = shares * px + fee
                 cash -= cost_cover
-                pnl = lot["notional"] - cost_cover - lot.get("fee_in", 0)
-            pos.pop(t)
+                pnl = float(lot["notional"]) * frac - cost_cover - fee_in_sold
+            if shares < old_shares:
+                lot["shares"] = old_shares - shares
+                lot["cost"] = float(lot["cost"]) - cost_sold
+                lot["notional"] = lot["shares"] * float(lot["entry_px"])
+                lot["fee_in"] = float(lot.get("fee_in") or 0) - fee_in_sold
+                held_names.append(t)
+            else:
+                pos.pop(t)
             rec_t = {
                 "date": date, "ticker": t,
                 "side": "SELL" if side == "long" else "COVER",
-                "shares": lot["shares"], "price": round(px, 4), "fees": fee,
-                "cash_after": round(cash, 2), "pnl": round(pnl, 2),
+                "shares": shares, "price": px, "fees": fee,
+                "cash_after": round(cash, 2), "pnl": round(pnl, 2), "entry_notional": shares * float(lot["entry_px"]),
                 "reason": reason, "held": held,
                 "cameras": fmb.camera_stamp(row.get("boxes")),
                 "owner": lot["owner"],
+                "fill_how": fill["how"], "filled_at": fill.get("filled_at"),
+                "partial": bool(fill["partial"] or shares < old_shares),
             }
             _stamp_mixed(rec_t, cash, pos, date, bars, CAPITAL)
             rec_t["equity_before"] = round(eq_before, 2)
@@ -737,6 +781,39 @@ def simulate_shared(panel: dict, recs: list[dict], weights: list[float],
                         "reason": f"leftover split {per:.2f} < 1 share @ {px:.2f}",
                     })
                     continue
+                fill = fmb.resolve_exec_fill(
+                    exec_fill, ticker=t, date=date, side=side, action="entry",
+                    official_px=px, intended_shares=shares, bars=bars)
+                if fill["miss"]:
+                    skips.append({
+                        "date": date, "ticker": t,
+                        "kind": fill["kind"] or "fill_miss",
+                        "reason": fill["reason"],
+                    })
+                    continue
+                px = float(fill["px"])
+                shares = int(fill["shares"])
+                if shares < 1:
+                    skips.append({
+                        "date": date, "ticker": t, "kind": "fill_miss",
+                        "reason": fill["reason"] or "fill miss — leftover stays",
+                    })
+                    continue
+                if fill["how"] and fill["how"] != "ideal_open":
+                    reason = f"{reason}; fill {fill['how']}"
+                allowed, rate, borrow_source = pr.locate(risk, date, t) if side == "short" else (True, 0., "")
+                if not allowed:
+                    skips.append({"date": date, "ticker": t, "kind": "borrow_unavailable",
+                                  "reason": "no timestamped available borrow before decision"})
+                    continue
+                budget = min(per, pr.room(cash, pos,
+                    lambda tk, lot: fmb._lot_px(lot, date, "open", bars), side, risk, "long"))
+                shares = pr.affordable(shares, px, budget,
+                    lambda n: pt.order_fees(n, px, "buy" if side == "long" else "sell", fees))
+                if shares < 1:
+                    skips.append({"date": date, "ticker": t, "kind": "risk_limit",
+                                  "reason": "aggregate exposure/collateral or allocation limit"})
+                    continue
                 fee_side = "buy" if side == "long" else "sell"
                 fee = pt.order_fees(shares, px, fee_side, fees)
                 if side == "long":
@@ -768,7 +845,7 @@ def simulate_shared(panel: dict, recs: list[dict], weights: list[float],
                             "reason": f"short cover {2*notional:.0f} > equity {eq_now:.0f}",
                         })
                         continue
-                    borrow = notional * fmb.BORROW_ANNUAL / 365.0
+                    borrow = 0.0  # calendar-day accrual before covers
                     fee = pt.order_fees(shares, px, "sell", fees) + borrow
                     cash += notional - fee
                     spent += 0.0
@@ -778,15 +855,18 @@ def simulate_shared(panel: dict, recs: list[dict], weights: list[float],
                         "notional": notional, "last_px": px, "peak_px": px,
                         "reason": reason, "side": "short", "owner": rec["name"],
                     }
+                lot.update(side=side, borrow_annual=rate, borrow_source=borrow_source)
                 pos[t] = lot
                 rec_t = {
                     "date": date, "ticker": t,
                     "side": "BUY" if side == "long" else "SHORT",
-                    "shares": shares, "price": round(px, 4), "fees": fee,
+                    "shares": shares, "price": px, "fees": fee,
                     "cash_after": round(cash, 2), "pnl": None,
                     "reason": reason, "held": 0,
                     "cameras": fmb.camera_stamp(row.get("boxes")),
                     "owner": rec["name"],
+                    "fill_how": fill["how"], "filled_at": fill.get("filled_at"),
+                    "partial": bool(fill["partial"]),
                 }
                 _stamp_mixed(rec_t, cash, pos, date, bars, CAPITAL)
                 trades.append(rec_t)
@@ -824,6 +904,7 @@ def simulate_shared(panel: dict, recs: list[dict], weights: list[float],
             ("hold " + ",".join(pos.keys()) if pos else "flat cash")
         )
         daily.append({
+            "exposure": pr.exposure(cash, pos, lambda t, lot: fmb._lot_px(lot, date, "close", bars), "long"),
             "date": date,
             "s": None if s is None else round(s, 2),
             "hard_red": hard_red,
@@ -865,6 +946,10 @@ def simulate_shared(panel: dict, recs: list[dict], weights: list[float],
     losses = [t for t in closed if (t.get("pnl") or 0) < 0]
     sides = {t.get("lot_side") or t.get("side") for t in (daily[-1]["lots"] if daily else [])}
     out = {
+        "accounting_version": 2,
+        "risk": {k: v for k, v in risk.items() if k != "borrow"},
+        "execution_verified": False,
+        "stop_semantics": "morning-open evaluation, not intraday protective orders",
         "name": name,
         "pool": "shared",
         "net": net,
@@ -884,7 +969,7 @@ def simulate_shared(panel: dict, recs: list[dict], weights: list[float],
              "side": p.get("side"), "owner": p.get("owner")}
             for t, p in pos.items()
         ],
-        "n_trades": len([t for t in trades if t.get("side") not in ("OPEN", "CLOSE")]),
+        "n_trades": len([t for t in trades if t.get("side") not in ("OPEN", "CLOSE", "BORROW")]),
         "n_skips": len(skips),
         "n_closed": len(closed),
         "n_wins": len(wins),
@@ -898,10 +983,10 @@ def simulate_shared(panel: dict, recs: list[dict], weights: list[float],
         "skips": skips,
         "win_rate": None if not closed else round(len(wins) / len(closed), 4),
         "avg_win_pct": None if not wins else round(
-            sum(100 * t["pnl"] / max((t.get("price") or 1) * t["shares"], 1)
+            sum(100 * t["pnl"] / max(t.get("entry_notional") or (t.get("price") or 1) * t["shares"], 1)
                 for t in wins) / len(wins), 3),
         "avg_loss_pct": None if not losses else round(
-            sum(100 * t["pnl"] / max((t.get("price") or 1) * t["shares"], 1)
+            sum(100 * t["pnl"] / max(t.get("entry_notional") or (t.get("price") or 1) * t["shares"], 1)
                 for t in losses) / len(losses), 3),
     }
     out["audit"] = _audit_combo(out)
@@ -918,7 +1003,7 @@ def _daily_on(book: dict, date: str) -> dict | None:
 
 def simulate_split(panel: dict, recs: list[dict], weights: list[float],
                    *, bars=None, fees=None, regime=None, start=None,
-                   name: str = "combo") -> dict:
+                   name: str = "combo", exec_fill=None, risk=None) -> dict:
     """Independent audited books at the weights, then sum equity / cash."""
     ws = _norm_w(weights)
     books = []
@@ -927,7 +1012,7 @@ def simulate_split(panel: dict, recs: list[dict], weights: list[float],
         rules["capital"] = CAPITAL * w
         books.append(fmb.simulate_book(
             panel, rec, bars=bars, fees=fees, regime=regime,
-            rules=rules, start=start))
+            rules=rules, start=start, exec_fill=exec_fill, risk=risk))
     full_cal = [d for d in (panel.get("session_dates") or [])
                 if not start or d >= start]
     last_closed = fm.last_closed_session(
@@ -1081,10 +1166,10 @@ def simulate_split(panel: dict, recs: list[dict], weights: list[float],
         "skips": skips,
         "win_rate": None if not closed else round(len(wins) / len(closed), 4),
         "avg_win_pct": None if not wins else round(
-            sum(100 * t["pnl"] / max((t.get("price") or 1) * t["shares"], 1)
+            sum(100 * t["pnl"] / max(t.get("entry_notional") or (t.get("price") or 1) * t["shares"], 1)
                 for t in wins) / len(wins), 3),
         "avg_loss_pct": None if not losses else round(
-            sum(100 * t["pnl"] / max((t.get("price") or 1) * t["shares"], 1)
+            sum(100 * t["pnl"] / max(t.get("entry_notional") or (t.get("price") or 1) * t["shares"], 1)
                 for t in losses) / len(losses), 3),
         "collisions": collisions,
         "parts": [{"name": r["name"], "capital": CAPITAL * w,
@@ -1132,6 +1217,7 @@ def _audit_combo(book: dict) -> dict:
     fails = []
     cash_ok = True
     held: dict[str, str] = {}
+    quantities = {}
     for t in book.get("trades") or []:
         side = t.get("side")
         tk = t.get("ticker")
@@ -1139,6 +1225,7 @@ def _audit_combo(book: dict) -> dict:
             if tk in held:
                 fails.append(f"{t.get('date')} {tk} already {held[tk]} — {side}")
             held[tk] = "long" if side == "BUY" else "short"
+            quantities[tk] = int(t["shares"])
             px = t.get("price")
             if px is None:
                 fails.append(f"{t.get('date')} {tk} {side} missing 09:30")
@@ -1146,9 +1233,14 @@ def _audit_combo(book: dict) -> dict:
             if tk not in held:
                 fails.append(f"{t.get('date')} sold unheld {tk}")
             else:
-                held.pop(tk, None)
+                quantities[tk] -= int(t["shares"])
+                if quantities[tk] <= 0:
+                    held.pop(tk, None)
         if side == "CLOSE":
             pass
+    cash_audit = fmb.audit_book(book, capital=CAPITAL, side="mix")
+    fails.extend(cash_audit["fails"])
+    cash_ok = cash_audit["ok"]
     # same-day opposite in buys
     by = {}
     for t in book.get("trades") or []:

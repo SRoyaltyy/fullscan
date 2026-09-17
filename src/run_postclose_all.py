@@ -69,7 +69,7 @@ def _push_pack(date: str) -> None:
         "01_daily/general/", "01_daily/sectors/", "01_daily/map_heat/",
         "01_daily/news/", "01_daily/_transcripts/", "01_daily/_channel1/",
         f"01_daily/{date}_learnings.md",
-        "02_lessons/", "03_scoreboard/",
+        "02_lessons/", "03_scoreboard/", "data/learning_trials/",
         "00_grounding/mutable_policy.md",
         "00_grounding/engine_policy.json",
         "00_grounding/book_policy.json",
@@ -194,6 +194,9 @@ def _run_one(date: str, force: bool = False) -> None:
 
     # Always rewrite. A thin dated file written before sector grades must
     # not skip the digest that includes tonight's 11 HIT% rows.
+    step("Paired learning replay",
+         [py, "-m", "src.learning_replay", "--date", date],
+         False, timeout_s=900)
     step("Learn cycle",
          [py, "-m", "src.learn_cycle", "--date", date],
          False, timeout_s=180)

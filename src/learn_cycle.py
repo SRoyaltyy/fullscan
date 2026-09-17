@@ -543,7 +543,9 @@ def _rebuild_mutable_policy(
         if p.name.startswith("."):
             continue
         text = _read(p).strip()
-        if text:
+        fm_ = lesson_select._frontmatter(text)
+        eligible = fm_.get("error_category") == "D" or fm_.get("scope") == "ops" or fm_.get("validation_status") == "validated"
+        if text and eligible:
             active_files.append((_promoted_on(text), p.name, text))
     n_active = len(active_files)
     # newest first; the full set is still reachable via lesson_select per topic
@@ -609,12 +611,12 @@ def _rebuild_mutable_policy(
         f"{skill_block}\n\n"
         f"## Active adjustments (newest promoted lessons, truncated)\n\n"
         f"{active_block}\n\n"
-        f"## Per-scope DO-INSTEAD\n\n"
+        f"## Research hypotheses — do not apply as trading rules\n\n"
         f"{scope_block}\n\n"
         f"## Open experiments\n\n"
         f"{exp_block}\n\n"
         f"## Methodology checklist (MEMORY_CONFIRM)\n\n"
-        f"1. Did any open experiment for THIS scope apply today?\n"
+        f"1. Log applicable shadow experiments; do not change trading rules without prospective validation.\n"
         f"2. Missing factor that would have flipped a recent loss?\n"
         f"3. Overweighting one bucket / double-counting one headline?\n"
         f"4. Sectors: S0 macro vs S1 sector factors — which failed?\n"

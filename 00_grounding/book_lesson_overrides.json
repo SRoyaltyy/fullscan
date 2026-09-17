@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "updated": "2026-09-15",
+  "note": "Enabled rules are shadow candidates. Execution requires code/lesson-hash-matched prospective paired portfolio evidence; historical trigger association cannot promote or suspend a rule.",
+  "overrides": {
+    "crash_rebound_admit": {
+      "enabled": true,
+      "lessons": [
+        "a-1w-winner-is-gated-out-when-s-ab-s-peer-are-still-deeply-n.md"
+      ],
+      "summary": "join+sector constructive but AB/peer still crash-negative: stop letting AB/peer drag the score (clip at 0) and waive the LAG-peer eligibility kill. Micro with maxed peer RS + positive AB bypasses the size gate.",
+      "params": {
+        "join_min": 0.5,
+        "sector_min": 0.5,
+        "ab_max": -0.5,
+        "peer_max": -0.5,
+        "micro_peer_min": 0.99,
+        "micro_ab_min": 0.5
+      }
+    },
+    "join_floor_pass": {
+      "enabled": true,
+      "lessons": [
+        "on-1w-books-micro-small-names-with-maxed-peer-rs-and-positiv.md"
+      ],
+      "summary": "Peer-maxed + AB-positive (or earnings inside 7d + AB-positive): a negative join no longer vetoes the name; the rest of the score stack decides.",
+      "params": {
+        "peer_min": 0.99,
+        "ab_min": 0.0,
+        "earnings_window_days": 7
+      }
+    },
+    "earnings_anti_fade": {
+      "enabled": true,
+      "lessons": [
+        "when-earnings-land-inside-the-1w-horizon-deeply-negative-s-j.md"
+      ],
+      "summary": "Earnings inside the 1w horizon (0-7d) with top-tercile AB (>=0.6): clip negative join/news contributions at 0 so the print name is not faded.",
+      "params": {
+        "ab_min": 0.6,
+        "earnings_window_days": 7
+      }
+    },
+    "news_attach": {
+      "enabled": true,
+      "lessons": [
+        "missed-1w-movers-show-s-news-0-despite-a-catalog-headline-al.md",
+        "this-shows-up-on-1w-books-when-the-news-family-is-absent-and.md"
+      ],
+      "summary": "News-dark name with strong join/AB gets the finviz-digest headline tone attached (+-0.2). Negative s_news on high-AB names with earnings inside 7d is treated as missing, not a sell veto.",
+      "params": {
+        "attach_abs": 0.2,
+        "trigger_abs": 0.5,
+        "neutralize_ab_min": 0.8,
+        "earnings_window_days": 7
+      }
+    }
+  }
+}

@@ -159,6 +159,11 @@ def step_paths(date: str, key: str) -> list[Path]:
             ROOT / "03_scoreboard" / "PAPER_TRADING.md",
             ROOT / "dashboard" / "index.html",
         ],
+        "lesson_check": [
+            ROOT / "03_scoreboard" / "LESSON_CHECK.md",
+            ROOT / "03_scoreboard" / "lesson_check.json",
+            ROOT / "dashboard" / "lesson-check" / "index.html",
+        ],
     }
     return list(mapping.get(key) or [])
 

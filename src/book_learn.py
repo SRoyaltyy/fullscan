@@ -180,10 +180,17 @@ def load_frame(date: str) -> pd.DataFrame | None:
 
 
 def _components_for(df: pd.DataFrame, h: str) -> np.ndarray:
-    """(n, 6) matrix; per-horizon sector/general columns when present."""
+    """(n, 6) matrix; per-horizon sector/general columns when present.
+    Prefers the lesson-executed *_lx copies so the learner trains on the
+    same inputs the live ranker actually traded."""
     sec_col = f"s_sector_{h}" if f"s_sector_{h}" in df.columns else "s_sector"
     gen_col = f"s_general_{h}" if f"s_general_{h}" in df.columns else "s_general"
-    cols = ["s_join", sec_col, gen_col, "s_news", "s_ab", "s_peer"]
+
+    def _lx(base: str) -> str:
+        col = f"{base}_lx"
+        return col if col in df.columns else base
+
+    cols = [_lx("s_join"), sec_col, gen_col, _lx("s_news"), _lx("s_ab"), _lx("s_peer")]
     return df[cols].to_numpy(dtype=float)
 
 
@@ -196,7 +203,10 @@ def _load_panel() -> pd.DataFrame | None:
     df["date"] = pd.to_datetime(df["date"]).dt.normalize()
     df["ticker"] = df["ticker"].astype(str).str.upper()
     df = df.drop_duplicates(subset=["date", "ticker"], keep="last")
-    return df.pivot(index="date", columns="ticker", values="close").sort_index()
+    panel = df.pivot(index="date", columns="ticker", values="close").sort_index()
+    if "open" in df.columns:
+        panel.attrs["opens"] = df.pivot(index="date", columns="ticker", values="open").sort_index()
+    return panel
 
 
 def _fwd_returns(panel: pd.DataFrame, date: str, n_td: int) -> pd.Series | None:
@@ -206,13 +216,16 @@ def _fwd_returns(panel: pd.DataFrame, date: str, n_td: int) -> pd.Series | None:
     idx = panel.index.searchsorted(ts)
     if idx >= len(panel.index):
         return None
-    # entry must be within 4 sessions of the signal (guards huge gaps)
-    if (panel.index[idx] - ts).days > 6:
+    # Never move an unfilled signal forward to a later available date.
+    if panel.index[idx] != ts:
         return None
-    exit_idx = idx + n_td
+    exit_idx = idx + n_td - 1
     if exit_idx >= len(panel.index):
         return None
-    entry = panel.iloc[idx]
+    opens = panel.attrs.get("opens")
+    if opens is None or ts not in opens.index:
+        return None  # close-only history cannot establish an opening entry
+    entry = opens.loc[ts]
     exitp = panel.iloc[exit_idx]
     ret = exitp / entry - 1.0
     return ret.replace([np.inf, -np.inf], np.nan).dropna()
@@ -230,6 +243,10 @@ def _select_buys(df: pd.DataFrame, score: np.ndarray, top_n: int) -> list[int]:
     inds = df["industry"].astype(str).to_numpy() if "industry" in df.columns \
         else np.array([""] * len(df))
     mcaps = pd.to_numeric(df["market_cap_m"], errors="coerce").fillna(0).to_numpy()
+    lesson_micro = (
+        df["lesson_admit_micro"].astype(bool).to_numpy()
+        if "lesson_admit_micro" in df.columns else None
+    )
     try:
         veto = _buy_veto_mask(df).to_numpy(dtype=bool)
     except Exception:
@@ -242,7 +259,8 @@ def _select_buys(df: pd.DataFrame, score: np.ndarray, top_n: int) -> list[int]:
         if i < len(veto) and veto[i]:
             continue
         size, mcap = sizes[i], float(mcaps[i])
-        if size == "micro" or mcap < MIN_OPP_MCAP_M:
+        admit_micro = bool(lesson_micro[i]) if lesson_micro is not None else False
+        if (size == "micro" or mcap < MIN_OPP_MCAP_M) and not admit_micro:
             continue
         is_large = size in ("large", "mega") or mcap > MAX_OPP_MCAP_M
         if is_large and large_n >= MAX_LARGE_MEGA:
@@ -736,6 +754,15 @@ def run(date: str | None = None, lookback: int = 40, top_n: int = 10,
     if panel is None or panel.empty:
         print("[book-learn] no price store — cannot learn (run price_store bootstrap)")
         return
+    # An historical asof must not read outcomes from the current price-store tail.
+    from .factor_mine import session_has_closed
+    allowed = [x for x in panel.index if str(x.date()) <= asof and session_has_closed(str(x.date()))]
+    opens = panel.attrs.get("opens")
+    panel = panel.loc[allowed].copy()
+    if opens is not None:
+        panel.attrs["opens"] = opens.reindex(allowed)
+    if panel.empty:
+        return
     print(f"[book-learn] price panel {panel.index.min().date()} → "
           f"{panel.index.max().date()} ({panel.shape[1]} tickers)")
 
@@ -783,6 +810,25 @@ def run(date: str | None = None, lookback: int = 40, top_n: int = 10,
     )
     print(f"[book-learn] heat scale: {heat_result['decision']}")
 
+    from .learning_trials import govern
+    proposed = {"weights": adopted, "sell_excludes_addons": bool(sell_result["adopted"]),
+                "heat_scale": heat_result.get("adopted", current_heat),
+                "risk_off_entry_scale": risk_result.get("adopted_scale", prev_pol.get("risk_off_entry_scale", RISK_DEFAULT_SCALE))}
+    incumbent = {"weights": {h: list(incumbent_w[h]) for h in HORIZONS},
+                 "sell_excludes_addons": current_sell, "heat_scale": current_heat,
+                 "risk_off_entry_scale": prev_pol.get("risk_off_entry_scale", RISK_DEFAULT_SCALE)}
+    # Sell/risk switches lack a matched execution evaluator; do not promote them indirectly.
+    proposed["sell_excludes_addons"] = incumbent["sell_excludes_addons"]
+    proposed["risk_off_entry_scale"] = incumbent["risk_off_entry_scale"]
+    approved, trial = govern(incumbent, proposed, asof)
+    adopted = approved["weights"]
+    sell_result["adopted"] = approved["sell_excludes_addons"]
+    heat_result["adopted"] = approved["heat_scale"]
+    risk_result["adopted_scale"] = approved["risk_off_entry_scale"]
+    for r in results:
+        r["research_decision"] = r["decision"]
+        r["decision"] = trial["decision"]
+        r["adopted"] = adopted[r["horizon"]]
     policy = _write_policy(adopted, bool(sell_result["adopted"]), results,
                            sell_result, asof, risk_result, heat_result)
     _write_ledger(policy, results, sell_result, risk_result, heat_result)

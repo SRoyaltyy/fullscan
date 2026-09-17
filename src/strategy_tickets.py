@@ -817,6 +817,14 @@ def build(date: str) -> dict:
         )
         print(f"[strategy-tickets] WARN: {warn}", flush=True)
         payload["errors"] = list(payload["errors"] or []) + [warn]
+    from .research_validation import digest, write_once
+    from datetime import timezone
+    observed = datetime.now(timezone.utc).isoformat()
+    snapshot = {"session": date, "observed_at": observed,
+                "payload_hash": digest(payload), "payload": payload}
+    target = ROOT / "data" / "learning_trials" / "tickets" / date / (digest(payload)+".json")
+    if not target.exists():
+        write_once(target, snapshot)
     return payload
 
 

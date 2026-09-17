@@ -667,11 +667,21 @@ def run(
         check=False, timeout_s=600,
     )
 
+    print("[all] → Prospective paired learning replay")
+    _run([sys.executable, "-m", "src.learning_replay", "--date", date], check=True, timeout_s=900)
+
     print("[all] → Book learn (weight tuner from realized forward returns)")
     _run(
         [sys.executable, "-m", "src.book_learn", "--date", date, "--update-prices"],
         check=False, timeout_s=900,
     )
+
+    print("[all] → Lesson exec (falsifier grading + lesson check page)")
+    _run(
+        [sys.executable, "-m", "src.lesson_exec", "--date", date],
+        check=False, timeout_s=900,
+    )
+    _land(date, "lesson_check", "Lesson check")
 
     print("[all] → Book reflect (gap scan + missing-input hypotheses)")
     reflect_cmd = [sys.executable, "-m", "src.book_reflect", "--date", date]

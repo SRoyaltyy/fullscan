@@ -59,6 +59,8 @@ def _relevant(fm: dict, topic: str) -> bool:
     if scope == "ops" or fm.get("error_category") == "D":
         # ops rules: everywhere, unless pinned to a different sector
         return lesson_topic is None or lesson_topic == topic or lesson_topic == "general"
+    if fm.get("validation_status") != "validated":
+        return False
     return lesson_topic == topic
 
 

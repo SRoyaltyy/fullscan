@@ -73,6 +73,8 @@ def _write_active(cl: list[dict], merged_body: str = "") -> str:
     slug = _slug(n0.get("when") or "rule") or "rule"
     apath = os.path.join(config.LESSONS_ACTIVE, f"{slug}.md")
     body = lesson_schema.active_rule_markdown({**n0, "status": "active"}, extra_body=merged_body)
+    validation = "ops" if n0.get("error_category") == "D" else "shadow"
+    body = body.replace('status: "active"', f'status: "active"\nvalidation_status: "{validation}"', 1)
     sources = [os.path.basename(c["path"]) for c in cl]
     body = body.replace(
         'status: "active"',

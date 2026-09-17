@@ -148,20 +148,12 @@ def test_align_sleeves_empty_and_unequal_no_indexerror() -> None:
 
 
 def test_keep_kill_thin_and_standing_bar() -> None:
-    thin = obs.decide_verdict(
-        label="market", n_fires=12, n_filled=12,
-        win_rate=0.80, pnl=40.0, ideal_pnl=50.0)
-    assert thin["label"] == "KILL" and thin["thin"] is True
-    assert "flatten_robust" in thin["why"]
-    lose = obs.decide_verdict(
-        label="market", n_fires=40, n_filled=40,
-        win_rate=0.50, pnl=-8.0, ideal_pnl=12.0)
-    assert lose["label"] == "KILL"
-    assert lose["vs_ideal_pnl"] == -20.0
-    keep = obs.decide_verdict(
-        label="market", n_fires=40, n_filled=40,
-        win_rate=0.60, pnl=15.0, ideal_pnl=20.0)
-    assert keep["keep"] is True and keep["label"] == "KEEP"
+    thin = obs.decide_verdict(label="thin", n_fires=10, n_filled=10, win_rate=1, pnl=100)
+    assert thin["label"] == "INSUFFICIENT_EVIDENCE" and thin["thin"]
+    losing = obs.decide_verdict(label="loser", n_fires=100, n_filled=100, win_rate=.8, pnl=-500)
+    assert losing["label"] == "NEGATIVE_DIAGNOSTIC" and not losing["keep"]
+    winning = obs.decide_verdict(label="winner", n_fires=100, n_filled=100, win_rate=.4, pnl=500)
+    assert winning["label"] == "POSITIVE_DIAGNOSTIC" and not winning["keep"]
 
 
 def test_after_fee_uses_paper_trade() -> None:
