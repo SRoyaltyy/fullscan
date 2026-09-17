@@ -414,6 +414,303 @@ def _tally_boxes(boxes: dict) -> tuple[int, int]:
     return good, bad
 
 
+def _finite_open(row) -> float | None:
+    if not isinstance(row, dict):
+        return None
+    return fm._finite(row.get("open"))
+
+
+def _cam_pair(row) -> tuple[int, int] | None:
+    """(n_pos, n_neg) when both are numeric. 0 is a real count; None is missing."""
+    if not isinstance(row, dict):
+        return None
+    pos = fm._finite(row.get("n_pos"))
+    neg = fm._finite(row.get("n_neg"))
+    if pos is None or neg is None:
+        return None
+    return int(pos), int(neg)
+
+
+def _open_window(rows: list, i: int, n: int = 5) -> list[float] | None:
+    """Today-first list of the last n numeric opens (skip rows without an open)."""
+    opens: list[float] = []
+    for j in range(i, -1, -1):
+        o = _finite_open(rows[j] if j < len(rows) else None)
+        if o is None:
+            continue
+        opens.append(float(o))
+        if len(opens) == n:
+            return opens
+    return None
+
+
+def open_camera_setup(rows: list, i: int) -> dict | None:
+    """LONG / SHORT open+camera badge for row i, or None.
+
+    LONG: today's open is lowest or 2nd-lowest among the last 5 numeric
+    opens (today included) AND net = n_pos − n_neg rose vs the prior
+    session. SHORT is the inverse (highest / 2nd-highest + net down).
+
+    CLEAN: net moved the right way and the other color did not
+    deteriorate (long: n_neg did not rise, n_pos did not fall).
+    EXPLORE: net moved the right way but the other color did
+    (e.g. +1 −1 → +4 −2).
+
+    Needs a 5-open window and a prior session with camera counts.
+    Matches dashboard setupOf(rows, i).
+    """
+    if not rows or i < 1 or i >= len(rows):
+        return None
+    opens = _open_window(rows, i, 5)
+    if not opens:
+        return None
+    cur = _cam_pair(rows[i])
+    prev = _cam_pair(rows[i - 1])
+    if cur is None or prev is None:
+        return None
+    uniq = sorted(set(opens))
+    lowest, highest = uniq[0], uniq[-1]
+    second_low = uniq[1] if len(uniq) > 1 else lowest
+    second_high = uniq[-2] if len(uniq) > 1 else highest
+    today_o = opens[0]
+    cheap = today_o == lowest or today_o == second_low
+    rich = today_o == highest or today_o == second_high
+    net = cur[0] - cur[1]
+    net_prev = prev[0] - prev[1]
+    d_net = net - net_prev
+    side = quality = rank = None
+    if cheap and d_net > 0:
+        side = "long"
+        rank = "lowest" if today_o == lowest else "second_lowest"
+        clean = cur[1] <= prev[1] and cur[0] >= prev[0]
+        quality = "clean" if clean else "explore"
+    elif rich and d_net < 0:
+        side = "short"
+        rank = "highest" if today_o == highest else "second_highest"
+        clean = cur[0] <= prev[0] and cur[1] >= prev[1]
+        quality = "clean" if clean else "explore"
+    else:
+        return None
+    return {
+        "side": side,
+        "quality": quality,
+        "open_rank": rank,
+        "n_pos": cur[0],
+        "n_neg": cur[1],
+        "n_pos_prev": prev[0],
+        "n_neg_prev": prev[1],
+        "net": net,
+        "net_prev": net_prev,
+        "net_delta": d_net,
+        "tight_long": (
+            side == "long" and quality == "clean"
+            and rank == "lowest" and d_net >= 2
+        ),
+    }
+
+
+def _horizon_side_pct(row: dict, hold: int, side: str) -> float | None:
+    raw = fm._finite((row or {}).get(f"h{hold}"))
+    if raw is None:
+        return None
+    pct = float(raw)
+    if side == "short":
+        pct = -pct
+    return round(pct, 2)
+
+
+def _setup_bucket_key(setup: dict) -> str:
+    return f"{setup['side']}_{setup['quality']}"
+
+
+def _empty_setup_stats() -> dict:
+    keys = (
+        "long_clean", "long_explore", "long_all",
+        "short_clean", "short_explore", "short_all",
+        "long_tight",
+    )
+    out = {}
+    for k in keys:
+        out[k] = {
+            "n": 0,
+            "h1": {"n": 0, "win": None, "mean": None},
+            "h3": {"n": 0, "win": None, "mean": None},
+            "h5": {"n": 0, "win": None, "mean": None},
+        }
+    return out
+
+
+def _fill_setup_stats(stats: dict) -> dict:
+    for pack in stats.values():
+        for h in (1, 3, 5):
+            slot = pack[f"h{h}"]
+            xs = slot.pop("_xs", [])
+            slot.update(_pack_rets(xs))
+    return stats
+
+
+def _note_setup(stats: dict, setup: dict, row: dict, *, tight: bool = False) -> None:
+    keys = [_setup_bucket_key(setup), f"{setup['side']}_all"]
+    if tight:
+        keys.append("long_tight")
+    for key in keys:
+        pack = stats[key]
+        pack["n"] += 1
+        for h in (1, 3, 5):
+            pct = _horizon_side_pct(row, h, setup["side"])
+            if pct is None:
+                continue
+            slot = pack[f"h{h}"]
+            slot.setdefault("_xs", []).append(pct)
+
+
+def scan_open_camera_setups(tick_dir: Path | None = None) -> dict:
+    """Honest H1/H3/H5 backtest of open+camera setups on checked-in histories."""
+    tick_dir = Path(tick_dir or (DASH_DIR / "t"))
+    all_s = _empty_setup_stats()
+    red_s = _empty_setup_stats()
+    n_files = 0
+    n_rows = 0
+    n_setups = 0
+    from_date = to_date = None
+    for path in sorted(tick_dir.glob("*.json")):
+        try:
+            doc = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        rows = doc.get("rows") or []
+        if not rows:
+            continue
+        n_files += 1
+        n_rows += len(rows)
+        fd, td = doc.get("from_date"), doc.get("to_date")
+        if fd and (from_date is None or fd < from_date):
+            from_date = fd
+        if td and (to_date is None or td > to_date):
+            to_date = td
+        for i, row in enumerate(rows):
+            setup = open_camera_setup(rows, i)
+            if not setup:
+                continue
+            n_setups += 1
+            _note_setup(all_s, setup, row, tight=bool(setup.get("tight_long")))
+            if row.get("hard_red"):
+                _note_setup(red_s, setup, row, tight=bool(setup.get("tight_long")))
+    _fill_setup_stats(all_s)
+    _fill_setup_stats(red_s)
+    return {
+        "n_histories": n_files,
+        "n_rows": n_rows,
+        "n_setups": n_setups,
+        "from_date": from_date,
+        "to_date": to_date,
+        "all": all_s,
+        "hard_red": red_s,
+        "note": (
+            "Long near 50% H1 is not an edge. Shorts are graded as short "
+            "P&L (− stored long hold). Thin n is said out loud."
+        ),
+    }
+
+
+def _fmt_win(pack: dict) -> str:
+    if not pack or not pack.get("n"):
+        return "—"
+    win = pack.get("win")
+    mean = pack.get("mean")
+    win_s = "—" if win is None else f"{100 * win:.1f}%"
+    mean_s = "—" if mean is None else f"{mean:+.2f}%"
+    return f"{win_s} / {mean_s} (n={pack['n']})"
+
+
+def format_setup_backtest_md(doc: dict) -> str:
+    labels = (
+        ("long_clean", "long clean"),
+        ("long_explore", "long explore"),
+        ("long_all", "long all"),
+        ("short_clean", "short clean"),
+        ("short_explore", "short explore"),
+        ("short_all", "short all"),
+        ("long_tight", "tighter long (lowest + clean + net ≥ +2)"),
+    )
+
+    def table(title: str, stats: dict) -> list[str]:
+        lines = [
+            f"## {title}",
+            "",
+            "| sleeve | n setups | H1 win / mean | H3 win / mean | H5 win / mean |",
+            "|---|---:|---|---|---|",
+        ]
+        for key, lab in labels:
+            pack = stats.get(key) or {}
+            lines.append(
+                f"| {lab} | {pack.get('n', 0)} | "
+                f"{_fmt_win(pack.get('h1'))} | "
+                f"{_fmt_win(pack.get('h3'))} | "
+                f"{_fmt_win(pack.get('h5'))} |"
+            )
+        lines.append("")
+        return lines
+
+    n_hist = doc.get("n_histories") or 0
+    thin = n_hist < 30 or (doc.get("n_setups") or 0) < 30
+    lines = [
+        "# Open + camera setup backtest",
+        "",
+        doc.get("note") or "",
+        "",
+        f"Scanned **{n_hist}** ticker histories "
+        f"(`dashboard/hard-red-exceptions/t/*.json`) · "
+        f"{doc.get('from_date')} → {doc.get('to_date')} · "
+        f"{doc.get('n_rows')} session rows · "
+        f"{doc.get('n_setups')} setups.",
+        "",
+        "Rule (same as `setupOf` / `open_camera_setup`): 5 numeric opens "
+        "including today; LONG if cheapest or 2nd-cheapest **and** camera "
+        "net rose vs prior session; SHORT if richest or 2nd-richest **and** "
+        "net fell. Clean = the other color did not deteriorate. Explore = "
+        "net moved the right way but positives/negatives moved against the "
+        "side. No badge without a 5-open window and a prior camera session.",
+        "",
+        "Short P&L flips the stored long hold-1/3/5. KEEP still wants "
+        ">55% after fees and n≥30. "
+        + ("**Sample is thin — do not wire.**" if thin else
+           "Sample is large enough to read the rates; still not a live wire."),
+        "",
+    ]
+    lines += table("ALL days", doc.get("all") or {})
+    lines += table("HARD-RED-ONLY days", doc.get("hard_red") or {})
+    lines += [
+        "## Honesty",
+        "",
+        "- Do not dress up a long H1 near 50% as edge.",
+        "- Prior recon (~1247 histories) was long ~49% H1, short ~56% H1 "
+        "(explore short ~60% H1; hard-red shorts H5 ~63.9% +2.12). "
+        "This scan is the same 1247 files through 2026-09-16: long all H1 "
+        "47.9% (still a coin-flip, a point worse), short all H1 56.3% "
+        "(unchanged), explore short H1 61.1% (unchanged), hard-red short "
+        "H5 66.3% +2.66 (a couple points stronger — more hard-red "
+        "sessions in the 9/8–9/15 tail). The table above is the source "
+        "of truth.",
+        "- Tighter long is a cheap extra cut (lowest open, not 2nd; clean; "
+        "net improved by ≥2), reported separately so it is not p-hacked "
+        "into the main rule.",
+        "",
+        "Dashboard: [hard-red-exceptions](./index.html).",
+        "",
+    ]
+    return "\n".join(lines)
+
+
+def write_setup_backtest_md(doc: dict | None = None,
+                            dest: Path | None = None) -> Path:
+    dest = dest or (DASH_DIR / "SETUP_BACKTEST.md")
+    payload = doc or scan_open_camera_setups()
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text(format_setup_backtest_md(payload), encoding="utf-8")
+    return dest
+
+
 def row_from_lookback(day: dict) -> dict:
     """Paint cameras from ticker-lookback artifacts (join/weather/Finviz/news)."""
     boxes = dict(day.get("boxes") or {})
@@ -948,7 +1245,21 @@ def main(argv: list[str] | None = None) -> int:
     p.add_argument("--write", action="store_true")
     p.add_argument("--no-yahoo", action="store_true")
     p.add_argument("--no-lookback", action="store_true")
+    p.add_argument("--setup-backtest", action="store_true",
+                   help="Scan t/*.json open+camera setups; write SETUP_BACKTEST.md")
     args = p.parse_args(argv)
+    if args.setup_backtest:
+        bt = scan_open_camera_setups()
+        dest = write_setup_backtest_md(bt)
+        print(json.dumps({
+            "ok": True,
+            "wrote": str(dest),
+            "n_histories": bt.get("n_histories"),
+            "n_setups": bt.get("n_setups"),
+            "all": bt.get("all"),
+            "hard_red": bt.get("hard_red"),
+        }, indent=2, default=str))
+        return 0
     doc = run(yahoo=not args.no_yahoo, lookback=not args.no_lookback)
     if args.write and doc.get("ok"):
         write_json(doc)

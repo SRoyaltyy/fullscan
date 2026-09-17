@@ -1,6 +1,7 @@
 """Idiosyncratic ranker for hard-red sit mornings."""
 from src.hard_red_exceptions import (
-    build_history, horizon_pack, idio_score, long_ok, rank_day, run, short_ok,
+    build_history, horizon_pack, idio_score, long_ok, open_camera_setup,
+    rank_day, run, scan_open_camera_setups, short_ok,
 )
 
 
@@ -147,3 +148,155 @@ def test_reconstructed_off_list_day_paints_cameras():
     assert "join" in " ".join(r0["files"])
     assert r1["on_list"] is True
     assert r1["reconstructed"] is False
+
+
+def _hist_row(open_, n_pos, n_neg, **kw):
+    row = {"open": open_, "n_pos": n_pos, "n_neg": n_neg, "hard_red": False,
+           "h1": None, "h3": None, "h5": None}
+    row.update(kw)
+    return row
+
+
+def test_open_camera_setup_explore_long_example():
+    # yesterday +1 −1 (net 0) → today +4 −2 (net +2); cheapest open.
+    rows = [
+        _hist_row(12, 2, 2),
+        _hist_row(11, 2, 1),
+        _hist_row(13, 1, 1),
+        _hist_row(14, 1, 1),
+        _hist_row(10, 4, 2),
+    ]
+    s = open_camera_setup(rows, 4)
+    assert s is not None
+    assert s["side"] == "long"
+    assert s["quality"] == "explore"
+    assert s["open_rank"] == "lowest"
+    assert s["net_delta"] == 2
+    assert s["tight_long"] is False  # explore, not clean
+
+
+def test_open_camera_setup_clean_long_and_tight():
+    rows = [
+        _hist_row(12, 1, 1),
+        _hist_row(11, 1, 1),
+        _hist_row(13, 1, 1),
+        _hist_row(14, 1, 1),
+        _hist_row(10, 4, 1),  # n_pos up, n_neg same, net 0→+3, lowest
+    ]
+    s = open_camera_setup(rows, 4)
+    assert s["side"] == "long"
+    assert s["quality"] == "clean"
+    assert s["open_rank"] == "lowest"
+    assert s["net_delta"] == 3
+    assert s["tight_long"] is True
+
+
+def test_open_camera_setup_second_lowest_is_still_long():
+    rows = [
+        _hist_row(10, 1, 1),
+        _hist_row(13, 1, 1),
+        _hist_row(14, 1, 1),
+        _hist_row(15, 1, 1),
+        _hist_row(11, 3, 1),
+    ]
+    s = open_camera_setup(rows, 4)
+    assert s["side"] == "long"
+    assert s["open_rank"] == "second_lowest"
+    assert s["quality"] == "clean"
+    assert s["tight_long"] is False
+
+
+def test_open_camera_setup_short_clean_and_explore():
+    rich = [
+        _hist_row(10, 2, 2),
+        _hist_row(11, 2, 2),
+        _hist_row(12, 2, 2),
+        _hist_row(13, 4, 2),
+        _hist_row(15, 1, 2),  # richest, n_pos down, n_neg same → clean short
+    ]
+    clean = open_camera_setup(rich, 4)
+    assert clean["side"] == "short"
+    assert clean["quality"] == "clean"
+    assert clean["open_rank"] == "highest"
+    assert clean["net_delta"] == -3
+
+    explore_rows = [
+        _hist_row(10, 2, 2),
+        _hist_row(11, 2, 2),
+        _hist_row(12, 2, 2),
+        _hist_row(13, 4, 2),
+        _hist_row(15, 5, 4),  # net 2→1 down, but n_pos rose → explore short
+    ]
+    exp = open_camera_setup(explore_rows, 4)
+    assert exp["side"] == "short"
+    assert exp["quality"] == "explore"
+    assert exp["net_delta"] == -1
+
+
+def test_open_camera_setup_skips_thin_window_or_missing_cams():
+    thin = [_hist_row(10 + i, 1, 1) for i in range(4)]
+    assert open_camera_setup(thin, 3) is None
+    missing_prev = [
+        _hist_row(12, 1, 1),
+        _hist_row(11, 1, 1),
+        _hist_row(13, 1, 1),
+        _hist_row(14, None, None),
+        _hist_row(10, 4, 0),
+    ]
+    assert open_camera_setup(missing_prev, 4) is None
+    mid = [
+        _hist_row(10, 1, 1),
+        _hist_row(11, 1, 1),
+        _hist_row(12, 1, 1),
+        _hist_row(13, 1, 1),
+        _hist_row(12, 5, 0),  # 3rd of 5 opens — not cheap/rich
+    ]
+    assert open_camera_setup(mid, 4) is None
+    flat = [
+        _hist_row(12, 2, 1),
+        _hist_row(11, 2, 1),
+        _hist_row(13, 2, 1),
+        _hist_row(14, 3, 1),
+        _hist_row(10, 3, 1),  # cheapest but net unchanged
+    ]
+    assert open_camera_setup(flat, 4) is None
+
+
+def test_open_camera_setup_skips_rows_without_open_in_window():
+    rows = [
+        _hist_row(12, 1, 1),
+        _hist_row(None, 9, 9),
+        _hist_row(11, 1, 1),
+        _hist_row(13, 1, 1),
+        _hist_row(14, 1, 1),
+        _hist_row(10, 3, 1),
+    ]
+    s = open_camera_setup(rows, 5)
+    assert s is not None
+    assert s["side"] == "long"
+    assert s["open_rank"] == "lowest"
+
+
+def test_scan_open_camera_setups_splits_all_vs_hard_red(tmp_path):
+    rows = [
+        _hist_row(12, 1, 1, h1=1.0),
+        _hist_row(11, 1, 1, h1=-2.0),
+        _hist_row(13, 1, 1, h1=0.5),
+        _hist_row(14, 1, 1, h1=0.4),
+        _hist_row(10, 4, 1, h1=3.0, hard_red=True),  # tight long, H1 +3
+        _hist_row(16, 1, 2, h1=4.0, hard_red=True),  # richest, net 3→-1, short
+    ]
+    (tmp_path / "AAA.json").write_text(
+        __import__("json").dumps({"ticker": "AAA", "from_date": "2026-08-13",
+                                  "to_date": "2026-08-20", "rows": rows}),
+        encoding="utf-8",
+    )
+    doc = scan_open_camera_setups(tmp_path)
+    assert doc["n_histories"] == 1
+    assert doc["all"]["long_all"]["n"] == 1
+    assert doc["all"]["long_tight"]["n"] == 1
+    assert doc["all"]["short_all"]["n"] == 1
+    # short H1 is −stored long = −4
+    assert doc["all"]["short_all"]["h1"]["mean"] == -4.0
+    assert doc["hard_red"]["long_all"]["n"] == 1
+    assert doc["hard_red"]["short_all"]["n"] == 1
