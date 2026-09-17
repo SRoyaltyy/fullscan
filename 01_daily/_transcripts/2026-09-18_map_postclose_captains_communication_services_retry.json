@@ -13,7 +13,7 @@
     },
     {
       "role": "assistant",
-      "content": "Researching all supplied captains with ticker-tagged news; X is skipped for this post-close batch."
+      "content": "Post-close batch: X not required. Searching Finviz-tagged and live news for every supplied captain."
     }
   ]
 }

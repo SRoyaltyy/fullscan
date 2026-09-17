@@ -13,7 +13,7 @@
     },
     {
       "role": "assistant",
-      "content": "Researching supplied Financial captains only — pulling current ticker news first, then scoring cards. X is optional on this post-close batch."
+      "content": "Post-close Financial captains need live ticker news, not the keyword stubs. Researching every supplied name now."
     }
   ]
 }

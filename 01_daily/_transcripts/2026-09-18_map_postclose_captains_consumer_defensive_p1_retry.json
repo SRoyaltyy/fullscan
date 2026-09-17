@@ -13,7 +13,7 @@
     },
     {
       "role": "assistant",
-      "content": "I’ll search ticker-tagged news for every supplied captain, then fetch the pieces that actually have dates and facts."
+      "content": "Researching the four Consumer Defensive industries and only the supplied captains. Starting with live ticker news."
     }
   ]
 }

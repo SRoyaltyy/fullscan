@@ -13,7 +13,7 @@
     },
     {
       "role": "assistant",
-      "content": "Pulling ticker-tagged news and filings for every Energy captain in parallel."
+      "content": "Post-close Energy batch: searching ticker-tagged news for every supplied captain. X is not required for this run."
     }
   ]
 }
