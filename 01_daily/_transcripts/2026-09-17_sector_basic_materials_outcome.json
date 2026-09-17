@@ -13,7 +13,7 @@
     },
     {
       "role": "assistant",
-      "content": "Need session path, metals, and XLB names. Searching those next."
+      "content": "X-search mixed FOMC dates; pulling session tape, metals, and constituent moves from primary sources."
     }
   ]
 }
