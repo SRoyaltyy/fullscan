@@ -1,6 +1,6 @@
 {
   "date": "2026-09-16",
-  "generated_at": "2026-09-16T17:00:49.979131-04:00",
+  "generated_at": "2026-09-17T02:08:56.266301-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -290,6 +290,45 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-16\n**Generated:** 2026-09-16T17:00:48.927704-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed lower as Fed delivered first rate hike since 2023 and signaled further tightening amid stubborn inflation while Dow futures fall over 1% ahead of data and earnings\n**Prior close:** SPX \u2014  Nasdaq -0.78%  Dow -0.45%\n**SPX:** \u2014  **Nasdaq:** -0.78%  **Dow:** -0.45%\n**Oil:** \u2014\n**CPI/Fed:** 4.0% hike (4.00% target range, its first hike)\n**Leaders:** INTC, SKHY, F, FANG, UAL, AAL, LEN\n**Next session:** housing no \u00b7 retail yes \u00b7 Fed yes\n**Earnings slate:** LEN\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-17\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-16",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T02:08:55.489840-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-16_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 86288,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-16_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11344,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-16\n_Generated 2026-09-17T02:08:55.105773-04:00 \u00b7 export=data/exports/finviz_2026-09-16.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+        },
+        {
+          "path": "data/exports/finviz_2026-09-16.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11429254,
+          "preview": "11641 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11429254,
+          "preview": "11641 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-16\n_Generated 2026-09-17T02:08:55.105773-04:00 \u00b7 export=data/exports/finviz_2026-09-16.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11641 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 11641 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
