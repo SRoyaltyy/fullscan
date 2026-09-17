@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T05:29:23.883313-04:00",
+  "generated_at": "2026-09-17T05:36:48.916715-04:00",
   "items": [
     {
       "ok": true,
@@ -146,14 +146,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-17/consumer_cyclical_predict.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 19159,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
@@ -260,9 +260,9 @@
     },
     {
       "sector": "Consumer Cyclical",
-      "ok": false,
-      "reason": "missing",
-      "size": 0
+      "ok": true,
+      "reason": "",
+      "size": 19159
     },
     {
       "sector": "Consumer Defensive",
@@ -313,7 +313,7 @@
       "size": 0
     }
   ],
-  "sector_n_ok": 2,
+  "sector_n_ok": 3,
   "sector_n_total": 11,
   "all_ok": false
 }
