@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ candle, no 🚨
 
-Cash book **-2.52%** ($9,748) · signal-only (no cash/fees) was +3.52%. Starts YES **3/24**. Fills 171 · skips 88 · realized $-154.23.
+Cash book **-1.05%** ($9,895) · signal-only (no cash/fees) was +3.52%. Starts YES **7/25**. Fills 172 · skips 88 · realized $-104.80.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $34.57.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,895.21.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -247,6 +247,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | `RDDT` | 7 | $157.77 | $160.00 | +15.61 | — | +0.00 | +15.61 | +17.15 | — |
 | 2026-09-15 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-16 | `BLFS` | 269 | — | $36.46 | +0.00 | $36.11 | -94.15 | -94.15 | +0.00 | -94.15 |
+| 2026-09-17 | `BLFS` | 269 | $36.11 | $36.67 | +150.64 | — | +0.00 | +150.64 | +56.49 | — |
 
 ## Each session (cash + holdings state)
 
@@ -276,6 +277,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | -11.00 | $169.34 | SANM×6, COHU×22, AMTX×615, CLOV×264, BAK×591, TYRA×53, FUBO×108, RDDT×7 | $9,875.66 | -100.57 | +0.00 | — | SANM, COHU, AMTX, CLOV, BAK, TYRA, FUBO, RDDT | $9,845.78 | $9,845.78 | — |
 | 2026-09-15 | -3.84 | $9,845.78 | — | $9,845.78 | +0.00 | +0.00 | — | — | $9,845.78 | $9,845.78 | — |
 | 2026-09-16 | +5.30 | $9,845.78 | — | $9,845.78 | +0.00 | -94.15 | BLFS | — | $34.57 | $9,748.16 | BLFS×269 |
+| 2026-09-17 | +7.38 | $34.57 | BLFS×269 | $9,898.80 | +150.64 | +0.00 | — | BLFS | $9,895.21 | $9,895.21 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -500,6 +502,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,845.78 | ▲ 09:30 equity $9,845.78 vs yday $9,845.78 (+0.00) | 09:30 open · cash $9,845.78 · no holdings · equity $9,845.78 vs prior close $9,845.78 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-16 09:30 ET | **BUY** | `BLFS` | 269 | $36.46 | $3.47 | — | $34.57 | — | union ∩ candle, no 🚨; gate candle_capture=True; list flatten; ⚪; ret5=-4.6; leftover $9845.78 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $34.57 | ▼ close $9,748.16 vs 09:30 $9,845.78 (session -94.15) | 16:00 close · cash $34.57 · equity $9,748.16 vs 09:30 $9,845.78 (-97.62; session marks -94.15) · 1 name(s) marked open→close (per-name table). BLFS×269 09:30 $36.46 → close $36.11 -94.15 | — |
+| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $34.57 | ▲ 09:30 equity $9,898.80 vs yday $9,748.16 (+150.64) | 09:30 open · cash $34.57 (unchanged overnight, no fees) · equity $9,898.80 vs prior close $9,748.16 (+150.64) · 1 name(s) re-marked at the open (per-name table). BLFS×269 yday $36.11 → 09:30 $36.67 +150.64 | — |
+| 2026-09-17 09:30 ET | **SELL** | `BLFS` | 269 | $36.67 | $3.59 | $+49.43 | $9,895.21 | ▲ +49.43 after sell → book $9,895.21; vs 09:30 mark -3.59 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,895.21 | ▲ close $9,895.21 vs 09:30 $9,898.80 (session +0.00) | 16:00 close · cash $9,895.21 · no lots left · equity $9,895.21. | — |
 
 ## Not taken
 
@@ -593,9 +598,3 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `S` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `CYPH` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `TYRA` | hard_red | hard-red S=-3.84 sit; no new buys |
-
-## Still open (marked at last close)
-
-| Ticker | Shares | Entry | Why |
-|---|---:|---|---|
-| `BLFS` | 269 | 2026-09-16 @ $36.46 | union ∩ candle, no 🚨; gate candle_capture=True; list flatten; ⚪; ret5=-4.6; leftover $9845.78 |

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · hot list ∩ not exploded
 
-Cash book **-18.41%** ($8,159) · signal-only (no cash/fees) was -5.60%. Starts YES **5/24**. Fills 84 · skips 60 · realized $-1841.38.
+Cash book **-18.41%** ($8,159) · signal-only (no cash/fees) was -5.60%. Starts YES **5/25**. Fills 84 · skips 60 · realized $-1841.38.
 
 ## How this sleeve decides (like you are 10)
 
@@ -161,6 +161,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `GME` | 47 | $21.62 | $21.51 | -5.17 | $21.44 | -3.29 | -8.46 | +22.09 | +18.80 |
 | 2026-09-16 | `FRO` | 20 | $51.59 | $52.52 | +18.60 | — | +0.00 | +18.60 | +89.40 | — |
 | 2026-09-16 | `GME` | 47 | $21.44 | $21.48 | +1.88 | — | +0.00 | +1.88 | +20.68 | — |
+| 2026-09-17 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -190,6 +191,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | -11.00 | $79.91 | AMTX×492, CLOV×211, BAK×474, TJGC×94, HAFN×107, INSP×14, FRO×20, GME×47 | $8,116.99 | -10.55 | +34.54 | — | AMTX, CLOV, BAK, TJGC, HAFN, INSP | $6,102.89 | $8,129.43 | FRO×20, GME×47 |
 | 2026-09-15 | -3.84 | $6,102.89 | FRO×20, GME×47 | $8,138.06 | +8.63 | +4.31 | — | — | $6,102.89 | $8,142.37 | FRO×20, GME×47 |
 | 2026-09-16 | +5.30 | $6,102.89 | FRO×20, GME×47 | $8,162.85 | +20.48 | +0.00 | — | FRO, GME | $8,158.63 | $8,158.63 | — |
+| 2026-09-17 | +7.38 | $8,158.63 | — | $8,158.63 | -0.00 | +0.00 | — | — | $8,158.63 | $8,158.63 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -327,6 +329,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 09:30 ET | **SELL** | `FRO` | 20 | $52.52 | $2.07 | $+85.28 | $7,151.22 | ▲ +85.28 after sell → book $8,160.78; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 1) | — |
 | 2026-09-16 09:30 ET | **SELL** | `GME` | 47 | $21.48 | $2.15 | $+16.40 | $8,158.63 | ▲ +16.40 after sell → book $8,158.63; vs 09:30 mark -2.15 | dropped from list after 3 sess (min 1) | — |
 | 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,158.63 | ▲ close $8,158.63 vs 09:30 $8,162.85 (session +0.00) | 16:00 close · cash $8,158.63 · no lots left · equity $8,158.63. | — |
+| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,158.63 | ▲ 09:30 equity $8,158.63 vs yday $8,158.63 (-0.00) | 09:30 open · cash $8,158.63 · no holdings · equity $8,158.63 vs prior close $8,158.63 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,158.63 | ▲ close $8,158.63 vs 09:30 $8,158.63 (session +0.00) | 16:00 close · cash $8,158.63 · no lots left · equity $8,158.63. | — |
 
 ## Not taken
 

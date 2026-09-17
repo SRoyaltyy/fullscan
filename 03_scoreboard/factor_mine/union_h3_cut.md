@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `cut_loser` · S-boost `none` · after min-hold, cut −3% losers
 
-Cash book **-2.45%** ($9,755) · signal-only (no cash/fees) was +14.30%. Starts YES **0/24**. Fills 136 · skips 229 · realized $-144.30.
+Cash book **-1.87%** ($9,813) · signal-only (no cash/fees) was +13.38%. Starts YES **0/25**. Fills 136 · skips 239 · realized $-153.19.
 
 ## How this sleeve decides (like you are 10)
 
@@ -50,7 +50,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $114.05.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $105.15.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -319,16 +319,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `CLOV` | 275 | $5.10 | $5.06 | -11.00 | $4.66 | -110.00 | -121.00 | +85.25 | -24.75 |
 | 2026-09-16 | `AUPH` | 80 | $16.13 | $16.16 | +2.40 | — | +0.00 | +2.40 | -9.60 | — |
 | 2026-09-16 | `OVID` | 478 | $2.71 | $2.72 | +4.78 | — | +0.00 | +4.78 | -4.78 | — |
-| 2026-09-16 | `SANM` | 6 | $191.61 | $195.79 | +25.08 | — | +0.00 | +25.08 | -66.30 | — |
+| 2026-09-16 | `SANM` | 6 | $191.61 | $194.84 | +19.38 | — | +0.00 | +19.38 | -72.00 | — |
 | 2026-09-16 | `ORCL` | 7 | $140.35 | $140.03 | -2.24 | — | +0.00 | -2.24 | -170.80 | — |
 | 2026-09-16 | `NVT` | 8 | $146.80 | $147.79 | +7.92 | — | +0.00 | +7.92 | -79.92 | — |
-| 2026-09-16 | `COHU` | 23 | $49.97 | $51.43 | +33.58 | — | +0.00 | +33.58 | -107.18 | — |
+| 2026-09-16 | `COHU` | 23 | $49.97 | $51.29 | +30.36 | — | +0.00 | +30.36 | -110.40 | — |
 | 2026-09-16 | `AMTX` | 640 | $1.91 | $1.89 | -12.80 | — | +0.00 | -12.80 | -96.00 | — |
-| 2026-09-16 | `CLOV` | 275 | $4.66 | $4.73 | +19.22 | — | +0.00 | +19.22 | -5.53 | — |
+| 2026-09-16 | `CLOV` | 275 | $4.66 | $4.73 | +19.25 | — | +0.00 | +19.25 | -5.50 | — |
 | 2026-09-16 | `IQV` | 9 | — | $270.89 | +0.00 | $268.82 | -18.63 | -18.63 | +0.00 | -18.63 |
 | 2026-09-16 | `RDNT` | 31 | — | $77.12 | +0.00 | $75.78 | -41.54 | -41.54 | +0.00 | -41.54 |
 | 2026-09-16 | `AVAH` | 172 | — | $14.31 | +0.00 | $14.26 | -8.60 | -8.60 | +0.00 | -8.60 |
 | 2026-09-16 | `BLFS` | 67 | — | $36.46 | +0.00 | $36.11 | -23.45 | -23.45 | +0.00 | -23.45 |
+| 2026-09-17 | `IQV` | 9 | $268.82 | $273.15 | +38.97 | $269.44 | -33.39 | +5.58 | +20.34 | -13.05 |
+| 2026-09-17 | `RDNT` | 31 | $75.78 | $76.44 | +20.46 | $77.78 | +41.54 | +62.00 | -21.08 | +20.46 |
+| 2026-09-17 | `AVAH` | 172 | $14.26 | $14.33 | +12.04 | $13.97 | -61.92 | -49.88 | +3.44 | -58.48 |
+| 2026-09-17 | `BLFS` | 67 | $36.11 | $36.67 | +37.52 | $36.85 | +12.06 | +49.58 | +14.07 | +26.13 |
 
 ## Each session (cash + holdings state)
 
@@ -357,7 +361,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | +0.50 | $10,452.77 | — | $10,452.77 | -0.00 | -17.99 | AUPH, OVID, SANM, ORCL, NVT, COHU, AMTX, CLOV | — | $260.93 | $10,406.49 | AUPH×80, OVID×478, SANM×6, ORCL×7, NVT×8, COHU×23, AMTX×640, CLOV×275 |
 | 2026-09-14 | -11.00 | $260.93 | AUPH×80, OVID×478, SANM×6, ORCL×7, NVT×8, COHU×23, AMTX×640, CLOV×275 | $10,102.35 | -304.14 | -56.20 | — | — | $260.93 | $10,046.15 | AUPH×80, OVID×478, SANM×6, ORCL×7, NVT×8, COHU×23, AMTX×640, CLOV×275 |
 | 2026-09-15 | -3.84 | $260.93 | AUPH×80, OVID×478, SANM×6, ORCL×7, NVT×8, COHU×23, AMTX×640, CLOV×275 | $10,078.28 | +32.13 | -271.85 | — | — | $260.93 | $9,806.43 | AUPH×80, OVID×478, SANM×6, ORCL×7, NVT×8, COHU×23, AMTX×640, CLOV×275 |
-| 2026-09-16 | +5.30 | $260.93 | AUPH×80, OVID×478, SANM×6, ORCL×7, NVT×8, COHU×23, AMTX×640, CLOV×275 | $9,884.37 | +77.94 | -92.22 | IQV, RDNT, AVAH, BLFS | AUPH, OVID, SANM, ORCL, NVT, COHU, AMTX, CLOV | $114.05 | $9,754.70 | IQV×9, RDNT×31, AVAH×172, BLFS×67 |
+| 2026-09-16 | +5.30 | $260.93 | AUPH×80, OVID×478, SANM×6, ORCL×7, NVT×8, COHU×23, AMTX×640, CLOV×275 | $9,875.48 | +69.05 | -92.22 | IQV, RDNT, AVAH, BLFS | AUPH, OVID, SANM, ORCL, NVT, COHU, AMTX, CLOV | $105.15 | $9,745.80 | IQV×9, RDNT×31, AVAH×172, BLFS×67 |
+| 2026-09-17 | +7.38 | $105.15 | IQV×9, RDNT×31, AVAH×172, BLFS×67 | $9,854.79 | +108.99 | -41.71 | — | — | $105.15 | $9,813.08 | IQV×9, RDNT×31, AVAH×172, BLFS×67 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -533,20 +538,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $260.93 | ▼ close $10,046.15 vs 09:30 $10,102.35 (session -56.20) | 16:00 close · cash $260.93 · equity $10,046.15 vs 09:30 $10,102.35 (-56.20; session marks -56.20) · 8 name(s) marked open→close (per-name table). AUPH×80 09:30 $16.03 → close $16.41 +30.40; OVID×478 09:30 $2.75 → close $2.74 -7.17; SANM×6 09:30 $206.50 → close $196.04 -62.76; ORCL×7 09:30 $141.42 → close $144.79 +23.59; NVT×8 09:30 $150.00 → close $146.64 -26.88; COHU×23 09:30 $52.23 → close $49.97 -51.98; AMTX×640 09:30 $2.01 → close $1.95 -38.40; CLOV×275 09:30 $4.82 → close $5.10 +77.00 | — |
 | 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $260.93 | ▲ 09:30 equity $10,078.28 vs yday $10,046.15 (+32.13) | 09:30 open · cash $260.93 (unchanged overnight, no fees) · equity $10,078.28 vs prior close $10,046.15 (+32.13) · 8 name(s) re-marked at the open (per-name table). AUPH×80 yday $16.41 → 09:30 $16.35 -4.80; OVID×478 yday $2.74 → 09:30 $2.73 -4.78; SANM×6 yday $196.04 → 09:30 $198.32 +13.68; ORCL×7 yday $144.79 → 09:30 $143.46 -9.31; NVT×8 yday $146.64 → 09:30 $151.12 +35.84; COHU×23 yday $49.97 → 09:30 $51.07 +25.30; AMTX×640 yday $1.95 → 09:30 $1.93 -12.80; CLOV×275 yday $5.10 → 09:30 $5.06 -11.00 | — |
 | 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $260.93 | ▼ close $9,806.43 vs 09:30 $10,078.28 (session -271.85) | 16:00 close · cash $260.93 · equity $9,806.43 vs 09:30 $10,078.28 (-271.85; session marks -271.85) · 8 name(s) marked open→close (per-name table). AUPH×80 09:30 $16.35 → close $16.13 -17.60; OVID×478 09:30 $2.73 → close $2.71 -9.56; SANM×6 09:30 $198.32 → close $191.61 -40.26; ORCL×7 09:30 $143.46 → close $140.35 -21.77; NVT×8 09:30 $151.12 → close $146.80 -34.56; COHU×23 09:30 $51.07 → close $49.97 -25.30; AMTX×640 09:30 $1.93 → close $1.91 -12.80; CLOV×275 09:30 $5.06 → close $4.66 -110.00 | — |
-| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $260.93 | ▲ 09:30 equity $9,884.37 vs yday $9,806.43 (+77.94) | 09:30 open · cash $260.93 (unchanged overnight, no fees) · equity $9,884.37 vs prior close $9,806.43 (+77.94) · 8 name(s) re-marked at the open (per-name table). AUPH×80 yday $16.13 → 09:30 $16.16 +2.40; OVID×478 yday $2.71 → 09:30 $2.72 +4.78; SANM×6 yday $191.61 → 09:30 $195.79 +25.08; ORCL×7 yday $140.35 → 09:30 $140.03 -2.24; NVT×8 yday $146.80 → 09:30 $147.79 +7.92; COHU×23 yday $49.97 → 09:30 $51.43 +33.58; AMTX×640 yday $1.91 → 09:30 $1.89 -12.80; CLOV×275 yday $4.66 → 09:30 $4.73 +19.22 | — |
-| 2026-09-16 09:30 ET | **SELL** | `AUPH` | 80 | $16.16 | $2.25 | $-14.08 | $1,551.47 | ▼ -14.08 after sell → book $9,882.12; vs 09:30 mark -2.25 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `OVID` | 478 | $2.72 | $6.26 | $-17.20 | $2,845.38 | ▼ -17.20 after sell → book $9,875.86; vs 09:30 mark -6.26 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `SANM` | 6 | $195.79 | $2.03 | $-70.34 | $4,018.09 | ▼ -70.34 after sell → book $9,873.83; vs 09:30 mark -2.03 | cut loser after 3 sess (−3% vs entry) | — |
-| 2026-09-16 09:30 ET | **SELL** | `ORCL` | 7 | $140.03 | $2.03 | $-174.84 | $4,996.27 | ▼ -174.84 after sell → book $9,871.80; vs 09:30 mark -2.03 | cut loser after 3 sess (−3% vs entry) | — |
-| 2026-09-16 09:30 ET | **SELL** | `NVT` | 8 | $147.79 | $2.03 | $-83.97 | $6,176.55 | ▼ -83.97 after sell → book $9,869.77; vs 09:30 mark -2.03 | cut loser after 3 sess (−3% vs entry) | — |
-| 2026-09-16 09:30 ET | **SELL** | `COHU` | 23 | $51.43 | $2.08 | $-111.32 | $7,357.37 | ▼ -111.32 after sell → book $9,867.69; vs 09:30 mark -2.08 | cut loser after 3 sess (−3% vs entry) | — |
-| 2026-09-16 09:30 ET | **SELL** | `AMTX` | 640 | $1.89 | $8.37 | $-112.63 | $8,558.59 | ▼ -112.63 after sell → book $9,859.32; vs 09:30 mark -8.37 | cut loser after 3 sess (−3% vs entry) | — |
-| 2026-09-16 09:30 ET | **SELL** | `CLOV` | 275 | $4.73 | $3.60 | $-12.68 | $9,855.71 | ▼ -12.68 after sell → book $9,855.71; vs 09:30 mark -3.61 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **BUY** | `IQV` | 9 | $270.89 | $2.02 | — | $7,415.69 | — | after min-hold, cut −3% losers; list flatten; ⚪; ret5=-0.8; leftover $2463.93 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-16 09:30 ET | **BUY** | `RDNT` | 31 | $77.12 | $2.08 | — | $5,022.88 | — | after min-hold, cut −3% losers; list flatten; ⚪; ret5=-5.1; leftover $2463.93 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-16 09:30 ET | **BUY** | `AVAH` | 172 | $14.31 | $2.51 | — | $2,559.06 | — | after min-hold, cut −3% losers; list flatten; ⚪; ret5=+3.2; leftover $2463.93 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
-| 2026-09-16 09:30 ET | **BUY** | `BLFS` | 67 | $36.46 | $2.19 | — | $114.05 | — | after min-hold, cut −3% losers; list flatten; ⚪; ret5=-4.6; leftover $2463.93 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $114.05 | ▼ close $9,754.70 vs 09:30 $9,884.37 (session -92.22) | 16:00 close · cash $114.05 · equity $9,754.70 vs 09:30 $9,884.37 (-129.67; session marks -92.22) · 4 name(s) marked open→close (per-name table). IQV×9 09:30 $270.89 → close $268.82 -18.63; RDNT×31 09:30 $77.12 → close $75.78 -41.54; AVAH×172 09:30 $14.31 → close $14.26 -8.60; BLFS×67 09:30 $36.46 → close $36.11 -23.45 | — |
+| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $260.93 | ▲ 09:30 equity $9,875.48 vs yday $9,806.43 (+69.05) | 09:30 open · cash $260.93 (unchanged overnight, no fees) · equity $9,875.48 vs prior close $9,806.43 (+69.05) · 8 name(s) re-marked at the open (per-name table). AUPH×80 yday $16.13 → 09:30 $16.16 +2.40; OVID×478 yday $2.71 → 09:30 $2.72 +4.78; SANM×6 yday $191.61 → 09:30 $194.84 +19.38; ORCL×7 yday $140.35 → 09:30 $140.03 -2.24; NVT×8 yday $146.80 → 09:30 $147.79 +7.92; COHU×23 yday $49.97 → 09:30 $51.29 +30.36; AMTX×640 yday $1.91 → 09:30 $1.89 -12.80; CLOV×275 yday $4.66 → 09:30 $4.73 +19.25 | — |
+| 2026-09-16 09:30 ET | **SELL** | `AUPH` | 80 | $16.16 | $2.25 | $-14.08 | $1,551.47 | ▼ -14.08 after sell → book $9,873.22; vs 09:30 mark -2.26 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `OVID` | 478 | $2.72 | $6.26 | $-17.20 | $2,845.38 | ▼ -17.20 after sell → book $9,866.97; vs 09:30 mark -6.25 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `SANM` | 6 | $194.84 | $2.03 | $-76.04 | $4,012.39 | ▼ -76.04 after sell → book $9,864.94; vs 09:30 mark -2.03 | cut loser after 3 sess (−3% vs entry) | — |
+| 2026-09-16 09:30 ET | **SELL** | `ORCL` | 7 | $140.03 | $2.03 | $-174.84 | $4,990.57 | ▼ -174.84 after sell → book $9,862.91; vs 09:30 mark -2.03 | cut loser after 3 sess (−3% vs entry) | — |
+| 2026-09-16 09:30 ET | **SELL** | `NVT` | 8 | $147.79 | $2.03 | $-83.97 | $6,170.85 | ▼ -83.97 after sell → book $9,860.87; vs 09:30 mark -2.04 | cut loser after 3 sess (−3% vs entry) | — |
+| 2026-09-16 09:30 ET | **SELL** | `COHU` | 23 | $51.29 | $2.08 | $-114.54 | $7,348.45 | ▼ -114.54 after sell → book $9,858.80; vs 09:30 mark -2.07 | cut loser after 3 sess (−3% vs entry) | — |
+| 2026-09-16 09:30 ET | **SELL** | `AMTX` | 640 | $1.89 | $8.37 | $-112.63 | $8,549.67 | ▼ -112.63 after sell → book $9,850.42; vs 09:30 mark -8.38 | cut loser after 3 sess (−3% vs entry) | — |
+| 2026-09-16 09:30 ET | **SELL** | `CLOV` | 275 | $4.73 | $3.60 | $-12.65 | $9,846.82 | ▼ -12.65 after sell → book $9,846.82; vs 09:30 mark -3.60 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **BUY** | `IQV` | 9 | $270.89 | $2.02 | — | $7,406.79 | — | after min-hold, cut −3% losers; list flatten; ⚪; ret5=-0.8; leftover $2461.70 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `RDNT` | 31 | $77.12 | $2.08 | — | $5,013.99 | — | after min-hold, cut −3% losers; list flatten; ⚪; ret5=-5.1; leftover $2461.70 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `AVAH` | 172 | $14.31 | $2.51 | — | $2,550.16 | — | after min-hold, cut −3% losers; list flatten; ⚪; ret5=+3.2; leftover $2461.70 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-09-16 09:30 ET | **BUY** | `BLFS` | 67 | $36.46 | $2.19 | — | $105.15 | — | after min-hold, cut −3% losers; list flatten; ⚪; ret5=-4.6; leftover $2461.70 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $105.15 | ▼ close $9,745.80 vs 09:30 $9,875.48 (session -92.22) | 16:00 close · cash $105.15 · equity $9,745.80 vs 09:30 $9,875.48 (-129.68; session marks -92.22) · 4 name(s) marked open→close (per-name table). IQV×9 09:30 $270.89 → close $268.82 -18.63; RDNT×31 09:30 $77.12 → close $75.78 -41.54; AVAH×172 09:30 $14.31 → close $14.26 -8.60; BLFS×67 09:30 $36.46 → close $36.11 -23.45 | — |
+| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $105.15 | ▲ 09:30 equity $9,854.79 vs yday $9,745.80 (+108.99) | 09:30 open · cash $105.15 (unchanged overnight, no fees) · equity $9,854.79 vs prior close $9,745.80 (+108.99) · 4 name(s) re-marked at the open (per-name table). IQV×9 yday $268.82 → 09:30 $273.15 +38.97; RDNT×31 yday $75.78 → 09:30 $76.44 +20.46; AVAH×172 yday $14.26 → 09:30 $14.33 +12.04; BLFS×67 yday $36.11 → 09:30 $36.67 +37.52 | — |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $105.15 | ▼ close $9,813.08 vs 09:30 $9,854.79 (session -41.71) | 16:00 close · cash $105.15 · equity $9,813.08 vs 09:30 $9,854.79 (-41.71; session marks -41.71) · 4 name(s) marked open→close (per-name table). IQV×9 09:30 $273.15 → close $269.44 -33.39; RDNT×31 09:30 $76.44 → close $77.78 +41.54; AVAH×172 09:30 $14.33 → close $13.97 -61.92; BLFS×67 09:30 $36.67 → close $36.85 +12.06 | — |
 
 ## Not taken
 
@@ -781,12 +788,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `RPD` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `SES` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `NTSK` | hard_red | hard-red S=-3.84 sit; no new buys |
+| 2026-09-17 | `IQV` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-17 | `RDNT` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-17 | `AVAH` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-17 | `BLFS` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-17 | `RVTY` | cash | leftover split 17.53 < 1 share @ 147.61 |
+| 2026-09-17 | `WAY` | cash | leftover split 17.53 < 1 share @ 26.51 |
+| 2026-09-17 | `AZTA` | cash | leftover split 17.53 < 1 share @ 33.94 |
+| 2026-09-17 | `IT` | cash | leftover split 17.53 < 1 share @ 191.61 |
+| 2026-09-17 | `IOT` | cash | leftover split 17.53 < 1 share @ 40.48 |
+| 2026-09-17 | `FIVN` | cash | leftover split 17.53 < 1 share @ 33.77 |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `IQV` | 9 | 2026-09-16 @ $270.89 | after min-hold, cut −3% losers; list flatten; ⚪; ret5=-0.8; leftover $2463.93 |
-| `RDNT` | 31 | 2026-09-16 @ $77.12 | after min-hold, cut −3% losers; list flatten; ⚪; ret5=-5.1; leftover $2463.93 |
-| `AVAH` | 172 | 2026-09-16 @ $14.31 | after min-hold, cut −3% losers; list flatten; ⚪; ret5=+3.2; leftover $2463.93 |
-| `BLFS` | 67 | 2026-09-16 @ $36.46 | after min-hold, cut −3% losers; list flatten; ⚪; ret5=-4.6; leftover $2463.93 |
+| `IQV` | 9 | 2026-09-16 @ $270.89 | after min-hold, cut −3% losers; list flatten; ⚪; ret5=-0.8; leftover $2461.70 |
+| `RDNT` | 31 | 2026-09-16 @ $77.12 | after min-hold, cut −3% losers; list flatten; ⚪; ret5=-5.1; leftover $2461.70 |
+| `AVAH` | 172 | 2026-09-16 @ $14.31 | after min-hold, cut −3% losers; list flatten; ⚪; ret5=+3.2; leftover $2461.70 |
+| `BLFS` | 67 | 2026-09-16 @ $36.46 | after min-hold, cut −3% losers; list flatten; ⚪; ret5=-4.6; leftover $2461.70 |

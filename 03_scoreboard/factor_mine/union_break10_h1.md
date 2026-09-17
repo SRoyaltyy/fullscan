@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ break10, no 🚨
 
-Cash book **-1.89%** ($9,811) · signal-only (no cash/fees) was +7.79%. Starts YES **15/24**. Fills 160 · skips 86 · realized $-188.84.
+Cash book **-1.84%** ($9,815) · signal-only (no cash/fees) was +7.79%. Starts YES **15/25**. Fills 160 · skips 86 · realized $-184.50.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,811.13.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,815.47.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -233,7 +233,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | `SWKS` | 13 | $88.35 | $86.06 | -29.77 | — | +0.00 | -29.77 | +23.27 | — |
 | 2026-09-15 | `INDP` | 434 | $3.14 | $3.40 | +112.84 | $3.64 | +104.16 | +217.00 | +303.80 | +407.96 |
 | 2026-09-15 | `CMRC` | 374 | $3.64 | $3.64 | +0.00 | — | +0.00 | +0.00 | +190.74 | — |
-| 2026-09-16 | `INDP` | 434 | $3.64 | $3.65 | +4.34 | — | +0.00 | +4.34 | +412.30 | — |
+| 2026-09-16 | `INDP` | 434 | $3.64 | $3.66 | +8.68 | — | +0.00 | +8.68 | +416.64 | — |
+| 2026-09-17 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -262,7 +263,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | +0.50 | $9,374.58 | — | $9,374.58 | +0.00 | +134.66 | AMTX, CLOV, BAK, INDP, CMRC, WLTH, DBI, SWKS | — | $50.07 | $9,474.19 | AMTX×574, CLOV×246, BAK×552, INDP×434, CMRC×374, WLTH×107, DBI×198, SWKS×13 |
 | 2026-09-14 | -11.00 | $50.07 | AMTX×574, CLOV×246, BAK×552, INDP×434, CMRC×374, WLTH×107, DBI×198, SWKS×13 | $9,429.16 | -45.03 | +196.18 | — | AMTX, CLOV, BAK, WLTH, DBI, SWKS | $6,876.25 | $9,600.37 | INDP×434, CMRC×374 |
 | 2026-09-15 | -3.84 | $6,876.25 | INDP×434, CMRC×374 | $9,713.21 | +112.84 | +104.16 | — | CMRC | $8,232.72 | $9,812.48 | INDP×434 |
-| 2026-09-16 | +5.30 | $8,232.72 | INDP×434 | $9,816.82 | +4.34 | +0.00 | — | INDP | $9,811.13 | $9,811.13 | — |
+| 2026-09-16 | +5.30 | $8,232.72 | INDP×434 | $9,821.16 | +8.68 | +0.00 | — | INDP | $9,815.47 | $9,815.47 | — |
+| 2026-09-17 | +7.38 | $9,815.47 | — | $9,815.47 | +0.00 | +0.00 | — | — | $9,815.47 | $9,815.47 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -473,9 +475,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6,876.25 | ▲ 09:30 equity $9,713.21 vs yday $9,600.37 (+112.84) | 09:30 open · cash $6,876.25 (unchanged overnight, no fees) · equity $9,713.21 vs prior close $9,600.37 (+112.84) · 2 name(s) re-marked at the open (per-name table). INDP×434 yday $3.14 → 09:30 $3.40 +112.84; CMRC×374 yday $3.64 → 09:30 $3.64 +0.00 | — |
 | 2026-09-15 09:30 ET | **SELL** | `CMRC` | 374 | $3.64 | $4.90 | $+181.02 | $8,232.72 | ▲ +181.02 after sell → book $9,708.32; vs 09:30 mark -4.89 | dropped from list after 2 sess (min 1) | — |
 | 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,232.72 | ▲ close $9,812.48 vs 09:30 $9,713.21 (session +104.16) | 16:00 close · cash $8,232.72 · equity $9,812.48 vs 09:30 $9,713.21 (+99.27; session marks +104.16) · 1 name(s) marked open→close (per-name table). INDP×434 09:30 $3.40 → close $3.64 +104.16 | — |
-| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,232.72 | ▲ 09:30 equity $9,816.82 vs yday $9,812.48 (+4.34) | 09:30 open · cash $8,232.72 (unchanged overnight, no fees) · equity $9,816.82 vs prior close $9,812.48 (+4.34) · 1 name(s) re-marked at the open (per-name table). INDP×434 yday $3.64 → 09:30 $3.65 +4.34 | — |
-| 2026-09-16 09:30 ET | **SELL** | `INDP` | 434 | $3.65 | $5.68 | $+401.02 | $9,811.13 | ▲ +401.02 after sell → book $9,811.13; vs 09:30 mark -5.69 | dropped from list after 3 sess (min 1) | — |
-| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,811.13 | ▲ close $9,811.13 vs 09:30 $9,816.82 (session +0.00) | 16:00 close · cash $9,811.13 · no lots left · equity $9,811.13. | — |
+| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,232.72 | ▲ 09:30 equity $9,821.16 vs yday $9,812.48 (+8.68) | 09:30 open · cash $8,232.72 (unchanged overnight, no fees) · equity $9,821.16 vs prior close $9,812.48 (+8.68) · 1 name(s) re-marked at the open (per-name table). INDP×434 yday $3.64 → 09:30 $3.66 +8.68 | — |
+| 2026-09-16 09:30 ET | **SELL** | `INDP` | 434 | $3.66 | $5.68 | $+405.36 | $9,815.47 | ▲ +405.36 after sell → book $9,815.47; vs 09:30 mark -5.69 | dropped from list after 3 sess (min 1) | — |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,815.47 | ▲ close $9,815.47 vs 09:30 $9,821.16 (session +0.00) | 16:00 close · cash $9,815.47 · no lots left · equity $9,815.47. | — |
+| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,815.47 | ▲ 09:30 equity $9,815.47 vs yday $9,815.47 (+0.00) | 09:30 open · cash $9,815.47 · no holdings · equity $9,815.47 vs prior close $9,815.47 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,815.47 | ▲ close $9,815.47 vs 09:30 $9,815.47 (session +0.00) | 16:00 close · cash $9,815.47 · no lots left · equity $9,815.47. | — |
 
 ## Not taken
 

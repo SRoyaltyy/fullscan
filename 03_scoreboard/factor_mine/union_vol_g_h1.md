@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ vol_g, no 🚨
 
-Cash book **-2.88%** ($9,711) · signal-only (no cash/fees) was +13.81%. Starts YES **3/24**. Fills 151 · skips 69 · realized $-114.65.
+Cash book **-2.67%** ($9,733) · signal-only (no cash/fees) was +13.13%. Starts YES **4/25**. Fills 153 · skips 69 · realized $-206.54.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $11.61.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $49.01.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -222,6 +222,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | `BNC` | 252 | $4.80 | $5.03 | +57.96 | — | +0.00 | +57.96 | +30.24 | — |
 | 2026-09-15 | `CMRC` | 396 | $3.64 | $3.64 | +0.00 | — | +0.00 | +0.00 | +201.96 | — |
 | 2026-09-16 | `RDNT` | 128 | — | $77.12 | +0.00 | $75.78 | -171.52 | -171.52 | +0.00 | -171.52 |
+| 2026-09-17 | `RDNT` | 128 | $75.78 | $76.44 | +84.48 | — | +0.00 | +84.48 | -87.04 | — |
+| 2026-09-17 | `RVTY` | 66 | — | $147.61 | +0.00 | $146.73 | -58.08 | -58.08 | +0.00 | -58.08 |
 
 ## Each session (cash + holdings state)
 
@@ -251,6 +253,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | -11.00 | $93.70 | ORCL×7, TYRA×52, VIST×16, INDP×459, CMRC×396, WLTH×113, DBI×210, BNC×252 | $9,859.73 | +71.44 | +51.48 | — | ORCL, TYRA, VIST, INDP, WLTH, DBI, BNC | $8,449.09 | $9,890.53 | CMRC×396 |
 | 2026-09-15 | -3.84 | $8,449.09 | CMRC×396 | $9,890.53 | +0.00 | +0.00 | — | CMRC | $9,885.35 | $9,885.35 | — |
 | 2026-09-16 | +5.30 | $9,885.35 | — | $9,885.35 | -0.00 | -171.52 | RDNT | — | $11.61 | $9,711.45 | RDNT×128 |
+| 2026-09-17 | +7.38 | $11.61 | RDNT×128 | $9,795.93 | +84.48 | -58.08 | RVTY | RDNT | $49.01 | $9,733.19 | RVTY×66 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -455,6 +458,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,885.35 | ▲ 09:30 equity $9,885.35 vs yday $9,885.35 (-0.00) | 09:30 open · cash $9,885.35 · no holdings · equity $9,885.35 vs prior close $9,885.35 (-0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-16 09:30 ET | **BUY** | `RDNT` | 128 | $77.12 | $2.37 | — | $11.61 | — | union ∩ vol_g, no 🚨; gate vol=good; list flatten; ⚪; ret5=-5.1; leftover $9885.35 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11.61 | ▼ close $9,711.45 vs 09:30 $9,885.35 (session -171.52) | 16:00 close · cash $11.61 · equity $9,711.45 vs 09:30 $9,885.35 (-173.90; session marks -171.52) · 1 name(s) marked open→close (per-name table). RDNT×128 09:30 $77.12 → close $75.78 -171.52 | — |
+| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11.61 | ▲ 09:30 equity $9,795.93 vs yday $9,711.45 (+84.48) | 09:30 open · cash $11.61 (unchanged overnight, no fees) · equity $9,795.93 vs prior close $9,711.45 (+84.48) · 1 name(s) re-marked at the open (per-name table). RDNT×128 yday $75.78 → 09:30 $76.44 +84.48 | — |
+| 2026-09-17 09:30 ET | **SELL** | `RDNT` | 128 | $76.44 | $2.47 | $-91.89 | $9,793.46 | ▼ -91.89 after sell → book $9,793.46; vs 09:30 mark -2.47 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-17 09:30 ET | **BUY** | `RVTY` | 66 | $147.61 | $2.19 | — | $49.01 | — | union ∩ vol_g, no 🚨; gate vol=good; list flatten; ret5=-4.8; leftover $9793.46 | join🟢 sector🟢 gen🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $49.01 | ▼ close $9,733.19 vs 09:30 $9,795.93 (session -58.08) | 16:00 close · cash $49.01 · equity $9,733.19 vs 09:30 $9,795.93 (-62.74; session marks -58.08) · 1 name(s) marked open→close (per-name table). RVTY×66 09:30 $147.61 → close $146.73 -58.08 | — |
 
 ## Not taken
 
@@ -534,4 +541,4 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `RDNT` | 128 | 2026-09-16 @ $77.12 | union ∩ vol_g, no 🚨; gate vol=good; list flatten; ⚪; ret5=-5.1; leftover $9885.35 |
+| `RVTY` | 66 | 2026-09-17 @ $147.61 | union ∩ vol_g, no 🚨; gate vol=good; list flatten; ret5=-4.8; leftover $9793.46 |

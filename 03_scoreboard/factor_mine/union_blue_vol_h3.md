@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-8.53%** ($9,147) · signal-only (no cash/fees) was +10.29%. Starts YES **1/24**. Fills 114 · skips 173 · realized $-853.13.
+Cash book **-8.48%** ($9,152) · signal-only (no cash/fees) was +14.87%. Starts YES **1/25**. Fills 114 · skips 173 · realized $-848.15.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,146.86.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,151.84.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -287,14 +287,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `LDI` | 1366 | $0.83 | $0.82 | -17.76 | $0.73 | -120.21 | -137.97 | -40.98 | -161.19 |
 | 2026-09-15 | `ASO` | 21 | $54.25 | $53.60 | -13.65 | $50.44 | -66.36 | -80.01 | -27.51 | -93.87 |
 | 2026-09-15 | `IRD` | 185 | $5.97 | $5.94 | -5.55 | $5.82 | -22.20 | -27.75 | -40.70 | -62.90 |
-| 2026-09-16 | `INDP` | 430 | $3.64 | $3.65 | +4.30 | — | +0.00 | +4.30 | +408.50 | — |
+| 2026-09-16 | `INDP` | 430 | $3.64 | $3.66 | +8.60 | — | +0.00 | +8.60 | +412.80 | — |
 | 2026-09-16 | `WLTH` | 106 | $10.87 | $10.82 | -5.30 | — | +0.00 | -5.30 | -13.78 | — |
 | 2026-09-16 | `BNC` | 236 | $4.91 | $4.77 | -33.04 | — | +0.00 | -33.04 | -33.04 | — |
 | 2026-09-16 | `ANGX` | 215 | $5.27 | $5.30 | +6.45 | — | +0.00 | +6.45 | -17.20 | — |
 | 2026-09-16 | `TSSI` | 129 | $8.16 | $8.21 | +6.45 | — | +0.00 | +6.45 | -99.33 | — |
-| 2026-09-16 | `LDI` | 1366 | $0.73 | $0.73 | -2.05 | — | +0.00 | -2.05 | -163.24 | — |
+| 2026-09-16 | `LDI` | 1366 | $0.73 | $0.73 | -1.37 | — | +0.00 | -1.37 | -162.55 | — |
 | 2026-09-16 | `ASO` | 21 | $50.44 | $50.69 | +5.25 | — | +0.00 | +5.25 | -88.62 | — |
 | 2026-09-16 | `IRD` | 185 | $5.82 | $5.80 | -3.70 | — | +0.00 | -3.70 | -66.60 | — |
+| 2026-09-17 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -323,7 +324,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | +0.50 | $9,291.78 | — | $9,291.78 | +0.00 | -80.92 | INDP, WLTH, BNC, ANGX, TSSI, LDI, ASO, IRD | — | $6.04 | $9,174.51 | INDP×430, WLTH×106, BNC×236, ANGX×215, TSSI×129, LDI×1366, ASO×21, IRD×185 |
 | 2026-09-14 | -11.00 | $6.04 | INDP×430, WLTH×106, BNC×236, ANGX×215, TSSI×129, LDI×1366, ASO×21, IRD×185 | $9,199.09 | +24.58 | +179.59 | — | — | $6.04 | $9,378.68 | INDP×430, WLTH×106, BNC×236, ANGX×215, TSSI×129, LDI×1366, ASO×21, IRD×185 |
 | 2026-09-15 | -3.84 | $6.04 | INDP×430, WLTH×106, BNC×236, ANGX×215, TSSI×129, LDI×1366, ASO×21, IRD×185 | $9,400.44 | +21.76 | -196.68 | — | — | $6.04 | $9,203.76 | INDP×430, WLTH×106, BNC×236, ANGX×215, TSSI×129, LDI×1366, ASO×21, IRD×185 |
-| 2026-09-16 | +5.30 | $6.04 | INDP×430, WLTH×106, BNC×236, ANGX×215, TSSI×129, LDI×1366, ASO×21, IRD×185 | $9,182.12 | -21.64 | +0.00 | — | INDP, WLTH, BNC, ANGX, TSSI, LDI, ASO, IRD | $9,146.86 | $9,146.86 | — |
+| 2026-09-16 | +5.30 | $6.04 | INDP×430, WLTH×106, BNC×236, ANGX×215, TSSI×129, LDI×1366, ASO×21, IRD×185 | $9,187.10 | -16.66 | +0.00 | — | INDP, WLTH, BNC, ANGX, TSSI, LDI, ASO, IRD | $9,151.84 | $9,151.84 | — |
+| 2026-09-17 | +7.38 | $9,151.84 | — | $9,151.84 | -0.00 | +0.00 | — | — | $9,151.84 | $9,151.84 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -481,16 +483,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.04 | ▲ close $9,378.68 vs 09:30 $9,199.09 (session +179.59) | 16:00 close · cash $6.04 · equity $9,378.68 vs 09:30 $9,199.09 (+179.59; session marks +179.59) · 8 name(s) marked open→close (per-name table). INDP×430 09:30 $2.80 → close $3.14 +146.20; WLTH×106 09:30 $10.29 → close $10.65 +38.16; BNC×236 09:30 $5.03 → close $5.27 +56.64; ANGX×215 09:30 $5.57 → close $5.48 -19.35; TSSI×129 09:30 $8.57 → close $8.45 -15.48; LDI×1366 09:30 $0.84 → close $0.83 -6.83; ASO×21 09:30 $54.75 → close $54.25 -10.50; IRD×185 09:30 $6.02 → close $5.97 -9.25 | — |
 | 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.04 | ▲ 09:30 equity $9,400.44 vs yday $9,378.68 (+21.76) | 09:30 open · cash $6.04 (unchanged overnight, no fees) · equity $9,400.44 vs prior close $9,378.68 (+21.76) · 8 name(s) re-marked at the open (per-name table). INDP×430 yday $3.14 → 09:30 $3.40 +111.80; WLTH×106 yday $10.65 → 09:30 $10.55 -10.60; BNC×236 yday $5.27 → 09:30 $5.11 -37.76; ANGX×215 yday $5.48 → 09:30 $5.47 -2.15; TSSI×129 yday $8.45 → 09:30 $8.43 -2.58; LDI×1366 yday $0.83 → 09:30 $0.82 -17.76; ASO×21 yday $54.25 → 09:30 $53.60 -13.65; IRD×185 yday $5.97 → 09:30 $5.94 -5.55 | — |
 | 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.04 | ▼ close $9,203.76 vs 09:30 $9,400.44 (session -196.68) | 16:00 close · cash $6.04 · equity $9,203.76 vs 09:30 $9,400.44 (-196.68; session marks -196.68) · 8 name(s) marked open→close (per-name table). INDP×430 09:30 $3.40 → close $3.64 +103.20; WLTH×106 09:30 $10.55 → close $10.87 +33.92; BNC×236 09:30 $5.11 → close $4.91 -47.20; ANGX×215 09:30 $5.47 → close $5.27 -43.00; TSSI×129 09:30 $8.43 → close $8.16 -34.83; LDI×1366 09:30 $0.82 → close $0.73 -120.21; ASO×21 09:30 $53.60 → close $50.44 -66.36; IRD×185 09:30 $5.94 → close $5.82 -22.20 | — |
-| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.04 | ▼ 09:30 equity $9,182.12 vs yday $9,203.76 (-21.64) | 09:30 open · cash $6.04 (unchanged overnight, no fees) · equity $9,182.12 vs prior close $9,203.76 (-21.64) · 8 name(s) re-marked at the open (per-name table). INDP×430 yday $3.64 → 09:30 $3.65 +4.30; WLTH×106 yday $10.87 → 09:30 $10.82 -5.30; BNC×236 yday $4.91 → 09:30 $4.77 -33.04; ANGX×215 yday $5.27 → 09:30 $5.30 +6.45; TSSI×129 yday $8.16 → 09:30 $8.21 +6.45; LDI×1366 yday $0.73 → 09:30 $0.73 -2.05; ASO×21 yday $50.44 → 09:30 $50.69 +5.25; IRD×185 yday $5.82 → 09:30 $5.80 -3.70 | — |
-| 2026-09-16 09:30 ET | **SELL** | `INDP` | 430 | $3.65 | $5.63 | $+397.32 | $1,569.91 | ▲ +397.32 after sell → book $9,176.49; vs 09:30 mark -5.63 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `WLTH` | 106 | $10.82 | $2.34 | $-18.42 | $2,714.49 | ▼ -18.42 after sell → book $9,174.15; vs 09:30 mark -2.34 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `BNC` | 236 | $4.77 | $3.09 | $-39.18 | $3,837.12 | ▼ -39.18 after sell → book $9,171.06; vs 09:30 mark -3.09 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `ANGX` | 215 | $5.30 | $2.82 | $-22.79 | $4,973.80 | ▼ -22.79 after sell → book $9,168.24; vs 09:30 mark -2.82 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `TSSI` | 129 | $8.21 | $2.41 | $-104.12 | $6,030.48 | ▼ -104.12 after sell → book $9,165.83; vs 09:30 mark -2.41 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `LDI` | 1366 | $0.73 | $14.31 | $-193.26 | $7,014.03 | ▼ -193.26 after sell → book $9,151.52; vs 09:30 mark -14.31 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `ASO` | 21 | $50.69 | $2.07 | $-92.75 | $8,076.45 | ▼ -92.75 after sell → book $9,149.45; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `IRD` | 185 | $5.80 | $2.59 | $-71.73 | $9,146.86 | ▼ -71.73 after sell → book $9,146.86; vs 09:30 mark -2.59 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,146.86 | ▲ close $9,146.86 vs 09:30 $9,182.12 (session +0.00) | 16:00 close · cash $9,146.86 · no lots left · equity $9,146.86. | — |
+| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.04 | ▼ 09:30 equity $9,187.10 vs yday $9,203.76 (-16.66) | 09:30 open · cash $6.04 (unchanged overnight, no fees) · equity $9,187.10 vs prior close $9,203.76 (-16.66) · 8 name(s) re-marked at the open (per-name table). INDP×430 yday $3.64 → 09:30 $3.66 +8.60; WLTH×106 yday $10.87 → 09:30 $10.82 -5.30; BNC×236 yday $4.91 → 09:30 $4.77 -33.04; ANGX×215 yday $5.27 → 09:30 $5.30 +6.45; TSSI×129 yday $8.16 → 09:30 $8.21 +6.45; LDI×1366 yday $0.73 → 09:30 $0.73 -1.37; ASO×21 yday $50.44 → 09:30 $50.69 +5.25; IRD×185 yday $5.82 → 09:30 $5.80 -3.70 | — |
+| 2026-09-16 09:30 ET | **SELL** | `INDP` | 430 | $3.66 | $5.63 | $+401.62 | $1,574.21 | ▲ +401.62 after sell → book $9,181.47; vs 09:30 mark -5.63 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `WLTH` | 106 | $10.82 | $2.34 | $-18.42 | $2,718.79 | ▼ -18.42 after sell → book $9,179.14; vs 09:30 mark -2.33 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `BNC` | 236 | $4.77 | $3.09 | $-39.18 | $3,841.42 | ▼ -39.18 after sell → book $9,176.04; vs 09:30 mark -3.10 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `ANGX` | 215 | $5.30 | $2.82 | $-22.79 | $4,978.10 | ▼ -22.79 after sell → book $9,173.22; vs 09:30 mark -2.82 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `TSSI` | 129 | $8.21 | $2.41 | $-104.12 | $6,034.78 | ▼ -104.12 after sell → book $9,170.82; vs 09:30 mark -2.40 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `LDI` | 1366 | $0.73 | $14.32 | $-192.58 | $7,019.00 | ▼ -192.58 after sell → book $9,156.49; vs 09:30 mark -14.33 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `ASO` | 21 | $50.69 | $2.07 | $-92.75 | $8,081.42 | ▼ -92.75 after sell → book $9,154.42; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `IRD` | 185 | $5.80 | $2.59 | $-71.73 | $9,151.84 | ▼ -71.73 after sell → book $9,151.84; vs 09:30 mark -2.58 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,151.84 | ▲ close $9,151.84 vs 09:30 $9,187.10 (session +0.00) | 16:00 close · cash $9,151.84 · no lots left · equity $9,151.84. | — |
+| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,151.84 | ▲ 09:30 equity $9,151.84 vs yday $9,151.84 (-0.00) | 09:30 open · cash $9,151.84 · no holdings · equity $9,151.84 vs prior close $9,151.84 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,151.84 | ▲ close $9,151.84 vs 09:30 $9,151.84 (session +0.00) | 16:00 close · cash $9,151.84 · no lots left · equity $9,151.84. | — |
 
 ## Not taken
 

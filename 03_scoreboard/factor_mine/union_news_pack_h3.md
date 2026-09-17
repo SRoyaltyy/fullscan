@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · morning packet news🟢 only (not the merged box)
 
-Cash book **-6.58%** ($9,342) · signal-only (no cash/fees) was -3.09%. Starts YES **16/24**. Fills 42 · skips 72 · realized $-657.54.
+Cash book **-6.73%** ($9,327) · signal-only (no cash/fees) was -3.09%. Starts YES **16/25**. Fills 42 · skips 72 · realized $-672.59.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,342.47.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,327.42.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -149,7 +149,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | `ADBE` | 36 | — | $242.17 | +0.00 | $252.23 | +362.16 | +362.16 | +0.00 | +362.16 |
 | 2026-09-14 | `ADBE` | 36 | $252.23 | $261.51 | +334.08 | $265.60 | +147.24 | +481.32 | +696.24 | +843.48 |
 | 2026-09-15 | `ADBE` | 36 | $265.60 | $261.70 | -140.40 | $257.76 | -141.84 | -282.24 | +703.08 | +561.24 |
-| 2026-09-16 | `ADBE` | 36 | $257.76 | $253.76 | -144.07 | — | +0.00 | -144.07 | +417.17 | — |
+| 2026-09-16 | `ADBE` | 36 | $257.76 | $253.34 | -159.12 | — | +0.00 | -159.12 | +402.12 | — |
+| 2026-09-17 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -178,7 +179,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | +0.50 | $8,929.58 | — | $8,929.58 | -0.00 | +362.16 | ADBE | — | $209.36 | $9,289.64 | ADBE×36 |
 | 2026-09-14 | -11.00 | $209.36 | ADBE×36 | $9,623.72 | +334.08 | +147.24 | — | — | $209.36 | $9,770.96 | ADBE×36 |
 | 2026-09-15 | -3.84 | $209.36 | ADBE×36 | $9,630.56 | -140.40 | -141.84 | — | — | $209.36 | $9,488.72 | ADBE×36 |
-| 2026-09-16 | +5.30 | $209.36 | ADBE×36 | $9,344.65 | -144.07 | +0.00 | — | ADBE | $9,342.47 | $9,342.47 | — |
+| 2026-09-16 | +5.30 | $209.36 | ADBE×36 | $9,329.60 | -159.12 | +0.00 | — | ADBE | $9,327.42 | $9,327.42 | — |
+| 2026-09-17 | +7.38 | $9,327.42 | — | $9,327.42 | -0.00 | +0.00 | — | — | $9,327.42 | $9,327.42 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -271,9 +273,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $209.36 | ▲ close $9,770.96 vs 09:30 $9,623.72 (session +147.24) | 16:00 close · cash $209.36 · equity $9,770.96 vs 09:30 $9,623.72 (+147.24; session marks +147.24) · 1 name(s) marked open→close (per-name table). ADBE×36 09:30 $261.51 → close $265.60 +147.24 | — |
 | 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $209.36 | ▼ 09:30 equity $9,630.56 vs yday $9,770.96 (-140.40) | 09:30 open · cash $209.36 (unchanged overnight, no fees) · equity $9,630.56 vs prior close $9,770.96 (-140.40) · 1 name(s) re-marked at the open (per-name table). ADBE×36 yday $265.60 → 09:30 $261.70 -140.40 | — |
 | 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $209.36 | ▼ close $9,488.72 vs 09:30 $9,630.56 (session -141.84) | 16:00 close · cash $209.36 · equity $9,488.72 vs 09:30 $9,630.56 (-141.84; session marks -141.84) · 1 name(s) marked open→close (per-name table). ADBE×36 09:30 $261.70 → close $257.76 -141.84 | — |
-| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $209.36 | ▼ 09:30 equity $9,344.65 vs yday $9,488.72 (-144.07) | 09:30 open · cash $209.36 (unchanged overnight, no fees) · equity $9,344.65 vs prior close $9,488.72 (-144.07) · 1 name(s) re-marked at the open (per-name table). ADBE×36 yday $257.76 → 09:30 $253.76 -144.07 | — |
-| 2026-09-16 09:30 ET | **SELL** | `ADBE` | 36 | $253.76 | $2.18 | $+412.89 | $9,342.47 | ▲ +412.89 after sell → book $9,342.47; vs 09:30 mark -2.18 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,342.47 | ▲ close $9,342.47 vs 09:30 $9,344.65 (session +0.00) | 16:00 close · cash $9,342.47 · no lots left · equity $9,342.47. | — |
+| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $209.36 | ▼ 09:30 equity $9,329.60 vs yday $9,488.72 (-159.12) | 09:30 open · cash $209.36 (unchanged overnight, no fees) · equity $9,329.60 vs prior close $9,488.72 (-159.12) · 1 name(s) re-marked at the open (per-name table). ADBE×36 yday $257.76 → 09:30 $253.34 -159.12 | — |
+| 2026-09-16 09:30 ET | **SELL** | `ADBE` | 36 | $253.34 | $2.18 | $+397.84 | $9,327.42 | ▲ +397.84 after sell → book $9,327.42; vs 09:30 mark -2.18 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,327.42 | ▲ close $9,327.42 vs 09:30 $9,329.60 (session +0.00) | 16:00 close · cash $9,327.42 · no lots left · equity $9,327.42. | — |
+| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,327.42 | ▲ 09:30 equity $9,327.42 vs yday $9,327.42 (-0.00) | 09:30 open · cash $9,327.42 · no holdings · equity $9,327.42 vs prior close $9,327.42 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,327.42 | ▲ close $9,327.42 vs 09:30 $9,327.42 (session +0.00) | 16:00 close · cash $9,327.42 · no lots left · equity $9,327.42. | — |
 
 ## Not taken
 

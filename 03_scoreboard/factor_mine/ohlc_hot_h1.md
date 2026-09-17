@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-10.52%** ($8,949) · signal-only (no cash/fees) was -2.44%. Starts YES **0/24**. Fills 148 · skips 77 · realized $-1051.42.
+Cash book **-10.52%** ($8,949) · signal-only (no cash/fees) was -2.44%. Starts YES **0/25**. Fills 148 · skips 77 · realized $-1051.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -227,6 +227,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `QRVO` | 10 | $107.98 | $108.40 | +4.20 | — | +0.00 | +4.20 | -44.35 | — |
 | 2026-09-15 | `GPRO` | 818 | $1.35 | $1.34 | -4.09 | $1.32 | -20.45 | -24.54 | -44.99 | -65.44 |
 | 2026-09-16 | `GPRO` | 818 | $1.32 | $1.31 | -8.18 | — | +0.00 | -8.18 | -73.62 | — |
+| 2026-09-17 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -256,6 +257,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | -11.00 | $50.78 | AMTX×561, CLOV×241, BAK×540, DBI×193, SWKS×13, QRVO×10, GPRO×818, PAYP×62 | $9,091.89 | -93.95 | -77.66 | — | AMTX, CLOV, BAK, DBI, SWKS, PAYP | $6,805.71 | $8,989.81 | QRVO×10, GPRO×818 |
 | 2026-09-15 | -3.84 | $6,805.71 | QRVO×10, GPRO×818 | $8,989.92 | +0.11 | -20.45 | — | QRVO | $7,887.67 | $8,967.43 | GPRO×818 |
 | 2026-09-16 | +5.30 | $7,887.67 | GPRO×818 | $8,959.25 | -8.18 | +0.00 | — | GPRO | $8,948.55 | $8,948.55 | — |
+| 2026-09-17 | +7.38 | $8,948.55 | — | $8,948.55 | +0.00 | +0.00 | — | — | $8,948.55 | $8,948.55 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -457,6 +459,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,887.67 | ▼ 09:30 equity $8,959.25 vs yday $8,967.43 (-8.18) | 09:30 open · cash $7,887.67 (unchanged overnight, no fees) · equity $8,959.25 vs prior close $8,967.43 (-8.18) · 1 name(s) re-marked at the open (per-name table). GPRO×818 yday $1.32 → 09:30 $1.31 -8.18 | — |
 | 2026-09-16 09:30 ET | **SELL** | `GPRO` | 818 | $1.31 | $10.70 | $-94.87 | $8,948.55 | ▼ -94.87 after sell → book $8,948.55; vs 09:30 mark -10.70 | dropped from list after 3 sess (min 1) | — |
 | 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,948.55 | ▲ close $8,948.55 vs 09:30 $8,959.25 (session +0.00) | 16:00 close · cash $8,948.55 · no lots left · equity $8,948.55. | — |
+| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,948.55 | ▲ 09:30 equity $8,948.55 vs yday $8,948.55 (+0.00) | 09:30 open · cash $8,948.55 · no holdings · equity $8,948.55 vs prior close $8,948.55 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,948.55 | ▲ close $8,948.55 vs 09:30 $8,948.55 (session +0.00) | 16:00 close · cash $8,948.55 · no lots left · equity $8,948.55. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · ret_5>15
 
-Cash book **-9.08%** ($9,092) · signal-only (no cash/fees) was -28.34%. Starts YES **0/24**. Fills 148 · skips 204 · realized $-907.94.
+Cash book **-9.09%** ($9,091) · signal-only (no cash/fees) was -31.76%. Starts YES **0/25**. Fills 148 · skips 204 · realized $-908.72.
 
 ## How this sleeve decides (like you are 10)
 
@@ -52,7 +52,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,092.10.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,091.32.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -353,14 +353,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `SWKS` | 6 | $79.26 | $80.54 | -7.68 | $90.00 | -56.76 | -64.44 | +22.38 | -34.38 |
 | 2026-09-15 | `ANGX` | 108 | $5.48 | $5.47 | +1.08 | $5.27 | +21.60 | +22.68 | -9.72 | +11.88 |
 | 2026-09-15 | `APPS` | 49 | $11.73 | $11.51 | +10.78 | $11.38 | +6.37 | +17.15 | +18.13 | +24.50 |
-| 2026-09-16 | `COHU` | 10 | $49.97 | $51.43 | -14.60 | — | +0.00 | -14.60 | +46.60 | — |
-| 2026-09-16 | `INDP` | 215 | $3.64 | $3.65 | -2.15 | — | +0.00 | -2.15 | -204.25 | — |
+| 2026-09-16 | `COHU` | 10 | $49.97 | $51.29 | -13.20 | — | +0.00 | -13.20 | +48.00 | — |
+| 2026-09-16 | `INDP` | 215 | $3.64 | $3.66 | -4.30 | — | +0.00 | -4.30 | -206.40 | — |
 | 2026-09-16 | `CMRC` | 186 | $3.58 | $3.48 | +18.60 | — | +0.00 | +18.60 | -65.10 | — |
 | 2026-09-16 | `WLTH` | 53 | $10.87 | $10.82 | +2.65 | — | +0.00 | +2.65 | +6.89 | — |
 | 2026-09-16 | `BNC` | 118 | $4.91 | $4.77 | +16.52 | — | +0.00 | +16.52 | +16.52 | — |
-| 2026-09-16 | `SWKS` | 6 | $90.00 | $89.38 | +3.75 | — | +0.00 | +3.75 | -30.63 | — |
+| 2026-09-16 | `SWKS` | 6 | $90.00 | $89.38 | +3.72 | — | +0.00 | +3.72 | -30.66 | — |
 | 2026-09-16 | `ANGX` | 108 | $5.27 | $5.30 | -3.24 | — | +0.00 | -3.24 | +8.64 | — |
 | 2026-09-16 | `APPS` | 49 | $11.38 | $11.30 | +3.92 | — | +0.00 | +3.92 | +28.42 | — |
+| 2026-09-17 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -389,7 +390,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | +0.50 | $10,396.29 | IRD×174 | $9,324.45 | -15.66 | -80.12 | COHU, INDP, CMRC, WLTH, BNC, SWKS, ANGX, APPS | IRD | $13,855.39 | $9,223.18 | COHU×10, INDP×215, CMRC×186, WLTH×53, BNC×118, SWKS×6, ANGX×108, APPS×49 |
 | 2026-09-14 | -11.00 | $13,855.39 | COHU×10, INDP×215, CMRC×186, WLTH×53, BNC×118, SWKS×6, ANGX×108, APPS×49 | $9,245.65 | +22.47 | -70.58 | — | — | $13,855.39 | $9,175.07 | COHU×10, INDP×215, CMRC×186, WLTH×53, BNC×118, SWKS×6, ANGX×108, APPS×49 |
 | 2026-09-15 | -3.84 | $13,855.39 | COHU×10, INDP×215, CMRC×186, WLTH×53, BNC×118, SWKS×6, ANGX×108, APPS×49 | $9,136.53 | -38.54 | -51.59 | — | — | $13,855.39 | $9,084.94 | COHU×10, INDP×215, CMRC×186, WLTH×53, BNC×118, SWKS×6, ANGX×108, APPS×49 |
-| 2026-09-16 | +5.30 | $13,855.39 | COHU×10, INDP×215, CMRC×186, WLTH×53, BNC×118, SWKS×6, ANGX×108, APPS×49 | $9,110.39 | +25.45 | +0.00 | — | COHU, INDP, CMRC, WLTH, BNC, SWKS, ANGX, APPS | $9,092.10 | $9,092.10 | — |
+| 2026-09-16 | +5.30 | $13,855.39 | COHU×10, INDP×215, CMRC×186, WLTH×53, BNC×118, SWKS×6, ANGX×108, APPS×49 | $9,109.61 | +24.67 | +0.00 | — | COHU, INDP, CMRC, WLTH, BNC, SWKS, ANGX, APPS | $9,091.32 | $9,091.32 | — |
+| 2026-09-17 | +7.38 | $9,091.32 | — | $9,091.32 | -0.00 | +0.00 | — | — | $9,091.32 | $9,091.32 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -581,16 +583,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,855.39 | ▼ close $9,175.07 vs 09:30 $9,245.65 (session -70.58) | 16:00 close · cash $13,855.39 · equity $9,175.07 vs 09:30 $9,245.65 (-70.58; session marks -70.58) · 8 name(s) marked open→close (per-name table). COHU×10 09:30 $52.23 → close $49.97 +22.60; INDP×215 09:30 $2.80 → close $3.14 -73.10; CMRC×186 09:30 $3.51 → close $3.64 -24.18; WLTH×53 09:30 $10.29 → close $10.65 -19.08; BNC×118 09:30 $5.03 → close $5.27 -28.32; SWKS×6 09:30 $86.06 → close $79.26 +40.80; ANGX×108 09:30 $5.57 → close $5.48 +9.72; APPS×49 09:30 $11.75 → close $11.73 +0.98 | — |
 | 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,855.39 | ▼ 09:30 equity $9,136.53 vs yday $9,175.07 (-38.54) | 09:30 open · cash $13,855.39 (unchanged overnight, no fees) · equity $9,136.53 vs prior close $9,175.07 (-38.54) · 8 name(s) re-marked at the open (per-name table). COHU×10 yday $49.97 → 09:30 $51.07 -11.00; INDP×215 yday $3.14 → 09:30 $3.40 -55.90; CMRC×186 yday $3.64 → 09:30 $3.64 -0.00; WLTH×53 yday $10.65 → 09:30 $10.55 +5.30; BNC×118 yday $5.27 → 09:30 $5.11 +18.88; SWKS×6 yday $79.26 → 09:30 $80.54 -7.68; ANGX×108 yday $5.48 → 09:30 $5.47 +1.08; APPS×49 yday $11.73 → 09:30 $11.51 +10.78 | — |
 | 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,855.39 | ▼ close $9,084.94 vs 09:30 $9,136.53 (session -51.59) | 16:00 close · cash $13,855.39 · equity $9,084.94 vs 09:30 $9,136.53 (-51.59; session marks -51.59) · 8 name(s) marked open→close (per-name table). COHU×10 09:30 $51.07 → close $49.97 +11.00; INDP×215 09:30 $3.40 → close $3.64 -51.60; CMRC×186 09:30 $3.64 → close $3.58 +11.16; WLTH×53 09:30 $10.55 → close $10.87 -16.96; BNC×118 09:30 $5.11 → close $4.91 +23.60; SWKS×6 09:30 $80.54 → close $90.00 -56.76; ANGX×108 09:30 $5.47 → close $5.27 +21.60; APPS×49 09:30 $11.51 → close $11.38 +6.37 | — |
-| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,855.39 | ▲ 09:30 equity $9,110.39 vs yday $9,084.94 (+25.45) | 09:30 open · cash $13,855.39 (unchanged overnight, no fees) · equity $9,110.39 vs prior close $9,084.94 (+25.45) · 8 name(s) re-marked at the open (per-name table). COHU×10 yday $49.97 → 09:30 $51.43 -14.60; INDP×215 yday $3.64 → 09:30 $3.65 -2.15; CMRC×186 yday $3.58 → 09:30 $3.48 +18.60; WLTH×53 yday $10.87 → 09:30 $10.82 +2.65; BNC×118 yday $4.91 → 09:30 $4.77 +16.52; SWKS×6 yday $90.00 → 09:30 $89.38 +3.75; ANGX×108 yday $5.27 → 09:30 $5.30 -3.24; APPS×49 yday $11.38 → 09:30 $11.30 +3.92 | — |
-| 2026-09-16 09:30 ET | **COVER** | `COHU` | 10 | $51.43 | $2.02 | $+42.52 | $13,339.07 | ▲ +42.52 after sell → book $9,108.37; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **COVER** | `INDP` | 215 | $3.65 | $2.77 | $-209.86 | $12,551.55 | ▼ -209.86 after sell → book $9,105.60; vs 09:30 mark -2.77 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **COVER** | `CMRC` | 186 | $3.48 | $2.55 | $-70.25 | $11,901.72 | ▼ -70.25 after sell → book $9,103.05; vs 09:30 mark -2.55 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **COVER** | `WLTH` | 53 | $10.82 | $2.15 | $+2.56 | $11,326.11 | ▲ +2.56 after sell → book $9,100.90; vs 09:30 mark -2.15 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **COVER** | `BNC` | 118 | $4.77 | $2.34 | $+11.79 | $10,760.91 | ▲ +11.79 after sell → book $9,098.56; vs 09:30 mark -2.34 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **COVER** | `SWKS` | 6 | $89.38 | $2.01 | $-34.68 | $10,222.65 | ▼ -34.68 after sell → book $9,096.55; vs 09:30 mark -2.01 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **COVER** | `ANGX` | 108 | $5.30 | $2.31 | $+3.97 | $9,647.93 | ▲ +3.97 after sell → book $9,094.23; vs 09:30 mark -2.32 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **COVER** | `APPS` | 49 | $11.30 | $2.14 | $+24.11 | $9,092.10 | ▲ +24.11 after sell → book $9,092.10; vs 09:30 mark -2.13 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,092.10 | ▲ close $9,092.10 vs 09:30 $9,110.39 (session +0.00) | 16:00 close · cash $9,092.10 · no lots left · equity $9,092.10. | — |
+| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,855.39 | ▲ 09:30 equity $9,109.61 vs yday $9,084.94 (+24.67) | 09:30 open · cash $13,855.39 (unchanged overnight, no fees) · equity $9,109.61 vs prior close $9,084.94 (+24.67) · 8 name(s) re-marked at the open (per-name table). COHU×10 yday $49.97 → 09:30 $51.29 -13.20; INDP×215 yday $3.64 → 09:30 $3.66 -4.30; CMRC×186 yday $3.58 → 09:30 $3.48 +18.60; WLTH×53 yday $10.87 → 09:30 $10.82 +2.65; BNC×118 yday $4.91 → 09:30 $4.77 +16.52; SWKS×6 yday $90.00 → 09:30 $89.38 +3.72; ANGX×108 yday $5.27 → 09:30 $5.30 -3.24; APPS×49 yday $11.38 → 09:30 $11.30 +3.92 | — |
+| 2026-09-16 09:30 ET | **COVER** | `COHU` | 10 | $51.29 | $2.02 | $+43.92 | $13,340.47 | ▲ +43.92 after sell → book $9,107.59; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **COVER** | `INDP` | 215 | $3.66 | $2.77 | $-212.01 | $12,550.80 | ▼ -212.01 after sell → book $9,104.82; vs 09:30 mark -2.77 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **COVER** | `CMRC` | 186 | $3.48 | $2.55 | $-70.25 | $11,900.97 | ▼ -70.25 after sell → book $9,102.27; vs 09:30 mark -2.55 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **COVER** | `WLTH` | 53 | $10.82 | $2.15 | $+2.56 | $11,325.36 | ▲ +2.56 after sell → book $9,100.12; vs 09:30 mark -2.15 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **COVER** | `BNC` | 118 | $4.77 | $2.34 | $+11.79 | $10,760.16 | ▲ +11.79 after sell → book $9,097.78; vs 09:30 mark -2.34 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **COVER** | `SWKS` | 6 | $89.38 | $2.01 | $-34.71 | $10,221.87 | ▼ -34.71 after sell → book $9,095.77; vs 09:30 mark -2.01 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **COVER** | `ANGX` | 108 | $5.30 | $2.31 | $+3.97 | $9,647.15 | ▲ +3.97 after sell → book $9,093.45; vs 09:30 mark -2.32 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **COVER** | `APPS` | 49 | $11.30 | $2.14 | $+24.11 | $9,091.32 | ▲ +24.11 after sell → book $9,091.32; vs 09:30 mark -2.13 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,091.32 | ▲ close $9,091.32 vs 09:30 $9,109.61 (session +0.00) | 16:00 close · cash $9,091.32 · no lots left · equity $9,091.32. | — |
+| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,091.32 | ▲ 09:30 equity $9,091.32 vs yday $9,091.32 (-0.00) | 09:30 open · cash $9,091.32 · no holdings · equity $9,091.32 vs prior close $9,091.32 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,091.32 | ▲ close $9,091.32 vs 09:30 $9,091.32 (session +0.00) | 16:00 close · cash $9,091.32 · no lots left · equity $9,091.32. | — |
 
 ## Not taken
 

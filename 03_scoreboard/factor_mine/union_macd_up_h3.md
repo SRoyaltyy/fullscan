@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_up, no 🚨
 
-Cash book **-7.65%** ($9,235) · signal-only (no cash/fees) was +0.10%. Starts YES **0/24**. Fills 122 · skips 221 · realized $-765.35.
+Cash book **-7.73%** ($9,227) · signal-only (no cash/fees) was +6.04%. Starts YES **0/25**. Fills 122 · skips 221 · realized $-773.15.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,234.61.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,226.81.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -301,14 +301,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `BAK` | 584 | $2.01 | $2.02 | +5.84 | $2.10 | +46.72 | +52.56 | -58.40 | -11.68 |
 | 2026-09-15 | `FUBO` | 107 | $11.87 | $11.70 | -18.19 | $10.91 | -84.53 | -102.72 | +16.05 | -68.48 |
 | 2026-09-15 | `RDDT` | 7 | $162.38 | $157.90 | -31.36 | $159.63 | +12.11 | -19.25 | +2.45 | +14.56 |
-| 2026-09-16 | `SANM` | 5 | $191.61 | $195.79 | +20.90 | — | +0.00 | +20.90 | -55.25 | — |
+| 2026-09-16 | `SANM` | 5 | $191.61 | $194.84 | +16.15 | — | +0.00 | +16.15 | -60.00 | — |
 | 2026-09-16 | `ORCL` | 7 | $140.35 | $140.03 | -2.24 | — | +0.00 | -2.24 | -170.80 | — |
 | 2026-09-16 | `NVT` | 7 | $146.80 | $147.79 | +6.93 | — | +0.00 | +6.93 | -69.93 | — |
-| 2026-09-16 | `COHU` | 22 | $49.97 | $51.43 | +32.12 | — | +0.00 | +32.12 | -102.52 | — |
-| 2026-09-16 | `CLOV` | 260 | $4.66 | $4.73 | +18.17 | — | +0.00 | +18.17 | -5.23 | — |
+| 2026-09-16 | `COHU` | 22 | $49.97 | $51.29 | +29.04 | — | +0.00 | +29.04 | -105.60 | — |
+| 2026-09-16 | `CLOV` | 260 | $4.66 | $4.73 | +18.20 | — | +0.00 | +18.20 | -5.20 | — |
 | 2026-09-16 | `BAK` | 584 | $2.10 | $1.84 | -151.84 | — | +0.00 | -151.84 | -163.52 | — |
 | 2026-09-16 | `FUBO` | 107 | $10.91 | $10.75 | -17.12 | — | +0.00 | -17.12 | -85.60 | — |
 | 2026-09-16 | `RDDT` | 7 | $159.63 | $160.62 | +6.93 | — | +0.00 | +6.93 | +21.49 | — |
+| 2026-09-17 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -337,7 +338,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | +0.50 | $9,912.84 | — | $9,912.84 | -0.00 | -5.03 | SANM, ORCL, NVT, COHU, CLOV, BAK, FUBO, RDDT | — | $554.12 | $9,884.52 | SANM×5, ORCL×7, NVT×7, COHU×22, CLOV×260, BAK×584, FUBO×107, RDDT×7 |
 | 2026-09-14 | -11.00 | $554.12 | SANM×5, ORCL×7, NVT×7, COHU×22, CLOV×260, BAK×584, FUBO×107, RDDT×7 | $9,582.94 | -301.58 | -2.68 | — | — | $554.12 | $9,580.26 | SANM×5, ORCL×7, NVT×7, COHU×22, CLOV×260, BAK×584, FUBO×107, RDDT×7 |
 | 2026-09-15 | -3.84 | $554.12 | SANM×5, ORCL×7, NVT×7, COHU×22, CLOV×260, BAK×584, FUBO×107, RDDT×7 | $9,583.80 | +3.54 | -239.46 | — | — | $554.12 | $9,344.34 | SANM×5, ORCL×7, NVT×7, COHU×22, CLOV×260, BAK×584, FUBO×107, RDDT×7 |
-| 2026-09-16 | +5.30 | $554.12 | SANM×5, ORCL×7, NVT×7, COHU×22, CLOV×260, BAK×584, FUBO×107, RDDT×7 | $9,258.19 | -86.15 | +0.00 | — | SANM, ORCL, NVT, COHU, CLOV, BAK, FUBO, RDDT | $9,234.61 | $9,234.61 | — |
+| 2026-09-16 | +5.30 | $554.12 | SANM×5, ORCL×7, NVT×7, COHU×22, CLOV×260, BAK×584, FUBO×107, RDDT×7 | $9,250.39 | -93.95 | +0.00 | — | SANM, ORCL, NVT, COHU, CLOV, BAK, FUBO, RDDT | $9,226.81 | $9,226.81 | — |
+| 2026-09-17 | +7.38 | $9,226.81 | — | $9,226.81 | -0.00 | +0.00 | — | — | $9,226.81 | $9,226.81 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -503,16 +505,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $554.12 | ▼ close $9,580.26 vs 09:30 $9,582.94 (session -2.68) | 16:00 close · cash $554.12 · equity $9,580.26 vs 09:30 $9,582.94 (-2.68; session marks -2.68) · 8 name(s) marked open→close (per-name table). SANM×5 09:30 $206.50 → close $196.04 -52.30; ORCL×7 09:30 $141.42 → close $144.79 +23.59; NVT×7 09:30 $150.00 → close $146.64 -23.52; COHU×22 09:30 $52.23 → close $49.97 -49.72; CLOV×260 09:30 $4.82 → close $5.10 +72.80; BAK×584 09:30 $2.05 → close $2.01 -23.36; FUBO×107 09:30 $11.56 → close $11.87 +33.17; RDDT×7 09:30 $160.00 → close $162.38 +16.66 | — |
 | 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $554.12 | ▲ 09:30 equity $9,583.80 vs yday $9,580.26 (+3.54) | 09:30 open · cash $554.12 (unchanged overnight, no fees) · equity $9,583.80 vs prior close $9,580.26 (+3.54) · 8 name(s) re-marked at the open (per-name table). SANM×5 yday $196.04 → 09:30 $198.32 +11.40; ORCL×7 yday $144.79 → 09:30 $143.46 -9.31; NVT×7 yday $146.64 → 09:30 $151.12 +31.36; COHU×22 yday $49.97 → 09:30 $51.07 +24.20; CLOV×260 yday $5.10 → 09:30 $5.06 -10.40; BAK×584 yday $2.01 → 09:30 $2.02 +5.84; FUBO×107 yday $11.87 → 09:30 $11.70 -18.19; RDDT×7 yday $162.38 → 09:30 $157.90 -31.36 | — |
 | 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $554.12 | ▼ close $9,344.34 vs 09:30 $9,583.80 (session -239.46) | 16:00 close · cash $554.12 · equity $9,344.34 vs 09:30 $9,583.80 (-239.46; session marks -239.46) · 8 name(s) marked open→close (per-name table). SANM×5 09:30 $198.32 → close $191.61 -33.55; ORCL×7 09:30 $143.46 → close $140.35 -21.77; NVT×7 09:30 $151.12 → close $146.80 -30.24; COHU×22 09:30 $51.07 → close $49.97 -24.20; CLOV×260 09:30 $5.06 → close $4.66 -104.00; BAK×584 09:30 $2.02 → close $2.10 +46.72; FUBO×107 09:30 $11.70 → close $10.91 -84.53; RDDT×7 09:30 $157.90 → close $159.63 +12.11 | — |
-| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $554.12 | ▼ 09:30 equity $9,258.19 vs yday $9,344.34 (-86.15) | 09:30 open · cash $554.12 (unchanged overnight, no fees) · equity $9,258.19 vs prior close $9,344.34 (-86.15) · 8 name(s) re-marked at the open (per-name table). SANM×5 yday $191.61 → 09:30 $195.79 +20.90; ORCL×7 yday $140.35 → 09:30 $140.03 -2.24; NVT×7 yday $146.80 → 09:30 $147.79 +6.93; COHU×22 yday $49.97 → 09:30 $51.43 +32.12; CLOV×260 yday $4.66 → 09:30 $4.73 +18.17; BAK×584 yday $2.10 → 09:30 $1.84 -151.84; FUBO×107 yday $10.91 → 09:30 $10.75 -17.12; RDDT×7 yday $159.63 → 09:30 $160.62 +6.93 | — |
-| 2026-09-16 09:30 ET | **SELL** | `SANM` | 5 | $195.79 | $2.02 | $-59.28 | $1,531.04 | ▼ -59.28 after sell → book $9,256.17; vs 09:30 mark -2.02 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `ORCL` | 7 | $140.03 | $2.03 | $-174.84 | $2,509.22 | ▼ -174.84 after sell → book $9,254.13; vs 09:30 mark -2.04 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `NVT` | 7 | $147.79 | $2.03 | $-73.97 | $3,541.72 | ▼ -73.97 after sell → book $9,252.10; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `COHU` | 22 | $51.43 | $2.08 | $-106.65 | $4,671.10 | ▼ -106.65 after sell → book $9,250.03; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `CLOV` | 260 | $4.73 | $3.41 | $-11.99 | $5,897.47 | ▼ -11.99 after sell → book $9,246.62; vs 09:30 mark -3.41 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `BAK` | 584 | $1.84 | $7.64 | $-178.69 | $6,964.39 | ▼ -178.69 after sell → book $9,238.98; vs 09:30 mark -7.64 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `FUBO` | 107 | $10.75 | $2.34 | $-90.25 | $8,112.30 | ▼ -90.25 after sell → book $9,236.64; vs 09:30 mark -2.34 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `RDDT` | 7 | $160.62 | $2.03 | $+17.45 | $9,234.61 | ▲ +17.45 after sell → book $9,234.61; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,234.61 | ▲ close $9,234.61 vs 09:30 $9,258.19 (session +0.00) | 16:00 close · cash $9,234.61 · no lots left · equity $9,234.61. | — |
+| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $554.12 | ▼ 09:30 equity $9,250.39 vs yday $9,344.34 (-93.95) | 09:30 open · cash $554.12 (unchanged overnight, no fees) · equity $9,250.39 vs prior close $9,344.34 (-93.95) · 8 name(s) re-marked at the open (per-name table). SANM×5 yday $191.61 → 09:30 $194.84 +16.15; ORCL×7 yday $140.35 → 09:30 $140.03 -2.24; NVT×7 yday $146.80 → 09:30 $147.79 +6.93; COHU×22 yday $49.97 → 09:30 $51.29 +29.04; CLOV×260 yday $4.66 → 09:30 $4.73 +18.20; BAK×584 yday $2.10 → 09:30 $1.84 -151.84; FUBO×107 yday $10.91 → 09:30 $10.75 -17.12; RDDT×7 yday $159.63 → 09:30 $160.62 +6.93 | — |
+| 2026-09-16 09:30 ET | **SELL** | `SANM` | 5 | $194.84 | $2.02 | $-64.03 | $1,526.29 | ▼ -64.03 after sell → book $9,248.36; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `ORCL` | 7 | $140.03 | $2.03 | $-174.84 | $2,504.47 | ▼ -174.84 after sell → book $9,246.33; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `NVT` | 7 | $147.79 | $2.03 | $-73.97 | $3,536.97 | ▼ -73.97 after sell → book $9,244.30; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `COHU` | 22 | $51.29 | $2.08 | $-109.73 | $4,663.27 | ▼ -109.73 after sell → book $9,242.22; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `CLOV` | 260 | $4.73 | $3.41 | $-11.96 | $5,889.67 | ▼ -11.96 after sell → book $9,238.82; vs 09:30 mark -3.40 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `BAK` | 584 | $1.84 | $7.64 | $-178.69 | $6,956.59 | ▼ -178.69 after sell → book $9,231.18; vs 09:30 mark -7.64 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `FUBO` | 107 | $10.75 | $2.34 | $-90.25 | $8,104.50 | ▼ -90.25 after sell → book $9,228.84; vs 09:30 mark -2.34 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `RDDT` | 7 | $160.62 | $2.03 | $+17.45 | $9,226.81 | ▲ +17.45 after sell → book $9,226.81; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,226.81 | ▲ close $9,226.81 vs 09:30 $9,250.39 (session +0.00) | 16:00 close · cash $9,226.81 · no lots left · equity $9,226.81. | — |
+| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,226.81 | ▲ 09:30 equity $9,226.81 vs yday $9,226.81 (-0.00) | 09:30 open · cash $9,226.81 · no holdings · equity $9,226.81 vs prior close $9,226.81 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,226.81 | ▲ close $9,226.81 vs 09:30 $9,226.81 (session +0.00) | 16:00 close · cash $9,226.81 · no lots left · equity $9,226.81. | — |
 
 ## Not taken
 

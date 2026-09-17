@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ vol_g, no 🚨
 
-Cash book **-4.62%** ($9,537) · signal-only (no cash/fees) was +23.89%. Starts YES **10/24**. Fills 123 · skips 200 · realized $-292.61.
+Cash book **-2.08%** ($9,792) · signal-only (no cash/fees) was +26.30%. Starts YES **19/25**. Fills 123 · skips 202 · realized $-288.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $64.99.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $69.28.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -306,12 +306,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | `ORCL` | 7 | $140.35 | $140.03 | -2.24 | — | +0.00 | -2.24 | -170.80 | — |
 | 2026-09-16 | `TYRA` | 49 | $25.43 | $25.58 | +7.35 | — | +0.00 | +7.35 | +95.55 | — |
 | 2026-09-16 | `VIST` | 15 | $78.36 | $76.75 | -24.15 | — | +0.00 | -24.15 | -8.70 | — |
-| 2026-09-16 | `INDP` | 429 | $3.64 | $3.65 | +4.29 | — | +0.00 | +4.29 | +407.55 | — |
+| 2026-09-16 | `INDP` | 429 | $3.64 | $3.66 | +8.58 | — | +0.00 | +8.58 | +411.84 | — |
 | 2026-09-16 | `CMRC` | 370 | $3.58 | $3.48 | -37.00 | — | +0.00 | -37.00 | +129.50 | — |
 | 2026-09-16 | `WLTH` | 105 | $10.87 | $10.82 | -5.25 | — | +0.00 | -5.25 | -13.65 | — |
 | 2026-09-16 | `DBI` | 196 | $6.25 | $6.25 | +0.00 | — | +0.00 | +0.00 | +66.64 | — |
 | 2026-09-16 | `BNC` | 236 | $4.91 | $4.77 | -33.04 | — | +0.00 | -33.04 | -33.04 | — |
 | 2026-09-16 | `RDNT` | 125 | — | $77.12 | +0.00 | $75.78 | -167.50 | -167.50 | +0.00 | -167.50 |
+| 2026-09-17 | `RDNT` | 125 | $75.78 | $76.44 | +82.50 | $77.78 | +167.50 | +250.00 | -85.00 | +82.50 |
 
 ## Each session (cash + holdings state)
 
@@ -340,7 +341,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | +0.50 | $9,283.48 | — | $9,283.48 | -0.00 | -116.26 | ORCL, TYRA, VIST, INDP, CMRC, WLTH, DBI, BNC | — | $6.96 | $9,142.80 | ORCL×7, TYRA×49, VIST×15, INDP×429, CMRC×370, WLTH×105, DBI×196, BNC×236 |
 | 2026-09-14 | -11.00 | $6.96 | ORCL×7, TYRA×49, VIST×15, INDP×429, CMRC×370, WLTH×105, DBI×196, BNC×236 | $9,206.19 | +63.39 | +524.59 | — | — | $6.96 | $9,730.78 | ORCL×7, TYRA×49, VIST×15, INDP×429, CMRC×370, WLTH×105, DBI×196, BNC×236 |
 | 2026-09-15 | -3.84 | $6.96 | ORCL×7, TYRA×49, VIST×15, INDP×429, CMRC×370, WLTH×105, DBI×196, BNC×236 | $9,766.18 | +35.40 | +55.97 | — | — | $6.96 | $9,822.15 | ORCL×7, TYRA×49, VIST×15, INDP×429, CMRC×370, WLTH×105, DBI×196, BNC×236 |
-| 2026-09-16 | +5.30 | $6.96 | ORCL×7, TYRA×49, VIST×15, INDP×429, CMRC×370, WLTH×105, DBI×196, BNC×236 | $9,732.11 | -90.04 | -167.50 | RDNT | ORCL, TYRA, VIST, INDP, CMRC, WLTH, DBI, BNC | $64.99 | $9,537.49 | RDNT×125 |
+| 2026-09-16 | +5.30 | $6.96 | ORCL×7, TYRA×49, VIST×15, INDP×429, CMRC×370, WLTH×105, DBI×196, BNC×236 | $9,736.40 | -85.75 | -167.50 | RDNT | ORCL, TYRA, VIST, INDP, CMRC, WLTH, DBI, BNC | $69.28 | $9,541.78 | RDNT×125 |
+| 2026-09-17 | +7.38 | $69.28 | RDNT×125 | $9,624.28 | +82.50 | +167.50 | — | — | $69.28 | $9,791.78 | RDNT×125 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -506,17 +508,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.96 | ▲ close $9,730.78 vs 09:30 $9,206.19 (session +524.59) | 16:00 close · cash $6.96 · equity $9,730.78 vs 09:30 $9,206.19 (+524.59; session marks +524.59) · 8 name(s) marked open→close (per-name table). ORCL×7 09:30 $141.42 → close $144.79 +23.59; TYRA×49 09:30 $23.20 → close $25.07 +91.63; VIST×15 09:30 $77.10 → close $76.41 -10.35; INDP×429 09:30 $2.80 → close $3.14 +145.86; CMRC×370 09:30 $3.51 → close $3.64 +48.10; WLTH×105 09:30 $10.29 → close $10.65 +37.80; DBI×196 09:30 $5.86 → close $6.53 +131.32; BNC×236 09:30 $5.03 → close $5.27 +56.64 | — |
 | 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.96 | ▲ 09:30 equity $9,766.18 vs yday $9,730.78 (+35.40) | 09:30 open · cash $6.96 (unchanged overnight, no fees) · equity $9,766.18 vs prior close $9,730.78 (+35.40) · 8 name(s) re-marked at the open (per-name table). ORCL×7 yday $144.79 → 09:30 $143.46 -9.31; TYRA×49 yday $25.07 → 09:30 $24.71 -17.64; VIST×15 yday $76.41 → 09:30 $76.74 +4.95; INDP×429 yday $3.14 → 09:30 $3.40 +111.54; CMRC×370 yday $3.64 → 09:30 $3.64 +0.00; WLTH×105 yday $10.65 → 09:30 $10.55 -10.50; DBI×196 yday $6.53 → 09:30 $6.50 -5.88; BNC×236 yday $5.27 → 09:30 $5.11 -37.76 | — |
 | 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.96 | ▲ close $9,822.15 vs 09:30 $9,766.18 (session +55.97) | 16:00 close · cash $6.96 · equity $9,822.15 vs 09:30 $9,766.18 (+55.97; session marks +55.97) · 8 name(s) marked open→close (per-name table). ORCL×7 09:30 $143.46 → close $140.35 -21.77; TYRA×49 09:30 $24.71 → close $25.43 +35.28; VIST×15 09:30 $76.74 → close $78.36 +24.30; INDP×429 09:30 $3.40 → close $3.64 +102.96; CMRC×370 09:30 $3.64 → close $3.58 -22.20; WLTH×105 09:30 $10.55 → close $10.87 +33.60; DBI×196 09:30 $6.50 → close $6.25 -49.00; BNC×236 09:30 $5.11 → close $4.91 -47.20 | — |
-| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.96 | ▼ 09:30 equity $9,732.11 vs yday $9,822.15 (-90.04) | 09:30 open · cash $6.96 (unchanged overnight, no fees) · equity $9,732.11 vs prior close $9,822.15 (-90.04) · 8 name(s) re-marked at the open (per-name table). ORCL×7 yday $140.35 → 09:30 $140.03 -2.24; TYRA×49 yday $25.43 → 09:30 $25.58 +7.35; VIST×15 yday $78.36 → 09:30 $76.75 -24.15; INDP×429 yday $3.64 → 09:30 $3.65 +4.29; CMRC×370 yday $3.58 → 09:30 $3.48 -37.00; WLTH×105 yday $10.87 → 09:30 $10.82 -5.25; DBI×196 yday $6.25 → 09:30 $6.25 +0.00; BNC×236 yday $4.91 → 09:30 $4.77 -33.04 | — |
-| 2026-09-16 09:30 ET | **SELL** | `ORCL` | 7 | $140.03 | $2.03 | $-174.84 | $985.14 | ▼ -174.84 after sell → book $9,730.08; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `TYRA` | 49 | $25.58 | $2.16 | $+91.26 | $2,236.40 | ▲ +91.26 after sell → book $9,727.92; vs 09:30 mark -2.16 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `VIST` | 15 | $76.75 | $2.06 | $-12.79 | $3,385.60 | ▼ -12.79 after sell → book $9,725.87; vs 09:30 mark -2.05 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `INDP` | 429 | $3.65 | $5.62 | $+396.40 | $4,945.83 | ▲ +396.40 after sell → book $9,720.25; vs 09:30 mark -5.62 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `CMRC` | 370 | $3.48 | $4.84 | $+119.88 | $6,228.58 | ▲ +119.88 after sell → book $9,715.40; vs 09:30 mark -4.85 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `WLTH` | 105 | $10.82 | $2.33 | $-18.29 | $7,362.35 | ▼ -18.29 after sell → book $9,713.07; vs 09:30 mark -2.33 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `DBI` | 196 | $6.25 | $2.62 | $+61.44 | $8,584.73 | ▲ +61.44 after sell → book $9,710.45; vs 09:30 mark -2.62 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `BNC` | 236 | $4.77 | $3.09 | $-39.18 | $9,707.36 | ▼ -39.18 after sell → book $9,707.36; vs 09:30 mark -3.09 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **BUY** | `RDNT` | 125 | $77.12 | $2.37 | — | $64.99 | — | union ∩ vol_g, no 🚨; gate vol=good; list flatten; ⚪; ret5=-5.1; leftover $9707.36 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $64.99 | ▼ close $9,537.49 vs 09:30 $9,732.11 (session -167.50) | 16:00 close · cash $64.99 · equity $9,537.49 vs 09:30 $9,732.11 (-194.62; session marks -167.50) · 1 name(s) marked open→close (per-name table). RDNT×125 09:30 $77.12 → close $75.78 -167.50 | — |
+| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.96 | ▼ 09:30 equity $9,736.40 vs yday $9,822.15 (-85.75) | 09:30 open · cash $6.96 (unchanged overnight, no fees) · equity $9,736.40 vs prior close $9,822.15 (-85.75) · 8 name(s) re-marked at the open (per-name table). ORCL×7 yday $140.35 → 09:30 $140.03 -2.24; TYRA×49 yday $25.43 → 09:30 $25.58 +7.35; VIST×15 yday $78.36 → 09:30 $76.75 -24.15; INDP×429 yday $3.64 → 09:30 $3.66 +8.58; CMRC×370 yday $3.58 → 09:30 $3.48 -37.00; WLTH×105 yday $10.87 → 09:30 $10.82 -5.25; DBI×196 yday $6.25 → 09:30 $6.25 +0.00; BNC×236 yday $4.91 → 09:30 $4.77 -33.04 | — |
+| 2026-09-16 09:30 ET | **SELL** | `ORCL` | 7 | $140.03 | $2.03 | $-174.84 | $985.14 | ▼ -174.84 after sell → book $9,734.37; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `TYRA` | 49 | $25.58 | $2.16 | $+91.26 | $2,236.40 | ▲ +91.26 after sell → book $9,732.21; vs 09:30 mark -2.16 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `VIST` | 15 | $76.75 | $2.06 | $-12.79 | $3,385.60 | ▼ -12.79 after sell → book $9,730.16; vs 09:30 mark -2.05 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `INDP` | 429 | $3.66 | $5.62 | $+400.69 | $4,950.12 | ▲ +400.69 after sell → book $9,724.54; vs 09:30 mark -5.62 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `CMRC` | 370 | $3.48 | $4.84 | $+119.88 | $6,232.87 | ▲ +119.88 after sell → book $9,719.69; vs 09:30 mark -4.85 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `WLTH` | 105 | $10.82 | $2.33 | $-18.29 | $7,366.64 | ▼ -18.29 after sell → book $9,717.36; vs 09:30 mark -2.33 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `DBI` | 196 | $6.25 | $2.62 | $+61.44 | $8,589.02 | ▲ +61.44 after sell → book $9,714.74; vs 09:30 mark -2.62 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `BNC` | 236 | $4.77 | $3.09 | $-39.18 | $9,711.65 | ▼ -39.18 after sell → book $9,711.65; vs 09:30 mark -3.09 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **BUY** | `RDNT` | 125 | $77.12 | $2.37 | — | $69.28 | — | union ∩ vol_g, no 🚨; gate vol=good; list flatten; ⚪; ret5=-5.1; leftover $9711.65 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $69.28 | ▼ close $9,541.78 vs 09:30 $9,736.40 (session -167.50) | 16:00 close · cash $69.28 · equity $9,541.78 vs 09:30 $9,736.40 (-194.62; session marks -167.50) · 1 name(s) marked open→close (per-name table). RDNT×125 09:30 $77.12 → close $75.78 -167.50 | — |
+| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $69.28 | ▲ 09:30 equity $9,624.28 vs yday $9,541.78 (+82.50) | 09:30 open · cash $69.28 (unchanged overnight, no fees) · equity $9,624.28 vs prior close $9,541.78 (+82.50) · 1 name(s) re-marked at the open (per-name table). RDNT×125 yday $75.78 → 09:30 $76.44 +82.50 | — |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $69.28 | ▲ close $9,791.78 vs 09:30 $9,624.28 (session +167.50) | 16:00 close · cash $69.28 · equity $9,791.78 vs 09:30 $9,624.28 (+167.50; session marks +167.50) · 1 name(s) marked open→close (per-name table). RDNT×125 09:30 $76.44 → close $77.78 +167.50 | — |
 
 ## Not taken
 
@@ -722,9 +726,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `SAIL` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `TRX` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `ZS` | hard_red | hard-red S=-3.84 sit; no new buys |
+| 2026-09-17 | `RDNT` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-17 | `RVTY` | cash | leftover split 69.28 < 1 share @ 147.61 |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `RDNT` | 125 | 2026-09-16 @ $77.12 | union ∩ vol_g, no 🚨; gate vol=good; list flatten; ⚪; ret5=-5.1; leftover $9707.36 |
+| `RDNT` | 125 | 2026-09-16 @ $77.12 | union ∩ vol_g, no 🚨; gate vol=good; list flatten; ⚪; ret5=-5.1; leftover $9711.65 |

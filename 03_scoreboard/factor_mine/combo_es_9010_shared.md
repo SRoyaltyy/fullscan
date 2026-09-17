@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/short_news_r_h3 w=0.9,0.1 net=priority
 
-Cash book **+27.63%** ($12,763) · signal-only (no cash/fees) was —. Starts YES **20/24**. Fills 188 · skips 258 · realized $+2763.38.
+Cash book **+27.65%** ($12,765) · signal-only (no cash/fees) was —. Starts YES **20/25**. Fills 188 · skips 258 · realized $+2765.17.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $12,763.41.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $12,765.20.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -429,7 +429,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `MYGN` | 117 | $3.79 | $3.80 | -1.17 | $3.88 | -9.36 | -10.53 | -50.31 | -59.67 |
 | 2026-09-16 | `ORCL` | 8 | $140.35 | $140.03 | -2.56 | — | +0.00 | -2.56 | -195.20 | — |
 | 2026-09-16 | `DBI` | 237 | $6.25 | $6.25 | +0.00 | — | +0.00 | +0.00 | +80.58 | — |
-| 2026-09-16 | `ADBE` | 5 | $257.76 | $253.76 | -20.01 | — | +0.00 | -20.01 | +57.94 | — |
+| 2026-09-16 | `ADBE` | 5 | $257.76 | $253.34 | -22.10 | — | +0.00 | -22.10 | +55.85 | — |
 | 2026-09-16 | `CPRT` | 43 | $31.04 | $30.57 | -20.21 | — | +0.00 | -20.21 | -61.92 | — |
 | 2026-09-16 | `DSGX` | 19 | $79.78 | $78.12 | -31.54 | — | +0.00 | -31.54 | +121.79 | — |
 | 2026-09-16 | `KR` | 25 | $62.25 | $61.93 | -8.00 | — | +0.00 | -8.00 | +147.75 | — |
@@ -437,8 +437,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | `REF` | 107 | $15.90 | $15.75 | -16.05 | — | +0.00 | -16.05 | +283.55 | — |
 | 2026-09-16 | `QRVO` | 3 | $118.06 | $118.18 | -0.36 | — | +0.00 | -0.36 | -16.04 | — |
 | 2026-09-16 | `RWT` | 112 | $3.91 | $3.98 | -7.84 | — | +0.00 | -7.84 | -51.52 | — |
-| 2026-09-16 | `CRDL` | 194 | $1.85 | $1.87 | -3.88 | — | +0.00 | -3.88 | +31.04 | — |
+| 2026-09-16 | `CRDL` | 194 | $1.85 | $1.85 | +0.00 | — | +0.00 | +0.00 | +34.92 | — |
 | 2026-09-16 | `MYGN` | 117 | $3.88 | $3.75 | +15.21 | — | +0.00 | +15.21 | -44.46 | — |
+| 2026-09-17 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -467,7 +468,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | +0.50 | $12,460.40 | — | $12,460.40 | -0.00 | +45.74 | ORCL, DBI, ADBE, CPRT, DSGX, KR, LPTH, REF, QRVO, RWT, CRDL, MYGN | — | $3,089.58 | $12,478.68 | ORCL×8, DBI×237, ADBE×5, CPRT×43, DSGX×19, KR×25, LPTH×149, REF×107, QRVO×3, RWT×112, CRDL×194, MYGN×117 |
 | 2026-09-14 | -11.00 | $3,089.58 | ORCL×8, DBI×237, ADBE×5, CPRT×43, DSGX×19, KR×25, LPTH×149, REF×107, QRVO×3, RWT×112, CRDL×194, MYGN×117 | $12,503.72 | +25.04 | +354.88 | — | — | $3,089.58 | $12,858.60 | ORCL×8, DBI×237, ADBE×5, CPRT×43, DSGX×19, KR×25, LPTH×149, REF×107, QRVO×3, RWT×112, CRDL×194, MYGN×117 |
 | 2026-09-15 | -3.84 | $3,089.58 | ORCL×8, DBI×237, ADBE×5, CPRT×43, DSGX×19, KR×25, LPTH×149, REF×107, QRVO×3, RWT×112, CRDL×194, MYGN×117 | $12,828.37 | -30.23 | +41.40 | — | — | $3,089.58 | $12,869.77 | ORCL×8, DBI×237, ADBE×5, CPRT×43, DSGX×19, KR×25, LPTH×149, REF×107, QRVO×3, RWT×112, CRDL×194, MYGN×117 |
-| 2026-09-16 | +5.30 | $3,089.58 | ORCL×8, DBI×237, ADBE×5, CPRT×43, DSGX×19, KR×25, LPTH×149, REF×107, QRVO×3, RWT×112, CRDL×194, MYGN×117 | $12,790.92 | -78.85 | +0.00 | — | ORCL, DBI, ADBE, CPRT, DSGX, KR, LPTH, REF, QRVO, RWT, CRDL, MYGN | $12,763.41 | $12,763.41 | — |
+| 2026-09-16 | +5.30 | $3,089.58 | ORCL×8, DBI×237, ADBE×5, CPRT×43, DSGX×19, KR×25, LPTH×149, REF×107, QRVO×3, RWT×112, CRDL×194, MYGN×117 | $12,792.71 | -77.06 | +0.00 | — | ORCL, DBI, ADBE, CPRT, DSGX, KR, LPTH, REF, QRVO, RWT, CRDL, MYGN | $12,765.20 | $12,765.20 | — |
+| 2026-09-17 | +7.38 | $12,765.20 | — | $12,765.20 | -0.00 | +0.00 | — | — | $12,765.20 | $12,765.20 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -695,20 +697,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,089.58 | ▲ close $12,858.60 vs 09:30 $12,503.72 (session +354.88) | 16:00 close · cash $3,089.58 · equity $12,858.60 vs 09:30 $12,503.72 (+354.88; session marks +354.88) · 12 name(s) marked open→close (per-name table). ORCL×8 09:30 $141.42 → close $144.79 +26.96; DBI×237 09:30 $5.86 → close $6.53 +158.79; ADBE×5 09:30 $261.51 → close $265.60 +20.45; CPRT×43 09:30 $30.63 → close $31.73 +47.30; DSGX×19 09:30 $77.68 → close $80.02 +44.46; KR×25 09:30 $59.31 → close $60.91 +40.00; LPTH×149 09:30 $8.85 → close $9.11 +38.74; REF×107 09:30 $14.16 → close $14.51 +37.45; QRVO×3 09:30 $114.11 → close $107.98 +18.39; RWT×112 09:30 $3.53 → close $3.83 -33.60; CRDL×194 09:30 $1.98 → close $1.99 -1.94; MYGN×117 09:30 $3.43 → close $3.79 -42.12 | — |
 | 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3,089.58 | ▼ 09:30 equity $12,828.37 vs yday $12,858.60 (-30.23) | 09:30 open · cash $3,089.58 (unchanged overnight, no fees) · equity $12,828.37 vs prior close $12,858.60 (-30.23) | — |
 | 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3,089.58 | ▲ close $12,869.77 vs 09:30 $12,828.37 (session +41.40) | 16:00 close · cash $3,089.58 · equity $12,869.77 vs 09:30 $12,828.37 (+41.40; session marks +41.40) · 12 name(s) marked open→close (per-name table). ORCL×8 09:30 $143.46 → close $140.35 -24.88; DBI×237 09:30 $6.50 → close $6.25 -59.25; ADBE×5 09:30 $261.70 → close $257.76 -19.70; CPRT×43 09:30 $31.55 → close $31.04 -21.93; DSGX×19 09:30 $78.87 → close $79.78 +17.29; KR×25 09:30 $60.77 → close $62.25 +37.00; LPTH×149 09:30 $9.14 → close $9.29 +22.35; REF×107 09:30 $14.78 → close $15.90 +119.84; QRVO×3 09:30 $108.40 → close $118.06 -28.98; RWT×112 09:30 $3.80 → close $3.91 -12.32; CRDL×194 09:30 $1.96 → close $1.85 +21.34; MYGN×117 09:30 $3.80 → close $3.88 -9.36 | — |
-| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3,089.58 | ▼ 09:30 equity $12,790.92 vs yday $12,869.77 (-78.85) | 09:30 open · cash $3,089.58 (unchanged overnight, no fees) · equity $12,790.92 vs prior close $12,869.77 (-78.85) | — |
-| 2026-09-16 09:30 ET | **SELL** | `ORCL` | 8 | $140.03 | $2.03 | $-199.25 | $4,207.79 | ▼ -199.25 after sell → book $12,788.89; vs 09:30 mark -2.03 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `DBI` | 237 | $6.25 | $3.11 | $+74.41 | $5,685.93 | ▲ +74.41 after sell → book $12,785.78; vs 09:30 mark -3.11 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `ADBE` | 5 | $253.76 | $2.03 | $+53.91 | $6,952.70 | ▲ +53.91 after sell → book $12,783.76; vs 09:30 mark -2.02 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `CPRT` | 43 | $30.57 | $2.14 | $-66.18 | $8,265.07 | ▼ -66.18 after sell → book $12,781.62; vs 09:30 mark -2.14 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `DSGX` | 19 | $78.12 | $2.07 | $+117.67 | $9,747.28 | ▲ +117.67 after sell → book $12,779.55; vs 09:30 mark -2.07 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `KR` | 25 | $61.93 | $2.09 | $+143.60 | $11,293.44 | ▲ +143.60 after sell → book $12,777.46; vs 09:30 mark -2.09 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `LPTH` | 149 | $9.40 | $2.47 | $-0.44 | $12,691.57 | ▼ -0.44 after sell → book $12,774.99; vs 09:30 mark -2.47 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `REF` | 107 | $15.75 | $2.34 | $+278.90 | $14,374.48 | ▲ +278.90 after sell → book $12,772.65; vs 09:30 mark -2.34 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **COVER** | `QRVO` | 3 | $118.18 | $2.00 | $-20.06 | $14,017.94 | ▼ -20.06 after sell → book $12,770.65; vs 09:30 mark -2.00 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **COVER** | `RWT` | 112 | $3.98 | $2.33 | $-56.21 | $13,569.85 | ▼ -56.21 after sell → book $12,768.32; vs 09:30 mark -2.33 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **COVER** | `CRDL` | 194 | $1.87 | $2.57 | $+25.84 | $13,204.50 | ▲ +25.84 after sell → book $12,765.75; vs 09:30 mark -2.57 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **COVER** | `MYGN` | 117 | $3.75 | $2.34 | $-49.18 | $12,763.41 | ▼ -49.18 after sell → book $12,763.41; vs 09:30 mark -2.34 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,763.41 | ▲ close $12,763.41 vs 09:30 $12,790.92 (session +0.00) | 16:00 close · cash $12,763.41 · no lots left · equity $12,763.41. | — |
+| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3,089.58 | ▼ 09:30 equity $12,792.71 vs yday $12,869.77 (-77.06) | 09:30 open · cash $3,089.58 (unchanged overnight, no fees) · equity $12,792.71 vs prior close $12,869.77 (-77.06) | — |
+| 2026-09-16 09:30 ET | **SELL** | `ORCL` | 8 | $140.03 | $2.03 | $-199.25 | $4,207.79 | ▼ -199.25 after sell → book $12,790.68; vs 09:30 mark -2.03 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `DBI` | 237 | $6.25 | $3.11 | $+74.41 | $5,685.93 | ▲ +74.41 after sell → book $12,787.57; vs 09:30 mark -3.11 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `ADBE` | 5 | $253.34 | $2.03 | $+51.82 | $6,950.61 | ▲ +51.82 after sell → book $12,785.55; vs 09:30 mark -2.02 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `CPRT` | 43 | $30.57 | $2.14 | $-66.18 | $8,262.98 | ▼ -66.18 after sell → book $12,783.41; vs 09:30 mark -2.14 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `DSGX` | 19 | $78.12 | $2.07 | $+117.67 | $9,745.19 | ▲ +117.67 after sell → book $12,781.34; vs 09:30 mark -2.07 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `KR` | 25 | $61.93 | $2.09 | $+143.60 | $11,291.35 | ▲ +143.60 after sell → book $12,779.25; vs 09:30 mark -2.09 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `LPTH` | 149 | $9.40 | $2.47 | $-0.44 | $12,689.48 | ▼ -0.44 after sell → book $12,776.78; vs 09:30 mark -2.47 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `REF` | 107 | $15.75 | $2.34 | $+278.90 | $14,372.39 | ▲ +278.90 after sell → book $12,774.44; vs 09:30 mark -2.34 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **COVER** | `QRVO` | 3 | $118.18 | $2.00 | $-20.06 | $14,015.85 | ▼ -20.06 after sell → book $12,772.44; vs 09:30 mark -2.00 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **COVER** | `RWT` | 112 | $3.98 | $2.33 | $-56.21 | $13,567.76 | ▼ -56.21 after sell → book $12,770.11; vs 09:30 mark -2.33 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **COVER** | `CRDL` | 194 | $1.85 | $2.57 | $+29.72 | $13,206.29 | ▲ +29.72 after sell → book $12,767.54; vs 09:30 mark -2.57 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **COVER** | `MYGN` | 117 | $3.75 | $2.34 | $-49.18 | $12,765.20 | ▼ -49.18 after sell → book $12,765.20; vs 09:30 mark -2.34 | short_news_r_h3: dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,765.20 | ▲ close $12,765.20 vs 09:30 $12,792.71 (session +0.00) | 16:00 close · cash $12,765.20 · no lots left · equity $12,765.20. | — |
+| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,765.20 | ▲ 09:30 equity $12,765.20 vs yday $12,765.20 (-0.00) | 09:30 open · cash $12,765.20 (unchanged overnight, no fees) · equity $12,765.20 vs prior close $12,765.20 (-0.00) | — |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,765.20 | ▲ close $12,765.20 vs 09:30 $12,765.20 (session +0.00) | 16:00 close · cash $12,765.20 · no lots left · equity $12,765.20. | — |
 
 ## Not taken
 
