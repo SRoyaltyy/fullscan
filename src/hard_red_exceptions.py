@@ -1229,6 +1229,11 @@ def write_json(doc: dict) -> Path:
         "cam_order": doc.get("cam_order") or list(CAM_ORDER),
         "cam_short": doc.get("cam_short") or dict(CAM_SHORT),
     }), encoding="utf-8")
+    try:
+        from . import day_movers as dm
+        dm.write_from_hre(doc, tick_dir=tick_dir)
+    except Exception as exc:
+        print(f"[hard-red] WARN: day-movers emit: {exc}", flush=True)
     return path
 
 
