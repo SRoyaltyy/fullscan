@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-17T18:41:32-04:00",
+ "generated": "2026-09-17T18:55:01-04:00",
  "replay_reference": {
   "general": {
    "n": 28,
@@ -773,16 +773,16 @@
    "verdict": "improving; not beating best baseline by -10% (last 10 sessions)"
   },
   "sectors": {
-   "n_runs": 220,
+   "n_runs": 224,
    "n_sessions": 21,
    "all": {
-    "n": 220,
-    "dir": 0.464,
-    "mag": 0.327,
-    "always_up": 0.405,
-    "always_down": 0.518,
-    "same_as_yesterday": 0.435,
-    "edge_vs_best_baseline": -0.054
+    "n": 224,
+    "dir": 0.455,
+    "mag": 0.326,
+    "always_up": 0.411,
+    "always_down": 0.513,
+    "same_as_yesterday": 0.437,
+    "edge_vs_best_baseline": -0.058
    },
    "legacy_era": {
     "n": 183,
@@ -796,13 +796,13 @@
    "since_v2": {
     "live": true,
     "since": "2026-09-14",
-    "n": 37,
-    "dir": 0.486,
-    "mag": 0.405,
-    "always_up": 0.297,
-    "always_down": 0.541,
-    "same_as_yesterday": 0.297,
-    "edge_vs_best_baseline": -0.055,
+    "n": 41,
+    "dir": 0.439,
+    "mag": 0.39,
+    "always_up": 0.341,
+    "always_down": 0.512,
+    "same_as_yesterday": 0.317,
+    "edge_vs_best_baseline": -0.073,
     "cumulative": [
      {
       "date": "2026-09-14",
@@ -1016,52 +1016,80 @@
      },
      {
       "date": "2026-09-17",
-      "topic": "sector:Consumer Defensive",
+      "topic": "sector:Basic Materials",
       "n": 31,
-      "cum_dir": 0.484,
+      "cum_dir": 0.452,
       "cum_mag": 0.355
      },
      {
       "date": "2026-09-17",
-      "topic": "sector:Energy",
+      "topic": "sector:Communication Services",
       "n": 32,
-      "cum_dir": 0.5,
+      "cum_dir": 0.438,
       "cum_mag": 0.375
      },
      {
       "date": "2026-09-17",
-      "topic": "sector:Financial",
+      "topic": "sector:Consumer Cyclical",
       "n": 33,
-      "cum_dir": 0.515,
-      "cum_mag": 0.394
+      "cum_dir": 0.424,
+      "cum_mag": 0.364
+     },
+     {
+      "date": "2026-09-17",
+      "topic": "sector:Consumer Defensive",
+      "n": 34,
+      "cum_dir": 0.441,
+      "cum_mag": 0.353
+     },
+     {
+      "date": "2026-09-17",
+      "topic": "sector:Energy",
+      "n": 35,
+      "cum_dir": 0.457,
+      "cum_mag": 0.371
+     },
+     {
+      "date": "2026-09-17",
+      "topic": "sector:Financial",
+      "n": 36,
+      "cum_dir": 0.472,
+      "cum_mag": 0.389
      },
      {
       "date": "2026-09-17",
       "topic": "sector:Healthcare",
-      "n": 34,
-      "cum_dir": 0.529,
-      "cum_mag": 0.412
+      "n": 37,
+      "cum_dir": 0.486,
+      "cum_mag": 0.405
      },
      {
       "date": "2026-09-17",
       "topic": "sector:Industrials",
-      "n": 35,
-      "cum_dir": 0.514,
-      "cum_mag": 0.429
+      "n": 38,
+      "cum_dir": 0.474,
+      "cum_mag": 0.421
      },
      {
       "date": "2026-09-17",
       "topic": "sector:Real Estate",
-      "n": 36,
-      "cum_dir": 0.5,
-      "cum_mag": 0.417
+      "n": 39,
+      "cum_dir": 0.462,
+      "cum_mag": 0.41
+     },
+     {
+      "date": "2026-09-17",
+      "topic": "sector:Technology",
+      "n": 40,
+      "cum_dir": 0.45,
+      "cum_mag": 0.4
      },
      {
       "date": "2026-09-17",
       "topic": "sector:Utilities",
-      "n": 37,
-      "cum_dir": 0.486,
-      "cum_mag": 0.405
+      "n": 41,
+      "cum_dir": 0.439,
+      "cum_mag": 0.39
      }
     ]
    },
@@ -1528,55 +1556,55 @@
     },
     {
      "date": "2026-09-17",
-     "n": 7,
+     "n": 11,
      "engine": "v2",
-     "session_dir": 0.571,
-     "session_mag": 0.571,
-     "dir_10": 0.446,
-     "mag_10": 0.366,
+     "session_dir": 0.364,
+     "session_mag": 0.455,
+     "dir_10": 0.429,
+     "mag_10": 0.362,
      "base_10": {
-      "always_up": 0.337,
-      "always_down": 0.574,
-      "same_as_yesterday": 0.436
+      "always_up": 0.352,
+      "always_down": 0.562,
+      "same_as_yesterday": 0.438
      },
-     "edge_10": -0.128,
-     "dir_20": 0.45,
-     "mag_20": 0.325,
+     "edge_10": -0.133,
+     "dir_20": 0.441,
+     "mag_20": 0.324,
      "base_20": {
-      "always_up": 0.402,
-      "always_down": 0.517,
-      "same_as_yesterday": 0.435
+      "always_up": 0.408,
+      "always_down": 0.512,
+      "same_as_yesterday": 0.437
      },
-     "edge_20": -0.067
+     "edge_20": -0.071
     }
    ],
    "by_sector": {
     "Basic Materials": {
-     "n": 20,
-     "dir": 0.5,
-     "mag": 0.45,
-     "always_up": 0.35,
-     "always_down": 0.6,
-     "same_as_yesterday": 0.421,
-     "edge_vs_best_baseline": -0.1
+     "n": 21,
+     "dir": 0.476,
+     "mag": 0.429,
+     "always_up": 0.381,
+     "always_down": 0.571,
+     "same_as_yesterday": 0.4,
+     "edge_vs_best_baseline": -0.095
     },
     "Communication Services": {
-     "n": 19,
-     "dir": 0.263,
-     "mag": 0.316,
-     "always_up": 0.421,
-     "always_down": 0.579,
-     "same_as_yesterday": 0.5,
-     "edge_vs_best_baseline": -0.316
+     "n": 20,
+     "dir": 0.25,
+     "mag": 0.35,
+     "always_up": 0.4,
+     "always_down": 0.6,
+     "same_as_yesterday": 0.526,
+     "edge_vs_best_baseline": -0.35
     },
     "Consumer Cyclical": {
-     "n": 20,
-     "dir": 0.6,
-     "mag": 0.2,
-     "always_up": 0.25,
-     "always_down": 0.7,
-     "same_as_yesterday": 0.526,
-     "edge_vs_best_baseline": -0.1
+     "n": 21,
+     "dir": 0.571,
+     "mag": 0.19,
+     "always_up": 0.286,
+     "always_down": 0.667,
+     "same_as_yesterday": 0.5,
+     "edge_vs_best_baseline": -0.096
     },
     "Consumer Defensive": {
      "n": 21,
@@ -1633,13 +1661,13 @@
      "edge_vs_best_baseline": -0.143
     },
     "Technology": {
-     "n": 18,
-     "dir": 0.444,
-     "mag": 0.444,
-     "always_up": 0.556,
-     "always_down": 0.389,
-     "same_as_yesterday": 0.294,
-     "edge_vs_best_baseline": -0.112
+     "n": 19,
+     "dir": 0.421,
+     "mag": 0.421,
+     "always_up": 0.579,
+     "always_down": 0.368,
+     "same_as_yesterday": 0.333,
+     "edge_vs_best_baseline": -0.158
     },
     "Utilities": {
      "n": 19,

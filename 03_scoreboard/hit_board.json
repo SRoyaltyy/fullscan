@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T18:41:31.730695-04:00",
+  "generated_at": "2026-09-17T18:55:00.821738-04:00",
   "dates": [
     "2026-07-31",
     "2026-08-02",
@@ -580,13 +580,13 @@
   },
   "sectors": {
     "overall": {
-      "n_graded": 220,
+      "n_graded": 224,
       "n_predicts": 278,
       "dir_hits": 102,
-      "dir_hit_pct": 46.36363636363637,
-      "mag_hits": 72,
-      "mag_n": 220,
-      "mag_hit_pct": 32.72727272727273,
+      "dir_hit_pct": 45.535714285714285,
+      "mag_hits": 73,
+      "mag_n": 224,
+      "mag_hit_pct": 32.589285714285715,
       "n_pipeline_blank": 10,
       "pipeline_blank_dates": [
         "2026-08-25"
@@ -1233,13 +1233,13 @@
       },
       {
         "date": "2026-09-17",
-        "n_graded": 7,
+        "n_graded": 11,
         "n_predicts": 11,
         "dir_hits": 4,
-        "dir_hit_pct": 57.142857142857146,
-        "mag_hits": 4,
-        "mag_n": 7,
-        "mag_hit_pct": 57.142857142857146,
+        "dir_hit_pct": 36.36363636363637,
+        "mag_hits": 5,
+        "mag_n": 11,
+        "mag_hit_pct": 45.45454545454545,
         "n_pipeline_blank": 0,
         "pipeline_blank_dates": [],
         "n_auto_miss_no_predict": 0,
@@ -1251,13 +1251,13 @@
       {
         "sector": "Basic Materials",
         "etf": "XLB",
-        "n_graded": 20,
+        "n_graded": 21,
         "n_predicts": 26,
         "dir_hits": 10,
-        "dir_hit_pct": 50.0,
+        "dir_hit_pct": 47.61904761904762,
         "mag_hits": 9,
-        "mag_n": 20,
-        "mag_hit_pct": 45.0,
+        "mag_n": 21,
+        "mag_hit_pct": 42.857142857142854,
         "n_pipeline_blank": 1,
         "pipeline_blank_dates": [
           "2026-08-25"
@@ -1268,13 +1268,13 @@
       {
         "sector": "Communication Services",
         "etf": "XLC",
-        "n_graded": 19,
+        "n_graded": 20,
         "n_predicts": 24,
         "dir_hits": 5,
-        "dir_hit_pct": 26.31578947368421,
-        "mag_hits": 6,
-        "mag_n": 19,
-        "mag_hit_pct": 31.57894736842105,
+        "dir_hit_pct": 25.0,
+        "mag_hits": 7,
+        "mag_n": 20,
+        "mag_hit_pct": 35.0,
         "n_pipeline_blank": 1,
         "pipeline_blank_dates": [
           "2026-08-25"
@@ -1287,13 +1287,13 @@
       {
         "sector": "Consumer Cyclical",
         "etf": "XLY",
-        "n_graded": 20,
+        "n_graded": 21,
         "n_predicts": 26,
         "dir_hits": 12,
-        "dir_hit_pct": 60.0,
+        "dir_hit_pct": 57.142857142857146,
         "mag_hits": 4,
-        "mag_n": 20,
-        "mag_hit_pct": 20.0,
+        "mag_n": 21,
+        "mag_hit_pct": 19.047619047619047,
         "n_pipeline_blank": 1,
         "pipeline_blank_dates": [
           "2026-08-25"
@@ -1414,13 +1414,13 @@
       {
         "sector": "Technology",
         "etf": "XLK",
-        "n_graded": 18,
+        "n_graded": 19,
         "n_predicts": 24,
         "dir_hits": 8,
-        "dir_hit_pct": 44.44444444444444,
+        "dir_hit_pct": 42.10526315789474,
         "mag_hits": 8,
-        "mag_n": 18,
-        "mag_hit_pct": 44.44444444444444,
+        "mag_n": 19,
+        "mag_hit_pct": 42.10526315789474,
         "n_pipeline_blank": 1,
         "pipeline_blank_dates": [
           "2026-08-25"
@@ -4310,20 +4310,20 @@
       "2026-09-17": {
         "Basic Materials": {
           "dir": "flat",
-          "hit": null,
-          "pct": null,
+          "hit": false,
+          "pct": 0.6949929902287488,
           "has_predict": true
         },
         "Communication Services": {
           "dir": "up",
-          "hit": null,
-          "pct": null,
+          "hit": false,
+          "pct": -0.575222589273372,
           "has_predict": true
         },
         "Consumer Cyclical": {
           "dir": "flat",
-          "hit": null,
-          "pct": null,
+          "hit": false,
+          "pct": 1.0982021066629155,
           "has_predict": true
         },
         "Consumer Defensive": {
@@ -4364,8 +4364,8 @@
         },
         "Technology": {
           "dir": "flat",
-          "hit": null,
-          "pct": null,
+          "hit": false,
+          "pct": 2.2454221971794253,
           "has_predict": true
         },
         "Utilities": {

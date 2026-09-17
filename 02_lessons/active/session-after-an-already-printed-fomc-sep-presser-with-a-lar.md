@@ -1,0 +1,29 @@
+---
+trigger_pattern: "Session AFTER an already-printed FOMC+SEP+presser, with a large overnight ES/NQ-vs-cash sleeve (ES ≥ +1.5% / NQ ≥ +2%) in tape_anchor, while the sector ETF's own live premarket print is flat (PM ≈ 0.00%, worst/tied-worst on the board) and the sector's own multi-horizon relative history is positive-but-leftover. The v2 engine converts the index sleeve into an official up/mild call even though every S0–S4 channel was explicitly scored 0 and the sector is not participating in the risk-on."
+corrected_behavior: "When the sector ETF's own live premarket print is flat (|PM| ≤ ~0.1%) and is the worst/tied-worst on the sector board while the index sleeve is strongly green, the index legs of tape_anchor must be **capped or zeroed for this sector** — an index rebound is not a participation certificate (08-27 / 09-10 / 09-16). With S0–S4 all explicitly 0 and PM:XLC = 0.00%, the correct official call is **flat/flat**, not up/mild. If the engine cannot suppress the index sleeve, the LLM overlay must emit an explicit negative offset (or a hard band cap) sized to cancel the index_carry contribution, and the divergence flag must be set True (leading sum 0 vs anchor 3.429 is a fight, not 'no fight'). The self-audit's claim 'Divergence: leading S0–S3 sum = 0 vs S4 = 0. No fight' was wrong — the fight was between the factor card (0) and the engine anchor (3.429), and it was mislabeled as absent."
+falsifier: "If a future post-printed-FOMC session shows XLC PM flat (≈0.00%) with ES/NQ ≥ +1.5% and XLC nonetheless closes up ≥ +0.5% (i.e. the index sleeve *did* transmit into the flat-PM sector), this lesson is falsified and the index sleeve should be restored as a valid anchor for XLC. Conversely, if XLC PM is flat but the sector's own 1d rel is strongly positive and *live* (not leftover), the flat-PM cap should not apply."
+current_behavior: "The card correctly zeroed S0–S4 (stale hawkish FOMC banned by 08-21; no fresh ad/AI HIT; non-participation breadth; flows zeroed; live PM flat), then let the deterministic pipeline's tape_anchor (NQ +2.10% / ES +1.71% / PM:XLC +0.00% → 3.429) plus index_carry (1.846) write official **up/mild** with total 5.275. The engine's own anchor leg for PM:XLC was 0.00% — i.e. the sector's only direct participation evidence contributed nothing, yet the two index legs carried the entire score. The narrative even flagged this exact failure mode ('09-16 engine overlay that turned zeros into up via NQ/ES must not recur') and then did not prevent it."
+evidence_cited: "Predicted up/mild; actual XLC −0.575% (dir MISS, mag HIT). Card's own SECTOR_SCORES all 0, MULTIPLIER 0.9, CONFIDENCE 0.50; engine anchor legs show PM:XLC +0.00% w=0.7 contributing zero while NQ/ES supplied the full 3.429; index_carry 1.846; total 5.275 → up/mild. Same failure signature as 09-15 (up/mild vs −0.90%), 09-16 (up/mild vs −0.90%), and the 09-17 sibling lessons (XLP, XLV, XLI, XLRE, XLU, XLB, XLF) — all post-printed-FOMC sessions where the index sleeve or a stale overlay wrote up while the sector did not participate. Rolling dir accuracy 0.2 (n=10) / 0.238 (n=21) is consistent with a systematic up-bias on non-participating sectors."
+error_category: "D"
+scope: "ops"
+date: "2026-09-17"
+status: "active"
+occurrences: "1"
+promoted_on: "2026-09-17"
+sources: "['2026-09-17_sector_communication_services_lesson.md']"
+schema_ok: "true"
+---
+
+## RULE
+When the sector ETF's own live premarket print is flat (|PM| ≤ ~0.1%) and is the worst/tied-worst on the sector board while the index sleeve is strongly green, the index legs of tape_anchor must be **capped or zeroed for this sector** — an index rebound is not a participation certificate (08-27 / 09-10 / 09-16). With S0–S4 all explicitly 0 and PM:XLC = 0.00%, the correct official call is **flat/flat**, not up/mild. If the engine cannot suppress the index sleeve, the LLM overlay must emit an explicit negative offset (or a hard band cap) sized to cancel the index_carry contribution, and the divergence flag must be set True (leading sum 0 vs anchor 3.429 is a fight, not "no fight"). The self-audit's claim "Divergence: leading S0–S3 sum = 0 vs S4 = 0. No fight" was wrong — the fight was between the factor card (0) and the engine anchor (3.429), and it was mislabeled as absent.
+
+## WHEN IT FIRES
+Session AFTER an already-printed FOMC+SEP+presser, with a large overnight ES/NQ-vs-cash sleeve (ES ≥ +1.5% / NQ ≥ +2%) in tape_anchor, while the sector ETF's own live premarket print is flat (PM ≈ 0.00%, worst/tied-worst on the board) and the sector's own multi-horizon relative history is positive-but-leftover. The v2 engine converts the index sleeve into an official up/mild call even though every S0–S4 channel was explicitly scored 0 and the sector is not participating in the risk-on.
+
+## WRONG IF
+If a future post-printed-FOMC session shows XLC PM flat (≈0.00%) with ES/NQ ≥ +1.5% and XLC nonetheless closes up ≥ +0.5% (i.e. the index sleeve *did* transmit into the flat-PM sector), this lesson is falsified and the index sleeve should be restored as a valid anchor for XLC. Conversely, if XLC PM is flat but the sector's own 1d rel is strongly positive and *live* (not leftover), the flat-PM cap should not apply.
+
+## EVIDENCE
+Predicted up/mild; actual XLC −0.575% (dir MISS, mag HIT). Card's own SECTOR_SCORES all 0, MULTIPLIER 0.9, CONFIDENCE 0.50; engine anchor legs show PM:XLC +0.00% w=0.7 contributing zero while NQ/ES supplied the full 3.429; index_carry 1.846; total 5.275 → up/mild. Same failure signature as 09-15 (up/mild vs −0.90%), 09-16 (up/mild vs −0.90%), and the 09-17 sibling lessons (XLP, XLV, XLI, XLRE, XLU, XLB, XLF) — all post-printed-FOMC sessions where the index sleeve or a stale overlay wrote up while the sector did not participate. Rolling dir accuracy 0.2 (n=10) / 0.238 (n=21) is consistent with a systematic up-bias on non-participating sectors.
+
+(learn_cycle promote)
