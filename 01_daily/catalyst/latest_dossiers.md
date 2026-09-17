@@ -1,4 +1,4 @@
-# CATALYST DAILY — 2026-09-16
+# CATALYST DAILY — 2026-09-17
 
 0/8 dossiers · max=8 · routing=Grok → DeepSeek
 
@@ -13,7 +13,7 @@
 - **BTU** [override_captain] OVERRIDE card Thermal Coal
 
 ## DOSSIERS
-- **NE** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NE
+- **NE** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP2 NE
 - **RIG** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 RIG
 - **SLB** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SLB
 - **BKR** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 BKR

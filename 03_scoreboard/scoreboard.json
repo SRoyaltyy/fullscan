@@ -22941,6 +22941,69 @@
       "index_carry": 1.324,
       "spy_pct_change": -0.4409916675517711,
       "rel_pct_change": 0.4409916675517711
+    },
+    {
+      "date": "2026-09-17",
+      "topic": "general",
+      "predicted_direction": "up",
+      "predicted_magnitude_band": "notable",
+      "confidence_score": 0.795,
+      "total_score": 7.383,
+      "multiplier": 1.0,
+      "components": {
+        "B0_ASIA": 0.0,
+        "B0_EUROPE": 0.0,
+        "B1_CATALYSTS": 0.0,
+        "B2_BONDS": -1.0,
+        "B3_FEDPATH": -0.5,
+        "B4_VIX": 0.0,
+        "B5_SENTIMENT": 0.0,
+        "B6_FUTURES": 0.5,
+        "B7_OIL_DOLLAR": 0.5
+      },
+      "leading_sum": -2.0,
+      "actual_open": null,
+      "actual_close": null,
+      "actual_pct_change": null,
+      "actual_direction": null,
+      "actual_magnitude_band": null,
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": null,
+      "sources_used": [],
+      "horizon_calls": {
+        "HORIZON_3D": {
+          "trading_days": 3,
+          "direction": "flat",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "trading_days": 5,
+          "direction": "down",
+          "magnitude_band": "mild",
+          "confidence": 0.52
+        },
+        "HORIZON_2W": {
+          "trading_days": 10,
+          "direction": "down",
+          "magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1M": {
+          "trading_days": 21,
+          "direction": "down",
+          "magnitude_band": "mild",
+          "confidence": 0.48
+        }
+      },
+      "news_judge_present": true,
+      "engine": "v2",
+      "anchor_score": 7.258,
+      "overlay_score": 0.125
     }
   ]
 }
