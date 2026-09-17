@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T19:52:12.057508-04:00",
+  "generated_at": "2026-09-17T19:52:18.600082-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -585,7 +585,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5901",
-          "size": 2305391
+          "size": 2291182
         },
         {
           "key": "peers",
@@ -642,9 +642,9 @@
           "size": 6258756
         }
       ],
-      "said": "211 rows",
+      "said": "204 rows",
       "bullets": [
-        "RDVT, HRTG, NUTX, OMER, GCT"
+        "SMTC, PGY, CDNA, HPE, DELL"
       ]
     },
     {
@@ -1080,6 +1080,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 4.936, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': 5.275, 'dir': 'up', 'conf': 0.65, 'source': 'llm'}, Consumer Cyclical={'score': 7.655, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Consumer Defensive={'score': 0.765, 'dir': 'up', 'conf': 0.431, 'source': 'llm'}, Energy={'score': 0.202, 'dir': 'up', 'conf': 0.408, 'source': 'llm'}, Financial={'score': 6.147, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Healthcare={'score': 4.847, 'dir': 'up', 'conf': 0.594, 'source': 'llm'}, Industrials={'score': 6.262, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-17\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T19:52:17.295516-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-17_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2291182,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 SMTC, PGY, CDNA, HPE, DELL"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 SMTC, PGY, CDNA, HPE, DELL"
     }
   ],
   "href": {
