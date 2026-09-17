@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T10:32:27.915649-04:00",
+  "generated_at": "2026-09-17T10:34:57.932600-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -994,13 +994,13 @@
       "date": "2026-09-17",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-17T10:32:26.925384-04:00",
+      "at": "2026-09-17T10:34:56.929520-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 3260,
+          "size": 14134,
           "preview": "2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA"
         },
         {
@@ -1014,14 +1014,14 @@
           "path": "data/day_board/2026-09-17.json",
           "ok": true,
           "reason": "",
-          "size": 24682,
+          "size": 35522,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
         },
         {
           "path": "data/day_board/2026-09-17_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 3219,
+          "size": 14093,
           "preview": "2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA"
         },
         {
@@ -1056,7 +1056,7 @@
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 3219,
+          "size": 14093,
           "preview": "2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA"
         },
         {
