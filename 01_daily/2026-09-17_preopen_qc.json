@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T05:22:37.097801-04:00",
+  "generated_at": "2026-09-17T05:29:23.883313-04:00",
   "items": [
     {
       "ok": true,
@@ -135,14 +135,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-17/communication_services_predict.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 17944,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
@@ -254,9 +254,9 @@
     },
     {
       "sector": "Communication Services",
-      "ok": false,
-      "reason": "missing",
-      "size": 0
+      "ok": true,
+      "reason": "",
+      "size": 17944
     },
     {
       "sector": "Consumer Cyclical",
@@ -313,7 +313,7 @@
       "size": 0
     }
   ],
-  "sector_n_ok": 1,
+  "sector_n_ok": 2,
   "sector_n_total": 11,
   "all_ok": false
 }
