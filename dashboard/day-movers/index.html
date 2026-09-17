@@ -27,6 +27,7 @@
   #date { min-width: 118px; text-align: center; font-variant-numeric: tabular-nums; }
   .banner { margin: 0 22px 10px; padding: 8px 12px; border-radius: 8px; background: #2a2410; color: var(--warn); border: 1px solid #4a3f18; display: none; }
   .banner.show { display: block; }
+  .banner.lag { background: #3a1518; color: #ffb4b8; border-color: #7f1d1d; }
   .layout { display: grid; grid-template-columns: minmax(320px, 0.9fr) minmax(520px, 1.25fr); gap: 14px; padding: 0 22px 28px; align-items: start; }
   @media (max-width: 1100px) { .layout { grid-template-columns: 1fr; } .pane { position: static; max-height: none; } }
   table { width: 100%; border-collapse: collapse; background: var(--card); border-radius: 12px; overflow: hidden; }
@@ -37,6 +38,7 @@
   tr.sel td { background: #243056; }
   .up, .pos { color: var(--gain); } .dn, .neg { color: var(--lose); } .mut { color: var(--dim); } .gold { color: var(--gold); }
   .pane { background: var(--card); border: 1px solid var(--line); border-radius: 12px; min-height: 640px; max-height: calc(100vh - 140px); overflow: auto; padding: 16px 18px 22px; position: sticky; top: 10px; }
+  .pane.on { box-shadow: -8px 0 28px rgba(0,0,0,.35); }
   .pane h2 { margin: 0 0 6px; font-size: 22px; }
   .kv { display: grid; grid-template-columns: 128px 1fr; gap: 5px 10px; color: var(--dim); margin: 8px 0 12px; }
   .kv b { color: var(--txt); font-weight: 600; }
@@ -53,6 +55,16 @@
   @media (max-width: 700px) { .cmp { grid-template-columns: 1fr; } }
   .box { background: #101628; border: 1px solid var(--line); border-radius: 10px; padding: 10px; }
   .box h3 { margin: 0 0 6px; font-size: 13px; color: var(--dim); font-weight: 650; }
+  .flag { display: inline-block; margin: 0 3px 0 0; padding: 1px 6px; border-radius: 999px;
+    font: 800 10px/1.3 system-ui; border: 1px solid var(--line); color: var(--dim); }
+  .flag.hot { border-color: var(--gold); color: var(--gold); }
+  .flag.fl { border-color: #9db7ff; color: #9db7ff; }
+  .setup { display: inline-flex; align-items: center; gap: 3px; margin-left: 4px;
+    padding: 1px 7px 1px 5px; border-radius: 999px; font: 800 10px/1.2 system-ui; }
+  .setup.long { background: rgba(61,220,151,.16); color: var(--gain); border: 1px solid rgba(61,220,151,.45); }
+  .setup.short { background: rgba(255,107,122,.16); color: var(--lose); border: 1px solid rgba(255,107,122,.45); }
+  .setup.explore { border-style: dashed; }
+  .setup .logo { width: 12px; height: 12px; display: block; flex: 0 0 12px; }
 </style>
 </head>
 <body>
@@ -64,27 +76,33 @@
     <a href="../factor-mine/">factor mine</a></div>
 </header>
 <div class="row">
-  <button id="first">&lt;&lt;</button><button id="prev">&lt;</button>
+  <button type="button" id="first">&lt;&lt;</button><button type="button" id="prev">&lt;</button>
   <strong id="date">—</strong>
-  <button id="next">&gt;</button><button id="last">&gt;&gt;</button>
+  <button type="button" id="next">&gt;</button><button type="button" id="last">&gt;&gt;</button>
   <div class="tog" id="side">
-    <button data-v="gainers" class="on">Gainers</button>
-    <button data-v="losers">Losers</button>
+    <span class="mut" style="padding:6px 8px 6px 0">Side</span>
+    <button type="button" data-v="gainers" class="on">Gainers</button>
+    <button type="button" data-v="losers">Losers</button>
   </div>
   <div class="tog" id="clock">
-    <button data-v="interday" class="on">Interday</button>
-    <button data-v="intraday">Intraday</button>
+    <span class="mut" style="padding:6px 8px 6px 0">Clock</span>
+    <button type="button" data-v="interday" class="on">Interday</button>
+    <button type="button" data-v="intraday">Intraday</button>
   </div>
 </div>
 <div class="meta" id="meta"></div>
+<div class="banner" id="lag"></div>
 <div class="banner" id="banner"></div>
 <div class="layout">
   <table>
-    <thead><tr><th>#</th><th>Ticker</th><th>Move</th><th>Open</th><th>Close</th><th>Prior</th><th>S</th><th>Cam</th><th>Idio</th></tr></thead>
+    <thead><tr>
+      <th>#</th><th>Ticker</th><th>Move %</th><th>Open</th>
+      <th id="pxHead">Prior close</th><th>S</th><th>Cams</th><th>Flags</th>
+    </tr></thead>
     <tbody id="body"></tbody>
   </table>
   <aside class="pane" id="pane">
-    <div class="empty">Click a name. The pane loads that morning’s full investigator card — cameras vs yesterday and whatever text was caught.</div>
+    <div class="empty">click a name</div>
   </aside>
 </div>
 <script>
@@ -108,24 +126,60 @@ function camDiff(today, yday) {
   for (const k of CAM_ORDER) { const a = t[k] || 'missing', b = y[k] || 'missing'; if (a !== b) changed.push(`${CAM_SHORT[k]||k}: ${b} → ${a}`); }
   return changed;
 }
+function setupLogo(side){
+  if(side==='long'){
+    return '<svg class="logo" viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="5.5" fill="#14532d"/><path d="M6 3.1 8.7 8H3.3Z" fill="#3ddc97"/></svg>';
+  }
+  return '<svg class="logo" viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="5.5" fill="#7f1d1d"/><path d="M6 8.9 3.3 4h5.4Z" fill="#ff6b7a"/></svg>';
+}
+function setupBadge(su, sq){
+  if(!su) return '';
+  const side=su==='s'?'short':'long';
+  const explore=sq==='e';
+  const mark=explore?' <span title="explore">?</span>':'';
+  return `<span class="setup ${side}${explore?' explore':''}">${setupLogo(side)} ${side==='long'?'LONG':'SHORT'}${mark}</span>`;
+}
+function flags(r){
+  let s='';
+  if(r.hot4) s+='<span class="flag hot">hot4</span>';
+  if(r.fl) s+='<span class="flag fl">flatten would-buy</span>';
+  s+=setupBadge(r.su, r.sq);
+  return s||'<span class="mut">—</span>';
+}
+function cams(r){
+  if(r.np==null && r.nn==null) return '<span class="mut">—</span>';
+  return `<span class="pos">+${esc(r.np||0)}</span> <span class="neg">−${esc(r.nn||0)}</span>`;
+}
+function rowsOf(){
+  const day = STATE.day || {};
+  return ((day[STATE.clock] || {})[STATE.side]) || [];
+}
 function renderTable() {
   const d = STATE.meta, day = STATE.day || {};
   if (!d) return;
   const date = STATE.dates[STATE.i];
   $('date').textContent = date;
-  const rows = (((day[STATE.side] || {})[STATE.clock]) || []);
-  $('meta').textContent = `${d.n_tickers_scanned} histories · ${d.from_date} → ${d.to_date} · ${day.n || 0} names this morning · S=${day.s ?? '—'} · top ${d.top_n}`;
+  const rows = rowsOf();
+  const pack = day[STATE.clock] || {};
+  $('meta').textContent = `${d.n_tickers || d.n_tickers_scanned || '—'} histories · ${d.from_date} → ${d.to_date} · universe ${pack.n ?? day.n_open ?? 0} · S=${day.s ?? '—'} · top ${d.top_n || 25} · ${STATE.side} · ${STATE.clock}`;
   const banner = $('banner');
-  if (STATE.clock === 'intraday') { banner.className = 'banner show'; banner.textContent = 'Intraday = same-session open → close. Not knowable at 09:30. Autopsy only.'; }
-  else if (!rows.length) { banner.className = 'banner show'; banner.textContent = 'Interday needs a prior close. First packed session has no gap rank.'; }
-  else { banner.className = 'banner show'; banner.textContent = 'Interday = prior close → today’s 09:30 open. Legal at the bell.'; }
-  const key = STATE.clock === 'intraday' ? 'intra' : 'inter';
+  if (STATE.clock === 'intraday') {
+    banner.className = 'banner show';
+    banner.textContent = 'same-session close — not knowable at 09:30.';
+  } else {
+    banner.className = 'banner show';
+    banner.textContent = 'Interday = prior close → today’s 09:30 open. Legal at the bell. Never ranked by same-day Change%.';
+  }
+  const lag = $('lag');
+  if (d.lag) { lag.className = 'banner show lag'; lag.textContent = d.lag; }
+  else { lag.className = 'banner'; lag.textContent = ''; }
+  $('pxHead').textContent = STATE.clock === 'intraday' ? 'Close' : 'Prior close';
   $('body').innerHTML = rows.map((r, i) => `
     <tr data-i="${i}" class="${STATE.sel===i?'sel':''}">
-      <td>${i+1}</td><td><strong>${r.t}</strong></td><td>${pct(r[key])}</td>
-      <td>${num(r.o)}</td><td>${num(r.c)}</td><td>${num(r.pc)}</td>
-      <td>${num(r.s)}</td><td>${r.cams || ('+' + (r.np??'?') + ' −' + (r.nn??'?'))}</td><td>${num(r.idio)}</td>
-    </tr>`).join('') || `<tr><td colspan="9">No ${STATE.clock} ${STATE.side} for ${date}.</td></tr>`;
+      <td>${i+1}</td><td><strong>${esc(r.t)}</strong></td><td>${pct(r.pct)}</td>
+      <td>${px(r.o)}</td><td>${px(r.x)}</td>
+      <td>${num(r.s)}</td><td>${cams(r)}</td><td>${flags(r)}</td>
+    </tr>`).join('') || `<tr><td colspan="8">No ${STATE.clock} ${STATE.side} for ${date}.</td></tr>`;
   document.querySelectorAll('#body tr[data-i]').forEach(tr => {
     tr.onclick = () => { STATE.sel = +tr.dataset.i; renderTable(); loadPane(rows[STATE.sel]); };
   });
@@ -147,7 +201,10 @@ function sessionBlock(title, r) {
 function loadPane(listRow) {
   const date = STATE.dates[STATE.i];
   if (!listRow) return;
-  $('pane').innerHTML = `<div class="empty">Loading ${esc(listRow.t)} ${esc(date)}…</div>`;
+  const pane = $('pane');
+  pane.classList.add('on');
+  pane.innerHTML = `<div class="empty">Loading ${esc(listRow.t)} ${esc(date)}…</div>`;
+  const href = '../hard-red-exceptions/?ticker=' + encodeURIComponent(listRow.t) + '#' + encodeURIComponent(listRow.t);
   fetch('../hard-red-exceptions/t/' + encodeURIComponent(listRow.t) + '.json').then(r => {
     if (!r.ok) throw new Error(r.status);
     return r.json();
@@ -156,26 +213,30 @@ function loadPane(listRow) {
     const idx = rows.findIndex(x => x.date === date);
     const r = idx >= 0 ? rows[idx] : null;
     const prev = idx > 0 ? rows[idx-1] : null;
-    if (!r) { $('pane').innerHTML = `<div class="empty">No investigator row for ${esc(listRow.t)} on ${esc(date)}.</div>`; return; }
+    if (!r) { pane.innerHTML = `<div class="empty">No investigator row for ${esc(listRow.t)} on ${esc(date)}.</div>`; return; }
     const good = litList(r.boxes, 'good'), bad = litList(r.boxes, 'bad');
     const neu = litList(r.boxes, 'neutral'), miss = litList(r.boxes, 'missing');
     const changed = camDiff(r.boxes, prev && prev.boxes);
-    const legal = STATE.clock === 'interday' && listRow.inter != null;
+    const legal = STATE.clock === 'interday' && listRow.gap != null;
     const caught = r.news && String(r.news).trim();
-    $('pane').innerHTML = `
-      <h2>${esc(doc.ticker)} <span class="sub">${esc(date)} 09:30</span></h2>
+    pane.innerHTML = `
+      <h2>${esc(doc.ticker)} <span class="sub">${esc(date)} 09:30</span> ${setupBadge(listRow.su, listRow.sq)}</h2>
       <div class="mut">${r.on_list?'on shopping list':'reconstructed — not on the lists'}
-        · <a href="../hard-red-exceptions/#${encodeURIComponent(doc.ticker)}">full history</a></div>
+        · ${flags(listRow)}
+        · <a href="${href}">full history</a></div>
       <div class="kv">
-        <div>Move intra / inter</div><b>${listRow.intra==null?'—':((listRow.intra>=0?'+':'')+listRow.intra.toFixed(2)+'%')} / ${listRow.inter==null?'—':((listRow.inter>=0?'+':'')+listRow.inter.toFixed(2)+'%')}</b>
+        <div>Move intra / inter</div><b>${listRow.oc==null?'—':((listRow.oc>=0?'+':'')+Number(listRow.oc).toFixed(2)+'%')} / ${listRow.gap==null?'—':((listRow.gap>=0?'+':'')+Number(listRow.gap).toFixed(2)+'%')}</b>
+        <div>OHLC</div><b>${px(listRow.o||r.open)} / ${px(listRow.h)} / ${px(listRow.l)} / ${px(listRow.c||r.close)}</b>
         <div>Open → close</div><b>${px(r.open)} → ${px(r.close)} (${r.day_pct==null?'—':((r.day_pct>=0?'+':'')+Number(r.day_pct).toFixed(2)+'%')})</b>
-        <div>Prior close</div><b>${px(listRow.pc)}</b>
+        <div>Prior close / gap</div><b>${px(listRow.pc)} · ${listRow.gap==null?'—':((listRow.gap>=0?'+':'')+Number(listRow.gap).toFixed(2)+'%')}</b>
         <div>Weather S</div><b>${num(r.s)}${r.hard_red?' · SIT':''}</b>
         <div>Idio / lean</div><b>${num(r.idio)}</b>
+        <div>Src</div><b>${esc((listRow.src||r.sources||[]).join(', ')||'—')}</b>
+        <div>hot4 / flatten</div><b>${listRow.hot4?'yes — union_hot_n4_h1':'no / soft-miss'} · ${listRow.fl?'yes — flatten_robust would-buy':'no / soft-miss'}</b>
         <div>H1 / H3 / H5</div><b>${r.h1==null?'—':((r.h1>=0?'+':'')+Number(r.h1).toFixed(2)+'%')} ${r.h1_px!=null?'@'+px(r.h1_px):''} · ${r.h3==null?'—':((r.h3>=0?'+':'')+Number(r.h3).toFixed(2)+'%')} · ${r.h5==null?'—':((r.h5>=0?'+':'')+Number(r.h5).toFixed(2)+'%')}</b>
         <div>E / R</div><b>${esc(r.e_label||r.e_pol||'—')} / ${esc(r.r_label||r.r_pol||'—')}</b>
         <div>RSI / MACD</div><b>${esc(r.rsi??'—')} / ${esc(r.macd_hist??'—')}</b>
-        <div>Legal at 09:30?</div><b>${legal?'yes — interday gap':'no — close print or missing prior'}</b>
+        <div>Legal at 09:30?</div><b>${legal?'yes — interday gap / prior close / open':'no — close print or missing prior'}</b>
       </div>
       <div class="cmp">${sessionBlock('Today', r)}${sessionBlock('Yesterday', prev)}</div>
       <div class="why">
@@ -193,15 +254,24 @@ function loadPane(listRow) {
         <ul>${(r.why||[]).map(x=>'<li>'+esc(x)+'</li>').join('')}</ul>
       </div>`;
   }).catch(err => {
-    $('pane').innerHTML = `<div class="empty">Could not load investigator file for ${esc(listRow.t)}.<br>${esc(err)}</div>`;
+    pane.innerHTML = `<h2>${esc(listRow.t)} <span class="sub">${esc(date)}</span></h2>
+      <div class="kv">
+        <div>Move</div><b>${pct(listRow.pct)}</b>
+        <div>OHLC</div><b>${px(listRow.o)} / ${px(listRow.h)} / ${px(listRow.l)} / ${px(listRow.c)}</b>
+        <div>Gap / o→c</div><b>${pct(listRow.gap)} / ${pct(listRow.oc)}</b>
+        <div>S / sit</div><b>${num(listRow.s)}${listRow.hr?' · SIT':''}</b>
+        <div>Legal at 09:30?</div><b>${STATE.clock==='interday'?'yes — interday fields':'no — same-session close'}</b>
+      </div>
+      <div class="empty">Could not load investigator file for ${esc(listRow.t)}.<br>${esc(err)}</div>`;
   });
 }
 function bindTog(id, field) {
-  $(id).querySelectorAll('button').forEach(btn => {
+  $(id).querySelectorAll('button[data-v]').forEach(btn => {
     btn.onclick = () => {
-      $(id).querySelectorAll('button').forEach(b => b.classList.toggle('on', b===btn));
+      $(id).querySelectorAll('button[data-v]').forEach(b => b.classList.toggle('on', b===btn));
       STATE[field] = btn.dataset.v; STATE.sel = null;
-      $('pane').innerHTML = '<div class="empty">Click a name.</div>';
+      $('pane').classList.remove('on');
+      $('pane').innerHTML = '<div class="empty">click a name</div>';
       renderTable();
     };
   });
@@ -209,19 +279,23 @@ function bindTog(id, field) {
 bindTog('side', 'side'); bindTog('clock', 'clock');
 function loadDay() {
   const date = STATE.dates[STATE.i]; if (!date) return;
-  fetch('./d/' + date + '.json').then(r => r.json()).then(day => {
-    STATE.day = day; STATE.sel = null;
-    $('pane').innerHTML = '<div class="empty">Click a name. The pane loads that morning’s full investigator card.</div>';
-    renderTable();
-  }).catch(err => { STATE.day = { n: 0, gainers: {}, losers: {} }; $('meta').textContent = 'Failed to load ' + date + ': ' + err; renderTable(); });
+  const day = (STATE.meta.days || []).find(x => x.date === date);
+  STATE.day = day || { n_open: 0, intraday: {}, interday: {} };
+  STATE.sel = null;
+  $('pane').classList.remove('on');
+  $('pane').innerHTML = '<div class="empty">click a name</div>';
+  renderTable();
 }
 $('first').onclick = () => { STATE.i = 0; loadDay(); };
 $('last').onclick = () => { STATE.i = STATE.dates.length-1; loadDay(); };
 $('prev').onclick = () => { STATE.i = Math.max(0, STATE.i-1); loadDay(); };
 $('next').onclick = () => { STATE.i = Math.min(STATE.dates.length-1, STATE.i+1); loadDay(); };
-fetch('./index.json').then(r => r.json()).then(d => {
+fetch('./days.json?t='+Date.now()).then(r => {
+  if(!r.ok) throw new Error('days.json '+r.status);
+  return r.json();
+}).then(d => {
   STATE.meta = d; STATE.dates = d.dates || []; STATE.i = Math.max(0, STATE.dates.length-1); loadDay();
-}).catch(err => { $('meta').textContent = 'Failed to load index.json: ' + err; });
+}).catch(err => { $('meta').textContent = 'Failed to load days.json: ' + err; });
 </script>
 </body>
 </html>

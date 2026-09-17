@@ -32,7 +32,7 @@ jobs:
       - name: Install
         run: pip install pandas pyarrow pytest yfinance
       - name: Test
-        run: python -m pytest -q src/test_hard_red_exceptions.py
+        run: python -m pytest -q src/test_hard_red_exceptions.py src/test_day_movers.py
       - name: Rank lookers
         run: |
           set -euo pipefail
@@ -40,6 +40,8 @@ jobs:
           test -s data/hard_red_exceptions/latest.json
           test -s dashboard/hard-red-exceptions/index.html
           test -s dashboard/hard-red-exceptions/tickers.json
+          test -s dashboard/day-movers/index.html
+          test -s dashboard/day-movers/days.json
       - name: Commit
         run: |
           bash scripts/safe_git_push.sh \
@@ -49,6 +51,8 @@ jobs:
             dashboard/hard-red-exceptions/latest.json \
             dashboard/hard-red-exceptions/tickers.json \
             dashboard/hard-red-exceptions/t \
+            dashboard/day-movers/days.json \
+            dashboard/day-movers/index.html \
             03_scoreboard/HARD_RED_EXCEPTIONS.md
       - name: Refresh Pages
         env:
