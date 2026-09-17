@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T06:47:33.989607-04:00",
+  "generated_at": "2026-09-17T06:47:44.133132-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -41,24 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "general_predict",
-      "title": "General market predict",
-      "date": "2026-09-17",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-17T04:38:34.995009-04:00",
-      "files": [
-        {
-          "path": "01_daily/general/2026-09-17_predict.md",
-          "ok": true,
-          "reason": "",
-          "size": 13641,
-          "preview": "# Premarket Prediction \u2014 2026-09-17\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 NOTABLE** | total score 7.383 (uncertainty multiplier \u00d71.0) | confidence 0.795\n>\n> **Good news vs bad news:** good +0.75 pts vs bad -3.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - ES/NQ gap-repair vs cash\n> - WTI/Brent overnight dip\n> - DXY soft\n> - HY still contained 2.76\n> - VIX contango 0.82\n>\n> **Bad news driving this:**\n> - 1w 10Y +20bp at 5.00 handle\n> - hawkish SEP 16/18 another hike\n> - leftover Hormuz oil ~$104-108\n> - BoJ hike-to-1.25% Friday\n> - housing still cracking (Lennar)\n>\n> **market uncertainty: **elevated** | VIX 16.24 | policy-uncertainty index 147.41 (1d -45.39)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \u26aa Asia overnight session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Overnight news & catalysts: +0.0 \u00d7 3.0"
-        }
-      ],
-      "preview": "# Premarket Prediction \u2014 2026-09-17\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 NOTABLE** | total score 7.383 (uncertainty multiplier \u00d71.0) | confidence 0.795\n>\n> **Good news vs bad news:** good +0.75 pts vs bad -3.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - ES/NQ gap-repair vs cash\n> - WTI/Brent overnight dip\n> - DXY soft\n> - HY still contained 2.76\n> - VIX contango 0.82\n>\n> **Bad news driving this:**\n> - 1w 10Y +20bp at 5.00 handle\n> - hawkish SEP 16/18 another hike\n> - leftover Hormuz oil ~$104-108\n> - BoJ hike-to-1.25% Friday\n> - housing still cracking (Lennar)\n>\n> **market uncertainty: **elevated** | VIX 16.24 | policy-uncertainty index 147.41 (1d -45.39)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \u26aa Asia overnight session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Overnight news & catalysts: +0.0 \u00d7 3.0"
-    },
     {
       "key": "sector_board",
       "title": "Sector board",
@@ -275,6 +257,24 @@
         }
       ],
       "preview": "11651 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11641 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "universe",
+      "title": "Universe labels",
+      "date": "2026-09-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T06:47:43.602841-04:00",
+      "files": [
+        {
+          "path": "data/universe/2026-09-17_membership.csv",
+          "ok": true,
+          "reason": "",
+          "size": 1118694,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
