@@ -12707,18 +12707,6 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
-        },
-        "HORIZON_2W": {
-          "label": "2w",
-          "target_date": "2026-09-17",
-          "actual_pct": -4.64,
-          "actual_direction": "down",
-          "actual_magnitude_band": "notable",
-          "direction_hit": false,
-          "magnitude_hit": false,
-          "predicted_direction": "flat",
-          "predicted_magnitude_band": "mild",
-          "confidence": 0.4
         }
       }
     },
