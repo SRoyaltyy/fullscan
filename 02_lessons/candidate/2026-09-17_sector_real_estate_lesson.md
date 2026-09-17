@@ -7,7 +7,7 @@ error_category: "D"
 falsifier: "Keep-flat is wrong if, on this same unsigned T+1 XLRE card (08-21 stress on, oil offered, tech-led mid-pack PM, Finviz ES not ≥+0.5%, no live curve rip), XLRE holds a ≥mild close-to-close gain (≳0.5% or holds the open) with duration-led breadth rather than fading a leftover gap. Today’s +0.30% fade does not falsify the flatten. Also revise 08-21 if 30Y stays ≥5.15%, 10Y falls ≥7 bp, and XLRE still prints ≥+0.5% relative."
 sector: "Real Estate"
 date: "2026-09-17"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Real Estate — 2026-09-17

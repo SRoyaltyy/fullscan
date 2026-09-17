@@ -1,5 +1,5 @@
 {
- "generated": "2026-09-16T18:58:46-04:00",
+ "generated": "2026-09-17T17:37:14-04:00",
  "replay_reference": {
   "general": {
    "n": 28,
@@ -743,16 +743,16 @@
    "verdict": "improving; not beating best baseline by -20% (last 10 sessions)"
   },
   "sectors": {
-   "n_runs": 213,
-   "n_sessions": 20,
+   "n_runs": 218,
+   "n_sessions": 21,
    "all": {
-    "n": 213,
-    "dir": 0.46,
-    "mag": 0.319,
-    "always_up": 0.39,
-    "always_down": 0.535,
-    "same_as_yesterday": 0.45,
-    "edge_vs_best_baseline": -0.075
+    "n": 218,
+    "dir": 0.459,
+    "mag": 0.321,
+    "always_up": 0.404,
+    "always_down": 0.523,
+    "same_as_yesterday": 0.44,
+    "edge_vs_best_baseline": -0.064
    },
    "legacy_era": {
     "n": 183,
@@ -766,13 +766,13 @@
    "since_v2": {
     "live": true,
     "since": "2026-09-14",
-    "n": 30,
-    "dir": 0.467,
-    "mag": 0.367,
-    "always_up": 0.167,
-    "always_down": 0.667,
-    "same_as_yesterday": 0.367,
-    "edge_vs_best_baseline": -0.2,
+    "n": 35,
+    "dir": 0.457,
+    "mag": 0.371,
+    "always_up": 0.286,
+    "always_down": 0.571,
+    "same_as_yesterday": 0.314,
+    "edge_vs_best_baseline": -0.114,
     "cumulative": [
      {
       "date": "2026-09-14",
@@ -983,6 +983,41 @@
       "n": 30,
       "cum_dir": 0.467,
       "cum_mag": 0.367
+     },
+     {
+      "date": "2026-09-17",
+      "topic": "sector:Consumer Defensive",
+      "n": 31,
+      "cum_dir": 0.484,
+      "cum_mag": 0.355
+     },
+     {
+      "date": "2026-09-17",
+      "topic": "sector:Healthcare",
+      "n": 32,
+      "cum_dir": 0.5,
+      "cum_mag": 0.375
+     },
+     {
+      "date": "2026-09-17",
+      "topic": "sector:Industrials",
+      "n": 33,
+      "cum_dir": 0.485,
+      "cum_mag": 0.394
+     },
+     {
+      "date": "2026-09-17",
+      "topic": "sector:Real Estate",
+      "n": 34,
+      "cum_dir": 0.471,
+      "cum_mag": 0.382
+     },
+     {
+      "date": "2026-09-17",
+      "topic": "sector:Utilities",
+      "n": 35,
+      "cum_dir": 0.457,
+      "cum_mag": 0.371
      }
     ]
    },
@@ -1446,6 +1481,29 @@
       "same_as_yesterday": 0.45
      },
      "edge_20": -0.075
+    },
+    {
+     "date": "2026-09-17",
+     "n": 5,
+     "engine": "v2",
+     "session_dir": 0.4,
+     "session_mag": 0.4,
+     "dir_10": 0.434,
+     "mag_10": 0.354,
+     "base_10": {
+      "always_up": 0.333,
+      "always_down": 0.586,
+      "same_as_yesterday": 0.444
+     },
+     "edge_10": -0.152,
+     "dir_20": 0.444,
+     "mag_20": 0.319,
+     "base_20": {
+      "always_up": 0.401,
+      "always_down": 0.522,
+      "same_as_yesterday": 0.44
+     },
+     "edge_20": -0.078
     }
    ],
    "by_sector": {
@@ -1477,13 +1535,13 @@
      "edge_vs_best_baseline": -0.1
     },
     "Consumer Defensive": {
-     "n": 20,
-     "dir": 0.45,
-     "mag": 0.35,
-     "always_up": 0.4,
-     "always_down": 0.55,
-     "same_as_yesterday": 0.526,
-     "edge_vs_best_baseline": -0.1
+     "n": 21,
+     "dir": 0.476,
+     "mag": 0.333,
+     "always_up": 0.429,
+     "always_down": 0.524,
+     "same_as_yesterday": 0.5,
+     "edge_vs_best_baseline": -0.048
     },
     "Energy": {
      "n": 20,
@@ -1504,31 +1562,31 @@
      "edge_vs_best_baseline": -0.05
     },
     "Healthcare": {
-     "n": 18,
-     "dir": 0.5,
-     "mag": 0.222,
-     "always_up": 0.333,
-     "always_down": 0.5,
-     "same_as_yesterday": 0.412,
-     "edge_vs_best_baseline": 0.0
+     "n": 19,
+     "dir": 0.526,
+     "mag": 0.263,
+     "always_up": 0.368,
+     "always_down": 0.474,
+     "same_as_yesterday": 0.389,
+     "edge_vs_best_baseline": 0.052
     },
     "Industrials": {
-     "n": 20,
-     "dir": 0.4,
-     "mag": 0.25,
-     "always_up": 0.35,
-     "always_down": 0.5,
-     "same_as_yesterday": 0.421,
-     "edge_vs_best_baseline": -0.1
+     "n": 21,
+     "dir": 0.381,
+     "mag": 0.286,
+     "always_up": 0.381,
+     "always_down": 0.476,
+     "same_as_yesterday": 0.4,
+     "edge_vs_best_baseline": -0.095
     },
     "Real Estate": {
-     "n": 20,
-     "dir": 0.5,
-     "mag": 0.3,
-     "always_up": 0.25,
-     "always_down": 0.65,
-     "same_as_yesterday": 0.474,
-     "edge_vs_best_baseline": -0.15
+     "n": 21,
+     "dir": 0.476,
+     "mag": 0.286,
+     "always_up": 0.286,
+     "always_down": 0.619,
+     "same_as_yesterday": 0.45,
+     "edge_vs_best_baseline": -0.143
     },
     "Technology": {
      "n": 18,
@@ -1540,16 +1598,16 @@
      "edge_vs_best_baseline": -0.112
     },
     "Utilities": {
-     "n": 18,
-     "dir": 0.444,
-     "mag": 0.333,
-     "always_up": 0.389,
-     "always_down": 0.556,
-     "same_as_yesterday": 0.588,
-     "edge_vs_best_baseline": -0.144
+     "n": 19,
+     "dir": 0.421,
+     "mag": 0.316,
+     "always_up": 0.421,
+     "always_down": 0.526,
+     "same_as_yesterday": 0.556,
+     "edge_vs_best_baseline": -0.135
     }
    },
-   "verdict": "slipping; not beating best baseline by -17% (last 10 sessions)"
+   "verdict": "steady; not beating best baseline by -15% (last 10 sessions)"
   }
  }
 }

@@ -7,7 +7,7 @@ error_category: "D"
 falsifier: "Keep-flat is wrong if, on this same unsigned post-paid-FOMC XLI card (08-27 lag on, oil offered, tech-led PM, no four-index confirm), XLI *holds* a ≥mild close-to-close gain with industrials-led breadth or four-index confirmation rather than fading a leftover gap. Today’s +0.178% fade does not falsify the flatten."
 sector: "Industrials"
 date: "2026-09-17"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Industrials — 2026-09-17

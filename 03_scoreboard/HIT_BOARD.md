@@ -1,6 +1,6 @@
 # HIT Board — general + sectors (all dates)
 
-Generated: **2026-09-16T18:58:46.053296-04:00**
+Generated: **2026-09-17T17:37:13.414090-04:00**
 
 Source: `03_scoreboard/scoreboard.json`.
 
@@ -11,7 +11,7 @@ Source: `03_scoreboard/scoreboard.json`.
 | Book | Direction HIT% | hits / graded | Mag HIT% | n mag |
 |------|----------------|---------------|----------|-------|
 | **General (SPX-style)** | **55.2%** | 16/29 | 51.7% | 29 |
-| **All sector calls** | **46.0%** | 98/213 | 31.9% | 213 |
+| **All sector calls** | **45.9%** | 100/218 | 32.1% | 218 |
 
 ### Pipeline blanks (general) — excluded from HIT%
 
@@ -65,6 +65,7 @@ Source: `03_scoreboard/scoreboard.json`.
 | 2026-09-14 | down | mild | -11.002 | -0.48 | down | HIT | HIT |
 | 2026-09-15 | down | mild | -6.215 | -0.45 | down | HIT | HIT |
 | 2026-09-16 | up | mild | 5.297 | -0.45 | down | MISS | HIT |
+| 2026-09-17 | up | notable | 7.383 | — | — | — | — |
 
 ## Sectors — HIT% by date (model calls only)
 
@@ -112,6 +113,7 @@ Source: `03_scoreboard/scoreboard.json`.
 | 2026-09-14 | 10 | **70.0%** | 7/10 | 40.0% |
 | 2026-09-15 | 11 | **55.6%** | 5/9 | 44.4% |
 | 2026-09-16 | 11 | **18.2%** | 2/11 | 27.3% |
+| 2026-09-17 | 11 | **40.0%** | 2/5 | 40.0% |
 
 ## Sectors — HIT% by sector (across dates)
 
@@ -120,32 +122,32 @@ Source: `03_scoreboard/scoreboard.json`.
 | Basic Materials | XLB | **50.0%** | 10/20 | 45.0% |
 | Communication Services | XLC | **26.3%** | 5/19 | 31.6% |
 | Consumer Cyclical | XLY | **60.0%** | 12/20 | 20.0% |
-| Consumer Defensive | XLP | **45.0%** | 9/20 | 35.0% |
+| Consumer Defensive | XLP | **47.6%** | 10/21 | 33.3% |
 | Energy | XLE | **50.0%** | 10/20 | 35.0% |
 | Financial | XLF | **45.0%** | 9/20 | 30.0% |
-| Healthcare | XLV | **50.0%** | 9/18 | 22.2% |
-| Industrials | XLI | **40.0%** | 8/20 | 25.0% |
-| Real Estate | XLRE | **50.0%** | 10/20 | 30.0% |
+| Healthcare | XLV | **52.6%** | 10/19 | 26.3% |
+| Industrials | XLI | **38.1%** | 8/21 | 28.6% |
+| Real Estate | XLRE | **47.6%** | 10/21 | 28.6% |
 | Technology | XLK | **44.4%** | 8/18 | 44.4% |
-| Utilities | XLU | **44.4%** | 8/18 | 33.3% |
+| Utilities | XLU | **42.1%** | 8/19 | 31.6% |
 
 ## Sector matrix (dir hit) — last 10 dates
 
 HIT / MISS / NO_PRED / — . Actual % when graded.
 
-| Sector | 2026-09-02 | 2026-09-03 | 2026-09-04 | 2026-09-08 | 2026-09-09 | 2026-09-10 | 2026-09-11 | 2026-09-14 | 2026-09-15 | 2026-09-16 |
+| Sector | 2026-09-03 | 2026-09-04 | 2026-09-08 | 2026-09-09 | 2026-09-10 | 2026-09-11 | 2026-09-14 | 2026-09-15 | 2026-09-16 | 2026-09-17 |
 |--------|------|------|------|------|------|------|------|------|------|------|
-| Basic Materials | flat | MISS (-0.6%) | HIT (-0.3%) | MISS (-1.0%) | HIT (-1.1%) | HIT (-1.2%) | MISS (+0.4%) | HIT (-0.9%) | MISS (+0.5%) | MISS (-0.7%) |
-| Communication Services | flat | MISS (+0.9%) | MISS (-1.2%) | HIT (-0.5%) | MISS (-0.6%) | MISS (+0.6%) | HIT (+1.0%) | NO_PRED | MISS (-0.9%) | MISS (-0.9%) |
-| Consumer Cyclical | down | MISS (+1.4%) | HIT (-1.3%) | HIT (-0.8%) | HIT (-1.3%) | HIT (-0.4%) | MISS (+0.9%) | MISS (-0.1%) | HIT (-1.7%) | MISS (-0.6%) |
-| Consumer Defensive | up | MISS (-0.3%) | HIT (-0.8%) | MISS (-0.7%) | HIT (-1.2%) | MISS (+0.0%) | HIT (+0.3%) | HIT (+1.2%) | MISS (-0.8%) | MISS (-0.5%) |
-| Energy | up | MISS (-0.7%) | MISS (-0.9%) | HIT (+1.1%) | HIT (+0.8%) | MISS (-0.6%) | MISS (+0.3%) | MISS (-0.9%) | HIT (+2.2%) | HIT (-2.9%) |
-| Financial | flat | MISS (+1.6%) | MISS (-0.8%) | HIT (-1.4%) | HIT (-0.4%) | HIT (-0.3%) | MISS (+0.7%) | HIT (-0.4%) | HIT (-0.3%) | MISS (-1.6%) |
-| Healthcare | flat | MISS (+0.2%) | MISS (-1.0%) | MISS (-2.5%) | HIT (-0.3%) | HIT (-0.6%) | MISS (-0.2%) | MISS (+1.4%) | MISS (-0.1%) | MISS (+0.1%) |
-| Industrials | flat | MISS (+1.0%) | MISS (+0.4%) | MISS (-0.5%) | MISS (-1.5%) | HIT (-0.7%) | HIT (+1.1%) | HIT (-1.4%) | HIT (-0.6%) | HIT (-0.1%) |
-| Real Estate | down | MISS (+1.2%) | MISS (-0.7%) | MISS (-0.1%) | HIT (-1.1%) | HIT (-0.8%) | MISS (+0.9%) | HIT (-0.7%) | HIT (-0.1%) | MISS (-0.6%) |
-| Technology | NO_PRED | MISS (+1.3%) | MISS (+0.7%) | NO_PRED | HIT (+0.0%) | MISS (-1.4%) | HIT (+1.3%) | HIT (-1.8%) | down | MISS (+0.1%) |
-| Utilities | NO_PRED | MISS (+0.8%) | MISS (+0.1%) | NO_PRED | MISS (-1.2%) | HIT (-1.0%) | HIT (-0.3%) | HIT (-1.3%) | down | MISS (+0.0%) |
+| Basic Materials | MISS (-0.6%) | HIT (-0.3%) | MISS (-1.0%) | HIT (-1.1%) | HIT (-1.2%) | MISS (+0.4%) | HIT (-0.9%) | MISS (+0.5%) | MISS (-0.7%) | flat |
+| Communication Services | MISS (+0.9%) | MISS (-1.2%) | HIT (-0.5%) | MISS (-0.6%) | MISS (+0.6%) | HIT (+1.0%) | NO_PRED | MISS (-0.9%) | MISS (-0.9%) | up |
+| Consumer Cyclical | MISS (+1.4%) | HIT (-1.3%) | HIT (-0.8%) | HIT (-1.3%) | HIT (-0.4%) | MISS (+0.9%) | MISS (-0.1%) | HIT (-1.7%) | MISS (-0.6%) | flat |
+| Consumer Defensive | MISS (-0.3%) | HIT (-0.8%) | MISS (-0.7%) | HIT (-1.2%) | MISS (+0.0%) | HIT (+0.3%) | HIT (+1.2%) | MISS (-0.8%) | MISS (-0.5%) | HIT (+0.2%) |
+| Energy | MISS (-0.7%) | MISS (-0.9%) | HIT (+1.1%) | HIT (+0.8%) | MISS (-0.6%) | MISS (+0.3%) | MISS (-0.9%) | HIT (+2.2%) | HIT (-2.9%) | up |
+| Financial | MISS (+1.6%) | MISS (-0.8%) | HIT (-1.4%) | HIT (-0.4%) | HIT (-0.3%) | MISS (+0.7%) | HIT (-0.4%) | HIT (-0.3%) | MISS (-1.6%) | flat |
+| Healthcare | MISS (+0.2%) | MISS (-1.0%) | MISS (-2.5%) | HIT (-0.3%) | HIT (-0.6%) | MISS (-0.2%) | MISS (+1.4%) | MISS (-0.1%) | MISS (+0.1%) | HIT (+0.6%) |
+| Industrials | MISS (+1.0%) | MISS (+0.4%) | MISS (-0.5%) | MISS (-1.5%) | HIT (-0.7%) | HIT (+1.1%) | HIT (-1.4%) | HIT (-0.6%) | HIT (-0.1%) | MISS (+0.2%) |
+| Real Estate | MISS (+1.2%) | MISS (-0.7%) | MISS (-0.1%) | HIT (-1.1%) | HIT (-0.8%) | MISS (+0.9%) | HIT (-0.7%) | HIT (-0.1%) | MISS (-0.6%) | MISS (+0.3%) |
+| Technology | MISS (+1.3%) | MISS (+0.7%) | NO_PRED | HIT (+0.0%) | MISS (-1.4%) | HIT (+1.3%) | HIT (-1.8%) | down | MISS (+0.1%) | flat |
+| Utilities | MISS (+0.8%) | MISS (+0.1%) | NO_PRED | MISS (-1.2%) | HIT (-1.0%) | HIT (-0.3%) | HIT (-1.3%) | down | MISS (+0.0%) | MISS (+0.9%) |
 
 ## Files
 

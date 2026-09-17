@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-09-16T18:58:46.364106-04:00",
+  "generated_at": "2026-09-17T17:37:14.364562-04:00",
   "window": 7,
   "summary": {
-    "n_active": 206,
-    "n_judged": 150,
-    "improved": 61,
+    "n_active": 207,
+    "n_judged": 156,
+    "improved": 66,
     "flat": 19,
-    "worse": 70,
-    "mean_delta": -0.015
+    "worse": 71,
+    "mean_delta": -0.011
   },
   "lessons": [
     {
@@ -73,8 +73,8 @@
         "n": 7
       },
       "after": {
-        "hit": null,
-        "n": 0
+        "hit": 1.0,
+        "n": 1
       },
       "verdict": "insufficient"
     },
@@ -218,6 +218,21 @@
       "verdict": "improved"
     },
     {
+      "lesson": "a-cyclical-industrials-etf-xli-like-posts-an-all-zero-s0-s4.md",
+      "topic": "sector:Industrials",
+      "active_since": "2026-09-17",
+      "error_category": "D",
+      "before": {
+        "hit": 0.714,
+        "n": 7
+      },
+      "after": {
+        "hit": null,
+        "n": 0
+      },
+      "verdict": "insufficient"
+    },
+    {
       "lesson": "a-cyclical-sector-etf-that-remains-a-1w-1m-relative-laggard.md",
       "topic": "sector:Industrials",
       "active_since": "2026-08-28",
@@ -243,10 +258,11 @@
         "n": 7
       },
       "after": {
-        "hit": 1.0,
-        "n": 3
+        "hit": 0.75,
+        "n": 4
       },
-      "verdict": "insufficient"
+      "delta": 0.464,
+      "verdict": "improved"
     },
     {
       "lesson": "a-defensive-bond-proxy-sector-is-predicted-down-flat-because.md",
@@ -306,10 +322,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.0,
-        "n": 3
+        "hit": 0.25,
+        "n": 4
       },
-      "verdict": "insufficient"
+      "delta": -0.321,
+      "verdict": "WORSE"
     },
     {
       "lesson": "a-defensive-sector-relative-call-is-built-on-a-carried-rotat.md",
@@ -747,8 +764,8 @@
         "n": 7
       },
       "after": {
-        "hit": null,
-        "n": 0
+        "hit": 1.0,
+        "n": 1
       },
       "verdict": "insufficient"
     },
@@ -778,10 +795,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.0,
-        "n": 4
+        "hit": 0.2,
+        "n": 5
       },
-      "delta": -0.571,
+      "delta": -0.371,
       "verdict": "WORSE"
     },
     {
@@ -848,10 +865,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.5,
-        "n": 4
+        "hit": 0.4,
+        "n": 5
       },
-      "delta": 0.214,
+      "delta": 0.114,
       "verdict": "improved"
     },
     {
@@ -864,10 +881,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.5,
-        "n": 4
+        "hit": 0.4,
+        "n": 5
       },
-      "delta": 0.214,
+      "delta": 0.114,
       "verdict": "improved"
     },
     {
@@ -880,10 +897,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.667,
-        "n": 3
+        "hit": 0.5,
+        "n": 4
       },
-      "verdict": "insufficient"
+      "delta": 0.071,
+      "verdict": "improved"
     },
     {
       "lesson": "a-rate-sensitive-bond-proxy-sector-xlu-xlre-has-a-positive-m.md",
@@ -895,10 +913,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.667,
-        "n": 3
+        "hit": 0.5,
+        "n": 4
       },
-      "verdict": "insufficient"
+      "delta": 0.357,
+      "verdict": "improved"
     },
     {
       "lesson": "a-rate-sensitive-bond-proxy-sector-xlu-xlre-type-is-predicte.md",
@@ -910,10 +929,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.667,
-        "n": 3
+        "hit": 0.5,
+        "n": 4
       },
-      "verdict": "insufficient"
+      "delta": 0.357,
+      "verdict": "improved"
     },
     {
       "lesson": "a-rate-sensitive-defensive-sector-consumer-staples-has-been.md",
@@ -1052,8 +1072,8 @@
         "n": 7
       },
       "after": {
-        "hit": 0.5,
-        "n": 2
+        "hit": 0.333,
+        "n": 3
       },
       "verdict": "insufficient"
     },
@@ -1129,10 +1149,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.333,
-        "n": 3
+        "hit": 0.5,
+        "n": 4
       },
-      "verdict": "insufficient"
+      "delta": 0.071,
+      "verdict": "improved"
     },
     {
       "lesson": "a-sector-call-correctly-identifies-a-dominant-risk-off-macro.md",
@@ -1287,10 +1308,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.0,
-        "n": 4
+        "hit": 0.2,
+        "n": 5
       },
-      "delta": -0.571,
+      "delta": -0.371,
       "verdict": "WORSE"
     },
     {
@@ -1318,10 +1339,10 @@
         "n": 7
       },
       "after": {
-        "hit": 1.0,
-        "n": 4
+        "hit": 0.8,
+        "n": 5
       },
-      "delta": 0.857,
+      "delta": 0.657,
       "verdict": "improved"
     },
     {
@@ -1381,10 +1402,10 @@
         "n": 7
       },
       "after": {
-        "hit": 1.0,
-        "n": 4
+        "hit": 0.8,
+        "n": 5
       },
-      "delta": 0.857,
+      "delta": 0.657,
       "verdict": "improved"
     },
     {
@@ -1477,10 +1498,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.5,
-        "n": 4
+        "hit": 0.6,
+        "n": 5
       },
-      "delta": 0.071,
+      "delta": 0.171,
       "verdict": "improved"
     },
     {
@@ -1493,10 +1514,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.5,
-        "n": 4
+        "hit": 0.6,
+        "n": 5
       },
-      "delta": 0.071,
+      "delta": 0.171,
       "verdict": "improved"
     },
     {
@@ -2359,10 +2380,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.6,
-        "n": 5
+        "hit": 0.5,
+        "n": 6
       },
-      "delta": 0.457,
+      "delta": 0.357,
       "verdict": "improved"
     },
     {
@@ -2673,10 +2694,10 @@
         "n": 7
       },
       "after": {
-        "hit": 1.0,
-        "n": 5
+        "hit": 0.833,
+        "n": 6
       },
-      "delta": 0.857,
+      "delta": 0.69,
       "verdict": "improved"
     },
     {
@@ -2721,10 +2742,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.333,
-        "n": 6
+        "hit": 0.429,
+        "n": 7
       },
-      "delta": -0.381,
+      "delta": -0.285,
       "verdict": "WORSE"
     },
     {
@@ -2737,10 +2758,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.6,
-        "n": 5
+        "hit": 0.5,
+        "n": 6
       },
-      "delta": 0.314,
+      "delta": 0.214,
       "verdict": "improved"
     },
     {
@@ -2801,10 +2822,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.667,
-        "n": 6
+        "hit": 0.571,
+        "n": 7
       },
-      "delta": 0.381,
+      "delta": 0.285,
       "verdict": "improved"
     },
     {
@@ -2817,10 +2838,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.667,
-        "n": 6
+        "hit": 0.571,
+        "n": 7
       },
-      "delta": 0.381,
+      "delta": 0.285,
       "verdict": "improved"
     },
     {
@@ -2881,10 +2902,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.75,
-        "n": 4
+        "hit": 0.6,
+        "n": 5
       },
-      "delta": 0.607,
+      "delta": 0.457,
       "verdict": "improved"
     },
     {
@@ -2913,10 +2934,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.2,
-        "n": 5
+        "hit": 0.333,
+        "n": 6
       },
-      "delta": -0.371,
+      "delta": -0.238,
       "verdict": "WORSE"
     },
     {
@@ -2961,10 +2982,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.4,
-        "n": 5
+        "hit": 0.5,
+        "n": 6
       },
-      "delta": 0.114,
+      "delta": 0.214,
       "verdict": "improved"
     },
     {
@@ -3084,10 +3105,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.833,
-        "n": 6
+        "hit": 0.714,
+        "n": 7
       },
-      "delta": 0.69,
+      "delta": 0.571,
       "verdict": "improved"
     },
     {
@@ -3203,7 +3224,7 @@
     {
       "topic": "sector:Consumer Defensive",
       "last10": {
-        "hit": 0.4,
+        "hit": 0.5,
         "n": 10
       },
       "prev10": {
@@ -3240,14 +3261,14 @@
         "n": 10
       },
       "prev10": {
-        "hit": 0.75,
-        "n": 8
+        "hit": 0.778,
+        "n": 9
       }
     },
     {
       "topic": "sector:Industrials",
       "last10": {
-        "hit": 0.6,
+        "hit": 0.5,
         "n": 10
       },
       "prev10": {
@@ -3258,7 +3279,7 @@
     {
       "topic": "sector:Real Estate",
       "last10": {
-        "hit": 0.5,
+        "hit": 0.4,
         "n": 10
       },
       "prev10": {
@@ -3284,8 +3305,8 @@
         "n": 10
       },
       "prev10": {
-        "hit": 0.444,
-        "n": 9
+        "hit": 0.4,
+        "n": 10
       }
     }
   ]
