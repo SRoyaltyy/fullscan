@@ -1,0 +1,9 @@
+{
+  "phase": "done",
+  "split_kind": "time",
+  "cutoff": "2026-07-06",
+  "done": true,
+  "n_rows": 1084066,
+  "n_keep": 0,
+  "verdict": "FAIL"
+}

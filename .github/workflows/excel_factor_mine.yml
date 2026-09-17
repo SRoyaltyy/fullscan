@@ -1,0 +1,84 @@
+name: Excel Factor Mine (fee-aware combo prove)
+
+# Phase B: open-knowable Excel factor singles→combinations graded on the
+# Cyrus KEEP bar (≥30 prove fires and >55% after-fee H). Research only.
+# Unit tests run on PR. Full tape is workflow_dispatch (ohlc.parquet).
+
+on:
+  pull_request:
+    paths:
+      - "excel_bot/engine/excel_factor_mine.py"
+      - "excel_bot/engine/test_excel_factor_mine.py"
+      - "excel_bot/engine/excel_clock_gate.py"
+      - "excel_bot/engine/excel_open_features.py"
+      - "excel_bot/engine/j_winrate.py"
+      - ".github/workflows/excel_factor_mine.yml"
+      - "03_scoreboard/EXCEL_FACTOR_MINE.md"
+      - "03_scoreboard/excel_factor_mine.json"
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Cap tickers (0 = finviz 50M/100k universe)"
+        required: false
+        default: "0"
+        type: string
+      reset:
+        description: "Ignore checkpoint and remine"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: excel-factor-mine
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Leak + fee bar
+        run: |
+          set -euo pipefail
+          python excel_bot/engine/test_excel_factor_mine.py
+          python excel_bot/engine/test_excel_open_gates.py
+
+  mine:
+    if: github.event_name == 'workflow_dispatch'
+    needs: test
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install pyarrow pandas
+      - name: Prove
+        env:
+          LIMIT: ${{ inputs.limit || '0' }}
+        run: |
+          set -euo pipefail
+          ARGS=()
+          if [ -n "${LIMIT:-}" ] && [ "${LIMIT}" != "0" ]; then ARGS+=(--limit "$LIMIT"); fi
+          python excel_bot/engine/excel_factor_mine.py "${ARGS[@]}"
+          test -s 03_scoreboard/EXCEL_FACTOR_MINE.md
+          test -s 03_scoreboard/excel_factor_mine.json
+          head -n 40 03_scoreboard/EXCEL_FACTOR_MINE.md
+      - name: Publish board
+        if: always()
+        run: |
+          bash scripts/safe_git_push.sh "chore: excel factor-mine fee prove" \
+            03_scoreboard/EXCEL_FACTOR_MINE.md \
+            03_scoreboard/excel_factor_mine.json \
+            03_scoreboard/excel_factor_mine_ckpt.json || true
