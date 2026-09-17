@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T04:08:54.981806-04:00",
+  "generated_at": "2026-09-17T04:09:05.041095-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -87,7 +87,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 86711
+          "size": 86288
         },
         {
           "key": "digest_md",
@@ -96,7 +96,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11300
+          "size": 11317
         },
         {
           "key": "market_digest_json",
@@ -156,7 +156,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 86711
+          "size": 86288
         },
         {
           "key": "in_market_digest",
@@ -405,7 +405,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 86711
+          "size": 86288
         },
         {
           "key": "weather",
@@ -480,7 +480,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 86711
+          "size": 86288
         },
         {
           "key": "dossiers",
@@ -540,7 +540,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 86711
+          "size": 86288
         },
         {
           "key": "in_judge",
@@ -800,7 +800,7 @@
       "date": "2026-09-17",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-17T04:08:54.844920-04:00",
+      "at": "2026-09-17T04:09:04.903403-04:00",
       "files": [
         {
           "path": "01_daily/news/2026-09-17_finviz_market_digest.json",
@@ -814,10 +814,10 @@
           "ok": true,
           "reason": "",
           "size": 2654,
-          "preview": "# Finviz homepage market digest \u2014 2026-09-17\n**Generated:** 2026-09-17T04:08:54.831694-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point to a higher open as traders await housing, labor and manufacturing data in a gap-up session\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** DJT, IPHA, UPXI, VFS, DAVA\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-17\n**Clock use:** `same_morning`"
+          "preview": "# Finviz homepage market digest \u2014 2026-09-17\n**Generated:** 2026-09-17T04:09:04.890147-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point to a higher open as traders await housing, labor and manufacturing data in a gap-up session\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** DJT, IPHA, UPXI, VFS, DAVA\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-17\n**Clock use:** `same_morning`"
         }
       ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-17\n**Generated:** 2026-09-17T04:08:54.831694-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point to a higher open as traders await housing, labor and manufacturing data in a gap-up session\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** DJT, IPHA, UPXI, VFS, DAVA\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-17\n**Clock use:** `same_morning`"
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-17\n**Generated:** 2026-09-17T04:09:04.890147-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point to a higher open as traders await housing, labor and manufacturing data in a gap-up session\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** DJT, IPHA, UPXI, VFS, DAVA\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-17\n**Clock use:** `same_morning`"
     }
   ],
   "href": {
