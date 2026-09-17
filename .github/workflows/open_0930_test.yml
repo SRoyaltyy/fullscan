@@ -18,6 +18,23 @@ on:
       - "src/strategy_tickets.py"
       - "src/skip_if_good.py"
       - "src/test_skip_if_good.py"
+      - "src/elite_live_px.py"
+      - "src/test_elite_live_px.py"
+      - "src/publish_live_boards.py"
+      - "src/day_board.py"
+      - "src/test_day_board.py"
+      - "src/book_suggestions.py"
+      - "src/test_book_suggestions.py"
+      - "src/overlay_live_strip.py"
+      - "src/factor_mine_dash.html"
+      - "src/paper_dash.html"
+      - "dashboard/index.html"
+      - "dashboard/day-board/index.html"
+      - "dashboard/factor-mine/index.html"
+      - "dashboard/strategy-board/index.html"
+      - "data/day_board/today.json"
+      - "data/day_board/today_strategies.json"
+      - "data/day_board/*_open_0930.json"
       - "scripts/publish_open_pack.sh"
   push:
     branches: [main]
@@ -53,3 +70,18 @@ jobs:
           PYTHONPATH=. python3 -m src.test_webull_exec
           PYTHONPATH=. python3 -m src.test_combo_broker
           PYTHONPATH=. python3 -m src.test_skip_if_good
+          PYTHONPATH=. python3 -m src.test_elite_live_px
+          PYTHONPATH=. python3 -m src.test_book_suggestions
+          PYTHONPATH=. python3 -c "
+          from src.test_day_board import (
+              test_write_json_keeps_open_0930_lock_over_ranker_scores,
+              test_write_json_keeps_last_closed_elite_before_next_bell,
+              test_write_json_drops_yesterday_lock_after_bell,
+              test_day_board_html_has_raw_poll,
+          )
+          test_write_json_keeps_open_0930_lock_over_ranker_scores()
+          test_write_json_keeps_last_closed_elite_before_next_bell()
+          test_write_json_drops_yesterday_lock_after_bell()
+          test_day_board_html_has_raw_poll()
+          print('day_board lock+html ok')
+          "

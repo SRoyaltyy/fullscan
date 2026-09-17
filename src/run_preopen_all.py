@@ -734,7 +734,7 @@ def run(date: str | None = None, force: bool = False,
             # paper_trade must not gate the live BUY/SELL strip.
             print("[preopen-all] → live 1d BUY/SELL strip (dashboards poll main)")
             _run([py, "-m", "src.publish_live_boards",
-                  "--date", date, "--write", "--no-extras"], timeout_s=180)
+                  "--date", date, "--write", "--no-extras"], timeout_s=420)
             _land(date, "live_boards", "Live 1d BUY/SELL strip")
             if force or not preopen.past_predict_cutoff():
                 print("[preopen-all] → paper / sleeve (after book is on main)")

@@ -58,73 +58,12 @@ _POLLER_JS = r"""
   var STRAT = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/today_strategies.json";
   var SUG = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/stock_book/latest_suggestions.json";
   var HOLD = "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board/hold_live_px.json";
-  function holdPxLive(src){
-    if(!src) return false;
-    if(/theme|radar|_close|yesterday/i.test(src)) return false;
-    var head=String(src).split("+")[0];
-    return head==="elite_live" || head==="elite_live_file";
-  }
-  function fmtHoldClock(at){
-    if(!at) return "";
-    try{
-      return new Date(at).toLocaleTimeString("en-US",{timeZone:"America/New_York",hour:"2-digit",minute:"2-digit",hour12:false})+" ET";
-    }catch(e){ return String(at).slice(11,16)+" ET"; }
-  }
-  function holdNum(v,d){
-    if(v==null||v==="") return "—";
-    var n=Number(v);
-    if(!isFinite(n)) return "—";
-    return d==null?String(n):n.toFixed(d);
-  }
-  function paintHold(d){
-    var el=document.getElementById("holdLive");
-    if(!el||!d) return;
-    var q=d.quote||{};
-    var clock=fmtHoldClock(q.at||d.generated_at);
-    var banner=d.banner||(holdPxLive(q.src)?("Elite Overview as of "+clock):("Elite export as of "+(clock||"?")+" (not live)"));
-    var sleeves=d.sleeves||{};
-    var names=[];
-    if(sleeves.combo_sh_5050_shared) names.push("combo_sh_5050_shared");
-    ["combo_jse_333_shared","combo_ej_5050_shared","union_hot_n4_h1"].forEach(function(n){
-      if(names.indexOf(n)<0 && sleeves[n] && (sleeves[n].lots||[]).length) names.push(n);
-    });
-    var html='<div class="live-book-kicker">'+banner+'</div>';
-    html+='<div class="live-book-date">open lots on the $10k butterfly — ticker / side / shares / entry. Not the looker list. Closed lots omitted'
-      +(q.src?(" · px "+q.src+(holdPxLive(q.src)?" (now)":" (not live)")):"")+"</div>";
-    names.forEach(function(name){
-      var s=sleeves[name]||{};
-      var lots=s.lots||[];
-      html+='<div class="live-book-row"><b>'+name+"</b> "+lots.length+" open</div>";
-      lots.forEach(function(lot){
-        var vsO=lot.vs_open_pct==null?"—":((Number(lot.vs_open_pct)>0?"+":"")+holdNum(lot.vs_open_pct,2)+"%");
-        var vsE=lot.vs_entry_pct==null?"—":((Number(lot.vs_entry_pct)>0?"+":"")+holdNum(lot.vs_entry_pct,2)+"%");
-        var pnl=lot.pnl==null?"—":((Number(lot.pnl)>0?"+":"")+holdNum(lot.pnl,2));
-        html+='<div class="live-book-row">'+(lot.ticker||"")+" "+(lot.side||"")+" ×"+(lot.shares||"")
-          +" entry "+holdNum(lot.entry,2)+" · Elite "+holdNum(lot.px,2)
-          +" · vs 09:30 "+vsO+" · vs entry "+vsE+" · $ P/L "+pnl
-          +" · "+(fmtHoldClock(lot.px_asof||q.at)||"—")+"</div>";
-      });
-      if(!lots.length) html+='<div class="live-book-date">no open lots</div>';
-    });
-    el.innerHTML=html;
-  }
-  function loadHold(){
-    var rels=["hold_live_px.json","factor-mine/hold_live_px.json","../factor-mine/hold_live_px.json"].map(function(u){
-      return fetch(u+"?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});
-    });
-    Promise.all([
-      fetch(HOLD+"?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;})
-    ].concat(rels)).then(function(arr){
-      var d=arr.filter(function(x){return x&&(x.sleeves||x.banner);})[0];
-      if(d) paintHold(d);
-    });
-  }
   function quoteLabel(q){
     if(!q) return "";
     var src = q.src || "";
     if(!src && !q.at) return "";
     var banned = /theme|radar|_close|yesterday/i.test(src);
-    var live = !banned && (src === "elite_live" || src === "elite_live_file");
+    var live = !banned && String(src).indexOf("elite_live") === 0;
     var bit = " · px " + (src || "?") + (live ? " (now)" : " (not live)");
     if(banned) bit += " — Theme Radar/close refused";
     if(q.at) bit += " @ " + q.at;
@@ -221,36 +160,170 @@ _POLLER_JS = r"""
       '<div class="live-book-row"><b>BUY 1d</b> ' + (buys.join(" · ") || "—") + '</div>' +
       '<div class="live-book-row sell"><b>SELL 1d</b> ' + (sells.join(" · ") || "—") + '</div>' + extra;
   }
-  function load(){
-    var rels = [
-      "today_strategies.json",
-      "factor-mine/today_strategies.json",
-      "../factor-mine/today_strategies.json"
-    ].map(function(u){
-      return fetch(u + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; });
+  function getJson(url){
+    return fetch(url + (url.indexOf("?")>=0 ? "&" : "?") + "t=" + Date.now(), {cache: "no-store"}).then(function(r){
+      if(!r.ok) throw new Error(String(r.status));
+      return r.json();
+    });
+  }
+  function sessionDate(){
+    try{
+      return new Intl.DateTimeFormat("en-CA",{timeZone:"America/New_York",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());
+    }catch(e){ return ""; }
+  }
+  function ticketsLookLive(st){
+    if(!st || typeof st !== "object") return false;
+    var q = st.quote || {};
+    var d = String(st.date || st.clock_legal_for || "");
+    var today = sessionDate();
+    if(today && d && d !== today) return false;
+    return !!(q.after_open && String(q.src || "").indexOf("elite_live") === 0);
+  }
+  function stripLooksLive(d){
+    if(!d || typeof d !== "object") return false;
+    var q = d.quote || {};
+    var row = (d.buy_1d && d.buy_1d[0]) || {};
+    var src = String(row.px_src || q.src || "");
+    var day = String(d.date || d.clock_legal_for || "");
+    var today = sessionDate();
+    if(today && day && day !== today) return false;
+    return !!(row.px != null && src.indexOf("elite_live") === 0);
+  }
+  function elitePx(d){
+    if(!d || typeof d !== "object") return false;
+    var q = d.quote || {};
+    var row = (d.buy_1d && d.buy_1d[0]) || {};
+    if(!row.ticker){
+      var sb = (d.strategies && d.strategies.stock_book_1d) || {};
+      row = (sb.buy && sb.buy[0]) || {};
+    }
+    var src = String(row.px_src || q.src || "");
+    return !!(row.px != null && src.indexOf("elite_live") === 0);
+  }
+  function firstOk(urls, ok){
+    var i = 0;
+    var last = {};
+    function next(){
+      if(i >= urls.length) return Promise.resolve(ok ? {} : last);
+      return getJson(urls[i++]).then(function(d){
+        last = d;
+        if(!ok || ok(d)) return d;
+        return next();
+      }).catch(next);
+    }
+    return next();
+  }
+  function holdPxLive(src){
+    if(!src) return false;
+    if(/theme|radar|_close|yesterday/i.test(src)) return false;
+    var head=String(src).split("+")[0];
+    return head==="elite_live" || head==="elite_live_file";
+  }
+  function fmtHoldClock(at){
+    if(!at) return "";
+    try{
+      return new Date(at).toLocaleTimeString("en-US",{timeZone:"America/New_York",hour:"2-digit",minute:"2-digit",hour12:false})+" ET";
+    }catch(e){ return String(at).slice(11,16)+" ET"; }
+  }
+  function holdNum(v,d){
+    if(v==null||v==="") return "—";
+    var n=Number(v);
+    if(!isFinite(n)) return "—";
+    return d==null?String(n):n.toFixed(d);
+  }
+  function paintHold(d){
+    var el=document.getElementById("holdLive");
+    if(!el||!d) return;
+    var q=d.quote||{};
+    var clock=fmtHoldClock(q.at||d.generated_at);
+    var banner=d.banner||(holdPxLive(q.src)?("Elite Overview as of "+clock):("Elite export as of "+(clock||"?")+" (not live)"));
+    var sleeves=d.sleeves||{};
+    var names=[];
+    if(sleeves.combo_sh_5050_shared) names.push("combo_sh_5050_shared");
+    ["combo_jse_333_shared","combo_ej_5050_shared","union_hot_n4_h1"].forEach(function(n){
+      if(names.indexOf(n)<0 && sleeves[n] && (sleeves[n].lots||[]).length) names.push(n);
+    });
+    var html='<div class="live-book-kicker">'+banner+'</div>';
+    html+='<div class="live-book-date">open lots on the $10k butterfly — ticker / side / shares / entry. Not the looker list. Closed lots omitted'
+      +(q.src?(" · px "+q.src+(holdPxLive(q.src)?" (now)":" (not live)")):"")+"</div>";
+    names.forEach(function(name){
+      var s=sleeves[name]||{};
+      var lots=s.lots||[];
+      html+='<div class="live-book-row"><b>'+name+"</b> "+lots.length+" open</div>";
+      lots.forEach(function(lot){
+        var vsO=lot.vs_open_pct==null?"—":((Number(lot.vs_open_pct)>0?"+":"")+holdNum(lot.vs_open_pct,2)+"%");
+        var vsE=lot.vs_entry_pct==null?"—":((Number(lot.vs_entry_pct)>0?"+":"")+holdNum(lot.vs_entry_pct,2)+"%");
+        var pnl=lot.pnl==null?"—":((Number(lot.pnl)>0?"+":"")+holdNum(lot.pnl,2));
+        html+='<div class="live-book-row">'+(lot.ticker||"")+" "+(lot.side||"")+" ×"+(lot.shares||"")
+          +" entry "+holdNum(lot.entry,2)+" · Elite "+holdNum(lot.px,2)
+          +" · vs 09:30 "+vsO+" · vs entry "+vsE+" · $ P/L "+pnl
+          +" · "+(fmtHoldClock(lot.px_asof||q.at)||"—")+"</div>";
+      });
+      if(!lots.length) html+='<div class="live-book-date">no open lots</div>';
+    });
+    el.innerHTML=html;
+  }
+  function loadHold(){
+    var rels=["hold_live_px.json","factor-mine/hold_live_px.json","../factor-mine/hold_live_px.json"].map(function(u){
+      return fetch(u+"?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;});
     });
     Promise.all([
-      fetch(TODAY + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; }),
-      fetch(STRAT + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; }),
-      fetch(SUG + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; })
+      fetch(HOLD+"?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;})
     ].concat(rels)).then(function(arr){
+      var d=arr.filter(function(x){return x&&(x.sleeves||x.banner);})[0];
+      if(d) paintHold(d);
+    });
+  }
+  function load(){
+    Promise.all([
+      firstOk(["today.json", "../day-board/today.json", TODAY], afterBell() ? stripLooksLive : null),
+      firstOk([
+        "today_strategies.json",
+        "factor-mine/today_strategies.json",
+        "../factor-mine/today_strategies.json",
+        STRAT
+      ], afterBell() ? ticketsLookLive : null),
+      firstOk(["latest_suggestions.json", SUG])
+    ]).then(function(arr){
       var today = arr[0] || {}, strat = arr[1] || {}, sug = arr[2] || {};
-      var local = arr.slice(3).filter(function(x){ return x && x.strategies && Object.keys(x.strategies).length; })[0];
-      if(local && local.strategies) strat = local;
-      var d = Object.assign({}, sug, today);
-      if(strat && strat.strategies) d.strategies = strat.strategies;
-      if(strat && strat.date) d.date = strat.date;
-      if(strat && strat.n) d.n_strategies = strat.n;
-      if(strat && strat.quote) d.quote = strat.quote;
-      if(strat && strat.clock_legal_for) d.clock_legal_for = strat.clock_legal_for;
-      if(!d.buy_1d && sug.buy_1d) d.buy_1d = sug.buy_1d;
-      if(!d.sell_1d && sug.sell_1d) d.sell_1d = sug.sell_1d;
+      var d = afterBell() ? Object.assign({}, today) : Object.assign({}, sug, today);
+      var sb = (strat && strat.strategies && strat.strategies.stock_book_1d) || {};
+      var buys = (strat && strat.buy_1d && strat.buy_1d.length) ? strat.buy_1d : (sb.buy || []);
+      var sells = (strat && strat.sell_1d && strat.sell_1d.length) ? strat.sell_1d : (sb.sell || []);
+      var ticketsToday = !sessionDate() || !String(strat.date || strat.clock_legal_for || "") || String(strat.date || strat.clock_legal_for || "") === sessionDate();
+      var takeTicket1d = !!(elitePx(strat) && ticketsToday && (!afterBell() || ticketsLookLive(strat)));
+      if(takeTicket1d){
+        if(strat && strat.strategies) d.strategies = strat.strategies;
+        if(strat && strat.n) d.n_strategies = strat.n;
+        if(strat && strat.date) d.date = strat.date;
+        if(strat && strat.quote) d.quote = strat.quote;
+        if(strat && strat.clock_legal_for) d.clock_legal_for = strat.clock_legal_for;
+        if(buys.length) d.buy_1d = buys;
+        if(sells.length) d.sell_1d = sells;
+      }
+      if(!afterBell()){
+        if(!d.buy_1d && sug.buy_1d) d.buy_1d = sug.buy_1d;
+        if(!d.sell_1d && sug.sell_1d) d.sell_1d = sug.sell_1d;
+      }
       paint(d);
     });
   }
+  function afterBell(){
+    try{
+      var parts=new Intl.DateTimeFormat("en-US",{
+        timeZone:"America/New_York",hour:"2-digit",minute:"2-digit",hour12:false
+      }).formatToParts(new Date());
+      var h=0,m=0;
+      parts.forEach(function(p){
+        if(p.type==="hour") h=+p.value;
+        if(p.type==="minute") m=+p.value;
+      });
+      return h>9 || (h===9 && m>=30);
+    }catch(e){ return true; }
+  }
   load();
   loadHold();
-  setInterval(load, 60000);
+  setInterval(load, afterBell() ? 20000 : 60000);
   setInterval(loadHold, 60000);
 })();
 </script>
@@ -321,10 +394,77 @@ def write(book: dict | None = None, date: str | None = None) -> Path | None:
 
 
 LIVE_BOARD_HTML = (
+    ROOT / "src" / "paper_dash.html",
     ROOT / "dashboard" / "index.html",
     ROOT / "dashboard" / "sleeve-merge" / "index.html",
     ROOT / "dashboard" / "strategy-board" / "index.html",
 )
+
+
+def _div_block_end(html: str, id_attr: str) -> tuple[int, int] | None:
+    """Start/end of the outer <div id="..."> ... </div> (nested divs counted)."""
+    needle = f'id="{id_attr}"'
+    loc = html.find(needle)
+    if loc < 0:
+        return None
+    start = html.rfind("<div", 0, loc)
+    if start < 0:
+        return None
+    i = start
+    depth = 0
+    n = len(html)
+    while i < n:
+        if html.startswith("<div", i) and (i + 4 == n or not html[i + 4].isalnum()):
+            depth += 1
+            gt = html.find(">", i)
+            i = n if gt < 0 else gt + 1
+            continue
+        if html.startswith("</div>", i):
+            depth -= 1
+            i += 6
+            if depth == 0:
+                return start, i
+            continue
+        i += 1
+    return None
+
+
+_HOLD_ONLY_HTML = (
+    '<div id="holdLive" class="live-book" data-hold-live="1">\n'
+    '  <div class="live-book-kicker" id="holdLiveBanner">Elite Overview as of —</div>\n'
+    '  <div class="live-book-date" id="holdLiveStamp">open lots on the $10k butterfly — not the looker list</div>\n'
+    '  <div id="holdLiveBody">Loading hold marks…</div>\n'
+    '</div>\n'
+)
+
+
+def place_hold_live(html: str) -> str:
+    """Keep #holdLive a sibling after #liveBook.
+
+    paint() writes liveBook.innerHTML; a nested hold strip is wiped.
+    """
+    live = _div_block_end(html, "liveBook")
+    hold = _div_block_end(html, "holdLive")
+    if live is None:
+        if hold is None and '<div class="wrap">' in html:
+            return html.replace(
+                '<div class="wrap">',
+                '<div class="wrap">' + _HOLD_ONLY_HTML,
+                1,
+            )
+        return html
+    live_start, live_end = live
+    if hold is None:
+        return html[:live_end] + "\n" + _HOLD_ONLY_HTML + html[live_end:]
+    hold_start, hold_end = hold
+    if live_end <= hold_start:
+        return html
+    block = html[hold_start:hold_end]
+    without = html[:hold_start] + html[hold_end:]
+    live2 = _div_block_end(without, "liveBook")
+    if live2 is None:
+        return html
+    return without[: live2[1]] + "\n" + block + "\n" + without[live2[1]:]
 
 
 def ensure_dashboard_poller(html_path: Path | None = None) -> bool:
@@ -345,6 +485,7 @@ def ensure_dashboard_poller(html_path: Path | None = None) -> bool:
             text,
             count=1,
         )
+        nxt = place_hold_live(nxt)
         if nxt != text:
             path.write_text(nxt, encoding="utf-8")
             print(f"  refreshed live-book poller → {path}", flush=True)

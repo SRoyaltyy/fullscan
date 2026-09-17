@@ -4,6 +4,7 @@ Run: PYTHONPATH=. python3 -m src.test_strategy_tickets
 """
 from __future__ import annotations
 
+import json
 from unittest import mock
 
 from src import strategy_tickets as st
@@ -227,6 +228,271 @@ def test_assert_open_lock_requires_webull_sit_names() -> None:
     st.assert_session_look(payload, "2026-09-14")
 
 
+def test_stamp_fills_buy_1d_from_stock_book() -> None:
+    """Factor-mine today_strategies.json must carry Elite 1d rows at top level."""
+    payload = {
+        "strategies": {
+            "stock_book_1d": {
+                "buy": [{"ticker": "AVAH", "side": "long"}],
+                "sell": [{"ticker": "METC", "side": "short"}],
+            }
+        }
+    }
+    book = {
+        "src": "elite_live", "after_open": True, "at": "t", "n": 2,
+        "error": None, "clock_rule": "x",
+    }
+    with mock.patch("src.elite_live_px.quote_book", return_value=book), \
+            mock.patch("src.elite_live_px.official_opens", return_value={}), \
+            mock.patch(
+                "src.elite_live_px.stamp_rows",
+                side_effect=lambda rows, _book, opens=None: list(rows),
+            ):
+        out = st.stamp_live_quotes(payload, "2026-09-15")
+    assert out["quote"]["src"] == "elite_live"
+    assert [x["ticker"] for x in out["buy_1d"]] == ["AVAH"]
+    assert [x["ticker"] for x in out["sell_1d"]] == ["METC"]
+
+
+def test_keep_open_elite_book_refuses_session_export() -> None:
+    """Noon restamp without requests must not replace the 09:30 Elite book."""
+    import tempfile
+    from pathlib import Path
+    from src import elite_live_px as elp
+
+    elite = {
+        "date": "2026-09-15",
+        "clock_legal_for": "2026-09-15",
+        "quote": {"src": "elite_live", "after_open": True},
+        "buy_1d": [{"ticker": "AVAH", "px": 14.24, "px_src": "elite_live"}],
+        "strategies": {"stock_book_1d": {
+            "buy": [{"ticker": "AVAH", "px": 14.24, "px_src": "elite_live"}],
+        }},
+    }
+    bad = {
+        "date": "2026-09-15",
+        "clock_legal_for": "2026-09-15",
+        "quote": {
+            "src": "session_export+finviz_session: No module named 'requests'",
+            "after_open": True,
+        },
+        "buy_1d": [{"ticker": "MTCH", "px": 42.69, "px_src": "session_export"}],
+        "strategies": {"stock_book_1d": {
+            "buy": [{"ticker": "MTCH", "px": 42.69, "px_src": "session_export"}],
+        }},
+    }
+    with tempfile.TemporaryDirectory() as d:
+        day = Path(d)
+        (day / "today_strategies.json").write_text(
+            json.dumps(elite), encoding="utf-8")
+        old_day, old_dash = st.DAY, st.DASH_FM
+        st.DAY = day
+        st.DASH_FM = day / "dash"
+        st.DASH_FM.mkdir()
+        try:
+            with mock.patch.object(elp, "after_open", return_value=True):
+                out = st.keep_open_elite_book("2026-09-15", bad)
+        finally:
+            st.DAY = old_day
+            st.DASH_FM = old_dash
+    assert out["buy_1d"][0]["ticker"] == "AVAH"
+    assert out["quote"]["src"] == "elite_live"
+
+
+def test_keep_open_elite_book_restamps_px_on_0930_names() -> None:
+    elite = {
+        "date": "2026-09-15",
+        "clock_legal_for": "2026-09-15",
+        "quote": {"src": "elite_live", "after_open": True},
+        "buy_1d": [{"ticker": "AVAH", "px": 14.24, "px_src": "elite_live"}],
+        "strategies": {"stock_book_1d": {
+            "buy": [{"ticker": "AVAH", "px": 14.24, "px_src": "elite_live"}],
+        }},
+    }
+    fresh = {
+        "date": "2026-09-15",
+        "quote": {"src": "elite_live", "after_open": True, "at": "noon"},
+        "buy_1d": [{"ticker": "MTCH", "px": 42.69, "px_src": "elite_live"}],
+    }
+    book = {
+        "src": "elite_live", "after_open": True, "at": "noon", "n": 1,
+        "error": None, "clock_rule": "x",
+        "prices": {"AVAH": 14.55},
+    }
+    import tempfile
+    from pathlib import Path
+    from src import elite_live_px as elp
+
+    with tempfile.TemporaryDirectory() as d:
+        day = Path(d)
+        (day / "today_strategies.json").write_text(
+            json.dumps(elite), encoding="utf-8")
+        old_day, old_dash = st.DAY, st.DASH_FM
+        st.DAY = day
+        st.DASH_FM = day / "dash"
+        st.DASH_FM.mkdir()
+        try:
+            with mock.patch.object(elp, "after_open", return_value=True), \
+                    mock.patch.object(elp, "quote_book", return_value=book), \
+                    mock.patch.object(elp, "official_opens", return_value={}):
+                out = st.keep_open_elite_book("2026-09-15", fresh)
+        finally:
+            st.DAY = old_day
+            st.DASH_FM = old_dash
+    assert out["buy_1d"][0]["ticker"] == "AVAH"
+    assert out["buy_1d"][0]["px"] == 14.55
+    assert out["quote"]["src"] == "elite_live"
+
+
+def test_open_0930_snapshot_beats_later_elite_rerank() -> None:
+    """13:50 elite_live MPC must not replace the locked 09:30 MTCH names."""
+    import tempfile
+    from pathlib import Path
+    from src import elite_live_px as elp
+
+    locked = {
+        "date": "2026-09-15",
+        "clock_legal_for": "2026-09-15",
+        "generated_at": "2026-09-15T12:47:05",
+        "quote": {"src": "elite_live", "after_open": True},
+        "buy_1d": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+        "strategies": {"stock_book_1d": {
+            "buy": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+        }},
+    }
+    later = {
+        "date": "2026-09-15",
+        "clock_legal_for": "2026-09-15",
+        "quote": {"src": "elite_live", "after_open": True, "at": "13:50"},
+        "buy_1d": [{"ticker": "MPC", "px": 412.55, "px_src": "elite_live"}],
+        "strategies": {"stock_book_1d": {
+            "buy": [{"ticker": "MPC", "px": 412.55, "px_src": "elite_live"}],
+        }},
+    }
+    book = {
+        "src": "elite_live", "after_open": True, "at": "13:50", "n": 1,
+        "error": None, "clock_rule": "x", "prices": {"MTCH": 44.01},
+    }
+    with tempfile.TemporaryDirectory() as d:
+        day = Path(d)
+        (day / "2026-09-15_open_0930.json").write_text(
+            json.dumps(locked), encoding="utf-8")
+        (day / "today_strategies.json").write_text(
+            json.dumps(later), encoding="utf-8")
+        old_day, old_dash = st.DAY, st.DASH_FM
+        st.DAY = day
+        st.DASH_FM = day / "dash"
+        st.DASH_FM.mkdir()
+        try:
+            with mock.patch.object(elp, "after_open", return_value=True), \
+                    mock.patch.object(elp, "quote_book", return_value=book), \
+                    mock.patch.object(elp, "official_opens", return_value={}):
+                out = st.keep_open_elite_book("2026-09-15", later)
+        finally:
+            st.DAY = old_day
+            st.DASH_FM = old_dash
+    assert out["buy_1d"][0]["ticker"] == "MTCH"
+    assert out["buy_1d"][0]["px"] == 44.01
+    assert out["quote"]["src"] == "elite_live"
+
+
+def test_keep_open_does_not_reuse_yesterdays_today_strategies() -> None:
+    """09-15 slim tickets must not become the 09-16 name lock."""
+    import tempfile
+    from pathlib import Path
+    from src import elite_live_px as elp
+
+    stale = {
+        "date": "2026-09-15",
+        "clock_legal_for": "2026-09-15",
+        "quote": {"src": "elite_live", "after_open": True},
+        "buy_1d": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+        "strategies": {"stock_book_1d": {
+            "buy": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+        }},
+    }
+    fresh = {
+        "date": "2026-09-16",
+        "clock_legal_for": "2026-09-16",
+        "quote": {"src": "elite_live", "after_open": True},
+        "buy_1d": [{"ticker": "AAPL", "px": 221.1, "px_src": "elite_live"}],
+        "strategies": {"stock_book_1d": {
+            "buy": [{"ticker": "AAPL", "px": 221.1, "px_src": "elite_live"}],
+        }},
+    }
+    with tempfile.TemporaryDirectory() as d:
+        day = Path(d)
+        (day / "today_strategies.json").write_text(
+            json.dumps(stale), encoding="utf-8")
+        old_day, old_dash = st.DAY, st.DASH_FM
+        st.DAY = day
+        st.DASH_FM = day / "dash"
+        st.DASH_FM.mkdir()
+        try:
+            with mock.patch.object(elp, "after_open", return_value=True):
+                out = st.keep_open_elite_book("2026-09-16", fresh)
+        finally:
+            st.DAY = old_day
+            st.DASH_FM = old_dash
+    assert out["buy_1d"][0]["ticker"] == "AAPL"
+    assert out["buy_1d"][0]["px"] == 221.1
+
+
+def test_write_fm_today_strategies_is_slim_with_quote() -> None:
+    """Factor-mine same-origin tickets must carry quote + top-level buy_1d."""
+    import tempfile
+    from pathlib import Path
+
+    payload = {
+        "date": "2026-09-15",
+        "generated_at": "t",
+        "clock_legal_for": "2026-09-15",
+        "session_open": "2026-09-15",
+        "n": 1,
+        "n_ok": 1,
+        "families": ["stock_book"],
+        "quote": {"src": "elite_live", "after_open": True},
+        "buy_1d": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+        "sell_1d": [],
+        "strategies": {
+            "stock_book_1d": {
+                "buy": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live",
+                         "side": "long"}],
+                "sell": [],
+                "family": "stock_book",
+                "status": "ok",
+                "date": "2026-09-15",
+            }
+        },
+    }
+    with tempfile.TemporaryDirectory() as d:
+        tmp = Path(d)
+        day = tmp / "data" / "day_board"
+        fm = tmp / "data" / "factor_mine"
+        dash = tmp / "dashboard" / "factor-mine"
+        day.mkdir(parents=True)
+        fm.mkdir(parents=True)
+        dash.mkdir(parents=True)
+        old = (st.ROOT, st.DAY, st.FM_DIR, st.DASH_FM)
+        st.ROOT, st.DAY, st.FM_DIR, st.DASH_FM = tmp, day, fm, dash
+        try:
+            with mock.patch.object(st, "keep_open_elite_book",
+                                   side_effect=lambda _d, p: p), \
+                    mock.patch.object(st, "assert_session_look"), \
+                    mock.patch.object(st, "load_existing_payload",
+                                      return_value={}):
+                st.write("2026-09-15", payload)
+        finally:
+            st.ROOT, st.DAY, st.FM_DIR, st.DASH_FM = old
+        slim = json.loads((dash / "today_strategies.json").read_text())
+        assert slim["quote"]["src"] == "elite_live"
+        assert slim["buy_1d"][0]["ticker"] == "MTCH"
+        assert slim["buy_1d"][0]["px"] == 43.04
+        assert "families" not in slim
+        full = json.loads((dash / "strategy_tickets.json").read_text())
+        assert full["families"] == ["stock_book"]
+
+
 def main() -> None:
     test_combo_would_buy_unions_member_lists()
     test_combo_skip_drops_long_and_short_clash()
@@ -239,6 +505,12 @@ def main() -> None:
     test_assert_fails_when_bake_is_not_session_open()
     test_open_lock_pins_indp_and_drops_friday()
     test_assert_open_lock_requires_webull_sit_names()
+    test_stamp_fills_buy_1d_from_stock_book()
+    test_keep_open_elite_book_refuses_session_export()
+    test_keep_open_elite_book_restamps_px_on_0930_names()
+    test_write_fm_today_strategies_is_slim_with_quote()
+    test_open_0930_snapshot_beats_later_elite_rerank()
+    test_keep_open_does_not_reuse_yesterdays_today_strategies()
     print("ok")
 
 

@@ -1,0 +1,287 @@
+"""Copy the live 09:30 strip onto every Pages surface.
+
+Paper / factor-mine / strategy-board firstOk looks next to the HTML.
+On 2026-09-15 the same-origin factor-mine tickets were a 200 without
+``quote`` / top-level ``buy_1d``, so loaders never reached raw main
+(elite_live MTCH 43.04). A last-write-wins copy then overwrote the
+good ``data/day_board`` slim with that stripped file.
+
+Pick the richest Elite file and publish it everywhere, including
+factor-mine. If today.json is score-only, restamp 1d rows from tickets.
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import shutil
+from datetime import datetime
+from pathlib import Path
+from zoneinfo import ZoneInfo
+
+ROOT = Path(__file__).resolve().parent.parent
+ET = ZoneInfo("America/New_York")
+
+DEST_REL = (
+    ".",
+    "dashboard",
+    "day-board",
+    "dashboard/day-board",
+    "strategy-board",
+    "dashboard/strategy-board",
+    "factor-mine",
+    "dashboard/factor-mine",
+    "sleeve-merge",
+    "dashboard/sleeve-merge",
+)
+
+
+def session_date(when: datetime | None = None) -> str:
+    t = when or datetime.now(ET)
+    if t.tzinfo is None:
+        t = t.replace(tzinfo=ET)
+    else:
+        t = t.astimezone(ET)
+    return t.date().isoformat()
+
+
+def after_bell(when: datetime | None = None) -> bool:
+    t = when or datetime.now(ET)
+    if t.tzinfo is None:
+        t = t.replace(tzinfo=ET)
+    else:
+        t = t.astimezone(ET)
+    return t.hour > 9 or (t.hour == 9 and t.minute >= 30)
+
+
+def _legal_date(data: dict) -> str:
+    return str(
+        data.get("clock_legal_for")
+        or data.get("session_open")
+        or data.get("date")
+        or ""
+    )
+
+
+def _load(path: Path) -> dict:
+    if not path.is_file():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError, json.JSONDecodeError):
+        return {}
+    return data if isinstance(data, dict) else {}
+
+
+def _quote_live(quote: object) -> bool:
+    if not isinstance(quote, dict):
+        return False
+    src = str(quote.get("src") or "")
+    return bool(quote.get("after_open")) and src.startswith("elite_live")
+
+
+def _row0(rows: object) -> dict:
+    if isinstance(rows, list) and rows and isinstance(rows[0], dict):
+        return rows[0]
+    return {}
+
+
+def tickets_score(data: dict, want_date: str | None = None,
+                  *, require_today: bool = False) -> int:
+    if not data:
+        return -1
+    legal = _legal_date(data)
+    if require_today and want_date and legal and legal != want_date:
+        return -1
+    sb = (data.get("strategies") or {}).get("stock_book_1d") or {}
+    buys = data.get("buy_1d") or sb.get("buy") or []
+    row = _row0(buys)
+    score = 0
+    if _quote_live(data.get("quote")):
+        score += 100
+    if row.get("px") is not None:
+        score += 10
+    if str(row.get("px_src") or "").startswith("elite_live"):
+        score += 10
+    if data.get("buy_1d"):
+        score += 5
+    if data.get("quote"):
+        score += 2
+    if data.get("date"):
+        score += 1
+    if want_date and legal == want_date:
+        score += 20
+    return score
+
+
+def strip_score(data: dict, want_date: str | None = None,
+                *, require_today: bool = False) -> int:
+    if not data:
+        return -1
+    legal = _legal_date(data)
+    if require_today and want_date and legal and legal != want_date:
+        return -1
+    row = _row0(data.get("buy_1d"))
+    score = 0
+    if _quote_live(data.get("quote")):
+        score += 100
+    if row.get("px") is not None:
+        score += 10
+    if str(row.get("px_src") or "").startswith("elite_live"):
+        score += 10
+    if data.get("date"):
+        score += 1
+    if want_date and legal == want_date:
+        score += 20
+    return score
+
+
+def pick_best(paths: list[Path], score_fn) -> tuple[Path | None, dict]:
+    best_path: Path | None = None
+    best: dict = {}
+    best_score = -1
+    for path in paths:
+        data = _load(path)
+        score = score_fn(data)
+        if score > best_score:
+            best_score = score
+            best_path = path
+            best = data
+    if best_score < 0:
+        return None, {}
+    return best_path, best
+
+
+_SLIM_TICKET_KEYS = (
+    "date",
+    "clock_legal_for",
+    "clock_use",
+    "session_open",
+    "generated_at",
+    "n",
+    "n_ok",
+    "quote",
+    "buy_1d",
+    "sell_1d",
+)
+
+
+def slim_pages_tickets(data: dict) -> dict:
+    """Same-origin Pages tickets: date / quote / 1d only.
+
+    The fat ``today_strategies`` book (~900K, hundreds of families) is
+    not what firstOk fetches. deploy-dashboard overlay must not copy
+    that blob onto day-board / strategy-board / paper.
+    """
+    if not data:
+        return {}
+    out = {k: data[k] for k in _SLIM_TICKET_KEYS if k in data}
+    sb = (data.get("strategies") or {}).get("stock_book_1d")
+    if sb:
+        out["strategies"] = {"stock_book_1d": sb}
+    return out or dict(data)
+
+
+def ticket_1d(data: dict) -> tuple[list, list, dict]:
+    sb = (data.get("strategies") or {}).get("stock_book_1d") or {}
+    buys = list(data.get("buy_1d") or sb.get("buy") or [])
+    sells = list(data.get("sell_1d") or sb.get("sell") or [])
+    return buys, sells, data.get("quote") or {}
+
+
+def restamp_strip(strip: dict, tickets: dict) -> dict:
+    """Keep land metadata; force Elite 1d names + quote from tickets."""
+    out = dict(strip) if strip else {}
+    buys, sells, quote = ticket_1d(tickets)
+    if tickets.get("date"):
+        out["date"] = tickets.get("date")
+    if buys:
+        out["buy_1d"] = buys
+    if sells:
+        out["sell_1d"] = sells
+    if quote:
+        out["quote"] = quote
+    return out
+
+
+def candidate_ticket_paths(repo: Path, date: str | None = None) -> list[Path]:
+    want = date or session_date()
+    locked = repo / "data" / "day_board" / f"{want}_open_0930.json"
+    paths = [locked] if locked.is_file() else []
+    return paths + [
+        repo / "data" / "day_board" / "today_strategies.json",
+        repo / "dashboard" / "today_strategies.json",
+        repo / "dashboard" / "factor-mine" / "today_strategies.json",
+        repo / "dashboard" / "factor-mine" / "strategy_tickets.json",
+        repo / "data" / "day_board" / "strategy_tickets.json",
+    ]
+
+
+def candidate_strip_paths(repo: Path) -> list[Path]:
+    return [
+        repo / "data" / "day_board" / "today.json",
+        repo / "dashboard" / "factor-mine" / "today.json",
+        repo / "dashboard" / "today.json",
+    ]
+
+
+def overlay(dest_root: Path, repo: Path | None = None,
+            date: str | None = None, when: datetime | None = None) -> list[str]:
+    """Write the winning today.json + today_strategies.json under dest_root."""
+    repo = repo or ROOT
+    dest_root = Path(dest_root)
+    want = date or session_date(when)
+    require = after_bell(when)
+    t_path, tickets = pick_best(
+        candidate_ticket_paths(repo, want),
+        lambda d: tickets_score(d, want, require_today=require),
+    )
+    s_path, strip = pick_best(
+        candidate_strip_paths(repo),
+        lambda d: strip_score(d, want, require_today=require),
+    )
+    if tickets and strip_score(strip, want, require_today=require) < 100 and \
+            tickets_score(tickets, want, require_today=require) >= 100:
+        strip = restamp_strip(strip, tickets)
+        s_path = None
+    wrote: list[str] = []
+    for rel in DEST_REL:
+        dest = dest_root / rel if rel != "." else dest_root
+        dest.mkdir(parents=True, exist_ok=True)
+        pages_tickets = slim_pages_tickets(tickets) if tickets else (
+            slim_pages_tickets(_load(t_path)) if t_path else {}
+        )
+        if pages_tickets:
+            out = dest / "today_strategies.json"
+            out.write_text(json.dumps(pages_tickets, indent=2), encoding="utf-8")
+            wrote.append(str(out))
+            print(f"Overlayed live strip {out}", flush=True)
+        if strip:
+            out = dest / "today.json"
+            out.write_text(json.dumps(strip, indent=2), encoding="utf-8")
+            wrote.append(str(out))
+            print(f"Overlayed live strip {out}", flush=True)
+        elif s_path and s_path.is_file():
+            out = dest / "today.json"
+            shutil.copy2(s_path, out)
+            wrote.append(str(out))
+            print(f"Overlayed live strip {out}", flush=True)
+    return wrote
+
+
+def main(argv: list[str] | None = None) -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--dest", required=True, help="pages_out directory")
+    ap.add_argument("--repo", default="", help="repo root (default: this tree)")
+    ap.add_argument("--date", default="", help="YYYY-MM-DD session (default: today ET)")
+    args = ap.parse_args(argv)
+    repo = Path(args.repo) if args.repo else ROOT
+    wrote = overlay(Path(args.dest), repo=repo, date=args.date or None)
+    if not wrote:
+        print("WARN: no live strip to overlay", flush=True)
+        return 0
+    print(f"Overlayed live strip n={len(wrote)}", flush=True)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

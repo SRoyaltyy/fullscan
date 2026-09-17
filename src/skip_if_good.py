@@ -544,19 +544,129 @@ def check_strategy_tickets(date: str) -> bool:
     if missing:
         return _log(False, "strategy_tickets", date,
                     f"missing families {sorted(missing)}")
+    if not tickets_are_live_open(date):
+        return _log(False, "strategy_tickets", date,
+                    "tickets not after-open live px")
     return _log(True, "strategy_tickets", date,
                 f"legal_for={legal} n={len(strats)} n_ok={data.get('n_ok')}")
 
 
-def check_open_0930(date: str) -> bool:
-    """09:30 pack landed: session-open tickets + connected paper snapshot.
+def after_bell(when: datetime | None = None) -> bool:
+    """True at/after 09:30 ET. Same cut as elite_live_px.after_open."""
+    t = when or datetime.now(ET)
+    if t.tzinfo is None:
+        t = t.replace(tzinfo=ET)
+    else:
+        t = t.astimezone(ET)
+    return t.hour > 9 or (t.hour == 9 and t.minute >= 30)
+
+
+def tickets_are_live_open(date: str, when: datetime | None = None) -> bool:
+    """After 09:30 ET on this session, tickets must carry live after-open px.
+
+    A pre-bell ``session_open`` stamp (07:47 export, after_open=false) is
+    not the 09:30 pack. Other dates / before the bell are not judged here.
+    """
+    t = when or datetime.now(ET)
+    if t.tzinfo is None:
+        t = t.replace(tzinfo=ET)
+    else:
+        t = t.astimezone(ET)
+    if t.strftime("%Y-%m-%d") != str(date):
+        return True
+    if not after_bell(t):
+        return True
+    paths = [
+        ROOT / "data" / "day_board" / f"{date}_open_0930.json",
+        ROOT / "data" / "day_board" / "today_strategies.json",
+        ROOT / "data" / "day_board" / f"{date}_strategy_tickets.json",
+        ROOT / "dashboard" / "factor-mine" / "strategy_tickets.json",
+    ]
+    from . import elite_live_px as elp
+    for found in paths:
+        if not found.is_file():
+            continue
+        try:
+            data = json.loads(found.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        if not isinstance(data, dict):
+            continue
+        legal = str(
+            data.get("clock_legal_for")
+            or data.get("session_open")
+            or data.get("date")
+            or ""
+        )
+        if legal and legal != str(date):
+            continue
+        # Clock after_open with a 07:47 session_export is not live Elite px.
+        return elp.quote_is_elite_live(data.get("quote"))
+    return False
+
+
+def today_strip_is_live_open(date: str, when: datetime | None = None) -> bool:
+    """After 09:30 on this session, today.json must carry Elite 1d px.
+
+    2026-09-15: tickets were elite_live (MTCH 43.04) while today.json
+    stayed a noon ranker strip (same names, scores only, no quote).
+    Old Pages pollers read today.json first, so the live book looked
+    dead. Other dates / before the bell are not judged here.
+    """
+    t = when or datetime.now(ET)
+    if t.tzinfo is None:
+        t = t.replace(tzinfo=ET)
+    else:
+        t = t.astimezone(ET)
+    if t.strftime("%Y-%m-%d") != str(date):
+        return True
+    if not after_bell(t):
+        return True
+    from . import elite_live_px as elp
+    paths = [
+        ROOT / "data" / "day_board" / "today.json",
+        ROOT / "dashboard" / "factor-mine" / "today.json",
+    ]
+    found = next((p for p in paths if p.is_file()), None)
+    if found is None:
+        return False
+    try:
+        data = json.loads(found.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return False
+    if not isinstance(data, dict):
+        return False
+    legal = str(data.get("date") or "")
+    if legal and legal != date:
+        return False
+    quote = data.get("quote") or {}
+    buys = data.get("buy_1d") or []
+    if not buys:
+        return False
+    row0 = buys[0] if isinstance(buys[0], dict) else {}
+    if row0.get("px") is None:
+        return False
+    src = str(row0.get("px_src") or quote.get("src") or "")
+    return elp.quote_is_elite_live(quote) or src.startswith("elite_live")
+
+
+def check_open_0930(date: str, when: datetime | None = None) -> bool:
+    """09:30 pack landed: live after-open tickets + connected paper snapshot.
 
     A 401 / missing last file must not skip — 09:35 orch should heal.
+    A 07:47 session_open stamp without after_open is not done.
     Hard-red sit (0 tickets) still counts when the sandbox connected.
+    ``when`` is the session clock (tests freeze it). Live Actions uses now.
     Does not change flatten_robust.
     """
     if not check_strategy_tickets(date):
         return _log(False, "open_0930", date, "tickets not session-open")
+    if not tickets_are_live_open(date, when):
+        return _log(False, "open_0930", date,
+                    "tickets not after-open live px")
+    if not today_strip_is_live_open(date, when):
+        return _log(False, "open_0930", date,
+                    "today.json 1d strip not Elite live px")
     path = ROOT / "data" / "sleeve_merge" / "webull_last.json"
     if not path.is_file():
         return _log(False, "open_0930", date, "webull_last missing")

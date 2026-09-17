@@ -7,10 +7,14 @@ from __future__ import annotations
 import json
 import os
 import tempfile
+from datetime import datetime
 from pathlib import Path
 from unittest import mock
+from zoneinfo import ZoneInfo
 
 from src import day_board, land_file, output_qc
+
+ET = ZoneInfo("America/New_York")
 
 
 def test_preview_news_parse_uses_titles() -> None:
@@ -194,6 +198,162 @@ def test_day_board_html_has_raw_poll() -> None:
     assert "Stock Book readiness" in html
     assert "What was just pushed" in html
     assert "factor-mine" in html
+    assert "stock_book_1d" in html
+    assert 'indexOf("elite_live")===0' in html
+    assert "function firstOk" in html
+    assert "ok ? {} : last" in html
+    assert "function ticketsLookLive" in html
+    assert "function stripLooksLive" in html
+    assert "function sessionDate" in html
+    assert '"today_strategies.json"' in html
+    assert '"today.json"' in html
+    assert "RAW + \"/today.json\"" in html
+    assert "afterBell() ? stripLooksLive" in html
+    assert "viewingToday && afterBell() && !liveBoard" in html
+    assert "afterBell() && dates.indexOf(today) < 0" in html
+    assert "today && afterBell() && dates.includes(today)" in html
+    assert 'board = {date: date, overall: "—", counts: {}, lands: [], processes: []}' in html
+    assert "earlyBuys" in html
+    assert "function elitePx" in html
+    assert "elitePx(d) && ticketsToday" in html
+    assert "takeTicket1d && (earlyBuys.length || earlySells.length)" in html
+    assert "takeTicket1d && (liveBuys.length || liveSells.length)" in html
+    assert "if(!takeTicket1d)" in html
+    assert "waiting for today's elite_live tickets" in html
+    assert "!buys && !sells && !afterBell()" in html
+
+
+def test_write_json_keeps_open_0930_lock_over_ranker_scores() -> None:
+    """news_parse-style write_json must not replace locked MTCH with DBX scores."""
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        board_dir = root / "data" / "day_board"
+        board_dir.mkdir(parents=True)
+        lock = {
+            "date": "2026-09-15",
+            "clock_legal_for": "2026-09-15",
+            "quote": {"src": "elite_live", "after_open": True},
+            "buy_1d": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+            "sell_1d": [{"ticker": "OKLO", "px": 36.14, "px_src": "elite_live"}],
+            "strategies": {"stock_book_1d": {
+                "buy": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+                "sell": [{"ticker": "OKLO", "px": 36.14, "px_src": "elite_live"}],
+            }},
+        }
+        (board_dir / "2026-09-15_open_0930.json").write_text(
+            json.dumps(lock), encoding="utf-8")
+        (board_dir / "today_strategies.json").write_text(json.dumps({
+            "date": "2026-09-15",
+            "quote": {"src": "elite_live", "after_open": True},
+            "buy_1d": [{"ticker": "DBX", "px": 38.07, "px_src": "elite_live"}],
+        }), encoding="utf-8")
+        board = {
+            "date": "2026-09-15",
+            "generated_at": "t",
+            "overall": "OK",
+            "ranker_ready": True,
+            "counts": {"ok": 1},
+            "selections": {
+                "buy_1d": [{"ticker": "DBX", "score": 0.67}],
+                "sell_1d": [{"ticker": "OKTA", "score": 0.1}],
+            },
+            "lands": [],
+        }
+        with mock.patch.object(day_board, "ROOT", root), \
+                mock.patch.object(day_board, "BOARD_DIR", board_dir):
+            wrote = day_board.write_json(board)
+        today = json.loads((board_dir / "today.json").read_text())
+        assert today["buy_1d"][0]["ticker"] == "MTCH"
+        assert today["buy_1d"][0]["px"] == 43.04
+        assert today["quote"]["src"] == "elite_live"
+        dated = json.loads((board_dir / "2026-09-15.json").read_text())
+        assert dated["selections"]["buy_1d"][0]["ticker"] == "MTCH"
+        assert dated["selections"]["buy_1d"][0]["px"] == 43.04
+        assert dated["quote"]["src"] == "elite_live"
+        fm = root / "dashboard" / "factor-mine" / "today.json"
+        assert fm.is_file()
+        fm_today = json.loads(fm.read_text())
+        assert fm_today["buy_1d"][0]["ticker"] == "MTCH"
+        assert any(p == board_dir / "today.json" for p in wrote)
+
+
+def test_write_json_keeps_last_closed_elite_before_next_bell() -> None:
+    """09-16 news_parse must not empty today.json before 09:30."""
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        board_dir = root / "data" / "day_board"
+        board_dir.mkdir(parents=True)
+        lock = {
+            "date": "2026-09-15",
+            "clock_legal_for": "2026-09-15",
+            "quote": {"src": "elite_live", "after_open": True},
+            "buy_1d": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+            "sell_1d": [{"ticker": "OKLO", "px": 36.14, "px_src": "elite_live"}],
+        }
+        (board_dir / "2026-09-15_open_0930.json").write_text(
+            json.dumps(lock), encoding="utf-8")
+        (board_dir / "today.json").write_text(json.dumps({
+            "date": "2026-09-16",
+            "buy_1d": [],
+            "sell_1d": [],
+        }), encoding="utf-8")
+        board = {
+            "date": "2026-09-16",
+            "generated_at": "t",
+            "overall": "—",
+            "ranker_ready": False,
+            "counts": {},
+            "selections": {"buy_1d": [], "sell_1d": []},
+            "lands": [{"key": "news_parse"}],
+        }
+        before = datetime(2026, 9, 16, 4, 16, tzinfo=ET)
+        with mock.patch.object(day_board, "ROOT", root), \
+                mock.patch.object(day_board, "BOARD_DIR", board_dir):
+            day_board.write_json(board, when=before)
+        today = json.loads((board_dir / "today.json").read_text())
+        assert today["date"] == "2026-09-15"
+        assert today["buy_1d"][0]["ticker"] == "MTCH"
+        assert today["buy_1d"][0]["px"] == 43.04
+        assert today["quote"]["src"] == "elite_live"
+        dated = json.loads((board_dir / "2026-09-16.json").read_text())
+        assert dated["date"] == "2026-09-16"
+        assert dated.get("selections", {}).get("buy_1d") == []
+        latest = json.loads((board_dir / "latest.json").read_text())
+        assert latest["date"] == "2026-09-16"
+
+
+def test_write_json_drops_yesterday_lock_after_bell() -> None:
+    """After 09:30, yesterday's MTCH lock must not stamp today's strip."""
+    with tempfile.TemporaryDirectory() as d:
+        root = Path(d)
+        board_dir = root / "data" / "day_board"
+        board_dir.mkdir(parents=True)
+        lock = {
+            "date": "2026-09-15",
+            "clock_legal_for": "2026-09-15",
+            "quote": {"src": "elite_live", "after_open": True},
+            "buy_1d": [{"ticker": "MTCH", "px": 43.04, "px_src": "elite_live"}],
+        }
+        (board_dir / "2026-09-15_open_0930.json").write_text(
+            json.dumps(lock), encoding="utf-8")
+        (board_dir / "today.json").write_text(json.dumps(lock), encoding="utf-8")
+        board = {
+            "date": "2026-09-16",
+            "generated_at": "t",
+            "overall": "—",
+            "ranker_ready": False,
+            "counts": {},
+            "selections": {"buy_1d": [], "sell_1d": []},
+            "lands": [],
+        }
+        after = datetime(2026, 9, 16, 9, 31, tzinfo=ET)
+        with mock.patch.object(day_board, "ROOT", root), \
+                mock.patch.object(day_board, "BOARD_DIR", board_dir):
+            day_board.write_json(board, when=after)
+        today = json.loads((board_dir / "today.json").read_text())
+        assert today["date"] == "2026-09-16"
+        assert today.get("buy_1d") == []
+        assert not (today.get("quote") or {}).get("after_open")
 
 
 def test_should_not_push_locally() -> None:
@@ -253,6 +413,9 @@ def main() -> None:
         test_merge_boards_unions_lands,
         test_qc_rejects_2b_digest,
         test_day_board_html_has_raw_poll,
+        test_write_json_keeps_open_0930_lock_over_ranker_scores,
+        test_write_json_keeps_last_closed_elite_before_next_bell,
+        test_write_json_drops_yesterday_lock_after_bell,
         test_day_board_splits_finviz_digest_rows,
         test_should_not_push_locally,
         test_land_never_raises,
