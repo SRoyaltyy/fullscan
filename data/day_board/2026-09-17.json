@@ -1,21 +1,20 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T04:08:26.829932-04:00",
-  "overall": "FAIL",
+  "generated_at": "2026-09-17T04:08:47.420932-04:00",
+  "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-17_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-17/_board.json` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-09-17_actions.json` \u2014 missing",
-    "MISSING Quote-page digest JSON (*_finviz_digest) `01_daily/news/2026-09-17_finviz_digest.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-09-17_judge.md` \u2014 missing",
     "MISSING Weather JSON `01_daily/weather/2026-09-17_weather.json` \u2014 missing",
     "MISSING AB checklist enriched `data/ab_checklist/2026-09-17_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 0,
-    "partial": 2,
-    "fail": 6,
+    "ok": 1,
+    "partial": 3,
+    "fail": 4,
     "n": 8
   },
   "processes": [
@@ -74,11 +73,11 @@
       "key": "finviz",
       "name": "Finviz scrape",
       "yaml": "finviz_preopen_scrape.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 2,
+      "n_opt_ok": 1,
       "n_opt": 5,
       "files": [
         {
@@ -86,36 +85,36 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-17_finviz_digest.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 86711
         },
         {
           "key": "digest_md",
           "name": "Quote-page digest MD (*_finviz_digest)",
           "path": "01_daily/news/2026-09-17_finviz_digest.md",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 11300
         },
         {
           "key": "market_digest_json",
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-17_finviz_market_digest.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 5266
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "market_digest_md",
           "name": "Homepage warm-up MD (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-17_finviz_market_digest.md",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 2654
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "market_digest_close_json",
@@ -143,11 +142,11 @@
       "key": "preopen",
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 0,
+      "n_req_ok": 2,
       "n_req": 20,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 3,
       "files": [
         {
@@ -155,18 +154,18 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-17_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 86711
         },
         {
           "key": "in_market_digest",
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-17_finviz_market_digest.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 5266
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "in_baseline",
@@ -263,9 +262,9 @@
           "name": "Pre-open QC JSON",
           "path": "01_daily/2026-09-17_preopen_qc.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "all_ok=False",
+          "size": 7299
         },
         {
           "key": "status",
@@ -281,9 +280,9 @@
           "name": "Grok review JSON",
           "path": "01_daily/2026-09-17_grok_review.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "ok=False Grok returned an empty review",
+          "size": 308
         },
         {
           "key": "sector_basic_materials",
@@ -393,7 +392,7 @@
       "name": "Label + weather",
       "yaml": "label_weather.yml",
       "status": "FAIL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 1,
       "n_opt_ok": 0,
@@ -404,9 +403,9 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-17_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 86711
         },
         {
           "key": "weather",
@@ -479,9 +478,9 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-17_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 86711
         },
         {
           "key": "dossiers",
@@ -539,9 +538,9 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-17_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 86711
         },
         {
           "key": "in_judge",
@@ -723,6 +722,45 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-17\n**Generated:** 2026-09-17T04:08:26.644312-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point to a higher open as traders await housing, labor and manufacturing data in a gap-up session\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** DJT, IPHA, UPXI, VFS, DAVA\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-17\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T04:08:47.262323-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-17_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 86711,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-17_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11339,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-17\n_Generated 2026-09-17T04:08:47.098186-04:00 \u00b7 export=data/exports/finviz_2026-09-17.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+        },
+        {
+          "path": "data/exports/finviz_2026-09-17.csv",
+          "ok": true,
+          "reason": "",
+          "size": 10981336,
+          "preview": "11651 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11429254,
+          "preview": "11641 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-17\n_Generated 2026-09-17T04:08:47.098186-04:00 \u00b7 export=data/exports/finviz_2026-09-17.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11651 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11641 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
