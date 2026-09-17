@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-09-17
 
-Export `finviz_2026-09-17.csv` · 11616 names · generated 2026-09-17T04:10:06.931610-04:00
+Export `finviz_2026-09-16.csv` · 11616 names · generated 2026-09-17T04:10:17.053880-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -254,13 +254,13 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 6 min **STLA** European markets open higher after Fed hike as US dollar hits seven-week high (Euronews)
-- 6 min **HGTY** 'HOLY TRINITY' LEADS EXCITING HYPERCARS AND SUPERCARS AT BROAD ARROW'S SECOND ANNUAL ZOUTE CONCOURS AUCTION (GlobeNewswire)
-- 9 min **ECX** ECARX Surpasses 12 Million Vehicles Globally, Marking New Milestone in Automotive Intelligence (PR Newswire)
-- 9 min **BAC** BofA's CashPro App facilitates more than 100 billion in payments approved European companies (PR Newswire)
-- 9 min **MKL** Markel International appoints Nick Rugg to Head of Financial Institutions & Fintech - PFR & Cyber, International (PR Newswire)
+- 7 min **STLA** European markets open higher after Fed hike as US dollar hits seven-week high (Euronews)
+- 7 min **HGTY** 'HOLY TRINITY' LEADS EXCITING HYPERCARS AND SUPERCARS AT BROAD ARROW'S SECOND ANNUAL ZOUTE CONCOURS AUCTION (GlobeNewswire)
+- 10 min **ECX** ECARX Surpasses 12 Million Vehicles Globally, Marking New Milestone in Automotive Intelligence (PR Newswire)
+- 10 min **BAC** BofA's CashPro App facilitates more than 100 billion in payments approved European companies (PR Newswire)
+- 10 min **MKL** Markel International appoints Nick Rugg to Head of Financial Institutions & Fintech - PFR & Cyber, International (PR Newswire)
 - 25 min **NVDA** NVDA Stock In Focus As Huawei Announces 2 Advanced AI Chips For 2027 (Stocktwits)
-- 26 min **IQMX** IQM to Deliver Its First Quantum Computer in South America to Brazil's Eldorado Research Institute (Business Wire)
+- 27 min **IQMX** IQM to Deliver Its First Quantum Computer in South America to Brazil's Eldorado Research Institute (Business Wire)
 - 36 min **VICR** Why Is VICR Stock Jumping Over 10% Overnight? (Stocktwits)
 - 41 min **V** Meme Coin Launchpads Captured 82% of Arc's First Day Trading Volume (BeInCrypto)
 - 48 min **PDSB,MRNA,SLS,IOVA** This Tiny Biotech Is Beating MRNA, IOVA And SLS  Here's How A Billionaire Fueled Its September Rally (Stocktwits)

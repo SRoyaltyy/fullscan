@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-09-17
 
-**Generated:** 2026-09-17T04:08:54.831694-04:00 (America/New_York)
+**Generated:** 2026-09-17T04:09:04.890147-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US equity futures point to a higher open as traders await housing, labor and manufacturing data in a gap-up session
 **Prior close:** SPX —  Nasdaq —  Dow —
