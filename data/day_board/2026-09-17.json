@@ -1,0 +1,734 @@
+{
+  "date": "2026-09-17",
+  "generated_at": "2026-09-17T04:08:26.829932-04:00",
+  "overall": "FAIL",
+  "ranker_ready": false,
+  "blockers": [
+    "MISSING General predict MD `01_daily/general/2026-09-17_predict.md` \u2014 missing",
+    "MISSING Sector board JSON `01_daily/sectors/2026-09-17/_board.json` \u2014 missing",
+    "MISSING News actions JSON `01_daily/news/2026-09-17_actions.json` \u2014 missing",
+    "MISSING Quote-page digest JSON (*_finviz_digest) `01_daily/news/2026-09-17_finviz_digest.json` \u2014 missing",
+    "MISSING News judge MD `01_daily/news/2026-09-17_judge.md` \u2014 missing",
+    "MISSING Weather JSON `01_daily/weather/2026-09-17_weather.json` \u2014 missing",
+    "MISSING AB checklist enriched `data/ab_checklist/2026-09-17_ab_checklist_enriched.csv` \u2014 missing"
+  ],
+  "counts": {
+    "ok": 0,
+    "partial": 2,
+    "fail": 6,
+    "n": 8
+  },
+  "processes": [
+    {
+      "key": "postclose",
+      "name": "Post-close research",
+      "yaml": "map_heat_postclose.yml",
+      "status": "PARTIAL",
+      "inputs_ready": true,
+      "n_req_ok": 1,
+      "n_req": 2,
+      "n_opt_ok": 2,
+      "n_opt": 2,
+      "files": [
+        {
+          "key": "baseline_json",
+          "name": "Captain baseline JSON",
+          "path": "01_daily/map_heat/2026-09-17_research_baseline.json",
+          "role": "required",
+          "status": "OK",
+          "reason": "",
+          "size": 369859
+        },
+        {
+          "key": "baseline_md",
+          "name": "Captain baseline MD",
+          "path": "01_daily/map_heat/2026-09-17_research_baseline.md",
+          "role": "optional",
+          "status": "OK",
+          "reason": "",
+          "size": 37424
+        },
+        {
+          "key": "heat_json",
+          "name": "Map heat tables JSON",
+          "path": "01_daily/map_heat/2026-09-17_map_heat.json",
+          "role": "required",
+          "status": "FAIL",
+          "reason": "stale_map_heat_md",
+          "size": 0
+        },
+        {
+          "key": "heat_md",
+          "name": "Map heat tables MD",
+          "path": "01_daily/map_heat/2026-09-17_map_heat.md",
+          "role": "optional",
+          "status": "OK",
+          "reason": "",
+          "size": 16992
+        }
+      ],
+      "said": "tables on disk",
+      "bullets": []
+    },
+    {
+      "key": "finviz",
+      "name": "Finviz scrape",
+      "yaml": "finviz_preopen_scrape.yml",
+      "status": "FAIL",
+      "inputs_ready": true,
+      "n_req_ok": 0,
+      "n_req": 1,
+      "n_opt_ok": 2,
+      "n_opt": 5,
+      "files": [
+        {
+          "key": "digest_json",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
+          "path": "01_daily/news/2026-09-17_finviz_digest.json",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "digest_md",
+          "name": "Quote-page digest MD (*_finviz_digest)",
+          "path": "01_daily/news/2026-09-17_finviz_digest.md",
+          "role": "optional",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "market_digest_json",
+          "name": "Homepage warm-up JSON (*_finviz_market_digest)",
+          "path": "01_daily/news/2026-09-17_finviz_market_digest.json",
+          "role": "optional",
+          "status": "OK",
+          "reason": "",
+          "size": 5266
+        },
+        {
+          "key": "market_digest_md",
+          "name": "Homepage warm-up MD (*_finviz_market_digest)",
+          "path": "01_daily/news/2026-09-17_finviz_market_digest.md",
+          "role": "optional",
+          "status": "OK",
+          "reason": "",
+          "size": 2654
+        },
+        {
+          "key": "market_digest_close_json",
+          "name": "Close answer-key JSON (*_finviz_market_digest_close)",
+          "path": "01_daily/news/2026-09-17_finviz_market_digest_close.json",
+          "role": "optional",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "market_digest_close_md",
+          "name": "Close answer-key MD (*_finviz_market_digest_close)",
+          "path": "01_daily/news/2026-09-17_finviz_market_digest_close.md",
+          "role": "optional",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        }
+      ],
+      "said": "",
+      "bullets": []
+    },
+    {
+      "key": "preopen",
+      "name": "Pre-Open ALL",
+      "yaml": "preopen_all.yml",
+      "status": "FAIL",
+      "inputs_ready": false,
+      "n_req_ok": 0,
+      "n_req": 20,
+      "n_opt_ok": 1,
+      "n_opt": 3,
+      "files": [
+        {
+          "key": "in_digest",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
+          "path": "01_daily/news/2026-09-17_finviz_digest.json",
+          "role": "input",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "in_market_digest",
+          "name": "Homepage warm-up JSON (*_finviz_market_digest)",
+          "path": "01_daily/news/2026-09-17_finviz_market_digest.json",
+          "role": "optional",
+          "status": "OK",
+          "reason": "",
+          "size": 5266
+        },
+        {
+          "key": "in_baseline",
+          "name": "Captain baseline JSON",
+          "path": "01_daily/map_heat/2026-09-17_research_baseline.json",
+          "role": "input",
+          "status": "OK",
+          "reason": "",
+          "size": 369859
+        },
+        {
+          "key": "in_heat",
+          "name": "Map heat tables JSON",
+          "path": "01_daily/map_heat/2026-09-17_map_heat.json",
+          "role": "input",
+          "status": "FAIL",
+          "reason": "stale_map_heat_md",
+          "size": 0
+        },
+        {
+          "key": "parsed",
+          "name": "News parse JSON",
+          "path": "01_daily/news/2026-09-17_parsed.json",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "events",
+          "name": "Events JSON",
+          "path": "01_daily/events/2026-09-17_events.json",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "judge",
+          "name": "News judge MD",
+          "path": "01_daily/news/2026-09-17_judge.md",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "research_json",
+          "name": "Morning refresh JSON",
+          "path": "01_daily/map_heat/2026-09-17_research.json",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "research_md",
+          "name": "Morning refresh MD",
+          "path": "01_daily/map_heat/2026-09-17_research.md",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "actions",
+          "name": "News actions JSON",
+          "path": "01_daily/news/2026-09-17_actions.json",
+          "role": "optional",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "general",
+          "name": "General predict MD",
+          "path": "01_daily/general/2026-09-17_predict.md",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "board",
+          "name": "Sector board JSON",
+          "path": "01_daily/sectors/2026-09-17/_board.json",
+          "role": "optional",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "qc",
+          "name": "Pre-open QC JSON",
+          "path": "01_daily/2026-09-17_preopen_qc.json",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "status",
+          "name": "Pre-open status JSON",
+          "path": "01_daily/2026-09-17_preopen_status.json",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "review",
+          "name": "Grok review JSON",
+          "path": "01_daily/2026-09-17_grok_review.json",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "sector_basic_materials",
+          "name": "Sector predict \u2014 basic_materials",
+          "path": "01_daily/sectors/2026-09-17/basic_materials_predict.md",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "sector_communication_services",
+          "name": "Sector predict \u2014 communication_services",
+          "path": "01_daily/sectors/2026-09-17/communication_services_predict.md",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "sector_consumer_cyclical",
+          "name": "Sector predict \u2014 consumer_cyclical",
+          "path": "01_daily/sectors/2026-09-17/consumer_cyclical_predict.md",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "sector_consumer_defensive",
+          "name": "Sector predict \u2014 consumer_defensive",
+          "path": "01_daily/sectors/2026-09-17/consumer_defensive_predict.md",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "sector_energy",
+          "name": "Sector predict \u2014 energy",
+          "path": "01_daily/sectors/2026-09-17/energy_predict.md",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "sector_financial",
+          "name": "Sector predict \u2014 financial",
+          "path": "01_daily/sectors/2026-09-17/financial_predict.md",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "sector_healthcare",
+          "name": "Sector predict \u2014 healthcare",
+          "path": "01_daily/sectors/2026-09-17/healthcare_predict.md",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "sector_industrials",
+          "name": "Sector predict \u2014 industrials",
+          "path": "01_daily/sectors/2026-09-17/industrials_predict.md",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "sector_real_estate",
+          "name": "Sector predict \u2014 real_estate",
+          "path": "01_daily/sectors/2026-09-17/real_estate_predict.md",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "sector_technology",
+          "name": "Sector predict \u2014 technology",
+          "path": "01_daily/sectors/2026-09-17/technology_predict.md",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "sector_utilities",
+          "name": "Sector predict \u2014 utilities",
+          "path": "01_daily/sectors/2026-09-17/utilities_predict.md",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        }
+      ],
+      "said": "",
+      "bullets": []
+    },
+    {
+      "key": "weather",
+      "name": "Label + weather",
+      "yaml": "label_weather.yml",
+      "status": "FAIL",
+      "inputs_ready": false,
+      "n_req_ok": 0,
+      "n_req": 1,
+      "n_opt_ok": 0,
+      "n_opt": 0,
+      "files": [
+        {
+          "key": "in_digest",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
+          "path": "01_daily/news/2026-09-17_finviz_digest.json",
+          "role": "input",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "weather",
+          "name": "Weather JSON",
+          "path": "01_daily/weather/2026-09-17_weather.json",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        }
+      ],
+      "said": "",
+      "bullets": []
+    },
+    {
+      "key": "ab",
+      "name": "AB checklist",
+      "yaml": "ab_checklist.yml",
+      "status": "FAIL",
+      "inputs_ready": true,
+      "n_req_ok": 0,
+      "n_req": 1,
+      "n_opt_ok": 0,
+      "n_opt": 1,
+      "files": [
+        {
+          "key": "ab_raw",
+          "name": "AB checklist raw",
+          "path": "data/ab_checklist/2026-09-17_ab_checklist.csv",
+          "role": "optional",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "ab_enriched",
+          "name": "AB checklist enriched",
+          "path": "data/ab_checklist/2026-09-17_ab_checklist_enriched.csv",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        }
+      ],
+      "said": "",
+      "bullets": []
+    },
+    {
+      "key": "catalyst",
+      "name": "Catalyst dossiers",
+      "yaml": "catalyst_daily.yml",
+      "status": "FAIL",
+      "inputs_ready": false,
+      "n_req_ok": 0,
+      "n_req": 0,
+      "n_opt_ok": 0,
+      "n_opt": 1,
+      "files": [
+        {
+          "key": "in_actions",
+          "name": "News actions JSON",
+          "path": "01_daily/news/2026-09-17_actions.json",
+          "role": "input",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "in_digest",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
+          "path": "01_daily/news/2026-09-17_finviz_digest.json",
+          "role": "input",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "dossiers",
+          "name": "Catalyst dossiers JSON",
+          "path": "01_daily/catalyst/2026-09-17_dossiers.json",
+          "role": "optional",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        }
+      ],
+      "said": "",
+      "bullets": []
+    },
+    {
+      "key": "stock_book",
+      "name": "Stock Book ALL",
+      "yaml": "stock_book_all.yml",
+      "status": "FAIL",
+      "inputs_ready": false,
+      "n_req_ok": 0,
+      "n_req": 4,
+      "n_opt_ok": 1,
+      "n_opt": 3,
+      "files": [
+        {
+          "key": "in_general",
+          "name": "General predict MD",
+          "path": "01_daily/general/2026-09-17_predict.md",
+          "role": "input",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "in_board",
+          "name": "Sector board JSON",
+          "path": "01_daily/sectors/2026-09-17/_board.json",
+          "role": "input",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "in_actions",
+          "name": "News actions JSON",
+          "path": "01_daily/news/2026-09-17_actions.json",
+          "role": "input",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "in_digest",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
+          "path": "01_daily/news/2026-09-17_finviz_digest.json",
+          "role": "input",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "in_judge",
+          "name": "News judge MD",
+          "path": "01_daily/news/2026-09-17_judge.md",
+          "role": "input",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "in_weather",
+          "name": "Weather JSON",
+          "path": "01_daily/weather/2026-09-17_weather.json",
+          "role": "input",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "in_ab",
+          "name": "AB checklist enriched",
+          "path": "data/ab_checklist/2026-09-17_ab_checklist_enriched.csv",
+          "role": "input",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "join",
+          "name": "Join ranked CSV",
+          "path": "data/join/2026-09-17_ranked.csv",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "peers",
+          "name": "Peer RS CSV",
+          "path": "data/peers/2026-09-17_peer_rs.csv",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "book_json",
+          "name": "Stock book JSON",
+          "path": "data/stock_book/2026-09-17_stock_book.json",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "book_md",
+          "name": "Stock book MD",
+          "path": "01_daily/2026-09-17_stock_book.md",
+          "role": "required",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "green",
+          "name": "Green-pile JSON",
+          "path": "data/stock_book/2026-09-17_green.json",
+          "role": "optional",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "paper",
+          "name": "Paper trading MD",
+          "path": "03_scoreboard/PAPER_TRADING.md",
+          "role": "optional",
+          "status": "OK",
+          "reason": "",
+          "size": 1845
+        },
+        {
+          "key": "dashboard",
+          "name": "Dashboard HTML",
+          "path": "dashboard/index.html",
+          "role": "optional",
+          "status": "FAIL",
+          "reason": "session 2026-09-17 not in dashboard dates (last=2026-09-16)",
+          "size": 6089424
+        }
+      ],
+      "said": "",
+      "bullets": []
+    },
+    {
+      "key": "publish",
+      "name": "Dashboard / .io",
+      "yaml": "deploy-dashboard.yml",
+      "status": "PARTIAL",
+      "inputs_ready": false,
+      "n_req_ok": 1,
+      "n_req": 2,
+      "n_opt_ok": 0,
+      "n_opt": 1,
+      "files": [
+        {
+          "key": "in_book",
+          "name": "Stock book JSON",
+          "path": "data/stock_book/2026-09-17_stock_book.json",
+          "role": "input",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
+        },
+        {
+          "key": "dash_html",
+          "name": "Dashboard HTML (repo)",
+          "path": "dashboard/index.html",
+          "role": "required",
+          "status": "FAIL",
+          "reason": "session 2026-09-17 not in dashboard dates (last=2026-09-16)",
+          "size": 6089424
+        },
+        {
+          "key": "paper",
+          "name": "Paper trading MD",
+          "path": "03_scoreboard/PAPER_TRADING.md",
+          "role": "required",
+          "status": "OK",
+          "reason": "",
+          "size": 1845
+        },
+        {
+          "key": "pages",
+          "name": "Live GitHub Pages",
+          "path": "https://sroyaltyy.github.io/fullscan/dashboard/",
+          "role": "optional",
+          "status": "SKIP",
+          "reason": "day-board reads main disk, not live Pages",
+          "size": 0
+        }
+      ],
+      "said": "",
+      "bullets": []
+    }
+  ],
+  "selections": {
+    "buy_1d": [],
+    "sell_1d": [],
+    "flatten": {},
+    "general": {},
+    "sectors": {},
+    "news": {},
+    "weather": {}
+  },
+  "lands": [
+    {
+      "key": "finviz_market_digest",
+      "title": "Finviz homepage market digest",
+      "date": "2026-09-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T04:08:26.664072-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-17_finviz_market_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 5266,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-09-17_finviz_market_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 2654,
+          "preview": "# Finviz homepage market digest \u2014 2026-09-17\n**Generated:** 2026-09-17T04:08:26.644312-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point to a higher open as traders await housing, labor and manufacturing data in a gap-up session\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** DJT, IPHA, UPXI, VFS, DAVA\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-17\n**Clock use:** `same_morning`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-17\n**Generated:** 2026-09-17T04:08:26.644312-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point to a higher open as traders await housing, labor and manufacturing data in a gap-up session\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** DJT, IPHA, UPXI, VFS, DAVA\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-17\n**Clock use:** `same_morning`"
+    }
+  ],
+  "href": {
+    "pages": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/",
+    "readiness_action": "https://github.com/SRoyaltyy/fullscan/actions/workflows/stock_book_diag.yml",
+    "factor_mine": "https://sroyaltyy.github.io/fullscan/dashboard/factor-mine/",
+    "paper": "https://sroyaltyy.github.io/fullscan/dashboard/"
+  }
+}
