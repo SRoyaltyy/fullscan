@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T05:14:03.650039-04:00",
+  "generated_at": "2026-09-17T06:52:09.805851-04:00",
   "featured": [
     "combo_sh_5050_shared",
     "combo_jse_333_shared",
@@ -71,13 +71,13 @@
   ],
   "quote": {
     "src": "session_export",
-    "at": "2026-09-17T05:14:02.181504-04:00",
+    "at": "2026-09-17T06:52:08.243788-04:00",
     "after_open": false,
-    "n": 11622,
+    "n": 11628,
     "error": null,
     "live": false
   },
-  "banner": "Elite export as of 05:14 ET (not live)",
+  "banner": "Elite export as of 06:52 ET (not live)",
   "clock_rule": "px is Finviz Elite Price from a fresh post-09:30 Overview export when live is allowed. Theme Radar close dump and yesterday Price are never live.",
   "sleeves": {
     "combo_sh_5050_shared": {
@@ -90,14 +90,14 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 14.55,
+          "px": 14.26,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 14.42,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 14.26,
           "open_src": "session_open",
-          "vs_open_pct": 0.902,
-          "vs_entry_pct": 1.677,
-          "pnl": 59.28
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.349,
+          "pnl": -12.35
         },
         {
           "ticker": "BLFS",
@@ -106,14 +106,14 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 36.29,
+          "px": 36.11,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 36.29,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 36.11,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": -0.466,
-          "pnl": -16.32
+          "vs_entry_pct": -0.96,
+          "pnl": -33.6
         },
         {
           "ticker": "IQV",
@@ -122,14 +122,14 @@
           "entry": 270.89,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 270.35,
+          "px": 268.82,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 272.15,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 268.82,
           "open_src": "session_open",
-          "vs_open_pct": -0.661,
-          "vs_entry_pct": -0.199,
-          "pnl": -7.02
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.764,
+          "pnl": -26.91
         },
         {
           "ticker": "RDNT",
@@ -138,14 +138,14 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 77.97,
+          "px": 75.78,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 77.36,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 75.78,
           "open_src": "session_open",
-          "vs_open_pct": 0.789,
-          "vs_entry_pct": 1.102,
-          "pnl": 38.25
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -1.738,
+          "pnl": -60.3
         }
       ]
     },
@@ -179,14 +179,14 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 14.55,
+          "px": 14.26,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 14.42,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 14.26,
           "open_src": "session_open",
-          "vs_open_pct": 0.902,
-          "vs_entry_pct": 1.677,
-          "pnl": 58.8
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.349,
+          "pnl": -12.25
         },
         {
           "ticker": "BLFS",
@@ -195,14 +195,14 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 36.29,
+          "px": 36.11,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 36.29,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 36.11,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": -0.466,
-          "pnl": -16.32
+          "vs_entry_pct": -0.96,
+          "pnl": -33.6
         },
         {
           "ticker": "IQV",
@@ -211,14 +211,14 @@
           "entry": 270.89,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 270.35,
+          "px": 268.82,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 272.15,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 268.82,
           "open_src": "session_open",
-          "vs_open_pct": -0.661,
-          "vs_entry_pct": -0.199,
-          "pnl": -6.48
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.764,
+          "pnl": -24.84
         },
         {
           "ticker": "RDNT",
@@ -227,14 +227,14 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 77.97,
+          "px": 75.78,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 77.36,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 75.78,
           "open_src": "session_open",
-          "vs_open_pct": 0.789,
-          "vs_entry_pct": 1.102,
-          "pnl": 38.25
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -1.738,
+          "pnl": -60.3
         }
       ]
     },
@@ -248,14 +248,14 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 14.55,
+          "px": 14.26,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 14.42,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 14.26,
           "open_src": "session_open",
-          "vs_open_pct": 0.902,
-          "vs_entry_pct": 1.677,
-          "pnl": 56.16
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.349,
+          "pnl": -11.7
         },
         {
           "ticker": "BLFS",
@@ -264,14 +264,14 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 36.29,
+          "px": 36.11,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 36.29,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 36.11,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": -0.466,
-          "pnl": -15.47
+          "vs_entry_pct": -0.96,
+          "pnl": -31.85
         },
         {
           "ticker": "IQV",
@@ -280,14 +280,14 @@
           "entry": 270.89,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 270.35,
+          "px": 268.82,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 272.15,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 268.82,
           "open_src": "session_open",
-          "vs_open_pct": -0.661,
-          "vs_entry_pct": -0.199,
-          "pnl": -6.48
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.764,
+          "pnl": -24.84
         },
         {
           "ticker": "RDNT",
@@ -296,14 +296,14 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 77.97,
+          "px": 75.78,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 77.36,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 75.78,
           "open_src": "session_open",
-          "vs_open_pct": 0.789,
-          "vs_entry_pct": 1.102,
-          "pnl": 36.55
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -1.738,
+          "pnl": -57.62
         }
       ]
     },
@@ -317,14 +317,14 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 14.55,
+          "px": 14.26,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 14.42,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 14.26,
           "open_src": "session_open",
-          "vs_open_pct": 0.902,
-          "vs_entry_pct": 1.677,
-          "pnl": 55.2
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.349,
+          "pnl": -11.5
         },
         {
           "ticker": "BLFS",
@@ -333,14 +333,14 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 36.29,
+          "px": 36.11,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 36.29,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 36.11,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": -0.466,
-          "pnl": -15.3
+          "vs_entry_pct": -0.96,
+          "pnl": -31.5
         },
         {
           "ticker": "IQV",
@@ -349,14 +349,14 @@
           "entry": 270.89,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 270.35,
+          "px": 268.82,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 272.15,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 268.82,
           "open_src": "session_open",
-          "vs_open_pct": -0.661,
-          "vs_entry_pct": -0.199,
-          "pnl": -6.48
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.764,
+          "pnl": -24.84
         },
         {
           "ticker": "RDNT",
@@ -365,14 +365,14 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 77.97,
+          "px": 75.78,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 77.36,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 75.78,
           "open_src": "session_open",
-          "vs_open_pct": 0.789,
-          "vs_entry_pct": 1.102,
-          "pnl": 35.7
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -1.738,
+          "pnl": -56.28
         }
       ]
     },
@@ -386,14 +386,14 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 14.55,
+          "px": 14.26,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 14.42,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 14.26,
           "open_src": "session_open",
-          "vs_open_pct": 0.902,
-          "vs_entry_pct": 1.677,
-          "pnl": 55.2
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.349,
+          "pnl": -11.5
         },
         {
           "ticker": "BLFS",
@@ -402,14 +402,14 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 36.29,
+          "px": 36.11,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 36.29,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 36.11,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": -0.466,
-          "pnl": -15.3
+          "vs_entry_pct": -0.96,
+          "pnl": -31.5
         },
         {
           "ticker": "IQV",
@@ -418,14 +418,14 @@
           "entry": 270.89,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 270.35,
+          "px": 268.82,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 272.15,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 268.82,
           "open_src": "session_open",
-          "vs_open_pct": -0.661,
-          "vs_entry_pct": -0.199,
-          "pnl": -6.48
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.764,
+          "pnl": -24.84
         },
         {
           "ticker": "RDNT",
@@ -434,14 +434,14 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 77.97,
+          "px": 75.78,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 77.36,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 75.78,
           "open_src": "session_open",
-          "vs_open_pct": 0.789,
-          "vs_entry_pct": 1.102,
-          "pnl": 35.7
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -1.738,
+          "pnl": -56.28
         }
       ]
     },
@@ -467,14 +467,14 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 14.55,
+          "px": 14.26,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 14.42,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 14.26,
           "open_src": "session_open",
-          "vs_open_pct": 0.902,
-          "vs_entry_pct": 1.677,
-          "pnl": 54.0
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.349,
+          "pnl": -11.25
         },
         {
           "ticker": "BLFS",
@@ -483,14 +483,14 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 36.29,
+          "px": 36.11,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 36.29,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 36.11,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": -0.466,
-          "pnl": -14.96
+          "vs_entry_pct": -0.96,
+          "pnl": -30.8
         },
         {
           "ticker": "IQV",
@@ -499,14 +499,14 @@
           "entry": 270.89,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 270.35,
+          "px": 268.82,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 272.15,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 268.82,
           "open_src": "session_open",
-          "vs_open_pct": -0.661,
-          "vs_entry_pct": -0.199,
-          "pnl": -5.94
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.764,
+          "pnl": -22.77
         },
         {
           "ticker": "RDNT",
@@ -515,14 +515,14 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 77.97,
+          "px": 75.78,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 77.36,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 75.78,
           "open_src": "session_open",
-          "vs_open_pct": 0.789,
-          "vs_entry_pct": 1.102,
-          "pnl": 34.85
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -1.738,
+          "pnl": -54.94
         }
       ]
     },
@@ -536,14 +536,14 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 14.55,
+          "px": 14.26,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 14.42,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 14.26,
           "open_src": "session_open",
-          "vs_open_pct": 0.902,
-          "vs_entry_pct": 1.677,
-          "pnl": 54.0
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.349,
+          "pnl": -11.25
         },
         {
           "ticker": "BLFS",
@@ -552,14 +552,14 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 36.29,
+          "px": 36.11,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 36.29,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 36.11,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": -0.466,
-          "pnl": -14.96
+          "vs_entry_pct": -0.96,
+          "pnl": -30.8
         },
         {
           "ticker": "IQV",
@@ -568,14 +568,14 @@
           "entry": 270.89,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 270.35,
+          "px": 268.82,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 272.15,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 268.82,
           "open_src": "session_open",
-          "vs_open_pct": -0.661,
-          "vs_entry_pct": -0.199,
-          "pnl": -5.94
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.764,
+          "pnl": -22.77
         },
         {
           "ticker": "RDNT",
@@ -584,14 +584,14 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 77.97,
+          "px": 75.78,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 77.36,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 75.78,
           "open_src": "session_open",
-          "vs_open_pct": 0.789,
-          "vs_entry_pct": 1.102,
-          "pnl": 34.85
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -1.738,
+          "pnl": -54.94
         }
       ]
     },
@@ -605,14 +605,14 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 14.55,
+          "px": 14.26,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 14.42,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 14.26,
           "open_src": "session_open",
-          "vs_open_pct": 0.902,
-          "vs_entry_pct": 1.677,
-          "pnl": 54.0
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.349,
+          "pnl": -11.25
         },
         {
           "ticker": "BLFS",
@@ -621,14 +621,14 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 36.29,
+          "px": 36.11,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 36.29,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 36.11,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": -0.466,
-          "pnl": -14.96
+          "vs_entry_pct": -0.96,
+          "pnl": -30.8
         },
         {
           "ticker": "IQV",
@@ -637,14 +637,14 @@
           "entry": 270.89,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 270.35,
+          "px": 268.82,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 272.15,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 268.82,
           "open_src": "session_open",
-          "vs_open_pct": -0.661,
-          "vs_entry_pct": -0.199,
-          "pnl": -5.94
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.764,
+          "pnl": -22.77
         },
         {
           "ticker": "RDNT",
@@ -653,14 +653,14 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 77.97,
+          "px": 75.78,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 77.36,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 75.78,
           "open_src": "session_open",
-          "vs_open_pct": 0.789,
-          "vs_entry_pct": 1.102,
-          "pnl": 34.85
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -1.738,
+          "pnl": -54.94
         }
       ]
     },
@@ -678,14 +678,14 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 14.55,
+          "px": 14.26,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 14.42,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 14.26,
           "open_src": "session_open",
-          "vs_open_pct": 0.902,
-          "vs_entry_pct": 1.677,
-          "pnl": 53.76
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.349,
+          "pnl": -11.2
         },
         {
           "ticker": "BLFS",
@@ -694,14 +694,14 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 36.29,
+          "px": 36.11,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 36.29,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 36.11,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": -0.466,
-          "pnl": -14.96
+          "vs_entry_pct": -0.96,
+          "pnl": -30.8
         },
         {
           "ticker": "IQV",
@@ -710,14 +710,14 @@
           "entry": 270.89,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 270.35,
+          "px": 268.82,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 272.15,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 268.82,
           "open_src": "session_open",
-          "vs_open_pct": -0.661,
-          "vs_entry_pct": -0.199,
-          "pnl": -5.94
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.764,
+          "pnl": -22.77
         },
         {
           "ticker": "RDNT",
@@ -726,14 +726,14 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 77.97,
+          "px": 75.78,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 77.36,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 75.78,
           "open_src": "session_open",
-          "vs_open_pct": 0.789,
-          "vs_entry_pct": 1.102,
-          "pnl": 34.85
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -1.738,
+          "pnl": -54.94
         }
       ]
     },
@@ -763,14 +763,14 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 14.55,
+          "px": 14.26,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 14.42,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 14.26,
           "open_src": "session_open",
-          "vs_open_pct": 0.902,
-          "vs_entry_pct": 1.677,
-          "pnl": 53.04
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.349,
+          "pnl": -11.05
         },
         {
           "ticker": "BLFS",
@@ -779,14 +779,14 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 36.29,
+          "px": 36.11,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 36.29,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 36.11,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": -0.466,
-          "pnl": -14.62
+          "vs_entry_pct": -0.96,
+          "pnl": -30.1
         },
         {
           "ticker": "IQV",
@@ -795,14 +795,14 @@
           "entry": 270.89,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 270.35,
+          "px": 268.82,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 272.15,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 268.82,
           "open_src": "session_open",
-          "vs_open_pct": -0.661,
-          "vs_entry_pct": -0.199,
-          "pnl": -5.94
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.764,
+          "pnl": -22.77
         },
         {
           "ticker": "RDNT",
@@ -811,14 +811,14 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 77.97,
+          "px": 75.78,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 77.36,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 75.78,
           "open_src": "session_open",
-          "vs_open_pct": 0.789,
-          "vs_entry_pct": 1.102,
-          "pnl": 34.85
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -1.738,
+          "pnl": -54.94
         }
       ]
     },
@@ -832,14 +832,14 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 14.55,
+          "px": 14.26,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 14.42,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 14.26,
           "open_src": "session_open",
-          "vs_open_pct": 0.902,
-          "vs_entry_pct": 1.677,
-          "pnl": 53.04
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.349,
+          "pnl": -11.05
         },
         {
           "ticker": "BLFS",
@@ -848,14 +848,14 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 36.29,
+          "px": 36.11,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 36.29,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 36.11,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": -0.466,
-          "pnl": -14.62
+          "vs_entry_pct": -0.96,
+          "pnl": -30.1
         },
         {
           "ticker": "IQV",
@@ -864,14 +864,14 @@
           "entry": 270.89,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 270.35,
+          "px": 268.82,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 272.15,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 268.82,
           "open_src": "session_open",
-          "vs_open_pct": -0.661,
-          "vs_entry_pct": -0.199,
-          "pnl": -5.94
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.764,
+          "pnl": -22.77
         },
         {
           "ticker": "RDNT",
@@ -880,14 +880,14 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 77.97,
+          "px": 75.78,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 77.36,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 75.78,
           "open_src": "session_open",
-          "vs_open_pct": 0.789,
-          "vs_entry_pct": 1.102,
-          "pnl": 34.85
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -1.738,
+          "pnl": -54.94
         }
       ]
     },
@@ -901,14 +901,14 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 14.55,
+          "px": 14.26,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 14.42,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 14.26,
           "open_src": "session_open",
-          "vs_open_pct": 0.902,
-          "vs_entry_pct": 1.677,
-          "pnl": 53.04
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.349,
+          "pnl": -11.05
         },
         {
           "ticker": "BLFS",
@@ -917,14 +917,14 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 36.29,
+          "px": 36.11,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 36.29,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 36.11,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": -0.466,
-          "pnl": -14.62
+          "vs_entry_pct": -0.96,
+          "pnl": -30.1
         },
         {
           "ticker": "IQV",
@@ -933,14 +933,14 @@
           "entry": 270.89,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 270.35,
+          "px": 268.82,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 272.15,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 268.82,
           "open_src": "session_open",
-          "vs_open_pct": -0.661,
-          "vs_entry_pct": -0.199,
-          "pnl": -5.94
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.764,
+          "pnl": -22.77
         },
         {
           "ticker": "RDNT",
@@ -949,14 +949,14 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 77.97,
+          "px": 75.78,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 77.36,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 75.78,
           "open_src": "session_open",
-          "vs_open_pct": 0.789,
-          "vs_entry_pct": 1.102,
-          "pnl": 34.85
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -1.738,
+          "pnl": -54.94
         }
       ]
     },
@@ -970,14 +970,14 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 14.55,
+          "px": 14.26,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 14.42,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 14.26,
           "open_src": "session_open",
-          "vs_open_pct": 0.902,
-          "vs_entry_pct": 1.677,
-          "pnl": 52.8
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.349,
+          "pnl": -11.0
         },
         {
           "ticker": "BLFS",
@@ -986,14 +986,14 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 36.29,
+          "px": 36.11,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 36.29,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 36.11,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": -0.466,
-          "pnl": -14.62
+          "vs_entry_pct": -0.96,
+          "pnl": -30.1
         },
         {
           "ticker": "IQV",
@@ -1002,14 +1002,14 @@
           "entry": 270.89,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 270.35,
+          "px": 268.82,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 272.15,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 268.82,
           "open_src": "session_open",
-          "vs_open_pct": -0.661,
-          "vs_entry_pct": -0.199,
-          "pnl": -5.94
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.764,
+          "pnl": -22.77
         },
         {
           "ticker": "RDNT",
@@ -1018,14 +1018,14 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 77.97,
+          "px": 75.78,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 77.36,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 75.78,
           "open_src": "session_open",
-          "vs_open_pct": 0.789,
-          "vs_entry_pct": 1.102,
-          "pnl": 34.0
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -1.738,
+          "pnl": -53.6
         }
       ]
     },
@@ -1039,14 +1039,14 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 14.55,
+          "px": 14.26,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 14.42,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 14.26,
           "open_src": "session_open",
-          "vs_open_pct": 0.902,
-          "vs_entry_pct": 1.677,
-          "pnl": 52.56
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.349,
+          "pnl": -10.95
         },
         {
           "ticker": "BLFS",
@@ -1055,14 +1055,14 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 36.29,
+          "px": 36.11,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 36.29,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 36.11,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": -0.466,
-          "pnl": -14.62
+          "vs_entry_pct": -0.96,
+          "pnl": -30.1
         },
         {
           "ticker": "IQV",
@@ -1071,14 +1071,14 @@
           "entry": 270.89,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 270.35,
+          "px": 268.82,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 272.15,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 268.82,
           "open_src": "session_open",
-          "vs_open_pct": -0.661,
-          "vs_entry_pct": -0.199,
-          "pnl": -5.94
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.764,
+          "pnl": -22.77
         },
         {
           "ticker": "RDNT",
@@ -1087,14 +1087,14 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 77.97,
+          "px": 75.78,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 77.36,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 75.78,
           "open_src": "session_open",
-          "vs_open_pct": 0.789,
-          "vs_entry_pct": 1.102,
-          "pnl": 34.0
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -1.738,
+          "pnl": -53.6
         }
       ]
     },
@@ -1112,14 +1112,14 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 14.55,
+          "px": 14.26,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 14.42,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 14.26,
           "open_src": "session_open",
-          "vs_open_pct": 0.902,
-          "vs_entry_pct": 1.677,
-          "pnl": 51.6
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.349,
+          "pnl": -10.75
         },
         {
           "ticker": "BLFS",
@@ -1128,14 +1128,14 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 36.29,
+          "px": 36.11,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 36.29,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 36.11,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": -0.466,
-          "pnl": -14.28
+          "vs_entry_pct": -0.96,
+          "pnl": -29.4
         },
         {
           "ticker": "IQV",
@@ -1144,14 +1144,14 @@
           "entry": 270.89,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 270.35,
+          "px": 268.82,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 272.15,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 268.82,
           "open_src": "session_open",
-          "vs_open_pct": -0.661,
-          "vs_entry_pct": -0.199,
-          "pnl": -5.94
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.764,
+          "pnl": -22.77
         },
         {
           "ticker": "RDNT",
@@ -1160,14 +1160,14 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 77.97,
+          "px": 75.78,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 77.36,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 75.78,
           "open_src": "session_open",
-          "vs_open_pct": 0.789,
-          "vs_entry_pct": 1.102,
-          "pnl": 34.0
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -1.738,
+          "pnl": -53.6
         }
       ]
     },
@@ -1181,14 +1181,14 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 14.55,
+          "px": 14.26,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 14.42,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 14.26,
           "open_src": "session_open",
-          "vs_open_pct": 0.902,
-          "vs_entry_pct": 1.677,
-          "pnl": 18.0
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.349,
+          "pnl": -3.75
         },
         {
           "ticker": "BLFS",
@@ -1197,14 +1197,14 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 36.29,
+          "px": 36.11,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 36.29,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 36.11,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": -0.466,
-          "pnl": -4.93
+          "vs_entry_pct": -0.96,
+          "pnl": -10.15
         },
         {
           "ticker": "IQV",
@@ -1213,14 +1213,14 @@
           "entry": 270.89,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 270.35,
+          "px": 268.82,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 272.15,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 268.82,
           "open_src": "session_open",
-          "vs_open_pct": -0.661,
-          "vs_entry_pct": -0.199,
-          "pnl": -1.62
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.764,
+          "pnl": -6.21
         },
         {
           "ticker": "RDNT",
@@ -1229,14 +1229,14 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 77.97,
+          "px": 75.78,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 77.36,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 75.78,
           "open_src": "session_open",
-          "vs_open_pct": 0.789,
-          "vs_entry_pct": 1.102,
-          "pnl": 11.9
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -1.738,
+          "pnl": -18.76
         }
       ]
     },
@@ -1250,14 +1250,14 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 14.55,
+          "px": 14.26,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 14.42,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 14.26,
           "open_src": "session_open",
-          "vs_open_pct": 0.902,
-          "vs_entry_pct": 1.677,
-          "pnl": 50.88
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.349,
+          "pnl": -10.6
         },
         {
           "ticker": "BLFS",
@@ -1266,14 +1266,14 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 36.29,
+          "px": 36.11,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 36.29,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 36.11,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": -0.466,
-          "pnl": -14.11
+          "vs_entry_pct": -0.96,
+          "pnl": -29.05
         },
         {
           "ticker": "IQV",
@@ -1282,14 +1282,14 @@
           "entry": 270.89,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 270.35,
+          "px": 268.82,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 272.15,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 268.82,
           "open_src": "session_open",
-          "vs_open_pct": -0.661,
-          "vs_entry_pct": -0.199,
-          "pnl": -5.94
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.764,
+          "pnl": -22.77
         },
         {
           "ticker": "RDNT",
@@ -1298,14 +1298,14 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 77.97,
+          "px": 75.78,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 77.36,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 75.78,
           "open_src": "session_open",
-          "vs_open_pct": 0.789,
-          "vs_entry_pct": 1.102,
-          "pnl": 33.15
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -1.738,
+          "pnl": -52.26
         }
       ]
     },
@@ -1319,14 +1319,14 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 14.55,
+          "px": 14.26,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 14.42,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 14.26,
           "open_src": "session_open",
-          "vs_open_pct": 0.902,
-          "vs_entry_pct": 1.677,
-          "pnl": 55.68
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.349,
+          "pnl": -11.6
         },
         {
           "ticker": "BLFS",
@@ -1335,14 +1335,14 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 36.29,
+          "px": 36.11,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 36.29,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 36.11,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": -0.466,
-          "pnl": -15.47
+          "vs_entry_pct": -0.96,
+          "pnl": -31.85
         },
         {
           "ticker": "IQV",
@@ -1351,14 +1351,14 @@
           "entry": 270.89,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 270.35,
+          "px": 268.82,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 272.15,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 268.82,
           "open_src": "session_open",
-          "vs_open_pct": -0.661,
-          "vs_entry_pct": -0.199,
-          "pnl": -6.48
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.764,
+          "pnl": -24.84
         },
         {
           "ticker": "RDNT",
@@ -1367,14 +1367,14 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": "union_hot_n4_h1",
-          "px": 77.97,
+          "px": 75.78,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 77.36,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 75.78,
           "open_src": "session_open",
-          "vs_open_pct": 0.789,
-          "vs_entry_pct": 1.102,
-          "pnl": 36.55
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -1.738,
+          "pnl": -57.62
         }
       ]
     },
@@ -1448,14 +1448,14 @@
           "entry": 164.43,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 140.44,
+          "px": 146.64,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 140.9,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 145.95,
           "open_src": "session_open",
-          "vs_open_pct": -0.326,
-          "vs_entry_pct": -14.59,
-          "pnl": -23.99
+          "vs_open_pct": 0.473,
+          "vs_entry_pct": -10.819,
+          "pnl": -17.79
         },
         {
           "ticker": "AMTX",
@@ -1466,7 +1466,7 @@
           "owner": null,
           "px": 1.9,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
           "open_px": 1.9,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
@@ -1480,14 +1480,14 @@
           "entry": 242.17,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 254.69,
+          "px": 250.53,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 256.48,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 252.01,
           "open_src": "session_open",
-          "vs_open_pct": -0.698,
-          "vs_entry_pct": 5.17,
-          "pnl": 12.52
+          "vs_open_pct": -0.587,
+          "vs_entry_pct": 3.452,
+          "pnl": 8.36
         },
         {
           "ticker": "RH",
@@ -1496,14 +1496,14 @@
           "entry": 135.71,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 126.64,
+          "px": 129.83,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 127.52,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 129.67,
           "open_src": "session_open",
-          "vs_open_pct": -0.69,
-          "vs_entry_pct": -6.683,
-          "pnl": -18.14
+          "vs_open_pct": 0.123,
+          "vs_entry_pct": -4.333,
+          "pnl": -11.76
         }
       ]
     },
@@ -1517,14 +1517,14 @@
           "entry": 270.89,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 270.35,
+          "px": 268.82,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 272.15,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 268.82,
           "open_src": "session_open",
-          "vs_open_pct": -0.661,
-          "vs_entry_pct": -0.199,
-          "pnl": -4.32
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.764,
+          "pnl": -16.56
         },
         {
           "ticker": "RDNT",
@@ -1533,14 +1533,14 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 77.97,
+          "px": 75.78,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 77.36,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 75.78,
           "open_src": "session_open",
-          "vs_open_pct": 0.789,
-          "vs_entry_pct": 1.102,
-          "pnl": 25.5
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -1.738,
+          "pnl": -40.2
         },
         {
           "ticker": "AVAH",
@@ -1549,14 +1549,14 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 14.55,
+          "px": 14.26,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 14.42,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 14.26,
           "open_src": "session_open",
-          "vs_open_pct": 0.902,
-          "vs_entry_pct": 1.677,
-          "pnl": 39.12
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.349,
+          "pnl": -8.15
         },
         {
           "ticker": "BLFS",
@@ -1565,14 +1565,14 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 36.29,
+          "px": 36.11,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 36.29,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 36.11,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": -0.466,
-          "pnl": -10.88
+          "vs_entry_pct": -0.96,
+          "pnl": -22.4
         }
       ]
     },
@@ -1622,14 +1622,14 @@
           "entry": 16.28,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 16.29,
+          "px": 17.06,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 16.1,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 16.94,
           "open_src": "session_open",
-          "vs_open_pct": 1.18,
-          "vs_entry_pct": 0.061,
-          "pnl": 1.09
+          "vs_open_pct": 0.708,
+          "vs_entry_pct": 4.791,
+          "pnl": 85.02
         },
         {
           "ticker": "OVID",
@@ -1638,14 +1638,14 @@
           "entry": 2.73,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 2.75,
+          "px": 2.68,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 2.75,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 2.68,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": 0.733,
-          "pnl": 13.08
+          "vs_entry_pct": -1.832,
+          "pnl": -32.7
         },
         {
           "ticker": "SANM",
@@ -1654,14 +1654,14 @@
           "entry": 206.84,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 193.0,
+          "px": 198.0,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 192.85,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 198.0,
           "open_src": "session_open",
-          "vs_open_pct": 0.078,
-          "vs_entry_pct": -6.691,
-          "pnl": -110.72
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -4.274,
+          "pnl": -70.72
         },
         {
           "ticker": "ORCL",
@@ -1670,14 +1670,14 @@
           "entry": 164.43,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 140.44,
+          "px": 146.64,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 140.9,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 145.95,
           "open_src": "session_open",
-          "vs_open_pct": -0.326,
-          "vs_entry_pct": -14.59,
-          "pnl": -239.9
+          "vs_open_pct": 0.473,
+          "vs_entry_pct": -10.819,
+          "pnl": -177.9
         },
         {
           "ticker": "NVT",
@@ -1688,10 +1688,10 @@
           "owner": null,
           "px": 150.0,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 149.91,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 150.5,
           "open_src": "session_open",
-          "vs_open_pct": 0.06,
+          "vs_open_pct": -0.332,
           "vs_entry_pct": -4.931,
           "pnl": -85.58
         },
@@ -1702,14 +1702,14 @@
           "entry": 56.09,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 51.2,
+          "px": 52.5,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 50.78,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 52.21,
           "open_src": "session_open",
-          "vs_open_pct": 0.827,
-          "vs_entry_pct": -8.718,
-          "pnl": -151.59
+          "vs_open_pct": 0.555,
+          "vs_entry_pct": -6.4,
+          "pnl": -111.29
         },
         {
           "ticker": "RDNT",
@@ -1718,14 +1718,14 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 77.97,
+          "px": 75.78,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 77.36,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 75.78,
           "open_src": "session_open",
-          "vs_open_pct": 0.789,
-          "vs_entry_pct": 1.102,
-          "pnl": 0.85
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -1.738,
+          "pnl": -1.34
         },
         {
           "ticker": "AVAH",
@@ -1734,14 +1734,14 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 14.55,
+          "px": 14.26,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 14.42,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 14.26,
           "open_src": "session_open",
-          "vs_open_pct": 0.902,
-          "vs_entry_pct": 1.677,
-          "pnl": 1.92
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.349,
+          "pnl": -0.4
         },
         {
           "ticker": "BLFS",
@@ -1750,14 +1750,14 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 36.29,
+          "px": 36.11,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 36.29,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 36.11,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": -0.466,
-          "pnl": -0.51
+          "vs_entry_pct": -0.96,
+          "pnl": -1.05
         }
       ]
     },
@@ -1771,14 +1771,14 @@
           "entry": 16.28,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 16.29,
+          "px": 17.06,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 16.1,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 16.94,
           "open_src": "session_open",
-          "vs_open_pct": 1.18,
-          "vs_entry_pct": 0.061,
-          "pnl": 1.81
+          "vs_open_pct": 0.708,
+          "vs_entry_pct": 4.791,
+          "pnl": 141.18
         },
         {
           "ticker": "OVID",
@@ -1787,14 +1787,14 @@
           "entry": 2.73,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 2.75,
+          "px": 2.68,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 2.75,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 2.68,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": 0.733,
-          "pnl": 18.06
+          "vs_entry_pct": -1.832,
+          "pnl": -45.15
         },
         {
           "ticker": "SANM",
@@ -1803,14 +1803,14 @@
           "entry": 206.84,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 193.0,
+          "px": 198.0,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 192.85,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 198.0,
           "open_src": "session_open",
-          "vs_open_pct": 0.078,
-          "vs_entry_pct": -6.691,
-          "pnl": -124.56
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -4.274,
+          "pnl": -79.56
         },
         {
           "ticker": "ORCL",
@@ -1819,14 +1819,14 @@
           "entry": 164.43,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 140.44,
+          "px": 146.64,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 140.9,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 145.95,
           "open_src": "session_open",
-          "vs_open_pct": -0.326,
-          "vs_entry_pct": -14.59,
-          "pnl": -215.91
+          "vs_open_pct": 0.473,
+          "vs_entry_pct": -10.819,
+          "pnl": -160.11
         },
         {
           "ticker": "NVT",
@@ -1837,10 +1837,10 @@
           "owner": null,
           "px": 150.0,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 149.91,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 150.5,
           "open_src": "session_open",
-          "vs_open_pct": 0.06,
+          "vs_open_pct": -0.332,
           "vs_entry_pct": -4.931,
           "pnl": -46.68
         },
@@ -1851,14 +1851,14 @@
           "entry": 56.09,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 51.2,
+          "px": 52.5,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 50.78,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 52.21,
           "open_src": "session_open",
-          "vs_open_pct": 0.827,
-          "vs_entry_pct": -8.718,
-          "pnl": -39.12
+          "vs_open_pct": 0.555,
+          "vs_entry_pct": -6.4,
+          "pnl": -28.72
         },
         {
           "ticker": "RDNT",
@@ -1867,14 +1867,14 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 77.97,
+          "px": 75.78,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 77.36,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 75.78,
           "open_src": "session_open",
-          "vs_open_pct": 0.789,
-          "vs_entry_pct": 1.102,
-          "pnl": 0.85
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -1.738,
+          "pnl": -1.34
         },
         {
           "ticker": "AVAH",
@@ -1883,14 +1883,14 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 14.55,
+          "px": 14.26,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 14.42,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 14.26,
           "open_src": "session_open",
-          "vs_open_pct": 0.902,
-          "vs_entry_pct": 1.677,
-          "pnl": 0.96
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.349,
+          "pnl": -0.2
         }
       ]
     },
@@ -1904,14 +1904,14 @@
           "entry": 16.28,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 16.29,
+          "px": 17.06,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 16.1,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 16.94,
           "open_src": "session_open",
-          "vs_open_pct": 1.18,
-          "vs_entry_pct": 0.061,
-          "pnl": 1.09
+          "vs_open_pct": 0.708,
+          "vs_entry_pct": 4.791,
+          "pnl": 85.02
         },
         {
           "ticker": "OVID",
@@ -1920,14 +1920,14 @@
           "entry": 2.73,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 2.75,
+          "px": 2.68,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 2.75,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 2.68,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": 0.733,
-          "pnl": 13.08
+          "vs_entry_pct": -1.832,
+          "pnl": -32.7
         },
         {
           "ticker": "SANM",
@@ -1936,14 +1936,14 @@
           "entry": 206.84,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 193.0,
+          "px": 198.0,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 192.85,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 198.0,
           "open_src": "session_open",
-          "vs_open_pct": 0.078,
-          "vs_entry_pct": -6.691,
-          "pnl": -110.72
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -4.274,
+          "pnl": -70.72
         },
         {
           "ticker": "ORCL",
@@ -1952,14 +1952,14 @@
           "entry": 164.43,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 140.44,
+          "px": 146.64,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 140.9,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 145.95,
           "open_src": "session_open",
-          "vs_open_pct": -0.326,
-          "vs_entry_pct": -14.59,
-          "pnl": -239.9
+          "vs_open_pct": 0.473,
+          "vs_entry_pct": -10.819,
+          "pnl": -177.9
         },
         {
           "ticker": "NVT",
@@ -1970,10 +1970,10 @@
           "owner": null,
           "px": 150.0,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 149.91,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 150.5,
           "open_src": "session_open",
-          "vs_open_pct": 0.06,
+          "vs_open_pct": -0.332,
           "vs_entry_pct": -4.931,
           "pnl": -85.58
         },
@@ -1984,14 +1984,14 @@
           "entry": 56.09,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 51.2,
+          "px": 52.5,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 50.78,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 52.21,
           "open_src": "session_open",
-          "vs_open_pct": 0.827,
-          "vs_entry_pct": -8.718,
-          "pnl": -151.59
+          "vs_open_pct": 0.555,
+          "vs_entry_pct": -6.4,
+          "pnl": -111.29
         },
         {
           "ticker": "RDNT",
@@ -2000,14 +2000,14 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 77.97,
+          "px": 75.78,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 77.36,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 75.78,
           "open_src": "session_open",
-          "vs_open_pct": 0.789,
-          "vs_entry_pct": 1.102,
-          "pnl": 0.85
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -1.738,
+          "pnl": -1.34
         },
         {
           "ticker": "AVAH",
@@ -2016,14 +2016,14 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 14.55,
+          "px": 14.26,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 14.42,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 14.26,
           "open_src": "session_open",
-          "vs_open_pct": 0.902,
-          "vs_entry_pct": 1.677,
-          "pnl": 1.92
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.349,
+          "pnl": -0.4
         },
         {
           "ticker": "BLFS",
@@ -2032,14 +2032,14 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 36.29,
+          "px": 36.11,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 36.29,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 36.11,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": -0.466,
-          "pnl": -0.51
+          "vs_entry_pct": -0.96,
+          "pnl": -1.05
         }
       ]
     },
@@ -2053,14 +2053,14 @@
           "entry": 16.28,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 16.29,
+          "px": 17.06,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 16.1,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 16.94,
           "open_src": "session_open",
-          "vs_open_pct": 1.18,
-          "vs_entry_pct": 0.061,
-          "pnl": 1.07
+          "vs_open_pct": 0.708,
+          "vs_entry_pct": 4.791,
+          "pnl": 83.46
         },
         {
           "ticker": "OVID",
@@ -2069,14 +2069,14 @@
           "entry": 2.73,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 2.75,
+          "px": 2.68,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 2.75,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 2.68,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": 0.733,
-          "pnl": 12.84
+          "vs_entry_pct": -1.832,
+          "pnl": -32.1
         },
         {
           "ticker": "SANM",
@@ -2085,14 +2085,14 @@
           "entry": 206.84,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 193.0,
+          "px": 198.0,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 192.85,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 198.0,
           "open_src": "session_open",
-          "vs_open_pct": 0.078,
-          "vs_entry_pct": -6.691,
-          "pnl": -110.72
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -4.274,
+          "pnl": -70.72
         },
         {
           "ticker": "ORCL",
@@ -2101,14 +2101,14 @@
           "entry": 164.43,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 140.44,
+          "px": 146.64,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 140.9,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 145.95,
           "open_src": "session_open",
-          "vs_open_pct": -0.326,
-          "vs_entry_pct": -14.59,
-          "pnl": -239.9
+          "vs_open_pct": 0.473,
+          "vs_entry_pct": -10.819,
+          "pnl": -177.9
         },
         {
           "ticker": "NVT",
@@ -2119,10 +2119,10 @@
           "owner": null,
           "px": 150.0,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 149.91,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 150.5,
           "open_src": "session_open",
-          "vs_open_pct": 0.06,
+          "vs_open_pct": -0.332,
           "vs_entry_pct": -4.931,
           "pnl": -85.58
         },
@@ -2133,14 +2133,14 @@
           "entry": 56.09,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 51.2,
+          "px": 52.5,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 50.78,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 52.21,
           "open_src": "session_open",
-          "vs_open_pct": 0.827,
-          "vs_entry_pct": -8.718,
-          "pnl": -151.59
+          "vs_open_pct": 0.555,
+          "vs_entry_pct": -6.4,
+          "pnl": -111.29
         },
         {
           "ticker": "RDNT",
@@ -2149,14 +2149,14 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 77.97,
+          "px": 75.78,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 77.36,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 75.78,
           "open_src": "session_open",
-          "vs_open_pct": 0.789,
-          "vs_entry_pct": 1.102,
-          "pnl": 0.85
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -1.738,
+          "pnl": -1.34
         },
         {
           "ticker": "AVAH",
@@ -2165,14 +2165,14 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 14.55,
+          "px": 14.26,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 14.42,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 14.26,
           "open_src": "session_open",
-          "vs_open_pct": 0.902,
-          "vs_entry_pct": 1.677,
-          "pnl": 1.2
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.349,
+          "pnl": -0.25
         },
         {
           "ticker": "BLFS",
@@ -2181,14 +2181,14 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 36.29,
+          "px": 36.11,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 36.29,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 36.11,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": -0.466,
-          "pnl": -0.34
+          "vs_entry_pct": -0.96,
+          "pnl": -0.7
         }
       ]
     },
@@ -2202,14 +2202,14 @@
           "entry": 16.28,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 16.29,
+          "px": 17.06,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 16.1,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 16.94,
           "open_src": "session_open",
-          "vs_open_pct": 1.18,
-          "vs_entry_pct": 0.061,
-          "pnl": 0.65
+          "vs_open_pct": 0.708,
+          "vs_entry_pct": 4.791,
+          "pnl": 50.7
         },
         {
           "ticker": "OVID",
@@ -2218,14 +2218,14 @@
           "entry": 2.73,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 2.75,
+          "px": 2.68,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 2.75,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 2.68,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": 0.733,
-          "pnl": 7.76
+          "vs_entry_pct": -1.832,
+          "pnl": -19.4
         },
         {
           "ticker": "SANM",
@@ -2234,14 +2234,14 @@
           "entry": 206.84,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 193.0,
+          "px": 198.0,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 192.85,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 198.0,
           "open_src": "session_open",
-          "vs_open_pct": 0.078,
-          "vs_entry_pct": -6.691,
-          "pnl": -69.2
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -4.274,
+          "pnl": -44.2
         },
         {
           "ticker": "ORCL",
@@ -2250,14 +2250,14 @@
           "entry": 164.43,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 140.44,
+          "px": 146.64,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 140.9,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 145.95,
           "open_src": "session_open",
-          "vs_open_pct": -0.326,
-          "vs_entry_pct": -14.59,
-          "pnl": -143.94
+          "vs_open_pct": 0.473,
+          "vs_entry_pct": -10.819,
+          "pnl": -106.74
         },
         {
           "ticker": "NVT",
@@ -2268,10 +2268,10 @@
           "owner": null,
           "px": 150.0,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 149.91,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 150.5,
           "open_src": "session_open",
-          "vs_open_pct": 0.06,
+          "vs_open_pct": -0.332,
           "vs_entry_pct": -4.931,
           "pnl": -46.68
         },
@@ -2282,14 +2282,14 @@
           "entry": 56.09,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 51.2,
+          "px": 52.5,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 50.78,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 52.21,
           "open_src": "session_open",
-          "vs_open_pct": 0.827,
-          "vs_entry_pct": -8.718,
-          "pnl": -88.02
+          "vs_open_pct": 0.555,
+          "vs_entry_pct": -6.4,
+          "pnl": -64.62
         },
         {
           "ticker": "AMTX",
@@ -2300,7 +2300,7 @@
           "owner": null,
           "px": 1.9,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
           "open_px": 1.9,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
@@ -2314,14 +2314,14 @@
           "entry": 4.75,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 4.7,
+          "px": 4.59,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 4.64,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 4.62,
           "open_src": "session_open",
-          "vs_open_pct": 1.293,
-          "vs_entry_pct": -1.053,
-          "pnl": -11.15
+          "vs_open_pct": -0.649,
+          "vs_entry_pct": -3.368,
+          "pnl": -35.68
         },
         {
           "ticker": "IQV",
@@ -2330,14 +2330,14 @@
           "entry": 270.89,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 270.35,
+          "px": 268.82,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 272.15,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 268.82,
           "open_src": "session_open",
-          "vs_open_pct": -0.661,
-          "vs_entry_pct": -0.199,
-          "pnl": -0.54
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.764,
+          "pnl": -2.07
         },
         {
           "ticker": "RDNT",
@@ -2346,14 +2346,14 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 77.97,
+          "px": 75.78,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 77.36,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 75.78,
           "open_src": "session_open",
-          "vs_open_pct": 0.789,
-          "vs_entry_pct": 1.102,
-          "pnl": 5.1
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -1.738,
+          "pnl": -8.04
         },
         {
           "ticker": "AVAH",
@@ -2362,14 +2362,14 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 14.55,
+          "px": 14.26,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 14.42,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 14.26,
           "open_src": "session_open",
-          "vs_open_pct": 0.902,
-          "vs_entry_pct": 1.677,
-          "pnl": 8.88
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.349,
+          "pnl": -1.85
         },
         {
           "ticker": "BLFS",
@@ -2378,14 +2378,14 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 36.29,
+          "px": 36.11,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 36.29,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 36.11,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": -0.466,
-          "pnl": -2.38
+          "vs_entry_pct": -0.96,
+          "pnl": -4.9
         }
       ]
     },
@@ -2403,14 +2403,14 @@
           "entry": 270.89,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 270.35,
+          "px": 268.82,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 272.15,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 268.82,
           "open_src": "session_open",
-          "vs_open_pct": -0.661,
-          "vs_entry_pct": -0.199,
-          "pnl": -4.86
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.764,
+          "pnl": -18.63
         },
         {
           "ticker": "RDNT",
@@ -2419,14 +2419,14 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 77.97,
+          "px": 75.78,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 77.36,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 75.78,
           "open_src": "session_open",
-          "vs_open_pct": 0.789,
-          "vs_entry_pct": 1.102,
-          "pnl": 26.35
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -1.738,
+          "pnl": -41.54
         },
         {
           "ticker": "AVAH",
@@ -2435,14 +2435,14 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 14.55,
+          "px": 14.26,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 14.42,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 14.26,
           "open_src": "session_open",
-          "vs_open_pct": 0.902,
-          "vs_entry_pct": 1.677,
-          "pnl": 41.28
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.349,
+          "pnl": -8.6
         },
         {
           "ticker": "BLFS",
@@ -2451,14 +2451,14 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 36.29,
+          "px": 36.11,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 36.29,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 36.11,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": -0.466,
-          "pnl": -11.39
+          "vs_entry_pct": -0.96,
+          "pnl": -23.45
         }
       ]
     },
@@ -2472,14 +2472,14 @@
           "entry": 270.89,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 270.35,
+          "px": 268.82,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 272.15,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 268.82,
           "open_src": "session_open",
-          "vs_open_pct": -0.661,
-          "vs_entry_pct": -0.199,
-          "pnl": -8.1
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.764,
+          "pnl": -31.05
         },
         {
           "ticker": "RDNT",
@@ -2488,14 +2488,14 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 77.97,
+          "px": 75.78,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 77.36,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 75.78,
           "open_src": "session_open",
-          "vs_open_pct": 0.789,
-          "vs_entry_pct": 1.102,
-          "pnl": 22.95
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -1.738,
+          "pnl": -36.18
         },
         {
           "ticker": "AVAH",
@@ -2504,14 +2504,14 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 14.55,
+          "px": 14.26,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 14.42,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 14.26,
           "open_src": "session_open",
-          "vs_open_pct": 0.902,
-          "vs_entry_pct": 1.677,
-          "pnl": 35.28
+          "vs_open_pct": 0.0,
+          "vs_entry_pct": -0.349,
+          "pnl": -7.35
         },
         {
           "ticker": "BLFS",
@@ -2520,14 +2520,14 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 36.29,
+          "px": 36.11,
           "px_src": "session_export",
-          "px_asof": "2026-09-17T05:14:02.181504-04:00",
-          "open_px": 36.29,
+          "px_asof": "2026-09-17T06:52:08.243788-04:00",
+          "open_px": 36.11,
           "open_src": "session_open",
           "vs_open_pct": 0.0,
-          "vs_entry_pct": -0.466,
-          "pnl": -9.69
+          "vs_entry_pct": -0.96,
+          "pnl": -19.95
         }
       ]
     }

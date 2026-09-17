@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T06:52:13.242861-04:00",
+  "generated_at": "2026-09-17T06:52:16.936826-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -163,73 +163,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "sector_one",
-      "title": "Sector predict Utilities (11/11)",
-      "date": "2026-09-17",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-17T06:38:39.019202-04:00",
-      "files": [
-        {
-          "path": "01_daily/sectors/2026-09-17/utilities_predict.md",
-          "ok": true,
-          "reason": "",
-          "size": 18381,
-          "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-09-17\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **1.751** (mult 0.9)\n- regime: risk_on\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **2.605** (ES +1.71%, ZN -0.03%, PM:XLU +0.41%) \u00b7 index_carry **1.846** (general 7.383) \u00b7 llm_overlay **-2.7** (raw -2.7)"
-        },
-        {
-          "path": "01_daily/sectors/2026-09-17/utilities_predict_trace.md",
-          "ok": true,
-          "reason": "",
-          "size": 390,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-09-17\n**Step 0 \u2014 Setup.** Loaded 140,645 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (16,456 characters)."
-        },
-        {
-          "path": "01_daily/_transcripts/2026-09-17_sector_utilities_predict.json",
-          "ok": true,
-          "reason": "",
-          "size": 160936,
-          "preview": "keys: provider, agent, backend_model, messages"
-        },
-        {
-          "path": "01_daily/2026-09-17_preopen_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 7187,
-          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
-        },
-        {
-          "path": "01_daily/sectors/2026-09-17/_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 1215,
-          "preview": "keys: date, n_ok, n_total, sectors"
-        },
-        {
-          "path": "01_daily/sectors/2026-09-17/_BOARD.md",
-          "ok": true,
-          "reason": "",
-          "size": 1814,
-          "preview": "# Sector Board \u2014 2026-09-17\nGenerated: **2026-09-17T06:38:38.979813-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
-        },
-        {
-          "path": "01_daily/sectors/2026-09-17/_board.json",
-          "ok": true,
-          "reason": "",
-          "size": 7091,
-          "preview": "keys: date, generated_at, sectors"
-        },
-        {
-          "path": "03_scoreboard/scoreboard.json",
-          "ok": true,
-          "reason": "",
-          "size": 747743,
-          "preview": "keys: runs"
-        }
-      ],
-      "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-09-17\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **1.751** (mult 0.9)\n- regime: risk_on\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **2.605** (ES +1.71%, ZN -0.03%, PM:XLU +0.41%) \u00b7 index_carry **1.846** (general 7.383) \u00b7 llm_overlay **-2.7** (raw -2.7) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-09-17\n**Step 0 \u2014 Setup.** Loaded 140,645 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (16,456 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-17\nGenerated: **2026-09-17T06:38:38.979813-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_at, sectors"
-    },
     {
       "key": "finviz",
       "title": "Finviz universe export",
@@ -432,6 +365,115 @@
         }
       ],
       "preview": "1d BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA \u00b7 green 187 \u00b7 BLFS, SONO, SLDB, EXEL, MTCH, PTGX, PUBM, DXCM, QTTB, QNST \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA \u00b7 2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA \u00b7 # Stock book \u2014 2026-09-17\n_Generated 2026-09-17T06:50:31.999494-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-09-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T06:52:16.019904-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 18726,
+          "preview": "2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 1107,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-17.json",
+          "ok": true,
+          "reason": "",
+          "size": 76805,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-17_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 52734,
+          "preview": "2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 764012,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-17_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 764012,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1073602,
+          "preview": "2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 764012,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 52734,
+          "preview": "2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 764012,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 764012,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1073602,
+          "preview": "2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 71429,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 71429,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, c"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
