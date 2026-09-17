@@ -14,12 +14,12 @@
 
   - United Rentals (URI) Raised Guidance, Is The Stock Still Cheap? - simplywall.st (https://news.google.com/rss/articles/CBMizwFBVV95cUxPWFUyQ0hWMUgwVThPT3ZQaFFIVm16ajFuclJmdW55RlZqdldQemU1ZmFLcW0zVTVheG02eGZmbTRFZzdaT25QRVZSSVI1enkyX0JaaldxTTRGYVB0YXpKQXdlcXk2V3V6S045cU1XNkwyTDdxMDIzY3ltUXVzUUswd0dHSm9zWFFEek9RTmQ2ajJ3OWYxYW5iNW1ZeDRDMHJLd2x5S3c4VGc3VGJveHV1UHhlTTRYODJGSDl6Z0cxWHVKOWxwRlhkUlluQWt3d2fSAdQBQVVfeXFMTjNUeHUtTk14NWtBSF9keThQY2xicFNabXYtQTFLTkpjU2pmWEhORFlJZDcxRGs2ckNFX1dBQ0xoOS1UTjBtellVM1dPY3NNZlE3bTlaMkhOWjdNR2ZLcHY5X1dDUE9wUGNtZi00SFRrTUNlaUplcTRtb3BxVmx4b1dDLVl1aW5RQ3UwQjI3ZXFGT1FmXzM2RjQ4d2xmRjQweHBCZkdFTDUyRVFLOVgybW1XdnAtdVZCMjFYb1UyR18wUmNnSGhybXhyMlZXbU03UWg4NXg?oc=5)
 
-**Step 2 — Research.** The model wanted to know: *"GATX news September 2026"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"GATX HRI rental leasing news September 2026"* → got 3 results (via gnews_rss)
 
-  - GATX Corporation - Press Releases (https://ir.gatx.com/press-releases/)
+  - Rented Fleets Are Winning the Infrastructure Buildout as Mega Projects Multiply - TradingView (https://news.google.com/rss/articles/CBMia0FVX3lxTFA2cHR2ZUxHNTV5VVdsbDU2TldPVF8zenJpSE00emo1UDF6MHQ0UERVelZ2Q2Q3QTE1dEllaU8xcFJMUUVkU3BUY0QzZTRmWnBXOEFBZmpWOWc0WjNwVlM3YUd3RjNfeTVkTXZj?oc=5)
 
-  - GATX (GATX) Could Be 23% Below Fair Value After Dividend ... (https://simplywall.st/stocks/us/capital-goods/nyse-gatx/gatx/news/gatx-gatx-could-be-23-below-fair-value-after-dividend-update)
+  - United Rentals (URI) Stock Price, News & Analysis - Stock Titan (https://news.google.com/rss/articles/CBMiUkFVX3lxTE4tVjhOWXM2ZjlsTE1NVGhycE1hdVE3ZXZXcUNkTTVDd29TaGtDM29TaVdQdXY4d0ZNV3pOYXJCSm5idmRoMmpjOGFkRFZqcVppdHc?oc=5)
 
-  - GATX Corporation - Investor Relations (https://ir.gatx.com/overview/default.aspx)
+  - Mcgrath Rentcorp (MGRC) Stock Price, News & Analysis - Stock Titan (https://news.google.com/rss/articles/CBMiU0FVX3lxTE5VUE1PcVBFcVl5cVNzUVJkX3c3WS1ETmpMNzg2cEdiR01yNzNuMXNReFpqVWpKMkh2NmpHdFVTNDZSWW1iaDdmeDczbmVYc1E4VVVr?oc=5)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

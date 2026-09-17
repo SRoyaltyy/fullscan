@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"NVDA Nvidia stock news September 18 2026"* → got 6 results (via gnews_rss)
+**Step 1 — Research.** The model wanted to know: *"NVDA news September 18 2026"* → got 6 results (via gnews_rss)
 
-  - OpenAI CFO confirms AI spending will prioritize ROI, impacting NVIDIA, AMD, and others. - Pluang (https://news.google.com/rss/articles/CBMirwFBVV95cUxPbjZiaGdvd0lEcUhxc1k5OExRdno5aXFNdFpWeVpxNURfQzJBeG5QRms4OGlzRGlqSVQzQUduQzBsbTBrLTZ6dGRDTlJONXBkc19MSElvQ1NYVkExT1VOaElFX1UxTzJpbVJlOWVweFBObTk0S0g5bFNCSUlmNXJUZ3F0MXFIWS1QaTJING5FaXpURGkxbWtWVERweW1xdE1iMnFGR21ieTcyMXBXX3NZ?oc=5)
+  - Nvidia CEO dismisses AI doomsday fears, urges s... - pluang.com (https://news.google.com/rss/articles/CBMijgFBVV95cUxOVG92bm95SHpseEhmQUxqeEFiVzJwR0ppM3FZNFpobGtSM3Rvd3IycS1nYjNYOTZlaDV3RG0zZER2emNaNWFWZVI5UXpyUnY5aHJfcldGNlNjbHd5WTJmWjh4MnJSdnV2UTR0dWNSWklnWG5PSXZZZ2FNSjhqbDZkZ1g5S2J1Rkd3M2ZkVGl3?oc=5)
 
   - 10 Information Technology Stocks With Whale Alerts In Today’s Session - Benzinga (https://news.google.com/rss/articles/CBMiuAFBVV95cUxNVklIby13Rzlwdl9jSG8wMEFOVDNjYjZvN0RyTE5mSDFwVTRESmhtQnRKMjV2YVh3R3RKcHR5NDBmTmZaRXBqZjZfSjNkc2UtX3E2NHlpZUU3VG5WcVJXN0VkZ21NTS1LWmxZV2lUYXgwaVljU3U0QndLVWNWX18tb0IxTGVxSXZ1UURtbVJoMG5Xa25CVWlFc293dkptMDFkQzBSVTJiUnFPUkJIdXU3V3gxcDBUT0sx?oc=5)
 
   - What will NVIDIA (NVDA) hit Week of September 14 2026? | Play Free, Win Rewards - OKX (https://news.google.com/rss/articles/CBMirwFBVV95cUxNV3dqM2o3eW9INUxfS2FLUmNBaml4YUUwLTBXUThKX0VwQ1NQZ0lvWmVvdVZwQ2hIZHVZN19JREoyRTlqTzdqbEZFOU9GN2kwT0UxWkVpTGZDay1vNnc5a1p6NVpLd1pGR1ZlQm5nV2tCNW43UUkyRVZ4M2hzaTJVbFVfeHNETXJyVm44TWhWd2ViS2JlNTJfTVpRS1h3NmRxNWR5Zk9zTUdvX1hHcVdR?oc=5)
 
-**Step 2 — Research.** The model wanted to know: *"AVGO Broadcom stock news September 18 2026"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"AVGO Broadcom news September 18 2026"* → got 6 results (via gnews_rss)
 
-  - Broadcom Inc. (AVGO) Stock Price, News, Quote & History ... (https://finance.yahoo.com/quote/AVGO/?fr=sycsrp_catchall)
+  - AMD stock jumps 7% amid a third day of semicond... - pluang.com (https://news.google.com/rss/articles/CBMinAFBVV95cUxOdVRiVi1xSGhYZGUzVDFTc3ktWnFUNW9jWU1RXzM2MmdUdUo3a3ZFTFI4c1Z6WGZ6YXJEMEhaZDJKUXhDc1FOamVaeGNWUWhGcmtDT1JVYTJFR3U2Rjlvb0FDWmJjemRGZGZPU3dEYy1NV2laNnNSb2RNN21wSHNJQ2lEM1Q4Z3lFOHF4ZGRiM3RsR3daQTRHMC1rWWY?oc=5)
 
-  - Broadcom Inc. (AVGO) Stock Forecast & Price Target — Sep 2026 (https://tickflow.io/stock/AVGO/forecast)
+  - Broadcom Options Spot-On: On September 15th, 314.04K Contracts Were Traded, With 2.37 Million Open Interest - Moomoo (https://news.google.com/rss/articles/CBMipAFBVV95cUxPUXFueEs3NEJ4Y0o3dXVlUUR0M2hNdlU3N1VKOV9ua1dSTDRUdTROMzAxS1RvRHZ6SGQ4WTE5cmZUbkVrSUZ3dUhQUjNtX3g2TUg0cFdLX1Y3V0VoVk5iSy03ZW92R1JPN1dwdmZLdklRSk1MZVZCUDVBZU1JaWtDd3ZiY1FOckIyM01sMUtXYjVWRm4ySG5PSXl3OXBSYjRTeEM0Ug?oc=5)
 
-  - Broadcom (AVGO) Stock Forecast & Analyst Price Targets (https://stockanalysis.com/stocks/avgo/forecast/)
+  - What Makes Broadcom (AVGO) a Lucrative Bet? - finance.yahoo.com (https://news.google.com/rss/articles/CBMinwFBVV95cUxNVVpldW02NVRoTXJKYUttLWxhdnlGREkwcUV0Z1RaLWtQazRsSHV4SWhBRUNaWGFydHcySng2akpHZXZCb1ZEVG9COUswazFxeXlOWVFCV0x3UzJpWVJHYXZWWHBjYjFyMzZxVUpheVh4WEpmX1pXZDZ3LW1yU2VkZEtBZUlxY1YxdXJIQldCb3pTczhBSDlWbmV3SjM0aEk?oc=5)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

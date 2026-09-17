@@ -14,12 +14,12 @@
 
   - MET Looks 5.3% Overvalued on GF Value™ - GuruFocus (https://news.google.com/rss/articles/CBMif0FVX3lxTE16YTNyMWpJWEJsSVF4QW9BaFRhODk5bkFhdHBnejdwSDBBcVFUb05CaHBLY293OVEtUUNzaldYVUswbFkxV2ZhZzZ0OTJqQjFRZFJCTy11VEREY2twVDJiMVJBNVdiQUpzd3daS2Q4Z3dxcEhCOVhFa25WZ0Zxd1U?oc=5)
 
-**Step 2 — Research.** The model wanted to know: *"Aflac AFL news September 2026"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"Aflac AFL news September 2026"* → got 6 results (via gnews_rss)
 
-  - Aflac (AFL) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/AFL/)
+  - Aflac (NYSE: AFL) executive to sell 13,201 shares from vested stock and options - Stock Titan (https://news.google.com/rss/articles/CBMijgFBVV95cUxOMGV6eHBCeFZTcy1FcmNPSlE1T2UybmktenBVTjNheWREX3ZJbVZQaDhTZXJVZ0lSWi1yV3hUTURqZ0t3RThRZFExMmhxb2ZPUEhnM05PN1RsY0dqVUpPb2doRVVuTGZiaTZ2NkFSQWwwY2twcDVMTGhnX1A2cU8tb2hodHhRUWh4VnRSSzZB?oc=5)
 
-  - Aflac (AFL) Looks Fully Valued On Conference Spotlight (https://simplywall.st/stocks/us/insurance/nyse-afl/aflac/news/aflac-afl-looks-fully-valued-on-conference-spotlight)
+  - Is Aflac (AFL) Fairly Valued After Its Shares Closed Near $117? - simplywall.st (https://news.google.com/rss/articles/CBMivgFBVV95cUxOZVExS2FTMTRrRlhfTTRad3NPU05qNFQxemFjN1NrM1pDV1FiZTloM3hudFZtTEdiRC1CMFVZQlgxSUNudGxneG1hWnIzbEJaTm9od3ozQXVLX1g3bHYwMWl6bm1MbUFIdlFOa1cyMXdZdnBjeTRLN1g2NEh6azM3UkMzVTRFZXRfa2pRZHN6RTN6bXFBSVNpV0V6QnctckR6dEg1UHdCX0NJcVQza1JiaS1Vc0FpSTBoQ3VHUjl30gHDAUFVX3lxTFBxVTNQZ0g4MmlYUHRzc2tsRU5rRkxmQmIwanp3S01oVnNoX0x5UnRyb05YSVhKZ3BQczBUVWpYWDZRajEzSlFIcmVlZlBQOENOWUU2Y0VUODhpaUl2YlYzWjNxajN5dVlIUW1lWUZFYkR5ZGJXdFE1dXhCMndIS3hPVTV2VFFQQlhMbnJ0UUNuTGRDNFdKU0REbW5sZjFOajl3Mnd3T21KR1lxWUJ1ZWhlRlVaVmhnLWVkWk5rZU5HMEFVTQ?oc=5)
 
-  - AFL - Aflac Inc News | Morningstar (https://www.morningstar.com/stocks/xnys/afl/news)
+  - Aflac stock heads into the open after a 0.4% gain - ad-hoc-news.de (https://news.google.com/rss/articles/CBMiuwFBVV95cUxQd3Nodi1wRmhyN3F4YjZMaWo0V1lsUXh4dTk1dnZlclFhclFLYzlIUlByTDh3UDgzMkQ4bFBKTDJxa0lSM3VCRjZFeUs2bldGRHlVQ3l1T2NPZkp5X0RWRUhaSzR2czV2RVI4RElvOHBHYUc3cFlJeHFPRjZnOW5rX19VMnZYczlFYUdzWjlwWWphZENGZkdYYmRLcUI5WV91Y2hfdnc5N0ZDOUEwcFFpWXExVDM1V1lDTWow?oc=5)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

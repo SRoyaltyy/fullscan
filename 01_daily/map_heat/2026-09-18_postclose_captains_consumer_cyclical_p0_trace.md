@@ -8,18 +8,18 @@
 
 **Step 1 — Research.** The model wanted to know: *"Ralph Lauren RL news September 2026"* → got 6 results (via ddg)
 
-  - Newsroom - Ralph Lauren Corporation (https://corporate.ralphlauren.com/newsroom)
+  - Ralph Lauren stock edges lower after strong Q2 2026 sales beat (https://www.ad-hoc-news.de/boerse/news/corporate-news/ralph-lauren-stock-edges-lower-after-strong-q2-2026-sales-beat/70039258)
 
-  - NEWS RELEASES - Ralph Lauren Corporation (https://investor.ralphlauren.com/news-releases)
+  - NEWS RELEASES | Ralph Lauren Corporation (https://investor.ralphlauren.com/news-releases)
 
-  - Ralph Lauren (RL) Could Be 24% Undervalued On Its Fresh ... (https://simplywall.st/stocks/us/consumer-durables/nyse-rl/ralph-lauren/news/ralph-lauren-rl-could-be-24-undervalued-on-its-fresh-dividen)
+  - Ralph Lauren Corporation (RL) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/RL/)
 
 **Step 2 — Research.** The model wanted to know: *"Zegna ZGN H1 2026 earnings results"* → got 6 results (via ddg)
 
-  - Ermenegildo Zegna Group - H1 2026 Financial Results (*) (https://ir.zegnagroup.com/financial-calendar/events/event-details/2026/H1-2026-Financial-Results/default.aspx)
+  - Ermenegildo Zegna NV (ZGN) (H1 2026) Earnings Call Highlights: Adjusted EBIT Rises to EUR74 Million, ZEGNA Segment Margin Expands to 14.8% (https://www.gurufocus.com/news/9066962/ermenegildo-zegna-nv-zgn-h1-2026-earnings-call-highlights-adjusted-ebit-rises-to-eur74-million-zegna-segment-margin-expands-to-148)
 
-  - Ermenegildo Zegna Group - Financial Documents (https://ir.zegnagroup.com/financial-documents/presentations/default.aspx)
+  - Ermenegildo Zegna Lifts H1 2026 Sales and Margins as Direct-to-Consumer Growth Offsets Profit Dip - The Globe and Mail (https://www.theglobeandmail.com/investing/markets/stocks/ZGN-N/pressreleases/4441773/ermenegildo-zegna-lifts-h1-2026-sales-and-margins-as-direct-to-consumer-growth-offsets-profit-dip/)
 
-  - ZGN H1 2026 Earnings Report on 9/3/2026 - MarketBeat (https://www.marketbeat.com/earnings/reports/2026-9-3-ermenegildo-zegna-nv-stock/)
+  - Ermenegildo Zegna H1 2026 Earnings Report (https://www.marketbeat.com/earnings/reports/2026-9-3-ermenegildo-zegna-nv-stock/)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

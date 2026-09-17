@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"GE Aerospace stock news September 18 2026"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"GE Aerospace stock news September 18 2026"* → got 6 results (via gnews_rss)
 
-  - GE Aerospace IR Updates (https://www.geaerospace.com/investor-relations/ir-updates)
+  - What Has To Go Right For GE Stock To Keep Climbing? - Trefis (https://news.google.com/rss/articles/CBMirgFBVV95cUxNWEdndEp2dFFYMzJ5Y1k5bGpnUGtYdENIelYtNGpmTjZqYTJXeVZSYWlMRmZubGhhOVlGcE9GZmNhRHpBcjRNY1NaODczSnExVWVUV1djZGRKekdscjhOLURYcGJST2lzNVItSzRFRS1yZHFGTmxuakRUcS1LWFZBbzlRSHduYzk2NHE5TDEwQ3N6aW9SUGlodW9aQWotWDREajFLcFFWaUpqTmlCcWc?oc=5)
 
-  - GE Aerospace (GE) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/GE/)
+  - GE Aerospace (GE) Stock Forecast and Price Target 2026 $GE - MarketBeat (https://news.google.com/rss/articles/CBMiYEFVX3lxTFB1dmxMbWtVMGtzM1pITHAxOGF5bHJJS09uRE9EMjBacHdTOUhWYzFoX3AtOTFYdm9iMF9PMkhLWXJWMmE1NUw3clFvZmJKSUVpb2RGV3F0RU5OeW5qRnBOcA?oc=5)
 
-  - GE Aerospace (GE) Stock Price History 1968-2026 (https://stockanalysis.com/stocks/ge/history/)
+  - Top 3 Defense Stocks To Watch In September 2026 - finance.yahoo.com (https://news.google.com/rss/articles/CBMilgFBVV95cUxOdGU4Q3VfMDZwOTdMMjA2NTZqcjgzd0R6TVRlRFVPV0FfYkw3Ry1vc1dDdVhSY3BFaW14Z0x2NWJBTlppUHhjeWU2UUVwN1ZOTHhLMkhJdDI1UFR0alluejNXWmNLMVhOcWs3Rko1WDNEYkJYWHZDWDRhd2RVN18yZndXczAxVzNNYUZ6YTZndm1oVUtPVHc?oc=5)
 
-**Step 2 — Research.** The model wanted to know: *"RTX stock news September 18 2026"* → got 6 results (via gnews_rss)
-
-  - A silver miner will join an index tracked by VanEck's mining fund. - Stock Titan (https://news.google.com/rss/articles/CBMiwgFBVV95cUxNdUV6NElidUZUbTdMQnpDbTVEWHp5dUt6WU1abEV0WHktTUdhQlVwQzk4aWR4cVRZQjBxSEpMQVMxN3F0MXJ1TWNMM1loVEp5YzBMbThZWjBtSlUzOU5xcWhua0hVa0hVMXNYR2czYzZPeEs5UGlidTBXRmxmMk8yZFo1akFVWEFkU2l2Z1R1VWlBaW52bXRfVVA0cE90TVp6RW1sVjdTMVQ4Uk02ZlN3YkdiUDZFMHdFbm04b3o4bUtOQQ?oc=5)
+**Step 2 — Research.** The model wanted to know: *"RTX Raytheon news September 18 2026"* → got 6 results (via gnews_rss)
 
   - RTX Looks 28.2% Overvalued on GF Value™ as Partnership Sparks In - GuruFocus (https://news.google.com/rss/articles/CBMirAFBVV95cUxQYnFIc05oczNCczhJeGNtVlNkS1lTb041ZDFMaS1OaTZ6bmRFUjlmUmVrTWlWREtCa2hDZnpJS2pVeFRta3JEak11a3Z5eUxPN25XdGVjM2FnOW5pVDhqdE9VRmt3OUNadU1ORlJIZ1FrWDF3QjhIVXc1TGRpYnZkTlZ5dDR3bHM3dDB3aGwyVDRDVEVWSUVTOGtjME1OekZaeEt2NmctRmpYWkhB?oc=5)
 
-  - 3 Market-Beating Stocks with Competitive Advantages - Yahoo Finance (https://news.google.com/rss/articles/CBMiogFBVV95cUxPeUdfcU9MVU9aZzRwcnU0LXNTN2pYMTlNR2hjUnVyNV9EQ2p0NEVSa1QzN0NKN1BuV0lVYXZHeHlqM1pPVGMyczVienhES3prQTZuLUpESDlhTzlsbHRYTmNsMUdmbTdLQnMwcTAya2h4RFdjS2tpNkgzRVRNQWpfUzdyaHlYRXRLQXljSnhsZjlVTzFQaUZCc0w0aHBtb0EtVnc?oc=5)
+  - Raytheon adds 100 jobs as its Mississippi plant grows by $50 million - Stock Titan (https://news.google.com/rss/articles/CBMitAFBVV95cUxQLUpSaDZudXJqNUwtN0k3cnAwMzJDMVVFbWFxeW9tMmRhOWlhSFdhOTZETEgzbUNFbHg5UlpHOWQ5NXFBUklQRThrQngwSDRkV0FGaHlMN1R6WW5EeWdqaDZxa0s5YkJhOHFCSVhhV3lUZFJKQUpiUndGcHlZekJ4RWpyTmtKQ1pJdXVVeW9GYTQ0SmRsa1ZyQzNuenJhOExoLWMwU1VYM2FEM1RRZC1sNEoycXk?oc=5)
+
+  - 'Some of These Lasers Were the Size of Buildings': Now They Need 12 Minerals China Cut Off - 24/7 Wall St. (https://news.google.com/rss/articles/CBMiywFBVV95cUxQbXZhVy1LV0M5SlZnaHNfbmx0bjFFU0lUMzBFTXA4QzlURVlpNWxqSTQ3WUE2M0JWNTJRWWY2ZUwxaG42a1d3MHhvRDZJMHVXVHVJWmtZUlRfWjN0NWpzbmdyR0NEalZtQXRRd2YtVEpkSnlSekIyODVQVzhqdldiVzN6NWRNZ1NsVUVxRm00LVRDb0NmOGNaQVB4OVo0SktvajhSTVRfOU8teG5RMEFDMVdyMUh6dElrTnlkQ01KREhnaUJqOVgxZzFydw?oc=5)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

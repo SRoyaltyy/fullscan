@@ -6,13 +6,13 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"CSCO Cisco news September 18 2026"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"CSCO Cisco news September 18 2026"* → got 6 results (via gnews_rss)
 
-  - Cisco Systems Inc. - News (https://investor.cisco.com/news/default.aspx)
+  - Cisco (NASDAQ: CSCO) board member takes retainer in stock - Stock Titan (https://news.google.com/rss/articles/CBMisAFBVV95cUxQMmxFWEs1c3ZDcnNrem42VWhlcFp1Tld1RXY5eUdJSFpMTWM1LXBiV0N5bUpsY3BvcnlFMU1FekxmOHdpNEFTZ1E4X2pXREExWHF2c0lHcDMzOEhwQjByQ2xKa3NGZGRZOWMtRnV2amZaeW5KRmJOOWtmUlhZazQ3YTRzaVpMX1BQckRlR0c0OUJkSDFOeHkxWHN0blF1N21HRjAxeUZGZE1Yc1ByQjVHXw?oc=5)
 
-  - CISCO REPORTS FOURTH QUARTER AND FISCAL YEAR 2026 EARNINGS (https://investor.cisco.com/news/news-details/2026/CISCO-REPORTS-FOURTH-QUARTER-AND-FISCAL-YEAR-2026-EARNINGS/default.aspx)
+  - Cisco Delivers Trusted AI at Scale Through New Splunk Advancements - HPCwire (https://news.google.com/rss/articles/CBMitwFBVV95cUxNUnlqRHllVjhPZTAyalVuWnRVRUxydms4NzMzTjZXUXVqU1VjQzdRV1BQSHNCeDdPSHdnVGQyV3lqWlZrNE0xbnZnaUpWS2t2S2xoNGJ6ajJrSU56T1hINmxmeG1fLWNNUWZZMl8zZXRGOVppX3h6bG93MDRjeTdrUllsNGtDNTc3eWtGUFFiaEVLaUZHZHl4eU5nSVV5WjBoRU5OM1dpQnFXdUw3aEtyaEtTZkY2Z2c?oc=5)
 
-  - Press Releases - Cisco (https://newsroom.cisco.com/pressreleases)
+  - Cisco Systems (NASDAQ: CSCO) director takes 417-share stock award instead of cash fees - Stock Titan (https://news.google.com/rss/articles/CBMisAFBVV95cUxPS0xBcmloN0ZKcmhpSnlnUHFUZUt3Wi1fazNMMGtDM29QclZiaDQ2UFZCRU1KbWdxXzN1MjFYcWxPdHkwMHptazBnODNJcUsyenMtN0R2WEh5aFhPNVlCdG1NMnJUSnpiT3BVU1VCV1hLbVZ3VVdrT1A3akJ0bnROSGpjbk9YMW51cElFYjFvSGljem5ib3g0WDNLY05yZmtaODFXcHdFZjVSZlVXYUY0TQ?oc=5)
 
 **Step 2 — Research.** The model wanted to know: *"MSI Motorola Solutions news September 2026"* → got 6 results (via gnews_rss)
 

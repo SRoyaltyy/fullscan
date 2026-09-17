@@ -8,18 +8,18 @@
 
 **Step 1 — Research.** The model wanted to know: *"USAR USA Rare Earth stock news September 2026"* → got 6 results (via ddg)
 
-  - USAR Stock Quote Price and Forecast | CNN (https://www.cnn.com/markets/stocks/USAR)
+  - News Releases - USA Rare Earth (https://investors.usare.com/news-events/news-releases)
 
-  - USA Rare Earth, Inc. (USAR) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/USAR/)
+  - Investor Relations - USA Rare Earth (https://investors.usare.com/)
 
-  - USA Rare Earth, Inc. (USAR) Latest Stock News & Headlines - Yahoo Finance (https://finance.yahoo.com/quote/USAR/news/)
+  - USA Rare Earth Inc (USAR) Stock Price & Latest News - September 2026 (https://www.insidearbitrage.com/symbol-metrics/USAR)
 
 **Step 2 — Research.** The model wanted to know: *"MTRN Materion stock news September 2026"* → got 6 results (via ddg)
 
-  - Materion Corporation - Stock InfoMTRN News Today | Why did Materion stock go up today?Materion (MTRN) Stock Price & OverviewMTRN Stock Forecast 2026-2027 - Materion Corp. Price Targets ...Materion Corporation (MTRN) Stock Price, News, Quote ...MTRN | Materion Corp. - Trade Ideas, Price, News Sep 2026Materion (MTRN) Stock Forecast & Analyst Price Targets (https://investor.materion.com/stock-info/default.aspx)
+  - Materion Corporation (MTRN) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/MTRN/)
 
-  - MTRN News Today | Why did Materion stock go up today? (https://www.marketbeat.com/stocks/NYSE/MTRN/news/)
+  - Materion Corporation (MTRN) Stock Price, Quote, News & Analysis | Seeking Alpha (https://seekingalpha.com/symbol/MTRN)
 
-  - Materion (MTRN) Stock Price & OverviewMTRN Stock Forecast 2026-2027 - Materion Corp. Price Targets ...Materion Corporation (MTRN) Stock Price, News, Quote ...MTRN | Materion Corp. - Trade Ideas, Price, News Sep 2026Materion (MTRN) Stock Forecast & Analyst Price Targets (https://stockanalysis.com/stocks/mtrn/)
+  - Materion: MTRN Stock Price Quote & News | Robinhood (https://robinhood.com/us/en/stocks/MTRN/)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

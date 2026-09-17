@@ -12,7 +12,7 @@
 
   - Why VICI Properties’ 7.19% Yield Beats Realty Income’s Dividend Streak, At Least For Now - AOL.com (https://news.google.com/rss/articles/CBMid0FVX3lxTE5ROEVQOUxnR21qTTRSdzZzYkltaUlLMnA0TVVCd0U1eENoMHVJLU1ETExlZ1RycGlkSkN1RkRwdjg2UmVKUVRuTkpRdHVQMFBlYmhLdVVLMjFXN1BYOEQxWlJHdVkxZE5ELS1ILTBsUGpMbnhwdzhv?oc=5)
 
-  - Can VICI Properties (VICI) Stay Cheap After Its Dividend Raise? - Yahoo Finance (https://news.google.com/rss/articles/CBMinAFBVV95cUxQUmFZMHh6ZzdheUEwQjV3c2RjdjF4aS14eGFMSmltV0lOalFKRGEzdkVNZGcwYTVxZ3BHOGlweHRXTW5hTHZEV2VGZFUtTEEtWnFzc1JzUmJGRXhyek9pblpneTVIMHlkUjU4eWI0TkU2OEQ5R09qdDhtS0Q1clZTS0o0X0JqZllpMUdjMUVmSnAwZnVtcGYxejRGM0I?oc=5)
+  - Can VICI Properties (VICI) Stay Cheap After Its Dividend Raise? - finance.yahoo.com (https://news.google.com/rss/articles/CBMinAFBVV95cUxQUmFZMHh6ZzdheUEwQjV3c2RjdjF4aS14eGFMSmltV0lOalFKRGEzdkVNZGcwYTVxZ3BHOGlweHRXTW5hTHZEV2VGZFUtTEEtWnFzc1JzUmJGRXhyek9pblpneTVIMHlkUjU4eWI0TkU2OEQ5R09qdDhtS0Q1clZTS0o0X0JqZllpMUdjMUVmSnAwZnVtcGYxejRGM0I?oc=5)
 
 **Step 2 — Research.** The model wanted to know: *"Global Net Lease GNL Modiv Industrial acquisition $535M"* → got 6 results (via gnews_rss)
 
@@ -20,6 +20,6 @@
 
   - Greenberg Traurig Advises Global Net Lease on $535M Modiv Industrial Acquisition - PR Newswire (https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZTV0NWE4cHBpUzdaYUFPdnZMUVhnbmpsTVVJTnRVUnloSUJPdlZkNExFSmZDUkktWUlWQ205YU1NTTdXeE9rZlNYbDBZa2pMN3Ffd3VVdHZFU0hQYkRJNWZsR281bm8yMjIxRkVqNlhuaVhkeHZHSFJ5QXBmalh0MFk4aE5sXzNzVzY0V1oyWXhsQ2NlbjNOaThEUDBXSUFFS1RLOERjVzhYRzRYZ3d5U2tnUE82aTRYNElVTlRlWE1LYnB2RHhrVkthS2t3M25i?oc=5)
 
-  - Global Net Lease acquires $535M Modiv Industria... - Pluang (https://news.google.com/rss/articles/CBMiqwFBVV95cUxNVjE1bWJFN2hIX2lwWFlzbVpEMmtEYVVDNE85R0ZLd0tlUWVzSFV4T0xrQmJqRHJMSmZZNkJSWGlNaGg5cWZra0o5bjRIbEpWczZRWmo3enJCTWVwbG0xU1ZleTU4TUF6MHpzUDFuWi1RUzJFdDZ5dFkwdGY0RXQ2WVgzM1pyZUJiQkxTamNWU3dwVlZ3VDF2N3N1UG5lWjBQSEhIemdpblNxR3M?oc=5)
+  - Global Net Lease acquires $535M Modiv Industria... - pluang.com (https://news.google.com/rss/articles/CBMiqwFBVV95cUxNVjE1bWJFN2hIX2lwWFlzbVpEMmtEYVVDNE85R0ZLd0tlUWVzSFV4T0xrQmJqRHJMSmZZNkJSWGlNaGg5cWZra0o5bjRIbEpWczZRWmo3enJCTWVwbG0xU1ZleTU4TUF6MHpzUDFuWi1RUzJFdDZ5dFkwdGY0RXQ2WVgzM1pyZUJiQkxTamNWU3dwVlZ3VDF2N3N1UG5lWjBQSEhIemdpblNxR3M?oc=5)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.
