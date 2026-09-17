@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Day movers — gainers / losers</title>
+<style>
+  :root {
+    --bg: #0b1020;
+    --card: #141a2e;
+    --line: #24304d;
+    --txt: #e8eefc;
+    --dim: #8b97b3;
+    --gain: #3ddc97;
+    --lose: #ff6b7a;
+    --warn: #e6c36a;
+    --chip: #1c2540;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font: 14px/1.45 ui-sans-serif, system-ui, sans-serif;
+    background: var(--bg); color: var(--txt);
+  }
+  a { color: #9db7ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  header { padding: 18px 22px 8px; }
+  h1 { margin: 0 0 4px; font-size: 20px; font-weight: 650; }
+  .sub { color: var(--dim); font-size: 13px; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; padding: 10px 22px; }
+  button, .tog button {
+    background: var(--chip); color: var(--txt); border: 1px solid var(--line);
+    border-radius: 8px; padding: 6px 10px; cursor: pointer;
+  }
+  button:hover { border-color: #3a4a72; }
+  .tog { display: flex; gap: 0; }
+  .tog button { border-radius: 0; }
+  .tog button:first-child { border-radius: 8px 0 0 8px; }
+  .tog button:last-child { border-radius: 0 8px 8px 0; }
+  .tog button.on { background: #2a3a66; border-color: #5b7ad4; }
+  #date { min-width: 118px; text-align: center; font-variant-numeric: tabular-nums; }
+  .banner {
+    margin: 0 22px 10px; padding: 8px 12px; border-radius: 8px;
+    background: #2a2410; color: var(--warn); border: 1px solid #4a3f18;
+    display: none;
+  }
+  .banner.show { display: block; }
+  .layout {
+    display: grid; grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 12px; padding: 0 22px 28px; align-items: start;
+  }
+  @media (max-width: 900px) {
+    .layout { grid-template-columns: 1fr; }
+  }
+  table { width: 100%; border-collapse: collapse; background: var(--card); border-radius: 12px; overflow: hidden; }
+  th, td { padding: 7px 10px; text-align: left; border-bottom: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+  th { color: var(--dim); font-weight: 600; font-size: 12px; }
+  tr { cursor: pointer; }
+  tr:hover td { background: #1b2340; }
+  tr.sel td { background: #243056; }
+  .up { color: var(--gain); }
+  .dn { color: var(--lose); }
+  .pane {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+    min-height: 420px; padding: 16px; position: sticky; top: 12px;
+  }
+  .pane h2 { margin: 0 0 8px; font-size: 18px; }
+  .kv { display: grid; grid-template-columns: 120px 1fr; gap: 6px 10px; color: var(--dim); }
+  .kv b { color: var(--txt); font-weight: 600; }
+  .empty { color: var(--dim); padding-top: 48px; text-align: center; }
+  .meta { color: var(--dim); font-size: 12px; padding: 0 22px 8px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Day movers — gainers / losers</h1>
+  <div class="sub">
+    Investigator companion · one session at a time ·
+    <a href="../hard-red-exceptions/">investigator</a> ·
+    <a href="../day-board/">day board</a> ·
+    <a href="../factor-mine/">factor mine</a>
+  </div>
+</header>
+<div class="row">
+  <button id="first">&lt;&lt;</button>
+  <button id="prev">&lt;</button>
+  <strong id="date">—</strong>
+  <button id="next">&gt;</button>
+  <button id="last">&gt;&gt;</button>
+  <div class="tog" id="side">
+    <button data-v="gainers" class="on">Gainers</button>
+    <button data-v="losers">Losers</button>
+  </div>
+  <div class="tog" id="clock">
+    <button data-v="interday" class="on">Interday</button>
+    <button data-v="intraday">Intraday</button>
+  </div>
+</div>
+<div class="meta" id="meta"></div>
+<div class="banner" id="banner"></div>
+<div class="layout">
+  <table>
+    <thead>
+      <tr>
+        <th>#</th><th>Ticker</th><th>Move</th><th>Open</th><th>Close</th><th>Prior</th>
+        <th>S</th><th>Cam</th><th>Idio</th>
+      </tr>
+    </thead>
+    <tbody id="body"></tbody>
+  </table>
+  <aside class="pane" id="pane">
+    <div class="empty">Click a name for that morning’s attributes.</div>
+  </aside>
+</div>
+<script>
+const STATE = { dates: [], i: 0, side: 'gainers', clock: 'interday', sel: null, meta: null, day: null };
+const $ = (id) => document.getElementById(id);
+
+function pct(v) {
+  if (v == null || !isFinite(v)) return '—';
+  const s = (v >= 0 ? '+' : '') + v.toFixed(2) + '%';
+  return `<span class="${v>=0?'up':'dn'}">${s}</span>`;
+}
+function num(v) { return v == null || !isFinite(v) ? '—' : v; }
+
+function renderTable() {
+  const d = STATE.meta;
+  const day = STATE.day || {};
+  if (!d) return;
+  const date = STATE.dates[STATE.i];
+  $('date').textContent = date;
+  const rows = (((day[STATE.side] || {})[STATE.clock]) || []);
+  $('meta').textContent =
+    `${d.n_tickers_scanned} histories · ${d.from_date} → ${d.to_date} · ${day.n || 0} names this morning · S=${day.s ?? '—'} · top ${d.top_n}`;
+  const banner = $('banner');
+  if (STATE.clock === 'intraday') {
+    banner.className = 'banner show';
+    banner.textContent = 'Intraday = same-session open → close. Not knowable at 09:30. Autopsy only.';
+  } else if (!rows.length) {
+    banner.className = 'banner show';
+    banner.textContent = 'Interday needs a prior close. First packed session (or a name with no previous row) has no gap rank.';
+  } else {
+    banner.className = 'banner';
+    banner.textContent = 'Interday = prior close → today’s 09:30 open. Legal at the bell.';
+    banner.classList.add('show');
+  }
+  const key = STATE.clock === 'intraday' ? 'intra' : 'inter';
+  $('body').innerHTML = rows.map((r, i) => `
+    <tr data-i="${i}" class="${STATE.sel===i?'sel':''}">
+      <td>${i+1}</td>
+      <td><strong>${r.t}</strong></td>
+      <td>${pct(r[key])}</td>
+      <td>${num(r.o)}</td>
+      <td>${num(r.c)}</td>
+      <td>${num(r.pc)}</td>
+      <td>${num(r.s)}</td>
+      <td>${r.cams || ('+' + (r.np??'?') + ' −' + (r.nn??'?'))}</td>
+      <td>${num(r.idio)}</td>
+    </tr>`).join('') || `<tr><td colspan="9">No ${STATE.clock} ${STATE.side} for ${date}.</td></tr>`;
+  document.querySelectorAll('#body tr[data-i]').forEach(tr => {
+    tr.onclick = () => { STATE.sel = +tr.dataset.i; renderTable(); renderPane(rows[STATE.sel]); };
+  });
+  if (STATE.sel != null && rows[STATE.sel]) renderPane(rows[STATE.sel]);
+  else $('pane').innerHTML = '<div class="empty">Click a name for that morning’s attributes.</div>';
+}
+
+function renderPane(r) {
+  if (!r) return;
+  const date = STATE.dates[STATE.i];
+  const legal = STATE.clock === 'interday' && r.inter != null;
+  $('pane').innerHTML = `
+    <h2>${r.t} <span class="sub">${date}</span></h2>
+    <div class="kv">
+      <div>Move (intra)</div><b>${r.intra==null?'—':((r.intra>=0?'+':'')+r.intra.toFixed(2)+'%')}</b>
+      <div>Move (inter)</div><b>${r.inter==null?'—':((r.inter>=0?'+':'')+r.inter.toFixed(2)+'%')}</b>
+      <div>Open</div><b>${num(r.o)}</b>
+      <div>Close</div><b>${num(r.c)}</b>
+      <div>Prior close</div><b>${num(r.pc)}</b>
+      <div>Weather S</div><b>${num(r.s)}${r.hr||r.sit?' · sit':''}</b>
+      <div>Cameras</div><b>${r.cams || '—'} · idio ${num(r.idio)}</b>
+      <div>H1 / H3 / H5</div><b>${num(r.h1)} / ${num(r.h3)} / ${num(r.h5)}</b>
+      <div>On shopping list</div><b>${r.on?'yes':'no'}${r.recon?' · reconstructed':''}</b>
+      <div>Legal at 09:30?</div><b>${legal?'yes — interday gap':'no — close print or missing prior'}</b>
+    </div>
+    <p style="margin:14px 0 0">
+      <a href="../hard-red-exceptions/#${encodeURIComponent(r.t)}">Open in investigator</a>
+    </p>`;
+}
+
+function bindTog(id, field) {
+  $(id).querySelectorAll('button').forEach(btn => {
+    btn.onclick = () => {
+      $(id).querySelectorAll('button').forEach(b => b.classList.toggle('on', b===btn));
+      STATE[field] = btn.dataset.v;
+      STATE.sel = null;
+      renderTable();
+    };
+  });
+}
+bindTog('side', 'side');
+bindTog('clock', 'clock');
+function loadDay() {
+  const date = STATE.dates[STATE.i];
+  if (!date) return;
+  fetch('./d/' + date + '.json').then(r => r.json()).then(day => {
+    STATE.day = day;
+    STATE.sel = null;
+    renderTable();
+  }).catch(err => {
+    STATE.day = { n: 0, gainers: {}, losers: {} };
+    $('meta').textContent = 'Failed to load ' + date + ': ' + err;
+    renderTable();
+  });
+}
+$('first').onclick = () => { STATE.i = 0; loadDay(); };
+$('last').onclick = () => { STATE.i = STATE.dates.length-1; loadDay(); };
+$('prev').onclick = () => { STATE.i = Math.max(0, STATE.i-1); loadDay(); };
+$('next').onclick = () => { STATE.i = Math.min(STATE.dates.length-1, STATE.i+1); loadDay(); };
+
+fetch('./index.json').then(r => r.json()).then(d => {
+  STATE.meta = d;
+  STATE.dates = d.dates || [];
+  STATE.i = Math.max(0, STATE.dates.length-1);
+  loadDay();
+}).catch(err => {
+  $('meta').textContent = 'Failed to load index.json: ' + err;
+});
+</script>
+</body>
+</html>

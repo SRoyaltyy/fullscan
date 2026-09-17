@@ -1,0 +1,1 @@
+{"from_date":"2026-08-13","to_date":"2026-09-17","n_days":2,"n_tickers_scanned":1249,"top_n":12,"clocks":{"interday":"prior close to 09:30 open (legal at the bell)","intraday":"09:30 open to close (autopsy; not knowable at 09:30)"},"dates":["2026-08-13","2026-09-17"],"note":"first ship packs the +8.53 open and the latest session; bake_day_movers.py fills the rest"}
