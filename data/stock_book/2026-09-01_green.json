@@ -1,80 +1,217 @@
 {
-  "n_pile": 50,
-  "n_pile_raw": 51,
-  "n_pile_liquid": 50,
+  "date": "2026-09-01",
+  "n_pile": 0,
   "n_universe": 2683,
-  "used": true,
-  "min": 8,
-  "eps": 0.05,
-  "hard_red": 0.25,
-  "relvol_dead": 0.7,
-  "rank_col": "green_rank",
-  "core_fired": {
-    "join": true,
-    "AB": true,
-    "peer": true
-  },
-  "missing_core": [],
-  "buy_mode": "green_pile",
-  "sell_mode": "core_weights_ex_green",
-  "caps": {
-    "min_mcap_m": 400.0,
-    "max_per_sector": 4,
-    "max_per_industry": 3,
-    "max_large_mega": 4
-  },
-  "reason": "pile 50 \u2265 8 liquid all-green names \u2014 BUY 15 from the pile by green_rank (no opp); SELL is core weights on the non-green remainder",
-  "tickers": [
-    "EXE",
-    "MTDR",
-    "CHRD",
-    "FTI",
-    "KMI",
+  "pile_used": false,
+  "live_buy": [
+    {
+      "ticker": "CRM",
+      "book": 0.163,
+      "s_join": -0.1832079032522584,
+      "s_general": -0.23375,
+      "s_ab": 0.9540452601799488,
+      "s_peer": 0.9929721393600428,
+      "s_opp": -0.3399999999999999,
+      "size": "mega",
+      "sector": "Technology",
+      "in_pile": false,
+      "fwd": {
+        "1d": -0.46,
+        "2d": 2.45,
+        "3d": 0.43,
+        "1w": -5.4
+      }
+    },
+    {
+      "ticker": "KMI",
+      "book": 0.453,
+      "s_join": 0.9866142981514304,
+      "s_general": -0.070125,
+      "s_ab": 0.9540452601799488,
+      "s_peer": 0.3681228913045139,
+      "s_opp": -0.05,
+      "size": "large",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": -0.4,
+        "2d": -1.56,
+        "3d": -2.18,
+        "1w": -2.15
+      }
+    },
+    {
+      "ticker": "FTI",
+      "book": 0.319,
+      "s_join": 0.9866142981514304,
+      "s_general": -0.070125,
+      "s_ab": 0.9640275800758168,
+      "s_peer": 0.2021757576967394,
+      "s_opp": -0.1699999999999999,
+      "size": "large",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": 1.74,
+        "2d": 2.26,
+        "3d": 1.95,
+        "1w": -0.64
+      }
+    },
+    {
+      "ticker": "CNR",
+      "book": 0.666,
+      "s_join": 0.9866142981514304,
+      "s_general": -0.070125,
+      "s_ab": 0.9253462253117412,
+      "s_peer": 0.2236547380034742,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": 1.4,
+        "2d": -3.76,
+        "3d": -1.6,
+        "1w": -1.85
+      }
+    },
+    {
+      "ticker": "DK",
+      "book": 0.748,
+      "s_join": 0.9566973723940728,
+      "s_general": -0.070125,
+      "s_ab": 0.9540452601799488,
+      "s_peer": 0.6138026315335671,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": -2.58,
+        "2d": -1.28,
+        "3d": -2.02,
+        "1w": 2.65
+      }
+    },
+    {
+      "ticker": "INVX",
+      "book": 0.636,
+      "s_join": 0.9614846470973548,
+      "s_general": -0.23375,
+      "s_ab": 0.9051482536448664,
+      "s_peer": 0.0922370820915592,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": 2.98,
+        "2d": 1.82,
+        "3d": -0.6,
+        "1w": -1.36
+      }
+    },
+    {
+      "ticker": "OXY",
+      "book": 0.642,
+      "s_join": 0.9866142981514304,
+      "s_general": -0.070125,
+      "s_ab": 0.9413755384972874,
+      "s_peer": 0.2913126124515908,
+      "s_opp": -0.05,
+      "size": "large",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": -0.07,
+        "2d": -0.56,
+        "3d": -1.49,
+        "1w": 0.57
+      }
+    },
+    {
+      "ticker": "DOCS",
+      "book": 0.491,
+      "s_join": 0.9269957637668794,
+      "s_general": -0.23375,
+      "s_ab": 0.8482836399575129,
+      "s_peer": 0.8290217211303869,
+      "s_opp": 0.0,
+      "size": "mid",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": -0.11,
+        "2d": 2.85,
+        "3d": 0.0,
+        "1w": -8.2
+      }
+    },
+    {
+      "ticker": "DHT",
+      "book": 0.705,
+      "s_join": 0.9866142981514304,
+      "s_general": -0.070125,
+      "s_ab": 0.9540452601799488,
+      "s_peer": 0.3820860248314457,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": 1.93,
+        "2d": 2.54,
+        "3d": 5.99,
+        "1w": 7.67
+      }
+    },
+    {
+      "ticker": "LNG",
+      "book": 0.314,
+      "s_join": 0.9861518135262048,
+      "s_general": -0.070125,
+      "s_ab": 0.8798266996519848,
+      "s_peer": 0.3702821135005857,
+      "s_opp": -0.1699999999999999,
+      "size": "large",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": 0.59,
+        "2d": -1.12,
+        "3d": -0.72,
+        "1w": -6.19
+      }
+    }
+  ],
+  "green_buy": [],
+  "overlap": [],
+  "entered": [],
+  "dropped": [
     "CNR",
-    "DINO",
-    "TAL",
-    "BTE",
-    "APA",
-    "OVV",
-    "CRK",
-    "YPF",
-    "OKE",
-    "AM",
-    "PAA",
-    "SDRL",
-    "UROY",
-    "INVX",
+    "CRM",
+    "DHT",
     "DK",
-    "PARR",
-    "EDU",
-    "PBF",
-    "MKC",
-    "HESM",
-    "RES",
-    "DTM",
-    "VET",
-    "ADM",
-    "NOV",
-    "LRN",
-    "FMX",
-    "BG",
-    "WFRD",
-    "DAR",
-    "MO",
-    "PTEN",
-    "MAMA",
-    "KDP",
-    "AMPY",
-    "CL",
-    "COKE",
-    "OLLI",
-    "SJM",
-    "OIS",
-    "KOS",
-    "COUR",
-    "GIS",
-    "CPB",
-    "TSN",
-    "IEP"
-  ]
+    "DOCS",
+    "FTI",
+    "INVX",
+    "KMI",
+    "LNG",
+    "OXY"
+  ],
+  "avg_fwd": {
+    "live": {
+      "1d": 0.5019999999999999,
+      "2d": 0.364,
+      "3d": -0.024000000000000042,
+      "1w": -1.4899999999999998
+    },
+    "green": {
+      "1d": null,
+      "2d": null,
+      "3d": null,
+      "1w": null
+    }
+  }
 }

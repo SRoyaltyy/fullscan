@@ -1,28 +1,179 @@
 {
+  "date": "2026-09-15",
   "n_pile": 0,
-  "n_pile_raw": 0,
-  "n_pile_liquid": 0,
   "n_universe": 2089,
-  "used": false,
-  "min": 8,
-  "eps": 0.05,
-  "hard_red": 0.25,
-  "relvol_dead": 0.7,
-  "rank_col": "green_rank",
-  "core_fired": {
-    "join": true,
-    "AB": true,
-    "peer": true
-  },
-  "missing_core": [],
-  "buy_mode": "weighted_fallback",
-  "sell_mode": "core_weights",
-  "caps": {
-    "min_mcap_m": 400.0,
-    "max_per_sector": 4,
-    "max_per_industry": 3,
-    "max_large_mega": 4
-  },
-  "reason": "pile 0 < 8 liquid all-green names. Fallback weighted walk; SELL stays on core",
-  "tickers": []
+  "pile_used": false,
+  "live_buy": [
+    {
+      "ticker": "MPC",
+      "book": 0.292,
+      "s_join": 0.9866142981514304,
+      "s_general": -0.0954974999999999,
+      "s_ab": 0.6351489523872873,
+      "s_peer": -0.0224962038937096,
+      "s_opp": -0.11,
+      "size": "large",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "ZD",
+      "book": 0.559,
+      "s_join": 0.0039999786668031,
+      "s_general": -0.3183249999999999,
+      "s_ab": 0.7615941559557649,
+      "s_peer": 0.513520901239621,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Communication Services",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "DBX",
+      "book": 0.666,
+      "s_join": 0.7750688231466556,
+      "s_general": -0.0954974999999999,
+      "s_ab": 0.6351489523872873,
+      "s_peer": 0.8725700114960693,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Technology",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "OKTA",
+      "book": 0.317,
+      "s_join": 0.9225518506769016,
+      "s_general": -0.0954974999999999,
+      "s_ab": 0.703905603936621,
+      "s_peer": 0.8062605889249376,
+      "s_opp": -0.1699999999999999,
+      "size": "large",
+      "sector": "Technology",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "S",
+      "book": 0.676,
+      "s_join": 0.8497075831003388,
+      "s_general": -0.0954974999999999,
+      "s_ab": 0.703905603936621,
+      "s_peer": 0.7922701689754608,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Technology",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "MTCH",
+      "book": 0.251,
+      "s_join": 0.9009608950581768,
+      "s_general": -0.6366499999999999,
+      "s_ab": 0.4621171572600097,
+      "s_peer": 0.4863360172249623,
+      "s_opp": -0.11,
+      "size": "large",
+      "sector": "Communication Services",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "TWLO",
+      "book": 0.234,
+      "s_join": 0.9550666814854792,
+      "s_general": -0.6366499999999999,
+      "s_ab": 0.7615941559557649,
+      "s_peer": 0.51719292375787,
+      "s_opp": -0.1699999999999999,
+      "size": "large",
+      "sector": "Technology",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "AVAH",
+      "book": 0.653,
+      "s_join": 0.836168818578604,
+      "s_general": -0.6366499999999999,
+      "s_ab": 0.7615941559557649,
+      "s_peer": 0.5476371485389075,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    }
+  ],
+  "green_buy": [],
+  "overlap": [],
+  "entered": [],
+  "dropped": [
+    "AVAH",
+    "DBX",
+    "MPC",
+    "MTCH",
+    "OKTA",
+    "S",
+    "TWLO",
+    "ZD"
+  ],
+  "avg_fwd": {
+    "live": {
+      "1d": null,
+      "2d": null,
+      "3d": null,
+      "1w": null
+    },
+    "green": {
+      "1d": null,
+      "2d": null,
+      "3d": null,
+      "1w": null
+    }
+  }
 }

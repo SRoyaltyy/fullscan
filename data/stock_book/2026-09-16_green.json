@@ -1,89 +1,472 @@
 {
-  "n_pile": 55,
-  "n_pile_raw": 60,
-  "n_pile_liquid": 55,
+  "date": "2026-09-16",
+  "n_pile": 60,
   "n_universe": 2062,
-  "used": true,
-  "min": 8,
-  "eps": 0.05,
-  "hard_red": 0.25,
-  "relvol_dead": 0.7,
-  "rank_col": "green_rank",
-  "core_fired": {
-    "join": true,
-    "AB": true,
-    "peer": true
-  },
-  "missing_core": [],
-  "buy_mode": "green_pile",
-  "sell_mode": "core_weights_ex_green",
-  "caps": {
-    "min_mcap_m": 400.0,
-    "max_per_sector": 4,
-    "max_per_industry": 3,
-    "max_large_mega": 4
-  },
-  "reason": "pile 55 \u2265 8 liquid all-green names \u2014 BUY 15 from the pile by green_rank (no opp); SELL is core weights on the non-green remainder",
-  "tickers": [
-    "DELL",
-    "CRSR",
-    "WMG",
-    "STGW",
-    "FRSH",
-    "PRGS",
-    "FOXA",
-    "SAIC",
-    "FOX",
-    "DBX",
-    "ALKT",
-    "TENB",
+  "pile_used": true,
+  "live_buy": [
+    {
+      "ticker": "DBX",
+      "book": 0.715,
+      "s_join": 0.9821759179205296,
+      "s_general": 0.0907799999999999,
+      "s_ab": 0.7615941559557649,
+      "s_peer": 0.749527084490048,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Technology",
+      "in_pile": true,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "BLFS",
+      "book": 0.798,
+      "s_join": 0.9441874146921212,
+      "s_general": 0.6052,
+      "s_ab": 0.8482836399575129,
+      "s_peer": 0.6505490325113644,
+      "s_opp": 0.2,
+      "size": "small",
+      "sector": "Healthcare",
+      "in_pile": true,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "RDNT",
+      "book": 0.844,
+      "s_join": 0.8880449813646751,
+      "s_general": 0.6052,
+      "s_ab": 0.703905603936621,
+      "s_peer": 0.8489831921189297,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Healthcare",
+      "in_pile": true,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "FOXA",
+      "book": 0.49,
+      "s_join": 0.9866142981514304,
+      "s_general": 0.0907799999999999,
+      "s_ab": 0.8798266996519848,
+      "s_peer": 0.5571908930236567,
+      "s_opp": -0.05,
+      "size": "large",
+      "sector": "Communication Services",
+      "in_pile": true,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "NYT",
+      "book": 0.59,
+      "s_join": 0.8784640929853902,
+      "s_general": 0.3026,
+      "s_ab": 0.9051482536448664,
+      "s_peer": 0.6075318872684417,
+      "s_opp": 0.03,
+      "size": "large",
+      "sector": "Communication Services",
+      "in_pile": true,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "SPT",
+      "book": 0.684,
+      "s_join": 0.9709713929698732,
+      "s_general": 0.3026,
+      "s_ab": 0.809301070201781,
+      "s_peer": 0.4561983965324985,
+      "s_opp": 0.2,
+      "size": "small",
+      "sector": "Technology",
+      "in_pile": true,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "AVAH",
+      "book": 0.77,
+      "s_join": 0.975555508164411,
+      "s_general": 0.6052,
+      "s_ab": 0.7615941559557649,
+      "s_peer": 0.4939335870393798,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Healthcare",
+      "in_pile": true,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "TENB",
+      "book": 0.683,
+      "s_join": 0.980001586905011,
+      "s_general": 0.3026,
+      "s_ab": 0.9051482536448664,
+      "s_peer": 0.3241254496127976,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Technology",
+      "in_pile": true,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "SAIC",
+      "book": 0.666,
+      "s_join": 0.9841125889982508,
+      "s_general": 0.0907799999999999,
+      "s_ab": 0.9413755384972874,
+      "s_peer": 0.2769493883434116,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Technology",
+      "in_pile": true,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "IQV",
+      "book": 0.37,
+      "s_join": 0.7185786864062161,
+      "s_general": 0.3026,
+      "s_ab": 0.8482836399575129,
+      "s_peer": 0.6180693776134656,
+      "s_opp": -0.1699999999999999,
+      "size": "large",
+      "sector": "Healthcare",
+      "in_pile": true,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "FOX",
+      "book": 0.432,
+      "s_join": 0.9826809813980426,
+      "s_general": 0.0907799999999999,
+      "s_ab": 0.971872745913509,
+      "s_peer": 0.1580391748010278,
+      "s_opp": -0.05,
+      "size": "large",
+      "sector": "Communication Services",
+      "in_pile": true,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "STGW",
+      "book": 0.739,
+      "s_join": 0.9866142981514304,
+      "s_general": 0.3026,
+      "s_ab": 0.8482836399575129,
+      "s_peer": 0.2647875791391257,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Communication Services",
+      "in_pile": true,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    }
+  ],
+  "green_buy": [
+    {
+      "ticker": "DBX",
+      "book": 0.715,
+      "s_join": 0.9821759179205296,
+      "s_general": 0.0907799999999999,
+      "s_ab": 0.7615941559557649,
+      "s_peer": 0.749527084490048,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Technology",
+      "in_pile": true,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "BLFS",
+      "book": 0.798,
+      "s_join": 0.9441874146921212,
+      "s_general": 0.6052,
+      "s_ab": 0.8482836399575129,
+      "s_peer": 0.6505490325113644,
+      "s_opp": 0.2,
+      "size": "small",
+      "sector": "Healthcare",
+      "in_pile": true,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "RDNT",
+      "book": 0.844,
+      "s_join": 0.8880449813646751,
+      "s_general": 0.6052,
+      "s_ab": 0.703905603936621,
+      "s_peer": 0.8489831921189297,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Healthcare",
+      "in_pile": true,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "FOXA",
+      "book": 0.49,
+      "s_join": 0.9866142981514304,
+      "s_general": 0.0907799999999999,
+      "s_ab": 0.8798266996519848,
+      "s_peer": 0.5571908930236567,
+      "s_opp": -0.05,
+      "size": "large",
+      "sector": "Communication Services",
+      "in_pile": true,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "NYT",
+      "book": 0.59,
+      "s_join": 0.8784640929853902,
+      "s_general": 0.3026,
+      "s_ab": 0.9051482536448664,
+      "s_peer": 0.6075318872684417,
+      "s_opp": 0.03,
+      "size": "large",
+      "sector": "Communication Services",
+      "in_pile": true,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "SPT",
+      "book": 0.684,
+      "s_join": 0.9709713929698732,
+      "s_general": 0.3026,
+      "s_ab": 0.809301070201781,
+      "s_peer": 0.4561983965324985,
+      "s_opp": 0.2,
+      "size": "small",
+      "sector": "Technology",
+      "in_pile": true,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "AVAH",
+      "book": 0.77,
+      "s_join": 0.975555508164411,
+      "s_general": 0.6052,
+      "s_ab": 0.7615941559557649,
+      "s_peer": 0.4939335870393798,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Healthcare",
+      "in_pile": true,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "TENB",
+      "book": 0.683,
+      "s_join": 0.980001586905011,
+      "s_general": 0.3026,
+      "s_ab": 0.9051482536448664,
+      "s_peer": 0.3241254496127976,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Technology",
+      "in_pile": true,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "SAIC",
+      "book": 0.666,
+      "s_join": 0.9841125889982508,
+      "s_general": 0.0907799999999999,
+      "s_ab": 0.9413755384972874,
+      "s_peer": 0.2769493883434116,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Technology",
+      "in_pile": true,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "IQV",
+      "book": 0.37,
+      "s_join": 0.7185786864062161,
+      "s_general": 0.3026,
+      "s_ab": 0.8482836399575129,
+      "s_peer": 0.6180693776134656,
+      "s_opp": -0.1699999999999999,
+      "size": "large",
+      "sector": "Healthcare",
+      "in_pile": true,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "FOX",
+      "book": 0.432,
+      "s_join": 0.9826809813980426,
+      "s_general": 0.0907799999999999,
+      "s_ab": 0.971872745913509,
+      "s_peer": 0.1580391748010278,
+      "s_opp": -0.05,
+      "size": "large",
+      "sector": "Communication Services",
+      "in_pile": true,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "STGW",
+      "book": 0.739,
+      "s_join": 0.9866142981514304,
+      "s_general": 0.3026,
+      "s_ab": 0.8482836399575129,
+      "s_peer": 0.2647875791391257,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Communication Services",
+      "in_pile": true,
+      "fwd": {
+        "1d": null,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    }
+  ],
+  "overlap": [
     "AVAH",
-    "CGNX",
-    "RNG",
-    "SPT",
-    "GRMN",
-    "SHLS",
-    "DXCM",
     "BLFS",
-    "ASML",
-    "DXC",
-    "TDC",
-    "CALX",
-    "VISN",
-    "NEO",
-    "THC",
-    "RDNT",
-    "TDAY",
-    "NYT",
-    "AGEN",
-    "PTC",
-    "AUPH",
-    "VERX",
-    "ELV",
-    "VECO",
-    "OLED",
-    "ATEN",
-    "SOLV",
-    "SYRE",
-    "TEL",
-    "QTTB",
+    "DBX",
+    "FOX",
+    "FOXA",
     "IQV",
-    "LOGI",
-    "A",
-    "CERT",
-    "COLL",
-    "CHTR",
-    "EXFY",
-    "TASK",
-    "CYPH",
-    "DHR",
-    "ATHM",
-    "PRTH",
-    "CCCC",
-    "CRCT",
-    "ZLAB",
-    "ZBH",
-    "PLX",
-    "AVTR"
-  ]
+    "NYT",
+    "RDNT",
+    "SAIC",
+    "SPT",
+    "STGW",
+    "TENB"
+  ],
+  "entered": [],
+  "dropped": [],
+  "avg_fwd": {
+    "live": {
+      "1d": null,
+      "2d": null,
+      "3d": null,
+      "1w": null
+    },
+    "green": {
+      "1d": null,
+      "2d": null,
+      "3d": null,
+      "1w": null
+    }
+  }
 }

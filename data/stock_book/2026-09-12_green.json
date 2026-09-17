@@ -1,28 +1,122 @@
 {
+  "date": "2026-09-12",
   "n_pile": 0,
-  "n_pile_raw": 0,
-  "n_pile_liquid": 0,
   "n_universe": 2082,
-  "used": false,
-  "min": 8,
-  "eps": 0.05,
-  "hard_red": 0.25,
-  "relvol_dead": 0.7,
-  "rank_col": "green_rank",
-  "core_fired": {
-    "join": true,
-    "AB": true,
-    "peer": true
-  },
-  "missing_core": [],
-  "buy_mode": "weighted_fallback",
-  "sell_mode": "core_weights",
-  "caps": {
-    "min_mcap_m": 400.0,
-    "max_per_sector": 4,
-    "max_per_industry": 3,
-    "max_large_mega": 4
-  },
-  "reason": "pile 0 < 8 liquid all-green names. Fallback weighted walk; SELL stays on core",
-  "tickers": []
+  "pile_used": false,
+  "live_buy": [
+    {
+      "ticker": "DELL",
+      "book": 0.437,
+      "s_join": 0.9764422776890512,
+      "s_general": 0.0,
+      "s_ab": 0.9253462253117412,
+      "s_peer": 0.6043677771171634,
+      "s_opp": -0.28,
+      "size": "mega",
+      "sector": "Technology",
+      "in_pile": false,
+      "fwd": {
+        "1d": 1.73,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "HPQ",
+      "book": 0.529,
+      "s_join": 0.9696734655275812,
+      "s_general": 0.0,
+      "s_ab": 0.8798266996519848,
+      "s_peer": 0.7317573500386784,
+      "s_opp": -0.11,
+      "size": "large",
+      "sector": "Technology",
+      "in_pile": false,
+      "fwd": {
+        "1d": -0.59,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "AVT",
+      "book": 0.879,
+      "s_join": 0.9638221188558992,
+      "s_general": 0.0,
+      "s_ab": 0.982845029172576,
+      "s_peer": 0.7138545530398384,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Technology",
+      "in_pile": false,
+      "fwd": {
+        "1d": 0.32,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "ARW",
+      "book": 0.414,
+      "s_join": 0.9579420171874112,
+      "s_general": 0.0,
+      "s_ab": 0.8798266996519848,
+      "s_peer": 0.458175844698613,
+      "s_opp": -0.1699999999999999,
+      "size": "large",
+      "sector": "Technology",
+      "in_pile": false,
+      "fwd": {
+        "1d": -0.48,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "VICR",
+      "book": 0.807,
+      "s_join": 0.9589832360283066,
+      "s_general": 0.0,
+      "s_ab": 0.8482836399575129,
+      "s_peer": 0.5712490698501635,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Technology",
+      "in_pile": false,
+      "fwd": {
+        "1d": -0.41,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    }
+  ],
+  "green_buy": [],
+  "overlap": [],
+  "entered": [],
+  "dropped": [
+    "ARW",
+    "AVT",
+    "DELL",
+    "HPQ",
+    "VICR"
+  ],
+  "avg_fwd": {
+    "live": {
+      "1d": 0.11400000000000006,
+      "2d": null,
+      "3d": null,
+      "1w": null
+    },
+    "green": {
+      "1d": null,
+      "2d": null,
+      "3d": null,
+      "1w": null
+    }
+  }
 }

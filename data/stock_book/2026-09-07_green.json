@@ -1,0 +1,141 @@
+{
+  "date": "2026-09-07",
+  "n_pile": 0,
+  "n_universe": 2088,
+  "pile_used": false,
+  "live_buy": [
+    {
+      "ticker": "JCI",
+      "book": 0.431,
+      "s_join": 0.273922849721524,
+      "s_general": 0.0,
+      "s_ab": 0.4621171572600097,
+      "s_peer": 0.638122413695716,
+      "s_opp": -0.05,
+      "size": "large",
+      "sector": "Industrials",
+      "in_pile": false,
+      "fwd": {
+        "1d": -0.99,
+        "2d": -2.43,
+        "3d": -0.25,
+        "1w": -5.52
+      }
+    },
+    {
+      "ticker": "ALAB",
+      "book": 0.621,
+      "s_join": 0.6225756739407605,
+      "s_general": 0.0,
+      "s_ab": 0.703905603936621,
+      "s_peer": 0.5787791975453099,
+      "s_opp": 0.03,
+      "size": "large",
+      "sector": "Technology",
+      "in_pile": false,
+      "fwd": {
+        "1d": 4.05,
+        "2d": -1.5,
+        "3d": 0.82,
+        "1w": -12.57
+      }
+    },
+    {
+      "ticker": "CRWD",
+      "book": 0.102,
+      "s_join": 0.4277993887086264,
+      "s_general": 0.0,
+      "s_ab": 0.3583573983507859,
+      "s_peer": 0.51444068070808,
+      "s_opp": -0.3399999999999999,
+      "size": "mega",
+      "sector": "Technology",
+      "in_pile": false,
+      "fwd": {
+        "1d": -1.06,
+        "2d": -0.55,
+        "3d": -1.56,
+        "1w": 15.46
+      }
+    },
+    {
+      "ticker": "BKR",
+      "book": 0.425,
+      "s_join": 0.9844864252370004,
+      "s_general": 0.0,
+      "s_ab": 0.9051482536448664,
+      "s_peer": 0.0212468020099273,
+      "s_opp": -0.05,
+      "size": "large",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": -0.44,
+        "2d": -7.07,
+        "3d": -7.6,
+        "1w": -11.26
+      }
+    },
+    {
+      "ticker": "MOS",
+      "book": 0.536,
+      "s_join": -0.0229959451913286,
+      "s_general": 0.0,
+      "s_ab": 0.5545997223493823,
+      "s_peer": 0.4929879666753242,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Basic Materials",
+      "in_pile": false,
+      "fwd": {
+        "1d": -1.21,
+        "2d": -4.26,
+        "3d": -5.05,
+        "1w": -3.22
+      }
+    },
+    {
+      "ticker": "HPE",
+      "book": 0.231,
+      "s_join": 0.6948639478323405,
+      "s_general": 0.0,
+      "s_ab": 0.1243530017715962,
+      "s_peer": -0.0137491335290684,
+      "s_opp": -0.05,
+      "size": "large",
+      "sector": "Technology",
+      "in_pile": false,
+      "fwd": {
+        "1d": 5.12,
+        "2d": -1.45,
+        "3d": 10.82,
+        "1w": -0.27
+      }
+    }
+  ],
+  "green_buy": [],
+  "overlap": [],
+  "entered": [],
+  "dropped": [
+    "ALAB",
+    "BKR",
+    "CRWD",
+    "HPE",
+    "JCI",
+    "MOS"
+  ],
+  "avg_fwd": {
+    "live": {
+      "1d": 0.9116666666666666,
+      "2d": -2.876666666666667,
+      "3d": -0.47000000000000003,
+      "1w": -2.8966666666666665
+    },
+    "green": {
+      "1d": null,
+      "2d": null,
+      "3d": null,
+      "1w": null
+    }
+  }
+}

@@ -1,0 +1,1180 @@
+{
+  "date": "2026-09-01",
+  "n_universe": 2683,
+  "definition": {
+    "standalone": "mean(join, sector, general, news, AB, peer) \u2014 no weights, no opp/rebound",
+    "tape": "mean(AB, peer) \u2014 name-specific only",
+    "gates": "same as live: skip micro/<$400M, max 4 large, 4/sector, 3/industry"
+  },
+  "live_buy": [
+    {
+      "ticker": "CRM",
+      "standalone": 0.3182,
+      "tape": 0.9735,
+      "book": 0.1632,
+      "s_join": -0.1832079032522584,
+      "s_sector": -0.08,
+      "s_general": -0.23375,
+      "s_news": 0.4589655575033787,
+      "s_ab": 0.9540452601799488,
+      "s_peer": 0.9929721393600428,
+      "s_opp": -0.3399999999999999,
+      "size": "mega",
+      "sector": "Technology",
+      "fwd": {
+        "1d": -0.46,
+        "2d": 2.45,
+        "3d": 0.43,
+        "1w": -5.4
+      }
+    },
+    {
+      "ticker": "KMI",
+      "standalone": 0.4191,
+      "tape": 0.6611,
+      "book": 0.4525,
+      "s_join": 0.9866142981514304,
+      "s_sector": 0.276,
+      "s_general": -0.070125,
+      "s_news": 0.0,
+      "s_ab": 0.9540452601799488,
+      "s_peer": 0.3681228913045139,
+      "s_opp": -0.05,
+      "size": "large",
+      "sector": "Energy",
+      "fwd": {
+        "1d": -0.4,
+        "2d": -1.56,
+        "3d": -2.18,
+        "1w": -2.15
+      }
+    },
+    {
+      "ticker": "FTI",
+      "standalone": 0.3931,
+      "tape": 0.5831,
+      "book": 0.3186,
+      "s_join": 0.9866142981514304,
+      "s_sector": 0.276,
+      "s_general": -0.070125,
+      "s_news": 0.0,
+      "s_ab": 0.9640275800758168,
+      "s_peer": 0.2021757576967394,
+      "s_opp": -0.1699999999999999,
+      "size": "large",
+      "sector": "Energy",
+      "fwd": {
+        "1d": 1.74,
+        "2d": 2.26,
+        "3d": 1.95,
+        "1w": -0.64
+      }
+    },
+    {
+      "ticker": "CNR",
+      "standalone": 0.3902,
+      "tape": 0.5745,
+      "book": 0.6665,
+      "s_join": 0.9866142981514304,
+      "s_sector": 0.276,
+      "s_general": -0.070125,
+      "s_news": 0.0,
+      "s_ab": 0.9253462253117412,
+      "s_peer": 0.2236547380034742,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Energy",
+      "fwd": {
+        "1d": 1.4,
+        "2d": -3.76,
+        "3d": -1.6,
+        "1w": -1.85
+      }
+    },
+    {
+      "ticker": "DK",
+      "standalone": 0.4551,
+      "tape": 0.7839,
+      "book": 0.7481,
+      "s_join": 0.9566973723940728,
+      "s_sector": 0.276,
+      "s_general": -0.070125,
+      "s_news": 0.0,
+      "s_ab": 0.9540452601799488,
+      "s_peer": 0.6138026315335671,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Energy",
+      "fwd": {
+        "1d": -2.58,
+        "2d": -1.28,
+        "3d": -2.02,
+        "1w": 2.65
+      }
+    },
+    {
+      "ticker": "INVX",
+      "standalone": 0.3335,
+      "tape": 0.4987,
+      "book": 0.6358,
+      "s_join": 0.9614846470973548,
+      "s_sector": 0.276,
+      "s_general": -0.23375,
+      "s_news": 0.0,
+      "s_ab": 0.9051482536448664,
+      "s_peer": 0.0922370820915592,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Energy",
+      "fwd": {
+        "1d": 2.98,
+        "2d": 1.82,
+        "3d": -0.6,
+        "1w": -1.36
+      }
+    },
+    {
+      "ticker": "OXY",
+      "standalone": 0.5431,
+      "tape": 0.6163,
+      "book": 0.6424,
+      "s_join": 0.9866142981514304,
+      "s_sector": 0.276,
+      "s_general": -0.070125,
+      "s_news": 0.8336546070121552,
+      "s_ab": 0.9413755384972874,
+      "s_peer": 0.2913126124515908,
+      "s_opp": -0.05,
+      "size": "large",
+      "sector": "Energy",
+      "fwd": {
+        "1d": -0.07,
+        "2d": -0.56,
+        "3d": -1.49,
+        "1w": 0.57
+      }
+    },
+    {
+      "ticker": "DOCS",
+      "standalone": 0.3084,
+      "tape": 0.8387,
+      "book": 0.4914,
+      "s_join": 0.9269957637668794,
+      "s_sector": -0.52,
+      "s_general": -0.23375,
+      "s_news": 0.0,
+      "s_ab": 0.8482836399575129,
+      "s_peer": 0.8290217211303869,
+      "s_opp": 0.0,
+      "size": "mid",
+      "sector": "Healthcare",
+      "fwd": {
+        "1d": -0.11,
+        "2d": 2.85,
+        "3d": 0.0,
+        "1w": -8.2
+      }
+    },
+    {
+      "ticker": "DHT",
+      "standalone": 0.4214,
+      "tape": 0.6681,
+      "book": 0.7053,
+      "s_join": 0.9866142981514304,
+      "s_sector": 0.276,
+      "s_general": -0.070125,
+      "s_news": 0.0,
+      "s_ab": 0.9540452601799488,
+      "s_peer": 0.3820860248314457,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Energy",
+      "fwd": {
+        "1d": 1.93,
+        "2d": 2.54,
+        "3d": 5.99,
+        "1w": 7.67
+      }
+    },
+    {
+      "ticker": "LNG",
+      "standalone": 0.407,
+      "tape": 0.6251,
+      "book": 0.3143,
+      "s_join": 0.9861518135262048,
+      "s_sector": 0.276,
+      "s_general": -0.070125,
+      "s_news": 0.0,
+      "s_ab": 0.8798266996519848,
+      "s_peer": 0.3702821135005857,
+      "s_opp": -0.1699999999999999,
+      "size": "large",
+      "sector": "Energy",
+      "fwd": {
+        "1d": 0.59,
+        "2d": -1.12,
+        "3d": -0.72,
+        "1w": -6.19
+      }
+    }
+  ],
+  "standalone_buy": [
+    {
+      "ticker": "DK",
+      "standalone": 0.4551,
+      "tape": 0.7839,
+      "book": 0.7481,
+      "s_join": 0.9566973723940728,
+      "s_sector": 0.276,
+      "s_general": -0.070125,
+      "s_news": 0.0,
+      "s_ab": 0.9540452601799488,
+      "s_peer": 0.6138026315335671,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Energy",
+      "fwd": {
+        "1d": -2.58,
+        "2d": -1.28,
+        "3d": -2.02,
+        "1w": 2.65
+      }
+    },
+    {
+      "ticker": "BTE",
+      "standalone": 0.4195,
+      "tape": 0.6657,
+      "book": 0.7029,
+      "s_join": 0.9798465673355172,
+      "s_sector": 0.276,
+      "s_general": -0.070125,
+      "s_news": 0.0,
+      "s_ab": 0.9413755384972874,
+      "s_peer": 0.3900635614070829,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Energy",
+      "fwd": {
+        "1d": 1.4,
+        "2d": -1.0,
+        "3d": -2.8,
+        "1w": -0.2
+      }
+    },
+    {
+      "ticker": "KMI",
+      "standalone": 0.4191,
+      "tape": 0.6611,
+      "book": 0.4525,
+      "s_join": 0.9866142981514304,
+      "s_sector": 0.276,
+      "s_general": -0.070125,
+      "s_news": 0.0,
+      "s_ab": 0.9540452601799488,
+      "s_peer": 0.3681228913045139,
+      "s_opp": -0.05,
+      "size": "large",
+      "sector": "Energy",
+      "fwd": {
+        "1d": -0.4,
+        "2d": -1.56,
+        "3d": -2.18,
+        "1w": -2.15
+      }
+    },
+    {
+      "ticker": "MTDR",
+      "standalone": 0.4168,
+      "tape": 0.654,
+      "book": 0.6997,
+      "s_join": 0.9866142981514304,
+      "s_sector": 0.276,
+      "s_general": -0.070125,
+      "s_news": 0.0,
+      "s_ab": 0.9540452601799488,
+      "s_peer": 0.3539917124770459,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Energy",
+      "fwd": {
+        "1d": 0.62,
+        "2d": 0.86,
+        "3d": -0.1,
+        "1w": 2.48
+      }
+    },
+    {
+      "ticker": "TEL",
+      "standalone": 0.349,
+      "tape": 0.8584,
+      "book": 0.5267,
+      "s_join": 0.6911217085214867,
+      "s_sector": -0.08,
+      "s_general": -0.23375,
+      "s_news": 0.0,
+      "s_ab": 0.9413755384972874,
+      "s_peer": 0.7754079776985525,
+      "s_opp": 0.03,
+      "size": "large",
+      "sector": "Technology",
+      "fwd": {
+        "1d": -2.78,
+        "2d": 0.68,
+        "3d": 0.31,
+        "1w": -1.6
+      }
+    },
+    {
+      "ticker": "ASND",
+      "standalone": 0.3282,
+      "tape": 0.7864,
+      "book": 0.4693,
+      "s_join": 0.9866142981514304,
+      "s_sector": -0.52,
+      "s_general": -0.070125,
+      "s_news": 0.0,
+      "s_ab": 0.8798266996519848,
+      "s_peer": 0.693023483032249,
+      "s_opp": 0.0,
+      "size": "large",
+      "sector": "Healthcare",
+      "fwd": {
+        "1d": 2.71,
+        "2d": 4.18,
+        "3d": 3.96,
+        "1w": 0.22
+      }
+    },
+    {
+      "ticker": "WAY",
+      "standalone": 0.3278,
+      "tape": 0.7851,
+      "book": 0.4918,
+      "s_join": 0.9866142981514304,
+      "s_sector": -0.52,
+      "s_general": -0.070125,
+      "s_news": 0.0,
+      "s_ab": 0.8798266996519848,
+      "s_peer": 0.6904158768408093,
+      "s_opp": 0.0,
+      "size": "mid",
+      "sector": "Healthcare",
+      "fwd": {
+        "1d": -0.16,
+        "2d": 1.24,
+        "3d": -2.68,
+        "1w": -7.38
+      }
+    },
+    {
+      "ticker": "PCRX",
+      "standalone": 0.3202,
+      "tape": 0.808,
+      "book": 0.4635,
+      "s_join": 0.8951974297716622,
+      "s_sector": -0.52,
+      "s_general": -0.070125,
+      "s_news": 0.0,
+      "s_ab": 0.809301070201781,
+      "s_peer": 0.806697578116818,
+      "s_opp": 0.0,
+      "size": "small",
+      "sector": "Healthcare",
+      "fwd": {
+        "1d": 0.42,
+        "2d": 0.49,
+        "3d": -0.45,
+        "1w": -2.23
+      }
+    },
+    {
+      "ticker": "KEYS",
+      "standalone": 0.3058,
+      "tape": 0.6269,
+      "book": 0.3994,
+      "s_join": 0.5855715898809077,
+      "s_sector": -0.08,
+      "s_general": -0.23375,
+      "s_news": 0.3095069212126384,
+      "s_ab": 0.5545997223493823,
+      "s_peer": 0.6991444782613718,
+      "s_opp": -0.05,
+      "size": "large",
+      "sector": "Technology",
+      "fwd": {
+        "1d": 0.72,
+        "2d": 1.05,
+        "3d": 2.49,
+        "1w": 3.68
+      }
+    },
+    {
+      "ticker": "PHR",
+      "standalone": 0.2925,
+      "tape": 0.7861,
+      "book": 0.4754,
+      "s_join": 0.9361920085163264,
+      "s_sector": -0.52,
+      "s_general": -0.23375,
+      "s_news": 0.0,
+      "s_ab": 0.9253462253117412,
+      "s_peer": 0.6469294504417665,
+      "s_opp": 0.0,
+      "size": "small",
+      "sector": "Healthcare",
+      "fwd": {
+        "1d": 0.08,
+        "2d": -6.25,
+        "3d": -7.6,
+        "1w": -12.67
+      }
+    },
+    {
+      "ticker": "G",
+      "standalone": 0.2182,
+      "tape": 0.4941,
+      "book": 0.5346,
+      "s_join": 0.471190903625333,
+      "s_sector": -0.08,
+      "s_general": -0.070125,
+      "s_news": 0.0,
+      "s_ab": 0.8798266996519848,
+      "s_peer": 0.108323305527297,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Technology",
+      "fwd": {
+        "1d": -0.53,
+        "2d": 1.03,
+        "3d": -0.98,
+        "1w": -7.48
+      }
+    },
+    {
+      "ticker": "MEI",
+      "standalone": 0.1916,
+      "tape": 0.9237,
+      "book": 0.5985,
+      "s_join": -0.15,
+      "s_sector": -0.08,
+      "s_general": -0.4675,
+      "s_news": 0.0,
+      "s_ab": 0.8482836399575129,
+      "s_peer": 0.999102638350942,
+      "s_opp": 0.2,
+      "size": "small",
+      "sector": "Technology",
+      "fwd": {
+        "1d": -1.2,
+        "2d": -16.38,
+        "3d": -14.36,
+        "1w": -23.64
+      }
+    },
+    {
+      "ticker": "SBLK",
+      "standalone": 0.164,
+      "tape": 0.419,
+      "book": 0.288,
+      "s_join": 0.6962576726866814,
+      "s_sector": -0.48,
+      "s_general": -0.070125,
+      "s_news": 0.0,
+      "s_ab": 0.809301070201781,
+      "s_peer": 0.0287420813941204,
+      "s_opp": 0.0,
+      "size": "mid",
+      "sector": "Industrials",
+      "fwd": {
+        "1d": 2.48,
+        "2d": 2.64,
+        "3d": 4.41,
+        "1w": 0.35
+      }
+    },
+    {
+      "ticker": "RNW",
+      "standalone": 0.15,
+      "tape": 0.5778,
+      "book": 0.309,
+      "s_join": 0.2381387167958503,
+      "s_sector": -0.26,
+      "s_general": -0.23375,
+      "s_news": 0.0,
+      "s_ab": 0.8798266996519848,
+      "s_peer": 0.2757948654688504,
+      "s_opp": 0.0,
+      "size": "mid",
+      "sector": "Utilities",
+      "fwd": {
+        "1d": 0.15,
+        "2d": 0.44,
+        "3d": 1.03,
+        "1w": 0.74
+      }
+    },
+    {
+      "ticker": "XRX",
+      "standalone": 0.1002,
+      "tape": 0.8494,
+      "book": 0.2804,
+      "s_join": -0.15,
+      "s_sector": -0.48,
+      "s_general": -0.4675,
+      "s_news": 0.0,
+      "s_ab": 0.8798266996519848,
+      "s_peer": 0.8189925677444958,
+      "s_opp": 0.0,
+      "size": "small",
+      "sector": "Industrials",
+      "fwd": {
+        "1d": 0.63,
+        "2d": 4.43,
+        "3d": 5.06,
+        "1w": -0.63
+      }
+    }
+  ],
+  "tape_buy": [
+    {
+      "ticker": "MEI",
+      "standalone": 0.1916,
+      "tape": 0.9237,
+      "book": 0.5985,
+      "s_join": -0.15,
+      "s_sector": -0.08,
+      "s_general": -0.4675,
+      "s_news": 0.0,
+      "s_ab": 0.8482836399575129,
+      "s_peer": 0.999102638350942,
+      "s_opp": 0.2,
+      "size": "small",
+      "sector": "Technology",
+      "fwd": {
+        "1d": -1.2,
+        "2d": -16.38,
+        "3d": -14.36,
+        "1w": -23.64
+      }
+    },
+    {
+      "ticker": "TEL",
+      "standalone": 0.349,
+      "tape": 0.8584,
+      "book": 0.5267,
+      "s_join": 0.6911217085214867,
+      "s_sector": -0.08,
+      "s_general": -0.23375,
+      "s_news": 0.0,
+      "s_ab": 0.9413755384972874,
+      "s_peer": 0.7754079776985525,
+      "s_opp": 0.03,
+      "size": "large",
+      "sector": "Technology",
+      "fwd": {
+        "1d": -2.78,
+        "2d": 0.68,
+        "3d": 0.31,
+        "1w": -1.6
+      }
+    },
+    {
+      "ticker": "XRX",
+      "standalone": 0.1002,
+      "tape": 0.8494,
+      "book": 0.2804,
+      "s_join": -0.15,
+      "s_sector": -0.48,
+      "s_general": -0.4675,
+      "s_news": 0.0,
+      "s_ab": 0.8798266996519848,
+      "s_peer": 0.8189925677444958,
+      "s_opp": 0.0,
+      "size": "small",
+      "sector": "Industrials",
+      "fwd": {
+        "1d": 0.63,
+        "2d": 4.43,
+        "3d": 5.06,
+        "1w": -0.63
+      }
+    },
+    {
+      "ticker": "PCRX",
+      "standalone": 0.3202,
+      "tape": 0.808,
+      "book": 0.4635,
+      "s_join": 0.8951974297716622,
+      "s_sector": -0.52,
+      "s_general": -0.070125,
+      "s_news": 0.0,
+      "s_ab": 0.809301070201781,
+      "s_peer": 0.806697578116818,
+      "s_opp": 0.0,
+      "size": "small",
+      "sector": "Healthcare",
+      "fwd": {
+        "1d": 0.42,
+        "2d": 0.49,
+        "3d": -0.45,
+        "1w": -2.23
+      }
+    },
+    {
+      "ticker": "ASND",
+      "standalone": 0.3282,
+      "tape": 0.7864,
+      "book": 0.4693,
+      "s_join": 0.9866142981514304,
+      "s_sector": -0.52,
+      "s_general": -0.070125,
+      "s_news": 0.0,
+      "s_ab": 0.8798266996519848,
+      "s_peer": 0.693023483032249,
+      "s_opp": 0.0,
+      "size": "large",
+      "sector": "Healthcare",
+      "fwd": {
+        "1d": 2.71,
+        "2d": 4.18,
+        "3d": 3.96,
+        "1w": 0.22
+      }
+    },
+    {
+      "ticker": "PHR",
+      "standalone": 0.2925,
+      "tape": 0.7861,
+      "book": 0.4754,
+      "s_join": 0.9361920085163264,
+      "s_sector": -0.52,
+      "s_general": -0.23375,
+      "s_news": 0.0,
+      "s_ab": 0.9253462253117412,
+      "s_peer": 0.6469294504417665,
+      "s_opp": 0.0,
+      "size": "small",
+      "sector": "Healthcare",
+      "fwd": {
+        "1d": 0.08,
+        "2d": -6.25,
+        "3d": -7.6,
+        "1w": -12.67
+      }
+    },
+    {
+      "ticker": "WAY",
+      "standalone": 0.3278,
+      "tape": 0.7851,
+      "book": 0.4918,
+      "s_join": 0.9866142981514304,
+      "s_sector": -0.52,
+      "s_general": -0.070125,
+      "s_news": 0.0,
+      "s_ab": 0.8798266996519848,
+      "s_peer": 0.6904158768408093,
+      "s_opp": 0.0,
+      "size": "mid",
+      "sector": "Healthcare",
+      "fwd": {
+        "1d": -0.16,
+        "2d": 1.24,
+        "3d": -2.68,
+        "1w": -7.38
+      }
+    },
+    {
+      "ticker": "DK",
+      "standalone": 0.4551,
+      "tape": 0.7839,
+      "book": 0.7481,
+      "s_join": 0.9566973723940728,
+      "s_sector": 0.276,
+      "s_general": -0.070125,
+      "s_news": 0.0,
+      "s_ab": 0.9540452601799488,
+      "s_peer": 0.6138026315335671,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Energy",
+      "fwd": {
+        "1d": -2.58,
+        "2d": -1.28,
+        "3d": -2.02,
+        "1w": 2.65
+      }
+    },
+    {
+      "ticker": "SN",
+      "standalone": 0.1421,
+      "tape": 0.7495,
+      "book": 0.3372,
+      "s_join": 0.3471503804083505,
+      "s_sector": -0.76,
+      "s_general": -0.23375,
+      "s_news": 0.0,
+      "s_ab": 0.809301070201781,
+      "s_peer": 0.6897611547473924,
+      "s_opp": 0.0,
+      "size": "large",
+      "sector": "Consumer Cyclical",
+      "fwd": {
+        "1d": 0.19,
+        "2d": 0.17,
+        "3d": -0.88,
+        "1w": -3.21
+      }
+    },
+    {
+      "ticker": "KD",
+      "standalone": 0.1179,
+      "tape": 0.7024,
+      "book": 0.4628,
+      "s_join": -0.15,
+      "s_sector": -0.08,
+      "s_general": -0.4675,
+      "s_news": 0.0,
+      "s_ab": 0.9051482536448664,
+      "s_peer": 0.4995827757740295,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Technology",
+      "fwd": {
+        "1d": -0.23,
+        "2d": 1.68,
+        "3d": 0.23,
+        "1w": -0.84
+      }
+    },
+    {
+      "ticker": "TASK",
+      "standalone": 0.1166,
+      "tape": 0.6986,
+      "book": 0.4638,
+      "s_join": -0.15,
+      "s_sector": -0.08,
+      "s_general": -0.4675,
+      "s_news": 0.0,
+      "s_ab": 0.9540452601799488,
+      "s_peer": 0.4432353403693175,
+      "s_opp": 0.2,
+      "size": "small",
+      "sector": "Technology",
+      "fwd": {
+        "1d": 3.87,
+        "2d": 4.12,
+        "3d": 1.93,
+        "1w": -2.45
+      }
+    },
+    {
+      "ticker": "BTE",
+      "standalone": 0.4195,
+      "tape": 0.6657,
+      "book": 0.7029,
+      "s_join": 0.9798465673355172,
+      "s_sector": 0.276,
+      "s_general": -0.070125,
+      "s_news": 0.0,
+      "s_ab": 0.9413755384972874,
+      "s_peer": 0.3900635614070829,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Energy",
+      "fwd": {
+        "1d": 1.4,
+        "2d": -1.0,
+        "3d": -2.8,
+        "1w": -0.2
+      }
+    },
+    {
+      "ticker": "KMI",
+      "standalone": 0.4191,
+      "tape": 0.6611,
+      "book": 0.4525,
+      "s_join": 0.9866142981514304,
+      "s_sector": 0.276,
+      "s_general": -0.070125,
+      "s_news": 0.0,
+      "s_ab": 0.9540452601799488,
+      "s_peer": 0.3681228913045139,
+      "s_opp": -0.05,
+      "size": "large",
+      "sector": "Energy",
+      "fwd": {
+        "1d": -0.4,
+        "2d": -1.56,
+        "3d": -2.18,
+        "1w": -2.15
+      }
+    },
+    {
+      "ticker": "MTDR",
+      "standalone": 0.4168,
+      "tape": 0.654,
+      "book": 0.6997,
+      "s_join": 0.9866142981514304,
+      "s_sector": 0.276,
+      "s_general": -0.070125,
+      "s_news": 0.0,
+      "s_ab": 0.9540452601799488,
+      "s_peer": 0.3539917124770459,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Energy",
+      "fwd": {
+        "1d": 0.62,
+        "2d": 0.86,
+        "3d": -0.1,
+        "1w": 2.48
+      }
+    },
+    {
+      "ticker": "RNW",
+      "standalone": 0.15,
+      "tape": 0.5778,
+      "book": 0.309,
+      "s_join": 0.2381387167958503,
+      "s_sector": -0.26,
+      "s_general": -0.23375,
+      "s_news": 0.0,
+      "s_ab": 0.8798266996519848,
+      "s_peer": 0.2757948654688504,
+      "s_opp": 0.0,
+      "size": "mid",
+      "sector": "Utilities",
+      "fwd": {
+        "1d": 0.15,
+        "2d": 0.44,
+        "3d": 1.03,
+        "1w": 0.74
+      }
+    }
+  ],
+  "watch": [
+    {
+      "ticker": "SLS",
+      "standalone": -0.0769,
+      "tape": -0.0774,
+      "book": 0.0292,
+      "s_join": 0.6805833819789111,
+      "s_sector": -0.52,
+      "s_general": -0.4675,
+      "s_news": 0.0,
+      "s_ab": 0.3583573983507859,
+      "s_peer": -0.5130605683779753,
+      "s_opp": 0.0,
+      "size": "mid",
+      "sector": "Healthcare",
+      "fwd": {
+        "1d": 7.11,
+        "2d": 3.63,
+        "3d": 4.84,
+        "1w": 5.52
+      },
+      "rank_standalone_raw": 1464,
+      "rank_tape_raw": 1811,
+      "mcap": 2655.59,
+      "gated": false
+    },
+    {
+      "ticker": "ARCT",
+      "standalone": -0.2224,
+      "tape": -0.16,
+      "book": -0.1444,
+      "s_join": -0.0269549917855995,
+      "s_sector": -0.52,
+      "s_general": -0.4675,
+      "s_news": 0.0,
+      "s_ab": 0.2449186624037091,
+      "s_peer": -0.564899552846225,
+      "s_opp": 0.0,
+      "size": "small",
+      "sector": "Healthcare",
+      "fwd": {
+        "1d": 3.14,
+        "2d": -4.13,
+        "3d": -2.53,
+        "1w": -9.18
+      },
+      "rank_standalone_raw": 2079,
+      "rank_tape_raw": 1989,
+      "mcap": 406.45,
+      "gated": false
+    },
+    {
+      "ticker": "CYPH",
+      "standalone": 0.005,
+      "tape": 0.2369,
+      "book": 0.0368,
+      "s_join": 0.146090799133865,
+      "s_sector": -0.52,
+      "s_general": -0.070125,
+      "s_news": 0.0,
+      "s_ab": -0.3583573983507859,
+      "s_peer": 0.8321231362048838,
+      "s_opp": 0.0,
+      "size": "micro",
+      "sector": "Healthcare",
+      "fwd": {
+        "1d": -1.75,
+        "2d": 32.75,
+        "3d": 41.52,
+        "1w": 43.27
+      },
+      "rank_standalone_raw": 1064,
+      "rank_tape_raw": 965,
+      "mcap": 190.31,
+      "gated": true
+    },
+    {
+      "ticker": "ASST",
+      "standalone": 0.1288,
+      "tape": 0.8651,
+      "book": 0.2995,
+      "s_join": -0.03,
+      "s_sector": -0.46,
+      "s_general": -0.4675,
+      "s_news": 0.0,
+      "s_ab": 0.809301070201781,
+      "s_peer": 0.9208174360558768,
+      "s_opp": 0.0,
+      "size": "mid",
+      "sector": "Financial",
+      "fwd": {
+        "1d": 1.33,
+        "2d": 11.75,
+        "3d": 13.08,
+        "1w": 11.21
+      },
+      "rank_standalone_raw": 523,
+      "rank_tape_raw": 5,
+      "mcap": 2145.23,
+      "gated": false
+    },
+    {
+      "ticker": "BTDR",
+      "standalone": -0.0779,
+      "tape": 0.115,
+      "book": 0.1647,
+      "s_join": -0.15,
+      "s_sector": -0.08,
+      "s_general": -0.4675,
+      "s_news": 0.0,
+      "s_ab": -0.3583573983507859,
+      "s_peer": 0.5882592563981054,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Technology",
+      "fwd": {
+        "1d": 3.77,
+        "2d": 15.07,
+        "3d": 19.61,
+        "1w": 19.13
+      },
+      "rank_standalone_raw": 1470,
+      "rank_tape_raw": 1312,
+      "mcap": 2913.51,
+      "gated": false
+    },
+    {
+      "ticker": "VIRT",
+      "standalone": 0.2131,
+      "tape": 0.4569,
+      "book": 0.281,
+      "s_join": 0.8951974297716622,
+      "s_sector": -0.46,
+      "s_general": -0.070125,
+      "s_news": 0.0,
+      "s_ab": 0.8482836399575129,
+      "s_peer": 0.0655309542415199,
+      "s_opp": 0.0,
+      "size": "large",
+      "sector": "Financial",
+      "fwd": {
+        "1d": -4.03,
+        "2d": -1.73,
+        "3d": -1.36,
+        "1w": -3.72
+      },
+      "rank_standalone_raw": 238,
+      "rank_tape_raw": 397,
+      "mcap": 10187.34,
+      "gated": false
+    },
+    {
+      "ticker": "FIGR",
+      "standalone": 0.1624,
+      "tape": 0.4627,
+      "book": 0.2539,
+      "s_join": 0.6962576726866814,
+      "s_sector": -0.46,
+      "s_general": -0.187,
+      "s_news": 0.0,
+      "s_ab": 0.9253462253117412,
+      "s_peer": 0.0,
+      "s_opp": 0.0,
+      "size": "mid",
+      "sector": "Financial",
+      "fwd": {
+        "1d": -1.51,
+        "2d": 7.45,
+        "3d": 6.71,
+        "1w": 13.12
+      },
+      "rank_standalone_raw": 390,
+      "rank_tape_raw": 379,
+      "mcap": 7981.28,
+      "gated": false
+    },
+    {
+      "ticker": "ELF",
+      "standalone": 0.2201,
+      "tape": 0.6045,
+      "book": 0.5191,
+      "s_join": 0.5789620474636595,
+      "s_sector": 0.0,
+      "s_general": -0.4675,
+      "s_news": 0.0,
+      "s_ab": 0.9051482536448664,
+      "s_peer": 0.3038447577854626,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Consumer Defensive",
+      "fwd": {
+        "1d": 1.72,
+        "2d": 1.77,
+        "3d": 3.91,
+        "1w": -5.17
+      },
+      "rank_standalone_raw": 223,
+      "rank_tape_raw": 152,
+      "mcap": 6402.37,
+      "gated": false
+    },
+    {
+      "ticker": "AUPH",
+      "standalone": 0.1169,
+      "tape": 0.3511,
+      "book": 0.2599,
+      "s_join": 0.9866142981514304,
+      "s_sector": -0.52,
+      "s_general": -0.4675,
+      "s_news": 0.0,
+      "s_ab": 0.809301070201781,
+      "s_peer": -0.1070878063022365,
+      "s_opp": 0.0,
+      "size": "mid",
+      "sector": "Healthcare",
+      "fwd": {
+        "1d": 1.5,
+        "2d": 0.44,
+        "3d": 0.19,
+        "1w": 1.25
+      },
+      "rank_standalone_raw": 556,
+      "rank_tape_raw": 676,
+      "mcap": 2143.45,
+      "gated": false
+    }
+  ],
+  "overlap_standalone_vs_live": [
+    "DK",
+    "KMI"
+  ],
+  "entered_standalone": [
+    "ASND",
+    "BTE",
+    "G",
+    "KEYS",
+    "MEI",
+    "MTDR",
+    "PCRX",
+    "PHR",
+    "RNW",
+    "SBLK",
+    "TEL",
+    "WAY",
+    "XRX"
+  ],
+  "dropped_standalone": [
+    "CNR",
+    "CRM",
+    "DHT",
+    "DOCS",
+    "FTI",
+    "INVX",
+    "LNG",
+    "OXY"
+  ],
+  "overlap_tape_vs_live": [
+    "DK",
+    "KMI"
+  ],
+  "entered_tape": [
+    "ASND",
+    "BTE",
+    "KD",
+    "MEI",
+    "MTDR",
+    "PCRX",
+    "PHR",
+    "RNW",
+    "SN",
+    "TASK",
+    "TEL",
+    "WAY",
+    "XRX"
+  ],
+  "dropped_tape": [
+    "CNR",
+    "CRM",
+    "DHT",
+    "DOCS",
+    "FTI",
+    "INVX",
+    "LNG",
+    "OXY"
+  ],
+  "avg_fwd": {
+    "live": {
+      "1d": 0.5019999999999999,
+      "2d": 0.364,
+      "3d": -0.024000000000000042,
+      "1w": -1.4899999999999998
+    },
+    "standalone": {
+      "1d": 0.104,
+      "2d": -0.6286666666666668,
+      "3d": -1.0606666666666666,
+      "1w": -3.190666666666667
+    },
+    "tape": {
+      "1d": 0.18133333333333335,
+      "2d": -0.5453333333333334,
+      "3d": -1.37,
+      "1w": -3.3940000000000006
+    }
+  },
+  "hit_rate": {
+    "live": {
+      "1d": 0.5,
+      "2d": 0.5,
+      "3d": 0.3,
+      "1w": 0.3
+    },
+    "standalone": {
+      "1d": 0.6,
+      "2d": 0.6666666666666666,
+      "3d": 0.4,
+      "1w": 0.4
+    },
+    "tape": {
+      "1d": 0.6,
+      "2d": 0.6666666666666666,
+      "3d": 0.4,
+      "1w": 0.26666666666666666
+    }
+  }
+}

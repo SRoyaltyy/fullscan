@@ -1,0 +1,863 @@
+{
+  "date": "2026-09-08",
+  "n_universe": 2065,
+  "definition": {
+    "standalone": "mean(join, sector, general, news, AB, peer) \u2014 no weights, no opp/rebound",
+    "tape": "mean(AB, peer) \u2014 name-specific only",
+    "gates": "same as live: skip micro/<$400M, max 4 large, 4/sector, 3/industry"
+  },
+  "live_buy": [
+    {
+      "ticker": "ZIM",
+      "standalone": 0.1848,
+      "tape": 0.7107,
+      "book": 0.5124,
+      "s_join": -0.15,
+      "s_sector": 0.0,
+      "s_general": -0.1625,
+      "s_news": 0.0,
+      "s_ab": 0.7615941559557649,
+      "s_peer": 0.659822949529347,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Industrials",
+      "fwd": {
+        "1d": -2.33,
+        "2d": -2.03,
+        "3d": -1.7,
+        "1w": -1.7
+      }
+    }
+  ],
+  "standalone_buy": [
+    {
+      "ticker": "SUZ",
+      "standalone": 0.3334,
+      "tape": 0.6774,
+      "book": 0.4596,
+      "s_join": 0.8944600911224239,
+      "s_sector": -0.2,
+      "s_general": -0.04875,
+      "s_news": 0.0,
+      "s_ab": 0.703905603936621,
+      "s_peer": 0.6509093771734615,
+      "s_opp": 0.0699999999999999,
+      "size": "large",
+      "sector": "Basic Materials",
+      "fwd": {
+        "1d": 0.43,
+        "2d": 2.17,
+        "3d": 1.41,
+        "1w": 0.0
+      }
+    },
+    {
+      "ticker": "TX",
+      "standalone": 0.2522,
+      "tape": 0.5857,
+      "book": 0.1921,
+      "s_join": 0.7042081862471288,
+      "s_sector": -0.2,
+      "s_general": -0.1625,
+      "s_news": 0.0,
+      "s_ab": 0.9253462253117412,
+      "s_peer": 0.2460933207332323,
+      "s_opp": -0.1699999999999999,
+      "size": "large",
+      "sector": "Basic Materials",
+      "fwd": {
+        "1d": 0.02,
+        "2d": -0.84,
+        "3d": -0.34,
+        "1w": -1.46
+      }
+    },
+    {
+      "ticker": "NOK",
+      "standalone": 0.2129,
+      "tape": 0.268,
+      "book": 0.2639,
+      "s_join": 0.7042081862471288,
+      "s_sector": 0.2,
+      "s_general": -0.1625,
+      "s_news": 0.0,
+      "s_ab": 0.1243530017715962,
+      "s_peer": 0.4115700556740224,
+      "s_opp": 0.03,
+      "size": "large",
+      "sector": "Technology",
+      "fwd": {
+        "1d": 1.03,
+        "2d": -0.28,
+        "3d": 4.51,
+        "1w": -7.61
+      }
+    },
+    {
+      "ticker": "CRSR",
+      "standalone": 0.1867,
+      "tape": 0.6442,
+      "book": 0.4918,
+      "s_join": -0.0429735172531338,
+      "s_sector": 0.2,
+      "s_general": -0.325,
+      "s_news": 0.0,
+      "s_ab": 0.9051482536448664,
+      "s_peer": 0.3831530275042387,
+      "s_opp": 0.2,
+      "size": "small",
+      "sector": "Technology",
+      "fwd": {
+        "1d": 0.57,
+        "2d": 2.53,
+        "3d": 10.44,
+        "1w": 8.97
+      }
+    },
+    {
+      "ticker": "ZIM",
+      "standalone": 0.1848,
+      "tape": 0.7107,
+      "book": 0.5124,
+      "s_join": -0.15,
+      "s_sector": 0.0,
+      "s_general": -0.1625,
+      "s_news": 0.0,
+      "s_ab": 0.7615941559557649,
+      "s_peer": 0.659822949529347,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Industrials",
+      "fwd": {
+        "1d": -2.33,
+        "2d": -2.03,
+        "3d": -1.7,
+        "1w": -1.7
+      }
+    },
+    {
+      "ticker": "BLBD",
+      "standalone": 0.1768,
+      "tape": 0.768,
+      "book": 0.5013,
+      "s_join": -0.15,
+      "s_sector": 0.0,
+      "s_general": -0.325,
+      "s_news": 0.0,
+      "s_ab": 0.7615941559557649,
+      "s_peer": 0.7744091874342136,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Industrials",
+      "fwd": {
+        "1d": -2.13,
+        "2d": -2.97,
+        "3d": -3.3,
+        "1w": -3.36
+      }
+    },
+    {
+      "ticker": "GGB",
+      "standalone": 0.1762,
+      "tape": 0.6208,
+      "book": 0.5156,
+      "s_join": 0.3406255368147078,
+      "s_sector": -0.2,
+      "s_general": -0.325,
+      "s_news": 0.0,
+      "s_ab": 0.8482836399575129,
+      "s_peer": 0.3932383417201148,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Basic Materials",
+      "fwd": {
+        "1d": -0.99,
+        "2d": 0.79,
+        "3d": 1.78,
+        "1w": 0.0
+      }
+    },
+    {
+      "ticker": "OSK",
+      "standalone": 0.1752,
+      "tape": 0.6235,
+      "book": 0.4776,
+      "s_join": -0.0334874738313004,
+      "s_sector": 0.0,
+      "s_general": -0.1625,
+      "s_news": 0.0,
+      "s_ab": 0.9051482536448664,
+      "s_peer": 0.3419066658115552,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Industrials",
+      "fwd": {
+        "1d": -1.13,
+        "2d": -3.91,
+        "3d": -5.16,
+        "1w": -6.9
+      }
+    },
+    {
+      "ticker": "DE",
+      "standalone": 0.1565,
+      "tape": 0.7419,
+      "book": 0.1429,
+      "s_join": -0.3823421985405307,
+      "s_sector": 0.0,
+      "s_general": -0.1625,
+      "s_news": 0.0,
+      "s_ab": 0.9413755384972874,
+      "s_peer": 0.5423648911116336,
+      "s_opp": -0.1699999999999999,
+      "size": "large",
+      "sector": "Industrials",
+      "fwd": {
+        "1d": -0.52,
+        "2d": -0.41,
+        "3d": -0.73,
+        "1w": 0.49
+      }
+    },
+    {
+      "ticker": "SID",
+      "standalone": 0.1536,
+      "tape": 0.7982,
+      "book": 0.517,
+      "s_join": -0.15,
+      "s_sector": -0.2,
+      "s_general": -0.325,
+      "s_news": 0.0,
+      "s_ab": 0.6351489523872873,
+      "s_peer": 0.9611850992833714,
+      "s_opp": 0.2,
+      "size": "small",
+      "sector": "Basic Materials",
+      "fwd": {
+        "1d": 7.26,
+        "2d": 11.29,
+        "3d": 2.42,
+        "1w": -3.23
+      }
+    },
+    {
+      "ticker": "LEA",
+      "standalone": 0.0387,
+      "tape": 0.6724,
+      "book": 0.202,
+      "s_join": -0.15,
+      "s_sector": -0.8,
+      "s_general": -0.1625,
+      "s_news": 0.0,
+      "s_ab": 0.8798266996519848,
+      "s_peer": 0.4650612205752105,
+      "s_opp": 0.0,
+      "size": "mid",
+      "sector": "Consumer Cyclical",
+      "fwd": {
+        "1d": -1.54,
+        "2d": -0.83,
+        "3d": 1.48,
+        "1w": -2.12
+      }
+    },
+    {
+      "ticker": "M",
+      "standalone": -0.0932,
+      "tape": 0.3578,
+      "book": 0.0469,
+      "s_join": -0.15,
+      "s_sector": -0.8,
+      "s_general": -0.325,
+      "s_news": 0.0,
+      "s_ab": 0.5545997223493823,
+      "s_peer": 0.1610846096413192,
+      "s_opp": 0.0,
+      "size": "mid",
+      "sector": "Consumer Cyclical",
+      "fwd": {
+        "1d": -4.19,
+        "2d": -8.69,
+        "3d": -1.65,
+        "1w": -0.8
+      }
+    }
+  ],
+  "tape_buy": [
+    {
+      "ticker": "BBY",
+      "standalone": 0.0149,
+      "tape": 0.8147,
+      "book": 0.2017,
+      "s_join": -0.577364303377445,
+      "s_sector": -0.8,
+      "s_general": -0.1625,
+      "s_news": 0.0,
+      "s_ab": 0.7615941559557649,
+      "s_peer": 0.8677134741392155,
+      "s_opp": 0.0,
+      "size": "large",
+      "sector": "Consumer Cyclical",
+      "fwd": {
+        "1d": -1.46,
+        "2d": -1.39,
+        "3d": 1.65,
+        "1w": 4.38
+      }
+    },
+    {
+      "ticker": "SID",
+      "standalone": 0.1536,
+      "tape": 0.7982,
+      "book": 0.517,
+      "s_join": -0.15,
+      "s_sector": -0.2,
+      "s_general": -0.325,
+      "s_news": 0.0,
+      "s_ab": 0.6351489523872873,
+      "s_peer": 0.9611850992833714,
+      "s_opp": 0.2,
+      "size": "small",
+      "sector": "Basic Materials",
+      "fwd": {
+        "1d": 7.26,
+        "2d": 11.29,
+        "3d": 2.42,
+        "1w": -3.23
+      }
+    },
+    {
+      "ticker": "BLBD",
+      "standalone": 0.1768,
+      "tape": 0.768,
+      "book": 0.5013,
+      "s_join": -0.15,
+      "s_sector": 0.0,
+      "s_general": -0.325,
+      "s_news": 0.0,
+      "s_ab": 0.7615941559557649,
+      "s_peer": 0.7744091874342136,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Industrials",
+      "fwd": {
+        "1d": -2.13,
+        "2d": -2.97,
+        "3d": -3.3,
+        "1w": -3.36
+      }
+    },
+    {
+      "ticker": "DE",
+      "standalone": 0.1565,
+      "tape": 0.7419,
+      "book": 0.1429,
+      "s_join": -0.3823421985405307,
+      "s_sector": 0.0,
+      "s_general": -0.1625,
+      "s_news": 0.0,
+      "s_ab": 0.9413755384972874,
+      "s_peer": 0.5423648911116336,
+      "s_opp": -0.1699999999999999,
+      "size": "large",
+      "sector": "Industrials",
+      "fwd": {
+        "1d": -0.52,
+        "2d": -0.41,
+        "3d": -0.73,
+        "1w": 0.49
+      }
+    },
+    {
+      "ticker": "ZIM",
+      "standalone": 0.1848,
+      "tape": 0.7107,
+      "book": 0.5124,
+      "s_join": -0.15,
+      "s_sector": 0.0,
+      "s_general": -0.1625,
+      "s_news": 0.0,
+      "s_ab": 0.7615941559557649,
+      "s_peer": 0.659822949529347,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Industrials",
+      "fwd": {
+        "1d": -2.33,
+        "2d": -2.03,
+        "3d": -1.7,
+        "1w": -1.7
+      }
+    },
+    {
+      "ticker": "TWI",
+      "standalone": 0.1539,
+      "tape": 0.6993,
+      "book": 0.4635,
+      "s_join": -0.15,
+      "s_sector": 0.0,
+      "s_general": -0.325,
+      "s_news": 0.0,
+      "s_ab": 0.5545997223493823,
+      "s_peer": 0.8440235297412673,
+      "s_opp": 0.2,
+      "size": "small",
+      "sector": "Industrials",
+      "fwd": {
+        "1d": -3.3,
+        "2d": -6.6,
+        "3d": -8.76,
+        "1w": -8.88
+      }
+    },
+    {
+      "ticker": "SUZ",
+      "standalone": 0.3334,
+      "tape": 0.6774,
+      "book": 0.4596,
+      "s_join": 0.8944600911224239,
+      "s_sector": -0.2,
+      "s_general": -0.04875,
+      "s_news": 0.0,
+      "s_ab": 0.703905603936621,
+      "s_peer": 0.6509093771734615,
+      "s_opp": 0.0699999999999999,
+      "size": "large",
+      "sector": "Basic Materials",
+      "fwd": {
+        "1d": 0.43,
+        "2d": 2.17,
+        "3d": 1.41,
+        "1w": 0.0
+      }
+    },
+    {
+      "ticker": "LEA",
+      "standalone": 0.0387,
+      "tape": 0.6724,
+      "book": 0.202,
+      "s_join": -0.15,
+      "s_sector": -0.8,
+      "s_general": -0.1625,
+      "s_news": 0.0,
+      "s_ab": 0.8798266996519848,
+      "s_peer": 0.4650612205752105,
+      "s_opp": 0.0,
+      "size": "mid",
+      "sector": "Consumer Cyclical",
+      "fwd": {
+        "1d": -1.54,
+        "2d": -0.83,
+        "3d": 1.48,
+        "1w": -2.12
+      }
+    },
+    {
+      "ticker": "CRSR",
+      "standalone": 0.1867,
+      "tape": 0.6442,
+      "book": 0.4918,
+      "s_join": -0.0429735172531338,
+      "s_sector": 0.2,
+      "s_general": -0.325,
+      "s_news": 0.0,
+      "s_ab": 0.9051482536448664,
+      "s_peer": 0.3831530275042387,
+      "s_opp": 0.2,
+      "size": "small",
+      "sector": "Technology",
+      "fwd": {
+        "1d": 0.57,
+        "2d": 2.53,
+        "3d": 10.44,
+        "1w": 8.97
+      }
+    },
+    {
+      "ticker": "GGB",
+      "standalone": 0.1762,
+      "tape": 0.6208,
+      "book": 0.5156,
+      "s_join": 0.3406255368147078,
+      "s_sector": -0.2,
+      "s_general": -0.325,
+      "s_news": 0.0,
+      "s_ab": 0.8482836399575129,
+      "s_peer": 0.3932383417201148,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Basic Materials",
+      "fwd": {
+        "1d": -0.99,
+        "2d": 0.79,
+        "3d": 1.78,
+        "1w": 0.0
+      }
+    },
+    {
+      "ticker": "BWA",
+      "standalone": 0.0341,
+      "tape": 0.6192,
+      "book": 0.1938,
+      "s_join": -0.0712789154596645,
+      "s_sector": -0.8,
+      "s_general": -0.1625,
+      "s_news": 0.0,
+      "s_ab": 0.9540452601799488,
+      "s_peer": 0.2844341859148753,
+      "s_opp": 0.0,
+      "size": "large",
+      "sector": "Consumer Cyclical",
+      "fwd": {
+        "1d": -1.51,
+        "2d": -0.86,
+        "3d": 0.59,
+        "1w": -5.69
+      }
+    },
+    {
+      "ticker": "CLF",
+      "standalone": 0.0678,
+      "tape": 0.5409,
+      "book": 0.4101,
+      "s_join": -0.15,
+      "s_sector": -0.2,
+      "s_general": -0.325,
+      "s_news": 0.0,
+      "s_ab": 0.5545997223493823,
+      "s_peer": 0.5271932103192539,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Basic Materials",
+      "fwd": {
+        "1d": -1.63,
+        "2d": -3.74,
+        "3d": -1.87,
+        "1w": -4.07
+      }
+    },
+    {
+      "ticker": "M",
+      "standalone": -0.0932,
+      "tape": 0.3578,
+      "book": 0.0469,
+      "s_join": -0.15,
+      "s_sector": -0.8,
+      "s_general": -0.325,
+      "s_news": 0.0,
+      "s_ab": 0.5545997223493823,
+      "s_peer": 0.1610846096413192,
+      "s_opp": 0.0,
+      "size": "mid",
+      "sector": "Consumer Cyclical",
+      "fwd": {
+        "1d": -4.19,
+        "2d": -8.69,
+        "3d": -1.65,
+        "1w": -0.8
+      }
+    }
+  ],
+  "watch": [
+    {
+      "ticker": "SLS",
+      "standalone": 0.2246,
+      "tape": 0.6142,
+      "book": 0.517,
+      "s_join": 0.4445602152497642,
+      "s_sector": 0.0,
+      "s_general": -0.325,
+      "s_news": 0.0,
+      "s_ab": 0.8798266996519848,
+      "s_peer": 0.3485128504458946,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Healthcare",
+      "fwd": {
+        "1d": -0.07,
+        "2d": -3.37,
+        "3d": -17.26,
+        "1w": -19.13
+      },
+      "rank_standalone_raw": 326,
+      "rank_tape_raw": 157,
+      "mcap": 2805.03,
+      "gated": false
+    },
+    {
+      "ticker": "ARCT",
+      "standalone": 0.0819,
+      "tape": 0.4233,
+      "book": 0.3749,
+      "s_join": -0.03,
+      "s_sector": 0.0,
+      "s_general": -0.325,
+      "s_news": 0.0,
+      "s_ab": 0.703905603936621,
+      "s_peer": 0.1427679633538647,
+      "s_opp": 0.2,
+      "size": "small",
+      "sector": "Healthcare",
+      "fwd": {
+        "1d": -5.69,
+        "2d": -10.56,
+        "3d": -5.76,
+        "1w": 1.34
+      },
+      "rank_standalone_raw": 820,
+      "rank_tape_raw": 466,
+      "mcap": 449.65,
+      "gated": false
+    },
+    {
+      "ticker": "CYPH",
+      "standalone": 0.2528,
+      "tape": 0.7771,
+      "book": 0.3406,
+      "s_join": 0.1250403890016933,
+      "s_sector": 0.0,
+      "s_general": -0.1625,
+      "s_news": 0.0,
+      "s_ab": 0.5545997223493823,
+      "s_peer": 0.9996742940852268,
+      "s_opp": 0.0,
+      "size": "micro",
+      "sector": "Healthcare",
+      "fwd": {
+        "1d": -6.84,
+        "2d": -16.35,
+        "3d": -13.88,
+        "1w": -15.59
+      },
+      "rank_standalone_raw": 238,
+      "rank_tape_raw": 36,
+      "mcap": 264.08,
+      "gated": true
+    },
+    {
+      "ticker": "ASST",
+      "standalone": -0.0702,
+      "tape": 0.132,
+      "book": -0.0415,
+      "s_join": -0.03,
+      "s_sector": -0.33,
+      "s_general": -0.325,
+      "s_news": 0.0,
+      "s_ab": -0.6351489523872873,
+      "s_peer": 0.8992191739670065,
+      "s_opp": 0.0,
+      "size": "mid",
+      "sector": "Financial",
+      "fwd": {
+        "1d": -1.73,
+        "2d": -0.96,
+        "3d": 1.69,
+        "1w": 1.51
+      },
+      "rank_standalone_raw": 1378,
+      "rank_tape_raw": 1099,
+      "mcap": 2470.53,
+      "gated": false
+    },
+    {
+      "ticker": "BTDR",
+      "standalone": 0.1147,
+      "tape": 0.4817,
+      "book": 0.3809,
+      "s_join": -0.15,
+      "s_sector": 0.2,
+      "s_general": -0.325,
+      "s_news": 0.0,
+      "s_ab": 0.2449186624037091,
+      "s_peer": 0.7184214651763897,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Technology",
+      "fwd": {
+        "1d": -2.68,
+        "2d": -9.0,
+        "3d": -5.6,
+        "1w": -13.89
+      },
+      "rank_standalone_raw": 697,
+      "rank_tape_raw": 343,
+      "mcap": 3359.22,
+      "gated": false
+    },
+    {
+      "ticker": "VIRT",
+      "standalone": 0.1696,
+      "tape": 0.23,
+      "book": 0.2056,
+      "s_join": 0.9365124435838256,
+      "s_sector": -0.33,
+      "s_general": -0.04875,
+      "s_news": 0.0,
+      "s_ab": 0.7615941559557649,
+      "s_peer": -0.3015738415936697,
+      "s_opp": 0.0,
+      "size": "mid",
+      "sector": "Financial",
+      "fwd": {
+        "1d": -0.21,
+        "2d": -2.3,
+        "3d": -3.43,
+        "1w": -8.06
+      },
+      "rank_standalone_raw": 499,
+      "rank_tape_raw": 902,
+      "mcap": 9999.55,
+      "gated": false
+    },
+    {
+      "ticker": "FIGR",
+      "standalone": 0.2353,
+      "tape": 0.4241,
+      "book": 0.2882,
+      "s_join": 0.9420883180118528,
+      "s_sector": -0.33,
+      "s_general": -0.04875,
+      "s_news": 0.0,
+      "s_ab": 0.8482836399575129,
+      "s_peer": 0.0,
+      "s_opp": 0.0,
+      "size": "mid",
+      "sector": "Financial",
+      "fwd": {
+        "1d": -0.38,
+        "2d": -4.43,
+        "3d": -8.87,
+        "1w": -13.03
+      },
+      "rank_standalone_raw": 286,
+      "rank_tape_raw": 464,
+      "mcap": 8034.93,
+      "gated": false
+    },
+    {
+      "ticker": "ELF",
+      "standalone": 0.0985,
+      "tape": 0.3048,
+      "book": 0.3604,
+      "s_join": 0.3067012012483338,
+      "s_sector": 0.0,
+      "s_general": -0.325,
+      "s_news": 0.0,
+      "s_ab": 0.5545997223493823,
+      "s_peer": 0.0549446086891874,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Consumer Defensive",
+      "fwd": {
+        "1d": -4.06,
+        "2d": -8.2,
+        "3d": -7.09,
+        "1w": -8.47
+      },
+      "rank_standalone_raw": 754,
+      "rank_tape_raw": 703,
+      "mcap": 6413.58,
+      "gated": false
+    },
+    {
+      "ticker": "AUPH",
+      "standalone": 0.2283,
+      "tape": 0.3599,
+      "book": 0.4827,
+      "s_join": 0.9753518508178624,
+      "s_sector": 0.0,
+      "s_general": -0.325,
+      "s_news": 0.0,
+      "s_ab": 0.9540452601799488,
+      "s_peer": -0.2343147253059444,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Healthcare",
+      "fwd": {
+        "1d": 1.12,
+        "2d": 0.25,
+        "3d": 0.19,
+        "1w": 0.37
+      },
+      "rank_standalone_raw": 309,
+      "rank_tape_raw": 580,
+      "mcap": 2139.46,
+      "gated": false
+    }
+  ],
+  "overlap_standalone_vs_live": [
+    "ZIM"
+  ],
+  "entered_standalone": [
+    "BLBD",
+    "CRSR",
+    "DE",
+    "GGB",
+    "LEA",
+    "M",
+    "NOK",
+    "OSK",
+    "SID",
+    "SUZ",
+    "TX"
+  ],
+  "dropped_standalone": [],
+  "overlap_tape_vs_live": [
+    "ZIM"
+  ],
+  "entered_tape": [
+    "BBY",
+    "BLBD",
+    "BWA",
+    "CLF",
+    "CRSR",
+    "DE",
+    "GGB",
+    "LEA",
+    "M",
+    "SID",
+    "SUZ",
+    "TWI"
+  ],
+  "dropped_tape": [],
+  "avg_fwd": {
+    "live": {
+      "1d": -2.33,
+      "2d": -2.03,
+      "3d": -1.7,
+      "1w": -1.7
+    },
+    "standalone": {
+      "1d": -0.2933333333333333,
+      "2d": -0.2650000000000001,
+      "3d": 0.7633333333333333,
+      "1w": -1.4766666666666668
+    },
+    "tape": {
+      "1d": -0.8723076923076923,
+      "2d": -0.8261538461538463,
+      "3d": 0.13538461538461546,
+      "1w": -1.2315384615384617
+    }
+  },
+  "hit_rate": {
+    "live": {
+      "1d": 0.0,
+      "2d": 0.0,
+      "3d": 0.0,
+      "1w": 0.0
+    },
+    "standalone": {
+      "1d": 0.4166666666666667,
+      "2d": 0.3333333333333333,
+      "3d": 0.5,
+      "1w": 0.16666666666666666
+    },
+    "tape": {
+      "1d": 0.23076923076923078,
+      "2d": 0.3076923076923077,
+      "3d": 0.5384615384615384,
+      "1w": 0.23076923076923078
+    }
+  }
+}

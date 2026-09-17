@@ -1,0 +1,179 @@
+{
+  "date": "2026-09-06",
+  "n_pile": 0,
+  "n_universe": 2088,
+  "pile_used": false,
+  "live_buy": [
+    {
+      "ticker": "WWW",
+      "book": 0.717,
+      "s_join": 0.4917758710484107,
+      "s_general": 0.0,
+      "s_ab": 0.9051482536448664,
+      "s_peer": 0.4891938316549519,
+      "s_opp": 0.2,
+      "size": "small",
+      "sector": "Consumer Cyclical",
+      "in_pile": false,
+      "fwd": {
+        "1d": -2.29,
+        "2d": -3.79,
+        "3d": -0.6,
+        "1w": -4.64
+      }
+    },
+    {
+      "ticker": "FIVE",
+      "book": 0.299,
+      "s_join": 0.8058577801762088,
+      "s_general": 0.0,
+      "s_ab": 0.809301070201781,
+      "s_peer": 0.2212784678984439,
+      "s_opp": -0.1699999999999999,
+      "size": "large",
+      "sector": "Consumer Cyclical",
+      "in_pile": false,
+      "fwd": {
+        "1d": -2.74,
+        "2d": -5.03,
+        "3d": -3.73,
+        "1w": -7.08
+      }
+    },
+    {
+      "ticker": "CMBT",
+      "book": 0.666,
+      "s_join": 0.9866142981514304,
+      "s_general": 0.0,
+      "s_ab": 0.809301070201781,
+      "s_peer": 0.1009054226790555,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": 0.62,
+        "2d": 0.78,
+        "3d": 1.3,
+        "1w": 1.72
+      }
+    },
+    {
+      "ticker": "ORCL",
+      "book": 0.498,
+      "s_join": 0.613553271791991,
+      "s_general": 0.0,
+      "s_ab": 0.7615941559557649,
+      "s_peer": 0.7644663953715926,
+      "s_opp": -0.06,
+      "size": "mega",
+      "sector": "Technology",
+      "in_pile": false,
+      "fwd": {
+        "1d": -0.55,
+        "2d": -5.89,
+        "3d": -7.53,
+        "1w": -13.64
+      }
+    },
+    {
+      "ticker": "VYX",
+      "book": 0.675,
+      "s_join": 0.183787700367146,
+      "s_general": 0.0,
+      "s_ab": 0.809301070201781,
+      "s_peer": 0.6192267666903568,
+      "s_opp": 0.2,
+      "size": "small",
+      "sector": "Technology",
+      "in_pile": false,
+      "fwd": {
+        "1d": -1.42,
+        "2d": -4.83,
+        "3d": 0.83,
+        "1w": -10.85
+      }
+    },
+    {
+      "ticker": "WCC",
+      "book": 0.347,
+      "s_join": 0.5388261224574971,
+      "s_general": 0.0,
+      "s_ab": 0.809301070201781,
+      "s_peer": 0.5808536095862721,
+      "s_opp": -0.1699999999999999,
+      "size": "large",
+      "sector": "Industrials",
+      "in_pile": false,
+      "fwd": {
+        "1d": -1.29,
+        "2d": -4.49,
+        "3d": -0.92,
+        "1w": -7.0
+      }
+    },
+    {
+      "ticker": "KNX",
+      "book": 0.46,
+      "s_join": 0.2748475623857588,
+      "s_general": 0.0,
+      "s_ab": 0.9253462253117412,
+      "s_peer": 0.565324957905875,
+      "s_opp": -0.05,
+      "size": "large",
+      "sector": "Industrials",
+      "in_pile": false,
+      "fwd": {
+        "1d": -2.83,
+        "2d": -2.49,
+        "3d": -3.98,
+        "1w": -3.25
+      }
+    },
+    {
+      "ticker": "MHK",
+      "book": 0.616,
+      "s_join": 0.2146109983504548,
+      "s_general": 0.0,
+      "s_ab": 0.809301070201781,
+      "s_peer": 0.5657500624566206,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Consumer Cyclical",
+      "in_pile": false,
+      "fwd": {
+        "1d": -1.37,
+        "2d": -4.22,
+        "3d": -2.26,
+        "1w": -0.58
+      }
+    }
+  ],
+  "green_buy": [],
+  "overlap": [],
+  "entered": [],
+  "dropped": [
+    "CMBT",
+    "FIVE",
+    "KNX",
+    "MHK",
+    "ORCL",
+    "VYX",
+    "WCC",
+    "WWW"
+  ],
+  "avg_fwd": {
+    "live": {
+      "1d": -1.4837500000000001,
+      "2d": -3.745,
+      "3d": -2.11125,
+      "1w": -5.665
+    },
+    "green": {
+      "1d": null,
+      "2d": null,
+      "3d": null,
+      "1w": null
+    }
+  }
+}

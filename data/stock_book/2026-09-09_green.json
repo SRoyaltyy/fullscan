@@ -1,28 +1,198 @@
 {
+  "date": "2026-09-09",
   "n_pile": 0,
-  "n_pile_raw": 0,
-  "n_pile_liquid": 0,
   "n_universe": 2065,
-  "used": false,
-  "min": 8,
-  "eps": 0.05,
-  "hard_red": 0.25,
-  "relvol_dead": 0.7,
-  "rank_col": "green_rank",
-  "core_fired": {
-    "join": true,
-    "AB": true,
-    "peer": true
-  },
-  "missing_core": [],
-  "buy_mode": "weighted_fallback",
-  "sell_mode": "core_weights",
-  "caps": {
-    "min_mcap_m": 400.0,
-    "max_per_sector": 4,
-    "max_per_industry": 3,
-    "max_large_mega": 4
-  },
-  "reason": "pile 0 < 8 liquid all-green names. Fallback weighted walk; SELL stays on core",
-  "tickers": []
+  "pile_used": false,
+  "live_buy": [
+    {
+      "ticker": "CIG",
+      "book": 0.724,
+      "s_join": 0.9231304684272637,
+      "s_general": -0.0828749999999999,
+      "s_ab": 0.9253462253117412,
+      "s_peer": 0.6939966893863517,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Utilities",
+      "in_pile": false,
+      "fwd": {
+        "1d": 1.84,
+        "2d": 1.38,
+        "3d": -0.92,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "ATRO",
+      "book": 0.521,
+      "s_join": -0.15,
+      "s_general": -0.27625,
+      "s_ab": 0.703905603936621,
+      "s_peer": 0.7756570709906158,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Industrials",
+      "in_pile": false,
+      "fwd": {
+        "1d": -2.79,
+        "2d": -2.14,
+        "3d": -6.12,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "EMBJ",
+      "book": 0.13,
+      "s_join": 0.381658938140294,
+      "s_general": -0.5525,
+      "s_ab": 0.4621171572600097,
+      "s_peer": 0.7662785342332765,
+      "s_opp": -0.1699999999999999,
+      "size": "large",
+      "sector": "Industrials",
+      "in_pile": false,
+      "fwd": {
+        "1d": 0.57,
+        "2d": 1.56,
+        "3d": 0.9,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "MIR",
+      "book": 0.596,
+      "s_join": -0.15,
+      "s_general": -0.27625,
+      "s_ab": 0.8482836399575129,
+      "s_peer": 0.9686148314184672,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Industrials",
+      "in_pile": false,
+      "fwd": {
+        "1d": -4.69,
+        "2d": -3.85,
+        "3d": -7.46,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "NXE",
+      "book": 0.514,
+      "s_join": 0.9460867727116088,
+      "s_general": -0.5525,
+      "s_ab": 0.3583573983507859,
+      "s_peer": 0.3895335257475609,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": -4.04,
+        "2d": -7.42,
+        "3d": -11.0,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "BG",
+      "book": 0.385,
+      "s_join": 0.918194878212364,
+      "s_general": -0.0828749999999999,
+      "s_ab": 0.9413755384972874,
+      "s_peer": 0.0785876117967191,
+      "s_opp": 0.0,
+      "size": "large",
+      "sector": "Consumer Defensive",
+      "in_pile": false,
+      "fwd": {
+        "1d": 0.88,
+        "2d": -0.88,
+        "3d": -1.84,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "AR",
+      "book": 0.388,
+      "s_join": 0.9866142981514304,
+      "s_general": -0.0828749999999999,
+      "s_ab": 0.703905603936621,
+      "s_peer": 0.3654182714543069,
+      "s_opp": -0.05,
+      "size": "large",
+      "sector": "Energy",
+      "in_pile": false,
+      "fwd": {
+        "1d": 0.13,
+        "2d": -1.76,
+        "3d": -2.61,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "ITT",
+      "book": 0.367,
+      "s_join": 0.4441589429808519,
+      "s_general": -0.27625,
+      "s_ab": 0.8798266996519848,
+      "s_peer": 0.2781031121340115,
+      "s_opp": 0.03,
+      "size": "large",
+      "sector": "Industrials",
+      "in_pile": false,
+      "fwd": {
+        "1d": -1.02,
+        "2d": 2.97,
+        "3d": 0.63,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "XIFR",
+      "book": 0.561,
+      "s_join": 0.2458584467685245,
+      "s_general": -0.27625,
+      "s_ab": 0.9051482536448664,
+      "s_peer": 0.3884726802160609,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Utilities",
+      "in_pile": false,
+      "fwd": {
+        "1d": -2.05,
+        "2d": -2.73,
+        "3d": -4.44,
+        "1w": null
+      }
+    }
+  ],
+  "green_buy": [],
+  "overlap": [],
+  "entered": [],
+  "dropped": [
+    "AR",
+    "ATRO",
+    "BG",
+    "CIG",
+    "EMBJ",
+    "ITT",
+    "MIR",
+    "NXE",
+    "XIFR"
+  ],
+  "avg_fwd": {
+    "live": {
+      "1d": -1.2411111111111113,
+      "2d": -1.4300000000000002,
+      "3d": -3.651111111111111,
+      "1w": null
+    },
+    "green": {
+      "1d": null,
+      "2d": null,
+      "3d": null,
+      "1w": null
+    }
+  }
 }

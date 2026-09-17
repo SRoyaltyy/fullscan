@@ -1,28 +1,179 @@
 {
+  "date": "2026-09-13",
   "n_pile": 0,
-  "n_pile_raw": 0,
-  "n_pile_liquid": 0,
   "n_universe": 2082,
-  "used": false,
-  "min": 8,
-  "eps": 0.05,
-  "hard_red": 0.25,
-  "relvol_dead": 0.7,
-  "rank_col": "green_rank",
-  "core_fired": {
-    "join": true,
-    "AB": true,
-    "peer": true
-  },
-  "missing_core": [],
-  "buy_mode": "weighted_fallback",
-  "sell_mode": "core_weights",
-  "caps": {
-    "min_mcap_m": 400.0,
-    "max_per_sector": 4,
-    "max_per_industry": 3,
-    "max_large_mega": 4
-  },
-  "reason": "pile 0 < 8 liquid all-green names. Fallback weighted walk; SELL stays on core",
-  "tickers": []
+  "pile_used": false,
+  "live_buy": [
+    {
+      "ticker": "INSP",
+      "book": 0.88,
+      "s_join": 0.9655222812870052,
+      "s_general": 0.0,
+      "s_ab": 0.809301070201781,
+      "s_peer": 0.9941919539184336,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": 0.38,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "ICLR",
+      "book": 0.594,
+      "s_join": 0.9646440615360192,
+      "s_general": 0.0,
+      "s_ab": 0.8482836399575129,
+      "s_peer": 0.797788791179091,
+      "s_opp": -0.05,
+      "size": "large",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": 2.08,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "CYPH",
+      "book": 0.555,
+      "s_join": 0.9545632146114016,
+      "s_general": 0.0,
+      "s_ab": 0.3583573983507859,
+      "s_peer": 0.7208321386813888,
+      "s_opp": 0.08,
+      "size": "micro",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": -13.95,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "PTGX",
+      "book": 0.836,
+      "s_join": 0.9791939266298768,
+      "s_general": 0.0,
+      "s_ab": 0.8798266996519848,
+      "s_peer": 0.7162978701990245,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": -2.96,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "ATRC",
+      "book": 0.857,
+      "s_join": 0.9556861884164944,
+      "s_general": 0.0,
+      "s_ab": 0.8798266996519848,
+      "s_peer": 0.8135705538363528,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": 0.77,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "BMRN",
+      "book": 0.586,
+      "s_join": 0.9732050237827649,
+      "s_general": 0.0,
+      "s_ab": 0.971872745913509,
+      "s_peer": 0.6051606022442623,
+      "s_opp": -0.05,
+      "size": "large",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": -2.95,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "CLOV",
+      "book": 0.85,
+      "s_join": 0.953412460991473,
+      "s_general": 0.0,
+      "s_ab": 0.7615941559557649,
+      "s_peer": 0.9365708162231824,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": -8.63,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "ACAD",
+      "book": 0.825,
+      "s_join": 0.9861380544427394,
+      "s_general": 0.0,
+      "s_ab": 0.9413755384972874,
+      "s_peer": 0.5907061635462981,
+      "s_opp": 0.2,
+      "size": "mid",
+      "sector": "Healthcare",
+      "in_pile": false,
+      "fwd": {
+        "1d": -2.76,
+        "2d": null,
+        "3d": null,
+        "1w": null
+      }
+    }
+  ],
+  "green_buy": [],
+  "overlap": [],
+  "entered": [],
+  "dropped": [
+    "ACAD",
+    "ATRC",
+    "BMRN",
+    "CLOV",
+    "CYPH",
+    "ICLR",
+    "INSP",
+    "PTGX"
+  ],
+  "avg_fwd": {
+    "live": {
+      "1d": -3.5025,
+      "2d": null,
+      "3d": null,
+      "1w": null
+    },
+    "green": {
+      "1d": null,
+      "2d": null,
+      "3d": null,
+      "1w": null
+    }
+  }
 }

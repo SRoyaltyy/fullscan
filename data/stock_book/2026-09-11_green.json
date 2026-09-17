@@ -1,28 +1,65 @@
 {
+  "date": "2026-09-11",
   "n_pile": 0,
-  "n_pile_raw": 0,
-  "n_pile_liquid": 0,
   "n_universe": 2059,
-  "used": false,
-  "min": 8,
-  "eps": 0.05,
-  "hard_red": 0.25,
-  "relvol_dead": 0.7,
-  "rank_col": "green_rank",
-  "core_fired": {
-    "join": true,
-    "AB": true,
-    "peer": true
-  },
-  "missing_core": [],
-  "buy_mode": "weighted_fallback",
-  "sell_mode": "core_weights",
-  "caps": {
-    "min_mcap_m": 400.0,
-    "max_per_sector": 4,
-    "max_per_industry": 3,
-    "max_large_mega": 4
-  },
-  "reason": "pile 0 < 8 liquid all-green names. Fallback weighted walk; SELL stays on core",
-  "tickers": []
+  "pile_used": false,
+  "live_buy": [
+    {
+      "ticker": "ORCL",
+      "book": 0.541,
+      "s_join": 0.1684287370546656,
+      "s_general": 0.0,
+      "s_ab": 0.703905603936621,
+      "s_peer": 0.911382269118559,
+      "s_opp": -0.06,
+      "size": "mega",
+      "sector": "Technology",
+      "in_pile": false,
+      "fwd": {
+        "1d": -3.65,
+        "2d": -6.61,
+        "3d": null,
+        "1w": null
+      }
+    },
+    {
+      "ticker": "NVT",
+      "book": 0.468,
+      "s_join": 0.978609442735833,
+      "s_general": 0.0,
+      "s_ab": 0.9253462253117412,
+      "s_peer": 0.5610573868706579,
+      "s_opp": -0.05,
+      "size": "large",
+      "sector": "Industrials",
+      "in_pile": false,
+      "fwd": {
+        "1d": -9.69,
+        "2d": -9.59,
+        "3d": null,
+        "1w": null
+      }
+    }
+  ],
+  "green_buy": [],
+  "overlap": [],
+  "entered": [],
+  "dropped": [
+    "NVT",
+    "ORCL"
+  ],
+  "avg_fwd": {
+    "live": {
+      "1d": -6.67,
+      "2d": -8.1,
+      "3d": null,
+      "1w": null
+    },
+    "green": {
+      "1d": null,
+      "2d": null,
+      "3d": null,
+      "1w": null
+    }
+  }
 }

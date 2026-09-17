@@ -22,10 +22,10 @@
       "size": "mid",
       "sector": "Energy",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -0.43,
+        "2d": -0.77,
+        "3d": 1.83,
+        "1w": 1.75
       }
     },
     {
@@ -43,10 +43,10 @@
       "size": "mid",
       "sector": "Energy",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -2.26,
+        "2d": -1.3,
+        "3d": 9.58,
+        "1w": 2.26
       }
     },
     {
@@ -64,10 +64,10 @@
       "size": "mid",
       "sector": "Technology",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -7.54,
+        "2d": -9.53,
+        "3d": -12.98,
+        "1w": -13.75
       }
     },
     {
@@ -85,10 +85,10 @@
       "size": "mid",
       "sector": "Basic Materials",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -0.67,
+        "2d": 1.52,
+        "3d": 4.29,
+        "1w": 7.28
       }
     },
     {
@@ -106,10 +106,10 @@
       "size": "mid",
       "sector": "Consumer Defensive",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -1.95,
+        "2d": 2.71,
+        "3d": -0.59,
+        "1w": 1.17
       }
     },
     {
@@ -127,10 +127,10 @@
       "size": "mid",
       "sector": "Technology",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": 1.8,
+        "2d": 4.49,
+        "3d": 3.17,
+        "1w": 6.3
       }
     },
     {
@@ -148,10 +148,10 @@
       "size": "mid",
       "sector": "Industrials",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": 0.84,
+        "2d": -1.63,
+        "3d": -1.11,
+        "1w": 0.56
       }
     },
     {
@@ -169,10 +169,10 @@
       "size": "mid",
       "sector": "Financial",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -0.11,
+        "2d": 3.11,
+        "3d": 5.88,
+        "1w": 13.12
       }
     },
     {
@@ -190,10 +190,10 @@
       "size": "mid",
       "sector": "Technology",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": 1.21,
+        "2d": 1.64,
+        "3d": -3.01,
+        "1w": -2.19
       }
     },
     {
@@ -211,10 +211,10 @@
       "size": "mid",
       "sector": "Technology",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -1.09,
+        "2d": -2.75,
+        "3d": -3.86,
+        "1w": -0.3
       }
     },
     {
@@ -232,10 +232,10 @@
       "size": "mid",
       "sector": "Consumer Cyclical",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": 0.65,
+        "2d": -0.2,
+        "3d": -1.7,
+        "1w": -4.36
       }
     },
     {
@@ -253,10 +253,10 @@
       "size": "small",
       "sector": "Basic Materials",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -3.41,
+        "2d": 1.14,
+        "3d": -5.68,
+        "1w": -7.95
       }
     },
     {
@@ -274,10 +274,10 @@
       "size": "mid",
       "sector": "Consumer Defensive",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": 0.52,
+        "2d": 1.23,
+        "3d": -0.28,
+        "1w": -2.36
       }
     },
     {
@@ -295,10 +295,10 @@
       "size": "small",
       "sector": "Energy",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -2.12,
+        "2d": -1.19,
+        "3d": 1.92,
+        "1w": 4.31
       }
     },
     {
@@ -316,10 +316,10 @@
       "size": "mid",
       "sector": "Consumer Defensive",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": 0.33,
+        "2d": -0.49,
+        "3d": -4.01,
+        "1w": -7.96
       }
     },
     {
@@ -337,10 +337,10 @@
       "size": "mid",
       "sector": "Basic Materials",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -1.23,
+        "2d": 0.88,
+        "3d": 1.76,
+        "1w": 2.82
       }
     },
     {
@@ -358,10 +358,10 @@
       "size": "mid",
       "sector": "Financial",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -2.44,
+        "2d": -3.91,
+        "3d": -2.32,
+        "1w": -0.68
       }
     },
     {
@@ -379,10 +379,10 @@
       "size": "mid",
       "sector": "Healthcare",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": 0.44,
+        "2d": -1.18,
+        "3d": 0.22,
+        "1w": -0.11
       }
     },
     {
@@ -400,10 +400,10 @@
       "size": "mid",
       "sector": "Industrials",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -0.42,
+        "2d": -1.81,
+        "3d": -3.22,
+        "1w": -2.36
       }
     },
     {
@@ -421,10 +421,10 @@
       "size": "small",
       "sector": "Financial",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -0.3,
+        "2d": -0.4,
+        "3d": -3.56,
+        "1w": 0.2
       }
     },
     {
@@ -442,10 +442,10 @@
       "size": "mid",
       "sector": "Communication Services",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": 0.65,
+        "2d": -1.33,
+        "3d": -5.59,
+        "1w": -0.25
       }
     },
     {
@@ -463,10 +463,10 @@
       "size": "mid",
       "sector": "Financial",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": 0.04,
+        "2d": 1.09,
+        "3d": -0.24,
+        "1w": -0.28
       }
     },
     {
@@ -484,10 +484,10 @@
       "size": "mid",
       "sector": "Industrials",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -1.75,
+        "2d": -1.66,
+        "3d": -5.76,
+        "1w": -0.22
       }
     },
     {
@@ -505,10 +505,10 @@
       "size": "mid",
       "sector": "Consumer Cyclical",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": 2.03,
+        "2d": -1.15,
+        "3d": -4.24,
+        "1w": -5.56
       }
     },
     {
@@ -526,10 +526,10 @@
       "size": "mid",
       "sector": "Energy",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -7.63,
+        "2d": -7.63,
+        "3d": -12.81,
+        "1w": -7.08
       }
     }
   ],
@@ -549,10 +549,10 @@
       "size": "mega",
       "sector": "Technology",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -2.33,
+        "2d": -1.25,
+        "3d": -3.58,
+        "1w": -4.3
       }
     },
     {
@@ -570,10 +570,10 @@
       "size": "large",
       "sector": "Technology",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": 1.7,
+        "2d": 1.64,
+        "3d": -1.57,
+        "1w": 2.72
       }
     },
     {
@@ -591,10 +591,10 @@
       "size": "large",
       "sector": "Financial",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -0.25,
+        "2d": -1.95,
+        "3d": -4.25,
+        "1w": -2.06
       }
     },
     {
@@ -612,10 +612,10 @@
       "size": "small",
       "sector": "Technology",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -5.5,
+        "2d": -6.53,
+        "3d": -9.97,
+        "1w": -1.59
       }
     },
     {
@@ -633,10 +633,10 @@
       "size": "mega",
       "sector": "Technology",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -5.24,
+        "2d": -5.36,
+        "3d": -8.91,
+        "1w": -8.14
       }
     },
     {
@@ -654,10 +654,10 @@
       "size": "mid",
       "sector": "Energy",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -0.43,
+        "2d": -0.77,
+        "3d": 1.83,
+        "1w": 1.75
       }
     },
     {
@@ -675,10 +675,10 @@
       "size": "mid",
       "sector": "Financial",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -2.44,
+        "2d": -3.91,
+        "3d": -2.32,
+        "1w": -0.68
       }
     },
     {
@@ -696,10 +696,10 @@
       "size": "mid",
       "sector": "Financial",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": 0.17,
+        "2d": -0.74,
+        "3d": -0.91,
+        "1w": 0.41
       }
     },
     {
@@ -717,10 +717,10 @@
       "size": "mid",
       "sector": "Financial",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -0.11,
+        "2d": 3.11,
+        "3d": 5.88,
+        "1w": 13.12
       }
     },
     {
@@ -738,10 +738,10 @@
       "size": "mid",
       "sector": "Communication Services",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -1.11,
+        "2d": -3.56,
+        "3d": -2.5,
+        "1w": -6.44
       }
     },
     {
@@ -759,31 +759,10 @@
       "size": "small",
       "sector": "Communication Services",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
-      }
-    },
-    {
-      "ticker": "ERO",
-      "standalone": 0.4069,
-      "tape": 0.8874,
-      "book": 1.0372,
-      "s_join": 0.9866142981514304,
-      "s_sector": -0.32,
-      "s_general": 0.0,
-      "s_news": 0.0,
-      "s_ab": 0.982845029172576,
-      "s_peer": 0.7920373612395393,
-      "s_opp": 0.4,
-      "size": "mid",
-      "sector": "Basic Materials",
-      "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": 3.38,
+        "2d": 2.5,
+        "3d": 0.04,
+        "1w": 1.97
       }
     },
     {
@@ -801,10 +780,10 @@
       "size": "small",
       "sector": "Energy",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -2.12,
+        "2d": -1.19,
+        "3d": 1.92,
+        "1w": 4.31
       }
     },
     {
@@ -822,31 +801,52 @@
       "size": "small",
       "sector": "Real Estate",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": 0.95,
+        "2d": -0.12,
+        "3d": -0.48,
+        "1w": 1.79
       }
     },
     {
-      "ticker": "CRML",
-      "standalone": 0.3767,
-      "tape": 0.8157,
-      "book": 0.9755,
-      "s_join": 0.9490672465916454,
-      "s_sector": -0.32,
+      "ticker": "ELF",
+      "standalone": 0.3711,
+      "tape": 0.7757,
+      "book": 1.1617,
+      "s_join": 0.9154204563159324,
+      "s_sector": -0.24,
       "s_general": 0.0,
       "s_news": 0.0,
-      "s_ab": 0.6351489523872873,
-      "s_peer": 0.9962037924619064,
-      "s_opp": 0.4,
-      "size": "small",
-      "sector": "Basic Materials",
+      "s_ab": 0.809301070201781,
+      "s_peer": 0.7420382957075286,
+      "s_opp": 0.6000000000000001,
+      "size": "mid",
+      "sector": "Consumer Defensive",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -1.95,
+        "2d": 2.71,
+        "3d": -0.59,
+        "1w": 1.17
+      }
+    },
+    {
+      "ticker": "CVI",
+      "standalone": 0.3709,
+      "tape": 0.8367,
+      "book": 0.9777,
+      "s_join": 0.7916737206403102,
+      "s_sector": -0.24,
+      "s_general": 0.0,
+      "s_news": 0.0,
+      "s_ab": 0.8798266996519848,
+      "s_peer": 0.7936621816849337,
+      "s_opp": 0.4,
+      "size": "mid",
+      "sector": "Energy",
+      "fwd": {
+        "1d": 5.03,
+        "2d": 5.28,
+        "3d": 7.82,
+        "1w": 9.61
       }
     }
   ],
@@ -866,31 +866,10 @@
       "size": "large",
       "sector": "Financial",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
-      }
-    },
-    {
-      "ticker": "ANF",
-      "standalone": 0.2113,
-      "tape": 0.9525,
-      "book": 0.9237,
-      "s_join": 0.1626396615207475,
-      "s_sector": -0.8,
-      "s_general": 0.0,
-      "s_news": 0.0,
-      "s_ab": 0.9051482536448664,
-      "s_peer": 0.9999330715409368,
-      "s_opp": 0.38,
-      "size": "mid",
-      "sector": "Consumer Cyclical",
-      "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -0.25,
+        "2d": -1.95,
+        "3d": -4.25,
+        "1w": -2.06
       }
     },
     {
@@ -908,10 +887,10 @@
       "size": "small",
       "sector": "Financial",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -0.3,
+        "2d": -0.4,
+        "3d": -3.56,
+        "1w": 0.2
       }
     },
     {
@@ -929,31 +908,10 @@
       "size": "small",
       "sector": "Technology",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
-      }
-    },
-    {
-      "ticker": "CNH",
-      "standalone": 0.3705,
-      "tape": 0.9191,
-      "book": 0.6754,
-      "s_join": 0.9448991360003488,
-      "s_sector": -0.56,
-      "s_general": 0.0,
-      "s_news": 0.0,
-      "s_ab": 0.9640275800758168,
-      "s_peer": 0.8742007266047085,
-      "s_opp": 0.03,
-      "size": "large",
-      "sector": "Industrials",
-      "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -4.36,
+        "2d": -8.71,
+        "3d": -4.79,
+        "1w": -2.4
       }
     },
     {
@@ -971,10 +929,10 @@
       "size": "large",
       "sector": "Financial",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -5.01,
+        "2d": -4.51,
+        "3d": -5.69,
+        "1w": 13.63
       }
     },
     {
@@ -992,31 +950,10 @@
       "size": "large",
       "sector": "Financial",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
-      }
-    },
-    {
-      "ticker": "ERO",
-      "standalone": 0.4069,
-      "tape": 0.8874,
-      "book": 1.0372,
-      "s_join": 0.9866142981514304,
-      "s_sector": -0.32,
-      "s_general": 0.0,
-      "s_news": 0.0,
-      "s_ab": 0.982845029172576,
-      "s_peer": 0.7920373612395393,
-      "s_opp": 0.4,
-      "size": "mid",
-      "sector": "Basic Materials",
-      "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -1.11,
+        "2d": -4.38,
+        "3d": -2.02,
+        "1w": -4.92
       }
     },
     {
@@ -1034,10 +971,31 @@
       "size": "small",
       "sector": "Consumer Defensive",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -1.56,
+        "2d": -0.69,
+        "3d": -2.26,
+        "1w": 1.56
+      }
+    },
+    {
+      "ticker": "GEN",
+      "standalone": 0.5219,
+      "tape": 0.8814,
+      "book": 0.4534,
+      "s_join": 0.9682997247073648,
+      "s_sector": 0.4,
+      "s_general": 0.0,
+      "s_news": 0.0,
+      "s_ab": 0.8482836399575129,
+      "s_peer": 0.914606711563372,
+      "s_opp": -0.1699999999999999,
+      "size": "large",
+      "sector": "Technology",
+      "fwd": {
+        "1d": 1.7,
+        "2d": 1.64,
+        "3d": -1.57,
+        "1w": 2.72
       }
     },
     {
@@ -1055,10 +1013,10 @@
       "size": "small",
       "sector": "Technology",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": 2.42,
+        "2d": 2.53,
+        "3d": 3.04,
+        "1w": -13.84
       }
     },
     {
@@ -1076,10 +1034,10 @@
       "size": "mid",
       "sector": "Consumer Defensive",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": 0.52,
+        "2d": 1.23,
+        "3d": -0.28,
+        "1w": -2.36
       }
     },
     {
@@ -1097,10 +1055,10 @@
       "size": "small",
       "sector": "Consumer Defensive",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -4.27,
+        "2d": -3.94,
+        "3d": -5.67,
+        "1w": -5.74
       }
     },
     {
@@ -1118,31 +1076,10 @@
       "size": "small",
       "sector": "Technology",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
-      }
-    },
-    {
-      "ticker": "SLI",
-      "standalone": 0.3649,
-      "tape": 0.8369,
-      "book": 1.0999,
-      "s_join": 0.8357773250191383,
-      "s_sector": -0.32,
-      "s_general": 0.0,
-      "s_news": 0.0,
-      "s_ab": 0.809301070201781,
-      "s_peer": 0.864591356367123,
-      "s_opp": 0.52,
-      "size": "small",
-      "sector": "Basic Materials",
-      "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -5.5,
+        "2d": -6.53,
+        "3d": -9.97,
+        "1w": -1.59
       }
     },
     {
@@ -1160,10 +1097,73 @@
       "size": "mid",
       "sector": "Energy",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": 5.03,
+        "2d": 5.28,
+        "3d": 7.82,
+        "1w": 9.61
+      }
+    },
+    {
+      "ticker": "ACHC",
+      "standalone": 0.2519,
+      "tape": 0.8307,
+      "book": 0.9497,
+      "s_join": -0.15,
+      "s_sector": 0.0,
+      "s_general": 0.0,
+      "s_news": 0.0,
+      "s_ab": 0.7615941559557649,
+      "s_peer": 0.8998156361720202,
+      "s_opp": 0.52,
+      "size": "mid",
+      "sector": "Healthcare",
+      "fwd": {
+        "1d": -5.53,
+        "2d": -8.8,
+        "3d": -6.52,
+        "1w": -6.09
+      }
+    },
+    {
+      "ticker": "PCRX",
+      "standalone": 0.2496,
+      "tape": 0.8238,
+      "book": 0.6764,
+      "s_join": -0.15,
+      "s_sector": 0.0,
+      "s_general": 0.0,
+      "s_news": 0.0,
+      "s_ab": 0.9253462253117412,
+      "s_peer": 0.7223300129053858,
+      "s_opp": 0.24,
+      "size": "small",
+      "sector": "Healthcare",
+      "fwd": {
+        "1d": -0.27,
+        "2d": 0.27,
+        "3d": 2.48,
+        "1w": 2.98
+      }
+    },
+    {
+      "ticker": "ALVO",
+      "standalone": 0.2466,
+      "tape": 0.8147,
+      "book": 0.7742,
+      "s_join": -0.15,
+      "s_sector": 0.0,
+      "s_general": 0.0,
+      "s_news": 0.0,
+      "s_ab": 0.6351489523872873,
+      "s_peer": 0.9942567416885992,
+      "s_opp": 0.36,
+      "size": "small",
+      "sector": "Healthcare",
+      "fwd": {
+        "1d": 1.43,
+        "2d": 6.35,
+        "3d": 7.38,
+        "1w": 10.25
       }
     }
   ],
@@ -1183,10 +1183,10 @@
       "size": "mid",
       "sector": "Healthcare",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -13.15,
+        "2d": -12.29,
+        "3d": -13.08,
+        "1w": -9.93
       },
       "rank_standalone_raw": 1187,
       "rank_tape_raw": 719,
@@ -1208,10 +1208,10 @@
       "size": "small",
       "sector": "Healthcare",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -6.06,
+        "2d": -8.72,
+        "3d": 0.37,
+        "1w": -3.77
       },
       "rank_standalone_raw": 725,
       "rank_tape_raw": 129,
@@ -1233,10 +1233,10 @@
       "size": "micro",
       "sector": "Healthcare",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -9.52,
+        "2d": -3.44,
+        "3d": -9.52,
+        "1w": 20.11
       },
       "rank_standalone_raw": 1162,
       "rank_tape_raw": 185,
@@ -1258,10 +1258,10 @@
       "size": "small",
       "sector": "Financial",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -5.97,
+        "2d": 4.76,
+        "3d": 3.81,
+        "1w": 16.0
       },
       "rank_standalone_raw": 698,
       "rank_tape_raw": 788,
@@ -1283,10 +1283,10 @@
       "size": "mid",
       "sector": "Technology",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -8.91,
+        "2d": -4.24,
+        "3d": -8.65,
+        "1w": 5.12
       },
       "rank_standalone_raw": 1029,
       "rank_tape_raw": 1327,
@@ -1308,10 +1308,10 @@
       "size": "large",
       "sector": "Financial",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -0.97,
+        "2d": -2.09,
+        "3d": -2.57,
+        "1w": -4.25
       },
       "rank_standalone_raw": 21,
       "rank_tape_raw": 23,
@@ -1333,13 +1333,13 @@
       "size": "mid",
       "sector": "Financial",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -5.18,
+        "2d": -3.5,
+        "3d": -11.36,
+        "1w": -4.76
       },
       "rank_standalone_raw": 154,
-      "rank_tape_raw": 589,
+      "rank_tape_raw": 590,
       "mcap": 8289.8,
       "gated": false
     },
@@ -1358,10 +1358,10 @@
       "size": "mid",
       "sector": "Consumer Defensive",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -1.95,
+        "2d": 2.71,
+        "3d": -0.59,
+        "1w": 1.17
       },
       "rank_standalone_raw": 104,
       "rank_tape_raw": 51,
@@ -1383,10 +1383,10 @@
       "size": "mid",
       "sector": "Healthcare",
       "fwd": {
-        "1d": null,
-        "2d": null,
-        "3d": null,
-        "1w": null
+        "1d": -1.12,
+        "2d": -2.22,
+        "3d": -2.58,
+        "1w": -2.15
       },
       "rank_standalone_raw": 554,
       "rank_tape_raw": 216,
@@ -1396,6 +1396,7 @@
   ],
   "overlap_standalone_vs_live": [
     "DEC",
+    "ELF",
     "RRC",
     "WT",
     "XP"
@@ -1404,8 +1405,7 @@
     "AMD",
     "BGC",
     "BZ",
-    "CRML",
-    "ERO",
+    "CVI",
     "EVER",
     "FBRT",
     "FUTU",
@@ -1421,7 +1421,6 @@
     "CRK",
     "CXT",
     "DNN",
-    "ELF",
     "EPAM",
     "GPK",
     "ICL",
@@ -1438,20 +1437,20 @@
   ],
   "overlap_tape_vs_live": [
     "SFM",
-    "SLI",
     "TIGR"
   ],
   "entered_tape": [
-    "ANF",
+    "ACHC",
+    "ALVO",
     "CBOE",
-    "CNH",
     "CVI",
-    "ERO",
     "FUTU",
+    "GEN",
     "HNST",
     "HOOD",
     "MEI",
     "ODD",
+    "PCRX",
     "PGY",
     "VYX"
   ],
@@ -1474,6 +1473,7 @@
     "MOS",
     "OSK",
     "RRC",
+    "SLI",
     "VNT",
     "WT",
     "XP",
@@ -1481,42 +1481,42 @@
   ],
   "avg_fwd": {
     "live": {
-      "1d": null,
-      "2d": null,
-      "3d": null,
-      "1w": null
+      "1d": -0.9935999999999998,
+      "2d": -0.7647999999999999,
+      "3d": -1.6924,
+      "1w": -0.6255999999999999
     },
     "standalone": {
-      "1d": null,
-      "2d": null,
-      "3d": null,
-      "1w": null
+      "1d": -0.6833333333333333,
+      "2d": -0.676,
+      "3d": -1.172666666666667,
+      "1w": 0.9093333333333331
     },
     "tape": {
-      "1d": null,
-      "2d": null,
-      "3d": null,
-      "1w": null
+      "1d": -1.1373333333333335,
+      "2d": -1.5073333333333332,
+      "3d": -1.7240000000000002,
+      "1w": 0.1300000000000002
     }
   },
   "hit_rate": {
     "live": {
-      "1d": null,
-      "2d": null,
-      "3d": null,
-      "1w": null
+      "1d": 0.4,
+      "2d": 0.36,
+      "3d": 0.32,
+      "1w": 0.4
     },
     "standalone": {
-      "1d": null,
-      "2d": null,
-      "3d": null,
-      "1w": null
+      "1d": 0.3333333333333333,
+      "2d": 0.3333333333333333,
+      "3d": 0.3333333333333333,
+      "1w": 0.6
     },
     "tape": {
-      "1d": null,
-      "2d": null,
-      "3d": null,
-      "1w": null
+      "1d": 0.3333333333333333,
+      "2d": 0.4,
+      "3d": 0.26666666666666666,
+      "1w": 0.4666666666666667
     }
   }
 }
