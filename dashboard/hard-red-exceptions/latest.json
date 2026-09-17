@@ -1,9 +1,9 @@
 {
   "ok": true,
-  "generated_at": "2026-09-17T07:28:41.033927-04:00",
+  "generated_at": "2026-09-17T10:05:00.447701-04:00",
   "from_date": "2026-08-13",
-  "to_date": "2026-09-16",
-  "n_days": 24,
+  "to_date": "2026-09-17",
+  "n_days": 25,
   "top_n": 8,
   "cam_order": [
     "join",
@@ -461,6 +461,7 @@
     "FINV",
     "FIRY",
     "FIVE",
+    "FIVN",
     "FJET",
     "FLNC",
     "FLO",
@@ -620,6 +621,7 @@
     "IRDM",
     "IREN",
     "IRON",
+    "IT",
     "ITG",
     "ITUB",
     "IVVD",
@@ -1309,25 +1311,25 @@
     }
   },
   "latest": {
-    "date": "2026-09-16",
-    "s": 5.297,
+    "date": "2026-09-17",
+    "s": 7.383,
     "hard_red": false,
-    "n_cards": 4,
+    "n_cards": 6,
     "longs": [
       {
-        "ticker": "AVAH",
-        "date": "2026-09-16",
-        "idio": 23,
-        "n_pos": 7,
+        "ticker": "FIVN",
+        "date": "2026-09-17",
+        "idio": 25,
+        "n_pos": 8,
         "n_neg": 0,
         "e_pol": "good",
-        "e_label": "beat \u00b7 EPS surprise +30.7% (morning export)",
+        "e_label": "beat \u00b7 EPS surprise +2.7% (morning export)",
         "r_pol": "good",
         "news_tone": "missing",
-        "headline": "Aveanna to Participate in the Deutsche Bank 2026 Healthcare Summit",
-        "yday_ret": 1.59,
-        "rsi": 72.16,
-        "macd_hist": -0.0663,
+        "headline": "Starbucks initiated, Expedia downgraded: Wall Street's top analyst calls",
+        "yday_ret": -6.13,
+        "rsi": 48.15,
+        "macd_hist": -0.4156,
         "flow_in": false,
         "white": true,
         "alarm": false,
@@ -1335,131 +1337,20 @@
         "sources": [
           "flatten"
         ],
-        "open": 14.31,
-        "close": 14.26,
-        "day_pct": -0.35,
+        "open": null,
+        "close": 35.0,
+        "day_pct": 0.0,
         "boxes": {
           "join": "good",
           "sector": "good",
           "gen": "good",
           "news": "missing",
-          "digest": "neutral",
-          "judge": "missing",
+          "digest": "good",
+          "judge": "good",
           "ab": "good",
           "peer": "good",
           "heat": "good",
           "vol": "neutral",
-          "catal": "missing",
-          "buy": "good",
-          "yday": "missing"
-        },
-        "domains": null,
-        "parts": [
-          {
-            "k": "cameras",
-            "pts": 14,
-            "why": "+7 \u22120 cameras"
-          },
-          {
-            "k": "E",
-            "pts": 4,
-            "why": "beat \u00b7 EPS surprise +30.7% (morning export)"
-          },
-          {
-            "k": "R",
-            "pts": 2,
-            "why": "buy-side recom 1.6 (level, not a change \u00b7 morning export)"
-          },
-          {
-            "k": "join",
-            "pts": 1,
-            "why": "join green"
-          },
-          {
-            "k": "peer",
-            "pts": 1,
-            "why": "peer green"
-          },
-          {
-            "k": "yday",
-            "pts": 1,
-            "why": "yday +1.6%"
-          },
-          {
-            "k": "white",
-            "pts": 2,
-            "why": "zero red cameras"
-          },
-          {
-            "k": "rsi",
-            "pts": -2,
-            "why": "RSI 72 OB \u2014 pause longs"
-          }
-        ],
-        "weather": [
-          "gen good",
-          "sector good"
-        ],
-        "h1": -0.35,
-        "h3": null,
-        "h5": null,
-        "side": "long",
-        "why": [
-          "Weather S=5.297. Not a sit morning \u2014 still ranked.",
-          "+14 +7 \u22120 cameras",
-          "+4 beat \u00b7 EPS surprise +30.7% (morning export)",
-          "+2 buy-side recom 1.6 (level, not a change \u00b7 morning export)",
-          "+2 zero red cameras",
-          "-2 RSI 72 OB \u2014 pause longs",
-          "+1 join green",
-          "Weather cameras (not in idio score): gen good, sector good",
-          "News: missing \u2014 Aveanna to Participate in the Deutsche Bank 2026 Healthcare Summit",
-          "beat \u00b7 EPS surprise +30.7% (morning export)",
-          "Tape RSI 72 OB \u00b7 MACD hist -0.0663",
-          "Side lean: long \u00b7 idio +23"
-        ],
-        "h1_px": 14.26,
-        "h1_date": "2026-09-17",
-        "h3_px": null,
-        "h3_date": null,
-        "h5_px": null,
-        "h5_date": null
-      },
-      {
-        "ticker": "RDNT",
-        "date": "2026-09-16",
-        "idio": 23,
-        "n_pos": 7,
-        "n_neg": 0,
-        "e_pol": "good",
-        "e_label": "beat \u00b7 EPS surprise +44.0% (morning export)",
-        "r_pol": "good",
-        "news_tone": "missing",
-        "headline": "RadNet, Inc. to Present at the Morgan Stanley 24th Annual Global Healthcare Conference on Wednesday, September 16th, 2026",
-        "yday_ret": -2.36,
-        "rsi": 47.26,
-        "macd_hist": -0.8641,
-        "flow_in": false,
-        "white": true,
-        "alarm": false,
-        "on_list": true,
-        "sources": [
-          "flatten"
-        ],
-        "open": 77.12,
-        "close": 75.78,
-        "day_pct": -1.74,
-        "boxes": {
-          "join": "good",
-          "sector": "good",
-          "gen": "good",
-          "news": "missing",
-          "digest": "neutral",
-          "judge": "missing",
-          "ab": "good",
-          "peer": "good",
-          "heat": "good",
-          "vol": "good",
           "catal": "missing",
           "buy": "neutral",
           "yday": "missing"
@@ -1468,18 +1359,18 @@
         "parts": [
           {
             "k": "cameras",
-            "pts": 14,
-            "why": "+7 \u22120 cameras"
+            "pts": 16,
+            "why": "+8 \u22120 cameras"
           },
           {
             "k": "E",
             "pts": 4,
-            "why": "beat \u00b7 EPS surprise +44.0% (morning export)"
+            "why": "beat \u00b7 EPS surprise +2.7% (morning export)"
           },
           {
             "k": "R",
             "pts": 2,
-            "why": "buy-side recom 1.1 (level, not a change \u00b7 morning export)"
+            "why": "buy-side recom 1.8 (level, not a change \u00b7 morning export)"
           },
           {
             "k": "join",
@@ -1494,7 +1385,7 @@
           {
             "k": "yday",
             "pts": -1,
-            "why": "yday -2.4%"
+            "why": "yday -6.1%"
           },
           {
             "k": "white",
@@ -1506,146 +1397,45 @@
           "gen good",
           "sector good"
         ],
-        "h1": -1.74,
+        "h1": null,
         "h3": null,
         "h5": null,
         "side": "long",
         "why": [
-          "Weather S=5.297. Not a sit morning \u2014 still ranked.",
-          "+14 +7 \u22120 cameras",
-          "+4 beat \u00b7 EPS surprise +44.0% (morning export)",
-          "+2 buy-side recom 1.1 (level, not a change \u00b7 morning export)",
+          "Weather S=7.383. Not a sit morning \u2014 still ranked.",
+          "+16 +8 \u22120 cameras",
+          "+4 beat \u00b7 EPS surprise +2.7% (morning export)",
+          "+2 buy-side recom 1.8 (level, not a change \u00b7 morning export)",
           "+2 zero red cameras",
           "+1 join green",
           "+1 peer green",
           "Weather cameras (not in idio score): gen good, sector good",
-          "News: missing \u2014 RadNet, Inc. to Present at the Morgan Stanley 24th Annual Global Healthcare Conference on Wednesday, September 16th, 202",
-          "beat \u00b7 EPS surprise +44.0% (morning export)",
-          "Tape RSI 47 \u00b7 MACD hist -0.8641",
-          "Side lean: long \u00b7 idio +23"
+          "News: missing \u2014 Starbucks initiated, Expedia downgraded: Wall Street's top analyst calls",
+          "beat \u00b7 EPS surprise +2.7% (morning export)",
+          "Tape RSI 48 \u00b7 MACD hist -0.4156",
+          "Side lean: long \u00b7 idio +25"
         ],
-        "h1_px": 75.78,
-        "h1_date": "2026-09-17",
+        "h1_px": null,
+        "h1_date": null,
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
         "h5_date": null
       },
       {
-        "ticker": "BLFS",
-        "date": "2026-09-16",
-        "idio": 21,
-        "n_pos": 6,
+        "ticker": "IOT",
+        "date": "2026-09-17",
+        "idio": 25,
+        "n_pos": 8,
         "n_neg": 0,
         "e_pol": "good",
-        "e_label": "beat \u00b7 EPS surprise +2807.3% (morning export)",
-        "r_pol": "neutral",
-        "news_tone": "missing",
-        "headline": "Are BLFS, FTHM, AUUD, VRME Obtaining Fair Deals for their Shareholders?",
-        "yday_ret": 0.37,
-        "rsi": 53.91,
-        "macd_hist": -0.4241,
-        "flow_in": false,
-        "white": true,
-        "alarm": false,
-        "on_list": true,
-        "sources": [
-          "flatten"
-        ],
-        "open": 36.46,
-        "close": 36.11,
-        "day_pct": -0.96,
-        "boxes": {
-          "join": "good",
-          "sector": "good",
-          "gen": "good",
-          "news": "missing",
-          "digest": "neutral",
-          "judge": "missing",
-          "ab": "good",
-          "peer": "good",
-          "heat": "good",
-          "vol": "neutral",
-          "catal": "missing",
-          "buy": "neutral",
-          "yday": "missing"
-        },
-        "domains": null,
-        "parts": [
-          {
-            "k": "cameras",
-            "pts": 12,
-            "why": "+6 \u22120 cameras"
-          },
-          {
-            "k": "E",
-            "pts": 4,
-            "why": "beat \u00b7 EPS surprise +2807.3% (morning export)"
-          },
-          {
-            "k": "join",
-            "pts": 1,
-            "why": "join green"
-          },
-          {
-            "k": "peer",
-            "pts": 1,
-            "why": "peer green"
-          },
-          {
-            "k": "yday",
-            "pts": 1,
-            "why": "yday +0.4%"
-          },
-          {
-            "k": "white",
-            "pts": 2,
-            "why": "zero red cameras"
-          }
-        ],
-        "weather": [
-          "gen good",
-          "sector good"
-        ],
-        "h1": -0.96,
-        "h3": null,
-        "h5": null,
-        "side": "long",
-        "why": [
-          "Weather S=5.297. Not a sit morning \u2014 still ranked.",
-          "+12 +6 \u22120 cameras",
-          "+4 beat \u00b7 EPS surprise +2807.3% (morning export)",
-          "+2 zero red cameras",
-          "+1 join green",
-          "+1 peer green",
-          "+1 yday +0.4%",
-          "Weather cameras (not in idio score): gen good, sector good",
-          "News: missing \u2014 Are BLFS, FTHM, AUUD, VRME Obtaining Fair Deals for their Shareholders?",
-          "beat \u00b7 EPS surprise +2807.3% (morning export)",
-          "Tape RSI 54 \u00b7 MACD hist -0.4241",
-          "Side lean: long \u00b7 idio +21"
-        ],
-        "h1_px": 36.11,
-        "h1_date": "2026-09-17",
-        "h3_px": null,
-        "h3_date": null,
-        "h5_px": null,
-        "h5_date": null
-      },
-      {
-        "ticker": "IQV",
-        "date": "2026-09-16",
-        "idio": 21,
-        "n_pos": 6,
-        "n_neg": 0,
-        "e_pol": "good",
-        "e_label": "beat \u00b7 EPS surprise +3.9% (morning export)",
+        "e_label": "beat \u00b7 EPS surprise +25.0% (morning export)",
         "r_pol": "good",
         "news_tone": "missing",
-        "headline": "IQVIA Announces Pricing of Senior Notes",
-        "yday_ret": -3.2,
-        "rsi": 59.25,
-        "macd_hist": -0.8813,
+        "headline": "Ulta Beauty, Etsy upgraded: Wall Street's top analyst calls",
+        "yday_ret": -0.16,
+        "rsi": 48.06,
+        "macd_hist": -0.3167,
         "flow_in": false,
         "white": true,
         "alarm": false,
@@ -1653,16 +1443,16 @@
         "sources": [
           "flatten"
         ],
-        "open": 270.89,
-        "close": 268.82,
-        "day_pct": -0.76,
+        "open": null,
+        "close": 41.54,
+        "day_pct": 1.32,
         "boxes": {
           "join": "good",
           "sector": "good",
           "gen": "good",
           "news": "missing",
-          "digest": "neutral",
-          "judge": "missing",
+          "digest": "good",
+          "judge": "good",
           "ab": "good",
           "peer": "good",
           "heat": "good",
@@ -1675,13 +1465,13 @@
         "parts": [
           {
             "k": "cameras",
-            "pts": 12,
-            "why": "+6 \u22120 cameras"
+            "pts": 16,
+            "why": "+8 \u22120 cameras"
           },
           {
             "k": "E",
             "pts": 4,
-            "why": "beat \u00b7 EPS surprise +3.9% (morning export)"
+            "why": "beat \u00b7 EPS surprise +25.0% (morning export)"
           },
           {
             "k": "R",
@@ -1701,7 +1491,7 @@
           {
             "k": "yday",
             "pts": -1,
-            "why": "yday -3.2%"
+            "why": "yday -0.2%"
           },
           {
             "k": "white",
@@ -1713,26 +1503,418 @@
           "gen good",
           "sector good"
         ],
-        "h1": -0.76,
+        "h1": null,
         "h3": null,
         "h5": null,
         "side": "long",
         "why": [
-          "Weather S=5.297. Not a sit morning \u2014 still ranked.",
-          "+12 +6 \u22120 cameras",
-          "+4 beat \u00b7 EPS surprise +3.9% (morning export)",
+          "Weather S=7.383. Not a sit morning \u2014 still ranked.",
+          "+16 +8 \u22120 cameras",
+          "+4 beat \u00b7 EPS surprise +25.0% (morning export)",
           "+2 buy-side recom 1.5 (level, not a change \u00b7 morning export)",
           "+2 zero red cameras",
           "+1 join green",
           "+1 peer green",
           "Weather cameras (not in idio score): gen good, sector good",
-          "News: missing \u2014 IQVIA Announces Pricing of Senior Notes",
-          "beat \u00b7 EPS surprise +3.9% (morning export)",
-          "Tape RSI 59 \u00b7 MACD hist -0.8813",
-          "Side lean: long \u00b7 idio +21"
+          "News: missing \u2014 Ulta Beauty, Etsy upgraded: Wall Street's top analyst calls",
+          "beat \u00b7 EPS surprise +25.0% (morning export)",
+          "Tape RSI 48 \u00b7 MACD hist -0.3167",
+          "Side lean: long \u00b7 idio +25"
         ],
-        "h1_px": 268.82,
-        "h1_date": "2026-09-17",
+        "h1_px": null,
+        "h1_date": null,
+        "h3_px": null,
+        "h3_date": null,
+        "h5_px": null,
+        "h5_date": null
+      },
+      {
+        "ticker": "IT",
+        "date": "2026-09-17",
+        "idio": 19,
+        "n_pos": 8,
+        "n_neg": 1,
+        "e_pol": "good",
+        "e_label": "beat \u00b7 EPS surprise +16.3% (morning export)",
+        "r_pol": "neutral",
+        "news_tone": "missing",
+        "headline": "Global AI spend will nearly double in 2026 due to infrastructure demand",
+        "yday_ret": -7.42,
+        "rsi": 43.3,
+        "macd_hist": -3.3893,
+        "flow_in": false,
+        "white": false,
+        "alarm": false,
+        "on_list": true,
+        "sources": [
+          "flatten"
+        ],
+        "open": null,
+        "close": 191.57,
+        "day_pct": 0.0,
+        "boxes": {
+          "join": "good",
+          "sector": "good",
+          "gen": "good",
+          "news": "missing",
+          "digest": "good",
+          "judge": "good",
+          "ab": "good",
+          "peer": "good",
+          "heat": "good",
+          "vol": "bad",
+          "catal": "missing",
+          "buy": "neutral",
+          "yday": "missing"
+        },
+        "domains": null,
+        "parts": [
+          {
+            "k": "cameras",
+            "pts": 14,
+            "why": "+8 \u22121 cameras"
+          },
+          {
+            "k": "E",
+            "pts": 4,
+            "why": "beat \u00b7 EPS surprise +16.3% (morning export)"
+          },
+          {
+            "k": "join",
+            "pts": 1,
+            "why": "join green"
+          },
+          {
+            "k": "peer",
+            "pts": 1,
+            "why": "peer green"
+          },
+          {
+            "k": "yday",
+            "pts": -1,
+            "why": "yday -7.4%"
+          }
+        ],
+        "weather": [
+          "gen good",
+          "sector good"
+        ],
+        "h1": null,
+        "h3": null,
+        "h5": null,
+        "side": "long",
+        "why": [
+          "Weather S=7.383. Not a sit morning \u2014 still ranked.",
+          "+14 +8 \u22121 cameras",
+          "+4 beat \u00b7 EPS surprise +16.3% (morning export)",
+          "+1 join green",
+          "+1 peer green",
+          "-1 yday -7.4%",
+          "Weather cameras (not in idio score): gen good, sector good",
+          "News: missing \u2014 Global AI spend will nearly double in 2026 due to infrastructure demand",
+          "beat \u00b7 EPS surprise +16.3% (morning export)",
+          "Tape RSI 43 \u00b7 MACD hist -3.3893",
+          "Side lean: long \u00b7 idio +19"
+        ],
+        "h1_px": null,
+        "h1_date": null,
+        "h3_px": null,
+        "h3_date": null,
+        "h5_px": null,
+        "h5_date": null
+      },
+      {
+        "ticker": "RVTY",
+        "date": "2026-09-17",
+        "idio": 19,
+        "n_pos": 7,
+        "n_neg": 1,
+        "e_pol": "good",
+        "e_label": "beat \u00b7 EPS surprise +16.2% (morning export)",
+        "r_pol": "neutral",
+        "news_tone": "missing",
+        "headline": "Revvity Inc. stock outperforms competitors on strong trading day",
+        "yday_ret": 2.79,
+        "rsi": 53.5,
+        "macd_hist": -0.9598,
+        "flow_in": false,
+        "white": false,
+        "alarm": false,
+        "on_list": true,
+        "sources": [
+          "flatten"
+        ],
+        "open": null,
+        "close": 147.8,
+        "day_pct": 1.2,
+        "boxes": {
+          "join": "good",
+          "sector": "good",
+          "gen": "good",
+          "news": "missing",
+          "digest": "bad",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "good",
+          "heat": "good",
+          "vol": "good",
+          "catal": "missing",
+          "buy": "neutral",
+          "yday": "missing"
+        },
+        "domains": null,
+        "parts": [
+          {
+            "k": "cameras",
+            "pts": 12,
+            "why": "+7 \u22121 cameras"
+          },
+          {
+            "k": "E",
+            "pts": 4,
+            "why": "beat \u00b7 EPS surprise +16.2% (morning export)"
+          },
+          {
+            "k": "join",
+            "pts": 1,
+            "why": "join green"
+          },
+          {
+            "k": "peer",
+            "pts": 1,
+            "why": "peer green"
+          },
+          {
+            "k": "yday",
+            "pts": 1,
+            "why": "yday +2.8%"
+          }
+        ],
+        "weather": [
+          "gen good",
+          "sector good"
+        ],
+        "h1": null,
+        "h3": null,
+        "h5": null,
+        "side": "long",
+        "why": [
+          "Weather S=7.383. Not a sit morning \u2014 still ranked.",
+          "+12 +7 \u22121 cameras",
+          "+4 beat \u00b7 EPS surprise +16.2% (morning export)",
+          "+1 join green",
+          "+1 peer green",
+          "+1 yday +2.8%",
+          "Weather cameras (not in idio score): gen good, sector good",
+          "News: missing \u2014 Revvity Inc. stock outperforms competitors on strong trading day",
+          "beat \u00b7 EPS surprise +16.2% (morning export)",
+          "Tape RSI 54 \u00b7 MACD hist -0.9598",
+          "Side lean: long \u00b7 idio +19"
+        ],
+        "h1_px": null,
+        "h1_date": null,
+        "h3_px": null,
+        "h3_date": null,
+        "h5_px": null,
+        "h5_date": null
+      },
+      {
+        "ticker": "AZTA",
+        "date": "2026-09-17",
+        "idio": 19,
+        "n_pos": 6,
+        "n_neg": 1,
+        "e_pol": "good",
+        "e_label": "beat \u00b7 EPS surprise +40.6% (morning export)",
+        "r_pol": "good",
+        "news_tone": "missing",
+        "headline": "Azenta Receives Full Repayment of $35 Million Vendor Loan Related to Sale of B Medical Systems",
+        "yday_ret": 2.22,
+        "rsi": 46.61,
+        "macd_hist": -0.5777,
+        "flow_in": false,
+        "white": false,
+        "alarm": false,
+        "on_list": true,
+        "sources": [
+          "flatten"
+        ],
+        "open": null,
+        "close": 33.21,
+        "day_pct": 0.0,
+        "boxes": {
+          "join": "good",
+          "sector": "good",
+          "gen": "good",
+          "news": "missing",
+          "digest": "bad",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "good",
+          "heat": "good",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "neutral",
+          "yday": "missing"
+        },
+        "domains": null,
+        "parts": [
+          {
+            "k": "cameras",
+            "pts": 10,
+            "why": "+6 \u22121 cameras"
+          },
+          {
+            "k": "E",
+            "pts": 4,
+            "why": "beat \u00b7 EPS surprise +40.6% (morning export)"
+          },
+          {
+            "k": "R",
+            "pts": 2,
+            "why": "buy-side recom 2.0 (level, not a change \u00b7 morning export)"
+          },
+          {
+            "k": "join",
+            "pts": 1,
+            "why": "join green"
+          },
+          {
+            "k": "peer",
+            "pts": 1,
+            "why": "peer green"
+          },
+          {
+            "k": "yday",
+            "pts": 1,
+            "why": "yday +2.2%"
+          }
+        ],
+        "weather": [
+          "gen good",
+          "sector good"
+        ],
+        "h1": null,
+        "h3": null,
+        "h5": null,
+        "side": "long",
+        "why": [
+          "Weather S=7.383. Not a sit morning \u2014 still ranked.",
+          "+10 +6 \u22121 cameras",
+          "+4 beat \u00b7 EPS surprise +40.6% (morning export)",
+          "+2 buy-side recom 2.0 (level, not a change \u00b7 morning export)",
+          "+1 join green",
+          "+1 peer green",
+          "+1 yday +2.2%",
+          "Weather cameras (not in idio score): gen good, sector good",
+          "News: missing \u2014 Azenta Receives Full Repayment of $35 Million Vendor Loan Related to Sale of B Medical Systems",
+          "beat \u00b7 EPS surprise +40.6% (morning export)",
+          "Tape RSI 47 \u00b7 MACD hist -0.5777",
+          "Side lean: long \u00b7 idio +19"
+        ],
+        "h1_px": null,
+        "h1_date": null,
+        "h3_px": null,
+        "h3_date": null,
+        "h5_px": null,
+        "h5_date": null
+      },
+      {
+        "ticker": "WAY",
+        "date": "2026-09-17",
+        "idio": 17,
+        "n_pos": 6,
+        "n_neg": 1,
+        "e_pol": "good",
+        "e_label": "beat \u00b7 EPS surprise +8.0% (morning export)",
+        "r_pol": "good",
+        "news_tone": "missing",
+        "headline": "WAY Stock Surges On Reported Sale Buzz  RBC Flags This Tech Giant As The Obvious First Name",
+        "yday_ret": -3.31,
+        "rsi": 47.79,
+        "macd_hist": -0.1527,
+        "flow_in": false,
+        "white": false,
+        "alarm": false,
+        "on_list": true,
+        "sources": [
+          "flatten"
+        ],
+        "open": null,
+        "close": 26.6,
+        "day_pct": 0.0,
+        "boxes": {
+          "join": "good",
+          "sector": "good",
+          "gen": "good",
+          "news": "missing",
+          "digest": "bad",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "good",
+          "heat": "good",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "neutral",
+          "yday": "missing"
+        },
+        "domains": null,
+        "parts": [
+          {
+            "k": "cameras",
+            "pts": 10,
+            "why": "+6 \u22121 cameras"
+          },
+          {
+            "k": "E",
+            "pts": 4,
+            "why": "beat \u00b7 EPS surprise +8.0% (morning export)"
+          },
+          {
+            "k": "R",
+            "pts": 2,
+            "why": "buy-side recom 1.2 (level, not a change \u00b7 morning export)"
+          },
+          {
+            "k": "join",
+            "pts": 1,
+            "why": "join green"
+          },
+          {
+            "k": "peer",
+            "pts": 1,
+            "why": "peer green"
+          },
+          {
+            "k": "yday",
+            "pts": -1,
+            "why": "yday -3.3%"
+          }
+        ],
+        "weather": [
+          "gen good",
+          "sector good"
+        ],
+        "h1": null,
+        "h3": null,
+        "h5": null,
+        "side": "long",
+        "why": [
+          "Weather S=7.383. Not a sit morning \u2014 still ranked.",
+          "+10 +6 \u22121 cameras",
+          "+4 beat \u00b7 EPS surprise +8.0% (morning export)",
+          "+2 buy-side recom 1.2 (level, not a change \u00b7 morning export)",
+          "+1 join green",
+          "+1 peer green",
+          "-1 yday -3.3%",
+          "Weather cameras (not in idio score): gen good, sector good",
+          "News: missing \u2014 WAY Stock Surges On Reported Sale Buzz  RBC Flags This Tech Giant As The Obvious First Name",
+          "beat \u00b7 EPS surprise +8.0% (morning export)",
+          "Tape RSI 48 \u00b7 MACD hist -0.1527",
+          "Side lean: long \u00b7 idio +17"
+        ],
+        "h1_px": null,
+        "h1_date": null,
         "h3_px": null,
         "h3_date": null,
         "h5_px": null,
@@ -1740,23 +1922,23 @@
       }
     ],
     "shorts": [],
-    "n_long_ok": 4,
+    "n_long_ok": 6,
     "n_short_ok": 0,
     "all_top": [
       {
-        "ticker": "AVAH",
-        "date": "2026-09-16",
-        "idio": 23,
-        "n_pos": 7,
+        "ticker": "FIVN",
+        "date": "2026-09-17",
+        "idio": 25,
+        "n_pos": 8,
         "n_neg": 0,
         "e_pol": "good",
-        "e_label": "beat \u00b7 EPS surprise +30.7% (morning export)",
+        "e_label": "beat \u00b7 EPS surprise +2.7% (morning export)",
         "r_pol": "good",
         "news_tone": "missing",
-        "headline": "Aveanna to Participate in the Deutsche Bank 2026 Healthcare Summit",
-        "yday_ret": 1.59,
-        "rsi": 72.16,
-        "macd_hist": -0.0663,
+        "headline": "Starbucks initiated, Expedia downgraded: Wall Street's top analyst calls",
+        "yday_ret": -6.13,
+        "rsi": 48.15,
+        "macd_hist": -0.4156,
         "flow_in": false,
         "white": true,
         "alarm": false,
@@ -1764,110 +1946,20 @@
         "sources": [
           "flatten"
         ],
-        "open": 14.31,
-        "close": 14.26,
-        "day_pct": -0.35,
+        "open": null,
+        "close": 35.0,
+        "day_pct": 0.0,
         "boxes": {
           "join": "good",
           "sector": "good",
           "gen": "good",
           "news": "missing",
-          "digest": "neutral",
-          "judge": "missing",
+          "digest": "good",
+          "judge": "good",
           "ab": "good",
           "peer": "good",
           "heat": "good",
           "vol": "neutral",
-          "catal": "missing",
-          "buy": "good",
-          "yday": "missing"
-        },
-        "domains": null,
-        "parts": [
-          {
-            "k": "cameras",
-            "pts": 14,
-            "why": "+7 \u22120 cameras"
-          },
-          {
-            "k": "E",
-            "pts": 4,
-            "why": "beat \u00b7 EPS surprise +30.7% (morning export)"
-          },
-          {
-            "k": "R",
-            "pts": 2,
-            "why": "buy-side recom 1.6 (level, not a change \u00b7 morning export)"
-          },
-          {
-            "k": "join",
-            "pts": 1,
-            "why": "join green"
-          },
-          {
-            "k": "peer",
-            "pts": 1,
-            "why": "peer green"
-          },
-          {
-            "k": "yday",
-            "pts": 1,
-            "why": "yday +1.6%"
-          },
-          {
-            "k": "white",
-            "pts": 2,
-            "why": "zero red cameras"
-          },
-          {
-            "k": "rsi",
-            "pts": -2,
-            "why": "RSI 72 OB \u2014 pause longs"
-          }
-        ],
-        "weather": [
-          "gen good",
-          "sector good"
-        ],
-        "h1": null,
-        "h3": null,
-        "h5": null
-      },
-      {
-        "ticker": "RDNT",
-        "date": "2026-09-16",
-        "idio": 23,
-        "n_pos": 7,
-        "n_neg": 0,
-        "e_pol": "good",
-        "e_label": "beat \u00b7 EPS surprise +44.0% (morning export)",
-        "r_pol": "good",
-        "news_tone": "missing",
-        "headline": "RadNet, Inc. to Present at the Morgan Stanley 24th Annual Global Healthcare Conference on Wednesday, September 16th, 2026",
-        "yday_ret": -2.36,
-        "rsi": 47.26,
-        "macd_hist": -0.8641,
-        "flow_in": false,
-        "white": true,
-        "alarm": false,
-        "on_list": true,
-        "sources": [
-          "flatten"
-        ],
-        "open": 77.12,
-        "close": 75.78,
-        "day_pct": -1.74,
-        "boxes": {
-          "join": "good",
-          "sector": "good",
-          "gen": "good",
-          "news": "missing",
-          "digest": "neutral",
-          "judge": "missing",
-          "ab": "good",
-          "peer": "good",
-          "heat": "good",
-          "vol": "good",
           "catal": "missing",
           "buy": "neutral",
           "yday": "missing"
@@ -1876,18 +1968,18 @@
         "parts": [
           {
             "k": "cameras",
-            "pts": 14,
-            "why": "+7 \u22120 cameras"
+            "pts": 16,
+            "why": "+8 \u22120 cameras"
           },
           {
             "k": "E",
             "pts": 4,
-            "why": "beat \u00b7 EPS surprise +44.0% (morning export)"
+            "why": "beat \u00b7 EPS surprise +2.7% (morning export)"
           },
           {
             "k": "R",
             "pts": 2,
-            "why": "buy-side recom 1.1 (level, not a change \u00b7 morning export)"
+            "why": "buy-side recom 1.8 (level, not a change \u00b7 morning export)"
           },
           {
             "k": "join",
@@ -1902,7 +1994,7 @@
           {
             "k": "yday",
             "pts": -1,
-            "why": "yday -2.4%"
+            "why": "yday -6.1%"
           },
           {
             "k": "white",
@@ -1919,99 +2011,19 @@
         "h5": null
       },
       {
-        "ticker": "BLFS",
-        "date": "2026-09-16",
-        "idio": 21,
-        "n_pos": 6,
+        "ticker": "IOT",
+        "date": "2026-09-17",
+        "idio": 25,
+        "n_pos": 8,
         "n_neg": 0,
         "e_pol": "good",
-        "e_label": "beat \u00b7 EPS surprise +2807.3% (morning export)",
-        "r_pol": "neutral",
-        "news_tone": "missing",
-        "headline": "Are BLFS, FTHM, AUUD, VRME Obtaining Fair Deals for their Shareholders?",
-        "yday_ret": 0.37,
-        "rsi": 53.91,
-        "macd_hist": -0.4241,
-        "flow_in": false,
-        "white": true,
-        "alarm": false,
-        "on_list": true,
-        "sources": [
-          "flatten"
-        ],
-        "open": 36.46,
-        "close": 36.11,
-        "day_pct": -0.96,
-        "boxes": {
-          "join": "good",
-          "sector": "good",
-          "gen": "good",
-          "news": "missing",
-          "digest": "neutral",
-          "judge": "missing",
-          "ab": "good",
-          "peer": "good",
-          "heat": "good",
-          "vol": "neutral",
-          "catal": "missing",
-          "buy": "neutral",
-          "yday": "missing"
-        },
-        "domains": null,
-        "parts": [
-          {
-            "k": "cameras",
-            "pts": 12,
-            "why": "+6 \u22120 cameras"
-          },
-          {
-            "k": "E",
-            "pts": 4,
-            "why": "beat \u00b7 EPS surprise +2807.3% (morning export)"
-          },
-          {
-            "k": "join",
-            "pts": 1,
-            "why": "join green"
-          },
-          {
-            "k": "peer",
-            "pts": 1,
-            "why": "peer green"
-          },
-          {
-            "k": "yday",
-            "pts": 1,
-            "why": "yday +0.4%"
-          },
-          {
-            "k": "white",
-            "pts": 2,
-            "why": "zero red cameras"
-          }
-        ],
-        "weather": [
-          "gen good",
-          "sector good"
-        ],
-        "h1": null,
-        "h3": null,
-        "h5": null
-      },
-      {
-        "ticker": "IQV",
-        "date": "2026-09-16",
-        "idio": 21,
-        "n_pos": 6,
-        "n_neg": 0,
-        "e_pol": "good",
-        "e_label": "beat \u00b7 EPS surprise +3.9% (morning export)",
+        "e_label": "beat \u00b7 EPS surprise +25.0% (morning export)",
         "r_pol": "good",
         "news_tone": "missing",
-        "headline": "IQVIA Announces Pricing of Senior Notes",
-        "yday_ret": -3.2,
-        "rsi": 59.25,
-        "macd_hist": -0.8813,
+        "headline": "Ulta Beauty, Etsy upgraded: Wall Street's top analyst calls",
+        "yday_ret": -0.16,
+        "rsi": 48.06,
+        "macd_hist": -0.3167,
         "flow_in": false,
         "white": true,
         "alarm": false,
@@ -2019,16 +2031,16 @@
         "sources": [
           "flatten"
         ],
-        "open": 270.89,
-        "close": 268.82,
-        "day_pct": -0.76,
+        "open": null,
+        "close": 41.54,
+        "day_pct": 1.32,
         "boxes": {
           "join": "good",
           "sector": "good",
           "gen": "good",
           "news": "missing",
-          "digest": "neutral",
-          "judge": "missing",
+          "digest": "good",
+          "judge": "good",
           "ab": "good",
           "peer": "good",
           "heat": "good",
@@ -2041,13 +2053,13 @@
         "parts": [
           {
             "k": "cameras",
-            "pts": 12,
-            "why": "+6 \u22120 cameras"
+            "pts": 16,
+            "why": "+8 \u22120 cameras"
           },
           {
             "k": "E",
             "pts": 4,
-            "why": "beat \u00b7 EPS surprise +3.9% (morning export)"
+            "why": "beat \u00b7 EPS surprise +25.0% (morning export)"
           },
           {
             "k": "R",
@@ -2067,12 +2079,322 @@
           {
             "k": "yday",
             "pts": -1,
-            "why": "yday -3.2%"
+            "why": "yday -0.2%"
           },
           {
             "k": "white",
             "pts": 2,
             "why": "zero red cameras"
+          }
+        ],
+        "weather": [
+          "gen good",
+          "sector good"
+        ],
+        "h1": null,
+        "h3": null,
+        "h5": null
+      },
+      {
+        "ticker": "AZTA",
+        "date": "2026-09-17",
+        "idio": 19,
+        "n_pos": 6,
+        "n_neg": 1,
+        "e_pol": "good",
+        "e_label": "beat \u00b7 EPS surprise +40.6% (morning export)",
+        "r_pol": "good",
+        "news_tone": "missing",
+        "headline": "Azenta Receives Full Repayment of $35 Million Vendor Loan Related to Sale of B Medical Systems",
+        "yday_ret": 2.22,
+        "rsi": 46.61,
+        "macd_hist": -0.5777,
+        "flow_in": false,
+        "white": false,
+        "alarm": false,
+        "on_list": true,
+        "sources": [
+          "flatten"
+        ],
+        "open": null,
+        "close": 33.21,
+        "day_pct": 0.0,
+        "boxes": {
+          "join": "good",
+          "sector": "good",
+          "gen": "good",
+          "news": "missing",
+          "digest": "bad",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "good",
+          "heat": "good",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "neutral",
+          "yday": "missing"
+        },
+        "domains": null,
+        "parts": [
+          {
+            "k": "cameras",
+            "pts": 10,
+            "why": "+6 \u22121 cameras"
+          },
+          {
+            "k": "E",
+            "pts": 4,
+            "why": "beat \u00b7 EPS surprise +40.6% (morning export)"
+          },
+          {
+            "k": "R",
+            "pts": 2,
+            "why": "buy-side recom 2.0 (level, not a change \u00b7 morning export)"
+          },
+          {
+            "k": "join",
+            "pts": 1,
+            "why": "join green"
+          },
+          {
+            "k": "peer",
+            "pts": 1,
+            "why": "peer green"
+          },
+          {
+            "k": "yday",
+            "pts": 1,
+            "why": "yday +2.2%"
+          }
+        ],
+        "weather": [
+          "gen good",
+          "sector good"
+        ],
+        "h1": null,
+        "h3": null,
+        "h5": null
+      },
+      {
+        "ticker": "IT",
+        "date": "2026-09-17",
+        "idio": 19,
+        "n_pos": 8,
+        "n_neg": 1,
+        "e_pol": "good",
+        "e_label": "beat \u00b7 EPS surprise +16.3% (morning export)",
+        "r_pol": "neutral",
+        "news_tone": "missing",
+        "headline": "Global AI spend will nearly double in 2026 due to infrastructure demand",
+        "yday_ret": -7.42,
+        "rsi": 43.3,
+        "macd_hist": -3.3893,
+        "flow_in": false,
+        "white": false,
+        "alarm": false,
+        "on_list": true,
+        "sources": [
+          "flatten"
+        ],
+        "open": null,
+        "close": 191.57,
+        "day_pct": 0.0,
+        "boxes": {
+          "join": "good",
+          "sector": "good",
+          "gen": "good",
+          "news": "missing",
+          "digest": "good",
+          "judge": "good",
+          "ab": "good",
+          "peer": "good",
+          "heat": "good",
+          "vol": "bad",
+          "catal": "missing",
+          "buy": "neutral",
+          "yday": "missing"
+        },
+        "domains": null,
+        "parts": [
+          {
+            "k": "cameras",
+            "pts": 14,
+            "why": "+8 \u22121 cameras"
+          },
+          {
+            "k": "E",
+            "pts": 4,
+            "why": "beat \u00b7 EPS surprise +16.3% (morning export)"
+          },
+          {
+            "k": "join",
+            "pts": 1,
+            "why": "join green"
+          },
+          {
+            "k": "peer",
+            "pts": 1,
+            "why": "peer green"
+          },
+          {
+            "k": "yday",
+            "pts": -1,
+            "why": "yday -7.4%"
+          }
+        ],
+        "weather": [
+          "gen good",
+          "sector good"
+        ],
+        "h1": null,
+        "h3": null,
+        "h5": null
+      },
+      {
+        "ticker": "RVTY",
+        "date": "2026-09-17",
+        "idio": 19,
+        "n_pos": 7,
+        "n_neg": 1,
+        "e_pol": "good",
+        "e_label": "beat \u00b7 EPS surprise +16.2% (morning export)",
+        "r_pol": "neutral",
+        "news_tone": "missing",
+        "headline": "Revvity Inc. stock outperforms competitors on strong trading day",
+        "yday_ret": 2.79,
+        "rsi": 53.5,
+        "macd_hist": -0.9598,
+        "flow_in": false,
+        "white": false,
+        "alarm": false,
+        "on_list": true,
+        "sources": [
+          "flatten"
+        ],
+        "open": null,
+        "close": 147.8,
+        "day_pct": 1.2,
+        "boxes": {
+          "join": "good",
+          "sector": "good",
+          "gen": "good",
+          "news": "missing",
+          "digest": "bad",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "good",
+          "heat": "good",
+          "vol": "good",
+          "catal": "missing",
+          "buy": "neutral",
+          "yday": "missing"
+        },
+        "domains": null,
+        "parts": [
+          {
+            "k": "cameras",
+            "pts": 12,
+            "why": "+7 \u22121 cameras"
+          },
+          {
+            "k": "E",
+            "pts": 4,
+            "why": "beat \u00b7 EPS surprise +16.2% (morning export)"
+          },
+          {
+            "k": "join",
+            "pts": 1,
+            "why": "join green"
+          },
+          {
+            "k": "peer",
+            "pts": 1,
+            "why": "peer green"
+          },
+          {
+            "k": "yday",
+            "pts": 1,
+            "why": "yday +2.8%"
+          }
+        ],
+        "weather": [
+          "gen good",
+          "sector good"
+        ],
+        "h1": null,
+        "h3": null,
+        "h5": null
+      },
+      {
+        "ticker": "WAY",
+        "date": "2026-09-17",
+        "idio": 17,
+        "n_pos": 6,
+        "n_neg": 1,
+        "e_pol": "good",
+        "e_label": "beat \u00b7 EPS surprise +8.0% (morning export)",
+        "r_pol": "good",
+        "news_tone": "missing",
+        "headline": "WAY Stock Surges On Reported Sale Buzz  RBC Flags This Tech Giant As The Obvious First Name",
+        "yday_ret": -3.31,
+        "rsi": 47.79,
+        "macd_hist": -0.1527,
+        "flow_in": false,
+        "white": false,
+        "alarm": false,
+        "on_list": true,
+        "sources": [
+          "flatten"
+        ],
+        "open": null,
+        "close": 26.6,
+        "day_pct": 0.0,
+        "boxes": {
+          "join": "good",
+          "sector": "good",
+          "gen": "good",
+          "news": "missing",
+          "digest": "bad",
+          "judge": "missing",
+          "ab": "good",
+          "peer": "good",
+          "heat": "good",
+          "vol": "neutral",
+          "catal": "missing",
+          "buy": "neutral",
+          "yday": "missing"
+        },
+        "domains": null,
+        "parts": [
+          {
+            "k": "cameras",
+            "pts": 10,
+            "why": "+6 \u22121 cameras"
+          },
+          {
+            "k": "E",
+            "pts": 4,
+            "why": "beat \u00b7 EPS surprise +8.0% (morning export)"
+          },
+          {
+            "k": "R",
+            "pts": 2,
+            "why": "buy-side recom 1.2 (level, not a change \u00b7 morning export)"
+          },
+          {
+            "k": "join",
+            "pts": 1,
+            "why": "join green"
+          },
+          {
+            "k": "peer",
+            "pts": 1,
+            "why": "peer green"
+          },
+          {
+            "k": "yday",
+            "pts": -1,
+            "why": "yday -3.3%"
           }
         ],
         "weather": [
@@ -38759,22 +39081,28 @@
       ],
       "shorts": [],
       "n_long_ok": 4,
-      "n_short_ok": 0,
-      "all_top": [
+      "n_short_ok": 0
+    },
+    {
+      "date": "2026-09-17",
+      "s": 7.383,
+      "hard_red": false,
+      "n_cards": 6,
+      "longs": [
         {
-          "ticker": "AVAH",
-          "date": "2026-09-16",
-          "idio": 23,
-          "n_pos": 7,
+          "ticker": "FIVN",
+          "date": "2026-09-17",
+          "idio": 25,
+          "n_pos": 8,
           "n_neg": 0,
           "e_pol": "good",
-          "e_label": "beat \u00b7 EPS surprise +30.7% (morning export)",
+          "e_label": "beat \u00b7 EPS surprise +2.7% (morning export)",
           "r_pol": "good",
           "news_tone": "missing",
-          "headline": "Aveanna to Participate in the Deutsche Bank 2026 Healthcare Summit",
-          "yday_ret": 1.59,
-          "rsi": 72.16,
-          "macd_hist": -0.0663,
+          "headline": "Starbucks initiated, Expedia downgraded: Wall Street's top analyst calls",
+          "yday_ret": -6.13,
+          "rsi": 48.15,
+          "macd_hist": -0.4156,
           "flow_in": false,
           "white": true,
           "alarm": false,
@@ -38782,110 +39110,20 @@
           "sources": [
             "flatten"
           ],
-          "open": 14.31,
-          "close": 14.26,
-          "day_pct": -0.35,
+          "open": null,
+          "close": 35.0,
+          "day_pct": 0.0,
           "boxes": {
             "join": "good",
             "sector": "good",
             "gen": "good",
             "news": "missing",
-            "digest": "neutral",
-            "judge": "missing",
+            "digest": "good",
+            "judge": "good",
             "ab": "good",
             "peer": "good",
             "heat": "good",
             "vol": "neutral",
-            "catal": "missing",
-            "buy": "good",
-            "yday": "missing"
-          },
-          "domains": null,
-          "parts": [
-            {
-              "k": "cameras",
-              "pts": 14,
-              "why": "+7 \u22120 cameras"
-            },
-            {
-              "k": "E",
-              "pts": 4,
-              "why": "beat \u00b7 EPS surprise +30.7% (morning export)"
-            },
-            {
-              "k": "R",
-              "pts": 2,
-              "why": "buy-side recom 1.6 (level, not a change \u00b7 morning export)"
-            },
-            {
-              "k": "join",
-              "pts": 1,
-              "why": "join green"
-            },
-            {
-              "k": "peer",
-              "pts": 1,
-              "why": "peer green"
-            },
-            {
-              "k": "yday",
-              "pts": 1,
-              "why": "yday +1.6%"
-            },
-            {
-              "k": "white",
-              "pts": 2,
-              "why": "zero red cameras"
-            },
-            {
-              "k": "rsi",
-              "pts": -2,
-              "why": "RSI 72 OB \u2014 pause longs"
-            }
-          ],
-          "weather": [
-            "gen good",
-            "sector good"
-          ],
-          "h1": null,
-          "h3": null,
-          "h5": null
-        },
-        {
-          "ticker": "RDNT",
-          "date": "2026-09-16",
-          "idio": 23,
-          "n_pos": 7,
-          "n_neg": 0,
-          "e_pol": "good",
-          "e_label": "beat \u00b7 EPS surprise +44.0% (morning export)",
-          "r_pol": "good",
-          "news_tone": "missing",
-          "headline": "RadNet, Inc. to Present at the Morgan Stanley 24th Annual Global Healthcare Conference on Wednesday, September 16th, 2026",
-          "yday_ret": -2.36,
-          "rsi": 47.26,
-          "macd_hist": -0.8641,
-          "flow_in": false,
-          "white": true,
-          "alarm": false,
-          "on_list": true,
-          "sources": [
-            "flatten"
-          ],
-          "open": 77.12,
-          "close": 75.78,
-          "day_pct": -1.74,
-          "boxes": {
-            "join": "good",
-            "sector": "good",
-            "gen": "good",
-            "news": "missing",
-            "digest": "neutral",
-            "judge": "missing",
-            "ab": "good",
-            "peer": "good",
-            "heat": "good",
-            "vol": "good",
             "catal": "missing",
             "buy": "neutral",
             "yday": "missing"
@@ -38894,18 +39132,18 @@
           "parts": [
             {
               "k": "cameras",
-              "pts": 14,
-              "why": "+7 \u22120 cameras"
+              "pts": 16,
+              "why": "+8 \u22120 cameras"
             },
             {
               "k": "E",
               "pts": 4,
-              "why": "beat \u00b7 EPS surprise +44.0% (morning export)"
+              "why": "beat \u00b7 EPS surprise +2.7% (morning export)"
             },
             {
               "k": "R",
               "pts": 2,
-              "why": "buy-side recom 1.1 (level, not a change \u00b7 morning export)"
+              "why": "buy-side recom 1.8 (level, not a change \u00b7 morning export)"
             },
             {
               "k": "join",
@@ -38920,7 +39158,7 @@
             {
               "k": "yday",
               "pts": -1,
-              "why": "yday -2.4%"
+              "why": "yday -6.1%"
             },
             {
               "k": "white",
@@ -38934,102 +39172,43 @@
           ],
           "h1": null,
           "h3": null,
-          "h5": null
+          "h5": null,
+          "side": "long",
+          "why": [
+            "Weather S=7.383. Not a sit morning \u2014 still ranked.",
+            "+16 +8 \u22120 cameras",
+            "+4 beat \u00b7 EPS surprise +2.7% (morning export)",
+            "+2 buy-side recom 1.8 (level, not a change \u00b7 morning export)",
+            "+2 zero red cameras",
+            "+1 join green",
+            "+1 peer green",
+            "Weather cameras (not in idio score): gen good, sector good",
+            "News: missing \u2014 Starbucks initiated, Expedia downgraded: Wall Street's top analyst calls",
+            "beat \u00b7 EPS surprise +2.7% (morning export)",
+            "Tape RSI 48 \u00b7 MACD hist -0.4156",
+            "Side lean: long \u00b7 idio +25"
+          ],
+          "h1_px": null,
+          "h1_date": null,
+          "h3_px": null,
+          "h3_date": null,
+          "h5_px": null,
+          "h5_date": null
         },
         {
-          "ticker": "BLFS",
-          "date": "2026-09-16",
-          "idio": 21,
-          "n_pos": 6,
+          "ticker": "IOT",
+          "date": "2026-09-17",
+          "idio": 25,
+          "n_pos": 8,
           "n_neg": 0,
           "e_pol": "good",
-          "e_label": "beat \u00b7 EPS surprise +2807.3% (morning export)",
-          "r_pol": "neutral",
-          "news_tone": "missing",
-          "headline": "Are BLFS, FTHM, AUUD, VRME Obtaining Fair Deals for their Shareholders?",
-          "yday_ret": 0.37,
-          "rsi": 53.91,
-          "macd_hist": -0.4241,
-          "flow_in": false,
-          "white": true,
-          "alarm": false,
-          "on_list": true,
-          "sources": [
-            "flatten"
-          ],
-          "open": 36.46,
-          "close": 36.11,
-          "day_pct": -0.96,
-          "boxes": {
-            "join": "good",
-            "sector": "good",
-            "gen": "good",
-            "news": "missing",
-            "digest": "neutral",
-            "judge": "missing",
-            "ab": "good",
-            "peer": "good",
-            "heat": "good",
-            "vol": "neutral",
-            "catal": "missing",
-            "buy": "neutral",
-            "yday": "missing"
-          },
-          "domains": null,
-          "parts": [
-            {
-              "k": "cameras",
-              "pts": 12,
-              "why": "+6 \u22120 cameras"
-            },
-            {
-              "k": "E",
-              "pts": 4,
-              "why": "beat \u00b7 EPS surprise +2807.3% (morning export)"
-            },
-            {
-              "k": "join",
-              "pts": 1,
-              "why": "join green"
-            },
-            {
-              "k": "peer",
-              "pts": 1,
-              "why": "peer green"
-            },
-            {
-              "k": "yday",
-              "pts": 1,
-              "why": "yday +0.4%"
-            },
-            {
-              "k": "white",
-              "pts": 2,
-              "why": "zero red cameras"
-            }
-          ],
-          "weather": [
-            "gen good",
-            "sector good"
-          ],
-          "h1": null,
-          "h3": null,
-          "h5": null
-        },
-        {
-          "ticker": "IQV",
-          "date": "2026-09-16",
-          "idio": 21,
-          "n_pos": 6,
-          "n_neg": 0,
-          "e_pol": "good",
-          "e_label": "beat \u00b7 EPS surprise +3.9% (morning export)",
+          "e_label": "beat \u00b7 EPS surprise +25.0% (morning export)",
           "r_pol": "good",
           "news_tone": "missing",
-          "headline": "IQVIA Announces Pricing of Senior Notes",
-          "yday_ret": -3.2,
-          "rsi": 59.25,
-          "macd_hist": -0.8813,
+          "headline": "Ulta Beauty, Etsy upgraded: Wall Street's top analyst calls",
+          "yday_ret": -0.16,
+          "rsi": 48.06,
+          "macd_hist": -0.3167,
           "flow_in": false,
           "white": true,
           "alarm": false,
@@ -39037,16 +39216,16 @@
           "sources": [
             "flatten"
           ],
-          "open": 270.89,
-          "close": 268.82,
-          "day_pct": -0.76,
+          "open": null,
+          "close": 41.54,
+          "day_pct": 1.32,
           "boxes": {
             "join": "good",
             "sector": "good",
             "gen": "good",
             "news": "missing",
-            "digest": "neutral",
-            "judge": "missing",
+            "digest": "good",
+            "judge": "good",
             "ab": "good",
             "peer": "good",
             "heat": "good",
@@ -39059,13 +39238,13 @@
           "parts": [
             {
               "k": "cameras",
-              "pts": 12,
-              "why": "+6 \u22120 cameras"
+              "pts": 16,
+              "why": "+8 \u22120 cameras"
             },
             {
               "k": "E",
               "pts": 4,
-              "why": "beat \u00b7 EPS surprise +3.9% (morning export)"
+              "why": "beat \u00b7 EPS surprise +25.0% (morning export)"
             },
             {
               "k": "R",
@@ -39085,12 +39264,910 @@
             {
               "k": "yday",
               "pts": -1,
-              "why": "yday -3.2%"
+              "why": "yday -0.2%"
             },
             {
               "k": "white",
               "pts": 2,
               "why": "zero red cameras"
+            }
+          ],
+          "weather": [
+            "gen good",
+            "sector good"
+          ],
+          "h1": null,
+          "h3": null,
+          "h5": null,
+          "side": "long",
+          "why": [
+            "Weather S=7.383. Not a sit morning \u2014 still ranked.",
+            "+16 +8 \u22120 cameras",
+            "+4 beat \u00b7 EPS surprise +25.0% (morning export)",
+            "+2 buy-side recom 1.5 (level, not a change \u00b7 morning export)",
+            "+2 zero red cameras",
+            "+1 join green",
+            "+1 peer green",
+            "Weather cameras (not in idio score): gen good, sector good",
+            "News: missing \u2014 Ulta Beauty, Etsy upgraded: Wall Street's top analyst calls",
+            "beat \u00b7 EPS surprise +25.0% (morning export)",
+            "Tape RSI 48 \u00b7 MACD hist -0.3167",
+            "Side lean: long \u00b7 idio +25"
+          ],
+          "h1_px": null,
+          "h1_date": null,
+          "h3_px": null,
+          "h3_date": null,
+          "h5_px": null,
+          "h5_date": null
+        },
+        {
+          "ticker": "IT",
+          "date": "2026-09-17",
+          "idio": 19,
+          "n_pos": 8,
+          "n_neg": 1,
+          "e_pol": "good",
+          "e_label": "beat \u00b7 EPS surprise +16.3% (morning export)",
+          "r_pol": "neutral",
+          "news_tone": "missing",
+          "headline": "Global AI spend will nearly double in 2026 due to infrastructure demand",
+          "yday_ret": -7.42,
+          "rsi": 43.3,
+          "macd_hist": -3.3893,
+          "flow_in": false,
+          "white": false,
+          "alarm": false,
+          "on_list": true,
+          "sources": [
+            "flatten"
+          ],
+          "open": null,
+          "close": 191.57,
+          "day_pct": 0.0,
+          "boxes": {
+            "join": "good",
+            "sector": "good",
+            "gen": "good",
+            "news": "missing",
+            "digest": "good",
+            "judge": "good",
+            "ab": "good",
+            "peer": "good",
+            "heat": "good",
+            "vol": "bad",
+            "catal": "missing",
+            "buy": "neutral",
+            "yday": "missing"
+          },
+          "domains": null,
+          "parts": [
+            {
+              "k": "cameras",
+              "pts": 14,
+              "why": "+8 \u22121 cameras"
+            },
+            {
+              "k": "E",
+              "pts": 4,
+              "why": "beat \u00b7 EPS surprise +16.3% (morning export)"
+            },
+            {
+              "k": "join",
+              "pts": 1,
+              "why": "join green"
+            },
+            {
+              "k": "peer",
+              "pts": 1,
+              "why": "peer green"
+            },
+            {
+              "k": "yday",
+              "pts": -1,
+              "why": "yday -7.4%"
+            }
+          ],
+          "weather": [
+            "gen good",
+            "sector good"
+          ],
+          "h1": null,
+          "h3": null,
+          "h5": null,
+          "side": "long",
+          "why": [
+            "Weather S=7.383. Not a sit morning \u2014 still ranked.",
+            "+14 +8 \u22121 cameras",
+            "+4 beat \u00b7 EPS surprise +16.3% (morning export)",
+            "+1 join green",
+            "+1 peer green",
+            "-1 yday -7.4%",
+            "Weather cameras (not in idio score): gen good, sector good",
+            "News: missing \u2014 Global AI spend will nearly double in 2026 due to infrastructure demand",
+            "beat \u00b7 EPS surprise +16.3% (morning export)",
+            "Tape RSI 43 \u00b7 MACD hist -3.3893",
+            "Side lean: long \u00b7 idio +19"
+          ],
+          "h1_px": null,
+          "h1_date": null,
+          "h3_px": null,
+          "h3_date": null,
+          "h5_px": null,
+          "h5_date": null
+        },
+        {
+          "ticker": "RVTY",
+          "date": "2026-09-17",
+          "idio": 19,
+          "n_pos": 7,
+          "n_neg": 1,
+          "e_pol": "good",
+          "e_label": "beat \u00b7 EPS surprise +16.2% (morning export)",
+          "r_pol": "neutral",
+          "news_tone": "missing",
+          "headline": "Revvity Inc. stock outperforms competitors on strong trading day",
+          "yday_ret": 2.79,
+          "rsi": 53.5,
+          "macd_hist": -0.9598,
+          "flow_in": false,
+          "white": false,
+          "alarm": false,
+          "on_list": true,
+          "sources": [
+            "flatten"
+          ],
+          "open": null,
+          "close": 147.8,
+          "day_pct": 1.2,
+          "boxes": {
+            "join": "good",
+            "sector": "good",
+            "gen": "good",
+            "news": "missing",
+            "digest": "bad",
+            "judge": "missing",
+            "ab": "good",
+            "peer": "good",
+            "heat": "good",
+            "vol": "good",
+            "catal": "missing",
+            "buy": "neutral",
+            "yday": "missing"
+          },
+          "domains": null,
+          "parts": [
+            {
+              "k": "cameras",
+              "pts": 12,
+              "why": "+7 \u22121 cameras"
+            },
+            {
+              "k": "E",
+              "pts": 4,
+              "why": "beat \u00b7 EPS surprise +16.2% (morning export)"
+            },
+            {
+              "k": "join",
+              "pts": 1,
+              "why": "join green"
+            },
+            {
+              "k": "peer",
+              "pts": 1,
+              "why": "peer green"
+            },
+            {
+              "k": "yday",
+              "pts": 1,
+              "why": "yday +2.8%"
+            }
+          ],
+          "weather": [
+            "gen good",
+            "sector good"
+          ],
+          "h1": null,
+          "h3": null,
+          "h5": null,
+          "side": "long",
+          "why": [
+            "Weather S=7.383. Not a sit morning \u2014 still ranked.",
+            "+12 +7 \u22121 cameras",
+            "+4 beat \u00b7 EPS surprise +16.2% (morning export)",
+            "+1 join green",
+            "+1 peer green",
+            "+1 yday +2.8%",
+            "Weather cameras (not in idio score): gen good, sector good",
+            "News: missing \u2014 Revvity Inc. stock outperforms competitors on strong trading day",
+            "beat \u00b7 EPS surprise +16.2% (morning export)",
+            "Tape RSI 54 \u00b7 MACD hist -0.9598",
+            "Side lean: long \u00b7 idio +19"
+          ],
+          "h1_px": null,
+          "h1_date": null,
+          "h3_px": null,
+          "h3_date": null,
+          "h5_px": null,
+          "h5_date": null
+        },
+        {
+          "ticker": "AZTA",
+          "date": "2026-09-17",
+          "idio": 19,
+          "n_pos": 6,
+          "n_neg": 1,
+          "e_pol": "good",
+          "e_label": "beat \u00b7 EPS surprise +40.6% (morning export)",
+          "r_pol": "good",
+          "news_tone": "missing",
+          "headline": "Azenta Receives Full Repayment of $35 Million Vendor Loan Related to Sale of B Medical Systems",
+          "yday_ret": 2.22,
+          "rsi": 46.61,
+          "macd_hist": -0.5777,
+          "flow_in": false,
+          "white": false,
+          "alarm": false,
+          "on_list": true,
+          "sources": [
+            "flatten"
+          ],
+          "open": null,
+          "close": 33.21,
+          "day_pct": 0.0,
+          "boxes": {
+            "join": "good",
+            "sector": "good",
+            "gen": "good",
+            "news": "missing",
+            "digest": "bad",
+            "judge": "missing",
+            "ab": "good",
+            "peer": "good",
+            "heat": "good",
+            "vol": "neutral",
+            "catal": "missing",
+            "buy": "neutral",
+            "yday": "missing"
+          },
+          "domains": null,
+          "parts": [
+            {
+              "k": "cameras",
+              "pts": 10,
+              "why": "+6 \u22121 cameras"
+            },
+            {
+              "k": "E",
+              "pts": 4,
+              "why": "beat \u00b7 EPS surprise +40.6% (morning export)"
+            },
+            {
+              "k": "R",
+              "pts": 2,
+              "why": "buy-side recom 2.0 (level, not a change \u00b7 morning export)"
+            },
+            {
+              "k": "join",
+              "pts": 1,
+              "why": "join green"
+            },
+            {
+              "k": "peer",
+              "pts": 1,
+              "why": "peer green"
+            },
+            {
+              "k": "yday",
+              "pts": 1,
+              "why": "yday +2.2%"
+            }
+          ],
+          "weather": [
+            "gen good",
+            "sector good"
+          ],
+          "h1": null,
+          "h3": null,
+          "h5": null,
+          "side": "long",
+          "why": [
+            "Weather S=7.383. Not a sit morning \u2014 still ranked.",
+            "+10 +6 \u22121 cameras",
+            "+4 beat \u00b7 EPS surprise +40.6% (morning export)",
+            "+2 buy-side recom 2.0 (level, not a change \u00b7 morning export)",
+            "+1 join green",
+            "+1 peer green",
+            "+1 yday +2.2%",
+            "Weather cameras (not in idio score): gen good, sector good",
+            "News: missing \u2014 Azenta Receives Full Repayment of $35 Million Vendor Loan Related to Sale of B Medical Systems",
+            "beat \u00b7 EPS surprise +40.6% (morning export)",
+            "Tape RSI 47 \u00b7 MACD hist -0.5777",
+            "Side lean: long \u00b7 idio +19"
+          ],
+          "h1_px": null,
+          "h1_date": null,
+          "h3_px": null,
+          "h3_date": null,
+          "h5_px": null,
+          "h5_date": null
+        },
+        {
+          "ticker": "WAY",
+          "date": "2026-09-17",
+          "idio": 17,
+          "n_pos": 6,
+          "n_neg": 1,
+          "e_pol": "good",
+          "e_label": "beat \u00b7 EPS surprise +8.0% (morning export)",
+          "r_pol": "good",
+          "news_tone": "missing",
+          "headline": "WAY Stock Surges On Reported Sale Buzz  RBC Flags This Tech Giant As The Obvious First Name",
+          "yday_ret": -3.31,
+          "rsi": 47.79,
+          "macd_hist": -0.1527,
+          "flow_in": false,
+          "white": false,
+          "alarm": false,
+          "on_list": true,
+          "sources": [
+            "flatten"
+          ],
+          "open": null,
+          "close": 26.6,
+          "day_pct": 0.0,
+          "boxes": {
+            "join": "good",
+            "sector": "good",
+            "gen": "good",
+            "news": "missing",
+            "digest": "bad",
+            "judge": "missing",
+            "ab": "good",
+            "peer": "good",
+            "heat": "good",
+            "vol": "neutral",
+            "catal": "missing",
+            "buy": "neutral",
+            "yday": "missing"
+          },
+          "domains": null,
+          "parts": [
+            {
+              "k": "cameras",
+              "pts": 10,
+              "why": "+6 \u22121 cameras"
+            },
+            {
+              "k": "E",
+              "pts": 4,
+              "why": "beat \u00b7 EPS surprise +8.0% (morning export)"
+            },
+            {
+              "k": "R",
+              "pts": 2,
+              "why": "buy-side recom 1.2 (level, not a change \u00b7 morning export)"
+            },
+            {
+              "k": "join",
+              "pts": 1,
+              "why": "join green"
+            },
+            {
+              "k": "peer",
+              "pts": 1,
+              "why": "peer green"
+            },
+            {
+              "k": "yday",
+              "pts": -1,
+              "why": "yday -3.3%"
+            }
+          ],
+          "weather": [
+            "gen good",
+            "sector good"
+          ],
+          "h1": null,
+          "h3": null,
+          "h5": null,
+          "side": "long",
+          "why": [
+            "Weather S=7.383. Not a sit morning \u2014 still ranked.",
+            "+10 +6 \u22121 cameras",
+            "+4 beat \u00b7 EPS surprise +8.0% (morning export)",
+            "+2 buy-side recom 1.2 (level, not a change \u00b7 morning export)",
+            "+1 join green",
+            "+1 peer green",
+            "-1 yday -3.3%",
+            "Weather cameras (not in idio score): gen good, sector good",
+            "News: missing \u2014 WAY Stock Surges On Reported Sale Buzz  RBC Flags This Tech Giant As The Obvious First Name",
+            "beat \u00b7 EPS surprise +8.0% (morning export)",
+            "Tape RSI 48 \u00b7 MACD hist -0.1527",
+            "Side lean: long \u00b7 idio +17"
+          ],
+          "h1_px": null,
+          "h1_date": null,
+          "h3_px": null,
+          "h3_date": null,
+          "h5_px": null,
+          "h5_date": null
+        }
+      ],
+      "shorts": [],
+      "n_long_ok": 6,
+      "n_short_ok": 0,
+      "all_top": [
+        {
+          "ticker": "FIVN",
+          "date": "2026-09-17",
+          "idio": 25,
+          "n_pos": 8,
+          "n_neg": 0,
+          "e_pol": "good",
+          "e_label": "beat \u00b7 EPS surprise +2.7% (morning export)",
+          "r_pol": "good",
+          "news_tone": "missing",
+          "headline": "Starbucks initiated, Expedia downgraded: Wall Street's top analyst calls",
+          "yday_ret": -6.13,
+          "rsi": 48.15,
+          "macd_hist": -0.4156,
+          "flow_in": false,
+          "white": true,
+          "alarm": false,
+          "on_list": true,
+          "sources": [
+            "flatten"
+          ],
+          "open": null,
+          "close": 35.0,
+          "day_pct": 0.0,
+          "boxes": {
+            "join": "good",
+            "sector": "good",
+            "gen": "good",
+            "news": "missing",
+            "digest": "good",
+            "judge": "good",
+            "ab": "good",
+            "peer": "good",
+            "heat": "good",
+            "vol": "neutral",
+            "catal": "missing",
+            "buy": "neutral",
+            "yday": "missing"
+          },
+          "domains": null,
+          "parts": [
+            {
+              "k": "cameras",
+              "pts": 16,
+              "why": "+8 \u22120 cameras"
+            },
+            {
+              "k": "E",
+              "pts": 4,
+              "why": "beat \u00b7 EPS surprise +2.7% (morning export)"
+            },
+            {
+              "k": "R",
+              "pts": 2,
+              "why": "buy-side recom 1.8 (level, not a change \u00b7 morning export)"
+            },
+            {
+              "k": "join",
+              "pts": 1,
+              "why": "join green"
+            },
+            {
+              "k": "peer",
+              "pts": 1,
+              "why": "peer green"
+            },
+            {
+              "k": "yday",
+              "pts": -1,
+              "why": "yday -6.1%"
+            },
+            {
+              "k": "white",
+              "pts": 2,
+              "why": "zero red cameras"
+            }
+          ],
+          "weather": [
+            "gen good",
+            "sector good"
+          ],
+          "h1": null,
+          "h3": null,
+          "h5": null
+        },
+        {
+          "ticker": "IOT",
+          "date": "2026-09-17",
+          "idio": 25,
+          "n_pos": 8,
+          "n_neg": 0,
+          "e_pol": "good",
+          "e_label": "beat \u00b7 EPS surprise +25.0% (morning export)",
+          "r_pol": "good",
+          "news_tone": "missing",
+          "headline": "Ulta Beauty, Etsy upgraded: Wall Street's top analyst calls",
+          "yday_ret": -0.16,
+          "rsi": 48.06,
+          "macd_hist": -0.3167,
+          "flow_in": false,
+          "white": true,
+          "alarm": false,
+          "on_list": true,
+          "sources": [
+            "flatten"
+          ],
+          "open": null,
+          "close": 41.54,
+          "day_pct": 1.32,
+          "boxes": {
+            "join": "good",
+            "sector": "good",
+            "gen": "good",
+            "news": "missing",
+            "digest": "good",
+            "judge": "good",
+            "ab": "good",
+            "peer": "good",
+            "heat": "good",
+            "vol": "neutral",
+            "catal": "missing",
+            "buy": "neutral",
+            "yday": "missing"
+          },
+          "domains": null,
+          "parts": [
+            {
+              "k": "cameras",
+              "pts": 16,
+              "why": "+8 \u22120 cameras"
+            },
+            {
+              "k": "E",
+              "pts": 4,
+              "why": "beat \u00b7 EPS surprise +25.0% (morning export)"
+            },
+            {
+              "k": "R",
+              "pts": 2,
+              "why": "buy-side recom 1.5 (level, not a change \u00b7 morning export)"
+            },
+            {
+              "k": "join",
+              "pts": 1,
+              "why": "join green"
+            },
+            {
+              "k": "peer",
+              "pts": 1,
+              "why": "peer green"
+            },
+            {
+              "k": "yday",
+              "pts": -1,
+              "why": "yday -0.2%"
+            },
+            {
+              "k": "white",
+              "pts": 2,
+              "why": "zero red cameras"
+            }
+          ],
+          "weather": [
+            "gen good",
+            "sector good"
+          ],
+          "h1": null,
+          "h3": null,
+          "h5": null
+        },
+        {
+          "ticker": "AZTA",
+          "date": "2026-09-17",
+          "idio": 19,
+          "n_pos": 6,
+          "n_neg": 1,
+          "e_pol": "good",
+          "e_label": "beat \u00b7 EPS surprise +40.6% (morning export)",
+          "r_pol": "good",
+          "news_tone": "missing",
+          "headline": "Azenta Receives Full Repayment of $35 Million Vendor Loan Related to Sale of B Medical Systems",
+          "yday_ret": 2.22,
+          "rsi": 46.61,
+          "macd_hist": -0.5777,
+          "flow_in": false,
+          "white": false,
+          "alarm": false,
+          "on_list": true,
+          "sources": [
+            "flatten"
+          ],
+          "open": null,
+          "close": 33.21,
+          "day_pct": 0.0,
+          "boxes": {
+            "join": "good",
+            "sector": "good",
+            "gen": "good",
+            "news": "missing",
+            "digest": "bad",
+            "judge": "missing",
+            "ab": "good",
+            "peer": "good",
+            "heat": "good",
+            "vol": "neutral",
+            "catal": "missing",
+            "buy": "neutral",
+            "yday": "missing"
+          },
+          "domains": null,
+          "parts": [
+            {
+              "k": "cameras",
+              "pts": 10,
+              "why": "+6 \u22121 cameras"
+            },
+            {
+              "k": "E",
+              "pts": 4,
+              "why": "beat \u00b7 EPS surprise +40.6% (morning export)"
+            },
+            {
+              "k": "R",
+              "pts": 2,
+              "why": "buy-side recom 2.0 (level, not a change \u00b7 morning export)"
+            },
+            {
+              "k": "join",
+              "pts": 1,
+              "why": "join green"
+            },
+            {
+              "k": "peer",
+              "pts": 1,
+              "why": "peer green"
+            },
+            {
+              "k": "yday",
+              "pts": 1,
+              "why": "yday +2.2%"
+            }
+          ],
+          "weather": [
+            "gen good",
+            "sector good"
+          ],
+          "h1": null,
+          "h3": null,
+          "h5": null
+        },
+        {
+          "ticker": "IT",
+          "date": "2026-09-17",
+          "idio": 19,
+          "n_pos": 8,
+          "n_neg": 1,
+          "e_pol": "good",
+          "e_label": "beat \u00b7 EPS surprise +16.3% (morning export)",
+          "r_pol": "neutral",
+          "news_tone": "missing",
+          "headline": "Global AI spend will nearly double in 2026 due to infrastructure demand",
+          "yday_ret": -7.42,
+          "rsi": 43.3,
+          "macd_hist": -3.3893,
+          "flow_in": false,
+          "white": false,
+          "alarm": false,
+          "on_list": true,
+          "sources": [
+            "flatten"
+          ],
+          "open": null,
+          "close": 191.57,
+          "day_pct": 0.0,
+          "boxes": {
+            "join": "good",
+            "sector": "good",
+            "gen": "good",
+            "news": "missing",
+            "digest": "good",
+            "judge": "good",
+            "ab": "good",
+            "peer": "good",
+            "heat": "good",
+            "vol": "bad",
+            "catal": "missing",
+            "buy": "neutral",
+            "yday": "missing"
+          },
+          "domains": null,
+          "parts": [
+            {
+              "k": "cameras",
+              "pts": 14,
+              "why": "+8 \u22121 cameras"
+            },
+            {
+              "k": "E",
+              "pts": 4,
+              "why": "beat \u00b7 EPS surprise +16.3% (morning export)"
+            },
+            {
+              "k": "join",
+              "pts": 1,
+              "why": "join green"
+            },
+            {
+              "k": "peer",
+              "pts": 1,
+              "why": "peer green"
+            },
+            {
+              "k": "yday",
+              "pts": -1,
+              "why": "yday -7.4%"
+            }
+          ],
+          "weather": [
+            "gen good",
+            "sector good"
+          ],
+          "h1": null,
+          "h3": null,
+          "h5": null
+        },
+        {
+          "ticker": "RVTY",
+          "date": "2026-09-17",
+          "idio": 19,
+          "n_pos": 7,
+          "n_neg": 1,
+          "e_pol": "good",
+          "e_label": "beat \u00b7 EPS surprise +16.2% (morning export)",
+          "r_pol": "neutral",
+          "news_tone": "missing",
+          "headline": "Revvity Inc. stock outperforms competitors on strong trading day",
+          "yday_ret": 2.79,
+          "rsi": 53.5,
+          "macd_hist": -0.9598,
+          "flow_in": false,
+          "white": false,
+          "alarm": false,
+          "on_list": true,
+          "sources": [
+            "flatten"
+          ],
+          "open": null,
+          "close": 147.8,
+          "day_pct": 1.2,
+          "boxes": {
+            "join": "good",
+            "sector": "good",
+            "gen": "good",
+            "news": "missing",
+            "digest": "bad",
+            "judge": "missing",
+            "ab": "good",
+            "peer": "good",
+            "heat": "good",
+            "vol": "good",
+            "catal": "missing",
+            "buy": "neutral",
+            "yday": "missing"
+          },
+          "domains": null,
+          "parts": [
+            {
+              "k": "cameras",
+              "pts": 12,
+              "why": "+7 \u22121 cameras"
+            },
+            {
+              "k": "E",
+              "pts": 4,
+              "why": "beat \u00b7 EPS surprise +16.2% (morning export)"
+            },
+            {
+              "k": "join",
+              "pts": 1,
+              "why": "join green"
+            },
+            {
+              "k": "peer",
+              "pts": 1,
+              "why": "peer green"
+            },
+            {
+              "k": "yday",
+              "pts": 1,
+              "why": "yday +2.8%"
+            }
+          ],
+          "weather": [
+            "gen good",
+            "sector good"
+          ],
+          "h1": null,
+          "h3": null,
+          "h5": null
+        },
+        {
+          "ticker": "WAY",
+          "date": "2026-09-17",
+          "idio": 17,
+          "n_pos": 6,
+          "n_neg": 1,
+          "e_pol": "good",
+          "e_label": "beat \u00b7 EPS surprise +8.0% (morning export)",
+          "r_pol": "good",
+          "news_tone": "missing",
+          "headline": "WAY Stock Surges On Reported Sale Buzz  RBC Flags This Tech Giant As The Obvious First Name",
+          "yday_ret": -3.31,
+          "rsi": 47.79,
+          "macd_hist": -0.1527,
+          "flow_in": false,
+          "white": false,
+          "alarm": false,
+          "on_list": true,
+          "sources": [
+            "flatten"
+          ],
+          "open": null,
+          "close": 26.6,
+          "day_pct": 0.0,
+          "boxes": {
+            "join": "good",
+            "sector": "good",
+            "gen": "good",
+            "news": "missing",
+            "digest": "bad",
+            "judge": "missing",
+            "ab": "good",
+            "peer": "good",
+            "heat": "good",
+            "vol": "neutral",
+            "catal": "missing",
+            "buy": "neutral",
+            "yday": "missing"
+          },
+          "domains": null,
+          "parts": [
+            {
+              "k": "cameras",
+              "pts": 10,
+              "why": "+6 \u22121 cameras"
+            },
+            {
+              "k": "E",
+              "pts": 4,
+              "why": "beat \u00b7 EPS surprise +8.0% (morning export)"
+            },
+            {
+              "k": "R",
+              "pts": 2,
+              "why": "buy-side recom 1.2 (level, not a change \u00b7 morning export)"
+            },
+            {
+              "k": "join",
+              "pts": 1,
+              "why": "join green"
+            },
+            {
+              "k": "peer",
+              "pts": 1,
+              "why": "peer green"
+            },
+            {
+              "k": "yday",
+              "pts": -1,
+              "why": "yday -3.3%"
             }
           ],
           "weather": [
