@@ -355,14 +355,16 @@ def test_open_0930_requires_tickets_and_connected_paper() -> None:
             assert skip_if_good.check_open_0930("2026-09-15") is False
             last.write_text(json.dumps({
                 "date": "2026-09-15",
-                "combo": "combo_sh_macd_5050_shared",
+                "source": "hot4",
+                "policy": "union_hot_n4_h1",
                 "connected": False,
                 "n_tickets": 0,
             }), encoding="utf-8")
             assert skip_if_good.check_open_0930("2026-09-15") is False
             last.write_text(json.dumps({
                 "date": "2026-09-15",
-                "combo": "combo_sh_macd_5050_shared",
+                "source": "hot4",
+                "policy": "union_hot_n4_h1",
                 "connected": True,
                 "n_tickets": 0,
             }), encoding="utf-8")

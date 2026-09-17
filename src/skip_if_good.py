@@ -567,9 +567,11 @@ def check_open_0930(date: str) -> bool:
     if str(last.get("date") or "") != date:
         return _log(False, "open_0930", date,
                     f"webull date={last.get('date')!r} ≠ {date}")
-    if str(last.get("combo") or "") != "combo_sh_macd_5050_shared":
+    src = str(last.get("source") or "")
+    policy = str(last.get("policy") or last.get("combo") or "")
+    if src != "hot4" and policy != "union_hot_n4_h1":
         return _log(False, "open_0930", date,
-                    f"webull combo={last.get('combo')!r}")
+                    f"webull source={src!r} policy={policy!r}")
     if not last.get("connected"):
         return _log(False, "open_0930", date, "webull not connected")
     return _log(True, "open_0930", date,

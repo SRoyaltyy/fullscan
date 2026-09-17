@@ -8,13 +8,18 @@ from pathlib import Path
 
 from src.futubull_exec import BrokerSnap, send_card
 from src.webull_exec import (
+    HOT4,
     client_order_id,
+    load_hot4_published,
+    order_body,
     paper_host,
     parse_account_id,
     parse_balance,
     parse_order_id,
     parse_positions,
+    plan_hot4_for_broker,
     refuse_real,
+    size_hot4_tickets,
 )
 
 
@@ -129,17 +134,18 @@ def test_not_connected_writes_last_without_replay(tmp_path=None) -> None:
 
     with mock.patch.object(we, "PaperAPI", return_value=Dead()), \
             mock.patch.object(we, "_plan", return_value={
-                "tickets": [], "stale": False, "policy": "combo_sh_macd_5050_shared",
+                "tickets": [], "stale": False, "policy": HOT4,
             }), \
             mock.patch.object(we, "write_last") as wl, \
             mock.patch.object(we, "inject_today_from_disk"):
-        rc = we.run("2026-09-14", submit=True, write=True)
+        rc = we.run("2026-09-17", submit=True, write=True)
     assert rc == 0
     last = wl.call_args[0][0]
     assert last["connected"] is False
     assert last["n_tickets"] == 0
-    assert last["source"] == "combo"
-    assert last["combo"] == "combo_sh_macd_5050_shared"
+    assert last["source"] == "hot4"
+    assert last["combo"] == ""
+    assert last["policy"] == HOT4
     assert "401" in (last.get("error") or "")
 
 
@@ -181,6 +187,96 @@ def test_stale_combo_does_not_submit() -> None:
     assert last["stale"] is True
 
 
+def _hot4_buys() -> list[dict]:
+    return [
+        {"ticker": "INDP", "src": "yday_mover", "side": "long", "px": 3.23},
+        {"ticker": "GPRO", "src": "ohlc_hot", "side": "long", "px": 1.26},
+        {"ticker": "INSP", "src": "ohlc_hot", "side": "long", "px": 72.75},
+        {"ticker": "TJGC", "src": "ohlc_hot", "side": "long", "px": 10.98},
+        {"ticker": "SHRT", "src": "news_red", "side": "short", "px": 5.0},
+    ]
+
+
+def test_hot4_tickets_long_only_skip_held_cash_and_sit() -> None:
+    buys = _hot4_buys()
+    tickets, skips = size_hot4_tickets(
+        buys, cash=10_000, held={"GPRO"}, date="2026-09-17", s=7.383,
+    )
+    by_t = {t["ticker"]: t for t in tickets}
+    assert "SHRT" not in by_t
+    assert "GPRO" not in by_t
+    assert by_t["INDP"]["side"] == "BUY"
+    assert by_t["INSP"]["side"] == "BUY"
+    assert by_t["TJGC"]["side"] == "BUY"
+    assert all(t["order_type"] == "MARKET" for t in tickets)
+    assert all(t["sleeve"] == HOT4 for t in tickets)
+    assert any(s["ticker"] == "SHRT" and s["kind"] == "short" for s in skips)
+    assert any(s["ticker"] == "GPRO" and s["kind"] == "held" for s in skips)
+    sit_tickets, sit_skips = size_hot4_tickets(
+        buys, cash=10_000, held=set(), date="2026-09-17", s=-3.1,
+    )
+    assert sit_tickets == []
+    assert any(s["kind"] == "hard_red" for s in sit_skips)
+    tiny, tiny_skips = size_hot4_tickets(
+        [{"ticker": "INSP", "side": "long", "px": 72.75}],
+        cash=10, held=set(), date="2026-09-17", s=7.0,
+    )
+    assert tiny == []
+    assert any(s["kind"] == "cash" for s in tiny_skips)
+
+    payload = {
+        "date": "2026-09-17",
+        "strategies": {
+            HOT4: {
+                "name": HOT4, "date": "2026-09-17", "side": "long",
+                "buy": buys[:4], "sell": [], "sit": False, "s": 7.383,
+            }
+        },
+    }
+    pub = load_hot4_published("2026-09-17", payload)
+    assert [b["ticker"] for b in pub["buy"]] == ["INDP", "GPRO", "INSP", "TJGC"]
+    snap = BrokerSnap(env="paper", cash=10_000, positions={"INDP": {"shares": 1}})
+    card = plan_hot4_for_broker("2026-09-17", snap, payload=payload)
+    assert card["policy"] == HOT4
+    assert card["hard_red"] is False
+    assert card["order_type"] == "MARKET"
+    names = {t["ticker"] for t in card["tickets"]}
+    assert "INDP" not in names
+    assert "GPRO" in names and "INSP" in names and "TJGC" in names
+    assert all(t["side"] == "BUY" for t in card["tickets"])
+    assert len(card["would_buy"]["rows"]) == 4
+
+
+def test_hot4_zero_cash_is_honest() -> None:
+    payload = {
+        "date": "2026-09-17",
+        "strategies": {
+            HOT4: {
+                "name": HOT4, "date": "2026-09-17",
+                "buy": _hot4_buys()[:4], "sit": False, "s": 7.383,
+            }
+        },
+    }
+    snap = BrokerSnap(env="paper", cash=0, positions={}, buying_power=10_000)
+    card = plan_hot4_for_broker("2026-09-17", snap, payload=payload)
+    assert card["tickets"] == []
+    assert len(card["would_buy"]["rows"]) == 4
+    assert all(s["kind"] == "cash" for s in card["skipped"])
+    assert "cannot buy 1 share" in card["why"]
+
+
+def test_paper_order_is_market_not_limit() -> None:
+    body = order_body({
+        "side": "BUY", "ticker": "INDP", "shares": 3, "px": 3.23,
+        "date": "2026-09-17",
+    })
+    assert body["order_type"] == "MARKET"
+    assert "limit_price" not in body
+    assert body["symbol"] == "INDP"
+    assert body["quantity"] == "3"
+    assert body["side"] == "BUY"
+
+
 def test_yml_poke_on_main_submits() -> None:
     """Cloud agent cannot workflow_dispatch; a main poke must submit paper."""
     yml = Path(__file__).resolve().parent.parent.joinpath(
@@ -190,9 +286,12 @@ def test_yml_poke_on_main_submits() -> None:
     assert '".github/workflows/webull_paper.yml"' in yml
     assert "github.event_name == 'push'" in yml
     assert "github.event_name == 'schedule'" in yml
-    assert "--source combo" in yml
-    assert "combo_sh_macd_5050_shared" in yml
-    assert "POKE 2026-09-14" in yml
+    assert "--source hot4" in yml
+    assert "--submit" in yml
+    assert "combo_sh_macd_5050_shared" not in yml
+    assert "--source combo" not in yml
+    assert "--env real" not in yml
+    assert "POKE 2026-09-17" in yml
     assert 'cron: "30 13 * * 1-5"' in yml
     assert 'cron: "30 14 * * 1-5"' in yml
     assert "src.open_0930_clock" in yml
@@ -211,7 +310,10 @@ def main() -> None:
     test_not_connected_writes_last_without_replay()
     test_stale_combo_does_not_submit()
     test_yml_poke_on_main_submits()
-    print("test_webull_exec: 10 ok")
+    test_hot4_tickets_long_only_skip_held_cash_and_sit()
+    test_hot4_zero_cash_is_honest()
+    test_paper_order_is_market_not_limit()
+    print("test_webull_exec: 13 ok")
 
 
 if __name__ == "__main__":

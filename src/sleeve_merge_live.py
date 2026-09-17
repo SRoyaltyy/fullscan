@@ -909,7 +909,7 @@ def today_panel_html(card: dict) -> str:
     def webull_strip() -> str:
         return _broker_strip(
             "Webull paper", "webull_last.json", "no API key",
-            "Paper overlay is <code>combo_sh_macd_5050_shared</code>. "
+            "Paper overlay is <code>union_hot_n4_h1</code> (hot4, MARKET). "
             "Set <code>WEBULL_APP_KEY</code> / <code>WEBULL_APP_SECRET</code> "
             "and run <code>python -m src.webull_exec --submit</code>.")
 

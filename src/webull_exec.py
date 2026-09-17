@@ -1,25 +1,27 @@
-"""Push today's combo_sh 50/50 + MACD-short tickets into Webull *paper*.
+"""Push today's union_hot_n4_h1 (hot4) tickets into Webull *paper*.
 
-Default source is ``combo_sh_macd_5050_shared`` (short news🔴 ∩ MACD-up
-+ union_hot_n4, shared leftover). Flatten live-card tickets stay
-available via ``--source flatten``.
+Default source is ``hot4``: long-only today's ``union_hot_n4_h1`` buy
+list from ``dashboard/factor-mine/today_strategies.json`` (same panel
+the factor-mine cash book uses). Flatten live-card tickets stay
+available via ``--source flatten``. Combo is a manual escape only.
 
 Official OpenAPI sandbox is the in-app Paper Trading book
 (webull.com → Open API → “Using OpenAPI service in Paper Trading”).
 App key + secret are auto-approved for sandbox in a few minutes.
 
-    python -m src.webull_exec --date 2026-09-14          # dry-run combo
-    python -m src.webull_exec --date 2026-09-14 --submit  # paper only
-    python -m src.webull_exec --source flatten --submit   # old flatten path
+    python -m src.webull_exec --date 2026-09-17          # dry-run hot4
+    python -m src.webull_exec --date 2026-09-17 --submit  # paper MARKET
+    python -m src.webull_exec --source flatten --submit   # flatten escape
 
 REAL is refused unless --env real AND --live AND WEBULL_LIVE=1.
-Paper never talks to api.webull.com.
+Paper never talks to api.webull.com. Do not enable --env real here.
 
 Rules:
-  * combo: size against the account's real cash + positions
-  * skip a name already held; skip if leftover cash cannot size a share
+  * hot4: long-only leftover cash, MARKET (live print, not ticket px)
+  * skip a name already held; skip if leftover cash cannot buy 1 share
   * hard-red S≤−3 sits; stale Friday panel is dry-run unless --allow-stale
   * flatten source: only live card tickets (never the would-buy wish list)
+  * $0 sandbox cash still buys nothing — snapshot reports the skip
 
 Env: WEBULL_APP_KEY, WEBULL_APP_SECRET, WEBULL_ACCOUNT_ID (optional),
      WEBULL_REGION (default us).
@@ -45,6 +47,14 @@ from src.sleeve_merge import OUT_DIR
 from src.sleeve_merge_live import (
     TODAY_JSON,
     inject_today_from_disk,
+)
+
+ROOT = Path(__file__).resolve().parent.parent
+HOT4 = "union_hot_n4_h1"
+HOT4_STRATEGY_PATHS = (
+    ROOT / "dashboard" / "factor-mine" / "today_strategies.json",
+    ROOT / "data" / "day_board" / "today_strategies.json",
+    ROOT / "data" / "factor_mine" / "strategy_tickets.json",
 )
 
 LAST_JSON = OUT_DIR / "webull_last.json"
@@ -178,6 +188,267 @@ def parse_positions(payload) -> dict:
     return out
 
 
+def _hot4_from_payload(payload) -> dict:
+    if not isinstance(payload, dict):
+        return {}
+    strats = payload.get("strategies")
+    if not isinstance(strats, dict):
+        strats = payload
+    rec = strats.get(HOT4)
+    if not isinstance(rec, dict):
+        return {}
+    out = dict(rec)
+    if payload.get("date") and not out.get("date"):
+        out["date"] = payload.get("date")
+    return out
+
+
+def load_hot4_published(date: str, payload: dict | None = None) -> dict:
+    """Today's union_hot_n4_h1 buy list from the factor-mine cash-book panel."""
+    if payload is not None:
+        rec = _hot4_from_payload(payload)
+        return rec or {}
+    for path in HOT4_STRATEGY_PATHS:
+        if not path.is_file():
+            continue
+        try:
+            raw = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        rec = _hot4_from_payload(raw)
+        if rec:
+            rec["_path"] = str(path)
+            return rec
+    return {}
+
+
+def _hot4_num(row: dict, *keys: str):
+    for key in keys:
+        raw = row.get(key) if isinstance(row, dict) else None
+        if raw is None or raw == "":
+            continue
+        try:
+            return float(raw)
+        except (TypeError, ValueError):
+            continue
+    return None
+
+
+def size_hot4_tickets(buys: list, *, cash: float, held: set[str] | None,
+                      date: str, s=None, sit: bool = False) -> tuple[list[dict], list[dict]]:
+    """Long-only leftover split. No shorts. MARKET sizing uses list px."""
+    from src import factor_mine_book as fmb
+    from src.combo_broker import quote_px
+
+    held = {str(t).upper() for t in (held or set())}
+    leftover = max(float(cash or 0), 0.0)
+    hard_red = bool(sit) or (
+        s is not None and float(s) <= float(fmb.HARD_RED))
+    tickets: list[dict] = []
+    skips: list[dict] = []
+    names: list[dict] = []
+    for raw in buys or []:
+        if not isinstance(raw, dict):
+            continue
+        t = str(raw.get("ticker") or raw.get("symbol") or "").upper().strip()
+        if not t:
+            continue
+        side = str(raw.get("side") or raw.get("kid_side") or "long").lower()
+        if side == "short":
+            skips.append({
+                "date": date, "ticker": t, "kind": "short",
+                "reason": "hot4 is long-only — skip short",
+            })
+            continue
+        if hard_red:
+            skips.append({
+                "date": date, "ticker": t, "kind": "hard_red",
+                "reason": (
+                    f"hard-red S={s} sit; no new long {HOT4}"
+                ),
+            })
+            continue
+        if t in held:
+            skips.append({
+                "date": date, "ticker": t, "kind": "held",
+                "reason": f"already held — skip {HOT4}",
+            })
+            continue
+        names.append(raw)
+    if leftover <= 0:
+        for raw in names:
+            t = str(raw.get("ticker") or "").upper()
+            skips.append({
+                "date": date, "ticker": t, "kind": "cash",
+                "reason": f"leftover cash {leftover:.2f} cannot buy 1 share",
+            })
+        return tickets, skips
+    budgets = fmb.split_budgets(names, leftover, "leftover")
+    for raw, per in zip(names, budgets):
+        t = str(raw.get("ticker") or "").upper()
+        px = _hot4_num(raw, "px", "open", "open_px")
+        if px is None or px <= 0:
+            px = quote_px(t, date, row=raw.get("row") if isinstance(
+                raw.get("row"), dict) else raw)
+        if px is None or px <= 0:
+            skips.append({
+                "date": date, "ticker": t, "kind": "no_price",
+                "reason": "no session_export / 09:30 open or prior close",
+            })
+            continue
+        shares = int(per // px)
+        if shares < 1:
+            skips.append({
+                "date": date, "ticker": t, "kind": "cash",
+                "reason": f"leftover split {per:.2f} < 1 share @ {px:.2f}",
+            })
+            continue
+        notional = shares * px
+        if notional > leftover + 1e-6:
+            shares = int(leftover // px)
+            if shares < 1:
+                skips.append({
+                    "date": date, "ticker": t, "kind": "cash",
+                    "reason": f"cash {leftover:.2f} < 1 share @ {px:.2f}",
+                })
+                continue
+            notional = shares * px
+        leftover -= notional
+        tickets.append({
+            "side": "BUY",
+            "ticker": t,
+            "shares": shares,
+            "px": round(float(px), 4),
+            "notional": round(notional, 2),
+            "order_type": "MARKET",
+            "status": "plan",
+            "sleeve": HOT4,
+            "kid_side": "long",
+            "date": date,
+            "clock": "09:30 ET",
+            "reason": f"{HOT4} {raw.get('src') or 'long'} leftover ${per:.2f}",
+        })
+    return tickets, skips
+
+
+def plan_hot4_for_broker(date: str, snap: BrokerSnap,
+                         payload: dict | None = None,
+                         panel: dict | None = None) -> dict:
+    """Today's hot4 would-buy list, sized against leftover cash only."""
+    from src import factor_mine as fm
+    from src import factor_mine_book as fmb
+    from src.combo_broker import resolve_rows
+
+    published = load_hot4_published(date, payload)
+    buys = list(published.get("buy") or [])
+    use_date = str(published.get("date") or date)
+    stale = False
+    source = "today_strategies"
+    look_err = ""
+    if not buys:
+        looked = resolve_rows(date, panel)
+        rec_by = {r["name"]: r for r in fm.build_recipes()}
+        rec = rec_by.get(HOT4) or {}
+        rows = looked.get("rows") or []
+        use_date = str(looked.get("date") or date)
+        stale = bool(looked.get("stale"))
+        source = f"panel_{looked.get('source') or 'look'}"
+        look_err = looked.get("error") or ""
+        for r in fm.pick_day(rows, rec) if rec else []:
+            t = str(r.get("ticker") or "").upper()
+            if t:
+                buys.append({
+                    "ticker": t,
+                    "src": ",".join(r.get("sources") or []),
+                    "side": "long",
+                    "row": r,
+                })
+    else:
+        pub_date = str(published.get("date")
+                       or published.get("clock_legal_for")
+                       or published.get("session_open") or "")
+        if pub_date and pub_date != date:
+            stale = True
+            use_date = pub_date
+    try:
+        s = published.get("s")
+        if s is None:
+            s = fmb.morning_s(fmb.load_regime(), date)
+    except Exception:
+        s = published.get("s")
+    sit = bool(published.get("sit"))
+    # Hot4 spends leftover cash only. Buying power is not a fill.
+    cash = max(float(getattr(snap, "cash", 0) or 0), 0.0)
+    held = set((snap.positions or {}) if snap else {})
+    tickets, skips = size_hot4_tickets(
+        buys, cash=cash, held=held, date=use_date, s=s, sit=sit,
+    )
+    would = []
+    for raw in buys:
+        t = str((raw or {}).get("ticker") or "").upper()
+        if not t:
+            continue
+        side = str(raw.get("side") or raw.get("kid_side") or "long").lower()
+        if side == "short":
+            continue
+        would.append({
+            "ticker": t,
+            "sleeve": HOT4,
+            "kid_side": "long",
+            "clock": "09:30 ET",
+            "px": raw.get("px"),
+            "src": raw.get("src"),
+        })
+    hard_red = sit or (
+        s is not None and float(s) <= float(fmb.HARD_RED))
+    why = (f"{HOT4} long-only leftover cash · MARKET · "
+           f"rows via {source}")
+    if stale:
+        why += (f" · STALE panel {use_date} (wanted {date})"
+                " — do not submit unless --allow-stale")
+    if hard_red:
+        why += f" · hard-red S={s} sit"
+    if cash <= 0:
+        why += f" · leftover cash ${cash:.2f} cannot buy 1 share"
+    return {
+        "date": use_date,
+        "want_date": date,
+        "policy": HOT4,
+        "combo": "",
+        "source": source,
+        "stale": stale,
+        "score": s,
+        "hard_red": hard_red,
+        "why": why,
+        "tickets": tickets,
+        "skipped": skips,
+        "would_buy": {"rows": would},
+        "flatten_ok": True,
+        "look_error": look_err,
+        "order_type": "MARKET",
+    }
+
+
+def order_body(ticket: dict) -> dict:
+    """Webull paper order: MARKET at the live print, not LIMIT at ticket px."""
+    side = "BUY" if str(ticket.get("side") or "").upper() == "BUY" else "SELL"
+    return {
+        "combo_type": "NORMAL",
+        "client_order_id": client_order_id(
+            str(ticket.get("date") or ticket.get("asof") or ""),
+            side, ticket.get("ticker") or ""),
+        "symbol": str(ticket.get("ticker") or "").upper(),
+        "instrument_type": "EQUITY",
+        "market": "US",
+        "order_type": "MARKET",
+        "quantity": str(int(ticket.get("shares") or 0)),
+        "support_trading_session": "CORE",
+        "side": side,
+        "time_in_force": "DAY",
+        "entrust_type": "QTY",
+    }
+
+
 def parse_order_id(payload) -> str:
     if isinstance(payload, dict):
         for key in ("order_id", "orderId", "client_order_id"):
@@ -280,36 +551,27 @@ class PaperAPI:
     def place(self, ticket: dict, env: str) -> dict:
         if self.trade is None or not self.account_id:
             return {"ok": False, "error": self.err or "not connected"}
-        side = "BUY" if ticket["side"] == "BUY" else "SELL"
-        body = [{
-            "combo_type": "NORMAL",
-            "client_order_id": client_order_id(
-                str(ticket.get("date") or ticket.get("asof") or ""),
-                side, ticket["ticker"]),
-            "symbol": str(ticket["ticker"]).upper(),
-            "instrument_type": "EQUITY",
-            "market": "US",
-            "order_type": "LIMIT",
-            "limit_price": str(ticket.get("px") or 0),
-            "quantity": str(int(ticket["shares"])),
-            "support_trading_session": "CORE",
-            "side": side,
-            "time_in_force": "DAY",
-            "entrust_type": "QTY",
-        }]
+        body = [order_body(ticket)]
         try:
             res = self.trade.order_v3.place_order(self.account_id, body)
             payload = self._json(res, "place_order")
         except Exception as e:  # noqa: BLE001
             return {"ok": False, "error": str(e)[:240]}
         oid = parse_order_id(payload) or body[0]["client_order_id"]
-        return {"ok": True, "order_id": oid}
+        return {"ok": True, "order_id": oid, "order_type": "MARKET"}
 
 
 def write_last(doc: dict) -> Path:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     LAST_JSON.write_text(json.dumps(doc, indent=2), encoding="utf-8")
     return LAST_JSON
+
+
+def _norm_source(source: str) -> str:
+    src = (source or "hot4").strip().lower()
+    if src in ("hot4", "flatten", "combo"):
+        return src
+    return "hot4"
 
 
 def _plan(date: str, snap: BrokerSnap, *, source: str, combo: str) -> dict:
@@ -320,14 +582,16 @@ def _plan(date: str, snap: BrokerSnap, *, source: str, combo: str) -> dict:
         card.setdefault("stale", False)
         card.setdefault("combo", "")
         return card
-    return plan_combo_for_broker(date, snap, combo=combo)
+    if source == "combo":
+        return plan_combo_for_broker(date, snap, combo=combo)
+    return plan_hot4_for_broker(date, snap)
 
 
 def run(date: str | None, *, env: str = "paper", submit: bool = False,
-        live: bool = False, write: bool = True, source: str = "combo",
+        live: bool = False, write: bool = True, source: str = "hot4",
         combo: str = PAPER_COMBO, allow_stale: bool = False) -> int:
     env = "real" if env == "real" else "paper"
-    source = "flatten" if source == "flatten" else "combo"
+    source = _norm_source(source)
     combo = combo or PAPER_COMBO
     blocked = refuse_real(env, submit, live)
     if blocked:
@@ -363,9 +627,12 @@ def run(date: str | None, *, env: str = "paper", submit: bool = False,
             "date": date, "env": env, "submit": False,
             "connected": False, "error": snap.error, "host": api.host,
             "n_tickets": n_tickets,
-            "source": source, "combo": combo if source == "combo" else "",
+            "source": source,
+            "combo": combo if source == "combo" else "",
             "stale": bool(card.get("stale")),
-            "policy": card.get("policy") or source,
+            "policy": card.get("policy") or (HOT4 if source == "hot4" else source),
+            "skipped": card.get("skipped") or [],
+            "why": card.get("why") or "",
             "sent": [],
             "generated": datetime.now().isoformat(timespec="seconds"),
         }
@@ -386,10 +653,14 @@ def run(date: str | None, *, env: str = "paper", submit: bool = False,
     last["host"] = api.host
     last["account_id"] = snap.acc_id
     last["source"] = source
-    last["combo"] = combo if source == "combo" else card.get("policy") or ""
+    last["combo"] = combo if source == "combo" else ""
     last["stale"] = bool(card.get("stale"))
-    last["policy"] = card.get("policy") or source
+    last["policy"] = card.get("policy") or (HOT4 if source == "hot4" else source)
     last["why"] = card.get("why") or ""
+    last["skipped"] = card.get("skipped") or []
+    last["score"] = card.get("score")
+    last["hard_red"] = bool(card.get("hard_red"))
+    last["order_type"] = "MARKET"
     print(f"[webull] {env} {api.host} {source} {last.get('combo') or ''} "
           f"cash=${snap.cash:,.2f} pos={len(snap.positions)} "
           f"tickets={last['n_tickets']} submit={submit} "
@@ -415,10 +686,11 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--live", action="store_true",
                     help="required together with --env real and WEBULL_LIVE=1")
     ap.add_argument("--write", action="store_true", default=True)
-    ap.add_argument("--source", choices=("combo", "flatten"), default="combo",
-                    help="combo_sh_macd_5050 (default) or flatten live card")
+    ap.add_argument("--source", choices=("hot4", "flatten", "combo"),
+                    default="hot4",
+                    help="union_hot_n4_h1 long-only (default), flatten escape, or combo")
     ap.add_argument("--combo", default=PAPER_COMBO,
-                    help="combo name when --source combo")
+                    help="combo name when --source combo (manual escape)")
     ap.add_argument("--allow-stale", action="store_true",
                     help="submit even if the look is last-closed, not today")
     args = ap.parse_args(argv)

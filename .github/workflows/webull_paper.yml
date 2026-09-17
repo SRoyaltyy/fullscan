@@ -1,9 +1,9 @@
 name: Webull paper (OpenAPI sandbox)
 
-# Places today's combo_sh_macd_5050_shared tickets (short news🔴 ∩
-# MACD-up + union_hot_n4, shared 50/50 leftover) into the Webull
-# *paper* account (api.sandbox.webull.com). Flatten live-card path is
-# still `--source flatten`. Never talks to the live host.
+# Places today's union_hot_n4_h1 (hot4) long-only tickets into the
+# Webull *paper* account (api.sandbox.webull.com) as MARKET orders.
+# Flatten live-card path is still `--source flatten`. Never talks to
+# the live host. Paper only (sandbox).
 # Needs repo secrets WEBULL_APP_KEY + WEBULL_APP_SECRET.
 # Optional: WEBULL_ACCOUNT_ID.
 # CLOCK: a main push that touches this file starts the job (same poke
@@ -11,6 +11,7 @@ name: Webull paper (OpenAPI sandbox)
 # POKE 2026-09-11: re-fire after sandbox 401 + missing numpy.
 # POKE 2026-09-11b: retry after owner rotated paper secrets.
 # POKE 2026-09-14: combo_sh 50/50 + MACD-short overlay for today's paper.
+# POKE 2026-09-17: drop combo — paper is hot4 MARKET long-only.
 
 on:
   push:
@@ -82,7 +83,7 @@ jobs:
         if: steps.clock.outputs.go == 'yes'
         run: pip install webull-openapi-python-sdk pandas numpy yfinance requests
 
-      - name: Send combo 5050+MACD tickets to Webull paper
+      - name: Send hot4 MARKET tickets to Webull paper
         if: steps.clock.outputs.go == 'yes'
         env:
           WEBULL_APP_KEY: ${{ secrets.WEBULL_APP_KEY }}
@@ -94,13 +95,13 @@ jobs:
           set -euo pipefail
           DATE="${RUN_DATE:-}"
           DATE="${DATE:-$(TZ=America/New_York date +%F)}"
-          ARGS=(--date "$DATE" --source combo --combo combo_sh_macd_5050_shared)
+          ARGS=(--date "$DATE" --source hot4)
           if [ -n "${WEBULL_APP_KEY:-}" ] && [ -n "${WEBULL_APP_SECRET:-}" ] \
              && [ "${WANT_SUBMIT}" = "true" ]; then
             ARGS+=(--submit)
-            echo "paper submit combo_sh_macd_5050_shared on $DATE"
+            echo "paper submit union_hot_n4_h1 MARKET on $DATE"
           else
-            echo "dry-run combo_sh_macd_5050_shared on $DATE (no keys or submit unchecked)"
+            echo "dry-run union_hot_n4_h1 MARKET on $DATE (no keys or submit unchecked)"
           fi
           python -m src.webull_exec "${ARGS[@]}"
           test -s data/sleeve_merge/webull_last.json

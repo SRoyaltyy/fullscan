@@ -253,6 +253,8 @@ def send_card(card: dict, snap: BrokerSnap, *, submit: bool,
             "shares": t["shares"], "px": t.get("px"),
             "clock": t.get("clock"), "sleeve": t.get("sleeve"),
         }
+        if t.get("order_type"):
+            rec["order_type"] = t["order_type"]
         if not submit:
             rec["status"] = "dry_run"
             sent.append(rec)
