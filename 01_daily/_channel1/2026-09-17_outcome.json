@@ -1,0 +1,626 @@
+{
+  "stage": "outcome",
+  "fetched_at": "2026-09-17T16:37:35.842603-04:00",
+  "fred": {
+    "DGS30": {
+      "available": true,
+      "date": "2026-09-16",
+      "current": 5.35,
+      "delta_1d": -0.01,
+      "delta_1w": 0.07,
+      "delta_1m": 0.04
+    },
+    "DGS10": {
+      "available": true,
+      "date": "2026-09-16",
+      "current": 5.01,
+      "delta_1d": 0.01,
+      "delta_1w": 0.18,
+      "delta_1m": 0.29
+    },
+    "DFII10": {
+      "available": true,
+      "date": "2026-09-16",
+      "current": 2.68,
+      "delta_1d": 0.06,
+      "delta_1w": 0.22,
+      "delta_1m": 0.24
+    },
+    "BAMLH0A0HYM2": {
+      "available": true,
+      "date": "2026-09-16",
+      "current": 2.7,
+      "delta_1d": -0.06,
+      "delta_1w": -0.01,
+      "delta_1m": -0.05
+    },
+    "SOFR": {
+      "available": true,
+      "date": "2026-09-16",
+      "current": 3.62,
+      "delta_1d": -0.02,
+      "delta_1w": -0.02,
+      "delta_1m": -0.04
+    },
+    "IORB": {
+      "available": true,
+      "date": "2026-09-18",
+      "current": 3.9,
+      "delta_1d": 0.0,
+      "delta_1w": 0.25,
+      "delta_1m": 0.25
+    },
+    "RRPONTSYD": {
+      "available": true,
+      "date": "2026-09-17",
+      "current": 0.276,
+      "delta_1d": -5.099,
+      "delta_1w": -4.46,
+      "delta_1m": 0.121
+    },
+    "USEPUINDXD": {
+      "available": true,
+      "date": "2026-09-16",
+      "current": 106.54,
+      "delta_1d": -149.78,
+      "delta_1w": -385.32,
+      "delta_1m": -159.65
+    }
+  },
+  "vix": {
+    "vix": {
+      "date": "2026-09-17",
+      "current": 15.44,
+      "delta_1d": -2.27,
+      "delta_1w": -2.4
+    },
+    "vix3m": {
+      "date": "2026-09-17",
+      "current": 18.55,
+      "source": "^VIX3M"
+    },
+    "ratio": 0.832,
+    "ratio_source": "vix/vix3m",
+    "vix_ma20": 15.72,
+    "ratio_ma20": 0.982
+  },
+  "commodities_fx": {
+    "CL=F": {
+      "available": true,
+      "date": "2026-09-17",
+      "last": 101.27,
+      "pct_1d": -1.13
+    },
+    "BZ=F": {
+      "available": true,
+      "date": "2026-09-17",
+      "last": 104.1,
+      "pct_1d": -1.63
+    },
+    "GC=F": {
+      "available": true,
+      "date": "2026-09-17",
+      "last": 4384.1,
+      "pct_1d": -0.08
+    },
+    "DXY": {
+      "available": true,
+      "date": "2026-09-17",
+      "source": "DX-Y.NYB",
+      "pct_1d": -0.07,
+      "pct_1m": 0.59
+    }
+  },
+  "futures": {
+    "ES=F": {
+      "available": true,
+      "date": "2026-09-17",
+      "last": 7702.5,
+      "pct_1d": 1.93
+    },
+    "NQ=F": {
+      "available": true,
+      "date": "2026-09-17",
+      "last": 29717.5,
+      "pct_1d": 2.6
+    }
+  },
+  "finviz_futures_tape": {
+    "available": true,
+    "source": "01_daily/map_heat/2026-09-17_map_heat.json",
+    "rows": [
+      {
+        "ticker": "ES",
+        "label": "S&P 500",
+        "last": 7671.5,
+        "change": 0.2
+      },
+      {
+        "ticker": "NQ",
+        "label": "Nasdaq 100",
+        "last": 29365.25,
+        "change": 0.41
+      },
+      {
+        "ticker": "ER2",
+        "label": "Russell 2000",
+        "last": 2896.8,
+        "change": 0.08
+      },
+      {
+        "ticker": "YM",
+        "label": "DJIA",
+        "last": 52580.0,
+        "change": 0.11
+      },
+      {
+        "ticker": "VX",
+        "label": "VIX",
+        "last": 18.4,
+        "change": -0.52
+      },
+      {
+        "ticker": "CL",
+        "label": "Crude Oil WTI",
+        "last": 104.16,
+        "change": -1.59
+      },
+      {
+        "ticker": "QA",
+        "label": "Crude Oil Brent",
+        "last": 107.67,
+        "change": -1.02
+      },
+      {
+        "ticker": "NG",
+        "label": "Natural Gas",
+        "last": 2.902,
+        "change": -0.51
+      },
+      {
+        "ticker": "HO",
+        "label": "Heating Oil",
+        "last": 5.2714,
+        "change": 0.18
+      },
+      {
+        "ticker": "RB",
+        "label": "Gasoline RBOB",
+        "last": 3.4464,
+        "change": -0.54
+      },
+      {
+        "ticker": "GC",
+        "label": "Gold",
+        "last": 4370.8,
+        "change": 0.9
+      },
+      {
+        "ticker": "SI",
+        "label": "Silver",
+        "last": 65.1,
+        "change": 1.96
+      },
+      {
+        "ticker": "HG",
+        "label": "Copper",
+        "last": 6.489,
+        "change": 0.66
+      },
+      {
+        "ticker": "PL",
+        "label": "Platinum",
+        "last": 1788.4,
+        "change": 0.61
+      },
+      {
+        "ticker": "PA",
+        "label": "Palladium",
+        "last": 1325.0,
+        "change": 1.64
+      },
+      {
+        "ticker": "DX",
+        "label": "USD",
+        "last": 99.32,
+        "change": -0.02
+      },
+      {
+        "ticker": "6E",
+        "label": "EUR",
+        "last": 1.15905,
+        "change": 0.05
+      },
+      {
+        "ticker": "6J",
+        "label": "JPY",
+        "last": 0.65,
+        "change": 0.09
+      },
+      {
+        "ticker": "6B",
+        "label": "GBP",
+        "last": 1.3479,
+        "change": -0.03
+      },
+      {
+        "ticker": "6A",
+        "label": "AUD",
+        "last": 0.7122,
+        "change": 0.0
+      },
+      {
+        "ticker": "6C",
+        "label": "CAD",
+        "last": 0.72065,
+        "change": -0.15
+      },
+      {
+        "ticker": "6S",
+        "label": "CHF",
+        "last": 1.2339,
+        "change": -0.02
+      },
+      {
+        "ticker": "6N",
+        "label": "NZD",
+        "last": 0.5765,
+        "change": -0.1
+      },
+      {
+        "ticker": "ZN",
+        "label": "10 Year Note",
+        "last": 105.90625,
+        "change": -0.03
+      },
+      {
+        "ticker": "ZF",
+        "label": "5 Year Note",
+        "last": 104.359375,
+        "change": -0.01
+      },
+      {
+        "ticker": "ZT",
+        "label": "2 Year Note",
+        "last": 102.03515625,
+        "change": 0.01
+      },
+      {
+        "ticker": "ZB",
+        "label": "30 Year Bond",
+        "last": 106.53125,
+        "change": -0.06
+      },
+      {
+        "ticker": "NKD",
+        "label": "Nikkei 225",
+        "last": 63920.0,
+        "change": 0.72
+      },
+      {
+        "ticker": "DY",
+        "label": "DAX",
+        "last": 25456.0,
+        "change": 0.11
+      },
+      {
+        "ticker": "EX",
+        "label": "Euro Stoxx 50",
+        "last": 6266.0,
+        "change": 0.35
+      },
+      {
+        "ticker": "ZC",
+        "label": "Corn",
+        "last": 538.75,
+        "change": 0.56
+      },
+      {
+        "ticker": "ZS",
+        "label": "Soybeans",
+        "last": 1327.75,
+        "change": 0.7
+      },
+      {
+        "ticker": "ZW",
+        "label": "Wheat",
+        "last": 734.75,
+        "change": 0.86
+      },
+      {
+        "ticker": "ZL",
+        "label": "Soybean oil",
+        "last": 70.11,
+        "change": 0.3
+      },
+      {
+        "ticker": "ZM",
+        "label": "Soybean Meal",
+        "last": 362.6,
+        "change": 0.75
+      },
+      {
+        "ticker": "ZO",
+        "label": "Oats",
+        "last": 395.0,
+        "change": 1.02
+      },
+      {
+        "ticker": "ZR",
+        "label": "Rough Rice",
+        "last": 15.795,
+        "change": 0.06
+      },
+      {
+        "ticker": "KC",
+        "label": "Coffee",
+        "last": 283.35,
+        "change": -2.36
+      },
+      {
+        "ticker": "SB",
+        "label": "Sugar",
+        "last": 17.72,
+        "change": -1.17
+      },
+      {
+        "ticker": "CT",
+        "label": "Cotton",
+        "last": 84.79,
+        "change": 0.37
+      },
+      {
+        "ticker": "CC",
+        "label": "Cocoa",
+        "last": 5860.0,
+        "change": -1.66
+      },
+      {
+        "ticker": "JO",
+        "label": "Orange Juice",
+        "last": 152.45,
+        "change": -0.52
+      },
+      {
+        "ticker": "LB",
+        "label": "Lumber",
+        "last": 562.0,
+        "change": -1.32
+      },
+      {
+        "ticker": "LC",
+        "label": "Live Cattle",
+        "last": 220.625,
+        "change": -0.7
+      },
+      {
+        "ticker": "LH",
+        "label": "Lean Hogs",
+        "last": 79.1,
+        "change": -0.66
+      },
+      {
+        "ticker": "FC",
+        "label": "Feeder Cattle",
+        "last": 333.675,
+        "change": -1.18
+      },
+      {
+        "ticker": "BTC",
+        "label": "Bitcoin",
+        "last": 75760.0,
+        "change": -0.53
+      },
+      {
+        "ticker": "SR3",
+        "label": "3 Month SOFR",
+        "last": 96.025,
+        "change": 0.01
+      },
+      {
+        "ticker": "ZQ",
+        "label": "30 Day Fed Funds",
+        "last": 96.2625,
+        "change": 0.0
+      },
+      {
+        "ticker": "ALI",
+        "label": "Aluminum",
+        "last": 3430.75,
+        "change": 1.1
+      },
+      {
+        "ticker": "RS",
+        "label": "Canola",
+        "last": 834.0,
+        "change": 0.57
+      },
+      {
+        "ticker": "NCF",
+        "label": "Coal Newcastle",
+        "last": 144.6,
+        "change": -1.53
+      },
+      {
+        "ticker": "ZK",
+        "label": "Ethanol",
+        "last": 2.08,
+        "change": 1.22
+      },
+      {
+        "ticker": "G",
+        "label": "Gasoil",
+        "last": 1564.75,
+        "change": -0.26
+      },
+      {
+        "ticker": "TIO",
+        "label": "Iron Ore",
+        "last": 97.41,
+        "change": -0.14
+      },
+      {
+        "ticker": "HRC",
+        "label": "Steel HRC",
+        "last": 1230.0,
+        "change": -0.16
+      },
+      {
+        "ticker": "TN",
+        "label": "Ultra 10 Year Note",
+        "last": 107.40625,
+        "change": -0.04
+      },
+      {
+        "ticker": "UB",
+        "label": "Ultra Bond",
+        "last": 108.0,
+        "change": -0.06
+      },
+      {
+        "ticker": "UX",
+        "label": "Uranium",
+        "last": 89.9,
+        "change": 0.0
+      }
+    ]
+  },
+  "global_sessions": {
+    "asia": {
+      "per_index": {
+        "Nikkei": {
+          "available": true,
+          "date": "2026-09-16",
+          "last": 63923.0,
+          "pct_1d": 0.69
+        },
+        "Hang Seng": {
+          "available": true,
+          "date": "2026-09-16",
+          "last": 24713.78,
+          "pct_1d": 0.19
+        },
+        "Shanghai": {
+          "available": true,
+          "date": "2026-09-16",
+          "last": 3891.6,
+          "pct_1d": 0.71
+        },
+        "Kospi": {
+          "available": true,
+          "date": "2026-09-16",
+          "last": 6717.97,
+          "pct_1d": 1.37
+        },
+        "ASX200": {
+          "available": true,
+          "date": "2026-09-16",
+          "last": 8696.5,
+          "pct_1d": 0.28
+        }
+      },
+      "composite_avg": 0.65
+    },
+    "europe": {
+      "per_index": {
+        "FTSE": {
+          "available": true,
+          "date": "2026-09-17",
+          "last": 10816.14,
+          "pct_1d": 1.19
+        },
+        "DAX": {
+          "available": true,
+          "date": "2026-09-17",
+          "last": 25716.71,
+          "pct_1d": 0.7
+        },
+        "CAC": {
+          "available": true,
+          "date": "2026-09-17",
+          "last": 8186.93,
+          "pct_1d": 0.57
+        },
+        "EuroStoxx50": {
+          "available": true,
+          "date": "2026-09-17",
+          "last": 6322.9,
+          "pct_1d": 0.9
+        }
+      },
+      "composite_avg": 0.84
+    }
+  },
+  "etf_premarket": {},
+  "yield_spx_corr": {
+    "available": true,
+    "corr_5d": -0.437,
+    "window": "2026-09-10..2026-09-17"
+  },
+  "fear_greed": {
+    "available": true,
+    "value": 58.2,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-27 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
+  },
+  "fedwatch": {
+    "available": false,
+    "note": "CME FedWatch not directly scrapable; CONFIDENCE low — derive via Channel 2 search"
+  },
+  "news_24h": {
+    "available": false,
+    "count": 0,
+    "items": [],
+    "error": "db_timeout"
+  },
+  "actual_close": {
+    "SPX": {
+      "date": "2026-09-17",
+      "open": 7631.44,
+      "high": 7646.86,
+      "low": 7611.81,
+      "close": 7637.76,
+      "pct_change": 1.14,
+      "prev_close": 7551.81,
+      "path": {
+        "shape": "choppy / range-bound",
+        "range_pct": 0.46,
+        "intraday_low_pct": 0.79,
+        "intraday_high_pct": 1.26,
+        "close_position_in_range": 0.74
+      }
+    },
+    "DOW": {
+      "date": "2026-09-17",
+      "open": 51882.53,
+      "high": 51935.97,
+      "low": 51607.65,
+      "close": 51778.04,
+      "pct_change": 0.61,
+      "prev_close": 51461.9,
+      "path": {
+        "shape": "choppy / range-bound",
+        "range_pct": 0.64,
+        "intraday_low_pct": 0.28,
+        "intraday_high_pct": 0.92,
+        "close_position_in_range": 0.52
+      }
+    },
+    "NDX": {
+      "date": "2026-09-17",
+      "open": 26377.86,
+      "high": 26460.64,
+      "low": 26289.94,
+      "close": 26418.3,
+      "pct_change": 1.69,
+      "prev_close": 25978.43,
+      "path": {
+        "shape": "choppy / range-bound",
+        "range_pct": 0.65,
+        "intraday_low_pct": 1.2,
+        "intraday_high_pct": 1.86,
+        "close_position_in_range": 0.75
+      }
+    }
+  }
+}
