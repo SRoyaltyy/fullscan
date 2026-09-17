@@ -1,392 +1,264 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T10:38:36.439536-04:00",
-  "overall": "PARTIAL",
-  "ranker_ready": true,
-  "counts": {
-    "ok": 7,
-    "partial": 0,
-    "fail": 1,
-    "n": 8
-  },
+  "generated_at": "2026-09-17T10:04:11.604738-04:00",
+  "overall": null,
+  "ranker_ready": null,
+  "counts": {},
   "buy_1d": [
     {
       "ticker": "FIVN",
-      "score": 0.8011356924652404
+      "side": "long",
+      "predict": "UP",
+      "px": 34.89,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     },
     {
       "ticker": "RVTY",
-      "score": 0.496766097630279
+      "side": "long",
+      "predict": "UP",
+      "px": 148.46,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     },
     {
       "ticker": "WAY",
-      "score": 0.77939252437554
+      "side": "long",
+      "predict": "UP",
+      "px": 26.47,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     },
     {
       "ticker": "IT",
-      "score": 0.5781070751076243
+      "side": "long",
+      "predict": "UP",
+      "px": 190.25,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     },
     {
       "ticker": "IOT",
-      "score": 0.5159705888738928
+      "side": "long",
+      "predict": "UP",
+      "px": 40.68,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     },
     {
       "ticker": "CARG",
-      "score": 0.7747156952340235
+      "side": "long",
+      "predict": "UP",
+      "px": 34.58,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     },
     {
       "ticker": "ATRC",
-      "score": 0.7585336310172601
+      "side": "long",
+      "predict": "UP",
+      "px": 58.96,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     },
     {
       "ticker": "AMRX",
-      "score": 0.7971416116723959
+      "side": "long",
+      "predict": "UP",
+      "px": 18.85,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     },
     {
       "ticker": "FRSH",
-      "score": 0.7048752049148768
+      "side": "long",
+      "predict": "UP",
+      "px": 12.75,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     },
     {
       "ticker": "M",
-      "score": 0.7824154529206155
+      "side": "long",
+      "predict": "UP",
+      "px": 21.72,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     },
     {
       "ticker": "LIND",
-      "score": 0.7601567402034792
+      "side": "long",
+      "predict": "UP",
+      "px": 28.56,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     },
     {
       "ticker": "NYT",
-      "score": 0.5180778954989806
+      "side": "long",
+      "predict": "UP",
+      "px": 71.7,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     },
     {
       "ticker": "IMAX",
-      "score": 0.6522873689734392
+      "side": "long",
+      "predict": "UP",
+      "px": 52.03,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     },
     {
       "ticker": "ZD",
-      "score": 0.6410522813436259
+      "side": "long",
+      "predict": "UP",
+      "px": 58.76,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     },
     {
       "ticker": "TILE",
-      "score": 0.6985899572327936
+      "side": "long",
+      "predict": "UP",
+      "px": 35.01,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     }
   ],
   "sell_1d": [
     {
       "ticker": "TLN",
-      "score": -0.30613590787239364
+      "side": "short",
+      "predict": "DOWN",
+      "px": 293.8,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     },
     {
       "ticker": "JKS",
-      "score": -0.27853750731343596
+      "side": "short",
+      "predict": "DOWN",
+      "px": 10.44,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     },
     {
       "ticker": "CMTG",
-      "score": -0.2652432612223309
+      "side": "short",
+      "predict": "DOWN",
+      "px": 1.48,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     },
     {
       "ticker": "DVLT",
-      "score": -0.2536937291657989
+      "side": "short",
+      "predict": "DOWN",
+      "px": 0.17,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     },
     {
       "ticker": "MIST",
-      "score": -0.24636048860619322
+      "side": "short",
+      "predict": "DOWN",
+      "px": 0.93,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     },
     {
       "ticker": "NUS",
-      "score": -0.23892227383012668
+      "side": "short",
+      "predict": "DOWN",
+      "px": 4.67,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     },
     {
       "ticker": "GETY",
-      "score": -0.22837916482892154
+      "side": "short",
+      "predict": "DOWN",
+      "px": 0.23,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     },
     {
       "ticker": "TLSA",
-      "score": -0.2261961685865451
+      "side": "short",
+      "predict": "DOWN",
+      "px": 0.9,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     },
     {
       "ticker": "CDZI",
-      "score": -0.2253650391844479
+      "side": "short",
+      "predict": "DOWN",
+      "px": 3.6,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     },
     {
       "ticker": "LODE",
-      "score": -0.2240404596810072
+      "side": "short",
+      "predict": "DOWN",
+      "px": 2.59,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     },
     {
       "ticker": "EU",
-      "score": -0.22251468637604516
+      "side": "short",
+      "predict": "DOWN",
+      "px": 0.91,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     },
     {
       "ticker": "STLA",
-      "score": -0.22155065764105014
+      "side": "short",
+      "predict": "DOWN",
+      "px": 5.12,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     },
     {
       "ticker": "AIRJ",
-      "score": -0.21718122839832515
+      "side": "short",
+      "predict": "DOWN",
+      "px": 4.2,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     },
     {
       "ticker": "SGML",
-      "score": -0.2111497499915636
+      "side": "short",
+      "predict": "DOWN",
+      "px": 9.09,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     },
     {
       "ticker": "OSG",
-      "score": -0.20878351777438445
+      "side": "short",
+      "predict": "DOWN",
+      "px": 4.69,
+      "px_src": "elite_live",
+      "px_asof": "2026-09-17T10:04:11.605804-04:00"
     }
   ],
-  "flatten": {
-    "said": "0 priced buys \u00b7 cash $101,497.51",
-    "bullets": [
-      "0 priced buys",
-      "cash $101,497.51"
-    ]
-  },
-  "general": {
-    "said": "UP  7.383",
-    "bullets": [
-      "bad: 1w 10Y +20bp at 5.00 handle",
-      "bad: hawkish SEP 16/18 another hike",
-      "bad: leftover Hormuz oil ~$104-108",
-      "good: ES/NQ gap-repair vs cash",
-      "good: WTI/Brent overnight dip"
-    ],
-    "score": "7.383",
-    "direction": "up"
-  },
-  "sectors": {
-    "said": "4 up / 0 down / 7 flat",
-    "bullets": [
-      "XLB FLAT +4.9",
-      "XLC UP +5.3",
-      "XLY FLAT +7.7",
-      "XLP UP +0.8",
-      "XLE UP +0.2",
-      "XLF FLAT +6.1",
-      "XLV UP +4.8",
-      "XLI FLAT +6.3",
-      "XLRE FLAT +4.9",
-      "XLK FLAT +15.7",
-      "XLU FLAT +1.8"
-    ]
-  },
-  "lands": [
-    {
-      "key": "live_boards",
-      "title": "live_boards",
-      "date": "2026-09-17",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-17T10:31:09.669800-04:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 3260,
-          "preview": "2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 1107,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-09-17.json",
-          "ok": true,
-          "reason": "",
-          "size": 24682,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-09-17_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 3219,
-          "preview": "2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 484494,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-09-17_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 484494,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 653350,
-          "preview": "2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 484494,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 3219,
-          "preview": "2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 484494,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 484494,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 653350,
-          "preview": "2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA"
-        },
-        {
-          "path": "data/day_board/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 77316,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        },
-        {
-          "path": "dashboard/factor-mine/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 77316,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        }
-      ],
-      "preview": "2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, c"
-    },
-    {
-      "key": "live_boards",
-      "title": "live_boards",
-      "date": "2026-09-17",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-17T10:34:56.929520-04:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 14134,
-          "preview": "2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 1107,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-09-17.json",
-          "ok": true,
-          "reason": "",
-          "size": 35522,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-09-17_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 14093,
-          "preview": "2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 484494,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-09-17_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 484494,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 653350,
-          "preview": "2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 484494,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 14093,
-          "preview": "2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 484494,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 484494,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 653350,
-          "preview": "2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA"
-        },
-        {
-          "path": "data/day_board/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 77316,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        },
-        {
-          "path": "dashboard/factor-mine/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 77316,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        }
-      ],
-      "preview": "2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, c"
-    }
-  ],
-  "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
+  "flatten": {},
+  "general": {},
+  "sectors": {},
+  "lands": [],
+  "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/",
+  "quote": {
+    "src": "elite_live",
+    "at": "2026-09-17T10:04:11.605804-04:00",
+    "after_open": true,
+    "n": 11637,
+    "error": null,
+    "clock_rule": "px is Finviz Elite Price from a fresh post-09:30 Overview export when live is allowed. Theme Radar close dump and yesterday Price are never live."
+  }
 }
