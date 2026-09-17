@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T04:15:43.979891-04:00",
+  "generated_at": "2026-09-17T04:15:49.793838-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -12,8 +12,8 @@
   ],
   "counts": {
     "ok": 3,
-    "partial": 2,
-    "fail": 3,
+    "partial": 3,
+    "fail": 2,
     "n": 8
   },
   "processes": [
@@ -501,9 +501,9 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 4,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -576,9 +576,9 @@
           "name": "Join ranked CSV",
           "path": "data/join/2026-09-17_ranked.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=5901",
+          "size": 2261880
         },
         {
           "key": "peers",
@@ -635,8 +635,10 @@
           "size": 6089424
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "205 rows",
+      "bullets": [
+        "SKHY, AVPT, NICE, DFIN, SONO"
+      ]
     },
     {
       "key": "publish",
@@ -1037,6 +1039,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -5.69, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -0.1, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.45, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.7, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -3.04, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -1.14, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -3.1, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -2.4, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-17\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T04:15:49.504151-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-17_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2261880,
+          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 SKHY, AVPT, NICE, DFIN, SONO"
+        }
+      ],
+      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 SKHY, AVPT, NICE, DFIN, SONO"
     }
   ],
   "href": {
