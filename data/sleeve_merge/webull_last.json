@@ -9,7 +9,7 @@
   "n_tickets": 0,
   "n_would": 4,
   "sent": [],
-  "generated": "2026-09-17T14:04:26",
+  "generated": "2026-09-17T14:39:11",
   "host": "api.sandbox.webull.com",
   "account_id": "83GO0SKCO4C521H2KQ8FS57MNA",
   "source": "hot4",
@@ -20,25 +20,25 @@
   "skipped": [
     {
       "date": "2026-09-17",
-      "ticker": "INDP",
+      "ticker": "AZTA",
       "kind": "cash",
       "reason": "leftover cash 0.00 cannot buy 1 share"
     },
     {
       "date": "2026-09-17",
-      "ticker": "GPRO",
+      "ticker": "RVTY",
       "kind": "cash",
       "reason": "leftover cash 0.00 cannot buy 1 share"
     },
     {
       "date": "2026-09-17",
-      "ticker": "INSP",
+      "ticker": "IT",
       "kind": "cash",
       "reason": "leftover cash 0.00 cannot buy 1 share"
     },
     {
       "date": "2026-09-17",
-      "ticker": "TJGC",
+      "ticker": "FIVN",
       "kind": "cash",
       "reason": "leftover cash 0.00 cannot buy 1 share"
     }
