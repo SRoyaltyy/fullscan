@@ -1,7 +1,7 @@
 name: Open 09:30 pack
 
 # Owner of the bell. Publishes session-open tickets, restamps .io, and
-# submits combo_sh_macd_5050_shared to Webull paper at 09:30 ET.
+# submits union_hot_n4_h1 (hot4, long-only MARKET) to Webull paper at 09:30 ET.
 # Does not wait on Pre-Open / Stock Book / sleeve-merge / 09:35 orch.
 # GH cron is UTC: 13:30 = EDT 09:30 / EST 08:30, 14:30 = EST 09:30 /
 # EDT 10:30. The clock waits from 08:00–09:29 (70 min max covers the
@@ -143,7 +143,7 @@ jobs:
         if: steps.clock.outputs.go == 'yes'
         run: pip install webull-openapi-python-sdk pandas numpy yfinance requests
 
-      - name: Submit combo to Webull paper
+      - name: Submit hot4 MARKET to Webull paper
         if: steps.clock.outputs.go == 'yes'
         env:
           WEBULL_APP_KEY: ${{ secrets.WEBULL_APP_KEY }}
@@ -153,13 +153,13 @@ jobs:
         run: |
           set -euo pipefail
           DATE="${{ steps.clock.outputs.date }}"
-          ARGS=(--date "$DATE" --source combo --combo combo_sh_macd_5050_shared)
+          ARGS=(--date "$DATE" --source hot4)
           if [ -n "${WEBULL_APP_KEY:-}" ] && [ -n "${WEBULL_APP_SECRET:-}" ] \
              && [ "${WANT_SUBMIT}" = "true" ]; then
             ARGS+=(--submit)
-            echo "09:30 paper submit combo_sh_macd_5050_shared on $DATE"
+            echo "09:30 paper submit union_hot_n4_h1 MARKET on $DATE"
           else
-            echo "09:30 dry-run combo_sh_macd_5050_shared on $DATE"
+            echo "09:30 dry-run union_hot_n4_h1 MARKET on $DATE"
           fi
           python -m src.webull_exec "${ARGS[@]}"
           test -s data/sleeve_merge/webull_last.json

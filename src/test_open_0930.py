@@ -91,9 +91,11 @@ def test_open_0930_yml_owns_the_bell() -> None:
     assert "--max-wait-s 4200" in yml
     assert "scripts/publish_open_pack.sh" in yml
     assert "pip install pandas pyarrow openpyxl requests" in yml
-    assert "combo_sh_macd_5050_shared" in yml
+    assert "union_hot_n4_h1" in yml
+    assert "--source hot4" in yml
     assert "--submit" in yml
     assert "src.webull_exec" in yml
+    assert "combo_sh_macd_5050_shared" not in yml
     assert "deploy-dashboard.yml" in yml
     assert "timeout-minutes: 90" in yml
     assert "group: webull-paper" in yml
@@ -130,9 +132,11 @@ def test_boards_and_paper_share_the_bell() -> None:
     yml = (WF / "open_0930.yml").read_text(encoding="utf-8")
     assert yml.count("src.open_0930_clock --wait --max-wait-s 4200") == 2
     assert yml.count("name: Clock gate (09:30 ET)") == 2
-    assert "--source combo --combo combo_sh_macd_5050_shared" in yml
+    assert "--source hot4" in yml
     assert "--submit" in yml
     assert "src.webull_exec" in yml
+    assert "--source combo" not in yml
+    assert "combo_sh_macd_5050_shared" not in yml
 
 
 def test_webull_backup_schedule_is_clock_gated() -> None:
@@ -141,7 +145,9 @@ def test_webull_backup_schedule_is_clock_gated() -> None:
     assert 'cron: "30 14 * * 1-5"' in yml
     assert "src.open_0930_clock" in yml
     assert "workflow_dispatch" in yml
-    assert "combo_sh_macd_5050_shared" in yml
+    assert "--source hot4" in yml
+    assert "union_hot_n4_h1" in yml
+    assert "combo_sh_macd_5050_shared" not in yml
     assert "github.event_name == 'schedule'" in yml
     assert "group: webull-paper" in yml
 
