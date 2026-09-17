@@ -80,6 +80,38 @@
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-17\n_Generated 2026-09-17T04:08:47.098186-04:00 \u00b7 export=data/exports/finviz_2026-09-17.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11651 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11641 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     },
     {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T04:08:54.442380-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-17_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 86288,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-17_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11344,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-17\n_Generated 2026-09-17T04:08:54.304136-04:00 \u00b7 export=data/exports/finviz_2026-09-16.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11429254,
+          "preview": "11641 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-17\n_Generated 2026-09-17T04:08:54.304136-04:00 \u00b7 export=data/exports/finviz_2026-09-16.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11641 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
       "key": "finviz_market_digest",
       "title": "Finviz homepage market digest",
       "date": "2026-09-17",
