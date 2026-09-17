@@ -1,8 +1,8 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T04:10:06.931610-04:00",
+  "generated_at": "2026-09-17T04:10:17.053880-04:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-09-17.csv",
+  "export": "finviz_2026-09-16.csv",
   "n_tickers": 11616,
   "sectors": [
     {
@@ -8935,7 +8935,7 @@
   ],
   "ticker_news": [
     {
-      "time": "6 min",
+      "time": "7 min",
       "title": "European markets open higher after Fed hike as US dollar hits seven-week high",
       "url": "https://finance.yahoo.com/markets/world-indices/articles/european-markets-open-higher-fed-080305716.html",
       "source": "Euronews",
@@ -8944,7 +8944,7 @@
       ]
     },
     {
-      "time": "6 min",
+      "time": "7 min",
       "title": "'HOLY TRINITY' LEADS EXCITING HYPERCARS AND SUPERCARS AT BROAD ARROW'S SECOND ANNUAL ZOUTE CONCOURS AUCTION",
       "url": "/news/392941/holy-trinity-leads-exciting-hypercars-and-supercars-at-broad-arrows-second-annual-zoute-concours-auction",
       "source": "GlobeNewswire",
@@ -8953,7 +8953,7 @@
       ]
     },
     {
-      "time": "9 min",
+      "time": "10 min",
       "title": "ECARX Surpasses 12 Million Vehicles Globally, Marking New Milestone in Automotive Intelligence",
       "url": "/news/392938/ecarx-surpasses-12-million-vehicles-globally-marking-new-milestone-in-automotive-intelligence",
       "source": "PR Newswire",
@@ -8962,7 +8962,7 @@
       ]
     },
     {
-      "time": "9 min",
+      "time": "10 min",
       "title": "BofA's CashPro App facilitates more than 100 billion in payments approved European companies",
       "url": "/news/392939/bofas-cashpro-app-facilitates-more-than-100-billion-in-payments-approved-european-companies",
       "source": "PR Newswire",
@@ -8971,7 +8971,7 @@
       ]
     },
     {
-      "time": "9 min",
+      "time": "10 min",
       "title": "Markel International appoints Nick Rugg to Head of Financial Institutions & Fintech - PFR & Cyber, International",
       "url": "/news/392940/markel-international-appoints-nick-rugg-to-head-of-financial-institutions-fintech-pfr-cyber-international",
       "source": "PR Newswire",
@@ -8989,7 +8989,7 @@
       ]
     },
     {
-      "time": "26 min",
+      "time": "27 min",
       "title": "IQM to Deliver Its First Quantum Computer in South America to Brazil's Eldorado Research Institute",
       "url": "/news/392937/iqm-to-deliver-its-first-quantum-computer-in-south-america-to-brazils-eldorado-research-institute",
       "source": "Business Wire",
@@ -10572,5 +10572,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 180,
   "earnings_window_count": 44,
-  "overlay_at": "2026-09-17T04:10:06.931610-04:00"
+  "overlay_at": "2026-09-17T04:10:17.053880-04:00"
 }

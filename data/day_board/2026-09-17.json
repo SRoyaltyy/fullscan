@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T04:10:07.106271-04:00",
+  "generated_at": "2026-09-17T04:10:17.231642-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -54,7 +54,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 270277
+          "size": 270280
         },
         {
           "key": "heat_md",
@@ -63,7 +63,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 16792
+          "size": 16795
         }
       ],
       "said": "tables on disk",
@@ -87,7 +87,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 86711
+          "size": 86288
         },
         {
           "key": "digest_md",
@@ -96,7 +96,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11300
+          "size": 11317
         },
         {
           "key": "market_digest_json",
@@ -156,7 +156,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 86711
+          "size": 86288
         },
         {
           "key": "in_market_digest",
@@ -183,7 +183,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 270277
+          "size": 270280
         },
         {
           "key": "parsed",
@@ -405,7 +405,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 86711
+          "size": 86288
         },
         {
           "key": "weather",
@@ -480,7 +480,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 86711
+          "size": 86288
         },
         {
           "key": "dossiers",
@@ -540,7 +540,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 86711
+          "size": 86288
         },
         {
           "key": "in_judge",
@@ -868,6 +868,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-17\nExport `finviz_2026-09-17.csv` \u00b7 11616 names \u00b7 generated 2026-09-17T04:10:06.931610-04:00"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-09-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T04:10:17.092536-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-17_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 270280,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-17_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 17166,
+          "preview": "# MAP HEAT \u2014 2026-09-17\nExport `finviz_2026-09-16.csv` \u00b7 11616 names \u00b7 generated 2026-09-17T04:10:17.053880-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-17\nExport `finviz_2026-09-16.csv` \u00b7 11616 names \u00b7 generated 2026-09-17T04:10:17.053880-04:00"
     }
   ],
   "href": {
