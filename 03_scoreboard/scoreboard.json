@@ -7818,6 +7818,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.4
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-09-17",
+          "actual_pct": -0.91,
+          "actual_direction": "down",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.4
         }
       },
       "lesson_schema_ok": true
@@ -11378,6 +11390,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.42
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-17",
+          "actual_pct": -4.18,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.4
         }
       }
     },
@@ -12941,6 +12965,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-17",
+          "actual_pct": -2.29,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.45
         }
       }
     },
@@ -13199,6 +13235,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-17",
+          "actual_pct": -1.37,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.48
         }
       }
     },
@@ -13285,6 +13333,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-17",
+          "actual_pct": -4.59,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.4
         }
       }
     },
@@ -13371,6 +13431,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.52
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-17",
+          "actual_pct": -3.46,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       }
     },
@@ -15376,6 +15448,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-17",
+          "actual_pct": -0.38,
+          "actual_direction": "down",
+          "actual_magnitude_band": "flat",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.48
         }
       },
       "lesson_schema_ok": true
@@ -19686,6 +19770,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-17",
+          "actual_pct": -2.91,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       }
     },
@@ -20098,6 +20194,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.62
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-17",
+          "actual_pct": 0.61,
+          "actual_direction": "up",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.58
         }
       },
       "lesson_schema_ok": true
@@ -21303,7 +21411,20 @@
       "knowable_at_9am": "partially — direction and both catalysts were fully knowable premarket (AI shock published Sat, pipeline attack Sat, 10Y at 4.96% on 09-11, hike odds ~77%); the magnitude of the offsetting rotation and the absorption of the NQ -1.6% gap were NOT foreseeable",
       "attribution_contested": "yes — Bloomberg/Schwab/Fortune lead with the AI-slowdown shock; TheStreet/CNN lead with the 10Y hitting 5%; Bloomberg/Al Jazeera/NYT lead with oil/Middle East; Trading Economics frames it as single-name drags (Caterpillar, Goldman, Nvidia)",
       "outlier_watch": "Gold -1.26% and silver -2.17% FELL on a Middle East supply-shock day, and utilities (XLU) and REITs (XLRE) were GREEN despite the 10Y at 5% — both contradict a pure rates/geopolitical-risk story and point to equity-internal rotation as the true driver",
-      "horizon_grades": {},
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-09-17",
+          "actual_pct": 0.23,
+          "actual_direction": "flat",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.6
+        }
+      },
       "lesson_schema_ok": true
     },
     {
@@ -23018,7 +23139,7 @@
           "status": "hit"
         }
       ],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-09-17_lesson.md",
       "sources_used": [
         {
           "url": "https://www.morningstar.com/news/dow-jones/202609177386/sp-500-rises-114-to-763776-data-talk",
@@ -23105,7 +23226,9 @@
       "key_interaction": "overnight B6 gap was the price, oil↓×yields↓ was the permission structure that stopped the gap from filling (hawkish SEP vs oil-relief offset after the open)",
       "knowable_at_9am": "partially",
       "attribution_contested": "yes",
-      "outlier_watch": "energy lagged and financials/staples finished red on a +1.14% SPX day; Boeing/CoreWeave/Fluence sold off inside “tech led”; NYSE/Nasdaq new lows still exceeded new highs"
+      "outlier_watch": "energy lagged and financials/staples finished red on a +1.14% SPX day; Boeing/CoreWeave/Fluence sold off inside “tech led”; NYSE/Nasdaq new lows still exceeded new highs",
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-09-17",
