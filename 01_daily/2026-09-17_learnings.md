@@ -1,6 +1,6 @@
 # Learnings report — 2026-09-17
 
-Generated: **2026-09-17T18:55:01.147584-04:00** by `src/learn_cycle.py`.
+Generated: **2026-09-17T18:55:23.548498-04:00** by `src/learn_cycle.py`.
 
 This is the human-readable digest of what the bot **actually learned** this cycle: graded evidence, hypotheses (wins and losses), promoted standing rules, and **how that changes every daily workflow**.
 
@@ -496,7 +496,7 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 
 ## 4. Promoted standing rules (this cycle)
 
-- `session-after-an-already-printed-fomc-sep-presser-with-a-lar.md`
+- `a-sector-etf-posts-an-all-zero-or-net-zero-s0-s4-leading-car.md`
 
 Full text lives in `02_lessons/active/`. Summaries also feed `mutable_policy.md`.
 

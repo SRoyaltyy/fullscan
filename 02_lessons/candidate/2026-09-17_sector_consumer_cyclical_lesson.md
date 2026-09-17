@@ -7,7 +7,7 @@ error_category: "A"
 falsifier: "If a future session shows an all-zero S0–S4 card with tape_anchor >4 on a broad risk-on tape (NQ ≥ +1.5%, VIX falling) and XLY closes DOWN or flat-absolute, this lesson is falsified. Also falsified if taking the anchor produces a dir MISS on a session where the anchor was stale relative to a live opposing cash tape (i.e., if the narrowing fails to distinguish 09-16-type from 09-17-type setups)."
 sector: "Consumer Cyclical"
 date: "2026-09-17"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Cyclical — 2026-09-17

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T18:55:01.125922-04:00",
+  "generated_at": "2026-09-17T18:55:23.527270-04:00",
   "window": 7,
   "summary": {
     "n_active": 208,
@@ -1352,6 +1352,21 @@
       "verdict": "improved"
     },
     {
+      "lesson": "a-sector-etf-posts-an-all-zero-or-net-zero-s0-s4-leading-car.md",
+      "topic": "sector:Basic Materials",
+      "active_since": "2026-09-17",
+      "error_category": "A",
+      "before": {
+        "hit": 0.429,
+        "n": 7
+      },
+      "after": {
+        "hit": null,
+        "n": 0
+      },
+      "verdict": "insufficient"
+    },
+    {
       "lesson": "a-sector-etf-s-trailing-1d-relative-print-from-the-prior-clo.md",
       "topic": "sector:Communication Services",
       "active_since": "2026-09-11",
@@ -2588,21 +2603,6 @@
       },
       "delta": -0.524,
       "verdict": "WORSE"
-    },
-    {
-      "lesson": "session-after-an-already-printed-fomc-sep-presser-with-a-lar.md",
-      "topic": "sector:Communication Services",
-      "active_since": "2026-09-17",
-      "error_category": "D",
-      "before": {
-        "hit": 0.286,
-        "n": 7
-      },
-      "after": {
-        "hit": null,
-        "n": 0
-      },
-      "verdict": "insufficient"
     },
     {
       "lesson": "this-shows-up-on-1w-books-when-the-news-family-is-absent-and.md",

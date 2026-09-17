@@ -55,9 +55,9 @@ No signed-call change. Keep flat/flat on an unsigned post-event industrials card
 ## WHEN IT FIRES
 A cyclical industrials ETF (XLI-like) posts an all-zero S0–S4 card on the session AFTER a paid FOMC/SEP, with 1w/1m relative lag fo …
 
-### session-after-an-already-printed-fomc-sep-presser-with-a-lar.md
+### a-sector-etf-posts-an-all-zero-or-net-zero-s0-s4-leading-car.md
 ## RULE
-When the sector ETF's own live premarket print is flat (|PM| ≤ ~0.1%) and is the worst/tied-worst on the sector board while the index sleeve is strongly green, the index legs of tape_anchor must be **capped or zeroed for this sector** — an index rebound is not a participation certificate (08-27 / 09-10 / 09-16). With S0–S4 all explicitly 0 and PM:XLC = 0.00%, the correct official call is **flat/flat**, not up/mild. If the engine cannot suppress the index sleeve, the LLM overlay must emit …
+When S0–S3 net to zero BUT (a) the index backdrop is strongly positive (ES/NQ ≥ +0.5% and ideally ≥ +1%), (b) yields are falling / duration-relief is live, and (c) the sector's own PM is green, the residual should be MILD UP with relative lag — not flat. Condition the 8/28 "residual-is-flat" rule on a NEUTRAL index tape; it must not bind when the broad tape is up >1%. Treat the 8/27 S4-cap as a cap on CONVICTION (cannot emit confirmed-up), not on LEVEL (a capped-up call is still an up ca …
 
 ### a-bond-proxy-defensive-xlp-xlu-xlre-like-has-a-net-negative.md
 ## RULE

@@ -7,7 +7,7 @@ error_category: "A"
 falsifier: "If a future session has an all-zero S0–S4 card, a strongly positive index tape (ES/NQ ≥ +0.5%, ideally ≥ +1%), falling yields, and a green sector PM, and the sector ETF nonetheless closes flat or down (|close| < 0.2% or negative), then the "mild up / relative lag" correction is falsified and the flat rule should re-bind unconditionally. Conversely, if such a session closes up but the relative lag is absent (rel ≥ 0), the "relative lag" half of the correction is falsified."
 sector: "Basic Materials"
 date: "2026-09-17"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Basic Materials — 2026-09-17

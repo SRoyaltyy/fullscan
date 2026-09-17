@@ -1,6 +1,6 @@
 # Lesson efficacy — did promoted lessons change outcomes?
 
-_Generated 2026-09-17T18:55:01.125922-04:00_ · window: 7 graded runs each side of activation · deltas within ±5pp count as flat.
+_Generated 2026-09-17T18:55:23.527270-04:00_ · window: 7 graded runs each side of activation · deltas within ±5pp count as flat.
 
 This is correlation, not proof — but a lesson whose topic got WORSE after promotion has no evidence of working and is a retirement candidate for the monthly distill.
 
@@ -173,6 +173,7 @@ This is correlation, not proof — but a lesson whose topic got WORSE after prom
 | `a-sector-etf-has-printed-2-consecutive-sessions-` | sector:Healthcare | 2026-09-10 | 57% (n=7) | 20% (n=5) | -37% | WORSE |
 | `a-sector-etf-is-a-concentrated-two-name-book-top` | sector:Communication Services | 2026-09-10 | 14% (n=7) | 25% (n=4) | +11% | improved |
 | `a-sector-etf-is-a-deep-multi-horizon-relative-la` | sector:Industrials | 2026-09-10 | 14% (n=7) | 80% (n=5) | +66% | improved |
+| `a-sector-etf-posts-an-all-zero-or-net-zero-s0-s4` | sector:Basic Materials | 2026-09-17 | 43% (n=7) | — | — | insufficient |
 | `a-sector-etf-s-trailing-1d-relative-print-from-t` | sector:Communication Services | 2026-09-11 | 14% (n=7) | 0% (n=3) | — | insufficient |
 | `a-sector-etf-sits-at-near-all-time-highs-after-a` | sector:Energy | 2026-09-10 | 43% (n=7) | 60% (n=5) | +17% | improved |
 | `a-sector-has-led-spy-on-a-defensive-relative-str` | sector:Healthcare | 2026-08-14 | 50% (n=4) | 57% (n=7) | +7% | improved |
@@ -255,7 +256,6 @@ This is correlation, not proof — but a lesson whose topic got WORSE after prom
 | `sector-prediction-calls-flat-flat-when-the-secto` | sector:Energy | 2026-09-04 | 29% (n=7) | 57% (n=7) | +28% | improved |
 | `sector-prediction-emits-flat-flat-when-broad-mar` | sector:Healthcare | 2026-09-04 | 71% (n=7) | 29% (n=7) | -43% | WORSE |
 | `sector-prediction-made-when-the-sector-s-dominan` | sector:Energy | 2026-08-18 | 67% (n=6) | 14% (n=7) | -52% | WORSE |
-| `session-after-an-already-printed-fomc-sep-presse` | sector:Communication Services | 2026-09-17 | 29% (n=7) | — | — | insufficient |
 | `this-shows-up-on-1w-books-when-the-news-family-i` | — | 2026-08-31 | — | — | — | not market-graded |
 | `two-name-duration-growth-book-xlc-like-meta-goog` | sector:Communication Services | 2026-08-28 | 29% (n=7) | 29% (n=7) | +0% | flat |
 | `when-a-defensive-sector-prediction-is-directiona` | sector:Consumer Defensive | 2026-08-13 | 33% (n=3) | 43% (n=7) | — | insufficient |
