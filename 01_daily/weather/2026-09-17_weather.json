@@ -1,6 +1,6 @@
 {
  "date": "2026-09-17",
- "generated_at": "2026-09-17T06:47:52.389359-04:00",
+ "generated_at": "2026-09-17T19:52:10.368694-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -17,23 +17,23 @@
   "fed_score": -0.5,
   "dollar_oil_score": 0.5,
   "futures_score": 0.5,
-  "yields": "rising",
+  "yields": "flat",
   "yields_source": "fred_dgs10",
-  "dgs10_delta_1d": 0.03,
-  "dgs10_current": 5.0,
-  "dollar": "soft",
+  "dgs10_delta_1d": 0.01,
+  "dgs10_current": 5.01,
+  "dollar": "flat",
   "dollar_source": "dxy",
-  "dxy_pct_1d": -0.16,
-  "vix_ratio": 0.81,
-  "vix_spot": 15.99,
-  "vix_delta_1d": -1.72,
+  "dxy_pct_1d": -0.07,
+  "vix_ratio": 0.832,
+  "vix_spot": 15.44,
+  "vix_delta_1d": -2.27,
   "vix_ratio_source": "vix/vix3m",
   "vix": "falling",
-  "oil_pct_1d": -1.74,
+  "oil_pct_1d": -1.27,
   "oil": "falling",
   "fear_greed": null,
   "fear_greed_label": null,
-  "regime_corr": -0.109,
+  "regime_corr": -0.437,
   "sectors": {
    "Basic Materials": {
     "score": 4.936,
@@ -179,14 +179,14 @@
   },
   "size": {
    "micro": {
-    "stance": "favorable",
-    "confidence": "medium",
-    "why": "risk-on with soft dollar — small-cap tape works; risk-on, dollar soft [general predict + factors]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "risk-on, dollar flat [general predict + factors]"
    },
    "small": {
-    "stance": "favorable",
-    "confidence": "medium",
-    "why": "risk-on with soft dollar — small-cap tape works; risk-on, dollar soft [general predict + factors]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "risk-on, dollar flat [general predict + factors]"
    },
    "large": {
     "stance": "neutral",
@@ -221,9 +221,9 @@
     "why": "risk-on — mega leads less in broad rallies [general predict]"
    },
    "rut": {
-    "stance": "favorable",
-    "confidence": "medium",
-    "why": "risk-on with soft dollar — small-cap tape works; risk-on, dollar soft [general predict + factors]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "risk-on, dollar flat [general predict + factors]"
    },
    "none": {
     "stance": "neutral",
@@ -318,14 +318,14 @@
   },
   "lev": {
    "high": {
-    "stance": "hostile",
-    "confidence": "medium",
-    "why": "yields rising — leverage amplifies the downside [factors + general]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "—"
    },
    "low": {
-    "stance": "favorable",
+    "stance": "neutral",
     "confidence": "low",
-    "why": "balance-sheet strength preferred in stress"
+    "why": "—"
    },
    "mid": {
     "stance": "neutral",
@@ -340,14 +340,14 @@
   },
   "style": {
    "growth": {
-    "stance": "hostile",
-    "confidence": "medium",
-    "why": "yields rising — long-duration growth de-rates [factor: Bond yields]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "yields flat/unknown"
    },
    "value": {
-    "stance": "favorable",
-    "confidence": "medium",
-    "why": "rising yields/reflation favors value & cyclicals [factor: Bond yields]"
+    "stance": "neutral",
+    "confidence": "low",
+    "why": "yields flat/unknown"
    },
    "blend": {
     "stance": "neutral",

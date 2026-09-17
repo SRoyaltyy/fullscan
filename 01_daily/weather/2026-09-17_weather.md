@@ -5,8 +5,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 ## Snapshot
 
 - **Risk state:** ON (general predict up score +7.4, conf 0.795)
-- **Yields:** rising (fred_dgs10) | **Dollar:** soft (dxy) | **Oil:** falling | **VIX:** falling (ratio 0.81 via vix/vix3m) spot 15.99
-- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.11
+- **Yields:** flat (fred_dgs10) | **Dollar:** flat (dxy) | **Oil:** falling | **VIX:** falling (ratio 0.83 via vix/vix3m) spot 15.44
+- **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.44
 - **High-impact events:** 2 bullish vs 7 bearish
 
 ## Sectors
@@ -29,8 +29,8 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| size:micro | 🌤️ favorable | medium | risk-on with soft dollar — small-cap tape works; risk-on, dollar soft [general predict + factors] |
-| size:small | 🌤️ favorable | medium | risk-on with soft dollar — small-cap tape works; risk-on, dollar soft [general predict + factors] |
+| size:micro | ⛅ neutral | low | risk-on, dollar flat [general predict + factors] |
+| size:small | ⛅ neutral | low | risk-on, dollar flat [general predict + factors] |
 | size:large | ⛅ neutral | low | risk-on — mega leads less in broad rallies [general predict] |
 | size:mega | ⛅ neutral | low | risk-on — mega leads less in broad rallies [general predict] |
 | size:mid | ⛅ neutral | low | no dedicated mid-cap signal in v1 |
@@ -64,16 +64,16 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| style:growth | 🌧️ hostile | medium | yields rising — long-duration growth de-rates [factor: Bond yields] |
-| style:value | 🌤️ favorable | medium | rising yields/reflation favors value & cyclicals [factor: Bond yields] |
+| style:growth | ⛅ neutral | low | yields flat/unknown |
+| style:value | ⛅ neutral | low | yields flat/unknown |
 | style:blend | ⛅ neutral | low | — |
 
 ## Leverage
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| lev:high | 🌧️ hostile | medium | yields rising — leverage amplifies the downside [factors + general] |
-| lev:low | 🌤️ favorable | low | balance-sheet strength preferred in stress |
+| lev:high | ⛅ neutral | low | — |
+| lev:low | ⛅ neutral | low | — |
 | lev:mid | ⛅ neutral | low | — |
 | lev:neg_equity | 🌧️ hostile | low | negative equity is distressed in any regime |
 
