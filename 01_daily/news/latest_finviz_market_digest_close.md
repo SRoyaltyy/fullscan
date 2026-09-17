@@ -1,49 +1,48 @@
-# Finviz homepage market digest (close) — 2026-09-16
+# Finviz homepage market digest (close) — 2026-09-17
 
-**Generated:** 2026-09-16T17:00:48.927704-04:00 (America/New_York)
+**Generated:** 2026-09-17T16:34:29.476431-04:00 (America/New_York)
 **Source:** `live`
-**Banner:** US stocks closed lower as Fed delivered first rate hike since 2023 and signaled further tightening amid stubborn inflation while Dow futures fall over 1% ahead of data and earnings
-**Prior close:** SPX —  Nasdaq -0.78%  Dow -0.45%
-**SPX:** —  **Nasdaq:** -0.78%  **Dow:** -0.45%
+**Banner:** US stocks closed higher as falling Treasury yields and oil prices eased post-Fed pressures after jobless claims data and Bank of England follow-through
+**Prior close:** SPX +1.15%  Nasdaq +1.69%  Dow +0.61%
+**SPX:** +1.15%  **Nasdaq:** +1.69%  **Dow:** +0.61%
 **Oil:** —
-**CPI/Fed:** 4.0% hike (4.00% target range, its first hike)
-**Leaders:** INTC, SKHY, F, FANG, UAL, AAL, LEN
-**Next session:** housing no · retail yes · Fed yes
-**Earnings slate:** LEN
+**CPI/Fed:** 4.95% hike (around 4.95%, helping support equities after the Federal Reserve’s quarter-point hike)
+**Leaders:** NVDA, AMD, AMZN, GNRC, NBIS, SECZ, LEN, DHI, PHM
+**Next session:** housing yes · retail no · Fed yes
+**Earnings slate:** —
 **Geo/grain:** —
-**Clock legal for:** 2026-09-17
+**Clock legal for:** 2026-09-18
 **Clock use:** `next_open`
 
 ## Clock
 
-Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-09-17) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
+Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-09-18) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
 ## Theme Radar
 
-- **Prior close:** SPX — · Nasdaq -0.78% · Dow -0.45%
+- **Prior close:** SPX +1.15% · Nasdaq +1.69% · Dow +0.61%
 - **Oil:** —
-- **CPI / Fed-odds:** 4.0% hike (4.00% target range, its first hike)
-- **Named leaders:** INTC, SKHY, F, FANG, UAL, AAL, LEN
-- **Next-session calendar:** housing no · retail yes · Fed yes
-  - The Federal Reserve unanimously raised the federal funds rate by 25 bp to a 3.75%-4.00% target range, its first hike since 2023, and signaled at least one additional increase through 2027 amid persistent inflation pressures
-  - August retail sales rose 1.2%, beating forecasts and adding to the macro backdrop the Fed is monitoring
-  - After-hours Dow (@YM) futures traded more than 1% lower as investors looked ahead to Thursday’s economic data and further earnings for additional clues on Fed policy
-- **Earnings slate:** LEN
+- **CPI / Fed-odds:** 4.95% hike (around 4.95%, helping support equities after the Federal Reserve’s quarter-point hike)
+- **Named leaders:** NVDA, AMD, AMZN, GNRC, NBIS, SECZ, LEN, DHI, PHM
+- **Next-session calendar:** housing yes · retail no · Fed yes
+  - The 10-year US Treasury yield slipped back below 5% to around 4.95%, helping support equities after the Federal Reserve’s quarter-point hike to a 3.75%–4.00% target range under Chair Kevin Warsh
+  - US housing starts unexpectedly declined in August, led by multifamily weakness, though the release had limited market impact, and investors looked ahead to US jobless claims and follow-through from Bank of England policy decisions
+- **Earnings slate:** —
 - **Geo / grain:** —
 
 ## Narrative
 
-**US stocks closed lower as Fed delivered first rate hike since 2023 and signaled further tightening amid stubborn inflation while Dow futures fall over 1% ahead of data and earnings**
+**US stocks closed higher as falling Treasury yields and oil prices eased post-Fed pressures after jobless claims data and Bank of England follow-through**
 
-- The Federal Reserve unanimously raised the federal funds rate by 25 bp to a 3.75%-4.00% target range, its first hike since 2023, and signaled at least one additional increase through 2027 amid persistent inflation pressures
-- The Dow Jones Industrial Average ($DJI) fell 631 points to 51,462, the S&P 500 ($SPX) declined 0.45% to 7,585.73, and the Nasdaq Composite ($COMP) lost 0.78% to 25,981.57, with losses reportedly accelerating in the final hour after Fed comments
-- Fed Chair Kevin Warsh highlighted inflation risks in his press conference, and remarks from Warsh and Cleveland Fed President Loretta Mester were cited as drivers of intraday volatility
-- Nine of the 11 S&P 500 ($SPX) sectors finished lower, led by consumer discretionary down 1.76% and utilities off 1.2%, while energy gained 2.26% and materials added 0.37% even as oil (@CL) slipped on increased Saudi supply via Oman
-- Intel (INTC) advanced as chip stocks including SK Hynix (SKHY) rebounded from a recent sell-off
-- Ford Motor (F) shares fell after the company unveiled a comprehensively refreshed 2027 F-150 with BlueCruise hands-free towing and expanded V8 engine availability
-- Diamondback Energy (FANG) dropped about 7–9% amid an energy sector rotation and fuel-cost pressures flagged by United Airlines (UAL) and American Airlines (AAL)
-- August retail sales rose 1.2%, beating forecasts and adding to the macro backdrop the Fed is monitoring
-- Lennar Corporation (LEN) is scheduled to report its Q3 earnings after the closing bell
-- After-hours Dow (@YM) futures traded more than 1% lower as investors looked ahead to Thursday’s economic data and further earnings for additional clues on Fed policy
+- The S&P 500 ($SPX) rose 1.15% to 7,638.40, the Dow Jones Industrial Average ($DJI) gained 0.61% to 51,778.04, the Nasdaq Composite ($COMP) climbed 1.69% to 26,418.30, the Nasdaq 100 ($NDX) added 1.73%, and the Russell 2000 (IWM) advanced about 0.5%, rebounding from the prior day’s Fed-driven selloff
+- The 10-year US Treasury yield slipped back below 5% to around 4.95%, helping support equities after the Federal Reserve’s quarter-point hike to a 3.75%–4.00% target range under Chair Kevin Warsh
+- Technology led the advance as the PHLX Semiconductor Index jumped 3.21%, with Nvidia (NVDA) up 2.5% and Advanced Micro Devices (AMD) gaining 6.4% amid an AI-related rebound, even as OpenAI reported additional concerning AI model behavior
+- Amazon (AMZN) shares advanced after the company signed a long-term Generac deal for data-center backup generators worth up to $8 billion that supported broader tech and infrastructure sentiment
+- Generac Holdings (GNRC) surged 18.3% after securing a long-term supply agreement with Amazon (AMZN) for data-center backup generators valued at up to $8 billion, including $2.4 billion in initial deliveries for 2027–2028
+- Nebius (NBIS) climbed about 4% after raising on-demand GPU prices by up to 21% effective October 1, reflecting strong demand for compute capacity
+- Securitize (SECZ) jumped more than 15% after the US securities regulator granted a five-year exemption allowing tokenized US stock trading on its platform
+- Oil fell about 1.7% to around $104 per barrel after Saudi Arabia offered additional cargoes, pressuring energy stocks
+- Lennar (LEN) gained about 1.7% after initially falling on weaker-than-expected quarterly profit and revenue, while D.R. Horton (DHI) and PulteGroup (PHM) also advanced as lower yields aided homebuilders
+- US housing starts unexpectedly declined in August, led by multifamily weakness, though the release had limited market impact, and investors looked ahead to US jobless claims and follow-through from Bank of England policy decisions
