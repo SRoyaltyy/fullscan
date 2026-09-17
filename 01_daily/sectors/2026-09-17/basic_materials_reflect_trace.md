@@ -6,4 +6,4 @@
 
 
 
-**Step 1 — Done researching.** Sector essay landed with the tool call (5,852 characters); skipping further search so the child can write.
+**Step 1 — Done researching.** Sector essay landed with the tool call (5,358 characters); skipping further search so the child can write.
