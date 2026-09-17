@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "n_ok": 3,
+  "n_ok": 4,
   "n_total": 11,
   "sectors": [
     {
@@ -23,9 +23,9 @@
     },
     {
       "sector": "Consumer Defensive",
-      "ok": false,
-      "reason": "missing",
-      "size": 0
+      "ok": true,
+      "reason": "",
+      "size": 16895
     },
     {
       "sector": "Energy",
