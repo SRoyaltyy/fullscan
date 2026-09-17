@@ -407,7 +407,8 @@ def test_score_only_today_json_is_not_open_0930_good() -> None:
         sleeve.mkdir(parents=True)
         (sleeve / "webull_last.json").write_text(json.dumps({
             "date": "2026-09-15",
-            "combo": "combo_sh_macd_5050_shared",
+            "source": "hot4",
+            "policy": "union_hot_n4_h1",
             "connected": True,
             "n_tickets": 0,
         }), encoding="utf-8")
