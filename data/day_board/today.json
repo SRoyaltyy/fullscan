@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T04:17:28.865878-04:00",
+  "generated_at": "2026-09-17T04:17:46.300617-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,24 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-09-17",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-17T04:12:07.050110-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-09-17_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1119089,
-          "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5901 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -186,6 +168,31 @@
         }
       ],
       "preview": "11641 rows \u00b7 Ticker,score,score_source,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month, \u00b7 HRTG, GLBS, WAY, EXLS, KRT"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-09-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T04:17:45.689628-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-17_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 64505,
+          "preview": "raw=121 usable=8 single=17 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | Retail Sales, Imports Come In Warm Ahead of FOMC Decision | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u2019s Jackson Hole commen | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Surprise US crude inventory build and Fed rate hike drive 5.63% DVN drop"
+        },
+        {
+          "path": "01_daily/news/2026-09-17_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 3984,
+          "preview": "# News Parse v2 \u2014 2026-09-17T04:17:45.633491-04:00\nWindow\u224848h | raw=121 | usable=8 | single_name=17 | noise_dropped=96\nusable polarity={'+': 1, '-': 4, 'mixed': 0, 'neutral': 3}"
+        }
+      ],
+      "preview": "raw=121 usable=8 single=17 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | Retail Sales, Imports Come In Warm Ahead of FOMC Decision | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u2019s Jackson Hole commen | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Surprise US crude inventory build and Fed rate hike drive 5.63% DVN drop \u00b7 # News Parse v2 \u2014 2026-09-17T04:17:45.633491-04:00\nWindow\u224848h | raw=121 | usable=8 | single_name=17 | noise_dropped=96\nusable polarity={'+': 1, '-': 4, 'mixed': 0, 'neutral': 3}"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
