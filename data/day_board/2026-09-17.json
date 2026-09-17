@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T04:56:19.337781-04:00",
+  "generated_at": "2026-09-17T04:57:14.716239-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -417,14 +417,14 @@
           "path": "01_daily/weather/2026-09-17_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9488 vix=falling yields=rising",
-          "size": 9488
+          "reason": "sectors=11 bytes=10167 vix=falling yields=rising",
+          "size": 10167
         }
       ],
       "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
         "hostile: Basic Materials, Consumer Cyclical, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities",
-        "events bull 2 / bear 12"
+        "events bull 2 / bear 7"
       ]
     },
     {
@@ -566,8 +566,8 @@
           "path": "01_daily/weather/2026-09-17_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9488 vix=falling yields=rising",
-          "size": 9488
+          "reason": "sectors=11 bytes=10167 vix=falling yields=rising",
+          "size": 10167
         },
         {
           "key": "in_ab",
@@ -585,7 +585,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5901",
-          "size": 2261880
+          "size": 2282652
         },
         {
           "key": "peers",
@@ -642,9 +642,9 @@
           "size": 6089424
         }
       ],
-      "said": "205 rows",
+      "said": "207 rows",
       "bullets": [
-        "SKHY, AVPT, NICE, DFIN, SONO"
+        "AXTI, RDVT, CRSR, ANET, AMD"
       ]
     },
     {
@@ -746,7 +746,7 @@
       "said": "favorable 1 \u00b7 hostile 8 \u00b7 neutral 2",
       "bullets": [
         "hostile: Basic Materials, Consumer Cyclical, Consumer Defensive, Energy, Healthcare, Industrials, Real Estate, Utilities",
-        "events bull 2 / bear 12"
+        "events bull 2 / bear 7"
       ]
     }
   },
@@ -1279,6 +1279,31 @@
         }
       ],
       "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-17\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-09-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T04:57:14.010807-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-09-17.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11002161,
+          "preview": "11641 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11429254,
+          "preview": "11641 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11641 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11641 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
