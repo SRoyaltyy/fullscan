@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T23:46:59.255592-04:00",
+  "generated_at": "2026-09-17T23:48:16.203086-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -602,8 +602,8 @@
           "path": "data/stock_book/2026-09-17_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=210",
-          "size": 1497680
+          "reason": "horizons=5 names=220",
+          "size": 1526226
         },
         {
           "key": "book_md",
@@ -612,7 +612,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 83727
+          "size": 89652
         },
         {
           "key": "green",
@@ -621,7 +621,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 3745
+          "size": 2891
         },
         {
           "key": "paper",
@@ -664,8 +664,8 @@
           "path": "data/stock_book/2026-09-17_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=210",
-          "size": 1497680
+          "reason": "horizons=5 names=220",
+          "size": 1526226
         },
         {
           "key": "dash_html",
@@ -702,126 +702,126 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "ILMN",
-        "score": 0.5912664255463734
-      },
-      {
-        "ticker": "IOVA",
-        "score": 0.8171253936116503
-      },
-      {
-        "ticker": "PGEN",
-        "score": 0.8599167205490108
-      },
-      {
         "ticker": "FIVN",
-        "score": 0.8056706447862081
+        "score": 0.801300319710498
+      },
+      {
+        "ticker": "WAY",
+        "score": 0.7822236458009222
+      },
+      {
+        "ticker": "RVTY",
+        "score": 0.4987466026503685
+      },
+      {
+        "ticker": "IT",
+        "score": 0.5764702364018779
+      },
+      {
+        "ticker": "IOT",
+        "score": 0.5161544621864507
       },
       {
         "ticker": "ATRC",
-        "score": 0.8458045741914606
+        "score": 0.7593680947338235
       },
       {
-        "ticker": "ASAN",
-        "score": 0.8049978570110208
-      },
-      {
-        "ticker": "MGNI",
-        "score": 0.87696946072677
-      },
-      {
-        "ticker": "CRWD",
-        "score": 0.26472507241916676
-      },
-      {
-        "ticker": "BBY",
-        "score": 0.3732146912526119
-      },
-      {
-        "ticker": "SONO",
-        "score": 0.74733798620364
-      },
-      {
-        "ticker": "CROX",
-        "score": 0.7885155288364787
-      },
-      {
-        "ticker": "ZD",
-        "score": 0.7021835975593342
-      },
-      {
-        "ticker": "GME",
-        "score": 0.5788690966329287
+        "ticker": "AMRX",
+        "score": 0.7994630738938153
       },
       {
         "ticker": "CARG",
-        "score": 0.7219152308478134
+        "score": 0.7680123979308255
+      },
+      {
+        "ticker": "FRSH",
+        "score": 0.7051606300844773
       },
       {
         "ticker": "M",
-        "score": 0.752488389619979
+        "score": 0.7881311448726551
+      },
+      {
+        "ticker": "LIND",
+        "score": 0.7577937840345121
+      },
+      {
+        "ticker": "OMC",
+        "score": 0.3383035911268022
+      },
+      {
+        "ticker": "IMAX",
+        "score": 0.6527394309435515
+      },
+      {
+        "ticker": "ZD",
+        "score": 0.6378070692605247
+      },
+      {
+        "ticker": "FTDR",
+        "score": 0.6291886753210132
       }
     ],
     "sell_1d": [
       {
         "ticker": "TLN",
-        "score": -0.29057693801458984
-      },
-      {
-        "ticker": "OSG",
-        "score": -0.28666988353340406
-      },
-      {
-        "ticker": "CDZI",
-        "score": -0.2724174896727416
-      },
-      {
-        "ticker": "EQ",
-        "score": -0.2711170428047044
-      },
-      {
-        "ticker": "DVLT",
-        "score": -0.2562563626469788
-      },
-      {
-        "ticker": "MIST",
-        "score": -0.2479747981100571
-      },
-      {
-        "ticker": "LDI",
-        "score": -0.24758704702996906
-      },
-      {
-        "ticker": "SEER",
-        "score": -0.24126785332391437
-      },
-      {
-        "ticker": "LODE",
-        "score": -0.23880985850774886
-      },
-      {
-        "ticker": "GETY",
-        "score": -0.2348939613843615
-      },
-      {
-        "ticker": "NUS",
-        "score": -0.23172315206377972
-      },
-      {
-        "ticker": "NAUT",
-        "score": -0.21886685010467602
+        "score": -0.2889510366491428
       },
       {
         "ticker": "JKS",
-        "score": -0.21398230029361492
+        "score": -0.26782518673938
+      },
+      {
+        "ticker": "DVLT",
+        "score": -0.26381172832321953
       },
       {
         "ticker": "CMTG",
-        "score": -0.21392310884838397
+        "score": -0.25645817895823675
       },
       {
-        "ticker": "BGS",
-        "score": -0.21064894358866917
+        "ticker": "MIST",
+        "score": -0.24254257495492096
+      },
+      {
+        "ticker": "EQ",
+        "score": -0.23433141890786524
+      },
+      {
+        "ticker": "LODE",
+        "score": -0.23290383909759818
+      },
+      {
+        "ticker": "AIRJ",
+        "score": -0.2244972186737923
+      },
+      {
+        "ticker": "NUS",
+        "score": -0.22255110160793842
+      },
+      {
+        "ticker": "EU",
+        "score": -0.22182121535151528
+      },
+      {
+        "ticker": "TLSA",
+        "score": -0.22114208194492443
+      },
+      {
+        "ticker": "CDZI",
+        "score": -0.2204694642805946
+      },
+      {
+        "ticker": "GETY",
+        "score": -0.21607970321741202
+      },
+      {
+        "ticker": "OSG",
+        "score": -0.21288120303679556
+      },
+      {
+        "ticker": "ELDN",
+        "score": -0.20723445607349322
       }
     ],
     "flatten": {
@@ -1646,6 +1646,115 @@
           "ok": true,
           "reason": "",
           "size": 41018,
+          "preview": "2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 510387,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 510387,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 697365,
+          "preview": "2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 90328,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 90328,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock"
+    },
+    {
+      "key": "live_boards",
+      "title": "live_boards",
+      "date": "2026-09-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T23:48:15.231388-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 25916,
+          "preview": "2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 593,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-17.json",
+          "ok": true,
+          "reason": "",
+          "size": 78757,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-17_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 57317,
+          "preview": "2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 510387,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-17_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 510387,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 697365,
+          "preview": "2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 510387,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 57317,
           "preview": "2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ"
         },
         {
