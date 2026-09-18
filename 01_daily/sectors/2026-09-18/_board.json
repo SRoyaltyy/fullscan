@@ -1,6 +1,6 @@
 {
   "date": "2026-09-18",
-  "generated_at": "2026-09-18T05:22:37.652301-04:00",
+  "generated_at": "2026-09-18T05:30:29.032502-04:00",
   "sectors": [
     {
       "sector": "Basic Materials",
@@ -28,19 +28,25 @@
     {
       "sector": "Communication Services",
       "etf": "XLC",
-      "predicted_direction": null,
-      "predicted_magnitude_band": null,
-      "total_score": null,
-      "confidence_score": null,
-      "multiplier": null,
-      "divergence_flagged": null,
+      "predicted_direction": "up",
+      "predicted_magnitude_band": "mild",
+      "total_score": 3.549,
+      "confidence_score": 0.642,
+      "multiplier": 0.9,
+      "divergence_flagged": false,
       "actual_pct_change": null,
       "actual_direction": null,
       "direction_hit": null,
       "magnitude_hit": null,
-      "has_predict_md": false,
+      "has_predict_md": true,
       "has_outcome_md": false,
-      "components": {}
+      "components": {
+        "S0_SHARED_MACRO": 0.0,
+        "S1_SECTOR_FACTORS": 0.0,
+        "S2_BREADTH": 0.0,
+        "S3_FLOWS_POSITIONING": 0.0,
+        "S4_ETF_TAPE": 0.0
+      }
     },
     {
       "sector": "Consumer Cyclical",

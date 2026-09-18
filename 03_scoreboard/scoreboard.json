@@ -23881,6 +23881,43 @@
       "anchor_score": 3.902,
       "overlay_score": 1.062,
       "index_carry": 1.215
+    },
+    {
+      "date": "2026-09-18",
+      "topic": "sector:Communication Services",
+      "predicted_direction": "up",
+      "predicted_magnitude_band": "mild",
+      "confidence_score": 0.642,
+      "total_score": 3.549,
+      "multiplier": 0.9,
+      "components": {
+        "S0_SHARED_MACRO": 0.0,
+        "S1_SECTOR_FACTORS": 0.0,
+        "S2_BREADTH": 0.0,
+        "S3_FLOWS_POSITIONING": 0.0,
+        "S4_ETF_TAPE": 0.0
+      },
+      "leading_sum": 0.0,
+      "actual_open": null,
+      "actual_close": null,
+      "actual_pct_change": null,
+      "actual_direction": null,
+      "actual_magnitude_band": null,
+      "direction_hit": null,
+      "magnitude_hit": null,
+      "divergence_flagged": false,
+      "divergence_verdict": null,
+      "per_factor_breakdown": [],
+      "reflection_lesson_ref": null,
+      "sources_used": [],
+      "horizon_calls": {},
+      "sector": "Communication Services",
+      "etf": "XLC",
+      "rubric": "00_grounding/sectors/communication_services.md",
+      "engine": "v2",
+      "anchor_score": 2.334,
+      "overlay_score": 0.0,
+      "index_carry": 1.215
     }
   ]
 }
