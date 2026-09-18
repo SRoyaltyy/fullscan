@@ -143,6 +143,66 @@ def main():
 
     if mode == "cash":
         return 0
+
+    if mode == "status":
+        want = _env("STANDTEST_ORDER_ID") or _env("STANDTEST_COID")
+        status_doc = {
+            "ok": True,
+            "stage": "status",
+            "et": now_et().isoformat(),
+            "cash": cash,
+            "buying_power": bp,
+            "want": want,
+            "open_orders": None,
+            "matched": None,
+        }
+        open_payload = None
+        # try common SDK list methods
+        for call in (
+            lambda: trade.order_v3.get_order_history_and_open_orders(aid),
+            lambda: trade.order_v3.get_open_orders(aid),
+            lambda: trade.order_v2.get_open_orders(aid) if hasattr(trade, "order_v2") else (_ for _ in ()).throw(AttributeError("no v2")),
+            lambda: trade.order_v3.list_orders(aid),
+        ):
+            try:
+                open_payload = _json(call(), "open_orders")
+                break
+            except Exception as e:
+                status_doc.setdefault("list_errors", []).append(str(e)[:160])
+        status_doc["open_snip"] = json.dumps(open_payload)[:1200] if open_payload is not None else None
+        # flatten rows
+        rows = []
+        def walk(v):
+            if isinstance(v, list):
+                for x in v: walk(x)
+            elif isinstance(v, dict):
+                if v.get("order_id") or v.get("orderId") or v.get("client_order_id"):
+                    rows.append(v)
+                for k in ("data", "orders", "list", "items", "result"):
+                    if k in v: walk(v[k])
+        walk(open_payload)
+        status_doc["n_open_rows"] = len(rows)
+        if want:
+            for r in rows:
+                oid = str(r.get("order_id") or r.get("orderId") or "")
+                coid = str(r.get("client_order_id") or r.get("clientOrderId") or "")
+                if want in (oid, coid) or want in coid or want in oid:
+                    status_doc["matched"] = {
+                        "order_id": oid,
+                        "client_order_id": coid,
+                        "status": r.get("status") or r.get("order_status"),
+                        "symbol": r.get("symbol"),
+                        "side": r.get("side"),
+                        "order_type": r.get("order_type") or r.get("orderType"),
+                        "tif": r.get("time_in_force") or r.get("timeInForce"),
+                        "session": r.get("support_trading_session") or r.get("tradingSession"),
+                        "row_snip": json.dumps(r)[:500],
+                    }
+                    break
+        print(json.dumps(status_doc, indent=2))
+        (out_dir / "standtest_status.json").write_text(json.dumps(status_doc, indent=2))
+        return 0
+
     if cash <= 0:
         doc2 = {**doc, "stage": "submit_blocked", "reason": "cash<=0"}
         print(json.dumps(doc2, indent=2))

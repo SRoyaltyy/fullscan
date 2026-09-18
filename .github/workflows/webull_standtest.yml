@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "cash = snapshot only; place = tiny STANDTEST if cash>0"
+        description: "cash | place | status"
         type: choice
-        options: [cash, place]
+        options: [cash, place, status]
         default: cash
       ticker:
         description: "Ticker for place mode"
@@ -16,6 +16,10 @@ on:
         description: "Share qty"
         required: false
         default: "1"
+      order_id:
+        description: "order_id or client_order_id for status mode"
+        required: false
+        default: ""
 
 permissions:
   contents: read
@@ -40,6 +44,7 @@ jobs:
           WEBULL_ACCOUNT_ID: ${{ secrets.WEBULL_ACCOUNT_ID }}
           STANDTEST_TICKER: ${{ inputs.ticker }}
           STANDTEST_QTY: ${{ inputs.qty }}
+          STANDTEST_ORDER_ID: ${{ inputs.order_id }}
         run: |
           set -euo pipefail
           python scripts/webull_standtest_probe.py "${{ inputs.mode }}"
