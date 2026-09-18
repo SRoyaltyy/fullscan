@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-09-18",
-    "generated_at": "2026-09-18T16:37:35.388969-04:00",
+    "generated_at": "2026-09-18T16:49:05.918061-04:00",
     "general_bias": 0.5899,
     "sector_bias": {
       "Basic Materials": 0.0,
@@ -18,8 +18,8 @@
     },
     "accuracy_gates": {
       "general": {
-        "hit_rate": 0.515,
-        "n": 33,
+        "hit_rate": 0.529,
+        "n": 34,
         "gate": 0.85
       },
       "sector:Basic Materials": {
