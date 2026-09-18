@@ -1,0 +1,51 @@
+name: Webull standtest probe
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "cash = snapshot only; place = tiny STANDTEST if cash>0"
+        type: choice
+        options: [cash, place]
+        default: cash
+      ticker:
+        description: "Ticker for place mode"
+        required: false
+        default: "AAPL"
+      qty:
+        description: "Share qty"
+        required: false
+        default: "1"
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install SDK
+        run: pip install webull-openapi-python-sdk
+      - name: Run probe
+        env:
+          WEBULL_APP_KEY: ${{ secrets.WEBULL_APP_KEY }}
+          WEBULL_APP_SECRET: ${{ secrets.WEBULL_APP_SECRET }}
+          WEBULL_ACCOUNT_ID: ${{ secrets.WEBULL_ACCOUNT_ID }}
+          STANDTEST_TICKER: ${{ inputs.ticker }}
+          STANDTEST_QTY: ${{ inputs.qty }}
+        run: |
+          set -euo pipefail
+          python scripts/webull_standtest_probe.py "${{ inputs.mode }}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: standtest-evidence
+          path: data/paper_open/standtest_*.json
+          if-no-files-found: warn
