@@ -102,9 +102,9 @@ function loadTickerNews(ticker, date, extraHeadlines){
   };
   if(NEWS_CACHE[letter]){ apply(NEWS_CACHE[letter]); return; }
   var urls = [
-    './n/' + letter + '.json?t=' + Date.now(),
+    'https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/dashboard/day-movers/n/' + letter + '.json',
     'https://cdn.jsdelivr.net/gh/SRoyaltyy/fullscan@main/dashboard/day-movers/n/' + letter + '.json',
-    'https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/dashboard/day-movers/n/' + letter + '.json'
+    './n/' + letter + '.json?t=' + Date.now()
   ];
   var tryAt = function(i, lastErr){
     if(i >= urls.length){
@@ -128,7 +128,6 @@ function loadTickerNews(ticker, date, extraHeadlines){
 loadDay = function() {
   var date = STATE.dates[STATE.i]; if (!date) return;
   var bundled = (STATE.meta.days || []).find(function(x){ return x.date === date; });
-  STATE.day = bundled || { n_open: 0, intradaily: {}, interday: {} };
   STATE.day = bundled || { n_open: 0, intraday: {}, interday: {} };
   STATE.sel = null;
   $('pane').classList.remove('on');
@@ -154,10 +153,9 @@ loadDay = function() {
       day = {
         date: date, s: ig.s != null ? ig.s : (STATE.day && STATE.day.s), hard_red: !!ig.hard_red,
         n_open: ig.n_open || ig.n, lag: ig.lag || '2026-09-17 OHLC rebased from official Yahoo daily bars.',
-        intradaily: { n: ig.n || ig.n_open, gainers: norm(ig,'intraday'), losers: il && il.rows ? norm(il,'intraday') : [] },
+        intraday: { n: ig.n || ig.n_open, gainers: norm(ig,'intraday'), losers: il && il.rows ? norm(il,'intraday') : [] },
         interday: { n: (eg && (eg.n || eg.n_open)) || ig.n, gainers: eg && eg.rows ? norm(eg,'interday') : [], losers: el && el.rows ? norm(el,'interday') : [] }
       };
-      day.intraday = day.intradaily;
     }
     if (!day) return;
     STATE.day = day;
