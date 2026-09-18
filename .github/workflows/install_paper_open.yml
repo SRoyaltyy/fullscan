@@ -24,6 +24,11 @@ jobs:
         with:
           ref: main
           fetch-depth: 1
+          sparse-checkout: |
+            src
+            scripts
+            .github
+            00_grounding
       - name: Provision dedicated sandbox environment without printing credentials
         env:
           WEBULL_APP_KEY: ${{ secrets.WEBULL_APP_KEY }}

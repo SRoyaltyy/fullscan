@@ -162,6 +162,13 @@ def run(*, submit=False, clock=now, sleep=time.sleep, loader=load_published, api
         except BlockingIOError:
             raise RuntimeError('another paper-open process owns this host')
         status_path = state / f'{date}_status.json'
+        journal = state / f'{date}_{"submit" if submit else "dry_run"}.json'
+        if journal.exists():
+            # The second DST fallback schedule/restart must preserve the first
+            # attempt's evidence rather than replace it with a late-start error.
+            prior = json.loads(journal.read_text())
+            print('[paper-open] session already attempted; no resend', flush=True)
+            return 0 if prior.get('status') in ('acknowledged', 'no_trade', 'dry_run') else 2
         if current >= target:
             atomic_json(status_path, {'date': date, 'status': 'missed_deadline', 'observed_at': current.isoformat()})
             return 2
@@ -191,7 +198,6 @@ def run(*, submit=False, clock=now, sleep=time.sleep, loader=load_published, api
             return 2
         while clock() < target:
             sleep(min(.1, max(0, (target-clock()).total_seconds())))
-        journal = state / f'{date}_{"submit" if submit else "dry_run"}.json'
         try:
             result = release(plan, api, clock, journal, submit=submit)
         except Exception as exc:

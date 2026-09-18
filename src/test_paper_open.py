@@ -124,3 +124,13 @@ def test_slow_journal_cannot_allow_a_late_send(tmp_path):
     assert not api.calls
     assert result['status'] == 'failed'
     assert result['sent'][0]['status'] == 'missed_deadline'
+
+
+def test_later_fallback_schedule_preserves_first_attempt(tmp_path):
+    original = {'date':DATE, 'status':'acknowledged', 'sent':[{'ticker':'ABC'}]}
+    for suffix in ('submit','status'):
+        (tmp_path/f'{DATE}_{suffix}.json').write_text(json.dumps(original))
+    api=API()
+    assert po.run(submit=True,clock=lambda:BELL+timedelta(minutes=10),api=api,state_dir=tmp_path)==0
+    assert not api.calls
+    assert json.loads((tmp_path/f'{DATE}_status.json').read_text())==original
