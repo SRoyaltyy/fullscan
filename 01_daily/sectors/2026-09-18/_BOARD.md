@@ -1,15 +1,15 @@
 # Sector Board — 2026-09-18
 
-Generated: **2026-09-18T05:42:53.779144-04:00** (America/New_York)
+Generated: **2026-09-18T05:49:00.816674-04:00** (America/New_York)
 
 Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.).
 
 ## Summary
 
-- Predicts present: **4/11**
+- Predicts present: **5/11**
 - Outcomes graded: **0/11**
 - Direction hits (when graded): **0/0**
-- Predicted up / down / flat-or-missing: **2** / **0** / **9**
+- Predicted up / down / flat-or-missing: **2** / **1** / **8**
 
 ## Full table
 
@@ -19,7 +19,7 @@ Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file 
 | Communication Services | XLC | up | mild | 3.55 | 0.64 | — | — | — | P |
 | Consumer Cyclical | XLY | flat | flat | 4.01 | 0.55 | — | — | — | P |
 | Consumer Defensive | XLP | up | mild | -0.12 | 0.41 | — | — | — | P |
-| Energy | XLE | — | — | — | — | — | — | — | — |
+| Energy | XLE | down | mild | -3.73 | 0.65 | — | — | — | P |
 | Financial | XLF | — | — | — | — | — | — | — | — |
 | Healthcare | XLV | — | — | — | — | — | — | — | — |
 | Industrials | XLI | — | — | — | — | — | — | — | — |
@@ -34,7 +34,7 @@ Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file 
 
 ## Predicted laggards (down)
 
-_None_
+- **Energy** (XLE): score=-3.73, mag=mild, conf=0.65
 
 ## Files
 
