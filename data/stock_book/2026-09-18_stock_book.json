@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-09-18",
-    "generated_at": "2026-09-18T17:18:53.219825-04:00",
+    "generated_at": "2026-09-18T17:24:14.326722-04:00",
     "general_bias": 0.5899,
     "sector_bias": {
       "Basic Materials": 0.0,
@@ -43,8 +43,8 @@
         "gate": 0.5
       },
       "sector:Energy": {
-        "hit_rate": 0.5,
-        "n": 22,
+        "hit_rate": 0.522,
+        "n": 23,
         "gate": 0.85
       },
       "sector:Financial": {

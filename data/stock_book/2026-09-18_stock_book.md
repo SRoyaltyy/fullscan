@@ -1,6 +1,6 @@
 # Stock book — 2026-09-18
 
-_Generated 2026-09-18T17:18:53.219825-04:00_
+_Generated 2026-09-18T17:24:14.326722-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -234,7 +234,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | sector:Communication Services | 23% | 22 | ×0.50 |
 | sector:Consumer Cyclical | 52% | 23 | ×0.85 |
 | sector:Consumer Defensive | 44% | 23 | ×0.50 |
-| sector:Energy | 50% | 22 | ×0.85 |
+| sector:Energy | 52% | 23 | ×0.85 |
 | sector:Financial | 46% | 22 | ×0.85 |
 | sector:Healthcare | 53% | 19 | ×0.85 |
 | sector:Industrials | 36% | 22 | ×0.50 |
