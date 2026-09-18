@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T20:00:08.251685-04:00",
+  "generated_at": "2026-09-17T20:00:14.966737-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -169,115 +169,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "live_boards",
-      "title": "live_boards",
-      "date": "2026-09-17",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-17T14:28:52.036194-04:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 3260,
-          "preview": "2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 1107,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-09-17.json",
-          "ok": true,
-          "reason": "",
-          "size": 24682,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-09-17_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 3219,
-          "preview": "2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 457634,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-09-17_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 457634,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 586369,
-          "preview": "2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 457634,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 3219,
-          "preview": "2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 457634,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 457634,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 586369,
-          "preview": "2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA"
-        },
-        {
-          "path": "data/day_board/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 61860,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        },
-        {
-          "path": "dashboard/factor-mine/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 61860,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        }
-      ],
-      "preview": "2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-17 BUY FIVN, RVTY, WAY, IT, IOT, CARG, ATRC, AMRX \u00b7 SELL TLN, JKS, CMTG, DVLT, MIST, NUS, GETY, TLSA \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, c"
-    },
     {
       "key": "finviz_market_digest_close",
       "title": "Finviz homepage market digest (close)",
@@ -466,6 +357,115 @@
         }
       ],
       "preview": "1d BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ \u00b7 green 194 \u00b7 AVAH, DXCM, NTAP, PTGX, MTCH, CORT, FIVN, BLFS, EXEL, INCY \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ \u00b7 2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ \u00b7 # Stock book \u2014 2026-09-17\n_Generated 2026-09-17T19:56:54.868590-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-09-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T20:00:13.627407-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 20292,
+          "preview": "2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 1107,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-17.json",
+          "ok": true,
+          "reason": "",
+          "size": 41657,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-17_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 17603,
+          "preview": "2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 482641,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-17_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 482641,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 636887,
+          "preview": "2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 482641,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 17603,
+          "preview": "2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 482641,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 482641,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 636887,
+          "preview": "2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 61860,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 61860,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
