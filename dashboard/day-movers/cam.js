@@ -1,4 +1,4 @@
-/* +5 / -2 camera screen — one file per session, local / raw / jsdelivr. */
+/* +5 / −2 camera screen — load compact pack first, then per-day shards. */
 STATE.camDays = {};
 STATE.camMeta = null;
 
@@ -29,7 +29,7 @@ renderTable = function () {
   const d = STATE.meta;
   if (!d) return;
   const date = STATE.dates[STATE.i];
-  $('date').textContent = date;
+  $('date').textContent = date || '—';
   const rows = rowsOf();
   const nDay = (STATE.camDays[date] || []).length;
   $('meta').textContent = (d.n_tickers_scanned || '—') + ' histories · ' + (d.from_date||'') + ' → ' + (d.to_date||'') +
@@ -52,12 +52,38 @@ renderTable = function () {
   });
 };
 
-function tryUrls(urls, i, ok, fail, lastErr) {
-  if (i >= urls.length) { fail(lastErr || 'missing'); return; }
-  fetch(urls[i]).then(r => {
+function fetchJson(url, ms) {
+  const ctrl = typeof AbortController !== 'undefined' ? new AbortController() : null;
+  const timer = ctrl ? setTimeout(function(){ ctrl.abort(); }, ms || 8000) : null;
+  return fetch(url, ctrl ? { signal: ctrl.signal } : {}).then(function(r){
     if (!r.ok) throw new Error(String(r.status));
     return r.json();
-  }).then(ok).catch(err => tryUrls(urls, i + 1, ok, fail, err));
+  }).finally(function(){ if (timer) clearTimeout(timer); });
+}
+
+function tryUrls(urls, i, ok, fail, lastErr) {
+  if (i >= urls.length) { fail(lastErr || 'missing'); return; }
+  fetchJson(urls[i], 8000).then(ok).catch(function(err){ tryUrls(urls, i + 1, ok, fail, err); });
+}
+
+function applyPack(d) {
+  STATE.camMeta = d;
+  STATE.meta = {
+    from_date: d.from_date, to_date: d.to_date,
+    n_tickers_scanned: d.n_tickers_scanned, n_tickers: d.n_tickers_scanned,
+    top_n: d.n_rows, lag: null, dates: d.dates || []
+  };
+  STATE.dates = d.dates || [];
+  (d.days || []).forEach(function(day){
+    if (day && day.date) STATE.camDays[day.date] = day.rows || [];
+  });
+  if (d.by_date) {
+    Object.keys(d.by_date).forEach(function(dt){
+      STATE.camDays[dt] = d.by_date[dt].rows || d.by_date[dt] || [];
+    });
+  }
+  STATE.i = Math.max(0, STATE.dates.length - 1);
+  loadDay();
 }
 
 function dateUrls(date) {
@@ -65,9 +91,8 @@ function dateUrls(date) {
   const name = 'cam/' + date + '.json';
   return [
     './' + name + '?t=' + t,
-    'https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/dashboard/day-movers/' + name,
     'https://cdn.jsdelivr.net/gh/SRoyaltyy/fullscan@main/dashboard/day-movers/' + name,
-    'https://raw.githubusercontent.com/SRoyaltyy/fullscan/gh-pages/dashboard/day-movers/' + name
+    'https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/dashboard/day-movers/' + name
   ];
 }
 
@@ -97,23 +122,17 @@ loadDay = function () {
 
 function boot() {
   const t = Date.now();
+  $('meta').textContent = 'Loading cam pack…';
   tryUrls([
+    './cam.compact.json?t=' + t,
+    'https://cdn.jsdelivr.net/gh/SRoyaltyy/fullscan@main/dashboard/day-movers/cam.compact.json',
+    'https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/dashboard/day-movers/cam.compact.json',
     './cam-index.json?t=' + t,
-    'https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/dashboard/day-movers/cam-index.json',
     'https://cdn.jsdelivr.net/gh/SRoyaltyy/fullscan@main/dashboard/day-movers/cam-index.json',
-    'https://raw.githubusercontent.com/SRoyaltyy/fullscan/gh-pages/dashboard/day-movers/cam-index.json'
-  ], 0, function(d) {
-    STATE.camMeta = d;
-    STATE.meta = {
-      from_date: d.from_date, to_date: d.to_date,
-      n_tickers_scanned: d.n_tickers_scanned, n_tickers: d.n_tickers_scanned,
-      top_n: d.n_rows, lag: null, dates: d.dates || []
-    };
-    STATE.dates = d.dates || [];
-    STATE.i = Math.max(0, STATE.dates.length - 1);
-    loadDay();
-  }, function(err) {
-    $('meta').textContent = 'Failed to load cam-index.json: ' + err;
+    'https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/dashboard/day-movers/cam-index.json'
+  ], 0, applyPack, function(err) {
+    $('meta').textContent = 'Failed to load cam pack: ' + err;
+    $('body').innerHTML = '<tr><td colspan="10">Failed to load cam pack — '+esc(String(err))+'</td></tr>';
   });
 }
 boot();
