@@ -38,11 +38,15 @@ HARD_RED_SIT = "sit"
 HARD_RED_SHORT_ONLY = "short_only"
 HARD_RED_DIP_SCOOP = "dip_scoop"
 HARD_RED_SHORT_AND_SCOOP = "short_and_scoop"
+# Research-only: take the recipe's normal 09:30 open fill even on
+# hard-red. Not a live policy. No dip-scoop rewrite.
+HARD_RED_ALLOW = "allow"
 HARD_RED_MODES = (
     HARD_RED_SIT,
     HARD_RED_SHORT_ONLY,
     HARD_RED_DIP_SCOOP,
     HARD_RED_SHORT_AND_SCOOP,
+    HARD_RED_ALLOW,
 )
 DIP_GRID = (0.5, 1.0, 1.5, 2.0, 3.0)
 OUTPERFORM_RULE = (
@@ -437,6 +441,7 @@ def hard_red_skip_new(side: str | None, mode: str | None = HARD_RED_SIT) -> bool
       * ``short_only`` — shorts may fire; longs sit
       * ``dip_scoop`` — longs may limit-buy after open−X%; shorts sit
       * ``short_and_scoop`` — shorts fire and longs may scoop
+      * ``allow`` — both sides take the normal 09:30 open (research)
     """
     mode = str(mode or HARD_RED_SIT)
     side = str(side or "long")
@@ -447,6 +452,8 @@ def hard_red_skip_new(side: str | None, mode: str | None = HARD_RED_SIT) -> bool
     if mode == HARD_RED_DIP_SCOOP:
         return side == "short"
     if mode == HARD_RED_SHORT_AND_SCOOP:
+        return False
+    if mode == HARD_RED_ALLOW:
         return False
     return True
 
@@ -481,6 +488,37 @@ def dip_limit_px(open_px, low_px, dip_pct):
     if low > target + 1e-9:
         return None, "no_dip"
     return target, "scoop"
+
+
+def rally_limit_px(open_px, high_px, rally_pct):
+    """Intraday first-touch of open+X%. Close is never an input.
+
+    Mirror of ``dip_limit_px`` for a short fade: official 09:30 open
+    plus session high as the daily first-hit proxy. Do **not** pass
+    close, last, Gap, or Finviz Price. Returns ``(fill, kind)`` =
+    ``fade`` / ``no_rally`` / ``no_open`` / ``no_high``. Slightly
+    optimistic — OHLC cannot prove the print happened after 09:30.
+    """
+    try:
+        o = float(open_px)
+    except (TypeError, ValueError):
+        return None, "no_open"
+    if o <= 0:
+        return None, "no_open"
+    try:
+        x = float(rally_pct)
+    except (TypeError, ValueError):
+        return None, "no_rally"
+    if x <= 0:
+        return o, "fade"
+    target = o * (1.0 + x / 100.0)
+    try:
+        high = float(high_px)
+    except (TypeError, ValueError):
+        return None, "no_high"
+    if high < target - 1e-9:
+        return None, "no_rally"
+    return target, "fade"
 
 
 def _choose_intents(intents: list[dict], *, net: str, s) -> list[dict]:
