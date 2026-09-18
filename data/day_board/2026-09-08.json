@@ -1,6 +1,6 @@
 {
   "date": "2026-09-08",
-  "generated_at": "2026-09-09T01:20:11.023367-04:00",
+  "generated_at": "2026-09-17T23:43:35.206115-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [
@@ -31,7 +31,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 22
+          "size": 296809
         },
         {
           "key": "baseline_md",
@@ -49,7 +49,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 27
+          "size": 271650
         },
         {
           "key": "heat_md",
@@ -60,7 +60,9 @@
           "reason": "",
           "size": 17311
         }
-      ]
+      ],
+      "said": "tables on disk",
+      "bullets": []
     },
     {
       "key": "finviz",
@@ -70,28 +72,66 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 1,
-      "n_opt": 1,
+      "n_opt_ok": 3,
+      "n_opt": 3,
       "files": [
         {
           "key": "digest_json",
-          "name": "Finviz digest JSON",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-08_finviz_digest.json",
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 2
+          "size": 86066
         },
         {
           "key": "digest_md",
-          "name": "Finviz digest MD",
+          "name": "Quote-page digest MD (*_finviz_digest)",
           "path": "01_daily/news/2026-09-08_finviz_digest.md",
           "role": "optional",
           "status": "OK",
           "reason": "",
           "size": 11415
+        },
+        {
+          "key": "market_digest_json",
+          "name": "Homepage warm-up JSON (*_finviz_market_digest)",
+          "path": "01_daily/news/2026-09-08_finviz_market_digest.json",
+          "role": "optional",
+          "status": "OK",
+          "reason": "",
+          "size": 9341
+        },
+        {
+          "key": "market_digest_md",
+          "name": "Homepage warm-up MD (*_finviz_market_digest)",
+          "path": "01_daily/news/2026-09-08_finviz_market_digest.md",
+          "role": "optional",
+          "status": "OK",
+          "reason": "",
+          "size": 3957
+        },
+        {
+          "key": "market_digest_close_json",
+          "name": "Close answer-key JSON (*_finviz_market_digest_close)",
+          "path": "01_daily/news/2026-09-08_finviz_market_digest_close.json",
+          "role": "era",
+          "status": "SKIP",
+          "reason": "not in pipeline as of 2026-09-08 (first finviz_market_digest_close 2026-09-10)",
+          "size": 0
+        },
+        {
+          "key": "market_digest_close_md",
+          "name": "Close answer-key MD (*_finviz_market_digest_close)",
+          "path": "01_daily/news/2026-09-08_finviz_market_digest_close.md",
+          "role": "era",
+          "status": "SKIP",
+          "reason": "not in pipeline as of 2026-09-08 (first finviz_market_digest_close 2026-09-10)",
+          "size": 0
         }
-      ]
+      ],
+      "said": "",
+      "bullets": []
     },
     {
       "key": "preopen",
@@ -99,19 +139,28 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 16,
+      "n_req_ok": 17,
       "n_req": 20,
-      "n_opt_ok": 2,
-      "n_opt": 2,
+      "n_opt_ok": 3,
+      "n_opt": 3,
       "files": [
         {
           "key": "in_digest",
-          "name": "Finviz digest JSON",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-08_finviz_digest.json",
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 2
+          "size": 86066
+        },
+        {
+          "key": "in_market_digest",
+          "name": "Homepage warm-up JSON (*_finviz_market_digest)",
+          "path": "01_daily/news/2026-09-08_finviz_market_digest.json",
+          "role": "optional",
+          "status": "OK",
+          "reason": "",
+          "size": 9341
         },
         {
           "key": "in_baseline",
@@ -120,7 +169,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 22
+          "size": 296809
         },
         {
           "key": "in_heat",
@@ -129,16 +178,16 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 27
+          "size": 271650
         },
         {
           "key": "parsed",
           "name": "News parse JSON",
           "path": "01_daily/news/2026-09-08_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 307699
         },
         {
           "key": "events",
@@ -147,7 +196,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 29635
+          "size": 29669
         },
         {
           "key": "judge",
@@ -174,7 +223,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 34324
+          "size": 34365
         },
         {
           "key": "actions",
@@ -183,7 +232,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 2
+          "size": 861
         },
         {
           "key": "general",
@@ -192,7 +241,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 10669
+          "size": 10902
         },
         {
           "key": "board",
@@ -210,7 +259,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 6625
+          "size": 7197
         },
         {
           "key": "status",
@@ -218,8 +267,8 @@
           "path": "01_daily/2026-09-08_preopen_status.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=False missing=['news_parse', 'news_judge']",
-          "size": 7097
+          "reason": "all_ok=False missing=['news_judge']",
+          "size": 7022
         },
         {
           "key": "review",
@@ -227,8 +276,8 @@
           "path": "01_daily/2026-09-08_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=False The general predict, events JSON, finviz digest, map-heat tables, and research/baseline files are present and appear sam",
-          "size": 1128
+          "reason": "ok=False Grok returned an empty review",
+          "size": 309
         },
         {
           "key": "sector_basic_materials",
@@ -237,7 +286,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 8523
+          "size": 8628
         },
         {
           "key": "sector_communication_services",
@@ -246,7 +295,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 11279
+          "size": 11347
         },
         {
           "key": "sector_consumer_cyclical",
@@ -255,7 +304,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 11968
+          "size": 12244
         },
         {
           "key": "sector_consumer_defensive",
@@ -264,7 +313,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 21033
+          "size": 21247
         },
         {
           "key": "sector_energy",
@@ -273,7 +322,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 8486
+          "size": 8560
         },
         {
           "key": "sector_financial",
@@ -282,7 +331,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 14211
+          "size": 14373
         },
         {
           "key": "sector_healthcare",
@@ -291,7 +340,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 8963
+          "size": 9059
         },
         {
           "key": "sector_industrials",
@@ -300,7 +349,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 10969
+          "size": 11069
         },
         {
           "key": "sector_real_estate",
@@ -309,7 +358,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 10329
+          "size": 10480
         },
         {
           "key": "sector_technology",
@@ -329,6 +378,19 @@
           "reason": "missing",
           "size": 0
         }
+      ],
+      "said": "general DOWN  -11.475 \u00b7 sectors 1 up / 4 down / 4 flat \u00b7 news 30 items",
+      "bullets": [
+        "bad: Houthi attack on Saudi energy (73 wounded)",
+        "bad: Iran tanker attack in Hormuz",
+        "bad: oil WTI +3.18% near $100",
+        "good: China exports +25% y/y",
+        "good: HY tight 2.65",
+        "XLB FLAT +1.1",
+        "XLC DOWN -6.8",
+        "XLY DOWN -7.5",
+        "XLP FLAT -0.7",
+        "XLE UP +8.5"
       ]
     },
     {
@@ -344,12 +406,12 @@
       "files": [
         {
           "key": "in_digest",
-          "name": "Finviz digest JSON",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-08_finviz_digest.json",
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 2
+          "size": 86066
         },
         {
           "key": "weather",
@@ -357,9 +419,14 @@
           "path": "01_daily/weather/2026-09-08_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11",
-          "size": 10449
+          "reason": "sectors=11 bytes=10505 vix=falling yields=flat",
+          "size": 10505
         }
+      ],
+      "said": "favorable 3 \u00b7 hostile 4 \u00b7 neutral 4",
+      "bullets": [
+        "hostile: Communication Services, Consumer Cyclical, Industrials, Real Estate",
+        "events bull 4 / bear 8"
       ]
     },
     {
@@ -391,6 +458,10 @@
           "reason": "rows=2666",
           "size": 8473978
         }
+      ],
+      "said": "25 rows",
+      "bullets": [
+        "SBLK, PBR-A, PAA, BJ, NWBI"
       ]
     },
     {
@@ -411,16 +482,16 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 2
+          "size": 861
         },
         {
           "key": "in_digest",
-          "name": "Finviz digest JSON",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-08_finviz_digest.json",
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 2
+          "size": 86066
         },
         {
           "key": "dossiers",
@@ -431,7 +502,9 @@
           "reason": "missing",
           "size": 0
         }
-      ]
+      ],
+      "said": "",
+      "bullets": []
     },
     {
       "key": "stock_book",
@@ -451,7 +524,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 10669
+          "size": 10902
         },
         {
           "key": "in_board",
@@ -469,16 +542,16 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 2
+          "size": 861
         },
         {
           "key": "in_digest",
-          "name": "Finviz digest JSON",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-08_finviz_digest.json",
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 2
+          "size": 86066
         },
         {
           "key": "in_judge",
@@ -495,8 +568,8 @@
           "path": "01_daily/weather/2026-09-08_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11",
-          "size": 10449
+          "reason": "sectors=11 bytes=10505 vix=falling yields=flat",
+          "size": 10505
         },
         {
           "key": "in_ab",
@@ -550,7 +623,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 585
+          "size": 771
         },
         {
           "key": "paper",
@@ -559,7 +632,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 1795
+          "size": 1845
         },
         {
           "key": "dashboard",
@@ -567,9 +640,13 @@
           "path": "dashboard/index.html",
           "role": "optional",
           "status": "OK",
-          "reason": "generated=2026-09-08T14:45:28.923749-04:00 last=2026-09-08",
-          "size": 3693862
+          "reason": "generated=2026-09-17T20:51:59.413465-04:00 last=2026-09-17",
+          "size": 6300779
         }
+      ],
+      "said": "219 rows",
+      "bullets": [
+        "ONC, ARGX, EXE, FUTU, SSB"
       ]
     },
     {
@@ -598,8 +675,8 @@
           "path": "dashboard/index.html",
           "role": "required",
           "status": "OK",
-          "reason": "generated=2026-09-08T14:45:28.923749-04:00 last=2026-09-08",
-          "size": 3693862
+          "reason": "generated=2026-09-17T20:51:59.413465-04:00 last=2026-09-17",
+          "size": 6300779
         },
         {
           "key": "paper",
@@ -608,7 +685,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 1795
+          "size": 1845
         },
         {
           "key": "pages",
@@ -619,7 +696,9 @@
           "reason": "day-board reads main disk, not live Pages",
           "size": 0
         }
-      ]
+      ],
+      "said": "",
+      "bullets": []
     }
   ],
   "selections": {
@@ -671,9 +750,88 @@
         "score": -0.4895149305393223
       }
     ],
-    "flatten": "# flatten_robust card \u2014 2026-09-08\n_Generated 2026-09-08T17:18:15 \u2014 live `flatten_robust`._\n**S=-11.47; hard-red: no new buys; holds and due 1d exits stay**\n- Score **-11.47** (DOWN) \u00b7 route **hold** \u00b7 HARD-RED\n- Cash leftover **$11,513.75** (after 09:30 $11,513.75 \u00b7 after 16:00 $119,048.93)\n- Open lots **5** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$119,048.92**\n## Open holdings\n| Ticker | Sleeve | Shares | Entry | Since | Mark | MV |\n|---|---|---:|---:|---|---:|---:|\n| ATRC | io_core | 396 | $52.46 | 2026-09-03 | $51.52 | $20,402 |\n| HRMY | io_core | 496 | $41.86 | 2026-09-03 | $42.25 | $20,956 |\n| CABA | io_core | 5975 | $3.48 | 2026"
+    "flatten": {
+      "said": "0 priced buys \u00b7 5 lots \u00b7 cash $11,513.75",
+      "bullets": [
+        "0 priced buys",
+        "5 lots",
+        "cash $11,513.75"
+      ]
+    },
+    "general": {
+      "said": "DOWN  -11.475",
+      "bullets": [
+        "bad: Houthi attack on Saudi energy (73 wounded)",
+        "bad: Iran tanker attack in Hormuz",
+        "bad: oil WTI +3.18% near $100",
+        "good: China exports +25% y/y",
+        "good: HY tight 2.65"
+      ],
+      "score": "-11.475",
+      "direction": "down"
+    },
+    "sectors": {
+      "said": "1 up / 4 down / 4 flat",
+      "bullets": [
+        "XLB FLAT +1.1",
+        "XLC DOWN -6.8",
+        "XLY DOWN -7.5",
+        "XLP FLAT -0.7",
+        "XLE UP +8.5",
+        "XLF DOWN -2.9",
+        "XLV FLAT +0.9",
+        "XLI FLAT -3.6",
+        "XLRE DOWN -4.5",
+        "XLK missing",
+        "XLU missing"
+      ]
+    },
+    "news": {
+      "said": "30 items",
+      "bullets": [
+        "September Fed decision is now a coin flip as rate hike odds increase post Warsh",
+        "Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his word",
+        "Fed\u2019s Warsh Cites \u201cReadiness to Act\u201d on Inflation. Markets See a September Rate Hike. - Barron's",
+        "Economists betting on a rate hike after Fed chair speech - RealEstateNews.com",
+        "Fed Chairman Kevin Warsh Leaves the Door Open for September Rate Hike in Jackson Hole Speech - Realtor.com",
+        "Markets see rate hike coming following Warsh's speech - Bond Buyer"
+      ]
+    },
+    "weather": {
+      "said": "favorable 3 \u00b7 hostile 4 \u00b7 neutral 4",
+      "bullets": [
+        "hostile: Communication Services, Consumer Cyclical, Industrials, Real Estate",
+        "events bull 4 / bear 8"
+      ]
+    }
   },
-  "lands": [],
+  "lands": [
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-09-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T23:43:34.289646-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-08_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 307699,
+          "preview": "raw=400 usable=37 single=33 \u00b7 September Fed decision is now a coin flip as rate hike odds increase post Warsh | Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his w | Fed\u2019s Warsh Cites \u201cReadiness to Act\u201d on Inflation. Markets See a September Rate  | Economists betting on a rate hike after Fed chair speech - RealEstateNews.com | Fed Chairman Kevin Warsh Leaves the Door Open for September Rate Hike in Jackson"
+        },
+        {
+          "path": "01_daily/news/2026-09-08_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 4132,
+          "preview": "# News Parse v2 \u2014 2026-09-17T23:43:33.788223-04:00\nWindow\u224848h | raw=400 | usable=37 | single_name=33 | noise_dropped=330\nusable polarity={'+': 1, '-': 8, 'mixed': 0, 'neutral': 28}"
+        }
+      ],
+      "preview": "raw=400 usable=37 single=33 \u00b7 September Fed decision is now a coin flip as rate hike odds increase post Warsh | Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his w | Fed\u2019s Warsh Cites \u201cReadiness to Act\u201d on Inflation. Markets See a September Rate  | Economists betting on a rate hike after Fed chair speech - RealEstateNews.com | Fed Chairman Kevin Warsh Leaves the Door Open for September Rate Hike in Jackson \u00b7 # News Parse v2 \u2014 2026-09-17T23:43:33.788223-04:00\nWindow\u224848h | raw=400 | usable=37 | single_name=33 | noise_dropped=330\nusable polarity={'+': 1, '-': 8, 'mixed': 0, 'neutral': 28}"
+    }
+  ],
   "href": {
     "pages": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/",
     "readiness_action": "https://github.com/SRoyaltyy/fullscan/actions/workflows/stock_book_diag.yml",

@@ -1,13 +1,13 @@
 {
   "date": "2026-09-08",
-  "generated_at": "2026-09-08T12:14:57.778713-04:00",
+  "generated_at": "2026-09-17T23:43:33.901860-04:00",
   "items": [
     {
       "ok": true,
       "kind": "general_predict",
       "path": "01_daily/general/2026-09-08_predict.md",
       "reason": "",
-      "size": 10669,
+      "size": 10902,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -18,7 +18,7 @@
       "kind": "events",
       "path": "01_daily/events/2026-09-08_events.json",
       "reason": "",
-      "size": 29635,
+      "size": 29669,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -36,14 +36,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "news_parse",
       "path": "01_daily/news/2026-09-08_parsed.json",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 307699,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
@@ -51,7 +51,7 @@
       "kind": "news_actions",
       "path": "01_daily/news/2026-09-08_actions.json",
       "reason": "",
-      "size": 2,
+      "size": 861,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -62,7 +62,7 @@
       "kind": "finviz_digest",
       "path": "01_daily/news/2026-09-08_finviz_digest.json",
       "reason": "",
-      "size": 2,
+      "size": 86066,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -70,10 +70,32 @@
     },
     {
       "ok": true,
+      "kind": "finviz_market_digest",
+      "path": "01_daily/news/2026-09-08_finviz_market_digest.json",
+      "reason": "",
+      "size": 9341,
+      "carried": false,
+      "timeout": false,
+      "empty": false,
+      "missing_markers": []
+    },
+    {
+      "ok": false,
+      "kind": "finviz_market_digest",
+      "path": "01_daily/news/2026-09-08_finviz_market_digest_close.json",
+      "reason": "missing",
+      "size": 0,
+      "carried": false,
+      "timeout": false,
+      "empty": true,
+      "missing_markers": []
+    },
+    {
+      "ok": true,
       "kind": "map_heat",
       "path": "01_daily/map_heat/2026-09-08_map_heat.json",
       "reason": "",
-      "size": 27,
+      "size": 271650,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -84,7 +106,7 @@
       "kind": "map_heat_baseline",
       "path": "01_daily/map_heat/2026-09-08_research_baseline.json",
       "reason": "",
-      "size": 22,
+      "size": 296809,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -95,7 +117,7 @@
       "kind": "map_heat_research",
       "path": "01_daily/map_heat/2026-09-08_research.md",
       "reason": "",
-      "size": 34324,
+      "size": 34365,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -106,7 +128,7 @@
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-08/basic_materials_predict.md",
       "reason": "",
-      "size": 8523,
+      "size": 8628,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -117,7 +139,7 @@
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-08/communication_services_predict.md",
       "reason": "",
-      "size": 11279,
+      "size": 11347,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -128,7 +150,7 @@
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-08/consumer_cyclical_predict.md",
       "reason": "",
-      "size": 11968,
+      "size": 12244,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -139,7 +161,7 @@
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-08/consumer_defensive_predict.md",
       "reason": "",
-      "size": 21033,
+      "size": 21247,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -150,7 +172,7 @@
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-08/energy_predict.md",
       "reason": "",
-      "size": 8486,
+      "size": 8560,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -161,7 +183,7 @@
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-08/financial_predict.md",
       "reason": "",
-      "size": 14211,
+      "size": 14373,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -172,7 +194,7 @@
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-08/healthcare_predict.md",
       "reason": "",
-      "size": 8963,
+      "size": 9059,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -183,7 +205,7 @@
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-08/industrials_predict.md",
       "reason": "",
-      "size": 10969,
+      "size": 11069,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -194,7 +216,7 @@
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-08/real_estate_predict.md",
       "reason": "",
-      "size": 10329,
+      "size": 10480,
       "carried": false,
       "timeout": false,
       "empty": false,
@@ -228,55 +250,55 @@
       "sector": "Basic Materials",
       "ok": true,
       "reason": "",
-      "size": 8523
+      "size": 8628
     },
     {
       "sector": "Communication Services",
       "ok": true,
       "reason": "",
-      "size": 11279
+      "size": 11347
     },
     {
       "sector": "Consumer Cyclical",
       "ok": true,
       "reason": "",
-      "size": 11968
+      "size": 12244
     },
     {
       "sector": "Consumer Defensive",
       "ok": true,
       "reason": "",
-      "size": 21033
+      "size": 21247
     },
     {
       "sector": "Energy",
       "ok": true,
       "reason": "",
-      "size": 8486
+      "size": 8560
     },
     {
       "sector": "Financial",
       "ok": true,
       "reason": "",
-      "size": 14211
+      "size": 14373
     },
     {
       "sector": "Healthcare",
       "ok": true,
       "reason": "",
-      "size": 8963
+      "size": 9059
     },
     {
       "sector": "Industrials",
       "ok": true,
       "reason": "",
-      "size": 10969
+      "size": 11069
     },
     {
       "sector": "Real Estate",
       "ok": true,
       "reason": "",
-      "size": 10329
+      "size": 10480
     },
     {
       "sector": "Technology",
