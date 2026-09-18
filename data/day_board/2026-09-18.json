@@ -1,12 +1,12 @@
 {
   "date": "2026-09-18",
-  "generated_at": "2026-09-18T06:43:13.513116-04:00",
+  "generated_at": "2026-09-18T06:57:25.566810-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 5,
-    "partial": 2,
+    "ok": 7,
+    "partial": 0,
     "fail": 1,
     "n": 8
   },
@@ -417,8 +417,8 @@
           "path": "01_daily/weather/2026-09-18_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10173 vix=falling yields=flat",
-          "size": 10173
+          "reason": "sectors=11 bytes=10174 vix=falling yields=flat",
+          "size": 10174
         }
       ],
       "said": "favorable 4 \u00b7 hostile 3 \u00b7 neutral 4",
@@ -508,11 +508,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -566,8 +566,8 @@
           "path": "01_daily/weather/2026-09-18_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10173 vix=falling yields=flat",
-          "size": 10173
+          "reason": "sectors=11 bytes=10174 vix=falling yields=flat",
+          "size": 10174
         },
         {
           "key": "in_ab",
@@ -592,36 +592,36 @@
           "name": "Peer RS CSV",
           "path": "data/peers/2026-09-18_peer_rs.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=5110",
+          "size": 817497
         },
         {
           "key": "book_json",
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-18_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "horizons=5 names=245",
+          "size": 1660838
         },
         {
           "key": "book_md",
           "name": "Stock book MD",
           "path": "01_daily/2026-09-18_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 106571
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-09-18_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 4863
         },
         {
           "key": "paper",
@@ -637,8 +637,8 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-09-18 not in dashboard dates (last=2026-09-17)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-18)",
           "size": 6300795
         }
       ],
@@ -651,9 +651,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -663,17 +663,17 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-18_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "horizons=5 names=245",
+          "size": 1660838
         },
         {
           "key": "dash_html",
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-09-18 not in dashboard dates (last=2026-09-17)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-18)",
           "size": 6300795
         },
         {
@@ -700,8 +700,130 @@
     }
   ],
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "RBRK",
+        "score": 0.4387479515826178
+      },
+      {
+        "ticker": "FIVN",
+        "score": 0.7660125964152846
+      },
+      {
+        "ticker": "SDGR",
+        "score": 0.7976664965389122
+      },
+      {
+        "ticker": "ILMN",
+        "score": 0.4873263812643802
+      },
+      {
+        "ticker": "ZS",
+        "score": 0.6053842164876406
+      },
+      {
+        "ticker": "ARQT",
+        "score": 0.7785577314708076
+      },
+      {
+        "ticker": "CROX",
+        "score": 0.7403520471795884
+      },
+      {
+        "ticker": "TEM",
+        "score": 0.5388188624429483
+      },
+      {
+        "ticker": "SONO",
+        "score": 0.7685592103211827
+      },
+      {
+        "ticker": "MGNI",
+        "score": 0.7174177888342135
+      },
+      {
+        "ticker": "LIND",
+        "score": 0.6752022278081191
+      },
+      {
+        "ticker": "M",
+        "score": 0.6700118668730075
+      },
+      {
+        "ticker": "CARG",
+        "score": 0.6827514639655334
+      },
+      {
+        "ticker": "ZD",
+        "score": 0.6515017414223465
+      },
+      {
+        "ticker": "RUSHA",
+        "score": 0.6177370820559243
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "SOC",
+        "score": -0.44719114610947497
+      },
+      {
+        "ticker": "EU",
+        "score": -0.40453821802871637
+      },
+      {
+        "ticker": "UUUU",
+        "score": -0.39659770426804924
+      },
+      {
+        "ticker": "PUMP",
+        "score": -0.39580390777443186
+      },
+      {
+        "ticker": "GS",
+        "score": -0.38624449793953247
+      },
+      {
+        "ticker": "MS",
+        "score": -0.37649357642340797
+      },
+      {
+        "ticker": "WFRD",
+        "score": -0.3637457994832436
+      },
+      {
+        "ticker": "BTU",
+        "score": -0.3385316139979353
+      },
+      {
+        "ticker": "URG",
+        "score": -0.3251672882166321
+      },
+      {
+        "ticker": "TTI",
+        "score": -0.3139814689220982
+      },
+      {
+        "ticker": "AR",
+        "score": -0.30733684048102317
+      },
+      {
+        "ticker": "XPRO",
+        "score": -0.30182106956904897
+      },
+      {
+        "ticker": "HP",
+        "score": -0.2967740892961252
+      },
+      {
+        "ticker": "KGS",
+        "score": -0.2874313592637256
+      },
+      {
+        "ticker": "C",
+        "score": -0.2870048230232352
+      }
+    ],
     "flatten": {},
     "general": {
       "said": "UP  4.861",
@@ -1471,6 +1593,59 @@
         }
       ],
       "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 SMTC, HPE, AMD, NVDA, ANET"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-18",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-18T06:57:16.727037-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-18_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1660838,
+          "preview": "1d BUY RBRK, FIVN, SDGR, ILMN, ZS, ARQT, CROX, TEM \u00b7 SELL SOC, EU, UUUU, PUMP, GS, MS, WFRD, BTU"
+        },
+        {
+          "path": "data/stock_book/2026-09-18_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 4863,
+          "preview": "green 363 \u00b7 SMTC, HPE, AMD, DELL, TWLO, SMCI, SNX, NTAP, MGNI, VICR"
+        },
+        {
+          "path": "data/stock_book/2026-09-18_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2474,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-18_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13768,
+          "preview": "2026-09-18 BUY RBRK, FIVN, SDGR, ILMN, ZS, ARQT, CROX, TEM \u00b7 SELL SOC, EU, UUUU, PUMP, GS, MS, WFRD, BTU"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13768,
+          "preview": "2026-09-18 BUY RBRK, FIVN, SDGR, ILMN, ZS, ARQT, CROX, TEM \u00b7 SELL SOC, EU, UUUU, PUMP, GS, MS, WFRD, BTU"
+        },
+        {
+          "path": "01_daily/2026-09-18_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 107797,
+          "preview": "# Stock book \u2014 2026-09-18\n_Generated 2026-09-18T06:47:05.038181-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY RBRK, FIVN, SDGR, ILMN, ZS, ARQT, CROX, TEM \u00b7 SELL SOC, EU, UUUU, PUMP, GS, MS, WFRD, BTU \u00b7 green 363 \u00b7 SMTC, HPE, AMD, DELL, TWLO, SMCI, SNX, NTAP, MGNI, VICR \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-18 BUY RBRK, FIVN, SDGR, ILMN, ZS, ARQT, CROX, TEM \u00b7 SELL SOC, EU, UUUU, PUMP, GS, MS, WFRD, BTU \u00b7 2026-09-18 BUY RBRK, FIVN, SDGR, ILMN, ZS, ARQT, CROX, TEM \u00b7 SELL SOC, EU, UUUU, PUMP, GS, MS, WFRD, BTU \u00b7 # Stock book \u2014 2026-09-18\n_Generated 2026-09-18T06:47:05.038181-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
