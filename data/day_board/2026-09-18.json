@@ -1,6 +1,6 @@
 {
   "date": "2026-09-18",
-  "generated_at": "2026-09-18T05:30:30.006621-04:00",
+  "generated_at": "2026-09-18T05:36:29.426523-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -137,7 +137,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 11,
+      "n_req_ok": 12,
       "n_req": 20,
       "n_opt_ok": 3,
       "n_opt": 3,
@@ -248,7 +248,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 5578
+          "size": 5746
         },
         {
           "key": "qc",
@@ -257,7 +257,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7250
+          "size": 7243
         },
         {
           "key": "status",
@@ -300,9 +300,9 @@
           "name": "Sector predict \u2014 consumer_cyclical",
           "path": "01_daily/sectors/2026-09-18/consumer_cyclical_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 18665
         },
         {
           "key": "sector_consumer_defensive",
@@ -377,7 +377,7 @@
           "size": 0
         }
       ],
-      "said": "general UP  4.861 \u00b7 sectors 1 up / 0 down / 1 flat \u00b7 news 7 items",
+      "said": "general UP  4.861 \u00b7 sectors 1 up / 0 down / 2 flat \u00b7 news 7 items",
       "bullets": [
         "bad: 1w 10Y +18bp at 5.01 handle",
         "bad: hawkish SEP / ~50% October hike",
@@ -386,7 +386,7 @@
         "good: ES/NQ +1.18%/+1.61%",
         "XLB FLAT +6.2",
         "XLC UP +3.5",
-        "XLY missing",
+        "XLY FLAT +4.0",
         "XLP missing",
         "XLE missing"
       ]
@@ -531,7 +531,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 5578
+          "size": 5746
         },
         {
           "key": "in_actions",
@@ -716,11 +716,11 @@
       "direction": "up"
     },
     "sectors": {
-      "said": "1 up / 0 down / 1 flat",
+      "said": "1 up / 0 down / 2 flat",
       "bullets": [
         "XLB FLAT +6.2",
         "XLC UP +3.5",
-        "XLY missing",
+        "XLY FLAT +4.0",
         "XLP missing",
         "XLE missing",
         "XLF missing",
@@ -1364,70 +1364,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Communication Services (2/11)",
+      "title": "Sector predict Consumer Cyclical (3/11)",
       "date": "2026-09-18",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-18T05:30:29.070912-04:00",
+      "at": "2026-09-18T05:36:28.687301-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-09-18/communication_services_predict.md",
+          "path": "01_daily/sectors/2026-09-18/consumer_cyclical_predict.md",
           "ok": true,
           "reason": "",
-          "size": 18975,
-          "preview": "# Sector Prediction \u2014 Communication Services \u2014 2026-09-18\n- ETF: **XLC**\n- rubric: `00_grounding/sectors/communication_services.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **3.549** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **2.334** (NQ +1.50%, ES +1.14%, PM:XLC -0.01%) \u00b7 index_carry **1.215** (general 4.861) \u00b7 llm_overlay **0.0** (raw 0.0)"
+          "size": 18665,
+          "preview": "# Sector Prediction \u2014 Consumer Cyclical \u2014 2026-09-18\n- ETF: **XLY**\n- rubric: `00_grounding/sectors/consumer_cyclical.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **4.013** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **2.798** (ES +1.14%, ER2 +0.08%, NQ +1.50%, PM:XLY +0.14%) \u00b7 index_carry **1.215** (general 4.861) \u00b7 llm_overlay **0.0** (raw 0.0)"
         },
         {
-          "path": "01_daily/sectors/2026-09-18/communication_services_predict_trace.md",
+          "path": "01_daily/sectors/2026-09-18/consumer_cyclical_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 403,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Communication Services 2026-09-18\n**Step 0 \u2014 Setup.** Loaded 149,666 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (17,058 characters)."
+          "size": 398,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Consumer Cyclical 2026-09-18\n**Step 0 \u2014 Setup.** Loaded 150,527 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (16,684 characters)."
         },
         {
-          "path": "01_daily/_transcripts/2026-09-18_sector_communication_services_predict.json",
+          "path": "01_daily/_transcripts/2026-09-18_sector_consumer_cyclical_predict.json",
           "ok": true,
           "reason": "",
-          "size": 170511,
+          "size": 171685,
           "preview": "keys: provider, agent, backend_model, messages"
         },
         {
           "path": "01_daily/2026-09-18_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 7250,
+          "size": 7243,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-09-18/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 1250,
+          "size": 1246,
           "preview": "keys: date, n_ok, n_total, sectors"
         },
         {
           "path": "01_daily/sectors/2026-09-18/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1629,
-          "preview": "# Sector Board \u2014 2026-09-18\nGenerated: **2026-09-18T05:30:29.032502-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1631,
+          "preview": "# Sector Board \u2014 2026-09-18\nGenerated: **2026-09-18T05:36:28.662497-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-09-18/_board.json",
           "ok": true,
           "reason": "",
-          "size": 5578,
+          "size": 5746,
           "preview": "keys: date, generated_at, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 766264,
+          "size": 767358,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Communication Services \u2014 2026-09-18\n- ETF: **XLC**\n- rubric: `00_grounding/sectors/communication_services.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **3.549** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **2.334** (NQ +1.50%, ES +1.14%, PM:XLC -0.01%) \u00b7 index_carry **1.215** (general 4.861) \u00b7 llm_overlay **0.0** (raw 0.0) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Communication Services 2026-09-18\n**Step 0 \u2014 Setup.** Loaded 149,666 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (17,058 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-18\nGenerated: **2026-09-18T05:30:29.032502-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7"
+      "preview": "# Sector Prediction \u2014 Consumer Cyclical \u2014 2026-09-18\n- ETF: **XLY**\n- rubric: `00_grounding/sectors/consumer_cyclical.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **4.013** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **2.798** (ES +1.14%, ER2 +0.08%, NQ +1.50%, PM:XLY +0.14%) \u00b7 index_carry **1.215** (general 4.861) \u00b7 llm_overlay **0.0** (raw 0.0) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Consumer Cyclical 2026-09-18\n**Step 0 \u2014 Setup.** Loaded 150,527 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (16,684 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-18\nGenerated: **2026-09-18T05:36:28.662497-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 "
     }
   ],
   "href": {
