@@ -169,10 +169,10 @@ def main():
         open_payload = None
         # try common SDK list methods
         for call in (
-            lambda: trade.order_v3.get_order_history_and_open_orders(aid),
-            lambda: trade.order_v3.get_open_orders(aid),
-            lambda: trade.order_v2.get_open_orders(aid) if hasattr(trade, "order_v2") else (_ for _ in ()).throw(AttributeError("no v2")),
-            lambda: trade.order_v3.list_orders(aid),
+            lambda: trade.order_v3.list_order_open(aid),
+            lambda: trade.order_v3.get_order_open(aid),
+            lambda: trade.order_v3.get_order_detail(aid, want) if want else (_ for _ in ()).throw(RuntimeError("no want")),
+            lambda: trade.order_v2.get_order_open(aid) if hasattr(trade, "order_v2") else (_ for _ in ()).throw(AttributeError("no v2")),
         ):
             try:
                 open_payload = _json(call(), "open_orders")
