@@ -16,6 +16,9 @@ on:
       - "src/webull_exec.py"
       - "src/combo_broker.py"
       - "src/strategy_tickets.py"
+      - "src/ticket_lesson_filter.py"
+      - "src/test_ticket_lesson_filter.py"
+      - "00_grounding/ticket_filters.json"
       - "src/skip_if_good.py"
       - "src/test_skip_if_good.py"
       - "scripts/publish_open_pack.sh"
@@ -52,4 +55,5 @@ jobs:
           PYTHONPATH=. python3 -m src.test_strategy_tickets
           PYTHONPATH=. python3 -m src.test_webull_exec
           PYTHONPATH=. python3 -m src.test_combo_broker
+          PYTHONPATH=. python3 -m src.test_ticket_lesson_filter
           PYTHONPATH=. python3 -m src.test_skip_if_good
