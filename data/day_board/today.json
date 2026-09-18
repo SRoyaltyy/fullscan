@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T19:52:50.291586-04:00",
+  "generated_at": "2026-09-17T20:00:08.251685-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -12,125 +12,125 @@
   "buy_1d": [
     {
       "ticker": "FIVN",
-      "score": 0.8011356924652404
-    },
-    {
-      "ticker": "RVTY",
-      "score": 0.496766097630279
+      "score": 0.801300319710498
     },
     {
       "ticker": "WAY",
-      "score": 0.77939252437554
+      "score": 0.7822236458009222
+    },
+    {
+      "ticker": "RVTY",
+      "score": 0.4987466026503685
     },
     {
       "ticker": "IT",
-      "score": 0.5781070751076243
+      "score": 0.5764702364018779
     },
     {
       "ticker": "IOT",
-      "score": 0.5159705888738928
-    },
-    {
-      "ticker": "CARG",
-      "score": 0.7747156952340235
+      "score": 0.5161544621864507
     },
     {
       "ticker": "ATRC",
-      "score": 0.7585336310172601
+      "score": 0.7593680947338235
     },
     {
       "ticker": "AMRX",
-      "score": 0.7971416116723959
+      "score": 0.7994630738938153
+    },
+    {
+      "ticker": "CARG",
+      "score": 0.7680123979308255
     },
     {
       "ticker": "FRSH",
-      "score": 0.7048752049148768
+      "score": 0.7051606300844773
     },
     {
       "ticker": "M",
-      "score": 0.7824154529206155
+      "score": 0.7881311448726551
     },
     {
       "ticker": "LIND",
-      "score": 0.7601567402034792
+      "score": 0.7577937840345121
     },
     {
-      "ticker": "NYT",
-      "score": 0.5180778954989806
+      "ticker": "OMC",
+      "score": 0.3383035911268022
     },
     {
       "ticker": "IMAX",
-      "score": 0.6522873689734392
+      "score": 0.6527394309435515
     },
     {
       "ticker": "ZD",
-      "score": 0.6410522813436259
+      "score": 0.6378070692605247
     },
     {
-      "ticker": "TILE",
-      "score": 0.6985899572327936
+      "ticker": "FTDR",
+      "score": 0.6291886753210132
     }
   ],
   "sell_1d": [
     {
       "ticker": "TLN",
-      "score": -0.30613590787239364
+      "score": -0.2889510366491428
     },
     {
       "ticker": "JKS",
-      "score": -0.27853750731343596
-    },
-    {
-      "ticker": "CMTG",
-      "score": -0.2652432612223309
+      "score": -0.26782518673938
     },
     {
       "ticker": "DVLT",
-      "score": -0.2536937291657989
+      "score": -0.26381172832321953
+    },
+    {
+      "ticker": "CMTG",
+      "score": -0.25645817895823675
     },
     {
       "ticker": "MIST",
-      "score": -0.24636048860619322
+      "score": -0.24254257495492096
     },
     {
-      "ticker": "NUS",
-      "score": -0.23892227383012668
-    },
-    {
-      "ticker": "GETY",
-      "score": -0.22837916482892154
-    },
-    {
-      "ticker": "TLSA",
-      "score": -0.2261961685865451
-    },
-    {
-      "ticker": "CDZI",
-      "score": -0.2253650391844479
+      "ticker": "EQ",
+      "score": -0.23433141890786524
     },
     {
       "ticker": "LODE",
-      "score": -0.2240404596810072
-    },
-    {
-      "ticker": "EU",
-      "score": -0.22251468637604516
-    },
-    {
-      "ticker": "STLA",
-      "score": -0.22155065764105014
+      "score": -0.23290383909759818
     },
     {
       "ticker": "AIRJ",
-      "score": -0.21718122839832515
+      "score": -0.2244972186737923
     },
     {
-      "ticker": "SGML",
-      "score": -0.2111497499915636
+      "ticker": "NUS",
+      "score": -0.22255110160793842
+    },
+    {
+      "ticker": "EU",
+      "score": -0.22182121535151528
+    },
+    {
+      "ticker": "TLSA",
+      "score": -0.22114208194492443
+    },
+    {
+      "ticker": "CDZI",
+      "score": -0.2204694642805946
+    },
+    {
+      "ticker": "GETY",
+      "score": -0.21607970321741202
     },
     {
       "ticker": "OSG",
-      "score": -0.20878351777438445
+      "score": -0.21288120303679556
+    },
+    {
+      "ticker": "ELDN",
+      "score": -0.20723445607349322
     }
   ],
   "flatten": {
@@ -413,6 +413,59 @@
         }
       ],
       "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, CFFN, ANET, HSBC, SKM \u00b7 2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 DSGX, SFL, ANET, UHS, ADSK"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T20:00:04.295576-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-17_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1526226,
+          "preview": "1d BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ"
+        },
+        {
+          "path": "data/stock_book/2026-09-17_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 2891,
+          "preview": "green 194 \u00b7 AVAH, DXCM, NTAP, PTGX, MTCH, CORT, FIVN, BLFS, EXEL, INCY"
+        },
+        {
+          "path": "data/stock_book/2026-09-17_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2376,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-17_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13810,
+          "preview": "2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13810,
+          "preview": "2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ"
+        },
+        {
+          "path": "01_daily/2026-09-17_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 90815,
+          "preview": "# Stock book \u2014 2026-09-17\n_Generated 2026-09-17T19:56:54.868590-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ \u00b7 green 194 \u00b7 AVAH, DXCM, NTAP, PTGX, MTCH, CORT, FIVN, BLFS, EXEL, INCY \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ \u00b7 2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ \u00b7 # Stock book \u2014 2026-09-17\n_Generated 2026-09-17T19:56:54.868590-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
