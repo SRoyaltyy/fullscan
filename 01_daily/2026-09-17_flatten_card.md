@@ -1,6 +1,6 @@
 # flatten_robust card — 2026-09-17
 
-_Generated 2026-09-18T03:46:40 — live `flatten_robust`._
+_Generated 2026-09-18T03:50:43 — live `flatten_robust`._
 
 **S=+7.38; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
 
@@ -40,9 +40,11 @@ Sized from marked equity **$101,497.51** as if the book were flat. `io 3d_size (
 
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
-| 16:00 ET | RVTY | io_core | 172 | $146.73 | $25,237.56 | cash tied |
-| 16:00 ET | WAY | io_core | 957 | $26.51 | $25,370.07 | cash tied |
-| 16:00 ET | ATRC | io_core | 429 | $59.12 | $25,362.48 | cash tied |
-| 16:00 ET | AZTA | io_core | 754 | $33.63 | $25,357.02 | cash tied |
+| 16:00 ET | ILMN | io_core | 68 | $245.18 | $16,672.24 | cash tied |
+| 16:00 ET | TWST | io_core | 108 | $155.56 | $16,800.48 | cash tied |
+| 16:00 ET | RVTY | io_core | 115 | $146.73 | $16,873.95 | cash tied |
+| 16:00 ET | IOVA | io_core | 1688 | $10.02 | $16,913.76 | cash tied |
+| 16:00 ET | PGEN | io_core | 2149 | $7.87 | $16,912.63 | cash tied |
+| 16:00 ET | AMN | io_core | 489 | $34.55 | $16,894.95 | cash tied |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/
