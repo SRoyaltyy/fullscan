@@ -26,7 +26,7 @@ if [ -z "$TOKEN" ]; then
   exit 0
 fi
 
-SUBS="boring-winners ticker-lookback gainer-lookback flatten-lookback mover-lookback sleeve-combine sleeve-merge mover-paper book-paper strategy-board factor-mine day-board down-day-mine hard-red-exceptions day-movers"
+SUBS="boring-winners ticker-lookback gainer-lookback flatten-lookback mover-lookback sleeve-combine sleeve-merge mover-paper book-paper strategy-board factor-mine day-board down-day-mine hard-red-exceptions day-movers excel-cam"
 
 TMP=$(mktemp -d)
 trap 'rm -rf "$TMP"' EXIT
