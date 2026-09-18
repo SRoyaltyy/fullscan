@@ -1,6 +1,6 @@
 {
   "date": "2026-09-18",
-  "generated_at": "2026-09-18T05:36:28.662497-04:00",
+  "generated_at": "2026-09-18T05:42:53.779144-04:00",
   "sectors": [
     {
       "sector": "Basic Materials",
@@ -74,19 +74,25 @@
     {
       "sector": "Consumer Defensive",
       "etf": "XLP",
-      "predicted_direction": null,
-      "predicted_magnitude_band": null,
-      "total_score": null,
-      "confidence_score": null,
-      "multiplier": null,
-      "divergence_flagged": null,
+      "predicted_direction": "up",
+      "predicted_magnitude_band": "mild",
+      "total_score": -0.125,
+      "confidence_score": 0.405,
+      "multiplier": 0.8,
+      "divergence_flagged": true,
       "actual_pct_change": null,
       "actual_direction": null,
       "direction_hit": null,
       "magnitude_hit": null,
-      "has_predict_md": false,
+      "has_predict_md": true,
       "has_outcome_md": false,
-      "components": {}
+      "components": {
+        "S0_SHARED_MACRO": -1.0,
+        "S1_SECTOR_FACTORS": -0.5,
+        "S2_BREADTH": 0.0,
+        "S3_FLOWS_POSITIONING": 0.0,
+        "S4_ETF_TAPE": 0.0
+      }
     },
     {
       "sector": "Energy",
