@@ -1,1 +1,1 @@
-see-file
+"""Finviz Daily Digest extractor + major-index market digests.\n\nSources:\n  1) Latest data/exports/finviz_YYYY-MM-DD.csv\n"""\n
