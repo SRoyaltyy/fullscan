@@ -1,6 +1,6 @@
 {
   "date": "2026-09-18",
-  "generated_at": "2026-09-18T04:17:09.870829-04:00",
+  "generated_at": "2026-09-18T04:20:30.659548-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -142,7 +142,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -188,9 +188,9 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-09-18_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 63933
         },
         {
           "key": "events",
@@ -262,7 +262,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7282
+          "size": 7279
         },
         {
           "key": "status",
@@ -382,8 +382,13 @@
           "size": 0
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "news 7 items",
+      "bullets": [
+        "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
+        "Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comments boost September U.S. rate hike expectations",
+        "Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year",
+        "Surprise US crude inventory build and Fed rate hike drive 5.63% DVN drop"
+      ]
     },
     {
       "key": "weather",
@@ -699,7 +704,17 @@
     "flatten": {},
     "general": {},
     "sectors": {},
-    "news": {},
+    "news": {
+      "said": "7 items",
+      "bullets": [
+        "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
+        "Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comments boost September U.S. rate hike expectations",
+        "Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year",
+        "Surprise US crude inventory build and Fed rate hike drive 5.63% DVN drop",
+        "Another rate hike, just for insurance: Five questions for the ECB",
+        "Amgen gets FDA approval to update IMDELLTRA label to reduce monitoring for first two ES-SCLC doses"
+      ]
+    },
     "weather": {
       "said": "favorable 2 \u00b7 hostile 2 \u00b7 neutral 7",
       "bullets": [
@@ -1076,6 +1091,31 @@
         }
       ],
       "preview": "11651 rows \u00b7 Ticker,score,score_source,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month, \u00b7 GCT, AVPT, RDVT, GLBS, HRTG"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-09-18",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-18T04:20:30.098217-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-18_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 63933,
+          "preview": "raw=123 usable=7 single=15 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Surprise US crude inventory build and Fed rate hike drive 5.63% DVN drop | Another rate hike, just for insurance: Five questions for the ECB"
+        },
+        {
+          "path": "01_daily/news/2026-09-18_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 3865,
+          "preview": "# News Parse v2 \u2014 2026-09-18T04:20:30.035754-04:00\nWindow\u224848h | raw=123 | usable=7 | single_name=15 | noise_dropped=101\nusable polarity={'+': 1, '-': 4, 'mixed': 0, 'neutral': 2}"
+        }
+      ],
+      "preview": "raw=123 usable=7 single=15 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Surprise US crude inventory build and Fed rate hike drive 5.63% DVN drop | Another rate hike, just for insurance: Five questions for the ECB \u00b7 # News Parse v2 \u2014 2026-09-18T04:20:30.035754-04:00\nWindow\u224848h | raw=123 | usable=7 | single_name=15 | noise_dropped=101\nusable polarity={'+': 1, '-': 4, 'mixed': 0, 'neutral': 2}"
     }
   ],
   "href": {
