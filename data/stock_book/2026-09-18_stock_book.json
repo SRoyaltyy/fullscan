@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-09-18",
-    "generated_at": "2026-09-18T17:30:46.076502-04:00",
+    "generated_at": "2026-09-18T17:33:58.434520-04:00",
     "general_bias": 0.5899,
     "sector_bias": {
       "Basic Materials": 0.0,
@@ -53,8 +53,8 @@
         "gate": 0.85
       },
       "sector:Healthcare": {
-        "hit_rate": 0.526,
-        "n": 19,
+        "hit_rate": 0.5,
+        "n": 20,
         "gate": 0.85
       },
       "sector:Industrials": {
