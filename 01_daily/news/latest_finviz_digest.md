@@ -1,6 +1,6 @@
 # Finviz Daily Digest — 2026-09-18
 
-_Generated 2026-09-18T04:07:37.538113-04:00 · export=data/exports/finviz_2026-09-17.csv · ticker digests=5888 · high-signal=2388_
+_Generated 2026-09-18T04:08:13.435308-04:00 · export=data/exports/finviz_2026-09-18.csv · ticker digests=5887 · high-signal=2382_
 
 ## Major indices (live quote page)
 
@@ -36,6 +36,7 @@ _Generated 2026-09-18T04:07:37.538113-04:00 · export=data/exports/finviz_2026-0
 - **COR** [Healthcare]: Cencora reaffirms fiscal 2026 adjusted EPS guidance despite Walgreens prescription volume shift
 - **CRH** [Basic Materials]: Berenberg price target cut to $140 from $146 triggers CRH 3.87% drop to near 52-week low
 - **CRM** [Technology]: Salesforce issues FY27 revenue guidance of $46.4B, sets FY30 revenue target above $63B at Investor Day
+- **CRWD** [Technology]: Bernstein raises CrowdStrike price target to $132 from $119 on stronger cybersecurity demand signals and improved sentiment
 - **CSX** [Industrials]: CSX delivers record revenue, raises 2026 margin and free cash flow outlook
 - **CVE** [Energy]: Cenovus Energy Q2 2026 non-GAAP EPS $1.08 misses estimates, revenue $14.7B beats, company raises full-year production guidance
 - **D** [Utilities]: Dominion, NextEra enhance Virginia merger benefits with 1,000 new jobs, doubled bill credits and $1B-a-year supplier program
@@ -50,7 +51,6 @@ _Generated 2026-09-18T04:07:37.538113-04:00 · export=data/exports/finviz_2026-0
 - **GD** [Industrials]: General Dynamics' GDIT wins $1.3B multi-year Enterprise Network Operations and Cybersecurity Support contract for Army National Guard, federal partners
 - **GE** [Industrials]: Melius downgrades GE Aerospace to Hold from Buy and cuts price target to $350 from $432
 - **GEV** [Industrials]: GE Vernova settles over $300 million Vineyard Wind payment dispute, withdraws contract-termination notice and legal claims on Massachusetts offshore project
-- **GSK** [Healthcare]: Positive Jideytro ARROS-1 trial data for first-line ROS1+ NSCLC drives GSK premarket surge
 
 ## By sector (top signal)
 
@@ -68,19 +68,19 @@ _Generated 2026-09-18T04:07:37.538113-04:00 · export=data/exports/finviz_2026-0
 - CAH: Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.
 - CI: Jefferies downgrades Cigna to Hold from Buy, cuts price target to $307 from $336 on concern consensus too high post EviCore sale, Centene prescription drug plan shrinkage
 
+### Technology (n=8)
+- APH: Fabrinet earnings weakness and rising yields spark 6.5% APH drop
+- ASML: ASML nearly sold out of 2027 EUV capacity amid very strong AI-driven demand, JPMorgan says
+- CRM: Salesforce issues FY27 revenue guidance of $46.4B, sets FY30 revenue target above $63B at Investor Day
+- CRWD: Bernstein raises CrowdStrike price target to $132 from $119 on stronger cybersecurity demand signals and improved sentiment
+- DDOG: Snowflake's stronger-than-expected quarterly revenue and earnings support cloud and AI-focused enterprise software peers including Datadog
+
 ### Industrials (n=8)
 - AME: AMETEK completes $5.0 billion all-cash acquisition of Indicor Instrumentation
 - CSX: CSX delivers record revenue, raises 2026 margin and free cash flow outlook
 - FAST: Fastenal beats Q2 estimates with EPS $0.33 (+14% YoY), revenue $2.4B (+15% YoY), notes gross margin pressure and lowers 2026 digital sales mix target
 - FIX: Zacks Strong Buy upgrade and AI data center backlog drive 11% FIX surge
 - GD: General Dynamics' GDIT wins $1.3B multi-year Enterprise Network Operations and Cybersecurity Support contract for Army National Guard, federal partners
-
-### Technology (n=8)
-- APH: Fabrinet earnings weakness and rising yields spark 6.5% APH drop
-- ASML: ASML nearly sold out of 2027 EUV capacity amid very strong AI-driven demand, JPMorgan says
-- CRM: Salesforce issues FY27 revenue guidance of $46.4B, sets FY30 revenue target above $63B at Investor Day
-- DDOG: Snowflake's stronger-than-expected quarterly revenue and earnings support cloud and AI-focused enterprise software peers including Datadog
-- IBM: IBM unit Anderon finalizes $1B U.S. CHIPS Act award to fund scaling of U.S. quantum wafer foundry
 
 ### Basic Materials (n=5)
 - AU: Gold prices slide more than 3% after Fed Chair Kevin Warshâs Jackson Hole comments boost September U.S. rate hike expectations
@@ -96,12 +96,6 @@ _Generated 2026-09-18T04:07:37.538113-04:00 · export=data/exports/finviz_2026-0
 - E: Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results
 - KMI: KMI rebounds on pipeline project momentum and raised 2026 guidance
 
-### Consumer Cyclical (n=4)
-- HD: Home Depot announces the nationwide rollout of its Magic Apron AI-powered in-store assistant with localized, personalized shopping guidance now live in all U.S. stores.
-- HLT: Deutsche Bank upgrades Hilton Worldwide to Buy from Hold, raises price target to $365
-- LOW: Bernstein cuts Loweâs price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery
-- NKE: UBS cuts Nike price target 13% to $42, keeps Neutral on risk of weak guidance, earnings downgrades through FY27
-
 ### Communication Services (n=3)
 - AMX: JPMorgan upgrades America Movil to Overweight from Neutral and raises its price target to $32 from $30.
 - APP: Piper Sandler cuts AppLovin price target to $325 from $385, maintains Neutral rating
@@ -111,6 +105,11 @@ _Generated 2026-09-18T04:07:37.538113-04:00 · export=data/exports/finviz_2026-0
 - D: Dominion, NextEra enhance Virginia merger benefits with 1,000 new jobs, doubled bill credits and $1B-a-year supplier program
 - DUK: Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year
 - NEE: NextEra and Dominion unveil expanded Virginia benefits package for proposed merger, doubling bill credits and adding major investments
+
+### Consumer Cyclical (n=3)
+- HD: Home Depot announces the nationwide rollout of its Magic Apron AI-powered in-store assistant with localized, personalized shopping guidance now live in all U.S. stores.
+- HLT: Deutsche Bank upgrades Hilton Worldwide to Buy from Hold, raises price target to $365
+- LOW: Bernstein cuts Loweâs price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery
 
 ### Real Estate (n=1)
 - EQIX: Equinix, CPP Investments close US$4B atNorth acquisition with Equinix investing about US$895M for roughly 34% stake

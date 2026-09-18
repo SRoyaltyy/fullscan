@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-09-18
 
-**Generated:** 2026-09-18T04:07:44.089903-04:00 (America/New_York)
+**Generated:** 2026-09-18T04:08:19.577786-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US futures point to a modestly higher open as traders look to industrial production data in a catalyst-light session
 **Prior close:** SPX —  Nasdaq —  Dow —
