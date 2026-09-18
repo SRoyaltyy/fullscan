@@ -1,6 +1,6 @@
 {
   "date": "2026-09-18",
-  "generated_at": "2026-09-18T04:20:37.227450-04:00",
+  "generated_at": "2026-09-18T04:26:31.315782-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -142,7 +142,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 3,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -197,9 +197,9 @@
           "name": "Events JSON",
           "path": "01_daily/events/2026-09-18_events.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 35234
         },
         {
           "key": "judge",
@@ -262,7 +262,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7279
+          "size": 7276
         },
         {
           "key": "status",
@@ -1116,6 +1116,31 @@
         }
       ],
       "preview": "raw=123 usable=7 single=15 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Surprise US crude inventory build and Fed rate hike drive 5.63% DVN drop | Another rate hike, just for insurance: Five questions for the ECB \u00b7 # News Parse v2 \u2014 2026-09-18T04:20:30.035754-04:00\nWindow\u224848h | raw=123 | usable=7 | single_name=15 | noise_dropped=101\nusable polarity={'+': 1, '-': 4, 'mixed': 0, 'neutral': 2}"
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-09-18",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-18T04:26:30.375334-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-09-18_events.json",
+          "ok": true,
+          "reason": "",
+          "size": 35234,
+          "preview": "34 events \u00b7 BoJ hikes 25bp to 1.25% (31-year high) | IRGC strikes/detains Togo-flagged tanker in Hormuz | Electra Therapeutics (ETRA) IPO begins trading | SEMICON India 2026 (New Delhi) | Taiwan joint attack-drone drill; PLA activity spike | Bessent\u2013He Lifeng pre-summit talks (New York)"
+        },
+        {
+          "path": "01_daily/events/2026-09-18_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 19304,
+          "preview": "# Event Scan \u2014 2026-09-18\n- events tracked: **34** (via openclaw)\n- uncertainty: **elevated**\n- summary: The Warsh Fed's 25bp hike to 3.75\u20134.00% with a hawkish SEP is now joined by a live BoJ hike to 1.25% and a still-unresolved Hormuz tanker war (fresh IRGC strike today, Brent ~$102). The two-way overlay for the next two weeks is Sept 19\u201321 Bessent\u2013He talks and the Sept 24 Trump\u2013Xi summit on ~$30bn tariff cuts versus oil, Taiwan, and a Graham secondary-tariff bill on Trump's desk. Housing is already cracking (starts 1.275M, existing sales 3.98M, Lennar cut) even as nominal retail sales rebounded +1.2%."
+        }
+      ],
+      "preview": "34 events \u00b7 BoJ hikes 25bp to 1.25% (31-year high) | IRGC strikes/detains Togo-flagged tanker in Hormuz | Electra Therapeutics (ETRA) IPO begins trading | SEMICON India 2026 (New Delhi) | Taiwan joint attack-drone drill; PLA activity spike | Bessent\u2013He Lifeng pre-summit talks (New York) \u00b7 # Event Scan \u2014 2026-09-18\n- events tracked: **34** (via openclaw)\n- uncertainty: **elevated**\n- summary: The Warsh Fed's 25bp hike to 3.75\u20134.00% with a hawkish SEP is now joined by a live BoJ hike to 1.25% and a still-unresolved Hormuz tanker war (fresh IRGC strike today, Brent ~$102). The two-way overlay for the next two weeks is Sept 19\u201321 Bessent\u2013He talks and the Sept 24 Trump\u2013Xi summit on ~$30bn tariff cuts versus oil, Taiwan, and a Graham secondary-tariff bill on Trump's desk. Housing is already cracking (starts 1.275M, existing sales 3.98M, Lennar cut) even as nominal retail sales rebounded +1.2%."
     }
   ],
   "href": {
