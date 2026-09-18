@@ -183,10 +183,9 @@ function loadTickerNews(ticker, date, extraHeadlines){
   };
   if(NEWS_CACHE[letter]){ apply(NEWS_CACHE[letter]); return; }
   var urls = [
-    'https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/dashboard/day-movers/n/' + letter + '.json',
+    './n/' + letter + '.json?t=' + Date.now(),
     'https://cdn.jsdelivr.net/gh/SRoyaltyy/fullscan@main/dashboard/day-movers/n/' + letter + '.json',
-    './n/' + letter + '.json?t=' + Date.now()
-  ];
+    'https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/dashboard/day-movers/n/' + letter + '.json'];
   var tryAt = function(i, lastErr){
     if(i >= urls.length){
       var el = document.getElementById('news-univ');
@@ -207,6 +206,7 @@ function loadTickerNews(ticker, date, extraHeadlines){
   tryAt(0);
 }
 loadDay = function() {
+  if (window.CAM_SCREEN) return;
   var date = STATE.dates[STATE.i]; if (!date) return;
   var bundled = (STATE.meta.days || []).find(function(x){ return x.date === date; });
   STATE.day = bundled || { n_open: 0, intraday: {}, interday: {} };
