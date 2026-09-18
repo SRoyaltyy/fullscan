@@ -1,18 +1,17 @@
 {
   "date": "2026-09-18",
-  "generated_at": "2026-09-18T04:26:31.315782-04:00",
+  "generated_at": "2026-09-18T04:26:50.705862-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-18_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-18/_board.json` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-09-18_actions.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-09-18_judge.md` \u2014 missing"
   ],
   "counts": {
     "ok": 4,
-    "partial": 3,
-    "fail": 1,
+    "partial": 4,
+    "fail": 0,
     "n": 8
   },
   "processes": [
@@ -144,7 +143,7 @@
       "inputs_ready": true,
       "n_req_ok": 3,
       "n_req": 20,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 3,
       "files": [
         {
@@ -233,9 +232,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-18_actions.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 20967
         },
         {
           "key": "general",
@@ -465,8 +464,8 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "FAIL",
-      "inputs_ready": false,
+      "status": "PARTIAL",
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
       "n_opt_ok": 0,
@@ -477,9 +476,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-18_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 20967
         },
         {
           "key": "in_digest",
@@ -537,9 +536,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-18_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 20967
         },
         {
           "key": "in_digest",
@@ -1141,6 +1140,31 @@
         }
       ],
       "preview": "34 events \u00b7 BoJ hikes 25bp to 1.25% (31-year high) | IRGC strikes/detains Togo-flagged tanker in Hormuz | Electra Therapeutics (ETRA) IPO begins trading | SEMICON India 2026 (New Delhi) | Taiwan joint attack-drone drill; PLA activity spike | Bessent\u2013He Lifeng pre-summit talks (New York) \u00b7 # Event Scan \u2014 2026-09-18\n- events tracked: **34** (via openclaw)\n- uncertainty: **elevated**\n- summary: The Warsh Fed's 25bp hike to 3.75\u20134.00% with a hawkish SEP is now joined by a live BoJ hike to 1.25% and a still-unresolved Hormuz tanker war (fresh IRGC strike today, Brent ~$102). The two-way overlay for the next two weeks is Sept 19\u201321 Bessent\u2013He talks and the Sept 24 Trump\u2013Xi summit on ~$30bn tariff cuts versus oil, Taiwan, and a Graham secondary-tariff bill on Trump's desk. Housing is already cracking (starts 1.275M, existing sales 3.98M, Lennar cut) even as nominal retail sales rebounded +1.2%."
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-09-18",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-18T04:26:50.137509-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-18_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 20967,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-09-18_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 7738,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-09-18T04:26:50.128969-04:00\nraw=157 unique_events=3 tickers=32"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-18T04:26:50.128969-04:00\nraw=157 unique_events=3 tickers=32"
     }
   ],
   "href": {
