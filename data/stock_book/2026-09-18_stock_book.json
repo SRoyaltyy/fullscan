@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-09-18",
-    "generated_at": "2026-09-18T17:08:01.818390-04:00",
+    "generated_at": "2026-09-18T17:13:51.736571-04:00",
     "general_bias": 0.5899,
     "sector_bias": {
       "Basic Materials": 0.0,
@@ -33,8 +33,8 @@
         "gate": 0.5
       },
       "sector:Consumer Cyclical": {
-        "hit_rate": 0.545,
-        "n": 22,
+        "hit_rate": 0.522,
+        "n": 23,
         "gate": 0.85
       },
       "sector:Consumer Defensive": {
