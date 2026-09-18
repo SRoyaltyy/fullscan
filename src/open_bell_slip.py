@@ -630,55 +630,18 @@ def fire_stats(rows: list[dict] | None, reality: str) -> dict:
 
 def decide_verdict(*, label: str, n_fires: int, n_filled: int,
                    win_rate, pnl, ideal_pnl=None) -> dict:
-    """KEEP only on the standing bar. Thin n is KILL, not a wink.
-
-    ≥30 *filled* fires, >55% after Futubull fees. After-fee P&L vs the
-    ideal-open baseline is always reported; it does not rescue a thin
-    or sub-55% tape.
-    """
-    wr = None if win_rate is None else float(win_rate)
-    n = int(n_filled or 0)
-    n_int = int(n_fires or 0)
-    thin = n < KEEP_MIN_FIRES
-    miss_win = wr is None or wr <= KEEP_WIN
-    vs = None
-    if pnl is not None and ideal_pnl is not None:
-        vs = round(float(pnl) - float(ideal_pnl), 2)
-    if thin:
-        verdict = "KILL"
-        why = (
-            f"KILL {label}: thin n={n} filled fires "
-            f"(intended {n_int}; bar ≥{KEEP_MIN_FIRES}). After-fee win "
-            f"{'—' if wr is None else f'{100 * wr:.1f}%'}"
-            f"{'' if vs is None else f'; vs ideal-open ${vs:+.2f}'}. "
-            "Do not change live flatten_robust / hard-red sit / Webull "
-            "paper on this sample."
-        )
-    elif miss_win:
-        verdict = "KILL"
-        why = (
-            f"KILL {label}: {n} filled fires but after-fee win "
-            f"{100 * wr:.1f}% ≤ {100 * KEEP_WIN:.0f}%"
-            f"{'' if vs is None else f'; vs ideal-open ${vs:+.2f}'}."
-        )
-    else:
-        verdict = "KEEP"
-        why = (
-            f"KEEP {label}: {n} filled fires, after-fee win "
-            f"{100 * wr:.1f}% (>{100 * KEEP_WIN:.0f}%)"
-            f"{'' if vs is None else f'; vs ideal-open ${vs:+.2f}'}."
-        )
-    return {
-        "label": verdict,
-        "keep": verdict == "KEEP",
-        "why": why,
-        "n_fires": n_int,
-        "n_filled": n,
-        "win_rate": wr,
-        "pnl": None if pnl is None else float(pnl),
-        "vs_ideal_pnl": vs,
-        "thin": thin,
-    }
+    """One-share name-day diagnostics cannot approve a portfolio strategy."""
+    value = _finite(pnl)
+    thin = int(n_filled or 0) < KEEP_MIN_FIRES
+    verdict = ("INSUFFICIENT_EVIDENCE" if thin or value is None else
+               "NEGATIVE_DIAGNOSTIC" if value <= 0 else "POSITIVE_DIAGNOSTIC")
+    return {"label": verdict, "keep": False,
+            "why": f"{label}: {verdict}; one-share same-day stress only. "
+                   "Use stateful portfolio replay and prospective net expectancy for promotion.",
+            "n_fires": int(n_fires or 0), "n_filled": int(n_filled or 0),
+            "win_rate": win_rate, "pnl": value, "thin": thin,
+            "vs_ideal_pnl": round(value - float(ideal_pnl), 2)
+            if value is not None and ideal_pnl is not None else None}
 
 
 def sleeve_report(name: str, rows: list[dict]) -> dict:

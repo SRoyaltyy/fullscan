@@ -837,6 +837,8 @@
   }
   function simulateBook(pack, rec, start, mornings) {
     const fees = pack.fees || {};
+    // Browser replay is strict: no short entries without a dated locate.
+    const risk = Object.assign({max_gross:1, max_short:0.5, short_margin:0.5, require_locate:true}, pack.risk || {});
     const calAll = pack.dates || [];
     const lastClosed = lastClosedDate(pack);
     const cal = calAll.filter(d =>
@@ -884,6 +886,16 @@
         open_held: openLots.map(p => p.ticker + "×" + p.shares),
         overnight: ov.overnight,
       });
+      if (side === "short") {
+        for (const [t, lot] of Object.entries(pos)) {
+          const days = (Date.parse(date)-Date.parse(lot.borrow_through || lot.entry_date))/86400000;
+          if (days > 0) {
+            const fee = lot.shares * lotPx(pack,lot,date,"open") * lot.borrow_annual * days / 365;
+            cash -= fee; lot.fee_in += fee; lot.cost += fee; lot.borrow_through = date;
+            trades.push({date,ticker:t,side:"BORROW",shares:0,price:null,fees:fee,pnl:null,cash_after:cash});
+          }
+        }
+      }
       for (const t of Object.keys(pos)) {
         const lot = pos[t];
         const held = dateIx[date] - (dateIx[lot.entry_date] != null ? dateIx[lot.entry_date] : dateIx[date]);
@@ -924,7 +936,7 @@
         delete pos[t];
         const recT = {
           date, ticker: t, side: side === "long" ? "SELL" : "COVER",
-          shares: lot.shares, price: Math.round(p * 10000) / 10000, fees: fee,
+          shares: lot.shares, price: p, fees: fee,
           cash_after: Math.round(cash * 100) / 100, pnl: Math.round(pnl * 100) / 100,
           reason: whySell(held, minHold, early, rec.exit_when, dropped, kind),
         };
@@ -960,7 +972,31 @@
             skips.push({ date, ticker: t, kind: "no_price", reason: "no 09:30 open" });
             return;
           }
-          let shares = Math.floor(budgets[i] / p);
+          let rate = 0;
+          const stockNow = markStock(pack,pos,date,"open",side);
+          const eqNowRisk = cash + stockNow;
+          let budget = Math.min(budgets[i], cash);
+          if (side === "short") {
+            const locate = (((pack.borrow || {})[date] || {})[t]);
+            // Compare wall-clock ET via Intl, avoiding a fixed DST offset.
+            const seen = locate && new Date(locate.observed_at);
+            const parts = seen && Number.isFinite(seen.getTime()) ? Object.fromEntries(
+              new Intl.DateTimeFormat('en-CA',{timeZone:'America/New_York',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hourCycle:'h23'}).formatToParts(seen).map(x=>[x.type,x.value])) : null;
+            const observed = parts && `${parts.year}-${parts.month}-${parts.day}T${parts.hour}:${parts.minute}:${parts.second}`;
+            const located = locate && locate.available === true && observed && observed <= date+'T09:30:00' && Number.isFinite(Number(locate.annual_rate)) && Number(locate.annual_rate)>=0;
+            if (risk.require_locate && !located) {
+              skips.push({date,ticker:t,kind:'borrow_unavailable',reason:'No pre-open dated locate'}); return;
+            }
+            rate = located ? Number(locate.annual_rate) : Number(pack.borrow_annual || BORROW_ANNUAL);
+            const shortValue = -stockNow;
+            budget = Math.min(budgets[i], eqNowRisk*risk.max_gross-shortValue,
+              eqNowRisk*risk.max_short-shortValue, (cash-(1+risk.short_margin)*shortValue)/risk.short_margin);
+          } else {
+            budget = Math.min(budget, eqNowRisk*risk.max_gross-stockNow);
+          }
+          let shares = Math.floor(Math.max(0,budget) / p);
+          while(shares>0 && shares*p+orderFees(shares,p,side==='long'?'buy':'sell',fees)>budget+1e-9) shares--;
+
           if (shares < 1) {
             skips.push({ date, ticker: t, kind: "cash", reason: "leftover split " + budgets[i].toFixed(2) + " < 1 share @ " + p.toFixed(2) });
             return;
@@ -987,15 +1023,16 @@
               skips.push({ date, ticker: t, kind: "cash", reason: "short cover " + (2 * notional).toFixed(0) + " > equity " + eqNow.toFixed(0) });
               return;
             }
-            const borrow = notional * (pack.borrow_annual || BORROW_ANNUAL) / 365;
+            const borrow = 0; // accrued by actual calendar days before covers
             fee = orderFees(shares, p, "sell", fees) + borrow;
             cash += notional - fee;
             lot = { ticker: t, shares, entry_px: p, entry_date: date, cost: fee, fee_in: fee, notional, last_px: p, peak_px: p, reason };
           }
+          lot.borrow_annual = rate;
           pos[t] = lot;
           const recT = {
             date, ticker: t, side: side === "long" ? "BUY" : "SHORT",
-            shares, price: Math.round(p * 10000) / 10000, fees: fee,
+            shares, price: p, fees: fee,
             cash_after: Math.round(cash * 100) / 100, pnl: null, reason,
           };
           const stock = markStock(pack, pos, date, "open", side);
@@ -1067,7 +1104,7 @@
       final_equity: eq[eq.length - 1],
       equity: eq.map(x => Math.round(x * 100) / 100),
       daily, trades, skips,
-      n_trades: trades.filter(t => t.side !== "OPEN" && t.side !== "CLOSE").length,
+      n_trades: trades.filter(t => t.side !== "OPEN" && t.side !== "CLOSE" && t.side !== "BORROW").length,
       n_skips: skips.length,
     };
   }

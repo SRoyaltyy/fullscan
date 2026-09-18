@@ -722,7 +722,7 @@ def test_short_book_marks_liability_and_cover() -> None:
     rec = fm.make_recipe("short_alarm_h1", hold=1, side="short",
                          require={"alarm": True}, top_n=1)
     book = fmb.simulate_book(panel, rec, bars=bars, fees=pt.load_fees(),
-                             regime={})
+                             regime={}, risk={"require_locate": False})
     d0 = book["daily"][0]
     # Liability mark: stock is negative; equity stays near $10k, not $20k.
     assert d0["stock"] < 0

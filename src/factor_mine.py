@@ -2587,7 +2587,7 @@ def restamp_dash() -> dict:
     bought = _bought_tickers(payload.get("books"), payload.get("starts"))
     payload["probe"] = fmp.slim_probe(fmp.build_probe(panel), bought)
     payload["sim"] = fms.build_sim_pack(panel)
-    payload["generated_at"] = datetime.now(tl.ET).isoformat()
+    payload["pages_built_at"] = datetime.now(tl.ET).isoformat()
     dest = write_dash_html(payload)
     print(f"[factor-mine] restamp-dash → {dest} "
           f"to={payload.get('to_date')} recipes={payload.get('n_recipes')}",

@@ -17,8 +17,10 @@ It does not change live flatten_robust.
 from __future__ import annotations
 
 import json
+import math
 from pathlib import Path
 
+from . import portfolio_risk as pr
 from . import factor_mine as fm
 from . import paper_trade as pt
 from . import sleeve_merge as sm
@@ -518,13 +520,15 @@ def reconcile_marks(book: dict) -> dict:
                 fails.append(f"{date} close held {tick} missing close mark")
             elif m.get("session") is None:
                 fails.append(f"{date} {tick} missing session $")
+        carrying_cost = sum(float(t.get("fees") or 0) for t in trades
+                            if t.get("date") == date and t.get("side") == "BORROW")
         if not (d.get("bought") or d.get("sold")):
-            if abs(float(d["cash"]) - float(d["open_cash"])) > 0.05:
+            if abs(float(d["cash"]) - float(d["open_cash"]) + carrying_cost) > 0.05:
                 fails.append(
                     f"{date} no-fill cash {d['cash']} ≠ open {d['open_cash']}")
             sess = round(sum(float(m.get("session") or 0) for m in marks), 2)
             gap = round(float(d["equity"]) - float(d["open_equity"]), 2)
-            if abs(sess - gap) > MARK_TOL:
+            if abs(sess - carrying_cost - gap) > MARK_TOL:
                 fails.append(f"{date} no-fill session {sess} ≠ close−open {gap}")
         else:
             day_fills = [
@@ -633,9 +637,71 @@ def equity_walk(book: dict, from_date: str, to_date: str) -> dict:
 def _lots_snap(pos: dict) -> list[dict]:
     return [
         {"ticker": t, "shares": int(p["shares"]),
-         "entry_date": p.get("entry_date"), "entry_px": p.get("entry_px")}
+         "entry_date": p.get("entry_date"), "entry_px": p.get("entry_px"),
+         "side": p.get("side", "long"), "owner": p.get("owner")}
         for t, p in pos.items()
     ]
+
+
+def resolve_exec_fill(exec_fill, *, ticker: str, date: str, side: str,
+                      action: str, official_px, intended_shares: int,
+                      bars=None) -> dict:
+    """Map an intended ticket to a fill. Live books pass ``exec_fill=None``.
+
+    Research overlays (``book_fill_reality``) may supply a callback.
+    Default is the published rule: official 09:30 open, all intended
+    shares. A miss leaves leftover cash (entry) or carries the lot
+    (exit). Never sells more shares than held — the caller caps that.
+    """
+    intended = int(intended_shares or 0)
+    try:
+        official = None if official_px is None else float(official_px)
+    except (TypeError, ValueError):
+        official = None
+    if official is None or not math.isfinite(official) or official <= 0:
+        return {
+            "px": None, "how": "no_open", "shares": 0,
+            "miss": True, "partial": False, "kind": "no_price",
+            "reason": ("no 09:30 open — carry" if action == "exit"
+                       else "no 09:30 open"),
+        }
+    if exec_fill is None:
+        return {
+            "px": official, "how": "ideal_open",
+            "shares": max(0, intended), "miss": False, "partial": False,
+            "kind": None, "reason": "",
+        }
+    got = exec_fill(
+        ticker=ticker, date=date, side=side, action=action,
+        official_px=official, intended_shares=max(0, intended),
+        bars=bars,
+    ) or {}
+    try:
+        px = got.get("px")
+        px = None if px is None else float(px)
+    except (TypeError, ValueError):
+        px = None
+    if px is not None and (not math.isfinite(px) or px <= 0):
+        px = None
+    try:
+        shares = min(intended, int(got["shares"])) if got.get("shares") is not None else intended
+    except (TypeError, ValueError):
+        shares = intended
+    miss = bool(got.get("miss") or px is None or shares < 1)
+    how = str(got.get("how") or ("fill_miss" if miss else "fill"))
+    if action == "exit":
+        reason = got.get("reason") or f"{how} — carry"
+    else:
+        reason = got.get("reason") or f"{how} — leftover stays"
+    return {
+        "px": None if miss else px,
+        "how": how,
+        "shares": 0 if miss else shares,
+        "miss": miss,
+        "partial": bool(got.get("partial")),
+        "kind": got.get("kind") or ("fill_miss" if miss else None),
+        "reason": reason, "filled_at": got.get("filled_at"),
+    }
 
 
 def audit_book(book: dict, *, capital: float | None = None,
@@ -659,6 +725,11 @@ def audit_book(book: dict, *, capital: float | None = None,
         date = t.get("date")
         kind = t.get("side")
         if kind in ("OPEN", "CLOSE"):
+            continue
+        if kind == "BORROW":
+            cash -= fee
+            if abs(float(t.get("cash_after", cash)) - cash) > 0.08:
+                fails.append(f"{date} borrow cash mismatch")
             continue
         if shares < 1 or not ticker:
             fails.append(f"{date} empty fill {kind} {ticker}")
@@ -833,10 +904,17 @@ def recipes_from_action(*, universe="auto", hold="auto", gate="auto",
 
 
 def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
-                  regime=None, rules=None, start: str | None = None) -> dict:
-    """Walk one recipe as a $10k paper sleeve. Sell first, then buy."""
+                  regime=None, rules=None, start: str | None = None,
+                  exec_fill=None, risk=None) -> dict:
+    """Walk one recipe as a $10k paper sleeve. Sell first, then buy.
+
+    ``exec_fill`` is a research-only hook. Live / published books leave
+    it ``None`` (official 09:30 open, full intended size). The hook
+    does not change pick_day, leftover split, min-hold, or hard-red sit.
+    """
     panel = fm.ensure_sim_fields(panel, rec)
     rules = {**BOOK_RULES, **(rules or {})}
+    risk = pr.policy(risk)
     fees = fees if fees is not None else pt.load_fees()
     cal_all = list(panel.get("session_dates") or [])
     last_closed = fm.last_closed_session(
@@ -904,6 +982,9 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
         if good_s and s_boost in ("sizeup", "both"):
             day_why.append(f"S={s:+.2f} sizeup x{SIZEUP:g}")
 
+        cash = pr.accrue(cash, pos, date,
+            lambda t, lot: _lot_px(lot, date, "open", bars), trades, side)
+
         for t in list(pos):
             lot = pos[t]
             held = date_ix[date] - date_ix.get(lot["entry_date"], date_ix[date])
@@ -934,27 +1015,62 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
                               "reason": "no 09:30 open — carry"})
                 held_names.append(t)
                 continue
+            fill = resolve_exec_fill(
+                exec_fill, ticker=t, date=date, side=side, action="exit",
+                official_px=px, intended_shares=lot["shares"], bars=bars)
+            if fill["miss"]:
+                skips.append({
+                    "date": date, "ticker": t,
+                    "kind": fill["kind"] or "fill_miss",
+                    "reason": fill["reason"],
+                })
+                held_names.append(t)
+                continue
+            px = float(fill["px"])
+            old_shares = int(lot["shares"])
+            shares = min(int(fill["shares"]), old_shares)
+            if shares < 1:
+                skips.append({
+                    "date": date, "ticker": t, "kind": "fill_miss",
+                    "reason": "fill miss — carry",
+                })
+                held_names.append(t)
+                continue
             reason = why_sell(t, held, min_hold, early,
                               rec.get("exit_when"), dropped, kind)
+            if fill["how"] and fill["how"] != "ideal_open":
+                reason = f"{reason}; fill {fill['how']}"
             eq_before = cash + mark(date, "open")
-            fee = pt.order_fees(lot["shares"], px, "sell" if side == "long" else "buy", fees)
+            fee = pt.order_fees(shares, px, "sell" if side == "long" else "buy", fees)
+            frac = shares / old_shares
+            cost_sold = float(lot["cost"]) * frac
+            fee_in_sold = float(lot.get("fee_in") or 0) * frac
             if side == "long":
-                proceeds = lot["shares"] * px - fee
+                proceeds = shares * px - fee
                 cash += proceeds
-                pnl = proceeds - lot["cost"]
+                pnl = proceeds - cost_sold
             else:
-                cost_cover = lot["shares"] * px + fee
+                cost_cover = shares * px + fee
                 cash -= cost_cover
-                pnl = lot["notional"] - cost_cover - lot.get("fee_in", 0)
-            pos.pop(t)
+                pnl = float(lot["notional"]) * frac - cost_cover - fee_in_sold
+            if shares < old_shares:
+                lot["shares"] = old_shares - shares
+                lot["cost"] = float(lot["cost"]) - cost_sold
+                lot["notional"] = lot["shares"] * float(lot["entry_px"])
+                lot["fee_in"] = float(lot.get("fee_in") or 0) - fee_in_sold
+                held_names.append(t)
+            else:
+                pos.pop(t)
             rec_t = {
                 "date": date, "ticker": t, "side": "SELL" if side == "long" else "COVER",
-                "shares": lot["shares"], "price": round(px, 4), "fees": fee,
+                "shares": shares, "price": px, "fees": fee,
                 "cash_after": round(cash, 2),
-                "pnl": round(pnl, 2),
+                "pnl": round(pnl, 2), "entry_notional": shares * float(lot["entry_px"]),
                 "reason": reason,
                 "held": held,
                 "cameras": camera_stamp(row.get("boxes")),
+                "fill_how": fill["how"], "filled_at": fill.get("filled_at"),
+                "partial": bool(fill["partial"] or shares < old_shares),
             }
             _stamp_equity(rec_t, cash, pos, date, bars, side, rules)
             rec_t["equity_before"] = round(eq_before, 2)
@@ -1001,6 +1117,39 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
                         "reason": f"leftover split {per:.2f} < 1 share @ {px:.2f}",
                     })
                     continue
+                fill = resolve_exec_fill(
+                    exec_fill, ticker=t, date=date, side=side, action="entry",
+                    official_px=px, intended_shares=shares, bars=bars)
+                if fill["miss"]:
+                    skips.append({
+                        "date": date, "ticker": t,
+                        "kind": fill["kind"] or "fill_miss",
+                        "reason": fill["reason"],
+                    })
+                    continue
+                px = float(fill["px"])
+                shares = int(fill["shares"])
+                if shares < 1:
+                    skips.append({
+                        "date": date, "ticker": t, "kind": "fill_miss",
+                        "reason": fill["reason"] or "fill miss — leftover stays",
+                    })
+                    continue
+                if fill["how"] and fill["how"] != "ideal_open":
+                    reason = f"{reason}; fill {fill['how']}"
+                allowed, rate, borrow_source = pr.locate(risk, date, t) if side == "short" else (True, 0., "")
+                if not allowed:
+                    skips.append({"date": date, "ticker": t, "kind": "borrow_unavailable",
+                                  "reason": "no timestamped available borrow before decision"})
+                    continue
+                budget = min(per, pr.room(cash, pos,
+                    lambda tk, lot: _lot_px(lot, date, "open", bars), side, risk, side))
+                shares = pr.affordable(shares, px, budget,
+                    lambda n: pt.order_fees(n, px, "buy" if side == "long" else "sell", fees))
+                if shares < 1:
+                    skips.append({"date": date, "ticker": t, "kind": "risk_limit",
+                                  "reason": "aggregate exposure/collateral or allocation limit"})
+                    continue
                 fee_side = "buy" if side == "long" else "sell"
                 fee = pt.order_fees(shares, px, fee_side, fees)
                 if side == "long":
@@ -1031,7 +1180,7 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
                             "reason": f"short cover {2*notional:.0f} > equity {eq_now:.0f}",
                         })
                         continue
-                    borrow = notional * BORROW_ANNUAL / 365.0
+                    borrow = 0.0  # calendar-day accrual before covers
                     fee = pt.order_fees(shares, px, "sell", fees) + borrow
                     cash += notional - fee
                     lot = {
@@ -1040,16 +1189,19 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
                         "notional": notional, "last_px": px, "peak_px": px,
                         "reason": reason,
                     }
+                lot.update(side=side, borrow_annual=rate, borrow_source=borrow_source)
                 pos[t] = lot
                 rec_t = {
                     "date": date, "ticker": t,
                     "side": "BUY" if side == "long" else "SHORT",
-                    "shares": shares, "price": round(px, 4), "fees": fee,
+                    "shares": shares, "price": px, "fees": fee,
                     "cash_after": round(cash, 2),
                     "pnl": None,
                     "reason": reason,
                     "held": 0,
                     "cameras": camera_stamp(row.get("boxes")),
+                    "fill_how": fill["how"], "filled_at": fill.get("filled_at"),
+                    "partial": bool(fill["partial"]),
                 }
                 _stamp_equity(rec_t, cash, pos, date, bars, side, rules)
                 trades.append(rec_t)
@@ -1089,6 +1241,7 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
             ("hold " + ",".join(pos.keys()) if pos else "flat cash")
         )
         daily.append({
+            "exposure": pr.exposure(cash, pos, lambda t, lot: _lot_px(lot, date, "close", bars), side),
             "date": date,
             "s": None if s is None else round(s, 2),
             "hard_red": hard_red,
@@ -1131,6 +1284,10 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
     wins = [t for t in closed if (t.get("pnl") or 0) > 0]
     losses = [t for t in closed if (t.get("pnl") or 0) < 0]
     out = {
+        "accounting_version": 2,
+        "risk": {k: v for k, v in risk.items() if k != "borrow"},
+        "execution_verified": False,
+        "stop_semantics": "morning-open evaluation, not intraday protective orders",
         "name": rec["name"],
         "rules": {k: rules[k] for k in BOOK_RULES},
         "size": size_mode,
@@ -1145,7 +1302,7 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
              "entry_px": p["entry_px"], "reason": p.get("reason")}
             for t, p in pos.items()
         ],
-        "n_trades": len([t for t in trades if t.get("side") not in ("OPEN", "CLOSE")]),
+        "n_trades": len([t for t in trades if t.get("side") not in ("OPEN", "CLOSE", "BORROW")]),
         "n_skips": len(skips),
         "n_closed": len(closed),
         "n_wins": len(wins),
@@ -1159,10 +1316,10 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
         "skips": skips,
         "win_rate": None if not closed else round(len(wins) / len(closed), 4),
         "avg_win_pct": None if not wins else round(
-            sum(100 * t["pnl"] / max((t.get("price") or 1) * t["shares"], 1)
+            sum(100 * t["pnl"] / max(t.get("entry_notional") or (t.get("price") or 1) * t["shares"], 1)
                 for t in wins) / len(wins), 3),
         "avg_loss_pct": None if not losses else round(
-            sum(100 * t["pnl"] / max((t.get("price") or 1) * t["shares"], 1)
+            sum(100 * t["pnl"] / max(t.get("entry_notional") or (t.get("price") or 1) * t["shares"], 1)
                 for t in losses) / len(losses), 3),
     }
     out["audit"] = audit_book(out, capital=rules["capital"], side=side)
