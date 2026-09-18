@@ -14,12 +14,12 @@
 
   - Hackers claim millions of patient records stolen during data breach at healthcare giant McKesson - TechCrunch (https://news.google.com/rss/articles/CBMiywFBVV95cUxQamJrNGdlbjJ4bk9QSXl5c1NDNHFQR2c3OWpid2xtaXVfSkNubHBZNWE2QXVxTFFyeGQwWWplbzlubXJuRmU3MklNTVZsdENKMUhFWmdzdWZGdjZMRUlJQUJOQ2JyTWp1UFJDcDgtMnRtX085U2pZdTdZU2hYZ0JuUzJvbHVZWFBEdzA1WUR0azNHZ080eVVyQ0NTSU95aC1fSWc2ZGF3bnVaNkhOWUlmV0daTzc1SDFZSmpxSElEYnJtektxdFE5Qi1FMA?oc=5)
 
-**Step 2 — Research.** The model wanted to know: *"COR Cencora news September 2026"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"COR Cencora news September 2026"* → got 6 results (via gnews_rss)
 
-  - Cencora, Inc. - Investor Relations (https://investor.cencora.com/overview/default.aspx)
+  - Cencora (NYSE: COR) director sells $411K in shares - Stock Titan (https://news.google.com/rss/articles/CBMipwFBVV95cUxPZjdLT1NVYm5UUElfXzktZk5XbU9hY21fa19GMFF3OVdFY1VPT3lHUzF6RlNYdnhaYzBBcnROUDVUZWhWY0hnWWUxSzQ5R3JaUEJ6eElmX0lFOFB6M3FOVUpXSXNVSlF4clFoY05pX3QzelVEQ0V5QW5EMWpScy15T1RJLTBCUnRmZGFlckRWVGNfTGNfUHd0cGg0aGxEQTBVcEg4clVVYw?oc=5)
 
-  - Newsroom: Press Releases, Company News and Insights | Cencora (https://www.cencora.com/newsroom)
+  - Is Cencora (COR) Undervalued On Its New Cell And Gene Therapy Push? - simplywall.st (https://news.google.com/rss/articles/CBMiwgFBVV95cUxNMmdFWDkxM19VZUhPZ3V4N1VjOWJGa3dhbnlGaHhjWTA5M0pQWU9NazJXSnMwMTc3YUg5STBWRWNNTjRGVnJCU0h5XzJQaFFyaWxlU2s3Z25uS1N0cGZzVnlqbUw2UjFZa3QyNDJ4X0xXMVl4TU5rYkxFYnBudXRsS2NSU3lfd3dsMjlpWXRIMTRlOHRLU1FSTW5pZWZORE12QnZaLXMwNEMxV2VlOEJfTEtOdF83NUV1ZW9VdVhULUZid9IBxwFBVV95cUxOVTRfSTZjUU5JVEtINXdTZGh0ZVhIbDk1ZElzR25KZHlKLVdkOFkwMnl3c0IwbHJIVVEydXljaXlZR1ZXOXB3dWFSRkl0WXF0N0FOeE43bmo4WW4xNWl5Y1dmRHBaTnlQMm1PSmNGR2s4RUw3X2lTY19IUnJvb0NkajZ5cFlENVB0N1JRMk5uY2ptbzY0dVhXZE1OdFZlai1TMWRQakNKY2RMamU4UWNrU1R3UGFKd2NIbFV3Ym1WLWd1STlyY29N?oc=5)
 
-  - Cencora Raises 2026 EPS Outlook as Specialty Businesses ... (https://www.zacks.com/stock/news/2984771/cencora-raises-2026-eps-outlook-as-specialty-businesses-strengthen)
+  - Cencora at Morgan Stanley conference: specialty strategy drives growth - Investing.com (https://news.google.com/rss/articles/CBMizgFBVV95cUxPOWtZRVFvRGtreEJuRm5ESmt1UVVTcmo5MFBaeU5HUy1lYUpBcHROOUJxczhwXzNGOE40OUkxbVVDSmRiY1cyQ2I1NGdleEZDekhlVUloVmxDSUhJeG8wWjJIbXBneDI0S1dLcExxMmlwaTJRR1NVT0FYamlUQm9pcTRzVFpBaG1OWGJXSHF1T0otTUcyTTlCNndmX2w3eHFvVjZuc1lCSGFGTzVubTdwSThMVkRNTFFPVGNVc1k4OThOeE1qLUR1UWx3aFFUZw?oc=5)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

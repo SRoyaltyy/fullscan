@@ -14,12 +14,12 @@
 
   - Nvidia-Backed Cloud Platform Nscale Files For IPO — NVDA Stock In Focus - TradingView (https://news.google.com/rss/articles/CBMiygFBVV95cUxQeHRuUlF6VWw0VE5wZ19WTjZSQmJVNG0ycjlGdkh1eTZqajFPTExBNjBiMzBvNjJ0Y1ZBLUl6dXA3akgyNE5iUjlrTVA4a3U2bzV2QnFaWDk5b0l1ZFZNbV9NR1ZSNldRcVlkZ0tHSTVYRktyOWQ2bV9GbzdRNmJXTTN6Tkt3ZWdoZzF6SHhERnpCbFA0V2xsdHpnTmxORGtyYVVoVnpzRTY2N3BMYjZzNlNIcTB3c2xnc0F1cFhkLUcwNS0yTFAydDRR?oc=5)
 
-**Step 2 — Research.** The model wanted to know: *"AVGO Broadcom news September 18 2026"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"AVGO Broadcom news September 18 2026"* → got 6 results (via gnews_rss)
 
-  - All News for AVGO : Broadcom - Zacks.com (https://www.zacks.com/stock/research/AVGO/all-news)
+  - Broadcom: A New Buying Opportunity Emerged (NASDAQ:AVGO) - Seeking Alpha (https://news.google.com/rss/articles/CBMiigFBVV95cUxNSVEtVHhjMXh4a2lBSjZ2Wm9MeU5XdF9aRDk3V0JwTEFNVDBnU2ZrTkZGTFBhRGxOZGQ5M3FDeTZjdVNfVl9rLUJoWmI3TUpZb1JoZ0NjUzBXdGxyaE8xMWhOTm13Q2hTMmZodVpnM2JFeG5rek95OW9jQVFPR3p2czg2ZDNyREQyNFE?oc=5)
 
-  - Investor Center | Broadcom Inc. (https://investors.broadcom.com/)
+  - Own Broadcom by Sept. 21 to Qualify for Its Sept. 30 Dividend. Here's How Many Shares You'd Need for $5,000 in Yearly Dividends. - The Motley Fool (https://news.google.com/rss/articles/CBMimAFBVV95cUxQbGkwTEw2QzN6bmJrR2dzcEl2cVV0eEtLdHdycTBTUF9kTkxsMHRPeTJVak5CWmlpNTNqUDZudlJ3QmRvUDdDZFhPV25BZXVmX1RLOGNTTUpmdDM0ZUE4ZWF0TXh6N0o2dW5lMFR3VzJDS0hLVFV5aUZSNnVWZG8xZjRzYTBqQVpwZDhZQlloUHRHTkFJaFQ0Sw?oc=5)
 
-  - Here’s When Nividia’s Dominance Fades, Opening Broadcom’s Era ... (https://247wallst.com/investing/2026/09/18/heres-when-nividias-dominance-fades-opening-broadcoms-era-of-dominance/)
+  - What Is Going on With Broadcom Stock on Friday? - TradingView (https://news.google.com/rss/articles/CBMiqAFBVV95cUxOTHlPdElTV1F5RjB5RjhDZ2RPaXFFbXdWY3pxVWh3dnNtZGxDQml1STdSOHF3NDRXM3R2cUdveUlTS2dHQkRPd1VTc1QyM0xBbmFDRzliTmRTM2xyNnR2RGkxb2lpSXg5bUxGYzc1SW1UR3lCdS1rRlhxYnIzZnhSWkRmdnkwUzFuZmcybkpqeWFRU0cyLWoyY1NvVF9kUXJqX0NndFU0dUk?oc=5)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

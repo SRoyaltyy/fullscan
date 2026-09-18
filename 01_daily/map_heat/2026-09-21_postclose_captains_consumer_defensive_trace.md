@@ -14,12 +14,12 @@
 
   - STZ Maintained by TD Cowen -- Price Target Lowered to $150 - GuruFocus (https://news.google.com/rss/articles/CBMimAFBVV95cUxOZV9xSXlGSXpETUtuNUFPb0JfdWdwaEZsOHFkelRiRWs1bjYyTFJrdUJTblJYVHYxdF85MjItTnduY2hFR3IwazAxSzVVWlB4R0NYSmFBaUlNekszdVp1eE1XRm9DWGg2b2Z3RTgtcWFxTGFlSzRIYWJHNFlzTVk5ZTBBWWpyM3hCTGhZWU5HbU9lb0U3V2xJeA?oc=5)
 
-**Step 2 — Research.** The model wanted to know: *"Molson Coors TAP news September 2026"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"TAP Molson Coors news September 2026"* → got 6 results (via gnews_rss)
 
-  - Molson Coors Beverage Company - Molson Coors Beverage Company ... (https://ir.molsoncoors.com/news/news-details/2026/Molson-Coors-Beverage-Company-Reports-2026-Second-Quarter-Results/default.aspx)
+  - Molson Coors stock holds steady after second quarter 2026 results - AD HOC NEWS (https://news.google.com/rss/articles/CBMixwFBVV95cUxPUzlidi1nRlNHVjdpRkR3OEUtOTBRSzFPcXJzRVJkU1RIQ2g4RGNqQ1RYeF8tU0d2SUp5ZExwaGt2WGdiM0dqYlJxZThqYkgzMkZoNDBXX0Rsb2M1LXVCc1drdzVNZ00xNi1DNTlJQndRSlVJRWhDc01LMnNxeUtOdUt6STlHNnZqclI0REFRTGxJd0JvSUJDNWo1UkJHNk1rTEtsbVhGZUhHSmdLX0dscEVKenBBemlvM2UwREZ0WlZCbFhES0hZ?oc=5)
 
-  - Molson Coors Beverage Company - Stock Information - Stock ... (https://ir.molsoncoors.com/stock-information/stock-information/default.aspx)
+  - Is Molson Coors Beverage (TAP) A Bargain Or Is The Upside Already Priced In? - simplywall.st (https://news.google.com/rss/articles/CBMi5AFBVV95cUxPZXVjeW8zbEswOFh5c05BSUw0bVhfbE5RWXB1Y3dXSnVFWW90SERJYUotNVBPMUNWS3RtcV9DRUJUUlV5RXVtNWg3ZjR6RDJIa0Q1TnVVUnlud1QwbGhjMGtYODlSV2JoMk1Tel9tdzkyejNSTlFtS2kwbF9uYnRkcTVLUnd2SktXdE1WbHlZNlctYUVHRWpjcU9CT0E5RHlYYndOSGUyNkppR2pMQ2hfVnpVSV9ZX3hEcGlKcENsLUNpVEZKU3VZOWYxbnVaREY5SXdidVRhQ2VIaWhGbnNxR3ZLNGPSAeoBQVVfeXFMUG9TYUF1TUd2M21kSEpEamNHTU9uUFVsc0lJUkNHQ2NsejZqY0tzOFF2RUU1bTdkRVNDbm9CTFNDUnR1aWZVbTJtWlNqam5XNFFQT2xSZWUzQi1aSnBnMVRVRE9qU3VOQlRleDA1WHRtZXlpTXVIbHpzOEk3M3M0WmlydHBBWWtaTkdNR194R1lXY0J1dXFNUlE2UFdzTFd5TmI3UHNfSGxqRnFzZTFlRWFrb3VZTVJMLWMwSEZxZmdKb0tYdERGWW9ld0tsTlZRTWVVNWVKNzhiRVdmMWtRaW1pbzkyal9vQWxR?oc=5)
 
-  - Molson Coors Beverage : Takeaways from the 2026 Molson Coors ... (https://www.marketscreener.com/news/molson-coors-beverage-takeaways-from-the-2026-molson-coors-distributor-convention-ce785bd3d088f224)
+  - Three Stocks Are Joining the S&P 500. Will They Actually Improve VOO’s Returns? - 24/7 Wall St. (https://news.google.com/rss/articles/CBMiwAFBVV95cUxNeTVsQXVob1NjNEFoUDVEal85ZTJfZVJZakVvUXVvZ1NsVEtreFFWd29RUTlNY1JTVDBxTnRTY1BQdW44d3V6bnB3am92UU9KRE5Jdy1ERkczMGRxNFE1UjVBRHVmVHlkSzhzakgzY3RpTmVodmx2U243RW45bVJycWxnX0pnaXcxeHZyRl9RRUR3VlhmQUY4WHBsSzVIUGNzdGo5RUQzaXNaNTdwYnBHRnFIRjZaRGY3aHRLdk1DUjQ?oc=5)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

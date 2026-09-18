@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"AppLovin APP stock news September 2026"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"APP AppLovin stock news September 2026"* → got 6 results (via ddg)
 
   - AppLovin Corporation (APP) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/APP/)
 
-  - AppLovin: APP Stock Price Quote & News | Robinhood (https://robinhood.com/us/en/stocks/APP/)
+  - Applovin Corp (APP) Stock Price & News - Google Finance (https://www.google.com/finance/quote/APP:NASDAQ)
 
-  - AppLovin stock heads into the open after a 3.17 percent gain (https://www.ad-hoc-news.de/boerse/news/corporate-news/applovin-stock-heads-into-the-open-after-a-3-17-percent-gain/70102346)
+  - APP News Today | Why did AppLovin stock drop today? $APP (https://www.marketbeat.com/stocks/NASDAQ/APP/news/)
 
-**Step 2 — Research.** The model wanted to know: *"Omnicom OMC CEO switch Robertson Ruhanen news"* → got 6 results (via ddg)
-
-  - Omnicom Advertising Group president and CEO Troy Ruhanen is retiring | Campaign US (https://www.campaignlive.com/article/omnicom-advertising-group-president-ceo-troy-ruhanen-retiring/1969589)
-
-  - CEO Switch at Omnicom Advertising As Robertson Succeeds Ruhanen 09/10/2026 (https://www.mediapost.com/publications/article/417759/ceo-switch-at-omnicom-advertising-as-robertson-suc.html)
+**Step 2 — Research.** The model wanted to know: *"OMC Omnicom news September 2026 CEO Robertson Ruhanen"* → got 6 results (via ddg)
 
   - Omnicom Advertising Announces Leadership Transition - Omnicom (https://www.omc.com/newsroom/omnicom-advertising-announces-leadership-transition/)
+
+  - Omnicom Advertising Names Robertson CEO; Ruhanen Retires | OMC Stock News (https://www.stocktitan.net/news/OMC/omnicom-advertising-announces-leadership-gsytluc8w8vo.html)
+
+  - Omnicom advertising chief Ruhanen to retire, Robertson named CEO By Investing.com (https://www.investing.com/news/company-news/omnicom-advertising-chief-ruhanen-to-retire-robertson-named-ceo-93CH-4894014)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

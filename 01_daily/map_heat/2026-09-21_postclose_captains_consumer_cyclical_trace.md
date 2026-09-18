@@ -6,13 +6,13 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"Ralph Lauren RL stock news September 2026"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"Ralph Lauren RL news September 2026"* → got 6 results (via ddg)
 
-  - Ralph Lauren Corporation (RL) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/RL/)
+  - NEWS RELEASES | Ralph Lauren Corporation (https://investor.ralphlauren.com/news-releases)
 
-  - Ralph Lauren - 15 Year Stock Price History | RL | MacroTrends (https://www.macrotrends.net/stocks/charts/RL/ralph-lauren/stock-price-history)
+  - What is the Fiscal Year for Ralph Lauren? - Salesmotion (https://salesmotion.io/insights/fiscal-year/ralph-lauren/)
 
-  - Stock Information | Ralph Lauren Corporation (https://investor.ralphlauren.com/stock-information/historical-price-lookup)
+  - Ralph Lauren (RL) Stock News, Sep 2025-Jan 2026 | StockTitan (https://www.stocktitan.net/news/RL/page-2.html)
 
 **Step 2 — Research.** The model wanted to know: *"Zegna ZGN earnings H1 2026 results"* → got 6 results (via ddg)
 

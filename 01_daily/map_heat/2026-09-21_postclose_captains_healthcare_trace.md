@@ -10,16 +10,16 @@
 
   - Newsroom | Vertex Pharmaceuticals Newsroom (https://news.vrtx.com/)
 
-  - Vertex Pharmaceuticals | Vertex Completes Acquisition of ... (https://investors.vrtx.com/news-releases/news-release-details/vertex-completes-acquisition-crinetics-pharmaceuticals-and)
+  - Vertex Pharmaceuticals | Investor Relations (https://investors.vrtx.com/investor-relations)
 
-  - Vertex Pharmaceuticals | Press releases - investors.vrtx.com (https://investors.vrtx.com/news-events/press-releases)
+  - Press releases - Vertex Pharmaceuticals | Investor Relations (https://investors.vrtx.com/news-events/press-releases)
 
-**Step 2 — Research.** The model wanted to know: *"REGN Regeneron news September 2026"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"REGN Regeneron news September 2026"* → got 6 results (via gnews_rss)
 
-  - SEPTEMBER 14, 2026 REGN INVESTOR DEADLINE: Regeneron ... (https://www.tmcnet.com/usubmit/2026/09/04/10440736.htm)
+  - CLASS ACTION DEADLINE TONIGHT: Faruqi & Faruqi, LLP Reminds Regeneron (REGN) Investors of Securities Class Action Lawsuit Deadline on September 14, 2026 - AOL.com (https://news.google.com/rss/articles/CBMihwFBVV95cUxNdUxMeGROLXRmeXlXWnRwZy1oTW52aC01cXg3NU84WTRmYW80c05fR1RtWG1qQnk0cDE5YUJYeDAxa2Z4TWNESVNIZHFCQnJYZldLM2hlRy1JUTVIOU1YSjJCVHVYWk5IeXdPUVJZZXVKYUkwUGJFMVo5ekZNYWNsRzZFemNuQzA?oc=5)
 
-  - Regeneron Pharmaceuticals, Inc. (REGN) Investors: September ... (https://www.prnewswire.com/news-releases/regeneron-pharmaceuticals-inc-regn-investors-september-14-2026-lead-plaintiff-deadline-in-class-action-lawsuit-302856077.html)
+  - CLASS ACTION DEADLINE TONIGHT: Faruqi & Faruqi, LLP Reminds Regeneron (REGN) Investors of Securities Class Action Lawsuit Deadline on September 14, 2026 - New Castle News (https://news.google.com/rss/articles/CBMipwJBVV95cUxOTGlrczJFQzlHQjctMVJDLUoybnphTTRxWWZhdjJyMWdlRW9XbG5sOEQ1bzNveUNCZzBxeW9tandLWjVEQVJTb0YxaU8wZWZZU08wMmh2dm5Hc29KTHh0LW9DbXZDVTJpMl9FTlRNXzV5MlpXdGxjWVVCX1V3akVlcmFid1FZNE5JU3RwUXNlTWpsaWlhZ3ZPRXNCeUxWUUpfUTBydGNlQ0E4c3UwZmpwQ2RRR3Rjc1pIb2V5SFhrTlQwUGwxTnYyajBBRnB3SVMwZG0tS1VXc3JNSFVsWlpCV0tWbDNYM3NrdHhGNFNmMXFfWS1kOFlrekEwb3NFekI1dTdFNEQtaFctbXlGU1JSdDhiRTVCYV91QnRiRzE0bmdGR28zbGdB?oc=5)
 
-  - SEPTEMBER 14, 2026 REGN INVESTOR DEADLINE: Regeneron ... (https://www.morningstar.com/news/business-wire/20260904755352/september-14-2026-regn-investor-deadline-regeneron-pharmaceuticals-inc-investors-with-substantial-losses-have-opportunity-to-lead-class-action-lawsuit-robbins-geller-rudman-dowd-llp-announces)
+  - SueWallSt Reminds Shareholders of a Lead Plaintiff Deadline of September 14, 2026 in Regeneron Pharmaceuticals, Inc. Lawsuit - REGN - PR Newswire (https://news.google.com/rss/articles/CBMikgJBVV95cUxQcFEwLWZzckhlMDZKb1A1RTF5MS05UW43NlBlZDJpQXBQRnBuS2hSZHpBVmx0VXZ0MGFpN0RIbmV2S1VLYkZiSlJYMEZrZmhydUpndTltdDVjbEhQeEdTWkNqV2FYRFZsZXV2UVdPbVdRd1dSaGdOUUlubU9GOHhocjNMd1FnWHFDYy1JaFA3OE50YnFZRzJQdVF5NDJ4Ql9YNUpBenhvN0FBZ1dYRFJ5ektEZWtVU3NSLUlRVk8xamwxMWFidEFrMkE2cmd0anhQQkRTWS0xaVB5eXhZUi1telk3ZjRSclZqb0RRRnBaeXFRUjNNMjNVMTBta0FLbFRfYS1mOWhsVmdDWlFZUnhOd2Z3?oc=5)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.
