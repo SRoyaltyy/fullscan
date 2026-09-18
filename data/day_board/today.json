@@ -1,6 +1,6 @@
 {
   "date": "2026-09-18",
-  "generated_at": "2026-09-18T14:55:03.647032-04:00",
+  "generated_at": "2026-09-18T16:34:49.089891-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -169,31 +169,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "catalyst",
-      "title": "Catalyst dossiers (after book)",
-      "date": "2026-09-18",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-18T05:02:25.443996-04:00",
-      "files": [
-        {
-          "path": "01_daily/catalyst/2026-09-18_dossiers.json",
-          "ok": true,
-          "reason": "",
-          "size": 2887,
-          "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, targets, dossiers"
-        },
-        {
-          "path": "01_daily/catalyst/2026-09-18_dossiers.md",
-          "ok": true,
-          "reason": "",
-          "size": 1305,
-          "preview": "# CATALYST DAILY \u2014 2026-09-18\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
-        }
-      ],
-      "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-09-18\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
-    },
     {
       "key": "status",
       "title": "Pre-open status packet",
@@ -599,6 +574,31 @@
         }
       ],
       "preview": "2026-09-18 BUY RBRK, FIVN, SDGR, ILMN, ZS, ARQT, CROX, TEM \u00b7 SELL SOC, EU, UUUU, PUMP, GS, MS, WFRD, BTU \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-18 BUY RBRK, FIVN, SDGR, ILMN, ZS, ARQT, CROX, TEM \u00b7 SELL SOC, EU, UUUU, PUMP, GS, MS, WFRD, BTU \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-18 BUY RBRK, FIVN, SDGR, ILMN, ZS, ARQT, CROX, TEM \u00b7 SELL SOC, EU, UUUU, PUMP, GS, MS, WFRD, BTU \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-18 BUY RBRK, FIVN, SDGR, ILMN, ZS, ARQT, CROX, TEM \u00b7 SELL SOC, EU, UUUU, PUMP, GS, MS, WFRD, BTU \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, "
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-09-18",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-18T16:34:48.408229-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-18_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 8888,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-09-18_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 3716,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-09-18\n**Generated:** 2026-09-18T16:34:48.382211-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks ended mixed as tech gains countered a 5% 10-year yield and $7 trillion options expiration amid Middle East-driven oil concerns\n**Prior close:** SPX +0.08%  Nasdaq +0.20%  Dow -0.10%\n**SPX:** +0.08%  **Nasdaq:** +0.20%  **Dow:** -0.10%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** AVGO, XENE, COIN, NFLX, WFC, AZO, CTAS, GIS\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** AZO, CTAS, GIS\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-21\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-18\n**Generated:** 2026-09-18T16:34:48.382211-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks ended mixed as tech gains countered a 5% 10-year yield and $7 trillion options expiration amid Middle East-driven oil concerns\n**Prior close:** SPX +0.08%  Nasdaq +0.20%  Dow -0.10%\n**SPX:** +0.08%  **Nasdaq:** +0.20%  **Dow:** -0.10%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** AVGO, XENE, COIN, NFLX, WFC, AZO, CTAS, GIS\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** AZO, CTAS, GIS\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-21\n**Clock use:** `next_open`"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

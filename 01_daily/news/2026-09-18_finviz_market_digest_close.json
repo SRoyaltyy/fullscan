@@ -1,0 +1,116 @@
+{
+  "date": "2026-09-18",
+  "generated_at": "2026-09-18T16:34:48.382211-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-09-21",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-09-21) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks ended mixed as tech gains countered a 5% 10-year yield and $7 trillion options expiration amid Middle East-driven oil concerns",
+  "raw_text": "- The S&P 500 ($SPX) rose 0.08% to 7643.91, the Nasdaq Composite ($COMP) gained 0.20% to 26472.07, the Dow Jones ($DJI) slipped 0.10% to 51725.17, and the Russell 2000 (IWM) fell 0.52% on Friday\n- The 10-year Treasury yield hit 5.00% as traders priced in further Federal Reserve rate hikes following Wednesday’s 25-basis-point increase and ongoing inflation worries tied to the Iran conflict and volatile oil prices\n- Rate-sensitive groups including materials and industrials lagged while technology outperformed, highlighted by Broadcom (AVGO) advancing 2.5%\n- A roughly $7 trillion triple-witching options expiration drove sharp intraday volatility across equities and derivatives\n- Xenon Pharmaceuticals (XENE) sank 30.7% after the company paused enrollment in trials of its experimental drug for major depressive and bipolar disorder due to reported side effects, according to Reuters\n- Coinbase Global (COIN) jumped more than 11% as Bitcoin (@BTC) traded above $80,000 amid a broader cryptocurrency rebound\n- Berkshire Hathaway (BRK-B) traded roughly flat after Warren Buffett stepped down as chairman after about six decades, with his son Howard Buffett elected to succeed him\n- Netflix (NFLX) fell nearly 5% after Wells Fargo (WFC) downgraded the stock, citing weakening viewership trends and content concerns\n- Oil prices eased into the close despite supply concerns linked to Saudi Arabia, Yemen’s Iran-backed Houthis, and broader Middle East tensions, with softer crude (@CL) in the final hour helping support the S&P 500 ($SPX) and Nasdaq\n- Few notable after-hours reports on September 18, investors looked ahead to next week’s new home sales data and earnings from AutoZone (AZO), Cintas (CTAS), and General Mills (GIS)",
+  "raw_summary_md": "- The **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) **rose 0.08% to 7643.91**, the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) **gained 0.20% to 26472.07**, the **Dow Jones** ([$DJI](https://finviz.com/index/DJI?p=d)) **slipped 0.10% to 51725.17**, and the **Russell 2000** ([IWM](https://finviz.com/quote?t=IWM)) **fell 0.52%** on Friday\n- The **10-year Treasury yield hit 5.00%** as traders priced in further **Federal Reserve rate hikes** following Wednesday’s **25-basis-point increase** and ongoing inflation worries tied to the Iran conflict and volatile oil prices\n- **Rate-sensitive groups** including materials and industrials lagged while **technology outperformed**, highlighted by **Broadcom** ([AVGO](https://finviz.com/quote?t=AVGO)) **advancing 2.5%**\n- A roughly **$7 trillion triple-witching options expiration** drove **sharp intraday volatility** across equities and derivatives\n- **Xenon Pharmaceuticals** ([XENE](https://finviz.com/quote?t=XENE)) **sank 30.7%** after the company **paused enrollment in trials of its experimental drug for major depressive and bipolar disorder** due to reported side effects, according to Reuters\n- **Coinbase Global** ([COIN](https://finviz.com/quote?t=COIN)) **jumped more than 11%** as **Bitcoin** ([@BTC](https://finviz.com/futures_charts?t=BTC)) **traded above $80,000** amid a broader **cryptocurrency rebound**\n- **Berkshire Hathaway** ([BRK-B](https://finviz.com/quote?t=BRK-B)) traded roughly flat after **Warren Buffett stepped down as chairman after about six decades**, with his son **Howard Buffett elected to succeed him**\n- **Netflix** ([NFLX](https://finviz.com/quote?t=NFLX)) **fell nearly 5%** after **Wells Fargo** ([WFC](https://finviz.com/quote?t=WFC)) **downgraded the stock**, citing weakening viewership trends and content concerns\n- **Oil prices eased into the close** despite supply concerns linked to Saudi Arabia, Yemen’s Iran-backed Houthis, and broader **Middle East tensions**, with **softer crude** ([@CL](https://finviz.com/futures_charts?t=CL)) in the final hour **helping support the S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) **and Nasdaq**\n- **Few notable after-hours reports on September 18**, investors looked ahead to next week’s **new home sales data** and earnings from **AutoZone** ([AZO](https://finviz.com/quote?t=AZO)), **Cintas** ([CTAS](https://finviz.com/quote?t=CTAS)), and **General Mills** ([GIS](https://finviz.com/quote?t=GIS))",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": 0.08,
+      "verb": "rose"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": 0.2,
+      "verb": "gained"
+    },
+    {
+      "name": "Dow Jones",
+      "code": "DJI",
+      "change_pct": -0.1,
+      "verb": "slipped"
+    },
+    {
+      "name": "Russell 2000",
+      "code": "RUT",
+      "change_pct": -0.52,
+      "verb": "fell"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "AVGO",
+    "XENE",
+    "COIN",
+    "NFLX",
+    "WFC",
+    "AZO",
+    "CTAS",
+    "GIS"
+  ],
+  "named_leaders": [
+    "AVGO",
+    "XENE",
+    "COIN",
+    "NFLX",
+    "WFC",
+    "AZO",
+    "CTAS",
+    "GIS"
+  ],
+  "calendar": [
+    "The S&P 500 ($SPX) rose 0.08% to 7643.91, the Nasdaq Composite ($COMP) gained 0.20% to 26472.07, the Dow Jones ($DJI) slipped 0.10% to 51725.17, and the Russell 2000 (IWM) fell 0.52% on Friday",
+    "The 10-year Treasury yield hit 5.00% as traders priced in further Federal Reserve rate hikes following Wednesday’s 25-basis-point increase and ongoing inflation worries tied to the Iran conflict and volatile oil prices",
+    "Few notable after-hours reports on September 18, investors looked ahead to next week’s new home sales data and earnings from AutoZone (AZO), Cintas (CTAS), and General Mills (GIS)"
+  ],
+  "prior_close": {
+    "spx": 0.08,
+    "nasdaq": 0.2,
+    "dow": -0.1
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": true,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "The 10-year Treasury yield hit 5.00% as traders priced in further Federal Reserve rate hikes following Wednesday’s 25-basis-point increase and ongoing inflation worries tied to the Iran conflict and volatile oil prices",
+      "Few notable after-hours reports on September 18, investors looked ahead to next week’s new home sales data and earnings from AutoZone (AZO), Cintas (CTAS), and General Mills (GIS)"
+    ],
+    "text": "The 10-year Treasury yield hit 5.00% as traders priced in further Federal Reserve rate hikes following Wednesday’s 25-basis-point increase and ongoing inflation worries tied to the Iran conflict and volatile oil prices Few notable after-hours reports on September 18, investors looked ahead to next week’s new home sales data and earnings from AutoZone (AZO), Cintas (CTAS), and General Mills (GIS)"
+  },
+  "earnings_slate": {
+    "tickers": [
+      "AZO",
+      "CTAS",
+      "GIS"
+    ],
+    "text": "Few notable after-hours reports on September 18, investors looked ahead to next week’s new home sales data and earnings from AutoZone (AZO), Cintas (CTAS), and General Mills (GIS)"
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "The 10-year Treasury yield hit 5.00% as traders priced in further Federal Reserve rate hikes following Wednesday’s 25-basis-point increase and ongoing inflation worries tied to the Iran conflict and volatile oil prices Oil prices eased into the close despite supply concerns linked to Saudi Arabia, Yemen’s Iran-backed Houthis, and broader Middle East tensions, with softer crude (@CL) in the final hour helping support the S&P 500 ($SPX) and Nasdaq"
+  },
+  "finviz_id": 289042,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-09-18T16:06:33.783",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "neutral"
+}
