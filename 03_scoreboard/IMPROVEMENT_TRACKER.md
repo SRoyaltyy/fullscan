@@ -1,18 +1,18 @@
-# Improvement tracker — 2026-09-17T18:55:23-04:00
+# Improvement tracker — 2026-09-18T18:35:10-04:00
 
 Rolling direction/magnitude hit of the *shipped* prediction vs three naive baselines computed on the same graded runs (always up, always down, same direction as the previous graded session of that topic). `edge` = engine direction hit minus the best baseline over the same window. Sessions are dated by the predicted session; sectors are pooled (11 per day).
 
-## General market (SPX) — 30 graded runs over 30 sessions
+## General market (SPX) — 31 graded runs over 31 sessions
 
-**Read:** improving; not beating best baseline by -10% (last 10 sessions)
+**Read:** improving; not beating best baseline by +0% (last 10 sessions)
 
 ### Eras
 
 | Era | n | engine dir | engine mag | always up | always down | same as yesterday | edge vs best baseline |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| all graded | 30 | **57%** | 53% | 43% | 53% | 48% | **+3%** |
+| all graded | 31 | **58%** | 52% | 45% | 52% | 50% | **+6%** |
 | legacy engine era | 26 | **54%** | 46% | 46% | 50% | 48% | **+4%** |
-| v2 engine live (since 2026-09-14) | 4 | **75%** | 100% | 25% | 75% | 50% | **+0%** |
+| v2 engine live (since 2026-09-14) | 5 | **80%** | 80% | 40% | 60% | 60% | **+20%** |
 
 Walk-forward replay estimate for v2 on the same history: **71%** direction / 57% magnitude (n=28, `REPLAY_HARNESS.md` 2026-09-12). The live v2 curve above should converge toward this as sessions accumulate; if it sits well below it for 20+ sessions, the anchor inputs or the LLM components changed.
 
@@ -24,12 +24,12 @@ Walk-forward replay estimate for v2 on the same history: **71%** direction / 57%
 | 2 | 2026-09-15 | general | 100% | 100% |
 | 3 | 2026-09-16 | general | 67% | 100% |
 | 4 | 2026-09-17 | general | 75% | 100% |
+| 5 | 2026-09-18 | general | 80% | 80% |
 
 ### Session curve (last 30 sessions)
 
 | Session | engine | n | session dir | dir (10) | mag (10) | up (10) | down (10) | yest (10) | edge (10) | dir (20) | edge (20) |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 2026-07-31 | legacy | 1 | 0% | **0%** | 100% | 100% | 0% | — | -100% | 0% | -100% |
 | 2026-08-03 | legacy | 1 | 100% | **50%** | 50% | 100% | 0% | 100% | -50% | 50% | -50% |
 | 2026-08-04 | legacy | 1 | 100% | **67%** | 33% | 100% | 0% | 100% | -33% | 67% | -33% |
 | 2026-08-05 | legacy | 1 | 100% | **75%** | 50% | 75% | 25% | 67% | +0% | 75% | +0% |
@@ -59,18 +59,19 @@ Walk-forward replay estimate for v2 on the same history: **71%** direction / 57%
 | 2026-09-15 | v2 | 1 | 100% | **60%** | 60% | 30% | 70% | 60% | -10% | 50% | -10% |
 | 2026-09-16 | v2 | 1 | 0% | **50%** | 60% | 30% | 70% | 60% | -20% | 45% | -20% |
 | 2026-09-17 | v2 | 1 | 100% | **60%** | 60% | 30% | 70% | 60% | -10% | 45% | -20% |
+| 2026-09-18 | v2 | 1 | 100% | **70%** | 60% | 30% | 70% | 60% | +0% | 50% | -10% |
 
-## Sectors (11 ETFs pooled) — 224 graded runs over 21 sessions
+## Sectors (11 ETFs pooled) — 235 graded runs over 22 sessions
 
-**Read:** steady; not beating best baseline by -13% (last 10 sessions)
+**Read:** steady; not beating best baseline by -16% (last 10 sessions)
 
 ### Eras
 
 | Era | n | engine dir | engine mag | always up | always down | same as yesterday | edge vs best baseline |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| all graded | 224 | **46%** | 33% | 41% | 51% | 44% | **-6%** |
+| all graded | 235 | **44%** | 32% | 40% | 52% | 43% | **-8%** |
 | legacy engine era | 183 | **46%** | 31% | 43% | 51% | 46% | **-6%** |
-| v2 engine live (since 2026-09-14) | 41 | **44%** | 39% | 34% | 51% | 32% | **-7%** |
+| v2 engine live (since 2026-09-14) | 52 | **38%** | 35% | 31% | 56% | 33% | **-17%** |
 
 Walk-forward replay estimate for v2 on the same history: **61%** direction / 48% magnitude (n=183, `REPLAY_HARNESS.md` 2026-09-12). The live v2 curve above should converge toward this as sessions accumulate; if it sits well below it for 20+ sessions, the anchor inputs or the LLM components changed.
 
@@ -78,17 +79,6 @@ Walk-forward replay estimate for v2 on the same history: **61%** direction / 48%
 
 | # | Session | topic | cum dir | cum mag |
 |---:|---|---|---:|---:|
-| 2 | 2026-09-14 | sector:Consumer Cyclical | 50% | 0% |
-| 3 | 2026-09-14 | sector:Consumer Defensive | 67% | 0% |
-| 4 | 2026-09-14 | sector:Energy | 50% | 25% |
-| 5 | 2026-09-14 | sector:Financial | 60% | 40% |
-| 6 | 2026-09-14 | sector:Healthcare | 50% | 33% |
-| 7 | 2026-09-14 | sector:Industrials | 57% | 43% |
-| 8 | 2026-09-14 | sector:Real Estate | 62% | 50% |
-| 9 | 2026-09-14 | sector:Technology | 67% | 44% |
-| 10 | 2026-09-14 | sector:Utilities | 70% | 40% |
-| 11 | 2026-09-15 | sector:Basic Materials | 64% | 46% |
-| 12 | 2026-09-15 | sector:Communication Services | 58% | 50% |
 | 13 | 2026-09-15 | sector:Consumer Cyclical | 62% | 46% |
 | 14 | 2026-09-15 | sector:Consumer Defensive | 57% | 43% |
 | 15 | 2026-09-15 | sector:Energy | 60% | 40% |
@@ -118,6 +108,17 @@ Walk-forward replay estimate for v2 on the same history: **61%** direction / 48%
 | 39 | 2026-09-17 | sector:Real Estate | 46% | 41% |
 | 40 | 2026-09-17 | sector:Technology | 45% | 40% |
 | 41 | 2026-09-17 | sector:Utilities | 44% | 39% |
+| 42 | 2026-09-18 | sector:Basic Materials | 43% | 38% |
+| 43 | 2026-09-18 | sector:Communication Services | 42% | 37% |
+| 44 | 2026-09-18 | sector:Consumer Cyclical | 41% | 36% |
+| 45 | 2026-09-18 | sector:Consumer Defensive | 40% | 38% |
+| 46 | 2026-09-18 | sector:Energy | 41% | 37% |
+| 47 | 2026-09-18 | sector:Financial | 43% | 38% |
+| 48 | 2026-09-18 | sector:Healthcare | 42% | 38% |
+| 49 | 2026-09-18 | sector:Industrials | 41% | 37% |
+| 50 | 2026-09-18 | sector:Real Estate | 40% | 36% |
+| 51 | 2026-09-18 | sector:Technology | 39% | 35% |
+| 52 | 2026-09-18 | sector:Utilities | 38% | 35% |
 
 ### Session curve (last 30 sessions)
 
@@ -144,20 +145,21 @@ Walk-forward replay estimate for v2 on the same history: **61%** direction / 48%
 | 2026-09-15 | v2 | 9 | 56% | **44%** | 35% | 32% | 62% | 44% | -18% | 48% | -6% |
 | 2026-09-16 | v2 | 11 | 18% | **43%** | 35% | 31% | 60% | 45% | -17% | 46% | -8% |
 | 2026-09-17 | v2 | 11 | 36% | **43%** | 36% | 35% | 56% | 44% | -13% | 44% | -7% |
+| 2026-09-18 | v2 | 11 | 18% | **45%** | 36% | 30% | 61% | 45% | -16% | 44% | -8% |
 
 ### Per sector (all graded)
 
 | Sector | n | dir | mag | always up | always down | yest | edge |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| Basic Materials | 21 | 48% | 43% | 38% | 57% | 40% | -10% |
-| Communication Services | 20 | 25% | 35% | 40% | 60% | 53% | -35% |
-| Consumer Cyclical | 21 | 57% | 19% | 29% | 67% | 50% | -10% |
-| Consumer Defensive | 21 | 48% | 33% | 43% | 52% | 50% | -5% |
-| Energy | 21 | 52% | 38% | 62% | 33% | 30% | -10% |
-| Financial | 21 | 48% | 33% | 38% | 48% | 45% | +0% |
-| Healthcare | 19 | 53% | 26% | 37% | 47% | 39% | +5% |
-| Industrials | 21 | 38% | 29% | 38% | 48% | 40% | -10% |
-| Real Estate | 21 | 48% | 29% | 29% | 62% | 45% | -14% |
-| Technology | 19 | 42% | 42% | 58% | 37% | 33% | -16% |
-| Utilities | 19 | 42% | 32% | 42% | 53% | 56% | -14% |
+| Basic Materials | 22 | 46% | 41% | 36% | 59% | 38% | -14% |
+| Communication Services | 21 | 24% | 33% | 38% | 62% | 55% | -38% |
+| Consumer Cyclical | 22 | 55% | 18% | 27% | 68% | 48% | -14% |
+| Consumer Defensive | 22 | 46% | 36% | 41% | 55% | 48% | -9% |
+| Energy | 22 | 55% | 36% | 59% | 36% | 29% | -5% |
+| Financial | 22 | 50% | 36% | 36% | 46% | 48% | +2% |
+| Healthcare | 20 | 50% | 25% | 35% | 50% | 37% | +0% |
+| Industrials | 22 | 36% | 27% | 41% | 46% | 43% | -9% |
+| Real Estate | 22 | 46% | 27% | 27% | 64% | 43% | -18% |
+| Technology | 20 | 40% | 40% | 60% | 35% | 37% | -20% |
+| Utilities | 20 | 40% | 30% | 40% | 55% | 53% | -15% |
 

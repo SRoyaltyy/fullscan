@@ -7,7 +7,7 @@ error_category: "NONE"
 falsifier: "If this T+1 setup recurs (paid FOMC, tech-led risk-on, oil offered, XLV S0≤0 / leftover RS banned, PM already ~+0.4% mild, official up/mild from tape_anchor) and XLV still closes |pct|<0.3% or prints positive rel vs a green SPY, revise the “tape_anchor owns absolute / S0 owns relative” split rather than defend it."
 sector: "Healthcare"
 date: "2026-09-17"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Healthcare — 2026-09-17

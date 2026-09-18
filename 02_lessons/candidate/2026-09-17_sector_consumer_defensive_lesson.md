@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "Same trigger recurs and XLP still closes ≥0.3% (mild or larger) so tape_anchor up/mild matches cash better than a flat cap — then the cap is wrong and must be revised"
 sector: "Consumer Defensive"
 date: "2026-09-17"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Defensive — 2026-09-17

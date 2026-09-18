@@ -1,13 +1,13 @@
 {
   "general": {
     "B0_ASIA": {
-      "n": 16,
-      "hit": 0.438,
-      "mult": 0.0
+      "n": 17,
+      "hit": 0.471,
+      "mult": 0.5
     },
     "B0_EUROPE": {
-      "n": 9,
-      "hit": 1.0,
+      "n": 10,
+      "hit": 0.9,
       "mult": 1.25
     },
     "B1_CATALYSTS": {
@@ -16,13 +16,13 @@
       "mult": 1.25
     },
     "B2_BONDS": {
-      "n": 28,
-      "hit": 0.393,
+      "n": 29,
+      "hit": 0.379,
       "mult": 0.0
     },
     "B3_FEDPATH": {
-      "n": 26,
-      "hit": 0.5,
+      "n": 27,
+      "hit": 0.481,
       "mult": 0.5
     },
     "B4_VIX": {
@@ -36,49 +36,49 @@
       "mult": 0.0
     },
     "B6_FUTURES": {
-      "n": 19,
-      "hit": 0.737,
+      "n": 20,
+      "hit": 0.75,
       "mult": 1.25
     },
     "B7_OIL_DOLLAR": {
-      "n": 25,
-      "hit": 0.68,
+      "n": 26,
+      "hit": 0.692,
       "mult": 1.25
     }
   },
   "sector_pooled": {
     "S0_SHARED_MACRO": {
-      "n": 141,
-      "hit": 0.596,
+      "n": 145,
+      "hit": 0.6,
       "mult": 1.0
     },
     "S1_SECTOR_FACTORS": {
-      "n": 165,
-      "hit": 0.552,
+      "n": 168,
+      "hit": 0.56,
       "mult": 1.0
     },
     "S2_BREADTH": {
-      "n": 130,
-      "hit": 0.608,
+      "n": 131,
+      "hit": 0.611,
       "mult": 1.0
     },
     "S3_FLOWS_POSITIONING": {
-      "n": 93,
-      "hit": 0.495,
+      "n": 94,
+      "hit": 0.5,
       "mult": 0.5
     },
     "S4_ETF_TAPE": {
-      "n": 136,
-      "hit": 0.618,
+      "n": 137,
+      "hit": 0.62,
       "mult": 1.0
     }
   },
   "sectors": {
     "Basic Materials": {
       "S0_SHARED_MACRO": {
-        "n": 15,
-        "hit": 0.667,
-        "mult": 1.25
+        "n": 16,
+        "hit": 0.625,
+        "mult": 1.0
       },
       "S1_SECTOR_FACTORS": {
         "n": 17,
@@ -108,8 +108,8 @@
         "mult": 0.5
       },
       "S1_SECTOR_FACTORS": {
-        "n": 165,
-        "hit": 0.552,
+        "n": 168,
+        "hit": 0.56,
         "mult": 1.0,
         "pooled": true
       },
@@ -119,8 +119,8 @@
         "mult": 0.5
       },
       "S3_FLOWS_POSITIONING": {
-        "n": 93,
-        "hit": 0.495,
+        "n": 94,
+        "hit": 0.5,
         "mult": 0.5,
         "pooled": true
       },
@@ -159,14 +159,14 @@
     },
     "Consumer Defensive": {
       "S0_SHARED_MACRO": {
-        "n": 10,
-        "hit": 0.6,
+        "n": 11,
+        "hit": 0.636,
         "mult": 1.0
       },
       "S1_SECTOR_FACTORS": {
-        "n": 19,
-        "hit": 0.526,
-        "mult": 0.5
+        "n": 20,
+        "hit": 0.55,
+        "mult": 1.0
       },
       "S2_BREADTH": {
         "n": 10,
@@ -191,8 +191,8 @@
         "mult": 1.0
       },
       "S1_SECTOR_FACTORS": {
-        "n": 21,
-        "hit": 0.571,
+        "n": 22,
+        "hit": 0.591,
         "mult": 1.0
       },
       "S2_BREADTH": {
@@ -240,9 +240,9 @@
     },
     "Healthcare": {
       "S0_SHARED_MACRO": {
-        "n": 12,
-        "hit": 0.417,
-        "mult": 0.0
+        "n": 13,
+        "hit": 0.462,
+        "mult": 0.5
       },
       "S1_SECTOR_FACTORS": {
         "n": 12,
@@ -282,8 +282,8 @@
         "mult": 0.5
       },
       "S3_FLOWS_POSITIONING": {
-        "n": 93,
-        "hit": 0.495,
+        "n": 94,
+        "hit": 0.5,
         "mult": 0.5,
         "pooled": true
       },
@@ -310,8 +310,8 @@
         "mult": 1.0
       },
       "S3_FLOWS_POSITIONING": {
-        "n": 93,
-        "hit": 0.495,
+        "n": 94,
+        "hit": 0.5,
         "mult": 0.5,
         "pooled": true
       },
@@ -323,18 +323,18 @@
     },
     "Technology": {
       "S0_SHARED_MACRO": {
-        "n": 16,
-        "hit": 0.688,
+        "n": 17,
+        "hit": 0.706,
         "mult": 1.25
       },
       "S1_SECTOR_FACTORS": {
-        "n": 15,
-        "hit": 0.533,
-        "mult": 0.5
+        "n": 16,
+        "hit": 0.562,
+        "mult": 1.0
       },
       "S2_BREADTH": {
-        "n": 10,
-        "hit": 0.7,
+        "n": 11,
+        "hit": 0.727,
         "mult": 1.25
       },
       "S3_FLOWS_POSITIONING": {
@@ -343,8 +343,8 @@
         "mult": 0.0
       },
       "S4_ETF_TAPE": {
-        "n": 9,
-        "hit": 0.667,
+        "n": 10,
+        "hit": 0.7,
         "mult": 1.25
       }
     },
@@ -365,8 +365,8 @@
         "mult": 1.0
       },
       "S3_FLOWS_POSITIONING": {
-        "n": 93,
-        "hit": 0.495,
+        "n": 94,
+        "hit": 0.5,
         "mult": 0.5,
         "pooled": true
       },
@@ -377,8 +377,8 @@
       }
     }
   },
-  "version": 14,
-  "updated": "2026-09-17T18:55:23-04:00",
+  "version": 15,
+  "updated": "2026-09-18T18:35:10-04:00",
   "rules": {
     "min_n": 8,
     "mute_below": 0.45,
@@ -536,6 +536,16 @@
       "at": "2026-09-17T18:55:23-04:00",
       "changes": [
         "hold"
+      ]
+    },
+    {
+      "at": "2026-09-18T18:35:10-04:00",
+      "changes": [
+        "general.B0_ASIA: 0.0 -> 0.5 (n=17, hit=0.471)",
+        "Basic Materials.S0_SHARED_MACRO: 1.25 -> 1.0 (n=16, hit=0.625)",
+        "Consumer Defensive.S1_SECTOR_FACTORS: 0.5 -> 1.0 (n=20, hit=0.55)",
+        "Healthcare.S0_SHARED_MACRO: 0.0 -> 0.5 (n=13, hit=0.462)",
+        "Technology.S1_SECTOR_FACTORS: 0.5 -> 1.0 (n=16, hit=0.562)"
       ]
     }
   ]

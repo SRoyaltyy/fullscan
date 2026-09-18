@@ -7,7 +7,7 @@ error_category: "B"
 falsifier: "If this trigger recurs (paid FOMC, tech-led risk-on, oil offered, XLV S0≤0 / leftover RS banned, PM ≤ 0 / not already-mild, official forced flat instead of tape_anchor up) and XLV still closes ≥ +0.3% absolute, revise the flat-cap rather than defend it. Forcing down/mild is separately wrong if the same setup then closes flat or up."
 sector: "Healthcare"
 date: "2026-09-18"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Healthcare — 2026-09-18
