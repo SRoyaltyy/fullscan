@@ -1,123 +1,464 @@
 {
-  "date": "2026-09-08",
-  "generated_at": "2026-09-17T23:43:35.206115-04:00",
+  "date": "2026-09-17",
+  "generated_at": "2026-09-17T23:44:05.940792-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 6,
-    "partial": 2,
-    "fail": 0,
+    "ok": 7,
+    "partial": 0,
+    "fail": 1,
     "n": 8
   },
   "buy_1d": [
     {
-      "ticker": "ZIM",
-      "score": 0.5123631288948107
+      "ticker": "FIVN",
+      "score": 0.801300319710498
+    },
+    {
+      "ticker": "WAY",
+      "score": 0.7822236458009222
+    },
+    {
+      "ticker": "RVTY",
+      "score": 0.4987466026503685
+    },
+    {
+      "ticker": "IT",
+      "score": 0.5764702364018779
+    },
+    {
+      "ticker": "IOT",
+      "score": 0.5161544621864507
+    },
+    {
+      "ticker": "ATRC",
+      "score": 0.7593680947338235
+    },
+    {
+      "ticker": "AMRX",
+      "score": 0.7994630738938153
+    },
+    {
+      "ticker": "CARG",
+      "score": 0.7680123979308255
+    },
+    {
+      "ticker": "FRSH",
+      "score": 0.7051606300844773
+    },
+    {
+      "ticker": "M",
+      "score": 0.7881311448726551
+    },
+    {
+      "ticker": "LIND",
+      "score": 0.7577937840345121
+    },
+    {
+      "ticker": "OMC",
+      "score": 0.3383035911268022
+    },
+    {
+      "ticker": "IMAX",
+      "score": 0.6527394309435515
+    },
+    {
+      "ticker": "ZD",
+      "score": 0.6378070692605247
+    },
+    {
+      "ticker": "FTDR",
+      "score": 0.6291886753210132
     }
   ],
   "sell_1d": [
     {
-      "ticker": "SLQT",
-      "score": -0.4187531318580195
+      "ticker": "TLN",
+      "score": -0.2889510366491428
     },
     {
-      "ticker": "CPB",
-      "score": 0.18301585532641992
+      "ticker": "JKS",
+      "score": -0.26782518673938
     },
     {
-      "ticker": "BYND",
-      "score": -0.10639729500847392
+      "ticker": "DVLT",
+      "score": -0.26381172832321953
     },
     {
-      "ticker": "DJT",
-      "score": -0.12374607396746728
+      "ticker": "CMTG",
+      "score": -0.25645817895823675
     },
     {
-      "ticker": "TMC",
-      "score": -0.21331310881826632
+      "ticker": "MIST",
+      "score": -0.24254257495492096
     },
     {
-      "ticker": "IE",
-      "score": -0.16475612286187874
+      "ticker": "EQ",
+      "score": -0.23433141890786524
     },
     {
-      "ticker": "COLD",
-      "score": -0.4803840532754435
+      "ticker": "LODE",
+      "score": -0.23290383909759818
     },
     {
-      "ticker": "SGML",
-      "score": -0.2006190766695211
+      "ticker": "AIRJ",
+      "score": -0.2244972186737923
     },
     {
-      "ticker": "FLO",
-      "score": -0.11897248948368622
+      "ticker": "NUS",
+      "score": -0.22255110160793842
     },
     {
-      "ticker": "OPEN",
-      "score": -0.4895149305393223
+      "ticker": "EU",
+      "score": -0.22182121535151528
+    },
+    {
+      "ticker": "TLSA",
+      "score": -0.22114208194492443
+    },
+    {
+      "ticker": "CDZI",
+      "score": -0.2204694642805946
+    },
+    {
+      "ticker": "GETY",
+      "score": -0.21607970321741202
+    },
+    {
+      "ticker": "OSG",
+      "score": -0.21288120303679556
+    },
+    {
+      "ticker": "ELDN",
+      "score": -0.20723445607349322
     }
   ],
   "flatten": {
-    "said": "0 priced buys \u00b7 5 lots \u00b7 cash $11,513.75",
+    "said": "0 priced buys \u00b7 cash $101,497.51",
     "bullets": [
       "0 priced buys",
-      "5 lots",
-      "cash $11,513.75"
+      "cash $101,497.51"
     ]
   },
   "general": {
-    "said": "DOWN  -11.475",
+    "said": "UP  7.383",
     "bullets": [
-      "bad: Houthi attack on Saudi energy (73 wounded)",
-      "bad: Iran tanker attack in Hormuz",
-      "bad: oil WTI +3.18% near $100",
-      "good: China exports +25% y/y",
-      "good: HY tight 2.65"
+      "bad: 1w 10Y +20bp at 5.00 handle",
+      "bad: hawkish SEP 16/18 another hike",
+      "bad: leftover Hormuz oil ~$104-108",
+      "good: ES/NQ gap-repair vs cash",
+      "good: WTI/Brent overnight dip"
     ],
-    "score": "-11.475",
-    "direction": "down"
+    "score": "7.383",
+    "direction": "up"
   },
   "sectors": {
-    "said": "1 up / 4 down / 4 flat",
+    "said": "4 up / 0 down / 7 flat",
     "bullets": [
-      "XLB FLAT +1.1",
-      "XLC DOWN -6.8",
-      "XLY DOWN -7.5",
-      "XLP FLAT -0.7",
-      "XLE UP +8.5",
-      "XLF DOWN -2.9",
-      "XLV FLAT +0.9",
-      "XLI FLAT -3.6",
-      "XLRE DOWN -4.5",
-      "XLK missing",
-      "XLU missing"
+      "XLB FLAT +4.9",
+      "XLC UP +5.3",
+      "XLY FLAT +7.7",
+      "XLP UP +0.8",
+      "XLE UP +0.2",
+      "XLF FLAT +6.1",
+      "XLV UP +4.8",
+      "XLI FLAT +6.3",
+      "XLRE FLAT +4.9",
+      "XLK FLAT +15.7",
+      "XLU FLAT +1.8"
     ]
   },
   "lands": [
     {
-      "key": "news_parse",
-      "title": "News parse",
-      "date": "2026-09-08",
+      "key": "flatten",
+      "title": "Flatten live card",
+      "date": "2026-09-17",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-17T23:43:34.289646-04:00",
+      "at": "2026-09-17T21:00:16.563059-04:00",
       "files": [
         {
-          "path": "01_daily/news/2026-09-08_parsed.json",
+          "path": "01_daily/2026-09-17_flatten_card.md",
           "ok": true,
           "reason": "",
-          "size": 307699,
-          "preview": "raw=400 usable=37 single=33 \u00b7 September Fed decision is now a coin flip as rate hike odds increase post Warsh | Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his w | Fed\u2019s Warsh Cites \u201cReadiness to Act\u201d on Inflation. Markets See a September Rate  | Economists betting on a rate hike after Fed chair speech - RealEstateNews.com | Fed Chairman Kevin Warsh Leaves the Door Open for September Rate Hike in Jackson"
+          "size": 2007,
+          "preview": "# flatten_robust card \u2014 2026-09-17\n_Generated 2026-09-17T17:43:37 \u2014 live `flatten_robust`._\n**S=+7.38; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **+7.38** (UP) \u00b7 route **io**\n- Cash leftover **$101,497.51** (after 09:30 $101,497.51 \u00b7 after 16:00 $101,497.51)\n- Prior close **$101,497.51** \u00b7 09:30 **$101,497.51** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$101,497.51**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$101,497.51**"
         },
         {
-          "path": "01_daily/news/2026-09-08_parsed.md",
+          "path": "data/sleeve_merge/today.json",
           "ok": true,
           "reason": "",
-          "size": 4132,
-          "preview": "# News Parse v2 \u2014 2026-09-17T23:43:33.788223-04:00\nWindow\u224848h | raw=400 | usable=37 | single_name=33 | noise_dropped=330\nusable polarity={'+': 1, '-': 8, 'mixed': 0, 'neutral': 28}"
+          "size": 4139,
+          "preview": "2026-09-17 BUY \u2014 \u00b7 SELL \u2014"
+        },
+        {
+          "path": "data/sleeve_merge/daily_marks.json",
+          "ok": true,
+          "reason": "",
+          "size": 161757,
+          "preview": "[{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\": \"IREN\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 223, \"shares\": 223, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 45.98, \"close_px\": 44.76, \"entry_px\": 44.76, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": -272.06, \"day\": -272.06, \"pct_overnight\""
+        },
+        {
+          "path": "data/sleeve_merge/equity_curve.csv",
+          "ok": true,
+          "reason": "",
+          "size": 4033,
+          "preview": "25 rows \u00b7 date,equity,cash,core_n,tac_io_n,tac_n,core_mv,tac_mv,route,score,predict,open_held,open_cash,open_equity,yday_equity,ov \u00b7 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19"
+        },
+        {
+          "path": "dashboard/sleeve-merge/index.html",
+          "ok": true,
+          "reason": "",
+          "size": 51961,
+          "preview": "<!doctype html>\n<html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Combined sleeve \u2014 .io \u00d7 mover</title>\n<style>\n:root{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9}\n*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui}\nmain{max-width:1240px;margin:auto;padding:16px}h1,h2{margin:.4em 0}\n.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:14px 0}\n.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}\n.card b{display:block;font-size:22px;margin-top:4px}\n.muted{color:var(--muted)}a{color:#93c5fd}\n.sheet{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0}\ntable{border-collapse:separate;border-spacing:0;width:100%;background:var(--card)}\nth,td{padding:7px 8"
         }
       ],
-      "preview": "raw=400 usable=37 single=33 \u00b7 September Fed decision is now a coin flip as rate hike odds increase post Warsh | Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his w | Fed\u2019s Warsh Cites \u201cReadiness to Act\u201d on Inflation. Markets See a September Rate  | Economists betting on a rate hike after Fed chair speech - RealEstateNews.com | Fed Chairman Kevin Warsh Leaves the Door Open for September Rate Hike in Jackson \u00b7 # News Parse v2 \u2014 2026-09-17T23:43:33.788223-04:00\nWindow\u224848h | raw=400 | usable=37 | single_name=33 | noise_dropped=330\nusable polarity={'+': 1, '-': 8, 'mixed': 0, 'neutral': 28}"
+      "preview": "# flatten_robust card \u2014 2026-09-17\n_Generated 2026-09-17T17:43:37 \u2014 live `flatten_robust`._\n**S=+7.38; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **+7.38** (UP) \u00b7 route **io**\n- Cash leftover **$101,497.51** (after 09:30 $101,497.51 \u00b7 after 16:00 $101,497.51)\n- Prior close **$101,497.51** \u00b7 09:30 **$101,497.51** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$101,497.51**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$101,497.51** \u00b7 2026-09-17 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight"
+    },
+    {
+      "key": "paper",
+      "title": "Paper dashboard",
+      "date": "2026-09-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T21:00:32.426242-04:00",
+      "files": [
+        {
+          "path": "03_scoreboard/PAPER_TRADING.md",
+          "ok": true,
+          "reason": "",
+          "size": 1851,
+          "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-09-17** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-09-17** ranker: **green pile** (188 liquid names). Paper buys the pile 15, not the old weighted 15.\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $9,609.87 | -3.90% | $1,990.58 | 10 | 272 | $585.61 | $-367.07 | $-23.06 | 33.6% | 0.0% |\n| 1d_size | $10,01"
+        },
+        {
+          "path": "dashboard/index.html",
+          "ok": true,
+          "reason": "",
+          "size": 6300995,
+          "preview": "<!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#66708a; --pos:#4ade80; --neg:#f87171;\n--chip:#2a3450; --day:#121826; --gold:#fbbf24;\n}\n*{box-sizing:border-box}\nhtml,body{overflow-x:hidden}\nbody{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif}\n.wrap{max-width:1180px;margin:0 auto;padding:16px 16px 48px;width:100%}\nh1{font-size:20px;margin:0 0 4px}\n.sub{color:var(--mut);font-size:12px;margin:0 0 12px}\n.merge-hero{display:block;margin:0 0 14px;padding:14px 16px;border-radius:12px;\nbackground:linear-gradient(180deg,#1a2744,#171e2e);border:1px solid #3b4d78;\ncolor:var(--fg);text-decoration:none}\n."
+        }
+      ],
+      "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-09-17** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-09-17** ranker: **green pile** (188 liquid names). Paper buys the pile 15, not the old weighted 15.\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $9,609.87 | -3.90% | $1,990.58 | 10 | 272 | $585.61 | $-367.07 | $-23.06 | 33.6% | 0.0% |\n| 1d_size | $10,01 \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-09-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T21:42:27.397802-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-09-17.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11255053,
+          "preview": "11651 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11429254,
+          "preview": "11641 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11651 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11641 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "universe",
+      "title": "Universe labels",
+      "date": "2026-09-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T21:42:34.489734-04:00",
+      "files": [
+        {
+          "path": "data/universe/2026-09-17_membership.csv",
+          "ok": true,
+          "reason": "",
+          "size": 1119400,
+          "preview": "5902 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+        }
+      ],
+      "preview": "5902 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T21:42:47.998285-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-17_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10061,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 4.936, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': 5.275, 'dir': 'up', 'conf': 0.65, 'source': 'llm'}, Consumer Cyclical={'score': 7.655, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Consumer Defensive={'score': 0.765, 'dir': 'up', 'conf': 0.431, 'source': 'llm'}, Energy={'score': 0.202, 'dir': 'up', 'conf': 0.408, 'source': 'llm'}, Financial={'score': 6.147, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Healthcare={'score': 4.847, 'dir': 'up', 'conf': 0.594, 'source': 'llm'}, Industrials={'score': 6.262, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-17_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5665,
+          "preview": "# Weather report \u2014 2026-09-17\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 4.936, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': 5.275, 'dir': 'up', 'conf': 0.65, 'source': 'llm'}, Consumer Cyclical={'score': 7.655, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Consumer Defensive={'score': 0.765, 'dir': 'up', 'conf': 0.431, 'source': 'llm'}, Energy={'score': 0.202, 'dir': 'up', 'conf': 0.408, 'source': 'llm'}, Financial={'score': 6.147, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Healthcare={'score': 4.847, 'dir': 'up', 'conf': 0.594, 'source': 'llm'}, Industrials={'score': 6.262, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-17\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T21:42:51.038611-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-17_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2287184,
+          "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 SMTC, CDNA, GCT, AVAH, HPE"
+        }
+      ],
+      "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 SMTC, CDNA, GCT, AVAH, HPE"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T21:42:58.714793-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-17_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7626980,
+          "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, CFFN, ANET, HSBC, SKM"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-17_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8459028,
+          "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, DSGX, WWW, SFL, NTAP"
+        }
+      ],
+      "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, CFFN, ANET, HSBC, SKM \u00b7 2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, DSGX, WWW, SFL, NTAP"
+    },
+    {
+      "key": "live_boards",
+      "title": "live_boards",
+      "date": "2026-09-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T23:44:04.934685-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 24029,
+          "preview": "2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 593,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-17.json",
+          "ok": true,
+          "reason": "",
+          "size": 62424,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-17_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 41018,
+          "preview": "2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 510387,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-17_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 510387,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 697365,
+          "preview": "2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 510387,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 41018,
+          "preview": "2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 510387,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 510387,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 697365,
+          "preview": "2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 90328,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 90328,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
