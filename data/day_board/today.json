@@ -1,12 +1,12 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T20:00:14.966737-04:00",
-  "overall": "PARTIAL",
+  "generated_at": "2026-09-17T21:00:26.395876-04:00",
+  "overall": "OK",
   "ranker_ready": true,
   "counts": {
-    "ok": 7,
+    "ok": 8,
     "partial": 0,
-    "fail": 1,
+    "fail": 0,
     "n": 8
   },
   "buy_1d": [
@@ -169,31 +169,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "finviz_market_digest_close",
-      "title": "Finviz homepage market digest (close)",
-      "date": "2026-09-17",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-17T16:34:29.508715-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-17_finviz_market_digest_close.json",
-          "ok": true,
-          "reason": "",
-          "size": 8502,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-09-17_finviz_market_digest_close.md",
-          "ok": true,
-          "reason": "",
-          "size": 4247,
-          "preview": "# Finviz homepage market digest (close) \u2014 2026-09-17\n**Generated:** 2026-09-17T16:34:29.476431-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed higher as falling Treasury yields and oil prices eased post-Fed pressures after jobless claims data and Bank of England follow-through\n**Prior close:** SPX +1.15%  Nasdaq +1.69%  Dow +0.61%\n**SPX:** +1.15%  **Nasdaq:** +1.69%  **Dow:** +0.61%\n**Oil:** \u2014\n**CPI/Fed:** 4.95% hike (around 4.95%, helping support equities after the Federal Reserve\u2019s quarter-point hike)\n**Leaders:** NVDA, AMD, AMZN, GNRC, NBIS, SECZ, LEN, DHI, PHM\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-18\n**Clock use:** `next_open`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-17\n**Generated:** 2026-09-17T16:34:29.476431-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed higher as falling Treasury yields and oil prices eased post-Fed pressures after jobless claims data and Bank of England follow-through\n**Prior close:** SPX +1.15%  Nasdaq +1.69%  Dow +0.61%\n**SPX:** +1.15%  **Nasdaq:** +1.69%  **Dow:** +0.61%\n**Oil:** \u2014\n**CPI/Fed:** 4.95% hike (around 4.95%, helping support equities after the Federal Reserve\u2019s quarter-point hike)\n**Leaders:** NVDA, AMD, AMZN, GNRC, NBIS, SECZ, LEN, DHI, PHM\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-18\n**Clock use:** `next_open`"
-    },
     {
       "key": "finviz",
       "title": "Finviz universe export",
@@ -466,6 +441,52 @@
         }
       ],
       "preview": "2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock"
+    },
+    {
+      "key": "flatten",
+      "title": "Flatten live card",
+      "date": "2026-09-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T21:00:16.563059-04:00",
+      "files": [
+        {
+          "path": "01_daily/2026-09-17_flatten_card.md",
+          "ok": true,
+          "reason": "",
+          "size": 2007,
+          "preview": "# flatten_robust card \u2014 2026-09-17\n_Generated 2026-09-17T17:43:37 \u2014 live `flatten_robust`._\n**S=+7.38; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **+7.38** (UP) \u00b7 route **io**\n- Cash leftover **$101,497.51** (after 09:30 $101,497.51 \u00b7 after 16:00 $101,497.51)\n- Prior close **$101,497.51** \u00b7 09:30 **$101,497.51** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$101,497.51**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$101,497.51**"
+        },
+        {
+          "path": "data/sleeve_merge/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 4139,
+          "preview": "2026-09-17 BUY \u2014 \u00b7 SELL \u2014"
+        },
+        {
+          "path": "data/sleeve_merge/daily_marks.json",
+          "ok": true,
+          "reason": "",
+          "size": 161757,
+          "preview": "[{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\": \"IREN\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 223, \"shares\": 223, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 45.98, \"close_px\": 44.76, \"entry_px\": 44.76, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": -272.06, \"day\": -272.06, \"pct_overnight\""
+        },
+        {
+          "path": "data/sleeve_merge/equity_curve.csv",
+          "ok": true,
+          "reason": "",
+          "size": 4033,
+          "preview": "25 rows \u00b7 date,equity,cash,core_n,tac_io_n,tac_n,core_mv,tac_mv,route,score,predict,open_held,open_cash,open_equity,yday_equity,ov \u00b7 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19"
+        },
+        {
+          "path": "dashboard/sleeve-merge/index.html",
+          "ok": true,
+          "reason": "",
+          "size": 51961,
+          "preview": "<!doctype html>\n<html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Combined sleeve \u2014 .io \u00d7 mover</title>\n<style>\n:root{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9}\n*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui}\nmain{max-width:1240px;margin:auto;padding:16px}h1,h2{margin:.4em 0}\n.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:14px 0}\n.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}\n.card b{display:block;font-size:22px;margin-top:4px}\n.muted{color:var(--muted)}a{color:#93c5fd}\n.sheet{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0}\ntable{border-collapse:separate;border-spacing:0;width:100%;background:var(--card)}\nth,td{padding:7px 8"
+        }
+      ],
+      "preview": "# flatten_robust card \u2014 2026-09-17\n_Generated 2026-09-17T17:43:37 \u2014 live `flatten_robust`._\n**S=+7.38; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **+7.38** (UP) \u00b7 route **io**\n- Cash leftover **$101,497.51** (after 09:30 $101,497.51 \u00b7 after 16:00 $101,497.51)\n- Prior close **$101,497.51** \u00b7 09:30 **$101,497.51** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$101,497.51**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$101,497.51** \u00b7 2026-09-17 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
