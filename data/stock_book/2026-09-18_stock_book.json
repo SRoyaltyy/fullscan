@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-09-18",
-    "generated_at": "2026-09-18T17:40:01.038512-04:00",
+    "generated_at": "2026-09-18T17:45:23.105791-04:00",
     "general_bias": 0.5899,
     "sector_bias": {
       "Basic Materials": 0.0,
@@ -63,8 +63,8 @@
         "gate": 0.5
       },
       "sector:Real Estate": {
-        "hit_rate": 0.5,
-        "n": 22,
+        "hit_rate": 0.478,
+        "n": 23,
         "gate": 0.85
       },
       "sector:Technology": {
