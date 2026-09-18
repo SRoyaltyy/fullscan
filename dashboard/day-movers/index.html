@@ -69,6 +69,16 @@
   .news-item.on { background: #162238; margin: 6px -8px; padding: 8px; border-radius: 8px; border-top: 0; }
   .news-kicker { font-size: 11px; color: var(--dim); margin-bottom: 2px; }
   .news-title { color: var(--txt); font-weight: 650; }
+  .news-vote { margin: 6px 0 8px; font-size: 12px; }
+  .news-miss { margin: 0 0 8px; padding: 6px 8px; border-radius: 8px; background: #3a1518; color: #ffb4b8; border: 1px solid #7f1d1d; font-size: 12px; }
+  .pol { display: inline-block; margin: 0 4px 0 0; padding: 0 6px; border-radius: 999px; font: 800 10px/1.4 system-ui; border: 1px solid var(--line); text-transform: uppercase; letter-spacing: .02em; }
+  .pol.good { color: var(--gain); border-color: #2d6a4f; background: rgba(61,220,151,.12); }
+  .pol.bad { color: var(--lose); border-color: #7f1d1d; background: rgba(255,107,122,.12); }
+  .pol.mix { color: var(--gold); border-color: #92720d; background: rgba(251,191,36,.12); }
+  .pol.neu { color: var(--dim); }
+  .news-item.pol-good { border-left: 3px solid var(--gain); padding-left: 8px; }
+  .news-item.pol-bad { border-left: 3px solid var(--lose); padding-left: 8px; }
+  .news-item.pol-mix { border-left: 3px solid var(--gold); padding-left: 8px; }
 </style>
 </head>
 <body>
@@ -109,7 +119,7 @@
     <div class="empty">click a name</div>
   </aside>
 </div>
-<script src="./index-core.js?v=20260918n"></script>
-<script src="./eod-overlay.js?v=20260918n"></script>
+<script src="./index-core.js?v=20260918p"></script>
+<script src="./eod-overlay.js?v=20260918p"></script>
 </body>
 </html>
