@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Investigator history — cameras + prices since 8/13</title>
+<style>
+ :root{--bg:#0f1420;--card:#171e2e;--line:#262f45;--fg:#dfe6f2;--mut:#8b96ab;
+  --pos:#4ade80;--neg:#f87171;--gold:#fbbf24;--day:#121826}
+ *{box-sizing:border-box}
+ html,body{margin:0;background:var(--bg);color:var(--fg);
+   font:13px/1.4 -apple-system,Segoe UI,Roboto,sans-serif}
+ .wrap{max-width:1400px;margin:0 auto;padding:14px 12px 48px}
+ h1{font-size:20px;margin:0 0 4px}
+ .sub{color:var(--mut);font-size:12px;margin:0 0 12px}
+ .sub a{color:#93c5fd}
+ .search{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 12px}
+ .search input,.search select{background:var(--card);color:var(--fg);border:1px solid var(--line);
+   border-radius:8px;padding:9px 12px;font:15px/1.2 ui-monospace,Menlo,monospace;min-width:160px}
+ .search button{background:#fbbf24;color:#111;border:0;border-radius:8px;padding:9px 14px;font-weight:800;cursor:pointer}
+ .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin:0 0 12px}
+ .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 10px}
+ .card b{display:block;font-size:16px;margin-top:2px;font-variant-numeric:tabular-nums}
+ .pos{color:var(--pos)}.neg{color:var(--neg)}.mut{color:var(--mut)}.gold{color:var(--gold)}
+ .banner{font:800 18px/1.2 system-ui;text-align:center;padding:10px;border-radius:10px;margin:0 0 10px}
+ .banner.sit{background:#7f1d1d;color:#fecaca}
+ .tbl-wrap{width:100%;overflow-x:auto}
+ table{width:100%;border-collapse:collapse;font:12px/1.35 ui-monospace,Menlo,monospace}
+ th,td{padding:5px 6px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+ th{color:var(--mut);font-weight:600} td:first-child,th:first-child{text-align:left}
+ tr.sit{background:rgba(127,29,29,.25)}
+ tr.long:not(.sit){background:rgba(74,222,128,.10)}
+ tr.short:not(.sit){background:rgba(248,113,113,.10)}
+ tr.sit.long{box-shadow:inset 3px 0 0 #4ade80}
+ tr.sit.short{box-shadow:inset 3px 0 0 #f87171}
+ tr.off{opacity:.55}
+ .search button.ghost{background:transparent;color:var(--gold);
+   border:1px solid var(--gold)}
+ .setup{display:inline-flex;align-items:center;gap:3px;margin-left:6px;
+   padding:1px 7px 1px 5px;border-radius:999px;font:800 10px/1.2 system-ui;
+   letter-spacing:.02em;vertical-align:middle}
+ .setup.long{background:rgba(74,222,128,.16);color:#4ade80;
+   border:1px solid rgba(74,222,128,.45)}
+ .setup.short{background:rgba(248,113,113,.16);color:#f87171;
+   border:1px solid rgba(248,113,113,.45)}
+ .setup.explore{border-style:dashed}
+ .setup .logo{width:12px;height:12px;display:block;flex:0 0 12px}
+ .setup .q{font-weight:800;opacity:.9}
+ .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin:0 1px;vertical-align:middle;
+   background:#3a445c}
+ .dot.good{background:#4ade80}.dot.bad{background:#f87171}.dot.neutral{background:#fbbf24}
+ .dot.missing{background:#3a445c}
+ .why{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:10px 0}
+ .why ul{margin:0;padding-left:18px}
+ .cam{display:inline-block;margin:1px 3px 1px 0;padding:1px 6px;border:1px solid var(--line);border-radius:999px;font-size:11px}
+ .name{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;margin:0 0 8px;cursor:pointer}
+ .cols{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+ @media(max-width:900px){.cols{grid-template-columns:1fr}}
+</style></head><body><div class="wrap">
+<h1>Investigator history</h1>
+<div class="sub">Every looker since <b>2026-08-13</b>. Search a ticker for cameras (+N −N), 09:30 open, close, same-day % and hold-1/3/5 with actual prices.
+Days not on the shopping lists still get a reconstructed 09:30 card from join / weather / Finviz / news. Live sit on S≤−3 is untouched.
+ · <a href="../excel-cam/">excel + cameras</a>
+ · <a href="../factor-mine/">factor mine</a>
+ · <a href="../day-board/">day board</a>
+ · <a href="../day-movers/">day movers</a></div>
+<div class="search">
+  <input id="q" list="ticklist" placeholder="Search ticker — OKTA, ZS, CRWD…" autocomplete="on" spellcheck="false">
+  <datalist id="ticklist"></datalist>
+  <select id="dateSel" aria-label="Morning"></select>
+  <button type="button" id="go">Show</button>
+  <button type="button" id="rand" class="ghost">Random stock</button>
+</div>
+<div class="cards" id="sum"></div>
+<div id="hist"></div>
+<div id="home"></div>
+</div>
+<script>
+const BASE = new URL('.', location.href).href;
+let TICKERS = [];
+function esc(s){return String(s??'').replace(/[&<>"]/g,c=>({'&':'&','<':'<','>':'>','"':'"'}[c]));}
+function cls(n){return n==null||n==='—'?'mut':(Number(n)>0?'pos':(Number(n)<0?'neg':'mut'));}
+function pct(v){return v==null?'—':((Number(v)>=0?'+':'')+Number(v).toFixed(2)+'%');}
+function px(v){return v==null?'—':Number(v).toFixed(2);}
+function dots(boxes, order, short){
+  order = order || Object.keys(boxes||{});
+  short = short || {};
+  return order.map(k=>{
+    const t=String((boxes||{})[k]||'missing');
+    return `<span class="dot ${esc(t)}" title="${esc(k)} ${esc(t)}"></span>`;
+  }).join('') + ' ' + order.map(k=>{
+    const t=String((boxes||{})[k]||'');
+    if(t!=='good'&&t!=='bad') return '';
+    return `<span class="cam ${t==='good'?'pos':'neg'}">${esc(short[k]||k)}</span>`;
+  }).join('');
+}
+function tally(r){
+  if(r.n_pos==null && r.n_neg==null) return '<span class="mut">—</span>';
+  return `<span class="pos">+${esc(r.n_pos||0)}</span> <span class="neg">−${esc(r.n_neg||0)}</span>`;
+}
+function num(v){
+  if(v==null || v==='') return null;
+  const n=Number(v);
+  return Number.isFinite(n) ? n : null;
+}
+function camPair(r){
+  if(!r) return null;
+  const p=num(r.n_pos), n=num(r.n_neg);
+  if(p==null || n==null) return null;
+  return [p, n];
+}
+/** Same contract as Python open_camera_setup(rows, i). */
+function setupOf(rows, i){
+  const list=rows||[];
+  if(i<1 || i>=list.length) return null;
+  const opens=[];
+  for(let j=i;j>=0;j--){
+    const o=num(list[j].open);
+    if(o==null) continue;
+    opens.push(o);
+    if(opens.length===5) break;
+  }
+  if(opens.length<5) return null;
+  const cur=camPair(list[i]), prev=camPair(list[i-1]);
+  if(!cur || !prev) return null;
+  const uniq=[...new Set(opens)].sort((a,b)=>a-b);
+  const lowest=uniq[0], highest=uniq[uniq.length-1];
+  const secondLow=uniq.length>1?uniq[1]:lowest;
+  const secondHigh=uniq.length>1?uniq[uniq.length-2]:highest;
+  const o=opens[0];
+  const cheap=o===lowest||o===secondLow;
+  const rich=o===highest||o===secondHigh;
+  const net=cur[0]-cur[1], netPrev=prev[0]-prev[1], dNet=net-netPrev;
+  let side=null, rank=null, quality=null;
+  if(cheap && dNet>0){
+    side='long';
+    rank=o===lowest?'lowest':'second_lowest';
+    quality=(cur[1]<=prev[1] && cur[0]>=prev[0])?'clean':'explore';
+  }else if(rich && dNet<0){
+    side='short';
+    rank=o===highest?'highest':'second_highest';
+    quality=(cur[0]<=prev[0] && cur[1]>=prev[1])?'clean':'explore';
+  }else return null;
+  return {
+    side, quality, open_rank:rank,
+    n_pos:cur[0], n_neg:cur[1], n_pos_prev:prev[0], n_neg_prev:prev[1],
+    net, net_prev:netPrev, net_delta:dNet,
+    tight_long: side==='long' && quality==='clean' && rank==='lowest' && dNet>=2
+  };
+}
+function setupLogo(side){
+  if(side==='long'){
+    return '<svg class="logo" viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="5.5" fill="#14532d"/><path d="M6 3.1 8.7 8H3.3Z" fill="#4ade80"/></svg>';
+  }
+  return '<svg class="logo" viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="5.5" fill="#7f1d1d"/><path d="M6 8.9 3.3 4h5.4Z" fill="#f87171"/></svg>';
+}
+function setupBadge(s){
+  if(!s) return '';
+  const explore=s.quality==='explore';
+  const mark=explore?' <span class="q" title="explore: net moved the right way but the other color deteriorated">?</span>':'';
+  const lab=s.side==='long'?'LONG':'SHORT';
+  const title=s.side+' '+s.quality+' · open '+s.open_rank+' · net '+(s.net_delta>=0?'+':'')+s.net_delta;
+  return `<span class="setup ${esc(s.side)}${explore?' explore':''}" title="${esc(title)}">${setupLogo(s.side)} ${lab}${mark}</span>`;
+}
+function holdWinLine(rows, setups, side){
+  const xs=[];
+  setups.forEach((s,i)=>{
+    if(!s || s.side!==side) return;
+    let v=num(rows[i].h1);
+    if(v==null) return;
+    if(side==='short') v=-v;
+    xs.push(v);
+  });
+  if(!xs.length) return '—';
+  const w=xs.filter(v=>v>0).length;
+  return (100*w/xs.length).toFixed(0)+'% n='+xs.length;
+}
+
+async function loadJSON(path){
+  const r = await fetch(BASE+path+'?t='+Date.now(), {cache:'no-store'});
+  if(!r.ok) throw new Error(path+' '+r.status);
+  return r.json();
+}
+
+function renderHistory(doc){
+  const rows = doc.rows || [];
+  const order = doc.cam_order || [];
+  const short = doc.cam_short || {};
+  const on = rows.filter(r=>r.on_list).length;
+  const recon = rows.filter(r=>r.reconstructed && !r.on_list).length;
+  const sit = rows.filter(r=>r.hard_red).length;
+  const h1s = rows.map(r=>r.h1).filter(v=>v!=null);
+  const win = h1s.filter(v=>v>0).length;
+  const setups = rows.map((_,i)=>setupOf(rows, i));
+  const nLong = setups.filter(s=>s && s.side==='long').length;
+  const nShort = setups.filter(s=>s && s.side==='short').length;
+  document.getElementById('sum').innerHTML = [
+    ['Ticker', doc.ticker, 'gold'],
+    ['Sessions', rows.length, ''],
+    ['On list', on, ''],
+    ['Reconstructed', recon, 'gold'],
+    ['Sit mornings', sit, 'neg'],
+    ['H1 green', h1s.length?(win+'/'+h1s.length):'—', win>h1s.length/2?'pos':'neg'],
+    ['Long setups', nLong+' · H1 win '+holdWinLine(rows, setups, 'long'), 'pos'],
+    ['Short setups', nShort+' · H1 win '+holdWinLine(rows, setups, 'short'), 'neg'],
+  ].map(([k,v,c])=>`<div class="card">${k}<b class="${c}">${esc(v)}</b></div>`).join('');
+
+  const body = rows.map((r,i)=>{
+    const painted = r.on_list || r.reconstructed || (r.boxes && Object.keys(r.boxes).length);
+    const s = setups[i];
+    const trCls = (r.hard_red?'sit':(painted?'':'off'))+(s?' '+s.side:'')+(s&&s.quality==='explore'?' explore':'');
+    const listCell = r.on_list?'list':(r.reconstructed?'<span class="gold">recon</span>':'<span class="mut">—</span>');
+    const camCell = painted?dots(r.boxes, order, short):'<span class="mut">no 09:30 files</span>';
+    return `<tr class="${trCls}" data-i="${i}">
+      <td>${esc(r.date)}${r.hard_red?' <span class="neg">SIT</span>':''}${setupBadge(s)}</td>
+      <td>${r.s==null?'—':Number(r.s).toFixed(2)}</td>
+      <td>${listCell}</td>
+      <td>${tally(r)}</td>
+      <td style="text-align:left">${camCell}</td>
+      <td>${esc(r.e_pol||'—')}</td>
+      <td>${px(r.open)}</td>
+      <td>${px(r.close)}</td>
+      <td class="${cls(r.day_pct)}">${pct(r.day_pct)}</td>
+      <td class="${cls(r.h1)}">${pct(r.h1)}${r.h1_px!=null?' <span class="mut">@'+px(r.h1_px)+'</span>':''}</td>
+      <td class="${cls(r.h3)}">${pct(r.h3)}${r.h3_px!=null?' <span class="mut">@'+px(r.h3_px)+'</span>':''}</td>
+      <td class="${cls(r.h5)}">${pct(r.h5)}${r.h5_px!=null?' <span class="mut">@'+px(r.h5_px)+'</span>':''}</td>
+    </tr>
+    <tr class="detail" data-for="${i}" hidden><td colspan="12">
+      <div class="why">
+        <b>${esc(doc.ticker)} ${esc(r.date)} 09:30</b>
+        · files: ${esc((r.files||[]).join(' · ')||'—')}
+        · sources: ${esc((r.sources||[]).join(', ')||'—')}
+        · RSI ${esc(r.rsi??'—')} · MACD ${esc(r.macd_hist??'—')}
+        · E ${esc(r.e_label||r.e_pol||'—')} · R ${esc(r.r_label||r.r_pol||'—')}
+        ${r.news?('<div>'+esc(r.news_tone)+' — '+esc(r.news)+'</div>'):''}
+        <ul>${(r.why||[]).map(x=>'<li>'+esc(x)+'</li>').join('')}</ul>
+        <div class="mut">Open ${px(r.open)} → close ${px(r.close)} (${pct(r.day_pct)}).
+          H1 ${esc(r.h1_date||'')} ${px(r.h1_px)} · H3 ${esc(r.h3_date||'')} ${px(r.h3_px)} · H5 ${esc(r.h5_date||'')} ${px(r.h5_px)}</div>
+      </div>
+    </td></tr>`;
+  }).join('');
+  document.getElementById('hist').innerHTML = `
+    <div class="mut" style="margin:0 0 6px">Click a row for the investigator card (cameras, files, why). SIT rows are weather S≤−3.
+      <b>list</b> = on that morning's shopping lists. <b>recon</b> = same 09:30 files, reconstructed even though the name was not on the lists.</div>
+    <div class="mut" style="margin:0 0 8px">LONG = 5-session open is cheapest or 2nd-cheapest and camera net (+pos −neg) improved vs the prior session. SHORT = richest or 2nd-richest open and net worsened. Clean = the other color did not deteriorate; <b>?</b> / explore = net moved the right way but positives fell or negatives rose (long), or the inverse for shorts. Need five numeric opens and a prior camera session — otherwise no badge. Live sit is untouched.</div>
+    <div class="tbl-wrap"><table>
+      <thead><tr>
+        <th>Date</th><th>S</th><th>List</th><th>Cams</th><th>Cameras</th><th>E</th>
+        <th>Open</th><th>Close</th><th>Day %</th><th>H1</th><th>H3</th><th>H5</th>
+      </tr></thead>
+      <tbody>${body}</tbody>
+    </table></div>`;
+  document.getElementById('hist').querySelectorAll('tr[data-i]').forEach(tr=>{
+    tr.onclick=()=>{
+      const d=document.querySelector('tr.detail[data-for="'+tr.dataset.i+'"]');
+      if(d) d.hidden=!d.hidden;
+    };
+  });
+  document.getElementById('home').innerHTML='';
+}
+
+function nameCard(r){
+  return `<div class="name" data-t="${esc(r.ticker)}">
+    <b>${esc(r.ticker)}</b>
+    <span class="${cls(r.idio)}">idio ${r.idio>=0?'+':''}${esc(r.idio)}</span>
+    · ${tally(r)} · E ${esc(r.e_pol)}
+    · day <span class="${cls(r.day_pct)}">${pct(r.day_pct)}</span>
+    · H1 <span class="${cls(r.h1)}">${pct(r.h1)}</span>
+    · H3 <span class="${cls(r.h3)}">${pct(r.h3)}</span>
+  </div>`;
+}
+
+function renderHome(latest){
+  const L=latest.latest||{};
+  document.getElementById('sum').innerHTML=[
+    ['Session', L.date||'—',''],
+    ['Weather S', L.s==null?'—':L.s, Number(L.s)<=-3?'neg':'pos'],
+    ['Cards', L.n_cards??'—',''],
+    ['Long-ok', L.n_long_ok??'—','pos'],
+    ['Short-ok', L.n_short_ok??'—','neg'],
+  ].map(([k,v,c])=>`<div class="card">${k}<b class="${c}">${esc(v)}</b></div>`).join('');
+  document.getElementById('hist').innerHTML = L.hard_red
+    ? `<div class="banner sit">SIT morning — live book bought nobody. Search a ticker for the full camera history.</div>`
+    : `<div class="banner">Latest morning ${esc(L.date)}. Search a ticker for every session since 8/13.</div>`;
+  document.getElementById('home').innerHTML = `<div class="cols">
+    <div><h2>Longs sit hid</h2>${(L.longs||[]).map(nameCard).join('')||'<div class="mut">none</div>'}</div>
+    <div><h2>Shorts sit hid</h2>${(L.shorts||[]).map(nameCard).join('')||'<div class="mut">none</div>'}</div>
+  </div>
+  <h2>Top 40 by idio</h2>
+  ${(L.all_top||[]).map(nameCard).join('')}`;
+  document.querySelectorAll('.name[data-t]').forEach(el=>{
+    el.onclick=()=>go(el.dataset.t);
+  });
+}
+
+async function go(raw){
+  const t=String(raw||document.getElementById('q').value||'').trim().toUpperCase();
+  if(!t){ location.hash=''; const latest=await loadJSON('latest.json'); renderHome(latest); return; }
+  document.getElementById('q').value=t;
+  location.hash=t;
+  try{
+    const doc=await loadJSON('t/'+encodeURIComponent(t)+'.json');
+    renderHistory(doc);
+  }catch(e){
+    document.getElementById('hist').innerHTML='<div class="mut">No history for '+esc(t)+' — not on any 09:30 looker list since 8/13.</div>';
+    document.getElementById('home').innerHTML='';
+  }
+}
+
+async function boot(){
+  let meta={}, latest={};
+  try{ meta=await loadJSON('tickers.json'); }catch(e){ meta={tickers:[]}; }
+  try{ latest=await loadJSON('latest.json'); }catch(e){}
+  const dl=document.getElementById('ticklist');
+  TICKERS = meta.tickers||[];
+  TICKERS.forEach(t=>{
+    const o=document.createElement('option'); o.value=t; dl.appendChild(o);
+  });
+  const ds=document.getElementById('dateSel');
+  const cal=(latest.days||[]).map(d=>d.date);
+  ds.innerHTML='<option value="">latest morning</option>'+cal.map(d=>`<option>${esc(d)}</option>`).join('');
+  document.getElementById('go').onclick=()=>go();
+  document.getElementById('rand').onclick=()=>{
+    if(!TICKERS.length) return;
+    go(TICKERS[Math.floor(Math.random()*TICKERS.length)]);
+  };
+  document.getElementById('q').addEventListener('keydown',e=>{ if(e.key==='Enter') go(); });
+  ds.onchange=()=>{ /* date filter is the morning list; ticker search is the history */ };
+  const want=(location.hash||'').replace('#','').toUpperCase();
+  if(want) go(want); else renderHome(latest);
+}
+boot();
+</script></body></html>
