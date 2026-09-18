@@ -338,8 +338,8 @@ async function getJson(url, ms){
   }catch(e){ return null; }
 }
 async function firstJson(urls, ms){
-  for(const u of urls){ const j=await getJson(u, ms); if(j) return j; }
-  return null;
+  const hits = await Promise.all(urls.map(u=>getJson(u, ms)));
+  return hits.find(Boolean) || null;
 }
 
 async function loadInv(ticker){
@@ -450,13 +450,24 @@ async function load(ticker){
   history.replaceState(null,"", location.pathname+"?"+qs.toString());
   document.querySelectorAll(".chip").forEach(b=>b.classList.toggle("on", b.dataset.t===ticker));
   try{
+    if(SEED[ticker]){
+      PACK=buildSheet(ticker, barsFromSeed(SEED[ticker]), null);
+      PACK.src="seed";
+      SEL=0;
+      renderAudit(PACK);
+      renderGrid(PACK);
+      formula();
+      document.getElementById("meta").textContent=`seed · ${PACK.rows.length} sessions · last ${PACK.asOf||"—"}`;
+    }
     const invRaw=await loadInv(ticker);
     const inv=invRaw?parseInv(invRaw, ticker):null;
     const got=await loadBars(ticker, inv);
     if(!got.bars.length){
-      document.getElementById("sheet").innerHTML=`<p class="foot">No daily bars for ${ticker}.</p>`;
-      document.getElementById("audit").innerHTML="";
-      document.getElementById("fx").textContent="No daily bars for "+ticker;
+      if(!PACK){
+        document.getElementById("sheet").innerHTML=`<p class="foot">No daily bars for ${ticker}.</p>`;
+        document.getElementById("audit").innerHTML="";
+        document.getElementById("fx").textContent="No daily bars for "+ticker;
+      }
       return;
     }
     PACK=buildSheet(ticker, got.bars, inv);
@@ -496,16 +507,13 @@ function wireSearch(){
 (async function boot(){
   bootPicks(); wireSearch();
   const start=(new URLSearchParams(location.search).get("t")||"CRWD").toUpperCase();
-  const [seed, ticks]=await Promise.all([
-    Promise.resolve(SEED),
-    loadTickers()
-  ]);
-  if(seed) SEED=seed;
-  if(ticks&&ticks.length){
-    TICKERS=ticks;
-    const dl=document.getElementById("tickers");
-    dl.innerHTML=ticks.slice(0,800).map(t=>`<option value="${t}"></option>`).join("");
-  }
+  loadTickers().then(ticks=>{
+    if(ticks&&ticks.length){
+      TICKERS=ticks;
+      const dl=document.getElementById("tickers");
+      dl.innerHTML=ticks.slice(0,800).map(t=>`<option value="${t}"></option>`).join("");
+    }
+  });
   await load(start);
 })();
 </script>
