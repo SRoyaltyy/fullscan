@@ -1,6 +1,6 @@
 {
   "date": "2026-09-18",
-  "generated_at": "2026-09-18T04:20:30.659548-04:00",
+  "generated_at": "2026-09-18T04:20:37.227450-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -171,11 +171,11 @@
     },
     {
       "key": "news_parse",
-      "title": "News parse",
+      "title": "News parse (timeout retry)",
       "date": "2026-09-18",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-18T04:20:30.098217-04:00",
+      "at": "2026-09-18T04:20:36.690724-04:00",
       "files": [
         {
           "path": "01_daily/news/2026-09-18_parsed.json",
