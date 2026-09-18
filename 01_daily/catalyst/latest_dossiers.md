@@ -13,13 +13,9 @@
 - **BTU** [override_captain] OVERRIDE card Thermal Coal
 
 ## DOSSIERS
-- **NE** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NE
+- **NE** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP2 NE
 - **RIG** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 RIG
 - **SLB** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SLB
 - **BKR** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 BKR
-- **KGS** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 KGS
-- **WHD** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 WHD
-- **CNR** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 CNR
-- **BTU** ERROR OpenClaw and DeepSeek both returned empty for CATALYST STEP1 BTU
 
 CATALYST_DAILY_OK

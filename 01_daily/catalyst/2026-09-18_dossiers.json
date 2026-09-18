@@ -1,10 +1,10 @@
 {
   "date": "2026-09-18",
-  "generated_at": "2026-09-18T05:02:24.446934-04:00",
+  "generated_at": "2026-09-18T07:18:34.739140-04:00",
   "max_n": 8,
   "routing": "Grok \u2192 DeepSeek",
   "grok": true,
-  "deepseek_fallback": false,
+  "deepseek_fallback": true,
   "gemini": false,
   "n_targets": 8,
   "n_ok": 0,
@@ -55,7 +55,7 @@
       "ticker": "NE",
       "role": "override_captain",
       "why": "OVERRIDE card Oil & Gas Drilling",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NE"
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP2 NE"
     },
     {
       "ticker": "RIG",
@@ -74,30 +74,6 @@
       "role": "override_captain",
       "why": "OVERRIDE card Oil & Gas Equipment & Services",
       "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 BKR"
-    },
-    {
-      "ticker": "KGS",
-      "role": "override_captain",
-      "why": "OVERRIDE card Oil & Gas Equipment & Services",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 KGS"
-    },
-    {
-      "ticker": "WHD",
-      "role": "override_captain",
-      "why": "OVERRIDE card Oil & Gas Equipment & Services",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 WHD"
-    },
-    {
-      "ticker": "CNR",
-      "role": "override_captain",
-      "why": "OVERRIDE card Thermal Coal",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 CNR"
-    },
-    {
-      "ticker": "BTU",
-      "role": "override_captain",
-      "why": "OVERRIDE card Thermal Coal",
-      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 BTU"
     }
   ]
 }
