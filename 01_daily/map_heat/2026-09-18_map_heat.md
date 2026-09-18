@@ -1,6 +1,6 @@
-# MAP HEAT — 2026-09-17
+# MAP HEAT — 2026-09-18
 
-Export `finviz_2026-09-16.csv` · 11616 names · generated 2026-09-17T04:10:17.053880-04:00
+Export `finviz_2026-09-17.csv` · 11616 names · generated 2026-09-18T04:09:04.716032-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -69,14 +69,6 @@ Export `finviz_2026-09-16.csv` · 11616 names · generated 2026-09-17T04:10:17.0
 **SIZE GATE on** — high-impact print and/or mega-cap earnings today.
 
 Econ (importance ≥ 2):
-- 08:30 ET  Building Permits Prel  actual —  cons 1.41M  surprise —  prev 1.433M
-- 08:30 ET  Housing Starts  actual —  cons 1.31M  surprise —  prev 1.239M
-- 08:30 ET  Building Permits MoM Prel  actual —  cons -1.6%  surprise —  prev 4.3%
-- 08:30 ET  Housing Starts MoM  actual —  cons 9.0%  surprise —  prev -12.4%
-- 08:30 ET  Initial Jobless Claims  actual —  cons 208K  surprise —  prev 206K
-- 08:30 ET  Philadelphia Fed Manufacturing Index  actual —  cons 30.5  surprise —  prev 47.4
-- 10:00 ET  Pending Home Sales MoM  actual —  cons 2%  surprise —  prev -2.3%
-- 10:00 ET  Pending Home Sales YoY  actual —  cons -0.7%  surprise —  prev -2.2%
 - 09:15 ET  Industrial Production MoM  actual —  cons 0.3%  surprise —  prev 0.2%
 - 09:30 ET  Fed Bowman Speech  actual —  cons —  surprise —  prev —
 - 06:30 ET  Fed Goolsbee Speech  actual —  cons —  surprise —  prev —
@@ -86,8 +78,9 @@ Econ (importance ≥ 2):
 - 10:20 ET  Fed Jefferson Speech  actual —  cons —  surprise —  prev —
 - 16:30 ET  API Crude Oil Stock Change  actual —  cons —  surprise —  prev 7.14M
 - 07:00 ET  MBA 30-Year Mortgage Rate  actual —  cons —  surprise —  prev 6.97%
-- 10:30 ET  EIA Crude Oil Stocks Change  actual —  cons —  surprise —  prev —
-- 10:30 ET  EIA Gasoline Stocks Change  actual —  cons —  surprise —  prev —
+- 10:30 ET  EIA Crude Oil Stocks Change  actual —  cons —  surprise —  prev -0.64M
+- 10:30 ET  EIA Gasoline Stocks Change  actual —  cons —  surprise —  prev 0.794M
+- 20:00 ET  President Trump and President Xi Summit  actual —  cons —  surprise —  prev —
 - 08:30 ET  Current Account  actual —  cons -$ 315.0B  surprise —  prev -$226.8B
 - 08:30 ET  Initial Jobless Claims  actual —  cons —  surprise —  prev —
 - 08:50 ET  Fed Hammack Speech  actual —  cons —  surprise —  prev —
@@ -109,32 +102,39 @@ Econ (importance ≥ 2):
 - 08:30 ET  GDP Growth Rate QoQ Final  actual —  cons 1.5%  surprise —  prev 2.1%
 - 08:30 ET  Personal Income MoM  actual —  cons 0.3%  surprise —  prev 0.4%
 - 08:30 ET  Personal Spending MoM  actual —  cons 0.3%  surprise —  prev 0.2%
+- 08:30 ET  GDP Price Index QoQ Final  actual —  cons 6.4%  surprise —  prev 3.6%
+- 08:30 ET  Goods Trade Balance Adv  actual —  cons —  surprise —  prev -$118.8B
+- 08:30 ET  PCE Price Index MoM  actual —  cons —  surprise —  prev 0.2%
+- 08:30 ET  PCE Price Index YoY  actual —  cons —  surprise —  prev 3.7%
+- 08:30 ET  Retail Inventories Ex Autos MoM Adv  actual —  cons —  surprise —  prev 0.8%
+- 08:30 ET  Wholesale Inventories MoM Adv  actual —  cons —  surprise —  prev —
+- 09:45 ET  Chicago PMI  actual —  cons 48.9  surprise —  prev 47.1
 
 Mega-cap earnings:
 - AMC **MU**  EPS est 31.1573  (Micron Technology Inc)
-- AMC **COST**  EPS est 6.5473  (Costco Wholesale Corp)
+- AMC **COST**  EPS est 6.533  (Costco Wholesale Corp)
 - BMO **ACN**  EPS est 3.185  (Accenture plc)
 - BMO **CTAS**  EPS est 1.3481  (Cintas Corp)
-- AMC **NKE**  EPS est 0.4446  (Nike Inc)
+- AMC **NKE**  EPS est 0.4409  (Nike Inc)
 - BMO **AZO**  EPS est 54.2978  (Autozone Inc)
 - BMO **PAYX**  EPS est 1.3197  (Paychex Inc)
 - BMO **JBL**  EPS est 4.0593  (Jabil Inc)
-- BMO **CCL**  EPS est 1.3569  (Carnival Corp Ltd)
+- BMO **CCL**  EPS est 1.3578  (Carnival Corp Ltd)
 - BMO **DRI**  EPS est 2.0539  (Darden Restaurants Inc)
 - BMO **SNX**  EPS est 4.6819  (TD Synnex Corp)
-- BMO **GIS**  EPS est 0.7195  (General Mills Inc)
-- BMO **MKC**  EPS est 0.7558  (McCormick & Co Inc)
-- AMC **JEF**  EPS est 0.926  (Jefferies Financial Group Inc)
+- BMO **GIS**  EPS est 0.717  (General Mills Inc)
+- BMO **MKC**  EPS est 0.7555  (McCormick & Co Inc)
+- AMC **JEF**  EPS est 1.004  (Jefferies Financial Group Inc)
 
 Options event-vol flags (NOT direction):
-- **MU** exp 2026-09-18 ATM IV 0.0039 implied move +0.0% put/call OI —
-- **COST** exp 2026-09-18 ATM IV 0.002 implied move +0.0% put/call OI —
+- **MU** exp 2026-09-18 ATM IV — implied move 0.0% put/call OI —
+- **COST** exp 2026-09-18 ATM IV 0.0039 implied move +0.0% put/call OI —
 - **ACN** exp 2026-09-18 ATM IV 0.0039 implied move +0.0% put/call OI —
 - **CTAS** exp 2026-09-18 ATM IV 0.0078 implied move +0.0% put/call OI —
-- **NKE** exp 2026-09-18 ATM IV 0.0156 implied move +0.1% put/call OI —
-- **AZO** exp 2026-09-18 ATM IV 0.0005 implied move 0.0% put/call OI —
+- **NKE** exp 2026-09-18 ATM IV 0.0313 implied move +0.2% put/call OI —
+- **AZO** exp 2026-09-18 ATM IV 0.0039 implied move +0.0% put/call OI —
 - **PAYX** exp 2026-09-18 ATM IV 0.0313 implied move +0.2% put/call OI —
-- **JBL** exp 2026-09-18 ATM IV 0.0156 implied move +0.1% put/call OI —
+- **JBL** exp 2026-09-18 ATM IV 0.0391 implied move +0.2% put/call OI —
 
 ## SECTOR RS (live groups, else export median)
 | Sector | 1d | 1w | rvol |
@@ -254,31 +254,31 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 7 min **STLA** European markets open higher after Fed hike as US dollar hits seven-week high (Euronews)
-- 7 min **HGTY** 'HOLY TRINITY' LEADS EXCITING HYPERCARS AND SUPERCARS AT BROAD ARROW'S SECOND ANNUAL ZOUTE CONCOURS AUCTION (GlobeNewswire)
-- 10 min **ECX** ECARX Surpasses 12 Million Vehicles Globally, Marking New Milestone in Automotive Intelligence (PR Newswire)
-- 10 min **BAC** BofA's CashPro App facilitates more than 100 billion in payments approved European companies (PR Newswire)
-- 10 min **MKL** Markel International appoints Nick Rugg to Head of Financial Institutions & Fintech - PFR & Cyber, International (PR Newswire)
-- 25 min **NVDA** NVDA Stock In Focus As Huawei Announces 2 Advanced AI Chips For 2027 (Stocktwits)
-- 27 min **IQMX** IQM to Deliver Its First Quantum Computer in South America to Brazil's Eldorado Research Institute (Business Wire)
-- 36 min **VICR** Why Is VICR Stock Jumping Over 10% Overnight? (Stocktwits)
-- 41 min **V** Meme Coin Launchpads Captured 82% of Arc's First Day Trading Volume (BeInCrypto)
-- 48 min **PDSB,MRNA,SLS,IOVA** This Tiny Biotech Is Beating MRNA, IOVA And SLS  Here's How A Billionaire Fueled Its September Rally (Stocktwits)
-- 49 min **ASML** European shares rise as oil slips, yields stall (Reuters)
-- 1 hour **GFL,BAM** Waste Management Giant GFL Is Surging Over 10% Overnight: Whats Driving Up The Mid-Cap Stock? (Stocktwits)
-- 1 hour **CLVT** Clarivate Reveals Citation Laureates 2026 Recognizing Transformative Scientific Breakthroughs (PR Newswire)
-- 1 hour **ALMU** Aeluma Inc (ALMU) (Q4 2026) Earnings Call Highlights: Strategic Shift to AI Datacom and $30 ... (GuruFocus.com)
-- 1 hour **ISPR** Ispire Technology Inc (ISPR) (Q4 2026) Earnings Call Highlights: Malaysia Licenses Set Stage ... (GuruFocus.com)
-- 1 hour **YI** 111, Inc. Announces Second Quarter 2026 Unaudited Financial Results (PR Newswire)
-- 1 hour **APO** Daiwa House to Acquire a Significant Minority Stake in Miller Homes from Apollo Funds (GlobeNewswire)
-- 1 hour **GXO** GXO and Exotec Partner To Advance Fashion Fulfillment For Guess In The Netherlands (GlobeNewswire)
-- 1 hour **IDXX** IDEXX Expands Faecal Dx Antigen Testing Platform in the United Kingdom with Taeniid Tapeworm Detection (Business Wire)
-- 1 hour **GOOG,IBM,MSFT,IQMX** This Quantum Start-Up Just Sold a Computer in an Untapped Market (Barrons.com)
-- 1 hour **CIGI** Bay Area Apartment Demand Draws More Investor Capital (CRE Daily)
-- 1 hour **CTSH** Axis Bank and Cognizant Collaborate to Strengthen Application Management with AMS 2.0 (PR Newswire)
-- 1 hour **CTRE** CareTrust Buys $400M Skilled Nursing Portfolio (CRE Daily)
-- 1 hour **VCRE** Vicore Pharma to Present in The Stifel 2026 Virtual Immunology and Inflammation Forum (ACCESSWIRE)
-- 1 hour **ADBE** ADBE Stock On Track For Third Weekly Loss: Outgoing CEO Files $31.5M Share Sale (Stocktwits)
+- 8 min **PSO** Pearson Acquires Assessment Technology Provider, ITS (PR Newswire)
+- 8 min **TBLA** Taboola to Acquire Dianomi, Significantly Bolstering its Ability to Provide Performance Advertisers with a Highly Specialized, Premium Ad Network Focused on Finance, Powered by Taboola's Performance Advertising Platform Realize (GlobeNewswire)
+- 8 min **VNT** Tesco Partners with Vontier to Elevate Forecourt Automation and Integration (Business Wire)
+- 8 min **III** U.K. Public Sector Adopts Platform-Based Delivery Approach (Business Wire)
+- 9 min **PBR** Petrobras secures eight offshore PSCs in Côte dIvoire (Offshore Technology)
+- 32 min **QQQ** US Stock Market This Week: Are SPY, QQQ Beating Asian Equities? (Stocktwits)
+- 57 min **GOOG,GOOGL,CBRE** Google Delays Thompson Center Opening to 2028 in Chicago (CRE Daily)
+- 1 hour **ESLT** Elbit Systems Files a Shelf Prospectus in Israel (PR Newswire)
+- 1 hour **PL,RKLB,ASTS,LUNR,VOYG** RKLB, ASTS, VOYG, LUNR Steal SpaceXs Thunder  Heres What Lit Up Space Stocks This Week (Stocktwits)
+- 1 hour **BB** BB Stock Heads For Weekly Gain: Retail Turns Bullish On BlackBerry Ahead Of Earnings As QNX Helps Drive Physical AI (Stocktwits)
+- 1 hour **BE,FCEL,VICR,ASPN,ENLT** These 5 Green Stocks Have Crushed Clean Energy ETFs, S&P 500 And AI Funds In 2026 (Stocktwits)
+- 1 hour **TTE** TotalEnergies SE UK Regulatory Announcement: TotalEnergies Signs an Agreement with GIP on African Energy Infrastructure Assets (Business Wire)
+- 1 hour **TTE** TotalEnergies Signs an Agreement with GIP on African Energy Infrastructure Assets (Business Wire)
+- 2 hours **IHG** InterContinental Hotels Group PLC Announces Transaction in Own Shares - September 18 (ACCESSWIRE)
+- 2 hours **INTC,AMD,QCOM,META,AAPL** Apple's Chip Strategy Keeps Paying Dividends (Barrons.com)
+- 2 hours **SPY** Stock Market: Will S&P 500 Open Up or Down Today? (Benzinga Prediction Markets)
+- 2 hours **CRWV,ARKK,ARKW** CRWV Stock Rebounds From 1-Month Low  Cathie Woods ARK Bets $19M As Retail Favors CoreWeave Over Nebius (Stocktwits)
+- 2 hours **BLK** Why this former contender for the Fed chair job thinks Kevin Warsh has a huge problem on his hands (Yahoo Finance)
+- 3 hours **GME** GME Stock Heads For Third Week Of Gains: Retail Says GameStop Is 'Primed And Ready' As Jim Cramer Turns Bullish (Stocktwits)
+- 3 hours **STUB** StubHub Stock Jumps After Citi Upgrade, But Shares Remain Well Below IPO Price (Stocktwits)
+- 3 hours **ASTS,SPCX,VZ,T** ASTS Retail Sentiment Nears 1-Year Low As SpaceX Turns Up The Heat In Global Mobile Race (Stocktwits)
+- 3 hours **UPXI** Upexi Inc (UPXI) (Q4 2026) Earnings Call Highlights: Massive Solana Treasury Fuels $246 Million ... (GuruFocus.com)
+- 3 hours **COIN,SOFI,AFRM,PYPL** New Bank Approvals Are Surging. What's Behind the Boom. (Barrons.com)
+- 3 hours **TAK** Takeda Employees Select Four New Global Corporate Social Responsibility Collaborations to Advance Climate-Resilient Health Systems (Business Wire)
+- 3 hours **MPC** Why Is the BoE Holding Rates While the US Fed Hikes? (BeInCrypto)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
