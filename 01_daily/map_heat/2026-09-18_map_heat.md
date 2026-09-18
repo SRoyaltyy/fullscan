@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-09-18
 
-Export `finviz_2026-09-17.csv` · 11616 names · generated 2026-09-18T04:09:04.716032-04:00
+Export `finviz_2026-09-18.csv` · 11616 names · generated 2026-09-18T04:09:36.036248-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -254,13 +254,13 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 8 min **PSO** Pearson Acquires Assessment Technology Provider, ITS (PR Newswire)
-- 8 min **TBLA** Taboola to Acquire Dianomi, Significantly Bolstering its Ability to Provide Performance Advertisers with a Highly Specialized, Premium Ad Network Focused on Finance, Powered by Taboola's Performance Advertising Platform Realize (GlobeNewswire)
-- 8 min **VNT** Tesco Partners with Vontier to Elevate Forecourt Automation and Integration (Business Wire)
-- 8 min **III** U.K. Public Sector Adopts Platform-Based Delivery Approach (Business Wire)
-- 9 min **PBR** Petrobras secures eight offshore PSCs in Côte dIvoire (Offshore Technology)
+- 9 min **PSO** Pearson Acquires Assessment Technology Provider, ITS (PR Newswire)
+- 9 min **TBLA** Taboola to Acquire Dianomi, Significantly Bolstering its Ability to Provide Performance Advertisers with a Highly Specialized, Premium Ad Network Focused on Finance, Powered by Taboola's Performance Advertising Platform Realize (GlobeNewswire)
+- 9 min **VNT** Tesco Partners with Vontier to Elevate Forecourt Automation and Integration (Business Wire)
+- 9 min **III** U.K. Public Sector Adopts Platform-Based Delivery Approach (Business Wire)
+- 10 min **PBR** Petrobras secures eight offshore PSCs in Côte dIvoire (Offshore Technology)
 - 32 min **QQQ** US Stock Market This Week: Are SPY, QQQ Beating Asian Equities? (Stocktwits)
-- 57 min **GOOG,GOOGL,CBRE** Google Delays Thompson Center Opening to 2028 in Chicago (CRE Daily)
+- 58 min **GOOG,GOOGL,CBRE** Google Delays Thompson Center Opening to 2028 in Chicago (CRE Daily)
 - 1 hour **ESLT** Elbit Systems Files a Shelf Prospectus in Israel (PR Newswire)
 - 1 hour **PL,RKLB,ASTS,LUNR,VOYG** RKLB, ASTS, VOYG, LUNR Steal SpaceXs Thunder  Heres What Lit Up Space Stocks This Week (Stocktwits)
 - 1 hour **BB** BB Stock Heads For Weekly Gain: Retail Turns Bullish On BlackBerry Ahead Of Earnings As QNX Helps Drive Physical AI (Stocktwits)

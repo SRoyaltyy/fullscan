@@ -1,8 +1,8 @@
 {
   "date": "2026-09-18",
-  "generated_at": "2026-09-18T04:09:04.716032-04:00",
+  "generated_at": "2026-09-18T04:09:36.036248-04:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-09-17.csv",
+  "export": "finviz_2026-09-18.csv",
   "n_tickers": 11616,
   "sectors": [
     {
@@ -8935,7 +8935,7 @@
   ],
   "ticker_news": [
     {
-      "time": "8 min",
+      "time": "9 min",
       "title": "Pearson Acquires Assessment Technology Provider, ITS",
       "url": "/news/393424/pearson-acquires-assessment-technology-provider-its",
       "source": "PR Newswire",
@@ -8944,7 +8944,7 @@
       ]
     },
     {
-      "time": "8 min",
+      "time": "9 min",
       "title": "Taboola to Acquire Dianomi, Significantly Bolstering its Ability to Provide Performance Advertisers with a Highly Specialized, Premium Ad Network Focused on Finance, Powered by Taboola's Performance Advertising Platform Realize",
       "url": "/news/393425/taboola-to-acquire-dianomi-significantly-bolstering-its-ability-to-provide-performance-advertisers-with-a-highly-specialized-premium-ad-network-focused-on-finance-powered-by-taboolas-performance-advertising-platform-realize",
       "source": "GlobeNewswire",
@@ -8953,7 +8953,7 @@
       ]
     },
     {
-      "time": "8 min",
+      "time": "9 min",
       "title": "Tesco Partners with Vontier to Elevate Forecourt Automation and Integration",
       "url": "/news/393426/tesco-partners-with-vontier-to-elevate-forecourt-automation-and-integration",
       "source": "Business Wire",
@@ -8962,7 +8962,7 @@
       ]
     },
     {
-      "time": "8 min",
+      "time": "9 min",
       "title": "U.K. Public Sector Adopts Platform-Based Delivery Approach",
       "url": "https://www.businesswire.com/news/home/20260918857513/en/",
       "source": "Business Wire",
@@ -8971,7 +8971,7 @@
       ]
     },
     {
-      "time": "9 min",
+      "time": "10 min",
       "title": "Petrobras secures eight offshore PSCs in C\u00f4te dIvoire",
       "url": "https://finance.yahoo.com/energy/articles/petrobras-secures-eight-offshore-pscs-075901625.html",
       "source": "Offshore Technology",
@@ -8989,7 +8989,7 @@
       ]
     },
     {
-      "time": "57 min",
+      "time": "58 min",
       "title": "Google Delays Thompson Center Opening to 2028 in Chicago",
       "url": "https://finance.yahoo.com/real-estate/articles/google-delays-thompson-center-opening-071058851.html",
       "source": "CRE Daily",
@@ -10499,5 +10499,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 159,
   "earnings_window_count": 44,
-  "overlay_at": "2026-09-18T04:09:04.716032-04:00"
+  "overlay_at": "2026-09-18T04:09:36.036248-04:00"
 }
