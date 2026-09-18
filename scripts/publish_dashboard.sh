@@ -45,16 +45,14 @@ else
 fi
 touch "$TMP/.nojekyll"
 
-# Every sub-dashboard on main rides along so an orphan deploy cannot 404
-# a page another job just published.
+# Always overlay sub-dashes from this checkout. A stale artifact
+# day-movers/index.html used to skip the copy and 404 cam.html.
 for sub in $SUBS; do
-  if [ -f "dashboard/${sub}/index.html" ] && [ ! -f "$TMP/dashboard/${sub}/index.html" ]; then
+  if [ -f "dashboard/${sub}/index.html" ]; then
     mkdir -p "$TMP/dashboard/${sub}"
     cp -a "dashboard/${sub}/." "$TMP/dashboard/${sub}/"
+    echo "[pages] overlay dashboard/${sub} from main"
   fi
-  # Root copy: the paper book is also published at /fullscan/ so
-  # href="sleeve-merge/" from the homepage must not 404.
-  # deploy-dashboard.yml also mirrors into pages_out/${sub}.
   if [ -d "$TMP/dashboard/${sub}" ]; then
     mkdir -p "$TMP/${sub}"
     cp -a "$TMP/dashboard/${sub}/." "$TMP/${sub}/"
