@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T21:42:48.495256-04:00",
+  "generated_at": "2026-09-17T21:42:51.537463-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -169,31 +169,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "ab",
-      "title": "AB checklist",
-      "date": "2026-09-17",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-17T19:52:48.996681-04:00",
-      "files": [
-        {
-          "path": "data/ab_checklist/2026-09-17_ab_checklist.csv",
-          "ok": true,
-          "reason": "",
-          "size": 7626980,
-          "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, CFFN, ANET, HSBC, SKM"
-        },
-        {
-          "path": "data/ab_checklist/2026-09-17_ab_checklist_enriched.csv",
-          "ok": true,
-          "reason": "",
-          "size": 8459785,
-          "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 DSGX, SFL, ANET, UHS, ADSK"
-        }
-      ],
-      "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, CFFN, ANET, HSBC, SKM \u00b7 2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 DSGX, SFL, ANET, UHS, ADSK"
-    },
     {
       "key": "stock_book",
       "title": "Stock book + green",
@@ -494,6 +469,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 4.936, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': 5.275, 'dir': 'up', 'conf': 0.65, 'source': 'llm'}, Consumer Cyclical={'score': 7.655, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Consumer Defensive={'score': 0.765, 'dir': 'up', 'conf': 0.431, 'source': 'llm'}, Energy={'score': 0.202, 'dir': 'up', 'conf': 0.408, 'source': 'llm'}, Financial={'score': 6.147, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Healthcare={'score': 4.847, 'dir': 'up', 'conf': 0.594, 'source': 'llm'}, Industrials={'score': 6.262, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-17\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T21:42:51.038611-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-17_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2287184,
+          "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 SMTC, CDNA, GCT, AVAH, HPE"
+        }
+      ],
+      "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 SMTC, CDNA, GCT, AVAH, HPE"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
