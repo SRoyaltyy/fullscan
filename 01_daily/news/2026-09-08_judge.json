@@ -1,20 +1,25 @@
 {
  "risk_tilt": "off",
  "macros": [
+  "hawkish",
   "bearish",
+  "hawkish",
+  "hawkish",
   "bearish",
-  "bearish",
-  "bearish"
+  "hawkish"
  ],
  "sector_tilts": {
+  "Technology": "bullish",
   "Healthcare": "bullish",
-  "Financial": "bullish",
-  "Real Estate": "bearish"
+  "Basic Materials": "mixed",
+  "Industrials": "bearish"
  },
  "tickers": {
-  "AMGN": 3.0,
-  "XLU": -1.5
+  "ADI": 5.5,
+  "NVDA": 4.0,
+  "XLV": 4.0,
+  "AU": -3.0
  },
- "b1_inject": "NEWS_JUDGE: n=8 rescued=4\nMACRO Fed-hawkish: [hawkish] Divided Fed holds, 3 dissent; Warsh signals Sep hike risk; hike odds rising (regime/1w)\nMACRO Rates: [bearish] US borrowing costs hit 19-yr high; long-end yields persistent headwind for duration (regime/1w-1m)\nMACRO Gold: [bearish] Gold -3% on Warsh comments; monetary-metals bid inverts, hits XLB/GDX (session/1d-1w)\nSECTOR Healthcare: [bullish] ABBV Phase 3 + AMGN mortality data form sector-fundamental cluster; XLV relative bid (sector_etf)\nSECTOR Financials: [bullish] Hawkish repricing + steepening curve = NIM tailwind; XLF relative strength (sector_etf)\nSECTOR Real Estate: [bearish] 19-yr high borrowing costs crush duration; XLRE underperforms (sector_etf)\nINTERACTION: Fed-hawkish + gold slide = one rates cluster; do not double-count. Healthcare cluster + defensive bid supports XLV.\nWATCH: Prior-session relief rally at risk of reversal if Warsh-hawkish repricing dominates; watch for SPX fade.",
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=6\nMACRO rates: [hawkish] Warsh Jackson Hole puts Sept hike back on table; coin-flip odds, yields up (regime/1d-1w)\nMACRO rates: [bearish] Treasury yields rise as bond market \"trusts\" Warsh \u2014 multiple compression channel (session/1d-1w)\nMACRO inflation: [hawkish] Corn/wheat 3-yr highs reinforce \"inflation not improving\" framing (session/1w-1m)\nSECTOR semis: [bullish] NVDA AI deal + Dell backlog lift AMAT +5%, ADI upgrades \u2014 narrow AI-hardware bid (SMH/SOXX)\nSECTOR healthcare: [bullish] ABBV Phase 3 myeloma hit + Apogee close, guidance reaffirmed \u2014 XLV sympathy (XLV)\nSECTOR materials: [mixed] Gold \u22123% on hike-odds; ag complex bid on food inflation (GDX, MOS/CF)\nSECTOR industrials: [bearish] US\u2013Canada trade war, recession fears \u2014 cyclical/cross-border drag (IWM, industrials)\nINTERACTION: Fed path + yields = ONE rates cluster; hawkish rates + AI semis bid = mixed, do not double-count; ag strength reinforces inflation, not risk-on\nWATCH: Fed-saturated tape (30/37 usable = same Warsh story); ranking collapses cluster \u2014 if a fresh same-day catalyst (hard data, mega-cap) prints, re-rank",
  "date": "2026-09-08"
 }

@@ -1,19 +1,21 @@
 {
   "date": "2026-09-08",
-  "generated_at": "2026-09-17T23:43:34.256904-04:00",
+  "generated_at": "2026-09-17T23:48:10.712135-04:00",
   "all_ok": false,
-  "qc_all_ok": false,
+  "qc_all_ok": true,
   "book_ok": false,
   "grok_ok": false,
   "grok_fails": [
     {
-      "path": "(review)",
-      "reason": "empty_review_reply"
+      "path": "01_daily/sectors/2026-09-08/technology_predict.md",
+      "reason": "Wrong date / carry-forward: body is explicitly for 2026-09-18 (header 'Sector Environment Analysis \u2014 2026-09-18', Channel 1 tape 'through 2026-09-17', FOMC printed 09-16, BOJ hiked 09-18, Apple iPhone 18 availability TODAY 09-18, HIT_GRID dated 2026-09-18). Not a same-day 2026-09-08 artifact."
+    },
+    {
+      "path": "01_daily/sectors/2026-09-08/utilities_predict.md",
+      "reason": "Wrong date / carry-forward: body is for 2026-09-18 (header 'Utilities (XLU) \u2014 2026-09-18', tape 'through 2026-09-17', post-FOMC 09-16/09-17 discussion, triple-witching 09-18, HIT_GRID dated 2026-09-18). Not a same-day 2026-09-08 artifact."
     }
   ],
-  "missing_required": [
-    "news_judge"
-  ],
+  "missing_required": [],
   "attempts": [
     {
       "key": "weather",
@@ -141,7 +143,7 @@
     }
   ],
   "qc": {
-    "sector_n_ok": 9,
+    "sector_n_ok": 11,
     "sector_n_total": 11,
     "items": [
       {
@@ -160,10 +162,10 @@
       },
       {
         "kind": "news_judge",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/news/2026-09-08_judge.md",
-        "size": 0
+        "size": 12839
       },
       {
         "kind": "news_parse",
@@ -286,17 +288,17 @@
       },
       {
         "kind": "sector_predict",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/sectors/2026-09-08/technology_predict.md",
-        "size": 0
+        "size": 18970
       },
       {
         "kind": "sector_predict",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/sectors/2026-09-08/utilities_predict.md",
-        "size": 0
+        "size": 18367
       }
     ]
   }

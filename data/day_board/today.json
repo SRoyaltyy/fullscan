@@ -1,11 +1,11 @@
 {
   "date": "2026-09-08",
-  "generated_at": "2026-09-17T23:47:34.431268-04:00",
+  "generated_at": "2026-09-17T23:48:11.646389-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 6,
-    "partial": 2,
+    "ok": 7,
+    "partial": 1,
     "fail": 0,
     "n": 8
   },
@@ -185,6 +185,31 @@
         }
       ],
       "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-09-08\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **-2.158** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **2.961** (ES +2.02%, ZN -0.15%) \u00b7 index_carry **-2.869** (general -11.475) \u00b7 llm_overlay **-2.25** (raw -2.25) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-09-08\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (150,100 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10 year Treasury yield September 18 2026\"* \u2192 got 6 results (via ddg)\n- Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity, Quoted on an Investment Basis (DGS10) | FRED | St. Louis Fed (https://fred.stlouisfed.org/series/dgs10)\n- US 10 Year Treasury Note Yield - Quote - Chart - Historical Data - News (https://tradingeconomics.com/united-states/government-bond-yield)\n- US10Y: U.S. 10 Year Treasury - Stock Price, Quote and News - CNBC (https://www.cnbc.com/quotes/"
+    },
+    {
+      "key": "news_judge",
+      "title": "News judge",
+      "date": "2026-09-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T23:48:10.745293-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-08_judge.md",
+          "ok": true,
+          "reason": "",
+          "size": 12839,
+          "preview": "# News Judge \u2014 2026-09-08"
+        },
+        {
+          "path": "01_daily/news/2026-09-08_judge.json",
+          "ok": true,
+          "reason": "",
+          "size": 1533,
+          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+        }
+      ],
+      "preview": "# News Judge \u2014 2026-09-08 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
