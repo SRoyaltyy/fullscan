@@ -7982,6 +7982,18 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-09-18",
+          "actual_pct": 0.12,
+          "actual_direction": "flat",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       },
       "lesson_schema_ok": true
@@ -11304,6 +11316,18 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-17",
+          "actual_pct": 2.85,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": true,
+          "magnitude_hit": true,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       }
     },
@@ -11586,6 +11610,18 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.42
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-17",
+          "actual_pct": 0.84,
+          "actual_direction": "up",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.4
         }
       }
     },
@@ -12707,6 +12743,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-17",
+          "actual_pct": -4.64,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.4
         }
       }
     },
@@ -12879,6 +12927,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-17",
+          "actual_pct": -4.97,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.45
         }
       }
     },
@@ -16195,6 +16255,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.52
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-18",
+          "actual_pct": -1.25,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": true,
+          "magnitude_hit": true,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.55
         }
       },
       "lesson_schema_ok": true
@@ -19720,6 +19792,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-17",
+          "actual_pct": 0.1,
+          "actual_direction": "flat",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       }
     },
@@ -20849,6 +20933,18 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-18",
+          "actual_pct": -0.08,
+          "actual_direction": "flat",
+          "actual_magnitude_band": "flat",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.45
         }
       },
       "lesson_schema_ok": true
@@ -22062,7 +22158,20 @@
       "knowable_at_9am": "yes — the 10Y was already above 5% at 1:25am ET and oil was up pre-open; no genuine intraday shock",
       "attribution_contested": "yes — CNBC/AP lead with dual oil+bonds; Trading Economics leads with yields; Motley Fool leads with AI (contradicted by its own chip-recovery headline); Benzinga leads with FOMC positioning",
       "outlier_watch": "Chip stocks recovered intraday while indices fell (Motley Fool), and gold fell alongside equities — a real-yield/rates regime, not risk-off flight",
-      "horizon_grades": {},
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-09-18",
+          "actual_pct": 0.85,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.62
+        }
+      },
       "lesson_schema_ok": true
     },
     {
@@ -23858,7 +23967,7 @@
           "status": "hit"
         }
       ],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-09-18_lesson.md",
       "sources_used": [
         {
           "url": "https://www.cnbc.com/2026/09/18/treasury-yields-fed-rates-volatile-week.html",
@@ -23939,7 +24048,9 @@
       "key_interaction": "OFFSETTING — oil-down (usual equity-positive inflation channel) vs 10Y back above 5% (multiple compression); net looks calm, interior was a tug-of-war",
       "knowable_at_9am": "partially",
       "attribution_contested": "yes",
-      "outlier_watch": "Dow/small-caps red vs SPX/NDX green; oil down hard while Friday yields rose (broke Thursday’s oil-yields couple); VIX still fell"
+      "outlier_watch": "Dow/small-caps red vs SPX/NDX green; oil down hard while Friday yields rose (broke Thursday’s oil-yields couple); VIX still fell",
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-09-18",
