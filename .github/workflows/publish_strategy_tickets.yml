@@ -85,8 +85,18 @@ jobs:
           PY
           test -s data/day_board/today_strategies.json
           test -s dashboard/factor-mine/strategy_tickets.json
-      - name: Push tickets
+      - name: Submit paper hot4 standing batch
         if: steps.readiness.outputs.ready == 'true'
+        env:
+          WEBULL_APP_KEY: ${{ secrets.WEBULL_APP_KEY }}
+          WEBULL_APP_SECRET: ${{ secrets.WEBULL_APP_SECRET }}
+          WEBULL_ACCOUNT_ID: ${{ secrets.WEBULL_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          pip install webull-openapi-python-sdk
+          python -m src.paper_open --submit --ready --owner actions
+      - name: Push tickets
+        if: always() && steps.readiness.outputs.ready == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -105,6 +115,8 @@ jobs:
             dashboard/factor-mine/today_strategies.json \
             dashboard/today_strategies.json \
             dashboard/factor-mine/today.json \
+            data/paper_open/ \
+            data/sleeve_merge/webull_last.json \
             data/day_board/hold_live_px.json \
             dashboard/factor-mine/hold_live_px.json \
             dashboard/sleeve-merge/index.html \
@@ -115,7 +127,7 @@ jobs:
           chmod +x scripts/publish_dashboard.sh || true
           bash scripts/publish_dashboard.sh
       - name: Restamp GitHub Pages
-        if: steps.readiness.outputs.ready == 'true'
+        if: always() && steps.readiness.outputs.ready == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh workflow run deploy-dashboard.yml --ref main

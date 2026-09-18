@@ -71,22 +71,13 @@ jobs:
               raise SystemExit('Sandbox has no spendable cash; fund/reset the paper account before activation')
           print('Sandbox preflight passed; spendable cash is positive. No orders submitted.')
           PY
-      - name: Switch owner only after timer and broker preflight pass
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Keep Actions as automatic owner (ECS timer must skip)
         run: |
-          set -euo pipefail
           python3 - <<'PY'
           import json
-          from datetime import datetime, timezone
           from pathlib import Path
-          from zoneinfo import ZoneInfo
-          t = datetime.now(ZoneInfo('America/New_York'))
-          if (8, 0) <= (t.hour, t.minute) <= (9, 31):
-              raise SystemExit('Defer ownership changes until after 09:31 ET to avoid competing armed workers')
-          Path('00_grounding/paper_open_owner.json').write_text(json.dumps({
-              'owner': 'ecs', 'installed_at': datetime.now(timezone.utc).isoformat(),
-              'note': 'Persistent timer verified and sandbox preflight passed; Actions is disabled by this record.'
-          }, indent=2)+'\n')
+          rec = json.loads(Path('00_grounding/paper_open_owner.json').read_text())
+          if rec.get('owner') != 'actions':
+              raise SystemExit('owner must remain actions; ECS --owner ecs must no-op via owner_enabled')
+          print('owner=actions; ECS timer stays installed but skips automatic send')
           PY
-          bash scripts/safe_git_push.sh "ops: activate verified ECS paper opening clock" 00_grounding/paper_open_owner.json
