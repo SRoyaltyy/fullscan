@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T21:42:51.537463-04:00",
+  "generated_at": "2026-09-17T21:42:59.213636-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -169,59 +169,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-09-17",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-17T20:00:04.295576-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-09-17_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1526226,
-          "preview": "1d BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ"
-        },
-        {
-          "path": "data/stock_book/2026-09-17_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 2891,
-          "preview": "green 194 \u00b7 AVAH, DXCM, NTAP, PTGX, MTCH, CORT, FIVN, BLFS, EXEL, INCY"
-        },
-        {
-          "path": "data/stock_book/2026-09-17_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2376,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-09-17_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 13810,
-          "preview": "2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 13810,
-          "preview": "2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ"
-        },
-        {
-          "path": "01_daily/2026-09-17_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 90815,
-          "preview": "# Stock book \u2014 2026-09-17\n_Generated 2026-09-17T19:56:54.868590-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ \u00b7 green 194 \u00b7 AVAH, DXCM, NTAP, PTGX, MTCH, CORT, FIVN, BLFS, EXEL, INCY \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ \u00b7 2026-09-17 BUY FIVN, WAY, RVTY, IT, IOT, ATRC, AMRX, CARG \u00b7 SELL TLN, JKS, DVLT, CMTG, MIST, EQ, LODE, AIRJ \u00b7 # Stock book \u2014 2026-09-17\n_Generated 2026-09-17T19:56:54.868590-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -487,6 +434,31 @@
         }
       ],
       "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 SMTC, CDNA, GCT, AVAH, HPE"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-17",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T21:42:58.714793-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-17_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7626980,
+          "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, CFFN, ANET, HSBC, SKM"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-17_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8459028,
+          "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, DSGX, WWW, SFL, NTAP"
+        }
+      ],
+      "preview": "2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, CFFN, ANET, HSBC, SKM \u00b7 2653 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, DSGX, WWW, SFL, NTAP"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
