@@ -1,12 +1,12 @@
 {
   "date": "2026-09-18",
-  "generated_at": "2026-09-18T04:11:06.028210-04:00",
+  "generated_at": "2026-09-18T04:14:36.011028-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 2,
-    "partial": 1,
-    "fail": 5,
+    "partial": 2,
+    "fail": 4,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
-      "date": "2026-09-18",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-18T04:07:10.334124-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-18_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 3275,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-09-18_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 1785,
-          "preview": "# Finviz homepage market digest \u2014 2026-09-18\n**Generated:** 2026-09-18T04:07:10.317391-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a modestly higher open as traders look to industrial production data in a catalyst-light session\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** \u2014\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-18\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-18\n**Generated:** 2026-09-18T04:07:10.317391-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a modestly higher open as traders look to industrial production data in a catalyst-light session\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** \u2014\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-18\n**Clock use:** `same_morning`"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -228,6 +203,31 @@
         }
       ],
       "preview": "5904 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-18",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-18T04:14:35.637652-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-18_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 87988,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-18_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11544,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-18\n_Generated 2026-09-18T04:08:13.435308-04:00 \u00b7 export=data/exports/finviz_2026-09-18.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2382_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-18\n_Generated 2026-09-18T04:08:13.435308-04:00 \u00b7 export=data/exports/finviz_2026-09-18.csv \u00b7 ticker digests=5887 \u00b7 high-signal=2382_"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
