@@ -791,5 +791,7 @@
     "NVDA": 4.0,
     "XLV": 4.0,
     "AU": -3.0
-  }
+  },
+  "catalyst_tickers": 0,
+  "catalyst_date": "2026-09-18"
 }

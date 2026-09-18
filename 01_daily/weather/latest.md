@@ -4,60 +4,59 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 ## Snapshot
 
-- **Risk state:** UNKNOWN
-- **Yields:** flat (fred_dgs10) | **Dollar:** flat (dxy) | **Oil:** falling | **VIX:** falling (ratio 0.81 via vix/vix3m) spot 15.06
+- **Risk state:** ON (general predict up score +4.9, conf 0.694)
+- **Yields:** flat (fred_dgs10) | **Dollar:** strong (dxy) | **Oil:** falling | **VIX:** falling (ratio 0.82 via vix/vix3m) spot 15.25
 - **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.44
-- **High-impact events:** 2 bullish vs 7 bearish
-- ⚠️ **Data gaps:** general predict run, general predict factor scoreboard
+- **High-impact events:** 4 bullish vs 9 bearish
 
 ## Sectors
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| sector:Basic Materials | ⛅ neutral | medium | finviz sector median week -0.61% [tape] |
-| sector:Communication Services | ⛅ neutral | medium | finviz sector median week -1.29% [tape] |
-| sector:Consumer Cyclical | 🌧️ hostile | medium | finviz sector median week -1.64% [tape] |
-| sector:Consumer Defensive | ⛅ neutral | medium | finviz sector median week -0.78% [tape] |
-| sector:Energy | 🌧️ hostile | medium | finviz sector median week -2.42% [tape] |
-| sector:Financial | ⛅ neutral | medium | finviz sector median week +0.02% [tape] |
-| sector:Healthcare | 🌤️ favorable | medium | news_judge SECTOR Healthcare [bullish] |
-| sector:Industrials | 🌧️ hostile | medium | news_judge SECTOR Industrials [bearish] |
-| sector:Real Estate | 🌧️ hostile | medium | finviz sector median week -1.52% [tape] |
+| sector:Basic Materials | 🌧️ hostile | medium | news_judge SECTOR Basic Materials [bearish] |
+| sector:Communication Services | ⛅ neutral | medium | finviz sector median week -0.97% [tape] |
+| sector:Consumer Cyclical | ⛅ neutral | medium | finviz sector median week -1.04% [tape] |
+| sector:Consumer Defensive | ⛅ neutral | medium | finviz sector median week -0.65% [tape] |
+| sector:Energy | 🌧️ hostile | medium | news_judge SECTOR Energy [bearish] |
+| sector:Financial | 🌧️ hostile | medium | news_judge SECTOR Financial [bearish] |
+| sector:Healthcare | ⛅ neutral | medium | finviz sector median week -0.52% [tape] |
+| sector:Industrials | ⛅ neutral | medium | finviz sector median week -0.25% [tape] |
+| sector:Real Estate | ⛅ neutral | medium | finviz sector median week -1.49% [tape] |
 | sector:Technology | 🌤️ favorable | medium | news_judge SECTOR Technology [bullish] |
-| sector:Utilities | ⛅ neutral | medium | finviz sector median week -0.71% [tape] |
+| sector:Utilities | ⛅ neutral | medium | finviz sector median week -1.23% [tape] |
 
 ## Size
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| size:micro | ❔ unknown | low | no general predict |
-| size:small | ❔ unknown | low | no general predict |
-| size:mid | ❔ unknown | low | no general predict |
-| size:large | ❔ unknown | low | no general predict |
-| size:mega | ❔ unknown | low | no general predict |
+| size:micro | 🌧️ hostile | medium | strong dollar — small caps de-rate first; risk-on, dollar strong [general predict + factors] |
+| size:small | 🌧️ hostile | medium | strong dollar — small caps de-rate first; risk-on, dollar strong [general predict + factors] |
+| size:large | ⛅ neutral | low | risk-on — mega leads less in broad rallies [general predict] |
+| size:mega | ⛅ neutral | low | risk-on — mega leads less in broad rallies [general predict] |
+| size:mid | ⛅ neutral | low | no dedicated mid-cap signal in v1 |
 
 ## Beta & volatility
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| beta:high | ⛅ neutral | low | risk-unknown, VIX falling |
-| beta:low | ⛅ neutral | low | risk-unknown, VIX falling |
+| beta:high | 🌤️ favorable | medium | risk-on, VIX falling — high beta outperforms [general + channel1] |
+| beta:low | ⛅ neutral | low | risk-on — low beta lags rallies |
 | beta:mid | ⛅ neutral | low | beta-neutral zone |
 
 ## Short interest (multiplier, not direction)
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| short:low | ❔ unknown | low | no general predict |
-| short:mid | ❔ unknown | low | no general predict |
-| short:high | ❔ unknown | low | no general predict |
-| short:extreme | ❔ unknown | low | no general predict |
+| short:high | 🌤️ favorable | low | risk-on — crowded shorts are squeeze FUEL if the tape rises (multiplier, not a direction) [general] |
+| short:extreme | 🌤️ favorable | low | risk-on — crowded shorts are squeeze FUEL if the tape rises (multiplier, not a direction) [general] |
+| short:low | ⛅ neutral | low | low short is not a tailwind by itself |
+| short:mid | ⛅ neutral | low | no strong crowding signal |
 
 ## Profitability & style
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| profit:no | ⛅ neutral | low | risk-unknown, F&G None |
+| profit:no | ⛅ neutral | low | risk-on, F&G None |
 | profit:yes | ⛅ neutral | low | — |
 | profit:thin | ⛅ neutral | low | — |
 
@@ -82,35 +81,35 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| mom:uptrend | ❔ unknown | low | no general predict |
-| mom:downtrend | ❔ unknown | low | no general predict |
-| mom:mixed | ❔ unknown | low | no general predict |
+| mom:uptrend | 🌤️ favorable | medium | risk-on + positive futures — trend continuation day [general + factors] |
+| mom:downtrend | ⛅ neutral | low | — |
+| mom:mixed | ⛅ neutral | low | — |
 
 ## Extension state
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| ext:extreme | ❔ unknown | low | no general predict |
-| ext:extended | ❔ unknown | low | no general predict |
-| ext:washed | ❔ unknown | low | no general predict |
-| ext:neutral | ❔ unknown | low | no general predict |
+| ext:washed | 🌤️ favorable | low | washouts bounce in risk-on turns |
+| ext:extended | ⛅ neutral | low | extension tolerated while tape is firm |
+| ext:extreme | ⛅ neutral | low | extension tolerated while tape is firm |
+| ext:neutral | ⛅ neutral | low | — |
 
 ## 52-week zone
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| range:deep_low | ❔ unknown | low | no general predict |
-| range:low | ❔ unknown | low | no general predict |
-| range:mid | ❔ unknown | low | no general predict |
-| range:high | ❔ unknown | low | no general predict |
-| range:top | ❔ unknown | low | no general predict |
-| range:breakout | ❔ unknown | low | no general predict |
+| range:deep_low | ⛅ neutral | low | bottom-fishing only with confirmation |
+| range:top | 🌤️ favorable | low | breakouts follow through on trend days |
+| range:breakout | 🌤️ favorable | low | breakouts follow through on trend days |
+| range:low | ⛅ neutral | low | — |
+| range:mid | ⛅ neutral | low | — |
+| range:high | ⛅ neutral | low | — |
 
 ## Geography
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| geo:US | ❔ unknown | low | mirrors general risk-unknown [general predict] |
+| geo:US | 🌤️ favorable | low | mirrors general risk-on [general predict] |
 | geo:ADR-China | ⛅ neutral | low | no high-impact China event flagged |
 
 ## Gates (always-on cautions)

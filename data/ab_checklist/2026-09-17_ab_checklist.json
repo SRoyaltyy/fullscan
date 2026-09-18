@@ -1,7 +1,7 @@
 {
   "asof": "2026-09-17",
   "prior_export": "2026-09-16",
-  "n_liquid": 2653,
+  "n_liquid": 2651,
   "features": [
     "A01_rsi_value",
     "A02_rsi_cross_30",
@@ -36,6 +36,6 @@
   ],
   "pair_rule": "exactly_two_connected_sessions",
   "section_bars": 21,
-  "generated": "2026-09-17T06:48:27.761035-04:00",
+  "generated": "2026-09-18T04:16:43.427812-04:00",
   "csv": "data/ab_checklist/2026-09-17_ab_checklist.csv"
 }

@@ -1,15 +1,55 @@
 {
   "date": "2026-09-18",
-  "generated_at": "2026-09-18T04:09:36.075295-04:00",
+  "generated_at": "2026-09-18T05:04:41.989509-04:00",
   "ok": false,
   "fails": [
     {
-      "path": "(review)",
-      "reason": "empty_review_reply"
+      "path": "01_daily/sectors/2026-09-18/basic_materials_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-18/communication_services_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-18/consumer_cyclical_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-18/consumer_defensive_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-18/energy_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-18/financial_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-18/healthcare_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-18/industrials_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-18/real_estate_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-18/technology_predict.md",
+      "reason": "missing"
+    },
+    {
+      "path": "01_daily/sectors/2026-09-18/utilities_predict.md",
+      "reason": "missing"
     }
   ],
-  "notes": "Grok returned an empty review",
-  "prompt_chars": 44881,
-  "reply_chars": 0,
+  "notes": "Day fails on sectors 0/11 missing (need \u22658 quality-ok); the single-sector exception does not apply. Core general predict, events (scan_date today, mixed new/carried items), news judge/parse, finviz digest, and map-heat tape/tables are same-day complete with markers and an UP direction. Research reused last-night captain cards after a failed morning delta (enhancement only); close digest missing is not a core fail.",
+  "prompt_chars": 120766,
+  "reply_chars": 1406,
   "reviewer": "grok-4.6-text"
 }

@@ -2,7 +2,17 @@
 
 ok=False
 
-Grok returned an empty review
+Day fails on sectors 0/11 missing (need ≥8 quality-ok); the single-sector exception does not apply. Core general predict, events (scan_date today, mixed new/carried items), news judge/parse, finviz digest, and map-heat tape/tables are same-day complete with markers and an UP direction. Research reused last-night captain cards after a failed morning delta (enhancement only); close digest missing is not a core fail.
 
 ## Fails
-- `(review)`: empty_review_reply
+- `01_daily/sectors/2026-09-18/basic_materials_predict.md`: missing
+- `01_daily/sectors/2026-09-18/communication_services_predict.md`: missing
+- `01_daily/sectors/2026-09-18/consumer_cyclical_predict.md`: missing
+- `01_daily/sectors/2026-09-18/consumer_defensive_predict.md`: missing
+- `01_daily/sectors/2026-09-18/energy_predict.md`: missing
+- `01_daily/sectors/2026-09-18/financial_predict.md`: missing
+- `01_daily/sectors/2026-09-18/healthcare_predict.md`: missing
+- `01_daily/sectors/2026-09-18/industrials_predict.md`: missing
+- `01_daily/sectors/2026-09-18/real_estate_predict.md`: missing
+- `01_daily/sectors/2026-09-18/technology_predict.md`: missing
+- `01_daily/sectors/2026-09-18/utilities_predict.md`: missing
