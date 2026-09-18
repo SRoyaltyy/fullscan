@@ -23802,18 +23802,107 @@
         "B7_OIL_DOLLAR": 1.0
       },
       "leading_sum": -2.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7657.17,
+      "actual_close": 7650.5,
+      "actual_pct_change": 0.17,
+      "actual_direction": "up",
+      "actual_magnitude_band": "flat",
+      "direction_hit": true,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": -1.0,
+          "status": "miss"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 1.0,
+          "status": "hit"
+        }
+      ],
       "reflection_lesson_ref": null,
-      "sources_used": [],
+      "sources_used": [
+        {
+          "url": "https://www.cnbc.com/2026/09/18/treasury-yields-fed-rates-volatile-week.html",
+          "date_accessed": "2026-09-18",
+          "summary": "Friday’s live yield move is the leash that faded the oil/futures bid; FRED DGS10 in the later Channel 1 block is as-of 09-17 and is not Friday’s close.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/09/18/oil-prices-today-brent-wti-saudi-arabia-houthi.html",
+          "date_accessed": "2026-09-18",
+          "summary": "Oil relief was real and session-long, but still left crude ~$100 and did not produce a yield rally on Friday.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.ttnews.com/articles/factory-output-fell-august",
+          "date_accessed": "2026-09-18",
+          "summary": "Same-morning hard-data miss; too small and too early to be the close, but it is the only scheduled US print of the cash session.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.federalreserve.gov/newsevents/speech/bowman20260918a.htm",
+          "date_accessed": "2026-09-18",
+          "summary": "Calendar Fed-speaker risk did not reprice the policy path; treat as bank-regulation noise for index beta.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/09/18/japan-rate-hike-stocks-rise-bond-yields-yen-fall.html",
+          "date_accessed": "2026-09-18",
+          "summary": "Confirms the morning card’s “BoJ digested / not a carry-unwind shock” read; not a US primary driver.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/09/18/gold-edges-higher-on-lower-oil-prices-subdued-dollar.html",
+          "date_accessed": "2026-09-18",
+          "summary": "Keeps B3 as residual headwind, not a Friday surprise.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.investors.com/news/technology/netflix-stock-downgraded-sell-viewer-engagement-wanes/",
+          "date_accessed": "2026-09-18",
+          "summary": "Explains a high-profile loser without explaining NDX +0.39%.",
+          "verification": "quote_not_found"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -23843,7 +23932,14 @@
       "news_judge_present": true,
       "engine": "v2",
       "anchor_score": 4.111,
-      "overlay_score": 0.75
+      "overlay_score": 0.75,
+      "ops_fail": false,
+      "path_shape": "trend up (closed near day high)",
+      "primary_driver": "Friday 10Y backup through 5% faded a large oil-relief/overnight-futures bid into a nearly flat split close",
+      "key_interaction": "OFFSETTING — oil-down (usual equity-positive inflation channel) vs 10Y back above 5% (multiple compression); net looks calm, interior was a tug-of-war",
+      "knowable_at_9am": "partially",
+      "attribution_contested": "yes",
+      "outlier_watch": "Dow/small-caps red vs SPX/NDX green; oil down hard while Friday yields rose (broke Thursday’s oil-yields couple); VIX still fell"
     },
     {
       "date": "2026-09-18",
