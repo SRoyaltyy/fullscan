@@ -297,7 +297,7 @@ def main() -> None:
     test_env_strips_quoted_secrets()
     test_not_connected_writes_last_without_replay()
     test_stale_combo_does_not_submit()
-    test_yml_poke_on_main_submits()
+    test_yml_warms_before_bell_and_has_one_automatic_sender()
     test_hot4_tickets_long_only_skip_held_cash_and_sit()
     test_hot4_zero_cash_is_honest()
     test_paper_order_is_market_not_limit()
