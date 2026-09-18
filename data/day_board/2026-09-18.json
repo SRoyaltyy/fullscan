@@ -1,6 +1,6 @@
 {
   "date": "2026-09-18",
-  "generated_at": "2026-09-18T04:55:17.018784-04:00",
+  "generated_at": "2026-09-18T04:58:37.611630-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -417,14 +417,14 @@
           "path": "01_daily/weather/2026-09-18_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9302 vix=falling yields=flat",
-          "size": 9302
+          "reason": "sectors=11 bytes=10131 vix=falling yields=flat",
+          "size": 10131
         }
       ],
-      "said": "favorable 2 \u00b7 hostile 2 \u00b7 neutral 7",
+      "said": "favorable 1 \u00b7 hostile 3 \u00b7 neutral 7",
       "bullets": [
-        "hostile: Energy, Industrials",
-        "events bull 2 / bear 7"
+        "hostile: Basic Materials, Energy, Financial",
+        "events bull 4 / bear 9"
       ]
     },
     {
@@ -566,8 +566,8 @@
           "path": "01_daily/weather/2026-09-18_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9302 vix=falling yields=flat",
-          "size": 9302
+          "reason": "sectors=11 bytes=10131 vix=falling yields=flat",
+          "size": 10131
         },
         {
           "key": "in_ab",
@@ -585,7 +585,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5902",
-          "size": 2161521
+          "size": 2271385
         },
         {
           "key": "peers",
@@ -642,9 +642,9 @@
           "size": 6300795
         }
       ],
-      "said": "203 rows",
+      "said": "204 rows",
       "bullets": [
-        "NVDA, FORM, MU, ONC, SKHY"
+        "SMTC, HPE, AMD, ANET, NVDA"
       ]
     },
     {
@@ -743,10 +743,10 @@
       ]
     },
     "weather": {
-      "said": "favorable 2 \u00b7 hostile 2 \u00b7 neutral 7",
+      "said": "favorable 1 \u00b7 hostile 3 \u00b7 neutral 7",
       "bullets": [
-        "hostile: Energy, Industrials",
-        "events bull 2 / bear 7"
+        "hostile: Basic Materials, Energy, Financial",
+        "events bull 4 / bear 9"
       ]
     }
   },
@@ -1279,6 +1279,31 @@
         }
       ],
       "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-18\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-09-18",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-18T04:58:36.823541-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-09-18.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11255053,
+          "preview": "11651 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11429254,
+          "preview": "11641 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11651 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11641 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
