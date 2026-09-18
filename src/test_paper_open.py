@@ -138,12 +138,18 @@ def test_later_fallback_schedule_preserves_first_attempt(tmp_path):
     assert json.loads((tmp_path/f'{DATE}_status.json').read_text())==original
 
 
+def early_payload():
+    p = payload()
+    p['decision_readiness']['completed_at'] = DATE + 'T06:00:00-04:00'
+    return p
+
+
 def test_ready_submit_places_standing_orders_before_bell(tmp_path):
     api = API()
     early = datetime.fromisoformat(DATE + 'T06:20:00-04:00')
     with patch.object(we, 'write_last'), \
             patch.object(po, 'remote_session_journal', return_value=None):
-        rc = po.submit_ready(submit=True, clock=lambda: early, loader=lambda _: payload(),
+        rc = po.submit_ready(submit=True, clock=lambda: early, loader=lambda _: early_payload(),
                              api=api, state_dir=tmp_path)
     assert rc == 0
     assert len(api.calls) == 1
@@ -163,9 +169,9 @@ def test_ready_refire_does_not_double_place(tmp_path):
     early = datetime.fromisoformat(DATE + 'T06:20:00-04:00')
     with patch.object(we, 'write_last'), \
             patch.object(po, 'remote_session_journal', return_value=None):
-        assert po.submit_ready(submit=True, clock=lambda: early, loader=lambda _: payload(),
+        assert po.submit_ready(submit=True, clock=lambda: early, loader=lambda _: early_payload(),
                                api=api, state_dir=tmp_path) == 0
-        assert po.submit_ready(submit=True, clock=lambda: early, loader=lambda _: payload(),
+        assert po.submit_ready(submit=True, clock=lambda: early, loader=lambda _: early_payload(),
                                api=api, state_dir=tmp_path) == 0
     assert len(api.calls) == 1
 
@@ -175,7 +181,7 @@ def test_fallback_run_noops_after_ready_journal(tmp_path):
     early = datetime.fromisoformat(DATE + 'T06:20:00-04:00')
     with patch.object(we, 'write_last'), \
             patch.object(po, 'remote_session_journal', return_value=None):
-        assert po.submit_ready(submit=True, clock=lambda: early, loader=lambda _: payload(),
+        assert po.submit_ready(submit=True, clock=lambda: early, loader=lambda _: early_payload(),
                                api=api, state_dir=tmp_path) == 0
         t = [BELL - timedelta(seconds=20)]
         def clock():
