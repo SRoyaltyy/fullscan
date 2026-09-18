@@ -1,6 +1,6 @@
 {
   "date": "2026-09-17",
-  "generated_at": "2026-09-17T23:47:13.577532-04:00",
+  "generated_at": "2026-09-17T23:50:15.096746-04:00",
   "featured": [
     "combo_sh_5050_shared",
     "combo_jse_333_shared",
@@ -73,13 +73,13 @@
   ],
   "quote": {
     "src": "elite_live",
-    "at": "2026-09-17T23:47:09.949251-04:00",
+    "at": "2026-09-17T23:50:12.223294-04:00",
     "after_open": true,
     "n": 11638,
     "error": null,
     "live": true
   },
-  "banner": "Elite Overview as of 23:47 ET",
+  "banner": "Elite Overview as of 23:50 ET",
   "clock_rule": "px is Finviz Elite Price from a fresh post-09:30 Overview export when live is allowed. Theme Radar close dump and yesterday Price are never live.",
   "sleeves": {
     "combo_sh_5050_shared": {
@@ -94,7 +94,7 @@
           "owner": "union_hot_n4_h1",
           "px": 33.63,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.913,
           "pnl": -32.24
@@ -108,7 +108,7 @@
           "owner": "union_hot_n4_h1",
           "px": 146.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.596,
           "pnl": -20.24
@@ -122,7 +122,7 @@
           "owner": "union_hot_n4_h1",
           "px": 187.8,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.988,
           "pnl": -68.58
@@ -136,7 +136,7 @@
           "owner": "union_hot_n4_h1",
           "px": 34.5,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 2.162,
           "pnl": 75.92
@@ -155,7 +155,7 @@
           "owner": "union_join_vol_green_h1",
           "px": 146.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.596,
           "pnl": -77.44
@@ -174,7 +174,7 @@
           "owner": "union_join_vol_green_h1",
           "px": 146.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.596,
           "pnl": -76.56
@@ -205,7 +205,7 @@
           "owner": "union_hot_n4_h1",
           "px": 33.63,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.913,
           "pnl": -31.93
@@ -219,7 +219,7 @@
           "owner": "union_hot_n4_h1",
           "px": 146.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.596,
           "pnl": -20.24
@@ -233,7 +233,7 @@
           "owner": "union_hot_n4_h1",
           "px": 187.8,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.988,
           "pnl": -68.58
@@ -247,7 +247,7 @@
           "owner": "union_hot_n4_h1",
           "px": 34.5,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 2.162,
           "pnl": 75.92
@@ -266,7 +266,7 @@
           "owner": "union_hot_n4_h1",
           "px": 33.63,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.913,
           "pnl": -30.38
@@ -280,7 +280,7 @@
           "owner": "union_hot_n4_h1",
           "px": 146.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.596,
           "pnl": -19.36
@@ -294,7 +294,7 @@
           "owner": "union_hot_n4_h1",
           "px": 187.8,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.988,
           "pnl": -64.77
@@ -308,7 +308,7 @@
           "owner": "union_hot_n4_h1",
           "px": 34.5,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 2.162,
           "pnl": 72.27
@@ -327,7 +327,7 @@
           "owner": "union_hot_n4_h1",
           "px": 33.63,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.913,
           "pnl": -30.38
@@ -341,7 +341,7 @@
           "owner": "union_hot_n4_h1",
           "px": 146.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.596,
           "pnl": -19.36
@@ -355,7 +355,7 @@
           "owner": "union_hot_n4_h1",
           "px": 187.8,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.988,
           "pnl": -64.77
@@ -369,7 +369,7 @@
           "owner": "union_hot_n4_h1",
           "px": 34.5,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 2.162,
           "pnl": 71.54
@@ -388,7 +388,7 @@
           "owner": null,
           "px": 33.63,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.913,
           "pnl": -30.07
@@ -402,7 +402,7 @@
           "owner": null,
           "px": 146.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.596,
           "pnl": -19.36
@@ -416,7 +416,7 @@
           "owner": null,
           "px": 187.8,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.988,
           "pnl": -64.77
@@ -430,7 +430,7 @@
           "owner": null,
           "px": 34.5,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 2.162,
           "pnl": 70.81
@@ -449,7 +449,7 @@
           "owner": "union_hot_n4_h1",
           "px": 33.63,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.913,
           "pnl": -30.07
@@ -463,7 +463,7 @@
           "owner": "union_hot_n4_h1",
           "px": 146.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.596,
           "pnl": -19.36
@@ -477,7 +477,7 @@
           "owner": "union_hot_n4_h1",
           "px": 187.8,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.988,
           "pnl": -64.77
@@ -491,7 +491,7 @@
           "owner": "union_hot_n4_h1",
           "px": 34.5,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 2.162,
           "pnl": 70.81
@@ -510,7 +510,7 @@
           "owner": "union_hot_n4_h1",
           "px": 33.63,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.913,
           "pnl": -29.76
@@ -524,7 +524,7 @@
           "owner": "union_hot_n4_h1",
           "px": 146.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.596,
           "pnl": -19.36
@@ -538,7 +538,7 @@
           "owner": "union_hot_n4_h1",
           "px": 187.8,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.988,
           "pnl": -64.77
@@ -552,7 +552,7 @@
           "owner": "union_hot_n4_h1",
           "px": 34.5,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 2.162,
           "pnl": 70.08
@@ -571,7 +571,7 @@
           "owner": "union_hot_n4_h1",
           "px": 33.63,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.913,
           "pnl": -29.76
@@ -585,7 +585,7 @@
           "owner": "union_hot_n4_h1",
           "px": 146.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.596,
           "pnl": -19.36
@@ -599,7 +599,7 @@
           "owner": "union_hot_n4_h1",
           "px": 187.8,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.988,
           "pnl": -64.77
@@ -613,7 +613,7 @@
           "owner": "union_hot_n4_h1",
           "px": 34.5,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 2.162,
           "pnl": 70.08
@@ -632,7 +632,7 @@
           "owner": "union_hot_n4_h1",
           "px": 33.63,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.913,
           "pnl": -29.45
@@ -646,7 +646,7 @@
           "owner": "union_hot_n4_h1",
           "px": 146.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.596,
           "pnl": -18.48
@@ -660,7 +660,7 @@
           "owner": "union_hot_n4_h1",
           "px": 187.8,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.988,
           "pnl": -60.96
@@ -674,7 +674,7 @@
           "owner": "union_hot_n4_h1",
           "px": 34.5,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 2.162,
           "pnl": 69.35
@@ -693,7 +693,7 @@
           "owner": "union_hot_n4_h1",
           "px": 33.63,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.913,
           "pnl": -29.45
@@ -707,7 +707,7 @@
           "owner": "union_hot_n4_h1",
           "px": 146.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.596,
           "pnl": -18.48
@@ -721,7 +721,7 @@
           "owner": "union_hot_n4_h1",
           "px": 187.8,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.988,
           "pnl": -60.96
@@ -735,7 +735,7 @@
           "owner": "union_hot_n4_h1",
           "px": 34.5,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 2.162,
           "pnl": 69.35
@@ -758,7 +758,7 @@
           "owner": "union_hot_n4_h1",
           "px": 33.63,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.913,
           "pnl": -29.45
@@ -772,7 +772,7 @@
           "owner": "union_hot_n4_h1",
           "px": 146.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.596,
           "pnl": -18.48
@@ -786,7 +786,7 @@
           "owner": "union_hot_n4_h1",
           "px": 187.8,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.988,
           "pnl": -60.96
@@ -800,7 +800,7 @@
           "owner": "union_hot_n4_h1",
           "px": 34.5,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 2.162,
           "pnl": 69.35
@@ -823,7 +823,7 @@
           "owner": "union_hot_n4_h1",
           "px": 33.63,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.913,
           "pnl": -29.14
@@ -837,7 +837,7 @@
           "owner": "union_hot_n4_h1",
           "px": 146.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.596,
           "pnl": -18.48
@@ -851,7 +851,7 @@
           "owner": "union_hot_n4_h1",
           "px": 187.8,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.988,
           "pnl": -60.96
@@ -865,7 +865,7 @@
           "owner": "union_hot_n4_h1",
           "px": 34.5,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 2.162,
           "pnl": 69.35
@@ -908,7 +908,7 @@
           "owner": "union_hot_n4_h1",
           "px": 33.63,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.913,
           "pnl": -28.83
@@ -922,7 +922,7 @@
           "owner": "union_hot_n4_h1",
           "px": 146.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.596,
           "pnl": -18.48
@@ -936,7 +936,7 @@
           "owner": "union_hot_n4_h1",
           "px": 187.8,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.988,
           "pnl": -60.96
@@ -950,7 +950,7 @@
           "owner": "union_hot_n4_h1",
           "px": 34.5,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 2.162,
           "pnl": 67.89
@@ -969,7 +969,7 @@
           "owner": "union_hot_n4_h1",
           "px": 33.63,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.913,
           "pnl": -28.83
@@ -983,7 +983,7 @@
           "owner": "union_hot_n4_h1",
           "px": 146.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.596,
           "pnl": -18.48
@@ -997,7 +997,7 @@
           "owner": "union_hot_n4_h1",
           "px": 187.8,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.988,
           "pnl": -60.96
@@ -1011,7 +1011,7 @@
           "owner": "union_hot_n4_h1",
           "px": 34.5,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 2.162,
           "pnl": 67.89
@@ -1030,7 +1030,7 @@
           "owner": "union_hot_n4_h1",
           "px": 33.63,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.913,
           "pnl": -28.83
@@ -1044,7 +1044,7 @@
           "owner": "union_hot_n4_h1",
           "px": 146.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.596,
           "pnl": -18.48
@@ -1058,7 +1058,7 @@
           "owner": "union_hot_n4_h1",
           "px": 187.8,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.988,
           "pnl": -60.96
@@ -1072,7 +1072,7 @@
           "owner": "union_hot_n4_h1",
           "px": 34.5,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 2.162,
           "pnl": 67.89
@@ -1091,7 +1091,7 @@
           "owner": "union_hot_n4_h1",
           "px": 33.63,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.913,
           "pnl": -28.83
@@ -1105,7 +1105,7 @@
           "owner": "union_hot_n4_h1",
           "px": 146.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.596,
           "pnl": -18.48
@@ -1119,7 +1119,7 @@
           "owner": "union_hot_n4_h1",
           "px": 187.8,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.988,
           "pnl": -60.96
@@ -1133,7 +1133,7 @@
           "owner": "union_hot_n4_h1",
           "px": 34.5,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 2.162,
           "pnl": 67.89
@@ -1152,7 +1152,7 @@
           "owner": "union_hot_n4_h1",
           "px": 33.63,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.913,
           "pnl": -28.52
@@ -1166,7 +1166,7 @@
           "owner": "union_hot_n4_h1",
           "px": 146.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.596,
           "pnl": -18.48
@@ -1180,7 +1180,7 @@
           "owner": "union_hot_n4_h1",
           "px": 187.8,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.988,
           "pnl": -60.96
@@ -1194,7 +1194,7 @@
           "owner": "union_hot_n4_h1",
           "px": 34.5,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 2.162,
           "pnl": 67.89
@@ -1217,7 +1217,7 @@
           "owner": "union_hot_n4_h1",
           "px": 33.63,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.913,
           "pnl": -28.21
@@ -1231,7 +1231,7 @@
           "owner": "union_hot_n4_h1",
           "px": 146.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.596,
           "pnl": -17.6
@@ -1245,7 +1245,7 @@
           "owner": "union_hot_n4_h1",
           "px": 187.8,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.988,
           "pnl": -60.96
@@ -1259,7 +1259,7 @@
           "owner": "union_hot_n4_h1",
           "px": 34.5,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 2.162,
           "pnl": 66.43
@@ -1278,7 +1278,7 @@
           "owner": "union_hot_n4_h1",
           "px": 33.63,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.913,
           "pnl": -27.59
@@ -1292,7 +1292,7 @@
           "owner": "union_hot_n4_h1",
           "px": 146.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.596,
           "pnl": -17.6
@@ -1306,7 +1306,7 @@
           "owner": "union_hot_n4_h1",
           "px": 187.8,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.988,
           "pnl": -57.15
@@ -1320,7 +1320,7 @@
           "owner": "union_hot_n4_h1",
           "px": 34.5,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 2.162,
           "pnl": 65.7
@@ -1339,7 +1339,7 @@
           "owner": null,
           "px": 33.63,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.913,
           "pnl": -9.61
@@ -1353,7 +1353,7 @@
           "owner": null,
           "px": 146.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.596,
           "pnl": -6.16
@@ -1367,7 +1367,7 @@
           "owner": null,
           "px": 187.8,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.988,
           "pnl": -19.05
@@ -1381,7 +1381,7 @@
           "owner": null,
           "px": 34.5,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 2.162,
           "pnl": 22.63
@@ -1404,7 +1404,7 @@
           "owner": "union_join_vol_green_h1",
           "px": 146.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.596,
           "pnl": -75.68
@@ -1439,7 +1439,7 @@
           "owner": "union_join_vol_green_h1",
           "px": 146.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.596,
           "pnl": -72.16
@@ -1458,7 +1458,7 @@
           "owner": "union_join_vol_green_h1",
           "px": 146.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.596,
           "pnl": -71.28
@@ -1477,7 +1477,7 @@
           "owner": "union_join_vol_green_h1",
           "px": 146.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.596,
           "pnl": -69.52
@@ -1496,7 +1496,7 @@
           "owner": "union_join_vol_green_h1",
           "px": 146.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.596,
           "pnl": -67.76
@@ -1519,7 +1519,7 @@
           "owner": "union_join_vol_green_h1",
           "px": 146.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.596,
           "pnl": -66.88
@@ -1550,7 +1550,7 @@
           "owner": null,
           "px": 150.59,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -8.417,
           "pnl": -13.84
@@ -1564,7 +1564,7 @@
           "owner": null,
           "px": 1.88,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -7.843,
           "pnl": -24.32
@@ -1578,7 +1578,7 @@
           "owner": null,
           "px": 252.67,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 4.336,
           "pnl": 10.5
@@ -1592,7 +1592,7 @@
           "owner": null,
           "px": 126.82,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -6.551,
           "pnl": -17.78
@@ -1611,7 +1611,7 @@
           "owner": null,
           "px": 40.0,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.174,
           "pnl": -54.63
@@ -1625,7 +1625,7 @@
           "owner": null,
           "px": 34.5,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 2.162,
           "pnl": 100.74
@@ -1680,7 +1680,7 @@
           "owner": null,
           "px": 16.96,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 4.177,
           "pnl": 74.12
@@ -1694,7 +1694,7 @@
           "owner": null,
           "px": 2.7,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.099,
           "pnl": -19.62
@@ -1708,7 +1708,7 @@
           "owner": null,
           "px": 196.06,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -5.212,
           "pnl": -86.24
@@ -1722,7 +1722,7 @@
           "owner": null,
           "px": 150.59,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -8.417,
           "pnl": -138.4
@@ -1736,7 +1736,7 @@
           "owner": null,
           "px": 151.33,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -4.088,
           "pnl": -70.95
@@ -1750,7 +1750,7 @@
           "owner": null,
           "px": 55.0,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.943,
           "pnl": -33.79
@@ -1764,7 +1764,7 @@
           "owner": null,
           "px": 77.78,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 0.856,
           "pnl": 0.66
@@ -1778,7 +1778,7 @@
           "owner": null,
           "px": 13.97,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -2.376,
           "pnl": -2.72
@@ -1792,7 +1792,7 @@
           "owner": null,
           "px": 36.85,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 1.07,
           "pnl": 1.17
@@ -1806,7 +1806,7 @@
           "owner": null,
           "px": 26.51,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 0.0,
           "pnl": 0.0
@@ -1825,7 +1825,7 @@
           "owner": null,
           "px": 16.96,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 4.177,
           "pnl": 123.08
@@ -1839,7 +1839,7 @@
           "owner": null,
           "px": 2.7,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.099,
           "pnl": -27.09
@@ -1853,7 +1853,7 @@
           "owner": null,
           "px": 196.06,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -5.212,
           "pnl": -97.02
@@ -1867,7 +1867,7 @@
           "owner": null,
           "px": 150.59,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -8.417,
           "pnl": -124.56
@@ -1881,7 +1881,7 @@
           "owner": null,
           "px": 151.33,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -4.088,
           "pnl": -38.7
@@ -1895,7 +1895,7 @@
           "owner": null,
           "px": 55.0,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.943,
           "pnl": -8.72
@@ -1909,7 +1909,7 @@
           "owner": null,
           "px": 77.78,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 0.856,
           "pnl": 0.66
@@ -1923,7 +1923,7 @@
           "owner": null,
           "px": 13.97,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -2.376,
           "pnl": -1.36
@@ -1937,7 +1937,7 @@
           "owner": null,
           "px": 26.51,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 0.0,
           "pnl": 0.0
@@ -1951,7 +1951,7 @@
           "owner": null,
           "px": 33.63,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.913,
           "pnl": -0.31
@@ -1970,7 +1970,7 @@
           "owner": null,
           "px": 16.96,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 4.177,
           "pnl": 74.12
@@ -1984,7 +1984,7 @@
           "owner": null,
           "px": 2.7,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.099,
           "pnl": -19.62
@@ -1998,7 +1998,7 @@
           "owner": null,
           "px": 196.06,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -5.212,
           "pnl": -86.24
@@ -2012,7 +2012,7 @@
           "owner": null,
           "px": 150.59,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -8.417,
           "pnl": -138.4
@@ -2026,7 +2026,7 @@
           "owner": null,
           "px": 151.33,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -4.088,
           "pnl": -70.95
@@ -2040,7 +2040,7 @@
           "owner": null,
           "px": 55.0,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.943,
           "pnl": -33.79
@@ -2054,7 +2054,7 @@
           "owner": null,
           "px": 77.78,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 0.856,
           "pnl": 0.66
@@ -2068,7 +2068,7 @@
           "owner": null,
           "px": 13.97,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -2.376,
           "pnl": -2.72
@@ -2082,7 +2082,7 @@
           "owner": null,
           "px": 36.85,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 1.07,
           "pnl": 1.17
@@ -2096,7 +2096,7 @@
           "owner": null,
           "px": 26.51,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 0.0,
           "pnl": 0.0
@@ -2115,7 +2115,7 @@
           "owner": null,
           "px": 16.96,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 4.177,
           "pnl": 72.76
@@ -2129,7 +2129,7 @@
           "owner": null,
           "px": 2.7,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.099,
           "pnl": -19.26
@@ -2143,7 +2143,7 @@
           "owner": null,
           "px": 196.06,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -5.212,
           "pnl": -86.24
@@ -2157,7 +2157,7 @@
           "owner": null,
           "px": 150.59,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -8.417,
           "pnl": -138.4
@@ -2171,7 +2171,7 @@
           "owner": null,
           "px": 151.33,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -4.088,
           "pnl": -70.95
@@ -2185,7 +2185,7 @@
           "owner": null,
           "px": 55.0,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.943,
           "pnl": -33.79
@@ -2199,7 +2199,7 @@
           "owner": null,
           "px": 77.78,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 0.856,
           "pnl": 0.66
@@ -2213,7 +2213,7 @@
           "owner": null,
           "px": 13.97,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -2.376,
           "pnl": -1.7
@@ -2227,7 +2227,7 @@
           "owner": null,
           "px": 36.85,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 1.07,
           "pnl": 0.78
@@ -2246,7 +2246,7 @@
           "owner": null,
           "px": 16.96,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 4.177,
           "pnl": 44.2
@@ -2260,7 +2260,7 @@
           "owner": null,
           "px": 2.7,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.099,
           "pnl": -11.64
@@ -2274,7 +2274,7 @@
           "owner": null,
           "px": 196.06,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -5.212,
           "pnl": -53.9
@@ -2288,7 +2288,7 @@
           "owner": null,
           "px": 150.59,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -8.417,
           "pnl": -83.04
@@ -2302,7 +2302,7 @@
           "owner": null,
           "px": 151.33,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -4.088,
           "pnl": -38.7
@@ -2316,7 +2316,7 @@
           "owner": null,
           "px": 55.0,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.943,
           "pnl": -19.62
@@ -2330,7 +2330,7 @@
           "owner": null,
           "px": 1.88,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -7.843,
           "pnl": -83.2
@@ -2344,7 +2344,7 @@
           "owner": null,
           "px": 4.54,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -4.421,
           "pnl": -46.83
@@ -2358,7 +2358,7 @@
           "owner": null,
           "px": 269.44,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.535,
           "pnl": -1.45
@@ -2372,7 +2372,7 @@
           "owner": null,
           "px": 77.78,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 0.856,
           "pnl": 3.96
@@ -2386,7 +2386,7 @@
           "owner": null,
           "px": 13.97,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -2.376,
           "pnl": -12.58
@@ -2400,7 +2400,7 @@
           "owner": null,
           "px": 36.85,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 1.07,
           "pnl": 5.46
@@ -2414,7 +2414,7 @@
           "owner": null,
           "px": 26.51,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 0.0,
           "pnl": 0.0
@@ -2428,7 +2428,7 @@
           "owner": null,
           "px": 33.63,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.913,
           "pnl": -0.31
@@ -2442,7 +2442,7 @@
           "owner": null,
           "px": 40.0,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.174,
           "pnl": -0.48
@@ -2456,7 +2456,7 @@
           "owner": null,
           "px": 34.5,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 2.162,
           "pnl": 0.73
@@ -2479,7 +2479,7 @@
           "owner": null,
           "px": 269.44,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.535,
           "pnl": -13.05
@@ -2493,7 +2493,7 @@
           "owner": null,
           "px": 77.78,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 0.856,
           "pnl": 20.46
@@ -2507,7 +2507,7 @@
           "owner": null,
           "px": 13.97,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -2.376,
           "pnl": -58.48
@@ -2521,7 +2521,7 @@
           "owner": null,
           "px": 36.85,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 1.07,
           "pnl": 26.13
@@ -2540,7 +2540,7 @@
           "owner": null,
           "px": 146.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.596,
           "pnl": -24.64
@@ -2554,7 +2554,7 @@
           "owner": null,
           "px": 26.51,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 0.0,
           "pnl": 0.0
@@ -2568,7 +2568,7 @@
           "owner": null,
           "px": 33.63,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -0.913,
           "pnl": -11.47
@@ -2582,7 +2582,7 @@
           "owner": null,
           "px": 187.8,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.988,
           "pnl": -22.86
@@ -2596,7 +2596,7 @@
           "owner": null,
           "px": 40.0,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": -1.174,
           "pnl": -14.73
@@ -2610,7 +2610,7 @@
           "owner": null,
           "px": 34.5,
           "px_src": "elite_live",
-          "px_asof": "2026-09-17T23:47:09.949251-04:00",
+          "px_asof": "2026-09-17T23:50:12.223294-04:00",
           "vs_open_pct": null,
           "vs_entry_pct": 2.162,
           "pnl": 27.01
