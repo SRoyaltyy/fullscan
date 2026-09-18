@@ -1,1 +1,5 @@
-{"owner":"actions","note":"Warm Actions fallback until install_paper_open.yml verifies the ECS timer and switches this record."}
+{
+  "owner": "ecs",
+  "installed_at": "2026-09-18T03:43:03.183731+00:00",
+  "note": "Persistent timer verified and sandbox preflight passed; Actions is disabled by this record."
+}
