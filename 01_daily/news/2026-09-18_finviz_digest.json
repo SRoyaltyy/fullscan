@@ -1,9 +1,9 @@
 {
   "date": "2026-09-18",
-  "generated_at": "2026-09-18T04:07:37.538113-04:00",
-  "export_used": "data/exports/finviz_2026-09-17.csv",
-  "ticker_digest_count": 5888,
-  "signal_count": 2388,
+  "generated_at": "2026-09-18T04:08:13.435308-04:00",
+  "export_used": "data/exports/finviz_2026-09-18.csv",
+  "ticker_digest_count": 5887,
+  "signal_count": 2382,
   "index_digests": [
     {
       "ticker": "SPY",
@@ -305,6 +305,17 @@
       "news_title": "Would You Want CRM Stock Back At The Price It Just Left?",
       "sector": "Technology",
       "industry": "Software - Application",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
+      "ticker": "CRWD",
+      "digest": "Bernstein raises CrowdStrike price target to $132 from $119 on stronger cybersecurity demand signals and improved sentiment",
+      "news_title": "Why Did CRWD, OKTA, IOVA Shares Climb To 52-Week Highs Today?",
+      "sector": "Technology",
+      "industry": "Software - Infrastructure",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -683,17 +694,6 @@
       "has_signal": true,
       "rank": 2.8,
       "source": "finviz_export"
-    },
-    {
-      "ticker": "NKE",
-      "digest": "UBS cuts Nike price target 13% to $42, keeps Neutral on risk of weak guidance, earnings downgrades through FY27",
-      "news_title": "Can Alexandre Arnault Help Transform Nike?",
-      "sector": "Consumer Cyclical",
-      "industry": "Footwear & Accessories",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
     }
   ],
   "by_sector": {
@@ -877,6 +877,96 @@
         "source": "finviz_export"
       }
     ],
+    "Technology": [
+      {
+        "ticker": "APH",
+        "digest": "Fabrinet earnings weakness and rising yields spark 6.5% APH drop",
+        "news_title": "Top Stock Reports for Meta Platforms, Marvell & Amphenol",
+        "sector": "Technology",
+        "industry": "Electronic Components",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "ASML",
+        "digest": "ASML nearly sold out of 2027 EUV capacity amid very strong AI-driven demand, JPMorgan says",
+        "news_title": "ASML Gains 1.5% as 110 EUV Machines Test Assembly Speed",
+        "sector": "Technology",
+        "industry": "Semiconductor Equipment & Materials",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "CRM",
+        "digest": "Salesforce issues FY27 revenue guidance of $46.4B, sets FY30 revenue target above $63B at Investor Day",
+        "news_title": "Would You Want CRM Stock Back At The Price It Just Left?",
+        "sector": "Technology",
+        "industry": "Software - Application",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "CRWD",
+        "digest": "Bernstein raises CrowdStrike price target to $132 from $119 on stronger cybersecurity demand signals and improved sentiment",
+        "news_title": "Why Did CRWD, OKTA, IOVA Shares Climb To 52-Week Highs Today?",
+        "sector": "Technology",
+        "industry": "Software - Infrastructure",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "DDOG",
+        "digest": "Snowflake's stronger-than-expected quarterly revenue and earnings support cloud and AI-focused enterprise software peers including Datadog",
+        "news_title": "French AI boom exposes Europes funding gap as startups turn to U.S.",
+        "sector": "Technology",
+        "industry": "Software - Application",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "IBM",
+        "digest": "IBM unit Anderon finalizes $1B U.S. CHIPS Act award to fund scaling of U.S. quantum wafer foundry",
+        "news_title": "Why Has Accenture Stock Surged With No New Results To Report?",
+        "sector": "Technology",
+        "industry": "Information Technology Services",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "INTU",
+        "digest": "Intuit said at its investor day that it is reaffirming its first-quarter and fiscal 2027 financial guidance.",
+        "news_title": "Intuit Hosts Investor Day, Reaffirms First-Quarter and Fiscal 2027 Guidance",
+        "sector": "Technology",
+        "industry": "Software - Application",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "LITE",
+        "digest": "ECOC 2026 AI optics showcase drives Lumentum's 8.5% surge",
+        "news_title": "OpenAI Reveals 6 'Concerning' Incidents. Why AI Stocks Are Rising Anyway.",
+        "sector": "Technology",
+        "industry": "Communication Equipment",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      }
+    ],
     "Industrials": [
       {
         "ticker": "AME",
@@ -961,96 +1051,6 @@
         "news_title": "This Stock Can Rise 150%, Plus 12 More Aerospace Buys",
         "sector": "Industrials",
         "industry": "Aerospace & Defense",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      }
-    ],
-    "Technology": [
-      {
-        "ticker": "APH",
-        "digest": "Fabrinet earnings weakness and rising yields spark 6.5% APH drop",
-        "news_title": "Top Stock Reports for Meta Platforms, Marvell & Amphenol",
-        "sector": "Technology",
-        "industry": "Electronic Components",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "ASML",
-        "digest": "ASML nearly sold out of 2027 EUV capacity amid very strong AI-driven demand, JPMorgan says",
-        "news_title": "ASML Gains 1.5% as 110 EUV Machines Test Assembly Speed",
-        "sector": "Technology",
-        "industry": "Semiconductor Equipment & Materials",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "CRM",
-        "digest": "Salesforce issues FY27 revenue guidance of $46.4B, sets FY30 revenue target above $63B at Investor Day",
-        "news_title": "Would You Want CRM Stock Back At The Price It Just Left?",
-        "sector": "Technology",
-        "industry": "Software - Application",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "DDOG",
-        "digest": "Snowflake's stronger-than-expected quarterly revenue and earnings support cloud and AI-focused enterprise software peers including Datadog",
-        "news_title": "French AI boom exposes Europes funding gap as startups turn to U.S.",
-        "sector": "Technology",
-        "industry": "Software - Application",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "IBM",
-        "digest": "IBM unit Anderon finalizes $1B U.S. CHIPS Act award to fund scaling of U.S. quantum wafer foundry",
-        "news_title": "Why Has Accenture Stock Surged With No New Results To Report?",
-        "sector": "Technology",
-        "industry": "Information Technology Services",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "INTU",
-        "digest": "Intuit said at its investor day that it is reaffirming its first-quarter and fiscal 2027 financial guidance.",
-        "news_title": "Intuit Hosts Investor Day, Reaffirms First-Quarter and Fiscal 2027 Guidance",
-        "sector": "Technology",
-        "industry": "Software - Application",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "LITE",
-        "digest": "ECOC 2026 AI optics showcase drives Lumentum's 8.5% surge",
-        "news_title": "OpenAI Reveals 6 'Concerning' Incidents. Why AI Stocks Are Rising Anyway.",
-        "sector": "Technology",
-        "industry": "Communication Equipment",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "MSI",
-        "digest": "Motorola Solutions wins $139 million 10-year public safety technology contract from State of Louisiana",
-        "news_title": "Why Did Axon Stock Fall Ten Percent On A Convertible That Pays No Interest?",
-        "sector": "Technology",
-        "industry": "Communication Equipment",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
@@ -1171,52 +1171,6 @@
         "source": "finviz_export"
       }
     ],
-    "Consumer Cyclical": [
-      {
-        "ticker": "HD",
-        "digest": "Home Depot announces the nationwide rollout of its Magic Apron AI-powered in-store assistant with localized, personalized shopping guidance now live in all U.S. stores.",
-        "news_title": "Home Depot Paid $2.3 Billion in Dividends While Returns on Capital Slipped. Heres Where HD Stock Could Go.",
-        "sector": "Consumer Cyclical",
-        "industry": "Home Improvement Retail",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "HLT",
-        "digest": "Deutsche Bank upgrades Hilton Worldwide to Buy from Hold, raises price target to $365",
-        "news_title": "Summer Travel Season May Be Ending, but Marriott's Stock Is Worth Checking In For",
-        "sector": "Consumer Cyclical",
-        "industry": "Lodging",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "LOW",
-        "digest": "Bernstein cuts Loweâs price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery",
-        "news_title": "What Has Home Depot Stopped Telling You About Where Its Goods Come From?",
-        "sector": "Consumer Cyclical",
-        "industry": "Home Improvement Retail",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      },
-      {
-        "ticker": "NKE",
-        "digest": "UBS cuts Nike price target 13% to $42, keeps Neutral on risk of weak guidance, earnings downgrades through FY27",
-        "news_title": "Can Alexandre Arnault Help Transform Nike?",
-        "sector": "Consumer Cyclical",
-        "industry": "Footwear & Accessories",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
-      }
-    ],
     "Communication Services": [
       {
         "ticker": "AMX",
@@ -1281,6 +1235,41 @@
         "news_title": "How a Trade Deal With Japan Could Change the Face of U.S. Energy",
         "sector": "Utilities",
         "industry": "Utilities - Regulated Electric",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      }
+    ],
+    "Consumer Cyclical": [
+      {
+        "ticker": "HD",
+        "digest": "Home Depot announces the nationwide rollout of its Magic Apron AI-powered in-store assistant with localized, personalized shopping guidance now live in all U.S. stores.",
+        "news_title": "Home Depot Paid $2.3 Billion in Dividends While Returns on Capital Slipped. Heres Where HD Stock Could Go.",
+        "sector": "Consumer Cyclical",
+        "industry": "Home Improvement Retail",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "HLT",
+        "digest": "Deutsche Bank upgrades Hilton Worldwide to Buy from Hold, raises price target to $365",
+        "news_title": "Summer Travel Season May Be Ending, but Marriott's Stock Is Worth Checking In For",
+        "sector": "Consumer Cyclical",
+        "industry": "Lodging",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "LOW",
+        "digest": "Bernstein cuts Loweâs price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery",
+        "news_title": "What Has Home Depot Stopped Telling You About Where Its Goods Come From?",
+        "sector": "Consumer Cyclical",
+        "industry": "Home Improvement Retail",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
@@ -1591,6 +1580,17 @@
       "source": "finviz_export"
     },
     {
+      "ticker": "CRWD",
+      "digest": "Bernstein raises CrowdStrike price target to $132 from $119 on stronger cybersecurity demand signals and improved sentiment",
+      "news_title": "Why Did CRWD, OKTA, IOVA Shares Climb To 52-Week Highs Today?",
+      "sector": "Technology",
+      "industry": "Software - Infrastructure",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
       "ticker": "CSX",
       "digest": "CSX delivers record revenue, raises 2026 margin and free cash flow outlook",
       "news_title": "CSX Corp's Dividend Analysis",
@@ -1967,7 +1967,7 @@
     {
       "ticker": "NKE",
       "digest": "UBS cuts Nike price target 13% to $42, keeps Neutral on risk of weak guidance, earnings downgrades through FY27",
-      "news_title": "Can Alexandre Arnault Help Transform Nike?",
+      "news_title": "NKE, FLNC, CPRT, ULTA, JBHT: Top Wall Street Calls And Target Changes Making Waves This Week",
       "sector": "Consumer Cyclical",
       "industry": "Footwear & Accessories",
       "is_dividend": false,
@@ -2088,7 +2088,7 @@
     {
       "ticker": "QCOM",
       "digest": "RBC Capital Markets raises Qualcomm price target to $180 from $160, keeps Sector Perform on up-to-$60B AWS AI data-center chip deal",
-      "news_title": "Trump-Xi Dinner Next Week Brings AI Titans To The Table  OpenAI, NVDA, and QCOM CEOs To Attend, Says Report",
+      "news_title": "Apple's Chip Strategy Keeps Paying Dividends",
       "sector": "Technology",
       "industry": "Semiconductors",
       "is_dividend": false,
@@ -2179,17 +2179,6 @@
       "news_title": "Why Has McDonald's Gone Quiet On Its Low-Income Customer?",
       "sector": "Consumer Cyclical",
       "industry": "Restaurants",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "SCHW",
-      "digest": "Zacks downgrade from Strong Buy to Hold drives SCHW's 2.87% decline",
-      "news_title": "Bond Rout Spurs Record Outflow From $3.6 Billion Schwab Muni ETF",
-      "sector": "Financial",
-      "industry": "Capital Markets",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
