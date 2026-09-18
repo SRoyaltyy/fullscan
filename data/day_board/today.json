@@ -1,12 +1,12 @@
 {
   "date": "2026-09-18",
-  "generated_at": "2026-09-18T04:15:28.575703-04:00",
+  "generated_at": "2026-09-18T04:17:09.870829-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 3,
-    "fail": 2,
+    "fail": 1,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-09-18",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-18T04:09:36.075945-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-18_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 268645,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-18_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 17362,
-          "preview": "# MAP HEAT \u2014 2026-09-18\nExport `finviz_2026-09-18.csv` \u00b7 11616 names \u00b7 generated 2026-09-18T04:09:36.036248-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-18\nExport `finviz_2026-09-18.csv` \u00b7 11616 names \u00b7 generated 2026-09-18T04:09:36.036248-04:00"
-    },
     {
       "key": "universe",
       "title": "Universe labels",
@@ -193,6 +168,24 @@
         }
       ],
       "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 NVDA, FORM, MU, ONC, SKHY"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-18",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-18T04:17:08.489445-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-18_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 3272514,
+          "preview": "11651 rows \u00b7 Ticker,score,score_source,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month, \u00b7 GCT, AVPT, RDVT, GLBS, HRTG"
+        }
+      ],
+      "preview": "11651 rows \u00b7 Ticker,score,score_source,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month, \u00b7 GCT, AVPT, RDVT, GLBS, HRTG"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
