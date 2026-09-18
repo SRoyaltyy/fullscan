@@ -1,6 +1,6 @@
 {
   "date": "2026-09-18",
-  "generated_at": "2026-09-18T10:04:11.030841-04:00",
+  "generated_at": "2026-09-18T10:30:55.805057-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -1761,13 +1761,13 @@
       "date": "2026-09-18",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-18T10:00:44.198501-04:00",
+      "at": "2026-09-18T10:30:55.143104-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 22950,
+          "size": 27032,
           "preview": "2026-09-18 BUY RBRK, FIVN, SDGR, ILMN, ZS, ARQT, CROX, TEM \u00b7 SELL SOC, EU, UUUU, PUMP, GS, MS, WFRD, BTU"
         },
         {
@@ -1781,70 +1781,70 @@
           "path": "data/day_board/2026-09-18.json",
           "ok": true,
           "reason": "",
-          "size": 76663,
+          "size": 82083,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
         },
         {
           "path": "data/day_board/2026-09-18_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 55085,
+          "size": 60505,
           "preview": "2026-09-18 BUY RBRK, FIVN, SDGR, ILMN, ZS, ARQT, CROX, TEM \u00b7 SELL SOC, EU, UUUU, PUMP, GS, MS, WFRD, BTU"
         },
         {
           "path": "data/day_board/strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 746466,
+          "size": 446043,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "data/day_board/2026-09-18_strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 746466,
+          "size": 446043,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "data/day_board/today_strategies.json",
           "ok": true,
           "reason": "",
-          "size": 1083562,
+          "size": 591848,
           "preview": "2026-09-18 BUY RBRK, FIVN, SDGR, ILMN, ZS, ARQT, CROX, TEM \u00b7 SELL SOC, EU, UUUU, PUMP, GS, MS, WFRD, BTU"
         },
         {
           "path": "data/factor_mine/strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 746466,
+          "size": 446043,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 55085,
+          "size": 60505,
           "preview": "2026-09-18 BUY RBRK, FIVN, SDGR, ILMN, ZS, ARQT, CROX, TEM \u00b7 SELL SOC, EU, UUUU, PUMP, GS, MS, WFRD, BTU"
         },
         {
           "path": "dashboard/factor-mine/strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 746466,
+          "size": 446043,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "dashboard/factor-mine/today_strategies.json",
           "ok": true,
           "reason": "",
-          "size": 746466,
+          "size": 446043,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "dashboard/today_strategies.json",
           "ok": true,
           "reason": "",
-          "size": 1083562,
+          "size": 591848,
           "preview": "2026-09-18 BUY RBRK, FIVN, SDGR, ILMN, ZS, ARQT, CROX, TEM \u00b7 SELL SOC, EU, UUUU, PUMP, GS, MS, WFRD, BTU"
         },
         {
