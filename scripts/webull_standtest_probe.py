@@ -141,6 +141,16 @@ def main():
         (out_dir / "standtest_cash.json").write_text(json.dumps(doc, indent=2))
         return 2
 
+
+    if mode == "methods":
+        names = sorted([n for n in dir(trade.order_v3) if not n.startswith("_")])
+        doc = {"ok": True, "stage": "methods", "et": now_et().isoformat(), "order_v3": names}
+        if hasattr(trade, "order_v2"):
+            doc["order_v2"] = sorted([n for n in dir(trade.order_v2) if not n.startswith("_")])
+        print(json.dumps(doc, indent=2))
+        (out_dir / "standtest_methods.json").write_text(json.dumps(doc, indent=2))
+        return 0
+
     if mode == "cash":
         return 0
 

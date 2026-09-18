@@ -4,20 +4,17 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "cash | place | status"
+        description: "cash | place | status | methods"
         type: choice
-        options: [cash, place, status]
+        options: [cash, place, status, methods]
         default: cash
       ticker:
-        description: "Ticker for place mode"
         required: false
         default: "AAPL"
       qty:
-        description: "Share qty"
         required: false
         default: "1"
       order_id:
-        description: "order_id or client_order_id for status mode"
         required: false
         default: ""
 
@@ -30,13 +27,10 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Install SDK
-        run: pip install webull-openapi-python-sdk
+      - run: pip install webull-openapi-python-sdk
       - name: Run probe
         env:
           WEBULL_APP_KEY: ${{ secrets.WEBULL_APP_KEY }}
@@ -45,9 +39,7 @@ jobs:
           STANDTEST_TICKER: ${{ inputs.ticker }}
           STANDTEST_QTY: ${{ inputs.qty }}
           STANDTEST_ORDER_ID: ${{ inputs.order_id }}
-        run: |
-          set -euo pipefail
-          python scripts/webull_standtest_probe.py "${{ inputs.mode }}"
+        run: python scripts/webull_standtest_probe.py "${{ inputs.mode }}"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
