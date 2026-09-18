@@ -1,12 +1,12 @@
 # Sector Board — 2026-09-08
 
-Generated: **2026-09-17T23:46:15.363401-04:00** (America/New_York)
+Generated: **2026-09-17T23:47:33.511899-04:00** (America/New_York)
 
 Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.).
 
 ## Summary
 
-- Predicts present: **10/11**
+- Predicts present: **11/11**
 - Outcomes graded: **9/11**
 - Direction hits (when graded): **4/9**
 - Predicted up / down / flat-or-missing: **2** / **4** / **5**
@@ -25,7 +25,7 @@ Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file 
 | Industrials | XLI | flat | flat | -3.60 | 0.55 | -0.48 | MISS | MISS | PO |
 | Real Estate | XLRE | down | mild | -4.50 | 0.55 | -0.07 | MISS | MISS | PO |
 | Technology | XLK | up | mild | 15.13 | 0.65 | — | — | — | P |
-| Utilities | XLU | — | — | — | — | — | — | — | — |
+| Utilities | XLU | flat | flat | -2.16 | 0.49 | — | — | — | P |
 
 ## Predicted leaders (up)
 

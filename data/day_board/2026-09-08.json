@@ -1,6 +1,6 @@
 {
   "date": "2026-09-08",
-  "generated_at": "2026-09-17T23:46:16.287996-04:00",
+  "generated_at": "2026-09-17T23:47:34.431268-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [
@@ -139,7 +139,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 18,
+      "n_req_ok": 19,
       "n_req": 20,
       "n_opt_ok": 3,
       "n_opt": 3,
@@ -250,7 +250,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 7082
+          "size": 7254
         },
         {
           "key": "qc",
@@ -259,7 +259,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7191
+          "size": 7184
         },
         {
           "key": "status",
@@ -374,12 +374,12 @@
           "name": "Sector predict \u2014 utilities",
           "path": "01_daily/sectors/2026-09-08/utilities_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 18367
         }
       ],
-      "said": "general DOWN  -11.475 \u00b7 sectors 2 up / 4 down / 4 flat \u00b7 news 30 items",
+      "said": "general DOWN  -11.475 \u00b7 sectors 2 up / 4 down / 5 flat \u00b7 news 30 items",
       "bullets": [
         "bad: Houthi attack on Saudi energy (73 wounded)",
         "bad: Iran tanker attack in Hormuz",
@@ -533,7 +533,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 7082
+          "size": 7254
         },
         {
           "key": "in_actions",
@@ -771,7 +771,7 @@
       "direction": "down"
     },
     "sectors": {
-      "said": "2 up / 4 down / 4 flat",
+      "said": "2 up / 4 down / 5 flat",
       "bullets": [
         "XLB FLAT +1.1",
         "XLC DOWN -6.8",
@@ -783,7 +783,7 @@
         "XLI FLAT -3.6",
         "XLRE DOWN -4.5",
         "XLK UP +15.1",
-        "XLU missing"
+        "XLU FLAT -2.2"
       ]
     },
     "news": {
@@ -833,70 +833,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Technology (10/11)",
+      "title": "Sector predict Utilities (11/11)",
       "date": "2026-09-08",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-17T23:46:15.378339-04:00",
+      "at": "2026-09-17T23:47:33.528308-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-09-08/technology_predict.md",
+          "path": "01_daily/sectors/2026-09-08/utilities_predict.md",
           "ok": true,
           "reason": "",
-          "size": 18970,
-          "preview": "# Sector Prediction \u2014 Technology \u2014 2026-09-08\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **15.131** (mult 0.9)\n- regime: risk_on\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **12.0** (NQ +2.66%, ES +2.02%) \u00b7 index_carry **-2.869** (general -11.475) \u00b7 llm_overlay **6.0** (raw 6.525)"
+          "size": 18367,
+          "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-09-08\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **-2.158** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **2.961** (ES +2.02%, ZN -0.15%) \u00b7 index_carry **-2.869** (general -11.475) \u00b7 llm_overlay **-2.25** (raw -2.25)"
         },
         {
-          "path": "01_daily/sectors/2026-09-08/technology_predict_trace.md",
+          "path": "01_daily/sectors/2026-09-08/utilities_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 16908,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Technology 2026-09-08 retry1\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (151,589 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"XLK technology sector September 18 2026 premarket outlook\"* \u2192 \u274c search failed (searxng#1: 404 Client Error: Not Found for url: https://searxng-production-f4dd.up.railway.app/search?q=XLK+technology+s)\n**Step 2 \u2014 Research.** The model wanted to know: *\"Nvidia AI capex hyperscaler spending September 2026\"* \u2192 got 6 results (via ddg)\n- AI Capex 2026: The $690B Infrastructure Sprint - Futurum (https://futurumgroup.com/insights/ai-capex-2026-the-690b-infrastructure-sprint/)\n- Technology: Hyperscaler Capex 2026 Estimates - CreditSights (https://know.creditsights.com/insights/t"
+          "size": 12898,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-09-08\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (150,100 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10 year Treasury yield September 18 2026\"* \u2192 got 6 results (via ddg)\n- Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity, Quoted on an Investment Basis (DGS10) | FRED | St. Louis Fed (https://fred.stlouisfed.org/series/dgs10)\n- US 10 Year Treasury Note Yield - Quote - Chart - Historical Data - News (https://tradingeconomics.com/united-states/government-bond-yield)\n- US10Y: U.S. 10 Year Treasury - Stock Price, Quote and News - CNBC (https://www.cnbc.com/quotes/US10Y)\n**Step 2 \u2014 Research.** The model wanted to know: *\"utilities stocks XLU September 2026 rate h"
         },
         {
-          "path": "01_daily/_transcripts/2026-09-08_sector_technology_predict.json",
+          "path": "01_daily/_transcripts/2026-09-08_sector_utilities_predict.json",
           "ok": true,
           "reason": "",
-          "size": 236799,
+          "size": 225511,
           "preview": "keys: model, messages"
         },
         {
           "path": "01_daily/2026-09-08_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 7191,
+          "size": 7184,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-09-08/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 1216,
+          "size": 1212,
           "preview": "keys: date, n_ok, n_total, sectors"
         },
         {
           "path": "01_daily/sectors/2026-09-08/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 2705,
-          "preview": "# Sector Board \u2014 2026-09-08\nGenerated: **2026-09-17T23:46:15.363401-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 2708,
+          "preview": "# Sector Board \u2014 2026-09-08\nGenerated: **2026-09-17T23:47:33.511899-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-09-08/_board.json",
           "ok": true,
           "reason": "",
-          "size": 7082,
+          "size": 7254,
           "preview": "keys: date, generated_at, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 761292,
+          "size": 762370,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Technology \u2014 2026-09-08\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **15.131** (mult 0.9)\n- regime: risk_on\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **12.0** (NQ +2.66%, ES +2.02%) \u00b7 index_carry **-2.869** (general -11.475) \u00b7 llm_overlay **6.0** (raw 6.525) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Technology 2026-09-08 retry1\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (151,589 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"XLK technology sector September 18 2026 premarket outlook\"* \u2192 \u274c search failed (searxng#1: 404 Client Error: Not Found for url: https://searxng-production-f4dd.up.railway.app/search?q=XLK+technology+s)\n**Step 2 \u2014 Research.** The model wanted to know: *\"Nvidia AI capex hyperscaler spending September 2026\"* \u2192 got 6 results (via ddg)\n- AI Capex 2026: The $690B Infrastructure Sprint - Futurum (https://futurumgroup.com/insights/ai-capex-2026-the-690b-infrastructure-sprint/)\n- T"
+      "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-09-08\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **-2.158** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **2.961** (ES +2.02%, ZN -0.15%) \u00b7 index_carry **-2.869** (general -11.475) \u00b7 llm_overlay **-2.25** (raw -2.25) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-09-08\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (150,100 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10 year Treasury yield September 18 2026\"* \u2192 got 6 results (via ddg)\n- Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity, Quoted on an Investment Basis (DGS10) | FRED | St. Louis Fed (https://fred.stlouisfed.org/series/dgs10)\n- US 10 Year Treasury Note Yield - Quote - Chart - Historical Data - News (https://tradingeconomics.com/united-states/government-bond-yield)\n- US10Y: U.S. 10 Year Treasury - Stock Price, Quote and News - CNBC (https://www.cnbc.com/quotes/"
     }
   ],
   "href": {
