@@ -1,6 +1,6 @@
 {
   "date": "2026-09-18",
-  "generated_at": "2026-09-18T11:17:41.553753-04:00",
+  "generated_at": "2026-09-18T11:54:05.729192-04:00",
   "featured": [
     "combo_sh_5050_shared",
     "combo_jse_333_shared",
@@ -73,13 +73,13 @@
   ],
   "quote": {
     "src": "elite_live",
-    "at": "2026-09-18T11:17:37.640684-04:00",
+    "at": "2026-09-18T11:54:01.332326-04:00",
     "after_open": true,
-    "n": 11642,
+    "n": 11643,
     "error": null,
     "live": true
   },
-  "banner": "Elite Overview as of 11:17 ET",
+  "banner": "Elite Overview as of 11:54 ET",
   "clock_rule": "px is Finviz Elite Price from a fresh post-09:30 Overview export when live is allowed. Theme Radar close dump and yesterday Price are never live.",
   "sleeves": {
     "combo_sh_5050_shared": {
@@ -92,12 +92,12 @@
           "entry": 33.94,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.44,
+          "px": 33.47,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.473,
-          "pnl": -52.0
+          "vs_entry_pct": -1.385,
+          "pnl": -48.88
         },
         {
           "ticker": "RVTY",
@@ -106,12 +106,12 @@
           "entry": 147.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 143.93,
+          "px": 143.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.493,
-          "pnl": -84.64
+          "vs_entry_pct": -2.629,
+          "pnl": -89.24
         },
         {
           "ticker": "IT",
@@ -120,12 +120,12 @@
           "entry": 191.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 185.25,
+          "px": 185.86,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -3.319,
-          "pnl": -114.48
+          "vs_entry_pct": -3.001,
+          "pnl": -103.5
         },
         {
           "ticker": "FIVN",
@@ -134,12 +134,12 @@
           "entry": 33.77,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.01,
+          "px": 32.78,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.251,
-          "pnl": -79.04
+          "vs_entry_pct": -2.932,
+          "pnl": -102.96
         }
       ]
     },
@@ -153,12 +153,12 @@
           "entry": 147.61,
           "entry_date": "2026-09-17",
           "owner": "union_join_vol_green_h1",
-          "px": 143.93,
+          "px": 143.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.493,
-          "pnl": -323.84
+          "vs_entry_pct": -2.629,
+          "pnl": -341.44
         }
       ]
     },
@@ -172,12 +172,12 @@
           "entry": 147.61,
           "entry_date": "2026-09-17",
           "owner": "union_join_vol_green_h1",
-          "px": 143.93,
+          "px": 143.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.493,
-          "pnl": -320.16
+          "vs_entry_pct": -2.629,
+          "pnl": -337.56
         }
       ]
     },
@@ -203,12 +203,12 @@
           "entry": 33.94,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.44,
+          "px": 33.47,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.473,
-          "pnl": -51.5
+          "vs_entry_pct": -1.385,
+          "pnl": -48.41
         },
         {
           "ticker": "RVTY",
@@ -217,12 +217,12 @@
           "entry": 147.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 143.93,
+          "px": 143.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.493,
-          "pnl": -84.64
+          "vs_entry_pct": -2.629,
+          "pnl": -89.24
         },
         {
           "ticker": "IT",
@@ -231,12 +231,12 @@
           "entry": 191.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 185.25,
+          "px": 185.86,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -3.319,
-          "pnl": -114.48
+          "vs_entry_pct": -3.001,
+          "pnl": -103.5
         },
         {
           "ticker": "FIVN",
@@ -245,12 +245,12 @@
           "entry": 33.77,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.01,
+          "px": 32.78,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.251,
-          "pnl": -79.04
+          "vs_entry_pct": -2.932,
+          "pnl": -102.96
         }
       ]
     },
@@ -264,12 +264,12 @@
           "entry": 33.94,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.44,
+          "px": 33.47,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.473,
-          "pnl": -49.0
+          "vs_entry_pct": -1.385,
+          "pnl": -46.06
         },
         {
           "ticker": "RVTY",
@@ -278,12 +278,12 @@
           "entry": 147.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 143.93,
+          "px": 143.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.493,
-          "pnl": -80.96
+          "vs_entry_pct": -2.629,
+          "pnl": -85.36
         },
         {
           "ticker": "IT",
@@ -292,12 +292,12 @@
           "entry": 191.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 185.25,
+          "px": 185.86,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -3.319,
-          "pnl": -108.12
+          "vs_entry_pct": -3.001,
+          "pnl": -97.75
         },
         {
           "ticker": "FIVN",
@@ -306,12 +306,12 @@
           "entry": 33.77,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.01,
+          "px": 32.78,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.251,
-          "pnl": -75.24
+          "vs_entry_pct": -2.932,
+          "pnl": -98.01
         }
       ]
     },
@@ -325,12 +325,12 @@
           "entry": 33.94,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.44,
+          "px": 33.47,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.473,
-          "pnl": -49.0
+          "vs_entry_pct": -1.385,
+          "pnl": -46.06
         },
         {
           "ticker": "RVTY",
@@ -339,12 +339,12 @@
           "entry": 147.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 143.93,
+          "px": 143.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.493,
-          "pnl": -80.96
+          "vs_entry_pct": -2.629,
+          "pnl": -85.36
         },
         {
           "ticker": "IT",
@@ -353,12 +353,12 @@
           "entry": 191.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 185.25,
+          "px": 185.86,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -3.319,
-          "pnl": -108.12
+          "vs_entry_pct": -3.001,
+          "pnl": -97.75
         },
         {
           "ticker": "FIVN",
@@ -367,12 +367,12 @@
           "entry": 33.77,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.01,
+          "px": 32.78,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.251,
-          "pnl": -74.48
+          "vs_entry_pct": -2.932,
+          "pnl": -97.02
         }
       ]
     },
@@ -386,12 +386,12 @@
           "entry": 33.94,
           "entry_date": "2026-09-17",
           "owner": null,
-          "px": 33.44,
+          "px": 33.47,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.473,
-          "pnl": -48.5
+          "vs_entry_pct": -1.385,
+          "pnl": -45.59
         },
         {
           "ticker": "RVTY",
@@ -400,12 +400,12 @@
           "entry": 147.61,
           "entry_date": "2026-09-17",
           "owner": null,
-          "px": 143.93,
+          "px": 143.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.493,
-          "pnl": -80.96
+          "vs_entry_pct": -2.629,
+          "pnl": -85.36
         },
         {
           "ticker": "IT",
@@ -414,12 +414,12 @@
           "entry": 191.61,
           "entry_date": "2026-09-17",
           "owner": null,
-          "px": 185.25,
+          "px": 185.86,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -3.319,
-          "pnl": -108.12
+          "vs_entry_pct": -3.001,
+          "pnl": -97.75
         },
         {
           "ticker": "FIVN",
@@ -428,12 +428,12 @@
           "entry": 33.77,
           "entry_date": "2026-09-17",
           "owner": null,
-          "px": 33.01,
+          "px": 32.78,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.251,
-          "pnl": -73.72
+          "vs_entry_pct": -2.932,
+          "pnl": -96.03
         }
       ]
     },
@@ -447,12 +447,12 @@
           "entry": 33.94,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.44,
+          "px": 33.47,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.473,
-          "pnl": -48.5
+          "vs_entry_pct": -1.385,
+          "pnl": -45.59
         },
         {
           "ticker": "RVTY",
@@ -461,12 +461,12 @@
           "entry": 147.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 143.93,
+          "px": 143.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.493,
-          "pnl": -80.96
+          "vs_entry_pct": -2.629,
+          "pnl": -85.36
         },
         {
           "ticker": "IT",
@@ -475,12 +475,12 @@
           "entry": 191.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 185.25,
+          "px": 185.86,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -3.319,
-          "pnl": -108.12
+          "vs_entry_pct": -3.001,
+          "pnl": -97.75
         },
         {
           "ticker": "FIVN",
@@ -489,12 +489,12 @@
           "entry": 33.77,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.01,
+          "px": 32.78,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.251,
-          "pnl": -73.72
+          "vs_entry_pct": -2.932,
+          "pnl": -96.03
         }
       ]
     },
@@ -508,12 +508,12 @@
           "entry": 33.94,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.44,
+          "px": 33.47,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.473,
-          "pnl": -48.0
+          "vs_entry_pct": -1.385,
+          "pnl": -45.12
         },
         {
           "ticker": "RVTY",
@@ -522,12 +522,12 @@
           "entry": 147.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 143.93,
+          "px": 143.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.493,
-          "pnl": -80.96
+          "vs_entry_pct": -2.629,
+          "pnl": -85.36
         },
         {
           "ticker": "IT",
@@ -536,12 +536,12 @@
           "entry": 191.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 185.25,
+          "px": 185.86,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -3.319,
-          "pnl": -108.12
+          "vs_entry_pct": -3.001,
+          "pnl": -97.75
         },
         {
           "ticker": "FIVN",
@@ -550,12 +550,12 @@
           "entry": 33.77,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.01,
+          "px": 32.78,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.251,
-          "pnl": -72.96
+          "vs_entry_pct": -2.932,
+          "pnl": -95.04
         }
       ]
     },
@@ -569,12 +569,12 @@
           "entry": 33.94,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.44,
+          "px": 33.47,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.473,
-          "pnl": -48.0
+          "vs_entry_pct": -1.385,
+          "pnl": -45.12
         },
         {
           "ticker": "RVTY",
@@ -583,12 +583,12 @@
           "entry": 147.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 143.93,
+          "px": 143.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.493,
-          "pnl": -80.96
+          "vs_entry_pct": -2.629,
+          "pnl": -85.36
         },
         {
           "ticker": "IT",
@@ -597,12 +597,12 @@
           "entry": 191.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 185.25,
+          "px": 185.86,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -3.319,
-          "pnl": -108.12
+          "vs_entry_pct": -3.001,
+          "pnl": -97.75
         },
         {
           "ticker": "FIVN",
@@ -611,12 +611,12 @@
           "entry": 33.77,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.01,
+          "px": 32.78,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.251,
-          "pnl": -72.96
+          "vs_entry_pct": -2.932,
+          "pnl": -95.04
         }
       ]
     },
@@ -630,12 +630,12 @@
           "entry": 33.94,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.44,
+          "px": 33.47,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.473,
-          "pnl": -47.5
+          "vs_entry_pct": -1.385,
+          "pnl": -44.65
         },
         {
           "ticker": "RVTY",
@@ -644,12 +644,12 @@
           "entry": 147.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 143.93,
+          "px": 143.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.493,
-          "pnl": -77.28
+          "vs_entry_pct": -2.629,
+          "pnl": -81.48
         },
         {
           "ticker": "IT",
@@ -658,12 +658,12 @@
           "entry": 191.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 185.25,
+          "px": 185.86,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -3.319,
-          "pnl": -101.76
+          "vs_entry_pct": -3.001,
+          "pnl": -92.0
         },
         {
           "ticker": "FIVN",
@@ -672,12 +672,12 @@
           "entry": 33.77,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.01,
+          "px": 32.78,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.251,
-          "pnl": -72.2
+          "vs_entry_pct": -2.932,
+          "pnl": -94.05
         }
       ]
     },
@@ -691,12 +691,12 @@
           "entry": 33.94,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.44,
+          "px": 33.47,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.473,
-          "pnl": -47.5
+          "vs_entry_pct": -1.385,
+          "pnl": -44.65
         },
         {
           "ticker": "RVTY",
@@ -705,12 +705,12 @@
           "entry": 147.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 143.93,
+          "px": 143.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.493,
-          "pnl": -77.28
+          "vs_entry_pct": -2.629,
+          "pnl": -81.48
         },
         {
           "ticker": "IT",
@@ -719,12 +719,12 @@
           "entry": 191.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 185.25,
+          "px": 185.86,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -3.319,
-          "pnl": -101.76
+          "vs_entry_pct": -3.001,
+          "pnl": -92.0
         },
         {
           "ticker": "FIVN",
@@ -733,12 +733,12 @@
           "entry": 33.77,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.01,
+          "px": 32.78,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.251,
-          "pnl": -72.2
+          "vs_entry_pct": -2.932,
+          "pnl": -94.05
         }
       ]
     },
@@ -756,12 +756,12 @@
           "entry": 33.94,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.44,
+          "px": 33.47,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.473,
-          "pnl": -47.5
+          "vs_entry_pct": -1.385,
+          "pnl": -44.65
         },
         {
           "ticker": "RVTY",
@@ -770,12 +770,12 @@
           "entry": 147.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 143.93,
+          "px": 143.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.493,
-          "pnl": -77.28
+          "vs_entry_pct": -2.629,
+          "pnl": -81.48
         },
         {
           "ticker": "IT",
@@ -784,12 +784,12 @@
           "entry": 191.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 185.25,
+          "px": 185.86,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -3.319,
-          "pnl": -101.76
+          "vs_entry_pct": -3.001,
+          "pnl": -92.0
         },
         {
           "ticker": "FIVN",
@@ -798,12 +798,12 @@
           "entry": 33.77,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.01,
+          "px": 32.78,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.251,
-          "pnl": -72.2
+          "vs_entry_pct": -2.932,
+          "pnl": -94.05
         }
       ]
     },
@@ -821,12 +821,12 @@
           "entry": 33.94,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.44,
+          "px": 33.47,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.473,
-          "pnl": -47.0
+          "vs_entry_pct": -1.385,
+          "pnl": -44.18
         },
         {
           "ticker": "RVTY",
@@ -835,12 +835,12 @@
           "entry": 147.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 143.93,
+          "px": 143.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.493,
-          "pnl": -77.28
+          "vs_entry_pct": -2.629,
+          "pnl": -81.48
         },
         {
           "ticker": "IT",
@@ -849,12 +849,12 @@
           "entry": 191.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 185.25,
+          "px": 185.86,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -3.319,
-          "pnl": -101.76
+          "vs_entry_pct": -3.001,
+          "pnl": -92.0
         },
         {
           "ticker": "FIVN",
@@ -863,12 +863,12 @@
           "entry": 33.77,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.01,
+          "px": 32.78,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.251,
-          "pnl": -72.2
+          "vs_entry_pct": -2.932,
+          "pnl": -94.05
         }
       ]
     },
@@ -906,12 +906,12 @@
           "entry": 33.94,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.44,
+          "px": 33.47,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.473,
-          "pnl": -46.5
+          "vs_entry_pct": -1.385,
+          "pnl": -43.71
         },
         {
           "ticker": "RVTY",
@@ -920,12 +920,12 @@
           "entry": 147.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 143.93,
+          "px": 143.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.493,
-          "pnl": -77.28
+          "vs_entry_pct": -2.629,
+          "pnl": -81.48
         },
         {
           "ticker": "IT",
@@ -934,12 +934,12 @@
           "entry": 191.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 185.25,
+          "px": 185.86,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -3.319,
-          "pnl": -101.76
+          "vs_entry_pct": -3.001,
+          "pnl": -92.0
         },
         {
           "ticker": "FIVN",
@@ -948,12 +948,12 @@
           "entry": 33.77,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.01,
+          "px": 32.78,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.251,
-          "pnl": -70.68
+          "vs_entry_pct": -2.932,
+          "pnl": -92.07
         }
       ]
     },
@@ -967,12 +967,12 @@
           "entry": 33.94,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.44,
+          "px": 33.47,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.473,
-          "pnl": -46.5
+          "vs_entry_pct": -1.385,
+          "pnl": -43.71
         },
         {
           "ticker": "RVTY",
@@ -981,12 +981,12 @@
           "entry": 147.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 143.93,
+          "px": 143.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.493,
-          "pnl": -77.28
+          "vs_entry_pct": -2.629,
+          "pnl": -81.48
         },
         {
           "ticker": "IT",
@@ -995,12 +995,12 @@
           "entry": 191.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 185.25,
+          "px": 185.86,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -3.319,
-          "pnl": -101.76
+          "vs_entry_pct": -3.001,
+          "pnl": -92.0
         },
         {
           "ticker": "FIVN",
@@ -1009,12 +1009,12 @@
           "entry": 33.77,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.01,
+          "px": 32.78,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.251,
-          "pnl": -70.68
+          "vs_entry_pct": -2.932,
+          "pnl": -92.07
         }
       ]
     },
@@ -1028,12 +1028,12 @@
           "entry": 33.94,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.44,
+          "px": 33.47,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.473,
-          "pnl": -46.5
+          "vs_entry_pct": -1.385,
+          "pnl": -43.71
         },
         {
           "ticker": "RVTY",
@@ -1042,12 +1042,12 @@
           "entry": 147.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 143.93,
+          "px": 143.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.493,
-          "pnl": -77.28
+          "vs_entry_pct": -2.629,
+          "pnl": -81.48
         },
         {
           "ticker": "IT",
@@ -1056,12 +1056,12 @@
           "entry": 191.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 185.25,
+          "px": 185.86,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -3.319,
-          "pnl": -101.76
+          "vs_entry_pct": -3.001,
+          "pnl": -92.0
         },
         {
           "ticker": "FIVN",
@@ -1070,12 +1070,12 @@
           "entry": 33.77,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.01,
+          "px": 32.78,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.251,
-          "pnl": -70.68
+          "vs_entry_pct": -2.932,
+          "pnl": -92.07
         }
       ]
     },
@@ -1089,12 +1089,12 @@
           "entry": 33.94,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.44,
+          "px": 33.47,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.473,
-          "pnl": -46.5
+          "vs_entry_pct": -1.385,
+          "pnl": -43.71
         },
         {
           "ticker": "RVTY",
@@ -1103,12 +1103,12 @@
           "entry": 147.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 143.93,
+          "px": 143.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.493,
-          "pnl": -77.28
+          "vs_entry_pct": -2.629,
+          "pnl": -81.48
         },
         {
           "ticker": "IT",
@@ -1117,12 +1117,12 @@
           "entry": 191.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 185.25,
+          "px": 185.86,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -3.319,
-          "pnl": -101.76
+          "vs_entry_pct": -3.001,
+          "pnl": -92.0
         },
         {
           "ticker": "FIVN",
@@ -1131,12 +1131,12 @@
           "entry": 33.77,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.01,
+          "px": 32.78,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.251,
-          "pnl": -70.68
+          "vs_entry_pct": -2.932,
+          "pnl": -92.07
         }
       ]
     },
@@ -1150,12 +1150,12 @@
           "entry": 33.94,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.44,
+          "px": 33.47,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.473,
-          "pnl": -46.0
+          "vs_entry_pct": -1.385,
+          "pnl": -43.24
         },
         {
           "ticker": "RVTY",
@@ -1164,12 +1164,12 @@
           "entry": 147.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 143.93,
+          "px": 143.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.493,
-          "pnl": -77.28
+          "vs_entry_pct": -2.629,
+          "pnl": -81.48
         },
         {
           "ticker": "IT",
@@ -1178,12 +1178,12 @@
           "entry": 191.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 185.25,
+          "px": 185.86,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -3.319,
-          "pnl": -101.76
+          "vs_entry_pct": -3.001,
+          "pnl": -92.0
         },
         {
           "ticker": "FIVN",
@@ -1192,12 +1192,12 @@
           "entry": 33.77,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.01,
+          "px": 32.78,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.251,
-          "pnl": -70.68
+          "vs_entry_pct": -2.932,
+          "pnl": -92.07
         }
       ]
     },
@@ -1215,12 +1215,12 @@
           "entry": 33.94,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.44,
+          "px": 33.47,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.473,
-          "pnl": -45.5
+          "vs_entry_pct": -1.385,
+          "pnl": -42.77
         },
         {
           "ticker": "RVTY",
@@ -1229,12 +1229,12 @@
           "entry": 147.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 143.93,
+          "px": 143.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.493,
-          "pnl": -73.6
+          "vs_entry_pct": -2.629,
+          "pnl": -77.6
         },
         {
           "ticker": "IT",
@@ -1243,12 +1243,12 @@
           "entry": 191.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 185.25,
+          "px": 185.86,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -3.319,
-          "pnl": -101.76
+          "vs_entry_pct": -3.001,
+          "pnl": -92.0
         },
         {
           "ticker": "FIVN",
@@ -1257,12 +1257,12 @@
           "entry": 33.77,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.01,
+          "px": 32.78,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.251,
-          "pnl": -69.16
+          "vs_entry_pct": -2.932,
+          "pnl": -90.09
         }
       ]
     },
@@ -1276,12 +1276,12 @@
           "entry": 33.94,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.44,
+          "px": 33.47,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.473,
-          "pnl": -44.5
+          "vs_entry_pct": -1.385,
+          "pnl": -41.83
         },
         {
           "ticker": "RVTY",
@@ -1290,12 +1290,12 @@
           "entry": 147.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 143.93,
+          "px": 143.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.493,
-          "pnl": -73.6
+          "vs_entry_pct": -2.629,
+          "pnl": -77.6
         },
         {
           "ticker": "IT",
@@ -1304,12 +1304,12 @@
           "entry": 191.61,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 185.25,
+          "px": 185.86,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -3.319,
-          "pnl": -95.4
+          "vs_entry_pct": -3.001,
+          "pnl": -86.25
         },
         {
           "ticker": "FIVN",
@@ -1318,12 +1318,12 @@
           "entry": 33.77,
           "entry_date": "2026-09-17",
           "owner": "union_hot_n4_h1",
-          "px": 33.01,
+          "px": 32.78,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.251,
-          "pnl": -68.4
+          "vs_entry_pct": -2.932,
+          "pnl": -89.1
         }
       ]
     },
@@ -1337,12 +1337,12 @@
           "entry": 33.94,
           "entry_date": "2026-09-17",
           "owner": null,
-          "px": 33.44,
+          "px": 33.47,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.473,
-          "pnl": -15.5
+          "vs_entry_pct": -1.385,
+          "pnl": -14.57
         },
         {
           "ticker": "RVTY",
@@ -1351,12 +1351,12 @@
           "entry": 147.61,
           "entry_date": "2026-09-17",
           "owner": null,
-          "px": 143.93,
+          "px": 143.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.493,
-          "pnl": -25.76
+          "vs_entry_pct": -2.629,
+          "pnl": -27.16
         },
         {
           "ticker": "IT",
@@ -1365,12 +1365,12 @@
           "entry": 191.61,
           "entry_date": "2026-09-17",
           "owner": null,
-          "px": 185.25,
+          "px": 185.86,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -3.319,
-          "pnl": -31.8
+          "vs_entry_pct": -3.001,
+          "pnl": -28.75
         },
         {
           "ticker": "FIVN",
@@ -1379,12 +1379,12 @@
           "entry": 33.77,
           "entry_date": "2026-09-17",
           "owner": null,
-          "px": 33.01,
+          "px": 32.78,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.251,
-          "pnl": -23.56
+          "vs_entry_pct": -2.932,
+          "pnl": -30.69
         }
       ]
     },
@@ -1402,12 +1402,12 @@
           "entry": 147.61,
           "entry_date": "2026-09-17",
           "owner": "union_join_vol_green_h1",
-          "px": 143.93,
+          "px": 143.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.493,
-          "pnl": -316.48
+          "vs_entry_pct": -2.629,
+          "pnl": -333.68
         }
       ]
     },
@@ -1437,12 +1437,12 @@
           "entry": 147.61,
           "entry_date": "2026-09-17",
           "owner": "union_join_vol_green_h1",
-          "px": 143.93,
+          "px": 143.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.493,
-          "pnl": -301.76
+          "vs_entry_pct": -2.629,
+          "pnl": -318.16
         }
       ]
     },
@@ -1456,12 +1456,12 @@
           "entry": 147.61,
           "entry_date": "2026-09-17",
           "owner": "union_join_vol_green_h1",
-          "px": 143.93,
+          "px": 143.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.493,
-          "pnl": -298.08
+          "vs_entry_pct": -2.629,
+          "pnl": -314.28
         }
       ]
     },
@@ -1475,12 +1475,12 @@
           "entry": 147.61,
           "entry_date": "2026-09-17",
           "owner": "union_join_vol_green_h1",
-          "px": 143.93,
+          "px": 143.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.493,
-          "pnl": -290.72
+          "vs_entry_pct": -2.629,
+          "pnl": -306.52
         }
       ]
     },
@@ -1494,12 +1494,12 @@
           "entry": 147.61,
           "entry_date": "2026-09-17",
           "owner": "union_join_vol_green_h1",
-          "px": 143.93,
+          "px": 143.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.493,
-          "pnl": -283.36
+          "vs_entry_pct": -2.629,
+          "pnl": -298.76
         }
       ]
     },
@@ -1517,12 +1517,12 @@
           "entry": 147.61,
           "entry_date": "2026-09-17",
           "owner": "union_join_vol_green_h1",
-          "px": 143.93,
+          "px": 143.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.493,
-          "pnl": -279.68
+          "vs_entry_pct": -2.629,
+          "pnl": -294.88
         }
       ]
     },
@@ -1548,12 +1548,12 @@
           "entry": 164.43,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 145.24,
+          "px": 145.7,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -11.671,
-          "pnl": -19.19
+          "vs_entry_pct": -11.391,
+          "pnl": -18.73
         },
         {
           "ticker": "AMTX",
@@ -1562,12 +1562,12 @@
           "entry": 2.04,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 1.95,
+          "px": 2.02,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -4.412,
-          "pnl": -13.68
+          "vs_entry_pct": -0.98,
+          "pnl": -3.04
         },
         {
           "ticker": "ADBE",
@@ -1576,12 +1576,12 @@
           "entry": 242.17,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 249.85,
+          "px": 249.02,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": 3.171,
-          "pnl": 7.68
+          "vs_entry_pct": 2.829,
+          "pnl": 6.85
         },
         {
           "ticker": "RH",
@@ -1590,12 +1590,12 @@
           "entry": 135.71,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 127.66,
+          "px": 126.55,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -5.932,
-          "pnl": -16.1
+          "vs_entry_pct": -6.75,
+          "pnl": -18.32
         }
       ]
     },
@@ -1609,12 +1609,12 @@
           "entry": 40.475,
           "entry_date": "2026-09-17",
           "owner": null,
-          "px": 39.26,
+          "px": 39.24,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -3.002,
-          "pnl": -139.73
+          "vs_entry_pct": -3.051,
+          "pnl": -142.02
         },
         {
           "ticker": "FIVN",
@@ -1623,12 +1623,12 @@
           "entry": 33.77,
           "entry_date": "2026-09-17",
           "owner": null,
-          "px": 33.01,
+          "px": 32.78,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.251,
-          "pnl": -104.88
+          "vs_entry_pct": -2.932,
+          "pnl": -136.62
         }
       ]
     },
@@ -1678,12 +1678,12 @@
           "entry": 16.28,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 16.89,
+          "px": 16.87,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": 3.747,
-          "pnl": 66.49
+          "vs_entry_pct": 3.624,
+          "pnl": 64.31
         },
         {
           "ticker": "OVID",
@@ -1692,12 +1692,12 @@
           "entry": 2.73,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 2.66,
+          "px": 2.67,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.564,
-          "pnl": -45.78
+          "vs_entry_pct": -2.198,
+          "pnl": -39.24
         },
         {
           "ticker": "SANM",
@@ -1706,12 +1706,12 @@
           "entry": 206.84,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 198.24,
+          "px": 198.38,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -4.158,
-          "pnl": -68.8
+          "vs_entry_pct": -4.09,
+          "pnl": -67.68
         },
         {
           "ticker": "ORCL",
@@ -1720,12 +1720,12 @@
           "entry": 164.43,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 145.24,
+          "px": 145.7,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -11.671,
-          "pnl": -191.9
+          "vs_entry_pct": -11.391,
+          "pnl": -187.3
         },
         {
           "ticker": "NVT",
@@ -1734,12 +1734,12 @@
           "entry": 157.78,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 155.34,
+          "px": 155.27,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.546,
-          "pnl": -26.84
+          "vs_entry_pct": -1.591,
+          "pnl": -27.61
         },
         {
           "ticker": "COHU",
@@ -1748,12 +1748,12 @@
           "entry": 56.09,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 56.35,
+          "px": 56.47,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": 0.464,
-          "pnl": 8.06
+          "vs_entry_pct": 0.677,
+          "pnl": 11.78
         },
         {
           "ticker": "RDNT",
@@ -1762,12 +1762,12 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 76.58,
+          "px": 76.07,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -0.7,
-          "pnl": -0.54
+          "vs_entry_pct": -1.362,
+          "pnl": -1.05
         },
         {
           "ticker": "AVAH",
@@ -1776,12 +1776,12 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 13.59,
+          "px": 13.69,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -5.031,
-          "pnl": -5.76
+          "vs_entry_pct": -4.333,
+          "pnl": -4.96
         },
         {
           "ticker": "BLFS",
@@ -1790,12 +1790,12 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 36.63,
+          "px": 36.82,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": 0.466,
-          "pnl": 0.51
+          "vs_entry_pct": 0.987,
+          "pnl": 1.08
         },
         {
           "ticker": "WAY",
@@ -1804,12 +1804,12 @@
           "entry": 26.51,
           "entry_date": "2026-09-17",
           "owner": null,
-          "px": 26.27,
+          "px": 26.3,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -0.905,
-          "pnl": -0.24
+          "vs_entry_pct": -0.792,
+          "pnl": -0.21
         }
       ]
     },
@@ -1823,12 +1823,12 @@
           "entry": 16.28,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 16.89,
+          "px": 16.87,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": 3.747,
-          "pnl": 110.41
+          "vs_entry_pct": 3.624,
+          "pnl": 106.79
         },
         {
           "ticker": "OVID",
@@ -1837,12 +1837,12 @@
           "entry": 2.73,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 2.66,
+          "px": 2.67,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.564,
-          "pnl": -63.21
+          "vs_entry_pct": -2.198,
+          "pnl": -54.18
         },
         {
           "ticker": "SANM",
@@ -1851,12 +1851,12 @@
           "entry": 206.84,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 198.24,
+          "px": 198.38,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -4.158,
-          "pnl": -77.4
+          "vs_entry_pct": -4.09,
+          "pnl": -76.14
         },
         {
           "ticker": "ORCL",
@@ -1865,12 +1865,12 @@
           "entry": 164.43,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 145.24,
+          "px": 145.7,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -11.671,
-          "pnl": -172.71
+          "vs_entry_pct": -11.391,
+          "pnl": -168.57
         },
         {
           "ticker": "NVT",
@@ -1879,12 +1879,12 @@
           "entry": 157.78,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 155.34,
+          "px": 155.27,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.546,
-          "pnl": -14.64
+          "vs_entry_pct": -1.591,
+          "pnl": -15.06
         },
         {
           "ticker": "COHU",
@@ -1893,12 +1893,12 @@
           "entry": 56.09,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 56.35,
+          "px": 56.47,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": 0.464,
-          "pnl": 2.08
+          "vs_entry_pct": 0.677,
+          "pnl": 3.04
         },
         {
           "ticker": "RDNT",
@@ -1907,12 +1907,12 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 76.58,
+          "px": 76.07,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -0.7,
-          "pnl": -0.54
+          "vs_entry_pct": -1.362,
+          "pnl": -1.05
         },
         {
           "ticker": "AVAH",
@@ -1921,12 +1921,12 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 13.59,
+          "px": 13.69,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -5.031,
-          "pnl": -2.88
+          "vs_entry_pct": -4.333,
+          "pnl": -2.48
         },
         {
           "ticker": "WAY",
@@ -1935,12 +1935,12 @@
           "entry": 26.51,
           "entry_date": "2026-09-17",
           "owner": null,
-          "px": 26.27,
+          "px": 26.3,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -0.905,
-          "pnl": -0.24
+          "vs_entry_pct": -0.792,
+          "pnl": -0.21
         },
         {
           "ticker": "AZTA",
@@ -1949,12 +1949,12 @@
           "entry": 33.94,
           "entry_date": "2026-09-17",
           "owner": null,
-          "px": 33.44,
+          "px": 33.47,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.473,
-          "pnl": -0.5
+          "vs_entry_pct": -1.385,
+          "pnl": -0.47
         }
       ]
     },
@@ -1968,12 +1968,12 @@
           "entry": 16.28,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 16.89,
+          "px": 16.87,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": 3.747,
-          "pnl": 66.49
+          "vs_entry_pct": 3.624,
+          "pnl": 64.31
         },
         {
           "ticker": "OVID",
@@ -1982,12 +1982,12 @@
           "entry": 2.73,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 2.66,
+          "px": 2.67,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.564,
-          "pnl": -45.78
+          "vs_entry_pct": -2.198,
+          "pnl": -39.24
         },
         {
           "ticker": "SANM",
@@ -1996,12 +1996,12 @@
           "entry": 206.84,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 198.24,
+          "px": 198.38,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -4.158,
-          "pnl": -68.8
+          "vs_entry_pct": -4.09,
+          "pnl": -67.68
         },
         {
           "ticker": "ORCL",
@@ -2010,12 +2010,12 @@
           "entry": 164.43,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 145.24,
+          "px": 145.7,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -11.671,
-          "pnl": -191.9
+          "vs_entry_pct": -11.391,
+          "pnl": -187.3
         },
         {
           "ticker": "NVT",
@@ -2024,12 +2024,12 @@
           "entry": 157.78,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 155.34,
+          "px": 155.27,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.546,
-          "pnl": -26.84
+          "vs_entry_pct": -1.591,
+          "pnl": -27.61
         },
         {
           "ticker": "COHU",
@@ -2038,12 +2038,12 @@
           "entry": 56.09,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 56.35,
+          "px": 56.47,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": 0.464,
-          "pnl": 8.06
+          "vs_entry_pct": 0.677,
+          "pnl": 11.78
         },
         {
           "ticker": "RDNT",
@@ -2052,12 +2052,12 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 76.58,
+          "px": 76.07,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -0.7,
-          "pnl": -0.54
+          "vs_entry_pct": -1.362,
+          "pnl": -1.05
         },
         {
           "ticker": "AVAH",
@@ -2066,12 +2066,12 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 13.59,
+          "px": 13.69,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -5.031,
-          "pnl": -5.76
+          "vs_entry_pct": -4.333,
+          "pnl": -4.96
         },
         {
           "ticker": "BLFS",
@@ -2080,12 +2080,12 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 36.63,
+          "px": 36.82,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": 0.466,
-          "pnl": 0.51
+          "vs_entry_pct": 0.987,
+          "pnl": 1.08
         },
         {
           "ticker": "WAY",
@@ -2094,12 +2094,12 @@
           "entry": 26.51,
           "entry_date": "2026-09-17",
           "owner": null,
-          "px": 26.27,
+          "px": 26.3,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -0.905,
-          "pnl": -0.24
+          "vs_entry_pct": -0.792,
+          "pnl": -0.21
         }
       ]
     },
@@ -2113,12 +2113,12 @@
           "entry": 16.28,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 16.89,
+          "px": 16.87,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": 3.747,
-          "pnl": 65.27
+          "vs_entry_pct": 3.624,
+          "pnl": 63.13
         },
         {
           "ticker": "OVID",
@@ -2127,12 +2127,12 @@
           "entry": 2.73,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 2.66,
+          "px": 2.67,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.564,
-          "pnl": -44.94
+          "vs_entry_pct": -2.198,
+          "pnl": -38.52
         },
         {
           "ticker": "SANM",
@@ -2141,12 +2141,12 @@
           "entry": 206.84,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 198.24,
+          "px": 198.38,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -4.158,
-          "pnl": -68.8
+          "vs_entry_pct": -4.09,
+          "pnl": -67.68
         },
         {
           "ticker": "ORCL",
@@ -2155,12 +2155,12 @@
           "entry": 164.43,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 145.24,
+          "px": 145.7,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -11.671,
-          "pnl": -191.9
+          "vs_entry_pct": -11.391,
+          "pnl": -187.3
         },
         {
           "ticker": "NVT",
@@ -2169,12 +2169,12 @@
           "entry": 157.78,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 155.34,
+          "px": 155.27,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.546,
-          "pnl": -26.84
+          "vs_entry_pct": -1.591,
+          "pnl": -27.61
         },
         {
           "ticker": "COHU",
@@ -2183,12 +2183,12 @@
           "entry": 56.09,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 56.35,
+          "px": 56.47,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": 0.464,
-          "pnl": 8.06
+          "vs_entry_pct": 0.677,
+          "pnl": 11.78
         },
         {
           "ticker": "RDNT",
@@ -2197,12 +2197,12 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 76.58,
+          "px": 76.07,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -0.7,
-          "pnl": -0.54
+          "vs_entry_pct": -1.362,
+          "pnl": -1.05
         },
         {
           "ticker": "AVAH",
@@ -2211,12 +2211,12 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 13.59,
+          "px": 13.69,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -5.031,
-          "pnl": -3.6
+          "vs_entry_pct": -4.333,
+          "pnl": -3.1
         },
         {
           "ticker": "BLFS",
@@ -2225,12 +2225,12 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 36.63,
+          "px": 36.82,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": 0.466,
-          "pnl": 0.34
+          "vs_entry_pct": 0.987,
+          "pnl": 0.72
         }
       ]
     },
@@ -2244,12 +2244,12 @@
           "entry": 16.28,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 16.89,
+          "px": 16.87,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": 3.747,
-          "pnl": 39.65
+          "vs_entry_pct": 3.624,
+          "pnl": 38.35
         },
         {
           "ticker": "OVID",
@@ -2258,12 +2258,12 @@
           "entry": 2.73,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 2.66,
+          "px": 2.67,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.564,
-          "pnl": -27.16
+          "vs_entry_pct": -2.198,
+          "pnl": -23.28
         },
         {
           "ticker": "SANM",
@@ -2272,12 +2272,12 @@
           "entry": 206.84,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 198.24,
+          "px": 198.38,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -4.158,
-          "pnl": -43.0
+          "vs_entry_pct": -4.09,
+          "pnl": -42.3
         },
         {
           "ticker": "ORCL",
@@ -2286,12 +2286,12 @@
           "entry": 164.43,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 145.24,
+          "px": 145.7,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -11.671,
-          "pnl": -115.14
+          "vs_entry_pct": -11.391,
+          "pnl": -112.38
         },
         {
           "ticker": "NVT",
@@ -2300,12 +2300,12 @@
           "entry": 157.78,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 155.34,
+          "px": 155.27,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.546,
-          "pnl": -14.64
+          "vs_entry_pct": -1.591,
+          "pnl": -15.06
         },
         {
           "ticker": "COHU",
@@ -2314,12 +2314,12 @@
           "entry": 56.09,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 56.35,
+          "px": 56.47,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": 0.464,
-          "pnl": 4.68
+          "vs_entry_pct": 0.677,
+          "pnl": 6.84
         },
         {
           "ticker": "AMTX",
@@ -2328,12 +2328,12 @@
           "entry": 2.04,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 1.95,
+          "px": 2.02,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -4.412,
-          "pnl": -46.8
+          "vs_entry_pct": -0.98,
+          "pnl": -10.4
         },
         {
           "ticker": "CLOV",
@@ -2342,12 +2342,12 @@
           "entry": 4.75,
           "entry_date": "2026-09-11",
           "owner": null,
-          "px": 4.38,
+          "px": 4.41,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -7.789,
-          "pnl": -82.51
+          "vs_entry_pct": -7.158,
+          "pnl": -75.82
         },
         {
           "ticker": "IQV",
@@ -2356,12 +2356,12 @@
           "entry": 270.89,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 267.86,
+          "px": 266.44,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.119,
-          "pnl": -3.03
+          "vs_entry_pct": -1.643,
+          "pnl": -4.45
         },
         {
           "ticker": "RDNT",
@@ -2370,12 +2370,12 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 76.58,
+          "px": 76.07,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -0.7,
-          "pnl": -3.24
+          "vs_entry_pct": -1.362,
+          "pnl": -6.3
         },
         {
           "ticker": "AVAH",
@@ -2384,12 +2384,12 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 13.59,
+          "px": 13.69,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -5.031,
-          "pnl": -26.64
+          "vs_entry_pct": -4.333,
+          "pnl": -22.94
         },
         {
           "ticker": "BLFS",
@@ -2398,12 +2398,12 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 36.63,
+          "px": 36.82,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": 0.466,
-          "pnl": 2.38
+          "vs_entry_pct": 0.987,
+          "pnl": 5.04
         },
         {
           "ticker": "WAY",
@@ -2412,12 +2412,12 @@
           "entry": 26.51,
           "entry_date": "2026-09-17",
           "owner": null,
-          "px": 26.27,
+          "px": 26.3,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -0.905,
-          "pnl": -0.48
+          "vs_entry_pct": -0.792,
+          "pnl": -0.42
         },
         {
           "ticker": "AZTA",
@@ -2426,12 +2426,12 @@
           "entry": 33.94,
           "entry_date": "2026-09-17",
           "owner": null,
-          "px": 33.44,
+          "px": 33.47,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.473,
-          "pnl": -0.5
+          "vs_entry_pct": -1.385,
+          "pnl": -0.47
         },
         {
           "ticker": "IOT",
@@ -2440,12 +2440,12 @@
           "entry": 40.475,
           "entry_date": "2026-09-17",
           "owner": null,
-          "px": 39.26,
+          "px": 39.24,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -3.002,
-          "pnl": -1.22
+          "vs_entry_pct": -3.051,
+          "pnl": -1.23
         },
         {
           "ticker": "FIVN",
@@ -2454,12 +2454,12 @@
           "entry": 33.77,
           "entry_date": "2026-09-17",
           "owner": null,
-          "px": 33.01,
+          "px": 32.78,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.251,
-          "pnl": -0.76
+          "vs_entry_pct": -2.932,
+          "pnl": -0.99
         }
       ]
     },
@@ -2477,12 +2477,12 @@
           "entry": 270.89,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 267.86,
+          "px": 266.44,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.119,
-          "pnl": -27.27
+          "vs_entry_pct": -1.643,
+          "pnl": -40.05
         },
         {
           "ticker": "RDNT",
@@ -2491,12 +2491,12 @@
           "entry": 77.12,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 76.58,
+          "px": 76.07,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -0.7,
-          "pnl": -16.74
+          "vs_entry_pct": -1.362,
+          "pnl": -32.55
         },
         {
           "ticker": "AVAH",
@@ -2505,12 +2505,12 @@
           "entry": 14.31,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 13.59,
+          "px": 13.69,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -5.031,
-          "pnl": -123.84
+          "vs_entry_pct": -4.333,
+          "pnl": -106.64
         },
         {
           "ticker": "BLFS",
@@ -2519,12 +2519,12 @@
           "entry": 36.46,
           "entry_date": "2026-09-16",
           "owner": null,
-          "px": 36.63,
+          "px": 36.82,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": 0.466,
-          "pnl": 11.39
+          "vs_entry_pct": 0.987,
+          "pnl": 24.12
         }
       ]
     },
@@ -2538,12 +2538,12 @@
           "entry": 147.61,
           "entry_date": "2026-09-17",
           "owner": null,
-          "px": 143.93,
+          "px": 143.73,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.493,
-          "pnl": -103.04
+          "vs_entry_pct": -2.629,
+          "pnl": -108.64
         },
         {
           "ticker": "WAY",
@@ -2552,12 +2552,12 @@
           "entry": 26.51,
           "entry_date": "2026-09-17",
           "owner": null,
-          "px": 26.27,
+          "px": 26.3,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -0.905,
-          "pnl": -11.28
+          "vs_entry_pct": -0.792,
+          "pnl": -9.87
         },
         {
           "ticker": "AZTA",
@@ -2566,12 +2566,12 @@
           "entry": 33.94,
           "entry_date": "2026-09-17",
           "owner": null,
-          "px": 33.44,
+          "px": 33.47,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -1.473,
-          "pnl": -18.5
+          "vs_entry_pct": -1.385,
+          "pnl": -17.39
         },
         {
           "ticker": "IT",
@@ -2580,12 +2580,12 @@
           "entry": 191.61,
           "entry_date": "2026-09-17",
           "owner": null,
-          "px": 185.25,
+          "px": 185.86,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -3.319,
-          "pnl": -38.16
+          "vs_entry_pct": -3.001,
+          "pnl": -34.5
         },
         {
           "ticker": "IOT",
@@ -2594,12 +2594,12 @@
           "entry": 40.475,
           "entry_date": "2026-09-17",
           "owner": null,
-          "px": 39.26,
+          "px": 39.24,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -3.002,
-          "pnl": -37.67
+          "vs_entry_pct": -3.051,
+          "pnl": -38.28
         },
         {
           "ticker": "FIVN",
@@ -2608,12 +2608,12 @@
           "entry": 33.77,
           "entry_date": "2026-09-17",
           "owner": null,
-          "px": 33.01,
+          "px": 32.78,
           "px_src": "elite_live",
-          "px_asof": "2026-09-18T11:17:37.640684-04:00",
+          "px_asof": "2026-09-18T11:54:01.332326-04:00",
           "vs_open_pct": null,
-          "vs_entry_pct": -2.251,
-          "pnl": -28.12
+          "vs_entry_pct": -2.932,
+          "pnl": -36.63
         }
       ]
     }
