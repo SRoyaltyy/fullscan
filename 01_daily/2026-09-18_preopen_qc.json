@@ -1,6 +1,6 @@
 {
   "date": "2026-09-18",
-  "generated_at": "2026-09-18T05:49:00.804434-04:00",
+  "generated_at": "2026-09-18T05:55:31.429482-04:00",
   "items": [
     {
       "ok": true,
@@ -179,14 +179,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-18/financial_predict.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 18525,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
@@ -278,9 +278,9 @@
     },
     {
       "sector": "Financial",
-      "ok": false,
-      "reason": "missing",
-      "size": 0
+      "ok": true,
+      "reason": "",
+      "size": 18525
     },
     {
       "sector": "Healthcare",
@@ -313,7 +313,7 @@
       "size": 0
     }
   ],
-  "sector_n_ok": 5,
+  "sector_n_ok": 6,
   "sector_n_total": 11,
   "all_ok": false
 }
