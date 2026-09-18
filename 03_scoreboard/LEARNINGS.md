@@ -1,6 +1,6 @@
 # Learnings report — 2026-09-18
 
-Generated: **2026-09-18T18:35:10.314937-04:00** by `src/learn_cycle.py`.
+Generated: **2026-09-18T18:37:38.785040-04:00** by `src/learn_cycle.py`.
 
 This is the human-readable digest of what the bot **actually learned** this cycle: graded evidence, hypotheses (wins and losses), promoted standing rules, and **how that changes every daily workflow**.
 
@@ -15,10 +15,10 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 | Graded runs mined | 180 |
 | Hypotheses written | 181 (wins=72, losses=109) |
 | News hypotheses | 1 |
-| Lessons promoted to active | 2 |
+| Lessons promoted to active | 0 |
 | Lessons retired (efficacy-gated) | 10 |
 | Active lesson files now | 200 |
-| Engine policy version | 15 |
+| Engine policy version | 16 |
 
 ## 2. Accuracy by topic (evidence this cycle learned from)
 
@@ -496,8 +496,7 @@ Each scope lists recent win and loss hypotheses: the **counterfactual ask**, the
 
 ## 4. Promoted standing rules (this cycle)
 
-- `a-low-beta-bond-proxy-defensive-xlp-like-posts-a-net-negativ.md`
-- `a-low-beta-defensive-healthcare-etf-xlv-like-posts-a-net-non.md`
+_No new promotions this cycle (candidates incomplete, not yet recurring, or already active)._
 
 Full text lives in `02_lessons/active/`. Summaries also feed `mutable_policy.md`.
 
@@ -534,7 +533,7 @@ Sectors (pooled S0–S4; per-sector overrides in engine_policy.json):
 - S2_BREADTH: n=131 sign-hit=0.61 → ×1.0
 - S3_FLOWS_POSITIONING: n=94 sign-hit=0.50 → ×0.5
 - S4_ETF_TAPE: n=137 sign-hit=0.62 → ×1.0
-Last change: general.B0_ASIA: 0.0 -> 0.5 (n=17, hit=0.471); Basic Materials.S0_SHARED_MACRO: 1.25 -> 1.0 (n=16, hit=0.625); Consumer Defensive.S1_SECTOR_FACTORS: 0.5 -> 1.0 (n=20, hit=0.55); Healthcare.S0_SHARED_MACRO: 0.0 -> 0.5 (n=13, hit=0.462); Technology.S1_SECTOR_FACTORS: 0.5 -> 1.0 (n=16, hit=0.562)
+Last change: hold
 
 Progress vs baselines: `03_scoreboard/IMPROVEMENT_TRACKER.md`.
 

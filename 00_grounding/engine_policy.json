@@ -377,8 +377,8 @@
       }
     }
   },
-  "version": 15,
-  "updated": "2026-09-18T18:35:10-04:00",
+  "version": 16,
+  "updated": "2026-09-18T18:37:38-04:00",
   "rules": {
     "min_n": 8,
     "mute_below": 0.45,
@@ -546,6 +546,12 @@
         "Consumer Defensive.S1_SECTOR_FACTORS: 0.5 -> 1.0 (n=20, hit=0.55)",
         "Healthcare.S0_SHARED_MACRO: 0.0 -> 0.5 (n=13, hit=0.462)",
         "Technology.S1_SECTOR_FACTORS: 0.5 -> 1.0 (n=16, hit=0.562)"
+      ]
+    },
+    {
+      "at": "2026-09-18T18:37:38-04:00",
+      "changes": [
+        "hold"
       ]
     }
   ]
