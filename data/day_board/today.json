@@ -1,6 +1,6 @@
 {
   "date": "2026-09-18",
-  "generated_at": "2026-09-18T06:43:05.305878-04:00",
+  "generated_at": "2026-09-18T06:43:13.513116-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -41,24 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "general_predict",
-      "title": "General market predict",
-      "date": "2026-09-18",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-18T04:37:22.639666-04:00",
-      "files": [
-        {
-          "path": "01_daily/general/2026-09-18_predict.md",
-          "ok": true,
-          "reason": "",
-          "size": 15159,
-          "preview": "# Premarket Prediction \u2014 2026-09-18\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 4.861 (uncertainty multiplier \u00d71.0) | confidence 0.694\n>\n> **Good news vs bad news:** good +2.25 pts vs bad -4.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - Asia composite +1.11%\n> - ES/NQ +1.18%/+1.61%\n> - WTI/Brent offered -6.5%/-6.21%\n> - BoJ hike digested (yen weaker, Nikkei up)\n> - HY contained 2.70\n>\n> **Bad news driving this:**\n> - 1w 10Y +18bp at 5.01 handle\n> - hawkish SEP / ~50% October hike\n> - IRGC Hormuz tanker hit (oil not confirming)\n> - Europe -0.54% partial\n> - housing still cracking\n>\n> **market uncertainty: **elevated** | VIX 15.22 | policy-uncertainty index 106.54 (1d -149.78)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udfe2 Asia overnight session: +0.5 \u00d7 2.0 = +1.0\n> - \ud83d\udd34 Europe session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Over"
-        }
-      ],
-      "preview": "# Premarket Prediction \u2014 2026-09-18\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 4.861 (uncertainty multiplier \u00d71.0) | confidence 0.694\n>\n> **Good news vs bad news:** good +2.25 pts vs bad -4.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - Asia composite +1.11%\n> - ES/NQ +1.18%/+1.61%\n> - WTI/Brent offered -6.5%/-6.21%\n> - BoJ hike digested (yen weaker, Nikkei up)\n> - HY contained 2.70\n>\n> **Bad news driving this:**\n> - 1w 10Y +18bp at 5.01 handle\n> - hawkish SEP / ~50% October hike\n> - IRGC Hormuz tanker hit (oil not confirming)\n> - Europe -0.54% partial\n> - housing still cracking\n>\n> **market uncertainty: **elevated** | VIX 15.22 | policy-uncertainty index 106.54 (1d -149.78)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udfe2 Asia overnight session: +0.5 \u00d7 2.0 = +1.0\n> - \ud83d\udd34 Europe session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Over"
-    },
     {
       "key": "sector_board",
       "title": "Sector board",
@@ -275,6 +257,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 6.18, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': 3.549, 'dir': 'up', 'conf': 0.642, 'source': 'llm'}, Consumer Cyclical={'score': 4.013, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Consumer Defensive={'score': -0.125, 'dir': 'up', 'conf': 0.405, 'source': 'llm'}, Energy={'score': -3.733, 'dir': 'down', 'conf': 0.649, 'source': 'llm'}, Financial={'score': 3.519, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Healthcare={'score': 2.404, 'dir': 'up', 'conf': 0.596, 'source': 'llm'}, Industrials={'score': 4.138, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-18\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-18",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-18T06:43:12.686821-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-18_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2296349,
+          "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 SMTC, HPE, AMD, NVDA, ANET"
+        }
+      ],
+      "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 SMTC, HPE, AMD, NVDA, ANET"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

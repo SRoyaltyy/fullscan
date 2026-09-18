@@ -1,6 +1,6 @@
 {
   "date": "2026-09-18",
-  "generated_at": "2026-09-18T06:43:05.305878-04:00",
+  "generated_at": "2026-09-18T06:43:13.513116-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -585,7 +585,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5902",
-          "size": 2271385
+          "size": 2296349
         },
         {
           "key": "peers",
@@ -642,9 +642,9 @@
           "size": 6300795
         }
       ],
-      "said": "204 rows",
+      "said": "202 rows",
       "bullets": [
-        "SMTC, HPE, AMD, ANET, NVDA"
+        "SMTC, HPE, AMD, NVDA, ANET"
       ]
     },
     {
@@ -1453,6 +1453,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 6.18, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Communication Services={'score': 3.549, 'dir': 'up', 'conf': 0.642, 'source': 'llm'}, Consumer Cyclical={'score': 4.013, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Consumer Defensive={'score': -0.125, 'dir': 'up', 'conf': 0.405, 'source': 'llm'}, Energy={'score': -3.733, 'dir': 'down', 'conf': 0.649, 'source': 'llm'}, Financial={'score': 3.519, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Healthcare={'score': 2.404, 'dir': 'up', 'conf': 0.596, 'source': 'llm'}, Industrials={'score': 4.138, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-18\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-18",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-18T06:43:12.686821-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-18_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2296349,
+          "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 SMTC, HPE, AMD, NVDA, ANET"
+        }
+      ],
+      "preview": "5902 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 SMTC, HPE, AMD, NVDA, ANET"
     }
   ],
   "href": {
