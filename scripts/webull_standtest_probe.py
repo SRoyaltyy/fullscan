@@ -151,6 +151,25 @@ def main():
         (out_dir / "standtest_methods.json").write_text(json.dumps(doc, indent=2))
         return 0
 
+
+    if mode == "cancel":
+        want = _env("STANDTEST_ORDER_ID")
+        if not want:
+            doc = {"ok": False, "stage": "cancel", "error": "STANDTEST_ORDER_ID required", "et": now_et().isoformat()}
+            print(json.dumps(doc, indent=2))
+            (out_dir / "standtest_cancel.json").write_text(json.dumps(doc, indent=2))
+            return 2
+        try:
+            res = trade.order_v3.cancel_order(aid, want)
+            payload = _json(res, "cancel_order")
+            doc = {"ok": True, "stage": "cancel", "et": now_et().isoformat(), "order_id": want,
+                   "payload_snip": json.dumps(payload)[:500]}
+        except Exception as e:
+            doc = {"ok": False, "stage": "cancel", "et": now_et().isoformat(), "order_id": want, "error": str(e)[:400]}
+        print(json.dumps(doc, indent=2))
+        (out_dir / "standtest_cancel.json").write_text(json.dumps(doc, indent=2))
+        return 0 if doc.get("ok") else 4
+
     if mode == "cash":
         return 0
 

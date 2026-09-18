@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "cash | place | status | methods"
+        description: "cash | place | status | methods | cancel"
         type: choice
-        options: [cash, place, status, methods]
+        options: [cash, place, status, methods, cancel]
         default: cash
       ticker:
         required: false
