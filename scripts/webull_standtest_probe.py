@@ -153,13 +153,16 @@ def main():
     qty = int(_env("STANDTEST_QTY", "1") or "1")
     coid = (_env("STANDTEST_COID") or f"STANDTEST-20260918-{int(time.time())}")[:32]
     body = {
+        "combo_type": "NORMAL",
         "client_order_id": coid,
         "symbol": ticker,
-        "side": "BUY",
+        "instrument_type": "EQUITY",
+        "market": "US",
         "order_type": "MARKET",
-        "time_in_force": "DAY",
-        "support_trading_session": "CORE",
         "quantity": str(qty),
+        "support_trading_session": "CORE",
+        "side": "BUY",
+        "time_in_force": "DAY",
         "entrust_type": "QTY",
     }
     try:
