@@ -1,12 +1,11 @@
 {
   "date": "2026-09-18",
-  "generated_at": "2026-09-18T04:26:57.844776-04:00",
+  "generated_at": "2026-09-18T04:29:42.010847-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-18_predict.md` \u2014 missing",
-    "MISSING Sector board JSON `01_daily/sectors/2026-09-18/_board.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-09-18_judge.md` \u2014 missing"
+    "MISSING Sector board JSON `01_daily/sectors/2026-09-18/_board.json` \u2014 missing"
   ],
   "counts": {
     "ok": 4,
@@ -141,7 +140,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 3,
+      "n_req_ok": 4,
       "n_req": 20,
       "n_opt_ok": 2,
       "n_opt": 3,
@@ -205,9 +204,9 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-09-18_judge.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 10852
         },
         {
           "key": "research_json",
@@ -261,7 +260,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7276
+          "size": 7270
         },
         {
           "key": "status",
@@ -554,9 +553,9 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-09-18_judge.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 10852
         },
         {
           "key": "in_weather",
@@ -1165,6 +1164,31 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-18T04:26:50.128969-04:00\nraw=157 unique_events=3 tickers=32"
+    },
+    {
+      "key": "news_judge",
+      "title": "News judge",
+      "date": "2026-09-18",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-18T04:29:41.427684-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-18_judge.md",
+          "ok": true,
+          "reason": "",
+          "size": 10852,
+          "preview": "# News Judge \u2014 2026-09-18"
+        },
+        {
+          "path": "01_daily/news/2026-09-18_judge.json",
+          "ok": true,
+          "reason": "",
+          "size": 1181,
+          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+        }
+      ],
+      "preview": "# News Judge \u2014 2026-09-18 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
     }
   ],
   "href": {
