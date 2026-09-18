@@ -1,6 +1,6 @@
 {
   "date": "2026-09-08",
-  "generated_at": "2026-09-17T23:43:35.206115-04:00",
+  "generated_at": "2026-09-17T23:46:16.287996-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [
@@ -139,7 +139,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 17,
+      "n_req_ok": 18,
       "n_req": 20,
       "n_opt_ok": 3,
       "n_opt": 3,
@@ -250,7 +250,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6915
+          "size": 7082
         },
         {
           "key": "qc",
@@ -259,7 +259,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7197
+          "size": 7191
         },
         {
           "key": "status",
@@ -365,9 +365,9 @@
           "name": "Sector predict \u2014 technology",
           "path": "01_daily/sectors/2026-09-08/technology_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 18970
         },
         {
           "key": "sector_utilities",
@@ -379,7 +379,7 @@
           "size": 0
         }
       ],
-      "said": "general DOWN  -11.475 \u00b7 sectors 1 up / 4 down / 4 flat \u00b7 news 30 items",
+      "said": "general DOWN  -11.475 \u00b7 sectors 2 up / 4 down / 4 flat \u00b7 news 30 items",
       "bullets": [
         "bad: Houthi attack on Saudi energy (73 wounded)",
         "bad: Iran tanker attack in Hormuz",
@@ -533,7 +533,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 6915
+          "size": 7082
         },
         {
           "key": "in_actions",
@@ -640,7 +640,7 @@
           "path": "dashboard/index.html",
           "role": "optional",
           "status": "OK",
-          "reason": "generated=2026-09-17T20:51:59.413465-04:00 last=2026-09-17",
+          "reason": "live-book poller + today.json (2026-09-08)",
           "size": 6300779
         }
       ],
@@ -675,7 +675,7 @@
           "path": "dashboard/index.html",
           "role": "required",
           "status": "OK",
-          "reason": "generated=2026-09-17T20:51:59.413465-04:00 last=2026-09-17",
+          "reason": "live-book poller + today.json (2026-09-08)",
           "size": 6300779
         },
         {
@@ -771,7 +771,7 @@
       "direction": "down"
     },
     "sectors": {
-      "said": "1 up / 4 down / 4 flat",
+      "said": "2 up / 4 down / 4 flat",
       "bullets": [
         "XLB FLAT +1.1",
         "XLC DOWN -6.8",
@@ -782,7 +782,7 @@
         "XLV FLAT +0.9",
         "XLI FLAT -3.6",
         "XLRE DOWN -4.5",
-        "XLK missing",
+        "XLK UP +15.1",
         "XLU missing"
       ]
     },
@@ -830,6 +830,73 @@
         }
       ],
       "preview": "raw=400 usable=37 single=33 \u00b7 September Fed decision is now a coin flip as rate hike odds increase post Warsh | Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his w | Fed\u2019s Warsh Cites \u201cReadiness to Act\u201d on Inflation. Markets See a September Rate  | Economists betting on a rate hike after Fed chair speech - RealEstateNews.com | Fed Chairman Kevin Warsh Leaves the Door Open for September Rate Hike in Jackson \u00b7 # News Parse v2 \u2014 2026-09-17T23:43:33.788223-04:00\nWindow\u224848h | raw=400 | usable=37 | single_name=33 | noise_dropped=330\nusable polarity={'+': 1, '-': 8, 'mixed': 0, 'neutral': 28}"
+    },
+    {
+      "key": "sector_one",
+      "title": "Sector predict Technology (10/11)",
+      "date": "2026-09-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-17T23:46:15.378339-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-08/technology_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 18970,
+          "preview": "# Sector Prediction \u2014 Technology \u2014 2026-09-08\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **15.131** (mult 0.9)\n- regime: risk_on\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **12.0** (NQ +2.66%, ES +2.02%) \u00b7 index_carry **-2.869** (general -11.475) \u00b7 llm_overlay **6.0** (raw 6.525)"
+        },
+        {
+          "path": "01_daily/sectors/2026-09-08/technology_predict_trace.md",
+          "ok": true,
+          "reason": "",
+          "size": 16908,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Technology 2026-09-08 retry1\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (151,589 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"XLK technology sector September 18 2026 premarket outlook\"* \u2192 \u274c search failed (searxng#1: 404 Client Error: Not Found for url: https://searxng-production-f4dd.up.railway.app/search?q=XLK+technology+s)\n**Step 2 \u2014 Research.** The model wanted to know: *\"Nvidia AI capex hyperscaler spending September 2026\"* \u2192 got 6 results (via ddg)\n- AI Capex 2026: The $690B Infrastructure Sprint - Futurum (https://futurumgroup.com/insights/ai-capex-2026-the-690b-infrastructure-sprint/)\n- Technology: Hyperscaler Capex 2026 Estimates - CreditSights (https://know.creditsights.com/insights/t"
+        },
+        {
+          "path": "01_daily/_transcripts/2026-09-08_sector_technology_predict.json",
+          "ok": true,
+          "reason": "",
+          "size": 236799,
+          "preview": "keys: model, messages"
+        },
+        {
+          "path": "01_daily/2026-09-08_preopen_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 7191,
+          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
+        },
+        {
+          "path": "01_daily/sectors/2026-09-08/_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 1216,
+          "preview": "keys: date, n_ok, n_total, sectors"
+        },
+        {
+          "path": "01_daily/sectors/2026-09-08/_BOARD.md",
+          "ok": true,
+          "reason": "",
+          "size": 2705,
+          "preview": "# Sector Board \u2014 2026-09-08\nGenerated: **2026-09-17T23:46:15.363401-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+        },
+        {
+          "path": "01_daily/sectors/2026-09-08/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 7082,
+          "preview": "keys: date, generated_at, sectors"
+        },
+        {
+          "path": "03_scoreboard/scoreboard.json",
+          "ok": true,
+          "reason": "",
+          "size": 761292,
+          "preview": "keys: runs"
+        }
+      ],
+      "preview": "# Sector Prediction \u2014 Technology \u2014 2026-09-08\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **15.131** (mult 0.9)\n- regime: risk_on\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **12.0** (NQ +2.66%, ES +2.02%) \u00b7 index_carry **-2.869** (general -11.475) \u00b7 llm_overlay **6.0** (raw 6.525) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Technology 2026-09-08 retry1\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (151,589 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"XLK technology sector September 18 2026 premarket outlook\"* \u2192 \u274c search failed (searxng#1: 404 Client Error: Not Found for url: https://searxng-production-f4dd.up.railway.app/search?q=XLK+technology+s)\n**Step 2 \u2014 Research.** The model wanted to know: *\"Nvidia AI capex hyperscaler spending September 2026\"* \u2192 got 6 results (via ddg)\n- AI Capex 2026: The $690B Infrastructure Sprint - Futurum (https://futurumgroup.com/insights/ai-capex-2026-the-690b-infrastructure-sprint/)\n- T"
     }
   ],
   "href": {
