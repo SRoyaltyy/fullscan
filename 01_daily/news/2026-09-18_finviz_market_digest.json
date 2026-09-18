@@ -1,0 +1,59 @@
+{
+  "date": "2026-09-18",
+  "generated_at": "2026-09-18T04:07:10.317391-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-09-18",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US futures point to a modestly higher open as traders look to industrial production data in a catalyst-light session",
+  "raw_text": "- S&P 500 Futures (@ES) +0.38%, Dow Jones Futures (@YM) +0.27%, Nasdaq 100 Futures (@NQ) +0.69%, and Russell 2000 Futures (@ER2) +0.22% indicate a gap-up open after the prior session's rebound\n- Asian equities trade mostly higher while major European indices edge lower amid falling oil (@CL) prices\n- No significant pre-market stock-specific movers or earnings reactions have been reported in the minutes after 4 AM ET\n- Investors will monitor US industrial production and capacity utilization data at 9:15 AM ET for potential volatility cues",
+  "raw_summary_md": "- **S&P 500 Futures** ([@ES](https://finviz.com/futures_charts?t=ES)) **+0.38%**, **Dow Jones Futures** ([@YM](https://finviz.com/futures_charts?t=YM)) **+0.27%**, **Nasdaq 100 Futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) **+0.69%**, and **Russell 2000 Futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) **+0.22%** indicate a **gap-up open** after the prior session's rebound\n- **Asian equities trade mostly higher** while **major European indices edge lower** amid **falling oil** ([@CL](https://finviz.com/futures_charts?t=CL)) prices\n- **No significant pre-market stock-specific movers or earnings reactions** have been reported in the minutes after **4 AM ET**\n- Investors will monitor **US industrial production and capacity utilization data** at **9:15 AM ET** for potential volatility cues",
+  "index_moves": [],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [],
+  "named_leaders": [],
+  "calendar": [],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 288481,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-09-18T04:05:58.733",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}
