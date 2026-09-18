@@ -1,6 +1,6 @@
 {
   "date": "2026-09-18",
-  "generated_at": "2026-09-18T04:29:49.184204-04:00",
+  "generated_at": "2026-09-18T04:37:23.248878-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -12,27 +12,20 @@
   "buy_1d": [],
   "sell_1d": [],
   "flatten": {},
-  "general": {},
+  "general": {
+    "said": "UP  4.861",
+    "bullets": [
+      "bad: 1w 10Y +18bp at 5.01 handle",
+      "bad: hawkish SEP / ~50% October hike",
+      "bad: IRGC Hormuz tanker hit (oil not confirming)",
+      "good: Asia composite +1.11%",
+      "good: ES/NQ +1.18%/+1.61%"
+    ],
+    "score": "4.861",
+    "direction": "up"
+  },
   "sectors": {},
   "lands": [
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-09-18",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-18T04:14:58.566198-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-09-18_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1119394,
-          "preview": "5902 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5902 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "weather",
       "title": "Weather / regime (offline retry)",
@@ -193,6 +186,24 @@
         }
       ],
       "preview": "# News Judge \u2014 2026-09-18 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "date": "2026-09-18",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-18T04:37:22.639666-04:00",
+      "files": [
+        {
+          "path": "01_daily/general/2026-09-18_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 15159,
+          "preview": "# Premarket Prediction \u2014 2026-09-18\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 4.861 (uncertainty multiplier \u00d71.0) | confidence 0.694\n>\n> **Good news vs bad news:** good +2.25 pts vs bad -4.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - Asia composite +1.11%\n> - ES/NQ +1.18%/+1.61%\n> - WTI/Brent offered -6.5%/-6.21%\n> - BoJ hike digested (yen weaker, Nikkei up)\n> - HY contained 2.70\n>\n> **Bad news driving this:**\n> - 1w 10Y +18bp at 5.01 handle\n> - hawkish SEP / ~50% October hike\n> - IRGC Hormuz tanker hit (oil not confirming)\n> - Europe -0.54% partial\n> - housing still cracking\n>\n> **market uncertainty: **elevated** | VIX 15.22 | policy-uncertainty index 106.54 (1d -149.78)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udfe2 Asia overnight session: +0.5 \u00d7 2.0 = +1.0\n> - \ud83d\udd34 Europe session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Over"
+        }
+      ],
+      "preview": "# Premarket Prediction \u2014 2026-09-18\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 4.861 (uncertainty multiplier \u00d71.0) | confidence 0.694\n>\n> **Good news vs bad news:** good +2.25 pts vs bad -4.0 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - Asia composite +1.11%\n> - ES/NQ +1.18%/+1.61%\n> - WTI/Brent offered -6.5%/-6.21%\n> - BoJ hike digested (yen weaker, Nikkei up)\n> - HY contained 2.70\n>\n> **Bad news driving this:**\n> - 1w 10Y +18bp at 5.01 handle\n> - hawkish SEP / ~50% October hike\n> - IRGC Hormuz tanker hit (oil not confirming)\n> - Europe -0.54% partial\n> - housing still cracking\n>\n> **market uncertainty: **elevated** | VIX 15.22 | policy-uncertainty index 106.54 (1d -149.78)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udfe2 Asia overnight session: +0.5 \u00d7 2.0 = +1.0\n> - \ud83d\udd34 Europe session: -0.5 \u00d7 2.0 = -1.0\n> - \u26aa Over"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
