@@ -30,6 +30,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import os
 import re
 import uuid
@@ -150,19 +151,32 @@ def parse_account_id(payload, preferred: str = "") -> str:
 
 
 def parse_balance(payload) -> tuple[float, float]:
-    row = payload if isinstance(payload, dict) else {}
-    data = row.get("data") if isinstance(row, dict) else None
-    if isinstance(data, dict):
-        row = data
-    elif isinstance(data, list) and data and isinstance(data[0], dict):
-        row = data[0]
-    cash = _num(row, "available_cash", "availableCash", "cash_balance",
-                "cashBalance", "cash", "total_cash", "totalCash",
-                "total_cash_value", "totalCashValue", "settled_cash",
-                "settledCash")
-    power = _num(row, "buying_power", "buyingPower",
-                 "available_buying_power", "availableBuyingPower",
-                 "day_buying_power", "dayBuyingPower", default=cash)
+    # Never turn an unknown response schema into a funded/connected $0 account.
+    keys = ("available_cash", "availableCash", "cash_balance", "cashBalance",
+            "cash", "total_cash", "totalCash", "total_cash_value", "totalCashValue",
+            "settled_cash", "settledCash")
+    def visit(value):
+        if isinstance(value, list):
+            for item in value:
+                yield from visit(item)
+        elif isinstance(value, dict):
+            currency = value.get("currency") or value.get("currency_code")
+            if currency and str(currency).upper() != "USD":
+                return
+            if any(value.get(k) not in (None, "") for k in keys):
+                yield value
+            for key in ("data", "account_currency_assets", "currency_assets", "assets", "balances"):
+                if key in value:
+                    yield from visit(value[key])
+    rows = list(visit(payload))
+    if len(rows) != 1:
+        raise ValueError("unrecognized or ambiguous USD cash balance response")
+    row = rows[0]
+    cash = _num(row, *keys, default=float("nan"))
+    power = _num(row, "buying_power", "buyingPower", "available_buying_power",
+                 "availableBuyingPower", "day_buying_power", "dayBuyingPower", default=cash)
+    if not math.isfinite(cash) or not math.isfinite(power):
+        raise ValueError("invalid cash/buying power")
     return cash, power
 
 
@@ -216,7 +230,7 @@ def load_hot4_published(date: str, payload: dict | None = None) -> dict:
         except (OSError, ValueError):
             continue
         rec = _hot4_from_payload(raw)
-        if rec:
+        if rec and str(rec.get("date") or rec.get("clock_legal_for") or "") == date:
             rec["_path"] = str(path)
             return rec
     return {}
@@ -342,10 +356,10 @@ def plan_hot4_for_broker(date: str, snap: BrokerSnap,
     published = load_hot4_published(date, payload)
     buys = list(published.get("buy") or [])
     use_date = str(published.get("date") or date)
-    stale = False
+    stale = bool(published and published.get("status") not in ("ok", "sit"))
     source = "today_strategies"
     look_err = ""
-    if not buys:
+    if not published:
         looked = resolve_rows(date, panel)
         rec_by = {r["name"]: r for r in fm.build_recipes()}
         rec = rec_by.get(HOT4) or {}
@@ -543,10 +557,42 @@ class PaperAPI:
         except Exception as e:  # noqa: BLE001
             return BrokerSnap(env=self.env, cash=0, positions={},
                               connected=False, error=str(e)[:240])
-        cash, power = parse_balance(bal)
+        try:
+            cash, power = parse_balance(bal)
+        except ValueError as e:
+            return BrokerSnap(env=self.env, cash=0, positions={}, connected=False, error=str(e))
         return BrokerSnap(env=self.env, cash=cash, buying_power=power,
                           positions=parse_positions(pos), connected=True,
                           acc_id=self.account_id)
+
+    def place_batch(self, tickets):
+        if self.host != PAPER_HOST or self.trade is None or not self.account_id:
+            raise RuntimeError("sandbox account not connected")
+        bodies = [order_body(t) for t in tickets]
+        payload = self._json(self.trade.order_v3.place_order(self.account_id, bodies), "place_order_batch")
+        def rows(value):
+            if isinstance(value, list):
+                for x in value:
+                    yield from rows(x)
+            elif isinstance(value, dict):
+                if value.get("client_order_id"):
+                    yield value
+                for key in ("data", "orders", "result"):
+                    if key in value:
+                        yield from rows(value[key])
+        out = {}
+        ack = datetime.now().astimezone().isoformat()
+        envelope_ok = not isinstance(payload, dict) or (
+            not payload.get("error") and payload.get("success") is not False and
+            str(payload.get("code", "0")).upper() in ("0", "200", "SUCCESS", "OK"))
+        for row in rows(payload):
+            ok = (envelope_ok and not row.get("error") and not row.get("error_code") and
+                  row.get("success") is not False and
+                  str(row.get("code", "0")).upper() in ("0", "200", "SUCCESS", "OK") and
+                  str(row.get("status", "")).upper() not in ("REJECTED", "ERROR", "FAILED"))
+            out[str(row["client_order_id"])] = {"ok": ok, "order_id": parse_order_id(row),
+                                                "acknowledged_at": ack}
+        return out
 
     def place(self, ticket: dict, env: str) -> dict:
         if self.trade is None or not self.account_id:
@@ -557,8 +603,25 @@ class PaperAPI:
             payload = self._json(res, "place_order")
         except Exception as e:  # noqa: BLE001
             return {"ok": False, "error": str(e)[:240]}
-        oid = parse_order_id(payload) or body[0]["client_order_id"]
-        return {"ok": True, "order_id": oid, "order_type": "MARKET"}
+        # HTTP 200 is not sufficient evidence of broker acceptance.
+        def rejected(value):
+            if isinstance(value, list):
+                return any(rejected(x) for x in value)
+            if not isinstance(value, dict):
+                return False
+            if value.get("success") is False or value.get("error") or value.get("error_code"):
+                return True
+            if str(value.get("status", "")).upper() in ("REJECTED", "FAILED", "ERROR"):
+                return True
+            if "code" in value and str(value["code"]).upper() not in ("0", "200", "SUCCESS", "OK"):
+                return True
+            return any(rejected(value[k]) for k in ("data", "orders") if k in value)
+        oid = parse_order_id(payload)
+        if rejected(payload) or not oid:
+            return {"ok": False, "error": "broker rejection or missing acknowledgment; reconcile before retry",
+                    "client_order_id": body[0]["client_order_id"]}
+        return {"ok": True, "order_id": oid, "order_type": "MARKET",
+                "acknowledged_at": datetime.now().astimezone().isoformat()}
 
 
 def write_last(doc: dict) -> Path:
@@ -590,6 +653,7 @@ def _plan(date: str, snap: BrokerSnap, *, source: str, combo: str) -> dict:
 def run(date: str | None, *, env: str = "paper", submit: bool = False,
         live: bool = False, write: bool = True, source: str = "hot4",
         combo: str = PAPER_COMBO, allow_stale: bool = False) -> int:
+    requested_submit = submit
     env = "real" if env == "real" else "paper"
     source = _norm_source(source)
     combo = combo or PAPER_COMBO
@@ -640,7 +704,7 @@ def run(date: str | None, *, env: str = "paper", submit: bool = False,
             write_last(last)
             if TODAY_JSON.is_file():
                 inject_today_from_disk()
-        return 0
+        return 2 if requested_submit else 0
 
     card = _plan(date, snap, source=source, combo=combo)
     for t in card.get("tickets") or []:
@@ -674,7 +738,11 @@ def run(date: str | None, *, env: str = "paper", submit: bool = False,
             write_card(card)
         write_last(last)
         inject_today_from_disk()
-    return 0
+    failed = (not submit or card.get("stale") or card.get("look_error") or
+              any(x.get("status") == "error" for x in last["sent"]) or
+              (source == "hot4" and not card.get("hard_red") and
+               any(x.get("kind") in ("cash", "no_price") for x in card.get("skipped", []))))
+    return 2 if requested_submit and failed else 0
 
 
 def main(argv: list[str] | None = None) -> int:

@@ -1,0 +1,12 @@
+[Unit]
+Description=Warm sandbox order executor at 08:15 New York, independent of GitHub queues
+
+[Timer]
+OnCalendar=Mon..Fri *-*-* 08:15:00 America/New_York
+AccuracySec=1s
+RandomizedDelaySec=0
+Persistent=false
+Unit=fullscan-paper-open.service
+
+[Install]
+WantedBy=timers.target

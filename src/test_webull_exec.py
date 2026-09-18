@@ -139,7 +139,7 @@ def test_not_connected_writes_last_without_replay(tmp_path=None) -> None:
             mock.patch.object(we, "write_last") as wl, \
             mock.patch.object(we, "inject_today_from_disk"):
         rc = we.run("2026-09-17", submit=True, write=True)
-    assert rc == 0
+    assert rc == 2
     last = wl.call_args[0][0]
     assert last["connected"] is False
     assert last["n_tickets"] == 0
@@ -180,7 +180,7 @@ def test_stale_combo_does_not_submit() -> None:
             mock.patch.object(we, "write_last") as wl, \
             mock.patch.object(we, "inject_today_from_disk"):
         rc = we.run("2026-09-14", submit=True, write=True, source="combo")
-    assert rc == 0
+    assert rc == 2
     last = wl.call_args[0][0]
     assert last["submit"] is False
     assert last["sent"][0]["status"] == "dry_run"
@@ -277,26 +277,14 @@ def test_paper_order_is_market_not_limit() -> None:
     assert body["side"] == "BUY"
 
 
-def test_yml_poke_on_main_submits() -> None:
-    """Cloud agent cannot workflow_dispatch; a main poke must submit paper."""
-    yml = Path(__file__).resolve().parent.parent.joinpath(
-        ".github", "workflows", "webull_paper.yml"
-    ).read_text(encoding="utf-8")
-    assert "branches: [main]" in yml
-    assert '".github/workflows/webull_paper.yml"' in yml
-    assert "github.event_name == 'push'" in yml
-    assert "github.event_name == 'schedule'" in yml
-    assert "--source hot4" in yml
-    assert "--submit" in yml
-    assert "combo_sh_macd_5050_shared" not in yml
-    assert "--source combo" not in yml
-    assert "--env real" not in yml
-    assert "POKE 2026-09-17" in yml
-    assert 'cron: "30 13 * * 1-5"' in yml
-    assert 'cron: "30 14 * * 1-5"' in yml
-    assert "src.open_0930_clock" in yml
-    assert "workflow_dispatch" in yml
-    # A 01:00 merge poke is clock-gated; daytime poke still submits.
+def test_yml_warms_before_bell_and_has_one_automatic_sender() -> None:
+    root = Path(__file__).resolve().parent.parent
+    yml = (root / ".github/workflows/webull_paper.yml").read_text()
+    assert "7 12,13" in yml
+    assert "src.paper_open" in yml
+    assert "workflow_run:" not in yml
+    assert "  push:" not in yml
+    assert "src.webull_exec" not in (root / ".github/workflows/open_0930.yml").read_text()
 
 
 def main() -> None:
@@ -309,7 +297,7 @@ def main() -> None:
     test_env_strips_quoted_secrets()
     test_not_connected_writes_last_without_replay()
     test_stale_combo_does_not_submit()
-    test_yml_poke_on_main_submits()
+    test_yml_warms_before_bell_and_has_one_automatic_sender()
     test_hot4_tickets_long_only_skip_held_cash_and_sit()
     test_hot4_zero_cash_is_honest()
     test_paper_order_is_market_not_limit()

@@ -1,0 +1,20 @@
+[Unit]
+Description=Pre-armed Webull sandbox opening batch
+After=network-online.target time-sync.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=gha
+Group=gha
+WorkingDirectory=/home/gha/fullscan-paper-open
+EnvironmentFile=/home/gha/.fullscan-paper.env
+Environment=PYTHONUNBUFFERED=1
+Environment=PAPER_OPEN_STATE=/home/gha/fullscan-persist/paper-open
+ExecStartPre=/bin/bash /home/gha/fullscan-paper-open/scripts/check_paper_clock.sh
+ExecStart=/home/gha/fullscan-paper-open/.venv/bin/python -m src.paper_open --submit --owner ecs
+TimeoutStartSec=7200
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

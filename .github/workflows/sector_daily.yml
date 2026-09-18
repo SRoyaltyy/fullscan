@@ -32,11 +32,15 @@ on:
         default: "false"
 
 permissions:
+  actions: write
   contents: write
 
 concurrency:
   group: sector-daily
   cancel-in-progress: false
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   sector-daily:

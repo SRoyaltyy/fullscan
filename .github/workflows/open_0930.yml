@@ -1,189 +1,23 @@
 name: Open 09:30 pack
 
-# Owner of the bell. Publishes session-open tickets, restamps .io, and
-# submits union_hot_n4_h1 (hot4, long-only MARKET) to Webull paper at 09:30 ET.
-# Does not wait on Pre-Open / Stock Book / sleeve-merge / 09:35 orch.
-# GH cron is UTC: 13:30 = EDT 09:30 / EST 08:30, 14:30 = EST 09:30 /
-# EDT 10:30. The clock waits from 08:00–09:29 (70 min max covers the
-# EST 08:30 fire). A 10:30 EDT heal is skip-held on paper. Weekend /
-# NYSE holiday / before 08:00 / after 16:00 = skip.
-# CLOCK: a main push that touches this file starts the job (workflow_dispatch
-# is 403 from the cloud agent). Before 08:00 ET the clock gate no-ops.
-
+# Compatibility entry point for existing callers. Decision publication is
+# readiness-driven; paper submission has a single independent clock owner.
 on:
-  schedule:
-    - cron: "30 13 * * 1-5"   # 09:30 ET while EDT
-    - cron: "30 14 * * 1-5"   # 09:30 ET while EST
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/open_0930.yml"
   workflow_dispatch:
     inputs:
       run_date:
-        description: "YYYY-MM-DD (empty = today ET)"
+        description: YYYY-MM-DD (empty means today ET)
         required: false
-        default: ""
-      submit:
-        description: "Place paper orders (unchecked = dry-run)"
-        type: boolean
-        default: true
-
+        default: ''
 permissions:
-  contents: write
   actions: write
-  pages: write
-
-concurrency:
-  group: open-0930
-  cancel-in-progress: false
-
 jobs:
-  boards:
+  publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
-    outputs:
-      go: ${{ steps.clock.outputs.go }}
-      date: ${{ steps.clock.outputs.date }}
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Clock gate (09:30 ET)
-        id: clock
-        run: |
-          set -euo pipefail
-          DATE="${{ github.event.inputs.run_date }}"
-          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
-          echo "date=$DATE" >> "$GITHUB_OUTPUT"
-          if python3 -m src.open_0930_clock --wait --max-wait-s 4200; then
-            echo "go=yes" >> "$GITHUB_OUTPUT"
-            echo "09:30 window — publish boards"
-          else
-            echo "go=no" >> "$GITHUB_OUTPUT"
-            echo "outside 08:00–16:00 ET session / holiday — skip boards"
-          fi
-
-      - name: Install
-        if: steps.clock.outputs.go == 'yes'
-        run: pip install pandas pyarrow openpyxl requests
-
-      - name: Publish session-open tickets + Pages
-        if: steps.clock.outputs.go == 'yes'
+      - name: Request readiness evaluation and immediate publication
         env:
-          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
-          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
-          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
-          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
-          FINVIZ_EXPORT: ${{ secrets.FINVIZ_EXPORT }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          set -euo pipefail
-          DATE="${{ steps.clock.outputs.date }}"
-          chmod +x scripts/publish_open_pack.sh
-          bash scripts/publish_open_pack.sh "$DATE"
-          bash scripts/safe_git_push.sh \
-            "auto: open 09:30 tickets ${DATE}" \
-            data/day_board/strategy_tickets.json \
-            data/day_board/today_strategies.json \
-            data/day_board/today.json \
-            data/factor_mine/strategy_tickets.json \
-            dashboard/factor-mine/strategy_tickets.json \
-            dashboard/factor-mine/today_strategies.json \
-            dashboard/today_strategies.json \
-            dashboard/factor-mine/today.json \
-            data/day_board/hold_live_px.json \
-            dashboard/factor-mine/hold_live_px.json \
-            dashboard/sleeve-merge/index.html \
-            dashboard/strategy-board/index.html \
-            dashboard/index.html || true
-          if [ -f "data/day_board/${DATE}_strategy_tickets.json" ]; then
-            bash scripts/safe_git_push.sh \
-              "auto: open 09:30 tickets dated ${DATE}" \
-              "data/day_board/${DATE}_strategy_tickets.json" || true
-          fi
-          gh workflow run deploy-dashboard.yml --ref main || true
-
-  paper:
-    runs-on: ubuntu-latest
-    timeout-minutes: 90
-    concurrency:
-      group: webull-paper
-      cancel-in-progress: false
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Clock gate (09:30 ET)
-        id: clock
-        run: |
-          set -euo pipefail
-          DATE="${{ github.event.inputs.run_date }}"
-          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
-          echo "date=$DATE" >> "$GITHUB_OUTPUT"
-          if python3 -m src.open_0930_clock --wait --max-wait-s 4200; then
-            echo "go=yes" >> "$GITHUB_OUTPUT"
-          else
-            echo "go=no" >> "$GITHUB_OUTPUT"
-            echo "outside 08:00–16:00 ET session / holiday — skip Webull"
-          fi
-
-      - name: Install
-        if: steps.clock.outputs.go == 'yes'
-        run: pip install webull-openapi-python-sdk pandas numpy yfinance requests
-
-      - name: Submit hot4 MARKET to Webull paper
-        if: steps.clock.outputs.go == 'yes'
-        env:
-          WEBULL_APP_KEY: ${{ secrets.WEBULL_APP_KEY }}
-          WEBULL_APP_SECRET: ${{ secrets.WEBULL_APP_SECRET }}
-          WEBULL_ACCOUNT_ID: ${{ secrets.WEBULL_ACCOUNT_ID }}
-          WANT_SUBMIT: ${{ (github.event_name == 'schedule' || github.event_name == 'push' || inputs.submit) && 'true' || 'false' }}
-        run: |
-          set -euo pipefail
-          DATE="${{ steps.clock.outputs.date }}"
-          ARGS=(--date "$DATE" --source hot4)
-          if [ -n "${WEBULL_APP_KEY:-}" ] && [ -n "${WEBULL_APP_SECRET:-}" ] \
-             && [ "${WANT_SUBMIT}" = "true" ]; then
-            ARGS+=(--submit)
-            echo "09:30 paper submit union_hot_n4_h1 MARKET on $DATE"
-          else
-            echo "09:30 dry-run union_hot_n4_h1 MARKET on $DATE"
-          fi
-          python -m src.webull_exec "${ARGS[@]}"
-          test -s data/sleeve_merge/webull_last.json
-          python - <<'PY'
-          import json
-          from pathlib import Path
-          last = json.loads(Path("data/sleeve_merge/webull_last.json").read_text())
-          print("connected", last.get("connected"), "submit", last.get("submit"),
-                "source", last.get("source"), "combo", last.get("combo"),
-                "stale", last.get("stale"),
-                "tickets", last.get("n_tickets"), "error", last.get("error"),
-                "cash", last.get("cash"))
-          for s in last.get("sent") or []:
-              print(" ", s.get("status"), s.get("side"), s.get("ticker"),
-                    s.get("shares"), s.get("order_id") or s.get("error") or "")
-          PY
-
-      - name: Land last snapshot
-        if: steps.clock.outputs.go == 'yes'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          DATE="${{ steps.clock.outputs.date }}"
-          bash scripts/safe_git_push.sh \
-            "auto: webull paper ${DATE}" \
-            data/sleeve_merge/webull_last.json \
-            dashboard/sleeve-merge/ || true
+          GH_REPO: ${{ github.repository }}
+          RUN_DATE: ${{ inputs.run_date }}
+        run: gh workflow run publish_strategy_tickets.yml --ref main -f "run_date=${RUN_DATE}"

@@ -49,11 +49,15 @@ on:
         default: ""
 
 permissions:
+  actions: write
   contents: write
 
 concurrency:
   group: finviz-market-digest
   cancel-in-progress: false
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   capture:

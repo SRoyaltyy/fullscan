@@ -120,6 +120,7 @@ def publish(date: str, *, write: bool = True, extras: bool = True) -> dict:
             out["n_strategies"] = payload_st.get("n")
             out["n_strategies_ok"] = payload_st.get("n_ok")
         except Exception as e:  # noqa: BLE001
+            out["strategy_error"] = str(e)
             print(f"[live-boards] WARN: strategy tickets: {e}", flush=True)
 
     if write:

@@ -90,6 +90,9 @@ concurrency:
   group: preopen-all-${{ (github.event_name == 'push' || github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu') && 'ubuntu' || 'ecs' }}
   cancel-in-progress: ${{ github.event_name == 'push' || github.event_name == 'schedule' || github.event.inputs.runner == 'ubuntu' }}
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
   gate:
     name: Clock gate (merge poke is not a 01:00 packet)

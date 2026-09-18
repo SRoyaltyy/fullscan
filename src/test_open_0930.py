@@ -85,24 +85,11 @@ def test_now_et_aware() -> None:
 
 def test_open_0930_yml_owns_the_bell() -> None:
     yml = (WF / "open_0930.yml").read_text(encoding="utf-8")
-    assert 'cron: "30 13 * * 1-5"' in yml
-    assert 'cron: "30 14 * * 1-5"' in yml
-    assert "src.open_0930_clock" in yml
-    assert "--max-wait-s 4200" in yml
-    assert "scripts/publish_open_pack.sh" in yml
-    assert "pip install pandas pyarrow openpyxl requests" in yml
-    assert "union_hot_n4_h1" in yml
-    assert "--source hot4" in yml
-    assert "--submit" in yml
-    assert "src.webull_exec" in yml
-    assert "combo_sh_macd_5050_shared" not in yml
-    assert "deploy-dashboard.yml" in yml
-    assert "timeout-minutes: 90" in yml
-    assert "group: webull-paper" in yml
-    assert "workflow_run:" not in yml
-    assert "api.webull.com" not in yml
-    assert "--env real" not in yml
-    assert "flatten_robust" not in yml.lower() or "does not change" in yml.lower()
+    assert 'workflow_dispatch:' in yml
+    assert 'publish_strategy_tickets.yml' in yml
+    assert 'schedule:' not in yml
+    assert 'src.webull_exec' not in yml
+    assert '--submit' not in yml
 
 
 def test_open_pack_stamps_session_open_and_restamps_pages() -> None:
@@ -121,35 +108,30 @@ def test_open_pack_stamps_session_open_and_restamps_pages() -> None:
     assert 'clock_use": "session_open"' in st
     assert "clock_legal_for" in st
     assert "assert_session_look(payload, date)" in st
-    assert "scripts/publish_open_pack.sh" in yml
+    assert "publish_strategy_tickets.yml" in yml
     assert "publish_dashboard.sh" in script
-    assert "deploy-dashboard.yml" in yml
+    assert "deploy-dashboard.yml" in (WF / "publish_strategy_tickets.yml").read_text()
     assert "Open 09:30 pack" in dep
 
 
 def test_boards_and_paper_share_the_bell() -> None:
-    """Named verify: Webull --submit at the same 09:30 clock as boards."""
-    yml = (WF / "open_0930.yml").read_text(encoding="utf-8")
-    assert yml.count("src.open_0930_clock --wait --max-wait-s 4200") == 2
-    assert yml.count("name: Clock gate (09:30 ET)") == 2
-    assert "--source hot4" in yml
-    assert "--submit" in yml
-    assert "src.webull_exec" in yml
-    assert "--source combo" not in yml
-    assert "combo_sh_macd_5050_shared" not in yml
+    """Publication runs at input readiness, before the independent bell sender."""
+    yml = (WF / "publish_strategy_tickets.yml").read_text()
+    assert 'src.decision_ready' in yml
+    assert 'src.open_0930_clock' not in yml
+    assert '--submit' not in yml
+    paper = (WF / "webull_paper.yml").read_text()
+    assert 'src.paper_open' in paper
+    assert 'workflow_run:' not in paper
 
 
 def test_webull_backup_schedule_is_clock_gated() -> None:
-    yml = (WF / "webull_paper.yml").read_text(encoding="utf-8")
-    assert 'cron: "30 13 * * 1-5"' in yml
-    assert 'cron: "30 14 * * 1-5"' in yml
-    assert "src.open_0930_clock" in yml
-    assert "workflow_dispatch" in yml
-    assert "--source hot4" in yml
-    assert "union_hot_n4_h1" in yml
-    assert "combo_sh_macd_5050_shared" not in yml
+    yml = (WF / "webull_paper.yml").read_text()
+    assert "cron: '7 12,13 * * 1-5'" in yml
+    assert 'src.paper_open' in yml
+    assert yml.index('pip install') < yml.index('python -m src.paper_open')
     assert "github.event_name == 'schedule'" in yml
-    assert "group: webull-paper" in yml
+    assert 'group: webull-paper' in yml
 
 
 def test_tickets_install_requests() -> None:

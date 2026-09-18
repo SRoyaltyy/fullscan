@@ -221,22 +221,35 @@ _POLLER_JS = r"""
       '<div class="live-book-row"><b>BUY 1d</b> ' + (buys.join(" · ") || "—") + '</div>' +
       '<div class="live-book-row sell"><b>SELL 1d</b> ' + (sells.join(" · ") || "—") + '</div>' + extra;
   }
+  var loading=false;
+  function getJSON(url){
+    return fetch(url + "?t=" + Date.now(), {cache:"no-store", signal:AbortSignal.timeout(8000)})
+      .then(function(r){return r.ok?r.json():{};}).catch(function(){return {};});
+  }
+  function newestStrategy(candidates){
+    return candidates.filter(function(x){return x && x.date && x.strategies;})
+      .sort(function(a,b){
+        return String(b.date).localeCompare(String(a.date)) ||
+          ((Date.parse(b.generated_at)||0)-(Date.parse(a.generated_at)||0));
+      })[0] || {};
+  }
   function load(){
+    if(loading) return;
+    loading=true;
     var rels = [
       "today_strategies.json",
       "factor-mine/today_strategies.json",
       "../factor-mine/today_strategies.json"
     ].map(function(u){
-      return fetch(u + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; });
+      return getJSON(u);
     });
     Promise.all([
-      fetch(TODAY + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; }),
-      fetch(STRAT + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; }),
-      fetch(SUG + "?t=" + Date.now(), {cache: "no-store"}).then(function(r){ return r.ok ? r.json() : {}; }).catch(function(){ return {}; })
+      getJSON(TODAY),
+      getJSON(STRAT),
+      getJSON(SUG)
     ].concat(rels)).then(function(arr){
       var today = arr[0] || {}, strat = arr[1] || {}, sug = arr[2] || {};
-      var local = arr.slice(3).filter(function(x){ return x && x.strategies && Object.keys(x.strategies).length; })[0];
-      if(local && local.strategies) strat = local;
+      strat = newestStrategy([strat].concat(arr.slice(3)));
       var d = Object.assign({}, sug, today);
       if(strat && strat.strategies) d.strategies = strat.strategies;
       if(strat && strat.date) d.date = strat.date;
@@ -246,11 +259,11 @@ _POLLER_JS = r"""
       if(!d.buy_1d && sug.buy_1d) d.buy_1d = sug.buy_1d;
       if(!d.sell_1d && sug.sell_1d) d.sell_1d = sug.sell_1d;
       paint(d);
-    });
+    }).finally(function(){loading=false;});
   }
   load();
   loadHold();
-  setInterval(load, 60000);
+  setInterval(load, 10000);
   setInterval(loadHold, 60000);
 })();
 </script>
@@ -383,3 +396,23 @@ def ensure_live_board_pollers() -> list[str]:
             except ValueError:
                 wrote.append(str(path))
     return wrote
+
+
+def refresh_factor_live_poller(path: Path | None = None) -> bool:
+    """Update only the live strip; preserve the expensive historical research pack."""
+    path = path or ROOT / 'dashboard/factor-mine/index.html'
+    if not path.exists():
+        return False
+    template = (ROOT / 'src/factor_mine_dash.html').read_text()
+    current = path.read_text()
+    marker = "(function(){\n  var RAW="
+    def bounds(text):
+        start = text.index(marker)
+        return start, text.index('\n})();', start) + len('\n})();')
+    a, b = bounds(template)
+    x, y = bounds(current)
+    updated = current[:x] + template[a:b] + current[y:]
+    if updated == current:
+        return False
+    path.write_text(updated)
+    return True

@@ -123,6 +123,9 @@ concurrency:
   group: factor-strategy-mine
   cancel-in-progress: ${{ github.event_name == 'workflow_dispatch' }}
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
   mine:
     if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
