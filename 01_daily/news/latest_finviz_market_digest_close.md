@@ -1,48 +1,48 @@
-# Finviz homepage market digest (close) — 2026-09-17
+# Finviz homepage market digest (close) — 2026-09-18
 
-**Generated:** 2026-09-17T16:34:29.476431-04:00 (America/New_York)
+**Generated:** 2026-09-18T16:34:48.382211-04:00 (America/New_York)
 **Source:** `live`
-**Banner:** US stocks closed higher as falling Treasury yields and oil prices eased post-Fed pressures after jobless claims data and Bank of England follow-through
-**Prior close:** SPX +1.15%  Nasdaq +1.69%  Dow +0.61%
-**SPX:** +1.15%  **Nasdaq:** +1.69%  **Dow:** +0.61%
+**Banner:** US stocks ended mixed as tech gains countered a 5% 10-year yield and $7 trillion options expiration amid Middle East-driven oil concerns
+**Prior close:** SPX +0.08%  Nasdaq +0.20%  Dow -0.10%
+**SPX:** +0.08%  **Nasdaq:** +0.20%  **Dow:** -0.10%
 **Oil:** —
-**CPI/Fed:** 4.95% hike (around 4.95%, helping support equities after the Federal Reserve’s quarter-point hike)
-**Leaders:** NVDA, AMD, AMZN, GNRC, NBIS, SECZ, LEN, DHI, PHM
+**CPI/Fed:** —
+**Leaders:** AVGO, XENE, COIN, NFLX, WFC, AZO, CTAS, GIS
 **Next session:** housing yes · retail no · Fed yes
-**Earnings slate:** —
-**Geo/grain:** —
-**Clock legal for:** 2026-09-18
+**Earnings slate:** AZO, CTAS, GIS
+**Geo/grain:** geo
+**Clock legal for:** 2026-09-21
 **Clock use:** `next_open`
 
 ## Clock
 
-Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-09-18) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
+Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-09-21) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
 ## Theme Radar
 
-- **Prior close:** SPX +1.15% · Nasdaq +1.69% · Dow +0.61%
+- **Prior close:** SPX +0.08% · Nasdaq +0.20% · Dow -0.10%
 - **Oil:** —
-- **CPI / Fed-odds:** 4.95% hike (around 4.95%, helping support equities after the Federal Reserve’s quarter-point hike)
-- **Named leaders:** NVDA, AMD, AMZN, GNRC, NBIS, SECZ, LEN, DHI, PHM
+- **CPI / Fed-odds:** —
+- **Named leaders:** AVGO, XENE, COIN, NFLX, WFC, AZO, CTAS, GIS
 - **Next-session calendar:** housing yes · retail no · Fed yes
-  - The 10-year US Treasury yield slipped back below 5% to around 4.95%, helping support equities after the Federal Reserve’s quarter-point hike to a 3.75%–4.00% target range under Chair Kevin Warsh
-  - US housing starts unexpectedly declined in August, led by multifamily weakness, though the release had limited market impact, and investors looked ahead to US jobless claims and follow-through from Bank of England policy decisions
-- **Earnings slate:** —
-- **Geo / grain:** —
+  - The 10-year Treasury yield hit 5.00% as traders priced in further Federal Reserve rate hikes following Wednesday’s 25-basis-point increase and ongoing inflation worries tied to the Iran conflict and volatile oil prices
+  - Few notable after-hours reports on September 18, investors looked ahead to next week’s new home sales data and earnings from AutoZone (AZO), Cintas (CTAS), and General Mills (GIS)
+- **Earnings slate:** AZO, CTAS, GIS
+- **Geo / grain:** geo
 
 ## Narrative
 
-**US stocks closed higher as falling Treasury yields and oil prices eased post-Fed pressures after jobless claims data and Bank of England follow-through**
+**US stocks ended mixed as tech gains countered a 5% 10-year yield and $7 trillion options expiration amid Middle East-driven oil concerns**
 
-- The S&P 500 ($SPX) rose 1.15% to 7,638.40, the Dow Jones Industrial Average ($DJI) gained 0.61% to 51,778.04, the Nasdaq Composite ($COMP) climbed 1.69% to 26,418.30, the Nasdaq 100 ($NDX) added 1.73%, and the Russell 2000 (IWM) advanced about 0.5%, rebounding from the prior day’s Fed-driven selloff
-- The 10-year US Treasury yield slipped back below 5% to around 4.95%, helping support equities after the Federal Reserve’s quarter-point hike to a 3.75%–4.00% target range under Chair Kevin Warsh
-- Technology led the advance as the PHLX Semiconductor Index jumped 3.21%, with Nvidia (NVDA) up 2.5% and Advanced Micro Devices (AMD) gaining 6.4% amid an AI-related rebound, even as OpenAI reported additional concerning AI model behavior
-- Amazon (AMZN) shares advanced after the company signed a long-term Generac deal for data-center backup generators worth up to $8 billion that supported broader tech and infrastructure sentiment
-- Generac Holdings (GNRC) surged 18.3% after securing a long-term supply agreement with Amazon (AMZN) for data-center backup generators valued at up to $8 billion, including $2.4 billion in initial deliveries for 2027–2028
-- Nebius (NBIS) climbed about 4% after raising on-demand GPU prices by up to 21% effective October 1, reflecting strong demand for compute capacity
-- Securitize (SECZ) jumped more than 15% after the US securities regulator granted a five-year exemption allowing tokenized US stock trading on its platform
-- Oil fell about 1.7% to around $104 per barrel after Saudi Arabia offered additional cargoes, pressuring energy stocks
-- Lennar (LEN) gained about 1.7% after initially falling on weaker-than-expected quarterly profit and revenue, while D.R. Horton (DHI) and PulteGroup (PHM) also advanced as lower yields aided homebuilders
-- US housing starts unexpectedly declined in August, led by multifamily weakness, though the release had limited market impact, and investors looked ahead to US jobless claims and follow-through from Bank of England policy decisions
+- The S&P 500 ($SPX) rose 0.08% to 7643.91, the Nasdaq Composite ($COMP) gained 0.20% to 26472.07, the Dow Jones ($DJI) slipped 0.10% to 51725.17, and the Russell 2000 (IWM) fell 0.52% on Friday
+- The 10-year Treasury yield hit 5.00% as traders priced in further Federal Reserve rate hikes following Wednesday’s 25-basis-point increase and ongoing inflation worries tied to the Iran conflict and volatile oil prices
+- Rate-sensitive groups including materials and industrials lagged while technology outperformed, highlighted by Broadcom (AVGO) advancing 2.5%
+- A roughly $7 trillion triple-witching options expiration drove sharp intraday volatility across equities and derivatives
+- Xenon Pharmaceuticals (XENE) sank 30.7% after the company paused enrollment in trials of its experimental drug for major depressive and bipolar disorder due to reported side effects, according to Reuters
+- Coinbase Global (COIN) jumped more than 11% as Bitcoin (@BTC) traded above $80,000 amid a broader cryptocurrency rebound
+- Berkshire Hathaway (BRK-B) traded roughly flat after Warren Buffett stepped down as chairman after about six decades, with his son Howard Buffett elected to succeed him
+- Netflix (NFLX) fell nearly 5% after Wells Fargo (WFC) downgraded the stock, citing weakening viewership trends and content concerns
+- Oil prices eased into the close despite supply concerns linked to Saudi Arabia, Yemen’s Iran-backed Houthis, and broader Middle East tensions, with softer crude (@CL) in the final hour helping support the S&P 500 ($SPX) and Nasdaq
+- Few notable after-hours reports on September 18, investors looked ahead to next week’s new home sales data and earnings from AutoZone (AZO), Cintas (CTAS), and General Mills (GIS)
