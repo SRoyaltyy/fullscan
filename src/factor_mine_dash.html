@@ -1893,16 +1893,23 @@ window.addEventListener('resize', draw);
       return bit;
     }).filter(Boolean);
   }
-  Promise.all([
-    fetch(RAW+'?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.json():{};}).catch(function(){return {};}),
-    fetch(STRAT+'?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.json():{};}).catch(function(){return {};}),
-    fetch('hold_live_px.json?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;}),
-    fetch(HOLD+'?t='+Date.now(),{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;})
-  ]).then(function(arr){
+  var loading=false;
+  function getJSON(url){
+    return fetch(url+'?t='+Date.now(), {cache:'no-store', signal:AbortSignal.timeout(8000)})
+      .then(function(r){return r.ok?r.json():{};}).catch(function(){return {};});
+  }
+  function loadLiveDay(){
+  if(loading) return;
+  loading=true;
+  Promise.all([getJSON(RAW), getJSON(STRAT), getJSON(HOLD)]).then(function(arr){
     var d=arr[0]||{}, st=arr[1]||{};
+    if(!st.date || !st.strategies){
+      stamp.textContent='Live decisions unavailable; last displayed tickets may be stale';
+      return;
+    }
     window.__TODAY_STRATS=st;
     window.__FM_SESSION=st.date||d.date||'';
-    var hold=arr[2]||arr[3];
+    var hold=arr[2];
     if(hold&&typeof paintHoldMarks==='function') try{ paintHoldMarks(hold); }catch(e){}
     var head=document.getElementById('sessionHead');
     if(head && window.__FM_SESSION) head.textContent='· session '+window.__FM_SESSION;
@@ -1917,6 +1924,8 @@ window.addEventListener('resize', draw);
       packBit='pack is '+(D0.to_date||'?')+', Pages built '+String(D0.pages_built_at||D0.generated_at||'').slice(0,10)+' · ';
     }
     stamp.textContent=(st.date||d.date||'')+' · '+packBit+(d.overall||'?')+' · ranker '+(d.ranker_ready?'READY':'BLOCKED')+' · processes ok '+(c.ok||0)+'/'+(c.n||'?')
+      +' · decision '+(st.decision_readiness&&st.decision_readiness.ready?'READY':'WAITING')
+      +' · updated '+(st.generated_at||'?')
       +(st.n?(' · '+st.n+' strategies ('+(st.n_ok||0)+' with tickets)'):'')
       +(st.quote&&st.quote.src?(' · px '+st.quote.src+(st.quote.src==='elite_live'||st.quote.src==='elite_live_file'?' (now)':' (not live)')):'');
     var html='';
@@ -1977,7 +1986,11 @@ window.addEventListener('resize', draw);
         : '';
     }
     if(typeof renderTable==='function') try{ renderTable(); }catch(e){}
-  }).catch(function(){ stamp.textContent='day board JSON not on main yet'; });
+  }).catch(function(){ stamp.textContent='Live decisions unavailable; displayed tickets may be stale'; })
+    .finally(function(){loading=false;});
+  }
+  loadLiveDay();
+  setInterval(loadLiveDay,10000);
 })();
 </script>
 <script>

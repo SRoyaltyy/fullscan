@@ -7,6 +7,11 @@ on:
         description: "YYYY-MM-DD (empty = today ET)"
         required: false
         default: ""
+  push:
+    branches: [main]
+    paths: ['01_daily/**', 'data/join/**', 'data/peers/**', 'data/ab_checklist/**', 'data/factor_mine/panel.json']
+  schedule:
+    - cron: '3,18,33,48 12-20 * * 1-5'
   workflow_run:
     workflows:
       - "Stock Book ALL (one-shot)"
@@ -19,7 +24,7 @@ permissions:
 
 concurrency:
   group: publish-strategy-tickets
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   tickets:
@@ -28,23 +33,33 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 1
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - name: Install
         run: pip install pandas pyarrow openpyxl requests
-      - name: Apply pending ticket patches if present
+      - name: Required inputs, independent of previous outputs
+        id: readiness
+        env:
+          RUN_DATE: ${{ github.event.inputs.run_date }}
         run: |
+          set -euo pipefail
+          DATE="${RUN_DATE:-$(TZ=America/New_York date +%F)}"
           set +e
-          if [ -d patches/strategy_tickets ]; then
-            for p in patches/strategy_tickets/*.patch; do
-              echo apply "$p"
-              patch -p1 --forward < "$p" || true
-            done
+          python -m src.decision_ready --date "$DATE"
+          CODE=$?
+          set -e
+          if [ "$CODE" -eq 3 ]; then
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+          elif [ "$CODE" -eq 0 ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            exit "$CODE"
           fi
-          python3 -m py_compile src/strategy_tickets.py src/publish_live_boards.py
       - name: Write tickets
+        if: steps.readiness.outputs.ready == 'true'
         env:
           FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
           FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
@@ -54,8 +69,8 @@ jobs:
         run: |
           DATE="${{ github.event.inputs.run_date }}"
           DATE="${DATE:-$(TZ=America/New_York date +%F)}"
-          python3 -m src.strategy_tickets --date "$DATE" --write
-          python3 -m src.publish_live_boards --date "$DATE" --write --no-extras || true
+          set -euo pipefail
+          python3 -m src.decision_ready --date "$DATE" --publish
           python3 - <<'PY'
           import json
           from pathlib import Path
@@ -71,11 +86,17 @@ jobs:
           test -s data/day_board/today_strategies.json
           test -s dashboard/factor-mine/strategy_tickets.json
       - name: Push tickets
+        if: steps.readiness.outputs.ready == 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          set -euo pipefail
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
           bash scripts/safe_git_push.sh \
             "auto: strategy tickets $(TZ=America/New_York date +%F)" \
+            "data/day_board/${DATE}_strategy_tickets.json" \
+            dashboard/factor-mine/index.html \
             data/day_board/strategy_tickets.json \
             data/day_board/today_strategies.json \
             data/day_board/today.json \
@@ -89,20 +110,12 @@ jobs:
             dashboard/sleeve-merge/index.html \
             dashboard/strategy-board/index.html \
             dashboard/index.html \
-            src/strategy_tickets.py \
-            src/publish_live_boards.py \
-            src/book_suggestions.py \
-            src/factor_mine_dash.html
-          DATE="${{ github.event.inputs.run_date }}"
-          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
-          if [ -f "data/day_board/${DATE}_strategy_tickets.json" ]; then
-            bash scripts/safe_git_push.sh \
-              "auto: strategy tickets dated ${DATE}" \
-              "data/day_board/${DATE}_strategy_tickets.json"
-          fi
+            "data/stock_book/" \
+            "01_daily/${DATE}_stock_book.md"
           chmod +x scripts/publish_dashboard.sh || true
-          bash scripts/publish_dashboard.sh || true
+          bash scripts/publish_dashboard.sh
       - name: Restamp GitHub Pages
+        if: steps.readiness.outputs.ready == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh workflow run deploy-dashboard.yml --ref main || true
+        run: gh workflow run deploy-dashboard.yml --ref main

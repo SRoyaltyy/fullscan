@@ -183,7 +183,7 @@ def _latest_dates(extra: str) -> list[str]:
     dates = set()
     if BOARD_DIR.is_dir():
         for p in BOARD_DIR.glob("20*.json"):
-            if p.stem.count("-") == 2:
+            if len(p.stem) == 10 and p.stem.count("-") == 2:
                 dates.add(p.stem)
     dates.add(extra)
     return sorted(dates, reverse=True)[:40]
@@ -233,7 +233,7 @@ def merge_ours_dir(ours_dir: str) -> None:
     dates: set[str] = set()
     for folder in (BOARD_DIR, src):
         for p in folder.glob("20*.json"):
-            if p.stem.count("-") == 2:
+            if len(p.stem) == 10 and p.stem.count("-") == 2:
                 dates.add(p.stem)
     if not dates:
         print("[day-board] merge-ours: no dated boards")

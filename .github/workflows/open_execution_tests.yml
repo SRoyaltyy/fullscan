@@ -1,0 +1,17 @@
+name: Opening execution regression tests
+on:
+  pull_request:
+    paths: ['src/**', 'scripts/**', '.github/workflows/**']
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pytest pandas numpy requests pyarrow
+      - run: python -m pytest -q src/test_paper_open.py src/test_open_0930.py src/test_webull_exec.py src/test_decision_ready.py src/test_live_decision_refresh.py src/test_pages_publish_gate.py -k "not live_2026_09_16_board_is_ready"
+      - run: bash -n scripts/safe_git_push.sh scripts/install_paper_open.sh

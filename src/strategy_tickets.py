@@ -753,6 +753,8 @@ def attach_hard_red_research(payload: dict, date: str) -> dict:
 
 
 def build(date: str) -> dict:
+    from .decision_ready import evaluate
+    input_before = evaluate(date)
     strats: list[dict] = []
     errors: list[str] = []
     try:
@@ -817,6 +819,11 @@ def build(date: str) -> dict:
         )
         print(f"[strategy-tickets] WARN: {warn}", flush=True)
         payload["errors"] = list(payload["errors"] or []) + [warn]
+    input_after = evaluate(date)
+    input_after["ready"] = bool(input_before["ready"] and input_after["ready"] and
+                                input_before["fingerprint"] == input_after["fingerprint"])
+    input_after["completed_at"] = datetime.now(ET).isoformat()
+    payload["decision_readiness"] = input_after
     return payload
 
 
@@ -846,6 +853,7 @@ def write(date: str, payload: dict | None = None) -> list[Path]:
         "n": payload.get("n"),
         "n_ok": payload.get("n_ok"),
         "quote": payload.get("quote"),
+        "decision_readiness": payload.get("decision_readiness"),
         "buy_1d": _board_quote_rows((payload.get("strategies") or {}).get("stock_book_1d", {}).get("buy")),
         "sell_1d": _board_quote_rows((payload.get("strategies") or {}).get("stock_book_1d", {}).get("sell")),
         "strategies": {
@@ -853,6 +861,7 @@ def write(date: str, payload: dict | None = None) -> list[Path]:
                 "buy": _board_quote_rows(v.get("buy")),
                 "sell": _board_quote_rows(v.get("sell")),
                 "sit": v.get("sit"),
+                "s": v.get("s"),
                 "would_have": bool(v.get("sit") or v.get("hard_red")),
                 "status": v.get("status"),
                 "family": v.get("family"),

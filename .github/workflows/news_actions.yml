@@ -23,11 +23,15 @@ on:
   # Dispatch-only — orchestrator last-chance fallback after 08:00 ET.
 
 permissions:
+  actions: write
   contents: write
 
 concurrency:
   group: news-actions
   cancel-in-progress: true
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   actions:

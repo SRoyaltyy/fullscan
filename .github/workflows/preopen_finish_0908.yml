@@ -26,6 +26,9 @@ concurrency:
   group: preopen-finish-0908
   cancel-in-progress: true
 
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
   finish:
     name: Fill 2026-09-08 holes (no catalyst)

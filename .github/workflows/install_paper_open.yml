@@ -1,0 +1,87 @@
+name: Install persistent paper opening clock
+on:
+  push:
+    branches: [main]
+    paths:
+      - scripts/install_paper_open.sh
+      - scripts/check_paper_clock.sh
+      - scripts/systemd/fullscan-paper-open.service
+      - scripts/systemd/fullscan-paper-open.timer
+      - src/paper_open.py
+      - src/webull_exec.py
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: install-paper-open
+  cancel-in-progress: false
+jobs:
+  install:
+    runs-on: [self-hosted, ecs]
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - name: Provision dedicated sandbox environment without printing credentials
+        env:
+          WEBULL_APP_KEY: ${{ secrets.WEBULL_APP_KEY }}
+          WEBULL_APP_SECRET: ${{ secrets.WEBULL_APP_SECRET }}
+          WEBULL_ACCOUNT_ID: ${{ secrets.WEBULL_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          umask 077
+          TMP_ENV=$(mktemp)
+          trap 'rm -f "$TMP_ENV"' EXIT
+          python3 - "$TMP_ENV" <<'PY'
+          import json, os, sys
+          keys = ('WEBULL_APP_KEY', 'WEBULL_APP_SECRET', 'WEBULL_ACCOUNT_ID')
+          if not all(os.environ.get(k) for k in keys[:2]):
+              raise SystemExit('Missing sandbox credentials')
+          with open(sys.argv[1], 'w') as f:
+              for key in keys:
+                  if os.environ.get(key):
+                      f.write(key + '=' + json.dumps(os.environ[key]) + '\n')
+          PY
+          sudo -n install -o gha -g gha -m 0600 "$TMP_ENV" /home/gha/.fullscan-paper.env
+          sudo -n bash scripts/install_paper_open.sh
+      - name: Verify broker connection before switching automatic ownership
+        run: |
+          sudo -n -u gha /home/gha/fullscan-paper-open/.venv/bin/python - <<'PY'
+          import json, os, sys
+          sys.path.insert(0, '/home/gha/fullscan-paper-open')
+          with open('/home/gha/.fullscan-paper.env') as f:
+              for line in f:
+                  key, value = line.rstrip().split('=', 1)
+                  os.environ[key] = json.loads(value)
+          from src.webull_exec import PaperAPI
+          api = PaperAPI('paper')
+          if not api.connect():
+              raise SystemExit(api.err)
+          snap = api.snapshot()
+          if not snap.connected:
+              raise SystemExit(snap.error)
+          if snap.cash <= 0:
+              raise SystemExit('Sandbox has no spendable cash; fund/reset the paper account before activation')
+          print('Sandbox preflight passed; spendable cash is positive. No orders submitted.')
+          PY
+      - name: Switch owner only after timer and broker preflight pass
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+          t = datetime.now(ZoneInfo('America/New_York'))
+          if (8, 0) <= (t.hour, t.minute) <= (9, 31):
+              raise SystemExit('Defer ownership changes until after 09:31 ET to avoid competing armed workers')
+          Path('00_grounding/paper_open_owner.json').write_text(json.dumps({
+              'owner': 'ecs', 'installed_at': datetime.now(timezone.utc).isoformat(),
+              'note': 'Persistent timer verified and sandbox preflight passed; Actions is disabled by this record.'
+          }, indent=2)+'\n')
+          PY
+          bash scripts/safe_git_push.sh "ops: activate verified ECS paper opening clock" 00_grounding/paper_open_owner.json

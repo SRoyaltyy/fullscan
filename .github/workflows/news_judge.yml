@@ -15,11 +15,15 @@ on:
         default: "false"
 
 permissions:
+  actions: write
   contents: write
 
 concurrency:
   group: news-judge
   cancel-in-progress: true
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   judge:

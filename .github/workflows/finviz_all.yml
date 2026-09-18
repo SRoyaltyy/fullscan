@@ -32,12 +32,16 @@ on:
         default: "false"
 
 permissions:
+  actions: write
   contents: write
   actions: read
 
 concurrency:
   group: finviz-all
   cancel-in-progress: false
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   scrape:

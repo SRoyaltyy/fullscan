@@ -239,7 +239,7 @@ union_day_board() {
   cp -a data/day_board/. "$OURS_DB/" 2>/dev/null || true
   local f ok=1
   for f in "${CAND[@]}"; do
-    case "$f" in data/day_board/*) ;; *) continue ;; esac
+    [ "$(policy "$f")" = union_db ] || continue
     local u="${UP[$f]:-}" b="${BASE[$f]:-}"
     if [ -n "$u" ] && [ "$u" != "$b" ] && [ "$u" != "${OURS[$f]}" ]; then
       write_upstream_to_disk "$f" "$u" || ok=0
@@ -292,6 +292,7 @@ policy() {
     dashboard/day-board/*)        echo ours ;;
     dashboard|dashboard/*)        echo upstream ;;
     03_scoreboard/scoreboard.json) echo union_sb ;;
+    data/day_board/*strategy*.json) echo ours ;;
     data/day_board/*)             echo union_db ;;
     *)                            echo ours ;;
   esac
@@ -373,6 +374,12 @@ attempt() {
     # Real index: these blobs are now the base for the next land.
     emit_spec | git update-index -z --add --index-info 2>/dev/null || true
     echo "[safe-push] pushed ${new:0:8} (${n_take} files) onto ${upsha:0:8}"
+    # Explicit dispatch: GITHUB_TOKEN pushes do not start push workflows.
+    # Never wait for the producer's optional LLM/extras to finish.
+    if [ -f src/decision_ready.py ]; then
+      python3 -m src.decision_ready --notify "${!TAKE[@]}" \
+        || echo "[safe-push] WARNING: decision dispatch failed; scheduled readiness check remains active"
+    fi
     return 0
   fi
   return 3

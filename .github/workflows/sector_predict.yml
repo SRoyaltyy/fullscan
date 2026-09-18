@@ -19,11 +19,15 @@ on:
         default: ""
 
 permissions:
+  actions: write
   contents: write
 
 concurrency:
   group: sector-predict
   cancel-in-progress: false
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   predict:

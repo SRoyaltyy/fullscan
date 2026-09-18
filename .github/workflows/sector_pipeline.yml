@@ -17,11 +17,15 @@ on:
         default: ""
 
 permissions:
+  actions: write
   contents: write
 
 concurrency:
   group: sector-pipeline
   cancel-in-progress: false
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   sector-loop:

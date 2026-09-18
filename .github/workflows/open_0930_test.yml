@@ -44,7 +44,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install
-        run: pip install pandas numpy pyarrow openpyxl
+        run: pip install pandas numpy pyarrow openpyxl requests
       - name: Clock + pack + paper contract
         run: |
           set -euo pipefail

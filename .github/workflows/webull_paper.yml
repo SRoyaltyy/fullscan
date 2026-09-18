@@ -1,131 +1,56 @@
 name: Webull paper (OpenAPI sandbox)
 
-# Places today's union_hot_n4_h1 (hot4) long-only tickets into the
-# Webull *paper* account (api.sandbox.webull.com) as MARKET orders.
-# Flatten live-card path is still `--source flatten`. Never talks to
-# the live host. Paper only (sandbox).
-# Needs repo secrets WEBULL_APP_KEY + WEBULL_APP_SECRET.
-# Optional: WEBULL_ACCOUNT_ID.
-# CLOCK: a main push that touches this file starts the job (same poke
-# as Pre-Open ALL). workflow_dispatch is 403 from the cloud agent.
-# POKE 2026-09-11: re-fire after sandbox 401 + missing numpy.
-# POKE 2026-09-11b: retry after owner rotated paper secrets.
-# POKE 2026-09-14: combo_sh 50/50 + MACD-short overlay for today's paper.
-# POKE 2026-09-17: drop combo — paper is hot4 MARKET long-only.
-
+# Warm well BEFORE the bell. Hosted cron is a fallback, not a punctual clock.
+# The committed owner record prevents both Actions and ECS from submitting.
 on:
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/webull_paper.yml"
   schedule:
-    # 09:30 ET both DST sides. Clock wait holds an early EST fire
-    # until the bell; a later EDT fire is a skip-held no-op.
-    - cron: "30 13 * * 1-5"
-    - cron: "30 14 * * 1-5"
+    - cron: '7 12,13 * * 1-5'
   workflow_dispatch:
     inputs:
-      run_date:
-        description: "YYYY-MM-DD (empty = today ET)"
-        required: false
-        default: ""
       submit:
-        description: "Place paper orders (unchecked = dry-run)"
+        description: Place sandbox orders at the next 09:30 ET (late starts fail)
         type: boolean
-        default: true
-  workflow_run:
-    workflows:
-      - "Sleeve merge live card"
-    types: [completed]
-
+        default: false
 permissions:
   contents: write
-
 concurrency:
   group: webull-paper
   cancel-in-progress: false
-
 jobs:
   paper:
-    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-
+          ref: main
+          fetch-depth: 1
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
-
-      - name: Clock gate (09:30 ET)
-        id: clock
-        run: |
-          set -euo pipefail
-          # Manual dispatch is a daytime retry — do not wait.
-          # Schedule / sleeve-merge / main poke wait until the bell
-          # (or skip before 08:00 / after the close / holiday).
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "go=yes" >> "$GITHUB_OUTPUT"
-            echo "workflow_dispatch — submit now"
-            exit 0
-          fi
-          if python3 -m src.open_0930_clock --wait --max-wait-s 4200; then
-            echo "go=yes" >> "$GITHUB_OUTPUT"
-            echo "09:30 window — paper submit"
-          else
-            echo "go=no" >> "$GITHUB_OUTPUT"
-            echo "outside 08:00–16:00 ET session / holiday — skip paper"
-          fi
-
-      - name: Install
-        if: steps.clock.outputs.go == 'yes'
-        run: pip install webull-openapi-python-sdk pandas numpy yfinance requests
-
-      - name: Send hot4 MARKET tickets to Webull paper
-        if: steps.clock.outputs.go == 'yes'
+          python-version: '3.12'
+      - name: Install before preflight and clock wait
+        run: pip install webull-openapi-python-sdk pandas numpy pyarrow yfinance requests
+      - name: Preflight, arm and release sandbox batch at 09:30 ET
         env:
           WEBULL_APP_KEY: ${{ secrets.WEBULL_APP_KEY }}
           WEBULL_APP_SECRET: ${{ secrets.WEBULL_APP_SECRET }}
           WEBULL_ACCOUNT_ID: ${{ secrets.WEBULL_ACCOUNT_ID }}
-          RUN_DATE: ${{ github.event.inputs.run_date }}
-          WANT_SUBMIT: ${{ (github.event_name == 'workflow_run' || github.event_name == 'push' || github.event_name == 'schedule' || inputs.submit) && 'true' || 'false' }}
+          WANT_SUBMIT: ${{ github.event_name == 'schedule' || inputs.submit }}
         run: |
           set -euo pipefail
-          DATE="${RUN_DATE:-}"
-          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
-          ARGS=(--date "$DATE" --source hot4)
-          if [ -n "${WEBULL_APP_KEY:-}" ] && [ -n "${WEBULL_APP_SECRET:-}" ] \
-             && [ "${WANT_SUBMIT}" = "true" ]; then
-            ARGS+=(--submit)
-            echo "paper submit union_hot_n4_h1 MARKET on $DATE"
-          else
-            echo "dry-run union_hot_n4_h1 MARKET on $DATE (no keys or submit unchecked)"
-          fi
-          python -m src.webull_exec "${ARGS[@]}"
-          test -s data/sleeve_merge/webull_last.json
-          python - <<'PY'
-          import json
-          from pathlib import Path
-          last = json.loads(Path("data/sleeve_merge/webull_last.json").read_text())
-          print("connected", last.get("connected"), "submit", last.get("submit"),
-                "source", last.get("source"), "combo", last.get("combo"),
-                "stale", last.get("stale"),
-                "tickets", last.get("n_tickets"), "error", last.get("error"))
-          for s in last.get("sent") or []:
-              print(" ", s.get("status"), s.get("side"), s.get("ticker"),
-                    s.get("shares"), s.get("order_id") or s.get("error") or "")
-          PY
-
-      - name: Land last snapshot
-        if: steps.clock.outputs.go == 'yes'
+          ARGS=()
+          if [ "$WANT_SUBMIT" = true ]; then ARGS+=(--submit); fi
+          python -m src.paper_open "${ARGS[@]}"
+      - name: Preserve preflight, submission and acknowledgment evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: paper-open-evidence
+          path: data/paper_open/
+          if-no-files-found: warn
+      - name: Land outcome, including failed attempts
+        if: always()
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          DATE="${{ github.event.inputs.run_date }}"
-          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
-          bash scripts/safe_git_push.sh \
-            "auto: webull paper ${DATE}" \
-            data/sleeve_merge/webull_last.json \
-            dashboard/sleeve-merge/ || true
+          bash scripts/safe_git_push.sh "auto: paper open evidence" data/paper_open/ data/sleeve_merge/webull_last.json
