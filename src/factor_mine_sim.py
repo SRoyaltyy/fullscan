@@ -35,6 +35,7 @@ ROW_KEEP = (
     "clk_mom_break_peer", "clk_fresh_cat_coil", "clk_earn_guide_react",
     "clk_neg_weak_fail", "clk_ext_veto", "clk_hold_vs_sector",
     "clk_insider_cash_stab", "clk_flow_coil", "clk_r_up_coil", "clk_nr7_mom",
+    "oppset", "opp_rvol", "opp_gap_pct", "opp_finviz_asof",
 )
 
 

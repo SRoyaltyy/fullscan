@@ -256,7 +256,9 @@
   function matches(row, rec, mornings) {
     const uni = rec.universe || "union";
     const srcs = new Set(row.sources || []);
-    if (uni !== "union" && !srcs.has(uni)) return false;
+    const onOpp0 = !!(row.oppset || srcs.has("oppset"));
+    if (uni === "oppset") { if (!onOpp0) return false; }
+    else if (uni !== "union" && !srcs.has(uni)) return false;
     const req = rec.require || {}, forb = rec.forbid || {};
     if (req.live_entry) {
       const ok = row.flatten_ok != null ? row.flatten_ok
@@ -330,6 +332,10 @@
       if (req[k] && !row[k]) return false;
       if (forb[k] && row[k]) return false;
     }
+    const onOpp = !!(row.oppset || (row.sources || []).includes("oppset"));
+    if (uni === "oppset" && !onOpp) return false;
+    if (req.oppset && !onOpp) return false;
+    if (forb.oppset && onOpp) return false;
     return true;
   }
   function kidGate(key, val) {
@@ -387,6 +393,7 @@
     if (key === "clk_flow_coil") return "Clock-B #8 flow-in + green + not extended";
     if (key === "clk_r_up_coil") return "Clock-B #9 upgrade + green + not extended";
     if (key === "clk_nr7_mom") return "Clock-B #10 NR7 + moderate momentum";
+    if (key === "oppset") return "Theme Radar Clock-B T−1 gap+RelVol opportunity-set";
     const word = {good:"green", bad:"red", neutral:"yellow", missing:"blank", true:"green"}[String(val)] || String(val);
     return key + " is " + word;
   }
@@ -395,7 +402,9 @@
     const need = (ok, msg) => { (ok ? passed : failed).push(msg); };
     const uni = rec.universe || "union";
     const srcs = new Set(row.sources || []);
-    if (uni !== "union") need(srcs.has(uni), "on the " + uni + " 09:30 list");
+    const onOppWhy = !!(row.oppset || srcs.has("oppset"));
+    if (uni === "oppset") need(onOppWhy, "on the Theme Radar Clock-B T−1 opportunity-set");
+    else if (uni !== "union") need(srcs.has(uni), "on the " + uni + " 09:30 list");
     const req = rec.require || {}, forb = rec.forbid || {};
     if (req.live_entry) {
       const ok = row.flatten_ok != null ? row.flatten_ok
@@ -457,6 +466,8 @@
       if (req[k]) need(!!row[k], kidGate(k, true));
       if (forb[k]) need(!row[k], "not " + kidGate(k, true));
     }
+    if (req.oppset) need(onOppWhy, kidGate("oppset", true));
+    if (forb.oppset) need(!onOppWhy, "not " + kidGate("oppset", true));
     return {ok: !failed.length, failed, passed};
   }
   function decisionWhy(pack, rec, date, ticker, mornings) {
@@ -545,6 +556,7 @@
     if (how === "w_hot_candle") return [-(0.6 * hot + 0.4 * candle), row.ticker];
     if (how === "rsi") return [row.rsi == null ? 999 : Number(row.rsi), row.ticker];
     if (how === "macd_hist") return [-(finite(row.macd_hist) || 0), row.ticker];
+    if (how === "opp_rvol") return [-(finite(row.opp_rvol) || 0), row.ticker];
     const src = row.src_rank == null ? 99 : Number(row.src_rank);
     return [src, row.ticker];
   }
@@ -573,6 +585,7 @@
     if (how === "w_hot_candle") return Math.round((0.6 * hot + 0.4 * candle) * 10000) / 10000;
     if (how === "rsi") return row.rsi == null ? null : Math.round(Number(row.rsi) * 100) / 100;
     if (how === "macd_hist") return Math.round((finite(row.macd_hist) || 0) * 10000) / 10000;
+    if (how === "opp_rvol") return Math.round((finite(row.opp_rvol) || 0) * 10000) / 10000;
     return (row.src_rank == null ? 99 : Number(row.src_rank)) * -1 + 100;
   }
   function shouldExit(row, exitWhen) {

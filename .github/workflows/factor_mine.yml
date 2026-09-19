@@ -143,6 +143,7 @@ jobs:
       - name: Unit tests
         run: |
           python -m src.test_clock_b_tells
+          python -m src.test_oppset_clock_b
           python -m src.test_factor_mine
       - name: Mine recipes (cash book)
         env:

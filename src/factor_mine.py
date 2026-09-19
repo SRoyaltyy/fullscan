@@ -43,6 +43,7 @@ from . import book_era
 from . import candle_factor as cf
 from . import clock_b_tells as cbt
 from . import finviz_events as fe
+from . import oppset_clock_b as opp
 from . import flatten_lookback_action as fla
 from . import gainer_asof as ga
 from . import gainer_capture as gc
@@ -119,6 +120,8 @@ INPUT_FIELDS = frozenset({
     "macd_up", "macd_down", "flow_in", "close_loc",
     "fv_rvol", "fv_sma20", "fv_sma50", "fv_inst",
     "ins_buy", "form4_buy", "rs_week",
+    "oppset", "opp_any", "opp_rvol", "opp_gap_pct", "opp_change_pct",
+    "opp_finviz_asof",
     *cbt.COMBO_KEYS,
 })
 _SCAN_CACHE: dict[tuple[str, str], dict | None] = {}
@@ -675,6 +678,7 @@ _UNI_KID = {
     "probable": "yesterday's 'likely to keep moving' list",
     "yday_gainer": "yesterday's top liquid winners",
     "ohlc_hot": "names that looked hot on the prior price/volume tape",
+    "oppset": "Theme Radar Clock-B opportunity-set (T−1 gap + RelVol flagged; optional feed)",
     "combo": "several existing sleeves sharing one $10k book (each kid still uses its own 09:30 list)",
 }
 _CAM_KID = {
@@ -700,6 +704,7 @@ _RANK_KID = {
     "w_hot_candle": "a mix of tape-heat and prior candles",
     "rsi": "how oversold the prior RSI is (lower first)",
     "macd_hist": "how positive the prior MACD histogram is",
+    "opp_rvol": "Theme Radar T−1 relative volume (Clock-B opportunity-set; not same-day RelVol)",
     "list": "the morning-board Score (100 minus list rank) — only after the pool is chosen",
     "score": "the morning-board Score (100 minus list rank) — only after the pool is chosen",
 }
@@ -807,6 +812,11 @@ def _gate_kid(key: str, val) -> str:
         if int(val) == -1:
             return "the latest revision flag is a downgrade"
         return f"the revision flag equals {val}"
+    if key == "oppset":
+        return (
+            "Theme Radar Clock-B opportunity-set: T−1 gap or RelVol "
+            "(or week move) flagged — not today's Gap/RelVol"
+        )
     if key in cbt.COMBO_KID:
         return cbt.COMBO_KID[key]
     if key in _CAM_KID:
@@ -1033,10 +1043,20 @@ def flatten_plan(date: str) -> dict:
         return {}
 
 
+def on_oppset(row: dict) -> bool:
+    """Theme Radar T−1 flagged name. Stamp or optional remine source."""
+    if row.get("oppset"):
+        return True
+    return "oppset" in set(row.get("sources") or [])
+
+
 def matches(row: dict, rec: dict) -> bool:
     uni = rec.get("universe") or "union"
     srcs = set(row.get("sources") or [])
-    if uni != "union" and uni not in srcs:
+    if uni == "oppset":
+        if not on_oppset(row):
+            return False
+    elif uni != "union" and uni not in srcs:
         return False
     req = rec.get("require") or {}
     forb = rec.get("forbid") or {}
@@ -1165,6 +1185,10 @@ def matches(row: dict, rec: dict) -> bool:
         v = _finite(row.get("rsi"))
         if v is None or v > float(req["rsi_max"]):
             return False
+    if req.get("oppset") and not on_oppset(row):
+        return False
+    if forb.get("oppset") and on_oppset(row):
+        return False
     if not cbt.gate_row(row, req, forb):
         return False
     return True
@@ -1297,6 +1321,8 @@ def ensure_sim_fields(panel: dict, rec: dict | None = None) -> dict:
             panel["_tape_filled"] = True
     if rec is None or cbt.recipe_needs_clock_b(rec) or not panel.get("_clock_b"):
         cbt.attach_panel(panel)
+    if not panel.get("_oppset"):
+        opp.attach_panel(panel)
     return panel
 
 
@@ -1371,7 +1397,9 @@ def match_why(row: dict, rec: dict) -> dict:
 
     uni = rec.get("universe") or "union"
     srcs = set(row.get("sources") or [])
-    if uni != "union":
+    if uni == "oppset":
+        need(on_oppset(row), "on the Theme Radar Clock-B T−1 opportunity-set")
+    elif uni != "union":
         need(uni in srcs, f"on the {uni} 09:30 list")
     req = rec.get("require") or {}
     forb = rec.get("forbid") or {}
@@ -1511,6 +1539,10 @@ def match_why(row: dict, rec: dict) -> dict:
         if forb.get(key):
             need(not cbt.combo_true(row, key),
                  f"not {_gate_kid(key, True)}")
+    if req.get("oppset"):
+        need(on_oppset(row), _gate_kid("oppset", True))
+    if forb.get("oppset"):
+        need(not on_oppset(row), f"not {_gate_kid('oppset', True)}")
     return {"ok": not failed, "failed": failed, "passed": passed}
 
 
@@ -1588,6 +1620,8 @@ def rank_key(row: dict, rec: dict) -> tuple:
         return (999.0 if v is None else v, row["ticker"])
     if how == "macd_hist":
         return (-(_finite(row.get("macd_hist")) or 0.0), row["ticker"])
+    if how == "opp_rvol":
+        return (-(_finite(row.get("opp_rvol")) or 0.0), row["ticker"])
     if how in ("list", "score", "src_rank"):
         src = row.get("src_rank")
         src_i = 99 if src is None else int(src)
@@ -1652,7 +1686,7 @@ def _candidates(date: str, cal: list[str], flatten_plan: dict,
                 mover_by_date: dict) -> dict[str, list[str]]:
     look = gc.lookback_calendar(cal)
     prior = gc.knowable_export_date(look, date)
-    return {
+    buckets = {
         "flatten": [_tick(t) for t in (flatten_plan.get("tickers") or [])],
         "probable": ohlc.continuation(prior, date, top_n=ohlc.CONT_TOP_N),
         "yday_gainer": gc.yesterday_gainers(prior, top_n=25),
@@ -1661,6 +1695,11 @@ def _candidates(date: str, cal: list[str], flatten_plan: dict,
         "earn_react": gc.earnings_reaction(prior, date),
         "mover_buy": [_tick(t) for t in (mover_by_date.get(date) or [])][:15],
     }
+    if opp.union_enabled():
+        # Opt-in remine union: top 30 flagged by T−1 rvol. Default is stamp/
+        # filter only so land-closed does not balloon the panel.
+        buckets["oppset"] = opp.flagged_tickers(date, top_n=30)
+    return buckets
 
 
 def _session_map(from_date: str, to_date: str | None):
@@ -1767,6 +1806,7 @@ def _attach_row(date: str, ticker: str, sources: list[str], src_rank: int,
     rec["ins_buy"] = _headline_insider_buy(str(prior_title or "").lower())
     peer = card.get("peer") or {}
     rec["rs_week"] = _finite(peer.get("rs_week"))
+    opp.apply_to_rec(rec, date, ticker)
     cbt.stamp_row(rec)
     return rec
 
@@ -3083,6 +3123,7 @@ def restamp_dash() -> dict:
     from . import factor_mine_sim as fms
     fmp.attach_erd_polarity(panel)
     cbt.attach_panel(panel)
+    opp.attach_panel(panel)
     bought = _bought_tickers(payload.get("books"), payload.get("starts"))
     payload["probe"] = fmp.slim_probe(fmp.build_probe(panel), bought)
     payload["sim"] = fms.build_sim_pack(panel)
@@ -3187,7 +3228,7 @@ TAPE_FLOW_PIN = (
     "union_rsi_os_h1",
     "short_rsi_ob_h3",
 )
-CLOCK_B_SPLICE = cbt.CLOCK_B_RECIPES
+CLOCK_B_SPLICE = cbt.CLOCK_B_CORE + cbt.CLOCK_B_OPPSET_RECIPES
 CLOCK_B_PIN = cbt.CLOCK_B_PIN
 
 
@@ -3372,6 +3413,7 @@ def splice_clock_b(*, write: bool = True) -> dict:
     from . import factor_mine_probe as fmp
     fmp.attach_erd_polarity(panel)
     cbt.attach_panel(panel)
+    opp.attach_panel(panel)
     payload = load_dash_payload()
     rec_by = {r["name"]: r for r in build_recipes()}
     recipes = [rec_by[n] for n in CLOCK_B_SPLICE if n in rec_by]
@@ -3734,6 +3776,8 @@ def main(argv=None) -> int:
                     help="cash-book RSI / MACD / flow-in recipes onto the last board")
     ap.add_argument("--splice-clock-b", action="store_true",
                     help="cash-book Clock-B catalogue tells onto the last board (research; not KEEP)")
+    ap.add_argument("--pull-oppset", action="store_true",
+                    help="download Theme Radar Clock-B oppset CSV (no git clone)")
     ap.add_argument("--sweep-white", action="store_true",
                     help="cash-book sweep: −0 red + (yday/catalyst) × hold × rank")
     ap.add_argument("--sweep-bracket", action="store_true",
@@ -3761,6 +3805,15 @@ def main(argv=None) -> int:
     ap.add_argument("--no-combo", action="store_true",
                     help="skip combination books (single-recipe mine only)")
     args = ap.parse_args(argv)
+    if args.pull_oppset:
+        dest = opp.pull()
+        idx = opp.load_index(dest)
+        n16 = opp.flagged_n("2026-09-16", idx)
+        n17 = opp.flagged_n("2026-09-17", idx)
+        n18 = opp.flagged_n("2026-09-18", idx)
+        print(f"[oppset] pulled {dest} rows={len(idx)} "
+              f"09-16={n16} 09-17={n17} 09-18={n18} ref={opp.DEFAULT_REF}")
+        return 0
     if args.restamp_dash:
         payload = restamp_dash()
         print(f"[factor-mine] recipes={payload.get('n_recipes')} "

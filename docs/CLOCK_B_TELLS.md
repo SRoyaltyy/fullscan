@@ -2,8 +2,8 @@
 
 Research / ops note. Does **not** change live `flatten_robust` or Webull
 money paths. Does **not** claim a Cyrus KEEP edge. Excel fee-KEEP prove
-of the 10 priority combos is a separate job. Theme Radar supplies the
-gap + RelVol opportunity-set separately.
+of the 10 priority combos is a separate job. Theme Radar T−1 gap + RelVol
+is an optional panel/universe feed (stamp/filter, or remine union).
 
 Clock-B = 09:30-knowable. No VWAP / intraday for open fills. Same-day
 Change% / Gap / RelVol stay leaks, never gates.
@@ -44,9 +44,10 @@ named recipe gates.
 | 24 | News tone | have | `news_box`, `news_prior` |
 
 **Need-source (not wired):** VWAP / intraday open fills; same-day Gap /
-RelVol (Theme Radar); Webull live; structured guidance events; true FCF
-statements; same-day E stamped after 09:30 (`finviz_events` already drops
-those).
+RelVol from snapshot T (leak); Webull live; structured guidance events;
+true FCF statements; same-day E stamped after 09:30 (`finviz_events`
+already drops those). Theme Radar **T−1** gap+RelVol is Clock-B and is
+wired as an optional feed — see below.
 
 ## 10 priority combos wired
 
@@ -62,6 +63,10 @@ those).
 | 8 | `union_clk_flow_coil_h1` | `clk_flow_coil` | long |
 | 9 | `union_clk_r_up_coil_h1` | `clk_r_up_coil` | long |
 | 10 | `union_clk_nr7_mom_h1` | `clk_nr7_mom` | long |
+
+Ship-now splice is combos **1 / 2 / 4 / 5 / 6 / 10** plus the Theme Radar
+oppset hook (`CLOCK_B_CORE` + `CLOCK_B_OPPSET_RECIPES`). Combos 3 / 7 / 8 / 9
+stay wired and testable; they are not on `--splice-clock-b`.
 
 Long Clock-B sleeves also `forbid` `#5` (`clk_ext_veto`) and `alarm`.
 Collectors used: `factor_mine` panel union, `ohlc_ripper`, `candle_factor`,
@@ -129,3 +134,74 @@ python -m src.factor_mine --splice-clock-b
 ```
 
 Do **not** merge until checks are green. Do **not** claim KEEP.
+
+## Theme Radar Clock-B opportunity-set (optional feed)
+
+Live on [SRoyaltyy/theme-radar `main` @ `a782cc2b`](https://github.com/SRoyaltyy/theme-radar/tree/main/research/oppset_clock_b):
+24 join mornings, ~53k clean, ~7.4k flagged. Features = T−1 only
+(`join_morning` = decision T, `finviz_asof` = T−1). Same-day Gap /
+RelVol / Change from snapshot T are outcomes and are **never** joined
+(`parse_rows` drops `finviz_asof >= join_morning`).
+
+Proof on the live flagged CSV:
+
+| `join_morning` | flagged n | notes |
+|---|---|---|
+| 2026-09-16 | 242 | |
+| 2026-09-17 | 261 | |
+| 2026-09-18 | 451 | SDGR / GNRC `finviz_asof` 2026-09-17 |
+
+Research-only. No live Webull. Do not commit the CSV.
+
+### Pull / join without cloning theme-radar
+
+Pinned raw URL (HTTPS only — no `git clone`):
+
+```
+https://raw.githubusercontent.com/SRoyaltyy/theme-radar/a782cc2b/research/oppset_clock_b/oppset_flagged.csv
+```
+
+```bash
+# one-shot cache (gitignored)
+python -m src.factor_mine --pull-oppset
+
+# equivalent curl
+mkdir -p data/factor_mine/oppset_clock_b
+curl -fsSL \
+  https://raw.githubusercontent.com/SRoyaltyy/theme-radar/a782cc2b/research/oppset_clock_b/oppset_flagged.csv \
+  -o data/factor_mine/oppset_clock_b/oppset_flagged.csv
+```
+
+Override path with `FULLSCAN_OPPSET_CSV=/path/to/oppset_flagged.csv`.
+`discover_csv()` also accepts `/tmp/oppset_clock_b/oppset_flagged.csv`
+or a sibling `../theme-radar/research/oppset_clock_b/oppset_flagged.csv`
+checkout if one already exists.
+
+Join key is `(join_morning, ticker)` → panel `(date, ticker)`. Stamped
+fields (never aliases of same-day Change / Gap / RelVol):
+
+- `oppset` / `opp_any`
+- `opp_rvol` / `opp_gap_pct` / `opp_change_pct`
+- `opp_finviz_asof`
+
+Default mode is **stamp + rank/filter** on the existing union so
+`--land-closed` does not add 242–451 names/day. Opt-in remine union
+(top 30 by T−1 rvol as a panel source):
+
+```bash
+FULLSCAN_OPPSET_UNION=1 python -m src.factor_mine --rebuild-panel --write
+```
+
+Recipes (research; not KEEP):
+
+| Recipe | What it does |
+|---|---|
+| `union_oppset_h1` | union ∩ stamped `oppset`, rank `opp_rvol` |
+| `oppset_h1` | dedicated `oppset` universe, rank `opp_rvol` |
+| `union_clk_*_opp_h1` / `short_clk_*_opp_h3` | combos 1 / 2 / 4 / 5 / 6 / 10 ∩ oppset |
+
+```bash
+python -m src.test_oppset_clock_b
+python -m src.factor_mine --splice-clock-b   # CORE 1/2/4/5/6/10 + oppset hook
+# or: python -m src.factor_mine --gate oppset --no-auto-tweak --no-combo
+```

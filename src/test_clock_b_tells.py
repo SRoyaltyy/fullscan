@@ -183,9 +183,15 @@ def test_recipes_and_gates_are_wired() -> None:
         assert n in names, n
     recs = [r for r in fm.build_recipes() if r["name"] in cbt.CLOCK_B_RECIPES]
     assert len(recs) == 10
+    assert set(cbt.CLOCK_B_CORE) <= names
+    for n in cbt.CLOCK_B_OPPSET_RECIPES:
+        assert n in names, n
     assert "clk_b" in fmb.GATES
     gated = fmb.recipes_from_action(gate="clk_b", auto_tweak=False)
-    assert {r["name"] for r in gated} == set(cbt.CLOCK_B_RECIPES)
+    clk_names = {r["name"] for r in gated}
+    assert set(cbt.CLOCK_B_RECIPES) <= clk_names
+    assert {n for n in cbt.CLOCK_B_OPPSET_RECIPES
+            if n.startswith(("union_clk_", "short_clk_"))} <= clk_names
     for r in recs:
         ex = fm.explain_recipe(r)
         assert ex["kid"] and ex["inputs"] and ex["buy"]
@@ -289,6 +295,8 @@ def main() -> None:
     test_js_matches_stamped_clock_b_flags()
     test_panel_smoke_restored_multisrc_and_clock_b_eval()
     test_form4_asof_is_completed_month()
+    from src.test_oppset_clock_b import main as oppset_main
+    oppset_main()
     print("15 clock-b tell tests passed")
 
 

@@ -8,7 +8,8 @@ tells into the restored factor-mine panel / recipe path.
 This module does **not** scrape new vendors, does **not** read VWAP /
 intraday / same-day Gap / RelVol, and does **not** touch Webull or
 ``flatten_robust``. Excel fee-KEEP prove of the 10 priority combos is
-a separate path. Theme Radar gap+RelVol is a separate opportunity-set.
+a separate path. Theme Radar T−1 gap+RelVol is an optional opportunity-set
+feed (``src/oppset_clock_b.py``) — not a same-day leak.
 
 Clock-B proof: every atom below is knowable at 09:30 ET on session D
 from prior tape, the morning packet, or a prior Finviz export.
@@ -117,7 +118,7 @@ FAMILIES: tuple[dict, ...] = (
 
 NEED_SOURCE = (
     "VWAP / intraday tape for open fills (James: no)",
-    "Same-day Gap / RelVol (Theme Radar opportunity-set; leak if used as a gate)",
+    "Same-day Gap / RelVol from snapshot T (leak; Theme Radar T−1 oppset is the Clock-B feed)",
     "Webull live path (frozen)",
     "Structured raised-guidance event (headline proxy only)",
     "True FCF / cash-flow statement improvement (no vendor)",
@@ -227,7 +228,26 @@ CLOCK_B_RECIPES = (
     "union_clk_r_up_coil_h1",
     "union_clk_nr7_mom_h1",
 )
-CLOCK_B_PIN = CLOCK_B_RECIPES
+# James: ship 1/2/4/5/6/10 + Theme Radar oppset hook. Do not wait on Excel.
+CLOCK_B_CORE = (
+    "union_clk_mom_break_peer_h1",
+    "union_clk_fresh_cat_coil_h1",
+    "short_clk_neg_weak_fail_h3",
+    "short_clk_ext_veto_h3",
+    "union_clk_hold_vs_sector_h1",
+    "union_clk_nr7_mom_h1",
+)
+CLOCK_B_OPPSET_RECIPES = (
+    "union_clk_mom_break_peer_opp_h1",
+    "union_clk_fresh_cat_coil_opp_h1",
+    "short_clk_neg_weak_fail_opp_h3",
+    "short_clk_ext_veto_opp_h3",
+    "union_clk_hold_vs_sector_opp_h1",
+    "union_clk_nr7_mom_opp_h1",
+    "union_oppset_h1",
+    "oppset_h1",
+)
+CLOCK_B_PIN = CLOCK_B_CORE + CLOCK_B_OPPSET_RECIPES
 
 
 def _finite(x):
@@ -648,6 +668,40 @@ def clock_b_recipes(make_recipe) -> list[dict]:
         require={"clk_nr7_mom": True}, forbid=dict(veto),
         rank="hot_score",
         note="Clock-B #10 NR7 + moderate momentum")
+    # Theme Radar T−1 gap+RelVol oppset: rank/filter on the existing union,
+    # plus a dedicated universe. Optional — empty if the CSV was not pulled.
+    add(name="union_oppset_h1", universe="union", hold=1,
+        require={"oppset": True}, forbid={"alarm": True},
+        rank="opp_rvol",
+        note="Theme Radar Clock-B oppset ∩ union, rank T−1 rvol (research; not KEEP)")
+    add(name="oppset_h1", universe="oppset", hold=1,
+        require={"oppset": True},
+        rank="opp_rvol",
+        note="Theme Radar Clock-B oppset universe (flagged T−1 names; research; not KEEP)")
+    add(name="union_clk_mom_break_peer_opp_h1", universe="union", hold=1,
+        require={"clk_mom_break_peer": True, "oppset": True}, forbid=dict(veto),
+        rank="opp_rvol",
+        note="Clock-B #1 ∩ Theme Radar T−1 oppset")
+    add(name="union_clk_fresh_cat_coil_opp_h1", universe="union", hold=1,
+        require={"clk_fresh_cat_coil": True, "oppset": True}, forbid=dict(veto),
+        rank="opp_rvol",
+        note="Clock-B #2 ∩ Theme Radar T−1 oppset")
+    add(name="short_clk_neg_weak_fail_opp_h3", universe="union", hold=3,
+        side="short", require={"clk_neg_weak_fail": True, "oppset": True},
+        rank="opp_rvol",
+        note="Clock-B #4 ∩ Theme Radar T−1 oppset")
+    add(name="short_clk_ext_veto_opp_h3", universe="union", hold=3,
+        side="short", require={"clk_ext_veto": True, "oppset": True},
+        rank="opp_rvol",
+        note="Clock-B #5 ∩ Theme Radar T−1 oppset")
+    add(name="union_clk_hold_vs_sector_opp_h1", universe="union", hold=1,
+        require={"clk_hold_vs_sector": True, "oppset": True}, forbid=dict(veto),
+        rank="opp_rvol",
+        note="Clock-B #6 ∩ Theme Radar T−1 oppset")
+    add(name="union_clk_nr7_mom_opp_h1", universe="union", hold=1,
+        require={"clk_nr7_mom": True, "oppset": True}, forbid=dict(veto),
+        rank="opp_rvol",
+        note="Clock-B #10 ∩ Theme Radar T−1 oppset")
     return recs
 
 
