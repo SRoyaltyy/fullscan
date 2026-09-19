@@ -1766,7 +1766,9 @@ def test_overnight_hold1_harvests_next_open() -> None:
     assert fm.matches(rows[0], rec)
     assert not fm.matches(rows[1], rec)
     book = fmb.simulate_book(
-        _panel(cal, rows), rec, bars=bars, fees=pt.load_fees(), regime={})
+        _panel(cal, rows), rec, bars=bars, fees=pt.load_fees(),
+        regime={"2026-09-02": {"predict_score": 1.5},
+                "2026-09-03": {"predict_score": 0.4}})
     sells = [t for t in book["trades"] if t.get("side") == "SELL"]
     assert sells, book["trades"]
     assert sells[0]["date"] == "2026-09-03"
