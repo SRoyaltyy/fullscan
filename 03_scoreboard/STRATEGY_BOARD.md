@@ -1,6 +1,6 @@
 # Strategy board — every shipped book
 
-_Generated 2026-09-19T10:54:35 — 2026-08-13 → 2026-09-18_
+_Generated 2026-09-19T11:19:33 — 2026-08-13 → 2026-09-18_
 
 Live production method is **`flatten_robust`**: 3d size-book selection (not raw 2w_size), 3-session recycle, same flatten-switch clock, plus S ≤ −3 blocks new buys. Working lots and due 1d exits stay on.
 
@@ -11,6 +11,7 @@ Integrity: **fill** = one Futubull cash account. **stitch** = daily mark overlay
 | Live | Book | Family | PR | Integrity | Return | Max DD | Trades | Win | Cap |
 |---|---|---|---|---|---:|---:|---:|---:|---:|
 | YES | flatten_robust | sleeve merge | — | fill | +2.57% | 12.62% | 80 | 41.2% | 100000 |
+|  | union_hot_n4_holdup | factor mine | #127 | fill | +56.52% | 6.89% | 74 | 65.7% | 10000.0 |
 |  | combo_ej_5050_shared | factor mine | #127 | fill | +38.77% | 4.06% | 265 | 50.4% | 10000.0 |
 |  | union_e_fresh_h3 | factor mine | #127 | fill | +38.47% | 7.17% | 107 | 40.4% | 10000.0 |
 |  | combo_ee1_3070_shared | factor mine | #127 | fill | +38.47% | 7.17% | 107 | 40.4% | 10000.0 |

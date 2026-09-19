@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T06:55:54-04:00",
+  "generated_at": "2026-09-19T07:19:34-04:00",
   "top_n": 15,
   "min_change": 5.0,
   "dates": [
@@ -331,6 +331,7 @@
           "TEM",
           "REF"
         ],
+        "union_news_pack_net2_h1": [],
         "flatten_h5": [
           "IQV",
           "RDNT",
@@ -680,6 +681,9 @@
           "FPS",
           "SABR"
         ],
+        "union_news_pack_net2_h1": [
+          "LITE"
+        ],
         "flatten_h5": [
           "ILMN",
           "TWST",
@@ -1023,6 +1027,7 @@
           "GNRC",
           "VICR"
         ],
+        "union_news_pack_net2_h1": [],
         "flatten_h5": [
           "ILMN",
           "SDGR",
@@ -1080,8 +1085,29 @@
       "why": "flatten_robust sit=True on an audited UP window is a fail when leftover cash could buy 1 share (see sleeve today.json)."
     },
     "fat_day_keep_oc": {
-      "pass": null,
-      "why": "Needs official SPX + KEEP open\u2192close for each fat day. 09-17 already measured: hot4 \u22121.06% vs SPX open\u2192close +0.08%."
+      "pass": true,
+      "n_fat": 1,
+      "n_ok": 1,
+      "days": [
+        {
+          "date": "2026-09-17",
+          "c2c_pct": 1.1381,
+          "gap_pct": 1.0544,
+          "oc_pct": 0.0828,
+          "keep": [
+            "INDP",
+            "GPRO",
+            "INSP",
+            "TJGC"
+          ],
+          "keep_oc": 5.4925,
+          "e_fresh_oc": 0.6917,
+          "news_pack_oc": -4.4145,
+          "keep_ok": true,
+          "gap_share": 0.926
+        }
+      ],
+      "why": "1/1 fat days: KEEP OC \u2265 index OC \u2212 0.50pp. C2C fat days are often the overnight gap; 09:30 longs only get the leftover OC. 2026-09-17 c2c=+1.14 gap=+1.05 idx_oc=+0.08 keep_oc=+5.49"
     }
   },
   "rules": [

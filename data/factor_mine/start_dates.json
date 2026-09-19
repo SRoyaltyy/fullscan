@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T06:52:55.372315-04:00",
+  "generated_at": "2026-09-19T07:19:11.523519-04:00",
   "rows": [
     {
       "name": "combo_sj_3070_shared",
@@ -1620,6 +1620,12 @@
       "start_green": 0,
       "start_n": 26,
       "start_rate": 0.0
+    },
+    {
+      "name": "union_hot_n4_holdup",
+      "start_green": 25,
+      "start_n": 26,
+      "start_rate": 0.9615
     }
   ]
 }

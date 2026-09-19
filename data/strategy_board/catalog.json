@@ -1,11 +1,11 @@
 {
-  "generated": "2026-09-19T10:54:35",
+  "generated": "2026-09-19T11:19:33",
   "live": "flatten_hard_red",
   "window": [
     "2026-08-13",
     "2026-09-18"
   ],
-  "n": 327,
+  "n": 328,
   "rows": [
     {
       "id": "merge_flatten_robust",
@@ -22,6 +22,22 @@
       "href": "../sleeve-merge/",
       "note": "LIVE: 3d robust size book + flatten clock; S\u2264\u22123 no new buys.",
       "live": true
+    },
+    {
+      "id": "fm_union_hot_n4_holdup",
+      "name": "union_hot_n4_holdup",
+      "family": "factor mine",
+      "pr": 127,
+      "integrity": "fill",
+      "ret_pct": 56.525,
+      "max_dd_pct": 6.89,
+      "capital": 10000.0,
+      "trades": 74,
+      "hit": 0.6571,
+      "final_equity": 15652.54,
+      "href": "../factor-mine/",
+      "note": "Research $10k cash book, 09:30 open, leftover split, fees. Not live.",
+      "live": false
     },
     {
       "id": "fm_combo_ej_5050_shared",

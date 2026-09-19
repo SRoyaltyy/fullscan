@@ -1,6 +1,6 @@
 # Strategy improve — gainer reverse-run
 
-_Generated 2026-09-19T06:55:54-04:00 — research audit, not a wire._
+_Generated 2026-09-19T07:19:34-04:00 — research audit, not a wire._
 
 Liquid Finviz top-15 gainers (Change% ≥ 5%, mcap ≥ $100M, adv ≥ 500k) run back through the 09:30 packet that already printed. Same-day Change% only picks the universe.
 
@@ -14,11 +14,11 @@ All four bars below must be green on a rolling 10-session window. Book% / fill-r
 - Fail looks like: S positive and $101k leftover with 0 priced BUYs / `io 3d cannot settle` is a sit, not a strategy call.
 - This window: flatten_robust sit=True on an audited UP window is a fail when leftover cash could buy 1 share (see sleeve today.json).
 
-### `fat_day_keep_oc` — KEEP longs are not red from the 09:30 open on fat index days · **MEASURE**
+### `fat_day_keep_oc` — KEEP longs are not red from the 09:30 open on fat index days · **PASS**
 
 - Pass: On sessions with SPX close-to-close ≥ +0.80%: equal-weight open→close of that morning's KEEP long list (union_hot_n4_h1, else combo_sh longs) ≥ SPX open→close − 0.50 pp. Gap days are scored from the open, not from the prior close.
 - Fail looks like: Thursday 09-17: SPX +1.14% close-to-close / +0.08% from the open; hot4 AZTA/RVTY/IT/FIVN −1.06% from the open.
-- This window: Needs official SPX + KEEP open→close for each fat day. 09-17 already measured: hot4 −1.06% vs SPX open→close +0.08%.
+- This window: 1/1 fat days: KEEP OC ≥ index OC − 0.50pp. C2C fat days are often the overnight gap; 09:30 longs only get the leftover OC. 2026-09-17 c2c=+1.14 gap=+1.05 idx_oc=+0.08 keep_oc=+5.49
 
 ### `gainer_recall` — Liquid rippers show up on a morning list · **FAIL**
 
@@ -48,6 +48,15 @@ Three stacked filters, in order:
 3. **The book is a different pile.** News actions stay on the oil E&P cluster (COP/EOG/RRC…). Judge prints sector ETFs (XLE/IGV), not SDGR/GNRC. Flatten / hot4 pick healthcare size-book names. Live flatten then sits (`io 3d cannot settle`) so even the wrong names are not bought.
 
 Dossiers also run **after** the stock book in preopen ALL, so a healthy STEP1 still cannot pick that morning's BUY list.
+
+## Why long-only books miss highly positive days
+
+Two stacked reasons, in order:
+
+1. **The fat print is the overnight gap.** A 09:30 long buys after the gap. Thursday 09-17 SPX +1.14% close-to-close was +1.05% before the open and +0.08% from 09:30→16:00. `union_hot_n4_h1` is hold=1 — it never carries last night's lot into that gap. `union_hot_n4_holdup` keeps S>0 lots through the next 09:30 so the *next* gap is in the book. `union_e_fresh_h3` already holds 3.
+2. **KEEP hot4 is leftover tape, not index beta.** On the 09-03 grind fat day (SPY +0.69% from the open) hot4 GPRO/REAX/CNH/MMED was **−5.28%**. The same morning `union_e_fresh_h3` (AVGO/CIEN/FIVE…) was **+4.07%** and `union_news_pack_net2_h1` (AVGO/DELL/HPE) was **+7.37%**. Event / news longs participated. Hot-score micro names faded.
+
+Morning S does not call fat grind days (09-03 S=−0.9). S=+7 on 09-17 was after the gap was already printed.
 
 ## Reverse-run
 

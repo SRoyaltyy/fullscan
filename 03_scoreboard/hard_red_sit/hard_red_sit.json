@@ -2901,7 +2901,7 @@
   },
   "per_sleeve": {
     "tag": "RESEARCH",
-    "date": "2026-09-18",
+    "date": "2026-09-17",
     "live_sit": true,
     "keep_bar_unchanged": true,
     "n_sit": 1,
@@ -2927,35 +2927,35 @@
           {
             "ticker": "ILMN",
             "side": "long",
-            "open": 249.13,
-            "px": 239.62,
+            "open": 233.85,
+            "px": 245.18,
             "px_src": "session_export",
-            "low": 236.42,
+            "low": 232.99,
             "scoops": {
               "0.5": {
-                "kind": "scoop",
+                "kind": "no_dip",
                 "x": 0.5,
-                "fill": 247.8843
+                "fill": null
               },
               "1.0": {
-                "kind": "scoop",
+                "kind": "no_dip",
                 "x": 1.0,
-                "fill": 246.6387
+                "fill": null
               },
               "1.5": {
-                "kind": "scoop",
+                "kind": "no_dip",
                 "x": 1.5,
-                "fill": 245.393
+                "fill": null
               },
               "2.0": {
-                "kind": "scoop",
+                "kind": "no_dip",
                 "x": 2.0,
-                "fill": 244.1474
+                "fill": null
               },
               "3.0": {
-                "kind": "scoop",
+                "kind": "no_dip",
                 "x": 3.0,
-                "fill": 241.6561
+                "fill": null
               }
             },
             "tag": "RESEARCH"
@@ -2963,30 +2963,30 @@
           {
             "ticker": "SDGR",
             "side": "long",
-            "open": 29.32,
-            "px": 29.02,
+            "open": 24.09,
+            "px": 30.24,
             "px_src": "session_export",
-            "low": 28.55,
+            "low": 24.09,
             "scoops": {
               "0.5": {
-                "kind": "scoop",
+                "kind": "no_dip",
                 "x": 0.5,
-                "fill": 29.1734
+                "fill": null
               },
               "1.0": {
-                "kind": "scoop",
+                "kind": "no_dip",
                 "x": 1.0,
-                "fill": 29.0268
+                "fill": null
               },
               "1.5": {
-                "kind": "scoop",
+                "kind": "no_dip",
                 "x": 1.5,
-                "fill": 28.8802
+                "fill": null
               },
               "2.0": {
-                "kind": "scoop",
+                "kind": "no_dip",
                 "x": 2.0,
-                "fill": 28.7336
+                "fill": null
               },
               "3.0": {
                 "kind": "no_dip",
@@ -2999,35 +2999,35 @@
           {
             "ticker": "ARQT",
             "side": "long",
-            "open": 26.14,
-            "px": 25.38,
+            "open": 25.95,
+            "px": 26.46,
             "px_src": "session_export",
-            "low": 25.13,
+            "low": 24.345,
             "scoops": {
               "0.5": {
                 "kind": "scoop",
                 "x": 0.5,
-                "fill": 26.0093
+                "fill": 25.8202
               },
               "1.0": {
                 "kind": "scoop",
                 "x": 1.0,
-                "fill": 25.8786
+                "fill": 25.6905
               },
               "1.5": {
                 "kind": "scoop",
                 "x": 1.5,
-                "fill": 25.7479
+                "fill": 25.5607
               },
               "2.0": {
                 "kind": "scoop",
                 "x": 2.0,
-                "fill": 25.6172
+                "fill": 25.431
               },
               "3.0": {
                 "kind": "scoop",
                 "x": 3.0,
-                "fill": 25.3558
+                "fill": 25.1715
               }
             },
             "tag": "RESEARCH"
@@ -3035,35 +3035,35 @@
           {
             "ticker": "FTRE",
             "side": "long",
-            "open": 20.1,
-            "px": 19.93,
+            "open": 20.31,
+            "px": 20.28,
             "px_src": "session_export",
-            "low": 19.28,
+            "low": 20.19,
             "scoops": {
               "0.5": {
                 "kind": "scoop",
                 "x": 0.5,
-                "fill": 19.9995
+                "fill": 20.2084
               },
               "1.0": {
-                "kind": "scoop",
+                "kind": "no_dip",
                 "x": 1.0,
-                "fill": 19.899
+                "fill": null
               },
               "1.5": {
-                "kind": "scoop",
+                "kind": "no_dip",
                 "x": 1.5,
-                "fill": 19.7985
+                "fill": null
               },
               "2.0": {
-                "kind": "scoop",
+                "kind": "no_dip",
                 "x": 2.0,
-                "fill": 19.698
+                "fill": null
               },
               "3.0": {
-                "kind": "scoop",
+                "kind": "no_dip",
                 "x": 3.0,
-                "fill": 19.497
+                "fill": null
               }
             },
             "tag": "RESEARCH"

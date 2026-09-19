@@ -79,6 +79,22 @@ def test_render_lists_locked_bars() -> None:
     assert "flatten_robust" in md
 
 
+def test_fat_day_splits_gap_from_open() -> None:
+    path = gra.index_path("2026-09-17")
+    assert path["src"] == "channel1"
+    assert path["c2c_pct"] > 1.0
+    assert path["gap_pct"] > 1.0
+    assert abs(path["oc_pct"]) < 0.20
+    days = [{
+        "date": "2026-09-17",
+        "keep": {"union_hot_n4_h1": ["INDP", "GPRO", "INSP", "TJGC"],
+                 "union_e_fresh_h3": ["ALMU", "LEN"]},
+    }]
+    grade = gra.score_fat_day_keep(days)
+    assert grade["n_fat"] == 1
+    assert grade["days"][0]["gap_share"] > 0.8
+
+
 def test_audit_0917_sdgr_not_on_leakfree_hot4() -> None:
     """Same-day rip cannot be on that morning's leak-free hot4.
 
@@ -98,5 +114,6 @@ if __name__ == "__main__":
     test_classify_captured_vs_never_targeted()
     test_score_improve_fails_empty_dossiers_and_zero_recall()
     test_render_lists_locked_bars()
+    test_fat_day_splits_gap_from_open()
     test_audit_0917_sdgr_not_on_leakfree_hot4()
-    print("4 gainer-reverse-audit tests passed")
+    print("5 gainer-reverse-audit tests passed")

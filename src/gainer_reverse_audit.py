@@ -24,6 +24,16 @@ from . import catalyst_daily as cd
 from . import gainer_asof as ga
 from . import ticker_lookback as tl
 
+
+def _finite(x):
+    try:
+        v = float(x)
+    except (TypeError, ValueError):
+        return None
+    if v != v:  # NaN
+        return None
+    return v
+
 ROOT = Path(__file__).resolve().parent.parent
 ET = ZoneInfo("America/New_York")
 OUT_MD = ROOT / "03_scoreboard" / "STRATEGY_IMPROVE.md"
@@ -44,11 +54,18 @@ KEEP_KEYS = (
     "combo_ej_5050_shared",
     "union_e_fresh_h3",
     "yday_gainer_h1",
+    "union_news_pack_net2_h1",
     "flatten_h5",
     "flatten_robust",
 )
 FAT_SPX_C2C = 0.80
 KEEP_OC_SLACK = 0.50
+# Official Channel 1 prints when Yahoo SPY is missing (09-16..18).
+CHANNEL1_SPX = {
+    "2026-09-16": {"prev": 7585.73, "open": 7601.25, "close": 7551.81},
+    "2026-09-17": {"prev": 7551.81, "open": 7631.44, "close": 7637.76},
+    "2026-09-18": {"prev": 7637.76, "open": 7657.17, "close": 7650.50},
+}
 RECALL_BAR = 0.25
 TOP5_HIT_BAR = 1
 ROLLING_SESSIONS = 10
@@ -280,6 +297,124 @@ def classify_gainer(ticker: str, rank: int, hits: dict[str, set[str]],
     }
 
 
+def index_path(date: str) -> dict:
+    """SPX/SPY close-to-close, gap, and open→close. Gap is not 09:30-harvestable."""
+    if not date:
+        return {"src": None, "gap_pct": None, "oc_pct": None, "c2c_pct": None}
+    ch = CHANNEL1_SPX.get(date)
+    if ch and ch.get("open") and ch.get("close") and ch.get("prev"):
+        o, c, pc = float(ch["open"]), float(ch["close"]), float(ch["prev"])
+        return {
+            "src": "channel1",
+            "gap_pct": round(100.0 * (o / pc - 1.0), 4),
+            "oc_pct": round(100.0 * (c / o - 1.0), 4),
+            "c2c_pct": round(100.0 * (c / pc - 1.0), 4),
+        }
+    bar = tl.session_bar("SPY", date) or {}
+    o, c = _finite(bar.get("open")), _finite(bar.get("close"))
+    # prior close from SPY if present on the bar, else None
+    pc = _finite(bar.get("prev_close") or bar.get("prior_close"))
+    if pc is None:
+        # walk back one session via ticker_lookback if we can
+        from . import gainer_capture as gc
+        cal = []
+        try:
+            from . import sleeve_merge as sm
+            cal = list(sm.session_calendar(sm.load_payload(), sm.list_books()))
+        except Exception:
+            cal = []
+        prior = gc.prior_session(cal, date) if cal else None
+        if prior:
+            prev = tl.session_bar("SPY", prior) or {}
+            pc = _finite(prev.get("close"))
+    if not o or not c or not pc:
+        return {"src": None, "gap_pct": None, "oc_pct": None, "c2c_pct": None}
+    return {
+        "src": "spy",
+        "gap_pct": round(100.0 * (o / pc - 1.0), 4),
+        "oc_pct": round(100.0 * (c / o - 1.0), 4),
+        "c2c_pct": round(100.0 * (c / pc - 1.0), 4),
+    }
+
+
+def ew_open_close(tickers: list[str], date: str) -> float | None:
+    rets = []
+    for raw in tickers or []:
+        t = tl._tick(raw)
+        if not t:
+            continue
+        bar = tl.session_bar(t, date) or {}
+        o, c = _finite(bar.get("open")), _finite(bar.get("close"))
+        if o and c:
+            rets.append(100.0 * (c / o - 1.0))
+    if not rets:
+        return None
+    return round(sum(rets) / len(rets), 4)
+
+
+def score_fat_day_keep(days: list[dict]) -> dict:
+    """Fat C2C days: KEEP open→close vs index open→close. Gap is reported, not scored."""
+    rows = []
+    for d in days or []:
+        date = d.get("date")
+        if not date:
+            continue
+        path = index_path(date)
+        c2c = path.get("c2c_pct")
+        if c2c is None or c2c < FAT_SPX_C2C:
+            continue
+        keep = (d.get("keep") or {}).get("union_hot_n4_h1") or []
+        event = (d.get("keep") or {}).get("union_e_fresh_h3") or []
+        pack = (d.get("keep") or {}).get("union_news_pack_net2_h1") or []
+        keep_oc = ew_open_close(keep, date)
+        event_oc = ew_open_close(event, date)
+        pack_oc = ew_open_close(pack, date)
+        oc = path.get("oc_pct")
+        keep_ok = (
+            keep_oc is not None and oc is not None
+            and keep_oc >= oc - KEEP_OC_SLACK
+        )
+        rows.append({
+            "date": date,
+            "c2c_pct": c2c,
+            "gap_pct": path.get("gap_pct"),
+            "oc_pct": oc,
+            "keep": keep,
+            "keep_oc": keep_oc,
+            "e_fresh_oc": event_oc,
+            "news_pack_oc": pack_oc,
+            "keep_ok": keep_ok,
+            "gap_share": (
+                round(path["gap_pct"] / c2c, 3)
+                if c2c and path.get("gap_pct") is not None else None
+            ),
+        })
+    if not rows:
+        return {
+            "pass": None,
+            "n_fat": 0,
+            "days": [],
+            "why": "No fat C2C days (≥ +0.80%) on this window with an index print.",
+        }
+    n_ok = sum(1 for r in rows if r.get("keep_ok"))
+    return {
+        "pass": n_ok == len(rows),
+        "n_fat": len(rows),
+        "n_ok": n_ok,
+        "days": rows,
+        "why": (
+            f"{n_ok}/{len(rows)} fat days: KEEP OC ≥ index OC − {KEEP_OC_SLACK:.2f}pp. "
+            "C2C fat days are often the overnight gap; 09:30 longs only get the leftover OC. "
+            + "; ".join(
+                f"{r['date']} c2c={r['c2c_pct']:+.2f} gap={r['gap_pct']:+.2f} "
+                f"idx_oc={r['oc_pct']:+.2f} keep_oc="
+                f"{'—' if r['keep_oc'] is None else f'{r['keep_oc']:+.2f}'}"
+                for r in rows
+            )
+        ),
+    }
+
+
 def audit_date(date: str, top_n: int = TOP_N,
                min_change: float = MIN_CHANGE) -> dict:
     df = ga.load_finviz(date)
@@ -383,13 +518,7 @@ def score_improve(days: list[dict]) -> dict:
             "No sit flag on this window — still check leftover cash + tickets."
         ),
     }
-    out["fat_day_keep_oc"] = {
-        "pass": None,
-        "why": (
-            "Needs official SPX + KEEP open→close for each fat day. "
-            "09-17 already measured: hot4 −1.06% vs SPX open→close +0.08%."
-        ),
-    }
+    out["fat_day_keep_oc"] = score_fat_day_keep(days)
     return out
 
 
@@ -457,6 +586,27 @@ def render_markdown(payload: dict) -> str:
         "",
         "Dossiers also run **after** the stock book in preopen ALL, so a "
         "healthy STEP1 still cannot pick that morning's BUY list.",
+        "",
+        "## Why long-only books miss highly positive days",
+        "",
+        "Two stacked reasons, in order:",
+        "",
+        "1. **The fat print is the overnight gap.** A 09:30 long buys "
+        "after the gap. Thursday 09-17 SPX +1.14% close-to-close was "
+        "+1.05% before the open and +0.08% from 09:30→16:00. "
+        "`union_hot_n4_h1` is hold=1 — it never carries last night's "
+        "lot into that gap. `union_hot_n4_holdup` keeps S>0 lots through "
+        "the next 09:30 so the *next* gap is in the book. "
+        "`union_e_fresh_h3` already holds 3.",
+        "2. **KEEP hot4 is leftover tape, not index beta.** On the "
+        "09-03 grind fat day (SPY +0.69% from the open) hot4 "
+        "GPRO/REAX/CNH/MMED was **−5.28%**. The same morning "
+        "`union_e_fresh_h3` (AVGO/CIEN/FIVE…) was **+4.07%** and "
+        "`union_news_pack_net2_h1` (AVGO/DELL/HPE) was **+7.37%**. "
+        "Event / news longs participated. Hot-score micro names faded.",
+        "",
+        "Morning S does not call fat grind days (09-03 S=−0.9). "
+        "S=+7 on 09-17 was after the gap was already printed.",
         "",
         "## Reverse-run",
         "",

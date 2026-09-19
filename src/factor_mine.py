@@ -530,6 +530,9 @@ def build_recipes() -> list[dict]:
 
     add(name="union_hot_n4_h1", universe="union", hold=1, top_n=4,
         rank="hot_score", forbid={"alarm": True}, note="top 4 by hot")
+    add(name="union_hot_n4_holdup", universe="union", hold=1, top_n=4,
+        rank="hot_score", s_boost="holdup", forbid={"alarm": True},
+        note="hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book")
     add(name="union_hot_n12_h1", universe="union", hold=1, top_n=12,
         rank="hot_score", forbid={"alarm": True}, note="top 12 by hot")
     add(name="union_cond_n4_h3", universe="union", hold=3, top_n=4,
@@ -880,6 +883,13 @@ def explain_recipe(rec: dict) -> dict:
     elif boost == "both":
         buy.append(
             "On a strong morning (S ≥ +5), spend 1.35× leftover and add 4 extra names — still cash-capped."
+        )
+    elif boost == "holdup":
+        buy.append(
+            "On an UP morning (S > 0), each new long lot stays through the "
+            "next 09:30 so the overnight gap is marked. Highly positive days "
+            "in this window were mostly that gap; a same-day 09:30→16:00 "
+            "book cannot harvest them."
         )
     if short:
         buy.append(

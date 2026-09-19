@@ -63,6 +63,8 @@ LONG_LED_PIN = (
     "combo_es_9010_shared",
     "combo_se_3070_shared",
     "union_e_fresh_h3",
+    "union_news_pack_net2_h1",
+    "union_hot_n4_holdup",
 )
 
 

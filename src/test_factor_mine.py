@@ -1703,6 +1703,43 @@ def test_rank_w_gives_more_shares_to_first() -> None:
     assert abs(sum(half) - 50.0) < 1e-9
 
 
+def test_holdup_keeps_up_morning_lot_through_next_gap() -> None:
+    """S>0 entry on hold=1 holdup must still be held on the next session."""
+    from src import factor_mine_book as fmb
+    from src import paper_trade as pt
+    cal = ["2026-09-02", "2026-09-03", "2026-09-04"]
+    rows = [
+        _row("2026-09-02", "AAA", src_rank=0, ohlc_hot_score=9),
+        # Day-2/3 lists drop AAA so a hold=1 book would sell at the fat open.
+        _row("2026-09-03", "BBB", src_rank=0, ohlc_hot_score=9),
+        _row("2026-09-04", "BBB", src_rank=0, ohlc_hot_score=9),
+    ]
+    bars = {
+        ("AAA", "2026-09-02"): {"open": 10, "close": 10},
+        ("AAA", "2026-09-03"): {"open": 10.3, "close": 10.4},  # fat gap
+        ("AAA", "2026-09-04"): {"open": 10.4, "close": 10.2},
+        ("BBB", "2026-09-03"): {"open": 20, "close": 19},
+        ("BBB", "2026-09-04"): {"open": 19, "close": 19},
+    }
+    rec = fm.make_recipe(
+        "union_hot_n4_holdup", hold=1, top_n=1, rank="hot_score",
+        s_boost="holdup", forbid={"alarm": True})
+    book = fmb.simulate_book(
+        _panel(cal, rows), rec, bars=bars, fees=pt.load_fees(),
+        regime={"2026-09-02": {"predict_score": 2.25},
+                "2026-09-03": {"predict_score": -0.9},
+                "2026-09-04": {"predict_score": 2.0}})
+    sells = [t for t in book["trades"] if t.get("side") == "SELL"]
+    assert sells, book["trades"]
+    assert sells[0]["date"] == "2026-09-04", sells[0]
+    assert sells[0]["ticker"] == "AAA"
+    opens = [t for t in book["trades"]
+             if t.get("side") == "OPEN" and t["date"] == "2026-09-03"]
+    assert opens and "AAA×" in " ".join(opens[0].get("open_held") or [])
+    names = {r["name"] for r in fm.build_recipes()}
+    assert "union_hot_n4_holdup" in names
+
+
 def test_sboost_more_names_on_good_s_still_cash_capped() -> None:
     from src import factor_mine_book as fmb
     from src import paper_trade as pt
@@ -2476,6 +2513,7 @@ if __name__ == "__main__":
     test_audit_fails_on_unheld_sell_and_overspend()
     test_time_sell_exits_at_min_hold_even_if_listed()
     test_rank_w_gives_more_shares_to_first()
+    test_holdup_keeps_up_morning_lot_through_next_gap()
     test_sboost_more_names_on_good_s_still_cash_capped()
     test_action_filters_size_sell_boost()
     test_dash_payload_ships_every_book_and_features_high_return()
@@ -2520,4 +2558,4 @@ if __name__ == "__main__":
     test_js_look_day_cams_and_white_yday()
     test_js_white_horizon_pool_then_score()
     test_js_bracket_take_inside_min_hold()
-    print("63 factor-mine tests passed")
+    print("64 factor-mine tests passed")
