@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_e_fresh_h3/union_e_fresh_h1 w=0.5,0.5 net=priority
 
-Cash book **+26.85%** ($12,685) · signal-only (no cash/fees) was —. Starts YES **20/26**. Fills 104 · skips 215 · realized $+2684.66.
+Cash book **+38.47%** ($13,847) · signal-only (no cash/fees) was —. Starts YES **25/26**. Fills 107 · skips 221 · realized $+2684.66.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $12,684.62.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $23.99.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -271,8 +271,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | `KR` | 27 | $62.25 | $61.93 | -8.64 | — | +0.00 | -8.64 | +159.57 | — |
 | 2026-09-16 | `LPTH` | 163 | $9.29 | $9.40 | +17.93 | — | +0.00 | +17.93 | +4.89 | — |
 | 2026-09-16 | `REF` | 116 | $15.90 | $15.75 | -17.40 | — | +0.00 | -17.40 | +307.40 | — |
-| 2026-09-17 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-09-18 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-16 | `FPS` | 191 | — | $33.14 | +0.00 | $34.84 | +324.70 | +324.70 | +0.00 | +324.70 |
+| 2026-09-16 | `TCOM` | 154 | — | $40.93 | +0.00 | $40.43 | -77.00 | -77.00 | +0.00 | -77.00 |
+| 2026-09-17 | `FPS` | 191 | $34.84 | $36.76 | +366.72 | $38.06 | +248.30 | +615.02 | +691.42 | +939.72 |
+| 2026-09-17 | `TCOM` | 154 | $40.43 | $40.79 | +55.44 | $40.36 | -66.22 | -10.78 | -21.56 | -87.78 |
+| 2026-09-17 | `ALMU` | 2 | — | $11.21 | +0.00 | $11.54 | +0.67 | +0.67 | +0.00 | +0.67 |
+| 2026-09-18 | `FPS` | 191 | $38.06 | $39.50 | +275.04 | $39.44 | -11.46 | +263.58 | +1214.76 | +1203.30 |
+| 2026-09-18 | `TCOM` | 154 | $40.36 | $40.61 | +38.50 | $40.68 | +10.78 | +49.28 | -49.28 | -38.50 |
+| 2026-09-18 | `ALMU` | 2 | $11.54 | $11.64 | +0.19 | $12.72 | +2.17 | +2.36 | +0.86 | +3.03 |
 
 ## Each session (cash + holdings state)
 
@@ -301,9 +307,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | +0.50 | $12,247.47 | — | $12,247.47 | -0.00 | +66.21 | ORCL, DBI, ADBE, CPRT, DSGX, KR, LPTH, REF | — | $195.62 | $12,295.24 | ORCL×9, DBI×259, ADBE×6, CPRT×47, DSGX×21, KR×27, LPTH×163, REF×116 |
 | 2026-09-14 | -11.00 | $195.62 | ORCL×9, DBI×259, ADBE×6, CPRT×47, DSGX×21, KR×27, LPTH×163, REF×116 | $12,312.57 | +17.33 | +455.42 | — | — | $195.62 | $12,767.99 | ORCL×9, DBI×259, ADBE×6, CPRT×47, DSGX×21, KR×27, LPTH×163, REF×116 |
 | 2026-09-15 | -3.84 | $195.62 | ORCL×9, DBI×259, ADBE×6, CPRT×47, DSGX×21, KR×27, LPTH×163, REF×116 | $12,724.67 | -43.32 | +73.09 | — | — | $195.62 | $12,797.76 | ORCL×9, DBI×259, ADBE×6, CPRT×47, DSGX×21, KR×27, LPTH×163, REF×116 |
-| 2026-09-16 | +5.30 | $195.62 | ORCL×9, DBI×259, ADBE×6, CPRT×47, DSGX×21, KR×27, LPTH×163, REF×116 | $12,703.30 | -94.46 | +0.00 | — | ORCL, DBI, ADBE, CPRT, DSGX, KR, LPTH, REF | $12,684.62 | $12,684.62 | — |
-| 2026-09-17 | +7.38 | $12,684.62 | — | $12,684.62 | +0.00 | +0.00 | — | — | $12,684.62 | $12,684.62 | — |
-| 2026-09-18 | +4.86 | $12,684.62 | — | $12,684.62 | +0.00 | +0.00 | — | — | $12,684.62 | $12,684.62 | — |
+| 2026-09-16 | +5.30 | $195.62 | ORCL×9, DBI×259, ADBE×6, CPRT×47, DSGX×21, KR×27, LPTH×163, REF×116 | $12,703.30 | -94.46 | +247.70 | FPS, TCOM | ORCL, DBI, ADBE, CPRT, DSGX, KR, LPTH, REF | $46.65 | $12,927.31 | FPS×191, TCOM×154 |
+| 2026-09-17 | +7.38 | $46.65 | FPS×191, TCOM×154 | $13,349.47 | +422.16 | +182.75 | ALMU | — | $23.99 | $13,531.98 | FPS×191, TCOM×154, ALMU×2 |
+| 2026-09-18 | +4.86 | $23.99 | FPS×191, TCOM×154, ALMU×2 | $13,845.71 | +313.73 | +1.49 | — | — | $23.99 | $13,847.20 | FPS×191, TCOM×154, ALMU×2 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -459,12 +465,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 09:30 ET | **SELL** | `DSGX` | 21 | $78.12 | $2.08 | $+130.48 | $7,660.29 | ▲ +130.48 after sell → book $12,691.60; vs 09:30 mark -2.08 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
 | 2026-09-16 09:30 ET | **SELL** | `KR` | 27 | $61.93 | $2.09 | $+155.40 | $9,330.31 | ▲ +155.40 after sell → book $12,689.51; vs 09:30 mark -2.09 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
 | 2026-09-16 09:30 ET | **SELL** | `LPTH` | 163 | $9.40 | $2.52 | $-0.11 | $10,859.99 | ▼ -0.11 after sell → book $12,686.99; vs 09:30 mark -2.52 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **SELL** | `REF` | 116 | $15.75 | $2.37 | $+302.69 | $12,684.62 | ▲ +302.69 after sell → book $12,684.62; vs 09:30 mark -2.37 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,684.62 | ▲ close $12,684.62 vs 09:30 $12,703.30 (session +0.00) | 16:00 close · cash $12,684.62 · no lots left · equity $12,684.62. | — |
-| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,684.62 | ▲ 09:30 equity $12,684.62 vs yday $12,684.62 (+0.00) | 09:30 open · cash $12,684.62 (unchanged overnight, no fees) · equity $12,684.62 vs prior close $12,684.62 (+0.00) | — |
-| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,684.62 | ▲ close $12,684.62 vs 09:30 $12,684.62 (session +0.00) | 16:00 close · cash $12,684.62 · no lots left · equity $12,684.62. | — |
-| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,684.62 | ▲ 09:30 equity $12,684.62 vs yday $12,684.62 (+0.00) | 09:30 open · cash $12,684.62 (unchanged overnight, no fees) · equity $12,684.62 vs prior close $12,684.62 (+0.00) | — |
-| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,684.62 | ▲ close $12,684.62 vs 09:30 $12,684.62 (session +0.00) | 16:00 close · cash $12,684.62 · no lots left · equity $12,684.62. | — |
+| 2026-09-16 09:30 ET | **SELL** | `REF` | 116 | $15.75 | $2.37 | $+302.69 | $12,684.62 | ▲ +302.69 after sell → book $12,684.62; vs 09:30 mark -2.37 | union_e_fresh_h3: dropped from list after 3 sess (min 3) | join🔴 sector🔴 gen🟢 news🟡 digest🔴 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `FPS` | 191 | $33.14 | $2.56 | — | $6,352.32 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list yday_gainer; 🔵; ret5=+5.8; combo leftover $6342.31; owner union_e_fresh_h3 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `TCOM` | 154 | $40.93 | $2.45 | — | $46.65 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-9.3; combo leftover $6342.31; owner union_e_fresh_h3 | join🔴 sector🔴 gen🟢 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $46.65 | ▲ close $12,927.31 vs 09:30 $12,703.30 (session +247.70) | 16:00 close · cash $46.65 · equity $12,927.31 vs 09:30 $12,703.30 (+224.01; session marks +247.70) · 2 name(s) marked open→close (per-name table). FPS×191 09:30 $33.14 → close $34.84 +324.70; TCOM×154 09:30 $40.93 → close $40.43 -77.00 | — |
+| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $46.65 | ▲ 09:30 equity $13,349.47 vs yday $12,927.31 (+422.16) | 09:30 open · cash $46.65 (unchanged overnight, no fees) · equity $13,349.47 vs prior close $12,927.31 (+422.16) | — |
+| 2026-09-17 09:30 ET | **BUY** | `ALMU` | 2 | $11.21 | $0.23 | — | $23.99 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+1.6; combo leftover $23.32; owner union_e_fresh_h3 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $23.99 | ▲ close $13,531.98 vs 09:30 $13,349.47 (session +182.75) | 16:00 close · cash $23.99 · equity $13,531.98 vs 09:30 $13,349.47 (+182.51; session marks +182.75) · 3 name(s) marked open→close (per-name table). FPS×191 09:30 $36.76 → close $38.06 +248.30; TCOM×154 09:30 $40.79 → close $40.36 -66.22; ALMU×2 09:30 $11.21 → close $11.54 +0.67 | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $23.99 | ▲ 09:30 equity $13,845.71 vs yday $13,531.98 (+313.73) | 09:30 open · cash $23.99 (unchanged overnight, no fees) · equity $13,845.71 vs prior close $13,531.98 (+313.73) | — |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $23.99 | ▲ close $13,847.20 vs 09:30 $13,845.71 (session +1.49) | 16:00 close · cash $23.99 · equity $13,847.20 vs 09:30 $13,845.71 (+1.49; session marks +1.49) · 3 name(s) marked open→close (per-name table). FPS×191 09:30 $39.50 → close $39.44 -11.46; TCOM×154 09:30 $40.61 → close $40.68 +10.78; ALMU×2 09:30 $11.64 → close $12.72 +2.17 | — |
 
 ## Not taken
 
@@ -685,3 +694,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `HITI` | hard_red | hard-red S=-3.84 sit; no new long union_e_fresh_h1 |
 | 2026-09-15 | `PLAY` | hard_red | hard-red S=-3.84 sit; no new long union_e_fresh_h1 |
 | 2026-09-15 | `UROY` | hard_red | hard-red S=-3.84 sit; no new long union_e_fresh_h1 |
+| 2026-09-17 | `FPS` | min_hold | union_e_fresh_h3: dropped but min-hold 1/3 |
+| 2026-09-17 | `TCOM` | min_hold | union_e_fresh_h3: dropped but min-hold 1/3 |
+| 2026-09-17 | `LEN` | cash | leftover split 23.32 < 1 share @ 81.00 |
+| 2026-09-18 | `FPS` | min_hold | union_e_fresh_h3: dropped but min-hold 2/3 |
+| 2026-09-18 | `TCOM` | min_hold | union_e_fresh_h3: dropped but min-hold 2/3 |
+| 2026-09-18 | `ALMU` | min_hold | union_e_fresh_h3: dropped but min-hold 1/3 |
+
+## Still open (marked at last close)
+
+| Ticker | Shares | Entry | Why |
+|---|---:|---|---|
+| `FPS` | 191 | 2026-09-16 @ $33.14 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list yday_gainer; 🔵; ret5=+5.8; combo leftover $6342.31; owner union_e_fresh_h3 |
+| `TCOM` | 154 | 2026-09-16 @ $40.93 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-9.3; combo leftover $6342.31; owner union_e_fresh_h3 |
+| `ALMU` | 2 | 2026-09-17 @ $11.21 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+1.6; combo leftover $23.32; owner union_e_fresh_h3 |

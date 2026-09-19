@@ -17,6 +17,10 @@ NEWS_DIR = ROOT / "01_daily" / "news"
 HEAT_DIR = ROOT / "01_daily" / "map_heat"
 DATA_CATALYST = ROOT / "data" / "catalyst"
 DEFAULT_MAX = 8
+# Override captains used to consume every dossier seat (oil/coal 8/8 on
+# 09-16/17/18). News action_top never got a look. Reserve these seats
+# so the morning packet's strongest ticker actions still get dossiers.
+ACTION_TOP_RESERVE = 3
 # A dossier is 3 concurrent search-and-extract LLM calls, then Step 4
 # synthesis + catcher. DeepSeek's tool loop keeps a 150s close reserve, so
 # the research phase (62% of the slice) needs ~220s before any search
@@ -94,6 +98,22 @@ def signal_weight(net_signal: str, conviction: object) -> float:
     return round(base * scale, 3)
 
 
+def override_fill_cap(max_n: int, reserve: int = ACTION_TOP_RESERVE) -> int:
+    """How many override-captain seats may fill before news actions.
+
+    Researched opportunities and mega earnings still use the full ``max_n``.
+    Mechanical OVERRIDE cards / map-heat captains stop here so
+    ``action_top`` can take the reserved remainder.
+    """
+    n = int(max_n or 0)
+    keep = max(0, int(reserve or 0))
+    if n <= 0:
+        return 0
+    if keep >= n:
+        return 0
+    return n - keep
+
+
 def _add(picked: list[dict], seen: set[str], ticker: str, role: str,
          why: str, max_n: int) -> None:
     t = _norm_ticker(ticker)
@@ -125,21 +145,34 @@ def select_targets(date: str, max_n: int = DEFAULT_MAX,
         if t in MEGA:
             sess = e.get("session") if isinstance(e, dict) else ""
             _add(picked, seen, t, "earnings", f"earnings {sess or 'today'}", max_n)
+    override_cap = override_fill_cap(max_n)
+
+    def _add_override(ticker, why: str) -> None:
+        n_over = sum(1 for p in picked if p.get("role") == "override_captain")
+        if n_over >= override_cap:
+            return
+        _add(picked, seen, ticker, "override_captain", why, max_n)
+
     for card in research.get("cards") or []:
         if str(card.get("action") or "") != "OVERRIDE":
             continue
         industry = card.get("industry") or ""
         for cap in card.get("captains") or []:
-            _add(picked, seen, cap.get("ticker") if isinstance(cap, dict) else cap,
-                 "override_captain", f"OVERRIDE card {industry}", max_n)
+            _add_override(
+                cap.get("ticker") if isinstance(cap, dict) else cap,
+                f"OVERRIDE card {industry}",
+            )
     # Fill remaining slots with mechanically flagged captains only after
     # researched opportunities and binary earnings names have seats. The old
     # order let the first four override industries consume all eight slots.
+    # ACTION_TOP_RESERVE still caps how many of those captains may sit.
     for row in heat.get("overrides") or []:
         industry = row.get("industry") or ""
         for cap in (row.get("spx_leaders") or []) + (row.get("rut_leaders") or []):
-            _add(picked, seen, cap.get("ticker") if isinstance(cap, dict) else cap,
-                 "override_captain", f"OVERRIDE {industry}", max_n)
+            _add_override(
+                cap.get("ticker") if isinstance(cap, dict) else cap,
+                f"OVERRIDE {industry}",
+            )
     heat_side: dict[str, str] = {}
     for card in research.get("cards") or []:
         direction = str(card.get("subsector_dir") or "").lower()

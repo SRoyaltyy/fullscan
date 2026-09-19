@@ -1140,6 +1140,81 @@ def test_build_mornings_covers_closed_session_past_lookback() -> None:
     assert morn["2026-09-11"]["hard_red"] is False
 
 
+def test_candidates_need_lookback_calendar() -> None:
+    """A one-day emit window used to drop yday_gainer / probable / hot."""
+    from unittest import mock
+
+    with mock.patch.object(
+        fm.gc, "yesterday_gainers",
+        side_effect=lambda prior, top_n=25: (["SDGR"] if prior else []),
+    ), mock.patch.object(fm.gc, "yesterday_movers", return_value=[]), \
+            mock.patch.object(fm.gc, "earnings_reaction", return_value=[]), \
+            mock.patch.object(fm.ohlc, "continuation",
+                              side_effect=lambda prior, date, top_n=8: (
+                                  ["ARQT"] if prior else [])), \
+            mock.patch.object(fm.ohlc, "liquid_hot",
+                              side_effect=lambda prior, date, top_n=30: (
+                                  ["ILMN"] if prior else [])):
+        one = fm._candidates("2026-09-18", ["2026-09-18"],
+                             {"tickers": ["FLA"]}, {})
+        assert one["flatten"] == ["FLA"]
+        assert one["yday_gainer"] == []
+        assert one["probable"] == []
+        assert one["ohlc_hot"] == []
+        full = fm._candidates(
+            "2026-09-18", ["2026-09-17", "2026-09-18"],
+            {"tickers": ["FLA"]}, {},
+        )
+        assert full["yday_gainer"] == ["SDGR"]
+        assert full["probable"] == ["ARQT"]
+        assert full["ohlc_hot"] == ["ILMN"]
+
+
+def test_panel_emit_keeps_lookback_off_the_row_list() -> None:
+    full = [
+        "2026-09-16", "2026-09-17", "2026-09-18",
+    ]
+    assert fm.panel_emit_dates(full, "2026-09-18", "2026-09-18") == [
+        "2026-09-18",
+    ]
+    prior = fm.feature_export_date(full, "2026-09-18")
+    assert prior == "2026-09-17"
+    assert fm.feature_export_date(["2026-09-18"], "2026-09-18") is None
+
+
+def test_merge_panel_days_replaces_only_the_window() -> None:
+    base = {
+        "from_date": "2026-08-13",
+        "to_date": "2026-09-18",
+        "session_dates": ["2026-09-15", "2026-09-18"],
+        "n_sessions": 2,
+        "n_rows": 2,
+        "rows": [
+            {"date": "2026-09-15", "ticker": "OLD", "src_rank": 0,
+             "sources": ["yday_gainer"]},
+            {"date": "2026-09-18", "ticker": "FLA", "src_rank": 0,
+             "sources": ["flatten"]},
+        ],
+        "by_date": {},
+    }
+    extra = {
+        "session_dates": ["2026-09-18"],
+        "rows": [
+            {"date": "2026-09-18", "ticker": "SDGR", "src_rank": 0,
+             "sources": ["yday_gainer"]},
+        ],
+        "by_date": {"2026-09-18": [
+            {"date": "2026-09-18", "ticker": "SDGR"},
+        ]},
+    }
+    out = fm.merge_panel_days(base, extra)
+    ticks = [(r["date"], r["ticker"]) for r in out["rows"]]
+    assert ("2026-09-15", "OLD") in ticks
+    assert ("2026-09-18", "SDGR") in ticks
+    assert ("2026-09-18", "FLA") not in ticks
+    assert out["n_rows"] == 2
+
+
 def test_live_panel_end_honors_explicit_open_to_date() -> None:
     from datetime import datetime
     from zoneinfo import ZoneInfo
@@ -2410,6 +2485,9 @@ if __name__ == "__main__":
     test_morning_s_falls_back_to_predict_file()
     test_morning_s_falls_back_to_weather_when_predict_missing()
     test_build_mornings_covers_closed_session_past_lookback()
+    test_candidates_need_lookback_calendar()
+    test_panel_emit_keeps_lookback_off_the_row_list()
+    test_merge_panel_days_replaces_only_the_window()
     test_live_panel_end_honors_explicit_open_to_date()
     test_extend_pack_through_adds_pending_start()
     test_payload_covers_session_and_land_closed_skips()
@@ -2442,4 +2520,4 @@ if __name__ == "__main__":
     test_js_look_day_cams_and_white_yday()
     test_js_white_horizon_pool_then_score()
     test_js_bracket_take_inside_min_hold()
-    print("60 factor-mine tests passed")
+    print("63 factor-mine tests passed")

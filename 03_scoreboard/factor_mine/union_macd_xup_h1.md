@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ macd_xup, no 🚨
 
-Cash book **-12.77%** ($8,723) · signal-only (no cash/fees) was -16.55%. Starts YES **5/26**. Fills 82 · skips 49 · realized $-1276.91.
+Cash book **-12.89%** ($8,711) · signal-only (no cash/fees) was -15.92%. Starts YES **2/26**. Fills 87 · skips 49 · realized $-1407.97.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8,723.07.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $24.72.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -154,8 +154,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | `INSP` | 41 | $73.00 | $72.14 | -35.26 | — | +0.00 | -35.26 | +92.66 | — |
 | 2026-09-15 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-16 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-09-17 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-09-18 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-17 | `AIB` | 2987 | — | $1.46 | +0.00 | $1.40 | -179.22 | -179.22 | +0.00 | -179.22 |
+| 2026-09-17 | `IQ` | 3991 | — | $1.07 | +0.00 | $1.10 | +119.73 | +119.73 | +0.00 | +119.73 |
+| 2026-09-18 | `AIB` | 2987 | $1.40 | $1.41 | +29.87 | — | +0.00 | +29.87 | -149.35 | — |
+| 2026-09-18 | `IQ` | 3991 | $1.10 | $1.12 | +79.82 | — | +0.00 | +79.82 | +199.55 | — |
+| 2026-09-18 | `VICR` | 39 | — | $219.62 | +0.00 | $222.72 | +120.90 | +120.90 | +0.00 | +120.90 |
 
 ## Each session (cash + holdings state)
 
@@ -185,8 +188,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | -11.00 | $32.86 | DBI×491, APPS×244, INSP×41 | $8,734.86 | -59.72 | +0.00 | — | DBI, APPS, INSP | $8,723.07 | $8,723.07 | — |
 | 2026-09-15 | -3.84 | $8,723.07 | — | $8,723.07 | -0.00 | +0.00 | — | — | $8,723.07 | $8,723.07 | — |
 | 2026-09-16 | +5.30 | $8,723.07 | — | $8,723.07 | -0.00 | +0.00 | — | — | $8,723.07 | $8,723.07 | — |
-| 2026-09-17 | +7.38 | $8,723.07 | — | $8,723.07 | -0.00 | +0.00 | — | — | $8,723.07 | $8,723.07 | — |
-| 2026-09-18 | +4.86 | $8,723.07 | — | $8,723.07 | -0.00 | +0.00 | — | — | $8,723.07 | $8,723.07 | — |
+| 2026-09-17 | +7.38 | $8,723.07 | — | $8,723.07 | -0.00 | -59.49 | AIB, IQ | — | $1.66 | $8,573.56 | AIB×2987, IQ×3991 |
+| 2026-09-18 | +4.86 | $1.66 | AIB×2987, IQ×3991 | $8,683.25 | +109.69 | +120.90 | VICR | AIB, IQ | $24.72 | $8,710.80 | VICR×39 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -323,9 +326,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,723.07 | ▲ 09:30 equity $8,723.07 vs yday $8,723.07 (-0.00) | 09:30 open · cash $8,723.07 · no holdings · equity $8,723.07 vs prior close $8,723.07 (-0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,723.07 | ▲ close $8,723.07 vs 09:30 $8,723.07 (session +0.00) | 16:00 close · cash $8,723.07 · no lots left · equity $8,723.07. | — |
 | 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,723.07 | ▲ 09:30 equity $8,723.07 vs yday $8,723.07 (-0.00) | 09:30 open · cash $8,723.07 · no holdings · equity $8,723.07 vs prior close $8,723.07 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,723.07 | ▲ close $8,723.07 vs 09:30 $8,723.07 (session +0.00) | 16:00 close · cash $8,723.07 · no lots left · equity $8,723.07. | — |
-| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,723.07 | ▲ 09:30 equity $8,723.07 vs yday $8,723.07 (-0.00) | 09:30 open · cash $8,723.07 · no holdings · equity $8,723.07 vs prior close $8,723.07 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,723.07 | ▲ close $8,723.07 vs 09:30 $8,723.07 (session +0.00) | 16:00 close · cash $8,723.07 · no lots left · equity $8,723.07. | — |
+| 2026-09-17 09:30 ET | **BUY** | `AIB` | 2987 | $1.46 | $38.53 | — | $4,323.51 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer; 🔵; ret5=+25.4; leftover $4361.53 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-17 09:30 ET | **BUY** | `IQ` | 3991 | $1.07 | $51.48 | — | $1.66 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list yday_gainer; 🔵; ret5=+7.8; leftover $4361.53 | join🔴 sector🟢 gen🟢 news🟡 digest🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.66 | ▼ close $8,573.56 vs 09:30 $8,723.07 (session -59.49) | 16:00 close · cash $1.66 · equity $8,573.56 vs 09:30 $8,723.07 (-149.51; session marks -59.49) · 2 name(s) marked open→close (per-name table). AIB×2987 09:30 $1.46 → close $1.40 -179.22; IQ×3991 09:30 $1.07 → close $1.10 +119.73 | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.66 | ▲ 09:30 equity $8,683.25 vs yday $8,573.56 (+109.69) | 09:30 open · cash $1.66 (unchanged overnight, no fees) · equity $8,683.25 vs prior close $8,573.56 (+109.69) · 2 name(s) re-marked at the open (per-name table). AIB×2987 yday $1.40 → 09:30 $1.41 +29.87; IQ×3991 yday $1.10 → 09:30 $1.12 +79.82 | — |
+| 2026-09-18 09:30 ET | **SELL** | `AIB` | 2987 | $1.41 | $39.06 | $-226.94 | $4,174.27 | ▼ -226.94 after sell → book $8,644.19; vs 09:30 mark -39.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-18 09:30 ET | **SELL** | `IQ` | 3991 | $1.12 | $52.18 | $+95.88 | $8,592.01 | ▲ +95.88 after sell → book $8,592.01; vs 09:30 mark -52.18 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-18 09:30 ET | **BUY** | `VICR` | 39 | $219.62 | $2.11 | — | $24.72 | — | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+3.0; leftover $8592.01 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $24.72 | ▲ close $8,710.80 vs 09:30 $8,683.25 (session +120.90) | 16:00 close · cash $24.72 · equity $8,710.80 vs 09:30 $8,683.25 (+27.55; session marks +120.90) · 1 name(s) marked open→close (per-name table). VICR×39 09:30 $219.62 → close $222.72 +120.90 | — |
 
 ## Not taken
 
@@ -380,3 +388,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `INIO` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `TXG` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `PD` | hard_red | hard-red S=-3.84 sit; no new buys |
+
+## Still open (marked at last close)
+
+| Ticker | Shares | Entry | Why |
+|---|---:|---|---|
+| `VICR` | 39 | 2026-09-18 @ $219.62 | union ∩ macd_xup, no 🚨; gate macd_cross_up=True; list probable,yday_gainer,yday_mover; 🔵; ret5=+3.0; leftover $8592.01 |
