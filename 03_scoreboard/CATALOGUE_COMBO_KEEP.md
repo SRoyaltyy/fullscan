@@ -18,7 +18,7 @@ Cyrus KEEP: **≥30 prove fires** and **after-fee H win rate > 55%**. After-fee 
 - Gate: `OPEN_SAME_ROW_LABELS + CLOCK_MAP`
 - Same-row leak abort: `DF, BB, BQ`
 - Leak check: **PASS**
-- Features: T−1 Finviz + panel prior tape (Clock B). Open is the fill, not a feature. Same-day Gap / Change / RelVol / minute Performance* are never flags. H/I are labels only.
+- Features: Theme Radar join on `join_morning` (T) + `finviz_asof` (T−1), else panel prior tape. Open is the fill, not a feature. Same-day Gap / Change / RelVol / minute Performance* are never Clock B and never flags. H/I are labels only.
 - Split: TIME-SPLIT last 30% of aisle session dates (cutoff `2026-09-10`). Discovery feature date is strictly before cutoff.
 - Aisle: restored multi-src morning panel (`lookback=full_session_cal`) ∪ Theme Radar Clock-B flagged oppset (`theme-radar a782cc2b research/oppset_clock_b`). Oppset gap/RelVol flags are T−1 membership only (VOL/CROWD aisle, not direction atoms). Flatten-only / starved days stay out unless the oppset covers that morning.
 - Live: `flatten_robust` not imported, not written.
@@ -61,7 +61,7 @@ Panel-only prove (pre-oppset fold) was 1941 name-days, 0 KEEP; best near-miss wa
 - Atoms: `mod_mom + completed_breakout + peer_sector_strong`.
 - HAVE / calculable: panel ohlc_ret_5 / last_green / ohlc_break_10 / fv_sma20 / rsi; T−1 Performance (Week); boxes.sector / peer
 - NEED: —
-- Discovery n=261 after-fee WR 43.7% (not KEEP).
+- Discovery n=258 after-fee WR 44.2% (not KEEP).
 - T−1 RelVol is context only (VOL/CROWD). Same-day Gap out.
 
 ### 2. Fresh material positive catalyst + limited prior extension
@@ -117,7 +117,7 @@ Panel-only prove (pre-oppset fold) was 1941 name-days, 0 KEEP; best near-miss wa
 - Atoms: `sector_weak + stock_firm + stock_beats_sector`.
 - HAVE / calculable: T−1 sector median Performance (Week); last_green; ohlc_ret_5
 - NEED: true peer basket (sector tag is the crude CALC)
-- Discovery n=765 after-fee WR 45.8% (not KEEP).
+- Discovery n=747 after-fee WR 46.3% (not KEEP).
 - Peer map beyond Sector tag is NEED; sector median is used.
 
 ### 7. Insider buying + improving cash economics + stabilization
@@ -170,12 +170,12 @@ Discovery ranks honesty only. A discovery >55% print is not a call.
 
 | combo | disc n | disc after-fee WR |
 |---|---:|---:|
-| `c1_continuation` | 261 | 43.7% |
+| `c1_continuation` | 258 | 44.2% |
 | `c2_room` | 258 | 42.2% |
 | `c3_earn_drift` | 1 | 100.0% |
 | `c4_downside` | 69 | 53.6% |
 | `c5_exhaustion_veto` | 380 | 43.9% |
-| `c6_resilience` | 765 | 45.8% |
+| `c6_resilience` | 747 | 46.3% |
 | `c7_insider_recovery` | 8 | 25.0% |
 | `c9_financing` | 0 | — |
 
@@ -183,12 +183,12 @@ Discovery ranks honesty only. A discovery >55% print is not a call.
 
 | combo | fold1 n / WR | fold2 n / WR | fold3 n / WR |
 |---|---|---|---|
-| `c1_continuation` | 81 / 42.0% | 68 / 35.3% | 112 / 50.0% |
+| `c1_continuation` | 81 / 42.0% | 65 / 36.9% | 112 / 50.0% |
 | `c2_room` | 102 / 47.1% | 54 / 35.2% | 102 / 41.2% |
 | `c3_earn_drift` | 1 / 100.0% | 0 / — | 0 / — |
 | `c4_downside` | 34 / 50.0% | 14 / 35.7% | 21 / 71.4% |
 | `c5_exhaustion_veto` | 209 / 45.0% | 88 / 54.5% | 83 / 30.1% |
-| `c6_resilience` | 256 / 44.1% | 146 / 37.0% | 363 / 50.4% |
+| `c6_resilience` | 256 / 44.1% | 128 / 39.1% | 363 / 50.4% |
 | `c7_insider_recovery` | 7 / 14.3% | 0 / — | 1 / 100.0% |
 | `c9_financing` | 0 / — | 0 / — | 0 / — |
 

@@ -215,12 +215,12 @@
       "need": "",
       "note": "T\u22121 RelVol is context only (VOL/CROWD). Same-day Gap out.",
       "disc": {
-        "n": 261,
+        "n": 258,
         "n_pos": 114,
-        "wr": 0.4367816091954023,
-        "mean_net": -0.005722507584586543,
+        "wr": 0.4418604651162791,
+        "mean_net": -0.005425948661346587,
         "verdict": "FAIL",
-        "why": "n=261, after-fee WR 43.7% \u2264 55%"
+        "why": "n=258, after-fee WR 44.2% \u2264 55%"
       },
       "hold": {
         "n": 86,
@@ -243,8 +243,8 @@
         {
           "lo": "2026-08-24",
           "hi": "2026-08-31",
-          "n": 68,
-          "wr": 0.35294117647058826,
+          "n": 65,
+          "wr": 0.36923076923076925,
           "verdict": "FAIL"
         },
         {
@@ -536,12 +536,12 @@
       "need": "true peer basket (sector tag is the crude CALC)",
       "note": "Peer map beyond Sector tag is NEED; sector median is used.",
       "disc": {
-        "n": 765,
-        "n_pos": 350,
-        "wr": 0.45751633986928103,
-        "mean_net": -0.0021101395660583053,
+        "n": 747,
+        "n_pos": 346,
+        "wr": 0.46318607764390896,
+        "mean_net": -0.0014968699310070664,
         "verdict": "FAIL",
-        "why": "n=765, after-fee WR 45.8% \u2264 55%"
+        "why": "n=747, after-fee WR 46.3% \u2264 55%"
       },
       "hold": {
         "n": 505,
@@ -564,8 +564,8 @@
         {
           "lo": "2026-08-24",
           "hi": "2026-08-31",
-          "n": 146,
-          "wr": 0.3698630136986301,
+          "n": 128,
+          "wr": 0.390625,
           "verdict": "FAIL"
         },
         {
