@@ -345,8 +345,14 @@ def factor_mine_books() -> list[dict]:
     if not FACTOR_MINE.is_file():
         return []
     try:
-        doc = json.loads(FACTOR_MINE.read_text(encoding="utf-8"))
-    except (OSError, json.JSONDecodeError):
+        from src.factor_mine import load_scoreboard
+        doc = load_scoreboard(FACTOR_MINE)
+    except Exception:
+        try:
+            doc = json.loads(FACTOR_MINE.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            return []
+    if not doc:
         return []
     dates = doc.get("dates") or []
     series = doc.get("series") or {}

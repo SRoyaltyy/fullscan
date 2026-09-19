@@ -53,6 +53,14 @@ OUT_MD = ROOT / "03_scoreboard" / "FACTOR_MINE.md"
 OUT_START = ROOT / "data" / "factor_mine" / "start_dates.json"
 PANEL_PATH = ROOT / "data" / "factor_mine" / "panel.json"
 DASH_DIR = ROOT / "dashboard" / "factor-mine"
+# Heavy books / starts / daily / probe / sim live in gzip shards so the
+# committed index stays under GitHub's 100MB hard cap. 2026-09-18 mine
+# runs died on `factor_mine.json is 102.00 MB` (GH001).
+LAYOUT_SHARDS = "shards-v1"
+SHARD_KEYS = ("books", "starts", "daily", "probe", "sim")
+SHARD_META_KEYS = ("layout", "shards", "shard_bytes")
+COMMIT_SOFT_LIMIT = 90 * 1024 * 1024
+SHARD_GZIP_SPLIT = 80 * 1024 * 1024
 TEMPLATE = Path(__file__).with_name("factor_mine_dash.html")
 SIM_JS = Path(__file__).with_name("factor_mine_sim.js")
 START = book_era.DASHBOARD_START
@@ -2255,9 +2263,8 @@ def _held_tickers_from_disk() -> set[str]:
     out: set[str] = set()
     if not OUT_JSON.is_file():
         return out
-    try:
-        doc = json.loads(OUT_JSON.read_text(encoding="utf-8"))
-    except (OSError, json.JSONDecodeError):
+    doc = load_scoreboard()
+    if not doc:
         return out
     for bk in (doc.get("books") or {}).values():
         for t in (bk or {}).get("trades") or []:
@@ -2446,12 +2453,153 @@ def pt_fees():
     return pt.load_fees()
 
 
+def shards_dir(out_json: Path | None = None) -> Path:
+    """Gzip shards sit next to the blotter markdowns, or `<stem>_shards` in tests."""
+    p = Path(out_json or OUT_JSON)
+    if p.name == "factor_mine.json":
+        return p.parent / "factor_mine" / "shards"
+    return p.parent / f"{p.stem}_shards"
+
+
+def _rel_to_index(path: Path, out_json: Path) -> str:
+    return path.resolve().relative_to(out_json.parent.resolve()).as_posix()
+
+
+def _clear_key_shards(dest: Path, key: str) -> None:
+    dest.mkdir(parents=True, exist_ok=True)
+    for p in dest.glob(f"{key}.json.gz"):
+        p.unlink()
+    for p in dest.glob(f"{key}_*.json.gz"):
+        p.unlink()
+
+
+def _gzip_json(obj) -> bytes:
+    raw = json.dumps(obj, separators=(",", ":")).encode("utf-8")
+    return gzip.compress(raw, compresslevel=9)
+
+
+def _load_gzip_json(path: Path):
+    blob = path.read_bytes()
+    if blob[:2] == b"\x1f\x8b":
+        blob = gzip.decompress(blob)
+    return json.loads(blob.decode("utf-8"))
+
+
+def _split_mapping(obj: dict, max_gzip: int) -> list[dict]:
+    """Split a dict so each gzip piece stays under ``max_gzip``."""
+    if not obj:
+        return [{}]
+    gz = _gzip_json(obj)
+    if len(gz) <= max_gzip:
+        return [obj]
+    items = list(obj.items())
+    if len(items) == 1:
+        # Single recipe still too big — last resort: write it anyway and
+        # let assert_publish_budget fail with a clear path.
+        return [obj]
+    mid = max(1, len(items) // 2)
+    return _split_mapping(dict(items[:mid]), max_gzip) + _split_mapping(
+        dict(items[mid:]), max_gzip)
+
+
+def _write_shard_key(dest: Path, key: str, obj, out_json: Path) -> list[str]:
+    _clear_key_shards(dest, key)
+    pieces = _split_mapping(obj, SHARD_GZIP_SPLIT) if isinstance(obj, dict) else [obj]
+    rels: list[str] = []
+    many = len(pieces) > 1
+    for i, piece in enumerate(pieces):
+        name = f"{key}_{i:02d}.json.gz" if many else f"{key}.json.gz"
+        path = dest / name
+        path.write_bytes(_gzip_json(piece))
+        rels.append(_rel_to_index(path, out_json))
+    return rels
+
+
+def write_scoreboard(payload: dict, out_json: Path | None = None) -> dict:
+    """Write slim index + gzip shards. Never keeps books/starts/daily in the index.
+
+    Returns the slim document that was written (manifest + summaries).
+    """
+    dest_json = Path(out_json or OUT_JSON)
+    dest_json.parent.mkdir(parents=True, exist_ok=True)
+    dest_shards = shards_dir(dest_json)
+    dest_shards.mkdir(parents=True, exist_ok=True)
+    slim = {k: v for k, v in payload.items() if k not in SHARD_KEYS and k not in SHARD_META_KEYS}
+    manifest: dict[str, list[str]] = {}
+    sizes: dict[str, list[int]] = {}
+    for key in SHARD_KEYS:
+        if key not in payload:
+            continue
+        rels = _write_shard_key(dest_shards, key, payload[key], dest_json)
+        manifest[key] = rels
+        sizes[key] = [
+            (dest_json.parent / rel).stat().st_size for rel in rels]
+    slim["layout"] = LAYOUT_SHARDS
+    slim["shards"] = manifest
+    slim["shard_bytes"] = sizes
+    dest_json.write_text(json.dumps(slim, separators=(",", ":")), encoding="utf-8")
+    assert_publish_budget(dest_json)
+    return slim
+
+
+def load_scoreboard(path: Path | None = None) -> dict:
+    """Reassemble slim index + gzip shards. Also accepts the old monolith JSON."""
+    src = Path(path or OUT_JSON)
+    if not src.is_file():
+        return {}
+    try:
+        doc = json.loads(src.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    if not isinstance(doc, dict):
+        return {}
+    shards = doc.get("shards")
+    if isinstance(shards, dict) and shards:
+        root = src.parent
+        for key, rels in shards.items():
+            paths = rels if isinstance(rels, list) else [rels]
+            merged = None
+            for rel in paths:
+                if not rel:
+                    continue
+                part = _load_gzip_json(root / rel)
+                if merged is None:
+                    merged = part
+                elif isinstance(merged, dict) and isinstance(part, dict):
+                    merged.update(part)
+                elif isinstance(merged, list) and isinstance(part, list):
+                    merged.extend(part)
+                else:
+                    merged = part
+            if merged is not None:
+                doc[key] = merged
+    for meta in SHARD_META_KEYS:
+        doc.pop(meta, None)
+    return doc
+
+
+def assert_publish_budget(out_json: Path | None = None,
+                          limit: int = COMMIT_SOFT_LIMIT) -> list[Path]:
+    """Raise if any file this publish path writes exceeds the GitHub-safe budget."""
+    dest_json = Path(out_json or OUT_JSON)
+    checked: list[Path] = [dest_json]
+    shard_root = shards_dir(dest_json)
+    if shard_root.is_dir():
+        checked.extend(p for p in shard_root.rglob("*") if p.is_file())
+    over = [p for p in checked if p.is_file() and p.stat().st_size > limit]
+    if over:
+        detail = ", ".join(f"{p}={p.stat().st_size}" for p in over)
+        raise SystemExit(
+            f"factor-mine publish file exceeds {limit} bytes: {detail}")
+    return checked
+
+
 def write_outputs(payload: dict, stats: list[dict] | None = None,
                   books: dict | None = None) -> None:
     OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
     OUT_START.parent.mkdir(parents=True, exist_ok=True)
     DASH_DIR.mkdir(parents=True, exist_ok=True)
-    OUT_JSON.write_text(json.dumps(payload, separators=(",", ":")), encoding="utf-8")
+    write_scoreboard(payload)
     starts = {
         "generated_at": payload.get("generated_at"),
         "rows": [
@@ -2483,6 +2631,11 @@ def write_outputs(payload: dict, stats: list[dict] | None = None,
         "fill). `flatten_h*` = wish-list (io/HOLD mornings still buy). "
         "`flatten_live_*` = only when the live flatten gate fires. "
         "Research only — does not change live `flatten_robust`.",
+        "",
+        "Scoreboard files: slim `factor_mine.json` (stats / recipes / "
+        "series) plus gzip shards in `factor_mine/shards/` "
+        "(`books`, `starts`, `daily`, `probe`, `sim`). One file used "
+        "to be 104MB and GitHub rejected the publish (100MB cap).",
         "",
     ]
     combos = payload.get("combos") or {}
@@ -2564,7 +2717,9 @@ def load_dash_payload() -> dict:
             if end > start:
                 return decode_payload(text[start:end])
     if OUT_JSON.is_file():
-        return json.loads(OUT_JSON.read_text(encoding="utf-8"))
+        doc = load_scoreboard()
+        if doc:
+            return doc
     raise FileNotFoundError("no baked factor-mine dashboard payload")
 
 
@@ -2861,10 +3016,7 @@ def existing_single_recipes(payload: dict | None = None) -> list[dict]:
     """Recipes already on the published board — no combo rows, no remine grid."""
     doc = payload
     if doc is None and OUT_JSON.is_file():
-        try:
-            doc = json.loads(OUT_JSON.read_text(encoding="utf-8"))
-        except (OSError, json.JSONDecodeError):
-            doc = {}
+        doc = load_scoreboard()
     recs = []
     for rec in (doc or {}).get("recipes") or []:
         if rec.get("universe") == "combo" or rec.get("members"):
@@ -2958,10 +3110,7 @@ def extend_pack_through(date: str, *, write: bool = False) -> dict:
     })
     payload: dict = {}
     if OUT_JSON.is_file():
-        try:
-            payload = json.loads(OUT_JSON.read_text(encoding="utf-8"))
-        except (OSError, json.JSONDecodeError):
-            payload = {}
+        payload = load_scoreboard()
     if not payload:
         try:
             payload = load_dash_payload()
@@ -3024,10 +3173,7 @@ def land_closed(from_date: str = START, write: bool = False,
         return {}
     payload = {}
     if OUT_JSON.is_file():
-        try:
-            payload = json.loads(OUT_JSON.read_text(encoding="utf-8"))
-        except (OSError, json.JSONDecodeError):
-            payload = {}
+        payload = load_scoreboard()
     if not rebuild_panel and payload_covers_session(payload, target):
         print(f"[factor-mine] land-closed: {target} already on the board — skip",
               flush=True)

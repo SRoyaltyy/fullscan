@@ -1642,20 +1642,19 @@ def main(argv=None) -> int:
     # Prefer member stats already on disk so the scorecard is the live table.
     member_stat_by = {}
     if fm.OUT_JSON.is_file():
-        try:
-            raw = json.loads(fm.OUT_JSON.read_text(encoding="utf-8"))
-            daily = raw.get("daily") or {}
-            member_stat_by = {}
-            for s in (raw.get("stats") or []):
-                row = dict(s)
-                if row.get("worst_day_pct") is None:
-                    means = [d.get("mean") for d in (daily.get(s["name"]) or [])
-                             if d.get("mean") is not None]
-                    if means:
-                        row["worst_day_pct"] = min(float(x) for x in means)
-                member_stat_by[s["name"]] = row
-        except (OSError, json.JSONDecodeError):
+        raw = fm.load_scoreboard()
+        if not raw:
             raw = None
+        daily = (raw or {}).get("daily") or {}
+        member_stat_by = {}
+        for s in (raw or {}).get("stats") or []:
+            row = dict(s)
+            if row.get("worst_day_pct") is None:
+                means = [d.get("mean") for d in (daily.get(s["name"]) or [])
+                         if d.get("mean") is not None]
+                if means:
+                    row["worst_day_pct"] = min(float(x) for x in means)
+            member_stat_by[s["name"]] = row
     else:
         raw = None
     fees = fm.pt_fees()
