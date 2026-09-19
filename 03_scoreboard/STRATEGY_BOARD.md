@@ -1,6 +1,6 @@
 # Strategy board — every shipped book
 
-_Generated 2026-09-19T11:19:33 — 2026-08-13 → 2026-09-18_
+_Generated 2026-09-19T17:33:59 — 2026-08-13 → 2026-09-18_
 
 Live production method is **`flatten_robust`**: 3d size-book selection (not raw 2w_size), 3-session recycle, same flatten-switch clock, plus S ≤ −3 blocks new buys. Working lots and due 1d exits stay on.
 
@@ -61,6 +61,7 @@ Integrity: **fill** = one Futubull cash account. **stitch** = daily mark overlay
 |  | union_earn_react_h3 | factor mine | #127 | fill | +20.11% | 7.64% | 107 | 39.6% | 10000.0 |
 |  | combo_en_3070_shared | factor mine | #127 | fill | +20.00% | 4.72% | 240 | 44.4% | 10000.0 |
 |  | combo_se_5050_split | factor mine | #127 | fill | +19.36% | 4.27% | 186 | 48.9% | 10000.0 |
+|  | combo_oh_5050_shared | factor mine | #127 | fill | +18.61% | 9.08% | 114 | 54.5% | 10000.0 |
 |  | combo_sj_7030_shared | factor mine | #127 | fill | +18.41% | 12.36% | 243 | 54.3% | 10000.0 |
 |  | combo_ers_7030_shared | factor mine | #127 | fill | +18.27% | 7.92% | 203 | 47.5% | 10000.0 |
 |  | combo_ner_5050_shared | factor mine | #127 | fill | +17.57% | 4.19% | 243 | 42.7% | 10000.0 |
@@ -199,6 +200,7 @@ Integrity: **fill** = one Futubull cash account. **stitch** = daily mark overlay
 |  | union_h3_exit_alarm | factor mine | #127 | fill | +0.85% | 12.29% | 155 | 31.4% | 10000.0 |
 |  | union_last_green_h5 | factor mine | #127 | fill | +0.73% | 18.14% | 133 | 39.7% | 10000.0 |
 |  | combo_fe1_5050_shared | factor mine | #127 | fill | +0.68% | 10.61% | 287 | 46.0% | 10000.0 |
+|  | overnight_mega_h2 | factor mine | #127 | fill | +0.50% | 5.43% | 6 | 33.3% | 10000.0 |
 |  | union_news_or_h1 | factor mine | #127 | fill | +0.50% | 5.19% | 154 | 47.3% | 10000.0 |
 |  | Flatten switch_80_overlap | sleeve merge | — | fill | +0.50% | 7.49% | 187 | 42.2% | 100000 |
 |  | union_join_present_h3 | factor mine | #127 | fill | +0.50% | 13.61% | 147 | 22.7% | 10000.0 |
@@ -213,6 +215,7 @@ Integrity: **fill** = one Futubull cash account. **stitch** = daily mark overlay
 |  | union_h1_trail | factor mine | #127 | fill | -0.03% | 11.80% | 202 | 49.5% | 10000.0 |
 |  | probable_h3 | factor mine | #127 | fill | -0.08% | 7.71% | 135 | 33.3% | 10000.0 |
 |  | union_h1_cut | factor mine | #127 | fill | -0.23% | 11.99% | 204 | 49.0% | 10000.0 |
+|  | overnight_mega_h1 | factor mine | #127 | fill | -0.27% | 10.51% | 20 | 70.0% | 10000.0 |
 |  | probable_h1 | factor mine | #127 | fill | -0.41% | 5.88% | 196 | 50.0% | 10000.0 |
 |  | union_join_present_h1 | factor mine | #127 | fill | -0.47% | 11.63% | 202 | 49.5% | 10000.0 |
 |  | union_coil_green_h1 | factor mine | #127 | fill | -0.55% | 10.68% | 190 | 44.0% | 10000.0 |
@@ -313,6 +316,7 @@ Integrity: **fill** = one Futubull cash account. **stitch** = daily mark overlay
 |  | ohlc_hot_coil_h1 | factor mine | #127 | fill | -17.33% | 20.57% | 98 | 35.6% | 10000.0 |
 |  | short_rsi_ob_h1 | factor mine | #127 | fill | -17.48% | 18.22% | 180 | 45.4% | 10000.0 |
 |  | union_news_g_h3 | factor mine | #127 | fill | -18.20% | 19.52% | 123 | 31.6% | 10000.0 |
+|  | overnight_h1 | factor mine | #127 | fill | -19.04% | 21.22% | 98 | 46.9% | 10000.0 |
 |  | union_e_green_h1 | factor mine | #127 | fill | -19.60% | 33.05% | 100 | 50.0% | 10000.0 |
 |  | union_news_head_h3 | factor mine | #127 | fill | -21.04% | 22.06% | 107 | 20.4% | 10000.0 |
 |  | union_rsi_os_h1 | factor mine | #127 | fill | -22.54% | 25.74% | 74 | 47.2% | 10000.0 |

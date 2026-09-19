@@ -67,12 +67,24 @@ Two different nights, two different lists:
 1. **Print night** — AMC today / BMO next from the prior export. `overnight_mega_h1` keeps mcap ≥ $50B. The full liquid calendar has more −5% dumps than +5% bangs. `earn_react` / `e_fresh` fire *after* the print — they miss the bang.
 2. **Index-like night** — yesterday's liquid winners (`yday_gainer_h1` / `union_hot_n4_holdup` when S>0). Thursday 09-17's +1.05% SPX gap was this kind of night: scheduled AMC leftover was ALMU/LEN, not mega-cap beta.
 
-Lookback 2026-08-14 → last closed (24 nights; D close → D+1 open EW):
+Lookback 2026-08-14 → last closed (24 nights; D close → D+1 open EW).
+Cameras on the stamped calendar names (191 priced):
 
-- scheduled liquid `overnight`: -0.95% on 20 nights with names
-- scheduled mega `overnight_mega` ($50B+): +1.13% on 12 nights
-- yesterday's liquid 25: +1.75%
-- post-print `earn_react`: -0.04%
+- scheduled liquid `overnight`: **−0.61%** (21% bang / 30% dump)
+- mega $50B+: **+1.42%**
+- mega ∩ no 🚨: **+2.17%** — this is `overnight_mega_h1`
+- yesterday's liquid 25: **+1.75%**
+- post-print `earn_react`: **−0.04%**
+- Excel time-split KEEP: **0 rules**. Excel-bot L1/L2/L3 live means are red.
+
+Cash book (09:30 fill, fees, hard-red sit) on the stamped panel:
+
+- `union_hot_n4_holdup` **+56.52%** (the index-like night book)
+- `overnight_mega_h1` **−0.27%** (gap is one-way; D's open→close + hard-red sit wipe it)
+- `overnight_h1` **−19.04%** (do not buy the whole calendar)
+- `combo_oh_5050_shared` **+18.61%** (mixing mega into holdup dilutes holdup)
+
+Kid-plain writeup: `03_scoreboard/OVERNIGHT_BANGERS.md`.
 
 Audited window nights:
 

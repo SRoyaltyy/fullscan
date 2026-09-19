@@ -1,11 +1,11 @@
 {
-  "generated": "2026-09-19T11:19:33",
+  "generated": "2026-09-19T17:33:58",
   "live": "flatten_hard_red",
   "window": [
     "2026-08-13",
     "2026-09-18"
   ],
-  "n": 328,
+  "n": 332,
   "rows": [
     {
       "id": "merge_flatten_robust",
@@ -819,6 +819,22 @@
       "trades": 186,
       "hit": 0.4889,
       "final_equity": 11936.47,
+      "href": "../factor-mine/",
+      "note": "Research $10k cash book, 09:30 open, leftover split, fees. Not live.",
+      "live": false
+    },
+    {
+      "id": "fm_combo_oh_5050_shared",
+      "name": "combo_oh_5050_shared",
+      "family": "factor mine",
+      "pr": 127,
+      "integrity": "fill",
+      "ret_pct": 18.612,
+      "max_dd_pct": 9.08,
+      "capital": 10000.0,
+      "trades": 114,
+      "hit": 0.5455,
+      "final_equity": 11861.19,
       "href": "../factor-mine/",
       "note": "Research $10k cash book, 09:30 open, leftover split, fees. Not live.",
       "live": false
@@ -3031,6 +3047,22 @@
       "live": false
     },
     {
+      "id": "fm_overnight_mega_h2",
+      "name": "overnight_mega_h2",
+      "family": "factor mine",
+      "pr": 127,
+      "integrity": "fill",
+      "ret_pct": 0.504,
+      "max_dd_pct": 5.43,
+      "capital": 10000.0,
+      "trades": 6,
+      "hit": 0.3333,
+      "final_equity": 10050.37,
+      "href": "../factor-mine/",
+      "note": "Research $10k cash book, 09:30 open, leftover split, fees. Not live.",
+      "live": false
+    },
+    {
       "id": "fm_union_news_or_h1",
       "name": "union_news_or_h1",
       "family": "factor mine",
@@ -3250,6 +3282,22 @@
       "trades": 204,
       "hit": 0.4898,
       "final_equity": 9976.66,
+      "href": "../factor-mine/",
+      "note": "Research $10k cash book, 09:30 open, leftover split, fees. Not live.",
+      "live": false
+    },
+    {
+      "id": "fm_overnight_mega_h1",
+      "name": "overnight_mega_h1",
+      "family": "factor mine",
+      "pr": 127,
+      "integrity": "fill",
+      "ret_pct": -0.266,
+      "max_dd_pct": 10.51,
+      "capital": 10000.0,
+      "trades": 20,
+      "hit": 0.7,
+      "final_equity": 9973.37,
       "href": "../factor-mine/",
       "note": "Research $10k cash book, 09:30 open, leftover split, fees. Not live.",
       "live": false
@@ -4850,6 +4898,22 @@
       "trades": 123,
       "hit": 0.3158,
       "final_equity": 8180.23,
+      "href": "../factor-mine/",
+      "note": "Research $10k cash book, 09:30 open, leftover split, fees. Not live.",
+      "live": false
+    },
+    {
+      "id": "fm_overnight_h1",
+      "name": "overnight_h1",
+      "family": "factor mine",
+      "pr": 127,
+      "integrity": "fill",
+      "ret_pct": -19.036,
+      "max_dd_pct": 21.22,
+      "capital": 10000.0,
+      "trades": 98,
+      "hit": 0.4694,
+      "final_equity": 8096.45,
       "href": "../factor-mine/",
       "note": "Research $10k cash book, 09:30 open, leftover split, fees. Not live.",
       "live": false
