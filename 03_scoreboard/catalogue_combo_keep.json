@@ -1,0 +1,834 @@
+{
+  "status": "DONE",
+  "generated": "2026-09-19",
+  "leak": "PASS",
+  "live_untouched": "flatten_robust",
+  "gate": {
+    "gate": "OPEN_SAME_ROW_LABELS + CLOCK_MAP",
+    "fill_open": [
+      "A",
+      "B",
+      "C",
+      "G",
+      "J",
+      "K",
+      "L",
+      "M",
+      "O",
+      "IR",
+      "IS",
+      "IT"
+    ],
+    "value_mine_open": [
+      "A",
+      "C",
+      "J",
+      "Q",
+      "Z",
+      "AC",
+      "AH",
+      "BT",
+      "BV",
+      "CG",
+      "CH",
+      "DC",
+      "DE",
+      "EB",
+      "EK",
+      "EN",
+      "EP",
+      "EQ",
+      "ER",
+      "ES",
+      "ET",
+      "EU",
+      "EV",
+      "FQ",
+      "FR",
+      "FS",
+      "FU",
+      "GD",
+      "GE",
+      "GF",
+      "HF",
+      "HG",
+      "HW",
+      "II",
+      "IR",
+      "IT",
+      "IY",
+      "IZ",
+      "JB",
+      "JC",
+      "JD",
+      "JE",
+      "JF",
+      "JL"
+    ],
+    "value_out_same_row": [
+      "B",
+      "G",
+      "K",
+      "M",
+      "O",
+      "L",
+      "D",
+      "E",
+      "F",
+      "H",
+      "I",
+      "N",
+      "AA"
+    ],
+    "core_score": "close",
+    "m_number": "close",
+    "lags": "any letter from rows above",
+    "lag_only_close": [
+      "DF",
+      "DG",
+      "DH",
+      "BB",
+      "BQ",
+      "BU"
+    ],
+    "same_row_leak_abort": [
+      "DF",
+      "BB",
+      "BQ"
+    ],
+    "open_44_tally_subs": [
+      "AH",
+      "JB",
+      "JC",
+      "FQ",
+      "FR",
+      "ER",
+      "EP",
+      "EN"
+    ],
+    "live_untouched": "flatten_robust"
+  },
+  "fire_bar": {
+    "win": "after-fee H > 0 on prove name-days, strictly > 0.55",
+    "min_fires": 30,
+    "fee_rt": 0.0015,
+    "fee_caveat": "After-fee H is the equal-weight day-mean minus 15 bp Futubull, not dollar-weighted.",
+    "lift_never_keep": true
+  },
+  "cutoff": "2026-09-10",
+  "split_kind": "time",
+  "hold_frac": 0.3,
+  "lookback": "full_session_cal",
+  "panel_to": "2026-09-18",
+  "panel_n": 1969,
+  "aisle_dates": [
+    "2026-08-14",
+    "2026-08-17",
+    "2026-08-18",
+    "2026-08-19",
+    "2026-08-20",
+    "2026-08-21",
+    "2026-08-24",
+    "2026-08-25",
+    "2026-08-26",
+    "2026-08-28",
+    "2026-08-31",
+    "2026-09-01",
+    "2026-09-02",
+    "2026-09-03",
+    "2026-09-04",
+    "2026-09-08",
+    "2026-09-09",
+    "2026-09-10",
+    "2026-09-11",
+    "2026-09-14",
+    "2026-09-15",
+    "2026-09-16",
+    "2026-09-17",
+    "2026-09-18"
+  ],
+  "n_aisle_dates": 24,
+  "skipped_days": {
+    "2026-08-13": {
+      "n": 9,
+      "sources": [
+        "flatten"
+      ],
+      "why": "flatten-only / no Finviz-OHLC aux / no Clock-B oppset"
+    },
+    "2026-08-27": {
+      "n": 19,
+      "sources": [
+        "flatten",
+        "mover_buy"
+      ],
+      "why": "flatten-only / no Finviz-OHLC aux / no Clock-B oppset"
+    }
+  },
+  "oppset_source": "theme-radar a782cc2b research/oppset_clock_b",
+  "n_oppset_flagged": 7370,
+  "n_aisle_panel": 1941,
+  "n_aisle_overlap": 889,
+  "n_aisle_oppset_only": 6481,
+  "n_label_finviz_t": 6206,
+  "n_tickers": 1900,
+  "n_rows": 8147,
+  "n_disc": 5595,
+  "n_hold": 2552,
+  "n_keep": 1,
+  "n_need": 2,
+  "n_fail": 7,
+  "headline": {
+    "verdict": "KEEP",
+    "n_keep": 1,
+    "text": "KEEP. 1 of 10 cleared \u226530 prove fires and >55% after-fee H (cutoff 2026-09-10): `c4_downside` n=40, after-fee WR 75.0% (>55%)."
+  },
+  "baseline_disc": {
+    "n": 5595,
+    "wr": 0.40250223413762287,
+    "mean_net": -0.004362918959653231
+  },
+  "baseline_hold": {
+    "n": 2552,
+    "wr": 0.3867554858934169,
+    "mean_net": -0.005093564794749547,
+    "verdict": "FAIL",
+    "why": "n=2552, after-fee WR 38.7% \u2264 55%"
+  },
+  "kronos_artifacts": [],
+  "borrow_artifacts": [],
+  "scored": [
+    {
+      "id": 1,
+      "key": "c1_continuation",
+      "title": "Moderate momentum + completed breakout + peer/sector strength",
+      "thesis": "continuation",
+      "side": "long",
+      "role": "direction",
+      "atoms": [
+        "mod_mom",
+        "completed_breakout",
+        "peer_sector_strong"
+      ],
+      "status": "calculable",
+      "have": "panel ohlc_ret_5 / last_green / ohlc_break_10 / fv_sma20 / rsi; T\u22121 Performance (Week); boxes.sector / peer",
+      "need": "",
+      "note": "T\u22121 RelVol is context only (VOL/CROWD). Same-day Gap out.",
+      "disc": {
+        "n": 258,
+        "n_pos": 114,
+        "wr": 0.4418604651162791,
+        "mean_net": -0.005425948661346587,
+        "verdict": "FAIL",
+        "why": "n=258, after-fee WR 44.2% \u2264 55%"
+      },
+      "hold": {
+        "n": 86,
+        "n_pos": 43,
+        "wr": 0.5,
+        "mean_net": 0.0009463783654137291,
+        "verdict": "FAIL",
+        "why": "n=86, after-fee WR 50.0% \u2264 55%"
+      },
+      "verdict": "FAIL",
+      "why": "n=86, after-fee WR 50.0% \u2264 55%",
+      "walk": [
+        {
+          "lo": "2026-08-14",
+          "hi": "2026-08-21",
+          "n": 81,
+          "wr": 0.41975308641975306,
+          "verdict": "FAIL"
+        },
+        {
+          "lo": "2026-08-24",
+          "hi": "2026-08-31",
+          "n": 65,
+          "wr": 0.36923076923076925,
+          "verdict": "FAIL"
+        },
+        {
+          "lo": "2026-09-01",
+          "hi": "2026-09-09",
+          "n": 112,
+          "wr": 0.5,
+          "verdict": "FAIL"
+        }
+      ],
+      "walk_folds_wr_gt_50": 0,
+      "n_walk_folds": 3
+    },
+    {
+      "id": 2,
+      "key": "c2_room",
+      "title": "Fresh material positive catalyst + limited prior extension",
+      "thesis": "room after entry",
+      "side": "long",
+      "role": "direction",
+      "atoms": [
+        "fresh_pos_catalyst",
+        "limited_extension"
+      ],
+      "status": "have",
+      "have": "news_box / news_prior / catal; T\u22121 News Title; rsi / fv_sma20 / ohlc_ret_5",
+      "need": "",
+      "note": "Headline tone is T\u22121 or morning packet. Mid-window news out.",
+      "disc": {
+        "n": 258,
+        "n_pos": 109,
+        "wr": 0.42248062015503873,
+        "mean_net": -0.0027618179211029875,
+        "verdict": "FAIL",
+        "why": "n=258, after-fee WR 42.2% \u2264 55%"
+      },
+      "hold": {
+        "n": 138,
+        "n_pos": 52,
+        "wr": 0.37681159420289856,
+        "mean_net": -0.005906791167518317,
+        "verdict": "FAIL",
+        "why": "n=138, after-fee WR 37.7% \u2264 55%"
+      },
+      "verdict": "FAIL",
+      "why": "n=138, after-fee WR 37.7% \u2264 55%",
+      "walk": [
+        {
+          "lo": "2026-08-14",
+          "hi": "2026-08-21",
+          "n": 102,
+          "wr": 0.47058823529411764,
+          "verdict": "FAIL"
+        },
+        {
+          "lo": "2026-08-24",
+          "hi": "2026-08-31",
+          "n": 54,
+          "wr": 0.35185185185185186,
+          "verdict": "FAIL"
+        },
+        {
+          "lo": "2026-09-01",
+          "hi": "2026-09-09",
+          "n": 102,
+          "wr": 0.4117647058823529,
+          "verdict": "FAIL"
+        }
+      ],
+      "walk_folds_wr_gt_50": 0,
+      "n_walk_folds": 3
+    },
+    {
+      "id": 3,
+      "key": "c3_earn_drift",
+      "title": "Earnings improvement + raised guidance + favorable reaction",
+      "thesis": "drift",
+      "side": "long",
+      "role": "direction",
+      "atoms": [
+        "earn_improve",
+        "raised_guidance",
+        "fav_reaction"
+      ],
+      "status": "calculable",
+      "have": "T\u22121 EPS/Revenue Surprise; News Title guidance proxy; erd_earn_react / days_since_E + last_green",
+      "need": "filing-grade guidance text (headline proxy used)",
+      "note": "Guidance is a T\u22121 headline proxy, not a filing parse.",
+      "disc": {
+        "n": 1,
+        "n_pos": 1,
+        "wr": 1.0,
+        "mean_net": 0.015720470531166646,
+        "verdict": "FAIL",
+        "why": "thin n=1 (bar \u226530), after-fee WR 100.0%"
+      },
+      "hold": {
+        "n": 0,
+        "n_pos": 0,
+        "wr": null,
+        "mean_net": null,
+        "verdict": "FAIL",
+        "why": "no fires (n=0)"
+      },
+      "verdict": "FAIL",
+      "why": "no fires (n=0)",
+      "walk": [
+        {
+          "lo": "2026-08-14",
+          "hi": "2026-08-21",
+          "n": 1,
+          "wr": 1.0,
+          "verdict": "FAIL"
+        },
+        {
+          "lo": "2026-08-24",
+          "hi": "2026-08-31",
+          "n": 0,
+          "wr": null,
+          "verdict": "FAIL"
+        },
+        {
+          "lo": "2026-09-01",
+          "hi": "2026-09-09",
+          "n": 0,
+          "wr": null,
+          "verdict": "FAIL"
+        }
+      ],
+      "walk_folds_wr_gt_50": 1,
+      "n_walk_folds": 3
+    },
+    {
+      "id": 4,
+      "key": "c4_downside",
+      "title": "Negative catalyst + relative weakness + failed recovery",
+      "thesis": "downside",
+      "side": "short",
+      "role": "direction",
+      "atoms": [
+        "neg_catalyst",
+        "rel_weak",
+        "failed_recovery",
+        "shortable"
+      ],
+      "status": "have",
+      "have": "news bad; sector RS vs T\u22121 Performance (Week); last_red; Shortable",
+      "need": "",
+      "note": "Shorts only when Finviz Shortable=Yes. Shorts pay FEE_RT. Discovery / walk-forward are not KEEP. Oppset-only names have no 10-bar breakout, so failed_recovery is last_red and not break10 (break unknown). Borrow fee is not in the 15 bp model.",
+      "disc": {
+        "n": 69,
+        "n_pos": 37,
+        "wr": 0.5362318840579711,
+        "mean_net": 0.0056110876909330415,
+        "verdict": "FAIL",
+        "why": "n=69, after-fee WR 53.6% \u2264 55%"
+      },
+      "hold": {
+        "n": 40,
+        "n_pos": 30,
+        "wr": 0.75,
+        "mean_net": 0.010692267530942653,
+        "verdict": "KEEP",
+        "why": "n=40, after-fee WR 75.0% (>55%)"
+      },
+      "verdict": "KEEP",
+      "why": "n=40, after-fee WR 75.0% (>55%)",
+      "walk": [
+        {
+          "lo": "2026-08-14",
+          "hi": "2026-08-21",
+          "n": 34,
+          "wr": 0.5,
+          "verdict": "FAIL"
+        },
+        {
+          "lo": "2026-08-24",
+          "hi": "2026-08-31",
+          "n": 14,
+          "wr": 0.35714285714285715,
+          "verdict": "FAIL"
+        },
+        {
+          "lo": "2026-09-01",
+          "hi": "2026-09-09",
+          "n": 21,
+          "wr": 0.7142857142857143,
+          "verdict": "FAIL"
+        }
+      ],
+      "walk_folds_wr_gt_50": 1,
+      "n_walk_folds": 3
+    },
+    {
+      "id": 5,
+      "key": "c5_exhaustion_veto",
+      "title": "Extreme extension + diminishing progress + failed breakout",
+      "thesis": "exhaustion / long veto",
+      "side": "long",
+      "role": "veto",
+      "atoms": [
+        "extreme_ext",
+        "diminishing",
+        "failed_breakout"
+      ],
+      "status": "calculable",
+      "have": "rsi / fv_sma20 / ohlc_ret_5; rvol+|ret1| (T\u22121); last_red",
+      "need": "",
+      "note": "Diminishing progress is VOL/CROWD \u2014 not a direction KEEP. Veto KEEP only if complement clears the fee bar and beats baseline.",
+      "disc": {
+        "n": 380,
+        "n_pos": 167,
+        "wr": 0.4394736842105263,
+        "mean_net": -0.0034435787754223957,
+        "verdict": "FAIL",
+        "why": "n=380, after-fee WR 43.9% \u2264 55%"
+      },
+      "hold": {
+        "n": 87,
+        "n_pos": 41,
+        "wr": 0.47126436781609193,
+        "mean_net": 0.009062204740470167,
+        "verdict": "FAIL",
+        "why": "n=87, after-fee WR 47.1% \u2264 55%"
+      },
+      "verdict": "FAIL",
+      "why": "n=2465, after-fee WR 38.4% \u2264 55%",
+      "walk": [
+        {
+          "lo": "2026-08-14",
+          "hi": "2026-08-21",
+          "n": 209,
+          "wr": 0.44976076555023925,
+          "verdict": "FAIL"
+        },
+        {
+          "lo": "2026-08-24",
+          "hi": "2026-08-31",
+          "n": 88,
+          "wr": 0.5454545454545454,
+          "verdict": "FAIL"
+        },
+        {
+          "lo": "2026-09-01",
+          "hi": "2026-09-09",
+          "n": 83,
+          "wr": 0.30120481927710846,
+          "verdict": "FAIL"
+        }
+      ],
+      "walk_folds_wr_gt_50": 1,
+      "n_walk_folds": 3,
+      "veto": {
+        "flagged": {
+          "n": 87,
+          "n_pos": 41,
+          "wr": 0.47126436781609193,
+          "mean_net": 0.009062204740470167,
+          "verdict": "FAIL",
+          "why": "n=87, after-fee WR 47.1% \u2264 55%"
+        },
+        "complement": {
+          "n": 2465,
+          "n_pos": 946,
+          "wr": 0.38377281947261666,
+          "mean_net": -0.005593180190110242,
+          "verdict": "FAIL",
+          "why": "n=2465, after-fee WR 38.4% \u2264 55%"
+        },
+        "lifts_baseline": false,
+        "verdict": "FAIL",
+        "why": "n=2465, after-fee WR 38.4% \u2264 55%"
+      }
+    },
+    {
+      "id": 6,
+      "key": "c6_resilience",
+      "title": "Stock holds firm while sector weakens",
+      "thesis": "stock-specific resilience",
+      "side": "long",
+      "role": "direction",
+      "atoms": [
+        "sector_weak",
+        "stock_firm",
+        "stock_beats_sector"
+      ],
+      "status": "calculable",
+      "have": "T\u22121 sector median Performance (Week); last_green; ohlc_ret_5",
+      "need": "true peer basket (sector tag is the crude CALC)",
+      "note": "Peer map beyond Sector tag is NEED; sector median is used.",
+      "disc": {
+        "n": 747,
+        "n_pos": 346,
+        "wr": 0.46318607764390896,
+        "mean_net": -0.0014968699310070664,
+        "verdict": "FAIL",
+        "why": "n=747, after-fee WR 46.3% \u2264 55%"
+      },
+      "hold": {
+        "n": 505,
+        "n_pos": 231,
+        "wr": 0.45742574257425744,
+        "mean_net": -0.0012986188286550364,
+        "verdict": "FAIL",
+        "why": "n=505, after-fee WR 45.7% \u2264 55%"
+      },
+      "verdict": "FAIL",
+      "why": "n=505, after-fee WR 45.7% \u2264 55%",
+      "walk": [
+        {
+          "lo": "2026-08-14",
+          "hi": "2026-08-21",
+          "n": 256,
+          "wr": 0.44140625,
+          "verdict": "FAIL"
+        },
+        {
+          "lo": "2026-08-24",
+          "hi": "2026-08-31",
+          "n": 128,
+          "wr": 0.390625,
+          "verdict": "FAIL"
+        },
+        {
+          "lo": "2026-09-01",
+          "hi": "2026-09-09",
+          "n": 363,
+          "wr": 0.5041322314049587,
+          "verdict": "FAIL"
+        }
+      ],
+      "walk_folds_wr_gt_50": 1,
+      "n_walk_folds": 3
+    },
+    {
+      "id": 7,
+      "key": "c7_insider_recovery",
+      "title": "Insider buying + improving cash economics + stabilization",
+      "thesis": "medium-term recovery",
+      "side": "long",
+      "role": "direction",
+      "atoms": [
+        "insider_buy",
+        "cash_ok",
+        "stabilizing"
+      ],
+      "status": "have",
+      "have": "T\u22121 Insider Transactions; Cash/sh \u0394 vs T\u22122; Current Ratio; rsi_os / ohlc_nr7 / last_green",
+      "need": "",
+      "note": "KEEP bar is still same-day after-fee H (open-knowable entry).",
+      "disc": {
+        "n": 8,
+        "n_pos": 2,
+        "wr": 0.25,
+        "mean_net": -0.015244812804034674,
+        "verdict": "FAIL",
+        "why": "thin n=8 (bar \u226530), after-fee WR 25.0%"
+      },
+      "hold": {
+        "n": 0,
+        "n_pos": 0,
+        "wr": null,
+        "mean_net": null,
+        "verdict": "FAIL",
+        "why": "no fires (n=0)"
+      },
+      "verdict": "FAIL",
+      "why": "no fires (n=0)",
+      "walk": [
+        {
+          "lo": "2026-08-14",
+          "hi": "2026-08-21",
+          "n": 7,
+          "wr": 0.14285714285714285,
+          "verdict": "FAIL"
+        },
+        {
+          "lo": "2026-08-24",
+          "hi": "2026-08-31",
+          "n": 0,
+          "wr": null,
+          "verdict": "FAIL"
+        },
+        {
+          "lo": "2026-09-01",
+          "hi": "2026-09-09",
+          "n": 1,
+          "wr": 1.0,
+          "verdict": "FAIL"
+        }
+      ],
+      "walk_folds_wr_gt_50": 1,
+      "n_walk_folds": 3
+    },
+    {
+      "id": 8,
+      "key": "c8_squeeze",
+      "title": "High short interest + positive surprise + constrained borrow",
+      "thesis": "squeeze",
+      "side": "long",
+      "role": "need",
+      "atoms": [
+        "high_short",
+        "pos_surprise"
+      ],
+      "status": "need-source",
+      "have": "T\u22121 Short Float / Short Ratio / Short Interest; EPS Surprise",
+      "need": "borrow fee / locate inventory (Family 17 feasibility)",
+      "note": "Constrained borrow is NEED. Fee prove skipped.",
+      "disc": {
+        "n": 0,
+        "n_pos": null,
+        "wr": null,
+        "mean_net": null,
+        "verdict": "NEED",
+        "why": null
+      },
+      "hold": {
+        "n": 0,
+        "n_pos": null,
+        "wr": null,
+        "mean_net": null,
+        "verdict": "NEED",
+        "why": null
+      },
+      "verdict": "NEED",
+      "why": "NEED-source skipped: borrow fee / locate inventory (Family 17 feasibility)",
+      "walk": null,
+      "walk_folds_wr_gt_50": null,
+      "n_walk_folds": null
+    },
+    {
+      "id": 9,
+      "key": "c9_financing",
+      "title": "Deteriorating cash + credible issuance + failed rally",
+      "thesis": "financing pressure",
+      "side": "short",
+      "role": "direction",
+      "atoms": [
+        "cash_worse",
+        "issuance_headline",
+        "failed_rally",
+        "shortable"
+      ],
+      "status": "calculable",
+      "have": "T\u22121 vs T\u22122 Cash/sh; T\u22121 News Title offering/dilut; last_red after a 5-session bounce; Shortable",
+      "need": "filing-grade issuance/convert/lockup events",
+      "note": "Headline issuance is Clock B. Filing-grade source still NEED.",
+      "disc": {
+        "n": 0,
+        "n_pos": 0,
+        "wr": null,
+        "mean_net": null,
+        "verdict": "FAIL",
+        "why": "no fires (n=0)"
+      },
+      "hold": {
+        "n": 0,
+        "n_pos": 0,
+        "wr": null,
+        "mean_net": null,
+        "verdict": "FAIL",
+        "why": "no fires (n=0)"
+      },
+      "verdict": "FAIL",
+      "why": "no fires (n=0)",
+      "walk": [
+        {
+          "lo": "2026-08-14",
+          "hi": "2026-08-21",
+          "n": 0,
+          "wr": null,
+          "verdict": "FAIL"
+        },
+        {
+          "lo": "2026-08-24",
+          "hi": "2026-08-31",
+          "n": 0,
+          "wr": null,
+          "verdict": "FAIL"
+        },
+        {
+          "lo": "2026-09-01",
+          "hi": "2026-09-09",
+          "n": 0,
+          "wr": null,
+          "verdict": "FAIL"
+        }
+      ],
+      "walk_folds_wr_gt_50": 0,
+      "n_walk_folds": 3
+    },
+    {
+      "id": 10,
+      "key": "c10_kronos",
+      "title": "Frozen Fullscan picks + Kronos agreement/disagreement",
+      "thesis": "confirmation / veto",
+      "side": "long",
+      "role": "need",
+      "atoms": [
+        "on_frozen_picks"
+      ],
+      "status": "need-source",
+      "have": "flatten source flag on the morning panel",
+      "need": "Kronos overlay artifacts (agree/disagree vs frozen picks)",
+      "note": "No Kronos files in fullscan. Fee prove skipped.",
+      "disc": {
+        "n": 0,
+        "n_pos": null,
+        "wr": null,
+        "mean_net": null,
+        "verdict": "NEED",
+        "why": null
+      },
+      "hold": {
+        "n": 0,
+        "n_pos": null,
+        "wr": null,
+        "mean_net": null,
+        "verdict": "NEED",
+        "why": null
+      },
+      "verdict": "NEED",
+      "why": "NEED-source skipped: Kronos overlay artifacts (agree/disagree vs frozen picks)",
+      "walk": null,
+      "walk_folds_wr_gt_50": null,
+      "n_walk_folds": null
+    }
+  ],
+  "clocks_generated": "2026-09-07",
+  "feature_keys": [
+    "cash_ok",
+    "cash_worse",
+    "completed_breakout",
+    "diminishing",
+    "earn_improve",
+    "extreme_ext",
+    "failed_breakout",
+    "failed_rally",
+    "failed_recovery",
+    "fav_reaction",
+    "fresh_pos_catalyst",
+    "high_short",
+    "insider_buy",
+    "issuance_headline",
+    "limited_extension",
+    "mod_mom",
+    "neg_catalyst",
+    "on_frozen_picks",
+    "peer_sector_strong",
+    "pos_surprise",
+    "raised_guidance",
+    "rel_weak",
+    "sector_weak",
+    "shortable",
+    "stabilizing",
+    "stock_beats_sector",
+    "stock_firm"
+  ],
+  "forbidden": [
+    "After-Hours Change",
+    "After-Hours Close",
+    "After-Hours Volume",
+    "Change",
+    "Change from Open",
+    "Gap",
+    "H",
+    "I",
+    "Performance (1 Hour)",
+    "Performance (1 Minute)",
+    "Performance (10 Minutes)",
+    "Performance (15 Minutes)",
+    "Performance (2 Hours)",
+    "Performance (2 Minutes)",
+    "Performance (3 Minutes)",
+    "Performance (30 Minutes)",
+    "Performance (4 Hours)",
+    "Performance (5 Minutes)",
+    "RelVol",
+    "change_pct",
+    "close",
+    "high",
+    "i_net",
+    "low",
+    "net"
+  ]
+}
