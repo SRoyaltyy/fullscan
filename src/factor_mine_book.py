@@ -36,6 +36,7 @@ GATES = (
     "join_g", "last_green", "blue", "news_present", "join_present", "ab_g",
     "news_pack", "news_head", "news_both", "news_or",
     "rsi_os", "rsi_ob", "macd_up", "macd_xup", "flow_in",
+    "clk_b",
 )
 RANKS = ("auto", "none", "list", "hot_score", "cond", "w_hot_cond",
          "w_hot_candle", "ret_5", "candle_score", "rsi", "macd_hist")
@@ -768,6 +769,8 @@ def recipes_from_action(*, universe="auto", hold="auto", gate="auto",
             return "macd_up"
         if req.get("flow_in") and len(req) == 1:
             return "flow_in"
+        if any(str(k).startswith("clk_") for k in req):
+            return "clk_b"
         return "other"
 
     def exit_name(rec: dict) -> str:

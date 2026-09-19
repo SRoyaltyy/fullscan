@@ -41,6 +41,7 @@ from pathlib import Path
 
 from . import book_era
 from . import candle_factor as cf
+from . import clock_b_tells as cbt
 from . import finviz_events as fe
 from . import flatten_lookback_action as fla
 from . import gainer_asof as ga
@@ -117,6 +118,8 @@ INPUT_FIELDS = frozenset({
     "macd_cross_up", "macd_cross_down", "rsi_os", "rsi_ob",
     "macd_up", "macd_down", "flow_in", "close_loc",
     "fv_rvol", "fv_sma20", "fv_sma50", "fv_inst",
+    "ins_buy", "form4_buy", "rs_week",
+    *cbt.COMBO_KEYS,
 })
 _SCAN_CACHE: dict[tuple[str, str], dict | None] = {}
 _OHLC_CACHE: dict[tuple[str, str], dict] = {}
@@ -338,6 +341,7 @@ def attach_tape_flow(panel: dict) -> dict:
             r["ohlc_ret_1"] = oh.get("ret_1")
         if r.get("ohlc_rvol") is None and _finite(oh.get("rvol")) is not None:
             r["ohlc_rvol"] = oh.get("rvol")
+        cbt.stamp_row(r)
     panel["_tape_filled"] = True
     return panel
 
@@ -656,6 +660,10 @@ def build_recipes() -> list[dict]:
     add(name="flatten_h5_s8", universe="flatten", hold=5, stop_pct=0.08,
         note="flatten hold 5, stop −8% at 09:30 even inside hold")
 
+    # Clock-B catalogue tells Fullscan already supports. Research gates
+    # only — Excel fee-KEEP prove is a separate path. Not KEEP.
+    recs.extend(cbt.clock_b_recipes(make_recipe))
+
     return recs
 
 
@@ -799,6 +807,8 @@ def _gate_kid(key: str, val) -> str:
         if int(val) == -1:
             return "the latest revision flag is a downgrade"
         return f"the revision flag equals {val}"
+    if key in cbt.COMBO_KID:
+        return cbt.COMBO_KID[key]
     if key in _CAM_KID:
         tone = {True: "green", False: "off", "good": "green", "bad": "red",
                 "neutral": "yellow", "missing": "blank"}.get(val, str(val))
@@ -1155,6 +1165,8 @@ def matches(row: dict, rec: dict) -> bool:
         v = _finite(row.get("rsi"))
         if v is None or v > float(req["rsi_max"]):
             return False
+    if not cbt.gate_row(row, req, forb):
+        return False
     return True
 
 
@@ -1257,7 +1269,8 @@ def major_catalyst(row: dict) -> bool:
 def _recipe_needs_catalyst(rec: dict | None) -> bool:
     req = (rec or {}).get("require") or {}
     return bool(req.get("yday_or_catalyst") or req.get("yday_and_catalyst")
-                or req.get("major_catalyst"))
+                or req.get("major_catalyst")
+                or cbt.recipe_needs_epol(rec))
 
 
 def ensure_sim_fields(panel: dict, rec: dict | None = None) -> dict:
@@ -1282,6 +1295,8 @@ def ensure_sim_fields(panel: dict, rec: dict | None = None) -> dict:
             attach_tape_flow(panel)
         else:
             panel["_tape_filled"] = True
+    if rec is None or cbt.recipe_needs_clock_b(rec) or not panel.get("_clock_b"):
+        cbt.attach_panel(panel)
     return panel
 
 
@@ -1490,6 +1505,12 @@ def match_why(row: dict, rec: dict) -> dict:
         v = _finite(row.get("rsi"))
         need(v is not None and v <= float(req["rsi_max"]),
              _gate_kid("rsi_max", req["rsi_max"]))
+    for key in cbt.COMBO_KEYS:
+        if req.get(key):
+            need(cbt.combo_true(row, key), _gate_kid(key, True))
+        if forb.get(key):
+            need(not cbt.combo_true(row, key),
+                 f"not {_gate_kid(key, True)}")
     return {"ok": not failed, "failed": failed, "passed": passed}
 
 
@@ -1743,6 +1764,10 @@ def _attach_row(date: str, ticker: str, sources: list[str], src_rank: int,
         "prior_date": prior_date,
     }
     apply_tape_fields(rec, oh, _finviz_snap(prior_df, ticker))
+    rec["ins_buy"] = _headline_insider_buy(str(prior_title or "").lower())
+    peer = card.get("peer") or {}
+    rec["rs_week"] = _finite(peer.get("rs_week"))
+    cbt.stamp_row(rec)
     return rec
 
 
@@ -3057,6 +3082,7 @@ def restamp_dash() -> dict:
     from . import factor_mine_probe as fmp
     from . import factor_mine_sim as fms
     fmp.attach_erd_polarity(panel)
+    cbt.attach_panel(panel)
     bought = _bought_tickers(payload.get("books"), payload.get("starts"))
     payload["probe"] = fmp.slim_probe(fmp.build_probe(panel), bought)
     payload["sim"] = fms.build_sim_pack(panel)
@@ -3161,6 +3187,8 @@ TAPE_FLOW_PIN = (
     "union_rsi_os_h1",
     "short_rsi_ob_h3",
 )
+CLOCK_B_SPLICE = cbt.CLOCK_B_RECIPES
+CLOCK_B_PIN = cbt.CLOCK_B_PIN
 
 
 def merge_stats_into_payload(
@@ -3323,6 +3351,55 @@ def splice_tape_flow(*, write: bool = True) -> dict:
     for s in stats:
         print(
             f"{s['name']:32s} {_n(s.get('total_ret_pct')):>8} "
+            f"{s.get('start_green') or 0:>2}/{s.get('start_n') or 0:<4} "
+            f"{s.get('book_n_trades') or 0:>5}",
+            flush=True,
+        )
+    return payload
+
+
+def splice_clock_b(*, write: bool = True) -> dict:
+    """Cash-book Clock-B catalogue recipes onto the last board.
+
+    Research / ops only. Does not claim KEEP. Does not change live
+    flatten_robust or Webull.
+    """
+    from . import factor_mine_book as fmb
+    from . import factor_mine_sim as fms
+
+    panel = load_or_build_panel(START, None, rebuild=False)
+    attach_tape_flow(panel)
+    from . import factor_mine_probe as fmp
+    fmp.attach_erd_polarity(panel)
+    cbt.attach_panel(panel)
+    payload = load_dash_payload()
+    rec_by = {r["name"]: r for r in build_recipes()}
+    recipes = [rec_by[n] for n in CLOCK_B_SPLICE if n in rec_by]
+    tapes = _tapes(list(panel.get("session_dates") or []))
+    regime = fmb.load_regime()
+    fees = pt_fees()
+    stats: list[dict] = []
+    books: dict = {}
+    for rec in recipes:
+        print(f"[splice] {rec['name']}", flush=True)
+        st = score_recipe(panel, rec, tapes)
+        bk = fmb.simulate_book(panel, rec, fees=fees, regime=regime)
+        starts = fmb.replay_starts(panel, rec, fees=fees, regime=regime)
+        st = fmb.attach_book(st, bk, starts)
+        stats.append(st)
+        books[rec["name"]] = bk
+    merge_stats_into_payload(
+        payload, stats, books, recipes, pin=CLOCK_B_PIN)
+    payload["sim"] = fms.build_sim_pack(panel)
+    payload["generated_at"] = datetime.now(tl.ET).isoformat()
+    payload["n_recipes"] = len(payload["stats"])
+    if write:
+        write_outputs(payload, payload["stats"], books=None)
+    print("[splice] clock-b books (research; not KEEP)", flush=True)
+    print(f"{'name':36s} {'book%':>8} {'starts':>8} {'fills':>5}", flush=True)
+    for s in stats:
+        print(
+            f"{s['name']:36s} {_n(s.get('total_ret_pct')):>8} "
             f"{s.get('start_green') or 0:>2}/{s.get('start_n') or 0:<4} "
             f"{s.get('book_n_trades') or 0:>5}",
             flush=True,
@@ -3655,6 +3732,8 @@ def main(argv=None) -> int:
                     help="cash-book news packet / headline / camera recipes onto the last board")
     ap.add_argument("--splice-tape-flow", action="store_true",
                     help="cash-book RSI / MACD / flow-in recipes onto the last board")
+    ap.add_argument("--splice-clock-b", action="store_true",
+                    help="cash-book Clock-B catalogue tells onto the last board (research; not KEEP)")
     ap.add_argument("--sweep-white", action="store_true",
                     help="cash-book sweep: −0 red + (yday/catalyst) × hold × rank")
     ap.add_argument("--sweep-bracket", action="store_true",
@@ -3695,6 +3774,11 @@ def main(argv=None) -> int:
     if args.splice_tape_flow:
         payload = splice_tape_flow(write=args.write)
         print(f"[factor-mine] splice-tape-flow recipes={payload.get('n_recipes')} "
+              f"to={payload.get('to_date')}")
+        return 0
+    if args.splice_clock_b:
+        payload = splice_clock_b(write=args.write)
+        print(f"[factor-mine] splice-clock-b recipes={payload.get('n_recipes')} "
               f"to={payload.get('to_date')}")
         return 0
     if args.sweep_white:

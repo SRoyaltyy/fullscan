@@ -89,6 +89,8 @@ def test_matches_ryg_presence_and_ignores_same_day_change() -> None:
     assert "change" not in fm.INPUT_FIELDS
     assert "Gap" not in fm.INPUT_FIELDS
     assert "RelVol" not in fm.INPUT_FIELDS
+    assert "vwap" not in fm.INPUT_FIELDS
+    assert "clk_mom_break_peer" in fm.INPUT_FIELDS
 
 
 def test_matches_news_packet_headline_and_cam_floor() -> None:
@@ -2636,4 +2638,6 @@ if __name__ == "__main__":
     test_js_look_day_cams_and_white_yday()
     test_js_white_horizon_pool_then_score()
     test_js_bracket_take_inside_min_hold()
+    from src.test_clock_b_tells import main as clock_b_main
+    clock_b_main()
     print("68 factor-mine tests passed")

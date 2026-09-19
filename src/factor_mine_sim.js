@@ -321,6 +321,15 @@
     if (req.flow_in && !row.flow_in) return false;
     if (req.rsi_min != null && !(row.rsi != null && row.rsi >= Number(req.rsi_min))) return false;
     if (req.rsi_max != null && !(row.rsi != null && row.rsi <= Number(req.rsi_max))) return false;
+    const clk = [
+      "clk_mom_break_peer","clk_fresh_cat_coil","clk_earn_guide_react",
+      "clk_neg_weak_fail","clk_ext_veto","clk_hold_vs_sector",
+      "clk_insider_cash_stab","clk_flow_coil","clk_r_up_coil","clk_nr7_mom",
+    ];
+    for (const k of clk) {
+      if (req[k] && !row[k]) return false;
+      if (forb[k] && row[k]) return false;
+    }
     return true;
   }
   function kidGate(key, val) {
@@ -368,6 +377,16 @@
       if (Number(val) === -1) return "the latest revision flag is a downgrade";
       return "the revision flag equals " + val;
     }
+    if (key === "clk_mom_break_peer") return "Clock-B #1 moderate momentum + breakout + peer/sector";
+    if (key === "clk_fresh_cat_coil") return "Clock-B #2 fresh catalyst + limited extension";
+    if (key === "clk_earn_guide_react") return "Clock-B #3 knowable earnings + guidance + reaction";
+    if (key === "clk_neg_weak_fail") return "Clock-B #4 negative catalyst + weakness + failed recovery";
+    if (key === "clk_ext_veto") return "Clock-B #5 extreme extension long veto";
+    if (key === "clk_hold_vs_sector") return "Clock-B #6 stock holds while sector weakens";
+    if (key === "clk_insider_cash_stab") return "Clock-B #7 insider + cash economics + stabilize";
+    if (key === "clk_flow_coil") return "Clock-B #8 flow-in + green + not extended";
+    if (key === "clk_r_up_coil") return "Clock-B #9 upgrade + green + not extended";
+    if (key === "clk_nr7_mom") return "Clock-B #10 NR7 + moderate momentum";
     const word = {good:"green", bad:"red", neutral:"yellow", missing:"blank", true:"green"}[String(val)] || String(val);
     return key + " is " + word;
   }
@@ -429,6 +448,15 @@
     if (req.flow_in) need(!!row.flow_in, kidGate("flow_in", true));
     if (req.rsi_min != null) need(row.rsi != null && row.rsi >= Number(req.rsi_min), kidGate("rsi_min", req.rsi_min));
     if (req.rsi_max != null) need(row.rsi != null && row.rsi <= Number(req.rsi_max), kidGate("rsi_max", req.rsi_max));
+    const clk = [
+      "clk_mom_break_peer","clk_fresh_cat_coil","clk_earn_guide_react",
+      "clk_neg_weak_fail","clk_ext_veto","clk_hold_vs_sector",
+      "clk_insider_cash_stab","clk_flow_coil","clk_r_up_coil","clk_nr7_mom",
+    ];
+    for (const k of clk) {
+      if (req[k]) need(!!row[k], kidGate(k, true));
+      if (forb[k]) need(!row[k], "not " + kidGate(k, true));
+    }
     return {ok: !failed.length, failed, passed};
   }
   function decisionWhy(pack, rec, date, ticker, mornings) {

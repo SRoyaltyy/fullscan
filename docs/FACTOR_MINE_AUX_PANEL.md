@@ -100,3 +100,6 @@ from 4–6 flatten names only.
 
 Do **not** retune gates or rankers until this remine shows `panel_n`
 recovered. Live Webull / `flatten_robust` stay frozen.
+
+Clock-B / 09:30-knowable catalogue wiring (have / calculable tells already
+on this panel, not KEEP) is documented in [CLOCK_B_TELLS.md](CLOCK_B_TELLS.md).
