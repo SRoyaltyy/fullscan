@@ -116,6 +116,7 @@
 <h1>Factor strategy mine <span class="mut" id="sessionHead"></span></h1>
 <div class="sub" id="packStamp"></div>
 <div class="sub" id="gen"></div>
+<div class="sub">Workable recipes only — selected from Win%, $ days, Starts YES, and Book% for combo / long / short. flatten_h5 stays as the $10k benchmark. The rest of the mine is discarded so this page stays small.</div>
 <div class="sub">Books:
  <a href="../" style="color:#93c5fd">paper book</a>
  · <a href="../hard-red-exceptions/" style="color:#93c5fd">daily investigator / sit exceptions</a>
@@ -1830,6 +1831,9 @@ function renderAll(){
     " · "+(D.leak||"leak-free 09:30")+
     (((D.combos||{}).n)
       ? (" · "+D.combos.n+" combo books"+(((D.combos.outperform||[]).length)?" · "+D.combos.outperform.length+" WIN":""))
+      : "")+
+    (D.workable
+      ? (" · "+(D.workable.n_kept||D.n_recipes)+" workable of "+(D.workable.n_mined||"?")+" mined (Win%>55 · $ days≥40% · Starts YES≥50% · Book%>0 · ≥30 trades)")
       : "")+
     (bracketOn() ? (" · sell% "+sellStatusText()) : "");
   document.getElementById('fees').textContent =
