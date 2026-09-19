@@ -1,6 +1,6 @@
 # Strategy improve — gainer reverse-run
 
-_Generated 2026-09-19T07:19:34-04:00 — research audit, not a wire._
+_Generated 2026-09-19T07:47:11-04:00 — research audit, not a wire._
 
 Liquid Finviz top-15 gainers (Change% ≥ 5%, mcap ≥ $100M, adv ≥ 500k) run back through the 09:30 packet that already printed. Same-day Change% only picks the universe.
 
@@ -57,6 +57,28 @@ Two stacked reasons, in order:
 2. **KEEP hot4 is leftover tape, not index beta.** On the 09-03 grind fat day (SPY +0.69% from the open) hot4 GPRO/REAX/CNH/MMED was **−5.28%**. The same morning `union_e_fresh_h3` (AVGO/CIEN/FIVE…) was **+4.07%** and `union_news_pack_net2_h1` (AVGO/DELL/HPE) was **+7.37%**. Event / news longs participated. Hot-score micro names faded.
 
 Morning S does not call fat grind days (09-03 S=−0.9). S=+7 on 09-17 was after the gap was already printed.
+
+## How to find overnight bangers
+
+Find the bang *before* 09:30: buy D from the prior Finviz earnings calendar (AMC today / BMO next). Unfiltered liquid calendar is a coin flip. Mega-cap ($50B+) is the one-way slice. Index-like nights are yesterday's liquid winners (holdup / yday_gainer), not the earnings lottery. earn_react / e_fresh are after the print.
+
+Two different nights, two different lists:
+
+1. **Print night** — AMC today / BMO next from the prior export. `overnight_mega_h1` keeps mcap ≥ $50B. The full liquid calendar has more −5% dumps than +5% bangs. `earn_react` / `e_fresh` fire *after* the print — they miss the bang.
+2. **Index-like night** — yesterday's liquid winners (`yday_gainer_h1` / `union_hot_n4_holdup` when S>0). Thursday 09-17's +1.05% SPX gap was this kind of night: scheduled AMC leftover was ALMU/LEN, not mega-cap beta.
+
+Lookback 2026-08-14 → last closed (24 nights; D close → D+1 open EW):
+
+- scheduled liquid `overnight`: -0.95% on 20 nights with names
+- scheduled mega `overnight_mega` ($50B+): +1.13% on 12 nights
+- yesterday's liquid 25: +1.75%
+- post-print `earn_react`: -0.04%
+
+Audited window nights:
+
+- 2026-09-15→2026-09-16: overnight n=1 gap=+4.28%; mega n=0 gap=—; yday25 gap=-0.19%; earn_react gap=+2.20%
+- 2026-09-16→2026-09-17: overnight n=2 gap=-6.58%; mega n=0 gap=—; yday25 gap=+1.30%; earn_react gap=+0.89%
+- 2026-09-17→2026-09-18: overnight n=0 gap=—; mega n=0 gap=—; yday25 gap=+0.84%; earn_react gap=-0.50%
 
 ## Reverse-run
 
