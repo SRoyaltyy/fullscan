@@ -1314,6 +1314,10 @@ let sleeveFilter = "all";
 let sideFilter = "all";
 let holdFilter = "all";
 let kindFilter = "all";
+function lastStartIdx(){
+  const n=((D.starts||{})[pickedName()]||[]).length;
+  return Math.max(0, n-1);
+}
 let startIdx = 0;
 let probeIdx = 0;
 let probeTick = "";
@@ -1360,8 +1364,8 @@ function pickWorst(list, key){
 function selectSleeve(name){
   sleeveFilter = name || 'all';
   hidden.clear();
-  startIdx = 0;
-  probeIdx = 0;
+  startIdx = lastStartIdx();
+  probeIdx = startIdx;
   probeTick = '';
   _simKey=''; _simBook=null;
   renderAll();
@@ -2135,7 +2139,7 @@ function renderTools(){
   box.hidden=false;
   const ds=D.dates||[];
   const rows=startRows();
-  if(startIdx>=rows.length) startIdx=0;
+  if(startIdx>=rows.length) startIdx=lastStartIdx();
   const sp=startPath();
   if(probeIdx>=ds.length) probeIdx=0;
   const startDate=sp?sp.start:(ds[startIdx]||'');
