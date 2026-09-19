@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ e_fresh, no 🚨
 
-Cash book **+9.66%** ($10,966) · signal-only (no cash/fees) was +6.30%. Starts YES **17/26**. Fills 144 · skips 47 · realized $+966.37.
+Cash book **+15.43%** ($11,543) · signal-only (no cash/fees) was +9.13%. Starts YES **25/26**. Fills 152 · skips 47 · realized $+1543.08.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $10,966.34.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $11,543.05.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -219,9 +219,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | `LPTH` | 145 | $9.20 | $8.85 | -50.75 | — | +0.00 | -50.75 | -75.40 | — |
 | 2026-09-14 | `REF` | 104 | $14.03 | $14.16 | +13.52 | — | +0.00 | +13.52 | +110.24 | — |
 | 2026-09-15 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-09-16 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-09-17 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-09-18 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-16 | `FPS` | 165 | — | $33.14 | +0.00 | $34.84 | +280.50 | +280.50 | +0.00 | +280.50 |
+| 2026-09-16 | `TCOM` | 133 | — | $40.93 | +0.00 | $40.43 | -66.50 | -66.50 | +0.00 | -66.50 |
+| 2026-09-17 | `FPS` | 165 | $34.84 | $36.76 | +316.80 | — | +0.00 | +316.80 | +597.30 | — |
+| 2026-09-17 | `TCOM` | 133 | $40.43 | $40.79 | +47.88 | — | +0.00 | +47.88 | -18.62 | — |
+| 2026-09-17 | `ALMU` | 514 | — | $11.21 | +0.00 | $11.54 | +172.19 | +172.19 | +0.00 | +172.19 |
+| 2026-09-17 | `LEN` | 71 | — | $81.00 | +0.00 | $79.70 | -92.30 | -92.30 | +0.00 | -92.30 |
+| 2026-09-18 | `ALMU` | 514 | $11.54 | $11.64 | +48.83 | — | +0.00 | +48.83 | +221.02 | — |
+| 2026-09-18 | `LEN` | 71 | $79.70 | $78.25 | -102.95 | — | +0.00 | -102.95 | -195.25 | — |
 
 ## Each session (cash + holdings state)
 
@@ -250,9 +255,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | +0.50 | $10,932.12 | — | $10,932.12 | -0.00 | +57.27 | ORCL, DBI, ADBE, CPRT, DSGX, KR, LPTH, REF | — | $250.23 | $10,971.44 | ORCL×8, DBI×231, ADBE×5, CPRT×42, DSGX×19, KR×24, LPTH×145, REF×104 |
 | 2026-09-14 | -11.00 | $250.23 | ORCL×8, DBI×231, ADBE×5, CPRT×42, DSGX×19, KR×24, LPTH×145, REF×104 | $10,984.51 | +13.07 | +0.00 | — | ORCL, DBI, ADBE, CPRT, DSGX, KR, LPTH, REF | $10,966.34 | $10,966.34 | — |
 | 2026-09-15 | -3.84 | $10,966.34 | — | $10,966.34 | +0.00 | +0.00 | — | — | $10,966.34 | $10,966.34 | — |
-| 2026-09-16 | +5.30 | $10,966.34 | — | $10,966.34 | +0.00 | +0.00 | — | — | $10,966.34 | $10,966.34 | — |
-| 2026-09-17 | +7.38 | $10,966.34 | — | $10,966.34 | +0.00 | +0.00 | — | — | $10,966.34 | $10,966.34 | — |
-| 2026-09-18 | +4.86 | $10,966.34 | — | $10,966.34 | +0.00 | +0.00 | — | — | $10,966.34 | $10,966.34 | — |
+| 2026-09-16 | +5.30 | $10,966.34 | — | $10,966.34 | +0.00 | +214.00 | FPS, TCOM | — | $49.68 | $11,175.47 | FPS×165, TCOM×133 |
+| 2026-09-17 | +7.38 | $49.68 | FPS×165, TCOM×133 | $11,540.15 | +364.68 | +79.89 | ALMU, LEN | FPS, TCOM | $13.36 | $11,606.19 | ALMU×514, LEN×71 |
+| 2026-09-18 | +4.86 | $13.36 | ALMU×514, LEN×71 | $11,552.07 | -54.12 | +0.00 | — | ALMU, LEN | $11,543.05 | $11,543.05 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -449,11 +454,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,966.34 | ▲ 09:30 equity $10,966.34 vs yday $10,966.34 (+0.00) | 09:30 open · cash $10,966.34 · no holdings · equity $10,966.34 vs prior close $10,966.34 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,966.34 | ▲ close $10,966.34 vs 09:30 $10,966.34 (session +0.00) | 16:00 close · cash $10,966.34 · no lots left · equity $10,966.34. | — |
 | 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,966.34 | ▲ 09:30 equity $10,966.34 vs yday $10,966.34 (+0.00) | 09:30 open · cash $10,966.34 · no holdings · equity $10,966.34 vs prior close $10,966.34 (+0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,966.34 | ▲ close $10,966.34 vs 09:30 $10,966.34 (session +0.00) | 16:00 close · cash $10,966.34 · no lots left · equity $10,966.34. | — |
-| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,966.34 | ▲ 09:30 equity $10,966.34 vs yday $10,966.34 (+0.00) | 09:30 open · cash $10,966.34 · no holdings · equity $10,966.34 vs prior close $10,966.34 (+0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,966.34 | ▲ close $10,966.34 vs 09:30 $10,966.34 (session +0.00) | 16:00 close · cash $10,966.34 · no lots left · equity $10,966.34. | — |
-| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,966.34 | ▲ 09:30 equity $10,966.34 vs yday $10,966.34 (+0.00) | 09:30 open · cash $10,966.34 · no holdings · equity $10,966.34 vs prior close $10,966.34 (+0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,966.34 | ▲ close $10,966.34 vs 09:30 $10,966.34 (session +0.00) | 16:00 close · cash $10,966.34 · no lots left · equity $10,966.34. | — |
+| 2026-09-16 09:30 ET | **BUY** | `FPS` | 165 | $33.14 | $2.48 | — | $5,495.76 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list probable,yday_gainer; 🔵; ret5=+5.8; leftover $5483.17 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `TCOM` | 133 | $40.93 | $2.39 | — | $49.68 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-9.3; leftover $5483.17 | join🔴 sector🔴 gen🟢 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $49.68 | ▲ close $11,175.47 vs 09:30 $10,966.34 (session +214.00) | 16:00 close · cash $49.68 · equity $11,175.47 vs 09:30 $10,966.34 (+209.13; session marks +214.00) · 2 name(s) marked open→close (per-name table). FPS×165 09:30 $33.14 → close $34.84 +280.50; TCOM×133 09:30 $40.93 → close $40.43 -66.50 | — |
+| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $49.68 | ▲ 09:30 equity $11,540.15 vs yday $11,175.47 (+364.68) | 09:30 open · cash $49.68 (unchanged overnight, no fees) · equity $11,540.15 vs prior close $11,175.47 (+364.68) · 2 name(s) re-marked at the open (per-name table). FPS×165 yday $34.84 → 09:30 $36.76 +316.80; TCOM×133 yday $40.43 → 09:30 $40.79 +47.88 | — |
+| 2026-09-17 09:30 ET | **SELL** | `FPS` | 165 | $36.76 | $2.56 | $+592.25 | $6,112.52 | ▲ +592.25 after sell → book $11,537.59; vs 09:30 mark -2.56 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-17 09:30 ET | **SELL** | `TCOM` | 133 | $40.79 | $2.45 | $-23.46 | $11,535.13 | ▼ -23.46 after sell → book $11,535.13; vs 09:30 mark -2.46 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-17 09:30 ET | **BUY** | `ALMU` | 514 | $11.21 | $6.63 | — | $5,766.56 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+1.6; leftover $5767.57 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-17 09:30 ET | **BUY** | `LEN` | 71 | $81.00 | $2.20 | — | $13.36 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-4.4; leftover $5767.57 | join🔴 sector🟢 gen🟢 news🔴 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13.36 | ▲ close $11,606.19 vs 09:30 $11,540.15 (session +79.89) | 16:00 close · cash $13.36 · equity $11,606.19 vs 09:30 $11,540.15 (+66.04; session marks +79.89) · 2 name(s) marked open→close (per-name table). ALMU×514 09:30 $11.21 → close $11.54 +172.19; LEN×71 09:30 $81.00 → close $79.70 -92.30 | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13.36 | ▼ 09:30 equity $11,552.07 vs yday $11,606.19 (-54.12) | 09:30 open · cash $13.36 (unchanged overnight, no fees) · equity $11,552.07 vs prior close $11,606.19 (-54.12) · 2 name(s) re-marked at the open (per-name table). ALMU×514 yday $11.54 → 09:30 $11.64 +48.83; LEN×71 yday $79.70 → 09:30 $78.25 -102.95 | — |
+| 2026-09-18 09:30 ET | **SELL** | `ALMU` | 514 | $11.64 | $6.76 | $+207.63 | $5,989.55 | ▲ +207.63 after sell → book $11,545.30; vs 09:30 mark -6.77 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-18 09:30 ET | **SELL** | `LEN` | 71 | $78.25 | $2.26 | $-199.71 | $11,543.05 | ▼ -199.71 after sell → book $11,543.05; vs 09:30 mark -2.25 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,543.05 | ▲ close $11,543.05 vs 09:30 $11,552.07 (session +0.00) | 16:00 close · cash $11,543.05 · no lots left · equity $11,543.05. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · alarm
 
-Cash book **+1.71%** ($10,171) · signal-only (no cash/fees) was +1.58%. Starts YES **12/26**. Fills 58 · skips 77 · realized $+170.77.
+Cash book **+0.71%** ($10,071) · signal-only (no cash/fees) was -0.80%. Starts YES **3/26**. Fills 72 · skips 77 · realized $+150.38.
 
 ## How this sleeve decides (like you are 10)
 
@@ -52,7 +52,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $10,170.79.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $14,806.34.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -137,8 +137,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-15 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-16 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-09-17 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-09-18 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-17 | `FRO` | 23 | — | $54.31 | +0.00 | $54.03 | +6.44 | +6.44 | -0.00 | +6.44 |
+| 2026-09-17 | `CVI` | 24 | — | $51.88 | +0.00 | $54.14 | -54.24 | -54.24 | -0.00 | -54.24 |
+| 2026-09-17 | `DHT` | 55 | — | $22.97 | +0.00 | $22.82 | +8.25 | +8.25 | -0.00 | +8.25 |
+| 2026-09-17 | `ATRC` | 21 | — | $57.96 | +0.00 | $59.12 | -24.36 | -24.36 | -0.00 | -24.36 |
+| 2026-09-18 | `FRO` | 23 | $54.03 | $51.19 | +65.32 | — | +0.00 | +65.32 | +71.76 | — |
+| 2026-09-18 | `CVI` | 24 | $54.14 | $54.10 | +0.96 | — | +0.00 | +0.96 | -53.28 | — |
+| 2026-09-18 | `DHT` | 55 | $22.82 | $23.16 | -18.70 | — | +0.00 | -18.70 | -10.45 | — |
+| 2026-09-18 | `ATRC` | 21 | $59.12 | $58.51 | +12.81 | — | +0.00 | +12.81 | -11.55 | — |
+| 2026-09-18 | `SWRD` | 406 | — | $2.08 | +0.00 | $2.15 | -28.42 | -28.42 | -0.00 | -28.42 |
+| 2026-09-18 | `BRR` | 236 | — | $3.57 | +0.00 | $3.76 | -44.84 | -44.84 | -0.00 | -44.84 |
+| 2026-09-18 | `SMTC` | 4 | — | $182.33 | +0.00 | $185.00 | -10.68 | -10.68 | -0.00 | -10.68 |
+| 2026-09-18 | `DELL` | 1 | — | $593.15 | +0.00 | $568.06 | +25.09 | +25.09 | -0.00 | +25.09 |
+| 2026-09-18 | `BKV` | 36 | — | $22.92 | +0.00 | $22.97 | -1.80 | -1.80 | -0.00 | -1.80 |
+| 2026-09-18 | `AESI` | 62 | — | $13.52 | +0.00 | $13.55 | -1.86 | -1.86 | -0.00 | -1.86 |
 
 ## Each session (cash + holdings state)
 
@@ -168,8 +180,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | -11.00 | $10,170.79 | — | $10,170.79 | -0.00 | +0.00 | — | — | $10,170.79 | $10,170.79 | — |
 | 2026-09-15 | -3.84 | $10,170.79 | — | $10,170.79 | -0.00 | +0.00 | — | — | $10,170.79 | $10,170.79 | — |
 | 2026-09-16 | +5.30 | $10,170.79 | — | $10,170.79 | -0.00 | +0.00 | — | — | $10,170.79 | $10,170.79 | — |
-| 2026-09-17 | +7.38 | $10,170.79 | — | $10,170.79 | -0.00 | +0.00 | — | — | $10,170.79 | $10,170.79 | — |
-| 2026-09-18 | +4.86 | $10,170.79 | — | $10,170.79 | -0.00 | +0.00 | — | — | $10,170.79 | $10,170.79 | — |
+| 2026-09-17 | +7.38 | $10,170.79 | — | $10,170.79 | -0.00 | -63.91 | FRO, CVI, DHT, ATRC | — | $15,137.00 | $10,098.33 | FRO×23, CVI×24, DHT×55, ATRC×21 |
+| 2026-09-18 | +4.86 | $15,137.00 | FRO×23, CVI×24, DHT×55, ATRC×21 | $10,158.72 | +60.39 | -62.51 | SWRD, BRR, SMTC, DELL, BKV, AESI | FRO, CVI, DHT, ATRC | $14,806.34 | $10,071.00 | SWRD×406, BRR×236, SMTC×4, DELL×1, BKV×36, AESI×62 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -282,9 +294,23 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,170.79 | ▲ 09:30 equity $10,170.79 vs yday $10,170.79 (-0.00) | 09:30 open · cash $10,170.79 · no holdings · equity $10,170.79 vs prior close $10,170.79 (-0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,170.79 | ▲ close $10,170.79 vs 09:30 $10,170.79 (session +0.00) | 16:00 close · cash $10,170.79 · no lots left · equity $10,170.79. | — |
 | 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,170.79 | ▲ 09:30 equity $10,170.79 vs yday $10,170.79 (-0.00) | 09:30 open · cash $10,170.79 · no holdings · equity $10,170.79 vs prior close $10,170.79 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,170.79 | ▲ close $10,170.79 vs 09:30 $10,170.79 (session +0.00) | 16:00 close · cash $10,170.79 · no lots left · equity $10,170.79. | — |
-| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,170.79 | ▲ 09:30 equity $10,170.79 vs yday $10,170.79 (-0.00) | 09:30 open · cash $10,170.79 · no holdings · equity $10,170.79 vs prior close $10,170.79 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,170.79 | ▲ close $10,170.79 vs 09:30 $10,170.79 (session +0.00) | 16:00 close · cash $10,170.79 · no lots left · equity $10,170.79. | — |
+| 2026-09-17 09:30 ET | **SHORT** | `FRO` | 23 | $54.31 | $2.11 | — | $11,417.80 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+13.7; leftover $1271.35 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-17 09:30 ET | **SHORT** | `CVI` | 24 | $51.88 | $2.12 | — | $12,660.81 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+11.1; leftover $1271.35 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-17 09:30 ET | **SHORT** | `DHT` | 55 | $22.97 | $2.21 | — | $13,921.95 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+9.0; leftover $1271.35 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-17 09:30 ET | **SHORT** | `ATRC` | 21 | $57.96 | $2.11 | — | $15,137.00 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+7.8; leftover $1271.35 | join🟢 sector🟢 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,137.00 | ▼ close $10,098.33 vs 09:30 $10,170.79 (session -63.91) | 16:00 close · cash $15,137.00 · equity $10,098.33 vs 09:30 $10,170.79 (-72.46; session marks -63.91) · 4 name(s) marked open→close (per-name table). FRO×23 09:30 $54.31 → close $54.03 +6.44; CVI×24 09:30 $51.88 → close $54.14 -54.24; DHT×55 09:30 $22.97 → close $22.82 +8.25; ATRC×21 09:30 $57.96 → close $59.12 -24.36 | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,137.00 | ▲ 09:30 equity $10,158.72 vs yday $10,098.33 (+60.39) | 09:30 open · cash $15,137.00 (unchanged overnight, no fees) · equity $10,158.72 vs prior close $10,098.33 (+60.39) · 4 name(s) re-marked at the open (per-name table). FRO×23 yday $54.03 → 09:30 $51.19 +65.32; CVI×24 yday $54.14 → 09:30 $54.10 +0.96; DHT×55 yday $22.82 → 09:30 $23.16 -18.70; ATRC×21 yday $59.12 → 09:30 $58.51 +12.81 | — |
+| 2026-09-18 09:30 ET | **COVER** | `FRO` | 23 | $51.19 | $2.06 | $+67.59 | $13,957.57 | ▲ +67.59 after sell → book $10,156.66; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-18 09:30 ET | **COVER** | `CVI` | 24 | $54.10 | $2.06 | $-57.46 | $12,657.11 | ▼ -57.46 after sell → book $10,154.60; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | join🟡 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-18 09:30 ET | **COVER** | `DHT` | 55 | $23.16 | $2.15 | $-14.81 | $11,381.15 | ▼ -14.81 after sell → book $10,152.44; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | join🟡 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-18 09:30 ET | **COVER** | `ATRC` | 21 | $58.51 | $2.05 | $-15.71 | $10,150.39 | ▼ -15.71 after sell → book $10,150.39; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-09-18 09:30 ET | **SHORT** | `SWRD` | 406 | $2.08 | $5.34 | — | $10,989.53 | — | alarm; gate alarm=True; list yday_gainer,yday_mover; ret5=+0.0; leftover $845.87 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-18 09:30 ET | **SHORT** | `BRR` | 236 | $3.57 | $3.12 | — | $11,828.94 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+15.4; leftover $845.87 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-09-18 09:30 ET | **SHORT** | `SMTC` | 4 | $182.33 | $2.04 | — | $12,556.21 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+12.0; leftover $845.87 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-18 09:30 ET | **SHORT** | `DELL` | 1 | $593.15 | $2.03 | — | $13,147.34 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+16.1; leftover $845.87 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-18 09:30 ET | **SHORT** | `BKV` | 36 | $22.92 | $2.14 | — | $13,970.31 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+10.8; leftover $845.87 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-09-18 09:30 ET | **SHORT** | `AESI` | 62 | $13.52 | $2.22 | — | $14,806.34 | — | alarm; gate alarm=True; list ohlc_hot; ret5=+6.8; leftover $845.87 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,806.34 | ▼ close $10,071.00 vs 09:30 $10,158.72 (session -62.51) | 16:00 close · cash $14,806.34 · equity $10,071.00 vs 09:30 $10,158.72 (-87.72; session marks -62.51) · 6 name(s) marked open→close (per-name table). SWRD×406 09:30 $2.08 → close $2.15 -28.42; BRR×236 09:30 $3.57 → close $3.76 -44.84; SMTC×4 09:30 $182.33 → close $185.00 -10.68; DELL×1 09:30 $593.15 → close $568.06 +25.09; BKV×36 09:30 $22.92 → close $22.97 -1.80; AESI×62 09:30 $13.52 → close $13.55 -1.86 | — |
 
 ## Not taken
 
@@ -367,3 +393,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `HLP` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `TJGC` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `SPCX` | hard_red | hard-red S=-3.84 sit; no new buys |
+
+## Still open (marked at last close)
+
+| Ticker | Shares | Entry | Why |
+|---|---:|---|---|
+| `SWRD` | 406 | 2026-09-18 @ $2.08 | alarm; gate alarm=True; list yday_gainer,yday_mover; ret5=+0.0; leftover $845.87 |
+| `BRR` | 236 | 2026-09-18 @ $3.57 | alarm; gate alarm=True; list ohlc_hot; ret5=+15.4; leftover $845.87 |
+| `SMTC` | 4 | 2026-09-18 @ $182.33 | alarm; gate alarm=True; list ohlc_hot; ret5=+12.0; leftover $845.87 |
+| `DELL` | 1 | 2026-09-18 @ $593.15 | alarm; gate alarm=True; list ohlc_hot; ret5=+16.1; leftover $845.87 |
+| `BKV` | 36 | 2026-09-18 @ $22.92 | alarm; gate alarm=True; list ohlc_hot; ret5=+10.8; leftover $845.87 |
+| `AESI` | 62 | 2026-09-18 @ $13.52 | alarm; gate alarm=True; list ohlc_hot; ret5=+6.8; leftover $845.87 |

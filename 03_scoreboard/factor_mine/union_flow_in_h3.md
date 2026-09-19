@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in, no 🚨
 
-Cash book **-2.79%** ($9,722) · signal-only (no cash/fees) was -7.30%. Starts YES **4/26**. Fills 50 · skips 77 · realized $-278.47.
+Cash book **+1.44%** ($10,144) · signal-only (no cash/fees) was -3.23%. Starts YES **15/26**. Fills 51 · skips 79 · realized $-278.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,721.53.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $34.18.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -164,8 +164,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `ARLO` | 359 | $13.76 | $13.83 | +25.13 | $13.52 | -111.29 | -86.16 | +218.99 | +107.70 |
 | 2026-09-16 | `SSL` | 331 | $15.11 | $14.62 | -162.19 | — | +0.00 | -162.19 | +89.37 | — |
 | 2026-09-16 | `ARLO` | 359 | $13.52 | $13.62 | +35.90 | — | +0.00 | +35.90 | +143.60 | — |
-| 2026-09-17 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-09-18 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-16 | `ATRC` | 174 | — | $55.66 | +0.00 | $57.14 | +257.52 | +257.52 | +0.00 | +257.52 |
+| 2026-09-17 | `ATRC` | 174 | $57.14 | $57.96 | +142.68 | $59.12 | +201.84 | +344.52 | +400.20 | +602.04 |
+| 2026-09-18 | `ATRC` | 174 | $59.12 | $58.51 | -106.14 | $58.10 | -71.34 | -177.48 | +495.90 | +424.56 |
 
 ## Each session (cash + holdings state)
 
@@ -194,9 +195,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | +0.50 | $9,506.55 | — | $9,506.55 | +0.00 | +68.67 | SSL, ARLO | — | $1.82 | $9,566.32 | SSL×331, ARLO×359 |
 | 2026-09-14 | -11.00 | $1.82 | SSL×331, ARLO×359 | $9,556.34 | -9.98 | +184.82 | — | — | $1.82 | $9,741.16 | SSL×331, ARLO×359 |
 | 2026-09-15 | -3.84 | $1.82 | SSL×331, ARLO×359 | $9,762.98 | +21.82 | +93.93 | — | — | $1.82 | $9,856.91 | SSL×331, ARLO×359 |
-| 2026-09-16 | +5.30 | $1.82 | SSL×331, ARLO×359 | $9,730.62 | -126.29 | +0.00 | — | SSL, ARLO | $9,721.53 | $9,721.53 | — |
-| 2026-09-17 | +7.38 | $9,721.53 | — | $9,721.53 | +0.00 | +0.00 | — | — | $9,721.53 | $9,721.53 | — |
-| 2026-09-18 | +4.86 | $9,721.53 | — | $9,721.53 | +0.00 | +0.00 | — | — | $9,721.53 | $9,721.53 | — |
+| 2026-09-16 | +5.30 | $1.82 | SSL×331, ARLO×359 | $9,730.62 | -126.29 | +257.52 | ATRC | SSL, ARLO | $34.18 | $9,976.54 | ATRC×174 |
+| 2026-09-17 | +7.38 | $34.18 | ATRC×174 | $10,119.22 | +142.68 | +201.84 | — | — | $34.18 | $10,321.06 | ATRC×174 |
+| 2026-09-18 | +4.86 | $34.18 | ATRC×174 | $10,214.92 | -106.14 | -71.34 | — | — | $34.18 | $10,143.58 | ATRC×174 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -297,13 +298,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.82 | ▲ 09:30 equity $9,762.98 vs yday $9,741.16 (+21.82) | 09:30 open · cash $1.82 (unchanged overnight, no fees) · equity $9,762.98 vs prior close $9,741.16 (+21.82) · 2 name(s) re-marked at the open (per-name table). SSL×331 yday $14.50 → 09:30 $14.49 -3.31; ARLO×359 yday $13.76 → 09:30 $13.83 +25.13 | — |
 | 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.82 | ▲ close $9,856.91 vs 09:30 $9,762.98 (session +93.93) | 16:00 close · cash $1.82 · equity $9,856.91 vs 09:30 $9,762.98 (+93.93; session marks +93.93) · 2 name(s) marked open→close (per-name table). SSL×331 09:30 $14.49 → close $15.11 +205.22; ARLO×359 09:30 $13.83 → close $13.52 -111.29 | — |
 | 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.82 | ▼ 09:30 equity $9,730.62 vs yday $9,856.91 (-126.29) | 09:30 open · cash $1.82 (unchanged overnight, no fees) · equity $9,730.62 vs prior close $9,856.91 (-126.29) · 2 name(s) re-marked at the open (per-name table). SSL×331 yday $15.11 → 09:30 $14.62 -162.19; ARLO×359 yday $13.52 → 09:30 $13.62 +35.90 | — |
-| 2026-09-16 09:30 ET | **SELL** | `SSL` | 331 | $14.62 | $4.36 | $+80.74 | $4,836.68 | ▲ +80.74 after sell → book $9,726.26; vs 09:30 mark -4.36 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `SSL` | 331 | $14.62 | $4.36 | $+80.74 | $4,836.68 | ▲ +80.74 after sell → book $9,726.26; vs 09:30 mark -4.36 | dropped from list after 3 sess (min 3) | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-16 09:30 ET | **SELL** | `ARLO` | 359 | $13.62 | $4.73 | $+134.24 | $9,721.53 | ▲ +134.24 after sell → book $9,721.53; vs 09:30 mark -4.73 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,721.53 | ▲ close $9,721.53 vs 09:30 $9,730.62 (session +0.00) | 16:00 close · cash $9,721.53 · no lots left · equity $9,721.53. | — |
-| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,721.53 | ▲ 09:30 equity $9,721.53 vs yday $9,721.53 (+0.00) | 09:30 open · cash $9,721.53 · no holdings · equity $9,721.53 vs prior close $9,721.53 (+0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,721.53 | ▲ close $9,721.53 vs 09:30 $9,721.53 (session +0.00) | 16:00 close · cash $9,721.53 · no lots left · equity $9,721.53. | — |
-| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,721.53 | ▲ 09:30 equity $9,721.53 vs yday $9,721.53 (+0.00) | 09:30 open · cash $9,721.53 · no holdings · equity $9,721.53 vs prior close $9,721.53 (+0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,721.53 | ▲ close $9,721.53 vs 09:30 $9,721.53 (session +0.00) | 16:00 close · cash $9,721.53 · no lots left · equity $9,721.53. | — |
+| 2026-09-16 09:30 ET | **BUY** | `ATRC` | 174 | $55.66 | $2.51 | — | $34.18 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list ohlc_hot; 🔵; ret5=+4.6; leftover $9721.53 | join🟢 sector🟢 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $34.18 | ▲ close $9,976.54 vs 09:30 $9,730.62 (session +257.52) | 16:00 close · cash $34.18 · equity $9,976.54 vs 09:30 $9,730.62 (+245.92; session marks +257.52) · 1 name(s) marked open→close (per-name table). ATRC×174 09:30 $55.66 → close $57.14 +257.52 | — |
+| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $34.18 | ▲ 09:30 equity $10,119.22 vs yday $9,976.54 (+142.68) | 09:30 open · cash $34.18 (unchanged overnight, no fees) · equity $10,119.22 vs prior close $9,976.54 (+142.68) · 1 name(s) re-marked at the open (per-name table). ATRC×174 yday $57.14 → 09:30 $57.96 +142.68 | — |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $34.18 | ▲ close $10,321.06 vs 09:30 $10,119.22 (session +201.84) | 16:00 close · cash $34.18 · equity $10,321.06 vs 09:30 $10,119.22 (+201.84; session marks +201.84) · 1 name(s) marked open→close (per-name table). ATRC×174 09:30 $57.96 → close $59.12 +201.84 | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $34.18 | ▼ 09:30 equity $10,214.92 vs yday $10,321.06 (-106.14) | 09:30 open · cash $34.18 (unchanged overnight, no fees) · equity $10,214.92 vs prior close $10,321.06 (-106.14) · 1 name(s) re-marked at the open (per-name table). ATRC×174 yday $59.12 → 09:30 $58.51 -106.14 | — |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $34.18 | ▼ close $10,143.58 vs 09:30 $10,214.92 (session -71.34) | 16:00 close · cash $34.18 · equity $10,143.58 vs 09:30 $10,214.92 (-71.34; session marks -71.34) · 1 name(s) marked open→close (per-name table). ATRC×174 09:30 $58.51 → close $58.10 -71.34 | — |
 
 ## Not taken
 
@@ -386,3 +388,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | `ANAB` | hard_red | hard-red S=-11.00 sit; no new buys |
 | 2026-09-15 | `SSL` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-15 | `LFMD` | hard_red | hard-red S=-3.84 sit; no new buys |
+| 2026-09-17 | `ATRC` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-18 | `ATRC` | min_hold | dropped but min-hold 2/3 sess — no sell |
+
+## Still open (marked at last close)
+
+| Ticker | Shares | Entry | Why |
+|---|---:|---|---|
+| `ATRC` | 174 | 2026-09-16 @ $55.66 | union ∩ flow_in, no 🚨; gate flow_in=True; list ohlc_hot; 🔵; ret5=+4.6; leftover $9721.53 |
