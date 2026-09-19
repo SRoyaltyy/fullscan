@@ -60,7 +60,9 @@ HOLD_FRAC = 0.30
 CORE_AUX = frozenset({
     "probable", "yday_gainer", "yday_mover", "ohlc_hot", "earn_react",
 })
-# Same-day / close-knowable names that must never be flags.
+# Same-day Gap / minute-hour Performance* are never Clock B, even if
+# present on a T dump. T−1 RelVol/Change on finviz_asof stay aisle
+# context, not these column names.
 FORBIDDEN_FEATURE_FIELDS = frozenset({
     "H", "I", "net", "i_net", "close", "high", "low",
     "Gap", "Change", "change_pct", "RelVol",
@@ -295,6 +297,7 @@ def synth_oppset_row(rec):
         "date": iso,
         "ticker": _tick(rec.get("ticker")),
         "sources": ["oppset_clock_b"],
+        "finviz_asof": asof or None,
         "news_export_date": asof or None,
         "prior_date": asof or None,
         "ohlc_ret_1": chg,
@@ -346,16 +349,24 @@ def aisle_rows(panel, oppset_by_date=None):
             continue
         aisle_dates.append(iso)
         seen = set()
-        oset_ticks = {_tick(r.get("ticker")) for r in oset}
+        oset_by_tick = {_tick(r.get("ticker")): r for r in oset}
         for r in day:
             t = _tick(r.get("ticker"))
             if not t:
                 continue
             srcs = list(r.get("sources") or [])
-            if t in oset_ticks and "oppset_clock_b" not in srcs:
-                srcs = srcs + ["oppset_clock_b"]
-                r = dict(r, sources=srcs)
+            extra = {}
+            hit = oset_by_tick.get(t)
+            if hit is not None:
+                asof = clock_b_asof(iso, hit.get("finviz_asof"))
+                if asof:
+                    extra["finviz_asof"] = asof
+                    extra["news_export_date"] = asof
+                    extra["prior_date"] = asof
+                if "oppset_clock_b" not in srcs:
+                    srcs = srcs + ["oppset_clock_b"]
                 stats["n_overlap"] += 1
+            r = dict(r, sources=srcs, **extra)
             seen.add(t)
             out.append(r)
             stats["n_panel"] += 1
@@ -424,6 +435,9 @@ def load_finviz_index(iso, export_dir=None):
                 "news_title": str(rec.get("News Title") or ""),
                 "earn_date": str(rec.get("Earnings Date") or ""),
             }
+            leak = set(row) & FORBIDDEN_FEATURE_FIELDS
+            if leak:
+                raise ValueError(f"LEAK abort: Finviz snap stored {sorted(leak)}")
             by[t] = row
             if not _is_etf(rec) and row["sector"] and row["perf_week"] is not None:
                 sector_xs[row["sector"]].append(row["perf_week"])
@@ -436,11 +450,38 @@ def load_finviz_index(iso, export_dir=None):
     return by, sector_med
 
 
+def clock_b_asof(join_morning, finviz_asof):
+    """Theme Radar pair: T = join_morning, T−1 = finviz_asof.
+
+    Same-day asof is a leak (would expose T Gap / RelVol / minute Performance).
+    """
+    t = str(join_morning or "")[:10]
+    a = str(finviz_asof or "")[:10]
+    if not t or not a:
+        return None
+    if a >= t:
+        raise ValueError(
+            f"LEAK abort: finviz_asof {a} is not T−1 for join_morning {t}"
+        )
+    return a
+
+
 def prior_finviz_date(iso, fv_dates, row=None):
-    stamped = str((row or {}).get("news_export_date")
-                  or (row or {}).get("prior_date") or "")[:10]
-    if stamped and stamped < iso:
-        return stamped
+    """Open-knowable Finviz date. Oppset rows join exactly on finviz_asof.
+
+    Panel-only rows (no Theme Radar pair) may walk to the last prior
+    export. Never returns join_morning itself.
+    """
+    row = row or {}
+    iso = str(iso or row.get("date") or "")[:10]
+    stamped = str(
+        row.get("finviz_asof")
+        or row.get("news_export_date")
+        or row.get("prior_date")
+        or ""
+    )[:10]
+    if stamped:
+        return clock_b_asof(iso, stamped)
     prev = [d for d in fv_dates if d < iso]
     return prev[-1] if prev else None
 
@@ -659,7 +700,10 @@ def name_days_from_panel(panel, export_dir=None, oppset_by_date=None):
                 n_label_fv += 1
         if not o or not c or o <= 0:
             continue
-        stamped = str(r.get("news_export_date") or r.get("prior_date") or "")[:10]
+        stamped = str(
+            r.get("finviz_asof") or r.get("news_export_date")
+            or r.get("prior_date") or ""
+        )[:10]
         if stamped == iso:
             raise ValueError(f"LEAK abort: Finviz date {stamped} is same-row as {iso}")
         t1 = prior_finviz_date(iso, fv_dates, r)
@@ -1035,9 +1079,10 @@ def write_board(payload, path=None):
         f"- Gate: `{gp['gate']}`",
         f"- Same-row leak abort: `{', '.join(gp['same_row_leak_abort'])}`",
         f"- Leak check: **{payload['leak']}**",
-        "- Features: T−1 Finviz + panel prior tape (Clock B). Open is the "
-        "fill, not a feature. Same-day Gap / Change / RelVol / minute "
-        "Performance* are never flags. H/I are labels only.",
+        "- Features: Theme Radar join on `join_morning` (T) + `finviz_asof` "
+        "(T−1), else panel prior tape. Open is the fill, not a feature. "
+        "Same-day Gap / Change / RelVol / minute Performance* are never "
+        "Clock B and never flags. H/I are labels only.",
         f"- Split: TIME-SPLIT last {HOLD_FRAC:.0%} of aisle "
         f"session dates (cutoff `{payload.get('cutoff')}`). Discovery "
         "feature date is strictly before cutoff.",

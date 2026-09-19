@@ -14,9 +14,9 @@ from excel_clock_gate import (  # noqa: E402
 from catalogue_combo_keep import (  # noqa: E402
     COMBOS, FEATURE_KEYS, FORBIDDEN_FEATURE_FIELDS,
     aisle_rows, assert_atoms_legal, assert_flags_legal, build_flags,
-    combo_hits, headline_from, leak_check, load_finviz_labels,
-    load_oppset_flagged, name_days_from_panel, prior_finviz_date, score_veto,
-    synth_oppset_row, write_board,
+    clock_b_asof, combo_hits, headline_from, leak_check, load_finviz_index,
+    load_finviz_labels, load_oppset_flagged, name_days_from_panel,
+    prior_finviz_date, score_veto, synth_oppset_row, write_board,
 )
 from excel_factor_mine import keep_verdict, score_hits, split_rows, time_slot  # noqa: E402
 from join_post_813 import FEE_RT  # noqa: E402
@@ -200,6 +200,7 @@ def test_aisle_unions_oppset_not_flatten_only():
     assert stats["n_oppset_only"] == 1
     new = next(r for r in rows if r["ticker"] == "NEW")
     assert new["sources"] == ["oppset_clock_b"]
+    assert new["finviz_asof"] == "2026-08-13"
     assert new["news_export_date"] == "2026-08-13"
     assert "yday_gainer" in next(r for r in rows if r["ticker"] == "BBB")["sources"]
 
@@ -261,12 +262,70 @@ def test_finviz_labels_use_price_as_close():
 
 def test_prior_finviz_never_same_session():
     assert prior_finviz_date("2026-09-18", ["2026-09-17", "2026-09-18"]) == "2026-09-17"
-    row = {"news_export_date": "2026-09-18", "prior_date": "2026-09-17"}
-    # stamped same-day is ignored; walk back
-    iso = "2026-09-18"
-    got = prior_finviz_date(iso, ["2026-09-16", "2026-09-17"], row)
+    assert clock_b_asof("2026-09-18", "2026-09-17") == "2026-09-17"
+    try:
+        clock_b_asof("2026-09-18", "2026-09-18")
+    except ValueError as e:
+        assert "LEAK" in str(e)
+    else:
+        raise AssertionError("same-day finviz_asof must abort")
+    # stamped same-day is a leak, not a walk-back
+    try:
+        prior_finviz_date(
+            "2026-09-18", ["2026-09-16", "2026-09-17"],
+            {"news_export_date": "2026-09-18", "prior_date": "2026-09-17"},
+        )
+    except ValueError as e:
+        assert "LEAK" in str(e)
+    else:
+        raise AssertionError("same-day news_export_date must abort")
+    got = prior_finviz_date(
+        "2026-09-18", ["2026-09-16", "2026-09-17"],
+        {"finviz_asof": "2026-09-17", "join_morning": "2026-09-18"},
+    )
     assert got == "2026-09-17"
-    assert got != iso
+
+
+def test_join_uses_asof_not_neighbor_or_same_day_gap():
+    """Features come from finviz_asof (T−1). T Gap / minute Performance stay out."""
+    with tempfile.TemporaryDirectory() as td:
+        open(os.path.join(td, "finviz_2026-09-16.csv"), "w", encoding="utf-8").write(
+            "Ticker,Sector,Relative Strength Index (14),News Title,"
+            "Gap,Performance (5 Minutes)\n"
+            "AAA,Tech,30.0,OLD TITLE,1.0,9.0\n"
+        )
+        open(os.path.join(td, "finviz_2026-09-17.csv"), "w", encoding="utf-8").write(
+            "Ticker,Sector,Relative Strength Index (14),News Title,"
+            "Gap,Performance (5 Minutes)\n"
+            "AAA,Tech,58.0,Acme raises full-year EPS guidance after beat,2.0,8.0\n"
+        )
+        open(os.path.join(td, "finviz_2026-09-18.csv"), "w", encoding="utf-8").write(
+            "Ticker,Open,Price,Gap,Change,Relative Volume,Performance (5 Minutes)\n"
+            "AAA,10.00,10.50,80.0,19.0,12.0,7.0\n"
+        )
+        snap, _ = load_finviz_index("2026-09-17", td)
+        assert "Gap" not in snap["AAA"]
+        assert snap["AAA"]["rsi"] == 58.0
+        panel = {"rows": [{
+            "date": "2026-09-18", "ticker": "AAA",
+            "sources": ["yday_gainer"], "open": 10, "close": 10.5,
+            "news_export_date": "2026-09-16", "prior_date": "2026-09-16",
+            "last_green": True, "rsi": 58.0, "fv_sma20": 2.0,
+            "ohlc_ret_5": 5.0, "ohlc_break_10": False,
+        }]}
+        oppset = {"2026-09-18": [{
+            "join_morning": "2026-09-18", "finviz_asof": "2026-09-17",
+            "ticker": "AAA", "any_opp": "1", "change_pct": "3.0",
+            "pweek": "5.0", "rvol": "1.2",
+        }]}
+        rows, _, _, _ = name_days_from_panel(
+            panel, export_dir=td, oppset_by_date=oppset,
+        )
+        assert len(rows) == 1
+        fl = rows[0]["flags"]
+        assert "Gap" not in fl
+        assert fl["raised_guidance"] is True  # 09-17 title, not 09-16
+        assert fl["mod_mom"] is True
 
 
 def test_name_days_abort_same_row_finviz(tmp_path=None):
@@ -415,6 +474,7 @@ if __name__ == "__main__":
     test_oppset_tminus1_not_same_day_gap()
     test_finviz_labels_use_price_as_close()
     test_prior_finviz_never_same_session()
+    test_join_uses_asof_not_neighbor_or_same_day_gap()
     test_name_days_abort_same_row_finviz()
     test_veto_keep_requires_bar_and_lift()
     test_ten_combos_declared()
