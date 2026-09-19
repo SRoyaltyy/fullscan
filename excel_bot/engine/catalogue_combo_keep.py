@@ -6,7 +6,8 @@ Spike is the 10 Cyrus catalogue combinations mapped onto Fullscan
 Clock-B fields (T−1 Finviz + panel prior tape / open-print fills).
 Not a remine of EXCEL_FACTOR_MINE letter grids.
 
-Candidate aisle = restored multi-src morning panel (not flatten-only).
+Candidate aisle = restored multi-src morning panel ∪ Theme Radar
+Clock-B gap+RelVol flagged oppset (not flatten-only hot4).
 KEEP bar (Cyrus): prove (time-split holdout) n ≥ 30 AND after-fee H
 win rate > 55%. Futubull FEE_RT=0.0015. Lift-only is never KEEP.
 Thin n with high WR is FAIL.
@@ -48,6 +49,10 @@ from j_winrate import FEE_CAVEAT, MIN_FIRES, WIN_BAR  # noqa: E402
 SCOREBOARD = os.path.join(REPO, "03_scoreboard")
 PANEL_PATH = os.path.join(REPO, "data", "factor_mine", "panel.json")
 EXPORT_DIR = os.path.join(REPO, "data", "exports")
+OPPSET_PATH = os.path.join(
+    REPO, "data", "theme_radar", "oppset_clock_b", "oppset_flagged.csv",
+)
+OPPSET_SOURCE = "theme-radar a782cc2b research/oppset_clock_b"
 BOARD_MD = os.path.join(SCOREBOARD, "CATALOGUE_COMBO_KEEP.md")
 BOARD_JSON = os.path.join(SCOREBOARD, "catalogue_combo_keep.json")
 
@@ -231,8 +236,90 @@ def day_has_aux(rows):
     return bool(srcs & CORE_AUX)
 
 
-def aisle_rows(panel):
-    """Multi-src morning panel. Flatten-only / starved days stay out."""
+def load_oppset_flagged(path=None):
+    """Theme Radar Clock-B flagged membership. Keyed by join_morning T.
+
+    CSV features are T−1 (finviz_asof). Same-day T Gap/RelVol are absent.
+    """
+    path = path or OPPSET_PATH
+    by = defaultdict(list)
+    if not path or not os.path.isfile(path):
+        return by
+    with open(path, newline="", encoding="utf-8", errors="replace") as f:
+        for rec in csv.DictReader(f):
+            iso = str(rec.get("join_morning") or "")[:10]
+            asof = str(rec.get("finviz_asof") or "")[:10]
+            t = _tick(rec.get("ticker"))
+            if not iso or not t or not is_session(iso):
+                continue
+            if asof and asof >= iso:
+                raise ValueError(
+                    f"LEAK abort: oppset finviz_asof {asof} is not T−1 for {iso}"
+                )
+            flag = str(rec.get("any_opp") or "").strip()
+            if flag not in ("1", "true", "True"):
+                continue
+            by[iso].append(rec)
+    return by
+
+
+def load_finviz_labels(iso, export_dir=None):
+    """Same-day Open/Close as *labels only*. Never passed to build_flags."""
+    export_dir = export_dir or EXPORT_DIR
+    path = os.path.join(export_dir, f"finviz_{iso}.csv")
+    out = {}
+    if not os.path.isfile(path):
+        return out
+    with open(path, newline="", encoding="utf-8", errors="replace") as f:
+        for rec in csv.DictReader(f):
+            t = _tick(rec.get("Ticker"))
+            o = _finite(rec.get("Open"))
+            # Fullscan Elite dumps stamp session close as Price, not Close.
+            c = _finite(rec.get("Close")) or _finite(rec.get("Price"))
+            if not t or not o or not c or o <= 0:
+                continue
+            out[t] = {"open": o, "close": c}
+    return out
+
+
+def synth_oppset_row(rec):
+    """Panel-shaped row from flagged CSV. T−1 tape only; no T Gap/RelVol."""
+    iso = str(rec.get("join_morning") or "")[:10]
+    asof = str(rec.get("finviz_asof") or "")[:10]
+    if asof and asof >= iso:
+        raise ValueError(f"LEAK abort: oppset finviz_asof {asof} same-row as {iso}")
+    chg = _finite(rec.get("change_pct"))
+    pw = _finite(rec.get("pweek"))
+    rvol = _finite(rec.get("rvol"))
+    return {
+        "date": iso,
+        "ticker": _tick(rec.get("ticker")),
+        "sources": ["oppset_clock_b"],
+        "news_export_date": asof or None,
+        "prior_date": asof or None,
+        "ohlc_ret_1": chg,
+        "ohlc_ret_5": pw,
+        "ohlc_rvol": rvol,
+        "fv_rvol": rvol,
+        "last_green": bool(chg is not None and chg > 0),
+        "last_red": bool(chg is not None and chg < 0),
+        "ohlc_break_10": False,
+        "ohlc_nr7": False,
+        "rsi_os": False,
+        "rsi_ob": False,
+        "erd_earn_react": False,
+        "boxes": {"sector": "missing"},
+        "open": None,
+        "close": None,
+    }
+
+
+def aisle_rows(panel, oppset_by_date=None):
+    """Multi-src morning panel ∪ Clock-B oppset. Flatten-only days stay out
+    unless the Theme Radar flagged set covers that morning.
+    """
+    if oppset_by_date is None:
+        oppset_by_date = load_oppset_flagged()
     by = defaultdict(list)
     for r in panel.get("rows") or []:
         iso = str(r.get("date") or "")[:10]
@@ -242,18 +329,44 @@ def aisle_rows(panel):
     out = []
     aisle_dates = []
     skipped = {}
-    for iso in sorted(by):
-        day = by[iso]
-        if not day_has_aux(day):
+    stats = {
+        "n_panel": 0, "n_oppset_only": 0, "n_overlap": 0,
+        "oppset_source": OPPSET_SOURCE if oppset_by_date else None,
+    }
+    days = sorted(set(by) | set(oppset_by_date or {}))
+    for iso in days:
+        day = list(by.get(iso) or [])
+        oset = list((oppset_by_date or {}).get(iso) or [])
+        if not day_has_aux(day) and not oset:
             skipped[iso] = {
                 "n": len(day),
                 "sources": sorted({s for r in day for s in (r.get("sources") or [])}),
-                "why": "flatten-only / no Finviz-OHLC aux",
+                "why": "flatten-only / no Finviz-OHLC aux / no Clock-B oppset",
             }
             continue
         aisle_dates.append(iso)
-        out.extend(day)
-    return out, aisle_dates, skipped
+        seen = set()
+        oset_ticks = {_tick(r.get("ticker")) for r in oset}
+        for r in day:
+            t = _tick(r.get("ticker"))
+            if not t:
+                continue
+            srcs = list(r.get("sources") or [])
+            if t in oset_ticks and "oppset_clock_b" not in srcs:
+                srcs = srcs + ["oppset_clock_b"]
+                r = dict(r, sources=srcs)
+                stats["n_overlap"] += 1
+            seen.add(t)
+            out.append(r)
+            stats["n_panel"] += 1
+        for rec in oset:
+            t = _tick(rec.get("ticker"))
+            if not t or t in seen:
+                continue
+            out.append(synth_oppset_row(rec))
+            seen.add(t)
+            stats["n_oppset_only"] += 1
+    return out, aisle_dates, skipped, stats
 
 
 def list_finviz_dates(export_dir=None):
@@ -512,12 +625,13 @@ def build_flags(row, fv=None, fv_prev=None, sector_med=None):
     return flags
 
 
-def name_days_from_panel(panel, export_dir=None):
+def name_days_from_panel(panel, export_dir=None, oppset_by_date=None):
     """Open-knowable aisle name-days. H/I are labels from same-day OHLC."""
-    raw, aisle_dates, skipped = aisle_rows(panel)
+    raw, aisle_dates, skipped, stats = aisle_rows(panel, oppset_by_date)
     fv_dates = list_finviz_dates(export_dir)
     cache = {}
     sec_cache = {}
+    label_cache = {}
 
     def _fv(iso):
         if not iso:
@@ -526,10 +640,23 @@ def name_days_from_panel(panel, export_dir=None):
             cache[iso], sec_cache[iso] = load_finviz_index(iso, export_dir)
         return cache[iso], sec_cache[iso]
 
+    def _labels(iso):
+        if iso not in label_cache:
+            label_cache[iso] = load_finviz_labels(iso, export_dir)
+        return label_cache[iso]
+
     rows = []
+    n_label_fv = 0
     for r in raw:
         iso = str(r.get("date") or "")[:10]
+        tk = _tick(r.get("ticker"))
         o, c = _finite(r.get("open")), _finite(r.get("close"))
+        if (not o or not c or o <= 0) and iso and tk:
+            lab = _labels(iso).get(tk) or {}
+            o = o or lab.get("open")
+            c = c or lab.get("close")
+            if lab.get("open") and lab.get("close"):
+                n_label_fv += 1
         if not o or not c or o <= 0:
             continue
         stamped = str(r.get("news_export_date") or r.get("prior_date") or "")[:10]
@@ -541,7 +668,6 @@ def name_days_from_panel(panel, export_dir=None):
         by, sec_med = _fv(t1)
         t2 = t2_finviz_date(t1, fv_dates)
         by2, _ = _fv(t2)
-        tk = _tick(r.get("ticker"))
         flags = build_flags(r, by.get(tk), by2.get(tk), sec_med)
         H = (c - o) / o
         rows.append({
@@ -553,7 +679,9 @@ def name_days_from_panel(panel, export_dir=None):
             "flags": flags,
             "sources": list(r.get("sources") or []),
         })
-    return rows, aisle_dates, skipped
+    stats["n_label_finviz_t"] = n_label_fv
+    stats["n_scored"] = len(rows)
+    return rows, aisle_dates, skipped, stats
 
 
 def combo_hits(rows, atoms, *, side="long"):
@@ -620,7 +748,11 @@ COMBOS = (
         "have": "news bad; sector RS vs T−1 Performance (Week); last_red; "
                 "Shortable",
         "need": "",
-        "note": "Shorts only when Finviz Shortable=Yes. Shorts pay FEE_RT.",
+        "note": "Shorts only when Finviz Shortable=Yes. Shorts pay FEE_RT. "
+                "Discovery / walk-forward are not KEEP. Oppset-only names "
+                "have no 10-bar breakout, so failed_recovery is last_red "
+                "and not break10 (break unknown). Borrow fee is not in "
+                "the 15 bp model.",
     },
     {
         "id": 5, "key": "c5_exhaustion_veto",
@@ -891,8 +1023,9 @@ def write_board(payload, path=None):
         f"Cyrus KEEP: **≥{MIN_FIRES} prove fires** and **after-fee H win rate "
         f"> {100 * WIN_BAR:.0f}%**. After-fee H = open-to-close minus "
         f"{FEE_RT * 10000:.0f} bp Futubull (`FEE_RT={FEE_RT}`). Shorts pay "
-        "the same 15 bp (they do not collect it). A fire is a multi-src "
-        "panel name-day where every Clock-B atom is true at the 09:30 open. "
+        "the same 15 bp (they do not collect it). A fire is an aisle "
+        "name-day (multi-src panel ∪ Clock-B oppset) where every Clock-B "
+        "atom is true at the 09:30 open. "
         "**Lift-only is never KEEP.** Thin n that prints >55% is FAIL. "
         "Discovery cannot KEEP. "
         f"{FEE_CAVEAT}",
@@ -905,19 +1038,30 @@ def write_board(payload, path=None):
         "- Features: T−1 Finviz + panel prior tape (Clock B). Open is the "
         "fill, not a feature. Same-day Gap / Change / RelVol / minute "
         "Performance* are never flags. H/I are labels only.",
-        f"- Split: TIME-SPLIT last {HOLD_FRAC:.0%} of multi-src aisle "
+        f"- Split: TIME-SPLIT last {HOLD_FRAC:.0%} of aisle "
         f"session dates (cutoff `{payload.get('cutoff')}`). Discovery "
         "feature date is strictly before cutoff.",
         f"- Aisle: restored multi-src morning panel "
-        f"(`lookback={payload.get('lookback')}`). Flatten-only / starved "
-        "days excluded.",
+        f"(`lookback={payload.get('lookback')}`) ∪ Theme Radar Clock-B "
+        f"flagged oppset (`{payload.get('oppset_source') or OPPSET_SOURCE}`). "
+        "Oppset gap/RelVol flags are T−1 membership only (VOL/CROWD aisle, "
+        "not direction atoms). Flatten-only / starved days stay out unless "
+        "the oppset covers that morning.",
         "- Live: `flatten_robust` not imported, not written.",
         "",
         "## Aisle",
         "",
         f"Panel `{payload.get('panel_to')}` n_rows={payload.get('panel_n')} "
-        f"lookback=`{payload.get('lookback')}`. Multi-src aisle days: "
-        f"{', '.join(payload.get('aisle_dates') or []) or '—'}.",
+        f"lookback=`{payload.get('lookback')}`. "
+        f"Oppset `{payload.get('oppset_source') or OPPSET_SOURCE}` "
+        f"flagged={payload.get('n_oppset_flagged', '—')}. "
+        f"Aisle mix: panel={payload.get('n_aisle_panel', '—')} "
+        f"overlap={payload.get('n_aisle_overlap', '—')} "
+        f"oppset_only={payload.get('n_aisle_oppset_only', '—')} "
+        f"scored={payload.get('n_rows')}. "
+        f"Oppset-only labels use same-day Finviz Open→Price "
+        f"(n={payload.get('n_label_finviz_t', 0)}); not features. "
+        f"Aisle days: {', '.join(payload.get('aisle_dates') or []) or '—'}.",
         "",
     ]
     skipped = payload.get("skipped_days") or {}
@@ -934,6 +1078,10 @@ def write_board(payload, path=None):
         f"Holdout baseline (every aisle name-day, long): n={base.get('n', 0)} "
         f"after-fee WR {_pct(base.get('wr'))} mean_net="
         f"{_mean_net(base)}.",
+        "",
+        "Panel-only prove (pre-oppset fold) was 1941 name-days, 0 KEEP; "
+        "best near-miss was `c6_resilience` n=236 WR 50.4%. The union is "
+        "the KEEP aisle. Oppset gap+RelVol flags are membership only.",
         "",
         "## Per-combo prove",
         "",
@@ -1040,6 +1188,7 @@ def write_board(payload, path=None):
         "`excel_clock_gate.py` / `CLOCK_MAP.md` · `j_winrate.py` "
         f"(`WIN_BAR`, `MIN_FIRES`, `FEE_RT={FEE_RT}`) · "
         "Theme Radar `research/catalogue/FINVIZ_CATALOGUE_MAP.md` · "
+        f"Clock-B oppset `{OPPSET_SOURCE}` · "
         "restored `data/factor_mine/panel.json` (PR #277 remine). "
         "Research only.",
         "",
@@ -1081,10 +1230,14 @@ def slim(r):
     return out
 
 
-def run(panel_path=None, export_dir=None, out_md=None, out_json=None):
+def run(panel_path=None, export_dir=None, oppset_path=None,
+        out_md=None, out_json=None):
     clocks, leak = leak_check()
     panel = load_panel(panel_path)
-    rows, aisle_dates, skipped = name_days_from_panel(panel, export_dir)
+    oppset = load_oppset_flagged(oppset_path or OPPSET_PATH)
+    rows, aisle_dates, skipped, aisle_stats = name_days_from_panel(
+        panel, export_dir, oppset,
+    )
     dates = sorted({r["date"] for r in rows})
     cutoff = cutoff_from_dates(dates, hold_frac=HOLD_FRAC, locked=None)
     disc, hold = split_rows(rows, cutoff)
@@ -1116,6 +1269,12 @@ def run(panel_path=None, export_dir=None, out_md=None, out_json=None):
         "aisle_dates": aisle_dates,
         "n_aisle_dates": len(aisle_dates),
         "skipped_days": skipped,
+        "oppset_source": (aisle_stats or {}).get("oppset_source") or OPPSET_SOURCE,
+        "n_oppset_flagged": sum(len(v) for v in oppset.values()),
+        "n_aisle_panel": (aisle_stats or {}).get("n_panel"),
+        "n_aisle_overlap": (aisle_stats or {}).get("n_overlap"),
+        "n_aisle_oppset_only": (aisle_stats or {}).get("n_oppset_only"),
+        "n_label_finviz_t": (aisle_stats or {}).get("n_label_finviz_t"),
         "n_tickers": len({r["ticker"] for r in rows}),
         "n_rows": len(rows),
         "n_disc": len(disc),
@@ -1154,11 +1313,13 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--panel", default="")
     ap.add_argument("--exports", default="")
+    ap.add_argument("--oppset", default="")
     ap.add_argument("--out-md", default=BOARD_MD)
     ap.add_argument("--out-json", default=BOARD_JSON)
     args = ap.parse_args()
     run(panel_path=args.panel or None,
         export_dir=args.exports or None,
+        oppset_path=args.oppset or None,
         out_md=args.out_md, out_json=args.out_json)
 
 

@@ -14,8 +14,9 @@ from excel_clock_gate import (  # noqa: E402
 from catalogue_combo_keep import (  # noqa: E402
     COMBOS, FEATURE_KEYS, FORBIDDEN_FEATURE_FIELDS,
     aisle_rows, assert_atoms_legal, assert_flags_legal, build_flags,
-    combo_hits, headline_from, leak_check, name_days_from_panel,
-    prior_finviz_date, score_veto, write_board,
+    combo_hits, headline_from, leak_check, load_finviz_labels,
+    load_oppset_flagged, name_days_from_panel, prior_finviz_date, score_veto,
+    synth_oppset_row, write_board,
 )
 from excel_factor_mine import keep_verdict, score_hits, split_rows, time_slot  # noqa: E402
 from join_post_813 import FEE_RT  # noqa: E402
@@ -169,10 +170,93 @@ def test_aisle_drops_flatten_only_days():
         {"date": "2026-08-27", "ticker": "CCC",
          "sources": ["flatten", "mover_buy"], "open": 10, "close": 11},
     ]}
-    rows, dates, skipped = aisle_rows(panel)
+    rows, dates, skipped, stats = aisle_rows(panel, oppset_by_date={})
     assert dates == ["2026-08-14"]
     assert "2026-08-13" in skipped and "2026-08-27" in skipped
     assert [r["ticker"] for r in rows] == ["BBB"]
+    assert stats["n_oppset_only"] == 0
+
+
+def test_aisle_unions_oppset_not_flatten_only():
+    """Oppset ∪ multi-src panel. Flatten-only day without oppset stays out."""
+    panel = {"rows": [
+        {"date": "2026-08-13", "ticker": "HOT4", "sources": ["flatten"],
+         "open": 10, "close": 11},
+        {"date": "2026-08-14", "ticker": "BBB",
+         "sources": ["yday_gainer"], "open": 10, "close": 11},
+    ]}
+    oppset = {
+        "2026-08-14": [{
+            "join_morning": "2026-08-14", "finviz_asof": "2026-08-13",
+            "ticker": "NEW", "any_opp": "1", "change_pct": "6.0",
+            "pweek": "4.0", "rvol": "2.4",
+        }],
+    }
+    rows, dates, skipped, stats = aisle_rows(panel, oppset_by_date=oppset)
+    assert dates == ["2026-08-14"]
+    assert "2026-08-13" in skipped
+    ticks = {r["ticker"] for r in rows}
+    assert ticks == {"BBB", "NEW"}
+    assert stats["n_oppset_only"] == 1
+    new = next(r for r in rows if r["ticker"] == "NEW")
+    assert new["sources"] == ["oppset_clock_b"]
+    assert new["news_export_date"] == "2026-08-13"
+    assert "yday_gainer" in next(r for r in rows if r["ticker"] == "BBB")["sources"]
+
+
+def test_oppset_asof_must_be_tminus1():
+    try:
+        synth_oppset_row({
+            "join_morning": "2026-09-18", "finviz_asof": "2026-09-18",
+            "ticker": "LEAK", "any_opp": "1",
+        })
+    except ValueError as e:
+        assert "LEAK" in str(e)
+    else:
+        raise AssertionError("same-row oppset asof must abort")
+    with tempfile.TemporaryDirectory() as td:
+        path = os.path.join(td, "oppset_flagged.csv")
+        open(path, "w", encoding="utf-8").write(
+            "join_morning,finviz_asof,ticker,any_opp\n"
+            "2026-09-18,2026-09-18,LEAK,1\n"
+        )
+        try:
+            load_oppset_flagged(path)
+        except ValueError as e:
+            assert "LEAK" in str(e)
+        else:
+            raise AssertionError("flagged CSV same-row asof must abort")
+
+
+def test_oppset_tminus1_not_same_day_gap():
+    """Oppset change/gap/rvol are T−1 aisle context, not same-day flags."""
+    rec = {
+        "join_morning": "2026-09-18", "finviz_asof": "2026-09-17",
+        "ticker": "AAA", "any_opp": "1", "change_pct": "8.0",
+        "pweek": "5.0", "rvol": "3.2", "gap_pct": "4.0",
+    }
+    row = synth_oppset_row(rec)
+    assert row["ohlc_ret_1"] == 8.0
+    assert row["last_green"] is True
+    flags = build_flags(row, {
+        "sector": "Tech", "perf_week": 5.0, "sma20": 2.0, "rsi": 55.0,
+        "rvol": 3.2, "shortable": True, "news_title": "",
+    }, {}, {"Tech": -1.0})
+    assert "Gap" not in flags and "RelVol" not in flags and "Change" not in flags
+    assert flags["mod_mom"] is True  # pweek 5 in 2–15, rsi 55
+
+
+def test_finviz_labels_use_price_as_close():
+    """Elite dumps have Open + Price, not Close. Labels only."""
+    with tempfile.TemporaryDirectory() as td:
+        open(os.path.join(td, "finviz_2026-09-18.csv"), "w", encoding="utf-8").write(
+            "Ticker,Open,Price,Gap,Change,Relative Volume\n"
+            "AAA,10.00,10.20,8.0,19.0,12.0\n"
+        )
+        lab = load_finviz_labels("2026-09-18", td)
+        assert lab["AAA"]["open"] == 10.0
+        assert lab["AAA"]["close"] == 10.20
+        assert "Gap" not in lab["AAA"]
 
 
 def test_prior_finviz_never_same_session():
@@ -208,7 +292,7 @@ def test_name_days_abort_same_row_finviz(tmp_path=None):
         panel["rows"][0]["news_export_date"] = "2026-09-18"
         panel["rows"][0]["prior_date"] = "2026-09-18"
         try:
-            name_days_from_panel(panel, export_dir=td)
+            name_days_from_panel(panel, export_dir=td, oppset_by_date={})
         except ValueError as e:
             assert "LEAK" in str(e)
         else:
@@ -326,6 +410,10 @@ if __name__ == "__main__":
     test_time_split_fail_closed()
     test_combo_and_is_intersection()
     test_aisle_drops_flatten_only_days()
+    test_aisle_unions_oppset_not_flatten_only()
+    test_oppset_asof_must_be_tminus1()
+    test_oppset_tminus1_not_same_day_gap()
+    test_finviz_labels_use_price_as_close()
     test_prior_finviz_never_same_session()
     test_name_days_abort_same_row_finviz()
     test_veto_keep_requires_bar_and_lift()

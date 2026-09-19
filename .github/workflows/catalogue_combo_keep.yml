@@ -15,6 +15,7 @@ on:
       - ".github/workflows/catalogue_combo_keep.yml"
       - "03_scoreboard/CATALOGUE_COMBO_KEEP.md"
       - "03_scoreboard/catalogue_combo_keep.json"
+      - "data/theme_radar/oppset_clock_b/**"
   workflow_dispatch:
 
 permissions:

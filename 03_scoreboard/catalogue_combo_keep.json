@@ -154,7 +154,7 @@
       "sources": [
         "flatten"
       ],
-      "why": "flatten-only / no Finviz-OHLC aux"
+      "why": "flatten-only / no Finviz-OHLC aux / no Clock-B oppset"
     },
     "2026-08-27": {
       "n": 19,
@@ -162,37 +162,38 @@
         "flatten",
         "mover_buy"
       ],
-      "why": "flatten-only / no Finviz-OHLC aux"
+      "why": "flatten-only / no Finviz-OHLC aux / no Clock-B oppset"
     }
   },
-  "n_tickers": 965,
-  "n_rows": 1941,
-  "n_disc": 1464,
-  "n_hold": 477,
-  "n_keep": 0,
+  "oppset_source": "theme-radar a782cc2b research/oppset_clock_b",
+  "n_oppset_flagged": 7370,
+  "n_aisle_panel": 1941,
+  "n_aisle_overlap": 889,
+  "n_aisle_oppset_only": 6481,
+  "n_label_finviz_t": 6206,
+  "n_tickers": 1900,
+  "n_rows": 8147,
+  "n_disc": 5595,
+  "n_hold": 2552,
+  "n_keep": 1,
   "n_need": 2,
-  "n_fail": 8,
+  "n_fail": 7,
   "headline": {
-    "verdict": "FAIL",
-    "n_keep": 0,
-    "text": "FAIL. 0 of 10 catalogue combos cleared the Cyrus KEEP bar on holdout (cutoff 2026-09-10). 2 NEED-source skipped, 8 FAIL. Best near-miss: `c6_resilience` prove n=236 after-fee WR 50.4%. Aisle baseline prove n=477 after-fee WR 48.6%. Lift-only is not KEEP.",
-    "best": {
-      "key": "c6_resilience",
-      "n": 236,
-      "wr": 0.5042372881355932
-    }
+    "verdict": "KEEP",
+    "n_keep": 1,
+    "text": "KEEP. 1 of 10 cleared \u226530 prove fires and >55% after-fee H (cutoff 2026-09-10): `c4_downside` n=40, after-fee WR 75.0% (>55%)."
   },
   "baseline_disc": {
-    "n": 1464,
-    "wr": 0.4453551912568306,
-    "mean_net": -0.0037989724183771943
+    "n": 5595,
+    "wr": 0.40250223413762287,
+    "mean_net": -0.004362918959653231
   },
   "baseline_hold": {
-    "n": 477,
-    "wr": 0.4863731656184486,
-    "mean_net": 0.0016985691429117205,
+    "n": 2552,
+    "wr": 0.3867554858934169,
+    "mean_net": -0.005093564794749547,
     "verdict": "FAIL",
-    "why": "n=477, after-fee WR 48.6% \u2264 55%"
+    "why": "n=2552, after-fee WR 38.7% \u2264 55%"
   },
   "kronos_artifacts": [],
   "borrow_artifacts": [],
@@ -273,47 +274,47 @@
       "need": "",
       "note": "Headline tone is T\u22121 or morning packet. Mid-window news out.",
       "disc": {
-        "n": 66,
-        "n_pos": 39,
-        "wr": 0.5909090909090909,
-        "mean_net": 0.006706746627445675,
-        "verdict": "KEEP",
-        "why": "n=66, after-fee WR 59.1% (>55%)"
+        "n": 258,
+        "n_pos": 109,
+        "wr": 0.42248062015503873,
+        "mean_net": -0.0027618179211029875,
+        "verdict": "FAIL",
+        "why": "n=258, after-fee WR 42.2% \u2264 55%"
       },
       "hold": {
-        "n": 21,
-        "n_pos": 8,
-        "wr": 0.38095238095238093,
-        "mean_net": -0.003716731553775114,
+        "n": 138,
+        "n_pos": 52,
+        "wr": 0.37681159420289856,
+        "mean_net": -0.005906791167518317,
         "verdict": "FAIL",
-        "why": "thin n=21 (bar \u226530), after-fee WR 38.1%"
+        "why": "n=138, after-fee WR 37.7% \u2264 55%"
       },
       "verdict": "FAIL",
-      "why": "thin n=21 (bar \u226530), after-fee WR 38.1%",
+      "why": "n=138, after-fee WR 37.7% \u2264 55%",
       "walk": [
         {
           "lo": "2026-08-14",
           "hi": "2026-08-21",
-          "n": 22,
-          "wr": 0.6818181818181818,
+          "n": 102,
+          "wr": 0.47058823529411764,
           "verdict": "FAIL"
         },
         {
           "lo": "2026-08-24",
           "hi": "2026-08-31",
-          "n": 15,
-          "wr": 0.2,
+          "n": 54,
+          "wr": 0.35185185185185186,
           "verdict": "FAIL"
         },
         {
           "lo": "2026-09-01",
           "hi": "2026-09-09",
-          "n": 29,
-          "wr": 0.7241379310344828,
+          "n": 102,
+          "wr": 0.4117647058823529,
           "verdict": "FAIL"
         }
       ],
-      "walk_folds_wr_gt_50": 2,
+      "walk_folds_wr_gt_50": 0,
       "n_walk_folds": 3
     },
     {
@@ -392,49 +393,49 @@
       "status": "have",
       "have": "news bad; sector RS vs T\u22121 Performance (Week); last_red; Shortable",
       "need": "",
-      "note": "Shorts only when Finviz Shortable=Yes. Shorts pay FEE_RT.",
+      "note": "Shorts only when Finviz Shortable=Yes. Shorts pay FEE_RT. Discovery / walk-forward are not KEEP. Oppset-only names have no 10-bar breakout, so failed_recovery is last_red and not break10 (break unknown). Borrow fee is not in the 15 bp model.",
       "disc": {
-        "n": 11,
-        "n_pos": 6,
-        "wr": 0.5454545454545454,
-        "mean_net": 0.006718337354104873,
+        "n": 69,
+        "n_pos": 37,
+        "wr": 0.5362318840579711,
+        "mean_net": 0.0056110876909330415,
         "verdict": "FAIL",
-        "why": "thin n=11 (bar \u226530), after-fee WR 54.5%"
+        "why": "n=69, after-fee WR 53.6% \u2264 55%"
       },
       "hold": {
-        "n": 3,
-        "n_pos": 3,
-        "wr": 1.0,
-        "mean_net": 0.01965981375722569,
-        "verdict": "FAIL",
-        "why": "thin n=3 (bar \u226530), after-fee WR 100.0%"
+        "n": 40,
+        "n_pos": 30,
+        "wr": 0.75,
+        "mean_net": 0.010692267530942653,
+        "verdict": "KEEP",
+        "why": "n=40, after-fee WR 75.0% (>55%)"
       },
-      "verdict": "FAIL",
-      "why": "thin n=3 (bar \u226530), after-fee WR 100.0%",
+      "verdict": "KEEP",
+      "why": "n=40, after-fee WR 75.0% (>55%)",
       "walk": [
         {
           "lo": "2026-08-14",
           "hi": "2026-08-21",
-          "n": 7,
-          "wr": 0.5714285714285714,
+          "n": 34,
+          "wr": 0.5,
           "verdict": "FAIL"
         },
         {
           "lo": "2026-08-24",
           "hi": "2026-08-31",
-          "n": 1,
-          "wr": 1.0,
+          "n": 14,
+          "wr": 0.35714285714285715,
           "verdict": "FAIL"
         },
         {
           "lo": "2026-09-01",
           "hi": "2026-09-09",
-          "n": 3,
-          "wr": 0.3333333333333333,
+          "n": 21,
+          "wr": 0.7142857142857143,
           "verdict": "FAIL"
         }
       ],
-      "walk_folds_wr_gt_50": 2,
+      "walk_folds_wr_gt_50": 1,
       "n_walk_folds": 3
     },
     {
@@ -454,68 +455,68 @@
       "need": "",
       "note": "Diminishing progress is VOL/CROWD \u2014 not a direction KEEP. Veto KEEP only if complement clears the fee bar and beats baseline.",
       "disc": {
-        "n": 109,
-        "n_pos": 61,
-        "wr": 0.5596330275229358,
-        "mean_net": 0.006142068409459253,
-        "verdict": "KEEP",
-        "why": "n=109, after-fee WR 56.0% (>55%)"
+        "n": 380,
+        "n_pos": 167,
+        "wr": 0.4394736842105263,
+        "mean_net": -0.0034435787754223957,
+        "verdict": "FAIL",
+        "why": "n=380, after-fee WR 43.9% \u2264 55%"
       },
       "hold": {
-        "n": 16,
-        "n_pos": 11,
-        "wr": 0.6875,
-        "mean_net": 0.05467829492954175,
+        "n": 87,
+        "n_pos": 41,
+        "wr": 0.47126436781609193,
+        "mean_net": 0.009062204740470167,
         "verdict": "FAIL",
-        "why": "thin n=16 (bar \u226530), after-fee WR 68.8%"
+        "why": "n=87, after-fee WR 47.1% \u2264 55%"
       },
       "verdict": "FAIL",
-      "why": "n=461, after-fee WR 47.9% \u2264 55%",
+      "why": "n=2465, after-fee WR 38.4% \u2264 55%",
       "walk": [
         {
           "lo": "2026-08-14",
           "hi": "2026-08-21",
-          "n": 27,
-          "wr": 0.5555555555555556,
+          "n": 209,
+          "wr": 0.44976076555023925,
           "verdict": "FAIL"
         },
         {
           "lo": "2026-08-24",
           "hi": "2026-08-31",
-          "n": 43,
-          "wr": 0.6046511627906976,
-          "verdict": "KEEP"
+          "n": 88,
+          "wr": 0.5454545454545454,
+          "verdict": "FAIL"
         },
         {
           "lo": "2026-09-01",
           "hi": "2026-09-09",
-          "n": 39,
-          "wr": 0.5128205128205128,
+          "n": 83,
+          "wr": 0.30120481927710846,
           "verdict": "FAIL"
         }
       ],
-      "walk_folds_wr_gt_50": 3,
+      "walk_folds_wr_gt_50": 1,
       "n_walk_folds": 3,
       "veto": {
         "flagged": {
-          "n": 16,
-          "n_pos": 11,
-          "wr": 0.6875,
-          "mean_net": 0.05467829492954175,
+          "n": 87,
+          "n_pos": 41,
+          "wr": 0.47126436781609193,
+          "mean_net": 0.009062204740470167,
           "verdict": "FAIL",
-          "why": "thin n=16 (bar \u226530), after-fee WR 68.8%"
+          "why": "n=87, after-fee WR 47.1% \u2264 55%"
         },
         "complement": {
-          "n": 461,
-          "n_pos": 221,
-          "wr": 0.4793926247288503,
-          "mean_net": -0.00014020658937912646,
+          "n": 2465,
+          "n_pos": 946,
+          "wr": 0.38377281947261666,
+          "mean_net": -0.005593180190110242,
           "verdict": "FAIL",
-          "why": "n=461, after-fee WR 47.9% \u2264 55%"
+          "why": "n=2465, after-fee WR 38.4% \u2264 55%"
         },
         "lifts_baseline": false,
         "verdict": "FAIL",
-        "why": "n=461, after-fee WR 47.9% \u2264 55%"
+        "why": "n=2465, after-fee WR 38.4% \u2264 55%"
       }
     },
     {
@@ -535,47 +536,47 @@
       "need": "true peer basket (sector tag is the crude CALC)",
       "note": "Peer map beyond Sector tag is NEED; sector median is used.",
       "disc": {
-        "n": 412,
-        "n_pos": 161,
-        "wr": 0.3907766990291262,
-        "mean_net": -0.009504125537640656,
+        "n": 765,
+        "n_pos": 350,
+        "wr": 0.45751633986928103,
+        "mean_net": -0.0021101395660583053,
         "verdict": "FAIL",
-        "why": "n=412, after-fee WR 39.1% \u2264 55%"
+        "why": "n=765, after-fee WR 45.8% \u2264 55%"
       },
       "hold": {
-        "n": 236,
-        "n_pos": 119,
-        "wr": 0.5042372881355932,
-        "mean_net": 0.00290439170499021,
+        "n": 505,
+        "n_pos": 231,
+        "wr": 0.45742574257425744,
+        "mean_net": -0.0012986188286550364,
         "verdict": "FAIL",
-        "why": "n=236, after-fee WR 50.4% \u2264 55%"
+        "why": "n=505, after-fee WR 45.7% \u2264 55%"
       },
       "verdict": "FAIL",
-      "why": "n=236, after-fee WR 50.4% \u2264 55%",
+      "why": "n=505, after-fee WR 45.7% \u2264 55%",
       "walk": [
         {
           "lo": "2026-08-14",
           "hi": "2026-08-21",
-          "n": 113,
-          "wr": 0.39823008849557523,
+          "n": 256,
+          "wr": 0.44140625,
           "verdict": "FAIL"
         },
         {
           "lo": "2026-08-24",
           "hi": "2026-08-31",
-          "n": 93,
-          "wr": 0.2903225806451613,
+          "n": 146,
+          "wr": 0.3698630136986301,
           "verdict": "FAIL"
         },
         {
           "lo": "2026-09-01",
           "hi": "2026-09-09",
-          "n": 206,
-          "wr": 0.4320388349514563,
+          "n": 363,
+          "wr": 0.5041322314049587,
           "verdict": "FAIL"
         }
       ],
-      "walk_folds_wr_gt_50": 0,
+      "walk_folds_wr_gt_50": 1,
       "n_walk_folds": 3
     },
     {
@@ -595,12 +596,12 @@
       "need": "",
       "note": "KEEP bar is still same-day after-fee H (open-knowable entry).",
       "disc": {
-        "n": 1,
-        "n_pos": 1,
-        "wr": 1.0,
-        "mean_net": 0.028114325068870502,
+        "n": 8,
+        "n_pos": 2,
+        "wr": 0.25,
+        "mean_net": -0.015244812804034674,
         "verdict": "FAIL",
-        "why": "thin n=1 (bar \u226530), after-fee WR 100.0%"
+        "why": "thin n=8 (bar \u226530), after-fee WR 25.0%"
       },
       "hold": {
         "n": 0,
@@ -616,8 +617,8 @@
         {
           "lo": "2026-08-14",
           "hi": "2026-08-21",
-          "n": 0,
-          "wr": null,
+          "n": 7,
+          "wr": 0.14285714285714285,
           "verdict": "FAIL"
         },
         {
