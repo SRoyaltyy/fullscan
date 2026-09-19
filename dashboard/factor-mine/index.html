@@ -2258,19 +2258,87 @@ function renderCashStart(){
   if(!el) return;
   const sp=startPath();
   if(!sp){ el.innerHTML='<div class="mut">No cash-start path for this sleeve.</div>'; return; }
-  const buys=sp.buys||[];
-  const skips=sp.skips||[];
-  const startDate=(sp&&sp.start)||'';
+  const morn=morningFills(sp);
+  const buys=morn.lots||[];
+  const skips=morn.skips||[];
+  const startDate=sp.start||'';
+  const leftover=morn.cash;
   const pills=buys.length
     ? buys.map(b=>{
-        const earn=earnFor(startDate, b.ticker);
-        return `<span class="pill pos"><b>${esc(b.ticker)}</b> ×${b.shares} @ ${b.price==null?'—':('$'+(+b.price).toFixed(2))}${earn?(' · '+earn):''} · ${esc(b.reason||'')}</span>`;
+        const tick=b.ticker||b;
+        const earn=earnFor(startDate, tick);
+        const sh=b.shares!=null?(' ×'+b.shares):'';
+        const px=b.price==null?'':(' @ $'+(+b.price).toFixed(2));
+        const why=b.reason?(' · '+esc(b.reason)):'';
+        return `<span class="pill pos"><b>${esc(tick)}</b>${sh}${px}${earn?(' · '+earn):''}${why}</span>`;
       }).join('')
-    : `<span class="pill mut">${sp.hard_red?'hard-red S≤−3 — bought nobody, cash still $10k':'no fill this morning (list empty, leftover too small, or live gate HOLD)'}</span>`;
+    : `<span class="pill mut">${emptyFillWhy(sp, morn)}</span>`;
   const skipHtml=skips.length?`<div class="pills" style="margin-top:6px">${skips.map(k=>`<span class="pill">${esc(k.ticker||'')} · ${esc(k.kind)} · ${esc(k.reason||'')}</span>`).join('')}</div>`:'';
+  const others=buys.length?'':otherMorningFills(startDate, pickedName());
   el.innerHTML =
-    `<div class="pill">S ${sp.s==null?'—':num(sp.s)} · leftover after open ${money(sp.cash)} · book to end <span class="${cls(sp.return_pct)}">${num(sp.return_pct)}%</span> · $ days ${sp.n_up_days||0}/${sp.n_sessions||0}</div>
-     <div class="pills" style="margin-top:6px">${pills}</div>${skipHtml}`;
+    `<div class="pill">S ${sp.s==null?'—':num(sp.s)} · leftover after open ${money(leftover)} · book to end <span class="${cls(morn.ret!=null?morn.ret:sp.return_pct)}">${num(morn.ret!=null?morn.ret:sp.return_pct)}%</span> · $ days ${sp.n_up_days||0}/${sp.n_sessions||0}</div>
+     <div class="pills" style="margin-top:6px">${pills}</div>${skipHtml}${others}`;
+}
+function morningFills(sp){
+  const date=sp&&sp.start;
+  const book=(!isCombo(pickedName()) && simBook()) || null;
+  const day=book && (book.daily||[]).find(d=>d.date===date);
+  const trades=(book&&book.trades||[]).filter(t=>t.date===date && (t.side==='BUY'||t.side==='SHORT') && t.ticker);
+  if(trades.length){
+    return {
+      lots: trades,
+      cash: day?day.cash:book.cash,
+      skips: (book.skips||[]).filter(k=>k.date===date),
+      nLook: day&&day.n,
+      hard: !!(day&&day.hard_red),
+      ret: book.total_ret_pct
+    };
+  }
+  if((sp.buys||[]).length){
+    return { lots: sp.buys, cash: sp.cash, skips: sp.skips||[], nLook: null, hard: !!sp.hard_red, ret: sp.return_pct };
+  }
+  const d0=((sp.days||[])[0])||{};
+  const tick=(sp.bought&&sp.bought.length)?sp.bought:(d0.bought||[]);
+  return {
+    lots: (tick||[]).map(t=>(typeof t==='string'?{ticker:t}:t)),
+    cash: sp.cash!=null?sp.cash:d0.cash,
+    skips: sp.skips||[],
+    nLook: d0.n,
+    hard: !!(sp.hard_red||d0.hard_red),
+    ret: sp.return_pct
+  };
+}
+function emptyFillWhy(sp, morn){
+  if(morn.hard || sp.hard_red) return 'hard-red S≤−3 — bought nobody, cash still $10k';
+  const name=pickedName()||'';
+  if(/live[_-]?gate|flatten_live/i.test(name)) return 'live-gate HOLD — this recipe only prints names when flatten fires new lots';
+  if(morn.nLook===0) return 'this sleeve’s 09:30 list was empty (filters matched nobody)';
+  const cashSkip=(morn.skips||[]).filter(k=>k.kind==='cash');
+  if(cashSkip.length && !(morn.lots||[]).length) return 'leftover too small to buy 1 share';
+  return 'no fill this morning (this sleeve’s list was empty)';
+}
+function otherMorningFills(date, skipName){
+  const hits=[];
+  const seen=new Set();
+  const add=(nm, names)=>{
+    if(!nm || nm===skipName || !names || !names.length) return;
+    const key=nm+'|'+names.join(',');
+    if(seen.has(key)) return;
+    seen.add(key);
+    hits.push({nm, names});
+  };
+  Object.entries(D.starts||{}).forEach(([nm, paths])=>{
+    const p=(paths||[]).find(x=>x.start===date);
+    if(!p) return;
+    add(nm, p.bought || ((p.days||[])[0]||{}).bought || (p.buys||[]).map(b=>b.ticker).filter(Boolean));
+  });
+  Object.entries(D.daily||{}).forEach(([nm, days])=>{
+    const d=(days||[]).find(x=>x.date===date);
+    if(d) add(nm, d.bought||[]);
+  });
+  if(!hits.length) return '';
+  const top=hits.slice(0,6).map(h=>`<div class="pill pos"><b>${esc(h.nm)}</b> · ${esc(h.names.join(' · '))}</div>`).join('');
+  return `<div class="mut" style="margin-top:8px">Same morning, other workable sleeves did fill:</div><div class="pills" style="margin-top:6px">${top}</div>`;
 }
 function renderProbe(){
   const el=document.getElementById('probeOut');
