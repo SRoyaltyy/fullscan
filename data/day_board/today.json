@@ -1,6 +1,6 @@
 {
   "date": "2026-09-18",
-  "generated_at": "2026-09-18T18:47:25.298016-04:00",
+  "generated_at": "2026-09-19T01:46:40.836991-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -169,38 +169,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "status",
-      "title": "Pre-open status packet",
-      "date": "2026-09-18",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-18T05:04:55.941879-04:00",
-      "files": [
-        {
-          "path": "01_daily/2026-09-18_preopen_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 7264,
-          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
-        },
-        {
-          "path": "01_daily/2026-09-18_preopen_status.json",
-          "ok": true,
-          "reason": "",
-          "size": 8098,
-          "preview": "keys: date, generated_at, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs, qc"
-        },
-        {
-          "path": "01_daily/2026-09-18_preopen_status.md",
-          "ok": true,
-          "reason": "",
-          "size": 578,
-          "preview": "# Pre-open ALL status \u2014 2026-09-18\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 124\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
-        }
-      ],
-      "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs, qc \u00b7 # Pre-open ALL status \u2014 2026-09-18\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 124\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
-    },
     {
       "key": "sector_one",
       "title": "Sector predict Utilities (11/11)",
@@ -599,6 +567,45 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-18\n**Generated:** 2026-09-18T16:34:48.382211-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks ended mixed as tech gains countered a 5% 10-year yield and $7 trillion options expiration amid Middle East-driven oil concerns\n**Prior close:** SPX +0.08%  Nasdaq +0.20%  Dow -0.10%\n**SPX:** +0.08%  **Nasdaq:** +0.20%  **Dow:** -0.10%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** AVGO, XENE, COIN, NFLX, WFC, AZO, CTAS, GIS\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** AZO, CTAS, GIS\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-21\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-18",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-19T01:46:40.483743-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-18_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 88555,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-18_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11958,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-18\n_Generated 2026-09-19T01:46:40.123481-04:00 \u00b7 export=data/exports/finviz_2026-09-18.csv \u00b7 ticker digests=5888 \u00b7 high-signal=2344_"
+        },
+        {
+          "path": "data/exports/finviz_2026-09-18.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11434850,
+          "preview": "11655 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11434850,
+          "preview": "11655 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-18\n_Generated 2026-09-19T01:46:40.123481-04:00 \u00b7 export=data/exports/finviz_2026-09-18.csv \u00b7 ticker digests=5888 \u00b7 high-signal=2344_ \u00b7 11655 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 11655 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
