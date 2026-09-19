@@ -66,6 +66,13 @@ python -m src.factor_mine --from-date 2026-08-13 --write --land-closed --rebuild
 GitHub Actions equivalent: workflow `factor_mine.yml` dispatch with
 `land_closed=true`. Add `rebuild_panel=true` only for the nuclear path.
 
+Theme Radar Clock-B oppset remine (research; top-30 T−1 flagged names as
+a panel source) is **off** unless you dispatch `oppset_union=true`. That
+sets `FULLSCAN_OPPSET_UNION=1` and runs `--pull-oppset` first. Recipe:
+`rebuild_panel=true` + `oppset_union=true` + `from_date=2026-08-13`.
+Leave it false on scheduled / `workflow_run` land-closed so those days
+do not grow by 242–451 names. See [CLOCK_B_TELLS.md](CLOCK_B_TELLS.md).
+
 ### Verify
 
 ```bash

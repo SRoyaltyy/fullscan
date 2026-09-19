@@ -192,6 +192,18 @@ Default mode is **stamp + rank/filter** on the existing union so
 FULLSCAN_OPPSET_UNION=1 python -m src.factor_mine --rebuild-panel --write
 ```
 
+GitHub Actions equivalent (`factor_mine.yml` workflow_dispatch). Default
+`oppset_union` is **false** so scheduled / `workflow_run` land-closed
+stays stamp-only:
+
+- `rebuild_panel=true`
+- `oppset_union=true` (sets `FULLSCAN_OPPSET_UNION=1` and runs `--pull-oppset`)
+- `from_date=2026-08-13`
+
+That caches `data/factor_mine/oppset_clock_b/oppset_flagged.csv`
+(gitignored) and rebuilds the panel with top-30 T−1 flagged names as an
+`oppset` source. Do not enable on nightly land-closed.
+
 Recipes (research; not KEEP):
 
 | Recipe | What it does |
