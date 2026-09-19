@@ -1690,31 +1690,86 @@ def _attach_row(date: str, ticker: str, sources: list[str], src_rank: int,
     return rec
 
 
+def panel_lookback_calendar(from_date: str,
+                            to_date: str | None = None) -> list[str]:
+    """Sleeve calendar through ``to_date``, including days before ``from_date``.
+
+    ``build_panel(D, D)`` / ``extend_pack_through`` still need D−1 so
+    ``prior_session``, yday_gainer, probable, ohlc_hot, and earn_react
+    are not empty. The emit window stays ``[from_date, end]``.
+    """
+    payload = sm.load_payload()
+    books = sm.list_books()
+    end = live_panel_end(from_date, to_date)
+    return [d for d in sm.session_calendar(payload, books)
+            if not end or d <= end]
+
+
+def panel_emit_dates(full_cal: list[str], from_date: str,
+                     to_date: str | None = None) -> list[str]:
+    """Dates that receive new rows. Lookback days stay off the emit list."""
+    end = to_date or (full_cal[-1] if full_cal else from_date)
+    return [d for d in full_cal if d >= from_date and (not end or d <= end)]
+
+
+def merge_panel_days(base: dict, extra: dict) -> dict:
+    """Replace ``extra``'s dates in ``base``. Other days stay intact."""
+    extra_dates = set(extra.get("session_dates") or [])
+    rows = [r for r in (base.get("rows") or [])
+            if r.get("date") not in extra_dates]
+    rows.extend(extra.get("rows") or [])
+    rows.sort(key=lambda r: (
+        r.get("date") or "", int(r.get("src_rank") or 0), r.get("ticker") or "",
+    ))
+    dates = list(base.get("session_dates") or [])
+    for d in extra.get("session_dates") or []:
+        if d and d not in dates:
+            dates.append(d)
+    dates.sort()
+    by_date = dict(base.get("by_date") or {})
+    by_date.update(extra.get("by_date") or {})
+    out = dict(base)
+    out.update({
+        "from_date": out.get("from_date") or extra.get("from_date") or START,
+        "to_date": dates[-1] if dates else out.get("to_date"),
+        "session_dates": dates,
+        "n_sessions": len(dates),
+        "n_rows": len(rows),
+        "rows": rows,
+        "by_date": by_date,
+    })
+    return out
+
+
 def build_panel(from_date: str = START, to_date: str | None = None) -> dict:
     """Leak-free candidate rows for every *closed* session in the window.
 
     An empty ``to_date`` used to walk the whole stock-book calendar,
     including today's pre-open stub. Member books then stopped at
     ``last_closed`` and combo split crashed on the extra day.
+
+    A one-day window still looks back on the full sleeve calendar so
+    yesterday's liquid lists are inputs, not empty.
     """
     _SCAN_CACHE.clear()
     payload = sm.load_payload()
     books = sm.list_books()
     end = live_panel_end(from_date, to_date)
-    cal = [d for d in sm.session_calendar(payload, books)
-           if d >= from_date and (not end or d <= end)]
+    full_cal = panel_lookback_calendar(from_date, to_date)
+    cal = panel_emit_dates(full_cal, from_date, end)
     end = end or (cal[-1] if cal else from_date)
-    sess_map, _all_sessions = _session_map(from_date, end)
+    map_from = full_cal[0] if full_cal else from_date
+    sess_map, _all_sessions = _session_map(map_from, end)
     movers = (fla.collect_mover_buys(payload, cal[0], cal[-1], top_n=15)
               if cal else {"by_date": {}})
     rows: list[dict] = []
     by_date: dict[str, list[dict]] = {}
     for date in cal:
-        prior = feature_export_date(cal, date)
+        prior = feature_export_date(full_cal, date)
         # Prior export only. Same-day Finviz is never a feature.
         prior_df = ga.load_finviz(prior) if prior else None
         plan = fla.flatten_day_targets(date)
-        buckets = _candidates(date, cal, plan, movers.get("by_date") or {})
+        buckets = _candidates(date, full_cal, plan, movers.get("by_date") or {})
         reasons: dict[str, list[str]] = {}
         order: list[str] = []
         for key, names in buckets.items():
@@ -3354,6 +3409,34 @@ def extend_pack_through(date: str, *, write: bool = False) -> dict:
     return payload
 
 
+def refresh_panel_window(from_date: str, to_date: str | None = None,
+                         *, write: bool = False) -> dict:
+    """Rebuild ``[from_date, to_date]`` with a full lookback calendar.
+
+    Older panel days stay as they are. Used after ``extend_pack_through``
+    wrote flatten-only rows because the emit window had no prior session.
+    """
+    extra = build_panel(from_date, to_date)
+    raw: dict = {}
+    if PANEL_PATH.is_file():
+        try:
+            raw = json.loads(PANEL_PATH.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            raw = {}
+    panel = merge_panel_days(rehydrate_panel(raw) if raw else extra, extra)
+    print(
+        f"[factor-mine] refresh-window {from_date}→{panel.get('to_date')} "
+        f"new_rows={extra.get('n_rows')} total={panel.get('n_rows')}",
+        flush=True,
+    )
+    if write:
+        PANEL_PATH.parent.mkdir(parents=True, exist_ok=True)
+        slim = {k: v for k, v in panel.items() if k != "by_date"}
+        slim["by_date"] = None
+        PANEL_PATH.write_text(json.dumps(slim, indent=2), encoding="utf-8")
+    return panel
+
+
 def land_closed(from_date: str = START, write: bool = False,
                 rebuild_panel: bool = False,
                 to_date: str | None = None) -> dict:
@@ -3532,6 +3615,8 @@ def main(argv=None) -> int:
     ap.add_argument("--sweep-bracket", action="store_true",
                     help="cash-book sweep: take-profit / stop-loss on top of hold")
     ap.add_argument("--rebuild-panel", action="store_true")
+    ap.add_argument("--refresh-window", action="store_true",
+                    help="rebuild --from-date..--to-date panel rows with lookback")
     ap.add_argument("--land-closed", action="store_true",
                     help="reuse existing recipes; mine through last closed session")
     ap.add_argument("--universe", default="auto", choices=fmb.UNIVERSES)
@@ -3598,6 +3683,12 @@ def main(argv=None) -> int:
                   f"{_pct(r.get('win_rate')):>6} {r.get('n_trades') or 0:>5} "
                   f"{r.get('n_take') or 0:>4} {r.get('n_stop') or 0:>4} "
                   f"{r['base']}")
+        return 0
+    if args.refresh_window:
+        panel = refresh_panel_window(
+            args.from_date, args.to_date or None, write=args.write)
+        print(f"[factor-mine] refresh-window rows={panel.get('n_rows')} "
+              f"to={panel.get('to_date')}")
         return 0
     if args.land_closed:
         payload = land_closed(
