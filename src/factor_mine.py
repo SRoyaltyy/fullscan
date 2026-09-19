@@ -71,6 +71,17 @@ MIN_GRADED = 20
 MIN_STARTS = 8
 MIN_DAYS = 5
 POTHOLE_CUT = 30.0  # one session's mean % that dominates the path
+# Pages dashboard keep-bar. Combo / long / short selected from Win%,
+# $ days, Starts YES, Book%. Everything else is discarded so the
+# .io page stays under ~1MB instead of a 100MB+ inflate.
+WORKABLE_BAR = {
+    "min_trades": 30,
+    "min_win": 0.55,
+    "min_book_pct": 0.0,
+    "min_start": 0.50,
+    "min_dollar_days": 0.40,
+}
+WORKABLE_ALWAYS = ("flatten_h5",)
 NEWS_POS = (
     "beat", "upgrade", "approv", "record high", "surge", "wins ",
     "raises", "buyback", "phase 3", "fda", "breakthrough",
@@ -2448,6 +2459,194 @@ def _slim_dash_book(bk: dict) -> dict:
     }
 
 
+def _finite_stat(s: dict, *keys, default: float = 0.0) -> float:
+    for k in keys:
+        v = _finite(s.get(k))
+        if v is not None:
+            return float(v)
+    return default
+
+
+def is_workable_stat(s: dict, bar: dict | None = None) -> bool:
+    """Win% >55, $ days ≥40%, Starts YES ≥50%, Book% >0, ≥30 trades, audit pass."""
+    bar = bar or WORKABLE_BAR
+    if s.get("audit_ok") is False:
+        return False
+    ntr = int(_finite_stat(s, "book_n_trades", "n_trades", "n_graded"))
+    if ntr < int(bar["min_trades"]):
+        return False
+    if _finite_stat(s, "win_rate") <= float(bar["min_win"]):
+        return False
+    if _finite_stat(s, "total_ret_pct") <= float(bar["min_book_pct"]):
+        return False
+    if _finite_stat(s, "start_rate") < float(bar["min_start"]):
+        return False
+    if _finite_stat(s, "profitable_day_rate") < float(bar["min_dollar_days"]):
+        return False
+    return True
+
+
+def workable_names(stats: list | None, recipes: list | None = None,
+                   bar: dict | None = None) -> set[str]:
+    """Workable recipes + combo members + flatten_h5 benchmark."""
+    keep: set[str] = set(WORKABLE_ALWAYS)
+    rec_by = {r.get("name"): r for r in (recipes or []) if r.get("name")}
+    for s in stats or []:
+        name = s.get("name")
+        if not name or not is_workable_stat(s, bar):
+            continue
+        keep.add(name)
+        members = list(s.get("members") or [])
+        rec = rec_by.get(name) or {}
+        members += list(rec.get("members") or [])
+        for m in members:
+            if m:
+                keep.add(str(m))
+    return keep
+
+
+def _slim_start_row(row: dict, keep_days: bool) -> dict:
+    keys = (
+        "start", "return_pct", "made_money", "prelim", "pending",
+        "last_closed", "n_sessions", "final_equity", "n_up_days",
+        "s", "hard_red",
+    )
+    out = {k: row.get(k) for k in keys
+           if row.get(k) is not None or k in ("made_money", "pending", "prelim")}
+    if keep_days:
+        days = []
+        for d in row.get("days") or []:
+            days.append({k: d.get(k) for k in (
+                "date", "s", "hard_red", "bought", "sold",
+                "cash", "equity", "open_cash", "made_money")})
+        out["days"] = days
+        out["bought"] = row.get("bought") or []
+    return out
+
+
+def _slim_daily_workable(days: list | None) -> list:
+    keep = (
+        "date", "s", "hard_red", "open_cash", "open_held", "open_equity",
+        "cash", "stock", "equity", "bought", "sold", "held", "made_money", "mean",
+    )
+    return [{k: d.get(k) for k in keep} for d in (days or [])]
+
+
+def _slim_book_workable(bk: dict) -> dict:
+    keep_t = ("date", "ticker", "side", "shares", "price", "fees", "pnl", "reason")
+    keep_k = ("date", "ticker", "kind", "reason")
+    return {
+        "trades": [{k: t.get(k) for k in keep_t if t.get(k) is not None}
+                   for t in (bk.get("trades") or [])],
+        "skips": [{k: x.get(k) for k in keep_k} for x in (bk.get("skips") or [])],
+        "n_trades": bk.get("n_trades"),
+        "n_skips": bk.get("n_skips"),
+        "realized": bk.get("realized"),
+        "cash": bk.get("cash"),
+        "total_ret_pct": bk.get("total_ret_pct"),
+        "audit": bk.get("audit"),
+        "size": bk.get("size"),
+        "sell": bk.get("sell"),
+        "s_boost": bk.get("s_boost"),
+    }
+
+
+def _bought_from_kept(payload: dict, names: set[str]) -> set[str]:
+    out: set[str] = set()
+    books = payload.get("books") or {}
+    daily = payload.get("daily") or {}
+    for name in names:
+        for t in (books.get(name) or {}).get("trades") or []:
+            if t.get("ticker"):
+                out.add(_tick(t["ticker"]))
+        for row in daily.get(name) or []:
+            for x in (row.get("bought") or []) + (row.get("sold") or []) + (row.get("held") or []):
+                if isinstance(x, str) and x:
+                    out.add(_tick(x))
+                elif isinstance(x, dict) and x.get("ticker"):
+                    out.add(_tick(x["ticker"]))
+    return {t for t in out if t}
+
+
+def prune_payload_workable(payload: dict, bar: dict | None = None) -> dict:
+    """Drop recipes that fail Win% / $ days / Starts YES / Book%. Slim the rest.
+
+    The baked .io page used to inflate ~107MB in the browser (16MB gzip HTML).
+    Keeping only workable combo / long / short books plus flatten_h5 lands
+    well under 1MB gzip.
+    """
+    bar = bar or WORKABLE_BAR
+    stats = list(payload.get("stats") or [])
+    recipes = list(payload.get("recipes") or [])
+    n_mined = int(payload.get("n_recipes") or len(stats) or len(recipes))
+    keep = workable_names(stats, recipes, bar)
+    if not keep:
+        return payload
+    combo_names = {
+        s.get("name") for s in stats
+        if s.get("name") in keep and (
+            s.get("universe") == "combo" or s.get("members") or s.get("side") == "mix")
+    }
+    out = dict(payload)
+    out["stats"] = [s for s in stats if s.get("name") in keep]
+    out["recipes"] = [r for r in recipes if r.get("name") in keep]
+    for key in ("series", "daily", "books", "starts"):
+        blob = payload.get(key) or {}
+        if isinstance(blob, dict):
+            if key == "daily":
+                out[key] = {n: _slim_daily_workable(v) for n, v in blob.items() if n in keep}
+            elif key == "books":
+                out[key] = {n: _slim_book_workable(v) for n, v in blob.items() if n in keep}
+            elif key == "starts":
+                out[key] = {
+                    n: [_slim_start_row(r, n in combo_names) for r in (rows or [])]
+                    for n, rows in blob.items() if n in keep
+                }
+            else:
+                out[key] = {n: v for n, v in blob.items() if n in keep}
+    if isinstance(payload.get("featured"), list):
+        feat = [n for n in payload["featured"] if n in keep]
+        out["featured"] = feat or sorted(keep)
+    if isinstance(payload.get("md_names"), list):
+        out["md_names"] = [n for n in payload["md_names"] if n in keep]
+    combos = dict(payload.get("combos") or {})
+    if combos:
+        for ck in ("outperform", "long_led"):
+            if isinstance(combos.get(ck), list):
+                combos[ck] = [n for n in combos[ck] if n in keep]
+        out["combos"] = combos
+    bought = _bought_from_kept(payload, keep)
+    probe = payload.get("probe") or {}
+    if bought and isinstance(probe, dict):
+        slim_probe = {}
+        for date, by in probe.items():
+            if not isinstance(by, dict):
+                slim_probe[date] = by
+                continue
+            slim_probe[date] = {t: card for t, card in by.items() if _tick(t) in bought}
+        out["probe"] = slim_probe
+    sim = dict(payload.get("sim") or {})
+    if bought and sim:
+        if isinstance(sim.get("rows"), list):
+            sim["rows"] = [r for r in sim["rows"] if _tick(r.get("ticker")) in bought]
+        if isinstance(sim.get("tape"), dict):
+            sim["tape"] = {t: v for t, v in sim["tape"].items() if _tick(t) in bought}
+        out["sim"] = sim
+    out["n_recipes"] = len(out["recipes"])
+    out["n_mined"] = n_mined
+    out["workable"] = {
+        "bar": dict(bar),
+        "n_kept": len(keep),
+        "n_mined": n_mined,
+        "note": (
+            "Win% >55, $ days ≥40%, Starts YES ≥50%, Book% >0, ≥30 trades. "
+            "Combo / long / short. Members of kept combos + flatten_h5 kept. "
+            "Rest discarded."
+        ),
+    }
+    return out
+
+
 def pt_fees():
     from . import paper_trade as pt
     return pt.load_fees()
@@ -2688,6 +2887,7 @@ def write_dash_html(payload: dict) -> Path:
     """Bake the current template + sim.js + payload into Pages HTML."""
     from . import factor_mine_combo as fmc
     payload = fmc.enrich_payload_legs(payload)
+    payload = prune_payload_workable(payload)
     payload = dict(payload)
     # Pack to_date / generated_at stay with the cash book. Pages built
     # is this bake so a 9/15 cash-start is not read as a missing pack.
