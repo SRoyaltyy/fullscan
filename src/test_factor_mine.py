@@ -1149,6 +1149,7 @@ def test_candidates_need_lookback_calendar() -> None:
         side_effect=lambda prior, top_n=25: (["SDGR"] if prior else []),
     ), mock.patch.object(fm.gc, "yesterday_movers", return_value=[]), \
             mock.patch.object(fm.gc, "earnings_reaction", return_value=[]), \
+            mock.patch.object(fm.gc, "overnight_scheduled", return_value=[]), \
             mock.patch.object(fm.ohlc, "continuation",
                               side_effect=lambda prior, date, top_n=8: (
                                   ["ARQT"] if prior else [])), \
@@ -1161,6 +1162,8 @@ def test_candidates_need_lookback_calendar() -> None:
         assert one["yday_gainer"] == []
         assert one["probable"] == []
         assert one["ohlc_hot"] == []
+        assert one["overnight"] == []
+        assert one["overnight_mega"] == []
         full = fm._candidates(
             "2026-09-18", ["2026-09-17", "2026-09-18"],
             {"tickers": ["FLA"]}, {},
@@ -1738,6 +1741,37 @@ def test_holdup_keeps_up_morning_lot_through_next_gap() -> None:
     assert opens and "AAA×" in " ".join(opens[0].get("open_held") or [])
     names = {r["name"] for r in fm.build_recipes()}
     assert "union_hot_n4_holdup" in names
+    assert "overnight_mega_h1" in names
+    assert "overnight_h1" in names
+
+
+def test_overnight_hold1_harvests_next_open() -> None:
+    """Calendar AMC/BMO list bought at D 09:30 must sell at D+1 open."""
+    from src import factor_mine_book as fmb
+    from src import paper_trade as pt
+    cal = ["2026-09-02", "2026-09-03"]
+    rows = [
+        _row("2026-09-02", "AVGO", sources=["overnight", "overnight_mega"],
+             overnight_sched=True, src_rank=0),
+        _row("2026-09-03", "BBB", sources=["union"], src_rank=0),
+    ]
+    bars = {
+        ("AVGO", "2026-09-02"): {"open": 100, "close": 100},
+        ("AVGO", "2026-09-03"): {"open": 110, "close": 108},
+        ("BBB", "2026-09-03"): {"open": 10, "close": 10},
+    }
+    rec = fm.make_recipe(
+        "overnight_mega_h1", universe="overnight_mega", hold=1, top_n=8,
+        forbid={"alarm": True})
+    assert fm.matches(rows[0], rec)
+    assert not fm.matches(rows[1], rec)
+    book = fmb.simulate_book(
+        _panel(cal, rows), rec, bars=bars, fees=pt.load_fees(), regime={})
+    sells = [t for t in book["trades"] if t.get("side") == "SELL"]
+    assert sells, book["trades"]
+    assert sells[0]["date"] == "2026-09-03"
+    assert sells[0]["ticker"] == "AVGO"
+    assert abs(float(sells[0]["price"]) - 110) < 1e-6
 
 
 def test_sboost_more_names_on_good_s_still_cash_capped() -> None:
@@ -2514,6 +2548,7 @@ if __name__ == "__main__":
     test_time_sell_exits_at_min_hold_even_if_listed()
     test_rank_w_gives_more_shares_to_first()
     test_holdup_keeps_up_morning_lot_through_next_gap()
+    test_overnight_hold1_harvests_next_open()
     test_sboost_more_names_on_good_s_still_cash_capped()
     test_action_filters_size_sell_boost()
     test_dash_payload_ships_every_book_and_features_high_return()

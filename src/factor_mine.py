@@ -102,6 +102,7 @@ INPUT_FIELDS = frozenset({
     "candle_score", "candle_capture", "candle_body_rg",
     "erd_earn_react", "erd_days_since_E", "erd_days_since_R",
     "erd_days_since_D", "erd_flag_E", "erd_flag_R",
+    "overnight_sched",
     "e_pol", "e_label",
     "rsi", "fv_rsi", "macd", "macd_sig", "macd_hist",
     "macd_cross_up", "macd_cross_down", "rsi_os", "rsi_ob",
@@ -367,7 +368,8 @@ def build_recipes() -> list[dict]:
     def add(**kw):
         recs.append(make_recipe(**kw))
 
-    universes = ("union", "flatten", "probable", "yday_gainer", "ohlc_hot")
+    universes = ("union", "flatten", "probable", "yday_gainer", "ohlc_hot",
+                 "overnight")
     for uni in universes:
         for hold in (1, 3, 5):
             add(name=f"{uni}_h{hold}", universe=uni, hold=hold,
@@ -392,6 +394,7 @@ def build_recipes() -> list[dict]:
         ("coil_off", {"ret_5_min": 0.0, "ret_5_max": 10.0,
                       "rvol_min": 0.7, "rvol_max": 2.2}),
         ("earn_react", {"earn_react": True}),
+        ("overnight", {"overnight": True}),
         ("e_fresh", {"days_since_E_max": 1, "flag_E_min": 0}),
         ("r_up", {"days_since_R_max": 5, "flag_R": 1}),
         ("break10", {"break_10": True}),
@@ -533,6 +536,12 @@ def build_recipes() -> list[dict]:
     add(name="union_hot_n4_holdup", universe="union", hold=1, top_n=4,
         rank="hot_score", s_boost="holdup", forbid={"alarm": True},
         note="hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book")
+    add(name="overnight_mega_h1", universe="overnight_mega", hold=1, top_n=8,
+        forbid={"alarm": True},
+        note="prior-calendar AMC-today / BMO-next, mcap≥$50B; hold 1 sells at next 09:30 so the print gap is in the book")
+    add(name="overnight_mega_h2", universe="overnight_mega", hold=2, top_n=8,
+        forbid={"alarm": True},
+        note="same mega calendar; hold 2 also keeps the session after the print")
     add(name="union_hot_n12_h1", universe="union", hold=1, top_n=12,
         rank="hot_score", forbid={"alarm": True}, note="top 12 by hot")
     add(name="union_cond_n4_h3", universe="union", hold=3, top_n=4,
@@ -660,6 +669,8 @@ _UNI_KID = {
     "probable": "yesterday's 'likely to keep moving' list",
     "yday_gainer": "yesterday's top liquid winners",
     "ohlc_hot": "names that looked hot on the prior price/volume tape",
+    "overnight": "names the prior Finviz calendar said report AMC today or BMO next session (print not in yet)",
+    "overnight_mega": "the same calendar list, kept only when prior-export mcap is at least $50B",
     "combo": "several existing sleeves sharing one $10k book (each kid still uses its own 09:30 list)",
 }
 _CAM_KID = {
@@ -709,6 +720,8 @@ def _gate_kid(key: str, val) -> str:
         return "the name broke its prior 10-session range"
     if key == "earn_react":
         return "the name is in an earnings-reaction window (just reported, we are trading the reaction — not today's print)"
+    if key == "overnight":
+        return "the prior Finviz calendar said this name reports AMC today or BMO next session (the print is still ahead; we buy today 09:30 to own the next open)"
     if key == "news_present":
         return "the news camera printed something (any color, not blank)"
     if key == "join_present":
@@ -1062,6 +1075,11 @@ def matches(row: dict, rec: dict) -> bool:
         return False
     if req.get("earn_react") and not row.get("erd_earn_react"):
         return False
+    if req.get("overnight") and not (
+            row.get("overnight_sched")
+            or "overnight" in srcs
+            or "overnight_mega" in srcs):
+        return False
     if req.get("news_present") and _tone(boxes, "news") == "missing":
         return False
     if req.get("join_present") and _tone(boxes, "join") == "missing":
@@ -1392,6 +1410,13 @@ def match_why(row: dict, rec: dict) -> dict:
         need(bool(row.get("ohlc_break_10")), _gate_kid("break_10", True))
     if req.get("earn_react"):
         need(bool(row.get("erd_earn_react")), _gate_kid("earn_react", True))
+    if req.get("overnight"):
+        need(
+            bool(row.get("overnight_sched")
+                 or "overnight" in srcs
+                 or "overnight_mega" in srcs),
+            _gate_kid("overnight", True),
+        )
     if req.get("news_present"):
         need(_tone(boxes, "news") != "missing", _gate_kid("news_present", True))
     if req.get("join_present"):
@@ -1592,6 +1617,11 @@ def _candidates(date: str, cal: list[str], flatten_plan: dict,
         "yday_mover": gc.yesterday_movers(prior, top_n=20),
         "ohlc_hot": ohlc.liquid_hot(prior, date, top_n=30),
         "earn_react": gc.earnings_reaction(prior, date),
+        "overnight": gc.overnight_scheduled(
+            prior, date, gc.next_session(cal, date)),
+        "overnight_mega": gc.overnight_scheduled(
+            prior, date, gc.next_session(cal, date),
+            min_mcap_m=gc.OVERNIGHT_MEGA_MCAP_M),
         "mover_buy": [_tick(t) for t in (mover_by_date.get(date) or [])][:15],
     }
 
@@ -1687,6 +1717,7 @@ def _attach_row(date: str, ticker: str, sources: list[str], src_rank: int,
         "candle_capture": bool(cf.capture(cd)),
         "candle_body_rg": cd.get("body_rg"),
         "erd_earn_react": bool(snap.get("earn_react")),
+        "overnight_sched": "overnight" in sources or "overnight_mega" in sources,
         "erd_days_since_E": snap.get("days_since_E"),
         "erd_days_since_R": snap.get("days_since_R"),
         "erd_days_since_D": snap.get("days_since_D"),
@@ -1705,8 +1736,9 @@ def panel_lookback_calendar(from_date: str,
     """Sleeve calendar through ``to_date``, including days before ``from_date``.
 
     ``build_panel(D, D)`` / ``extend_pack_through`` still need D−1 so
-    ``prior_session``, yday_gainer, probable, ohlc_hot, and earn_react
-    are not empty. The emit window stays ``[from_date, end]``.
+    ``prior_session``, yday_gainer, probable, ohlc_hot, earn_react,
+    and overnight (needs D+1 on the calendar) are not empty. The emit
+    window stays ``[from_date, end]``.
     """
     payload = sm.load_payload()
     books = sm.list_books()
@@ -2265,6 +2297,7 @@ def run(from_date: str = START, to_date: str | None = None,
     extra = [n for n in (
         "flatten_live_h1", "flatten_live_h3", "flatten_live_h5",
         "union_e_fresh_h3", "union_news_g_h5", "union_white_coil_h1",
+        "overnight_mega_h1", "overnight_mega_h2", "overnight_h1",
         "union_news_pack_h1", "union_news_pack_net2_h1",
         "union_news_or_h1",
         "union_news_or_net3_h1", "union_news_or_net4_h1",

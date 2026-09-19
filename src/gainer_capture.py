@@ -6,7 +6,13 @@ knowable before 09:30:
 
   * prior session's liquid top gainers / top |movers|
   * earnings reaction: yesterday AMC or today BMO, from the **prior**
-    Finviz earnings calendar (not today's tape)
+    Finviz earnings calendar (not today's tape) — the print already
+    happened; this is the reaction, not the bang night
+  * overnight scheduled: AMC **today** or BMO **next session**, from
+    the same prior calendar — the print has not happened. Buy today
+    09:30, hold overnight, harvest next open. Same-day Change% is
+    never an input. Mega-cap ($50B+) is the one-way slice; the full
+    liquid calendar is a coin flip.
   * this morning's priced mover BUY calls
   * flatten_robust would-buy / wish-list
   * specialized R:G + candlestick flags on those names (prior bars)
@@ -31,6 +37,9 @@ TOP_YDAY_GAINERS = 50
 TOP_YDAY_MOVERS = 40
 OHLC_HOT_N = ohlc.HOT_TOP_N
 PROBABLE_N = ohlc.CONT_TOP_N
+# Finviz Market Cap is millions. $50B was the only overnight-schedule
+# slice that stayed one-way (more +5% gaps than −5%) on Aug–Sep 2026.
+OVERNIGHT_MEGA_MCAP_M = 50_000.0
 
 
 def _tick(v) -> str:
@@ -43,6 +52,14 @@ def prior_session(cal: list[str], date: str) -> str | None:
         return cal[i - 1] if i else None
     earlier = [d for d in cal if d < date]
     return earlier[-1] if earlier else None
+
+
+def next_session(cal: list[str], date: str) -> str | None:
+    if date in cal:
+        i = cal.index(date)
+        return cal[i + 1] if i + 1 < len(cal) else None
+    later = [d for d in cal if d > date]
+    return later[0] if later else None
 
 
 def parse_earnings(raw) -> tuple[str | None, int | None]:
@@ -89,6 +106,55 @@ def earnings_reaction(prior_date: str | None, session_date: str,
     return out
 
 
+def overnight_scheduled(prior_date: str | None, session_date: str,
+                        next_date: str | None = None, df=None,
+                        *, min_mcap_m: float | None = None) -> list[str]:
+    """Names scheduled to report AMC today or BMO next session.
+
+    Knowable at session 09:30 from the **prior** Finviz export.
+    The print has not happened. Result is unknown. Same-day Change%
+    is never an input.
+
+    AMC today needs an explicit time ≥ 16:00 (date-only on *today*
+    could already be BMO). BMO next accepts date-only — we still
+    want to own the name before tomorrow's print.
+    """
+    if not prior_date or not session_date:
+        return []
+    frame = ga.load_finviz(prior_date) if df is None else df
+    if frame is None or getattr(frame, "empty", True) or "Ticker" not in frame.columns:
+        return []
+    col = "Earnings Date" if "Earnings Date" in frame.columns else None
+    if not col:
+        return []
+    liquid = {
+        _tick(r.get("ticker"))
+        for r in ga._liquid_tape(
+            frame, top_n=0, min_change=0.0, liquid=True,
+            min_mcap_m=min_mcap_m, side="up", skip_change=True,
+        )
+        if _tick(r.get("ticker"))
+    }
+    out: list[str] = []
+    seen: set[str] = set()
+    for rec in frame.to_dict("records"):
+        t = _tick(rec.get("Ticker"))
+        if not t or t in seen or (liquid and t not in liquid):
+            continue
+        ed, hm = parse_earnings(rec.get(col))
+        amc_today = bool(
+            ed == session_date and hm is not None and int(hm) >= 1600
+        )
+        bmo_next = bool(
+            next_date and ed == next_date and (hm is None or int(hm) <= 930)
+        )
+        if not (amc_today or bmo_next):
+            continue
+        seen.add(t)
+        out.append(t)
+    return out
+
+
 def yesterday_gainers(prior_date: str | None, top_n: int = TOP_YDAY_GAINERS) -> list[str]:
     if not prior_date:
         return []
@@ -115,9 +181,13 @@ def watchlist(date: str, *,
     session = str(date or "")[:10]
     calendar = list(cal or [])
     prior = prior_session(calendar, session) if calendar else None
+    nxt = next_session(calendar, session) if calendar else None
     buckets = {
         "flatten": [_tick(t) for t in (flatten_picks or []) if _tick(t)],
         "mover_buys": [_tick(t) for t in (mover_buys or []) if _tick(t)],
+        "overnight": overnight_scheduled(prior, session, nxt),
+        "overnight_mega": overnight_scheduled(
+            prior, session, nxt, min_mcap_m=OVERNIGHT_MEGA_MCAP_M),
         "earn_react": earnings_reaction(prior, session),
         "yday_gainers": yesterday_gainers(prior, top_n=top_gainers),
         "yday_movers": yesterday_movers(prior, top_n=top_movers),
@@ -135,14 +205,15 @@ def watchlist(date: str, *,
     # / morning BUYs can still carry them (those are explicit lists).
     protected = set(buckets["flatten"]) | set(buckets["earn_react"]) | set(
         buckets["mover_buys"]
-    )
+    ) | set(buckets["overnight"])
     buckets["ohlc_hot"] = [
         t for t in buckets["ohlc_hot"]
         if t in protected or t not in yday_losers
     ]
     reasons: dict[str, list[str]] = {}
     order: list[str] = []
-    for key in ("flatten", "mover_buys", "earn_react", "probable",
+    for key in ("flatten", "mover_buys", "overnight", "overnight_mega",
+                "earn_react", "probable",
                 "yday_gainers", "yday_movers", "ohlc_hot"):
         for t in buckets[key]:
             reasons.setdefault(t, [])
@@ -180,6 +251,8 @@ def watchlist(date: str, *,
         "n": len(order),
         "n_flatten": len(buckets["flatten"]),
         "n_mover_buys": len(buckets["mover_buys"]),
+        "n_overnight": len(buckets["overnight"]),
+        "n_overnight_mega": len(buckets["overnight_mega"]),
         "n_earn_react": len(buckets["earn_react"]),
         "n_yday_gainers": len(buckets["yday_gainers"]),
         "n_yday_movers": len(buckets["yday_movers"]),

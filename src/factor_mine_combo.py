@@ -65,6 +65,7 @@ LONG_LED_PIN = (
     "union_e_fresh_h3",
     "union_news_pack_net2_h1",
     "union_hot_n4_holdup",
+    "overnight_mega_h1",
 )
 
 

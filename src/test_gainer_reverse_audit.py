@@ -77,6 +77,8 @@ def test_render_lists_locked_bars() -> None:
     assert "live_up_not_empty" in md
     assert "Book%" in md
     assert "flatten_robust" in md
+    assert "overnight banger" in md.lower()
+    assert "overnight_mega" in md
 
 
 def test_fat_day_splits_gap_from_open() -> None:
@@ -93,6 +95,13 @@ def test_fat_day_splits_gap_from_open() -> None:
     grade = gra.score_fat_day_keep(days)
     assert grade["n_fat"] == 1
     assert grade["days"][0]["gap_share"] > 0.8
+
+
+def test_score_overnight_find_can_skip_the_tape() -> None:
+    out = gra.score_overnight_find(["2026-09-17"], walk=False)
+    assert out["n_nights"] == 0
+    assert "prior Finviz" in out["rule"]
+    assert out["mean_mega"] is None
 
 
 def test_audit_0917_sdgr_not_on_leakfree_hot4() -> None:
@@ -115,5 +124,6 @@ if __name__ == "__main__":
     test_score_improve_fails_empty_dossiers_and_zero_recall()
     test_render_lists_locked_bars()
     test_fat_day_splits_gap_from_open()
+    test_score_overnight_find_can_skip_the_tape()
     test_audit_0917_sdgr_not_on_leakfree_hot4()
-    print("5 gainer-reverse-audit tests passed")
+    print("6 gainer-reverse-audit tests passed")

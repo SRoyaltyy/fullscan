@@ -55,6 +55,8 @@ KEEP_KEYS = (
     "union_e_fresh_h3",
     "yday_gainer_h1",
     "union_news_pack_net2_h1",
+    "overnight_h1",
+    "overnight_mega_h1",
     "flatten_h5",
     "flatten_robust",
 )
@@ -337,6 +339,92 @@ def index_path(date: str) -> dict:
     }
 
 
+def close_to_next_open(tickers: list[str], date: str,
+                       next_date: str) -> float | None:
+    """Equal-weight D close → D+1 open. None when no priced names."""
+    rets = []
+    for raw in tickers or []:
+        t = tl._tick(raw)
+        if not t:
+            continue
+        b0 = tl.session_bar(t, date) or {}
+        b1 = tl.session_bar(t, next_date) or {}
+        c, o = _finite(b0.get("close")), _finite(b1.get("open"))
+        if c and o:
+            rets.append(100.0 * (o / c - 1.0))
+    if not rets:
+        return None
+    return round(sum(rets) / len(rets), 4)
+
+
+def _mean(vals: list[float | None]) -> float | None:
+    xs = [v for v in vals if v is not None]
+    if not xs:
+        return None
+    return round(sum(xs) / len(xs), 4)
+
+
+def score_overnight_find(dates: list[str] | None = None, *,
+                         lookback_from: str = "2026-08-14",
+                         walk: bool = True) -> dict:
+    """Which leak-free D list harvested D+1 open. Calendar, not Change%."""
+    from . import gainer_capture as gc
+    from . import sleeve_merge as sm
+
+    payload = sm.load_payload()
+    books = sm.list_books()
+    cal = [d for d in sm.session_calendar(payload, books) if d >= lookback_from]
+    focus = set(dates or [])
+    rows = []
+    if walk:
+        for i, d in enumerate(cal):
+            if i + 1 >= len(cal):
+                break
+            prior = cal[i - 1] if i else None
+            d1 = cal[i + 1]
+            overnight = gc.overnight_scheduled(prior, d, d1)
+            mega = gc.overnight_scheduled(
+                prior, d, d1, min_mcap_m=gc.OVERNIGHT_MEGA_MCAP_M)
+            yday = gc.yesterday_gainers(prior, top_n=25)
+            react = gc.earnings_reaction(prior, d)
+            rows.append({
+                "date": d,
+                "next": d1,
+                "in_window": d in focus or d1 in focus,
+                "overnight": overnight,
+                "overnight_n": len(overnight),
+                "overnight_gap": close_to_next_open(overnight, d, d1),
+                "mega": mega,
+                "mega_n": len(mega),
+                "mega_gap": close_to_next_open(mega, d, d1),
+                "yday": yday,
+                "yday_n": len(yday),
+                "yday_gap": close_to_next_open(yday, d, d1),
+                "earn_react": react,
+                "earn_react_n": len(react),
+                "earn_react_gap": close_to_next_open(react, d, d1),
+            })
+    return {
+        "lookback_from": lookback_from,
+        "n_nights": len(rows),
+        "mean_overnight": _mean([r.get("overnight_gap") for r in rows]),
+        "mean_mega": _mean([r.get("mega_gap") for r in rows]),
+        "mean_yday": _mean([r.get("yday_gap") for r in rows]),
+        "mean_earn_react": _mean([r.get("earn_react_gap") for r in rows]),
+        "n_mega_nights": sum(1 for r in rows if r.get("mega_n")),
+        "n_overnight_nights": sum(1 for r in rows if r.get("overnight_n")),
+        "days": rows,
+        "rule": (
+            "Find the bang *before* 09:30: buy D from the prior Finviz "
+            "earnings calendar (AMC today / BMO next). Unfiltered liquid "
+            "calendar is a coin flip. Mega-cap ($50B+) is the one-way "
+            "slice. Index-like nights are yesterday's liquid winners "
+            "(holdup / yday_gainer), not the earnings lottery. "
+            "earn_react / e_fresh are after the print."
+        ),
+    }
+
+
 def ew_open_close(tickers: list[str], date: str) -> float | None:
     rets = []
     for raw in tickers or []:
@@ -608,6 +696,63 @@ def render_markdown(payload: dict) -> str:
         "Morning S does not call fat grind days (09-03 S=−0.9). "
         "S=+7 on 09-17 was after the gap was already printed.",
         "",
+        "## How to find overnight bangers",
+        "",
+    ]
+    ov = payload.get("overnight") or {}
+    lines += [
+        ov.get("rule") or (
+            "Buy D 09:30 names the **prior** Finviz calendar said report "
+            "AMC today or BMO next session. Hold 1 sells at the next open."
+        ),
+        "",
+        "Two different nights, two different lists:",
+        "",
+        "1. **Print night** — AMC today / BMO next from the prior export. "
+        "`overnight_mega_h1` keeps mcap ≥ $50B. The full liquid calendar "
+        "has more −5% dumps than +5% bangs. "
+        "`earn_react` / `e_fresh` fire *after* the print — they miss the bang.",
+        "2. **Index-like night** — yesterday's liquid winners "
+        "(`yday_gainer_h1` / `union_hot_n4_holdup` when S>0). "
+        "Thursday 09-17's +1.05% SPX gap was this kind of night: "
+        "scheduled AMC leftover was ALMU/LEN, not mega-cap beta.",
+        "",
+    ]
+    if ov.get("n_nights"):
+        def _fmt(v):
+            return "—" if v is None else f"{v:+.2f}%"
+        lines += [
+            f"Lookback {ov.get('lookback_from')} → last closed "
+            f"({ov.get('n_nights')} nights; D close → D+1 open EW):",
+            "",
+            f"- scheduled liquid `overnight`: {_fmt(ov.get('mean_overnight'))} "
+            f"on {ov.get('n_overnight_nights')} nights with names",
+            f"- scheduled mega `overnight_mega` ($50B+): "
+            f"{_fmt(ov.get('mean_mega'))} on {ov.get('n_mega_nights')} nights",
+            f"- yesterday's liquid 25: {_fmt(ov.get('mean_yday'))}",
+            f"- post-print `earn_react`: {_fmt(ov.get('mean_earn_react'))}",
+            "",
+        ]
+        focus = [r for r in (ov.get("days") or []) if r.get("in_window")]
+        if focus:
+            lines.append("Audited window nights:")
+            lines.append("")
+            for r in focus:
+                lines.append(
+                    f"- {r['date']}→{r['next']}: "
+                    f"overnight n={r.get('overnight_n')} "
+                    f"gap={_fmt(r.get('overnight_gap'))}; "
+                    f"mega n={r.get('mega_n')} "
+                    f"gap={_fmt(r.get('mega_gap'))}; "
+                    f"yday25 gap={_fmt(r.get('yday_gap'))}; "
+                    f"earn_react gap={_fmt(r.get('earn_react_gap'))}"
+                    + (
+                        " · " + ", ".join(f"`{t}`" for t in (r.get("mega") or [])[:8])
+                        if r.get("mega") else ""
+                    )
+                )
+            lines.append("")
+    lines += [
         "## Reverse-run",
         "",
     ]
@@ -682,6 +827,7 @@ def run(dates: list[str], top_n: int = TOP_N, min_change: float = MIN_CHANGE,
         "dates": dates,
         "days": days,
         "grades": score_improve(days),
+        "overnight": score_overnight_find(dates),
         "rules": IMPROVE_RULES,
         "not_improved": list(NOT_IMPROVED),
         "live_untouched": "flatten_robust",
