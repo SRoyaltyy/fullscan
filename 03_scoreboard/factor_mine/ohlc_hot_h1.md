@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `ohlc_hot` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-10.52%** ($8,949) · signal-only (no cash/fees) was -2.44%. Starts YES **0/26**. Fills 148 · skips 77 · realized $-1051.42.
+Cash book **-4.17%** ($9,584) · signal-only (no cash/fees) was +3.57%. Starts YES **17/26**. Fills 154 · skips 77 · realized $-956.55.
 
 ## How this sleeve decides (like you are 10)
 
@@ -50,7 +50,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8,948.55.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $135.88.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -226,9 +226,30 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | `PAYP` | 62 | $18.45 | $18.28 | -10.54 | — | +0.00 | -10.54 | -1.24 | — |
 | 2026-09-15 | `QRVO` | 10 | $107.98 | $108.40 | +4.20 | — | +0.00 | +4.20 | -44.35 | — |
 | 2026-09-15 | `GPRO` | 818 | $1.35 | $1.34 | -4.09 | $1.32 | -20.45 | -24.54 | -44.99 | -65.44 |
-| 2026-09-16 | `GPRO` | 818 | $1.32 | $1.31 | -8.18 | — | +0.00 | -8.18 | -73.62 | — |
-| 2026-09-17 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-09-18 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-16 | `GPRO` | 818 | $1.32 | $1.31 | -8.18 | $1.27 | -32.72 | -40.90 | -73.62 | -106.34 |
+| 2026-09-16 | `QRVO` | 9 | — | $118.18 | +0.00 | $113.97 | -37.89 | -37.89 | +0.00 | -37.89 |
+| 2026-09-16 | `SION` | 162 | — | $6.95 | +0.00 | $7.04 | +14.58 | +14.58 | +0.00 | +14.58 |
+| 2026-09-16 | `INSP` | 15 | — | $73.17 | +0.00 | $72.75 | -6.30 | -6.30 | +0.00 | -6.30 |
+| 2026-09-16 | `TJGC` | 102 | — | $10.95 | +0.00 | $11.02 | +7.14 | +7.14 | +0.00 | +7.14 |
+| 2026-09-16 | `HPQ` | 33 | — | $33.80 | +0.00 | $32.70 | -36.30 | -36.30 | +0.00 | -36.30 |
+| 2026-09-16 | `HPE` | 20 | — | $55.51 | +0.00 | $56.68 | +23.40 | +23.40 | +0.00 | +23.40 |
+| 2026-09-16 | `DELL` | 2 | — | $553.63 | +0.00 | $563.29 | +19.32 | +19.32 | +0.00 | +19.32 |
+| 2026-09-17 | `GPRO` | 818 | $1.27 | $1.29 | +16.36 | $1.34 | +40.90 | +57.26 | -89.98 | -49.08 |
+| 2026-09-17 | `QRVO` | 9 | $113.97 | $114.90 | +8.37 | $119.51 | +41.49 | +49.86 | -29.52 | +11.97 |
+| 2026-09-17 | `SION` | 162 | $7.04 | $7.27 | +37.26 | $7.18 | -14.58 | +22.68 | +51.84 | +37.26 |
+| 2026-09-17 | `INSP` | 15 | $72.75 | $73.54 | +11.85 | $72.74 | -12.00 | -0.15 | +5.55 | -6.45 |
+| 2026-09-17 | `TJGC` | 102 | $11.02 | $11.00 | -2.04 | $11.01 | +1.02 | -1.02 | +5.10 | +6.12 |
+| 2026-09-17 | `HPQ` | 33 | $32.70 | $33.01 | +10.23 | $34.66 | +54.45 | +64.68 | -26.07 | +28.38 |
+| 2026-09-17 | `HPE` | 20 | $56.68 | $57.25 | +11.40 | $61.04 | +75.80 | +87.20 | +34.80 | +110.60 |
+| 2026-09-17 | `DELL` | 2 | $563.29 | $570.40 | +14.22 | $588.40 | +36.00 | +50.22 | +33.54 | +69.54 |
+| 2026-09-18 | `GPRO` | 818 | $1.34 | $1.34 | +0.00 | $1.31 | -24.54 | -24.54 | -49.08 | -73.62 |
+| 2026-09-18 | `QRVO` | 9 | $119.51 | $120.76 | +11.25 | $117.18 | -32.22 | -20.97 | +23.22 | -9.00 |
+| 2026-09-18 | `SION` | 162 | $7.18 | $7.12 | -9.72 | $5.96 | -187.92 | -197.64 | +27.54 | -160.38 |
+| 2026-09-18 | `INSP` | 15 | $72.74 | $72.29 | -6.75 | $76.78 | +67.35 | +60.60 | -13.20 | +54.15 |
+| 2026-09-18 | `TJGC` | 102 | $11.01 | $10.86 | -15.30 | $16.84 | +609.96 | +594.66 | -9.18 | +600.78 |
+| 2026-09-18 | `HPQ` | 33 | $34.66 | $34.74 | +2.64 | $34.40 | -11.22 | -8.58 | +31.02 | +19.80 |
+| 2026-09-18 | `HPE` | 20 | $61.04 | $61.70 | +13.20 | $60.76 | -18.80 | -5.60 | +123.80 | +105.00 |
+| 2026-09-18 | `DELL` | 2 | $588.40 | $593.15 | +9.50 | $568.06 | -50.18 | -40.68 | +79.04 | +28.86 |
 
 ## Each session (cash + holdings state)
 
@@ -257,9 +278,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | +0.50 | $9,165.72 | — | $9,165.72 | -0.00 | +56.78 | AMTX, CLOV, BAK, DBI, SWKS, QRVO, GPRO, PAYP | — | $50.78 | $9,185.84 | AMTX×561, CLOV×241, BAK×540, DBI×193, SWKS×13, QRVO×10, GPRO×818, PAYP×62 |
 | 2026-09-14 | -11.00 | $50.78 | AMTX×561, CLOV×241, BAK×540, DBI×193, SWKS×13, QRVO×10, GPRO×818, PAYP×62 | $9,091.89 | -93.95 | -77.66 | — | AMTX, CLOV, BAK, DBI, SWKS, PAYP | $6,805.71 | $8,989.81 | QRVO×10, GPRO×818 |
 | 2026-09-15 | -3.84 | $6,805.71 | QRVO×10, GPRO×818 | $8,989.92 | +0.11 | -20.45 | — | QRVO | $7,887.67 | $8,967.43 | GPRO×818 |
-| 2026-09-16 | +5.30 | $7,887.67 | GPRO×818 | $8,959.25 | -8.18 | +0.00 | — | GPRO | $8,948.55 | $8,948.55 | — |
-| 2026-09-17 | +7.38 | $8,948.55 | — | $8,948.55 | +0.00 | +0.00 | — | — | $8,948.55 | $8,948.55 | — |
-| 2026-09-18 | +4.86 | $8,948.55 | — | $8,948.55 | +0.00 | +0.00 | — | — | $8,948.55 | $8,948.55 | — |
+| 2026-09-16 | +5.30 | $7,887.67 | GPRO×818 | $8,959.25 | -8.18 | -48.77 | QRVO, SION, INSP, TJGC, HPQ, HPE, DELL | — | $135.88 | $8,895.52 | GPRO×818, QRVO×9, SION×162, INSP×15, TJGC×102, HPQ×33, HPE×20, DELL×2 |
+| 2026-09-17 | +7.38 | $135.88 | GPRO×818, QRVO×9, SION×162, INSP×15, TJGC×102, HPQ×33, HPE×20, DELL×2 | $9,003.17 | +107.65 | +223.08 | — | — | $135.88 | $9,226.25 | GPRO×818, QRVO×9, SION×162, INSP×15, TJGC×102, HPQ×33, HPE×20, DELL×2 |
+| 2026-09-18 | +4.86 | $135.88 | GPRO×818, QRVO×9, SION×162, INSP×15, TJGC×102, HPQ×33, HPE×20, DELL×2 | $9,231.07 | +4.82 | +352.43 | — | — | $135.88 | $9,583.50 | GPRO×818, QRVO×9, SION×162, INSP×15, TJGC×102, HPQ×33, HPE×20, DELL×2 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -459,12 +480,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 09:30 ET | **SELL** | `QRVO` | 10 | $108.40 | $2.04 | $-48.41 | $7,887.67 | ▼ -48.41 after sell → book $8,987.88; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 1) | — |
 | 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,887.67 | ▼ close $8,967.43 vs 09:30 $8,989.92 (session -20.45) | 16:00 close · cash $7,887.67 · equity $8,967.43 vs 09:30 $8,989.92 (-22.49; session marks -20.45) · 1 name(s) marked open→close (per-name table). GPRO×818 09:30 $1.34 → close $1.32 -20.45 | — |
 | 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,887.67 | ▼ 09:30 equity $8,959.25 vs yday $8,967.43 (-8.18) | 09:30 open · cash $7,887.67 (unchanged overnight, no fees) · equity $8,959.25 vs prior close $8,967.43 (-8.18) · 1 name(s) re-marked at the open (per-name table). GPRO×818 yday $1.32 → 09:30 $1.31 -8.18 | — |
-| 2026-09-16 09:30 ET | **SELL** | `GPRO` | 818 | $1.31 | $10.70 | $-94.87 | $8,948.55 | ▼ -94.87 after sell → book $8,948.55; vs 09:30 mark -10.70 | dropped from list after 3 sess (min 1) | — |
-| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,948.55 | ▲ close $8,948.55 vs 09:30 $8,959.25 (session +0.00) | 16:00 close · cash $8,948.55 · no lots left · equity $8,948.55. | — |
-| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,948.55 | ▲ 09:30 equity $8,948.55 vs yday $8,948.55 (+0.00) | 09:30 open · cash $8,948.55 · no holdings · equity $8,948.55 vs prior close $8,948.55 (+0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,948.55 | ▲ close $8,948.55 vs 09:30 $8,948.55 (session +0.00) | 16:00 close · cash $8,948.55 · no lots left · equity $8,948.55. | — |
-| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,948.55 | ▲ 09:30 equity $8,948.55 vs yday $8,948.55 (+0.00) | 09:30 open · cash $8,948.55 · no holdings · equity $8,948.55 vs prior close $8,948.55 (+0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,948.55 | ▲ close $8,948.55 vs 09:30 $8,948.55 (session +0.00) | 16:00 close · cash $8,948.55 · no lots left · equity $8,948.55. | — |
+| 2026-09-16 09:30 ET | **BUY** | `QRVO` | 9 | $118.18 | $2.02 | — | $6,822.03 | — | baseline list, no extra gate; list yday_gainer,ohlc_hot; 🔵; ⚪; ret5=+16.2; leftover $1126.81 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `SION` | 162 | $6.95 | $2.48 | — | $5,693.66 | — | baseline list, no extra gate; list yday_mover,ohlc_hot; ret5=+16.3; leftover $1126.81 | join🔴 sector🟢 gen🟢 news🟢 digest🔴 ab🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `INSP` | 15 | $73.17 | $2.04 | — | $4,594.07 | — | baseline list, no extra gate; list ohlc_hot; ret5=+17.5; leftover $1126.81 | join🟢 sector🟢 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `TJGC` | 102 | $10.95 | $2.30 | — | $3,474.88 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+13.5; leftover $1126.81 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `HPQ` | 33 | $33.80 | $2.09 | — | $2,357.39 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+11.1; leftover $1126.81 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `HPE` | 20 | $55.51 | $2.05 | — | $1,245.14 | — | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+14.1; leftover $1126.81 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `DELL` | 2 | $553.63 | $2.00 | — | $135.88 | — | baseline list, no extra gate; list ohlc_hot; ret5=+9.9; leftover $1126.81 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $135.88 | ▼ close $8,895.52 vs 09:30 $8,959.25 (session -48.77) | 16:00 close · cash $135.88 · equity $8,895.52 vs 09:30 $8,959.25 (-63.73; session marks -48.77) · 8 name(s) marked open→close (per-name table). GPRO×818 09:30 $1.31 → close $1.27 -32.72; QRVO×9 09:30 $118.18 → close $113.97 -37.89; SION×162 09:30 $6.95 → close $7.04 +14.58; INSP×15 09:30 $73.17 → close $72.75 -6.30; TJGC×102 09:30 $10.95 → close $11.02 +7.14; HPQ×33 09:30 $33.80 → close $32.70 -36.30; HPE×20 09:30 $55.51 → close $56.68 +23.40; DELL×2 09:30 $553.63 → close $563.29 +19.32 | — |
+| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $135.88 | ▲ 09:30 equity $9,003.17 vs yday $8,895.52 (+107.65) | 09:30 open · cash $135.88 (unchanged overnight, no fees) · equity $9,003.17 vs prior close $8,895.52 (+107.65) · 8 name(s) re-marked at the open (per-name table). GPRO×818 yday $1.27 → 09:30 $1.29 +16.36; QRVO×9 yday $113.97 → 09:30 $114.90 +8.37; SION×162 yday $7.04 → 09:30 $7.27 +37.26; INSP×15 yday $72.75 → 09:30 $73.54 +11.85; TJGC×102 yday $11.02 → 09:30 $11.00 -2.04; HPQ×33 yday $32.70 → 09:30 $33.01 +10.23; HPE×20 yday $56.68 → 09:30 $57.25 +11.40; DELL×2 yday $563.29 → 09:30 $570.40 +14.22 | — |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $135.88 | ▲ close $9,226.25 vs 09:30 $9,003.17 (session +223.08) | 16:00 close · cash $135.88 · equity $9,226.25 vs 09:30 $9,003.17 (+223.08; session marks +223.08) · 8 name(s) marked open→close (per-name table). GPRO×818 09:30 $1.29 → close $1.34 +40.90; QRVO×9 09:30 $114.90 → close $119.51 +41.49; SION×162 09:30 $7.27 → close $7.18 -14.58; INSP×15 09:30 $73.54 → close $72.74 -12.00; TJGC×102 09:30 $11.00 → close $11.01 +1.02; HPQ×33 09:30 $33.01 → close $34.66 +54.45; HPE×20 09:30 $57.25 → close $61.04 +75.80; DELL×2 09:30 $570.40 → close $588.40 +36.00 | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $135.88 | ▲ 09:30 equity $9,231.07 vs yday $9,226.25 (+4.82) | 09:30 open · cash $135.88 (unchanged overnight, no fees) · equity $9,231.07 vs prior close $9,226.25 (+4.82) · 8 name(s) re-marked at the open (per-name table). GPRO×818 yday $1.34 → 09:30 $1.34 +0.00; QRVO×9 yday $119.51 → 09:30 $120.76 +11.25; SION×162 yday $7.18 → 09:30 $7.12 -9.72; INSP×15 yday $72.74 → 09:30 $72.29 -6.75; TJGC×102 yday $11.01 → 09:30 $10.86 -15.30; HPQ×33 yday $34.66 → 09:30 $34.74 +2.64; HPE×20 yday $61.04 → 09:30 $61.70 +13.20; DELL×2 yday $588.40 → 09:30 $593.15 +9.50 | — |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $135.88 | ▲ close $9,583.50 vs 09:30 $9,231.07 (session +352.43) | 16:00 close · cash $135.88 · equity $9,583.50 vs 09:30 $9,231.07 (+352.43; session marks +352.43) · 8 name(s) marked open→close (per-name table). GPRO×818 09:30 $1.34 → close $1.31 -24.54; QRVO×9 09:30 $120.76 → close $117.18 -32.22; SION×162 09:30 $7.12 → close $5.96 -187.92; INSP×15 09:30 $72.29 → close $76.78 +67.35; TJGC×102 09:30 $10.86 → close $16.84 +609.96; HPQ×33 09:30 $34.74 → close $34.40 -11.22; HPE×20 09:30 $61.70 → close $60.76 -18.80; DELL×2 09:30 $593.15 → close $568.06 -50.18 | — |
 
 ## Not taken
 
@@ -547,3 +574,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `CYPH` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `SION` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `SAFX` | hard_red | hard-red S=-3.84 sit; no new buys |
+
+## Still open (marked at last close)
+
+| Ticker | Shares | Entry | Why |
+|---|---:|---|---|
+| `GPRO` | 818 | 2026-09-11 @ $1.40 | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=-17.2; leftover $1145.71 |
+| `QRVO` | 9 | 2026-09-16 @ $118.18 | baseline list, no extra gate; list yday_gainer,ohlc_hot; 🔵; ⚪; ret5=+16.2; leftover $1126.81 |
+| `SION` | 162 | 2026-09-16 @ $6.95 | baseline list, no extra gate; list yday_mover,ohlc_hot; ret5=+16.3; leftover $1126.81 |
+| `INSP` | 15 | 2026-09-16 @ $73.17 | baseline list, no extra gate; list ohlc_hot; ret5=+17.5; leftover $1126.81 |
+| `TJGC` | 102 | 2026-09-16 @ $10.95 | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+13.5; leftover $1126.81 |
+| `HPQ` | 33 | 2026-09-16 @ $33.80 | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+11.1; leftover $1126.81 |
+| `HPE` | 20 | 2026-09-16 @ $55.51 | baseline list, no extra gate; list ohlc_hot; 🔵; ret5=+14.1; leftover $1126.81 |
+| `DELL` | 2 | 2026-09-16 @ $553.63 | baseline list, no extra gate; list ohlc_hot; ret5=+9.9; leftover $1126.81 |

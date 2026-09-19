@@ -1,6 +1,6 @@
 # Strategy improve — gainer reverse-run
 
-_Generated 2026-09-19T05:22:16-04:00 — research audit, not a wire._
+_Generated 2026-09-19T06:55:54-04:00 — research audit, not a wire._
 
 Liquid Finviz top-15 gainers (Change% ≥ 5%, mcap ≥ $100M, adv ≥ 500k) run back through the 09:30 packet that already printed. Same-day Change% only picks the universe.
 
@@ -24,7 +24,7 @@ All four bars below must be green on a rolling 10-session window. Book% / fill-r
 
 - Pass: Rolling 10 sessions: of each day's liquid top-15 (Change% ≥ 5%, mcap ≥ $100M, adv ≥ 500k), ≥ 25% are a hit, and ≥ 1 of the day's top-5 is a hit on at least 6 of those sessions. Hit = in stock-book 1d BUY ∪ flatten/KEEP tickets ∪ news |net| ≥ 1 ∪ a usable catalyst dossier.
 - Fail looks like: Same-day Change% is the universe only. A name that ripped with every camera dark and no list seat is a miss.
-- This window: mean recall 0% vs 25% bar; top-5 hit on 0/3 sessions
+- This window: mean recall 22% vs 25% bar; top-5 hit on 3/3 sessions
 
 ### `catalyst_targets_move` — Dossier seats are real company events, not stuck override captains · **FAIL**
 
@@ -51,24 +51,24 @@ Dossiers also run **after** the stock book in preopen ALL, so a healthy STEP1 st
 
 ## Reverse-run
 
-### 2026-09-16 · recall 0% (0/15) · top-5 hits 0 · dossiers 0/8 · flatten **sit**
+### 2026-09-16 · recall 27% (4/15) · top-5 hits 2 · dossiers 0/8 · flatten **sit**
 
 Catalyst targets: `NE`, `RIG`, `SLB`, `BKR`, `KGS`, `WHD`, `CNR`, `BTU`
 
 Dossier error: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NE
 
-KEEP hot4: `AVAH`, `BLFS`, `IQV`, `RDNT`
+KEEP hot4: `INDP`, `SWKS`, `GPRO`, `INSP`
 
 | # | Ticker | Δ | Sector | Hit | Why | Book | KEEP | News | Cat |
 |---:|---|---:|---|---|---|---|---|---|---|
-| 1 | `BBNX` | +15.3% | Healthcare |  | never_targeted |  |  |  |  |
+| 1 | `BBNX` | +15.3% | Healthcare | Y | captured |  | Y |  |  |
 | 2 | `EMAT` | +14.8% | Basic Materials |  | never_targeted |  |  |  |  |
-| 3 | `HLP` | +13.7% | Basic Materials |  | never_targeted |  |  |  |  |
+| 3 | `HLP` | +13.7% | Basic Materials | Y | captured |  | Y |  |  |
 | 4 | `DVLT` | +12.6% | Technology |  | never_targeted |  |  |  |  |
 | 5 | `BRUN` | +11.7% | Technology |  | never_targeted |  |  |  |  |
 | 6 | `AXTI` | +11.4% | Technology |  | never_targeted |  |  |  |  |
-| 7 | `ARQT` | +11.2% | Healthcare |  | never_targeted |  |  |  |  |
-| 8 | `FPS` | +11.1% | Industrials |  | never_targeted |  |  |  |  |
+| 7 | `ARQT` | +11.2% | Healthcare | Y | captured |  | Y |  |  |
+| 8 | `FPS` | +11.1% | Industrials | Y | captured |  | Y |  |  |
 | 9 | `SMTC` | +11.0% | Technology |  | never_targeted |  |  |  |  |
 | 10 | `SABR` | +11.0% | Technology |  | never_targeted |  |  |  |  |
 | 11 | `CIFR` | +10.8% | Technology |  | never_targeted |  |  |  |  |
@@ -77,22 +77,22 @@ KEEP hot4: `AVAH`, `BLFS`, `IQV`, `RDNT`
 | 14 | `CYPH` | +9.9% | Healthcare |  | never_targeted |  |  |  |  |
 | 15 | `BYND` | +9.6% | Consumer Defensive |  | never_targeted |  |  |  |  |
 
-### 2026-09-17 · recall 0% (0/15) · top-5 hits 0 · dossiers 0/8 · flatten **sit**
+### 2026-09-17 · recall 13% (2/15) · top-5 hits 1 · dossiers 0/8 · flatten **sit**
 
 Catalyst targets: `NE`, `RIG`, `SLB`, `BKR`, `KGS`, `WHD`, `CNR`, `BTU`
 
 Dossier error: OpenClaw and DeepSeek both returned empty for CATALYST STEP2 NE
 
-KEEP hot4: `AZTA`, `RVTY`, `IT`, `FIVN`
+KEEP hot4: `INDP`, `GPRO`, `INSP`, `TJGC`
 
 | # | Ticker | Δ | Sector | Hit | Why | Book | KEEP | News | Cat |
 |---:|---|---:|---|---|---|---|---|---|---|
 | 1 | `DCX` | +37.5% | Consumer Cyclical |  | never_targeted |  |  |  |  |
-| 2 | `SDGR` | +26.4% | Healthcare |  | never_targeted |  |  |  |  |
+| 2 | `SDGR` | +26.4% | Healthcare | Y | captured |  | Y |  |  |
 | 3 | `TLSA` | +26.0% | Healthcare |  | never_targeted |  |  |  |  |
 | 4 | `CYPH` | +25.8% | Healthcare |  | never_targeted |  |  |  |  |
 | 5 | `USDE` | +24.4% | Financial |  | never_targeted |  |  |  |  |
-| 6 | `INDP` | +22.4% | Healthcare |  | never_targeted |  |  |  |  |
+| 6 | `INDP` | +22.4% | Healthcare | Y | captured |  | Y |  |  |
 | 7 | `LVWR` | +19.3% | Consumer Cyclical |  | never_targeted |  |  |  |  |
 | 8 | `GNRC` | +18.3% | Industrials |  | never_targeted |  |  |  |  |
 | 9 | `SWRD` | +17.7% | Financial |  | never_targeted |  |  |  |  |
@@ -103,30 +103,30 @@ KEEP hot4: `AZTA`, `RVTY`, `IT`, `FIVN`
 | 14 | `ABSI` | +15.3% | Healthcare |  | never_targeted |  |  |  |  |
 | 15 | `SECZ` | +14.9% | Technology |  | never_targeted |  |  |  |  |
 
-### 2026-09-18 · recall 0% (0/15) · top-5 hits 0 · dossiers 0/8 · flatten **sit**
+### 2026-09-18 · recall 27% (4/15) · top-5 hits 2 · dossiers 0/8 · flatten **sit**
 
 Catalyst targets: `NE`, `RIG`, `SLB`, `BKR`, `KGS`, `WHD`, `CNR`, `BTU`
 
 Dossier error: OpenClaw and DeepSeek both returned empty for CATALYST STEP2 NE
 
-KEEP hot4: `ARQT`, `ILMN`, `FTRE`, `SDGR`
+KEEP hot4: `INDP`, `BNC`, `GPRO`, `INSP`
 
 | # | Ticker | Δ | Sector | Hit | Why | Book | KEEP | News | Cat |
 |---:|---|---:|---|---|---|---|---|---|---|
 | 1 | `TJGC` | +53.0% | Communication Services |  | never_targeted |  |  |  |  |
-| 2 | `USDE` | +32.2% | Financial |  | never_targeted |  |  |  |  |
+| 2 | `USDE` | +32.2% | Financial | Y | captured |  | Y |  |  |
 | 3 | `GEMI` | +31.1% | Financial |  | never_targeted |  |  |  |  |
 | 4 | `FWDI` | +24.2% | Financial |  | never_targeted |  |  |  |  |
-| 5 | `SECZ` | +21.6% | Technology |  | never_targeted |  |  |  |  |
+| 5 | `SECZ` | +21.6% | Technology | Y | captured |  | Y |  |  |
 | 6 | `FEAM` | +21.4% | Basic Materials |  | never_targeted |  |  |  |  |
 | 7 | `DFDV` | +21.2% | Financial |  | never_targeted |  |  |  |  |
-| 8 | `CYPH` | +17.3% | Healthcare |  | never_targeted |  |  |  |  |
+| 8 | `CYPH` | +17.3% | Healthcare | Y | captured |  | Y |  |  |
 | 9 | `CAN` | +16.8% | Technology |  | never_targeted |  |  |  |  |
 | 10 | `MSTR` | +16.4% | Technology |  | never_targeted |  |  |  |  |
 | 11 | `BKKT` | +15.4% | Technology |  | never_targeted |  |  |  |  |
 | 12 | `BTDR` | +15.4% | Technology |  | never_targeted |  |  |  |  |
 | 13 | `AMTX` | +14.9% | Basic Materials |  | never_targeted |  |  |  |  |
-| 14 | `LVWR` | +14.8% | Consumer Cyclical |  | never_targeted |  |  |  |  |
+| 14 | `LVWR` | +14.8% | Consumer Cyclical | Y | captured |  | Y |  |  |
 | 15 | `ORBS` | +14.7% | Consumer Cyclical |  | never_targeted |  |  |  |  |
 
 ## How to extend the reverse-run

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `w_hot_cond` · size `leftover` · sell `list` · S-boost `none` · rank by w_hot_cond
 
-Cash book **+0.74%** ($10,074) · signal-only (no cash/fees) was +14.67%. Starts YES **17/26**. Fills 208 · skips 82 · realized $+300.83.
+Cash book **+5.23%** ($10,523) · signal-only (no cash/fees) was +19.62%. Starts YES **25/26**. Fills 206 · skips 82 · realized $+131.42.
 
 ## How this sleeve decides (like you are 10)
 
@@ -53,7 +53,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $115.21.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $6.26.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -259,31 +259,38 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `INDP` | 455 | $3.14 | $3.40 | +118.30 | $3.64 | +109.20 | +227.50 | +318.50 | +427.70 |
 | 2026-09-15 | `BNC` | 250 | $5.27 | $5.11 | -40.00 | — | +0.00 | -40.00 | +50.00 | — |
 | 2026-09-15 | `CMRC` | 393 | $3.64 | $3.64 | +0.00 | — | +0.00 | +0.00 | +200.43 | — |
-| 2026-09-16 | `INDP` | 455 | $3.64 | $3.66 | +9.10 | — | +0.00 | +9.10 | +436.80 | — |
-| 2026-09-16 | `AVAH` | 181 | — | $14.31 | +0.00 | $14.26 | -9.05 | -9.05 | +0.00 | -9.05 |
-| 2026-09-16 | `RDNT` | 33 | — | $77.12 | +0.00 | $75.78 | -44.22 | -44.22 | +0.00 | -44.22 |
-| 2026-09-16 | `BLFS` | 71 | — | $36.46 | +0.00 | $36.11 | -24.85 | -24.85 | +0.00 | -24.85 |
-| 2026-09-16 | `IQV` | 9 | — | $270.89 | +0.00 | $268.82 | -18.63 | -18.63 | +0.00 | -18.63 |
-| 2026-09-17 | `AVAH` | 181 | $14.26 | $14.33 | +12.67 | — | +0.00 | +12.67 | +3.62 | — |
-| 2026-09-17 | `RDNT` | 33 | $75.78 | $76.44 | +21.78 | — | +0.00 | +21.78 | -22.44 | — |
-| 2026-09-17 | `BLFS` | 71 | $36.11 | $36.67 | +39.76 | — | +0.00 | +39.76 | +14.91 | — |
-| 2026-09-17 | `IQV` | 9 | $268.82 | $273.15 | +38.97 | — | +0.00 | +38.97 | +20.34 | — |
-| 2026-09-17 | `FIVN` | 49 | — | $34.75 | +0.00 | $34.50 | -12.25 | -12.25 | +0.00 | -12.25 |
-| 2026-09-17 | `IOT` | 42 | — | $40.48 | +0.00 | $40.00 | -19.95 | -19.95 | +0.00 | -19.95 |
-| 2026-09-17 | `IT` | 9 | — | $191.61 | +0.00 | $187.80 | -34.29 | -34.29 | +0.00 | -34.29 |
-| 2026-09-17 | `RVTY` | 11 | — | $147.61 | +0.00 | $146.73 | -9.68 | -9.68 | +0.00 | -9.68 |
-| 2026-09-17 | `AZTA` | 50 | — | $33.94 | +0.00 | $33.63 | -15.50 | -15.50 | +0.00 | -15.50 |
-| 2026-09-17 | `WAY` | 65 | — | $26.51 | +0.00 | $26.51 | +0.00 | +0.00 | +0.00 | +0.00 |
-| 2026-09-18 | `FIVN` | 49 | $34.50 | $34.44 | -2.94 | — | +0.00 | -2.94 | -15.19 | — |
-| 2026-09-18 | `IOT` | 42 | $40.00 | $40.42 | +17.64 | — | +0.00 | +17.64 | -2.31 | — |
-| 2026-09-18 | `IT` | 9 | $187.80 | $188.32 | +4.68 | — | +0.00 | +4.68 | -29.61 | — |
-| 2026-09-18 | `RVTY` | 11 | $146.73 | $146.50 | -2.53 | — | +0.00 | -2.53 | -12.21 | — |
-| 2026-09-18 | `AZTA` | 50 | $33.63 | $33.44 | -9.50 | — | +0.00 | -9.50 | -25.00 | — |
-| 2026-09-18 | `WAY` | 65 | $26.51 | $26.95 | +28.60 | — | +0.00 | +28.60 | +28.60 | — |
-| 2026-09-18 | `ILMN` | 10 | — | $249.13 | +0.00 | $239.62 | -95.10 | -95.10 | +0.00 | -95.10 |
-| 2026-09-18 | `ARQT` | 98 | — | $26.14 | +0.00 | $25.38 | -74.48 | -74.48 | +0.00 | -74.48 |
-| 2026-09-18 | `FTRE` | 128 | — | $20.10 | +0.00 | $19.93 | -21.76 | -21.76 | +0.00 | -21.76 |
-| 2026-09-18 | `SDGR` | 87 | — | $29.32 | +0.00 | $29.02 | -26.10 | -26.10 | +0.00 | -26.10 |
+| 2026-09-16 | `INDP` | 455 | $3.64 | $3.66 | +9.10 | $3.21 | -204.75 | -195.65 | +436.80 | +232.05 |
+| 2026-09-16 | `SWKS` | 13 | — | $89.38 | +0.00 | $85.59 | -49.27 | -49.27 | +0.00 | -49.27 |
+| 2026-09-16 | `QRVO` | 10 | — | $118.18 | +0.00 | $113.97 | -42.10 | -42.10 | +0.00 | -42.10 |
+| 2026-09-16 | `CLOV` | 263 | — | $4.73 | +0.00 | $4.56 | -44.71 | -44.71 | +0.00 | -44.71 |
+| 2026-09-16 | `UMC` | 55 | — | $22.49 | +0.00 | $22.53 | +2.20 | +2.20 | +0.00 | +2.20 |
+| 2026-09-16 | `HPQ` | 36 | — | $33.80 | +0.00 | $32.70 | -39.60 | -39.60 | +0.00 | -39.60 |
+| 2026-09-16 | `HPE` | 22 | — | $55.51 | +0.00 | $56.68 | +25.74 | +25.74 | +0.00 | +25.74 |
+| 2026-09-16 | `AMD` | 2 | — | $517.39 | +0.00 | $512.50 | -9.78 | -9.78 | +0.00 | -9.78 |
+| 2026-09-17 | `INDP` | 455 | $3.21 | $3.30 | +40.95 | $3.93 | +286.65 | +327.60 | +273.00 | +559.65 |
+| 2026-09-17 | `SWKS` | 13 | $85.59 | $86.76 | +15.21 | — | +0.00 | +15.21 | -34.06 | — |
+| 2026-09-17 | `QRVO` | 10 | $113.97 | $114.90 | +9.30 | $119.51 | +46.10 | +55.40 | -32.80 | +13.30 |
+| 2026-09-17 | `CLOV` | 263 | $4.56 | $4.56 | +0.00 | — | +0.00 | +0.00 | -44.71 | — |
+| 2026-09-17 | `UMC` | 55 | $22.53 | $23.51 | +53.90 | $24.47 | +52.80 | +106.70 | +56.10 | +108.90 |
+| 2026-09-17 | `HPQ` | 36 | $32.70 | $33.01 | +11.16 | $34.66 | +59.40 | +70.56 | -28.44 | +30.96 |
+| 2026-09-17 | `HPE` | 22 | $56.68 | $57.25 | +12.54 | — | +0.00 | +12.54 | +38.28 | — |
+| 2026-09-17 | `AMD` | 2 | $512.50 | $533.60 | +42.20 | — | +0.00 | +42.20 | +32.42 | — |
+| 2026-09-17 | `DELL` | 2 | — | $570.40 | +0.00 | $588.40 | +36.00 | +36.00 | +0.00 | +36.00 |
+| 2026-09-17 | `INSP` | 17 | — | $73.54 | +0.00 | $72.74 | -13.60 | -13.60 | +0.00 | -13.60 |
+| 2026-09-17 | `SMTC` | 7 | — | $170.85 | +0.00 | $178.19 | +51.38 | +51.38 | +0.00 | +51.38 |
+| 2026-09-17 | `CLS` | 3 | — | $337.75 | +0.00 | $329.94 | -23.43 | -23.43 | +0.00 | -23.43 |
+| 2026-09-18 | `INDP` | 455 | $3.93 | $3.85 | -36.40 | $3.55 | -136.50 | -172.90 | +523.25 | +386.75 |
+| 2026-09-18 | `QRVO` | 10 | $119.51 | $120.76 | +12.50 | $117.18 | -35.80 | -23.30 | +25.80 | -10.00 |
+| 2026-09-18 | `UMC` | 55 | $24.47 | $24.45 | -1.10 | — | +0.00 | -1.10 | +107.80 | — |
+| 2026-09-18 | `HPQ` | 36 | $34.66 | $34.74 | +2.88 | $34.40 | -12.24 | -9.36 | +33.84 | +21.60 |
+| 2026-09-18 | `DELL` | 2 | $588.40 | $593.15 | +9.50 | — | +0.00 | +9.50 | +45.50 | — |
+| 2026-09-18 | `INSP` | 17 | $72.74 | $72.29 | -7.65 | $76.78 | +76.33 | +68.68 | -21.25 | +55.08 |
+| 2026-09-18 | `SMTC` | 7 | $178.19 | $182.33 | +28.98 | — | +0.00 | +28.98 | +80.36 | — |
+| 2026-09-18 | `CLS` | 3 | $329.94 | $332.06 | +6.36 | — | +0.00 | +6.36 | -17.07 | — |
+| 2026-09-18 | `BNC` | 224 | — | $5.83 | +0.00 | $5.98 | +33.60 | +33.60 | +0.00 | +33.60 |
+| 2026-09-18 | `GME` | 57 | — | $22.90 | +0.00 | $22.64 | -14.82 | -14.82 | +0.00 | -14.82 |
+| 2026-09-18 | `GPRO` | 977 | — | $1.34 | +0.00 | $1.31 | -29.31 | -29.31 | +0.00 | -29.31 |
+| 2026-09-18 | `HPE` | 21 | — | $61.70 | +0.00 | $60.76 | -19.74 | -19.74 | +0.00 | -19.74 |
 
 ## Each session (cash + holdings state)
 
@@ -312,9 +319,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | +0.50 | $9,844.83 | — | $9,844.83 | +0.00 | +147.38 | INDP, BNC, CMRC, GPRO, SWKS, WLTH, ASO, PAYP | — | $53.73 | $9,958.10 | INDP×455, BNC×250, CMRC×393, GPRO×879, SWKS×14, WLTH×112, ASO×22, PAYP×67 |
 | 2026-09-14 | -11.00 | $53.73 | INDP×455, BNC×250, CMRC×393, GPRO×879, SWKS×14, WLTH×112, ASO×22, PAYP×67 | $9,955.47 | -2.63 | +265.79 | — | GPRO, SWKS, WLTH, ASO, PAYP | $6,024.35 | $10,201.07 | INDP×455, BNC×250, CMRC×393 |
 | 2026-09-15 | -3.84 | $6,024.35 | INDP×455, BNC×250, CMRC×393 | $10,279.37 | +78.30 | +109.20 | — | BNC, CMRC | $8,723.95 | $10,380.15 | INDP×455 |
-| 2026-09-16 | +5.30 | $8,723.95 | INDP×455 | $10,389.25 | +9.10 | -96.75 | AVAH, RDNT, BLFS, IQV | INDP | $212.71 | $10,277.70 | AVAH×181, RDNT×33, BLFS×71, IQV×9 |
-| 2026-09-17 | +7.38 | $212.71 | AVAH×181, RDNT×33, BLFS×71, IQV×9 | $10,390.88 | +113.18 | -91.67 | FIVN, IOT, IT, RVTY, AZTA, WAY | AVAH, RDNT, BLFS, IQV | $198.23 | $10,277.61 | FIVN×49, IOT×42, IT×9, RVTY×11, AZTA×50, WAY×65 |
-| 2026-09-18 | +4.86 | $198.23 | FIVN×49, IOT×42, IT×9, RVTY×11, AZTA×50, WAY×65 | $10,313.56 | +35.95 | -217.44 | ILMN, ARQT, FTRE, SDGR | FIVN, IOT, IT, RVTY, AZTA, WAY | $115.21 | $10,074.43 | ILMN×10, ARQT×98, FTRE×128, SDGR×87 |
+| 2026-09-16 | +5.30 | $8,723.95 | INDP×455 | $10,389.25 | +9.10 | -362.27 | SWKS, QRVO, CLOV, UMC, HPQ, HPE, AMD | — | $410.72 | $10,011.23 | INDP×455, SWKS×13, QRVO×10, CLOV×263, UMC×55, HPQ×36, HPE×22, AMD×2 |
+| 2026-09-17 | +7.38 | $410.72 | INDP×455, SWKS×13, QRVO×10, CLOV×263, UMC×55, HPQ×36, HPE×22, AMD×2 | $10,196.49 | +185.26 | +495.30 | DELL, INSP, SMTC, CLS | SWKS, CLOV, HPE, AMD | $446.77 | $10,674.16 | INDP×455, QRVO×10, UMC×55, HPQ×36, DELL×2, INSP×17, SMTC×7, CLS×3 |
+| 2026-09-18 | +4.86 | $446.77 | INDP×455, QRVO×10, UMC×55, HPQ×36, DELL×2, INSP×17, SMTC×7, CLS×3 | $10,689.23 | +15.07 | -138.48 | BNC, GME, GPRO, HPE | UMC, DELL, SMTC, CLS | $6.26 | $10,522.80 | INDP×455, QRVO×10, HPQ×36, INSP×17, BNC×224, GME×57, GPRO×977, HPE×21 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -550,36 +557,34 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 09:30 ET | **SELL** | `CMRC` | 393 | $3.64 | $5.15 | $+190.21 | $8,723.95 | ▲ +190.21 after sell → book $10,270.95; vs 09:30 mark -5.15 | dropped from list after 2 sess (min 1) | — |
 | 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,723.95 | ▲ close $10,380.15 vs 09:30 $10,279.37 (session +109.20) | 16:00 close · cash $8,723.95 · equity $10,380.15 vs 09:30 $10,279.37 (+100.78; session marks +109.20) · 1 name(s) marked open→close (per-name table). INDP×455 09:30 $3.40 → close $3.64 +109.20 | — |
 | 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,723.95 | ▲ 09:30 equity $10,389.25 vs yday $10,380.15 (+9.10) | 09:30 open · cash $8,723.95 (unchanged overnight, no fees) · equity $10,389.25 vs prior close $10,380.15 (+9.10) · 1 name(s) re-marked at the open (per-name table). INDP×455 yday $3.64 → 09:30 $3.66 +9.10 | — |
-| 2026-09-16 09:30 ET | **SELL** | `INDP` | 455 | $3.66 | $5.96 | $+424.97 | $10,383.29 | ▲ +424.97 after sell → book $10,383.29; vs 09:30 mark -5.96 | dropped from list after 3 sess (min 1) | — |
-| 2026-09-16 09:30 ET | **BUY** | `AVAH` | 181 | $14.31 | $2.53 | — | $7,790.65 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=+3.2; leftover $2595.82 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
-| 2026-09-16 09:30 ET | **BUY** | `RDNT` | 33 | $77.12 | $2.09 | — | $5,243.60 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=-5.1; leftover $2595.82 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-16 09:30 ET | **BUY** | `BLFS` | 71 | $36.46 | $2.20 | — | $2,652.74 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=-4.6; leftover $2595.82 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-16 09:30 ET | **BUY** | `IQV` | 9 | $270.89 | $2.02 | — | $212.71 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=-0.8; leftover $2595.82 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $212.71 | ▼ close $10,277.70 vs 09:30 $10,389.25 (session -96.75) | 16:00 close · cash $212.71 · equity $10,277.70 vs 09:30 $10,389.25 (-111.55; session marks -96.75) · 4 name(s) marked open→close (per-name table). AVAH×181 09:30 $14.31 → close $14.26 -9.05; RDNT×33 09:30 $77.12 → close $75.78 -44.22; BLFS×71 09:30 $36.46 → close $36.11 -24.85; IQV×9 09:30 $270.89 → close $268.82 -18.63 | — |
-| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $212.71 | ▲ 09:30 equity $10,390.88 vs yday $10,277.70 (+113.18) | 09:30 open · cash $212.71 (unchanged overnight, no fees) · equity $10,390.88 vs prior close $10,277.70 (+113.18) · 4 name(s) re-marked at the open (per-name table). AVAH×181 yday $14.26 → 09:30 $14.33 +12.67; RDNT×33 yday $75.78 → 09:30 $76.44 +21.78; BLFS×71 yday $36.11 → 09:30 $36.67 +39.76; IQV×9 yday $268.82 → 09:30 $273.15 +38.97 | — |
-| 2026-09-17 09:30 ET | **SELL** | `AVAH` | 181 | $14.33 | $2.58 | $-1.50 | $2,803.86 | ▼ -1.50 after sell → book $10,388.30; vs 09:30 mark -2.58 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-17 09:30 ET | **SELL** | `RDNT` | 33 | $76.44 | $2.12 | $-26.65 | $5,324.26 | ▼ -26.65 after sell → book $10,386.18; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-17 09:30 ET | **SELL** | `BLFS` | 71 | $36.67 | $2.24 | $+10.47 | $7,925.59 | ▲ +10.47 after sell → book $10,383.94; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-17 09:30 ET | **SELL** | `IQV` | 9 | $273.15 | $2.05 | $+16.28 | $10,381.89 | ▲ +16.28 after sell → book $10,381.89; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-17 09:30 ET | **BUY** | `FIVN` | 49 | $34.75 | $2.14 | — | $8,677.01 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=-9.6; leftover $1730.32 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-17 09:30 ET | **BUY** | `IOT` | 42 | $40.48 | $2.12 | — | $6,974.94 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=-1.0; leftover $1730.32 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-17 09:30 ET | **BUY** | `IT` | 9 | $191.61 | $2.02 | — | $5,248.43 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ret5=-12.9; leftover $1730.32 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-09-17 09:30 ET | **BUY** | `RVTY` | 11 | $147.61 | $2.02 | — | $3,622.70 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ret5=-4.8; leftover $1730.32 | join🟢 sector🟢 gen🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-17 09:30 ET | **BUY** | `AZTA` | 50 | $33.94 | $2.14 | — | $1,923.56 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ret5=-1.1; leftover $1730.32 | join🟢 sector🟢 gen🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-17 09:30 ET | **BUY** | `WAY` | 65 | $26.51 | $2.19 | — | $198.23 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ret5=-7.4; leftover $1730.32 | join🟢 sector🟢 gen🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $198.23 | ▼ close $10,277.61 vs 09:30 $10,390.88 (session -91.67) | 16:00 close · cash $198.23 · equity $10,277.61 vs 09:30 $10,390.88 (-113.27; session marks -91.67) · 6 name(s) marked open→close (per-name table). FIVN×49 09:30 $34.75 → close $34.50 -12.25; IOT×42 09:30 $40.48 → close $40.00 -19.95; IT×9 09:30 $191.61 → close $187.80 -34.29; RVTY×11 09:30 $147.61 → close $146.73 -9.68; AZTA×50 09:30 $33.94 → close $33.63 -15.50; WAY×65 09:30 $26.51 → close $26.51 +0.00 | — |
-| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $198.23 | ▲ 09:30 equity $10,313.56 vs yday $10,277.61 (+35.95) | 09:30 open · cash $198.23 (unchanged overnight, no fees) · equity $10,313.56 vs prior close $10,277.61 (+35.95) · 6 name(s) re-marked at the open (per-name table). FIVN×49 yday $34.50 → 09:30 $34.44 -2.94; IOT×42 yday $40.00 → 09:30 $40.42 +17.64; IT×9 yday $187.80 → 09:30 $188.32 +4.68; RVTY×11 yday $146.73 → 09:30 $146.50 -2.53; AZTA×50 yday $33.63 → 09:30 $33.44 -9.50; WAY×65 yday $26.51 → 09:30 $26.95 +28.60 | — |
-| 2026-09-18 09:30 ET | **SELL** | `FIVN` | 49 | $34.44 | $2.16 | $-19.49 | $1,883.63 | ▼ -19.49 after sell → book $10,311.40; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-18 09:30 ET | **SELL** | `IOT` | 42 | $40.42 | $2.14 | $-6.57 | $3,579.13 | ▼ -6.57 after sell → book $10,309.26; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-18 09:30 ET | **SELL** | `IT` | 9 | $188.32 | $2.04 | $-33.67 | $5,271.97 | ▼ -33.67 after sell → book $10,307.22; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-18 09:30 ET | **SELL** | `RVTY` | 11 | $146.50 | $2.05 | $-16.28 | $6,881.42 | ▼ -16.28 after sell → book $10,305.17; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-18 09:30 ET | **SELL** | `AZTA` | 50 | $33.44 | $2.16 | $-29.30 | $8,551.26 | ▼ -29.30 after sell → book $10,303.01; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-18 09:30 ET | **SELL** | `WAY` | 65 | $26.95 | $2.21 | $+24.21 | $10,300.80 | ▲ +24.21 after sell → book $10,300.80; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-18 09:30 ET | **BUY** | `ILMN` | 10 | $249.13 | $2.02 | — | $7,807.48 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=-6.9; leftover $2575.20 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
-| 2026-09-18 09:30 ET | **BUY** | `ARQT` | 98 | $26.14 | $2.28 | — | $5,243.47 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=+1.8; leftover $2575.20 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-18 09:30 ET | **BUY** | `FTRE` | 128 | $20.10 | $2.37 | — | $2,668.30 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=-7.1; leftover $2575.20 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-18 09:30 ET | **BUY** | `SDGR` | 87 | $29.32 | $2.25 | — | $115.21 | — | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=-8.2; leftover $2575.20 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $115.21 | ▼ close $10,074.43 vs 09:30 $10,313.56 (session -217.44) | 16:00 close · cash $115.21 · equity $10,074.43 vs 09:30 $10,313.56 (-239.13; session marks -217.44) · 4 name(s) marked open→close (per-name table). ILMN×10 09:30 $249.13 → close $239.62 -95.10; ARQT×98 09:30 $26.14 → close $25.38 -74.48; FTRE×128 09:30 $20.10 → close $19.93 -21.76; SDGR×87 09:30 $29.32 → close $29.02 -26.10 | — |
+| 2026-09-16 09:30 ET | **BUY** | `SWKS` | 13 | $89.38 | $2.03 | — | $7,559.98 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+23.6; leftover $1246.28 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `QRVO` | 10 | $118.18 | $2.02 | — | $6,376.16 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,ohlc_hot; 🔵; ⚪; ret5=+16.2; leftover $1246.28 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `CLOV` | 263 | $4.73 | $3.39 | — | $5,128.78 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+13.3; leftover $1246.28 | join🟢 sector🟢 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-09-16 09:30 ET | **BUY** | `UMC` | 55 | $22.49 | $2.15 | — | $3,889.67 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+9.8; leftover $1246.28 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `HPQ` | 36 | $33.80 | $2.10 | — | $2,670.78 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+11.1; leftover $1246.28 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `HPE` | 22 | $55.51 | $2.06 | — | $1,447.50 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+14.1; leftover $1246.28 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `AMD` | 2 | $517.39 | $2.00 | — | $410.72 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+7.4; leftover $1246.28 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $410.72 | ▼ close $10,011.23 vs 09:30 $10,389.25 (session -362.27) | 16:00 close · cash $410.72 · equity $10,011.23 vs 09:30 $10,389.25 (-378.02; session marks -362.27) · 8 name(s) marked open→close (per-name table). INDP×455 09:30 $3.66 → close $3.21 -204.75; SWKS×13 09:30 $89.38 → close $85.59 -49.27; QRVO×10 09:30 $118.18 → close $113.97 -42.10; CLOV×263 09:30 $4.73 → close $4.56 -44.71; UMC×55 09:30 $22.49 → close $22.53 +2.20; HPQ×36 09:30 $33.80 → close $32.70 -39.60; HPE×22 09:30 $55.51 → close $56.68 +25.74; AMD×2 09:30 $517.39 → close $512.50 -9.78 | — |
+| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $410.72 | ▲ 09:30 equity $10,196.49 vs yday $10,011.23 (+185.26) | 09:30 open · cash $410.72 (unchanged overnight, no fees) · equity $10,196.49 vs prior close $10,011.23 (+185.26) · 8 name(s) re-marked at the open (per-name table). INDP×455 yday $3.21 → 09:30 $3.30 +40.95; SWKS×13 yday $85.59 → 09:30 $86.76 +15.21; QRVO×10 yday $113.97 → 09:30 $114.90 +9.30; CLOV×263 yday $4.56 → 09:30 $4.56 +0.00; UMC×55 yday $22.53 → 09:30 $23.51 +53.90; HPQ×36 yday $32.70 → 09:30 $33.01 +11.16; HPE×22 yday $56.68 → 09:30 $57.25 +12.54; AMD×2 yday $512.50 → 09:30 $533.60 +42.20 | — |
+| 2026-09-17 09:30 ET | **SELL** | `SWKS` | 13 | $86.76 | $2.05 | $-38.14 | $1,536.55 | ▼ -38.14 after sell → book $10,194.44; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-17 09:30 ET | **SELL** | `CLOV` | 263 | $4.56 | $3.45 | $-51.55 | $2,732.39 | ▼ -51.55 after sell → book $10,191.00; vs 09:30 mark -3.44 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-17 09:30 ET | **SELL** | `HPE` | 22 | $57.25 | $2.08 | $+34.15 | $3,989.81 | ▲ +34.15 after sell → book $10,188.92; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-09-17 09:30 ET | **SELL** | `AMD` | 2 | $533.60 | $2.02 | $+28.41 | $5,055.00 | ▲ +28.41 after sell → book $10,186.91; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-17 09:30 ET | **BUY** | `DELL` | 2 | $570.40 | $2.00 | — | $3,912.20 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+9.9; leftover $1263.75 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-17 09:30 ET | **BUY** | `INSP` | 17 | $73.54 | $2.04 | — | $2,659.98 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+17.5; leftover $1263.75 | join🟢 sector🟢 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-17 09:30 ET | **BUY** | `SMTC` | 7 | $170.85 | $2.01 | — | $1,462.02 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ret5=+23.5; leftover $1263.75 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-17 09:30 ET | **BUY** | `CLS` | 3 | $337.75 | $2.00 | — | $446.77 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+10.2; leftover $1263.75 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $446.77 | ▲ close $10,674.16 vs 09:30 $10,196.49 (session +495.30) | 16:00 close · cash $446.77 · equity $10,674.16 vs 09:30 $10,196.49 (+477.67; session marks +495.30) · 8 name(s) marked open→close (per-name table). INDP×455 09:30 $3.30 → close $3.93 +286.65; QRVO×10 09:30 $114.90 → close $119.51 +46.10; UMC×55 09:30 $23.51 → close $24.47 +52.80; HPQ×36 09:30 $33.01 → close $34.66 +59.40; DELL×2 09:30 $570.40 → close $588.40 +36.00; INSP×17 09:30 $73.54 → close $72.74 -13.60; SMTC×7 09:30 $170.85 → close $178.19 +51.38; CLS×3 09:30 $337.75 → close $329.94 -23.43 | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $446.77 | ▲ 09:30 equity $10,689.23 vs yday $10,674.16 (+15.07) | 09:30 open · cash $446.77 (unchanged overnight, no fees) · equity $10,689.23 vs prior close $10,674.16 (+15.07) · 8 name(s) re-marked at the open (per-name table). INDP×455 yday $3.93 → 09:30 $3.85 -36.40; QRVO×10 yday $119.51 → 09:30 $120.76 +12.50; UMC×55 yday $24.47 → 09:30 $24.45 -1.10; HPQ×36 yday $34.66 → 09:30 $34.74 +2.88; DELL×2 yday $588.40 → 09:30 $593.15 +9.50; INSP×17 yday $72.74 → 09:30 $72.29 -7.65; SMTC×7 yday $178.19 → 09:30 $182.33 +28.98; CLS×3 yday $329.94 → 09:30 $332.06 +6.36 | — |
+| 2026-09-18 09:30 ET | **SELL** | `UMC` | 55 | $24.45 | $2.18 | $+103.47 | $1,789.34 | ▲ +103.47 after sell → book $10,687.05; vs 09:30 mark -2.18 | dropped from list after 2 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-18 09:30 ET | **SELL** | `DELL` | 2 | $593.15 | $2.02 | $+41.49 | $2,973.63 | ▲ +41.49 after sell → book $10,685.04; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-18 09:30 ET | **SELL** | `SMTC` | 7 | $182.33 | $2.03 | $+76.32 | $4,247.91 | ▲ +76.32 after sell → book $10,683.01; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-18 09:30 ET | **SELL** | `CLS` | 3 | $332.06 | $2.02 | $-21.09 | $5,242.07 | ▼ -21.09 after sell → book $10,680.99; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-18 09:30 ET | **BUY** | `BNC` | 224 | $5.83 | $2.89 | — | $3,933.26 | — | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ret5=+45.9; leftover $1310.52 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-18 09:30 ET | **BUY** | `GME` | 57 | $22.90 | $2.16 | — | $2,625.80 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ⚪; ret5=+10.0; leftover $1310.52 | join🟢 sector🟢 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-09-18 09:30 ET | **BUY** | `GPRO` | 977 | $1.34 | $12.60 | — | $1,304.01 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=-0.7; leftover $1310.52 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-18 09:30 ET | **BUY** | `HPE` | 21 | $61.70 | $2.05 | — | $6.26 | — | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+14.1; leftover $1310.52 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.26 | ▼ close $10,522.80 vs 09:30 $10,689.23 (session -138.48) | 16:00 close · cash $6.26 · equity $10,522.80 vs 09:30 $10,689.23 (-166.43; session marks -138.48) · 8 name(s) marked open→close (per-name table). INDP×455 09:30 $3.85 → close $3.55 -136.50; QRVO×10 09:30 $120.76 → close $117.18 -35.80; HPQ×36 09:30 $34.74 → close $34.40 -12.24; INSP×17 09:30 $72.29 → close $76.78 +76.33; BNC×224 09:30 $5.83 → close $5.98 +33.60; GME×57 09:30 $22.90 → close $22.64 -14.82; GPRO×977 09:30 $1.34 → close $1.31 -29.31; HPE×21 09:30 $61.70 → close $60.76 -19.74 | — |
 
 ## Not taken
 
@@ -672,7 +677,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `ILMN` | 10 | 2026-09-18 @ $249.13 | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=-6.9; leftover $2575.20 |
-| `ARQT` | 98 | 2026-09-18 @ $26.14 | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=+1.8; leftover $2575.20 |
-| `FTRE` | 128 | 2026-09-18 @ $20.10 | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=-7.1; leftover $2575.20 |
-| `SDGR` | 87 | 2026-09-18 @ $29.32 | rank by w_hot_cond; rank w_hot_cond; list flatten; ⚪; ret5=-8.2; leftover $2575.20 |
+| `INDP` | 455 | 2026-09-11 @ $2.70 | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ret5=+118.8; leftover $1230.60 |
+| `QRVO` | 10 | 2026-09-16 @ $118.18 | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,ohlc_hot; 🔵; ⚪; ret5=+16.2; leftover $1246.28 |
+| `HPQ` | 36 | 2026-09-16 @ $33.80 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+11.1; leftover $1246.28 |
+| `INSP` | 17 | 2026-09-17 @ $73.54 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+17.5; leftover $1263.75 |
+| `BNC` | 224 | 2026-09-18 @ $5.83 | rank by w_hot_cond; rank w_hot_cond; list yday_gainer,yday_mover; 🔵; ret5=+45.9; leftover $1310.52 |
+| `GME` | 57 | 2026-09-18 @ $22.90 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ⚪; ret5=+10.0; leftover $1310.52 |
+| `GPRO` | 977 | 2026-09-18 @ $1.34 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=-0.7; leftover $1310.52 |
+| `HPE` | 21 | 2026-09-18 @ $61.70 | rank by w_hot_cond; rank w_hot_cond; list ohlc_hot; 🔵; ret5=+14.1; leftover $1310.52 |

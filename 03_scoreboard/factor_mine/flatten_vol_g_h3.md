@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · flatten wish-list ∩ vol🟢
 
-Cash book **-25.48%** ($7,452) · signal-only (no cash/fees) was -23.82%. Starts YES **0/26**. Fills 51 · skips 65 · realized $-2435.51.
+Cash book **-25.48%** ($7,452) · signal-only (no cash/fees) was -21.05%. Starts YES **1/26**. Fills 51 · skips 67 · realized $-2435.51.
 
 ## How this sleeve decides (like you are 10)
 
@@ -306,7 +306,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5.06 | ▼ close $7,583.96 vs 09:30 $7,751.90 (session -167.94) | 16:00 close · cash $5.06 · equity $7,583.96 vs 09:30 $7,751.90 (-167.94; session marks -167.94) · 1 name(s) marked open→close (per-name table). ORCL×54 09:30 $143.46 → close $140.35 -167.94 | — |
 | 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5.06 | ▼ 09:30 equity $7,566.68 vs yday $7,583.96 (-17.28) | 09:30 open · cash $5.06 (unchanged overnight, no fees) · equity $7,566.68 vs prior close $7,583.96 (-17.28) · 1 name(s) re-marked at the open (per-name table). ORCL×54 yday $140.35 → 09:30 $140.03 -17.28 | — |
 | 2026-09-16 09:30 ET | **SELL** | `ORCL` | 54 | $140.03 | $2.22 | $-1321.97 | $7,564.45 | ▼ -1,321.97 after sell → book $7,564.45; vs 09:30 mark -2.23 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **BUY** | `RDNT` | 98 | $77.12 | $2.28 | — | $4.41 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=-5.1; leftover $7564.45 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `RDNT` | 98 | $77.12 | $2.28 | — | $4.41 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); ret5=-5.1; leftover $7564.45 | join🟢 sector🟢 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.41 | ▼ close $7,430.85 vs 09:30 $7,566.68 (session -131.32) | 16:00 close · cash $4.41 · equity $7,430.85 vs 09:30 $7,566.68 (-135.83; session marks -131.32) · 1 name(s) marked open→close (per-name table). RDNT×98 09:30 $77.12 → close $75.78 -131.32 | — |
 | 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4.41 | ▲ 09:30 equity $7,495.53 vs yday $7,430.85 (+64.68) | 09:30 open · cash $4.41 (unchanged overnight, no fees) · equity $7,495.53 vs prior close $7,430.85 (+64.68) · 1 name(s) re-marked at the open (per-name table). RDNT×98 yday $75.78 → 09:30 $76.44 +64.68 | — |
 | 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.41 | ▲ close $7,626.85 vs 09:30 $7,495.53 (session +131.32) | 16:00 close · cash $4.41 · equity $7,626.85 vs 09:30 $7,495.53 (+131.32; session marks +131.32) · 1 name(s) marked open→close (per-name table). RDNT×98 09:30 $76.44 → close $77.78 +131.32 | — |
@@ -376,7 +376,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `ORCL` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-15 | `ICLR` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-17 | `RDNT` | min_hold | dropped but min-hold 1/3 sess — no sell |
-| 2026-09-17 | `RVTY` | cash | leftover split 4.41 < 1 share @ 147.61 |
+| 2026-09-17 | `ILMN` | cash | leftover split 1.47 < 1 share @ 233.85 |
+| 2026-09-17 | `RVTY` | cash | leftover split 1.47 < 1 share @ 147.61 |
+| 2026-09-17 | `PGEN` | cash | leftover split 1.47 < 1 share @ 7.59 |
 | 2026-09-18 | `RDNT` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-18 | `ILMN` | cash | leftover split 1.10 < 1 share @ 249.13 |
 | 2026-09-18 | `SDGR` | cash | leftover split 1.10 < 1 share @ 29.32 |
@@ -387,4 +389,4 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `RDNT` | 98 | 2026-09-16 @ $77.12 | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=-5.1; leftover $7564.45 |
+| `RDNT` | 98 | 2026-09-16 @ $77.12 | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); ret5=-5.1; leftover $7564.45 |

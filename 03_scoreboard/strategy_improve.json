@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T05:22:16-04:00",
+  "generated_at": "2026-09-19T06:55:54-04:00",
   "top_n": 15,
   "min_change": 5.0,
   "dates": [
@@ -11,24 +11,25 @@
     {
       "date": "2026-09-16",
       "n_gainers": 15,
-      "n_hit": 0,
-      "recall": 0.0,
-      "top5_hits": 0,
+      "n_hit": 4,
+      "recall": 0.26666666666666666,
+      "top5_hits": 2,
       "reasons": {
-        "never_targeted": 15
+        "captured": 4,
+        "never_targeted": 11
       },
       "gainers": [
         {
           "ticker": "BBNX",
           "rank": 1,
-          "reason": "never_targeted",
+          "reason": "captured",
           "stock_book_1d": false,
-          "keep_tickets": false,
+          "keep_tickets": true,
           "news": false,
           "judge": null,
           "catal_targets": false,
           "catal_usable": false,
-          "any": false,
+          "any": true,
           "change_pct": 15.34,
           "sector": "Healthcare",
           "company": "Beta Bionics Inc",
@@ -53,14 +54,14 @@
         {
           "ticker": "HLP",
           "rank": 3,
-          "reason": "never_targeted",
+          "reason": "captured",
           "stock_book_1d": false,
-          "keep_tickets": false,
+          "keep_tickets": true,
           "news": false,
           "judge": null,
           "catal_targets": false,
           "catal_usable": false,
-          "any": false,
+          "any": true,
           "change_pct": 13.74,
           "sector": "Basic Materials",
           "company": "Hongli Group Inc",
@@ -117,14 +118,14 @@
         {
           "ticker": "ARQT",
           "rank": 7,
-          "reason": "never_targeted",
+          "reason": "captured",
           "stock_book_1d": false,
-          "keep_tickets": false,
+          "keep_tickets": true,
           "news": false,
           "judge": null,
           "catal_targets": false,
           "catal_usable": false,
-          "any": false,
+          "any": true,
           "change_pct": 11.19,
           "sector": "Healthcare",
           "company": "Arcutis Biotherapeutics Inc",
@@ -133,14 +134,14 @@
         {
           "ticker": "FPS",
           "rank": 8,
-          "reason": "never_targeted",
+          "reason": "captured",
           "stock_book_1d": false,
-          "keep_tickets": false,
+          "keep_tickets": true,
           "news": false,
           "judge": null,
           "catal_targets": false,
           "catal_usable": false,
-          "any": false,
+          "any": true,
           "change_pct": 11.1,
           "sector": "Industrials",
           "company": "Forgent Power Solutions Inc",
@@ -287,22 +288,48 @@
       },
       "keep": {
         "union_hot_n4_h1": [
-          "AVAH",
-          "BLFS",
-          "IQV",
-          "RDNT"
+          "INDP",
+          "SWKS",
+          "GPRO",
+          "INSP"
         ],
         "combo_sh_5050_shared": [
-          "AVAH",
-          "BLFS",
-          "IQV",
-          "RDNT"
+          "BBNX",
+          "INDP",
+          "SWKS",
+          "GPRO",
+          "INSP"
         ],
         "combo_sh_macd_5050_shared": [
-          "AVAH",
-          "BLFS",
-          "IQV",
-          "RDNT"
+          "INDP",
+          "SWKS",
+          "GPRO",
+          "INSP"
+        ],
+        "combo_ej_5050_shared": [
+          "FPS",
+          "TCOM",
+          "SDGR",
+          "SWKS",
+          "CAI",
+          "QRVO",
+          "RVTY",
+          "ADPT",
+          "QLYS"
+        ],
+        "union_e_fresh_h3": [
+          "FPS",
+          "TCOM"
+        ],
+        "yday_gainer_h1": [
+          "HQ",
+          "HLP",
+          "BBNX",
+          "FTRE",
+          "ARQQ",
+          "SDGR",
+          "TEM",
+          "REF"
         ],
         "flatten_h5": [
           "IQV",
@@ -311,10 +338,10 @@
           "BLFS"
         ],
         "flatten_robust": [
-          "IQV",
-          "RDNT",
-          "AVAH",
-          "BLFS"
+          "ILMN",
+          "SDGR",
+          "ARQT",
+          "FTRE"
         ]
       },
       "flatten_sit": true,
@@ -330,11 +357,12 @@
     {
       "date": "2026-09-17",
       "n_gainers": 15,
-      "n_hit": 0,
-      "recall": 0.0,
-      "top5_hits": 0,
+      "n_hit": 2,
+      "recall": 0.13333333333333333,
+      "top5_hits": 1,
       "reasons": {
-        "never_targeted": 15
+        "never_targeted": 13,
+        "captured": 2
       },
       "gainers": [
         {
@@ -356,14 +384,14 @@
         {
           "ticker": "SDGR",
           "rank": 2,
-          "reason": "never_targeted",
+          "reason": "captured",
           "stock_book_1d": false,
-          "keep_tickets": false,
+          "keep_tickets": true,
           "news": false,
           "judge": null,
           "catal_targets": false,
           "catal_usable": false,
-          "any": false,
+          "any": true,
           "change_pct": 26.37,
           "sector": "Healthcare",
           "company": "Schrodinger Inc",
@@ -420,14 +448,14 @@
         {
           "ticker": "INDP",
           "rank": 6,
-          "reason": "never_targeted",
+          "reason": "captured",
           "stock_book_1d": false,
-          "keep_tickets": false,
+          "keep_tickets": true,
           "news": false,
           "judge": null,
           "catal_targets": false,
           "catal_usable": false,
-          "any": false,
+          "any": true,
           "change_pct": 22.43,
           "sector": "Healthcare",
           "company": "Indaptus Therapeutics Inc",
@@ -606,36 +634,65 @@
       },
       "keep": {
         "union_hot_n4_h1": [
-          "AZTA",
-          "RVTY",
-          "IT",
-          "FIVN"
+          "INDP",
+          "GPRO",
+          "INSP",
+          "TJGC"
         ],
         "combo_sh_5050_shared": [
-          "AZTA",
-          "RVTY",
-          "IT",
-          "FIVN"
+          "BBNX",
+          "BULL",
+          "LEN",
+          "INDP",
+          "GPRO",
+          "INSP",
+          "TJGC"
         ],
         "combo_sh_macd_5050_shared": [
-          "AZTA",
+          "INDP",
+          "GPRO",
+          "INSP",
+          "TJGC"
+        ],
+        "combo_ej_5050_shared": [
+          "ALMU",
+          "LEN",
+          "ILMN",
           "RVTY",
-          "IT",
-          "FIVN"
+          "PGEN",
+          "FPS",
+          "SMTC",
+          "CIFR",
+          "BRKR",
+          "ALHC"
+        ],
+        "union_e_fresh_h3": [
+          "ALMU",
+          "LEN"
+        ],
+        "yday_gainer_h1": [
+          "BBNX",
+          "EMAT",
+          "HLP",
+          "DVLT",
+          "BRUN",
+          "ARQT",
+          "FPS",
+          "SABR"
         ],
         "flatten_h5": [
+          "ILMN",
+          "TWST",
           "RVTY",
-          "WAY",
-          "AZTA",
-          "IT",
-          "IOT",
-          "FIVN"
+          "IOVA",
+          "PGEN",
+          "AMN"
         ],
         "flatten_robust": [
-          "RVTY",
-          "WAY",
-          "ATRC",
-          "AZTA"
+          "ILMN",
+          "SDGR",
+          "ARQT",
+          "FTRE"
         ]
       },
       "flatten_sit": true,
@@ -651,11 +708,12 @@
     {
       "date": "2026-09-18",
       "n_gainers": 15,
-      "n_hit": 0,
-      "recall": 0.0,
-      "top5_hits": 0,
+      "n_hit": 4,
+      "recall": 0.26666666666666666,
+      "top5_hits": 2,
       "reasons": {
-        "never_targeted": 15
+        "never_targeted": 11,
+        "captured": 4
       },
       "gainers": [
         {
@@ -677,14 +735,14 @@
         {
           "ticker": "USDE",
           "rank": 2,
-          "reason": "never_targeted",
+          "reason": "captured",
           "stock_book_1d": false,
-          "keep_tickets": false,
+          "keep_tickets": true,
           "news": false,
           "judge": null,
           "catal_targets": false,
           "catal_usable": false,
-          "any": false,
+          "any": true,
           "change_pct": 32.17,
           "sector": "Financial",
           "company": "StableCoinX Inc",
@@ -725,14 +783,14 @@
         {
           "ticker": "SECZ",
           "rank": 5,
-          "reason": "never_targeted",
+          "reason": "captured",
           "stock_book_1d": false,
-          "keep_tickets": false,
+          "keep_tickets": true,
           "news": false,
           "judge": null,
           "catal_targets": false,
           "catal_usable": false,
-          "any": false,
+          "any": true,
           "change_pct": 21.61,
           "sector": "Technology",
           "company": "Securitize Corp",
@@ -773,14 +831,14 @@
         {
           "ticker": "CYPH",
           "rank": 8,
-          "reason": "never_targeted",
+          "reason": "captured",
           "stock_book_1d": false,
-          "keep_tickets": false,
+          "keep_tickets": true,
           "news": false,
           "judge": null,
           "catal_targets": false,
           "catal_usable": false,
-          "any": false,
+          "any": true,
           "change_pct": 17.26,
           "sector": "Healthcare",
           "company": "Cypherpunk Technologies Inc",
@@ -869,14 +927,14 @@
         {
           "ticker": "LVWR",
           "rank": 14,
-          "reason": "never_targeted",
+          "reason": "captured",
           "stock_book_1d": false,
-          "keep_tickets": false,
+          "keep_tickets": true,
           "news": false,
           "judge": null,
           "catal_targets": false,
           "catal_usable": false,
-          "any": false,
+          "any": true,
           "change_pct": 14.79,
           "sector": "Consumer Cyclical",
           "company": "LiveWire Group Inc",
@@ -927,22 +985,43 @@
       },
       "keep": {
         "union_hot_n4_h1": [
-          "ARQT",
-          "ILMN",
-          "FTRE",
-          "SDGR"
+          "INDP",
+          "BNC",
+          "GPRO",
+          "INSP"
         ],
         "combo_sh_5050_shared": [
-          "ARQT",
-          "ILMN",
-          "FTRE",
-          "SDGR"
+          "INDP",
+          "BNC",
+          "GPRO",
+          "INSP"
         ],
         "combo_sh_macd_5050_shared": [
-          "ARQT",
+          "INDP",
+          "BNC",
+          "GPRO",
+          "INSP"
+        ],
+        "combo_ej_5050_shared": [
           "ILMN",
-          "FTRE",
-          "SDGR"
+          "SDGR",
+          "GNRC",
+          "VICR",
+          "ABSI",
+          "SECZ",
+          "PURR",
+          "ALMU"
+        ],
+        "union_e_fresh_h3": [],
+        "yday_gainer_h1": [
+          "SDGR",
+          "DCX",
+          "TLSA",
+          "CYPH",
+          "USDE",
+          "LVWR",
+          "GNRC",
+          "VICR"
         ],
         "flatten_h5": [
           "ILMN",
@@ -971,10 +1050,10 @@
   "grades": {
     "gainer_recall": {
       "pass": false,
-      "mean_recall": 0.0,
-      "top5_ok_days": 0,
+      "mean_recall": 0.222,
+      "top5_ok_days": 3,
       "n_days": 3,
-      "why": "mean recall 0% vs 25% bar; top-5 hit on 0/3 sessions"
+      "why": "mean recall 22% vs 25% bar; top-5 hit on 3/3 sessions"
     },
     "catalyst_targets_move": {
       "pass": false,

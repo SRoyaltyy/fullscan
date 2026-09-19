@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-6.21%** ($9,380) · signal-only (no cash/fees) was -19.79%. Starts YES **13/26**. Fills 38 · skips 54 · realized $-620.50.
+Cash book **-8.16%** ($9,184) · signal-only (no cash/fees) was -29.19%. Starts YES **10/26**. Fills 46 · skips 72 · realized $-620.50.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,379.50.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $1.05.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -143,8 +143,30 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | `NAVN` | 141 | $22.42 | $22.50 | +11.28 | — | +0.00 | +11.28 | +266.49 | — |
 | 2026-09-16 | `RWT` | 831 | $3.91 | $3.98 | +58.17 | — | +0.00 | +58.17 | +382.26 | — |
 | 2026-09-16 | `COO` | 53 | $53.27 | $54.37 | +58.30 | — | +0.00 | +58.30 | -15.37 | — |
-| 2026-09-17 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-09-18 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-16 | `ALHC` | 113 | — | $10.30 | +0.00 | $8.71 | -179.67 | -179.67 | +0.00 | -179.67 |
+| 2026-09-16 | `PLAY` | 170 | — | $6.86 | +0.00 | $6.86 | +0.00 | +0.00 | +0.00 | +0.00 |
+| 2026-09-16 | `DVLT` | 7327 | — | $0.16 | +0.00 | $0.18 | +146.54 | +146.54 | +0.00 | +146.54 |
+| 2026-09-16 | `NMRA` | 1389 | — | $0.84 | +0.00 | $0.77 | -98.62 | -98.62 | +0.00 | -98.62 |
+| 2026-09-16 | `ZSQR` | 501 | — | $2.34 | +0.00 | $2.29 | -25.05 | -25.05 | +0.00 | -25.05 |
+| 2026-09-16 | `CTMX` | 431 | — | $2.72 | +0.00 | $2.77 | +19.39 | +19.39 | +0.00 | +19.39 |
+| 2026-09-16 | `CRBP` | 170 | — | $6.86 | +0.00 | $7.26 | +68.00 | +68.00 | +0.00 | +68.00 |
+| 2026-09-16 | `EYPT` | 306 | — | $3.66 | +0.00 | $3.45 | -64.26 | -64.26 | +0.00 | -64.26 |
+| 2026-09-17 | `ALHC` | 113 | $8.71 | $8.58 | -14.69 | $8.70 | +13.56 | -1.13 | -194.36 | -180.80 |
+| 2026-09-17 | `PLAY` | 170 | $6.86 | $6.96 | +17.00 | $6.54 | -71.40 | -54.40 | +17.00 | -54.40 |
+| 2026-09-17 | `DVLT` | 7327 | $0.18 | $0.17 | -73.27 | $0.16 | -73.27 | -146.54 | +73.27 | +0.00 |
+| 2026-09-17 | `NMRA` | 1389 | $0.77 | $0.78 | +9.72 | $0.75 | -41.67 | -31.95 | -88.90 | -130.57 |
+| 2026-09-17 | `ZSQR` | 501 | $2.29 | $2.35 | +30.06 | $2.54 | +95.19 | +125.25 | +5.01 | +100.20 |
+| 2026-09-17 | `CTMX` | 431 | $2.77 | $2.83 | +28.01 | $2.82 | -4.31 | +23.70 | +47.41 | +43.10 |
+| 2026-09-17 | `CRBP` | 170 | $7.26 | $7.26 | +0.00 | $7.26 | +0.00 | +0.00 | +68.00 | +68.00 |
+| 2026-09-17 | `EYPT` | 306 | $3.45 | $3.57 | +36.72 | $3.99 | +128.52 | +165.24 | -27.54 | +100.98 |
+| 2026-09-18 | `ALHC` | 113 | $8.70 | $8.68 | -2.26 | $8.35 | -37.29 | -39.55 | -183.06 | -220.35 |
+| 2026-09-18 | `PLAY` | 170 | $6.54 | $6.64 | +17.00 | $6.73 | +15.30 | +32.30 | -37.40 | -22.10 |
+| 2026-09-18 | `DVLT` | 7327 | $0.16 | $0.17 | +73.27 | $0.15 | -146.54 | -73.27 | +73.27 | -73.27 |
+| 2026-09-18 | `NMRA` | 1389 | $0.75 | $0.74 | -12.50 | $0.73 | -15.28 | -27.78 | -143.07 | -158.35 |
+| 2026-09-18 | `ZSQR` | 501 | $2.54 | $2.50 | -20.04 | $2.68 | +90.18 | +70.14 | +80.16 | +170.34 |
+| 2026-09-18 | `CTMX` | 431 | $2.82 | $2.83 | +4.31 | $2.76 | -30.17 | -25.86 | +47.41 | +17.24 |
+| 2026-09-18 | `CRBP` | 170 | $7.26 | $7.22 | -6.80 | $7.48 | +44.20 | +37.40 | +61.20 | +105.40 |
+| 2026-09-18 | `EYPT` | 306 | $3.99 | $3.95 | -12.24 | $3.85 | -30.60 | -42.84 | +88.74 | +58.14 |
 
 ## Each session (cash + holdings state)
 
@@ -173,9 +195,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | +0.50 | $8,776.93 | — | $8,776.93 | -0.00 | +42.99 | NAVN, RWT, COO | — | $33.54 | $8,804.64 | NAVN×141, RWT×831, COO×53 |
 | 2026-09-14 | -11.00 | $33.54 | NAVN×141, RWT×831, COO×53 | $8,845.41 | +40.77 | +257.69 | — | — | $33.54 | $9,103.10 | NAVN×141, RWT×831, COO×53 |
 | 2026-09-15 | -3.84 | $33.54 | NAVN×141, RWT×831, COO×53 | $9,080.66 | -22.44 | +186.62 | — | — | $33.54 | $9,267.28 | NAVN×141, RWT×831, COO×53 |
-| 2026-09-16 | +5.30 | $33.54 | NAVN×141, RWT×831, COO×53 | $9,395.03 | +127.75 | +0.00 | — | NAVN, RWT, COO | $9,379.50 | $9,379.50 | — |
-| 2026-09-17 | +7.38 | $9,379.50 | — | $9,379.50 | -0.00 | +0.00 | — | — | $9,379.50 | $9,379.50 | — |
-| 2026-09-18 | +4.86 | $9,379.50 | — | $9,379.50 | -0.00 | +0.00 | — | — | $9,379.50 | $9,379.50 | — |
+| 2026-09-16 | +5.30 | $33.54 | NAVN×141, RWT×831, COO×53 | $9,395.03 | +127.75 | -133.67 | ALHC, PLAY, DVLT, NMRA, ZSQR, CTMX, CRBP, EYPT | NAVN, RWT, COO | $1.05 | $9,172.94 | ALHC×113, PLAY×170, DVLT×7327, NMRA×1389, ZSQR×501, CTMX×431, CRBP×170, EYPT×306 |
+| 2026-09-17 | +7.38 | $1.05 | ALHC×113, PLAY×170, DVLT×7327, NMRA×1389, ZSQR×501, CTMX×431, CRBP×170, EYPT×306 | $9,206.50 | +33.56 | +46.62 | — | — | $1.05 | $9,253.12 | ALHC×113, PLAY×170, DVLT×7327, NMRA×1389, ZSQR×501, CTMX×431, CRBP×170, EYPT×306 |
+| 2026-09-18 | +4.86 | $1.05 | ALHC×113, PLAY×170, DVLT×7327, NMRA×1389, ZSQR×501, CTMX×431, CRBP×170, EYPT×306 | $9,293.86 | +40.74 | -110.20 | — | — | $1.05 | $9,183.66 | ALHC×113, PLAY×170, DVLT×7327, NMRA×1389, ZSQR×501, CTMX×431, CRBP×170, EYPT×306 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -266,11 +288,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 09:30 ET | **SELL** | `NAVN` | 141 | $22.50 | $2.46 | $+261.62 | $3,203.57 | ▲ +261.62 after sell → book $9,392.56; vs 09:30 mark -2.47 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-16 09:30 ET | **SELL** | `RWT` | 831 | $3.98 | $10.88 | $+360.66 | $6,500.07 | ▲ +360.66 after sell → book $9,381.68; vs 09:30 mark -10.88 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-16 09:30 ET | **SELL** | `COO` | 53 | $54.37 | $2.18 | $-19.70 | $9,379.50 | ▼ -19.70 after sell → book $9,379.50; vs 09:30 mark -2.18 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,379.50 | ▲ close $9,379.50 vs 09:30 $9,395.03 (session +0.00) | 16:00 close · cash $9,379.50 · no lots left · equity $9,379.50. | — |
-| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,379.50 | ▲ 09:30 equity $9,379.50 vs yday $9,379.50 (-0.00) | 09:30 open · cash $9,379.50 · no holdings · equity $9,379.50 vs prior close $9,379.50 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,379.50 | ▲ close $9,379.50 vs 09:30 $9,379.50 (session +0.00) | 16:00 close · cash $9,379.50 · no lots left · equity $9,379.50. | — |
-| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,379.50 | ▲ 09:30 equity $9,379.50 vs yday $9,379.50 (-0.00) | 09:30 open · cash $9,379.50 · no holdings · equity $9,379.50 vs prior close $9,379.50 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,379.50 | ▲ close $9,379.50 vs 09:30 $9,379.50 (session +0.00) | 16:00 close · cash $9,379.50 · no lots left · equity $9,379.50. | — |
+| 2026-09-16 09:30 ET | **BUY** | `ALHC` | 113 | $10.30 | $2.33 | — | $8,213.27 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=+0.4; leftover $1172.44 | join🟢 sector🟢 gen🟢 news🟡 digest🔴 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `PLAY` | 170 | $6.86 | $2.50 | — | $7,044.57 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-6.1; leftover $1172.44 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `DVLT` | 7327 | $0.16 | $33.70 | — | $5,838.54 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-29.6; leftover $1172.44 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `NMRA` | 1389 | $0.84 | $15.89 | — | $4,650.34 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-23.0; leftover $1172.44 | join🔴 sector🟢 gen🟢 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `ZSQR` | 501 | $2.34 | $6.46 | — | $3,471.54 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=+4.7; leftover $1172.44 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `CTMX` | 431 | $2.72 | $5.56 | — | $2,293.66 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-10.6; leftover $1172.44 | join🔴 sector🟢 gen🟢 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `CRBP` | 170 | $6.86 | $2.50 | — | $1,124.96 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-29.1; leftover $1172.44 | join🔴 sector🟢 gen🟢 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `EYPT` | 306 | $3.66 | $3.95 | — | $1.05 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-7.4; leftover $1172.44 | join🟢 sector🟢 gen🟢 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.05 | ▼ close $9,172.94 vs 09:30 $9,395.03 (session -133.67) | 16:00 close · cash $1.05 · equity $9,172.94 vs 09:30 $9,395.03 (-222.09; session marks -133.67) · 8 name(s) marked open→close (per-name table). ALHC×113 09:30 $10.30 → close $8.71 -179.67; PLAY×170 09:30 $6.86 → close $6.86 +0.00; DVLT×7327 09:30 $0.16 → close $0.18 +146.54; NMRA×1389 09:30 $0.84 → close $0.77 -98.62; ZSQR×501 09:30 $2.34 → close $2.29 -25.05; CTMX×431 09:30 $2.72 → close $2.77 +19.39; CRBP×170 09:30 $6.86 → close $7.26 +68.00; EYPT×306 09:30 $3.66 → close $3.45 -64.26 | — |
+| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.05 | ▲ 09:30 equity $9,206.50 vs yday $9,172.94 (+33.56) | 09:30 open · cash $1.05 (unchanged overnight, no fees) · equity $9,206.50 vs prior close $9,172.94 (+33.56) · 8 name(s) re-marked at the open (per-name table). ALHC×113 yday $8.71 → 09:30 $8.58 -14.69; PLAY×170 yday $6.86 → 09:30 $6.96 +17.00; DVLT×7327 yday $0.18 → 09:30 $0.17 -73.27; NMRA×1389 yday $0.77 → 09:30 $0.78 +9.72; ZSQR×501 yday $2.29 → 09:30 $2.35 +30.06; CTMX×431 yday $2.77 → 09:30 $2.83 +28.01; CRBP×170 yday $7.26 → 09:30 $7.26 +0.00; EYPT×306 yday $3.45 → 09:30 $3.57 +36.72 | — |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.05 | ▲ close $9,253.12 vs 09:30 $9,206.50 (session +46.62) | 16:00 close · cash $1.05 · equity $9,253.12 vs 09:30 $9,206.50 (+46.62; session marks +46.62) · 8 name(s) marked open→close (per-name table). ALHC×113 09:30 $8.58 → close $8.70 +13.56; PLAY×170 09:30 $6.96 → close $6.54 -71.40; DVLT×7327 09:30 $0.17 → close $0.16 -73.27; NMRA×1389 09:30 $0.78 → close $0.75 -41.67; ZSQR×501 09:30 $2.35 → close $2.54 +95.19; CTMX×431 09:30 $2.83 → close $2.82 -4.31; CRBP×170 09:30 $7.26 → close $7.26 +0.00; EYPT×306 09:30 $3.57 → close $3.99 +128.52 | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.05 | ▲ 09:30 equity $9,293.86 vs yday $9,253.12 (+40.74) | 09:30 open · cash $1.05 (unchanged overnight, no fees) · equity $9,293.86 vs prior close $9,253.12 (+40.74) · 8 name(s) re-marked at the open (per-name table). ALHC×113 yday $8.70 → 09:30 $8.68 -2.26; PLAY×170 yday $6.54 → 09:30 $6.64 +17.00; DVLT×7327 yday $0.16 → 09:30 $0.17 +73.27; NMRA×1389 yday $0.75 → 09:30 $0.74 -12.50; ZSQR×501 yday $2.54 → 09:30 $2.50 -20.04; CTMX×431 yday $2.82 → 09:30 $2.83 +4.31; CRBP×170 yday $7.26 → 09:30 $7.22 -6.80; EYPT×306 yday $3.99 → 09:30 $3.95 -12.24 | — |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.05 | ▼ close $9,183.66 vs 09:30 $9,293.86 (session -110.20) | 16:00 close · cash $1.05 · equity $9,183.66 vs 09:30 $9,293.86 (-110.20; session marks -110.20) · 8 name(s) marked open→close (per-name table). ALHC×113 09:30 $8.68 → close $8.35 -37.29; PLAY×170 09:30 $6.64 → close $6.73 +15.30; DVLT×7327 09:30 $0.17 → close $0.15 -146.54; NMRA×1389 09:30 $0.74 → close $0.73 -15.28; ZSQR×501 09:30 $2.50 → close $2.68 +90.18; CTMX×431 09:30 $2.83 → close $2.76 -30.17; CRBP×170 09:30 $7.22 → close $7.48 +44.20; EYPT×306 09:30 $3.95 → close $3.85 -30.60 | — |
 
 ## Not taken
 
@@ -330,3 +360,34 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `NAVN` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-15 | `RWT` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-15 | `COO` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-17 | `PLAY` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-17 | `DVLT` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-17 | `NMRA` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-17 | `ZSQR` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-17 | `CTMX` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-17 | `CRBP` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-17 | `EYPT` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-17 | `MRLN` | cash | leftover split 1.05 < 1 share @ 2.27 |
+| 2026-09-18 | `ALHC` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-18 | `PLAY` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-18 | `DVLT` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-18 | `NMRA` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-18 | `ZSQR` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-18 | `CTMX` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-18 | `CRBP` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-18 | `EYPT` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-18 | `RARE` | cash | leftover split 0.52 < 1 share @ 14.79 |
+| 2026-09-18 | `FLNC` | cash | leftover split 0.52 < 1 share @ 7.54 |
+
+## Still open (marked at last close)
+
+| Ticker | Shares | Entry | Why |
+|---|---:|---|---|
+| `ALHC` | 113 | 2026-09-16 @ $10.30 | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=+0.4; leftover $1172.44 |
+| `PLAY` | 170 | 2026-09-16 @ $6.86 | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-6.1; leftover $1172.44 |
+| `DVLT` | 7327 | 2026-09-16 @ $0.16 | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-29.6; leftover $1172.44 |
+| `NMRA` | 1389 | 2026-09-16 @ $0.84 | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-23.0; leftover $1172.44 |
+| `ZSQR` | 501 | 2026-09-16 @ $2.34 | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=+4.7; leftover $1172.44 |
+| `CTMX` | 431 | 2026-09-16 @ $2.72 | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-10.6; leftover $1172.44 |
+| `CRBP` | 170 | 2026-09-16 @ $6.86 | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-29.1; leftover $1172.44 |
+| `EYPT` | 306 | 2026-09-16 @ $3.66 | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-7.4; leftover $1172.44 |

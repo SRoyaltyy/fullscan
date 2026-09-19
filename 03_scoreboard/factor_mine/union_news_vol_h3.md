@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-7.46%** ($9,254) · signal-only (no cash/fees) was +203.03%. Starts YES **0/26**. Fills 76 · skips 103 · realized $-746.38.
+Cash book **-9.66%** ($9,034) · signal-only (no cash/fees) was +189.75%. Starts YES **1/26**. Fills 77 · skips 111 · realized $-746.38.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,253.62.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $2.04.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -220,8 +220,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | `ORCL` | 19 | $140.35 | $140.03 | -6.08 | — | +0.00 | -6.08 | -463.60 | — |
 | 2026-09-16 | `ADBE` | 13 | $257.76 | $253.34 | -57.46 | — | +0.00 | -57.46 | +145.21 | — |
 | 2026-09-16 | `RH` | 24 | $124.83 | $125.55 | +17.28 | — | +0.00 | +17.28 | -243.84 | — |
-| 2026-09-17 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-09-18 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-16 | `WAY` | 352 | — | $26.27 | +0.00 | $26.59 | +112.64 | +112.64 | +0.00 | +112.64 |
+| 2026-09-17 | `WAY` | 352 | $26.59 | $26.51 | -28.16 | $26.51 | +0.00 | -28.16 | +84.48 | +84.48 |
+| 2026-09-18 | `WAY` | 352 | $26.51 | $26.95 | +154.88 | $25.66 | -454.08 | -299.20 | +239.36 | -214.72 |
 
 ## Each session (cash + holdings state)
 
@@ -250,9 +251,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 | +0.50 | $9,828.22 | — | $9,828.22 | +0.00 | -177.43 | ORCL, ADBE, RH | — | $292.67 | $9,644.66 | ORCL×19, ADBE×13, RH×24 |
 | 2026-09-14 | -11.00 | $292.67 | ORCL×19, ADBE×13, RH×24 | $9,532.88 | -111.78 | +183.68 | — | — | $292.67 | $9,716.56 | ORCL×19, ADBE×13, RH×24 |
 | 2026-09-15 | -3.84 | $292.67 | ORCL×19, ADBE×13, RH×24 | $9,626.19 | -90.37 | -320.07 | — | — | $292.67 | $9,306.12 | ORCL×19, ADBE×13, RH×24 |
-| 2026-09-16 | +5.30 | $292.67 | ORCL×19, ADBE×13, RH×24 | $9,259.86 | -46.26 | +0.00 | — | ORCL, ADBE, RH | $9,253.62 | $9,253.62 | — |
-| 2026-09-17 | +7.38 | $9,253.62 | — | $9,253.62 | -0.00 | +0.00 | — | — | $9,253.62 | $9,253.62 | — |
-| 2026-09-18 | +4.86 | $9,253.62 | — | $9,253.62 | -0.00 | +0.00 | — | — | $9,253.62 | $9,253.62 | — |
+| 2026-09-16 | +5.30 | $292.67 | ORCL×19, ADBE×13, RH×24 | $9,259.86 | -46.26 | +112.64 | WAY | ORCL, ADBE, RH | $2.04 | $9,361.72 | WAY×352 |
+| 2026-09-17 | +7.38 | $2.04 | WAY×352 | $9,333.56 | -28.16 | +0.00 | — | — | $2.04 | $9,333.56 | WAY×352 |
+| 2026-09-18 | +4.86 | $2.04 | WAY×352 | $9,488.44 | +154.88 | -454.08 | — | — | $2.04 | $9,034.36 | WAY×352 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -381,11 +382,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 09:30 ET | **SELL** | `ORCL` | 19 | $140.03 | $2.08 | $-467.73 | $2,951.16 | ▼ -467.73 after sell → book $9,257.78; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-16 09:30 ET | **SELL** | `ADBE` | 13 | $253.34 | $2.07 | $+141.12 | $6,242.51 | ▲ +141.12 after sell → book $9,255.71; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-16 09:30 ET | **SELL** | `RH` | 24 | $125.55 | $2.10 | $-248.00 | $9,253.62 | ▼ -248.00 after sell → book $9,253.62; vs 09:30 mark -2.09 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,253.62 | ▲ close $9,253.62 vs 09:30 $9,259.86 (session +0.00) | 16:00 close · cash $9,253.62 · no lots left · equity $9,253.62. | — |
-| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,253.62 | ▲ 09:30 equity $9,253.62 vs yday $9,253.62 (-0.00) | 09:30 open · cash $9,253.62 · no holdings · equity $9,253.62 vs prior close $9,253.62 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,253.62 | ▲ close $9,253.62 vs 09:30 $9,253.62 (session +0.00) | 16:00 close · cash $9,253.62 · no lots left · equity $9,253.62. | — |
-| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,253.62 | ▲ 09:30 equity $9,253.62 vs yday $9,253.62 (-0.00) | 09:30 open · cash $9,253.62 · no holdings · equity $9,253.62 vs prior close $9,253.62 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,253.62 | ▲ close $9,253.62 vs 09:30 $9,253.62 (session +0.00) | 16:00 close · cash $9,253.62 · no lots left · equity $9,253.62. | — |
+| 2026-09-16 09:30 ET | **BUY** | `WAY` | 352 | $26.27 | $4.54 | — | $2.04 | — | combo gate; gate news=good,vol=good; list yday_gainer; 🔵; ret5=-7.4; leftover $9253.62 | join🟢 sector🟢 gen🟢 news🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.04 | ▲ close $9,361.72 vs 09:30 $9,259.86 (session +112.64) | 16:00 close · cash $2.04 · equity $9,361.72 vs 09:30 $9,259.86 (+101.86; session marks +112.64) · 1 name(s) marked open→close (per-name table). WAY×352 09:30 $26.27 → close $26.59 +112.64 | — |
+| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.04 | ▼ 09:30 equity $9,333.56 vs yday $9,361.72 (-28.16) | 09:30 open · cash $2.04 (unchanged overnight, no fees) · equity $9,333.56 vs prior close $9,361.72 (-28.16) · 1 name(s) re-marked at the open (per-name table). WAY×352 yday $26.59 → 09:30 $26.51 -28.16 | — |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.04 | ▲ close $9,333.56 vs 09:30 $9,333.56 (session +0.00) | 16:00 close · cash $2.04 · equity $9,333.56 vs 09:30 $9,333.56 (-0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). WAY×352 09:30 $26.51 → close $26.51 +0.00 | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.04 | ▲ 09:30 equity $9,488.44 vs yday $9,333.56 (+154.88) | 09:30 open · cash $2.04 (unchanged overnight, no fees) · equity $9,488.44 vs prior close $9,333.56 (+154.88) · 1 name(s) re-marked at the open (per-name table). WAY×352 yday $26.51 → 09:30 $26.95 +154.88 | — |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.04 | ▼ close $9,034.36 vs 09:30 $9,488.44 (session -454.08) | 16:00 close · cash $2.04 · equity $9,034.36 vs 09:30 $9,488.44 (-454.08; session marks -454.08) · 1 name(s) marked open→close (per-name table). WAY×352 09:30 $26.95 → close $25.66 -454.08 | — |
 
 ## Not taken
 
@@ -494,3 +496,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `ADBE` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-15 | `RH` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-15 | `OKTA` | hard_red | hard-red S=-3.84 sit; no new buys |
+| 2026-09-17 | `WAY` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-17 | `SMTC` | cash | leftover split 0.68 < 1 share @ 170.85 |
+| 2026-09-17 | `TNDM` | cash | leftover split 0.68 < 1 share @ 17.72 |
+| 2026-09-17 | `JBHT` | cash | leftover split 0.68 < 1 share @ 238.60 |
+| 2026-09-18 | `WAY` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-18 | `BHVN` | cash | leftover split 0.68 < 1 share @ 14.07 |
+| 2026-09-18 | `RARE` | cash | leftover split 0.68 < 1 share @ 14.79 |
+| 2026-09-18 | `FLNC` | cash | leftover split 0.68 < 1 share @ 7.54 |
+
+## Still open (marked at last close)
+
+| Ticker | Shares | Entry | Why |
+|---|---:|---|---|
+| `WAY` | 352 | 2026-09-16 @ $26.27 | combo gate; gate news=good,vol=good; list yday_gainer; 🔵; ret5=-7.4; leftover $9253.62 |

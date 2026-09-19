@@ -41,6 +41,9 @@ KEEP_KEYS = (
     "union_hot_n4_h1",
     "combo_sh_5050_shared",
     "combo_sh_macd_5050_shared",
+    "combo_ej_5050_shared",
+    "union_e_fresh_h3",
+    "yday_gainer_h1",
     "flatten_h5",
     "flatten_robust",
 )

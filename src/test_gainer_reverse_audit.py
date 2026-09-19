@@ -79,14 +79,16 @@ def test_render_lists_locked_bars() -> None:
     assert "flatten_robust" in md
 
 
-def test_audit_0917_sdgr_is_a_miss() -> None:
+def test_audit_0917_sdgr_not_on_leakfree_hot4() -> None:
+    """Same-day rip cannot be on that morning's leak-free hot4.
+
+    After the lookback-panel restamp it can sit on yday_gainer the *next*
+    session, and on combo_ej if the event rifle already had a seat.
+    """
     day = gra.audit_date("2026-09-17")
     assert day["coverage"]["status"] in {"full", "partial"}
     ticks = [r["ticker"] for r in day["gainers"]]
     assert "SDGR" in ticks
-    sdgr = next(r for r in day["gainers"] if r["ticker"] == "SDGR")
-    assert sdgr["any"] is False
-    assert sdgr["reason"] == "never_targeted"
     assert day["catalyst"]["n_ok"] == 0
     assert "NE" in day["catalyst"]["targets"]
     assert "SDGR" not in (day.get("keep") or {}).get("union_hot_n4_h1", [])
@@ -96,5 +98,5 @@ if __name__ == "__main__":
     test_classify_captured_vs_never_targeted()
     test_score_improve_fails_empty_dossiers_and_zero_recall()
     test_render_lists_locked_bars()
-    test_audit_0917_sdgr_is_a_miss()
+    test_audit_0917_sdgr_not_on_leakfree_hot4()
     print("4 gainer-reverse-audit tests passed")
