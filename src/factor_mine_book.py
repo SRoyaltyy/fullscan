@@ -29,16 +29,19 @@ OUT_DIR = ROOT / "03_scoreboard" / "factor_mine"
 OUT_INDEX = ROOT / "03_scoreboard" / "FACTOR_MINE_ACTION.md"
 DAILY_MD = ROOT / "01_daily" / "factor_mine_action.md"
 HARD_RED = -3.0
-UNIVERSES = ("auto", "union", "flatten", "probable", "yday_gainer", "ohlc_hot")
+UNIVERSES = ("auto", "union", "flatten", "probable", "yday_gainer", "ohlc_hot",
+             "oppset")
 HOLDS = ("auto", "1", "2", "3", "5")
 GATES = (
     "auto", "none", "vol_g", "news_g", "white", "white_any", "coil_off",
     "join_g", "last_green", "blue", "news_present", "join_present", "ab_g",
     "news_pack", "news_head", "news_both", "news_or",
     "rsi_os", "rsi_ob", "macd_up", "macd_xup", "flow_in",
+    "clk_b", "oppset",
 )
 RANKS = ("auto", "none", "list", "hot_score", "cond", "w_hot_cond",
-         "w_hot_candle", "ret_5", "candle_score", "rsi", "macd_hist")
+         "w_hot_candle", "ret_5", "candle_score", "rsi", "macd_hist",
+         "opp_rvol")
 SIDES = ("auto", "long", "short")
 TOP_NS = ("auto", "4", "8", "12")
 EXITS = ("auto", "none", "alarm", "last_red", "news_bad")
@@ -768,6 +771,10 @@ def recipes_from_action(*, universe="auto", hold="auto", gate="auto",
             return "macd_up"
         if req.get("flow_in") and len(req) == 1:
             return "flow_in"
+        if any(str(k).startswith("clk_") for k in req):
+            return "clk_b"
+        if req.get("oppset"):
+            return "oppset"
         return "other"
 
     def exit_name(rec: dict) -> str:

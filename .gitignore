@@ -8,3 +8,4 @@ build/
 .venv/
 venv/
 grids_deep/
+data/factor_mine/oppset_clock_b/*.csv
