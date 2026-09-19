@@ -542,6 +542,9 @@ def build_recipes() -> list[dict]:
     add(name="overnight_mega_h2", universe="overnight_mega", hold=2, top_n=8,
         forbid={"alarm": True},
         note="same mega calendar; hold 2 also keeps the session after the print")
+    add(name="overnight_mega_green_h1", universe="overnight_mega", hold=1,
+        top_n=8, require={"last_green": True}, forbid={"alarm": True},
+        note="mega calendar ∩ last bar green; still a print-night long, not a reaction")
     add(name="union_hot_n12_h1", universe="union", hold=1, top_n=12,
         rank="hot_score", forbid={"alarm": True}, note="top 12 by hot")
     add(name="union_cond_n4_h3", universe="union", hold=3, top_n=4,
@@ -1783,6 +1786,81 @@ def merge_panel_days(base: dict, extra: dict) -> dict:
     return out
 
 
+def stamp_overnight_on_panel(panel: dict, *, write: bool = False) -> dict:
+    """Tag / add prior-calendar AMC-today and BMO-next names on each day.
+
+    Existing rows keep their other sources. New names get a full
+    ``_attach_row`` so cameras and prior tape are on the card. Same-day
+    Change% is never an input.
+    """
+    panel = rehydrate_panel(panel)
+    cal = list(panel.get("session_dates") or [])
+    if not cal:
+        return panel
+    full_cal = panel_lookback_calendar(
+        panel.get("from_date") or cal[0], panel.get("to_date") or cal[-1])
+    if not full_cal:
+        full_cal = list(cal)
+    end = panel.get("to_date") or cal[-1]
+    map_from = full_cal[0]
+    sess_map, _ = _session_map(map_from, end)
+    by_date = panel.get("by_date") or {}
+    rows = list(panel.get("rows") or [])
+    tagged = added = 0
+    for date in cal:
+        prior = feature_export_date(full_cal, date)
+        prior_df = ga.load_finviz(prior) if prior else None
+        nxt = gc.next_session(full_cal, date)
+        ov = gc.overnight_scheduled(prior, date, nxt)
+        mega = set(gc.overnight_scheduled(
+            prior, date, nxt, min_mcap_m=gc.OVERNIGHT_MEGA_MCAP_M))
+        existing = {r["ticker"]: r for r in (by_date.get(date) or [])}
+        sess = sess_map.get(date)
+        prev_sess = sess_map.get(prior) if prior else None
+        for t in ov:
+            srcs = ["overnight"]
+            if t in mega:
+                srcs.append("overnight_mega")
+            hit = existing.get(t)
+            if hit is not None:
+                have = list(hit.get("sources") or [])
+                for s in srcs:
+                    if s not in have:
+                        have.append(s)
+                hit["sources"] = have
+                hit["overnight_sched"] = True
+                tagged += 1
+                continue
+            if sess is None:
+                continue
+            rec = _attach_row(
+                date, t, srcs, 80, sess, prev_sess, prior, prior_df)
+            rec["overnight_sched"] = True
+            rows.append(rec)
+            by_date.setdefault(date, []).append(rec)
+            existing[t] = rec
+            added += 1
+        print(f"[factor-mine] overnight-stamp {date} "
+              f"sched={len(ov)} mega={len(mega)} tagged={tagged} "
+              f"added={added}", flush=True)
+    rows.sort(key=lambda r: (
+        r.get("date") or "", int(r.get("src_rank") or 0), r.get("ticker") or "",
+    ))
+    panel = dict(panel)
+    panel["rows"] = rows
+    panel["by_date"] = by_date
+    panel["n_rows"] = len(rows)
+    panel["overnight_stamp"] = {"tagged": tagged, "added": added}
+    if write:
+        PANEL_PATH.parent.mkdir(parents=True, exist_ok=True)
+        slim = {k: v for k, v in panel.items() if k != "by_date"}
+        slim["by_date"] = None
+        PANEL_PATH.write_text(json.dumps(slim, indent=2), encoding="utf-8")
+    print(f"[factor-mine] overnight-stamp done tagged={tagged} "
+          f"added={added} rows={len(rows)}", flush=True)
+    return panel
+
+
 def build_panel(from_date: str = START, to_date: str | None = None) -> dict:
     """Leak-free candidate rows for every *closed* session in the window.
 
@@ -2298,6 +2376,7 @@ def run(from_date: str = START, to_date: str | None = None,
         "flatten_live_h1", "flatten_live_h3", "flatten_live_h5",
         "union_e_fresh_h3", "union_news_g_h5", "union_white_coil_h1",
         "overnight_mega_h1", "overnight_mega_h2", "overnight_h1",
+        "overnight_mega_green_h1", "combo_oh_5050_shared",
         "union_news_pack_h1", "union_news_pack_net2_h1",
         "union_news_or_h1",
         "union_news_or_net3_h1", "union_news_or_net4_h1",
@@ -3660,6 +3739,8 @@ def main(argv=None) -> int:
     ap.add_argument("--rebuild-panel", action="store_true")
     ap.add_argument("--refresh-window", action="store_true",
                     help="rebuild --from-date..--to-date panel rows with lookback")
+    ap.add_argument("--stamp-overnight", action="store_true",
+                    help="tag/add prior-calendar AMC-today / BMO-next names on the panel")
     ap.add_argument("--land-closed", action="store_true",
                     help="reuse existing recipes; mine through last closed session")
     ap.add_argument("--universe", default="auto", choices=fmb.UNIVERSES)
@@ -3731,6 +3812,15 @@ def main(argv=None) -> int:
         panel = refresh_panel_window(
             args.from_date, args.to_date or None, write=args.write)
         print(f"[factor-mine] refresh-window rows={panel.get('n_rows')} "
+              f"to={panel.get('to_date')}")
+        return 0
+    if args.stamp_overnight:
+        panel = load_or_build_panel(
+            args.from_date, args.to_date or None,
+            rebuild=args.rebuild_panel)
+        panel = stamp_overnight_on_panel(panel, write=args.write)
+        print(f"[factor-mine] stamp-overnight rows={panel.get('n_rows')} "
+              f"added={(panel.get('overnight_stamp') or {}).get('added')} "
               f"to={panel.get('to_date')}")
         return 0
     if args.land_closed:

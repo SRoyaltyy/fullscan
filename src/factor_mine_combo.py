@@ -187,6 +187,8 @@ MEMBER_POOL = (
     "union_e_fresh_h3",
     "union_e_fresh_h1",
     "union_hot_n4_h1",
+    "union_hot_n4_holdup",
+    "overnight_mega_h1",
     "union_news_g_h1",
     "union_news_pack_h1",
     "union_news_pack_net2_h1",
@@ -203,6 +205,8 @@ CLAIM = (
     "union_e_fresh_h1",
     "union_earn_react_h3",
     "union_hot_n4_h1",
+    "union_hot_n4_holdup",
+    "overnight_mega_h1",
     "union_join_vol_green_h1",
     "union_news_g_h1",
     "union_news_pack_h1",
@@ -273,6 +277,8 @@ def combo_specs() -> list[dict]:
     add("combo_ps_5050_shared", [P, S], [1, 1])
     add("combo_ps_7030_shared", [P, S], [70, 30])
     add("combo_p2s_5050_shared", ["union_news_pack_net2_h1", S], [1, 1])
+    add("combo_oh_5050_shared",
+        ["overnight_mega_h1", "union_hot_n4_holdup"], [1, 1])
     add("combo_sn_5050_shared", [S, N], [1, 1])
     add("combo_sj_5050_shared", [S, J], [1, 1])
     add("combo_sf_5050_shared", [S, F], [1, 1])

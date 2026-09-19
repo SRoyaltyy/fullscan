@@ -1173,6 +1173,40 @@ def test_candidates_need_lookback_calendar() -> None:
         assert full["ohlc_hot"] == ["ILMN"]
 
 
+def test_stamp_overnight_tags_existing_and_skips_attach_when_listed() -> None:
+    from unittest import mock
+    panel = {
+        "from_date": "2026-09-02",
+        "to_date": "2026-09-03",
+        "session_dates": ["2026-09-02", "2026-09-03"],
+        "rows": [
+            _row("2026-09-02", "AVGO", sources=["union"], src_rank=0),
+            _row("2026-09-03", "BBB", sources=["union"], src_rank=0),
+        ],
+        "by_date": None,
+    }
+    with mock.patch.object(fm, "panel_lookback_calendar",
+                           return_value=["2026-09-01", "2026-09-02",
+                                         "2026-09-03"]), \
+            mock.patch.object(fm, "_session_map",
+                              return_value=({}, [])), \
+            mock.patch.object(fm.gc, "overnight_scheduled",
+                              side_effect=lambda prior, date, nxt,
+                              min_mcap_m=None, **kw: (
+                                  ["AVGO"] if date == "2026-09-02"
+                                  and min_mcap_m else
+                                  ["AVGO", "TINY"] if date == "2026-09-02"
+                                  else [])):
+        out = fm.stamp_overnight_on_panel(panel, write=False)
+    avgo = next(r for r in out["rows"] if r["ticker"] == "AVGO")
+    assert "overnight" in avgo["sources"]
+    assert "overnight_mega" in avgo["sources"]
+    assert avgo["overnight_sched"] is True
+    # TINY was scheduled but no session card — not invented from Change%.
+    assert all(r["ticker"] != "TINY" for r in out["rows"])
+    assert out["overnight_stamp"]["tagged"] >= 1
+
+
 def test_panel_emit_keeps_lookback_off_the_row_list() -> None:
     full = [
         "2026-09-16", "2026-09-17", "2026-09-18",
@@ -2561,6 +2595,7 @@ if __name__ == "__main__":
     test_morning_s_falls_back_to_weather_when_predict_missing()
     test_build_mornings_covers_closed_session_past_lookback()
     test_candidates_need_lookback_calendar()
+    test_stamp_overnight_tags_existing_and_skips_attach_when_listed()
     test_panel_emit_keeps_lookback_off_the_row_list()
     test_merge_panel_days_replaces_only_the_window()
     test_live_panel_end_honors_explicit_open_to_date()

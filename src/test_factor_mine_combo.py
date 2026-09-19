@@ -94,6 +94,8 @@ def test_combo_specs_unique_and_members_known() -> None:
     assert macd["members"] == ["short_news_r_macd_h3", "union_hot_n4_h1"]
     assert macd["weights"] == [1.0, 1.0]
     assert macd["pool"] == "shared"
+    oh = next(s for s in specs if s["name"] == "combo_oh_5050_shared")
+    assert oh["members"] == ["overnight_mega_h1", "union_hot_n4_holdup"]
     recs = {r["name"]: r for r in fm.build_recipes()}
     kid = recs["short_news_r_macd_h3"]
     assert kid["side"] == "short"
