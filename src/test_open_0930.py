@@ -115,13 +115,20 @@ def test_open_pack_stamps_session_open_and_restamps_pages() -> None:
 
 
 def test_boards_and_paper_share_the_bell() -> None:
-    """Publication runs at input readiness, before the independent bell sender."""
+    """Ready publish writes tickets and submits paper in the same workflow."""
     yml = (WF / "publish_strategy_tickets.yml").read_text()
     assert 'src.decision_ready' in yml
     assert 'src.open_0930_clock' not in yml
-    assert '--submit' not in yml
+    assert 'src.paper_open' in yml
+    assert '--submit' in yml
+    assert '--ready' in yml
+    assert '--owner actions' in yml
+    assert 'WEBULL_APP_KEY' in yml
+    assert 'WEBULL_APP_SECRET' in yml
+    assert 'WEBULL_ACCOUNT_ID' in yml
     paper = (WF / "webull_paper.yml").read_text()
     assert 'src.paper_open' in paper
+    assert '--owner actions' in paper
     assert 'workflow_run:' not in paper
 
 

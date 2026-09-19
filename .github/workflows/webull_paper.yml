@@ -1,7 +1,10 @@
 name: Webull paper (OpenAPI sandbox)
 
 # Warm well BEFORE the bell. Hosted cron is a fallback, not a punctual clock.
-# The committed owner record prevents both Actions and ECS from submitting.
+# Primary send is publish_strategy_tickets.yml on decision_ready (standing
+# MARKET/CORE/DAY, --owner actions). This job must not twin-submit: it uses
+# --owner actions (no-ops if owner≠actions) and paper_open journal + stable
+# client_order_id. Do not add another delayed cron.
 on:
   schedule:
     - cron: '7 12,13 * * 1-5'
@@ -40,7 +43,7 @@ jobs:
           set -euo pipefail
           ARGS=()
           if [ "$WANT_SUBMIT" = true ]; then ARGS+=(--submit); fi
-          python -m src.paper_open "${ARGS[@]}"
+          python -m src.paper_open --owner actions "${ARGS[@]}"
       - name: Preserve preflight, submission and acknowledgment evidence
         if: always()
         uses: actions/upload-artifact@v4

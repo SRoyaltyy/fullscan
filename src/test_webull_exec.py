@@ -271,6 +271,8 @@ def test_paper_order_is_market_not_limit() -> None:
         "date": "2026-09-17",
     })
     assert body["order_type"] == "MARKET"
+    assert body["support_trading_session"] == "CORE"
+    assert body["time_in_force"] == "DAY"
     assert "limit_price" not in body
     assert body["symbol"] == "INDP"
     assert body["quantity"] == "3"
@@ -282,9 +284,18 @@ def test_yml_warms_before_bell_and_has_one_automatic_sender() -> None:
     yml = (root / ".github/workflows/webull_paper.yml").read_text()
     assert "7 12,13" in yml
     assert "src.paper_open" in yml
+    assert "--owner actions" in yml
+    assert "--ready" not in yml
     assert "workflow_run:" not in yml
     assert "  push:" not in yml
     assert "src.webull_exec" not in (root / ".github/workflows/open_0930.yml").read_text()
+    pub = (root / ".github/workflows/publish_strategy_tickets.yml").read_text()
+    assert "src.paper_open" in pub
+    assert "--submit" in pub
+    assert "--ready" in pub
+    assert "WEBULL_APP_KEY" in pub
+    owner = (root / "00_grounding" / "paper_open_owner.json").read_text()
+    assert '"owner": "actions"' in owner
 
 
 def main() -> None:

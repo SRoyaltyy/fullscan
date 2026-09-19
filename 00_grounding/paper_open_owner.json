@@ -1,5 +1,5 @@
 {
-  "owner": "ecs",
-  "installed_at": "2026-09-18T03:43:03.183731+00:00",
-  "note": "Persistent timer verified and sandbox preflight passed; Actions is disabled by this record."
+  "owner": "actions",
+  "installed_at": "2026-09-18T13:40:00+00:00",
+  "note": "Ready-publish on GitHub Actions is the automatic sender (publish_strategy_tickets.yml --ready --submit --owner actions). ECS fullscan-paper-open.timer uses --owner ecs and MUST skip via paper_open.owner_enabled. webull_paper.yml is warm/fallback only and also uses --owner actions; journal + stable client_order_id prevent a twin place. Do not flip this record back to ecs."
 }

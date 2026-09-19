@@ -88,7 +88,8 @@ def test_warm_worker_releases_without_network_preparation_at_bell(tmp_path):
         assert clock() < BELL-timedelta(seconds=5)
         return payload()
     api = API()
-    with patch.object(we, 'write_last'):
+    with patch.object(we, 'write_last'), \
+            patch.object(po, 'remote_session_journal', return_value=None):
         assert po.run(submit=True, clock=clock, sleep=sleep, loader=loader,
                       api=api, state_dir=tmp_path) == 0
     assert t[0] == BELL
@@ -131,6 +132,118 @@ def test_later_fallback_schedule_preserves_first_attempt(tmp_path):
     for suffix in ('submit','status'):
         (tmp_path/f'{DATE}_{suffix}.json').write_text(json.dumps(original))
     api=API()
-    assert po.run(submit=True,clock=lambda:BELL+timedelta(minutes=10),api=api,state_dir=tmp_path)==0
+    with patch.object(po, 'remote_session_journal', return_value=None):
+        assert po.run(submit=True,clock=lambda:BELL+timedelta(minutes=10),api=api,state_dir=tmp_path)==0
     assert not api.calls
     assert json.loads((tmp_path/f'{DATE}_status.json').read_text())==original
+
+
+def early_payload():
+    p = payload()
+    p['decision_readiness']['completed_at'] = DATE + 'T06:00:00-04:00'
+    return p
+
+
+def test_ready_submit_places_standing_orders_before_bell(tmp_path):
+    api = API()
+    early = datetime.fromisoformat(DATE + 'T06:20:00-04:00')
+    with patch.object(we, 'write_last'), \
+            patch.object(po, 'remote_session_journal', return_value=None):
+        rc = po.submit_ready(submit=True, clock=lambda: early, loader=lambda _: early_payload(),
+                             api=api, state_dir=tmp_path)
+    assert rc == 0
+    assert len(api.calls) == 1
+    journal = json.loads((tmp_path / f'{DATE}_submit.json').read_text())
+    assert journal['status'] == 'acknowledged'
+    assert journal['standing'] is True
+    assert journal['fingerprint'] == 'abc'
+    assert journal['sent'][0]['client_order_id'] == we.client_order_id(DATE, 'BUY', 'ABC')
+    body = we.order_body({'date': DATE, 'side': 'BUY', 'ticker': 'ABC', 'shares': 1})
+    assert body['order_type'] == 'MARKET'
+    assert body['support_trading_session'] == 'CORE'
+    assert body['time_in_force'] == 'DAY'
+
+
+def test_ready_refire_does_not_double_place(tmp_path):
+    api = API()
+    early = datetime.fromisoformat(DATE + 'T06:20:00-04:00')
+    with patch.object(we, 'write_last'), \
+            patch.object(po, 'remote_session_journal', return_value=None):
+        assert po.submit_ready(submit=True, clock=lambda: early, loader=lambda _: early_payload(),
+                               api=api, state_dir=tmp_path) == 0
+        assert po.submit_ready(submit=True, clock=lambda: early, loader=lambda _: early_payload(),
+                               api=api, state_dir=tmp_path) == 0
+    assert len(api.calls) == 1
+
+
+def test_fallback_run_noops_after_ready_journal(tmp_path):
+    api = API()
+    early = datetime.fromisoformat(DATE + 'T06:20:00-04:00')
+    with patch.object(we, 'write_last'), \
+            patch.object(po, 'remote_session_journal', return_value=None):
+        assert po.submit_ready(submit=True, clock=lambda: early, loader=lambda _: early_payload(),
+                               api=api, state_dir=tmp_path) == 0
+        t = [BELL - timedelta(seconds=20)]
+        def clock():
+            return t[0]
+        def sleep(seconds):
+            t[0] += timedelta(seconds=seconds)
+        assert po.run(submit=True, clock=clock, sleep=sleep, loader=lambda _: payload(),
+                      api=api, state_dir=tmp_path) == 0
+    assert len(api.calls) == 1
+
+
+def test_fallback_run_noops_on_remote_ready_journal(tmp_path):
+    api = API()
+    remote = {'date': DATE, 'status': 'acknowledged', 'fingerprint': 'abc', 'sent': []}
+    with patch.object(po, 'remote_session_journal', return_value=remote):
+        assert po.run(submit=True, clock=lambda: BELL - timedelta(minutes=10),
+                      api=api, state_dir=tmp_path) == 0
+    assert not api.calls
+
+
+def test_ready_submit_after_bell_when_decisions_arrive_late(tmp_path):
+    api = API()
+    late = datetime.fromisoformat(DATE + 'T10:05:00-04:00')
+    p = payload()
+    p['decision_readiness']['completed_at'] = (BELL + timedelta(minutes=20)).isoformat()
+    with patch.object(we, 'write_last'), \
+            patch.object(po, 'remote_session_journal', return_value=None):
+        rc = po.submit_ready(submit=True, clock=lambda: late, loader=lambda _: p,
+                             api=api, state_dir=tmp_path)
+    assert rc == 0
+    assert len(api.calls) == 1
+    with pytest.raises(ValueError, match='after decision clock'):
+        po.make_plan(p, API().snapshot(), late)
+
+
+def test_owner_gate_actions_blocks_ecs(tmp_path, monkeypatch):
+    rec = tmp_path / 'owner.json'
+    rec.write_text(json.dumps({'owner': 'actions'}))
+    monkeypatch.setenv('PAPER_OPEN_OWNER_FILE', str(rec))
+    assert po.owner_enabled('actions')
+    assert not po.owner_enabled('ecs')
+    with patch.object(po, 'submit_ready', return_value=0) as ready, \
+            patch.object(po, 'run', return_value=0) as run:
+        assert po.main(['--submit', '--ready', '--owner', 'ecs']) == 0
+        ready.assert_not_called()
+        run.assert_not_called()
+        assert po.main(['--submit', '--ready', '--owner', 'actions']) == 0
+        ready.assert_called_once()
+        run.assert_not_called()
+
+
+def test_committed_owner_is_actions():
+    rec = json.loads((po.ROOT / '00_grounding' / 'paper_open_owner.json').read_text())
+    assert rec['owner'] == 'actions'
+    yml = (po.ROOT / '.github/workflows/install_paper_open.yml').read_text()
+    assert "'owner': 'ecs'" not in yml
+    assert '"owner": "ecs"' not in yml
+
+
+def test_load_local_reads_dated_tickets(tmp_path):
+    board = tmp_path / 'data' / 'day_board'
+    board.mkdir(parents=True)
+    (board / f'{DATE}_strategy_tickets.json').write_text(json.dumps(payload()))
+    got = po.load_local(DATE, root=tmp_path)
+    assert got['decision_readiness']['fingerprint'] == 'abc'
