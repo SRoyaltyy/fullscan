@@ -48,6 +48,30 @@ def test_814_watchlist_captures_earn_rip_not_asts_book() -> None:
     assert plan["tickers"][:3] == ["TLN", "VST", "NRG"]
 
 
+def test_watchlist_one_day_cal_still_reads_prior_export() -> None:
+    """land-closed emit ``[D]`` must still union yesterday's liquid tape."""
+    from unittest import mock
+    with mock.patch.object(gc, "yesterday_gainers",
+                           return_value=["AAA", "BBB"]) as gainers, \
+            mock.patch.object(gc, "yesterday_movers", return_value=[]), \
+            mock.patch.object(gc, "earnings_reaction", return_value=[]), \
+            mock.patch.object(gc.ohlc, "liquid_hot", return_value=[]), \
+            mock.patch.object(gc.ohlc, "continuation", return_value=[]), \
+            mock.patch.object(gc.cf, "features", return_value={}), \
+            mock.patch.object(gc.ohlc, "features", return_value={}), \
+            mock.patch.object(gc, "lookback_calendar",
+                              return_value=["2026-09-15", "2026-09-16"]), \
+            mock.patch.object(gc, "knowable_export_date",
+                              return_value="2026-09-15"):
+        wl = gc.watchlist(
+            "2026-09-16", cal=["2026-09-16"], flatten_picks=["FL"],
+        )
+    assert wl["n_yday_gainers"] == 2
+    assert "AAA" in wl["tickers"]
+    gainers.assert_called()
+    assert gainers.call_args.args[0] == "2026-09-15"
+
+
 def test_html_has_captured_chip() -> None:
     page = fla.render_html(fla._sample_payload() if hasattr(fla, "_sample_payload")
                            else __import__("src.test_flatten_lookback_action",
@@ -61,5 +85,6 @@ if __name__ == "__main__":
     test_earnings_parse_amc_and_bmo()
     test_814_earnings_reaction_hits_known_gainers()
     test_814_watchlist_captures_earn_rip_not_asts_book()
+    test_watchlist_one_day_cal_still_reads_prior_export()
     test_html_has_captured_chip()
-    print("4 gainer-capture tests passed")
+    print("5 gainer-capture tests passed")
