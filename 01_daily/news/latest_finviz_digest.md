@@ -1,12 +1,12 @@
 # Finviz Daily Digest — 2026-09-18
 
-_Generated 2026-09-18T04:08:13.435308-04:00 · export=data/exports/finviz_2026-09-18.csv · ticker digests=5887 · high-signal=2382_
+_Generated 2026-09-19T01:46:40.123481-04:00 · export=data/exports/finviz_2026-09-18.csv · ticker digests=5888 · high-signal=2344_
 
 ## Major indices (live quote page)
 
-- **S&P 500 (SPY)**: Stock Market: Will S&P 500 Open Up or Down Today?
-- **Nasdaq-100 (QQQ)**: US Stock Market This Week: Are SPY, QQQ Beating Asian Equities?
-- **Dow Jones (DIA)**: S&P 500, Nasdaq, Dow End Higher As Drop In Oil Prices Allays Inflationary Concerns  NVDA, MCD, CRWV, LMT, AMZN In Focus
+- **S&P 500 (SPY)**: Dow Drops To Record Worst Week In Six Months Amid Elevated Yields, Oil  NVDA, TSLA, SPCX, ONON In Focus
+- **Nasdaq-100 (QQQ)**: Dow Drops To Record Worst Week In Six Months Amid Elevated Yields, Oil  NVDA, TSLA, SPCX, ONON In Focus
+- **Dow Jones (DIA)**: Dow Drops To Record Worst Week In Six Months Amid Elevated Yields, Oil  NVDA, TSLA, SPCX, ONON In Focus
 - **Russell 2000 (IWM)**: Investors worried about rising bond yields are keeping a close eye on this corner of the market
 
 ## High-signal ticker digests (ranked)
@@ -20,30 +20,27 @@ _Generated 2026-09-18T04:08:13.435308-04:00 · export=data/exports/finviz_2026-0
 - **APP** [Communication Serv]: Piper Sandler cuts AppLovin price target to $325 from $385, maintains Neutral rating
 - **ARGX** [Healthcare]: argenx announces it has completed the acquisition of Forte Biosciences for $77 per share in cash, adding first-in-class anti-CD122 antibody FB102 to its immunology pipeline.
 - **ASML** [Technology]: ASML nearly sold out of 2027 EUV capacity amid very strong AI-driven demand, JPMorgan says
-- **AU** [Basic Materials]: Gold prices slide more than 3% after Fed Chair Kevin Warshâs Jackson Hole comments boost September U.S. rate hike expectations
+- **AU** [Basic Materials]: Gold prices slide more than 3% after Fed Chair Kevin Warsh’s Jackson Hole comments boost September U.S. rate hike expectations
 - **B** [Basic Materials]: Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%
-- **BAC** [Financial]: BAC CEO's soft Q3 outlook at Barclays conference drives 5% plunge
-- **BCS** [Financial]: Strong H1 profits, guidance upgrade and Â£1bn buyback drive BCS 6.48% surge
 - **BHP** [Basic Materials]: BHP Group ADRs fall after copper prices retreat from record highs amid U.S. tariff uncertainty on refined copper.
 - **BNS** [Financial]: Bank of Nova Scotia posts record Q3 2026 EPS $2.28 as National Bank upgrades to Outperform, lifts target to C$142
 - **BNY** [Financial]: BNY announces it will raise its Prime Lending Rate by 25 basis points to 7.00% effective September 17, 2026.
 - **BSX** [Healthcare]: Citi downgrades Boston Scientific to Neutral, cuts target to $50 on pulsed field ablation and LAAC concerns
 - **BX** [Financial]: Blackstone Infrastructure and PNM file amended New Mexico PRC merger plan with $220M ratepayer credits and $80M community benefits for $11.5B TXNM deal
-- **CAH** [Healthcare]: Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.
+- **CAH** [Healthcare]: Barron’s reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.
 - **CI** [Healthcare]: Jefferies downgrades Cigna to Hold from Buy, cuts price target to $307 from $336 on concern consensus too high post EviCore sale, Centene prescription drug plan shrinkage
 - **CM** [Financial]: Canadian Imperial Bank Of Commerce reports fiscal Q3 2026 results with non-GAAP EPS $1.97 (+25% YoY) and revenue $6.0B (+14% YoY), beats EPS and revenue estimates
 - **CNQ** [Energy]: Canadian Natural Resources posts record Q2 2026 results with EPS $1.58, raises 2026 production guidance and returns about $4B to shareholders
 - **COR** [Healthcare]: Cencora reaffirms fiscal 2026 adjusted EPS guidance despite Walgreens prescription volume shift
 - **CRH** [Basic Materials]: Berenberg price target cut to $140 from $146 triggers CRH 3.87% drop to near 52-week low
 - **CRM** [Technology]: Salesforce issues FY27 revenue guidance of $46.4B, sets FY30 revenue target above $63B at Investor Day
-- **CRWD** [Technology]: Bernstein raises CrowdStrike price target to $132 from $119 on stronger cybersecurity demand signals and improved sentiment
 - **CSX** [Industrials]: CSX delivers record revenue, raises 2026 margin and free cash flow outlook
 - **CVE** [Energy]: Cenovus Energy Q2 2026 non-GAAP EPS $1.08 misses estimates, revenue $14.7B beats, company raises full-year production guidance
 - **D** [Utilities]: Dominion, NextEra enhance Virginia merger benefits with 1,000 new jobs, doubled bill credits and $1B-a-year supplier program
 - **DDOG** [Technology]: Snowflake's stronger-than-expected quarterly revenue and earnings support cloud and AI-focused enterprise software peers including Datadog
 - **DUK** [Utilities]: Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year
 - **DVN** [Energy]: Surprise US crude inventory build and Fed rate hike drive 5.63% DVN drop
-- **E** [Energy]: Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results
+- **E** [Energy]: Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to €3.4B on stronger Q2 results
 - **ELV** [Healthcare]: Elevance Health disclosed in an SEC filing that it reaffirmed its 2026 guidance for at least $27.00 in adjusted EPS and a 90.2% benefit expense ratio.
 - **EQIX** [Real Estate]: Equinix, CPP Investments close US$4B atNorth acquisition with Equinix investing about US$895M for roughly 34% stake
 - **FAST** [Industrials]: Fastenal beats Q2 estimates with EPS $0.33 (+14% YoY), revenue $2.4B (+15% YoY), notes gross margin pressure and lowers 2026 digital sales mix target
@@ -51,29 +48,25 @@ _Generated 2026-09-18T04:08:13.435308-04:00 · export=data/exports/finviz_2026-0
 - **GD** [Industrials]: General Dynamics' GDIT wins $1.3B multi-year Enterprise Network Operations and Cybersecurity Support contract for Army National Guard, federal partners
 - **GE** [Industrials]: Melius downgrades GE Aerospace to Hold from Buy and cuts price target to $350 from $432
 - **GEV** [Industrials]: GE Vernova settles over $300 million Vineyard Wind payment dispute, withdraws contract-termination notice and legal claims on Massachusetts offshore project
+- **GOOG** [Communication Serv]: Evercore ISI, Tigress raise Alphabet price targets after survey shows Google search share has rebounded
+- **GSK** [Healthcare]: Positive Jideytro ARROS-1 trial data for first-line ROS1+ NSCLC drives GSK premarket surge
+- **HCA** [Healthcare]: HCA Healthcare announces it has completed the previously announced acquisition of The College of Health Care Professions, expanding its healthcare education platform.
 
 ## By sector (top signal)
-
-### Financial (n=8)
-- AJG: Arthur J. Gallagher & Co. announces acquisition of Colorado-based Innovise Business Consultants, expanding its commercial insurance and surety bonding capabilities in the Western U.S.
-- AON: Aon files audited and pro forma financials with SEC for pending USI Advantage merger
-- BAC: BAC CEO's soft Q3 outlook at Barclays conference drives 5% plunge
-- BCS: Strong H1 profits, guidance upgrade and Â£1bn buyback drive BCS 6.48% surge
-- BNS: Bank of Nova Scotia posts record Q3 2026 EPS $2.28 as National Bank upgrades to Outperform, lifts target to C$142
 
 ### Healthcare (n=8)
 - AMGN: Amgen gets FDA approval to update IMDELLTRA label to reduce monitoring for first two ES-SCLC doses
 - ARGX: argenx announces it has completed the acquisition of Forte Biosciences for $77 per share in cash, adding first-in-class anti-CD122 antibody FB102 to its immunology pipeline.
 - BSX: Citi downgrades Boston Scientific to Neutral, cuts target to $50 on pulsed field ablation and LAAC concerns
-- CAH: Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.
+- CAH: Barron’s reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.
 - CI: Jefferies downgrades Cigna to Hold from Buy, cuts price target to $307 from $336 on concern consensus too high post EviCore sale, Centene prescription drug plan shrinkage
 
-### Technology (n=8)
-- APH: Fabrinet earnings weakness and rising yields spark 6.5% APH drop
-- ASML: ASML nearly sold out of 2027 EUV capacity amid very strong AI-driven demand, JPMorgan says
-- CRM: Salesforce issues FY27 revenue guidance of $46.4B, sets FY30 revenue target above $63B at Investor Day
-- CRWD: Bernstein raises CrowdStrike price target to $132 from $119 on stronger cybersecurity demand signals and improved sentiment
-- DDOG: Snowflake's stronger-than-expected quarterly revenue and earnings support cloud and AI-focused enterprise software peers including Datadog
+### Financial (n=8)
+- AJG: Arthur J. Gallagher & Co. announces acquisition of Colorado-based Innovise Business Consultants, expanding its commercial insurance and surety bonding capabilities in the Western U.S.
+- AON: Aon files audited and pro forma financials with SEC for pending USI Advantage merger
+- BNS: Bank of Nova Scotia posts record Q3 2026 EPS $2.28 as National Bank upgrades to Outperform, lifts target to C$142
+- BNY: BNY announces it will raise its Prime Lending Rate by 25 basis points to 7.00% effective September 17, 2026.
+- BX: Blackstone Infrastructure and PNM file amended New Mexico PRC merger plan with $220M ratepayer credits and $80M community benefits for $11.5B TXNM deal
 
 ### Industrials (n=8)
 - AME: AMETEK completes $5.0 billion all-cash acquisition of Indicor Instrumentation
@@ -82,8 +75,15 @@ _Generated 2026-09-18T04:08:13.435308-04:00 · export=data/exports/finviz_2026-0
 - FIX: Zacks Strong Buy upgrade and AI data center backlog drive 11% FIX surge
 - GD: General Dynamics' GDIT wins $1.3B multi-year Enterprise Network Operations and Cybersecurity Support contract for Army National Guard, federal partners
 
+### Technology (n=8)
+- APH: Fabrinet earnings weakness and rising yields spark 6.5% APH drop
+- ASML: ASML nearly sold out of 2027 EUV capacity amid very strong AI-driven demand, JPMorgan says
+- CRM: Salesforce issues FY27 revenue guidance of $46.4B, sets FY30 revenue target above $63B at Investor Day
+- DDOG: Snowflake's stronger-than-expected quarterly revenue and earnings support cloud and AI-focused enterprise software peers including Datadog
+- IBM: IBM unit Anderon finalizes $1B U.S. CHIPS Act award to fund scaling of U.S. quantum wafer foundry
+
 ### Basic Materials (n=5)
-- AU: Gold prices slide more than 3% after Fed Chair Kevin Warshâs Jackson Hole comments boost September U.S. rate hike expectations
+- AU: Gold prices slide more than 3% after Fed Chair Kevin Warsh’s Jackson Hole comments boost September U.S. rate hike expectations
 - B: Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%
 - BHP: BHP Group ADRs fall after copper prices retreat from record highs amid U.S. tariff uncertainty on refined copper.
 - CRH: Berenberg price target cut to $140 from $146 triggers CRH 3.87% drop to near 52-week low
@@ -93,13 +93,14 @@ _Generated 2026-09-18T04:08:13.435308-04:00 · export=data/exports/finviz_2026-0
 - CNQ: Canadian Natural Resources posts record Q2 2026 results with EPS $1.58, raises 2026 production guidance and returns about $4B to shareholders
 - CVE: Cenovus Energy Q2 2026 non-GAAP EPS $1.08 misses estimates, revenue $14.7B beats, company raises full-year production guidance
 - DVN: Surprise US crude inventory build and Fed rate hike drive 5.63% DVN drop
-- E: Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results
+- E: Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to €3.4B on stronger Q2 results
 - KMI: KMI rebounds on pipeline project momentum and raised 2026 guidance
 
-### Communication Services (n=3)
+### Communication Services (n=4)
 - AMX: JPMorgan upgrades America Movil to Overweight from Neutral and raises its price target to $32 from $30.
 - APP: Piper Sandler cuts AppLovin price target to $325 from $385, maintains Neutral rating
-- NFLX: Evercore ISI raises Netflix price target to $110 from $100, reiterates outperform on live events and short-form growth
+- GOOG: Evercore ISI, Tigress raise Alphabet price targets after survey shows Google search share has rebounded
+- NFLX: Wells Fargo downgrades Netflix to Underweight from Equal Weight, cuts price target to $57 from $80 on concerns over weakening engagement and a softer 2H26 originals slate
 
 ### Utilities (n=3)
 - D: Dominion, NextEra enhance Virginia merger benefits with 1,000 new jobs, doubled bill credits and $1B-a-year supplier program
@@ -109,7 +110,7 @@ _Generated 2026-09-18T04:08:13.435308-04:00 · export=data/exports/finviz_2026-0
 ### Consumer Cyclical (n=3)
 - HD: Home Depot announces the nationwide rollout of its Magic Apron AI-powered in-store assistant with localized, personalized shopping guidance now live in all U.S. stores.
 - HLT: Deutsche Bank upgrades Hilton Worldwide to Buy from Hold, raises price target to $365
-- LOW: Bernstein cuts Loweâs price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery
+- LOW: Bernstein cuts Lowe’s price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery
 
 ### Real Estate (n=1)
 - EQIX: Equinix, CPP Investments close US$4B atNorth acquisition with Equinix investing about US$895M for roughly 34% stake
