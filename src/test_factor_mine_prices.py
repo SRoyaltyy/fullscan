@@ -43,7 +43,8 @@ def test_session_bar_matches_official_held_names() -> None:
 
 def test_rebuilt_factor_mine_books_use_official_marks() -> None:
     assert FM_JSON.is_file(), "factor_mine.json missing — run python -m src.factor_mine --write"
-    payload = json.loads(FM_JSON.read_text(encoding="utf-8"))
+    from src.factor_mine import load_scoreboard
+    payload = load_scoreboard(FM_JSON)
     dates = payload.get("dates") or []
     assert "2026-09-07" not in dates, dates[-6:]
     assert "2026-09-04" in dates and "2026-09-08" in dates

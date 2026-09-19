@@ -68,9 +68,15 @@ def load_pack() -> dict:
                     pass
     if OUT_JSON.is_file():
         try:
-            return json.loads(OUT_JSON.read_text(encoding="utf-8"))
-        except (OSError, json.JSONDecodeError):
-            return {}
+            from . import factor_mine as fm
+            pack = fm.load_scoreboard(OUT_JSON)
+            if pack:
+                return pack
+        except Exception:
+            try:
+                return json.loads(OUT_JSON.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError):
+                return {}
     return {}
 
 

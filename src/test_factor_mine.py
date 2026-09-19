@@ -777,6 +777,84 @@ def test_payload_is_gzip_base64_and_round_trips() -> None:
     assert "window.__FM_D" in main
 
 
+def test_scoreboard_shards_roundtrip(tmp_path=None) -> None:
+    """Monolith JSON is not committed — slim index + gzip shards round-trip."""
+    from pathlib import Path
+    import tempfile
+    payload = {
+        "generated_at": "2026-09-18T09:55:27",
+        "n_recipes": 2,
+        "dates": ["2026-08-13", "2026-08-14"],
+        "stats": [{"name": "union_h1", "total_ret_pct": 1.2}],
+        "recipes": [{"name": "union_h1", "hold": 1}],
+        "series": {"union_h1": [10000, 10100]},
+        "books": {"union_h1": {"n_trades": 2, "trades": [{"ticker": "AAA"}]}},
+        "starts": {"union_h1": [{"start": "2026-08-13", "days": [{"date": "2026-08-13"}]}]},
+        "daily": {"union_h1": [{"date": "2026-08-13", "equity": 10100}]},
+        "probe": {"2026-08-13": {"AAA": {"on_list": True}}},
+        "sim": {"dates": ["2026-08-13"], "rows": [{"ticker": "AAA"}]},
+    }
+    with tempfile.TemporaryDirectory() as d:
+        dest = Path(d) / "factor_mine.json"
+        slim = fm.write_scoreboard(payload, dest)
+        assert slim["layout"] == fm.LAYOUT_SHARDS
+        assert dest.stat().st_size < 50_000
+        shard_dir = dest.parent / "factor_mine" / "shards"
+        for key in fm.SHARD_KEYS:
+            gz = shard_dir / f"{key}.json.gz"
+            assert gz.is_file(), key
+            assert gz.stat().st_size < fm.COMMIT_SOFT_LIMIT
+        raw = json.loads(dest.read_text(encoding="utf-8"))
+        for key in fm.SHARD_KEYS:
+            assert key not in raw
+            assert key in raw["shards"]
+        got = fm.load_scoreboard(dest)
+        for key in fm.SHARD_KEYS:
+            assert got[key] == payload[key]
+        assert got["stats"] == payload["stats"]
+        assert "layout" not in got
+        checked = fm.assert_publish_budget(dest)
+        assert dest in checked
+
+
+def test_load_scoreboard_legacy_monolith(tmp_path=None) -> None:
+    from pathlib import Path
+    import tempfile
+    payload = {
+        "n_recipes": 1,
+        "stats": [{"name": "union_h1"}],
+        "books": {"union_h1": {"n_trades": 1}},
+        "daily": {"union_h1": [{"date": "2026-08-13"}]},
+        "starts": {"union_h1": []},
+    }
+    with tempfile.TemporaryDirectory() as d:
+        dest = Path(d) / "legacy.json"
+        dest.write_text(json.dumps(payload), encoding="utf-8")
+        got = fm.load_scoreboard(dest)
+        assert got["books"]["union_h1"]["n_trades"] == 1
+        assert got["daily"]["union_h1"][0]["date"] == "2026-08-13"
+
+
+def test_write_scoreboard_splits_oversized_mapping(tmp_path=None) -> None:
+    from pathlib import Path
+    import tempfile
+    import os
+    books = {f"sleeve_{i}": {"blob": os.urandom(12_000).hex()} for i in range(8)}
+    payload = {"n_recipes": 12, "books": books, "stats": []}
+    orig = fm.SHARD_GZIP_SPLIT
+    fm.SHARD_GZIP_SPLIT = 2000
+    try:
+        with tempfile.TemporaryDirectory() as d:
+            dest = Path(d) / "factor_mine.json"
+            slim = fm.write_scoreboard(payload, dest)
+            rels = slim["shards"]["books"]
+            assert len(rels) >= 2
+            got = fm.load_scoreboard(dest)
+            assert set(got["books"]) == set(books)
+    finally:
+        fm.SHARD_GZIP_SPLIT = orig
+
+
 def test_factor_mine_main_script_parses_and_replays_sell() -> None:
     """A second `const sp` in renderTools blanked the live .io page (#223)."""
     import subprocess
@@ -1223,6 +1301,8 @@ def test_factor_mine_workflow_lands_after_close() -> None:
     assert 'cron: "0 12 * * 6"' in yml
     assert "data/factor_mine/panel.json" in yml
     assert "Stock Book ALL (one-shot)" in yml
+    assert "assert_publish_budget" in yml
+    assert "03_scoreboard/factor_mine/" in yml
 
 
 def test_session_calendar_includes_completed_predict_day() -> None:
@@ -2313,6 +2393,9 @@ if __name__ == "__main__":
     test_recipes_cover_holds_shorts_and_exits()
     test_template_has_data_slot()
     test_payload_is_gzip_base64_and_round_trips()
+    test_scoreboard_shards_roundtrip()
+    test_load_scoreboard_legacy_monolith()
+    test_write_scoreboard_splits_oversized_mapping()
     test_write_outputs_injects_payload()
     test_butterfly_day2_opens_at_day1_leftover()
     test_audit_fails_on_unheld_sell_and_overspend()

@@ -184,6 +184,28 @@ jobs:
           test -s 03_scoreboard/FACTOR_MINE_ACTION.md
           test -s 03_scoreboard/factor_mine.json
           test -s dashboard/factor-mine/index.html
+          python - <<'PY'
+          from pathlib import Path
+          from src.factor_mine import COMMIT_SOFT_LIMIT, assert_publish_budget, load_scoreboard
+          checked = assert_publish_budget()
+          pack = load_scoreboard()
+          print(
+              "scoreboard layout shards-v1",
+              "recipes", pack.get("n_recipes"),
+              "books", len(pack.get("books") or {}),
+              "files", len(checked),
+          )
+          roots = [Path("03_scoreboard"), Path("dashboard/factor-mine"), Path("data/factor_mine")]
+          bad = []
+          for root in roots:
+              if not root.exists():
+                  continue
+              for p in root.rglob("*"):
+                  if p.is_file() and p.stat().st_size > COMMIT_SOFT_LIMIT:
+                      bad.append(f"{p} {p.stat().st_size}")
+          if bad:
+              raise SystemExit("oversize publish path:\n" + "\n".join(bad))
+          PY
       - name: Publish scoreboard to main
         run: |
           bash scripts/safe_git_push.sh \
