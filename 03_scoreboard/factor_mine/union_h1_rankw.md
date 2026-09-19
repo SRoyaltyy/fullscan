@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `rank_w` · sell `list` · S-boost `none` · rank-weighted leftover
 
-Cash book **-0.41%** ($9,959) · signal-only (no cash/fees) was +10.67%. Starts YES **0/25**. Fills 178 · skips 88 · realized $+33.05.
+Cash book **-2.88%** ($9,712) · signal-only (no cash/fees) was +7.77%. Starts YES **0/26**. Fills 188 · skips 88 · realized $-30.04.
 
 ## How this sleeve decides (like you are 10)
 
@@ -50,7 +50,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $184.32.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $12.95.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -256,7 +256,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | `AZTA` | 56 | — | $33.94 | +0.00 | $33.63 | -17.36 | -17.36 | +0.00 | -17.36 |
 | 2026-09-17 | `IT` | 7 | — | $191.61 | +0.00 | $187.80 | -26.67 | -26.67 | +0.00 | -26.67 |
 | 2026-09-17 | `IOT` | 23 | — | $40.48 | +0.00 | $40.00 | -10.93 | -10.93 | +0.00 | -10.93 |
-| 2026-09-17 | `FIVN` | 14 | — | $33.77 | +0.00 | $34.50 | +10.22 | +10.22 | +0.00 | +10.22 |
+| 2026-09-17 | `FIVN` | 13 | — | $34.75 | +0.00 | $34.50 | -3.25 | -3.25 | +0.00 | -3.25 |
+| 2026-09-18 | `RVTY` | 19 | $146.73 | $146.50 | -4.37 | — | +0.00 | -4.37 | -21.09 | — |
+| 2026-09-18 | `WAY` | 90 | $26.51 | $26.95 | +39.60 | — | +0.00 | +39.60 | +39.60 | — |
+| 2026-09-18 | `AZTA` | 56 | $33.63 | $33.44 | -10.64 | — | +0.00 | -10.64 | -28.00 | — |
+| 2026-09-18 | `IT` | 7 | $187.80 | $188.32 | +3.64 | — | +0.00 | +3.64 | -23.03 | — |
+| 2026-09-18 | `IOT` | 23 | $40.00 | $40.42 | +9.66 | — | +0.00 | +9.66 | -1.26 | — |
+| 2026-09-18 | `FIVN` | 13 | $34.50 | $34.44 | -0.78 | — | +0.00 | -0.78 | -4.03 | — |
+| 2026-09-18 | `ILMN` | 16 | — | $249.13 | +0.00 | $239.62 | -152.16 | -152.16 | +0.00 | -152.16 |
+| 2026-09-18 | `SDGR` | 102 | — | $29.32 | +0.00 | $29.02 | -30.60 | -30.60 | +0.00 | -30.60 |
+| 2026-09-18 | `ARQT` | 76 | — | $26.14 | +0.00 | $25.38 | -57.76 | -57.76 | +0.00 | -57.76 |
+| 2026-09-18 | `FTRE` | 49 | — | $20.10 | +0.00 | $19.93 | -8.33 | -8.33 | +0.00 | -8.33 |
 
 ## Each session (cash + holdings state)
 
@@ -286,7 +296,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | -11.00 | $281.36 | AUPH×141, OVID×740, SANM×8, ORCL×8, NVT×7, COHU×15, AMTX×283, CLOV×60 | $10,055.13 | -268.06 | -23.52 | — | AUPH, OVID, SANM, ORCL, COHU, AMTX, CLOV | $8,980.97 | $10,007.45 | NVT×7 |
 | 2026-09-15 | -3.84 | $8,980.97 | NVT×7 | $10,038.81 | +31.36 | +0.00 | — | NVT | $10,036.78 | $10,036.78 | — |
 | 2026-09-16 | +5.30 | $10,036.78 | — | $10,036.78 | -0.00 | -97.69 | IQV, RDNT, AVAH, BLFS | — | $240.20 | $9,930.47 | IQV×14, RDNT×39, AVAH×140, BLFS×27 |
-| 2026-09-17 | +7.38 | $240.20 | IQV×14, RDNT×39, AVAH×140, BLFS×27 | $10,041.75 | +111.28 | -61.46 | RVTY, WAY, AZTA, IT, IOT, FIVN | IQV, RDNT, AVAH, BLFS | $184.32 | $9,958.97 | RVTY×19, WAY×90, AZTA×56, IT×7, IOT×23, FIVN×14 |
+| 2026-09-17 | +7.38 | $240.20 | IQV×14, RDNT×39, AVAH×140, BLFS×27 | $10,041.75 | +111.28 | -74.93 | RVTY, WAY, AZTA, IT, IOT, FIVN | IQV, RDNT, AVAH, BLFS | $205.36 | $9,945.51 | RVTY×19, WAY×90, AZTA×56, IT×7, IOT×23, FIVN×13 |
+| 2026-09-18 | +4.86 | $205.36 | RVTY×19, WAY×90, AZTA×56, IT×7, IOT×23, FIVN×13 | $9,982.62 | +37.11 | -248.85 | ILMN, SDGR, ARQT, FTRE | RVTY, WAY, AZTA, IT, IOT, FIVN | $12.95 | $9,712.36 | ILMN×16, SDGR×102, ARQT×76, FTRE×49 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -518,8 +529,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 09:30 ET | **BUY** | `AZTA` | 56 | $33.94 | $2.16 | — | $2,935.40 | — | rank-weighted leftover; list flatten; ret5=-1.1; leftover $1911.05 | join🟢 sector🟢 gen🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-17 09:30 ET | **BUY** | `IT` | 7 | $191.61 | $2.01 | — | $1,592.12 | — | rank-weighted leftover; list flatten; ret5=-12.9; leftover $1433.29 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-09-17 09:30 ET | **BUY** | `IOT` | 23 | $40.48 | $2.06 | — | $659.14 | — | rank-weighted leftover; list flatten; ⚪; ret5=-1.0; leftover $955.52 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-17 09:30 ET | **BUY** | `FIVN` | 14 | $33.77 | $2.03 | — | $184.32 | — | rank-weighted leftover; list flatten; ⚪; ret5=-9.6; leftover $477.76 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $184.32 | ▼ close $9,958.97 vs 09:30 $10,041.75 (session -61.46) | 16:00 close · cash $184.32 · equity $9,958.97 vs 09:30 $10,041.75 (-82.78; session marks -61.46) · 6 name(s) marked open→close (per-name table). RVTY×19 09:30 $147.61 → close $146.73 -16.72; WAY×90 09:30 $26.51 → close $26.51 +0.00; AZTA×56 09:30 $33.94 → close $33.63 -17.36; IT×7 09:30 $191.61 → close $187.80 -26.67; IOT×23 09:30 $40.48 → close $40.00 -10.93; FIVN×14 09:30 $33.77 → close $34.50 +10.22 | — |
+| 2026-09-17 09:30 ET | **BUY** | `FIVN` | 13 | $34.75 | $2.03 | — | $205.36 | — | rank-weighted leftover; list flatten; ⚪; ret5=-9.6; leftover $477.76 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $205.36 | ▼ close $9,945.51 vs 09:30 $10,041.75 (session -74.93) | 16:00 close · cash $205.36 · equity $9,945.51 vs 09:30 $10,041.75 (-96.24; session marks -74.93) · 6 name(s) marked open→close (per-name table). RVTY×19 09:30 $147.61 → close $146.73 -16.72; WAY×90 09:30 $26.51 → close $26.51 +0.00; AZTA×56 09:30 $33.94 → close $33.63 -17.36; IT×7 09:30 $191.61 → close $187.80 -26.67; IOT×23 09:30 $40.48 → close $40.00 -10.93; FIVN×13 09:30 $34.75 → close $34.50 -3.25 | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $205.36 | ▲ 09:30 equity $9,982.62 vs yday $9,945.51 (+37.11) | 09:30 open · cash $205.36 (unchanged overnight, no fees) · equity $9,982.62 vs prior close $9,945.51 (+37.11) · 6 name(s) re-marked at the open (per-name table). RVTY×19 yday $146.73 → 09:30 $146.50 -4.37; WAY×90 yday $26.51 → 09:30 $26.95 +39.60; AZTA×56 yday $33.63 → 09:30 $33.44 -10.64; IT×7 yday $187.80 → 09:30 $188.32 +3.64; IOT×23 yday $40.00 → 09:30 $40.42 +9.66; FIVN×13 yday $34.50 → 09:30 $34.44 -0.78 | — |
+| 2026-09-18 09:30 ET | **SELL** | `RVTY` | 19 | $146.50 | $2.08 | $-25.22 | $2,986.78 | ▼ -25.22 after sell → book $9,980.54; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-18 09:30 ET | **SELL** | `WAY` | 90 | $26.95 | $2.29 | $+35.05 | $5,409.98 | ▲ +35.05 after sell → book $9,978.24; vs 09:30 mark -2.30 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-18 09:30 ET | **SELL** | `AZTA` | 56 | $33.44 | $2.18 | $-32.34 | $7,280.44 | ▼ -32.34 after sell → book $9,976.06; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-18 09:30 ET | **SELL** | `IT` | 7 | $188.32 | $2.03 | $-27.07 | $8,596.65 | ▼ -27.07 after sell → book $9,974.03; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-18 09:30 ET | **SELL** | `IOT` | 23 | $40.42 | $2.08 | $-5.40 | $9,524.23 | ▼ -5.40 after sell → book $9,971.95; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-18 09:30 ET | **SELL** | `FIVN` | 13 | $34.44 | $2.05 | $-8.11 | $9,969.90 | ▼ -8.11 after sell → book $9,969.90; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-18 09:30 ET | **BUY** | `ILMN` | 16 | $249.13 | $2.04 | — | $5,981.78 | — | rank-weighted leftover; list flatten; ⚪; ret5=-6.9; leftover $3987.96 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-09-18 09:30 ET | **BUY** | `SDGR` | 102 | $29.32 | $2.30 | — | $2,988.85 | — | rank-weighted leftover; list flatten; ⚪; ret5=-8.2; leftover $2990.97 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-18 09:30 ET | **BUY** | `ARQT` | 76 | $26.14 | $2.22 | — | $999.99 | — | rank-weighted leftover; list flatten; ⚪; ret5=+1.8; leftover $1993.98 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-18 09:30 ET | **BUY** | `FTRE` | 49 | $20.10 | $2.14 | — | $12.95 | — | rank-weighted leftover; list flatten; ⚪; ret5=-7.1; leftover $996.99 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12.95 | ▼ close $9,712.36 vs 09:30 $9,982.62 (session -248.85) | 16:00 close · cash $12.95 · equity $9,712.36 vs 09:30 $9,982.62 (-270.26; session marks -248.85) · 4 name(s) marked open→close (per-name table). ILMN×16 09:30 $249.13 → close $239.62 -152.16; SDGR×102 09:30 $29.32 → close $29.02 -30.60; ARQT×76 09:30 $26.14 → close $25.38 -57.76; FTRE×49 09:30 $20.10 → close $19.93 -8.33 | — |
 
 ## Not taken
 
@@ -618,9 +641,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `RVTY` | 19 | 2026-09-17 @ $147.61 | rank-weighted leftover; list flatten; ret5=-4.8; leftover $2866.57 |
-| `WAY` | 90 | 2026-09-17 @ $26.51 | rank-weighted leftover; list flatten; ret5=-7.4; leftover $2388.81 |
-| `AZTA` | 56 | 2026-09-17 @ $33.94 | rank-weighted leftover; list flatten; ret5=-1.1; leftover $1911.05 |
-| `IT` | 7 | 2026-09-17 @ $191.61 | rank-weighted leftover; list flatten; ret5=-12.9; leftover $1433.29 |
-| `IOT` | 23 | 2026-09-17 @ $40.48 | rank-weighted leftover; list flatten; ⚪; ret5=-1.0; leftover $955.52 |
-| `FIVN` | 14 | 2026-09-17 @ $33.77 | rank-weighted leftover; list flatten; ⚪; ret5=-9.6; leftover $477.76 |
+| `ILMN` | 16 | 2026-09-18 @ $249.13 | rank-weighted leftover; list flatten; ⚪; ret5=-6.9; leftover $3987.96 |
+| `SDGR` | 102 | 2026-09-18 @ $29.32 | rank-weighted leftover; list flatten; ⚪; ret5=-8.2; leftover $2990.97 |
+| `ARQT` | 76 | 2026-09-18 @ $26.14 | rank-weighted leftover; list flatten; ⚪; ret5=+1.8; leftover $1993.98 |
+| `FTRE` | 49 | 2026-09-18 @ $20.10 | rank-weighted leftover; list flatten; ⚪; ret5=-7.1; leftover $996.99 |

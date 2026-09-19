@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_news_pack_net2_h1/short_news_r_h3 w=0.5,0.5 net=priority
 
-Cash book **+27.40%** ($12,740) · signal-only (no cash/fees) was —. Starts YES **21/25**. Fills 132 · skips 110 · realized $+2740.44.
+Cash book **+27.40%** ($12,740) · signal-only (no cash/fees) was —. Starts YES **21/26**. Fills 132 · skips 110 · realized $+2740.44.
 
 ## How this sleeve decides (like you are 10)
 
@@ -274,6 +274,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | `CRDL` | 775 | $1.85 | $1.85 | +0.00 | — | +0.00 | +0.00 | +139.50 | — |
 | 2026-09-16 | `MYGN` | 467 | $3.88 | $3.75 | +60.71 | — | +0.00 | +60.71 | -177.46 | — |
 | 2026-09-17 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-18 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -304,6 +305,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | -3.84 | $19,264.62 | QRVO×13, RWT×447, CRDL×775, MYGN×467 | $12,863.22 | +26.53 | -126.86 | — | — | $19,264.62 | $12,736.36 | QRVO×13, RWT×447, CRDL×775, MYGN×467 |
 | 2026-09-16 | +5.30 | $19,264.62 | QRVO×13, RWT×447, CRDL×775, MYGN×467 | $12,764.22 | +27.86 | +0.00 | — | QRVO, RWT, CRDL, MYGN | $12,740.40 | $12,740.40 | — |
 | 2026-09-17 | +7.38 | $12,740.40 | — | $12,740.40 | +0.00 | +0.00 | — | — | $12,740.40 | $12,740.40 | — |
+| 2026-09-18 | +4.86 | $12,740.40 | — | $12,740.40 | +0.00 | +0.00 | — | — | $12,740.40 | $12,740.40 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -491,6 +493,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,740.40 | ▲ close $12,740.40 vs 09:30 $12,764.22 (session +0.00) | 16:00 close · cash $12,740.40 · no lots left · equity $12,740.40. | — |
 | 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,740.40 | ▲ 09:30 equity $12,740.40 vs yday $12,740.40 (+0.00) | 09:30 open · cash $12,740.40 (unchanged overnight, no fees) · equity $12,740.40 vs prior close $12,740.40 (+0.00) | — |
 | 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,740.40 | ▲ close $12,740.40 vs 09:30 $12,740.40 (session +0.00) | 16:00 close · cash $12,740.40 · no lots left · equity $12,740.40. | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,740.40 | ▲ 09:30 equity $12,740.40 vs yday $12,740.40 (+0.00) | 09:30 open · cash $12,740.40 (unchanged overnight, no fees) · equity $12,740.40 vs prior close $12,740.40 (+0.00) | — |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,740.40 | ▲ close $12,740.40 vs 09:30 $12,740.40 (session +0.00) | 16:00 close · cash $12,740.40 · no lots left · equity $12,740.40. | — |
 
 ## Not taken
 

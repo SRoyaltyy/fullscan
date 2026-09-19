@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · coil, exit on 🚨
 
-Cash book **-11.12%** ($8,888) · signal-only (no cash/fees) was -14.83%. Starts YES **0/25**. Fills 113 · skips 213 · realized $-887.94.
+Cash book **-13.03%** ($8,697) · signal-only (no cash/fees) was -16.66%. Starts YES **0/26**. Fills 113 · skips 214 · realized $-887.94.
 
 ## How this sleeve decides (like you are 10)
 
@@ -288,6 +288,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | `VIST` | 15 | $78.36 | $76.75 | -24.15 | — | +0.00 | -24.15 | -8.70 | — |
 | 2026-09-16 | `AVAH` | 636 | — | $14.31 | +0.00 | $14.26 | -31.80 | -31.80 | +0.00 | -31.80 |
 | 2026-09-17 | `AVAH` | 636 | $14.26 | $14.33 | +44.52 | $13.97 | -228.96 | -184.44 | +12.72 | -216.24 |
+| 2026-09-18 | `AVAH` | 636 | $13.97 | $13.90 | -44.52 | $13.67 | -146.28 | -190.80 | -260.76 | -407.04 |
 
 ## Each session (cash + holdings state)
 
@@ -318,6 +319,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | -3.84 | $2,734.13 | SANM×5, NVT×7, AMTX×583, BAK×561, FUBO×103, VIST×15 | $9,398.18 | +24.15 | -87.64 | — | — | $2,734.13 | $9,310.54 | SANM×5, NVT×7, AMTX×583, BAK×561, FUBO×103, VIST×15 |
 | 2026-09-16 | +5.30 | $2,734.13 | SANM×5, NVT×7, AMTX×583, BAK×561, FUBO×103, VIST×15 | $9,135.47 | -175.07 | -31.80 | AVAH | SANM, NVT, AMTX, BAK, FUBO, VIST | $2.70 | $9,072.06 | AVAH×636 |
 | 2026-09-17 | +7.38 | $2.70 | AVAH×636 | $9,116.58 | +44.52 | -228.96 | — | — | $2.70 | $8,887.62 | AVAH×636 |
+| 2026-09-18 | +4.86 | $2.70 | AVAH×636 | $8,843.10 | -44.52 | -146.28 | — | — | $2.70 | $8,696.82 | AVAH×636 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -486,6 +488,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.70 | ▼ close $9,072.06 vs 09:30 $9,135.47 (session -31.80) | 16:00 close · cash $2.70 · equity $9,072.06 vs 09:30 $9,135.47 (-63.41; session marks -31.80) · 1 name(s) marked open→close (per-name table). AVAH×636 09:30 $14.31 → close $14.26 -31.80 | — |
 | 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.70 | ▲ 09:30 equity $9,116.58 vs yday $9,072.06 (+44.52) | 09:30 open · cash $2.70 (unchanged overnight, no fees) · equity $9,116.58 vs prior close $9,072.06 (+44.52) · 1 name(s) re-marked at the open (per-name table). AVAH×636 yday $14.26 → 09:30 $14.33 +44.52 | — |
 | 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.70 | ▼ close $8,887.62 vs 09:30 $9,116.58 (session -228.96) | 16:00 close · cash $2.70 · equity $8,887.62 vs 09:30 $9,116.58 (-228.96; session marks -228.96) · 1 name(s) marked open→close (per-name table). AVAH×636 09:30 $14.33 → close $13.97 -228.96 | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.70 | ▼ 09:30 equity $8,843.10 vs yday $8,887.62 (-44.52) | 09:30 open · cash $2.70 (unchanged overnight, no fees) · equity $8,843.10 vs prior close $8,887.62 (-44.52) · 1 name(s) re-marked at the open (per-name table). AVAH×636 yday $13.97 → 09:30 $13.90 -44.52 | — |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.70 | ▼ close $8,696.82 vs 09:30 $8,843.10 (session -146.28) | 16:00 close · cash $2.70 · equity $8,696.82 vs 09:30 $8,843.10 (-146.28; session marks -146.28) · 1 name(s) marked open→close (per-name table). AVAH×636 09:30 $13.90 → close $13.67 -146.28 | — |
 
 ## Not taken
 
@@ -704,6 +708,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `LFMD` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `RBLX` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-17 | `AVAH` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-18 | `AVAH` | min_hold | dropped but min-hold 2/3 sess — no sell |
 
 ## Still open (marked at last close)
 

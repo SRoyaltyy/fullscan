@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared short_news_r_h3/union_join_vol_green_h1 w=0.5,0.5 net=priority
 
-Cash book **+20.63%** ($12,063) · signal-only (no cash/fees) was —. Starts YES **16/25**. Fills 207 · skips 130 · realized $+2137.36.
+Cash book **+17.47%** ($11,747) · signal-only (no cash/fees) was —. Starts YES **12/26**. Fills 210 · skips 130 · realized $+2041.76.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $31.01.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $47.24.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -348,6 +348,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | `CRDL` | 771 | $1.85 | $1.85 | +0.00 | — | +0.00 | +0.00 | +138.78 | — |
 | 2026-09-16 | `MYGN` | 464 | $3.88 | $3.75 | +60.32 | — | +0.00 | +60.32 | -176.32 | — |
 | 2026-09-17 | `RVTY` | 82 | — | $147.61 | +0.00 | $146.73 | -72.16 | -72.16 | +0.00 | -72.16 |
+| 2026-09-18 | `RVTY` | 82 | $146.73 | $146.50 | -18.86 | — | +0.00 | -18.86 | -91.02 | — |
+| 2026-09-18 | `ILMN` | 24 | — | $249.13 | +0.00 | $239.62 | -228.24 | -228.24 | +0.00 | -228.24 |
+| 2026-09-18 | `SDGR` | 205 | — | $29.32 | +0.00 | $29.02 | -61.50 | -61.50 | +0.00 | -61.50 |
 
 ## Each session (cash + holdings state)
 
@@ -378,6 +381,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | -3.84 | $18,630.76 | QRVO×13, RWT×444, CRDL×771, MYGN×464 | $12,260.00 | +26.35 | -126.73 | — | — | $18,630.76 | $12,133.27 | QRVO×13, RWT×444, CRDL×771, MYGN×464 |
 | 2026-09-16 | +5.30 | $18,630.76 | QRVO×13, RWT×444, CRDL×771, MYGN×464 | $12,160.95 | +27.68 | +0.00 | — | QRVO, RWT, CRDL, MYGN | $12,137.27 | $12,137.27 | — |
 | 2026-09-17 | +7.38 | $12,137.27 | — | $12,137.27 | -0.00 | -72.16 | RVTY | — | $31.01 | $12,062.87 | RVTY×82 |
+| 2026-09-18 | +4.86 | $31.01 | RVTY×82 | $12,044.01 | -18.86 | -289.74 | ILMN, SDGR | RVTY | $47.24 | $11,747.22 | ILMN×24, SDGR×205 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -640,6 +644,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,137.27 | ▲ 09:30 equity $12,137.27 vs yday $12,137.27 (-0.00) | 09:30 open · cash $12,137.27 (unchanged overnight, no fees) · equity $12,137.27 vs prior close $12,137.27 (-0.00) | — |
 | 2026-09-17 09:30 ET | **BUY** | `RVTY` | 82 | $147.61 | $2.24 | — | $31.01 | — | combo gate; gate join=good,vol=good,last_green=True; list flatten; ret5=-4.8; combo leftover $12137.27; owner union_join_vol_green_h1 | join🟢 sector🟢 gen🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $31.01 | ▼ close $12,062.87 vs 09:30 $12,137.27 (session -72.16) | 16:00 close · cash $31.01 · equity $12,062.87 vs 09:30 $12,137.27 (-74.40; session marks -72.16) · 1 name(s) marked open→close (per-name table). RVTY×82 09:30 $147.61 → close $146.73 -72.16 | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $31.01 | ▼ 09:30 equity $12,044.01 vs yday $12,062.87 (-18.86) | 09:30 open · cash $31.01 (unchanged overnight, no fees) · equity $12,044.01 vs prior close $12,062.87 (-18.86) | — |
+| 2026-09-18 09:30 ET | **SELL** | `RVTY` | 82 | $146.50 | $2.35 | $-95.60 | $12,041.66 | ▼ -95.60 after sell → book $12,041.66; vs 09:30 mark -2.35 | union_join_vol_green_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-09-18 09:30 ET | **BUY** | `ILMN` | 24 | $249.13 | $2.06 | — | $6,060.48 | — | combo gate; gate join=good,vol=good,last_green=True; list flatten; ⚪; ret5=-6.9; combo leftover $6020.83; owner union_join_vol_green_h1 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-09-18 09:30 ET | **BUY** | `SDGR` | 205 | $29.32 | $2.64 | — | $47.24 | — | combo gate; gate join=good,vol=good,last_green=True; list flatten; ⚪; ret5=-8.2; combo leftover $6020.83; owner union_join_vol_green_h1 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $47.24 | ▼ close $11,747.22 vs 09:30 $12,044.01 (session -289.74) | 16:00 close · cash $47.24 · equity $11,747.22 vs 09:30 $12,044.01 (-296.79; session marks -289.74) · 2 name(s) marked open→close (per-name table). ILMN×24 09:30 $249.13 → close $239.62 -228.24; SDGR×205 09:30 $29.32 → close $29.02 -61.50 | — |
 
 ## Not taken
 
@@ -780,4 +789,5 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `RVTY` | 82 | 2026-09-17 @ $147.61 | combo gate; gate join=good,vol=good,last_green=True; list flatten; ret5=-4.8; combo leftover $12137.27; owner union_join_vol_green_h1 |
+| `ILMN` | 24 | 2026-09-18 @ $249.13 | combo gate; gate join=good,vol=good,last_green=True; list flatten; ⚪; ret5=-6.9; combo leftover $6020.83; owner union_join_vol_green_h1 |
+| `SDGR` | 205 | 2026-09-18 @ $29.32 | combo gate; gate join=good,vol=good,last_green=True; list flatten; ⚪; ret5=-8.2; combo leftover $6020.83; owner union_join_vol_green_h1 |

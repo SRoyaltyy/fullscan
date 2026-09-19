@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · RSI overbought
 
-Cash book **-4.22%** ($9,578) · signal-only (no cash/fees) was -126.58%. Starts YES **13/25**. Fills 153 · skips 221 · realized $-530.10.
+Cash book **-3.23%** ($9,677) · signal-only (no cash/fees) was -127.12%. Starts YES **17/26**. Fills 153 · skips 222 · realized $-530.10.
 
 ## How this sleeve decides (like you are 10)
 
@@ -371,6 +371,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | `IRD` | 98 | $5.82 | $5.80 | +1.96 | — | +0.00 | +1.96 | +35.28 | — |
 | 2026-09-16 | `AVAH` | 330 | — | $14.31 | +0.00 | $14.26 | +16.50 | +16.50 | -0.00 | +16.50 |
 | 2026-09-17 | `AVAH` | 330 | $14.26 | $14.33 | -23.10 | $13.97 | +118.80 | +95.70 | -6.60 | +112.20 |
+| 2026-09-18 | `AVAH` | 330 | $13.97 | $13.90 | +23.10 | $13.67 | +75.90 | +99.00 | +135.30 | +211.20 |
 
 ## Each session (cash + holdings state)
 
@@ -401,6 +402,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | -3.84 | $14,422.08 | INDP×223, WLTH×55, BNC×123, SWKS×7, ANGX×112, QRVO×5, ASO×11, IRD×98 | $9,564.96 | -32.65 | -92.12 | — | — | $14,422.08 | $9,472.84 | INDP×223, WLTH×55, BNC×123, SWKS×7, ANGX×112, QRVO×5, ASO×11, IRD×98 |
 | 2026-09-16 | +5.30 | $14,422.08 | INDP×223, WLTH×55, BNC×123, SWKS×7, ANGX×112, QRVO×5, ASO×11, IRD×98 | $9,487.94 | +15.10 | +16.50 | AVAH | INDP, WLTH, BNC, SWKS, ANGX, QRVO, ASO, IRD | $14,187.72 | $9,481.92 | AVAH×330 |
 | 2026-09-17 | +7.38 | $14,187.72 | AVAH×330 | $9,458.82 | -23.10 | +118.80 | — | — | $14,187.72 | $9,577.62 | AVAH×330 |
+| 2026-09-18 | +4.86 | $14,187.72 | AVAH×330 | $9,600.72 | +23.10 | +75.90 | — | — | $14,187.72 | $9,676.62 | AVAH×330 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -609,6 +611,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,187.72 | ▲ close $9,481.92 vs 09:30 $9,487.94 (session +16.50) | 16:00 close · cash $14,187.72 · equity $9,481.92 vs 09:30 $9,487.94 (-6.02; session marks +16.50) · 1 name(s) marked open→close (per-name table). AVAH×330 09:30 $14.31 → close $14.26 +16.50 | — |
 | 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,187.72 | ▼ 09:30 equity $9,458.82 vs yday $9,481.92 (-23.10) | 09:30 open · cash $14,187.72 (unchanged overnight, no fees) · equity $9,458.82 vs prior close $9,481.92 (-23.10) · 1 name(s) re-marked at the open (per-name table). AVAH×330 yday $14.26 → 09:30 $14.33 -23.10 | — |
 | 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,187.72 | ▲ close $9,577.62 vs 09:30 $9,458.82 (session +118.80) | 16:00 close · cash $14,187.72 · equity $9,577.62 vs 09:30 $9,458.82 (+118.80; session marks +118.80) · 1 name(s) marked open→close (per-name table). AVAH×330 09:30 $14.33 → close $13.97 +118.80 | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $14,187.72 | ▲ 09:30 equity $9,600.72 vs yday $9,577.62 (+23.10) | 09:30 open · cash $14,187.72 (unchanged overnight, no fees) · equity $9,600.72 vs prior close $9,577.62 (+23.10) · 1 name(s) re-marked at the open (per-name table). AVAH×330 yday $13.97 → 09:30 $13.90 +23.10 | — |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14,187.72 | ▲ close $9,676.62 vs 09:30 $9,600.72 (session +75.90) | 16:00 close · cash $14,187.72 · equity $9,676.62 vs 09:30 $9,600.72 (+75.90; session marks +75.90) · 1 name(s) marked open→close (per-name table). AVAH×330 09:30 $13.90 → close $13.67 +75.90 | — |
 
 ## Not taken
 
@@ -835,6 +839,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `GME` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `FRO` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-17 | `AVAH` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-18 | `AVAH` | min_hold | dropped but min-hold 2/3 sess — no sell |
 
 ## Still open (marked at last close)
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-10.42%** ($8,958) · signal-only (no cash/fees) was +23.27%. Starts YES **7/25**. Fills 111 · skips 182 · realized $-986.48.
+Cash book **-12.42%** ($8,758) · signal-only (no cash/fees) was +17.60%. Starts YES **7/26**. Fills 111 · skips 185 · realized $-986.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -288,6 +288,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | `BNC` | 214 | $4.91 | $4.77 | -29.96 | — | +0.00 | -29.96 | -29.96 | — |
 | 2026-09-16 | `SWKS` | 12 | $90.00 | $89.38 | -7.44 | — | +0.00 | -7.44 | +61.32 | — |
 | 2026-09-17 | `RVTY` | 61 | — | $147.61 | +0.00 | $146.73 | -53.68 | -53.68 | +0.00 | -53.68 |
+| 2026-09-18 | `RVTY` | 61 | $146.73 | $146.50 | -14.03 | $143.45 | -186.05 | -200.08 | -67.71 | -253.76 |
 
 ## Each session (cash + holdings state)
 
@@ -318,6 +319,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | -3.84 | $85.79 | TYRA×44, VIST×13, INDP×389, CMRC×335, WLTH×96, DBI×177, BNC×214, SWKS×12 | $8,935.97 | +55.80 | +183.19 | — | — | $85.79 | $9,119.16 | TYRA×44, VIST×13, INDP×389, CMRC×335, WLTH×96, DBI×177, BNC×214, SWKS×12 |
 | 2026-09-16 | +5.30 | $85.79 | TYRA×44, VIST×13, INDP×389, CMRC×335, WLTH×96, DBI×177, BNC×214, SWKS×12 | $9,036.91 | -82.25 | +0.00 | — | TYRA, VIST, INDP, CMRC, WLTH, DBI, BNC, SWKS | $9,013.52 | $9,013.52 | — |
 | 2026-09-17 | +7.38 | $9,013.52 | — | $9,013.52 | -0.00 | -53.68 | RVTY | — | $7.13 | $8,957.66 | RVTY×61 |
+| 2026-09-18 | +4.86 | $7.13 | RVTY×61 | $8,943.63 | -14.03 | -186.05 | — | — | $7.13 | $8,757.58 | RVTY×61 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -484,6 +486,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,013.52 | ▲ 09:30 equity $9,013.52 vs yday $9,013.52 (-0.00) | 09:30 open · cash $9,013.52 · no holdings · equity $9,013.52 vs prior close $9,013.52 (-0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-17 09:30 ET | **BUY** | `RVTY` | 61 | $147.61 | $2.17 | — | $7.13 | — | combo gate; gate vol=good,last_green=True; list flatten; ret5=-4.8; leftover $9013.52 | join🟢 sector🟢 gen🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7.13 | ▼ close $8,957.66 vs 09:30 $9,013.52 (session -53.68) | 16:00 close · cash $7.13 · equity $8,957.66 vs 09:30 $9,013.52 (-55.86; session marks -53.68) · 1 name(s) marked open→close (per-name table). RVTY×61 09:30 $147.61 → close $146.73 -53.68 | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7.13 | ▼ 09:30 equity $8,943.63 vs yday $8,957.66 (-14.03) | 09:30 open · cash $7.13 (unchanged overnight, no fees) · equity $8,943.63 vs prior close $8,957.66 (-14.03) · 1 name(s) re-marked at the open (per-name table). RVTY×61 yday $146.73 → 09:30 $146.50 -14.03 | — |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7.13 | ▼ close $8,757.58 vs 09:30 $8,943.63 (session -186.05) | 16:00 close · cash $7.13 · equity $8,757.58 vs 09:30 $8,943.63 (-186.05; session marks -186.05) · 1 name(s) marked open→close (per-name table). RVTY×61 09:30 $146.50 → close $143.45 -186.05 | — |
 
 ## Not taken
 
@@ -671,6 +675,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `RBLX` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `QNC` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `IOT` | hard_red | hard-red S=-3.84 sit; no new buys |
+| 2026-09-18 | `RVTY` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-18 | `ILMN` | cash | leftover split 3.57 < 1 share @ 249.13 |
+| 2026-09-18 | `SDGR` | cash | leftover split 3.57 < 1 share @ 29.32 |
 
 ## Still open (marked at last close)
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · buy last-green, sell next 09:30 if last bar flipped red
 
-Cash book **-5.35%** ($9,465) · signal-only (no cash/fees) was +19.75%. Starts YES **0/25**. Fills 120 · skips 234 · realized $-465.48.
+Cash book **-6.55%** ($9,345) · signal-only (no cash/fees) was +13.40%. Starts YES **0/26**. Fills 120 · skips 238 · realized $-465.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -294,6 +294,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | `BLFS` | 130 | — | $36.46 | +0.00 | $36.11 | -45.50 | -45.50 | +0.00 | -45.50 |
 | 2026-09-17 | `AVAH` | 333 | $14.26 | $14.33 | +23.31 | $13.97 | -119.88 | -96.57 | +6.66 | -113.22 |
 | 2026-09-17 | `BLFS` | 130 | $36.11 | $36.67 | +72.80 | $36.85 | +23.40 | +96.20 | +27.30 | +50.70 |
+| 2026-09-18 | `AVAH` | 333 | $13.97 | $13.90 | -23.31 | $13.67 | -76.59 | -99.90 | -136.53 | -213.12 |
+| 2026-09-18 | `BLFS` | 130 | $36.85 | $36.73 | -15.60 | $36.69 | -5.20 | -20.80 | +35.10 | +29.90 |
 
 ## Each session (cash + holdings state)
 
@@ -324,6 +326,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | -3.84 | $166.99 | SANM×6, COHU×22, AMTX×612, CLOV×263, BAK×589, TYRA×52, FUBO×108, RDDT×7 | $9,835.99 | -47.43 | -170.55 | — | — | $166.99 | $9,665.44 | SANM×6, COHU×22, AMTX×612, CLOV×263, BAK×589, TYRA×52, FUBO×108, RDDT×7 |
 | 2026-09-16 | +5.30 | $166.99 | SANM×6, COHU×22, AMTX×612, CLOV×263, BAK×589, TYRA×52, FUBO×108, RDDT×7 | $9,564.34 | -101.10 | -62.15 | AVAH, BLFS | SANM, COHU, AMTX, CLOV, BAK, TYRA, FUBO, RDDT | $22.83 | $9,465.71 | AVAH×333, BLFS×130 |
 | 2026-09-17 | +7.38 | $22.83 | AVAH×333, BLFS×130 | $9,561.82 | +96.11 | -96.48 | — | — | $22.83 | $9,465.34 | AVAH×333, BLFS×130 |
+| 2026-09-18 | +4.86 | $22.83 | AVAH×333, BLFS×130 | $9,426.43 | -38.91 | -81.79 | — | — | $22.83 | $9,344.64 | AVAH×333, BLFS×130 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -499,6 +502,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $22.83 | ▼ close $9,465.71 vs 09:30 $9,564.34 (session -62.15) | 16:00 close · cash $22.83 · equity $9,465.71 vs 09:30 $9,564.34 (-98.63; session marks -62.15) · 2 name(s) marked open→close (per-name table). AVAH×333 09:30 $14.31 → close $14.26 -16.65; BLFS×130 09:30 $36.46 → close $36.11 -45.50 | — |
 | 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $22.83 | ▲ 09:30 equity $9,561.82 vs yday $9,465.71 (+96.11) | 09:30 open · cash $22.83 (unchanged overnight, no fees) · equity $9,561.82 vs prior close $9,465.71 (+96.11) · 2 name(s) re-marked at the open (per-name table). AVAH×333 yday $14.26 → 09:30 $14.33 +23.31; BLFS×130 yday $36.11 → 09:30 $36.67 +72.80 | — |
 | 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $22.83 | ▼ close $9,465.34 vs 09:30 $9,561.82 (session -96.48) | 16:00 close · cash $22.83 · equity $9,465.34 vs 09:30 $9,561.82 (-96.48; session marks -96.48) · 2 name(s) marked open→close (per-name table). AVAH×333 09:30 $14.33 → close $13.97 -119.88; BLFS×130 09:30 $36.67 → close $36.85 +23.40 | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $22.83 | ▼ 09:30 equity $9,426.43 vs yday $9,465.34 (-38.91) | 09:30 open · cash $22.83 (unchanged overnight, no fees) · equity $9,426.43 vs prior close $9,465.34 (-38.91) · 2 name(s) re-marked at the open (per-name table). AVAH×333 yday $13.97 → 09:30 $13.90 -23.31; BLFS×130 yday $36.85 → 09:30 $36.73 -15.60 | — |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $22.83 | ▼ close $9,344.64 vs 09:30 $9,426.43 (session -81.79) | 16:00 close · cash $22.83 · equity $9,344.64 vs 09:30 $9,426.43 (-81.79; session marks -81.79) · 2 name(s) marked open→close (per-name table). AVAH×333 09:30 $13.90 → close $13.67 -76.59; BLFS×130 09:30 $36.73 → close $36.69 -5.20 | — |
 
 ## Not taken
 
@@ -738,6 +743,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | `BLFS` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-17 | `RVTY` | cash | leftover split 11.41 < 1 share @ 147.61 |
 | 2026-09-17 | `AZTA` | cash | leftover split 11.41 < 1 share @ 33.94 |
+| 2026-09-18 | `AVAH` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-18 | `BLFS` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-18 | `ILMN` | cash | leftover split 11.41 < 1 share @ 249.13 |
+| 2026-09-18 | `SDGR` | cash | leftover split 11.41 < 1 share @ 29.32 |
 
 ## Still open (marked at last close)
 

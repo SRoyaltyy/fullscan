@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_hot_n4_h1/union_e_fresh_h1 w=0.5,0.5 net=priority
 
-Cash book **+19.81%** ($11,981) · signal-only (no cash/fees) was —. Starts YES **21/25**. Fills 236 · skips 86 · realized $+2026.33.
+Cash book **+16.12%** ($11,612) · signal-only (no cash/fees) was —. Starts YES **20/26**. Fills 244 · skips 86 · realized $+1866.81.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $199.13.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $247.45.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -314,7 +314,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | `AZTA` | 88 | — | $33.94 | +0.00 | $33.63 | -27.28 | -27.28 | +0.00 | -27.28 |
 | 2026-09-17 | `RVTY` | 20 | — | $147.61 | +0.00 | $146.73 | -17.60 | -17.60 | +0.00 | -17.60 |
 | 2026-09-17 | `IT` | 15 | — | $191.61 | +0.00 | $187.80 | -57.15 | -57.15 | +0.00 | -57.15 |
-| 2026-09-17 | `FIVN` | 89 | — | $33.77 | +0.00 | $34.50 | +64.97 | +64.97 | +0.00 | +64.97 |
+| 2026-09-17 | `FIVN` | 86 | — | $34.75 | +0.00 | $34.50 | -21.50 | -21.50 | +0.00 | -21.50 |
+| 2026-09-18 | `AZTA` | 88 | $33.63 | $33.44 | -16.72 | — | +0.00 | -16.72 | -44.00 | — |
+| 2026-09-18 | `RVTY` | 20 | $146.73 | $146.50 | -4.60 | — | +0.00 | -4.60 | -22.20 | — |
+| 2026-09-18 | `IT` | 15 | $187.80 | $188.32 | +7.80 | — | +0.00 | +7.80 | -49.35 | — |
+| 2026-09-18 | `FIVN` | 86 | $34.50 | $34.44 | -5.16 | — | +0.00 | -5.16 | -26.66 | — |
+| 2026-09-18 | `ARQT` | 113 | — | $26.14 | +0.00 | $25.38 | -85.88 | -85.88 | +0.00 | -85.88 |
+| 2026-09-18 | `ILMN` | 11 | — | $249.13 | +0.00 | $239.62 | -104.61 | -104.61 | +0.00 | -104.61 |
+| 2026-09-18 | `FTRE` | 147 | — | $20.10 | +0.00 | $19.93 | -24.99 | -24.99 | +0.00 | -24.99 |
+| 2026-09-18 | `SDGR` | 101 | — | $29.32 | +0.00 | $29.02 | -30.30 | -30.30 | +0.00 | -30.30 |
 
 ## Each session (cash + holdings state)
 
@@ -344,7 +352,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | -11.00 | $2.42 | ORCL×4, DBI×119, ADBE×2, CPRT×22, DSGX×9, KR×12, LPTH×75, REF×53, INDP×555, BNC×305, IRD×243, CMRC×473 | $11,498.63 | +85.25 | +323.39 | — | ORCL, DBI, ADBE, CPRT, DSGX, KR, LPTH, REF, IRD | $6,730.08 | $11,801.85 | INDP×555, BNC×305, CMRC×473 |
 | 2026-09-15 | -3.84 | $6,730.08 | INDP×555, BNC×305, CMRC×473 | $11,897.35 | +95.50 | +133.20 | — | BNC, CMRC | $10,000.16 | $12,020.36 | INDP×555 |
 | 2026-09-16 | +5.30 | $10,000.16 | INDP×555 | $12,031.46 | +11.10 | -112.89 | AVAH, BLFS, IQV, RDNT | INDP | $109.95 | $11,902.23 | AVAH×210, BLFS×82, IQV×11, RDNT×38 |
-| 2026-09-17 | +7.38 | $109.95 | AVAH×210, BLFS×82, IQV×11, RDNT×38 | $12,035.56 | +133.33 | -37.06 | AZTA, RVTY, IT, FIVN | AVAH, BLFS, IQV, RDNT | $199.13 | $11,980.67 | AZTA×88, RVTY×20, IT×15, FIVN×89 |
+| 2026-09-17 | +7.38 | $109.95 | AVAH×210, BLFS×82, IQV×11, RDNT×38 | $12,035.56 | +133.33 | -123.53 | AZTA, RVTY, IT, FIVN | AVAH, BLFS, IQV, RDNT | $216.16 | $11,894.20 | AZTA×88, RVTY×20, IT×15, FIVN×86 |
+| 2026-09-18 | +4.86 | $216.16 | AZTA×88, RVTY×20, IT×15, FIVN×86 | $11,875.52 | -18.68 | -245.78 | ARQT, ILMN, FTRE, SDGR | AZTA, RVTY, IT, FIVN | $247.45 | $11,611.94 | ARQT×113, ILMN×11, FTRE×147, SDGR×101 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -634,8 +643,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 09:30 ET | **BUY** | `AZTA` | 88 | $33.94 | $2.25 | — | $9,037.35 | — | top 4 by hot; rank hot_score; list flatten; ret5=-1.1; combo leftover $3006.58; owner union_hot_n4_h1 | join🟢 sector🟢 gen🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-17 09:30 ET | **BUY** | `RVTY` | 20 | $147.61 | $2.05 | — | $6,083.10 | — | top 4 by hot; rank hot_score; list flatten; ret5=-4.8; combo leftover $3006.58; owner union_hot_n4_h1 | join🟢 sector🟢 gen🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-17 09:30 ET | **BUY** | `IT` | 15 | $191.61 | $2.04 | — | $3,206.91 | — | top 4 by hot; rank hot_score; list flatten; ret5=-12.9; combo leftover $3006.58; owner union_hot_n4_h1 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-09-17 09:30 ET | **BUY** | `FIVN` | 89 | $33.77 | $2.26 | — | $199.13 | — | top 4 by hot; rank hot_score; list flatten; ⚪; ret5=-9.6; combo leftover $3006.58; owner union_hot_n4_h1 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $199.13 | ▼ close $11,980.67 vs 09:30 $12,035.56 (session -37.06) | 16:00 close · cash $199.13 · equity $11,980.67 vs 09:30 $12,035.56 (-54.89; session marks -37.06) · 4 name(s) marked open→close (per-name table). AZTA×88 09:30 $33.94 → close $33.63 -27.28; RVTY×20 09:30 $147.61 → close $146.73 -17.60; IT×15 09:30 $191.61 → close $187.80 -57.15; FIVN×89 09:30 $33.77 → close $34.50 +64.97 | — |
+| 2026-09-17 09:30 ET | **BUY** | `FIVN` | 86 | $34.75 | $2.25 | — | $216.16 | — | top 4 by hot; rank hot_score; list flatten; ⚪; ret5=-9.6; combo leftover $3006.58; owner union_hot_n4_h1 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $216.16 | ▼ close $11,894.20 vs 09:30 $12,035.56 (session -123.53) | 16:00 close · cash $216.16 · equity $11,894.20 vs 09:30 $12,035.56 (-141.36; session marks -123.53) · 4 name(s) marked open→close (per-name table). AZTA×88 09:30 $33.94 → close $33.63 -27.28; RVTY×20 09:30 $147.61 → close $146.73 -17.60; IT×15 09:30 $191.61 → close $187.80 -57.15; FIVN×86 09:30 $34.75 → close $34.50 -21.50 | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $216.16 | ▼ 09:30 equity $11,875.52 vs yday $11,894.20 (-18.68) | 09:30 open · cash $216.16 (unchanged overnight, no fees) · equity $11,875.52 vs prior close $11,894.20 (-18.68) | — |
+| 2026-09-18 09:30 ET | **SELL** | `AZTA` | 88 | $33.44 | $2.29 | $-48.55 | $3,156.59 | ▼ -48.55 after sell → book $11,873.23; vs 09:30 mark -2.29 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-09-18 09:30 ET | **SELL** | `RVTY` | 20 | $146.50 | $2.08 | $-26.33 | $6,084.51 | ▼ -26.33 after sell → book $11,871.15; vs 09:30 mark -2.08 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-09-18 09:30 ET | **SELL** | `IT` | 15 | $188.32 | $2.07 | $-53.45 | $8,907.24 | ▼ -53.45 after sell → book $11,869.08; vs 09:30 mark -2.07 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-09-18 09:30 ET | **SELL** | `FIVN` | 86 | $34.44 | $2.29 | $-31.19 | $11,866.80 | ▼ -31.19 after sell → book $11,866.80; vs 09:30 mark -2.28 | union_hot_n4_h1: dropped from list after 1 sess (min 1) | — |
+| 2026-09-18 09:30 ET | **BUY** | `ARQT` | 113 | $26.14 | $2.33 | — | $8,910.65 | — | top 4 by hot; rank hot_score; list flatten; ⚪; ret5=+1.8; combo leftover $2966.70; owner union_hot_n4_h1 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-18 09:30 ET | **BUY** | `ILMN` | 11 | $249.13 | $2.02 | — | $6,168.19 | — | top 4 by hot; rank hot_score; list flatten; ⚪; ret5=-6.9; combo leftover $2966.70; owner union_hot_n4_h1 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-09-18 09:30 ET | **BUY** | `FTRE` | 147 | $20.10 | $2.43 | — | $3,211.06 | — | top 4 by hot; rank hot_score; list flatten; ⚪; ret5=-7.1; combo leftover $2966.70; owner union_hot_n4_h1 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-18 09:30 ET | **BUY** | `SDGR` | 101 | $29.32 | $2.29 | — | $247.45 | — | top 4 by hot; rank hot_score; list flatten; ⚪; ret5=-8.2; combo leftover $2966.70; owner union_hot_n4_h1 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $247.45 | ▼ close $11,611.94 vs 09:30 $11,875.52 (session -245.78) | 16:00 close · cash $247.45 · equity $11,611.94 vs 09:30 $11,875.52 (-263.58; session marks -245.78) · 4 name(s) marked open→close (per-name table). ARQT×113 09:30 $26.14 → close $25.38 -85.88; ILMN×11 09:30 $249.13 → close $239.62 -104.61; FTRE×147 09:30 $20.10 → close $19.93 -24.99; SDGR×101 09:30 $29.32 → close $29.02 -30.30 | — |
 
 ## Not taken
 
@@ -732,7 +751,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `AZTA` | 88 | 2026-09-17 @ $33.94 | top 4 by hot; rank hot_score; list flatten; ret5=-1.1; combo leftover $3006.58; owner union_hot_n4_h1 |
-| `RVTY` | 20 | 2026-09-17 @ $147.61 | top 4 by hot; rank hot_score; list flatten; ret5=-4.8; combo leftover $3006.58; owner union_hot_n4_h1 |
-| `IT` | 15 | 2026-09-17 @ $191.61 | top 4 by hot; rank hot_score; list flatten; ret5=-12.9; combo leftover $3006.58; owner union_hot_n4_h1 |
-| `FIVN` | 89 | 2026-09-17 @ $33.77 | top 4 by hot; rank hot_score; list flatten; ⚪; ret5=-9.6; combo leftover $3006.58; owner union_hot_n4_h1 |
+| `ARQT` | 113 | 2026-09-18 @ $26.14 | top 4 by hot; rank hot_score; list flatten; ⚪; ret5=+1.8; combo leftover $2966.70; owner union_hot_n4_h1 |
+| `ILMN` | 11 | 2026-09-18 @ $249.13 | top 4 by hot; rank hot_score; list flatten; ⚪; ret5=-6.9; combo leftover $2966.70; owner union_hot_n4_h1 |
+| `FTRE` | 147 | 2026-09-18 @ $20.10 | top 4 by hot; rank hot_score; list flatten; ⚪; ret5=-7.1; combo leftover $2966.70; owner union_hot_n4_h1 |
+| `SDGR` | 101 | 2026-09-18 @ $29.32 | top 4 by hot; rank hot_score; list flatten; ⚪; ret5=-8.2; combo leftover $2966.70; owner union_hot_n4_h1 |

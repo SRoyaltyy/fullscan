@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ ab_g, no 🚨
 
-Cash book **-10.89%** ($8,911) · signal-only (no cash/fees) was -16.94%. Starts YES **0/25**. Fills 108 · skips 183 · realized $-1057.66.
+Cash book **-12.21%** ($8,779) · signal-only (no cash/fees) was -22.28%. Starts YES **0/26**. Fills 111 · skips 188 · realized $-1057.66.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $150.72.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $74.39.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -286,6 +286,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | `RDNT` | 28 | $75.78 | $76.44 | +18.48 | $77.78 | +37.52 | +56.00 | -19.04 | +18.48 |
 | 2026-09-17 | `AVAH` | 156 | $14.26 | $14.33 | +10.92 | $13.97 | -56.16 | -45.24 | +3.12 | -53.04 |
 | 2026-09-17 | `BLFS` | 61 | $36.11 | $36.67 | +34.16 | $36.85 | +10.98 | +45.14 | +12.81 | +23.79 |
+| 2026-09-18 | `IQV` | 8 | $269.44 | $269.45 | +0.08 | $266.42 | -24.24 | -24.16 | -11.52 | -35.76 |
+| 2026-09-18 | `RDNT` | 28 | $77.78 | $77.66 | -3.36 | $76.00 | -46.48 | -49.84 | +15.12 | -31.36 |
+| 2026-09-18 | `AVAH` | 156 | $13.97 | $13.90 | -10.92 | $13.67 | -35.88 | -46.80 | -63.96 | -99.84 |
+| 2026-09-18 | `BLFS` | 61 | $36.85 | $36.73 | -7.32 | $36.69 | -2.44 | -9.76 | +16.47 | +14.03 |
+| 2026-09-18 | `SDGR` | 1 | — | $29.32 | +0.00 | $29.02 | -0.30 | -0.30 | +0.00 | -0.30 |
+| 2026-09-18 | `ARQT` | 1 | — | $26.14 | +0.00 | $25.38 | -0.76 | -0.76 | +0.00 | -0.76 |
+| 2026-09-18 | `FTRE` | 1 | — | $20.10 | +0.00 | $19.93 | -0.17 | -0.17 | +0.00 | -0.17 |
 
 ## Each session (cash + holdings state)
 
@@ -316,6 +323,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | -3.84 | $274.08 | AUPH×72, OVID×435, SANM×5, ORCL×7, NVT×7, COHU×21, AMTX×582, CLOV×250 | $9,153.22 | +26.24 | -244.84 | — | — | $274.08 | $8,908.38 | AUPH×72, OVID×435, SANM×5, ORCL×7, NVT×7, COHU×21, AMTX×582, CLOV×250 |
 | 2026-09-16 | +5.30 | $274.08 | AUPH×72, OVID×435, SANM×5, ORCL×7, NVT×7, COHU×21, AMTX×582, CLOV×250 | $8,969.31 | +60.93 | -83.23 | IQV, RDNT, AVAH, BLFS | AUPH, OVID, SANM, ORCL, NVT, COHU, AMTX, CLOV | $150.72 | $8,850.39 | IQV×8, RDNT×28, AVAH×156, BLFS×61 |
 | 2026-09-17 | +7.38 | $150.72 | IQV×8, RDNT×28, AVAH×156, BLFS×61 | $8,948.59 | +98.20 | -37.34 | — | — | $150.72 | $8,911.25 | IQV×8, RDNT×28, AVAH×156, BLFS×61 |
+| 2026-09-18 | +4.86 | $150.72 | IQV×8, RDNT×28, AVAH×156, BLFS×61 | $8,889.73 | -21.52 | -110.27 | SDGR, ARQT, FTRE | — | $74.39 | $8,778.69 | IQV×8, RDNT×28, AVAH×156, BLFS×61, SDGR×1, ARQT×1, FTRE×1 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -479,6 +487,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $150.72 | ▼ close $8,850.39 vs 09:30 $8,969.31 (session -83.23) | 16:00 close · cash $150.72 · equity $8,850.39 vs 09:30 $8,969.31 (-118.92; session marks -83.23) · 4 name(s) marked open→close (per-name table). IQV×8 09:30 $270.89 → close $268.82 -16.56; RDNT×28 09:30 $77.12 → close $75.78 -37.52; AVAH×156 09:30 $14.31 → close $14.26 -7.80; BLFS×61 09:30 $36.46 → close $36.11 -21.35 | — |
 | 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $150.72 | ▲ 09:30 equity $8,948.59 vs yday $8,850.39 (+98.20) | 09:30 open · cash $150.72 (unchanged overnight, no fees) · equity $8,948.59 vs prior close $8,850.39 (+98.20) · 4 name(s) re-marked at the open (per-name table). IQV×8 yday $268.82 → 09:30 $273.15 +34.64; RDNT×28 yday $75.78 → 09:30 $76.44 +18.48; AVAH×156 yday $14.26 → 09:30 $14.33 +10.92; BLFS×61 yday $36.11 → 09:30 $36.67 +34.16 | — |
 | 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $150.72 | ▼ close $8,911.25 vs 09:30 $8,948.59 (session -37.34) | 16:00 close · cash $150.72 · equity $8,911.25 vs 09:30 $8,948.59 (-37.34; session marks -37.34) · 4 name(s) marked open→close (per-name table). IQV×8 09:30 $273.15 → close $269.44 -29.68; RDNT×28 09:30 $76.44 → close $77.78 +37.52; AVAH×156 09:30 $14.33 → close $13.97 -56.16; BLFS×61 09:30 $36.67 → close $36.85 +10.98 | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $150.72 | ▼ 09:30 equity $8,889.73 vs yday $8,911.25 (-21.52) | 09:30 open · cash $150.72 (unchanged overnight, no fees) · equity $8,889.73 vs prior close $8,911.25 (-21.52) · 4 name(s) re-marked at the open (per-name table). IQV×8 yday $269.44 → 09:30 $269.45 +0.08; RDNT×28 yday $77.78 → 09:30 $77.66 -3.36; AVAH×156 yday $13.97 → 09:30 $13.90 -10.92; BLFS×61 yday $36.85 → 09:30 $36.73 -7.32 | — |
+| 2026-09-18 09:30 ET | **BUY** | `SDGR` | 1 | $29.32 | $0.30 | — | $121.10 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ⚪; ret5=-8.2; leftover $37.68 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-18 09:30 ET | **BUY** | `ARQT` | 1 | $26.14 | $0.26 | — | $94.70 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ⚪; ret5=+1.8; leftover $37.68 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-18 09:30 ET | **BUY** | `FTRE` | 1 | $20.10 | $0.20 | — | $74.39 | — | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ⚪; ret5=-7.1; leftover $37.68 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $74.39 | ▼ close $8,778.69 vs 09:30 $8,889.73 (session -110.27) | 16:00 close · cash $74.39 · equity $8,778.69 vs 09:30 $8,889.73 (-111.04; session marks -110.27) · 7 name(s) marked open→close (per-name table). IQV×8 09:30 $269.45 → close $266.42 -24.24; RDNT×28 09:30 $77.66 → close $76.00 -46.48; AVAH×156 09:30 $13.90 → close $13.67 -35.88; BLFS×61 09:30 $36.73 → close $36.69 -2.44; SDGR×1 09:30 $29.32 → close $29.02 -0.30; ARQT×1 09:30 $26.14 → close $25.38 -0.76; FTRE×1 09:30 $20.10 → close $19.93 -0.17 | — |
 
 ## Not taken
 
@@ -666,7 +679,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | `AZTA` | cash | leftover split 25.12 < 1 share @ 33.94 |
 | 2026-09-17 | `IT` | cash | leftover split 25.12 < 1 share @ 191.61 |
 | 2026-09-17 | `IOT` | cash | leftover split 25.12 < 1 share @ 40.48 |
-| 2026-09-17 | `FIVN` | cash | leftover split 25.12 < 1 share @ 33.77 |
+| 2026-09-17 | `FIVN` | cash | leftover split 25.12 < 1 share @ 34.75 |
+| 2026-09-18 | `IQV` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-18 | `RDNT` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-18 | `AVAH` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-18 | `BLFS` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-18 | `ILMN` | cash | leftover split 37.68 < 1 share @ 249.13 |
 
 ## Still open (marked at last close)
 
@@ -676,3 +694,6 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | `RDNT` | 28 | 2026-09-16 @ $77.12 | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ⚪; ret5=-5.1; leftover $2235.58 |
 | `AVAH` | 156 | 2026-09-16 @ $14.31 | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ⚪; ret5=+3.2; leftover $2235.58 |
 | `BLFS` | 61 | 2026-09-16 @ $36.46 | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ⚪; ret5=-4.6; leftover $2235.58 |
+| `SDGR` | 1 | 2026-09-18 @ $29.32 | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ⚪; ret5=-8.2; leftover $37.68 |
+| `ARQT` | 1 | 2026-09-18 @ $26.14 | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ⚪; ret5=+1.8; leftover $37.68 |
+| `FTRE` | 1 | 2026-09-18 @ $20.10 | union ∩ ab_g, no 🚨; gate ab=good; list flatten; ⚪; ret5=-7.1; leftover $37.68 |

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · morning packet news🟢 only (not the merged box)
 
-Cash book **-6.73%** ($9,327) · signal-only (no cash/fees) was -3.09%. Starts YES **16/25**. Fills 42 · skips 72 · realized $-672.59.
+Cash book **-6.73%** ($9,327) · signal-only (no cash/fees) was -3.09%. Starts YES **16/26**. Fills 42 · skips 72 · realized $-672.59.
 
 ## How this sleeve decides (like you are 10)
 
@@ -151,6 +151,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `ADBE` | 36 | $265.60 | $261.70 | -140.40 | $257.76 | -141.84 | -282.24 | +703.08 | +561.24 |
 | 2026-09-16 | `ADBE` | 36 | $257.76 | $253.34 | -159.12 | — | +0.00 | -159.12 | +402.12 | — |
 | 2026-09-17 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-18 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -181,6 +182,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | -3.84 | $209.36 | ADBE×36 | $9,630.56 | -140.40 | -141.84 | — | — | $209.36 | $9,488.72 | ADBE×36 |
 | 2026-09-16 | +5.30 | $209.36 | ADBE×36 | $9,329.60 | -159.12 | +0.00 | — | ADBE | $9,327.42 | $9,327.42 | — |
 | 2026-09-17 | +7.38 | $9,327.42 | — | $9,327.42 | -0.00 | +0.00 | — | — | $9,327.42 | $9,327.42 | — |
+| 2026-09-18 | +4.86 | $9,327.42 | — | $9,327.42 | -0.00 | +0.00 | — | — | $9,327.42 | $9,327.42 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -278,6 +280,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,327.42 | ▲ close $9,327.42 vs 09:30 $9,329.60 (session +0.00) | 16:00 close · cash $9,327.42 · no lots left · equity $9,327.42. | — |
 | 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,327.42 | ▲ 09:30 equity $9,327.42 vs yday $9,327.42 (-0.00) | 09:30 open · cash $9,327.42 · no holdings · equity $9,327.42 vs prior close $9,327.42 (-0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,327.42 | ▲ close $9,327.42 vs 09:30 $9,327.42 (session +0.00) | 16:00 close · cash $9,327.42 · no lots left · equity $9,327.42. | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,327.42 | ▲ 09:30 equity $9,327.42 vs yday $9,327.42 (-0.00) | 09:30 open · cash $9,327.42 · no holdings · equity $9,327.42 vs prior close $9,327.42 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,327.42 | ▲ close $9,327.42 vs 09:30 $9,327.42 (session +0.00) | 16:00 close · cash $9,327.42 · no lots left · equity $9,327.42. | — |
 
 ## Not taken
 

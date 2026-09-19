@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_green, no 🚨
 
-Cash book **+2.17%** ($10,217) · signal-only (no cash/fees) was +11.38%. Starts YES **5/25**. Fills 186 · skips 88 · realized $+298.66.
+Cash book **-0.70%** ($9,930) · signal-only (no cash/fees) was +8.69%. Starts YES **0/26**. Fills 190 · skips 88 · realized $+176.24.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $150.49.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $116.76.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -259,6 +259,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | `BLFS` | 140 | $36.11 | $36.67 | +78.40 | — | +0.00 | +78.40 | +29.40 | — |
 | 2026-09-17 | `RVTY` | 34 | — | $147.61 | +0.00 | $146.73 | -29.92 | -29.92 | +0.00 | -29.92 |
 | 2026-09-17 | `AZTA` | 151 | — | $33.94 | +0.00 | $33.63 | -46.81 | -46.81 | +0.00 | -46.81 |
+| 2026-09-18 | `RVTY` | 34 | $146.73 | $146.50 | -7.82 | — | +0.00 | -7.82 | -37.74 | — |
+| 2026-09-18 | `AZTA` | 151 | $33.63 | $33.44 | -28.69 | — | +0.00 | -28.69 | -75.50 | — |
+| 2026-09-18 | `ILMN` | 20 | — | $249.13 | +0.00 | $239.62 | -190.20 | -190.20 | +0.00 | -190.20 |
+| 2026-09-18 | `SDGR` | 173 | — | $29.32 | +0.00 | $29.02 | -51.90 | -51.90 | +0.00 | -51.90 |
 
 ## Each session (cash + holdings state)
 
@@ -289,6 +293,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | -3.84 | $10,276.37 | — | $10,276.37 | -0.00 | +0.00 | — | — | $10,276.37 | $10,276.37 | — |
 | 2026-09-16 | +5.30 | $10,276.37 | — | $10,276.37 | -0.00 | -66.95 | AVAH, BLFS | — | $27.64 | $10,202.38 | AVAH×359, BLFS×140 |
 | 2026-09-17 | +7.38 | $27.64 | AVAH×359, BLFS×140 | $10,305.91 | +103.53 | -76.73 | RVTY, AZTA | AVAH, BLFS | $150.49 | $10,217.44 | RVTY×34, AZTA×151 |
+| 2026-09-18 | +4.86 | $150.49 | RVTY×34, AZTA×151 | $10,180.93 | -36.51 | -242.10 | ILMN, SDGR | RVTY, AZTA | $116.76 | $9,929.62 | ILMN×20, SDGR×173 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -530,6 +535,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 09:30 ET | **BUY** | `RVTY` | 34 | $147.61 | $2.09 | — | $5,277.87 | — | union ∩ last_green, no 🚨; gate last_green=True; list flatten; ret5=-4.8; leftover $5149.35 | join🟢 sector🟢 gen🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-17 09:30 ET | **BUY** | `AZTA` | 151 | $33.94 | $2.44 | — | $150.49 | — | union ∩ last_green, no 🚨; gate last_green=True; list flatten; ret5=-1.1; leftover $5149.35 | join🟢 sector🟢 gen🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $150.49 | ▼ close $10,217.44 vs 09:30 $10,305.91 (session -76.73) | 16:00 close · cash $150.49 · equity $10,217.44 vs 09:30 $10,305.91 (-88.47; session marks -76.73) · 2 name(s) marked open→close (per-name table). RVTY×34 09:30 $147.61 → close $146.73 -29.92; AZTA×151 09:30 $33.94 → close $33.63 -46.81 | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $150.49 | ▼ 09:30 equity $10,180.93 vs yday $10,217.44 (-36.51) | 09:30 open · cash $150.49 (unchanged overnight, no fees) · equity $10,180.93 vs prior close $10,217.44 (-36.51) · 2 name(s) re-marked at the open (per-name table). RVTY×34 yday $146.73 → 09:30 $146.50 -7.82; AZTA×151 yday $33.63 → 09:30 $33.44 -28.69 | — |
+| 2026-09-18 09:30 ET | **SELL** | `RVTY` | 34 | $146.50 | $2.14 | $-41.97 | $5,129.35 | ▼ -41.97 after sell → book $10,178.79; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-18 09:30 ET | **SELL** | `AZTA` | 151 | $33.44 | $2.51 | $-80.45 | $10,176.28 | ▼ -80.45 after sell → book $10,176.28; vs 09:30 mark -2.51 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-18 09:30 ET | **BUY** | `ILMN` | 20 | $249.13 | $2.05 | — | $5,191.63 | — | union ∩ last_green, no 🚨; gate last_green=True; list flatten; ⚪; ret5=-6.9; leftover $5088.14 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-09-18 09:30 ET | **BUY** | `SDGR` | 173 | $29.32 | $2.51 | — | $116.76 | — | union ∩ last_green, no 🚨; gate last_green=True; list flatten; ⚪; ret5=-8.2; leftover $5088.14 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $116.76 | ▼ close $9,929.62 vs 09:30 $10,180.93 (session -242.10) | 16:00 close · cash $116.76 · equity $9,929.62 vs 09:30 $10,180.93 (-251.31; session marks -242.10) · 2 name(s) marked open→close (per-name table). ILMN×20 09:30 $249.13 → close $239.62 -190.20; SDGR×173 09:30 $29.32 → close $29.02 -51.90 | — |
 
 ## Not taken
 
@@ -628,5 +639,5 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `RVTY` | 34 | 2026-09-17 @ $147.61 | union ∩ last_green, no 🚨; gate last_green=True; list flatten; ret5=-4.8; leftover $5149.35 |
-| `AZTA` | 151 | 2026-09-17 @ $33.94 | union ∩ last_green, no 🚨; gate last_green=True; list flatten; ret5=-1.1; leftover $5149.35 |
+| `ILMN` | 20 | 2026-09-18 @ $249.13 | union ∩ last_green, no 🚨; gate last_green=True; list flatten; ⚪; ret5=-6.9; leftover $5088.14 |
+| `SDGR` | 173 | 2026-09-18 @ $29.32 | union ∩ last_green, no 🚨; gate last_green=True; list flatten; ⚪; ret5=-8.2; leftover $5088.14 |

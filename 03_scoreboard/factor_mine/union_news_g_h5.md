@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ news_g hold 5, no 🚨
 
-Cash book **-10.85%** ($8,915) · signal-only (no cash/fees) was +120.16%. Starts YES **0/25**. Fills 94 · skips 264 · realized $-1031.68.
+Cash book **-10.92%** ($8,908) · signal-only (no cash/fees) was +110.47%. Starts YES **0/26**. Fills 98 · skips 264 · realized $-1092.06.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $7,972.17.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8,907.99.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -354,8 +354,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | `RH` | 2 | $124.83 | $125.55 | +1.44 | $126.52 | +1.94 | +3.38 | -20.32 | -18.38 |
 | 2026-09-17 | `ORCL` | 1 | $143.16 | $146.75 | +3.59 | $150.59 | +3.84 | +7.43 | -17.68 | -13.84 |
 | 2026-09-17 | `AMTX` | 152 | $1.90 | $1.94 | +6.08 | $1.88 | -9.12 | -3.04 | -15.20 | -24.32 |
-| 2026-09-17 | `ADBE` | 1 | $250.50 | $250.05 | -0.45 | $252.67 | +2.62 | +2.17 | +7.88 | +10.50 |
+| 2026-09-17 | `ADBE` | 1 | $250.50 | $250.35 | -0.15 | $252.67 | +2.32 | +2.17 | +8.18 | +10.50 |
 | 2026-09-17 | `RH` | 2 | $126.52 | $131.57 | +10.10 | $126.82 | -9.50 | +0.60 | -8.28 | -17.78 |
+| 2026-09-18 | `ORCL` | 1 | $150.59 | $150.47 | -0.12 | — | +0.00 | -0.12 | -13.96 | — |
+| 2026-09-18 | `AMTX` | 152 | $1.88 | $1.90 | +3.04 | — | +0.00 | +3.04 | -21.28 | — |
+| 2026-09-18 | `ADBE` | 1 | $252.67 | $251.58 | -1.09 | — | +0.00 | -1.09 | +9.41 | — |
+| 2026-09-18 | `RH` | 2 | $126.82 | $126.50 | -0.64 | — | +0.00 | -0.64 | -18.42 | — |
 
 ## Each session (cash + holdings state)
 
@@ -385,7 +389,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | -11.00 | $249.58 | CRM×6, BAK×828, MSTR×11, BE×6, MRX×21, ORCL×1, AMTX×152, ADBE×1, RH×2 | $8,934.81 | -127.67 | +7.81 | — | CRM, BAK, MSTR, MRX | $6,408.21 | $8,925.64 | BE×6, ORCL×1, AMTX×152, ADBE×1, RH×2 |
 | 2026-09-15 | -3.84 | $6,408.21 | BE×6, ORCL×1, AMTX×152, ADBE×1, RH×2 | $8,939.87 | +14.23 | -27.57 | — | BE | $7,972.17 | $8,910.26 | ORCL×1, AMTX×152, ADBE×1, RH×2 |
 | 2026-09-16 | +5.30 | $7,972.17 | ORCL×1, AMTX×152, ADBE×1, RH×2 | $8,903.92 | -6.34 | +3.75 | — | — | $7,972.17 | $8,907.67 | ORCL×1, AMTX×152, ADBE×1, RH×2 |
-| 2026-09-17 | +7.38 | $7,972.17 | ORCL×1, AMTX×152, ADBE×1, RH×2 | $8,926.99 | +19.32 | -12.16 | — | — | $7,972.17 | $8,914.83 | ORCL×1, AMTX×152, ADBE×1, RH×2 |
+| 2026-09-17 | +7.38 | $7,972.17 | ORCL×1, AMTX×152, ADBE×1, RH×2 | $8,927.30 | +19.62 | -12.46 | — | — | $7,972.17 | $8,914.83 | ORCL×1, AMTX×152, ADBE×1, RH×2 |
+| 2026-09-18 | +4.86 | $7,972.17 | ORCL×1, AMTX×152, ADBE×1, RH×2 | $8,916.02 | +1.19 | +0.00 | — | ORCL, AMTX, ADBE, RH | $8,907.99 | $8,907.99 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -533,8 +538,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,972.17 | ▼ close $8,910.26 vs 09:30 $8,939.87 (session -27.57) | 16:00 close · cash $7,972.17 · equity $8,910.26 vs 09:30 $8,939.87 (-29.61; session marks -27.57) · 4 name(s) marked open→close (per-name table). ORCL×1 09:30 $143.46 → close $140.35 -3.11; AMTX×152 09:30 $1.93 → close $1.91 -3.04; ADBE×1 09:30 $261.70 → close $257.76 -3.94; RH×2 09:30 $133.57 → close $124.83 -17.48 | — |
 | 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,972.17 | ▼ 09:30 equity $8,903.92 vs yday $8,910.26 (-6.34) | 09:30 open · cash $7,972.17 (unchanged overnight, no fees) · equity $8,903.92 vs prior close $8,910.26 (-6.34) · 4 name(s) re-marked at the open (per-name table). ORCL×1 yday $140.35 → 09:30 $140.03 -0.32; AMTX×152 yday $1.91 → 09:30 $1.89 -3.04; ADBE×1 yday $257.76 → 09:30 $253.34 -4.42; RH×2 yday $124.83 → 09:30 $125.55 +1.44 | — |
 | 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,972.17 | ▲ close $8,907.67 vs 09:30 $8,903.92 (session +3.75) | 16:00 close · cash $7,972.17 · equity $8,907.67 vs 09:30 $8,903.92 (+3.75; session marks +3.75) · 4 name(s) marked open→close (per-name table). ORCL×1 09:30 $140.03 → close $143.16 +3.13; AMTX×152 09:30 $1.89 → close $1.90 +1.52; ADBE×1 09:30 $253.34 → close $250.50 -2.84; RH×2 09:30 $125.55 → close $126.52 +1.94 | — |
-| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,972.17 | ▲ 09:30 equity $8,926.99 vs yday $8,907.67 (+19.32) | 09:30 open · cash $7,972.17 (unchanged overnight, no fees) · equity $8,926.99 vs prior close $8,907.67 (+19.32) · 4 name(s) re-marked at the open (per-name table). ORCL×1 yday $143.16 → 09:30 $146.75 +3.59; AMTX×152 yday $1.90 → 09:30 $1.94 +6.08; ADBE×1 yday $250.50 → 09:30 $250.05 -0.45; RH×2 yday $126.52 → 09:30 $131.57 +10.10 | — |
-| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,972.17 | ▼ close $8,914.83 vs 09:30 $8,926.99 (session -12.16) | 16:00 close · cash $7,972.17 · equity $8,914.83 vs 09:30 $8,926.99 (-12.16; session marks -12.16) · 4 name(s) marked open→close (per-name table). ORCL×1 09:30 $146.75 → close $150.59 +3.84; AMTX×152 09:30 $1.94 → close $1.88 -9.12; ADBE×1 09:30 $250.05 → close $252.67 +2.62; RH×2 09:30 $131.57 → close $126.82 -9.50 | — |
+| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,972.17 | ▲ 09:30 equity $8,927.30 vs yday $8,907.67 (+19.62) | 09:30 open · cash $7,972.17 (unchanged overnight, no fees) · equity $8,927.30 vs prior close $8,907.67 (+19.62) · 4 name(s) re-marked at the open (per-name table). ORCL×1 yday $143.16 → 09:30 $146.75 +3.59; AMTX×152 yday $1.90 → 09:30 $1.94 +6.08; ADBE×1 yday $250.50 → 09:30 $250.35 -0.15; RH×2 yday $126.52 → 09:30 $131.57 +10.10 | — |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,972.17 | ▼ close $8,914.83 vs 09:30 $8,927.30 (session -12.46) | 16:00 close · cash $7,972.17 · equity $8,914.83 vs 09:30 $8,927.30 (-12.47; session marks -12.46) · 4 name(s) marked open→close (per-name table). ORCL×1 09:30 $146.75 → close $150.59 +3.84; AMTX×152 09:30 $1.94 → close $1.88 -9.12; ADBE×1 09:30 $250.35 → close $252.67 +2.32; RH×2 09:30 $131.57 → close $126.82 -9.50 | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,972.17 | ▲ 09:30 equity $8,916.02 vs yday $8,914.83 (+1.19) | 09:30 open · cash $7,972.17 (unchanged overnight, no fees) · equity $8,916.02 vs prior close $8,914.83 (+1.19) · 4 name(s) re-marked at the open (per-name table). ORCL×1 yday $150.59 → 09:30 $150.47 -0.12; AMTX×152 yday $1.88 → 09:30 $1.90 +3.04; ADBE×1 yday $252.67 → 09:30 $251.58 -1.09; RH×2 yday $126.82 → 09:30 $126.50 -0.64 | — |
+| 2026-09-18 09:30 ET | **SELL** | `ORCL` | 1 | $150.47 | $1.53 | $-17.14 | $8,121.12 | ▼ -17.14 after sell → book $8,914.50; vs 09:30 mark -1.52 | dropped from list after 5 sess (min 5) | — |
+| 2026-09-18 09:30 ET | **SELL** | `AMTX` | 152 | $1.90 | $2.48 | $-26.21 | $8,407.44 | ▼ -26.21 after sell → book $8,912.02; vs 09:30 mark -2.48 | dropped from list after 5 sess (min 5) | — |
+| 2026-09-18 09:30 ET | **SELL** | `ADBE` | 1 | $251.58 | $2.01 | $+5.40 | $8,657.00 | ▲ +5.40 after sell → book $8,910.00; vs 09:30 mark -2.02 | dropped from list after 5 sess (min 5) | — |
+| 2026-09-18 09:30 ET | **SELL** | `RH` | 2 | $126.50 | $2.02 | $-22.43 | $8,907.99 | ▼ -22.43 after sell → book $8,907.99; vs 09:30 mark -2.01 | dropped from list after 5 sess (min 5) | — |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,907.99 | ▲ close $8,907.99 vs 09:30 $8,916.02 (session +0.00) | 16:00 close · cash $8,907.99 · no lots left · equity $8,907.99. | — |
 
 ## Not taken
 
@@ -804,12 +815,3 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | `AMTX` | min_hold | dropped but min-hold 4/5 sess — no sell |
 | 2026-09-17 | `ADBE` | min_hold | dropped but min-hold 4/5 sess — no sell |
 | 2026-09-17 | `RH` | min_hold | dropped but min-hold 4/5 sess — no sell |
-
-## Still open (marked at last close)
-
-| Ticker | Shares | Entry | Why |
-|---|---:|---|---|
-| `ORCL` | 1 | 2026-09-11 @ $164.43 | union ∩ news_g hold 5, no 🚨; gate news=good; list flatten,earn_react; ⚪; ret5=+4.9; leftover $311.44 |
-| `AMTX` | 152 | 2026-09-11 @ $2.04 | union ∩ news_g hold 5, no 🚨; gate news=good; list probable,yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+6.8; leftover $311.44 |
-| `ADBE` | 1 | 2026-09-11 @ $242.17 | union ∩ news_g hold 5, no 🚨; gate news=good; list earn_react; ret5=-11.1; leftover $311.44 |
-| `RH` | 2 | 2026-09-11 @ $135.71 | union ∩ news_g hold 5, no 🚨; gate news=good; list earn_react; ret5=-9.2; leftover $311.44 |

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ vol_g, no 🚨
 
-Cash book **-2.08%** ($9,792) · signal-only (no cash/fees) was +26.30%. Starts YES **19/25**. Fills 123 · skips 202 · realized $-288.32.
+Cash book **-4.31%** ($9,569) · signal-only (no cash/fees) was +18.06%. Starts YES **10/26**. Fills 123 · skips 207 · realized $-288.32.
 
 ## How this sleeve decides (like you are 10)
 
@@ -313,6 +313,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | `BNC` | 236 | $4.91 | $4.77 | -33.04 | — | +0.00 | -33.04 | -33.04 | — |
 | 2026-09-16 | `RDNT` | 125 | — | $77.12 | +0.00 | $75.78 | -167.50 | -167.50 | +0.00 | -167.50 |
 | 2026-09-17 | `RDNT` | 125 | $75.78 | $76.44 | +82.50 | $77.78 | +167.50 | +250.00 | -85.00 | +82.50 |
+| 2026-09-18 | `RDNT` | 125 | $77.78 | $77.66 | -15.00 | $76.00 | -207.50 | -222.50 | +67.50 | -140.00 |
 
 ## Each session (cash + holdings state)
 
@@ -343,6 +344,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | -3.84 | $6.96 | ORCL×7, TYRA×49, VIST×15, INDP×429, CMRC×370, WLTH×105, DBI×196, BNC×236 | $9,766.18 | +35.40 | +55.97 | — | — | $6.96 | $9,822.15 | ORCL×7, TYRA×49, VIST×15, INDP×429, CMRC×370, WLTH×105, DBI×196, BNC×236 |
 | 2026-09-16 | +5.30 | $6.96 | ORCL×7, TYRA×49, VIST×15, INDP×429, CMRC×370, WLTH×105, DBI×196, BNC×236 | $9,736.40 | -85.75 | -167.50 | RDNT | ORCL, TYRA, VIST, INDP, CMRC, WLTH, DBI, BNC | $69.28 | $9,541.78 | RDNT×125 |
 | 2026-09-17 | +7.38 | $69.28 | RDNT×125 | $9,624.28 | +82.50 | +167.50 | — | — | $69.28 | $9,791.78 | RDNT×125 |
+| 2026-09-18 | +4.86 | $69.28 | RDNT×125 | $9,776.78 | -15.00 | -207.50 | — | — | $69.28 | $9,569.28 | RDNT×125 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -521,6 +523,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $69.28 | ▼ close $9,541.78 vs 09:30 $9,736.40 (session -167.50) | 16:00 close · cash $69.28 · equity $9,541.78 vs 09:30 $9,736.40 (-194.62; session marks -167.50) · 1 name(s) marked open→close (per-name table). RDNT×125 09:30 $77.12 → close $75.78 -167.50 | — |
 | 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $69.28 | ▲ 09:30 equity $9,624.28 vs yday $9,541.78 (+82.50) | 09:30 open · cash $69.28 (unchanged overnight, no fees) · equity $9,624.28 vs prior close $9,541.78 (+82.50) · 1 name(s) re-marked at the open (per-name table). RDNT×125 yday $75.78 → 09:30 $76.44 +82.50 | — |
 | 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $69.28 | ▲ close $9,791.78 vs 09:30 $9,624.28 (session +167.50) | 16:00 close · cash $69.28 · equity $9,791.78 vs 09:30 $9,624.28 (+167.50; session marks +167.50) · 1 name(s) marked open→close (per-name table). RDNT×125 09:30 $76.44 → close $77.78 +167.50 | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $69.28 | ▼ 09:30 equity $9,776.78 vs yday $9,791.78 (-15.00) | 09:30 open · cash $69.28 (unchanged overnight, no fees) · equity $9,776.78 vs prior close $9,791.78 (-15.00) · 1 name(s) re-marked at the open (per-name table). RDNT×125 yday $77.78 → 09:30 $77.66 -15.00 | — |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $69.28 | ▼ close $9,569.28 vs 09:30 $9,776.78 (session -207.50) | 16:00 close · cash $69.28 · equity $9,569.28 vs 09:30 $9,776.78 (-207.50; session marks -207.50) · 1 name(s) marked open→close (per-name table). RDNT×125 09:30 $77.66 → close $76.00 -207.50 | — |
 
 ## Not taken
 
@@ -728,6 +732,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `ZS` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-17 | `RDNT` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-17 | `RVTY` | cash | leftover split 69.28 < 1 share @ 147.61 |
+| 2026-09-18 | `RDNT` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-18 | `ILMN` | cash | leftover split 17.32 < 1 share @ 249.13 |
+| 2026-09-18 | `SDGR` | cash | leftover split 17.32 < 1 share @ 29.32 |
+| 2026-09-18 | `ARQT` | cash | leftover split 17.32 < 1 share @ 26.14 |
+| 2026-09-18 | `FTRE` | cash | leftover split 17.32 < 1 share @ 20.10 |
 
 ## Still open (marked at last close)
 

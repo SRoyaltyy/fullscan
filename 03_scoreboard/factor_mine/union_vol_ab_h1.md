@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-0.05%** ($9,995) · signal-only (no cash/fees) was +50.88%. Starts YES **4/25**. Fills 119 · skips 48 · realized $+57.37.
+Cash book **-2.45%** ($9,755) · signal-only (no cash/fees) was +47.64%. Starts YES **0/26**. Fills 124 · skips 48 · realized $-22.59.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $17.67.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9.29.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -195,6 +195,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | `RDNT` | 131 | — | $77.12 | +0.00 | $75.78 | -175.54 | -175.54 | +0.00 | -175.54 |
 | 2026-09-17 | `RDNT` | 131 | $75.78 | $76.44 | +86.46 | — | +0.00 | +86.46 | -89.08 | — |
 | 2026-09-17 | `RVTY` | 68 | — | $147.61 | +0.00 | $146.73 | -59.84 | -59.84 | +0.00 | -59.84 |
+| 2026-09-18 | `RVTY` | 68 | $146.73 | $146.50 | -15.64 | — | +0.00 | -15.64 | -75.48 | — |
+| 2026-09-18 | `ILMN` | 10 | — | $249.13 | +0.00 | $239.62 | -95.10 | -95.10 | +0.00 | -95.10 |
+| 2026-09-18 | `SDGR` | 85 | — | $29.32 | +0.00 | $29.02 | -25.50 | -25.50 | +0.00 | -25.50 |
+| 2026-09-18 | `ARQT` | 95 | — | $26.14 | +0.00 | $25.38 | -72.20 | -72.20 | +0.00 | -72.20 |
+| 2026-09-18 | `FTRE` | 124 | — | $20.10 | +0.00 | $19.93 | -21.08 | -21.08 | +0.00 | -21.08 |
 
 ## Each session (cash + holdings state)
 
@@ -225,6 +230,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | -3.84 | $8,603.48 | INDP×457 | $10,157.28 | +118.82 | +0.00 | — | INDP | $10,151.30 | $10,151.30 | — |
 | 2026-09-16 | +5.30 | $10,151.30 | — | $10,151.30 | -0.00 | -175.54 | RDNT | — | $46.19 | $9,973.37 | RDNT×131 |
 | 2026-09-17 | +7.38 | $46.19 | RDNT×131 | $10,059.83 | +86.46 | -59.84 | RVTY | RDNT | $17.67 | $9,995.31 | RVTY×68 |
+| 2026-09-18 | +4.86 | $17.67 | RVTY×68 | $9,979.67 | -15.64 | -213.88 | ILMN, SDGR, ARQT, FTRE | RVTY | $9.29 | $9,754.61 | ILMN×10, SDGR×85, ARQT×95, FTRE×124 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -399,6 +405,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 09:30 ET | **SELL** | `RDNT` | 131 | $76.44 | $2.48 | $-93.95 | $10,057.35 | ▼ -93.95 after sell → book $10,057.35; vs 09:30 mark -2.48 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-17 09:30 ET | **BUY** | `RVTY` | 68 | $147.61 | $2.19 | — | $17.67 | — | combo gate; gate vol=good,ab=good; list flatten; ret5=-4.8; leftover $10057.35 | join🟢 sector🟢 gen🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $17.67 | ▼ close $9,995.31 vs 09:30 $10,059.83 (session -59.84) | 16:00 close · cash $17.67 · equity $9,995.31 vs 09:30 $10,059.83 (-64.52; session marks -59.84) · 1 name(s) marked open→close (per-name table). RVTY×68 09:30 $147.61 → close $146.73 -59.84 | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $17.67 | ▼ 09:30 equity $9,979.67 vs yday $9,995.31 (-15.64) | 09:30 open · cash $17.67 (unchanged overnight, no fees) · equity $9,979.67 vs prior close $9,995.31 (-15.64) · 1 name(s) re-marked at the open (per-name table). RVTY×68 yday $146.73 → 09:30 $146.50 -15.64 | — |
+| 2026-09-18 09:30 ET | **SELL** | `RVTY` | 68 | $146.50 | $2.29 | $-79.96 | $9,977.39 | ▼ -79.96 after sell → book $9,977.39; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-18 09:30 ET | **BUY** | `ILMN` | 10 | $249.13 | $2.02 | — | $7,484.07 | — | combo gate; gate vol=good,ab=good; list flatten; ⚪; ret5=-6.9; leftover $2494.35 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-09-18 09:30 ET | **BUY** | `SDGR` | 85 | $29.32 | $2.25 | — | $4,989.62 | — | combo gate; gate vol=good,ab=good; list flatten; ⚪; ret5=-8.2; leftover $2494.35 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-18 09:30 ET | **BUY** | `ARQT` | 95 | $26.14 | $2.27 | — | $2,504.05 | — | combo gate; gate vol=good,ab=good; list flatten; ⚪; ret5=+1.8; leftover $2494.35 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-18 09:30 ET | **BUY** | `FTRE` | 124 | $20.10 | $2.36 | — | $9.29 | — | combo gate; gate vol=good,ab=good; list flatten; ⚪; ret5=-7.1; leftover $2494.35 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9.29 | ▼ close $9,754.61 vs 09:30 $9,979.67 (session -213.88) | 16:00 close · cash $9.29 · equity $9,754.61 vs 09:30 $9,979.67 (-225.06; session marks -213.88) · 4 name(s) marked open→close (per-name table). ILMN×10 09:30 $249.13 → close $239.62 -95.10; SDGR×85 09:30 $29.32 → close $29.02 -25.50; ARQT×95 09:30 $26.14 → close $25.38 -72.20; FTRE×124 09:30 $20.10 → close $19.93 -21.08 | — |
 
 ## Not taken
 
@@ -457,4 +470,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `RVTY` | 68 | 2026-09-17 @ $147.61 | combo gate; gate vol=good,ab=good; list flatten; ret5=-4.8; leftover $10057.35 |
+| `ILMN` | 10 | 2026-09-18 @ $249.13 | combo gate; gate vol=good,ab=good; list flatten; ⚪; ret5=-6.9; leftover $2494.35 |
+| `SDGR` | 85 | 2026-09-18 @ $29.32 | combo gate; gate vol=good,ab=good; list flatten; ⚪; ret5=-8.2; leftover $2494.35 |
+| `ARQT` | 95 | 2026-09-18 @ $26.14 | combo gate; gate vol=good,ab=good; list flatten; ⚪; ret5=+1.8; leftover $2494.35 |
+| `FTRE` | 124 | 2026-09-18 @ $20.10 | combo gate; gate vol=good,ab=good; list flatten; ⚪; ret5=-7.1; leftover $2494.35 |

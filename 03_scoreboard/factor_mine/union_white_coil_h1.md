@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-5.76%** ($9,424) · signal-only (no cash/fees) was -3.70%. Starts YES **8/25**. Fills 136 · skips 0 · realized $-617.42.
+Cash book **-8.54%** ($9,146) · signal-only (no cash/fees) was -6.88%. Starts YES **0/26**. Fills 141 · skips 0 · realized $-675.17.
 
 ## How this sleeve decides (like you are 10)
 
@@ -57,7 +57,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $62.96.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $125.17.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -213,7 +213,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | `AVAH` | 163 | $14.26 | $14.33 | +11.41 | — | +0.00 | +11.41 | +3.26 | — |
 | 2026-09-17 | `BLFS` | 64 | $36.11 | $36.67 | +35.84 | — | +0.00 | +35.84 | +13.44 | — |
 | 2026-09-17 | `IOT` | 115 | — | $40.48 | +0.00 | $40.00 | -54.63 | -54.63 | +0.00 | -54.63 |
-| 2026-09-17 | `FIVN` | 138 | — | $33.77 | +0.00 | $34.50 | +100.74 | +100.74 | +0.00 | +100.74 |
+| 2026-09-17 | `FIVN` | 135 | — | $34.75 | +0.00 | $34.50 | -33.75 | -33.75 | +0.00 | -33.75 |
+| 2026-09-18 | `IOT` | 115 | $40.00 | $40.42 | +48.30 | — | +0.00 | +48.30 | -6.32 | — |
+| 2026-09-18 | `FIVN` | 135 | $34.50 | $34.44 | -8.10 | — | +0.00 | -8.10 | -41.85 | — |
+| 2026-09-18 | `ILMN` | 12 | — | $249.13 | +0.00 | $239.62 | -114.12 | -114.12 | +0.00 | -114.12 |
+| 2026-09-18 | `SDGR` | 106 | — | $29.32 | +0.00 | $29.02 | -31.80 | -31.80 | +0.00 | -31.80 |
+| 2026-09-18 | `FTRE` | 154 | — | $20.10 | +0.00 | $19.93 | -26.18 | -26.18 | +0.00 | -26.18 |
 
 ## Each session (cash + holdings state)
 
@@ -243,7 +248,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | -11.00 | $13.89 | BAND×59, PAGS×309, ZSQR×962 | $9,404.71 | -44.93 | +0.00 | — | BAND, PAGS, ZSQR | $9,385.85 | $9,385.85 | — |
 | 2026-09-15 | -3.84 | $9,385.85 | — | $9,385.85 | -0.00 | +0.00 | — | — | $9,385.85 | $9,385.85 | — |
 | 2026-09-16 | +5.30 | $9,385.85 | — | $9,385.85 | -0.00 | -87.31 | IQV, RDNT, AVAH, BLFS | — | $230.40 | $9,289.78 | IQV×8, RDNT×30, AVAH×163, BLFS×64 |
-| 2026-09-17 | +7.38 | $230.40 | IQV×8, RDNT×30, AVAH×163, BLFS×64 | $9,391.47 | +101.69 | +46.11 | IOT, FIVN | IQV, RDNT, AVAH, BLFS | $62.96 | $9,423.96 | IOT×115, FIVN×138 |
+| 2026-09-17 | +7.38 | $230.40 | IQV×8, RDNT×30, AVAH×163, BLFS×64 | $9,391.47 | +101.69 | -88.38 | IOT, FIVN | IQV, RDNT, AVAH, BLFS | $31.98 | $9,289.48 | IOT×115, FIVN×135 |
+| 2026-09-18 | +4.86 | $31.98 | IOT×115, FIVN×135 | $9,329.68 | +40.20 | -172.10 | ILMN, SDGR, FTRE | IOT, FIVN | $125.17 | $9,145.95 | ILMN×12, SDGR×106, FTRE×154 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -433,12 +439,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 09:30 ET | **SELL** | `AVAH` | 163 | $14.33 | $2.52 | $-1.74 | $7,037.92 | ▼ -1.74 after sell → book $9,384.80; vs 09:30 mark -2.52 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-17 09:30 ET | **SELL** | `BLFS` | 64 | $36.67 | $2.21 | $+9.05 | $9,382.59 | ▲ +9.05 after sell → book $9,382.59; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-17 09:30 ET | **BUY** | `IOT` | 115 | $40.48 | $2.33 | — | $4,725.63 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; ⚪; ret5=-1.0; leftover $4691.29 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-17 09:30 ET | **BUY** | `FIVN` | 138 | $33.77 | $2.40 | — | $62.96 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; ⚪; ret5=-9.6; leftover $4691.29 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $62.96 | ▲ close $9,423.96 vs 09:30 $9,391.47 (session +46.11) | 16:00 close · cash $62.96 · equity $9,423.96 vs 09:30 $9,391.47 (+32.49; session marks +46.11) · 2 name(s) marked open→close (per-name table). IOT×115 09:30 $40.48 → close $40.00 -54.63; FIVN×138 09:30 $33.77 → close $34.50 +100.74 | — |
+| 2026-09-17 09:30 ET | **BUY** | `FIVN` | 135 | $34.75 | $2.40 | — | $31.98 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; ⚪; ret5=-9.6; leftover $4691.29 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $31.98 | ▼ close $9,289.48 vs 09:30 $9,391.47 (session -88.38) | 16:00 close · cash $31.98 · equity $9,289.48 vs 09:30 $9,391.47 (-101.99; session marks -88.38) · 2 name(s) marked open→close (per-name table). IOT×115 09:30 $40.48 → close $40.00 -54.63; FIVN×135 09:30 $34.75 → close $34.50 -33.75 | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $31.98 | ▲ 09:30 equity $9,329.68 vs yday $9,289.48 (+40.20) | 09:30 open · cash $31.98 (unchanged overnight, no fees) · equity $9,329.68 vs prior close $9,289.48 (+40.20) · 2 name(s) re-marked at the open (per-name table). IOT×115 yday $40.00 → 09:30 $40.42 +48.30; FIVN×135 yday $34.50 → 09:30 $34.44 -8.10 | — |
+| 2026-09-18 09:30 ET | **SELL** | `IOT` | 115 | $40.42 | $2.39 | $-11.05 | $4,677.89 | ▼ -11.05 after sell → book $9,327.29; vs 09:30 mark -2.39 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-18 09:30 ET | **SELL** | `FIVN` | 135 | $34.44 | $2.45 | $-46.70 | $9,324.83 | ▼ -46.70 after sell → book $9,324.83; vs 09:30 mark -2.46 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-18 09:30 ET | **BUY** | `ILMN` | 12 | $249.13 | $2.03 | — | $6,333.25 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; ⚪; ret5=-6.9; leftover $3108.28 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-09-18 09:30 ET | **BUY** | `SDGR` | 106 | $29.32 | $2.31 | — | $3,223.02 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; ⚪; ret5=-8.2; leftover $3108.28 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-18 09:30 ET | **BUY** | `FTRE` | 154 | $20.10 | $2.45 | — | $125.17 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; ⚪; ret5=-7.1; leftover $3108.28 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $125.17 | ▼ close $9,145.95 vs 09:30 $9,329.68 (session -172.10) | 16:00 close · cash $125.17 · equity $9,145.95 vs 09:30 $9,329.68 (-183.73; session marks -172.10) · 3 name(s) marked open→close (per-name table). ILMN×12 09:30 $249.13 → close $239.62 -114.12; SDGR×106 09:30 $29.32 → close $29.02 -31.80; FTRE×154 09:30 $20.10 → close $19.93 -26.18 | — |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `IOT` | 115 | 2026-09-17 @ $40.48 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; ⚪; ret5=-1.0; leftover $4691.29 |
-| `FIVN` | 138 | 2026-09-17 @ $33.77 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; ⚪; ret5=-9.6; leftover $4691.29 |
+| `ILMN` | 12 | 2026-09-18 @ $249.13 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; ⚪; ret5=-6.9; leftover $3108.28 |
+| `SDGR` | 106 | 2026-09-18 @ $29.32 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; ⚪; ret5=-8.2; leftover $3108.28 |
+| `FTRE` | 154 | 2026-09-18 @ $20.10 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; ⚪; ret5=-7.1; leftover $3108.28 |

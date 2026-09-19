@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · RSI overbought
 
-Cash book **-10.13%** ($8,987) · signal-only (no cash/fees) was -11.11%. Starts YES **0/25**. Fills 158 · skips 81 · realized $-1012.85.
+Cash book **-10.13%** ($8,987) · signal-only (no cash/fees) was -11.11%. Starts YES **0/26**. Fills 158 · skips 81 · realized $-1012.85.
 
 ## How this sleeve decides (like you are 10)
 
@@ -233,6 +233,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | `INDP` | 213 | $3.64 | $3.66 | -4.26 | — | +0.00 | -4.26 | -204.48 | — |
 | 2026-09-16 | `AVAH` | 314 | — | $14.31 | +0.00 | $14.26 | +15.70 | +15.70 | -0.00 | +15.70 |
 | 2026-09-17 | `AVAH` | 314 | $14.26 | $14.33 | -21.98 | — | +0.00 | -21.98 | -6.28 | — |
+| 2026-09-18 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -263,6 +264,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | -3.84 | $10,328.09 | INDP×213, QRVO×5 | $9,061.89 | -57.48 | -51.12 | — | QRVO | $9,784.08 | $9,008.76 | INDP×213 |
 | 2026-09-16 | +5.30 | $9,784.08 | INDP×213 | $9,004.50 | -4.26 | +15.70 | AVAH | INDP | $13,490.83 | $9,013.19 | AVAH×314 |
 | 2026-09-17 | +7.38 | $13,490.83 | AVAH×314 | $8,991.21 | -21.98 | +0.00 | — | AVAH | $8,987.16 | $8,987.16 | — |
+| 2026-09-18 | +4.86 | $8,987.16 | — | $8,987.16 | +0.00 | +0.00 | — | — | $8,987.16 | $8,987.16 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -476,6 +478,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,490.83 | ▼ 09:30 equity $8,991.21 vs yday $9,013.19 (-21.98) | 09:30 open · cash $13,490.83 (unchanged overnight, no fees) · equity $8,991.21 vs prior close $9,013.19 (-21.98) · 1 name(s) re-marked at the open (per-name table). AVAH×314 yday $14.26 → 09:30 $14.33 -21.98 | — |
 | 2026-09-17 09:30 ET | **COVER** | `AVAH` | 314 | $14.33 | $4.05 | $-14.59 | $8,987.16 | ▼ -14.59 after sell → book $8,987.16; vs 09:30 mark -4.05 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,987.16 | ▲ close $8,987.16 vs 09:30 $8,991.21 (session +0.00) | 16:00 close · cash $8,987.16 · no lots left · equity $8,987.16. | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,987.16 | ▲ 09:30 equity $8,987.16 vs yday $8,987.16 (+0.00) | 09:30 open · cash $8,987.16 · no holdings · equity $8,987.16 vs prior close $8,987.16 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,987.16 | ▲ close $8,987.16 vs 09:30 $8,987.16 (session +0.00) | 16:00 close · cash $8,987.16 · no lots left · equity $8,987.16. | — |
 
 ## Not taken
 

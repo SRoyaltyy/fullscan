@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ candle, no 🚨
 
-Cash book **-7.80%** ($9,220) · signal-only (no cash/fees) was +7.21%. Starts YES **3/25**. Fills 127 · skips 231 · realized $-874.55.
+Cash book **-8.20%** ($9,180) · signal-only (no cash/fees) was +2.67%. Starts YES **3/26**. Fills 127 · skips 233 · realized $-874.55.
 
 ## How this sleeve decides (like you are 10)
 
@@ -318,6 +318,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | `RDDT` | 7 | $159.63 | $160.62 | +6.93 | — | +0.00 | +6.93 | +21.49 | — |
 | 2026-09-16 | `BLFS` | 250 | — | $36.46 | +0.00 | $36.11 | -87.50 | -87.50 | +0.00 | -87.50 |
 | 2026-09-17 | `BLFS` | 250 | $36.11 | $36.67 | +140.00 | $36.85 | +45.00 | +185.00 | +52.50 | +97.50 |
+| 2026-09-18 | `BLFS` | 250 | $36.85 | $36.73 | -30.00 | $36.69 | -10.00 | -40.00 | +67.50 | +57.50 |
 
 ## Each session (cash + holdings state)
 
@@ -348,6 +349,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | -3.84 | $263.71 | SANM×5, COHU×21, AMTX×585, CLOV×251, BAK×563, TYRA×50, FUBO×103, RDDT×7 | $9,410.05 | -48.48 | -156.97 | — | — | $263.71 | $9,253.08 | SANM×5, COHU×21, AMTX×585, CLOV×251, BAK×563, TYRA×50, FUBO×103, RDDT×7 |
 | 2026-09-16 | +5.30 | $263.71 | SANM×5, COHU×21, AMTX×585, CLOV×251, BAK×563, TYRA×50, FUBO×103, RDDT×7 | $9,154.39 | -98.69 | -87.50 | BLFS | SANM, COHU, AMTX, CLOV, BAK, TYRA, FUBO, RDDT | $7.24 | $9,034.74 | BLFS×250 |
 | 2026-09-17 | +7.38 | $7.24 | BLFS×250 | $9,174.74 | +140.00 | +45.00 | — | — | $7.24 | $9,219.74 | BLFS×250 |
+| 2026-09-18 | +4.86 | $7.24 | BLFS×250 | $9,189.74 | -30.00 | -10.00 | — | — | $7.24 | $9,179.74 | BLFS×250 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -530,6 +532,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7.24 | ▼ close $9,034.74 vs 09:30 $9,154.39 (session -87.50) | 16:00 close · cash $7.24 · equity $9,034.74 vs 09:30 $9,154.39 (-119.65; session marks -87.50) · 1 name(s) marked open→close (per-name table). BLFS×250 09:30 $36.46 → close $36.11 -87.50 | — |
 | 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7.24 | ▲ 09:30 equity $9,174.74 vs yday $9,034.74 (+140.00) | 09:30 open · cash $7.24 (unchanged overnight, no fees) · equity $9,174.74 vs prior close $9,034.74 (+140.00) · 1 name(s) re-marked at the open (per-name table). BLFS×250 yday $36.11 → 09:30 $36.67 +140.00 | — |
 | 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7.24 | ▲ close $9,219.74 vs 09:30 $9,174.74 (session +45.00) | 16:00 close · cash $7.24 · equity $9,219.74 vs 09:30 $9,174.74 (+45.00; session marks +45.00) · 1 name(s) marked open→close (per-name table). BLFS×250 09:30 $36.67 → close $36.85 +45.00 | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7.24 | ▼ 09:30 equity $9,189.74 vs yday $9,219.74 (-30.00) | 09:30 open · cash $7.24 (unchanged overnight, no fees) · equity $9,189.74 vs prior close $9,219.74 (-30.00) · 1 name(s) re-marked at the open (per-name table). BLFS×250 yday $36.85 → 09:30 $36.73 -30.00 | — |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7.24 | ▼ close $9,179.74 vs 09:30 $9,189.74 (session -10.00) | 16:00 close · cash $7.24 · equity $9,179.74 vs 09:30 $9,189.74 (-10.00; session marks -10.00) · 1 name(s) marked open→close (per-name table). BLFS×250 09:30 $36.73 → close $36.69 -10.00 | — |
 
 ## Not taken
 
@@ -766,6 +770,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `S` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `CYPH` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-17 | `BLFS` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-18 | `BLFS` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-18 | `ILMN` | cash | leftover split 7.24 < 1 share @ 249.13 |
 
 ## Still open (marked at last close)
 

@@ -6,7 +6,7 @@ Combination book: each member still runs its own leak-free 09:30 `pick_day`. Sha
 
 Side **mix** · universe `combo` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · shared union_join_vol_green_h1/flatten_h5 w=0.5,0.5 net=priority
 
-Cash book **+4.81%** ($10,481) · signal-only (no cash/fees) was —. Starts YES **1/25**. Fills 201 · skips 286 · realized $+612.56.
+Cash book **+2.93%** ($10,293) · signal-only (no cash/fees) was —. Starts YES **1/26**. Fills 211 · skips 293 · realized $+507.10.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $90.16.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $21.73.
 
 ## Every lot, every session (09:30 mark and same-day change)
 
@@ -438,7 +438,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | `BLFS` | 47 | $36.11 | $36.67 | +26.32 | $36.85 | +8.46 | +34.78 | +9.87 | +18.33 |
 | 2026-09-17 | `WAY` | 1 | — | $26.51 | +0.00 | $26.51 | +0.00 | +0.00 | +0.00 | +0.00 |
 | 2026-09-17 | `AZTA` | 1 | — | $33.94 | +0.00 | $33.63 | -0.31 | -0.31 | +0.00 | -0.31 |
-| 2026-09-17 | `FIVN` | 1 | — | $33.77 | +0.00 | $34.50 | +0.73 | +0.73 | +0.00 | +0.73 |
+| 2026-09-17 | `FIVN` | 1 | — | $34.75 | +0.00 | $34.50 | -0.25 | -0.25 | +0.00 | -0.25 |
+| 2026-09-18 | `AUPH` | 39 | $16.96 | $16.93 | -1.17 | — | +0.00 | -1.17 | +25.35 | — |
+| 2026-09-18 | `OVID` | 235 | $2.70 | $2.68 | -4.70 | — | +0.00 | -4.70 | -11.75 | — |
+| 2026-09-18 | `SANM` | 3 | $196.06 | $197.76 | +5.10 | — | +0.00 | +5.10 | -27.24 | — |
+| 2026-09-18 | `ORCL` | 3 | $150.59 | $150.47 | -0.36 | — | +0.00 | -0.36 | -41.88 | — |
+| 2026-09-18 | `NVT` | 4 | $151.33 | $152.71 | +5.52 | — | +0.00 | +5.52 | -20.28 | — |
+| 2026-09-18 | `COHU` | 11 | $55.00 | $55.80 | +8.80 | — | +0.00 | +8.80 | -3.19 | — |
+| 2026-09-18 | `IQV` | 6 | $269.44 | $269.45 | +0.06 | $266.42 | -18.18 | -18.12 | -8.64 | -26.82 |
+| 2026-09-18 | `RDNT` | 22 | $77.78 | $77.66 | -2.64 | $76.00 | -36.52 | -39.16 | +11.88 | -24.64 |
+| 2026-09-18 | `AVAH` | 121 | $13.97 | $13.90 | -8.47 | $13.67 | -27.83 | -36.30 | -49.61 | -77.44 |
+| 2026-09-18 | `BLFS` | 47 | $36.85 | $36.73 | -5.64 | $36.69 | -1.88 | -7.52 | +12.69 | +10.81 |
+| 2026-09-18 | `WAY` | 1 | $26.51 | $26.95 | +0.44 | $25.66 | -1.29 | -0.85 | +0.44 | -0.85 |
+| 2026-09-18 | `AZTA` | 1 | $33.63 | $33.44 | -0.19 | $33.24 | -0.20 | -0.39 | -0.50 | -0.70 |
+| 2026-09-18 | `FIVN` | 1 | $34.50 | $34.44 | -0.06 | $32.47 | -1.97 | -2.03 | -0.31 | -2.28 |
+| 2026-09-18 | `ILMN` | 3 | — | $249.13 | +0.00 | $239.62 | -28.53 | -28.53 | +0.00 | -28.53 |
+| 2026-09-18 | `SDGR` | 30 | — | $29.32 | +0.00 | $29.02 | -9.00 | -9.00 | +0.00 | -9.00 |
+| 2026-09-18 | `ARQT` | 38 | — | $26.14 | +0.00 | $25.38 | -28.88 | -28.88 | +0.00 | -28.88 |
+| 2026-09-18 | `FTRE` | 49 | — | $20.10 | +0.00 | $19.93 | -8.33 | -8.33 | +0.00 | -8.33 |
 
 ## Each session (cash + holdings state)
 
@@ -468,7 +485,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | -11.00 | $208.14 | ALEC×234, BHC×87, BMEA×310, OABI×123, OPK×371, VIR×51, TYRA×19, INDP×173, WLTH×42, BNC×95, SWKS×5, ASO×8, IRD×75, COO×8, AUPH×39, OVID×235, SANM×3, ORCL×3, NVT×4, COHU×11 | $10,488.07 | -89.69 | -48.27 | — | ALEC, BHC, BMEA, OABI, OPK, VIR, TYRA, INDP, WLTH, BNC, SWKS, ASO, IRD, COO | $6,960.99 | $10,403.60 | AUPH×39, OVID×235, SANM×3, ORCL×3, NVT×4, COHU×11 |
 | 2026-09-15 | -3.84 | $6,960.99 | AUPH×39, OVID×235, SANM×3, ORCL×3, NVT×4, COHU×11 | $10,431.78 | +28.18 | -72.12 | — | — | $6,960.99 | $10,359.66 | AUPH×39, OVID×235, SANM×3, ORCL×3, NVT×4, COHU×11 |
 | 2026-09-16 | +5.30 | $6,960.99 | AUPH×39, OVID×235, SANM×3, ORCL×3, NVT×4, COHU×11 | $10,390.39 | +30.73 | -33.57 | IQV, RDNT, AVAH, BLFS | — | $185.33 | $10,348.27 | AUPH×39, OVID×235, SANM×3, ORCL×3, NVT×4, COHU×11, IQV×6, RDNT×22, AVAH×121, BLFS×47 |
-| 2026-09-17 | +7.38 | $185.33 | AUPH×39, OVID×235, SANM×3, ORCL×3, NVT×4, COHU×11, IQV×6, RDNT×22, AVAH×121, BLFS×47 | $10,507.22 | +158.95 | -25.14 | WAY, AZTA, FIVN | — | $90.16 | $10,481.13 | AUPH×39, OVID×235, SANM×3, ORCL×3, NVT×4, COHU×11, IQV×6, RDNT×22, AVAH×121, BLFS×47, WAY×1, AZTA×1, FIVN×1 |
+| 2026-09-17 | +7.38 | $185.33 | AUPH×39, OVID×235, SANM×3, ORCL×3, NVT×4, COHU×11, IQV×6, RDNT×22, AVAH×121, BLFS×47 | $10,507.22 | +158.95 | -26.12 | WAY, AZTA, FIVN | — | $89.17 | $10,480.14 | AUPH×39, OVID×235, SANM×3, ORCL×3, NVT×4, COHU×11, IQV×6, RDNT×22, AVAH×121, BLFS×47, WAY×1, AZTA×1, FIVN×1 |
+| 2026-09-18 | +4.86 | $89.17 | AUPH×39, OVID×235, SANM×3, ORCL×3, NVT×4, COHU×11, IQV×6, RDNT×22, AVAH×121, BLFS×47, WAY×1, AZTA×1, FIVN×1 | $10,476.83 | -3.31 | -162.61 | ILMN, SDGR, ARQT, FTRE | AUPH, OVID, SANM, ORCL, NVT, COHU | $21.73 | $10,292.59 | IQV×6, RDNT×22, AVAH×121, BLFS×47, WAY×1, AZTA×1, FIVN×1, ILMN×3, SDGR×30, ARQT×38, FTRE×49 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -723,8 +741,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $185.33 | ▲ 09:30 equity $10,507.22 vs yday $10,348.27 (+158.95) | 09:30 open · cash $185.33 (unchanged overnight, no fees) · equity $10,507.22 vs prior close $10,348.27 (+158.95) | — |
 | 2026-09-17 09:30 ET | **BUY** | `WAY` | 1 | $26.51 | $0.27 | — | $158.55 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=-7.4; combo leftover $37.07; owner flatten_h5 | join🟢 sector🟢 gen🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-17 09:30 ET | **BUY** | `AZTA` | 1 | $33.94 | $0.34 | — | $124.27 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=-1.1; combo leftover $37.07; owner flatten_h5 | join🟢 sector🟢 gen🟢 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-17 09:30 ET | **BUY** | `FIVN` | 1 | $33.77 | $0.34 | — | $90.16 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=-9.6; combo leftover $37.07; owner flatten_h5 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $90.16 | ▼ close $10,481.13 vs 09:30 $10,507.22 (session -25.14) | 16:00 close · cash $90.16 · equity $10,481.13 vs 09:30 $10,507.22 (-26.09; session marks -25.14) · 13 name(s) marked open→close (per-name table). AUPH×39 09:30 $17.06 → close $16.96 -3.90; OVID×235 09:30 $2.73 → close $2.70 -7.05; SANM×3 09:30 $200.46 → close $196.06 -13.20; ORCL×3 09:30 $146.75 → close $150.59 +11.52; NVT×4 09:30 $152.46 → close $151.33 -4.52; COHU×11 09:30 $53.23 → close $55.00 +19.47; IQV×6 09:30 $273.15 → close $269.44 -22.26; RDNT×22 09:30 $76.44 → close $77.78 +29.48; AVAH×121 09:30 $14.33 → close $13.97 -43.56; BLFS×47 09:30 $36.67 → close $36.85 +8.46; WAY×1 09:30 $26.51 → close $26.51 +0.00; AZTA×1 09:30 $33.94 → close $33.63 -0.31; FIVN×1 09:30 $33.77 → close $34.50 +0.73 | — |
+| 2026-09-17 09:30 ET | **BUY** | `FIVN` | 1 | $34.75 | $0.35 | — | $89.17 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=-9.6; combo leftover $37.07; owner flatten_h5 | join🟢 sector🟢 gen🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $89.17 | ▼ close $10,480.14 vs 09:30 $10,507.22 (session -26.12) | 16:00 close · cash $89.17 · equity $10,480.14 vs 09:30 $10,507.22 (-27.08; session marks -26.12) · 13 name(s) marked open→close (per-name table). AUPH×39 09:30 $17.06 → close $16.96 -3.90; OVID×235 09:30 $2.73 → close $2.70 -7.05; SANM×3 09:30 $200.46 → close $196.06 -13.20; ORCL×3 09:30 $146.75 → close $150.59 +11.52; NVT×4 09:30 $152.46 → close $151.33 -4.52; COHU×11 09:30 $53.23 → close $55.00 +19.47; IQV×6 09:30 $273.15 → close $269.44 -22.26; RDNT×22 09:30 $76.44 → close $77.78 +29.48; AVAH×121 09:30 $14.33 → close $13.97 -43.56; BLFS×47 09:30 $36.67 → close $36.85 +8.46; WAY×1 09:30 $26.51 → close $26.51 +0.00; AZTA×1 09:30 $33.94 → close $33.63 -0.31; FIVN×1 09:30 $34.75 → close $34.50 -0.25 | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $89.17 | ▼ 09:30 equity $10,476.83 vs yday $10,480.14 (-3.31) | 09:30 open · cash $89.17 (unchanged overnight, no fees) · equity $10,476.83 vs prior close $10,480.14 (-3.31) | — |
+| 2026-09-18 09:30 ET | **SELL** | `AUPH` | 39 | $16.93 | $2.13 | $+21.12 | $747.31 | ▲ +21.12 after sell → book $10,474.70; vs 09:30 mark -2.13 | flatten_h5: dropped from list after 5 sess (min 5) | — |
+| 2026-09-18 09:30 ET | **SELL** | `OVID` | 235 | $2.68 | $3.08 | $-17.86 | $1,374.03 | ▼ -17.86 after sell → book $10,471.62; vs 09:30 mark -3.08 | flatten_h5: dropped from list after 5 sess (min 5) | — |
+| 2026-09-18 09:30 ET | **SELL** | `SANM` | 3 | $197.76 | $2.02 | $-31.26 | $1,965.29 | ▼ -31.26 after sell → book $10,469.60; vs 09:30 mark -2.02 | flatten_h5: dropped from list after 5 sess (min 5) | — |
+| 2026-09-18 09:30 ET | **SELL** | `ORCL` | 3 | $150.47 | $2.02 | $-45.90 | $2,414.68 | ▼ -45.90 after sell → book $10,467.58; vs 09:30 mark -2.02 | flatten_h5: dropped from list after 5 sess (min 5) | — |
+| 2026-09-18 09:30 ET | **SELL** | `NVT` | 4 | $152.71 | $2.02 | $-24.30 | $3,023.50 | ▼ -24.30 after sell → book $10,465.56; vs 09:30 mark -2.02 | flatten_h5: dropped from list after 5 sess (min 5) | — |
+| 2026-09-18 09:30 ET | **SELL** | `COHU` | 11 | $55.80 | $2.04 | $-7.26 | $3,635.26 | ▼ -7.26 after sell → book $10,463.52; vs 09:30 mark -2.04 | flatten_h5: dropped from list after 5 sess (min 5) | — |
+| 2026-09-18 09:30 ET | **BUY** | `ILMN` | 3 | $249.13 | $2.00 | — | $2,885.87 | — | combo gate; gate join=good,vol=good,last_green=True; list flatten; ⚪; ret5=-6.9; combo leftover $908.81; owner union_join_vol_green_h1 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-09-18 09:30 ET | **BUY** | `SDGR` | 30 | $29.32 | $2.08 | — | $2,004.19 | — | combo gate; gate join=good,vol=good,last_green=True; list flatten; ⚪; ret5=-8.2; combo leftover $908.81; owner union_join_vol_green_h1 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-18 09:30 ET | **BUY** | `ARQT` | 38 | $26.14 | $2.10 | — | $1,008.77 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+1.8; combo leftover $1002.10; owner flatten_h5 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-18 09:30 ET | **BUY** | `FTRE` | 49 | $20.10 | $2.14 | — | $21.73 | — | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=-7.1; combo leftover $1002.10; owner flatten_h5 | join🟢 sector🟢 gen🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $21.73 | ▼ close $10,292.59 vs 09:30 $10,476.83 (session -162.61) | 16:00 close · cash $21.73 · equity $10,292.59 vs 09:30 $10,476.83 (-184.24; session marks -162.61) · 11 name(s) marked open→close (per-name table). IQV×6 09:30 $269.45 → close $266.42 -18.18; RDNT×22 09:30 $77.66 → close $76.00 -36.52; AVAH×121 09:30 $13.90 → close $13.67 -27.83; BLFS×47 09:30 $36.73 → close $36.69 -1.88; WAY×1 09:30 $26.95 → close $25.66 -1.29; AZTA×1 09:30 $33.44 → close $33.24 -0.20; FIVN×1 09:30 $34.44 → close $32.47 -1.97; ILMN×3 09:30 $249.13 → close $239.62 -28.53; SDGR×30 09:30 $29.32 → close $29.02 -9.00; ARQT×38 09:30 $26.14 → close $25.38 -28.88; FTRE×49 09:30 $20.10 → close $19.93 -8.33 | — |
 
 ## Not taken
 
@@ -1016,21 +1046,26 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | `RVTY` | cash | leftover split 92.67 < 1 share @ 147.61 |
 | 2026-09-17 | `IT` | cash | leftover split 37.07 < 1 share @ 191.61 |
 | 2026-09-17 | `IOT` | cash | leftover split 37.07 < 1 share @ 40.48 |
+| 2026-09-18 | `IQV` | min_hold | flatten_h5: dropped but min-hold 2/5 |
+| 2026-09-18 | `RDNT` | min_hold | flatten_h5: dropped but min-hold 2/5 |
+| 2026-09-18 | `AVAH` | min_hold | flatten_h5: dropped but min-hold 2/5 |
+| 2026-09-18 | `BLFS` | min_hold | flatten_h5: dropped but min-hold 2/5 |
+| 2026-09-18 | `WAY` | min_hold | flatten_h5: dropped but min-hold 1/5 |
+| 2026-09-18 | `AZTA` | min_hold | flatten_h5: dropped but min-hold 1/5 |
+| 2026-09-18 | `FIVN` | min_hold | flatten_h5: dropped but min-hold 1/5 |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `AUPH` | 39 | 2026-09-11 @ $16.28 | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=-1.1; combo leftover $643.28; owner flatten_h5 |
-| `OVID` | 235 | 2026-09-11 @ $2.73 | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=-3.0; combo leftover $643.28; owner flatten_h5 |
-| `SANM` | 3 | 2026-09-11 @ $206.84 | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=+8.3; combo leftover $643.28; owner flatten_h5 |
-| `ORCL` | 3 | 2026-09-11 @ $164.43 | baseline list, no extra gate; list flatten,earn_react; wish-list (live io HOLD — not a ticket); ⚪; ret5=+4.9; combo leftover $643.28; owner flatten_h5 |
-| `NVT` | 4 | 2026-09-11 @ $157.78 | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+4.7; combo leftover $643.28; owner flatten_h5 |
-| `COHU` | 11 | 2026-09-11 @ $56.09 | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+19.6; combo leftover $643.28; owner flatten_h5 |
 | `IQV` | 6 | 2026-09-16 @ $270.89 | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=-0.8; combo leftover $1740.25; owner flatten_h5 |
 | `RDNT` | 22 | 2026-09-16 @ $77.12 | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=-5.1; combo leftover $1740.25; owner flatten_h5 |
 | `AVAH` | 121 | 2026-09-16 @ $14.31 | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+3.2; combo leftover $1740.25; owner flatten_h5 |
 | `BLFS` | 47 | 2026-09-16 @ $36.46 | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=-4.6; combo leftover $1740.25; owner flatten_h5 |
 | `WAY` | 1 | 2026-09-17 @ $26.51 | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=-7.4; combo leftover $37.07; owner flatten_h5 |
 | `AZTA` | 1 | 2026-09-17 @ $33.94 | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ret5=-1.1; combo leftover $37.07; owner flatten_h5 |
-| `FIVN` | 1 | 2026-09-17 @ $33.77 | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=-9.6; combo leftover $37.07; owner flatten_h5 |
+| `FIVN` | 1 | 2026-09-17 @ $34.75 | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=-9.6; combo leftover $37.07; owner flatten_h5 |
+| `ILMN` | 3 | 2026-09-18 @ $249.13 | combo gate; gate join=good,vol=good,last_green=True; list flatten; ⚪; ret5=-6.9; combo leftover $908.81; owner union_join_vol_green_h1 |
+| `SDGR` | 30 | 2026-09-18 @ $29.32 | combo gate; gate join=good,vol=good,last_green=True; list flatten; ⚪; ret5=-8.2; combo leftover $908.81; owner union_join_vol_green_h1 |
+| `ARQT` | 38 | 2026-09-18 @ $26.14 | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+1.8; combo leftover $1002.10; owner flatten_h5 |
+| `FTRE` | 49 | 2026-09-18 @ $20.10 | baseline list, no extra gate; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=-7.1; combo leftover $1002.10; owner flatten_h5 |
