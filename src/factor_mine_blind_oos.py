@@ -16,6 +16,7 @@ Research only. Live ``flatten_robust`` / Pages are not imported or written.
 from __future__ import annotations
 
 import json
+from concurrent.futures import ProcessPoolExecutor, as_completed
 from datetime import datetime
 from pathlib import Path
 
@@ -154,6 +155,19 @@ def score_fee_h(book: dict, *, oos_start: str, oos_end: str,
     }
 
 
+def _start_row(book: dict, start: str) -> dict:
+    ret = fm._finite(book.get("total_ret_pct"))
+    return {
+        "start": start,
+        "return_pct": None if ret is None else round(float(ret), 3),
+        "made_money": bool(ret is not None and float(ret) > 0),
+        "n_trades": book.get("n_trades"),
+        "final_equity": book.get("final_equity"),
+        "win_rate": book.get("win_rate"),
+        "audit_ok": bool((book.get("audit") or {}).get("ok", True)),
+    }
+
+
 def replay_oos_starts(panel: dict, rec: dict, rec_by: dict, *,
                       oos_start: str, oos_end: str,
                       bars=None, fees=None, regime=None) -> tuple[list[dict], dict | None]:
@@ -168,17 +182,32 @@ def replay_oos_starts(panel: dict, rec: dict, rec_by: dict, *,
             regime=regime)
         if first is None:
             first = book
-        ret = fm._finite(book.get("total_ret_pct"))
-        starts.append({
-            "start": start,
-            "return_pct": None if ret is None else round(float(ret), 3),
-            "made_money": bool(ret is not None and float(ret) > 0),
-            "n_trades": book.get("n_trades"),
-            "final_equity": book.get("final_equity"),
-            "win_rate": book.get("win_rate"),
-            "audit_ok": bool((book.get("audit") or {}).get("ok", True)),
-        })
+        starts.append(_start_row(book, start))
     return starts, first
+
+
+def _replay_name_job(job: dict) -> dict:
+    """Process-worker: one frozen name, all OOS starts."""
+    rec = job["rec"]
+    rec_by = job["rec_by"]
+    panel = job["panel"]
+    starts, fresh = replay_oos_starts(
+        panel, rec, rec_by, oos_start=job["oos_start"], oos_end=job["oos_end"],
+        bars=job.get("bars"), fees=job["fees"], regime=job["regime"])
+    fee = score_fee_h(
+        fresh or {}, oos_start=job["oos_start"], oos_end=job["oos_end"],
+        bars=job.get("bars"), fee_rt=FEE_RT)
+    return {
+        "name": job["name"],
+        "oos_starts": starts,
+        "fresh_win_rate": None if fresh is None else fresh.get("win_rate"),
+        **fee,
+    }
+
+
+def should_replay(name: str, cyrus: set[str]) -> bool:
+    """Replay Cyrus featured + hot4 contamination. Formal-only cannot KEEP."""
+    return name in cyrus or name == "union_hot_n4_h1" or name in TASKFORCE_BOOK_SURVIVORS
 
 
 def _members(rec: dict | None) -> str:
@@ -260,10 +289,63 @@ def attach_verdict(row: dict) -> dict:
     return row
 
 
+def _base_row(name: str, rec: dict | None, h: dict,
+              cyrus: set[str], formal: set[str]) -> dict:
+    return {
+        "name": name,
+        "side": (rec or h).get("side"),
+        "hold": (rec or h).get("hold"),
+        "members": list((rec or {}).get("members") or []),
+        "weights": list((rec or {}).get("weights") or []),
+        "member_note": _members(rec),
+        "cyrus_is": name in cyrus,
+        "formal_is": name in formal,
+        "taskforce_book": name in TASKFORCE_BOOK_SURVIVORS,
+        "is_book_pct": h.get("is_book_pct"),
+        "is_win_rate": h.get("is_win_rate"),
+        "is_start_green": h.get("is_start_green"),
+        "is_start_n": h.get("is_start_n"),
+        "is_n_trades": h.get("is_n_trades"),
+        "oos_book_pct_continued": h.get("oos_book_pct_continued"),
+        "fresh_book_pct": h.get("fresh_book_pct"),
+        "fresh_n_trades": h.get("fresh_n_trades"),
+        "oos_dollar_days": h.get("oos_dollar_days"),
+        "oos_n_hit": h.get("oos_n_hit"),
+        "oos_n_days": h.get("oos_n_days"),
+        "missing_recipe": rec is None,
+        "oos_starts": [],
+        "oos_start_green": 0,
+        "oos_start_n": 0,
+        "oos_start_rate": None,
+        "fresh_win_rate": None,
+        "oos_fee_h_n": 0,
+        "oos_fee_h_hits": 0,
+        "oos_fee_h_wr": None,
+        "oos_fee_h_mean": None,
+        "fee_rt": FEE_RT,
+    }
+
+
+def _apply_replay(row: dict, replayed: dict) -> dict:
+    starts = list(replayed.get("oos_starts") or [])
+    n_green = sum(1 for s in starts if s.get("made_money"))
+    row["oos_starts"] = starts
+    row["oos_start_green"] = n_green
+    row["oos_start_n"] = len(starts)
+    row["oos_start_rate"] = (
+        None if not starts else round(n_green / len(starts), 4))
+    row["fresh_win_rate"] = replayed.get("fresh_win_rate")
+    row["oos_fee_h_n"] = replayed.get("oos_fee_h_n") or 0
+    row["oos_fee_h_hits"] = replayed.get("oos_fee_h_hits") or 0
+    row["oos_fee_h_wr"] = replayed.get("oos_fee_h_wr")
+    row["oos_fee_h_mean"] = replayed.get("oos_fee_h_mean")
+    return row
+
+
 def score_frozen(holdout: dict, payload: dict, panel: dict, *,
                  oos_start: str = OOS_START, oos_end: str = OOS_END,
                  bars=None, fees=None, regime=None,
-                 replay: bool = True) -> list[dict]:
+                 replay: bool = True, workers: int = 4) -> list[dict]:
     """Score the frozen set. ``replay=False`` keeps holdout books only."""
     fees = fees if fees is not None else fm.pt_fees()
     if regime is None:
@@ -275,65 +357,48 @@ def score_frozen(holdout: dict, payload: dict, panel: dict, *,
     hold_by = {r["name"]: r for r in (holdout.get("rows") or []) if r.get("name")}
     cyrus = set(holdout.get("cyrus_featured") or [])
     formal = set(holdout.get("formal_keep") or [])
-    rows = []
-    for name in frozen_names(holdout):
+    names = frozen_names(holdout)
+    rows_by = {}
+    jobs = []
+    for name in names:
         h = hold_by.get(name) or {}
         rec = rec_by.get(name)
-        row = {
-            "name": name,
-            "side": (rec or h).get("side"),
-            "hold": (rec or h).get("hold"),
-            "members": list((rec or {}).get("members") or []),
-            "weights": list((rec or {}).get("weights") or []),
-            "member_note": _members(rec),
-            "cyrus_is": name in cyrus,
-            "formal_is": name in formal,
-            "taskforce_book": name in TASKFORCE_BOOK_SURVIVORS,
-            "is_book_pct": h.get("is_book_pct"),
-            "is_win_rate": h.get("is_win_rate"),
-            "is_start_green": h.get("is_start_green"),
-            "is_start_n": h.get("is_start_n"),
-            "is_n_trades": h.get("is_n_trades"),
-            "oos_book_pct_continued": h.get("oos_book_pct_continued"),
-            "fresh_book_pct": h.get("fresh_book_pct"),
-            "fresh_n_trades": h.get("fresh_n_trades"),
-            "oos_dollar_days": h.get("oos_dollar_days"),
-            "oos_n_hit": h.get("oos_n_hit"),
-            "oos_n_days": h.get("oos_n_days"),
-            "missing_recipe": rec is None,
-            "oos_starts": [],
-            "oos_start_green": 0,
-            "oos_start_n": 0,
-            "oos_start_rate": None,
-            "fresh_win_rate": None,
-            "oos_fee_h_n": 0,
-            "oos_fee_h_hits": 0,
-            "oos_fee_h_wr": None,
-            "oos_fee_h_mean": None,
-            "fee_rt": FEE_RT,
-        }
-        if rec is None or not replay:
+        row = _base_row(name, rec, h, cyrus, formal)
+        if rec is None or not replay or not should_replay(name, cyrus):
             row.update(confirm_holdout_books(row, h))
-            rows.append(attach_verdict(row))
+            rows_by[name] = attach_verdict(row)
             continue
-        print(f"[blind-oos] starts {name}", flush=True)
-        starts, fresh = replay_oos_starts(
-            panel, rec, rec_by, oos_start=oos_start, oos_end=oos_end,
-            bars=bars, fees=fees, regime=regime)
-        n_green = sum(1 for s in starts if s.get("made_money"))
-        row["oos_starts"] = starts
-        row["oos_start_green"] = n_green
-        row["oos_start_n"] = len(starts)
-        row["oos_start_rate"] = (
-            None if not starts else round(n_green / len(starts), 4))
-        if fresh is not None:
-            row["fresh_win_rate"] = fresh.get("win_rate")
-            row.update(score_fee_h(
-                fresh, oos_start=oos_start, oos_end=oos_end,
-                bars=bars, fee_rt=FEE_RT))
-        row.update(confirm_holdout_books(row, h))
-        rows.append(attach_verdict(row))
-    return rows
+        print(f"[blind-oos] queue {name}", flush=True)
+        need = {name, *(rec.get("members") or [])}
+        slim = {k: rec_by[k] for k in need if k in rec_by}
+        jobs.append({
+            "name": name, "rec": rec, "rec_by": slim, "panel": panel,
+            "oos_start": oos_start, "oos_end": oos_end, "bars": bars,
+            "fees": fees, "regime": regime,
+        })
+        rows_by[name] = row
+    if jobs:
+        n_workers = max(1, min(int(workers or 1), len(jobs)))
+        if n_workers == 1:
+            done = [_replay_name_job(j) for j in jobs]
+        else:
+            # Import via package name so workers do not pickle __main__.
+            from src.factor_mine_blind_oos import _replay_name_job as _job
+            done = []
+            with ProcessPoolExecutor(max_workers=n_workers) as pool:
+                futs = [pool.submit(_job, j) for j in jobs]
+                for fut in as_completed(futs):
+                    done.append(fut.result())
+        for replayed in done:
+            name = replayed["name"]
+            row = _apply_replay(rows_by[name], replayed)
+            h = hold_by.get(name) or {}
+            row.update(confirm_holdout_books(row, h))
+            rows_by[name] = attach_verdict(row)
+            print(f"[blind-oos] done {name} starts "
+                  f"{row.get('oos_start_green')}/{row.get('oos_start_n')} "
+                  f"book={row.get('oos_book_pct_continued')}", flush=True)
+    return [rows_by[n] for n in names if n in rows_by]
 
 
 def live_contamination(live: dict | None, holdout: dict) -> dict:
@@ -539,15 +604,32 @@ def render_oos_md(holdout: dict, rows: list[dict], *,
                 f"{_md_pp(r.get('oos_book_pct_continued'))} | "
                 f"{_md_pp(r.get('fresh_book_pct'))} | **FAIL** |"
             )
+    is_wr = [
+        r for r in cyrus
+        if fm._finite(r.get("is_win_rate")) is not None
+        and float(r["is_win_rate"]) > WR_BAR
+    ]
     lines += [
         "",
         "## Win% > 55% alone",
         "",
+        "Win% is not the Cyrus bar. On 9/9, "
+        + (
+            ", ".join(
+                f"`{r['name']}` IS WR {_md_pct(r.get('is_win_rate'))}"
+                for r in is_wr
+            ) or "no Cyrus name"
+        )
+        + " would pass a Win%>55% screen; every one **FAIL**s OOS "
+        "starts + Book%. The `combo_seh_*` mixes were Cyrus-featured "
+        "with IS WR 50% — Win% alone would have dropped them on 9/9 "
+        "too (starts 17/19 + Book% kept them).",
+        "",
     ]
     if wr_trap:
         lines.append(
-            "These print after-fee H WR or fresh cash-trade WR > 55% and "
-            "still **FAIL** Cyrus (starts + Book%). "
+            "OOS after-fee H / fresh cash WR > 55% and still **FAIL** "
+            "Cyrus: "
             + ", ".join(
                 f"`{r['name']}` (H {_md_pct(r.get('oos_fee_h_wr'))}, "
                 f"cash WR {_md_pct(r.get('fresh_win_rate'))})"
@@ -557,9 +639,9 @@ def render_oos_md(holdout: dict, rows: list[dict], *,
         )
     else:
         lines.append(
-            "No frozen name clears after-fee H WR or fresh cash-trade WR "
-            "> 55% while failing Cyrus — or none cleared 55% at all. "
-            "WR is still not the KEEP bar."
+            "No frozen name clears **OOS** after-fee H WR or fresh "
+            "cash-trade WR > 55%. Best Taskforce-6 H WR is well under "
+            "the 55% screen. WR is still not the KEEP bar."
         )
     pins = ", ".join(f"`{n}`" for n in (cont.get("post_0909_live_pins") or [])) or "none"
     live_task = cont.get("taskforce_in_live_featured") or []
@@ -671,7 +753,8 @@ def load_json(path: Path) -> dict:
 def run(*, holdout_path: Path | None = None, payload_path: Path | None = None,
         live_path: Path | None = None, dest_md: Path | None = None,
         dest_json: Path | None = None, panel: dict | None = None,
-        bars=None, fees=None, regime=None, replay: bool = True) -> dict:
+        bars=None, fees=None, regime=None, replay: bool = True,
+        workers: int = 4) -> dict:
     holdout = load_json(holdout_path or HOLDOUT_JSON)
     payload = load_json(payload_path or IS_JSON)
     live = None
@@ -683,7 +766,8 @@ def run(*, holdout_path: Path | None = None, payload_path: Path | None = None,
         fm.attach_tape_flow(panel)
     rows = score_frozen(
         holdout, payload, panel or {},
-        bars=bars, fees=fees, regime=regime, replay=replay)
+        bars=bars, fees=fees, regime=regime, replay=replay,
+        workers=workers)
     contam = live_contamination(live, holdout)
     return write_board(
         holdout, rows, contamination=contam,
@@ -700,6 +784,7 @@ def main(argv=None) -> int:
     ap.add_argument("--json", dest="json_path", default=str(BOARD_JSON))
     ap.add_argument("--no-replay", action="store_true",
                     help="board from holdout books only (no start-day walk)")
+    ap.add_argument("--workers", type=int, default=4)
     args = ap.parse_args(argv)
     md = Path(args.md)
     js = Path(args.json_path)
@@ -711,7 +796,7 @@ def main(argv=None) -> int:
         payload_path=Path(args.payload),
         live_path=Path(args.live),
         dest_md=md, dest_json=js,
-        replay=not args.no_replay)
+        replay=not args.no_replay, workers=args.workers)
     print(f"[blind-oos] KEEP={blob['n_keep']} FAIL={blob['n_fail']}",
           flush=True)
     return 0

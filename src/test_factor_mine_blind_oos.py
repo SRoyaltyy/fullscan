@@ -133,6 +133,14 @@ def test_cyrus_oos_keep_needs_starts_and_book_not_wr() -> None:
     assert fmoos.is_cyrus_oos_keep(hot4) is False
 
 
+def test_should_replay_cyrus_and_hot4_only() -> None:
+    cyrus = {"combo_sh_5050_shared"}
+    assert fmoos.should_replay("combo_sh_5050_shared", cyrus) is True
+    assert fmoos.should_replay("union_hot_n4_h1", cyrus) is True
+    assert fmoos.should_replay("combo_se_5050_skip", cyrus) is False
+    assert fmoos.should_replay("union_hot_n4_holdup", cyrus) is False
+
+
 def test_frozen_names_never_add_oos_or_holdup() -> None:
     h = _holdout()
     names = fmoos.frozen_names(h)
