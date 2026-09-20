@@ -1,6 +1,6 @@
 {
   "date": "2026-09-20",
-  "generated_at": "2026-09-20T15:03:29.736040-04:00",
+  "generated_at": "2026-09-20T15:03:34.202066-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -11,9 +11,9 @@
     "MISSING AB checklist enriched `data/ab_checklist/2026-09-20_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 2,
-    "partial": 0,
-    "fail": 6,
+    "ok": 1,
+    "partial": 2,
+    "fail": 5,
     "n": 8
   },
   "processes": [
@@ -501,11 +501,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 4,
-      "n_opt_ok": 2,
+      "n_opt_ok": 1,
       "n_opt": 3,
       "files": [
         {
@@ -576,9 +576,9 @@
           "name": "Join ranked CSV",
           "path": "data/join/2026-09-20_ranked.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=5894",
+          "size": 2220760
         },
         {
           "key": "peers",
@@ -630,21 +630,23 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-20)",
+          "status": "FAIL",
+          "reason": "session 2026-09-20 not in dashboard dates (last=2026-09-17)",
           "size": 6300795
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "203 rows",
+      "bullets": [
+        "FORM, P, KEYS, VICR, MU"
+      ]
     },
     {
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "OK",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 1,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -663,8 +665,8 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-20)",
+          "status": "FAIL",
+          "reason": "session 2026-09-20 not in dashboard dates (last=2026-09-17)",
           "size": 6300795
         },
         {
@@ -1064,6 +1066,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.74, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.68, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.475, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.88, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.34, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.55, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.32, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-20\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-20",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-20T15:03:34.082460-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-20_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2220760,
+          "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FORM, P, KEYS, VICR, MU"
+        }
+      ],
+      "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FORM, P, KEYS, VICR, MU"
     }
   ],
   "href": {
