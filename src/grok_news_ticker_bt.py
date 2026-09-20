@@ -89,7 +89,8 @@ HORMUZ_SHOCK = re.compile(
 POLICY_KEEP = re.compile(
     r"(?i)("
     r"\b(sec|fda|doj|epa|ftc|fcc|cftc|cms|occ|fdic|nlrb|osha|cpsc|itc|bis)\b|"
-    r"federal reserve|fed chair|fomc|fed funds|dot plot|powell|warsh|"
+    r"federal reserve|fed chair|fomc|fed funds|dot plot|chair powell|"
+    r"kevin warsh|\bwarsh\b|"
     r"white house|federal register|executive order|"
     r"\btariff|\bban(?:s|ned|ning)?\b|\bexemption|"
     r"tokeniz|regulation crypto|safe harbor|\batkins\b|"
@@ -98,7 +99,8 @@ POLICY_KEEP = re.compile(
     r"supreme court|court of (appeals|international trade)|"
     r"\bbill\b.{0,30}(congress|senate|house)|"
     r"(congress|senate|house).{0,30}\bbill\b|"
-    r"rate (cut|hike|hold)|interest[- ]rate"
+    r"rate (cut|hike|hold)|interest[- ]rate|"
+    r"\bthaad\b|\bpentagon\b|defense contract"
     r")"
 )
 SINGLE_FDA = re.compile(
@@ -131,7 +133,7 @@ THEME_PACKS: list[dict] = [
         "id": "fed_path",
         "rx": re.compile(
             r"(?i)(federal reserve|fed chair|fomc|fed (rate|hike|cut)|"
-            r"warsh|powell|rate hike|rate cut|fed funds)"
+            r"warsh|chair powell|rate hike|rate cut|fed funds)"
         ),
         "polarity": None,
     },
@@ -967,11 +969,14 @@ def run_standalone_books(scores: dict[str, dict[str, int]], cal: list[str],
         print(f"[grok-news-bt] standalone {name}", flush=True)
         rec = fm.make_recipe(
             name=name, universe="union", hold=hold, top_n=top_n,
-            rank="list", side="long",
-            note="standalone exact policy-catalyst longs; no short locate",
+            rank="list", side="long", day_cap=0.35,
+            note="standalone exact policy-catalyst longs; no short locate; "
+                 "35% day-cap so one name cannot dump the book",
         )
         book = fmb.simulate_book(
-            panel, rec, fees=fees, regime=regime, start=start)
+            panel, rec, fees=fees, regime=regime, start=start,
+            rules={**fmb.BOOK_RULES, "hard_red_no_new": False},
+        )
         books[name] = slim_book(book)
         stats[name] = book_stats(book)
     return books, stats
@@ -1438,7 +1443,9 @@ def write_md(payload: dict) -> str:
         "These names are **not** on `union_hot_n4_h1` (0/26 overlap). "
         "If we do not run a standalone book, the catalysts are unused. "
         "Long-only the exact bullish names on a policy/gov article. "
-        "No shorts. No wraps. Cap 3 names per article.",
+        "No shorts. No wraps. Cap 3 names per article. "
+        "Does **not** inherit hard-red sit (that weather gate is why "
+        "Disney/FCC never traded). Day-cap 35% so one name cannot dump $10k.",
         "",
         "| Window | `grok_n4_h1` | `grok_n4_h2` | `grok_n8_h1` | `grok_n8_h2` | published hot4 | published flatten |",
         "|---|---:|---:|---:|---:|---:|---:|",

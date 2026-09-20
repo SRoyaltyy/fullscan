@@ -309,6 +309,10 @@ def test_wrap_is_not_a_catalyst() -> None:
     assert not bt.is_catalyst(
         "Stock Market Today: Nvidia, Micron, Sandisk All Tumble")
     assert bt.is_catalyst("SEC Greenlights Tokenized Stocks After Clarity Act Fails in Senate")
+    assert not bt.is_catalyst(
+        "Powell Industries Eyes Record Revenue as Data Center Backlog Powers Growth")
+    assert bt.is_catalyst(
+        "Patriots and THAAD: Lockheed Martin Corporation (LMT) and Northrop Grumman")
 
 
 def test_catalyst_mapper_drops_noun_collisions() -> None:
