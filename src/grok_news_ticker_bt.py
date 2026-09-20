@@ -216,10 +216,25 @@ _NAME_STOP = {
     "share", "first", "income", "equity", "growth", "value", "world",
     "united", "states", "international", "capital", "markets", "financial",
     "partners", "advisors", "limited", "ordinary", "common", "stock",
-    "american", "national", "services", "resources", "industries",
+    "american", "national", "nation", "services", "resources", "industries",
     "solutions", "systems", "technologies", "energy", "mining", "bank",
     "gold", "silver", "holdings", "entertainment", "software",
+    "reserve", "federal", "yields", "yield", "change", "agents", "live",
+    "invest", "investor", "investors", "trader", "traders", "currency",
+    "opportunistic", "green", "acquisition", "income", "strategy",
+    "decline", "retail", "store", "thermal", "cooling", "power",
+    "management", "conductor", "signal", "jackson", "arrow", "crown",
+    "daily", "you", "with", "fed", "index", "etn", "shares",
+    "interest", "dividend", "premium", "treasury", "policy", "outlook",
+    "protection", "regional", "florida", "solutions", "support", "action",
+    "associated", "public", "holding", "controls", "practice", "advisor",
 }
+_ETF_OR_SHELL = re.compile(
+    r"(?i)(exchange traded|etn\b|\betf\b|shell compan|closed-end fund)"
+)
+_SOURCE_TAIL = re.compile(r"\s+[-–—]\s+[^-–—]{2,48}$")
+_PAREN_TICKER = re.compile(r"\$([A-Z]{1,5})\b|\(([A-Z]{1,5})\)")
+_WORD_TICKER = re.compile(r"\b([A-Z]{3,5})\b")
 
 
 def _norm(title: str) -> str:
@@ -741,9 +756,16 @@ def load_prior_profiles(fill: str, cal: list[str]) -> dict[str, dict]:
     return out
 
 
+def _is_etf_or_shell(prof: dict) -> bool:
+    blob = f"{prof.get('industry') or ''} {prof.get('company') or ''}"
+    return bool(_ETF_OR_SHELL.search(blob))
+
+
 def _index_profiles(exp: str, profiles: dict[str, dict]) -> None:
     names: dict[str, list[str]] = defaultdict(list)
     for t, p in profiles.items():
+        if _is_etf_or_shell(p):
+            continue
         for key in _company_keys(p.get("company") or ""):
             names[key].append(t)
     _NAME_INDEX[exp] = names
@@ -764,23 +786,33 @@ def _ensure_index(profiles: dict[str, dict]) -> str | None:
 def exact_named_tickers(blob: str, profiles: dict[str, dict]) -> set[str]:
     """Tickers the article names — ticker token or unique company name.
 
-    Does not expand a theme to a sector book.
+    Does not expand a theme to a sector book. Skips ETF / shell-company
+    name matches (``Reserve`` ≠ ARCM; ``Fed`` ≠ IFED). One- and two-
+    letter tokens only count in ``$TICK`` / ``(TICK)``.
     """
     found: set[str] = set()
     if not blob or not profiles:
         return found
-    for t in _TICKER_IN_TEXT.findall(blob):
-        if t in _TICKER_DENY:
-            continue
-        if t in profiles:
+    cleaned = _SOURCE_TAIL.sub("", blob)
+    cleaned = re.sub(r"\bU\.S\.?\b", " ", cleaned)
+    cleaned = re.sub(r"\bS\s*&\s*P\b", " ", cleaned, flags=re.I)
+    for a, b in _PAREN_TICKER.findall(cleaned):
+        t = a or b
+        if t and t not in _TICKER_DENY and t in profiles:
             found.add(t)
+    for t in _WORD_TICKER.findall(cleaned):
+        if t in _TICKER_DENY or t not in profiles:
+            continue
+        found.add(t)
     exp = _ensure_index(profiles)
     nidx = _NAME_INDEX.get(exp) or {}
-    blob_l = blob.lower()
+    blob_l = cleaned.lower()
     for key, tickers in nidx.items():
-        if key not in blob_l:
+        if not re.search(rf"\b{re.escape(key)}\b", blob_l):
             continue
         uniq = list(dict.fromkeys(tickers))
+        if " " not in key and len(uniq) != 1:
+            continue
         if len(uniq) > 2:
             continue
         found.update(uniq)

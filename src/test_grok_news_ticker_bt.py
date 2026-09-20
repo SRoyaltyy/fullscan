@@ -195,6 +195,113 @@ def test_mapper_does_not_assign_random_software_on_epa() -> None:
     assert {h["ticker"] for h in named} == {"VST"}
 
 
+def test_mapper_rejects_headline_noise_tickers() -> None:
+    """S&P / U.S. / Fed / Reserve / investors are not a stock map."""
+    profiles = {
+        "ARCM": {
+            "ticker": "ARCM",
+            "company": "Arrow Reserve Capital Management ETF",
+            "sector": "Financial",
+            "industry": "Exchange Traded Fund",
+            "text": "arrow reserve capital management etf",
+            "export": "2026-09-15",
+        },
+        "IFED": {
+            "ticker": "IFED",
+            "company": "ETRACS IFED Invest with the Fed TR Index ETN",
+            "sector": "Financial",
+            "industry": "Exchange Traded Fund",
+            "text": "etracs ifed invest with the fed",
+            "export": "2026-09-15",
+        },
+        "S": {
+            "ticker": "S",
+            "company": "SentinelOne Inc",
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "text": "sentinelone inc technology software",
+            "export": "2026-09-15",
+        },
+        "U": {
+            "ticker": "U",
+            "company": "Unity Software Inc",
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "text": "unity software inc technology",
+            "export": "2026-09-15",
+        },
+        "EO": {
+            "ticker": "EO",
+            "company": "Corgi EOSE 2x Daily ETF",
+            "sector": "Financial",
+            "industry": "Exchange Traded Fund",
+            "text": "corgi eose 2x daily etf",
+            "export": "2026-09-15",
+        },
+        "KLAC": {
+            "ticker": "KLAC",
+            "company": "KLA Corporation",
+            "sector": "Technology",
+            "industry": "Semiconductor Equipment & Materials",
+            "text": "kla corporation technology semiconductor",
+            "export": "2026-09-15",
+        },
+    }
+    fed = bt.map_tickers(
+        {"title": "Federal Reserve: Gradual easing path – UOB", "digest": ""},
+        profiles,
+    )
+    assert {h["ticker"] for h in fed} == set()
+    spx = bt.map_tickers(
+        {"title": "Stock market today: Dow, S&P 500, Nasdaq gain on soft inflation data",
+         "digest": ""},
+        profiles,
+    )
+    assert "S" not in {h["ticker"] for h in spx}
+    us = bt.map_tickers(
+        {"title": "U.S. inflation data dents September Fed hike bets", "digest": ""},
+        profiles,
+    )
+    assert "U" not in {h["ticker"] for h in us}
+    eo = bt.map_tickers(
+        {"title": "EO 14420: national emergency on U.S. bulk-power system", "digest": ""},
+        profiles,
+    )
+    assert "EO" not in {h["ticker"] for h in eo}
+    kla = bt.map_tickers(
+        {"title": "KLA Corporation (KLAC) Positioned to Benefit from Semiconductor Chip Complexity",
+         "digest": ""},
+        profiles,
+    )
+    assert {h["ticker"] for h in kla} == {"KLAC"}
+    profiles["NFJ"] = {
+        "ticker": "NFJ",
+        "company": "Virtus AllianzGI Dividend Interest & Premium Strategy Fund",
+        "sector": "Financial",
+        "industry": "Closed-End Fund - Equity",
+        "text": "virtus dividend interest premium strategy fund",
+        "export": "2026-09-15",
+    }
+    profiles["AVAT"] = {
+        "ticker": "AVAT",
+        "company": "Avalanche Treasury Corp",
+        "sector": "Financial",
+        "industry": "Asset Management",
+        "text": "avalanche treasury corp asset management",
+        "export": "2026-09-15",
+    }
+    assert not bt.map_tickers(
+        {"title": "Divided Fed holds interest rates steady, but three members voted to hike",
+         "digest": ""},
+        profiles,
+    )
+    assert not bt.map_tickers(
+        {"title": "Treasury yields dip as Wall Street awaits wholesale inflation data",
+         "digest": ""},
+        profiles,
+    )
+
+
 def test_overlay_rewrites_existing_list() -> None:
     base = ["AAA", "BBB", "CCC", "DDD"]
     news = {"BBB": -3, "CCC": 3, "EEE": 5, "FFF": 2}
@@ -245,6 +352,7 @@ def main() -> None:
     test_mapper_ignores_finviz_row_ticker()
     test_mapper_exact_company_and_ticker()
     test_mapper_does_not_assign_random_software_on_epa()
+    test_mapper_rejects_headline_noise_tickers()
     test_overlay_rewrites_existing_list()
     test_harvest_skips_standtest_and_13q()
     from tempfile import TemporaryDirectory

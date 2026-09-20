@@ -1,40 +1,69 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Grok news ticker book — research</title>
+<title>Grok news overlay — research</title>
 <style>
 :root{--bg:#0f1420;--card:#171e2e;--line:#262f45;--fg:#dfe6f2;--mut:#8b96ab;--pos:#4ade80;--neg:#f87171;--gold:#fbbf24}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:13px/1.45 -apple-system,Segoe UI,sans-serif}
-.wrap{max-width:960px;margin:0 auto;padding:16px}h1{font-size:18px;margin:0 0 6px}
+.wrap{max-width:1040px;margin:0 auto;padding:16px}h1{font-size:18px;margin:0 0 6px}h2{font-size:14px;margin:0 0 8px}
 .sub{color:var(--mut);margin:0 0 12px}table{width:100%;border-collapse:collapse;margin:8px 0 16px}
 th,td{padding:5px 6px;border-bottom:1px solid var(--line);text-align:right}th:first-child,td:first-child{text-align:left}
 .pos{color:var(--pos)}.neg{color:var(--neg)}.note{color:var(--mut);font-size:12px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:0 0 12px}
 </style></head><body><div class="wrap">
-<h1>Grok news → ticker cash-book</h1>
-<p class="sub">Research only. Frozen automations + dated repo news. Live factor-mine / flatten / Webull untouched.</p>
+<h1>Grok news overlay on existing strategies</h1>
+<p class="sub">Research only. Exact named tickers from pre-open Grok articles, overlaid on union_hot_n4_h1 and flatten_h5. Live factor-mine / flatten / Webull untouched.</p>
 <div class="card" id="cov"></div>
-<div class="card"><h2>Windows</h2><table id="win"></table></div>
-<div class="card"><h2>Hits / misses</h2><div id="ex"></div></div>
-<p class="note">Fill = next 09:30 strictly after known_at. Mapper is D-1 company text. Long-only + hard-red sit.</p>
+<div class="card"><h2>union_hot_n4_h1 overlay</h2><table id="hot"></table></div>
+<div class="card"><h2>flatten_h5 overlay</h2><table id="flat"></table></div>
+<div class="card"><h2>List touch</h2><table id="touch"></table></div>
+<div class="card"><h2>Hits / misses (exact named)</h2><div id="ex"></div></div>
+<p class="note">Fill = next 09:30 strictly after known_at. Named ticker or unique D-1 company only. Long-only + hard-red sit.</p>
 </div>
 <script>
 fetch('payload.json').then(r=>r.json()).then(d=>{
   const cov=d.coverage||{};
   document.getElementById('cov').innerHTML =
     '<b>Coverage</b><div>automation days dumped: '+(cov.automation_days||0)+
-    ' · repo-only sessions: '+(cov.repo_only_sessions||0)+'/'+(cov.n_sessions||0)+
+    ' · pipeline sessions: '+(cov.pipeline_sessions||0)+'/'+(cov.n_sessions||0)+
+    ' · articles: '+(cov.articles_kept||0)+
+    ' · named: '+(cov.articles_with_name||0)+
+    ' · ticker-days: '+(cov.n_ticker_days||0)+
     '</div><div class="note">'+(cov.reason||'')+'</div>';
   const pct=v=>v==null?'—':((v>=0?'+':'')+Number(v).toFixed(2));
-  let h='<tr><th>Window</th><th>n art</th><th>ticker-days</th><th>same-day hit</th><th>n4 h1</th><th>hot4</th><th>flatten_h5</th></tr>';
-  for (const [k,label] of [['full','full'],['is','08-13→09-09'],['oos','09-10→end']]){
-    const w=d.windows[k]; if(!w) continue;
-    h+='<tr><td>'+label+'</td><td>'+w.n_articles+'</td><td>'+w.n_ticker_days+
-      '</td><td>'+w.same_day_hit+'</td><td>'+pct(w.grok_n4_h1.book_pct)+
-      '</td><td>'+pct(w.baselines.union_hot_n4_h1.book_pct)+
-      '</td><td>'+pct(w.baselines.flatten_h5.book_pct)+'</td></tr>';
+  const cls=v=>v==null?'':(v>=0?'pos':'neg');
+  const cell=(v,base)=>{
+    if(v==null) return '—';
+    const d = base==null? null : (Number(v)-Number(base));
+    const extra = d==null||base==null?'': ' <span class="'+cls(d)+'">('+pct(d)+')</span>';
+    return '<span class="'+cls(v)+'">'+pct(v)+'</span>'+extra;
+  };
+  const rows=(key)=>{
+    let h='<tr><th>Window</th><th>base</th><th>veto_bear</th><th>require_bull</th><th>add_named</th><th>full</th></tr>';
+    for (const [k,label] of [['full','full'],['is','08-13→09-09'],['oos','09-10→end']]){
+      const w=d.windows[k]; if(!w) continue;
+      const ov=w.overlay[key];
+      const b=ov.base.book_pct;
+      h+='<tr><td>'+label+'</td><td>'+cell(b,null)+
+        '</td><td>'+cell(ov.veto_bear.book_pct,b)+
+        '</td><td>'+cell(ov.require_bull.book_pct,b)+
+        '</td><td>'+cell(ov.add_named.book_pct,b)+
+        '</td><td>'+cell(ov.full.book_pct,b)+'</td></tr>';
+    }
+    return h;
+  };
+  document.getElementById('hot').innerHTML=rows('union_hot_n4_h1');
+  document.getElementById('flat').innerHTML=rows('flatten_h5');
+  let th='<tr><th>Base</th><th>overlay</th><th>days changed</th><th>list ∩ named</th><th>vetoed</th><th>added</th></tr>';
+  const touch=d.touch||{};
+  for (const base of ['union_hot_n4_h1','flatten_h5']){
+    for (const mode of ['veto_bear','require_bull','add_named','full']){
+      const t=(touch[base]||{})[mode]||{};
+      th+='<tr><td>'+base+'</td><td>'+mode+'</td><td>'+(t.days_changed||0)+'/'+(t.n_days||0)+
+        '</td><td>'+(t.overlap_days||0)+'</td><td>'+(t.n_vetoed||0)+'</td><td>'+(t.n_added||0)+'</td></tr>';
+    }
   }
-  document.getElementById('win').innerHTML=h;
+  document.getElementById('touch').innerHTML=th;
   const ex=d.examples||{};
   const li=(arr,tag)=>'<p><b>'+tag+'</b></p><ul>'+(arr||[]).map(g=>
     '<li><code>'+g.ticker+'</code> '+g.side+' '+g.fill+' same-day '+pct(g.same_day_pct)+' — '+(g.title||'')+'</li>').join('')+'</ul>';

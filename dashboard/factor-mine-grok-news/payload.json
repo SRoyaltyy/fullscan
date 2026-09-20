@@ -7,100 +7,162 @@
     "automation_days": 0,
     "n_results": 0,
     "n_sessions": 26,
+    "pipeline_sessions": 26,
     "repo_only_sessions": 26,
     "frozen_articles": 0,
-    "parsed_articles": 1038,
+    "parsed_articles": 975,
+    "actions_articles": 142,
     "event_articles": 173,
-    "finviz_articles": 706,
-    "articles_kept": 816,
-    "note": "0 automation days dumped in this environment. Stage 1 must be re-run by Grok Bot / Cursor with Automations connector. Stage 2 filled from dated repo news only."
+    "articles_kept": 699,
+    "articles_with_name": 192,
+    "n_ticker_days": 277,
+    "n_signed_ticker_days": 126,
+    "note": "0 automation days dumped in this environment. Stage 1 must be re-run by Grok Bot / Cursor with Automations connector. Stage 2 filled from dated Grok pipeline (parsed/actions/events) only. Raw Finviz is not the article list."
   },
   "windows": {
     "full": {
       "start": "2026-08-13",
       "end": "2026-09-18",
-      "n_articles": 816,
-      "n_ticker_days": 2907,
-      "same_day_hit": "1185/2305 (51%)",
-      "next_close_hit": "1072/2069 (52%)",
-      "grok_n4_h1": {
-        "name": "grok_n4_h1",
-        "book_pct": -3.786,
-        "final_equity": 9621.38,
-        "win_rate": 0.3902,
-        "dollar_days": 0.2308,
-        "starts_yes": "6/26",
-        "start_n": 26,
-        "start_green": 6,
-        "n_trades": 86,
-        "n_skips": 69
-      },
-      "variants": {
-        "grok_n4_h1": {
-          "name": "grok_n4_h1",
-          "book_pct": -3.786,
-          "final_equity": 9621.38,
-          "win_rate": 0.3902,
-          "dollar_days": 0.2308,
-          "starts_yes": "6/26",
-          "start_n": 26,
-          "start_green": 6,
-          "n_trades": 86,
-          "n_skips": 69
+      "n_articles": 699,
+      "n_ticker_days": 277,
+      "same_day_hit": "47/95 (49%)",
+      "next_close_hit": "37/73 (51%)",
+      "overlay": {
+        "union_hot_n4_h1": {
+          "base": {
+            "name": "union_hot_n4_h1",
+            "book_pct": 21.475,
+            "final_equity": 12147.54,
+            "win_rate": 0.525,
+            "dollar_days": 0.3462,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 84,
+            "n_skips": 58
+          },
+          "veto_bear": {
+            "name": "union_hot_n4_h1+veto_bear",
+            "book_pct": 21.405,
+            "final_equity": 12140.54,
+            "win_rate": 0.5366,
+            "dollar_days": 0.3462,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 86,
+            "n_skips": 58
+          },
+          "require_bull": {
+            "name": "union_hot_n4_h1+require_bull",
+            "book_pct": 0.0,
+            "final_equity": 10000.0,
+            "win_rate": null,
+            "dollar_days": 0.0,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 0,
+            "n_skips": 0
+          },
+          "add_named": {
+            "name": "union_hot_n4_h1+add_named",
+            "book_pct": 20.737,
+            "final_equity": 12073.66,
+            "win_rate": 0.5283,
+            "dollar_days": 0.3077,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 111,
+            "n_skips": 79
+          },
+          "full": {
+            "name": "union_hot_n4_h1+full",
+            "book_pct": 20.75,
+            "final_equity": 12075.04,
+            "win_rate": 0.537,
+            "dollar_days": 0.3077,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 113,
+            "n_skips": 79
+          }
         },
-        "grok_n4_h2": {
-          "name": "grok_n4_h2",
-          "book_pct": 0.545,
-          "final_equity": 10054.46,
-          "win_rate": 0.4615,
-          "dollar_days": 0.3462,
-          "starts_yes": null,
-          "start_n": 0,
-          "start_green": 0,
-          "n_trades": 56,
-          "n_skips": 109
-        },
-        "grok_n8_h1": {
-          "name": "grok_n8_h1",
-          "book_pct": -4.299,
-          "final_equity": 9570.07,
-          "win_rate": 0.3735,
-          "dollar_days": 0.1923,
-          "starts_yes": null,
-          "start_n": 0,
-          "start_green": 0,
-          "n_trades": 174,
-          "n_skips": 137
-        },
-        "grok_n8_h2": {
-          "name": "grok_n8_h2",
-          "book_pct": -3.526,
-          "final_equity": 9647.35,
-          "win_rate": 0.3509,
-          "dollar_days": 0.3077,
-          "starts_yes": null,
-          "start_n": 0,
-          "start_green": 0,
-          "n_trades": 122,
-          "n_skips": 225
+        "flatten_h5": {
+          "base": {
+            "name": "flatten_h5",
+            "book_pct": 7.993,
+            "final_equity": 10799.33,
+            "win_rate": 0.5854,
+            "dollar_days": 0.5769,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 92,
+            "n_skips": 315
+          },
+          "veto_bear": {
+            "name": "flatten_h5+veto_bear",
+            "book_pct": 9.664,
+            "final_equity": 10966.36,
+            "win_rate": 0.5854,
+            "dollar_days": 0.5769,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 91,
+            "n_skips": 310
+          },
+          "require_bull": {
+            "name": "flatten_h5+require_bull",
+            "book_pct": 0.0,
+            "final_equity": 10000.0,
+            "win_rate": null,
+            "dollar_days": 0.0,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 0,
+            "n_skips": 0
+          },
+          "add_named": {
+            "name": "flatten_h5+add_named",
+            "book_pct": 5.731,
+            "final_equity": 10573.09,
+            "win_rate": 0.5532,
+            "dollar_days": 0.5769,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 105,
+            "n_skips": 366
+          },
+          "full": {
+            "name": "flatten_h5+full",
+            "book_pct": 7.033,
+            "final_equity": 10703.3,
+            "win_rate": 0.5532,
+            "dollar_days": 0.5769,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 104,
+            "n_skips": 361
+          }
         }
       },
-      "baselines": {
+      "published": {
         "union_hot_n4_h1": {
           "name": "union_hot_n4_h1",
           "book_pct": 31.966,
-          "final_equity": 13196.55,
-          "dollar_days": 0.5769,
-          "starts_yes": "26/26",
           "from_published": true,
           "window_from_running_equity": false
         },
         "flatten_h5": {
           "name": "flatten_h5",
           "book_pct": 3.393,
-          "final_equity": 10339.3,
-          "dollar_days": 0.6154,
-          "starts_yes": "2/26",
           "from_published": true,
           "window_from_running_equity": false
         }
@@ -109,88 +171,156 @@
     "is": {
       "start": "2026-08-13",
       "end": "2026-09-09",
-      "n_articles": 652,
-      "n_ticker_days": 2205,
-      "same_day_hit": "1090/2152 (51%)",
-      "next_close_hit": "1067/2060 (52%)",
-      "grok_n4_h1": {
-        "name": "grok_n4_h1",
-        "book_pct": -3.677,
-        "final_equity": 9632.26,
-        "win_rate": 0.3902,
-        "dollar_days": 0.3158,
-        "starts_yes": "6/19",
-        "start_n": 19,
-        "start_green": 6,
-        "n_trades": 82,
-        "n_skips": 27
-      },
-      "variants": {
-        "grok_n4_h1": {
-          "name": "grok_n4_h1",
-          "book_pct": -3.677,
-          "final_equity": 9632.26,
-          "win_rate": 0.3902,
-          "dollar_days": 0.3158,
-          "starts_yes": "6/19",
-          "start_n": 19,
-          "start_green": 6,
-          "n_trades": 82,
-          "n_skips": 27
+      "n_articles": 581,
+      "n_ticker_days": 186,
+      "same_day_hit": "33/70 (47%)",
+      "next_close_hit": "34/69 (49%)",
+      "overlay": {
+        "union_hot_n4_h1": {
+          "base": {
+            "name": "union_hot_n4_h1",
+            "book_pct": 18.839,
+            "final_equity": 12147.54,
+            "win_rate": 0.525,
+            "dollar_days": 0.3462,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 84,
+            "n_skips": 58,
+            "window_from_running_equity": true
+          },
+          "veto_bear": {
+            "name": "union_hot_n4_h1+veto_bear",
+            "book_pct": 18.759,
+            "final_equity": 12140.54,
+            "win_rate": 0.5366,
+            "dollar_days": 0.3462,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 86,
+            "n_skips": 58,
+            "window_from_running_equity": true
+          },
+          "require_bull": {
+            "name": "union_hot_n4_h1+require_bull",
+            "book_pct": 0.0,
+            "final_equity": 10000.0,
+            "win_rate": null,
+            "dollar_days": 0.0,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 0,
+            "n_skips": 0,
+            "window_from_running_equity": true
+          },
+          "add_named": {
+            "name": "union_hot_n4_h1+add_named",
+            "book_pct": 18.263,
+            "final_equity": 12073.66,
+            "win_rate": 0.5283,
+            "dollar_days": 0.3077,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 111,
+            "n_skips": 79,
+            "window_from_running_equity": true
+          },
+          "full": {
+            "name": "union_hot_n4_h1+full",
+            "book_pct": 18.278,
+            "final_equity": 12075.04,
+            "win_rate": 0.537,
+            "dollar_days": 0.3077,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 113,
+            "n_skips": 79,
+            "window_from_running_equity": true
+          }
         },
-        "grok_n4_h2": {
-          "name": "grok_n4_h2",
-          "book_pct": 0.698,
-          "final_equity": 10069.8,
-          "win_rate": 0.5,
-          "dollar_days": 0.4737,
-          "starts_yes": null,
-          "start_n": 0,
-          "start_green": 0,
-          "n_trades": 50,
-          "n_skips": 65
-        },
-        "grok_n8_h1": {
-          "name": "grok_n8_h1",
-          "book_pct": -3.783,
-          "final_equity": 9621.67,
-          "win_rate": 0.3735,
-          "dollar_days": 0.2632,
-          "starts_yes": null,
-          "start_n": 0,
-          "start_green": 0,
-          "n_trades": 166,
-          "n_skips": 53
-        },
-        "grok_n8_h2": {
-          "name": "grok_n8_h2",
-          "book_pct": -2.989,
-          "final_equity": 9701.1,
-          "win_rate": 0.3846,
-          "dollar_days": 0.4211,
-          "starts_yes": null,
-          "start_n": 0,
-          "start_green": 0,
-          "n_trades": 109,
-          "n_skips": 136
+        "flatten_h5": {
+          "base": {
+            "name": "flatten_h5",
+            "book_pct": 10.541,
+            "final_equity": 10799.33,
+            "win_rate": 0.5854,
+            "dollar_days": 0.5769,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 92,
+            "n_skips": 315,
+            "window_from_running_equity": true
+          },
+          "veto_bear": {
+            "name": "flatten_h5+veto_bear",
+            "book_pct": 10.541,
+            "final_equity": 10966.36,
+            "win_rate": 0.5854,
+            "dollar_days": 0.5769,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 91,
+            "n_skips": 310,
+            "window_from_running_equity": true
+          },
+          "require_bull": {
+            "name": "flatten_h5+require_bull",
+            "book_pct": 0.0,
+            "final_equity": 10000.0,
+            "win_rate": null,
+            "dollar_days": 0.0,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 0,
+            "n_skips": 0,
+            "window_from_running_equity": true
+          },
+          "add_named": {
+            "name": "flatten_h5+add_named",
+            "book_pct": 7.022,
+            "final_equity": 10573.09,
+            "win_rate": 0.5532,
+            "dollar_days": 0.5769,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 105,
+            "n_skips": 366,
+            "window_from_running_equity": true
+          },
+          "full": {
+            "name": "flatten_h5+full",
+            "book_pct": 7.022,
+            "final_equity": 10703.3,
+            "win_rate": 0.5532,
+            "dollar_days": 0.5769,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 104,
+            "n_skips": 361,
+            "window_from_running_equity": true
+          }
         }
       },
-      "baselines": {
+      "published": {
         "union_hot_n4_h1": {
           "name": "union_hot_n4_h1",
           "book_pct": 14.95,
-          "final_equity": 11494.95,
-          "dollar_days": null,
-          "starts_yes": null,
           "from_published": true,
           "window_from_running_equity": true
         },
         "flatten_h5": {
           "name": "flatten_h5",
           "book_pct": 10.541,
-          "final_equity": 11054.1,
-          "dollar_days": null,
-          "starts_yes": null,
           "from_published": true,
           "window_from_running_equity": true
         }
@@ -199,184 +329,272 @@
     "oos": {
       "start": "2026-09-10",
       "end": "2026-09-18",
-      "n_articles": 164,
-      "n_ticker_days": 702,
-      "same_day_hit": "95/153 (62%)",
-      "next_close_hit": "5/9 (56%)",
-      "grok_n4_h1": {
-        "name": "grok_n4_h1",
-        "book_pct": -0.109,
-        "final_equity": 9989.06,
-        "win_rate": null,
-        "dollar_days": 0.0,
-        "starts_yes": "0/7",
-        "start_n": 7,
-        "start_green": 0,
-        "n_trades": 4,
-        "n_skips": 42
-      },
-      "variants": {
-        "grok_n4_h1": {
-          "name": "grok_n4_h1",
-          "book_pct": -0.109,
-          "final_equity": 9989.06,
-          "win_rate": null,
-          "dollar_days": 0.0,
-          "starts_yes": "0/7",
-          "start_n": 7,
-          "start_green": 0,
-          "n_trades": 4,
-          "n_skips": 42
+      "n_articles": 118,
+      "n_ticker_days": 91,
+      "same_day_hit": "14/25 (56%)",
+      "next_close_hit": "3/4 (75%)",
+      "overlay": {
+        "union_hot_n4_h1": {
+          "base": {
+            "name": "union_hot_n4_h1",
+            "book_pct": 2.219,
+            "final_equity": 12147.54,
+            "win_rate": 0.525,
+            "dollar_days": 0.3462,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 84,
+            "n_skips": 58,
+            "window_from_running_equity": true
+          },
+          "veto_bear": {
+            "name": "union_hot_n4_h1+veto_bear",
+            "book_pct": 2.228,
+            "final_equity": 12140.54,
+            "win_rate": 0.5366,
+            "dollar_days": 0.3462,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 86,
+            "n_skips": 58,
+            "window_from_running_equity": true
+          },
+          "require_bull": {
+            "name": "union_hot_n4_h1+require_bull",
+            "book_pct": 0.0,
+            "final_equity": 10000.0,
+            "win_rate": null,
+            "dollar_days": 0.0,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 0,
+            "n_skips": 0,
+            "window_from_running_equity": true
+          },
+          "add_named": {
+            "name": "union_hot_n4_h1+add_named",
+            "book_pct": 2.092,
+            "final_equity": 12073.66,
+            "win_rate": 0.5283,
+            "dollar_days": 0.3077,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 111,
+            "n_skips": 79,
+            "window_from_running_equity": true
+          },
+          "full": {
+            "name": "union_hot_n4_h1+full",
+            "book_pct": 2.09,
+            "final_equity": 12075.04,
+            "win_rate": 0.537,
+            "dollar_days": 0.3077,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 113,
+            "n_skips": 79,
+            "window_from_running_equity": true
+          }
         },
-        "grok_n4_h2": {
-          "name": "grok_n4_h2",
-          "book_pct": -0.109,
-          "final_equity": 9989.06,
-          "win_rate": null,
-          "dollar_days": 0.0,
-          "starts_yes": null,
-          "start_n": 0,
-          "start_green": 0,
-          "n_trades": 4,
-          "n_skips": 42
-        },
-        "grok_n8_h1": {
-          "name": "grok_n8_h1",
-          "book_pct": -0.53,
-          "final_equity": 9946.95,
-          "win_rate": null,
-          "dollar_days": 0.0,
-          "starts_yes": null,
-          "start_n": 0,
-          "start_green": 0,
-          "n_trades": 8,
-          "n_skips": 84
-        },
-        "grok_n8_h2": {
-          "name": "grok_n8_h2",
-          "book_pct": -0.53,
-          "final_equity": 9946.95,
-          "win_rate": null,
-          "dollar_days": 0.0,
-          "starts_yes": null,
-          "start_n": 0,
-          "start_green": 0,
-          "n_trades": 8,
-          "n_skips": 84
+        "flatten_h5": {
+          "base": {
+            "name": "flatten_h5",
+            "book_pct": -2.305,
+            "final_equity": 10799.33,
+            "win_rate": 0.5854,
+            "dollar_days": 0.5769,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 92,
+            "n_skips": 315,
+            "window_from_running_equity": true
+          },
+          "veto_bear": {
+            "name": "flatten_h5+veto_bear",
+            "book_pct": -0.794,
+            "final_equity": 10966.36,
+            "win_rate": 0.5854,
+            "dollar_days": 0.5769,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 91,
+            "n_skips": 310,
+            "window_from_running_equity": true
+          },
+          "require_bull": {
+            "name": "flatten_h5+require_bull",
+            "book_pct": 0.0,
+            "final_equity": 10000.0,
+            "win_rate": null,
+            "dollar_days": 0.0,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 0,
+            "n_skips": 0,
+            "window_from_running_equity": true
+          },
+          "add_named": {
+            "name": "flatten_h5+add_named",
+            "book_pct": -1.206,
+            "final_equity": 10573.09,
+            "win_rate": 0.5532,
+            "dollar_days": 0.5769,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 105,
+            "n_skips": 366,
+            "window_from_running_equity": true
+          },
+          "full": {
+            "name": "flatten_h5+full",
+            "book_pct": 0.01,
+            "final_equity": 10703.3,
+            "win_rate": 0.5532,
+            "dollar_days": 0.5769,
+            "starts_yes": null,
+            "start_n": 0,
+            "start_green": 0,
+            "n_trades": 104,
+            "n_skips": 361,
+            "window_from_running_equity": true
+          }
         }
       },
-      "baselines": {
+      "published": {
         "union_hot_n4_h1": {
           "name": "union_hot_n4_h1",
           "book_pct": 14.803,
-          "final_equity": 13196.55,
-          "dollar_days": null,
-          "starts_yes": null,
           "from_published": true,
           "window_from_running_equity": true
         },
         "flatten_h5": {
           "name": "flatten_h5",
           "book_pct": -6.466,
-          "final_equity": 10339.3,
-          "dollar_days": null,
-          "starts_yes": null,
           "from_published": true,
           "window_from_running_equity": true
         }
       }
     }
   },
-  "books_full": {
-    "grok_n4_h1": {
-      "name": "grok_n4_h1",
-      "book_pct": -3.786,
-      "final_equity": 9621.38,
-      "win_rate": 0.3902,
-      "dollar_days": 0.2308,
-      "starts_yes": "6/26",
-      "start_n": 26,
-      "start_green": 6,
-      "n_trades": 86,
-      "n_skips": 69
+  "touch": {
+    "union_hot_n4_h1": {
+      "veto_bear": {
+        "days_changed": 0,
+        "n_days": 26,
+        "overlap_days": 0,
+        "n_vetoed": 0,
+        "n_added": 0,
+        "n_confirmed": 0
+      },
+      "require_bull": {
+        "days_changed": 26,
+        "n_days": 26,
+        "overlap_days": 0,
+        "n_vetoed": 104,
+        "n_added": 0,
+        "n_confirmed": 0
+      },
+      "add_named": {
+        "days_changed": 16,
+        "n_days": 26,
+        "overlap_days": 0,
+        "n_vetoed": 0,
+        "n_added": 30,
+        "n_confirmed": 0
+      },
+      "full": {
+        "days_changed": 16,
+        "n_days": 26,
+        "overlap_days": 0,
+        "n_vetoed": 0,
+        "n_added": 30,
+        "n_confirmed": 0
+      }
     },
-    "grok_n4_h2": {
-      "name": "grok_n4_h2",
-      "book_pct": 0.545,
-      "final_equity": 10054.46,
-      "win_rate": 0.4615,
-      "dollar_days": 0.3462,
-      "starts_yes": null,
-      "start_n": 0,
-      "start_green": 0,
-      "n_trades": 56,
-      "n_skips": 109
-    },
-    "grok_n8_h1": {
-      "name": "grok_n8_h1",
-      "book_pct": -4.299,
-      "final_equity": 9570.07,
-      "win_rate": 0.3735,
-      "dollar_days": 0.1923,
-      "starts_yes": null,
-      "start_n": 0,
-      "start_green": 0,
-      "n_trades": 174,
-      "n_skips": 137
-    },
-    "grok_n8_h2": {
-      "name": "grok_n8_h2",
-      "book_pct": -3.526,
-      "final_equity": 9647.35,
-      "win_rate": 0.3509,
-      "dollar_days": 0.3077,
-      "starts_yes": null,
-      "start_n": 0,
-      "start_green": 0,
-      "n_trades": 122,
-      "n_skips": 225
+    "flatten_h5": {
+      "veto_bear": {
+        "days_changed": 1,
+        "n_days": 26,
+        "overlap_days": 1,
+        "n_vetoed": 1,
+        "n_added": 0,
+        "n_confirmed": 0
+      },
+      "require_bull": {
+        "days_changed": 26,
+        "n_days": 26,
+        "overlap_days": 1,
+        "n_vetoed": 156,
+        "n_added": 0,
+        "n_confirmed": 0
+      },
+      "add_named": {
+        "days_changed": 16,
+        "n_days": 26,
+        "overlap_days": 1,
+        "n_vetoed": 0,
+        "n_added": 33,
+        "n_confirmed": 0
+      },
+      "full": {
+        "days_changed": 16,
+        "n_days": 26,
+        "overlap_days": 1,
+        "n_vetoed": 1,
+        "n_added": 33,
+        "n_confirmed": 0
+      }
     }
   },
   "examples": {
     "hits": [
       {
-        "title": "Three Infrastructure Layers Are Converging Into a Single Investable Thesis for Tokenized Finance",
-        "ticker": "SECZ",
-        "fill": "2026-09-03",
-        "side": "bullish",
-        "theme": "crypto_sec",
-        "open": 6.53,
-        "close": 7.1,
-        "same_day_pct": 8.729,
-        "next_close_pct": 13.629,
+        "title": "Nasdaq, Dow, S&P 500 Futures Rise After 4-Day Market Slide As CPI Looms Large: ORCL, ADBE, MU, TSLA, RKLB, IBRX, HOOD, GME In Focus",
+        "ticker": "ORCL",
+        "fill": "2026-09-11",
+        "side": "bearish",
+        "theme": "named",
+        "open": 164.43,
+        "close": 150.28,
+        "same_day_pct": -8.605,
+        "next_close_pct": null,
         "same_day_hit": true,
-        "next_close_hit": true,
-        "source": "finviz"
+        "next_close_hit": null,
+        "source": "parsed"
       },
       {
-        "title": "Robinhood CEO Calls On U.S. To Approve Tokenized Stocks",
-        "ticker": "HOOD",
-        "fill": "2026-08-19",
-        "side": "bullish",
-        "theme": "crypto_sec",
-        "open": 92.9,
-        "close": 95.77,
-        "same_day_pct": 3.089,
-        "next_close_pct": 2.368,
+        "title": "Stock Market Today: Futures Little Changed After Major Indexes Snap 3-Day Skids; Oil Prices, Treasury Yields, Bitcoin Rise; Walmart Stock Drops - Yahoo Finance",
+        "ticker": "ABTC",
+        "fill": "2026-08-21",
+        "side": "bearish",
+        "theme": "named",
+        "open": 8.66,
+        "close": 7.93,
+        "same_day_pct": -8.43,
+        "next_close_pct": -0.231,
         "same_day_hit": true,
         "next_close_hit": true,
         "source": "parsed"
       },
       {
-        "title": "Coinbase Debuts Tokenized Stocks On Base Network",
-        "ticker": "COIN",
-        "fill": "2026-08-26",
-        "side": "bullish",
-        "theme": "crypto_sec",
-        "open": 181.65,
-        "close": 181.78,
-        "same_day_pct": 0.072,
-        "next_close_pct": 4.993,
+        "title": "Mortgage and refinance interest rates today, Thursday, August 27, 2026: Fixed rates rise, 5/1 ARM falls",
+        "ticker": "ARM",
+        "fill": "2026-08-28",
+        "side": "bearish",
+        "theme": "named",
+        "open": 251.1,
+        "close": 239.05,
+        "same_day_pct": -4.799,
+        "next_close_pct": -3.66,
         "same_day_hit": true,
         "next_close_hit": true,
         "source": "parsed"
@@ -384,46 +602,46 @@
     ],
     "misses": [
       {
-        "title": "SEC proposes Regulation Crypto Assets",
-        "ticker": "AIXC",
-        "fill": "2026-08-20",
+        "title": "Bitcoin Rally Tops $79,000. Crypto Shorts, ETF Flows Soar. CFTC Explores Crypto Rules.",
+        "ticker": "ABTC",
+        "fill": "2026-08-21",
         "side": "bullish",
         "theme": "crypto_sec",
-        "open": 1.46,
-        "close": 1.175,
-        "same_day_pct": -19.521,
-        "next_close_pct": -23.288,
+        "open": 8.66,
+        "close": 7.93,
+        "same_day_pct": -8.43,
+        "next_close_pct": -0.231,
         "same_day_hit": false,
         "next_close_hit": false,
-        "source": "events"
+        "source": "parsed"
       },
       {
-        "title": "George Santos Gets Kalshi's First-Ever Lifetime Ban",
-        "ticker": "ANTA",
-        "fill": "2026-09-01",
-        "side": "bearish",
+        "title": "Disney sues FCC over Trump\u2019s broadcast-license threat",
+        "ticker": "BBGI",
+        "fill": "2026-08-19",
+        "side": "bullish",
         "theme": "named",
-        "open": 3.4,
-        "close": 3.9,
-        "same_day_pct": 14.706,
-        "next_close_pct": 9.853,
+        "open": 21.73,
+        "close": 20.18,
+        "same_day_pct": -7.133,
+        "next_close_pct": -6.857,
         "same_day_hit": false,
         "next_close_hit": false,
-        "source": "finviz"
+        "source": "actions"
       },
       {
-        "title": "StreetWatch: As Washington Puts a 100 Percent Tariff on Foreign Drones, the Magnet Inside Them Comes Into Focus",
-        "ticker": "EMAT",
+        "title": "Stock Market Today: Tech Futures Sink As Treasury Yields Jump; Nvidia, Micron, Sandisk All Tumble (Live Coverage)",
+        "ticker": "SNDK",
         "fill": "2026-08-18",
-        "side": "bearish",
-        "theme": "tariff",
-        "open": 2.745,
-        "close": 3.12,
-        "same_day_pct": 13.661,
-        "next_close_pct": 3.825,
+        "side": "bullish",
+        "theme": "named",
+        "open": 1677.54,
+        "close": 1625.78,
+        "same_day_pct": -3.085,
+        "next_close_pct": -6.478,
         "same_day_hit": false,
         "next_close_hit": false,
-        "source": "finviz"
+        "source": "parsed"
       }
     ]
   }
