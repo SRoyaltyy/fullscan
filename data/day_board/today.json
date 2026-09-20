@@ -1,11 +1,11 @@
 {
   "date": "2026-09-20",
-  "generated_at": "2026-09-20T15:04:10.121961-04:00",
+  "generated_at": "2026-09-20T15:04:28.778287-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 2,
-    "partial": 2,
+    "ok": 4,
+    "partial": 0,
     "fail": 4,
     "n": 8
   },
@@ -46,7 +46,7 @@
   "sell_1d": [
     {
       "ticker": "FLNC",
-      "score": -0.4348691569535859
+      "score": -0.4348667126708305
     },
     {
       "ticker": "METC",
@@ -54,7 +54,7 @@
     },
     {
       "ticker": "STLA",
-      "score": -0.5029499604164206
+      "score": -0.5029492537056993
     },
     {
       "ticker": "REAX",
@@ -62,7 +62,7 @@
     },
     {
       "ticker": "KEP",
-      "score": -0.08766337956328289
+      "score": -0.08766199316636318
     },
     {
       "ticker": "GENI",
@@ -74,45 +74,13 @@
     },
     {
       "ticker": "WU",
-      "score": -0.3615882040007791
+      "score": -0.36158716748564584
     }
   ],
-  "flatten": {
-    "said": "0 priced buys \u00b7 cash $102,571.54 \u00b7 morning S missing",
-    "bullets": [
-      "0 priced buys",
-      "cash $102,571.54",
-      "morning S missing"
-    ]
-  },
+  "flatten": {},
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz",
-      "title": "Finviz universe export",
-      "date": "2026-09-20",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-20T15:03:02.860026-04:00",
-      "files": [
-        {
-          "path": "data/exports/finviz_2026-09-20.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11237962,
-          "preview": "11640 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11434850,
-          "preview": "11655 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-        }
-      ],
-      "preview": "11640 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11655 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-    },
     {
       "key": "stock_book",
       "title": "Stock book + green",
@@ -399,6 +367,59 @@
         }
       ],
       "preview": "2654 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, WWW, CFFN, WDS, CXW \u00b7 2654 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, SFL, DSGX, ILMN, CDNA"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-20",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-20T15:04:28.108973-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-20_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1449523,
+          "preview": "1d BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU"
+        },
+        {
+          "path": "data/stock_book/2026-09-20_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-20_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2577,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-20_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12409,
+          "preview": "2026-09-20 BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12409,
+          "preview": "2026-09-20 BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU"
+        },
+        {
+          "path": "01_daily/2026-09-20_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 79500,
+          "preview": "# Stock book \u2014 2026-09-20\n_Generated 2026-09-20T15:04:21.379930-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-20 BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU \u00b7 2026-09-20 BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU \u00b7 # Stock book \u2014 2026-09-20\n_Generated 2026-09-20T15:04:21.379930-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

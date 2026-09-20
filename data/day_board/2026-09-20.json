@@ -1,6 +1,6 @@
 {
   "date": "2026-09-20",
-  "generated_at": "2026-09-20T15:04:10.121961-04:00",
+  "generated_at": "2026-09-20T15:04:28.778287-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -10,8 +10,8 @@
     "MISSING News judge MD `01_daily/news/2026-09-20_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 2,
-    "partial": 2,
+    "ok": 4,
+    "partial": 0,
     "fail": 4,
     "n": 8
   },
@@ -502,11 +502,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -595,27 +595,27 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-20_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "horizons=5 names=216",
+          "size": 1449523
         },
         {
           "key": "book_md",
           "name": "Stock book MD",
           "path": "01_daily/2026-09-20_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 78513
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-09-20_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 585
         },
         {
           "key": "paper",
@@ -631,8 +631,8 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-09-20 not in dashboard dates (last=2026-09-17)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-20)",
           "size": 6300795
         }
       ],
@@ -645,9 +645,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -657,17 +657,17 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-20_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "horizons=5 names=216",
+          "size": 1449523
         },
         {
           "key": "dash_html",
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-09-20 not in dashboard dates (last=2026-09-17)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-20)",
           "size": 6300795
         },
         {
@@ -731,7 +731,7 @@
     "sell_1d": [
       {
         "ticker": "FLNC",
-        "score": -0.4348691569535859
+        "score": -0.4348667126708305
       },
       {
         "ticker": "METC",
@@ -739,7 +739,7 @@
       },
       {
         "ticker": "STLA",
-        "score": -0.5029499604164206
+        "score": -0.5029492537056993
       },
       {
         "ticker": "REAX",
@@ -747,7 +747,7 @@
       },
       {
         "ticker": "KEP",
-        "score": -0.08766337956328289
+        "score": -0.08766199316636318
       },
       {
         "ticker": "GENI",
@@ -759,17 +759,10 @@
       },
       {
         "ticker": "WU",
-        "score": -0.3615882040007791
+        "score": -0.36158716748564584
       }
     ],
-    "flatten": {
-      "said": "0 priced buys \u00b7 cash $102,571.54 \u00b7 morning S missing",
-      "bullets": [
-        "0 priced buys",
-        "cash $102,571.54",
-        "morning S missing"
-      ]
-    },
+    "flatten": {},
     "general": {},
     "sectors": {},
     "news": {},
@@ -1229,6 +1222,59 @@
         }
       ],
       "preview": "2654 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, WWW, CFFN, WDS, CXW \u00b7 2654 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, SFL, DSGX, ILMN, CDNA"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-20",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-20T15:04:28.108973-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-20_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1449523,
+          "preview": "1d BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU"
+        },
+        {
+          "path": "data/stock_book/2026-09-20_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-20_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2577,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-20_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12409,
+          "preview": "2026-09-20 BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12409,
+          "preview": "2026-09-20 BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU"
+        },
+        {
+          "path": "01_daily/2026-09-20_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 79500,
+          "preview": "# Stock book \u2014 2026-09-20\n_Generated 2026-09-20T15:04:21.379930-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-20 BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU \u00b7 2026-09-20 BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU \u00b7 # Stock book \u2014 2026-09-20\n_Generated 2026-09-20T15:04:21.379930-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {

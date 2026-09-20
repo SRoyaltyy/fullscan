@@ -1,6 +1,6 @@
 {
   "date": "2026-09-20",
-  "generated_at": "2026-09-20T15:03:02.245088-04:00",
+  "generated_at": "2026-09-20T15:04:17.443486-04:00",
   "inputs": [
     {
       "name": "finviz_export",
@@ -26,8 +26,8 @@
     {
       "name": "news_actions",
       "family": "news",
-      "status": "missing",
-      "n": 0,
+      "status": "degraded",
+      "n": 2,
       "detail": ""
     },
     {
