@@ -2562,7 +2562,7 @@ def run(from_date: str = START, to_date: str | None = None,
             # yahoo walk used to die on junk tickers.
             ps.ensure_through(end, tickers=sorted(held) or None)
             tl.reset_price_caches()
-        except Exception as e:
+        except (Exception, SystemExit) as e:
             print(f"[factor-mine] price ensure skipped: {e}", flush=True)
     panel = (panel if panel is not None
              else load_or_build_panel(from_date, to_date, rebuild=rebuild_panel))
@@ -2578,7 +2578,7 @@ def run(from_date: str = START, to_date: str | None = None,
                 ps.ensure_through(end or panel.get("to_date"), tickers=need)
                 tl.reset_price_caches()
             panel = refresh_panel_marks(panel)
-        except Exception as e:
+        except (Exception, SystemExit) as e:
             print(f"[factor-mine] price ensure skipped: {e}", flush=True)
     if persist_panel:
         PANEL_PATH.parent.mkdir(parents=True, exist_ok=True)
