@@ -4,8 +4,20 @@
     "1d": {
       "buy": [
         {
+          "ticker": "VICR",
+          "score": 0.8457966679510307
+        },
+        {
           "ticker": "RBRK",
           "score": 0.4387479515826178
+        },
+        {
+          "ticker": "ECO",
+          "score": 0.7787755181767473
+        },
+        {
+          "ticker": "DELL",
+          "score": 0.31301341153751355
         },
         {
           "ticker": "FIVN",
@@ -16,52 +28,36 @@
           "score": 0.7976664965389122
         },
         {
+          "ticker": "GNRC",
+          "score": 0.6387805533179371
+        },
+        {
           "ticker": "ILMN",
           "score": 0.4873263812643802
         },
         {
-          "ticker": "ZS",
-          "score": 0.6053842164876406
+          "ticker": "WAY",
+          "score": 0.7595831760161345
         },
         {
-          "ticker": "ARQT",
-          "score": 0.7785577314708076
+          "ticker": "XMTR",
+          "score": 0.7480238010689635
         },
         {
-          "ticker": "CROX",
-          "score": 0.7403520471795884
+          "ticker": "BRKR",
+          "score": 0.7999654436410955
         },
         {
-          "ticker": "TEM",
-          "score": 0.5388188624429483
+          "ticker": "SFL",
+          "score": 0.7304810714418355
         },
         {
-          "ticker": "SONO",
-          "score": 0.7685592103211827
-        },
-        {
-          "ticker": "MGNI",
-          "score": 0.7174177888342135
-        },
-        {
-          "ticker": "LIND",
-          "score": 0.6752022278081191
+          "ticker": "GLBE",
+          "score": 0.7024277081149934
         },
         {
           "ticker": "M",
-          "score": 0.6700118668730075
-        },
-        {
-          "ticker": "CARG",
-          "score": 0.6827514639655334
-        },
-        {
-          "ticker": "ZD",
-          "score": 0.6515017414223465
-        },
-        {
-          "ticker": "RUSHA",
-          "score": 0.6177370820559243
+          "score": 0.7200118668730076
         }
       ],
       "sell": [
@@ -130,8 +126,20 @@
     "3d": {
       "buy": [
         {
+          "ticker": "VICR",
+          "score": 0.8919520762766631
+        },
+        {
           "ticker": "RBRK",
           "score": 0.4897993599082502
+        },
+        {
+          "ticker": "ECO",
+          "score": 0.8311329805644729
+        },
+        {
+          "ticker": "DELL",
+          "score": 0.3591688198631459
         },
         {
           "ticker": "FIVN",
@@ -142,52 +150,36 @@
           "score": 0.8522264599428306
         },
         {
+          "ticker": "GNRC",
+          "score": 0.6813883905867244
+        },
+        {
           "ticker": "ILMN",
           "score": 0.543063209322078
         },
         {
-          "ticker": "ZS",
-          "score": 0.6552625802173029
+          "ticker": "WAY",
+          "score": 0.8221756036295229
         },
         {
-          "ticker": "ARQT",
-          "score": 0.8347197122210577
+          "ticker": "XMTR",
+          "score": 0.7959001087940376
         },
         {
-          "ticker": "CROX",
-          "score": 0.7780735224399864
+          "ticker": "BRKR",
+          "score": 0.8554593371478352
         },
         {
-          "ticker": "TEM",
-          "score": 0.5905809098529189
+          "ticker": "SFL",
+          "score": 0.7826906181086883
         },
         {
-          "ticker": "SONO",
-          "score": 0.8142085094085383
-        },
-        {
-          "ticker": "MGNI",
-          "score": 0.7662818502841435
-        },
-        {
-          "ticker": "LIND",
-          "score": 0.7103880923043617
+          "ticker": "GLBE",
+          "score": 0.7468461311202677
         },
         {
           "ticker": "M",
-          "score": 0.7075078302769258
-        },
-        {
-          "ticker": "CARG",
-          "score": 0.7313798491513057
-        },
-        {
-          "ticker": "ZD",
-          "score": 0.7045651485087179
-        },
-        {
-          "ticker": "RUSHA",
-          "score": 0.657474497884853
+          "score": 0.7575078302769258
         }
       ],
       "sell": [
@@ -256,8 +248,20 @@
     "1w": {
       "buy": [
         {
+          "ticker": "VICR",
+          "score": 0.8952500350388419
+        },
+        {
           "ticker": "RBRK",
           "score": 0.5117973186704291
+        },
+        {
+          "ticker": "ECO",
+          "score": 0.8645756278113623
+        },
+        {
+          "ticker": "DELL",
+          "score": 0.3624667786253248
         },
         {
           "ticker": "FIVN",
@@ -268,52 +272,36 @@
           "score": 0.8584263539841261
         },
         {
+          "ticker": "GNRC",
+          "score": 0.6816122215604545
+        },
+        {
           "ticker": "ILMN",
           "score": 0.5505671394039535
         },
         {
-          "ticker": "ZS",
-          "score": 0.6760892781351607
+          "ticker": "WAY",
+          "score": 0.8607357334892438
         },
         {
-          "ticker": "ARQT",
-          "score": 0.8408552866552319
+          "ticker": "XMTR",
+          "score": 0.8141448467156238
         },
         {
-          "ticker": "CROX",
-          "score": 0.7758541724095218
+          "ticker": "BRKR",
+          "score": 0.8790937999542316
         },
         {
-          "ticker": "TEM",
-          "score": 0.5953818458972404
+          "ticker": "SFL",
+          "score": 0.8166440460414774
         },
         {
-          "ticker": "SONO",
-          "score": 0.816668675005243
-        },
-        {
-          "ticker": "MGNI",
-          "score": 0.767737115294918
-        },
-        {
-          "ticker": "LIND",
-          "score": 0.7037960203877238
+          "ticker": "GLBE",
+          "score": 0.7649428586759313
         },
         {
           "ticker": "M",
-          "score": 0.7051757243182215
-        },
-        {
-          "ticker": "CARG",
-          "score": 0.7463737991030921
-        },
-        {
-          "ticker": "ZD",
-          "score": 0.7243720863377128
-        },
-        {
-          "ticker": "RUSHA",
-          "score": 0.669410201634558
+          "score": 0.7551757243182216
         }
       ],
       "sell": [
@@ -382,8 +370,20 @@
     "2w": {
       "buy": [
         {
+          "ticker": "VICR",
+          "score": 0.8836223210018705
+        },
+        {
           "ticker": "RBRK",
           "score": 0.5178496046334576
+        },
+        {
+          "ticker": "ECO",
+          "score": 0.8821382536542164
+        },
+        {
+          "ticker": "DELL",
+          "score": 0.3508390645883534
         },
         {
           "ticker": "FIVN",
@@ -394,52 +394,36 @@
           "score": 0.8514343649063065
         },
         {
+          "ticker": "GNRC",
+          "score": 0.6686441694150693
+        },
+        {
           "ticker": "ILMN",
           "score": 0.5439250480817935
         },
         {
-          "ticker": "ZS",
-          "score": 0.681749954648983
+          "ticker": "WAY",
+          "score": 0.8834158419449292
         },
         {
-          "ticker": "ARQT",
-          "score": 0.8349527490106738
+          "ticker": "XMTR",
+          "score": 0.8193314725584777
         },
         {
-          "ticker": "CROX",
-          "score": 0.7604429392599419
+          "ticker": "BRKR",
+          "score": 0.8875622413565927
         },
         {
-          "ticker": "TEM",
-          "score": 0.5869908988224468
+          "ticker": "SFL",
+          "score": 0.8339378011751164
         },
         {
-          "ticker": "SONO",
-          "score": 0.8049828191979118
-        },
-        {
-          "ticker": "MGNI",
-          "score": 0.7585294012579467
-        },
-        {
-          "ticker": "LIND",
-          "score": 0.6881519540240981
+          "ticker": "GLBE",
+          "score": 0.7678735648275594
         },
         {
           "ticker": "M",
-          "score": 0.6896517352404019
-        },
-        {
-          "ticker": "CARG",
-          "score": 0.753145405909678
-        },
-        {
-          "ticker": "ZD",
-          "score": 0.7324960451189622
-        },
-        {
-          "ticker": "RUSHA",
-          "score": 0.6712739109372754
+          "score": 0.739651735240402
         }
       ],
       "sell": [
@@ -508,8 +492,20 @@
     "1m": {
       "buy": [
         {
+          "ticker": "VICR",
+          "score": 0.9222802797640495
+        },
+        {
           "ticker": "RBRK",
           "score": 0.5575275633956365
+        },
+        {
+          "ticker": "ECO",
+          "score": 0.9208849009011058
+        },
+        {
+          "ticker": "DELL",
+          "score": 0.3894970233505322
         },
         {
           "ticker": "FIVN",
@@ -520,52 +516,36 @@
           "score": 0.8929942589476021
         },
         {
+          "ticker": "GNRC",
+          "score": 0.7042280003887993
+        },
+        {
           "ticker": "ILMN",
           "score": 0.586788978163669
         },
         {
-          "ticker": "ZS",
-          "score": 0.7202566525668408
+          "ticker": "WAY",
+          "score": 0.92727997180465
         },
         {
-          "ticker": "ARQT",
-          "score": 0.8764483234448481
+          "ticker": "XMTR",
+          "score": 0.8552562104800641
         },
         {
-          "ticker": "CROX",
-          "score": 0.7935835892294774
+          "ticker": "BRKR",
+          "score": 0.9288767041629891
         },
         {
-          "ticker": "TEM",
-          "score": 0.6271518348667686
+          "ticker": "SFL",
+          "score": 0.8731952291079055
         },
         {
-          "ticker": "SONO",
-          "score": 0.8428029847946166
-        },
-        {
-          "ticker": "MGNI",
-          "score": 0.7953446662687209
-        },
-        {
-          "ticker": "LIND",
-          "score": 0.7169198821074603
+          "ticker": "GLBE",
+          "score": 0.8036502923832232
         },
         {
           "ticker": "M",
-          "score": 0.7226796292816975
-        },
-        {
-          "ticker": "CARG",
-          "score": 0.7858193558614643
-        },
-        {
-          "ticker": "ZD",
-          "score": 0.769982982947957
-        },
-        {
-          "ticker": "RUSHA",
-          "score": 0.7008896146869805
+          "score": 0.7726796292816975
         }
       ],
       "sell": [
@@ -633,21 +613,20 @@
     }
   },
   "buy_1d": [
+    "VICR",
     "RBRK",
+    "ECO",
+    "DELL",
     "FIVN",
     "SDGR",
+    "GNRC",
     "ILMN",
-    "ZS",
-    "ARQT",
-    "CROX",
-    "TEM",
-    "SONO",
-    "MGNI",
-    "LIND",
-    "M",
-    "CARG",
-    "ZD",
-    "RUSHA"
+    "WAY",
+    "XMTR",
+    "BRKR",
+    "SFL",
+    "GLBE",
+    "M"
   ],
   "sell_1d": [
     "SOC",

@@ -1,18 +1,30 @@
 {
   "date": "2026-09-18",
-  "generated_at": "2026-09-18T18:47:25.298016-04:00",
+  "generated_at": "2026-09-19T23:19:18.232925-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 7,
-    "partial": 0,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
   "buy_1d": [
     {
+      "ticker": "VICR",
+      "score": 0.8457966679510307
+    },
+    {
       "ticker": "RBRK",
       "score": 0.4387479515826178
+    },
+    {
+      "ticker": "ECO",
+      "score": 0.7787755181767473
+    },
+    {
+      "ticker": "DELL",
+      "score": 0.31301341153751355
     },
     {
       "ticker": "FIVN",
@@ -23,52 +35,36 @@
       "score": 0.7976664965389122
     },
     {
+      "ticker": "GNRC",
+      "score": 0.6387805533179371
+    },
+    {
       "ticker": "ILMN",
       "score": 0.4873263812643802
     },
     {
-      "ticker": "ZS",
-      "score": 0.6053842164876406
+      "ticker": "WAY",
+      "score": 0.7595831760161345
     },
     {
-      "ticker": "ARQT",
-      "score": 0.7785577314708076
+      "ticker": "XMTR",
+      "score": 0.7480238010689635
     },
     {
-      "ticker": "CROX",
-      "score": 0.7403520471795884
+      "ticker": "BRKR",
+      "score": 0.7999654436410955
     },
     {
-      "ticker": "TEM",
-      "score": 0.5388188624429483
+      "ticker": "SFL",
+      "score": 0.7304810714418355
     },
     {
-      "ticker": "SONO",
-      "score": 0.7685592103211827
-    },
-    {
-      "ticker": "MGNI",
-      "score": 0.7174177888342135
-    },
-    {
-      "ticker": "LIND",
-      "score": 0.6752022278081191
+      "ticker": "GLBE",
+      "score": 0.7024277081149934
     },
     {
       "ticker": "M",
-      "score": 0.6700118668730075
-    },
-    {
-      "ticker": "CARG",
-      "score": 0.6827514639655334
-    },
-    {
-      "ticker": "ZD",
-      "score": 0.6515017414223465
-    },
-    {
-      "ticker": "RUSHA",
-      "score": 0.6177370820559243
+      "score": 0.7200118668730076
     }
   ],
   "sell_1d": [
@@ -1178,6 +1174,45 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-18\n**Generated:** 2026-09-18T16:34:48.382211-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks ended mixed as tech gains countered a 5% 10-year yield and $7 trillion options expiration amid Middle East-driven oil concerns\n**Prior close:** SPX +0.08%  Nasdaq +0.20%  Dow -0.10%\n**SPX:** +0.08%  **Nasdaq:** +0.20%  **Dow:** -0.10%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** AVGO, XENE, COIN, NFLX, WFC, AZO, CTAS, GIS\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** AZO, CTAS, GIS\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-21\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-18",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-19T01:46:40.483743-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-18_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 88555,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-18_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11958,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-18\n_Generated 2026-09-19T01:46:40.123481-04:00 \u00b7 export=data/exports/finviz_2026-09-18.csv \u00b7 ticker digests=5888 \u00b7 high-signal=2344_"
+        },
+        {
+          "path": "data/exports/finviz_2026-09-18.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11434850,
+          "preview": "11655 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11434850,
+          "preview": "11655 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-18\n_Generated 2026-09-19T01:46:40.123481-04:00 \u00b7 export=data/exports/finviz_2026-09-18.csv \u00b7 ticker digests=5888 \u00b7 high-signal=2344_ \u00b7 11655 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 11655 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "source": "publish_live_boards"

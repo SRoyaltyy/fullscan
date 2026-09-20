@@ -1,18 +1,30 @@
 {
   "date": "2026-09-18",
-  "generated_at": "2026-09-19T01:46:40.836991-04:00",
+  "generated_at": "2026-09-19T23:19:18.232925-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 7,
-    "partial": 0,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
   "buy_1d": [
     {
+      "ticker": "VICR",
+      "score": 0.8457966679510307
+    },
+    {
       "ticker": "RBRK",
       "score": 0.4387479515826178
+    },
+    {
+      "ticker": "ECO",
+      "score": 0.7787755181767473
+    },
+    {
+      "ticker": "DELL",
+      "score": 0.31301341153751355
     },
     {
       "ticker": "FIVN",
@@ -23,52 +35,36 @@
       "score": 0.7976664965389122
     },
     {
+      "ticker": "GNRC",
+      "score": 0.6387805533179371
+    },
+    {
       "ticker": "ILMN",
       "score": 0.4873263812643802
     },
     {
-      "ticker": "ZS",
-      "score": 0.6053842164876406
+      "ticker": "WAY",
+      "score": 0.7595831760161345
     },
     {
-      "ticker": "ARQT",
-      "score": 0.7785577314708076
+      "ticker": "XMTR",
+      "score": 0.7480238010689635
     },
     {
-      "ticker": "CROX",
-      "score": 0.7403520471795884
+      "ticker": "BRKR",
+      "score": 0.7999654436410955
     },
     {
-      "ticker": "TEM",
-      "score": 0.5388188624429483
+      "ticker": "SFL",
+      "score": 0.7304810714418355
     },
     {
-      "ticker": "SONO",
-      "score": 0.7685592103211827
-    },
-    {
-      "ticker": "MGNI",
-      "score": 0.7174177888342135
-    },
-    {
-      "ticker": "LIND",
-      "score": 0.6752022278081191
+      "ticker": "GLBE",
+      "score": 0.7024277081149934
     },
     {
       "ticker": "M",
-      "score": 0.6700118668730075
-    },
-    {
-      "ticker": "CARG",
-      "score": 0.6827514639655334
-    },
-    {
-      "ticker": "ZD",
-      "score": 0.6515017414223465
-    },
-    {
-      "ticker": "RUSHA",
-      "score": 0.6177370820559243
+      "score": 0.7200118668730076
     }
   ],
   "sell_1d": [

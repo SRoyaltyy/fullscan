@@ -1,12 +1,12 @@
 {
   "date": "2026-09-18",
-  "generated_at": "2026-09-18T18:47:18.133415-04:00",
+  "generated_at": "2026-09-19T23:19:12.608783-04:00",
   "inputs": [
     {
       "name": "finviz_export",
       "family": "join",
       "status": "ok",
-      "n": 11651,
+      "n": 11655,
       "detail": "finviz_2026-09-18.csv"
     },
     {
