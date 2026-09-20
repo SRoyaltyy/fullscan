@@ -302,6 +302,85 @@ def test_mapper_rejects_headline_noise_tickers() -> None:
     )
 
 
+def test_wrap_is_not_a_catalyst() -> None:
+    assert bt.is_wrap("Stock Market Today: Tech Futures Sink As Treasury Yields Jump")
+    assert bt.is_wrap("Nasdaq, Dow, S&P 500 Futures Rise After 4-Day Market Slide As CPI Looms Large: ORCL In Focus")
+    assert not bt.is_wrap("Coinbase Debuts Tokenized Stocks On Base Network")
+    assert not bt.is_catalyst(
+        "Stock Market Today: Nvidia, Micron, Sandisk All Tumble")
+    assert bt.is_catalyst("SEC Greenlights Tokenized Stocks After Clarity Act Fails in Senate")
+
+
+def test_catalyst_mapper_drops_noun_collisions() -> None:
+    profiles = {
+        "AAT": {
+            "ticker": "AAT",
+            "company": "American Assets Trust Inc",
+            "sector": "Real Estate",
+            "industry": "REIT - Diversified",
+            "text": "american assets trust inc reit",
+            "export": "2026-09-12",
+        },
+        "BBGI": {
+            "ticker": "BBGI",
+            "company": "Beasley Broadcast Group Inc",
+            "sector": "Communication Services",
+            "industry": "Broadcasting",
+            "text": "beasley broadcast group inc broadcasting",
+            "export": "2026-09-12",
+        },
+        "DIS": {
+            "ticker": "DIS",
+            "company": "Walt Disney Co",
+            "sector": "Communication Services",
+            "industry": "Entertainment",
+            "text": "walt disney co communication entertainment",
+            "export": "2026-09-12",
+        },
+        "GHG": {
+            "ticker": "GHG",
+            "company": "GreenTree Hospitality Group Ltd",
+            "sector": "Consumer Cyclical",
+            "industry": "Lodging",
+            "text": "greentree hospitality lodging",
+            "export": "2026-09-12",
+        },
+        "COIN": {
+            "ticker": "COIN",
+            "company": "Coinbase Global Inc",
+            "sector": "Financial",
+            "industry": "Capital Markets",
+            "text": "coinbase global inc financial",
+            "export": "2026-09-12",
+        },
+        "SMX": {
+            "ticker": "SMX",
+            "company": "SMX (Security Matters) Plc",
+            "sector": "Industrials",
+            "industry": "Specialty Business Services",
+            "text": "smx security matters plc",
+            "export": "2026-09-12",
+        },
+    }
+    assert "AAT" not in {h["ticker"] for h in bt.map_tickers(
+        {"title": "SEC proposes Regulation Crypto Assets", "digest": ""}, profiles)}
+    assert "BBGI" not in {h["ticker"] for h in bt.map_tickers(
+        {"title": "Disney sues FCC over Trump’s broadcast-license threat",
+         "digest": ""}, profiles)}
+    assert {h["ticker"] for h in bt.map_tickers(
+        {"title": "Disney sues FCC over Trump’s broadcast-license threat",
+         "digest": ""}, profiles)} == {"DIS"}
+    assert "GHG" not in {h["ticker"] for h in bt.map_tickers(
+        {"title": "EPA finalizes repeal of 2024 power-plant GHG standards",
+         "digest": ""}, profiles)}
+    assert {h["ticker"] for h in bt.map_tickers(
+        {"title": "Coinbase Debuts Tokenized Stocks On Base Network", "digest": ""},
+        profiles)} == {"COIN"}
+    assert "SMX" not in {h["ticker"] for h in bt.map_tickers(
+        {"title": "The dollar’s rally matters — but it still won’t help Fed’s Warsh",
+         "digest": ""}, profiles)}
+
+
 def test_overlay_rewrites_existing_list() -> None:
     base = ["AAA", "BBB", "CCC", "DDD"]
     news = {"BBB": -3, "CCC": 3, "EEE": 5, "FFF": 2}
@@ -353,6 +432,8 @@ def main() -> None:
     test_mapper_exact_company_and_ticker()
     test_mapper_does_not_assign_random_software_on_epa()
     test_mapper_rejects_headline_noise_tickers()
+    test_wrap_is_not_a_catalyst()
+    test_catalyst_mapper_drops_noun_collisions()
     test_overlay_rewrites_existing_list()
     test_harvest_skips_standtest_and_13q()
     from tempfile import TemporaryDirectory

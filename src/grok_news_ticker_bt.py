@@ -1,10 +1,10 @@
-"""Stage 2 — leak-safe Grok-news overlay on existing strategy books.
+"""Stage 2 — leak-safe Grok-news standalone catalyst book + overlay.
 
 What this answers:
   1. Every Grok-pipeline article knowable before each trading day
   2. Which listed stocks that article names EXACTLY
-  3. If those signals overlay ``union_hot_n4_h1`` / ``flatten_h5``,
-     how the cash book yields vs the same-panel base
+  3. Standalone: long those policy/gov names (they are not on hot4)
+  4. Overlay: same signals on ``union_hot_n4_h1`` / ``flatten_h5``
 
 Reads ONLY:
   * frozen ``data/grok_automations/*.json``
@@ -208,6 +208,7 @@ _TICKER_DENY = frozenset({
     "EIA", "OPEC", "ECB", "BOE", "IMF", "NATO", "IRS", "LLC", "INC",
     "CORP", "LTD", "PLC", "ETF", "SPX", "NDX", "DXY", "VIX", "Q",
     "AM", "PM", "ET", "PT", "CT", "MT", "BMO", "AMC",
+    "GHG", "BTC", "ARM", "TACO", "NMS", "NDAQ",
 })
 _TICKER_IN_TEXT = re.compile(r"(?:[$()]|\b)([A-Z]{1,5})(?:\b|[)$])")
 _NAME_STOP = {
@@ -228,7 +229,18 @@ _NAME_STOP = {
     "interest", "dividend", "premium", "treasury", "policy", "outlook",
     "protection", "regional", "florida", "solutions", "support", "action",
     "associated", "public", "holding", "controls", "practice", "advisor",
+    "assets", "broadcast", "matters", "exemption", "innovation", "nasdaq",
+    "greenhouse", "security", "physical",
 }
+WRAP_TITLE = re.compile(
+    r"(?i)("
+    r"stock market today|"
+    r"\bin focus\b|"
+    r"live coverage|"
+    r"futures (rise|advance|sink|mixed|drop|end)|"
+    r"^(nasdaq|dow|s&p 500).{0,40}(dow|nasdaq|s&p)"
+    r")"
+)
 _ETF_OR_SHELL = re.compile(
     r"(?i)(exchange traded|etn\b|\betf\b|shell compan|closed-end fund)"
 )
@@ -320,6 +332,21 @@ def is_hormuz_carry(title: str, *, status: str = "") -> bool:
     if str(status).lower() == "carried":
         return True
     return not HORMUZ_SHOCK.search(title or "")
+
+
+def is_wrap(title: str) -> bool:
+    """Market-wrap / 'stocks in focus' laundry list — not a catalyst map."""
+    return bool(WRAP_TITLE.search(title or ""))
+
+
+def is_catalyst(title: str, *, source: str = "", status: str = "",
+                category: str = "") -> bool:
+    """Policy / gov / regulator article that is not a wrap."""
+    if is_wrap(title):
+        return False
+    if not POLICY_KEEP.search(title or ""):
+        return False
+    return keep_article(title, source=source, status=status, category=category)
 
 
 def keep_article(title: str, *, source: str = "", status: str = "",
@@ -803,6 +830,11 @@ def exact_named_tickers(blob: str, profiles: dict[str, dict]) -> set[str]:
     for t in _WORD_TICKER.findall(cleaned):
         if t in _TICKER_DENY or t not in profiles:
             continue
+        if len(t) < 4 and not re.search(
+            rf"(?:\(|\$){t}\)|{t}\s*(?:drop|drops|surge|rall|shares|stock|%|jump|fell)",
+            cleaned,
+        ):
+            continue  # bare GHG / NMS / ARM stay out; "DVN drop" / (B) stay in
         found.add(t)
     exp = _ensure_index(profiles)
     nidx = _NAME_INDEX.get(exp) or {}
@@ -861,6 +893,88 @@ def map_tickers(article: dict, profiles: dict[str, dict]) -> list[dict]:
 
 def official_bar(ticker: str, date: str) -> dict:
     return tl.session_bar(ticker, date) or {}
+
+
+def catalyst_daily_scores(articles: list[dict], maps: dict[str, list[dict]],
+                          cal: list[str]) -> dict[str, dict[str, int]]:
+    """Long-only scores from policy/gov articles that name a ticker.
+
+    Wraps and unsigned / bearish names stay out — no short locate.
+    Cap 3 names per article so a comma list cannot become the book.
+    """
+    scores: dict[str, dict[str, int]] = {d: {} for d in cal}
+    for art in articles:
+        title = art.get("title") or ""
+        if not is_catalyst(title, source=art.get("source") or ""):
+            continue
+        fill = art.get("fill")
+        if not fill or fill not in scores:
+            continue
+        hits = [
+            h for h in (maps.get(_norm(title)) or [])
+            if int(h.get("signed") or 0) > 0
+        ]
+        for h in hits[:3]:
+            t = h["ticker"]
+            scores[fill][t] = scores[fill].get(t, 0) + int(h["signed"])
+    return scores
+
+
+def panel_from_scores(scores: dict[str, dict[str, int]], cal: list[str],
+                      *, long_only: bool = True) -> dict:
+    rows = []
+    by_date: dict[str, list] = {}
+    for date in cal:
+        day = []
+        items = scores.get(date) or {}
+        ranked = sorted(items.items(), key=lambda kv: (-abs(kv[1]), kv[0]))
+        src = 0
+        for t, sc in ranked:
+            if long_only and sc <= 0:
+                continue
+            src += 1
+            row = {
+                "date": date, "ticker": t, "sources": ["union"],
+                "src_rank": src, "news_score": sc, "boxes": {},
+            }
+            rows.append(row)
+            day.append(row)
+        by_date[date] = day
+    return {
+        "session_dates": list(cal),
+        "rows": rows,
+        "by_date": by_date,
+        "from_date": cal[0] if cal else "",
+        "to_date": cal[-1] if cal else "",
+        "n_sessions": len(cal),
+        "n_rows": len(rows),
+        "_ohlc_filled": True,
+        "_tape_filled": True,
+        "_clock_b": True,
+        "_oppset": True,
+    }
+
+
+def run_standalone_books(scores: dict[str, dict[str, int]], cal: list[str],
+                         start: str) -> tuple[dict, dict]:
+    """$10k leftover book of exact named policy longs. Not an overlay."""
+    panel = panel_from_scores(scores, cal)
+    regime = fmb.load_regime()
+    fees = fm.pt_fees()
+    books, stats = {}, {}
+    for top_n, hold in ((4, 1), (4, 2), (8, 1), (8, 2)):
+        name = f"grok_n{top_n}_h{hold}"
+        print(f"[grok-news-bt] standalone {name}", flush=True)
+        rec = fm.make_recipe(
+            name=name, universe="union", hold=hold, top_n=top_n,
+            rank="list", side="long",
+            note="standalone exact policy-catalyst longs; no short locate",
+        )
+        book = fmb.simulate_book(
+            panel, rec, fees=fees, regime=regime, start=start)
+        books[name] = slim_book(book)
+        stats[name] = book_stats(book)
+    return books, stats
 
 
 # ── overlay on existing strategy daily lists ─────────────────────────
@@ -1267,12 +1381,13 @@ def write_md(payload: dict) -> str:
     cov = payload["coverage"]
     w = payload["windows"]
     lines = [
-        "# Grok news overlay on existing strategies (research)",
+        "# Grok news standalone catalyst book + overlay (research)",
         "",
         f"Window **{payload['from_date']} → {payload['to_date']}** · "
         f"last closed session **{payload['to_date']}**. "
-        "Every pre-open Grok-pipeline article → exact named tickers → "
-        "overlay on `union_hot_n4_h1` and `flatten_h5`. "
+        "Every pre-open Grok-pipeline article → exact named tickers. "
+        "Standalone long-only book of policy/gov names (they are not on "
+        "hot4). Overlay on `union_hot_n4_h1` / `flatten_h5` is secondary. "
         "Not live. Does not touch factor-mine / flatten / Webull.",
         "",
         "## Coverage",
@@ -1293,8 +1408,12 @@ def write_md(payload: dict) -> str:
         f"- Articles that name ≥1 listed ticker: **{cov.get('articles_with_name', 0)}**.",
         f"- Exact ticker-days: **{cov.get('n_ticker_days', 0)}** "
         f"(bull/bear used by overlay: {cov.get('n_signed_ticker_days', 0)}).",
+        f"- Catalyst articles (policy/gov, not a market wrap): "
+        f"**{cov.get('catalyst_articles', 0)}** → "
+        f"**{cov.get('catalyst_ticker_days', 0)}** standalone longs.",
         "- Raw Finviz CSV is **not** the article list. Sector baskets "
-        "(Hormuz → COP/EOG, EPA → every generator) are **not** a map.",
+        "(Hormuz → COP/EOG, EPA → every generator) are **not** a map. "
+        "Stock-market-today / in-focus laundry lists are not a catalyst.",
         "- GH Actions must not harvest. Replay reads frozen dumps + dated Grok pipeline.",
         "",
         "## Leak rules",
@@ -1311,7 +1430,39 @@ def write_md(payload: dict) -> str:
         "- No close digest, no post-close research_baseline, no OOS files "
         "while mapping an IS fill, no same-day Change%/Gap/RelVol.",
         "- Long-only (no short locate) + hard-red S≤−3 sit. $10k leftover "
-        "split, Futubull fees, whole shares.",
+        "split, Futubull fees, whole shares. Standalone holds 1 and 2 — "
+        "policy prints often land on the next session, not 09:30→close.",
+        "",
+        "## Standalone policy-catalyst book",
+        "",
+        "These names are **not** on `union_hot_n4_h1` (0/26 overlap). "
+        "If we do not run a standalone book, the catalysts are unused. "
+        "Long-only the exact bullish names on a policy/gov article. "
+        "No shorts. No wraps. Cap 3 names per article.",
+        "",
+        "| Window | `grok_n4_h1` | `grok_n4_h2` | `grok_n8_h1` | `grok_n8_h2` | published hot4 | published flatten |",
+        "|---|---:|---:|---:|---:|---:|---:|",
+    ]
+    for key, label in (
+        ("full", f"{payload['from_date']}→{payload['to_date']}"),
+        ("is", f"{WINDOW_START}→{IS_END}"),
+        ("oos", f"{OOS_START}→{payload['to_date']}"),
+    ):
+        row = w[key]
+        st = row.get("standalone") or {}
+        pub = row.get("published") or {}
+        lines.append(
+            f"| {label} | {_pct((st.get('grok_n4_h1') or {}).get('book_pct'))} | "
+            f"{_pct((st.get('grok_n4_h2') or {}).get('book_pct'))} | "
+            f"{_pct((st.get('grok_n8_h1') or {}).get('book_pct'))} | "
+            f"{_pct((st.get('grok_n8_h2') or {}).get('book_pct'))} | "
+            f"{_pct((pub.get('union_hot_n4_h1') or {}).get('book_pct'))} | "
+            f"{_pct((pub.get('flatten_h5') or {}).get('book_pct'))} |"
+        )
+    lines += [
+        "",
+        f"Catalyst same-day hit rate: {w['full'].get('catalyst_same_day_hit')}. "
+        f"Next-close (the hold-2 print): {w['full'].get('catalyst_next_close_hit')}.",
         "",
         "## Overlay vs same-panel base",
         "",
@@ -1430,12 +1581,13 @@ def write_md(payload: dict) -> str:
         "tabloid, single-name FDA approvals, carried Hormuz.",
         "3. A stock is affected only when the article names it. Company "
         "names resolve through D-1 Finviz Company text. Theme packs set "
-        "polarity of a named name; they do not add unnamed names.",
-        "4. Each session: `pick_day` the live recipe, then rewrite the "
-        "list (`veto_bear` / `require_bull` / `add_named` / `full`). "
-        "Cash book is the factor-mine family.",
-        "5. `full` also marks held names news🔴 when the article names "
-        "them bearish, so flatten hold-5 can exit after the min-hold rule.",
+        "polarity of a named name; they do not add unnamed names. "
+        "3-letter tokens only in `$TICK` / `(TICK)`. Wraps are not maps.",
+        "4. Standalone book: long the bullish named names on a policy/gov "
+        "article (`grok_n4/n8` × hold 1/2). These names are not on hot4.",
+        "5. Overlay: `pick_day` the live recipe, then rewrite "
+        "(`veto_bear` / `require_bull` / `add_named` / `full`). "
+        "`full` marks held names news🔴 when the article names them bearish.",
         "",
     ]
     return "\n".join(lines) + "\n"
@@ -1466,9 +1618,10 @@ th,td{padding:5px 6px;border-bottom:1px solid var(--line);text-align:right}th:fi
 .pos{color:var(--pos)}.neg{color:var(--neg)}.note{color:var(--mut);font-size:12px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:0 0 12px}
 </style></head><body><div class="wrap">
-<h1>Grok news overlay on existing strategies</h1>
-<p class="sub">Research only. Exact named tickers from pre-open Grok articles, overlaid on union_hot_n4_h1 and flatten_h5. Live factor-mine / flatten / Webull untouched.</p>
+<h1>Grok news standalone + overlay</h1>
+<p class="sub">Research only. Exact named policy/gov catalysts as their own book, then the same signals overlaid on union_hot_n4_h1 and flatten_h5. Live factor-mine / flatten / Webull untouched.</p>
 <div class="card" id="cov"></div>
+<div class="card"><h2>Standalone policy-catalyst book</h2><table id="solo"></table></div>
 <div class="card"><h2>union_hot_n4_h1 overlay</h2><table id="hot"></table></div>
 <div class="card"><h2>flatten_h5 overlay</h2><table id="flat"></table></div>
 <div class="card"><h2>List touch</h2><table id="touch"></table></div>
@@ -1484,6 +1637,7 @@ fetch('payload.json').then(r=>r.json()).then(d=>{
     ' · articles: '+(cov.articles_kept||0)+
     ' · named: '+(cov.articles_with_name||0)+
     ' · ticker-days: '+(cov.n_ticker_days||0)+
+    ' · catalyst longs: '+(cov.catalyst_ticker_days||0)+
     '</div><div class="note">'+(cov.reason||'')+'</div>';
   const pct=v=>v==null?'—':((v>=0?'+':'')+Number(v).toFixed(2));
   const cls=v=>v==null?'':(v>=0?'pos':'neg');
@@ -1507,6 +1661,16 @@ fetch('payload.json').then(r=>r.json()).then(d=>{
     }
     return h;
   };
+  let sh='<tr><th>Window</th><th>n4 h1</th><th>n4 h2</th><th>n8 h1</th><th>n8 h2</th></tr>';
+  for (const [k,label] of [['full','full'],['is','08-13→09-09'],['oos','09-10→end']]){
+    const w=d.windows[k]; if(!w||!w.standalone) continue;
+    const s=w.standalone;
+    sh+='<tr><td>'+label+'</td><td class="'+cls(s.grok_n4_h1&&s.grok_n4_h1.book_pct)+'">'+pct(s.grok_n4_h1&&s.grok_n4_h1.book_pct)+
+      '</td><td class="'+cls(s.grok_n4_h2&&s.grok_n4_h2.book_pct)+'">'+pct(s.grok_n4_h2&&s.grok_n4_h2.book_pct)+
+      '</td><td class="'+cls(s.grok_n8_h1&&s.grok_n8_h1.book_pct)+'">'+pct(s.grok_n8_h1&&s.grok_n8_h1.book_pct)+
+      '</td><td class="'+cls(s.grok_n8_h2&&s.grok_n8_h2.book_pct)+'">'+pct(s.grok_n8_h2&&s.grok_n8_h2.book_pct)+'</td></tr>';
+  }
+  document.getElementById('solo').innerHTML=sh;
   document.getElementById('hot').innerHTML=rows('union_hot_n4_h1');
   document.getElementById('flat').innerHTML=rows('flatten_h5');
   let th='<tr><th>Base</th><th>overlay</th><th>days changed</th><th>list ∩ named</th><th>vetoed</th><th>added</th></tr>';
@@ -1577,6 +1741,9 @@ def run(write: bool = True) -> dict:
 
     news = daily_news_scores(articles, maps, cal)
     apply_judge_sides(news, articles)
+    cat_scores = catalyst_daily_scores(articles, maps, cal)
+    cat_arts = [a for a in articles if is_catalyst(a.get("title") or "", source=a.get("source") or "")]
+    n_cat_td = sum(len(v) for v in cat_scores.values())
 
     auto_days = {a.get("file_date") for a in frozen if a.get("file_date")}
     pipeline_days = sorted({
@@ -1586,7 +1753,12 @@ def run(write: bool = True) -> dict:
     repo_only = [d for d in cal if d not in auto_days]
 
     graded = name_grades(articles, maps, cal)
-    hits, misses = pick_examples(graded)
+    cat_keys = {_norm(a["title"]) for a in cat_arts}
+    cat_graded = [
+        g for g in graded
+        if _norm(g.get("title") or "") in cat_keys and g.get("side") == "bullish"
+    ]
+    hits, misses = pick_examples(cat_graded or graded)
 
     print("[grok-news-bt] loading research panel (read-only)", flush=True)
     panel = load_baseline_panel()
@@ -1596,7 +1768,11 @@ def run(write: bool = True) -> dict:
     if not panel_cal:
         raise SystemExit("panel has no sessions in the overlay window")
 
+    solo_books, solo_stats = run_standalone_books(
+        cat_scores, panel_cal, WINDOW_START)
     books, stats, meta = run_overlay_books(panel, news, panel_cal, WINDOW_START)
+    books.update(solo_books)
+    stats.update(solo_stats)
 
     n_named = sum(1 for a in articles if maps.get(_norm(a["title"])))
     n_td = sum(len(maps.get(_norm(a["title"])) or []) for a in articles)
@@ -1623,6 +1799,23 @@ def run(write: bool = True) -> dict:
             "next_close_hit": _hit_rate(g_graded, "next_close_hit"),
             "overlay": _window_overlay(
                 stats, books, start, end, WINDOW_START, last),
+            "standalone": {
+                n: (
+                    dict(solo_stats[n], book_pct=running_book_pct(
+                        solo_books[n], start, end),
+                        window_from_running_equity=True)
+                    if start != WINDOW_START or end != last
+                    else solo_stats[n]
+                )
+                for n in ("grok_n4_h1", "grok_n4_h2", "grok_n8_h1", "grok_n8_h2")
+                if n in solo_stats
+            },
+            "catalyst_same_day_hit": _hit_rate(
+                [g for g in cat_graded if start <= (g.get("fill") or "") <= end],
+                "same_day_hit"),
+            "catalyst_next_close_hit": _hit_rate(
+                [g for g in cat_graded if start <= (g.get("fill") or "") <= end],
+                "next_close_hit"),
             "published": published_baselines(start, end),
         }
 
@@ -1648,6 +1841,8 @@ def run(write: bool = True) -> dict:
         "articles_with_name": n_named,
         "n_ticker_days": n_td,
         "n_signed_ticker_days": n_signed,
+        "catalyst_articles": len(cat_arts),
+        "catalyst_ticker_days": n_cat_td,
         "note": (
             "0 automation days dumped in this environment. Stage 1 must be "
             "re-run by Grok Bot / Cursor with Automations connector. Stage 2 "
@@ -1679,7 +1874,7 @@ def run(write: bool = True) -> dict:
         "generated_at": datetime.now(ET).isoformat(),
         "stage": 2,
         "research_only": True,
-        "product": "overlay",
+        "product": "standalone+overlay",
         "live_untouched": [
             "dashboard/factor-mine/", "03_scoreboard/factor_mine.json",
             "flatten", "webull", "paper_open",
@@ -1731,7 +1926,8 @@ def main(argv: list[str] | None = None) -> int:
         f"named={payload['coverage']['articles_with_name']} "
         f"auto_days={payload['coverage']['automation_days']} "
         f"hot4={hot.get('base', {}).get('book_pct')} "
-        f"hot4+full={hot.get('full', {}).get('book_pct')}"
+        f"hot4+full={hot.get('full', {}).get('book_pct')} "
+        f"solo_n4h2={((payload['windows']['full'].get('standalone') or {}).get('grok_n4_h2') or {}).get('book_pct')}"
     )
     return 0
 
