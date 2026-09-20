@@ -13,26 +13,30 @@ concurrency:
 jobs:
   patch:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - name: Checkout main
         uses: actions/checkout@v4
         with:
           ref: main
           path: main
+          fetch-depth: 1
 
       - name: Checkout gh-pages
         uses: actions/checkout@v4
         with:
           ref: gh-pages
           path: pages
+          fetch-depth: 1
 
-      - name: Inject calendar into live factor-mine page
+      - name: Patch live factor-mine page
         run: |
           set -euo pipefail
           python3 main/scripts/patch_fm_ovcal.py pages/dashboard/factor-mine/index.html
+          python3 main/scripts/patch_fm_holdup.py pages/dashboard/factor-mine/index.html
           if [ -f pages/factor-mine/index.html ]; then
             python3 main/scripts/patch_fm_ovcal.py pages/factor-mine/index.html
+            python3 main/scripts/patch_fm_holdup.py pages/factor-mine/index.html
           fi
 
       - name: Commit gh-pages
@@ -46,5 +50,5 @@ jobs:
             echo "no change"
             exit 0
           fi
-          git commit -m "Add new-buy vs held calendar to factor-mine dash."
+          git commit -m "Replay holdup cash-start on the factor-mine page."
           git push origin HEAD:gh-pages
