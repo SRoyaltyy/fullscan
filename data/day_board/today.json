@@ -1,104 +1,20 @@
 {
   "date": "2026-09-20",
-  "generated_at": "2026-09-20T15:03:12.415777-04:00",
-  "overall": "FAIL",
+  "generated_at": "2026-09-20T15:03:29.736040-04:00",
+  "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 0,
-    "partial": 1,
-    "fail": 7,
+    "ok": 2,
+    "partial": 0,
+    "fail": 6,
     "n": 8
   },
-  "buy_1d": [
-    {
-      "ticker": "AVO",
-      "score": 0.6999704553649888
-    },
-    {
-      "ticker": "ACRS",
-      "score": 0.6056502087228353
-    },
-    {
-      "ticker": "CLYM",
-      "score": 0.4335245925831646
-    },
-    {
-      "ticker": "MATV",
-      "score": 0.5917927508358969
-    },
-    {
-      "ticker": "GAU",
-      "score": 0.47578182672945707
-    },
-    {
-      "ticker": "PGEN",
-      "score": 0.8221614018882937
-    },
-    {
-      "ticker": "SPCE",
-      "score": 0.6938920420363159
-    },
-    {
-      "ticker": "HOOD",
-      "score": 0.47292651415915626
-    }
-  ],
-  "sell_1d": [
-    {
-      "ticker": "FLNC",
-      "score": -0.4348691569535859
-    },
-    {
-      "ticker": "METC",
-      "score": -0.39278860774644847
-    },
-    {
-      "ticker": "STLA",
-      "score": -0.5029499604164206
-    },
-    {
-      "ticker": "REAX",
-      "score": -0.27796508434332384
-    },
-    {
-      "ticker": "KEP",
-      "score": -0.08766337956328289
-    },
-    {
-      "ticker": "GENI",
-      "score": -0.2115733682862383
-    },
-    {
-      "ticker": "BAK",
-      "score": -0.39561934115444397
-    },
-    {
-      "ticker": "WU",
-      "score": -0.3615882040007791
-    }
-  ],
+  "buy_1d": [],
+  "sell_1d": [],
   "flatten": {},
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-09-20",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-20T15:02:13.302110-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-09-20_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1113401,
-          "preview": "5894 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5894 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -364,6 +280,31 @@
         }
       ],
       "preview": "5894 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-20",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-20T15:03:29.643703-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-20_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 9338,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.74, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.68, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.475, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.88, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.34, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.55, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.32, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-20_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5070,
+          "preview": "# Weather report \u2014 2026-09-20\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.74, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.68, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.475, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.88, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.34, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.55, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.32, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-20\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
