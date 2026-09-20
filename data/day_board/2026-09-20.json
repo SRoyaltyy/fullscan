@@ -1,19 +1,19 @@
 {
   "date": "2026-09-20",
-  "generated_at": "2026-09-20T15:03:34.202066-04:00",
+  "generated_at": "2026-09-20T15:03:52.694869-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-20_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-20/_board.json` \u2014 missing",
+    "MISSING News actions JSON `01_daily/news/2026-09-20_actions.json` \u2014 missing",
     "MISSING Quote-page digest JSON (*_finviz_digest) `01_daily/news/2026-09-20_finviz_digest.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-09-20_judge.md` \u2014 missing",
-    "MISSING AB checklist enriched `data/ab_checklist/2026-09-20_ab_checklist_enriched.csv` \u2014 missing"
+    "MISSING News judge MD `01_daily/news/2026-09-20_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 1,
-    "partial": 2,
-    "fail": 5,
+    "ok": 4,
+    "partial": 0,
+    "fail": 4,
     "n": 8
   },
   "processes": [
@@ -145,7 +145,7 @@
       "inputs_ready": false,
       "n_req_ok": 0,
       "n_req": 20,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 3,
       "files": [
         {
@@ -234,9 +234,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-20_actions.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 889
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "general",
@@ -426,11 +426,11 @@
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -438,22 +438,24 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-09-20_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=2654",
+          "size": 7629213
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-20_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=2654",
+          "size": 8466566
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "25 rows",
+      "bullets": [
+        "ANET, SFL, DSGX, DSX, ILMN"
+      ]
     },
     {
       "key": "catalyst",
@@ -471,9 +473,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-20_actions.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 889
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "in_digest",
@@ -501,11 +503,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 1,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -531,9 +533,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-20_actions.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 889
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "in_digest",
@@ -567,9 +569,9 @@
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-20_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=2654",
+          "size": 8466566
         },
         {
           "key": "join",
@@ -578,43 +580,43 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5894",
-          "size": 2220760
+          "size": 2220790
         },
         {
           "key": "peers",
           "name": "Peer RS CSV",
           "path": "data/peers/2026-09-20_peer_rs.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=5102",
+          "size": 821799
         },
         {
           "key": "book_json",
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-20_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "horizons=5 names=216",
+          "size": 1449545
         },
         {
           "key": "book_md",
           "name": "Stock book MD",
           "path": "01_daily/2026-09-20_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 78531
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-09-20_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 585
         },
         {
           "key": "paper",
@@ -630,23 +632,23 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-09-20 not in dashboard dates (last=2026-09-17)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-20)",
           "size": 6300795
         }
       ],
       "said": "203 rows",
       "bullets": [
-        "FORM, P, KEYS, VICR, MU"
+        "FORM, P, KEYS, VICR, SKHY"
       ]
     },
     {
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -656,17 +658,17 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-20_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "horizons=5 names=216",
+          "size": 1449545
         },
         {
           "key": "dash_html",
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-09-20 not in dashboard dates (last=2026-09-17)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-20)",
           "size": 6300795
         },
         {
@@ -693,9 +695,82 @@
     }
   ],
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
-    "flatten": {},
+    "buy_1d": [
+      {
+        "ticker": "AVO",
+        "score": 0.6999704553649888
+      },
+      {
+        "ticker": "ACRS",
+        "score": 0.6056502087228353
+      },
+      {
+        "ticker": "CLYM",
+        "score": 0.4335245925831646
+      },
+      {
+        "ticker": "MATV",
+        "score": 0.5917927508358969
+      },
+      {
+        "ticker": "GAU",
+        "score": 0.47578182672945707
+      },
+      {
+        "ticker": "PGEN",
+        "score": 0.8221614018882937
+      },
+      {
+        "ticker": "SPCE",
+        "score": 0.6938920420363159
+      },
+      {
+        "ticker": "HOOD",
+        "score": 0.47292651415915626
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "FLNC",
+        "score": -0.4348691569535859
+      },
+      {
+        "ticker": "METC",
+        "score": -0.39278860774644847
+      },
+      {
+        "ticker": "STLA",
+        "score": -0.5029499604164206
+      },
+      {
+        "ticker": "REAX",
+        "score": -0.27796508434332384
+      },
+      {
+        "ticker": "KEP",
+        "score": -0.08766337956328289
+      },
+      {
+        "ticker": "GENI",
+        "score": -0.2115733682862383
+      },
+      {
+        "ticker": "BAK",
+        "score": -0.39561934115444397
+      },
+      {
+        "ticker": "WU",
+        "score": -0.3615882040007791
+      }
+    ],
+    "flatten": {
+      "said": "0 priced buys \u00b7 cash $102,571.54 \u00b7 morning S missing",
+      "bullets": [
+        "0 priced buys",
+        "cash $102,571.54",
+        "morning S missing"
+      ]
+    },
     "general": {},
     "sectors": {},
     "news": {},
@@ -1084,6 +1159,52 @@
         }
       ],
       "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FORM, P, KEYS, VICR, MU"
+    },
+    {
+      "key": "flatten",
+      "title": "Flatten live card",
+      "date": "2026-09-20",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-20T15:03:52.298063-04:00",
+      "files": [
+        {
+          "path": "01_daily/2026-09-20_flatten_card.md",
+          "ok": true,
+          "reason": "",
+          "size": 2016,
+          "preview": "# flatten_robust card \u2014 2026-09-20\n_Generated 2026-09-20T19:03:51 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$102,571.54** (after 09:30 $102,571.54 \u00b7 after 16:00 $102,571.54)\n- Prior close **$102,571.54** \u00b7 09:30 **$102,571.54** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$102,571.54**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$102,571.54**"
+        },
+        {
+          "path": "data/sleeve_merge/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 4183,
+          "preview": "2026-09-20 BUY \u2014 \u00b7 SELL \u2014"
+        },
+        {
+          "path": "data/sleeve_merge/daily_marks.json",
+          "ok": true,
+          "reason": "",
+          "size": 161757,
+          "preview": "[{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\": \"IREN\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 223, \"shares\": 223, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 45.98, \"close_px\": 44.76, \"entry_px\": 44.76, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": -272.06, \"day\": -272.06, \"pct_overnight\""
+        },
+        {
+          "path": "data/sleeve_merge/equity_curve.csv",
+          "ok": true,
+          "reason": "",
+          "size": 4033,
+          "preview": "25 rows \u00b7 date,equity,cash,core_n,tac_io_n,tac_n,core_mv,tac_mv,route,score,predict,open_held,open_cash,open_equity,yday_equity,ov \u00b7 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19"
+        },
+        {
+          "path": "dashboard/sleeve-merge/index.html",
+          "ok": true,
+          "reason": "",
+          "size": 51985,
+          "preview": "<!doctype html>\n<html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Combined sleeve \u2014 .io \u00d7 mover</title>\n<style>\n:root{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9}\n*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui}\nmain{max-width:1240px;margin:auto;padding:16px}h1,h2{margin:.4em 0}\n.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:14px 0}\n.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}\n.card b{display:block;font-size:22px;margin-top:4px}\n.muted{color:var(--muted)}a{color:#93c5fd}\n.sheet{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0}\ntable{border-collapse:separate;border-spacing:0;width:100%;background:var(--card)}\nth,td{padding:7px 8"
+        }
+      ],
+      "preview": "# flatten_robust card \u2014 2026-09-20\n_Generated 2026-09-20T19:03:51 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$102,571.54** (after 09:30 $102,571.54 \u00b7 after 16:00 $102,571.54)\n- Prior close **$102,571.54** \u00b7 09:30 **$102,571.54** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$102,571.54**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$102,571.54** \u00b7 2026-09-20 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_over"
     }
   ],
   "href": {
