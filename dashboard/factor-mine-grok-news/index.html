@@ -11,9 +11,10 @@ th,td{padding:5px 6px;border-bottom:1px solid var(--line);text-align:right}th:fi
 .pos{color:var(--pos)}.neg{color:var(--neg)}.note{color:var(--mut);font-size:12px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:0 0 12px}
 </style></head><body><div class="wrap">
-<h1>Grok news overlay on existing strategies</h1>
-<p class="sub">Research only. Exact named tickers from pre-open Grok articles, overlaid on union_hot_n4_h1 and flatten_h5. Live factor-mine / flatten / Webull untouched.</p>
+<h1>Grok news standalone + overlay</h1>
+<p class="sub">Research only. Exact named policy/gov catalysts as their own book, then the same signals overlaid on union_hot_n4_h1 and flatten_h5. Live factor-mine / flatten / Webull untouched.</p>
 <div class="card" id="cov"></div>
+<div class="card"><h2>Standalone policy-catalyst book</h2><table id="solo"></table></div>
 <div class="card"><h2>union_hot_n4_h1 overlay</h2><table id="hot"></table></div>
 <div class="card"><h2>flatten_h5 overlay</h2><table id="flat"></table></div>
 <div class="card"><h2>List touch</h2><table id="touch"></table></div>
@@ -29,6 +30,7 @@ fetch('payload.json').then(r=>r.json()).then(d=>{
     ' · articles: '+(cov.articles_kept||0)+
     ' · named: '+(cov.articles_with_name||0)+
     ' · ticker-days: '+(cov.n_ticker_days||0)+
+    ' · catalyst longs: '+(cov.catalyst_ticker_days||0)+
     '</div><div class="note">'+(cov.reason||'')+'</div>';
   const pct=v=>v==null?'—':((v>=0?'+':'')+Number(v).toFixed(2));
   const cls=v=>v==null?'':(v>=0?'pos':'neg');
@@ -52,6 +54,16 @@ fetch('payload.json').then(r=>r.json()).then(d=>{
     }
     return h;
   };
+  let sh='<tr><th>Window</th><th>n4 h1</th><th>n4 h2</th><th>n8 h1</th><th>n8 h2</th></tr>';
+  for (const [k,label] of [['full','full'],['is','08-13→09-09'],['oos','09-10→end']]){
+    const w=d.windows[k]; if(!w||!w.standalone) continue;
+    const s=w.standalone;
+    sh+='<tr><td>'+label+'</td><td class="'+cls(s.grok_n4_h1&&s.grok_n4_h1.book_pct)+'">'+pct(s.grok_n4_h1&&s.grok_n4_h1.book_pct)+
+      '</td><td class="'+cls(s.grok_n4_h2&&s.grok_n4_h2.book_pct)+'">'+pct(s.grok_n4_h2&&s.grok_n4_h2.book_pct)+
+      '</td><td class="'+cls(s.grok_n8_h1&&s.grok_n8_h1.book_pct)+'">'+pct(s.grok_n8_h1&&s.grok_n8_h1.book_pct)+
+      '</td><td class="'+cls(s.grok_n8_h2&&s.grok_n8_h2.book_pct)+'">'+pct(s.grok_n8_h2&&s.grok_n8_h2.book_pct)+'</td></tr>';
+  }
+  document.getElementById('solo').innerHTML=sh;
   document.getElementById('hot').innerHTML=rows('union_hot_n4_h1');
   document.getElementById('flat').innerHTML=rows('flatten_h5');
   let th='<tr><th>Base</th><th>overlay</th><th>days changed</th><th>list ∩ named</th><th>vetoed</th><th>added</th></tr>';

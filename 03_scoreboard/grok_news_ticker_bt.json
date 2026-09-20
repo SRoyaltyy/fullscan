@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-20T13:58:19.723186-04:00",
+  "generated_at": "2026-09-20T14:30:33.090636-04:00",
   "stage": 2,
   "research_only": true,
-  "product": "overlay",
+  "product": "standalone+overlay",
   "live_untouched": [
     "dashboard/factor-mine/",
     "03_scoreboard/factor_mine.json",
@@ -22,12 +22,14 @@
     "repo_only_sessions": 26,
     "frozen_articles": 0,
     "parsed_articles": 975,
-    "actions_articles": 142,
+    "actions_articles": 139,
     "event_articles": 173,
     "articles_kept": 699,
-    "articles_with_name": 192,
-    "n_ticker_days": 277,
-    "n_signed_ticker_days": 126,
+    "articles_with_name": 171,
+    "n_ticker_days": 237,
+    "n_signed_ticker_days": 106,
+    "catalyst_articles": 465,
+    "catalyst_ticker_days": 12,
     "note": "0 automation days dumped in this environment. Stage 1 must be re-run by Grok Bot / Cursor with Automations connector. Stage 2 filled from dated Grok pipeline (parsed/actions/events) only. Raw Finviz is not the article list."
   },
   "windows": {
@@ -35,9 +37,9 @@
       "start": "2026-08-13",
       "end": "2026-09-18",
       "n_articles": 699,
-      "n_ticker_days": 277,
-      "same_day_hit": "47/95 (49%)",
-      "next_close_hit": "37/73 (51%)",
+      "n_ticker_days": 237,
+      "same_day_hit": "39/78 (50%)",
+      "next_close_hit": "32/59 (54%)",
       "overlay": {
         "union_hot_n4_h1": {
           "base": {
@@ -78,27 +80,27 @@
           },
           "add_named": {
             "name": "union_hot_n4_h1+add_named",
-            "book_pct": 20.737,
-            "final_equity": 12073.66,
-            "win_rate": 0.5283,
-            "dollar_days": 0.3077,
+            "book_pct": 22.358,
+            "final_equity": 12235.81,
+            "win_rate": 0.5532,
+            "dollar_days": 0.3462,
             "starts_yes": null,
             "start_n": 0,
             "start_green": 0,
-            "n_trades": 111,
-            "n_skips": 79
+            "n_trades": 98,
+            "n_skips": 71
           },
           "full": {
             "name": "union_hot_n4_h1+full",
-            "book_pct": 20.75,
-            "final_equity": 12075.04,
-            "win_rate": 0.537,
-            "dollar_days": 0.3077,
+            "book_pct": 22.225,
+            "final_equity": 12222.45,
+            "win_rate": 0.5625,
+            "dollar_days": 0.3462,
             "starts_yes": null,
             "start_n": 0,
             "start_green": 0,
-            "n_trades": 113,
-            "n_skips": 79
+            "n_trades": 100,
+            "n_skips": 71
           }
         },
         "flatten_h5": {
@@ -140,30 +142,82 @@
           },
           "add_named": {
             "name": "flatten_h5+add_named",
-            "book_pct": 5.731,
-            "final_equity": 10573.09,
-            "win_rate": 0.5532,
+            "book_pct": 7.998,
+            "final_equity": 10799.79,
+            "win_rate": 0.5714,
             "dollar_days": 0.5769,
             "starts_yes": null,
             "start_n": 0,
             "start_green": 0,
-            "n_trades": 105,
-            "n_skips": 366
+            "n_trades": 94,
+            "n_skips": 341
           },
           "full": {
             "name": "flatten_h5+full",
-            "book_pct": 7.033,
-            "final_equity": 10703.3,
-            "win_rate": 0.5532,
+            "book_pct": 9.668,
+            "final_equity": 10966.82,
+            "win_rate": 0.5714,
             "dollar_days": 0.5769,
             "starts_yes": null,
             "start_n": 0,
             "start_green": 0,
-            "n_trades": 104,
-            "n_skips": 361
+            "n_trades": 93,
+            "n_skips": 336
           }
         }
       },
+      "standalone": {
+        "grok_n4_h1": {
+          "name": "grok_n4_h1",
+          "book_pct": 1.982,
+          "final_equity": 10198.17,
+          "win_rate": 0.5556,
+          "dollar_days": 0.3077,
+          "starts_yes": null,
+          "start_n": 0,
+          "start_green": 0,
+          "n_trades": 18,
+          "n_skips": 2
+        },
+        "grok_n4_h2": {
+          "name": "grok_n4_h2",
+          "book_pct": 1.452,
+          "final_equity": 10145.2,
+          "win_rate": 0.4444,
+          "dollar_days": 0.3462,
+          "starts_yes": null,
+          "start_n": 0,
+          "start_green": 0,
+          "n_trades": 18,
+          "n_skips": 10
+        },
+        "grok_n8_h1": {
+          "name": "grok_n8_h1",
+          "book_pct": 1.982,
+          "final_equity": 10198.17,
+          "win_rate": 0.5556,
+          "dollar_days": 0.3077,
+          "starts_yes": null,
+          "start_n": 0,
+          "start_green": 0,
+          "n_trades": 18,
+          "n_skips": 2
+        },
+        "grok_n8_h2": {
+          "name": "grok_n8_h2",
+          "book_pct": 1.452,
+          "final_equity": 10145.2,
+          "win_rate": 0.4444,
+          "dollar_days": 0.3462,
+          "starts_yes": null,
+          "start_n": 0,
+          "start_green": 0,
+          "n_trades": 18,
+          "n_skips": 10
+        }
+      },
+      "catalyst_same_day_hit": "9/11 (82%)",
+      "catalyst_next_close_hit": "6/11 (55%)",
       "published": {
         "union_hot_n4_h1": {
           "name": "union_hot_n4_h1",
@@ -183,9 +237,9 @@
       "start": "2026-08-13",
       "end": "2026-09-09",
       "n_articles": 581,
-      "n_ticker_days": 186,
-      "same_day_hit": "33/70 (47%)",
-      "next_close_hit": "34/69 (49%)",
+      "n_ticker_days": 159,
+      "same_day_hit": "27/56 (48%)",
+      "next_close_hit": "29/55 (53%)",
       "overlay": {
         "union_hot_n4_h1": {
           "base": {
@@ -229,28 +283,28 @@
           },
           "add_named": {
             "name": "union_hot_n4_h1+add_named",
-            "book_pct": 18.263,
-            "final_equity": 12073.66,
-            "win_rate": 0.5283,
-            "dollar_days": 0.3077,
+            "book_pct": 19.697,
+            "final_equity": 12235.81,
+            "win_rate": 0.5532,
+            "dollar_days": 0.3462,
             "starts_yes": null,
             "start_n": 0,
             "start_green": 0,
-            "n_trades": 111,
-            "n_skips": 79,
+            "n_trades": 98,
+            "n_skips": 71,
             "window_from_running_equity": true
           },
           "full": {
             "name": "union_hot_n4_h1+full",
-            "book_pct": 18.278,
-            "final_equity": 12075.04,
-            "win_rate": 0.537,
-            "dollar_days": 0.3077,
+            "book_pct": 19.57,
+            "final_equity": 12222.45,
+            "win_rate": 0.5625,
+            "dollar_days": 0.3462,
             "starts_yes": null,
             "start_n": 0,
             "start_green": 0,
-            "n_trades": 113,
-            "n_skips": 79,
+            "n_trades": 100,
+            "n_skips": 71,
             "window_from_running_equity": true
           }
         },
@@ -296,32 +350,88 @@
           },
           "add_named": {
             "name": "flatten_h5+add_named",
-            "book_pct": 7.022,
-            "final_equity": 10573.09,
-            "win_rate": 0.5532,
+            "book_pct": 10.536,
+            "final_equity": 10799.79,
+            "win_rate": 0.5714,
             "dollar_days": 0.5769,
             "starts_yes": null,
             "start_n": 0,
             "start_green": 0,
-            "n_trades": 105,
-            "n_skips": 366,
+            "n_trades": 94,
+            "n_skips": 341,
             "window_from_running_equity": true
           },
           "full": {
             "name": "flatten_h5+full",
-            "book_pct": 7.022,
-            "final_equity": 10703.3,
-            "win_rate": 0.5532,
+            "book_pct": 10.536,
+            "final_equity": 10966.82,
+            "win_rate": 0.5714,
             "dollar_days": 0.5769,
             "starts_yes": null,
             "start_n": 0,
             "start_green": 0,
-            "n_trades": 104,
-            "n_skips": 361,
+            "n_trades": 93,
+            "n_skips": 336,
             "window_from_running_equity": true
           }
         }
       },
+      "standalone": {
+        "grok_n4_h1": {
+          "name": "grok_n4_h1",
+          "book_pct": 1.314,
+          "final_equity": 10198.17,
+          "win_rate": 0.5556,
+          "dollar_days": 0.3077,
+          "starts_yes": null,
+          "start_n": 0,
+          "start_green": 0,
+          "n_trades": 18,
+          "n_skips": 2,
+          "window_from_running_equity": true
+        },
+        "grok_n4_h2": {
+          "name": "grok_n4_h2",
+          "book_pct": 0.938,
+          "final_equity": 10145.2,
+          "win_rate": 0.4444,
+          "dollar_days": 0.3462,
+          "starts_yes": null,
+          "start_n": 0,
+          "start_green": 0,
+          "n_trades": 18,
+          "n_skips": 10,
+          "window_from_running_equity": true
+        },
+        "grok_n8_h1": {
+          "name": "grok_n8_h1",
+          "book_pct": 1.314,
+          "final_equity": 10198.17,
+          "win_rate": 0.5556,
+          "dollar_days": 0.3077,
+          "starts_yes": null,
+          "start_n": 0,
+          "start_green": 0,
+          "n_trades": 18,
+          "n_skips": 2,
+          "window_from_running_equity": true
+        },
+        "grok_n8_h2": {
+          "name": "grok_n8_h2",
+          "book_pct": 0.938,
+          "final_equity": 10145.2,
+          "win_rate": 0.4444,
+          "dollar_days": 0.3462,
+          "starts_yes": null,
+          "start_n": 0,
+          "start_green": 0,
+          "n_trades": 18,
+          "n_skips": 10,
+          "window_from_running_equity": true
+        }
+      },
+      "catalyst_same_day_hit": "8/10 (80%)",
+      "catalyst_next_close_hit": "5/10 (50%)",
       "published": {
         "union_hot_n4_h1": {
           "name": "union_hot_n4_h1",
@@ -341,8 +451,8 @@
       "start": "2026-09-10",
       "end": "2026-09-18",
       "n_articles": 118,
-      "n_ticker_days": 91,
-      "same_day_hit": "14/25 (56%)",
+      "n_ticker_days": 78,
+      "same_day_hit": "12/22 (55%)",
       "next_close_hit": "3/4 (75%)",
       "overlay": {
         "union_hot_n4_h1": {
@@ -387,28 +497,28 @@
           },
           "add_named": {
             "name": "union_hot_n4_h1+add_named",
-            "book_pct": 2.092,
-            "final_equity": 12073.66,
-            "win_rate": 0.5283,
-            "dollar_days": 0.3077,
+            "book_pct": 2.224,
+            "final_equity": 12235.81,
+            "win_rate": 0.5532,
+            "dollar_days": 0.3462,
             "starts_yes": null,
             "start_n": 0,
             "start_green": 0,
-            "n_trades": 111,
-            "n_skips": 79,
+            "n_trades": 98,
+            "n_skips": 71,
             "window_from_running_equity": true
           },
           "full": {
             "name": "union_hot_n4_h1+full",
-            "book_pct": 2.09,
-            "final_equity": 12075.04,
-            "win_rate": 0.537,
-            "dollar_days": 0.3077,
+            "book_pct": 2.22,
+            "final_equity": 12222.45,
+            "win_rate": 0.5625,
+            "dollar_days": 0.3462,
             "starts_yes": null,
             "start_n": 0,
             "start_green": 0,
-            "n_trades": 113,
-            "n_skips": 79,
+            "n_trades": 100,
+            "n_skips": 71,
             "window_from_running_equity": true
           }
         },
@@ -454,32 +564,88 @@
           },
           "add_named": {
             "name": "flatten_h5+add_named",
-            "book_pct": -1.206,
-            "final_equity": 10573.09,
-            "win_rate": 0.5532,
+            "book_pct": -2.297,
+            "final_equity": 10799.79,
+            "win_rate": 0.5714,
             "dollar_days": 0.5769,
             "starts_yes": null,
             "start_n": 0,
             "start_green": 0,
-            "n_trades": 105,
-            "n_skips": 366,
+            "n_trades": 94,
+            "n_skips": 341,
             "window_from_running_equity": true
           },
           "full": {
             "name": "flatten_h5+full",
-            "book_pct": 0.01,
-            "final_equity": 10703.3,
-            "win_rate": 0.5532,
+            "book_pct": -0.786,
+            "final_equity": 10966.82,
+            "win_rate": 0.5714,
             "dollar_days": 0.5769,
             "starts_yes": null,
             "start_n": 0,
             "start_green": 0,
-            "n_trades": 104,
-            "n_skips": 361,
+            "n_trades": 93,
+            "n_skips": 336,
             "window_from_running_equity": true
           }
         }
       },
+      "standalone": {
+        "grok_n4_h1": {
+          "name": "grok_n4_h1",
+          "book_pct": 0.66,
+          "final_equity": 10198.17,
+          "win_rate": 0.5556,
+          "dollar_days": 0.3077,
+          "starts_yes": null,
+          "start_n": 0,
+          "start_green": 0,
+          "n_trades": 18,
+          "n_skips": 2,
+          "window_from_running_equity": true
+        },
+        "grok_n4_h2": {
+          "name": "grok_n4_h2",
+          "book_pct": 0.509,
+          "final_equity": 10145.2,
+          "win_rate": 0.4444,
+          "dollar_days": 0.3462,
+          "starts_yes": null,
+          "start_n": 0,
+          "start_green": 0,
+          "n_trades": 18,
+          "n_skips": 10,
+          "window_from_running_equity": true
+        },
+        "grok_n8_h1": {
+          "name": "grok_n8_h1",
+          "book_pct": 0.66,
+          "final_equity": 10198.17,
+          "win_rate": 0.5556,
+          "dollar_days": 0.3077,
+          "starts_yes": null,
+          "start_n": 0,
+          "start_green": 0,
+          "n_trades": 18,
+          "n_skips": 2,
+          "window_from_running_equity": true
+        },
+        "grok_n8_h2": {
+          "name": "grok_n8_h2",
+          "book_pct": 0.509,
+          "final_equity": 10145.2,
+          "win_rate": 0.4444,
+          "dollar_days": 0.3462,
+          "starts_yes": null,
+          "start_n": 0,
+          "start_green": 0,
+          "n_trades": 18,
+          "n_skips": 10,
+          "window_from_running_equity": true
+        }
+      },
+      "catalyst_same_day_hit": "1/1 (100%)",
+      "catalyst_next_close_hit": "1/1 (100%)",
       "published": {
         "union_hot_n4_h1": {
           "name": "union_hot_n4_h1",
@@ -535,27 +701,27 @@
     },
     "union_hot_n4_h1+add_named": {
       "name": "union_hot_n4_h1+add_named",
-      "book_pct": 20.737,
-      "final_equity": 12073.66,
-      "win_rate": 0.5283,
-      "dollar_days": 0.3077,
+      "book_pct": 22.358,
+      "final_equity": 12235.81,
+      "win_rate": 0.5532,
+      "dollar_days": 0.3462,
       "starts_yes": null,
       "start_n": 0,
       "start_green": 0,
-      "n_trades": 111,
-      "n_skips": 79
+      "n_trades": 98,
+      "n_skips": 71
     },
     "union_hot_n4_h1+full": {
       "name": "union_hot_n4_h1+full",
-      "book_pct": 20.75,
-      "final_equity": 12075.04,
-      "win_rate": 0.537,
-      "dollar_days": 0.3077,
+      "book_pct": 22.225,
+      "final_equity": 12222.45,
+      "win_rate": 0.5625,
+      "dollar_days": 0.3462,
       "starts_yes": null,
       "start_n": 0,
       "start_green": 0,
-      "n_trades": 113,
-      "n_skips": 79
+      "n_trades": 100,
+      "n_skips": 71
     },
     "flatten_h5": {
       "name": "flatten_h5",
@@ -595,27 +761,75 @@
     },
     "flatten_h5+add_named": {
       "name": "flatten_h5+add_named",
-      "book_pct": 5.731,
-      "final_equity": 10573.09,
-      "win_rate": 0.5532,
+      "book_pct": 7.998,
+      "final_equity": 10799.79,
+      "win_rate": 0.5714,
       "dollar_days": 0.5769,
       "starts_yes": null,
       "start_n": 0,
       "start_green": 0,
-      "n_trades": 105,
-      "n_skips": 366
+      "n_trades": 94,
+      "n_skips": 341
     },
     "flatten_h5+full": {
       "name": "flatten_h5+full",
-      "book_pct": 7.033,
-      "final_equity": 10703.3,
-      "win_rate": 0.5532,
+      "book_pct": 9.668,
+      "final_equity": 10966.82,
+      "win_rate": 0.5714,
       "dollar_days": 0.5769,
       "starts_yes": null,
       "start_n": 0,
       "start_green": 0,
-      "n_trades": 104,
-      "n_skips": 361
+      "n_trades": 93,
+      "n_skips": 336
+    },
+    "grok_n4_h1": {
+      "name": "grok_n4_h1",
+      "book_pct": 1.982,
+      "final_equity": 10198.17,
+      "win_rate": 0.5556,
+      "dollar_days": 0.3077,
+      "starts_yes": null,
+      "start_n": 0,
+      "start_green": 0,
+      "n_trades": 18,
+      "n_skips": 2
+    },
+    "grok_n4_h2": {
+      "name": "grok_n4_h2",
+      "book_pct": 1.452,
+      "final_equity": 10145.2,
+      "win_rate": 0.4444,
+      "dollar_days": 0.3462,
+      "starts_yes": null,
+      "start_n": 0,
+      "start_green": 0,
+      "n_trades": 18,
+      "n_skips": 10
+    },
+    "grok_n8_h1": {
+      "name": "grok_n8_h1",
+      "book_pct": 1.982,
+      "final_equity": 10198.17,
+      "win_rate": 0.5556,
+      "dollar_days": 0.3077,
+      "starts_yes": null,
+      "start_n": 0,
+      "start_green": 0,
+      "n_trades": 18,
+      "n_skips": 2
+    },
+    "grok_n8_h2": {
+      "name": "grok_n8_h2",
+      "book_pct": 1.452,
+      "final_equity": 10145.2,
+      "win_rate": 0.4444,
+      "dollar_days": 0.3462,
+      "starts_yes": null,
+      "start_n": 0,
+      "start_green": 0,
+      "n_trades": 18,
+      "n_skips": 10
     }
   },
   "daily_books": {
@@ -2072,11 +2286,11 @@
     },
     "union_hot_n4_h1+add_named": {
       "name": "union_hot_n4_h1+add_named",
-      "total_ret_pct": 20.737,
-      "final_equity": 12073.66,
-      "win_rate": 0.5283,
-      "n_trades": 111,
-      "n_skips": 79,
+      "total_ret_pct": 22.358,
+      "final_equity": 12235.81,
+      "win_rate": 0.5532,
+      "n_trades": 98,
+      "n_skips": 71,
       "equity": [
         10000.0,
         10345.37,
@@ -2084,27 +2298,27 @@
         10024.6,
         9868.83,
         9904.09,
-        9817.31,
-        10025.87,
-        11357.13,
-        12004.72,
-        11772.67,
-        12131.8,
-        12114.8,
-        11937.98,
-        11898.08,
-        11898.08,
-        11465.89,
-        12230.93,
-        11826.3,
-        11826.3,
-        11826.3,
-        12073.66,
-        12073.66,
-        12073.66,
-        12073.66,
-        12073.66,
-        12073.66
+        9740.56,
+        10185.08,
+        11579.7,
+        12244.02,
+        12056.59,
+        12573.63,
+        12585.14,
+        12366.3,
+        12316.92,
+        12316.92,
+        11636.55,
+        12422.7,
+        11969.66,
+        11969.66,
+        11969.66,
+        12235.81,
+        12235.81,
+        12235.81,
+        12235.81,
+        12235.81,
+        12235.81
       ],
       "daily": [
         {
@@ -2228,25 +2442,21 @@
           "date": "2026-08-20",
           "s": 1.12,
           "hard_red": false,
-          "equity": 9817.31,
-          "mean": -0.8762,
+          "equity": 9740.56,
+          "mean": -1.6511,
           "made_money": false,
           "bought": [
             "MRNA",
             "CYPH",
             "ABCL",
-            "AZI",
-            "AAT",
-            "BTC"
+            "AZI"
           ],
           "sold": [],
           "held": [
             "MRNA",
             "CYPH",
             "ABCL",
-            "AZI",
-            "AAT",
-            "BTC"
+            "AZI"
           ],
           "open_cash": 9904.09
         },
@@ -2254,8 +2464,8 @@
           "date": "2026-08-21",
           "s": 3.25,
           "hard_red": false,
-          "equity": 10025.87,
-          "mean": 2.1244,
+          "equity": 10185.08,
+          "mean": 4.5636,
           "made_money": true,
           "bought": [
             "XHG",
@@ -2263,9 +2473,7 @@
           ],
           "sold": [
             "ABCL",
-            "AZI",
-            "AAT",
-            "BTC"
+            "AZI"
           ],
           "held": [
             "MRNA",
@@ -2273,14 +2481,14 @@
             "XHG",
             "CAPR"
           ],
-          "open_cash": 151.06
+          "open_cash": 25.16
         },
         {
           "date": "2026-08-24",
           "s": -5.17,
           "hard_red": true,
-          "equity": 11357.13,
-          "mean": 13.2782,
+          "equity": 11579.7,
+          "mean": 13.6928,
           "made_money": true,
           "bought": [],
           "sold": [
@@ -2290,14 +2498,14 @@
             "CAPR"
           ],
           "held": [],
-          "open_cash": 5.64
+          "open_cash": 0.02
         },
         {
           "date": "2026-08-25",
           "s": 1.8,
           "hard_red": false,
-          "equity": 12004.72,
-          "mean": 5.7021,
+          "equity": 12244.02,
+          "mean": 5.7369,
           "made_money": true,
           "bought": [
             "REAX",
@@ -2316,20 +2524,19 @@
             "BEN",
             "NVDA"
           ],
-          "open_cash": 11357.13
+          "open_cash": 11579.7
         },
         {
           "date": "2026-08-26",
           "s": 2.02,
           "hard_red": false,
-          "equity": 11772.67,
-          "mean": -1.933,
+          "equity": 12056.59,
+          "mean": -1.5308,
           "made_money": false,
           "bought": [
             "BYND",
             "USDE",
             "PURR",
-            "AAT",
             "COIN"
           ],
           "sold": [
@@ -2344,150 +2551,140 @@
             "BYND",
             "USDE",
             "PURR",
-            "AAT",
             "COIN"
           ],
-          "open_cash": 214.93
+          "open_cash": 30.97
         },
         {
           "date": "2026-08-27",
           "s": null,
           "hard_red": false,
-          "equity": 12131.8,
-          "mean": 3.0505,
+          "equity": 12573.63,
+          "mean": 4.2884,
           "made_money": true,
           "bought": [
             "SLI",
             "RRC",
             "PGY",
-            "CRK",
-            "POWL"
+            "CRK"
           ],
           "sold": [
             "XHG",
             "BYND",
             "USDE",
             "PURR",
-            "AAT",
             "COIN"
           ],
           "held": [
             "SLI",
             "RRC",
             "PGY",
-            "CRK",
-            "POWL"
+            "CRK"
           ],
-          "open_cash": 160.9
+          "open_cash": 152.19
         },
         {
           "date": "2026-08-28",
           "s": 0.75,
           "hard_red": false,
-          "equity": 12114.8,
-          "mean": -0.1401,
-          "made_money": false,
+          "equity": 12585.14,
+          "mean": 0.0915,
+          "made_money": true,
           "bought": [
             "BYND",
             "CAPR",
             "MRNA",
             "ANF",
-            "AAT",
             "BHB"
           ],
           "sold": [
             "SLI",
             "RRC",
             "PGY",
-            "CRK",
-            "POWL"
+            "CRK"
           ],
           "held": [
             "BYND",
             "CAPR",
             "MRNA",
             "ANF",
-            "AAT",
             "BHB"
           ],
-          "open_cash": 67.04
+          "open_cash": 9.79
         },
         {
           "date": "2026-08-31",
           "s": -5.85,
           "hard_red": true,
-          "equity": 11937.98,
-          "mean": -1.4595,
+          "equity": 12366.3,
+          "mean": -1.7389,
           "made_money": false,
           "bought": [],
           "sold": [
             "CAPR",
             "MRNA",
             "ANF",
-            "AAT",
             "BHB"
           ],
           "held": [
             "BYND"
           ],
-          "open_cash": 257.25
+          "open_cash": 77.97
         },
         {
           "date": "2026-09-01",
           "s": -6.3,
           "hard_red": true,
-          "equity": 11898.08,
-          "mean": -0.3342,
+          "equity": 12316.92,
+          "mean": -0.3993,
           "made_money": false,
           "bought": [],
           "sold": [
             "BYND"
           ],
           "held": [],
-          "open_cash": 10022.78
+          "open_cash": 9972.3
         },
         {
           "date": "2026-09-02",
           "s": -3.83,
           "hard_red": true,
-          "equity": 11898.08,
+          "equity": 12316.92,
           "mean": 0.0,
           "made_money": false,
           "bought": [],
           "sold": [],
           "held": [],
-          "open_cash": 11898.08
+          "open_cash": 12316.92
         },
         {
           "date": "2026-09-03",
           "s": -0.9,
           "hard_red": false,
-          "equity": 11465.89,
-          "mean": -3.6324,
+          "equity": 11636.55,
+          "mean": -5.5239,
           "made_money": false,
           "bought": [
             "GPRO",
             "REAX",
             "CNH",
-            "MMED",
-            "SMX"
+            "MMED"
           ],
           "sold": [],
           "held": [
             "GPRO",
             "REAX",
             "CNH",
-            "MMED",
-            "SMX"
+            "MMED"
           ],
-          "open_cash": 11898.08
+          "open_cash": 12316.92
         },
         {
           "date": "2026-09-04",
           "s": 2.25,
           "hard_red": false,
-          "equity": 12230.93,
-          "mean": 6.6723,
+          "equity": 12422.7,
+          "mean": 6.7559,
           "made_money": true,
           "bought": [
             "ASST",
@@ -2497,8 +2694,7 @@
           "sold": [
             "REAX",
             "CNH",
-            "MMED",
-            "SMX"
+            "MMED"
           ],
           "held": [
             "GPRO",
@@ -2506,14 +2702,14 @@
             "USDE",
             "DFDV"
           ],
-          "open_cash": 5.62
+          "open_cash": 8.76
         },
         {
           "date": "2026-09-08",
           "s": -11.47,
           "hard_red": true,
-          "equity": 11826.3,
-          "mean": -3.3083,
+          "equity": 11969.66,
+          "mean": -3.6469,
           "made_money": false,
           "bought": [],
           "sold": [
@@ -2523,61 +2719,59 @@
             "DFDV"
           ],
           "held": [],
-          "open_cash": 11.73
+          "open_cash": 9.46
         },
         {
           "date": "2026-09-09",
           "s": -13.95,
           "hard_red": true,
-          "equity": 11826.3,
+          "equity": 11969.66,
           "mean": 0.0,
           "made_money": false,
           "bought": [],
           "sold": [],
           "held": [],
-          "open_cash": 11826.3
+          "open_cash": 11969.66
         },
         {
           "date": "2026-09-10",
           "s": -13.28,
           "hard_red": true,
-          "equity": 11826.3,
+          "equity": 11969.66,
           "mean": 0.0,
           "made_money": false,
           "bought": [],
           "sold": [],
           "held": [],
-          "open_cash": 11826.3
+          "open_cash": 11969.66
         },
         {
           "date": "2026-09-11",
           "s": 0.5,
           "hard_red": false,
-          "equity": 12073.66,
-          "mean": 2.0916,
+          "equity": 12235.81,
+          "mean": 2.2235,
           "made_money": true,
           "bought": [
             "INDP",
             "BNC",
             "IRD",
-            "CMRC",
-            "USO"
+            "CMRC"
           ],
           "sold": [],
           "held": [
             "INDP",
             "BNC",
             "IRD",
-            "CMRC",
-            "USO"
+            "CMRC"
           ],
-          "open_cash": 11826.3
+          "open_cash": 11969.66
         },
         {
           "date": "2026-09-14",
           "s": -11.0,
           "hard_red": true,
-          "equity": 12073.66,
+          "equity": 12235.81,
           "mean": 0.0,
           "made_money": false,
           "bought": [],
@@ -2586,16 +2780,15 @@
             "INDP",
             "BNC",
             "IRD",
-            "CMRC",
-            "USO"
+            "CMRC"
           ],
-          "open_cash": 55.24
+          "open_cash": 1.83
         },
         {
           "date": "2026-09-15",
           "s": -3.84,
           "hard_red": true,
-          "equity": 12073.66,
+          "equity": 12235.81,
           "mean": 0.0,
           "made_money": false,
           "bought": [],
@@ -2604,16 +2797,15 @@
             "INDP",
             "BNC",
             "IRD",
-            "CMRC",
-            "USO"
+            "CMRC"
           ],
-          "open_cash": 55.24
+          "open_cash": 1.83
         },
         {
           "date": "2026-09-16",
           "s": 5.3,
           "hard_red": false,
-          "equity": 12073.66,
+          "equity": 12235.81,
           "mean": 0.0,
           "made_money": false,
           "bought": [],
@@ -2622,16 +2814,15 @@
             "INDP",
             "BNC",
             "IRD",
-            "CMRC",
-            "USO"
+            "CMRC"
           ],
-          "open_cash": 55.24
+          "open_cash": 1.83
         },
         {
           "date": "2026-09-17",
           "s": 7.38,
           "hard_red": false,
-          "equity": 12073.66,
+          "equity": 12235.81,
           "mean": 0.0,
           "made_money": false,
           "bought": [],
@@ -2640,16 +2831,15 @@
             "INDP",
             "BNC",
             "IRD",
-            "CMRC",
-            "USO"
+            "CMRC"
           ],
-          "open_cash": 55.24
+          "open_cash": 1.83
         },
         {
           "date": "2026-09-18",
           "s": 4.86,
           "hard_red": false,
-          "equity": 12073.66,
+          "equity": 12235.81,
           "mean": 0.0,
           "made_money": false,
           "bought": [],
@@ -2658,20 +2848,19 @@
             "INDP",
             "BNC",
             "IRD",
-            "CMRC",
-            "USO"
+            "CMRC"
           ],
-          "open_cash": 55.24
+          "open_cash": 1.83
         }
       ]
     },
     "union_hot_n4_h1+full": {
       "name": "union_hot_n4_h1+full",
-      "total_ret_pct": 20.75,
-      "final_equity": 12075.04,
-      "win_rate": 0.537,
-      "n_trades": 113,
-      "n_skips": 79,
+      "total_ret_pct": 22.225,
+      "final_equity": 12222.45,
+      "win_rate": 0.5625,
+      "n_trades": 100,
+      "n_skips": 71,
       "equity": [
         10000.0,
         10345.37,
@@ -2679,27 +2868,27 @@
         10024.6,
         9868.83,
         9904.09,
-        9817.31,
-        10210.3,
-        11358.88,
-        12006.48,
-        11774.42,
-        12133.55,
-        12116.55,
-        11939.73,
-        11899.83,
-        11899.83,
-        11467.24,
-        12232.59,
-        11827.82,
-        11827.82,
-        11827.82,
-        12075.04,
-        12075.04,
-        12075.04,
-        12075.04,
-        12075.04,
-        12075.04
+        9740.56,
+        10205.81,
+        11568.18,
+        12228.11,
+        12042.44,
+        12559.32,
+        12570.95,
+        12352.91,
+        12303.79,
+        12303.79,
+        11623.87,
+        12409.6,
+        11956.96,
+        11956.96,
+        11956.96,
+        12222.45,
+        12222.45,
+        12222.45,
+        12222.45,
+        12222.45,
+        12222.45
       ],
       "daily": [
         {
@@ -2823,25 +3012,21 @@
           "date": "2026-08-20",
           "s": 1.12,
           "hard_red": false,
-          "equity": 9817.31,
-          "mean": -0.8762,
+          "equity": 9740.56,
+          "mean": -1.6511,
           "made_money": false,
           "bought": [
             "MRNA",
             "CYPH",
             "ABCL",
-            "AZI",
-            "AAT",
-            "BTC"
+            "AZI"
           ],
           "sold": [],
           "held": [
             "MRNA",
             "CYPH",
             "ABCL",
-            "AZI",
-            "AAT",
-            "BTC"
+            "AZI"
           ],
           "open_cash": 9904.09
         },
@@ -2849,8 +3034,8 @@
           "date": "2026-08-21",
           "s": 3.25,
           "hard_red": false,
-          "equity": 10210.3,
-          "mean": 4.003,
+          "equity": 10205.81,
+          "mean": 4.7764,
           "made_money": true,
           "bought": [
             "XHG",
@@ -2860,9 +3045,7 @@
           "sold": [
             "MRNA",
             "ABCL",
-            "AZI",
-            "AAT",
-            "BTC"
+            "AZI"
           ],
           "held": [
             "CYPH",
@@ -2870,14 +3053,14 @@
             "MRNA",
             "CAPR"
           ],
-          "open_cash": 151.06
+          "open_cash": 25.16
         },
         {
           "date": "2026-08-24",
           "s": -5.17,
           "hard_red": true,
-          "equity": 11358.88,
-          "mean": 11.2492,
+          "equity": 11568.18,
+          "mean": 13.349,
           "made_money": true,
           "bought": [],
           "sold": [
@@ -2887,14 +3070,14 @@
             "CAPR"
           ],
           "held": [],
-          "open_cash": 62.02
+          "open_cash": 123.02
         },
         {
           "date": "2026-08-25",
           "s": 1.8,
           "hard_red": false,
-          "equity": 12006.48,
-          "mean": 5.7013,
+          "equity": 12228.11,
+          "mean": 5.7047,
           "made_money": true,
           "bought": [
             "REAX",
@@ -2913,20 +3096,19 @@
             "BEN",
             "NVDA"
           ],
-          "open_cash": 11358.88
+          "open_cash": 11568.18
         },
         {
           "date": "2026-08-26",
           "s": 2.02,
           "hard_red": false,
-          "equity": 11774.42,
-          "mean": -1.9328,
+          "equity": 12042.44,
+          "mean": -1.5184,
           "made_money": false,
           "bought": [
             "BYND",
             "USDE",
             "PURR",
-            "AAT",
             "COIN"
           ],
           "sold": [
@@ -2941,150 +3123,140 @@
             "BYND",
             "USDE",
             "PURR",
-            "AAT",
             "COIN"
           ],
-          "open_cash": 216.69
+          "open_cash": 50.79
         },
         {
           "date": "2026-08-27",
           "s": null,
           "hard_red": false,
-          "equity": 12133.55,
-          "mean": 3.0501,
+          "equity": 12559.32,
+          "mean": 4.2922,
           "made_money": true,
           "bought": [
             "SLI",
             "RRC",
             "PGY",
-            "CRK",
-            "POWL"
+            "CRK"
           ],
           "sold": [
             "XHG",
             "BYND",
             "USDE",
             "PURR",
-            "AAT",
             "COIN"
           ],
           "held": [
             "SLI",
             "RRC",
             "PGY",
-            "CRK",
-            "POWL"
+            "CRK"
           ],
-          "open_cash": 162.65
+          "open_cash": 156.35
         },
         {
           "date": "2026-08-28",
           "s": 0.75,
           "hard_red": false,
-          "equity": 12116.55,
-          "mean": -0.1401,
-          "made_money": false,
+          "equity": 12570.95,
+          "mean": 0.0926,
+          "made_money": true,
           "bought": [
             "BYND",
             "CAPR",
             "MRNA",
             "ANF",
-            "AAT",
             "BHB"
           ],
           "sold": [
             "SLI",
             "RRC",
             "PGY",
-            "CRK",
-            "POWL"
+            "CRK"
           ],
           "held": [
             "BYND",
             "CAPR",
             "MRNA",
             "ANF",
-            "AAT",
             "BHB"
           ],
-          "open_cash": 68.79
+          "open_cash": 39.76
         },
         {
           "date": "2026-08-31",
           "s": -5.85,
           "hard_red": true,
-          "equity": 11939.73,
-          "mean": -1.4593,
+          "equity": 12352.91,
+          "mean": -1.7345,
           "made_money": false,
           "bought": [],
           "sold": [
             "CAPR",
             "MRNA",
             "ANF",
-            "AAT",
             "BHB"
           ],
           "held": [
             "BYND"
           ],
-          "open_cash": 259.0
+          "open_cash": 126.63
         },
         {
           "date": "2026-09-01",
           "s": -6.3,
           "hard_red": true,
-          "equity": 11899.83,
-          "mean": -0.3342,
+          "equity": 12303.79,
+          "mean": -0.3976,
           "made_money": false,
           "bought": [],
           "sold": [
             "BYND"
           ],
           "held": [],
-          "open_cash": 10024.53
+          "open_cash": 9972.21
         },
         {
           "date": "2026-09-02",
           "s": -3.83,
           "hard_red": true,
-          "equity": 11899.83,
+          "equity": 12303.79,
           "mean": 0.0,
           "made_money": false,
           "bought": [],
           "sold": [],
           "held": [],
-          "open_cash": 11899.83
+          "open_cash": 12303.79
         },
         {
           "date": "2026-09-03",
           "s": -0.9,
           "hard_red": false,
-          "equity": 11467.24,
-          "mean": -3.6353,
+          "equity": 11623.87,
+          "mean": -5.5261,
           "made_money": false,
           "bought": [
             "GPRO",
             "REAX",
             "CNH",
-            "MMED",
-            "SMX"
+            "MMED"
           ],
           "sold": [],
           "held": [
             "GPRO",
             "REAX",
             "CNH",
-            "MMED",
-            "SMX"
+            "MMED"
           ],
-          "open_cash": 11899.83
+          "open_cash": 12303.79
         },
         {
           "date": "2026-09-04",
           "s": 2.25,
           "hard_red": false,
-          "equity": 12232.59,
-          "mean": 6.6742,
+          "equity": 12409.6,
+          "mean": 6.7596,
           "made_money": true,
           "bought": [
             "ASST",
@@ -3094,8 +3266,7 @@
           "sold": [
             "REAX",
             "CNH",
-            "MMED",
-            "SMX"
+            "MMED"
           ],
           "held": [
             "GPRO",
@@ -3103,14 +3274,14 @@
             "USDE",
             "DFDV"
           ],
-          "open_cash": 5.58
+          "open_cash": 21.31
         },
         {
           "date": "2026-09-08",
           "s": -11.47,
           "hard_red": true,
-          "equity": 11827.82,
-          "mean": -3.3089,
+          "equity": 11956.96,
+          "mean": -3.6475,
           "made_money": false,
           "bought": [],
           "sold": [
@@ -3120,61 +3291,59 @@
             "DFDV"
           ],
           "held": [],
-          "open_cash": 11.69
+          "open_cash": 11.86
         },
         {
           "date": "2026-09-09",
           "s": -13.95,
           "hard_red": true,
-          "equity": 11827.82,
+          "equity": 11956.96,
           "mean": 0.0,
           "made_money": false,
           "bought": [],
           "sold": [],
           "held": [],
-          "open_cash": 11827.82
+          "open_cash": 11956.96
         },
         {
           "date": "2026-09-10",
           "s": -13.28,
           "hard_red": true,
-          "equity": 11827.82,
+          "equity": 11956.96,
           "mean": 0.0,
           "made_money": false,
           "bought": [],
           "sold": [],
           "held": [],
-          "open_cash": 11827.82
+          "open_cash": 11956.96
         },
         {
           "date": "2026-09-11",
           "s": 0.5,
           "hard_red": false,
-          "equity": 12075.04,
-          "mean": 2.0902,
+          "equity": 12222.45,
+          "mean": 2.2204,
           "made_money": true,
           "bought": [
             "INDP",
             "BNC",
             "IRD",
-            "CMRC",
-            "USO"
+            "CMRC"
           ],
           "sold": [],
           "held": [
             "INDP",
             "BNC",
             "IRD",
-            "CMRC",
-            "USO"
+            "CMRC"
           ],
-          "open_cash": 11827.82
+          "open_cash": 11956.96
         },
         {
           "date": "2026-09-14",
           "s": -11.0,
           "hard_red": true,
-          "equity": 12075.04,
+          "equity": 12222.45,
           "mean": 0.0,
           "made_money": false,
           "bought": [],
@@ -3183,16 +3352,15 @@
             "INDP",
             "BNC",
             "IRD",
-            "CMRC",
-            "USO"
+            "CMRC"
           ],
-          "open_cash": 50.58
+          "open_cash": 3.05
         },
         {
           "date": "2026-09-15",
           "s": -3.84,
           "hard_red": true,
-          "equity": 12075.04,
+          "equity": 12222.45,
           "mean": 0.0,
           "made_money": false,
           "bought": [],
@@ -3201,16 +3369,15 @@
             "INDP",
             "BNC",
             "IRD",
-            "CMRC",
-            "USO"
+            "CMRC"
           ],
-          "open_cash": 50.58
+          "open_cash": 3.05
         },
         {
           "date": "2026-09-16",
           "s": 5.3,
           "hard_red": false,
-          "equity": 12075.04,
+          "equity": 12222.45,
           "mean": 0.0,
           "made_money": false,
           "bought": [],
@@ -3219,16 +3386,15 @@
             "INDP",
             "BNC",
             "IRD",
-            "CMRC",
-            "USO"
+            "CMRC"
           ],
-          "open_cash": 50.58
+          "open_cash": 3.05
         },
         {
           "date": "2026-09-17",
           "s": 7.38,
           "hard_red": false,
-          "equity": 12075.04,
+          "equity": 12222.45,
           "mean": 0.0,
           "made_money": false,
           "bought": [],
@@ -3237,16 +3403,15 @@
             "INDP",
             "BNC",
             "IRD",
-            "CMRC",
-            "USO"
+            "CMRC"
           ],
-          "open_cash": 50.58
+          "open_cash": 3.05
         },
         {
           "date": "2026-09-18",
           "s": 4.86,
           "hard_red": false,
-          "equity": 12075.04,
+          "equity": 12222.45,
           "mean": 0.0,
           "made_money": false,
           "bought": [],
@@ -3255,10 +3420,9 @@
             "INDP",
             "BNC",
             "IRD",
-            "CMRC",
-            "USO"
+            "CMRC"
           ],
-          "open_cash": 50.58
+          "open_cash": 3.05
         }
       ]
     },
@@ -5146,11 +5310,11 @@
     },
     "flatten_h5+add_named": {
       "name": "flatten_h5+add_named",
-      "total_ret_pct": 5.731,
-      "final_equity": 10573.09,
-      "win_rate": 0.5532,
-      "n_trades": 105,
-      "n_skips": 366,
+      "total_ret_pct": 7.998,
+      "final_equity": 10799.79,
+      "win_rate": 0.5714,
+      "n_trades": 94,
+      "n_skips": 341,
       "equity": [
         10000.0,
         10153.12,
@@ -5158,27 +5322,27 @@
         10524.24,
         10572.49,
         11031.12,
-        11115.91,
-        11415.96,
-        11516.18,
-        11744.02,
-        11422.42,
-        11453.97,
-        11134.11,
-        11240.21,
-        11319.53,
-        11124.16,
-        11056.3,
-        11340.32,
-        11015.79,
-        10702.2,
-        10469.79,
-        10572.52,
-        10573.09,
-        10573.09,
-        10573.09,
-        10573.09,
-        10573.09
+        11159.59,
+        11454.05,
+        11535.33,
+        11811.42,
+        11436.97,
+        11487.05,
+        11287.24,
+        11495.73,
+        11759.55,
+        11704.55,
+        11553.47,
+        11578.56,
+        11444.85,
+        11053.65,
+        10763.96,
+        10799.46,
+        10799.79,
+        10799.79,
+        10799.79,
+        10799.79,
+        10799.79
       ],
       "daily": [
         {
@@ -5327,8 +5491,8 @@
           "date": "2026-08-20",
           "s": 1.12,
           "hard_red": false,
-          "equity": 11115.91,
-          "mean": 0.7686,
+          "equity": 11159.59,
+          "mean": 1.1646,
           "made_money": true,
           "bought": [
             "AG",
@@ -5338,9 +5502,7 @@
             "IAG",
             "KGC",
             "NFGC",
-            "WPM",
-            "AAT",
-            "BTC"
+            "WPM"
           ],
           "sold": [
             "BTSG",
@@ -5366,9 +5528,7 @@
             "IAG",
             "KGC",
             "NFGC",
-            "WPM",
-            "AAT",
-            "BTC"
+            "WPM"
           ],
           "open_cash": 45.12
         },
@@ -5376,8 +5536,8 @@
           "date": "2026-08-21",
           "s": 3.25,
           "hard_red": false,
-          "equity": 11415.96,
-          "mean": 2.6993,
+          "equity": 11454.05,
+          "mean": 2.6386,
           "made_money": true,
           "bought": [
             "AUPH",
@@ -5403,22 +5563,20 @@
             "KGC",
             "NFGC",
             "WPM",
-            "AAT",
-            "BTC",
             "AUPH",
             "ARCT",
             "AUTL",
             "CRDL",
             "CYPH"
           ],
-          "open_cash": 223.85
+          "open_cash": 176.5
         },
         {
           "date": "2026-08-24",
           "s": -5.17,
           "hard_red": true,
-          "equity": 11516.18,
-          "mean": 0.8779,
+          "equity": 11535.33,
+          "mean": 0.7096,
           "made_money": true,
           "bought": [],
           "sold": [
@@ -5436,22 +5594,20 @@
             "KGC",
             "NFGC",
             "WPM",
-            "AAT",
-            "BTC",
             "AUPH",
             "ARCT",
             "AUTL",
             "CRDL",
             "CYPH"
           ],
-          "open_cash": 111.2
+          "open_cash": 82.54
         },
         {
           "date": "2026-08-25",
           "s": 1.8,
           "hard_red": false,
-          "equity": 11744.02,
-          "mean": 1.9784,
+          "equity": 11811.42,
+          "mean": 2.3934,
           "made_money": true,
           "bought": [
             "OCUL",
@@ -5468,8 +5624,6 @@
             "KGC",
             "NFGC",
             "WPM",
-            "AAT",
-            "BTC",
             "AUPH",
             "ARCT",
             "AUTL",
@@ -5479,18 +5633,16 @@
             "CRMD",
             "RZLT"
           ],
-          "open_cash": 149.81
+          "open_cash": 121.15
         },
         {
           "date": "2026-08-26",
           "s": 2.02,
           "hard_red": false,
-          "equity": 11422.42,
-          "mean": -2.7384,
+          "equity": 11436.97,
+          "mean": -3.1702,
           "made_money": false,
-          "bought": [
-            "MOS"
-          ],
+          "bought": [],
           "sold": [],
           "held": [
             "AG",
@@ -5501,8 +5653,6 @@
             "KGC",
             "NFGC",
             "WPM",
-            "AAT",
-            "BTC",
             "AUPH",
             "ARCT",
             "AUTL",
@@ -5510,23 +5660,22 @@
             "CYPH",
             "OCUL",
             "CRMD",
-            "RZLT",
-            "MOS"
+            "RZLT"
           ],
-          "open_cash": 106.87
+          "open_cash": 86.65
         },
         {
           "date": "2026-08-27",
           "s": null,
           "hard_red": false,
-          "equity": 11453.97,
-          "mean": 0.2762,
+          "equity": 11487.05,
+          "mean": 0.4379,
           "made_money": true,
           "bought": [
             "RRC",
             "CRK",
-            "SLI",
-            "POWL"
+            "MOS",
+            "SLI"
           ],
           "sold": [
             "AG",
@@ -5536,9 +5685,7 @@
             "IAG",
             "KGC",
             "NFGC",
-            "WPM",
-            "AAT",
-            "BTC"
+            "WPM"
           ],
           "held": [
             "AUPH",
@@ -5549,23 +5696,21 @@
             "OCUL",
             "CRMD",
             "RZLT",
-            "MOS",
             "RRC",
             "CRK",
-            "SLI",
-            "POWL"
+            "MOS",
+            "SLI"
           ],
-          "open_cash": 81.78
+          "open_cash": 86.65
         },
         {
           "date": "2026-08-28",
           "s": 0.75,
           "hard_red": false,
-          "equity": 11134.11,
-          "mean": -2.7926,
+          "equity": 11287.24,
+          "mean": -1.7394,
           "made_money": false,
           "bought": [
-            "AAT",
             "BHB"
           ],
           "sold": [
@@ -5579,22 +5724,20 @@
             "OCUL",
             "CRMD",
             "RZLT",
-            "MOS",
             "RRC",
             "CRK",
+            "MOS",
             "SLI",
-            "POWL",
-            "AAT",
             "BHB"
           ],
-          "open_cash": 67.79
+          "open_cash": 0.08
         },
         {
           "date": "2026-08-31",
           "s": -5.85,
           "hard_red": true,
-          "equity": 11240.21,
-          "mean": 0.9529,
+          "equity": 11495.73,
+          "mean": 1.8471,
           "made_money": true,
           "bought": [],
           "sold": [],
@@ -5602,22 +5745,20 @@
             "OCUL",
             "CRMD",
             "RZLT",
-            "MOS",
             "RRC",
             "CRK",
+            "MOS",
             "SLI",
-            "POWL",
-            "AAT",
             "BHB"
           ],
-          "open_cash": 41.7
+          "open_cash": 5.29
         },
         {
           "date": "2026-09-01",
           "s": -6.3,
           "hard_red": true,
-          "equity": 11319.53,
-          "mean": 0.7057,
+          "equity": 11759.55,
+          "mean": 2.2949,
           "made_money": true,
           "bought": [],
           "sold": [
@@ -5626,76 +5767,68 @@
             "RZLT"
           ],
           "held": [
-            "MOS",
             "RRC",
             "CRK",
+            "MOS",
             "SLI",
-            "POWL",
-            "AAT",
             "BHB"
           ],
-          "open_cash": 41.7
+          "open_cash": 5.29
         },
         {
           "date": "2026-09-02",
           "s": -3.83,
           "hard_red": true,
-          "equity": 11124.16,
-          "mean": -1.726,
+          "equity": 11704.55,
+          "mean": -0.4677,
           "made_money": false,
           "bought": [],
-          "sold": [
-            "MOS"
-          ],
+          "sold": [],
           "held": [
             "RRC",
             "CRK",
+            "MOS",
             "SLI",
-            "POWL",
-            "AAT",
             "BHB"
           ],
-          "open_cash": 82.06
+          "open_cash": 37.48
         },
         {
           "date": "2026-09-03",
           "s": -0.9,
           "hard_red": false,
-          "equity": 11056.3,
-          "mean": -0.61,
+          "equity": 11553.47,
+          "mean": -1.2908,
           "made_money": false,
           "bought": [
             "ATRC",
             "HRMY",
             "CABA",
             "VSTM",
-            "RVTY",
-            "SMX"
+            "RVTY"
           ],
           "sold": [
             "RRC",
             "CRK",
-            "SLI",
-            "POWL"
+            "MOS",
+            "SLI"
           ],
           "held": [
-            "AAT",
             "BHB",
             "ATRC",
             "HRMY",
             "CABA",
             "VSTM",
-            "RVTY",
-            "SMX"
+            "RVTY"
           ],
-          "open_cash": 106.49
+          "open_cash": 37.48
         },
         {
           "date": "2026-09-04",
           "s": 2.25,
           "hard_red": false,
-          "equity": 11340.32,
-          "mean": 2.5689,
+          "equity": 11578.56,
+          "mean": 0.2172,
           "made_money": true,
           "bought": [
             "ALEC",
@@ -5706,7 +5839,6 @@
             "VIR"
           ],
           "sold": [
-            "AAT",
             "BHB"
           ],
           "held": [
@@ -5715,7 +5847,6 @@
             "CABA",
             "VSTM",
             "RVTY",
-            "SMX",
             "ALEC",
             "BHC",
             "BMEA",
@@ -5723,14 +5854,14 @@
             "OPK",
             "VIR"
           ],
-          "open_cash": 175.72
+          "open_cash": 95.15
         },
         {
           "date": "2026-09-08",
           "s": -11.47,
           "hard_red": true,
-          "equity": 11015.79,
-          "mean": -2.8617,
+          "equity": 11444.85,
+          "mean": -1.1548,
           "made_money": false,
           "bought": [],
           "sold": [],
@@ -5740,7 +5871,6 @@
             "CABA",
             "VSTM",
             "RVTY",
-            "SMX",
             "ALEC",
             "BHC",
             "BMEA",
@@ -5748,14 +5878,14 @@
             "OPK",
             "VIR"
           ],
-          "open_cash": 7.59
+          "open_cash": 6.38
         },
         {
           "date": "2026-09-09",
           "s": -13.95,
           "hard_red": true,
-          "equity": 10702.2,
-          "mean": -2.8467,
+          "equity": 11053.65,
+          "mean": -3.4181,
           "made_money": false,
           "bought": [],
           "sold": [],
@@ -5765,7 +5895,6 @@
             "CABA",
             "VSTM",
             "RVTY",
-            "SMX",
             "ALEC",
             "BHC",
             "BMEA",
@@ -5773,14 +5902,14 @@
             "OPK",
             "VIR"
           ],
-          "open_cash": 7.59
+          "open_cash": 6.38
         },
         {
           "date": "2026-09-10",
           "s": -13.28,
           "hard_red": true,
-          "equity": 10469.79,
-          "mean": -2.1716,
+          "equity": 10763.96,
+          "mean": -2.6208,
           "made_money": false,
           "bought": [],
           "sold": [],
@@ -5790,7 +5919,6 @@
             "CABA",
             "VSTM",
             "RVTY",
-            "SMX",
             "ALEC",
             "BHC",
             "BMEA",
@@ -5798,14 +5926,14 @@
             "OPK",
             "VIR"
           ],
-          "open_cash": 7.59
+          "open_cash": 6.38
         },
         {
           "date": "2026-09-11",
           "s": 0.5,
           "hard_red": false,
-          "equity": 10572.52,
-          "mean": 0.9812,
+          "equity": 10799.46,
+          "mean": 0.3298,
           "made_money": true,
           "bought": [
             "AUPH",
@@ -5813,16 +5941,14 @@
             "SANM",
             "ORCL",
             "NVT",
-            "COHU",
-            "USO"
+            "COHU"
           ],
           "sold": [
             "ATRC",
             "HRMY",
             "CABA",
             "VSTM",
-            "RVTY",
-            "SMX"
+            "RVTY"
           ],
           "held": [
             "ALEC",
@@ -5836,17 +5962,16 @@
             "SANM",
             "ORCL",
             "NVT",
-            "COHU",
-            "USO"
+            "COHU"
           ],
-          "open_cash": 7.59
+          "open_cash": 6.38
         },
         {
           "date": "2026-09-14",
           "s": -11.0,
           "hard_red": true,
-          "equity": 10573.09,
-          "mean": 0.0054,
+          "equity": 10799.79,
+          "mean": 0.0031,
           "made_money": true,
           "bought": [],
           "sold": [
@@ -5863,16 +5988,15 @@
             "SANM",
             "ORCL",
             "NVT",
-            "COHU",
-            "USO"
+            "COHU"
           ],
-          "open_cash": 323.48
+          "open_cash": 321.44
         },
         {
           "date": "2026-09-15",
           "s": -3.84,
           "hard_red": true,
-          "equity": 10573.09,
+          "equity": 10799.79,
           "mean": 0.0,
           "made_money": false,
           "bought": [],
@@ -5887,16 +6011,15 @@
             "SANM",
             "ORCL",
             "NVT",
-            "COHU",
-            "USO"
+            "COHU"
           ],
-          "open_cash": 431.2
+          "open_cash": 387.63
         },
         {
           "date": "2026-09-16",
           "s": 5.3,
           "hard_red": false,
-          "equity": 10573.09,
+          "equity": 10799.79,
           "mean": 0.0,
           "made_money": false,
           "bought": [],
@@ -5911,16 +6034,15 @@
             "SANM",
             "ORCL",
             "NVT",
-            "COHU",
-            "USO"
+            "COHU"
           ],
-          "open_cash": 431.2
+          "open_cash": 387.63
         },
         {
           "date": "2026-09-17",
           "s": 7.38,
           "hard_red": false,
-          "equity": 10573.09,
+          "equity": 10799.79,
           "mean": 0.0,
           "made_money": false,
           "bought": [],
@@ -5935,16 +6057,15 @@
             "SANM",
             "ORCL",
             "NVT",
-            "COHU",
-            "USO"
+            "COHU"
           ],
-          "open_cash": 431.2
+          "open_cash": 387.63
         },
         {
           "date": "2026-09-18",
           "s": 4.86,
           "hard_red": false,
-          "equity": 10573.09,
+          "equity": 10799.79,
           "mean": 0.0,
           "made_money": false,
           "bought": [],
@@ -5959,20 +6080,19 @@
             "SANM",
             "ORCL",
             "NVT",
-            "COHU",
-            "USO"
+            "COHU"
           ],
-          "open_cash": 431.2
+          "open_cash": 387.63
         }
       ]
     },
     "flatten_h5+full": {
       "name": "flatten_h5+full",
-      "total_ret_pct": 7.033,
-      "final_equity": 10703.3,
-      "win_rate": 0.5532,
-      "n_trades": 104,
-      "n_skips": 361,
+      "total_ret_pct": 9.668,
+      "final_equity": 10966.82,
+      "win_rate": 0.5714,
+      "n_trades": 93,
+      "n_skips": 336,
       "equity": [
         10000.0,
         10153.12,
@@ -5980,27 +6100,27 @@
         10524.24,
         10572.49,
         11031.12,
-        11115.91,
-        11415.96,
-        11516.18,
-        11744.02,
-        11422.42,
-        11453.97,
-        11134.11,
-        11240.21,
-        11319.53,
-        11124.16,
-        11056.3,
-        11340.32,
-        11015.79,
-        10702.2,
-        10469.79,
-        10702.72,
-        10703.3,
-        10703.3,
-        10703.3,
-        10703.3,
-        10703.3
+        11159.59,
+        11454.05,
+        11535.33,
+        11811.42,
+        11436.97,
+        11487.05,
+        11287.24,
+        11495.73,
+        11759.55,
+        11704.55,
+        11553.47,
+        11578.56,
+        11444.85,
+        11053.65,
+        10763.96,
+        10966.49,
+        10966.82,
+        10966.82,
+        10966.82,
+        10966.82,
+        10966.82
       ],
       "daily": [
         {
@@ -6149,8 +6269,8 @@
           "date": "2026-08-20",
           "s": 1.12,
           "hard_red": false,
-          "equity": 11115.91,
-          "mean": 0.7686,
+          "equity": 11159.59,
+          "mean": 1.1646,
           "made_money": true,
           "bought": [
             "AG",
@@ -6160,9 +6280,7 @@
             "IAG",
             "KGC",
             "NFGC",
-            "WPM",
-            "AAT",
-            "BTC"
+            "WPM"
           ],
           "sold": [
             "BTSG",
@@ -6188,9 +6306,7 @@
             "IAG",
             "KGC",
             "NFGC",
-            "WPM",
-            "AAT",
-            "BTC"
+            "WPM"
           ],
           "open_cash": 45.12
         },
@@ -6198,8 +6314,8 @@
           "date": "2026-08-21",
           "s": 3.25,
           "hard_red": false,
-          "equity": 11415.96,
-          "mean": 2.6993,
+          "equity": 11454.05,
+          "mean": 2.6386,
           "made_money": true,
           "bought": [
             "AUPH",
@@ -6225,22 +6341,20 @@
             "KGC",
             "NFGC",
             "WPM",
-            "AAT",
-            "BTC",
             "AUPH",
             "ARCT",
             "AUTL",
             "CRDL",
             "CYPH"
           ],
-          "open_cash": 223.85
+          "open_cash": 176.5
         },
         {
           "date": "2026-08-24",
           "s": -5.17,
           "hard_red": true,
-          "equity": 11516.18,
-          "mean": 0.8779,
+          "equity": 11535.33,
+          "mean": 0.7096,
           "made_money": true,
           "bought": [],
           "sold": [
@@ -6258,22 +6372,20 @@
             "KGC",
             "NFGC",
             "WPM",
-            "AAT",
-            "BTC",
             "AUPH",
             "ARCT",
             "AUTL",
             "CRDL",
             "CYPH"
           ],
-          "open_cash": 111.2
+          "open_cash": 82.54
         },
         {
           "date": "2026-08-25",
           "s": 1.8,
           "hard_red": false,
-          "equity": 11744.02,
-          "mean": 1.9784,
+          "equity": 11811.42,
+          "mean": 2.3934,
           "made_money": true,
           "bought": [
             "OCUL",
@@ -6290,8 +6402,6 @@
             "KGC",
             "NFGC",
             "WPM",
-            "AAT",
-            "BTC",
             "AUPH",
             "ARCT",
             "AUTL",
@@ -6301,18 +6411,16 @@
             "CRMD",
             "RZLT"
           ],
-          "open_cash": 149.81
+          "open_cash": 121.15
         },
         {
           "date": "2026-08-26",
           "s": 2.02,
           "hard_red": false,
-          "equity": 11422.42,
-          "mean": -2.7384,
+          "equity": 11436.97,
+          "mean": -3.1702,
           "made_money": false,
-          "bought": [
-            "MOS"
-          ],
+          "bought": [],
           "sold": [],
           "held": [
             "AG",
@@ -6323,8 +6431,6 @@
             "KGC",
             "NFGC",
             "WPM",
-            "AAT",
-            "BTC",
             "AUPH",
             "ARCT",
             "AUTL",
@@ -6332,23 +6438,22 @@
             "CYPH",
             "OCUL",
             "CRMD",
-            "RZLT",
-            "MOS"
+            "RZLT"
           ],
-          "open_cash": 106.87
+          "open_cash": 86.65
         },
         {
           "date": "2026-08-27",
           "s": null,
           "hard_red": false,
-          "equity": 11453.97,
-          "mean": 0.2762,
+          "equity": 11487.05,
+          "mean": 0.4379,
           "made_money": true,
           "bought": [
             "RRC",
             "CRK",
-            "SLI",
-            "POWL"
+            "MOS",
+            "SLI"
           ],
           "sold": [
             "AG",
@@ -6358,9 +6463,7 @@
             "IAG",
             "KGC",
             "NFGC",
-            "WPM",
-            "AAT",
-            "BTC"
+            "WPM"
           ],
           "held": [
             "AUPH",
@@ -6371,23 +6474,21 @@
             "OCUL",
             "CRMD",
             "RZLT",
-            "MOS",
             "RRC",
             "CRK",
-            "SLI",
-            "POWL"
+            "MOS",
+            "SLI"
           ],
-          "open_cash": 81.78
+          "open_cash": 86.65
         },
         {
           "date": "2026-08-28",
           "s": 0.75,
           "hard_red": false,
-          "equity": 11134.11,
-          "mean": -2.7926,
+          "equity": 11287.24,
+          "mean": -1.7394,
           "made_money": false,
           "bought": [
-            "AAT",
             "BHB"
           ],
           "sold": [
@@ -6401,22 +6502,20 @@
             "OCUL",
             "CRMD",
             "RZLT",
-            "MOS",
             "RRC",
             "CRK",
+            "MOS",
             "SLI",
-            "POWL",
-            "AAT",
             "BHB"
           ],
-          "open_cash": 67.79
+          "open_cash": 0.08
         },
         {
           "date": "2026-08-31",
           "s": -5.85,
           "hard_red": true,
-          "equity": 11240.21,
-          "mean": 0.9529,
+          "equity": 11495.73,
+          "mean": 1.8471,
           "made_money": true,
           "bought": [],
           "sold": [],
@@ -6424,22 +6523,20 @@
             "OCUL",
             "CRMD",
             "RZLT",
-            "MOS",
             "RRC",
             "CRK",
+            "MOS",
             "SLI",
-            "POWL",
-            "AAT",
             "BHB"
           ],
-          "open_cash": 41.7
+          "open_cash": 5.29
         },
         {
           "date": "2026-09-01",
           "s": -6.3,
           "hard_red": true,
-          "equity": 11319.53,
-          "mean": 0.7057,
+          "equity": 11759.55,
+          "mean": 2.2949,
           "made_money": true,
           "bought": [],
           "sold": [
@@ -6448,76 +6545,68 @@
             "RZLT"
           ],
           "held": [
-            "MOS",
             "RRC",
             "CRK",
+            "MOS",
             "SLI",
-            "POWL",
-            "AAT",
             "BHB"
           ],
-          "open_cash": 41.7
+          "open_cash": 5.29
         },
         {
           "date": "2026-09-02",
           "s": -3.83,
           "hard_red": true,
-          "equity": 11124.16,
-          "mean": -1.726,
+          "equity": 11704.55,
+          "mean": -0.4677,
           "made_money": false,
           "bought": [],
-          "sold": [
-            "MOS"
-          ],
+          "sold": [],
           "held": [
             "RRC",
             "CRK",
+            "MOS",
             "SLI",
-            "POWL",
-            "AAT",
             "BHB"
           ],
-          "open_cash": 82.06
+          "open_cash": 37.48
         },
         {
           "date": "2026-09-03",
           "s": -0.9,
           "hard_red": false,
-          "equity": 11056.3,
-          "mean": -0.61,
+          "equity": 11553.47,
+          "mean": -1.2908,
           "made_money": false,
           "bought": [
             "ATRC",
             "HRMY",
             "CABA",
             "VSTM",
-            "RVTY",
-            "SMX"
+            "RVTY"
           ],
           "sold": [
             "RRC",
             "CRK",
-            "SLI",
-            "POWL"
+            "MOS",
+            "SLI"
           ],
           "held": [
-            "AAT",
             "BHB",
             "ATRC",
             "HRMY",
             "CABA",
             "VSTM",
-            "RVTY",
-            "SMX"
+            "RVTY"
           ],
-          "open_cash": 106.49
+          "open_cash": 37.48
         },
         {
           "date": "2026-09-04",
           "s": 2.25,
           "hard_red": false,
-          "equity": 11340.32,
-          "mean": 2.5689,
+          "equity": 11578.56,
+          "mean": 0.2172,
           "made_money": true,
           "bought": [
             "ALEC",
@@ -6528,7 +6617,6 @@
             "VIR"
           ],
           "sold": [
-            "AAT",
             "BHB"
           ],
           "held": [
@@ -6537,7 +6625,6 @@
             "CABA",
             "VSTM",
             "RVTY",
-            "SMX",
             "ALEC",
             "BHC",
             "BMEA",
@@ -6545,14 +6632,14 @@
             "OPK",
             "VIR"
           ],
-          "open_cash": 175.72
+          "open_cash": 95.15
         },
         {
           "date": "2026-09-08",
           "s": -11.47,
           "hard_red": true,
-          "equity": 11015.79,
-          "mean": -2.8617,
+          "equity": 11444.85,
+          "mean": -1.1548,
           "made_money": false,
           "bought": [],
           "sold": [],
@@ -6562,7 +6649,6 @@
             "CABA",
             "VSTM",
             "RVTY",
-            "SMX",
             "ALEC",
             "BHC",
             "BMEA",
@@ -6570,14 +6656,14 @@
             "OPK",
             "VIR"
           ],
-          "open_cash": 7.59
+          "open_cash": 6.38
         },
         {
           "date": "2026-09-09",
           "s": -13.95,
           "hard_red": true,
-          "equity": 10702.2,
-          "mean": -2.8467,
+          "equity": 11053.65,
+          "mean": -3.4181,
           "made_money": false,
           "bought": [],
           "sold": [],
@@ -6587,7 +6673,6 @@
             "CABA",
             "VSTM",
             "RVTY",
-            "SMX",
             "ALEC",
             "BHC",
             "BMEA",
@@ -6595,14 +6680,14 @@
             "OPK",
             "VIR"
           ],
-          "open_cash": 7.59
+          "open_cash": 6.38
         },
         {
           "date": "2026-09-10",
           "s": -13.28,
           "hard_red": true,
-          "equity": 10469.79,
-          "mean": -2.1716,
+          "equity": 10763.96,
+          "mean": -2.6208,
           "made_money": false,
           "bought": [],
           "sold": [],
@@ -6612,7 +6697,6 @@
             "CABA",
             "VSTM",
             "RVTY",
-            "SMX",
             "ALEC",
             "BHC",
             "BMEA",
@@ -6620,30 +6704,28 @@
             "OPK",
             "VIR"
           ],
-          "open_cash": 7.59
+          "open_cash": 6.38
         },
         {
           "date": "2026-09-11",
           "s": 0.5,
           "hard_red": false,
-          "equity": 10702.72,
-          "mean": 2.2248,
+          "equity": 10966.49,
+          "mean": 1.8816,
           "made_money": true,
           "bought": [
             "AUPH",
             "OVID",
             "SANM",
             "NVT",
-            "COHU",
-            "USO"
+            "COHU"
           ],
           "sold": [
             "ATRC",
             "HRMY",
             "CABA",
             "VSTM",
-            "RVTY",
-            "SMX"
+            "RVTY"
           ],
           "held": [
             "ALEC",
@@ -6656,17 +6738,16 @@
             "OVID",
             "SANM",
             "NVT",
-            "COHU",
-            "USO"
+            "COHU"
           ],
-          "open_cash": 7.59
+          "open_cash": 6.38
         },
         {
           "date": "2026-09-14",
           "s": -11.0,
           "hard_red": true,
-          "equity": 10703.3,
-          "mean": 0.0054,
+          "equity": 10966.82,
+          "mean": 0.003,
           "made_money": true,
           "bought": [],
           "sold": [
@@ -6682,16 +6763,15 @@
             "OVID",
             "SANM",
             "NVT",
-            "COHU",
-            "USO"
+            "COHU"
           ],
-          "open_cash": 255.82
+          "open_cash": 131.05
         },
         {
           "date": "2026-09-15",
           "s": -3.84,
           "hard_red": true,
-          "equity": 10703.3,
+          "equity": 10966.82,
           "mean": 0.0,
           "made_money": false,
           "bought": [],
@@ -6705,16 +6785,15 @@
             "OVID",
             "SANM",
             "NVT",
-            "COHU",
-            "USO"
+            "COHU"
           ],
-          "open_cash": 363.55
+          "open_cash": 197.24
         },
         {
           "date": "2026-09-16",
           "s": 5.3,
           "hard_red": false,
-          "equity": 10703.3,
+          "equity": 10966.82,
           "mean": 0.0,
           "made_money": false,
           "bought": [],
@@ -6728,16 +6807,15 @@
             "OVID",
             "SANM",
             "NVT",
-            "COHU",
-            "USO"
+            "COHU"
           ],
-          "open_cash": 363.55
+          "open_cash": 197.24
         },
         {
           "date": "2026-09-17",
           "s": 7.38,
           "hard_red": false,
-          "equity": 10703.3,
+          "equity": 10966.82,
           "mean": 0.0,
           "made_money": false,
           "bought": [],
@@ -6751,16 +6829,15 @@
             "OVID",
             "SANM",
             "NVT",
-            "COHU",
-            "USO"
+            "COHU"
           ],
-          "open_cash": 363.55
+          "open_cash": 197.24
         },
         {
           "date": "2026-09-18",
           "s": 4.86,
           "hard_red": false,
-          "equity": 10703.3,
+          "equity": 10966.82,
           "mean": 0.0,
           "made_money": false,
           "bought": [],
@@ -6774,10 +6851,1639 @@
             "OVID",
             "SANM",
             "NVT",
-            "COHU",
-            "USO"
+            "COHU"
           ],
-          "open_cash": 363.55
+          "open_cash": 197.24
+        }
+      ]
+    },
+    "grok_n4_h1": {
+      "name": "grok_n4_h1",
+      "total_ret_pct": 1.982,
+      "final_equity": 10198.17,
+      "win_rate": 0.5556,
+      "n_trades": 18,
+      "n_skips": 2,
+      "equity": [
+        10000.0,
+        10000.0,
+        9987.23,
+        9960.52,
+        9960.52,
+        10053.14,
+        10049.36,
+        9747.74,
+        10036.0,
+        10054.6,
+        10058.74,
+        10143.11,
+        10145.35,
+        10131.35,
+        10131.35,
+        10131.35,
+        10131.35,
+        10131.35,
+        10131.35,
+        10131.35,
+        10151.25,
+        10198.17,
+        10198.17,
+        10198.17,
+        10198.17,
+        10198.17,
+        10198.17
+      ],
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "s": 8.53,
+          "hard_red": false,
+          "equity": 10000.0,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10000.0
+        },
+        {
+          "date": "2026-08-14",
+          "s": 5.5,
+          "hard_red": false,
+          "equity": 9987.23,
+          "mean": -0.1277,
+          "made_money": false,
+          "bought": [
+            "LMT",
+            "NOC",
+            "STLD"
+          ],
+          "sold": [],
+          "held": [
+            "LMT",
+            "NOC",
+            "STLD"
+          ],
+          "open_cash": 10000.0
+        },
+        {
+          "date": "2026-08-17",
+          "s": 2.25,
+          "hard_red": false,
+          "equity": 9960.52,
+          "mean": -0.2674,
+          "made_money": false,
+          "bought": [],
+          "sold": [
+            "LMT",
+            "NOC",
+            "STLD"
+          ],
+          "held": [],
+          "open_cash": 7183.73
+        },
+        {
+          "date": "2026-08-18",
+          "s": -6.2,
+          "hard_red": false,
+          "equity": 9960.52,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 9960.52
+        },
+        {
+          "date": "2026-08-19",
+          "s": -7.2,
+          "hard_red": false,
+          "equity": 10053.14,
+          "mean": 0.9299,
+          "made_money": true,
+          "bought": [
+            "DIS"
+          ],
+          "sold": [],
+          "held": [
+            "DIS"
+          ],
+          "open_cash": 9960.52
+        },
+        {
+          "date": "2026-08-20",
+          "s": 1.12,
+          "hard_red": false,
+          "equity": 10049.36,
+          "mean": -0.0376,
+          "made_money": false,
+          "bought": [],
+          "sold": [
+            "DIS"
+          ],
+          "held": [],
+          "open_cash": 6524.45
+        },
+        {
+          "date": "2026-08-21",
+          "s": 3.25,
+          "hard_red": false,
+          "equity": 9747.74,
+          "mean": -3.0014,
+          "made_money": false,
+          "bought": [
+            "ABTC"
+          ],
+          "sold": [],
+          "held": [
+            "ABTC"
+          ],
+          "open_cash": 10049.36
+        },
+        {
+          "date": "2026-08-24",
+          "s": -5.17,
+          "hard_red": false,
+          "equity": 10036.0,
+          "mean": 2.9572,
+          "made_money": true,
+          "bought": [],
+          "sold": [],
+          "held": [
+            "ABTC"
+          ],
+          "open_cash": 6528.16
+        },
+        {
+          "date": "2026-08-25",
+          "s": 1.8,
+          "hard_red": false,
+          "equity": 10054.6,
+          "mean": 0.1853,
+          "made_money": true,
+          "bought": [
+            "BEN"
+          ],
+          "sold": [
+            "ABTC"
+          ],
+          "held": [
+            "BEN"
+          ],
+          "open_cash": 6528.16
+        },
+        {
+          "date": "2026-08-26",
+          "s": 2.02,
+          "hard_red": false,
+          "equity": 10058.74,
+          "mean": 0.0412,
+          "made_money": true,
+          "bought": [
+            "COIN"
+          ],
+          "sold": [
+            "BEN"
+          ],
+          "held": [
+            "COIN"
+          ],
+          "open_cash": 6516.57
+        },
+        {
+          "date": "2026-08-27",
+          "s": null,
+          "hard_red": false,
+          "equity": 10143.11,
+          "mean": 0.8388,
+          "made_money": true,
+          "bought": [],
+          "sold": [
+            "COIN"
+          ],
+          "held": [],
+          "open_cash": 6604.92
+        },
+        {
+          "date": "2026-08-28",
+          "s": 0.75,
+          "hard_red": false,
+          "equity": 10145.35,
+          "mean": 0.0221,
+          "made_money": true,
+          "bought": [
+            "BHB"
+          ],
+          "sold": [],
+          "held": [
+            "BHB"
+          ],
+          "open_cash": 10143.11
+        },
+        {
+          "date": "2026-08-31",
+          "s": -5.85,
+          "hard_red": false,
+          "equity": 10131.35,
+          "mean": -0.138,
+          "made_money": false,
+          "bought": [],
+          "sold": [
+            "BHB"
+          ],
+          "held": [],
+          "open_cash": 6599.35
+        },
+        {
+          "date": "2026-09-01",
+          "s": -6.3,
+          "hard_red": false,
+          "equity": 10131.35,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10131.35
+        },
+        {
+          "date": "2026-09-02",
+          "s": -3.83,
+          "hard_red": false,
+          "equity": 10131.35,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10131.35
+        },
+        {
+          "date": "2026-09-03",
+          "s": -0.9,
+          "hard_red": false,
+          "equity": 10131.35,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10131.35
+        },
+        {
+          "date": "2026-09-04",
+          "s": 2.25,
+          "hard_red": false,
+          "equity": 10131.35,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10131.35
+        },
+        {
+          "date": "2026-09-08",
+          "s": -11.47,
+          "hard_red": false,
+          "equity": 10131.35,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10131.35
+        },
+        {
+          "date": "2026-09-09",
+          "s": -13.95,
+          "hard_red": false,
+          "equity": 10131.35,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10131.35
+        },
+        {
+          "date": "2026-09-10",
+          "s": -13.28,
+          "hard_red": false,
+          "equity": 10151.25,
+          "mean": 0.1964,
+          "made_money": true,
+          "bought": [
+            "B"
+          ],
+          "sold": [],
+          "held": [
+            "B"
+          ],
+          "open_cash": 10131.35
+        },
+        {
+          "date": "2026-09-11",
+          "s": 0.5,
+          "hard_red": false,
+          "equity": 10198.17,
+          "mean": 0.4622,
+          "made_money": true,
+          "bought": [],
+          "sold": [
+            "B"
+          ],
+          "held": [],
+          "open_cash": 6587.53
+        },
+        {
+          "date": "2026-09-14",
+          "s": -11.0,
+          "hard_red": false,
+          "equity": 10198.17,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10198.17
+        },
+        {
+          "date": "2026-09-15",
+          "s": -3.84,
+          "hard_red": false,
+          "equity": 10198.17,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10198.17
+        },
+        {
+          "date": "2026-09-16",
+          "s": 5.3,
+          "hard_red": false,
+          "equity": 10198.17,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10198.17
+        },
+        {
+          "date": "2026-09-17",
+          "s": 7.38,
+          "hard_red": false,
+          "equity": 10198.17,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10198.17
+        },
+        {
+          "date": "2026-09-18",
+          "s": 4.86,
+          "hard_red": false,
+          "equity": 10198.17,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10198.17
+        }
+      ]
+    },
+    "grok_n4_h2": {
+      "name": "grok_n4_h2",
+      "total_ret_pct": 1.452,
+      "final_equity": 10145.2,
+      "win_rate": 0.4444,
+      "n_trades": 18,
+      "n_skips": 10,
+      "equity": [
+        10000.0,
+        10000.0,
+        9987.23,
+        9950.51,
+        9960.77,
+        10053.39,
+        10066.26,
+        9770.02,
+        10058.99,
+        10077.55,
+        10075.07,
+        10181.02,
+        10124.92,
+        10109.62,
+        10093.82,
+        10093.82,
+        10093.82,
+        10093.82,
+        10093.82,
+        10093.82,
+        10113.46,
+        10131.28,
+        10145.2,
+        10145.2,
+        10145.2,
+        10145.2,
+        10145.2
+      ],
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "s": 8.53,
+          "hard_red": false,
+          "equity": 10000.0,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10000.0
+        },
+        {
+          "date": "2026-08-14",
+          "s": 5.5,
+          "hard_red": false,
+          "equity": 9987.23,
+          "mean": -0.1277,
+          "made_money": false,
+          "bought": [
+            "LMT",
+            "NOC",
+            "STLD"
+          ],
+          "sold": [],
+          "held": [
+            "LMT",
+            "NOC",
+            "STLD"
+          ],
+          "open_cash": 10000.0
+        },
+        {
+          "date": "2026-08-17",
+          "s": 2.25,
+          "hard_red": false,
+          "equity": 9950.51,
+          "mean": -0.3677,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [
+            "LMT",
+            "NOC",
+            "STLD"
+          ],
+          "open_cash": 7183.73
+        },
+        {
+          "date": "2026-08-18",
+          "s": -6.2,
+          "hard_red": false,
+          "equity": 9960.77,
+          "mean": 0.1031,
+          "made_money": true,
+          "bought": [],
+          "sold": [
+            "LMT",
+            "NOC",
+            "STLD"
+          ],
+          "held": [],
+          "open_cash": 7183.73
+        },
+        {
+          "date": "2026-08-19",
+          "s": -7.2,
+          "hard_red": false,
+          "equity": 10053.39,
+          "mean": 0.9298,
+          "made_money": true,
+          "bought": [
+            "DIS"
+          ],
+          "sold": [],
+          "held": [
+            "DIS"
+          ],
+          "open_cash": 9960.77
+        },
+        {
+          "date": "2026-08-20",
+          "s": 1.12,
+          "hard_red": false,
+          "equity": 10066.26,
+          "mean": 0.128,
+          "made_money": true,
+          "bought": [],
+          "sold": [],
+          "held": [
+            "DIS"
+          ],
+          "open_cash": 6524.7
+        },
+        {
+          "date": "2026-08-21",
+          "s": 3.25,
+          "hard_red": false,
+          "equity": 9770.02,
+          "mean": -2.9429,
+          "made_money": false,
+          "bought": [
+            "ABTC"
+          ],
+          "sold": [
+            "DIS"
+          ],
+          "held": [
+            "ABTC"
+          ],
+          "open_cash": 6524.7
+        },
+        {
+          "date": "2026-08-24",
+          "s": -5.17,
+          "hard_red": false,
+          "equity": 10058.99,
+          "mean": 2.9577,
+          "made_money": true,
+          "bought": [],
+          "sold": [],
+          "held": [
+            "ABTC"
+          ],
+          "open_cash": 6542.51
+        },
+        {
+          "date": "2026-08-25",
+          "s": 1.8,
+          "hard_red": false,
+          "equity": 10077.55,
+          "mean": 0.1845,
+          "made_money": true,
+          "bought": [
+            "BEN"
+          ],
+          "sold": [
+            "ABTC"
+          ],
+          "held": [
+            "BEN"
+          ],
+          "open_cash": 6542.51
+        },
+        {
+          "date": "2026-08-26",
+          "s": 2.02,
+          "hard_red": false,
+          "equity": 10075.07,
+          "mean": -0.0246,
+          "made_money": false,
+          "bought": [
+            "COIN"
+          ],
+          "sold": [],
+          "held": [
+            "BEN",
+            "COIN"
+          ],
+          "open_cash": 6539.52
+        },
+        {
+          "date": "2026-08-27",
+          "s": null,
+          "hard_red": false,
+          "equity": 10181.02,
+          "mean": 1.0516,
+          "made_money": true,
+          "bought": [],
+          "sold": [
+            "BEN"
+          ],
+          "held": [
+            "COIN"
+          ],
+          "open_cash": 4357.7
+        },
+        {
+          "date": "2026-08-28",
+          "s": 0.75,
+          "hard_red": false,
+          "equity": 10124.92,
+          "mean": -0.551,
+          "made_money": false,
+          "bought": [
+            "BHB"
+          ],
+          "sold": [
+            "COIN"
+          ],
+          "held": [
+            "BHB"
+          ],
+          "open_cash": 7892.38
+        },
+        {
+          "date": "2026-08-31",
+          "s": -5.85,
+          "hard_red": false,
+          "equity": 10109.62,
+          "mean": -0.1511,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [
+            "BHB"
+          ],
+          "open_cash": 6578.92
+        },
+        {
+          "date": "2026-09-01",
+          "s": -6.3,
+          "hard_red": false,
+          "equity": 10093.82,
+          "mean": -0.1563,
+          "made_money": false,
+          "bought": [],
+          "sold": [
+            "BHB"
+          ],
+          "held": [],
+          "open_cash": 6578.92
+        },
+        {
+          "date": "2026-09-02",
+          "s": -3.83,
+          "hard_red": false,
+          "equity": 10093.82,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10093.82
+        },
+        {
+          "date": "2026-09-03",
+          "s": -0.9,
+          "hard_red": false,
+          "equity": 10093.82,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10093.82
+        },
+        {
+          "date": "2026-09-04",
+          "s": 2.25,
+          "hard_red": false,
+          "equity": 10093.82,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10093.82
+        },
+        {
+          "date": "2026-09-08",
+          "s": -11.47,
+          "hard_red": false,
+          "equity": 10093.82,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10093.82
+        },
+        {
+          "date": "2026-09-09",
+          "s": -13.95,
+          "hard_red": false,
+          "equity": 10093.82,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10093.82
+        },
+        {
+          "date": "2026-09-10",
+          "s": -13.28,
+          "hard_red": false,
+          "equity": 10113.46,
+          "mean": 0.1946,
+          "made_money": true,
+          "bought": [
+            "B"
+          ],
+          "sold": [],
+          "held": [
+            "B"
+          ],
+          "open_cash": 10093.82
+        },
+        {
+          "date": "2026-09-11",
+          "s": 0.5,
+          "hard_red": false,
+          "equity": 10131.28,
+          "mean": 0.1762,
+          "made_money": true,
+          "bought": [],
+          "sold": [],
+          "held": [
+            "B"
+          ],
+          "open_cash": 6593.2
+        },
+        {
+          "date": "2026-09-14",
+          "s": -11.0,
+          "hard_red": false,
+          "equity": 10145.2,
+          "mean": 0.1374,
+          "made_money": true,
+          "bought": [],
+          "sold": [
+            "B"
+          ],
+          "held": [],
+          "open_cash": 6593.2
+        },
+        {
+          "date": "2026-09-15",
+          "s": -3.84,
+          "hard_red": false,
+          "equity": 10145.2,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10145.2
+        },
+        {
+          "date": "2026-09-16",
+          "s": 5.3,
+          "hard_red": false,
+          "equity": 10145.2,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10145.2
+        },
+        {
+          "date": "2026-09-17",
+          "s": 7.38,
+          "hard_red": false,
+          "equity": 10145.2,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10145.2
+        },
+        {
+          "date": "2026-09-18",
+          "s": 4.86,
+          "hard_red": false,
+          "equity": 10145.2,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10145.2
+        }
+      ]
+    },
+    "grok_n8_h1": {
+      "name": "grok_n8_h1",
+      "total_ret_pct": 1.982,
+      "final_equity": 10198.17,
+      "win_rate": 0.5556,
+      "n_trades": 18,
+      "n_skips": 2,
+      "equity": [
+        10000.0,
+        10000.0,
+        9987.23,
+        9960.52,
+        9960.52,
+        10053.14,
+        10049.36,
+        9747.74,
+        10036.0,
+        10054.6,
+        10058.74,
+        10143.11,
+        10145.35,
+        10131.35,
+        10131.35,
+        10131.35,
+        10131.35,
+        10131.35,
+        10131.35,
+        10131.35,
+        10151.25,
+        10198.17,
+        10198.17,
+        10198.17,
+        10198.17,
+        10198.17,
+        10198.17
+      ],
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "s": 8.53,
+          "hard_red": false,
+          "equity": 10000.0,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10000.0
+        },
+        {
+          "date": "2026-08-14",
+          "s": 5.5,
+          "hard_red": false,
+          "equity": 9987.23,
+          "mean": -0.1277,
+          "made_money": false,
+          "bought": [
+            "LMT",
+            "NOC",
+            "STLD"
+          ],
+          "sold": [],
+          "held": [
+            "LMT",
+            "NOC",
+            "STLD"
+          ],
+          "open_cash": 10000.0
+        },
+        {
+          "date": "2026-08-17",
+          "s": 2.25,
+          "hard_red": false,
+          "equity": 9960.52,
+          "mean": -0.2674,
+          "made_money": false,
+          "bought": [],
+          "sold": [
+            "LMT",
+            "NOC",
+            "STLD"
+          ],
+          "held": [],
+          "open_cash": 7183.73
+        },
+        {
+          "date": "2026-08-18",
+          "s": -6.2,
+          "hard_red": false,
+          "equity": 9960.52,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 9960.52
+        },
+        {
+          "date": "2026-08-19",
+          "s": -7.2,
+          "hard_red": false,
+          "equity": 10053.14,
+          "mean": 0.9299,
+          "made_money": true,
+          "bought": [
+            "DIS"
+          ],
+          "sold": [],
+          "held": [
+            "DIS"
+          ],
+          "open_cash": 9960.52
+        },
+        {
+          "date": "2026-08-20",
+          "s": 1.12,
+          "hard_red": false,
+          "equity": 10049.36,
+          "mean": -0.0376,
+          "made_money": false,
+          "bought": [],
+          "sold": [
+            "DIS"
+          ],
+          "held": [],
+          "open_cash": 6524.45
+        },
+        {
+          "date": "2026-08-21",
+          "s": 3.25,
+          "hard_red": false,
+          "equity": 9747.74,
+          "mean": -3.0014,
+          "made_money": false,
+          "bought": [
+            "ABTC"
+          ],
+          "sold": [],
+          "held": [
+            "ABTC"
+          ],
+          "open_cash": 10049.36
+        },
+        {
+          "date": "2026-08-24",
+          "s": -5.17,
+          "hard_red": false,
+          "equity": 10036.0,
+          "mean": 2.9572,
+          "made_money": true,
+          "bought": [],
+          "sold": [],
+          "held": [
+            "ABTC"
+          ],
+          "open_cash": 6528.16
+        },
+        {
+          "date": "2026-08-25",
+          "s": 1.8,
+          "hard_red": false,
+          "equity": 10054.6,
+          "mean": 0.1853,
+          "made_money": true,
+          "bought": [
+            "BEN"
+          ],
+          "sold": [
+            "ABTC"
+          ],
+          "held": [
+            "BEN"
+          ],
+          "open_cash": 6528.16
+        },
+        {
+          "date": "2026-08-26",
+          "s": 2.02,
+          "hard_red": false,
+          "equity": 10058.74,
+          "mean": 0.0412,
+          "made_money": true,
+          "bought": [
+            "COIN"
+          ],
+          "sold": [
+            "BEN"
+          ],
+          "held": [
+            "COIN"
+          ],
+          "open_cash": 6516.57
+        },
+        {
+          "date": "2026-08-27",
+          "s": null,
+          "hard_red": false,
+          "equity": 10143.11,
+          "mean": 0.8388,
+          "made_money": true,
+          "bought": [],
+          "sold": [
+            "COIN"
+          ],
+          "held": [],
+          "open_cash": 6604.92
+        },
+        {
+          "date": "2026-08-28",
+          "s": 0.75,
+          "hard_red": false,
+          "equity": 10145.35,
+          "mean": 0.0221,
+          "made_money": true,
+          "bought": [
+            "BHB"
+          ],
+          "sold": [],
+          "held": [
+            "BHB"
+          ],
+          "open_cash": 10143.11
+        },
+        {
+          "date": "2026-08-31",
+          "s": -5.85,
+          "hard_red": false,
+          "equity": 10131.35,
+          "mean": -0.138,
+          "made_money": false,
+          "bought": [],
+          "sold": [
+            "BHB"
+          ],
+          "held": [],
+          "open_cash": 6599.35
+        },
+        {
+          "date": "2026-09-01",
+          "s": -6.3,
+          "hard_red": false,
+          "equity": 10131.35,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10131.35
+        },
+        {
+          "date": "2026-09-02",
+          "s": -3.83,
+          "hard_red": false,
+          "equity": 10131.35,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10131.35
+        },
+        {
+          "date": "2026-09-03",
+          "s": -0.9,
+          "hard_red": false,
+          "equity": 10131.35,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10131.35
+        },
+        {
+          "date": "2026-09-04",
+          "s": 2.25,
+          "hard_red": false,
+          "equity": 10131.35,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10131.35
+        },
+        {
+          "date": "2026-09-08",
+          "s": -11.47,
+          "hard_red": false,
+          "equity": 10131.35,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10131.35
+        },
+        {
+          "date": "2026-09-09",
+          "s": -13.95,
+          "hard_red": false,
+          "equity": 10131.35,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10131.35
+        },
+        {
+          "date": "2026-09-10",
+          "s": -13.28,
+          "hard_red": false,
+          "equity": 10151.25,
+          "mean": 0.1964,
+          "made_money": true,
+          "bought": [
+            "B"
+          ],
+          "sold": [],
+          "held": [
+            "B"
+          ],
+          "open_cash": 10131.35
+        },
+        {
+          "date": "2026-09-11",
+          "s": 0.5,
+          "hard_red": false,
+          "equity": 10198.17,
+          "mean": 0.4622,
+          "made_money": true,
+          "bought": [],
+          "sold": [
+            "B"
+          ],
+          "held": [],
+          "open_cash": 6587.53
+        },
+        {
+          "date": "2026-09-14",
+          "s": -11.0,
+          "hard_red": false,
+          "equity": 10198.17,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10198.17
+        },
+        {
+          "date": "2026-09-15",
+          "s": -3.84,
+          "hard_red": false,
+          "equity": 10198.17,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10198.17
+        },
+        {
+          "date": "2026-09-16",
+          "s": 5.3,
+          "hard_red": false,
+          "equity": 10198.17,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10198.17
+        },
+        {
+          "date": "2026-09-17",
+          "s": 7.38,
+          "hard_red": false,
+          "equity": 10198.17,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10198.17
+        },
+        {
+          "date": "2026-09-18",
+          "s": 4.86,
+          "hard_red": false,
+          "equity": 10198.17,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10198.17
+        }
+      ]
+    },
+    "grok_n8_h2": {
+      "name": "grok_n8_h2",
+      "total_ret_pct": 1.452,
+      "final_equity": 10145.2,
+      "win_rate": 0.4444,
+      "n_trades": 18,
+      "n_skips": 10,
+      "equity": [
+        10000.0,
+        10000.0,
+        9987.23,
+        9950.51,
+        9960.77,
+        10053.39,
+        10066.26,
+        9770.02,
+        10058.99,
+        10077.55,
+        10075.07,
+        10181.02,
+        10124.92,
+        10109.62,
+        10093.82,
+        10093.82,
+        10093.82,
+        10093.82,
+        10093.82,
+        10093.82,
+        10113.46,
+        10131.28,
+        10145.2,
+        10145.2,
+        10145.2,
+        10145.2,
+        10145.2
+      ],
+      "daily": [
+        {
+          "date": "2026-08-13",
+          "s": 8.53,
+          "hard_red": false,
+          "equity": 10000.0,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10000.0
+        },
+        {
+          "date": "2026-08-14",
+          "s": 5.5,
+          "hard_red": false,
+          "equity": 9987.23,
+          "mean": -0.1277,
+          "made_money": false,
+          "bought": [
+            "LMT",
+            "NOC",
+            "STLD"
+          ],
+          "sold": [],
+          "held": [
+            "LMT",
+            "NOC",
+            "STLD"
+          ],
+          "open_cash": 10000.0
+        },
+        {
+          "date": "2026-08-17",
+          "s": 2.25,
+          "hard_red": false,
+          "equity": 9950.51,
+          "mean": -0.3677,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [
+            "LMT",
+            "NOC",
+            "STLD"
+          ],
+          "open_cash": 7183.73
+        },
+        {
+          "date": "2026-08-18",
+          "s": -6.2,
+          "hard_red": false,
+          "equity": 9960.77,
+          "mean": 0.1031,
+          "made_money": true,
+          "bought": [],
+          "sold": [
+            "LMT",
+            "NOC",
+            "STLD"
+          ],
+          "held": [],
+          "open_cash": 7183.73
+        },
+        {
+          "date": "2026-08-19",
+          "s": -7.2,
+          "hard_red": false,
+          "equity": 10053.39,
+          "mean": 0.9298,
+          "made_money": true,
+          "bought": [
+            "DIS"
+          ],
+          "sold": [],
+          "held": [
+            "DIS"
+          ],
+          "open_cash": 9960.77
+        },
+        {
+          "date": "2026-08-20",
+          "s": 1.12,
+          "hard_red": false,
+          "equity": 10066.26,
+          "mean": 0.128,
+          "made_money": true,
+          "bought": [],
+          "sold": [],
+          "held": [
+            "DIS"
+          ],
+          "open_cash": 6524.7
+        },
+        {
+          "date": "2026-08-21",
+          "s": 3.25,
+          "hard_red": false,
+          "equity": 9770.02,
+          "mean": -2.9429,
+          "made_money": false,
+          "bought": [
+            "ABTC"
+          ],
+          "sold": [
+            "DIS"
+          ],
+          "held": [
+            "ABTC"
+          ],
+          "open_cash": 6524.7
+        },
+        {
+          "date": "2026-08-24",
+          "s": -5.17,
+          "hard_red": false,
+          "equity": 10058.99,
+          "mean": 2.9577,
+          "made_money": true,
+          "bought": [],
+          "sold": [],
+          "held": [
+            "ABTC"
+          ],
+          "open_cash": 6542.51
+        },
+        {
+          "date": "2026-08-25",
+          "s": 1.8,
+          "hard_red": false,
+          "equity": 10077.55,
+          "mean": 0.1845,
+          "made_money": true,
+          "bought": [
+            "BEN"
+          ],
+          "sold": [
+            "ABTC"
+          ],
+          "held": [
+            "BEN"
+          ],
+          "open_cash": 6542.51
+        },
+        {
+          "date": "2026-08-26",
+          "s": 2.02,
+          "hard_red": false,
+          "equity": 10075.07,
+          "mean": -0.0246,
+          "made_money": false,
+          "bought": [
+            "COIN"
+          ],
+          "sold": [],
+          "held": [
+            "BEN",
+            "COIN"
+          ],
+          "open_cash": 6539.52
+        },
+        {
+          "date": "2026-08-27",
+          "s": null,
+          "hard_red": false,
+          "equity": 10181.02,
+          "mean": 1.0516,
+          "made_money": true,
+          "bought": [],
+          "sold": [
+            "BEN"
+          ],
+          "held": [
+            "COIN"
+          ],
+          "open_cash": 4357.7
+        },
+        {
+          "date": "2026-08-28",
+          "s": 0.75,
+          "hard_red": false,
+          "equity": 10124.92,
+          "mean": -0.551,
+          "made_money": false,
+          "bought": [
+            "BHB"
+          ],
+          "sold": [
+            "COIN"
+          ],
+          "held": [
+            "BHB"
+          ],
+          "open_cash": 7892.38
+        },
+        {
+          "date": "2026-08-31",
+          "s": -5.85,
+          "hard_red": false,
+          "equity": 10109.62,
+          "mean": -0.1511,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [
+            "BHB"
+          ],
+          "open_cash": 6578.92
+        },
+        {
+          "date": "2026-09-01",
+          "s": -6.3,
+          "hard_red": false,
+          "equity": 10093.82,
+          "mean": -0.1563,
+          "made_money": false,
+          "bought": [],
+          "sold": [
+            "BHB"
+          ],
+          "held": [],
+          "open_cash": 6578.92
+        },
+        {
+          "date": "2026-09-02",
+          "s": -3.83,
+          "hard_red": false,
+          "equity": 10093.82,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10093.82
+        },
+        {
+          "date": "2026-09-03",
+          "s": -0.9,
+          "hard_red": false,
+          "equity": 10093.82,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10093.82
+        },
+        {
+          "date": "2026-09-04",
+          "s": 2.25,
+          "hard_red": false,
+          "equity": 10093.82,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10093.82
+        },
+        {
+          "date": "2026-09-08",
+          "s": -11.47,
+          "hard_red": false,
+          "equity": 10093.82,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10093.82
+        },
+        {
+          "date": "2026-09-09",
+          "s": -13.95,
+          "hard_red": false,
+          "equity": 10093.82,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10093.82
+        },
+        {
+          "date": "2026-09-10",
+          "s": -13.28,
+          "hard_red": false,
+          "equity": 10113.46,
+          "mean": 0.1946,
+          "made_money": true,
+          "bought": [
+            "B"
+          ],
+          "sold": [],
+          "held": [
+            "B"
+          ],
+          "open_cash": 10093.82
+        },
+        {
+          "date": "2026-09-11",
+          "s": 0.5,
+          "hard_red": false,
+          "equity": 10131.28,
+          "mean": 0.1762,
+          "made_money": true,
+          "bought": [],
+          "sold": [],
+          "held": [
+            "B"
+          ],
+          "open_cash": 6593.2
+        },
+        {
+          "date": "2026-09-14",
+          "s": -11.0,
+          "hard_red": false,
+          "equity": 10145.2,
+          "mean": 0.1374,
+          "made_money": true,
+          "bought": [],
+          "sold": [
+            "B"
+          ],
+          "held": [],
+          "open_cash": 6593.2
+        },
+        {
+          "date": "2026-09-15",
+          "s": -3.84,
+          "hard_red": false,
+          "equity": 10145.2,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10145.2
+        },
+        {
+          "date": "2026-09-16",
+          "s": 5.3,
+          "hard_red": false,
+          "equity": 10145.2,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10145.2
+        },
+        {
+          "date": "2026-09-17",
+          "s": 7.38,
+          "hard_red": false,
+          "equity": 10145.2,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10145.2
+        },
+        {
+          "date": "2026-09-18",
+          "s": 4.86,
+          "hard_red": false,
+          "equity": 10145.2,
+          "mean": 0.0,
+          "made_money": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "open_cash": 10145.2
         }
       ]
     }
@@ -6801,19 +8507,19 @@
         "n_confirmed": 0
       },
       "add_named": {
-        "days_changed": 16,
+        "days_changed": 11,
         "n_days": 26,
         "overlap_days": 0,
         "n_vetoed": 0,
-        "n_added": 30,
+        "n_added": 20,
         "n_confirmed": 0
       },
       "full": {
-        "days_changed": 16,
+        "days_changed": 11,
         "n_days": 26,
         "overlap_days": 0,
         "n_vetoed": 0,
-        "n_added": 30,
+        "n_added": 20,
         "n_confirmed": 0
       }
     },
@@ -6835,19 +8541,19 @@
         "n_confirmed": 0
       },
       "add_named": {
-        "days_changed": 16,
+        "days_changed": 11,
         "n_days": 26,
         "overlap_days": 1,
         "n_vetoed": 0,
-        "n_added": 33,
+        "n_added": 23,
         "n_confirmed": 0
       },
       "full": {
-        "days_changed": 16,
+        "days_changed": 12,
         "n_days": 26,
         "overlap_days": 1,
         "n_vetoed": 1,
-        "n_added": 33,
+        "n_added": 23,
         "n_confirmed": 0
       }
     }
@@ -6959,9 +8665,9 @@
     },
     {
       "title": "Patriots and THAAD: Lockheed Martin Corporation (LMT) and Northrop Grumman Corporation (NOC) Bet Big on Missile Defense Surge",
-      "source": "parsed",
+      "source": "actions",
       "task": "",
-      "event": "",
+      "event": "hormuz_energy_risk",
       "file_date": "2026-08-13",
       "known_at": "2026-08-13T10:05:53-04:00",
       "fill": "2026-08-14",
@@ -7476,14 +9182,7 @@
       "file_date": "2026-08-14",
       "known_at": "2026-08-14T11:05:56.283577-04:00",
       "fill": "2026-08-17",
-      "tickers": [
-        {
-          "ticker": "TACO",
-          "side": "bearish",
-          "theme": "tariff",
-          "why": "named in article \u2229 D-1 Berto Acquisition Corp"
-        }
-      ]
+      "tickers": []
     },
     {
       "title": "Temporary ban on sale of disposable BBQs over wildfire risk",
@@ -7913,20 +9612,7 @@
       "file_date": "2026-08-18",
       "known_at": "2026-08-18T08:46:01-04:00",
       "fill": "2026-08-18",
-      "tickers": [
-        {
-          "ticker": "PBJ",
-          "side": "neutral",
-          "theme": "named",
-          "why": "named in article \u2229 D-1 Invesco Food & Beverage ETF"
-        },
-        {
-          "ticker": "XLP",
-          "side": "neutral",
-          "theme": "named",
-          "why": "named in article \u2229 D-1 State Street Consumer Staples Select Sector SPDR ETF"
-        }
-      ]
+      "tickers": []
     },
     {
       "title": "Stock Market Today: Tech Futures Sink As Treasury Yields Jump; Nvidia, Micron, Sandisk All Tumble (Live Coverage)",
@@ -8063,12 +9749,6 @@
       "known_at": "2026-08-18T10:54:10.300490-04:00",
       "fill": "2026-08-19",
       "tickers": [
-        {
-          "ticker": "BBGI",
-          "side": "bullish",
-          "theme": "named",
-          "why": "named in article \u2229 D-1 Beasley Broadcast Group Inc"
-        },
         {
           "ticker": "DIS",
           "side": "bullish",
@@ -8226,14 +9906,7 @@
       "file_date": "2026-08-19",
       "known_at": "2026-08-19T10:54:27.100224-04:00",
       "fill": "2026-08-20",
-      "tickers": [
-        {
-          "ticker": "BTC",
-          "side": "bullish",
-          "theme": "fed_path",
-          "why": "named in article \u2229 D-1 Grayscale Bitcoin Mini Trust ETF"
-        }
-      ]
+      "tickers": []
     },
     {
       "title": "Treasury yields pull back from multi-decade highs ahead of FOMC minutes - CNBC",
@@ -8306,14 +9979,7 @@
       "file_date": "2026-08-20",
       "known_at": "2026-08-20T00:00:01-04:00",
       "fill": "2026-08-20",
-      "tickers": [
-        {
-          "ticker": "AAT",
-          "side": "bullish",
-          "theme": "crypto_sec",
-          "why": "named in article \u2229 D-1 American Assets Trust Inc"
-        }
-      ]
+      "tickers": []
     },
     {
       "title": "Target earnings, Canada tariffs, American Airlines' seatback screens and more in Morning Squawk",
@@ -8710,12 +10376,6 @@
       "fill": "2026-08-24",
       "tickers": [
         {
-          "ticker": "HBM",
-          "side": "neutral",
-          "theme": "named",
-          "why": "named in article \u2229 D-1 Hudbay Minerals Inc"
-        },
-        {
           "ticker": "KLAC",
           "side": "neutral",
           "theme": "named",
@@ -8923,12 +10583,6 @@
           "side": "neutral",
           "theme": "antitrust",
           "why": "named in article \u2229 D-1 Antalpha Platform Holding Co"
-        },
-        {
-          "ticker": "ILS",
-          "side": "neutral",
-          "theme": "antitrust",
-          "why": "named in article \u2229 D-1 Brookmont Catastrophic Bond ETF"
         }
       ]
     },
@@ -8977,20 +10631,7 @@
       "file_date": "2026-08-25",
       "known_at": "2026-08-25T00:00:01-04:00",
       "fill": "2026-08-25",
-      "tickers": [
-        {
-          "ticker": "MPC",
-          "side": "bearish",
-          "theme": "fed_path",
-          "why": "named in article \u2229 D-1 Marathon Petroleum Corp"
-        },
-        {
-          "ticker": "SBI",
-          "side": "bearish",
-          "theme": "fed_path",
-          "why": "named in article \u2229 D-1 Western Asset Intermediate Muni Fund Inc"
-        }
-      ]
+      "tickers": []
     },
     {
       "title": "Section 232 tariffs on UAS and UAS components",
@@ -9068,12 +10709,6 @@
       "known_at": "2026-08-25T07:59:46.879433-04:00",
       "fill": "2026-08-25",
       "tickers": [
-        {
-          "ticker": "CAS",
-          "side": "bearish",
-          "theme": "named",
-          "why": "named in article \u2229 D-1 Simplify China A Shares PLUS Income ETF"
-        },
         {
           "ticker": "SKY",
           "side": "bearish",
@@ -9558,14 +11193,7 @@
       "file_date": "2026-08-26",
       "known_at": "2026-08-26T00:00:01-04:00",
       "fill": "2026-08-26",
-      "tickers": [
-        {
-          "ticker": "AAT",
-          "side": "bullish",
-          "theme": "crypto_sec",
-          "why": "named in article \u2229 D-1 American Assets Trust Inc"
-        }
-      ]
+      "tickers": []
     },
     {
       "title": "SEC proposes 'Regulation Crypto Assets' framework",
@@ -9575,14 +11203,7 @@
       "file_date": "2026-08-26",
       "known_at": "2026-08-26T00:00:01-04:00",
       "fill": "2026-08-26",
-      "tickers": [
-        {
-          "ticker": "AAT",
-          "side": "bullish",
-          "theme": "crypto_sec",
-          "why": "named in article \u2229 D-1 American Assets Trust Inc"
-        }
-      ]
+      "tickers": []
     },
     {
       "title": "Taiwan AI chip export controls to China \u2014 TSMC compliance burden",
@@ -9928,17 +11549,17 @@
     },
     {
       "title": "Powell Industries Eyes Record Revenue as Data Center Backlog Powers Growth",
-      "source": "actions",
+      "source": "parsed",
       "task": "",
-      "event": "ai_power_demand",
+      "event": "",
       "file_date": "2026-08-27",
       "known_at": "2026-08-26T10:03:27-04:00",
       "fill": "2026-08-27",
       "tickers": [
         {
           "ticker": "POWL",
-          "side": "bullish",
-          "theme": "fed_path",
+          "side": "neutral",
+          "theme": "named",
           "why": "named in article \u2229 D-1 Powell Industries Inc"
         }
       ]
@@ -9979,12 +11600,6 @@
       "known_at": "2026-08-26T12:45:56-04:00",
       "fill": "2026-08-27",
       "tickers": [
-        {
-          "ticker": "AMD",
-          "side": "neutral",
-          "theme": "named",
-          "why": "named in article \u2229 D-1 Advanced Micro Devices Inc"
-        },
         {
           "ticker": "BLSH",
           "side": "neutral",
@@ -10544,14 +12159,7 @@
       "file_date": "2026-08-28",
       "known_at": "2026-08-28T00:00:01-04:00",
       "fill": "2026-08-28",
-      "tickers": [
-        {
-          "ticker": "ARM",
-          "side": "bearish",
-          "theme": "named",
-          "why": "named in article \u2229 D-1 Arm Holdings Plc ADR"
-        }
-      ]
+      "tickers": []
     },
     {
       "title": "NDRC draft outbound-investment administrative measures",
@@ -10598,14 +12206,7 @@
       "file_date": "2026-08-28",
       "known_at": "2026-08-28T00:00:01-04:00",
       "fill": "2026-08-28",
-      "tickers": [
-        {
-          "ticker": "HII",
-          "side": "neutral",
-          "theme": "named",
-          "why": "named in article \u2229 D-1 Huntington Ingalls Industries Inc"
-        }
-      ]
+      "tickers": []
     },
     {
       "title": "Operation Economic Outcast Iran sanctions",
@@ -10615,14 +12216,7 @@
       "file_date": "2026-08-28",
       "known_at": "2026-08-28T00:00:01-04:00",
       "fill": "2026-08-28",
-      "tickers": [
-        {
-          "ticker": "AAT",
-          "side": "neutral",
-          "theme": "named",
-          "why": "named in article \u2229 D-1 American Assets Trust Inc"
-        }
-      ]
+      "tickers": []
     },
     {
       "title": "SEC proposes Regulation Crypto Assets (S7-2026-27)",
@@ -10633,12 +12227,6 @@
       "known_at": "2026-08-28T00:00:01-04:00",
       "fill": "2026-08-28",
       "tickers": [
-        {
-          "ticker": "AAT",
-          "side": "bullish",
-          "theme": "crypto_sec",
-          "why": "named in article \u2229 D-1 American Assets Trust Inc"
-        },
         {
           "ticker": "BHB",
           "side": "bullish",
@@ -10904,12 +12492,6 @@
       "fill": "2026-08-31",
       "tickers": [
         {
-          "ticker": "ADC",
-          "side": "neutral",
-          "theme": "named",
-          "why": "named in article \u2229 D-1 Agree Realty Corp"
-        },
-        {
           "ticker": "ADCT",
           "side": "neutral",
           "theme": "named",
@@ -11030,12 +12612,6 @@
       "fill": "2026-08-31",
       "tickers": [
         {
-          "ticker": "AAT",
-          "side": "neutral",
-          "theme": "named",
-          "why": "named in article \u2229 D-1 American Assets Trust Inc"
-        },
-        {
           "ticker": "EXTR",
           "side": "neutral",
           "theme": "named",
@@ -11057,6 +12633,29 @@
           "side": "neutral",
           "theme": "named",
           "why": "named in article \u2229 D-1 Ambitions Enterprise Management Co LLC"
+        }
+      ]
+    },
+    {
+      "title": "Stock Transaction: Powell Industries Richard Williams Sells 2,250 Shares",
+      "source": "parsed",
+      "task": "",
+      "event": "",
+      "file_date": "2026-08-31",
+      "known_at": "2026-08-31T00:00:01-04:00",
+      "fill": "2026-08-31",
+      "tickers": [
+        {
+          "ticker": "POWL",
+          "side": "neutral",
+          "theme": "named",
+          "why": "named in article \u2229 D-1 Powell Industries Inc"
+        },
+        {
+          "ticker": "WMB",
+          "side": "neutral",
+          "theme": "named",
+          "why": "named in article \u2229 D-1 Williams Cos Inc"
         }
       ]
     },
@@ -12091,14 +13690,7 @@
       "file_date": "2026-09-01",
       "known_at": "2026-09-01T00:00:01-04:00",
       "fill": "2026-09-01",
-      "tickers": [
-        {
-          "ticker": "AAT",
-          "side": "neutral",
-          "theme": "named",
-          "why": "named in article \u2229 D-1 American Assets Trust Inc"
-        }
-      ]
+      "tickers": []
     },
     {
       "title": "Reflecting On Consumer Discretionary - Broadcasting Stocks\u2019 Q2 Earnings: Paramount (NASDAQ:PSKY) - Yahoo Finance",
@@ -12215,14 +13807,7 @@
       "file_date": "2026-09-02",
       "known_at": "2026-09-02T00:00:01-04:00",
       "fill": "2026-09-02",
-      "tickers": [
-        {
-          "ticker": "AAT",
-          "side": "mixed",
-          "theme": "hormuz_new",
-          "why": "named in article \u2229 D-1 American Assets Trust Inc"
-        }
-      ]
+      "tickers": []
     },
     {
       "title": "Warsh Jackson Hole speech (hawkish reset)",
@@ -12362,14 +13947,7 @@
       "file_date": "2026-09-03",
       "known_at": "2026-09-03T00:00:01-04:00",
       "fill": "2026-09-03",
-      "tickers": [
-        {
-          "ticker": "AAT",
-          "side": "mixed",
-          "theme": "hormuz_new",
-          "why": "named in article \u2229 D-1 American Assets Trust Inc"
-        }
-      ]
+      "tickers": []
     },
     {
       "title": "Warsh Jackson Hole hawkish reset (still gating Sep FOMC)",
@@ -12395,12 +13973,6 @@
           "side": "neutral",
           "theme": "fed_path",
           "why": "named in article \u2229 D-1 American Bitcoin Corp"
-        },
-        {
-          "ticker": "BTC",
-          "side": "neutral",
-          "theme": "fed_path",
-          "why": "named in article \u2229 D-1 Grayscale Bitcoin Mini Trust ETF"
         }
       ]
     },
@@ -12673,14 +14245,7 @@
       "file_date": "2026-09-03",
       "known_at": "2026-09-03T04:23:47.934530-04:00",
       "fill": "2026-09-03",
-      "tickers": [
-        {
-          "ticker": "FOX",
-          "side": "neutral",
-          "theme": "named",
-          "why": "named in article \u2229 D-1 Fox Corp"
-        }
-      ]
+      "tickers": []
     },
     {
       "title": "Fed holds key interest rate steady. Here's what It means for your wallet - fox13news.com",
@@ -13027,14 +14592,7 @@
       "file_date": "2026-09-03",
       "known_at": "2026-09-03T04:23:47.934530-04:00",
       "fill": "2026-09-03",
-      "tickers": [
-        {
-          "ticker": "BNY",
-          "side": "bearish",
-          "theme": "fed_path",
-          "why": "named in article \u2229 D-1 Bank Of New York Mellon Corp"
-        }
-      ]
+      "tickers": []
     },
     {
       "title": "Fed\u2019s Interest Rate Decision: July 29, 2026 - Advisor Perspectives",
@@ -13386,14 +14944,7 @@
       "file_date": "2026-09-03",
       "known_at": "2026-09-03T04:23:47.934530-04:00",
       "fill": "2026-09-03",
-      "tickers": [
-        {
-          "ticker": "SMX",
-          "side": "bullish",
-          "theme": "fed_path",
-          "why": "named in article \u2229 D-1 SMX (Security Matters) Plc"
-        }
-      ]
+      "tickers": []
     },
     {
       "title": "Trump Calls Warsh \"Fantastic\" But Says \"We Should Have the Lowest Interest Rate in the World\" Ahead of Critical Fed Meeting - 24/7 Wall St.",
@@ -13798,29 +15349,6 @@
       "tickers": []
     },
     {
-      "title": "Stock Transaction: Powell Industries Richard Williams Sells 2,250 Shares",
-      "source": "actions",
-      "task": "",
-      "event": "fed_rate_path",
-      "file_date": "2026-09-08",
-      "known_at": "2026-09-08T00:00:01-04:00",
-      "fill": "2026-09-08",
-      "tickers": [
-        {
-          "ticker": "POWL",
-          "side": "neutral",
-          "theme": "fed_path",
-          "why": "named in article \u2229 D-1 Powell Industries Inc"
-        },
-        {
-          "ticker": "WMB",
-          "side": "neutral",
-          "theme": "fed_path",
-          "why": "named in article \u2229 D-1 Williams Cos Inc"
-        }
-      ]
-    },
-    {
       "title": "China 360bn yuan recap of state banks and insurers",
       "source": "events",
       "task": "",
@@ -14154,14 +15682,7 @@
       "file_date": "2026-09-10",
       "known_at": "2026-09-10T06:27:16.743109-04:00",
       "fill": "2026-09-10",
-      "tickers": [
-        {
-          "ticker": "CAT",
-          "side": "neutral",
-          "theme": "named",
-          "why": "named in article \u2229 D-1 Caterpillar Inc"
-        }
-      ]
+      "tickers": []
     },
     {
       "title": "UBS upgrades Lockheed Martin to Buy from Neutral and raises its price target to $674, citing stronger-than-expected long-term missile and defense program growth.",
@@ -14177,12 +15698,6 @@
           "side": "neutral",
           "theme": "named",
           "why": "named in article \u2229 D-1 Lockheed Martin Corp"
-        },
-        {
-          "ticker": "UBS",
-          "side": "neutral",
-          "theme": "named",
-          "why": "named in article \u2229 D-1 UBS Group AG"
         }
       ]
     },
@@ -14382,12 +15897,6 @@
           "side": "neutral",
           "theme": "named",
           "why": "named in article \u2229 D-1 Elevance Health Inc"
-        },
-        {
-          "ticker": "EPS",
-          "side": "neutral",
-          "theme": "named",
-          "why": "named in article \u2229 D-1 WisdomTree U.S. LargeCap Fund"
         }
       ]
     },
@@ -14447,12 +15956,6 @@
           "why": "named in article \u2229 D-1 Adobe Inc"
         },
         {
-          "ticker": "GME",
-          "side": "bearish",
-          "theme": "named",
-          "why": "named in article \u2229 D-1 Gamestop Corp"
-        },
-        {
           "ticker": "HOOD",
           "side": "bearish",
           "theme": "named",
@@ -14506,12 +16009,6 @@
           "why": "named in article \u2229 D-1 Adobe Inc"
         },
         {
-          "ticker": "GME",
-          "side": "bullish",
-          "theme": "named",
-          "why": "named in article \u2229 D-1 Gamestop Corp"
-        },
-        {
           "ticker": "NDAQ",
           "side": "bullish",
           "theme": "named",
@@ -14522,12 +16019,6 @@
           "side": "bullish",
           "theme": "named",
           "why": "named in article \u2229 D-1 Oracle Corp"
-        },
-        {
-          "ticker": "USO",
-          "side": "bullish",
-          "theme": "named",
-          "why": "named in article \u2229 D-1 United States Oil Fund"
         }
       ]
     },
@@ -14889,12 +16380,6 @@
           "side": "neutral",
           "theme": "named",
           "why": "named in article \u2229 D-1 Blink Charging Co"
-        },
-        {
-          "ticker": "FAI",
-          "side": "neutral",
-          "theme": "named",
-          "why": "named in article \u2229 D-1 First Trust Bloomberg Artificial Intelligence ETF"
         }
       ]
     },
@@ -15135,14 +16620,7 @@
       "file_date": "2026-09-15",
       "known_at": "2026-09-15T15:23:04.395304-04:00",
       "fill": "2026-09-16",
-      "tickers": [
-        {
-          "ticker": "GHG",
-          "side": "bullish",
-          "theme": "epa_ghg",
-          "why": "named in article \u2229 D-1 GreenTree Hospitality Group Ltd ADR"
-        }
-      ]
+      "tickers": []
     },
     {
       "title": "Executive Order 14420/14421 \u2014 national emergency over foreign bulk-power system equipment",
@@ -15172,14 +16650,7 @@
       "file_date": "2026-09-15",
       "known_at": "2026-09-15T15:23:04.395304-04:00",
       "fill": "2026-09-16",
-      "tickers": [
-        {
-          "ticker": "IND",
-          "side": "neutral",
-          "theme": "named",
-          "why": "named in article \u2229 D-1 Xtrackers Nifty 500 India ETF"
-        }
-      ]
+      "tickers": []
     },
     {
       "title": "FDA opens Expedited IND pilot under Operation TrialBlazer",
@@ -15189,14 +16660,7 @@
       "file_date": "2026-09-15",
       "known_at": "2026-09-15T15:23:04.395304-04:00",
       "fill": "2026-09-16",
-      "tickers": [
-        {
-          "ticker": "IND",
-          "side": "neutral",
-          "theme": "named",
-          "why": "named in article \u2229 D-1 Xtrackers Nifty 500 India ETF"
-        }
-      ]
+      "tickers": []
     },
     {
       "title": "Google ad-tech antitrust remedy ruling \u2014 no breakup, conduct remedies imposed",
@@ -15555,14 +17019,7 @@
       "file_date": "2026-09-17",
       "known_at": "2026-09-17T04:17:45.633491-04:00",
       "fill": "2026-09-17",
-      "tickers": [
-        {
-          "ticker": "IBM",
-          "side": "bearish",
-          "theme": "tariff",
-          "why": "named in article \u2229 D-1 International Business Machines Corp"
-        }
-      ]
+      "tickers": []
     },
     {
       "title": "FOMC 25bp hike to 3.75-4.00% and hawkish SEP",
@@ -15648,12 +17105,6 @@
           "side": "bullish",
           "theme": "crypto_sec",
           "why": "named in article \u2229 D-1 Intercontinental Exchange Inc"
-        },
-        {
-          "ticker": "NMS",
-          "side": "bullish",
-          "theme": "crypto_sec",
-          "why": "named in article \u2229 D-1 Nuveen Minnesota Quality Municipal Income Fund"
         }
       ]
     },
@@ -15666,12 +17117,6 @@
       "known_at": "2026-09-18T00:00:01-04:00",
       "fill": "2026-09-18",
       "tickers": [
-        {
-          "ticker": "PLA",
-          "side": "neutral",
-          "theme": "named",
-          "why": "named in article \u2229 D-1 GraniteShares Autocallable PLTR ETF"
-        },
         {
           "ticker": "TSM",
           "side": "neutral",
@@ -15701,46 +17146,46 @@
   "examples": {
     "hits": [
       {
-        "title": "Nasdaq, Dow, S&P 500 Futures Rise After 4-Day Market Slide As CPI Looms Large: ORCL, ADBE, MU, TSLA, RKLB, IBRX, HOOD, GME In Focus",
-        "ticker": "ORCL",
-        "fill": "2026-09-11",
-        "side": "bearish",
-        "theme": "named",
-        "open": 164.43,
-        "close": 150.28,
-        "same_day_pct": -8.605,
-        "next_close_pct": null,
-        "same_day_hit": true,
-        "next_close_hit": null,
-        "source": "parsed"
-      },
-      {
-        "title": "Stock Market Today: Futures Little Changed After Major Indexes Snap 3-Day Skids; Oil Prices, Treasury Yields, Bitcoin Rise; Walmart Stock Drops - Yahoo Finance",
+        "title": "Bitcoin Rally Tops $79K. Crypto Shorts, ETF Flows Soar. CFTC Explores Crypto Rules. - Investor's Business Daily",
         "ticker": "ABTC",
-        "fill": "2026-08-21",
-        "side": "bearish",
-        "theme": "named",
-        "open": 8.66,
-        "close": 7.93,
-        "same_day_pct": -8.43,
-        "next_close_pct": -0.231,
+        "fill": "2026-08-24",
+        "side": "bullish",
+        "theme": "crypto_sec",
+        "open": 8.0,
+        "close": 8.64,
+        "same_day_pct": 8.0,
+        "next_close_pct": 15.5,
         "same_day_hit": true,
         "next_close_hit": true,
         "source": "parsed"
       },
       {
-        "title": "Mortgage and refinance interest rates today, Thursday, August 27, 2026: Fixed rates rise, 5/1 ARM falls",
-        "ticker": "ARM",
-        "fill": "2026-08-28",
-        "side": "bearish",
+        "title": "Disney sues FCC over Trump\u2019s broadcast-license threat",
+        "ticker": "DIS",
+        "fill": "2026-08-19",
+        "side": "bullish",
         "theme": "named",
-        "open": 251.1,
-        "close": 239.05,
-        "same_day_pct": -4.799,
-        "next_close_pct": -3.66,
+        "open": 104.06,
+        "close": 106.93,
+        "same_day_pct": 2.758,
+        "next_close_pct": 3.133,
         "same_day_hit": true,
         "next_close_hit": true,
-        "source": "parsed"
+        "source": "actions"
+      },
+      {
+        "title": "Patriots and THAAD: Lockheed Martin Corporation (LMT) and Northrop Grumman Corporation (NOC) Bet Big on Missile Defense Surge",
+        "ticker": "NOC",
+        "fill": "2026-08-14",
+        "side": "bullish",
+        "theme": "named",
+        "open": 579.36,
+        "close": 585.87,
+        "same_day_pct": 1.124,
+        "next_close_pct": -1.581,
+        "same_day_hit": true,
+        "next_close_hit": false,
+        "source": "actions"
       }
     ],
     "misses": [
@@ -15759,29 +17204,15 @@
         "source": "parsed"
       },
       {
-        "title": "Disney sues FCC over Trump\u2019s broadcast-license threat",
-        "ticker": "BBGI",
-        "fill": "2026-08-19",
+        "title": "Widening Spreads and Tariff Protection Drive Steel Dynamics\u2019 (STLD) Rally",
+        "ticker": "STLD",
+        "fill": "2026-08-14",
         "side": "bullish",
-        "theme": "named",
-        "open": 21.73,
-        "close": 20.18,
-        "same_day_pct": -7.133,
-        "next_close_pct": -6.857,
-        "same_day_hit": false,
-        "next_close_hit": false,
-        "source": "actions"
-      },
-      {
-        "title": "Stock Market Today: Tech Futures Sink As Treasury Yields Jump; Nvidia, Micron, Sandisk All Tumble (Live Coverage)",
-        "ticker": "SNDK",
-        "fill": "2026-08-18",
-        "side": "bullish",
-        "theme": "named",
-        "open": 1677.54,
-        "close": 1625.78,
-        "same_day_pct": -3.085,
-        "next_close_pct": -6.478,
+        "theme": "tariff",
+        "open": 262.14,
+        "close": 255.77,
+        "same_day_pct": -2.43,
+        "next_close_pct": -1.518,
         "same_day_hit": false,
         "next_close_hit": false,
         "source": "parsed"

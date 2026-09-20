@@ -1434,9 +1434,10 @@ def write_md(payload: dict) -> str:
         "and theme packs do not expand the set.",
         "- No close digest, no post-close research_baseline, no OOS files "
         "while mapping an IS fill, no same-day Change%/Gap/RelVol.",
-        "- Long-only (no short locate) + hard-red S≤−3 sit. $10k leftover "
-        "split, Futubull fees, whole shares. Standalone holds 1 and 2 — "
-        "policy prints often land on the next session, not 09:30→close.",
+        "- Long-only (no short locate). Overlay inherits hard-red S≤−3 sit; "
+        "the standalone catalyst book does not — sitting is why Disney/FCC "
+        "never traded. $10k leftover split, Futubull fees, whole shares, "
+        "35% day-cap. Hold 1 and 2.",
         "",
         "## Standalone policy-catalyst book",
         "",
