@@ -8,6 +8,10 @@ name: Factor strategy mine
 # and rolls cash-start / investigator / books to last_closed_session so
 # .io advances without a manual remine. Morning Pre-Open / Stock Book
 # triggers become a no-op once yesterday is already on the board.
+# A flatten-only aux panel (2026-09-16+) is not treated as current —
+# land-closed repairs those days. See docs/FACTOR_MINE_AUX_PANEL.md.
+# Opt-in remine: dispatch oppset_union=true (FULLSCAN_OPPSET_UNION=1 +
+# --pull-oppset). Default false so schedule/workflow_run stay stamp-only.
 # Every-sleeve BUY/SELL for the live open is strategy_tickets
 # (publish_strategy_tickets.yml / publish_open_pack.sh), not this remine.
 
@@ -114,6 +118,11 @@ on:
         required: false
         default: false
         type: boolean
+      oppset_union:
+        description: "Add Theme Radar Clock-B oppset top-30 as panel source (FULLSCAN_OPPSET_UNION=1)"
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -139,7 +148,10 @@ jobs:
       - name: Install
         run: pip install pandas pyarrow openpyxl yfinance requests
       - name: Unit tests
-        run: python -m src.test_factor_mine
+        run: |
+          python -m src.test_clock_b_tells
+          python -m src.test_oppset_clock_b
+          python -m src.test_factor_mine
       - name: Mine recipes (cash book)
         env:
           FROM_DATE: ${{ inputs.from_date }}
@@ -158,8 +170,18 @@ jobs:
           AUTO: ${{ inputs.auto_tweak }}
           REBUILD: ${{ inputs.rebuild_panel }}
           LAND_CLOSED: ${{ inputs.land_closed }}
+          OPPSET_UNION: ${{ inputs.oppset_union }}
+          FULLSCAN_OPPSET_UNION: ${{ (inputs.oppset_union == true || inputs.oppset_union == 'true') && '1' || '' }}
         run: |
           set -euo pipefail
+          # Opt-in remine union. Default off so schedule/workflow_run
+          # land-closed stays stamp-only (no 242–451 names/day).
+          if [ "${OPPSET_UNION:-false}" = "true" ] \
+             || [ "${FULLSCAN_OPPSET_UNION:-}" = "1" ] \
+             || [ "${FULLSCAN_OPPSET_UNION:-}" = "true" ]; then
+            export FULLSCAN_OPPSET_UNION=1
+            python -m src.factor_mine --pull-oppset
+          fi
           if [ "${GITHUB_EVENT_NAME}" = "schedule" ] \
              || [ "${GITHUB_EVENT_NAME}" = "workflow_run" ] \
              || [ "${LAND_CLOSED:-false}" = "true" ]; then

@@ -25,6 +25,9 @@ fills at that later session's 09:30 open — the first price we can act.
 This is a research miner. It does not change flatten_robust live.
 
 CLI: python -m src.factor_mine --write
+
+After a flatten-only panel (one-day land-closed lookback), remine with
+``--land-closed --write``. See docs/FACTOR_MINE_AUX_PANEL.md.
 """
 from __future__ import annotations
 
@@ -38,7 +41,9 @@ from pathlib import Path
 
 from . import book_era
 from . import candle_factor as cf
+from . import clock_b_tells as cbt
 from . import finviz_events as fe
+from . import oppset_clock_b as opp
 from . import flatten_lookback_action as fla
 from . import gainer_asof as ga
 from . import gainer_capture as gc
@@ -52,6 +57,13 @@ OUT_JSON = ROOT / "03_scoreboard" / "factor_mine.json"
 OUT_MD = ROOT / "03_scoreboard" / "FACTOR_MINE.md"
 OUT_START = ROOT / "data" / "factor_mine" / "start_dates.json"
 PANEL_PATH = ROOT / "data" / "factor_mine" / "panel.json"
+# One-day land-closed / extend-pack used to pass ``[date]`` as the
+# calendar, so prior_session was None and aux feeds went flatten-only.
+PANEL_LOOKBACK = "full_session_cal"
+AUX_SOURCES = frozenset({
+    "probable", "yday_gainer", "yday_mover", "ohlc_hot",
+    "earn_react", "mover_buy",
+})
 DASH_DIR = ROOT / "dashboard" / "factor-mine"
 # Heavy books / starts / daily / probe / sim live in gzip shards so the
 # committed index stays under GitHub's 100MB hard cap. 2026-09-18 mine
@@ -81,7 +93,14 @@ WORKABLE_BAR = {
     "min_start": 0.50,
     "min_dollar_days": 0.40,
 }
-WORKABLE_ALWAYS = ("flatten_h5",)
+WORKABLE_ALWAYS = (
+    "flatten_h5",
+    "union_hot_n4_holdup",
+    "overnight_mega_h1",
+    "overnight_mega_h2",
+    "overnight_h1",
+    "combo_oh_5050_shared",
+)
 NEWS_POS = (
     "beat", "upgrade", "approv", "record high", "surge", "wins ",
     "raises", "buyback", "phase 3", "fda", "breakthrough",
@@ -108,6 +127,10 @@ INPUT_FIELDS = frozenset({
     "macd_cross_up", "macd_cross_down", "rsi_os", "rsi_ob",
     "macd_up", "macd_down", "flow_in", "close_loc",
     "fv_rvol", "fv_sma20", "fv_sma50", "fv_inst",
+    "ins_buy", "form4_buy", "rs_week",
+    "oppset", "opp_any", "opp_rvol", "opp_gap_pct", "opp_change_pct",
+    "opp_finviz_asof",
+    *cbt.COMBO_KEYS,
 })
 _SCAN_CACHE: dict[tuple[str, str], dict | None] = {}
 _OHLC_CACHE: dict[tuple[str, str], dict] = {}
@@ -329,6 +352,7 @@ def attach_tape_flow(panel: dict) -> dict:
             r["ohlc_ret_1"] = oh.get("ret_1")
         if r.get("ohlc_rvol") is None and _finite(oh.get("rvol")) is not None:
             r["ohlc_rvol"] = oh.get("rvol")
+        cbt.stamp_row(r)
     panel["_tape_filled"] = True
     return panel
 
@@ -661,6 +685,10 @@ def build_recipes() -> list[dict]:
     add(name="flatten_h5_s8", universe="flatten", hold=5, stop_pct=0.08,
         note="flatten hold 5, stop −8% at 09:30 even inside hold")
 
+    # Clock-B catalogue tells Fullscan already supports. Research gates
+    # only — Excel fee-KEEP prove is a separate path. Not KEEP.
+    recs.extend(cbt.clock_b_recipes(make_recipe))
+
     return recs
 
 
@@ -674,6 +702,7 @@ _UNI_KID = {
     "ohlc_hot": "names that looked hot on the prior price/volume tape",
     "overnight": "names the prior Finviz calendar said report AMC today or BMO next session (print not in yet)",
     "overnight_mega": "the same calendar list, kept only when prior-export mcap is at least $50B",
+    "oppset": "Theme Radar Clock-B opportunity-set (T−1 gap + RelVol flagged; optional feed)",
     "combo": "several existing sleeves sharing one $10k book (each kid still uses its own 09:30 list)",
 }
 _CAM_KID = {
@@ -699,6 +728,7 @@ _RANK_KID = {
     "w_hot_candle": "a mix of tape-heat and prior candles",
     "rsi": "how oversold the prior RSI is (lower first)",
     "macd_hist": "how positive the prior MACD histogram is",
+    "opp_rvol": "Theme Radar T−1 relative volume (Clock-B opportunity-set; not same-day RelVol)",
     "list": "the morning-board Score (100 minus list rank) — only after the pool is chosen",
     "score": "the morning-board Score (100 minus list rank) — only after the pool is chosen",
 }
@@ -808,6 +838,13 @@ def _gate_kid(key: str, val) -> str:
         if int(val) == -1:
             return "the latest revision flag is a downgrade"
         return f"the revision flag equals {val}"
+    if key == "oppset":
+        return (
+            "Theme Radar Clock-B opportunity-set: T−1 gap or RelVol "
+            "(or week move) flagged — not today's Gap/RelVol"
+        )
+    if key in cbt.COMBO_KID:
+        return cbt.COMBO_KID[key]
     if key in _CAM_KID:
         tone = {True: "green", False: "off", "good": "green", "bad": "red",
                 "neutral": "yellow", "missing": "blank"}.get(val, str(val))
@@ -1039,10 +1076,20 @@ def flatten_plan(date: str) -> dict:
         return {}
 
 
+def on_oppset(row: dict) -> bool:
+    """Theme Radar T−1 flagged name. Stamp or optional remine source."""
+    if row.get("oppset"):
+        return True
+    return "oppset" in set(row.get("sources") or [])
+
+
 def matches(row: dict, rec: dict) -> bool:
     uni = rec.get("universe") or "union"
     srcs = set(row.get("sources") or [])
-    if uni != "union" and uni not in srcs:
+    if uni == "oppset":
+        if not on_oppset(row):
+            return False
+    elif uni != "union" and uni not in srcs:
         return False
     req = rec.get("require") or {}
     forb = rec.get("forbid") or {}
@@ -1176,6 +1223,12 @@ def matches(row: dict, rec: dict) -> bool:
         v = _finite(row.get("rsi"))
         if v is None or v > float(req["rsi_max"]):
             return False
+    if req.get("oppset") and not on_oppset(row):
+        return False
+    if forb.get("oppset") and on_oppset(row):
+        return False
+    if not cbt.gate_row(row, req, forb):
+        return False
     return True
 
 
@@ -1278,7 +1331,8 @@ def major_catalyst(row: dict) -> bool:
 def _recipe_needs_catalyst(rec: dict | None) -> bool:
     req = (rec or {}).get("require") or {}
     return bool(req.get("yday_or_catalyst") or req.get("yday_and_catalyst")
-                or req.get("major_catalyst"))
+                or req.get("major_catalyst")
+                or cbt.recipe_needs_epol(rec))
 
 
 def ensure_sim_fields(panel: dict, rec: dict | None = None) -> dict:
@@ -1303,6 +1357,10 @@ def ensure_sim_fields(panel: dict, rec: dict | None = None) -> dict:
             attach_tape_flow(panel)
         else:
             panel["_tape_filled"] = True
+    if rec is None or cbt.recipe_needs_clock_b(rec) or not panel.get("_clock_b"):
+        cbt.attach_panel(panel)
+    if not panel.get("_oppset"):
+        opp.attach_panel(panel)
     return panel
 
 
@@ -1377,7 +1435,9 @@ def match_why(row: dict, rec: dict) -> dict:
 
     uni = rec.get("universe") or "union"
     srcs = set(row.get("sources") or [])
-    if uni != "union":
+    if uni == "oppset":
+        need(on_oppset(row), "on the Theme Radar Clock-B T−1 opportunity-set")
+    elif uni != "union":
         need(uni in srcs, f"on the {uni} 09:30 list")
     req = rec.get("require") or {}
     forb = rec.get("forbid") or {}
@@ -1518,6 +1578,16 @@ def match_why(row: dict, rec: dict) -> dict:
         v = _finite(row.get("rsi"))
         need(v is not None and v <= float(req["rsi_max"]),
              _gate_kid("rsi_max", req["rsi_max"]))
+    for key in cbt.COMBO_KEYS:
+        if req.get(key):
+            need(cbt.combo_true(row, key), _gate_kid(key, True))
+        if forb.get(key):
+            need(not cbt.combo_true(row, key),
+                 f"not {_gate_kid(key, True)}")
+    if req.get("oppset"):
+        need(on_oppset(row), _gate_kid("oppset", True))
+    if forb.get("oppset"):
+        need(not on_oppset(row), f"not {_gate_kid('oppset', True)}")
     return {"ok": not failed, "failed": failed, "passed": passed}
 
 
@@ -1595,6 +1665,8 @@ def rank_key(row: dict, rec: dict) -> tuple:
         return (999.0 if v is None else v, row["ticker"])
     if how == "macd_hist":
         return (-(_finite(row.get("macd_hist")) or 0.0), row["ticker"])
+    if how == "opp_rvol":
+        return (-(_finite(row.get("opp_rvol")) or 0.0), row["ticker"])
     if how in ("list", "score", "src_rank"):
         src = row.get("src_rank")
         src_i = 99 if src is None else int(src)
@@ -1610,10 +1682,56 @@ def pick_day(rows: list[dict], rec: dict) -> list[dict]:
     return kept[: int(rec.get("top_n") or TOP_N_DEFAULT)]
 
 
+def day_source_set(rows: list[dict] | None) -> set[str]:
+    out: set[str] = set()
+    for r in rows or []:
+        out.update(r.get("sources") or [])
+    return out
+
+
+def aux_starved_dates(panel: dict | None) -> list[str]:
+    """Sessions after the first whose 09:30 list is flatten-only / empty.
+
+    The dashboard start day (no prior tape) is allowed to be flatten-only.
+    Later days that never unioned yday / OHLC / earn / mover feeds are a
+    lookback bug, not a quiet tape.
+    """
+    if not panel:
+        return []
+    raw = rehydrate_panel(panel)
+    cal = list(raw.get("session_dates") or [])
+    by_date = raw.get("by_date") or {}
+    starved: list[str] = []
+    for i, date in enumerate(cal):
+        if i == 0:
+            continue
+        rows = by_date.get(date) or [
+            r for r in (raw.get("rows") or []) if r.get("date") == date
+        ]
+        if not (day_source_set(rows) & AUX_SOURCES):
+            starved.append(date)
+    return starved
+
+
+def panel_aux_needs_repair(panel: dict | None = None) -> bool:
+    raw = panel
+    if raw is None:
+        if not PANEL_PATH.is_file():
+            return False
+        try:
+            raw = json.loads(PANEL_PATH.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            return False
+    if raw.get("lookback") == PANEL_LOOKBACK:
+        return False
+    return bool(aux_starved_dates(raw))
+
+
 def _candidates(date: str, cal: list[str], flatten_plan: dict,
                 mover_by_date: dict) -> dict[str, list[str]]:
-    prior = gc.prior_session(cal, date)
-    return {
+    look = gc.lookback_calendar(cal)
+    prior = gc.knowable_export_date(look, date)
+    buckets = {
         "flatten": [_tick(t) for t in (flatten_plan.get("tickers") or [])],
         "probable": ohlc.continuation(prior, date, top_n=ohlc.CONT_TOP_N),
         "yday_gainer": gc.yesterday_gainers(prior, top_n=25),
@@ -1627,6 +1745,11 @@ def _candidates(date: str, cal: list[str], flatten_plan: dict,
             min_mcap_m=gc.OVERNIGHT_MEGA_MCAP_M),
         "mover_buy": [_tick(t) for t in (mover_by_date.get(date) or [])][:15],
     }
+    if opp.union_enabled():
+        # Opt-in remine union: top 30 flagged by T−1 rvol. Default is stamp/
+        # filter only so land-closed does not balloon the panel.
+        buckets["oppset"] = opp.flagged_tickers(date, top_n=30)
+    return buckets
 
 
 def _session_map(from_date: str, to_date: str | None):
@@ -1731,6 +1854,11 @@ def _attach_row(date: str, ticker: str, sources: list[str], src_rank: int,
         "prior_date": prior_date,
     }
     apply_tape_fields(rec, oh, _finviz_snap(prior_df, ticker))
+    rec["ins_buy"] = _headline_insider_buy(str(prior_title or "").lower())
+    peer = card.get("peer") or {}
+    rec["rs_week"] = _finite(peer.get("rs_week"))
+    opp.apply_to_rec(rec, date, ticker)
+    cbt.stamp_row(rec)
     return rec
 
 
@@ -1875,21 +2003,25 @@ def build_panel(from_date: str = START, to_date: str | None = None) -> dict:
     payload = sm.load_payload()
     books = sm.list_books()
     end = live_panel_end(from_date, to_date)
-    full_cal = panel_lookback_calendar(from_date, to_date)
-    cal = panel_emit_dates(full_cal, from_date, end)
+    full_cal = list(sm.session_calendar(payload, books))
+    cal = [d for d in full_cal
+           if d >= from_date and (not end or d <= end)]
+    # One-day land-closed / extend-pack emit must still see yesterday.
+    lookback = gc.lookback_calendar(cal)
     end = end or (cal[-1] if cal else from_date)
-    map_from = full_cal[0] if full_cal else from_date
-    sess_map, _all_sessions = _session_map(map_from, end)
+    sess_from = lookback[0] if lookback else from_date
+    sess_map, _all_sessions = _session_map(sess_from, end)
     movers = (fla.collect_mover_buys(payload, cal[0], cal[-1], top_n=15)
               if cal else {"by_date": {}})
     rows: list[dict] = []
     by_date: dict[str, list[dict]] = {}
     for date in cal:
-        prior = feature_export_date(full_cal, date)
+        prior_sess = gc.prior_session(lookback, date)
+        prior_export = gc.knowable_export_date(lookback, date)
         # Prior export only. Same-day Finviz is never a feature.
-        prior_df = ga.load_finviz(prior) if prior else None
+        prior_df = ga.load_finviz(prior_export) if prior_export else None
         plan = fla.flatten_day_targets(date)
-        buckets = _candidates(date, full_cal, plan, movers.get("by_date") or {})
+        buckets = _candidates(date, lookback, plan, movers.get("by_date") or {})
         reasons: dict[str, list[str]] = {}
         order: list[str] = []
         for key, names in buckets.items():
@@ -1902,13 +2034,13 @@ def build_panel(from_date: str = START, to_date: str | None = None) -> dict:
                 if t not in order:
                     order.append(t)
         sess = sess_map.get(date)
-        prev_sess = sess_map.get(prior) if prior else None
+        prev_sess = sess_map.get(prior_sess) if prior_sess else None
         day_rows = []
         for i, t in enumerate(order):
             if sess is None:
                 continue
             rec = _attach_row(
-                date, t, reasons[t], i, sess, prev_sess, prior, prior_df,
+                date, t, reasons[t], i, sess, prev_sess, prior_export, prior_df,
             )
             day_rows.append(rec)
         by_date[date] = day_rows
@@ -1923,6 +2055,7 @@ def build_panel(from_date: str = START, to_date: str | None = None) -> dict:
         "n_sessions": len(cal),
         "asof": "09:30_et",
         "leak": "prior tape + pre-open packet; news from prior export or morning box",
+        "lookback": PANEL_LOOKBACK,
         "rows": rows,
         "by_date": by_date,
     }
@@ -2033,11 +2166,67 @@ def panel_is_current(raw: dict, from_date: str,
     return True
 
 
+def repair_aux_starved_days(panel: dict,
+                            dates: list[str] | None = None) -> dict:
+    """Rebuild flatten-only days with a full lookback calendar.
+
+    Leaves healthy days in place so a remine does not rescan 08-13→09-15.
+    """
+    panel = rehydrate_panel(panel)
+    need = list(dates or aux_starved_dates(panel))
+    if not need:
+        out = dict(panel)
+        out["lookback"] = PANEL_LOOKBACK
+        return out
+    skip = set(need)
+    rows = [r for r in (panel.get("rows") or []) if r.get("date") not in skip]
+    by_date = dict(panel.get("by_date") or {})
+    cal = list(panel.get("session_dates") or [])
+    for date in need:
+        print(f"[factor-mine] repair aux panel {date}", flush=True)
+        extra = build_panel(date, date)
+        rows.extend(extra.get("rows") or [])
+        by_date[date] = list(
+            (extra.get("by_date") or {}).get(date) or extra.get("rows") or []
+        )
+        for d in extra.get("session_dates") or []:
+            if d not in cal:
+                cal.append(d)
+    cal = sorted({d for d in cal if d})
+    rows.sort(key=lambda r: (
+        r.get("date") or "", int(r.get("src_rank") or 0), r.get("ticker") or "",
+    ))
+    out = dict(panel)
+    out.update({
+        "session_dates": cal,
+        "n_sessions": len(cal),
+        "n_rows": len(rows),
+        "rows": rows,
+        "by_date": by_date,
+        "lookback": PANEL_LOOKBACK,
+        "to_date": cal[-1] if cal else panel.get("to_date"),
+    })
+    return out
+
+
+def maybe_repair_aux_starved(panel: dict) -> dict:
+    if panel.get("lookback") == PANEL_LOOKBACK:
+        return panel
+    starved = aux_starved_dates(panel)
+    if not starved:
+        panel = dict(panel)
+        panel["lookback"] = PANEL_LOOKBACK
+        return panel
+    print(f"[factor-mine] aux-starved days {starved} — repairing", flush=True)
+    return repair_aux_starved_days(panel, starved)
+
+
 def load_or_build_panel(from_date: str = START, to_date: str | None = None,
                         rebuild: bool = False) -> dict:
     if not rebuild and PANEL_PATH.exists():
         raw = json.loads(PANEL_PATH.read_text(encoding="utf-8"))
         if panel_is_current(raw, from_date, to_date):
+            raw = maybe_repair_aux_starved(rehydrate_panel(raw))
             print(f"[factor-mine] loaded panel {PANEL_PATH} "
                   f"rows={raw.get('n_rows')} → {raw.get('to_date')}", flush=True)
             return rehydrate_panel(raw)
@@ -3116,6 +3305,8 @@ def restamp_dash() -> dict:
     from . import factor_mine_probe as fmp
     from . import factor_mine_sim as fms
     fmp.attach_erd_polarity(panel)
+    cbt.attach_panel(panel)
+    opp.attach_panel(panel)
     bought = _bought_tickers(payload.get("books"), payload.get("starts"))
     payload["probe"] = fmp.slim_probe(fmp.build_probe(panel), bought)
     payload["sim"] = fms.build_sim_pack(panel)
@@ -3220,6 +3411,8 @@ TAPE_FLOW_PIN = (
     "union_rsi_os_h1",
     "short_rsi_ob_h3",
 )
+CLOCK_B_SPLICE = cbt.CLOCK_B_CORE + cbt.CLOCK_B_OPPSET_RECIPES
+CLOCK_B_PIN = cbt.CLOCK_B_PIN
 
 
 def merge_stats_into_payload(
@@ -3382,6 +3575,56 @@ def splice_tape_flow(*, write: bool = True) -> dict:
     for s in stats:
         print(
             f"{s['name']:32s} {_n(s.get('total_ret_pct')):>8} "
+            f"{s.get('start_green') or 0:>2}/{s.get('start_n') or 0:<4} "
+            f"{s.get('book_n_trades') or 0:>5}",
+            flush=True,
+        )
+    return payload
+
+
+def splice_clock_b(*, write: bool = True) -> dict:
+    """Cash-book Clock-B catalogue recipes onto the last board.
+
+    Research / ops only. Does not claim KEEP. Does not change live
+    flatten_robust or Webull.
+    """
+    from . import factor_mine_book as fmb
+    from . import factor_mine_sim as fms
+
+    panel = load_or_build_panel(START, None, rebuild=False)
+    attach_tape_flow(panel)
+    from . import factor_mine_probe as fmp
+    fmp.attach_erd_polarity(panel)
+    cbt.attach_panel(panel)
+    opp.attach_panel(panel)
+    payload = load_dash_payload()
+    rec_by = {r["name"]: r for r in build_recipes()}
+    recipes = [rec_by[n] for n in CLOCK_B_SPLICE if n in rec_by]
+    tapes = _tapes(list(panel.get("session_dates") or []))
+    regime = fmb.load_regime()
+    fees = pt_fees()
+    stats: list[dict] = []
+    books: dict = {}
+    for rec in recipes:
+        print(f"[splice] {rec['name']}", flush=True)
+        st = score_recipe(panel, rec, tapes)
+        bk = fmb.simulate_book(panel, rec, fees=fees, regime=regime)
+        starts = fmb.replay_starts(panel, rec, fees=fees, regime=regime)
+        st = fmb.attach_book(st, bk, starts)
+        stats.append(st)
+        books[rec["name"]] = bk
+    merge_stats_into_payload(
+        payload, stats, books, recipes, pin=CLOCK_B_PIN)
+    payload["sim"] = fms.build_sim_pack(panel)
+    payload["generated_at"] = datetime.now(tl.ET).isoformat()
+    payload["n_recipes"] = len(payload["stats"])
+    if write:
+        write_outputs(payload, payload["stats"], books=None)
+    print("[splice] clock-b books (research; not KEEP)", flush=True)
+    print(f"{'name':36s} {'book%':>8} {'starts':>8} {'fills':>5}", flush=True)
+    for s in stats:
+        print(
+            f"{s['name']:36s} {_n(s.get('total_ret_pct')):>8} "
             f"{s.get('start_green') or 0:>2}/{s.get('start_n') or 0:<4} "
             f"{s.get('book_n_trades') or 0:>5}",
             flush=True,
@@ -3568,6 +3811,10 @@ def land_closed(from_date: str = START, write: bool = False,
     triggers become a no-op once yesterday is already on the board;
     post-close / 16:25 ET schedule lands today.
 
+    A payload that already covers ``target`` still remines when the
+    cached panel is flatten-only (aux list builders silent after a
+    one-day lookback). That is how 2026-09-16→18 starved.
+
     An explicit ``to_date`` past last_closed extends the pack with a
     pending start (no mid-day close mark) so Pages shows today's session.
     """
@@ -3580,9 +3827,15 @@ def land_closed(from_date: str = START, write: bool = False,
     if OUT_JSON.is_file():
         payload = load_scoreboard()
     if not rebuild_panel and payload_covers_session(payload, target):
-        print(f"[factor-mine] land-closed: {target} already on the board — skip",
-              flush=True)
-        return payload
+        if not panel_aux_needs_repair():
+            print(f"[factor-mine] land-closed: {target} already on the board — skip",
+                  flush=True)
+            return payload
+        print(
+            f"[factor-mine] land-closed: {target} already on the board but "
+            "aux panel is flatten-only — remine so union feeds land",
+            flush=True,
+        )
     recs = existing_single_recipes(payload)
     if not recs:
         from . import factor_mine_book as fmb
@@ -3732,6 +3985,10 @@ def main(argv=None) -> int:
                     help="cash-book news packet / headline / camera recipes onto the last board")
     ap.add_argument("--splice-tape-flow", action="store_true",
                     help="cash-book RSI / MACD / flow-in recipes onto the last board")
+    ap.add_argument("--splice-clock-b", action="store_true",
+                    help="cash-book Clock-B catalogue tells onto the last board (research; not KEEP)")
+    ap.add_argument("--pull-oppset", action="store_true",
+                    help="download Theme Radar Clock-B oppset CSV (no git clone)")
     ap.add_argument("--sweep-white", action="store_true",
                     help="cash-book sweep: −0 red + (yday/catalyst) × hold × rank")
     ap.add_argument("--sweep-bracket", action="store_true",
@@ -3763,6 +4020,15 @@ def main(argv=None) -> int:
     ap.add_argument("--no-combo", action="store_true",
                     help="skip combination books (single-recipe mine only)")
     args = ap.parse_args(argv)
+    if args.pull_oppset:
+        dest = opp.pull()
+        idx = opp.load_index(dest)
+        n16 = opp.flagged_n("2026-09-16", idx)
+        n17 = opp.flagged_n("2026-09-17", idx)
+        n18 = opp.flagged_n("2026-09-18", idx)
+        print(f"[oppset] pulled {dest} rows={len(idx)} "
+              f"09-16={n16} 09-17={n17} 09-18={n18} ref={opp.DEFAULT_REF}")
+        return 0
     if args.restamp_dash:
         payload = restamp_dash()
         print(f"[factor-mine] recipes={payload.get('n_recipes')} "
@@ -3776,6 +4042,11 @@ def main(argv=None) -> int:
     if args.splice_tape_flow:
         payload = splice_tape_flow(write=args.write)
         print(f"[factor-mine] splice-tape-flow recipes={payload.get('n_recipes')} "
+              f"to={payload.get('to_date')}")
+        return 0
+    if args.splice_clock_b:
+        payload = splice_clock_b(write=args.write)
+        print(f"[factor-mine] splice-clock-b recipes={payload.get('n_recipes')} "
               f"to={payload.get('to_date')}")
         return 0
     if args.sweep_white:

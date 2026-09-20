@@ -62,6 +62,56 @@ def next_session(cal: list[str], date: str) -> str | None:
     return later[0] if later else None
 
 
+def export_readable(date: str) -> bool:
+    """True when ``data/exports/finviz_{date}.csv`` is a usable tape.
+
+    Checks the header only — a missing file or a stub without Change /
+    Ticker is not 09:30-knowable input.
+    """
+    if not date:
+        return False
+    path = ga.EXPORT_DIR / f"finviz_{date}.csv"
+    try:
+        if not path.is_file() or path.stat().st_size < 1000:
+            return False
+        head = path.read_text(encoding="utf-8", errors="replace")[:4000]
+    except OSError:
+        return False
+    return "Ticker" in head and "Change" in head
+
+
+def lookback_calendar(cal: list[str] | None = None) -> list[str]:
+    """Union the emit window with the stock-book session calendar.
+
+    ``build_panel(date, date)`` / land-closed extend walks a one-day
+    emit calendar. ``prior_session([date], date)`` is then None and
+    every Finviz / OHLC aux list goes silent (flatten-only).
+    """
+    emit = [str(d) for d in (cal or []) if d]
+    extra: list[str] = []
+    try:
+        from . import sleeve_merge as sm
+        extra = list(sm.session_calendar(sm.load_payload(), sm.list_books()))
+    except Exception:
+        extra = []
+    return sorted({*emit, *extra})
+
+
+def knowable_export_date(cal: list[str] | None, date: str) -> str | None:
+    """Last session strictly before ``date`` with a readable Finviz export.
+
+    Clock-clean: never returns ``date`` or later. A missing prior file
+    (2026-08-26) walks back to the previous landed export.
+    """
+    if not date:
+        return None
+    look = lookback_calendar(cal)
+    for d in reversed([x for x in look if x < date]):
+        if export_readable(d):
+            return d
+    return None
+
+
 def parse_earnings(raw) -> tuple[str | None, int | None]:
     """Finviz Earnings Date → (YYYY-MM-DD, HHMM). Same stamps as the chart E."""
     from . import finviz_events as fe
@@ -179,9 +229,9 @@ def watchlist(date: str, *,
               top_movers: int = TOP_YDAY_MOVERS) -> dict:
     """Ordered unique capture names + per-name reasons. Leak-free."""
     session = str(date or "")[:10]
-    calendar = list(cal or [])
-    prior = prior_session(calendar, session) if calendar else None
-    nxt = next_session(calendar, session) if calendar else None
+    calendar = lookback_calendar(cal)
+    prior = knowable_export_date(calendar, session)
+    nxt = next_session(calendar, session)
     buckets = {
         "flatten": [_tick(t) for t in (flatten_picks or []) if _tick(t)],
         "mover_buys": [_tick(t) for t in (mover_buys or []) if _tick(t)],

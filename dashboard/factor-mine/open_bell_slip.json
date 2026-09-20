@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-19T01:28:34.420713-04:00",
+  "generated_at": "2026-09-19T14:30:41.877207-04:00",
   "order_sent": "09:30 ET",
   "live_wire": false,
   "live_untouched": [
@@ -31,96 +31,96 @@
   "reports": {
     "combo_sh_macd_5050_shared": {
       "name": "combo_sh_macd_5050_shared",
-      "n_intents": 152,
+      "n_intents": 168,
       "columns": {
         "ideal": {
           "reality": "ideal",
-          "n_fires": 152,
-          "n_filled": 131,
-          "n_miss": 21,
-          "n_wins": 39,
+          "n_fires": 168,
+          "n_filled": 139,
+          "n_miss": 29,
+          "n_wins": 49,
           "n_adverse": 0,
-          "win_rate": 0.2977,
+          "win_rate": 0.3525,
           "adverse_rate": 0.0,
-          "pnl": -77.36
+          "pnl": -72.16
         },
         "market": {
           "reality": "market",
-          "n_fires": 152,
-          "n_filled": 131,
-          "n_miss": 21,
-          "n_wins": 18,
-          "n_adverse": 128,
-          "win_rate": 0.1374,
-          "adverse_rate": 0.9771,
-          "pnl": -131.66
+          "n_fires": 168,
+          "n_filled": 139,
+          "n_miss": 29,
+          "n_wins": 25,
+          "n_adverse": 135,
+          "win_rate": 0.1799,
+          "adverse_rate": 0.9712,
+          "pnl": -138.63
         },
         "limit_open": {
           "reality": "limit_open",
-          "n_fires": 152,
-          "n_filled": 121,
-          "n_miss": 31,
-          "n_wins": 31,
+          "n_fires": 168,
+          "n_filled": 131,
+          "n_miss": 37,
+          "n_wins": 43,
           "n_adverse": 0,
-          "win_rate": 0.2562,
+          "win_rate": 0.3282,
           "adverse_rate": 0.0,
-          "pnl": -83.97
+          "pnl": -78.61
         },
         "limit_prior": {
           "reality": "limit_prior",
-          "n_fires": 152,
-          "n_filled": 113,
-          "n_miss": 39,
-          "n_wins": 34,
+          "n_fires": 168,
+          "n_filled": 117,
+          "n_miss": 51,
+          "n_wins": 40,
           "n_adverse": 0,
-          "win_rate": 0.3009,
+          "win_rate": 0.3419,
           "adverse_rate": 0.0,
-          "pnl": -63.06
+          "pnl": -69.37
         }
       },
       "verdicts": {
         "ideal": {
           "label": "KILL",
           "keep": false,
-          "why": "KILL combo_sh_macd_5050_shared / ideal: 131 filled fires but after-fee win 29.8% \u2264 55%.",
-          "n_fires": 152,
-          "n_filled": 131,
-          "win_rate": 0.2977,
-          "pnl": -77.36,
+          "why": "KILL combo_sh_macd_5050_shared / ideal: 139 filled fires but after-fee win 35.2% \u2264 55%.",
+          "n_fires": 168,
+          "n_filled": 139,
+          "win_rate": 0.3525,
+          "pnl": -72.16,
           "vs_ideal_pnl": null,
           "thin": false
         },
         "market": {
           "label": "KILL",
           "keep": false,
-          "why": "KILL combo_sh_macd_5050_shared / market: 131 filled fires but after-fee win 13.7% \u2264 55%; vs ideal-open $-54.30.",
-          "n_fires": 152,
-          "n_filled": 131,
-          "win_rate": 0.1374,
-          "pnl": -131.66,
-          "vs_ideal_pnl": -54.3,
+          "why": "KILL combo_sh_macd_5050_shared / market: 139 filled fires but after-fee win 18.0% \u2264 55%; vs ideal-open $-66.47.",
+          "n_fires": 168,
+          "n_filled": 139,
+          "win_rate": 0.1799,
+          "pnl": -138.63,
+          "vs_ideal_pnl": -66.47,
           "thin": false
         },
         "limit_open": {
           "label": "KILL",
           "keep": false,
-          "why": "KILL combo_sh_macd_5050_shared / limit_open: 121 filled fires but after-fee win 25.6% \u2264 55%; vs ideal-open $-6.61.",
-          "n_fires": 152,
-          "n_filled": 121,
-          "win_rate": 0.2562,
-          "pnl": -83.97,
-          "vs_ideal_pnl": -6.61,
+          "why": "KILL combo_sh_macd_5050_shared / limit_open: 131 filled fires but after-fee win 32.8% \u2264 55%; vs ideal-open $-6.45.",
+          "n_fires": 168,
+          "n_filled": 131,
+          "win_rate": 0.3282,
+          "pnl": -78.61,
+          "vs_ideal_pnl": -6.45,
           "thin": false
         },
         "limit_prior": {
           "label": "KILL",
           "keep": false,
-          "why": "KILL combo_sh_macd_5050_shared / limit_prior: 113 filled fires but after-fee win 30.1% \u2264 55%; vs ideal-open $+14.30.",
-          "n_fires": 152,
-          "n_filled": 113,
-          "win_rate": 0.3009,
-          "pnl": -63.06,
-          "vs_ideal_pnl": 14.3,
+          "why": "KILL combo_sh_macd_5050_shared / limit_prior: 117 filled fires but after-fee win 34.2% \u2264 55%; vs ideal-open $+2.79.",
+          "n_fires": 168,
+          "n_filled": 117,
+          "win_rate": 0.3419,
+          "pnl": -69.37,
+          "vs_ideal_pnl": 2.79,
           "thin": false
         }
       }
@@ -132,91 +132,91 @@
         "ideal": {
           "reality": "ideal",
           "n_fires": 104,
-          "n_filled": 84,
-          "n_miss": 20,
-          "n_wins": 27,
+          "n_filled": 83,
+          "n_miss": 21,
+          "n_wins": 32,
           "n_adverse": 0,
-          "win_rate": 0.3214,
+          "win_rate": 0.3855,
           "adverse_rate": 0.0,
-          "pnl": -27.15
+          "pnl": -20.12
         },
         "market": {
           "reality": "market",
           "n_fires": 104,
-          "n_filled": 84,
-          "n_miss": 20,
-          "n_wins": 13,
-          "n_adverse": 81,
-          "win_rate": 0.1548,
-          "adverse_rate": 0.9643,
-          "pnl": -66.83
+          "n_filled": 83,
+          "n_miss": 21,
+          "n_wins": 18,
+          "n_adverse": 79,
+          "win_rate": 0.2169,
+          "adverse_rate": 0.9518,
+          "pnl": -70.1
         },
         "limit_open": {
           "reality": "limit_open",
           "n_fires": 104,
-          "n_filled": 78,
-          "n_miss": 26,
-          "n_wins": 21,
+          "n_filled": 79,
+          "n_miss": 25,
+          "n_wins": 28,
           "n_adverse": 0,
-          "win_rate": 0.2692,
+          "win_rate": 0.3544,
           "adverse_rate": 0.0,
-          "pnl": -33.94
+          "pnl": -26.75
         },
         "limit_prior": {
           "reality": "limit_prior",
           "n_fires": 104,
-          "n_filled": 74,
-          "n_miss": 30,
-          "n_wins": 24,
+          "n_filled": 71,
+          "n_miss": 33,
+          "n_wins": 26,
           "n_adverse": 0,
-          "win_rate": 0.3243,
+          "win_rate": 0.3662,
           "adverse_rate": 0.0,
-          "pnl": -25.2
+          "pnl": -31.09
         }
       },
       "verdicts": {
         "ideal": {
           "label": "KILL",
           "keep": false,
-          "why": "KILL union_hot_n4_h1 / ideal: 84 filled fires but after-fee win 32.1% \u2264 55%.",
+          "why": "KILL union_hot_n4_h1 / ideal: 83 filled fires but after-fee win 38.6% \u2264 55%.",
           "n_fires": 104,
-          "n_filled": 84,
-          "win_rate": 0.3214,
-          "pnl": -27.15,
+          "n_filled": 83,
+          "win_rate": 0.3855,
+          "pnl": -20.12,
           "vs_ideal_pnl": null,
           "thin": false
         },
         "market": {
           "label": "KILL",
           "keep": false,
-          "why": "KILL union_hot_n4_h1 / market: 84 filled fires but after-fee win 15.5% \u2264 55%; vs ideal-open $-39.68.",
+          "why": "KILL union_hot_n4_h1 / market: 83 filled fires but after-fee win 21.7% \u2264 55%; vs ideal-open $-49.98.",
           "n_fires": 104,
-          "n_filled": 84,
-          "win_rate": 0.1548,
-          "pnl": -66.83,
-          "vs_ideal_pnl": -39.68,
+          "n_filled": 83,
+          "win_rate": 0.2169,
+          "pnl": -70.1,
+          "vs_ideal_pnl": -49.98,
           "thin": false
         },
         "limit_open": {
           "label": "KILL",
           "keep": false,
-          "why": "KILL union_hot_n4_h1 / limit_open: 78 filled fires but after-fee win 26.9% \u2264 55%; vs ideal-open $-6.79.",
+          "why": "KILL union_hot_n4_h1 / limit_open: 79 filled fires but after-fee win 35.4% \u2264 55%; vs ideal-open $-6.63.",
           "n_fires": 104,
-          "n_filled": 78,
-          "win_rate": 0.2692,
-          "pnl": -33.94,
-          "vs_ideal_pnl": -6.79,
+          "n_filled": 79,
+          "win_rate": 0.3544,
+          "pnl": -26.75,
+          "vs_ideal_pnl": -6.63,
           "thin": false
         },
         "limit_prior": {
           "label": "KILL",
           "keep": false,
-          "why": "KILL union_hot_n4_h1 / limit_prior: 74 filled fires but after-fee win 32.4% \u2264 55%; vs ideal-open $+1.95.",
+          "why": "KILL union_hot_n4_h1 / limit_prior: 71 filled fires but after-fee win 36.6% \u2264 55%; vs ideal-open $-10.97.",
           "n_fires": 104,
-          "n_filled": 74,
-          "win_rate": 0.3243,
-          "pnl": -25.2,
-          "vs_ideal_pnl": 1.95,
+          "n_filled": 71,
+          "win_rate": 0.3662,
+          "pnl": -31.09,
+          "vs_ideal_pnl": -10.97,
           "thin": false
         }
       }
@@ -318,8 +318,8 @@
       }
     }
   },
-  "headline": "Open-bell fills at 09:30 ET: combo_sh_macd_5050_shared MARKET KILL \u00b7 union_hot_n4_h1 MARKET KILL \u00b7 flatten_would MARKET KILL. KILL combo_sh_macd_5050_shared / market: 131 filled fires but after-fee win 13.7% \u2264 55%; vs ideal-open $-54.30.",
-  "n_aligned": 288,
+  "headline": "Open-bell fills at 09:30 ET: combo_sh_macd_5050_shared MARKET KILL \u00b7 union_hot_n4_h1 MARKET KILL \u00b7 flatten_would MARKET KILL. KILL combo_sh_macd_5050_shared / market: 139 filled fires but after-fee win 18.0% \u2264 55%; vs ideal-open $-66.47.",
+  "n_aligned": 318,
   "sample": [
     {
       "date": "2026-08-13",
@@ -1235,120 +1235,6 @@
     },
     {
       "date": "2026-08-14",
-      "ticker": "AIRO",
-      "side": "long",
-      "sleeves": {
-        "combo_sh_macd_5050_shared": {
-          "date": "2026-08-14",
-          "ticker": "AIRO",
-          "side": "long",
-          "sleeve": "combo_sh_macd_5050_shared",
-          "order_sent": "09:30 ET",
-          "open": 11.119999885559082,
-          "high": 11.279999732971191,
-          "low": 9.40999984741211,
-          "close": 9.569999694824219,
-          "prior_px": 10.71,
-          "src": "ohlc.parquet",
-          "cal": {
-            "n": 20,
-            "buy_adverse_rate": 0.65,
-            "sell_adverse_rate": 0.35,
-            "alpha_buy": 0.3901,
-            "alpha_sell": 0.3099,
-            "delay_frac": 0.35
-          },
-          "ideal": {
-            "fill": 11.12,
-            "how": "ideal_open",
-            "filled": true,
-            "pnl": -1.7829,
-            "win": false,
-            "adverse": false
-          },
-          "market": {
-            "fill": 11.1824,
-            "how": "market",
-            "filled": true,
-            "pnl": -1.8459,
-            "win": false,
-            "adverse": true
-          },
-          "limit_open": {
-            "fill": 11.12,
-            "how": "limit_fill",
-            "filled": true,
-            "pnl": -1.7829,
-            "win": false,
-            "adverse": false
-          },
-          "limit_prior": {
-            "fill": 10.71,
-            "how": "limit_fill",
-            "filled": true,
-            "pnl": -1.3688,
-            "win": false,
-            "adverse": false
-          }
-        },
-        "union_hot_n4_h1": {
-          "date": "2026-08-14",
-          "ticker": "AIRO",
-          "side": "long",
-          "sleeve": "union_hot_n4_h1",
-          "order_sent": "09:30 ET",
-          "open": 11.119999885559082,
-          "high": 11.279999732971191,
-          "low": 9.40999984741211,
-          "close": 9.569999694824219,
-          "prior_px": 10.71,
-          "src": "ohlc.parquet",
-          "cal": {
-            "n": 20,
-            "buy_adverse_rate": 0.65,
-            "sell_adverse_rate": 0.35,
-            "alpha_buy": 0.3901,
-            "alpha_sell": 0.3099,
-            "delay_frac": 0.35
-          },
-          "ideal": {
-            "fill": 11.12,
-            "how": "ideal_open",
-            "filled": true,
-            "pnl": -1.7829,
-            "win": false,
-            "adverse": false
-          },
-          "market": {
-            "fill": 11.1824,
-            "how": "market",
-            "filled": true,
-            "pnl": -1.8459,
-            "win": false,
-            "adverse": true
-          },
-          "limit_open": {
-            "fill": 11.12,
-            "how": "limit_fill",
-            "filled": true,
-            "pnl": -1.7829,
-            "win": false,
-            "adverse": false
-          },
-          "limit_prior": {
-            "fill": 10.71,
-            "how": "limit_fill",
-            "filled": true,
-            "pnl": -1.3688,
-            "win": false,
-            "adverse": false
-          }
-        },
-        "flatten_would": null
-      }
-    },
-    {
-      "date": "2026-08-14",
       "ticker": "ARX",
       "side": "long",
       "sleeves": {
@@ -1583,6 +1469,120 @@
             "adverse": false
           }
         }
+      }
+    },
+    {
+      "date": "2026-08-14",
+      "ticker": "EROC",
+      "side": "long",
+      "sleeves": {
+        "combo_sh_macd_5050_shared": {
+          "date": "2026-08-14",
+          "ticker": "EROC",
+          "side": "long",
+          "sleeve": "combo_sh_macd_5050_shared",
+          "order_sent": "09:30 ET",
+          "open": 16.049999237060547,
+          "high": 16.969999313354492,
+          "low": 15.550000190734863,
+          "close": 16.719999313354492,
+          "prior_px": 15.66,
+          "src": "ohlc.parquet",
+          "cal": {
+            "n": 20,
+            "buy_adverse_rate": 0.5,
+            "sell_adverse_rate": 0.5,
+            "alpha_buy": 0.3767,
+            "alpha_sell": 0.3233,
+            "delay_frac": 0.35
+          },
+          "ideal": {
+            "fill": 16.05,
+            "how": "ideal_open",
+            "filled": true,
+            "pnl": 0.3163,
+            "win": true,
+            "adverse": false
+          },
+          "market": {
+            "fill": 16.3966,
+            "how": "market",
+            "filled": true,
+            "pnl": -0.0338,
+            "win": false,
+            "adverse": true
+          },
+          "limit_open": {
+            "fill": 16.05,
+            "how": "limit_fill",
+            "filled": true,
+            "pnl": 0.3163,
+            "win": true,
+            "adverse": false
+          },
+          "limit_prior": {
+            "fill": 15.66,
+            "how": "limit_fill",
+            "filled": true,
+            "pnl": 0.7102,
+            "win": true,
+            "adverse": false
+          }
+        },
+        "union_hot_n4_h1": {
+          "date": "2026-08-14",
+          "ticker": "EROC",
+          "side": "long",
+          "sleeve": "union_hot_n4_h1",
+          "order_sent": "09:30 ET",
+          "open": 16.049999237060547,
+          "high": 16.969999313354492,
+          "low": 15.550000190734863,
+          "close": 16.719999313354492,
+          "prior_px": 15.66,
+          "src": "ohlc.parquet",
+          "cal": {
+            "n": 20,
+            "buy_adverse_rate": 0.5,
+            "sell_adverse_rate": 0.5,
+            "alpha_buy": 0.3767,
+            "alpha_sell": 0.3233,
+            "delay_frac": 0.35
+          },
+          "ideal": {
+            "fill": 16.05,
+            "how": "ideal_open",
+            "filled": true,
+            "pnl": 0.3163,
+            "win": true,
+            "adverse": false
+          },
+          "market": {
+            "fill": 16.3966,
+            "how": "market",
+            "filled": true,
+            "pnl": -0.0338,
+            "win": false,
+            "adverse": true
+          },
+          "limit_open": {
+            "fill": 16.05,
+            "how": "limit_fill",
+            "filled": true,
+            "pnl": 0.3163,
+            "win": true,
+            "adverse": false
+          },
+          "limit_prior": {
+            "fill": 15.66,
+            "how": "limit_fill",
+            "filled": true,
+            "pnl": 0.7102,
+            "win": true,
+            "adverse": false
+          }
+        },
+        "flatten_would": null
       }
     }
   ],

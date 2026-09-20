@@ -89,6 +89,8 @@ def test_matches_ryg_presence_and_ignores_same_day_change() -> None:
     assert "change" not in fm.INPUT_FIELDS
     assert "Gap" not in fm.INPUT_FIELDS
     assert "RelVol" not in fm.INPUT_FIELDS
+    assert "vwap" not in fm.INPUT_FIELDS
+    assert "clk_mom_break_peer" in fm.INPUT_FIELDS
 
 
 def test_matches_news_packet_headline_and_cam_floor() -> None:
@@ -1141,7 +1143,7 @@ def test_build_mornings_covers_closed_session_past_lookback() -> None:
 
 
 def test_candidates_need_lookback_calendar() -> None:
-    """A one-day emit window used to drop yday_gainer / probable / hot."""
+    """A one-day emit window still fills yday / probable / hot via lookback."""
     from unittest import mock
 
     with mock.patch.object(
@@ -1159,9 +1161,9 @@ def test_candidates_need_lookback_calendar() -> None:
         one = fm._candidates("2026-09-18", ["2026-09-18"],
                              {"tickers": ["FLA"]}, {})
         assert one["flatten"] == ["FLA"]
-        assert one["yday_gainer"] == []
-        assert one["probable"] == []
-        assert one["ohlc_hot"] == []
+        assert one["yday_gainer"] == ["SDGR"]
+        assert one["probable"] == ["ARQT"]
+        assert one["ohlc_hot"] == ["ILMN"]
         assert one["overnight"] == []
         assert one["overnight_mega"] == []
         full = fm._candidates(
@@ -1343,6 +1345,193 @@ def test_payload_covers_session_and_land_closed_skips() -> None:
     assert fm.payload_covers_session(stale, "2026-09-11") is False
     recs = fm.existing_single_recipes(payload)
     assert [r["name"] for r in recs] == ["union_h1"]
+
+
+def test_one_day_emit_calendar_has_no_prior_session() -> None:
+    """The 09-16 flatten-only starvation: prior_session([D], D) is None."""
+    from src import gainer_capture as gc
+    assert gc.prior_session(["2026-09-16"], "2026-09-16") is None
+    look = gc.lookback_calendar(["2026-09-16"])
+    assert "2026-09-15" in look
+    assert gc.prior_session(look, "2026-09-16") == "2026-09-15"
+
+
+def test_knowable_export_skips_missing_0826_and_keeps_clock_clean() -> None:
+    from src import gainer_capture as gc
+    assert gc.export_readable("2026-08-26") is False
+    assert gc.export_readable("2026-08-25") is True
+    assert gc.export_readable("2026-09-15") is True
+    cal = ["2026-08-25", "2026-08-26", "2026-08-27"]
+    assert gc.knowable_export_date(cal, "2026-08-27") == "2026-08-25"
+    assert gc.knowable_export_date(
+        ["2026-09-14", "2026-09-15", "2026-09-16"], "2026-09-16"
+    ) == "2026-09-15"
+    # Same-day export is a leak even if the file exists.
+    assert gc.knowable_export_date(["2026-09-16"], "2026-09-16") != "2026-09-16"
+
+
+def test_0915_finviz_still_feeds_yday_lists() -> None:
+    """Exports after 09-15 were never empty — the lookback calendar broke."""
+    from src import gainer_capture as gc
+    names = gc.yesterday_gainers("2026-09-15", top_n=25)
+    assert len(names) >= 15, names
+
+
+def test_candidates_one_day_cal_still_hits_prior_export() -> None:
+    from unittest import mock
+    seen: dict[str, str | None] = {}
+
+    def fake_gainers(prior, top_n=25):
+        seen["g"] = prior
+        return ["AAA", "BBB"] if prior else []
+
+    def fake_movers(prior, top_n=20):
+        seen["m"] = prior
+        return ["CCC"] if prior else []
+
+    def fake_hot(prior, asof, top_n=30):
+        seen["h"] = prior
+        return ["DDD"] if prior else []
+
+    def fake_cont(prior, asof, top_n=8):
+        seen["c"] = prior
+        return ["EEE"] if prior else []
+
+    def fake_earn(prior, session):
+        seen["e"] = prior
+        return ["FFF"] if prior else []
+
+    with mock.patch.object(fm.gc, "yesterday_gainers", fake_gainers), \
+            mock.patch.object(fm.gc, "yesterday_movers", fake_movers), \
+            mock.patch.object(fm.ohlc, "liquid_hot", fake_hot), \
+            mock.patch.object(fm.ohlc, "continuation", fake_cont), \
+            mock.patch.object(fm.gc, "earnings_reaction", fake_earn), \
+            mock.patch.object(
+                fm.gc, "lookback_calendar",
+                side_effect=lambda c: sorted(set(list(c or []) + [
+                    "2026-09-15", "2026-09-16"]))), \
+            mock.patch.object(fm.gc, "knowable_export_date",
+                              return_value="2026-09-15"):
+        buckets = fm._candidates(
+            "2026-09-16", ["2026-09-16"],
+            {"tickers": ["FL"]}, {"2026-09-16": ["MB"]},
+        )
+    assert buckets["flatten"] == ["FL"]
+    assert buckets["yday_gainer"] == ["AAA", "BBB"]
+    assert buckets["yday_mover"] == ["CCC"]
+    assert buckets["ohlc_hot"] == ["DDD"]
+    assert buckets["probable"] == ["EEE"]
+    assert buckets["earn_react"] == ["FFF"]
+    assert buckets["mover_buy"] == ["MB"]
+    assert seen["g"] == "2026-09-15"
+    assert seen["h"] == "2026-09-15"
+
+
+def test_aux_starved_dates_ignores_first_session() -> None:
+    panel = {
+        "session_dates": [
+            "2026-08-13", "2026-09-15", "2026-09-16", "2026-09-17",
+        ],
+        "rows": [
+            {"date": "2026-08-13", "sources": ["flatten"]},
+            {"date": "2026-09-15", "sources": ["flatten", "yday_gainer", "ohlc_hot"]},
+            {"date": "2026-09-16", "sources": ["flatten"]},
+            {"date": "2026-09-17", "sources": ["flatten"]},
+        ],
+    }
+    assert fm.aux_starved_dates(panel) == ["2026-09-16", "2026-09-17"]
+    assert fm.panel_aux_needs_repair(panel) is True
+
+
+def test_repair_aux_replaces_starved_day() -> None:
+    from unittest import mock
+    starved = {
+        "from_date": "2026-08-13",
+        "to_date": "2026-09-16",
+        "session_dates": ["2026-08-13", "2026-09-16"],
+        "n_rows": 2,
+        "rows": [
+            {"date": "2026-08-13", "ticker": "FL", "sources": ["flatten"], "src_rank": 0},
+            {"date": "2026-09-16", "ticker": "FL", "sources": ["flatten"], "src_rank": 0},
+        ],
+        "by_date": {},
+    }
+    extra = {
+        "session_dates": ["2026-09-16"],
+        "rows": [
+            {"date": "2026-09-16", "ticker": "FL", "sources": ["flatten"], "src_rank": 0},
+            {"date": "2026-09-16", "ticker": "AAA",
+             "sources": ["yday_gainer", "ohlc_hot"], "src_rank": 1},
+        ],
+        "by_date": {},
+    }
+    extra["by_date"] = {"2026-09-16": extra["rows"]}
+    with mock.patch.object(fm, "build_panel", return_value=extra):
+        out = fm.repair_aux_starved_days(starved)
+    assert fm.aux_starved_dates(out) == []
+    assert out["lookback"] == fm.PANEL_LOOKBACK
+    assert out["n_rows"] == 3
+    assert any("yday_gainer" in (r.get("sources") or []) for r in out["rows"])
+
+
+def test_land_closed_remines_when_aux_starved() -> None:
+    import tempfile
+    from pathlib import Path
+    from unittest import mock
+    payload = {
+        "from_date": "2026-08-13",
+        "to_date": "2026-09-16",
+        "dates": ["2026-09-16"],
+        "daily": {"demo": [{"date": "2026-09-16"}]},
+        "mornings": {"2026-09-16": {"s": 1.0}},
+        "recipes": [{"name": "union_h1", "universe": "union", "hold": 1}],
+    }
+    starved_panel = {
+        "from_date": "2026-08-13",
+        "to_date": "2026-09-16",
+        "session_dates": ["2026-08-13", "2026-09-16"],
+        "rows": [
+            {"date": "2026-08-13", "sources": ["flatten"]},
+            {"date": "2026-09-16", "sources": ["flatten"]},
+        ],
+    }
+    healthy_panel = {
+        "from_date": "2026-08-13",
+        "to_date": "2026-09-16",
+        "session_dates": ["2026-08-13", "2026-09-16"],
+        "rows": [
+            {"date": "2026-08-13", "sources": ["flatten"]},
+            {"date": "2026-09-16", "sources": ["flatten", "yday_gainer"]},
+        ],
+    }
+    with tempfile.TemporaryDirectory() as d:
+        tmp = Path(d)
+        panel_path = tmp / "panel.json"
+        out_path = tmp / "out.json"
+        orig = (fm.PANEL_PATH, fm.OUT_JSON)
+        fm.PANEL_PATH = panel_path
+        fm.OUT_JSON = out_path
+        try:
+            panel_path.write_text(json.dumps(starved_panel), encoding="utf-8")
+            out_path.write_text(json.dumps(payload), encoding="utf-8")
+            with mock.patch.object(fm, "last_closed_session",
+                                   return_value="2026-09-16"), \
+                    mock.patch.object(fm, "run",
+                                      return_value={"n_rows": 80}) as run:
+                out = fm.land_closed("2026-08-13", write=False)
+            run.assert_called_once()
+            assert out["n_rows"] == 80
+
+            panel_path.write_text(json.dumps(healthy_panel), encoding="utf-8")
+            with mock.patch.object(fm, "last_closed_session",
+                                   return_value="2026-09-16"), \
+                    mock.patch.object(fm, "run",
+                                      return_value={"n_rows": 80}) as run:
+                skipped = fm.land_closed("2026-08-13", write=False)
+            run.assert_not_called()
+            assert skipped["to_date"] == "2026-09-16"
+        finally:
+            fm.PANEL_PATH, fm.OUT_JSON = orig
 
 
 def test_yahoo_day_strips_iso_time() -> None:
@@ -2601,6 +2790,13 @@ if __name__ == "__main__":
     test_live_panel_end_honors_explicit_open_to_date()
     test_extend_pack_through_adds_pending_start()
     test_payload_covers_session_and_land_closed_skips()
+    test_one_day_emit_calendar_has_no_prior_session()
+    test_knowable_export_skips_missing_0826_and_keeps_clock_clean()
+    test_0915_finviz_still_feeds_yday_lists()
+    test_candidates_one_day_cal_still_hits_prior_export()
+    test_aux_starved_dates_ignores_first_session()
+    test_repair_aux_replaces_starved_day()
+    test_land_closed_remines_when_aux_starved()
     test_yahoo_day_strips_iso_time()
     test_simulate_split_indexes_daily_by_date()
     test_factor_mine_workflow_lands_after_close()
@@ -2630,4 +2826,6 @@ if __name__ == "__main__":
     test_js_look_day_cams_and_white_yday()
     test_js_white_horizon_pool_then_score()
     test_js_bracket_take_inside_min_hold()
-    print("64 factor-mine tests passed")
+    from src.test_clock_b_tells import main as clock_b_main
+    clock_b_main()
+    print("factor-mine tests passed")

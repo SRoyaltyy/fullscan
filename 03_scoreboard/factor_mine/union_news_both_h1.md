@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 AND headline🟢 (thin; kept as a KILL)
 
-Cash book **+7.92%** ($10,792) · signal-only (no cash/fees) was +4.91%. Starts YES **21/26**. Fills 4 · skips 1 · realized $+792.10.
+Cash book **+7.29%** ($10,729) · signal-only (no cash/fees) was +8.40%. Starts YES **21/26**. Fills 6 · skips 3 · realized $+729.11.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $10,792.10.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $10,729.11.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -76,7 +76,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-25 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-08-26 | `FNV` | 37 | — | $267.02 | +0.00 | $267.37 | +12.95 | +12.95 | +0.00 | +12.95 |
 | 2026-08-27 | `FNV` | 37 | $267.37 | $267.23 | -5.18 | — | +0.00 | -5.18 | +7.77 | — |
-| 2026-08-28 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-08-27 | `ASML` | 5 | — | $1746.53 | +0.00 | $1735.01 | -57.60 | -57.60 | +0.00 | -57.60 |
+| 2026-08-28 | `ASML` | 5 | $1735.01 | $1734.75 | -1.30 | — | +0.00 | -1.30 | -58.90 | — |
 | 2026-08-31 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-01 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-02 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
@@ -106,22 +107,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-24 | -5.17 | $10,000.00 | — | $10,000.00 | +0.00 | +0.00 | — | — | $10,000.00 | $10,000.00 | — |
 | 2026-08-25 | +1.80 | $10,000.00 | — | $10,000.00 | +0.00 | +0.00 | — | — | $10,000.00 | $10,000.00 | — |
 | 2026-08-26 | +2.02 | $10,000.00 | — | $10,000.00 | +0.00 | +12.95 | FNV | — | $118.16 | $10,010.85 | FNV×37 |
-| 2026-08-27 | — | $118.16 | FNV×37 | $10,005.67 | -5.18 | +0.00 | — | FNV | $10,003.48 | $10,003.48 | — |
-| 2026-08-28 | +0.75 | $10,003.48 | — | $10,003.48 | -0.00 | +0.00 | — | — | $10,003.48 | $10,003.48 | — |
-| 2026-08-31 | -5.85 | $10,003.48 | — | $10,003.48 | -0.00 | +0.00 | — | — | $10,003.48 | $10,003.48 | — |
-| 2026-09-01 | -6.30 | $10,003.48 | — | $10,003.48 | -0.00 | +0.00 | — | — | $10,003.48 | $10,003.48 | — |
-| 2026-09-02 | -3.83 | $10,003.48 | — | $10,003.48 | -0.00 | +0.00 | — | — | $10,003.48 | $10,003.48 | — |
-| 2026-09-03 | -0.90 | $10,003.48 | — | $10,003.48 | -0.00 | +0.00 | — | — | $10,003.48 | $10,003.48 | — |
-| 2026-09-04 | +2.25 | $10,003.48 | — | $10,003.48 | -0.00 | +0.00 | — | — | $10,003.48 | $10,003.48 | — |
-| 2026-09-08 | -11.47 | $10,003.48 | — | $10,003.48 | -0.00 | +0.00 | — | — | $10,003.48 | $10,003.48 | — |
-| 2026-09-09 | -13.95 | $10,003.48 | — | $10,003.48 | -0.00 | +0.00 | — | — | $10,003.48 | $10,003.48 | — |
-| 2026-09-10 | -13.28 | $10,003.48 | — | $10,003.48 | -0.00 | +0.00 | — | — | $10,003.48 | $10,003.48 | — |
-| 2026-09-11 | +0.50 | $10,003.48 | — | $10,003.48 | -0.00 | +412.46 | ADBE | — | $72.40 | $10,413.83 | ADBE×41 |
-| 2026-09-14 | -11.00 | $72.40 | ADBE×41 | $10,794.31 | +380.48 | +0.00 | — | ADBE | $10,792.10 | $10,792.10 | — |
-| 2026-09-15 | -3.84 | $10,792.10 | — | $10,792.10 | -0.00 | +0.00 | — | — | $10,792.10 | $10,792.10 | — |
-| 2026-09-16 | +5.30 | $10,792.10 | — | $10,792.10 | -0.00 | +0.00 | — | — | $10,792.10 | $10,792.10 | — |
-| 2026-09-17 | +7.38 | $10,792.10 | — | $10,792.10 | -0.00 | +0.00 | — | — | $10,792.10 | $10,792.10 | — |
-| 2026-09-18 | +4.86 | $10,792.10 | — | $10,792.10 | -0.00 | +0.00 | — | — | $10,792.10 | $10,792.10 | — |
+| 2026-08-27 | — | $118.16 | FNV×37 | $10,005.67 | -5.18 | -57.60 | ASML | FNV | $1,268.82 | $9,943.87 | ASML×5 |
+| 2026-08-28 | +0.75 | $1,268.82 | ASML×5 | $9,942.57 | -1.30 | +0.00 | — | ASML | $9,940.49 | $9,940.49 | — |
+| 2026-08-31 | -5.85 | $9,940.49 | — | $9,940.49 | -0.00 | +0.00 | — | — | $9,940.49 | $9,940.49 | — |
+| 2026-09-01 | -6.30 | $9,940.49 | — | $9,940.49 | -0.00 | +0.00 | — | — | $9,940.49 | $9,940.49 | — |
+| 2026-09-02 | -3.83 | $9,940.49 | — | $9,940.49 | -0.00 | +0.00 | — | — | $9,940.49 | $9,940.49 | — |
+| 2026-09-03 | -0.90 | $9,940.49 | — | $9,940.49 | -0.00 | +0.00 | — | — | $9,940.49 | $9,940.49 | — |
+| 2026-09-04 | +2.25 | $9,940.49 | — | $9,940.49 | -0.00 | +0.00 | — | — | $9,940.49 | $9,940.49 | — |
+| 2026-09-08 | -11.47 | $9,940.49 | — | $9,940.49 | -0.00 | +0.00 | — | — | $9,940.49 | $9,940.49 | — |
+| 2026-09-09 | -13.95 | $9,940.49 | — | $9,940.49 | -0.00 | +0.00 | — | — | $9,940.49 | $9,940.49 | — |
+| 2026-09-10 | -13.28 | $9,940.49 | — | $9,940.49 | -0.00 | +0.00 | — | — | $9,940.49 | $9,940.49 | — |
+| 2026-09-11 | +0.50 | $9,940.49 | — | $9,940.49 | -0.00 | +412.46 | ADBE | — | $9.41 | $10,350.84 | ADBE×41 |
+| 2026-09-14 | -11.00 | $9.41 | ADBE×41 | $10,731.32 | +380.48 | +0.00 | — | ADBE | $10,729.11 | $10,729.11 | — |
+| 2026-09-15 | -3.84 | $10,729.11 | — | $10,729.11 | -0.00 | +0.00 | — | — | $10,729.11 | $10,729.11 | — |
+| 2026-09-16 | +5.30 | $10,729.11 | — | $10,729.11 | -0.00 | +0.00 | — | — | $10,729.11 | $10,729.11 | — |
+| 2026-09-17 | +7.38 | $10,729.11 | — | $10,729.11 | -0.00 | +0.00 | — | — | $10,729.11 | $10,729.11 | — |
+| 2026-09-18 | +4.86 | $10,729.11 | — | $10,729.11 | -0.00 | +0.00 | — | — | $10,729.11 | $10,729.11 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -150,42 +151,46 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $118.16 | ▲ close $10,010.85 vs 09:30 $10,000.00 (session +12.95) | 16:00 close · cash $118.16 · equity $10,010.85 vs 09:30 $10,000.00 (+10.85; session marks +12.95) · 1 name(s) marked open→close (per-name table). FNV×37 09:30 $267.02 → close $267.37 +12.95 | — |
 | 2026-08-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $118.16 | ▼ 09:30 equity $10,005.67 vs yday $10,010.85 (-5.18) | 09:30 open · cash $118.16 (unchanged overnight, no fees) · equity $10,005.67 vs prior close $10,010.85 (-5.18) · 1 name(s) re-marked at the open (per-name table). FNV×37 yday $267.37 → 09:30 $267.23 -5.18 | — |
 | 2026-08-27 09:30 ET | **SELL** | `FNV` | 37 | $267.23 | $2.19 | $+3.48 | $10,003.48 | ▲ +3.48 after sell → book $10,003.48; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
-| 2026-08-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,003.48 | ▲ close $10,003.48 vs 09:30 $10,005.67 (session +0.00) | 16:00 close · cash $10,003.48 · no lots left · equity $10,003.48. | — |
-| 2026-08-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,003.48 | ▲ 09:30 equity $10,003.48 vs yday $10,003.48 (-0.00) | 09:30 open · cash $10,003.48 · no holdings · equity $10,003.48 vs prior close $10,003.48 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-08-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,003.48 | ▲ close $10,003.48 vs 09:30 $10,003.48 (session +0.00) | 16:00 close · cash $10,003.48 · no lots left · equity $10,003.48. | — |
-| 2026-08-31 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,003.48 | ▲ 09:30 equity $10,003.48 vs yday $10,003.48 (-0.00) | 09:30 open · cash $10,003.48 · no holdings · equity $10,003.48 vs prior close $10,003.48 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-08-31 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,003.48 | ▲ close $10,003.48 vs 09:30 $10,003.48 (session +0.00) | 16:00 close · cash $10,003.48 · no lots left · equity $10,003.48. | — |
-| 2026-09-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,003.48 | ▲ 09:30 equity $10,003.48 vs yday $10,003.48 (-0.00) | 09:30 open · cash $10,003.48 · no holdings · equity $10,003.48 vs prior close $10,003.48 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,003.48 | ▲ close $10,003.48 vs 09:30 $10,003.48 (session +0.00) | 16:00 close · cash $10,003.48 · no lots left · equity $10,003.48. | — |
-| 2026-09-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,003.48 | ▲ 09:30 equity $10,003.48 vs yday $10,003.48 (-0.00) | 09:30 open · cash $10,003.48 · no holdings · equity $10,003.48 vs prior close $10,003.48 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,003.48 | ▲ close $10,003.48 vs 09:30 $10,003.48 (session +0.00) | 16:00 close · cash $10,003.48 · no lots left · equity $10,003.48. | — |
-| 2026-09-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,003.48 | ▲ 09:30 equity $10,003.48 vs yday $10,003.48 (-0.00) | 09:30 open · cash $10,003.48 · no holdings · equity $10,003.48 vs prior close $10,003.48 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,003.48 | ▲ close $10,003.48 vs 09:30 $10,003.48 (session +0.00) | 16:00 close · cash $10,003.48 · no lots left · equity $10,003.48. | — |
-| 2026-09-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,003.48 | ▲ 09:30 equity $10,003.48 vs yday $10,003.48 (-0.00) | 09:30 open · cash $10,003.48 · no holdings · equity $10,003.48 vs prior close $10,003.48 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,003.48 | ▲ close $10,003.48 vs 09:30 $10,003.48 (session +0.00) | 16:00 close · cash $10,003.48 · no lots left · equity $10,003.48. | — |
-| 2026-09-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,003.48 | ▲ 09:30 equity $10,003.48 vs yday $10,003.48 (-0.00) | 09:30 open · cash $10,003.48 · no holdings · equity $10,003.48 vs prior close $10,003.48 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,003.48 | ▲ close $10,003.48 vs 09:30 $10,003.48 (session +0.00) | 16:00 close · cash $10,003.48 · no lots left · equity $10,003.48. | — |
-| 2026-09-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,003.48 | ▲ 09:30 equity $10,003.48 vs yday $10,003.48 (-0.00) | 09:30 open · cash $10,003.48 · no holdings · equity $10,003.48 vs prior close $10,003.48 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,003.48 | ▲ close $10,003.48 vs 09:30 $10,003.48 (session +0.00) | 16:00 close · cash $10,003.48 · no lots left · equity $10,003.48. | — |
-| 2026-09-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,003.48 | ▲ 09:30 equity $10,003.48 vs yday $10,003.48 (-0.00) | 09:30 open · cash $10,003.48 · no holdings · equity $10,003.48 vs prior close $10,003.48 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,003.48 | ▲ close $10,003.48 vs 09:30 $10,003.48 (session +0.00) | 16:00 close · cash $10,003.48 · no lots left · equity $10,003.48. | — |
-| 2026-09-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,003.48 | ▲ 09:30 equity $10,003.48 vs yday $10,003.48 (-0.00) | 09:30 open · cash $10,003.48 · no holdings · equity $10,003.48 vs prior close $10,003.48 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-11 09:30 ET | **BUY** | `ADBE` | 41 | $242.17 | $2.11 | — | $72.40 | — | packet🟢 AND headline🟢 (thin; kept as a KILL); gate news_and_headline=True; rank cond; list earn_react; ret5=-11.1; leftover $10003.48 | join🟢 sector🟢 gen🟡 news🟢 digest🟡 judge🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
-| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $72.40 | ▲ close $10,413.83 vs 09:30 $10,003.48 (session +412.46) | 16:00 close · cash $72.40 · equity $10,413.83 vs 09:30 $10,003.48 (+410.35; session marks +412.46) · 1 name(s) marked open→close (per-name table). ADBE×41 09:30 $242.17 → close $252.23 +412.46 | — |
-| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $72.40 | ▲ 09:30 equity $10,794.31 vs yday $10,413.83 (+380.48) | 09:30 open · cash $72.40 (unchanged overnight, no fees) · equity $10,794.31 vs prior close $10,413.83 (+380.48) · 1 name(s) re-marked at the open (per-name table). ADBE×41 yday $252.23 → 09:30 $261.51 +380.48 | — |
-| 2026-09-14 09:30 ET | **SELL** | `ADBE` | 41 | $261.51 | $2.21 | $+788.62 | $10,792.10 | ▲ +788.62 after sell → book $10,792.10; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,792.10 | ▲ close $10,792.10 vs 09:30 $10,794.31 (session +0.00) | 16:00 close · cash $10,792.10 · no lots left · equity $10,792.10. | — |
-| 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,792.10 | ▲ 09:30 equity $10,792.10 vs yday $10,792.10 (-0.00) | 09:30 open · cash $10,792.10 · no holdings · equity $10,792.10 vs prior close $10,792.10 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,792.10 | ▲ close $10,792.10 vs 09:30 $10,792.10 (session +0.00) | 16:00 close · cash $10,792.10 · no lots left · equity $10,792.10. | — |
-| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,792.10 | ▲ 09:30 equity $10,792.10 vs yday $10,792.10 (-0.00) | 09:30 open · cash $10,792.10 · no holdings · equity $10,792.10 vs prior close $10,792.10 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,792.10 | ▲ close $10,792.10 vs 09:30 $10,792.10 (session +0.00) | 16:00 close · cash $10,792.10 · no lots left · equity $10,792.10. | — |
-| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,792.10 | ▲ 09:30 equity $10,792.10 vs yday $10,792.10 (-0.00) | 09:30 open · cash $10,792.10 · no holdings · equity $10,792.10 vs prior close $10,792.10 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,792.10 | ▲ close $10,792.10 vs 09:30 $10,792.10 (session +0.00) | 16:00 close · cash $10,792.10 · no lots left · equity $10,792.10. | — |
-| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,792.10 | ▲ 09:30 equity $10,792.10 vs yday $10,792.10 (-0.00) | 09:30 open · cash $10,792.10 · no holdings · equity $10,792.10 vs prior close $10,792.10 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,792.10 | ▲ close $10,792.10 vs 09:30 $10,792.10 (session +0.00) | 16:00 close · cash $10,792.10 · no lots left · equity $10,792.10. | — |
+| 2026-08-27 09:30 ET | **BUY** | `ASML` | 5 | $1746.53 | $2.00 | — | $1,268.82 | — | packet🟢 AND headline🟢 (thin; kept as a KILL); gate news_and_headline=True; rank cond; list mover_buy; 🔵; ret5=-0.3; leftover $10003.48 | join🟡 sector🟢 gen🟢 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,268.82 | ▼ close $9,943.87 vs 09:30 $10,005.67 (session -57.60) | 16:00 close · cash $1,268.82 · equity $9,943.87 vs 09:30 $10,005.67 (-61.80; session marks -57.60) · 1 name(s) marked open→close (per-name table). ASML×5 09:30 $1746.53 → close $1735.01 -57.60 | — |
+| 2026-08-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1,268.82 | ▼ 09:30 equity $9,942.57 vs yday $9,943.87 (-1.30) | 09:30 open · cash $1,268.82 (unchanged overnight, no fees) · equity $9,942.57 vs prior close $9,943.87 (-1.30) · 1 name(s) re-marked at the open (per-name table). ASML×5 yday $1735.01 → 09:30 $1734.75 -1.30 | — |
+| 2026-08-28 09:30 ET | **SELL** | `ASML` | 5 | $1734.75 | $2.08 | $-62.99 | $9,940.49 | ▼ -62.99 after sell → book $9,940.49; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-08-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,940.49 | ▲ close $9,940.49 vs 09:30 $9,942.57 (session +0.00) | 16:00 close · cash $9,940.49 · no lots left · equity $9,940.49. | — |
+| 2026-08-31 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,940.49 | ▲ 09:30 equity $9,940.49 vs yday $9,940.49 (-0.00) | 09:30 open · cash $9,940.49 · no holdings · equity $9,940.49 vs prior close $9,940.49 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-08-31 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,940.49 | ▲ close $9,940.49 vs 09:30 $9,940.49 (session +0.00) | 16:00 close · cash $9,940.49 · no lots left · equity $9,940.49. | — |
+| 2026-09-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,940.49 | ▲ 09:30 equity $9,940.49 vs yday $9,940.49 (-0.00) | 09:30 open · cash $9,940.49 · no holdings · equity $9,940.49 vs prior close $9,940.49 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,940.49 | ▲ close $9,940.49 vs 09:30 $9,940.49 (session +0.00) | 16:00 close · cash $9,940.49 · no lots left · equity $9,940.49. | — |
+| 2026-09-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,940.49 | ▲ 09:30 equity $9,940.49 vs yday $9,940.49 (-0.00) | 09:30 open · cash $9,940.49 · no holdings · equity $9,940.49 vs prior close $9,940.49 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,940.49 | ▲ close $9,940.49 vs 09:30 $9,940.49 (session +0.00) | 16:00 close · cash $9,940.49 · no lots left · equity $9,940.49. | — |
+| 2026-09-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,940.49 | ▲ 09:30 equity $9,940.49 vs yday $9,940.49 (-0.00) | 09:30 open · cash $9,940.49 · no holdings · equity $9,940.49 vs prior close $9,940.49 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,940.49 | ▲ close $9,940.49 vs 09:30 $9,940.49 (session +0.00) | 16:00 close · cash $9,940.49 · no lots left · equity $9,940.49. | — |
+| 2026-09-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,940.49 | ▲ 09:30 equity $9,940.49 vs yday $9,940.49 (-0.00) | 09:30 open · cash $9,940.49 · no holdings · equity $9,940.49 vs prior close $9,940.49 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,940.49 | ▲ close $9,940.49 vs 09:30 $9,940.49 (session +0.00) | 16:00 close · cash $9,940.49 · no lots left · equity $9,940.49. | — |
+| 2026-09-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,940.49 | ▲ 09:30 equity $9,940.49 vs yday $9,940.49 (-0.00) | 09:30 open · cash $9,940.49 · no holdings · equity $9,940.49 vs prior close $9,940.49 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,940.49 | ▲ close $9,940.49 vs 09:30 $9,940.49 (session +0.00) | 16:00 close · cash $9,940.49 · no lots left · equity $9,940.49. | — |
+| 2026-09-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,940.49 | ▲ 09:30 equity $9,940.49 vs yday $9,940.49 (-0.00) | 09:30 open · cash $9,940.49 · no holdings · equity $9,940.49 vs prior close $9,940.49 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,940.49 | ▲ close $9,940.49 vs 09:30 $9,940.49 (session +0.00) | 16:00 close · cash $9,940.49 · no lots left · equity $9,940.49. | — |
+| 2026-09-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,940.49 | ▲ 09:30 equity $9,940.49 vs yday $9,940.49 (-0.00) | 09:30 open · cash $9,940.49 · no holdings · equity $9,940.49 vs prior close $9,940.49 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,940.49 | ▲ close $9,940.49 vs 09:30 $9,940.49 (session +0.00) | 16:00 close · cash $9,940.49 · no lots left · equity $9,940.49. | — |
+| 2026-09-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,940.49 | ▲ 09:30 equity $9,940.49 vs yday $9,940.49 (-0.00) | 09:30 open · cash $9,940.49 · no holdings · equity $9,940.49 vs prior close $9,940.49 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-11 09:30 ET | **BUY** | `ADBE` | 41 | $242.17 | $2.11 | — | $9.41 | — | packet🟢 AND headline🟢 (thin; kept as a KILL); gate news_and_headline=True; rank cond; list earn_react; ret5=-11.1; leftover $9940.49 | join🟢 sector🟢 gen🟡 news🟢 digest🟡 judge🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9.41 | ▲ close $10,350.84 vs 09:30 $9,940.49 (session +412.46) | 16:00 close · cash $9.41 · equity $10,350.84 vs 09:30 $9,940.49 (+410.35; session marks +412.46) · 1 name(s) marked open→close (per-name table). ADBE×41 09:30 $242.17 → close $252.23 +412.46 | — |
+| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9.41 | ▲ 09:30 equity $10,731.32 vs yday $10,350.84 (+380.48) | 09:30 open · cash $9.41 (unchanged overnight, no fees) · equity $10,731.32 vs prior close $10,350.84 (+380.48) · 1 name(s) re-marked at the open (per-name table). ADBE×41 yday $252.23 → 09:30 $261.51 +380.48 | — |
+| 2026-09-14 09:30 ET | **SELL** | `ADBE` | 41 | $261.51 | $2.21 | $+788.62 | $10,729.11 | ▲ +788.62 after sell → book $10,729.11; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,729.11 | ▲ close $10,729.11 vs 09:30 $10,731.32 (session +0.00) | 16:00 close · cash $10,729.11 · no lots left · equity $10,729.11. | — |
+| 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,729.11 | ▲ 09:30 equity $10,729.11 vs yday $10,729.11 (-0.00) | 09:30 open · cash $10,729.11 · no holdings · equity $10,729.11 vs prior close $10,729.11 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,729.11 | ▲ close $10,729.11 vs 09:30 $10,729.11 (session +0.00) | 16:00 close · cash $10,729.11 · no lots left · equity $10,729.11. | — |
+| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,729.11 | ▲ 09:30 equity $10,729.11 vs yday $10,729.11 (-0.00) | 09:30 open · cash $10,729.11 · no holdings · equity $10,729.11 vs prior close $10,729.11 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,729.11 | ▲ close $10,729.11 vs 09:30 $10,729.11 (session +0.00) | 16:00 close · cash $10,729.11 · no lots left · equity $10,729.11. | — |
+| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,729.11 | ▲ 09:30 equity $10,729.11 vs yday $10,729.11 (-0.00) | 09:30 open · cash $10,729.11 · no holdings · equity $10,729.11 vs prior close $10,729.11 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,729.11 | ▲ close $10,729.11 vs 09:30 $10,729.11 (session +0.00) | 16:00 close · cash $10,729.11 · no lots left · equity $10,729.11. | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,729.11 | ▲ 09:30 equity $10,729.11 vs yday $10,729.11 (-0.00) | 09:30 open · cash $10,729.11 · no holdings · equity $10,729.11 vs prior close $10,729.11 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,729.11 | ▲ close $10,729.11 vs 09:30 $10,729.11 (session +0.00) | 16:00 close · cash $10,729.11 · no lots left · equity $10,729.11. | — |
 
 ## Not taken
 
 | Date | Ticker | Kind | Why |
 |---|---|---|---|
+| 2026-09-08 | `SNOW` | hard_red | hard-red S=-11.47 sit; no new buys |
 | 2026-09-08 | `JCI` | hard_red | hard-red S=-11.47 sit; no new buys |
+| 2026-09-15 | `QCOM` | hard_red | hard-red S=-3.84 sit; no new buys |

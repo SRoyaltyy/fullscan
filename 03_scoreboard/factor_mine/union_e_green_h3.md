@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **+12.39%** ($11,239) · signal-only (no cash/fees) was -1.64%. Starts YES **18/26**. Fills 67 · skips 99 · realized $-87.73.
+Cash book **-0.88%** ($9,912) · signal-only (no cash/fees) was -21.98%. Starts YES **12/26**. Fills 66 · skips 101 · realized $-87.73.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $2.42.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,912.24.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -199,8 +199,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | `KR` | 160 | $58.49 | $59.31 | +131.20 | $60.91 | +256.00 | +387.20 | +526.40 | +782.40 |
 | 2026-09-15 | `KR` | 160 | $60.91 | $60.77 | -22.40 | $62.25 | +236.80 | +214.40 | +760.00 | +996.80 |
 | 2026-09-16 | `KR` | 160 | $62.25 | $61.93 | -51.20 | — | +0.00 | -51.20 | +945.60 | — |
-| 2026-09-17 | `ALMU` | 883 | — | $11.21 | +0.00 | $11.54 | +295.80 | +295.80 | +0.00 | +295.80 |
-| 2026-09-18 | `ALMU` | 883 | $11.54 | $11.64 | +83.89 | $12.72 | +958.05 | +1041.94 | +379.69 | +1337.74 |
+| 2026-09-17 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-18 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -230,8 +230,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | -11.00 | $6.01 | KR×160 | $9,495.61 | +131.20 | +256.00 | — | — | $6.01 | $9,751.61 | KR×160 |
 | 2026-09-15 | -3.84 | $6.01 | KR×160 | $9,729.21 | -22.40 | +236.80 | — | — | $6.01 | $9,966.01 | KR×160 |
 | 2026-09-16 | +5.30 | $6.01 | KR×160 | $9,914.81 | -51.20 | +0.00 | — | KR | $9,912.24 | $9,912.24 | — |
-| 2026-09-17 | +7.38 | $9,912.24 | — | $9,912.24 | -0.00 | +295.80 | ALMU | — | $2.42 | $10,196.65 | ALMU×883 |
-| 2026-09-18 | +4.86 | $2.42 | ALMU×883 | $10,280.54 | +83.89 | +958.05 | — | — | $2.42 | $11,238.59 | ALMU×883 |
+| 2026-09-17 | +7.38 | $9,912.24 | — | $9,912.24 | -0.00 | +0.00 | — | — | $9,912.24 | $9,912.24 | — |
+| 2026-09-18 | +4.86 | $9,912.24 | — | $9,912.24 | -0.00 | +0.00 | — | — | $9,912.24 | $9,912.24 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -281,7 +281,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-26 09:30 ET | **SELL** | `PSEC` | 29 | $2.35 | $0.79 | $-0.09 | $113.68 | ▼ -0.09 after sell → book $10,030.60; vs 09:30 mark -0.79 | dropped from list after 3 sess (min 3) | — |
 | 2026-08-26 09:30 ET | **BUY** | `TIGR` | 2 | $5.21 | $0.11 | — | $103.15 | — | combo gate; gate earn_react=True,last_green=True; list ohlc_hot,earn_react; 🔵; ret5=+14.3; leftover $14.21 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-26 09:30 ET | **BUY** | `LI` | 1 | $12.14 | $0.12 | — | $90.89 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+1.2; leftover $14.21 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
-| 2026-08-26 09:30 ET | **BUY** | `QFIN` | 1 | $9.76 | $0.10 | — | $81.03 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=-4.4; leftover $14.21 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-08-26 09:30 ET | **BUY** | `QFIN` | 1 | $9.76 | $0.10 | — | $81.03 | — | combo gate; gate earn_react=True,last_green=True; list earn_react,oppset; 🔵; ret5=-4.4; leftover $14.21 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-08-26 09:30 ET | **BUY** | `QMLS` | 2 | $6.47 | $0.14 | — | $67.95 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=-7.0; leftover $14.21 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-08-26 09:30 ET | **BUY** | `SFL` | 1 | $12.35 | $0.13 | — | $55.47 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=-1.7; leftover $14.21 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
 | 2026-08-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $55.47 | ▼ close $9,412.89 vs 09:30 $10,031.86 (session -617.11) | 16:00 close · cash $55.47 · equity $9,412.89 vs 09:30 $10,031.86 (-618.97; session marks -617.11) · 6 name(s) marked open→close (per-name table). SHMD×2934 09:30 $3.38 → close $3.17 -616.14; TIGR×2 09:30 $5.21 → close $5.46 +0.50; LI×1 09:30 $12.14 → close $12.14 +0.00; QFIN×1 09:30 $9.76 → close $9.35 -0.41; QMLS×2 09:30 $6.47 → close $6.10 -0.74; SFL×1 09:30 $12.35 → close $12.03 -0.32 | — |
@@ -349,13 +349,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.01 | ▼ 09:30 equity $9,729.21 vs yday $9,751.61 (-22.40) | 09:30 open · cash $6.01 (unchanged overnight, no fees) · equity $9,729.21 vs prior close $9,751.61 (-22.40) · 1 name(s) re-marked at the open (per-name table). KR×160 yday $60.91 → 09:30 $60.77 -22.40 | — |
 | 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.01 | ▲ close $9,966.01 vs 09:30 $9,729.21 (session +236.80) | 16:00 close · cash $6.01 · equity $9,966.01 vs 09:30 $9,729.21 (+236.80; session marks +236.80) · 1 name(s) marked open→close (per-name table). KR×160 09:30 $60.77 → close $62.25 +236.80 | — |
 | 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.01 | ▼ 09:30 equity $9,914.81 vs yday $9,966.01 (-51.20) | 09:30 open · cash $6.01 (unchanged overnight, no fees) · equity $9,914.81 vs prior close $9,966.01 (-51.20) · 1 name(s) re-marked at the open (per-name table). KR×160 yday $62.25 → 09:30 $61.93 -51.20 | — |
-| 2026-09-16 09:30 ET | **SELL** | `KR` | 160 | $61.93 | $2.58 | $+940.55 | $9,912.24 | ▲ +940.55 after sell → book $9,912.24; vs 09:30 mark -2.57 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **SELL** | `KR` | 160 | $61.93 | $2.58 | $+940.55 | $9,912.24 | ▲ +940.55 after sell → book $9,912.24; vs 09:30 mark -2.57 | dropped from list after 3 sess (min 3) | join🔴 sector🔴 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,912.24 | ▲ close $9,912.24 vs 09:30 $9,914.81 (session +0.00) | 16:00 close · cash $9,912.24 · no lots left · equity $9,912.24. | — |
 | 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,912.24 | ▲ 09:30 equity $9,912.24 vs yday $9,912.24 (-0.00) | 09:30 open · cash $9,912.24 · no holdings · equity $9,912.24 vs prior close $9,912.24 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-17 09:30 ET | **BUY** | `ALMU` | 883 | $11.21 | $11.39 | — | $2.42 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+1.6; leftover $9912.24 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 heat🔴 vol🟢 buy🟡 |
-| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.42 | ▲ close $10,196.65 vs 09:30 $9,912.24 (session +295.80) | 16:00 close · cash $2.42 · equity $10,196.65 vs 09:30 $9,912.24 (+284.41; session marks +295.80) · 1 name(s) marked open→close (per-name table). ALMU×883 09:30 $11.21 → close $11.54 +295.80 | — |
-| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.42 | ▲ 09:30 equity $10,280.54 vs yday $10,196.65 (+83.89) | 09:30 open · cash $2.42 (unchanged overnight, no fees) · equity $10,280.54 vs prior close $10,196.65 (+83.89) · 1 name(s) re-marked at the open (per-name table). ALMU×883 yday $11.54 → 09:30 $11.64 +83.89 | — |
-| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.42 | ▲ close $11,238.59 vs 09:30 $10,280.54 (session +958.05) | 16:00 close · cash $2.42 · equity $11,238.59 vs 09:30 $10,280.54 (+958.05; session marks +958.05) · 1 name(s) marked open→close (per-name table). ALMU×883 09:30 $11.64 → close $12.72 +958.05 | — |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,912.24 | ▲ close $9,912.24 vs 09:30 $9,912.24 (session +0.00) | 16:00 close · cash $9,912.24 · no lots left · equity $9,912.24. | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,912.24 | ▲ 09:30 equity $9,912.24 vs yday $9,912.24 (-0.00) | 09:30 open · cash $9,912.24 · no holdings · equity $9,912.24 vs prior close $9,912.24 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,912.24 | ▲ close $9,912.24 vs 09:30 $9,912.24 (session +0.00) | 16:00 close · cash $9,912.24 · no lots left · equity $9,912.24. | — |
 
 ## Not taken
 
@@ -409,6 +408,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-27 | `QFIN` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-08-27 | `QMLS` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-08-27 | `SFL` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-08-27 | `BBY` | cash | leftover split 13.87 < 1 share @ 80.60 |
+| 2026-08-27 | `HQY` | cash | leftover split 13.87 < 1 share @ 97.16 |
+| 2026-08-27 | `RY` | cash | leftover split 13.87 < 1 share @ 206.82 |
+| 2026-08-27 | `TD` | cash | leftover split 13.87 < 1 share @ 120.17 |
 | 2026-08-28 | `TIGR` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-08-28 | `LI` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-08-28 | `QFIN` | min_hold | dropped but min-hold 2/3 sess — no sell |
@@ -456,13 +459,5 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 | `DBI` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-14 | `KR` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-15 | `KR` | min_hold | dropped but min-hold 2/3 sess — no sell |
-| 2026-09-15 | `FPS` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `HITI` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `PLAY` | hard_red | hard-red S=-3.84 sit; no new buys |
-| 2026-09-18 | `ALMU` | min_hold | dropped but min-hold 1/3 sess — no sell |
-
-## Still open (marked at last close)
-
-| Ticker | Shares | Entry | Why |
-|---|---:|---|---|
-| `ALMU` | 883 | 2026-09-17 @ $11.21 | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=+1.6; leftover $9912.24 |

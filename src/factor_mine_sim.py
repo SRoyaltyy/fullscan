@@ -31,6 +31,11 @@ ROW_KEEP = (
     "rsi", "fv_rsi", "macd", "macd_hist", "macd_cross_up",
     "rsi_os", "rsi_ob", "macd_up", "macd_down", "flow_in",
     "fv_rvol", "fv_sma20", "fv_inst",
+    "ins_buy", "form4_buy", "rs_week",
+    "clk_mom_break_peer", "clk_fresh_cat_coil", "clk_earn_guide_react",
+    "clk_neg_weak_fail", "clk_ext_veto", "clk_hold_vs_sector",
+    "clk_insider_cash_stab", "clk_flow_coil", "clk_r_up_coil", "clk_nr7_mom",
+    "oppset", "opp_rvol", "opp_gap_pct", "opp_finviz_asof",
 )
 
 
