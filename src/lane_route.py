@@ -16,18 +16,19 @@ Hopper preference (never call Pro/ paid IDs)
 --------------------------------------------
 default (key_people / key_products / revenue_mix / custom):
   OpenRouter :free → DeepSeek → Qwen/DashScope → Zhipu Flash → Moonshot
-  → SiliconFlow non-Pro → ModelScope → GitHub Models → Cloudflare
-  → SambaNova → Ollama → HF free → Groq last-resort → Gemini
+  → SiliconFlow non-Pro → ModelScope → TokenHub overflow (flash then hy3)
+  → GitHub Models → Cloudflare → SambaNova → Ollama → HF free
+  → Groq last-resort → Gemini
 
 news_to_tickers (high volume):
   Zhipu Flash first (quality) → SiliconFlow mid free
   (Qwen/Qwen2.5-7B-Instruct + allowlisted non-Pro) → OpenRouter :free overflow
-  → remaining default hoppers
+  → remaining default hoppers (TokenHub still behind true $0)
 
 company_dig (longer context):
   SiliconFlow Qwen / DeepSeek free non-Pro → native DeepSeek
   → OpenRouter :free overflow → Zhipu Flash (quality digs OK)
-  → remaining default hoppers
+  → remaining default hoppers (TokenHub still behind true $0)
 
 #290 Grok-news overlay can enqueue news_to_tickers later. This module
 does not rewrite that book and does not touch flatten_robust / cash book.
@@ -96,6 +97,24 @@ QWEN_URLS = [
     "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions",
     "https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions",
 ]
+# Tencent TokenHub (Guangzhou CN). Flash IDs first if $0-safe on this host;
+# hy3 is overflow only. Never Pro/plus/paid. TOKENHUB_BASE_URL or
+# TENCENT_BASE_URL is prepended by tokenhub_urls() — never log that value.
+# Default public host only (do not add intl or legacy Hunyuan product URLs).
+TOKENHUB_DEFAULT_BASE = "https://tokenhub.tencentmaas.com/v1"
+# Flash / flashx first; hy3 last. tokenhub_models() re-filters Pro/plus/paid.
+_TOKENHUB_CANDIDATES = (
+    "glm-5.3-flash",
+    "glm-5.3-flashx",
+    "deepseek-v4-flash",
+    "hy3",
+)
+TOKENHUB_MODELS = [
+    m for m in _TOKENHUB_CANDIDATES
+    if "plus" not in m.lower() and "paid" not in m.lower()
+    and not m.lower().startswith("pro")
+    and "/pro" not in m.lower() and "-pro" not in m.lower()
+]
 SF_MODELS = [m for m in (
     "Qwen/Qwen3-8B",
     "Qwen/Qwen2.5-7B-Instruct",
@@ -155,9 +174,12 @@ PACE = 2.1
 DEAD_PROVIDER = (401, 403, 410, 402)
 
 # Default / existing-template hopper order (same as the green smoke path).
+# TokenHub is overflow behind true $0 hoppers (OR :free, DashScope, Zhipu
+# Flash, SF non-Pro, …). Do not move it ahead of those lanes.
 DEFAULT_LANES = [
     "openrouter", "deepseek", "qwen", "zhipu", "moonshot",
     "siliconflow", "modelscope",
+    "tokenhub",
     "github_models", "cloudflare", "sambanova",
     "ollama", "hf", "groq", "gemini",
 ]
@@ -182,11 +204,10 @@ def _dedupe(names: list[str]) -> list[str]:
     return out
 
 
-def dashscope_chat_url(base: str) -> str:
-    """Normalize a DashScope compatible-mode base to a chat/completions URL.
+def openai_compat_chat_url(base: str) -> str:
+    """Normalize an OpenAI-compatible base to a chat/completions URL.
 
-    James's secret is the /compatible-mode/v1 base. Append /chat/completions
-    when missing. Do not log or return the raw env value from callers.
+    Append /chat/completions when missing. Do not log the raw env value.
     """
     base = (base or "").strip().rstrip("/")
     if not base:
@@ -194,6 +215,23 @@ def dashscope_chat_url(base: str) -> str:
     if base.endswith("/chat/completions"):
         return base
     return base + "/chat/completions"
+
+
+def dashscope_chat_url(base: str) -> str:
+    """Normalize a DashScope compatible-mode base to a chat/completions URL.
+
+    James's secret is the /compatible-mode/v1 base. Append /chat/completions
+    when missing. Do not log or return the raw env value from callers.
+    """
+    return openai_compat_chat_url(base)
+
+
+def tokenhub_chat_url(base: str) -> str:
+    """Normalize a TokenHub / Tencent OpenAI-compatible base.
+
+    Same append rule as DashScope. Do not log the raw env value.
+    """
+    return openai_compat_chat_url(base)
 
 
 def qwen_urls() -> list[str]:
@@ -211,6 +249,61 @@ def qwen_models() -> list[str]:
             if "plus" not in m.lower() and "max" not in m.lower()
             and "paid" not in m.lower() and not m.lower().startswith("pro")
             and "/pro" not in m.lower() and "-pro" not in m.lower()]
+
+
+def _tokenhub_id_ok(mid: str) -> bool:
+    """True if a TokenHub model ID is not Pro / plus / paid."""
+    low = str(mid or "").lower()
+    if not low:
+        return False
+    if "plus" in low or "paid" in low:
+        return False
+    if low.startswith("pro") or "/pro" in low or "-pro" in low:
+        return False
+    return True
+
+
+def tokenhub_key() -> str:
+    """Bearer: TOKENHUB_API_KEY, else TENCENT_API_KEY, else HUNYUAN_API_KEY.
+
+    HUNYUAN_API_KEY is an optional alias only — no Hunyuan-product URL.
+    Never log or return this from print paths.
+    """
+    return (
+        (os.environ.get("TOKENHUB_API_KEY") or "").strip()
+        or (os.environ.get("TENCENT_API_KEY") or "").strip()
+        or (os.environ.get("HUNYUAN_API_KEY") or "").strip()
+    )
+
+
+def tokenhub_urls() -> list[str]:
+    """TOKENHUB_BASE_URL then TENCENT_BASE_URL, then CN TokenHub default.
+
+    Custom env bases are tried first (same append-/chat/completions rule as
+    DashScope). Never log or commit those values. Do not add intl or legacy
+    Hunyuan-product hosts as hardcoded fallbacks.
+    """
+    custom = []
+    for env in ("TOKENHUB_BASE_URL", "TENCENT_BASE_URL"):
+        url = tokenhub_chat_url(os.environ.get(env) or "")
+        if url:
+            custom.append(url)
+    default = tokenhub_chat_url(TOKENHUB_DEFAULT_BASE)
+    return _dedupe((custom + [default]) if default else custom)
+
+
+def tokenhub_models() -> list[str]:
+    """$0-safe flash / flashx first; hy3 overflow last. Skip Pro/plus/paid."""
+    flash, overflow = [], []
+    for mid in TOKENHUB_MODELS:
+        if not _tokenhub_id_ok(mid):
+            continue
+        low = mid.lower()
+        if "flash" in low:
+            flash.append(mid)
+        elif mid == "hy3":
+            overflow.append(mid)
+    return flash + overflow
 
 
 def lanes_for(tmpl: str) -> list[str]:
@@ -625,15 +718,24 @@ def hop_models(lane, models, call, abandon_404=False):
     return None, None
 
 
-def first_live_url(urls, key, model, prompt, max_tokens=320, system=None):
-    """Try regional bases; use the first that answers HTTP (not connect-fail)."""
+def first_live_url(urls, key, model, prompt, max_tokens=320, system=None,
+                   skip_statuses=()):
+    """Try regional bases; use the first that answers HTTP (not connect-fail).
+
+    skip_statuses: treat those HTTP codes as "wrong host, try next base"
+    (TokenHub: 401/403 = wrong product/region). Never log the URL.
+    """
     last = (None, 0, "no url")
     for url in urls:
         parsed, status, info = openai_chat(
             url, key, model, prompt, max_tokens=max_tokens, system=system,
         )
         last = (parsed, status, info)
-        if parsed is not None or status != 0:
+        if parsed is not None:
+            return last
+        if status == 0 or status in skip_statuses:
+            continue
+        if status != 0:
             return last
     return last
 
@@ -673,6 +775,9 @@ def load_keys():
         keys["cloudflare_account"] = os.environ["CLOUDFLARE_ACCOUNT_ID"]
     elif os.environ.get("CLOUDFLARE_API_TOKEN") or os.environ.get("CLOUDFLARE_ACCOUNT_ID"):
         print("cloudflare hopper skipped — need both CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID")
+    th_key = tokenhub_key()
+    if th_key:
+        keys["tokenhub"] = th_key
     ollama_url = (os.environ.get("OLLAMA_URL") or "").rstrip("/")
     gh_direct = keys.get("github_models") or os.environ.get("GITHUB_TOKEN") or ""
     return keys, ollama_url, gh_direct
@@ -758,6 +863,18 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
             lambda model: oc(
                 "https://api-inference.modelscope.cn/v1/chat/completions",
                 keys["modelscope"], model,
+            ),
+        )
+    if lane == "tokenhub":
+        if not keys.get("tokenhub"):
+            return None, None
+        return hop_models(
+            "tokenhub",
+            tokenhub_models(),
+            lambda model: first_live_url(
+                tokenhub_urls(), keys["tokenhub"], model, prompt,
+                max_tokens=max_tokens, system=system,
+                skip_statuses=(401, 403),
             ),
         )
     if lane == "github_models":

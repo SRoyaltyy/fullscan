@@ -43,12 +43,21 @@ name: Lane JSON wire
 #                                 MODELSCOPE_SDK_TOKEN). Skip if missing.
 #   OLLAMA_URL                  — optional US-box offline/batch (secret or var).
 #                                 Skip if unset. Not required on this ubuntu job.
+#   TOKENHUB_API_KEY            — Tencent TokenHub CN (or TENCENT_API_KEY).
+#   TENCENT_API_KEY             — alias for TokenHub Bearer.
+#   HUNYUAN_API_KEY             — optional extra alias (key only; no Hunyuan URL).
+#   TOKENHUB_BASE_URL           — optional OpenAI-compatible /v1 base (secret).
+#                                 Tried first; /chat/completions appended if
+#                                 missing. Default tokenhub.tencentmaas.com/v1.
+#                                 Never print this value.
+#   TENCENT_BASE_URL            — alias base, after TOKENHUB_BASE_URL.
 #   GROQ_API_KEY                — last-resort only (dead for HK). Do not prefer.
 #   GEMINI_API_KEY
 #
 # Direct hopper order (rotate to next model/provider on 429/5xx):
 #   OpenRouter free (CN-origin :free first) → DeepSeek → Qwen/DashScope
 #   → Zhipu GLM → Moonshot Kimi → SiliconFlow → ModelScope
+#   → TokenHub overflow (flash / flashx then hy3; behind true $0)
 #   → GitHub Models → Cloudflare → SambaNova
 #   → Ollama (if OLLAMA_URL) → HF free router → Groq (last-resort) → Gemini
 # news_to_tickers / company_dig reorder the same $0 allowlist (never Pro/paid).
@@ -89,6 +98,11 @@ jobs:
           MODELSCOPE_API_KEY: ${{ secrets.MODELSCOPE_API_KEY }}
           MODELSCOPE_API_TOKEN: ${{ secrets.MODELSCOPE_API_TOKEN }}
           MODELSCOPE_SDK_TOKEN: ${{ secrets.MODELSCOPE_SDK_TOKEN }}
+          TOKENHUB_API_KEY: ${{ secrets.TOKENHUB_API_KEY }}
+          TENCENT_API_KEY: ${{ secrets.TENCENT_API_KEY }}
+          HUNYUAN_API_KEY: ${{ secrets.HUNYUAN_API_KEY }}
+          TOKENHUB_BASE_URL: ${{ secrets.TOKENHUB_BASE_URL }}
+          TENCENT_BASE_URL: ${{ secrets.TENCENT_BASE_URL }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: PYTHONPATH=. python3 -m src.lane_route

@@ -588,9 +588,13 @@ def test_lane_json_zero_dollar_hoppers() -> None:
     assert DEFAULT_LANES == [
         "openrouter", "deepseek", "qwen", "zhipu", "moonshot",
         "siliconflow", "modelscope",
+        "tokenhub",
         "github_models", "cloudflare", "sambanova",
         "ollama", "hf", "groq", "gemini",
     ], DEFAULT_LANES
+    # TokenHub overflow must stay behind true $0 hoppers.
+    for ahead in ("openrouter", "qwen", "zhipu", "siliconflow"):
+        assert DEFAULT_LANES.index(ahead) < DEFAULT_LANES.index("tokenhub"), ahead
     assert lanes_for("key_people") == DEFAULT_LANES
     assert lanes_for("custom") == DEFAULT_LANES
     assert NEWS_HEAD == ["zhipu", "siliconflow", "openrouter"]
@@ -620,6 +624,11 @@ def test_lane_json_zero_dollar_hoppers() -> None:
         "MOONSHOT_API_KEY",
         "MODELSCOPE_API_KEY",
         "OLLAMA_URL",
+        "TOKENHUB_API_KEY",
+        "TENCENT_API_KEY",
+        "HUNYUAN_API_KEY",
+        "TOKENHUB_BASE_URL",
+        "TENCENT_BASE_URL",
         "GROQ_API_KEY",
     ):
         assert secret in header, secret
@@ -643,6 +652,7 @@ def test_lane_json_zero_dollar_hoppers() -> None:
     assert "open.bigmodel.cn" in py
     assert "api.moonshot.cn" in py
     assert "api-inference.modelscope.cn" in py
+    assert "tokenhub.tencentmaas.com" in py
     assert "models.github.ai" in py
     assert "api.cloudflare.com" in py
     assert "api.sambanova.ai" in py
@@ -676,6 +686,11 @@ def test_lane_json_zero_dollar_hoppers() -> None:
     assert "def qwen_urls" in py
     env_block = text.split("env:", 1)[1].split("run:", 1)[0]
     assert "secrets.DASHSCOPE_BASE_URL" in env_block
+    assert "secrets.TOKENHUB_API_KEY" in env_block
+    assert "secrets.TENCENT_API_KEY" in env_block
+    assert "secrets.TOKENHUB_BASE_URL" in env_block
+    assert "secrets.TENCENT_BASE_URL" in env_block
+    assert "secrets.HUNYUAN_API_KEY" in env_block
 
     assert "not required" in header.lower() or "Skip if unset" in header
 
@@ -820,6 +835,153 @@ def test_lane_dashscope_base_url_and_qwen_flash() -> None:
         assert "example.test" not in blob or path.name == "test_workflow_fromjson.py"
 
 
+def test_lane_tokenhub_base_url_bearer_and_flash_then_hy3() -> None:
+    """TokenHub: BASE_URL / Bearer precedence; flash first then hy3; no leak."""
+    import os
+
+    from src import lane_route
+    from src.lane_route import (
+        DEFAULT_LANES,
+        TOKENHUB_DEFAULT_BASE,
+        TOKENHUB_MODELS,
+        _tokenhub_id_ok,
+        first_live_url,
+        lanes_for,
+        load_keys,
+        tokenhub_chat_url,
+        tokenhub_key,
+        tokenhub_models,
+        tokenhub_urls,
+    )
+
+    zero = ("openrouter", "deepseek", "qwen", "zhipu", "moonshot",
+            "siliconflow", "modelscope")
+    assert DEFAULT_LANES.index("tokenhub") > max(DEFAULT_LANES.index(n) for n in zero)
+    for tmpl in ("custom", "news_to_tickers", "company_dig"):
+        order = lanes_for(tmpl)
+        assert order.index("tokenhub") > order.index("openrouter")
+        assert order.index("tokenhub") > order.index("qwen")
+        assert order.index("tokenhub") > order.index("zhipu")
+        assert order.index("tokenhub") > order.index("siliconflow")
+
+    models = tokenhub_models()
+    assert models, "tokenhub allowlist empty"
+    assert models[-1] == "hy3", models
+    flash = [m for m in models if m != "hy3"]
+    assert flash and all("flash" in m.lower() for m in flash), flash
+    assert models.index(flash[0]) < models.index("hy3")
+    assert "glm-5.3-flash" in models
+    assert "glm-5.3-flashx" in models
+    assert "deepseek-v4-flash" in models
+    for mid in list(TOKENHUB_MODELS) + models:
+        low = mid.lower()
+        assert "plus" not in low and "paid" not in low
+        assert not low.startswith("pro") and "/pro" not in low and "-pro" not in low
+    assert _tokenhub_id_ok("hy3")
+    assert _tokenhub_id_ok("glm-5.3-flashx")
+    assert not _tokenhub_id_ok("deepseek-v4-pro")
+    assert not _tokenhub_id_ok("glm-5.3-plus")
+    assert not _tokenhub_id_ok("qwen3.5-plus")
+
+    default_chat = TOKENHUB_DEFAULT_BASE.rstrip("/") + "/chat/completions"
+    env_names = (
+        "TOKENHUB_BASE_URL", "TENCENT_BASE_URL",
+        "TOKENHUB_API_KEY", "TENCENT_API_KEY", "HUNYUAN_API_KEY",
+    )
+    prev = {name: os.environ.pop(name, None) for name in env_names}
+    try:
+        assert tokenhub_urls() == [default_chat]
+        assert tokenhub_chat_url(TOKENHUB_DEFAULT_BASE) == default_chat
+        assert tokenhub_chat_url(TOKENHUB_DEFAULT_BASE + "/") == default_chat
+        assert tokenhub_chat_url(default_chat) == default_chat
+
+        fake_th = "https://example.test/tokenhub/v1"
+        fake_tc = "https://example.test/tencent/v1"
+        os.environ["TENCENT_BASE_URL"] = fake_tc
+        urls = tokenhub_urls()
+        assert urls[0] == fake_tc + "/chat/completions"
+        assert default_chat in urls
+        os.environ["TOKENHUB_BASE_URL"] = fake_th
+        urls = tokenhub_urls()
+        assert urls[0] == fake_th + "/chat/completions"
+        assert urls[1] == fake_tc + "/chat/completions"
+        assert urls[-1] == default_chat
+        os.environ["TOKENHUB_BASE_URL"] = fake_th + "/chat/completions"
+        assert tokenhub_urls()[0] == fake_th + "/chat/completions"
+        os.environ["TOKENHUB_BASE_URL"] = fake_th + "/"
+        assert tokenhub_chat_url(os.environ["TOKENHUB_BASE_URL"]) == (
+            fake_th + "/chat/completions"
+        )
+
+        assert tokenhub_key() == ""
+        os.environ["HUNYUAN_API_KEY"] = "hy-test-alias"
+        assert tokenhub_key() == "hy-test-alias"
+        os.environ["TENCENT_API_KEY"] = "tc-test-bearer"
+        assert tokenhub_key() == "tc-test-bearer"
+        os.environ["TOKENHUB_API_KEY"] = "th-test-bearer"
+        assert tokenhub_key() == "th-test-bearer"
+        keys, _ollama, _gh = load_keys()
+        assert keys.get("tokenhub") == "th-test-bearer"
+        del os.environ["TOKENHUB_API_KEY"]
+        keys, _ollama, _gh = load_keys()
+        assert keys.get("tokenhub") == "tc-test-bearer"
+        del os.environ["TENCENT_API_KEY"]
+        keys, _ollama, _gh = load_keys()
+        assert keys.get("tokenhub") == "hy-test-alias"
+
+        orig_chat = lane_route.openai_chat
+        hosts = []
+
+        def _fake_chat(url, key, model, prompt, extra=None, max_tokens=320, system=None):
+            hosts.append(url.split("://", 1)[-1].split("/", 1)[0])
+            if "bad-host" in url:
+                return None, 401, "denied"
+            return {"ok": 1}, 200, model
+
+        try:
+            lane_route.openai_chat = _fake_chat
+            parsed, status, info = first_live_url(
+                [
+                    "https://bad-host.test/v1/chat/completions",
+                    default_chat,
+                ],
+                "th-test-bearer",
+                "hy3",
+                "ping",
+                skip_statuses=(401, 403),
+            )
+            assert parsed == {"ok": 1} and status == 200 and info == "hy3"
+            assert hosts[0] == "bad-host.test"
+        finally:
+            lane_route.openai_chat = orig_chat
+    finally:
+        for name, value in prev.items():
+            if value is None:
+                os.environ.pop(name, None)
+            else:
+                os.environ[name] = value
+
+    route = (ROOT / "src" / "lane_route.py").read_text(encoding="utf-8")
+    assert "api.hunyuan.cloud.tencent.com" not in route
+    assert "tokenhub-intl" not in route
+    assert "tokenhub.tencentcloudmaas.com" not in route
+
+    leak_roots = (
+        ROOT / "src" / "lane_route.py",
+        ROOT / "src" / "test_workflow_fromjson.py",
+        WF / "lane_json.yml",
+        ROOT / "02_lessons" / "lane" / "README.md",
+        ROOT / "02_lessons" / "lane" / "inbox.examples.json",
+    )
+    key_pat = re.compile(r"sk-[A-Za-z0-9]{8,}")
+    for path in leak_roots:
+        blob = path.read_text(encoding="utf-8")
+        assert key_pat.search(blob) is None, path.name
+        assert "example.test" not in blob or path.name == "test_workflow_fromjson.py"
+        for needle in ("th-test-bearer", "tc-test-bearer", "hy-test-alias"):
+            assert needle not in blob or path.name == "test_workflow_fromjson.py"
+
+
 def test_ci_workflow_is_wired() -> None:
     yml = (WF / "workflow_selfcheck.yml").read_text(encoding="utf-8")
     assert "pull_request:" in yml
@@ -848,6 +1010,7 @@ def main() -> None:
         test_lane_json_zero_dollar_hoppers,
         test_lane_news_and_dig_templates,
         test_lane_dashscope_base_url_and_qwen_flash,
+        test_lane_tokenhub_base_url_bearer_and_flash_then_hy3,
         test_ci_workflow_is_wired,
     ]
     failed = 0
