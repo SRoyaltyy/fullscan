@@ -1,0 +1,37 @@
+name: Grok news ticker book (Stage 2 replay only)
+
+# Research replay. Reads frozen data/grok_automations/*.json and dated
+# repo news only. Does NOT call automation_get_results / live Grok
+# Automations — GH Actions cannot see those run logs. Stage 1 harvest
+# must be run by Cursor / Grok Bot with an Automations connector.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install -r requirements.txt
+      - name: Leak-rule tests
+        run: python -m src.test_grok_news_ticker_bt
+      - name: Stage 2 replay (frozen files + dated repo news)
+        run: python -m src.grok_news_ticker_bt
+      - name: Guard — no harvest API in this workflow
+        run: |
+          set -e
+          if grep -n 'automation_get_results' .github/workflows/grok_news_ticker_bt.yml; then
+            echo "replay workflow must not call automation_get_results" >&2
+            exit 1
+          fi
+          test -f 03_scoreboard/GROK_NEWS_TICKER_BT.md
+          test -f 03_scoreboard/grok_news_ticker_bt.json
