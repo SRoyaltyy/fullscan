@@ -564,6 +564,10 @@ def test_self_hosted_fromjson_jobs_resolve_both_sides() -> None:
 
 
 def _lane_json_python(text: str) -> str:
+    """Lane router source: extracted module, else inlined heredoc."""
+    route = ROOT / "src" / "lane_route.py"
+    if route.exists():
+        return route.read_text(encoding="utf-8")
     start = text.find("python - <<'PY'")
     end = text.find("\n          PY\n", start)
     assert start >= 0 and end > start, "lane_json.yml missing Route inbox python"
@@ -574,23 +578,28 @@ def test_lane_json_zero_dollar_hoppers() -> None:
     """OpenRouter-first $0 hopper stack: parse, order, secrets, no browser."""
     import ast
 
-    text = (WF / "lane_json.yml").read_text(encoding="utf-8")
-    py = _lane_json_python(text)
-    ast.parse("\n".join(line[10:] if line.startswith("          ") else line
-                        for line in py.splitlines()[1:]))
+    from src.lane_route import DEFAULT_LANES, DIG_HEAD, NEWS_HEAD, lanes_for
 
-    block = py.split("def direct_ask")[1].split("def via_lane")[0]
-    ordered = re.findall(
-        r'hop_models\(\s*"(openrouter|deepseek|qwen|zhipu|moonshot|siliconflow|'
-        r'modelscope|github_models|cloudflare|sambanova|ollama|hf|groq|gemini)"',
-        block,
-    )
-    assert ordered == [
+    text = (WF / "lane_json.yml").read_text(encoding="utf-8")
+    assert "src.lane_route" in text, "workflow must call src.lane_route"
+    py = _lane_json_python(text)
+    ast.parse(py)
+
+    assert DEFAULT_LANES == [
         "openrouter", "deepseek", "qwen", "zhipu", "moonshot",
         "siliconflow", "modelscope",
         "github_models", "cloudflare", "sambanova",
         "ollama", "hf", "groq", "gemini",
-    ], ordered
+    ], DEFAULT_LANES
+    assert lanes_for("key_people") == DEFAULT_LANES
+    assert lanes_for("custom") == DEFAULT_LANES
+    assert NEWS_HEAD == ["zhipu", "siliconflow", "openrouter"]
+    assert DIG_HEAD == ["siliconflow", "deepseek", "openrouter", "zhipu"]
+    assert lanes_for("news_to_tickers")[:3] == NEWS_HEAD
+    assert lanes_for("company_dig")[:4] == DIG_HEAD
+    # Overflow still the same $0 stack — no extra providers.
+    assert set(lanes_for("news_to_tickers")) == set(DEFAULT_LANES)
+    assert set(lanes_for("company_dig")) == set(DEFAULT_LANES)
 
     header = text.split("on:", 1)[0]
     for secret in (
@@ -603,6 +612,7 @@ def test_lane_json_zero_dollar_hoppers() -> None:
         "HF_TOKEN",
         "DEEPSEEK_API_KEY",
         "DASHSCOPE_API_KEY",
+        "DASHSCOPE_BASE_URL",
         "QWEN_API_KEY",
         "SILICONFLOW_API_KEY",
         "ZHIPU_API_KEY",
@@ -656,7 +666,158 @@ def test_lane_json_zero_dollar_hoppers() -> None:
     assert zhipu_ids and all("flash" in m for m in zhipu_ids), zhipu_ids
     assert "glm-5." not in py.split("ZHIPU_MODELS")[1].split("ZHIPU_URLS")[0]
 
+    qwen_ids = re.findall(
+        r'"(qwen[^"]+)"', py.split("QWEN_MODELS")[1].split("QWEN_URLS")[0]
+    )
+    assert qwen_ids and qwen_ids[0] == "qwen-flash", qwen_ids
+    assert "qwen-turbo" in qwen_ids
+    assert all("plus" not in m and "max" not in m and "paid" not in m for m in qwen_ids), qwen_ids
+    assert "DASHSCOPE_BASE_URL" in py
+    assert "def qwen_urls" in py
+    env_block = text.split("env:", 1)[1].split("run:", 1)[0]
+    assert "secrets.DASHSCOPE_BASE_URL" in env_block
+
     assert "not required" in header.lower() or "Skip if unset" in header
+
+
+def test_lane_news_and_dig_templates() -> None:
+    """news_to_tickers + company_dig prompts, inbox schema, $0 prefs."""
+    from src.lane_route import (
+        DIG_HEAD,
+        NEWS_HEAD,
+        articles_from,
+        inbox_error,
+        lanes_for,
+        load_questions,
+        prompt_for,
+        sf_models_for,
+        system_for,
+        token_budget,
+    )
+
+    live = json.loads((ROOT / "02_lessons" / "lane" / "inbox.json").read_text())
+    for q in load_questions(live):
+        assert inbox_error(q) is None, q
+        ticker, tmpl, question, prompt = prompt_for(q)
+        assert ticker == "NVDA"
+        assert tmpl in ("key_people", "key_products", "revenue_mix", "custom")
+        assert "Ticker: NVDA" in prompt
+        assert token_budget(tmpl) == 320
+        assert lanes_for(tmpl)[0] == "openrouter"
+
+    examples = json.loads(
+        (ROOT / "02_lessons" / "lane" / "inbox.examples.json").read_text()
+    )
+    qs = load_questions(examples)
+    assert {q.get("template") for q in qs} >= {"news_to_tickers", "company_dig"}
+
+    news = next(q for q in qs if q["template"] == "news_to_tickers")
+    assert inbox_error(news) is None
+    assert inbox_error({"template": "news_to_tickers"}) == (
+        "news_to_tickers needs articles[{title,body}]"
+    )
+    arts = articles_from(news)
+    assert arts and arts[0]["title"]
+    ticker, tmpl, question, prompt = prompt_for(news)
+    assert tmpl == "news_to_tickers"
+    assert ticker == ""
+    assert "tickers" in prompt
+    assert "polarity" in prompt
+    assert "theme" in prompt.lower() or "basket" in prompt.lower()
+    assert arts[0]["title"] in prompt
+    assert lanes_for(tmpl)[:3] == NEWS_HEAD
+    assert token_budget(tmpl) == 900
+    assert "listed" in system_for(tmpl).lower()
+    sf_news = sf_models_for(tmpl)
+    assert sf_news[0] == "Qwen/Qwen2.5-7B-Instruct"
+    assert not any(str(m).startswith("Pro/") for m in sf_news)
+
+    dig = next(q for q in qs if q["template"] == "company_dig")
+    assert inbox_error(dig) is None
+    assert inbox_error({"template": "company_dig"}) == "company_dig needs ticker"
+    ticker, tmpl, question, prompt = prompt_for(dig)
+    assert tmpl == "company_dig"
+    assert ticker == "NVDA"
+    for key in (
+        "business", "competitors", "catalysts", "risks",
+        "key_metrics", "sources_claimed",
+    ):
+        assert key in prompt, key
+    assert lanes_for(tmpl)[:4] == DIG_HEAD
+    assert token_budget(tmpl) == 1600
+    sf_dig = sf_models_for(tmpl)
+    assert not any(str(m).startswith("Pro/") for m in sf_dig)
+    assert any(m.startswith("Qwen/") for m in sf_dig)
+    assert any("DeepSeek" in m or "deepseek" in m.lower() for m in sf_dig)
+
+    # Top-level title/body is also valid news input.
+    flat = {
+        "id": "flat",
+        "template": "news_to_tickers",
+        "title": "Oil jump",
+        "body": "Brent spiked after the pipeline halt.",
+    }
+    assert inbox_error(flat) is None
+    assert articles_from(flat)[0]["title"] == "Oil jump"
+
+
+def test_lane_dashscope_base_url_and_qwen_flash() -> None:
+    """Custom DashScope base first; qwen-flash preferred; no secret leak."""
+    import os
+
+    from src.lane_route import (
+        QWEN_MODELS,
+        QWEN_URLS,
+        dashscope_chat_url,
+        qwen_models,
+        qwen_urls,
+    )
+
+    assert QWEN_MODELS[0] == "qwen-flash"
+    models = qwen_models()
+    assert models[0] == "qwen-flash"
+    assert "qwen-turbo" in models
+    assert "qwen2.5-7b-instruct" in models
+    for mid in models:
+        low = mid.lower()
+        assert "plus" not in low and "max" not in low and "paid" not in low
+        assert not low.startswith("pro") and "/pro" not in low and "-pro" not in low
+
+    public = list(QWEN_URLS)
+    assert public[0].startswith("https://dashscope.aliyuncs.com/")
+    prev = os.environ.pop("DASHSCOPE_BASE_URL", None)
+    try:
+        assert qwen_urls() == public
+        fake = "https://example.test/compatible-mode/v1"
+        os.environ["DASHSCOPE_BASE_URL"] = fake
+        urls = qwen_urls()
+        assert urls[0] == fake + "/chat/completions"
+        assert urls[1:] == public
+        os.environ["DASHSCOPE_BASE_URL"] = fake + "/chat/completions"
+        assert qwen_urls()[0] == fake + "/chat/completions"
+        os.environ["DASHSCOPE_BASE_URL"] = fake + "/"
+        assert dashscope_chat_url(os.environ["DASHSCOPE_BASE_URL"]) == (
+            fake + "/chat/completions"
+        )
+    finally:
+        if prev is None:
+            os.environ.pop("DASHSCOPE_BASE_URL", None)
+        else:
+            os.environ["DASHSCOPE_BASE_URL"] = prev
+
+    # Never bake a private host or secret value into repo files.
+    leak_roots = (
+        ROOT / "src" / "lane_route.py",
+        ROOT / "src" / "test_workflow_fromjson.py",
+        WF / "lane_json.yml",
+        ROOT / "02_lessons" / "lane" / "README.md",
+        ROOT / "02_lessons" / "lane" / "inbox.examples.json",
+    )
+    key_pat = re.compile(r"sk-[A-Za-z0-9]{8,}")
+    for path in leak_roots:
+        blob = path.read_text(encoding="utf-8")
+        assert key_pat.search(blob) is None, path.name
+        assert "example.test" not in blob or path.name == "test_workflow_fromjson.py"
 
 
 def test_ci_workflow_is_wired() -> None:
@@ -685,6 +846,8 @@ def main() -> None:
         test_openclaw_probe_stays_on_ecs,
         test_self_hosted_fromjson_jobs_resolve_both_sides,
         test_lane_json_zero_dollar_hoppers,
+        test_lane_news_and_dig_templates,
+        test_lane_dashscope_base_url_and_qwen_flash,
         test_ci_workflow_is_wired,
     ]
     failed = 0
