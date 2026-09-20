@@ -1,12 +1,12 @@
 {
   "date": "2026-09-20",
-  "generated_at": "2026-09-20T15:02:34.010904-04:00",
+  "generated_at": "2026-09-20T15:02:56.110435-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 1,
+    "ok": 2,
     "partial": 2,
-    "fail": 5,
+    "fail": 4,
     "n": 8
   },
   "buy_1d": [],
@@ -125,6 +125,31 @@
         }
       ],
       "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 FORM, P, KEYS, VICR, SKHY"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-20",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-20T15:02:55.748207-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-20_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7629213,
+          "preview": "2654 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, WWW, CFFN, WDS, DSGX"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-20_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8466566,
+          "preview": "2654 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, SFL, DSGX, DSX, ILMN"
+        }
+      ],
+      "preview": "2654 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, WWW, CFFN, WDS, DSGX \u00b7 2654 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, SFL, DSGX, DSX, ILMN"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
