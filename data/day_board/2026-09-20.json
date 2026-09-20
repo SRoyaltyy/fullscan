@@ -1,18 +1,17 @@
 {
   "date": "2026-09-20",
-  "generated_at": "2026-09-20T15:03:52.694869-04:00",
+  "generated_at": "2026-09-20T15:04:10.121961-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-20_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-20/_board.json` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-09-20_actions.json` \u2014 missing",
     "MISSING Quote-page digest JSON (*_finviz_digest) `01_daily/news/2026-09-20_finviz_digest.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-09-20_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 4,
-    "partial": 0,
+    "ok": 2,
+    "partial": 2,
     "fail": 4,
     "n": 8
   },
@@ -145,7 +144,7 @@
       "inputs_ready": false,
       "n_req_ok": 0,
       "n_req": 20,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 3,
       "files": [
         {
@@ -234,9 +233,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-20_actions.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 889
         },
         {
           "key": "general",
@@ -454,7 +453,7 @@
       ],
       "said": "25 rows",
       "bullets": [
-        "ANET, SFL, DSGX, DSX, ILMN"
+        "ANET, SFL, DSGX, ILMN, CDNA"
       ]
     },
     {
@@ -473,9 +472,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-20_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 889
         },
         {
           "key": "in_digest",
@@ -503,11 +502,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "OK",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 4,
+      "n_req_ok": 2,
       "n_req": 4,
-      "n_opt_ok": 3,
+      "n_opt_ok": 1,
       "n_opt": 3,
       "files": [
         {
@@ -533,9 +532,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-20_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 889
         },
         {
           "key": "in_digest",
@@ -580,7 +579,7 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5894",
-          "size": 2220790
+          "size": 2220760
         },
         {
           "key": "peers",
@@ -596,27 +595,27 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-20_stock_book.json",
           "role": "required",
-          "status": "OK",
-          "reason": "horizons=5 names=216",
-          "size": 1449545
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "book_md",
           "name": "Stock book MD",
           "path": "01_daily/2026-09-20_stock_book.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 78531
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-09-20_green.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 585
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "paper",
@@ -632,23 +631,23 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-20)",
+          "status": "FAIL",
+          "reason": "session 2026-09-20 not in dashboard dates (last=2026-09-17)",
           "size": 6300795
         }
       ],
       "said": "203 rows",
       "bullets": [
-        "FORM, P, KEYS, VICR, SKHY"
+        "FORM, P, KEYS, VICR, MU"
       ]
     },
     {
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "OK",
-      "inputs_ready": true,
-      "n_req_ok": 2,
+      "status": "PARTIAL",
+      "inputs_ready": false,
+      "n_req_ok": 1,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -658,17 +657,17 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-20_stock_book.json",
           "role": "input",
-          "status": "OK",
-          "reason": "horizons=5 names=216",
-          "size": 1449545
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "dash_html",
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-20)",
+          "status": "FAIL",
+          "reason": "session 2026-09-20 not in dashboard dates (last=2026-09-17)",
           "size": 6300795
         },
         {
@@ -1205,6 +1204,31 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-09-20\n_Generated 2026-09-20T19:03:51 \u2014 live `flatten_robust`._\n**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **\u2014** (\u2014) \u00b7 route **io**\n- Cash leftover **$102,571.54** (after 09:30 $102,571.54 \u00b7 after 16:00 $102,571.54)\n- Prior close **$102,571.54** \u00b7 09:30 **$102,571.54** \u00b7 overnight **$+0.00** \u00b7 session **$+0.00** \u00b7 16:00 **$102,571.54**\n- Overnight lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$102,571.54** \u00b7 2026-09-20 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_over"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-20",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-20T15:04:09.489981-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-20_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7629213,
+          "preview": "2654 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, WWW, CFFN, WDS, CXW"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-20_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8466566,
+          "preview": "2654 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, SFL, DSGX, ILMN, CDNA"
+        }
+      ],
+      "preview": "2654 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, WWW, CFFN, WDS, CXW \u00b7 2654 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, SFL, DSGX, ILMN, CDNA"
     }
   ],
   "href": {
