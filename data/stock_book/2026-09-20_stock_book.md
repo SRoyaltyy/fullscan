@@ -1,6 +1,6 @@
 # Stock book — 2026-09-20
 
-_Generated 2026-09-20T15:03:04.448021-04:00_
+_Generated 2026-09-20T15:04:21.379930-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -55,9 +55,9 @@ Decision domains: **MKT · parent · child · company · setup · flow**. Measur
 | 3 | **CLYM** | 🟡🟡🟡🟡🟢🟢 | standard | no direct company event; Biotechnology +0.0% d1 / +0.0% 1w / +0.0% vs parent | BUY STANDARD — market=YELLOW; parent=YELLOW; child=YELLOW/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,⚪,Cond green |
 | 4 | **MATV** | 🟡🟡🟡🟡🟢🟢 | standard | no direct company event; Specialty Chemicals +0.0% d1 / +0.0% 1w / +0.0% vs parent | BUY STANDARD — market=YELLOW; parent=YELLOW; child=YELLOW/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,⚪,Cond green |
 | 5 | **GAU** | 🟡🟡🟡🟡🟢🟢 | standard | no direct company event; Gold +0.0% d1 / +0.0% 1w / +0.0% vs parent | BUY STANDARD — market=YELLOW; parent=YELLOW; child=YELLOW/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,⚪ |
-| 6 | **PGEN** | 🟡🟡🟡🟡🟢🟢 | standard | no direct company event; Biotechnology +0.0% d1 / +0.0% 1w / +0.0% vs parent | BUY STANDARD — market=YELLOW; parent=YELLOW; child=YELLOW/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=⚪,Cond green |
-| 7 | **SPCE** | 🟡🟡🟡🟡🟢🟢 | standard | no direct company event; Aerospace & Defense +0.0% d1 / +0.0% 1w / +0.0% vs parent | BUY STANDARD — market=YELLOW; parent=YELLOW; child=YELLOW/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=⚪,Cond green |
-| 8 | **HOOD** | 🟡🟡🟡🟡🟢🟢 | standard | no direct company event; Capital Markets +0.0% d1 / +0.0% 1w / +0.0% vs parent | BUY STANDARD — market=YELLOW; parent=YELLOW; child=YELLOW/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=⚪,Cond green |
+| 6 | **HOOD** | 🟡🟡🟡🟡🟢🟢 | standard | no direct company event; Capital Markets +0.0% d1 / +0.0% 1w / +0.0% vs parent | BUY STANDARD — market=YELLOW; parent=YELLOW; child=YELLOW/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=⚪,Cond green |
+| 7 | **PGEN** | 🟡🟡🟡🟡🟢🟢 | standard | no direct company event; Biotechnology +0.0% d1 / +0.0% 1w / +0.0% vs parent | BUY STANDARD — market=YELLOW; parent=YELLOW; child=YELLOW/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=⚪,Cond green |
+| 8 | **SPCE** | 🟡🟡🟡🟡🟢🟢 | standard | no direct company event; Aerospace & Defense +0.0% d1 / +0.0% 1w / +0.0% vs parent | BUY STANDARD — market=YELLOW; parent=YELLOW; child=YELLOW/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=⚪,Cond green |
 | 9 | **ENGS** | 🟡🟡🟡🟡🟢🟢 | standard | no direct company event; Waste Management +0.0% d1 / +0.0% 1w / +0.0% vs parent | BUY STANDARD — market=YELLOW; parent=YELLOW; child=YELLOW/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,⚪ |
 | 10 | **HALO** | 🟡🟡🟡🟡🟢🟢 | standard | no direct company event; Biotechnology +0.0% d1 / +0.0% 1w / +0.0% vs parent | BUY STANDARD — market=YELLOW; parent=YELLOW; child=YELLOW/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=⚪,Cond green |
 | 11 | **PRLD** | 🟡🟡🟡🟡🟢🟢 | standard | no direct company event; Biotechnology +0.0% d1 / +0.0% 1w / +0.0% vs parent | BUY STANDARD — market=YELLOW; parent=YELLOW; child=YELLOW/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=⚪,Cond green |
@@ -106,7 +106,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Weather (tape + FRED/DXY/VIX) | **found** | join × weather |
 | Channel 1 raw | **found** | via weather |
 | Join ranked universe | **found** | s_join |
-| News parse + actions | **missing / not in ranker** | s_news |
+| News parse + actions | **found** | s_news |
 | News judge | **found** | s_news ticker tilts |
 | Finviz daily digest | **missing / not in ranker** | s_news company headlines |
 | General predict | **missing / not in ranker** | s_general × beta |
