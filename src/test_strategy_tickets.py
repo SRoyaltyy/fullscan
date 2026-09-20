@@ -77,6 +77,9 @@ def test_source_uses_session_look_not_last_bake() -> None:
     assert "assert_session_look" in src
     assert "clock_legal_for" in src
     assert "SESSION_OPEN_LOCK" in src
+    assert "morning_scan" in src
+    assert "pick_morning" in src
+    assert "attach_paper_dual_run" not in src
 
 
 def test_session_look_uses_panel_when_session_present() -> None:
@@ -239,6 +242,8 @@ def main() -> None:
     test_assert_fails_when_bake_is_not_session_open()
     test_open_lock_pins_indp_and_drops_friday()
     test_assert_open_lock_requires_webull_sit_names()
+    from src.test_morning_scan import main as morning_scan_main
+    morning_scan_main()
     print("ok")
 
 

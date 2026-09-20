@@ -10,6 +10,11 @@ Tickets stamp ``clock_legal_for`` / ``session_open`` so a Friday panel
 bake cannot read as Monday's open. Publish fails if bake ≠ session
 and there is no session-open look.
 
+Factor-mine morning picks use the KEEP aisle + Clock-B gates
+(``src.morning_scan``): panel ∪ Theme Radar oppset, then #279 filter/
+rank. That is the scan path — not a pinned e_fresh list. Does not
+replace ``flatten_robust`` / Webull / paper_open.
+
 Live Elite Overview Price is stamped on every buy/sell row after
 09:30 (`elite_live_px`). Soft-fail every source so
 publish_live_boards still writes a strip — except the clock assert.
@@ -442,6 +447,7 @@ def recipe_strats(date: str, look_out: dict | None = None) -> list[dict]:
     try:
         from . import factor_mine as fm
         from . import factor_mine_book as fmb
+        from . import morning_scan as mscan
     except Exception as e:  # noqa: BLE001
         print(f"[strategy-tickets] WARN: factor-mine import: {e}", flush=True)
         return []
@@ -461,9 +467,18 @@ def recipe_strats(date: str, look_out: dict | None = None) -> list[dict]:
              "date", "panel_bake_date")
             if looked.get(k) is not None
         })
-    rows = looked.get("rows") or []
     look_stale = bool(looked.get("stale"))
     look_err = str(looked.get("error") or "")
+    base_rows = looked.get("rows") or []
+    # Stale look already refused last-bake names. Do not invent an
+    # oppset-only aisle on top of that refuse.
+    rows = ([] if look_stale and not base_rows
+            else mscan.aisle_rows(date, base_rows))
+    if look_out is not None:
+        look_out["aisle"] = mscan.AISLE
+        look_out["methodology"] = mscan.METHODOLOGY
+        look_out["n_aisle"] = len(rows)
+        look_out["n_oppset"] = sum(1 for r in rows if fm.on_oppset(r))
     s = None
     try:
         s = fmb.morning_s(fmb.load_regime(), date)
@@ -526,7 +541,10 @@ def recipe_strats(date: str, look_out: dict | None = None) -> list[dict]:
             try:
                 buys = apply_open_lock(
                     date, name,
-                    _combo_would_buy(rows, rec_by, members, spec, fm),
+                    _combo_would_buy(
+                        rows, rec_by, members, spec, fm,
+                        picker=mscan.pick_morning,
+                    ),
                 )
             except Exception as e:  # noqa: BLE001
                 out.append(_entry(
@@ -564,7 +582,7 @@ def recipe_strats(date: str, look_out: dict | None = None) -> list[dict]:
             ))
             continue
         try:
-            picked = fm.pick_day(rows, rec)
+            picked = mscan.pick_morning(rows, rec)
         except Exception as e:  # noqa: BLE001
             out.append(_entry(
                 name, "factor_mine", date, [], [],
@@ -603,14 +621,18 @@ def recipe_strats(date: str, look_out: dict | None = None) -> list[dict]:
 
 
 def _combo_would_buy(rows, rec_by: dict, members: list[str],
-                     spec: dict, fm) -> list[dict]:
-    """09:30 shopping list: union of each kid's pick_day.
+                     spec: dict, fm, picker=None) -> list[dict]:
+    """09:30 shopping list: union of each kid's morning pick.
 
-    A combo does not invent a mashed gate. Shared/split only changes how
-    leftover cash is stacked at the open — the names each kid wants are
-    already on the panel. net=skip drops a name both a long kid and a
-    short kid want. Fills / leftover lots still need the cash-book roll.
+    Default picker is the KEEP aisle + Clock-B scan (``pick_morning``).
+    Tests may pass a fake ``fm.pick_day``. Shared/split only changes how
+    leftover cash is stacked at the open. net=skip drops a name both a
+    long kid and a short kid want. Fills still need the cash-book roll.
     """
+    pick = picker or getattr(fm, "pick_day", None)
+    if pick is None:
+        from . import morning_scan as mscan
+        pick = mscan.pick_morning
     net = (spec.get("net") or "priority")
     longs: set[str] = set()
     shorts: set[str] = set()
@@ -621,7 +643,7 @@ def _combo_would_buy(rows, rec_by: dict, members: list[str],
         if not kid:
             continue
         side = str(kid.get("side") or "long")
-        for r in fm.pick_day(rows, kid):
+        for r in pick(rows, kid):
             t = str(r.get("ticker") or "").upper()
             if not t:
                 continue
@@ -800,6 +822,18 @@ def build(date: str) -> dict:
             "Friday bake is never Monday's open."
         ),
         "source": "strategy_tickets",
+        "scan": {
+            "methodology": "oppset_union+clock_b",
+            "aisle": "panel ∪ Theme Radar Clock-B oppset",
+            "live_untouched": "flatten_robust",
+            "look_source": look.get("source"),
+            "n_aisle": look.get("n_aisle"),
+            "n_oppset": look.get("n_oppset"),
+            "note": (
+                "Factor-mine morning picks use the KEEP aisle + Clock-B "
+                "gates. flatten_robust stays LIVE money."
+            ),
+        },
     }
     try:
         payload = stamp_live_quotes(payload, date)
@@ -854,6 +888,7 @@ def write(date: str, payload: dict | None = None) -> list[Path]:
         "n_ok": payload.get("n_ok"),
         "quote": payload.get("quote"),
         "decision_readiness": payload.get("decision_readiness"),
+        "scan": payload.get("scan"),
         "buy_1d": _board_quote_rows((payload.get("strategies") or {}).get("stock_book_1d", {}).get("buy")),
         "sell_1d": _board_quote_rows((payload.get("strategies") or {}).get("stock_book_1d", {}).get("sell")),
         "strategies": {

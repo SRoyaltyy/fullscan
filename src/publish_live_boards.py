@@ -12,7 +12,9 @@ Paper / sleeve / strategy-board HTML rebuilds are extras. Names must
 already be on the dashboards from the JSON strip after the book lands.
 
 The 90-minute factor-mine recipe grid is NOT run here. Morning
-every-sleeve BUY/SELL is ``strategy_tickets`` (session-open look).
+every-sleeve BUY/SELL is ``strategy_tickets`` (session-open look
+on the oppset_union aisle + Clock-B gates — ``src.morning_scan``).
+Does not replace flatten_robust / Webull money.
 Stock Book ALL and Pre-Open ALL still kick ``factor_mine.yml``
 ``--land-closed`` after the close so the cash blotter rolls; that
 path is a no-op in the morning once yesterday is already on the board.
