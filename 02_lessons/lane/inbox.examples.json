@@ -1,0 +1,27 @@
+{
+  "_comment": "Fixture only — copy a question into inbox.json to enqueue. Do not replace the live NVDA smoke inbox unless you intend to run these jobs.",
+  "questions": [
+    {
+      "id": "example-news-nvda-export",
+      "template": "news_to_tickers",
+      "articles": [
+        {
+          "title": "U.S. expands advanced-chip export curbs",
+          "body": "Washington added new licensing rules for high-end accelerators sold into China. Nvidia said some data-center SKUs will need licenses. Rival GPU and foundry names were mentioned only in passing.",
+          "known_at": "2026-09-19T20:15:00Z"
+        }
+      ]
+    },
+    {
+      "id": "example-dig-nvda",
+      "ticker": "NVDA",
+      "template": "company_dig",
+      "brief": "Data-center GPU franchise after the latest export-license headlines.",
+      "questions": [
+        "Who actually competes for training clusters?",
+        "What is the next dated catalyst?",
+        "Which metrics should stay null if not in the brief?"
+      ]
+    }
+  ]
+}

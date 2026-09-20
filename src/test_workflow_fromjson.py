@@ -564,6 +564,10 @@ def test_self_hosted_fromjson_jobs_resolve_both_sides() -> None:
 
 
 def _lane_json_python(text: str) -> str:
+    """Lane router source: extracted module, else inlined heredoc."""
+    route = ROOT / "src" / "lane_route.py"
+    if route.exists():
+        return route.read_text(encoding="utf-8")
     start = text.find("python - <<'PY'")
     end = text.find("\n          PY\n", start)
     assert start >= 0 and end > start, "lane_json.yml missing Route inbox python"
@@ -574,23 +578,28 @@ def test_lane_json_zero_dollar_hoppers() -> None:
     """OpenRouter-first $0 hopper stack: parse, order, secrets, no browser."""
     import ast
 
-    text = (WF / "lane_json.yml").read_text(encoding="utf-8")
-    py = _lane_json_python(text)
-    ast.parse("\n".join(line[10:] if line.startswith("          ") else line
-                        for line in py.splitlines()[1:]))
+    from src.lane_route import DEFAULT_LANES, DIG_HEAD, NEWS_HEAD, lanes_for
 
-    block = py.split("def direct_ask")[1].split("def via_lane")[0]
-    ordered = re.findall(
-        r'hop_models\(\s*"(openrouter|deepseek|qwen|zhipu|moonshot|siliconflow|'
-        r'modelscope|github_models|cloudflare|sambanova|ollama|hf|groq|gemini)"',
-        block,
-    )
-    assert ordered == [
+    text = (WF / "lane_json.yml").read_text(encoding="utf-8")
+    assert "src.lane_route" in text, "workflow must call src.lane_route"
+    py = _lane_json_python(text)
+    ast.parse(py)
+
+    assert DEFAULT_LANES == [
         "openrouter", "deepseek", "qwen", "zhipu", "moonshot",
         "siliconflow", "modelscope",
         "github_models", "cloudflare", "sambanova",
         "ollama", "hf", "groq", "gemini",
-    ], ordered
+    ], DEFAULT_LANES
+    assert lanes_for("key_people") == DEFAULT_LANES
+    assert lanes_for("custom") == DEFAULT_LANES
+    assert NEWS_HEAD == ["zhipu", "siliconflow", "openrouter"]
+    assert DIG_HEAD == ["siliconflow", "deepseek", "openrouter", "zhipu"]
+    assert lanes_for("news_to_tickers")[:3] == NEWS_HEAD
+    assert lanes_for("company_dig")[:4] == DIG_HEAD
+    # Overflow still the same $0 stack — no extra providers.
+    assert set(lanes_for("news_to_tickers")) == set(DEFAULT_LANES)
+    assert set(lanes_for("company_dig")) == set(DEFAULT_LANES)
 
     header = text.split("on:", 1)[0]
     for secret in (
@@ -659,6 +668,87 @@ def test_lane_json_zero_dollar_hoppers() -> None:
     assert "not required" in header.lower() or "Skip if unset" in header
 
 
+def test_lane_news_and_dig_templates() -> None:
+    """news_to_tickers + company_dig prompts, inbox schema, $0 prefs."""
+    from src.lane_route import (
+        DIG_HEAD,
+        NEWS_HEAD,
+        articles_from,
+        inbox_error,
+        lanes_for,
+        load_questions,
+        prompt_for,
+        sf_models_for,
+        system_for,
+        token_budget,
+    )
+
+    live = json.loads((ROOT / "02_lessons" / "lane" / "inbox.json").read_text())
+    for q in load_questions(live):
+        assert inbox_error(q) is None, q
+        ticker, tmpl, question, prompt = prompt_for(q)
+        assert ticker == "NVDA"
+        assert tmpl in ("key_people", "key_products", "revenue_mix", "custom")
+        assert "Ticker: NVDA" in prompt
+        assert token_budget(tmpl) == 320
+        assert lanes_for(tmpl)[0] == "openrouter"
+
+    examples = json.loads(
+        (ROOT / "02_lessons" / "lane" / "inbox.examples.json").read_text()
+    )
+    qs = load_questions(examples)
+    assert {q.get("template") for q in qs} >= {"news_to_tickers", "company_dig"}
+
+    news = next(q for q in qs if q["template"] == "news_to_tickers")
+    assert inbox_error(news) is None
+    assert inbox_error({"template": "news_to_tickers"}) == (
+        "news_to_tickers needs articles[{title,body}]"
+    )
+    arts = articles_from(news)
+    assert arts and arts[0]["title"]
+    ticker, tmpl, question, prompt = prompt_for(news)
+    assert tmpl == "news_to_tickers"
+    assert ticker == ""
+    assert "tickers" in prompt
+    assert "polarity" in prompt
+    assert "theme" in prompt.lower() or "basket" in prompt.lower()
+    assert arts[0]["title"] in prompt
+    assert lanes_for(tmpl)[:3] == NEWS_HEAD
+    assert token_budget(tmpl) == 900
+    assert "listed" in system_for(tmpl).lower()
+    sf_news = sf_models_for(tmpl)
+    assert sf_news[0] == "Qwen/Qwen2.5-7B-Instruct"
+    assert not any(str(m).startswith("Pro/") for m in sf_news)
+
+    dig = next(q for q in qs if q["template"] == "company_dig")
+    assert inbox_error(dig) is None
+    assert inbox_error({"template": "company_dig"}) == "company_dig needs ticker"
+    ticker, tmpl, question, prompt = prompt_for(dig)
+    assert tmpl == "company_dig"
+    assert ticker == "NVDA"
+    for key in (
+        "business", "competitors", "catalysts", "risks",
+        "key_metrics", "sources_claimed",
+    ):
+        assert key in prompt, key
+    assert lanes_for(tmpl)[:4] == DIG_HEAD
+    assert token_budget(tmpl) == 1600
+    sf_dig = sf_models_for(tmpl)
+    assert not any(str(m).startswith("Pro/") for m in sf_dig)
+    assert any(m.startswith("Qwen/") for m in sf_dig)
+    assert any("DeepSeek" in m or "deepseek" in m.lower() for m in sf_dig)
+
+    # Top-level title/body is also valid news input.
+    flat = {
+        "id": "flat",
+        "template": "news_to_tickers",
+        "title": "Oil jump",
+        "body": "Brent spiked after the pipeline halt.",
+    }
+    assert inbox_error(flat) is None
+    assert articles_from(flat)[0]["title"] == "Oil jump"
+
+
 def test_ci_workflow_is_wired() -> None:
     yml = (WF / "workflow_selfcheck.yml").read_text(encoding="utf-8")
     assert "pull_request:" in yml
@@ -685,6 +775,7 @@ def main() -> None:
         test_openclaw_probe_stays_on_ecs,
         test_self_hosted_fromjson_jobs_resolve_both_sides,
         test_lane_json_zero_dollar_hoppers,
+        test_lane_news_and_dig_templates,
         test_ci_workflow_is_wired,
     ]
     failed = 0

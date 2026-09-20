@@ -9,11 +9,15 @@ on:
     paths:
       - ".github/workflows/**"
       - "src/test_workflow_fromjson.py"
+      - "src/lane_route.py"
+      - "02_lessons/lane/**"
   push:
     branches: [main]
     paths:
       - ".github/workflows/**"
       - "src/test_workflow_fromjson.py"
+      - "src/lane_route.py"
+      - "02_lessons/lane/**"
 
 permissions:
   contents: read
