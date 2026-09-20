@@ -1,19 +1,20 @@
 {
   "date": "2026-09-20",
-  "generated_at": "2026-09-20T15:02:56.110435-04:00",
-  "overall": "PARTIAL",
+  "generated_at": "2026-09-20T15:03:03.015905-04:00",
+  "overall": "FAIL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-20_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-20/_board.json` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-09-20_actions.json` \u2014 missing",
     "MISSING Quote-page digest JSON (*_finviz_digest) `01_daily/news/2026-09-20_finviz_digest.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-09-20_judge.md` \u2014 missing"
+    "MISSING News judge MD `01_daily/news/2026-09-20_judge.md` \u2014 missing",
+    "MISSING Weather JSON `01_daily/weather/2026-09-20_weather.json` \u2014 missing",
+    "MISSING AB checklist enriched `data/ab_checklist/2026-09-20_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 2,
-    "partial": 2,
-    "fail": 4,
+    "ok": 0,
+    "partial": 1,
+    "fail": 7,
     "n": 8
   },
   "processes": [
@@ -145,7 +146,7 @@
       "inputs_ready": false,
       "n_req_ok": 0,
       "n_req": 20,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 3,
       "files": [
         {
@@ -234,9 +235,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-20_actions.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 889
         },
         {
           "key": "general",
@@ -390,9 +391,9 @@
       "key": "weather",
       "name": "Label + weather",
       "yaml": "label_weather.yml",
-      "status": "OK",
+      "status": "FAIL",
       "inputs_ready": false,
-      "n_req_ok": 1,
+      "n_req_ok": 0,
       "n_req": 1,
       "n_opt_ok": 0,
       "n_opt": 0,
@@ -411,26 +412,23 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-09-20_weather.json",
           "role": "required",
-          "status": "OK",
-          "reason": "sectors=11 bytes=9338 vix=falling yields=falling",
-          "size": 9338
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         }
       ],
-      "said": "favorable 1 \u00b7 hostile 7 \u00b7 neutral 3",
-      "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Energy, Financial, Real Estate, Utilities",
-        "events bull 4 / bear 9"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "OK",
+      "status": "FAIL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 0,
       "n_req": 1,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 1,
       "files": [
         {
@@ -438,24 +436,22 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-09-20_ab_checklist.csv",
           "role": "optional",
-          "status": "OK",
-          "reason": "rows=2654",
-          "size": 7629213
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-20_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=2654",
-          "size": 8466566
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         }
       ],
-      "said": "25 rows",
-      "bullets": [
-        "ANET, SFL, DSGX, DSX, ILMN"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "catalyst",
@@ -473,9 +469,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-20_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 889
         },
         {
           "key": "in_digest",
@@ -503,9 +499,9 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "FAIL",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 0,
       "n_req": 4,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -533,9 +529,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-20_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 889
         },
         {
           "key": "in_digest",
@@ -560,36 +556,36 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-09-20_weather.json",
           "role": "input",
-          "status": "OK",
-          "reason": "sectors=11 bytes=9338 vix=falling yields=falling",
-          "size": 9338
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "in_ab",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-20_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "OK",
-          "reason": "rows=2654",
-          "size": 8466566
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "join",
           "name": "Join ranked CSV",
           "path": "data/join/2026-09-20_ranked.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=5894",
-          "size": 2220790
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "peers",
           "name": "Peer RS CSV",
           "path": "data/peers/2026-09-20_peer_rs.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=5102",
-          "size": 821799
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "book_json",
@@ -637,10 +633,8 @@
           "size": 6300795
         }
       ],
-      "said": "203 rows",
-      "bullets": [
-        "FORM, P, KEYS, VICR, SKHY"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "publish",
@@ -701,13 +695,7 @@
     "general": {},
     "sectors": {},
     "news": {},
-    "weather": {
-      "said": "favorable 1 \u00b7 hostile 7 \u00b7 neutral 3",
-      "bullets": [
-        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Energy, Financial, Real Estate, Utilities",
-        "events bull 4 / bear 9"
-      ]
-    }
+    "weather": {}
   },
   "lands": [
     {
@@ -845,6 +833,31 @@
         }
       ],
       "preview": "2654 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, WWW, CFFN, WDS, DSGX \u00b7 2654 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, SFL, DSGX, DSX, ILMN"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-09-20",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-20T15:03:02.860026-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-09-20.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11237962,
+          "preview": "11640 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11434850,
+          "preview": "11655 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11640 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11655 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
