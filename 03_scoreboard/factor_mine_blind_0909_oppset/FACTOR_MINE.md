@@ -1,0 +1,311 @@
+# Factor strategy mine — 2026-08-13 → 2026-09-09
+
+Leak-free 09:30 recipes: **295** · candidate rows **2019** · fill `09:30 open, whole shares, Futubull fees, leftover split, sell first, hard-red sit, cash+holdings audit`.
+
+Cash book: $10k, whole shares, Futubull fees, leftover split, sell first, min-hold, 09:30 open, hard-red S≤−3 sit, shorts marked as a liability. Each session starts from leftover cash and lots actually held (butterfly). Cash-start buttons wake a sleeve on date X with $10k and no lots (same rules). Stock investigator quotes 09:30 cameras / coaches / news from repo files. Size / sell / S-boost tweaks sit on the same ledger. Signal-only % is the old equal-weight path (not a fill). `flatten_h*` = wish-list (io/HOLD mornings still buy). `flatten_live_*` = only when the live flatten gate fires. Research only — does not change live `flatten_robust`.
+
+Scoreboard files: slim `factor_mine.json` (stats / recipes / series) plus gzip shards in `factor_mine/shards/` (`books`, `starts`, `daily`, `probe`, `sim`). One file used to be 104MB and GitHub rejected the publish (100MB cap).
+
+Combination books: **116** mixes on the same $10k cash ledger (shared leftover or split sleeves, official 09:30 / 16:00, hard-red sit, owner min-hold). Outperformers: `combo_jse_333_shared`, `combo_ej_5050_shared`, `combo_ecearnguid_5050_shared`, `combo_se_5050_skip`, `combo_ecnr7momop_5050_shared`, `combo_se_3070_shared`, `combo_es_8020_shared`, `combo_secmombreak_333_shared`, `combo_es_9010_shared`, `combo_ecnr7momh1_5050_shared`, `combo_se_5050_shared`, `combo_se_5050_weather`, `combo_jer_5050_shared`, `combo_scnr7momop_5050_shared`, `combo_form_efrh1jovogrh1snerh3_333_shared`, `combo_se1_5050_shared`, `combo_sh_5050_shared`, `combo_e1s_7030_shared`, `combo_form_efrh1snerh3_7030_shared`, `combo_form_efrh1snerh3_3070_shared`, `combo_sh_3070_shared`, `combo_scextvetooh_5050_shared`, `combo_form_efrh1sclexve_5050_shared`, `combo_ers_7030_shared`, `combo_sh_7030_shared`, `combo_ner_5050_shared`, `combo_ser_5050_shared`, `combo_sj_3070_shared`, `combo_form_jovogrh1snerh3_5050_shared`, `combo_sj_5050_shared`, `combo_form_jovogrh1sclexve_5050_shared`, `combo_sopp_5050_shared`, `combo_sf_5050_shared`, `combo_sf_7030_shared`, `combo_sj_7030_shared`, `combo_scmombreak_5050_shared`, `combo_form_negh1sclexve_5050_shared`, `combo_snj_333_shared`, `combo_form_negh1snerh3_5050_shared`, `combo_sn_5050_shared`, `combo_suopp_5050_shared`, `combo_sn_3070_shared`, `combo_scearnguid_5050_shared`.
+
+A combo outperforms its members on the cash book when the audit passes and either (1) Book% is strictly higher than every member, or (2) Book% stays within 2pp of the richest member, max drawdown is strictly smaller than every member's drawdown, start-rate is at least the best member, both halves are green, and the worst session is no worse than the worst member session. Effectiveness / Signal% do not decide WIN.
+
+Action blotters: [FACTOR_MINE_ACTION.md](FACTOR_MINE_ACTION.md).
+
+| Strategy | Side | H | Size | Sell | Boost | Win% | $ days | Starts YES | Med start | Top-g | Losers | AvgW | AvgL | Book% | Signal% | Audit | Eff |
+|---|---|---:|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---|---:|
+| `combo_jse_333_shared` | mix | 5 | leftover | list | none | 59% | 74% | 16/19 | +2.38 | 0 | 0 | +5.74 | -5.58 | +31.18 | — | PASS | 71.305 |
+| `combo_ej_5050_shared` | mix | 5 | leftover | list | none | 51% | 58% | 15/19 | +1.58 | 0 | 0 | +6.31 | -5.42 | +30.80 | — | PASS | 65.07 |
+| `combo_ecearnguid_5050_shared` | mix | 5 | leftover | list | none | 55% | 42% | 17/19 | +8.47 | 0 | 0 | +6.54 | -7.26 | +30.34 | — | PASS | 61.712 |
+| `combo_se_5050_skip` | mix | 5 | leftover | list | none | 68% | 58% | 17/19 | +3.38 | 0 | 0 | +5.50 | -7.77 | +29.36 | — | PASS | 69.087 |
+| `combo_ecnr7momop_5050_shared` | mix | 5 | leftover | list | none | 60% | 58% | 17/19 | +3.94 | 0 | 0 | +5.77 | -7.08 | +28.68 | — | PASS | 66.148 |
+| `combo_se_3070_shared` | mix | 5 | leftover | list | none | 62% | 58% | 16/19 | +3.57 | 0 | 0 | +5.59 | -7.38 | +28.39 | — | PASS | 65.092 |
+| `combo_es_8020_shared` | mix | 5 | leftover | list | none | 60% | 53% | 16/19 | +3.70 | 0 | 0 | +5.57 | -7.14 | +28.27 | — | PASS | 63.417 |
+| `combo_secmombreak_333_shared` | mix | 5 | leftover | list | none | 56% | 63% | 11/19 | +1.73 | 0 | 0 | +5.04 | -5.28 | +28.18 | — | PASS | 60.993 |
+| `combo_es_9010_shared` | mix | 5 | leftover | list | none | 55% | 53% | 16/19 | +3.65 | 0 | 0 | +6.10 | -5.62 | +27.85 | — | PASS | 62.909 |
+| `combo_ecnr7momh1_5050_shared` | mix | 5 | leftover | list | none | 52% | 53% | 14/19 | +3.39 | 0 | 0 | +5.85 | -6.43 | +27.31 | — | PASS | 60.305 |
+| `combo_se_5050_shared` | mix | 5 | leftover | list | none | 65% | 63% | 17/19 | +3.38 | 0 | 0 | +5.54 | -7.48 | +26.83 | — | PASS | 68.663 |
+| `combo_se_5050_weather` | mix | 5 | leftover | list | none | 65% | 63% | 17/19 | +3.38 | 0 | 0 | +5.54 | -7.48 | +26.83 | — | PASS | 68.663 |
+| `combo_jer_5050_shared` | mix | 5 | leftover | list | none | 43% | 53% | 12/19 | +0.72 | 0 | 0 | +7.10 | -6.30 | +26.46 | — | PASS | 55.788 |
+| `combo_scnr7momop_5050_shared` | mix | 5 | leftover | list | none | 75% | 58% | 17/19 | +3.71 | 0 | 0 | +4.61 | -5.51 | +25.48 | — | PASS | 71.726 |
+| `combo_form_efrh1jovogrh1snerh3_333_shared` | mix | 5 | leftover | list | none | 55% | 79% | 17/19 | +6.85 | 0 | 0 | +4.87 | -4.75 | +24.92 | — | PASS | 72.425 |
+| `combo_se1_5050_shared` | mix | 5 | leftover | list | none | 62% | 79% | 17/19 | +5.00 | 0 | 0 | +4.56 | -5.33 | +23.62 | — | PASS | 72.951 |
+| `combo_sh_5050_shared` | mix | 5 | leftover | list | none | 67% | 79% | 12/19 | +1.42 | 0 | 0 | +5.12 | -4.98 | +22.71 | — | PASS | 70.683 |
+| `combo_e1s_7030_shared` | mix | 5 | leftover | list | none | 62% | 79% | 17/19 | +4.91 | 0 | 0 | +4.54 | -5.29 | +22.59 | — | PASS | 72.806 |
+| `combo_form_efrh1snerh3_7030_shared` | mix | 5 | leftover | list | none | 62% | 79% | 17/19 | +4.91 | 0 | 0 | +4.54 | -5.29 | +22.59 | — | PASS | 72.806 |
+| `combo_form_efrh1snerh3_3070_shared` | mix | 5 | leftover | list | none | 60% | 79% | 17/19 | +4.83 | 0 | 0 | +4.60 | -5.28 | +22.58 | — | PASS | 72.078 |
+| `combo_sh_3070_shared` | mix | 5 | leftover | list | none | 67% | 74% | 10/19 | +1.32 | 0 | 0 | +5.00 | -5.05 | +22.15 | — | PASS | 66.723 |
+| `combo_scextvetooh_5050_shared` | mix | 5 | leftover | list | none | 55% | 63% | 17/19 | +9.33 | 0 | 0 | +7.10 | -5.50 | +21.09 | — | PASS | 70.388 |
+| `combo_form_efrh1sclexve_5050_shared` | mix | 5 | leftover | list | none | 52% | 58% | 16/19 | +6.37 | 0 | 0 | +5.97 | -5.35 | +20.74 | — | PASS | 64.171 |
+| `combo_ers_7030_shared` | mix | 5 | leftover | list | none | 54% | 42% | 5/19 | -0.61 | 0 | 0 | +6.05 | -8.44 | +20.03 | — | PASS | 32.309 |
+| `combo_sh_7030_shared` | mix | 5 | leftover | list | none | 67% | 79% | 17/19 | +2.29 | 0 | 0 | +5.08 | -5.04 | +19.77 | — | PASS | 76.721 |
+| `combo_ner_5050_shared` | mix | 5 | leftover | list | none | 44% | 47% | 6/19 | -1.66 | 0 | 0 | +5.64 | -6.43 | +19.15 | — | PASS | 35.189 |
+| `combo_ser_5050_shared` | mix | 5 | leftover | list | none | 56% | 42% | 6/19 | -0.88 | 0 | 0 | +6.04 | -8.33 | +19.11 | — | PASS | 34.292 |
+| `combo_sj_3070_shared` | mix | 5 | leftover | list | none | 58% | 58% | 17/19 | +6.46 | 0 | 0 | +5.00 | -5.08 | +15.12 | — | PASS | 67.604 |
+| `combo_form_jovogrh1snerh3_5050_shared` | mix | 5 | leftover | list | none | 58% | 63% | 17/19 | +5.19 | 0 | 0 | +5.06 | -5.08 | +14.90 | — | PASS | 68.682 |
+| `combo_sj_5050_shared` | mix | 5 | leftover | list | none | 58% | 63% | 17/19 | +5.19 | 0 | 0 | +5.06 | -5.08 | +14.90 | — | PASS | 68.682 |
+| `combo_form_jovogrh1sclexve_5050_shared` | mix | 5 | leftover | list | none | 48% | 63% | 17/19 | +14.27 | 0 | 0 | +6.46 | -4.59 | +14.77 | — | PASS | 66.376 |
+| `combo_sopp_5050_shared` | mix | 5 | leftover | list | none | 57% | 58% | 14/19 | +0.27 | 0 | 0 | +4.58 | -4.42 | +12.23 | — | PASS | 63.176 |
+| `combo_sf_5050_shared` | mix | 5 | leftover | list | none | 63% | 63% | 6/19 | -3.15 | 0 | 0 | +6.80 | -4.42 | +12.10 | — | PASS | 44.923 |
+| `combo_sf_7030_shared` | mix | 5 | leftover | list | none | 62% | 74% | 6/19 | -1.00 | 0 | 0 | +6.61 | -5.28 | +11.82 | — | PASS | 45.351 |
+| `combo_sj_7030_shared` | mix | 5 | leftover | list | none | 56% | 74% | 17/19 | +3.69 | 0 | 0 | +5.12 | -5.06 | +11.37 | — | PASS | 69.571 |
+| `combo_scmombreak_5050_shared` | mix | 5 | leftover | list | none | 60% | 53% | 16/19 | +2.18 | 0 | 0 | +4.32 | -4.52 | +11.17 | — | PASS | 65.715 |
+| `combo_form_negh1sclexve_5050_shared` | mix | 5 | leftover | list | none | 53% | 42% | 16/19 | +5.28 | 0 | 0 | +5.48 | -4.76 | +9.97 | — | PASS | 61.402 |
+| `combo_snj_333_shared` | mix | 5 | leftover | list | none | 54% | 68% | 16/19 | +2.87 | 0 | 0 | +4.50 | -4.67 | +9.61 | — | PASS | 67.05 |
+| `combo_form_negh1snerh3_5050_shared` | mix | 5 | leftover | list | none | 62% | 68% | 17/19 | +2.78 | 0 | 0 | +4.16 | -4.63 | +9.59 | — | PASS | 70.489 |
+| `combo_sn_5050_shared` | mix | 5 | leftover | list | none | 62% | 68% | 17/19 | +2.78 | 0 | 0 | +4.16 | -4.63 | +9.59 | — | PASS | 70.489 |
+| `combo_suopp_5050_shared` | mix | 5 | leftover | list | none | 56% | 47% | 14/19 | +0.81 | 0 | 0 | +4.64 | -4.27 | +9.29 | — | PASS | 60.311 |
+| `combo_sn_3070_shared` | mix | 5 | leftover | list | none | 62% | 68% | 17/19 | +2.27 | 0 | 0 | +4.15 | -4.56 | +8.92 | — | PASS | 70.239 |
+| `combo_scearnguid_5050_shared` | mix | 5 | leftover | list | none | 72% | 63% | 17/19 | +4.18 | 0 | 0 | +4.88 | -6.00 | +8.10 | — | PASS | 69.05 |
+| `combo_ecrupcoilh_5050_shared` | mix | 5 | leftover | list | none | 44% | 53% | 14/19 | +3.94 | 0 | 0 | +8.31 | -7.14 | +26.13 | — | PASS | 60.948 |
+| `combo_ee1_3070_shared` | mix | 5 | leftover | list | none | 44% | 53% | 14/19 | +3.94 | 0 | 0 | +8.31 | -7.14 | +26.13 | — | PASS | 57.99 |
+| `combo_ee1_5050_shared` | mix | 5 | leftover | list | none | 44% | 53% | 14/19 | +3.94 | 0 | 0 | +8.31 | -7.14 | +26.13 | — | PASS | 57.99 |
+| `combo_ee1_7030_shared` | mix | 5 | leftover | list | none | 44% | 53% | 14/19 | +3.94 | 0 | 0 | +8.31 | -7.14 | +26.13 | — | PASS | 57.99 |
+| `combo_ecinsiderc_5050_shared` | mix | 5 | leftover | list | none | 44% | 53% | 13/19 | +3.77 | 0 | 0 | +8.31 | -7.14 | +26.05 | — | PASS | 55.621 |
+| `combo_seopp_333_shared` | mix | 5 | leftover | list | none | 56% | 63% | 12/19 | +1.71 | 0 | 0 | +5.37 | -5.52 | +25.35 | — | PASS | 61.519 |
+| `combo_en_7030_shared` | mix | 5 | leftover | list | none | 44% | 53% | 15/19 | +2.64 | 0 | 0 | +5.78 | -5.33 | +24.81 | — | PASS | 60.503 |
+| `combo_nse_333_shared` | mix | 5 | leftover | list | none | 58% | 63% | 16/19 | +2.98 | 0 | 0 | +5.02 | -5.75 | +24.41 | — | PASS | 67.08 |
+| `combo_ecmombreak_5050_shared` | mix | 5 | leftover | list | none | 47% | 47% | 10/19 | +0.78 | 0 | 0 | +5.35 | -5.04 | +24.27 | — | PASS | 53.873 |
+| `combo_seuopp_333_shared` | mix | 5 | leftover | list | none | 55% | 58% | 12/19 | +1.68 | 0 | 0 | +5.30 | -5.44 | +24.10 | — | PASS | 59.996 |
+| `combo_ehs_601525_shared` | mix | 5 | leftover | list | none | 51% | 63% | 15/19 | +2.16 | 0 | 0 | +5.98 | -5.78 | +24.09 | — | PASS | 63.951 |
+| `combo_form_efrh3sclexve_5050_shared` | mix | 5 | leftover | list | none | 52% | 47% | 16/19 | +4.49 | 0 | 0 | +6.71 | -6.67 | +23.98 | — | PASS | 59.656 |
+| `combo_scextvetooe_5050_shared` | mix | 5 | leftover | list | none | 52% | 47% | 16/19 | +4.49 | 0 | 0 | +6.71 | -6.67 | +23.98 | — | PASS | 59.656 |
+| `combo_en_5050_shared` | mix | 5 | leftover | list | none | 50% | 53% | 15/19 | +1.82 | 0 | 0 | +5.28 | -5.52 | +23.80 | — | PASS | 61.993 |
+| `combo_ehs_702010_shared` | mix | 5 | leftover | list | none | 46% | 53% | 13/19 | +1.91 | 0 | 0 | +6.40 | -5.16 | +22.68 | — | PASS | 58.222 |
+| `combo_se_7030_shared` | mix | 5 | leftover | list | none | 65% | 63% | 12/19 | +1.22 | 0 | 0 | +5.72 | -6.90 | +22.63 | — | PASS | 61.851 |
+| `combo_seh_404020_shared` | mix | 5 | leftover | list | none | 56% | 58% | 15/19 | +1.73 | 0 | 0 | +5.67 | -6.39 | +22.39 | — | PASS | 64.125 |
+| `combo_eopp_5050_shared` | mix | 5 | leftover | list | none | 41% | 47% | 11/19 | +0.20 | 0 | 0 | +6.37 | -5.24 | +22.09 | — | PASS | 53.047 |
+| `combo_en_3070_shared` | mix | 5 | leftover | list | none | 51% | 37% | 14/19 | +1.41 | 0 | 0 | +5.26 | -5.21 | +22.04 | — | PASS | 57.744 |
+| `combo_euopp_5050_shared` | mix | 5 | leftover | list | none | 41% | 47% | 10/19 | +0.34 | 0 | 0 | +6.21 | -5.19 | +21.76 | — | PASS | 51.278 |
+| `combo_echoldvsse_5050_shared` | mix | 5 | leftover | list | none | 47% | 47% | 9/19 | +0.00 | 0 | 0 | +4.91 | -5.52 | +21.45 | — | PASS | 41.021 |
+| `combo_eh_7030_shared` | mix | 5 | leftover | list | none | 41% | 47% | 13/19 | +1.30 | 0 | 0 | +7.28 | -5.49 | +21.12 | — | PASS | 56.486 |
+| `combo_seh_333_skip` | mix | 5 | leftover | list | none | 59% | 58% | 14/19 | +0.72 | 0 | 0 | +5.64 | -6.27 | +20.93 | — | PASS | 63.717 |
+| `combo_seh_403525_shared` | mix | 5 | leftover | list | none | 57% | 58% | 14/19 | +1.32 | 0 | 0 | +5.62 | -6.41 | +20.88 | — | PASS | 62.847 |
+| `combo_ecflowcoil_5050_shared` | mix | 5 | leftover | list | none | 49% | 42% | 2/19 | -0.89 | 0 | 0 | +5.93 | -5.89 | +20.79 | — | PASS | 32.804 |
+| `combo_seh_502525_shared` | mix | 5 | leftover | list | none | 58% | 58% | 16/19 | +1.23 | 0 | 0 | +5.64 | -6.30 | +20.73 | — | PASS | 65.732 |
+| `combo_seh_601525_shared` | mix | 5 | leftover | list | none | 55% | 63% | 16/19 | +1.03 | 0 | 0 | +5.88 | -5.98 | +20.20 | — | PASS | 66.069 |
+| `combo_seh_451540_shared` | mix | 5 | leftover | list | none | 55% | 58% | 14/19 | +1.20 | 0 | 0 | +5.89 | -5.94 | +19.34 | — | PASS | 62.304 |
+| `combo_seh_333_shared` | mix | 5 | leftover | list | none | 57% | 53% | 14/19 | +0.74 | 0 | 0 | +5.58 | -6.36 | +19.31 | — | PASS | 61.56 |
+| `combo_seh_333_weather` | mix | 5 | leftover | list | none | 57% | 53% | 14/19 | +0.74 | 0 | 0 | +5.58 | -6.36 | +19.31 | — | PASS | 61.56 |
+| `combo_eh_5050_shared` | mix | 5 | leftover | list | none | 45% | 42% | 8/19 | +0.00 | 0 | 0 | +6.71 | -5.81 | +18.93 | — | PASS | 39.49 |
+| `combo_ef_7030_shared` | mix | 5 | leftover | list | none | 51% | 63% | 11/19 | +0.44 | 0 | 0 | +7.79 | -6.50 | +16.83 | — | PASS | 55.453 |
+| `combo_eh_3070_shared` | mix | 5 | leftover | list | none | 47% | 47% | 8/19 | +0.00 | 0 | 0 | +6.63 | -6.18 | +16.76 | — | PASS | 40.23 |
+| `combo_se_5050_split` | mix | 5 | leftover | list | none | 57% | 63% | 16/19 | +2.36 | 0 | 0 | +5.88 | -6.62 | +15.89 | — | PASS | 63.165 |
+| `combo_seh_333_split` | mix | 5 | leftover | list | none | 57% | 53% | 13/19 | +0.17 | 0 | 0 | +5.44 | -6.30 | +15.79 | — | PASS | 59.555 |
+| `combo_form_efrh1jovogrh1_5050_shared` | mix | 5 | leftover | list | none | 50% | 53% | 15/19 | +5.03 | 0 | 0 | +4.81 | -4.40 | +14.95 | — | PASS | 63.117 |
+| `combo_je1_5050_shared` | mix | 5 | leftover | list | none | 50% | 53% | 15/19 | +5.03 | 0 | 0 | +4.81 | -4.40 | +14.95 | — | PASS | 63.117 |
+| `combo_her_5050_shared` | mix | 5 | leftover | list | none | 43% | 47% | 7/19 | -0.59 | 0 | 0 | +7.14 | -7.79 | +14.11 | — | PASS | 35.85 |
+| `combo_he1_5050_shared` | mix | 5 | leftover | list | none | 53% | 58% | 8/19 | +0.00 | 0 | 0 | +4.74 | -4.74 | +14.00 | — | PASS | 46.386 |
+| `combo_hn_7030_shared` | mix | 5 | leftover | list | none | 54% | 58% | 8/19 | +0.00 | 0 | 0 | +4.09 | -4.28 | +13.95 | — | PASS | 48.043 |
+| `combo_fse_333_shared` | mix | 5 | leftover | list | none | 56% | 74% | 6/19 | -2.03 | 0 | 0 | +6.20 | -6.01 | +13.28 | — | PASS | 42.026 |
+| `combo_seh_502525_split` | mix | 5 | leftover | list | none | 55% | 53% | 13/19 | +0.37 | 0 | 0 | +5.74 | -6.04 | +12.84 | — | PASS | 58.891 |
+| `combo_ne1_5050_shared` | mix | 5 | leftover | list | none | 53% | 47% | 14/19 | +1.67 | 0 | 0 | +3.99 | -4.39 | +12.24 | — | PASS | 61.168 |
+| `combo_ef_5050_shared` | mix | 5 | leftover | list | none | 50% | 63% | 5/19 | -1.69 | 0 | 0 | +8.09 | -6.28 | +12.15 | — | PASS | 37.02 |
+| `combo_fe_5050_shared` | mix | 5 | leftover | list | none | 50% | 63% | 5/19 | -1.69 | 0 | 0 | +8.09 | -6.28 | +12.15 | — | PASS | 37.02 |
+| `combo_fes_403030_shared` | mix | 5 | leftover | list | none | 54% | 63% | 6/19 | -2.62 | 0 | 0 | +6.36 | -5.53 | +11.67 | — | PASS | 39.458 |
+| `combo_hj_5050_shared` | mix | 5 | leftover | list | none | 48% | 47% | 11/19 | +1.02 | 0 | 0 | +4.90 | -4.59 | +11.39 | — | PASS | 57.341 |
+| `combo_hn_5050_shared` | mix | 5 | leftover | list | none | 54% | 53% | 8/19 | +0.00 | 0 | 0 | +4.24 | -4.08 | +11.32 | — | PASS | 46.975 |
+| `combo_sf_3070_shared` | mix | 5 | leftover | list | none | 61% | 63% | 5/19 | -4.66 | 0 | 0 | +7.17 | -4.70 | +10.40 | — | PASS | 42.438 |
+| `combo_hn_3070_shared` | mix | 5 | leftover | list | none | 55% | 58% | 8/19 | +0.00 | 0 | 0 | +4.21 | -4.12 | +9.68 | — | PASS | 48.264 |
+| `combo_fer_5050_shared` | mix | 5 | leftover | list | none | 45% | 58% | 2/19 | -1.33 | 0 | 0 | +8.58 | -8.11 | +9.05 | — | PASS | 27.866 |
+| `combo_scextvetohh_5050_shared` | mix | 5 | leftover | list | none | 54% | 47% | 7/19 | -0.71 | 0 | 0 | +6.25 | -6.52 | +8.30 | — | PASS | 39.793 |
+| `combo_jf_5050_shared` | mix | 5 | leftover | list | none | 46% | 68% | 1/19 | -2.16 | 0 | 0 | +6.97 | -4.28 | +8.07 | — | PASS | 35.829 |
+| `combo_scrupcoilh_5050_shared` | mix | 5 | leftover | list | none | 75% | 63% | 17/19 | +3.23 | 0 | 0 | +4.86 | -6.33 | +8.02 | — | PASS | 75.013 |
+| `combo_nf_5050_shared` | mix | 5 | leftover | list | none | 48% | 58% | 3/19 | -4.08 | 0 | 0 | +7.07 | -3.99 | +7.89 | — | PASS | 38.138 |
+| `combo_ef_3070_shared` | mix | 5 | leftover | list | none | 54% | 63% | 5/19 | -3.22 | 0 | 0 | +8.05 | -6.54 | +7.75 | — | PASS | 37.523 |
+| `combo_sn_7030_shared` | mix | 5 | leftover | list | none | 62% | 68% | 17/19 | +2.53 | 0 | 0 | +4.08 | -4.72 | +7.50 | — | PASS | 69.65 |
+| `combo_ecfreshcat_5050_shared` | mix | 5 | leftover | list | none | 37% | 47% | 5/19 | -1.72 | 0 | 0 | +5.26 | -4.97 | +7.39 | — | PASS | 30.768 |
+| `combo_scholdvsse_5050_shared` | mix | 5 | leftover | list | none | 60% | 58% | 17/19 | +3.46 | 0 | 0 | +3.99 | -4.32 | +7.11 | — | PASS | 67.076 |
+| `combo_scnegweakfh_5050_shared` | mix | 5 | leftover | list | none | 56% | 58% | 3/19 | -1.20 | 0 | 0 | +5.31 | -4.60 | +6.86 | — | PASS | 38.388 |
+| `combo_scextvetohe_5050_shared` | mix | 5 | leftover | list | none | 51% | 53% | 9/19 | +0.00 | 0 | 0 | +6.89 | -7.18 | +6.76 | — | PASS | 38.037 |
+| `combo_hf_5050_shared` | mix | 5 | leftover | list | none | 57% | 58% | 5/19 | -2.88 | 0 | 0 | +6.29 | -4.84 | +6.07 | — | PASS | 41.989 |
+| `combo_secfreshcat_333_shared` | mix | 5 | leftover | list | none | 48% | 47% | 1/19 | -4.60 | 0 | 0 | +4.94 | -5.11 | +5.21 | — | PASS | 28.076 |
+| `combo_fe1_5050_shared` | mix | 5 | leftover | list | none | 51% | 63% | 3/19 | -3.58 | 0 | 0 | +5.93 | -4.75 | +4.41 | — | PASS | 35.617 |
+| `combo_fh_7030_shared` | mix | 5 | leftover | list | none | 54% | 63% | 2/19 | -3.87 | 0 | 0 | +6.42 | -4.92 | +3.51 | — | PASS | 37.724 |
+| `combo_nj_5050_shared` | mix | 5 | leftover | list | none | 46% | 42% | 15/19 | +2.47 | 0 | 0 | +4.37 | -4.26 | +2.98 | — | PASS | 59.132 |
+| `combo_scnegweakfe_5050_shared` | mix | 5 | leftover | list | none | 58% | 58% | 1/19 | -5.39 | 0 | 0 | +5.92 | -5.88 | +2.33 | — | PASS | 31.191 |
+| `combo_eer_5050_shared` | mix | 5 | leftover | list | none | 37% | 47% | 8/19 | +0.00 | 0 | 0 | +8.83 | -9.16 | +2.10 | — | PASS | 29.035 |
+| `combo_scnr7momh1_5050_shared` | mix | 5 | leftover | list | none | 66% | 53% | 0/19 | -2.24 | 0 | 0 | +4.81 | -4.94 | -2.10 | — | PASS | 33.558 |
+| `combo_scfreshcat_5050_shared` | mix | 5 | leftover | list | none | 53% | 63% | 0/19 | -7.42 | 0 | 0 | +4.15 | -3.91 | -4.22 | — | PASS | 31.972 |
+| `combo_scflowcoil_5050_shared` | mix | 5 | leftover | list | none | 61% | 53% | 0/19 | -8.33 | 0 | 0 | +4.81 | -4.40 | -9.28 | — | PASS | 32.928 |
+| `combo_e1er_5050_shared` | mix | 5 | leftover | list | none | 38% | 21% | 4/19 | -4.21 | 0 | 0 | +5.02 | -7.36 | -12.52 | — | PASS | 17.45 |
+| `combo_scinsiderc_5050_shared` | mix | 5 | leftover | list | none | 73% | 42% | 0/19 | -13.32 | 0 | 0 | +4.86 | -6.29 | -12.60 | — | PASS | 30.694 |
+| `short_news_r_h3` | short | 3 | leftover | list | none | 62% | 63% | 17/19 | +3.23 | 7 | 46 | +4.86 | -6.33 | +8.02 | +11.38 | PASS | 64.981 |
+| `union_e_fresh_h1` | long | 1 | leftover | list | none | 50% | 53% | 16/19 | +3.35 | 7 | 36 | +4.26 | -4.83 | +15.46 | +14.74 | PASS | 62.388 |
+| `union_news_g_h1` | long | 1 | leftover | list | none | 53% | 42% | 15/19 | +1.64 | 2 | 21 | +3.68 | -3.85 | +4.09 | +11.21 | PASS | 62.005 |
+| `union_news_vol_h1` | long | 1 | leftover | list | none | 46% | 42% | 14/19 | +4.23 | 3 | 12 | +4.35 | -4.05 | +7.01 | +5.30 | PASS | 59.043 |
+| `union_join_vol_green_h1` | long | 1 | leftover | list | none | 44% | 37% | 15/19 | +6.43 | 5 | 18 | +5.42 | -4.40 | +9.00 | +9.19 | PASS | 58.691 |
+| `short_clk_ext_veto_opp_h3` | short | 3 | leftover | list | none | 53% | 42% | 16/19 | +3.93 | 13 | 53 | +8.46 | -5.87 | +4.27 | +11.09 | PASS | 58.231 |
+| `union_e_fresh_h3` | long | 3 | leftover | list | none | 49% | 53% | 14/19 | +3.94 | 15 | 65 | +8.31 | -7.14 | +26.13 | -12.45 | PASS | 57.959 |
+| `union_w_hot_candle_h1` | long | 1 | leftover | list | none | 53% | 42% | 10/19 | +0.22 | 17 | 32 | +5.57 | -5.29 | +6.85 | +20.82 | PASS | 56.39 |
+| `union_clk_mom_break_peer_opp_h1` | long | 1 | leftover | list | none | 49% | 26% | 10/19 | +8.53 | 7 | 16 | +3.67 | -2.51 | +13.12 | +11.94 | PASS | 54.993 |
+| `union_news_vol_h3` | long | 3 | leftover | list | none | 51% | 53% | 13/19 | +1.47 | 7 | 38 | +4.62 | -4.41 | +1.58 | +181.30 | PASS | 54.914 |
+| `union_clk_hold_vs_sector_opp_h1` | long | 1 | leftover | list | none | 46% | 42% | 11/19 | +2.22 | 1 | 20 | +3.66 | -2.81 | +4.58 | -4.18 | PASS | 54.624 |
+| `union_last_red_h3` | long | 3 | leftover | list | none | 44% | 58% | 12/19 | +0.77 | 12 | 80 | +6.74 | -4.25 | +2.67 | +21.18 | PASS | 53.788 |
+| `short_alarm_h1` | short | 1 | leftover | list | none | 54% | 21% | 12/19 | +0.31 | 6 | 34 | +4.33 | -2.96 | +1.70 | +7.67 | PASS | 52.996 |
+| `union_vol_green_h1` | long | 1 | leftover | list | none | 44% | 37% | 11/19 | +3.58 | 8 | 25 | +5.33 | -5.11 | +7.30 | -6.10 | PASS | 52.178 |
+| `union_hot_n4_h1` | long | 1 | leftover | list | none | 55% | 58% | 8/19 | +0.00 | 9 | 15 | +5.55 | -4.63 | +19.52 | +43.50 | PASS | 50.725 |
+| `union_white_h1` | long | 1 | leftover | list | none | 39% | 42% | 10/19 | +2.65 | 1 | 16 | +5.73 | -5.01 | +6.17 | -0.22 | PASS | 49.551 |
+| `short_alarm_h3` | short | 3 | leftover | list | none | 55% | 42% | 12/19 | +1.35 | 10 | 65 | +7.28 | -7.66 | +2.46 | +8.22 | PASS | 49.22 |
+| `short_clk_ext_veto_h3` | short | 3 | leftover | list | none | 52% | 42% | 10/19 | +0.89 | 21 | 83 | +6.61 | -7.42 | -4.55 | -95.74 | PASS | 45.231 |
+| `short_last_red_h3` | short | 3 | leftover | list | none | 52% | 32% | 10/19 | +1.54 | 12 | 74 | +3.64 | -6.12 | -6.32 | -27.20 | PASS | 43.392 |
+| `short_news_r_h1` | short | 1 | leftover | list | none | 55% | 42% | 9/19 | +0.00 | 4 | 19 | +3.22 | -3.61 | -0.25 | +3.49 | PASS | 42.736 |
+| `flatten_h3_time` | long | 3 | leftover | time | none | 51% | 53% | 6/19 | -1.38 | 10 | 51 | +7.37 | -3.76 | +5.84 | +19.85 | PASS | 42.389 |
+| `union_h3` | long | 3 | leftover | list | none | 47% | 63% | 5/19 | -2.95 | 13 | 68 | +8.80 | -4.00 | +3.23 | +19.22 | PASS | 41.994 |
+| `union_h3_sizeup` | long | 3 | leftover | list | sizeup | 47% | 63% | 5/19 | -2.95 | 13 | 68 | +8.80 | -4.00 | +3.23 | +19.22 | PASS | 41.994 |
+| `union_h3_cut` | long | 3 | leftover | cut_loser | none | 47% | 63% | 5/19 | -1.69 | 13 | 68 | +8.80 | -4.21 | +4.57 | +19.22 | PASS | 41.634 |
+| `union_h3_trail` | long | 3 | leftover | trail | none | 47% | 63% | 5/19 | -1.69 | 13 | 68 | +8.80 | -4.21 | +4.57 | +19.22 | PASS | 41.634 |
+| `union_ret_5_h1` | long | 1 | leftover | list | none | 48% | 47% | 8/19 | +0.00 | 14 | 35 | +5.72 | -6.42 | +4.53 | +6.64 | PASS | 41.248 |
+| `union_hot_score_h1` | long | 1 | leftover | list | none | 52% | 47% | 7/19 | -0.74 | 18 | 37 | +6.02 | -6.50 | +1.96 | +19.15 | PASS | 41.18 |
+| `union_h3_sboost` | long | 3 | leftover | list | both | 47% | 63% | 5/19 | -2.95 | 13 | 68 | +8.46 | -4.16 | +3.17 | +19.22 | PASS | 41.139 |
+| `union_h3_time` | long | 3 | leftover | time | none | 47% | 63% | 5/19 | -1.15 | 13 | 68 | +8.04 | -4.31 | +5.05 | +19.22 | PASS | 40.577 |
+| `flatten_live_h1_topheavy` | long | 1 | topheavy | list | none | 54% | 16% | 7/19 | -1.75 | 1 | 5 | +6.75 | -3.75 | +7.19 | +4.45 | PASS | 40.573 |
+| `flatten_h1` | long | 1 | leftover | list | none | 47% | 42% | 7/19 | -1.72 | 2 | 20 | +4.44 | -3.72 | +7.05 | +4.76 | PASS | 40.383 |
+| `union_h1_topheavy` | long | 1 | topheavy | list | none | 45% | 47% | 7/19 | -1.75 | 4 | 27 | +4.38 | -4.03 | +8.47 | +8.66 | PASS | 40.128 |
+| `flatten_h5` | long | 5 | leftover | list | none | 49% | 68% | 6/19 | -3.27 | 18 | 79 | +9.48 | -6.23 | +10.54 | +33.17 | PASS | 39.877 |
+| `flatten_h5_cut` | long | 5 | leftover | cut_loser | none | 49% | 68% | 6/19 | -3.27 | 18 | 79 | +9.48 | -6.23 | +10.54 | +33.17 | PASS | 39.877 |
+| `flatten_h5_sizeup` | long | 5 | leftover | list | sizeup | 49% | 68% | 6/19 | -3.27 | 18 | 79 | +9.48 | -6.23 | +10.54 | +33.17 | PASS | 39.877 |
+| `flatten_h5_time` | long | 5 | leftover | time | none | 49% | 68% | 6/19 | -3.27 | 18 | 79 | +9.48 | -6.23 | +10.54 | +33.17 | PASS | 39.877 |
+| `flatten_h5_trail` | long | 5 | leftover | trail | none | 49% | 68% | 6/19 | -3.27 | 18 | 79 | +9.48 | -6.23 | +10.54 | +33.17 | PASS | 39.877 |
+| `flatten_h5_sboost` | long | 5 | leftover | list | both | 49% | 68% | 6/19 | -3.27 | 18 | 79 | +9.21 | -5.95 | +8.02 | +33.17 | PASS | 39.639 |
+| `union_w_hot_candle_h3` | long | 3 | leftover | list | none | 50% | 63% | 7/19 | -1.56 | 27 | 83 | +8.78 | -8.83 | +6.99 | +180.14 | PASS | 39.602 |
+| `flatten_live_h1` | long | 1 | leftover | list | none | 54% | 16% | 7/19 | -1.72 | 1 | 5 | +6.31 | -4.05 | +8.22 | +4.45 | PASS | 39.533 |
+| `flatten_live_h1_cut` | long | 1 | leftover | cut_loser | none | 54% | 16% | 7/19 | -1.72 | 1 | 5 | +6.31 | -4.05 | +8.22 | +4.45 | PASS | 39.533 |
+| `flatten_live_h1_sboost` | long | 1 | leftover | list | both | 54% | 16% | 7/19 | -1.72 | 1 | 5 | +6.31 | -4.05 | +8.22 | +4.45 | PASS | 39.533 |
+| `flatten_live_h1_sizeup` | long | 1 | leftover | list | sizeup | 54% | 16% | 7/19 | -1.72 | 1 | 5 | +6.31 | -4.05 | +8.22 | +4.45 | PASS | 39.533 |
+| `flatten_live_h1_time` | long | 1 | leftover | time | none | 54% | 16% | 7/19 | -1.72 | 1 | 5 | +6.31 | -4.05 | +8.22 | +4.45 | PASS | 39.533 |
+| `flatten_live_h1_trail` | long | 1 | leftover | trail | none | 54% | 16% | 7/19 | -1.72 | 1 | 5 | +6.31 | -4.05 | +8.22 | +4.45 | PASS | 39.533 |
+| `flatten_live_h1_half` | long | 1 | half | list | none | 54% | 16% | 7/19 | -0.93 | 1 | 5 | +6.58 | -3.90 | +3.74 | +4.45 | PASS | 39.481 |
+| `flatten_h3` | long | 3 | leftover | list | none | 51% | 53% | 3/19 | -3.02 | 10 | 51 | +8.12 | -3.64 | +2.63 | +19.85 | PASS | 39.32 |
+| `flatten_h3_cut` | long | 3 | leftover | cut_loser | none | 51% | 53% | 3/19 | -3.02 | 10 | 51 | +8.12 | -3.64 | +2.63 | +19.85 | PASS | 39.32 |
+| `flatten_h3_sizeup` | long | 3 | leftover | list | sizeup | 51% | 53% | 3/19 | -3.02 | 10 | 51 | +8.12 | -3.64 | +2.63 | +19.85 | PASS | 39.32 |
+| `flatten_h3_trail` | long | 3 | leftover | trail | none | 51% | 53% | 3/19 | -3.02 | 10 | 51 | +8.12 | -3.64 | +2.63 | +19.85 | PASS | 39.32 |
+| `union_last_green_h1` | long | 1 | leftover | list | none | 45% | 37% | 7/19 | -1.51 | 6 | 24 | +4.66 | -3.64 | +4.74 | +10.23 | PASS | 39.055 |
+| `flatten_h3_sboost` | long | 3 | leftover | list | both | 51% | 53% | 3/19 | -3.02 | 10 | 51 | +7.81 | -3.63 | +2.56 | +19.85 | PASS | 38.92 |
+| `union_hot_score_h3` | long | 3 | leftover | list | none | 48% | 63% | 7/19 | -1.29 | 28 | 91 | +10.03 | -8.69 | +9.53 | +184.40 | PASS | 38.902 |
+| `union_clk_mom_break_peer_h1` | long | 1 | leftover | list | none | 51% | 32% | 7/19 | -0.19 | 8 | 25 | +4.07 | -3.78 | +0.91 | +6.41 | PASS | 38.769 |
+| `union_hot_n12_h1` | long | 1 | leftover | list | none | 50% | 47% | 6/19 | -1.02 | 25 | 55 | +5.67 | -6.01 | -0.79 | +14.57 | PASS | 38.75 |
+| `yday_gainer_h1` | long | 1 | leftover | list | none | 50% | 37% | 7/19 | -0.91 | 7 | 41 | +4.99 | -4.21 | +6.16 | +11.54 | PASS | 38.18 |
+| `flatten_h3_half` | long | 3 | half | list | none | 51% | 53% | 3/19 | -2.54 | 10 | 51 | +7.14 | -3.54 | +0.88 | +19.85 | PASS | 38.003 |
+| `union_h1_rankw` | long | 1 | rank_w | list | none | 45% | 47% | 6/19 | -3.02 | 4 | 27 | +4.27 | -4.20 | +4.01 | +8.66 | PASS | 37.784 |
+| `union_join_present_h3` | long | 3 | leftover | list | none | 44% | 53% | 5/19 | -2.98 | 12 | 70 | +9.71 | -4.63 | +3.35 | +16.25 | PASS | 37.699 |
+| `union_h1_time` | long | 1 | leftover | time | none | 45% | 42% | 6/19 | -1.72 | 4 | 27 | +4.17 | -3.63 | +4.40 | +8.66 | PASS | 37.466 |
+| `union_h1_cut` | long | 1 | leftover | cut_loser | none | 45% | 42% | 6/19 | -1.72 | 4 | 27 | +4.34 | -3.98 | +5.01 | +8.66 | PASS | 37.251 |
+| `flatten_live_h1_rankw` | long | 1 | rank_w | list | none | 54% | 16% | 6/19 | -2.65 | 1 | 5 | +6.14 | -4.12 | +4.03 | +4.45 | PASS | 37.245 |
+| `union_h1` | long | 1 | leftover | list | none | 45% | 42% | 6/19 | -1.72 | 4 | 27 | +4.34 | -4.07 | +5.10 | +8.66 | PASS | 37.151 |
+| `union_h1_sizeup` | long | 1 | leftover | list | sizeup | 45% | 42% | 6/19 | -1.72 | 4 | 27 | +4.34 | -4.07 | +5.10 | +8.66 | PASS | 37.151 |
+| `union_h1_trail` | long | 1 | leftover | trail | none | 45% | 42% | 6/19 | -1.72 | 4 | 27 | +4.34 | -4.07 | +5.10 | +8.66 | PASS | 37.151 |
+| `union_h1_sboost` | long | 1 | leftover | list | both | 45% | 42% | 6/19 | -1.72 | 4 | 27 | +4.30 | -4.17 | +5.16 | +8.66 | PASS | 36.99 |
+| `union_w_hot_cond_h1` | long | 1 | leftover | list | none | 47% | 42% | 6/19 | -1.31 | 16 | 33 | +5.86 | -6.52 | -0.57 | +10.30 | PASS | 36.912 |
+| `flatten_h3_rankw` | long | 3 | rank_w | list | none | 51% | 47% | 3/19 | -1.87 | 10 | 51 | +7.94 | -3.88 | -0.55 | +19.85 | PASS | 36.861 |
+| `union_vol_g_h1` | long | 1 | leftover | list | none | 50% | 37% | 7/19 | -0.67 | 9 | 35 | +5.70 | -5.60 | +0.99 | +15.16 | PASS | 36.86 |
+| `union_join_g_h1` | long | 1 | leftover | list | none | 50% | 37% | 6/19 | -1.72 | 5 | 31 | +4.12 | -4.45 | +4.05 | +6.92 | PASS | 36.765 |
+| `union_h3_exit_alarm` | long | 3 | leftover | list | none | 44% | 58% | 5/19 | -2.66 | 12 | 70 | +7.26 | -4.40 | +3.46 | +14.08 | PASS | 36.532 |
+| `short_extended_h3` | short | 3 | leftover | list | none | 54% | 58% | 7/19 | -0.30 | 29 | 89 | +8.76 | -8.63 | -6.10 | -14.70 | PASS | 36.403 |
+| `union_join_present_h1` | long | 1 | leftover | list | none | 44% | 42% | 6/19 | -1.72 | 3 | 30 | +4.34 | -4.17 | +4.69 | +7.19 | PASS | 36.2 |
+| `flatten_h5_topheavy` | long | 5 | topheavy | list | none | 49% | 58% | 5/19 | -2.25 | 18 | 79 | +9.14 | -5.75 | +5.87 | +33.17 | PASS | 36.101 |
+| `oppset_h1` | long | 1 | leftover | list | none | 51% | 37% | 5/19 | -0.79 | 11 | 31 | +4.14 | -3.94 | -2.89 | +3.25 | PASS | 35.884 |
+| `union_h5_time` | long | 5 | leftover | time | none | 48% | 74% | 4/19 | -3.15 | 23 | 103 | +9.43 | -7.02 | +7.26 | +31.96 | PASS | 35.737 |
+| `union_last_red_h1` | long | 1 | leftover | list | none | 53% | 37% | 6/19 | -1.54 | 7 | 44 | +3.58 | -4.53 | +1.54 | +21.77 | PASS | 35.288 |
+| `union_h1_half` | long | 1 | half | list | none | 45% | 37% | 6/19 | -1.02 | 4 | 27 | +4.18 | -4.15 | +1.16 | +8.66 | PASS | 35.21 |
+| `flatten_h3_topheavy` | long | 3 | topheavy | list | none | 51% | 47% | 3/19 | -2.00 | 10 | 51 | +6.20 | -3.74 | +1.10 | +19.85 | PASS | 35.193 |
+| `union_break10_h1` | long | 1 | leftover | list | none | 49% | 32% | 6/19 | -3.41 | 13 | 28 | +5.19 | -5.53 | -6.25 | +3.84 | PASS | 34.915 |
+| `union_h3_rankw` | long | 3 | rank_w | list | none | 47% | 58% | 1/19 | -5.22 | 13 | 68 | +8.61 | -3.96 | -1.42 | +19.22 | PASS | 34.848 |
+| `union_h5` | long | 5 | leftover | list | none | 48% | 68% | 4/19 | -3.15 | 23 | 103 | +9.33 | -7.02 | +6.32 | +31.96 | PASS | 34.474 |
+| `union_h5_cut` | long | 5 | leftover | cut_loser | none | 48% | 68% | 4/19 | -3.15 | 23 | 103 | +9.33 | -7.02 | +6.32 | +31.96 | PASS | 34.474 |
+| `union_h5_sizeup` | long | 5 | leftover | list | sizeup | 48% | 68% | 4/19 | -3.15 | 23 | 103 | +9.33 | -7.02 | +6.32 | +31.96 | PASS | 34.474 |
+| `union_h5_trail` | long | 5 | leftover | trail | none | 48% | 68% | 4/19 | -3.15 | 23 | 103 | +9.33 | -7.02 | +6.32 | +31.96 | PASS | 34.474 |
+| `union_blue_vol_h1` | long | 1 | leftover | list | none | 45% | 37% | 7/19 | -0.63 | 6 | 30 | +5.85 | -5.79 | -2.34 | +8.92 | PASS | 34.033 |
+| `flatten_h5_rankw` | long | 5 | rank_w | list | none | 49% | 58% | 4/19 | -2.29 | 18 | 79 | +8.78 | -6.36 | +6.37 | +33.17 | PASS | 33.808 |
+| `union_h3_half` | long | 3 | half | list | none | 47% | 58% | 0/19 | -4.61 | 13 | 68 | +8.37 | -3.75 | -1.92 | +19.22 | PASS | 33.722 |
+| `union_blue_h1` | long | 1 | leftover | list | none | 43% | 32% | 6/19 | -1.72 | 5 | 24 | +4.25 | -4.22 | +1.85 | +1.80 | PASS | 33.646 |
+| `union_ret_5_h3` | long | 3 | leftover | list | none | 45% | 63% | 5/19 | -1.50 | 23 | 90 | +8.29 | -8.78 | +8.18 | +7.65 | PASS | 33.459 |
+| `union_h3_topheavy` | long | 3 | topheavy | list | none | 47% | 53% | 2/19 | -2.37 | 13 | 68 | +7.05 | -4.14 | +2.12 | +19.22 | PASS | 33.278 |
+| `union_news_present_h1` | long | 1 | leftover | list | none | 42% | 32% | 6/19 | -1.72 | 3 | 29 | +4.26 | -4.04 | +2.47 | +4.65 | PASS | 32.984 |
+| `union_w_hot_cond_h3` | long | 3 | leftover | list | none | 47% | 53% | 5/19 | -3.00 | 25 | 88 | +8.44 | -8.61 | +7.55 | +151.56 | PASS | 32.976 |
+| `union_clk_hold_vs_sector_h1` | long | 1 | leftover | list | none | 48% | 37% | 4/19 | -0.93 | 3 | 21 | +2.88 | -3.53 | -0.33 | -0.29 | PASS | 32.554 |
+| `union_ab_g_h1` | long | 1 | leftover | list | none | 40% | 26% | 6/19 | -1.72 | 3 | 21 | +4.25 | -3.57 | +3.21 | -2.31 | PASS | 32.314 |
+| `union_candle_h1` | long | 1 | leftover | list | none | 42% | 32% | 5/19 | -1.63 | 5 | 31 | +5.29 | -4.34 | +0.38 | +2.51 | PASS | 32.212 |
+| `union_candle_score_h1` | long | 1 | leftover | list | none | 48% | 42% | 2/19 | -2.61 | 10 | 34 | +4.99 | -4.86 | +0.05 | +0.91 | PASS | 31.927 |
+| `union_h5_sboost` | long | 5 | leftover | list | both | 48% | 68% | 3/19 | -3.15 | 23 | 103 | +8.79 | -8.02 | +5.76 | +31.96 | PASS | 31.909 |
+| `union_cond_h1` | long | 1 | leftover | list | none | 48% | 32% | 3/19 | -3.25 | 2 | 22 | +4.41 | -4.11 | -2.40 | +0.51 | PASS | 31.78 |
+| `union_earn_react_h3` | long | 3 | leftover | list | none | 38% | 47% | 8/19 | +0.00 | 12 | 65 | +9.50 | -9.12 | +18.62 | -31.03 | PASS | 31.674 |
+| `union_h3_exit_news_r` | long | 3 | leftover | list | none | 43% | 53% | 1/19 | -4.22 | 12 | 70 | +9.71 | -4.95 | +2.10 | +12.69 | PASS | 31.308 |
+| `yday_gainer_h5` | long | 5 | leftover | list | none | 47% | 42% | 7/19 | -0.74 | 20 | 98 | +11.96 | -8.56 | -1.78 | +21.95 | PASS | 30.968 |
+| `flatten_h5_half` | long | 5 | half | list | none | 49% | 58% | 1/19 | -3.69 | 18 | 79 | +8.21 | -4.88 | +3.15 | +33.17 | PASS | 30.883 |
+| `union_earn_react_h1` | long | 1 | leftover | list | none | 46% | 32% | 7/19 | -1.66 | 5 | 36 | +4.60 | -7.92 | +1.77 | +0.68 | PASS | 30.478 |
+| `union_h5_topheavy` | long | 5 | topheavy | list | none | 48% | 63% | 2/19 | -3.38 | 23 | 103 | +9.06 | -6.86 | +3.77 | +31.96 | PASS | 30.364 |
+| `short_extended_h1` | short | 1 | leftover | list | none | 54% | 37% | 2/19 | -1.47 | 14 | 45 | +5.81 | -6.32 | -8.23 | +2.29 | PASS | 30.004 |
+| `flatten_live_h3` | long | 3 | leftover | list | none | 58% | 16% | 0/19 | -7.72 | 4 | 14 | +9.65 | -3.63 | -4.36 | +6.87 | PASS | 29.955 |
+| `union_oppset_h1` | long | 1 | leftover | list | none | 52% | 32% | 1/19 | -0.53 | 10 | 32 | +4.25 | -3.82 | -3.21 | +3.48 | PASS | 29.892 |
+| `union_last_green_h5` | long | 5 | leftover | list | none | 48% | 63% | 3/19 | -3.52 | 20 | 104 | +8.47 | -8.68 | +7.04 | +26.30 | PASS | 29.629 |
+| `union_h5_half` | long | 5 | half | list | none | 48% | 63% | 1/19 | -3.89 | 23 | 103 | +8.29 | -5.84 | +3.33 | +31.96 | PASS | 29.476 |
+| `union_h5_rankw` | long | 5 | rank_w | list | none | 48% | 63% | 2/19 | -5.24 | 23 | 103 | +7.91 | -7.45 | +1.75 | +31.96 | PASS | 28.761 |
+| `union_h3_exit_red` | long | 3 | leftover | list | none | 52% | 42% | 2/19 | -3.65 | 16 | 68 | +5.54 | -6.55 | +1.08 | +21.28 | PASS | 28.596 |
+| `union_h5_exit_alarm` | long | 5 | leftover | list | none | 47% | 63% | 2/19 | -1.83 | 21 | 105 | +7.75 | -6.99 | +5.60 | +26.92 | PASS | 28.586 |
+| `probable_probable_ok_h3` | long | 3 | leftover | list | none | 52% | 32% | 6/19 | -14.46 | 11 | 32 | +5.80 | -8.29 | -17.29 | +7.99 | PASS | 28.32 |
+| `probable_h1` | long | 1 | leftover | list | none | 48% | 26% | 3/19 | -2.19 | 7 | 40 | +4.02 | -3.85 | -1.58 | +6.12 | PASS | 28.21 |
+| `union_break10_h3` | long | 3 | leftover | list | none | 47% | 42% | 4/19 | -4.61 | 19 | 76 | +7.50 | -7.41 | -5.00 | +18.30 | PASS | 28.106 |
+| `union_clk_fresh_cat_coil_h1` | long | 1 | leftover | list | none | 48% | 37% | 0/19 | -5.73 | 4 | 22 | +3.34 | -3.32 | -5.56 | -5.36 | PASS | 28.05 |
+| `union_last_green_h3` | long | 3 | leftover | list | none | 54% | 42% | 1/19 | -4.33 | 16 | 68 | +5.70 | -7.10 | -0.45 | +27.84 | PASS | 27.911 |
+| `union_white_h5` | long | 5 | leftover | list | none | 40% | 68% | 2/19 | -6.05 | 14 | 57 | +9.42 | -6.28 | +4.50 | +39.12 | PASS | 27.68 |
+| `yday_gainer_h3` | long | 3 | leftover | list | none | 49% | 42% | 2/19 | -0.06 | 16 | 78 | +9.04 | -6.79 | -4.55 | +31.61 | PASS | 26.738 |
+| `union_news_g_h3` | long | 3 | leftover | list | none | 52% | 32% | 3/19 | -3.83 | 15 | 61 | +4.65 | -5.72 | -6.78 | +163.93 | PASS | 26.495 |
+| `probable_probable_ok_h1` | long | 1 | leftover | list | none | 45% | 26% | 1/19 | -0.50 | 3 | 13 | +3.57 | -3.39 | -1.44 | -0.50 | PASS | 26.383 |
+| `union_cond_n4_h3` | long | 3 | leftover | list | none | 46% | 42% | 2/19 | -6.90 | 4 | 35 | +5.89 | -5.88 | +1.24 | -4.67 | PASS | 26.244 |
+| `ohlc_hot_h1` | long | 1 | leftover | list | none | 44% | 42% | 1/19 | -3.50 | 15 | 33 | +3.33 | -5.24 | -8.34 | -0.16 | PASS | 26.116 |
+| `union_blue_coil_h3` | long | 3 | leftover | list | none | 43% | 58% | 0/19 | -4.23 | 9 | 53 | +6.12 | -5.36 | -6.35 | -16.33 | PASS | 25.977 |
+| `union_news_present_h3` | long | 3 | leftover | list | none | 41% | 47% | 1/19 | -4.23 | 11 | 64 | +6.76 | -4.64 | -4.69 | +7.24 | PASS | 25.864 |
+| `short_clk_neg_weak_fail_opp_h3` | short | 3 | leftover | list | none | 53% | 47% | 1/19 | -4.15 | 5 | 52 | +4.02 | -4.28 | -10.13 | -7.44 | PASS | 25.441 |
+| `union_join_g_h3` | long | 3 | leftover | list | none | 46% | 37% | 0/19 | -5.60 | 13 | 70 | +7.46 | -4.83 | -2.63 | +3.56 | PASS | 25.257 |
+| `union_clk_fresh_cat_coil_opp_h1` | long | 1 | leftover | list | none | 43% | 26% | 0/19 | -3.05 | 11 | 26 | +4.23 | -3.40 | -4.74 | -7.04 | PASS | 24.604 |
+| `union_coil_green_h1` | long | 1 | leftover | list | none | 41% | 37% | 0/19 | -3.81 | 10 | 24 | +3.54 | -4.69 | -3.34 | -1.03 | PASS | 24.59 |
+| `ohlc_hot_coil_h1` | long | 1 | leftover | list | none | 47% | 26% | 1/19 | -7.25 | 9 | 13 | +3.02 | -4.17 | -19.57 | -7.52 | PASS | 24.561 |
+| `union_blue_h3` | long | 3 | leftover | list | none | 42% | 47% | 0/19 | -4.23 | 11 | 56 | +6.85 | -5.25 | -6.87 | -3.50 | PASS | 24.545 |
+| `flatten_vol_g_h3` | long | 3 | leftover | list | none | 53% | 21% | 1/19 | -5.10 | 5 | 18 | +9.63 | -5.62 | -11.12 | -6.56 | PASS | 24.25 |
+| `union_vol_ab_h1` | long | 1 | leftover | list | none | 47% | 21% | 0/19 | -3.44 | 5 | 21 | +4.74 | -4.29 | -0.79 | +38.84 | PASS | 24.021 |
+| `union_vol_g_h3` | long | 3 | leftover | list | none | 46% | 47% | 2/19 | -3.91 | 16 | 76 | +8.51 | -7.16 | -7.17 | +16.60 | PASS | 23.983 |
+| `union_white_coil_h3` | long | 3 | leftover | list | none | 42% | 47% | 1/19 | -4.55 | 9 | 38 | +6.36 | -5.52 | -0.08 | -3.47 | PASS | 23.929 |
+| `union_clk_nr7_mom_h1` | long | 1 | leftover | list | none | 42% | 32% | 0/19 | -2.49 | 2 | 10 | +4.66 | -3.60 | -2.49 | +18.39 | PASS | 23.694 |
+| `union_join_vol_green_h3` | long | 3 | leftover | list | none | 48% | 32% | 3/19 | -4.09 | 11 | 43 | +6.15 | -7.88 | -10.63 | +12.27 | PASS | 23.357 |
+| `union_ab_g_h3` | long | 3 | leftover | list | none | 38% | 32% | 1/19 | -4.93 | 9 | 54 | +7.68 | -3.90 | -4.93 | -11.53 | PASS | 23.31 |
+| `union_blue_vol_h3` | long | 3 | leftover | list | none | 43% | 42% | 2/19 | -3.94 | 12 | 60 | +8.40 | -6.40 | -7.69 | +12.72 | PASS | 23.202 |
+| `probable_h3` | long | 3 | leftover | list | none | 47% | 37% | 3/19 | -0.31 | 16 | 82 | +6.75 | -8.43 | -4.85 | +13.30 | PASS | 23.122 |
+| `union_candle_score_h3` | long | 3 | leftover | list | none | 45% | 42% | 1/19 | -2.64 | 15 | 86 | +6.72 | -6.74 | +2.00 | +8.06 | PASS | 23.083 |
+| `union_white_coil_h1` | long | 1 | leftover | list | none | 34% | 32% | 0/19 | -5.68 | 2 | 15 | +5.24 | -3.62 | -3.39 | -5.95 | PASS | 22.745 |
+| `union_cond_h3` | long | 3 | leftover | list | none | 42% | 47% | 0/19 | -5.52 | 7 | 74 | +6.52 | -6.24 | -2.84 | -11.26 | PASS | 22.073 |
+| `union_white_h3` | long | 3 | leftover | list | none | 40% | 42% | 2/19 | -7.39 | 10 | 48 | +7.40 | -5.97 | -2.88 | +9.69 | PASS | 21.674 |
+| `union_blue_coil_h1` | long | 1 | leftover | list | none | 43% | 26% | 0/19 | -4.96 | 3 | 22 | +3.47 | -4.92 | -7.20 | -7.67 | PASS | 21.62 |
+| `union_vol_g_h5` | long | 5 | leftover | list | none | 44% | 37% | 2/19 | -5.32 | 21 | 90 | +14.31 | -8.68 | -9.87 | +10.14 | PASS | 21.277 |
+| `union_clk_flow_coil_h1` | long | 1 | leftover | list | none | 27% | 26% | 0/19 | -6.64 | 0 | 2 | +4.53 | -2.79 | -9.85 | -13.96 | PASS | 20.987 |
+| `union_candle_h3` | long | 3 | leftover | list | none | 47% | 32% | 0/19 | -4.72 | 16 | 78 | +6.45 | -6.42 | -4.39 | +6.80 | PASS | 20.474 |
+| `ohlc_hot_h3` | long | 3 | leftover | list | none | 46% | 42% | 0/19 | -2.60 | 24 | 90 | +6.20 | -7.16 | -2.40 | +99.68 | PASS | 20.336 |
+| `union_vol_green_h3` | long | 3 | leftover | list | none | 51% | 21% | 2/19 | -7.56 | 16 | 63 | +6.84 | -7.64 | -14.02 | +4.81 | PASS | 20.062 |
+| `short_clk_neg_weak_fail_h3` | short | 3 | leftover | list | none | 47% | 37% | 0/19 | -5.05 | 12 | 78 | +5.12 | -5.05 | -6.00 | -16.82 | PASS | 20.06 |
+| `probable_h5` | long | 5 | leftover | list | none | 46% | 26% | 5/19 | -0.74 | 20 | 102 | +8.72 | -9.74 | -13.68 | +2.04 | PASS | 20.002 |
+| `flatten_live_h5` | long | 5 | leftover | list | none | 46% | 26% | 0/19 | -7.72 | 5 | 16 | +9.42 | -6.63 | -3.47 | +7.46 | PASS | 19.965 |
+| `union_news_g_h5` | long | 5 | leftover | list | none | 45% | 42% | 2/19 | -0.54 | 17 | 89 | +5.26 | -7.41 | -9.40 | +137.27 | PASS | 19.835 |
+| `union_vol_ab_h3` | long | 3 | leftover | list | none | 43% | 26% | 1/19 | -4.78 | 9 | 49 | +7.39 | -5.02 | -4.78 | +33.54 | PASS | 19.181 |
+| `union_coil_off_h1` | long | 1 | leftover | list | none | 40% | 21% | 0/19 | -10.70 | 5 | 33 | +3.40 | -4.00 | -8.99 | -9.27 | PASS | 18.997 |
+| `union_e_green_h1` | long | 1 | leftover | list | none | 47% | 32% | 0/19 | -10.21 | 2 | 16 | +4.13 | -9.48 | -26.62 | -22.35 | PASS | 18.336 |
+| `short_last_red_h1` | short | 1 | leftover | list | none | 44% | 16% | 0/19 | -2.68 | 6 | 43 | +3.53 | -4.56 | -10.33 | -17.16 | PASS | 17.844 |
+| `ohlc_hot_h5` | long | 5 | leftover | list | none | 43% | 42% | 0/19 | -4.25 | 34 | 110 | +9.08 | -8.62 | -8.51 | +86.42 | PASS | 17.336 |
+| `union_coil_green_h3` | long | 3 | leftover | list | none | 36% | 26% | 0/19 | -4.38 | 20 | 76 | +6.39 | -6.75 | -2.27 | -12.53 | PASS | 15.572 |
+| `union_coil_off_h3` | long | 3 | leftover | list | none | 37% | 26% | 0/19 | -8.77 | 14 | 75 | +4.47 | -8.21 | -7.72 | -16.79 | PASS | 12.792 |
+| `coil_h3_exit_alarm` | long | 3 | leftover | list | none | 36% | 26% | 0/19 | -8.46 | 11 | 78 | +4.37 | -6.43 | -4.74 | -12.40 | PASS | 12.646 |
+| `union_coil_off_h5` | long | 5 | leftover | list | none | 38% | 37% | 0/19 | -6.34 | 20 | 102 | +3.94 | -113.54 | -0.85 | -24.82 | PASS | 10.567 |
+| `union_e_green_h3` | long | 3 | leftover | list | none | 38% | 32% | 0/19 | -10.28 | 4 | 41 | +5.45 | -8.76 | -10.28 | -32.54 | PASS | 10.55 |
+| `union_catal_present_h3` *(thin)* | long | 3 | leftover | list | none | 50% | 16% | 10/19 | +12.16 | 2 | 2 | +12.05 | -2.56 | +12.16 | +15.01 | PASS | 41.473 |
+| `union_catal_present_h1` *(thin)* | long | 1 | leftover | list | none | 50% | 11% | 10/19 | +6.91 | 0 | 0 | +8.76 | -2.74 | +6.91 | +7.17 | PASS | 41.3 |
+| `union_news_missing_h1` *(thin)* | long | 1 | leftover | list | none | 56% | 16% | 11/19 | +0.19 | 0 | 2 | +3.78 | -2.55 | +1.64 | +2.18 | PASS | 35.297 |
+| `union_clk_nr7_mom_opp_h1` *(thin)* | long | 1 | leftover | list | none | 38% | 26% | 12/19 | +0.31 | 0 | 4 | +2.70 | -1.36 | +10.76 | -2.39 | PASS | 27.568 |
+| `union_clk_earn_guide_react_h1` *(thin)* | long | 1 | leftover | list | none | 50% | 16% | 10/19 | +0.59 | 0 | 3 | +5.17 | -4.79 | -0.12 | +1.48 | PASS | 21.692 |
+| `union_news_missing_h3` *(thin)* | long | 3 | leftover | list | none | 56% | 32% | 1/19 | -0.45 | 1 | 7 | +9.22 | -3.20 | +3.13 | +4.96 | PASS | 17.189 |
+| `union_vol_missing_h1` *(thin)* | long | 1 | leftover | list | none | 50% | 5% | 1/19 | +0.00 | 0 | 2 | +7.93 | -3.05 | +1.44 | +1.88 | PASS | 10.593 |
+| `union_vol_missing_h3` *(thin)* | long | 3 | leftover | list | none | 50% | 16% | 1/19 | +0.00 | 1 | 5 | +11.98 | -3.98 | +3.58 | +5.59 | PASS | 9.385 |
+| `union_clk_insider_cash_stab_h3` *(thin)* | long | 3 | leftover | list | none | 50% | 5% | 0/19 | -9.80 | 0 | 2 | +4.62 | -5.91 | -9.80 | +2.50 | PASS | -4.509 |
+| `short_r_down_h1` *(thin)* | short | 1 | leftover | list | none | — | 0% | 0/19 | +0.00 | 0 | 0 | — | — | +0.00 | +0.00 | PASS | -15.0 |
+| `short_r_down_h3` *(thin)* | short | 3 | leftover | list | none | — | 0% | 0/19 | +0.00 | 0 | 0 | — | — | +0.00 | +0.00 | PASS | -15.0 |
+| `union_clk_r_up_coil_h1` *(thin)* | long | 1 | leftover | list | none | — | 0% | 0/19 | +0.00 | 0 | 0 | — | — | +0.00 | +0.00 | PASS | -15.0 |
+| `union_r_up_h1` *(thin)* | long | 1 | leftover | list | none | — | 0% | 0/19 | +0.00 | 0 | 0 | — | — | +0.00 | +0.00 | PASS | -15.0 |
+| `union_r_up_h3` *(thin)* | long | 3 | leftover | list | none | — | 0% | 0/19 | +0.00 | 0 | 0 | — | — | +0.00 | +0.00 | PASS | -15.0 |

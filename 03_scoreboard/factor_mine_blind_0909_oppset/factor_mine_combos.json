@@ -1,0 +1,4502 @@
+{
+  "n": 116,
+  "outperform": [
+    "combo_jse_333_shared",
+    "combo_ej_5050_shared",
+    "combo_ecearnguid_5050_shared",
+    "combo_se_5050_skip",
+    "combo_ecnr7momop_5050_shared",
+    "combo_se_3070_shared",
+    "combo_es_8020_shared",
+    "combo_secmombreak_333_shared",
+    "combo_es_9010_shared",
+    "combo_ecnr7momh1_5050_shared",
+    "combo_se_5050_shared",
+    "combo_se_5050_weather",
+    "combo_jer_5050_shared",
+    "combo_scnr7momop_5050_shared",
+    "combo_form_efrh1jovogrh1snerh3_333_shared",
+    "combo_se1_5050_shared",
+    "combo_sh_5050_shared",
+    "combo_e1s_7030_shared",
+    "combo_form_efrh1snerh3_7030_shared",
+    "combo_form_efrh1snerh3_3070_shared",
+    "combo_sh_3070_shared",
+    "combo_scextvetooh_5050_shared",
+    "combo_form_efrh1sclexve_5050_shared",
+    "combo_ers_7030_shared",
+    "combo_sh_7030_shared",
+    "combo_ner_5050_shared",
+    "combo_ser_5050_shared",
+    "combo_sj_3070_shared",
+    "combo_form_jovogrh1snerh3_5050_shared",
+    "combo_sj_5050_shared",
+    "combo_form_jovogrh1sclexve_5050_shared",
+    "combo_sopp_5050_shared",
+    "combo_sf_5050_shared",
+    "combo_sf_7030_shared",
+    "combo_sj_7030_shared",
+    "combo_scmombreak_5050_shared",
+    "combo_form_negh1sclexve_5050_shared",
+    "combo_snj_333_shared",
+    "combo_form_negh1snerh3_5050_shared",
+    "combo_sn_5050_shared",
+    "combo_suopp_5050_shared",
+    "combo_sn_3070_shared",
+    "combo_scearnguid_5050_shared"
+  ],
+  "rows": [
+    {
+      "name": "combo_jse_333_shared",
+      "members": [
+        "union_join_vol_green_h1",
+        "short_news_r_h3",
+        "union_e_fresh_h3"
+      ],
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 31.184,
+      "dd": 4.68,
+      "starts": "16/19",
+      "start_rate": 0.8421,
+      "day_rate": 0.7368,
+      "eff": 71.305,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -4.211,
+        "member_worst_day": -3.601,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": false,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_ej_5050_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "union_join_vol_green_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 30.805,
+      "dd": 3.92,
+      "starts": "15/19",
+      "start_rate": 0.7895,
+      "day_rate": 0.5789,
+      "eff": 65.07,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 7.09,
+        "best_member_start": 0.7895,
+        "combo_worst_day": -2.657,
+        "member_worst_day": -3.601,
+        "keeps_book": true,
+        "safer_than_all": true,
+        "start_ok": true,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": true,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_ecearnguid_5050_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "union_clk_earn_guide_react_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 30.341,
+      "dd": 5.14,
+      "starts": "17/19",
+      "start_rate": 0.8947,
+      "day_rate": 0.4211,
+      "eff": 61.712,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 2.55,
+        "best_member_start": 0.7368,
+        "combo_worst_day": -1.684,
+        "member_worst_day": -3.491,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": true,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_se_5050_skip",
+      "members": [
+        "short_news_r_h3",
+        "union_e_fresh_h3"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "skip",
+      "book": 29.362,
+      "dd": 5.01,
+      "starts": "17/19",
+      "start_rate": 0.8947,
+      "day_rate": 0.5789,
+      "eff": 69.087,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -3.524,
+        "member_worst_day": -3.491,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": true,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": false,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_ecnr7momop_5050_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "union_clk_nr7_mom_opp_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 28.675,
+      "dd": 3.0,
+      "starts": "17/19",
+      "start_rate": 0.8947,
+      "day_rate": 0.5789,
+      "eff": 66.148,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 3.52,
+        "best_member_start": 0.7368,
+        "combo_worst_day": -1.912,
+        "member_worst_day": -3.522,
+        "keeps_book": true,
+        "safer_than_all": true,
+        "start_ok": true,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": true,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_se_3070_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_e_fresh_h3"
+      ],
+      "weights": [
+        0.3,
+        0.7
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 28.391,
+      "dd": 4.36,
+      "starts": "16/19",
+      "start_rate": 0.8421,
+      "day_rate": 0.5789,
+      "eff": 65.092,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -2.184,
+        "member_worst_day": -3.491,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_es_8020_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "short_news_r_h3"
+      ],
+      "weights": [
+        0.8,
+        0.2
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 28.271,
+      "dd": 5.0,
+      "starts": "16/19",
+      "start_rate": 0.8421,
+      "day_rate": 0.5263,
+      "eff": 63.417,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -2.138,
+        "member_worst_day": -3.491,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_secmombreak_333_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_e_fresh_h3",
+        "union_clk_mom_break_peer_h1"
+      ],
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 28.185,
+      "dd": 7.13,
+      "starts": "11/19",
+      "start_rate": 0.5789,
+      "day_rate": 0.6316,
+      "eff": 60.993,
+      "both_halves": false,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -3.671,
+        "member_worst_day": -3.491,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": false,
+        "both_halves": false,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_es_9010_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "short_news_r_h3"
+      ],
+      "weights": [
+        0.9,
+        0.1
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 27.85,
+      "dd": 5.57,
+      "starts": "16/19",
+      "start_rate": 0.8421,
+      "day_rate": 0.5263,
+      "eff": 62.909,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -2.345,
+        "member_worst_day": -3.491,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_ecnr7momh1_5050_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "union_clk_nr7_mom_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 27.313,
+      "dd": 4.1,
+      "starts": "14/19",
+      "start_rate": 0.7368,
+      "day_rate": 0.5263,
+      "eff": 60.305,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 7.28,
+        "best_member_start": 0.7368,
+        "combo_worst_day": -1.703,
+        "member_worst_day": -5.494,
+        "keeps_book": true,
+        "safer_than_all": true,
+        "start_ok": true,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": true,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_se_5050_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_e_fresh_h3"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 26.833,
+      "dd": 5.05,
+      "starts": "17/19",
+      "start_rate": 0.8947,
+      "day_rate": 0.6316,
+      "eff": 68.663,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -3.612,
+        "member_worst_day": -3.491,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": true,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": false,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_se_5050_weather",
+      "members": [
+        "short_news_r_h3",
+        "union_e_fresh_h3"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "weather",
+      "book": 26.833,
+      "dd": 5.05,
+      "starts": "17/19",
+      "start_rate": 0.8947,
+      "day_rate": 0.6316,
+      "eff": 68.663,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -3.612,
+        "member_worst_day": -3.491,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": true,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": false,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_jer_5050_shared",
+      "members": [
+        "union_join_vol_green_h1",
+        "union_earn_react_h3"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 26.461,
+      "dd": 3.84,
+      "starts": "12/19",
+      "start_rate": 0.6316,
+      "day_rate": 0.5263,
+      "eff": 55.788,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 18.623,
+        "safest_member_dd": 7.09,
+        "best_member_start": 0.7895,
+        "combo_worst_day": -2.882,
+        "member_worst_day": -4.068,
+        "keeps_book": true,
+        "safer_than_all": true,
+        "start_ok": false,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_scnr7momop_5050_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_clk_nr7_mom_opp_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 25.475,
+      "dd": 4.81,
+      "starts": "17/19",
+      "start_rate": 0.8947,
+      "day_rate": 0.5789,
+      "eff": 71.726,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 10.757,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -4.805,
+        "member_worst_day": -3.522,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": true,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": false,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_form_efrh1jovogrh1snerh3_333_shared",
+      "members": [
+        "union_e_fresh_h1",
+        "union_join_vol_green_h1",
+        "short_news_r_h3"
+      ],
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 24.922,
+      "dd": 1.92,
+      "starts": "17/19",
+      "start_rate": 0.8947,
+      "day_rate": 0.7895,
+      "eff": 72.425,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 15.459,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -1.923,
+        "member_worst_day": -4.021,
+        "keeps_book": true,
+        "safer_than_all": true,
+        "start_ok": true,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": true,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_se1_5050_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_e_fresh_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 23.62,
+      "dd": 2.07,
+      "starts": "17/19",
+      "start_rate": 0.8947,
+      "day_rate": 0.7895,
+      "eff": 72.951,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 15.459,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -2.071,
+        "member_worst_day": -4.021,
+        "keeps_book": true,
+        "safer_than_all": true,
+        "start_ok": true,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": true,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_sh_5050_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_hot_n4_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 22.706,
+      "dd": 2.83,
+      "starts": "12/19",
+      "start_rate": 0.6316,
+      "day_rate": 0.7895,
+      "eff": 70.683,
+      "both_halves": false,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 19.524,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -2.671,
+        "member_worst_day": -5.526,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_e1s_7030_shared",
+      "members": [
+        "union_e_fresh_h1",
+        "short_news_r_h3"
+      ],
+      "weights": [
+        0.7,
+        0.3
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 22.587,
+      "dd": 3.1,
+      "starts": "17/19",
+      "start_rate": 0.8947,
+      "day_rate": 0.7895,
+      "eff": 72.806,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 15.459,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -3.098,
+        "member_worst_day": -4.021,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": true,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_form_efrh1snerh3_7030_shared",
+      "members": [
+        "union_e_fresh_h1",
+        "short_news_r_h3"
+      ],
+      "weights": [
+        0.7,
+        0.3
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 22.587,
+      "dd": 3.1,
+      "starts": "17/19",
+      "start_rate": 0.8947,
+      "day_rate": 0.7895,
+      "eff": 72.806,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 15.459,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -3.098,
+        "member_worst_day": -4.021,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": true,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_form_efrh1snerh3_3070_shared",
+      "members": [
+        "union_e_fresh_h1",
+        "short_news_r_h3"
+      ],
+      "weights": [
+        0.3,
+        0.7
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 22.583,
+      "dd": 1.07,
+      "starts": "17/19",
+      "start_rate": 0.8947,
+      "day_rate": 0.7895,
+      "eff": 72.078,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 15.459,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -0.784,
+        "member_worst_day": -4.021,
+        "keeps_book": true,
+        "safer_than_all": true,
+        "start_ok": true,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": true,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_sh_3070_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_hot_n4_h1"
+      ],
+      "weights": [
+        0.3,
+        0.7
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 22.153,
+      "dd": 5.17,
+      "starts": "10/19",
+      "start_rate": 0.5263,
+      "day_rate": 0.7368,
+      "eff": 66.723,
+      "both_halves": false,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 19.524,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -3.827,
+        "member_worst_day": -5.526,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_scextvetooh_5050_shared",
+      "members": [
+        "short_clk_ext_veto_opp_h3",
+        "union_hot_n4_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 21.089,
+      "dd": 4.05,
+      "starts": "17/19",
+      "start_rate": 0.8947,
+      "day_rate": 0.6316,
+      "eff": 70.388,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 19.524,
+        "safest_member_dd": 7.31,
+        "best_member_start": 0.8421,
+        "combo_worst_day": -4.052,
+        "member_worst_day": -5.526,
+        "keeps_book": true,
+        "safer_than_all": true,
+        "start_ok": true,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": true,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_form_efrh1sclexve_5050_shared",
+      "members": [
+        "union_e_fresh_h1",
+        "short_clk_ext_veto_opp_h3"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 20.736,
+      "dd": 5.93,
+      "starts": "16/19",
+      "start_rate": 0.8421,
+      "day_rate": 0.5789,
+      "eff": 64.171,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 15.459,
+        "safest_member_dd": 4.29,
+        "best_member_start": 0.8421,
+        "combo_worst_day": -3.928,
+        "member_worst_day": -4.021,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": true,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_ers_7030_shared",
+      "members": [
+        "union_earn_react_h3",
+        "short_news_r_h3"
+      ],
+      "weights": [
+        0.7,
+        0.3
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 20.026,
+      "dd": 4.18,
+      "starts": "5/19",
+      "start_rate": 0.2632,
+      "day_rate": 0.4211,
+      "eff": 32.309,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 18.623,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -2.93,
+        "member_worst_day": -4.068,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_sh_7030_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_hot_n4_h1"
+      ],
+      "weights": [
+        0.7,
+        0.3
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 19.775,
+      "dd": 1.63,
+      "starts": "17/19",
+      "start_rate": 0.8947,
+      "day_rate": 0.7895,
+      "eff": 76.721,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 19.524,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -1.633,
+        "member_worst_day": -5.526,
+        "keeps_book": true,
+        "safer_than_all": true,
+        "start_ok": true,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": true,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_ner_5050_shared",
+      "members": [
+        "union_news_g_h1",
+        "union_earn_react_h3"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 19.149,
+      "dd": 4.32,
+      "starts": "6/19",
+      "start_rate": 0.3158,
+      "day_rate": 0.4737,
+      "eff": 35.189,
+      "both_halves": false,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 18.623,
+        "safest_member_dd": 3.35,
+        "best_member_start": 0.7895,
+        "combo_worst_day": -3.115,
+        "member_worst_day": -4.068,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_ser_5050_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_earn_react_h3"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 19.112,
+      "dd": 5.05,
+      "starts": "6/19",
+      "start_rate": 0.3158,
+      "day_rate": 0.4211,
+      "eff": 34.292,
+      "both_halves": false,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 18.623,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -4.053,
+        "member_worst_day": -4.068,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_sj_3070_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_join_vol_green_h1"
+      ],
+      "weights": [
+        0.3,
+        0.7
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 15.116,
+      "dd": 3.77,
+      "starts": "17/19",
+      "start_rate": 0.8947,
+      "day_rate": 0.5789,
+      "eff": 67.604,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 9.001,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -2.633,
+        "member_worst_day": -3.601,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": true,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_form_jovogrh1snerh3_5050_shared",
+      "members": [
+        "union_join_vol_green_h1",
+        "short_news_r_h3"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 14.905,
+      "dd": 2.18,
+      "starts": "17/19",
+      "start_rate": 0.8947,
+      "day_rate": 0.6316,
+      "eff": 68.682,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 9.001,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -1.619,
+        "member_worst_day": -3.601,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": true,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_sj_5050_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_join_vol_green_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 14.905,
+      "dd": 2.18,
+      "starts": "17/19",
+      "start_rate": 0.8947,
+      "day_rate": 0.6316,
+      "eff": 68.682,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 9.001,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -1.619,
+        "member_worst_day": -3.601,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": true,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_form_jovogrh1sclexve_5050_shared",
+      "members": [
+        "union_join_vol_green_h1",
+        "short_clk_ext_veto_opp_h3"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 14.773,
+      "dd": 4.29,
+      "starts": "17/19",
+      "start_rate": 0.8947,
+      "day_rate": 0.6316,
+      "eff": 66.376,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 9.001,
+        "safest_member_dd": 7.09,
+        "best_member_start": 0.8421,
+        "combo_worst_day": -3.739,
+        "member_worst_day": -3.801,
+        "keeps_book": true,
+        "safer_than_all": true,
+        "start_ok": true,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": true,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_sopp_5050_shared",
+      "members": [
+        "short_news_r_h3",
+        "oppset_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 12.233,
+      "dd": 6.83,
+      "starts": "14/19",
+      "start_rate": 0.7368,
+      "day_rate": 0.5789,
+      "eff": 63.176,
+      "both_halves": false,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 8.021,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -3.65,
+        "member_worst_day": -2.788,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": false,
+        "both_halves": false,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_sf_5050_shared",
+      "members": [
+        "short_news_r_h3",
+        "flatten_h5"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 12.099,
+      "dd": 6.98,
+      "starts": "6/19",
+      "start_rate": 0.3158,
+      "day_rate": 0.6316,
+      "eff": 44.923,
+      "both_halves": false,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 10.541,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -3.877,
+        "member_worst_day": -3.422,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": false,
+        "both_halves": false,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_sf_7030_shared",
+      "members": [
+        "short_news_r_h3",
+        "flatten_h5"
+      ],
+      "weights": [
+        0.7,
+        0.3
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 11.818,
+      "dd": 5.64,
+      "starts": "6/19",
+      "start_rate": 0.3158,
+      "day_rate": 0.7368,
+      "eff": 45.351,
+      "both_halves": false,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 10.541,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -3.22,
+        "member_worst_day": -3.422,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_sj_7030_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_join_vol_green_h1"
+      ],
+      "weights": [
+        0.7,
+        0.3
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 11.368,
+      "dd": 0.87,
+      "starts": "17/19",
+      "start_rate": 0.8947,
+      "day_rate": 0.7368,
+      "eff": 69.571,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 9.001,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -0.671,
+        "member_worst_day": -3.601,
+        "keeps_book": true,
+        "safer_than_all": true,
+        "start_ok": true,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": true,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_scmombreak_5050_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_clk_mom_break_peer_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 11.169,
+      "dd": 7.58,
+      "starts": "16/19",
+      "start_rate": 0.8421,
+      "day_rate": 0.5263,
+      "eff": 65.715,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 8.021,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -4.516,
+        "member_worst_day": -2.005,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": false,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_form_negh1sclexve_5050_shared",
+      "members": [
+        "union_news_g_h1",
+        "short_clk_ext_veto_opp_h3"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 9.966,
+      "dd": 4.92,
+      "starts": "16/19",
+      "start_rate": 0.8421,
+      "day_rate": 0.4211,
+      "eff": 61.402,
+      "both_halves": false,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 4.267,
+        "safest_member_dd": 3.35,
+        "best_member_start": 0.8421,
+        "combo_worst_day": -2.028,
+        "member_worst_day": -3.801,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": true,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_snj_333_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_news_g_h1",
+        "union_join_vol_green_h1"
+      ],
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 9.605,
+      "dd": 2.08,
+      "starts": "16/19",
+      "start_rate": 0.8421,
+      "day_rate": 0.6842,
+      "eff": 67.05,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 9.001,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -2.083,
+        "member_worst_day": -3.601,
+        "keeps_book": true,
+        "safer_than_all": true,
+        "start_ok": false,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_form_negh1snerh3_5050_shared",
+      "members": [
+        "union_news_g_h1",
+        "short_news_r_h3"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 9.587,
+      "dd": 3.05,
+      "starts": "17/19",
+      "start_rate": 0.8947,
+      "day_rate": 0.6842,
+      "eff": 70.489,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 8.021,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -1.662,
+        "member_worst_day": -3.118,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": true,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_sn_5050_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_news_g_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 9.587,
+      "dd": 3.05,
+      "starts": "17/19",
+      "start_rate": 0.8947,
+      "day_rate": 0.6842,
+      "eff": 70.489,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 8.021,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -1.662,
+        "member_worst_day": -3.118,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": true,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_suopp_5050_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_oppset_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 9.285,
+      "dd": 7.99,
+      "starts": "14/19",
+      "start_rate": 0.7368,
+      "day_rate": 0.4737,
+      "eff": 60.311,
+      "both_halves": false,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 8.021,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -3.852,
+        "member_worst_day": -2.846,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": false,
+        "both_halves": false,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_sn_3070_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_news_g_h1"
+      ],
+      "weights": [
+        0.3,
+        0.7
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 8.922,
+      "dd": 3.63,
+      "starts": "17/19",
+      "start_rate": 0.8947,
+      "day_rate": 0.6842,
+      "eff": 70.239,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 8.021,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -2.539,
+        "member_worst_day": -3.118,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": true,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_scearnguid_5050_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_clk_earn_guide_react_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 8.102,
+      "dd": 4.5,
+      "starts": "17/19",
+      "start_rate": 0.8947,
+      "day_rate": 0.6316,
+      "eff": 69.05,
+      "both_halves": true,
+      "outperforms": true,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 8.021,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -3.545,
+        "member_worst_day": -2.385,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": true,
+        "richer": true,
+        "beats_all_book": true,
+        "best_of_both": false,
+        "worse_day_ok": false,
+        "both_halves": true,
+        "outperforms": true
+      }
+    },
+    {
+      "name": "combo_ecrupcoilh_5050_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "union_clk_r_up_coil_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 26.128,
+      "dd": 7.28,
+      "starts": "14/19",
+      "start_rate": 0.7368,
+      "day_rate": 0.5263,
+      "eff": 60.948,
+      "both_halves": true,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 7.28,
+        "best_member_start": 0.7368,
+        "combo_worst_day": -3.491,
+        "member_worst_day": -3.491,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": true,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_ee1_3070_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "union_e_fresh_h1"
+      ],
+      "weights": [
+        0.3,
+        0.7
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 26.128,
+      "dd": 7.28,
+      "starts": "14/19",
+      "start_rate": 0.7368,
+      "day_rate": 0.5263,
+      "eff": 57.99,
+      "both_halves": true,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 4.29,
+        "best_member_start": 0.8421,
+        "combo_worst_day": -3.491,
+        "member_worst_day": -4.021,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_ee1_5050_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "union_e_fresh_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 26.128,
+      "dd": 7.28,
+      "starts": "14/19",
+      "start_rate": 0.7368,
+      "day_rate": 0.5263,
+      "eff": 57.99,
+      "both_halves": true,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 4.29,
+        "best_member_start": 0.8421,
+        "combo_worst_day": -3.491,
+        "member_worst_day": -4.021,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_ee1_7030_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "union_e_fresh_h1"
+      ],
+      "weights": [
+        0.7,
+        0.3
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 26.128,
+      "dd": 7.28,
+      "starts": "14/19",
+      "start_rate": 0.7368,
+      "day_rate": 0.5263,
+      "eff": 57.99,
+      "both_halves": true,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 4.29,
+        "best_member_start": 0.8421,
+        "combo_worst_day": -3.491,
+        "member_worst_day": -4.021,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_ecinsiderc_5050_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "union_clk_insider_cash_stab_h3"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 26.047,
+      "dd": 7.28,
+      "starts": "13/19",
+      "start_rate": 0.6842,
+      "day_rate": 0.5263,
+      "eff": 55.621,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 7.28,
+        "best_member_start": 0.7368,
+        "combo_worst_day": -3.491,
+        "member_worst_day": -4.533,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_seopp_333_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_e_fresh_h3",
+        "oppset_h1"
+      ],
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 25.351,
+      "dd": 8.66,
+      "starts": "12/19",
+      "start_rate": 0.6316,
+      "day_rate": 0.6316,
+      "eff": 61.519,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -4.3,
+        "member_worst_day": -3.491,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": false,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_en_7030_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "union_news_g_h1"
+      ],
+      "weights": [
+        0.7,
+        0.3
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 24.813,
+      "dd": 5.58,
+      "starts": "15/19",
+      "start_rate": 0.7895,
+      "day_rate": 0.5263,
+      "eff": 60.503,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 3.35,
+        "best_member_start": 0.7895,
+        "combo_worst_day": -2.994,
+        "member_worst_day": -3.491,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": true,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_nse_333_shared",
+      "members": [
+        "union_news_g_h1",
+        "short_news_r_h3",
+        "union_e_fresh_h3"
+      ],
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 24.412,
+      "dd": 4.61,
+      "starts": "16/19",
+      "start_rate": 0.8421,
+      "day_rate": 0.6316,
+      "eff": 67.08,
+      "both_halves": true,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -3.276,
+        "member_worst_day": -3.491,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_ecmombreak_5050_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "union_clk_mom_break_peer_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 24.265,
+      "dd": 5.01,
+      "starts": "10/19",
+      "start_rate": 0.5263,
+      "day_rate": 0.4737,
+      "eff": 53.873,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 5.9,
+        "best_member_start": 0.7368,
+        "combo_worst_day": -2.337,
+        "member_worst_day": -3.491,
+        "keeps_book": true,
+        "safer_than_all": true,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_seuopp_333_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_e_fresh_h3",
+        "union_oppset_h1"
+      ],
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 24.1,
+      "dd": 8.83,
+      "starts": "12/19",
+      "start_rate": 0.6316,
+      "day_rate": 0.5789,
+      "eff": 59.996,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -4.508,
+        "member_worst_day": -3.491,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": false,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_ehs_601525_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "union_hot_n4_h1",
+        "short_news_r_h3"
+      ],
+      "weights": [
+        0.6,
+        0.15,
+        0.25
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 24.095,
+      "dd": 4.28,
+      "starts": "15/19",
+      "start_rate": 0.7895,
+      "day_rate": 0.6316,
+      "eff": 63.951,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -2.254,
+        "member_worst_day": -5.526,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_form_efrh3sclexve_5050_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "short_clk_ext_veto_opp_h3"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 23.978,
+      "dd": 6.31,
+      "starts": "16/19",
+      "start_rate": 0.8421,
+      "day_rate": 0.4737,
+      "eff": 59.656,
+      "both_halves": true,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 7.28,
+        "best_member_start": 0.8421,
+        "combo_worst_day": -3.864,
+        "member_worst_day": -3.801,
+        "keeps_book": false,
+        "safer_than_all": true,
+        "start_ok": true,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": false,
+        "both_halves": true,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_scextvetooe_5050_shared",
+      "members": [
+        "short_clk_ext_veto_opp_h3",
+        "union_e_fresh_h3"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 23.978,
+      "dd": 6.31,
+      "starts": "16/19",
+      "start_rate": 0.8421,
+      "day_rate": 0.4737,
+      "eff": 59.656,
+      "both_halves": true,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 7.28,
+        "best_member_start": 0.8421,
+        "combo_worst_day": -3.864,
+        "member_worst_day": -3.801,
+        "keeps_book": false,
+        "safer_than_all": true,
+        "start_ok": true,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": false,
+        "both_halves": true,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_en_5050_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "union_news_g_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 23.8,
+      "dd": 4.9,
+      "starts": "15/19",
+      "start_rate": 0.7895,
+      "day_rate": 0.5263,
+      "eff": 61.993,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 3.35,
+        "best_member_start": 0.7895,
+        "combo_worst_day": -3.086,
+        "member_worst_day": -3.491,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": true,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_ehs_702010_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "union_hot_n4_h1",
+        "short_news_r_h3"
+      ],
+      "weights": [
+        0.7,
+        0.2,
+        0.1
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 22.682,
+      "dd": 5.17,
+      "starts": "13/19",
+      "start_rate": 0.6842,
+      "day_rate": 0.5263,
+      "eff": 58.222,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -2.361,
+        "member_worst_day": -5.526,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_se_7030_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_e_fresh_h3"
+      ],
+      "weights": [
+        0.7,
+        0.3
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 22.633,
+      "dd": 5.29,
+      "starts": "12/19",
+      "start_rate": 0.6316,
+      "day_rate": 0.6316,
+      "eff": 61.851,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -4.905,
+        "member_worst_day": -3.491,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": false,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_seh_404020_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_e_fresh_h3",
+        "union_hot_n4_h1"
+      ],
+      "weights": [
+        0.4,
+        0.4,
+        0.2
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 22.388,
+      "dd": 4.07,
+      "starts": "15/19",
+      "start_rate": 0.7895,
+      "day_rate": 0.5789,
+      "eff": 64.125,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -3.047,
+        "member_worst_day": -5.526,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_eopp_5050_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "oppset_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 22.094,
+      "dd": 4.49,
+      "starts": "11/19",
+      "start_rate": 0.5789,
+      "day_rate": 0.4737,
+      "eff": 53.047,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 5.37,
+        "best_member_start": 0.7368,
+        "combo_worst_day": -2.756,
+        "member_worst_day": -3.491,
+        "keeps_book": false,
+        "safer_than_all": true,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_en_3070_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "union_news_g_h1"
+      ],
+      "weights": [
+        0.3,
+        0.7
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 22.04,
+      "dd": 4.73,
+      "starts": "14/19",
+      "start_rate": 0.7368,
+      "day_rate": 0.3684,
+      "eff": 57.744,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 3.35,
+        "best_member_start": 0.7895,
+        "combo_worst_day": -3.404,
+        "member_worst_day": -3.491,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_euopp_5050_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "union_oppset_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 21.756,
+      "dd": 4.57,
+      "starts": "10/19",
+      "start_rate": 0.5263,
+      "day_rate": 0.4737,
+      "eff": 51.278,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 4.9,
+        "best_member_start": 0.7368,
+        "combo_worst_day": -2.915,
+        "member_worst_day": -3.491,
+        "keeps_book": false,
+        "safer_than_all": true,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_echoldvsse_5050_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "union_clk_hold_vs_sector_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 21.448,
+      "dd": 5.33,
+      "starts": "9/19",
+      "start_rate": 0.4737,
+      "day_rate": 0.4737,
+      "eff": 41.021,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 3.35,
+        "best_member_start": 0.7368,
+        "combo_worst_day": -2.545,
+        "member_worst_day": -3.491,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_eh_7030_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "union_hot_n4_h1"
+      ],
+      "weights": [
+        0.7,
+        0.3
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 21.12,
+      "dd": 5.84,
+      "starts": "13/19",
+      "start_rate": 0.6842,
+      "day_rate": 0.4737,
+      "eff": 56.486,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 7.28,
+        "best_member_start": 0.7368,
+        "combo_worst_day": -2.429,
+        "member_worst_day": -5.526,
+        "keeps_book": false,
+        "safer_than_all": true,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_seh_333_skip",
+      "members": [
+        "short_news_r_h3",
+        "union_e_fresh_h3",
+        "union_hot_n4_h1"
+      ],
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "pool": "shared",
+      "net": "skip",
+      "book": 20.929,
+      "dd": 4.62,
+      "starts": "14/19",
+      "start_rate": 0.7368,
+      "day_rate": 0.5789,
+      "eff": 63.717,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -2.541,
+        "member_worst_day": -5.526,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_seh_403525_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_e_fresh_h3",
+        "union_hot_n4_h1"
+      ],
+      "weights": [
+        0.4,
+        0.35,
+        0.25
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 20.878,
+      "dd": 4.43,
+      "starts": "14/19",
+      "start_rate": 0.7368,
+      "day_rate": 0.5789,
+      "eff": 62.847,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -2.923,
+        "member_worst_day": -5.526,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_ecflowcoil_5050_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "union_clk_flow_coil_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 20.792,
+      "dd": 4.77,
+      "starts": "2/19",
+      "start_rate": 0.1053,
+      "day_rate": 0.4211,
+      "eff": 32.804,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 7.28,
+        "best_member_start": 0.7368,
+        "combo_worst_day": -2.766,
+        "member_worst_day": -4.586,
+        "keeps_book": false,
+        "safer_than_all": true,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_seh_502525_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_e_fresh_h3",
+        "union_hot_n4_h1"
+      ],
+      "weights": [
+        0.5,
+        0.25,
+        0.25
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 20.735,
+      "dd": 3.25,
+      "starts": "16/19",
+      "start_rate": 0.8421,
+      "day_rate": 0.5789,
+      "eff": 65.732,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -2.362,
+        "member_worst_day": -5.526,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_seh_601525_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_e_fresh_h3",
+        "union_hot_n4_h1"
+      ],
+      "weights": [
+        0.6,
+        0.15,
+        0.25
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 20.202,
+      "dd": 1.74,
+      "starts": "16/19",
+      "start_rate": 0.8421,
+      "day_rate": 0.6316,
+      "eff": 66.069,
+      "both_halves": true,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -1.476,
+        "member_worst_day": -5.526,
+        "keeps_book": false,
+        "safer_than_all": true,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_seh_451540_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_e_fresh_h3",
+        "union_hot_n4_h1"
+      ],
+      "weights": [
+        0.45,
+        0.15,
+        0.4
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 19.341,
+      "dd": 3.52,
+      "starts": "14/19",
+      "start_rate": 0.7368,
+      "day_rate": 0.5789,
+      "eff": 62.304,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -1.793,
+        "member_worst_day": -5.526,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_seh_333_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_e_fresh_h3",
+        "union_hot_n4_h1"
+      ],
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 19.309,
+      "dd": 4.65,
+      "starts": "14/19",
+      "start_rate": 0.7368,
+      "day_rate": 0.5263,
+      "eff": 61.56,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -2.586,
+        "member_worst_day": -5.526,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_seh_333_weather",
+      "members": [
+        "short_news_r_h3",
+        "union_e_fresh_h3",
+        "union_hot_n4_h1"
+      ],
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "pool": "shared",
+      "net": "weather",
+      "book": 19.309,
+      "dd": 4.65,
+      "starts": "14/19",
+      "start_rate": 0.7368,
+      "day_rate": 0.5263,
+      "eff": 61.56,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -2.586,
+        "member_worst_day": -5.526,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_eh_5050_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "union_hot_n4_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 18.931,
+      "dd": 6.62,
+      "starts": "8/19",
+      "start_rate": 0.4211,
+      "day_rate": 0.4211,
+      "eff": 39.49,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 7.28,
+        "best_member_start": 0.7368,
+        "combo_worst_day": -2.172,
+        "member_worst_day": -5.526,
+        "keeps_book": false,
+        "safer_than_all": true,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_ef_7030_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "flatten_h5"
+      ],
+      "weights": [
+        0.7,
+        0.3
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 16.833,
+      "dd": 4.87,
+      "starts": "11/19",
+      "start_rate": 0.5789,
+      "day_rate": 0.6316,
+      "eff": 55.453,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 6.43,
+        "best_member_start": 0.7368,
+        "combo_worst_day": -3.364,
+        "member_worst_day": -3.491,
+        "keeps_book": false,
+        "safer_than_all": true,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_eh_3070_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "union_hot_n4_h1"
+      ],
+      "weights": [
+        0.3,
+        0.7
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 16.762,
+      "dd": 8.71,
+      "starts": "8/19",
+      "start_rate": 0.4211,
+      "day_rate": 0.4737,
+      "eff": 40.23,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 7.28,
+        "best_member_start": 0.7368,
+        "combo_worst_day": -3.292,
+        "member_worst_day": -5.526,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_se_5050_split",
+      "members": [
+        "short_news_r_h3",
+        "union_e_fresh_h3"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "split",
+      "net": "priority",
+      "book": 15.889,
+      "dd": 3.14,
+      "starts": "16/19",
+      "start_rate": 0.8421,
+      "day_rate": 0.6316,
+      "eff": 63.165,
+      "both_halves": true,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -1.421,
+        "member_worst_day": -3.491,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_seh_333_split",
+      "members": [
+        "short_news_r_h3",
+        "union_e_fresh_h3",
+        "union_hot_n4_h1"
+      ],
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "pool": "split",
+      "net": "priority",
+      "book": 15.787,
+      "dd": 4.06,
+      "starts": "13/19",
+      "start_rate": 0.6842,
+      "day_rate": 0.5263,
+      "eff": 59.555,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -1.216,
+        "member_worst_day": -5.526,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_form_efrh1jovogrh1_5050_shared",
+      "members": [
+        "union_e_fresh_h1",
+        "union_join_vol_green_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 14.947,
+      "dd": 4.56,
+      "starts": "15/19",
+      "start_rate": 0.7895,
+      "day_rate": 0.5263,
+      "eff": 63.117,
+      "both_halves": true,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 15.459,
+        "safest_member_dd": 4.29,
+        "best_member_start": 0.8421,
+        "combo_worst_day": -3.209,
+        "member_worst_day": -4.021,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_je1_5050_shared",
+      "members": [
+        "union_join_vol_green_h1",
+        "union_e_fresh_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 14.947,
+      "dd": 4.56,
+      "starts": "15/19",
+      "start_rate": 0.7895,
+      "day_rate": 0.5263,
+      "eff": 63.117,
+      "both_halves": true,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 15.459,
+        "safest_member_dd": 4.29,
+        "best_member_start": 0.8421,
+        "combo_worst_day": -3.209,
+        "member_worst_day": -4.021,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_her_5050_shared",
+      "members": [
+        "union_hot_n4_h1",
+        "union_earn_react_h3"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 14.109,
+      "dd": 5.29,
+      "starts": "7/19",
+      "start_rate": 0.3684,
+      "day_rate": 0.4737,
+      "eff": 35.85,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 19.524,
+        "safest_member_dd": 7.64,
+        "best_member_start": 0.4211,
+        "combo_worst_day": -2.579,
+        "member_worst_day": -5.526,
+        "keeps_book": false,
+        "safer_than_all": true,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_he1_5050_shared",
+      "members": [
+        "union_hot_n4_h1",
+        "union_e_fresh_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 13.996,
+      "dd": 5.86,
+      "starts": "8/19",
+      "start_rate": 0.4211,
+      "day_rate": 0.5789,
+      "eff": 46.386,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 19.524,
+        "safest_member_dd": 4.29,
+        "best_member_start": 0.8421,
+        "combo_worst_day": -2.729,
+        "member_worst_day": -5.526,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_hn_7030_shared",
+      "members": [
+        "union_hot_n4_h1",
+        "union_news_g_h1"
+      ],
+      "weights": [
+        0.7,
+        0.3
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 13.946,
+      "dd": 7.58,
+      "starts": "8/19",
+      "start_rate": 0.4211,
+      "day_rate": 0.5789,
+      "eff": 48.043,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 19.524,
+        "safest_member_dd": 3.35,
+        "best_member_start": 0.7895,
+        "combo_worst_day": -3.306,
+        "member_worst_day": -5.526,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_fse_333_shared",
+      "members": [
+        "flatten_h5",
+        "short_news_r_h3",
+        "union_e_fresh_h3"
+      ],
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 13.275,
+      "dd": 4.85,
+      "starts": "6/19",
+      "start_rate": 0.3158,
+      "day_rate": 0.7368,
+      "eff": 42.026,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -2.936,
+        "member_worst_day": -3.491,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_seh_502525_split",
+      "members": [
+        "short_news_r_h3",
+        "union_e_fresh_h3",
+        "union_hot_n4_h1"
+      ],
+      "weights": [
+        0.5,
+        0.25,
+        0.25
+      ],
+      "pool": "split",
+      "net": "priority",
+      "book": 12.842,
+      "dd": 3.17,
+      "starts": "13/19",
+      "start_rate": 0.6842,
+      "day_rate": 0.5263,
+      "eff": 58.891,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -0.944,
+        "member_worst_day": -5.526,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_ne1_5050_shared",
+      "members": [
+        "union_news_g_h1",
+        "union_e_fresh_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 12.238,
+      "dd": 4.18,
+      "starts": "14/19",
+      "start_rate": 0.7368,
+      "day_rate": 0.4737,
+      "eff": 61.168,
+      "both_halves": true,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 15.459,
+        "safest_member_dd": 3.35,
+        "best_member_start": 0.8421,
+        "combo_worst_day": -3.802,
+        "member_worst_day": -4.021,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_ef_5050_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "flatten_h5"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 12.153,
+      "dd": 5.26,
+      "starts": "5/19",
+      "start_rate": 0.2632,
+      "day_rate": 0.6316,
+      "eff": 37.02,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 6.43,
+        "best_member_start": 0.7368,
+        "combo_worst_day": -3.184,
+        "member_worst_day": -3.491,
+        "keeps_book": false,
+        "safer_than_all": true,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_fe_5050_shared",
+      "members": [
+        "flatten_h5",
+        "union_e_fresh_h3"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 12.153,
+      "dd": 5.26,
+      "starts": "5/19",
+      "start_rate": 0.2632,
+      "day_rate": 0.6316,
+      "eff": 37.02,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 6.43,
+        "best_member_start": 0.7368,
+        "combo_worst_day": -3.184,
+        "member_worst_day": -3.491,
+        "keeps_book": false,
+        "safer_than_all": true,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_fes_403030_shared",
+      "members": [
+        "flatten_h5",
+        "union_e_fresh_h3",
+        "short_news_r_h3"
+      ],
+      "weights": [
+        0.4,
+        0.3,
+        0.3
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 11.67,
+      "dd": 5.36,
+      "starts": "6/19",
+      "start_rate": 0.3158,
+      "day_rate": 0.6316,
+      "eff": 39.458,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -2.845,
+        "member_worst_day": -3.491,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_hj_5050_shared",
+      "members": [
+        "union_hot_n4_h1",
+        "union_join_vol_green_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 11.394,
+      "dd": 6.57,
+      "starts": "11/19",
+      "start_rate": 0.5789,
+      "day_rate": 0.4737,
+      "eff": 57.341,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 19.524,
+        "safest_member_dd": 7.09,
+        "best_member_start": 0.7895,
+        "combo_worst_day": -3.218,
+        "member_worst_day": -5.526,
+        "keeps_book": false,
+        "safer_than_all": true,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_hn_5050_shared",
+      "members": [
+        "union_hot_n4_h1",
+        "union_news_g_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 11.323,
+      "dd": 5.79,
+      "starts": "8/19",
+      "start_rate": 0.4211,
+      "day_rate": 0.5263,
+      "eff": 46.975,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 19.524,
+        "safest_member_dd": 3.35,
+        "best_member_start": 0.7895,
+        "combo_worst_day": -2.383,
+        "member_worst_day": -5.526,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_sf_3070_shared",
+      "members": [
+        "short_news_r_h3",
+        "flatten_h5"
+      ],
+      "weights": [
+        0.3,
+        0.7
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 10.405,
+      "dd": 8.29,
+      "starts": "5/19",
+      "start_rate": 0.2632,
+      "day_rate": 0.6316,
+      "eff": 42.438,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 10.541,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -4.434,
+        "member_worst_day": -3.422,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": false,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_hn_3070_shared",
+      "members": [
+        "union_hot_n4_h1",
+        "union_news_g_h1"
+      ],
+      "weights": [
+        0.3,
+        0.7
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 9.679,
+      "dd": 4.43,
+      "starts": "8/19",
+      "start_rate": 0.4211,
+      "day_rate": 0.5789,
+      "eff": 48.264,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 19.524,
+        "safest_member_dd": 3.35,
+        "best_member_start": 0.7895,
+        "combo_worst_day": -2.858,
+        "member_worst_day": -5.526,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_fer_5050_shared",
+      "members": [
+        "flatten_h5",
+        "union_earn_react_h3"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 9.051,
+      "dd": 5.28,
+      "starts": "2/19",
+      "start_rate": 0.1053,
+      "day_rate": 0.5789,
+      "eff": 27.866,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 18.623,
+        "safest_member_dd": 6.43,
+        "best_member_start": 0.4211,
+        "combo_worst_day": -3.325,
+        "member_worst_day": -4.068,
+        "keeps_book": false,
+        "safer_than_all": true,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_scextvetohh_5050_shared",
+      "members": [
+        "short_clk_ext_veto_h3",
+        "union_hot_n4_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 8.297,
+      "dd": 4.81,
+      "starts": "7/19",
+      "start_rate": 0.3684,
+      "day_rate": 0.4737,
+      "eff": 39.793,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 19.524,
+        "safest_member_dd": 10.53,
+        "best_member_start": 0.5263,
+        "combo_worst_day": -3.102,
+        "member_worst_day": -5.971,
+        "keeps_book": false,
+        "safer_than_all": true,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_jf_5050_shared",
+      "members": [
+        "union_join_vol_green_h1",
+        "flatten_h5"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 8.066,
+      "dd": 8.32,
+      "starts": "1/19",
+      "start_rate": 0.0526,
+      "day_rate": 0.6842,
+      "eff": 35.829,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 10.541,
+        "safest_member_dd": 6.43,
+        "best_member_start": 0.7895,
+        "combo_worst_day": -3.283,
+        "member_worst_day": -3.601,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_scrupcoilh_5050_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_clk_r_up_coil_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 8.021,
+      "dd": 2.16,
+      "starts": "17/19",
+      "start_rate": 0.8947,
+      "day_rate": 0.6316,
+      "eff": 75.013,
+      "both_halves": true,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 8.021,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -1.498,
+        "member_worst_day": -1.498,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": true,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_nf_5050_shared",
+      "members": [
+        "union_news_g_h1",
+        "flatten_h5"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 7.889,
+      "dd": 7.82,
+      "starts": "3/19",
+      "start_rate": 0.1579,
+      "day_rate": 0.5789,
+      "eff": 38.138,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 10.541,
+        "safest_member_dd": 3.35,
+        "best_member_start": 0.7895,
+        "combo_worst_day": -3.526,
+        "member_worst_day": -3.422,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": false,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_ef_3070_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "flatten_h5"
+      ],
+      "weights": [
+        0.3,
+        0.7
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 7.747,
+      "dd": 6.64,
+      "starts": "5/19",
+      "start_rate": 0.2632,
+      "day_rate": 0.6316,
+      "eff": 37.523,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 6.43,
+        "best_member_start": 0.7368,
+        "combo_worst_day": -2.711,
+        "member_worst_day": -3.491,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_sn_7030_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_news_g_h1"
+      ],
+      "weights": [
+        0.7,
+        0.3
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 7.497,
+      "dd": 2.56,
+      "starts": "17/19",
+      "start_rate": 0.8947,
+      "day_rate": 0.6842,
+      "eff": 69.65,
+      "both_halves": true,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 8.021,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -1.932,
+        "member_worst_day": -3.118,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": true,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_ecfreshcat_5050_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "union_clk_fresh_cat_coil_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 7.388,
+      "dd": 5.29,
+      "starts": "5/19",
+      "start_rate": 0.2632,
+      "day_rate": 0.4737,
+      "eff": 30.768,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 7.28,
+        "best_member_start": 0.7368,
+        "combo_worst_day": -2.984,
+        "member_worst_day": -3.491,
+        "keeps_book": false,
+        "safer_than_all": true,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_scholdvsse_5050_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_clk_hold_vs_sector_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 7.114,
+      "dd": 3.63,
+      "starts": "17/19",
+      "start_rate": 0.8947,
+      "day_rate": 0.5789,
+      "eff": 67.076,
+      "both_halves": true,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 8.021,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -3.627,
+        "member_worst_day": -2.537,
+        "keeps_book": true,
+        "safer_than_all": false,
+        "start_ok": true,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": false,
+        "both_halves": true,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_scnegweakfh_5050_shared",
+      "members": [
+        "short_clk_neg_weak_fail_h3",
+        "union_hot_n4_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 6.861,
+      "dd": 10.42,
+      "starts": "3/19",
+      "start_rate": 0.1579,
+      "day_rate": 0.5789,
+      "eff": 38.388,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 19.524,
+        "safest_member_dd": 10.53,
+        "best_member_start": 0.4211,
+        "combo_worst_day": -6.371,
+        "member_worst_day": -5.526,
+        "keeps_book": false,
+        "safer_than_all": true,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": false,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_scextvetohe_5050_shared",
+      "members": [
+        "short_clk_ext_veto_h3",
+        "union_e_fresh_h3"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 6.758,
+      "dd": 8.47,
+      "starts": "9/19",
+      "start_rate": 0.4737,
+      "day_rate": 0.5263,
+      "eff": 38.037,
+      "both_halves": true,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 7.28,
+        "best_member_start": 0.7368,
+        "combo_worst_day": -6.154,
+        "member_worst_day": -5.971,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": false,
+        "both_halves": true,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_hf_5050_shared",
+      "members": [
+        "union_hot_n4_h1",
+        "flatten_h5"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 6.072,
+      "dd": 9.57,
+      "starts": "5/19",
+      "start_rate": 0.2632,
+      "day_rate": 0.5789,
+      "eff": 41.989,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 19.524,
+        "safest_member_dd": 6.43,
+        "best_member_start": 0.4211,
+        "combo_worst_day": -2.876,
+        "member_worst_day": -5.526,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_secfreshcat_333_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_e_fresh_h3",
+        "union_clk_fresh_cat_coil_h1"
+      ],
+      "weights": [
+        0.3333333333333333,
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 5.215,
+      "dd": 7.79,
+      "starts": "1/19",
+      "start_rate": 0.0526,
+      "day_rate": 0.4737,
+      "eff": 28.076,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -4.471,
+        "member_worst_day": -3.491,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": false,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_fe1_5050_shared",
+      "members": [
+        "flatten_h5",
+        "union_e_fresh_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 4.412,
+      "dd": 6.78,
+      "starts": "3/19",
+      "start_rate": 0.1579,
+      "day_rate": 0.6316,
+      "eff": 35.617,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 15.459,
+        "safest_member_dd": 4.29,
+        "best_member_start": 0.8421,
+        "combo_worst_day": -3.614,
+        "member_worst_day": -4.021,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_fh_7030_shared",
+      "members": [
+        "flatten_h5",
+        "union_hot_n4_h1"
+      ],
+      "weights": [
+        0.7,
+        0.3
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 3.513,
+      "dd": 10.39,
+      "starts": "2/19",
+      "start_rate": 0.1053,
+      "day_rate": 0.6316,
+      "eff": 37.724,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 19.524,
+        "safest_member_dd": 6.43,
+        "best_member_start": 0.4211,
+        "combo_worst_day": -3.239,
+        "member_worst_day": -5.526,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_nj_5050_shared",
+      "members": [
+        "union_news_g_h1",
+        "union_join_vol_green_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 2.977,
+      "dd": 4.23,
+      "starts": "15/19",
+      "start_rate": 0.7895,
+      "day_rate": 0.4211,
+      "eff": 59.132,
+      "both_halves": true,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 9.001,
+        "safest_member_dd": 3.35,
+        "best_member_start": 0.7895,
+        "combo_worst_day": -2.988,
+        "member_worst_day": -3.601,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": true,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": true,
+        "both_halves": true,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_scnegweakfe_5050_shared",
+      "members": [
+        "short_clk_neg_weak_fail_h3",
+        "union_e_fresh_h3"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 2.332,
+      "dd": 12.26,
+      "starts": "1/19",
+      "start_rate": 0.0526,
+      "day_rate": 0.5789,
+      "eff": 31.191,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 7.28,
+        "best_member_start": 0.7368,
+        "combo_worst_day": -4.115,
+        "member_worst_day": -3.931,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": false,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_eer_5050_shared",
+      "members": [
+        "union_e_fresh_h3",
+        "union_earn_react_h3"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": 2.095,
+      "dd": 19.44,
+      "starts": "8/19",
+      "start_rate": 0.4211,
+      "day_rate": 0.4737,
+      "eff": 29.035,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 26.128,
+        "safest_member_dd": 7.28,
+        "best_member_start": 0.7368,
+        "combo_worst_day": -13.389,
+        "member_worst_day": -4.068,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": false,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_scnr7momh1_5050_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_clk_nr7_mom_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": -2.099,
+      "dd": 10.65,
+      "starts": "0/19",
+      "start_rate": 0.0,
+      "day_rate": 0.5263,
+      "eff": 33.558,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 8.021,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -7.978,
+        "member_worst_day": -5.494,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": false,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_scfreshcat_5050_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_clk_fresh_cat_coil_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": -4.22,
+      "dd": 13.68,
+      "starts": "0/19",
+      "start_rate": 0.0,
+      "day_rate": 0.6316,
+      "eff": 31.972,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 8.021,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -5.521,
+        "member_worst_day": -3.385,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": false,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_scflowcoil_5050_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_clk_flow_coil_h1"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": -9.281,
+      "dd": 13.85,
+      "starts": "0/19",
+      "start_rate": 0.0,
+      "day_rate": 0.5263,
+      "eff": 32.928,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 8.021,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -7.557,
+        "member_worst_day": -4.586,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": false,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_e1er_5050_shared",
+      "members": [
+        "union_e_fresh_h1",
+        "union_earn_react_h3"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": -12.521,
+      "dd": 19.97,
+      "starts": "4/19",
+      "start_rate": 0.2105,
+      "day_rate": 0.2105,
+      "eff": 17.45,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 18.623,
+        "safest_member_dd": 4.29,
+        "best_member_start": 0.8421,
+        "combo_worst_day": -9.954,
+        "member_worst_day": -4.068,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": false,
+        "both_halves": false,
+        "outperforms": false
+      }
+    },
+    {
+      "name": "combo_scinsiderc_5050_shared",
+      "members": [
+        "short_news_r_h3",
+        "union_clk_insider_cash_stab_h3"
+      ],
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "pool": "shared",
+      "net": "priority",
+      "book": -12.601,
+      "dd": 17.01,
+      "starts": "0/19",
+      "start_rate": 0.0,
+      "day_rate": 0.4211,
+      "eff": 30.694,
+      "both_halves": false,
+      "outperforms": false,
+      "audit_ok": true,
+      "scorecard": {
+        "best_member_book": 8.021,
+        "safest_member_dd": 2.16,
+        "best_member_start": 0.8947,
+        "combo_worst_day": -7.561,
+        "member_worst_day": -4.533,
+        "keeps_book": false,
+        "safer_than_all": false,
+        "start_ok": false,
+        "richer": false,
+        "beats_all_book": false,
+        "best_of_both": false,
+        "worse_day_ok": false,
+        "both_halves": false,
+        "outperforms": false
+      }
+    }
+  ]
+}
