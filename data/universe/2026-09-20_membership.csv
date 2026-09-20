@@ -1519,7 +1519,7 @@ DIBS,Communication Services,Internet Content & Information,micro,rut,US,low,mid,
 DIN,Consumer Cyclical,Restaurants,small,rut,US,mid,mid,low,hot,mid,thin,unknown,value,downtrend,neutral,low,past,inline,hold,,0,oversold,below,down,high,cheap,slow,unknown,some
 DINO,Energy,Oil & Gas Refining & Marketing,large,none,US,low,mid,high,hot,mid,thin,mid,growth,uptrend,extended,top,past,beat,hold,,0,overbought,above,up,high,cheap,fast,good,some
 DIOD,Technology,Semiconductors,mid,rut,US,high,low,mid,normal,high,thin,low,growth,uptrend,neutral,mid,past,beat,buy,,0,mid,above,down,high,cheap,fast,thin,unknown
-DIS,Communication Services,Entertainment,large,djia|sp500,US,high,low,high,hot,mid,thin,mid,value,downtrend,neutral,mid,past,beat,strong_buy,theme:ai_capex,1,mid,below,flat,high,fair,slow,thin,some
+DIS,Communication Services,Entertainment,large,djia|sp500,US,high,low,high,hot,mid,thin,mid,value,downtrend,neutral,mid,past,beat,strong_buy,,0,mid,below,flat,high,fair,slow,thin,some
 DIT,Consumer Defensive,Food Distribution,micro,none,US,low,low,low,quiet,high,thin,high,blend,downtrend,neutral,deep_low,past,unknown,unknown,,0,mid,below,down,low,unknown,slow,thin,some
 DJCO,Technology,Software - Application,small,rut,US,mid,mid,mid,hot,mid,no,low,growth,uptrend,neutral,top,past,unknown,unknown,,0,mid,above,up,high,unknown,fast,none,unknown
 DJT,Communication Services,Internet Content & Information,mid,rut,US,high,mid,mid,normal,mid,no,mid,growth,downtrend,neutral,deep_low,past,unknown,unknown,theme:crypto,1,mid,below,flat,mid,unknown,fast,none,unknown
