@@ -71,6 +71,50 @@ def test_select_priority(tmp_path, monkeypatch):
     assert roles["COP"] == "action_top"
 
 
+def test_select_reserves_action_top_when_overrides_fill_the_book(tmp_path, monkeypatch):
+    """Eight oil/coal captains used to eat all eight dossier seats."""
+    heat_dir = tmp_path / "map_heat"
+    news_dir = tmp_path / "news"
+    heat_dir.mkdir()
+    news_dir.mkdir()
+    date = "2026-09-18"
+    captains = ["NE", "RIG", "SLB", "BKR", "KGS", "WHD", "CNR", "BTU"]
+    (heat_dir / f"{date}_map_heat.json").write_text(json.dumps({
+        "overrides": [{
+            "industry": "Oil & Gas Drilling",
+            "spx_leaders": [{"ticker": t} for t in captains],
+            "rut_leaders": [],
+        }],
+    }), encoding="utf-8")
+    (heat_dir / f"{date}_research.json").write_text(json.dumps({
+        "cards": [{
+            "action": "OVERRIDE",
+            "industry": "Oil & Gas Drilling",
+            "captains": [{"ticker": t} for t in captains],
+        }],
+    }), encoding="utf-8")
+    (news_dir / f"{date}_actions.json").write_text(json.dumps({
+        "ticker_actions": [
+            {"ticker": "COP", "side": "buy", "net": 6.8},
+            {"ticker": "EOG", "side": "buy", "net": 4.2},
+            {"ticker": "RRC", "side": "buy", "net": 3.1},
+            {"ticker": "SDGR", "side": "buy", "net": 2.4},
+        ]
+    }), encoding="utf-8")
+    monkeypatch.setattr(cd, "HEAT_DIR", heat_dir)
+    monkeypatch.setattr(cd, "NEWS_DIR", news_dir)
+
+    assert cd.override_fill_cap(8) == 5
+    picked = cd.select_targets(date, max_n=8)
+    roles = {p["ticker"]: p["role"] for p in picked}
+    assert len(picked) == 8
+    assert sum(1 for r in roles.values() if r == "override_captain") == 5
+    assert roles.get("COP") == "action_top"
+    assert roles.get("EOG") == "action_top"
+    assert roles.get("RRC") == "action_top"
+    assert "SDGR" not in roles  # only three reserved seats
+
+
 def test_apply_to_actions(tmp_path, monkeypatch):
     news_dir = tmp_path / "news"
     news_dir.mkdir()

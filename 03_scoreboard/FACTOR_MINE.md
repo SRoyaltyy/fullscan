@@ -343,3 +343,17 @@ Action blotters: [FACTOR_MINE_ACTION.md](FACTOR_MINE_ACTION.md).
 | `union_r_up_h1` *(thin)* | long | 1 | leftover | list | none | — | 0% | 0/26 | +0.00 | 0 | 0 | — | — | +0.00 | +0.00 | PASS | -15.0 |
 | `union_r_up_h3` *(thin)* | long | 3 | leftover | list | none | — | 0% | 0/26 | +0.00 | 0 | 0 | — | — | +0.00 | +0.00 | PASS | -15.0 |
 | `union_clk_insider_cash_stab_h3` *(thin)* | long | 3 | leftover | list | none | 17% | 4% | 0/26 | -7.15 | 0 | 4 | +0.08 | -6.82 | -12.31 | -16.14 | PASS | -27.687 |
+
+## Overnight / hold-up splice (leak-free calendar)
+
+Spliced onto the 2026-09-19 remine so Pages shows the researched books.
+Same $10k / 09:30 / leftover / fees / hard-red sit rules. Not live.
+
+| Strategy | Side | H | Book% | Trades | Hit | MaxDD | Starts YES |
+|---|---|---:|---:|---:|---:|---:|---:|
+| `union_hot_n4_holdup` | long | 1 | 56.525 | 74 | 0.6571 | 6.89 | 25/26 |
+| `combo_oh_5050_shared` | mix | 5 | 18.612 | 114 | 0.5455 | 9.08 | 22/26 |
+| `overnight_mega_h2` | long | 2 | 0.504 | 6 | 0.3333 | 5.43 | 7/26 |
+| `overnight_mega_h1` | long | 1 | -0.266 | 20 | 0.7 | 10.51 | 1/26 |
+| `overnight_mega_green_h1` | long | 1 | -3.376 | 16 | 0.75 | 11.22 | 1/26 |
+| `overnight_h1` | long | 1 | -19.036 | 98 | 0.4694 | 21.22 | 0/26 |

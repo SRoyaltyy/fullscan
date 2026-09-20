@@ -16,6 +16,50 @@ def test_earnings_parse_amc_and_bmo() -> None:
     assert hm == 830
 
 
+def test_next_session_walks_calendar() -> None:
+    cal = ["2026-09-16", "2026-09-17", "2026-09-18"]
+    assert gc.next_session(cal, "2026-09-16") == "2026-09-17"
+    assert gc.next_session(cal, "2026-09-18") is None
+    assert gc.next_session(cal, "2026-09-15") == "2026-09-16"
+
+
+def test_overnight_scheduled_is_prior_calendar_not_reaction() -> None:
+    """AMC today + BMO next from the prior export; already-printed BMO stays off."""
+    import pandas as pd
+    df = pd.DataFrame([
+        {"Ticker": "AVGO", "Earnings Date": "9/2/2026 4:30:00 PM",
+         "Market Cap": 1_743_272, "Average Volume": 1_000_000,
+         "Volume": 2_000_000, "Industry": "Semiconductors", "Change": 0.4},
+        {"Ticker": "CIEN", "Earnings Date": "9/3/2026 8:30:00 AM",
+         "Market Cap": 53_524, "Average Volume": 1_000_000,
+         "Volume": 1_500_000, "Industry": "Communication Equipment",
+         "Change": -0.2},
+        {"Ticker": "MDT", "Earnings Date": "9/2/2026 8:30:00 AM",
+         "Market Cap": 120_000, "Average Volume": 2_000_000,
+         "Volume": 2_000_000, "Industry": "Medical Devices", "Change": 0.1},
+        {"Ticker": "TINY", "Earnings Date": "9/2/2026 4:30:00 PM",
+         "Market Cap": 40, "Average Volume": 10,
+         "Volume": 100, "Industry": "Biotechnology", "Change": 8.0},
+        {"Ticker": "SNOW", "Earnings Date": "9/2/2026",
+         "Market Cap": 113_000, "Average Volume": 3_000_000,
+         "Volume": 3_000_000, "Industry": "Software", "Change": 0.3},
+    ])
+    names = gc.overnight_scheduled(
+        "2026-09-01", "2026-09-02", "2026-09-03", df=df)
+    assert "AVGO" in names
+    assert "CIEN" in names
+    assert "MDT" not in names  # BMO today already printed — that's earn_react
+    assert "TINY" not in names  # not liquid
+    assert "SNOW" not in names  # date-only on *today* could already be BMO
+    react = gc.earnings_reaction("2026-09-01", "2026-09-02", df=df)
+    assert "MDT" in react
+    assert "AVGO" not in react  # AMC has not printed yet
+    mega = gc.overnight_scheduled(
+        "2026-09-01", "2026-09-02", "2026-09-03", df=df,
+        min_mcap_m=gc.OVERNIGHT_MEGA_MCAP_M)
+    assert mega == ["AVGO", "CIEN"]
+
+
 def test_814_earnings_reaction_hits_known_gainers() -> None:
     names = set(gc.earnings_reaction("2026-08-13", "2026-08-14"))
     assert names, names
@@ -83,8 +127,10 @@ def test_html_has_captured_chip() -> None:
 
 if __name__ == "__main__":
     test_earnings_parse_amc_and_bmo()
+    test_next_session_walks_calendar()
+    test_overnight_scheduled_is_prior_calendar_not_reaction()
     test_814_earnings_reaction_hits_known_gainers()
     test_814_watchlist_captures_earn_rip_not_asts_book()
     test_watchlist_one_day_cal_still_reads_prior_export()
     test_html_has_captured_chip()
-    print("5 gainer-capture tests passed")
+    print("7 gainer-capture tests passed")

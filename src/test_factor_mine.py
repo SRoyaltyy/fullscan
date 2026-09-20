@@ -1142,6 +1142,118 @@ def test_build_mornings_covers_closed_session_past_lookback() -> None:
     assert morn["2026-09-11"]["hard_red"] is False
 
 
+def test_candidates_need_lookback_calendar() -> None:
+    """A one-day emit window still fills yday / probable / hot via lookback."""
+    from unittest import mock
+
+    with mock.patch.object(
+        fm.gc, "yesterday_gainers",
+        side_effect=lambda prior, top_n=25: (["SDGR"] if prior else []),
+    ), mock.patch.object(fm.gc, "yesterday_movers", return_value=[]), \
+            mock.patch.object(fm.gc, "earnings_reaction", return_value=[]), \
+            mock.patch.object(fm.gc, "overnight_scheduled", return_value=[]), \
+            mock.patch.object(fm.ohlc, "continuation",
+                              side_effect=lambda prior, date, top_n=8: (
+                                  ["ARQT"] if prior else [])), \
+            mock.patch.object(fm.ohlc, "liquid_hot",
+                              side_effect=lambda prior, date, top_n=30: (
+                                  ["ILMN"] if prior else [])):
+        one = fm._candidates("2026-09-18", ["2026-09-18"],
+                             {"tickers": ["FLA"]}, {})
+        assert one["flatten"] == ["FLA"]
+        assert one["yday_gainer"] == ["SDGR"]
+        assert one["probable"] == ["ARQT"]
+        assert one["ohlc_hot"] == ["ILMN"]
+        assert one["overnight"] == []
+        assert one["overnight_mega"] == []
+        full = fm._candidates(
+            "2026-09-18", ["2026-09-17", "2026-09-18"],
+            {"tickers": ["FLA"]}, {},
+        )
+        assert full["yday_gainer"] == ["SDGR"]
+        assert full["probable"] == ["ARQT"]
+        assert full["ohlc_hot"] == ["ILMN"]
+
+
+def test_stamp_overnight_tags_existing_and_skips_attach_when_listed() -> None:
+    from unittest import mock
+    panel = {
+        "from_date": "2026-09-02",
+        "to_date": "2026-09-03",
+        "session_dates": ["2026-09-02", "2026-09-03"],
+        "rows": [
+            _row("2026-09-02", "AVGO", sources=["union"], src_rank=0),
+            _row("2026-09-03", "BBB", sources=["union"], src_rank=0),
+        ],
+        "by_date": None,
+    }
+    with mock.patch.object(fm, "panel_lookback_calendar",
+                           return_value=["2026-09-01", "2026-09-02",
+                                         "2026-09-03"]), \
+            mock.patch.object(fm, "_session_map",
+                              return_value=({}, [])), \
+            mock.patch.object(fm.gc, "overnight_scheduled",
+                              side_effect=lambda prior, date, nxt,
+                              min_mcap_m=None, **kw: (
+                                  ["AVGO"] if date == "2026-09-02"
+                                  and min_mcap_m else
+                                  ["AVGO", "TINY"] if date == "2026-09-02"
+                                  else [])):
+        out = fm.stamp_overnight_on_panel(panel, write=False)
+    avgo = next(r for r in out["rows"] if r["ticker"] == "AVGO")
+    assert "overnight" in avgo["sources"]
+    assert "overnight_mega" in avgo["sources"]
+    assert avgo["overnight_sched"] is True
+    # TINY was scheduled but no session card — not invented from Change%.
+    assert all(r["ticker"] != "TINY" for r in out["rows"])
+    assert out["overnight_stamp"]["tagged"] >= 1
+
+
+def test_panel_emit_keeps_lookback_off_the_row_list() -> None:
+    full = [
+        "2026-09-16", "2026-09-17", "2026-09-18",
+    ]
+    assert fm.panel_emit_dates(full, "2026-09-18", "2026-09-18") == [
+        "2026-09-18",
+    ]
+    prior = fm.feature_export_date(full, "2026-09-18")
+    assert prior == "2026-09-17"
+    assert fm.feature_export_date(["2026-09-18"], "2026-09-18") is None
+
+
+def test_merge_panel_days_replaces_only_the_window() -> None:
+    base = {
+        "from_date": "2026-08-13",
+        "to_date": "2026-09-18",
+        "session_dates": ["2026-09-15", "2026-09-18"],
+        "n_sessions": 2,
+        "n_rows": 2,
+        "rows": [
+            {"date": "2026-09-15", "ticker": "OLD", "src_rank": 0,
+             "sources": ["yday_gainer"]},
+            {"date": "2026-09-18", "ticker": "FLA", "src_rank": 0,
+             "sources": ["flatten"]},
+        ],
+        "by_date": {},
+    }
+    extra = {
+        "session_dates": ["2026-09-18"],
+        "rows": [
+            {"date": "2026-09-18", "ticker": "SDGR", "src_rank": 0,
+             "sources": ["yday_gainer"]},
+        ],
+        "by_date": {"2026-09-18": [
+            {"date": "2026-09-18", "ticker": "SDGR"},
+        ]},
+    }
+    out = fm.merge_panel_days(base, extra)
+    ticks = [(r["date"], r["ticker"]) for r in out["rows"]]
+    assert ("2026-09-15", "OLD") in ticks
+    assert ("2026-09-18", "SDGR") in ticks
+    assert ("2026-09-18", "FLA") not in ticks
+    assert out["n_rows"] == 2
+
+
 def test_live_panel_end_honors_explicit_open_to_date() -> None:
     from datetime import datetime
     from zoneinfo import ZoneInfo
@@ -1815,6 +1927,76 @@ def test_rank_w_gives_more_shares_to_first() -> None:
     assert abs(sum(rankw) - 100.0) < 1e-9
     half = fmb.split_budgets([{}, {}], 100.0, "half")
     assert abs(sum(half) - 50.0) < 1e-9
+
+
+def test_holdup_keeps_up_morning_lot_through_next_gap() -> None:
+    """S>0 entry on hold=1 holdup must still be held on the next session."""
+    from src import factor_mine_book as fmb
+    from src import paper_trade as pt
+    cal = ["2026-09-02", "2026-09-03", "2026-09-04"]
+    rows = [
+        _row("2026-09-02", "AAA", src_rank=0, ohlc_hot_score=9),
+        # Day-2/3 lists drop AAA so a hold=1 book would sell at the fat open.
+        _row("2026-09-03", "BBB", src_rank=0, ohlc_hot_score=9),
+        _row("2026-09-04", "BBB", src_rank=0, ohlc_hot_score=9),
+    ]
+    bars = {
+        ("AAA", "2026-09-02"): {"open": 10, "close": 10},
+        ("AAA", "2026-09-03"): {"open": 10.3, "close": 10.4},  # fat gap
+        ("AAA", "2026-09-04"): {"open": 10.4, "close": 10.2},
+        ("BBB", "2026-09-03"): {"open": 20, "close": 19},
+        ("BBB", "2026-09-04"): {"open": 19, "close": 19},
+    }
+    rec = fm.make_recipe(
+        "union_hot_n4_holdup", hold=1, top_n=1, rank="hot_score",
+        s_boost="holdup", forbid={"alarm": True})
+    book = fmb.simulate_book(
+        _panel(cal, rows), rec, bars=bars, fees=pt.load_fees(),
+        regime={"2026-09-02": {"predict_score": 2.25},
+                "2026-09-03": {"predict_score": -0.9},
+                "2026-09-04": {"predict_score": 2.0}})
+    sells = [t for t in book["trades"] if t.get("side") == "SELL"]
+    assert sells, book["trades"]
+    assert sells[0]["date"] == "2026-09-04", sells[0]
+    assert sells[0]["ticker"] == "AAA"
+    opens = [t for t in book["trades"]
+             if t.get("side") == "OPEN" and t["date"] == "2026-09-03"]
+    assert opens and "AAA×" in " ".join(opens[0].get("open_held") or [])
+    names = {r["name"] for r in fm.build_recipes()}
+    assert "union_hot_n4_holdup" in names
+    assert "overnight_mega_h1" in names
+    assert "overnight_h1" in names
+
+
+def test_overnight_hold1_harvests_next_open() -> None:
+    """Calendar AMC/BMO list bought at D 09:30 must sell at D+1 open."""
+    from src import factor_mine_book as fmb
+    from src import paper_trade as pt
+    cal = ["2026-09-02", "2026-09-03"]
+    rows = [
+        _row("2026-09-02", "AVGO", sources=["overnight", "overnight_mega"],
+             overnight_sched=True, src_rank=0),
+        _row("2026-09-03", "BBB", sources=["union"], src_rank=0),
+    ]
+    bars = {
+        ("AVGO", "2026-09-02"): {"open": 100, "close": 100},
+        ("AVGO", "2026-09-03"): {"open": 110, "close": 108},
+        ("BBB", "2026-09-03"): {"open": 10, "close": 10},
+    }
+    rec = fm.make_recipe(
+        "overnight_mega_h1", universe="overnight_mega", hold=1, top_n=8,
+        forbid={"alarm": True})
+    assert fm.matches(rows[0], rec)
+    assert not fm.matches(rows[1], rec)
+    book = fmb.simulate_book(
+        _panel(cal, rows), rec, bars=bars, fees=pt.load_fees(),
+        regime={"2026-09-02": {"predict_score": 1.5},
+                "2026-09-03": {"predict_score": 0.4}})
+    sells = [t for t in book["trades"] if t.get("side") == "SELL"]
+    assert sells, book["trades"]
+    assert sells[0]["date"] == "2026-09-03"
+    assert sells[0]["ticker"] == "AVGO"
+    assert abs(float(sells[0]["price"]) - 110) < 1e-6
 
 
 def test_sboost_more_names_on_good_s_still_cash_capped() -> None:
@@ -2590,6 +2772,8 @@ if __name__ == "__main__":
     test_audit_fails_on_unheld_sell_and_overspend()
     test_time_sell_exits_at_min_hold_even_if_listed()
     test_rank_w_gives_more_shares_to_first()
+    test_holdup_keeps_up_morning_lot_through_next_gap()
+    test_overnight_hold1_harvests_next_open()
     test_sboost_more_names_on_good_s_still_cash_capped()
     test_action_filters_size_sell_boost()
     test_dash_payload_ships_every_book_and_features_high_return()
@@ -2599,6 +2783,10 @@ if __name__ == "__main__":
     test_morning_s_falls_back_to_predict_file()
     test_morning_s_falls_back_to_weather_when_predict_missing()
     test_build_mornings_covers_closed_session_past_lookback()
+    test_candidates_need_lookback_calendar()
+    test_stamp_overnight_tags_existing_and_skips_attach_when_listed()
+    test_panel_emit_keeps_lookback_off_the_row_list()
+    test_merge_panel_days_replaces_only_the_window()
     test_live_panel_end_honors_explicit_open_to_date()
     test_extend_pack_through_adds_pending_start()
     test_payload_covers_session_and_land_closed_skips()
@@ -2640,4 +2828,4 @@ if __name__ == "__main__":
     test_js_bracket_take_inside_min_hold()
     from src.test_clock_b_tells import main as clock_b_main
     clock_b_main()
-    print("68 factor-mine tests passed")
+    print("factor-mine tests passed")

@@ -52,9 +52,14 @@ CONVICTION_BAD = 1
 CONVICTION_NET = 5
 CONVICTION_SHARE = 0.70
 SELLS = ("auto", "list", "time", "cut_loser", "trail")
-S_BOOSTS = ("auto", "none", "sizeup", "more_names", "both")
+S_BOOSTS = ("auto", "none", "sizeup", "more_names", "both", "holdup")
 BORROW_ANNUAL = 0.01
 GOOD_S = 5.0
+# S>0 entry lots hold through the next session(s). Fat C2C days in this
+# window were mostly the overnight gap — a hold=1 09:30 book cannot
+# harvest them. S is the morning weather, knowable at 09:30.
+HOLDUP_S = 0.0
+HOLDUP_SESS = 2  # entry night + next 09:30 (the fat-day gap)
 CUT_LOS = 0.03
 TRAIL_OFF = 0.05
 SIZEUP = 1.35
@@ -910,6 +915,17 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
             day_why.append(f"S={s:+.2f} more_names top_n={rec_day['top_n']}")
         if good_s and s_boost in ("sizeup", "both"):
             day_why.append(f"S={s:+.2f} sizeup x{SIZEUP:g}")
+        holdup = (
+            s_boost == "holdup"
+            and side == "long"
+            and s is not None
+            and float(s) > HOLDUP_S
+            and not hard_red
+        )
+        if holdup:
+            day_why.append(
+                f"S={float(s):+.2f} holdup min-hold {max(min_hold, HOLDUP_SESS)}"
+            )
 
         for t in list(pos):
             lot = pos[t]
@@ -924,15 +940,16 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
                 else:
                     lot["peak_px"] = min(float(lot.get("peak_px") or lot["entry_px"]), px)
                 lot["last_px"] = px
+            lot_min = int(lot.get("min_hold") or min_hold)
             do_sell, kind = lot_should_sell(
-                lot, held=held, min_hold=min_hold, early=early,
+                lot, held=held, min_hold=lot_min, early=early,
                 dropped=dropped, sell_mode=sell_mode, px=px, side=side,
                 take_pct=rec.get("take_pct"), stop_pct=rec.get("stop_pct"))
             if not do_sell:
-                if dropped and held < min_hold:
+                if dropped and held < lot_min:
                     skips.append({
                         "date": date, "ticker": t, "kind": "min_hold",
-                        "reason": f"dropped but min-hold {held}/{min_hold} sess — no sell",
+                        "reason": f"dropped but min-hold {held}/{lot_min} sess — no sell",
                     })
                 held_names.append(t)
                 continue
@@ -941,7 +958,7 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
                               "reason": "no 09:30 open — carry"})
                 held_names.append(t)
                 continue
-            reason = why_sell(t, held, min_hold, early,
+            reason = why_sell(t, held, lot_min, early,
                               rec.get("exit_when"), dropped, kind)
             eq_before = cash + mark(date, "open")
             fee = pt.order_fees(lot["shares"], px, "sell" if side == "long" else "buy", fees)
@@ -1028,6 +1045,7 @@ def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
                         "entry_date": date, "cost": cost, "fee_in": fee,
                         "notional": shares * px, "last_px": px, "peak_px": px,
                         "reason": reason,
+                        "min_hold": max(min_hold, HOLDUP_SESS) if holdup else min_hold,
                     }
                 else:
                     notional = shares * px

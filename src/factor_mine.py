@@ -93,7 +93,14 @@ WORKABLE_BAR = {
     "min_start": 0.50,
     "min_dollar_days": 0.40,
 }
-WORKABLE_ALWAYS = ("flatten_h5",)
+WORKABLE_ALWAYS = (
+    "flatten_h5",
+    "union_hot_n4_holdup",
+    "overnight_mega_h1",
+    "overnight_mega_h2",
+    "overnight_h1",
+    "combo_oh_5050_shared",
+)
 NEWS_POS = (
     "beat", "upgrade", "approv", "record high", "surge", "wins ",
     "raises", "buyback", "phase 3", "fda", "breakthrough",
@@ -114,6 +121,7 @@ INPUT_FIELDS = frozenset({
     "candle_score", "candle_capture", "candle_body_rg",
     "erd_earn_react", "erd_days_since_E", "erd_days_since_R",
     "erd_days_since_D", "erd_flag_E", "erd_flag_R",
+    "overnight_sched",
     "e_pol", "e_label",
     "rsi", "fv_rsi", "macd", "macd_sig", "macd_hist",
     "macd_cross_up", "macd_cross_down", "rsi_os", "rsi_ob",
@@ -384,7 +392,8 @@ def build_recipes() -> list[dict]:
     def add(**kw):
         recs.append(make_recipe(**kw))
 
-    universes = ("union", "flatten", "probable", "yday_gainer", "ohlc_hot")
+    universes = ("union", "flatten", "probable", "yday_gainer", "ohlc_hot",
+                 "overnight")
     for uni in universes:
         for hold in (1, 3, 5):
             add(name=f"{uni}_h{hold}", universe=uni, hold=hold,
@@ -409,6 +418,7 @@ def build_recipes() -> list[dict]:
         ("coil_off", {"ret_5_min": 0.0, "ret_5_max": 10.0,
                       "rvol_min": 0.7, "rvol_max": 2.2}),
         ("earn_react", {"earn_react": True}),
+        ("overnight", {"overnight": True}),
         ("e_fresh", {"days_since_E_max": 1, "flag_E_min": 0}),
         ("r_up", {"days_since_R_max": 5, "flag_R": 1}),
         ("break10", {"break_10": True}),
@@ -547,6 +557,18 @@ def build_recipes() -> list[dict]:
 
     add(name="union_hot_n4_h1", universe="union", hold=1, top_n=4,
         rank="hot_score", forbid={"alarm": True}, note="top 4 by hot")
+    add(name="union_hot_n4_holdup", universe="union", hold=1, top_n=4,
+        rank="hot_score", s_boost="holdup", forbid={"alarm": True},
+        note="hot4; S>0 lots stay through the next 09:30 so the overnight gap is in the book")
+    add(name="overnight_mega_h1", universe="overnight_mega", hold=1, top_n=8,
+        forbid={"alarm": True},
+        note="prior-calendar AMC-today / BMO-next, mcap≥$50B; hold 1 sells at next 09:30 so the print gap is in the book")
+    add(name="overnight_mega_h2", universe="overnight_mega", hold=2, top_n=8,
+        forbid={"alarm": True},
+        note="same mega calendar; hold 2 also keeps the session after the print")
+    add(name="overnight_mega_green_h1", universe="overnight_mega", hold=1,
+        top_n=8, require={"last_green": True}, forbid={"alarm": True},
+        note="mega calendar ∩ last bar green; still a print-night long, not a reaction")
     add(name="union_hot_n12_h1", universe="union", hold=1, top_n=12,
         rank="hot_score", forbid={"alarm": True}, note="top 12 by hot")
     add(name="union_cond_n4_h3", universe="union", hold=3, top_n=4,
@@ -678,6 +700,8 @@ _UNI_KID = {
     "probable": "yesterday's 'likely to keep moving' list",
     "yday_gainer": "yesterday's top liquid winners",
     "ohlc_hot": "names that looked hot on the prior price/volume tape",
+    "overnight": "names the prior Finviz calendar said report AMC today or BMO next session (print not in yet)",
+    "overnight_mega": "the same calendar list, kept only when prior-export mcap is at least $50B",
     "oppset": "Theme Radar Clock-B opportunity-set (T−1 gap + RelVol flagged; optional feed)",
     "combo": "several existing sleeves sharing one $10k book (each kid still uses its own 09:30 list)",
 }
@@ -729,6 +753,8 @@ def _gate_kid(key: str, val) -> str:
         return "the name broke its prior 10-session range"
     if key == "earn_react":
         return "the name is in an earnings-reaction window (just reported, we are trading the reaction — not today's print)"
+    if key == "overnight":
+        return "the prior Finviz calendar said this name reports AMC today or BMO next session (the print is still ahead; we buy today 09:30 to own the next open)"
     if key == "news_present":
         return "the news camera printed something (any color, not blank)"
     if key == "join_present":
@@ -911,6 +937,13 @@ def explain_recipe(rec: dict) -> dict:
         buy.append(
             "On a strong morning (S ≥ +5), spend 1.35× leftover and add 4 extra names — still cash-capped."
         )
+    elif boost == "holdup":
+        buy.append(
+            "On an UP morning (S > 0), each new long lot stays through the "
+            "next 09:30 so the overnight gap is marked. Highly positive days "
+            "in this window were mostly that gap; a same-day 09:30→16:00 "
+            "book cannot harvest them."
+        )
     if short:
         buy.append(
             "This is a SHORT sleeve: it borrows the name and profits if the price falls. "
@@ -1091,6 +1124,11 @@ def matches(row: dict, rec: dict) -> bool:
     if req.get("break_10") and not row.get("ohlc_break_10"):
         return False
     if req.get("earn_react") and not row.get("erd_earn_react"):
+        return False
+    if req.get("overnight") and not (
+            row.get("overnight_sched")
+            or "overnight" in srcs
+            or "overnight_mega" in srcs):
         return False
     if req.get("news_present") and _tone(boxes, "news") == "missing":
         return False
@@ -1435,6 +1473,13 @@ def match_why(row: dict, rec: dict) -> dict:
         need(bool(row.get("ohlc_break_10")), _gate_kid("break_10", True))
     if req.get("earn_react"):
         need(bool(row.get("erd_earn_react")), _gate_kid("earn_react", True))
+    if req.get("overnight"):
+        need(
+            bool(row.get("overnight_sched")
+                 or "overnight" in srcs
+                 or "overnight_mega" in srcs),
+            _gate_kid("overnight", True),
+        )
     if req.get("news_present"):
         need(_tone(boxes, "news") != "missing", _gate_kid("news_present", True))
     if req.get("join_present"):
@@ -1693,6 +1738,11 @@ def _candidates(date: str, cal: list[str], flatten_plan: dict,
         "yday_mover": gc.yesterday_movers(prior, top_n=20),
         "ohlc_hot": ohlc.liquid_hot(prior, date, top_n=30),
         "earn_react": gc.earnings_reaction(prior, date),
+        "overnight": gc.overnight_scheduled(
+            prior, date, gc.next_session(cal, date)),
+        "overnight_mega": gc.overnight_scheduled(
+            prior, date, gc.next_session(cal, date),
+            min_mcap_m=gc.OVERNIGHT_MEGA_MCAP_M),
         "mover_buy": [_tick(t) for t in (mover_by_date.get(date) or [])][:15],
     }
     if opp.union_enabled():
@@ -1793,6 +1843,7 @@ def _attach_row(date: str, ticker: str, sources: list[str], src_rank: int,
         "candle_capture": bool(cf.capture(cd)),
         "candle_body_rg": cd.get("body_rg"),
         "erd_earn_react": bool(snap.get("earn_react")),
+        "overnight_sched": "overnight" in sources or "overnight_mega" in sources,
         "erd_days_since_E": snap.get("days_since_E"),
         "erd_days_since_R": snap.get("days_since_R"),
         "erd_days_since_D": snap.get("days_since_D"),
@@ -1811,12 +1862,142 @@ def _attach_row(date: str, ticker: str, sources: list[str], src_rank: int,
     return rec
 
 
+def panel_lookback_calendar(from_date: str,
+                            to_date: str | None = None) -> list[str]:
+    """Sleeve calendar through ``to_date``, including days before ``from_date``.
+
+    ``build_panel(D, D)`` / ``extend_pack_through`` still need D−1 so
+    ``prior_session``, yday_gainer, probable, ohlc_hot, earn_react,
+    and overnight (needs D+1 on the calendar) are not empty. The emit
+    window stays ``[from_date, end]``.
+    """
+    payload = sm.load_payload()
+    books = sm.list_books()
+    end = live_panel_end(from_date, to_date)
+    return [d for d in sm.session_calendar(payload, books)
+            if not end or d <= end]
+
+
+def panel_emit_dates(full_cal: list[str], from_date: str,
+                     to_date: str | None = None) -> list[str]:
+    """Dates that receive new rows. Lookback days stay off the emit list."""
+    end = to_date or (full_cal[-1] if full_cal else from_date)
+    return [d for d in full_cal if d >= from_date and (not end or d <= end)]
+
+
+def merge_panel_days(base: dict, extra: dict) -> dict:
+    """Replace ``extra``'s dates in ``base``. Other days stay intact."""
+    extra_dates = set(extra.get("session_dates") or [])
+    rows = [r for r in (base.get("rows") or [])
+            if r.get("date") not in extra_dates]
+    rows.extend(extra.get("rows") or [])
+    rows.sort(key=lambda r: (
+        r.get("date") or "", int(r.get("src_rank") or 0), r.get("ticker") or "",
+    ))
+    dates = list(base.get("session_dates") or [])
+    for d in extra.get("session_dates") or []:
+        if d and d not in dates:
+            dates.append(d)
+    dates.sort()
+    by_date = dict(base.get("by_date") or {})
+    by_date.update(extra.get("by_date") or {})
+    out = dict(base)
+    out.update({
+        "from_date": out.get("from_date") or extra.get("from_date") or START,
+        "to_date": dates[-1] if dates else out.get("to_date"),
+        "session_dates": dates,
+        "n_sessions": len(dates),
+        "n_rows": len(rows),
+        "rows": rows,
+        "by_date": by_date,
+    })
+    return out
+
+
+def stamp_overnight_on_panel(panel: dict, *, write: bool = False) -> dict:
+    """Tag / add prior-calendar AMC-today and BMO-next names on each day.
+
+    Existing rows keep their other sources. New names get a full
+    ``_attach_row`` so cameras and prior tape are on the card. Same-day
+    Change% is never an input.
+    """
+    panel = rehydrate_panel(panel)
+    cal = list(panel.get("session_dates") or [])
+    if not cal:
+        return panel
+    full_cal = panel_lookback_calendar(
+        panel.get("from_date") or cal[0], panel.get("to_date") or cal[-1])
+    if not full_cal:
+        full_cal = list(cal)
+    end = panel.get("to_date") or cal[-1]
+    map_from = full_cal[0]
+    sess_map, _ = _session_map(map_from, end)
+    by_date = panel.get("by_date") or {}
+    rows = list(panel.get("rows") or [])
+    tagged = added = 0
+    for date in cal:
+        prior = feature_export_date(full_cal, date)
+        prior_df = ga.load_finviz(prior) if prior else None
+        nxt = gc.next_session(full_cal, date)
+        ov = gc.overnight_scheduled(prior, date, nxt)
+        mega = set(gc.overnight_scheduled(
+            prior, date, nxt, min_mcap_m=gc.OVERNIGHT_MEGA_MCAP_M))
+        existing = {r["ticker"]: r for r in (by_date.get(date) or [])}
+        sess = sess_map.get(date)
+        prev_sess = sess_map.get(prior) if prior else None
+        for t in ov:
+            srcs = ["overnight"]
+            if t in mega:
+                srcs.append("overnight_mega")
+            hit = existing.get(t)
+            if hit is not None:
+                have = list(hit.get("sources") or [])
+                for s in srcs:
+                    if s not in have:
+                        have.append(s)
+                hit["sources"] = have
+                hit["overnight_sched"] = True
+                tagged += 1
+                continue
+            if sess is None:
+                continue
+            rec = _attach_row(
+                date, t, srcs, 80, sess, prev_sess, prior, prior_df)
+            rec["overnight_sched"] = True
+            rows.append(rec)
+            by_date.setdefault(date, []).append(rec)
+            existing[t] = rec
+            added += 1
+        print(f"[factor-mine] overnight-stamp {date} "
+              f"sched={len(ov)} mega={len(mega)} tagged={tagged} "
+              f"added={added}", flush=True)
+    rows.sort(key=lambda r: (
+        r.get("date") or "", int(r.get("src_rank") or 0), r.get("ticker") or "",
+    ))
+    panel = dict(panel)
+    panel["rows"] = rows
+    panel["by_date"] = by_date
+    panel["n_rows"] = len(rows)
+    panel["overnight_stamp"] = {"tagged": tagged, "added": added}
+    if write:
+        PANEL_PATH.parent.mkdir(parents=True, exist_ok=True)
+        slim = {k: v for k, v in panel.items() if k != "by_date"}
+        slim["by_date"] = None
+        PANEL_PATH.write_text(json.dumps(slim, indent=2), encoding="utf-8")
+    print(f"[factor-mine] overnight-stamp done tagged={tagged} "
+          f"added={added} rows={len(rows)}", flush=True)
+    return panel
+
+
 def build_panel(from_date: str = START, to_date: str | None = None) -> dict:
     """Leak-free candidate rows for every *closed* session in the window.
 
     An empty ``to_date`` used to walk the whole stock-book calendar,
     including today's pre-open stub. Member books then stopped at
     ``last_closed`` and combo split crashed on the extra day.
+
+    A one-day window still looks back on the full sleeve calendar so
+    yesterday's liquid lists are inputs, not empty.
     """
     _SCAN_CACHE.clear()
     payload = sm.load_payload()
@@ -2383,6 +2564,8 @@ def run(from_date: str = START, to_date: str | None = None,
     extra = [n for n in (
         "flatten_live_h1", "flatten_live_h3", "flatten_live_h5",
         "union_e_fresh_h3", "union_news_g_h5", "union_white_coil_h1",
+        "overnight_mega_h1", "overnight_mega_h2", "overnight_h1",
+        "overnight_mega_green_h1", "combo_oh_5050_shared",
         "union_news_pack_h1", "union_news_pack_net2_h1",
         "union_news_or_h1",
         "union_news_or_net3_h1", "union_news_or_net4_h1",
@@ -3591,6 +3774,34 @@ def extend_pack_through(date: str, *, write: bool = False) -> dict:
     return payload
 
 
+def refresh_panel_window(from_date: str, to_date: str | None = None,
+                         *, write: bool = False) -> dict:
+    """Rebuild ``[from_date, to_date]`` with a full lookback calendar.
+
+    Older panel days stay as they are. Used after ``extend_pack_through``
+    wrote flatten-only rows because the emit window had no prior session.
+    """
+    extra = build_panel(from_date, to_date)
+    raw: dict = {}
+    if PANEL_PATH.is_file():
+        try:
+            raw = json.loads(PANEL_PATH.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            raw = {}
+    panel = merge_panel_days(rehydrate_panel(raw) if raw else extra, extra)
+    print(
+        f"[factor-mine] refresh-window {from_date}→{panel.get('to_date')} "
+        f"new_rows={extra.get('n_rows')} total={panel.get('n_rows')}",
+        flush=True,
+    )
+    if write:
+        PANEL_PATH.parent.mkdir(parents=True, exist_ok=True)
+        slim = {k: v for k, v in panel.items() if k != "by_date"}
+        slim["by_date"] = None
+        PANEL_PATH.write_text(json.dumps(slim, indent=2), encoding="utf-8")
+    return panel
+
+
 def land_closed(from_date: str = START, write: bool = False,
                 rebuild_panel: bool = False,
                 to_date: str | None = None) -> dict:
@@ -3783,6 +3994,10 @@ def main(argv=None) -> int:
     ap.add_argument("--sweep-bracket", action="store_true",
                     help="cash-book sweep: take-profit / stop-loss on top of hold")
     ap.add_argument("--rebuild-panel", action="store_true")
+    ap.add_argument("--refresh-window", action="store_true",
+                    help="rebuild --from-date..--to-date panel rows with lookback")
+    ap.add_argument("--stamp-overnight", action="store_true",
+                    help="tag/add prior-calendar AMC-today / BMO-next names on the panel")
     ap.add_argument("--land-closed", action="store_true",
                     help="reuse existing recipes; mine through last closed session")
     ap.add_argument("--universe", default="auto", choices=fmb.UNIVERSES)
@@ -3863,6 +4078,21 @@ def main(argv=None) -> int:
                   f"{_pct(r.get('win_rate')):>6} {r.get('n_trades') or 0:>5} "
                   f"{r.get('n_take') or 0:>4} {r.get('n_stop') or 0:>4} "
                   f"{r['base']}")
+        return 0
+    if args.refresh_window:
+        panel = refresh_panel_window(
+            args.from_date, args.to_date or None, write=args.write)
+        print(f"[factor-mine] refresh-window rows={panel.get('n_rows')} "
+              f"to={panel.get('to_date')}")
+        return 0
+    if args.stamp_overnight:
+        panel = load_or_build_panel(
+            args.from_date, args.to_date or None,
+            rebuild=args.rebuild_panel)
+        panel = stamp_overnight_on_panel(panel, write=args.write)
+        print(f"[factor-mine] stamp-overnight rows={panel.get('n_rows')} "
+              f"added={(panel.get('overnight_stamp') or {}).get('added')} "
+              f"to={panel.get('to_date')}")
         return 0
     if args.land_closed:
         payload = land_closed(
