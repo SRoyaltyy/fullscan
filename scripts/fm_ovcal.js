@@ -20,10 +20,35 @@ function ovPrevDate(date, dates){
   const i=(dates||[]).indexOf(date);
   return i>0 ? dates[i-1] : null;
 }
+const _ovBookCache={};
+function ovSimBook(name){
+  if(_ovBookCache[name]) return _ovBookCache[name];
+  if(typeof FMSim==='undefined' || !D.sim) return null;
+  const rec=(D.recipes||[]).find(function(r){return r.name===name;});
+  if(!rec) return null;
+  const start=(D.dates||[])[0];
+  if(!start) return null;
+  try{ _ovBookCache[name]=FMSim.simulateBook(D.sim, rec, start, D.mornings||{}); }
+  catch(e){ _ovBookCache[name]=null; }
+  return _ovBookCache[name];
+}
+function ovDaysAndTrades(name){
+  let days=((D.daily||{})[name]||[]).slice();
+  let trades=(((D.books||{})[name]||{}).trades||[]).filter(function(t){return t.side==='BUY' && t.ticker;});
+  if(!days.length || !trades.length){
+    const b=ovSimBook(name);
+    if(b){
+      if(!days.length) days=b.daily||[];
+      if(!trades.length) trades=(b.trades||[]).filter(function(t){return t.side==='BUY' && t.ticker;});
+    }
+  }
+  days=days.slice().sort(function(a,b){return String(a.date).localeCompare(String(b.date));});
+  return {days:days, trades:trades};
+}
 function ovSplitDays(name){
-  const days=((D.daily||{})[name]||[]).slice().sort(function(a,b){return String(a.date).localeCompare(String(b.date));});
+  const pack=ovDaysAndTrades(name);
+  const days=pack.days, trades=pack.trades;
   const dates=days.map(function(d){return d.date;});
-  const trades=(((D.books||{})[name]||{}).trades||[]).filter(function(t){return t.side==='BUY' && t.ticker;});
   return days.map(function(d){
     const bought={}; (d.bought||[]).forEach(function(t){ bought[t]=true; });
     const sold={}; (d.sold||[]).forEach(function(t){ sold[t]=true; });
@@ -49,21 +74,18 @@ function ovSplitDays(name){
     return {date:d.date, held:held, neu:neu, bought:d.bought||[], sold:d.sold||[]};
   });
 }
-function ovHeat(v, scale, kind){
-  if(v==null || !isFinite(v) || Math.abs(v)<0.5) return 'rgba(148,163,184,.12)';
+function ovHeat(v, scale){
+  if(v==null || !isFinite(v) || Math.abs(v)<0.5) return 'rgba(148,163,184,.16)';
   const a=Math.min(1, Math.abs(v)/scale);
-  const pos=v>0;
-  if(kind==='held'){
-    return pos ? 'rgba(251,191,36,'+(0.22+0.78*a)+')' : 'rgba(248,113,113,'+(0.22+0.78*a)+')';
-  }
-  return pos ? 'rgba(74,222,128,'+(0.22+0.78*a)+')' : 'rgba(252,165,165,'+(0.22+0.78*a)+')';
+  if(v>0) return 'rgba(22,163,74,'+(0.20+0.80*a)+')';
+  return 'rgba(220,38,38,'+(0.20+0.80*a)+')';
 }
 function ovScale(rows){
   const xs=[];
   rows.forEach(function(r){ xs.push(Math.abs(r.held||0)); xs.push(Math.abs(r.neu||0)); });
   xs.sort(function(a,b){return a-b;});
   const p=xs.length ? xs[Math.floor(xs.length*0.9)] : 200;
-  return Math.max(180, p||200);
+  return Math.max(80, p||200);
 }
 function ovWeeks(rows){
   if(!rows.length) return [];
@@ -87,9 +109,11 @@ function ovWeeks(rows){
 }
 function ovFmt(v){
   if(v==null || !isFinite(v)) return '—';
-  return (v>0?'+':'')+v.toFixed(0);
+  const n=Math.round(v);
+  return (n>0?'+':'')+n;
 }
-function ovCalHtml(name){
+function ovCalHtml(name, mode){
+  const big=mode==='big';
   const rows=ovSplitDays(name);
   if(!rows.length) return '<div class="ovcal-card"><div class="nm">'+esc(name)+'</div><div class="mut">no daily book</div></div>';
   const scale=ovScale(rows);
@@ -100,12 +124,12 @@ function ovCalHtml(name){
     if((r.neu||0)>0) neuG++;
   });
   const on = sleeveFilter===name ? ' on' : '';
-  let h='<div class="ovcal-card'+on+'" data-sleeve="'+esc(name)+'">';
+  let h='<div class="ovcal-card'+(big?' big':'')+on+'" data-sleeve="'+esc(name)+'">';
   h+='<div class="nm">'+esc(name)+'</div>';
   h+='<div class="tot"><span class="'+(heldS>=0?'pos':'neg')+'">held '+ovFmt(heldS)+'</span>';
   h+='<span class="'+(neuS>=0?'pos':'neg')+'">new '+ovFmt(neuS)+'</span>';
   h+='<span class="mut">new+ '+neuG+'/'+n+' · held+ '+heldG+'/'+n+'</span></div>';
-  h+='<div class="ovcal-wk">';
+  h+='<div class="ovcal-wk'+(big?' big':'')+'">';
   ['M','T','W','T','F'].forEach(function(d){ h+='<div class="ovcal-dow">'+d+'</div>'; });
   ovWeeks(rows).forEach(function(w){
     w.forEach(function(cell){
@@ -113,10 +137,10 @@ function ovCalHtml(name){
       const dayn=String(cell.date).slice(8,10).replace(/^0/,'');
       const tip=cell.date+'  held '+ovFmt(cell.held)+'  new buys '+ovFmt(cell.neu)
         +(cell.bought&&cell.bought.length?('  B '+cell.bought.join(',')):'');
-      h+='<div class="ovcal-cell" data-tip="'+esc(tip)+'" title="'+esc(tip)+'">';
+      h+='<div class="ovcal-cell'+(big?' big':'')+'" data-tip="'+esc(tip)+'" title="'+esc(tip)+'">';
       h+='<span class="d">'+esc(dayn)+'</span>';
-      h+='<div class="half" style="background:'+ovHeat(cell.held,scale,'held')+'"></div>';
-      h+='<div class="half" style="background:'+ovHeat(cell.neu,scale,'new')+'"></div>';
+      h+='<div class="half" style="background:'+ovHeat(cell.held,scale)+'"><span>'+ovFmt(cell.held)+'</span></div>';
+      h+='<div class="half" style="background:'+ovHeat(cell.neu,scale)+'"><span>'+ovFmt(cell.neu)+'</span></div>';
       h+='</div>';
     });
   });
@@ -126,19 +150,37 @@ function ovCalHtml(name){
 function renderOvCal(){
   const box=document.getElementById('ovCal');
   const tip=document.getElementById('ovCalTip');
-  if(!box) return;
+  const side=document.getElementById('ovCalSleeve');
   const list=statsList();
-  const names=(sleeveFilter!=='all' && list.some(function(s){return s.name===sleeveFilter;}))
+  const picked=sleeveFilter!=='all' && list.some(function(s){return s.name===sleeveFilter;});
+  const names=picked
     ? [sleeveFilter]
-    : list.map(function(s){return s.name;}).filter(function(n){return (D.daily||{})[n];});
-  box.innerHTML='<div class="ovcal-grid">'+names.map(ovCalHtml).join('')+'</div>';
-  box.onclick=function(ev){
-    const cell=ev.target.closest('.ovcal-cell[data-tip]');
-    if(cell){ if(tip) tip.textContent=cell.getAttribute('data-tip'); return; }
-    const card=ev.target.closest('.ovcal-card[data-sleeve]');
-    if(card){
-      const nm=card.getAttribute('data-sleeve');
-      if(nm && nm!==sleeveFilter) selectSleeve(nm);
+    : list.map(function(s){return s.name;}).filter(function(n){
+        return ((D.daily||{})[n] && (D.daily||{})[n].length) || ((D.recipes||[]).some(function(r){return r.name===n;}));
+      });
+  if(box){
+    box.innerHTML='<div class="ovcal-grid">'+names.map(function(n){return ovCalHtml(n,'mini');}).join('')+'</div>';
+    box.onclick=function(ev){
+      const cell=ev.target.closest('.ovcal-cell[data-tip]');
+      if(cell){ if(tip) tip.textContent=cell.getAttribute('data-tip'); return; }
+      const card=ev.target.closest('.ovcal-card[data-sleeve]');
+      if(card){
+        const nm=card.getAttribute('data-sleeve');
+        if(nm && nm!==sleeveFilter) selectSleeve(nm);
+      }
+    };
+  }
+  if(side){
+    if(picked){
+      side.innerHTML=ovCalHtml(sleeveFilter,'big');
+      side.style.display='block';
+      side.onclick=function(ev){
+        const cell=ev.target.closest('.ovcal-cell[data-tip]');
+        if(cell && tip) tip.textContent=cell.getAttribute('data-tip');
+      };
+    } else {
+      side.innerHTML='';
+      side.style.display='none';
     }
-  };
+  }
 }
