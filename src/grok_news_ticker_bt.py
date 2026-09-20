@@ -1,18 +1,32 @@
-"""Stage 2 — leak-safe Grok-news → ticker cash-book replay.
+"""Stage 2 — leak-safe Grok-news overlay on existing strategy books.
+
+What this answers:
+  1. Every Grok-pipeline article knowable before each trading day
+  2. Which listed stocks that article names EXACTLY
+  3. If those signals overlay ``union_hot_n4_h1`` / ``flatten_h5``,
+     how the cash book yields vs the same-panel base
 
 Reads ONLY:
   * frozen ``data/grok_automations/*.json``
-  * dated repo news: ``data/exports/finviz_{D}.csv``,
-    ``01_daily/news/{D}_*.json`` (never ``*_close*``),
-    ``01_daily/events/{D}_events.json``
-  * PRIOR-session Company / Sector / Industry (D-1 Finviz)
+  * Grok pipeline: ``01_daily/news/{D}_{parsed,actions,judge}.json``
+    (never ``*_close*``), ``01_daily/events/{D}_events.json``
+  * PRIOR-session Company / Sector / Industry (D-1 Finviz) to resolve
+    a named company → ticker. Never same-day tape. Never “Finviz
+    attached this headline to ticker X”. Never sector-basket expansion.
 
 No live web, no live automation API, no same-day close digest, no
-post-close research_baseline, no future files, no same-day Change%/Gap
-as mapping proof, no “Finviz attached this headline to ticker X”.
+post-close research_baseline, no OOS peek while mapping IS.
 
 Fill = next official 09:30 STRICTLY AFTER known_at. A 09:30:00 ET print
 is too late for that open.
+
+Overlays (long-only, hard-red S≤−3 sit):
+  * veto_bear     — drop exact-bearish names from the strategy list
+  * require_bull  — keep only strategy names the article named bullish
+  * add_named     — add exact-bullish names the strategy missed
+  * full          — veto_bear + add_named + exit held names on bearish
+
+Not live. Does not touch factor-mine / flatten / Webull.
 """
 from __future__ import annotations
 
@@ -46,6 +60,9 @@ OOS_START = "2026-09-10"
 ET = ZoneInfo("America/New_York")
 CLOSE_NAME = re.compile(r"close|research_baseline", re.I)
 STALE_MAX_DAYS = 2
+ADD_CAP = 4
+BASE_NAMES = ("union_hot_n4_h1", "flatten_h5")
+OVERLAY_MODES = ("base", "veto_bear", "require_bull", "add_named", "full")
 
 # ── drop / keep ──────────────────────────────────────────────────────
 DROP_TITLE = re.compile(
@@ -90,7 +107,8 @@ SINGLE_FDA = re.compile(
 )
 YAHOO_TABLOID = re.compile(r"(?i)(yahoo|seeking alpha|motley fool|benzinga)")
 
-# Theme packs: sector-wide only when the article is actually sector-wide.
+# Theme packs inform polarity of a NAMED ticker only. Never expand a
+# sector basket (EPA ≠ every coal plant; Hormuz ≠ COP/EOG book).
 THEME_PACKS: list[dict] = [
     {
         "id": "crypto_sec",
@@ -98,11 +116,6 @@ THEME_PACKS: list[dict] = [
             r"(?i)(\batkins\b|tokeniz|regulation crypto|tokenized|"
             r"sec.{0,48}(exemption|safe harbor|greenlight)|"
             r"clarity act|crypto (exemption|framework|rule))"
-        ),
-        "sector_wide": False,
-        "need": re.compile(
-            r"(?i)(crypto|bitcoin|ether|blockchain|digital asset|"
-            r"coinbase|robinhood|securitize|tokeniz)"
         ),
         "polarity": "bullish",
     },
@@ -112,12 +125,6 @@ THEME_PACKS: list[dict] = [
             r"(?i)(epa.{0,40}(ghg|greenhouse|carbon|repeal)|"
             r"greenhouse gas.{0,24}(repeal|rule|standard))"
         ),
-        "sector_wide": True,
-        "need": re.compile(
-            r"(?i)(coal|natural gas|gas-fired|thermal|independent power|"
-            r"regulated electric|lignite|generation|power producer|"
-            r"oil.?gas|utility)"
-        ),
         "polarity": "bullish",
     },
     {
@@ -126,12 +133,7 @@ THEME_PACKS: list[dict] = [
             r"(?i)(federal reserve|fed chair|fomc|fed (rate|hike|cut)|"
             r"warsh|powell|rate hike|rate cut|fed funds)"
         ),
-        "sector_wide": True,
-        "need": re.compile(
-            r"(?i)(gold|silver|reit|real estate|treasury|regional bank|"
-            r"mortgage|homebuilder|precious)"
-        ),
-        "polarity": None,  # from text
+        "polarity": None,
     },
     {
         "id": "tariff",
@@ -139,22 +141,11 @@ THEME_PACKS: list[dict] = [
             r"(?i)(tariff|section 301|section 232|de minimis|"
             r"import ban|export control|chips act)"
         ),
-        "sector_wide": True,
-        "need": re.compile(
-            r"(?i)(copper|aluminum|steel|solar|semiconductor|chip|foundry|"
-            r"auto|dairy|e-?commerce|china|drone|rare earth|mining|"
-            r"refined copper)"
-        ),
         "polarity": "bearish",
     },
     {
         "id": "hormuz_new",
         "rx": HORMUZ,
-        "sector_wide": True,
-        "need": re.compile(
-            r"(?i)(oil|gas|e&p|exploration|petroleum|airline|air freight|"
-            r"crude|refiner|tanker)"
-        ),
         "polarity": None,
     },
     {
@@ -163,21 +154,11 @@ THEME_PACKS: list[dict] = [
             r"(?i)(oil inventor|eia crude|crude inventor|opec|"
             r"wti|brent.{0,20}inventor)"
         ),
-        "sector_wide": True,
-        "need": re.compile(
-            r"(?i)(e&p|exploration|petroleum|oil.?gas|crude|refiner|"
-            r"integrated oil)"
-        ),
         "polarity": None,
     },
     {
         "id": "antitrust",
         "rx": re.compile(r"(?i)(antitrust|doj.{0,30}(suit|probe|case)|no breakup)"),
-        "sector_wide": False,
-        "need": re.compile(
-            r"(?i)(advertis|search|ad.tech|asset management|index fund|"
-            r"blackrock|state street|vanguard|google|alphabet|meta)"
-        ),
         "polarity": None,
     },
     {
@@ -185,10 +166,6 @@ THEME_PACKS: list[dict] = [
         "rx": re.compile(
             r"(?i)(fda (guidance|ban|policy|class|labeling rule)|"
             r"cms (rate|rule)|ira drug|drug pricing)"
-        ),
-        "sector_wide": True,
-        "need": re.compile(
-            r"(?i)(drug|pharma|biotech|medicare|managed care|pharmacy)"
         ),
         "polarity": None,
     },
@@ -198,10 +175,6 @@ THEME_PACKS: list[dict] = [
             r"(?i)(chips act|export control|bis\b|huawei ban|"
             r"advanced (node|chip) restrict)"
         ),
-        "sector_wide": True,
-        "need": re.compile(
-            r"(?i)(semiconductor|chip|foundry|gpu|asic|fab|wafer|eda)"
-        ),
         "polarity": None,
     },
     {
@@ -209,20 +182,44 @@ THEME_PACKS: list[dict] = [
         "rx": re.compile(
             r"(?i)(small[- ]refinery exemption|\bsre\b|rin (market|waiver))"
         ),
-        "sector_wide": True,
-        "need": re.compile(r"(?i)(refiner|refining|rin|biofuel|ethanol)"),
         "polarity": "bullish",
     },
 ]
 
 BULL = re.compile(
     r"(?i)\b(exemption|greenlight|approves?|clarity|repeal|"
-    r"rate cut|easing|dovish|safe harbor|wins?|clears?)\b"
+    r"rate cut|easing|dovish|safe harbor|wins?|clears?|lifts?|"
+    r"debuts?|surge|rall(?:y|ies))\b"
 )
 BEAR = re.compile(
     r"(?i)\b(ban|hike|hawkish|tariff|probe|suit|block|"
-    r"inventory build|tightening|enforcement|fine)\b"
+    r"inventory build|tightening|enforcement|fine|slide|"
+    r"drop|drops|fell|falls|slump)\b"
 )
+
+# Agency / English tokens that look like tickers.
+_TICKER_DENY = frozenset({
+    "A", "I", "IT", "THE", "FOR", "AND", "OR", "ON", "TO", "OF", "IN",
+    "AT", "BY", "AN", "BE", "SO", "IF", "AS", "NO", "YES", "ALL", "NEW",
+    "US", "USA", "UK", "EU", "UN", "CEO", "CFO", "IPO", "ETF", "ETN",
+    "ADR", "ADS", "AI", "GDP", "CPI", "PPI", "PCE", "FOMC", "NYSE",
+    "SEC", "FDA", "DOJ", "EPA", "FTC", "FCC", "CMS", "OCC", "FDIC",
+    "NLRB", "OSHA", "CPSC", "ITC", "BIS", "CFTC", "IRA", "USD", "WTI",
+    "EIA", "OPEC", "ECB", "BOE", "IMF", "NATO", "IRS", "LLC", "INC",
+    "CORP", "LTD", "PLC", "ETF", "SPX", "NDX", "DXY", "VIX", "Q",
+    "AM", "PM", "ET", "PT", "CT", "MT", "BMO", "AMC",
+})
+_TICKER_IN_TEXT = re.compile(r"(?:[$()]|\b)([A-Z]{1,5})(?:\b|[)$])")
+_NAME_STOP = {
+    "class", "shares", "holdings", "company", "corp", "inc", "ltd", "plc",
+    "group", "the", "and", "fund", "trust", "etf", "index", "global",
+    "share", "first", "income", "equity", "growth", "value", "world",
+    "united", "states", "international", "capital", "markets", "financial",
+    "partners", "advisors", "limited", "ordinary", "common", "stock",
+    "american", "national", "services", "resources", "industries",
+    "solutions", "systems", "technologies", "energy", "mining", "bank",
+    "gold", "silver", "holdings", "entertainment", "software",
+}
 
 
 def _norm(title: str) -> str:
@@ -358,7 +355,6 @@ def article_polarity(title: str, theme: dict | None = None) -> str:
         return "bullish"
     if e > b:
         return "bearish"
-    pol, _ = np._polarity(blob), None
     return {"+": "bullish", "-": "bearish"}.get(np._polarity(blob), "neutral")
 
 
@@ -387,7 +383,18 @@ def usable_known_at(stamp: datetime, file_date: str,
     return None, None
 
 
-# ── loaders (dated files only) ───────────────────────────────────────
+def norm_polarity(value: Any) -> str:
+    s = str(value or "").strip().lower()
+    if s in ("+", "bullish", "buy", "long", "positive"):
+        return "bullish"
+    if s in ("-", "bearish", "sell", "short", "negative"):
+        return "bearish"
+    if s in ("mixed",):
+        return "mixed"
+    return "neutral"
+
+
+# ── loaders (dated Grok-pipeline files only) ─────────────────────────
 def load_coverage() -> dict:
     path = AUTO_DIR / "_coverage.json"
     if path.is_file():
@@ -418,6 +425,28 @@ def _walk_titles(obj: Any) -> Iterable[str]:
             yield from _walk_titles(x)
 
 
+def _stamp_article(title: str, stamp: datetime | None, file_date: str,
+                   cal: list[str], **extra) -> dict | None:
+    if stamp is None:
+        stamp = datetime.strptime(file_date, "%Y-%m-%d").replace(
+            hour=0, minute=0, second=1, tzinfo=ET)
+    known, fill = usable_known_at(stamp, file_date, cal)
+    if not known or not fill:
+        return None
+    row = {
+        "title": title,
+        "file_date": file_date,
+        "known_at": known.isoformat(),
+        "fill": fill,
+        "url": extra.pop("url", "") or "",
+        "digest": extra.pop("digest", "") or "",
+        "task": extra.pop("task", "") or "",
+        "conversationId": extra.pop("conversationId", "") or "",
+    }
+    row.update(extra)
+    return row
+
+
 def load_frozen_articles(cal: list[str]) -> list[dict]:
     rows: list[dict] = []
     if not AUTO_DIR.is_dir():
@@ -446,26 +475,19 @@ def load_frozen_articles(cal: list[str]) -> list[dict]:
             for title in titles:
                 if not keep_article(title, source="automation"):
                     continue
-                if created is None:
-                    continue
-                known, fill = usable_known_at(created, file_date, cal)
-                if not known or not fill:
-                    continue
-                rows.append({
-                    "title": title,
-                    "source": "automation",
-                    "task": res.get("task") or payload.get("task"),
-                    "conversationId": res.get("conversationId") or "",
-                    "file_date": file_date,
-                    "known_at": known.isoformat(),
-                    "fill": fill,
-                    "url": "",
-                    "digest": "",
-                })
+                art = _stamp_article(
+                    title, created, file_date, cal,
+                    source="automation",
+                    task=res.get("task") or payload.get("task"),
+                    conversationId=res.get("conversationId") or "",
+                )
+                if art:
+                    rows.append(art)
     return rows
 
 
 def load_parsed_articles(cal: list[str]) -> list[dict]:
+    """Grok news-parsing automation output (pre-open ``generated_at``)."""
     rows: list[dict] = []
     for path in sorted(NEWS_DIR.glob("*_parsed.json")):
         if is_blocked_news_path(path):
@@ -478,30 +500,77 @@ def load_parsed_articles(cal: list[str]) -> list[dict]:
         except (OSError, json.JSONDecodeError):
             continue
         gen = _parse_et(data.get("generated_at"))
-        items = list(data.get("all_items") or []) + list(data.get("usable_top") or [])
+        seen: set[str] = set()
+        items = list(data.get("usable_top") or []) + list(data.get("all_items") or [])
         for it in items:
             title = (it.get("title") or "").strip()
-            if not keep_article(title, source=it.get("source") or "parsed"):
+            key = _norm(title)
+            if not title or key in seen:
+                continue
+            seen.add(key)
+            if it.get("class") == "noise" and not keep_article(
+                title, source=it.get("source") or "parsed",
+            ):
+                continue
+            if it.get("class") == "single_name" and not keep_article(
+                title, source=it.get("source") or "parsed",
+            ):
+                continue
+            if not it.get("usable") and not keep_article(
+                title, source=it.get("source") or "parsed",
+            ):
                 continue
             stamp = _parse_et(it.get("published_at")) or gen
-            if stamp is None:
-                stamp = datetime.strptime(file_date, "%Y-%m-%d").replace(
-                    hour=0, minute=0, second=1, tzinfo=ET)
-            known, fill = usable_known_at(stamp, file_date, cal)
-            if not known or not fill:
+            art = _stamp_article(
+                title, stamp, file_date, cal,
+                source="parsed",
+                url=it.get("url") or "",
+                grok_polarity=norm_polarity(it.get("polarity")),
+                grok_class=it.get("class") or "",
+            )
+            if art:
+                rows.append(art)
+    return rows
+
+
+def load_actions_articles(cal: list[str]) -> list[dict]:
+    """Grok reasoned-event evidence titles (pre-open ``generated_at``).
+
+    ``ticker_actions`` baskets are ignored unless the ticker is named in
+    that event's evidence titles.
+    """
+    rows: list[dict] = []
+    for path in sorted(NEWS_DIR.glob("*_actions.json")):
+        if is_blocked_news_path(path):
+            continue
+        file_date = _file_date(path)
+        if not file_date or file_date < WINDOW_START:
+            continue
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        gen = _parse_et(data.get("generated_at"))
+        for ev in data.get("reasoned_events") or []:
+            fw = ev.get("framework") or {}
+            if str(fw.get("keep") or "").lower() == "drop":
                 continue
-            rows.append({
-                "title": title,
-                "source": "parsed",
-                "task": "",
-                "conversationId": "",
-                "file_date": file_date,
-                "known_at": known.isoformat(),
-                "fill": fill,
-                "url": it.get("url") or "",
-                "digest": "",
-                "class": it.get("class"),
-            })
+            ev_pol = norm_polarity(fw.get("polarity"))
+            event = ev.get("event") or ""
+            for evd in ev.get("evidence") or []:
+                title = (evd.get("title") or "").strip()
+                if not keep_article(title, source=evd.get("source") or "actions"):
+                    continue
+                stamp = _parse_et(evd.get("published_at")) or gen
+                art = _stamp_article(
+                    title, stamp, file_date, cal,
+                    source="actions",
+                    url=evd.get("url") or "",
+                    grok_polarity=ev_pol,
+                    event=event,
+                )
+                if art:
+                    rows.append(art)
     return rows
 
 
@@ -526,118 +595,67 @@ def load_event_articles(cal: list[str]) -> list[dict]:
             ):
                 continue
             stamp = _parse_et(ev.get("date_or_window") or ev.get("scan_date"))
-            if stamp is None:
-                stamp = datetime.strptime(file_date, "%Y-%m-%d").replace(
-                    hour=0, minute=0, second=1, tzinfo=ET)
-            known, fill = usable_known_at(stamp, file_date, cal)
-            if not known or not fill:
-                continue
-            rows.append({
-                "title": title,
-                "source": "events",
-                "task": "",
-                "conversationId": "",
-                "file_date": file_date,
-                "known_at": known.isoformat(),
-                "fill": fill,
-                "url": "",
-                "digest": (ev.get("why_it_matters") or "")[:400],
-                "category": ev.get("category"),
-                "status": ev.get("status"),
-                "event_sectors": ev.get("sectors") or [],
-            })
+            art = _stamp_article(
+                title, stamp, file_date, cal,
+                source="events",
+                digest=(ev.get("why_it_matters") or "")[:400],
+                category=ev.get("category"),
+                status=ev.get("status"),
+            )
+            if art:
+                rows.append(art)
     return rows
 
 
-def _finviz_news_time_ok(news_dt: datetime, file_date: str) -> bool:
-    nd = news_dt.strftime("%Y-%m-%d")
-    if nd > file_date:
-        return False
-    file_d = datetime.strptime(file_date, "%Y-%m-%d")
-    if news_dt.replace(tzinfo=None) < file_d - timedelta(days=STALE_MAX_DAYS):
-        return False
-    return True
-
-
-def load_finviz_articles(cal: list[str]) -> list[dict]:
-    rows: list[dict] = []
-    for path in sorted(EXPORT_DIR.glob("finviz_20*.csv")):
-        file_date = _file_date(path)
-        if not file_date or file_date < WINDOW_START:
+def load_judge_sides(file_date: str) -> dict[str, str]:
+    """Signed judge tickers — applied only when the name is already exact."""
+    path = NEWS_DIR / f"{file_date}_judge.json"
+    if not path.is_file() or is_blocked_news_path(path):
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    out: dict[str, str] = {}
+    for t, v in (data.get("tickers") or {}).items():
+        tick = fm._tick(t)
+        if not tick or tick in _TICKER_DENY:
             continue
         try:
-            with path.open(newline="", encoding="utf-8", errors="replace") as fh:
-                reader = csv.DictReader(fh)
-                for rec in reader:
-                    title = (rec.get("News Title") or "").strip()
-                    if not title:
-                        continue
-                    if not keep_article(title, source=rec.get("News URL") or ""):
-                        continue
-                    news_dt = _parse_et(rec.get("News Time"))
-                    if news_dt is None or not _finviz_news_time_ok(news_dt, file_date):
-                        continue
-                    known, fill = usable_known_at(news_dt, file_date, cal)
-                    if not known or not fill:
-                        continue
-                    rows.append({
-                        "title": title,
-                        "source": "finviz",
-                        "task": "",
-                        "conversationId": "",
-                        "file_date": file_date,
-                        "known_at": known.isoformat(),
-                        "fill": fill,
-                        "url": rec.get("News URL") or "",
-                        "digest": (rec.get("Daily Digest") or "")[:400],
-                    })
-        except OSError:
+            score = float(v)
+        except (TypeError, ValueError):
             continue
-    return rows
+        if score > 0:
+            out[tick] = "bullish"
+        elif score < 0:
+            out[tick] = "bearish"
+    return out
 
 
 def dedupe_articles(rows: list[dict]) -> list[dict]:
     best: dict[str, dict] = {}
-    rank = {"automation": 0, "events": 1, "parsed": 2, "finviz": 3}
+    rank = {"automation": 0, "actions": 1, "parsed": 2, "events": 3}
     for r in rows:
         key = _norm(r.get("title") or "")
         if not key:
             continue
         prev = best.get(key)
-        if prev is None:
-            best[key] = r
-            continue
-        if rank.get(r["source"], 9) < rank.get(prev["source"], 9):
-            r = dict(r)
-            if prev.get("known_at") and (
-                not r.get("known_at") or r["known_at"] > prev["known_at"]
-            ):
-                # keep earlier usable stamp from the worse source if it
-                # is still on a file dated ≤ fill — already enforced.
-                pass
+        if prev is None or rank.get(r.get("source"), 9) < rank.get(prev.get("source"), 9):
             best[key] = r
             continue
         if r.get("known_at") and (
             not prev.get("known_at") or r["known_at"] < prev["known_at"]
-        ):
+        ) and rank.get(r.get("source"), 9) == rank.get(prev.get("source"), 9):
             best[key] = r
     out = list(best.values())
     out.sort(key=lambda r: (r.get("known_at") or "", r.get("title") or ""))
     return out
 
 
-# ── D-1 company text (never same-day tape) ───────────────────────────
+# ── D-1 company text (resolve a named company → ticker) ──────────────
 _PROFILE_CACHE: dict[str, dict[str, dict]] = {}
-_THEME_INDEX: dict[str, dict[str, list[str]]] = {}
 _NAME_INDEX: dict[str, dict[str, list[str]]] = {}
 _EXPORT_DATES: list[str] | None = None
-_NAME_STOP = {
-    "class", "shares", "holdings", "company", "corp", "inc", "ltd", "plc",
-    "group", "the", "and", "fund", "trust", "etf", "index", "global",
-    "share", "first", "income", "equity", "growth", "value", "world",
-    "united", "states", "international", "capital", "markets", "financial",
-    "partners", "advisors", "limited", "ordinary", "common", "stock",
-}
 
 
 def _export_dates() -> list[str]:
@@ -657,6 +675,31 @@ def prior_export_date(fill: str, cal: list[str]) -> str | None:
     if prior and prior in dates:
         return prior
     return dates[-1] if dates else None
+
+
+def _company_keys(company: str) -> list[str]:
+    c = re.sub(
+        r"\b(inc|corp|ltd|plc|llc|sa|ag|co|the|holdings|holding|"
+        r"class [a-z]|ordinary shares|ads|adr|limited)\b",
+        " ",
+        company or "",
+        flags=re.I,
+    )
+    c = re.sub(r"[^a-z0-9&. -]+", " ", c.lower())
+    c = re.sub(r"\s+", " ", c).strip()
+    keys: list[str] = []
+    if len(c) >= 6:
+        keys.append(c)
+    for w in c.split():
+        if len(w) >= 6 and w not in _NAME_STOP:
+            keys.append(w)
+    # two-word names ("bank of america", "duke energy")
+    parts = [w for w in c.split() if w not in _NAME_STOP]
+    if len(parts) >= 2:
+        pair = " ".join(parts[:2])
+        if len(pair) >= 8:
+            keys.append(pair)
+    return keys
 
 
 def load_prior_profiles(fill: str, cal: list[str]) -> dict[str, dict]:
@@ -699,189 +742,163 @@ def load_prior_profiles(fill: str, cal: list[str]) -> dict[str, dict]:
 
 
 def _index_profiles(exp: str, profiles: dict[str, dict]) -> None:
-    idx: dict[str, list[str]] = {}
-    for pack in THEME_PACKS:
-        need = pack.get("need")
-        if pack["id"] == "crypto_sec" and need is not None:
-            idx[pack["id"]] = [
-                t for t, p in profiles.items()
-                if need.search(p.get("company") or "")
-            ]
-        else:
-            idx[pack["id"]] = [
-                t for t, p in profiles.items()
-                if need is not None and need.search(p["text"])
-            ]
-    _THEME_INDEX[exp] = idx
     names: dict[str, list[str]] = defaultdict(list)
     for t, p in profiles.items():
-        for tok in re.findall(r"[a-z]{7,}", (p["company"] or "").lower()):
-            if tok not in _NAME_STOP:
-                names[tok].append(t)
+        for key in _company_keys(p.get("company") or ""):
+            names[key].append(t)
     _NAME_INDEX[exp] = names
 
 
-def _article_names(title: str, digest: str) -> str:
-    return f"{title or ''} {digest or ''}"
-
-
-_TICKER_IN_TEXT = re.compile(r"\b[A-Z]{1,5}\b")
-
-
-def _named_tickers(blob: str, blob_l: str, profiles: dict[str, dict]) -> set[str]:
-    found = {t for t in _TICKER_IN_TEXT.findall(blob) if t in profiles}
+def _ensure_index(profiles: dict[str, dict]) -> str | None:
+    if not profiles:
+        return None
     exp = next(iter(profiles.values()), {}).get("export")
-    nidx = _NAME_INDEX.get(exp) or {}
-    for tok in set(re.findall(r"[a-z]{7,}", blob_l)):
-        if tok in _NAME_STOP:
+    if not exp:
+        return None
+    if _PROFILE_CACHE.get(exp) is profiles and exp in _NAME_INDEX:
+        return exp
+    _index_profiles(exp, profiles)
+    return exp
+
+
+def exact_named_tickers(blob: str, profiles: dict[str, dict]) -> set[str]:
+    """Tickers the article names — ticker token or unique company name.
+
+    Does not expand a theme to a sector book.
+    """
+    found: set[str] = set()
+    if not blob or not profiles:
+        return found
+    for t in _TICKER_IN_TEXT.findall(blob):
+        if t in _TICKER_DENY:
             continue
-        for t in nidx.get(tok) or []:
+        if t in profiles:
             found.add(t)
+    exp = _ensure_index(profiles)
+    nidx = _NAME_INDEX.get(exp) or {}
+    blob_l = blob.lower()
+    for key, tickers in nidx.items():
+        if key not in blob_l:
+            continue
+        uniq = list(dict.fromkeys(tickers))
+        if len(uniq) > 2:
+            continue
+        found.update(uniq)
     return found
 
 
 def map_tickers(article: dict, profiles: dict[str, dict]) -> list[dict]:
-    """Overlap of article themes vs D-1 company text. No row-ticker proof."""
+    """Exact named overlap only. No sector-wide dump, no Finviz row ticker."""
     title = article.get("title") or ""
     digest = article.get("digest") or ""
-    blob = _article_names(title, digest)
-    blob_l = blob.lower()
+    blob = f"{title} {digest}".strip()
+    _ensure_index(profiles)
+    named = exact_named_tickers(blob, profiles)
+    for t in article.get("grok_tickers") or []:
+        tick = fm._tick(t)
+        if tick and tick in profiles and (tick in named or tick in blob):
+            named.add(tick)
+    if not named:
+        return []
     themes = match_themes(title) or match_themes(digest)
-    if not themes:
-        themes = [{
-            "id": "named",
-            "sector_wide": False,
-            "need": None,
-            "polarity": None,
-            "rx": None,
-        }]
-    exp = next(iter(profiles.values()), {}).get("export")
-    if exp and exp not in _THEME_INDEX:
-        _index_profiles(exp, profiles)
-    named_set = _named_tickers(blob, blob_l, profiles)
-    hits: dict[str, dict] = {}
-    for theme in themes:
-        pol = article_polarity(blob, theme)
-        if pol not in ("bullish", "bearish") and theme.get("id") != "hormuz_new":
-            continue
-        need = theme.get("need")
-        sector_wide = bool(theme.get("sector_wide"))
-        pre = list((_THEME_INDEX.get(exp) or {}).get(theme.get("id") or "") or [])
-        if theme.get("id") == "named":
-            tickers = list(named_set)
-        elif sector_wide:
-            tickers = pre
-        else:
-            tickers = list(set(pre) | named_set)
-        for t in tickers:
-            prof = profiles.get(t)
-            if not prof:
-                continue
-            text = prof["text"]
-            named = t in named_set
-            both = bool(need and need.search(blob_l) and need.search(text))
-            if theme.get("id") == "named":
-                overlap = named
-            elif theme.get("id") == "crypto_sec":
-                overlap = named or bool(
-                    need and need.search(prof.get("company") or "")
-                )
-            elif not sector_wide:
-                overlap = named or both
-            else:
-                rx = theme.get("rx")
-                overlap = bool(need and need.search(text) and (
-                    need.search(blob_l) or (rx.search(blob) if rx else False)
-                ))
-            if not overlap:
-                continue
-            if (prof.get("industry") or "") == "Exchange Traded Fund" and not named:
-                if not (need and need.search(prof.get("company") or "")):
-                    continue
-            side = pol
-            if theme.get("id") == "hormuz_new":
-                side = ("bearish" if re.search(r"(?i)(airline|air freight)", text)
-                        else "bullish")
-            if theme.get("id") == "fed_path" and side == "bearish":
-                if re.search(r"(?i)regional bank", text):
-                    side = "bullish"
-            if side not in ("bullish", "bearish"):
-                continue
-            score = 2 + (3 if named else 0)
-            if need and need.search(prof.get("company") or ""):
-                score += 2
-            signed = score if side == "bullish" else -score
-            prev = hits.get(t)
-            if prev:
-                signed = prev["signed"] + signed
-            hits[t] = {
-                "ticker": t,
-                "side": "bullish" if signed > 0 else "bearish",
-                "signed": signed,
-                "theme": theme["id"],
-                "why": f"{theme['id']} ∩ D-1 {prof['industry'] or prof['sector']}",
-                "profile_export": prof["export"],
-            }
-    out = [h for h in hits.values() if h["signed"] != 0]
-    out.sort(key=lambda h: (-abs(h["signed"]), h["ticker"]))
-    return out[:8]
+    theme = themes[0] if themes else {"id": "named", "polarity": None}
+    grok_pol = norm_polarity(article.get("grok_polarity"))
+    text_pol = article_polarity(blob, theme)
+    default_pol = grok_pol if grok_pol in ("bullish", "bearish") else text_pol
+    sides = article.get("ticker_sides") or {}
+    hits: list[dict] = []
+    for t in sorted(named):
+        prof = profiles.get(t) or {}
+        side = norm_polarity(sides.get(t)) if sides.get(t) else default_pol
+        if theme.get("id") == "hormuz_new" and side not in ("bullish", "bearish"):
+            text = prof.get("text") or ""
+            side = ("bearish" if re.search(r"(?i)(airline|air freight)", text)
+                    else "mixed")
+        hits.append({
+            "ticker": t,
+            "side": side if side in ("bullish", "bearish", "mixed") else "neutral",
+            "signed": (3 if side == "bullish" else -3 if side == "bearish" else 0),
+            "theme": theme.get("id") or "named",
+            "why": f"named in article ∩ D-1 {(prof.get('company') or t)}",
+            "profile_export": prof.get("export") or "",
+            "exact": True,
+        })
+    hits.sort(key=lambda h: (-abs(h["signed"]), h["ticker"]))
+    return hits
 
 
 def official_bar(ticker: str, date: str) -> dict:
     return tl.session_bar(ticker, date) or {}
 
 
-# ── books ────────────────────────────────────────────────────────────
-def daily_scores(articles: list[dict], maps: dict[str, list[dict]],
-                 cal: list[str], start: str, end: str) -> dict[str, dict[str, int]]:
-    scores: dict[str, dict[str, int]] = {d: {} for d in cal if start <= d <= end}
+# ── overlay on existing strategy daily lists ─────────────────────────
+def apply_overlay(base_names: list[str], news: dict[str, int], mode: str,
+                  *, top_n: int, add_cap: int = ADD_CAP) -> list[str]:
+    """Rewrite a strategy day's names. ``news`` is ticker → signed score."""
+    bull = [t for t, s in sorted(news.items(), key=lambda kv: (-kv[1], kv[0]))
+            if s > 0]
+    bear = {t for t, s in news.items() if s < 0}
+    names = list(base_names)
+    if mode in ("base", "", None):
+        return names
+    if mode == "veto_bear":
+        return [t for t in names if t not in bear]
+    if mode == "require_bull":
+        return [t for t in names if t in set(bull)]
+    extra = [t for t in bull if t not in names]
+    if mode == "add_named":
+        room = max(0, top_n - len(names)) + add_cap
+        return names + extra[:room]
+    if mode == "full":
+        kept = [t for t in names if t not in bear]
+        room = max(0, top_n - len(kept)) + add_cap
+        return kept + extra[:room]
+    return names
+
+
+def daily_news_scores(articles: list[dict], maps: dict[str, list[dict]],
+                      cal: list[str]) -> dict[str, dict[str, int]]:
+    scores: dict[str, dict[str, int]] = {d: {} for d in cal}
     for art in articles:
         fill = art.get("fill")
         if not fill or fill not in scores:
             continue
         for h in maps.get(_norm(art["title"])) or []:
+            if h.get("signed") == 0:
+                continue
             t = h["ticker"]
             scores[fill][t] = scores[fill].get(t, 0) + int(h["signed"])
     return scores
 
 
-def panel_from_scores(scores: dict[str, dict[str, int]], cal: list[str],
-                      *, long_only: bool = True) -> dict:
-    rows = []
-    by_date: dict[str, list] = {}
-    for date in cal:
-        day = []
-        items = scores.get(date) or {}
-        ranked = sorted(items.items(), key=lambda kv: (-abs(kv[1]), kv[0]))
-        src = 0
-        for t, sc in ranked:
-            if long_only and sc <= 0:
+def apply_judge_sides(scores: dict[str, dict[str, int]],
+                      articles: list[dict]) -> None:
+    """Judge signed tickers only when that ticker is already exact-named."""
+    by_file: dict[str, set[str]] = defaultdict(set)
+    for art in articles:
+        fd = art.get("file_date")
+        fill = art.get("fill")
+        if fd:
+            by_file[fd].add(fill or "")
+    for fd, fills in by_file.items():
+        sides = load_judge_sides(fd)
+        if not sides:
+            continue
+        for fill in fills:
+            day = scores.get(fill)
+            if not day:
                 continue
-            src += 1
-            row = {
-                "date": date,
-                "ticker": t,
-                "sources": ["union"],
-                "src_rank": src,
-                "news_score": sc,
-                "boxes": {},
-            }
-            rows.append(row)
-            day.append(row)
-        by_date[date] = day
-    return {
-        "session_dates": list(cal),
-        "rows": rows,
-        "by_date": by_date,
-        "from_date": cal[0] if cal else "",
-        "to_date": cal[-1] if cal else "",
-        "n_sessions": len(cal),
-        "n_rows": len(rows),
-        "_ohlc_filled": True,
-        "_tape_filled": True,
-        "_clock_b": True,
-        "_oppset": True,
-    }
+            for t, side in sides.items():
+                if t not in day:
+                    continue
+                day[t] += 2 if side == "bullish" else -2
+
+
+def recipe_by_name(name: str) -> dict:
+    for rec in fm.build_recipes():
+        if rec.get("name") == name:
+            return rec
+    raise KeyError(name)
 
 
 def slim_book(book: dict) -> dict:
@@ -930,28 +947,17 @@ def book_stats(book: dict, starts: list[dict] | None = None) -> dict:
     }
 
 
-def run_news_books(panel: dict, *, top_ns=(4, 8), holds=(1, 2),
-                   starts_for: set[str] | None = None) -> tuple[dict, dict]:
-    regime = fmb.load_regime()
-    fees = fm.pt_fees()
-    books, stats = {}, {}
-    starts_for = starts_for or {"grok_n4_h1"}
-    for top_n in top_ns:
-        for hold in holds:
-            name = f"grok_n{top_n}_h{hold}"
-            rec = fm.make_recipe(
-                name=name, universe="union", hold=hold, top_n=top_n,
-                rank="list", side="long",
-                note="Grok news ticker research; long-only (no short locate)",
-            )
-            book = fmb.simulate_book(panel, rec, fees=fees, regime=regime)
-            starts = []
-            if name in starts_for:
-                starts = fmb.replay_starts(
-                    panel, rec, fees=fees, regime=regime)
-            books[name] = slim_book(book)
-            stats[name] = book_stats(book, starts)
-    return books, stats
+def running_book_pct(book: dict, start: str, end: str,
+                     capital: float = 10000.0) -> float | None:
+    daily = [d for d in (book.get("daily") or []) if d.get("equity") is not None]
+    window = [d for d in daily if start <= (d.get("date") or "") <= end]
+    if not window:
+        return None
+    prior = [d for d in daily if (d.get("date") or "") < start]
+    prev = float(prior[-1]["equity"]) if prior else capital
+    if not prev:
+        return None
+    return round(100.0 * (float(window[-1]["equity"]) / prev - 1.0), 3)
 
 
 def load_baseline_panel() -> dict | None:
@@ -961,29 +967,22 @@ def load_baseline_panel() -> dict | None:
         raw = json.loads(fm.PANEL_PATH.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
         return None
-    return fm.rehydrate_panel(raw)
+    panel = fm.rehydrate_panel(raw)
+    dummy = fm.make_recipe("overlay_read", universe="union", hold=1, top_n=4)
+    return fm.ensure_sim_fields(panel, dummy)
 
 
-def run_baselines(panel: dict | None, start: str, end: str) -> dict:
-    """Same-window controls from the published factor-mine cash books.
-
-    Full window uses the published $10k book. Half-windows are the
-    running-book split of that same path (not a second live write).
-    """
+def published_baselines(start: str, end: str) -> dict:
     out = {}
-    published = {}
-    dates, series = [], {}
     try:
         raw = json.loads(
             (ROOT / "03_scoreboard" / "factor_mine.json").read_text(encoding="utf-8"))
-        published = {s["name"]: s for s in (raw.get("stats") or [])}
-        dates = list(raw.get("dates") or [])
-        series = raw.get("series") or {}
     except (OSError, json.JSONDecodeError):
-        pass
-    _ = panel  # research read-only; do not resim into live paths
-
-    for name in ("union_hot_n4_h1", "flatten_h5"):
+        raw = {}
+    published = {s["name"]: s for s in (raw.get("stats") or [])}
+    dates = list(raw.get("dates") or [])
+    series = raw.get("series") or {}
+    for name in BASE_NAMES:
         st = published.get(name) or {}
         eq = list(series.get(name) or [])
         book_pct = st.get("total_ret_pct")
@@ -1000,16 +999,134 @@ def run_baselines(panel: dict | None, start: str, end: str) -> dict:
         out[name] = {
             "name": name,
             "book_pct": book_pct,
-            "final_equity": st.get("final_equity") if not running else eq[dates.index(end)] if dates and end in dates and eq else st.get("final_equity"),
-            "dollar_days": st.get("profitable_day_rate") if not running else None,
-            "starts_yes": (
-                f"{st.get('start_green')}/{st.get('start_n')}"
-                if st.get("start_n") and not running else None
-            ),
             "from_published": True,
             "window_from_running_equity": running,
         }
     return out
+
+
+def _clone_row(row: dict, **extra) -> dict:
+    out = dict(row)
+    boxes = dict(row.get("boxes") or {})
+    if extra.pop("news_bad", False):
+        boxes["news"] = "bad"
+    out["boxes"] = boxes
+    out.update(extra)
+    return out
+
+
+def overlay_panel(base_panel: dict, picks_by_date: dict[str, list[str]],
+                  news: dict[str, dict[str, int]], mode: str) -> dict:
+    row_index = {(r["date"], r["ticker"]): r for r in (base_panel.get("rows") or [])}
+    rows: list[dict] = []
+    by_date: dict[str, list] = {}
+    extra: list[dict] = []
+    for date, names in picks_by_date.items():
+        day = []
+        bear = {t for t, s in (news.get(date) or {}).items() if s < 0}
+        for i, t in enumerate(names, start=1):
+            src = row_index.get((date, t))
+            news_bad = mode in ("veto_bear", "full") and t in bear
+            if src:
+                row = _clone_row(
+                    src, sources=["union"], src_rank=i, news_bad=news_bad,
+                )
+            else:
+                row = {
+                    "date": date, "ticker": t, "sources": ["union"],
+                    "src_rank": i, "boxes": {"news": "bad"} if news_bad else {},
+                }
+                extra.append(row)
+            day.append(row)
+            rows.append(row)
+        by_date[date] = day
+    return {
+        **{k: v for k, v in base_panel.items()
+           if k not in ("rows", "by_date")},
+        "rows": rows,
+        "by_date": by_date,
+        "_ohlc_filled": True,
+        "_tape_filled": True,
+        "_clock_b": True,
+        "_oppset": True,
+    }
+
+
+def build_daily_picks(panel: dict, rec: dict, news: dict[str, dict[str, int]],
+                      mode: str, cal: list[str]) -> dict[str, list[str]]:
+    by_date = panel.get("by_date") or {}
+    top_n = int(rec.get("top_n") or fm.TOP_N_DEFAULT)
+    out: dict[str, list[str]] = {}
+    for date in cal:
+        chosen = fm.pick_day(by_date.get(date) or [], rec)
+        names = [r["ticker"] for r in chosen]
+        out[date] = apply_overlay(names, news.get(date) or {}, mode, top_n=top_n)
+    return out
+
+
+def overlay_touch_stats(base_picks: dict[str, list[str]],
+                        overlay_picks: dict[str, list[str]],
+                        news: dict[str, dict[str, int]]) -> dict:
+    days_changed = 0
+    vetoed = added = confirmed = 0
+    overlap_days = 0
+    for date, base in base_picks.items():
+        ov = overlay_picks.get(date) or []
+        day_news = news.get(date) or {}
+        if any(t in day_news for t in base):
+            overlap_days += 1
+        if ov != base:
+            days_changed += 1
+        vetoed += sum(1 for t in base if t not in ov)
+        added += sum(1 for t in ov if t not in base)
+        confirmed += sum(1 for t in base if (day_news.get(t) or 0) > 0)
+    return {
+        "days_changed": days_changed,
+        "n_days": len(base_picks),
+        "overlap_days": overlap_days,
+        "n_vetoed": vetoed,
+        "n_added": added,
+        "n_confirmed": confirmed,
+    }
+
+
+def run_overlay_books(panel: dict, news: dict[str, dict[str, int]],
+                      cal: list[str], start: str) -> tuple[dict, dict, dict]:
+    """Replay each base × overlay. Base uses the live recipe; overlays use the rewritten list."""
+    regime = fmb.load_regime()
+    fees = fm.pt_fees()
+    books, stats, meta = {}, {}, {}
+    recs = {n: recipe_by_name(n) for n in BASE_NAMES}
+    for base_name, rec in recs.items():
+        base_picks = build_daily_picks(panel, rec, news, "base", cal)
+        for mode in OVERLAY_MODES:
+            name = base_name if mode == "base" else f"{base_name}+{mode}"
+            print(f"[grok-news-bt] book {name}", flush=True)
+            if mode == "base":
+                book = fmb.simulate_book(
+                    panel, rec, fees=fees, regime=regime, start=start)
+                picks = base_picks
+                touch = overlay_touch_stats(base_picks, picks, news)
+            else:
+                picks = build_daily_picks(panel, rec, news, mode, cal)
+                ov_panel = overlay_panel(panel, picks, news, mode)
+                ov_rec = fm.make_recipe(
+                    name=name, universe="union",
+                    hold=int(rec.get("hold") or 1),
+                    top_n=32, rank="list", side="long",
+                    exit_when={"news": "bad"} if mode in ("veto_bear", "full") else {},
+                    note=f"news overlay {mode} on {base_name}",
+                )
+                book = fmb.simulate_book(
+                    ov_panel, ov_rec, fees=fees, regime=regime, start=start)
+                touch = overlay_touch_stats(base_picks, picks, news)
+            books[name] = slim_book(book)
+            stats[name] = book_stats(book)
+            meta[name] = {
+                "base": base_name, "mode": mode, "touch": touch,
+                "picks": {d: picks[d] for d in cal if picks.get(d)},
+            }
+    return books, stats, meta
 
 
 def name_grades(articles: list[dict], maps: dict[str, list[dict]],
@@ -1022,6 +1139,17 @@ def name_grades(articles: list[dict], maps: dict[str, list[dict]],
         i = cal.index(fill)
         nxt = cal[i + 1] if i + 1 < len(cal) else None
         for h in maps.get(_norm(art["title"])) or []:
+            if h.get("side") not in ("bullish", "bearish"):
+                graded.append({
+                    "title": (art["title"] or "")[:180],
+                    "ticker": h["ticker"],
+                    "fill": fill,
+                    "side": h["side"],
+                    "theme": h.get("theme"),
+                    "source": art.get("source"),
+                    "named_only": True,
+                })
+                continue
             bar = official_bar(h["ticker"], fill)
             o, c = bar.get("open"), bar.get("close")
             if o is None:
@@ -1063,24 +1191,15 @@ def pick_examples(graded: list[dict]) -> tuple[list[dict], list[dict]]:
               and g.get("next_close_hit") is False]
     hits.sort(key=lambda g: -abs(g.get("same_day_pct") or g.get("next_close_pct") or 0))
     misses.sort(key=lambda g: -abs(g.get("same_day_pct") or g.get("next_close_pct") or 0))
-    priority = {"SECZ", "HOOD", "COIN", "IBIT", "MSTR"}
-    prefer = [g for g in hits if g["ticker"] in priority]
-    hits.sort(key=lambda g: (
-        0 if g["ticker"] in priority else 1,
-        -abs(g.get("same_day_pct") or g.get("next_close_pct") or 0),
-    ))
-    seen = set()
-    chosen_hits = []
-    for g in prefer + hits:
-        k = g["ticker"]
-        if k in seen:
+    chosen_hits, seen = [], set()
+    for g in hits:
+        if g["ticker"] in seen:
             continue
-        seen.add(k)
+        seen.add(g["ticker"])
         chosen_hits.append(g)
         if len(chosen_hits) == 3:
             break
-    chosen_miss = []
-    seen = set()
+    chosen_miss, seen = [], set()
     for g in misses:
         k = (g["ticker"], g.get("title"))
         if k in seen:
@@ -1092,65 +1211,86 @@ def pick_examples(graded: list[dict]) -> tuple[list[dict], list[dict]]:
     return chosen_hits, chosen_miss
 
 
-def window_slice(articles, maps, cal, start, end):
-    fills = [d for d in cal if start <= d <= end]
-    arts = [a for a in articles if a.get("fill") in set(fills)]
-    n_td = 0
-    for a in arts:
-        n_td += len(maps.get(_norm(a["title"])) or [])
-    return arts, n_td
-
-
 def _pct(v) -> str:
     if v is None:
         return "—"
     return f"{float(v):+.2f}"
 
 
+def _delta(ov, base) -> str:
+    if ov is None or base is None:
+        return "—"
+    return f"{float(ov) - float(base):+.2f}"
+
+
+def _hit_rate(graded: list[dict], field: str) -> str:
+    xs = [g for g in graded if g.get(field) is not None]
+    if not xs:
+        return "—"
+    n = sum(1 for g in xs if g.get(field))
+    return f"{n}/{len(xs)} ({n / len(xs):.0%})"
+
+
 def write_md(payload: dict) -> str:
     cov = payload["coverage"]
     w = payload["windows"]
     lines = [
-        "# Grok news → ticker cash-book (research)",
+        "# Grok news overlay on existing strategies (research)",
         "",
         f"Window **{payload['from_date']} → {payload['to_date']}** · "
         f"last closed session **{payload['to_date']}**. "
-        "Two-stage: harvest automations to frozen files, then replay. "
+        "Every pre-open Grok-pipeline article → exact named tickers → "
+        "overlay on `union_hot_n4_h1` and `flatten_h5`. "
         "Not live. Does not touch factor-mine / flatten / Webull.",
         "",
         "## Coverage",
         "",
         f"- Stage 1 automation days dumped: **{cov.get('automation_days', 0)}** "
         f"({cov.get('n_results', 0)} results).",
+        f"- Grok-pipeline sessions with a pre-open file: "
+        f"**{cov.get('pipeline_sessions', 0)}** of {cov.get('n_sessions', 0)}.",
         f"- Sessions filled from repo files only: **{cov.get('repo_only_sessions', 0)}** "
         f"of {cov.get('n_sessions', 0)}.",
         f"- `automation_get_results`: **{cov.get('automation_get_results')}**. "
         f"{cov.get('reason') or ''}",
-        "- GH Actions must not harvest. Replay reads frozen dumps + dated repo news.",
+        f"- Articles kept: **{cov.get('articles_kept', 0)}** "
+        f"(frozen={cov.get('frozen_articles', 0)}, "
+        f"actions={cov.get('actions_articles', 0)}, "
+        f"parsed={cov.get('parsed_articles', 0)}, "
+        f"events={cov.get('event_articles', 0)}).",
+        f"- Articles that name ≥1 listed ticker: **{cov.get('articles_with_name', 0)}**.",
+        f"- Exact ticker-days: **{cov.get('n_ticker_days', 0)}** "
+        f"(bull/bear used by overlay: {cov.get('n_signed_ticker_days', 0)}).",
+        "- Raw Finviz CSV is **not** the article list. Sector baskets "
+        "(Hormuz → COP/EOG, EPA → every generator) are **not** a map.",
+        "- GH Actions must not harvest. Replay reads frozen dumps + dated Grok pipeline.",
         "",
         "## Leak rules",
         "",
-        "- `known_at` = automation createTime, or Finviz News Time if the title "
-        "is on that day’s export. Earlier stamp only if that stamp sits on a "
-        "file dated ≤ the fill session.",
+        "- `known_at` = automation createTime, or the pipeline file's "
+        "`generated_at` / printed stamp. Earlier stamp only if that stamp "
+        "sits on a file dated ≤ the fill session.",
         "- Fill = next official 09:30 **strictly after** known_at. "
         "09:30:00 ET is too late for that open. RTH → next open. "
         "Missing official open → no fill.",
-        "- Mapper uses D-1 Company / Sector / Industry only. "
-        "Never same-day Change%/Gap/RelVol. Never “Finviz attached this "
-        "headline to ticker X”.",
+        "- A ticker is affected only if the article **names** it (ticker "
+        "token or unique D-1 company name). Grok `ticker_actions` baskets "
+        "and theme packs do not expand the set.",
         "- No close digest, no post-close research_baseline, no OOS files "
-        "while mapping an IS fill.",
-        "- Hormuz carry with no new shock is not an article.",
-        "- Long-only (no short locate) + hard-red S≤−3 sit. "
-        "$10k leftover split, Futubull fees, whole shares.",
+        "while mapping an IS fill, no same-day Change%/Gap/RelVol.",
+        "- Long-only (no short locate) + hard-red S≤−3 sit. $10k leftover "
+        "split, Futubull fees, whole shares.",
         "",
-        "## Headline books vs controls",
+        "## Overlay vs same-panel base",
         "",
-        "| Window | n articles | n ticker-days | same-day name hit | "
-        "`grok_n4_h1` book% | starts YES | $ days | "
-        "`union_hot_n4_h1` | `flatten_h5` |",
-        "|---|---:|---:|---:|---:|---:|---:|---:|---:|",
+        "Base books are resimulated on the research panel with the live "
+        "recipe (`pick_day`). Overlay books rewrite that day's list, then "
+        "use the same cash book. IS / OOS are running-book splits of the "
+        "full-window path. Published factor-mine numbers are a footnote "
+        "only — overlay delta is vs the same-panel base.",
+        "",
+        "| Window | `union_hot_n4_h1` | +veto_bear | +require_bull | +add_named | +full |",
+        "|---|---:|---:|---:|---:|---:|",
     ]
     for key, label in (
         ("full", f"{payload['from_date']}→{payload['to_date']}"),
@@ -1158,65 +1298,112 @@ def write_md(payload: dict) -> str:
         ("oos", f"{OOS_START}→{payload['to_date']}"),
     ):
         row = w[key]
-        g = row["grok_n4_h1"]
+        ov = row["overlay"]["union_hot_n4_h1"]
         lines.append(
-            f"| {label} | {row['n_articles']} | {row['n_ticker_days']} | "
-            f"{row['same_day_hit']} | {_pct(g.get('book_pct'))} | "
-            f"{g.get('starts_yes') or '—'} | "
-            f"{'' if g.get('dollar_days') is None else f'{100*(g.get('dollar_days') or 0):.0f}%'} | "
-            f"{_pct(row['baselines']['union_hot_n4_h1'].get('book_pct'))} | "
-            f"{_pct(row['baselines']['flatten_h5'].get('book_pct'))} |"
+            f"| {label} | {_pct(ov['base']['book_pct'])} | "
+            f"{_pct(ov['veto_bear']['book_pct'])} "
+            f"({_delta(ov['veto_bear']['book_pct'], ov['base']['book_pct'])}) | "
+            f"{_pct(ov['require_bull']['book_pct'])} "
+            f"({_delta(ov['require_bull']['book_pct'], ov['base']['book_pct'])}) | "
+            f"{_pct(ov['add_named']['book_pct'])} "
+            f"({_delta(ov['add_named']['book_pct'], ov['base']['book_pct'])}) | "
+            f"{_pct(ov['full']['book_pct'])} "
+            f"({_delta(ov['full']['book_pct'], ov['base']['book_pct'])}) |"
         )
     lines += [
         "",
-        "### Variants (full window)",
-        "",
-        "| Recipe | book% | starts YES | $ days | trades |",
-        "|---|---:|---:|---:|---:|",
+        "| Window | `flatten_h5` | +veto_bear | +require_bull | +add_named | +full |",
+        "|---|---:|---:|---:|---:|---:|",
     ]
-    for name, st in payload["books_full"].items():
+    for key, label in (
+        ("full", f"{payload['from_date']}→{payload['to_date']}"),
+        ("is", f"{WINDOW_START}→{IS_END}"),
+        ("oos", f"{OOS_START}→{payload['to_date']}"),
+    ):
+        row = w[key]
+        ov = row["overlay"]["flatten_h5"]
         lines.append(
-            f"| `{name}` | {_pct(st.get('book_pct'))} | "
-            f"{st.get('starts_yes') or '—'} | "
-            f"{'' if st.get('dollar_days') is None else f'{100*(st.get('dollar_days') or 0):.0f}%'} | "
-            f"{st.get('n_trades')} |"
+            f"| {label} | {_pct(ov['base']['book_pct'])} | "
+            f"{_pct(ov['veto_bear']['book_pct'])} "
+            f"({_delta(ov['veto_bear']['book_pct'], ov['base']['book_pct'])}) | "
+            f"{_pct(ov['require_bull']['book_pct'])} "
+            f"({_delta(ov['require_bull']['book_pct'], ov['base']['book_pct'])}) | "
+            f"{_pct(ov['add_named']['book_pct'])} "
+            f"({_delta(ov['add_named']['book_pct'], ov['base']['book_pct'])}) | "
+            f"{_pct(ov['full']['book_pct'])} "
+            f"({_delta(ov['full']['book_pct'], ov['base']['book_pct'])}) |"
         )
-    lines += ["", "## 3 hits", ""]
+    touch = payload.get("touch") or {}
+    lines += [
+        "",
+        "### How often news actually touched the list (full window)",
+        "",
+        "| Base | overlay | days changed | list ∩ named | vetoed names | added names | confirmed bulls |",
+        "|---|---|---:|---:|---:|---:|---:|",
+    ]
+    for base in BASE_NAMES:
+        for mode in ("veto_bear", "require_bull", "add_named", "full"):
+            t = ((touch.get(base) or {}).get(mode) or {})
+            lines.append(
+                f"| `{base}` | `{mode}` | {t.get('days_changed', 0)}/"
+                f"{t.get('n_days', 0)} | {t.get('overlap_days', 0)} | "
+                f"{t.get('n_vetoed', 0)} | {t.get('n_added', 0)} | "
+                f"{t.get('n_confirmed', 0)} |"
+            )
+    pub = (w["full"].get("published") or {})
+    lines += [
+        "",
+        "### Published factor-mine footnote (not the overlay delta)",
+        "",
+        f"- Published `union_hot_n4_h1`: {_pct((pub.get('union_hot_n4_h1') or {}).get('book_pct'))}. "
+        f"Published `flatten_h5`: {_pct((pub.get('flatten_h5') or {}).get('book_pct'))}.",
+        "- Same-panel resim can differ from the published phone book "
+        "(start-on / lookback). Overlay minus base uses the resim.",
+        "",
+        "## 3 hits (exact named, directional)",
+        "",
+    ]
     for g in payload["examples"]["hits"]:
         lines.append(
-            f"- **{g['ticker']}** `{g.get('side')}` fill {g.get('fill')} "
-            f"same-day { _pct(g.get('same_day_pct')) } / next-close "
+            f"- **{g['ticker']}** `{g['side']}` fill {g['fill']} "
+            f"same-day {_pct(g.get('same_day_pct'))} / next-close "
             f"{_pct(g.get('next_close_pct'))} — {g.get('title')}"
         )
     if not payload["examples"]["hits"]:
-        lines.append("- *(none graded)*")
+        lines.append("- —")
     lines += ["", "## 3 misses", ""]
     for g in payload["examples"]["misses"]:
         lines.append(
-            f"- **{g['ticker']}** `{g.get('side')}` fill {g.get('fill')} "
-            f"same-day { _pct(g.get('same_day_pct')) } / next-close "
+            f"- **{g['ticker']}** `{g['side']}` fill {g['fill']} "
+            f"same-day {_pct(g.get('same_day_pct'))} / next-close "
             f"{_pct(g.get('next_close_pct'))} — {g.get('title')}"
         )
     if not payload["examples"]["misses"]:
-        lines.append("- *(none graded)*")
+        lines.append("- —")
     lines += [
+        "",
+        f"Exact named same-day hit rate: {w['full'].get('same_day_hit')}. "
+        f"Next-close: {w['full'].get('next_close_hit')}.",
         "",
         "## Method",
         "",
         "1. Stage 1 harvest (Cursor / Grok Bot, not GH Action) dumps each "
         "automation result since 2026-08-13 into "
-        "`data/grok_automations/{date}_{task}.json`.",
-        "2. Stage 2 keeps policy / regulator / exemption / ban / tariff / "
-        "Fed / court / bill rows. Drops earnings PR, SEC filings, Yahoo/"
-        "Cramer tabloid, single-name FDA approvals, carried Hormuz.",
-        "3. Tickers must overlap D-1 company text. Sector-wide only when "
-        "the article is sector-wide (EPA GHG → coal/gas generators; random "
-        "software no).",
-        "4. Cash book is the factor-mine family: $10k, leftover split, "
-        "Futubull fees, whole shares, sell first, hard-red sit.",
-        "5. `union_hot_n4_h1` / `flatten_h5` full-window numbers are the "
-        "published cash books. 08-13→09-09 and 09-10→end are running-book "
-        "splits of that same path (not a live rewrite).",
+        "`data/grok_automations/{date}_{task}.json`. This environment has "
+        "no `automation_get_results`, so Stage 2 reads the dated Grok "
+        "pipeline the news-parsing automation already wrote "
+        "(`*_parsed.json`, `*_actions.json` evidence, events).",
+        "2. Keep policy / regulator / exemption / ban / tariff / Fed / "
+        "court / bill rows. Drop earnings PR, SEC filings, Yahoo/Cramer "
+        "tabloid, single-name FDA approvals, carried Hormuz.",
+        "3. A stock is affected only when the article names it. Company "
+        "names resolve through D-1 Finviz Company text. Theme packs set "
+        "polarity of a named name; they do not add unnamed names.",
+        "4. Each session: `pick_day` the live recipe, then rewrite the "
+        "list (`veto_bear` / `require_bull` / `add_named` / `full`). "
+        "Cash book is the factor-mine family.",
+        "5. `full` also marks held names news🔴 when the article names "
+        "them bearish, so flatten hold-5 can exit after the min-hold rule.",
         "",
     ]
     return "\n".join(lines) + "\n"
@@ -1229,7 +1416,7 @@ def write_dash(payload: dict) -> None:
         "to_date": payload["to_date"],
         "coverage": payload["coverage"],
         "windows": payload["windows"],
-        "books_full": payload["books_full"],
+        "touch": payload.get("touch"),
         "examples": payload["examples"],
     }
     (DASH_DIR / "payload.json").write_text(
@@ -1237,40 +1424,69 @@ def write_dash(payload: dict) -> None:
     html = """<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Grok news ticker book — research</title>
+<title>Grok news overlay — research</title>
 <style>
 :root{--bg:#0f1420;--card:#171e2e;--line:#262f45;--fg:#dfe6f2;--mut:#8b96ab;--pos:#4ade80;--neg:#f87171;--gold:#fbbf24}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:13px/1.45 -apple-system,Segoe UI,sans-serif}
-.wrap{max-width:960px;margin:0 auto;padding:16px}h1{font-size:18px;margin:0 0 6px}
+.wrap{max-width:1040px;margin:0 auto;padding:16px}h1{font-size:18px;margin:0 0 6px}h2{font-size:14px;margin:0 0 8px}
 .sub{color:var(--mut);margin:0 0 12px}table{width:100%;border-collapse:collapse;margin:8px 0 16px}
 th,td{padding:5px 6px;border-bottom:1px solid var(--line);text-align:right}th:first-child,td:first-child{text-align:left}
 .pos{color:var(--pos)}.neg{color:var(--neg)}.note{color:var(--mut);font-size:12px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:0 0 12px}
 </style></head><body><div class="wrap">
-<h1>Grok news → ticker cash-book</h1>
-<p class="sub">Research only. Frozen automations + dated repo news. Live factor-mine / flatten / Webull untouched.</p>
+<h1>Grok news overlay on existing strategies</h1>
+<p class="sub">Research only. Exact named tickers from pre-open Grok articles, overlaid on union_hot_n4_h1 and flatten_h5. Live factor-mine / flatten / Webull untouched.</p>
 <div class="card" id="cov"></div>
-<div class="card"><h2>Windows</h2><table id="win"></table></div>
-<div class="card"><h2>Hits / misses</h2><div id="ex"></div></div>
-<p class="note">Fill = next 09:30 strictly after known_at. Mapper is D-1 company text. Long-only + hard-red sit.</p>
+<div class="card"><h2>union_hot_n4_h1 overlay</h2><table id="hot"></table></div>
+<div class="card"><h2>flatten_h5 overlay</h2><table id="flat"></table></div>
+<div class="card"><h2>List touch</h2><table id="touch"></table></div>
+<div class="card"><h2>Hits / misses (exact named)</h2><div id="ex"></div></div>
+<p class="note">Fill = next 09:30 strictly after known_at. Named ticker or unique D-1 company only. Long-only + hard-red sit.</p>
 </div>
 <script>
 fetch('payload.json').then(r=>r.json()).then(d=>{
   const cov=d.coverage||{};
   document.getElementById('cov').innerHTML =
     '<b>Coverage</b><div>automation days dumped: '+(cov.automation_days||0)+
-    ' · repo-only sessions: '+(cov.repo_only_sessions||0)+'/'+(cov.n_sessions||0)+
+    ' · pipeline sessions: '+(cov.pipeline_sessions||0)+'/'+(cov.n_sessions||0)+
+    ' · articles: '+(cov.articles_kept||0)+
+    ' · named: '+(cov.articles_with_name||0)+
+    ' · ticker-days: '+(cov.n_ticker_days||0)+
     '</div><div class="note">'+(cov.reason||'')+'</div>';
   const pct=v=>v==null?'—':((v>=0?'+':'')+Number(v).toFixed(2));
-  let h='<tr><th>Window</th><th>n art</th><th>ticker-days</th><th>same-day hit</th><th>n4 h1</th><th>hot4</th><th>flatten_h5</th></tr>';
-  for (const [k,label] of [['full','full'],['is','08-13→09-09'],['oos','09-10→end']]){
-    const w=d.windows[k]; if(!w) continue;
-    h+='<tr><td>'+label+'</td><td>'+w.n_articles+'</td><td>'+w.n_ticker_days+
-      '</td><td>'+w.same_day_hit+'</td><td>'+pct(w.grok_n4_h1.book_pct)+
-      '</td><td>'+pct(w.baselines.union_hot_n4_h1.book_pct)+
-      '</td><td>'+pct(w.baselines.flatten_h5.book_pct)+'</td></tr>';
+  const cls=v=>v==null?'':(v>=0?'pos':'neg');
+  const cell=(v,base)=>{
+    if(v==null) return '—';
+    const d = base==null? null : (Number(v)-Number(base));
+    const extra = d==null||base==null?'': ' <span class="'+cls(d)+'">('+pct(d)+')</span>';
+    return '<span class="'+cls(v)+'">'+pct(v)+'</span>'+extra;
+  };
+  const rows=(key)=>{
+    let h='<tr><th>Window</th><th>base</th><th>veto_bear</th><th>require_bull</th><th>add_named</th><th>full</th></tr>';
+    for (const [k,label] of [['full','full'],['is','08-13→09-09'],['oos','09-10→end']]){
+      const w=d.windows[k]; if(!w) continue;
+      const ov=w.overlay[key];
+      const b=ov.base.book_pct;
+      h+='<tr><td>'+label+'</td><td>'+cell(b,null)+
+        '</td><td>'+cell(ov.veto_bear.book_pct,b)+
+        '</td><td>'+cell(ov.require_bull.book_pct,b)+
+        '</td><td>'+cell(ov.add_named.book_pct,b)+
+        '</td><td>'+cell(ov.full.book_pct,b)+'</td></tr>';
+    }
+    return h;
+  };
+  document.getElementById('hot').innerHTML=rows('union_hot_n4_h1');
+  document.getElementById('flat').innerHTML=rows('flatten_h5');
+  let th='<tr><th>Base</th><th>overlay</th><th>days changed</th><th>list ∩ named</th><th>vetoed</th><th>added</th></tr>';
+  const touch=d.touch||{};
+  for (const base of ['union_hot_n4_h1','flatten_h5']){
+    for (const mode of ['veto_bear','require_bull','add_named','full']){
+      const t=(touch[base]||{})[mode]||{};
+      th+='<tr><td>'+base+'</td><td>'+mode+'</td><td>'+(t.days_changed||0)+'/'+(t.n_days||0)+
+        '</td><td>'+(t.overlap_days||0)+'</td><td>'+(t.n_vetoed||0)+'</td><td>'+(t.n_added||0)+'</td></tr>';
+    }
   }
-  document.getElementById('win').innerHTML=h;
+  document.getElementById('touch').innerHTML=th;
   const ex=d.examples||{};
   const li=(arr,tag)=>'<p><b>'+tag+'</b></p><ul>'+(arr||[]).map(g=>
     '<li><code>'+g.ticker+'</code> '+g.side+' '+g.fill+' same-day '+pct(g.same_day_pct)+' — '+(g.title||'')+'</li>').join('')+'</ul>';
@@ -1281,12 +1497,20 @@ fetch('payload.json').then(r=>r.json()).then(d=>{
     (DASH_DIR / "index.html").write_text(html, encoding="utf-8")
 
 
-def _hit_rate(graded: list[dict], field: str) -> str:
-    xs = [g for g in graded if g.get(field) is not None]
-    if not xs:
-        return "—"
-    n = sum(1 for g in xs if g.get(field))
-    return f"{n}/{len(xs)} ({n/len(xs):.0%})"
+def _window_overlay(stats: dict, books: dict, start: str, end: str,
+                    full_start: str, full_end: str) -> dict:
+    out: dict[str, dict] = {}
+    for base in BASE_NAMES:
+        block = {}
+        for mode in OVERLAY_MODES:
+            name = base if mode == "base" else f"{base}+{mode}"
+            st = dict(stats.get(name) or {})
+            if start != full_start or end != full_end:
+                st["book_pct"] = running_book_pct(books.get(name) or {}, start, end)
+                st["window_from_running_equity"] = True
+            block[mode] = st
+        out[base] = block
+    return out
 
 
 def run(write: bool = True) -> dict:
@@ -1299,16 +1523,17 @@ def run(write: bool = True) -> dict:
     if not (AUTO_DIR / "_coverage.json").is_file():
         harvest_report = harvest.run(since=WINDOW_START, dest=AUTO_DIR)
 
-    print("[grok-news-bt] loading dated articles (no close digest)", flush=True)
+    print("[grok-news-bt] loading Grok-pipeline articles (no Finviz dump, no close)",
+          flush=True)
     frozen = load_frozen_articles(cal)
     parsed = load_parsed_articles(cal)
+    actions = load_actions_articles(cal)
     events = load_event_articles(cal)
-    finviz = load_finviz_articles(cal)
-    articles = dedupe_articles(frozen + parsed + events + finviz)
+    articles = dedupe_articles(frozen + parsed + actions + events)
     articles = [a for a in articles if a.get("fill") and a["fill"] <= last]
     print(f"[grok-news-bt] kept {len(articles)} "
-          f"(frozen={len(frozen)} parsed={len(parsed)} "
-          f"events={len(events)} finviz={len(finviz)})", flush=True)
+          f"(frozen={len(frozen)} actions={len(actions)} "
+          f"parsed={len(parsed)} events={len(events)})", flush=True)
 
     maps: dict[str, list[dict]] = {}
     for i, art in enumerate(articles):
@@ -1318,46 +1543,62 @@ def run(write: bool = True) -> dict:
         if i and i % 50 == 0:
             print(f"[grok-news-bt] mapped {i}/{len(articles)}", flush=True)
 
-    auto_days = set()
-    for a in frozen:
-        auto_days.add(a.get("file_date"))
+    news = daily_news_scores(articles, maps, cal)
+    apply_judge_sides(news, articles)
+
+    auto_days = {a.get("file_date") for a in frozen if a.get("file_date")}
+    pipeline_days = sorted({
+        a.get("file_date") for a in (parsed + actions)
+        if a.get("file_date") and a["file_date"] in set(cal)
+    })
     repo_only = [d for d in cal if d not in auto_days]
 
     graded = name_grades(articles, maps, cal)
     hits, misses = pick_examples(graded)
 
+    print("[grok-news-bt] loading research panel (read-only)", flush=True)
+    panel = load_baseline_panel()
+    if panel is None:
+        raise SystemExit("factor-mine panel missing — cannot overlay existing lists")
+    panel_cal = [d for d in (panel.get("session_dates") or []) if d in set(cal)]
+    if not panel_cal:
+        raise SystemExit("panel has no sessions in the overlay window")
+
+    books, stats, meta = run_overlay_books(panel, news, panel_cal, WINDOW_START)
+
+    n_named = sum(1 for a in articles if maps.get(_norm(a["title"])))
+    n_td = sum(len(maps.get(_norm(a["title"])) or []) for a in articles)
+    n_signed = sum(
+        1 for a in articles for h in (maps.get(_norm(a["title"])) or [])
+        if h.get("signed")
+    )
+
     windows = {}
-    baseline_panel = None
-    books_full_stats = {}
-    books_full_slim = {}
     for key, start, end in (
         ("full", WINDOW_START, last),
         ("is", WINDOW_START, IS_END),
         ("oos", OOS_START, last),
     ):
-        arts, n_td = window_slice(articles, maps, cal, start, end)
-        sub_cal = [d for d in cal if start <= d <= end]
-        scores = daily_scores(arts, maps, sub_cal, start, end)
-        panel = panel_from_scores(scores, sub_cal)
-        print(f"[grok-news-bt] window {key} {start}→{end} "
-              f"articles={len(arts)} ticker-days={n_td}", flush=True)
-        books, stats = run_news_books(panel, starts_for={"grok_n4_h1"})
+        arts = [a for a in articles if start <= (a.get("fill") or "") <= end]
         g_graded = [g for g in graded if start <= (g.get("fill") or "") <= end]
-        base = run_baselines(baseline_panel, start, end)
         windows[key] = {
             "start": start,
             "end": end,
             "n_articles": len(arts),
-            "n_ticker_days": n_td,
+            "n_ticker_days": sum(
+                len(maps.get(_norm(a["title"])) or []) for a in arts),
             "same_day_hit": _hit_rate(g_graded, "same_day_hit"),
             "next_close_hit": _hit_rate(g_graded, "next_close_hit"),
-            "grok_n4_h1": stats["grok_n4_h1"],
-            "variants": stats,
-            "baselines": base,
+            "overlay": _window_overlay(
+                stats, books, start, end, WINDOW_START, last),
+            "published": published_baselines(start, end),
         }
-        if key == "full":
-            books_full_stats = stats
-            books_full_slim = books
+
+    touch: dict[str, dict] = {}
+    for base in BASE_NAMES:
+        touch[base] = {}
+        for mode in ("veto_bear", "require_bull", "add_named", "full"):
+            touch[base][mode] = (meta.get(f"{base}+{mode}") or {}).get("touch") or {}
 
     coverage = {
         "automation_get_results": bool(harvest_report.get("automation_get_results")),
@@ -1365,18 +1606,23 @@ def run(write: bool = True) -> dict:
         "automation_days": int(harvest_report.get("n_days") or 0),
         "n_results": int(harvest_report.get("n_results") or 0),
         "n_sessions": len(cal),
+        "pipeline_sessions": len(pipeline_days),
         "repo_only_sessions": len(repo_only),
         "frozen_articles": len(frozen),
         "parsed_articles": len(parsed),
+        "actions_articles": len(actions),
         "event_articles": len(events),
-        "finviz_articles": len(finviz),
         "articles_kept": len(articles),
+        "articles_with_name": n_named,
+        "n_ticker_days": n_td,
+        "n_signed_ticker_days": n_signed,
         "note": (
             "0 automation days dumped in this environment. Stage 1 must be "
             "re-run by Grok Bot / Cursor with Automations connector. Stage 2 "
-            "filled from dated repo news only."
+            "filled from dated Grok pipeline (parsed/actions/events) only. "
+            "Raw Finviz is not the article list."
             if not harvest_report.get("n_days") else
-            "Frozen automation dumps present; repo news used for gaps."
+            "Frozen automation dumps present; Grok pipeline used for gaps."
         ),
     }
 
@@ -1386,6 +1632,7 @@ def run(write: bool = True) -> dict:
             "title": a["title"][:220],
             "source": a.get("source"),
             "task": a.get("task") or "",
+            "event": a.get("event") or "",
             "file_date": a.get("file_date"),
             "known_at": a.get("known_at"),
             "fill": a.get("fill"),
@@ -1400,22 +1647,28 @@ def run(write: bool = True) -> dict:
         "generated_at": datetime.now(ET).isoformat(),
         "stage": 2,
         "research_only": True,
-        "live_untouched": ["dashboard/factor-mine/", "03_scoreboard/factor_mine.json",
-                           "flatten", "webull", "paper_open"],
+        "product": "overlay",
+        "live_untouched": [
+            "dashboard/factor-mine/", "03_scoreboard/factor_mine.json",
+            "flatten", "webull", "paper_open",
+        ],
         "from_date": WINDOW_START,
         "to_date": last,
         "coverage": coverage,
         "windows": windows,
-        "books_full": books_full_stats,
-        "daily_books": books_full_slim,
+        "books_full": stats,
+        "daily_books": books,
+        "touch": touch,
         "articles": slim_articles,
         "examples": {"hits": hits, "misses": misses},
         "leak": {
             "fill": "next official 09:30 strictly after known_at; 09:30:00 too late",
-            "mapper": "D-1 Company/Sector/Industry only",
+            "mapper": "exact named ticker or unique D-1 company only",
             "forbidden": [
                 "same-day Change%/Gap/RelVol",
                 "Finviz row ticker as proof",
+                "sector-basket expansion",
+                "raw Finviz as the article list",
                 "close digest",
                 "post-close research_baseline",
                 "OOS files while mapping IS",
@@ -1440,10 +1693,13 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--no-write", action="store_true")
     args = ap.parse_args(argv)
     payload = run(write=not args.no_write)
+    hot = ((payload["windows"]["full"]["overlay"].get("union_hot_n4_h1") or {}))
     print(
         f"[grok-news-bt] articles={payload['coverage']['articles_kept']} "
+        f"named={payload['coverage']['articles_with_name']} "
         f"auto_days={payload['coverage']['automation_days']} "
-        f"n4h1={payload['books_full']['grok_n4_h1'].get('book_pct')}"
+        f"hot4={hot.get('base', {}).get('book_pct')} "
+        f"hot4+full={hot.get('full', {}).get('book_pct')}"
     )
     return 0
 

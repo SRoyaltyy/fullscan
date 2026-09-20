@@ -24,7 +24,7 @@ jobs:
         run: pip install -r requirements.txt
       - name: Leak-rule tests
         run: python -m src.test_grok_news_ticker_bt
-      - name: Stage 2 replay (frozen files + dated repo news)
+      - name: Stage 2 overlay replay (frozen files + Grok pipeline)
         run: python -m src.grok_news_ticker_bt
       - name: Guard — no harvest API in this workflow
         run: |

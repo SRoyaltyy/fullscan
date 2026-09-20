@@ -99,10 +99,70 @@ def test_mapper_ignores_finviz_row_ticker() -> None:
     }
     hits = {h["ticker"] for h in bt.map_tickers(art, profiles)}
     assert "AMC" not in hits
-    assert "COIN" in hits
-    assert "SECZ" in hits
-    # company-name overlap, not a Finviz row attachment
-    assert all(h["ticker"] != "AMC" for h in bt.map_tickers(art, profiles))
+    # unnamed names are not a map — theme packs do not expand
+    assert "COIN" not in hits
+    assert "SECZ" not in hits
+
+
+def test_mapper_exact_company_and_ticker() -> None:
+    profiles = {
+        "COIN": {
+            "ticker": "COIN",
+            "company": "Coinbase Global Inc",
+            "sector": "Financial",
+            "industry": "Capital Markets",
+            "text": "coinbase global inc financial capital markets",
+            "export": "2026-09-17",
+        },
+        "HOOD": {
+            "ticker": "HOOD",
+            "company": "Robinhood Markets Inc",
+            "sector": "Financial",
+            "industry": "Capital Markets",
+            "text": "robinhood markets inc financial capital markets",
+            "export": "2026-09-17",
+        },
+        "DVN": {
+            "ticker": "DVN",
+            "company": "Devon Energy Corp",
+            "sector": "Energy",
+            "industry": "Oil & Gas E&P",
+            "text": "devon energy corp energy oil gas",
+            "export": "2026-09-17",
+        },
+        "COP": {
+            "ticker": "COP",
+            "company": "ConocoPhillips",
+            "sector": "Energy",
+            "industry": "Oil & Gas E&P",
+            "text": "conocophillips energy oil gas",
+            "export": "2026-09-17",
+        },
+    }
+    coin = bt.map_tickers(
+        {"title": "Coinbase Debuts Tokenized Stocks On Base Network", "digest": ""},
+        profiles,
+    )
+    assert {h["ticker"] for h in coin} == {"COIN"}
+    assert coin[0]["side"] == "bullish"
+    hood = bt.map_tickers(
+        {"title": "Robinhood CEO Calls On U.S. To Approve Tokenized Stocks",
+         "digest": ""},
+        profiles,
+    )
+    assert {h["ticker"] for h in hood} == {"HOOD"}
+    dvn = bt.map_tickers(
+        {"title": "Surprise US crude inventory build and Fed rate hike drive 5.63% DVN drop",
+         "digest": ""},
+        profiles,
+    )
+    assert {h["ticker"] for h in dvn} == {"DVN"}
+    assert dvn[0]["side"] == "bearish"
+    hormuz = bt.map_tickers(
+        {"title": "IRGC strikes Togo-flagged tanker in Hormuz", "digest": ""},
+        profiles,
+    )
+    assert "COP" not in {h["ticker"] for h in hormuz}
 
 
 def test_mapper_does_not_assign_random_software_on_epa() -> None:
@@ -127,7 +187,27 @@ def test_mapper_does_not_assign_random_software_on_epa() -> None:
     art = {"title": "EPA moves to repeal GHG standards for existing coal plants", "digest": ""}
     hits = {h["ticker"] for h in bt.map_tickers(art, profiles)}
     assert "MSFT" not in hits
-    assert "VST" in hits
+    assert "VST" not in hits  # Vistra is not named
+    named = bt.map_tickers(
+        {"title": "EPA repeal of GHG standards lifts Vistra (VST)", "digest": ""},
+        profiles,
+    )
+    assert {h["ticker"] for h in named} == {"VST"}
+
+
+def test_overlay_rewrites_existing_list() -> None:
+    base = ["AAA", "BBB", "CCC", "DDD"]
+    news = {"BBB": -3, "CCC": 3, "EEE": 5, "FFF": 2}
+    assert bt.apply_overlay(base, news, "veto_bear", top_n=4) == [
+        "AAA", "CCC", "DDD",
+    ]
+    assert bt.apply_overlay(base, news, "require_bull", top_n=4) == ["CCC"]
+    added = bt.apply_overlay(base, news, "add_named", top_n=4)
+    assert added[:4] == base
+    assert "EEE" in added and "FFF" in added
+    full = bt.apply_overlay(base, news, "full", top_n=4)
+    assert "BBB" not in full
+    assert "EEE" in full
 
 
 def test_harvest_skips_standtest_and_13q() -> None:
@@ -163,7 +243,9 @@ def main() -> None:
     test_drop_sec_filing_and_single_name_fda()
     test_close_digest_paths_are_blocked()
     test_mapper_ignores_finviz_row_ticker()
+    test_mapper_exact_company_and_ticker()
     test_mapper_does_not_assign_random_software_on_epa()
+    test_overlay_rewrites_existing_list()
     test_harvest_skips_standtest_and_13q()
     from tempfile import TemporaryDirectory
     with TemporaryDirectory() as td:
