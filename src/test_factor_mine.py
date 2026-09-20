@@ -2829,3 +2829,50 @@ if __name__ == "__main__":
     from src.test_clock_b_tells import main as clock_b_main
     clock_b_main()
     print("factor-mine tests passed")
+
+
+def test_fee_keep_pins_always_workable():
+    """Cash Win% can fail WORKABLE_BAR while fee-prove is KEEP — still publish."""
+    from . import factor_mine as fm
+    # Failing cash-book stats for both fee-KEEP cards.
+    bad = [
+        {
+            "name": "union_e_fresh_h3",
+            "audit_ok": True,
+            "book_n_trades": 109,
+            "win_rate": 0.4667,
+            "total_ret_pct": 38.457,
+            "start_rate": 0.9615,
+            "profitable_day_rate": 0.6538,
+        },
+        {
+            "name": "short_clk_neg_weak_fail_h3",
+            "audit_ok": True,
+            "book_n_trades": 183,
+            "win_rate": 0.4949,
+            "total_ret_pct": -5.964,
+            "start_rate": 0.0769,
+            "profitable_day_rate": 0.3846,
+        },
+    ]
+    assert not fm.is_workable_stat(bad[0])
+    assert not fm.is_workable_stat(bad[1])
+    keep = fm.workable_names(bad, recipes=[])
+    assert "union_e_fresh_h3" in keep
+    assert "short_clk_neg_weak_fail_h3" in keep
+    pruned = fm.prune_payload_workable({
+        "stats": bad,
+        "recipes": [{"name": n} for n in ("union_e_fresh_h3", "short_clk_neg_weak_fail_h3")],
+        "featured": ["combo_other", "union_e_fresh_h3"],
+        "n_recipes": 2,
+        "series": {},
+        "daily": {},
+        "books": {},
+        "starts": {},
+    })
+    names = {s["name"] for s in pruned["stats"]}
+    assert names == {"union_e_fresh_h3", "short_clk_neg_weak_fail_h3"}
+    assert pruned["featured"][:2] == [
+        "union_e_fresh_h3",
+        "short_clk_neg_weak_fail_h3",
+    ]
