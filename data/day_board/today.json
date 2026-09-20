@@ -1,6 +1,6 @@
 {
   "date": "2026-09-20",
-  "generated_at": "2026-09-20T15:04:28.778287-04:00",
+  "generated_at": "2026-09-20T15:04:32.070146-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -81,59 +81,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-09-20",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-20T15:03:08.673666-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-09-20_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1449545,
-          "preview": "1d BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU"
-        },
-        {
-          "path": "data/stock_book/2026-09-20_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-09-20_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2576,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-09-20_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12411,
-          "preview": "2026-09-20 BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12411,
-          "preview": "2026-09-20 BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU"
-        },
-        {
-          "path": "01_daily/2026-09-20_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 79518,
-          "preview": "# Stock book \u2014 2026-09-20\n_Generated 2026-09-20T15:03:04.448021-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-20 BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU \u00b7 2026-09-20 BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU \u00b7 # Stock book \u2014 2026-09-20\n_Generated 2026-09-20T15:03:04.448021-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -420,6 +367,108 @@
         }
       ],
       "preview": "1d BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-20 BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU \u00b7 2026-09-20 BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU \u00b7 # Stock book \u2014 2026-09-20\n_Generated 2026-09-20T15:04:21.379930-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-09-20",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-20T15:04:31.393738-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 22212,
+          "preview": "2026-09-20 BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 630,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-20.json",
+          "ok": true,
+          "reason": "",
+          "size": 51985,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-20_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 28578,
+          "preview": "2026-09-20 BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 697774,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 973378,
+          "preview": "2026-09-18 BUY VICR, RBRK, ECO, DELL, FIVN, SDGR, GNRC, ILMN \u00b7 SELL SOC, EU, UUUU, PUMP, GS, MS, WFRD, BTU"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 697774,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 28578,
+          "preview": "2026-09-20 BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 697774,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 697774,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 973378,
+          "preview": "2026-09-18 BUY VICR, RBRK, ECO, DELL, FIVN, SDGR, GNRC, ILMN \u00b7 SELL SOC, EU, UUUU, PUMP, GS, MS, WFRD, BTU"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 2794,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 2794,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-09-20 BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-20 BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-18 BUY VICR, RBRK, ECO, DELL, FIVN, SDGR, GNRC, ILMN \u00b7 SELL SOC, EU, UUUU, PUMP, GS, MS, WFRD, BTU \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-20 BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-18 BUY VICR, RBRK, ECO, DELL, FIVN, SDGR, GNRC, ILMN \u00b7 SELL SOC, EU, UUUU, PUMP, "
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
