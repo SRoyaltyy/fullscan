@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-09-20T15:01:03.163523-04:00",
+  "hours": 48,
+  "raw_headlines": 0,
+  "news_source": "empty",
+  "unique_events": 0,
+  "universe_rows": 11654,
+  "interactions": [],
+  "reasoned_events": [],
+  "edge_actions": [],
+  "ticker_actions": [
+    {
+      "ticker": "XLE",
+      "buy_score": 0.0,
+      "sell_score": 8.0,
+      "events": [
+        {
+          "event": "news_judge",
+          "side": "sell",
+          "weight": 8.0,
+          "bucket": "judge"
+        }
+      ],
+      "net": -8.0,
+      "side": "sell"
+    },
+    {
+      "ticker": "BAC",
+      "buy_score": 0.0,
+      "sell_score": 5.5,
+      "events": [
+        {
+          "event": "news_judge",
+          "side": "sell",
+          "weight": 5.5,
+          "bucket": "judge"
+        }
+      ],
+      "net": -5.5,
+      "side": "sell"
+    }
+  ],
+  "judge_tickers": {
+    "XLE": -8.0,
+    "BAC": -5.5
+  }
+}
