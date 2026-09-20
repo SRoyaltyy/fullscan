@@ -44,20 +44,37 @@ def should_replay(name: str, cyrus: set[str]) -> bool:
     )
 
 
-def contrast_286(holdout: dict, no_oppset: dict | None) -> dict:
+def _touches_clock_b(name: str, members=None) -> bool:
+    bag = [name, *(members or [])]
+    for n in bag:
+        s = str(n)
+        if s in fmbopp.CLOCK_B_MENU or s.startswith("union_clk_") or s.startswith("short_clk_"):
+            return True
+        if "clk_" in s or s in ("union_oppset_h1", "oppset_h1") or "oppset" in s:
+            return True
+    return False
+
+
+def contrast_286(holdout: dict, no_oppset: dict | None,
+                 rows: list[dict] | None = None) -> dict:
     """What changed vs the no-oppset #286 freeze. Not a re-pick."""
     here = set(holdout.get("cyrus_featured") or [])
     there = set((no_oppset or {}).get("cyrus_featured") or [])
+    members_by = {}
+    for r in rows or holdout.get("rows") or []:
+        if r.get("name"):
+            members_by[r["name"]] = r.get("members") or []
+    clk = sorted(
+        n for n in here
+        if _touches_clock_b(n, members_by.get(n))
+    )
     return {
         "n_cyrus_oppset": len(here),
         "n_cyrus_no_oppset": len(there),
         "new_vs_286": sorted(here - there),
         "dropped_vs_286": sorted(there - here),
         "shared": sorted(here & there),
-        "clock_b_in_cyrus": sorted(
-            n for n in here
-            if n in fmbopp.CLOCK_B_MENU or "clk_" in n or "oppset" in n
-        ),
+        "clock_b_in_cyrus": clk,
     }
 
 
@@ -304,7 +321,7 @@ def run(*, holdout_path: Path | None = None, payload_path: Path | None = None,
     finally:
         fmoos.should_replay = orig_should
     contam = live_contamination(live, holdout)
-    contra = contrast_286(holdout, no_oppset)
+    contra = contrast_286(holdout, no_oppset, rows)
     return write_board(
         holdout, rows, contamination=contam, contrast=contra,
         dest_md=dest_md, dest_json=dest_json)
