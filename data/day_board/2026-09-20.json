@@ -1,20 +1,19 @@
 {
   "date": "2026-09-20",
-  "generated_at": "2026-09-20T15:03:03.015905-04:00",
-  "overall": "FAIL",
+  "generated_at": "2026-09-20T15:03:09.064706-04:00",
+  "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-20_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-20/_board.json` \u2014 missing",
+    "MISSING News actions JSON `01_daily/news/2026-09-20_actions.json` \u2014 missing",
     "MISSING Quote-page digest JSON (*_finviz_digest) `01_daily/news/2026-09-20_finviz_digest.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-09-20_judge.md` \u2014 missing",
-    "MISSING Weather JSON `01_daily/weather/2026-09-20_weather.json` \u2014 missing",
-    "MISSING AB checklist enriched `data/ab_checklist/2026-09-20_ab_checklist_enriched.csv` \u2014 missing"
+    "MISSING News judge MD `01_daily/news/2026-09-20_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 0,
-    "partial": 1,
-    "fail": 7,
+    "ok": 4,
+    "partial": 0,
+    "fail": 4,
     "n": 8
   },
   "processes": [
@@ -146,7 +145,7 @@
       "inputs_ready": false,
       "n_req_ok": 0,
       "n_req": 20,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 3,
       "files": [
         {
@@ -235,9 +234,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-20_actions.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 889
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "general",
@@ -391,9 +390,9 @@
       "key": "weather",
       "name": "Label + weather",
       "yaml": "label_weather.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
       "n_opt_ok": 0,
       "n_opt": 0,
@@ -412,23 +411,26 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-09-20_weather.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "sectors=11 bytes=9338 vix=falling yields=falling",
+          "size": 9338
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "favorable 1 \u00b7 hostile 7 \u00b7 neutral 3",
+      "bullets": [
+        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Energy, Financial, Real Estate, Utilities",
+        "events bull 4 / bear 9"
+      ]
     },
     {
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -436,22 +438,24 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-09-20_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=2654",
+          "size": 7629213
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-20_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=2654",
+          "size": 8466566
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "25 rows",
+      "bullets": [
+        "ANET, SFL, DSGX, DSX, ILMN"
+      ]
     },
     {
       "key": "catalyst",
@@ -469,9 +473,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-20_actions.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 889
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "in_digest",
@@ -499,11 +503,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 0,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -529,9 +533,9 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-20_actions.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 889
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "in_digest",
@@ -556,63 +560,63 @@
           "name": "Weather JSON",
           "path": "01_daily/weather/2026-09-20_weather.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "sectors=11 bytes=9338 vix=falling yields=falling",
+          "size": 9338
         },
         {
           "key": "in_ab",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-20_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=2654",
+          "size": 8466566
         },
         {
           "key": "join",
           "name": "Join ranked CSV",
           "path": "data/join/2026-09-20_ranked.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=5894",
+          "size": 2220790
         },
         {
           "key": "peers",
           "name": "Peer RS CSV",
           "path": "data/peers/2026-09-20_peer_rs.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "rows=5102",
+          "size": 821799
         },
         {
           "key": "book_json",
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-20_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "horizons=5 names=216",
+          "size": 1449545
         },
         {
           "key": "book_md",
           "name": "Stock book MD",
           "path": "01_daily/2026-09-20_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 78531
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-09-20_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 585
         },
         {
           "key": "paper",
@@ -628,21 +632,23 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-09-20 not in dashboard dates (last=2026-09-17)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-20)",
           "size": 6300795
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "203 rows",
+      "bullets": [
+        "FORM, P, KEYS, VICR, SKHY"
+      ]
     },
     {
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -652,17 +658,17 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-20_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "horizons=5 names=216",
+          "size": 1449545
         },
         {
           "key": "dash_html",
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-09-20 not in dashboard dates (last=2026-09-17)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-20)",
           "size": 6300795
         },
         {
@@ -689,13 +695,85 @@
     }
   ],
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "AVO",
+        "score": 0.6999704553649888
+      },
+      {
+        "ticker": "ACRS",
+        "score": 0.6056502087228353
+      },
+      {
+        "ticker": "CLYM",
+        "score": 0.4335245925831646
+      },
+      {
+        "ticker": "MATV",
+        "score": 0.5917927508358969
+      },
+      {
+        "ticker": "GAU",
+        "score": 0.47578182672945707
+      },
+      {
+        "ticker": "PGEN",
+        "score": 0.8221614018882937
+      },
+      {
+        "ticker": "SPCE",
+        "score": 0.6938920420363159
+      },
+      {
+        "ticker": "HOOD",
+        "score": 0.47292651415915626
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "FLNC",
+        "score": -0.4348691569535859
+      },
+      {
+        "ticker": "METC",
+        "score": -0.39278860774644847
+      },
+      {
+        "ticker": "STLA",
+        "score": -0.5029499604164206
+      },
+      {
+        "ticker": "REAX",
+        "score": -0.27796508434332384
+      },
+      {
+        "ticker": "KEP",
+        "score": -0.08766337956328289
+      },
+      {
+        "ticker": "GENI",
+        "score": -0.2115733682862383
+      },
+      {
+        "ticker": "BAK",
+        "score": -0.39561934115444397
+      },
+      {
+        "ticker": "WU",
+        "score": -0.3615882040007791
+      }
+    ],
     "flatten": {},
     "general": {},
     "sectors": {},
     "news": {},
-    "weather": {}
+    "weather": {
+      "said": "favorable 1 \u00b7 hostile 7 \u00b7 neutral 3",
+      "bullets": [
+        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Energy, Financial, Real Estate, Utilities",
+        "events bull 4 / bear 9"
+      ]
+    }
   },
   "lands": [
     {
@@ -858,6 +936,59 @@
         }
       ],
       "preview": "11640 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11655 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-20",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-20T15:03:08.673666-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-20_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1449545,
+          "preview": "1d BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU"
+        },
+        {
+          "path": "data/stock_book/2026-09-20_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-20_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2576,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-20_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12411,
+          "preview": "2026-09-20 BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12411,
+          "preview": "2026-09-20 BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU"
+        },
+        {
+          "path": "01_daily/2026-09-20_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 79518,
+          "preview": "# Stock book \u2014 2026-09-20\n_Generated 2026-09-20T15:03:04.448021-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-20 BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU \u00b7 2026-09-20 BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI, BAK, WU \u00b7 # Stock book \u2014 2026-09-20\n_Generated 2026-09-20T15:03:04.448021-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
