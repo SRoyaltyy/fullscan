@@ -4095,6 +4095,11 @@ def main(argv=None) -> int:
     ap.add_argument("--blind-0909", dest="blind_0909", action="store_true",
                     help="form sleeves from the ≤2026-09-09 recipe menu "
                          "(no live FOCUS / ALWAYS / Clock-B / holdup seeds)")
+    ap.add_argument("--blind-0909-oppset", dest="blind_0909_oppset",
+                    action="store_true",
+                    help="same 9/9 formation as --blind-0909 but INCLUDE "
+                         "Clock-B / Theme Radar oppset aisle (still no "
+                         "holdup / ALWAYS / FOCUS seeds)")
     ap.add_argument("--restamp-dash", action="store_true",
                     help="rewrite dashboard HTML from the current template; no remine")
     ap.add_argument("--splice-news-cam", action="store_true",
@@ -4149,7 +4154,13 @@ def main(argv=None) -> int:
         raise SystemExit("--holdout requires --out-root so OOS writes stay off the live board")
     if args.blind_0909 and not side:
         raise SystemExit("--blind-0909 requires --out-root so live Pages stay untouched")
+    if args.blind_0909_oppset and not side:
+        raise SystemExit(
+            "--blind-0909-oppset requires --out-root so live Pages stay untouched")
     paths = publish_paths(args.out_root or None, args.dash_dir or None)
+    if args.blind_0909_oppset:
+        from . import factor_mine_blind_oppset as fmbopp
+        return fmbopp.run_cli(args, paths)
     if args.blind_0909:
         from . import factor_mine_blind as fmbld
         return fmbld.run_cli(args, paths)
