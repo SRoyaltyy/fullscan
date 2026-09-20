@@ -1,4 +1,9 @@
-"""Required-input contract and explicit publication trigger; no broker calls."""
+"""Required-input contract and explicit publication trigger; no broker calls.
+
+Publish writes morning tickets via ``strategy_tickets`` / ``publish_live_boards``.
+Factor-mine picks use the oppset_union + Clock-B morning scan. This module
+does not size Webull or flatten_robust lots.
+"""
 from __future__ import annotations
 import argparse
 import hashlib

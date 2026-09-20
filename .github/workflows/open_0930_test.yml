@@ -16,6 +16,8 @@ on:
       - "src/webull_exec.py"
       - "src/combo_broker.py"
       - "src/strategy_tickets.py"
+      - "src/morning_scan.py"
+      - "src/test_morning_scan.py"
       - "src/skip_if_good.py"
       - "src/test_skip_if_good.py"
       - "scripts/publish_open_pack.sh"
@@ -27,6 +29,9 @@ on:
       - ".github/workflows/webull_paper.yml"
       - "src/open_0930_clock.py"
       - "src/test_open_0930.py"
+      - "src/strategy_tickets.py"
+      - "src/morning_scan.py"
+      - "src/test_morning_scan.py"
       - "scripts/publish_open_pack.sh"
 
 permissions:
@@ -50,6 +55,7 @@ jobs:
           set -euo pipefail
           PYTHONPATH=. python3 -m src.test_open_0930
           PYTHONPATH=. python3 -m src.test_strategy_tickets
+          PYTHONPATH=. python3 -m src.test_morning_scan
           PYTHONPATH=. python3 -m src.test_webull_exec
           PYTHONPATH=. python3 -m src.test_combo_broker
           PYTHONPATH=. python3 -m src.test_skip_if_good

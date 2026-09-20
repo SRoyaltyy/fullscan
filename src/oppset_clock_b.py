@@ -92,9 +92,10 @@ def pull(*, dest: Path | None = None, ref: str = DEFAULT_REF,
 
 
 def discover_csv() -> Path | None:
-    """Local cache, env override, or a sibling theme-radar checkout."""
+    """Local cache, vendored KEEP aisle, env override, or sibling checkout."""
     candidates = [
         cache_path(),
+        ROOT / "data" / "theme_radar" / "oppset_clock_b" / "oppset_flagged.csv",
         Path("/tmp/oppset_clock_b/oppset_flagged.csv"),
         ROOT.parent / "theme-radar" / DEFAULT_PATH,
     ]
