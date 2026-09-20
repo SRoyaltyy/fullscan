@@ -130,7 +130,7 @@ def mark_long_led(st: dict) -> dict:
     return st
 
 
-def enrich_payload_legs(payload: dict) -> dict:
+def enrich_payload_legs(payload: dict, pin: bool = True) -> dict:
     """Stamp long/short $ and long_led on baked stats. No remine."""
     rec_by = {r["name"]: r for r in (payload.get("recipes") or [])}
     books = payload.get("books") or {}
@@ -172,7 +172,8 @@ def enrich_payload_legs(payload: dict) -> dict:
     payload["combos"] = combo_meta
     featured: list[str] = []
     seen: set[str] = set()
-    for n in list(LONG_LED_PIN) + long_led + list(payload.get("featured") or []):
+    pins = LONG_LED_PIN if pin else ()
+    for n in list(pins) + long_led + list(payload.get("featured") or []):
         if n and n not in seen:
             seen.add(n)
             featured.append(n)

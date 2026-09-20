@@ -2549,7 +2549,8 @@ def run(from_date: str = START, to_date: str | None = None,
         panel: dict | None = None, rebuild_panel: bool = False,
         persist_panel: bool = False, book: bool = True,
         bars: dict | None = None, combos: bool = True,
-        paths: dict | None = None) -> dict:
+        paths: dict | None = None,
+        combo_specs: list[dict] | None = None) -> dict:
     from . import factor_mine_book as fmb
     recipes = list(recipes or build_recipes())
     end = to_date or live_panel_end(from_date, to_date)
@@ -2607,7 +2608,7 @@ def run(from_date: str = START, to_date: str | None = None,
         member_stat_by = {s["name"]: s for s in stats}
         combo_stats, combo_books = fmc.run_combos(
             panel, recipes, bars=bars, fees=fees, regime=regime,
-            member_stat_by=member_stat_by)
+            member_stat_by=member_stat_by, specs=combo_specs)
         for st in combo_stats:
             stats.append(st)
             books[st["name"]] = combo_books[st["name"]]
@@ -2932,9 +2933,9 @@ def is_workable_stat(s: dict, bar: dict | None = None) -> bool:
 
 
 def workable_names(stats: list | None, recipes: list | None = None,
-                   bar: dict | None = None) -> set[str]:
-    """Workable recipes + combo members + flatten_h5 benchmark."""
-    keep: set[str] = set(WORKABLE_ALWAYS)
+                   bar: dict | None = None, always=None) -> set[str]:
+    """Workable recipes + combo members + optional ALWAYS pins."""
+    keep: set[str] = set(WORKABLE_ALWAYS if always is None else always)
     rec_by = {r.get("name"): r for r in (recipes or []) if r.get("name")}
     for s in stats or []:
         name = s.get("name")
@@ -3013,7 +3014,9 @@ def _bought_from_kept(payload: dict, names: set[str]) -> set[str]:
     return {t for t in out if t}
 
 
-def prune_payload_workable(payload: dict, bar: dict | None = None) -> dict:
+def prune_payload_workable(payload: dict, bar: dict | None = None,
+                           always=None, keep_names: set[str] | None = None
+                           ) -> dict:
     """Drop recipes that fail Win% / $ days / Starts YES / Book%. Slim the rest.
 
     The baked .io page used to inflate ~107MB in the browser (16MB gzip HTML).
@@ -3024,7 +3027,8 @@ def prune_payload_workable(payload: dict, bar: dict | None = None) -> dict:
     stats = list(payload.get("stats") or [])
     recipes = list(payload.get("recipes") or [])
     n_mined = int(payload.get("n_recipes") or len(stats) or len(recipes))
-    keep = workable_names(stats, recipes, bar)
+    keep = (set(keep_names) if keep_names is not None
+            else workable_names(stats, recipes, bar, always=always))
     if not keep:
         return payload
     combo_names = {
@@ -3240,7 +3244,9 @@ def assert_publish_budget(out_json: Path | None = None,
 
 def write_outputs(payload: dict, stats: list[dict] | None = None,
                   books: dict | None = None, *,
-                  paths: dict | None = None) -> None:
+                  paths: dict | None = None,
+                  always=None, keep_names: set[str] | None = None,
+                  pin_long_led: bool = True) -> None:
     dest = paths or publish_paths()
     dest_json = Path(dest["json"])
     dest_md = Path(dest["md"])
@@ -3327,7 +3333,9 @@ def write_outputs(payload: dict, stats: list[dict] | None = None,
             f"{aud} | {s.get('effectiveness')} |"
         )
     dest_md.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    write_dash_html(payload, dash_dir=dest_dash)
+    write_dash_html(
+        payload, dash_dir=dest_dash, always=always,
+        keep_names=keep_names, pin_long_led=pin_long_led)
     if books:
         from . import factor_mine_book as fmb
         featured = payload.get("featured") or [
@@ -3340,11 +3348,14 @@ def write_outputs(payload: dict, stats: list[dict] | None = None,
         )
 
 
-def write_dash_html(payload: dict, dash_dir: Path | None = None) -> Path:
+def write_dash_html(payload: dict, dash_dir: Path | None = None,
+                    always=None, keep_names: set[str] | None = None,
+                    pin_long_led: bool = True) -> Path:
     """Bake the current template + sim.js + payload into Pages HTML."""
     from . import factor_mine_combo as fmc
-    payload = fmc.enrich_payload_legs(payload)
-    payload = prune_payload_workable(payload)
+    payload = fmc.enrich_payload_legs(payload, pin=pin_long_led)
+    payload = prune_payload_workable(
+        payload, always=always, keep_names=keep_names)
     payload = dict(payload)
     # Pack to_date / generated_at stay with the cash book. Pages built
     # is this bake so a 9/15 cash-start is not read as a missing pack.
@@ -4081,6 +4092,9 @@ def main(argv=None) -> int:
                          "the rest of the standing tape (OOS columns)")
     ap.add_argument("--asof-md", default="",
                     help="holdout verdict markdown path")
+    ap.add_argument("--blind-0909", dest="blind_0909", action="store_true",
+                    help="form sleeves from the ≤2026-09-09 recipe menu "
+                         "(no live FOCUS / ALWAYS / Clock-B / holdup seeds)")
     ap.add_argument("--restamp-dash", action="store_true",
                     help="rewrite dashboard HTML from the current template; no remine")
     ap.add_argument("--splice-news-cam", action="store_true",
@@ -4133,7 +4147,12 @@ def main(argv=None) -> int:
             "(not land-closed / restamp / splice / sweep)")
     if args.holdout and not side:
         raise SystemExit("--holdout requires --out-root so OOS writes stay off the live board")
+    if args.blind_0909 and not side:
+        raise SystemExit("--blind-0909 requires --out-root so live Pages stay untouched")
     paths = publish_paths(args.out_root or None, args.dash_dir or None)
+    if args.blind_0909:
+        from . import factor_mine_blind as fmbld
+        return fmbld.run_cli(args, paths)
     if args.pull_oppset:
         dest = opp.pull()
         idx = opp.load_index(dest)

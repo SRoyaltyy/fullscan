@@ -722,14 +722,15 @@ def recipes_from_action(*, universe="auto", hold="auto", gate="auto",
                         rank="auto", side="auto", top_n="auto",
                         exit="auto", entry="auto", size="auto",
                         sell="auto", s_boost="auto",
-                        auto_tweak=True) -> list[dict]:
+                        auto_tweak=True, base: list[dict] | None = None
+                        ) -> list[dict]:
     """Filter the systematic grid; auto dims stay swept.
 
     ``auto_tweak`` adds one-knob neighbors so a custom dropdown still
     explores nearby holds / gates / ranks / top-n / exits / universes
     / live-vs-list entry / size / sell / S-boost without a second click.
     """
-    base = fm.build_recipes()
+    base = list(base) if base is not None else fm.build_recipes()
 
     def gate_name(rec: dict) -> str:
         req = rec.get("require") or {}
