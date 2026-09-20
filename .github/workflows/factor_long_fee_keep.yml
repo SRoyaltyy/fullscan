@@ -1,0 +1,69 @@
+name: Factor-mine long fee KEEP (fee-aware prove)
+
+# Research only. Cash-leader longs + leftover Clock-B longs on the
+# restored multi-src morning panel ∪ Theme Radar oppset.
+# KEEP bar ≥30 prove fires and >55% after-fee H. Cash Book% is not KEEP.
+# Unit tests run on PR. Full prove is workflow_dispatch (panel + Finviz).
+
+on:
+  pull_request:
+    paths:
+      - "excel_bot/engine/factor_long_fee_keep.py"
+      - "excel_bot/engine/test_factor_long_fee_keep.py"
+      - "excel_bot/engine/catalogue_combo_keep.py"
+      - "excel_bot/engine/excel_clock_gate.py"
+      - "excel_bot/engine/excel_factor_mine.py"
+      - "excel_bot/engine/j_winrate.py"
+      - "src/clock_b_tells.py"
+      - ".github/workflows/factor_long_fee_keep.yml"
+      - "03_scoreboard/FACTOR_LONG_FEE_KEEP.md"
+      - "03_scoreboard/factor_long_fee_keep.json"
+      - "data/theme_radar/oppset_clock_b/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: factor-long-fee-keep
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Leak + fee bar
+        run: |
+          set -euo pipefail
+          python excel_bot/engine/test_factor_long_fee_keep.py
+
+  mine:
+    if: github.event_name == 'workflow_dispatch'
+    needs: test
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Prove
+        run: |
+          set -euo pipefail
+          python excel_bot/engine/factor_long_fee_keep.py
+          test -s 03_scoreboard/FACTOR_LONG_FEE_KEEP.md
+          test -s 03_scoreboard/factor_long_fee_keep.json
+          head -n 50 03_scoreboard/FACTOR_LONG_FEE_KEEP.md
+      - name: Publish board
+        if: always()
+        run: |
+          bash scripts/safe_git_push.sh "chore: long fee KEEP prove" \
+            03_scoreboard/FACTOR_LONG_FEE_KEEP.md \
+            03_scoreboard/factor_long_fee_keep.json || true
