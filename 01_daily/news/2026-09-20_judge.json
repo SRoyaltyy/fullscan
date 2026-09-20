@@ -1,0 +1,21 @@
+{
+ "risk_tilt": "off",
+ "macros": [
+  "hawkish",
+  "mixed",
+  "hawkish",
+  "mixed"
+ ],
+ "sector_tilts": {
+  "Energy": "bearish",
+  "Technology": "bullish",
+  "Financial": "bearish",
+  "Basic Materials": "bearish"
+ },
+ "tickers": {
+  "XLE": -8.0,
+  "BAC": -5.5
+ },
+ "b1_inject": "NEWS_JUDGE: n=7 rescued=3\nMACRO rates: [hawkish] Warsh JH lifts September hike odds; yields up, BNY prime +25bp (regime/1d-1w)\nMACRO risk: [mixed] Oil drop/inventory eases inflation optics but is not a dovish-Fed substitute (session/1d)\nSECTOR energy: [bearish] Surprise crude build + lower oil hit E&P beta (XLE)\nSECTOR semis: [bullish] ASML 2027 EUV sold out on AI demand (SMH/SOXX)\nSECTOR banks: [bearish] BAC CEO soft Q3 outlook (XLF/KBE)\nSECTOR materials: [bearish] Copper off records on US refined-copper tariff uncertainty (XLB/miners)\nSECTOR ai_infra: [mixed] FIX/LITE data-center/optics bid vs APH/Fabrinet + yields (AI-infra basket)\nINTERACTION: One hawkish rates cluster; do not buy duration on oil-disinflation; AI demand \u2260 uniform semi bid\nWATCH: Mechanical gold is two-sided (cut-bets rally vs Warsh slide); treat gold as rates symptom not a driver",
+ "date": "2026-09-20"
+}
