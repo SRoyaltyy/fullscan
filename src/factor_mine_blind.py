@@ -589,7 +589,7 @@ def render_blind_md(payload: dict, rows: list[dict], *,
         "## What was frozen",
         "",
         f"- **Panel cutoff:** `{FROM_DATE}` → `{cutoff}` only. No 9/10–{oos_end[-5:] if oos_end else 'end'} row entered ranking, tweaking, or featuring.",
-        f"- **Recipe-definition freeze:** yes. `{RECIPE_FREEZE_NOTE}`",
+        f"- **Recipe-definition freeze:** yes. {RECIPE_FREEZE_NOTE}",
         "- **Excluded from the seed set:** Clock-B catalogue pins, "
         "`union_hot_n4_holdup`, overnight_mega / overnight_h1, "
         "`combo_oh_5050_shared`, `combo_sh_macd_5050_shared`, "
@@ -612,7 +612,7 @@ def render_blind_md(payload: dict, rows: list[dict], *,
         f"shared 50/50 / 70/30 / 333 mixes **formed from IS singles** "
         f"(**{n_formed}** extras). Total scored: **{n_mined}**.",
         "4. Rank / KEEP from IS only. Cyrus would-have-featured: "
-        f"{blind.get('cyrus_rule') or 'Starts YES + Book% > 0 + n ≥ 30'}. "
+        f"{blind.get('cyrus_rule') or 'Starts YES + Book% > 0 + n ≥ 30'} "
         "Formal WORKABLE_BAR is reported beside it and does **not** pin "
         "FOCUS / WORKABLE_ALWAYS / hot4-holdup.",
         "5. Frozen discoveries replayed OOS continued + fresh $10k. "
@@ -630,11 +630,25 @@ def render_blind_md(payload: dict, rows: list[dict], *,
         "",
         "| Strategy | Side | Cyrus | Formal bar | "
         "IS start | IS book% | IS win% | IS n | "
-        "OOS cont book% | Fresh $10k |",
-        "|---|---|---|---|---:|---:|---:|---:|---:|---:|",
+        "OOS cont book% | Fresh $10k | Members / note |",
+        "|---|---|---|---|---:|---:|---:|---:|---:|---:|---|",
     ]
+    rec_by = {r.get("name"): r for r in (payload.get("recipes") or []) if r.get("name")}
+    formed_notes = []
     for r in rows:
         name = r["name"]
+        rec = rec_by.get(name) or {}
+        members = list(rec.get("members") or [])
+        note = ""
+        if str(name).startswith("combo_form_"):
+            note = "formed · " + " + ".join(f"`{m}`" for m in members)
+            formed_notes.append((name, members))
+        elif members:
+            note = " + ".join(f"`{m}`" for m in members)
+        elif name == "union_hot_n4_h1":
+            note = "9/9 grid point (union / h1 / n4 / hot_score); not featured"
+        elif name == "short_news_r_h3":
+            note = "9/9 short grid (news🔴 hold 3)"
         cys = "YES" if name in cyrus else "no"
         frm = "YES" if name in formal else "no"
         start = "—"
@@ -645,8 +659,20 @@ def render_blind_md(payload: dict, rows: list[dict], *,
             f"{start} | {_md_pp(r.get('is_book_pct'))} | "
             f"{_md_pct(r.get('is_win_rate'))} | {r.get('is_n_trades') or 0} | "
             f"{_md_pp(r.get('oos_book_pct_continued'))} | "
-            f"{_md_pp(r.get('fresh_book_pct'))} |"
+            f"{_md_pp(r.get('fresh_book_pct'))} | {note} |"
         )
+
+    if formed_notes:
+        lines += [
+            "",
+            "Formed extras (IS singles mixed with combo-engine primitives; "
+            "not live FOCUS pins):",
+            "",
+        ]
+        for name, members in formed_notes:
+            lines.append(
+                f"- `{name}` = " + " + ".join(f"`{m}`" for m in members)
+            )
 
     hot = by.get("union_hot_n4_h1") or {}
     hold = by.get("union_hot_n4_holdup")
