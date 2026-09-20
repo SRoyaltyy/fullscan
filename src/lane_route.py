@@ -81,7 +81,17 @@ _OR_CANDIDATES = [
 ]
 OR_MODELS = [m for m in _OR_CANDIDATES if m == "openrouter/free" or str(m).endswith(":free")]
 DS_MODELS = ["deepseek-flash", "deepseek-chat"]
-QWEN_MODELS = ["qwen-turbo", "qwen2.5-7b-instruct", "qwen3-8b"]
+# Free-ish first. qwen-flash, then turbo/small. Never plus / max / Pro / paid.
+QWEN_MODELS = [m for m in (
+    "qwen-flash",
+    "qwen-turbo",
+    "qwen2.5-7b-instruct",
+    "qwen3-8b",
+) if "plus" not in m.lower() and "max" not in m.lower()
+    and "paid" not in m.lower() and not m.lower().startswith("pro")
+    and "/pro" not in m.lower() and "-pro" not in m.lower()]
+# Public DashScope OpenAI-compatible fallbacks. DASHSCOPE_BASE_URL (env/secret)
+# is prepended by qwen_urls() — never log or commit that value.
 QWEN_URLS = [
     "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions",
     "https://dashscope-intl.aliyuncs.com/compatible-mode/v1/chat/completions",
@@ -170,6 +180,37 @@ def _dedupe(names: list[str]) -> list[str]:
             seen.add(name)
             out.append(name)
     return out
+
+
+def dashscope_chat_url(base: str) -> str:
+    """Normalize a DashScope compatible-mode base to a chat/completions URL.
+
+    James's secret is the /compatible-mode/v1 base. Append /chat/completions
+    when missing. Do not log or return the raw env value from callers.
+    """
+    base = (base or "").strip().rstrip("/")
+    if not base:
+        return ""
+    if base.endswith("/chat/completions"):
+        return base
+    return base + "/chat/completions"
+
+
+def qwen_urls() -> list[str]:
+    """DASHSCOPE_BASE_URL first (if set), then public dashscope*.aliyuncs.com."""
+    custom = dashscope_chat_url(os.environ.get("DASHSCOPE_BASE_URL") or "")
+    public = list(QWEN_URLS)
+    if custom:
+        return _dedupe([custom] + public)
+    return public
+
+
+def qwen_models() -> list[str]:
+    """Allowlisted free-ish Qwen IDs. qwen-flash first; skip plus/max/Pro."""
+    return [m for m in QWEN_MODELS
+            if "plus" not in m.lower() and "max" not in m.lower()
+            and "paid" not in m.lower() and not m.lower().startswith("pro")
+            and "/pro" not in m.lower() and "-pro" not in m.lower()]
 
 
 def lanes_for(tmpl: str) -> list[str]:
@@ -681,8 +722,8 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
             return None, None
         return hop_models(
             "qwen",
-            QWEN_MODELS,
-            lambda model: flu(QWEN_URLS, keys["qwen"], model),
+            qwen_models(),
+            lambda model: flu(qwen_urls(), keys["qwen"], model),
         )
     if lane == "zhipu":
         if not keys.get("zhipu"):

@@ -12,7 +12,9 @@ non-`Pro/`, Zhipu Flash IDs). Does not touch `flatten_robust` or the cash book.
 
 OpenRouter IDs must be `openrouter/free` or end in `:free`. SiliconFlow strips
 `Pro/`. Zhipu is Flash only: `glm-4.7-flash`, `glm-4-flash-250414`,
-`glm-4.5-flash`. Missing hopper secrets skip; they do not fail the job.
+`glm-4.5-flash`. DashScope prefers `qwen-flash` then turbo/small free IDs;
+`DASHSCOPE_BASE_URL` (if set) is tried before public `dashscope*.aliyuncs.com`.
+Missing hopper secrets skip; they do not fail the job.
 
 ## Enqueue
 

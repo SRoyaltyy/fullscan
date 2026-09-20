@@ -612,6 +612,7 @@ def test_lane_json_zero_dollar_hoppers() -> None:
         "HF_TOKEN",
         "DEEPSEEK_API_KEY",
         "DASHSCOPE_API_KEY",
+        "DASHSCOPE_BASE_URL",
         "QWEN_API_KEY",
         "SILICONFLOW_API_KEY",
         "ZHIPU_API_KEY",
@@ -664,6 +665,17 @@ def test_lane_json_zero_dollar_hoppers() -> None:
     zhipu_ids = re.findall(r'"(glm-[^"]+)"', py.split("ZHIPU_MODELS")[1].split("ZHIPU_URLS")[0])
     assert zhipu_ids and all("flash" in m for m in zhipu_ids), zhipu_ids
     assert "glm-5." not in py.split("ZHIPU_MODELS")[1].split("ZHIPU_URLS")[0]
+
+    qwen_ids = re.findall(
+        r'"(qwen[^"]+)"', py.split("QWEN_MODELS")[1].split("QWEN_URLS")[0]
+    )
+    assert qwen_ids and qwen_ids[0] == "qwen-flash", qwen_ids
+    assert "qwen-turbo" in qwen_ids
+    assert all("plus" not in m and "max" not in m and "paid" not in m for m in qwen_ids), qwen_ids
+    assert "DASHSCOPE_BASE_URL" in py
+    assert "def qwen_urls" in py
+    env_block = text.split("env:", 1)[1].split("run:", 1)[0]
+    assert "secrets.DASHSCOPE_BASE_URL" in env_block
 
     assert "not required" in header.lower() or "Skip if unset" in header
 
@@ -749,6 +761,65 @@ def test_lane_news_and_dig_templates() -> None:
     assert articles_from(flat)[0]["title"] == "Oil jump"
 
 
+def test_lane_dashscope_base_url_and_qwen_flash() -> None:
+    """Custom DashScope base first; qwen-flash preferred; no secret leak."""
+    import os
+
+    from src.lane_route import (
+        QWEN_MODELS,
+        QWEN_URLS,
+        dashscope_chat_url,
+        qwen_models,
+        qwen_urls,
+    )
+
+    assert QWEN_MODELS[0] == "qwen-flash"
+    models = qwen_models()
+    assert models[0] == "qwen-flash"
+    assert "qwen-turbo" in models
+    assert "qwen2.5-7b-instruct" in models
+    for mid in models:
+        low = mid.lower()
+        assert "plus" not in low and "max" not in low and "paid" not in low
+        assert not low.startswith("pro") and "/pro" not in low and "-pro" not in low
+
+    public = list(QWEN_URLS)
+    assert public[0].startswith("https://dashscope.aliyuncs.com/")
+    prev = os.environ.pop("DASHSCOPE_BASE_URL", None)
+    try:
+        assert qwen_urls() == public
+        fake = "https://example.test/compatible-mode/v1"
+        os.environ["DASHSCOPE_BASE_URL"] = fake
+        urls = qwen_urls()
+        assert urls[0] == fake + "/chat/completions"
+        assert urls[1:] == public
+        os.environ["DASHSCOPE_BASE_URL"] = fake + "/chat/completions"
+        assert qwen_urls()[0] == fake + "/chat/completions"
+        os.environ["DASHSCOPE_BASE_URL"] = fake + "/"
+        assert dashscope_chat_url(os.environ["DASHSCOPE_BASE_URL"]) == (
+            fake + "/chat/completions"
+        )
+    finally:
+        if prev is None:
+            os.environ.pop("DASHSCOPE_BASE_URL", None)
+        else:
+            os.environ["DASHSCOPE_BASE_URL"] = prev
+
+    # Never bake a private host or secret value into repo files.
+    leak_roots = (
+        ROOT / "src" / "lane_route.py",
+        ROOT / "src" / "test_workflow_fromjson.py",
+        WF / "lane_json.yml",
+        ROOT / "02_lessons" / "lane" / "README.md",
+        ROOT / "02_lessons" / "lane" / "inbox.examples.json",
+    )
+    key_pat = re.compile(r"sk-[A-Za-z0-9]{8,}")
+    for path in leak_roots:
+        blob = path.read_text(encoding="utf-8")
+        assert key_pat.search(blob) is None, path.name
+        assert "example.test" not in blob or path.name == "test_workflow_fromjson.py"
+
+
 def test_ci_workflow_is_wired() -> None:
     yml = (WF / "workflow_selfcheck.yml").read_text(encoding="utf-8")
     assert "pull_request:" in yml
@@ -776,6 +847,7 @@ def main() -> None:
         test_self_hosted_fromjson_jobs_resolve_both_sides,
         test_lane_json_zero_dollar_hoppers,
         test_lane_news_and_dig_templates,
+        test_lane_dashscope_base_url_and_qwen_flash,
         test_ci_workflow_is_wired,
     ]
     failed = 0
