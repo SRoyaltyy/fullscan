@@ -512,13 +512,15 @@ def render_oos_md(holdout: dict, rows: list[dict], *,
         "## Confirm vs #288 holdout books",
         "",
     ]
-    if mismatches:
+    cyrus_mismatch = [r for r in mismatches if r.get("cyrus_is")]
+    other_mismatch = [r for r in mismatches if not r.get("cyrus_is")]
+    if cyrus_mismatch:
         lines.append(
-            "MISMATCH vs holdout.json: "
+            "MISMATCH vs holdout.json on Cyrus featured: "
             + ", ".join(
                 f"`{r['name']}` cont={r.get('cont_match')} "
                 f"fresh={r.get('fresh_match')}"
-                for r in mismatches
+                for r in cyrus_mismatch
             )
             + "."
         )
@@ -526,7 +528,14 @@ def render_oos_md(holdout: dict, rows: list[dict], *,
         lines.append(
             "Continued Book% copied from #288 `holdout.json`. "
             "Fresh $10k start (9/10) matches holdout within "
-            f"{BOOK_MATCH_TOL:g} pp for every replayed name."
+            f"{BOOK_MATCH_TOL:g} pp for every Cyrus featured / mix name."
+        )
+    if other_mismatch:
+        lines.append(
+            "Clock-B catalogue singles drift on the empty-lot 9/10 path "
+            "(cannot KEEP; continued Book% still matches): "
+            + ", ".join(f"`{r['name']}`" for r in other_mismatch)
+            + "."
         )
     lines += [
         "",

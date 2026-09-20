@@ -16,7 +16,7 @@ OOS **continued** Book% is copied from #288 `holdout.json` (9/9 cash book walked
 
 FAIL. No frozen ≤9/9+oppset Cyrus name keeps positive continued Book% **and** enough OOS start-day wins (2026-09-10–2026-09-18).
 
-Taskforce continued-Book% survivors (not a KEEP bar): **7** of 26 Cyrus IS names. Win%>55% traps (WR clears, Cyrus FAIL): **11**. Frozen names verified: **64**. Start-day walks: **41/64**.
+Taskforce continued-Book% survivors (not a KEEP bar): **7** of 26 Cyrus IS names. Win%>55% traps (WR clears, Cyrus FAIL): **11**. Frozen names verified: **64**. Start-day walks: **64/64**.
 
 ## Taskforce 7 — continued Book% > 0 on #288 Cyrus
 
@@ -85,12 +85,12 @@ Clock-B / oppset-touched mixes (formed or 50/50 overlay):
 | `combo_scearnguid_5050_shared` | YES | `short_news_r_h3` + `union_clk_earn_guide_react_h1` | 0/7 | -0.20 | -0.87 | **FAIL** |
 | `combo_scrupcoilh_5050_shared` | YES | `short_news_r_h3` + `union_clk_r_up_coil_h1` | 0/7 | -0.20 | -0.87 | **FAIL** |
 | `combo_scholdvsse_5050_shared` | YES | `short_news_r_h3` + `union_clk_hold_vs_sector_h1` | 0/7 | -0.30 | -0.95 | **FAIL** |
-| `combo_secmombreak_333_shared` | no | `short_news_r_h3` + `union_e_fresh_h3` + `union_clk_mom_break_peer_h1` | — | -0.03 | -0.16 | **FAIL** |
-| `combo_seopp_333_shared` | no | `short_news_r_h3` + `union_e_fresh_h3` + `oppset_h1` | — | -1.46 | -1.61 | **FAIL** |
-| `combo_seuopp_333_shared` | no | `short_news_r_h3` + `union_e_fresh_h3` + `union_oppset_h1` | — | -1.48 | -1.61 | **FAIL** |
-| `combo_sopp_5050_shared` | no | `short_news_r_h3` + `oppset_h1` | — | -1.04 | -1.69 | **FAIL** |
-| `combo_scmombreak_5050_shared` | no | `short_news_r_h3` + `union_clk_mom_break_peer_h1` | — | +0.44 | -0.19 | **FAIL** |
-| `combo_suopp_5050_shared` | no | `short_news_r_h3` + `union_oppset_h1` | — | -1.01 | -1.69 | **FAIL** |
+| `combo_secmombreak_333_shared` | no | `short_news_r_h3` + `union_e_fresh_h3` + `union_clk_mom_break_peer_h1` | 0/7 | -0.03 | -0.16 | **FAIL** |
+| `combo_seopp_333_shared` | no | `short_news_r_h3` + `union_e_fresh_h3` + `oppset_h1` | 0/7 | -1.46 | -1.61 | **FAIL** |
+| `combo_seuopp_333_shared` | no | `short_news_r_h3` + `union_e_fresh_h3` + `union_oppset_h1` | 0/7 | -1.48 | -1.61 | **FAIL** |
+| `combo_sopp_5050_shared` | no | `short_news_r_h3` + `oppset_h1` | 0/7 | -1.04 | -1.69 | **FAIL** |
+| `combo_scmombreak_5050_shared` | no | `short_news_r_h3` + `union_clk_mom_break_peer_h1` | 0/7 | +0.44 | -0.19 | **FAIL** |
+| `combo_suopp_5050_shared` | no | `short_news_r_h3` + `union_oppset_h1` | 0/7 | -1.01 | -1.69 | **FAIL** |
 
 ## Frozen Cyrus featured — KEEP / FAIL
 
@@ -129,29 +129,29 @@ These cleared WORKABLE_BAR on 9/9 (Win% / $days / start≥50%) but not Starts YE
 
 | Strategy | IS start | IS book% | IS win% | OOS starts | Cont book% | Fresh $10k | Verdict |
 |---|---:|---:|---:|---:|---:|---:|---|
-| `combo_jse_333_shared` | 16/19 | +31.18 | 59% | — | -0.98 | -1.19 | **FAIL** |
-| `combo_se_3070_shared` | 16/19 | +28.39 | 62% | — | -0.49 | -0.30 | **FAIL** |
-| `combo_es_8020_shared` | 16/19 | +28.27 | 60% | — | -0.32 | -0.07 | **FAIL** |
-| `combo_secmombreak_333_shared` | 11/19 | +28.18 | 56% | — | -0.03 | -0.16 | **FAIL** |
-| `combo_seopp_333_shared` | 12/19 | +25.35 | 56% | — | -1.46 | -1.61 | **FAIL** |
-| `combo_nse_333_shared` | 16/19 | +24.41 | 58% | — | -0.96 | -1.15 | **FAIL** |
-| `combo_seuopp_333_shared` | 12/19 | +24.10 | 55% | — | -1.48 | -1.61 | **FAIL** |
-| `combo_sh_5050_shared` | 12/19 | +22.71 | 67% | — | +0.94 | +0.26 | **FAIL** |
-| `combo_se_7030_shared` | 12/19 | +22.63 | 65% | — | -0.53 | -0.84 | **FAIL** |
-| `combo_seh_404020_shared` | 15/19 | +22.39 | 56% | — | -0.06 | -0.23 | **FAIL** |
-| `combo_sh_3070_shared` | 10/19 | +22.15 | 67% | — | +1.50 | +1.04 | **FAIL** |
-| `combo_seh_333_skip` | 14/19 | +20.93 | 59% | — | +0.26 | +0.18 | **FAIL** |
-| `combo_seh_403525_shared` | 14/19 | +20.88 | 57% | — | +0.06 | -0.07 | **FAIL** |
-| `combo_seh_502525_shared` | 16/19 | +20.73 | 58% | — | +0.00 | -0.20 | **FAIL** |
-| `combo_seh_333_shared` | 14/19 | +19.31 | 57% | — | +0.22 | +0.18 | **FAIL** |
-| `combo_seh_333_weather` | 14/19 | +19.31 | 57% | — | +0.22 | +0.18 | **FAIL** |
-| `combo_se_5050_split` | 16/19 | +15.89 | 57% | — | +0.03 | -0.26 | **FAIL** |
-| `combo_seh_333_split` | 13/19 | +15.79 | 57% | — | +0.62 | +0.40 | **FAIL** |
-| `combo_seh_502525_split` | 13/19 | +12.84 | 55% | — | +0.35 | +0.15 | **FAIL** |
-| `combo_sopp_5050_shared` | 14/19 | +12.23 | 57% | — | -1.04 | -1.69 | **FAIL** |
-| `combo_scmombreak_5050_shared` | 16/19 | +11.17 | 60% | — | +0.44 | -0.19 | **FAIL** |
-| `combo_suopp_5050_shared` | 14/19 | +9.29 | 56% | — | -1.01 | -1.69 | **FAIL** |
-| `short_alarm_h3` | 12/19 | +2.46 | 55% | — | +0.00 | +0.00 | **FAIL** |
+| `combo_jse_333_shared` | 16/19 | +31.18 | 59% | 0/7 | -0.98 | -1.19 | **FAIL** |
+| `combo_se_3070_shared` | 16/19 | +28.39 | 62% | 0/7 | -0.49 | -0.30 | **FAIL** |
+| `combo_es_8020_shared` | 16/19 | +28.27 | 60% | 0/7 | -0.32 | -0.07 | **FAIL** |
+| `combo_secmombreak_333_shared` | 11/19 | +28.18 | 56% | 0/7 | -0.03 | -0.16 | **FAIL** |
+| `combo_seopp_333_shared` | 12/19 | +25.35 | 56% | 0/7 | -1.46 | -1.61 | **FAIL** |
+| `combo_nse_333_shared` | 16/19 | +24.41 | 58% | 0/7 | -0.96 | -1.15 | **FAIL** |
+| `combo_seuopp_333_shared` | 12/19 | +24.10 | 55% | 0/7 | -1.48 | -1.61 | **FAIL** |
+| `combo_sh_5050_shared` | 12/19 | +22.71 | 67% | 2/7 | +0.94 | +0.26 | **FAIL** |
+| `combo_se_7030_shared` | 12/19 | +22.63 | 65% | 0/7 | -0.53 | -0.84 | **FAIL** |
+| `combo_seh_404020_shared` | 15/19 | +22.39 | 56% | 0/7 | -0.06 | -0.23 | **FAIL** |
+| `combo_sh_3070_shared` | 10/19 | +22.15 | 67% | 2/7 | +1.50 | +1.04 | **FAIL** |
+| `combo_seh_333_skip` | 14/19 | +20.93 | 59% | 2/7 | +0.26 | +0.18 | **FAIL** |
+| `combo_seh_403525_shared` | 14/19 | +20.88 | 57% | 0/7 | +0.06 | -0.07 | **FAIL** |
+| `combo_seh_502525_shared` | 16/19 | +20.73 | 58% | 0/7 | +0.00 | -0.20 | **FAIL** |
+| `combo_seh_333_shared` | 14/19 | +19.31 | 57% | 2/7 | +0.22 | +0.18 | **FAIL** |
+| `combo_seh_333_weather` | 14/19 | +19.31 | 57% | 2/7 | +0.22 | +0.18 | **FAIL** |
+| `combo_se_5050_split` | 16/19 | +15.89 | 57% | 0/7 | +0.03 | -0.26 | **FAIL** |
+| `combo_seh_333_split` | 13/19 | +15.79 | 57% | 2/7 | +0.62 | +0.40 | **FAIL** |
+| `combo_seh_502525_split` | 13/19 | +12.84 | 55% | 2/7 | +0.35 | +0.15 | **FAIL** |
+| `combo_sopp_5050_shared` | 14/19 | +12.23 | 57% | 0/7 | -1.04 | -1.69 | **FAIL** |
+| `combo_scmombreak_5050_shared` | 16/19 | +11.17 | 60% | 0/7 | +0.44 | -0.19 | **FAIL** |
+| `combo_suopp_5050_shared` | 14/19 | +9.29 | 56% | 0/7 | -1.01 | -1.69 | **FAIL** |
+| `short_alarm_h3` | 12/19 | +2.46 | 55% | 0/7 | +0.00 | +0.00 | **FAIL** |
 
 ## Other frozen names (contamination / thin singles)
 
@@ -179,7 +179,8 @@ Live board window **2026-08-13 → 2026-09-18** (63 featured pins). That pack sa
 
 ## Confirm vs #288 holdout books
 
-MISMATCH vs holdout.json: `union_clk_fresh_cat_coil_h1` cont=True fresh=False, `short_clk_neg_weak_fail_h3` cont=True fresh=False, `union_clk_fresh_cat_coil_opp_h1` cont=True fresh=False, `short_clk_neg_weak_fail_opp_h3` cont=True fresh=False.
+Continued Book% copied from #288 `holdout.json`. Fresh $10k start (9/10) matches holdout within 0.05 pp for every Cyrus featured / mix name.
+Clock-B catalogue singles drift on the empty-lot 9/10 path (cannot KEEP; continued Book% still matches): `union_clk_fresh_cat_coil_h1`, `short_clk_neg_weak_fail_h3`, `union_clk_fresh_cat_coil_opp_h1`, `short_clk_neg_weak_fail_opp_h3`.
 
 Recipe-definition freeze: `cb7f09ae+e3aabf24`. Side paths only.
 

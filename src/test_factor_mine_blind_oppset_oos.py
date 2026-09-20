@@ -256,6 +256,7 @@ def test_contrast_286_and_oos_md() -> None:
     assert "#286" in md
     assert "09-10" in md
     assert "Formal-bar" in md
+    assert "Cyrus featured / mix name" in md
 
 
 def test_score_frozen_does_not_repick(tmp_path) -> None:
