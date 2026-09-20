@@ -14,7 +14,13 @@ OpenRouter IDs must be `openrouter/free` or end in `:free`. SiliconFlow strips
 `Pro/`. Zhipu is Flash only: `glm-4.7-flash`, `glm-4-flash-250414`,
 `glm-4.5-flash`. DashScope prefers `qwen-flash` then turbo/small free IDs;
 `DASHSCOPE_BASE_URL` (if set) is tried before public `dashscope*.aliyuncs.com`.
-Missing hopper secrets skip; they do not fail the job.
+TokenHub is overflow **behind** those $0 hoppers: flash IDs first
+(`glm-5.3-flash`, `glm-5.3-flashx`, `deepseek-v4-flash`) then `hy3`.
+`TOKENHUB_BASE_URL` or `TENCENT_BASE_URL` (if set) is tried before
+`https://tokenhub.tencentmaas.com/v1`; `/chat/completions` is appended when
+missing. Bearer: `TOKENHUB_API_KEY` or `TENCENT_API_KEY` (`HUNYUAN_API_KEY`
+is an optional key alias only). Missing hopper secrets skip; they do not
+fail the job.
 
 ## Enqueue
 
