@@ -26,6 +26,14 @@ This is a research miner. It does not change flatten_robust live.
 
 CLI: python -m src.factor_mine --write
 
+Time-cut remine (does not touch live Pages)::
+
+    python -m src.factor_mine --from-date 2026-08-13 --to-date 2026-09-09 \\
+        --write --auto-tweak --holdout \\
+        --out-root 03_scoreboard/factor_mine_asof_0909 \\
+        --dash-dir dashboard/factor-mine-asof-0909 \\
+        --asof-md 03_scoreboard/FACTOR_MINE_ASOF_0909.md
+
 After a flatten-only panel (one-day land-closed lookback), remine with
 ``--land-closed --write``. See docs/FACTOR_MINE_AUX_PANEL.md.
 """
@@ -65,6 +73,7 @@ AUX_SOURCES = frozenset({
     "earn_react", "mover_buy",
 })
 DASH_DIR = ROOT / "dashboard" / "factor-mine"
+COMBO_SIDECAR = ROOT / "03_scoreboard" / "factor_mine_combos.json"
 # Heavy books / starts / daily / probe / sim live in gzip shards so the
 # committed index stays under GitHub's 100MB hard cap. 2026-09-18 mine
 # runs died on `factor_mine.json is 102.00 MB` (GH001).
@@ -382,6 +391,71 @@ def make_recipe(name: str, *, universe: str = "union", hold: int = 1,
         "take_pct": take_pct,
         "stop_pct": stop_pct,
         "note": note,
+    }
+
+
+def slice_panel(panel: dict, start: str | None = None,
+                end: str | None = None) -> dict:
+    """Rows and calendar inside ``[start, end]``. Later sessions stay out."""
+    cal = [d for d in (panel.get("session_dates") or [])
+           if (not start or d >= start) and (not end or d <= end)]
+    keep = set(cal)
+    rows = [r for r in (panel.get("rows") or []) if r.get("date") in keep]
+    by_date: dict[str, list] = {}
+    for r in rows:
+        by_date.setdefault(r["date"], []).append(r)
+    out = {k: v for k, v in panel.items()
+           if k not in ("session_dates", "rows", "by_date")}
+    out.update({
+        "session_dates": cal,
+        "rows": rows,
+        "by_date": by_date,
+        "from_date": cal[0] if cal else start,
+        "to_date": cal[-1] if cal else end,
+        "n_sessions": len(cal),
+        "n_rows": len(rows),
+    })
+    return out
+
+
+def publish_paths(out_root: str | Path | None = None,
+                  dash_dir: str | Path | None = None) -> dict:
+    """Resolve scoreboard / dash write targets.
+
+    Default (no ``out_root``): live Pages paths. ``--out-root`` forks
+    every ``--write`` target so a time-cut remine cannot clobber
+    ``dashboard/factor-mine/`` or ``03_scoreboard/factor_mine.json``.
+    """
+    dash = Path(dash_dir) if dash_dir else None
+    if dash is not None and not dash.is_absolute():
+        dash = ROOT / dash
+    if not out_root:
+        return {
+            "json": OUT_JSON,
+            "md": OUT_MD,
+            "dash": dash or DASH_DIR,
+            "start": OUT_START,
+            "combo": COMBO_SIDECAR,
+            "action_dir": ROOT / "03_scoreboard" / "factor_mine",
+            "action_index": ROOT / "03_scoreboard" / "FACTOR_MINE_ACTION.md",
+            "daily_md": ROOT / "01_daily" / "factor_mine_action.md",
+            "persist_panel": True,
+            "write_actions": True,
+        }
+    root = Path(out_root)
+    if not root.is_absolute():
+        root = ROOT / root
+    return {
+        "json": root / "factor_mine.json",
+        "md": root / "FACTOR_MINE.md",
+        "dash": dash or (root / "dash"),
+        "start": root / "start_dates.json",
+        "combo": root / "factor_mine_combos.json",
+        "action_dir": root / "action",
+        "action_index": root / "FACTOR_MINE_ACTION.md",
+        "daily_md": None,
+        "persist_panel": False,
+        "write_actions": False,
     }
 
 
@@ -2474,7 +2548,8 @@ def run(from_date: str = START, to_date: str | None = None,
         write: bool = False, recipes: list[dict] | None = None,
         panel: dict | None = None, rebuild_panel: bool = False,
         persist_panel: bool = False, book: bool = True,
-        bars: dict | None = None, combos: bool = True) -> dict:
+        bars: dict | None = None, combos: bool = True,
+        paths: dict | None = None) -> dict:
     from . import factor_mine_book as fmb
     recipes = list(recipes or build_recipes())
     end = to_date or live_panel_end(from_date, to_date)
@@ -2505,7 +2580,7 @@ def run(from_date: str = START, to_date: str | None = None,
             panel = refresh_panel_marks(panel)
         except Exception as e:
             print(f"[factor-mine] price ensure skipped: {e}", flush=True)
-    if persist_panel or write:
+    if persist_panel:
         PANEL_PATH.parent.mkdir(parents=True, exist_ok=True)
         slim = {k: v for k, v in panel.items() if k != "by_date"}
         slim["by_date"] = None
@@ -2544,7 +2619,8 @@ def run(from_date: str = START, to_date: str | None = None,
                 "pool": st.get("pool") or "shared",
             }))
         if write:
-            fmc.write_combo_sidecar(combo_stats)
+            fmc.write_combo_sidecar(
+                combo_stats, dest=(paths or {}).get("combo"))
         combo_meta = {
             "n": len(combo_stats),
             "outperform": [s["name"] for s in combo_stats if s.get("outperforms")],
@@ -2631,7 +2707,10 @@ def run(from_date: str = START, to_date: str | None = None,
     payload.update(fmp.probe_meta())
     payload["sim"] = fms.build_sim_pack(panel)
     if write:
-        write_outputs(payload, stats, books=books)
+        write_outputs(
+            payload, stats,
+            books=books if (paths or {}).get("write_actions", True) else None,
+            paths=paths)
     return payload
 
 
@@ -3160,11 +3239,18 @@ def assert_publish_budget(out_json: Path | None = None,
 
 
 def write_outputs(payload: dict, stats: list[dict] | None = None,
-                  books: dict | None = None) -> None:
-    OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
-    OUT_START.parent.mkdir(parents=True, exist_ok=True)
-    DASH_DIR.mkdir(parents=True, exist_ok=True)
-    write_scoreboard(payload)
+                  books: dict | None = None, *,
+                  paths: dict | None = None) -> None:
+    dest = paths or publish_paths()
+    dest_json = Path(dest["json"])
+    dest_md = Path(dest["md"])
+    dest_dash = Path(dest["dash"])
+    dest_start = Path(dest["start"])
+    dest_json.parent.mkdir(parents=True, exist_ok=True)
+    dest_start.parent.mkdir(parents=True, exist_ok=True)
+    dest_dash.mkdir(parents=True, exist_ok=True)
+    dest_md.parent.mkdir(parents=True, exist_ok=True)
+    write_scoreboard(payload, dest_json)
     starts = {
         "generated_at": payload.get("generated_at"),
         "rows": [
@@ -3177,7 +3263,7 @@ def write_outputs(payload: dict, stats: list[dict] | None = None,
             for s in (stats or [])
         ],
     }
-    OUT_START.write_text(json.dumps(starts, indent=2), encoding="utf-8")
+    dest_start.write_text(json.dumps(starts, indent=2), encoding="utf-8")
     lines = [
         f"# Factor strategy mine — {payload.get('from_date')} → {payload.get('to_date')}",
         "",
@@ -3240,16 +3326,21 @@ def write_outputs(payload: dict, stats: list[dict] | None = None,
             f"{_n(s.get('total_ret_pct'))} | {_n(s.get('signal_ret_pct'))} | "
             f"{aud} | {s.get('effectiveness')} |"
         )
-    OUT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    write_dash_html(payload)
+    dest_md.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    write_dash_html(payload, dash_dir=dest_dash)
     if books:
         from . import factor_mine_book as fmb
         featured = payload.get("featured") or [
             s["name"] for s in (stats or []) if s.get("reliable")][:8]
-        fmb.write_action_mds(payload, stats or [], books, featured)
+        fmb.write_action_mds(
+            payload, stats or [], books, featured,
+            out_dir=dest.get("action_dir"),
+            out_index=dest.get("action_index"),
+            daily_md=dest.get("daily_md"),
+        )
 
 
-def write_dash_html(payload: dict) -> Path:
+def write_dash_html(payload: dict, dash_dir: Path | None = None) -> Path:
     """Bake the current template + sim.js + payload into Pages HTML."""
     from . import factor_mine_combo as fmc
     payload = fmc.enrich_payload_legs(payload)
@@ -3258,8 +3349,9 @@ def write_dash_html(payload: dict) -> Path:
     # Pack to_date / generated_at stay with the cash book. Pages built
     # is this bake so a 9/15 cash-start is not read as a missing pack.
     payload["pages_built_at"] = datetime.now(tl.ET).isoformat()
-    DASH_DIR.mkdir(parents=True, exist_ok=True)
-    dest = DASH_DIR / "index.html"
+    dest_dir = Path(dash_dir or DASH_DIR)
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    dest = dest_dir / "index.html"
     if not TEMPLATE.is_file():
         return dest
     html = TEMPLATE.read_text(encoding="utf-8")
@@ -3979,6 +4071,16 @@ def main(argv=None) -> int:
     ap.add_argument("--from-date", default=START)
     ap.add_argument("--to-date", default="")
     ap.add_argument("--write", action="store_true")
+    ap.add_argument("--out-root", default="",
+                    help="fork all --write targets under this directory "
+                         "(does not persist the live panel or live dash)")
+    ap.add_argument("--dash-dir", default="",
+                    help="dashboard directory (default: live, or <out-root>/dash)")
+    ap.add_argument("--holdout", action="store_true",
+                    help="after an --out-root remine, replay frozen KEEP on "
+                         "the rest of the standing tape (OOS columns)")
+    ap.add_argument("--asof-md", default="",
+                    help="holdout verdict markdown path")
     ap.add_argument("--restamp-dash", action="store_true",
                     help="rewrite dashboard HTML from the current template; no remine")
     ap.add_argument("--splice-news-cam", action="store_true",
@@ -4020,6 +4122,18 @@ def main(argv=None) -> int:
     ap.add_argument("--no-combo", action="store_true",
                     help="skip combination books (single-recipe mine only)")
     args = ap.parse_args(argv)
+    side = bool(args.out_root)
+    if side and (args.land_closed or args.restamp_dash
+                 or args.splice_news_cam or args.splice_tape_flow
+                 or args.splice_clock_b or args.sweep_white
+                 or args.sweep_bracket or args.refresh_window
+                 or args.stamp_overnight):
+        raise SystemExit(
+            "--out-root is only for a fresh remine --write "
+            "(not land-closed / restamp / splice / sweep)")
+    if args.holdout and not side:
+        raise SystemExit("--holdout requires --out-root so OOS writes stay off the live board")
+    paths = publish_paths(args.out_root or None, args.dash_dir or None)
     if args.pull_oppset:
         dest = opp.pull()
         idx = opp.load_index(dest)
@@ -4107,12 +4221,50 @@ def main(argv=None) -> int:
             entry=args.entry, size=args.size, sell=args.sell,
             s_boost=args.s_boost, auto_tweak=args.auto_tweak,
         )
+        panel = None
+        full_panel = None
+        persist = bool(args.write) and not side
+        if side:
+            # Standing tape through last closed, then slice. A --to-date
+            # earlier than the cache must not rebuild or persist live panel.
+            full_panel = load_or_build_panel(
+                args.from_date, None, rebuild=args.rebuild_panel)
+            full_panel = rehydrate_panel(full_panel)
+            attach_tape_flow(full_panel)
+            panel = slice_panel(
+                full_panel, args.from_date, args.to_date or None)
+            cal = list(panel.get("session_dates") or [])
+            if args.from_date and args.from_date not in cal:
+                raise SystemExit(
+                    f"panel missing --from-date {args.from_date}; "
+                    f"have {cal[:3]}…{cal[-3:] if len(cal) >= 3 else cal}")
+            if args.to_date and args.to_date not in cal:
+                raise SystemExit(
+                    f"panel missing --to-date {args.to_date}; "
+                    f"last session is {cal[-1] if cal else 'none'}")
+            print(f"[factor-mine] out-root {paths['json'].parent} "
+                  f"slice {panel.get('from_date')}→{panel.get('to_date')} "
+                  f"rows={panel.get('n_rows')} (live panel untouched)",
+                  flush=True)
         payload = run(
             args.from_date, args.to_date or None, write=args.write,
-            recipes=recipes, rebuild_panel=args.rebuild_panel,
-            persist_panel=args.write, book=not args.no_book,
+            recipes=recipes, panel=panel,
+            rebuild_panel=False if side else args.rebuild_panel,
+            persist_panel=persist, book=not args.no_book,
             combos=not args.no_combo,
+            paths=paths if args.write else None,
         )
+        if args.holdout:
+            from . import factor_mine_asof as fma
+            asof_md = Path(args.asof_md) if args.asof_md else None
+            if asof_md and not asof_md.is_absolute():
+                asof_md = ROOT / asof_md
+            fma.write_holdout_report(
+                payload, full_panel or load_or_build_panel(args.from_date, None),
+                cutoff=args.to_date or payload.get("to_date"),
+                out_root=paths["json"].parent,
+                asof_md=asof_md,
+            )
     print(f"[factor-mine] recipes={payload.get('n_recipes')} "
           f"rows={payload.get('n_rows')} sessions={payload.get('n_sessions')} "
           f"to={payload.get('to_date')}")
