@@ -1,0 +1,430 @@
+{
+  "from_date": "2026-08-13",
+  "to_date": "2026-09-18",
+  "coverage": {
+    "automation_get_results": false,
+    "reason": "automation_get_results unavailable in this environment (cloud VM / GH Actions cannot see automation run logs)",
+    "automation_days": 0,
+    "n_results": 0,
+    "n_sessions": 26,
+    "repo_only_sessions": 26,
+    "frozen_articles": 0,
+    "parsed_articles": 1038,
+    "event_articles": 173,
+    "finviz_articles": 706,
+    "articles_kept": 816,
+    "note": "0 automation days dumped in this environment. Stage 1 must be re-run by Grok Bot / Cursor with Automations connector. Stage 2 filled from dated repo news only."
+  },
+  "windows": {
+    "full": {
+      "start": "2026-08-13",
+      "end": "2026-09-18",
+      "n_articles": 816,
+      "n_ticker_days": 2907,
+      "same_day_hit": "1185/2305 (51%)",
+      "next_close_hit": "1072/2069 (52%)",
+      "grok_n4_h1": {
+        "name": "grok_n4_h1",
+        "book_pct": -3.786,
+        "final_equity": 9621.38,
+        "win_rate": 0.3902,
+        "dollar_days": 0.2308,
+        "starts_yes": "6/26",
+        "start_n": 26,
+        "start_green": 6,
+        "n_trades": 86,
+        "n_skips": 69
+      },
+      "variants": {
+        "grok_n4_h1": {
+          "name": "grok_n4_h1",
+          "book_pct": -3.786,
+          "final_equity": 9621.38,
+          "win_rate": 0.3902,
+          "dollar_days": 0.2308,
+          "starts_yes": "6/26",
+          "start_n": 26,
+          "start_green": 6,
+          "n_trades": 86,
+          "n_skips": 69
+        },
+        "grok_n4_h2": {
+          "name": "grok_n4_h2",
+          "book_pct": 0.545,
+          "final_equity": 10054.46,
+          "win_rate": 0.4615,
+          "dollar_days": 0.3462,
+          "starts_yes": null,
+          "start_n": 0,
+          "start_green": 0,
+          "n_trades": 56,
+          "n_skips": 109
+        },
+        "grok_n8_h1": {
+          "name": "grok_n8_h1",
+          "book_pct": -4.299,
+          "final_equity": 9570.07,
+          "win_rate": 0.3735,
+          "dollar_days": 0.1923,
+          "starts_yes": null,
+          "start_n": 0,
+          "start_green": 0,
+          "n_trades": 174,
+          "n_skips": 137
+        },
+        "grok_n8_h2": {
+          "name": "grok_n8_h2",
+          "book_pct": -3.526,
+          "final_equity": 9647.35,
+          "win_rate": 0.3509,
+          "dollar_days": 0.3077,
+          "starts_yes": null,
+          "start_n": 0,
+          "start_green": 0,
+          "n_trades": 122,
+          "n_skips": 225
+        }
+      },
+      "baselines": {
+        "union_hot_n4_h1": {
+          "name": "union_hot_n4_h1",
+          "book_pct": 31.966,
+          "final_equity": 13196.55,
+          "dollar_days": 0.5769,
+          "starts_yes": "26/26",
+          "from_published": true,
+          "window_from_running_equity": false
+        },
+        "flatten_h5": {
+          "name": "flatten_h5",
+          "book_pct": 3.393,
+          "final_equity": 10339.3,
+          "dollar_days": 0.6154,
+          "starts_yes": "2/26",
+          "from_published": true,
+          "window_from_running_equity": false
+        }
+      }
+    },
+    "is": {
+      "start": "2026-08-13",
+      "end": "2026-09-09",
+      "n_articles": 652,
+      "n_ticker_days": 2205,
+      "same_day_hit": "1090/2152 (51%)",
+      "next_close_hit": "1067/2060 (52%)",
+      "grok_n4_h1": {
+        "name": "grok_n4_h1",
+        "book_pct": -3.677,
+        "final_equity": 9632.26,
+        "win_rate": 0.3902,
+        "dollar_days": 0.3158,
+        "starts_yes": "6/19",
+        "start_n": 19,
+        "start_green": 6,
+        "n_trades": 82,
+        "n_skips": 27
+      },
+      "variants": {
+        "grok_n4_h1": {
+          "name": "grok_n4_h1",
+          "book_pct": -3.677,
+          "final_equity": 9632.26,
+          "win_rate": 0.3902,
+          "dollar_days": 0.3158,
+          "starts_yes": "6/19",
+          "start_n": 19,
+          "start_green": 6,
+          "n_trades": 82,
+          "n_skips": 27
+        },
+        "grok_n4_h2": {
+          "name": "grok_n4_h2",
+          "book_pct": 0.698,
+          "final_equity": 10069.8,
+          "win_rate": 0.5,
+          "dollar_days": 0.4737,
+          "starts_yes": null,
+          "start_n": 0,
+          "start_green": 0,
+          "n_trades": 50,
+          "n_skips": 65
+        },
+        "grok_n8_h1": {
+          "name": "grok_n8_h1",
+          "book_pct": -3.783,
+          "final_equity": 9621.67,
+          "win_rate": 0.3735,
+          "dollar_days": 0.2632,
+          "starts_yes": null,
+          "start_n": 0,
+          "start_green": 0,
+          "n_trades": 166,
+          "n_skips": 53
+        },
+        "grok_n8_h2": {
+          "name": "grok_n8_h2",
+          "book_pct": -2.989,
+          "final_equity": 9701.1,
+          "win_rate": 0.3846,
+          "dollar_days": 0.4211,
+          "starts_yes": null,
+          "start_n": 0,
+          "start_green": 0,
+          "n_trades": 109,
+          "n_skips": 136
+        }
+      },
+      "baselines": {
+        "union_hot_n4_h1": {
+          "name": "union_hot_n4_h1",
+          "book_pct": 14.95,
+          "final_equity": 11494.95,
+          "dollar_days": null,
+          "starts_yes": null,
+          "from_published": true,
+          "window_from_running_equity": true
+        },
+        "flatten_h5": {
+          "name": "flatten_h5",
+          "book_pct": 10.541,
+          "final_equity": 11054.1,
+          "dollar_days": null,
+          "starts_yes": null,
+          "from_published": true,
+          "window_from_running_equity": true
+        }
+      }
+    },
+    "oos": {
+      "start": "2026-09-10",
+      "end": "2026-09-18",
+      "n_articles": 164,
+      "n_ticker_days": 702,
+      "same_day_hit": "95/153 (62%)",
+      "next_close_hit": "5/9 (56%)",
+      "grok_n4_h1": {
+        "name": "grok_n4_h1",
+        "book_pct": -0.109,
+        "final_equity": 9989.06,
+        "win_rate": null,
+        "dollar_days": 0.0,
+        "starts_yes": "0/7",
+        "start_n": 7,
+        "start_green": 0,
+        "n_trades": 4,
+        "n_skips": 42
+      },
+      "variants": {
+        "grok_n4_h1": {
+          "name": "grok_n4_h1",
+          "book_pct": -0.109,
+          "final_equity": 9989.06,
+          "win_rate": null,
+          "dollar_days": 0.0,
+          "starts_yes": "0/7",
+          "start_n": 7,
+          "start_green": 0,
+          "n_trades": 4,
+          "n_skips": 42
+        },
+        "grok_n4_h2": {
+          "name": "grok_n4_h2",
+          "book_pct": -0.109,
+          "final_equity": 9989.06,
+          "win_rate": null,
+          "dollar_days": 0.0,
+          "starts_yes": null,
+          "start_n": 0,
+          "start_green": 0,
+          "n_trades": 4,
+          "n_skips": 42
+        },
+        "grok_n8_h1": {
+          "name": "grok_n8_h1",
+          "book_pct": -0.53,
+          "final_equity": 9946.95,
+          "win_rate": null,
+          "dollar_days": 0.0,
+          "starts_yes": null,
+          "start_n": 0,
+          "start_green": 0,
+          "n_trades": 8,
+          "n_skips": 84
+        },
+        "grok_n8_h2": {
+          "name": "grok_n8_h2",
+          "book_pct": -0.53,
+          "final_equity": 9946.95,
+          "win_rate": null,
+          "dollar_days": 0.0,
+          "starts_yes": null,
+          "start_n": 0,
+          "start_green": 0,
+          "n_trades": 8,
+          "n_skips": 84
+        }
+      },
+      "baselines": {
+        "union_hot_n4_h1": {
+          "name": "union_hot_n4_h1",
+          "book_pct": 14.803,
+          "final_equity": 13196.55,
+          "dollar_days": null,
+          "starts_yes": null,
+          "from_published": true,
+          "window_from_running_equity": true
+        },
+        "flatten_h5": {
+          "name": "flatten_h5",
+          "book_pct": -6.466,
+          "final_equity": 10339.3,
+          "dollar_days": null,
+          "starts_yes": null,
+          "from_published": true,
+          "window_from_running_equity": true
+        }
+      }
+    }
+  },
+  "books_full": {
+    "grok_n4_h1": {
+      "name": "grok_n4_h1",
+      "book_pct": -3.786,
+      "final_equity": 9621.38,
+      "win_rate": 0.3902,
+      "dollar_days": 0.2308,
+      "starts_yes": "6/26",
+      "start_n": 26,
+      "start_green": 6,
+      "n_trades": 86,
+      "n_skips": 69
+    },
+    "grok_n4_h2": {
+      "name": "grok_n4_h2",
+      "book_pct": 0.545,
+      "final_equity": 10054.46,
+      "win_rate": 0.4615,
+      "dollar_days": 0.3462,
+      "starts_yes": null,
+      "start_n": 0,
+      "start_green": 0,
+      "n_trades": 56,
+      "n_skips": 109
+    },
+    "grok_n8_h1": {
+      "name": "grok_n8_h1",
+      "book_pct": -4.299,
+      "final_equity": 9570.07,
+      "win_rate": 0.3735,
+      "dollar_days": 0.1923,
+      "starts_yes": null,
+      "start_n": 0,
+      "start_green": 0,
+      "n_trades": 174,
+      "n_skips": 137
+    },
+    "grok_n8_h2": {
+      "name": "grok_n8_h2",
+      "book_pct": -3.526,
+      "final_equity": 9647.35,
+      "win_rate": 0.3509,
+      "dollar_days": 0.3077,
+      "starts_yes": null,
+      "start_n": 0,
+      "start_green": 0,
+      "n_trades": 122,
+      "n_skips": 225
+    }
+  },
+  "examples": {
+    "hits": [
+      {
+        "title": "Three Infrastructure Layers Are Converging Into a Single Investable Thesis for Tokenized Finance",
+        "ticker": "SECZ",
+        "fill": "2026-09-03",
+        "side": "bullish",
+        "theme": "crypto_sec",
+        "open": 6.53,
+        "close": 7.1,
+        "same_day_pct": 8.729,
+        "next_close_pct": 13.629,
+        "same_day_hit": true,
+        "next_close_hit": true,
+        "source": "finviz"
+      },
+      {
+        "title": "Robinhood CEO Calls On U.S. To Approve Tokenized Stocks",
+        "ticker": "HOOD",
+        "fill": "2026-08-19",
+        "side": "bullish",
+        "theme": "crypto_sec",
+        "open": 92.9,
+        "close": 95.77,
+        "same_day_pct": 3.089,
+        "next_close_pct": 2.368,
+        "same_day_hit": true,
+        "next_close_hit": true,
+        "source": "parsed"
+      },
+      {
+        "title": "Coinbase Debuts Tokenized Stocks On Base Network",
+        "ticker": "COIN",
+        "fill": "2026-08-26",
+        "side": "bullish",
+        "theme": "crypto_sec",
+        "open": 181.65,
+        "close": 181.78,
+        "same_day_pct": 0.072,
+        "next_close_pct": 4.993,
+        "same_day_hit": true,
+        "next_close_hit": true,
+        "source": "parsed"
+      }
+    ],
+    "misses": [
+      {
+        "title": "SEC proposes Regulation Crypto Assets",
+        "ticker": "AIXC",
+        "fill": "2026-08-20",
+        "side": "bullish",
+        "theme": "crypto_sec",
+        "open": 1.46,
+        "close": 1.175,
+        "same_day_pct": -19.521,
+        "next_close_pct": -23.288,
+        "same_day_hit": false,
+        "next_close_hit": false,
+        "source": "events"
+      },
+      {
+        "title": "George Santos Gets Kalshi's First-Ever Lifetime Ban",
+        "ticker": "ANTA",
+        "fill": "2026-09-01",
+        "side": "bearish",
+        "theme": "named",
+        "open": 3.4,
+        "close": 3.9,
+        "same_day_pct": 14.706,
+        "next_close_pct": 9.853,
+        "same_day_hit": false,
+        "next_close_hit": false,
+        "source": "finviz"
+      },
+      {
+        "title": "StreetWatch: As Washington Puts a 100 Percent Tariff on Foreign Drones, the Magnet Inside Them Comes Into Focus",
+        "ticker": "EMAT",
+        "fill": "2026-08-18",
+        "side": "bearish",
+        "theme": "tariff",
+        "open": 2.745,
+        "close": 3.12,
+        "same_day_pct": 13.661,
+        "next_close_pct": 3.825,
+        "same_day_hit": false,
+        "next_close_hit": false,
+        "source": "finviz"
+      }
+    ]
+  }
+}

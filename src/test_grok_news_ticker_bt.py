@@ -99,7 +99,10 @@ def test_mapper_ignores_finviz_row_ticker() -> None:
     }
     hits = {h["ticker"] for h in bt.map_tickers(art, profiles)}
     assert "AMC" not in hits
-    assert "COIN" in hits or "SECZ" in hits
+    assert "COIN" in hits
+    assert "SECZ" in hits
+    # company-name overlap, not a Finviz row attachment
+    assert all(h["ticker"] != "AMC" for h in bt.map_tickers(art, profiles))
 
 
 def test_mapper_does_not_assign_random_software_on_epa() -> None:

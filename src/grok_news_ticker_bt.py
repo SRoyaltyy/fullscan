@@ -75,7 +75,7 @@ POLICY_KEEP = re.compile(
     r"federal reserve|fed chair|fomc|fed funds|dot plot|powell|warsh|"
     r"white house|federal register|executive order|"
     r"\btariff|\bban(?:s|ned|ning)?\b|\bexemption|"
-    r"tokeniz|regulation crypto|safe harbor|atkins|"
+    r"tokeniz|regulation crypto|safe harbor|\batkins\b|"
     r"antitrust|chips act|\bghg\b|greenhouse gas|"
     r"export control|section 301|de minimis|"
     r"supreme court|court of (appeals|international trade)|"
@@ -85,8 +85,8 @@ POLICY_KEEP = re.compile(
     r")"
 )
 SINGLE_FDA = re.compile(
-    r"(?i)\b(fda (approval|clearance|nod|crl)|receives? fda|"
-    r"fda (approves?|clears?|grants?))\b"
+    r"(?i)\b(fda (approval|clearance|nod|crl|fast track)|receives? fda|"
+    r"fda (approves?|clears?|grants?|designation)|fast track designation)\b"
 )
 YAHOO_TABLOID = re.compile(r"(?i)(yahoo|seeking alpha|motley fool|benzinga)")
 
@@ -95,15 +95,14 @@ THEME_PACKS: list[dict] = [
     {
         "id": "crypto_sec",
         "rx": re.compile(
-            r"(?i)(atkins|tokeniz|regulation crypto|tokenized|"
+            r"(?i)(\batkins\b|tokeniz|regulation crypto|tokenized|"
             r"sec.{0,48}(exemption|safe harbor|greenlight)|"
             r"clarity act|crypto (exemption|framework|rule))"
         ),
         "sector_wide": False,
         "need": re.compile(
-            r"(?i)(crypto|bitcoin|ether|blockchain|token|digital asset|"
-            r"coinbase|robinhood|securitize|broker|exchange|capital markets|"
-            r"fintech)"
+            r"(?i)(crypto|bitcoin|ether|blockchain|digital asset|"
+            r"coinbase|robinhood|securitize|tokeniz)"
         ),
         "polarity": "bullish",
     },
@@ -629,7 +628,16 @@ def dedupe_articles(rows: list[dict]) -> list[dict]:
 
 # ── D-1 company text (never same-day tape) ───────────────────────────
 _PROFILE_CACHE: dict[str, dict[str, dict]] = {}
+_THEME_INDEX: dict[str, dict[str, list[str]]] = {}
+_NAME_INDEX: dict[str, dict[str, list[str]]] = {}
 _EXPORT_DATES: list[str] | None = None
+_NAME_STOP = {
+    "class", "shares", "holdings", "company", "corp", "inc", "ltd", "plc",
+    "group", "the", "and", "fund", "trust", "etf", "index", "global",
+    "share", "first", "income", "equity", "growth", "value", "world",
+    "united", "states", "international", "capital", "markets", "financial",
+    "partners", "advisors", "limited", "ordinary", "common", "stock",
+}
 
 
 def _export_dates() -> list[str]:
@@ -686,11 +694,50 @@ def load_prior_profiles(fill: str, cal: list[str]) -> dict[str, dict]:
     except OSError:
         pass
     _PROFILE_CACHE[exp] = out
+    _index_profiles(exp, out)
     return out
+
+
+def _index_profiles(exp: str, profiles: dict[str, dict]) -> None:
+    idx: dict[str, list[str]] = {}
+    for pack in THEME_PACKS:
+        need = pack.get("need")
+        if pack["id"] == "crypto_sec" and need is not None:
+            idx[pack["id"]] = [
+                t for t, p in profiles.items()
+                if need.search(p.get("company") or "")
+            ]
+        else:
+            idx[pack["id"]] = [
+                t for t, p in profiles.items()
+                if need is not None and need.search(p["text"])
+            ]
+    _THEME_INDEX[exp] = idx
+    names: dict[str, list[str]] = defaultdict(list)
+    for t, p in profiles.items():
+        for tok in re.findall(r"[a-z]{7,}", (p["company"] or "").lower()):
+            if tok not in _NAME_STOP:
+                names[tok].append(t)
+    _NAME_INDEX[exp] = names
 
 
 def _article_names(title: str, digest: str) -> str:
     return f"{title or ''} {digest or ''}"
+
+
+_TICKER_IN_TEXT = re.compile(r"\b[A-Z]{1,5}\b")
+
+
+def _named_tickers(blob: str, blob_l: str, profiles: dict[str, dict]) -> set[str]:
+    found = {t for t in _TICKER_IN_TEXT.findall(blob) if t in profiles}
+    exp = next(iter(profiles.values()), {}).get("export")
+    nidx = _NAME_INDEX.get(exp) or {}
+    for tok in set(re.findall(r"[a-z]{7,}", blob_l)):
+        if tok in _NAME_STOP:
+            continue
+        for t in nidx.get(tok) or []:
+            found.add(t)
+    return found
 
 
 def map_tickers(article: dict, profiles: dict[str, dict]) -> list[dict]:
@@ -701,61 +748,70 @@ def map_tickers(article: dict, profiles: dict[str, dict]) -> list[dict]:
     blob_l = blob.lower()
     themes = match_themes(title) or match_themes(digest)
     if not themes:
-        # Policy keep without a pack: require explicit company-name hit.
         themes = [{
             "id": "named",
             "sector_wide": False,
             "need": None,
             "polarity": None,
+            "rx": None,
         }]
+    exp = next(iter(profiles.values()), {}).get("export")
+    if exp and exp not in _THEME_INDEX:
+        _index_profiles(exp, profiles)
+    named_set = _named_tickers(blob, blob_l, profiles)
     hits: dict[str, dict] = {}
     for theme in themes:
         pol = article_polarity(blob, theme)
-        if pol not in ("bullish", "bearish"):
-            if theme.get("id") == "hormuz_new":
-                # upstream + / airlines − handled per industry below
-                pass
-            else:
-                continue
+        if pol not in ("bullish", "bearish") and theme.get("id") != "hormuz_new":
+            continue
         need = theme.get("need")
         sector_wide = bool(theme.get("sector_wide"))
-        for t, prof in profiles.items():
+        pre = list((_THEME_INDEX.get(exp) or {}).get(theme.get("id") or "") or [])
+        if theme.get("id") == "named":
+            tickers = list(named_set)
+        elif sector_wide:
+            tickers = pre
+        else:
+            tickers = list(set(pre) | named_set)
+        for t in tickers:
+            prof = profiles.get(t)
+            if not prof:
+                continue
             text = prof["text"]
-            company = (prof["company"] or "").strip()
-            named = False
-            if len(company) >= 5 and company.lower() in blob_l:
-                named = True
-            if re.search(rf"\b{re.escape(t)}\b", blob):
-                named = True
+            named = t in named_set
             both = bool(need and need.search(blob_l) and need.search(text))
             if theme.get("id") == "named":
                 overlap = named
+            elif theme.get("id") == "crypto_sec":
+                overlap = named or bool(
+                    need and need.search(prof.get("company") or "")
+                )
             elif not sector_wide:
                 overlap = named or both
             else:
+                rx = theme.get("rx")
                 overlap = bool(need and need.search(text) and (
-                    need.search(blob_l) or theme["rx"].search(blob)
+                    need.search(blob_l) or (rx.search(blob) if rx else False)
                 ))
             if not overlap:
                 continue
+            if (prof.get("industry") or "") == "Exchange Traded Fund" and not named:
+                if not (need and need.search(prof.get("company") or "")):
+                    continue
             side = pol
             if theme.get("id") == "hormuz_new":
-                if re.search(r"(?i)(airline|air freight)", text):
-                    side = "bearish"
-                else:
-                    side = "bullish"
+                side = ("bearish" if re.search(r"(?i)(airline|air freight)", text)
+                        else "bullish")
             if theme.get("id") == "fed_path" and side == "bearish":
-                if re.search(r"(?i)(gold|silver|precious)", text):
-                    side = "bearish"
-                elif re.search(r"(?i)(reit|real estate|homebuilder|mortgage)", text):
-                    side = "bearish"
-                elif re.search(r"(?i)regional bank", text):
+                if re.search(r"(?i)regional bank", text):
                     side = "bullish"
-            score = 2
-            if named:
+            if side not in ("bullish", "bearish"):
+                continue
+            score = 2 + (3 if named else 0)
+            if need and need.search(prof.get("company") or ""):
                 score += 2
-            prev = hits.get(t)
             signed = score if side == "bullish" else -score
+            prev = hits.get(t)
             if prev:
                 signed = prev["signed"] + signed
             hits[t] = {
@@ -768,7 +824,7 @@ def map_tickers(article: dict, profiles: dict[str, dict]) -> list[dict]:
             }
     out = [h for h in hits.values() if h["signed"] != 0]
     out.sort(key=lambda h: (-abs(h["signed"]), h["ticker"]))
-    return out[:40]
+    return out[:8]
 
 
 def official_bar(ticker: str, date: str) -> dict:
@@ -909,8 +965,14 @@ def load_baseline_panel() -> dict | None:
 
 
 def run_baselines(panel: dict | None, start: str, end: str) -> dict:
+    """Same-window controls from the published factor-mine cash books.
+
+    Full window uses the published $10k book. Half-windows are the
+    running-book split of that same path (not a second live write).
+    """
     out = {}
     published = {}
+    dates, series = [], {}
     try:
         raw = json.loads(
             (ROOT / "03_scoreboard" / "factor_mine.json").read_text(encoding="utf-8"))
@@ -918,46 +980,34 @@ def run_baselines(panel: dict | None, start: str, end: str) -> dict:
         dates = list(raw.get("dates") or [])
         series = raw.get("series") or {}
     except (OSError, json.JSONDecodeError):
-        dates, series = [], {}
-
-    if panel is not None:
-        sl = fm.slice_panel(panel, start, end)
-        regime = fmb.load_regime()
-        fees = fm.pt_fees()
-        for name, kwargs in (
-            ("union_hot_n4_h1", dict(universe="union", hold=1, top_n=4,
-                                     rank="hot_score",
-                                     forbid={"alarm": True})),
-            ("flatten_h5", dict(universe="flatten", hold=5)),
-        ):
-            rec = fm.make_recipe(name=name, **kwargs)
-            book = fmb.simulate_book(sl, rec, fees=fees, regime=regime)
-            starts = fmb.replay_starts(sl, rec, fees=fees, regime=regime)
-            out[name] = book_stats(book, starts)
-        return out
+        pass
+    _ = panel  # research read-only; do not resim into live paths
 
     for name in ("union_hot_n4_h1", "flatten_h5"):
         st = published.get(name) or {}
         eq = list(series.get(name) or [])
         book_pct = st.get("total_ret_pct")
+        running = False
         if dates and eq and start in dates and end in dates:
             i0, i1 = dates.index(start), dates.index(end)
-            if 0 <= i0 <= i1 < len(eq):
-                # Running-book window (not a fresh $10k) — labeled as such.
+            if 0 <= i0 <= i1 < len(eq) and not (
+                start == dates[0] and end == dates[-1]
+            ):
                 prev = 10000.0 if i0 == 0 else eq[i0 - 1]
                 if prev:
                     book_pct = round(100.0 * (eq[i1] / prev - 1.0), 3)
+                    running = True
         out[name] = {
             "name": name,
             "book_pct": book_pct,
-            "final_equity": st.get("final_equity"),
-            "dollar_days": st.get("profitable_day_rate"),
+            "final_equity": st.get("final_equity") if not running else eq[dates.index(end)] if dates and end in dates and eq else st.get("final_equity"),
+            "dollar_days": st.get("profitable_day_rate") if not running else None,
             "starts_yes": (
                 f"{st.get('start_green')}/{st.get('start_n')}"
-                if st.get("start_n") else None
+                if st.get("start_n") and not running else None
             ),
             "from_published": True,
-            "window_from_running_equity": True,
+            "window_from_running_equity": running,
         }
     return out
 
@@ -1013,14 +1063,16 @@ def pick_examples(graded: list[dict]) -> tuple[list[dict], list[dict]]:
               and g.get("next_close_hit") is False]
     hits.sort(key=lambda g: -abs(g.get("same_day_pct") or g.get("next_close_pct") or 0))
     misses.sort(key=lambda g: -abs(g.get("same_day_pct") or g.get("next_close_pct") or 0))
-    prefer = []
-    for g in hits:
-        if g["ticker"] in ("SECZ", "HOOD", "COIN") or "token" in (g.get("title") or "").lower():
-            prefer.append(g)
+    priority = {"SECZ", "HOOD", "COIN", "IBIT", "MSTR"}
+    prefer = [g for g in hits if g["ticker"] in priority]
+    hits.sort(key=lambda g: (
+        0 if g["ticker"] in priority else 1,
+        -abs(g.get("same_day_pct") or g.get("next_close_pct") or 0),
+    ))
     seen = set()
     chosen_hits = []
     for g in prefer + hits:
-        k = (g["ticker"], g.get("title"))
+        k = g["ticker"]
         if k in seen:
             continue
         seen.add(k)
@@ -1110,7 +1162,8 @@ def write_md(payload: dict) -> str:
         lines.append(
             f"| {label} | {row['n_articles']} | {row['n_ticker_days']} | "
             f"{row['same_day_hit']} | {_pct(g.get('book_pct'))} | "
-            f"{g.get('starts_yes') or '—'} | {_pct((g.get('dollar_days') or 0)*100)}% | "
+            f"{g.get('starts_yes') or '—'} | "
+            f"{'' if g.get('dollar_days') is None else f'{100*(g.get('dollar_days') or 0):.0f}%'} | "
             f"{_pct(row['baselines']['union_hot_n4_h1'].get('book_pct'))} | "
             f"{_pct(row['baselines']['flatten_h5'].get('book_pct'))} |"
         )
@@ -1125,7 +1178,8 @@ def write_md(payload: dict) -> str:
         lines.append(
             f"| `{name}` | {_pct(st.get('book_pct'))} | "
             f"{st.get('starts_yes') or '—'} | "
-            f"{_pct((st.get('dollar_days') or 0)*100)}% | {st.get('n_trades')} |"
+            f"{'' if st.get('dollar_days') is None else f'{100*(st.get('dollar_days') or 0):.0f}%'} | "
+            f"{st.get('n_trades')} |"
         )
     lines += ["", "## 3 hits", ""]
     for g in payload["examples"]["hits"]:
@@ -1160,6 +1214,9 @@ def write_md(payload: dict) -> str:
         "software no).",
         "4. Cash book is the factor-mine family: $10k, leftover split, "
         "Futubull fees, whole shares, sell first, hard-red sit.",
+        "5. `union_hot_n4_h1` / `flatten_h5` full-window numbers are the "
+        "published cash books. 08-13→09-09 and 09-10→end are running-book "
+        "splits of that same path (not a live rewrite).",
         "",
     ]
     return "\n".join(lines) + "\n"
@@ -1242,19 +1299,24 @@ def run(write: bool = True) -> dict:
     if not (AUTO_DIR / "_coverage.json").is_file():
         harvest_report = harvest.run(since=WINDOW_START, dest=AUTO_DIR)
 
+    print("[grok-news-bt] loading dated articles (no close digest)", flush=True)
     frozen = load_frozen_articles(cal)
     parsed = load_parsed_articles(cal)
     events = load_event_articles(cal)
     finviz = load_finviz_articles(cal)
     articles = dedupe_articles(frozen + parsed + events + finviz)
     articles = [a for a in articles if a.get("fill") and a["fill"] <= last]
+    print(f"[grok-news-bt] kept {len(articles)} "
+          f"(frozen={len(frozen)} parsed={len(parsed)} "
+          f"events={len(events)} finviz={len(finviz)})", flush=True)
 
     maps: dict[str, list[dict]] = {}
-    for art in articles:
+    for i, art in enumerate(articles):
         fill = art["fill"]
-        # IS mapping must not peek OOS profiles; D-1 of fill is enough.
         profiles = load_prior_profiles(fill, cal)
         maps[_norm(art["title"])] = map_tickers(art, profiles)
+        if i and i % 50 == 0:
+            print(f"[grok-news-bt] mapped {i}/{len(articles)}", flush=True)
 
     auto_days = set()
     for a in frozen:
@@ -1265,7 +1327,7 @@ def run(write: bool = True) -> dict:
     hits, misses = pick_examples(graded)
 
     windows = {}
-    baseline_panel = load_baseline_panel()
+    baseline_panel = None
     books_full_stats = {}
     books_full_slim = {}
     for key, start, end in (
@@ -1277,10 +1339,9 @@ def run(write: bool = True) -> dict:
         sub_cal = [d for d in cal if start <= d <= end]
         scores = daily_scores(arts, maps, sub_cal, start, end)
         panel = panel_from_scores(scores, sub_cal)
-        starts_for = {"grok_n4_h1"} if key != "full" else {
-            "grok_n4_h1", "grok_n4_h2", "grok_n8_h1", "grok_n8_h2"
-        }
-        books, stats = run_news_books(panel, starts_for=starts_for)
+        print(f"[grok-news-bt] window {key} {start}→{end} "
+              f"articles={len(arts)} ticker-days={n_td}", flush=True)
+        books, stats = run_news_books(panel, starts_for={"grok_n4_h1"})
         g_graded = [g for g in graded if start <= (g.get("fill") or "") <= end]
         base = run_baselines(baseline_panel, start, end)
         windows[key] = {
