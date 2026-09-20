@@ -130,7 +130,7 @@ def mark_long_led(st: dict) -> dict:
     return st
 
 
-def enrich_payload_legs(payload: dict) -> dict:
+def enrich_payload_legs(payload: dict, pin: bool = True) -> dict:
     """Stamp long/short $ and long_led on baked stats. No remine."""
     rec_by = {r["name"]: r for r in (payload.get("recipes") or [])}
     books = payload.get("books") or {}
@@ -172,7 +172,8 @@ def enrich_payload_legs(payload: dict) -> dict:
     payload["combos"] = combo_meta
     featured: list[str] = []
     seen: set[str] = set()
-    for n in list(LONG_LED_PIN) + long_led + list(payload.get("featured") or []):
+    pins = LONG_LED_PIN if pin else ()
+    for n in list(pins) + long_led + list(payload.get("featured") or []):
         if n and n not in seen:
             seen.add(n)
             featured.append(n)
@@ -1602,10 +1603,12 @@ def merge_into_payload(payload: dict, combo_stats: list[dict],
     return payload
 
 
-def write_combo_sidecar(combo_stats: list[dict]) -> None:
-    if not combo_stats and OUT_JSON.is_file():
+def write_combo_sidecar(combo_stats: list[dict],
+                        dest: Path | str | None = None) -> None:
+    path = Path(dest or OUT_JSON)
+    if not combo_stats and path.is_file():
         try:
-            raw = json.loads(OUT_JSON.read_text(encoding="utf-8"))
+            raw = json.loads(path.read_text(encoding="utf-8"))
             if int(raw.get("n") or 0) > 0:
                 return
         except (OSError, json.JSONDecodeError, TypeError, ValueError):
@@ -1630,8 +1633,8 @@ def write_combo_sidecar(combo_stats: list[dict]) -> None:
             "audit_ok": s.get("audit_ok"),
             "scorecard": sc,
         })
-    OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
-    OUT_JSON.write_text(json.dumps({
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps({
         "n": len(rows),
         "outperform": [r["name"] for r in rows if r.get("outperforms")],
         "rows": rows,

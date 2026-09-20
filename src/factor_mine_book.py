@@ -722,14 +722,15 @@ def recipes_from_action(*, universe="auto", hold="auto", gate="auto",
                         rank="auto", side="auto", top_n="auto",
                         exit="auto", entry="auto", size="auto",
                         sell="auto", s_boost="auto",
-                        auto_tweak=True) -> list[dict]:
+                        auto_tweak=True, base: list[dict] | None = None
+                        ) -> list[dict]:
     """Filter the systematic grid; auto dims stay swept.
 
     ``auto_tweak`` adds one-knob neighbors so a custom dropdown still
     explores nearby holds / gates / ranks / top-n / exits / universes
     / live-vs-list entry / size / sell / S-boost without a second click.
     """
-    base = fm.build_recipes()
+    base = list(base) if base is not None else fm.build_recipes()
 
     def gate_name(rec: dict) -> str:
         req = rec.get("require") or {}
@@ -1674,8 +1675,14 @@ def _render_marks_md(daily: list) -> list[str]:
 
 
 def write_action_mds(payload: dict, stats: list[dict], books: dict,
-                     featured: list[str]) -> None:
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
+                     featured: list[str], *,
+                     out_dir: Path | str | None = None,
+                     out_index: Path | str | None = None,
+                     daily_md: Path | str | None = None) -> None:
+    dest_dir = Path(out_dir or OUT_DIR)
+    dest_index = Path(out_index or OUT_INDEX)
+    dest_dir.mkdir(parents=True, exist_ok=True)
+    dest_index.parent.mkdir(parents=True, exist_ok=True)
     recs = {r["name"]: r for r in (payload.get("recipes") or [])}
     by_stats = {s["name"]: s for s in stats}
 
@@ -1702,7 +1709,7 @@ def write_action_mds(payload: dict, stats: list[dict], books: dict,
         s = by_stats.get(name)
         if not s:
             continue
-        (OUT_DIR / f"{name}.md").write_text(
+        (dest_dir / f"{name}.md").write_text(
             render_recipe_md(rec_for(name, s), s, b), encoding="utf-8")
 
     index = [
@@ -1768,6 +1775,11 @@ def write_action_mds(payload: dict, stats: list[dict], books: dict,
         ]
         for name in others:
             index.append(f"- [`{name}`](factor_mine/{name}.md)")
-    OUT_INDEX.write_text("\n".join(index) + "\n", encoding="utf-8")
-    DAILY_MD.write_text(
-        OUT_INDEX.read_text(encoding="utf-8"), encoding="utf-8")
+    dest_index.write_text("\n".join(index) + "\n", encoding="utf-8")
+    if daily_md is None and out_dir is None and out_index is None:
+        daily_md = DAILY_MD
+    if daily_md:
+        daily_path = Path(daily_md)
+        daily_path.parent.mkdir(parents=True, exist_ok=True)
+        daily_path.write_text(dest_index.read_text(encoding="utf-8"),
+                              encoding="utf-8")
