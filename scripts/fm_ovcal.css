@@ -7,23 +7,31 @@
  .ovcal-card:hover,.ovcal-card.on{border-color:var(--gold)}
  .ovcal-card .nm{font:650 11.5px/1.2 ui-monospace,Menlo,Consolas,monospace;overflow-wrap:anywhere;margin:0 0 4px}
  .ovcal-card .tot{display:flex;flex-wrap:wrap;gap:6px 10px;font:11px/1.2 ui-monospace,Menlo,Consolas,monospace;margin:0 0 5px;color:var(--mut)}
- .ovcal-wk{display:grid;grid-template-columns:repeat(5,1fr);gap:2px}
+ .ovcal-wk{display:grid;grid-template-columns:repeat(5,1fr);gap:3px}
  .ovcal-dow{color:var(--dim);font:10px/1.2 ui-sans-serif,system-ui;text-align:center;padding:0 0 2px}
- .ovcal-cell{border-radius:4px;overflow:hidden;background:#121826;border:1px solid #1f2937;min-height:34px}
- .ovcal-cell.empty{opacity:.25;min-height:34px}
+ .ovcal-cell{border-radius:5px;overflow:hidden;background:#121826;border:1px solid #1f2937;min-height:36px;cursor:pointer}
+ .ovcal-cell.empty{opacity:.25;min-height:36px;cursor:default}
  .ovcal-cell .d{display:block;font:700 9px/1.1 ui-monospace,Menlo,Consolas,monospace;text-align:center;padding:1px 0 0;color:#e2e8f0}
  .ovcal-cell .half{min-height:12px;display:flex;align-items:center;justify-content:center;font:700 8px/1 ui-monospace,Menlo,Consolas,monospace;color:#f8fafc;text-shadow:0 0 2px #000}
- .ovcal-cell.big{min-height:52px}
- .ovcal-cell.big .d{font-size:11px;padding:2px 0 1px}
- .ovcal-cell.big .half{min-height:18px;font-size:11px}
- .ovcal-card.big{cursor:default;padding:10px}
- .ovcal-wk.big{gap:4px}
+ .ovcal-cell.big{min-height:76px}
+ .ovcal-cell.big .d{font-size:12px;padding:3px 0 2px}
+ .ovcal-cell.big .half{min-height:26px;font-size:13px}
+ .ovcal-cell.hard{border-color:#ef4444;box-shadow:inset 0 0 0 2px #ef4444}
+ .ovcal-cell.hard .d{background:#7f1d1d;color:#fecaca}
+ .ovcal-cell.pick{outline:2px solid #fbbf24}
+ .ovcal-card.big{cursor:default;padding:12px}
+ .ovcal-wk.big{gap:6px}
+ .ovcal-detail{margin:10px 0 0;padding:10px;border:1px solid var(--line);border-radius:8px;background:#0b1220;font:12.5px/1.45 ui-sans-serif,system-ui;min-height:7em}
+ .ovcal-detail-h{font:650 13px/1.3 ui-monospace,Menlo,Consolas,monospace;margin:0 0 8px;color:#e2e8f0}
+ .ovcal-names{margin:4px 0 10px;color:#cbd5e1}
+ .ovcal-names code{font:12px/1.4 ui-monospace,Menlo,Consolas,monospace;color:#f8fafc}
  .ovcal-tip{margin:6px 0 0;font:12px/1.35 ui-monospace,Menlo,Consolas,monospace;min-height:1.3em}
  .curve-box{max-width:100%;width:100%;margin:6px 0 12px}
- .curve-row{display:grid;grid-template-columns:minmax(280px,1fr) minmax(280px,440px);gap:12px;align-items:start}
+ .curve-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:stretch}
+ .curve-row > div:first-child canvas{height:560px}
  @media (max-width:900px){
    .curve-row{grid-template-columns:1fr}
    .ovcal-grid{grid-template-columns:repeat(auto-fit,minmax(148px,1fr))}
  }
  #ovCalSleeve{min-width:0}
- canvas{width:100%;max-width:100%;height:420px;background:var(--card);border:1px solid var(--line);border-radius:10px}
+ canvas{width:100%;max-width:100%;height:560px;background:var(--card);border:1px solid var(--line);border-radius:10px}
