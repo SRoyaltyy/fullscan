@@ -128,10 +128,12 @@ def run(date: str = "all", fetch: bool = True) -> dict:
     grok = grok_counts()
     raw, raw_meta = load_all_sources(date)
     unique = dedupe_titles(raw)
-    results = [
-        analyze_article(a, use_lane=False, use_search=False, persist=False)
-        for a in unique
-    ]
+    results = []
+    n_u = len(unique)
+    for i, a in enumerate(unique, 1):
+        results.append(analyze_article(a, use_lane=False, use_search=False, persist=False))
+        if i % 5000 == 0 or i == n_u:
+            print(f"[unique_title] routed {i}/{n_u}", flush=True)
     results = overlay_existing_tape(results)
     # Parquet first, then yfinance only for signed listed still missing tape.
     results = _fill_missing_tape(results, fetch=False)
