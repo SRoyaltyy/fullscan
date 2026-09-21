@@ -2,6 +2,9 @@ name: Patch factor-mine new-vs-held calendar
 
 on:
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Deploy dashboard to GitHub Pages"]
+    types: [completed]
 
 permissions:
   contents: write

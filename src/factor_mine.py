@@ -3370,6 +3370,39 @@ def write_dash_html(payload: dict, dash_dir: Path | None = None,
         html = html.replace("__SIM_JS__", SIM_JS.read_text(encoding="utf-8"))
     html = html.replace("__DATA__", encode_payload(payload))
     dest.write_text(html, encoding="utf-8")
+    apply_factor_mine_page_patches(dest)
+    return dest
+
+
+def apply_factor_mine_page_patches(dest: Path) -> Path:
+    """Keep the new-vs-held calendar + start-date chart on every bake.
+
+    The calendar was originally painted onto gh-pages only
+    (``scripts/patch_fm_ovcal.py``). A later remine / restamp / Pages
+    overlay copied the clean template over that paint job. Run the
+    injectors here so the baked ``index.html`` on main already has them.
+    """
+    dest = Path(dest)
+    if not dest.is_file():
+        return dest
+    scripts = ROOT / "scripts"
+    try:
+        import importlib.util
+
+        for name in ("patch_fm_ovcal.py", "patch_fm_holdup.py"):
+            path = scripts / name
+            if not path.is_file():
+                continue
+            spec = importlib.util.spec_from_file_location(
+                path.stem, path)
+            if spec is None or spec.loader is None:
+                continue
+            mod = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(mod)
+            if hasattr(mod, "patch_file"):
+                mod.patch_file(dest)
+    except Exception as exc:
+        print(f"[factor-mine] page-patch skip {dest}: {exc}", flush=True)
     return dest
 
 

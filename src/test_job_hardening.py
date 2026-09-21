@@ -156,9 +156,22 @@ def test_deploy_dashboard_follows_preopen_and_book() -> None:
     assert "github.event_name == 'push'" in text
     assert "Root copy pages_out/${sub}" in text
     assert "sleeve-merge" in text
+    assert "scripts/patch_fm_ovcal.py pages_out/dashboard/factor-mine/index.html" in text
+    assert "scripts/patch_fm_holdup.py pages_out/dashboard/factor-mine/index.html" in text
     book = (WF / "stock_book_all.yml").read_text(encoding="utf-8")
     assert "src.pages_publish_gate" in book
     assert "gh workflow run deploy-dashboard.yml" in book
+
+
+def test_ovcal_repaints_after_pages_deploy() -> None:
+    """Calendar paint used to be dispatch-only, so a later remine wiped it."""
+    text = (WF / "patch_fm_ovcal.yml").read_text(encoding="utf-8")
+    assert "workflow_dispatch:" in text
+    assert "Deploy dashboard to GitHub Pages" in text
+    assert "workflow_run:" in text
+    restamp = (WF / "restamp_factor_mine_dash.yml").read_text(encoding="utf-8")
+    assert 'id="ovCalBox"' in restamp
+    assert "ovAlignSeries(sp.equity" in restamp
 
 
 def test_jobs_publish_dashboard_in_place() -> None:
@@ -1220,6 +1233,7 @@ def main() -> None:
         test_excel_mine_poke_on_main,
         test_safe_git_push_used_by_failing_commit_jobs,
         test_deploy_dashboard_follows_preopen_and_book,
+        test_ovcal_repaints_after_pages_deploy,
         test_jobs_publish_dashboard_in_place,
         test_all_jobs_degrade_instead_of_failing,
         test_label_weather_yaml_inputs_not_under_permissions,

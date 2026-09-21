@@ -173,6 +173,9 @@ jobs:
             mkdir -p pages_out/dashboard/factor-mine
             cp -a dashboard/factor-mine/. pages_out/dashboard/factor-mine/
             echo "Overlayed dashboard/factor-mine from main"
+            python3 scripts/patch_fm_ovcal.py pages_out/dashboard/factor-mine/index.html
+            python3 scripts/patch_fm_holdup.py pages_out/dashboard/factor-mine/index.html
+            echo "Patched factor-mine new-vs-held calendar + start-date chart"
           fi
           if [ -f dashboard/down-day-mine/index.html ]; then
             mkdir -p pages_out/dashboard/down-day-mine
