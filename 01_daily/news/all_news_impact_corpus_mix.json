@@ -1,0 +1,437 @@
+{
+  "date": "all",
+  "inventory": {
+    "window": {
+      "earliest_on_disk": "2026-04-26",
+      "earliest_parse": "2026-08-08",
+      "latest": "2026-09-21",
+      "june_2026_parse": false,
+      "note": "No June 2026 *_parsed.json. Earliest parse is 2026-08-08. Earliest Finviz export is 2026-04-26 (one file). Window used = earliest on-disk news through latest."
+    },
+    "sources": [
+      {
+        "name": "parsed_json",
+        "path": "01_daily/news/*_parsed.json",
+        "n_files": 31,
+        "earliest": "2026-08-08",
+        "latest": "2026-09-21",
+        "status": "used"
+      },
+      {
+        "name": "finviz_export",
+        "path": "data/exports/finviz_YYYY-MM-DD.csv (News Title + Daily Digest)",
+        "n_files": 35,
+        "earliest": "2026-04-26",
+        "latest": "2026-09-21",
+        "status": "used"
+      },
+      {
+        "name": "finviz_digest",
+        "path": "01_daily/news/*finviz*digest*.json",
+        "n_files": 62,
+        "earliest": "2026-07-30",
+        "latest": "2026-09-21",
+        "status": "used"
+      },
+      {
+        "name": "events_json",
+        "path": "01_daily/events/*_events.json",
+        "n_files": 29,
+        "earliest": "2026-08-10",
+        "latest": "2026-09-21",
+        "status": "used"
+      },
+      {
+        "name": "actions_keep",
+        "path": "01_daily/news/*_actions.json (KEEP / conditional evidence)",
+        "n_files": 33,
+        "earliest": "2026-08-09",
+        "latest": "2026-09-21",
+        "status": "used"
+      },
+      {
+        "name": "grok_automations",
+        "path": "data/grok_automations/*.json",
+        "n_files": 0,
+        "earliest": "",
+        "latest": "",
+        "status": "empty"
+      },
+      {
+        "name": "rss_dumps",
+        "path": "collectors/rss_news.py (workflow exists; no dump dir on disk)",
+        "n_files": 0,
+        "status": "empty"
+      },
+      {
+        "name": "supabase_dumps",
+        "path": "src/db.py news pooler (no local dump on disk)",
+        "n_files": 0,
+        "status": "empty"
+      },
+      {
+        "name": "theme_radar_snapshots",
+        "path": "https://github.com/SRoyaltyy/theme-radar data/snapshots/*.csv",
+        "n_files": 30,
+        "earliest": "2026-08-06",
+        "latest": "2026-09-18",
+        "status": "unused_readonly",
+        "note": "Theme Radar: please export a headline pack (date, ticker, News Title, News Time, Daily Digest, News URL) from data/snapshots/*.csv into a JSON/CSV we can ingest in fullscan. Do not merge the repos."
+      }
+    ],
+    "theme_radar": {
+      "repo": "SRoyaltyy/theme-radar",
+      "readonly": true,
+      "paths": [
+        "data/snapshots/YYYY-MM-DD.csv (Finviz Elite snapshots, 2026-08-06..2026-09-18)",
+        "data/snapshots/manifest.json",
+        "01_daily/*_scan.md / *_universe.md (no headline export)"
+      ],
+      "status": "unused_here — read-only; no clone, no PR",
+      "export_ask": "Theme Radar: please export a headline pack (date, ticker, News Title, News Time, Daily Digest, News URL) from data/snapshots/*.csv into a JSON/CSV we can ingest in fullscan. Do not merge the repos."
+    }
+  },
+  "raw_meta": {
+    "n_raw": 333132,
+    "by_harvest_source": {
+      "parsed": 7946,
+      "finviz_export": 322070,
+      "finviz_digest": 1720,
+      "events": 1002,
+      "actions_keep": 394
+    }
+  },
+  "funnel": {
+    "raw_headlines": 333132,
+    "unique_after_dedupe": 29307,
+    "non_reaction_non_weather": 8749,
+    "impulse_updown_listed": 1531,
+    "has_tape_graded": 94,
+    "note": "has_tape_graded counts unique articles with at least one graded 0-1d tape row. If this is only hundreds, that is the truth — the five-digit target needs unused/empty sources (theme-radar headline export, RSS/Supabase dumps, June parses) to fill."
+  },
+  "tape": {
+    "n_1d": 47,
+    "hit_1d": 31,
+    "hit_rate_1d": 0.6596,
+    "n_20d": 51,
+    "hit_20d": 26,
+    "hit_rate_20d": 0.5098,
+    "slices": {
+      "market_structure": {
+        "n_1d": 16,
+        "hit_1d": 13,
+        "hit_rate_1d": 0.8125,
+        "n_20d": 8,
+        "hit_20d": 7,
+        "hit_rate_20d": 0.875,
+        "graded": true
+      },
+      "blast": {
+        "n_1d": 5,
+        "hit_1d": 4,
+        "hit_rate_1d": 0.8,
+        "n_20d": 3,
+        "hit_20d": 1,
+        "hit_rate_20d": 0.3333,
+        "graded": true
+      },
+      "guidance": {
+        "n_1d": 0,
+        "hit_1d": 0,
+        "hit_rate_1d": null,
+        "n_20d": 0,
+        "hit_20d": 0,
+        "hit_rate_20d": null,
+        "graded": true
+      },
+      "print_vs_priced": {
+        "n_1d": 0,
+        "hit_1d": 0,
+        "hit_rate_1d": null,
+        "n_20d": 23,
+        "hit_20d": 8,
+        "hit_rate_20d": 0.3478,
+        "graded": true
+      },
+      "capacity": {
+        "n_1d": 0,
+        "hit_1d": 0,
+        "hit_rate_1d": null,
+        "n_20d": 4,
+        "hit_20d": 0,
+        "hit_rate_20d": 0.0,
+        "graded": true
+      },
+      "demand": {
+        "n_1d": 1,
+        "hit_1d": 0,
+        "hit_rate_1d": 0.0,
+        "n_20d": 0,
+        "hit_20d": 0,
+        "hit_rate_20d": null,
+        "graded": true
+      },
+      "input_cost": {
+        "n_1d": 6,
+        "hit_1d": 6,
+        "hit_rate_1d": 1.0,
+        "n_20d": 6,
+        "hit_20d": 6,
+        "hit_rate_20d": 1.0,
+        "graded": true
+      },
+      "factor_impulse": {
+        "n_1d": 38,
+        "hit_1d": 22,
+        "hit_rate_1d": 0.5789,
+        "n_20d": 25,
+        "hit_20d": 11,
+        "hit_rate_20d": 0.44,
+        "graded": false
+      }
+    }
+  },
+  "guidance_slice": {
+    "n_1d": 0,
+    "hit_1d": 0,
+    "hit_rate_1d": null,
+    "n_20d": 0,
+    "hit_20d": 0,
+    "hit_rate_20d": null
+  },
+  "macro_headline": {
+    "n_1d": 8,
+    "hit_1d": 6,
+    "hit_rate_1d": 0.75,
+    "reprints_collapsed": 15,
+    "n_stories": 37
+  },
+  "mix": {
+    "converge_n": 42,
+    "conflict_n": 36,
+    "singleton_n": 7219,
+    "high_mass_n": 185,
+    "scores": {
+      "converge": {
+        "n_1d": 18,
+        "hit_1d": 13,
+        "hit_rate_1d": 0.7222
+      },
+      "singleton": {
+        "n_1d": 102,
+        "hit_1d": 56,
+        "hit_rate_1d": 0.549
+      },
+      "conflict_n": 36,
+      "high_mass_n": 185,
+      "note": "converge = ≥2 independent sources, same direction, no hard conflict. conflict stays mixed / ungraded. high_mass is binary (no multiplier)."
+    }
+  },
+  "window_grid": {
+    "capital_return": {
+      "horizon": "?",
+      "n_1d": 13,
+      "hit_1d": 5,
+      "hit_rate_1d": 0.3846,
+      "n_20d": 3,
+      "hit_20d": 1,
+      "hit_rate_20d": 0.3333,
+      "n_63d": 0,
+      "hit_63d": 0,
+      "hit_rate_63d": null
+    },
+    "print_vs_priced": {
+      "horizon": "1-4w",
+      "n_1d": 0,
+      "hit_1d": 0,
+      "hit_rate_1d": null,
+      "n_20d": 23,
+      "hit_20d": 8,
+      "hit_rate_20d": 0.3478,
+      "n_63d": 0,
+      "hit_63d": 0,
+      "hit_rate_63d": null
+    },
+    "capacity": {
+      "horizon": "1-6m",
+      "n_1d": 0,
+      "hit_1d": 0,
+      "hit_rate_1d": null,
+      "n_20d": 4,
+      "hit_20d": 0,
+      "hit_rate_20d": 0.0,
+      "n_63d": 0,
+      "hit_63d": 0,
+      "hit_rate_63d": null
+    },
+    "input_cost": {
+      "horizon": "?",
+      "n_1d": 6,
+      "hit_1d": 6,
+      "hit_rate_1d": 1.0,
+      "n_20d": 6,
+      "hit_20d": 6,
+      "hit_rate_20d": 1.0,
+      "n_63d": 0,
+      "hit_63d": 0,
+      "hit_rate_63d": null
+    },
+    "gate": {
+      "horizon": "1-6m",
+      "n_1d": 0,
+      "hit_1d": 0,
+      "hit_rate_1d": null,
+      "n_20d": 2,
+      "hit_20d": 1,
+      "hit_rate_20d": 0.5,
+      "n_63d": 0,
+      "hit_63d": 0,
+      "hit_rate_63d": null
+    },
+    "product_harm": {
+      "horizon": "?",
+      "n_1d": 3,
+      "hit_1d": 2,
+      "hit_rate_1d": 0.6667,
+      "n_20d": 1,
+      "hit_20d": 0,
+      "hit_rate_20d": 0.0,
+      "n_63d": 0,
+      "hit_63d": 0,
+      "hit_rate_63d": null
+    },
+    "blast_legal": {
+      "horizon": "?",
+      "n_1d": 2,
+      "hit_1d": 2,
+      "hit_rate_1d": 1.0,
+      "n_20d": 2,
+      "hit_20d": 1,
+      "hit_rate_20d": 0.5,
+      "n_63d": 0,
+      "hit_63d": 0,
+      "hit_rate_63d": null
+    },
+    "market_structure": {
+      "horizon": "?",
+      "n_1d": 16,
+      "hit_1d": 13,
+      "hit_rate_1d": 0.8125,
+      "n_20d": 8,
+      "hit_20d": 7,
+      "hit_rate_20d": 0.875,
+      "n_63d": 0,
+      "hit_63d": 0,
+      "hit_rate_63d": null
+    },
+    "listing_flow": {
+      "horizon": "?",
+      "n_1d": 3,
+      "hit_1d": 2,
+      "hit_rate_1d": 0.6667,
+      "n_20d": 2,
+      "hit_20d": 2,
+      "hit_rate_20d": 1.0,
+      "n_63d": 0,
+      "hit_63d": 0,
+      "hit_rate_63d": null
+    },
+    "access_control": {
+      "horizon": "?",
+      "n_1d": 1,
+      "hit_1d": 0,
+      "hit_rate_1d": 0.0,
+      "n_20d": 0,
+      "hit_20d": 0,
+      "hit_rate_20d": null,
+      "n_63d": 0,
+      "hit_63d": 0,
+      "hit_rate_63d": null
+    },
+    "blast_cyber": {
+      "horizon": "1-4w",
+      "n_1d": 0,
+      "hit_1d": 0,
+      "hit_rate_1d": null,
+      "n_20d": 0,
+      "hit_20d": 0,
+      "hit_rate_20d": null,
+      "n_63d": 0,
+      "hit_63d": 0,
+      "hit_rate_63d": null
+    },
+    "guidance": {
+      "horizon": "1-4w",
+      "n_1d": 0,
+      "hit_1d": 0,
+      "hit_rate_1d": null,
+      "n_20d": 0,
+      "hit_20d": 0,
+      "hit_rate_20d": null,
+      "n_63d": 0,
+      "hit_63d": 0,
+      "hit_rate_63d": null
+    },
+    "demand": {
+      "horizon": "?",
+      "n_1d": 1,
+      "hit_1d": 0,
+      "hit_rate_1d": 0.0,
+      "n_20d": 0,
+      "hit_20d": 0,
+      "hit_rate_20d": null,
+      "n_63d": 0,
+      "hit_63d": 0,
+      "hit_rate_63d": null
+    },
+    "inventory_print": {
+      "horizon": "0-1d",
+      "n_1d": 2,
+      "hit_1d": 1,
+      "hit_rate_1d": 0.5,
+      "n_20d": 0,
+      "hit_20d": 0,
+      "hit_rate_20d": null,
+      "n_63d": 0,
+      "hit_63d": 0,
+      "hit_rate_63d": null
+    },
+    "peer_spill": {
+      "horizon": "?",
+      "n_1d": 0,
+      "hit_1d": 0,
+      "hit_rate_1d": null,
+      "n_20d": 0,
+      "hit_20d": 0,
+      "hit_rate_20d": null,
+      "n_63d": 0,
+      "hit_63d": 0,
+      "hit_rate_63d": null
+    },
+    "dilution": {
+      "horizon": "?",
+      "n_1d": 0,
+      "hit_1d": 0,
+      "hit_rate_1d": null,
+      "n_20d": 0,
+      "hit_20d": 0,
+      "hit_rate_20d": null,
+      "n_63d": 0,
+      "hit_63d": 0,
+      "hit_rate_63d": null
+    },
+    "labor_stop": {
+      "horizon": "?",
+      "n_1d": 0,
+      "hit_1d": 0,
+      "hit_rate_1d": null,
+      "n_20d": 0,
+      "hit_20d": 0,
+      "hit_rate_20d": null,
+      "n_63d": 0,
+      "hit_63d": 0,
+      "hit_rate_63d": null
+    }
+  },
+  "theme_radar_ask": "Theme Radar: please export a headline pack (date, ticker, News Title, News Time, Daily Digest, News URL) from data/snapshots/*.csv into a JSON/CSV we can ingest in fullscan. Do not merge the repos."
+}

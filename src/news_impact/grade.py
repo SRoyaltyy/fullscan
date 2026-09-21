@@ -122,6 +122,11 @@ def parse_when(raw: str | None) -> datetime | None:
         return dt.astimezone(ET)
     except (TypeError, ValueError):
         pass
+    if len(s) >= 19 and s[4:5] == "-" and s[10:11] == " ":
+        try:
+            return datetime.strptime(s[:19], "%Y-%m-%d %H:%M:%S").replace(tzinfo=ET)
+        except ValueError:
+            pass
     if len(s) >= 10 and s[4:5] == "-" and s[7:8] == "-":
         try:
             return datetime.strptime(s[:10], "%Y-%m-%d").replace(tzinfo=ET)
@@ -444,9 +449,11 @@ def grade_one(
         "ret_1d": None,
         "ret_5d": None,
         "ret_20d": None,
+        "ret_63d": None,
         "ret_horizon": None,
         "agree_1d": None,
         "agree_20d": None,
+        "agree_63d": None,
         "agree_horizon": None,
         "note": "",
     }
@@ -491,6 +498,7 @@ def grade_one(
     base["ret_1d"] = round((float(same["close"]) / px - 1.0) * 100.0, 2)
     base["ret_5d"] = ret_at(5)
     base["ret_20d"] = ret_at(20)
+    base["ret_63d"] = ret_at(63)
     h_off = HORIZON_BARS.get(horizon, 1)
     if horizon == "0-1d":
         base["ret_horizon"] = base["ret_1d"]
@@ -498,6 +506,7 @@ def grade_one(
         base["ret_horizon"] = ret_at(h_off)
     base["agree_1d"] = _agree(direction, base["ret_1d"])
     base["agree_20d"] = _agree(direction, base["ret_20d"])
+    base["agree_63d"] = _agree(direction, base["ret_63d"])
     base["agree_horizon"] = _agree(direction, base["ret_horizon"])
     missing = []
     if base["ret_1d"] is None:

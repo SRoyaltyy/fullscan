@@ -255,7 +255,12 @@ def skips_01d_horizon(
         return True
     if ev == "blast_cyber" or (ev.startswith("blast") and "cyber" in ev):
         return True
-    _ = horizon  # horizon is informational; class list is authoritative
+    from .horizons import skips_short_window
+    sign = None
+    if row:
+        sign = (row.get("classification") or {}).get("sign")
+    if skips_short_window(ev, title, sign, horizon):
+        return True
     return False
 
 

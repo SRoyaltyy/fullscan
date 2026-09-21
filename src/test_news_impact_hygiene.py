@@ -239,9 +239,9 @@ def test_horizon_skips_01d_for_long_classes() -> None:
         ({"event_class": "input_cost", "horizon": "1-4w", "direction": "down",
           "q5": "impulse", "tradeable_expression": "direct", "kind": "ticker"},
          False),
-        ({"event_class": "guidance", "horizon": "0-1d", "direction": "up",
+        ({"event_class": "guidance", "horizon": "1-4w", "direction": "up",
           "q5": "impulse", "tradeable_expression": "direct", "kind": "ticker"},
-         False),
+         True),
     ]
     for target, want in cases:
         assert skips_01d_horizon(target) is want, (target, want)

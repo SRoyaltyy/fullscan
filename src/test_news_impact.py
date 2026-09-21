@@ -17,6 +17,17 @@ from src.news_impact.classify import classify_text, harvest_rank_score
 from src.news_impact.grade import grade_one, parse_when
 from src.news_impact.pipeline import analyze_article
 from src.news_impact.schema import PIPELINE_VERSION, is_tradable, is_usable
+from src.test_news_impact_corpus import (
+    test_class_horizons_defaults,
+    test_dedupe_titles,
+    test_finviz_export_has_news_title_and_ticker,
+    test_first_party_outranks_finviz_wrap,
+    test_funnel_does_not_invent_five_digits,
+    test_inventory_lists_empty_and_unused,
+    test_mix_converge_conflict_singleton,
+    test_reaction_and_reaffirm_still_hold_on_finviz_title,
+    test_window_grid_skips_6m_as_01d_miss,
+)
 from src.test_news_impact_hygiene import (
     test_classify_text_reaction_and_guidance_helpers,
     test_entry_clock_published_vs_retrieved_only,
@@ -512,10 +523,10 @@ def test_grade_filter_cuts_factor_impulse_and_non_direct() -> None:
                   ret_1d=2.0, agree_1d=True, ret_20d=None, agree_20d=None)
 
     roll = performance_rollup([factor, mixed, nd, regime, proxy, theme, good, blast, struct, guide])
-    # gradeable 0-1d: AAL input_cost, COIN market_structure, CRM guidance
-    # blast_cyber is long-horizon — stays in 1-4w, skipped in 0-1d
-    assert roll["n_1d"] == 3, roll
-    assert roll["hit_1d"] == 3
+    # gradeable 0-1d: AAL input_cost, COIN market_structure
+    # blast_cyber + guidance (1-4w natural) skip 0-1d
+    assert roll["n_1d"] == 2, roll
+    assert roll["hit_1d"] == 2
     assert roll["hit_rate_1d"] == 1.0
     assert roll["directional_calls"] == 4
     assert roll["ungraded_context"] >= 4
@@ -529,7 +540,7 @@ def test_grade_filter_cuts_factor_impulse_and_non_direct() -> None:
     assert roll["slices"]["blast"]["n_1d"] == 0
     assert roll["slices"]["blast"]["n_20d"] == 1
     assert roll["slices"]["market_structure"]["n_1d"] == 1
-    assert roll["slices"]["guidance"]["n_1d"] == 1
+    assert roll["slices"]["guidance"]["n_1d"] == 0
     # mixed market_structure must not inflate the graded slice
     assert roll["slices"]["market_structure"]["n_1d"] == 1
 
@@ -623,6 +634,15 @@ def main() -> None:
         test_macro_collapse_one_row_per_factor_session_sign,
         test_horizon_skips_01d_for_long_classes,
         test_classify_text_reaction_and_guidance_helpers,
+        test_inventory_lists_empty_and_unused,
+        test_finviz_export_has_news_title_and_ticker,
+        test_reaction_and_reaffirm_still_hold_on_finviz_title,
+        test_class_horizons_defaults,
+        test_window_grid_skips_6m_as_01d_miss,
+        test_mix_converge_conflict_singleton,
+        test_first_party_outranks_finviz_wrap,
+        test_funnel_does_not_invent_five_digits,
+        test_dedupe_titles,
         test_backtest_improves_sept_parses,
     ]
     failed = 0
