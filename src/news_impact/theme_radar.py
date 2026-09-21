@@ -6,7 +6,7 @@ Ticker, News Title, Daily Digest, News Time.
 Lookup order:
 1. THEME_RADAR_ROOT or vendor/theme-radar (Actions checkout)
 2. data/theme_radar_snapshots/ (optional slim copies)
-3. raw.githubusercontent.com (public; backtests / laptops)
+3. raw.githubusercontent.com (public; named dates only)
 """
 from __future__ import annotations
 
@@ -27,9 +27,6 @@ REMOTE = (
     "main/data/snapshots/{date}.csv"
 )
 _DATE = re.compile(r"(\d{4}-\d{2}-\d{2})")
-
-# Prefer a dated snapshot with a real News Time over a Finviz wrap of the same title.
-SOURCE_RANK = 80  # grok_automations is higher in prefer_source; this beats parsed.
 
 
 def _roots() -> list[Path]:
@@ -53,7 +50,6 @@ def snapshot_paths(date: str | None = None) -> list[Path]:
                 files.append(p)
             continue
         files.extend(sorted(root.glob("20??-??-??.csv")))
-    # skip .raw.csv via glob pattern already
     return [p for p in files if not p.name.endswith(".raw.csv")]
 
 
@@ -129,7 +125,6 @@ def load_theme_radar(
     date: str | None = None,
     allow_remote: bool = True,
 ) -> list[dict]:
-    """Every snapshot row that has a News Title. One article per ticker+title+time."""
     arts: list[dict] = []
     local = snapshot_paths(date)
     seen_dates: set[str] = set()
@@ -146,20 +141,35 @@ def load_theme_radar(
     if date and date.lower() not in {"all", "*", "history", "", None}:
         if date not in seen_dates:
             need = [date]
-    elif allow_remote and not local:
-        # Do not scrape the whole history over HTTP in one test. Caller passes a date.
-        need = []
     if allow_remote:
         for d in need:
             text = _fetch_remote(d)
-            arts.extend(_rows_from_text(
-                text, REMOTE.format(date=d), d,
-            ))
+            arts.extend(_rows_from_text(text, REMOTE.format(date=d), d))
     return arts
 
 
+def patch_load_corpus() -> None:
+    """Combine parsed + grok dumps + theme-radar titles. Idempotent."""
+    from . import backtest
+    from .grok_automations import prefer_source
+
+    if getattr(backtest.load_corpus, "_theme_radar_patched", False):
+        return
+    orig = backtest.load_corpus
+
+    def wrapped(date: str | None = None):
+        arts = orig(date)
+        extra = load_theme_radar(
+            date,
+            allow_remote=bool(date and str(date).lower() not in {"all", "*", "history"}),
+        )
+        return prefer_source(list(arts) + extra)
+
+    wrapped._theme_radar_patched = True  # type: ignore[attr-defined]
+    backtest.load_corpus = wrapped
+
+
 def amrx_acceptance(arts: list[dict] | None = None) -> dict[str, Any]:
-    """Proof row: 2026-09-18 16:01 lanreotide FDA on AMRX."""
     arts = arts if arts is not None else load_theme_radar("2026-09-18", allow_remote=True)
     hits = [
         a for a in arts
