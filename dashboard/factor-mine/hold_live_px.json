@@ -1,40 +1,47 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T17:47:03.996278-04:00",
+  "generated_at": "2026-09-21T17:54:58.673079-04:00",
   "featured": [
     "combo_sh_5050_shared",
+    "union_e_fresh_h3",
     "union_news_pack_net2_h1",
     "union_hot_n4_holdup",
     "overnight_mega_h1",
-    "union_hot_n4_h1",
     "combo_sh_3070_shared",
-    "combo_sj_3070_shared",
-    "combo_sj_5050_shared",
+    "combo_se_5050_skip",
     "combo_sh_macd_5050_shared",
+    "union_hot_n4_h1",
+    "combo_sh_7030_shared",
+    "combo_sj_3070_shared",
+    "union_join_vol_green_h1",
+    "combo_sj_5050_shared",
     "combo_e1s_7030_shared",
-    "combo_se1_5050_shared",
-    "combo_ps_7030_shared",
-    "combo_ps_5050_shared",
-    "union_news_pack_h1",
-    "combo_p2s_5050_shared",
-    "flatten_h5",
     "overnight_mega_h2",
     "overnight_h1",
-    "combo_oh_5050_shared"
+    "combo_oh_5050_shared",
+    "union_news_pack_h1",
+    "combo_ps_5050_shared",
+    "combo_ps_7030_shared",
+    "combo_p2s_5050_shared",
+    "flatten_h5"
   ],
   "quote": {
     "src": "elite_live",
-    "at": "2026-09-21T17:46:59.101164-04:00",
+    "at": "2026-09-21T17:54:53.953332-04:00",
     "after_open": true,
     "n": 11633,
     "error": null,
     "live": true
   },
-  "banner": "Elite Overview as of 17:46 ET",
+  "banner": "Elite Overview as of 17:54 ET",
   "clock_rule": "px is Finviz Elite Price from a fresh post-09:30 Overview export when live is allowed. Theme Radar close dump and yesterday Price are never live.",
   "sleeves": {
     "combo_sh_5050_shared": {
       "name": "combo_sh_5050_shared",
+      "lots": []
+    },
+    "union_e_fresh_h3": {
+      "name": "union_e_fresh_h3",
       "lots": []
     },
     "union_news_pack_net2_h1": {
@@ -49,52 +56,40 @@
       "name": "overnight_mega_h1",
       "lots": []
     },
-    "union_hot_n4_h1": {
-      "name": "union_hot_n4_h1",
-      "lots": []
-    },
     "combo_sh_3070_shared": {
       "name": "combo_sh_3070_shared",
       "lots": []
     },
-    "combo_sj_3070_shared": {
-      "name": "combo_sj_3070_shared",
-      "lots": []
-    },
-    "combo_sj_5050_shared": {
-      "name": "combo_sj_5050_shared",
+    "combo_se_5050_skip": {
+      "name": "combo_se_5050_skip",
       "lots": []
     },
     "combo_sh_macd_5050_shared": {
       "name": "combo_sh_macd_5050_shared",
       "lots": []
     },
+    "union_hot_n4_h1": {
+      "name": "union_hot_n4_h1",
+      "lots": []
+    },
+    "combo_sh_7030_shared": {
+      "name": "combo_sh_7030_shared",
+      "lots": []
+    },
+    "combo_sj_3070_shared": {
+      "name": "combo_sj_3070_shared",
+      "lots": []
+    },
+    "union_join_vol_green_h1": {
+      "name": "union_join_vol_green_h1",
+      "lots": []
+    },
+    "combo_sj_5050_shared": {
+      "name": "combo_sj_5050_shared",
+      "lots": []
+    },
     "combo_e1s_7030_shared": {
       "name": "combo_e1s_7030_shared",
-      "lots": []
-    },
-    "combo_se1_5050_shared": {
-      "name": "combo_se1_5050_shared",
-      "lots": []
-    },
-    "combo_ps_7030_shared": {
-      "name": "combo_ps_7030_shared",
-      "lots": []
-    },
-    "combo_ps_5050_shared": {
-      "name": "combo_ps_5050_shared",
-      "lots": []
-    },
-    "union_news_pack_h1": {
-      "name": "union_news_pack_h1",
-      "lots": []
-    },
-    "combo_p2s_5050_shared": {
-      "name": "combo_p2s_5050_shared",
-      "lots": []
-    },
-    "flatten_h5": {
-      "name": "flatten_h5",
       "lots": []
     },
     "overnight_mega_h2": {
@@ -107,6 +102,26 @@
     },
     "combo_oh_5050_shared": {
       "name": "combo_oh_5050_shared",
+      "lots": []
+    },
+    "union_news_pack_h1": {
+      "name": "union_news_pack_h1",
+      "lots": []
+    },
+    "combo_ps_5050_shared": {
+      "name": "combo_ps_5050_shared",
+      "lots": []
+    },
+    "combo_ps_7030_shared": {
+      "name": "combo_ps_7030_shared",
+      "lots": []
+    },
+    "combo_p2s_5050_shared": {
+      "name": "combo_p2s_5050_shared",
+      "lots": []
+    },
+    "flatten_h5": {
+      "name": "flatten_h5",
       "lots": []
     }
   },
