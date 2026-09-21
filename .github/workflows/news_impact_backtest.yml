@@ -7,6 +7,13 @@ name: News impact backtest
 # Research-only. Does not touch flatten / Webull / factor-mine.
 
 on:
+  # Push of this file on main fires a run (agent tokens cannot dispatch).
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/news_impact_backtest.yml"
+  schedule:
+    - cron: "30 21 * * 1-6"   # ~17:30 ET after the close, Mon–Sat
   workflow_dispatch:
     inputs:
       date:
@@ -106,7 +113,7 @@ jobs:
           unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
           cd "${GITHUB_WORKSPACE:-.}"
           bash scripts/safe_git_push.sh \
-            "auto: news impact backtest table ${{ github.event.inputs.date }}" \
+            "auto: news impact backtest table ${{ github.event.inputs.date || 'all' }}" \
             01_daily/news \
             03_scoreboard/NEWS_IMPACT_BACKTEST.md
       - name: Upload artifact
