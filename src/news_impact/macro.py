@@ -38,8 +38,10 @@ _PRINT = re.compile(
 )
 _DECISION = re.compile(
     r"(?i)(fomc (decision|statement|holds|hikes|cuts)|"
-    r"fed (holds|hikes|cuts|raises) (rates?|the funds)|"
-    r"raises? (the )?(funds )?rate|cuts? (the )?(funds )?rate|"
+    r"\bfed holds? rates|"
+    r"\bfed (hikes|cuts) rates|"
+    r"holds? rates? (steady|unchanged|at [0-9])|"
+    r"cuts? rates? for (the )?(first|second|third)|"
     r"dot plot|summary of economic projections|"
     r"dropping all mention|strips away all rate guidance|"
     r"opec\+?.{0,40}(cut|boost|output|agree)|"
@@ -52,7 +54,7 @@ _SURPRISE = re.compile(
     r"beats? (forecast|expect)|misses? (forecast|expect)|"
     r"(sticky|humid) .{0,12}(cpi|pce|ppi)|"
     r"retail sales.{0,20}(warm|hot|beat|miss|soft)|"
-    r"cool(er)? (cpi|pce|ppi|inflation))"
+    r"(?<!to )cool(er)? (cpi|pce|ppi|inflation))"
 )
 _HAWK = re.compile(
     r"(?i)(hike|hawk|hotter|comes? in (hot|warm)|warm ahead|"
@@ -78,16 +80,29 @@ _PREVIEW = re.compile(
 )
 _SPEECH = re.compile(
     r"(?i)(warsh|hammack|powell|fed (official|member|governor|chair)).{0,70}"
-    r"(says|said|warns|urges|hints|calls for|speech|address|essay)|"
-    r"quieter fed|in closely watched speech"
+    r"(says|said|warns|urges|hints|calls for|speech|address|essay|signals|indicates)|"
+    r"(says|said|warns|urges|hints|signals|indicates).{0,40}"
+    r"(warsh|hammack|powell)|"
+    r"quieter fed|in closely watched speech|blunt tool"
 )
 _RUMOR = re.compile(
     r"(?i)(considers?|may (impose|hike|cut)|report says|sources say|"
-    r"unconfirmed|rumors? of)"
+    r"unconfirmed|rumors? of|could raise rates|may need to raise|"
+    r"should raise rates)"
 )
 _NEWSLETTER = re.compile(
     r"(?i)(after comparing every|these \d win|bond etf paying|"
-    r"\d reasons .{0,40}(fomc|fed)|crypto daily)"
+    r"\d reasons .{0,40}(fomc|fed)|crypto daily|"
+    r"stocks that could (rally|win)|sectors will outperform if|"
+    r"what it means for credit cards)"
+)
+_REACTION = re.compile(
+    r"(?i)((stocks?|s&p|dow |nasdaq|wall street|oil prices?).{0,50}"
+    r"(after|as) (the )?fed)"
+)
+_SOFT_HOLD = re.compile(
+    r"(?i)(expected to (hold|hike|cut)|looks set to|poised to|forecast to|"
+    r"set to hold)"
 )
 
 PRIMARY = {
@@ -139,6 +154,8 @@ def macro_status(text: str) -> dict[str, Any]:
     speech = bool(_SPEECH.search(text))
     rumor = bool(_RUMOR.search(text))
     newsletter = bool(_NEWSLETTER.search(text))
+    reaction = bool(_REACTION.search(text))
+    soft = bool(_SOFT_HOLD.search(text))
 
     if newsletter:
         return {
@@ -152,10 +169,22 @@ def macro_status(text: str) -> dict[str, Any]:
             "why": "rumor / considers — not a binding print",
             "event_class": "rumor",
         }
-    if speech and not (has_decision or has_surprise):
+    if speech and not has_surprise:
         return {
             "q5": "regime", "sign": None, "factor": factor,
             "why": "Fed-path speech is weather until the print or the decision",
+            "event_class": "regime_state",
+        }
+    if reaction and not has_surprise:
+        return {
+            "q5": "regime", "sign": None, "factor": factor,
+            "why": "tape reaction after the decision is already in the price",
+            "event_class": "regime_state",
+        }
+    if soft and not has_surprise:
+        return {
+            "q5": "regime", "sign": None, "factor": factor,
+            "why": "expected-to / set-to is not the decision",
             "event_class": "regime_state",
         }
     live = has_decision or has_surprise or (has_print and has_surprise)
@@ -176,7 +205,7 @@ def macro_status(text: str) -> dict[str, Any]:
         if factor == "oil" and re.search(r"(?i)opec", text):
             if re.search(r"(?i)(cut|output cut|agree to cut)", text):
                 sign = "raise"
-            elif re.search(r"(?i)(boost|increase|raise output)", text):
+            elif re.search(r"(?i)(boost|increase|raise output|output hike)", text):
                 sign = "cut"
         if factor == "risk" and has_decision:
             sign = sign or "raise"

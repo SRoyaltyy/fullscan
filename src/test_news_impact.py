@@ -289,6 +289,24 @@ def test_macro_tariff_rumor_not_tradable() -> None:
         assert row["classification"]["event_class"] in {"rumor", "regime_state", "discard"}
 
 
+def test_macro_hammack_speech_is_weather() -> None:
+    row = analyze_article(
+        {"title": "Fed should raise rates to restrain growth and inflation, Hammack says - Reuters"},
+        persist=False,
+    )
+    assert row["usable"] is False
+    assert row["tradable"] is False
+
+
+def test_macro_if_fed_hikes_newsletter_is_weather() -> None:
+    row = analyze_article(
+        {"title": "Stocks that could rally if the Fed raises rates, or stocks that could win if it stays put"},
+        persist=False,
+    )
+    assert row["usable"] is False
+    assert row["tradable"] is False
+
+
 def test_macro_tariff_imposed_is_risk_off() -> None:
     row = analyze_article(
         {"title": "U.S. announces tariffs on semiconductors and steel"},
@@ -434,6 +452,8 @@ def main() -> None:
         test_macro_fed_speech_is_weather,
         test_macro_hike_odds_reprint_is_weather,
         test_macro_tariff_rumor_not_tradable,
+        test_macro_hammack_speech_is_weather,
+        test_macro_if_fed_hikes_newsletter_is_weather,
         test_macro_tariff_imposed_is_risk_off,
         test_search_pack_offline,
         test_reasoning_and_times_on_article,
