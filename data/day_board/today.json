@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T06:55:22.618399-04:00",
+  "generated_at": "2026-09-21T07:02:38.521750-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -11,113 +11,123 @@
   },
   "buy_1d": [
     {
-      "ticker": "TEM",
-      "score": 0.6878446846094661
-    },
-    {
-      "ticker": "WAY",
-      "score": 0.79571191523737
-    },
-    {
-      "ticker": "FTRE",
-      "score": 0.8359231529362716
-    },
-    {
-      "ticker": "AMRX",
-      "score": 0.8140664984408705
+      "ticker": "PGEN",
+      "score": 0.8376139065949222
     },
     {
       "ticker": "MGNI",
-      "score": 0.7980916423789843
+      "score": 0.8787515311040279
     },
     {
-      "ticker": "COCO",
-      "score": 0.6040714489524619
+      "ticker": "IOVA",
+      "score": 0.8252531235735936
     },
     {
-      "ticker": "DAR",
-      "score": 0.21840859934166296
+      "ticker": "NEOG",
+      "score": 0.8565442544423565
     },
     {
-      "ticker": "CHEF",
-      "score": 0.611399844100438
+      "ticker": "HAE",
+      "score": 0.8046767942654001
     },
     {
-      "ticker": "MTCH",
-      "score": 0.6594258493784588
+      "ticker": "ZD",
+      "score": 0.7458511329012261
     },
     {
       "ticker": "IMAX",
-      "score": 0.6256310037486628
+      "score": 0.7282616519380656
     },
     {
-      "ticker": "AVO",
-      "score": 0.5150080537894517
+      "ticker": "CNK",
+      "score": 0.7554397035732043
+    },
+    {
+      "ticker": "CHEF",
+      "score": 0.6538388853438419
+    },
+    {
+      "ticker": "DAR",
+      "score": 0.26277851542660113
+    },
+    {
+      "ticker": "SJM",
+      "score": 0.18308935716633895
+    },
+    {
+      "ticker": "TAL",
+      "score": 0.5717180252724567
     }
   ],
   "sell_1d": [
     {
       "ticker": "BTU",
-      "score": -0.5077501614201627
-    },
-    {
-      "ticker": "SOC",
-      "score": -0.49548706605653997
-    },
-    {
-      "ticker": "EU",
-      "score": -0.4843281931054503
-    },
-    {
-      "ticker": "UUUU",
-      "score": -0.4244085987509825
-    },
-    {
-      "ticker": "KEP",
-      "score": -0.42422351096411776
-    },
-    {
-      "ticker": "FLNC",
-      "score": -0.4234490029730773
-    },
-    {
-      "ticker": "PUMP",
-      "score": -0.3989876074416021
-    },
-    {
-      "ticker": "URG",
-      "score": -0.37317337950368024
+      "score": -0.5536688624308655
     },
     {
       "ticker": "UEC",
-      "score": -0.37182206951897184
+      "score": -0.4365422392148179
     },
     {
-      "ticker": "WFRD",
-      "score": -0.3715981890836949
+      "ticker": "FLNC",
+      "score": -0.42969603190689626
     },
     {
-      "ticker": "HE",
-      "score": -0.37050742453505336
+      "ticker": "HP",
+      "score": -0.4079040787384768
     },
     {
-      "ticker": "KGS",
-      "score": -0.35931005010904354
+      "ticker": "EU",
+      "score": -0.3905058579297228
     },
     {
-      "ticker": "AR",
-      "score": -0.34802708932927257
+      "ticker": "SOC",
+      "score": -0.3812003285209858
     },
     {
-      "ticker": "NRG",
-      "score": -0.3392950805199203
+      "ticker": "GLND",
+      "score": -0.36470650753732464
     },
     {
-      "ticker": "XPRO",
-      "score": -0.33288470268622816
+      "ticker": "CRC",
+      "score": -0.33461659463414095
+    },
+    {
+      "ticker": "AESI",
+      "score": -0.3312546911445078
+    },
+    {
+      "ticker": "AROC",
+      "score": -0.3306025108444287
+    },
+    {
+      "ticker": "FRVO",
+      "score": -0.32828193004614753
+    },
+    {
+      "ticker": "UUUU",
+      "score": -0.3138291429128407
+    },
+    {
+      "ticker": "RES",
+      "score": -0.31092634274601383
+    },
+    {
+      "ticker": "DVLT",
+      "score": -0.30469547449796364
+    },
+    {
+      "ticker": "VTS",
+      "score": -0.2981149297778855
     }
   ],
-  "flatten": {},
+  "flatten": {
+    "said": "0 priced buys \u00b7 cash $28.68",
+    "bullets": [
+      "0 priced buys",
+      "cash $28.68"
+    ]
+  },
   "general": {
     "said": "UP  12.871",
     "bullets": [

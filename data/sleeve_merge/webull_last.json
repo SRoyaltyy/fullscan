@@ -1,7 +1,7 @@
 {
   "date": "2026-09-21",
-  "prepared_at": "2026-09-21T06:44:44.565732-04:00",
-  "fingerprint": "8017a978300e7639e730d3f9a495cdd2ceb9d26783b7c0466bce03c48c1f5410",
+  "prepared_at": "2026-09-21T07:04:26.423506-04:00",
+  "fingerprint": "4612f59527dbd2bfc3bb3540a773a756c35eb832d85e71726373cac478812ab2",
   "card": {
     "date": "2026-09-21",
     "want_date": "2026-09-21",
@@ -16,9 +16,9 @@
       {
         "side": "BUY",
         "ticker": "DELL",
-        "shares": 439,
-        "px": 568.06,
-        "notional": 249378.34,
+        "shares": 428,
+        "px": 583.42,
+        "notional": 249703.76,
         "order_type": "MARKET",
         "status": "plan",
         "sleeve": "union_hot_n4_h1",
@@ -30,9 +30,9 @@
       {
         "side": "BUY",
         "ticker": "GME",
-        "shares": 11038,
-        "px": 22.64,
-        "notional": 249900.32,
+        "shares": 10942,
+        "px": 22.84,
+        "notional": 249915.28,
         "order_type": "MARKET",
         "status": "plan",
         "sleeve": "union_hot_n4_h1",
@@ -44,9 +44,9 @@
       {
         "side": "BUY",
         "ticker": "UMC",
-        "shares": 10155,
-        "px": 24.61,
-        "notional": 249914.55,
+        "shares": 10012,
+        "px": 24.96,
+        "notional": 249899.52,
         "order_type": "MARKET",
         "status": "plan",
         "sleeve": "union_hot_n4_h1",
@@ -78,7 +78,7 @@
           "sleeve": "union_hot_n4_h1",
           "kid_side": "long",
           "clock": "09:30 ET",
-          "px": 568.06,
+          "px": 583.42,
           "src": "ohlc_hot"
         },
         {
@@ -86,7 +86,7 @@
           "sleeve": "union_hot_n4_h1",
           "kid_side": "long",
           "clock": "09:30 ET",
-          "px": 22.64,
+          "px": 22.84,
           "src": "ohlc_hot"
         },
         {
@@ -94,7 +94,7 @@
           "sleeve": "union_hot_n4_h1",
           "kid_side": "long",
           "clock": "09:30 ET",
-          "px": 24.61,
+          "px": 24.96,
           "src": "ohlc_hot"
         },
         {
@@ -116,55 +116,59 @@
   "target_at": "2026-09-21T09:30:00-04:00",
   "submit": true,
   "standing": true,
-  "status": "failed",
+  "status": "acknowledged",
   "sent": [
     {
       "ticker": "DELL",
       "side": "BUY",
-      "shares": 439,
+      "shares": 428,
       "client_order_id": "fs20260921BDELL",
-      "intent_at": "2026-09-21T06:44:44.567473-04:00",
-      "status": "unknown",
-      "submission_started_at": "2026-09-21T06:44:44.568485-04:00",
-      "lateness_ms": -9915431.515,
-      "ok": false,
-      "error": "submission outcome unknown; reconcile broker"
+      "intent_at": "2026-09-21T07:04:26.425988-04:00",
+      "status": "acknowledged",
+      "submission_started_at": "2026-09-21T07:04:26.427274-04:00",
+      "lateness_ms": -8733572.726,
+      "ok": true,
+      "order_id": "VUJS2PUOU5SU3D5DOV4BF0LS79",
+      "acknowledged_at": "2026-09-21T11:04:26.571748+00:00"
     },
     {
       "ticker": "GME",
       "side": "BUY",
-      "shares": 11038,
+      "shares": 10942,
       "client_order_id": "fs20260921BGME",
-      "intent_at": "2026-09-21T06:44:44.567473-04:00",
-      "status": "unknown",
-      "submission_started_at": "2026-09-21T06:44:44.568485-04:00",
-      "lateness_ms": -9915431.515,
-      "ok": false,
-      "error": "submission outcome unknown; reconcile broker"
+      "intent_at": "2026-09-21T07:04:26.425988-04:00",
+      "status": "acknowledged",
+      "submission_started_at": "2026-09-21T07:04:26.427274-04:00",
+      "lateness_ms": -8733572.726,
+      "ok": true,
+      "order_id": "B9HCEQN5F5AGC0NRP8R1TU228A",
+      "acknowledged_at": "2026-09-21T11:04:26.723072+00:00"
     },
     {
       "ticker": "UMC",
       "side": "BUY",
-      "shares": 10155,
+      "shares": 10012,
       "client_order_id": "fs20260921BUMC",
-      "intent_at": "2026-09-21T06:44:44.567473-04:00",
-      "status": "unknown",
-      "submission_started_at": "2026-09-21T06:44:44.568485-04:00",
-      "lateness_ms": -9915431.515,
-      "ok": false,
-      "error": "submission outcome unknown; reconcile broker"
+      "intent_at": "2026-09-21T07:04:26.425988-04:00",
+      "status": "acknowledged",
+      "submission_started_at": "2026-09-21T07:04:26.427274-04:00",
+      "lateness_ms": -8733572.726,
+      "ok": true,
+      "order_id": "D8HGN8QS2KANBQAT1SD7OR8AN9",
+      "acknowledged_at": "2026-09-21T11:04:26.865570+00:00"
     },
     {
       "ticker": "VSTS",
       "side": "BUY",
       "shares": 18083,
       "client_order_id": "fs20260921BVSTS",
-      "intent_at": "2026-09-21T06:44:44.567473-04:00",
-      "status": "unknown",
-      "submission_started_at": "2026-09-21T06:44:44.568485-04:00",
-      "lateness_ms": -9915431.515,
-      "ok": false,
-      "error": "submission outcome unknown; reconcile broker"
+      "intent_at": "2026-09-21T07:04:26.425988-04:00",
+      "status": "acknowledged",
+      "submission_started_at": "2026-09-21T07:04:26.427274-04:00",
+      "lateness_ms": -8733572.726,
+      "ok": true,
+      "order_id": "QVH6EIJB1RF3DUJJAP6LFQDTIA",
+      "acknowledged_at": "2026-09-21T11:04:27.030021+00:00"
     }
   ],
   "fill_status": "not_observed",

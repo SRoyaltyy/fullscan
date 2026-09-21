@@ -4,582 +4,603 @@
     "1d": {
       "buy": [
         {
-          "ticker": "TEM",
-          "score": 0.6878446846094661
-        },
-        {
-          "ticker": "WAY",
-          "score": 0.79571191523737
-        },
-        {
-          "ticker": "FTRE",
-          "score": 0.8359231529362716
-        },
-        {
-          "ticker": "AMRX",
-          "score": 0.8140664984408705
+          "ticker": "PGEN",
+          "score": 0.8376139065949222
         },
         {
           "ticker": "MGNI",
-          "score": 0.7980916423789843
+          "score": 0.8787515311040279
         },
         {
-          "ticker": "COCO",
-          "score": 0.6040714489524619
+          "ticker": "IOVA",
+          "score": 0.8252531235735936
         },
         {
-          "ticker": "DAR",
-          "score": 0.21840859934166296
+          "ticker": "NEOG",
+          "score": 0.8565442544423565
         },
         {
-          "ticker": "CHEF",
-          "score": 0.611399844100438
+          "ticker": "HAE",
+          "score": 0.8046767942654001
         },
         {
-          "ticker": "MTCH",
-          "score": 0.6594258493784588
+          "ticker": "ZD",
+          "score": 0.7458511329012261
         },
         {
           "ticker": "IMAX",
-          "score": 0.6256310037486628
+          "score": 0.7282616519380656
         },
         {
-          "ticker": "AVO",
-          "score": 0.5150080537894517
+          "ticker": "CNK",
+          "score": 0.7554397035732043
+        },
+        {
+          "ticker": "CHEF",
+          "score": 0.6538388853438419
+        },
+        {
+          "ticker": "DAR",
+          "score": 0.26277851542660113
+        },
+        {
+          "ticker": "SJM",
+          "score": 0.18308935716633895
+        },
+        {
+          "ticker": "TAL",
+          "score": 0.5717180252724567
         }
       ],
       "sell": [
         {
           "ticker": "BTU",
-          "score": -0.5077501614201627
-        },
-        {
-          "ticker": "SOC",
-          "score": -0.49548706605653997
-        },
-        {
-          "ticker": "EU",
-          "score": -0.4843281931054503
-        },
-        {
-          "ticker": "UUUU",
-          "score": -0.4244085987509825
-        },
-        {
-          "ticker": "KEP",
-          "score": -0.42422351096411776
-        },
-        {
-          "ticker": "FLNC",
-          "score": -0.4234490029730773
-        },
-        {
-          "ticker": "PUMP",
-          "score": -0.3989876074416021
-        },
-        {
-          "ticker": "URG",
-          "score": -0.37317337950368024
+          "score": -0.5536688624308655
         },
         {
           "ticker": "UEC",
-          "score": -0.37182206951897184
+          "score": -0.4365422392148179
         },
         {
-          "ticker": "WFRD",
-          "score": -0.3715981890836949
+          "ticker": "FLNC",
+          "score": -0.42969603190689626
         },
         {
-          "ticker": "HE",
-          "score": -0.37050742453505336
+          "ticker": "HP",
+          "score": -0.4079040787384768
         },
         {
-          "ticker": "KGS",
-          "score": -0.35931005010904354
+          "ticker": "EU",
+          "score": -0.3905058579297228
         },
         {
-          "ticker": "AR",
-          "score": -0.34802708932927257
+          "ticker": "SOC",
+          "score": -0.3812003285209858
         },
         {
-          "ticker": "NRG",
-          "score": -0.3392950805199203
+          "ticker": "GLND",
+          "score": -0.36470650753732464
         },
         {
-          "ticker": "XPRO",
-          "score": -0.33288470268622816
+          "ticker": "CRC",
+          "score": -0.33461659463414095
+        },
+        {
+          "ticker": "AESI",
+          "score": -0.3312546911445078
+        },
+        {
+          "ticker": "AROC",
+          "score": -0.3306025108444287
+        },
+        {
+          "ticker": "FRVO",
+          "score": -0.32828193004614753
+        },
+        {
+          "ticker": "UUUU",
+          "score": -0.3138291429128407
+        },
+        {
+          "ticker": "RES",
+          "score": -0.31092634274601383
+        },
+        {
+          "ticker": "DVLT",
+          "score": -0.30469547449796364
+        },
+        {
+          "ticker": "VTS",
+          "score": -0.2981149297778855
         }
       ]
     },
     "3d": {
       "buy": [
         {
-          "ticker": "TEM",
-          "score": 0.7317015574515375
-        },
-        {
-          "ticker": "WAY",
-          "score": 0.8568336119956257
-        },
-        {
-          "ticker": "FTRE",
-          "score": 0.879427499971771
-        },
-        {
-          "ticker": "AMRX",
-          "score": 0.868794959979188
+          "ticker": "PGEN",
+          "score": 0.8926683084977094
         },
         {
           "ticker": "MGNI",
-          "score": 0.8275320662868173
+          "score": 0.9192989394296602
         },
         {
-          "ticker": "COCO",
-          "score": 0.6322699512753907
+          "ticker": "IOVA",
+          "score": 0.8787319605167438
         },
         {
-          "ticker": "DAR",
-          "score": 0.2510275121228114
+          "ticker": "NEOG",
+          "score": 0.9013656612070167
         },
         {
-          "ticker": "CHEF",
-          "score": 0.6350770105717902
+          "ticker": "HAE",
+          "score": 0.8665015894782895
         },
         {
-          "ticker": "MTCH",
-          "score": 0.6816906263261102
+          "ticker": "ZD",
+          "score": 0.7927953205946598
         },
         {
           "ticker": "IMAX",
-          "score": 0.654605788226484
+          "score": 0.7854292878936713
         },
         {
-          "ticker": "AVO",
-          "score": 0.5506677869472966
+          "ticker": "CNK",
+          "score": 0.7979925735898776
+        },
+        {
+          "ticker": "CHEF",
+          "score": 0.6768335078774044
+        },
+        {
+          "ticker": "DAR",
+          "score": 0.28957206555457493
+        },
+        {
+          "ticker": "SJM",
+          "score": 0.21031479968508465
+        },
+        {
+          "ticker": "TAL",
+          "score": 0.6007538279937477
         }
       ],
       "sell": [
         {
           "ticker": "BTU",
-          "score": -0.5780461979120034
-        },
-        {
-          "ticker": "EU",
-          "score": -0.5655431517815375
-        },
-        {
-          "ticker": "SOC",
-          "score": -0.5624108919826064
-        },
-        {
-          "ticker": "UUUU",
-          "score": -0.5012202989732062
-        },
-        {
-          "ticker": "KEP",
-          "score": -0.49068753920207814
-        },
-        {
-          "ticker": "PUMP",
-          "score": -0.47642364393344283
-        },
-        {
-          "ticker": "FLNC",
-          "score": -0.4748320037254576
+          "score": -0.6277071897418957
         },
         {
           "ticker": "UEC",
-          "score": -0.45677346196053176
+          "score": -0.5264746881639644
         },
         {
-          "ticker": "WFRD",
-          "score": -0.44781002445274876
+          "ticker": "EU",
+          "score": -0.4793701494925372
         },
         {
-          "ticker": "URG",
-          "score": -0.4428205651204309
+          "ticker": "HP",
+          "score": -0.47653787367969347
         },
         {
-          "ticker": "KGS",
-          "score": -0.42892945000227395
+          "ticker": "FLNC",
+          "score": -0.46745147286285993
         },
         {
-          "ticker": "HE",
-          "score": -0.4231439218923596
+          "ticker": "SOC",
+          "score": -0.4518533216163106
         },
         {
-          "ticker": "XPRO",
-          "score": -0.40758295947891643
-        },
-        {
-          "ticker": "AROC",
-          "score": -0.4037564454827547
+          "ticker": "GLND",
+          "score": -0.4365599315683023
         },
         {
           "ticker": "CRC",
-          "score": -0.40049302354632227
+          "score": -0.4126398593307327
+        },
+        {
+          "ticker": "AESI",
+          "score": -0.40811200772573175
+        },
+        {
+          "ticker": "AROC",
+          "score": -0.40561543562442526
+        },
+        {
+          "ticker": "UUUU",
+          "score": -0.3979799163956229
+        },
+        {
+          "ticker": "FRVO",
+          "score": -0.3909152820870512
+        },
+        {
+          "ticker": "BIPC",
+          "score": -0.37059788609961725
+        },
+        {
+          "ticker": "VTS",
+          "score": -0.3653927395291308
+        },
+        {
+          "ticker": "URG",
+          "score": -0.3544833538422296
         }
       ]
     },
     "1w": {
       "buy": [
         {
-          "ticker": "TEM",
-          "score": 0.7378539062119096
-        },
-        {
-          "ticker": "WAY",
-          "score": 0.8954539764277802
-        },
-        {
-          "ticker": "FTRE",
-          "score": 0.8845382575485699
-        },
-        {
-          "ticker": "AMRX",
-          "score": 0.8957565912431262
+          "ticker": "PGEN",
+          "score": 0.9187350255021298
         },
         {
           "ticker": "MGNI",
-          "score": 0.8256108622997829
+          "score": 0.925096898191839
         },
         {
-          "ticker": "COCO",
-          "score": 0.649220959795755
+          "ticker": "IOVA",
+          "score": 0.9040108950413455
         },
         {
-          "ticker": "DAR",
-          "score": 0.26066872587228573
+          "ticker": "NEOG",
+          "score": 0.9104565579690229
         },
         {
-          "ticker": "CHEF",
-          "score": 0.6266473511663666
+          "ticker": "HAE",
+          "score": 0.9069112108894073
         },
         {
-          "ticker": "MTCH",
-          "score": 0.6739420106351766
+          "ticker": "ZD",
+          "score": 0.814091326780713
         },
         {
           "ticker": "IMAX",
-          "score": 0.6745404147512037
+          "score": 0.8238132992511502
         },
         {
-          "ticker": "AVO",
-          "score": 0.5713494108851191
+          "ticker": "CNK",
+          "score": 0.8192462324028875
+        },
+        {
+          "ticker": "CHEF",
+          "score": 0.671689403203235
+        },
+        {
+          "ticker": "DAR",
+          "score": 0.3007927529578983
+        },
+        {
+          "ticker": "SJM",
+          "score": 0.22677927830335765
+        },
+        {
+          "ticker": "TAL",
+          "score": 0.6217503134134423
         }
       ],
       "sell": [
         {
-          "ticker": "EU",
-          "score": -0.6439092151786303
-        },
-        {
           "ticker": "BTU",
-          "score": -0.626801450443733
-        },
-        {
-          "ticker": "SOC",
-          "score": -0.6094800392314491
-        },
-        {
-          "ticker": "UUUU",
-          "score": -0.5773847331433675
-        },
-        {
-          "ticker": "KEP",
-          "score": -0.5470467876068676
-        },
-        {
-          "ticker": "FLNC",
-          "score": -0.538282088160697
-        },
-        {
-          "ticker": "PUMP",
-          "score": -0.5382688964651724
+          "score": -0.6829269864748699
         },
         {
           "ticker": "UEC",
-          "score": -0.537007742240361
+          "score": -0.6107804286915643
         },
         {
-          "ticker": "WFRD",
-          "score": -0.509043176423085
+          "ticker": "EU",
+          "score": -0.5631418113269712
         },
         {
-          "ticker": "URG",
-          "score": -0.5018027419878555
+          "ticker": "FLNC",
+          "score": -0.527409386720518
         },
         {
-          "ticker": "KGS",
-          "score": -0.4842709073077894
+          "ticker": "HP",
+          "score": -0.5254933552093511
         },
         {
-          "ticker": "TLN",
-          "score": -0.4683948650176908
+          "ticker": "SOC",
+          "score": -0.5018184022230222
         },
         {
-          "ticker": "XPRO",
-          "score": -0.4668510837105013
-        },
-        {
-          "ticker": "HE",
-          "score": -0.46410075463006195
+          "ticker": "GLND",
+          "score": -0.4887061596368178
         },
         {
           "ticker": "CRC",
-          "score": -0.45980058123682377
+          "score": -0.4747787259648379
+        },
+        {
+          "ticker": "UUUU",
+          "score": -0.47263066411227567
+        },
+        {
+          "ticker": "AESI",
+          "score": -0.469667900302153
+        },
+        {
+          "ticker": "AROC",
+          "score": -0.46209725898968523
+        },
+        {
+          "ticker": "BIPC",
+          "score": -0.44784726059069896
+        },
+        {
+          "ticker": "FRVO",
+          "score": -0.44630935860228277
+        },
+        {
+          "ticker": "BAK",
+          "score": -0.42702262407808045
+        },
+        {
+          "ticker": "VTS",
+          "score": -0.41004340176365367
         }
       ]
     },
     "2w": {
       "buy": [
         {
-          "ticker": "TEM",
-          "score": 0.7287743718531665
-        },
-        {
-          "ticker": "WAY",
-          "score": 0.9178883194558991
-        },
-        {
-          "ticker": "FTRE",
-          "score": 0.8755709030466365
-        },
-        {
-          "ticker": "AMRX",
-          "score": 0.9051216885140252
+          "ticker": "PGEN",
+          "score": 0.9286157211025146
         },
         {
           "ticker": "MGNI",
-          "score": 0.8096115462340163
+          "score": 0.9139291841548678
         },
         {
-          "ticker": "COCO",
-          "score": 0.6569296251709194
+          "ticker": "IOVA",
+          "score": 0.9131038081619118
         },
         {
-          "ticker": "DAR",
-          "score": 0.2610675964765599
+          "ticker": "NEOG",
+          "score": 0.9010405302247944
         },
         {
-          "ticker": "CHEF",
-          "score": 0.6089753486157428
+          "ticker": "HAE",
+          "score": 0.9292178672276279
         },
         {
-          "ticker": "MTCH",
-          "score": 0.6551014004972553
+          "ticker": "ZD",
+          "score": 0.8201554498476511
         },
         {
           "ticker": "IMAX",
-          "score": 0.6817720622281778
+          "score": 0.8436903861023943
         },
         {
-          "ticker": "AVO",
-          "score": 0.5827886916777415
+          "ticker": "CNK",
+          "score": 0.8223969261429998
+        },
+        {
+          "ticker": "CHEF",
+          "score": 0.6524671864503331
+        },
+        {
+          "ticker": "DAR",
+          "score": 0.2967815572421064
+        },
+        {
+          "ticker": "SJM",
+          "score": 0.23400141377643047
+        },
+        {
+          "ticker": "TAL",
+          "score": 0.6286686867544047
         }
       ],
       "sell": [
         {
-          "ticker": "EU",
-          "score": -0.7081971664969908
-        },
-        {
           "ticker": "BTU",
-          "score": -0.662853723927717
-        },
-        {
-          "ticker": "SOC",
-          "score": -0.6438462074325458
-        },
-        {
-          "ticker": "UUUU",
-          "score": -0.6394710552347962
+          "score": -0.7193192724378986
         },
         {
           "ticker": "UEC",
-          "score": -0.6031639104414577
+          "score": -0.6789001478151286
         },
         {
-          "ticker": "KEP",
-          "score": -0.5907030569639113
+          "ticker": "EU",
+          "score": -0.6307274517573694
         },
         {
           "ticker": "FLNC",
-          "score": -0.587654060517204
+          "score": -0.5688603760719411
         },
         {
-          "ticker": "PUMP",
-          "score": -0.5874111699491563
+          "ticker": "HP",
+          "score": -0.5603707246602764
         },
         {
-          "ticker": "WFRD",
-          "score": -0.5575733493456755
+          "ticker": "UUUU",
+          "score": -0.5401142638619129
         },
         {
-          "ticker": "URG",
-          "score": -0.5467068067765477
+          "ticker": "SOC",
+          "score": -0.5377053707510014
         },
         {
-          "ticker": "KGS",
-          "score": -0.5303700214681046
-        },
-        {
-          "ticker": "TLN",
-          "score": -0.5270635856766608
-        },
-        {
-          "ticker": "XPRO",
-          "score": -0.5150272134950986
+          "ticker": "GLND",
+          "score": -0.5246663663012977
         },
         {
           "ticker": "CRC",
-          "score": -0.5080161444803377
+          "score": -0.5242146135511974
+        },
+        {
+          "ticker": "AESI",
+          "score": -0.5185208138308285
         },
         {
           "ticker": "AROC",
-          "score": -0.5061658624880697
+          "score": -0.5114119343879295
+        },
+        {
+          "ticker": "BIPC",
+          "score": -0.508910613677745
+        },
+        {
+          "ticker": "BAK",
+          "score": -0.4865741406931642
+        },
+        {
+          "ticker": "FRVO",
+          "score": -0.4841069011244747
+        },
+        {
+          "ticker": "URG",
+          "score": -0.4547628779487526
         }
       ]
     },
     "1m": {
       "buy": [
         {
-          "ticker": "TEM",
-          "score": 0.7702867206135386
-        },
-        {
-          "ticker": "WAY",
-          "score": 0.9618126838880536
-        },
-        {
-          "ticker": "FTRE",
-          "score": 0.9160416606234354
-        },
-        {
-          "ticker": "AMRX",
-          "score": 0.9497633197779634
+          "ticker": "PGEN",
+          "score": 0.9723624381069347
         },
         {
           "ticker": "MGNI",
-          "score": 0.8430503422469819
+          "score": 0.9550871429170467
         },
         {
-          "ticker": "COCO",
-          "score": 0.6791846336912838
+          "ticker": "IOVA",
+          "score": 0.9560627426865136
         },
         {
-          "ticker": "DAR",
-          "score": 0.28838881022603424
+          "ticker": "NEOG",
+          "score": 0.9454914269868007
         },
         {
-          "ticker": "CHEF",
-          "score": 0.635905689210319
+          "ticker": "HAE",
+          "score": 0.9749314886387457
         },
         {
-          "ticker": "MTCH",
-          "score": 0.6827127848063217
+          "ticker": "ZD",
+          "score": 0.8591314560337044
         },
         {
           "ticker": "IMAX",
-          "score": 0.7070106887528976
+          "score": 0.8873783974598735
         },
         {
-          "ticker": "AVO",
-          "score": 0.608774315615564
+          "ticker": "CNK",
+          "score": 0.8613305849560093
+        },
+        {
+          "ticker": "CHEF",
+          "score": 0.6826830817761635
+        },
+        {
+          "ticker": "DAR",
+          "score": 0.3256822446454297
+        },
+        {
+          "ticker": "SJM",
+          "score": 0.25576989239470344
+        },
+        {
+          "ticker": "TAL",
+          "score": 0.6549691721740993
         }
       ],
       "sell": [
         {
-          "ticker": "EU",
-          "score": -0.7512032298940836
-        },
-        {
           "ticker": "BTU",
-          "score": -0.7063049764594466
-        },
-        {
-          "ticker": "SOC",
-          "score": -0.6856113546813883
-        },
-        {
-          "ticker": "UUUU",
-          "score": -0.6802754894049572
+          "score": -0.7692350691708728
         },
         {
           "ticker": "UEC",
-          "score": -0.6480381907212869
+          "score": -0.7278458883427286
         },
         {
-          "ticker": "PUMP",
-          "score": -0.631576422480886
+          "ticker": "EU",
+          "score": -0.6791391135918032
         },
         {
-          "ticker": "KEP",
-          "score": -0.6293823053687009
+          "ticker": "HP",
+          "score": -0.6040222061899341
         },
         {
           "ticker": "FLNC",
-          "score": -0.6157441449524435
+          "score": -0.5934582899295989
         },
         {
-          "ticker": "WFRD",
-          "score": -0.6011265013160118
+          "ticker": "SOC",
+          "score": -0.582366451357713
         },
         {
-          "ticker": "URG",
-          "score": -0.5880089836439722
+          "ticker": "UUUU",
+          "score": -0.5794050115785656
         },
         {
-          "ticker": "KGS",
-          "score": -0.5680314787736198
-        },
-        {
-          "ticker": "TLN",
-          "score": -0.5630752853833766
-        },
-        {
-          "ticker": "XPRO",
-          "score": -0.5566153377266835
+          "ticker": "GLND",
+          "score": -0.5715085943698132
         },
         {
           "ticker": "CRC",
-          "score": -0.5496437021708391
+          "score": -0.5686734801853025
+        },
+        {
+          "ticker": "AESI",
+          "score": -0.5623967064072498
+        },
+        {
+          "ticker": "BIPC",
+          "score": -0.5507999881688267
         },
         {
           "ticker": "AROC",
-          "score": -0.5432741449742352
+          "score": -0.5502137577531896
+        },
+        {
+          "ticker": "FRVO",
+          "score": -0.5253569776397062
+        },
+        {
+          "ticker": "BAK",
+          "score": -0.5248437693869804
+        },
+        {
+          "ticker": "URG",
+          "score": -0.48846617001973003
         }
       ]
     }
   },
   "buy_1d": [
-    "TEM",
-    "WAY",
-    "FTRE",
-    "AMRX",
+    "PGEN",
     "MGNI",
-    "COCO",
-    "DAR",
-    "CHEF",
-    "MTCH",
+    "IOVA",
+    "NEOG",
+    "HAE",
+    "ZD",
     "IMAX",
-    "AVO"
+    "CNK",
+    "CHEF",
+    "DAR",
+    "SJM",
+    "TAL"
   ],
   "sell_1d": [
     "BTU",
-    "SOC",
-    "EU",
-    "UUUU",
-    "KEP",
-    "FLNC",
-    "PUMP",
-    "URG",
     "UEC",
-    "WFRD",
-    "HE",
-    "KGS",
-    "AR",
-    "NRG",
-    "XPRO"
+    "FLNC",
+    "HP",
+    "EU",
+    "SOC",
+    "GLND",
+    "CRC",
+    "AESI",
+    "AROC",
+    "FRVO",
+    "UUUU",
+    "RES",
+    "DVLT",
+    "VTS"
   ]
 }

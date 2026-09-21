@@ -1,12 +1,12 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T06:55:15.520545-04:00",
+  "generated_at": "2026-09-21T07:02:32.323646-04:00",
   "inputs": [
     {
       "name": "finviz_export",
       "family": "join",
       "status": "ok",
-      "n": 11640,
+      "n": 11643,
       "detail": "finviz_2026-09-21.csv"
     },
     {
@@ -21,7 +21,7 @@
       "family": "join",
       "status": "ok",
       "n": 5894,
-      "detail": "std=0.951"
+      "detail": "std=0.992"
     },
     {
       "name": "news_actions",
@@ -48,7 +48,7 @@
       "name": "ab_checklist",
       "family": "ab",
       "status": "ok",
-      "n": 11640,
+      "n": 2663,
       "detail": "2026-09-21_ab_checklist_enriched.csv"
     },
     {
