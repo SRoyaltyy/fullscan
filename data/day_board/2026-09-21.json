@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T04:17:31.459689-04:00",
+  "generated_at": "2026-09-21T04:18:47.752618-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -12,8 +12,8 @@
     "MISSING AB checklist enriched `data/ab_checklist/2026-09-21_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 1,
-    "partial": 3,
+    "ok": 2,
+    "partial": 2,
     "fail": 4,
     "n": 8
   },
@@ -22,9 +22,9 @@
       "key": "postclose",
       "name": "Post-close research",
       "yaml": "map_heat_postclose.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 2,
       "n_opt": 2,
@@ -52,9 +52,9 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-09-21_map_heat.json",
           "role": "required",
-          "status": "FAIL",
-          "reason": "stale_map_heat_md",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 269113
         },
         {
           "key": "heat_md",
@@ -63,7 +63,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 16976
+          "size": 16935
         }
       ],
       "said": "tables on disk",
@@ -87,7 +87,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 88724
+          "size": 88439
         },
         {
           "key": "digest_md",
@@ -96,7 +96,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11847
+          "size": 11892
         },
         {
           "key": "market_digest_json",
@@ -143,7 +143,7 @@
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 2,
       "n_req": 20,
       "n_opt_ok": 1,
@@ -156,7 +156,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 88724
+          "size": 88439
         },
         {
           "key": "in_market_digest",
@@ -181,9 +181,9 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-09-21_map_heat.json",
           "role": "input",
-          "status": "FAIL",
-          "reason": "stale_map_heat_md",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 269113
         },
         {
           "key": "parsed",
@@ -264,7 +264,7 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7299
+          "size": 7282
         },
         {
           "key": "status",
@@ -405,7 +405,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 88724
+          "size": 88439
         },
         {
           "key": "weather",
@@ -480,7 +480,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 88724
+          "size": 88439
         },
         {
           "key": "dossiers",
@@ -540,7 +540,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 88724
+          "size": 88439
         },
         {
           "key": "in_judge",
@@ -800,6 +800,31 @@
       "date": "2026-09-21",
       "ok": true,
       "pushed": true,
+      "at": "2026-09-21T04:17:22.341487-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-21_finviz_market_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 5588,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-09-21_finviz_market_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 2644,
+          "preview": "# Finviz homepage market digest \u2014 2026-09-21\n**Generated:** 2026-09-21T04:17:22.327553-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a higher open on upbeat US-China trade signals as tech leads and oil drifts lower on a quiet data day\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** MARA, RIOT, AMD, GOOGL, NFLX, VFS, ABVX\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-21\n**Clock use:** `same_morning`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-21\n**Generated:** 2026-09-21T04:17:22.327553-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a higher open on upbeat US-China trade signals as tech leads and oil drifts lower on a quiet data day\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** MARA, RIOT, AMD, GOOGL, NFLX, VFS, ABVX\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-21\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "finviz_market_digest",
+      "title": "Finviz homepage market digest",
+      "date": "2026-09-21",
+      "ok": true,
+      "pushed": true,
       "at": "2026-09-21T04:17:31.315682-04:00",
       "files": [
         {
@@ -818,6 +843,31 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-21\n**Generated:** 2026-09-21T04:17:31.301733-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a higher open on upbeat US-China trade signals as tech leads and oil drifts lower on a quiet data day\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** MARA, RIOT, AMD, GOOGL, NFLX, VFS, ABVX\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-21\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-09-21",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-21T04:18:47.614059-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-21_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 269113,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-21_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 17324,
+          "preview": "# MAP HEAT \u2014 2026-09-21\nExport `finviz_2026-09-20.csv` \u00b7 11616 names \u00b7 generated 2026-09-21T04:18:47.569536-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-21\nExport `finviz_2026-09-20.csv` \u00b7 11616 names \u00b7 generated 2026-09-21T04:18:47.569536-04:00"
     }
   ],
   "href": {
