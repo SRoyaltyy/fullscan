@@ -5,6 +5,7 @@ import re
 
 from .axioms import retrieve
 from .classify import extract_named
+from .horizons import apply_class_horizons
 from .macro import macro_entities
 from .schema import Classification, Entity, empty_entity_ok
 
@@ -47,12 +48,19 @@ def analyze(art: dict, cls: Classification, pack: dict | None = None) -> list[En
     # Honesty: if the class is not weather/discard, name someone.
     if not rows and not empty_entity_ok(cls):
         named = extract_named(str(art.get("title") or ""), str(art.get("body") or ""))
+        hint = str(art.get("ticker_hint") or "").strip().upper()
         if named:
             tick, name = named[0]
             rows = [_ent(
                 name=name, ticker=tick, role="named",
                 direction="not_determined", horizon="0-1d",
                 if_unknown="pack incomplete", inferred=False,
+            )]
+        elif hint:
+            rows = [_ent(
+                name=str(art.get("company") or hint), ticker=hint, role="named",
+                direction="not_determined", horizon="0-1d",
+                if_unknown="finviz ticker map; pack incomplete", inferred=True,
             )]
         else:
             rows = [_ent(
@@ -61,6 +69,9 @@ def analyze(art: dict, cls: Classification, pack: dict | None = None) -> list[En
                 tradeable_expression="none",
                 if_unknown="no listed whole-company channel",
             )]
+    apply_class_horizons(
+        rows, cls.event_class, str(art.get("title") or ""), cls.sign,
+    )
     return rows
 
 
@@ -355,9 +366,10 @@ def _print(art: dict, cls: Classification, pack: dict) -> list[Entity]:
     elif re.search(r"(?i)(beat|raise|record)", text):
         direction = "up"
     for tick, name in named:
+        hz = "1-4w" if cls.event_class in {"guidance", "print_vs_priced"} else "0-1d"
         out.append(_ent(
             name=name, ticker=tick, role="named",
-            direction=direction, horizon="0-1d",
+            direction=direction, horizon=hz,
         ))
     return out
 
