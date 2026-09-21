@@ -2,12 +2,12 @@
 
 Human table of every harvested article: what published/when we retrieved it, which model(s) processed it, the intermediary reasoning, the up/down conclusion, and the realized tape.
 
-articles=123  pipeline=news_impact_v1  usable_rows=33  discarded_rows=90
+articles=123  pipeline=news_impact_v2  usable_rows=33  tradable_rows=0  discarded_rows=90
 
 ## Usable / discarded
 
 - Old news_parse: usable=7 discarded=116 ratio=0.0569
-- New router: usable=33 discarded=90 ratio=0.2683
+- New router: usable=33 discarded=90 ratio=0.2683  tradable=None ratio=None
 - Rescued (old discard → new usable): 28
 - Killed (old usable → new weather/discard): 2
 - Ratio delta: 0.2114
@@ -15,6 +15,8 @@ articles=123  pipeline=news_impact_v1  usable_rows=33  discarded_rows=90
 ## Actual tape (graded directional calls only)
 
 0-1d and 1-4w hit rates count a row only when **q5=impulse**, **direction in {up, down}**, and **tradeable_expression=direct** (listed ticker or ETF that *is* the expression). `factor_impulse` / Fed→QQQ/SPY and similar index-factor rows stay in the article table as **ungraded** context. `mixed` / `not_determined` stay ungraded — no new scores.
+
+Tradable = listed ticker with an up/down call. Ticker-less macro is tradable only when the factor basket is signed (print or decision), not on Fed-path color.
 
 - 0-1d (entry-day close vs entry open): 12/22 hit_rate=0.5455
 - 1-4w (~20 sessions): 0/0 hit_rate=None
