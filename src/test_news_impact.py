@@ -17,6 +17,19 @@ from src.news_impact.classify import classify_text, harvest_rank_score
 from src.news_impact.grade import grade_one, parse_when
 from src.news_impact.pipeline import analyze_article
 from src.news_impact.schema import PIPELINE_VERSION, is_tradable, is_usable
+from src.test_news_impact_hygiene import (
+    test_classify_text_reaction_and_guidance_helpers,
+    test_entry_clock_published_vs_retrieved_only,
+    test_guidance_cut_still_down,
+    test_guidance_raise_plus_miss_eps_is_mixed,
+    test_guidance_raise_still_up,
+    test_guidance_reaffirm_is_not_raise,
+    test_horizon_skips_01d_for_long_classes,
+    test_macro_collapse_one_row_per_factor_session_sign,
+    test_reaction_does_not_eat_real_impulse,
+    test_reaction_title_table,
+    test_reaction_titles_are_discard_not_tradable,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -198,7 +211,8 @@ def test_gold_fed_reprint_killed() -> None:
         {"title": "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%"},
         persist=False,
     )
-    assert _cls(row) == "regime_state"
+    assert _cls(row) in {"regime_state", "discard"}
+    assert row["classification"]["q5"] == "regime"
     assert row["usable"] is False
 
 
@@ -353,6 +367,7 @@ def test_reasoning_and_times_on_article() -> None:
     )
     assert row["published_at"].startswith("Wed, 17 Sep 2026")
     assert row["retrieved_at"].startswith("2026-09-17")
+    assert row["entry_clock"] == "published"
     assert row["models"] == [f"deterministic::{PIPELINE_VERSION}"]
     assert row["reasoning"] and row["reasoning"][0].startswith("Q5")
     assert "input_cost" in row["reasoning"][1]
@@ -497,9 +512,10 @@ def test_grade_filter_cuts_factor_impulse_and_non_direct() -> None:
                   ret_1d=2.0, agree_1d=True, ret_20d=None, agree_20d=None)
 
     roll = performance_rollup([factor, mixed, nd, regime, proxy, theme, good, blast, struct, guide])
-    # gradeable 0-1d: AAL input_cost, BSX blast, COIN market_structure, CRM guidance
-    assert roll["n_1d"] == 4, roll
-    assert roll["hit_1d"] == 4
+    # gradeable 0-1d: AAL input_cost, COIN market_structure, CRM guidance
+    # blast_cyber is long-horizon — stays in 1-4w, skipped in 0-1d
+    assert roll["n_1d"] == 3, roll
+    assert roll["hit_1d"] == 3
     assert roll["hit_rate_1d"] == 1.0
     assert roll["directional_calls"] == 4
     assert roll["ungraded_context"] >= 4
@@ -510,7 +526,8 @@ def test_grade_filter_cuts_factor_impulse_and_non_direct() -> None:
     assert fi["hit_1d"] == 1
     assert roll["slices"]["input_cost"]["graded"] is True
     assert roll["slices"]["input_cost"]["n_1d"] == 1
-    assert roll["slices"]["blast"]["n_1d"] == 1
+    assert roll["slices"]["blast"]["n_1d"] == 0
+    assert roll["slices"]["blast"]["n_20d"] == 1
     assert roll["slices"]["market_structure"]["n_1d"] == 1
     assert roll["slices"]["guidance"]["n_1d"] == 1
     # mixed market_structure must not inflate the graded slice
@@ -531,6 +548,7 @@ def test_grade_filter_cuts_factor_impulse_and_non_direct() -> None:
     assert "**ungraded**" in md
     assert "ungraded · factor_impulse" in md
     assert "graded directional calls: 4" in md
+    assert "Macro headline basket" in md
 
 
 def test_evaluation_targets_pass_tradeable_expression() -> None:
@@ -594,6 +612,17 @@ def main() -> None:
         test_load_parsed_keeps_times,
         test_grade_filter_cuts_factor_impulse_and_non_direct,
         test_evaluation_targets_pass_tradeable_expression,
+        test_reaction_title_table,
+        test_reaction_titles_are_discard_not_tradable,
+        test_reaction_does_not_eat_real_impulse,
+        test_guidance_reaffirm_is_not_raise,
+        test_guidance_raise_plus_miss_eps_is_mixed,
+        test_guidance_raise_still_up,
+        test_guidance_cut_still_down,
+        test_entry_clock_published_vs_retrieved_only,
+        test_macro_collapse_one_row_per_factor_session_sign,
+        test_horizon_skips_01d_for_long_classes,
+        test_classify_text_reaction_and_guidance_helpers,
         test_backtest_improves_sept_parses,
     ]
     failed = 0

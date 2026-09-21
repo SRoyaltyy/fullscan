@@ -7,6 +7,7 @@ from typing import Any
 from . import scratch
 from .classify import classify_article, extract_named, merge_lane_class, rank_articles
 from .families import analyze, axioms_for
+from .hygiene import entry_clock_of
 from .schema import (
     PIPELINE_VERSION,
     Classification,
@@ -236,9 +237,11 @@ def analyze_article(
 ) -> dict[str, Any]:
     title = str(art.get("title") or "")
     body = str(art.get("body") or "")
+    # Honesty: never copy retrieved into published_at.
     published = str(art.get("published_at") or "")
     retrieved = str(art.get("retrieved_at") or "")
     known = str(art.get("known_at") or published or retrieved or "")
+    entry_clock = entry_clock_of(art, published_at=published)
     aid = scratch.article_id(title, known)
     cls = classify_article(art)
     mark = _watermark(DETERMINISTIC_MARK, DETERMINISTIC_MODEL)
@@ -285,6 +288,7 @@ def analyze_article(
         "published_at": published,
         "retrieved_at": retrieved,
         "known_at": known,
+        "entry_clock": entry_clock,
         "sectors": art.get("sectors") or [],
         "macro_themes": art.get("macro_themes") or [],
         "pipeline_version": PIPELINE_VERSION,

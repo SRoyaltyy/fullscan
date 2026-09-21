@@ -1,5 +1,14 @@
 # News-impact backtest — all
 
+Hygiene restamp (research, not a new taxonomy) lives in
+`03_scoreboard/NEWS_IMPACT_HARVEST_HYGIENE.md`. After reaction-title /
+guidance-sign / entry-clock / macro-collapse / horizon-aware 0-1d filters:
+0-1d **60/105 = 57.1%**, 1-4w **26/51 = 51.0%**, guidance slice 0-1d
+**3/5 = 60.0%**, macro headline basket 0-1d **6/8 = 75.0%** (legs are
+transparency only). The article table below is the pre-hygiene v2 book;
+the specialised action will refresh rows. Graded rates after hygiene are
+the ones in the hygiene scoreboard.
+
 Human table of every harvested article: what published/when we retrieved it, which model(s) processed it, the intermediary reasoning, the up/down conclusion, and the realized tape.
 
 articles=5657  pipeline=news_impact_v2  usable_rows=752  tradable_rows=134  discarded_rows=4905

@@ -8,6 +8,7 @@ from pathlib import Path
 
 from .classify import rank_articles
 from .grade import format_performance, format_slice_table, performance_rollup, stamp_grade_flags
+from .hygiene import entry_clock_of
 from .pipeline import analyze_article, rollup
 
 NEWS_DIR = Path("01_daily/news")
@@ -16,7 +17,7 @@ _DATE_IN_NAME = re.compile(r"(\d{4}-\d{2}-\d{2})")
 
 COMPACT_KEYS = (
     "article_id", "title", "source", "url", "source_file",
-    "published_at", "retrieved_at", "known_at",
+    "published_at", "retrieved_at", "known_at", "entry_clock",
     "sectors", "macro_themes",
     "classification", "q5", "axioms_used", "entities", "conclusion",
     "hop_chain", "models", "reasoning", "performance",
@@ -84,16 +85,17 @@ def load_grok_dumps() -> list[dict]:
             title = str(it.get("title") or "").strip()
             if not title:
                 continue
-            known = str(it.get("createTime") or it.get("published_at") or "")
+            published = str(it.get("published_at") or "").strip()
+            retrieved = str(it.get("createTime") or it.get("retrieved_at") or "").strip()
             out.append({
                 "title": title,
                 "body": str(it.get("prompt") or it.get("body") or "")[:800],
                 "url": str(it.get("url") or ""),
                 "source": "grok_automation",
                 "source_file": str(path),
-                "published_at": known,
-                "retrieved_at": known,
-                "known_at": known,
+                "published_at": published,
+                "retrieved_at": retrieved,
+                "known_at": published or retrieved,
                 "sectors": [],
                 "macro_themes": [],
                 "old_usable": None,
@@ -119,6 +121,68 @@ def load_corpus(date: str | None = None) -> list[dict]:
         bag.add(k)
         out.append(a)
     return out
+
+
+def overlay_existing_tape(results: list[dict], artifact: Path | None = None) -> list[dict]:
+    """Re-use already-graded tape from a committed backtest JSON by title."""
+    path = artifact or Path("01_daily/news/all_news_impact_backtest.json")
+    if not path.is_file():
+        return results
+    try:
+        blob = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return results
+    by_title = {}
+    for old in blob.get("results") or []:
+        if not isinstance(old, dict):
+            continue
+        t = str(old.get("title") or "")
+        if t and old.get("performance"):
+            by_title[t] = old["performance"]
+    if not by_title:
+        return results
+    out = []
+    for r in results:
+        row = dict(r)
+        if not row.get("performance"):
+            taped = by_title.get(str(row.get("title") or ""))
+            if taped:
+                row["performance"] = [dict(g) for g in taped if isinstance(g, dict)]
+                _align_tape_to_router(row)
+        out.append(row)
+    return stamp_grade_flags(out)
+
+
+def _align_tape_to_router(row: dict) -> None:
+    """After overlay, pull direction/class from the new router so hygiene sticks."""
+    cls = row.get("classification") or {}
+    ev = str(cls.get("event_class") or "")
+    q5 = str(cls.get("q5") or "")
+    by_tick = {
+        str(e.get("ticker") or ""): e.get("direction")
+        for e in (row.get("entities") or [])
+        if isinstance(e, dict) and e.get("ticker")
+    }
+    default_dir = None
+    if ev == "guidance":
+        if cls.get("split") and cls.get("sign") is None:
+            default_dir = "mixed"
+        elif cls.get("sign") == "cut":
+            default_dir = "down"
+        elif cls.get("sign") == "raise":
+            default_dir = "up"
+        else:
+            default_dir = "not_determined"
+    for g in row.get("performance") or []:
+        if not isinstance(g, dict):
+            continue
+        g["event_class"] = ev or g.get("event_class")
+        g["q5"] = q5 or g.get("q5")
+        tick = str(g.get("ticker") or "")
+        if tick in by_tick:
+            g["direction"] = by_tick[tick]
+        elif default_dir:
+            g["direction"] = default_dir
 
 
 def run_backtest(
@@ -200,6 +264,14 @@ def _cell(raw) -> str:
     return s
 
 
+def _published_cell(r: dict) -> str:
+    pub = str(r.get("published_at") or "").strip()
+    clock = r.get("entry_clock") or entry_clock_of(r)
+    if pub:
+        return _cell(f"{pub} · {clock}")
+    return _cell(f"— · {clock}")
+
+
 def _article_cell(r: dict) -> str:
     title = _cell((r.get("title") or "")[:180])
     src = _cell(r.get("source") or "")
@@ -259,7 +331,7 @@ def _table(rows: list[dict]) -> list[str]:
             + " | ".join([
                 str(i),
                 _article_cell(r),
-                _cell(r.get("published_at") or "—"),
+                _published_cell(r),
                 _cell(r.get("retrieved_at") or "—"),
                 _llm_cell(r),
                 _reason_cell(r),
@@ -312,6 +384,21 @@ def markdown(report: dict) -> str:
         "in the article table as **ungraded** context. "
         "`mixed` / `not_determined` stay ungraded — no new scores.",
         "",
+        "Hygiene (this book, not a new taxonomy):",
+        "- price-reaction titles (plunge / surge N% / rebound / falls N% / "
+        "drives N% drop) are discard/regime with empty entities — never graded.",
+        "- reaffirm / maintains guidance → sign=None, direction=not_determined; "
+        "raise-guidance + miss-EPS → mixed (never a single UP).",
+        "- Published timestamp used for the entry clock when the source "
+        "provides one; missing Published is still retrieved and marked "
+        "`entry_clock=retrieved_only` (never invented).",
+        "- macro/factor_impulse reprints collapse to one row per "
+        "(factor, session, sign). Headline basket hit (majority of "
+        "QQQ/TLT/UUP/HYG/SPY) is a **separate** column from the graded "
+        "0-1d / 1-4w rates. Legs are transparency only.",
+        "- gate / capacity / blast_cyber / CHIPS-style awards skip the "
+        "0-1d hit-rate column (horizon noted); they may still count in 1-4w.",
+        "",
         "Tradable = listed ticker with an up/down call. Ticker-less macro "
         "is tradable only when the factor basket is signed (print or decision), "
         "not on Fed-path color.",
@@ -337,6 +424,30 @@ def markdown(report: dict) -> str:
         ]
         lines += format_slice_table(tape)
         lines.append("")
+        mh = tape.get("macro_headline") or {}
+        if mh:
+            lines += [
+                "## Macro headline basket (not in graded 0-1d / 1-4w)",
+                "",
+                "One story per `(factor, session, sign)`. FOMC-hold reprints "
+                "do not add extra legs to any denominator. "
+                "**Headline hit** = majority of QQQ/TLT/UUP/HYG/SPY agreeing "
+                "with the implied sign. **Legs** are listed for transparency "
+                "and are not double-counted into the headline rate or the "
+                "graded 0-1d / 1-4w columns.",
+                "",
+                f"- headline 0-1d: {mh.get('headline_hit_1d')}/{mh.get('headline_n_1d')} "
+                f"hit_rate={mh.get('headline_hit_rate_1d')}",
+                f"- headline 1-4w: {mh.get('headline_hit_20d')}/{mh.get('headline_n_20d')} "
+                f"hit_rate={mh.get('headline_hit_rate_20d')}",
+                f"- stories={mh.get('n_stories')}  reprints_collapsed="
+                f"{mh.get('reprints_collapsed')}",
+                f"- legs (transparency): 0-1d {mh.get('leg_hit_1d')}/{mh.get('leg_n_1d')} "
+                f"rate={mh.get('leg_hit_rate_1d')} · "
+                f"1-4w {mh.get('leg_hit_20d')}/{mh.get('leg_n_20d')} "
+                f"rate={mh.get('leg_hit_rate_20d')}",
+                "",
+            ]
         if tape.get("avg_ret_1d_by_ticker"):
             lines.append("Average 0-1d return by ticker (graded directional only):")
             lines.append("")

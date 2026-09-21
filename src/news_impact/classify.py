@@ -8,6 +8,7 @@ from __future__ import annotations
 import re
 from typing import Iterable
 
+from .hygiene import guidance_hygiene, is_reaction_title, reaction_discard_why
 from .macro import apply_macro
 from .schema import Classification, EVENT_CLASSES, family_of
 
@@ -200,8 +201,9 @@ _RULES: list[tuple[str, re.Pattern, str | None, str, str]] = [
           "up", "impulse", "new orders for a thing that still exists"),
     # --- information vs strip ---
     _rule("guidance",
-          r"(?i)((soft|cuts?|raises?|reaffirm).{0,30}(outlook|guidance)|"
-          r"outlook .{0,20}(plunge|cut|raise)|no longer expects to meet)",
+          r"(?i)((soft|cuts?|raises?|reaffirm|maintains?).{0,30}(outlook|guidance)|"
+          r"outlook .{0,20}(plunge|cut|raise)|no longer expects to meet|"
+          r"maintains? guidance)",
           "cut", "impulse", "guidance vs prior range"),
     _rule("print_vs_priced",
           r"(?i)(beats? estimates|misses? estimates|eps \$\d|revenue \$\d|"
@@ -261,12 +263,24 @@ _RULES: list[tuple[str, re.Pattern, str | None, str, str]] = [
 def _match_rules(text: str) -> Classification | None:
     for event_class, pat, sign, q5, why in _RULES:
         if pat.search(text):
-            # guidance raise vs cut
+            # guidance raise vs cut — reaffirm is NOT a raise (hygiene).
             if event_class == "guidance":
-                if re.search(r"(?i)(raises?|reaffirm|beats?.{0,20}outlook)", text):
-                    sign = "raise"
-                elif re.search(r"(?i)(cut|soft|no longer expects|plunge)", text):
-                    sign = "cut"
+                hy = guidance_hygiene(text)
+                sign = hy["sign"]
+                split = hy.get("split") or False
+                split_facts = list(hy.get("split_facts") or [])
+                constraint = _constraint_line(event_class, text)
+                hit = Classification(
+                    event_class=event_class,
+                    sign=sign,
+                    q5=q5,
+                    constraint=constraint,
+                    split=split,
+                    split_facts=split_facts,
+                    why=hy.get("why") or why,
+                    family=family_of(event_class),
+                )
+                return hit
             if event_class == "input_cost":
                 if re.search(r"(?i)(dump|collapse|plunge|fall|cut).{0,20}(oil|fuel|freight)", text):
                     sign = "down"
@@ -318,6 +332,16 @@ def classify_text(title: str, body: str = "") -> Classification:
         return Classification(
             event_class="discard", sign=None, q5="regime",
             constraint="", why="empty", family="time",
+        )
+    # Price-reaction titles are already in the tape — keep as ungraded context.
+    if is_reaction_title(title):
+        return Classification(
+            event_class="discard",
+            sign=None,
+            q5="regime",
+            constraint=_constraint_line("discard", title),
+            why=reaction_discard_why(),
+            family="time",
         )
     # Two-fact split: inventory print glued to a Fed hike
     split_facts: list[str] = []
