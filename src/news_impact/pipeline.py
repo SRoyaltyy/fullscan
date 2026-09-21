@@ -11,6 +11,7 @@ from .schema import (
     PIPELINE_VERSION,
     Classification,
     Entity,
+    is_tradable,
     is_usable,
 )
 from .search_pack import pack_for_article
@@ -23,7 +24,7 @@ FAMILY_TEST = {
     "structure": "who is newly allowed or newly blocked; incumbents vs new venues",
     "quantity": "who pays the unit vs who sells it; capacity add hurts incumbents",
     "permission": "gate open = named up; shut = named down",
-    "print": "gap vs priced; factor impulse is a block (QQQ/SPY), not a random name",
+    "print": "gap vs priced; ticker-less macro trades the factor basket (QQQ/TLT/UUP/XLE), not a name in the lede",
     "firm": "issuer-level action; no sector fishing",
     "flow": "listing / index / forced flow on the named name",
     "time": "regime_break flips the constraint; regime/discard emit nothing",
@@ -270,6 +271,7 @@ def analyze_article(
             mark = _watermark(hop, model)
 
     usable = is_usable(cls, entities)
+    tradable = is_tradable(cls, entities)
     axioms = axioms_for(entities)
     reasoning = _reasoning(art, cls, entities, pack, hop_chain, axioms)
     models = _models_from_hops(hop_chain, mark)
@@ -307,6 +309,8 @@ def analyze_article(
         "models": models,
         "reasoning": reasoning,
         "usable": usable,
+        "tradable": tradable,
+        "macro_factor": cls.factor or "",
         "old_usable": art.get("old_usable"),
         "old_class": art.get("old_class"),
         **mark,
@@ -349,9 +353,12 @@ def rollup(results: list[dict]) -> dict:
     hops = Counter()
     classes = Counter()
     usable = 0
+    tradable = 0
     for r in results:
         if r.get("usable"):
             usable += 1
+        if r.get("tradable"):
+            tradable += 1
         ev = ((r.get("classification") or {}).get("event_class")) or ""
         if ev:
             classes[ev] += 1
@@ -365,8 +372,10 @@ def rollup(results: list[dict]) -> dict:
     return {
         "n": len(results),
         "usable": usable,
+        "tradable": tradable,
         "discarded": len(results) - usable,
         "usable_ratio": round(usable / len(results), 4) if results else 0.0,
+        "tradable_ratio": round(tradable / len(results), 4) if results else 0.0,
         "event_classes": dict(classes.most_common()),
         "hopper_watermark": dict(hops.most_common()),
         "winners": dict(bull.most_common(20)),

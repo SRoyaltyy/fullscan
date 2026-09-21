@@ -20,7 +20,7 @@ COMPACT_KEYS = (
     "sectors", "macro_themes",
     "classification", "q5", "axioms_used", "entities", "conclusion",
     "hop_chain", "models", "reasoning", "performance",
-    "usable", "old_usable", "old_class",
+    "usable", "tradable", "macro_factor", "old_usable", "old_class",
     "lane", "model", "inference_source", "pipeline_version",
 )
 
@@ -285,20 +285,27 @@ def markdown(report: dict) -> str:
         "retrieved it, which model(s) processed it, the intermediary "
         "reasoning, the up/down conclusion, and the realized tape.",
         "",
-        f"articles={report.get('harvested')}  pipeline=news_impact_v1  "
-        f"usable_rows={len(usable)}  discarded_rows={len(discarded)}",
+        f"articles={report.get('harvested')}  pipeline=news_impact_v2  "
+        f"usable_rows={len(usable)}  tradable_rows="
+        f"{sum(1 for r in results if r.get('tradable'))}  "
+        f"discarded_rows={len(discarded)}",
         "",
         "## Usable / discarded",
         "",
         f"- Old news_parse: usable={old.get('usable')} discarded={old.get('discarded')} "
         f"ratio={old.get('usable_ratio')}",
         f"- New router: usable={new.get('usable')} discarded={new.get('discarded')} "
-        f"ratio={new.get('usable_ratio')}",
+        f"ratio={new.get('usable_ratio')}  tradable={new.get('tradable')} "
+        f"ratio={new.get('tradable_ratio')}",
         f"- Rescued (old discard → new usable): {report.get('rescued_n')}",
         f"- Killed (old usable → new weather/discard): {report.get('killed_n')}",
         f"- Ratio delta: {(report.get('improvement') or {}).get('usable_ratio_delta')}",
         "",
         "## Actual tape (directional calls only)",
+        "",
+        "Tradable = listed ticker with an up/down call. Ticker-less macro "
+        "is tradable only when the factor basket is signed (print or decision), "
+        "not on Fed-path color.",
         "",
     ]
     if tape:
@@ -330,6 +337,22 @@ def markdown(report: dict) -> str:
     lines += ["", "## Event classes", ""]
     for k, n in (new.get("event_classes") or {}).items():
         lines.append(f"- {k}: {n}")
+    macro = [
+        r for r in results
+        if (r.get("classification") or {}).get("event_class") == "factor_impulse"
+        or r.get("macro_factor")
+    ]
+    if macro and results:
+        lines += [
+            "",
+            f"## Macro book — ticker-less factor ({len(macro)})",
+            "",
+            "No single-name in the lede. Listed expressions are duration "
+            "(QQQ/TLT), dollar (UUP), credit (HYG), risk (SPY), oil (XLE/USO). "
+            "Fed-path color and speeches are discarded as weather.",
+            "",
+        ]
+        lines += _table(macro)
     if not results:
         lines += [
             "",
