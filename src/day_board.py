@@ -122,6 +122,8 @@ def build(date: str, lands: list[dict] | None = None) -> dict:
     for w in workflows:
         files = []
         for f in w.files:
+            brief = say.summarize_file(
+                f.path, date, status=f.status, reason=f.reason or "")
             files.append({
                 "key": f.key,
                 "name": f.name,
@@ -130,6 +132,8 @@ def build(date: str, lands: list[dict] | None = None) -> dict:
                 "status": f.status,
                 "reason": f.reason,
                 "size": f.size,
+                "said": brief.get("said") or "",
+                "bullets": brief.get("bullets") or [],
             })
         extract = say.summarize_process(w.key, date) or {}
         processes.append({
@@ -324,10 +328,26 @@ def write_html() -> Path:
     return DASH_DIR / "index.html"
 
 
+def write_all(extra: str = "") -> list[Path]:
+    """Rebuild every dated board so file summaries exist for all days."""
+    dates = _latest_dates(extra or _today())
+    written: list[Path] = []
+    for date in sorted(dates):
+        board = build(date)
+        written.extend(write_json(board))
+        print(
+            f"[day-board] {date} overall={board['overall']} "
+            f"ok={board['counts']['ok']}/{board['counts']['n']}"
+        )
+    return written
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", default="")
     ap.add_argument("--write", action="store_true")
+    ap.add_argument("--all", action="store_true",
+                    help="Rebuild every dated day-board JSON")
     ap.add_argument("--html", action="store_true",
                     help="Touch dashboard/day-board/index.html path only")
     ap.add_argument("--merge-ours", default="",
@@ -335,6 +355,14 @@ def main() -> None:
     args = ap.parse_args()
     if args.merge_ours:
         merge_ours_dir(args.merge_ours)
+        return
+    if args.all:
+        paths = write_all(args.date)
+        for p in paths:
+            print(f"[day-board] wrote {p}")
+        if args.html:
+            hp = write_html()
+            print(f"[day-board] html {hp}")
         return
     date = args.date or _today()
     board = build(date)

@@ -1,8 +1,8 @@
 {
   "date": "2026-09-20",
-  "generated_at": "2026-09-20T15:05:33.554647-04:00",
+  "generated_at": "2026-09-21T05:56:39.495748-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-20_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-20/_board.json` \u2014 missing",
@@ -34,7 +34,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "postclose_baseline_missing",
-          "size": 0
+          "size": 0,
+          "said": "postclose_baseline_missing",
+          "bullets": []
         },
         {
           "key": "baseline_md",
@@ -43,7 +45,9 @@
           "role": "optional",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "heat_json",
@@ -52,7 +56,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "heat_md",
@@ -61,7 +67,9 @@
           "role": "optional",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         }
       ],
       "said": "",
@@ -85,7 +93,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "digest_md",
@@ -94,7 +104,9 @@
           "role": "optional",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "market_digest_json",
@@ -103,7 +115,9 @@
           "role": "optional",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "market_digest_md",
@@ -112,7 +126,9 @@
           "role": "optional",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "market_digest_close_json",
@@ -121,7 +137,9 @@
           "role": "optional",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "market_digest_close_md",
@@ -130,7 +148,9 @@
           "role": "optional",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         }
       ],
       "said": "",
@@ -154,7 +174,9 @@
           "role": "input",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_market_digest",
@@ -163,7 +185,9 @@
           "role": "optional",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_baseline",
@@ -172,7 +196,9 @@
           "role": "input",
           "status": "MISSING",
           "reason": "postclose_baseline_missing",
-          "size": 0
+          "size": 0,
+          "said": "postclose_baseline_missing",
+          "bullets": []
         },
         {
           "key": "in_heat",
@@ -181,7 +207,9 @@
           "role": "input",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "parsed",
@@ -190,7 +218,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "events",
@@ -199,7 +229,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "judge",
@@ -208,7 +240,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "research_json",
@@ -217,7 +251,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "research_md",
@@ -226,7 +262,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "actions",
@@ -235,7 +273,12 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 889
+          "size": 889,
+          "said": "2 ticker actions \u00b7 0 events \u00b7 0 headlines \u00b7 XLE SELL, BAC SELL",
+          "bullets": [
+            "SELL XLE",
+            "SELL BAC"
+          ]
         },
         {
           "key": "general",
@@ -244,7 +287,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "board",
@@ -253,7 +298,9 @@
           "role": "optional",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "qc",
@@ -262,7 +309,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "status",
@@ -271,7 +320,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "review",
@@ -280,7 +331,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_basic_materials",
@@ -289,7 +342,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_communication_services",
@@ -298,7 +353,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_consumer_cyclical",
@@ -307,7 +364,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_consumer_defensive",
@@ -316,7 +375,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_energy",
@@ -325,7 +386,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_financial",
@@ -334,7 +397,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_healthcare",
@@ -343,7 +408,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_industrials",
@@ -352,7 +419,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_real_estate",
@@ -361,7 +430,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_technology",
@@ -370,7 +441,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_utilities",
@@ -379,7 +452,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         }
       ],
       "said": "",
@@ -403,7 +478,9 @@
           "role": "input",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "weather",
@@ -412,7 +489,12 @@
           "role": "required",
           "status": "OK",
           "reason": "sectors=11 bytes=9338 vix=falling yields=falling",
-          "size": 9338
+          "size": 9338,
+          "said": "favorable 1 \u00b7 hostile 7 \u00b7 neutral 3",
+          "bullets": [
+            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Energy, Financial, Real Estate, Utilities",
+            "events bull 4 / bear 9"
+          ]
         }
       ],
       "said": "favorable 1 \u00b7 hostile 7 \u00b7 neutral 3",
@@ -439,7 +521,11 @@
           "role": "optional",
           "status": "OK",
           "reason": "rows=2654",
-          "size": 7629213
+          "size": 7629213,
+          "said": "27 rows",
+          "bullets": [
+            "ANET, WWW, CFFN, WDS, DSGX, CXW, BMRN, SKM"
+          ]
         },
         {
           "key": "ab_enriched",
@@ -448,7 +534,11 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=2654",
-          "size": 8466566
+          "size": 8466566,
+          "said": "25 rows",
+          "bullets": [
+            "ANET, SFL, DSGX, ILMN, CDNA, DSX, MMSI, CFFN"
+          ]
         }
       ],
       "said": "25 rows",
@@ -474,7 +564,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 889
+          "size": 889,
+          "said": "2 ticker actions \u00b7 0 events \u00b7 0 headlines \u00b7 XLE SELL, BAC SELL",
+          "bullets": [
+            "SELL XLE",
+            "SELL BAC"
+          ]
         },
         {
           "key": "in_digest",
@@ -483,7 +578,9 @@
           "role": "input",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "dossiers",
@@ -492,11 +589,16 @@
           "role": "optional",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "2 ticker actions \u00b7 0 events \u00b7 0 headlines \u00b7 XLE SELL, BAC SELL",
+      "bullets": [
+        "SELL XLE",
+        "SELL BAC"
+      ]
     },
     {
       "key": "stock_book",
@@ -516,7 +618,9 @@
           "role": "input",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_board",
@@ -525,7 +629,9 @@
           "role": "input",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_actions",
@@ -534,7 +640,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 889
+          "size": 889,
+          "said": "2 ticker actions \u00b7 0 events \u00b7 0 headlines \u00b7 XLE SELL, BAC SELL",
+          "bullets": [
+            "SELL XLE",
+            "SELL BAC"
+          ]
         },
         {
           "key": "in_digest",
@@ -543,7 +654,9 @@
           "role": "input",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_judge",
@@ -552,7 +665,9 @@
           "role": "input",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_weather",
@@ -561,7 +676,12 @@
           "role": "input",
           "status": "OK",
           "reason": "sectors=11 bytes=9338 vix=falling yields=falling",
-          "size": 9338
+          "size": 9338,
+          "said": "favorable 1 \u00b7 hostile 7 \u00b7 neutral 3",
+          "bullets": [
+            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Energy, Financial, Real Estate, Utilities",
+            "events bull 4 / bear 9"
+          ]
         },
         {
           "key": "in_ab",
@@ -570,7 +690,11 @@
           "role": "input",
           "status": "OK",
           "reason": "rows=2654",
-          "size": 8466566
+          "size": 8466566,
+          "said": "25 rows",
+          "bullets": [
+            "ANET, SFL, DSGX, ILMN, CDNA, DSX, MMSI, CFFN"
+          ]
         },
         {
           "key": "join",
@@ -579,7 +703,11 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5894",
-          "size": 2220760
+          "size": 2220760,
+          "said": "203 rows",
+          "bullets": [
+            "FORM, P, KEYS, VICR, MU, SKHY, NVDA, SMTC"
+          ]
         },
         {
           "key": "peers",
@@ -588,7 +716,11 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5102",
-          "size": 821799
+          "size": 821799,
+          "said": "492 rows",
+          "bullets": [
+            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
+          ]
         },
         {
           "key": "book_json",
@@ -597,7 +729,9 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=216",
-          "size": 1449523
+          "size": 1449523,
+          "said": "1d BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI",
+          "bullets": []
         },
         {
           "key": "book_md",
@@ -606,7 +740,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 78513
+          "size": 78513,
+          "said": "Stock book \u2014 2026-09-20",
+          "bullets": [
+            "_Generated 2026-09-20T15:04:21.379930-04:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
@@ -615,7 +754,9 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 585
+          "size": 585,
+          "said": "0 green \u00b7",
+          "bullets": []
         },
         {
           "key": "paper",
@@ -624,7 +765,12 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 1789
+          "size": 1789,
+          "said": "Paper trading \u2014 Futubull-fee simulation",
+          "bullets": [
+            "As of **2026-09-08** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`",
+            "Latest book **2026-09-08** ranker: **weighted** (green pile liquid=0, need 8)."
+          ]
         },
         {
           "key": "dashboard",
@@ -632,8 +778,10 @@
           "path": "dashboard/index.html",
           "role": "optional",
           "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-20)",
-          "size": 6300795
+          "reason": "live-book poller + 2026-09-20_suggestions.json (2026-09-20)",
+          "size": 6300795,
+          "said": "live-book poller + 2026-09-20_suggestions.json (2026-09-20)",
+          "bullets": []
         }
       ],
       "said": "203 rows",
@@ -659,7 +807,9 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=216",
-          "size": 1449523
+          "size": 1449523,
+          "said": "1d BUY AVO, ACRS, CLYM, MATV, GAU, PGEN, SPCE, HOOD \u00b7 SELL FLNC, METC, STLA, REAX, KEP, GENI",
+          "bullets": []
         },
         {
           "key": "dash_html",
@@ -667,8 +817,10 @@
           "path": "dashboard/index.html",
           "role": "required",
           "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-20)",
-          "size": 6300795
+          "reason": "live-book poller + 2026-09-20_suggestions.json (2026-09-20)",
+          "size": 6300795,
+          "said": "live-book poller + 2026-09-20_suggestions.json (2026-09-20)",
+          "bullets": []
         },
         {
           "key": "paper",
@@ -677,7 +829,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 1789
+          "size": 1789,
+          "said": "Paper trading \u2014 Futubull-fee simulation",
+          "bullets": [
+            "As of **2026-09-08** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`",
+            "Latest book **2026-09-08** ranker: **weighted** (green pile liquid=0, need 8)."
+          ]
         },
         {
           "key": "pages",
@@ -686,7 +843,9 @@
           "role": "optional",
           "status": "SKIP",
           "reason": "day-board reads main disk, not live Pages",
-          "size": 0
+          "size": 0,
+          "said": "day-board reads main disk, not live Pages",
+          "bullets": []
         }
       ],
       "said": "",

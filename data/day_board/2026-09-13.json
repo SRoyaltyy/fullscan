@@ -1,12 +1,12 @@
 {
   "date": "2026-09-13",
-  "generated_at": "2026-09-13T14:59:24.361598-04:00",
+  "generated_at": "2026-09-21T05:56:36.345797-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-13_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-13/_board.json` \u2014 missing",
-    "MISSING Finviz digest JSON `01_daily/news/2026-09-13_finviz_digest.json` \u2014 missing",
+    "MISSING Quote-page digest JSON (*_finviz_digest) `01_daily/news/2026-09-13_finviz_digest.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-09-13_judge.md` \u2014 missing"
   ],
   "counts": {
@@ -34,7 +34,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "postclose_baseline_missing",
-          "size": 0
+          "size": 0,
+          "said": "postclose_baseline_missing",
+          "bullets": []
         },
         {
           "key": "baseline_md",
@@ -43,7 +45,9 @@
           "role": "optional",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "heat_json",
@@ -52,7 +56,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "heat_md",
@@ -61,7 +67,9 @@
           "role": "optional",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         }
       ],
       "said": "",
@@ -76,25 +84,73 @@
       "n_req_ok": 0,
       "n_req": 1,
       "n_opt_ok": 0,
-      "n_opt": 1,
+      "n_opt": 5,
       "files": [
         {
           "key": "digest_json",
-          "name": "Finviz digest JSON",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-13_finviz_digest.json",
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "digest_md",
-          "name": "Finviz digest MD",
+          "name": "Quote-page digest MD (*_finviz_digest)",
           "path": "01_daily/news/2026-09-13_finviz_digest.md",
           "role": "optional",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
+        },
+        {
+          "key": "market_digest_json",
+          "name": "Homepage warm-up JSON (*_finviz_market_digest)",
+          "path": "01_daily/news/2026-09-13_finviz_market_digest.json",
+          "role": "optional",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
+        },
+        {
+          "key": "market_digest_md",
+          "name": "Homepage warm-up MD (*_finviz_market_digest)",
+          "path": "01_daily/news/2026-09-13_finviz_market_digest.md",
+          "role": "optional",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
+        },
+        {
+          "key": "market_digest_close_json",
+          "name": "Close answer-key JSON (*_finviz_market_digest_close)",
+          "path": "01_daily/news/2026-09-13_finviz_market_digest_close.json",
+          "role": "optional",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
+        },
+        {
+          "key": "market_digest_close_md",
+          "name": "Close answer-key MD (*_finviz_market_digest_close)",
+          "path": "01_daily/news/2026-09-13_finviz_market_digest_close.md",
+          "role": "optional",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         }
       ],
       "said": "",
@@ -109,16 +165,29 @@
       "n_req_ok": 0,
       "n_req": 20,
       "n_opt_ok": 1,
-      "n_opt": 2,
+      "n_opt": 3,
       "files": [
         {
           "key": "in_digest",
-          "name": "Finviz digest JSON",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-13_finviz_digest.json",
           "role": "input",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
+        },
+        {
+          "key": "in_market_digest",
+          "name": "Homepage warm-up JSON (*_finviz_market_digest)",
+          "path": "01_daily/news/2026-09-13_finviz_market_digest.json",
+          "role": "optional",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_baseline",
@@ -127,7 +196,9 @@
           "role": "input",
           "status": "MISSING",
           "reason": "postclose_baseline_missing",
-          "size": 0
+          "size": 0,
+          "said": "postclose_baseline_missing",
+          "bullets": []
         },
         {
           "key": "in_heat",
@@ -136,7 +207,9 @@
           "role": "input",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "parsed",
@@ -145,7 +218,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "events",
@@ -154,7 +229,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "judge",
@@ -163,7 +240,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "research_json",
@@ -172,7 +251,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "research_md",
@@ -181,7 +262,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "actions",
@@ -190,7 +273,14 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 2388
+          "size": 2388,
+          "said": "7 ticker actions \u00b7 0 events \u00b7 0 headlines \u00b7 ADBE BUY, LITE BUY, XLV BUY, XLE SELL, XLU SELL, AAPL SELL, IWM SELL",
+          "bullets": [
+            "BUY ADBE",
+            "BUY LITE",
+            "BUY XLV",
+            "SELL XLE"
+          ]
         },
         {
           "key": "general",
@@ -199,7 +289,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "board",
@@ -208,7 +300,9 @@
           "role": "optional",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "qc",
@@ -217,7 +311,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "status",
@@ -226,7 +322,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "review",
@@ -235,7 +333,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_basic_materials",
@@ -244,7 +344,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_communication_services",
@@ -253,7 +355,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_consumer_cyclical",
@@ -262,7 +366,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_consumer_defensive",
@@ -271,7 +377,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_energy",
@@ -280,7 +388,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_financial",
@@ -289,7 +399,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_healthcare",
@@ -298,7 +410,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_industrials",
@@ -307,7 +421,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_real_estate",
@@ -316,7 +432,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_technology",
@@ -325,7 +443,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_utilities",
@@ -334,7 +454,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         }
       ],
       "said": "",
@@ -353,12 +475,14 @@
       "files": [
         {
           "key": "in_digest",
-          "name": "Finviz digest JSON",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-13_finviz_digest.json",
           "role": "input",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "weather",
@@ -367,7 +491,12 @@
           "role": "required",
           "status": "OK",
           "reason": "sectors=11 bytes=9525 vix=falling yields=rising",
-          "size": 9525
+          "size": 9525,
+          "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
+          "bullets": [
+            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Industrials, Real Estate, Utilities",
+            "events bull 5 / bear 6"
+          ]
         }
       ],
       "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
@@ -394,7 +523,11 @@
           "role": "optional",
           "status": "OK",
           "reason": "rows=2651",
-          "size": 7620317
+          "size": 7620317,
+          "said": "27 rows",
+          "bullets": [
+            "WWW, CFFN, ANET, BMRN, SLDE, DSGX, CXW, HSBC"
+          ]
         },
         {
           "key": "ab_enriched",
@@ -403,7 +536,11 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=2651",
-          "size": 8459317
+          "size": 8459317,
+          "said": "25 rows",
+          "bullets": [
+            "CFFN, SFL, AVT, AMD, LFST, CXW, TER, BDC"
+          ]
         }
       ],
       "said": "25 rows",
@@ -429,16 +566,25 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 2388
+          "size": 2388,
+          "said": "7 ticker actions \u00b7 0 events \u00b7 0 headlines \u00b7 ADBE BUY, LITE BUY, XLV BUY, XLE SELL, XLU SELL, AAPL SELL, IWM SELL",
+          "bullets": [
+            "BUY ADBE",
+            "BUY LITE",
+            "BUY XLV",
+            "SELL XLE"
+          ]
         },
         {
           "key": "in_digest",
-          "name": "Finviz digest JSON",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-13_finviz_digest.json",
           "role": "input",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "dossiers",
@@ -447,11 +593,21 @@
           "role": "optional",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "7 ticker actions \u00b7 0 events \u00b7 0 headlines \u00b7 ADBE BUY, LITE BUY, XLV BUY, XLE SELL, XLU SELL, AAPL SELL, IWM SELL",
+      "bullets": [
+        "BUY ADBE",
+        "BUY LITE",
+        "BUY XLV",
+        "SELL XLE",
+        "SELL XLU",
+        "SELL AAPL",
+        "SELL IWM"
+      ]
     },
     {
       "key": "stock_book",
@@ -471,7 +627,9 @@
           "role": "input",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_board",
@@ -480,7 +638,9 @@
           "role": "input",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_actions",
@@ -489,16 +649,25 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 2388
+          "size": 2388,
+          "said": "7 ticker actions \u00b7 0 events \u00b7 0 headlines \u00b7 ADBE BUY, LITE BUY, XLV BUY, XLE SELL, XLU SELL, AAPL SELL, IWM SELL",
+          "bullets": [
+            "BUY ADBE",
+            "BUY LITE",
+            "BUY XLV",
+            "SELL XLE"
+          ]
         },
         {
           "key": "in_digest",
-          "name": "Finviz digest JSON",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-13_finviz_digest.json",
           "role": "input",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_judge",
@@ -507,7 +676,9 @@
           "role": "input",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_weather",
@@ -516,7 +687,12 @@
           "role": "input",
           "status": "OK",
           "reason": "sectors=11 bytes=9525 vix=falling yields=rising",
-          "size": 9525
+          "size": 9525,
+          "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
+          "bullets": [
+            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Industrials, Real Estate, Utilities",
+            "events bull 5 / bear 6"
+          ]
         },
         {
           "key": "in_ab",
@@ -525,7 +701,11 @@
           "role": "input",
           "status": "OK",
           "reason": "rows=2651",
-          "size": 8459317
+          "size": 8459317,
+          "said": "25 rows",
+          "bullets": [
+            "CFFN, SFL, AVT, AMD, LFST, CXW, TER, BDC"
+          ]
         },
         {
           "key": "join",
@@ -534,7 +714,11 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5895",
-          "size": 2247810
+          "size": 2247810,
+          "said": "204 rows",
+          "bullets": [
+            "REGN, HRMY, EXEL, NUTX, CDNA, MU, FORM, DOCU"
+          ]
         },
         {
           "key": "peers",
@@ -543,7 +727,11 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5110",
-          "size": 824637
+          "size": 824637,
+          "said": "490 rows",
+          "bullets": [
+            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
+          ]
         },
         {
           "key": "book_json",
@@ -552,7 +740,9 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=216",
-          "size": 1458203
+          "size": 1458203,
+          "said": "1d BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR",
+          "bullets": []
         },
         {
           "key": "book_md",
@@ -561,7 +751,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 78486
+          "size": 78486,
+          "said": "Stock book \u2014 2026-09-13",
+          "bullets": [
+            "_Generated 2026-09-13T14:58:04.462241-04:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
@@ -570,7 +765,9 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 585
+          "size": 3600,
+          "said": "0 green \u00b7",
+          "bullets": []
         },
         {
           "key": "paper",
@@ -579,7 +776,12 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 1790
+          "size": 1789,
+          "said": "Paper trading \u2014 Futubull-fee simulation",
+          "bullets": [
+            "As of **2026-09-08** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`",
+            "Latest book **2026-09-08** ranker: **weighted** (green pile liquid=0, need 8)."
+          ]
         },
         {
           "key": "dashboard",
@@ -587,8 +789,10 @@
           "path": "dashboard/index.html",
           "role": "optional",
           "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-13)",
-          "size": 4874846
+          "reason": "live-book poller + 2026-09-13_suggestions.json (2026-09-13)",
+          "size": 6300795,
+          "said": "live-book poller + 2026-09-13_suggestions.json (2026-09-13)",
+          "bullets": []
         }
       ],
       "said": "204 rows",
@@ -614,7 +818,9 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=216",
-          "size": 1458203
+          "size": 1458203,
+          "said": "1d BUY INSP, ICLR, CYPH, PTGX, ATRC, BMRN, CLOV, ACAD \u00b7 SELL SGML, RUM, FUN, GT, AXON, SMR",
+          "bullets": []
         },
         {
           "key": "dash_html",
@@ -622,8 +828,10 @@
           "path": "dashboard/index.html",
           "role": "required",
           "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-13)",
-          "size": 4874846
+          "reason": "live-book poller + 2026-09-13_suggestions.json (2026-09-13)",
+          "size": 6300795,
+          "said": "live-book poller + 2026-09-13_suggestions.json (2026-09-13)",
+          "bullets": []
         },
         {
           "key": "paper",
@@ -632,7 +840,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 1790
+          "size": 1789,
+          "said": "Paper trading \u2014 Futubull-fee simulation",
+          "bullets": [
+            "As of **2026-09-08** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`",
+            "Latest book **2026-09-08** ranker: **weighted** (green pile liquid=0, need 8)."
+          ]
         },
         {
           "key": "pages",
@@ -641,7 +854,9 @@
           "role": "optional",
           "status": "SKIP",
           "reason": "day-board reads main disk, not live Pages",
-          "size": 0
+          "size": 0,
+          "said": "day-board reads main disk, not live Pages",
+          "bullets": []
         }
       ],
       "said": "",
