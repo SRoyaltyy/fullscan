@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `yday_gainer` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **+10.40%** ($11,040) · signal-only (no cash/fees) was +17.69%. Starts YES **21/26**. Fills 202 · skips 88 · realized $+1161.12.
+Cash book **+9.34%** ($10,934) · signal-only (no cash/fees) was +13.54%. Starts YES **21/27**. Fills 218 · skips 88 · realized $+1284.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -50,7 +50,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $0.68.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9.61.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -268,14 +268,30 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | `SABR` | 575 | $2.32 | $2.29 | -17.25 | — | +0.00 | -17.25 | -63.25 | — |
 | 2026-09-18 | `CIFR` | 76 | $16.94 | $17.80 | +65.36 | — | +0.00 | +65.36 | -17.86 | — |
 | 2026-09-18 | `EROC` | 108 | $12.90 | $13.00 | +10.80 | — | +0.00 | +10.80 | +38.88 | — |
-| 2026-09-18 | `SDGR` | 47 | — | $29.32 | +0.00 | $29.02 | -14.10 | -14.10 | +0.00 | -14.10 |
+| 2026-09-18 | `GNRC` | 6 | — | $209.52 | +0.00 | $207.44 | -12.48 | -12.48 | +0.00 | -12.48 |
+| 2026-09-18 | `VICR` | 6 | — | $219.62 | +0.00 | $222.72 | +18.60 | +18.60 | +0.00 | +18.60 |
 | 2026-09-18 | `TLSA` | 1438 | — | $0.97 | +0.00 | $0.91 | -86.28 | -86.28 | +0.00 | -86.28 |
 | 2026-09-18 | `SWRD` | 670 | — | $2.08 | +0.00 | $2.15 | +46.90 | +46.90 | +0.00 | +46.90 |
 | 2026-09-18 | `EYPT` | 353 | — | $3.95 | +0.00 | $3.85 | -35.30 | -35.30 | +0.00 | -35.30 |
 | 2026-09-18 | `BHVN` | 99 | — | $14.07 | +0.00 | $13.62 | -44.55 | -44.55 | +0.00 | -44.55 |
 | 2026-09-18 | `BNC` | 239 | — | $5.83 | +0.00 | $5.98 | +35.85 | +35.85 | +0.00 | +35.85 |
 | 2026-09-18 | `DDD` | 389 | — | $3.58 | +0.00 | $3.63 | +19.45 | +19.45 | +0.00 | +19.45 |
-| 2026-09-18 | `RANI` | 1598 | — | $0.85 | +0.00 | $0.86 | +19.18 | +19.18 | +0.00 | +19.18 |
+| 2026-09-21 | `GNRC` | 6 | $207.44 | $210.00 | +15.36 | — | +0.00 | +15.36 | +2.88 | — |
+| 2026-09-21 | `VICR` | 6 | $222.72 | $230.25 | +45.18 | — | +0.00 | +45.18 | +63.78 | — |
+| 2026-09-21 | `TLSA` | 1438 | $0.91 | $0.94 | +43.14 | — | +0.00 | +43.14 | -43.14 | — |
+| 2026-09-21 | `SWRD` | 670 | $2.15 | $2.15 | +0.00 | — | +0.00 | +0.00 | +46.90 | — |
+| 2026-09-21 | `EYPT` | 353 | $3.85 | $3.87 | +7.06 | — | +0.00 | +7.06 | -28.24 | — |
+| 2026-09-21 | `BHVN` | 99 | $13.62 | $13.90 | +27.72 | — | +0.00 | +27.72 | -16.83 | — |
+| 2026-09-21 | `BNC` | 239 | $5.98 | $6.42 | +103.96 | — | +0.00 | +103.96 | +139.81 | — |
+| 2026-09-21 | `DDD` | 389 | $3.63 | $3.71 | +31.12 | — | +0.00 | +31.12 | +50.57 | — |
+| 2026-09-21 | `CYPH` | 355 | — | $3.97 | +0.00 | $3.40 | -202.35 | -202.35 | +0.00 | -202.35 |
+| 2026-09-21 | `FEAM` | 571 | — | $2.47 | +0.00 | $2.48 | +5.71 | +5.71 | +0.00 | +5.71 |
+| 2026-09-21 | `BKKT` | 151 | — | $9.31 | +0.00 | $9.14 | -25.67 | -25.67 | +0.00 | -25.67 |
+| 2026-09-21 | `BTDR` | 104 | — | $13.44 | +0.00 | $13.14 | -31.20 | -31.20 | +0.00 | -31.20 |
+| 2026-09-21 | `ORBS` | 1282 | — | $1.10 | +0.00 | $1.05 | -64.10 | -64.10 | +0.00 | -64.10 |
+| 2026-09-21 | `SBET` | 141 | — | $9.99 | +0.00 | $9.98 | -1.41 | -1.41 | +0.00 | -1.41 |
+| 2026-09-21 | `BTBT` | 772 | — | $1.82 | +0.00 | $1.82 | -3.86 | -3.86 | +0.00 | -3.86 |
+| 2026-09-21 | `SGML` | 136 | — | $10.12 | +0.00 | $10.27 | +20.40 | +20.40 | +0.00 | +20.40 |
 
 ## Each session (cash + holdings state)
 
@@ -306,7 +322,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | -3.84 | $10,615.29 | — | $10,615.29 | +0.00 | +0.00 | — | — | $10,615.29 | $10,615.29 | — |
 | 2026-09-16 | +5.30 | $10,615.29 | — | $10,615.29 | +0.00 | +269.70 | BBNX, ARQQ, TEM, RIG, QTRX, VAL, KRMN, ADPT | — | $99.02 | $10,863.08 | BBNX×71, ARQQ×72, TEM×19, RIG×226, QTRX×487, VAL×15, KRMN×34, ADPT×48 |
 | 2026-09-17 | +7.38 | $99.02 | BBNX×71, ARQQ×72, TEM×19, RIG×226, QTRX×487, VAL×15, KRMN×34, ADPT×48 | $11,069.62 | +206.54 | -29.35 | DVLT, BRUN, AXTI, ARQT, SMTC, SABR, CIFR, EROC | BBNX, ARQQ, TEM, RIG, QTRX, VAL, KRMN, ADPT | $11.11 | $10,959.49 | DVLT×8123, BRUN×87, AXTI×20, ARQT×53, SMTC×8, SABR×575, CIFR×76, EROC×108 |
-| 2026-09-18 | +4.86 | $11.11 | DVLT×8123, BRUN×87, AXTI×20, ARQT×53, SMTC×8, SABR×575, CIFR×76, EROC×108 | $11,221.31 | +261.82 | -58.85 | SDGR, TLSA, SWRD, EYPT, BHVN, BNC, DDD, RANI | DVLT, BRUN, AXTI, ARQT, SMTC, SABR, CIFR, EROC | $0.68 | $11,039.90 | SDGR×47, TLSA×1438, SWRD×670, EYPT×353, BHVN×99, BNC×239, DDD×389, RANI×1598 |
+| 2026-09-18 | +4.86 | $11.11 | DVLT×8123, BRUN×87, AXTI×20, ARQT×53, SMTC×8, SABR×575, CIFR×76, EROC×108 | $11,221.31 | +261.82 | -57.81 | GNRC, VICR, TLSA, SWRD, EYPT, BHVN, BNC, DDD | DVLT, BRUN, AXTI, ARQT, SMTC, SABR, CIFR, EROC | $178.68 | $11,057.44 | GNRC×6, VICR×6, TLSA×1438, SWRD×670, EYPT×353, BHVN×99, BNC×239, DDD×389 |
+| 2026-09-21 | +12.87 | $178.68 | GNRC×6, VICR×6, TLSA×1438, SWRD×670, EYPT×353, BHVN×99, BNC×239, DDD×389 | $11,330.98 | +273.54 | -302.48 | CYPH, FEAM, BKKT, BTDR, ORBS, SBET, BTBT, SGML | GNRC, VICR, TLSA, SWRD, EYPT, BHVN, BNC, DDD | $9.61 | $10,934.43 | CYPH×355, FEAM×571, BKKT×151, BTDR×104, ORBS×1282, SBET×141, BTBT×772, SGML×136 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -318,9 +335,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-14 09:30 ET | **BUY** | `ANGX` | 290 | $4.31 | $3.74 | — | $8,746.36 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+0.5; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟢 vol🟢 buy🟡 |
 | 2026-08-14 09:30 ET | **BUY** | `WWW` | 60 | $20.60 | $2.17 | — | $7,508.19 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=+4.4; leftover $1250.00 | join🟢 sector🔴 gen🟢 news🟢 vol🟡 buy🟡 |
 | 2026-08-14 09:30 ET | **BUY** | `HYLN` | 299 | $4.18 | $3.86 | — | $6,254.51 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ⚪; ret5=+4.1; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `ARX` | 63 | $19.57 | $2.18 | — | $5,019.42 | — | baseline list, no extra gate; list yday_gainer,yday_mover,oppset; 🔵; ⚪; ret5=+58.7; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟢 vol🟢 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `OMER` | 72 | $17.35 | $2.21 | — | $3,768.02 | — | baseline list, no extra gate; list yday_gainer,yday_mover,oppset; 🔵; ret5=+31.9; leftover $1250.00 | join🟢 sector🔴 gen🟢 news🟡 vol🟢 buy🟡 |
-| 2026-08-14 09:30 ET | **BUY** | `AIRO` | 112 | $11.12 | $2.33 | — | $2,520.25 | — | baseline list, no extra gate; list yday_gainer,yday_mover,oppset; 🔵; ⚪; ret5=+36.3; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `ARX` | 63 | $19.57 | $2.18 | — | $5,019.42 | — | baseline list, no extra gate; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+58.7; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟢 vol🟢 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `OMER` | 72 | $17.35 | $2.21 | — | $3,768.02 | — | baseline list, no extra gate; list yday_gainer,yday_mover; 🔵; ret5=+31.9; leftover $1250.00 | join🟢 sector🔴 gen🟢 news🟡 vol🟢 buy🟡 |
+| 2026-08-14 09:30 ET | **BUY** | `AIRO` | 112 | $11.12 | $2.33 | — | $2,520.25 | — | baseline list, no extra gate; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+36.3; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
 | 2026-08-14 09:30 ET | **BUY** | `NCMI` | 464 | $2.69 | $5.99 | — | $1,266.11 | — | baseline list, no extra gate; list yday_gainer,yday_mover; 🔵; ⚪; ret5=-33.5; leftover $1250.00 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
 | 2026-08-14 09:30 ET | **BUY** | `MXCT` | 899 | $1.39 | $11.60 | — | $4.90 | — | baseline list, no extra gate; list yday_gainer,yday_mover; 🔵; ret5=+25.2; leftover $1250.00 | join🟢 sector🔴 gen🟢 news🟡 vol🟢 buy🟡 |
 | 2026-08-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.90 | ▼ close $9,804.72 vs 09:30 $10,000.00 (session -161.22) | 16:00 close · cash $4.90 · equity $9,804.72 vs 09:30 $10,000.00 (-195.28; session marks -161.22) · 8 name(s) marked open→close (per-name table). ANGX×290 09:30 $4.31 → close $4.37 +17.40; WWW×60 09:30 $20.60 → close $21.03 +25.80; HYLN×299 09:30 $4.18 → close $4.06 -35.88; ARX×63 09:30 $19.57 → close $19.58 +0.63; OMER×72 09:30 $17.35 → close $17.19 -11.52; AIRO×112 09:30 $11.12 → close $9.57 -173.60; NCMI×464 09:30 $2.69 → close $2.86 +78.88; MXCT×899 09:30 $1.39 → close $1.32 -62.93 | — |
@@ -328,19 +345,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-17 09:30 ET | **SELL** | `ANGX` | 290 | $4.60 | $3.80 | $+76.56 | $1,335.10 | ▲ +76.56 after sell → book $9,846.67; vs 09:30 mark -3.80 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-17 09:30 ET | **SELL** | `WWW` | 60 | $20.98 | $2.19 | $+18.44 | $2,591.71 | ▲ +18.44 after sell → book $9,844.48; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-17 09:30 ET | **SELL** | `HYLN` | 299 | $4.10 | $3.92 | $-31.69 | $3,813.69 | ▼ -31.69 after sell → book $9,840.56; vs 09:30 mark -3.92 | dropped from list after 1 sess (min 1) | — |
-| 2026-08-17 09:30 ET | **SELL** | `ARX` | 63 | $19.57 | $2.20 | $-4.38 | $5,044.40 | ▼ -4.38 after sell → book $9,838.36; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | join🟡 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
+| 2026-08-17 09:30 ET | **SELL** | `ARX` | 63 | $19.57 | $2.20 | $-4.38 | $5,044.40 | ▼ -4.38 after sell → book $9,838.36; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-17 09:30 ET | **SELL** | `OMER` | 72 | $17.17 | $2.23 | $-17.39 | $6,278.41 | ▼ -17.39 after sell → book $9,836.13; vs 09:30 mark -2.23 | dropped from list after 1 sess (min 1) | — |
-| 2026-08-17 09:30 ET | **SELL** | `AIRO` | 112 | $9.57 | $2.35 | $-178.28 | $7,347.90 | ▼ -178.28 after sell → book $9,833.78; vs 09:30 mark -2.35 | dropped from list after 1 sess (min 1) | join🟡 sector🟢 gen🟢 news🟢 vol🟢 buy🟡 |
+| 2026-08-17 09:30 ET | **SELL** | `AIRO` | 112 | $9.57 | $2.35 | $-178.28 | $7,347.90 | ▼ -178.28 after sell → book $9,833.78; vs 09:30 mark -2.35 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-17 09:30 ET | **SELL** | `NCMI` | 464 | $2.80 | $6.07 | $+38.98 | $8,641.03 | ▲ +38.98 after sell → book $9,827.71; vs 09:30 mark -6.07 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-17 09:30 ET | **SELL** | `MXCT` | 899 | $1.32 | $11.76 | $-86.28 | $9,815.95 | ▼ -86.28 after sell → book $9,815.95; vs 09:30 mark -11.76 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-17 09:30 ET | **BUY** | `CDNL` | 30 | $39.85 | $2.08 | — | $8,618.37 | — | baseline list, no extra gate; list probable,yday_gainer; ⚪; ret5=-38.4; leftover $1226.99 | join🟡 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
 | 2026-08-17 09:30 ET | **BUY** | `ABX` | 134 | $9.12 | $2.39 | — | $7,393.90 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ⚪; ret5=-2.6; leftover $1226.99 | join🟢 sector🟢 gen🟢 news🟡 vol🟢 buy🟡 |
 | 2026-08-17 09:30 ET | **BUY** | `FCEL` | 54 | $22.37 | $2.15 | — | $6,183.77 | — | baseline list, no extra gate; list probable,yday_gainer; ⚪; ret5=+9.5; leftover $1226.99 | join🟡 sector🟢 gen🟢 news🟡 vol🟡 buy🟡 |
-| 2026-08-17 09:30 ET | **BUY** | `VERA` | 39 | $31.30 | $2.11 | — | $4,960.96 | — | baseline list, no extra gate; list probable,yday_gainer,oppset; ret5=-3.8; leftover $1226.99 | join🟡 sector🔴 gen🟢 news🟡 vol🟢 buy🟡 |
+| 2026-08-17 09:30 ET | **BUY** | `VERA` | 39 | $31.30 | $2.11 | — | $4,960.96 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-3.8; leftover $1226.99 | join🟡 sector🔴 gen🟢 news🟡 vol🟢 buy🟡 |
 | 2026-08-17 09:30 ET | **BUY** | `CELC` | 13 | $92.99 | $2.03 | — | $3,750.06 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-0.8; leftover $1226.99 | join🟡 sector🔴 gen🟢 news🟢 vol🟡 buy🟡 |
-| 2026-08-17 09:30 ET | **BUY** | `CAPR` | 178 | $6.87 | $2.52 | — | $2,524.68 | — | baseline list, no extra gate; list yday_gainer,yday_mover,oppset; ret5=+62.6; leftover $1226.99 | join🟡 sector🔴 gen🟢 news🟡 vol🟢 buy🟡 |
-| 2026-08-17 09:30 ET | **BUY** | `HTFL` | 29 | $41.23 | $2.08 | — | $1,326.93 | — | baseline list, no extra gate; list yday_gainer,yday_mover,oppset; ret5=+46.0; leftover $1226.99 | join🟡 sector🔴 gen🟢 news🟡 vol🟢 buy🟡 |
-| 2026-08-17 09:30 ET | **BUY** | `UMAC` | 37 | $32.55 | $2.10 | — | $120.48 | — | baseline list, no extra gate; list yday_gainer,yday_mover,oppset; ⚪; ret5=+30.4; leftover $1226.99 | join🟡 sector🟢 gen🟢 news🟡 judge🟢 vol🟢 buy🟡 |
+| 2026-08-17 09:30 ET | **BUY** | `CAPR` | 178 | $6.87 | $2.52 | — | $2,524.68 | — | baseline list, no extra gate; list yday_gainer,yday_mover; ret5=+62.6; leftover $1226.99 | join🟡 sector🔴 gen🟢 news🟡 vol🟢 buy🟡 |
+| 2026-08-17 09:30 ET | **BUY** | `HTFL` | 29 | $41.23 | $2.08 | — | $1,326.93 | — | baseline list, no extra gate; list yday_gainer,yday_mover; ret5=+46.0; leftover $1226.99 | join🟡 sector🔴 gen🟢 news🟡 vol🟢 buy🟡 |
+| 2026-08-17 09:30 ET | **BUY** | `UMAC` | 37 | $32.55 | $2.10 | — | $120.48 | — | baseline list, no extra gate; list yday_gainer,yday_mover; ⚪; ret5=+30.4; leftover $1226.99 | join🟡 sector🟢 gen🟢 news🟡 judge🟢 vol🟢 buy🟡 |
 | 2026-08-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $120.48 | ▲ close $9,820.10 vs 09:30 $9,850.47 (session +21.61) | 16:00 close · cash $120.48 · equity $9,820.10 vs 09:30 $9,850.47 (-30.37; session marks +21.61) · 8 name(s) marked open→close (per-name table). CDNL×30 09:30 $39.85 → close $39.23 -18.60; ABX×134 09:30 $9.12 → close $9.12 +0.00; FCEL×54 09:30 $22.37 → close $22.36 -0.54; VERA×39 09:30 $31.30 → close $31.63 +12.87; CELC×13 09:30 $92.99 → close $92.44 -7.15; CAPR×178 09:30 $6.87 → close $7.45 +103.24; HTFL×29 09:30 $41.23 → close $41.94 +20.59; UMAC×37 09:30 $32.55 → close $30.15 -88.80 | — |
 | 2026-08-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $120.48 | ▼ 09:30 equity $9,739.68 vs yday $9,820.10 (-80.42) | 09:30 open · cash $120.48 (unchanged overnight, no fees) · equity $9,739.68 vs prior close $9,820.10 (-80.42) · 8 name(s) re-marked at the open (per-name table). CDNL×30 yday $39.23 → 09:30 $41.57 +70.20; ABX×134 yday $9.12 → 09:30 $9.03 -12.06; FCEL×54 yday $22.36 → 09:30 $21.18 -63.72; VERA×39 yday $31.63 → 09:30 $31.31 -12.48; CELC×13 yday $92.44 → 09:30 $92.38 -0.78; CAPR×178 yday $7.45 → 09:30 $7.50 +8.90; HTFL×29 yday $41.94 → 09:30 $41.50 -12.76; UMAC×37 yday $30.15 → 09:30 $28.59 -57.72 | — |
 | 2026-08-18 09:30 ET | **SELL** | `CDNL` | 30 | $41.57 | $2.10 | $+47.42 | $1,365.48 | ▲ +47.42 after sell → book $9,737.58; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
@@ -349,14 +366,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-18 09:30 ET | **SELL** | `VERA` | 39 | $31.31 | $2.13 | $-3.84 | $4,933.59 | ▼ -3.84 after sell → book $9,730.86; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-18 09:30 ET | **SELL** | `CELC` | 13 | $92.38 | $2.05 | $-12.01 | $6,132.48 | ▼ -12.01 after sell → book $9,728.81; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-18 09:30 ET | **SELL** | `CAPR` | 178 | $7.50 | $2.56 | $+107.05 | $7,464.91 | ▲ +107.05 after sell → book $9,726.24; vs 09:30 mark -2.57 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 vol🟢 buy🟡 |
-| 2026-08-18 09:30 ET | **SELL** | `HTFL` | 29 | $41.50 | $2.10 | $+3.66 | $8,666.31 | ▲ +3.66 after sell → book $9,724.14; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🔴 news🟡 vol🟢 buy🟡 |
+| 2026-08-18 09:30 ET | **SELL** | `HTFL` | 29 | $41.50 | $2.10 | $+3.66 | $8,666.31 | ▲ +3.66 after sell → book $9,724.14; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-18 09:30 ET | **SELL** | `UMAC` | 37 | $28.59 | $2.12 | $-150.74 | $9,722.02 | ▼ -150.74 after sell → book $9,722.02; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,722.02 | ▲ close $9,722.02 vs 09:30 $9,739.68 (session +0.00) | 16:00 close · cash $9,722.02 · no lots left · equity $9,722.02. | — |
 | 2026-08-19 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,722.02 | ▲ 09:30 equity $9,722.02 vs yday $9,722.02 (+0.00) | 09:30 open · cash $9,722.02 · no holdings · equity $9,722.02 vs prior close $9,722.02 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-08-19 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,722.02 | ▲ close $9,722.02 vs 09:30 $9,722.02 (session +0.00) | 16:00 close · cash $9,722.02 · no lots left · equity $9,722.02. | — |
 | 2026-08-20 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,722.02 | ▲ 09:30 equity $9,722.02 vs yday $9,722.02 (+0.00) | 09:30 open · cash $9,722.02 · no holdings · equity $9,722.02 vs prior close $9,722.02 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-08-20 09:30 ET | **BUY** | `CDE` | 58 | $20.65 | $2.16 | — | $8,522.16 | — | baseline list, no extra gate; list flatten,yday_gainer,yday_mover,mover_buy; 🔵; ⚪; ret5=+11.3; leftover $1215.25 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
-| 2026-08-20 09:30 ET | **BUY** | `MRVI` | 163 | $7.44 | $2.48 | — | $7,306.96 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover,oppset; 🔵; ⚪; ret5=-8.5; leftover $1215.25 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
+| 2026-08-20 09:30 ET | **BUY** | `MRVI` | 163 | $7.44 | $2.48 | — | $7,306.96 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=-8.5; leftover $1215.25 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
 | 2026-08-20 09:30 ET | **BUY** | `DNA` | 163 | $7.45 | $2.48 | — | $6,090.13 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=+6.9; leftover $1215.25 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 vol🟢 buy🟡 |
 | 2026-08-20 09:30 ET | **BUY** | `MSTR` | 10 | $113.23 | $2.02 | — | $4,955.81 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+9.9; leftover $1215.25 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 peer🟢 vol🟢 buy🟡 |
 | 2026-08-20 09:30 ET | **BUY** | `EXK` | 112 | $10.77 | $2.33 | — | $3,747.25 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+3.6; leftover $1215.25 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 vol🟢 buy🟡 |
@@ -373,7 +390,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-21 09:30 ET | **SELL** | `SCZM` | 128 | $10.26 | $2.41 | $+97.62 | $7,650.21 | ▲ +97.62 after sell → book $10,177.86; vs 09:30 mark -2.40 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 vol🟢 buy🟡 |
 | 2026-08-21 09:30 ET | **SELL** | `NG` | 145 | $9.02 | $2.46 | $+87.92 | $8,955.65 | ▲ +87.92 after sell → book $10,175.40; vs 09:30 mark -2.46 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 vol🟢 buy🟡 |
 | 2026-08-21 09:30 ET | **SELL** | `BLSH` | 41 | $29.75 | $2.13 | $+18.30 | $10,173.26 | ▲ +18.30 after sell → book $10,173.26; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
-| 2026-08-21 09:30 ET | **BUY** | `ARCT` | 114 | $11.13 | $2.33 | — | $8,902.11 | — | baseline list, no extra gate; list flatten,yday_gainer,mover_buy,oppset; 🔵; ⚪; ret5=+39.8; leftover $1271.66 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
+| 2026-08-21 09:30 ET | **BUY** | `ARCT` | 114 | $11.13 | $2.33 | — | $8,902.11 | — | baseline list, no extra gate; list flatten,yday_gainer,mover_buy; 🔵; ⚪; ret5=+39.8; leftover $1271.66 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
 | 2026-08-21 09:30 ET | **BUY** | `CYPH` | 963 | $1.32 | $12.42 | — | $7,618.53 | — | baseline list, no extra gate; list flatten,yday_gainer,mover_buy; 🔵; ⚪; ret5=+83.6; leftover $1271.66 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
 | 2026-08-21 09:30 ET | **BUY** | `BTBT` | 766 | $1.66 | $9.88 | — | $6,337.09 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=+7.0; leftover $1271.66 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 vol🟢 buy🟡 |
 | 2026-08-21 09:30 ET | **BUY** | `ENHA` | 743 | $1.71 | $9.58 | — | $5,056.97 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-32.0; leftover $1271.66 | join🔴 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 vol🟢 buy🟡 |
@@ -393,12 +410,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-24 09:30 ET | **SELL** | `GORO` | 399 | $3.20 | $5.22 | $+25.54 | $10,845.54 | ▲ +25.54 after sell → book $10,845.54; vs 09:30 mark -5.23 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-24 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,845.54 | ▲ close $10,845.54 vs 09:30 $10,907.51 (session +0.00) | 16:00 close · cash $10,845.54 · no lots left · equity $10,845.54. | — |
 | 2026-08-25 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,845.54 | ▲ 09:30 equity $10,845.54 vs yday $10,845.54 (+0.00) | 09:30 open · cash $10,845.54 · no holdings · equity $10,845.54 vs prior close $10,845.54 (+0.00). Cash unchanged overnight; no fees. | — |
-| 2026-08-25 09:30 ET | **BUY** | `CAPR` | 186 | $7.25 | $2.55 | — | $9,494.49 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover,ohlc_hot,oppset; 🔵; ret5=-8.7; leftover $1355.69 | join🔴 sector🟡 gen🟡 news🟡 digest🟢 ab🔴 peer🔴 vol🟢 buy🟡 |
+| 2026-08-25 09:30 ET | **BUY** | `CAPR` | 186 | $7.25 | $2.55 | — | $9,494.49 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=-8.7; leftover $1355.69 | join🔴 sector🟡 gen🟡 news🟡 digest🟢 ab🔴 peer🔴 vol🟢 buy🟡 |
 | 2026-08-25 09:30 ET | **BUY** | `SAFX` | 3786 | $0.36 | $24.91 | — | $8,114.20 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-15.6; leftover $1355.69 | join🔴 sector🟡 gen🟡 news🟡 digest🟡 ab🔴 vol🔴 buy🟡 |
 | 2026-08-25 09:30 ET | **BUY** | `VITL` | 121 | $11.12 | $2.35 | — | $6,766.32 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-0.7; leftover $1355.69 | join🔴 sector🟡 gen🟡 news🟡 digest🟡 ab🟢 peer🔴 vol🟡 buy🟡 |
 | 2026-08-25 09:30 ET | **BUY** | `KURA` | 99 | $13.59 | $2.29 | — | $5,418.63 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+9.9; leftover $1355.69 | join🔴 sector🟡 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
 | 2026-08-25 09:30 ET | **BUY** | `CCOI` | 142 | $9.49 | $2.42 | — | $4,068.63 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=-11.5; leftover $1355.69 | join🔴 sector🟡 gen🟡 news🟡 digest🟡 ab🔴 peer🔴 vol🟢 buy🟡 |
-| 2026-08-25 09:30 ET | **BUY** | `LIFE` | 36 | $36.96 | $2.10 | — | $2,735.97 | — | baseline list, no extra gate; list probable,yday_gainer,oppset; 🔵; ret5=+4.4; leftover $1355.69 | join🔴 sector🟡 gen🟡 news🟡 digest🟢 ab🟢 vol🟢 buy🟡 |
+| 2026-08-25 09:30 ET | **BUY** | `LIFE` | 36 | $36.96 | $2.10 | — | $2,735.97 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+4.4; leftover $1355.69 | join🔴 sector🟡 gen🟡 news🟡 digest🟢 ab🟢 vol🟢 buy🟡 |
 | 2026-08-25 09:30 ET | **BUY** | `ZIP` | 297 | $4.55 | $3.83 | — | $1,380.79 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=-6.6; leftover $1355.69 | join🔴 sector🟡 gen🟡 news🟡 digest🟡 ab🟢 peer🔴 vol🟢 buy🟡 |
 | 2026-08-25 09:30 ET | **BUY** | `BMEA` | 831 | $1.63 | $10.72 | — | $15.54 | — | baseline list, no extra gate; list yday_gainer,yday_mover,mover_buy; 🔵; ⚪; ret5=+17.8; leftover $1355.69 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
 | 2026-08-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15.54 | ▲ close $11,108.14 vs 09:30 $10,845.54 (session +313.77) | 16:00 close · cash $15.54 · equity $11,108.14 vs 09:30 $10,845.54 (+262.60; session marks +313.77) · 8 name(s) marked open→close (per-name table). CAPR×186 09:30 $7.25 → close $8.29 +193.44; SAFX×3786 09:30 $0.36 → close $0.35 -15.14; VITL×121 09:30 $11.12 → close $11.11 -1.21; KURA×99 09:30 $13.59 → close $13.59 +0.00; CCOI×142 09:30 $9.49 → close $9.88 +55.38; LIFE×36 09:30 $36.96 → close $38.56 +57.60; ZIP×297 09:30 $4.55 → close $4.35 -59.40; BMEA×831 09:30 $1.63 → close $1.73 +83.10 | — |
@@ -408,7 +425,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-26 09:30 ET | **SELL** | `VITL` | 121 | $11.03 | $2.38 | $-15.63 | $4,198.23 | ▼ -15.63 after sell → book $11,067.10; vs 09:30 mark -2.38 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-26 09:30 ET | **SELL** | `KURA` | 99 | $13.63 | $2.31 | $-0.64 | $5,545.29 | ▼ -0.64 after sell → book $11,064.78; vs 09:30 mark -2.32 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-26 09:30 ET | **SELL** | `CCOI` | 142 | $9.89 | $2.45 | $+51.93 | $6,947.22 | ▲ +51.93 after sell → book $11,062.33; vs 09:30 mark -2.45 | dropped from list after 1 sess (min 1) | — |
-| 2026-08-26 09:30 ET | **SELL** | `LIFE` | 36 | $38.24 | $2.12 | $+41.86 | $8,321.74 | ▲ +41.86 after sell → book $11,060.21; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-08-26 09:30 ET | **SELL** | `LIFE` | 36 | $38.24 | $2.12 | $+41.86 | $8,321.74 | ▲ +41.86 after sell → book $11,060.21; vs 09:30 mark -2.12 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-26 09:30 ET | **SELL** | `ZIP` | 297 | $4.31 | $3.89 | $-79.00 | $9,597.92 | ▼ -79.00 after sell → book $11,056.32; vs 09:30 mark -3.89 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-26 09:30 ET | **SELL** | `BMEA` | 831 | $1.75 | $10.87 | $+82.29 | $11,045.45 | ▲ +82.29 after sell → book $11,045.45; vs 09:30 mark -10.87 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-26 09:30 ET | **BUY** | `RZLT` | 275 | $5.01 | $3.55 | — | $9,664.15 | — | baseline list, no extra gate; list flatten,yday_gainer; 🔵; ret5=+7.5; leftover $1380.68 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
@@ -435,7 +452,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-28 09:30 ET | **SELL** | `KURA` | 116 | $13.05 | $2.37 | $+3.41 | $11,201.69 | ▲ +3.41 after sell → book $11,201.69; vs 09:30 mark -2.37 | dropped from list after 1 sess (min 1) | — |
 | 2026-08-28 09:30 ET | **BUY** | `SEDG` | 42 | $32.90 | $2.12 | — | $9,817.77 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=+8.4; leftover $1400.21 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🔴 peer🟢 heat🟡 vol🟢 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `GRRR` | 89 | $15.66 | $2.26 | — | $8,421.78 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=+2.7; leftover $1400.21 | join🟢 sector🟢 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
-| 2026-08-28 09:30 ET | **BUY** | `URBN` | 17 | $79.42 | $2.04 | — | $7,069.60 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover,oppset; 🔵; ret5=+8.5; leftover $1400.21 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-08-28 09:30 ET | **BUY** | `URBN` | 17 | $79.42 | $2.04 | — | $7,069.60 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=+8.5; leftover $1400.21 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `PYXS` | 421 | $3.32 | $5.43 | — | $5,666.44 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=+6.4; leftover $1400.21 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 peer🟡 heat🔴 vol🔴 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `SAFX` | 3836 | $0.36 | $25.51 | — | $4,240.79 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=+7.6; leftover $1400.21 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🔴 heat🟡 vol🔴 buy🟡 |
 | 2026-08-28 09:30 ET | **BUY** | `SIMO` | 5 | $252.24 | $2.00 | — | $2,977.59 | — | baseline list, no extra gate; list probable,yday_gainer; ⚪; ret5=+2.2; leftover $1400.21 | join🟢 sector🟢 gen🟡 news🔴 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
@@ -458,10 +475,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,840.62 | ▲ close $10,840.62 vs 09:30 $10,840.62 (session +0.00) | 16:00 close · cash $10,840.62 · no lots left · equity $10,840.62. | — |
 | 2026-09-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,840.62 | ▲ 09:30 equity $10,840.62 vs yday $10,840.62 (+0.00) | 09:30 open · cash $10,840.62 · no holdings · equity $10,840.62 vs prior close $10,840.62 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-03 09:30 ET | **BUY** | `CRK` | 87 | $15.45 | $2.25 | — | $9,494.22 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover,mover_buy; 🔵; ret5=+7.2; leftover $1355.08 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
-| 2026-09-03 09:30 ET | **BUY** | `MRNA` | 9 | $145.94 | $2.02 | — | $8,178.70 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+0.8; leftover $1355.08 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `ARCT` | 80 | $16.77 | $2.23 | — | $6,834.87 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover,ohlc_hot,mover_buy,oppset; 🔵; ⚪; ret5=+5.7; leftover $1355.08 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `MRNA` | 9 | $145.94 | $2.02 | — | $8,178.70 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=+0.8; leftover $1355.08 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `ARCT` | 80 | $16.77 | $2.23 | — | $6,834.87 | — | baseline list, no extra gate; list probable,yday_gainer,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+5.7; leftover $1355.08 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `SLN` | 91 | $14.85 | $2.26 | — | $5,481.25 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ⚪; ret5=+9.3; leftover $1355.08 | join🟢 sector🟡 gen🟡 news🔴 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `EIX` | 24 | $55.42 | $2.06 | — | $4,149.11 | — | baseline list, no extra gate; list probable,yday_gainer,oppset; ret5=-25.9; leftover $1355.08 | join🟡 sector🟡 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `EIX` | 24 | $55.42 | $2.06 | — | $4,149.11 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-25.9; leftover $1355.08 | join🟡 sector🟡 gen🟡 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `CRDL` | 621 | $2.18 | $8.01 | — | $2,787.32 | — | baseline list, no extra gate; list probable,yday_gainer,mover_buy; 🔵; ⚪; ret5=+1.4; leftover $1355.08 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `CLYM` | 97 | $13.96 | $2.28 | — | $1,430.92 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=-6.4; leftover $1355.08 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `SAFX` | 3594 | $0.38 | $24.33 | — | $51.65 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-2.3; leftover $1355.08 | join🔴 sector🟡 gen🟡 news🟡 digest🟢 ab🔴 heat🔴 vol🟡 buy🟡 |
@@ -473,14 +490,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-04 09:30 ET | **SELL** | `SLN` | 91 | $14.63 | $2.29 | $-24.57 | $5,310.51 | ▼ -24.57 after sell → book $10,754.89; vs 09:30 mark -2.29 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-04 09:30 ET | **SELL** | `EIX` | 24 | $55.79 | $2.08 | $+4.74 | $6,647.38 | ▲ +4.74 after sell → book $10,752.80; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-04 09:30 ET | **SELL** | `CRDL` | 621 | $2.16 | $8.12 | $-28.56 | $7,980.62 | ▼ -28.56 after sell → book $10,744.68; vs 09:30 mark -8.12 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-04 09:30 ET | **SELL** | `CLYM` | 97 | $14.49 | $2.31 | $+46.82 | $9,383.84 | ▲ +46.82 after sell → book $10,742.37; vs 09:30 mark -2.31 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-04 09:30 ET | **SELL** | `CLYM` | 97 | $14.49 | $2.31 | $+46.82 | $9,383.84 | ▲ +46.82 after sell → book $10,742.37; vs 09:30 mark -2.31 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-04 09:30 ET | **SELL** | `SAFX` | 3594 | $0.38 | $24.97 | $-45.71 | $10,717.40 | ▼ -45.71 after sell → book $10,717.40; vs 09:30 mark -24.97 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-04 09:30 ET | **BUY** | `ALEC` | 531 | $2.52 | $6.85 | — | $9,372.43 | — | baseline list, no extra gate; list flatten,probable,yday_gainer,yday_mover,mover_buy; 🔵; ⚪; ret5=+5.0; leftover $1339.67 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-04 09:30 ET | **BUY** | `OABI` | 280 | $4.78 | $3.61 | — | $8,030.41 | — | baseline list, no extra gate; list flatten,probable,yday_gainer,yday_mover,mover_buy; 🔵; ⚪; ret5=+3.0; leftover $1339.67 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-04 09:30 ET | **BUY** | `OPK` | 842 | $1.59 | $10.86 | — | $6,680.77 | — | baseline list, no extra gate; list flatten,yday_gainer,mover_buy; 🔵; ⚪; ret5=+7.3; leftover $1339.67 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-04 09:30 ET | **BUY** | `HQ` | 84 | $15.90 | $2.24 | — | $5,342.93 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-4.1; leftover $1339.67 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🟡 heat🔴 vol🔴 buy🟡 |
 | 2026-09-04 09:30 ET | **BUY** | `EOSE` | 380 | $3.52 | $4.90 | — | $4,000.43 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=+2.3; leftover $1339.67 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-04 09:30 ET | **BUY** | `DELL` | 2 | $513.78 | $2.00 | — | $2,970.87 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover,ohlc_hot,mover_buy,oppset; 🔵; ⚪; ret5=+9.3; leftover $1339.67 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-04 09:30 ET | **BUY** | `DELL` | 2 | $513.78 | $2.00 | — | $2,970.87 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+9.3; leftover $1339.67 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-04 09:30 ET | **BUY** | `MLYS` | 47 | $28.00 | $2.13 | — | $1,652.74 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+8.7; leftover $1339.67 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-04 09:30 ET | **BUY** | `CCOI` | 133 | $10.02 | $2.39 | — | $317.69 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=+3.2; leftover $1339.67 | join🔴 sector🟢 gen🟢 news🟡 digest🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $317.69 | ▲ close $10,709.47 vs 09:30 $10,763.74 (session +27.06) | 16:00 close · cash $317.69 · equity $10,709.47 vs 09:30 $10,763.74 (-54.27; session marks +27.06) · 8 name(s) marked open→close (per-name table). ALEC×531 09:30 $2.52 → close $2.46 -31.86; OABI×280 09:30 $4.78 → close $4.33 -126.00; OPK×842 09:30 $1.59 → close $1.64 +42.10; HQ×84 09:30 $15.90 → close $15.56 -28.56; EOSE×380 09:30 $3.52 → close $3.88 +136.80; DELL×2 09:30 $513.78 → close $524.14 +20.72; MLYS×47 09:30 $28.00 → close $28.21 +9.87; CCOI×133 09:30 $10.02 → close $10.05 +3.99 | — |
@@ -502,7 +519,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 09:30 ET | **BUY** | `AMTX` | 650 | $2.04 | $8.38 | — | $9,284.94 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+6.8; leftover $1327.42 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-09-11 09:30 ET | **BUY** | `CLOV` | 279 | $4.75 | $3.60 | — | $7,956.09 | — | baseline list, no extra gate; list probable,yday_gainer,ohlc_hot; 🔵; ret5=+9.5; leftover $1327.42 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-11 09:30 ET | **BUY** | `BAK` | 626 | $2.12 | $8.08 | — | $6,620.89 | — | baseline list, no extra gate; list probable,yday_gainer,ohlc_hot; 🔵; ret5=+7.1; leftover $1327.42 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-11 09:30 ET | **BUY** | `TYRA` | 56 | $23.63 | $2.16 | — | $5,295.45 | — | baseline list, no extra gate; list probable,yday_gainer,oppset; ret5=-6.3; leftover $1327.42 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `TYRA` | 56 | $23.63 | $2.16 | — | $5,295.45 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-6.3; leftover $1327.42 | join🟢 sector🟡 gen🟡 news🟡 digest🔴 judge🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-09-11 09:30 ET | **BUY** | `FUBO` | 114 | $11.55 | $2.33 | — | $3,976.42 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+1.2; leftover $1327.42 | join🔴 sector🟢 gen🟡 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 catal🟡 buy🟡 |
 | 2026-09-11 09:30 ET | **BUY** | `RDDT` | 8 | $157.55 | $2.01 | — | $2,714.01 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=-1.7; leftover $1327.42 | join🔴 sector🟢 gen🟡 news🟡 digest🟡 ab🟢 peer🟡 heat🟢 vol🟡 buy🟡 |
 | 2026-09-11 09:30 ET | **BUY** | `VIST` | 17 | $77.33 | $2.04 | — | $1,397.36 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=+2.5; leftover $1327.42 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
@@ -523,7 +540,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,615.29 | ▲ 09:30 equity $10,615.29 vs yday $10,615.29 (+0.00) | 09:30 open · cash $10,615.29 · no holdings · equity $10,615.29 vs prior close $10,615.29 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-16 09:30 ET | **BUY** | `BBNX` | 71 | $18.61 | $2.20 | — | $9,291.78 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-0.5; leftover $1326.91 | join🟢 sector🟢 gen🟢 news🔴 digest🔴 ab🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-09-16 09:30 ET | **BUY** | `ARQQ` | 72 | $18.21 | $2.21 | — | $7,978.45 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-19.1; leftover $1326.91 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
-| 2026-09-16 09:30 ET | **BUY** | `TEM` | 19 | $68.79 | $2.05 | — | $6,669.39 | — | baseline list, no extra gate; list probable,yday_gainer,ohlc_hot; 🔵; ret5=+7.1; leftover $1326.91 | join🟢 sector🟢 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-16 09:30 ET | **BUY** | `TEM` | 19 | $68.79 | $2.05 | — | $6,669.39 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+7.1; leftover $1326.91 | join🟢 sector🟢 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-16 09:30 ET | **BUY** | `RIG` | 226 | $5.87 | $2.92 | — | $5,339.86 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+3.1; leftover $1326.91 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟡 vol🟢 catal🟡 buy🟡 |
 | 2026-09-16 09:30 ET | **BUY** | `QTRX` | 487 | $2.72 | $6.28 | — | $4,008.94 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-0.4; leftover $1326.91 | join🔴 sector🟢 gen🟢 news🟡 digest🔴 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-09-16 09:30 ET | **BUY** | `VAL` | 15 | $87.40 | $2.04 | — | $2,695.90 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+3.2; leftover $1326.91 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟡 vol🟢 buy🟡 |
@@ -542,7 +559,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 09:30 ET | **BUY** | `DVLT` | 8123 | $0.17 | $38.18 | — | $9,628.34 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-14.3; leftover $1380.93 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-09-17 09:30 ET | **BUY** | `BRUN` | 87 | $15.87 | $2.25 | — | $8,245.40 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-12.7; leftover $1380.93 | join🟡 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-09-17 09:30 ET | **BUY** | `AXTI` | 20 | $67.91 | $2.05 | — | $6,885.15 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=-6.7; leftover $1380.93 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
-| 2026-09-17 09:30 ET | **BUY** | `ARQT` | 53 | $25.95 | $2.15 | — | $5,507.65 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover,ohlc_hot,oppset; 🔵; ret5=+9.6; leftover $1380.93 | join🟢 sector🟢 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-17 09:30 ET | **BUY** | `ARQT` | 53 | $25.95 | $2.15 | — | $5,507.65 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+9.6; leftover $1380.93 | join🟢 sector🟢 gen🟢 news🟡 digest🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-17 09:30 ET | **BUY** | `SMTC` | 8 | $170.85 | $2.01 | — | $4,138.84 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=+2.2; leftover $1380.93 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-09-17 09:30 ET | **BUY** | `SABR` | 575 | $2.40 | $7.42 | — | $2,751.42 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+8.4; leftover $1380.93 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-17 09:30 ET | **BUY** | `CIFR` | 76 | $18.04 | $2.22 | — | $1,378.54 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=-1.1; leftover $1380.93 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
@@ -557,15 +574,33 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 09:30 ET | **SELL** | `SABR` | 575 | $2.29 | $7.52 | $-78.19 | $8,408.89 | ▼ -78.19 after sell → book $11,165.69; vs 09:30 mark -7.53 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-18 09:30 ET | **SELL** | `CIFR` | 76 | $17.80 | $2.24 | $-22.32 | $9,759.45 | ▼ -22.32 after sell → book $11,163.45; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-18 09:30 ET | **SELL** | `EROC` | 108 | $13.00 | $2.34 | $+34.22 | $11,161.11 | ▲ +34.22 after sell → book $11,161.11; vs 09:30 mark -2.34 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-18 09:30 ET | **BUY** | `SDGR` | 47 | $29.32 | $2.13 | — | $9,780.94 | — | baseline list, no extra gate; list flatten,yday_gainer,yday_mover,oppset; 🔵; ⚪; ret5=+60.9; leftover $1395.14 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-18 09:30 ET | **BUY** | `TLSA` | 1438 | $0.97 | $18.26 | — | $8,367.82 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=+1.0; leftover $1395.14 | join🔴 sector🟢 gen🟢 news🟡 digest🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-18 09:30 ET | **BUY** | `SWRD` | 670 | $2.08 | $8.64 | — | $6,965.57 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-4.5; leftover $1395.14 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 heat🟢 vol🟡 buy🟡 |
-| 2026-09-18 09:30 ET | **BUY** | `EYPT` | 353 | $3.95 | $4.55 | — | $5,566.67 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=-6.1; leftover $1395.14 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
-| 2026-09-18 09:30 ET | **BUY** | `BHVN` | 99 | $14.07 | $2.29 | — | $4,171.45 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=+8.6; leftover $1395.14 | join🟢 sector🟢 gen🟢 news🟢 digest🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-18 09:30 ET | **BUY** | `BNC` | 239 | $5.83 | $3.08 | — | $2,775.00 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+8.6; leftover $1395.14 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
-| 2026-09-18 09:30 ET | **BUY** | `DDD` | 389 | $3.58 | $5.02 | — | $1,377.36 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+8.3; leftover $1395.14 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
-| 2026-09-18 09:30 ET | **BUY** | `RANI` | 1598 | $0.85 | $18.38 | — | $0.68 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=+3.6; leftover $1395.14 | join🔴 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.68 | ▼ close $11,039.90 vs 09:30 $11,221.31 (session -58.85) | 16:00 close · cash $0.68 · equity $11,039.90 vs 09:30 $11,221.31 (-181.41; session marks -58.85) · 8 name(s) marked open→close (per-name table). SDGR×47 09:30 $29.32 → close $29.02 -14.10; TLSA×1438 09:30 $0.97 → close $0.91 -86.28; SWRD×670 09:30 $2.08 → close $2.15 +46.90; EYPT×353 09:30 $3.95 → close $3.85 -35.30; BHVN×99 09:30 $14.07 → close $13.62 -44.55; BNC×239 09:30 $5.83 → close $5.98 +35.85; DDD×389 09:30 $3.58 → close $3.63 +19.45; RANI×1598 09:30 $0.85 → close $0.86 +19.18 | — |
+| 2026-09-18 09:30 ET | **BUY** | `GNRC` | 6 | $209.52 | $2.01 | — | $9,901.98 | — | baseline list, no extra gate; list flatten,yday_gainer,yday_mover; 🔵; ret5=+14.1; leftover $1395.14 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-18 09:30 ET | **BUY** | `VICR` | 6 | $219.62 | $2.01 | — | $8,582.25 | — | baseline list, no extra gate; list flatten,yday_gainer,yday_mover; 🔵; ret5=+21.5; leftover $1395.14 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-18 09:30 ET | **BUY** | `TLSA` | 1438 | $0.97 | $18.26 | — | $7,169.13 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=+1.0; leftover $1395.14 | join🔴 sector🟢 gen🟢 news🟡 digest🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-18 09:30 ET | **BUY** | `SWRD` | 670 | $2.08 | $8.64 | — | $5,766.89 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-4.5; leftover $1395.14 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-18 09:30 ET | **BUY** | `EYPT` | 353 | $3.95 | $4.55 | — | $4,367.98 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=-6.1; leftover $1395.14 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-18 09:30 ET | **BUY** | `BHVN` | 99 | $14.07 | $2.29 | — | $2,972.77 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=+8.6; leftover $1395.14 | join🟢 sector🟢 gen🟢 news🟢 digest🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-18 09:30 ET | **BUY** | `BNC` | 239 | $5.83 | $3.08 | — | $1,576.31 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+8.6; leftover $1395.14 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-18 09:30 ET | **BUY** | `DDD` | 389 | $3.58 | $5.02 | — | $178.68 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+8.3; leftover $1395.14 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $178.68 | ▼ close $11,057.44 vs 09:30 $11,221.31 (session -57.81) | 16:00 close · cash $178.68 · equity $11,057.44 vs 09:30 $11,221.31 (-163.87; session marks -57.81) · 8 name(s) marked open→close (per-name table). GNRC×6 09:30 $209.52 → close $207.44 -12.48; VICR×6 09:30 $219.62 → close $222.72 +18.60; TLSA×1438 09:30 $0.97 → close $0.91 -86.28; SWRD×670 09:30 $2.08 → close $2.15 +46.90; EYPT×353 09:30 $3.95 → close $3.85 -35.30; BHVN×99 09:30 $14.07 → close $13.62 -44.55; BNC×239 09:30 $5.83 → close $5.98 +35.85; DDD×389 09:30 $3.58 → close $3.63 +19.45 | — |
+| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $178.68 | ▲ 09:30 equity $11,330.98 vs yday $11,057.44 (+273.54) | 09:30 open · cash $178.68 (unchanged overnight, no fees) · equity $11,330.98 vs prior close $11,057.44 (+273.54) · 8 name(s) re-marked at the open (per-name table). GNRC×6 yday $207.44 → 09:30 $210.00 +15.36; VICR×6 yday $222.72 → 09:30 $230.25 +45.18; TLSA×1438 yday $0.91 → 09:30 $0.94 +43.14; SWRD×670 yday $2.15 → 09:30 $2.15 +0.00; EYPT×353 yday $3.85 → 09:30 $3.87 +7.06; BHVN×99 yday $13.62 → 09:30 $13.90 +27.72; BNC×239 yday $5.98 → 09:30 $6.42 +103.96; DDD×389 yday $3.63 → 09:30 $3.71 +31.12 | — |
+| 2026-09-21 09:30 ET | **SELL** | `GNRC` | 6 | $210.00 | $2.03 | $-1.16 | $1,436.65 | ▼ -1.16 after sell → book $11,328.95; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `VICR` | 6 | $230.25 | $2.03 | $+59.74 | $2,816.12 | ▲ +59.74 after sell → book $11,326.92; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟢 |
+| 2026-09-21 09:30 ET | **SELL** | `TLSA` | 1438 | $0.94 | $18.08 | $-79.48 | $4,149.76 | ▼ -79.48 after sell → book $11,308.84; vs 09:30 mark -18.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `SWRD` | 670 | $2.15 | $8.77 | $+29.49 | $5,581.49 | ▲ +29.49 after sell → book $11,300.08; vs 09:30 mark -8.76 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `EYPT` | 353 | $3.87 | $4.62 | $-37.42 | $6,942.98 | ▼ -37.42 after sell → book $11,295.45; vs 09:30 mark -4.63 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `BHVN` | 99 | $13.90 | $2.31 | $-21.43 | $8,316.76 | ▼ -21.43 after sell → book $11,293.14; vs 09:30 mark -2.31 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `BNC` | 239 | $6.42 | $3.13 | $+133.60 | $9,846.81 | ▲ +133.60 after sell → book $11,290.00; vs 09:30 mark -3.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `DDD` | 389 | $3.71 | $5.09 | $+40.46 | $11,284.91 | ▲ +40.46 after sell → book $11,284.91; vs 09:30 mark -5.09 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **BUY** | `CYPH` | 355 | $3.97 | $4.58 | — | $9,870.98 | — | baseline list, no extra gate; list flatten,yday_gainer,yday_mover; ⚪; ret5=+58.9; leftover $1410.61 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `FEAM` | 571 | $2.47 | $7.37 | — | $8,453.24 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-3.8; leftover $1410.61 | join🔴 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `BKKT` | 151 | $9.31 | $2.44 | — | $7,044.99 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-2.4; leftover $1410.61 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `BTDR` | 104 | $13.44 | $2.30 | — | $5,644.93 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+8.4; leftover $1410.61 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `ORBS` | 1282 | $1.10 | $16.54 | — | $4,218.19 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=+6.9; leftover $1410.61 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `SBET` | 141 | $9.99 | $2.41 | — | $2,807.19 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+5.3; leftover $1410.61 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `BTBT` | 772 | $1.82 | $9.96 | — | $1,388.33 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+8.8; leftover $1410.61 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `SGML` | 136 | $10.12 | $2.40 | — | $9.61 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-25.6; leftover $1410.61 | join🔴 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9.61 | ▼ close $10,934.43 vs 09:30 $11,330.98 (session -302.48) | 16:00 close · cash $9.61 · equity $10,934.43 vs 09:30 $11,330.98 (-396.55; session marks -302.48) · 8 name(s) marked open→close (per-name table). CYPH×355 09:30 $3.97 → close $3.40 -202.35; FEAM×571 09:30 $2.47 → close $2.48 +5.71; BKKT×151 09:30 $9.31 → close $9.14 -25.67; BTDR×104 09:30 $13.44 → close $13.14 -31.20; ORBS×1282 09:30 $1.10 → close $1.05 -64.10; SBET×141 09:30 $9.99 → close $9.98 -1.41; BTBT×772 09:30 $1.82 → close $1.82 -3.86; SGML×136 09:30 $10.12 → close $10.27 +20.40 | — |
 
 ## Not taken
 
@@ -643,7 +678,6 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 | `ODD` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-10 | `SIG` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-10 | `NAUT` | hard_red | hard-red S=-13.28 sit; no new buys |
-| 2026-09-14 | `ACVA` | hard_red | hard-red S=-11.00 sit; no new buys |
 | 2026-09-14 | `ATEC` | hard_red | hard-red S=-11.00 sit; no new buys |
 | 2026-09-14 | `DELL` | hard_red | hard-red S=-11.00 sit; no new buys |
 | 2026-09-14 | `RLMD` | hard_red | hard-red S=-11.00 sit; no new buys |
@@ -651,9 +685,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | `CAN` | hard_red | hard-red S=-11.00 sit; no new buys |
 | 2026-09-14 | `USDE` | hard_red | hard-red S=-11.00 sit; no new buys |
 | 2026-09-14 | `FPS` | hard_red | hard-red S=-11.00 sit; no new buys |
+| 2026-09-14 | `NTAP` | hard_red | hard-red S=-11.00 sit; no new buys |
 | 2026-09-15 | `RPD` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `TENB` | hard_red | hard-red S=-3.84 sit; no new buys |
-| 2026-09-15 | `NTSK` | hard_red | hard-red S=-3.84 sit; no new buys |
+| 2026-09-15 | `SES` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `RBRK` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `SAIL` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `QLYS` | hard_red | hard-red S=-3.84 sit; no new buys |
@@ -664,11 +699,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `SDGR` | 47 | 2026-09-18 @ $29.32 | baseline list, no extra gate; list flatten,yday_gainer,yday_mover,oppset; 🔵; ⚪; ret5=+60.9; leftover $1395.14 |
-| `TLSA` | 1438 | 2026-09-18 @ $0.97 | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=+1.0; leftover $1395.14 |
-| `SWRD` | 670 | 2026-09-18 @ $2.08 | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-4.5; leftover $1395.14 |
-| `EYPT` | 353 | 2026-09-18 @ $3.95 | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=-6.1; leftover $1395.14 |
-| `BHVN` | 99 | 2026-09-18 @ $14.07 | baseline list, no extra gate; list probable,yday_gainer,yday_mover; 🔵; ret5=+8.6; leftover $1395.14 |
-| `BNC` | 239 | 2026-09-18 @ $5.83 | baseline list, no extra gate; list probable,yday_gainer,yday_mover,ohlc_hot; 🔵; ret5=+8.6; leftover $1395.14 |
-| `DDD` | 389 | 2026-09-18 @ $3.58 | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+8.3; leftover $1395.14 |
-| `RANI` | 1598 | 2026-09-18 @ $0.85 | baseline list, no extra gate; list probable,yday_gainer; ret5=+3.6; leftover $1395.14 |
+| `CYPH` | 355 | 2026-09-21 @ $3.97 | baseline list, no extra gate; list flatten,yday_gainer,yday_mover; ⚪; ret5=+58.9; leftover $1410.61 |
+| `FEAM` | 571 | 2026-09-21 @ $2.47 | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-3.8; leftover $1410.61 |
+| `BKKT` | 151 | 2026-09-21 @ $9.31 | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-2.4; leftover $1410.61 |
+| `BTDR` | 104 | 2026-09-21 @ $13.44 | baseline list, no extra gate; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+8.4; leftover $1410.61 |
+| `ORBS` | 1282 | 2026-09-21 @ $1.10 | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=+6.9; leftover $1410.61 |
+| `SBET` | 141 | 2026-09-21 @ $9.99 | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+5.3; leftover $1410.61 |
+| `BTBT` | 772 | 2026-09-21 @ $1.82 | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+8.8; leftover $1410.61 |
+| `SGML` | 136 | 2026-09-21 @ $10.12 | baseline list, no extra gate; list probable,yday_gainer; ret5=-25.6; leftover $1410.61 |

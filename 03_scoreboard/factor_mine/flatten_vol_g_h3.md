@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · flatten wish-list ∩ vol🟢
 
-Cash book **-25.48%** ($7,452) · signal-only (no cash/fees) was -21.05%. Starts YES **1/26**. Fills 51 · skips 67 · realized $-2435.51.
+Cash book **-28.24%** ($7,176) · signal-only (no cash/fees) was -23.51%. Starts YES **1/27**. Fills 55 · skips 66 · realized $-2523.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $4.41.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $118.10.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -173,6 +173,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | `RDNT` | 98 | — | $77.12 | +0.00 | $75.78 | -131.32 | -131.32 | +0.00 | -131.32 |
 | 2026-09-17 | `RDNT` | 98 | $75.78 | $76.44 | +64.68 | $77.78 | +131.32 | +196.00 | -66.64 | +64.68 |
 | 2026-09-18 | `RDNT` | 98 | $77.78 | $77.66 | -11.76 | $76.00 | -162.68 | -174.44 | +52.92 | -109.76 |
+| 2026-09-21 | `RDNT` | 98 | $76.00 | $76.27 | +26.46 | — | +0.00 | +26.46 | -83.30 | — |
+| 2026-09-21 | `A` | 15 | — | $157.87 | +0.00 | $161.94 | +61.05 | +61.05 | +0.00 | +61.05 |
+| 2026-09-21 | `DXCM` | 28 | — | $88.89 | +0.00 | $89.17 | +7.79 | +7.79 | +0.00 | +7.79 |
+| 2026-09-21 | `CYPH` | 627 | — | $3.97 | +0.00 | $3.40 | -357.39 | -357.39 | +0.00 | -357.39 |
 
 ## Each session (cash + holdings state)
 
@@ -204,6 +208,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | +5.30 | $5.06 | ORCL×54 | $7,566.68 | -17.28 | -131.32 | RDNT | ORCL | $4.41 | $7,430.85 | RDNT×98 |
 | 2026-09-17 | +7.38 | $4.41 | RDNT×98 | $7,495.53 | +64.68 | +131.32 | — | — | $4.41 | $7,626.85 | RDNT×98 |
 | 2026-09-18 | +4.86 | $4.41 | RDNT×98 | $7,615.09 | -11.76 | -162.68 | — | — | $4.41 | $7,452.41 | RDNT×98 |
+| 2026-09-21 | +12.87 | $4.41 | RDNT×98 | $7,478.87 | +26.46 | -288.55 | A, DXCM, CYPH | RDNT | $118.10 | $7,175.76 | A×15, DXCM×28, CYPH×627 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -233,11 +238,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-20 09:30 ET | **BUY** | `IAG` | 57 | $19.63 | $2.16 | — | $3,453.84 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten,mover_buy; live flatten mover; 🔵; ⚪; ret5=+9.1; leftover $1130.80 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
 | 2026-08-20 09:30 ET | **BUY** | `KGC` | 38 | $29.63 | $2.10 | — | $2,325.80 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten,mover_buy; live flatten mover; 🔵; ⚪; ret5=+8.7; leftover $1130.80 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
 | 2026-08-20 09:30 ET | **BUY** | `NFGC` | 646 | $1.75 | $8.33 | — | $1,186.96 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten,mover_buy; live flatten mover; 🔵; ⚪; ret5=+7.9; leftover $1130.80 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
-| 2026-08-20 09:30 ET | **BUY** | `WPM` | 7 | $144.54 | $2.01 | — | $173.17 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten,mover_buy,oppset; live flatten mover; 🔵; ⚪; ret5=+9.2; leftover $1130.80 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
+| 2026-08-20 09:30 ET | **BUY** | `WPM` | 7 | $144.54 | $2.01 | — | $173.17 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten,mover_buy; live flatten mover; 🔵; ⚪; ret5=+9.2; leftover $1130.80 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
 | 2026-08-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $173.17 | ▲ close $9,233.36 vs 09:30 $9,046.54 (session +210.44) | 16:00 close · cash $173.17 · equity $9,233.36 vs 09:30 $9,046.54 (+186.82; session marks +210.44) · 8 name(s) marked open→close (per-name table). AG×55 09:30 $20.55 → close $21.19 +35.20; BHP×12 09:30 $91.01 → close $93.63 +31.44; CDE×54 09:30 $20.65 → close $21.11 +24.84; HDSN×195 09:30 $5.77 → close $5.57 -39.00; IAG×57 09:30 $19.63 → close $20.50 +49.59; KGC×38 09:30 $29.63 → close $31.43 +68.40; NFGC×646 09:30 $1.75 → close $1.75 +0.00; WPM×7 09:30 $144.54 → close $150.25 +39.97 | — |
 | 2026-08-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $173.17 | ▲ 09:30 equity $9,474.85 vs yday $9,233.36 (+241.49) | 09:30 open · cash $173.17 (unchanged overnight, no fees) · equity $9,474.85 vs prior close $9,233.36 (+241.49) · 8 name(s) re-marked at the open (per-name table). AG×55 yday $21.19 → 09:30 $21.90 +39.05; BHP×12 yday $93.63 → 09:30 $95.72 +25.08; CDE×54 yday $21.11 → 09:30 $21.75 +34.56; HDSN×195 yday $5.57 → 09:30 $5.67 +19.50; IAG×57 yday $20.50 → 09:30 $21.17 +38.19; KGC×38 yday $31.43 → 09:30 $32.17 +28.12; NFGC×646 yday $1.75 → 09:30 $1.79 +25.84; WPM×7 yday $150.25 → 09:30 $154.70 +31.15 | — |
 | 2026-08-21 09:30 ET | **BUY** | `AUPH` | 1 | $17.20 | $0.17 | — | $155.80 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten,mover_buy; live flatten mover; 🔵; ⚪; ret5=+13.8; leftover $21.65 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟢 |
-| 2026-08-21 09:30 ET | **BUY** | `ARCT` | 1 | $11.13 | $0.11 | — | $144.55 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten,yday_gainer,mover_buy,oppset; live flatten mover; 🔵; ⚪; ret5=+39.8; leftover $21.65 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
+| 2026-08-21 09:30 ET | **BUY** | `ARCT` | 1 | $11.13 | $0.11 | — | $144.55 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten,yday_gainer,mover_buy; live flatten mover; 🔵; ⚪; ret5=+39.8; leftover $21.65 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
 | 2026-08-21 09:30 ET | **BUY** | `AUTL` | 8 | $2.47 | $0.22 | — | $124.57 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten,mover_buy; live flatten mover; 🔵; ⚪; ret5=+10.8; leftover $21.65 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
 | 2026-08-21 09:30 ET | **BUY** | `CRDL` | 11 | $1.93 | $0.25 | — | $103.09 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten,mover_buy; live flatten mover; 🔵; ⚪; ret5=+10.2; leftover $21.65 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
 | 2026-08-21 09:30 ET | **BUY** | `CYPH` | 16 | $1.32 | $0.26 | — | $81.72 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten,yday_gainer,mover_buy; live flatten mover; 🔵; ⚪; ret5=+83.6; leftover $21.65 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
@@ -256,7 +261,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,269.67 | ▲ close $9,369.62 vs 09:30 $9,389.01 (session +4.41) | 16:00 close · cash $9,269.67 · equity $9,369.62 vs 09:30 $9,389.01 (-19.39; session marks +4.41) · 5 name(s) marked open→close (per-name table). AUPH×1 09:30 $16.63 → close $16.75 +0.12; ARCT×1 09:30 $14.12 → close $15.44 +1.32; AUTL×8 09:30 $2.38 → close $2.44 +0.48; CRDL×11 09:30 $1.89 → close $2.00 +1.21; CYPH×16 09:30 $1.56 → close $1.64 +1.28 | — |
 | 2026-08-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,269.67 | ▼ 09:30 equity $9,368.83 vs yday $9,369.62 (-0.79) | 09:30 open · cash $9,269.67 (unchanged overnight, no fees) · equity $9,368.83 vs prior close $9,369.62 (-0.79) · 5 name(s) re-marked at the open (per-name table). AUPH×1 yday $16.75 → 09:30 $16.60 -0.15; ARCT×1 yday $15.44 → 09:30 $15.35 -0.09; AUTL×8 yday $2.44 → 09:30 $2.41 -0.24; CRDL×11 yday $2.00 → 09:30 $2.03 +0.33; CYPH×16 yday $1.64 → 09:30 $1.60 -0.64 | — |
 | 2026-08-26 09:30 ET | **SELL** | `AUPH` | 1 | $16.60 | $0.19 | $-0.96 | $9,286.08 | ▼ -0.96 after sell → book $9,368.64; vs 09:30 mark -0.19 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-26 09:30 ET | **SELL** | `ARCT` | 1 | $15.35 | $0.18 | $+3.93 | $9,301.25 | ▲ +3.93 after sell → book $9,368.46; vs 09:30 mark -0.18 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-26 09:30 ET | **SELL** | `ARCT` | 1 | $15.35 | $0.18 | $+3.93 | $9,301.25 | ▲ +3.93 after sell → book $9,368.46; vs 09:30 mark -0.18 | dropped from list after 3 sess (min 3) | — |
 | 2026-08-26 09:30 ET | **SELL** | `AUTL` | 8 | $2.41 | $0.24 | $-0.94 | $9,320.30 | ▼ -0.94 after sell → book $9,368.23; vs 09:30 mark -0.23 | dropped from list after 3 sess (min 3) | — |
 | 2026-08-26 09:30 ET | **SELL** | `CRDL` | 11 | $2.03 | $0.28 | $+0.58 | $9,342.35 | ▲ +0.58 after sell → book $9,367.95; vs 09:30 mark -0.28 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-26 09:30 ET | **SELL** | `CYPH` | 16 | $1.60 | $0.32 | $+3.90 | $9,367.63 | ▲ +3.90 after sell → book $9,367.63; vs 09:30 mark -0.32 | dropped from list after 3 sess (min 3) | — |
@@ -312,6 +317,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.41 | ▲ close $7,626.85 vs 09:30 $7,495.53 (session +131.32) | 16:00 close · cash $4.41 · equity $7,626.85 vs 09:30 $7,495.53 (+131.32; session marks +131.32) · 1 name(s) marked open→close (per-name table). RDNT×98 09:30 $76.44 → close $77.78 +131.32 | — |
 | 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4.41 | ▼ 09:30 equity $7,615.09 vs yday $7,626.85 (-11.76) | 09:30 open · cash $4.41 (unchanged overnight, no fees) · equity $7,615.09 vs prior close $7,626.85 (-11.76) · 1 name(s) re-marked at the open (per-name table). RDNT×98 yday $77.78 → 09:30 $77.66 -11.76 | — |
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.41 | ▼ close $7,452.41 vs 09:30 $7,615.09 (session -162.68) | 16:00 close · cash $4.41 · equity $7,452.41 vs 09:30 $7,615.09 (-162.68; session marks -162.68) · 1 name(s) marked open→close (per-name table). RDNT×98 09:30 $77.66 → close $76.00 -162.68 | — |
+| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4.41 | ▲ 09:30 equity $7,478.87 vs yday $7,452.41 (+26.46) | 09:30 open · cash $4.41 (unchanged overnight, no fees) · equity $7,478.87 vs prior close $7,452.41 (+26.46) · 1 name(s) re-marked at the open (per-name table). RDNT×98 yday $76.00 → 09:30 $76.27 +26.46 | — |
+| 2026-09-21 09:30 ET | **SELL** | `RDNT` | 98 | $76.27 | $2.36 | $-87.94 | $7,476.51 | ▼ -87.94 after sell → book $7,476.51; vs 09:30 mark -2.36 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-21 09:30 ET | **BUY** | `A` | 15 | $157.87 | $2.04 | — | $5,106.42 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=-4.4; leftover $2492.17 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `DXCM` | 28 | $88.89 | $2.07 | — | $2,615.38 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=-7.2; leftover $2492.17 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `CYPH` | 627 | $3.97 | $8.09 | — | $118.10 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten,yday_gainer,yday_mover; wish-list (live io HOLD — not a ticket); ⚪; ret5=+58.9; leftover $2492.17 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $118.10 | ▼ close $7,175.76 vs 09:30 $7,478.87 (session -288.55) | 16:00 close · cash $118.10 · equity $7,175.76 vs 09:30 $7,478.87 (-303.11; session marks -288.55) · 3 name(s) marked open→close (per-name table). A×15 09:30 $157.87 → close $161.94 +61.05; DXCM×28 09:30 $88.89 → close $89.17 +7.79; CYPH×627 09:30 $3.97 → close $3.40 -357.39 | — |
 
 ## Not taken
 
@@ -380,13 +391,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | `RVTY` | cash | leftover split 1.47 < 1 share @ 147.61 |
 | 2026-09-17 | `PGEN` | cash | leftover split 1.47 < 1 share @ 7.59 |
 | 2026-09-18 | `RDNT` | min_hold | dropped but min-hold 2/3 sess — no sell |
-| 2026-09-18 | `ILMN` | cash | leftover split 1.10 < 1 share @ 249.13 |
-| 2026-09-18 | `SDGR` | cash | leftover split 1.10 < 1 share @ 29.32 |
-| 2026-09-18 | `ARQT` | cash | leftover split 1.10 < 1 share @ 26.14 |
-| 2026-09-18 | `FTRE` | cash | leftover split 1.10 < 1 share @ 20.10 |
+| 2026-09-18 | `GNRC` | cash | leftover split 1.47 < 1 share @ 209.52 |
+| 2026-09-18 | `VICR` | cash | leftover split 1.47 < 1 share @ 219.62 |
+| 2026-09-18 | `ECO` | cash | leftover split 1.47 < 1 share @ 85.00 |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `RDNT` | 98 | 2026-09-16 @ $77.12 | flatten wish-list ∩ vol🟢; gate vol=good; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); ret5=+7.2; leftover $7564.45 |
+| `A` | 15 | 2026-09-21 @ $157.87 | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=-4.4; leftover $2492.17 |
+| `DXCM` | 28 | 2026-09-21 @ $88.89 | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=-7.2; leftover $2492.17 |
+| `CYPH` | 627 | 2026-09-21 @ $3.97 | flatten wish-list ∩ vol🟢; gate vol=good; list flatten,yday_gainer,yday_mover; wish-list (live io HOLD — not a ticket); ⚪; ret5=+58.9; leftover $2492.17 |

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ catal_present, no 🚨
 
-Cash book **-13.16%** ($8,684) · signal-only (no cash/fees) was -17.08%. Starts YES **0/26**. Fills 7 · skips 11 · realized $-942.09.
+Cash book **-0.74%** ($9,926) · signal-only (no cash/fees) was -12.69%. Starts YES **0/27**. Fills 12 · skips 16 · realized $-73.76.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $4.13.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,926.24.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -73,28 +73,33 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-21 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-08-24 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-08-25 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-08-26 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-08-27 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-08-28 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-08-31 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-08-26 | `CRM` | 25 | — | $199.94 | +0.00 | $205.62 | +142.00 | +142.00 | +0.00 | +142.00 |
+| 2026-08-26 | `NVDA` | 23 | — | $212.64 | +0.00 | $209.66 | -68.54 | -68.54 | +0.00 | -68.54 |
+| 2026-08-27 | `CRM` | 25 | $205.62 | $230.05 | +610.75 | $252.05 | +550.00 | +1160.75 | +752.75 | +1302.75 |
+| 2026-08-27 | `NVDA` | 23 | $209.66 | $222.86 | +303.60 | $227.98 | +117.76 | +421.36 | +235.06 | +352.82 |
+| 2026-08-28 | `CRM` | 25 | $252.05 | $250.47 | -39.50 | $256.00 | +138.25 | +98.75 | +1263.25 | +1401.50 |
+| 2026-08-28 | `NVDA` | 23 | $227.98 | $227.36 | -14.26 | $217.55 | -225.63 | -239.89 | +338.56 | +112.93 |
+| 2026-08-31 | `CRM` | 25 | $256.00 | $254.39 | -40.25 | — | +0.00 | -40.25 | +1361.25 | — |
+| 2026-08-31 | `NVDA` | 23 | $217.55 | $218.87 | +30.36 | — | +0.00 | +30.36 | +143.29 | — |
 | 2026-09-01 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-02 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-09-03 | `CF` | 36 | — | $138.60 | +0.00 | $137.81 | -28.44 | -28.44 | +0.00 | -28.44 |
-| 2026-09-03 | `CTVA` | 55 | — | $90.24 | +0.00 | $88.62 | -89.10 | -89.10 | +0.00 | -89.10 |
-| 2026-09-04 | `CF` | 36 | $137.81 | $135.43 | -85.68 | $133.35 | -74.88 | -160.56 | -114.12 | -189.00 |
-| 2026-09-04 | `CTVA` | 55 | $88.62 | $87.64 | -53.90 | $87.86 | +12.10 | -41.80 | -143.00 | -130.90 |
-| 2026-09-08 | `CF` | 36 | $133.35 | $134.06 | +25.56 | $134.33 | +9.72 | +35.28 | -163.44 | -153.72 |
-| 2026-09-08 | `CTVA` | 55 | $87.86 | $88.25 | +21.45 | $85.90 | -129.25 | -107.80 | -109.45 | -238.70 |
-| 2026-09-09 | `CF` | 36 | $134.33 | $137.88 | +127.80 | — | +0.00 | +127.80 | -25.92 | — |
-| 2026-09-09 | `CTVA` | 55 | $85.90 | $86.40 | +27.50 | — | +0.00 | +27.50 | -211.20 | — |
+| 2026-09-03 | `CF` | 41 | — | $138.60 | +0.00 | $137.81 | -32.39 | -32.39 | +0.00 | -32.39 |
+| 2026-09-03 | `CTVA` | 63 | — | $90.24 | +0.00 | $88.62 | -102.06 | -102.06 | +0.00 | -102.06 |
+| 2026-09-04 | `CF` | 41 | $137.81 | $135.43 | -97.58 | $133.35 | -85.28 | -182.86 | -129.97 | -215.25 |
+| 2026-09-04 | `CTVA` | 63 | $88.62 | $87.64 | -61.74 | $87.86 | +13.86 | -47.88 | -163.80 | -149.94 |
+| 2026-09-08 | `CF` | 41 | $133.35 | $134.06 | +29.11 | $134.33 | +11.07 | +40.18 | -186.14 | -175.07 |
+| 2026-09-08 | `CTVA` | 63 | $87.86 | $88.25 | +24.57 | $85.90 | -148.05 | -123.48 | -125.37 | -273.42 |
+| 2026-09-09 | `CF` | 41 | $134.33 | $137.88 | +145.55 | — | +0.00 | +145.55 | -29.52 | — |
+| 2026-09-09 | `CTVA` | 63 | $85.90 | $86.40 | +31.50 | — | +0.00 | +31.50 | -241.92 | — |
 | 2026-09-10 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-09-11 | `FUBO` | 843 | — | $11.55 | +0.00 | $11.53 | -16.86 | -16.86 | +0.00 | -16.86 |
-| 2026-09-14 | `FUBO` | 843 | $11.53 | $11.56 | +25.29 | $11.87 | +261.33 | +286.62 | +8.43 | +269.76 |
-| 2026-09-15 | `FUBO` | 843 | $11.87 | $11.70 | -143.31 | $10.91 | -665.97 | -809.28 | +126.45 | -539.52 |
-| 2026-09-16 | `FUBO` | 843 | $10.91 | $10.75 | -134.88 | — | +0.00 | -134.88 | -674.40 | — |
-| 2026-09-16 | `RIG` | 1539 | — | $5.87 | +0.00 | $5.54 | -507.87 | -507.87 | +0.00 | -507.87 |
-| 2026-09-17 | `RIG` | 1539 | $5.54 | $5.58 | +61.56 | $5.66 | +123.12 | +184.68 | -446.31 | -323.19 |
-| 2026-09-18 | `RIG` | 1539 | $5.66 | $5.71 | +76.95 | $5.64 | -107.73 | -30.78 | -246.24 | -353.97 |
+| 2026-09-11 | `FUBO` | 970 | — | $11.55 | +0.00 | $11.53 | -19.40 | -19.40 | +0.00 | -19.40 |
+| 2026-09-14 | `FUBO` | 970 | $11.53 | $11.56 | +29.10 | $11.87 | +300.70 | +329.80 | +9.70 | +310.40 |
+| 2026-09-15 | `FUBO` | 970 | $11.87 | $11.70 | -164.90 | $10.91 | -766.30 | -931.20 | +145.50 | -620.80 |
+| 2026-09-16 | `FUBO` | 970 | $10.91 | $10.75 | -155.20 | — | +0.00 | -155.20 | -776.00 | — |
+| 2026-09-16 | `RIG` | 1770 | — | $5.87 | +0.00 | $5.54 | -584.10 | -584.10 | +0.00 | -584.10 |
+| 2026-09-17 | `RIG` | 1770 | $5.54 | $5.58 | +70.80 | $5.66 | +141.60 | +212.40 | -513.30 | -371.70 |
+| 2026-09-18 | `RIG` | 1770 | $5.66 | $5.71 | +88.50 | $5.64 | -123.90 | -35.40 | -283.20 | -407.10 |
+| 2026-09-21 | `RIG` | 1770 | $5.64 | $5.62 | -35.40 | — | +0.00 | -35.40 | -442.50 | — |
 
 ## Each session (cash + holdings state)
 
@@ -109,23 +114,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-21 | +3.25 | $10,000.00 | — | $10,000.00 | +0.00 | +0.00 | — | — | $10,000.00 | $10,000.00 | — |
 | 2026-08-24 | -5.17 | $10,000.00 | — | $10,000.00 | +0.00 | +0.00 | — | — | $10,000.00 | $10,000.00 | — |
 | 2026-08-25 | +1.80 | $10,000.00 | — | $10,000.00 | +0.00 | +0.00 | — | — | $10,000.00 | $10,000.00 | — |
-| 2026-08-26 | +2.02 | $10,000.00 | — | $10,000.00 | +0.00 | +0.00 | — | — | $10,000.00 | $10,000.00 | — |
-| 2026-08-27 | — | $10,000.00 | — | $10,000.00 | +0.00 | +0.00 | — | — | $10,000.00 | $10,000.00 | — |
-| 2026-08-28 | +0.75 | $10,000.00 | — | $10,000.00 | +0.00 | +0.00 | — | — | $10,000.00 | $10,000.00 | — |
-| 2026-08-31 | -5.85 | $10,000.00 | — | $10,000.00 | +0.00 | +0.00 | — | — | $10,000.00 | $10,000.00 | — |
-| 2026-09-01 | -6.30 | $10,000.00 | — | $10,000.00 | +0.00 | +0.00 | — | — | $10,000.00 | $10,000.00 | — |
-| 2026-09-02 | -3.83 | $10,000.00 | — | $10,000.00 | +0.00 | +0.00 | — | — | $10,000.00 | $10,000.00 | — |
-| 2026-09-03 | -0.90 | $10,000.00 | — | $10,000.00 | +0.00 | -117.54 | CF, CTVA | — | $42.95 | $9,878.21 | CF×36, CTVA×55 |
-| 2026-09-04 | +2.25 | $42.95 | CF×36, CTVA×55 | $9,738.63 | -139.58 | -62.78 | — | — | $42.95 | $9,675.85 | CF×36, CTVA×55 |
-| 2026-09-08 | -11.47 | $42.95 | CF×36, CTVA×55 | $9,722.86 | +47.01 | -119.53 | — | — | $42.95 | $9,603.33 | CF×36, CTVA×55 |
-| 2026-09-09 | -13.95 | $42.95 | CF×36, CTVA×55 | $9,758.63 | +155.30 | +0.00 | — | CF, CTVA | $9,754.28 | $9,754.28 | — |
-| 2026-09-10 | -13.28 | $9,754.28 | — | $9,754.28 | -0.00 | +0.00 | — | — | $9,754.28 | $9,754.28 | — |
-| 2026-09-11 | +0.50 | $9,754.28 | — | $9,754.28 | -0.00 | -16.86 | FUBO | — | $6.75 | $9,726.54 | FUBO×843 |
-| 2026-09-14 | -11.00 | $6.75 | FUBO×843 | $9,751.83 | +25.29 | +261.33 | — | — | $6.75 | $10,013.16 | FUBO×843 |
-| 2026-09-15 | -3.84 | $6.75 | FUBO×843 | $9,869.85 | -143.31 | -665.97 | — | — | $6.75 | $9,203.88 | FUBO×843 |
-| 2026-09-16 | +5.30 | $6.75 | FUBO×843 | $9,069.00 | -134.88 | -507.87 | RIG | FUBO | $4.13 | $8,530.19 | RIG×1539 |
-| 2026-09-17 | +7.38 | $4.13 | RIG×1539 | $8,591.75 | +61.56 | +123.12 | — | — | $4.13 | $8,714.87 | RIG×1539 |
-| 2026-09-18 | +4.86 | $4.13 | RIG×1539 | $8,791.82 | +76.95 | -107.73 | — | — | $4.13 | $8,684.09 | RIG×1539 |
+| 2026-08-26 | +2.02 | $10,000.00 | — | $10,000.00 | +0.00 | +73.46 | CRM, NVDA | — | $106.66 | $10,069.34 | CRM×25, NVDA×23 |
+| 2026-08-27 | — | $106.66 | CRM×25, NVDA×23 | $10,983.69 | +914.35 | +667.76 | — | — | $106.66 | $11,651.45 | CRM×25, NVDA×23 |
+| 2026-08-28 | +0.75 | $106.66 | CRM×25, NVDA×23 | $11,597.69 | -53.76 | -87.38 | — | — | $106.66 | $11,510.31 | CRM×25, NVDA×23 |
+| 2026-08-31 | -5.85 | $106.66 | CRM×25, NVDA×23 | $11,500.42 | -9.89 | +0.00 | — | CRM, NVDA | $11,496.18 | $11,496.18 | — |
+| 2026-09-01 | -6.30 | $11,496.18 | — | $11,496.18 | +0.00 | +0.00 | — | — | $11,496.18 | $11,496.18 | — |
+| 2026-09-02 | -3.83 | $11,496.18 | — | $11,496.18 | +0.00 | +0.00 | — | — | $11,496.18 | $11,496.18 | — |
+| 2026-09-03 | -0.90 | $11,496.18 | — | $11,496.18 | +0.00 | -134.45 | CF, CTVA | — | $124.17 | $11,357.44 | CF×41, CTVA×63 |
+| 2026-09-04 | +2.25 | $124.17 | CF×41, CTVA×63 | $11,198.12 | -159.32 | -71.42 | — | — | $124.17 | $11,126.70 | CF×41, CTVA×63 |
+| 2026-09-08 | -11.47 | $124.17 | CF×41, CTVA×63 | $11,180.38 | +53.68 | -136.98 | — | — | $124.17 | $11,043.40 | CF×41, CTVA×63 |
+| 2026-09-09 | -13.95 | $124.17 | CF×41, CTVA×63 | $11,220.45 | +177.05 | +0.00 | — | CF, CTVA | $11,216.05 | $11,216.05 | — |
+| 2026-09-10 | -13.28 | $11,216.05 | — | $11,216.05 | -0.00 | +0.00 | — | — | $11,216.05 | $11,216.05 | — |
+| 2026-09-11 | +0.50 | $11,216.05 | — | $11,216.05 | -0.00 | -19.40 | FUBO | — | $0.03 | $11,184.13 | FUBO×970 |
+| 2026-09-14 | -11.00 | $0.03 | FUBO×970 | $11,213.23 | +29.10 | +300.70 | — | — | $0.03 | $11,513.93 | FUBO×970 |
+| 2026-09-15 | -3.84 | $0.03 | FUBO×970 | $11,349.03 | -164.90 | -766.30 | — | — | $0.03 | $10,582.73 | FUBO×970 |
+| 2026-09-16 | +5.30 | $0.03 | FUBO×970 | $10,427.53 | -155.20 | -584.10 | RIG | FUBO | $2.04 | $9,807.84 | RIG×1770 |
+| 2026-09-17 | +7.38 | $2.04 | RIG×1770 | $9,878.64 | +70.80 | +141.60 | — | — | $2.04 | $10,020.24 | RIG×1770 |
+| 2026-09-18 | +4.86 | $2.04 | RIG×1770 | $10,108.74 | +88.50 | -123.90 | — | — | $2.04 | $9,984.84 | RIG×1770 |
+| 2026-09-21 | +12.87 | $2.04 | RIG×1770 | $9,949.44 | -35.40 | +0.00 | — | RIG | $9,926.24 | $9,926.24 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -150,65 +156,71 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-25 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,000.00 | ▲ 09:30 equity $10,000.00 vs yday $10,000.00 (+0.00) | 09:30 open · cash $10,000.00 · no holdings · equity $10,000.00 vs prior close $10,000.00 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-08-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,000.00 | ▲ close $10,000.00 vs 09:30 $10,000.00 (session +0.00) | 16:00 close · cash $10,000.00 · no lots left · equity $10,000.00. | — |
 | 2026-08-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,000.00 | ▲ 09:30 equity $10,000.00 vs yday $10,000.00 (+0.00) | 09:30 open · cash $10,000.00 · no holdings · equity $10,000.00 vs prior close $10,000.00 (+0.00). Cash unchanged overnight; no fees. | — |
-| 2026-08-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,000.00 | ▲ close $10,000.00 vs 09:30 $10,000.00 (session +0.00) | 16:00 close · cash $10,000.00 · no lots left · equity $10,000.00. | — |
-| 2026-08-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,000.00 | ▲ 09:30 equity $10,000.00 vs yday $10,000.00 (+0.00) | 09:30 open · cash $10,000.00 · no holdings · equity $10,000.00 vs prior close $10,000.00 (+0.00). Cash unchanged overnight; no fees. | — |
-| 2026-08-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,000.00 | ▲ close $10,000.00 vs 09:30 $10,000.00 (session +0.00) | 16:00 close · cash $10,000.00 · no lots left · equity $10,000.00. | — |
-| 2026-08-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,000.00 | ▲ 09:30 equity $10,000.00 vs yday $10,000.00 (+0.00) | 09:30 open · cash $10,000.00 · no holdings · equity $10,000.00 vs prior close $10,000.00 (+0.00). Cash unchanged overnight; no fees. | — |
-| 2026-08-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,000.00 | ▲ close $10,000.00 vs 09:30 $10,000.00 (session +0.00) | 16:00 close · cash $10,000.00 · no lots left · equity $10,000.00. | — |
-| 2026-08-31 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,000.00 | ▲ 09:30 equity $10,000.00 vs yday $10,000.00 (+0.00) | 09:30 open · cash $10,000.00 · no holdings · equity $10,000.00 vs prior close $10,000.00 (+0.00). Cash unchanged overnight; no fees. | — |
-| 2026-08-31 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,000.00 | ▲ close $10,000.00 vs 09:30 $10,000.00 (session +0.00) | 16:00 close · cash $10,000.00 · no lots left · equity $10,000.00. | — |
-| 2026-09-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,000.00 | ▲ 09:30 equity $10,000.00 vs yday $10,000.00 (+0.00) | 09:30 open · cash $10,000.00 · no holdings · equity $10,000.00 vs prior close $10,000.00 (+0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,000.00 | ▲ close $10,000.00 vs 09:30 $10,000.00 (session +0.00) | 16:00 close · cash $10,000.00 · no lots left · equity $10,000.00. | — |
-| 2026-09-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,000.00 | ▲ 09:30 equity $10,000.00 vs yday $10,000.00 (+0.00) | 09:30 open · cash $10,000.00 · no holdings · equity $10,000.00 vs prior close $10,000.00 (+0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,000.00 | ▲ close $10,000.00 vs 09:30 $10,000.00 (session +0.00) | 16:00 close · cash $10,000.00 · no lots left · equity $10,000.00. | — |
-| 2026-09-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,000.00 | ▲ 09:30 equity $10,000.00 vs yday $10,000.00 (+0.00) | 09:30 open · cash $10,000.00 · no holdings · equity $10,000.00 vs prior close $10,000.00 (+0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-03 09:30 ET | **BUY** | `CF` | 36 | $138.60 | $2.10 | — | $5,008.30 | — | union ∩ catal_present, no 🚨; gate catal_present=True; list ohlc_hot; 🔵; ret5=+10.8; leftover $5000.00 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🟢 catal🟡 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `CTVA` | 55 | $90.24 | $2.15 | — | $42.95 | — | union ∩ catal_present, no 🚨; gate catal_present=True; list ohlc_hot; 🔵; ret5=+8.6; leftover $5000.00 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🟢 vol🟡 catal🟡 buy🟡 |
-| 2026-09-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $42.95 | ▼ close $9,878.21 vs 09:30 $10,000.00 (session -117.54) | 16:00 close · cash $42.95 · equity $9,878.21 vs 09:30 $10,000.00 (-121.79; session marks -117.54) · 2 name(s) marked open→close (per-name table). CF×36 09:30 $138.60 → close $137.81 -28.44; CTVA×55 09:30 $90.24 → close $88.62 -89.10 | — |
-| 2026-09-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $42.95 | ▼ 09:30 equity $9,738.63 vs yday $9,878.21 (-139.58) | 09:30 open · cash $42.95 (unchanged overnight, no fees) · equity $9,738.63 vs prior close $9,878.21 (-139.58) · 2 name(s) re-marked at the open (per-name table). CF×36 yday $137.81 → 09:30 $135.43 -85.68; CTVA×55 yday $88.62 → 09:30 $87.64 -53.90 | — |
-| 2026-09-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $42.95 | ▼ close $9,675.85 vs 09:30 $9,738.63 (session -62.78) | 16:00 close · cash $42.95 · equity $9,675.85 vs 09:30 $9,738.63 (-62.78; session marks -62.78) · 2 name(s) marked open→close (per-name table). CF×36 09:30 $135.43 → close $133.35 -74.88; CTVA×55 09:30 $87.64 → close $87.86 +12.10 | — |
-| 2026-09-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $42.95 | ▲ 09:30 equity $9,722.86 vs yday $9,675.85 (+47.01) | 09:30 open · cash $42.95 (unchanged overnight, no fees) · equity $9,722.86 vs prior close $9,675.85 (+47.01) · 2 name(s) re-marked at the open (per-name table). CF×36 yday $133.35 → 09:30 $134.06 +25.56; CTVA×55 yday $87.86 → 09:30 $88.25 +21.45 | — |
-| 2026-09-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $42.95 | ▼ close $9,603.33 vs 09:30 $9,722.86 (session -119.53) | 16:00 close · cash $42.95 · equity $9,603.33 vs 09:30 $9,722.86 (-119.53; session marks -119.53) · 2 name(s) marked open→close (per-name table). CF×36 09:30 $134.06 → close $134.33 +9.72; CTVA×55 09:30 $88.25 → close $85.90 -129.25 | — |
-| 2026-09-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $42.95 | ▲ 09:30 equity $9,758.63 vs yday $9,603.33 (+155.30) | 09:30 open · cash $42.95 (unchanged overnight, no fees) · equity $9,758.63 vs prior close $9,603.33 (+155.30) · 2 name(s) re-marked at the open (per-name table). CF×36 yday $134.33 → 09:30 $137.88 +127.80; CTVA×55 yday $85.90 → 09:30 $86.40 +27.50 | — |
-| 2026-09-09 09:30 ET | **SELL** | `CF` | 36 | $137.88 | $2.15 | $-30.17 | $5,004.48 | ▼ -30.17 after sell → book $9,756.48; vs 09:30 mark -2.15 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-09 09:30 ET | **SELL** | `CTVA` | 55 | $86.40 | $2.20 | $-215.56 | $9,754.28 | ▼ -215.56 after sell → book $9,754.28; vs 09:30 mark -2.20 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,754.28 | ▲ close $9,754.28 vs 09:30 $9,758.63 (session +0.00) | 16:00 close · cash $9,754.28 · no lots left · equity $9,754.28. | — |
-| 2026-09-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,754.28 | ▲ 09:30 equity $9,754.28 vs yday $9,754.28 (-0.00) | 09:30 open · cash $9,754.28 · no holdings · equity $9,754.28 vs prior close $9,754.28 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,754.28 | ▲ close $9,754.28 vs 09:30 $9,754.28 (session +0.00) | 16:00 close · cash $9,754.28 · no lots left · equity $9,754.28. | — |
-| 2026-09-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,754.28 | ▲ 09:30 equity $9,754.28 vs yday $9,754.28 (-0.00) | 09:30 open · cash $9,754.28 · no holdings · equity $9,754.28 vs prior close $9,754.28 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-11 09:30 ET | **BUY** | `FUBO` | 843 | $11.55 | $10.87 | — | $6.75 | — | union ∩ catal_present, no 🚨; gate catal_present=True; list probable,yday_gainer; 🔵; ret5=+1.2; leftover $9754.28 | join🔴 sector🟢 gen🟡 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 catal🟡 buy🟡 |
-| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.75 | ▼ close $9,726.54 vs 09:30 $9,754.28 (session -16.86) | 16:00 close · cash $6.75 · equity $9,726.54 vs 09:30 $9,754.28 (-27.74; session marks -16.86) · 1 name(s) marked open→close (per-name table). FUBO×843 09:30 $11.55 → close $11.53 -16.86 | — |
-| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.75 | ▲ 09:30 equity $9,751.83 vs yday $9,726.54 (+25.29) | 09:30 open · cash $6.75 (unchanged overnight, no fees) · equity $9,751.83 vs prior close $9,726.54 (+25.29) · 1 name(s) re-marked at the open (per-name table). FUBO×843 yday $11.53 → 09:30 $11.56 +25.29 | — |
-| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.75 | ▲ close $10,013.16 vs 09:30 $9,751.83 (session +261.33) | 16:00 close · cash $6.75 · equity $10,013.16 vs 09:30 $9,751.83 (+261.33; session marks +261.33) · 1 name(s) marked open→close (per-name table). FUBO×843 09:30 $11.56 → close $11.87 +261.33 | — |
-| 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.75 | ▼ 09:30 equity $9,869.85 vs yday $10,013.16 (-143.31) | 09:30 open · cash $6.75 (unchanged overnight, no fees) · equity $9,869.85 vs prior close $10,013.16 (-143.31) · 1 name(s) re-marked at the open (per-name table). FUBO×843 yday $11.87 → 09:30 $11.70 -143.31 | — |
-| 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $6.75 | ▼ close $9,203.88 vs 09:30 $9,869.85 (session -665.97) | 16:00 close · cash $6.75 · equity $9,203.88 vs 09:30 $9,869.85 (-665.97; session marks -665.97) · 1 name(s) marked open→close (per-name table). FUBO×843 09:30 $11.70 → close $10.91 -665.97 | — |
-| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $6.75 | ▼ 09:30 equity $9,069.00 vs yday $9,203.88 (-134.88) | 09:30 open · cash $6.75 (unchanged overnight, no fees) · equity $9,069.00 vs prior close $9,203.88 (-134.88) · 1 name(s) re-marked at the open (per-name table). FUBO×843 yday $10.91 → 09:30 $10.75 -134.88 | — |
-| 2026-09-16 09:30 ET | **SELL** | `FUBO` | 843 | $10.75 | $11.09 | $-696.36 | $9,057.91 | ▼ -696.36 after sell → book $9,057.91; vs 09:30 mark -11.09 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 09:30 ET | **BUY** | `RIG` | 1539 | $5.87 | $19.85 | — | $4.13 | — | union ∩ catal_present, no 🚨; gate catal_present=True; list probable,yday_gainer; 🔵; ret5=+3.1; leftover $9057.91 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟡 vol🟢 catal🟡 buy🟡 |
-| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.13 | ▼ close $8,530.19 vs 09:30 $9,069.00 (session -507.87) | 16:00 close · cash $4.13 · equity $8,530.19 vs 09:30 $9,069.00 (-538.81; session marks -507.87) · 1 name(s) marked open→close (per-name table). RIG×1539 09:30 $5.87 → close $5.54 -507.87 | — |
-| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4.13 | ▲ 09:30 equity $8,591.75 vs yday $8,530.19 (+61.56) | 09:30 open · cash $4.13 (unchanged overnight, no fees) · equity $8,591.75 vs prior close $8,530.19 (+61.56) · 1 name(s) re-marked at the open (per-name table). RIG×1539 yday $5.54 → 09:30 $5.58 +61.56 | — |
-| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.13 | ▲ close $8,714.87 vs 09:30 $8,591.75 (session +123.12) | 16:00 close · cash $4.13 · equity $8,714.87 vs 09:30 $8,591.75 (+123.12; session marks +123.12) · 1 name(s) marked open→close (per-name table). RIG×1539 09:30 $5.58 → close $5.66 +123.12 | — |
-| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4.13 | ▲ 09:30 equity $8,791.82 vs yday $8,714.87 (+76.95) | 09:30 open · cash $4.13 (unchanged overnight, no fees) · equity $8,791.82 vs prior close $8,714.87 (+76.95) · 1 name(s) re-marked at the open (per-name table). RIG×1539 yday $5.66 → 09:30 $5.71 +76.95 | — |
-| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.13 | ▼ close $8,684.09 vs 09:30 $8,791.82 (session -107.73) | 16:00 close · cash $4.13 · equity $8,684.09 vs 09:30 $8,791.82 (-107.73; session marks -107.73) · 1 name(s) marked open→close (per-name table). RIG×1539 09:30 $5.71 → close $5.64 -107.73 | — |
+| 2026-08-26 09:30 ET | **BUY** | `CRM` | 25 | $199.94 | $2.06 | — | $4,999.44 | — | union ∩ catal_present, no 🚨; gate catal_present=True; list overnight,overnight_mega; ret5=+2.1; leftover $5000.00 | join🟡 sector🔴 gen🟢 news🔴 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🔴 catal🟡 buy🟡 |
+| 2026-08-26 09:30 ET | **BUY** | `NVDA` | 23 | $212.64 | $2.06 | — | $106.66 | — | union ∩ catal_present, no 🚨; gate catal_present=True; list overnight,overnight_mega; 🔵; ret5=-3.0; leftover $5000.00 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🟡 heat🟢 vol🔴 catal🟡 buy🟡 |
+| 2026-08-26 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $106.66 | ▲ close $10,069.34 vs 09:30 $10,000.00 (session +73.46) | 16:00 close · cash $106.66 · equity $10,069.34 vs 09:30 $10,000.00 (+69.34; session marks +73.46) · 2 name(s) marked open→close (per-name table). CRM×25 09:30 $199.94 → close $205.62 +142.00; NVDA×23 09:30 $212.64 → close $209.66 -68.54 | — |
+| 2026-08-27 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $106.66 | ▲ 09:30 equity $10,983.69 vs yday $10,069.34 (+914.35) | 09:30 open · cash $106.66 (unchanged overnight, no fees) · equity $10,983.69 vs prior close $10,069.34 (+914.35) · 2 name(s) re-marked at the open (per-name table). CRM×25 yday $205.62 → 09:30 $230.05 +610.75; NVDA×23 yday $209.66 → 09:30 $222.86 +303.60 | — |
+| 2026-08-27 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $106.66 | ▲ close $11,651.45 vs 09:30 $10,983.69 (session +667.76) | 16:00 close · cash $106.66 · equity $11,651.45 vs 09:30 $10,983.69 (+667.76; session marks +667.76) · 2 name(s) marked open→close (per-name table). CRM×25 09:30 $230.05 → close $252.05 +550.00; NVDA×23 09:30 $222.86 → close $227.98 +117.76 | — |
+| 2026-08-28 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $106.66 | ▼ 09:30 equity $11,597.69 vs yday $11,651.45 (-53.76) | 09:30 open · cash $106.66 (unchanged overnight, no fees) · equity $11,597.69 vs prior close $11,651.45 (-53.76) · 2 name(s) re-marked at the open (per-name table). CRM×25 yday $252.05 → 09:30 $250.47 -39.50; NVDA×23 yday $227.98 → 09:30 $227.36 -14.26 | — |
+| 2026-08-28 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $106.66 | ▼ close $11,510.31 vs 09:30 $11,597.69 (session -87.38) | 16:00 close · cash $106.66 · equity $11,510.31 vs 09:30 $11,597.69 (-87.38; session marks -87.38) · 2 name(s) marked open→close (per-name table). CRM×25 09:30 $250.47 → close $256.00 +138.25; NVDA×23 09:30 $227.36 → close $217.55 -225.63 | — |
+| 2026-08-31 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $106.66 | ▼ 09:30 equity $11,500.42 vs yday $11,510.31 (-9.89) | 09:30 open · cash $106.66 (unchanged overnight, no fees) · equity $11,500.42 vs prior close $11,510.31 (-9.89) · 2 name(s) re-marked at the open (per-name table). CRM×25 yday $256.00 → 09:30 $254.39 -40.25; NVDA×23 yday $217.55 → 09:30 $218.87 +30.36 | — |
+| 2026-08-31 09:30 ET | **SELL** | `CRM` | 25 | $254.39 | $2.13 | $+1357.06 | $6,464.28 | ▲ +1,357.06 after sell → book $11,498.29; vs 09:30 mark -2.13 | dropped from list after 3 sess (min 3) | join🔴 sector🟢 gen🔴 news🟢 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-08-31 09:30 ET | **SELL** | `NVDA` | 23 | $218.87 | $2.11 | $+139.12 | $11,496.18 | ▲ +139.12 after sell → book $11,496.18; vs 09:30 mark -2.11 | dropped from list after 3 sess (min 3) | — |
+| 2026-08-31 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,496.18 | ▲ close $11,496.18 vs 09:30 $11,500.42 (session +0.00) | 16:00 close · cash $11,496.18 · no lots left · equity $11,496.18. | — |
+| 2026-09-01 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,496.18 | ▲ 09:30 equity $11,496.18 vs yday $11,496.18 (+0.00) | 09:30 open · cash $11,496.18 · no holdings · equity $11,496.18 vs prior close $11,496.18 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-01 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,496.18 | ▲ close $11,496.18 vs 09:30 $11,496.18 (session +0.00) | 16:00 close · cash $11,496.18 · no lots left · equity $11,496.18. | — |
+| 2026-09-02 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,496.18 | ▲ 09:30 equity $11,496.18 vs yday $11,496.18 (+0.00) | 09:30 open · cash $11,496.18 · no holdings · equity $11,496.18 vs prior close $11,496.18 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,496.18 | ▲ close $11,496.18 vs 09:30 $11,496.18 (session +0.00) | 16:00 close · cash $11,496.18 · no lots left · equity $11,496.18. | — |
+| 2026-09-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,496.18 | ▲ 09:30 equity $11,496.18 vs yday $11,496.18 (+0.00) | 09:30 open · cash $11,496.18 · no holdings · equity $11,496.18 vs prior close $11,496.18 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-03 09:30 ET | **BUY** | `CF` | 41 | $138.60 | $2.11 | — | $5,811.47 | — | union ∩ catal_present, no 🚨; gate catal_present=True; list ohlc_hot; 🔵; ret5=+10.8; leftover $5748.09 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🟢 catal🟡 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `CTVA` | 63 | $90.24 | $2.18 | — | $124.17 | — | union ∩ catal_present, no 🚨; gate catal_present=True; list ohlc_hot; 🔵; ret5=+8.6; leftover $5748.09 | join🔴 sector🟢 gen🟡 news🟡 digest🟢 judge🔴 ab🟢 peer🔴 heat🟢 vol🟡 catal🟡 buy🟡 |
+| 2026-09-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $124.17 | ▼ close $11,357.44 vs 09:30 $11,496.18 (session -134.45) | 16:00 close · cash $124.17 · equity $11,357.44 vs 09:30 $11,496.18 (-138.74; session marks -134.45) · 2 name(s) marked open→close (per-name table). CF×41 09:30 $138.60 → close $137.81 -32.39; CTVA×63 09:30 $90.24 → close $88.62 -102.06 | — |
+| 2026-09-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $124.17 | ▼ 09:30 equity $11,198.12 vs yday $11,357.44 (-159.32) | 09:30 open · cash $124.17 (unchanged overnight, no fees) · equity $11,198.12 vs prior close $11,357.44 (-159.32) · 2 name(s) re-marked at the open (per-name table). CF×41 yday $137.81 → 09:30 $135.43 -97.58; CTVA×63 yday $88.62 → 09:30 $87.64 -61.74 | — |
+| 2026-09-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $124.17 | ▼ close $11,126.70 vs 09:30 $11,198.12 (session -71.42) | 16:00 close · cash $124.17 · equity $11,126.70 vs 09:30 $11,198.12 (-71.42; session marks -71.42) · 2 name(s) marked open→close (per-name table). CF×41 09:30 $135.43 → close $133.35 -85.28; CTVA×63 09:30 $87.64 → close $87.86 +13.86 | — |
+| 2026-09-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $124.17 | ▲ 09:30 equity $11,180.38 vs yday $11,126.70 (+53.68) | 09:30 open · cash $124.17 (unchanged overnight, no fees) · equity $11,180.38 vs prior close $11,126.70 (+53.68) · 2 name(s) re-marked at the open (per-name table). CF×41 yday $133.35 → 09:30 $134.06 +29.11; CTVA×63 yday $87.86 → 09:30 $88.25 +24.57 | — |
+| 2026-09-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $124.17 | ▼ close $11,043.40 vs 09:30 $11,180.38 (session -136.98) | 16:00 close · cash $124.17 · equity $11,043.40 vs 09:30 $11,180.38 (-136.98; session marks -136.98) · 2 name(s) marked open→close (per-name table). CF×41 09:30 $134.06 → close $134.33 +11.07; CTVA×63 09:30 $88.25 → close $85.90 -148.05 | — |
+| 2026-09-09 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $124.17 | ▲ 09:30 equity $11,220.45 vs yday $11,043.40 (+177.05) | 09:30 open · cash $124.17 (unchanged overnight, no fees) · equity $11,220.45 vs prior close $11,043.40 (+177.05) · 2 name(s) re-marked at the open (per-name table). CF×41 yday $134.33 → 09:30 $137.88 +145.55; CTVA×63 yday $85.90 → 09:30 $86.40 +31.50 | — |
+| 2026-09-09 09:30 ET | **SELL** | `CF` | 41 | $137.88 | $2.17 | $-33.80 | $5,775.08 | ▼ -33.80 after sell → book $11,218.28; vs 09:30 mark -2.17 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-09 09:30 ET | **SELL** | `CTVA` | 63 | $86.40 | $2.23 | $-246.33 | $11,216.05 | ▼ -246.33 after sell → book $11,216.05; vs 09:30 mark -2.23 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-09 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,216.05 | ▲ close $11,216.05 vs 09:30 $11,220.45 (session +0.00) | 16:00 close · cash $11,216.05 · no lots left · equity $11,216.05. | — |
+| 2026-09-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,216.05 | ▲ 09:30 equity $11,216.05 vs yday $11,216.05 (-0.00) | 09:30 open · cash $11,216.05 · no holdings · equity $11,216.05 vs prior close $11,216.05 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,216.05 | ▲ close $11,216.05 vs 09:30 $11,216.05 (session +0.00) | 16:00 close · cash $11,216.05 · no lots left · equity $11,216.05. | — |
+| 2026-09-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,216.05 | ▲ 09:30 equity $11,216.05 vs yday $11,216.05 (-0.00) | 09:30 open · cash $11,216.05 · no holdings · equity $11,216.05 vs prior close $11,216.05 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-11 09:30 ET | **BUY** | `FUBO` | 970 | $11.55 | $12.51 | — | $0.03 | — | union ∩ catal_present, no 🚨; gate catal_present=True; list probable,yday_gainer; 🔵; ret5=+1.2; leftover $11216.05 | join🔴 sector🟢 gen🟡 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 catal🟡 buy🟡 |
+| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.03 | ▼ close $11,184.13 vs 09:30 $11,216.05 (session -19.40) | 16:00 close · cash $0.03 · equity $11,184.13 vs 09:30 $11,216.05 (-31.92; session marks -19.40) · 1 name(s) marked open→close (per-name table). FUBO×970 09:30 $11.55 → close $11.53 -19.40 | — |
+| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.03 | ▲ 09:30 equity $11,213.23 vs yday $11,184.13 (+29.10) | 09:30 open · cash $0.03 (unchanged overnight, no fees) · equity $11,213.23 vs prior close $11,184.13 (+29.10) · 1 name(s) re-marked at the open (per-name table). FUBO×970 yday $11.53 → 09:30 $11.56 +29.10 | — |
+| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.03 | ▲ close $11,513.93 vs 09:30 $11,213.23 (session +300.70) | 16:00 close · cash $0.03 · equity $11,513.93 vs 09:30 $11,213.23 (+300.70; session marks +300.70) · 1 name(s) marked open→close (per-name table). FUBO×970 09:30 $11.56 → close $11.87 +300.70 | — |
+| 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.03 | ▼ 09:30 equity $11,349.03 vs yday $11,513.93 (-164.90) | 09:30 open · cash $0.03 (unchanged overnight, no fees) · equity $11,349.03 vs prior close $11,513.93 (-164.90) · 1 name(s) re-marked at the open (per-name table). FUBO×970 yday $11.87 → 09:30 $11.70 -164.90 | — |
+| 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.03 | ▼ close $10,582.73 vs 09:30 $11,349.03 (session -766.30) | 16:00 close · cash $0.03 · equity $10,582.73 vs 09:30 $11,349.03 (-766.30; session marks -766.30) · 1 name(s) marked open→close (per-name table). FUBO×970 09:30 $11.70 → close $10.91 -766.30 | — |
+| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.03 | ▼ 09:30 equity $10,427.53 vs yday $10,582.73 (-155.20) | 09:30 open · cash $0.03 (unchanged overnight, no fees) · equity $10,427.53 vs prior close $10,582.73 (-155.20) · 1 name(s) re-marked at the open (per-name table). FUBO×970 yday $10.91 → 09:30 $10.75 -155.20 | — |
+| 2026-09-16 09:30 ET | **SELL** | `FUBO` | 970 | $10.75 | $12.76 | $-801.27 | $10,414.78 | ▼ -801.27 after sell → book $10,414.78; vs 09:30 mark -12.75 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **BUY** | `RIG` | 1770 | $5.87 | $22.83 | — | $2.04 | — | union ∩ catal_present, no 🚨; gate catal_present=True; list probable,yday_gainer; 🔵; ret5=+3.1; leftover $10414.78 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟡 vol🟢 catal🟡 buy🟡 |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.04 | ▼ close $9,807.84 vs 09:30 $10,427.53 (session -584.10) | 16:00 close · cash $2.04 · equity $9,807.84 vs 09:30 $10,427.53 (-619.69; session marks -584.10) · 1 name(s) marked open→close (per-name table). RIG×1770 09:30 $5.87 → close $5.54 -584.10 | — |
+| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.04 | ▲ 09:30 equity $9,878.64 vs yday $9,807.84 (+70.80) | 09:30 open · cash $2.04 (unchanged overnight, no fees) · equity $9,878.64 vs prior close $9,807.84 (+70.80) · 1 name(s) re-marked at the open (per-name table). RIG×1770 yday $5.54 → 09:30 $5.58 +70.80 | — |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.04 | ▲ close $10,020.24 vs 09:30 $9,878.64 (session +141.60) | 16:00 close · cash $2.04 · equity $10,020.24 vs 09:30 $9,878.64 (+141.60; session marks +141.60) · 1 name(s) marked open→close (per-name table). RIG×1770 09:30 $5.58 → close $5.66 +141.60 | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.04 | ▲ 09:30 equity $10,108.74 vs yday $10,020.24 (+88.50) | 09:30 open · cash $2.04 (unchanged overnight, no fees) · equity $10,108.74 vs prior close $10,020.24 (+88.50) · 1 name(s) re-marked at the open (per-name table). RIG×1770 yday $5.66 → 09:30 $5.71 +88.50 | — |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.04 | ▼ close $9,984.84 vs 09:30 $10,108.74 (session -123.90) | 16:00 close · cash $2.04 · equity $9,984.84 vs 09:30 $10,108.74 (-123.90; session marks -123.90) · 1 name(s) marked open→close (per-name table). RIG×1770 09:30 $5.71 → close $5.64 -123.90 | — |
+| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.04 | ▼ 09:30 equity $9,949.44 vs yday $9,984.84 (-35.40) | 09:30 open · cash $2.04 (unchanged overnight, no fees) · equity $9,949.44 vs prior close $9,984.84 (-35.40) · 1 name(s) re-marked at the open (per-name table). RIG×1770 yday $5.64 → 09:30 $5.62 -35.40 | — |
+| 2026-09-21 09:30 ET | **SELL** | `RIG` | 1770 | $5.62 | $23.21 | $-488.54 | $9,926.24 | ▼ -488.54 after sell → book $9,926.24; vs 09:30 mark -23.20 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,926.24 | ▲ close $9,926.24 vs 09:30 $9,949.44 (session +0.00) | 16:00 close · cash $9,926.24 · no lots left · equity $9,926.24. | — |
 
 ## Not taken
 
 | Date | Ticker | Kind | Why |
 |---|---|---|---|
+| 2026-08-27 | `CRM` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-08-27 | `NVDA` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-08-28 | `CRM` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-08-28 | `NVDA` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-02 | `FMC` | hard_red | hard-red S=-3.83 sit; no new buys |
 | 2026-09-02 | `CF` | hard_red | hard-red S=-3.83 sit; no new buys |
 | 2026-09-04 | `CF` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-04 | `CTVA` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-08 | `CF` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-08 | `CTVA` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-10 | `ORCL` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-14 | `FUBO` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-14 | `NMAX` | hard_red | hard-red S=-11.00 sit; no new buys |
 | 2026-09-15 | `FUBO` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-17 | `RIG` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-18 | `RIG` | min_hold | dropped but min-hold 2/3 sess — no sell |
-
-## Still open (marked at last close)
-
-| Ticker | Shares | Entry | Why |
-|---|---:|---|---|
-| `RIG` | 1539 | 2026-09-16 @ $5.87 | union ∩ catal_present, no 🚨; gate catal_present=True; list probable,yday_gainer; 🔵; ret5=+3.1; leftover $9057.91 |

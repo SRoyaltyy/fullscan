@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `both` · S≥+5: sizeup + more names
 
-Cash book **-5.58%** ($9,442) · signal-only (no cash/fees) was +2.48%. Starts YES **1/26**. Fills 116 · skips 185 · realized $-383.84.
+Cash book **-8.73%** ($9,127) · signal-only (no cash/fees) was +2.16%. Starts YES **2/27**. Fills 122 · skips 191 · realized $-555.53.
 
 ## How this sleeve decides (like you are 10)
 
@@ -51,7 +51,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $70.50.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $527.20.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -293,9 +293,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | `IOVA` | 4 | $10.02 | $10.12 | +0.40 | $10.25 | +0.52 | +0.92 | -0.52 | +0.00 |
 | 2026-09-18 | `PGEN` | 6 | $7.87 | $7.98 | +0.66 | $7.78 | -1.20 | -0.54 | +2.34 | +1.14 |
 | 2026-09-18 | `AMN` | 1 | $34.55 | $34.52 | -0.03 | $34.26 | -0.26 | -0.29 | -0.41 | -0.67 |
-| 2026-09-18 | `SDGR` | 1 | — | $29.32 | +0.00 | $29.02 | -0.30 | -0.30 | +0.00 | -0.30 |
-| 2026-09-18 | `ARQT` | 1 | — | $26.14 | +0.00 | $25.38 | -0.76 | -0.76 | +0.00 | -0.76 |
-| 2026-09-18 | `FTRE` | 2 | — | $20.10 | +0.00 | $19.93 | -0.34 | -0.34 | +0.00 | -0.34 |
+| 2026-09-21 | `IQV` | 8 | $266.42 | $266.76 | +2.72 | — | +0.00 | +2.72 | -33.04 | — |
+| 2026-09-21 | `RDNT` | 31 | $76.00 | $76.27 | +8.37 | — | +0.00 | +8.37 | -26.35 | — |
+| 2026-09-21 | `AVAH` | 167 | $13.67 | $13.65 | -3.34 | — | +0.00 | -3.34 | -110.22 | — |
+| 2026-09-21 | `BLFS` | 65 | $36.69 | $36.70 | +0.65 | — | +0.00 | +0.65 | +15.60 | — |
+| 2026-09-21 | `IOVA` | 4 | $10.25 | $10.43 | +0.72 | $10.19 | -0.96 | -0.24 | +0.72 | -0.24 |
+| 2026-09-21 | `PGEN` | 6 | $7.78 | $7.84 | +0.36 | $7.70 | -0.84 | -0.48 | +1.50 | +0.66 |
+| 2026-09-21 | `AMN` | 1 | $34.26 | $34.47 | +0.21 | $34.24 | -0.23 | -0.02 | -0.46 | -0.69 |
+| 2026-09-21 | `A` | 11 | — | $157.87 | +0.00 | $161.94 | +44.77 | +44.77 | +0.00 | +44.77 |
+| 2026-09-21 | `HUM` | 4 | — | $386.20 | +0.00 | $378.58 | -30.48 | -30.48 | +0.00 | -30.48 |
+| 2026-09-21 | `DXCM` | 20 | — | $88.89 | +0.00 | $89.17 | +5.56 | +5.56 | +0.00 | +5.56 |
+| 2026-09-21 | `MGTX` | 138 | — | $13.47 | +0.00 | $13.08 | -53.82 | -53.82 | +0.00 | -53.82 |
+| 2026-09-21 | `CYPH` | 469 | — | $3.97 | +0.00 | $3.40 | -267.33 | -267.33 | +0.00 | -267.33 |
 
 ## Each session (cash + holdings state)
 
@@ -326,7 +335,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | -3.84 | $275.90 | AUPH×104, OVID×626, SANM×8, ORCL×10, NVT×10, COHU×30 | $9,749.74 | +70.24 | -196.38 | — | — | $275.90 | $9,553.36 | AUPH×104, OVID×626, SANM×8, ORCL×10, NVT×10, COHU×30 |
 | 2026-09-16 | +5.30 | $275.90 | AUPH×104, OVID×626, SANM×8, ORCL×10, NVT×10, COHU×30 | $9,634.88 | +81.52 | -89.20 | IQV, RDNT, AVAH, BLFS | AUPH, OVID, SANM, ORCL, NVT, COHU | $289.85 | $9,518.16 | IQV×8, RDNT×31, AVAH×167, BLFS×65 |
 | 2026-09-17 | +7.38 | $289.85 | IQV×8, RDNT×31, AVAH×167, BLFS×65 | $9,621.35 | +103.19 | -36.18 | IOVA, PGEN, AMN | — | $167.13 | $9,583.92 | IQV×8, RDNT×31, AVAH×167, BLFS×65, IOVA×4, PGEN×6, AMN×1 |
-| 2026-09-18 | +4.86 | $167.13 | IQV×8, RDNT×31, AVAH×167, BLFS×65, IOVA×4, PGEN×6, AMN×1 | $9,561.82 | -22.10 | -119.05 | SDGR, ARQT, FTRE | — | $70.50 | $9,441.80 | IQV×8, RDNT×31, AVAH×167, BLFS×65, IOVA×4, PGEN×6, AMN×1, SDGR×1, ARQT×1, FTRE×2 |
+| 2026-09-18 | +4.86 | $167.13 | IQV×8, RDNT×31, AVAH×167, BLFS×65, IOVA×4, PGEN×6, AMN×1 | $9,561.82 | -22.10 | -117.65 | — | — | $167.13 | $9,444.17 | IQV×8, RDNT×31, AVAH×167, BLFS×65, IOVA×4, PGEN×6, AMN×1 |
+| 2026-09-21 | +12.87 | $167.13 | IQV×8, RDNT×31, AVAH×167, BLFS×65, IOVA×4, PGEN×6, AMN×1 | $9,453.86 | +9.69 | -303.33 | A, HUM, DXCM, MGTX, CYPH | IQV, RDNT, AVAH, BLFS | $527.20 | $9,127.10 | IOVA×4, PGEN×6, AMN×1, A×11, HUM×4, DXCM×20, MGTX×138, CYPH×469 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -382,11 +392,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-20 09:30 ET | **BUY** | `IAG` | 65 | $19.63 | $2.19 | — | $3,939.64 | — | S≥+5: sizeup + more names; list flatten,mover_buy; live flatten mover; 🔵; ⚪; ret5=+9.1; leftover $1293.51 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
 | 2026-08-20 09:30 ET | **BUY** | `KGC` | 43 | $29.63 | $2.12 | — | $2,663.43 | — | S≥+5: sizeup + more names; list flatten,mover_buy; live flatten mover; 🔵; ⚪; ret5=+8.7; leftover $1293.51 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
 | 2026-08-20 09:30 ET | **BUY** | `NFGC` | 739 | $1.75 | $9.53 | — | $1,360.65 | — | S≥+5: sizeup + more names; list flatten,mover_buy; live flatten mover; 🔵; ⚪; ret5=+7.9; leftover $1293.51 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
-| 2026-08-20 09:30 ET | **BUY** | `WPM` | 8 | $144.54 | $2.01 | — | $202.32 | — | S≥+5: sizeup + more names; list flatten,mover_buy,oppset; live flatten mover; 🔵; ⚪; ret5=+9.2; leftover $1293.51 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
+| 2026-08-20 09:30 ET | **BUY** | `WPM` | 8 | $144.54 | $2.01 | — | $202.32 | — | S≥+5: sizeup + more names; list flatten,mover_buy; live flatten mover; 🔵; ⚪; ret5=+9.2; leftover $1293.51 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
 | 2026-08-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $202.32 | ▲ close $10,562.66 vs 09:30 $10,348.53 (session +239.71) | 16:00 close · cash $202.32 · equity $10,562.66 vs 09:30 $10,348.53 (+214.13; session marks +239.71) · 8 name(s) marked open→close (per-name table). AG×62 09:30 $20.55 → close $21.19 +39.68; BHP×14 09:30 $91.01 → close $93.63 +36.68; CDE×62 09:30 $20.65 → close $21.11 +28.52; HDSN×224 09:30 $5.77 → close $5.57 -44.80; IAG×65 09:30 $19.63 → close $20.50 +56.55; KGC×43 09:30 $29.63 → close $31.43 +77.40; NFGC×739 09:30 $1.75 → close $1.75 +0.00; WPM×8 09:30 $144.54 → close $150.25 +45.68 | — |
 | 2026-08-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $202.32 | ▲ 09:30 equity $10,838.55 vs yday $10,562.66 (+275.89) | 09:30 open · cash $202.32 (unchanged overnight, no fees) · equity $10,838.55 vs prior close $10,562.66 (+275.89) · 8 name(s) re-marked at the open (per-name table). AG×62 yday $21.19 → 09:30 $21.90 +44.02; BHP×14 yday $93.63 → 09:30 $95.72 +29.26; CDE×62 yday $21.11 → 09:30 $21.75 +39.68; HDSN×224 yday $5.57 → 09:30 $5.67 +22.40; IAG×65 yday $20.50 → 09:30 $21.17 +43.55; KGC×43 yday $31.43 → 09:30 $32.17 +31.82; NFGC×739 yday $1.75 → 09:30 $1.79 +29.56; WPM×8 yday $150.25 → 09:30 $154.70 +35.60 | — |
 | 2026-08-21 09:30 ET | **BUY** | `AUPH` | 1 | $17.20 | $0.17 | — | $184.94 | — | S≥+5: sizeup + more names; list flatten,mover_buy; live flatten mover; 🔵; ⚪; ret5=+13.8; leftover $25.29 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟢 |
-| 2026-08-21 09:30 ET | **BUY** | `ARCT` | 2 | $11.13 | $0.23 | — | $162.45 | — | S≥+5: sizeup + more names; list flatten,yday_gainer,mover_buy,oppset; live flatten mover; 🔵; ⚪; ret5=+39.8; leftover $25.29 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
+| 2026-08-21 09:30 ET | **BUY** | `ARCT` | 2 | $11.13 | $0.23 | — | $162.45 | — | S≥+5: sizeup + more names; list flatten,yday_gainer,mover_buy; live flatten mover; 🔵; ⚪; ret5=+39.8; leftover $25.29 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
 | 2026-08-21 09:30 ET | **BUY** | `AUTL` | 10 | $2.47 | $0.28 | — | $137.48 | — | S≥+5: sizeup + more names; list flatten,mover_buy; live flatten mover; 🔵; ⚪; ret5=+10.8; leftover $25.29 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
 | 2026-08-21 09:30 ET | **BUY** | `CRDL` | 13 | $1.93 | $0.29 | — | $112.10 | — | S≥+5: sizeup + more names; list flatten,mover_buy; live flatten mover; 🔵; ⚪; ret5=+10.2; leftover $25.29 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
 | 2026-08-21 09:30 ET | **BUY** | `CYPH` | 19 | $1.32 | $0.31 | — | $86.71 | — | S≥+5: sizeup + more names; list flatten,yday_gainer,mover_buy; live flatten mover; 🔵; ⚪; ret5=+83.6; leftover $25.29 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
@@ -411,7 +421,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-25 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $117.11 | ▲ close $10,802.81 vs 09:30 $10,743.92 (session +100.41) | 16:00 close · cash $117.11 · equity $10,802.81 vs 09:30 $10,743.92 (+58.89; session marks +100.41) · 11 name(s) marked open→close (per-name table). AUPH×1 09:30 $16.63 → close $16.75 +0.12; ARCT×2 09:30 $14.12 → close $15.44 +2.64; AUTL×10 09:30 $2.38 → close $2.44 +0.60; CRDL×13 09:30 $1.89 → close $2.00 +1.43; CYPH×19 09:30 $1.56 → close $1.64 +1.52; MOS×74 09:30 $23.77 → close $24.27 +37.00; OCUL×160 09:30 $10.98 → close $10.88 -16.00; INSP×28 09:30 $61.19 → close $61.07 -3.36; CRMD×211 09:30 $8.35 → close $8.56 +44.31; RZLT×357 09:30 $4.94 → close $5.01 +24.99; HCA×4 09:30 $426.97 → close $428.76 +7.16 | — |
 | 2026-08-26 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $117.11 | ▲ 09:30 equity $10,804.99 vs yday $10,802.81 (+2.18) | 09:30 open · cash $117.11 (unchanged overnight, no fees) · equity $10,804.99 vs prior close $10,802.81 (+2.18) · 11 name(s) re-marked at the open (per-name table). AUPH×1 yday $16.75 → 09:30 $16.60 -0.15; ARCT×2 yday $15.44 → 09:30 $15.35 -0.18; AUTL×10 yday $2.44 → 09:30 $2.41 -0.30; CRDL×13 yday $2.00 → 09:30 $2.03 +0.39; CYPH×19 yday $1.64 → 09:30 $1.60 -0.76; MOS×74 yday $24.27 → 09:30 $24.84 +42.18; OCUL×160 yday $10.88 → 09:30 $10.79 -14.40; INSP×28 yday $61.07 → 09:30 $60.07 -28.00; CRMD×211 yday $8.56 → 09:30 $8.60 +8.44; RZLT×357 yday $5.01 → 09:30 $5.01 +0.00; HCA×4 yday $428.76 → 09:30 $427.50 -5.04 | — |
 | 2026-08-26 09:30 ET | **SELL** | `AUPH` | 1 | $16.60 | $0.19 | $-0.96 | $133.52 | ▼ -0.96 after sell → book $10,804.80; vs 09:30 mark -0.19 | dropped from list after 3 sess (min 3) | — |
-| 2026-08-26 09:30 ET | **SELL** | `ARCT` | 2 | $15.35 | $0.33 | $+7.88 | $163.89 | ▲ +7.88 after sell → book $10,804.47; vs 09:30 mark -0.33 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-08-26 09:30 ET | **SELL** | `ARCT` | 2 | $15.35 | $0.33 | $+7.88 | $163.89 | ▲ +7.88 after sell → book $10,804.47; vs 09:30 mark -0.33 | dropped from list after 3 sess (min 3) | — |
 | 2026-08-26 09:30 ET | **SELL** | `AUTL` | 10 | $2.41 | $0.29 | $-1.17 | $187.70 | ▼ -1.17 after sell → book $10,804.18; vs 09:30 mark -0.29 | dropped from list after 3 sess (min 3) | — |
 | 2026-08-26 09:30 ET | **SELL** | `CRDL` | 13 | $2.03 | $0.32 | $+0.69 | $213.77 | ▲ +0.69 after sell → book $10,803.86; vs 09:30 mark -0.32 | dropped from list after 3 sess (min 3) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 judge🔴 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
 | 2026-08-26 09:30 ET | **SELL** | `CYPH` | 19 | $1.60 | $0.38 | $+4.63 | $243.79 | ▲ +4.63 after sell → book $10,803.48; vs 09:30 mark -0.38 | dropped from list after 3 sess (min 3) | — |
@@ -496,10 +506,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 09:30 ET | **BUY** | `AMN` | 1 | $34.93 | $0.35 | — | $167.13 | — | S≥+5: sizeup + more names; list flatten; wish-list (live io HOLD — not a ticket); ret5=+1.6; leftover $48.31 | join🟢 sector🟢 gen🟢 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $167.13 | ▼ close $9,583.92 vs 09:30 $9,621.35 (session -36.18) | 16:00 close · cash $167.13 · equity $9,583.92 vs 09:30 $9,621.35 (-37.43; session marks -36.18) · 7 name(s) marked open→close (per-name table). IQV×8 09:30 $273.15 → close $269.44 -29.68; RDNT×31 09:30 $76.44 → close $77.78 +41.54; AVAH×167 09:30 $14.33 → close $13.97 -60.12; BLFS×65 09:30 $36.67 → close $36.85 +11.70; IOVA×4 09:30 $10.25 → close $10.02 -0.92; PGEN×6 09:30 $7.59 → close $7.87 +1.68; AMN×1 09:30 $34.93 → close $34.55 -0.38 | — |
 | 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $167.13 | ▼ 09:30 equity $9,561.82 vs yday $9,583.92 (-22.10) | 09:30 open · cash $167.13 (unchanged overnight, no fees) · equity $9,561.82 vs prior close $9,583.92 (-22.10) · 7 name(s) re-marked at the open (per-name table). IQV×8 yday $269.44 → 09:30 $269.45 +0.08; RDNT×31 yday $77.78 → 09:30 $77.66 -3.72; AVAH×167 yday $13.97 → 09:30 $13.90 -11.69; BLFS×65 yday $36.85 → 09:30 $36.73 -7.80; IOVA×4 yday $10.02 → 09:30 $10.12 +0.40; PGEN×6 yday $7.87 → 09:30 $7.98 +0.66; AMN×1 yday $34.55 → 09:30 $34.52 -0.03 | — |
-| 2026-09-18 09:30 ET | **BUY** | `SDGR` | 1 | $29.32 | $0.30 | — | $137.51 | — | S≥+5: sizeup + more names; list flatten,yday_gainer,yday_mover,oppset; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+60.9; leftover $41.78 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-18 09:30 ET | **BUY** | `ARQT` | 1 | $26.14 | $0.26 | — | $111.11 | — | S≥+5: sizeup + more names; list flatten,ohlc_hot,oppset; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+13.2; leftover $41.78 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-18 09:30 ET | **BUY** | `FTRE` | 2 | $20.10 | $0.41 | — | $70.50 | — | S≥+5: sizeup + more names; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+19.2; leftover $41.78 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $70.50 | ▼ close $9,441.80 vs 09:30 $9,561.82 (session -119.05) | 16:00 close · cash $70.50 · equity $9,441.80 vs 09:30 $9,561.82 (-120.02; session marks -119.05) · 10 name(s) marked open→close (per-name table). IQV×8 09:30 $269.45 → close $266.42 -24.24; RDNT×31 09:30 $77.66 → close $76.00 -51.46; AVAH×167 09:30 $13.90 → close $13.67 -38.41; BLFS×65 09:30 $36.73 → close $36.69 -2.60; IOVA×4 09:30 $10.12 → close $10.25 +0.52; PGEN×6 09:30 $7.98 → close $7.78 -1.20; AMN×1 09:30 $34.52 → close $34.26 -0.26; SDGR×1 09:30 $29.32 → close $29.02 -0.30; ARQT×1 09:30 $26.14 → close $25.38 -0.76; FTRE×2 09:30 $20.10 → close $19.93 -0.34 | — |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $167.13 | ▼ close $9,444.17 vs 09:30 $9,561.82 (session -117.65) | 16:00 close · cash $167.13 · equity $9,444.17 vs 09:30 $9,561.82 (-117.65; session marks -117.65) · 7 name(s) marked open→close (per-name table). IQV×8 09:30 $269.45 → close $266.42 -24.24; RDNT×31 09:30 $77.66 → close $76.00 -51.46; AVAH×167 09:30 $13.90 → close $13.67 -38.41; BLFS×65 09:30 $36.73 → close $36.69 -2.60; IOVA×4 09:30 $10.12 → close $10.25 +0.52; PGEN×6 09:30 $7.98 → close $7.78 -1.20; AMN×1 09:30 $34.52 → close $34.26 -0.26 | — |
+| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $167.13 | ▲ 09:30 equity $9,453.86 vs yday $9,444.17 (+9.69) | 09:30 open · cash $167.13 (unchanged overnight, no fees) · equity $9,453.86 vs prior close $9,444.17 (+9.69) · 7 name(s) re-marked at the open (per-name table). IQV×8 yday $266.42 → 09:30 $266.76 +2.72; RDNT×31 yday $76.00 → 09:30 $76.27 +8.37; AVAH×167 yday $13.67 → 09:30 $13.65 -3.34; BLFS×65 yday $36.69 → 09:30 $36.70 +0.65; IOVA×4 yday $10.25 → 09:30 $10.43 +0.72; PGEN×6 yday $7.78 → 09:30 $7.84 +0.36; AMN×1 yday $34.26 → 09:30 $34.47 +0.21 | — |
+| 2026-09-21 09:30 ET | **SELL** | `IQV` | 8 | $266.76 | $2.04 | $-37.10 | $2,299.17 | ▼ -37.10 after sell → book $9,451.82; vs 09:30 mark -2.04 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-21 09:30 ET | **SELL** | `RDNT` | 31 | $76.27 | $2.11 | $-30.54 | $4,661.43 | ▼ -30.54 after sell → book $9,449.71; vs 09:30 mark -2.11 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-21 09:30 ET | **SELL** | `AVAH` | 167 | $13.65 | $2.54 | $-115.25 | $6,938.44 | ▼ -115.25 after sell → book $9,447.17; vs 09:30 mark -2.54 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-21 09:30 ET | **SELL** | `BLFS` | 65 | $36.70 | $2.21 | $+11.20 | $9,321.72 | ▲ +11.20 after sell → book $9,444.95; vs 09:30 mark -2.22 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-21 09:30 ET | **BUY** | `A` | 11 | $157.87 | $2.02 | — | $7,583.13 | — | S≥+5: sizeup + more names; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=-4.4; leftover $1864.34 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `HUM` | 4 | $386.20 | $2.00 | — | $6,036.33 | — | S≥+5: sizeup + more names; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+5.2; leftover $1864.34 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `DXCM` | 20 | $88.89 | $2.05 | — | $4,256.44 | — | S≥+5: sizeup + more names; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=-7.2; leftover $1864.34 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `MGTX` | 138 | $13.47 | $2.40 | — | $2,395.18 | — | S≥+5: sizeup + more names; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=-8.4; leftover $1864.34 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `CYPH` | 469 | $3.97 | $6.05 | — | $527.20 | — | S≥+5: sizeup + more names; list flatten,yday_gainer,yday_mover; wish-list (live io HOLD — not a ticket); ⚪; ret5=+58.9; leftover $1864.34 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $527.20 | ▼ close $9,127.10 vs 09:30 $9,453.86 (session -303.33) | 16:00 close · cash $527.20 · equity $9,127.10 vs 09:30 $9,453.86 (-326.76; session marks -303.33) · 8 name(s) marked open→close (per-name table). IOVA×4 09:30 $10.43 → close $10.19 -0.96; PGEN×6 09:30 $7.84 → close $7.70 -0.84; AMN×1 09:30 $34.47 → close $34.24 -0.23; A×11 09:30 $157.87 → close $161.94 +44.77; HUM×4 09:30 $386.20 → close $378.58 -30.48; DXCM×20 09:30 $88.89 → close $89.17 +5.56; MGTX×138 09:30 $13.47 → close $13.08 -53.82; CYPH×469 09:30 $3.97 → close $3.40 -267.33 | — |
 
 ## Not taken
 
@@ -689,19 +707,23 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | `IOVA` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-18 | `PGEN` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-18 | `AMN` | min_hold | dropped but min-hold 1/3 sess — no sell |
-| 2026-09-18 | `ILMN` | cash | leftover split 41.78 < 1 share @ 249.13 |
+| 2026-09-18 | `RBRK` | cash | leftover split 27.85 < 1 share @ 108.55 |
+| 2026-09-18 | `DELL` | cash | leftover split 27.85 < 1 share @ 593.15 |
+| 2026-09-18 | `GNRC` | cash | leftover split 27.85 < 1 share @ 209.52 |
+| 2026-09-18 | `VICR` | cash | leftover split 27.85 < 1 share @ 219.62 |
+| 2026-09-18 | `ECO` | cash | leftover split 27.85 < 1 share @ 85.00 |
+| 2026-09-18 | `FIVN` | cash | leftover split 27.85 < 1 share @ 34.44 |
+| 2026-09-21 | `AMN` | min_hold | dropped but min-hold 2/3 sess — no sell |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `IQV` | 8 | 2026-09-16 @ $270.89 | S≥+5: sizeup + more names; list flatten; wish-list (live io HOLD — not a ticket); ret5=+4.0; leftover $2404.03 |
-| `RDNT` | 31 | 2026-09-16 @ $77.12 | S≥+5: sizeup + more names; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); ret5=+7.2; leftover $2404.03 |
-| `AVAH` | 167 | 2026-09-16 @ $14.31 | S≥+5: sizeup + more names; list flatten; wish-list (live io HOLD — not a ticket); ret5=+4.8; leftover $2404.03 |
-| `BLFS` | 65 | 2026-09-16 @ $36.46 | S≥+5: sizeup + more names; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+2.9; leftover $2404.03 |
 | `IOVA` | 4 | 2026-09-17 @ $10.25 | S≥+5: sizeup + more names; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); 🔵; ret5=+17.1; leftover $48.31 |
 | `PGEN` | 6 | 2026-09-17 @ $7.59 | S≥+5: sizeup + more names; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); 🔵; ret5=+9.4; leftover $48.31 |
 | `AMN` | 1 | 2026-09-17 @ $34.93 | S≥+5: sizeup + more names; list flatten; wish-list (live io HOLD — not a ticket); ret5=+1.6; leftover $48.31 |
-| `SDGR` | 1 | 2026-09-18 @ $29.32 | S≥+5: sizeup + more names; list flatten,yday_gainer,yday_mover,oppset; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+60.9; leftover $41.78 |
-| `ARQT` | 1 | 2026-09-18 @ $26.14 | S≥+5: sizeup + more names; list flatten,ohlc_hot,oppset; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+13.2; leftover $41.78 |
-| `FTRE` | 2 | 2026-09-18 @ $20.10 | S≥+5: sizeup + more names; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+19.2; leftover $41.78 |
+| `A` | 11 | 2026-09-21 @ $157.87 | S≥+5: sizeup + more names; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=-4.4; leftover $1864.34 |
+| `HUM` | 4 | 2026-09-21 @ $386.20 | S≥+5: sizeup + more names; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+5.2; leftover $1864.34 |
+| `DXCM` | 20 | 2026-09-21 @ $88.89 | S≥+5: sizeup + more names; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=-7.2; leftover $1864.34 |
+| `MGTX` | 138 | 2026-09-21 @ $13.47 | S≥+5: sizeup + more names; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=-8.4; leftover $1864.34 |
+| `CYPH` | 469 | 2026-09-21 @ $3.97 | S≥+5: sizeup + more names; list flatten,yday_gainer,yday_mover; wish-list (live io HOLD — not a ticket); ⚪; ret5=+58.9; leftover $1864.34 |

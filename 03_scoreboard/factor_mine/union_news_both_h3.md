@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 AND headline🟢 (thin; kept as a KILL)
 
-Cash book **+4.04%** ($10,403) · signal-only (no cash/fees) was +6.07%. Starts YES **21/26**. Fills 4 · skips 8 · realized $+403.48.
+Cash book **+4.04%** ($10,403) · signal-only (no cash/fees) was +1.48%. Starts YES **21/27**. Fills 4 · skips 7 · realized $+403.48.
 
 ## How this sleeve decides (like you are 10)
 
@@ -91,6 +91,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | `ADBE` | 41 | $257.76 | $253.34 | -181.22 | — | +0.00 | -181.22 | +457.97 | — |
 | 2026-09-17 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-18 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-21 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -122,6 +123,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | +5.30 | $18.75 | ADBE×41 | $10,405.69 | -181.22 | +0.00 | — | ADBE | $10,403.48 | $10,403.48 | — |
 | 2026-09-17 | +7.38 | $10,403.48 | — | $10,403.48 | +0.00 | +0.00 | — | — | $10,403.48 | $10,403.48 | — |
 | 2026-09-18 | +4.86 | $10,403.48 | — | $10,403.48 | +0.00 | +0.00 | — | — | $10,403.48 | $10,403.48 | — |
+| 2026-09-21 | +12.87 | $10,403.48 | — | $10,403.48 | +0.00 | +0.00 | — | — | $10,403.48 | $10,403.48 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -183,6 +185,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,403.48 | ▲ close $10,403.48 vs 09:30 $10,403.48 (session +0.00) | 16:00 close · cash $10,403.48 · no lots left · equity $10,403.48. | — |
 | 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,403.48 | ▲ 09:30 equity $10,403.48 vs yday $10,403.48 (+0.00) | 09:30 open · cash $10,403.48 · no holdings · equity $10,403.48 vs prior close $10,403.48 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,403.48 | ▲ close $10,403.48 vs 09:30 $10,403.48 (session +0.00) | 16:00 close · cash $10,403.48 · no lots left · equity $10,403.48. | — |
+| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,403.48 | ▲ 09:30 equity $10,403.48 vs yday $10,403.48 (+0.00) | 09:30 open · cash $10,403.48 · no holdings · equity $10,403.48 vs prior close $10,403.48 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,403.48 | ▲ close $10,403.48 vs 09:30 $10,403.48 (session +0.00) | 16:00 close · cash $10,403.48 · no lots left · equity $10,403.48. | — |
 
 ## Not taken
 
@@ -195,4 +199,3 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | `JCI` | hard_red | hard-red S=-11.47 sit; no new buys |
 | 2026-09-14 | `ADBE` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-15 | `ADBE` | min_hold | dropped but min-hold 2/3 sess — no sell |
-| 2026-09-15 | `QCOM` | hard_red | hard-red S=-3.84 sit; no new buys |

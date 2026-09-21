@@ -6,7 +6,7 @@ New buys only when the live flatten gate fires (green S, ≥5 priced BUYs, prior
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `topheavy` · sell `list` · S-boost `none` · 40% to #1, rest split
 
-Cash book **+7.19%** ($10,719) · signal-only (no cash/fees) was +4.45%. Starts YES **7/26**. Fills 48 · skips 0 · realized $+718.61.
+Cash book **+7.19%** ($10,719) · signal-only (no cash/fees) was +4.45%. Starts YES **7/27**. Fills 48 · skips 0 · realized $+718.61.
 
 ## How this sleeve decides (like you are 10)
 
@@ -132,6 +132,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-17 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-18 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-21 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -163,6 +164,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | +5.30 | $10,718.60 | — | $10,718.60 | +0.00 | +0.00 | — | — | $10,718.60 | $10,718.60 | — |
 | 2026-09-17 | +7.38 | $10,718.60 | — | $10,718.60 | +0.00 | +0.00 | — | — | $10,718.60 | $10,718.60 | — |
 | 2026-09-18 | +4.86 | $10,718.60 | — | $10,718.60 | +0.00 | +0.00 | — | — | $10,718.60 | $10,718.60 | — |
+| 2026-09-21 | +12.87 | $10,718.60 | — | $10,718.60 | +0.00 | +0.00 | — | — | $10,718.60 | $10,718.60 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -186,7 +188,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-20 09:30 ET | **BUY** | `IAG` | 43 | $19.63 | $2.12 | — | $2,638.25 | — | 40% to #1, rest split; list flatten,mover_buy; live flatten mover; 🔵; ⚪; ret5=+9.1; leftover $857.14 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
 | 2026-08-20 09:30 ET | **BUY** | `KGC` | 28 | $29.63 | $2.07 | — | $1,806.54 | — | 40% to #1, rest split; list flatten,mover_buy; live flatten mover; 🔵; ⚪; ret5=+8.7; leftover $857.14 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
 | 2026-08-20 09:30 ET | **BUY** | `NFGC` | 489 | $1.75 | $6.31 | — | $944.48 | — | 40% to #1, rest split; list flatten,mover_buy; live flatten mover; 🔵; ⚪; ret5=+7.9; leftover $857.14 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
-| 2026-08-20 09:30 ET | **BUY** | `WPM` | 5 | $144.54 | $2.00 | — | $219.78 | — | 40% to #1, rest split; list flatten,mover_buy,oppset; live flatten mover; 🔵; ⚪; ret5=+9.2; leftover $857.14 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
+| 2026-08-20 09:30 ET | **BUY** | `WPM` | 5 | $144.54 | $2.00 | — | $219.78 | — | 40% to #1, rest split; list flatten,mover_buy; live flatten mover; 🔵; ⚪; ret5=+9.2; leftover $857.14 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
 | 2026-08-20 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $219.78 | ▲ close $10,231.72 vs 09:30 $10,000.00 (session +253.36) | 16:00 close · cash $219.78 · equity $10,231.72 vs 09:30 $10,000.00 (+231.72; session marks +253.36) · 8 name(s) marked open→close (per-name table). AG×194 09:30 $20.55 → close $21.19 +124.16; BHP×9 09:30 $91.01 → close $93.63 +23.58; CDE×41 09:30 $20.65 → close $21.11 +18.86; HDSN×148 09:30 $5.77 → close $5.57 -29.60; IAG×43 09:30 $19.63 → close $20.50 +37.41; KGC×28 09:30 $29.63 → close $31.43 +50.40; NFGC×489 09:30 $1.75 → close $1.75 +0.00; WPM×5 09:30 $144.54 → close $150.25 +28.55 | — |
 | 2026-08-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $219.78 | ▲ 09:30 equity $10,520.65 vs yday $10,231.72 (+288.93) | 09:30 open · cash $219.78 (unchanged overnight, no fees) · equity $10,520.65 vs prior close $10,231.72 (+288.93) · 8 name(s) re-marked at the open (per-name table). AG×194 yday $21.19 → 09:30 $21.90 +137.74; BHP×9 yday $93.63 → 09:30 $95.72 +18.81; CDE×41 yday $21.11 → 09:30 $21.75 +26.24; HDSN×148 yday $5.57 → 09:30 $5.67 +14.80; IAG×43 yday $20.50 → 09:30 $21.17 +28.81; KGC×28 yday $31.43 → 09:30 $32.17 +20.72; NFGC×489 yday $1.75 → 09:30 $1.79 +19.56; WPM×5 yday $150.25 → 09:30 $154.70 +22.25 | — |
 | 2026-08-21 09:30 ET | **SELL** | `AG` | 194 | $21.90 | $2.64 | $+256.69 | $4,465.74 | ▲ +256.69 after sell → book $10,518.01; vs 09:30 mark -2.64 | dropped from list after 1 sess (min 1) | — |
@@ -200,7 +202,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-08-21 09:30 ET | **BUY** | `AU` | 35 | $119.43 | $2.10 | — | $6,316.57 | — | 40% to #1, rest split; list flatten,mover_buy; live flatten mover; 🔵; ⚪; ret5=+21.1; leftover $4199.49 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
 | 2026-08-21 09:30 ET | **BUY** | `AUPH` | 52 | $17.20 | $2.15 | — | $5,420.02 | — | 40% to #1, rest split; list flatten,mover_buy; live flatten mover; 🔵; ⚪; ret5=+13.8; leftover $899.89 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟢 |
 | 2026-08-21 09:30 ET | **BUY** | `AEM` | 4 | $216.30 | $2.00 | — | $4,552.82 | — | 40% to #1, rest split; list flatten,ohlc_hot,mover_buy; live flatten mover; 🔵; ⚪; ret5=+17.6; leftover $899.89 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
-| 2026-08-21 09:30 ET | **BUY** | `ARCT` | 80 | $11.13 | $2.23 | — | $3,660.19 | — | 40% to #1, rest split; list flatten,yday_gainer,mover_buy,oppset; live flatten mover; 🔵; ⚪; ret5=+39.8; leftover $899.89 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
+| 2026-08-21 09:30 ET | **BUY** | `ARCT` | 80 | $11.13 | $2.23 | — | $3,660.19 | — | 40% to #1, rest split; list flatten,yday_gainer,mover_buy; live flatten mover; 🔵; ⚪; ret5=+39.8; leftover $899.89 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
 | 2026-08-21 09:30 ET | **BUY** | `AUTL` | 364 | $2.47 | $4.70 | — | $2,756.42 | — | 40% to #1, rest split; list flatten,mover_buy; live flatten mover; 🔵; ⚪; ret5=+10.8; leftover $899.89 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
 | 2026-08-21 09:30 ET | **BUY** | `CRDL` | 466 | $1.93 | $6.01 | — | $1,851.02 | — | 40% to #1, rest split; list flatten,mover_buy; live flatten mover; 🔵; ⚪; ret5=+10.2; leftover $899.89 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
 | 2026-08-21 09:30 ET | **BUY** | `CRSP` | 15 | $59.72 | $2.04 | — | $953.19 | — | 40% to #1, rest split; list flatten,mover_buy; live flatten mover; 🔵; ⚪; ret5=+7.6; leftover $899.89 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 vol🟢 buy🟡 |
@@ -268,3 +270,5 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,718.60 | ▲ close $10,718.60 vs 09:30 $10,718.60 (session +0.00) | 16:00 close · cash $10,718.60 · no lots left · equity $10,718.60. | — |
 | 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,718.60 | ▲ 09:30 equity $10,718.60 vs yday $10,718.60 (+0.00) | 09:30 open · cash $10,718.60 · no holdings · equity $10,718.60 vs prior close $10,718.60 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,718.60 | ▲ close $10,718.60 vs 09:30 $10,718.60 (session +0.00) | 16:00 close · cash $10,718.60 · no lots left · equity $10,718.60. | — |
+| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,718.60 | ▲ 09:30 equity $10,718.60 vs yday $10,718.60 (+0.00) | 09:30 open · cash $10,718.60 · no holdings · equity $10,718.60 vs prior close $10,718.60 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,718.60 | ▲ close $10,718.60 vs 09:30 $10,718.60 (session +0.00) | 16:00 close · cash $10,718.60 · no lots left · equity $10,718.60. | — |

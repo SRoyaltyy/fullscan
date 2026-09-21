@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #3 knowable E + guidance proxy + react (research; not KEEP)
 
-Cash book **-5.43%** ($9,457) · signal-only (no cash/fees) was +10.90%. Starts YES **0/26**. Fills 20 · skips 1 · realized $-543.00.
+Cash book **-5.43%** ($9,457) · signal-only (no cash/fees) was +10.90%. Starts YES **0/27**. Fills 20 · skips 1 · realized $-543.00.
 
 ## How this sleeve decides (like you are 10)
 
@@ -103,6 +103,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-17 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-18 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-21 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -134,6 +135,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | +5.30 | $9,457.00 | — | $9,457.00 | +0.00 | +0.00 | — | — | $9,457.00 | $9,457.00 | — |
 | 2026-09-17 | +7.38 | $9,457.00 | — | $9,457.00 | +0.00 | +0.00 | — | — | $9,457.00 | $9,457.00 | — |
 | 2026-09-18 | +4.86 | $9,457.00 | — | $9,457.00 | +0.00 | +0.00 | — | — | $9,457.00 | $9,457.00 | — |
+| 2026-09-21 | +12.87 | $9,457.00 | — | $9,457.00 | +0.00 | +0.00 | — | — | $9,457.00 | $9,457.00 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -179,13 +181,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-02 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,571.82 | ▲ close $9,571.82 vs 09:30 $9,571.82 (session +0.00) | 16:00 close · cash $9,571.82 · no lots left · equity $9,571.82. | — |
 | 2026-09-03 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,571.82 | ▲ 09:30 equity $9,571.82 vs yday $9,571.82 (+0.00) | 09:30 open · cash $9,571.82 · no holdings · equity $9,571.82 vs prior close $9,571.82 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-03 09:30 ET | **BUY** | `AVGO` | 9 | $351.74 | $2.02 | — | $6,404.15 | — | Clock-B #3 knowable E + guidance proxy + react (research; not KEEP); gate clk_earn_guide_react=True; rank cond; list earn_react; 🔵; ret5=+3.3; leftover $3190.61 | join🔴 sector🟢 gen🟡 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `HPE` | 67 | $47.60 | $2.19 | — | $3,212.75 | — | Clock-B #3 knowable E + guidance proxy + react (research; not KEEP); gate clk_earn_guide_react=True; rank cond; list earn_react,oppset; 🔵; ret5=-6.2; leftover $3190.61 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟡 ab🟢 peer🔴 heat🟡 vol🟡 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `HPE` | 67 | $47.60 | $2.19 | — | $3,212.75 | — | Clock-B #3 knowable E + guidance proxy + react (research; not KEEP); gate clk_earn_guide_react=True; rank cond; list earn_react; 🔵; ret5=-6.2; leftover $3190.61 | join🟢 sector🟢 gen🟡 news🟢 digest🟢 judge🟡 ab🟢 peer🔴 heat🟡 vol🟡 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `CIEN` | 9 | $354.49 | $2.02 | — | $20.33 | — | Clock-B #3 knowable E + guidance proxy + react (research; not KEEP); gate clk_earn_guide_react=True; rank cond; list earn_react; 🔵; ret5=-12.3; leftover $3190.61 | join🟡 sector🟢 gen🟡 news🟢 digest🟢 judge🟡 ab🔴 peer🔴 heat🟡 vol🟡 buy🟡 |
 | 2026-09-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $20.33 | ▲ close $9,739.39 vs 09:30 $9,571.82 (session +173.79) | 16:00 close · cash $20.33 · equity $9,739.39 vs 09:30 $9,571.82 (+167.57; session marks +173.79) · 3 name(s) marked open→close (per-name table). AVGO×9 09:30 $351.74 → close $357.16 +48.78; HPE×67 09:30 $47.60 → close $54.44 +458.28; CIEN×9 09:30 $354.49 → close $317.46 -333.27 | — |
 | 2026-09-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $20.33 | ▲ 09:30 equity $9,760.61 vs yday $9,739.39 (+21.22) | 09:30 open · cash $20.33 (unchanged overnight, no fees) · equity $9,760.61 vs prior close $9,739.39 (+21.22) · 3 name(s) re-marked at the open (per-name table). AVGO×9 yday $357.16 → 09:30 $359.70 +22.86; HPE×67 yday $54.44 → 09:30 $53.85 -39.53; CIEN×9 yday $317.46 → 09:30 $321.67 +37.89 | — |
 | 2026-09-04 09:30 ET | **SELL** | `AVGO` | 9 | $359.70 | $2.05 | $+67.57 | $3,255.58 | ▲ +67.57 after sell → book $9,758.56; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-04 09:30 ET | **SELL** | `HPE` | 67 | $53.85 | $2.23 | $+414.33 | $6,861.29 | ▲ +414.33 after sell → book $9,756.32; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🔴 heat🟡 vol🟢 buy🟢 |
-| 2026-09-04 09:30 ET | **SELL** | `CIEN` | 9 | $321.67 | $2.05 | $-299.45 | $9,754.27 | ▼ -299.45 after sell → book $9,754.27; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🔴 peer🔴 heat🟡 vol🟡 buy🟡 |
+| 2026-09-04 09:30 ET | **SELL** | `HPE` | 67 | $53.85 | $2.23 | $+414.33 | $6,861.29 | ▲ +414.33 after sell → book $9,756.32; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-04 09:30 ET | **SELL** | `CIEN` | 9 | $321.67 | $2.05 | $-299.45 | $9,754.27 | ▼ -299.45 after sell → book $9,754.27; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-04 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,754.27 | ▲ close $9,754.27 vs 09:30 $9,760.61 (session +0.00) | 16:00 close · cash $9,754.27 · no lots left · equity $9,754.27. | — |
 | 2026-09-08 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,754.27 | ▲ 09:30 equity $9,754.27 vs yday $9,754.27 (+0.00) | 09:30 open · cash $9,754.27 · no holdings · equity $9,754.27 vs prior close $9,754.27 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-08 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,754.27 | ▲ close $9,754.27 vs 09:30 $9,754.27 (session +0.00) | 16:00 close · cash $9,754.27 · no lots left · equity $9,754.27. | — |
@@ -196,12 +198,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,754.27 | ▲ 09:30 equity $9,754.27 vs yday $9,754.27 (+0.00) | 09:30 open · cash $9,754.27 · no holdings · equity $9,754.27 vs prior close $9,754.27 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-11 09:30 ET | **BUY** | `ORCL` | 19 | $164.43 | $2.05 | — | $6,628.06 | — | Clock-B #3 knowable E + guidance proxy + react (research; not KEEP); gate clk_earn_guide_react=True; rank cond; list flatten,earn_react; ⚪; ret5=+4.9; leftover $3251.42 | join🟢 sector🟢 gen🟡 news🟢 digest🟡 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-11 09:30 ET | **BUY** | `ADBE` | 13 | $242.17 | $2.03 | — | $3,477.82 | — | Clock-B #3 knowable E + guidance proxy + react (research; not KEEP); gate clk_earn_guide_react=True; rank cond; list earn_react; ret5=-11.1; leftover $3251.42 | join🟢 sector🟢 gen🟡 news🟢 digest🟡 judge🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
-| 2026-09-11 09:30 ET | **BUY** | `RH` | 23 | $135.71 | $2.06 | — | $354.43 | — | Clock-B #3 knowable E + guidance proxy + react (research; not KEEP); gate clk_earn_guide_react=True; rank cond; list earn_react,oppset; ret5=-9.2; leftover $3251.42 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **BUY** | `RH` | 23 | $135.71 | $2.06 | — | $354.43 | — | Clock-B #3 knowable E + guidance proxy + react (research; not KEEP); gate clk_earn_guide_react=True; rank cond; list earn_react; ret5=-9.2; leftover $3251.42 | join🔴 sector🔴 gen🟡 news🟢 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $354.43 | ▼ close $9,572.35 vs 09:30 $9,754.27 (session -175.79) | 16:00 close · cash $354.43 · equity $9,572.35 vs 09:30 $9,754.27 (-181.92; session marks -175.79) · 3 name(s) marked open→close (per-name table). ORCL×19 09:30 $164.43 → close $150.28 -268.85; ADBE×13 09:30 $242.17 → close $252.23 +130.78; RH×23 09:30 $135.71 → close $134.07 -37.72 | — |
 | 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $354.43 | ▼ 09:30 equity $9,463.24 vs yday $9,572.35 (-109.11) | 09:30 open · cash $354.43 (unchanged overnight, no fees) · equity $9,463.24 vs prior close $9,572.35 (-109.11) · 3 name(s) re-marked at the open (per-name table). ORCL×19 yday $150.28 → 09:30 $141.42 -168.34; ADBE×13 yday $252.23 → 09:30 $261.51 +120.64; RH×23 yday $134.07 → 09:30 $131.40 -61.41 | — |
-| 2026-09-14 09:30 ET | **SELL** | `ORCL` | 19 | $141.42 | $2.08 | $-441.32 | $3,039.33 | ▼ -441.32 after sell → book $9,461.16; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | join🟡 sector🔴 gen🔴 news🔴 digest🔴 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-09-14 09:30 ET | **SELL** | `ORCL` | 19 | $141.42 | $2.08 | $-441.32 | $3,039.33 | ▼ -441.32 after sell → book $9,461.16; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-14 09:30 ET | **SELL** | `ADBE` | 13 | $261.51 | $2.07 | $+247.32 | $6,436.89 | ▲ +247.32 after sell → book $9,459.09; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-14 09:30 ET | **SELL** | `RH` | 23 | $131.40 | $2.09 | $-103.28 | $9,457.00 | ▼ -103.28 after sell → book $9,457.00; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-14 09:30 ET | **SELL** | `RH` | 23 | $131.40 | $2.09 | $-103.28 | $9,457.00 | ▼ -103.28 after sell → book $9,457.00; vs 09:30 mark -2.09 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,457.00 | ▲ close $9,457.00 vs 09:30 $9,463.24 (session +0.00) | 16:00 close · cash $9,457.00 · no lots left · equity $9,457.00. | — |
 | 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,457.00 | ▲ 09:30 equity $9,457.00 vs yday $9,457.00 (+0.00) | 09:30 open · cash $9,457.00 · no holdings · equity $9,457.00 vs prior close $9,457.00 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,457.00 | ▲ close $9,457.00 vs 09:30 $9,457.00 (session +0.00) | 16:00 close · cash $9,457.00 · no lots left · equity $9,457.00. | — |
@@ -211,6 +213,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,457.00 | ▲ close $9,457.00 vs 09:30 $9,457.00 (session +0.00) | 16:00 close · cash $9,457.00 · no lots left · equity $9,457.00. | — |
 | 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,457.00 | ▲ 09:30 equity $9,457.00 vs yday $9,457.00 (+0.00) | 09:30 open · cash $9,457.00 · no holdings · equity $9,457.00 vs prior close $9,457.00 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,457.00 | ▲ close $9,457.00 vs 09:30 $9,457.00 (session +0.00) | 16:00 close · cash $9,457.00 · no lots left · equity $9,457.00. | — |
+| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,457.00 | ▲ 09:30 equity $9,457.00 vs yday $9,457.00 (+0.00) | 09:30 open · cash $9,457.00 · no holdings · equity $9,457.00 vs prior close $9,457.00 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,457.00 | ▲ close $9,457.00 vs 09:30 $9,457.00 (session +0.00) | 16:00 close · cash $9,457.00 · no lots left · equity $9,457.00. | — |
 
 ## Not taken
 
