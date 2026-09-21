@@ -1,0 +1,81 @@
+{
+  "date": "2026-09-21",
+  "generated_at": "2026-09-21T04:16:59.873332-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-09-21",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US futures point to a higher open on upbeat US-China trade signals as tech leads and oil drifts lower on a quiet data day",
+  "raw_text": "- S&P 500 Futures (@ES) +0.59%, Dow Jones Futures (@YM) +0.60%, Nasdaq 100 Futures (@NQ) +0.87%, and Russell 2000 Futures (@ER2) +0.51% indicate a firmer open for US equities.\n- Reports of “very successful” US-China talks in New York covering trade, AI, tariffs, and Iran underpin risk sentiment ahead of this week’s Trump-Xi summit.\n- Marathon Digital (MARA) and Riot Platforms (RIOT) climb around 2% pre-market as crypto-related stocks advance.\n- Advanced Micro Devices (AMD) trades higher in early action alongside gains in select semiconductor names.\n- Alphabet (GOOGL) is firmer pre-market as large-cap tech participates in the early bid for growth stocks.\n- Netflix (NFLX) trades higher pre-market alongside large-cap tech.\n- VinFast (VFS) and ABVX (ABVX) trade near flat pre-market.\n- Asian equities rose overnight, led by technology shares, in response to the positive tone from US-China discussions.\n- Brent crude (@QA) extends losses for a fourth straight session, adding to pressure on the energy complex.\n- The US economic calendar is quiet today with no major data releases scheduled, leaving trade headlines and company-specific moves as key drivers.",
+  "raw_summary_md": "- S&P 500 Futures ([@ES](https://finviz.com/futures_charts?t=ES)) +0.59%, Dow Jones Futures ([@YM](https://finviz.com/futures_charts?t=YM)) +0.60%, **Nasdaq 100 Futures ([@NQ](https://finviz.com/futures_charts?t=NQ)) +0.87%**, and Russell 2000 Futures ([@ER2](https://finviz.com/futures_charts?t=ER2)) +0.51% indicate a **firmer open** for US equities.\n- Reports of **“very successful” US-China talks** in New York covering trade, AI, tariffs, and Iran underpin risk sentiment ahead of this week’s **Trump-Xi summit**.\n- **Marathon Digital ([MARA](https://finviz.com/quote?t=MARA)) and Riot Platforms ([RIOT](https://finviz.com/quote?t=RIOT)) climb around 2% pre-market** as crypto-related stocks advance.\n- **Advanced Micro Devices ([AMD](https://finviz.com/quote?t=AMD)) trades higher in early action** alongside gains in select semiconductor names.\n- **Alphabet ([GOOGL](https://finviz.com/quote?t=GOOGL)) is firmer pre-market** as large-cap tech participates in the early bid for growth stocks.\n- **Netflix ([NFLX](https://finviz.com/quote?t=NFLX)) trades higher pre-market** alongside large-cap tech.\n- **VinFast ([VFS](https://finviz.com/quote?t=VFS)) and ABVX ([ABVX](https://finviz.com/quote?t=ABVX))** trade near **flat pre-market**.\n- **Asian equities rose overnight**, led by **technology shares**, in response to the positive tone from US-China discussions.\n- **Brent crude ([@QA](https://finviz.com/futures_charts?t=QA)) extends losses for a fourth straight session**, adding to pressure on the energy complex.\n- The **US economic calendar is quiet today with no major data releases scheduled**, leaving trade headlines and company-specific moves as key drivers.",
+  "index_moves": [],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "MARA",
+    "RIOT",
+    "AMD",
+    "GOOGL",
+    "NFLX",
+    "VFS",
+    "ABVX"
+  ],
+  "named_leaders": [
+    "MARA",
+    "RIOT",
+    "AMD",
+    "GOOGL",
+    "NFLX",
+    "VFS",
+    "ABVX"
+  ],
+  "calendar": [
+    "The US economic calendar is quiet today with no major data releases scheduled, leaving trade headlines and company-specific moves as key drivers."
+  ],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [
+      "The US economic calendar is quiet today with no major data releases scheduled, leaving trade headlines and company-specific moves as key drivers."
+    ],
+    "text": "The US economic calendar is quiet today with no major data releases scheduled, leaving trade headlines and company-specific moves as key drivers."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Reports of “very successful” US-China talks in New York covering trade, AI, tariffs, and Iran underpin risk sentiment ahead of this week’s Trump-Xi summit."
+  },
+  "finviz_id": 289704,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-09-21T04:06:18.077",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}
