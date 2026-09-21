@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "n_ok": 5,
+  "n_ok": 6,
   "n_total": 11,
   "sectors": [
     {
@@ -35,9 +35,9 @@
     },
     {
       "sector": "Financial",
-      "ok": false,
-      "reason": "missing",
-      "size": 0
+      "ok": true,
+      "reason": "",
+      "size": 19603
     },
     {
       "sector": "Healthcare",
