@@ -31,6 +31,8 @@ from src.finviz_market_digest import (
     parse_homepage_html,
     parse_market_digest_text,
     pick_capture_for_date,
+    pick_close_capture_for_date,
+    heal_close_date,
     report_has_narrative,
     save_report,
     theme_radar_fields,
@@ -526,24 +528,77 @@ def test_close_skips_weekend_and_holiday() -> None:
     assert not (news / "2026-09-11_finviz_market_digest.json").exists()
 
 
+def test_pick_close_capture_prefers_after_1600() -> None:
+    rows = [
+        {"et_date": "2026-09-18", "et": "2026-09-18T05:40:00-04:00",
+         "timestamp": "20260918094000"},
+        {"et_date": "2026-09-18", "et": "2026-09-18T16:12:00-04:00",
+         "timestamp": "20260918201200"},
+        {"et_date": "2026-09-18", "et": "2026-09-18T20:05:00-04:00",
+         "timestamp": "20260919000500"},
+    ]
+    cap = pick_close_capture_for_date(rows, "2026-09-18")
+    assert cap is not None
+    assert cap["timestamp"] == "20260919000500"
+    assert pick_close_capture_for_date([], "2026-09-18") is None
+
+
+def test_heal_close_skips_today_before_bell() -> None:
+    import src.finviz_market_digest as digest
+    news = Path("/tmp/fullscan-market-digest-heal-skip")
+    news.mkdir(parents=True, exist_ok=True)
+    for p in news.glob("*"):
+        p.unlink()
+    with mock.patch.object(digest, "NEWS_DIR", news), \
+            mock.patch.object(digest, "et_now",
+                              return_value=datetime(2026, 9, 21, 7, 3, tzinfo=ET)):
+        assert heal_close_date("2026-09-21") is True
+    assert list(news.glob("*_close*")) == []
+
+
+def test_close_flag_on_prior_date_uses_heal_not_live() -> None:
+    import src.finviz_market_digest as digest
+    with mock.patch.object(digest, "et_now",
+                           return_value=datetime(2026, 9, 21, 7, 3, tzinfo=ET)), \
+            mock.patch.object(digest, "existing_close_ok", return_value=False), \
+            mock.patch.object(digest, "heal_close_date", return_value=True) as heal, \
+            mock.patch("sys.argv", [
+                "finviz_market_digest", "--close", "--date", "2026-09-18",
+            ]):
+        try:
+            digest.main()
+        except SystemExit as exc:
+            assert exc.code == 0
+    heal.assert_called_once()
+    assert heal.call_args.kwargs.get("force") is False or heal.call_args[1].get("force") is False
+
+
 def test_workflow_has_close_cron_and_keeps_morning() -> None:
     root = Path(__file__).resolve().parent.parent
     yml = (root / ".github" / "workflows" / "finviz_market_digest.yml").read_text(
         encoding="utf-8")
     assert "Do not land an afternoon scrape" not in yml
     assert 'cron: "5 16 * * 1-5"' in yml
+    assert 'cron: "35 16 * * 1-5"' in yml
+    assert 'cron: "15 17 * * 1-5"' in yml
+    assert 'cron: "5 20 * * 1-5"' in yml
     assert 'timezone: "America/New_York"' in yml
     assert "--close" in yml
+    assert "--heal-last-closed" in yml
     assert "ubuntu-latest" in yml
     assert "self-hosted" not in yml
     assert 'cron: "0 12 * * 1-5"' in yml
+    assert 'cron: "0 13 * * 1-5"' in yml
     assert "finviz_preopen_scrape.yml" in yml
     assert "_finviz_market_digest_close" in yml
     assert "tape_anchor" in yml and "#210" in yml
     scrape = (root / ".github" / "workflows" / "finviz_preopen_scrape.yml").read_text(
         encoding="utf-8")
     assert "src.finviz_market_digest --date $DATE --force" in scrape
-    assert "--close" not in scrape
+    assert "--heal-last-closed" in scrape
+    assert "src.finviz_market_digest --date $DATE --close" not in scrape
+    assert 'cron: "40 10 * * 1-5"' in scrape
+    assert 'cron: "30 11 * * 1-5"' in scrape
     orch = (root / ".github" / "workflows" / "daily_orchestrator.yml").read_text(
         encoding="utf-8")
     assert "dispatch_close_digest" in orch
@@ -604,6 +659,9 @@ def main() -> None:
         test_close_mode_stamps_next_open,
         test_close_does_not_clobber_morning_file,
         test_close_skips_weekend_and_holiday,
+        test_pick_close_capture_prefers_after_1600,
+        test_heal_close_skips_today_before_bell,
+        test_close_flag_on_prior_date_uses_heal_not_live,
         test_workflow_has_close_cron_and_keeps_morning,
     ]
     failed = 0

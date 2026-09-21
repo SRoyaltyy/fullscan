@@ -18,7 +18,9 @@ name: Finviz pre-open scrape (GH-hosted Elite)
 
 on:
   schedule:
-    - cron: "40 9 * * 1-5"
+    - cron: "40 9 * * 1-5"    # 05:40 EDT — primary, 15 min before ECS
+    - cron: "40 10 * * 1-5"   # 06:40 EDT — backup if 05:40 delayed/403
+    - cron: "30 11 * * 1-5"   # 07:30 EDT — last chance before 09:25 skip
   workflow_dispatch:
     inputs:
       run_date:
@@ -92,6 +94,9 @@ jobs:
           python -m src.finviz_digest --date "$DATE" --force
           echo "CMD: python -m src.finviz_market_digest --date $DATE --force"
           python -m src.finviz_market_digest --date "$DATE" --force
+          echo "CMD: python -m src.finviz_market_digest --heal-last-closed"
+          python -m src.finviz_market_digest --heal-last-closed \
+            || echo "[scrape] last-closed close heal failed — evening crons retry"
 
       - name: Map heat morning overlay (Elite tape/calendar)
         if: env.skip != 'yes'
@@ -152,3 +157,11 @@ jobs:
             "auto: finviz preopen leftover sweep [$(date -u +%F_%H%M)]" \
             01_daily/news/ 01_daily/map_heat/ data/exports/ data/day_board/ \
             || echo "[scrape] leftover sweep failed — lands already on main"
+
+      - name: Require listed Finviz morning files
+        if: env.skip != 'yes'
+        run: |
+          set -euo pipefail
+          DATE="${{ github.event.inputs.run_date }}"
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          python3 -m src.skip_if_good --job finviz_preopen_scrape --date "$DATE"

@@ -442,6 +442,8 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "data/exports/" in scrape_yml
     assert "src.finviz_digest --date $DATE --force" in scrape_yml
     assert "src.finviz_market_digest --date $DATE --force" in scrape_yml
+    assert "--heal-last-closed" in scrape_yml
+    assert 'cron: "40 10 * * 1-5"' in scrape_yml
     health = (ROOT / "src" / "pipeline_health.py").read_text(encoding="utf-8")
     assert "Quote-page digest JSON (*_finviz_digest)" in health
     assert "Homepage warm-up JSON (*_finviz_market_digest)" in health

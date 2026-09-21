@@ -31,6 +31,9 @@ def test_aggregate_all_required_ok():
                    _fc("optional", "MISSING", "c")]
     status, *_ = aggregate_status(missing_opt)
     assert status == "PARTIAL"
+    wait_req = [_fc("required", "OK", "a"), _fc("required", "WAIT", "close")]
+    status, *_ = aggregate_status(wait_req)
+    assert status == "OK"
 
 
 def test_aggregate_partial_and_fail():
@@ -236,14 +239,14 @@ def test_specs_match_user_contract():
 
     fin = {f["key"]: f for f in specs["finviz"]["files"]}
     assert fin["digest_json"]["role"] == "required"
-    assert fin["market_digest_json"]["role"] == "optional"
+    assert fin["market_digest_json"]["role"] == "required"
     # Close answer-key first appears 2026-09-10; 08-31 is era-skip.
     assert fin["market_digest_close_json"]["role"] == "era"
     live = {s["key"]: s for s in diag.workflow_specs("2026-09-14")}
     fin14 = {f["key"]: f for f in live["finviz"]["files"]}
     assert fin14["digest_json"]["role"] == "required"
-    assert fin14["market_digest_json"]["role"] == "optional"
-    assert fin14["market_digest_close_json"]["role"] == "optional"
+    assert fin14["market_digest_json"]["role"] == "required"
+    assert fin14["market_digest_close_json"]["role"] == "required"
     assert "Quote-page" in fin14["digest_json"]["name"]
     assert "Homepage warm-up" in fin14["market_digest_json"]["name"]
     assert "Close answer-key" in fin14["market_digest_close_json"]["name"]
@@ -263,8 +266,10 @@ def test_close_digest_waits_until_1600():
     by = {w.key: w for w in report.workflows}
     fin = {f.key: f for f in by["finviz"].files}
     assert fin["market_digest_close_json"].status == "WAIT"
+    assert fin["market_digest_close_json"].role == "required"
     assert "16:00" in (fin["market_digest_close_json"].reason or "")
     assert fin["market_digest_close_md"].status == "WAIT"
+    assert by["finviz"].status in ("OK", "PARTIAL")
 
 
 def test_audit_live_days():

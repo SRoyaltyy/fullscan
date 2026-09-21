@@ -1440,6 +1440,97 @@ def _file_source(date_str: str) -> str:
         return ""
 
 
+def pick_close_capture_for_date(rows: list[dict], date_str: str) -> dict | None:
+    """Latest homepage snapshot on `date_str` at/after 16:00 ET."""
+    day = [r for r in rows if r.get("et_date") == date_str]
+    if not day:
+        return None
+    after = []
+    for row in day:
+        dt = parse_et_iso(row.get("et"))
+        if dt is None:
+            continue
+        if dt.hour * 100 + dt.minute >= CLOSE_HM:
+            after.append(row)
+    if after:
+        return after[-1]
+    return day[-1]
+
+
+def _save_close_report(
+    date_str: str, html: str, *, source: str, source_url: str = "",
+    archive_ts: str | None = None, archive_url: str | None = None,
+) -> bool:
+    report = build_report(
+        asof=date_str, html=html, source=source, source_url=source_url,
+        archive_ts=archive_ts, archive_url=archive_url, close=True,
+    )
+    if not report_has_narrative(report):
+        print(f"[market_digest] {date_str}: close heal has no narrative")
+        return False
+    saved = save_report(report)
+    if not saved:
+        return False
+    print(f"[market_digest] {date_str}: close heal {source} → {saved[1]}")
+    _land(date_str, close=True)
+    return True
+
+
+def heal_close_date(date_str: str, *, force: bool = False,
+                    html: str | None = None, source: str = "live",
+                    source_url: str = "") -> bool:
+    """Write the `_close` pair. Same-day live after 16:00; prior day Wayback."""
+    if existing_close_ok(date_str, force=force):
+        print(f"[market_digest] {date_str}: close already on disk")
+        return True
+    if not is_session_date(date_str):
+        print(f"[market_digest] {date_str}: not a session — skip close heal")
+        return True
+    now = et_now()
+    today = now.date().isoformat()
+    if date_str > today:
+        print(f"[market_digest] {date_str}: future — skip close heal")
+        return True
+    if date_str == today and (now.hour * 100 + now.minute) < CLOSE_HM:
+        print(f"[market_digest] {date_str}: before 16:00 ET — skip close heal")
+        return True
+    if html:
+        return _save_close_report(
+            date_str, html, source=source, source_url=source_url)
+    if date_str == today:
+        live_html, url, err = fetch_homepage_html()
+        if not live_html:
+            print(f"[market_digest] {date_str}: live close fetch failed ({err})")
+            return False
+        return _save_close_report(
+            date_str, live_html, source="live",
+            source_url=url or "https://finviz.com/")
+    sess = requests.Session()
+    sess.headers.update(UA)
+    rows = collect_cdx(date_str, date_str, sess=sess)
+    cap = pick_close_capture_for_date(rows, date_str)
+    if not cap:
+        print(f"[market_digest] {date_str}: no Wayback close snapshot")
+        return False
+    wb_html, archive_url = fetch_wayback_html(
+        cap["timestamp"], cap["original"], sess=sess)
+    if not wb_html:
+        print(f"[market_digest] {date_str}: Wayback close body empty")
+        return False
+    return _save_close_report(
+        date_str, wb_html, source="wayback", source_url=archive_url,
+        archive_ts=cap.get("timestamp"), archive_url=archive_url,
+    )
+
+
+def heal_last_closed(*, force: bool = False) -> bool:
+    """Fill last_closed *_close if a 16:05 cron missed. Never writes today before 16:00."""
+    from .skip_if_good import last_closed_session
+    date_str = last_closed_session()
+    print(f"[market_digest] heal last-closed close pair date={date_str}")
+    return heal_close_date(date_str, force=force)
+
+
 def _land(date_str: str, *, close: bool = False) -> None:
     try:
         from . import land_file
@@ -1467,10 +1558,20 @@ def main() -> None:
              "*_finviz_market_digest_close.* with clock_use=next_open.",
     )
     ap.add_argument("--backfill", action="store_true")
+    ap.add_argument(
+        "--heal-last-closed", action="store_true",
+        help="Write last_closed *_close if missing. Live after 16:00 "
+             "the same day; Wayback for a prior session. Never stamps "
+             "today's morning homepage as yesterday's close.",
+    )
     ap.add_argument("--from", dest="date_from", default="2026-08-20")
     ap.add_argument("--to", dest="date_to", default=None)
     ap.add_argument("--no-archive-ph", action="store_true")
     args = ap.parse_args()
+
+    if args.heal_last_closed:
+        ok = heal_last_closed(force=args.force)
+        raise SystemExit(0 if ok else 1)
 
     if args.backfill:
         end = args.date_to or et_now().date().isoformat()
@@ -1493,7 +1594,14 @@ def main() -> None:
             print(f"[market_digest] {date_str}: skip, close answer-key already on disk")
             return
         now = et_now()
-        if not args.force and (now.hour * 100 + now.minute) < CLOSE_HM:
+        today = now.date().isoformat()
+        # Today before the bell: do not invent a close. A prior session
+        # already printed — heal via Wayback, never this morning's live page.
+        if date_str < today and not args.html and not args.text:
+            ok = heal_close_date(date_str, force=args.force)
+            raise SystemExit(0 if ok else 1)
+        if not args.force and date_str >= today and (
+                now.hour * 100 + now.minute) < CLOSE_HM:
             print(f"[market_digest] {date_str}: before 16:00 ET — skip close capture")
             return
     elif existing_morning_ok(date_str, force=args.force):

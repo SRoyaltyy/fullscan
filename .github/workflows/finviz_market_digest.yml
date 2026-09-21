@@ -12,8 +12,10 @@ name: Finviz homepage market digest
 #       clock_legal_for = next NYSE session. Never same_morning.
 #       Also fired by daily_orchestrator.yml after 16:00 ET when
 #       skip-if-good --job finviz_close says the pair is still missing.
-#       Morning scrape never writes --close (clock leak). Midday slot
-#       stays skip; a missed 16:05 cron is healed by orch 16:20/17:15.
+#       Morning scrape never writes today's close (clock leak). It does
+#       run --heal-last-closed (Wayback) if yesterday's pair is missing.
+#       Extra 16:35 / 17:15 / 20:05 ET crons + orch so a late GH cron
+#       cannot leave the pair blank. Midday slot stays skip.
 #
 # GH Actions cron is UTC by default. Close uses on.schedule.timezone
 # (America/New_York) — the IANA equivalent of CRON_TZ — so 16:05 stays
@@ -26,8 +28,16 @@ on:
     # 12:00 UTC = 08:00 EDT. Last chance in the 05:40–08:00 ET window.
     # After the fall EST change this is 07:00 ET — still pre-09:30.
     - cron: "0 12 * * 1-5"
+    # 13:00 UTC = 09:00 EDT. Still before 09:25 skip / 09:30 clock.
+    - cron: "0 13 * * 1-5"
     # Post-close answer-key. timezone field (Mar 2026+) follows ET DST.
     - cron: "5 16 * * 1-5"
+      timezone: "America/New_York"
+    - cron: "35 16 * * 1-5"
+      timezone: "America/New_York"
+    - cron: "15 17 * * 1-5"
+      timezone: "America/New_York"
+    - cron: "5 20 * * 1-5"
       timezone: "America/New_York"
   workflow_dispatch:
     inputs:
@@ -142,6 +152,30 @@ jobs:
           [ "${{ github.event.inputs.force }}" = "true" ] && ARGS+=(--force)
           echo "CMD: python -m src.finviz_market_digest ${ARGS[*]}"
           python -m src.finviz_market_digest "${ARGS[@]}"
+
+      - name: Heal last-closed close pair if still missing
+        if: github.event.inputs.backfill_from == '' && env.slot != 'skip'
+        env:
+          FINVIZ_EMAIL: ${{ secrets.FINVIZ_EMAIL }}
+          FINVIZ_PASSWORD: ${{ secrets.FINVIZ_PASSWORD }}
+          FINVIZ_AUTH: ${{ secrets.FINVIZ_AUTH }}
+          AUTH_TOKEN_FINVIZ: ${{ secrets.AUTH_TOKEN_FINVIZ }}
+        run: |
+          set -euo pipefail
+          echo "CMD: python -m src.finviz_market_digest --heal-last-closed"
+          python -m src.finviz_market_digest --heal-last-closed \
+            || echo "[market_digest] last-closed close heal failed — later crons retry"
+
+      - name: Require listed Finviz digest files
+        if: github.event.inputs.backfill_from == '' && env.slot != 'skip'
+        run: |
+          set -euo pipefail
+          DATE="${DATE:-$(TZ=America/New_York date +%F)}"
+          if [ "${slot:-}" = "close" ]; then
+            python3 -m src.skip_if_good --job finviz_close --date "$DATE"
+          else
+            python3 -c "from pathlib import Path; from src.output_qc import qc_finviz_market_digest; import sys; r=qc_finviz_market_digest(Path('01_daily/news/${DATE}_finviz_market_digest.json')); print(r); sys.exit(0 if r.ok else 1)"
+          fi
 
       - name: Wayback / archive.ph backfill
         if: github.event.inputs.backfill_from != ''

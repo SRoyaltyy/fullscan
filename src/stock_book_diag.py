@@ -560,22 +560,22 @@ def workflow_specs(date: str, as_of: bool = True) -> list[dict]:
                 _file("digest_json", "Quote-page digest JSON (*_finviz_digest)",
                       f"{news}_finviz_digest.json", "required", "finviz_digest"),
                 _file("digest_md", "Quote-page digest MD (*_finviz_digest)",
-                      f"{news}_finviz_digest.md", "optional", "md"),
+                      f"{news}_finviz_digest.md", "required", "md"),
                 _file("market_digest_json",
                       "Homepage warm-up JSON (*_finviz_market_digest)",
-                      f"{news}_finviz_market_digest.json", "optional",
+                      f"{news}_finviz_market_digest.json", "required",
                       "finviz_market_digest"),
                 _file("market_digest_md",
                       "Homepage warm-up MD (*_finviz_market_digest)",
-                      f"{news}_finviz_market_digest.md", "optional",
+                      f"{news}_finviz_market_digest.md", "required",
                       "finviz_market_digest"),
                 _file("market_digest_close_json",
                       "Close answer-key JSON (*_finviz_market_digest_close)",
-                      f"{news}_finviz_market_digest_close.json", "optional",
+                      f"{news}_finviz_market_digest_close.json", "required",
                       "finviz_market_digest_close"),
                 _file("market_digest_close_md",
                       "Close answer-key MD (*_finviz_market_digest_close)",
-                      f"{news}_finviz_market_digest_close.md", "optional",
+                      f"{news}_finviz_market_digest_close.md", "required",
                       "finviz_market_digest_close"),
             ],
         },
@@ -589,7 +589,7 @@ def workflow_specs(date: str, as_of: bool = True) -> list[dict]:
                       "finviz"),
                 _file("in_market_digest",
                       "Homepage warm-up JSON (*_finviz_market_digest)",
-                      f"{news}_finviz_market_digest.json", "optional",
+                      f"{news}_finviz_market_digest.json", "input",
                       "finviz_market_digest", "finviz"),
                 _file("in_baseline", "Captain baseline JSON",
                       f"{heat}_research_baseline.json", "input",
@@ -738,6 +738,8 @@ def aggregate_status(files: list[FileCheck]) -> tuple[str, bool, int, int, int, 
     n_req_ok = sum(1 for f in req if f.status == "OK")
     n_opt_ok = sum(1 for f in opt if f.status == "OK")
     inputs_ready = all(f.status == "OK" for f in inp) if inp else True
+    due_req = [f for f in req if f.status != "WAIT"]
+    due_ok = sum(1 for f in due_req if f.status == "OK")
     if not req:
         # Catalyst: only optional output. OK if the optional is OK,
         # PARTIAL if missing (did not run), FAIL if present and QC-fail.
@@ -749,15 +751,15 @@ def aggregate_status(files: list[FileCheck]) -> tuple[str, bool, int, int, int, 
             status = "PARTIAL"
         else:
             status = "PARTIAL" if inputs_ready else "FAIL"
-    elif n_req_ok == len(req):
+    elif not due_req or due_ok == len(due_req):
+        # Close answer-key is required but WAIT until 16:00 ET.
         # Optional MISSING used to keep the process OK, so skip-if-good
-        # and the day-board treated close/actions/board as never-write.
-        # WAIT (not due yet) must not flip the flag.
+        # treated those rows as never-write.
         if any(f.status == "MISSING" for f in opt):
             status = "PARTIAL"
         else:
             status = "OK"
-    elif n_req_ok > 0:
+    elif due_ok > 0:
         status = "PARTIAL"
     else:
         status = "FAIL"
