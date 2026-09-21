@@ -1,6 +1,10 @@
 from src.lane_news_scan import FINVIZ_SECTORS, _add, _norm, _rollup
 
 
+def test_norm_collapses_punctuation_and_spaces():
+    assert _norm("AAPL!!!  Extra   spaces") == "aapl extra spaces"
+
+
 def test_norm_dedupes():
     bag = {}
     _add(bag, "SEC Clears Tokenized Stocks", "body a", "finviz")

@@ -68,8 +68,8 @@ _NOISE_TITLE = re.compile(
 
 
 def _norm(title: str) -> str:
-    t = re.sub(r"[^a-z0-9\\s]", " ", (title or "").lower())
-    return re.sub(r"\\s+", " ", t).strip()[:160]
+    t = re.sub(r"[^a-z0-9\s]", " ", (title or "").lower())
+    return re.sub(r"\s+", " ", t).strip()[:160]
 
 
 def _add(bag: dict[str, dict], title: str, body: str, source_file: str, known_at: str = "") -> None:
