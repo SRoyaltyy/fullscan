@@ -1,0 +1,597 @@
+{
+  "generated_at": "2026-09-21T02:34:30.369974Z",
+  "date": "2026-09-17",
+  "dates": [
+    "2026-09-17"
+  ],
+  "harvested": 40,
+  "limit": 40,
+  "results": [
+    {
+      "ok": true,
+      "title": "Agilent Announces Cash Dividend of 25.5 Cents per Share",
+      "source_file": "data/exports/finviz_2026-09-17.csv",
+      "known_at": "2026-09-16 16:15:00",
+      "bullish": [
+        "Financial"
+      ],
+      "bearish": [],
+      "notes": "",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "Agilent Technologies declares a quarterly cash dividend of $0.255 per share, payable October 6, 2026, to shareholders of record on October 28, 2026.",
+      "source_file": "data/exports/finviz_2026-09-17.csv#digest",
+      "known_at": "2026-09-16 16:15:00",
+      "bullish": [],
+      "bearish": [],
+      "notes": "Single-name earnings report on Agilent Technologies, no sector movement indicated.",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "Alcoa Schedules Third Quarter 2026 Earnings Release and Conference Call",
+      "source_file": "data/exports/finviz_2026-09-17.csv",
+      "known_at": "2026-09-15 08:59:00",
+      "bullish": [],
+      "bearish": [],
+      "notes": "The article is about Alcoa's earnings release and funding acquisition, which is specific to one company and does not provide enough information to make a bullish or bearish call on entire market sectors.",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "Alcoa prices $2.6 billion senior notes to fund South32 assets acquisition, enabling termination of its previously arranged bridge loan facility",
+      "source_file": "data/exports/finviz_2026-09-17.csv#digest",
+      "known_at": "2026-09-15 08:59:00",
+      "bullish": [
+        "Basic Materials"
+      ],
+      "bearish": [],
+      "notes": "",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "Retirees Are Quietly Earning 5% With Almost Zero Price Swings",
+      "source_file": "data/exports/finviz_2026-09-17.csv",
+      "known_at": "2026-02-24 09:04:42",
+      "bullish": [
+        "Consumer Defensive"
+      ],
+      "bearish": [],
+      "notes": "",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "Pacer ETFs and Barings Launch Two Actively Managed Fixed Income ETFs",
+      "source_file": "data/exports/finviz_2026-09-17.csv",
+      "known_at": "2026-06-23 09:00:00",
+      "bullish": [],
+      "bearish": [],
+      "notes": "The article is about the launch of two actively managed fixed income ETFs (CLO debt funds) by Pacer ETFs and Barings. It does not provide information that would make any of the specified Finviz market sectors bullish or bearish.",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "Pacer ETFs and Barings today launched the Pacer Barings CLO Market Flex ETF (AAAP), an actively managed CLO debt fund seeking current income and capital preservation.",
+      "source_file": "data/exports/finviz_2026-09-17.csv#digest",
+      "known_at": "2026-06-23 09:00:00",
+      "bullish": [],
+      "bearish": [],
+      "notes": "The article is about the launch of a new actively managed CLO debt fund. It does not provide enough information to determine a bullish or bearish sentiment towards any specific market sectors.",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "You Could Have Captured Golds 73% Surge For Only 0.18%",
+      "source_file": "data/exports/finviz_2026-09-17.csv",
+      "known_at": "2026-02-24 09:07:07",
+      "bullish": [],
+      "bearish": [],
+      "notes": "The article is about capturing the surge of gold and does not mention any specific Finviz market sectors.",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "ACG Announces Results of Extraordinary General Meeting of Shareholders",
+      "source_file": "data/exports/finviz_2026-09-17.csv",
+      "known_at": "2026-06-05 16:05:00",
+      "bullish": [
+        "Consumer Cyclical"
+      ],
+      "bearish": [],
+      "notes": "",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "Retail chatter and low-float momentum drive AACG's 13%+ premarket surge",
+      "source_file": "data/exports/finviz_2026-09-17.csv#digest",
+      "known_at": "2026-06-05 16:05:00",
+      "bullish": [
+        "Consumer Cyclical"
+      ],
+      "bearish": [],
+      "notes": "",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "Armada Acquisition Corp. II Announces Ticker Symbol to Change to XRPN on Oct 30, 2025",
+      "source_file": "data/exports/finviz_2026-09-17.csv",
+      "known_at": "2025-10-29 09:56:00",
+      "bullish": [],
+      "bearish": [],
+      "notes": "The article is about a single company's ticker symbol change and does not provide enough information to determine a bullish or bearish outlook on any market sectors.",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "Armada Acquisition Corp. II announced today it will change its NASDAQ ticker symbol to XRPN effective tomorrow, marking a strategic shift to focus on institutional XRP exposure.",
+      "source_file": "data/exports/finviz_2026-09-17.csv#digest",
+      "known_at": "2025-10-29 09:56:00",
+      "bullish": [],
+      "bearish": [],
+      "notes": "The article is about a single company's ticker symbol change and strategic shift, which does not provide enough information to determine bullish or bearish sentiment on broader market sectors.",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "Navigating The New Tariff Landscape",
+      "source_file": "data/exports/finviz_2026-09-17.csv",
+      "known_at": "2025-04-16 03:05:00",
+      "bullish": [
+        "Energy"
+      ],
+      "bearish": [],
+      "notes": "",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "This Stock Can Rise 150%, Plus 12 More Aerospace Buys",
+      "source_file": "data/exports/finviz_2026-09-17.csv",
+      "known_at": "2026-09-15 11:57:00",
+      "bullish": [
+        "Industrials"
+      ],
+      "bearish": [],
+      "notes": "",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "Q2 earnings miss and IPO costs drive AADX to new 12-month low",
+      "source_file": "data/exports/finviz_2026-09-17.csv#digest",
+      "known_at": "2026-09-15 11:57:00",
+      "bullish": [],
+      "bearish": [],
+      "notes": "",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "Airlines and Cruise Stocks Face New Oil Shock",
+      "source_file": "data/exports/finviz_2026-09-17.csv",
+      "known_at": "2026-09-16 14:18:53",
+      "bullish": [],
+      "bearish": [
+        "Energy"
+      ],
+      "notes": "",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "American Airlines warns surging jet fuel will lift Q4 fuel costs about $1B, may cut capacity",
+      "source_file": "data/exports/finviz_2026-09-17.csv#digest",
+      "known_at": "2026-09-16 14:18:53",
+      "bullish": [],
+      "bearish": [
+        "Energy"
+      ],
+      "notes": "The article discusses the impact of surging jet fuel costs on airlines, specifically mentioning a potential $1B increase in Q4 fuel costs for American Airlines. This suggests a bearish outlook for the Energy sector due to higher fuel prices",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "Atlantic American Corporation Receives Nasdaq Notice Regarding Delayed Second Quarter Form 10-Q Filing",
+      "source_file": "data/exports/finviz_2026-09-17.csv",
+      "known_at": "2026-08-26 16:39:00",
+      "bullish": [],
+      "bearish": [],
+      "notes": "The article is about a single company, Atlantic American Corporation, and its delayed filing, which does not provide enough information to determine a market sector movement.",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "Nasdaq filing delay notice and compliance extension drive AAME 20.77% surge",
+      "source_file": "data/exports/finviz_2026-09-17.csv#digest",
+      "known_at": "2026-08-26 16:39:00",
+      "bullish": [
+        "Technology"
+      ],
+      "bearish": [],
+      "notes": "",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "Acadian Asset Management Q2 2026 Earnings Call Summary",
+      "source_file": "data/exports/finviz_2026-09-17.csv",
+      "known_at": "2026-07-31 08:30:00",
+      "bullish": [],
+      "bearish": [],
+      "notes": "The article is about Acadian Asset Management's earnings call and mentions a decline in its stock price, but it does not provide enough information to determine a bullish or bearish sentiment towards any specific market sectors.",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "No clear catalyst identified for AAMI's 4.37% decline on September 1, 2026",
+      "source_file": "data/exports/finviz_2026-09-17.csv#digest",
+      "known_at": "2026-07-31 08:30:00",
+      "bullish": [],
+      "bearish": [],
+      "notes": "The article is about Acadian Asset Management's Q2 2026 earnings call and does not provide enough information to determine a bullish or bearish sentiment towards any specific market sectors.",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "Everyones Watching Applied Optoelectronics Revenue. Few Are Watching This Chart",
+      "source_file": "data/exports/finviz_2026-09-17.csv",
+      "known_at": "2026-09-17 13:22:51",
+      "bullish": [
+        "Industrials"
+      ],
+      "bearish": [],
+      "notes": "",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "Applied Optoelectronics signs 10-year leases for two Houston industrial buildings with starting monthly rent about $678,000",
+      "source_file": "data/exports/finviz_2026-09-17.csv#digest",
+      "known_at": "2026-09-17 13:22:51",
+      "bullish": [
+        "Industrials"
+      ],
+      "bearish": [],
+      "notes": "",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "AAON Introduces The Aaon Group as Its New Enterprise Identity",
+      "source_file": "data/exports/finviz_2026-09-17.csv",
+      "known_at": "2026-08-21 12:00:00",
+      "bullish": [],
+      "bearish": [],
+      "notes": "The article is a single-company news item about AAON's dividend declaration, which does not provide enough information to make bullish or bearish calls on broader market sectors.",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "AAON declares quarterly cash dividend of $0.10 per share, payable September 25, 2026 to shareholders of record on September 4, 2026.",
+      "source_file": "data/exports/finviz_2026-09-17.csv#digest",
+      "known_at": "2026-08-21 12:00:00",
+      "bullish": [],
+      "bearish": [],
+      "notes": "The article is a single-company news item about AAON declaring a dividend and changing its identity. It does not provide enough information to make bullish or bearish calls on broader market sectors.",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "Auto-parts sellers' stocks rally as Trump says tariffs are coming, to start next year",
+      "source_file": "data/exports/finviz_2026-09-17.csv",
+      "known_at": "2026-08-24 10:29:02",
+      "bullish": [
+        "Consumer Cyclical"
+      ],
+      "bearish": [],
+      "notes": "",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "Advance Auto Parts Q2 EPS $1.03 beats, revenue $2.0B misses as margins and cash flow expand despite soft DIY, raises EPS guidance, reiterates 2026 outlook",
+      "source_file": "data/exports/finviz_2026-09-17.csv#digest",
+      "known_at": "2026-08-24 10:29:02",
+      "bullish": [
+        "Consumer Cyclical"
+      ],
+      "bearish": [],
+      "notes": "",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "Single-Stock ETFs in Focus as Big Tech Earnings Unfold",
+      "source_file": "data/exports/finviz_2026-09-17.csv",
+      "known_at": "2025-07-29 10:00:00",
+      "bullish": [
+        "Technology"
+      ],
+      "bearish": [],
+      "notes": "",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "AAPDs 3.43% Yield Looks Great Until You See the 40% Hangover",
+      "source_file": "data/exports/finviz_2026-09-17.csv",
+      "known_at": "2026-02-23 08:53:02",
+      "bullish": [],
+      "bearish": [],
+      "notes": "The article is about a single company (AAPDs) and its yield and hangover, which does not provide enough information to determine a market sector movement.",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "Ascentage Pharma to Participate in Four Upcoming Investor Conferences",
+      "source_file": "data/exports/finviz_2026-09-17.csv",
+      "known_at": "2026-09-02 08:00:00",
+      "bullish": [],
+      "bearish": [],
+      "notes": "The article is a single-name earnings report on Ascentage Pharma, which does not provide enough information to make bullish or bearish calls on broader market sectors.",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "Ascentage Pharma posts H1 2026 unaudited results with revenue up 29% to US$44.5M, net loss US$120.4M",
+      "source_file": "data/exports/finviz_2026-09-17.csv#digest",
+      "known_at": "2026-09-02 08:00:00",
+      "bullish": [],
+      "bearish": [],
+      "notes": "The article is about Ascentage Pharma's unaudited results, focusing on revenue and net loss. It does not provide enough information to determine a bullish or bearish outlook for any specific market sectors.",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "Muskâs xAI and X Corp file to dismiss antitrust lawsuit over Appleâs iPhone ChatGPT integration",
+      "source_file": "data/exports/finviz_2026-09-17.csv#digest",
+      "known_at": "2026-09-17 16:20:44",
+      "bullish": [
+        "Technology"
+      ],
+      "bearish": [],
+      "notes": "The article discusses a dismissal of an antitrust lawsuit involving xAI and X Corp regarding Apple's iPhone ChatGPT integration, which could be seen as positive for technology companies. No bearish sectors are mentioned in the article.",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "Why Apple's Earnings Matter More For Tech ETFs Than Growth Stocks",
+      "source_file": "data/exports/finviz_2026-09-17.csv",
+      "known_at": "2026-01-30 09:48:32",
+      "bullish": [
+        "Technology"
+      ],
+      "bearish": [],
+      "notes": "",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "Roundhill Launches WeeklyPay Universe ETF (WPAY)",
+      "source_file": "data/exports/finviz_2026-09-17.csv",
+      "known_at": "2025-09-04 09:00:00",
+      "bullish": [
+        "Financial"
+      ],
+      "bearish": [],
+      "notes": "",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "Robbins LLP is Investigating Allegations that Aardvark Therapeutics, Inc. Misled Investors Regarding the Viability and Efficacy of its Lead Drug Candidate ARD-101",
+      "source_file": "data/exports/finviz_2026-09-17.csv",
+      "known_at": "2026-09-17 15:25:00",
+      "bullish": [],
+      "bearish": [],
+      "notes": "The article is about Aardvark Therapeutics and FDA discussions regarding its drug candidate ARD-101. It does not provide enough information to determine a bullish or bearish sentiment towards any specific market sectors.",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "Aardvark Therapeutics reviews unblinded Phase 3 ARD-101 data and continues FDA talks on resolving clinical hold",
+      "source_file": "data/exports/finviz_2026-09-17.csv#digest",
+      "known_at": "2026-09-17 15:25:00",
+      "bullish": [],
+      "bearish": [],
+      "notes": "The article is about Aardvark Therapeutics and its lead drug candidate ARD-101, focusing on FDA discussions and a clinical hold. It does not provide enough information to determine a bullish or bearish sentiment for any specific market sect",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "American Assets Trust: Q2 Earnings Snapshot",
+      "source_file": "data/exports/finviz_2026-09-17.csv",
+      "known_at": "2026-07-28 16:42:40",
+      "bullish": [
+        "Real Estate"
+      ],
+      "bearish": [],
+      "notes": "",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "AAT reaffirms 2026 FFO guidance, highlighting sizable embedded upside from office lease-up",
+      "source_file": "data/exports/finviz_2026-09-17.csv#digest",
+      "known_at": "2026-07-28 16:42:40",
+      "bullish": [
+        "Real Estate"
+      ],
+      "bearish": [],
+      "notes": "",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "Allied Gold Energizes Power Line, Feeds First Ore to the Crushing Circuit as the Kurmuk Mine Progresses Toward Completion of Commissioning and Transitions to Operations",
+      "source_file": "data/exports/finviz_2026-09-17.csv",
+      "known_at": "2026-09-17 17:00:00",
+      "bullish": [
+        "Energy"
+      ],
+      "bearish": [],
+      "notes": "",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    },
+    {
+      "ok": true,
+      "title": "Allied Gold's Kurmuk Mine connects to Ethiopian grid, starts crushing first ore, on track for grinding, first gold in weeks",
+      "source_file": "data/exports/finviz_2026-09-17.csv#digest",
+      "known_at": "2026-09-17 17:00:00",
+      "bullish": [
+        "Energy"
+      ],
+      "bearish": [],
+      "notes": "",
+      "lane": "zhipu",
+      "model": "glm-4-flash-250414",
+      "inference_source": "zhipu",
+      "via": "direct"
+    }
+  ],
+  "rollup": {
+    "bullish_mentions": {
+      "Consumer Cyclical": 4,
+      "Technology": 4,
+      "Energy": 3,
+      "Industrials": 3,
+      "Financial": 2,
+      "Real Estate": 2,
+      "Basic Materials": 1,
+      "Consumer Defensive": 1
+    },
+    "bearish_mentions": {
+      "Energy": 2
+    },
+    "hopper_watermark": {
+      "zhipu::glm-4-flash-250414": 40
+    },
+    "models": {
+      "glm-4-flash-250414": 40
+    }
+  },
+  "ok": 40
+}
