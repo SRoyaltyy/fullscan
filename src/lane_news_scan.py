@@ -2,6 +2,14 @@
 
 Backtest: one article → one $0 hop. Watermark lane + model on every row.
 Does not touch flatten / Webull / factor-mine live books.
+
+Cyrus 2026-09-21 hop policy (same as lane_route news_to_tickers):
+  current 2025+ flash only. Never land on glm-4-flash-250414, old glm-4-flash,
+  or qwen2.5-7b-instruct. On 429, abandon that provider — do not fall down
+  older sibling IDs.
+  Order: Zhipu glm-4.7-flash → SiliconFlow Qwen3-8B → OpenRouter :free
+  → DashScope qwen-flash → remaining $0 hoppers (TokenHub glm-5.3-flash
+  / flashx / deepseek-v4-flash, then hy3).
 """
 from __future__ import annotations
 
@@ -15,6 +23,8 @@ from collections import Counter
 from pathlib import Path
 
 from . import lane_route as lane
+
+NEWS_SCAN_TEMPLATE = "news_to_tickers"
 
 NEWS_DIR = Path("01_daily/news")
 EVENTS_DIR = Path("01_daily/events")
@@ -187,6 +197,21 @@ def harvest_all() -> list[dict]:
     return list(bag.values())
 
 
+def news_scan_lanes() -> list[str]:
+    """Same provider sequence as news_to_tickers (current flash first)."""
+    return lane.lanes_for(NEWS_SCAN_TEMPLATE)
+
+
+def news_scan_models(hop: str) -> list[str]:
+    """Primary current-flash IDs for one news hopper. Never banned IDs."""
+    return lane.primary_models_for(hop, NEWS_SCAN_TEMPLATE)
+
+
+def news_scan_hopper_plan() -> list[tuple[str, list[str]]]:
+    """Provider sequence + model IDs used by intensive news sector scan."""
+    return lane.hopper_plan(NEWS_SCAN_TEMPLATE)
+
+
 def _prompt(art: dict) -> str:
     return PROMPT.format(
         sectors=", ".join(FINVIZ_SECTORS),
@@ -199,12 +224,15 @@ def _prompt(art: dict) -> str:
 
 def _infer_one(art: dict, ctx: dict) -> dict:
     prompt = _prompt(art)
-    tmpl = "news_to_tickers"
-    for hop in lane.lanes_for(tmpl):
+    tmpl = NEWS_SCAN_TEMPLATE
+    for hop in news_scan_lanes():
         parsed, model = lane.ask_lane(
             hop, prompt, ctx, max_tokens=400, system=SYSTEM, tmpl=tmpl,
         )
         if parsed is not None:
+            if lane.is_banned_primary(model):
+                print(f"[lane_news_scan] skip banned model {hop}/{model}")
+                continue
             bull = [s for s in (parsed.get("bullish") or []) if s in FINVIZ_SECTORS]
             bear = [s for s in (parsed.get("bearish") or []) if s in FINVIZ_SECTORS]
             return {

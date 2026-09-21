@@ -14,20 +14,27 @@ New:
 
 Hopper preference (never call Pro/ paid IDs)
 --------------------------------------------
-default (key_people / key_products / revenue_mix / custom):
-  OpenRouter :free → DeepSeek → Qwen/DashScope → Zhipu Flash → Moonshot
-  → SiliconFlow non-Pro → ModelScope → TokenHub overflow (flash then hy3)
-  → GitHub Models → Cloudflare → SambaNova → Ollama → HF free
-  → Groq last-resort → Gemini
+Cyrus 2026-09-21: primary allowlists are current 2025+ flash only.
+On 429 / rate-limit, abandon that provider (add to skip) — do not fall
+down older sibling IDs on the same lane. Banned from primary / news:
+glm-4-flash-250414, any glm-4-flash that is not 4.7 / 5.x,
+qwen2.5-7b-instruct and similar pre-2025 small IDs.
 
-news_to_tickers (high volume):
-  Zhipu Flash first (quality) → SiliconFlow mid free
-  (Qwen/Qwen2.5-7B-Instruct + allowlisted non-Pro) → OpenRouter :free overflow
+default (key_people / key_products / revenue_mix / custom):
+  OpenRouter :free → DeepSeek flash → Qwen/DashScope qwen-flash
+  → Zhipu glm-4.7-flash → Moonshot → SiliconFlow current non-Pro
+  → ModelScope → TokenHub overflow (glm-5.3-flash / flashx /
+  deepseek-v4-flash, then hy3) → GitHub Models → Cloudflare
+  → SambaNova → Ollama → HF free → Groq last-resort → Gemini
+
+news_to_tickers + news sector scan (high volume, same policy):
+  Zhipu glm-4.7-flash → SiliconFlow current (Qwen3-8B)
+  → OpenRouter :free current → DashScope qwen-flash
   → remaining default hoppers (TokenHub still behind true $0)
 
 company_dig (longer context):
-  SiliconFlow Qwen / DeepSeek free non-Pro → native DeepSeek
-  → OpenRouter :free overflow → Zhipu Flash (quality digs OK)
+  SiliconFlow current Qwen / DeepSeek free non-Pro → native DeepSeek flash
+  → OpenRouter :free overflow → Zhipu glm-4.7-flash
   → remaining default hoppers (TokenHub still behind true $0)
 
 #290 Grok-news overlay can enqueue news_to_tickers later. This module
@@ -82,12 +89,9 @@ _OR_CANDIDATES = [
 ]
 OR_MODELS = [m for m in _OR_CANDIDATES if m == "openrouter/free" or str(m).endswith(":free")]
 DS_MODELS = ["deepseek-flash", "deepseek-chat"]
-# Free-ish first. qwen-flash, then turbo/small. Never plus / max / Pro / paid.
+# Current DashScope flash only. Never plus / max / Pro / paid / pre-2025 small.
 QWEN_MODELS = [m for m in (
     "qwen-flash",
-    "qwen-turbo",
-    "qwen2.5-7b-instruct",
-    "qwen3-8b",
 ) if "plus" not in m.lower() and "max" not in m.lower()
     and "paid" not in m.lower() and not m.lower().startswith("pro")
     and "/pro" not in m.lower() and "-pro" not in m.lower()]
@@ -117,7 +121,6 @@ TOKENHUB_MODELS = [
 ]
 SF_MODELS = [m for m in (
     "Qwen/Qwen3-8B",
-    "Qwen/Qwen2.5-7B-Instruct",
     "THUDM/GLM-Z1-9B-0414",
 ) if not str(m).startswith("Pro/")]
 # Extra SiliconFlow free non-Pro IDs for longer company_dig context only.
@@ -129,12 +132,12 @@ SF_URLS = [
     "https://api.siliconflow.com/v1/chat/completions",
 ]
 MS_MODELS = [
-    "Qwen/Qwen2.5-7B-Instruct",
     "Qwen/Qwen3-8B",
     "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
 ]
-# Zhipu documented free Flash family only — never glm-5.x / glm-4.7 paid.
-ZHIPU_MODELS = ["glm-4.7-flash", "glm-4-flash-250414", "glm-4.5-flash"]
+# Zhipu current free Flash only. Never glm-5.x (TokenHub) and never older
+# glm-4-flash siblings (those are last-resort, not primary / news).
+ZHIPU_MODELS = ["glm-4.7-flash"]
 ZHIPU_URLS = [
     "https://open.bigmodel.cn/api/paas/v4/chat/completions",
     "https://api.z.ai/api/paas/v4/chat/completions",
@@ -168,10 +171,19 @@ SN_MODELS = [
 HF_FALLBACK = [
     "HuggingFaceTB/SmolLM3-3B",
     "google/gemma-2-2b-it",
-    "Qwen/Qwen2.5-7B-Instruct",
 ]
 PACE = 2.1
 DEAD_PROVIDER = (401, 403, 410, 402)
+RATE_LIMIT = (429,)
+
+# Cyrus 2026-09-21 — last-resort only. Prefer excluding from every primary
+# allowlist. Not wired into hop_models. News scan never uses this list.
+LAST_RESORT_MODELS = (
+    "glm-4-flash-250414",
+    "glm-4.5-flash",
+    "qwen2.5-7b-instruct",
+    "Qwen/Qwen2.5-7B-Instruct",
+)
 
 # Default / existing-template hopper order (same as the green smoke path).
 # TokenHub is overflow behind true $0 hoppers (OR :free, DashScope, Zhipu
@@ -183,8 +195,9 @@ DEFAULT_LANES = [
     "github_models", "cloudflare", "sambanova",
     "ollama", "hf", "groq", "gemini",
 ]
-# news_to_tickers: Zhipu Flash → SF mid free → OpenRouter :free overflow.
-NEWS_HEAD = ["zhipu", "siliconflow", "openrouter"]
+# news_to_tickers + news sector scan: current flash first.
+# Zhipu glm-4.7-flash → SF Qwen3-8B → OR :free → DashScope qwen-flash.
+NEWS_HEAD = ["zhipu", "siliconflow", "openrouter", "qwen"]
 # company_dig: SF Qwen/DeepSeek free → native DeepSeek → OR :free → Zhipu.
 DIG_HEAD = ["siliconflow", "deepseek", "openrouter", "zhipu"]
 
@@ -243,12 +256,36 @@ def qwen_urls() -> list[str]:
     return public
 
 
+def is_banned_primary(mid: str) -> bool:
+    """True if a model ID is banned from primary / news hoppers.
+
+    Bans glm-4-flash-250414, any glm-4-flash that is not 4.7 / 5.x,
+    glm-4.5-flash (old glm-4 family), qwen2.5-7b-instruct and similar.
+    """
+    raw = str(mid or "").strip()
+    if not raw:
+        return True
+    low = raw.lower()
+    if any(n.lower() in low for n in LAST_RESORT_MODELS):
+        return True
+    if "qwen2.5-7b" in low:
+        return True
+    # glm-4-flash* that is not 4.7 (glm-4.7-flash does not contain this stem).
+    if "glm-4-flash" in low and "4.7" not in low:
+        return True
+    # glm-4.x-flash except 4.7 (covers glm-4.5-flash).
+    if low.startswith("glm-4.") and "flash" in low and "glm-4.7" not in low:
+        return True
+    return False
+
+
 def qwen_models() -> list[str]:
-    """Allowlisted free-ish Qwen IDs. qwen-flash first; skip plus/max/Pro."""
+    """Allowlisted current DashScope flash. qwen-flash only; skip plus/max/Pro."""
     return [m for m in QWEN_MODELS
             if "plus" not in m.lower() and "max" not in m.lower()
             and "paid" not in m.lower() and not m.lower().startswith("pro")
-            and "/pro" not in m.lower() and "-pro" not in m.lower()]
+            and "/pro" not in m.lower() and "-pro" not in m.lower()
+            and not is_banned_primary(m)]
 
 
 def _tokenhub_id_ok(mid: str) -> bool:
@@ -317,21 +354,70 @@ def lanes_for(tmpl: str) -> list[str]:
 
 
 def sf_models_for(tmpl: str) -> list[str]:
-    """SiliconFlow allowlist: strip Pro/; prefer mid-free Qwen for news, Qwen/DeepSeek for digs."""
-    ids = [m for m in SF_MODELS if not str(m).startswith("Pro/")]
+    """SiliconFlow allowlist: strip Pro/; current Qwen3 first for news/digs."""
+    ids = [
+        m for m in SF_MODELS
+        if not str(m).startswith("Pro/") and not is_banned_primary(m)
+    ]
     tmpl = str(tmpl or "").strip()
     if tmpl == "news_to_tickers":
-        prefer = "Qwen/Qwen2.5-7B-Instruct"
+        prefer = "Qwen/Qwen3-8B"
         ids = [prefer] + [m for m in ids if m != prefer] if prefer in ids else ids
     elif tmpl == "company_dig":
-        extra = [m for m in SF_DIG_MODELS if not str(m).startswith("Pro/")]
+        extra = [
+            m for m in SF_DIG_MODELS
+            if not str(m).startswith("Pro/") and not is_banned_primary(m)
+        ]
         prefer = [
             "Qwen/Qwen3-8B",
-            "Qwen/Qwen2.5-7B-Instruct",
             *extra,
         ]
         ids = _dedupe([m for m in prefer if m in ids or m in extra] + ids)
-    return [m for m in ids if not str(m).startswith("Pro/")]
+    return [
+        m for m in ids
+        if not str(m).startswith("Pro/") and not is_banned_primary(m)
+    ]
+
+
+def primary_models_for(lane: str, tmpl: str = "custom") -> list[str]:
+    """Current 2025+ primary IDs for a hopper. Never last-resort / banned IDs."""
+    tmpl = str(tmpl or "custom").strip()
+    if lane == "openrouter":
+        raw = [m for m in OR_MODELS if _or_is_free(m)]
+    elif lane == "deepseek":
+        raw = list(DS_MODELS)
+    elif lane == "qwen":
+        raw = qwen_models()
+    elif lane == "zhipu":
+        raw = list(ZHIPU_MODELS)
+    elif lane == "moonshot":
+        raw = list(MOONSHOT_MODELS)
+    elif lane == "siliconflow":
+        raw = sf_models_for(tmpl)
+    elif lane == "modelscope":
+        raw = list(MS_MODELS)
+    elif lane == "tokenhub":
+        raw = tokenhub_models()
+    elif lane == "github_models":
+        raw = list(GH_MODELS)
+    elif lane == "cloudflare":
+        raw = list(CF_MODELS)
+    elif lane == "sambanova":
+        raw = list(SN_MODELS)
+    elif lane == "hf":
+        raw = list(HF_FALLBACK)
+    elif lane == "groq":
+        raw = list(GROQ_MODELS)
+    elif lane == "gemini":
+        raw = list(GEMINI_MODELS)
+    else:
+        raw = []
+    return [m for m in raw if not is_banned_primary(m)]
+
+
+def hopper_plan(tmpl: str = "custom") -> list[tuple[str, list[str]]]:
+    """Provider sequence + primary model IDs for a template."""
+    return [(hop, primary_models_for(hop, tmpl)) for hop in lanes_for(tmpl)]
 
 
 def token_budget(tmpl: str) -> int:
@@ -396,7 +482,7 @@ def inbox_error(q) -> str | None:
 
 
 def _prompt_news_to_tickers(q: dict) -> str:
-    # Prefer Zhipu Flash, else SF mid-free Qwen2.5-7B, OpenRouter :free overflow.
+    # Prefer glm-4.7-flash, else SF Qwen3-8B, OpenRouter :free, qwen-flash.
     # #290 Grok-news overlay can enqueue this template later (articles + known_at).
     blocks = []
     for i, art in enumerate(articles_from(q), 1):
@@ -592,10 +678,8 @@ def _or_is_free(model):
 
 
 def _rotate(status):
-    """Next model after 429 / 5xx (and other model-level failures)."""
-    if status == 429:
-        time.sleep(2)
-    return status == 429 or status == 0 or status >= 500
+    """Next current model after connect-fail / 5xx. 429 abandons the provider."""
+    return status == 0 or status >= 500
 
 
 def _ok(ticker, tmpl, question, lane, model, parsed):
@@ -694,10 +778,16 @@ def ollama_chat(base, model, prompt, max_tokens=320, system=None):
 
 
 def hop_models(lane, models, call, abandon_404=False):
-    """call(model) -> (parsed, status, info). None = skip to next provider."""
+    """call(model) -> (parsed, status, info). None = skip to next provider.
+
+    Cyrus 2026-09-21: never try banned last-resort IDs. On 429 / rate-limit,
+    abandon this provider for the request (add to skip) — do not fall down
+    older sibling IDs on the same lane.
+    """
     if lane in _SKIP:
         print(f"  {lane} skip (cached)")
         return None, None
+    models = [m for m in models if not is_banned_primary(m)]
     n404 = 0
     for model in models:
         parsed, status, info = call(model)
@@ -707,6 +797,11 @@ def hop_models(lane, models, call, abandon_404=False):
         if status in DEAD_PROVIDER:
             print(f"  {lane} skip ({status})")
             _SKIP.add(lane)
+            return None, None
+        if status in RATE_LIMIT:
+            print(f"  {lane} skip (429)")
+            _SKIP.add(lane)
+            time.sleep(2)
             return None, None
         if status == 404 and abandon_404:
             n404 += 1
@@ -805,7 +900,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
         extra = {"HTTP-Referer": "https://github.com/SRoyaltyy/fullscan", "X-Title": "Lane"}
         return hop_models(
             "openrouter",
-            [m for m in OR_MODELS if _or_is_free(m)],
+            primary_models_for("openrouter", tmpl),
             lambda model: oc(
                 "https://openrouter.ai/api/v1/chat/completions",
                 keys["openrouter"], model, extra,
@@ -816,7 +911,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
             return None, None
         return hop_models(
             "deepseek",
-            DS_MODELS,
+            primary_models_for("deepseek", tmpl),
             lambda model: oc(
                 "https://api.deepseek.com/chat/completions",
                 keys["deepseek"], model,
@@ -827,7 +922,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
             return None, None
         return hop_models(
             "qwen",
-            qwen_models(),
+            primary_models_for("qwen", tmpl),
             lambda model: flu(qwen_urls(), keys["qwen"], model),
         )
     if lane == "zhipu":
@@ -835,7 +930,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
             return None, None
         return hop_models(
             "zhipu",
-            ZHIPU_MODELS,
+            primary_models_for("zhipu", tmpl),
             lambda model: flu(ZHIPU_URLS, keys["zhipu"], model),
         )
     if lane == "moonshot":
@@ -843,7 +938,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
             return None, None
         return hop_models(
             "moonshot",
-            MOONSHOT_MODELS,
+            primary_models_for("moonshot", tmpl),
             lambda model: flu(MOONSHOT_URLS, keys["moonshot"], model),
         )
     if lane == "siliconflow":
@@ -851,7 +946,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
             return None, None
         return hop_models(
             "siliconflow",
-            sf_models_for(tmpl),
+            primary_models_for("siliconflow", tmpl),
             lambda model: flu(SF_URLS, keys["siliconflow"], model),
         )
     if lane == "modelscope":
@@ -859,7 +954,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
             return None, None
         return hop_models(
             "modelscope",
-            MS_MODELS,
+            primary_models_for("modelscope", tmpl),
             lambda model: oc(
                 "https://api-inference.modelscope.cn/v1/chat/completions",
                 keys["modelscope"], model,
@@ -870,7 +965,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
             return None, None
         return hop_models(
             "tokenhub",
-            tokenhub_models(),
+            primary_models_for("tokenhub", tmpl),
             lambda model: first_live_url(
                 tokenhub_urls(), keys["tokenhub"], model, prompt,
                 max_tokens=max_tokens, system=system,
@@ -886,7 +981,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
         }
         return hop_models(
             "github_models",
-            GH_MODELS,
+            primary_models_for("github_models", tmpl),
             lambda model: oc(
                 "https://models.github.ai/inference/chat/completions",
                 gh_direct, model, extra,
@@ -903,7 +998,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
         )
         return hop_models(
             "cloudflare",
-            CF_MODELS,
+            primary_models_for("cloudflare", tmpl),
             lambda model: oc(cf_url, keys["cloudflare"], model),
         )
     if lane == "sambanova":
@@ -911,7 +1006,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
             return None, None
         return hop_models(
             "sambanova",
-            SN_MODELS,
+            primary_models_for("sambanova", tmpl),
             lambda model: oc(
                 "https://api.sambanova.ai/v1/chat/completions",
                 keys["sambanova"], model,
@@ -937,7 +1032,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
             return None, None
         return hop_models(
             "hf",
-            hf_free_models(keys["hf"]),
+            [m for m in hf_free_models(keys["hf"]) if not is_banned_primary(m)],
             lambda model: oc(
                 "https://router.huggingface.co/v1/chat/completions",
                 keys["hf"], model,
@@ -948,7 +1043,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
             return None, None
         return hop_models(
             "groq",
-            GROQ_MODELS,
+            primary_models_for("groq", tmpl),
             lambda model: oc(
                 "https://api.groq.com/openai/v1/chat/completions",
                 keys["groq"], model,
@@ -959,7 +1054,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
             return None, None
         return hop_models(
             "gemini",
-            GEMINI_MODELS,
+            primary_models_for("gemini", tmpl),
             lambda model: gemini_chat(
                 keys["gemini"], model, prompt, max_tokens=max_tokens, system=system,
             ),
