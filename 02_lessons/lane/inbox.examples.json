@@ -13,6 +13,31 @@
       ]
     },
     {
+      "id": "example-news-classify",
+      "template": "news_classify",
+      "articles": [
+        {
+          "title": "Four paying subscribers filed a class-action antitrust lawsuit against Anthropic, OpenAI, xAI, and Google",
+          "body": "Buist et al. v. Anthropic PBC et al., ND Cal, Sept 18 2026.",
+          "known_at": "2026-09-18"
+        }
+      ]
+    },
+    {
+      "id": "example-news-impact",
+      "template": "news_impact",
+      "family": "blast",
+      "event_class": "blast_legal",
+      "q5": "impulse",
+      "constraint": "Sherman Act class action exists",
+      "articles": [
+        {
+          "title": "Four paying subscribers filed a class-action antitrust lawsuit against Anthropic, OpenAI, xAI, and Google",
+          "body": "Buist et al. v. Anthropic PBC et al., ND Cal, Sept 18 2026."
+        }
+      ]
+    },
+    {
       "id": "example-dig-nvda",
       "ticker": "NVDA",
       "template": "company_dig",

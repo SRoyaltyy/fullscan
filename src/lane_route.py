@@ -10,6 +10,8 @@ Templates
 Existing (ticker required): key_people, key_products, revenue_mix, custom
 New:
   news_to_tickers  — articles[{title, body, known_at?}] → listed tickers
+  news_classify    — articles[{title, body}] → {event_class, sign, q5}
+  news_impact      — one family analyst → entities[] up/down
   company_dig      — ticker + brief/questions → research JSON
 
 Hopper preference (never call Pro/ paid IDs)
@@ -27,7 +29,8 @@ default (key_people / key_products / revenue_mix / custom):
   deepseek-v4-flash, then hy3) → GitHub Models → Cloudflare
   → SambaNova → Ollama → HF free → Groq last-resort → Gemini
 
-news_to_tickers + news sector scan (high volume, same policy):
+news_to_tickers + news_classify + news_impact + news sector scan
+(high volume, same policy):
   Zhipu glm-4.7-flash → SiliconFlow current (Qwen3-8B)
   → OpenRouter :free current → DashScope qwen-flash
   → remaining default hoppers (TokenHub still behind true $0)
@@ -195,14 +198,15 @@ DEFAULT_LANES = [
     "github_models", "cloudflare", "sambanova",
     "ollama", "hf", "groq", "gemini",
 ]
-# news_to_tickers + news sector scan: current flash first.
+# news_to_tickers + classify/impact + news sector scan: current flash first.
 # Zhipu glm-4.7-flash → SF Qwen3-8B → OR :free → DashScope qwen-flash.
 NEWS_HEAD = ["zhipu", "siliconflow", "openrouter", "qwen"]
 # company_dig: SF Qwen/DeepSeek free → native DeepSeek → OR :free → Zhipu.
 DIG_HEAD = ["siliconflow", "deepseek", "openrouter", "zhipu"]
 
 LEGACY_TEMPLATES = ("key_people", "key_products", "revenue_mix", "custom")
-KNOWN_TEMPLATES = LEGACY_TEMPLATES + ("news_to_tickers", "company_dig")
+NEWS_TEMPLATES = ("news_to_tickers", "news_classify", "news_impact")
+KNOWN_TEMPLATES = LEGACY_TEMPLATES + NEWS_TEMPLATES + ("company_dig",)
 
 _HF_CACHE: list[str] = []
 _SKIP: set[str] = set()
@@ -346,7 +350,7 @@ def tokenhub_models() -> list[str]:
 def lanes_for(tmpl: str) -> list[str]:
     """Hopper order for a template. Never includes Pro/ paid IDs."""
     tmpl = str(tmpl or "custom").strip()
-    if tmpl == "news_to_tickers":
+    if tmpl in NEWS_TEMPLATES:
         return _dedupe(NEWS_HEAD + DEFAULT_LANES)
     if tmpl == "company_dig":
         return _dedupe(DIG_HEAD + DEFAULT_LANES)
@@ -360,7 +364,7 @@ def sf_models_for(tmpl: str) -> list[str]:
         if not str(m).startswith("Pro/") and not is_banned_primary(m)
     ]
     tmpl = str(tmpl or "").strip()
-    if tmpl == "news_to_tickers":
+    if tmpl in NEWS_TEMPLATES:
         prefer = "Qwen/Qwen3-8B"
         ids = [prefer] + [m for m in ids if m != prefer] if prefer in ids else ids
     elif tmpl == "company_dig":
@@ -425,12 +429,22 @@ def token_budget(tmpl: str) -> int:
         return 1600
     if tmpl == "news_to_tickers":
         return 900
+    if tmpl == "news_classify":
+        return 400
+    if tmpl == "news_impact":
+        return 900
     return 320
 
 
 def system_for(tmpl: str) -> str:
     if tmpl == "news_to_tickers":
         return SYSTEM_NEWS
+    if tmpl == "news_classify":
+        from .news_impact.prompts import CLASSIFIER_SYSTEM
+        return CLASSIFIER_SYSTEM
+    if tmpl == "news_impact":
+        from .news_impact.prompts import ANALYST_SYSTEM
+        return ANALYST_SYSTEM
     if tmpl == "company_dig":
         return SYSTEM_DIG
     return SYSTEM
@@ -468,9 +482,9 @@ def inbox_error(q) -> str | None:
     if not isinstance(q, dict):
         return "question must be an object"
     tmpl = str(q.get("template") or "custom").strip() or "custom"
-    if tmpl == "news_to_tickers":
+    if tmpl in NEWS_TEMPLATES:
         if not articles_from(q):
-            return "news_to_tickers needs articles[{title,body}]"
+            return f"{tmpl} needs articles[{{title,body}}]"
         return None
     if tmpl == "company_dig":
         if not str(q.get("ticker") or "").strip():
@@ -560,6 +574,28 @@ def prompt_for(q: dict):
         if arts and not question:
             question = arts[0].get("title") or "news_to_tickers"
         return ticker, tmpl, question, _prompt_news_to_tickers(q)
+    if tmpl in ("news_classify", "news_impact"):
+        from .news_impact.prompts import analyst_prompt, classifier_prompt
+        arts = articles_from(q)
+        art = arts[0] if arts else {}
+        question = (q.get("question") or q.get("id") or art.get("title") or tmpl).strip()
+        if tmpl == "news_classify":
+            prompt = classifier_prompt(
+                art.get("title") or "", art.get("body") or "",
+                art.get("known_at") or "",
+            )
+        else:
+            prompt = analyst_prompt(
+                art.get("title") or "",
+                art.get("body") or "",
+                str(q.get("family") or "blast"),
+                str(q.get("event_class") or "blast_legal"),
+                q.get("sign"),
+                str(q.get("q5") or "impulse"),
+                str(q.get("constraint") or ""),
+                q.get("pack_facts") or [],
+            )
+        return ticker, tmpl, question, prompt
     if tmpl == "company_dig":
         question = str(q.get("brief") or q.get("question") or "company_dig").strip()
         return ticker, tmpl, question, _prompt_company_dig(q)

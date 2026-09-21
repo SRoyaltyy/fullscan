@@ -30,6 +30,13 @@ Copy a question into `inbox.json` and run **Lane JSON wire**
 (`workflow_dispatch`). Leave the live NVDA smoke rows in place unless you
 mean to replace that batch.
 
+### `news_classify` / `news_impact` (mechanism router)
+
+Same news hopper head as `news_to_tickers`. Classifier returns
+`{event_class, sign, q5}`. Analyst sees one family template and
+returns `entities[]` (up/down/mixed/not_determined). No scores.
+See `src/news_impact/`.
+
 ### `news_to_tickers` (high volume)
 
 Zhipu `glm-4.7-flash` first, else SiliconFlow current (`Qwen/Qwen3-8B`),

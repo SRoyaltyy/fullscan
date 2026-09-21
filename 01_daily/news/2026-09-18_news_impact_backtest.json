@@ -1,0 +1,269 @@
+{
+  "date": "2026-09-18",
+  "harvested": 123,
+  "old": {
+    "n_labeled": 123,
+    "usable": 7,
+    "discarded": 116,
+    "usable_ratio": 0.0569,
+    "by_class": {
+      "macro_relevant": 5,
+      "noise": 101,
+      "sector_relevant": 2,
+      "single_name": 15
+    }
+  },
+  "new": {
+    "n": 123,
+    "usable": 33,
+    "discarded": 90,
+    "usable_ratio": 0.2683,
+    "event_classes": {
+      "discard": 88,
+      "print_vs_priced": 10,
+      "guidance": 7,
+      "gate": 4,
+      "corporate_action_mna": 4,
+      "regime_state": 2,
+      "capital_return": 2,
+      "inventory_print": 1,
+      "capacity": 1,
+      "statement_public": 1,
+      "insider_flow": 1,
+      "price_cap": 1,
+      "trial_readout": 1
+    },
+    "hopper_watermark": {
+      "deterministic::news_impact_v1": 123
+    },
+    "winners": {
+      "ELV": 1,
+      "AMGN": 1,
+      "IBM": 1,
+      "ASML": 1,
+      "CNQ": 1,
+      "COR": 1,
+      "CVE": 1,
+      "KMI": 1,
+      "LIN": 1,
+      "BCS": 1,
+      "BNS": 1,
+      "CAH": 1,
+      "CM": 1,
+      "E": 1,
+      "FAST": 1,
+      "GD": 1,
+      "ING": 1
+    },
+    "losers": {
+      "DVN": 1,
+      "BAC": 1,
+      "APH": 1,
+      "SNOW": 1,
+      "DDOG": 1
+    }
+  },
+  "rescued_n": 28,
+  "killed_n": 2,
+  "rescued_sample": [
+    {
+      "title": "Elevance Health disclosed in an SEC filing that it reaffirmed its 2026 guidance for at least $27.00 in adjusted EPS and a 90.2% benefit expense ratio.",
+      "event_class": "guidance",
+      "entities": [
+        "ELV:up"
+      ]
+    },
+    {
+      "title": "ASML nearly sold out of 2027 EUV capacity amid very strong AI-driven demand, JPMorgan says",
+      "event_class": "capacity",
+      "entities": [
+        "ASML:up",
+        "TSM:mixed"
+      ]
+    },
+    {
+      "title": "BAC CEO's soft Q3 outlook at Barclays conference drives 5% plunge",
+      "event_class": "guidance",
+      "entities": [
+        "BAC:down"
+      ]
+    },
+    {
+      "title": "Canadian Natural Resources posts record Q2 2026 results with EPS $1.58, raises 2026 production guidance and returns about $4B to shareholders",
+      "event_class": "guidance",
+      "entities": [
+        "CNQ:up"
+      ]
+    },
+    {
+      "title": "Cencora reaffirms fiscal 2026 adjusted EPS guidance despite Walgreens prescription volume shift",
+      "event_class": "guidance",
+      "entities": [
+        "COR:up"
+      ]
+    },
+    {
+      "title": "Cenovus Energy Q2 2026 non-GAAP EPS $1.08 misses estimates, revenue $14.7B beats, company raises full-year production guidance",
+      "event_class": "guidance",
+      "entities": [
+        "CVE:up"
+      ]
+    },
+    {
+      "title": "KMI rebounds on pipeline project momentum and raised 2026 guidance",
+      "event_class": "guidance",
+      "entities": [
+        "KMI:up"
+      ]
+    },
+    {
+      "title": "Linde posts record Q2 EPS, raises 2026 EPS guidance floor as project backlog grows about $1B to $8.1B",
+      "event_class": "guidance",
+      "entities": [
+        "LIN:up"
+      ]
+    },
+    {
+      "title": "Salesforce issues FY27 revenue guidance of $46.4B, sets FY30 revenue target above $63B at Investor Day",
+      "event_class": "print_vs_priced",
+      "entities": [
+        "CRM:not_determined"
+      ]
+    },
+    {
+      "title": "Strong H1 profits, guidance upgrade and Â£1bn buyback drive BCS 6.48% surge",
+      "event_class": "capital_return",
+      "entities": [
+        "BCS:up"
+      ]
+    },
+    {
+      "title": "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
+      "event_class": "corporate_action_mna",
+      "entities": [
+        "AJG:mixed"
+      ]
+    },
+    {
+      "title": "Bank of Nova Scotia posts record Q3 2026 EPS $2.28 as National Bank upgrades to Outperform, lifts target to C$142",
+      "event_class": "print_vs_priced",
+      "entities": [
+        "BNS:up"
+      ]
+    },
+    {
+      "title": "Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
+      "event_class": "print_vs_priced",
+      "entities": [
+        "CAH:up"
+      ]
+    },
+    {
+      "title": "Blackstone Infrastructure and PNM file amended New Mexico PRC merger plan with $220M ratepayer credits and $80M community benefits for $11.5B TXNM deal",
+      "event_class": "corporate_action_mna",
+      "entities": [
+        "listed expression unknown:not_determined"
+      ]
+    },
+    {
+      "title": "Canadian Imperial Bank Of Commerce reports fiscal Q3 2026 results with non-GAAP EPS $1.97 (+25% YoY) and revenue $6.0B (+14% YoY), beats EPS and revenue estimates",
+      "event_class": "print_vs_priced",
+      "entities": [
+        "CM:up"
+      ]
+    },
+    {
+      "title": "Cardinal Health CEO Sells $29 Million in Stock After Earnings Send Shares to Record",
+      "event_class": "insider_flow",
+      "entities": [
+        "CAH:not_determined"
+      ]
+    },
+    {
+      "title": "Dominion, NextEra enhance Virginia merger benefits with 1,000 new jobs, doubled bill credits and $1B-a-year supplier program",
+      "event_class": "corporate_action_mna",
+      "entities": [
+        "D:mixed",
+        "NEE:mixed"
+      ]
+    },
+    {
+      "title": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results",
+      "event_class": "capital_return",
+      "entities": [
+        "E:up"
+      ]
+    },
+    {
+      "title": "Fabrinet earnings weakness and rising yields spark 6.5% APH drop",
+      "event_class": "print_vs_priced",
+      "entities": [
+        "APH:down"
+      ]
+    },
+    {
+      "title": "Fastenal beats Q2 estimates with EPS $0.33 (+14% YoY), revenue $2.4B (+15% YoY), notes gross margin pressure and lowers 2026 digital sales mix target",
+      "event_class": "print_vs_priced",
+      "entities": [
+        "FAST:up"
+      ]
+    },
+    {
+      "title": "General Dynamics' GDIT wins $1.3B multi-year Enterprise Network Operations and Cybersecurity Support contract for Army National Guard, federal partners",
+      "event_class": "gate",
+      "entities": [
+        "GD:up"
+      ]
+    },
+    {
+      "title": "ING Groep NV ADR reports fiscal Q2 2026 results with non-GAAP EPS $0.77 (+21% YoY) and revenue $7.2B (+10% YoY), beats EPS and revenue estimates",
+      "event_class": "print_vs_priced",
+      "entities": [
+        "ING:up"
+      ]
+    },
+    {
+      "title": "Mizuho Financial Group Inc ADR reports fiscal quarterly results with non-GAAP EPS $0.14 (-10% YoY) and revenue $15.4B (+198% YoY), misses EPS but beats revenue estimates",
+      "event_class": "print_vs_priced",
+      "entities": [
+        "listed expression unknown:not_determined"
+      ]
+    },
+    {
+      "title": "Motorola Solutions wins $139 million 10-year public safety technology contract from State of Louisiana",
+      "event_class": "gate",
+      "entities": [
+        "listed expression unknown:not_determined"
+      ]
+    },
+    {
+      "title": "NextEra and Dominion Sweeten Merger Deal With Bill Credits and New Jobs",
+      "event_class": "corporate_action_mna",
+      "entities": [
+        "D:mixed",
+        "NEE:mixed"
+      ]
+    }
+  ],
+  "killed_sample": [
+    {
+      "title": "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
+      "old_class": "macro_relevant",
+      "event_class": "regime_state",
+      "q5": "regime",
+      "why": "gold-on-Fed reaction reprint"
+    },
+    {
+      "title": "Gold prices slide more than 3% after Fed Chair Kevin Warshâs Jackson Hole comments boost September U.S. rate hike expectations",
+      "old_class": "macro_relevant",
+      "event_class": "regime_state",
+      "q5": "regime",
+      "why": "gold-on-Fed reaction reprint"
+    }
+  ],
+  "improvement": {
+    "usable_ratio_delta": 0.2114,
+    "note": "usable = impulse/regime_break with a real mechanism. rescued = old parse discarded, router kept. killed = old parse usable (often Hormuz/gold reprints), router weather/discard."
+  },
+  "results": []
+}
