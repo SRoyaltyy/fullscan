@@ -1,0 +1,115 @@
+{
+  "date": "2026-09-21",
+  "generated_at": "2026-09-21T16:37:56.316721-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-09-22",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-09-22) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks rallied as easing oil prices and lower Treasury yields lifted risk assets and AI optimism boosted tech ahead of the Trump–Xi summit",
+  "raw_text": "- The Nasdaq Composite ($COMP) climbed 2.26% to a record 27,122.09, the S&P 500 ($SPX) rose 1.49% to 7,764.22, and the Dow Jones Industrial Average ($DJI) gained 0.72% to 52,053.88, with nine of 11 S&P 500 ($SPX) sectors closing higher.\n- Communication Services led sector gains, rising 4.2% as Meta Platforms (META) jumped 6.2% after Wells Fargo raised its price target following the launch of the Muse AI assistant and related momentum.\n- Information Technology advanced 2.4% as Advanced Micro Devices (AMD) surged 8.5% to reach a $1 trillion market capitalization amid renewed AI spending optimism and reports of progress in US–China AI talks ahead of a Trump–Xi summit, while Intel (INTC) and Arm Holdings (ARM) also rallied on AI enthusiasm.\n- Consumer Discretionary gained 1.8%, while Energy fell 2.0% as West Texas Intermediate crude (@CL) dropped more than 3% to an 11-day low on hopes for US–Iran and broader Middle East diplomatic progress at this week’s UN meeting.\n- Accenture (ACN) climbed 3.5% after announcing a $2 billion partnership with Anthropic focused on AI model evaluation.\n- Critical Metals (CRML) soared 35% after President Trump announced a Greenland security agreement with Denmark.\n- Warner Bros. Discovery (WBD) jumped more than 10% and Paramount Global (PSKY) advanced after Paramount settled state antitrust lawsuits, including with California, clearing a major hurdle toward their planned $110 billion merger, with both stocks extending the move in extended trading.\n- Novo Nordisk (NVO) fell 7.9% after CEO Mike Doustdar outlined 2030 goals that lacked the new blockbuster details investors had been anticipating.\n- Treasury yields retreated even as Fed Governor Adriana Musalem said strong demand and inflation pressures may require further rate hikes, reinforcing expectations following last week’s Fed move.\n- After the bell, Ennis Inc. (EBF) reported Q4 EPS of $0.38 versus $0.39 expected, while muted after-hours reactions to earnings from ABIVAX (ABVX) and AnaptysBio (ANAB) left index futures little changed as investors look ahead to the Trump–Xi summit, upcoming housing data, and additional earnings.",
+  "raw_summary_md": "- The **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) **climbed 2.26% to a record 27,122.09**, the **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) **rose 1.49% to 7,764.22**, and the **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) **gained 0.72% to 52,053.88**, with **nine of 11 S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) **sectors closing higher**.\n- **Communication Services** led sector gains, **rising 4.2%** as **Meta Platforms** ([META](https://finviz.com/quote?t=META)) **jumped 6.2%** after **Wells Fargo** raised its price target following the launch of the Muse AI assistant and related momentum.\n- **Information Technology** advanced **2.4%** as **Advanced Micro Devices** ([AMD](https://finviz.com/quote?t=AMD)) **surged 8.5% to reach a $1 trillion market capitalization** amid **renewed AI spending optimism** and reports of progress in **US–China AI talks ahead of a Trump–Xi summit**, while **Intel** ([INTC](https://finviz.com/quote?t=INTC)) and **Arm Holdings** ([ARM](https://finviz.com/quote?t=ARM)) also **rallied on AI enthusiasm**.\n- **Consumer Discretionary gained 1.8%**, while **Energy fell 2.0%** as **West Texas Intermediate crude** ([@CL](https://finviz.com/futures_charts?t=CL)) **dropped more than 3% to an 11-day low** on hopes for **US–Iran and broader Middle East diplomatic progress** at this week’s UN meeting.\n- **Accenture** ([ACN](https://finviz.com/quote?t=ACN)) **climbed 3.5%** after announcing a **$2 billion partnership with Anthropic** focused on AI model evaluation.\n- **Critical Metals** ([CRML](https://finviz.com/quote?t=CRML)) **soared 35%** after **President Trump** announced a **Greenland security agreement with Denmark**.\n- **Warner Bros. Discovery** ([WBD](https://finviz.com/quote?t=WBD)) **jumped more than 10%** and **Paramount Global** ([PSKY](https://finviz.com/quote?t=PSKY)) advanced after **Paramount settled state antitrust lawsuits, including with California**, clearing a major hurdle toward their planned **$110 billion merger**, with both stocks extending the move in extended trading.\n- **Novo Nordisk** ([NVO](https://finviz.com/quote?t=NVO)) **fell 7.9%** after CEO **Mike Doustdar** outlined **2030 goals that lacked the new blockbuster details investors had been anticipating**.\n- **Treasury yields retreated** even as **Fed Governor Adriana Musalem** said **strong demand and inflation pressures may require further rate hikes**, reinforcing expectations following **last week’s Fed move**.\n- After the bell, **Ennis Inc.** ([EBF](https://finviz.com/quote?t=EBF)) reported **Q4 EPS of $0.38 versus $0.39 expected**, while **muted after-hours reactions to earnings from ABIVAX** ([ABVX](https://finviz.com/quote?t=ABVX)) **and AnaptysBio** ([ANAB](https://finviz.com/quote?t=ANAB)) left **index futures little changed** as investors look ahead to the **Trump–Xi summit**, upcoming housing data, and additional earnings.",
+  "index_moves": [
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": 2.26,
+      "verb": "climbed"
+    },
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": 1.49,
+      "verb": "rose"
+    },
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": 0.72,
+      "verb": "gained"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "META",
+    "AMD",
+    "INTC",
+    "ARM",
+    "ACN",
+    "CRML",
+    "WBD",
+    "PSKY",
+    "NVO",
+    "EBF",
+    "ABVX",
+    "ANAB"
+  ],
+  "named_leaders": [
+    "META",
+    "AMD",
+    "INTC",
+    "ARM",
+    "ACN",
+    "CRML",
+    "WBD",
+    "PSKY",
+    "NVO",
+    "EBF",
+    "ABVX",
+    "ANAB"
+  ],
+  "calendar": [
+    "After the bell, Ennis Inc. (EBF) reported Q4 EPS of $0.38 versus $0.39 expected, while muted after-hours reactions to earnings from ABIVAX (ABVX) and AnaptysBio (ANAB) left index futures little changed as investors look ahead to the Trump–Xi summit, upcoming housing data, and additional earnings."
+  ],
+  "prior_close": {
+    "spx": 1.49,
+    "nasdaq": 2.26,
+    "dow": 0.72
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": true,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "After the bell, Ennis Inc. (EBF) reported Q4 EPS of $0.38 versus $0.39 expected, while muted after-hours reactions to earnings from ABIVAX (ABVX) and AnaptysBio (ANAB) left index futures little changed as investors look ahead to the Trump–Xi summit, upcoming housing data, and additional earnings."
+    ],
+    "text": "After the bell, Ennis Inc. (EBF) reported Q4 EPS of $0.38 versus $0.39 expected, while muted after-hours reactions to earnings from ABIVAX (ABVX) and AnaptysBio (ANAB) left index futures little changed as investors look ahead to the Trump–Xi summit, upcoming housing data, and additional earnings."
+  },
+  "earnings_slate": {
+    "tickers": [
+      "EBF",
+      "ABVX",
+      "ANAB"
+    ],
+    "text": "After the bell, Ennis Inc. (EBF) reported Q4 EPS of $0.38 versus $0.39 expected, while muted after-hours reactions to earnings from ABIVAX (ABVX) and AnaptysBio (ANAB) left index futures little changed as investors look ahead to the Trump–Xi summit, upcoming housing data, and additional earnings."
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Consumer Discretionary gained 1.8%, while Energy fell 2.0% as West Texas Intermediate crude (@CL) dropped more than 3% to an 11-day low on hopes for US–Iran and broader Middle East diplomatic progress at this week’s UN meeting."
+  },
+  "finviz_id": 290482,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-09-21T16:37:01.933",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}

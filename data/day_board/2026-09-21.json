@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T14:50:30.613284-04:00",
+  "generated_at": "2026-09-21T16:37:57.449584-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -84,7 +84,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 3,
+      "n_opt_ok": 5,
       "n_opt": 5,
       "files": [
         {
@@ -146,10 +146,10 @@
           "name": "Close answer-key JSON (*_finviz_market_digest_close)",
           "path": "01_daily/news/2026-09-21_finviz_market_digest_close.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 9167,
+          "said": "US stocks rallied as easing oil prices and lower Treasury yields lifted risk assets and AI optimism boosted tech ahead of the Trump\u2013Xi summit \u00b7 leaders META, AMD, INTC, ARM, ACN, CRML \u00b7 good",
           "bullets": []
         },
         {
@@ -157,11 +157,14 @@
           "name": "Close answer-key MD (*_finviz_market_digest_close)",
           "path": "01_daily/news/2026-09-21_finviz_market_digest_close.md",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 4085,
+          "said": "Finviz homepage market digest (close) \u2014 2026-09-21",
+          "bullets": [
+            "Generated:** 2026-09-21T16:37:56.316721-04:00 (America/New_York)",
+            "Source:** `live`"
+          ]
         }
       ],
       "said": "5875 tickers \u00b7 2318 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
@@ -343,7 +346,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 7107,
+          "size": 7278,
           "said": "2 up / 2 down / 7 flat",
           "bullets": [
             "XLB FLAT +1.9",
@@ -742,7 +745,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 7107,
+          "size": 7278,
           "said": "2 up / 2 down / 7 flat",
           "bullets": [
             "XLB FLAT +1.9",
@@ -857,7 +860,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=185",
-          "size": 1403299,
+          "size": 1403296,
           "said": "1d BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC \u00b7 0.7224999999999999",
           "bullets": []
         },
@@ -868,10 +871,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 68088,
+          "size": 68070,
           "said": "Stock book \u2014 2026-09-21",
           "bullets": [
-            "_Generated 2026-09-21T14:50:28.532168-04:00_",
+            "_Generated 2026-09-21T16:22:09.260139-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -935,7 +938,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=185",
-          "size": 1403299,
+          "size": 1403296,
           "said": "1d BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC \u00b7 0.7224999999999999",
           "bullets": []
         },
@@ -2110,6 +2113,31 @@
         }
       ],
       "preview": "2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, sess"
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-09-21",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-21T16:37:56.369763-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-21_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 9167,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-09-21_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 4085,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-09-21\n**Generated:** 2026-09-21T16:37:56.316721-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks rallied as easing oil prices and lower Treasury yields lifted risk assets and AI optimism boosted tech ahead of the Trump\u2013Xi summit\n**Prior close:** SPX +1.49%  Nasdaq +2.26%  Dow +0.72%\n**SPX:** +1.49%  **Nasdaq:** +2.26%  **Dow:** +0.72%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** META, AMD, INTC, ARM, ACN, CRML, WBD, PSKY, NVO, EBF, ABVX, ANAB\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** EBF, ABVX, ANAB\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-22\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-21\n**Generated:** 2026-09-21T16:37:56.316721-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks rallied as easing oil prices and lower Treasury yields lifted risk assets and AI optimism boosted tech ahead of the Trump\u2013Xi summit\n**Prior close:** SPX +1.49%  Nasdaq +2.26%  Dow +0.72%\n**SPX:** +1.49%  **Nasdaq:** +2.26%  **Dow:** +0.72%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** META, AMD, INTC, ARM, ACN, CRML, WBD, PSKY, NVO, EBF, ABVX, ANAB\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** EBF, ABVX, ANAB\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-22\n**Clock use:** `next_open`"
     }
   ],
   "href": {
