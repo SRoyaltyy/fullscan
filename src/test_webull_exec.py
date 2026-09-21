@@ -16,6 +16,7 @@ from src.webull_exec import (
     parse_account_id,
     parse_balance,
     parse_order_id,
+    parse_orders,
     parse_positions,
     plan_hot4_for_broker,
     refuse_real,
@@ -72,6 +73,11 @@ def test_parse_account_and_book() -> None:
     assert pos["SOFI"]["shares"] == 10
     assert "SKIP" not in pos
     assert parse_order_id({"data": [{"order_id": "abc"}]}) == "abc"
+    parsed = parse_orders({"data": [{"symbol": "DELL", "side": "BUY",
+                                     "status": "SUBMITTED", "quantity": 1,
+                                     "client_order_id": "fsX"}]})
+    assert parsed[0]["ticker"] == "DELL"
+    assert parsed[0]["status"] == "SUBMITTED"
 
 
 def test_dry_run_does_not_place() -> None:
