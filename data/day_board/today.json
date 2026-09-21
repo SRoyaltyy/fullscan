@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T04:35:38.079680-04:00",
+  "generated_at": "2026-09-21T04:40:27.571036-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -12,27 +12,20 @@
   "buy_1d": [],
   "sell_1d": [],
   "flatten": {},
-  "general": {},
+  "general": {
+    "said": "UP  12.871",
+    "bullets": [
+      "bad: paid hawkish SEP / ~55% October hike",
+      "bad: leftover Hormuz Brent ~$101-108",
+      "bad: Trump UNGA + Xi summit two-sided",
+      "good: Asia composite +1.04%",
+      "good: Europe +0.88% partial"
+    ],
+    "score": "12.871",
+    "direction": "up"
+  },
   "sectors": {},
   "lands": [
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-09-21",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-21T04:24:12.024118-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-09-21_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1113396,
-          "preview": "5894 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5894 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "weather",
       "title": "Weather / regime (offline retry)",
@@ -193,6 +186,24 @@
         }
       ],
       "preview": "# News Judge \u2014 2026-09-21 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "date": "2026-09-21",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-21T04:40:27.000193-04:00",
+      "files": [
+        {
+          "path": "01_daily/general/2026-09-21_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 15731,
+          "preview": "# Premarket Prediction \u2014 2026-09-21\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 NOTABLE** | total score 12.871 (uncertainty multiplier \u00d71.0) | confidence 0.85\n>\n> **Good news vs bad news:** good +7.0 pts vs bad -1.0 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - Asia composite +1.04%\n> - Europe +0.88% partial\n> - Bessent-He talks ahead of Trump-Xi\n> - ES/NQ green vs cash\n> - oil offered\n>\n> **Bad news driving this:**\n> - paid hawkish SEP / ~55% October hike\n> - leftover Hormuz Brent ~$101-108\n> - Trump UNGA + Xi summit two-sided\n> - 1m real-yield backup still on tape\n> - EPU +163 1d\n>\n> **market uncertainty: **elevated** | VIX 14.95 | policy-uncertainty index 342.15 (1d +162.87)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udfe2 Asia overnight session: +0.5 \u00d7 2.0 = +1.0\n> - \ud83d\udfe2 Europe session: +0.5 \u00d7 2.0 = +1.0\n> - \ud83d\udfe2 Overnight news & catalys"
+        }
+      ],
+      "preview": "# Premarket Prediction \u2014 2026-09-21\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 NOTABLE** | total score 12.871 (uncertainty multiplier \u00d71.0) | confidence 0.85\n>\n> **Good news vs bad news:** good +7.0 pts vs bad -1.0 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - Asia composite +1.04%\n> - Europe +0.88% partial\n> - Bessent-He talks ahead of Trump-Xi\n> - ES/NQ green vs cash\n> - oil offered\n>\n> **Bad news driving this:**\n> - paid hawkish SEP / ~55% October hike\n> - leftover Hormuz Brent ~$101-108\n> - Trump UNGA + Xi summit two-sided\n> - 1m real-yield backup still on tape\n> - EPU +163 1d\n>\n> **market uncertainty: **elevated** | VIX 14.95 | policy-uncertainty index 342.15 (1d +162.87)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udfe2 Asia overnight session: +0.5 \u00d7 2.0 = +1.0\n> - \ud83d\udfe2 Europe session: +0.5 \u00d7 2.0 = +1.0\n> - \ud83d\udfe2 Overnight news & catalys"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
