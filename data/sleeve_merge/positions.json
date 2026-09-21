@@ -1,8 +1,69 @@
 {
-  "date": "2026-09-20",
+  "date": "2026-09-21",
   "policy": "flatten_robust",
-  "generated": "2026-09-20T19:03:51",
-  "cash": 102571.54,
-  "io": [],
+  "generated": "2026-09-21T10:56:53",
+  "cash": 28.68,
+  "io": [
+    {
+      "ticker": "IQV",
+      "sleeve": "io_core",
+      "shares": 76,
+      "entry_px": 270.04,
+      "entry_date": "2026-09-16",
+      "last_px": 266.42,
+      "yday_px": 266.42,
+      "open_px": 266.42,
+      "overnight": 0.0,
+      "pct": 0.0,
+      "mv": 20247.92,
+      "exit_date": "2026-09-21",
+      "reason": ""
+    },
+    {
+      "ticker": "RDNT",
+      "sleeve": "io_core",
+      "shares": 264,
+      "entry_px": 77.9175,
+      "entry_date": "2026-09-16",
+      "last_px": 76.0,
+      "yday_px": 76.0,
+      "open_px": 76.0,
+      "overnight": 0.0,
+      "pct": 0.0,
+      "mv": 20064.0,
+      "exit_date": "2026-09-21",
+      "reason": ""
+    },
+    {
+      "ticker": "AVAH",
+      "sleeve": "io_core",
+      "shares": 1429,
+      "entry_px": 14.42,
+      "entry_date": "2026-09-16",
+      "last_px": 13.67,
+      "yday_px": 13.67,
+      "open_px": 13.67,
+      "overnight": 0.0,
+      "pct": 0.0,
+      "mv": 19534.43,
+      "exit_date": "2026-09-21",
+      "reason": ""
+    },
+    {
+      "ticker": "BLFS",
+      "sleeve": "io_core",
+      "shares": 564,
+      "entry_px": 36.5,
+      "entry_date": "2026-09-16",
+      "last_px": 36.69,
+      "yday_px": 36.69,
+      "open_px": 36.69,
+      "overnight": -0.0,
+      "pct": -0.0,
+      "mv": 20693.16,
+      "exit_date": "2026-09-21",
+      "reason": ""
+    }
+  ],
   "mover": []
 }
