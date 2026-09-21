@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T06:53:48.453740-04:00",
+  "generated_at": "2026-09-21T06:55:47.163305-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -856,9 +856,9 @@
           "path": "data/stock_book/2026-09-21_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=180",
-          "size": 1400514,
-          "said": "1d BUY TEM, WAY, FTRE, AMRX, MGNI, COCO, DAR, CHEF \u00b7 SELL BTU, SOC, EU, UUUU, PUMP, URG \u00b7 0.7224999999999999",
+          "reason": "horizons=5 names=185",
+          "size": 1403300,
+          "said": "1d BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC \u00b7 0.7224999999999999",
           "bullets": []
         },
         {
@@ -868,10 +868,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 65348,
+          "size": 68088,
           "said": "Stock book \u2014 2026-09-21",
           "bullets": [
-            "_Generated 2026-09-21T06:47:49.221024-04:00_",
+            "_Generated 2026-09-21T06:53:58.226140-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -882,8 +882,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 2232,
-          "said": "134 green \u00b7 HALO, TGTX, DXCM, CHEF, MGTX, AMN, FTRE, FDMT, PGEN, TEM",
+          "size": 1598,
+          "said": "81 green \u00b7 TGTX, MGTX, DXCM, MGNI, FTRE, AGEN, PGEN, CORT, RDNT, KYMR",
           "bullets": []
         },
         {
@@ -934,9 +934,9 @@
           "path": "data/stock_book/2026-09-21_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=180",
-          "size": 1400514,
-          "said": "1d BUY TEM, WAY, FTRE, AMRX, MGNI, COCO, DAR, CHEF \u00b7 SELL BTU, SOC, EU, UUUU, PUMP, URG \u00b7 0.7224999999999999",
+          "reason": "horizons=5 names=185",
+          "size": 1403300,
+          "said": "1d BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC \u00b7 0.7224999999999999",
           "bullets": []
         },
         {
@@ -983,110 +983,114 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "TEM",
-        "score": 0.6878446846094661
-      },
-      {
-        "ticker": "WAY",
-        "score": 0.79571191523737
-      },
-      {
-        "ticker": "FTRE",
-        "score": 0.8359231529362716
-      },
-      {
-        "ticker": "AMRX",
-        "score": 0.8140664984408705
+        "ticker": "PGEN",
+        "score": 0.8376139065949222
       },
       {
         "ticker": "MGNI",
-        "score": 0.7980916423789843
+        "score": 0.8787515311040279
       },
       {
-        "ticker": "COCO",
-        "score": 0.6040714489524619
+        "ticker": "IOVA",
+        "score": 0.8252531235735936
       },
       {
-        "ticker": "DAR",
-        "score": 0.21840859934166296
+        "ticker": "NEOG",
+        "score": 0.8565442544423565
       },
       {
-        "ticker": "CHEF",
-        "score": 0.611399844100438
+        "ticker": "HAE",
+        "score": 0.8046767942654001
       },
       {
-        "ticker": "MTCH",
-        "score": 0.6594258493784588
+        "ticker": "ZD",
+        "score": 0.7458511329012261
       },
       {
         "ticker": "IMAX",
-        "score": 0.6256310037486628
+        "score": 0.7282616519380656
       },
       {
-        "ticker": "AVO",
-        "score": 0.5150080537894517
+        "ticker": "CNK",
+        "score": 0.7554397035732043
+      },
+      {
+        "ticker": "CHEF",
+        "score": 0.6538388853438419
+      },
+      {
+        "ticker": "DAR",
+        "score": 0.26277851542660113
+      },
+      {
+        "ticker": "SJM",
+        "score": 0.18308935716633895
+      },
+      {
+        "ticker": "TAL",
+        "score": 0.5717180252724567
       }
     ],
     "sell_1d": [
       {
         "ticker": "BTU",
-        "score": -0.5077501614201627
-      },
-      {
-        "ticker": "SOC",
-        "score": -0.49548706605653997
-      },
-      {
-        "ticker": "EU",
-        "score": -0.4843281931054503
-      },
-      {
-        "ticker": "UUUU",
-        "score": -0.4244085987509825
-      },
-      {
-        "ticker": "PUMP",
-        "score": -0.3989876074416021
-      },
-      {
-        "ticker": "URG",
-        "score": -0.37317337950368024
+        "score": -0.5536688624308655
       },
       {
         "ticker": "UEC",
-        "score": -0.37182206951897184
+        "score": -0.4365422392148179
       },
       {
-        "ticker": "WFRD",
-        "score": -0.3715981890836949
+        "ticker": "FLNC",
+        "score": -0.42969603190689626
       },
       {
-        "ticker": "KGS",
-        "score": -0.35931005010904354
+        "ticker": "HP",
+        "score": -0.4079040787384768
       },
       {
-        "ticker": "AR",
-        "score": -0.34802708932927257
+        "ticker": "EU",
+        "score": -0.3905058579297228
       },
       {
-        "ticker": "XPRO",
-        "score": -0.33288470268622816
+        "ticker": "SOC",
+        "score": -0.3812003285209858
       },
       {
-        "ticker": "AROC",
-        "score": -0.3321306024609475
+        "ticker": "GLND",
+        "score": -0.36470650753732464
       },
       {
         "ticker": "CRC",
-        "score": -0.3257158998358006
+        "score": -0.33461659463414095
       },
       {
-        "ticker": "MGY",
-        "score": -0.32432765911552874
+        "ticker": "AESI",
+        "score": -0.3312546911445078
       },
       {
-        "ticker": "VALE",
-        "score": -0.32228207041435786
+        "ticker": "AROC",
+        "score": -0.3306025108444287
+      },
+      {
+        "ticker": "FRVO",
+        "score": -0.32828193004614753
+      },
+      {
+        "ticker": "UUUU",
+        "score": -0.3138291429128407
+      },
+      {
+        "ticker": "RES",
+        "score": -0.31092634274601383
+      },
+      {
+        "ticker": "DVLT",
+        "score": -0.30469547449796364
+      },
+      {
+        "ticker": "VTS",
+        "score": -0.2981149297778855
       }
     ],
     "flatten": {},
@@ -2032,6 +2036,59 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-21\n_Generated 2026-09-21T06:53:43.347646-04:00 \u00b7 export=data/exports/finviz_2026-09-21.csv \u00b7 ticker digests=5875 \u00b7 high-signal=2318_ \u00b7 11643 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11655 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-21",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-21T06:55:46.174876-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-21_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1403300,
+          "preview": "1d BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC"
+        },
+        {
+          "path": "data/stock_book/2026-09-21_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 1598,
+          "preview": "green 81 \u00b7 TGTX, MGTX, DXCM, MGNI, FTRE, AGEN, PGEN, CORT, RDNT, KYMR"
+        },
+        {
+          "path": "data/stock_book/2026-09-21_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2446,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-21_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12468,
+          "preview": "2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12468,
+          "preview": "2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC"
+        },
+        {
+          "path": "01_daily/2026-09-21_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 69160,
+          "preview": "# Stock book \u2014 2026-09-21\n_Generated 2026-09-21T06:53:58.226140-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC \u00b7 green 81 \u00b7 TGTX, MGTX, DXCM, MGNI, FTRE, AGEN, PGEN, CORT, RDNT, KYMR \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC \u00b7 2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC \u00b7 # Stock book \u2014 2026-09-21\n_Generated 2026-09-21T06:53:58.226140-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
