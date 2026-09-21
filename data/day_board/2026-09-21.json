@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T06:56:55.415311-04:00",
+  "generated_at": "2026-09-21T06:55:22.618399-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -94,8 +94,8 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 88999,
-          "said": "5875 tickers \u00b7 2318 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
+          "size": 88724,
+          "said": "5875 tickers \u00b7 2328 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
             "AMETEK Completes Acquisition of Indicor Instrumentation",
@@ -109,10 +109,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11966,
+          "size": 11847,
           "said": "Finviz Daily Digest \u2014 2026-09-21",
           "bullets": [
-            "_Generated 2026-09-21T06:53:43.347646-04:00 \u00b7 export=data/exports/finviz_2026-09-21.csv \u00b7 ticker digests=5875 \u00b7 high-signal=2318_",
+            "_Generated 2026-09-21T04:17:16.971976-04:00 \u00b7 export=data/exports/finviz_2026-09-21.csv \u00b7 ticker digests=5875 \u00b7 high-signal=2328_",
             "Major indices (live quote page)"
           ]
         },
@@ -164,7 +164,7 @@
           "bullets": []
         }
       ],
-      "said": "5875 tickers \u00b7 2318 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
+      "said": "5875 tickers \u00b7 2328 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
       "bullets": [
         "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
         "AMETEK Completes Acquisition of Indicor Instrumentation",
@@ -189,8 +189,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 88999,
-          "said": "5875 tickers \u00b7 2318 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
+          "size": 88724,
+          "said": "5875 tickers \u00b7 2328 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
             "AMETEK Completes Acquisition of Indicor Instrumentation",
@@ -371,9 +371,9 @@
           "path": "01_daily/2026-09-21_preopen_status.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=True",
-          "size": 6829,
-          "said": "all_ok=True \u00b7 qc=True \u00b7 grok=True \u00b7 book=True",
+          "reason": "all_ok=False missing=['sector_predict']",
+          "size": 8096,
+          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing sector_predict",
           "bullets": []
         },
         {
@@ -382,11 +382,11 @@
           "path": "01_daily/2026-09-21_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=True All required core artifacts are present, same-day (2026-09-21), complete, and human-usable: general predict takes a clea",
-          "size": 1009,
-          "said": "ok=True \u00b7 All required core artifacts are present, same-day (2026-09-21), complete, and human-usable: general predict takes a clear UP/notable direction with MEMORY_CONFI",
+          "reason": "ok=False Core general/events/news/finviz/map-heat packets are same-day and usable (UP notable; scan_date 2026-09-21; live futures",
+          "size": 1784,
+          "said": "ok=False \u00b7 missing 01_daily/sectors/2026-09-21/basic_materials_predict.md",
           "bullets": [
-            "All required core artifacts are present, same-day (2026-09-21), complete, and human-usable: general predict takes a clear UP/notable direction with MEMORY_CONFIRM and full factor scan; events JSON is a real 2026-09-21 scan (scan_date matches, no carry-forward); news judge and news parse carry the required NEWS_PARSE_BEGIN/END markers with real ranked items; finviz digest and map-heat tables are populated with a live futures tape (ES/NQ/CL/GC etc., not empty); 11/11 sector essays are distinct, non-copy-paste, and each takes a direction. The map_heat_research file is phase=morning_refresh (size_gate=True) and its SYNTHESIS explicitly states the morning delta refresh failed captain-evidence QC (coverage 0/27<22) and fell back to last night's post-close cards \u2014 this is a noted degradation, not"
+            "Core general/events/news/finviz/map-heat packets are same-day and usable (UP notable; scan_date 2026-09-21; live futures tape present), but sector coverage is 0/11 so the 8-of-11 floor fails and the single-miss exception does not apply. Research.md reused last night\u2019s captain cards after a failed morning refresh (enhancement only); close market digest is out of preopen scope."
           ]
         },
         {
@@ -565,8 +565,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 88999,
-          "said": "5875 tickers \u00b7 2318 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
+          "size": 88724,
+          "said": "5875 tickers \u00b7 2328 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
             "AMETEK Completes Acquisition of Indicor Instrumentation",
@@ -579,18 +579,18 @@
           "path": "01_daily/weather/2026-09-21_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=10212 vix=falling yields=falling",
-          "size": 10212,
-          "said": "favorable 7 \u00b7 hostile 1 \u00b7 neutral 3",
+          "reason": "sectors=11 bytes=10112 vix=falling yields=falling",
+          "size": 10112,
+          "said": "favorable 1 \u00b7 hostile 6 \u00b7 neutral 4",
           "bullets": [
-            "hostile: Energy",
+            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Energy, Real Estate, Utilities",
             "events bull 2 / bear 8"
           ]
         }
       ],
-      "said": "favorable 7 \u00b7 hostile 1 \u00b7 neutral 3",
+      "said": "favorable 1 \u00b7 hostile 6 \u00b7 neutral 4",
       "bullets": [
-        "hostile: Energy",
+        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Energy, Real Estate, Utilities",
         "events bull 2 / bear 8"
       ]
     },
@@ -602,7 +602,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 1,
       "files": [
         {
@@ -610,13 +610,11 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-09-21_ab_checklist.csv",
           "role": "optional",
-          "status": "OK",
-          "reason": "rows=2663",
-          "size": 7652058,
-          "said": "28 rows",
-          "bullets": [
-            "CFFN, ANET, WWW, HSBC, WDS, SM, SKM, BMRN"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "ab_enriched",
@@ -624,17 +622,17 @@
           "path": "data/ab_checklist/2026-09-21_ab_checklist_enriched.csv",
           "role": "required",
           "status": "OK",
-          "reason": "rows=2663",
-          "size": 8489311,
-          "said": "25 rows",
+          "reason": "rows=11640",
+          "size": 3297757,
+          "said": "216 rows",
           "bullets": [
-            "ANET, SFL, ETN, TECK, TER, AMD, JCI, CLS"
+            "SBLK, PDEX, GLBS, RGEN, A, WST, ESEA, LLY"
           ]
         }
       ],
-      "said": "25 rows",
+      "said": "216 rows",
       "bullets": [
-        "ANET, SFL, ETN, TECK, TER"
+        "SBLK, PDEX, GLBS, RGEN, A"
       ]
     },
     {
@@ -671,8 +669,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 88999,
-          "said": "5875 tickers \u00b7 2318 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
+          "size": 88724,
+          "said": "5875 tickers \u00b7 2328 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
             "AMETEK Completes Acquisition of Indicor Instrumentation",
@@ -774,8 +772,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 88999,
-          "said": "5875 tickers \u00b7 2318 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
+          "size": 88724,
+          "said": "5875 tickers \u00b7 2328 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
             "AMETEK Completes Acquisition of Indicor Instrumentation",
@@ -803,11 +801,11 @@
           "path": "01_daily/weather/2026-09-21_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=10212 vix=falling yields=falling",
-          "size": 10212,
-          "said": "favorable 7 \u00b7 hostile 1 \u00b7 neutral 3",
+          "reason": "sectors=11 bytes=10112 vix=falling yields=falling",
+          "size": 10112,
+          "said": "favorable 1 \u00b7 hostile 6 \u00b7 neutral 4",
           "bullets": [
-            "hostile: Energy",
+            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Energy, Real Estate, Utilities",
             "events bull 2 / bear 8"
           ]
         },
@@ -817,11 +815,11 @@
           "path": "data/ab_checklist/2026-09-21_ab_checklist_enriched.csv",
           "role": "input",
           "status": "OK",
-          "reason": "rows=2663",
-          "size": 8489311,
-          "said": "25 rows",
+          "reason": "rows=11640",
+          "size": 3297757,
+          "said": "216 rows",
           "bullets": [
-            "ANET, SFL, ETN, TECK, TER, AMD, JCI, CLS"
+            "SBLK, PDEX, GLBS, RGEN, A, WST, ESEA, LLY"
           ]
         },
         {
@@ -831,10 +829,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5894",
-          "size": 2285038,
+          "size": 2247471,
           "said": "206 rows",
           "bullets": [
-            "AVAH, PGY, SMTC, HALO, ECPG, NVDA, AAMI, CDNA"
+            "PGY, NVDA, SMTC, GCT, HPE, DELL, ANET, RDVT"
           ]
         },
         {
@@ -844,8 +842,8 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5102",
-          "size": 816990,
-          "said": "494 rows",
+          "size": 821799,
+          "said": "492 rows",
           "bullets": [
             "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
           ]
@@ -856,9 +854,9 @@
           "path": "data/stock_book/2026-09-21_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=185",
-          "size": 1403300,
-          "said": "1d BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC \u00b7 0.7224999999999999",
+          "reason": "horizons=5 names=180",
+          "size": 1404174,
+          "said": "1d BUY TEM, WAY, FTRE, AMRX, MGNI, COCO, DAR, CHEF \u00b7 SELL BTU, SOC, EU, UUUU, KEP, FLNC \u00b7 0.7224999999999999",
           "bullets": []
         },
         {
@@ -868,10 +866,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 68088,
+          "size": 65437,
           "said": "Stock book \u2014 2026-09-21",
           "bullets": [
-            "_Generated 2026-09-21T06:53:58.226140-04:00_",
+            "_Generated 2026-09-21T06:55:19.544348-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -882,8 +880,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 1598,
-          "said": "81 green \u00b7 TGTX, MGTX, DXCM, MGNI, FTRE, AGEN, PGEN, CORT, RDNT, KYMR",
+          "size": 2220,
+          "said": "133 green \u00b7 HALO, TGTX, DXCM, CHEF, MGTX, AMN, FTRE, FDMT, PGEN, TEM",
           "bullets": []
         },
         {
@@ -914,7 +912,7 @@
       ],
       "said": "206 rows",
       "bullets": [
-        "AVAH, PGY, SMTC, HALO, ECPG"
+        "PGY, NVDA, SMTC, GCT, HPE"
       ]
     },
     {
@@ -934,9 +932,9 @@
           "path": "data/stock_book/2026-09-21_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=185",
-          "size": 1403300,
-          "said": "1d BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC \u00b7 0.7224999999999999",
+          "reason": "horizons=5 names=180",
+          "size": 1404174,
+          "said": "1d BUY TEM, WAY, FTRE, AMRX, MGNI, COCO, DAR, CHEF \u00b7 SELL BTU, SOC, EU, UUUU, KEP, FLNC \u00b7 0.7224999999999999",
           "bullets": []
         },
         {
@@ -983,123 +981,113 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "PGEN",
-        "score": 0.8376139065949222
+        "ticker": "TEM",
+        "score": 0.6878446846094661
+      },
+      {
+        "ticker": "WAY",
+        "score": 0.79571191523737
+      },
+      {
+        "ticker": "FTRE",
+        "score": 0.8359231529362716
+      },
+      {
+        "ticker": "AMRX",
+        "score": 0.8140664984408705
       },
       {
         "ticker": "MGNI",
-        "score": 0.8787515311040279
+        "score": 0.7980916423789843
       },
       {
-        "ticker": "IOVA",
-        "score": 0.8252531235735936
-      },
-      {
-        "ticker": "NEOG",
-        "score": 0.8565442544423565
-      },
-      {
-        "ticker": "HAE",
-        "score": 0.8046767942654001
-      },
-      {
-        "ticker": "ZD",
-        "score": 0.7458511329012261
-      },
-      {
-        "ticker": "IMAX",
-        "score": 0.7282616519380656
-      },
-      {
-        "ticker": "CNK",
-        "score": 0.7554397035732043
-      },
-      {
-        "ticker": "CHEF",
-        "score": 0.6538388853438419
+        "ticker": "COCO",
+        "score": 0.6040714489524619
       },
       {
         "ticker": "DAR",
-        "score": 0.26277851542660113
+        "score": 0.21840859934166296
       },
       {
-        "ticker": "SJM",
-        "score": 0.18308935716633895
+        "ticker": "CHEF",
+        "score": 0.611399844100438
       },
       {
-        "ticker": "TAL",
-        "score": 0.5717180252724567
+        "ticker": "MTCH",
+        "score": 0.6594258493784588
+      },
+      {
+        "ticker": "IMAX",
+        "score": 0.6256310037486628
+      },
+      {
+        "ticker": "AVO",
+        "score": 0.5150080537894517
       }
     ],
     "sell_1d": [
       {
         "ticker": "BTU",
-        "score": -0.5536688624308655
-      },
-      {
-        "ticker": "UEC",
-        "score": -0.4365422392148179
-      },
-      {
-        "ticker": "FLNC",
-        "score": -0.42969603190689626
-      },
-      {
-        "ticker": "HP",
-        "score": -0.4079040787384768
-      },
-      {
-        "ticker": "EU",
-        "score": -0.3905058579297228
+        "score": -0.5077501614201627
       },
       {
         "ticker": "SOC",
-        "score": -0.3812003285209858
+        "score": -0.49548706605653997
       },
       {
-        "ticker": "GLND",
-        "score": -0.36470650753732464
-      },
-      {
-        "ticker": "CRC",
-        "score": -0.33461659463414095
-      },
-      {
-        "ticker": "AESI",
-        "score": -0.3312546911445078
-      },
-      {
-        "ticker": "AROC",
-        "score": -0.3306025108444287
-      },
-      {
-        "ticker": "FRVO",
-        "score": -0.32828193004614753
+        "ticker": "EU",
+        "score": -0.4843281931054503
       },
       {
         "ticker": "UUUU",
-        "score": -0.3138291429128407
+        "score": -0.4244085987509825
       },
       {
-        "ticker": "RES",
-        "score": -0.31092634274601383
+        "ticker": "KEP",
+        "score": -0.42422351096411776
       },
       {
-        "ticker": "DVLT",
-        "score": -0.30469547449796364
+        "ticker": "FLNC",
+        "score": -0.4234490029730773
       },
       {
-        "ticker": "VTS",
-        "score": -0.2981149297778855
+        "ticker": "PUMP",
+        "score": -0.3989876074416021
+      },
+      {
+        "ticker": "URG",
+        "score": -0.37317337950368024
+      },
+      {
+        "ticker": "UEC",
+        "score": -0.37182206951897184
+      },
+      {
+        "ticker": "WFRD",
+        "score": -0.3715981890836949
+      },
+      {
+        "ticker": "HE",
+        "score": -0.37050742453505336
+      },
+      {
+        "ticker": "KGS",
+        "score": -0.35931005010904354
+      },
+      {
+        "ticker": "AR",
+        "score": -0.34802708932927257
+      },
+      {
+        "ticker": "NRG",
+        "score": -0.3392950805199203
+      },
+      {
+        "ticker": "XPRO",
+        "score": -0.33288470268622816
       }
     ],
-    "flatten": {
-      "said": "0 priced buys \u00b7 cash $28.68",
-      "bullets": [
-        "0 priced buys",
-        "cash $28.68"
-      ]
-    },
+    "flatten": {},
     "general": {
       "said": "UP  12.871",
       "bullets": [
@@ -1140,9 +1128,9 @@
       ]
     },
     "weather": {
-      "said": "favorable 7 \u00b7 hostile 1 \u00b7 neutral 3",
+      "said": "favorable 1 \u00b7 hostile 6 \u00b7 neutral 4",
       "bullets": [
-        "hostile: Energy",
+        "hostile: Basic Materials, Communication Services, Consumer Cyclical, Energy, Real Estate, Utilities",
         "events bull 2 / bear 8"
       ]
     }
@@ -1892,364 +1880,6 @@
         }
       ],
       "preview": "# Sector Prediction \u2014 Real Estate \u2014 2026-09-21\n- ETF: **XLRE**\n- rubric: `00_grounding/sectors/real_estate.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **3.17** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.965** (ES +1.35%, ZN -0.03%, PM:XLRE -0.05%) \u00b7 index_carry **3.218** (general 12.871) \u00b7 llm_overlay **-1.012** (raw -1.012) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Real Estate 2026-09-21\n**Step 0 \u2014 Setup.** Loaded 155,732 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (17,852 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-21\nGenerated: **2026-09-21T06:34:01.701306-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_a"
-    },
-    {
-      "key": "finviz",
-      "title": "Finviz universe export",
-      "date": "2026-09-21",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-21T06:52:32.798156-04:00",
-      "files": [
-        {
-          "path": "data/exports/finviz_2026-09-21.csv",
-          "ok": true,
-          "reason": "",
-          "size": 10981709,
-          "preview": "11643 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11434850,
-          "preview": "11655 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-        }
-      ],
-      "preview": "11643 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11655 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-    },
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-09-21",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-21T06:52:42.879551-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-09-21_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1116675,
-          "preview": "5894 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5894 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-09-21",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-21T06:52:52.625916-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-09-21_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 10212,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 1.904, 'dir': 'flat', 'conf': 0.476, 'source': 'llm'}, Communication Services={'score': 12.219, 'dir': 'up', 'conf': 0.65, 'source': 'llm'}, Consumer Cyclical={'score': 12.338, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Consumer Defensive={'score': -1.24, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Energy={'score': -6.269, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Financial={'score': 5.194, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Healthcare={'score': 3.016, 'dir': 'up', 'conf': 0.521, 'source': 'llm'}, Industrials={'score': 10.19, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}"
-        },
-        {
-          "path": "01_daily/weather/2026-09-21_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5828,
-          "preview": "# Weather report \u2014 2026-09-21\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 1.904, 'dir': 'flat', 'conf': 0.476, 'source': 'llm'}, Communication Services={'score': 12.219, 'dir': 'up', 'conf': 0.65, 'source': 'llm'}, Consumer Cyclical={'score': 12.338, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Consumer Defensive={'score': -1.24, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Energy={'score': -6.269, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Financial={'score': 5.194, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Healthcare={'score': 3.016, 'dir': 'up', 'conf': 0.521, 'source': 'llm'}, Industrials={'score': 10.19, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-21\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-09-21",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-21T06:52:58.015131-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-09-21_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2285038,
-          "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 AVAH, PGY, SMTC, HALO, ECPG"
-        }
-      ],
-      "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 AVAH, PGY, SMTC, HALO, ECPG"
-    },
-    {
-      "key": "ab",
-      "title": "AB checklist",
-      "date": "2026-09-21",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-21T06:53:34.094668-04:00",
-      "files": [
-        {
-          "path": "data/ab_checklist/2026-09-21_ab_checklist.csv",
-          "ok": true,
-          "reason": "",
-          "size": 7652058,
-          "preview": "2663 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, HSBC, WDS"
-        },
-        {
-          "path": "data/ab_checklist/2026-09-21_ab_checklist_enriched.csv",
-          "ok": true,
-          "reason": "",
-          "size": 8489311,
-          "preview": "2663 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, SFL, ETN, TECK, TER"
-        }
-      ],
-      "preview": "2663 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, HSBC, WDS \u00b7 2663 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, SFL, ETN, TECK, TER"
-    },
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-09-21",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-21T06:53:47.443248-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-21_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 88999,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-09-21_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11992,
-          "preview": "# Finviz Daily Digest \u2014 2026-09-21\n_Generated 2026-09-21T06:53:43.347646-04:00 \u00b7 export=data/exports/finviz_2026-09-21.csv \u00b7 ticker digests=5875 \u00b7 high-signal=2318_"
-        },
-        {
-          "path": "data/exports/finviz_2026-09-21.csv",
-          "ok": true,
-          "reason": "",
-          "size": 10981709,
-          "preview": "11643 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
-        },
-        {
-          "path": "data/finviz/latest.csv",
-          "ok": true,
-          "reason": "",
-          "size": 11434850,
-          "preview": "11655 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-21\n_Generated 2026-09-21T06:53:43.347646-04:00 \u00b7 export=data/exports/finviz_2026-09-21.csv \u00b7 ticker digests=5875 \u00b7 high-signal=2318_ \u00b7 11643 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11655 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
-    },
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-09-21",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-21T06:55:46.174876-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-09-21_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1403300,
-          "preview": "1d BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC"
-        },
-        {
-          "path": "data/stock_book/2026-09-21_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 1598,
-          "preview": "green 81 \u00b7 TGTX, MGTX, DXCM, MGNI, FTRE, AGEN, PGEN, CORT, RDNT, KYMR"
-        },
-        {
-          "path": "data/stock_book/2026-09-21_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2446,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-09-21_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12468,
-          "preview": "2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12468,
-          "preview": "2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC"
-        },
-        {
-          "path": "01_daily/2026-09-21_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 69160,
-          "preview": "# Stock book \u2014 2026-09-21\n_Generated 2026-09-21T06:53:58.226140-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC \u00b7 green 81 \u00b7 TGTX, MGTX, DXCM, MGNI, FTRE, AGEN, PGEN, CORT, RDNT, KYMR \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC \u00b7 2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC \u00b7 # Stock book \u2014 2026-09-21\n_Generated 2026-09-21T06:53:58.226140-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
-    {
-      "key": "live_boards",
-      "title": "Live 1d BUY/SELL strip",
-      "date": "2026-09-21",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-21T06:55:50.183972-04:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 18530,
-          "preview": "2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 647,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-09-21.json",
-          "ok": true,
-          "reason": "",
-          "size": 96777,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-09-21_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 57162,
-          "preview": "2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 685719,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-09-21_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 685719,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 945374,
-          "preview": "2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 685719,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 57162,
-          "preview": "2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 685719,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 685719,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 945374,
-          "preview": "2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC"
-        },
-        {
-          "path": "data/day_board/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 2760,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        },
-        {
-          "path": "dashboard/factor-mine/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 2760,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        }
-      ],
-      "preview": "2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, sess"
-    },
-    {
-      "key": "flatten",
-      "title": "Flatten live card",
-      "date": "2026-09-21",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-21T06:56:54.422305-04:00",
-      "files": [
-        {
-          "path": "01_daily/2026-09-21_flatten_card.md",
-          "ok": true,
-          "reason": "",
-          "size": 3711,
-          "preview": "# flatten_robust card \u2014 2026-09-21\n_Generated 2026-09-21T10:56:53 \u2014 live `flatten_robust`._\n**S=+12.87; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **+12.87** (UP) \u00b7 route **io**\n- Cash leftover **$28.68** (after 09:30 $2.22 \u00b7 after 16:00 $93,993.64)\n- Prior close **$94,100.48** \u00b7 09:30 **$94,187.75** \u00b7 overnight **$+87.27** \u00b7 session **$-194.11** \u00b7 16:00 **$93,993.64**\n- Overnight lots **6** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$26.46** \u2264 leftover after sells **$94,020.09**"
-        },
-        {
-          "path": "data/sleeve_merge/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 13785,
-          "preview": "2026-09-21 BUY \u2014 \u00b7 SELL \u2014"
-        },
-        {
-          "path": "data/sleeve_merge/daily_marks.json",
-          "ok": true,
-          "reason": "",
-          "size": 161757,
-          "preview": "[{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\": \"IREN\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 223, \"shares\": 223, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 45.98, \"close_px\": 44.76, \"entry_px\": 44.76, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": -272.06, \"day\": -272.06, \"pct_overnight\""
-        },
-        {
-          "path": "data/sleeve_merge/equity_curve.csv",
-          "ok": true,
-          "reason": "",
-          "size": 4033,
-          "preview": "25 rows \u00b7 date,equity,cash,core_n,tac_io_n,tac_n,core_mv,tac_mv,route,score,predict,open_held,open_cash,open_equity,yday_equity,ov \u00b7 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19"
-        },
-        {
-          "path": "dashboard/sleeve-merge/index.html",
-          "ok": true,
-          "reason": "",
-          "size": 55405,
-          "preview": "<!doctype html>\n<html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Combined sleeve \u2014 .io \u00d7 mover</title>\n<style>\n:root{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9}\n*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui}\nmain{max-width:1240px;margin:auto;padding:16px}h1,h2{margin:.4em 0}\n.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:14px 0}\n.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}\n.card b{display:block;font-size:22px;margin-top:4px}\n.muted{color:var(--muted)}a{color:#93c5fd}\n.sheet{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0}\ntable{border-collapse:separate;border-spacing:0;width:100%;background:var(--card)}\nth,td{padding:7px 8"
-        }
-      ],
-      "preview": "# flatten_robust card \u2014 2026-09-21\n_Generated 2026-09-21T10:56:53 \u2014 live `flatten_robust`._\n**S=+12.87; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **+12.87** (UP) \u00b7 route **io**\n- Cash leftover **$28.68** (after 09:30 $2.22 \u00b7 after 16:00 $93,993.64)\n- Prior close **$94,100.48** \u00b7 09:30 **$94,187.75** \u00b7 overnight **$+87.27** \u00b7 session **$-194.11** \u00b7 16:00 **$93,993.64**\n- Overnight lots **6** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$26.46** \u2264 leftover after sells **$94,020.09** \u00b7 2026-09-21 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \""
     }
   ],
   "href": {
