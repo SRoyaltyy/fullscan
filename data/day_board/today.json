@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T06:55:47.163305-04:00",
+  "generated_at": "2026-09-21T06:55:51.165207-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -151,73 +151,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "sector_one",
-      "title": "Sector predict Real Estate (9/11)",
-      "date": "2026-09-21",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-21T06:34:01.727474-04:00",
-      "files": [
-        {
-          "path": "01_daily/sectors/2026-09-21/real_estate_predict.md",
-          "ok": true,
-          "reason": "",
-          "size": 19910,
-          "preview": "# Sector Prediction \u2014 Real Estate \u2014 2026-09-21\n- ETF: **XLRE**\n- rubric: `00_grounding/sectors/real_estate.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **3.17** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.965** (ES +1.35%, ZN -0.03%, PM:XLRE -0.05%) \u00b7 index_carry **3.218** (general 12.871) \u00b7 llm_overlay **-1.012** (raw -1.012)"
-        },
-        {
-          "path": "01_daily/sectors/2026-09-21/real_estate_predict_trace.md",
-          "ok": true,
-          "reason": "",
-          "size": 392,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Real Estate 2026-09-21\n**Step 0 \u2014 Setup.** Loaded 155,732 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (17,852 characters)."
-        },
-        {
-          "path": "01_daily/_transcripts/2026-09-21_sector_real_estate_predict.json",
-          "ok": true,
-          "reason": "",
-          "size": 177970,
-          "preview": "keys: provider, agent, backend_model, messages"
-        },
-        {
-          "path": "01_daily/2026-09-21_preopen_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 7200,
-          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
-        },
-        {
-          "path": "01_daily/sectors/2026-09-21/_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 1222,
-          "preview": "keys: date, n_ok, n_total, sectors"
-        },
-        {
-          "path": "01_daily/sectors/2026-09-21/_BOARD.md",
-          "ok": true,
-          "reason": "",
-          "size": 1748,
-          "preview": "# Sector Board \u2014 2026-09-21\nGenerated: **2026-09-21T06:34:01.701306-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
-        },
-        {
-          "path": "01_daily/sectors/2026-09-21/_board.json",
-          "ok": true,
-          "reason": "",
-          "size": 6766,
-          "preview": "keys: date, generated_at, sectors"
-        },
-        {
-          "path": "03_scoreboard/scoreboard.json",
-          "ok": true,
-          "reason": "",
-          "size": 797569,
-          "preview": "keys: runs"
-        }
-      ],
-      "preview": "# Sector Prediction \u2014 Real Estate \u2014 2026-09-21\n- ETF: **XLRE**\n- rubric: `00_grounding/sectors/real_estate.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **3.17** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.965** (ES +1.35%, ZN -0.03%, PM:XLRE -0.05%) \u00b7 index_carry **3.218** (general 12.871) \u00b7 llm_overlay **-1.012** (raw -1.012) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Real Estate 2026-09-21\n**Step 0 \u2014 Setup.** Loaded 155,732 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (17,852 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-21\nGenerated: **2026-09-21T06:34:01.701306-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_a"
-    },
     {
       "key": "finviz",
       "title": "Finviz universe export",
@@ -420,6 +353,115 @@
         }
       ],
       "preview": "1d BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC \u00b7 green 81 \u00b7 TGTX, MGTX, DXCM, MGNI, FTRE, AGEN, PGEN, CORT, RDNT, KYMR \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC \u00b7 2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC \u00b7 # Stock book \u2014 2026-09-21\n_Generated 2026-09-21T06:53:58.226140-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-09-21",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-21T06:55:50.183972-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 18530,
+          "preview": "2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 647,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-21.json",
+          "ok": true,
+          "reason": "",
+          "size": 96777,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-21_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 57162,
+          "preview": "2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 685719,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-21_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 685719,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 945374,
+          "preview": "2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 685719,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 57162,
+          "preview": "2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 685719,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 685719,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 945374,
+          "preview": "2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 2760,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 2760,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, sess"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
