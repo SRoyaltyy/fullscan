@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T12:08:46.008497-04:00",
+  "generated_at": "2026-09-21T12:14:12.666618-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -513,13 +513,13 @@
       "date": "2026-09-21",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-21T12:08:45.178840-04:00",
+      "at": "2026-09-21T12:14:11.631758-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 20325,
+          "size": 28220,
           "preview": "2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC"
         },
         {
@@ -533,14 +533,14 @@
           "path": "data/day_board/2026-09-21.json",
           "ok": true,
           "reason": "",
-          "size": 85561,
+          "size": 96387,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
         },
         {
           "path": "data/day_board/2026-09-21_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 48556,
+          "size": 59382,
           "preview": "2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC"
         },
         {
@@ -575,7 +575,7 @@
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 48556,
+          "size": 59382,
           "preview": "2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC"
         },
         {
