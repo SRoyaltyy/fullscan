@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T05:03:09.765972-04:00",
+  "generated_at": "2026-09-21T05:05:12.781776-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -41,31 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "events",
-      "title": "Event scanner (primary)",
-      "date": "2026-09-21",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-21T04:33:04.144336-04:00",
-      "files": [
-        {
-          "path": "01_daily/events/2026-09-21_events.json",
-          "ok": true,
-          "reason": "",
-          "size": 36019,
-          "preview": "33 events \u00b7 Trump\u2013Xi Washington summit | Hormuz tanker war still live; Brent ~$101\u2013103 | UNGA 81 high-level debate; Trump speaks Sept 22 | Trump\u2013Zelensky UNGA sideline; energy-truce push | Bessent\u2013He Lifeng pre-summit talks (New York) | Warsh Fed 25bp hike to 3.75\u20134.00% with hawkish SEP"
-        },
-        {
-          "path": "01_daily/events/2026-09-21_events.md",
-          "ok": true,
-          "reason": "",
-          "size": 23430,
-          "preview": "# Event Scan \u2014 2026-09-21\n- events tracked: **33** (via openclaw)\n- uncertainty: **elevated**\n- summary: The two-way overlay for the next two weeks is Thursday's Trump\u2013Xi summit (tariff cuts/AI vs Taiwan arms and the newly signed Graham secondary-tariff law) against a still-unresolved Hormuz tanker war with Brent ~$101\u2013103. G3 tightening is done for this window (Warsh 3.75\u20134.00%, BoJ 1.25% effective Sept 24, ECB 2.50%) so the data that can still reprice the path are Aug PCE (Sept 30) and Oct 2 NFP, while US housing is already cracking even as nominal retail sales rebounded +1.2%."
-        }
-      ],
-      "preview": "33 events \u00b7 Trump\u2013Xi Washington summit | Hormuz tanker war still live; Brent ~$101\u2013103 | UNGA 81 high-level debate; Trump speaks Sept 22 | Trump\u2013Zelensky UNGA sideline; energy-truce push | Bessent\u2013He Lifeng pre-summit talks (New York) | Warsh Fed 25bp hike to 3.75\u20134.00% with hawkish SEP \u00b7 # Event Scan \u2014 2026-09-21\n- events tracked: **33** (via openclaw)\n- uncertainty: **elevated**\n- summary: The two-way overlay for the next two weeks is Thursday's Trump\u2013Xi summit (tariff cuts/AI vs Taiwan arms and the newly signed Graham secondary-tariff law) against a still-unresolved Hormuz tanker war with Brent ~$101\u2013103. G3 tightening is done for this window (Warsh 3.75\u20134.00%, BoJ 1.25% effective Sept 24, ECB 2.50%) so the data that can still reprice the path are Aug PCE (Sept 30) and Oct 2 NFP, while US housing is already cracking even as nominal retail sales rebounded +1.2%."
-    },
     {
       "key": "news_actions",
       "title": "News actions",
@@ -226,6 +201,38 @@
         }
       ],
       "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-09-21\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
+    },
+    {
+      "key": "status",
+      "title": "Pre-open status packet",
+      "date": "2026-09-21",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-21T05:05:11.993196-04:00",
+      "files": [
+        {
+          "path": "01_daily/2026-09-21_preopen_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 7264,
+          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
+        },
+        {
+          "path": "01_daily/2026-09-21_preopen_status.json",
+          "ok": true,
+          "reason": "",
+          "size": 8096,
+          "preview": "keys: date, generated_at, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs, qc"
+        },
+        {
+          "path": "01_daily/2026-09-21_preopen_status.md",
+          "ok": true,
+          "reason": "",
+          "size": 576,
+          "preview": "# Pre-open ALL status \u2014 2026-09-21\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
+        }
+      ],
+      "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs, qc \u00b7 # Pre-open ALL status \u2014 2026-09-21\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
