@@ -1,0 +1,25 @@
+# Reasoning trace — MAP POSTCLOSE captains_healthcare 2026-09-22
+
+
+
+**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (12,243 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
+
+
+
+**Step 1 — Research.** The model wanted to know: *"VRTX Vertex Pharmaceuticals news September 2026"* → got 6 results (via gnews_rss)
+
+  - Vertex (VRTX) Stock Still Looks Like A Bargain On Its 181% Run - simplywall.st (https://news.google.com/rss/articles/CBMi6wFBVV95cUxNX193TmJyNVdtZmNPZmxmNVZDQW4tTE4wTFo0Z1dwd0NoNmxUMkZXcVp1UHF2NDk0X1lsZ1YyV09EWFZxa0t4aThEU2xCZVpWQnR6WDlQLWZHZ093RlIyV3E3dC1hMDhySW5TbUc2WVJ4UUwxLW5XVTY5NE9CMWxjb0FmRnp1OTZMaWE1aFR0MHRKZzloS3YzY2FPdlQzSlF6WmtSTnR0RExCRF92YzJLeU5HOV9pejJtMDdJeGxhOFRvTVc3blB4eFBuUjdLUjNYZU40TmlqamZuUVMtM2ExcGptbWlBLWplMlZj0gHwAUFVX3lxTE1KNkFYeHpDRTRXTklGeHg3WVpSZ1ljNGMwQUFhanNRa0ZWWUlaWXZzUHBzZThJMTZSdUs5RldjekNVblVrWlIzR3MybkRCR2ZtbHJ6MUcyZWVjQzE1UklVcmNmNGtuR3ZnR0Y3cDdhTHpJNWpFSG9EcnNtYU5RMlYtV1NLVUsyZERqXzNQWjE0eW9aSWEwUW1jVTc2XzhBeG1waUgxYmMtcVZWTVdpOGFGejJGN2l2dXVLaFJuS3NSWDZOdVk1MHZwLVR6b2JuNERyUkVRbmpJZjdaWExzLU9BQ2x6aTd2Vkgzakw5YzBYcg?oc=5)
+
+  - Vertex to Participate in Upcoming September Investor Conferences - Yahoo Finance (https://news.google.com/rss/articles/CBMiqwFBVV95cUxQOVJPWVE1YllyY1U4aXBSZThJRDVsVFF5N0lYdVdncWsxWEdYRl94UmlZa21zV201N3Jhbm5NNnRNbWE2ZXoxVmZxVW45dmdZTmFpZ1dFZU1yY2xLNkJiQmJ1NkF0RGlYcDExRk5sM1lXSHJxNkNaOFlvXzBMWVNTLXM5QkE2eE5JZEZ1bE5LT0drX1JaZjFrM1BEZ193MHY0T0gwaWdwQWRxaDA?oc=5)
+
+  - Vertex (NASDAQ: VRTX) executive listed as insider with no reported shares - Stock Titan (https://news.google.com/rss/articles/CBMiywFBVV95cUxPMXduOTFKRVptanQ0UENsbDB3YTVwTDVRVlNwQVpFd1BTNEM4bVVpS1RBTlZvUXd5dGtHYVJDdElnYzk4cEdwa2xDOXFwY0dicDRtWl9PNWVBaTNUanhSbUtwakZ6ekpHU1lrcWhhbU1xY0pjS1B5SEJqVHJWSzRnamZKb3VyY1cybmNGZzB2c1ZqejZfMFNCS0pMZ2RyZWJra0REemc1OXhCQjR3anJoWDdoS2kxR2lZcnd0aUhIcFM3VVh6M3BhTnMwYw?oc=5)
+
+**Step 2 — Research.** The model wanted to know: *"REGN Regeneron news September 2026"* → got 6 results (via gnews_rss)
+
+  - SueWallSt Reminds Shareholders of a Lead Plaintiff Deadline of September 14, 2026 in Regeneron Pharmaceuticals, Inc. Lawsuit - REGN - PR Newswire (https://news.google.com/rss/articles/CBMikgJBVV95cUxQcFEwLWZzckhlMDZKb1A1RTF5MS05UW43NlBlZDJpQXBQRnBuS2hSZHpBVmx0VXZ0MGFpN0RIbmV2S1VLYkZiSlJYMEZrZmhydUpndTltdDVjbEhQeEdTWkNqV2FYRFZsZXV2UVdPbVdRd1dSaGdOUUlubU9GOHhocjNMd1FnWHFDYy1JaFA3OE50YnFZRzJQdVF5NDJ4Ql9YNUpBenhvN0FBZ1dYRFJ5ektEZWtVU3NSLUlRVk8xamwxMWFidEFrMkE2cmd0anhQQkRTWS0xaVB5eXhZUi1telk3ZjRSclZqb0RRRnBaeXFRUjNNMjNVMTBta0FLbFRfYS1mOWhsVmdDWlFZUnhOd2Z3?oc=5)
+
+  - MONDAY REGN INVESTOR DEADLINE: Regeneron Pharmaceuticals, - GlobeNewswire (https://news.google.com/rss/articles/CBMi7AJBVV95cUxOMDFGSDdLaEhnb0Zpbi1YeXRPNmtod1NwOEJHanV3akRqSGlralg5TkhJU3N2VVBXNV83dVdhaV8zeTR6V3gxMkRkWi05ZHB6T1Y3RlRUdGg1T3IyV2R1TVlPRFNZZkVCa0dYLU9naHE0aUswZTFHRXRQZmJsTGpHbDBSWTU4TG1nQlRrN2E4RmVqLUhLc19uMzFnSHVyTUs5MTZJdmJCMzBFX0J3QTJlTkhtenEzMFlHYUZvVW8wS1BmUG1DMUwxWXpndWdOWkxORzYwUmM4RVRZTmU5QU5mcWJZUWF4b254LUNFelBoV1ZHdzVseTNoUjVkQWJ1N3hmTlBpWVJTNUlNeVg4QW1QZS1lOTF3Zy1vakR4YVlsRUN1X2F3emlSb2w1a1hiN1VzZE5ZRlRKalMwZFRiWnFzU3k5YkVhRXozcmNPTjlrblVZR3BNNGhJb2F1UFpIR0FiYm9NZVpLbkUtck1o?oc=5)
+
+  - CLASS ACTION DEADLINE TONIGHT: Faruqi & Faruqi, LLP Reminds Regeneron (REGN) Investors of Securities Class Action Lawsuit Deadline on September 14, 2026 - Business Wire (https://news.google.com/rss/articles/CBMiqgJBVV95cUxNMzU2dWJtUlJfczY4YnFkYk56RFIzS0JhX0VYTEdGMVVkdG05RXpkcDJJTW1WZEhOZ0J5UzlMdHh1RlpkVnpzMU9xYTZKQWJXVFJObEU4eGZHdml5aHRnVDNMdHozUDhSal9CQXl2RzhjQ1BiMjlhM0dVRnhQeUF4cV8yNHNibWQ0RFh3dUUwRExaalVWQWRHMldKN3JfdWRlcTVDRFZuM0VxUnRvVV9VVndQMVcyNDMtQTZkVndYeU1La0dpLUx3dDJOMHhUOXZJOENYYkY1dGppc3pBbXlQZ0FJSTFJeE53eHRnUjNiZ2ZJNDhZZ19pTE5TQWI4OEZ3X19wc1pCaHRPaEw2dEFFWkE0RF9EbkZJSzFWU0V2RlF6bkVrNG9saWxn?oc=5)
+
+**Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.
