@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T04:50:05.973238-04:00",
+  "generated_at": "2026-09-21T04:58:14.291337-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -137,7 +137,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 5,
+      "n_req_ok": 7,
       "n_req": 20,
       "n_opt_ok": 3,
       "n_opt": 3,
@@ -210,18 +210,18 @@
           "name": "Morning refresh JSON",
           "path": "01_daily/map_heat/2026-09-21_research.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "cards=142",
+          "size": 394290
         },
         {
           "key": "research_md",
           "name": "Morning refresh MD",
           "path": "01_daily/map_heat/2026-09-21_research.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 42996
         },
         {
           "key": "actions",
@@ -1254,6 +1254,31 @@
         }
       ],
       "preview": "keys: date, generated_at, sectors"
+    },
+    {
+      "key": "map_heat_research",
+      "title": "Map heat morning delta refresh",
+      "date": "2026-09-21",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-21T04:58:12.870546-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-21_research.json",
+          "ok": true,
+          "reason": "",
+          "size": 42996,
+          "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-21_research.md",
+          "ok": true,
+          "reason": "",
+          "size": 42996,
+          "preview": "# MAP HEAT RESEARCH \u2014 2026-09-21\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+        }
+      ],
+      "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-21\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
     }
   ],
   "href": {
