@@ -1,0 +1,3 @@
+# Frozen factor-mine UI. Research PRs do not rewrite these.
+dashboard/factor-mine/*.html @SRoyaltyy
+docs/FACTOR_MINE_DASHBOARD_FROZEN.md @SRoyaltyy
