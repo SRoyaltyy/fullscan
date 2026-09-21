@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-09-21
 
-**Generated:** 2026-09-21T04:17:31.301733-04:00 (America/New_York)
+**Generated:** 2026-09-21T04:17:22.327553-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US futures point to a higher open on upbeat US-China trade signals as tech leads and oil drifts lower on a quiet data day
 **Prior close:** SPX —  Nasdaq —  Dow —

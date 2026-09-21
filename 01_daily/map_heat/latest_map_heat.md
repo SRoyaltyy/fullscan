@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-09-21
 
-Export `finviz_2026-09-21.csv` · 11616 names · generated 2026-09-21T04:18:55.645178-04:00
+Export `finviz_2026-09-20.csv` · 11616 names · generated 2026-09-21T04:18:47.569536-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -265,7 +265,7 @@ COLD (1w):
 - 38 min **WTW** WTW announces new global agreement to deploy Radar (GlobeNewswire)
 - 43 min **SPCX,NVDA** Nvidia's CEO Huang says there's a 0% chance AI ends the world  4 AI giants are sued over an alleged pact to slow it (Moneywise)
 - 47 min **CEG** Constellation Energy Stock Fell 13% Last Week. Analysts Still See 37% Upside From Here. (TIKR)
-- 54 min **HDB,AAPL,IBN** Apple Pay to launch in India next month with Axis Bank- report (Electronic Payments)
+- 53 min **HDB,AAPL,IBN** Apple Pay to launch in India next month with Axis Bank- report (Electronic Payments)
 - 1 hour **FDX,UNP,CZR,NSC** M&A Watch: PSKY-WBD Hurdle, Caesars Shareholder Vote, Union Pacific-Norfolk Southern, FedEx-InPost (Stocktwits)
 - 1 hour **FSLR** First Solar withdraws 337 case, shifts TOPCon patent fight (DigiTimes)
 - 1 hour **IBRX** Could IBRX Be A Tokenized Stock? Founders Tease Sends ImmunityBio Traders Into Speculation Mode (Stocktwits)

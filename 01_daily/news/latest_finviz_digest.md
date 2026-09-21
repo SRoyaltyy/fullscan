@@ -1,6 +1,6 @@
 # Finviz Daily Digest — 2026-09-21
 
-_Generated 2026-09-21T04:17:16.971976-04:00 · export=data/exports/finviz_2026-09-21.csv · ticker digests=5875 · high-signal=2328_
+_Generated 2026-09-21T04:17:15.018446-04:00 · export=data/exports/finviz_2026-09-20.csv · ticker digests=5875 · high-signal=2333_
 
 ## Major indices (live quote page)
 
@@ -29,7 +29,6 @@ _Generated 2026-09-21T04:17:16.971976-04:00 · export=data/exports/finviz_2026-0
 - **BX** [Financial]: Blackstone Infrastructure and PNM file amended New Mexico PRC merger plan with $220M ratepayer credits and $80M community benefits for $11.5B TXNM deal
 - **CAH** [Healthcare]: Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.
 - **CI** [Healthcare]: Jefferies downgrades Cigna to Hold from Buy, cuts price target to $307 from $336 on concern consensus too high post EviCore sale, Centene prescription drug plan shrinkage
-- **CIEN** [Technology]: Barclays raises Ciena price target to $548 from $475, keeps Overweight after new long-term financial targets
 - **CM** [Financial]: Canadian Imperial Bank Of Commerce reports fiscal Q3 2026 results with non-GAAP EPS $1.97 (+25% YoY) and revenue $6.0B (+14% YoY), beats EPS and revenue estimates
 - **CNQ** [Energy]: Canadian Natural Resources posts record Q2 2026 results with EPS $1.58, raises 2026 production guidance and returns about $4B to shareholders
 - **COR** [Healthcare]: Cencora reaffirms fiscal 2026 adjusted EPS guidance despite Walgreens prescription volume shift
@@ -51,6 +50,7 @@ _Generated 2026-09-21T04:17:16.971976-04:00 · export=data/exports/finviz_2026-0
 - **GEV** [Industrials]: GE Vernova settles over $300 million Vineyard Wind payment dispute, withdraws contract-termination notice and legal claims on Massachusetts offshore project
 - **GOOG** [Communication Serv]: Evercore ISI, Tigress raise Alphabet price targets after survey shows Google search share has rebounded
 - **GSK** [Healthcare]: Positive Jideytro ARROS-1 trial data for first-line ROS1+ NSCLC drives GSK premarket surge
+- **HCA** [Healthcare]: HCA Healthcare announces it has completed the previously announced acquisition of The College of Health Care Professions, expanding its healthcare education platform.
 
 ## By sector (top signal)
 
@@ -68,19 +68,19 @@ _Generated 2026-09-21T04:17:16.971976-04:00 · export=data/exports/finviz_2026-0
 - BNY: BNY announces it will raise its Prime Lending Rate by 25 basis points to 7.00% effective September 17, 2026.
 - BX: Blackstone Infrastructure and PNM file amended New Mexico PRC merger plan with $220M ratepayer credits and $80M community benefits for $11.5B TXNM deal
 
-### Technology (n=8)
-- APH: Fabrinet earnings weakness and rising yields spark 6.5% APH drop
-- ASML: ASML nearly sold out of 2027 EUV capacity amid very strong AI-driven demand, JPMorgan says
-- CIEN: Barclays raises Ciena price target to $548 from $475, keeps Overweight after new long-term financial targets
-- CRM: Salesforce issues FY27 revenue guidance of $46.4B, sets FY30 revenue target above $63B at Investor Day
-- DDOG: Snowflake's stronger-than-expected quarterly revenue and earnings support cloud and AI-focused enterprise software peers including Datadog
-
 ### Industrials (n=8)
 - AME: AMETEK completes $5.0 billion all-cash acquisition of Indicor Instrumentation
 - CSX: CSX delivers record revenue, raises 2026 margin and free cash flow outlook
 - FAST: Fastenal beats Q2 estimates with EPS $0.33 (+14% YoY), revenue $2.4B (+15% YoY), notes gross margin pressure and lowers 2026 digital sales mix target
 - FIX: Zacks Strong Buy upgrade and AI data center backlog drive 11% FIX surge
 - GD: General Dynamics' GDIT wins $1.3B multi-year Enterprise Network Operations and Cybersecurity Support contract for Army National Guard, federal partners
+
+### Technology (n=8)
+- APH: Fabrinet earnings weakness and rising yields spark 6.5% APH drop
+- ASML: ASML nearly sold out of 2027 EUV capacity amid very strong AI-driven demand, JPMorgan says
+- CRM: Salesforce issues FY27 revenue guidance of $46.4B, sets FY30 revenue target above $63B at Investor Day
+- DDOG: Snowflake's stronger-than-expected quarterly revenue and earnings support cloud and AI-focused enterprise software peers including Datadog
+- IBM: IBM unit Anderon finalizes $1B U.S. CHIPS Act award to fund scaling of U.S. quantum wafer foundry
 
 ### Basic Materials (n=5)
 - AU: Gold prices slide more than 3% after Fed Chair Kevin Warshâs Jackson Hole comments boost September U.S. rate hike expectations
