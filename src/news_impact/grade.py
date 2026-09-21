@@ -414,16 +414,13 @@ def performance_rollup(results: list[dict]) -> dict[str, Any]:
         if not r.get("usable"):
             continue
         rows = r.get("performance") or []
-        if not rows:
-            missing += 1
-            continue
         for g in rows:
             if g.get("direction") not in {"up", "down"}:
                 continue
             graded += 1
-            if g.get("ret_1d") is None:
+            if g.get("ret_1d") is None and g.get("ret_20d") is None:
                 missing += 1
-            else:
+            if g.get("ret_1d") is not None:
                 n1 += 1
                 hit1 += int(g.get("agree_1d") is True)
                 by_tick.setdefault(g["ticker"], []).append(float(g["ret_1d"]))

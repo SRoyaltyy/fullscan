@@ -219,10 +219,10 @@ def _reasoning(
         f"search ({pack.get('backend') or 'off'}): {fact_s}",
         "hops: " + " → ".join(hops),
         (
-            f"conclusion UP {conc['up'] or '—'} · "
-            f"DOWN {conc['down'] or '—'} · "
-            f"MIXED {conc['mixed'] or '—'} · "
-            f"ND {conc['not_determined'] or '—'}"
+            f"conclusion UP {', '.join(conc['up']) or '—'} · "
+            f"DOWN {', '.join(conc['down']) or '—'} · "
+            f"MIXED {', '.join(conc['mixed']) or '—'} · "
+            f"ND {', '.join(conc['not_determined']) or '—'}"
         ),
     ]
 
