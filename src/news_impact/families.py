@@ -5,6 +5,7 @@ import re
 
 from .axioms import retrieve
 from .classify import extract_named
+from .macro import macro_entities
 from .schema import Classification, Entity, empty_entity_ok
 
 AIRLINES = [
@@ -336,26 +337,8 @@ def _print(art: dict, cls: Classification, pack: dict) -> list[Entity]:
             ))
         return out
     if cls.event_class == "factor_impulse":
-        # A macro print — block, not a random ticker.
-        if re.search(r"(?i)(hike|hawk|warm|hot)", text):
-            out.append(_ent(
-                name="rate-sensitive growth / duration", ticker="QQQ",
-                role="named", direction="down", horizon="0-1d",
-                unit_vs_parent="slice", inferred=True,
-            ))
-        elif re.search(r"(?i)(cut|dovish|soft jobs|miss)", text):
-            out.append(_ent(
-                name="rate-sensitive growth / duration", ticker="QQQ",
-                role="named", direction="up", horizon="0-1d",
-                unit_vs_parent="slice", inferred=True,
-            ))
-        else:
-            out.append(_ent(
-                name="broad US equity", ticker="SPY",
-                role="named", direction="not_determined", horizon="0-1d",
-                if_unknown="gap vs consensus not in article",
-            ))
-        return out
+        # Ticker-less macro trades the factor basket, never a name in the lede.
+        return macro_entities(text, cls)
     direction = "not_determined"
     if cls.event_class == "guidance":
         direction = "down" if cls.sign == "cut" else "up"

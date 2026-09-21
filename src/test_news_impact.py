@@ -16,7 +16,7 @@ from src.news_impact.backtest import markdown, run_backtest
 from src.news_impact.classify import classify_text, harvest_rank_score
 from src.news_impact.grade import grade_one, parse_when
 from src.news_impact.pipeline import analyze_article
-from src.news_impact.schema import PIPELINE_VERSION, is_usable
+from src.news_impact.schema import PIPELINE_VERSION, is_tradable, is_usable
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -223,6 +223,100 @@ def test_usable_helper() -> None:
     assert is_usable(weather, []) is False
     hit = Classification("blast_ops", None, "impulse", "tsa")
     assert is_usable(hit, [Entity("Avis", "CAR", "substitute", "up")]) is True
+    assert is_tradable(hit, [Entity("Avis", "CAR", "substitute", "up")]) is True
+    nd = Entity("broad US equity", "SPY", "named", "not_determined")
+    assert is_usable(hit, [nd]) is True
+    assert is_tradable(hit, [nd]) is False
+
+
+def test_macro_cooler_cpi_trades_factor_basket() -> None:
+    row = analyze_article(
+        {"title": "Cooler CPI inflation reading bolsters case for Fed to hold rates in September"},
+        persist=False,
+    )
+    assert _cls(row) == "factor_impulse"
+    assert row["classification"]["q5"] == "impulse"
+    assert row["classification"]["factor"] == "inflation"
+    assert row["tradable"] is True
+    assert "TLT" in _ticks(row, "up")
+    assert "QQQ" in _ticks(row, "up")
+    assert "UUP" in _ticks(row, "down")
+    # Never a single-name from the lede.
+    assert "AMZN" not in _ticks(row)
+
+
+def test_macro_hot_retail_sales_is_hawkish() -> None:
+    row = analyze_article(
+        {"title": "Retail Sales, Imports Come In Warm Ahead of FOMC Decision"},
+        persist=False,
+    )
+    assert _cls(row) == "factor_impulse"
+    assert row["tradable"] is True
+    assert "QQQ" in _ticks(row, "down")
+    assert "TLT" in _ticks(row, "down")
+    assert "UUP" in _ticks(row, "up")
+
+
+def test_macro_fed_speech_is_weather() -> None:
+    row = analyze_article(
+        {"title": "Investors seek clearer Fed guidance from Warsh at Jackson Hole address"},
+        persist=False,
+    )
+    assert row["classification"]["q5"] == "regime"
+    assert row["entities"] == []
+    assert row["usable"] is False
+    assert row["tradable"] is False
+
+
+def test_macro_hike_odds_reprint_is_weather() -> None:
+    row = analyze_article(
+        {"title": "Fed Rate Hike Odds Fall As Amazon Prime Day Effect Hits Retail Sales"},
+        persist=False,
+    )
+    assert row["usable"] is False
+    assert row["tradable"] is False
+    assert "AMZN" not in _ticks(row)
+
+
+def test_macro_tariff_rumor_not_tradable() -> None:
+    row = analyze_article(
+        {"title": "U.S. considers fresh round of tariffs on semiconductors, report says"},
+        persist=False,
+    )
+    assert row["tradable"] is False
+    assert row["classification"]["q5"] in {"regime", "impulse"}
+    if row["usable"]:
+        assert row["classification"]["event_class"] in {"rumor", "regime_state", "discard"}
+
+
+def test_macro_hammack_speech_is_weather() -> None:
+    row = analyze_article(
+        {"title": "Fed should raise rates to restrain growth and inflation, Hammack says - Reuters"},
+        persist=False,
+    )
+    assert row["usable"] is False
+    assert row["tradable"] is False
+
+
+def test_macro_if_fed_hikes_newsletter_is_weather() -> None:
+    row = analyze_article(
+        {"title": "Stocks that could rally if the Fed raises rates, or stocks that could win if it stays put"},
+        persist=False,
+    )
+    assert row["usable"] is False
+    assert row["tradable"] is False
+
+
+def test_macro_tariff_imposed_is_risk_off() -> None:
+    row = analyze_article(
+        {"title": "U.S. announces tariffs on semiconductors and steel"},
+        persist=False,
+    )
+    assert _cls(row) == "factor_impulse"
+    assert row["tradable"] is True
+    assert "SPY" in _ticks(row, "down")
+    assert "TLT" in _ticks(row, "up")
+    assert "GLD" in _ticks(row, "up")
 
 
 def test_backtest_improves_sept_parses() -> None:
@@ -313,7 +407,7 @@ def test_markdown_table_columns() -> None:
         "| Reasoning |", "| Conclusion |", "| Actual |",
     ):
         assert col in md, col
-    assert "deterministic::news_impact_v1" in md
+    assert "deterministic::news_impact_v2" in md
     assert "Usable articles" in md
     assert "Discarded / weather" in md
 
@@ -353,6 +447,14 @@ def main() -> None:
         test_harvest_rank_gov_before_az,
         test_watermark_deterministic,
         test_usable_helper,
+        test_macro_cooler_cpi_trades_factor_basket,
+        test_macro_hot_retail_sales_is_hawkish,
+        test_macro_fed_speech_is_weather,
+        test_macro_hike_odds_reprint_is_weather,
+        test_macro_tariff_rumor_not_tradable,
+        test_macro_hammack_speech_is_weather,
+        test_macro_if_fed_hikes_newsletter_is_weather,
+        test_macro_tariff_imposed_is_risk_off,
         test_search_pack_offline,
         test_reasoning_and_times_on_article,
         test_grade_entity_agrees_on_up,

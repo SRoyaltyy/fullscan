@@ -89,6 +89,31 @@ BUILTIN: list[dict] = [
         "domain": "integrity",
         "text": "A Nasdaq 10-Q delay is a governance print on the named issuer's sector, never Technology-by-exchange.",
     },
+    {
+        "id": "A_MAC_01",
+        "domain": "macro",
+        "text": "A ticker-less macro print trades the factor, never a name in the lede.",
+    },
+    {
+        "id": "A_MAC_02",
+        "domain": "macro",
+        "text": "Hawkish surprise: duration and bonds down, dollar up. Dovish is the invert.",
+    },
+    {
+        "id": "A_MAC_03",
+        "domain": "macro",
+        "text": "Fed-path color, speeches, and ahead-of are weather until the print or the decision.",
+    },
+    {
+        "id": "A_MAC_04",
+        "domain": "macro",
+        "text": "A new tariff/risk shock is SPY down, TLT up, GLD up. Gold-on-Fed remains weather.",
+    },
+    {
+        "id": "A_MAC_05",
+        "domain": "macro",
+        "text": "Oil factor is XLE/USO on a new supply decision, not a Hormuz reprint.",
+    },
 ]
 
 

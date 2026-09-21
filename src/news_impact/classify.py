@@ -8,6 +8,7 @@ from __future__ import annotations
 import re
 from typing import Iterable
 
+from .macro import apply_macro
 from .schema import Classification, EVENT_CLASSES, family_of
 
 _STOP_TICK = frozenset(
@@ -214,8 +215,12 @@ _RULES: list[tuple[str, re.Pattern, str | None, str, str]] = [
           r"utility .{0,20}rate (cut|increase))",
           None, "impulse", "regulated price/rate filing"),
     _rule("factor_impulse",
-          r"(?i)(fomc|federal reserve|\bfed\b|payrolls|non-?farm|cpi |pce |"
-          r"rate hike odds|retail sales.{0,20}(warm|hot|miss|beat)|jackson hole)",
+          r"(?i)(fomc|federal reserve|\bfed\b|payrolls|non-?farm|"
+          r"\bcpi\b|\bpce\b|\bppi\b|\bnfp\b|jobless claims|jolts |"
+          r"rate hike odds|retail sales.{0,20}(warm|hot|miss|beat)|jackson hole|"
+          r"\bism \b|\bpmi \b|"
+          r"(imposes?|announces?|levies?|officially).{0,24}tariff|"
+          r"opec\+?.{0,40}(cut|boost|output|agree))",
           None, "impulse", "macro number reprices a factor"),
     # --- claims on the firm ---
     _rule("corporate_action_mna",
@@ -288,7 +293,7 @@ def _match_rules(text: str) -> Classification | None:
                     why="access fight is the state; no listed whole cash-flow channel",
                     family="structure",
                 )
-            return Classification(
+            hit = Classification(
                 event_class=event_class,
                 sign=sign,
                 q5=q5,
@@ -296,6 +301,9 @@ def _match_rules(text: str) -> Classification | None:
                 why=why,
                 family=family_of(event_class),
             )
+            if event_class == "factor_impulse":
+                return apply_macro(hit, text)
+            return hit
     return None
 
 
@@ -377,6 +385,7 @@ def merge_lane_class(base: Classification, lane: dict | None) -> Classification:
         split_facts=list(lane.get("split_facts") or base.split_facts),
         why=str(lane.get("why") or base.why),
         family=family_of(ev),
+        factor=str(lane.get("factor") or base.factor),
     )
 
 

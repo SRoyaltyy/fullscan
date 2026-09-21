@@ -17,6 +17,11 @@
     {"id": "A_TSV_06", "domain": "market_structure", "text": "Nasdaq/NYSE/DTCC are already building tokenization rails; incumbent response can flip old-rent from down to mixed."},
     {"id": "A_CAP_01", "domain": "capacity", "text": "New supply at an oligopoly node hits incumbent sellers and helps buyers of cheaper output."},
     {"id": "A_CAP_02", "domain": "capacity", "text": "Sold-out tools are scarce add for the toolmaker, not extra wafers for the foundry."},
-    {"id": "A_INS_01", "domain": "integrity", "text": "A Nasdaq 10-Q delay is a governance print on the named issuer's sector, never Technology-by-exchange."}
+    {"id": "A_INS_01", "domain": "integrity", "text": "A Nasdaq 10-Q delay is a governance print on the named issuer's sector, never Technology-by-exchange."},
+    {"id": "A_MAC_01", "domain": "macro", "text": "A ticker-less macro print trades the factor, never a name in the lede. Listed expressions are duration (QQQ/TLT), dollar (UUP), credit (HYG), risk (SPY), oil (XLE/USO)."},
+    {"id": "A_MAC_02", "domain": "macro", "text": "Hawkish surprise (hot inflation/labor/growth, hike): duration and bonds down, dollar up, credit and SPX down. Dovish is the invert."},
+    {"id": "A_MAC_03", "domain": "macro", "text": "Fed-path color, speeches, hike-odds, and ahead-of are weather until the print or the decision is in the title."},
+    {"id": "A_MAC_04", "domain": "macro", "text": "A new tariff/risk shock is SPY down, TLT up, GLD up. Gold-on-Fed remains weather."},
+    {"id": "A_MAC_05", "domain": "macro", "text": "Oil factor is XLE/USO on a new supply decision (OPEC cut/boost), not a Hormuz reprint and not a random energy name."}
   ]
 }

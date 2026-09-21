@@ -4,7 +4,7 @@ from __future__ import annotations
 from dataclasses import asdict, dataclass, field
 from typing import Any
 
-PIPELINE_VERSION = "news_impact_v1"
+PIPELINE_VERSION = "news_impact_v2"
 
 # Locked ship enum (families + sign). A new class needs a new loser AND winner set.
 EVENT_CLASSES = (
@@ -174,6 +174,7 @@ class Classification:
     split_facts: list[str] = field(default_factory=list)
     why: str = ""
     family: str = "time"
+    factor: str = ""
 
     def to_dict(self) -> dict[str, Any]:
         d = asdict(self)
@@ -200,3 +201,19 @@ def is_usable(cls: Classification, entities: list[Entity]) -> bool:
         return True
     # Identified mechanism, no listed expression yet (private names).
     return cls.event_class not in DISCARD_OR_WEATHER and cls.q5 != "regime"
+
+
+def is_tradable(cls: Classification, entities: list[Entity]) -> bool:
+    """Tradable = usable AND a listed ticker with an up/down call.
+
+    Ticker-less macro is tradable when the factor basket is signed
+    (QQQ/TLT/UUP/XLE/SPY). not_determined and private names are not.
+    """
+    if not is_usable(cls, entities):
+        return False
+    return any(
+        e.direction in {"up", "down"}
+        and bool(e.ticker)
+        and e.tradeable_expression != "none"
+        for e in entities
+    )
