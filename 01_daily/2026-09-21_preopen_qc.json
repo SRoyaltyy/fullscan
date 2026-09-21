@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T06:40:33.026474-04:00",
+  "generated_at": "2026-09-21T06:47:49.751869-04:00",
   "items": [
     {
       "ok": true,
@@ -234,14 +234,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-21/utilities_predict.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 20206,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     }
   ],
@@ -308,12 +308,12 @@
     },
     {
       "sector": "Utilities",
-      "ok": false,
-      "reason": "missing",
-      "size": 0
+      "ok": true,
+      "reason": "",
+      "size": 20206
     }
   ],
-  "sector_n_ok": 10,
+  "sector_n_ok": 11,
   "sector_n_total": 11,
   "all_ok": true
 }
