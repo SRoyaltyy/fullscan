@@ -1,0 +1,24 @@
+{
+  "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+  "slug": "13-questions",
+  "kind": "macro",
+  "retrieved": "2026-09-03T13:18:20Z",
+  "gmail_message_id": "1a0676b9c25ecbbd",
+  "gmail_message_ids": [
+    "1a0676b9c25ecbbd"
+  ],
+  "items": [
+    {
+      "headline": "Score drops to -4",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-09-03T13:18:20Z",
+      "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+      "gmail_message_id": "1a0676b9c25ecbbd",
+      "automation_title": "13 Questions",
+      "chat_url": null,
+      "raw_excerpt": "Automation · 13 Questions\n\n# 13 Questions is ready\n\nScore drops to -4\n\nAutomation · 13 Questions 13 Questions is ready Score drops to -4 Found the specified sheet. Downloading it and appending the new row.-4 Q13\n",
+      "body_complete": false
+    }
+  ]
+}

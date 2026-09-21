@@ -1,0 +1,24 @@
+{
+  "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+  "slug": "13-questions",
+  "kind": "macro",
+  "retrieved": "2026-09-16T13:06:37Z",
+  "gmail_message_id": "1a0aa538e906751e",
+  "gmail_message_ids": [
+    "1a0aa538e906751e"
+  ],
+  "items": [
+    {
+      "headline": "Score -16, Caution regime",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-09-16T13:06:37Z",
+      "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+      "gmail_message_id": "1a0aa538e906751e",
+      "automation_title": "13 Questions",
+      "chat_url": null,
+      "raw_excerpt": "Automation · 13 Questions\n\n# 13 Questions is ready\n\nScore -16, Caution regime\n\nAutomation · 13 Questions 13 Questions is ready Score -16, Caution regime I'll pull fresh market and macro data for 16 Sep 2026 and\n",
+      "body_complete": false
+    }
+  ]
+}

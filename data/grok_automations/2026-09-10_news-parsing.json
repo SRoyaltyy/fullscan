@@ -1,0 +1,24 @@
+{
+  "task_id": "unknown_news-parsing",
+  "slug": "news-parsing",
+  "kind": "ticker_news",
+  "retrieved": "2026-09-10T13:08:36Z",
+  "gmail_message_id": "1a08b6f3c25847c7",
+  "gmail_message_ids": [
+    "1a08b6f3c25847c7"
+  ],
+  "items": [
+    {
+      "headline": "Bulk-Power EO adds grid friction",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-09-10T13:08:36Z",
+      "task_id": "unknown_news-parsing",
+      "gmail_message_id": "1a08b6f3c25847c7",
+      "automation_title": "News Parsing",
+      "chat_url": null,
+      "raw_excerpt": "Automation · News Parsing\n\n# News Parsing is ready\n\nBulk-Power EO adds grid friction\n\nAutomation · News parsing News parsing is ready Bulk-Power EO adds grid friction 1. Executive Summary Over the past two weeks (roughly Augus\n",
+      "body_complete": false
+    }
+  ]
+}

@@ -18,7 +18,8 @@ def test_inventory_lists_empty_and_unused() -> None:
     names = {s["name"]: s for s in inv["sources"]}
     assert names["parsed_json"]["status"] == "used"
     assert names["finviz_export"]["status"] == "used"
-    assert names["grok_automations"]["status"] == "empty"
+    assert names["grok_automations"]["status"] == "used"
+    assert names["grok_automations"]["n_files"] >= 1
     assert names["rss_dumps"]["status"] == "empty"
     assert names["supabase_dumps"]["status"] == "empty"
     assert names["theme_radar_snapshots"]["status"] == "unused_readonly"

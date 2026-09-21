@@ -1,0 +1,24 @@
+{
+  "task_id": "unknown_news-parsing",
+  "slug": "news-parsing",
+  "kind": "ticker_news",
+  "retrieved": "2026-08-17T13:11:58Z",
+  "gmail_message_id": "1a00fd9ad644762e",
+  "gmail_message_ids": [
+    "1a00fd9ad644762e"
+  ],
+  "items": [
+    {
+      "headline": "Polysilicon tariffs, drone duties, shipbuilding memo",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-08-17T13:11:58Z",
+      "task_id": "unknown_news-parsing",
+      "gmail_message_id": "1a00fd9ad644762e",
+      "automation_title": "News Parsing",
+      "chat_url": null,
+      "raw_excerpt": "Automation · News Parsing\n\n# News Parsing is ready\n\nPolysilicon tariffs, drone duties, shipbuilding memo\n\nNews parsing is ready Polysilicon tariffs, drone duties, shipbuilding memo 1. Executive Summary Over the past two weeks (roughly August 3–17, 2026), the most material developments were Section 232\n",
+      "body_complete": false
+    }
+  ]
+}

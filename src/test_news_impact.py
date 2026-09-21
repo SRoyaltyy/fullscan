@@ -28,6 +28,15 @@ from src.test_news_impact_corpus import (
     test_reaction_and_reaffirm_still_hold_on_finviz_title,
     test_window_grid_skips_6m_as_01d_miss,
 )
+from src.test_news_impact_grok_automations import (
+    test_automations_headline_ranks_over_finviz_wrap,
+    test_empty_dir_does_not_crash,
+    test_ingest_gmail_and_connector_roundtrip,
+    test_inventory_lists_grok_after_wire,
+    test_load_all_sources_includes_grok,
+    test_load_reads_committed_json,
+    test_thirteen_questions_is_macro_not_tickers,
+)
 from src.test_news_impact_hygiene import (
     test_classify_text_reaction_and_guidance_helpers,
     test_entry_clock_published_vs_retrieved_only,
@@ -643,6 +652,13 @@ def main() -> None:
         test_first_party_outranks_finviz_wrap,
         test_funnel_does_not_invent_five_digits,
         test_dedupe_titles,
+        test_load_reads_committed_json,
+        test_empty_dir_does_not_crash,
+        test_inventory_lists_grok_after_wire,
+        test_automations_headline_ranks_over_finviz_wrap,
+        test_thirteen_questions_is_macro_not_tickers,
+        test_ingest_gmail_and_connector_roundtrip,
+        test_load_all_sources_includes_grok,
         test_backtest_improves_sept_parses,
     ]
     failed = 0

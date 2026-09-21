@@ -1,0 +1,24 @@
+{
+  "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+  "slug": "13-questions",
+  "kind": "macro",
+  "retrieved": "2026-09-08T13:41:38Z",
+  "gmail_message_id": "1a08140c49706f44",
+  "gmail_message_ids": [
+    "1a08140c49706f44"
+  ],
+  "items": [
+    {
+      "headline": "Score -8, Caution",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-09-08T13:41:38Z",
+      "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+      "gmail_message_id": "1a08140c49706f44",
+      "automation_title": "13 Questions",
+      "chat_url": null,
+      "raw_excerpt": "Automation · 13 Questions\n\n# 13 Questions is ready\n\nScore -8, Caution\n\nAutomation · 13 Questions 13 Questions is ready Score -8, Caution I'll gather today's market data from the required sources and\n",
+      "body_complete": false
+    }
+  ]
+}

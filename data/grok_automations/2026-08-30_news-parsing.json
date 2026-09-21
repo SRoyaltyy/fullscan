@@ -1,0 +1,24 @@
+{
+  "task_id": "unknown_news-parsing",
+  "slug": "news-parsing",
+  "kind": "ticker_news",
+  "retrieved": "2026-08-30T13:33:06Z",
+  "gmail_message_id": "1a052dfb1195e9ed",
+  "gmail_message_ids": [
+    "1a052dfb1195e9ed"
+  ],
+  "items": [
+    {
+      "headline": "Bulk-Power EO, Beef Quota, FDA Approvals",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-08-30T13:33:06Z",
+      "task_id": "unknown_news-parsing",
+      "gmail_message_id": "1a052dfb1195e9ed",
+      "automation_title": "News Parsing",
+      "chat_url": null,
+      "raw_excerpt": "Automation · News Parsing\n\n# News Parsing is ready\n\nBulk-Power EO, Beef Quota, FDA Approvals\n\nAutomation · News parsing News parsing is ready Bulk-Power EO, Beef Quota, FDA Approvals 1. Executive Summary Over the past two weeks (\n",
+      "body_complete": false
+    }
+  ]
+}

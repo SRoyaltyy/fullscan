@@ -1,0 +1,24 @@
+{
+  "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+  "slug": "13-questions",
+  "kind": "macro",
+  "retrieved": "2026-09-20T13:28:17Z",
+  "gmail_message_id": "1a0bf00d8f321cdc",
+  "gmail_message_ids": [
+    "1a0bf00d8f321cdc"
+  ],
+  "items": [
+    {
+      "headline": "Score -9, Caution",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-09-20T13:28:17Z",
+      "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+      "gmail_message_id": "1a0bf00d8f321cdc",
+      "automation_title": "13 Questions",
+      "chat_url": "https://grok.com/chat/2ac347c4-b0b2-4bb3-8105-837565748963",
+      "raw_excerpt": "Automation · 13 Questions\n\n# 13 Questions is ready\n\nScore -9, Caution\n\nI'll pull fresh data from the specified sources for today's checklist, then score and write the sheet.Need one-month changes, oil/copper, China prints, Fed-speak, and this week’s geopolitics.Searching the sheet and appending the scored row.*-9*\n\n*Q13. Is the market in \"bad news = good news\" mode?* *Regime:* inflation-dominant hike cycle *Current Value & Trend:* Aug CPI released 11 Sep 2026: headline +0.4% m/m / 3.4% y/y (in line); core +0.3% m/m vs 0.2% expected. S&P 500 +0.86% on 11 Sep 2026 as oil fell, then S&P 500 −0.44% and Dow −1.21% on 16 Sep 2026 after the unanimous hike and hawkish Warsh presser. *Threshold Band:* n/a (regime lens, not scored) *Reasoning:* Equities did not treat the CPI print as a rate-cut gift; hike odds jumped toward 90% and the subsequent FOMC hike/presser sold stocks. That is inflation-dominant, not “bad news = good news.” *Source ...*\n\nContinue reading: https://grok.com/chat/2ac347c4-b0b2-4bb3-8105-837565748963",
+      "body_complete": true
+    }
+  ]
+}

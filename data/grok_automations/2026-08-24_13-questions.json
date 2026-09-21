@@ -1,0 +1,24 @@
+{
+  "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+  "slug": "13-questions",
+  "kind": "macro",
+  "retrieved": "2026-08-24T13:19:03Z",
+  "gmail_message_id": "1a033ecae5c16c7d",
+  "gmail_message_ids": [
+    "1a033ecae5c16c7d"
+  ],
+  "items": [
+    {
+      "headline": "Score 2: Mildly favorable",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-08-24T13:19:03Z",
+      "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+      "gmail_message_id": "1a033ecae5c16c7d",
+      "automation_title": "13 Questions",
+      "chat_url": null,
+      "raw_excerpt": "Automation · 13 Questions\n\n# 13 Questions is ready\n\nScore 2: Mildly favorable\n\nAutomation · 13 Questions 13 Questions is ready Score 2: Mildly favorable 2 Q13. Is the market in \"bad news = good news\" mode?\n",
+      "body_complete": false
+    }
+  ]
+}

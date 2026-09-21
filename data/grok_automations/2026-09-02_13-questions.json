@@ -1,0 +1,24 @@
+{
+  "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+  "slug": "13-questions",
+  "kind": "macro",
+  "retrieved": "2026-09-02T14:07:18Z",
+  "gmail_message_id": "1a062721827bccc4",
+  "gmail_message_ids": [
+    "1a062721827bccc4"
+  ],
+  "items": [
+    {
+      "headline": "VIX spikes, oil surges, score -8",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-09-02T14:07:18Z",
+      "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+      "gmail_message_id": "1a062721827bccc4",
+      "automation_title": "13 Questions",
+      "chat_url": null,
+      "raw_excerpt": "Automation · 13 Questions\n\n# 13 Questions is ready\n\nVIX spikes, oil surges, score -8\n\nAutomation · 13 Questions 13 Questions is ready VIX spikes, oil surges, score -8 Gathering fresh data for 2026-09-02 across FRED, CME\n",
+      "body_complete": false
+    }
+  ]
+}

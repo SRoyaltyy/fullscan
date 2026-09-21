@@ -1,0 +1,24 @@
+{
+  "task_id": "5b4f01c3-fe5b-463a-a270-8bc9def8e26f",
+  "slug": "google-news-prompt",
+  "kind": "ticker_news",
+  "retrieved": "2026-08-17T13:19:51Z",
+  "gmail_message_id": "1a00fe0e6f78cced",
+  "gmail_message_ids": [
+    "1a00fe0e6f78cced"
+  ],
+  "items": [
+    {
+      "headline": "Anthropic $200B forecast, Iran oil risks",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-08-17T13:19:51Z",
+      "task_id": "5b4f01c3-fe5b-463a-a270-8bc9def8e26f",
+      "gmail_message_id": "1a00fe0e6f78cced",
+      "automation_title": "Google News prompt",
+      "chat_url": null,
+      "raw_excerpt": "Automation · Google News prompt\n\n# Google News prompt is ready\n\nAnthropic $200B forecast, Iran oil risks\n\nGoogle News prompt is ready Anthropic $200B forecast, Iran oil risks 1. Executive Summary Over the past 24–48 hours (as of August 17, 2026), markets focused on a mix of strong AI-related corporate\n",
+      "body_complete": false
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "task_id": "unknown_news-parsing",
+  "slug": "news-parsing",
+  "kind": "ticker_news",
+  "retrieved": "2026-08-14T13:11:16Z",
+  "gmail_message_id": "1a00065f9dbf6592",
+  "gmail_message_ids": [
+    "1a00065f9dbf6592"
+  ],
+  "items": [
+    {
+      "headline": "New tariffs boost domestic tech",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-08-14T13:11:16Z",
+      "task_id": "unknown_news-parsing",
+      "gmail_message_id": "1a00065f9dbf6592",
+      "automation_title": "News Parsing",
+      "chat_url": null,
+      "raw_excerpt": "Automation · News Parsing\n\n# News Parsing is ready\n\nNew tariffs boost domestic tech\n\nNews parsing is ready New tariffs boost domestic tech 1. Executive Summary Over the past two weeks (roughly July 31–August 14, 2026), the most material developments centered on Section 232 national-\n",
+      "body_complete": false
+    }
+  ]
+}

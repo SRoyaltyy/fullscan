@@ -1,0 +1,24 @@
+{
+  "task_id": "unknown_news-parsing",
+  "slug": "news-parsing",
+  "kind": "ticker_news",
+  "retrieved": "2026-08-23T13:05:21Z",
+  "gmail_message_id": "1a02eb9c6ef3b9f2",
+  "gmail_message_ids": [
+    "1a02eb9c6ef3b9f2"
+  ],
+  "items": [
+    {
+      "headline": "Space policy, UAS tariffs boost industrials",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-08-23T13:05:21Z",
+      "task_id": "unknown_news-parsing",
+      "gmail_message_id": "1a02eb9c6ef3b9f2",
+      "automation_title": "News Parsing",
+      "chat_url": null,
+      "raw_excerpt": "Automation · News Parsing\n\n# News Parsing is ready\n\nSpace policy, UAS tariffs boost industrials\n\nAutomation · News parsing News parsing is ready Space policy, UAS tariffs boost industrials 1. Executive Summary Over the past two weeks (\n",
+      "body_complete": false
+    }
+  ]
+}

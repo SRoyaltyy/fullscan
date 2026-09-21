@@ -1,0 +1,24 @@
+{
+  "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+  "slug": "13-questions",
+  "kind": "macro",
+  "retrieved": "2026-08-27T13:16:38Z",
+  "gmail_message_id": "1a0435d8b21bcb63",
+  "gmail_message_ids": [
+    "1a0435d8b21bcb63"
+  ],
+  "items": [
+    {
+      "headline": "Macro score +3, murky",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-08-27T13:16:38Z",
+      "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+      "gmail_message_id": "1a0435d8b21bcb63",
+      "automation_title": "13 Questions",
+      "chat_url": null,
+      "raw_excerpt": "Automation · 13 Questions\n\n# 13 Questions is ready\n\nMacro score +3, murky\n\nAutomation · 13 Questions 13 Questions is ready Macro score +3, murky I'll gather today's market and macro prints first so every\n",
+      "body_complete": false
+    }
+  ]
+}

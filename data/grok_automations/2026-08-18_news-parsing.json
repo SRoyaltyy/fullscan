@@ -1,0 +1,24 @@
+{
+  "task_id": "unknown_news-parsing",
+  "slug": "news-parsing",
+  "kind": "ticker_news",
+  "retrieved": "2026-08-18T13:11:12Z",
+  "gmail_message_id": "1a014ff59f277567",
+  "gmail_message_ids": [
+    "1a014ff59f277567"
+  ],
+  "items": [
+    {
+      "headline": "New tariffs, shipbuilding memo",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-08-18T13:11:12Z",
+      "task_id": "unknown_news-parsing",
+      "gmail_message_id": "1a014ff59f277567",
+      "automation_title": "News Parsing",
+      "chat_url": null,
+      "raw_excerpt": "Automation · News Parsing\n\n# News Parsing is ready\n\nNew tariffs, shipbuilding memo\n\nNews parsing is ready New tariffs, shipbuilding memo 1. Executive Summary Over the past two weeks (roughly August 4–18, 2026), the most material US policy developments centered on Section 232 national\n",
+      "body_complete": false
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "task_id": "unknown_news-parsing",
+  "slug": "news-parsing",
+  "kind": "ticker_news",
+  "retrieved": "2026-09-21T14:03:00Z",
+  "gmail_message_id": "1a0c446fdbe2c094",
+  "gmail_message_ids": [
+    "1a0c446fdbe2c094"
+  ],
+  "items": [
+    {
+      "headline": "EPA GHG repeal, H-1B friction",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-09-21T14:03:00Z",
+      "task_id": "unknown_news-parsing",
+      "gmail_message_id": "1a0c446fdbe2c094",
+      "automation_title": "News Parsing",
+      "chat_url": "https://grok.com/chat/0254c457-5e89-437c-b99f-b6b4701a9bc7",
+      "raw_excerpt": "Automation · News parsing\n\n# News parsing is ready\n\nEPA GHG repeal, H-1B friction\n\nI'll systematically check the specified official sources for developments from the past two weeks and map them to the sector checklist.Collecting remaining agency, court, and trade items from the specified sources.*1. Executive Summary*\n\nOver the two weeks ending September 21, 2026, the most market-relevant U.S. policy moves were tighter H-1B restrictions, a large EPA rollback of power-plant greenhouse-gas standards, and a DOJ-backed court remedy against Google in ad tech. On September 18, the White House renewed a $100,000 H-1B entry fee and directed agencies to weigh recent or planned U.S. layoffs when reviewing petitions, adding friction for technology and semiconductor employers that rely on specialty-occupation labor. On September 17, EPA finalized a partial repeal of the 2024 Carbon Pollution Standards for fossil fuel-fired electric generating units and separately proposed rescinding the underlying GHG findings under Clean Air Act section 111—supportive fo ...\n\nContinue reading: https://grok.com/chat/0254c457-5e89-437c-b99f-b6b4701a9bc7",
+      "body_complete": true
+    }
+  ]
+}

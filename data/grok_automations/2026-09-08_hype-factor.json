@@ -1,0 +1,24 @@
+{
+  "task_id": "23a24524-4eaa-4b9e-bd39-5b30e2ec74ae",
+  "slug": "hype-factor",
+  "kind": "ticker_news",
+  "retrieved": "2026-09-08T13:29:51Z",
+  "gmail_message_id": "1a08135f68b956df",
+  "gmail_message_ids": [
+    "1a08135f68b956df"
+  ],
+  "items": [
+    {
+      "headline": "SpaceX IPO hype drives aerospace",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-09-08T13:29:51Z",
+      "task_id": "23a24524-4eaa-4b9e-bd39-5b30e2ec74ae",
+      "gmail_message_id": "1a08135f68b956df",
+      "automation_title": "Hype Factor",
+      "chat_url": null,
+      "raw_excerpt": "Automation · Hype Factor\n\n# Hype Factor is ready\n\nSpaceX IPO hype drives aerospace\n\nAutomation · Hype factor Hype factor is ready SpaceX IPO hype drives aerospace 1. Overall Market Condition (Next 1–2 Weeks) Base Environment\n",
+      "body_complete": false
+    }
+  ]
+}

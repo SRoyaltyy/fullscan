@@ -1,0 +1,24 @@
+{
+  "task_id": "5b4f01c3-fe5b-463a-a270-8bc9def8e26f",
+  "slug": "google-news-prompt",
+  "kind": "ticker_news",
+  "retrieved": "2026-08-22T13:16:20Z",
+  "gmail_message_id": "1a0299d791ba9428",
+  "gmail_message_ids": [
+    "1a0299d791ba9428"
+  ],
+  "items": [
+    {
+      "headline": "Canada tariffs hit, oil rises",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-08-22T13:16:20Z",
+      "task_id": "5b4f01c3-fe5b-463a-a270-8bc9def8e26f",
+      "gmail_message_id": "1a0299d791ba9428",
+      "automation_title": "Google News Prompt",
+      "chat_url": null,
+      "raw_excerpt": "Automation · Google News Prompt\n\n# Google News Prompt is ready\n\nCanada tariffs hit, oil rises\n\nAutomation · Google News prompt Google News prompt is ready Canada tariffs hit, oil rises 1. Executive Summary Over the past 24–48 hours (\n",
+      "body_complete": false
+    }
+  ]
+}

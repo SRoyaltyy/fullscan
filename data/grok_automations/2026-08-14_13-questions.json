@@ -1,0 +1,24 @@
+{
+  "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+  "slug": "13-questions",
+  "kind": "macro",
+  "retrieved": "2026-08-14T13:08:52Z",
+  "gmail_message_id": "1a00063c2a7c2b4f",
+  "gmail_message_ids": [
+    "1a00063c2a7c2b4f"
+  ],
+  "items": [
+    {
+      "headline": "Score 4: Mildly favorable",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-08-14T13:08:52Z",
+      "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+      "gmail_message_id": "1a00063c2a7c2b4f",
+      "automation_title": "13 Questions",
+      "chat_url": null,
+      "raw_excerpt": "Automation · 13 Questions\n\n# 13 Questions is ready\n\nScore 4: Mildly favorable\n\n13 Questions is ready Score 4: Mildly favorable 4 Q13. Is the market in \"bad news = good news\" mode? Regime: bad news = good news Current Value & Trend: Latest July CPI (in-line 0.1% MoM\n",
+      "body_complete": false
+    }
+  ]
+}

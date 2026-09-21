@@ -1,0 +1,24 @@
+{
+  "task_id": "unknown_news-parsing",
+  "slug": "news-parsing",
+  "kind": "ticker_news",
+  "retrieved": "2026-09-17T13:24:30Z",
+  "gmail_message_id": "1a0af8a500c21d3a",
+  "gmail_message_ids": [
+    "1a0af8a500c21d3a"
+  ],
+  "items": [
+    {
+      "headline": "EPA GHG repeal boosts energy",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-09-17T13:24:30Z",
+      "task_id": "unknown_news-parsing",
+      "gmail_message_id": "1a0af8a500c21d3a",
+      "automation_title": "News parsing",
+      "chat_url": "https://grok.com/chat/b2d5378a-cf97-4d34-b8e0-da9f63c60b59",
+      "raw_excerpt": "Automation · News parsing\n# News parsing is ready\nEPA GHG repeal boosts energy\nI'll systematically scan the specified official sources for developments from the past two weeks, then map each item to the sector checklist.*1. Executive Summary*\nThe most market-relevant policy action in the past two weeks is EPA’s September 14, 2026 final partial repeal of the 2024 Carbon Pollution Standards for fossil fuel-fired power plants, paired with a proposal to strip remaining Clean Air Act Section 111 GHG standards for the sector. That is *supportive* for coal, gas generation, and utilities that still run thermal fleets, and *increased friction* for carbon-capture vendors and some renewables that had been priced as compliance substitutes.\nCongress advanced, but did not enact, the Ratepayer Protection Act (H.R. 9340), which would push 100 MW+ data-center loads to pay full in ...\nContinue reading: https://grok.com/chat/b2d5378a-cf97-4d34-b8e0-da9f63c60b59",
+      "body_complete": true
+    }
+  ]
+}

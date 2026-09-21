@@ -17,6 +17,7 @@ from collections import defaultdict
 from typing import Any
 
 from .grade import entry_calendar_date, signal_dt
+from .grok_automations import is_grok_automations
 from .hygiene import is_reaction_title
 
 _FIRST_PARTY = re.compile(
@@ -69,6 +70,8 @@ def _independent_key(row: dict) -> str:
     hs = str(row.get("harvest_source") or row.get("source") or "unknown")
     if _FINVIZ_WRAP.search(hs):
         return "finviz_wrap"
+    if is_grok_automations(row):
+        return "grok_automations"
     if is_first_party(row):
         return "first_party"
     return hs.split(":")[0][:40]
@@ -148,14 +151,20 @@ def mix_book(results: list[dict]) -> dict[str, Any]:
         mass = any(b["high_mass"] for b in bag)
         if mass:
             high_mass_n += 1
-        # First-party outranks a Finviz wrap of the same fact when they disagree.
+        # First-party / grok_automations outrank a Finviz wrap of the same fact.
         fp = [b for b in bag if b["first_party"] and b["direction"] in {"up", "down"}]
+        auto = [b for b in bag if b["indep"] == "grok_automations"
+                and b["direction"] in {"up", "down"}]
         wraps = [b for b in bag if b["indep"] == "finviz_wrap"]
-        if fp and wraps and {b["direction"] for b in fp} != {
+        preferred = fp or auto
+        if preferred and wraps and {b["direction"] for b in preferred} != {
             b["direction"] for b in wraps if b["direction"] in {"up", "down"}
         }:
-            # Drop wrap directions; keep first-party.
-            bag = [b for b in bag if b["first_party"] or b["indep"] != "finviz_wrap"]
+            bag = [
+                b for b in bag
+                if b["first_party"] or b["indep"] == "grok_automations"
+                or b["indep"] != "finviz_wrap"
+            ]
             dirs = {b["direction"] for b in bag if b["direction"] in {"up", "down"}}
             indep = {b["indep"] for b in bag}
 

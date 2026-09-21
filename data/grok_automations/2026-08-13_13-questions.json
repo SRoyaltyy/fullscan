@@ -1,0 +1,24 @@
+{
+  "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+  "slug": "13-questions",
+  "kind": "macro",
+  "retrieved": "2026-08-13T13:13:03Z",
+  "gmail_message_id": "19ffb413bb399caf",
+  "gmail_message_ids": [
+    "19ffb413bb399caf"
+  ],
+  "items": [
+    {
+      "headline": "Score 3: Mildly favorable",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-08-13T13:13:03Z",
+      "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+      "gmail_message_id": "19ffb413bb399caf",
+      "automation_title": "13 Questions",
+      "chat_url": null,
+      "raw_excerpt": "Automation · 13 Questions\n\n# 13 Questions is ready\n\nScore 3: Mildly favorable\n\n13 Questions is ready Score 3: Mildly favorable 3 Q13. Is the market in \"bad news = good news\" mode? Regime: bad news = good news Current Value & Trend: July jobs -23k (Aug 7 data) + in-\n",
+      "body_complete": false
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "task_id": "unknown_news-parsing",
+  "slug": "news-parsing",
+  "kind": "ticker_news",
+  "retrieved": "2026-09-18T13:36:34Z",
+  "gmail_message_id": "1a0b4bbb73e7ee5d",
+  "gmail_message_ids": [
+    "1a0b4bbb73e7ee5d"
+  ],
+  "items": [
+    {
+      "headline": "EPA Repeals Power Plant GHG Rules",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-09-18T13:36:34Z",
+      "task_id": "unknown_news-parsing",
+      "gmail_message_id": "1a0b4bbb73e7ee5d",
+      "automation_title": "News parsing",
+      "chat_url": "https://grok.com/chat/574f5e71-4023-417f-85e7-6e80eab2ef91",
+      "raw_excerpt": "Automation · News parsing\n# News parsing is ready\nEPA Repeals Power Plant GHG Rules\nI'll systematically scan the specified official sources for developments from Sept 4–18, 2026 and map any market-relevant items to your sector list.*1. Executive Summary*\nThe most material development in the two weeks ending September 18, 2026 was EPA’s September 14–17 package: a *final repeal* of most 2024 Carbon Pollution Standards for fossil EGUs plus a *supplemental proposal* to wipe remaining GHG standards and the statutory theory for climate regulation of the power sector. Combined with DOE’s September 11 emergency order keeping Washington’s Centralia Unit 2 coal plant online and a September 8 $1.9 billion loan close to restart Iowa’s Duane Arnold nuclear plant, the policy tilt is clearly *supportive for coal, gas-fired generation, nuclear, and utility fuel-mix ...*\nContinue reading: https://grok.com/chat/574f5e71-4023-417f-85e7-6e80eab2ef91",
+      "body_complete": true
+    }
+  ]
+}

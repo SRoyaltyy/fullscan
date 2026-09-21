@@ -1,0 +1,24 @@
+{
+  "task_id": "unknown_news-parsing",
+  "slug": "news-parsing",
+  "kind": "ticker_news",
+  "retrieved": "2026-08-15T13:08:30Z",
+  "gmail_message_id": "1a00589c8f6c7c3b",
+  "gmail_message_ids": [
+    "1a00589c8f6c7c3b"
+  ],
+  "items": [
+    {
+      "headline": "Polysilicon tariffs, coal orders, FDA rule",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-08-15T13:08:30Z",
+      "task_id": "unknown_news-parsing",
+      "gmail_message_id": "1a00589c8f6c7c3b",
+      "automation_title": "News Parsing",
+      "chat_url": null,
+      "raw_excerpt": "Automation · News Parsing\n\n# News Parsing is ready\n\nPolysilicon tariffs, coal orders, FDA rule\n\nNews parsing is ready Polysilicon tariffs, coal orders, FDA rule 1. Executive Summary Over the past two weeks (roughly August 1–15, 2026), the most material developments were a Section 232 proclamatio\n",
+      "body_complete": false
+    }
+  ]
+}

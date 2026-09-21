@@ -1,0 +1,24 @@
+{
+  "task_id": "unknown_news-parsing",
+  "slug": "news-parsing",
+  "kind": "ticker_news",
+  "retrieved": "2026-08-21T13:15:06Z",
+  "gmail_message_id": "1a02475fa4b784b1",
+  "gmail_message_ids": [
+    "1a02475fa4b784b1"
+  ],
+  "items": [
+    {
+      "headline": "Space policy, DOE grants boost",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-08-21T13:15:06Z",
+      "task_id": "unknown_news-parsing",
+      "gmail_message_id": "1a02475fa4b784b1",
+      "automation_title": "News Parsing",
+      "chat_url": null,
+      "raw_excerpt": "Automation · News Parsing\n\n# News Parsing is ready\n\nSpace policy, DOE grants boost\n\nAutomation · News parsing News parsing is ready Space policy, DOE grants boost 1. Executive Summary Over the past two weeks (approximately\n",
+      "body_complete": false
+    }
+  ]
+}

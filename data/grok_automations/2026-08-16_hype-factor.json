@@ -1,0 +1,24 @@
+{
+  "task_id": "23a24524-4eaa-4b9e-bd39-5b30e2ec74ae",
+  "slug": "hype-factor",
+  "kind": "ticker_news",
+  "retrieved": "2026-08-16T13:03:35Z",
+  "gmail_message_id": "1a00aaba598e2016",
+  "gmail_message_ids": [
+    "1a00aaba598e2016"
+  ],
+  "items": [
+    {
+      "headline": "SpaceX IPO hype lingers",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-08-16T13:03:35Z",
+      "task_id": "23a24524-4eaa-4b9e-bd39-5b30e2ec74ae",
+      "gmail_message_id": "1a00aaba598e2016",
+      "automation_title": "Hype Factor",
+      "chat_url": null,
+      "raw_excerpt": "Automation · Hype Factor\n\n# Hype Factor is ready\n\nSpaceX IPO hype lingers\n\nHype factor is ready SpaceX IPO hype lingers 1. Overall Market Condition (Next 1–2 Weeks) Base Environment: Cautious Dominant Macro Drivers: Post-IPO digestion of the SpaceX (SPCX) debut that began\n",
+      "body_complete": false
+    }
+  ]
+}

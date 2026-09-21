@@ -1,0 +1,24 @@
+{
+  "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+  "slug": "13-questions",
+  "kind": "macro",
+  "retrieved": "2026-08-15T13:10:25Z",
+  "gmail_message_id": "1a0058b88290483c",
+  "gmail_message_ids": [
+    "1a0058b88290483c"
+  ],
+  "items": [
+    {
+      "headline": "Score jumps to 8, mildly favorable",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-08-15T13:10:25Z",
+      "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+      "gmail_message_id": "1a0058b88290483c",
+      "automation_title": "13 Questions",
+      "chat_url": null,
+      "raw_excerpt": "Automation · 13 Questions\n\n# 13 Questions is ready\n\nScore jumps to 8, mildly favorable\n\n13 Questions is ready Score jumps to 8, mildly favorable 6 Q13. Is the market in \"bad news = good news\" mode? Regime: bad news = good news Current Value & Trend: Stocks rose on soft July\n",
+      "body_complete": false
+    }
+  ]
+}

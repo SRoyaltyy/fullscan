@@ -1,0 +1,24 @@
+{
+  "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+  "slug": "13-questions",
+  "kind": "macro",
+  "retrieved": "2026-09-18T13:39:43Z",
+  "gmail_message_id": "1a0b4be9570ecf1e",
+  "gmail_message_ids": [
+    "1a0b4be9570ecf1e"
+  ],
+  "items": [
+    {
+      "headline": "Score -11, Caution",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-09-18T13:39:43Z",
+      "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+      "gmail_message_id": "1a0b4be9570ecf1e",
+      "automation_title": "13 Questions",
+      "chat_url": "https://grok.com/chat/93e35d03-902a-432d-93f8-f3c5752a8547",
+      "raw_excerpt": "Automation · 13 Questions\n# 13 Questions is ready\nScore -11, Caution\nI'll pull fresh market and macro prints first, then score the checklist against the rubric and write the Google Sheet row.*-11*\n*Q13. Is the market in \"bad news = good news\" mode?* *Regime:* inflation-dominant *Current Value & Trend:* Aug CPI (released 11 Sep 2026): headline 0.4% m/m / 3.4% y/y in line; core 0.3% m/m vs 0.2% consensus. S&P 500 sold on the print then closed +0 ...\nContinue reading: https://grok.com/chat/93e35d03-902a-432d-93f8-f3c5752a8547",
+      "body_complete": true
+    }
+  ]
+}

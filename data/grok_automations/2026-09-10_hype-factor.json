@@ -1,0 +1,24 @@
+{
+  "task_id": "23a24524-4eaa-4b9e-bd39-5b30e2ec74ae",
+  "slug": "hype-factor",
+  "kind": "ticker_news",
+  "retrieved": "2026-09-10T13:44:30Z",
+  "gmail_message_id": "1a08b901a9f71e3c",
+  "gmail_message_ids": [
+    "1a08b901a9f71e3c"
+  ],
+  "items": [
+    {
+      "headline": "AI hype vs FOMC caution",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-09-10T13:44:30Z",
+      "task_id": "23a24524-4eaa-4b9e-bd39-5b30e2ec74ae",
+      "gmail_message_id": "1a08b901a9f71e3c",
+      "automation_title": "Hype Factor",
+      "chat_url": null,
+      "raw_excerpt": "Automation · Hype Factor\n\n# Hype Factor is ready\n\nAI hype vs FOMC caution\n\nAutomation · Hype factor Hype factor is ready AI hype vs FOMC caution 1. Overall Market Condition (Next 1–2 Weeks) Base Environment: Cautiou\n",
+      "body_complete": false
+    }
+  ]
+}

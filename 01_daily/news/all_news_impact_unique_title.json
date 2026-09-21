@@ -1,0 +1,2661 @@
+{
+  "date": "all",
+  "book": "unique_title_all",
+  "lane": "deterministic",
+  "inventory": {
+    "window": {
+      "earliest_on_disk": "2026-04-26",
+      "earliest_parse": "2026-08-08",
+      "latest": "2026-09-21",
+      "june_2026_parse": false,
+      "note": "No June 2026 *_parsed.json. Earliest parse is 2026-08-08. Earliest Finviz export is 2026-04-26 (one file). Window used = earliest on-disk news through latest."
+    },
+    "sources": [
+      {
+        "name": "parsed_json",
+        "path": "01_daily/news/*_parsed.json",
+        "n_files": 31,
+        "earliest": "2026-08-08",
+        "latest": "2026-09-21",
+        "status": "used"
+      },
+      {
+        "name": "finviz_export",
+        "path": "data/exports/finviz_YYYY-MM-DD.csv (News Title + Daily Digest)",
+        "n_files": 35,
+        "earliest": "2026-04-26",
+        "latest": "2026-09-21",
+        "status": "used"
+      },
+      {
+        "name": "finviz_digest",
+        "path": "01_daily/news/*finviz*digest*.json",
+        "n_files": 62,
+        "earliest": "2026-07-30",
+        "latest": "2026-09-21",
+        "status": "used"
+      },
+      {
+        "name": "events_json",
+        "path": "01_daily/events/*_events.json",
+        "n_files": 29,
+        "earliest": "2026-08-10",
+        "latest": "2026-09-21",
+        "status": "used"
+      },
+      {
+        "name": "actions_keep",
+        "path": "01_daily/news/*_actions.json (KEEP / conditional evidence)",
+        "n_files": 33,
+        "earliest": "2026-08-09",
+        "latest": "2026-09-21",
+        "status": "used"
+      },
+      {
+        "name": "grok_automations",
+        "path": "data/grok_automations/{date}_{slug}.json",
+        "n_files": 157,
+        "n_items": 157,
+        "earliest": "2026-08-13",
+        "latest": "2026-09-21",
+        "status": "used",
+        "note": "GH Actions tokens cannot call the Automations API. Ingest via bot/Cursor (Gmail noreply@x.ai or automation_get_results) then commit dumps. See docs/GROK_AUTOMATIONS_HARVEST.md."
+      },
+      {
+        "name": "rss_dumps",
+        "path": "collectors/rss_news.py (workflow exists; no dump dir on disk)",
+        "n_files": 0,
+        "status": "empty"
+      },
+      {
+        "name": "supabase_dumps",
+        "path": "src/db.py news pooler (no local dump on disk)",
+        "n_files": 0,
+        "status": "empty"
+      },
+      {
+        "name": "theme_radar_snapshots",
+        "path": "https://github.com/SRoyaltyy/theme-radar data/snapshots/*.csv",
+        "n_files": 30,
+        "earliest": "2026-08-06",
+        "latest": "2026-09-18",
+        "status": "unused_readonly",
+        "note": "Theme Radar: please export a headline pack (date, ticker, News Title, News Time, Daily Digest, News URL) from data/snapshots/*.csv into a JSON/CSV we can ingest in fullscan. Do not merge the repos."
+      }
+    ],
+    "theme_radar": {
+      "repo": "SRoyaltyy/theme-radar",
+      "readonly": true,
+      "paths": [
+        "data/snapshots/YYYY-MM-DD.csv (Finviz Elite snapshots, 2026-08-06..2026-09-18)",
+        "data/snapshots/manifest.json",
+        "01_daily/*_scan.md / *_universe.md (no headline export)"
+      ],
+      "status": "unused_here — read-only; no clone, no PR",
+      "export_ask": "Theme Radar: please export a headline pack (date, ticker, News Title, News Time, Daily Digest, News URL) from data/snapshots/*.csv into a JSON/CSV we can ingest in fullscan. Do not merge the repos."
+    }
+  },
+  "grok_automations": {
+    "n_files": 157,
+    "n_items": 157,
+    "n_body_complete": 20,
+    "by_slug": {
+      "13-questions": 39,
+      "google-news-prompt": 39,
+      "hype-factor": 40,
+      "news-parsing": 39
+    },
+    "earliest": "2026-08-13",
+    "latest": "2026-09-21",
+    "status": "used",
+    "ingest": "gmail_noreply_x.ai",
+    "note": "Gmail previews are truncated. body_complete=20/157. Actions must not call live Automations."
+  },
+  "raw_meta": {
+    "n_raw": 333289,
+    "by_harvest_source": {
+      "parsed": 7946,
+      "finviz_export": 322070,
+      "finviz_digest": 1720,
+      "events": 1002,
+      "actions_keep": 394,
+      "grok_automations": 157
+    }
+  },
+  "funnel": {
+    "raw_headlines": 333289,
+    "unique_after_dedupe": 29446,
+    "non_reaction_non_weather": 8771,
+    "impulse_updown_listed": 1538,
+    "has_tape_graded": 1277,
+    "note": "has_tape_graded counts unique articles with at least one graded 0-1d tape row. If this is only hundreds, that is the truth — the five-digit target needs unused/empty sources (theme-radar headline export, RSS/Supabase dumps, June parses) to fill."
+  },
+  "signed_listed_n": 1495,
+  "graded_n": 1277,
+  "no_tape_n": 218,
+  "no_tape": [
+    {
+      "title": "Holtec Nuclear IPO (HNUC) pricing window",
+      "source": "parsed",
+      "published_at": "",
+      "retrieved_at": "2026-09-15T15:23:04.395304-04:00",
+      "event_class": "listing_flow",
+      "tickers": [
+        "HNUC:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Holtec Nuclear IPO (HNUC) pricing/listing",
+      "source": "parsed",
+      "published_at": "",
+      "retrieved_at": "2026-09-15T15:23:04.395304-04:00",
+      "event_class": "listing_flow",
+      "tickers": [
+        "HNUC:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Holtec Nuclear IPO (HNUC)",
+      "source": "parsed",
+      "published_at": "",
+      "retrieved_at": "2026-09-15T15:23:04.395304-04:00",
+      "event_class": "listing_flow",
+      "tickers": [
+        "HNUC:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Aptiv PLC stock outperforms competitors on strong trading day",
+      "source": "finviz_export",
+      "published_at": "2026-08-07 16:30:00",
+      "retrieved_at": "2026-08-13",
+      "event_class": "guidance",
+      "tickers": [
+        "PLC:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "James Hardie Industries PLC (JHIUF) (Q1 2027) Earnings Call Highlights: Record Growth and ...",
+      "source": "finviz_export",
+      "published_at": "2026-08-07 01:12:37",
+      "retrieved_at": "2026-08-13",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "JHIUF:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Honda deepens relationship with quantum computing firm",
+      "source": "finviz_export",
+      "published_at": "2026-08-11 07:14:02",
+      "retrieved_at": "2026-08-13",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "ADR:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "$1.1B Loan on HPP, Blackstone LA Studios Hits Special Servicing",
+      "source": "finviz_export",
+      "published_at": "2026-08-07 02:08:40",
+      "retrieved_at": "2026-08-13",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "FFO:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Are MKTX, SMTI, FBRX, LXFR Obtaining Fair Deals for their Shareholders?",
+      "source": "finviz_export",
+      "published_at": "2026-08-06 15:48:00",
+      "retrieved_at": "2026-08-13",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "PLC:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Pangaea Logistics Solutions, Ltd. Q2 2026 Earnings Call Summary",
+      "source": "finviz_export",
+      "published_at": "2026-08-11 08:30:00",
+      "retrieved_at": "2026-08-13",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "TCE:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Pearson Interim Results for the six months to 30th June 2026 (Unaudited)",
+      "source": "finviz_export",
+      "published_at": "2026-07-31 02:10:00",
+      "retrieved_at": "2026-08-13",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "ADR:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Republic Bancorp: Q2 Earnings Snapshot",
+      "source": "finviz_export",
+      "published_at": "2026-07-24 08:13:41",
+      "retrieved_at": "2026-08-13",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "KY:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Rentokil Initial PLC (RKLIF) (H1 2026) Earnings Call Highlights: Revenue Growth and Margin ...",
+      "source": "finviz_export",
+      "published_at": "2026-07-30 15:00:48",
+      "retrieved_at": "2026-08-13",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "RKLIF:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Runway Growth Finance Corp. Q2 2026 Earnings Call Summary",
+      "source": "finviz_export",
+      "published_at": "2026-08-07 08:30:00",
+      "retrieved_at": "2026-08-13",
+      "event_class": "capital_return",
+      "tickers": [
+        "NII:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "SI-BONE, Inc. Q2 2026 Earnings Call Summary",
+      "source": "finviz_export",
+      "published_at": "2026-08-04 08:30:00",
+      "retrieved_at": "2026-08-13",
+      "event_class": "guidance",
+      "tickers": [
+        "BONE:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Smurfit Westrock PLC stock outperforms competitors on strong trading day",
+      "source": "finviz_export",
+      "published_at": "2026-08-11 16:30:00",
+      "retrieved_at": "2026-08-13",
+      "event_class": "guidance",
+      "tickers": [
+        "PLC:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Mobilicom Ltd (MOBBW) (Q2 2026) Earnings Call Highlights: Record Defense Revenue and Strategic ...",
+      "source": "finviz_export",
+      "published_at": "2026-08-14 01:02:03",
+      "retrieved_at": "2026-08-14",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "MOBBW:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Japan's economy manages 1.1% growth rate despite headwinds",
+      "source": "finviz_export",
+      "published_at": "2026-08-16 22:39:57",
+      "retrieved_at": "2026-08-17",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "ADR:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Equatorial SA (EQUEY) (Q2 2026) Earnings Call Highlights: Strategic Expansion and Resilient ...",
+      "source": "finviz_export",
+      "published_at": "2026-08-14 21:09:30",
+      "retrieved_at": "2026-08-17",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "EQUEY:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "What did c-store CEOs make in 2025? Heres what the filings show.",
+      "source": "finviz_export",
+      "published_at": "2026-08-18 04:28:17",
+      "retrieved_at": "2026-08-18",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "FEMSA:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Stantec announces amendment to Normal Course Issuer Bid",
+      "source": "finviz_export",
+      "published_at": "2026-08-18 06:45:00",
+      "retrieved_at": "2026-08-18",
+      "event_class": "capital_return",
+      "tickers": [
+        "NCIB:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Full Truck Alliance Tops Forecasts as Transaction Revenue Accelerates",
+      "source": "finviz_export",
+      "published_at": "2026-08-19 06:16:14",
+      "retrieved_at": "2026-08-19",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "ADR:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Cytokinetics Announces Upcoming Presentations at the European Society of Cardiology (ESC) Congress 2026",
+      "source": "finviz_export",
+      "published_at": "2026-08-20 07:30:00",
+      "retrieved_at": "2026-08-20",
+      "event_class": "guidance",
+      "tickers": [
+        "ESC:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Woodside Energy Group Ltd (WOPEF) (H1 2026) Earnings Call Highlights: Record Free Cash Flow ...",
+      "source": "finviz_export",
+      "published_at": "2026-08-25 03:00:55",
+      "retrieved_at": "2026-08-25",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "WOPEF:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Mexico's Primero raises $12 million seed to bring AI to Latin American blue-chips",
+      "source": "finviz_export",
+      "published_at": "2026-08-25 10:03:54",
+      "retrieved_at": "2026-08-27",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "FEMSA:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "ISG Announces 2026 ISG Paragon Awards Asia Winners",
+      "source": "finviz_export",
+      "published_at": "2026-08-26 21:00:00",
+      "retrieved_at": "2026-08-27",
+      "event_class": "capital_return",
+      "tickers": [
+        "ISG:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "AI Advances Analytics Software from Reporting to Action, ISG says",
+      "source": "finviz_export",
+      "published_at": "2026-08-27 10:00:00",
+      "retrieved_at": "2026-08-28",
+      "event_class": "capital_return",
+      "tickers": [
+        "ISG:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Russian strike kills 27 near Kyiv as Moscow militarizes schools",
+      "source": "finviz_export",
+      "published_at": "2026-08-29 06:24:19",
+      "retrieved_at": "2026-08-29",
+      "event_class": "labor_stop",
+      "tickers": [
+        "DARC:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "SI-BONE To Present at Morgan Stanley 24th Global Healthcare Conference on September 14, 2026",
+      "source": "finviz_export",
+      "published_at": "2026-08-31 16:09:00",
+      "retrieved_at": "2026-09-01",
+      "event_class": "guidance",
+      "tickers": [
+        "BONE:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "AI Helps Integrated Tools Take on Security Threats, ISG Says",
+      "source": "finviz_export",
+      "published_at": "2026-09-02 10:00:00",
+      "retrieved_at": "2026-09-03",
+      "event_class": "capital_return",
+      "tickers": [
+        "ISG:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Cboe Global Markets Reports Trading Volume for August 2026",
+      "source": "finviz_export",
+      "published_at": "2026-09-03 16:30:00",
+      "retrieved_at": "2026-09-04",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "XSP:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "ISG Announces Finalists for 2026 ISG Women in Digital Awards",
+      "source": "finviz_export",
+      "published_at": "2026-09-03 10:00:00",
+      "retrieved_at": "2026-09-04",
+      "event_class": "capital_return",
+      "tickers": [
+        "ISG:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Learning Platforms Gain Flexibility to Meet Changing Skill Requirements, Employee Expectations, ISG says",
+      "source": "finviz_export",
+      "published_at": "2026-09-04 10:00:00",
+      "retrieved_at": "2026-09-05",
+      "event_class": "capital_return",
+      "tickers": [
+        "ISG:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Alcoa Corporation Announces Pricing of Debt Offering to Finance Cash Consideration for Acquisition of South32s Bauxite, Alumina and Aluminum Assets",
+      "source": "finviz_export",
+      "published_at": "2026-09-09 17:23:00",
+      "retrieved_at": "2026-09-09",
+      "event_class": "dilution",
+      "tickers": [
+        "AA:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Avino Earns Second Consecutive TSX30(TM) Recognition",
+      "source": "finviz_export",
+      "published_at": "2026-09-09 07:30:00",
+      "retrieved_at": "2026-09-09",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "TM:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Caleres Inc (CAL) (Q2 2026) Earnings Call Highlights: Strategic Growth and Margin Expansion ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-09 21:00:30",
+      "retrieved_at": "2026-09-09",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "CAL:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Casey's General Stores Inc (CASY) (Q1 2027) Earnings Call Highlights: EPS Soars 28% to $7. ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-09 17:01:14",
+      "retrieved_at": "2026-09-09",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "CASY:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "CBRE IM Buys Net Lease REIT For $1.6B, Plans More Investment",
+      "source": "finviz_export",
+      "published_at": "2026-09-09 14:13:28",
+      "retrieved_at": "2026-09-09",
+      "event_class": "guidance",
+      "tickers": [
+        "CBRE:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Core & Main Inc (CNM) (Q2 2026) Earnings Call Highlights: Record Buybacks and Strategic ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-09 17:00:48",
+      "retrieved_at": "2026-09-09",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "CNM:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "EVI Industries Inc (EVI) (Q4 2026) Earnings Call Highlights: Record Revenue and Strategic ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-08 15:00:36",
+      "retrieved_at": "2026-09-09",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "EVI:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Shareholders who lost money in shares of Flotek Industries, Inc. (NYSE: FTK) should contact Wolf Haldenstein Immediately",
+      "source": "finviz_export",
+      "published_at": "2026-09-09 09:22:00",
+      "retrieved_at": "2026-09-09",
+      "event_class": "blast_legal",
+      "tickers": [
+        "ICE:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "NYSE Texas Office Opening: Globe Life Co-CEOs Cover Lone Star State Importance",
+      "source": "finviz_export",
+      "published_at": "2026-09-09 13:43:35",
+      "retrieved_at": "2026-09-09",
+      "event_class": "capital_return",
+      "tickers": [
+        "ICE:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Moonwalk Biosciences Announces $70 Million Series B: NYSE Content Update",
+      "source": "finviz_export",
+      "published_at": "2026-09-09 08:55:00",
+      "retrieved_at": "2026-09-09",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "ICE:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Trust Stamp offers free onboarding for financial institutions amid IDScan data breach",
+      "source": "finviz_export",
+      "published_at": "2026-09-09 09:04:00",
+      "retrieved_at": "2026-09-09",
+      "event_class": "blast_cyber",
+      "tickers": [
+        "IDAI:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Ingram Micro Holding Corporation Announces Pricing of Secondary Offering of Common Stock by its Principal Stockholder and a Concurrent Stock Repurchase",
+      "source": "finviz_export",
+      "published_at": "2026-09-08 23:01:00",
+      "retrieved_at": "2026-09-09",
+      "event_class": "dilution",
+      "tickers": [
+        "INGM:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Korn Ferry (KFY) (Q1 2027) Earnings Call Highlights: Record Growth Fueled by AMS Acquisition ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-09 19:00:31",
+      "retrieved_at": "2026-09-09",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "KFY:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Manchester United plc Announces Fourth Quarter Fiscal 2026 Earnings Report Date",
+      "source": "finviz_export",
+      "published_at": "2026-09-09 07:00:00",
+      "retrieved_at": "2026-09-09",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "MANU:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Kaplan Fox Urges Medline Inc. (MDLN) Investors to Contact the Firm About Possible Securities Law Violations",
+      "source": "finviz_export",
+      "published_at": "2026-09-08 18:20:00",
+      "retrieved_at": "2026-09-09",
+      "event_class": "guidance",
+      "tickers": [
+        "MDLN:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "MIND Technology Inc (MIND) (Q2 2027) Earnings Call Highlights: Navigating Geopolitical ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-09 17:00:31",
+      "retrieved_at": "2026-09-09",
+      "event_class": "guidance",
+      "tickers": [
+        "MIND:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Amazon Is Selling Its First Sterling Bonds in Four-Part Deal",
+      "source": "finviz_export",
+      "published_at": "2026-09-09 04:05:55",
+      "retrieved_at": "2026-09-09",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "AMZN:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Perma-Pipe International Holdings Inc (PPIH) (Q2 2026) Earnings Call Highlights: Record Sales ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-09 17:01:11",
+      "retrieved_at": "2026-09-09",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "PPIH:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Pearson and Illinois Tech to Explore Employability Pathways and Workforce-Focused Learning Credentials",
+      "source": "finviz_export",
+      "published_at": "2026-09-08 09:00:00",
+      "retrieved_at": "2026-09-09",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "ADR:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Research Solutions Inc (RSSS) (Q4 2026) Earnings Call Highlights: Record Gross Margins and ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-10 01:00:35",
+      "retrieved_at": "2026-09-09",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "RSSS:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Schrodinger Announces Licensing and Collaboration Agreement with Tectora Therapeutics, a New Biotechnology Company It Co-founded to Advance Immunology and Inflammation Programs",
+      "source": "finviz_export",
+      "published_at": "2026-09-09 07:00:00",
+      "retrieved_at": "2026-09-09",
+      "event_class": "guidance",
+      "tickers": [
+        "WBD:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "SFL Corp Ltd's Dividend Analysis",
+      "source": "finviz_export",
+      "published_at": "2026-09-09 07:10:33",
+      "retrieved_at": "2026-09-09",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "CAR:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "SS Innovations International(SSII) Turning India's Surgical Robotics Opportunity Into a Global Growth Story",
+      "source": "finviz_export",
+      "published_at": "2026-09-08 14:58:10",
+      "retrieved_at": "2026-09-09",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "SSII:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Smurfit Westrock PLC stock underperforms Wednesday when compared to competitors",
+      "source": "finviz_export",
+      "published_at": "2026-09-09 16:30:00",
+      "retrieved_at": "2026-09-09",
+      "event_class": "guidance",
+      "tickers": [
+        "PLC:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "UDR to Participate in Upcoming Real Estate Conferences",
+      "source": "finviz_export",
+      "published_at": "2026-09-09 16:16:00",
+      "retrieved_at": "2026-09-09",
+      "event_class": "guidance",
+      "tickers": [
+        "UDR:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "United Rentals to Present at the Morgan Stanley 14th Annual Laguna Conference",
+      "source": "finviz_export",
+      "published_at": "2026-09-08 16:05:00",
+      "retrieved_at": "2026-09-09",
+      "event_class": "guidance",
+      "tickers": [
+        "URI:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Americas Gold and Silver Recognized as a Top Performer in the 2026 TSX30(TM)",
+      "source": "finviz_export",
+      "published_at": "2026-09-09 07:35:00",
+      "retrieved_at": "2026-09-09",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "TM:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Waterdrop Inc (WDH) (Q2 2026) Earnings Call Highlights: Revenue Jumps 72. ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-10 01:00:21",
+      "retrieved_at": "2026-09-09",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "WDH:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Robbins LLP is Investigating Allegations that XTI Aerospace, Inc. Misled Investors Regarding the Effectiveness of its Disclosure Controls and Procedures",
+      "source": "finviz_export",
+      "published_at": "2026-09-09 15:20:00",
+      "retrieved_at": "2026-09-09",
+      "event_class": "blast_legal",
+      "tickers": [
+        "XTIA:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Cutting Canada tariffs alone won't flatten US aluminum premium, Alcoa says",
+      "source": "finviz_export",
+      "published_at": "2026-09-10 13:05:14",
+      "retrieved_at": "2026-09-10",
+      "event_class": "dilution",
+      "tickers": [
+        "AA:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Is Microsoft Stock Overvalued At 28x Earnings?",
+      "source": "finviz_export",
+      "published_at": "2026-09-10 12:52:16",
+      "retrieved_at": "2026-09-10",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "MSFT:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Cboe Global Markets to Present at the Barclays Global Financial Services Conference on September 16",
+      "source": "finviz_export",
+      "published_at": "2026-09-10 16:30:00",
+      "retrieved_at": "2026-09-10",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "XSP:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Office Market Splits as Prime Space Pulls Further Ahead",
+      "source": "finviz_export",
+      "published_at": "2026-09-10 02:18:08",
+      "retrieved_at": "2026-09-10",
+      "event_class": "guidance",
+      "tickers": [
+        "CBRE:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Frequency Electronics Inc (FEIM) (Q1 2027) Earnings Call Highlights: Record Revenue, Surging ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-11 01:01:08",
+      "retrieved_at": "2026-09-10",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "FEIM:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Oxxo USA taps Gaskins to lead marketing and category management",
+      "source": "finviz_export",
+      "published_at": "2026-09-10 06:00:00",
+      "retrieved_at": "2026-09-10",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "FEMSA:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Earnings To Watch: Hooker Furnishings Corp (HOFT) Q2 2027 -- GF Value Sees 7% Upside",
+      "source": "finviz_export",
+      "published_at": "2026-09-10 09:15:27",
+      "retrieved_at": "2026-09-10",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "HOFT:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Miss these deadlines and IRS penalties start stacking up",
+      "source": "finviz_export",
+      "published_at": "2026-09-10 07:00:00",
+      "retrieved_at": "2026-09-10",
+      "event_class": "guidance",
+      "tickers": [
+        "HRB:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Intercontinental Exchange Sept. Mortgage Monitor- Property Insurance Costs Rise 8.7% Annually",
+      "source": "finviz_export",
+      "published_at": "2026-09-10 11:10:35",
+      "retrieved_at": "2026-09-10",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "ICE:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "AI Expands Strategic Role of Contact Centers, ISG Says",
+      "source": "finviz_export",
+      "published_at": "2026-09-10 10:00:00",
+      "retrieved_at": "2026-09-10",
+      "event_class": "capital_return",
+      "tickers": [
+        "ISG:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Imperial Petroleum Inc (IMPP) (Q2 2026) Earnings Call Highlights: Record Revenue, Debt-Free ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-10 21:00:48",
+      "retrieved_at": "2026-09-10",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "IMPP:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "IRSA Inversiones y Representaciones SA (IRS) (Q4 2026) Earnings Call Highlights: Record Rental ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-10 21:01:09",
+      "retrieved_at": "2026-09-10",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "IRS:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "ITT Announces Participation at D.A. Davidsons 25th Annual Diversified Industrials & Services Conference on Sept. 24",
+      "source": "finviz_export",
+      "published_at": "2026-09-10 06:30:00",
+      "retrieved_at": "2026-09-10",
+      "event_class": "guidance",
+      "tickers": [
+        "ITT:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Lakeland Industries Inc (LAKE) Q2 2027 Earnings Call Highlights: Fire Segment Momentum and ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-10 05:00:41",
+      "retrieved_at": "2026-09-10",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "LAKE:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "The Lovesac Co (LOVE) (Q2 2027) Earnings Call Highlights: Record Non-Q4 Sales and Tariff ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-10 21:00:34",
+      "retrieved_at": "2026-09-10",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "LOVE:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Lesaka Technologies Inc (LSAK) (Q4 2026) Earnings Call Highlights: First GAAP Profit Since 2022 ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-10 17:00:26",
+      "retrieved_at": "2026-09-10",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "LSAK:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Tsakos Energy Navigation Ltd (TEN) (Q2 2026) Earnings Call Highlights: Record Net Income Surges ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-10 17:00:52",
+      "retrieved_at": "2026-09-10",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "TEN:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Bear of the Day: Tyson Foods (TSN)",
+      "source": "finviz_export",
+      "published_at": "2026-09-10 06:30:00",
+      "retrieved_at": "2026-09-10",
+      "event_class": "guidance",
+      "tickers": [
+        "TSN:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Vince Holding Corp (VNCE) Q2 2026 Earnings Call Highlights: Sales Surge 11. ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-10 17:00:52",
+      "retrieved_at": "2026-09-10",
+      "event_class": "guidance",
+      "tickers": [
+        "VNCE:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "34 Miles Out to Sea, Nowhere to Hide from the Sun: Tint World and XPEL Team Up to Protect Historic Frying Pan Shoals Tower",
+      "source": "finviz_export",
+      "published_at": "2026-09-10 08:30:00",
+      "retrieved_at": "2026-09-10",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "XPEL:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Zumiez Inc (ZUMZ) (Q2 2026) Earnings Call Highlights: US Footwear Weakness Drives Guidance Cut ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-11 01:00:41",
+      "retrieved_at": "2026-09-10",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "ZUMZ:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "AudioEye (AEYE) Crossed Above the 200-Day Moving Average: What That Means for Investors",
+      "source": "finviz_export",
+      "published_at": "2026-09-11 11:37:00",
+      "retrieved_at": "2026-09-11",
+      "event_class": "guidance",
+      "tickers": [
+        "AEYE:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Goldman, BofA vie to manage Anthropic employee wealth post-IPO - report",
+      "source": "finviz_export",
+      "published_at": "2026-09-11 17:36:08",
+      "retrieved_at": "2026-09-11",
+      "event_class": "listing_flow",
+      "tickers": [
+        "BAC:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Is Concrete Pumping Holdings (BBCP) Stock Undervalued Right Now?",
+      "source": "finviz_export",
+      "published_at": "2026-09-11 11:36:00",
+      "retrieved_at": "2026-09-11",
+      "event_class": "guidance",
+      "tickers": [
+        "BBCP:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Why Rising Bond Yields Arent Throttling The Economy, For Now",
+      "source": "finviz_export",
+      "published_at": "2026-09-11 17:09:14",
+      "retrieved_at": "2026-09-11",
+      "event_class": "capital_return",
+      "tickers": [
+        "BCS:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Kaplan Fox Encourages Capricor Therapeutics, Inc. (CAPR) Investors Who Suffered Losses to Seek a Leadership Role Before September 28, 2026",
+      "source": "finviz_export",
+      "published_at": "2026-09-11 15:15:00",
+      "retrieved_at": "2026-09-11",
+      "event_class": "blast_legal",
+      "tickers": [
+        "CAPR:down",
+        "BLA:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "CBRE Sees AI Office Demand Strengthening Prime Space",
+      "source": "finviz_export",
+      "published_at": "2026-09-11 05:04:22",
+      "retrieved_at": "2026-09-11",
+      "event_class": "guidance",
+      "tickers": [
+        "CBRE:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Is ChargePoint (CHPT) Outperforming Other Auto-Tires-Trucks Stocks This Year?",
+      "source": "finviz_export",
+      "published_at": "2026-09-11 11:36:00",
+      "retrieved_at": "2026-09-11",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "CHPT:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Should Value Investors Buy CNO Financial Group (CNO) Stock?",
+      "source": "finviz_export",
+      "published_at": "2026-09-11 11:36:00",
+      "retrieved_at": "2026-09-11",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "CNO:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Mecka AI nears $500M valuation in Sequoia-led deal amid rush for robot training data",
+      "source": "finviz_export",
+      "published_at": "2026-09-11 18:58:17",
+      "retrieved_at": "2026-09-11",
+      "event_class": "market_structure",
+      "tickers": [
+        "COIN:up",
+        "CRCL:up",
+        "SCHW:down",
+        "SECZ:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Is Salesforce Stock Cheap Because Software Is Dying?",
+      "source": "finviz_export",
+      "published_at": "2026-09-11 15:04:06",
+      "retrieved_at": "2026-09-11",
+      "event_class": "peer_spill",
+      "tickers": [
+        "CRM:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "IBEX Ltd (IBEX) (Q4 2026) Earnings Call Highlights: Record Revenue and AI-Driven Growth Momentum",
+      "source": "finviz_export",
+      "published_at": "2026-09-11 03:00:56",
+      "retrieved_at": "2026-09-11",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "IBEX:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "NYSE Honors Victims of 9/11: NYSE Content Update",
+      "source": "finviz_export",
+      "published_at": "2026-09-11 08:55:00",
+      "retrieved_at": "2026-09-11",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "ICE:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "ISG Announces 2026 ISG Women in Digital Awards Winners for the Americas",
+      "source": "finviz_export",
+      "published_at": "2026-09-11 10:00:00",
+      "retrieved_at": "2026-09-11",
+      "event_class": "capital_return",
+      "tickers": [
+        "ISG:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Jabil Inc. stock underperforms Friday when compared to competitors despite daily gains",
+      "source": "finviz_export",
+      "published_at": "2026-09-11 16:30:00",
+      "retrieved_at": "2026-09-11",
+      "event_class": "peer_spill",
+      "tickers": [
+        "APH:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "3 Reasons Growth Investors Will Love Jones Lang LaSalle (JLL)",
+      "source": "finviz_export",
+      "published_at": "2026-09-11 11:36:00",
+      "retrieved_at": "2026-09-11",
+      "event_class": "guidance",
+      "tickers": [
+        "JLL:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Wall Street Analysts Think M/I Homes (MHO) Is a Good Investment: Is It?",
+      "source": "finviz_export",
+      "published_at": "2026-09-11 11:37:00",
+      "retrieved_at": "2026-09-11",
+      "event_class": "capital_return",
+      "tickers": [
+        "MHO:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Micron Takes Unexpected Step as Tensions Rise",
+      "source": "finviz_export",
+      "published_at": "2026-09-11 17:11:02",
+      "retrieved_at": "2026-09-11",
+      "event_class": "labor_stop",
+      "tickers": [
+        "MU:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Kaplan Fox Encourages Microvast Holdings, Inc. (MVST) Investors Who Suffered Losses to Seek a Leadership Role Before September 21, 2026",
+      "source": "finviz_export",
+      "published_at": "2026-09-11 14:00:00",
+      "retrieved_at": "2026-09-11",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "MVST:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "RKLB Stock: What's Behind The 39% Drop?",
+      "source": "finviz_export",
+      "published_at": "2026-09-11 13:41:26",
+      "retrieved_at": "2026-09-11",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "DARC:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Kaplan Fox Urges Primoris Services Corporation (PRIM) Investors Seeking Recovery to Contact the Firm Before September 21, 2026",
+      "source": "finviz_export",
+      "published_at": "2026-09-11 14:15:00",
+      "retrieved_at": "2026-09-11",
+      "event_class": "blast_legal",
+      "tickers": [
+        "PRIM:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Rent the Runway Inc (RENT) (Q2 2026) Earnings Call Highlights: Record Revenue and New CEO Amid ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-11 17:00:39",
+      "retrieved_at": "2026-09-11",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "RENT:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Research Solutions Inc (RSSS) (Q3 2026) Earnings Call Highlights: Margin Expansion and AI ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-11 21:00:50",
+      "retrieved_at": "2026-09-11",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "RSSS:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Can Snowflake Stock Keep Climbing On The Work Its AI Tools Bring In?",
+      "source": "finviz_export",
+      "published_at": "2026-09-11 11:00:28",
+      "retrieved_at": "2026-09-11",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "SNOW:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Kaplan Fox Encourages Unicycive Therapeutics, Inc. (UNCY) Investors with Significant Losses to Contact the Firm Before November 2, 2026",
+      "source": "finviz_export",
+      "published_at": "2026-09-11 14:31:00",
+      "retrieved_at": "2026-09-11",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "UNCY:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Greystone Logistics Inc (GLGI) (Q4 2026) Earnings Call Highlights: Navigating the Loss of a ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-11 23:01:08",
+      "retrieved_at": "2026-09-11",
+      "event_class": "product_harm",
+      "tickers": [
+        "GLGI:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Burnham faces UK economic test as budget day approaches",
+      "source": "finviz_export",
+      "published_at": "2026-09-12 02:31:48",
+      "retrieved_at": "2026-09-12",
+      "event_class": "capital_return",
+      "tickers": [
+        "BCS:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Premium Offices Pull Ahead as Owners Rethink Workplaces",
+      "source": "finviz_export",
+      "published_at": "2026-09-12 17:59:49",
+      "retrieved_at": "2026-09-13",
+      "event_class": "guidance",
+      "tickers": [
+        "CBRE:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "MasterCraft Boat Holdings Inc (MCFT) Q4 2026 Earnings Call Highlights: Transformational Marine ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-12 21:00:36",
+      "retrieved_at": "2026-09-13",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "MCFT:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Going Beyond Apple's Presentation: Interesting Tidbits and Observations From Apple's 'Surprise and Shine' Event (Part 1)",
+      "source": "finviz_export",
+      "published_at": "2026-09-14 22:39:00",
+      "retrieved_at": "2026-09-14",
+      "event_class": "blast_legal",
+      "tickers": [
+        "GOOGL:down",
+        "META:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Review & Preview: AI Is At It Again",
+      "source": "finviz_export",
+      "published_at": "2026-09-14 19:55:00",
+      "retrieved_at": "2026-09-14",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "ANF:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "HealthStream Defines a New Enterprise Category Alongside the EHR and ERP, the Enterprise Clinical Workforce Platform (ECWP)",
+      "source": "finviz_export",
+      "published_at": "2026-09-14 09:25:00",
+      "retrieved_at": "2026-09-14",
+      "event_class": "guidance",
+      "tickers": [
+        "ECWP:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "AI Slowdown Debate Splits Tech CEOs: Nvidia, Broadcom Dismiss Any Threat While Elon Musk Calls For Peer Review System",
+      "source": "finviz_export",
+      "published_at": "2026-09-14 23:16:31",
+      "retrieved_at": "2026-09-14",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "NVDA:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Broadridge Expands Next-gen Digital Assets Capabilities to U.S. Wealth Management Firms",
+      "source": "finviz_export",
+      "published_at": "2026-09-14 06:20:00",
+      "retrieved_at": "2026-09-14",
+      "event_class": "market_structure",
+      "tickers": [
+        "COIN:up",
+        "CRCL:up",
+        "SCHW:down",
+        "SECZ:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Kaplan Fox Urges Avis Budget Group, Inc. (CAR) Investors Seeking Recovery to Contact the Firm Before September 29, 2026",
+      "source": "finviz_export",
+      "published_at": "2026-09-14 14:40:00",
+      "retrieved_at": "2026-09-14",
+      "event_class": "blast_legal",
+      "tickers": [
+        "CAR:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "NYLIM CBRE Global Infrastructure Megatrends Term Fund (NYSE: MEGI) Declares Monthly Distributions for September, October, and November 2026 and Availability of 19(a) Notice",
+      "source": "finviz_export",
+      "published_at": "2026-09-14 10:00:00",
+      "retrieved_at": "2026-09-14",
+      "event_class": "guidance",
+      "tickers": [
+        "ICE:up",
+        "CBRE:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Coda Octopus Group Inc (CODA) (Q3 2026) Earnings Call Highlights: Defense Surge Offsets Marine ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-15 01:00:22",
+      "retrieved_at": "2026-09-14",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "CODA:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "BNY Mellon Strategic Municipal Bond Fund, Inc.'s Dividend Analysis",
+      "source": "finviz_export",
+      "published_at": "2026-09-14 07:16:06",
+      "retrieved_at": "2026-09-14",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "DSM:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Kaplan Fox Urges Datavault AI Inc. (DVLT) Investors Seeking Recovery to Contact the Firm Before October 5, 2026",
+      "source": "finviz_export",
+      "published_at": "2026-09-14 15:10:00",
+      "retrieved_at": "2026-09-14",
+      "event_class": "blast_legal",
+      "tickers": [
+        "DVLT:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "BNY Mellon Strategic Municipals, Inc.'s Dividend Analysis",
+      "source": "finviz_export",
+      "published_at": "2026-09-14 07:13:35",
+      "retrieved_at": "2026-09-14",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "LEO:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "D-Wave Quantum (QBTS) Finalizes Definitive Agreement With U.S. Department of Commerce for Up to $100M to Accelerate U.S. Leadership in Quantum Computing",
+      "source": "finviz_export",
+      "published_at": "2026-09-14 15:44:24",
+      "retrieved_at": "2026-09-14",
+      "event_class": "blast_legal",
+      "tickers": [
+        "QBTS:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "RF Industries Ltd (RFIL) (Q3 2026) Earnings Call Highlights: Record Revenue and Expanding ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-14 19:00:23",
+      "retrieved_at": "2026-09-14",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "RFIL:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Radiant Logistics Inc (RLGT) (Q4 2026) Earnings Call Highlights: Record Quarterly Revenue and ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-15 01:00:33",
+      "retrieved_at": "2026-09-14",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "RLGT:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "RLJ Lodging Trust Announces Third Quarter 2026 Earnings Release and Conference Call Dates",
+      "source": "finviz_export",
+      "published_at": "2026-09-14 08:00:00",
+      "retrieved_at": "2026-09-14",
+      "event_class": "guidance",
+      "tickers": [
+        "RLJ:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Did You Pay For Palantir's Guidance Or For Something Else?",
+      "source": "finviz_export",
+      "published_at": "2026-09-14 14:00:36",
+      "retrieved_at": "2026-09-14",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "SNOW:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Oprah Winfrey to Host 'Immersive' Live Show at Las Vegas Sphere",
+      "source": "finviz_export",
+      "published_at": "2026-09-14 08:30:00",
+      "retrieved_at": "2026-09-14",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "SPHR:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Solidion Technology Announces Stock Buyback Program",
+      "source": "finviz_export",
+      "published_at": "2026-09-14 04:00:00",
+      "retrieved_at": "2026-09-14",
+      "event_class": "capital_return",
+      "tickers": [
+        "STI:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Kaplan Fox Encourages UWM Holdings Corporation (UWMC) Investors Who Suffered Losses to Seek a Leadership Role Before October 13, 2026",
+      "source": "finviz_export",
+      "published_at": "2026-09-14 14:30:00",
+      "retrieved_at": "2026-09-14",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "UWMC:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Apple reportedly accepts Samsung's 1Q27 memory hike, raising the 2027 smartphone cost floor",
+      "source": "finviz_export",
+      "published_at": "2026-09-16 00:19:00",
+      "retrieved_at": "2026-09-15",
+      "event_class": "blast_legal",
+      "tickers": [
+        "GOOGL:down",
+        "META:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "3 Defensive-Styled Stocks to Help Weather Volatility",
+      "source": "finviz_export",
+      "published_at": "2026-09-15 17:11:00",
+      "retrieved_at": "2026-09-15",
+      "event_class": "guidance",
+      "tickers": [
+        "ADM:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Robinhood To Offer Share Redemptions And Voting Rights On Tokenized Stocks",
+      "source": "finviz_export",
+      "published_at": "2026-09-15 09:25:00",
+      "retrieved_at": "2026-09-15",
+      "event_class": "market_structure",
+      "tickers": [
+        "COIN:up",
+        "CRCL:up",
+        "SCHW:down",
+        "SECZ:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "AMN Healthcare Survey Reveals Critical Divide Between Healthcare Leaders and Frontline Workers",
+      "source": "finviz_export",
+      "published_at": "2026-09-15 09:03:00",
+      "retrieved_at": "2026-09-15",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "AMN:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "DIAMONDROCK HOSPITALITY ANNOUNCES THIRD QUARTER 2026 EARNINGS RELEASE AND CONFERENCE CALL",
+      "source": "finviz_export",
+      "published_at": "2026-09-15 07:30:00",
+      "retrieved_at": "2026-09-15",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "DRH:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "This new tax law could save your business money",
+      "source": "finviz_export",
+      "published_at": "2026-09-15 07:00:00",
+      "retrieved_at": "2026-09-15",
+      "event_class": "guidance",
+      "tickers": [
+        "HRB:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "MindWalk Holdings Corp (HYFT) (Q1 2027) Earnings Call Highlights: Revenue Climbs 21% as ReefIQ ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-15 15:00:21",
+      "retrieved_at": "2026-09-15",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "HYFT:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Installed Building Products Inc's Dividend Analysis",
+      "source": "finviz_export",
+      "published_at": "2026-09-15 07:18:08",
+      "retrieved_at": "2026-09-15",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "IBP:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Perk Brings Its Spend Platform to U.S.: NYSE Content Update",
+      "source": "finviz_export",
+      "published_at": "2026-09-15 08:55:00",
+      "retrieved_at": "2026-09-15",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "ICE:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "AI is Delivering Measurable Value Across Healthcare Revenue Cycle, ISG Expert Says",
+      "source": "finviz_export",
+      "published_at": "2026-09-15 15:15:00",
+      "retrieved_at": "2026-09-15",
+      "event_class": "capital_return",
+      "tickers": [
+        "ISG:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Kestra Medical Technologies Ltd (KMTS) (Q1 2027) Earnings Call Highlights: Revenue Jumps 60% as ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-15 03:00:26",
+      "retrieved_at": "2026-09-15",
+      "event_class": "guidance",
+      "tickers": [
+        "KMTS:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Paramount Skydance Corp's Dividend Analysis",
+      "source": "finviz_export",
+      "published_at": "2026-09-15 07:11:34",
+      "retrieved_at": "2026-09-15",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "WBD:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Palantir wins higher UBS target as customer demand outpaces capacity",
+      "source": "finviz_export",
+      "published_at": "2026-09-15 14:30:00",
+      "retrieved_at": "2026-09-15",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "SNOW:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "WRD 3.0 Powers the AION i60 with Championship-Winning Technology Available from Delivery",
+      "source": "finviz_export",
+      "published_at": "2026-09-15 08:57:00",
+      "retrieved_at": "2026-09-15",
+      "event_class": "capacity",
+      "tickers": [
+        "MU:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "American Airlines CEO says shift to premium continues",
+      "source": "finviz_export",
+      "published_at": "2026-09-16 13:48:33",
+      "retrieved_at": "2026-09-16",
+      "event_class": "input_cost",
+      "tickers": [
+        "AAL:down",
+        "DAL:down",
+        "UAL:down",
+        "LUV:down",
+        "ALK:down",
+        "XLE:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "iPhone 18 Pro preorders rise up to 20% in Taiwan as foldable Duo debuts",
+      "source": "finviz_export",
+      "published_at": "2026-09-17 00:04:00",
+      "retrieved_at": "2026-09-16",
+      "event_class": "blast_legal",
+      "tickers": [
+        "GOOGL:down",
+        "META:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "American Savings Bank Raises $129 Million in IPO: NYSE Content Update",
+      "source": "finviz_export",
+      "published_at": "2026-09-16 08:55:00",
+      "retrieved_at": "2026-09-16",
+      "event_class": "listing_flow",
+      "tickers": [
+        "ICE:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Nestlé, PepsiCo join forces on paper packaging push",
+      "source": "finviz_export",
+      "published_at": "2026-09-16 10:15:45",
+      "retrieved_at": "2026-09-16",
+      "event_class": "inventory_print",
+      "tickers": [
+        "DVN:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "XOM Keeps Climbing. Should You Climb On?",
+      "source": "finviz_export",
+      "published_at": "2026-09-16 19:29:22",
+      "retrieved_at": "2026-09-16",
+      "event_class": "inventory_print",
+      "tickers": [
+        "DVN:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "High Tide Inc (HITI) (Q3 2026) Earnings Call Highlights: Record $198. ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-16 05:00:23",
+      "retrieved_at": "2026-09-16",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "HITI:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Kaplan Fox Urges Hyliion Holdings Corp. (HYLN) Investors Seeking Recovery to Contact the Firm Before October 27, 2026",
+      "source": "finviz_export",
+      "published_at": "2026-09-16 16:00:00",
+      "retrieved_at": "2026-09-16",
+      "event_class": "gate",
+      "tickers": [
+        "HYLN:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Data Management Builds Framework for AI to Safely Scale, ISG says",
+      "source": "finviz_export",
+      "published_at": "2026-09-16 11:00:00",
+      "retrieved_at": "2026-09-16",
+      "event_class": "capital_return",
+      "tickers": [
+        "ISG:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "IonQ, ORNL, NVIDIA, and the University of Tennessee, Knoxville Show AI Method Reduces Quantum Optimization Trade Off",
+      "source": "finviz_export",
+      "published_at": "2026-09-16 09:54:00",
+      "retrieved_at": "2026-09-16",
+      "event_class": "guidance",
+      "tickers": [
+        "NVDA:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Live Nation Makes Show Day Easier for Fans With Salesforce's Agentforce",
+      "source": "finviz_export",
+      "published_at": "2026-09-16 08:00:00",
+      "retrieved_at": "2026-09-16",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "CRM:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Kaplan Fox Reminds PROCEPT BioRobotics Corporation (PRCT) Investors That They Have Until September 22, 2026 to Move for Lead Plaintiff",
+      "source": "finviz_export",
+      "published_at": "2026-09-16 13:00:00",
+      "retrieved_at": "2026-09-16",
+      "event_class": "guidance",
+      "tickers": [
+        "PRCT:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Rent the Runway, Inc. Q2 2026 Earnings Call Summary",
+      "source": "finviz_export",
+      "published_at": "2026-09-12 08:30:00",
+      "retrieved_at": "2026-09-16",
+      "event_class": "guidance",
+      "tickers": [
+        "RENT:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Why Is Palantir Stock Priced For A Swing This Wide After A Flat Year?",
+      "source": "finviz_export",
+      "published_at": "2026-09-16 15:51:25",
+      "retrieved_at": "2026-09-16",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "SNOW:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Kaplan Fox Urges ARS Pharmaceuticals Inc. (SPRY) Investors Seeking Recovery to Contact the Firm Before October 5, 2026",
+      "source": "finviz_export",
+      "published_at": "2026-09-16 10:50:00",
+      "retrieved_at": "2026-09-16",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "SPRY:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Trip.com Group Ltd (TCOM) (Q2 2026) Earnings Call Highlights: International OTA Revenue Jumps ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-16 09:00:21",
+      "retrieved_at": "2026-09-16",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "TCOM:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "TELUS Digital Named as a Leader in Everest Group Customer Experience Management (CXM) Services PEAK Matrix Assessment - Americas for the Eighth Consecutive Year",
+      "source": "finviz_export",
+      "published_at": "2026-09-16 06:45:00",
+      "retrieved_at": "2026-09-16",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "CXM:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Airlines and Cruise Stocks Face New Oil Shock",
+      "source": "finviz_export",
+      "published_at": "2026-09-16 14:18:53",
+      "retrieved_at": "2026-09-17",
+      "event_class": "input_cost",
+      "tickers": [
+        "AAL:down",
+        "DAL:down",
+        "UAL:down",
+        "LUV:down",
+        "ALK:down",
+        "XLE:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Robinhood Rises as the SEC Clears Tokenized Stocks",
+      "source": "finviz_export",
+      "published_at": "2026-09-17 13:28:00",
+      "retrieved_at": "2026-09-17",
+      "event_class": "market_structure",
+      "tickers": [
+        "COIN:up",
+        "CRCL:up",
+        "SCHW:down",
+        "SECZ:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "American Savings Bank Jumps More Than 6% in Trading Debut: NYSE Content Update",
+      "source": "finviz_export",
+      "published_at": "2026-09-17 08:56:00",
+      "retrieved_at": "2026-09-17",
+      "event_class": "listing_flow",
+      "tickers": [
+        "ICE:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Baidu, Inc. Sued for Securities Law Violations - Contact the DJS Law Group to Discuss Your Rights BIDU",
+      "source": "finviz_export",
+      "published_at": "2026-09-17 07:30:00",
+      "retrieved_at": "2026-09-17",
+      "event_class": "blast_legal",
+      "tickers": [
+        "BIDU:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Securitize Surges After SEC Clears Path for Tokenized Stock Trading",
+      "source": "finviz_export",
+      "published_at": "2026-09-17 10:24:13",
+      "retrieved_at": "2026-09-17",
+      "event_class": "market_structure",
+      "tickers": [
+        "COIN:up",
+        "CRCL:up",
+        "SCHW:down",
+        "SECZ:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Accelerate Completes Second Infrastructure Asset-Backed Securitization Amid Strong Institutional Demand",
+      "source": "finviz_export",
+      "published_at": "2026-09-17 16:30:00",
+      "retrieved_at": "2026-09-17",
+      "event_class": "guidance",
+      "tickers": [
+        "CBRE:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "51 Talk Online Education Group (COE) (Q2 2026) Earnings Call Highlights: Gross Billings Surge ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-17 21:00:35",
+      "retrieved_at": "2026-09-17",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "COE:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Polymarket Hires Coinbase's Failed Social-Coin Architect",
+      "source": "finviz_export",
+      "published_at": "2026-09-17 17:54:25",
+      "retrieved_at": "2026-09-17",
+      "event_class": "market_structure",
+      "tickers": [
+        "COIN:up",
+        "CRCL:up",
+        "SCHW:down",
+        "SECZ:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Charles River Associates (CRA) to Present at Upcoming Investor Conferences",
+      "source": "finviz_export",
+      "published_at": "2026-09-17 08:30:00",
+      "retrieved_at": "2026-09-17",
+      "event_class": "guidance",
+      "tickers": [
+        "CRA:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Evolution Petroleum Corp (EPM) (Q4 2026) Earnings Call Highlights: Revenue Jumps 20% as Permian ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-17 15:00:23",
+      "retrieved_at": "2026-09-17",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "EPM:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Kaplan Fox Encourages FuelCell Energy, Inc. (FCEL) Investors with Significant Losses to Contact the Firm Before November 10, 2026",
+      "source": "finviz_export",
+      "published_at": "2026-09-17 17:00:00",
+      "retrieved_at": "2026-09-17",
+      "event_class": "blast_legal",
+      "tickers": [
+        "FCEL:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "SEC Sends Strong Signal to Robinhood, Coinbase Investors",
+      "source": "finviz_export",
+      "published_at": "2026-09-17 15:15:33",
+      "retrieved_at": "2026-09-17",
+      "event_class": "market_structure",
+      "tickers": [
+        "COIN:up",
+        "CRCL:up",
+        "SCHW:down",
+        "SECZ:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "SEC Allows Tokenized Stocks After Clarity Act Falters",
+      "source": "finviz_export",
+      "published_at": "2026-09-17 10:15:00",
+      "retrieved_at": "2026-09-17",
+      "event_class": "market_structure",
+      "tickers": [
+        "COIN:up",
+        "CRCL:up",
+        "SCHW:down",
+        "SECZ:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "U.S. Firms Expand ESM for Consistent, AI-Enabled Operations",
+      "source": "finviz_export",
+      "published_at": "2026-09-17 12:00:00",
+      "retrieved_at": "2026-09-17",
+      "event_class": "capital_return",
+      "tickers": [
+        "ISG:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Ispire Technology Inc (ISPR) (Q4 2026) Earnings Call Highlights: Malaysia Licenses Set Stage ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-17 03:00:18",
+      "retrieved_at": "2026-09-17",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "ISPR:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Lennar Corp (LEN) (Q3 2026) Earnings Call Highlights: Record Cycle Times and Margin Gains Amid ...",
+      "source": "finviz_export",
+      "published_at": "2026-09-17 19:00:38",
+      "retrieved_at": "2026-09-17",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "LEN:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Ethos Technologies Highlights Why Key Sell Rules Also Apply To New IPOs",
+      "source": "finviz_export",
+      "published_at": "2026-09-17 12:01:00",
+      "retrieved_at": "2026-09-17",
+      "event_class": "guidance",
+      "tickers": [
+        "LIFE:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Major airlines cut flights as higher jet fuel prices hit carriers",
+      "source": "finviz_export",
+      "published_at": "2026-09-17 17:10:03",
+      "retrieved_at": "2026-09-17",
+      "event_class": "input_cost",
+      "tickers": [
+        "AAL:down",
+        "DAL:down",
+        "UAL:down",
+        "LUV:down",
+        "ALK:down",
+        "XLE:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Kaplan Fox Encourages PROCEPT BioRobotics Corporation (PRCT) Investors With Substantial Losses to Contact the Firm Before September 22, 2026",
+      "source": "finviz_export",
+      "published_at": "2026-09-17 15:00:00",
+      "retrieved_at": "2026-09-17",
+      "event_class": "guidance",
+      "tickers": [
+        "PRCT:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "IBM Matches a $1 Billion CHIPS Award For Quantum Foundry",
+      "source": "finviz_export",
+      "published_at": "2026-09-17 08:06:34",
+      "retrieved_at": "2026-09-17",
+      "event_class": "blast_legal",
+      "tickers": [
+        "IBM:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Shell Warns 36 Million Lost LNG Tons Are Exhausting Market Buffers",
+      "source": "finviz_export",
+      "published_at": "2026-09-17 15:09:31",
+      "retrieved_at": "2026-09-17",
+      "event_class": "inventory_print",
+      "tickers": [
+        "DVN:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "AAL, UAL, DAL Get Fresh Rothschild Targets  Firm Sees Domestic Revenue Strength Extending Into 2027",
+      "source": "finviz_export",
+      "published_at": "2026-09-18 07:27:10",
+      "retrieved_at": "2026-09-18",
+      "event_class": "input_cost",
+      "tickers": [
+        "AAL:down",
+        "DAL:down",
+        "UAL:down",
+        "LUV:down",
+        "ALK:down",
+        "XLE:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "3 Strong Buy Undervalued Stocks Right Now",
+      "source": "finviz_export",
+      "published_at": "2026-09-18 17:25:00",
+      "retrieved_at": "2026-09-18",
+      "event_class": "guidance",
+      "tickers": [
+        "ADM:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "SEC Greenlights Tokenized Stocks After Clarity Act Fails in Senate",
+      "source": "finviz_export",
+      "published_at": "2026-09-18 00:01:00",
+      "retrieved_at": "2026-09-18",
+      "event_class": "market_structure",
+      "tickers": [
+        "COIN:up",
+        "CRCL:up",
+        "SCHW:down",
+        "SECZ:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Google Delays Thompson Center Opening to 2028 in Chicago",
+      "source": "finviz_export",
+      "published_at": "2026-09-18 03:10:58",
+      "retrieved_at": "2026-09-18",
+      "event_class": "guidance",
+      "tickers": [
+        "CBRE:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Eni divests 10% stake in Côte dIvoires Baleine oilfield to SOCAR",
+      "source": "finviz_export",
+      "published_at": "2026-09-17 07:19:12",
+      "retrieved_at": "2026-09-18",
+      "event_class": "capital_return",
+      "tickers": [
+        "E:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "FuelCell (FCEL) Scrutinized Over Fit Energy Disclosures Driving Stock Down 15% -- HBSS",
+      "source": "finviz_export",
+      "published_at": "2026-09-18 15:38:00",
+      "retrieved_at": "2026-09-18",
+      "event_class": "blast_legal",
+      "tickers": [
+        "FCEL:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Strategy, Circle, and Coinbase Lead Crypto Stock Rally on Tokenized Stock Approval",
+      "source": "finviz_export",
+      "published_at": "2026-09-18 12:26:25",
+      "retrieved_at": "2026-09-18",
+      "event_class": "market_structure",
+      "tickers": [
+        "COIN:up",
+        "CRCL:up",
+        "SCHW:down",
+        "SECZ:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Investing.coms stocks of the week",
+      "source": "finviz_export",
+      "published_at": "2026-09-18 14:28:42",
+      "retrieved_at": "2026-09-18",
+      "event_class": "market_structure",
+      "tickers": [
+        "COIN:up",
+        "CRCL:up",
+        "SCHW:down",
+        "SECZ:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "The SEC Greenlights Tokenized Stocks... With Caveats",
+      "source": "finviz_export",
+      "published_at": "2026-09-18 18:07:32",
+      "retrieved_at": "2026-09-18",
+      "event_class": "market_structure",
+      "tickers": [
+        "COIN:up",
+        "CRCL:up",
+        "SCHW:down",
+        "SECZ:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "U.K. Public Sector Adopts Platform-Based Delivery Approach",
+      "source": "finviz_export",
+      "published_at": "2026-09-18 04:00:00",
+      "retrieved_at": "2026-09-18",
+      "event_class": "capital_return",
+      "tickers": [
+        "ISG:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Using A Limit Order To Buy Occidental Petroleum At A Discount",
+      "source": "finviz_export",
+      "published_at": "2026-09-18 12:39:00",
+      "retrieved_at": "2026-09-18",
+      "event_class": "inventory_print",
+      "tickers": [
+        "DVN:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Republic Bancorp Inc's Dividend Analysis",
+      "source": "finviz_export",
+      "published_at": "2026-09-18 07:04:37",
+      "retrieved_at": "2026-09-18",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "KY:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "RH UNVEILS RH ESTATES, THE GALLERY ON GREENWICH AVENUE - THE FIRST FREESTANDING RH ESTATES GALLERY IN THE WORLD",
+      "source": "finviz_export",
+      "published_at": "2026-09-18 09:15:00",
+      "retrieved_at": "2026-09-18",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "RH:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Is Palantir's Lead Over Its Peers Already Priced In?",
+      "source": "finviz_export",
+      "published_at": "2026-09-18 14:00:41",
+      "retrieved_at": "2026-09-18",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "SNOW:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Like a rabbi buying a church: Delta once bought an entire oil refinery because it got tired of guessing at fuel prices",
+      "source": "finviz_export",
+      "published_at": "2026-09-20 05:45:00",
+      "retrieved_at": "2026-09-20",
+      "event_class": "inventory_print",
+      "tickers": [
+        "DVN:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "A sudden end to the Iran war would strike a blow against oil prices and energy stocks. Yet company insiders are buying.",
+      "source": "finviz_export",
+      "published_at": "2026-09-19 08:00:00",
+      "retrieved_at": "2026-09-20",
+      "event_class": "labor_stop",
+      "tickers": [
+        "KMI:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Robinhood CEO Says Civil Liability May Not Be Enough To Contain Biggest AI Risks",
+      "source": "finviz_export",
+      "published_at": "2026-09-20 10:11:17",
+      "retrieved_at": "2026-09-20",
+      "event_class": "market_structure",
+      "tickers": [
+        "COIN:up",
+        "CRCL:up",
+        "SCHW:down",
+        "SECZ:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "China'sÂ CXMT says new memory-chip platform enters mass production",
+      "source": "finviz_export",
+      "published_at": "2026-09-19 23:54:03",
+      "retrieved_at": "2026-09-20",
+      "event_class": "capacity",
+      "tickers": [
+        "MU:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "T. Rowe Price's Head Of Digital Assets Says Tokenized Stocks Must Be 'Instantly Fungible,' Agency Rules Can Move Without CLARITY Act",
+      "source": "finviz_export",
+      "published_at": "2026-09-19 13:33:01",
+      "retrieved_at": "2026-09-20",
+      "event_class": "market_structure",
+      "tickers": [
+        "COIN:up",
+        "CRCL:up",
+        "SCHW:down",
+        "SECZ:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Visa Moves to Close Meme Coin Credit Card Rewards Loophole",
+      "source": "finviz_export",
+      "published_at": "2026-09-20 12:01:03",
+      "retrieved_at": "2026-09-20",
+      "event_class": "blast_legal",
+      "tickers": [
+        "COIN:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Could IBRX Be A Tokenized Stock? Founders Tease Sends ImmunityBio Traders Into Speculation Mode",
+      "source": "finviz_export",
+      "published_at": "2026-09-21 02:49:37",
+      "retrieved_at": "2026-09-21",
+      "event_class": "market_structure",
+      "tickers": [
+        "COIN:up",
+        "CRCL:up",
+        "SCHW:down",
+        "SECZ:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "LG Display launches 24.5-inch 720Hz Gaming OLED Panel",
+      "source": "finviz_export",
+      "published_at": "2026-09-20 21:00:00",
+      "retrieved_at": "2026-09-21",
+      "event_class": "capacity",
+      "tickers": [
+        "MU:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Paramount, Warner Bros jump on report of settlement progress in merger fight",
+      "source": "finviz_export",
+      "published_at": "2026-09-21 04:52:02",
+      "retrieved_at": "2026-09-21",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "WBD:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Modi pitches India as global chipmaking hub",
+      "source": "finviz_digest",
+      "published_at": "",
+      "retrieved_at": "2026-09-17T06:50:18.348492-04:00",
+      "event_class": "capacity",
+      "tickers": [
+        "ASML:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Utility bills are rising faster than inflation, BofA says. Expect higher prices long-term.",
+      "source": "finviz_digest",
+      "published_at": "",
+      "retrieved_at": "2026-09-17T06:50:18.348492-04:00",
+      "event_class": "guidance",
+      "tickers": [
+        "BAC:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "IBMs Anderon finalises $1bn agreement for quantum foundry R&D",
+      "source": "finviz_digest",
+      "published_at": "",
+      "retrieved_at": "2026-09-17T06:50:18.348492-04:00",
+      "event_class": "gate",
+      "tickers": [
+        "IBM:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "SpaceX (SPCX) staggered lockup tranches",
+      "source": "events",
+      "published_at": "2026-09-09",
+      "retrieved_at": "2026-08-28",
+      "event_class": "listing_flow",
+      "tickers": [
+        "SPCX:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Japan Q2 GDP grows 1.1% annualized, missing estimates",
+      "source": "events",
+      "published_at": "2026-08-17",
+      "retrieved_at": "2026-08-31",
+      "event_class": "print_vs_priced",
+      "tickers": [
+        "GDP:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "SpaceX (SPCX) day-90 lockup tranche",
+      "source": "events",
+      "published_at": "2026-09-09",
+      "retrieved_at": "2026-09-03",
+      "event_class": "listing_flow",
+      "tickers": [
+        "SPCX:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Micron Taiwan union strike preparations",
+      "source": "events",
+      "published_at": "2026-09-15",
+      "retrieved_at": "2026-09-15",
+      "event_class": "labor_stop",
+      "tickers": [
+        "MU:down"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Holtec Nuclear IPO (HNUC) — ~$825M nuclear listing",
+      "source": "events",
+      "published_at": "2026-09-17",
+      "retrieved_at": "2026-09-16",
+      "event_class": "listing_flow",
+      "tickers": [
+        "HNUC:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Electra Therapeutics IPO (ETRA)",
+      "source": "events",
+      "published_at": "2026-09-17",
+      "retrieved_at": "2026-09-16",
+      "event_class": "gate",
+      "tickers": [
+        "ETRA:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Micron FY Q4 earnings (HBM/AI memory)",
+      "source": "events",
+      "published_at": "2026-09-30",
+      "retrieved_at": "2026-09-17",
+      "event_class": "capacity",
+      "tickers": [
+        "ASML:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Electra Therapeutics (ETRA) IPO begins trading",
+      "source": "events",
+      "published_at": "2026-09-18",
+      "retrieved_at": "2026-09-18",
+      "event_class": "listing_flow",
+      "tickers": [
+        "ETRA:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "SEC 5-year tokenized-securities 'innovation exemption'",
+      "source": "events",
+      "published_at": "2026-09-17",
+      "retrieved_at": "2026-09-18",
+      "event_class": "market_structure",
+      "tickers": [
+        "COIN:up",
+        "CRCL:up",
+        "SCHW:down",
+        "SECZ:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "SEC 5-year 'innovation exemption' for tokenized NMS stocks",
+      "source": "events",
+      "published_at": "2026-09-17",
+      "retrieved_at": "2026-09-21",
+      "event_class": "market_structure",
+      "tickers": [
+        "COIN:up",
+        "CRCL:up",
+        "SCHW:down",
+        "SECZ:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Electra Therapeutics (ETRA) IPO listed",
+      "source": "events",
+      "published_at": "2026-09-18",
+      "retrieved_at": "2026-09-21",
+      "event_class": "listing_flow",
+      "tickers": [
+        "ETRA:up"
+      ],
+      "note": "no tape"
+    },
+    {
+      "title": "Fed hike, oil dip, tariff delay",
+      "source": "grok_automations",
+      "published_at": "",
+      "retrieved_at": "2026-09-18T13:35:21Z",
+      "event_class": "market_structure",
+      "tickers": [
+        "COIN:up",
+        "CRCL:up",
+        "SCHW:down",
+        "SECZ:up"
+      ],
+      "note": "no tape"
+    }
+  ],
+  "tape": {
+    "n_1d": 237,
+    "hit_1d": 122,
+    "hit_rate_1d": 0.5148,
+    "n_20d": 521,
+    "hit_20d": 250,
+    "hit_rate_20d": 0.4798,
+    "missing_tape": 308,
+    "directional_calls": 1688
+  },
+  "guidance_slice": {
+    "n_1d": 0,
+    "hit_1d": 0,
+    "n_20d": 132,
+    "hit_20d": 63
+  },
+  "macro_headline": {
+    "n_1d": 8,
+    "hit_1d": 6,
+    "hit_rate_1d": 0.75,
+    "reprints_collapsed": 15,
+    "n_stories": 40
+  },
+  "mix": {
+    "converge_n": 60,
+    "conflict_n": 35,
+    "singleton_n": 8497,
+    "high_mass_n": 205,
+    "scores": {
+      "converge": {
+        "n_1d": 50,
+        "hit_1d": 35,
+        "hit_rate_1d": 0.7
+      },
+      "singleton": {
+        "n_1d": 1225,
+        "hit_1d": 647,
+        "hit_rate_1d": 0.5282
+      },
+      "conflict_n": 35,
+      "high_mass_n": 205,
+      "note": "converge = ≥2 independent sources, same direction, no hard conflict. conflict stays mixed / ungraded. high_mass is binary (no multiplier)."
+    }
+  },
+  "theme_radar_ask": "Theme Radar: please export a headline pack (date, ticker, News Title, News Time, Daily Digest, News URL) from data/snapshots/*.csv into a JSON/CSV we can ingest in fullscan. Do not merge the repos.",
+  "note": "Graded 0-1d / 1-4w only when hygiene + horizon + listed expression + tape exist. Missing tape is ungraded (no tape). No invented tape. No fake five-digit graded n."
+}

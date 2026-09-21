@@ -39,7 +39,7 @@ has_tape_graded counts unique articles with at least one graded 0-1d tape row. I
 - **finviz_digest** `01_daily/news/*finviz*digest*.json` — files=62 2026-07-30..2026-09-21 status=used
 - **events_json** `01_daily/events/*_events.json` — files=29 2026-08-10..2026-09-21 status=used
 - **actions_keep** `01_daily/news/*_actions.json (KEEP / conditional evidence)` — files=33 2026-08-09..2026-09-21 status=used
-- **grok_automations** `data/grok_automations/*.json` — files=0 .. status=empty
+- **grok_automations** `data/grok_automations/{date}_{slug}.json` — files=157 2026-08-13..2026-09-21 status=used items=157
 - **rss_dumps** `collectors/rss_news.py (workflow exists; no dump dir on disk)` — files=0 .. status=empty
 - **supabase_dumps** `src/db.py news pooler (no local dump on disk)` — files=0 .. status=empty
 - **theme_radar_snapshots** `https://github.com/SRoyaltyy/theme-radar data/snapshots/*.csv` — files=30 2026-08-06..2026-09-18 status=unused_readonly

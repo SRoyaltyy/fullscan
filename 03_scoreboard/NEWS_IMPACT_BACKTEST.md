@@ -3,6 +3,13 @@
 Hygiene restamp (research, not a new taxonomy) lives in
 `03_scoreboard/NEWS_IMPACT_HARVEST_HYGIENE.md` (A / #306). All-sources
 funnel + mix + class-horizon grid: `03_scoreboard/NEWS_IMPACT_CORPUS_MIX.md`.
+Unique-title book (all unique titles, grok_automations harvest):
+`03_scoreboard/NEWS_IMPACT_UNIQUE_TITLE.md`. Grok Automations daily refresh:
+`docs/GROK_AUTOMATIONS_HARVEST.md`. After Gmail dump (157 files / 157 items):
+raw **333289** → unique **29446** → impulse+listed **1538** → graded tape
+**1277** (ohlc/yfinance fill; 218 signed listed still **no tape**). 0-1d
+**122/237 = 51.5%**, 1-4w **250/521 = 48.0%**. converge 35/50 = 70.0% vs
+singleton 647/1225 = 52.8%.
 After reaction-title / guidance-sign / entry-clock / macro-collapse /
 horizon-aware 0-1d filters: 0-1d **60/105 = 57.1%**, 1-4w **26/51 = 51.0%**,
 guidance slice 0-1d **3/5 = 60.0%**, macro headline basket 0-1d

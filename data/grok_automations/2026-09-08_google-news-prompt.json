@@ -1,0 +1,24 @@
+{
+  "task_id": "5b4f01c3-fe5b-463a-a270-8bc9def8e26f",
+  "slug": "google-news-prompt",
+  "kind": "ticker_news",
+  "retrieved": "2026-09-08T13:09:09Z",
+  "gmail_message_id": "1a08123015b4b9da",
+  "gmail_message_ids": [
+    "1a08123015b4b9da"
+  ],
+  "items": [
+    {
+      "headline": "Oil nears $100 on Mideast strikes",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-09-08T13:09:09Z",
+      "task_id": "5b4f01c3-fe5b-463a-a270-8bc9def8e26f",
+      "gmail_message_id": "1a08123015b4b9da",
+      "automation_title": "Google News Prompt",
+      "chat_url": null,
+      "raw_excerpt": "Automation · Google News Prompt\n\n# Google News Prompt is ready\n\nOil nears $100 on Mideast strikes\n\nAutomation · Google News prompt Google News prompt is ready Oil nears $100 on Mideast strikes 1. Executive Summary Over the past 24–48 hours\n",
+      "body_complete": false
+    }
+  ]
+}

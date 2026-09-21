@@ -1,0 +1,24 @@
+{
+  "task_id": "unknown_news-parsing",
+  "slug": "news-parsing",
+  "kind": "ticker_news",
+  "retrieved": "2026-09-07T13:29:38Z",
+  "gmail_message_id": "1a07c0f6b7f505f2",
+  "gmail_message_ids": [
+    "1a07c0f6b7f505f2"
+  ],
+  "items": [
+    {
+      "headline": "Trump Signs EO on Bulk-Power Equipment",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-09-07T13:29:38Z",
+      "task_id": "unknown_news-parsing",
+      "gmail_message_id": "1a07c0f6b7f505f2",
+      "automation_title": "News Parsing",
+      "chat_url": null,
+      "raw_excerpt": "Automation · News Parsing\n\n# News Parsing is ready\n\nTrump Signs EO on Bulk-Power Equipment\n\nAutomation · News parsing News parsing is ready Trump Signs EO on Bulk-Power Equipment 1. Executive Summary Over the past two weeks (approx.\n",
+      "body_complete": false
+    }
+  ]
+}

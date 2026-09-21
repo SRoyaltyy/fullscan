@@ -1,0 +1,24 @@
+{
+  "task_id": "unknown_news-parsing",
+  "slug": "news-parsing",
+  "kind": "ticker_news",
+  "retrieved": "2026-09-20T13:31:49Z",
+  "gmail_message_id": "1a0bf0412890d389",
+  "gmail_message_ids": [
+    "1a0bf0412890d389"
+  ],
+  "items": [
+    {
+      "headline": "EPA GHG repeal, H-1B friction",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-09-20T13:31:49Z",
+      "task_id": "unknown_news-parsing",
+      "gmail_message_id": "1a0bf0412890d389",
+      "automation_title": "News Parsing",
+      "chat_url": "https://grok.com/chat/470a9126-80fc-4c17-b282-ed0246bd23fe",
+      "raw_excerpt": "Automation · News parsing\n\n# News parsing is ready\n\nEPA GHG repeal, H-1B friction\n\nI'll systematically check the allowed official sources for developments from the last two weeks and map them to the sector list.Pulling primary pages for the H-1B action, Canada tariffs, EPA repeal, and other agency items in the two-week window.*1. Executive Summary*\n\nThe two-week window (roughly Sept. 6–20, 2026) was dominated by energy deregulation, immigration friction for high-skill labor, new Russia-related tariff authority, and capital-markets modernization. EPA on Sept. 14 finalized a partial repeal of the 2024 Carbon Pollution Standards for fossil power plants and proposed wiping remaining GHG performance standards, a clear tailwind for coal, gas generation, and utility fuel-mix flexibility. On Sept. 18 the White House extended the $100,000 H-1B supplemental payment and tightened layoff-linked scrutiny, adding cost and delay for AI, semiconductors, and other specialty-occupation employers. The same day the President signed the Lindsey O. Graham Sanctioni ...\n\nContinue reading: https://grok.com/chat/470a9126-80fc-4c17-b282-ed0246bd23fe",
+      "body_complete": true
+    }
+  ]
+}

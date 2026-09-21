@@ -1,0 +1,24 @@
+{
+  "task_id": "23a24524-4eaa-4b9e-bd39-5b30e2ec74ae",
+  "slug": "hype-factor",
+  "kind": "ticker_news",
+  "retrieved": "2026-09-15T13:23:54Z",
+  "gmail_message_id": "1a0a53d0b582c1cb",
+  "gmail_message_ids": [
+    "1a0a53d0b582c1cb"
+  ],
+  "items": [
+    {
+      "headline": "FOMC & Nuclear IPO Hype",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-09-15T13:23:54Z",
+      "task_id": "23a24524-4eaa-4b9e-bd39-5b30e2ec74ae",
+      "gmail_message_id": "1a0a53d0b582c1cb",
+      "automation_title": "Hype Factor",
+      "chat_url": null,
+      "raw_excerpt": "Automation · Hype Factor\n\n# Hype Factor is ready\n\nFOMC & Nuclear IPO Hype\n\nAutomation · Hype factor Hype factor is ready FOMC & Nuclear IPO Hype I'll gather confirmed calendars, mega-IPO status, and sector\n",
+      "body_complete": false
+    }
+  ]
+}

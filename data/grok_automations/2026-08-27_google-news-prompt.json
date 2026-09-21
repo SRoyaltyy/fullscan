@@ -1,0 +1,24 @@
+{
+  "task_id": "5b4f01c3-fe5b-463a-a270-8bc9def8e26f",
+  "slug": "google-news-prompt",
+  "kind": "ticker_news",
+  "retrieved": "2026-08-27T13:21:15Z",
+  "gmail_message_id": "1a04361c4e421720",
+  "gmail_message_ids": [
+    "1a04361c4e421720"
+  ],
+  "items": [
+    {
+      "headline": "Nvidia beats, Meta settlement, tariffs",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-08-27T13:21:15Z",
+      "task_id": "5b4f01c3-fe5b-463a-a270-8bc9def8e26f",
+      "gmail_message_id": "1a04361c4e421720",
+      "automation_title": "Google News Prompt",
+      "chat_url": null,
+      "raw_excerpt": "Automation · Google News Prompt\n\n# Google News Prompt is ready\n\nNvidia beats, Meta settlement, tariffs\n\nAutomation · Google News prompt Google News prompt is ready Nvidia beats, Meta settlement, tariffs 1. Executive Summary Over the past 24–48\n",
+      "body_complete": false
+    }
+  ]
+}

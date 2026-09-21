@@ -8,6 +8,7 @@ from __future__ import annotations
 import re
 from typing import Iterable
 
+from .grok_automations import harvest_source_rank, is_macro_only
 from .hygiene import guidance_hygiene, is_reaction_title, reaction_discard_why
 from .macro import apply_macro
 from .schema import Classification, EVENT_CLASSES, family_of
@@ -377,7 +378,29 @@ def classify_text(title: str, body: str = "") -> Classification:
 
 
 def classify_article(art: dict) -> Classification:
-    return classify_text(str(art.get("title") or ""), str(art.get("body") or ""))
+    title = str(art.get("title") or "")
+    body = str(art.get("body") or "")
+    # 13-questions automations: factor_impulse / regime only. Never tickers.
+    if is_macro_only(art=art):
+        if is_reaction_title(title):
+            return Classification(
+                event_class="discard",
+                sign=None,
+                q5="regime",
+                constraint=_constraint_line("discard", title),
+                why=reaction_discard_why(),
+                family="time",
+            )
+        base = Classification(
+            event_class="factor_impulse",
+            sign=None,
+            q5="impulse",
+            constraint=_constraint_line("factor_impulse", title or body),
+            why="13-questions automation — macro factor only, no tickers",
+            family="print",
+        )
+        return apply_macro(base, _blob(title, body))
+    return classify_text(title, body)
 
 
 def validate_class(event_class: str) -> bool:
@@ -431,10 +454,12 @@ def harvest_rank_score(title: str, body: str = "") -> int:
 
 
 def rank_articles(arts: Iterable[dict]) -> list[dict]:
+    """Gov/macro first; grok_automations ranks above a Finviz wrap of the same fact."""
     rows = list(arts)
     return sorted(
         rows,
-        key=lambda a: (-harvest_rank_score(str(a.get("title") or ""),
+        key=lambda a: (-harvest_source_rank(a),
+                       -harvest_rank_score(str(a.get("title") or ""),
                                            str(a.get("body") or "")),
                        str(a.get("title") or "")),
     )
