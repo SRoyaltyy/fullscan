@@ -1,15 +1,15 @@
 # Sector Board — 2026-09-21
 
-Generated: **2026-09-21T05:50:10.659824-04:00** (America/New_York)
+Generated: **2026-09-21T06:12:49.173596-04:00** (America/New_York)
 
 Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.).
 
 ## Summary
 
-- Predicts present: **3/11**
+- Predicts present: **6/11**
 - Outcomes graded: **0/11**
 - Direction hits (when graded): **0/0**
-- Predicted up / down / flat-or-missing: **1** / **0** / **10**
+- Predicted up / down / flat-or-missing: **1** / **1** / **9**
 
 ## Full table
 
@@ -18,9 +18,9 @@ Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file 
 | Basic Materials | XLB | flat | flat | 1.90 | 0.48 | — | — | — | P |
 | Communication Services | XLC | up | mild | 12.22 | 0.65 | — | — | — | P |
 | Consumer Cyclical | XLY | flat | flat | 12.34 | 0.55 | — | — | — | P |
-| Consumer Defensive | XLP | — | — | — | — | — | — | — | — |
-| Energy | XLE | — | — | — | — | — | — | — | — |
-| Financial | XLF | — | — | — | — | — | — | — | — |
+| Consumer Defensive | XLP | flat | flat | -1.24 | 0.55 | — | — | — | P |
+| Energy | XLE | down | mild | -6.27 | 0.65 | — | — | — | P |
+| Financial | XLF | flat | flat | 5.19 | 0.55 | — | — | — | P |
 | Healthcare | XLV | — | — | — | — | — | — | — | — |
 | Industrials | XLI | — | — | — | — | — | — | — | — |
 | Real Estate | XLRE | — | — | — | — | — | — | — | — |
@@ -33,7 +33,7 @@ Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file 
 
 ## Predicted laggards (down)
 
-_None_
+- **Energy** (XLE): score=-6.27, mag=mild, conf=0.65
 
 ## Files
 
