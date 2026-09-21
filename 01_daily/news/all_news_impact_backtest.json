@@ -1,0 +1,485 @@
+{
+  "date": "all",
+  "harvested": 5657,
+  "old": {
+    "n_labeled": 5657,
+    "usable": 431,
+    "discarded": 5226,
+    "usable_ratio": 0.0762,
+    "by_class": {
+      "noise": 4291,
+      "sector_relevant": 81,
+      "macro_relevant": 350,
+      "single_name": 935
+    }
+  },
+  "new": {
+    "n": 5657,
+    "usable": 1195,
+    "discarded": 4462,
+    "usable_ratio": 0.2112,
+    "event_classes": {
+      "discard": 4436,
+      "factor_impulse": 465,
+      "print_vs_priced": 356,
+      "corporate_action_mna": 91,
+      "listing_flow": 68,
+      "capital_return": 45,
+      "guidance": 43,
+      "regime_state": 26,
+      "product_harm": 25,
+      "access_control": 25,
+      "gate": 15,
+      "market_structure": 10,
+      "blast_legal": 9,
+      "labor_stop": 7,
+      "blast_cyber": 6,
+      "capacity": 6,
+      "trial_readout": 5,
+      "insider_flow": 4,
+      "activist_campaign": 3,
+      "peer_spill": 3,
+      "inventory_print": 2,
+      "input_cost": 2,
+      "regime_break": 1,
+      "statement_public": 1,
+      "demand": 1,
+      "regulatory_probe": 1,
+      "price_cap": 1
+    },
+    "hopper_watermark": {
+      "deterministic::news_impact_v1": 5657
+    },
+    "winners": {
+      "QQQ": 16,
+      "NVDA": 8,
+      "CRM": 6,
+      "CXMT": 5,
+      "COIN": 4,
+      "CRCL": 4,
+      "SECZ": 4,
+      "ADBE": 3,
+      "META": 3,
+      "CAH": 3,
+      "GOOGL": 3,
+      "HNUC": 3,
+      "BBVA": 2,
+      "OABI": 2,
+      "BCS": 2,
+      "BNS": 2,
+      "LITE": 2,
+      "E": 2,
+      "AMZN": 2,
+      "GD": 2
+    },
+    "losers": {
+      "QQQ": 122,
+      "blocked exporter": 22,
+      "MU": 5,
+      "BSX": 4,
+      "SCHW": 4,
+      "MSFT": 3,
+      "BAC": 2,
+      "META": 2,
+      "APH": 2,
+      "NVDA": 2,
+      "CAR": 2,
+      "DVN": 1,
+      "AAL": 1,
+      "DAL": 1,
+      "UAL": 1,
+      "LUV": 1,
+      "ALK": 1,
+      "AMZN": 1,
+      "EMBC": 1,
+      "XLE": 1
+    }
+  },
+  "rescued_n": 930,
+  "killed_n": 166,
+  "rescued_sample": [
+    {
+      "title": "Dallas Fed Economists Warn Tokenized Deposits Could Trigger Bank Rate Wars - PYMNTS.com",
+      "event_class": "market_structure",
+      "entities": [
+        "listed expression unknown:not_determined"
+      ]
+    },
+    {
+      "title": "Two drivers of Mercedes AMG cars file class action lawsuit over an alleged burn hazard in its logo - AP News",
+      "event_class": "blast_legal",
+      "entities": [
+        "listed expression unknown:not_determined"
+      ]
+    },
+    {
+      "title": "Wall Street Loses Its Compass as Warsh’s Fed Strips Away All Rate Guidance - NAI500",
+      "event_class": "factor_impulse",
+      "entities": [
+        "SPY:not_determined"
+      ]
+    },
+    {
+      "title": "Oil settles lower on clues about Fed policy, rumors of Hormuz deal - Reuters",
+      "event_class": "factor_impulse",
+      "entities": [
+        "SPY:not_determined"
+      ]
+    },
+    {
+      "title": "Warsh calls for a ‘quieter’ Fed focused on reducing inflation - The Center Square",
+      "event_class": "factor_impulse",
+      "entities": [
+        "SPY:not_determined"
+      ]
+    },
+    {
+      "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On",
+      "event_class": "input_cost",
+      "entities": [
+        "AAL:down",
+        "DAL:down",
+        "UAL:down",
+        "LUV:down",
+        "ALK:down",
+        "XLE:up"
+      ]
+    },
+    {
+      "title": "Elevance Health disclosed in an SEC filing that it reaffirmed its 2026 guidance for at least $27.00 in adjusted EPS and a 90.2% benefit expense ratio.",
+      "event_class": "guidance",
+      "entities": [
+        "ELV:up"
+      ]
+    },
+    {
+      "title": "Fed rate hikes likely even with weakening jobs outlook - Washington Examiner",
+      "event_class": "factor_impulse",
+      "entities": [
+        "QQQ:down"
+      ]
+    },
+    {
+      "title": "Investors seek clearer Fed guidance from Warsh at Jackson Hole address",
+      "event_class": "factor_impulse",
+      "entities": [
+        "SPY:not_determined"
+      ]
+    },
+    {
+      "title": "Wall Street looks to retail earnings as softer data reshapes Fed rate outlook: Dow Jones, S&P, Nasdaq, Futures - Yahoo Finance UK",
+      "event_class": "guidance",
+      "entities": [
+        "listed expression unknown:not_determined"
+      ]
+    },
+    {
+      "title": "Wall Street slips as stubborn inflation keeps Fed outlook in focus - Malay Mail",
+      "event_class": "factor_impulse",
+      "entities": [
+        "SPY:not_determined"
+      ]
+    },
+    {
+      "title": "Warsh's inflation warning changes Fed rate outlook - thestreet.com",
+      "event_class": "factor_impulse",
+      "entities": [
+        "SPY:not_determined"
+      ]
+    },
+    {
+      "title": "Abercrombie & Fitch Soars 37% on a $100M Tariff Refund and Raised Guidance, Ross and Kohl’s Hold Steady",
+      "event_class": "guidance",
+      "entities": [
+        "ANF:up"
+      ]
+    },
+    {
+      "title": "Amazon is trying to crush class action suits before they get started - The Verge",
+      "event_class": "blast_legal",
+      "entities": [
+        "AMZN:down"
+      ]
+    },
+    {
+      "title": "Boston Scientific says cyberattack will materially hit Q3 and full-year 2026 results, no longer expects to meet sales and adjusted profit guidance",
+      "event_class": "blast_cyber",
+      "entities": [
+        "BSX:down",
+        "security vendors:not_determined"
+      ]
+    },
+    {
+      "title": "Coinbase Debuts Tokenized Stocks On Base Network",
+      "event_class": "market_structure",
+      "entities": [
+        "COIN:up",
+        "HOOD:mixed",
+        "CRCL:up",
+        "NDAQ:mixed",
+        "ICE:mixed",
+        "SCHW:down"
+      ]
+    },
+    {
+      "title": "Coinbase Enters the Tokenized Stock Wars",
+      "event_class": "market_structure",
+      "entities": [
+        "COIN:up",
+        "HOOD:mixed",
+        "CRCL:up",
+        "NDAQ:mixed",
+        "ICE:mixed",
+        "SCHW:down"
+      ]
+    },
+    {
+      "title": "Crypto.com Launches Tokenized Stock Derivatives",
+      "event_class": "market_structure",
+      "entities": [
+        "COIN:up",
+        "HOOD:mixed",
+        "CRCL:up",
+        "NDAQ:mixed",
+        "ICE:mixed",
+        "SCHW:down"
+      ]
+    },
+    {
+      "title": "Franklin Templeton's Tokenized Treasury Fund Lands on HashKey",
+      "event_class": "market_structure",
+      "entities": [
+        "listed expression unknown:not_determined"
+      ]
+    },
+    {
+      "title": "India Is Finally Getting Its First Tokenized Corporate Bond",
+      "event_class": "market_structure",
+      "entities": [
+        "listed expression unknown:not_determined"
+      ]
+    },
+    {
+      "title": "Japan To Proceed With Stock And Bond Tokenization",
+      "event_class": "market_structure",
+      "entities": [
+        "listed expression unknown:not_determined"
+      ]
+    },
+    {
+      "title": "Kaplan Fox & Kilsheimer LLP Alerts Embecta Corp. (NASDAQ: EMBC) Investors to a Securities Class Action Deadline on August 17, 2026",
+      "event_class": "blast_legal",
+      "entities": [
+        "EMBC:down"
+      ]
+    },
+    {
+      "title": "Paramount seeks $1.88 billion bond in Warner Bros. merger antitrust case",
+      "event_class": "corporate_action_mna",
+      "entities": [
+        "WBD:mixed"
+      ]
+    },
+    {
+      "title": "RWA Market and Tokenized Assets Beat Meme Coins With a 50% Rally",
+      "event_class": "market_structure",
+      "entities": [
+        "listed expression unknown:not_determined"
+      ]
+    },
+    {
+      "title": "Robinhood CEO Calls On U.S. To Approve Tokenized Stocks",
+      "event_class": "market_structure",
+      "entities": [
+        "COIN:up",
+        "HOOD:mixed",
+        "CRCL:up",
+        "NDAQ:mixed",
+        "ICE:mixed",
+        "SCHW:down"
+      ]
+    }
+  ],
+  "killed_sample": [
+    {
+      "title": "OPEC+ loses oil market sway in Iran war as China gains influence - Business Recorder",
+      "old_class": "macro_relevant",
+      "event_class": "discard",
+      "q5": "regime",
+      "why": "no constraint identified"
+    },
+    {
+      "title": "Gold Is Now Pricing Fed Credibility Rather Than the Inflation Data - StoneX",
+      "old_class": "macro_relevant",
+      "event_class": "regime_state",
+      "q5": "regime",
+      "why": "gold-on-Fed reaction reprint"
+    },
+    {
+      "title": "Gold Price Forecast: Cooling Fed Rate Hike Expectations Boost Appeal as Price May Hit $4,500? - TradingKey",
+      "old_class": "macro_relevant",
+      "event_class": "regime_state",
+      "q5": "regime",
+      "why": "gold-on-Fed reaction reprint"
+    },
+    {
+      "title": "Gold falls amid firmer dollar after PCE, GDP data muddles Fed interest rate path - Investing.com",
+      "old_class": "macro_relevant",
+      "event_class": "regime_state",
+      "q5": "regime",
+      "why": "gold-on-Fed reaction reprint"
+    },
+    {
+      "title": "Gold hits over 3-month high ahead of US inflation data, Fed chair’s speech - The Business Times",
+      "old_class": "macro_relevant",
+      "event_class": "regime_state",
+      "q5": "regime",
+      "why": "gold-on-Fed reaction reprint"
+    },
+    {
+      "title": "Gold holds near $4,400 as fading Fed rate hike bets weigh on US Dollar - FXStreet",
+      "old_class": "macro_relevant",
+      "event_class": "regime_state",
+      "q5": "regime",
+      "why": "gold-on-Fed reaction reprint"
+    },
+    {
+      "title": "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
+      "old_class": "macro_relevant",
+      "event_class": "regime_state",
+      "q5": "regime",
+      "why": "gold-on-Fed reaction reprint"
+    },
+    {
+      "title": "Gold prices slide more than 3% after Fed Chair Kevin Warshâs Jackson Hole comments boost September U.S. rate hike expectations",
+      "old_class": "macro_relevant",
+      "event_class": "regime_state",
+      "q5": "regime",
+      "why": "gold-on-Fed reaction reprint"
+    },
+    {
+      "title": "Gold prices slide more than 3% after Fed Chair Kevin Warsh’s Jackson Hole comments boost September U.S. rate hike expectations",
+      "old_class": "macro_relevant",
+      "event_class": "regime_state",
+      "q5": "regime",
+      "why": "gold-on-Fed reaction reprint"
+    },
+    {
+      "title": "Brent Tops $89 Amid U.S.-Iran Stalemate Over Hormuz - Yahoo Finance",
+      "old_class": "sector_relevant",
+      "event_class": "discard",
+      "q5": "regime",
+      "why": "no constraint identified"
+    },
+    {
+      "title": "Hormuz blockade, crude, and CPI keep D-Street on edge",
+      "old_class": "macro_relevant",
+      "event_class": "regime_state",
+      "q5": "regime",
+      "why": "Hormuz already the weather"
+    },
+    {
+      "title": "Iran says it will name its terms for reopening Strait of Hormuz",
+      "old_class": "macro_relevant",
+      "event_class": "discard",
+      "q5": "regime",
+      "why": "no constraint identified"
+    },
+    {
+      "title": "Iran war live: Tehran demands end to US blockade to reopen Strait of Hormuz",
+      "old_class": "macro_relevant",
+      "event_class": "discard",
+      "q5": "regime",
+      "why": "no constraint identified"
+    },
+    {
+      "title": "Iran war live: Tehran prepares conditions to open Strait of Hormuz",
+      "old_class": "macro_relevant",
+      "event_class": "discard",
+      "q5": "regime",
+      "why": "no constraint identified"
+    },
+    {
+      "title": "Iran war mediators focus on reopening Strait of Hormuz - NBC News",
+      "old_class": "macro_relevant",
+      "event_class": "discard",
+      "q5": "regime",
+      "why": "no constraint identified"
+    },
+    {
+      "title": "Oil prices tumble amid renewed optimism over the Strait of Hormuz - NBC News",
+      "old_class": "macro_relevant",
+      "event_class": "discard",
+      "q5": "regime",
+      "why": "no constraint identified"
+    },
+    {
+      "title": "Strait of Hormuz shipping grinds to a halt ahead of U.S.-Iran ceasefire expiry - CNBC",
+      "old_class": "macro_relevant",
+      "event_class": "regime_state",
+      "q5": "regime",
+      "why": "Hormuz already the weather"
+    },
+    {
+      "title": "U.S. oil price hovers around $82 as traders weigh conflicting signals on Strait of Hormuz deal - cnbc.com",
+      "old_class": "macro_relevant",
+      "event_class": "discard",
+      "q5": "regime",
+      "why": "no constraint identified"
+    },
+    {
+      "title": "UAE says Iran targeted ADNOC tanker in Strait of Hormuz, no casualties",
+      "old_class": "macro_relevant",
+      "event_class": "discard",
+      "q5": "regime",
+      "why": "no constraint identified"
+    },
+    {
+      "title": "US-Iran Strait of Hormuz conflict escalation",
+      "old_class": "macro_relevant",
+      "event_class": "discard",
+      "q5": "regime",
+      "why": "no constraint identified"
+    },
+    {
+      "title": "US-Iran tanker war; Brent ~$107, Hormuz traffic impaired",
+      "old_class": "sector_relevant",
+      "event_class": "discard",
+      "q5": "regime",
+      "why": "no constraint identified"
+    },
+    {
+      "title": "US-Iran tanker war; Hormuz traffic impaired; Brent ~$107-109",
+      "old_class": "sector_relevant",
+      "event_class": "discard",
+      "q5": "regime",
+      "why": "no constraint identified"
+    },
+    {
+      "title": "Klarna stock plunges 20% on trimmed guidance as German retail sales slow",
+      "old_class": "sector_relevant",
+      "event_class": "discard",
+      "q5": "regime",
+      "why": "no constraint identified"
+    },
+    {
+      "title": "1 Wall Street Analyst Just Upgraded AMD Stock and Estimates 30% Upside. Here's Why He's Bullish on This Semiconductor Stock.",
+      "old_class": "sector_relevant",
+      "event_class": "discard",
+      "q5": "regime",
+      "why": "no constraint identified"
+    },
+    {
+      "title": "10-year Treasury yield breaches 5% — global bond selloff",
+      "old_class": "macro_relevant",
+      "event_class": "discard",
+      "q5": "regime",
+      "why": "no constraint identified"
+    }
+  ],
+  "improvement": {
+    "usable_ratio_delta": 0.135,
+    "note": "usable = impulse/regime_break with a real mechanism. rescued = old parse discarded, router kept. killed = old parse usable (often Hormuz/gold reprints), router weather/discard."
+  },
+  "results": []
+}

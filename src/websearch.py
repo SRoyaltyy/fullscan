@@ -13,6 +13,9 @@ Backend chain (every step logged with result counts):
   4. Google News RSS — no key, verified working; great for news queries
 
 search_results() never raises: it returns (backend, items, errors).
+
+Google AI Overview (Gemini Search grounding) sits on top of this chain
+in src/news_impact/search_pack.py — facts only, no implied winners.
 """
 from __future__ import annotations
 
