@@ -12,8 +12,9 @@ from src.lane_route import (
     prompt_for,
     token_budget,
 )
-from src.news_impact.backtest import run_backtest
+from src.news_impact.backtest import markdown, run_backtest
 from src.news_impact.classify import classify_text, harvest_rank_score
+from src.news_impact.grade import grade_one, parse_when
 from src.news_impact.pipeline import analyze_article
 from src.news_impact.schema import PIPELINE_VERSION, is_usable
 
@@ -246,6 +247,87 @@ def test_backtest_improves_sept_parses() -> None:
     ).get("usable_ratio", 0)
 
 
+def test_reasoning_and_times_on_article() -> None:
+    row = analyze_article(
+        {
+            "title": "Airlines Scramble for Jet Fuel as Hormuz Disruption Drags On",
+            "published_at": "Wed, 17 Sep 2026 08:00:00 -0400",
+            "retrieved_at": "2026-09-17T04:17:45-04:00",
+            "source": "rss_yahoo_finance",
+        },
+        persist=False,
+    )
+    assert row["published_at"].startswith("Wed, 17 Sep 2026")
+    assert row["retrieved_at"].startswith("2026-09-17")
+    assert row["models"] == [f"deterministic::{PIPELINE_VERSION}"]
+    assert row["reasoning"] and row["reasoning"][0].startswith("Q5")
+    assert "input_cost" in row["reasoning"][1]
+    assert row["conclusion"]["down"]
+    assert "XLE" in " ".join(row["conclusion"]["up"])
+    hops = row["hop_chain"]
+    assert hops and hops[0]["lane"] == "deterministic"
+
+
+def test_grade_entity_agrees_on_up() -> None:
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+    et = ZoneInfo("America/New_York")
+    bars = [
+        {"date": "2026-09-17", "open": 10.0, "high": 11.0, "low": 9.5, "close": 10.5},
+        {"date": "2026-09-18", "open": 10.5, "high": 12.0, "low": 10.4, "close": 11.8},
+        {"date": "2026-10-15", "open": 12.0, "high": 12.2, "low": 11.9, "close": 12.1},
+    ]
+    # pad to 20 sessions so 1-4w can resolve
+    day = 19
+    last = 12.1
+    while len(bars) < 22:
+        day += 1
+        last += 0.1
+        bars.append({
+            "date": f"2026-10-{day:02d}" if day <= 31 else f"2026-11-{day-31:02d}",
+            "open": last, "high": last + 0.2, "low": last - 0.1, "close": last + 0.05,
+        })
+    when = datetime(2026, 9, 17, 8, 0, tzinfo=et)
+    g = grade_one(
+        {"ticker": "AAL", "name": "AAL", "direction": "up", "horizon": "0-1d", "kind": "ticker"},
+        bars, when,
+    )
+    assert g["entry_date"] == "2026-09-17"
+    assert g["ret_1d"] == 5.0
+    assert g["agree_1d"] is True
+    down = grade_one(
+        {"ticker": "AAL", "name": "AAL", "direction": "down", "horizon": "0-1d"},
+        bars, when,
+    )
+    assert down["agree_1d"] is False
+    dt = parse_when("Thu, 27 Aug 2026 02:33:08 +0000")
+    assert dt is not None
+    assert dt.year == 2026 and dt.month == 8
+
+
+def test_markdown_table_columns() -> None:
+    report = run_backtest("2026-09-17", persist=False)
+    md = markdown(report)
+    for col in (
+        "| Article |", "| Published |", "| Retrieved |", "| LLM(s) |",
+        "| Reasoning |", "| Conclusion |", "| Actual |",
+    ):
+        assert col in md, col
+    assert "deterministic::news_impact_v1" in md
+    assert "Usable articles" in md
+    assert "Discarded / weather" in md
+
+
+def test_load_parsed_keeps_times() -> None:
+    from pathlib import Path
+    from src.news_impact.backtest import load_parsed
+    rows = load_parsed(Path("01_daily/news/2026-08-27_parsed.json"))
+    assert rows
+    assert any(r.get("published_at") for r in rows)
+    assert all(r.get("retrieved_at") for r in rows)
+    assert any(r.get("source") for r in rows)
+
+
 def test_search_pack_offline() -> None:
     from src.news_impact.search_pack import pack_for_article
     pack = pack_for_article("SEC tokenized stocks", enabled=False)
@@ -272,6 +354,10 @@ def main() -> None:
         test_watermark_deterministic,
         test_usable_helper,
         test_search_pack_offline,
+        test_reasoning_and_times_on_article,
+        test_grade_entity_agrees_on_up,
+        test_markdown_table_columns,
+        test_load_parsed_keeps_times,
         test_backtest_improves_sept_parses,
     ]
     failed = 0

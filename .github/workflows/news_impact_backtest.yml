@@ -1,0 +1,121 @@
+name: News impact backtest
+
+# Specialised table run — not the live scanner.
+# Every harvested parse: article + published/retrieved, which LLM(s)
+# processed it (bridge hops if Lane is on), intermediary reasoning,
+# up/down conclusion, realized tape for the named ticker / theme ETF.
+# Research-only. Does not touch flatten / Webull / factor-mine.
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: YYYY-MM-DD or all
+        required: true
+        default: "all"
+        type: string
+      limit:
+        description: Max articles (0 = every unique headline)
+        required: false
+        default: "0"
+        type: string
+      lane:
+        description: "1 to hop the $0 Lane stack and watermark every model"
+        required: false
+        default: "0"
+        type: string
+      search:
+        description: "1 to use Google AI Overview + web parse"
+        required: false
+        default: "0"
+        type: string
+      prices:
+        description: "1 to grade named tickers / theme ETFs against the tape"
+        required: false
+        default: "1"
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: news-impact-backtest
+  cancel-in-progress: true
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install pandas pyarrow yfinance
+      - name: News-impact backtest table
+        env:
+          LANE_URL: ${{ vars.LANE_URL }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GITHUB_MODELS_TOKEN: ${{ secrets.GITHUB_MODELS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          SAMBANOVA_API_KEY: ${{ secrets.SAMBANOVA_API_KEY }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          OLLAMA_URL: ${{ secrets.OLLAMA_URL || vars.OLLAMA_URL }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+          DASHSCOPE_BASE_URL: ${{ secrets.DASHSCOPE_BASE_URL }}
+          QWEN_API_KEY: ${{ secrets.QWEN_API_KEY }}
+          SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}
+          ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
+          GLM_API_KEY: ${{ secrets.GLM_API_KEY }}
+          MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
+          MODELSCOPE_API_KEY: ${{ secrets.MODELSCOPE_API_KEY }}
+          MODELSCOPE_API_TOKEN: ${{ secrets.MODELSCOPE_API_TOKEN }}
+          MODELSCOPE_SDK_TOKEN: ${{ secrets.MODELSCOPE_SDK_TOKEN }}
+          TOKENHUB_API_KEY: ${{ secrets.TOKENHUB_API_KEY }}
+          TENCENT_API_KEY: ${{ secrets.TENCENT_API_KEY }}
+          HUNYUAN_API_KEY: ${{ secrets.HUNYUAN_API_KEY }}
+          TOKENHUB_BASE_URL: ${{ secrets.TOKENHUB_BASE_URL }}
+          TENCENT_BASE_URL: ${{ secrets.TENCENT_BASE_URL }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          set -euo pipefail
+          DATE="${{ github.event.inputs.date }}"
+          LIMIT="${{ github.event.inputs.limit }}"
+          EXTRA=()
+          if [ "${{ github.event.inputs.lane }}" = "1" ]; then EXTRA+=(--lane); fi
+          if [ "${{ github.event.inputs.search }}" = "1" ]; then EXTRA+=(--search); fi
+          if [ "${{ github.event.inputs.prices }}" = "0" ]; then EXTRA+=(--no-prices); fi
+          PYTHONPATH=. python3 -m src.news_impact_backtest \
+            --date "${DATE:-all}" --limit "${LIMIT:-0}" "${EXTRA[@]}"
+      - name: Preview table
+        if: always()
+        run: |
+          head -80 03_scoreboard/NEWS_IMPACT_BACKTEST.md || true
+          echo "---"
+          ls -lh 01_daily/news/*_news_impact_backtest.md \
+                 03_scoreboard/NEWS_IMPACT_BACKTEST.md || true
+      - name: Commit table
+        if: always()
+        run: |
+          export HOME="${HOME:-/home/gha}"
+          unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
+          cd "${GITHUB_WORKSPACE:-.}"
+          bash scripts/safe_git_push.sh \
+            "auto: news impact backtest table ${{ github.event.inputs.date }}" \
+            01_daily/news \
+            03_scoreboard/NEWS_IMPACT_BACKTEST.md
+      - name: Upload artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: news-impact-backtest
+          if-no-files-found: warn
+          path: |
+            01_daily/news/*_news_impact_backtest.md
+            01_daily/news/*_news_impact_backtest.json
+            03_scoreboard/NEWS_IMPACT_BACKTEST.md
