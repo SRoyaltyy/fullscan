@@ -125,6 +125,23 @@ def last_closed_session(now: datetime | None = None) -> str:
     return d.isoformat()
 
 
+def close_answer_key_due(date: str, now: datetime | None = None) -> bool:
+    """True when `date` has already printed a close (after 16:00 ET).
+
+    The day-board lists *_finviz_market_digest_close from the morning
+    scrape, but the writer is ~16:05 ET. Before that clock the file is
+    WAIT, not MISSING — skip-if-good must not demand it yet.
+    """
+    now = now or datetime.now(ET)
+    try:
+        d = datetime.strptime(date, "%Y-%m-%d").date()
+    except ValueError:
+        return False
+    if not _session_date(d):
+        return False
+    return date <= last_closed_session(now)
+
+
 def _next_weekday(date_s: str) -> str:
     """Next NYSE session (weekends + full-day holidays).
 
@@ -177,10 +194,24 @@ def _log(ok: bool, job: str, date: str, detail: str) -> bool:
 
 
 def check_finviz_scrape(date: str) -> bool:
+    """Every scrape-owned day-board file, not just the required quote digest.
+
+    Close answer-key is evening-only — see check_finviz_close / close_answer_key_due.
+    Morning scrape must not skip when the homepage warm-up is still missing.
+    """
     digest = ROOT / "01_daily" / "news" / f"{date}_finviz_digest.json"
+    digest_md = ROOT / "01_daily" / "news" / f"{date}_finviz_digest.md"
     heat = ROOT / "01_daily" / "map_heat" / f"{date}_map_heat.json"
     if not output_qc.qc_finviz_digest(digest).ok:
         return _log(False, "finviz_preopen_scrape", date, "digest missing/thin")
+    if not _exists_gt(digest_md, 200):
+        return _log(False, "finviz_preopen_scrape", date, "digest md missing")
+    market = ROOT / "01_daily" / "news" / f"{date}_finviz_market_digest.json"
+    market_md = ROOT / "01_daily" / "news" / f"{date}_finviz_market_digest.md"
+    if not output_qc.qc_finviz_market_digest(market).ok:
+        return _log(False, "finviz_preopen_scrape", date, "market digest missing/thin")
+    if not _exists_gt(market_md, 200):
+        return _log(False, "finviz_preopen_scrape", date, "market digest md missing")
     if not output_qc.qc_map_heat(heat).ok:
         return _log(False, "finviz_preopen_scrape", date, "map_heat missing/thin")
     try:
@@ -200,8 +231,26 @@ def check_finviz_scrape(date: str) -> bool:
                 f"overlay_at={overlay!r} tape={len(tape) if isinstance(tape, list) else 0} export_ok")
 
 
+def check_finviz_close(date: str) -> bool:
+    """Post-close answer-key pair. Not due before 16:00 ET that session."""
+    if not close_answer_key_due(date):
+        return _log(True, "finviz_close", date, "not due until 16:00 ET")
+    jp = ROOT / "01_daily" / "news" / f"{date}_finviz_market_digest_close.json"
+    md = ROOT / "01_daily" / "news" / f"{date}_finviz_market_digest_close.md"
+    if not output_qc.qc_finviz_market_digest(jp).ok:
+        return _log(False, "finviz_close", date, "close json missing/thin")
+    if not _exists_gt(md, 200):
+        return _log(False, "finviz_close", date, "close md missing/thin")
+    return _log(True, "finviz_close", date, "close answer-key present")
+
+
 def check_preopen_all(date: str) -> bool:
-    """Morning packet only. Night captain research is NOT required."""
+    """Morning packet only. Night captain research is NOT required.
+
+    Skip only when every listed day-board file is on disk — not just the
+    required 8/11 sector essays. Optional actions / board / homepage
+    warm-up used to stay MISSING forever after the first good packet.
+    """
     pred = ROOT / "01_daily" / "general" / f"{date}_predict.md"
     if not output_qc.qc_general_predict(pred).ok:
         return _log(False, "preopen_all", date, "general predict missing/thin")
@@ -213,13 +262,22 @@ def check_preopen_all(date: str) -> bool:
     parsed = ROOT / "01_daily" / "news" / f"{date}_parsed.json"
     if not output_qc.qc_news_parse(parsed).ok:
         return _log(False, "preopen_all", date, "parse missing")
+    actions = ROOT / "01_daily" / "news" / f"{date}_actions.json"
+    if not output_qc.qc_news_actions(actions).ok:
+        return _log(False, "preopen_all", date, "actions missing/thin")
+    board = ROOT / "01_daily" / "sectors" / date / "_board.json"
+    if not _exists_gt(board, 80):
+        return _log(False, "preopen_all", date, "sector board missing")
+    market = ROOT / "01_daily" / "news" / f"{date}_finviz_market_digest.json"
+    if not output_qc.qc_finviz_market_digest(market).ok:
+        return _log(False, "preopen_all", date, "market digest missing/thin")
     sector_dir = ROOT / "01_daily" / "sectors" / date
     n_ok = 0
     if sector_dir.is_dir():
         for p in sector_dir.glob("*_predict.md"):
             if output_qc.qc_sector_predict(p).ok:
                 n_ok += 1
-    ok = n_ok >= 8
+    ok = n_ok >= 11
     return _log(ok, "preopen_all", date, f"sector_predict_ok={n_ok}/11")
 
 
@@ -481,8 +539,12 @@ def check_stock_book_all(date: str) -> bool:
 def check_ab_checklist(date: str) -> bool:
     enriched = ROOT / "data" / "ab_checklist" / f"{date}_ab_checklist_enriched.csv"
     raw = ROOT / "data" / "ab_checklist" / f"{date}_ab_checklist.csv"
-    ok = _exists_gt(enriched, 5_000) or _exists_gt(raw, 10_000)
-    return _log(ok, "ab_checklist", date, f"enriched={enriched.exists()} raw={raw.exists()}")
+    if not _exists_gt(enriched, 5_000):
+        return _log(False, "ab_checklist", date, "enriched missing/thin")
+    if not _exists_gt(raw, 10_000):
+        return _log(False, "ab_checklist", date, "raw missing/thin")
+    return _log(True, "ab_checklist", date,
+                f"enriched={enriched.exists()} raw={raw.exists()}")
 
 
 def check_daily_pipeline_outcome(date: str) -> bool:
@@ -642,7 +704,7 @@ def check_sector_outcomes(date: str) -> bool:
     stubs = _count_sector_dumps(date, "_outcome.md")
     # ≥8 essays is not enough when leaked tool-call XML is sitting in
     # the other slots — skip would freeze those stubs forever.
-    ok = n >= 8 and stubs == 0
+    ok = n >= 11 and stubs == 0
     return _log(ok, "sector_outcomes", date,
                 f"outcome_md={n}/11 dumps={stubs}")
 
@@ -651,11 +713,11 @@ def check_sector_reflects(date: str) -> bool:
     """Sector reflect is part of the intended pack, not an optional extra.
 
     Outcomes-only would let skip-if-good SKIP after 8 stubs and never write
-    the 11 diagnostics the night pack is supposed to land.
+    the 11 diagnostics the night pack is supposed to land. Skip only at 11/11.
     """
     n = _count_sector_md(date, "_reflect.md")
     stubs = _count_sector_dumps(date, "_reflect.md")
-    ok = n >= 8 and stubs == 0
+    ok = n >= 11 and stubs == 0
     return _log(ok, "sector_reflects", date,
                 f"reflect_md={n}/11 dumps={stubs}")
 
@@ -732,6 +794,7 @@ def postclose_all_should_yield_to_sidecar() -> bool:
 
 JOBS = {
     "finviz_preopen_scrape": check_finviz_scrape,
+    "finviz_close": check_finviz_close,
     "preopen_all": check_preopen_all,
     "preopen_full": check_preopen_full,
     "map_heat_postclose": check_map_heat_postclose,

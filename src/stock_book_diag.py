@@ -57,7 +57,7 @@ class FileCheck:
     name: str
     path: str
     role: str  # required | optional | input | era
-    status: str  # OK | FAIL | MISSING | SKIP
+    status: str  # OK | FAIL | MISSING | SKIP | WAIT
     reason: str = ""
     size: int = 0
     source: str = ""
@@ -750,7 +750,13 @@ def aggregate_status(files: list[FileCheck]) -> tuple[str, bool, int, int, int, 
         else:
             status = "PARTIAL" if inputs_ready else "FAIL"
     elif n_req_ok == len(req):
-        status = "OK"
+        # Optional MISSING used to keep the process OK, so skip-if-good
+        # and the day-board treated close/actions/board as never-write.
+        # WAIT (not due yet) must not flip the flag.
+        if any(f.status == "MISSING" for f in opt):
+            status = "PARTIAL"
+        else:
+            status = "OK"
     elif n_req_ok > 0:
         status = "PARTIAL"
     else:
@@ -772,6 +778,20 @@ def _check_file(spec: dict, date: str) -> FileCheck:
                 role=role,
                 status="SKIP",
                 reason=f"not in pipeline as of {date} (first {feature} {start})",
+                size=0,
+                source=spec.get("source") or "",
+            )
+    if (spec.get("kind") == "finviz_market_digest_close"
+            and not path.exists() and role != "era"):
+        from .skip_if_good import close_answer_key_due
+        if not close_answer_key_due(date):
+            return FileCheck(
+                key=spec["key"],
+                name=spec["name"],
+                path=spec["rel"],
+                role=role,
+                status="WAIT",
+                reason="due after 16:00 ET (close answer-key)",
                 size=0,
                 source=spec.get("source") or "",
             )

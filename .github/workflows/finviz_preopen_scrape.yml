@@ -2,6 +2,10 @@ name: Finviz pre-open scrape (GH-hosted Elite)
 
 # Live Finviz HTML (quote digest + homepage market-day prose + morning
 # overlay) from ubuntu-latest.
+# skip-if-good requires the quote pair AND the homepage warm-up pair
+# (not just the required digest). Close answer-key is evening-only
+# (finviz_market_digest.yml --close / orch after 16:00). Do not pass
+# --close here — a 05:40 live scrape is not a post-close recap.
 # Aliyun ECS 403s public finviz.com. GitHub-hosted + Elite login works
 # (same path as collect-finviz.yml).
 #

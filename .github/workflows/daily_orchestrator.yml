@@ -118,6 +118,16 @@ jobs:
               -f ref=main || true
           }
 
+          dispatch_close_digest() {
+            local D="$1"
+            echo "MISSING close answer-key $D → finviz_market_digest.yml close"
+            gh api --method POST \
+              "repos/${REPO}/actions/workflows/finviz_market_digest.yml/dispatches" \
+              -f ref=main \
+              -f "inputs[run_date]=$D" \
+              -f "inputs[close]=true" || true
+          }
+
           already_running() {
             local WF="$1"
             local RAW HAS_ACTIVE=""
@@ -256,6 +266,21 @@ jobs:
               echo "sidecar already grading last-closed — skip postclose_all.yml second writer"
             else
               maybe postclose_all.yml
+            fi
+            # Close answer-key is optional on the day-board so skip-if-good
+            # used to ignore it. A missed 16:05 cron then left *_close
+            # MISSING for the rest of the day (and the next morning).
+            echo ""
+            echo "======== finviz_market_digest.yml (close) ========"
+            LAST=$(python3 -c "from src.skip_if_good import last_closed_session; print(last_closed_session())")
+            echo "last_closed=$LAST"
+            if already_running "finviz_market_digest.yml"; then
+              echo "OK — finviz_market_digest already running"
+            elif [ "$FORCE" != "true" ] \
+                 && python3 -m src.skip_if_good --job finviz_close --date "$LAST"; then
+              echo "OK — skip-if-good: close answer-key already on disk"
+            else
+              dispatch_close_digest "$LAST"
             fi
             # postclose-all-ubuntu can sit behind a hung push. The sidecar
             # has its own group so last_closed (09-04 after the bell) can

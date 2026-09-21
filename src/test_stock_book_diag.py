@@ -21,12 +21,16 @@ def _fc(role: str, status: str, key: str = "x") -> FileCheck:
 
 def test_aggregate_all_required_ok():
     files = [_fc("required", "OK", "a"), _fc("required", "OK", "b"),
-             _fc("optional", "MISSING", "c")]
+             _fc("optional", "WAIT", "c")]
     status, ready, n_ok, n_req, n_opt_ok, n_opt = aggregate_status(files)
     assert status == "OK"
     assert ready is True
     assert (n_ok, n_req) == (2, 2)
     assert (n_opt_ok, n_opt) == (0, 1)
+    missing_opt = [_fc("required", "OK", "a"), _fc("required", "OK", "b"),
+                   _fc("optional", "MISSING", "c")]
+    status, *_ = aggregate_status(missing_opt)
+    assert status == "PARTIAL"
 
 
 def test_aggregate_partial_and_fail():
@@ -251,12 +255,28 @@ def test_specs_match_user_contract():
     assert fin14["digest_json"]["rel"] != fin14["market_digest_json"]["rel"]
 
 
+def test_close_digest_waits_until_1600():
+    """Morning board must not paint tonight's close pair as MISSING."""
+    from unittest import mock
+    with mock.patch("src.skip_if_good.close_answer_key_due", return_value=False):
+        report = diag.audit("2026-09-21", gh_runs={})
+    by = {w.key: w for w in report.workflows}
+    fin = {f.key: f for f in by["finviz"].files}
+    assert fin["market_digest_close_json"].status == "WAIT"
+    assert "16:00" in (fin["market_digest_close_json"].reason or "")
+    assert fin["market_digest_close_md"].status == "WAIT"
+
+
 def test_audit_live_days():
     """Real packet days: 08-28 is a completed pre-open; 08-31 is scrape+baseline."""
     d28 = diag.audit("2026-08-28", gh_runs={})
     by = {w.key: w for w in d28.workflows}
     assert by["postclose"].status in ("OK", "PARTIAL")
-    assert by["finviz"].status == "OK"
+    # 08-28 predates the live homepage warm-up pair — optional MISSING
+    # is now PARTIAL (used to stay OK and never get written).
+    assert by["finviz"].status == "PARTIAL"
+    fin28 = {f.key: f for f in by["finviz"].files}
+    assert fin28["market_digest_json"].status == "MISSING"
     assert by["preopen"].n_req >= 11
     # 08-28 ran pre-open; ranker inputs may still miss sector board / actions.
     assert d28.overall in ("OK", "PARTIAL", "FAIL")
@@ -425,6 +445,7 @@ if __name__ == "__main__":
         _run(test_inspect_stock_book_json, p)
         _run(test_inspect_join, p)
     _run(test_specs_match_user_contract)
+    _run(test_close_digest_waits_until_1600)
     _run(test_decisions_trace_to_inputs)
     _run(test_audit_live_days)
     _run(test_workflow_yaml_is_read_only)

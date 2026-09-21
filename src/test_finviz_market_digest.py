@@ -544,6 +544,11 @@ def test_workflow_has_close_cron_and_keeps_morning() -> None:
         encoding="utf-8")
     assert "src.finviz_market_digest --date $DATE --force" in scrape
     assert "--close" not in scrape
+    orch = (root / ".github" / "workflows" / "daily_orchestrator.yml").read_text(
+        encoding="utf-8")
+    assert "dispatch_close_digest" in orch
+    assert "inputs[close]=true" in orch
+    assert "--job finviz_close" in orch
 
 
 def test_qc_rejects_afternoon_and_missing_radar() -> None:

@@ -10,6 +10,10 @@ name: Finviz homepage market digest
 #   (2) ~16:05 ET post-close answer-key (clock_use=next_open only)
 #       01_daily/news/<date>_finviz_market_digest_close.{md,json}
 #       clock_legal_for = next NYSE session. Never same_morning.
+#       Also fired by daily_orchestrator.yml after 16:00 ET when
+#       skip-if-good --job finviz_close says the pair is still missing.
+#       Morning scrape never writes --close (clock leak). Midday slot
+#       stays skip; a missed 16:05 cron is healed by orch 16:20/17:15.
 #
 # GH Actions cron is UTC by default. Close uses on.schedule.timezone
 # (America/New_York) — the IANA equivalent of CRON_TZ — so 16:05 stays

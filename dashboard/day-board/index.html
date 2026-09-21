@@ -24,6 +24,7 @@
  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
  .card b{display:block;font-size:18px;margin-top:2px;font-variant-numeric:tabular-nums}
  .ok{color:var(--pos)} .fail{color:var(--neg)} .part{color:var(--gold)} .mut{color:var(--mut)}
+ .wait{color:var(--gold)}
  .proc{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:0 0 10px;overflow:hidden}
  .proc h3{margin:0;padding:10px 12px;background:var(--day);font-size:14px;
    display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline;justify-content:space-between}
@@ -62,7 +63,8 @@
 <h2>What was just pushed</h2>
 <div id="lands"></div>
 <p class="note">OK = file exists and passes QC.
-MISSING = not written yet. FAIL = empty / truncated / timeout stub / QC reject.
+WAIT = not due yet (close answer-key after 16:00 ET).
+MISSING = due and not written. FAIL = empty / truncated / timeout stub / QC reject.
 The last column is a short extract of what is actually in the file, not a byte count.</p>
 </div>
 <script>
@@ -71,8 +73,8 @@ const LOCAL = location.hostname === "localhost" || location.hostname === "127.0.
 const RAW = LOCAL
   ? "../../data/day_board"
   : "https://raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board";
-const mark = {OK:"ok", PARTIAL:"part", FAIL:"fail", MISSING:"fail", SKIP:"mut"};
-const fileMark = {OK:"OK", FAIL:"FAIL", MISSING:"MISSING", SKIP:"SKIP", PARTIAL:"PARTIAL"};
+const mark = {OK:"ok", PARTIAL:"part", FAIL:"fail", MISSING:"fail", SKIP:"mut", WAIT:"wait"};
+const fileMark = {OK:"OK", FAIL:"FAIL", MISSING:"MISSING", SKIP:"SKIP", PARTIAL:"PARTIAL", WAIT:"WAIT"};
 function $(id){return document.getElementById(id)}
 async function fetchJson(url){
   const u = url + (url.includes("?") ? "&" : "?") + "t=" + Date.now();

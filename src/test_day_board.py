@@ -194,6 +194,8 @@ def test_day_board_html_has_raw_poll() -> None:
     assert "What was just pushed" in html
     assert "File status" in html
     assert "What's in it" in html
+    assert "WAIT" in html
+    assert "due after 16:00 ET" in html
     assert "factor-mine" in html
     assert "Today's selections" not in html
     assert "Every strategy" not in html

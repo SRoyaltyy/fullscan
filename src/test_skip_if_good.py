@@ -291,12 +291,86 @@ def test_finviz_scrape_requires_elite_export() -> None:
     assert skip_if_good.check_finviz_scrape("1999-01-01") is False
 
 
+def test_close_answer_key_due_follows_1600_et() -> None:
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+    et = ZoneInfo("America/New_York")
+    fri_pre = datetime(2026, 9, 18, 15, 59, tzinfo=et)
+    fri_post = datetime(2026, 9, 18, 16, 0, tzinfo=et)
+    mon_morn = datetime(2026, 9, 21, 7, 3, tzinfo=et)
+    assert skip_if_good.close_answer_key_due("2026-09-18", now=fri_pre) is False
+    assert skip_if_good.close_answer_key_due("2026-09-18", now=fri_post) is True
+    assert skip_if_good.close_answer_key_due("2026-09-21", now=mon_morn) is False
+    assert skip_if_good.close_answer_key_due("2026-09-18", now=mon_morn) is True
+    assert skip_if_good.close_answer_key_due("2026-09-19", now=mon_morn) is False
+    assert skip_if_good.check_finviz_close("1999-01-01") is True  # not a session
+
+
+def test_finviz_scrape_requires_homepage_warm_up() -> None:
+    """Quote digest + export must not skip when the warm-up pair is missing."""
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        news = root / "01_daily" / "news"
+        heat = root / "01_daily" / "map_heat"
+        exp = root / "data" / "exports"
+        news.mkdir(parents=True)
+        heat.mkdir(parents=True)
+        exp.mkdir(parents=True)
+        (news / "1999-01-04_finviz_digest.json").write_text(
+            json.dumps({"tickers": [{"t": "AAA"}] * 20, "date": "1999-01-04"}),
+            encoding="utf-8")
+        (news / "1999-01-04_finviz_digest.md").write_text("# d\n" + ("x" * 200),
+                                                         encoding="utf-8")
+        (heat / "1999-01-04_map_heat.json").write_text(json.dumps({
+            "overlay_at": "1999-01-04T05:40:00-05:00",
+            "tape": [{"ticker": "ES"}],
+            "industries": [{"name": "x"}] * 40,
+        }), encoding="utf-8")
+        (exp / "finviz_1999-01-04.csv").write_bytes(b"h\n" * 60_000)
+        with mock.patch.object(skip_if_good, "ROOT", root), \
+                mock.patch.object(skip_if_good.output_qc, "qc_finviz_digest",
+                                  return_value=mock.Mock(ok=True)), \
+                mock.patch.object(skip_if_good.output_qc, "qc_map_heat",
+                                  return_value=mock.Mock(ok=True)):
+            assert skip_if_good.check_finviz_scrape("1999-01-04") is False
+        (news / "1999-01-04_finviz_market_digest.json").write_text(
+            json.dumps({
+                "date": "1999-01-04",
+                "generated_at": "1999-01-04T05:40:00-05:00",
+                "clock_use": "same_morning",
+                "clock_legal_for": "1999-01-04",
+                "raw_text": "The S&P 500 rose 0.86 percent as oil drifted. " * 4,
+                "headline": "US futures point to a higher open on quiet data",
+                "prior_close": {"spx": 0.8, "nasdaq": 0.9, "dow": 0.7},
+                "oil": {"name": "Brent", "price": 70},
+                "cpi_fed": {},
+                "named_leaders": ["AAA"],
+                "next_session_calendar": {"housing": False, "retail": False,
+                                          "fed": False},
+                "earnings_slate": {"tickers": []},
+                "geo_grain": {"flags": []},
+            }), encoding="utf-8")
+        (news / "1999-01-04_finviz_market_digest.md").write_text(
+            "# Finviz homepage market digest — 1999-01-04\n" + ("x" * 200),
+            encoding="utf-8")
+        with mock.patch.object(skip_if_good, "ROOT", root), \
+                mock.patch.object(skip_if_good.output_qc, "qc_finviz_digest",
+                                  return_value=mock.Mock(ok=True)), \
+                mock.patch.object(skip_if_good.output_qc, "qc_map_heat",
+                                  return_value=mock.Mock(ok=True)), \
+                mock.patch.object(skip_if_good.output_qc,
+                                  "qc_finviz_market_digest",
+                                  return_value=mock.Mock(ok=True)):
+            assert skip_if_good.check_finviz_scrape("1999-01-04") is True
+
+
 def test_jobs_include_label_weather() -> None:
     assert "label_weather" in skip_if_good.JOBS
     assert "stock_book_all" in skip_if_good.JOBS
     assert "postclose_all" in skip_if_good.JOBS
     assert "strategy_tickets" in skip_if_good.JOBS
     assert "open_0930" in skip_if_good.JOBS
+    assert "finviz_close" in skip_if_good.JOBS
 
 
 def test_strategy_tickets_require_session_open_look() -> None:
@@ -494,6 +568,8 @@ if __name__ == "__main__":
     test_general_outcome_and_reflect_reject_tool_dumps()
     test_is_tool_dump_detects_dsml_and_web_search()
     test_finviz_scrape_requires_elite_export()
+    test_close_answer_key_due_follows_1600_et()
+    test_finviz_scrape_requires_homepage_warm_up()
     test_jobs_include_label_weather()
     test_strategy_tickets_require_session_open_look()
     test_open_0930_requires_tickets_and_connected_paper()
