@@ -169,6 +169,11 @@ jobs:
             cp -a dashboard/book-paper/. pages_out/dashboard/book-paper/
             echo "Overlayed dashboard/book-paper from main"
           fi
+          if [ -f dashboard/paper-book/index.html ]; then
+            mkdir -p pages_out/dashboard/paper-book
+            cp -a dashboard/paper-book/. pages_out/dashboard/paper-book/
+            echo "Overlayed dashboard/paper-book from main"
+          fi
           if [ -f dashboard/factor-mine/index.html ]; then
             mkdir -p pages_out/dashboard/factor-mine
             cp -a dashboard/factor-mine/. pages_out/dashboard/factor-mine/
@@ -198,7 +203,7 @@ jobs:
           # The paper book is also copied to the site root. Mirror every
           # sub-dash there so homepage links like sleeve-merge/ resolve.
           for sub in boring-winners ticker-lookback gainer-lookback flatten-lookback \
-                     mover-lookback sleeve-combine sleeve-merge mover-paper book-paper \
+                     mover-lookback sleeve-combine sleeve-merge mover-paper book-paper paper-book \
                      strategy-board factor-mine day-board down-day-mine hard-red-exceptions day-movers; do
             if [ -d "pages_out/dashboard/${sub}" ]; then
               mkdir -p "pages_out/${sub}"
@@ -235,6 +240,7 @@ jobs:
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/sleeve-merge/"
           echo "https://SRoyaltyy.github.io/fullscan/sleeve-merge/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/mover-paper/"
+          echo "https://SRoyaltyy.github.io/fullscan/dashboard/paper-book/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/strategy-board/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/factor-mine/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/day-board/"

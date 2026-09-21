@@ -149,6 +149,37 @@ def test_dash_template_has_session_and_pack_stamp() -> None:
     assert "Six effectiveness metrics (cash book) · " in html
 
 
+def test_paper_book_page_is_on_the_pages_deploy() -> None:
+    """OpenAPI sandbox book is a Pages overlay, not a second site."""
+    root = Path(__file__).resolve().parent.parent
+    page = (root / "dashboard" / "paper-book" / "index.html").read_text(
+        encoding="utf-8")
+    assert "Webull OpenAPI sandbox" in page
+    assert "api.sandbox.webull.com" in page
+    assert "fill_observe.cash" in page
+    assert "data/paper_open" in page
+    assert "_status.json" in page
+    assert "raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/paper_open" in page
+    dep = (root / ".github" / "workflows" / "deploy-dashboard.yml").read_text(
+        encoding="utf-8")
+    pub = (root / "scripts" / "publish_dashboard.sh").read_text(encoding="utf-8")
+    assert "dashboard/paper-book" in dep
+    assert "paper-book" in pub
+    shell = (root / "src" / "paper_dash.html").read_text(encoding="utf-8")
+    assert 'href="/fullscan/dashboard/paper-book/"' in shell
+    board = (root / "src" / "strategy_board.py").read_text(encoding="utf-8")
+    assert 'href="../paper-book/"' in board
+    # Committed pages are what GitHub Pages serves until the next regen.
+    # Skip when a sparse checkout omitted them.
+    live_path = root / "dashboard" / "index.html"
+    if live_path.is_file():
+        assert 'href="/fullscan/dashboard/paper-book/"' in live_path.read_text(
+            encoding="utf-8")
+    sboard_path = root / "dashboard" / "strategy-board" / "index.html"
+    if sboard_path.is_file():
+        assert 'href="../paper-book/"' in sboard_path.read_text(encoding="utf-8")
+
+
 def test_workflows_wire_the_gate() -> None:
     root = Path(__file__).resolve().parent.parent
     dep = (root / ".github" / "workflows" / "deploy-dashboard.yml").read_text(
@@ -171,6 +202,7 @@ def main() -> None:
         test_blocked_when_today_json_is_yesterday,
         test_live_2026_09_16_board_is_ready,
         test_dash_template_has_session_and_pack_stamp,
+        test_paper_book_page_is_on_the_pages_deploy,
         test_workflows_wire_the_gate,
     ]
     for fn in tests:
