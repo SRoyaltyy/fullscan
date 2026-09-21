@@ -341,7 +341,15 @@ def _print(art: dict, cls: Classification, pack: dict) -> list[Entity]:
         return macro_entities(text, cls)
     direction = "not_determined"
     if cls.event_class == "guidance":
-        direction = "down" if cls.sign == "cut" else "up"
+        # Hygiene: reaffirm → not_determined; raise+miss EPS → mixed.
+        if cls.split and cls.sign is None:
+            direction = "mixed"
+        elif cls.sign == "cut":
+            direction = "down"
+        elif cls.sign == "raise":
+            direction = "up"
+        else:
+            direction = "not_determined"
     elif re.search(r"(?i)(miss|plunge|drop|soft)", text):
         direction = "down"
     elif re.search(r"(?i)(beat|raise|record)", text):

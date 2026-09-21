@@ -15,6 +15,13 @@ from pathlib import Path
 from typing import Any
 from zoneinfo import ZoneInfo
 
+from .hygiene import (
+    collapse_macro_stories,
+    entry_clock_of,
+    horizon_note,
+    skips_01d_horizon,
+)
+
 ET = ZoneInfo("America/New_York")
 MARKET_OPEN = dtime(9, 30)
 STORE = Path("data/prices/ohlc.parquet")
@@ -124,7 +131,11 @@ def parse_when(raw: str | None) -> datetime | None:
 
 
 def signal_dt(row: dict) -> datetime | None:
-    return parse_when(row.get("published_at")) or parse_when(row.get("retrieved_at")) or parse_when(row.get("known_at"))
+    """Published when the source provided it; else retrieved. Never invent Published."""
+    pub = parse_when(row.get("published_at"))
+    if pub is not None:
+        return pub
+    return parse_when(row.get("retrieved_at")) or parse_when(row.get("known_at"))
 
 
 def entry_calendar_date(dt: datetime) -> str:
@@ -194,12 +205,17 @@ def is_gradeable(target: dict, row: dict | None = None) -> bool:
 def stamp_grade_flags(results: list[dict]) -> list[dict]:
     """Attach graded / ungraded_reason on existing performance rows."""
     for r in results:
+        clock = r.get("entry_clock") or entry_clock_of(r)
+        r["entry_clock"] = clock
         for g in r.get("performance") or []:
             if not isinstance(g, dict):
                 continue
             reason = ungraded_reason(g, r)
             g["graded"] = reason is None
             g["ungraded_reason"] = reason or ""
+            g["skip_01d"] = skips_01d_horizon(g, r)
+            g["horizon_note"] = horizon_note(g, r)
+            g["entry_clock"] = clock
     return results
 
 
@@ -419,6 +435,9 @@ def grade_one(
         "q5": target.get("q5") or "",
         "graded": reason is None,
         "ungraded_reason": reason or "",
+        "skip_01d": skips_01d_horizon(target),
+        "horizon_note": horizon_note(target),
+        "entry_clock": "",
         "entry_date": None,
         "entry_open": None,
         "through": None,
@@ -492,10 +511,15 @@ def grade_one(
 
 def grade_row(row: dict, book: dict[str, list[dict]]) -> list[dict]:
     when = signal_dt(row)
-    return [
-        grade_one(t, book.get(t["ticker"]) or [], when)
-        for t in evaluation_targets(row)
-    ]
+    clock = entry_clock_of(row)
+    out = []
+    for t in evaluation_targets(row):
+        g = grade_one(t, book.get(t["ticker"]) or [], when)
+        g["entry_clock"] = clock
+        g["skip_01d"] = skips_01d_horizon(t, row)
+        g["horizon_note"] = horizon_note(t, row)
+        out.append(g)
+    return out
 
 
 def grade_results(results: list[dict], fetch: bool = True) -> list[dict]:
@@ -531,8 +555,11 @@ def _rate(h: int, n: int) -> float | None:
     return round(h / n, 4) if n else None
 
 
-def _add_hits(bag: dict[str, Any], g: dict) -> None:
-    if g.get("ret_1d") is not None:
+def _add_hits(bag: dict[str, Any], g: dict, row: dict | None = None) -> None:
+    skip_01d = g.get("skip_01d")
+    if skip_01d is None:
+        skip_01d = skips_01d_horizon(g, row)
+    if g.get("ret_1d") is not None and not skip_01d:
         bag["n_1d"] += 1
         bag["hit_1d"] += int(g.get("agree_1d") is True)
     if g.get("ret_20d") is not None:
@@ -565,16 +592,19 @@ def performance_rollup(results: list[dict]) -> dict[str, Any]:
             # factor_impulse shows directional-as-if hits, tagged ungraded.
             if sl == "factor_impulse":
                 if g.get("direction") in {"up", "down"}:
-                    _add_hits(slices[sl], g)
+                    _add_hits(slices[sl], g, r)
             elif sl and gradeable:
-                _add_hits(slices[sl], g)
+                _add_hits(slices[sl], g, r)
             if not gradeable:
                 ungraded += 1
                 continue
             graded += 1
+            skip_01d = g.get("skip_01d")
+            if skip_01d is None:
+                skip_01d = skips_01d_horizon(g, r)
             if g.get("ret_1d") is None and g.get("ret_20d") is None:
                 missing += 1
-            if g.get("ret_1d") is not None:
+            if g.get("ret_1d") is not None and not skip_01d:
                 n1 += 1
                 hit1 += int(g.get("agree_1d") is True)
                 by_tick.setdefault(g.get("ticker") or "?", []).append(float(g["ret_1d"]))
@@ -584,6 +614,17 @@ def performance_rollup(results: list[dict]) -> dict[str, Any]:
     for bag in slices.values():
         bag["hit_rate_1d"] = _rate(bag["hit_1d"], bag["n_1d"])
         bag["hit_rate_20d"] = _rate(bag["hit_20d"], bag["n_20d"])
+    macro = collapse_macro_stories(results)
+    # Collapsed unique legs only — reprints do not inflate the ungraded slice.
+    slices["factor_impulse"] = {
+        "n_1d": macro["leg_n_1d"],
+        "hit_1d": macro["leg_hit_1d"],
+        "hit_rate_1d": macro["leg_hit_rate_1d"],
+        "n_20d": macro["leg_n_20d"],
+        "hit_20d": macro["leg_hit_20d"],
+        "hit_rate_20d": macro["leg_hit_rate_20d"],
+        "graded": False,
+    }
     avg = {
         t: round(sum(v) / len(v), 2)
         for t, v in sorted(by_tick.items(), key=lambda kv: -len(kv[1]))[:20]
@@ -603,8 +644,11 @@ def performance_rollup(results: list[dict]) -> dict[str, Any]:
         "grade_rule": (
             "0-1d / 1-4w graded only when q5=impulse, direction in "
             "{up, down}, tradeable_expression=direct. factor_impulse "
-            "and mixed/not_determined are ungraded context."
+            "and mixed/not_determined are ungraded context. "
+            "gate / capacity / blast_cyber / CHIPS awards skip 0-1d. "
+            "macro headline basket is a separate column (not in these rates)."
         ),
+        "macro_headline": macro,
     }
 
 
@@ -657,11 +701,27 @@ def format_performance(rows: list[dict] | None, row: dict | None = None) -> str:
         r1s = f"{r1:+.2f}%" if r1 is not None else "n/a"
         r20s = f"{r20:+.2f}%" if r20 is not None else "n/a"
         extra = f" · {g['note']}" if g.get("note") else ""
+        hz = g.get("horizon_note") or horizon_note(g, row)
+        if hz:
+            extra = f"{extra} · {hz}"
+        clock = g.get("entry_clock") or (row or {}).get("entry_clock") or ""
+        if clock:
+            extra = f"{extra} · entry_clock={clock}"
+        skip_01d = g.get("skip_01d")
+        if skip_01d is None:
+            skip_01d = skips_01d_horizon(g, row)
         if reason:
             # Tape stays as context; do not invent a directional score.
             bits.append(
                 f"{tick} {d} · 0-1d {r1s} · 1-4w {r20s} "
                 f"entry {g.get('entry_date') or '?'} · **{reason}**{extra}"
+            )
+            continue
+        if skip_01d:
+            bits.append(
+                f"{tick} {d} · 0-1d {r1s} (skipped) · "
+                f"1-4w {r20s} ({mark(g.get('agree_20d'))}) "
+                f"entry {g.get('entry_date') or '?'}{extra}"
             )
             continue
         bits.append(
