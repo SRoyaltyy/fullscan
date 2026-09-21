@@ -72,6 +72,29 @@ HORIZON_BARS = {
     "6m+": 126,
 }
 
+# Scoreboard grade cut: 0-1d / 1-4w hit rates count a row only when
+# q5=impulse, direction in {up, down}, and the listed ticker/ETF *is*
+# the expression (tradeable_expression=direct). factor_impulse and
+# theme/sector index proxies (Fed→QQQ/SPY) stay in the markdown as
+# context and are tagged ungraded. mixed / not_determined stay ungraded.
+# No new score types.
+UNGRADED_EVENT_CLASSES = frozenset({"factor_impulse"})
+INDEX_FACTOR_KINDS = frozenset({"theme_etf", "sector_etf"})
+BLAST_EVENT_CLASSES = frozenset({
+    "blast_legal", "blast_ops", "blast_cyber",
+    "product_harm", "labor_stop", "cat_weather", "labor_organize",
+})
+SLICE_LABELS = (
+    "market_structure",
+    "blast",
+    "guidance",
+    "print_vs_priced",
+    "capacity",
+    "demand",
+    "input_cost",
+    "factor_impulse",
+)
+
 
 def parse_when(raw: str | None) -> datetime | None:
     """ISO / RFC 2822 / YYYY-MM-DD → aware ET datetime, or None."""
@@ -121,10 +144,82 @@ def _agree(direction: str, ret_pct: float | None) -> bool | None:
     return ret_pct < 0
 
 
+def row_q5(row: dict | None) -> str:
+    if not row:
+        return ""
+    cls = row.get("classification") or {}
+    if cls.get("q5"):
+        return str(cls["q5"])
+    q5 = row.get("q5")
+    if isinstance(q5, dict):
+        return str(q5.get("status") or "")
+    return str(q5 or "")
+
+
+def row_event_class(row: dict | None) -> str:
+    if not row:
+        return ""
+    return str((row.get("classification") or {}).get("event_class") or "")
+
+
+def ungraded_reason(target: dict, row: dict | None = None) -> str | None:
+    """Why this tape row is context-only, or None if it is gradeable.
+
+    Grade 0-1d / 1-4w only when q5=impulse, direction in {up, down},
+    and tradeable_expression=direct. factor_impulse / index-factor
+    proxies and mixed / not_determined never enter the hit rate.
+    """
+    ev = str(target.get("event_class") or row_event_class(row) or "")
+    q5 = str(target.get("q5") or row_q5(row) or "")
+    direction = str(target.get("direction") or "")
+    expr = str(target.get("tradeable_expression") or "direct")
+    kind = str(target.get("kind") or "ticker")
+    if ev in UNGRADED_EVENT_CLASSES:
+        return "ungraded · factor_impulse"
+    if kind in INDEX_FACTOR_KINDS:
+        return "ungraded · index-factor"
+    if q5 != "impulse":
+        return f"ungraded · q5={q5 or '?'}"
+    if direction not in {"up", "down"}:
+        return f"ungraded · {direction or 'no-direction'}"
+    if expr != "direct":
+        return f"ungraded · tradeable_expression={expr}"
+    return None
+
+
+def is_gradeable(target: dict, row: dict | None = None) -> bool:
+    return ungraded_reason(target, row) is None
+
+
+def stamp_grade_flags(results: list[dict]) -> list[dict]:
+    """Attach graded / ungraded_reason on existing performance rows."""
+    for r in results:
+        for g in r.get("performance") or []:
+            if not isinstance(g, dict):
+                continue
+            reason = ungraded_reason(g, r)
+            g["graded"] = reason is None
+            g["ungraded_reason"] = reason or ""
+    return results
+
+
+def slice_label(row: dict | None, target: dict | None = None) -> str | None:
+    ev = str((target or {}).get("event_class") or row_event_class(row) or "")
+    if ev == "factor_impulse":
+        return "factor_impulse"
+    if ev in BLAST_EVENT_CLASSES or ev == "blast":
+        return "blast"
+    if ev in SLICE_LABELS:
+        return ev
+    return None
+
+
 def evaluation_targets(row: dict) -> list[dict]:
     """What to pull from the tape: named tickers, else theme/sector ETFs."""
     out: list[dict] = []
     seen: set[str] = set()
+    ev = row_event_class(row)
+    q5 = row_q5(row)
     for e in row.get("entities") or []:
         if not isinstance(e, dict):
             continue
@@ -139,6 +234,10 @@ def evaluation_targets(row: dict) -> list[dict]:
             "role": e.get("role") or "named",
             "direction": e.get("direction") or "not_determined",
             "horizon": e.get("horizon") or "0-1d",
+            "tradeable_expression": e.get("tradeable_expression") or "direct",
+            "inferred": bool(e.get("inferred")),
+            "event_class": ev,
+            "q5": q5,
         })
     if out:
         return out
@@ -153,6 +252,10 @@ def evaluation_targets(row: dict) -> list[dict]:
                 "role": "theme",
                 "direction": "not_determined",
                 "horizon": "0-1d",
+                "tradeable_expression": "proxy",
+                "inferred": True,
+                "event_class": ev,
+                "q5": q5,
             })
     for sec in row.get("sectors") or []:
         etf = SECTOR_TO_ETF.get(str(sec).strip()) or THEME_TO_ETF.get(str(sec).strip().lower())
@@ -165,6 +268,10 @@ def evaluation_targets(row: dict) -> list[dict]:
                 "role": "theme",
                 "direction": "not_determined",
                 "horizon": "0-1d",
+                "tradeable_expression": "proxy",
+                "inferred": True,
+                "event_class": ev,
+                "q5": q5,
             })
     return out
 
@@ -298,6 +405,7 @@ def grade_one(
     tick = str(target.get("ticker") or "")
     direction = str(target.get("direction") or "not_determined")
     horizon = str(target.get("horizon") or "0-1d")
+    reason = ungraded_reason(target)
     base = {
         "kind": target.get("kind") or "ticker",
         "ticker": tick,
@@ -305,6 +413,12 @@ def grade_one(
         "role": target.get("role") or "named",
         "direction": direction,
         "horizon": horizon,
+        "tradeable_expression": target.get("tradeable_expression") or "direct",
+        "inferred": bool(target.get("inferred")),
+        "event_class": target.get("event_class") or "",
+        "q5": target.get("q5") or "",
+        "graded": reason is None,
+        "ungraded_reason": reason or "",
         "entry_date": None,
         "entry_open": None,
         "through": None,
@@ -405,17 +519,57 @@ def grade_results(results: list[dict], fetch: bool = True) -> list[dict]:
     return out
 
 
+def _empty_slice(graded: bool) -> dict[str, Any]:
+    return {
+        "n_1d": 0, "hit_1d": 0, "hit_rate_1d": None,
+        "n_20d": 0, "hit_20d": 0, "hit_rate_20d": None,
+        "graded": graded,
+    }
+
+
+def _rate(h: int, n: int) -> float | None:
+    return round(h / n, 4) if n else None
+
+
+def _add_hits(bag: dict[str, Any], g: dict) -> None:
+    if g.get("ret_1d") is not None:
+        bag["n_1d"] += 1
+        bag["hit_1d"] += int(g.get("agree_1d") is True)
+    if g.get("ret_20d") is not None:
+        bag["n_20d"] += 1
+        bag["hit_20d"] += int(g.get("agree_20d") is True)
+
+
 def performance_rollup(results: list[dict]) -> dict[str, Any]:
+    """Hit rates for gradeable rows only. Slice table keeps factor_impulse as context."""
+    stamp_grade_flags(results)
     n1 = hit1 = n20 = hit20 = 0
     missing = 0
     graded = 0
+    ungraded = 0
     by_tick: dict[str, list[float]] = {}
+    slices = {
+        label: _empty_slice(graded=(label != "factor_impulse"))
+        for label in SLICE_LABELS
+    }
     for r in results:
         if not r.get("usable"):
             continue
-        rows = r.get("performance") or []
-        for g in rows:
-            if g.get("direction") not in {"up", "down"}:
+        for g in r.get("performance") or []:
+            if not isinstance(g, dict):
+                continue
+            reason = g.get("ungraded_reason") or ungraded_reason(g, r)
+            gradeable = reason is None
+            sl = slice_label(r, g)
+            # Slice comparison: graded slices use the grade cut;
+            # factor_impulse shows directional-as-if hits, tagged ungraded.
+            if sl == "factor_impulse":
+                if g.get("direction") in {"up", "down"}:
+                    _add_hits(slices[sl], g)
+            elif sl and gradeable:
+                _add_hits(slices[sl], g)
+            if not gradeable:
+                ungraded += 1
                 continue
             graded += 1
             if g.get("ret_1d") is None and g.get("ret_20d") is None:
@@ -423,38 +577,74 @@ def performance_rollup(results: list[dict]) -> dict[str, Any]:
             if g.get("ret_1d") is not None:
                 n1 += 1
                 hit1 += int(g.get("agree_1d") is True)
-                by_tick.setdefault(g["ticker"], []).append(float(g["ret_1d"]))
+                by_tick.setdefault(g.get("ticker") or "?", []).append(float(g["ret_1d"]))
             if g.get("ret_20d") is not None:
                 n20 += 1
                 hit20 += int(g.get("agree_20d") is True)
-    def rate(h, n):
-        return round(h / n, 4) if n else None
+    for bag in slices.values():
+        bag["hit_rate_1d"] = _rate(bag["hit_1d"], bag["n_1d"])
+        bag["hit_rate_20d"] = _rate(bag["hit_20d"], bag["n_20d"])
     avg = {
         t: round(sum(v) / len(v), 2)
         for t, v in sorted(by_tick.items(), key=lambda kv: -len(kv[1]))[:20]
     }
     return {
         "directional_calls": graded,
+        "ungraded_context": ungraded,
         "n_1d": n1,
         "hit_1d": hit1,
-        "hit_rate_1d": rate(hit1, n1),
+        "hit_rate_1d": _rate(hit1, n1),
         "n_20d": n20,
         "hit_20d": hit20,
-        "hit_rate_20d": rate(hit20, n20),
+        "hit_rate_20d": _rate(hit20, n20),
         "missing_tape": missing,
         "avg_ret_1d_by_ticker": avg,
+        "slices": slices,
+        "grade_rule": (
+            "0-1d / 1-4w graded only when q5=impulse, direction in "
+            "{up, down}, tradeable_expression=direct. factor_impulse "
+            "and mixed/not_determined are ungraded context."
+        ),
     }
 
 
-def format_performance(rows: list[dict] | None) -> str:
+def format_slice_table(tape: dict | None) -> list[str]:
+    """Markdown slice table: named classes vs ungraded factor_impulse."""
+    slices = (tape or {}).get("slices") or {}
+    lines = [
+        "| slice | 0-1d hits | 0-1d n | 0-1d rate | 1-4w hits | 1-4w n | 1-4w rate | graded |",
+        "| --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |",
+    ]
+    for label in SLICE_LABELS:
+        bag = slices.get(label) or _empty_slice(graded=(label != "factor_impulse"))
+        graded = bag.get("graded")
+        tag = "yes" if graded else "**ungraded**"
+        def cell(key, fallback="—"):
+            v = bag.get(key)
+            return fallback if v is None else v
+        lines.append(
+            f"| {label} | {cell('hit_1d', 0)} | {cell('n_1d', 0)} | "
+            f"{cell('hit_rate_1d')} | {cell('hit_20d', 0)} | "
+            f"{cell('n_20d', 0)} | {cell('hit_rate_20d')} | {tag} |"
+        )
+    return lines
+
+
+def format_performance(rows: list[dict] | None, row: dict | None = None) -> str:
     if not rows:
         return "n/a — nothing to grade"
     bits = []
     for g in rows:
         tick = g.get("ticker") or g.get("name") or "?"
         d = g.get("direction") or "?"
+        reason = (
+            g.get("ungraded_reason")
+            if "graded" in g
+            else ungraded_reason(g, row)
+        )
         if g.get("note") and g.get("ret_1d") is None:
-            bits.append(f"{tick} ({d}): {g['note']}")
+            tag = f" · **{reason}**" if reason else ""
+            bits.append(f"{tick} ({d}): {g['note']}{tag}")
             continue
         def mark(agree):
             if agree is True:
@@ -467,6 +657,13 @@ def format_performance(rows: list[dict] | None) -> str:
         r1s = f"{r1:+.2f}%" if r1 is not None else "n/a"
         r20s = f"{r20:+.2f}%" if r20 is not None else "n/a"
         extra = f" · {g['note']}" if g.get("note") else ""
+        if reason:
+            # Tape stays as context; do not invent a directional score.
+            bits.append(
+                f"{tick} {d} · 0-1d {r1s} · 1-4w {r20s} "
+                f"entry {g.get('entry_date') or '?'} · **{reason}**{extra}"
+            )
+            continue
         bits.append(
             f"{tick} {d} · 0-1d {r1s} ({mark(g.get('agree_1d'))}) · "
             f"1-4w {r20s} ({mark(g.get('agree_20d'))}) "

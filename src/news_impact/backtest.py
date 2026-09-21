@@ -7,7 +7,7 @@ from collections import Counter
 from pathlib import Path
 
 from .classify import rank_articles
-from .grade import format_performance, performance_rollup
+from .grade import format_performance, format_slice_table, performance_rollup, stamp_grade_flags
 from .pipeline import analyze_article, rollup
 
 NEWS_DIR = Path("01_daily/news")
@@ -245,7 +245,7 @@ def _conclusion_cell(r: dict) -> str:
 def _actual_cell(r: dict) -> str:
     if "performance" not in r:
         return "not graded"
-    return format_performance(r.get("performance") or [])
+    return format_performance(r.get("performance") or [], row=r)
 
 
 def _table(rows: list[dict]) -> list[str]:
@@ -274,8 +274,10 @@ def _table(rows: list[dict]) -> list[str]:
 def markdown(report: dict) -> str:
     old = report.get("old") or {}
     new = report.get("new") or {}
-    tape = report.get("tape") or {}
     results = report.get("results") or []
+    if results:
+        stamp_grade_flags(results)
+    tape = report.get("tape") or {}
     usable = [r for r in results if r.get("usable")]
     discarded = [r for r in results if not r.get("usable")]
     lines = [
@@ -301,7 +303,14 @@ def markdown(report: dict) -> str:
         f"- Killed (old usable → new weather/discard): {report.get('killed_n')}",
         f"- Ratio delta: {(report.get('improvement') or {}).get('usable_ratio_delta')}",
         "",
-        "## Actual tape (directional calls only)",
+        "## Actual tape (graded directional calls only)",
+        "",
+        "0-1d and 1-4w hit rates count a row only when **q5=impulse**, "
+        "**direction in {up, down}**, and **tradeable_expression=direct** "
+        "(listed ticker or ETF that *is* the expression). "
+        "`factor_impulse` / Fed→QQQ/SPY and similar index-factor rows stay "
+        "in the article table as **ungraded** context. "
+        "`mixed` / `not_determined` stay ungraded — no new scores.",
         "",
         "Tradable = listed ticker with an up/down call. Ticker-less macro "
         "is tradable only when the factor basket is signed (print or decision), "
@@ -316,12 +325,20 @@ def markdown(report: dict) -> str:
             f"- 1-4w (~20 sessions): "
             f"{tape.get('hit_20d')}/{tape.get('n_20d')} "
             f"hit_rate={tape.get('hit_rate_20d')}",
-            f"- directional calls: {tape.get('directional_calls')}  "
+            f"- graded directional calls: {tape.get('directional_calls')}  "
+            f"ungraded context rows: {tape.get('ungraded_context')}  "
             f"missing tape: {tape.get('missing_tape')}",
             "",
+            "## Slice hit rates",
+            "",
+            "Graded slices use the same cut as the headline rates. "
+            "`factor_impulse` is shown for comparison and is **ungraded**.",
+            "",
         ]
+        lines += format_slice_table(tape)
+        lines.append("")
         if tape.get("avg_ret_1d_by_ticker"):
-            lines.append("Average 0-1d return by ticker (directional only):")
+            lines.append("Average 0-1d return by ticker (graded directional only):")
             lines.append("")
             for t, v in (tape.get("avg_ret_1d_by_ticker") or {}).items():
                 lines.append(f"- {t}: {v:+.2f}%")
