@@ -1,6 +1,6 @@
 {
   "date": "2026-09-08",
-  "generated_at": "2026-09-21T05:56:33.965435-04:00",
+  "generated_at": "2026-09-21T07:57:33.492735-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -82,10 +82,10 @@
       "yaml": "finviz_preopen_scrape.yml",
       "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 1,
-      "n_req": 1,
-      "n_opt_ok": 3,
-      "n_opt": 3,
+      "n_req_ok": 4,
+      "n_req": 4,
+      "n_opt_ok": 0,
+      "n_opt": 0,
       "files": [
         {
           "key": "digest_json",
@@ -106,7 +106,7 @@
           "key": "digest_md",
           "name": "Quote-page digest MD (*_finviz_digest)",
           "path": "01_daily/news/2026-09-08_finviz_digest.md",
-          "role": "optional",
+          "role": "required",
           "status": "OK",
           "reason": "",
           "size": 11415,
@@ -120,7 +120,7 @@
           "key": "market_digest_json",
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-08_finviz_market_digest.json",
-          "role": "optional",
+          "role": "required",
           "status": "OK",
           "reason": "",
           "size": 9341,
@@ -131,7 +131,7 @@
           "key": "market_digest_md",
           "name": "Homepage warm-up MD (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-08_finviz_market_digest.md",
-          "role": "optional",
+          "role": "required",
           "status": "OK",
           "reason": "",
           "size": 3957,
@@ -146,10 +146,10 @@
           "name": "Close answer-key JSON (*_finviz_market_digest_close)",
           "path": "01_daily/news/2026-09-08_finviz_market_digest_close.json",
           "role": "era",
-          "status": "SKIP",
-          "reason": "not in pipeline as of 2026-09-08 (first finviz_market_digest_close 2026-09-10)",
-          "size": 0,
-          "said": "not in pipeline as of 2026-09-08 (first finviz_market_digest_close 2026-09-10)",
+          "status": "OK",
+          "reason": "",
+          "size": 9419,
+          "said": "US stocks closed lower as Brent crude neared $100 and the 10-year yield hit 4.805% ahead CPI and PPI amid escalating US-Iran and Middle East tensions \u00b7 leaders TPL, VLO, MPC, OKE, WMB, AMGN \u00b7 neutral",
           "bullets": []
         },
         {
@@ -157,11 +157,14 @@
           "name": "Close answer-key MD (*_finviz_market_digest_close)",
           "path": "01_daily/news/2026-09-08_finviz_market_digest_close.md",
           "role": "era",
-          "status": "SKIP",
-          "reason": "not in pipeline as of 2026-09-08 (first finviz_market_digest_close 2026-09-10)",
-          "size": 0,
-          "said": "not in pipeline as of 2026-09-08 (first finviz_market_digest_close 2026-09-10)",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 4026,
+          "said": "Finviz homepage market digest (close) \u2014 2026-09-08",
+          "bullets": [
+            "Generated:** 2026-09-08T21:03:48-04:00 (America/New_York)",
+            "Source:** `wayback`"
+          ]
         }
       ],
       "said": "400 tickers \u00b7 400 signals \u00b7 top ABBV, ADI, ALAB, AMAT, AME, AMX, APD, APH",
@@ -179,8 +182,8 @@
       "inputs_ready": true,
       "n_req_ok": 20,
       "n_req": 20,
-      "n_opt_ok": 3,
-      "n_opt": 3,
+      "n_opt_ok": 2,
+      "n_opt": 2,
       "files": [
         {
           "key": "in_digest",
@@ -201,7 +204,7 @@
           "key": "in_market_digest",
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-08_finviz_market_digest.json",
-          "role": "optional",
+          "role": "input",
           "status": "OK",
           "reason": "",
           "size": 9341,
@@ -1221,6 +1224,31 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-17T23:48:21.181212-04:00\nraw=400 unique_events=5 tickers=70"
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-09-08",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-21T07:57:32.944562-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-08_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 9419,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-09-08_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 4026,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-09-08\n**Generated:** 2026-09-08T21:03:48-04:00 (America/New_York)\n**Source:** `wayback`\n**Banner:** US stocks closed lower as Brent crude neared $100 and the 10-year yield hit 4.805% ahead CPI and PPI amid escalating US-Iran and Middle East tensions\n**Prior close:** SPX -0.58%  Nasdaq -0.32%  Dow -1.18%\n**SPX:** -0.58%  **Nasdaq:** -0.32%  **Dow:** -1.18%\n**Oil:** Brent crude $97.92 up (rose)\n**CPI/Fed:** s CPI data; 4.805% hike (4.805%, its highest level since 2023, reviving inflation and Fed rate-hike)\n**Leaders:** TPL, VLO, MPC, OKE, WMB, AMGN, SYK, INTC, QCOM, AMZN, GLW, VZ, NVS, CRM, CASY, TTAN, ANY, COO\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** COO\n**Geo/grain:** geo\n**Archive snapshot:** `20260909010348` (2026-09-08T21:03:48-04:00)\n**Archive URL:** https://web.archive.org/web/20260909010348id_/https://finv"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-08\n**Generated:** 2026-09-08T21:03:48-04:00 (America/New_York)\n**Source:** `wayback`\n**Banner:** US stocks closed lower as Brent crude neared $100 and the 10-year yield hit 4.805% ahead CPI and PPI amid escalating US-Iran and Middle East tensions\n**Prior close:** SPX -0.58%  Nasdaq -0.32%  Dow -1.18%\n**SPX:** -0.58%  **Nasdaq:** -0.32%  **Dow:** -1.18%\n**Oil:** Brent crude $97.92 up (rose)\n**CPI/Fed:** s CPI data; 4.805% hike (4.805%, its highest level since 2023, reviving inflation and Fed rate-hike)\n**Leaders:** TPL, VLO, MPC, OKE, WMB, AMGN, SYK, INTC, QCOM, AMZN, GLW, VZ, NVS, CRM, CASY, TTAN, ANY, COO\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** COO\n**Geo/grain:** geo\n**Archive snapshot:** `20260909010348` (2026-09-08T21:03:48-04:00)\n**Archive URL:** https://web.archive.org/web/20260909010348id_/https://finv"
     }
   ],
   "href": {

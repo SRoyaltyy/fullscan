@@ -1,6 +1,6 @@
 {
   "date": "2026-09-04",
-  "generated_at": "2026-09-21T05:56:33.404878-04:00",
+  "generated_at": "2026-09-21T07:57:38.991814-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -84,10 +84,10 @@
       "yaml": "finviz_preopen_scrape.yml",
       "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 1,
-      "n_req": 1,
-      "n_opt_ok": 3,
-      "n_opt": 3,
+      "n_req_ok": 4,
+      "n_req": 4,
+      "n_opt_ok": 0,
+      "n_opt": 0,
       "files": [
         {
           "key": "digest_json",
@@ -108,7 +108,7 @@
           "key": "digest_md",
           "name": "Quote-page digest MD (*_finviz_digest)",
           "path": "01_daily/news/2026-09-04_finviz_digest.md",
-          "role": "optional",
+          "role": "required",
           "status": "OK",
           "reason": "",
           "size": 11586,
@@ -122,7 +122,7 @@
           "key": "market_digest_json",
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-04_finviz_market_digest.json",
-          "role": "optional",
+          "role": "required",
           "status": "OK",
           "reason": "",
           "size": 7869,
@@ -133,7 +133,7 @@
           "key": "market_digest_md",
           "name": "Homepage warm-up MD (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-04_finviz_market_digest.md",
-          "role": "optional",
+          "role": "required",
           "status": "OK",
           "reason": "",
           "size": 3850,
@@ -148,10 +148,10 @@
           "name": "Close answer-key JSON (*_finviz_market_digest_close)",
           "path": "01_daily/news/2026-09-04_finviz_market_digest_close.json",
           "role": "era",
-          "status": "SKIP",
-          "reason": "not in pipeline as of 2026-09-04 (first finviz_market_digest_close 2026-09-10)",
-          "size": 0,
-          "said": "not in pipeline as of 2026-09-04 (first finviz_market_digest_close 2026-09-10)",
+          "status": "OK",
+          "reason": "",
+          "size": 7947,
+          "said": "US stocks closed lower as strong August jobs data boosted Fed hike odds and lifted short\u2011term yields ahead of next week\u2019s CPI and PPI releases \u00b7 leaders ETN, JBHT, LULU, SNDK, MU, NVDA \u00b7 bad",
           "bullets": []
         },
         {
@@ -159,11 +159,14 @@
           "name": "Close answer-key MD (*_finviz_market_digest_close)",
           "path": "01_daily/news/2026-09-04_finviz_market_digest_close.md",
           "role": "era",
-          "status": "SKIP",
-          "reason": "not in pipeline as of 2026-09-04 (first finviz_market_digest_close 2026-09-10)",
-          "size": 0,
-          "said": "not in pipeline as of 2026-09-04 (first finviz_market_digest_close 2026-09-10)",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 3919,
+          "said": "Finviz homepage market digest (close) \u2014 2026-09-04",
+          "bullets": [
+            "Generated:** 2026-09-04T21:03:26-04:00 (America/New_York)",
+            "Source:** `wayback`"
+          ]
         }
       ],
       "said": "400 tickers \u00b7 400 signals \u00b7 top ABBV, ADI, AME, AMGN, AMX, APD, APH, APP",
@@ -181,8 +184,8 @@
       "inputs_ready": false,
       "n_req_ok": 20,
       "n_req": 20,
-      "n_opt_ok": 3,
-      "n_opt": 3,
+      "n_opt_ok": 2,
+      "n_opt": 2,
       "files": [
         {
           "key": "in_digest",
@@ -203,7 +206,7 @@
           "key": "in_market_digest",
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-04_finviz_market_digest.json",
-          "role": "optional",
+          "role": "input",
           "status": "OK",
           "reason": "",
           "size": 7869,
@@ -1161,7 +1164,33 @@
       ]
     }
   },
-  "lands": [],
+  "lands": [
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-09-04",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-21T07:57:38.438029-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-04_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 7947,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-09-04_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 3919,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-09-04\n**Generated:** 2026-09-04T21:03:26-04:00 (America/New_York)\n**Source:** `wayback`\n**Banner:** US stocks closed lower as strong August jobs data boosted Fed hike odds and lifted short\u2011term yields ahead of next week\u2019s CPI and PPI releases\n**Prior close:** SPX -0.40%  Nasdaq -0.30%  Dow -0.50%\n**SPX:** -0.40%  **Nasdaq:** -0.30%  **Dow:** -0.50%\n**Oil:** \u2014\n**CPI/Fed:** s CPI and PPI reports for further signals on Federal Reserve policy, with U; 50.0% hike (50% chance of a September Federal Reserve rate hike)\n**Leaders:** ETN, JBHT, LULU, SNDK, MU, NVDA, BE, ILMN, P\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Archive snapshot:** `20260905010326` (2026-09-04T21:03:26-04:00)\n**Archive URL:** https://web.archive.org/web/20260905010326id_/https://finviz.com/\n**Clock legal for:** 2026-09-08\n**Cloc"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-04\n**Generated:** 2026-09-04T21:03:26-04:00 (America/New_York)\n**Source:** `wayback`\n**Banner:** US stocks closed lower as strong August jobs data boosted Fed hike odds and lifted short\u2011term yields ahead of next week\u2019s CPI and PPI releases\n**Prior close:** SPX -0.40%  Nasdaq -0.30%  Dow -0.50%\n**SPX:** -0.40%  **Nasdaq:** -0.30%  **Dow:** -0.50%\n**Oil:** \u2014\n**CPI/Fed:** s CPI and PPI reports for further signals on Federal Reserve policy, with U; 50.0% hike (50% chance of a September Federal Reserve rate hike)\n**Leaders:** ETN, JBHT, LULU, SNDK, MU, NVDA, BE, ILMN, P\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Archive snapshot:** `20260905010326` (2026-09-04T21:03:26-04:00)\n**Archive URL:** https://web.archive.org/web/20260905010326id_/https://finviz.com/\n**Clock legal for:** 2026-09-08\n**Cloc"
+    }
+  ],
   "href": {
     "pages": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/",
     "readiness_action": "https://github.com/SRoyaltyy/fullscan/actions/workflows/stock_book_diag.yml",

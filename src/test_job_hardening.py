@@ -442,12 +442,17 @@ def test_ranker_inputs_before_llm_packet() -> None:
     assert "data/exports/" in scrape_yml
     assert "src.finviz_digest --date $DATE --force" in scrape_yml
     assert "src.finviz_market_digest --date $DATE --force" in scrape_yml
+    assert "--heal-last-closed" in scrape_yml
+    assert 'cron: "40 10 * * 1-5"' in scrape_yml
     health = (ROOT / "src" / "pipeline_health.py").read_text(encoding="utf-8")
     assert "Quote-page digest JSON (*_finviz_digest)" in health
     assert "Homepage warm-up JSON (*_finviz_market_digest)" in health
     assert "Close answer-key JSON (*_finviz_market_digest_close)" in health
     skip = (ROOT / "src" / "skip_if_good.py").read_text(encoding="utf-8")
     assert "elite export missing/thin" in skip
+    assert "market digest missing/thin" in skip
+    assert "def check_finviz_close" in skip
+    assert "close_answer_key_due" in skip
     assert "1d BUY has printed dead relvol" in skip
     assert "book_1d_has_dead_relvol" in skip
     assert "1d BUY is not all-green" in skip
@@ -753,6 +758,8 @@ def test_ubuntu_postclose_skips_grok_and_keeps_runner_home() -> None:
     assert "&& 'deepseek'" in post_yml
     assert 'export HOME="${FULLSCAN_HOME:-/home/gha}"' not in post_yml
     assert "dispatch_postclose_ubuntu" in orch
+    assert "dispatch_close_digest" in orch
+    assert "inputs[close]=true" in orch
     assert "inputs[llm_backend]=deepseek" in orch
     assert "HOME: \"/home/gha\"" not in book_yml
     assert "'/home/runner'" in book_yml

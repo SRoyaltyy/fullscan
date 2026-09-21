@@ -605,7 +605,7 @@ def _plain_md(path: Path) -> dict | None:
 def summarize_file(rel: str, date: str, *, status: str = "",
                    reason: str = "") -> dict:
     """Short 'what is actually in this file' for one day-board row."""
-    if status in ("MISSING", "SKIP"):
+    if status in ("MISSING", "SKIP", "WAIT"):
         return {"said": reason or status.lower(), "bullets": []}
     path = ROOT / rel
     name = path.name
