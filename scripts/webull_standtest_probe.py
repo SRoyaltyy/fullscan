@@ -117,11 +117,32 @@ def main():
             raise RuntimeError("no account_id in list: " + json.dumps(accounts)[:300])
         bal = _json(trade.account_v2.get_account_balance(aid), "balance")
         cash, bp = parse_balance(bal)
+        pos_rows = []
         try:
             pos = _json(trade.account_v2.get_account_position(aid), "positions")
-            npos = len(pos) if isinstance(pos, list) else len((pos or {}).get("data") or []) if isinstance(pos, dict) else 0
-        except Exception:
+            def walk_pos(v):
+                if isinstance(v, list):
+                    for x in v: walk_pos(x)
+                elif isinstance(v, dict):
+                    sym = v.get("symbol") or v.get("ticker") or v.get("instrument_id")
+                    qty = v.get("quantity") or v.get("qty") or v.get("position_qty") or v.get("total_quantity")
+                    if sym and qty is not None:
+                        pos_rows.append({
+                            "symbol": str(sym),
+                            "quantity": str(qty),
+                            "avg_cost": str(v.get("average_cost") or v.get("avg_cost") or v.get("cost_price") or ""),
+                            "market_value": str(v.get("market_value") or v.get("marketValue") or ""),
+                            "unrealized_pl": str(v.get("unrealized_profit_loss") or v.get("unrealizedProfitLoss") or ""),
+                            "row_snip": json.dumps(v)[:400],
+                        })
+                    for k in ("data", "positions", "list", "items", "result"):
+                        if k in v: walk_pos(v[k])
+            walk_pos(pos)
+            npos = len(pos_rows) if pos_rows else (
+                len(pos) if isinstance(pos, list) else len((pos or {}).get("data") or []) if isinstance(pos, dict) else 0)
+        except Exception as e:
             npos = -1
+            pos_rows = [{"error": str(e)[:200]}]
         doc = {
             "ok": True,
             "stage": "snapshot",
@@ -130,6 +151,7 @@ def main():
             "buying_power": bp,
             "account_id_suffix": aid[-6:],
             "n_positions": npos,
+            "positions": pos_rows[:20],
             "host": PAPER_HOST,
             "balance_snip": json.dumps(bal)[:500],
         }
@@ -225,9 +247,60 @@ def main():
                         "order_type": r.get("order_type") or r.get("orderType"),
                         "tif": r.get("time_in_force") or r.get("timeInForce"),
                         "session": r.get("support_trading_session") or r.get("tradingSession"),
+                        "filled_quantity": r.get("filled_quantity") or r.get("filledQuantity"),
+                        "total_quantity": r.get("total_quantity") or r.get("totalQuantity"),
                         "row_snip": json.dumps(r)[:500],
                     }
                     break
+            # Always fetch detail for filled/cancelled orders that left the open book.
+            try:
+                detail = None
+                for call in (
+                    lambda: trade.order_v3.get_order_detail(aid, want),
+                    lambda: trade.order_v3.get_order(aid, want),
+                    lambda: getattr(trade.order_v2, "get_order_detail")(aid, want) if hasattr(trade, "order_v2") and hasattr(trade.order_v2, "get_order_detail") else (_ for _ in ()).throw(AttributeError("no v2 detail")),
+                ):
+                    try:
+                        detail = _json(call(), "order_detail")
+                        break
+                    except Exception as e:
+                        status_doc.setdefault("detail_errors", []).append(str(e)[:160])
+                if detail is not None:
+                    status_doc["detail_snip"] = json.dumps(detail)[:1200]
+                    drows = []
+                    def walk_d(v):
+                        if isinstance(v, list):
+                            for x in v: walk_d(x)
+                        elif isinstance(v, dict):
+                            if v.get("order_id") or v.get("orderId") or v.get("status") or v.get("symbol"):
+                                drows.append(v)
+                            for k in ("data", "orders", "list", "items", "result"):
+                                if k in v: walk_d(v[k])
+                    walk_d(detail)
+                    hit = None
+                    for r in drows:
+                        oid = str(r.get("order_id") or r.get("orderId") or "")
+                        coid = str(r.get("client_order_id") or r.get("clientOrderId") or "")
+                        if want in (oid, coid) or want == oid or want == coid or not hit:
+                            hit = r
+                            if want in (oid, coid) or want == oid or want == coid:
+                                break
+                    if hit:
+                        status_doc["detail"] = {
+                            "order_id": str(hit.get("order_id") or hit.get("orderId") or ""),
+                            "client_order_id": str(hit.get("client_order_id") or hit.get("clientOrderId") or ""),
+                            "status": hit.get("status") or hit.get("order_status"),
+                            "symbol": hit.get("symbol"),
+                            "side": hit.get("side"),
+                            "filled_quantity": hit.get("filled_quantity") or hit.get("filledQuantity"),
+                            "total_quantity": hit.get("total_quantity") or hit.get("totalQuantity"),
+                            "avg_filled_price": hit.get("avg_filled_price") or hit.get("average_filled_price") or hit.get("avgFilledPrice") or hit.get("filled_avg_price"),
+                            "row_snip": json.dumps(hit)[:600],
+                        }
+                        if not status_doc.get("matched"):
+                            status_doc["matched"] = status_doc["detail"]
+            except Exception as e:
+                status_doc["detail_fatal"] = str(e)[:200]
         print(json.dumps(status_doc, indent=2))
         (out_dir / "standtest_status.json").write_text(json.dumps(status_doc, indent=2))
         return 0
