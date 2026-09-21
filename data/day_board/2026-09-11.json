@@ -1,6 +1,6 @@
 {
   "date": "2026-09-11",
-  "generated_at": "2026-09-21T05:56:35.496599-04:00",
+  "generated_at": "2026-09-21T07:57:14.959975-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -82,10 +82,10 @@
       "yaml": "finviz_preopen_scrape.yml",
       "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 1,
-      "n_req": 1,
-      "n_opt_ok": 3,
-      "n_opt": 5,
+      "n_req_ok": 6,
+      "n_req": 6,
+      "n_opt_ok": 0,
+      "n_opt": 0,
       "files": [
         {
           "key": "digest_json",
@@ -106,7 +106,7 @@
           "key": "digest_md",
           "name": "Quote-page digest MD (*_finviz_digest)",
           "path": "01_daily/news/2026-09-11_finviz_digest.md",
-          "role": "optional",
+          "role": "required",
           "status": "OK",
           "reason": "",
           "size": 11687,
@@ -120,7 +120,7 @@
           "key": "market_digest_json",
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-11_finviz_market_digest.json",
-          "role": "optional",
+          "role": "required",
           "status": "OK",
           "reason": "",
           "size": 8936,
@@ -131,7 +131,7 @@
           "key": "market_digest_md",
           "name": "Homepage warm-up MD (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-11_finviz_market_digest.md",
-          "role": "optional",
+          "role": "required",
           "status": "OK",
           "reason": "",
           "size": 4013,
@@ -145,23 +145,26 @@
           "key": "market_digest_close_json",
           "name": "Close answer-key JSON (*_finviz_market_digest_close)",
           "path": "01_daily/news/2026-09-11_finviz_market_digest_close.json",
-          "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "role": "required",
+          "status": "OK",
+          "reason": "",
+          "size": 9014,
+          "said": "US stocks closed higher, breaking four-day slide as cooling oil prices offset hotter August CPI and reinforced expectations of a Fed rate hike next week \u00b7 leaders TRI, DELL, HPE, HPQ, ORCL, XLK \u00b7 bad",
           "bullets": []
         },
         {
           "key": "market_digest_close_md",
           "name": "Close answer-key MD (*_finviz_market_digest_close)",
           "path": "01_daily/news/2026-09-11_finviz_market_digest_close.md",
-          "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "role": "required",
+          "status": "OK",
+          "reason": "",
+          "size": 4082,
+          "said": "Finviz homepage market digest (close) \u2014 2026-09-11",
+          "bullets": [
+            "Generated:** 2026-09-11T22:17:17-04:00 (America/New_York)",
+            "Source:** `wayback`"
+          ]
         }
       ],
       "said": "400 tickers \u00b7 400 signals \u00b7 top AAPL, ABT, ADBE, ALAB, AME, AMGN, AMX, AON",
@@ -179,8 +182,8 @@
       "inputs_ready": true,
       "n_req_ok": 20,
       "n_req": 20,
-      "n_opt_ok": 3,
-      "n_opt": 3,
+      "n_opt_ok": 2,
+      "n_opt": 2,
       "files": [
         {
           "key": "in_digest",
@@ -201,7 +204,7 @@
           "key": "in_market_digest",
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-11_finviz_market_digest.json",
-          "role": "optional",
+          "role": "input",
           "status": "OK",
           "reason": "",
           "size": 8936,
@@ -2153,6 +2156,31 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-11\n_Generated 2026-09-12T01:46:03.499285-04:00 \u00b7 export=data/exports/finviz_2026-09-11.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11633 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 11633 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-09-11",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-21T07:57:14.332109-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-11_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 9014,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-09-11_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 4082,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-09-11\n**Generated:** 2026-09-11T22:17:17-04:00 (America/New_York)\n**Source:** `wayback`\n**Banner:** US stocks closed higher, breaking four-day slide as cooling oil prices offset hotter August CPI and reinforced expectations of a Fed rate hike next week\n**Prior close:** SPX +0.86%  Nasdaq +0.96%  Dow +0.98%\n**SPX:** +0.86%  **Nasdaq:** +0.96%  **Dow:** +0.98%\n**Oil:** Brent crude $108.0 down (fell)\n**CPI/Fed:** August CPI increased 0\n**Leaders:** TRI, DELL, HPE, HPQ, ORCL, XLK, CHTR, TMUS, XLU, PCG, AWK, ACVA, CPRT, ZUMZ, SMR, ADBE\n**Next session:** housing no \u00b7 retail yes \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Archive snapshot:** `20260912021717` (2026-09-11T22:17:17-04:00)\n**Archive URL:** https://web.archive.org/web/20260912021717id_/https://finviz.com/\n**Clock legal for:** 2026-09-14\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-11\n**Generated:** 2026-09-11T22:17:17-04:00 (America/New_York)\n**Source:** `wayback`\n**Banner:** US stocks closed higher, breaking four-day slide as cooling oil prices offset hotter August CPI and reinforced expectations of a Fed rate hike next week\n**Prior close:** SPX +0.86%  Nasdaq +0.96%  Dow +0.98%\n**SPX:** +0.86%  **Nasdaq:** +0.96%  **Dow:** +0.98%\n**Oil:** Brent crude $108.0 down (fell)\n**CPI/Fed:** August CPI increased 0\n**Leaders:** TRI, DELL, HPE, HPQ, ORCL, XLK, CHTR, TMUS, XLU, PCG, AWK, ACVA, CPRT, ZUMZ, SMR, ADBE\n**Next session:** housing no \u00b7 retail yes \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Archive snapshot:** `20260912021717` (2026-09-11T22:17:17-04:00)\n**Archive URL:** https://web.archive.org/web/20260912021717id_/https://finviz.com/\n**Clock legal for:** 2026-09-14\n**Clock use:** `next_open`"
     }
   ],
   "href": {
