@@ -1,0 +1,24 @@
+{
+  "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+  "slug": "13-questions",
+  "kind": "macro",
+  "retrieved": "2026-08-23T13:15:07Z",
+  "gmail_message_id": "1a02ec2b81db9cb1",
+  "gmail_message_ids": [
+    "1a02ec2b81db9cb1"
+  ],
+  "items": [
+    {
+      "headline": "Macro score -1, murky",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-08-23T13:15:07Z",
+      "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+      "gmail_message_id": "1a02ec2b81db9cb1",
+      "automation_title": "13 Questions",
+      "chat_url": null,
+      "raw_excerpt": "Automation · 13 Questions\n\n# 13 Questions is ready\n\nMacro score -1, murky\n\nAutomation · 13 Questions 13 Questions is ready Macro score -1, murky -1 Q13. Is the market in \"bad news = good news\" mode? Regime\n",
+      "body_complete": false
+    }
+  ]
+}

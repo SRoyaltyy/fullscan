@@ -1,0 +1,24 @@
+{
+  "task_id": "unknown_news-parsing",
+  "slug": "news-parsing",
+  "kind": "ticker_news",
+  "retrieved": "2026-08-16T13:16:45Z",
+  "gmail_message_id": "1a00ab7b1b4a3cc7",
+  "gmail_message_ids": [
+    "1a00ab7b1b4a3cc7"
+  ],
+  "items": [
+    {
+      "headline": "US Trade Tariffs & Shipbuilding Support",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-08-16T13:16:45Z",
+      "task_id": "unknown_news-parsing",
+      "gmail_message_id": "1a00ab7b1b4a3cc7",
+      "automation_title": "News Parsing",
+      "chat_url": null,
+      "raw_excerpt": "Automation · News Parsing\n\n# News Parsing is ready\n\nUS Trade Tariffs & Shipbuilding Support\n\nNews parsing is ready US Trade Tariffs & Shipbuilding Support 1. Executive Summary In the past two weeks (roughly August 2–16, 2026), the primary market-relevant developments have been Section 232\n",
+      "body_complete": false
+    }
+  ]
+}

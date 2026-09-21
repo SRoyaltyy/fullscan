@@ -1,0 +1,24 @@
+{
+  "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+  "slug": "13-questions",
+  "kind": "macro",
+  "retrieved": "2026-09-10T13:45:27Z",
+  "gmail_message_id": "1a08b90f71b58aba",
+  "gmail_message_ids": [
+    "1a08b90f71b58aba"
+  ],
+  "items": [
+    {
+      "headline": "VIX rises, score -8",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-09-10T13:45:27Z",
+      "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+      "gmail_message_id": "1a08b90f71b58aba",
+      "automation_title": "13 Questions",
+      "chat_url": null,
+      "raw_excerpt": "Automation · 13 Questions\n\n# 13 Questions is ready\n\nVIX rises, score -8\n\nAutomation · 13 Questions 13 Questions is ready VIX rises, score -8 Gathering fresh data for the September 10, 2026 checklist and locating\n",
+      "body_complete": false
+    }
+  ]
+}

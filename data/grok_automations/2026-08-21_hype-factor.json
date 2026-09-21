@@ -1,0 +1,24 @@
+{
+  "task_id": "23a24524-4eaa-4b9e-bd39-5b30e2ec74ae",
+  "slug": "hype-factor",
+  "kind": "ticker_news",
+  "retrieved": "2026-08-21T13:15:49Z",
+  "gmail_message_id": "1a02476a452503b9",
+  "gmail_message_ids": [
+    "1a02476a452503b9"
+  ],
+  "items": [
+    {
+      "headline": "Jackson Hole Warsh keynote looms",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-08-21T13:15:49Z",
+      "task_id": "23a24524-4eaa-4b9e-bd39-5b30e2ec74ae",
+      "gmail_message_id": "1a02476a452503b9",
+      "automation_title": "Hype Factor",
+      "chat_url": null,
+      "raw_excerpt": "Automation · Hype Factor\n\n# Hype Factor is ready\n\nJackson Hole Warsh keynote looms\n\nAutomation · Hype factor Hype factor is ready Jackson Hole Warsh keynote looms 1. Overall Market Condition (Next 1–2 Weeks) Base Environment\n",
+      "body_complete": false
+    }
+  ]
+}

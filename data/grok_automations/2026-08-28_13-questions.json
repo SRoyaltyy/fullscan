@@ -1,0 +1,24 @@
+{
+  "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+  "slug": "13-questions",
+  "kind": "macro",
+  "retrieved": "2026-08-28T13:29:21Z",
+  "gmail_message_id": "1a0488f8dcec19aa",
+  "gmail_message_ids": [
+    "1a0488f8dcec19aa"
+  ],
+  "items": [
+    {
+      "headline": "Hormuz attack tanks score to -2",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-08-28T13:29:21Z",
+      "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+      "gmail_message_id": "1a0488f8dcec19aa",
+      "automation_title": "13 Questions",
+      "chat_url": null,
+      "raw_excerpt": "Automation · 13 Questions\n\n# 13 Questions is ready\n\nHormuz attack tanks score to -2\n\nAutomation · 13 Questions 13 Questions is ready Hormuz attack tanks score to -2 I'll pull fresh market data and locate the Google Sheets\n",
+      "body_complete": false
+    }
+  ]
+}

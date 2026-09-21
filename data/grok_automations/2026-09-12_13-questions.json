@@ -1,0 +1,24 @@
+{
+  "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+  "slug": "13-questions",
+  "kind": "macro",
+  "retrieved": "2026-09-12T13:30:53Z",
+  "gmail_message_id": "1a095d05a1e8f1bc",
+  "gmail_message_ids": [
+    "1a095d05a1e8f1bc"
+  ],
+  "items": [
+    {
+      "headline": "Score -13, Caution",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-09-12T13:30:53Z",
+      "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+      "gmail_message_id": "1a095d05a1e8f1bc",
+      "automation_title": "13 Questions",
+      "chat_url": null,
+      "raw_excerpt": "Automation · 13 Questions\n\n# 13 Questions is ready\n\nScore -13, Caution\n\nAutomation · 13 Questions 13 Questions is ready Score -13, Caution Gathering fresh data for each checklist item from primary sources.Fetchin\n",
+      "body_complete": false
+    }
+  ]
+}

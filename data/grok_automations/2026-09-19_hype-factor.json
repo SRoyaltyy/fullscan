@@ -1,0 +1,24 @@
+{
+  "task_id": "23a24524-4eaa-4b9e-bd39-5b30e2ec74ae",
+  "slug": "hype-factor",
+  "kind": "ticker_news",
+  "retrieved": "2026-09-19T13:11:34Z",
+  "gmail_message_id": "1a0b9cb2d2c5d14c",
+  "gmail_message_ids": [
+    "1a0b9cb2d2c5d14c"
+  ],
+  "items": [
+    {
+      "headline": "SpaceX IPO hype peaks",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-09-19T13:11:34Z",
+      "task_id": "23a24524-4eaa-4b9e-bd39-5b30e2ec74ae",
+      "gmail_message_id": "1a0b9cb2d2c5d14c",
+      "automation_title": "Hype factor",
+      "chat_url": "https://grok.com/chat/43043cc8-044a-486d-9b39-1c3a39ab397b",
+      "raw_excerpt": "Automation · Hype factor\n# Hype factor is ready\nSpaceX IPO hype peaks\nI'll gather confirmed calendars and SpaceX/IPO context first, then lock dates and hype ratings before writing the structured brief.*1. Overall Market Condition (Next 1–2 Weeks)*\n* Base Environment: Cautious\n* Dominant Macro Drivers: The CPI released on June 10, 2026 and the PPI released on June 11, 2026 already set the inflation tape into the June 16–17, 2026 FOMC meeting (decision Wednesday, June 17, 2026 at 2:00 PM ET, with SEP and dot plot). Retail sales for May 2026 print on June 17, 2026. Markets are closed Friday, June 19, 2026 for Juneteenth. The Q1 2026 GDP third estimate and May 2026 PCE land together on June 25, 2026. Liquidity is being pulled into the SpaceX (SPCX) listing that begins trading today, June 12, 2026.\n* Key Risks: A hawkish June 17, 2026 FOMC statement or dot plot after the June 10 CPI can reprice duration and crush multiple expansion outside the IPO complex. A weak May retail-sales print on June 17, 2026 would conf ...\nContinue reading: https://grok.com/chat/43043cc8-044a-486d-9b39-1c3a39ab397b",
+      "body_complete": true
+    }
+  ]
+}

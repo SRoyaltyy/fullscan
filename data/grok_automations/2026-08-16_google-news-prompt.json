@@ -1,0 +1,24 @@
+{
+  "task_id": "5b4f01c3-fe5b-463a-a270-8bc9def8e26f",
+  "slug": "google-news-prompt",
+  "kind": "ticker_news",
+  "retrieved": "2026-08-16T13:07:14Z",
+  "gmail_message_id": "1a00aaefe662ea2c",
+  "gmail_message_ids": [
+    "1a00aaefe662ea2c"
+  ],
+  "items": [
+    {
+      "headline": "Iran tensions, retail sales drop",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-08-16T13:07:14Z",
+      "task_id": "5b4f01c3-fe5b-463a-a270-8bc9def8e26f",
+      "gmail_message_id": "1a00aaefe662ea2c",
+      "automation_title": "Google News prompt",
+      "chat_url": null,
+      "raw_excerpt": "Automation · Google News prompt\n\n# Google News prompt is ready\n\nIran tensions, retail sales drop\n\nGoogle News prompt is ready Iran tensions, retail sales drop 1. Executive Summary Over the past 24–48 hours, market-relevant news centered on the ongoing US-Iran conflict (including extended carrier\n",
+      "body_complete": false
+    }
+  ]
+}

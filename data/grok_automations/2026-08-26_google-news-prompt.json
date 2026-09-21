@@ -1,0 +1,24 @@
+{
+  "task_id": "5b4f01c3-fe5b-463a-a270-8bc9def8e26f",
+  "slug": "google-news-prompt",
+  "kind": "ticker_news",
+  "retrieved": "2026-08-26T13:28:59Z",
+  "gmail_message_id": "1a03e4280ba1f9db",
+  "gmail_message_ids": [
+    "1a03e4280ba1f9db"
+  ],
+  "items": [
+    {
+      "headline": "Trade war hits US paper prices",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-08-26T13:28:59Z",
+      "task_id": "5b4f01c3-fe5b-463a-a270-8bc9def8e26f",
+      "gmail_message_id": "1a03e4280ba1f9db",
+      "automation_title": "Google News Prompt",
+      "chat_url": null,
+      "raw_excerpt": "Automation · Google News Prompt\n\n# Google News Prompt is ready\n\nTrade war hits US paper prices\n\nAutomation · Google News prompt Google News prompt is ready Trade war hits US paper prices 1. Executive Summary Over the past 24–48 hours,\n",
+      "body_complete": false
+    }
+  ]
+}

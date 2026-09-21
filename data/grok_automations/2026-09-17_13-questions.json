@@ -1,0 +1,24 @@
+{
+  "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+  "slug": "13-questions",
+  "kind": "macro",
+  "retrieved": "2026-09-17T13:36:31Z",
+  "gmail_message_id": "1a0af954dc9dcd46",
+  "gmail_message_ids": [
+    "1a0af954dc9dcd46"
+  ],
+  "items": [
+    {
+      "headline": "VIX dips, score -14",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-09-17T13:36:31Z",
+      "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+      "gmail_message_id": "1a0af954dc9dcd46",
+      "automation_title": "13 Questions",
+      "chat_url": "https://grok.com/chat/336d9307-be0b-4ed0-b020-f2d83f76e72b",
+      "raw_excerpt": "Automation · 13 Questions\n# 13 Questions is ready\nVIX dips, score -14\nGathering fresh market data and locating the Google Sheet connector.*-14*\n*Q13. Is the market in \"bad news = good news\" mode?* *Regime:* inflation-dominant *Current Value & Trend:* Aug CPI (released 2026-09-11) headline in line at +0.4% m/m / 3.4% y/y; core +0.3% m/m vs +0.2% expected. Immediate US500 tick-down, then S&P 500 closed +0.86% as hike odds jumped toward ~90% into the 2026-09-16 FOMC. Latest jobs: Aug payrolls +162k, unemployment 4.1% (BLS, 2026-09). *Threshold Band:* inflation-dom ...\nContinue reading: https://grok.com/chat/336d9307-be0b-4ed0-b020-f2d83f76e72b",
+      "body_complete": true
+    }
+  ]
+}

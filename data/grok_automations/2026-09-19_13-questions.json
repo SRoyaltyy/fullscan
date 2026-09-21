@@ -1,0 +1,24 @@
+{
+  "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+  "slug": "13-questions",
+  "kind": "macro",
+  "retrieved": "2026-09-19T13:24:20Z",
+  "gmail_message_id": "1a0b9d6e04758bea",
+  "gmail_message_ids": [
+    "1a0b9d6e04758bea"
+  ],
+  "items": [
+    {
+      "headline": "Score -9 Caution",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-09-19T13:24:20Z",
+      "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+      "gmail_message_id": "1a0b9d6e04758bea",
+      "automation_title": "13 Questions",
+      "chat_url": "https://grok.com/chat/ab1caf48-8844-420b-a382-d9cbc30b7379",
+      "raw_excerpt": "Automation · 13 Questions\n\n# 13 Questions is ready\n\nScore -9 Caution\n\nI'll pull fresh market, FRED, FedWatch, CPI, claims, and geopolitics data first, then score the checklist and append the row to the Google Sheet.Next I’ll lock 1-month trends and fill Fed path, commodities, China, geopolitics, and the CPI/jobs market reaction.Pulling one-month FRED levels, 3m10y, CPI consensus, and China FAI so every scored item has a dated trend.The named sheet ID is different from the copies I found; I’ll open that file and grab the remaining FRED 1-month levels.The live tracker already has rows through yesterday. I’ll read it and append today’s score there.Score is locked at −9. Next I’ll append that row to the Grok Update sheet.*-9*\n\n*Q13. Is the market in \"bad news = good news\" mode?* *Regime:* inflation-dominant hike regime *Current Value & Trend:* August CPI released 2026-09-11: headline +0.4% MoM / +3.4% YoY (in line); core +0.3% MoM vs +0.2% forecast. S&P 500 closed +0.86% tha ...\n\nContinue reading: https://grok.com/chat/ab1caf48-8844-420b-a382-d9cbc30b7379",
+      "body_complete": true
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "task_id": "5b4f01c3-fe5b-463a-a270-8bc9def8e26f",
+  "slug": "google-news-prompt",
+  "kind": "ticker_news",
+  "retrieved": "2026-08-15T13:06:22Z",
+  "gmail_message_id": "1a00587d7d4b5e2b",
+  "gmail_message_ids": [
+    "1a00587d7d4b5e2b"
+  ],
+  "items": [
+    {
+      "headline": "Hormuz tensions lift oil",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-08-15T13:06:22Z",
+      "task_id": "5b4f01c3-fe5b-463a-a270-8bc9def8e26f",
+      "gmail_message_id": "1a00587d7d4b5e2b",
+      "automation_title": "Google News prompt",
+      "chat_url": null,
+      "raw_excerpt": "Automation · Google News prompt\n\n# Google News prompt is ready\n\nHormuz tensions lift oil\n\nGoogle News prompt is ready Hormuz tensions lift oil 1. Executive Summary Over the past 24–48 hours (primarily August 13–15, 2026), markets digested weaker-than-expected July US retail sales (-0.6%),\n",
+      "body_complete": false
+    }
+  ]
+}

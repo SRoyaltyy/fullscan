@@ -1,16 +1,24 @@
 {
   "task_id": "23a24524-4eaa-4b9e-bd39-5b30e2ec74ae",
   "slug": "hype-factor",
-  "kind": "hype-factor",
-  "retrieved": "2026-09-21T16:00:00Z",
+  "kind": "ticker_news",
+  "retrieved": "2026-09-21T13:18:30Z",
+  "gmail_message_id": "1a0c41e3dcda08f7",
+  "gmail_message_ids": [
+    "1a0c41e3dcda08f7"
+  ],
   "items": [
     {
-      "headline": "SEC issues order granting temporary exemptive relief to Tokenized Securities Venues",
-      "source": "sec.gov",
-      "published": "2026-09-17T08:00:00-04:00",
-      "retrieved": "2026-09-21T16:00:00Z",
+      "headline": "SPCX lock-up supply looms",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-09-21T13:18:30Z",
       "task_id": "23a24524-4eaa-4b9e-bd39-5b30e2ec74ae",
-      "raw_excerpt": "Fixture: Commission granted temporary exemptive relief to tokenized securities venues."
+      "gmail_message_id": "1a0c41e3dcda08f7",
+      "automation_title": "Hype Factor",
+      "chat_url": "https://grok.com/chat/e2d7ee0f-b6a9-41ff-91d5-f95d289f5758",
+      "raw_excerpt": "Automation · Hype factor\n\n# Hype factor is ready\n\nSPCX lock-up supply looms\n\nI'll scan official calendars and primary sources for confirmed events over the next 1–4 weeks and build the structured report from those dates.*1. Overall Market Condition (Next 1–2 Weeks)*\n\n* Base Environment: Cautious\n* Dominant Macro Drivers: The FOMC raised the funds target 25 bp to 3.75%–4.00% on September 16, 2026, the first hike since 2023; markets now price a higher-for-longer path into the October 27–28, 2026 meeting. Confirmed data that can reprice that path arrive in a tight cluster: JOLTS for August 2026 on September 29, 2026; Q2 2026 GDP third estimate and August 2026 PCE on September 30, 2026; ISM Manufacturing on October 1, 2026; September 2026 Employment Situation on October 2, 2026.\n* Key Risks: Another hot PCE or payrolls print that validates a second hike; SpaceX (SPCX) lock-up supply of up to ~328.4 million shares on September 24, 2026 after earlier September 9–10, 2026 releases; thin confirmed mega-IPO calendar this ...\n\nContinue reading: https://grok.com/chat/e2d7ee0f-b6a9-41ff-91d5-f95d289f5758",
+      "body_complete": true
     }
   ]
 }

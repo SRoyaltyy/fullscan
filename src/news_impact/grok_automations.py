@@ -38,6 +38,11 @@ KNOWN_TASKS: dict[str, dict[str, Any]] = {
         "kind": "13-questions",
         "macro_only": True,
     },
+    "unknown_news-parsing": {
+        "slug": "news-parsing",
+        "kind": "news-parsing",
+        "macro_only": False,
+    },
 }
 
 _MACRO_SLUGS = frozenset({
@@ -271,13 +276,29 @@ def counts(root: Path | None = None) -> dict[str, Any]:
         sl = str(a.get("automation_slug") or "unknown")
         by_slug[sl] = by_slug.get(sl, 0) + 1
     earliest, latest = dump_span(root)
+    body_complete = 0
+    for path in paths:
+        try:
+            blob = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        for it in _items_from_blob(blob):
+            if it.get("body_complete") is True:
+                body_complete += 1
     return {
         "n_files": len(paths),
         "n_items": len(arts),
+        "n_body_complete": body_complete,
         "by_slug": by_slug,
         "earliest": earliest,
         "latest": latest,
         "status": "used" if paths else "empty",
+        "ingest": "gmail_noreply_x.ai",
+        "note": (
+            "Gmail previews are truncated. "
+            f"body_complete={body_complete}/{len(arts) or 0}. "
+            "Actions must not call live Automations."
+        ),
     }
 
 

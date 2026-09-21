@@ -1,0 +1,24 @@
+{
+  "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+  "slug": "13-questions",
+  "kind": "macro",
+  "retrieved": "2026-09-06T13:41:19Z",
+  "gmail_message_id": "1a076f3bdcd5084d",
+  "gmail_message_ids": [
+    "1a076f3bdcd5084d"
+  ],
+  "items": [
+    {
+      "headline": "Sep 6 macro score -7",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-09-06T13:41:19Z",
+      "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+      "gmail_message_id": "1a076f3bdcd5084d",
+      "automation_title": "13 Questions",
+      "chat_url": null,
+      "raw_excerpt": "Automation · 13 Questions\n\n# 13 Questions is ready\n\nSep 6 macro score -7\n\nAutomation · 13 Questions 13 Questions is ready Sep 6 macro score -7 Gathering fresh market and macro data for the 6 Sep 2026 checklist.\n",
+      "body_complete": false
+    }
+  ]
+}

@@ -1,16 +1,24 @@
 {
   "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
   "slug": "13-questions",
-  "kind": "13-questions",
-  "retrieved": "2026-09-21T16:00:00Z",
+  "kind": "macro",
+  "retrieved": "2026-09-21T13:17:49Z",
+  "gmail_message_id": "1a0c41d9ff26a52a",
+  "gmail_message_ids": [
+    "1a0c41d9ff26a52a"
+  ],
   "items": [
     {
-      "headline": "What does a hotter-than-expected CPI print do to duration and the dollar?",
+      "headline": "Score -8 Caution",
       "source": "grok_automations",
       "published": null,
-      "retrieved": "2026-09-21T16:00:00Z",
+      "retrieved": "2026-09-21T13:17:49Z",
       "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
-      "raw_excerpt": "Macro Q only. CPI surprise reprices TLT/QQQ down and UUP up. No single-name."
+      "gmail_message_id": "1a0c41d9ff26a52a",
+      "automation_title": "13 Questions",
+      "chat_url": "https://grok.com/chat/5fac1a12-3751-499d-814b-f45dbab339b3",
+      "raw_excerpt": "Automation · 13 Questions\n\n# 13 Questions is ready\n\nScore -8 Caution\n\nI'll pull fresh data for each rubric item first, then score strictly and append the row to the specified Google Sheet.Pulling FRED series, FedWatch curve, CPI, claims, and the remaining market series next.Scoring is ready. Opening the Google Sheet and appending the dated score row.Downloading the specified sheet and writing today’s row, then uploading the updated file.*-8*\n\n*Q13. Is the market in \"bad news = good news\" mode?* *Regime:* inflation-dominant *Current Value & Trend:* Aug CPI (released 2026-09-11) headline 0.4% m/m / 3.4% y/y; core 0.3% m/m vs 0.2% consensus. Immediate S&P futures sold off, then cash S&P closed +0.86% as hike odds jumped toward ~90% into the Sep 16 FOMC. *Threshold Band:* n/a (regime lens, not scored) *Reasoning:* Hotter core and a confirmed hike path raised yields first; the later equity bounce priced tighter policy as inflation-control, not cut- ...\n\nContinue reading: https://grok.com/chat/5fac1a12-3751-499d-814b-f45dbab339b3",
+      "body_complete": true
     }
   ]
 }

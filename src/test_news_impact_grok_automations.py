@@ -9,6 +9,7 @@ from src.news_impact.classify import rank_articles
 from src.news_impact.corpus import dedupe_titles, inventory, load_all_sources
 from src.news_impact.grok_automations import (
     SOURCE,
+    counts,
     is_macro_only,
     load_grok_dumps,
     parse_connector_results,
@@ -21,16 +22,17 @@ from src.news_impact.pipeline import analyze_article
 
 def test_load_reads_committed_json() -> None:
     rows = load_grok_dumps()
-    assert rows, "fixture JSON under data/grok_automations/ must be readable"
+    assert len(rows) >= 157, "Gmail dump tree must be readable"
     assert all(r.get("harvest_source") == SOURCE for r in rows)
     assert all(r.get("source") == SOURCE for r in rows)
-    titles = {r["title"] for r in rows}
-    assert any("Tokenized Securities" in t for t in titles)
-    # 13-questions fixture is tagged macro-only
+    slugs = {r.get("automation_slug") for r in rows}
+    assert {"hype-factor", "google-news-prompt", "13-questions", "news-parsing"} <= slugs
     q13 = [r for r in rows if r.get("automation_slug") == "13-questions"]
-    assert q13
+    assert len(q13) >= 39
     assert q13[0]["macro_only"] is True
     assert is_macro_only(art=q13[0]) is True
+    # Gmail schema: headline + optional published=null still harvests
+    assert any(not r.get("published_at") for r in rows)
 
 
 def test_empty_dir_does_not_crash() -> None:
@@ -46,9 +48,12 @@ def test_inventory_lists_grok_after_wire() -> None:
     inv = inventory()
     names = {s["name"]: s for s in inv["sources"]}
     grok = names["grok_automations"]
-    assert grok["n_files"] >= 1
+    meta = counts()
+    assert grok["n_files"] >= 157
     assert grok["status"] == "used"
-    assert grok.get("n_items", 0) >= 1
+    assert grok.get("n_items", 0) >= 157
+    assert meta["n_items"] >= 157
+    assert grok.get("earliest") == "2026-08-13"
     assert "Automations API" in (grok.get("note") or "")
 
 

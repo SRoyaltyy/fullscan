@@ -1,0 +1,24 @@
+{
+  "task_id": "23a24524-4eaa-4b9e-bd39-5b30e2ec74ae",
+  "slug": "hype-factor",
+  "kind": "ticker_news",
+  "retrieved": "2026-09-17T13:24:21Z",
+  "gmail_message_id": "1a0af8a2a9ec12ac",
+  "gmail_message_ids": [
+    "1a0af8a2a9ec12ac"
+  ],
+  "items": [
+    {
+      "headline": "SpaceX Starship hype vs hike",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-09-17T13:24:21Z",
+      "task_id": "23a24524-4eaa-4b9e-bd39-5b30e2ec74ae",
+      "gmail_message_id": "1a0af8a2a9ec12ac",
+      "automation_title": "Hype factor",
+      "chat_url": "https://grok.com/chat/7481e4c8-2331-4468-b42f-ec8ff48d76ae",
+      "raw_excerpt": "Automation · Hype factor\n# Hype factor is ready\nSpaceX Starship hype vs hike\nI'll gather confirmed calendars and high-reliability event dates first so the scan is anchored to primary sources rather than rumor.*1. Overall Market Condition (Next 1–2 Weeks)*\n* Base Environment: Cautious\n* Dominant Macro Drivers: The FOMC raised the funds target 25 bp to 3.75%–4.00% at the September 15–16, 2026 meeting (decision Wednesday, September 16, 2026). Markets now price a tighter policy path into the October 27–28, 2026 FOMC. The next confirmed data cluster is JOLTS (August 2026) on Tuesday, September 29, 2026; GDP third estimate (Q2 2026) and PCE (August 2026) on Wednesday, September 30, 2026; and the Employment Situation (September 2026 payrolls) on Friday, October 2, 2026. CPI (September 2026) on Wednesday, October 14, 2026 sits just beyond the two-week window and will dominate the subsequent week.\n* Key Risks: Another firm labor or inflation print that validates the September 16 hike and lifts odds of a follow-up move a ...\nContinue reading: https://grok.com/chat/7481e4c8-2331-4468-b42f-ec8ff48d76ae",
+      "body_complete": true
+    }
+  ]
+}

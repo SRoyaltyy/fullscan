@@ -1,0 +1,24 @@
+{
+  "task_id": "unknown_news-parsing",
+  "slug": "news-parsing",
+  "kind": "ticker_news",
+  "retrieved": "2026-09-19T13:24:04Z",
+  "gmail_message_id": "1a0b9d6a31448884",
+  "gmail_message_ids": [
+    "1a0b9d6a31448884"
+  ],
+  "items": [
+    {
+      "headline": "EPA GHG repeal, H-1B curbs",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-09-19T13:24:04Z",
+      "task_id": "unknown_news-parsing",
+      "gmail_message_id": "1a0b9d6a31448884",
+      "automation_title": "News Parsing",
+      "chat_url": "https://grok.com/chat/dd0322a1-01a6-4c58-bf34-b2368a56b100",
+      "raw_excerpt": "Automation · News parsing\n\n# News parsing is ready\n\nEPA GHG repeal, H-1B curbs\n\nI'll systematically scan the listed official sources for developments from September 5–19, 2026 and map any market-relevant items to your sector checklist.Pulling agency-specific items from the last two weeks so the sector map is complete.*1. Executive Summary*\n\nThe most market-relevant U.S. policy moves in the September 5–19, 2026 window were labor and energy regulation, not new statutes. On September 18 the White House extended the $100,000 H-1B entry fee and ordered agencies to weigh recent or planned U.S. layoffs when reviewing petitions—*increased friction* for Technology & Semiconductors (AI infrastructure hiring). On September 14 EPA finalized repeal of most of the 2024 power-plant GHG standards and proposed wiping remaining GHG standards, while DOE used Federal Power Act §202(c) on September 18 to keep specified fossil units available—*supportive* for coal, oil & gas generation, and utility fuel mix,\n\nContinue reading: https://grok.com/chat/dd0322a1-01a6-4c58-bf34-b2368a56b100",
+      "body_complete": true
+    }
+  ]
+}
