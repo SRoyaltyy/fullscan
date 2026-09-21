@@ -7,7 +7,7 @@ error_category: "C"
 falsifier: "If on a future session with a net-negative leading S0–S4 card for a defensive sector, red PM, and a strong risk-on tape (index futures ≥ +1%, growth leading), the sector ETF closes UP or flat (|pct| < 0.3%), then the corrected behavior (preserving the negative leading-sum sign) would have produced a dir MISS, falsifying the claim that index_carry systematically fights correct negative defensive reads. Conversely, if the engine's index_carry leg is shown to have positive predictive value for defensive sectors in risk-on regimes (i.e., defensive ETFs systematically mean-revert up on such days), the correction should be withdrawn."
 sector: "Consumer Defensive"
 date: "2026-09-21"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Defensive — 2026-09-21

@@ -7,7 +7,7 @@ error_category: "D"
 falsifier: "If a future session shows the injected Channel 1 relative tape and the pipeline `sector_rs_tape` agreeing in sign, AND the card is a genuine gap day (PM green but NQ < +0.5% or 4-horizon rel mixed), AND the published flat/flat call is correct — then this lesson's mechanism is not the binding constraint and should be re-examined."
 sector: "Technology"
 date: "2026-09-21"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Technology — 2026-09-21

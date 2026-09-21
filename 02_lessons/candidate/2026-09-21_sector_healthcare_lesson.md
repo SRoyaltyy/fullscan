@@ -7,7 +7,7 @@ error_category: "C"
 falsifier: "If a future session shows a low-beta defensive with PM ≤ 0 on a strong risk-on tape (SPY ≥ +1%) and the sector closes DOWN absolute (not just lagging relative), then the beta-arithmetic decomposition is wrong and the funding-source effect CAN flip absolute direction — invalidating this lesson. Conversely, if a modest-tape session (SPY < +0.75%) with PM ≤ 0 produces a mild-up absolute close, the tape-strength qualifier is too strict."
 sector: "Healthcare"
 date: "2026-09-21"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Healthcare — 2026-09-21

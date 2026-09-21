@@ -1,0 +1,77 @@
+{
+  "signal_date": "2026-09-20",
+  "suggestions": [
+    {
+      "signal_date": "2026-09-20",
+      "generated_at": "2026-09-20 15:01",
+      "ticker": "XLE",
+      "side": "sell",
+      "net": -8.0,
+      "events": [
+        "news_judge"
+      ],
+      "entry_date": "2026-09-21",
+      "entry_open": 63.17,
+      "window_through": "2026-09-21",
+      "trading_days_elapsed": 0,
+      "complete": false,
+      "latest_close": 62.46,
+      "current_return_pct": 1.14,
+      "horizon_returns_pct": {},
+      "mfe_pct": 1.29,
+      "mfe_day": "2026-09-21",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-21"
+    },
+    {
+      "signal_date": "2026-09-20",
+      "generated_at": "2026-09-20 15:01",
+      "ticker": "BAC",
+      "side": "sell",
+      "net": -5.5,
+      "events": [
+        "news_judge"
+      ],
+      "entry_date": "2026-09-21",
+      "entry_open": 58.05,
+      "window_through": "2026-09-21",
+      "trading_days_elapsed": 0,
+      "complete": false,
+      "latest_close": 57.96,
+      "current_return_pct": 0.16,
+      "horizon_returns_pct": {},
+      "mfe_pct": 1.02,
+      "mfe_day": "2026-09-21",
+      "ever_profitable": true,
+      "first_profitable_day": "2026-09-21"
+    }
+  ],
+  "summary": {
+    "n_suggestions": 2,
+    "ever_profitable": {
+      "n": 2,
+      "wins": 2,
+      "win_rate": 100.0
+    },
+    "close_1d": null,
+    "close_3d": null,
+    "close_5d": null,
+    "close_10d": null,
+    "close_14d": null,
+    "side_buy": {
+      "n": 0,
+      "ever_profitable": null,
+      "close_5d": null
+    },
+    "side_sell": {
+      "n": 2,
+      "ever_profitable": {
+        "n": 2,
+        "wins": 2,
+        "win_rate": 100.0,
+        "avg": 1.16
+      },
+      "close_5d": null
+    }
+  }
+}
