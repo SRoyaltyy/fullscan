@@ -137,7 +137,7 @@ def make_plan(payload, snap, clock, *, allow_after_bell=False):
 
 def _place_batch(result, api, tickets):
     try:
-        # One broker batch: later names do not wait behind earlier network RTTs.
+        # Serial single places (sandbox rejects multi-order combo_type).
         replies = api.place_batch(tickets)
         for row in result['sent']:
             got = replies.get(row['client_order_id'], {})

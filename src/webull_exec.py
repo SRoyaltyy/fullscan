@@ -566,32 +566,27 @@ class PaperAPI:
                           acc_id=self.account_id)
 
     def place_batch(self, tickets):
+        """Place each ticket as a one-element list — same path as place().
+
+        Sandbox rejects a multi-order place_order with
+        invalid combo_type=["NORMAL", ...] (OPENAPI_PARAM_ERR / HTTP 417).
+        """
         if self.host != PAPER_HOST or self.trade is None or not self.account_id:
             raise RuntimeError("sandbox account not connected")
-        bodies = [order_body(t) for t in tickets]
-        payload = self._json(self.trade.order_v3.place_order(self.account_id, bodies), "place_order_batch")
-        def rows(value):
-            if isinstance(value, list):
-                for x in value:
-                    yield from rows(x)
-            elif isinstance(value, dict):
-                if value.get("client_order_id"):
-                    yield value
-                for key in ("data", "orders", "result"):
-                    if key in value:
-                        yield from rows(value[key])
         out = {}
         ack = datetime.now().astimezone().isoformat()
-        envelope_ok = not isinstance(payload, dict) or (
-            not payload.get("error") and payload.get("success") is not False and
-            str(payload.get("code", "0")).upper() in ("0", "200", "SUCCESS", "OK"))
-        for row in rows(payload):
-            ok = (envelope_ok and not row.get("error") and not row.get("error_code") and
-                  row.get("success") is not False and
-                  str(row.get("code", "0")).upper() in ("0", "200", "SUCCESS", "OK") and
-                  str(row.get("status", "")).upper() not in ("REJECTED", "ERROR", "FAILED"))
-            out[str(row["client_order_id"])] = {"ok": ok, "order_id": parse_order_id(row),
-                                                "acknowledged_at": ack}
+        for ticket in tickets:
+            body = order_body(ticket)
+            coid = str(body["client_order_id"])
+            reply = self.place(ticket, self.env)
+            row = {
+                "ok": bool(reply.get("ok")),
+                "order_id": str(reply.get("order_id") or ""),
+                "acknowledged_at": reply.get("acknowledged_at") or ack,
+            }
+            if reply.get("error"):
+                row["error"] = reply["error"]
+            out[coid] = row
         return out
 
     def place(self, ticket: dict, env: str) -> dict:

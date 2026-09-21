@@ -115,7 +115,11 @@ def test_http_200_business_rejection_is_not_acceptance():
     api.account_id = 'paper-test'
     api.trade = SimpleNamespace(order_v3=SimpleNamespace(place_order=lambda *args:
         {'code': 'ERROR', 'data': [{'client_order_id': 'x', 'order_id': 'fake'}]}))
-    assert not api.place_batch([{'ticker': 'ABC', 'side': 'BUY', 'shares': 1, 'date': DATE}])['x']['ok']
+    ticket = {'ticker': 'ABC', 'side': 'BUY', 'shares': 1, 'date': DATE}
+    coid = we.client_order_id(DATE, 'BUY', 'ABC')
+    got = api.place_batch([ticket])
+    assert coid in got
+    assert not got[coid]['ok']
 
 
 def test_slow_journal_cannot_allow_a_late_send(tmp_path):
