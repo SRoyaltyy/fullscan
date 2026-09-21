@@ -1,0 +1,20 @@
+{
+ "risk_tilt": "off",
+ "macros": [
+  "hawkish",
+  "bearish",
+  "hawkish",
+  "bearish"
+ ],
+ "sector_tilts": {
+  "Energy": "bearish",
+  "Technology": "bullish",
+  "Hardware": "bearish"
+ },
+ "tickers": {
+  "XLE": -9.5,
+  "SMH": 4.0
+ },
+ "b1_inject": "NEWS_JUDGE: n=7 rescued=5\nMACRO rates: [hawkish] Warsh JH boosts September hike odds; gold \u22123% (session/1d-1w)\nMACRO risk: [bearish] Dow worst week in six months on yields + oil (session)\nSECTOR small_caps: [bearish] rising yields pressure IWM duration/beta (IWM)\nSECTOR energy: [bearish] surprise crude build + hike path; DVN \u22125.6% (XLE)\nSECTOR semis: [bullish] ASML 2027 EUV nearly sold out on AI demand (SMH)\nSECTOR ai_infra: [bullish] FIX backlog + LITE optics bid (AI-infra basket)\nSECTOR hardware: [bearish] APH/Fabrinet weakness with yields overlay (connectors/EMS)\nINTERACTION: hike-odds+yields+IWM=one rates cluster; ASML vs APH=mixed tech not broad bid; do not long XLE on Dow-oil while inventories build\nWATCH: usable set thin and gold-contradictory; ignore Barrick cut-bet tape",
+ "date": "2026-09-21"
+}
