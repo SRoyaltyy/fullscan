@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T04:35:31.175970-04:00",
+  "generated_at": "2026-09-21T04:35:38.079680-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -175,7 +175,7 @@
       "date": "2026-09-21",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-21T04:35:30.600452-04:00",
+      "at": "2026-09-21T04:35:37.503899-04:00",
       "files": [
         {
           "path": "01_daily/news/2026-09-21_judge.md",
