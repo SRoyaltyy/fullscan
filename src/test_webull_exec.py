@@ -279,6 +279,73 @@ def test_paper_order_is_market_not_limit() -> None:
     assert body["side"] == "BUY"
 
 
+def test_place_batch_sends_one_order_at_a_time() -> None:
+    from types import SimpleNamespace
+    from src import webull_exec as we
+
+    seen = []
+
+    def place_order(account_id, bodies):
+        seen.append((account_id, bodies))
+        assert isinstance(bodies, list) and len(bodies) == 1
+        assert bodies[0]["combo_type"] == "NORMAL"
+        assert not isinstance(bodies[0]["combo_type"], list)
+        body = bodies[0]
+        return {
+            "code": "SUCCESS",
+            "data": [{
+                "client_order_id": body["client_order_id"],
+                "order_id": "oid-" + body["symbol"],
+            }],
+        }
+
+    api = we.PaperAPI()
+    api.account_id = "paper-test"
+    api.trade = SimpleNamespace(order_v3=SimpleNamespace(place_order=place_order))
+    tickets = [
+        {"ticker": "DELL", "side": "BUY", "shares": 1, "date": "2026-09-21"},
+        {"ticker": "GME", "side": "BUY", "shares": 1, "date": "2026-09-21"},
+        {"ticker": "UMC", "side": "BUY", "shares": 1, "date": "2026-09-21"},
+        {"ticker": "VSTS", "side": "BUY", "shares": 1, "date": "2026-09-21"},
+    ]
+    got = api.place_batch(tickets)
+    assert len(seen) == 4
+    for ticket, (aid, bodies) in zip(tickets, seen):
+        assert aid == "paper-test"
+        assert len(bodies) == 1
+        assert bodies[0]["symbol"] == ticket["ticker"]
+        coid = client_order_id("2026-09-21", "BUY", ticket["ticker"])
+        assert bodies[0]["client_order_id"] == coid
+        assert got[coid]["ok"] is True
+        assert got[coid]["order_id"] == "oid-" + ticket["ticker"]
+
+
+def test_place_batch_keeps_later_names_after_one_reject() -> None:
+    from types import SimpleNamespace
+    from src import webull_exec as we
+
+    def place_order(account_id, bodies):
+        body = bodies[0]
+        assert len(bodies) == 1
+        if body["symbol"] == "GME":
+            return {"code": "ERROR", "msg": "reject"}
+        return {"code": "0", "data": [{"order_id": "ok-" + body["symbol"]}]}
+
+    api = we.PaperAPI()
+    api.account_id = "paper-test"
+    api.trade = SimpleNamespace(order_v3=SimpleNamespace(place_order=place_order))
+    tickets = [
+        {"ticker": "DELL", "side": "BUY", "shares": 1, "date": "2026-09-21"},
+        {"ticker": "GME", "side": "BUY", "shares": 1, "date": "2026-09-21"},
+        {"ticker": "UMC", "side": "BUY", "shares": 1, "date": "2026-09-21"},
+    ]
+    got = api.place_batch(tickets)
+    assert got[client_order_id("2026-09-21", "BUY", "DELL")]["ok"] is True
+    assert got[client_order_id("2026-09-21", "BUY", "GME")]["ok"] is False
+    assert got[client_order_id("2026-09-21", "BUY", "UMC")]["ok"] is True
+    assert got[client_order_id("2026-09-21", "BUY", "UMC")]["order_id"] == "ok-UMC"
+
+
 def test_yml_warms_before_bell_and_has_one_automatic_sender() -> None:
     root = Path(__file__).resolve().parent.parent
     yml = (root / ".github/workflows/webull_paper.yml").read_text()
@@ -312,7 +379,9 @@ def main() -> None:
     test_hot4_tickets_long_only_skip_held_cash_and_sit()
     test_hot4_zero_cash_is_honest()
     test_paper_order_is_market_not_limit()
-    print("test_webull_exec: 13 ok")
+    test_place_batch_sends_one_order_at_a_time()
+    test_place_batch_keeps_later_names_after_one_reject()
+    print("test_webull_exec: 15 ok")
 
 
 if __name__ == "__main__":
