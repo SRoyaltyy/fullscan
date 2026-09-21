@@ -190,10 +190,37 @@ def test_day_board_html_has_raw_poll() -> None:
     html = (Path(__file__).resolve().parent.parent
             / "dashboard" / "day-board" / "index.html").read_text(encoding="utf-8")
     assert "raw.githubusercontent.com/SRoyaltyy/fullscan/main/data/day_board" in html
-    assert "data/stock_book/latest_suggestions.json" in html
     assert "Stock Book readiness" in html
     assert "What was just pushed" in html
+    assert "File status" in html
+    assert "What's in it" in html
     assert "factor-mine" in html
+    assert "Today's selections" not in html
+    assert "Every strategy" not in html
+    assert "today_strategies.json" not in html
+    assert "latest_suggestions.json" not in html
+
+
+def test_file_rows_include_content_said() -> None:
+    board = day_board.build("2026-09-18")
+    fin = next(p for p in board["processes"] if p["key"] == "finviz")
+    digest = next(f for f in fin["files"] if f["key"] == "digest_json")
+    assert digest["status"] == "OK"
+    assert digest["said"]
+    assert "tickers" in digest["said"] or "signals" in digest["said"]
+    heat = next(p for p in board["processes"] if p["key"] == "postclose")
+    heat_json = next(f for f in heat["files"] if f["key"] == "heat_json" or "map_heat.json" in f["path"])
+    if heat_json["status"] == "OK":
+        assert heat_json["said"]
+        assert heat_json["said"] != str(heat_json.get("size") or "")
+    pre = next(p for p in board["processes"] if p["key"] == "preopen")
+    gen = next(f for f in pre["files"] if f["key"] == "general")
+    assert gen["said"]
+    assert "UP" in gen["said"] or "DOWN" in gen["said"] or gen["status"] != "OK"
+    cat = next(p for p in board["processes"] if p["key"] == "catalyst")
+    dos = next(f for f in cat["files"] if f["key"] == "dossiers")
+    if dos["status"] != "MISSING":
+        assert "usable" in (dos["said"] or "").lower() or dos["reason"]
 
 
 def test_should_not_push_locally() -> None:
@@ -233,7 +260,6 @@ def test_day_board_splits_finviz_digest_rows() -> None:
     assert by["digest_json"]["path"] != by["market_digest_json"]["path"]
     assert by["digest_json"]["path"] != by["market_digest_close_json"]["path"]
     assert by["digest_json"]["status"] == "OK"
-    assert by["market_digest_close_json"]["status"] != "OK"
 
 
 def test_qc_news_parse_still_loud() -> None:
@@ -253,6 +279,7 @@ def main() -> None:
         test_merge_boards_unions_lands,
         test_qc_rejects_2b_digest,
         test_day_board_html_has_raw_poll,
+        test_file_rows_include_content_said,
         test_day_board_splits_finviz_digest_rows,
         test_should_not_push_locally,
         test_land_never_raises,

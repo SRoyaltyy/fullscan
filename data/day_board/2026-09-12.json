@@ -1,8 +1,8 @@
 {
   "date": "2026-09-12",
-  "generated_at": "2026-09-12T09:59:00.799868-04:00",
+  "generated_at": "2026-09-21T05:56:35.930968-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-12_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-12/_board.json` \u2014 missing",
@@ -11,8 +11,8 @@
   ],
   "counts": {
     "ok": 5,
-    "partial": 1,
-    "fail": 2,
+    "partial": 0,
+    "fail": 3,
     "n": 8
   },
   "processes": [
@@ -20,9 +20,9 @@
       "key": "postclose",
       "name": "Post-close research",
       "yaml": "map_heat_postclose.yml",
-      "status": "PARTIAL",
+      "status": "FAIL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 0,
       "n_req": 2,
       "n_opt_ok": 1,
       "n_opt": 2,
@@ -34,7 +34,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "postclose_baseline_missing",
-          "size": 0
+          "size": 0,
+          "said": "postclose_baseline_missing",
+          "bullets": []
         },
         {
           "key": "baseline_md",
@@ -43,16 +45,20 @@
           "role": "optional",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "heat_json",
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-09-12_map_heat.json",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 269164
+          "status": "FAIL",
+          "reason": "stale_map_heat_md",
+          "size": 0,
+          "said": "stale_map_heat_md \u00b7 morning_overlay \u00b7 11632 names \u00b7 hot Electronic Components, Electronics & Computer Distribution, Communication Equipment, Computer Hardware \u00b7 cold Silver, Staffing & Employment Services, Insurance Brokers",
+          "bullets": []
         },
         {
           "key": "heat_md",
@@ -61,7 +67,12 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 16810
+          "size": 16810,
+          "said": "MAP HEAT \u2014 2026-09-11",
+          "bullets": [
+            "Export `finviz_2026-09-11.csv` \u00b7 11632 names \u00b7 generated 2026-09-12T01:47:24.157263-04:00",
+            "TAPE (live futures)"
+          ]
         }
       ],
       "said": "tables on disk",
@@ -76,29 +87,88 @@
       "n_req_ok": 1,
       "n_req": 1,
       "n_opt_ok": 1,
-      "n_opt": 1,
+      "n_opt": 5,
       "files": [
         {
           "key": "digest_json",
-          "name": "Finviz digest JSON",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-12_finviz_digest.json",
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 88414
+          "size": 88414,
+          "said": "400 tickers \u00b7 400 signals \u00b7 top AAPL, ABT, ADBE, ALAB, AME, AMGN, AMX, AON",
+          "bullets": [
+            "Apple foldable plans drive new demand for Japanese smartphone parts makers",
+            "Is This BSX Stock Pullback Worth The Patience?",
+            "UBS Reworks Adobe Price Target For Rest Of The Year"
+          ]
         },
         {
           "key": "digest_md",
-          "name": "Finviz digest MD",
+          "name": "Quote-page digest MD (*_finviz_digest)",
           "path": "01_daily/news/2026-09-12_finviz_digest.md",
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11687
+          "size": 11687,
+          "said": "Finviz Daily Digest \u2014 2026-09-12",
+          "bullets": [
+            "_Generated 2026-09-12T04:41:42.302895-04:00 \u00b7 export=data/exports/finviz_2026-09-11.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_",
+            "Major indices (live quote page)"
+          ]
+        },
+        {
+          "key": "market_digest_json",
+          "name": "Homepage warm-up JSON (*_finviz_market_digest)",
+          "path": "01_daily/news/2026-09-12_finviz_market_digest.json",
+          "role": "optional",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
+        },
+        {
+          "key": "market_digest_md",
+          "name": "Homepage warm-up MD (*_finviz_market_digest)",
+          "path": "01_daily/news/2026-09-12_finviz_market_digest.md",
+          "role": "optional",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
+        },
+        {
+          "key": "market_digest_close_json",
+          "name": "Close answer-key JSON (*_finviz_market_digest_close)",
+          "path": "01_daily/news/2026-09-12_finviz_market_digest_close.json",
+          "role": "optional",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
+        },
+        {
+          "key": "market_digest_close_md",
+          "name": "Close answer-key MD (*_finviz_market_digest_close)",
+          "path": "01_daily/news/2026-09-12_finviz_market_digest_close.md",
+          "role": "optional",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "400 tickers \u00b7 400 signals \u00b7 top AAPL, ABT, ADBE, ALAB, AME, AMGN, AMX, AON",
+      "bullets": [
+        "Apple foldable plans drive new demand for Japanese smartphone parts makers",
+        "Is This BSX Stock Pullback Worth The Patience?",
+        "UBS Reworks Adobe Price Target For Rest Of The Year"
+      ]
     },
     {
       "key": "preopen",
@@ -109,16 +179,33 @@
       "n_req_ok": 0,
       "n_req": 20,
       "n_opt_ok": 0,
-      "n_opt": 2,
+      "n_opt": 3,
       "files": [
         {
           "key": "in_digest",
-          "name": "Finviz digest JSON",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-12_finviz_digest.json",
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 88414
+          "size": 88414,
+          "said": "400 tickers \u00b7 400 signals \u00b7 top AAPL, ABT, ADBE, ALAB, AME, AMGN, AMX, AON",
+          "bullets": [
+            "Apple foldable plans drive new demand for Japanese smartphone parts makers",
+            "Is This BSX Stock Pullback Worth The Patience?",
+            "UBS Reworks Adobe Price Target For Rest Of The Year"
+          ]
+        },
+        {
+          "key": "in_market_digest",
+          "name": "Homepage warm-up JSON (*_finviz_market_digest)",
+          "path": "01_daily/news/2026-09-12_finviz_market_digest.json",
+          "role": "optional",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_baseline",
@@ -127,16 +214,20 @@
           "role": "input",
           "status": "MISSING",
           "reason": "postclose_baseline_missing",
-          "size": 0
+          "size": 0,
+          "said": "postclose_baseline_missing",
+          "bullets": []
         },
         {
           "key": "in_heat",
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-09-12_map_heat.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 269164
+          "status": "FAIL",
+          "reason": "stale_map_heat_md",
+          "size": 0,
+          "said": "stale_map_heat_md \u00b7 morning_overlay \u00b7 11632 names \u00b7 hot Electronic Components, Electronics & Computer Distribution, Communication Equipment, Computer Hardware \u00b7 cold Silver, Staffing & Employment Services, Insurance Brokers",
+          "bullets": []
         },
         {
           "key": "parsed",
@@ -145,7 +236,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "events",
@@ -154,7 +247,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "judge",
@@ -163,7 +258,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "research_json",
@@ -172,7 +269,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "research_md",
@@ -181,7 +280,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "actions",
@@ -190,7 +291,9 @@
           "role": "optional",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "general",
@@ -199,7 +302,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "board",
@@ -208,7 +313,9 @@
           "role": "optional",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "qc",
@@ -217,7 +324,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "status",
@@ -226,7 +335,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "review",
@@ -235,7 +346,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_basic_materials",
@@ -244,7 +357,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_communication_services",
@@ -253,7 +368,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_consumer_cyclical",
@@ -262,7 +379,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_consumer_defensive",
@@ -271,7 +390,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_energy",
@@ -280,7 +401,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_financial",
@@ -289,7 +412,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_healthcare",
@@ -298,7 +423,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_industrials",
@@ -307,7 +434,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_real_estate",
@@ -316,7 +445,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_technology",
@@ -325,7 +456,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_utilities",
@@ -334,7 +467,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         }
       ],
       "said": "",
@@ -353,12 +488,18 @@
       "files": [
         {
           "key": "in_digest",
-          "name": "Finviz digest JSON",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-12_finviz_digest.json",
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 88414
+          "size": 88414,
+          "said": "400 tickers \u00b7 400 signals \u00b7 top AAPL, ABT, ADBE, ALAB, AME, AMGN, AMX, AON",
+          "bullets": [
+            "Apple foldable plans drive new demand for Japanese smartphone parts makers",
+            "Is This BSX Stock Pullback Worth The Patience?",
+            "UBS Reworks Adobe Price Target For Rest Of The Year"
+          ]
         },
         {
           "key": "weather",
@@ -367,7 +508,12 @@
           "role": "required",
           "status": "OK",
           "reason": "sectors=11 bytes=9497 vix=falling yields=rising",
-          "size": 9497
+          "size": 9497,
+          "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
+          "bullets": [
+            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Industrials, Real Estate, Utilities",
+            "events bull 5 / bear 6"
+          ]
         }
       ],
       "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
@@ -394,7 +540,11 @@
           "role": "optional",
           "status": "OK",
           "reason": "rows=2653",
-          "size": 7624280
+          "size": 7624280,
+          "said": "27 rows",
+          "bullets": [
+            "CFFN, ANET, WWW, HSBC, SKM, WDS, BMRN, DSGX"
+          ]
         },
         {
           "key": "ab_enriched",
@@ -403,7 +553,11 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=2653",
-          "size": 8463617
+          "size": 8463617,
+          "said": "25 rows",
+          "bullets": [
+            "CFFN, AVT, SFL, LFST, CXW, AMD, TER, CLS"
+          ]
         }
       ],
       "said": "25 rows",
@@ -429,16 +583,24 @@
           "role": "input",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_digest",
-          "name": "Finviz digest JSON",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-12_finviz_digest.json",
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 88414
+          "size": 88414,
+          "said": "400 tickers \u00b7 400 signals \u00b7 top AAPL, ABT, ADBE, ALAB, AME, AMGN, AMX, AON",
+          "bullets": [
+            "Apple foldable plans drive new demand for Japanese smartphone parts makers",
+            "Is This BSX Stock Pullback Worth The Patience?",
+            "UBS Reworks Adobe Price Target For Rest Of The Year"
+          ]
         },
         {
           "key": "dossiers",
@@ -447,7 +609,9 @@
           "role": "optional",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         }
       ],
       "said": "",
@@ -471,7 +635,9 @@
           "role": "input",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_board",
@@ -480,7 +646,9 @@
           "role": "input",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_actions",
@@ -489,16 +657,24 @@
           "role": "input",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_digest",
-          "name": "Finviz digest JSON",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-12_finviz_digest.json",
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 88414
+          "size": 88414,
+          "said": "400 tickers \u00b7 400 signals \u00b7 top AAPL, ABT, ADBE, ALAB, AME, AMGN, AMX, AON",
+          "bullets": [
+            "Apple foldable plans drive new demand for Japanese smartphone parts makers",
+            "Is This BSX Stock Pullback Worth The Patience?",
+            "UBS Reworks Adobe Price Target For Rest Of The Year"
+          ]
         },
         {
           "key": "in_judge",
@@ -507,7 +683,9 @@
           "role": "input",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "in_weather",
@@ -516,7 +694,12 @@
           "role": "input",
           "status": "OK",
           "reason": "sectors=11 bytes=9497 vix=falling yields=rising",
-          "size": 9497
+          "size": 9497,
+          "said": "favorable 2 \u00b7 hostile 7 \u00b7 neutral 2",
+          "bullets": [
+            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Consumer Defensive, Industrials, Real Estate, Utilities",
+            "events bull 5 / bear 6"
+          ]
         },
         {
           "key": "in_ab",
@@ -525,7 +708,11 @@
           "role": "input",
           "status": "OK",
           "reason": "rows=2653",
-          "size": 8463617
+          "size": 8463617,
+          "said": "25 rows",
+          "bullets": [
+            "CFFN, AVT, SFL, LFST, CXW, AMD, TER, CLS"
+          ]
         },
         {
           "key": "join",
@@ -534,7 +721,11 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5904",
-          "size": 2251574
+          "size": 2251574,
+          "said": "204 rows",
+          "bullets": [
+            "REGN, HRMY, EXEL, NUTX, CDNA, FORM, MU, DOCU"
+          ]
         },
         {
           "key": "peers",
@@ -543,7 +734,11 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5115",
-          "size": 825314
+          "size": 825314,
+          "said": "490 rows",
+          "bullets": [
+            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
+          ]
         },
         {
           "key": "book_json",
@@ -552,7 +747,9 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=213",
-          "size": 1459637
+          "size": 1459637,
+          "said": "1d BUY DELL, HPQ, AVT, ARW, VICR \u00b7 SELL BORR, EU, LUCD, SGML, AG, QDEL",
+          "bullets": []
         },
         {
           "key": "book_md",
@@ -561,7 +758,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 80570
+          "size": 80570,
+          "said": "Stock book \u2014 2026-09-12",
+          "bullets": [
+            "_Generated 2026-09-12T09:57:46.952900-04:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
@@ -570,7 +772,9 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 585
+          "size": 2435,
+          "said": "0 green \u00b7",
+          "bullets": []
         },
         {
           "key": "paper",
@@ -579,7 +783,12 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 1790
+          "size": 1789,
+          "said": "Paper trading \u2014 Futubull-fee simulation",
+          "bullets": [
+            "As of **2026-09-08** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`",
+            "Latest book **2026-09-08** ranker: **weighted** (green pile liquid=0, need 8)."
+          ]
         },
         {
           "key": "dashboard",
@@ -587,8 +796,10 @@
           "path": "dashboard/index.html",
           "role": "optional",
           "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-12)",
-          "size": 4874846
+          "reason": "live-book poller + 2026-09-12_suggestions.json (2026-09-12)",
+          "size": 6300795,
+          "said": "live-book poller + 2026-09-12_suggestions.json (2026-09-12)",
+          "bullets": []
         }
       ],
       "said": "204 rows",
@@ -614,7 +825,9 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=213",
-          "size": 1459637
+          "size": 1459637,
+          "said": "1d BUY DELL, HPQ, AVT, ARW, VICR \u00b7 SELL BORR, EU, LUCD, SGML, AG, QDEL",
+          "bullets": []
         },
         {
           "key": "dash_html",
@@ -622,8 +835,10 @@
           "path": "dashboard/index.html",
           "role": "required",
           "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-12)",
-          "size": 4874846
+          "reason": "live-book poller + 2026-09-12_suggestions.json (2026-09-12)",
+          "size": 6300795,
+          "said": "live-book poller + 2026-09-12_suggestions.json (2026-09-12)",
+          "bullets": []
         },
         {
           "key": "paper",
@@ -632,7 +847,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 1790
+          "size": 1789,
+          "said": "Paper trading \u2014 Futubull-fee simulation",
+          "bullets": [
+            "As of **2026-09-08** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`",
+            "Latest book **2026-09-08** ranker: **weighted** (green pile liquid=0, need 8)."
+          ]
         },
         {
           "key": "pages",
@@ -641,7 +861,9 @@
           "role": "optional",
           "status": "SKIP",
           "reason": "day-board reads main disk, not live Pages",
-          "size": 0
+          "size": 0,
+          "said": "day-board reads main disk, not live Pages",
+          "bullets": []
         }
       ],
       "said": "",
@@ -706,10 +928,10 @@
       }
     ],
     "flatten": {
-      "said": "0 priced buys \u00b7 cash $108,616.66 \u00b7 morning S missing",
+      "said": "0 priced buys \u00b7 cash $107,448.18 \u00b7 morning S missing",
       "bullets": [
         "0 priced buys",
-        "cash $108,616.66",
+        "cash $107,448.18",
         "morning S missing"
       ]
     },

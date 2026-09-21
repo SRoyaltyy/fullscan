@@ -1,12 +1,12 @@
 {
   "date": "2026-09-16",
-  "generated_at": "2026-09-17T02:08:56.266301-04:00",
+  "generated_at": "2026-09-21T05:56:38.093177-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 7,
-    "partial": 0,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
@@ -15,9 +15,9 @@
       "key": "postclose",
       "name": "Post-close research",
       "yaml": "map_heat_postclose.yml",
-      "status": "OK",
+      "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 1,
       "n_req": 2,
       "n_opt_ok": 2,
       "n_opt": 2,
@@ -29,7 +29,9 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 373212
+          "size": 373212,
+          "said": "postclose_baseline \u00b7 142 cards \u00b7 HEAT=128 SPLIT=8 OVERRIDE=6 \u00b7 err Industrials:coverage:0/8<required:1",
+          "bullets": []
         },
         {
           "key": "baseline_md",
@@ -38,16 +40,23 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 37232
+          "size": 37232,
+          "said": "MAP HEAT RESEARCH \u2014 2026-09-16",
+          "bullets": [
+            "142 captain cards \u00b7 size_gate=False set by pre-open refresh",
+            "CAPTAIN CARDS"
+          ]
         },
         {
           "key": "heat_json",
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-09-16_map_heat.json",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 272533
+          "status": "FAIL",
+          "reason": "empty_futures_tape",
+          "size": 0,
+          "said": "empty_futures_tape \u00b7 postclose \u00b7 11640 names \u00b7 hot Grocery Stores, Consumer Electronics, Diagnostics & Research, Advertising Agencies \u00b7 cold Coking Coal, Silver, Uranium \u00b7 macro_gate",
+          "bullets": []
         },
         {
           "key": "heat_md",
@@ -56,7 +65,12 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 16992
+          "size": 14762,
+          "said": "MAP HEAT \u2014 2026-09-16",
+          "bullets": [
+            "Export `finviz_2026-09-16.csv` \u00b7 11640 names \u00b7 generated 2026-09-17T02:10:23.678524-04:00",
+            "TAPE (live futures)"
+          ]
         }
       ],
       "said": "tables on disk",
@@ -80,7 +94,13 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 86288
+          "size": 86288,
+          "said": "400 tickers \u00b7 400 signals \u00b7 top ADBE, AJG, AME, AMGN, AMX, AON, APH, APP",
+          "bullets": [
+            "Did Salesforce Telegraph Its Own Massive Rally?",
+            "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
+          ]
         },
         {
           "key": "digest_md",
@@ -89,7 +109,12 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11317
+          "size": 11317,
+          "said": "Finviz Daily Digest \u2014 2026-09-16",
+          "bullets": [
+            "_Generated 2026-09-17T02:08:55.105773-04:00 \u00b7 export=data/exports/finviz_2026-09-16.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_",
+            "Major indices (live quote page)"
+          ]
         },
         {
           "key": "market_digest_json",
@@ -98,7 +123,9 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 10165
+          "size": 10165,
+          "said": "US stocks closed lower as 10-year yield touched 5% and oil jumped on Saudi pipeline closure ahead of Fed decision \u00b7 leaders APA, VLO, MPC, DVN, PSX, GS \u00b7 neutral",
+          "bullets": []
         },
         {
           "key": "market_digest_md",
@@ -107,7 +134,12 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 4142
+          "size": 4142,
+          "said": "Finviz homepage market digest \u2014 2026-09-16",
+          "bullets": [
+            "Generated:** 2026-09-16T04:03:36.232554-04:00 (America/New_York)",
+            "Source:** `live`"
+          ]
         },
         {
           "key": "market_digest_close_json",
@@ -116,7 +148,9 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 7944
+          "size": 7944,
+          "said": "US stocks closed lower as Fed delivered first rate hike since 2023 and signaled further tightening amid stubborn inflation while Dow futures fall over 1% ahead of data and earnings \u00b7 leaders INTC, SKHY, F, FANG, UAL, AAL \u00b7 bad",
+          "bullets": []
         },
         {
           "key": "market_digest_close_md",
@@ -125,18 +159,27 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 3888
+          "size": 3888,
+          "said": "Finviz homepage market digest (close) \u2014 2026-09-16",
+          "bullets": [
+            "Generated:** 2026-09-16T17:00:48.927704-04:00 (America/New_York)",
+            "Source:** `live`"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "400 tickers \u00b7 400 signals \u00b7 top ADBE, AJG, AME, AMGN, AMX, AON, APH, APP",
+      "bullets": [
+        "Did Salesforce Telegraph Its Own Massive Rally?",
+        "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
+        "AMETEK Completes Acquisition of Indicor Instrumentation"
+      ]
     },
     {
       "key": "preopen",
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
       "status": "OK",
-      "inputs_ready": true,
+      "inputs_ready": false,
       "n_req_ok": 20,
       "n_req": 20,
       "n_opt_ok": 3,
@@ -149,7 +192,13 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 86288
+          "size": 86288,
+          "said": "400 tickers \u00b7 400 signals \u00b7 top ADBE, AJG, AME, AMGN, AMX, AON, APH, APP",
+          "bullets": [
+            "Did Salesforce Telegraph Its Own Massive Rally?",
+            "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
+          ]
         },
         {
           "key": "in_market_digest",
@@ -158,7 +207,9 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 10165
+          "size": 10165,
+          "said": "US stocks closed lower as 10-year yield touched 5% and oil jumped on Saudi pipeline closure ahead of Fed decision \u00b7 leaders APA, VLO, MPC, DVN, PSX, GS \u00b7 neutral",
+          "bullets": []
         },
         {
           "key": "in_baseline",
@@ -167,16 +218,20 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 373212
+          "size": 373212,
+          "said": "postclose_baseline \u00b7 142 cards \u00b7 HEAT=128 SPLIT=8 OVERRIDE=6 \u00b7 err Industrials:coverage:0/8<required:1",
+          "bullets": []
         },
         {
           "key": "in_heat",
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-09-16_map_heat.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 272533
+          "status": "FAIL",
+          "reason": "empty_futures_tape",
+          "size": 0,
+          "said": "empty_futures_tape \u00b7 postclose \u00b7 11640 names \u00b7 hot Grocery Stores, Consumer Electronics, Diagnostics & Research, Advertising Agencies \u00b7 cold Coking Coal, Silver, Uranium \u00b7 macro_gate",
+          "bullets": []
         },
         {
           "key": "parsed",
@@ -185,7 +240,14 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 61986
+          "size": 61986,
+          "said": "120 raw / 6 usable \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
+          "bullets": [
+            "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
+            "S&P 500, Nasdaq, Dow End Lower As Investors Price In Rate Hike Ahead Of Fed Meeting  AMZN, META, MU, TSLA, PLTR In Focus",
+            "Gold prices slide more than 3% after Fed Chair Kevin Warsh\u2019s Jackson Hole comments boost September U.S. rate hike expectations",
+            "Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year"
+          ]
         },
         {
           "key": "events",
@@ -194,7 +256,14 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 36019
+          "size": 36019,
+          "said": "36 events \u00b7 elevated uncertainty \u00b7 Today is a regime day: retail sales already rebounded +0.6%, but the 2pm ET FOMC/SEP/Warsh presser is still ~90%+ priced as the first hike o",
+          "bullets": [
+            "FOMC decision, SEP/dot plot, Warsh press conference",
+            "August advance retail sales rebound +0.6% MoM",
+            "Japan August trade deficit widens on oil imports",
+            "Lennar Q3 earnings (housing bellwether)"
+          ]
         },
         {
           "key": "judge",
@@ -203,7 +272,13 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 9689
+          "size": 9689,
+          "said": "1. **US indices closed lower as a September rate hike is priced ahead of the Fed** \u2014 This is the session\u2019s SPX/NDX beta driver; Mag7/AI names (AMZN, META, MU, T",
+          "bullets": [
+            "2. **Warsh Jackson Hole comments lift September hike odds; gold \u22123%+** \u2014 Same hawkish-Fed path with a clean real-rate/gold print; outranks ticker noise because it sets duration and risk appetite. Channel: rates",
+            "3. **Rising bond yields keeping heat on Russell 2000 / small-caps** \u2014 Breadth test of the hike tape; IWM is the crowded rates-sensitive basket, not a generic open-call. Channel: risk",
+            "4. **ASML 2027 EUV capacity nearly sold out on AI demand (JPM)** \u2014 AI-capex/semi cycle confirmation with SOX/SMH force; digest-elevated, not a single-name blip. Channel: sector_fundamental"
+          ]
         },
         {
           "key": "research_json",
@@ -212,7 +287,11 @@
           "role": "required",
           "status": "OK",
           "reason": "cards=142",
-          "size": 393212
+          "size": 393212,
+          "said": "morning_refresh \u00b7 142 cards \u00b7 refreshed 0 \u00b7 passthrough \u00b7 HEAT=128 SPLIT=8 OVERRIDE=6 \u00b7 err coverage:0/26<required:21",
+          "bullets": [
+            "Morning delta refresh failed captain-evidence QC (coverage:0/26<required:21). Using last night's post-close captain cards so the book still has heat. Overnight tape/news was not re-scored."
+          ]
         },
         {
           "key": "research_md",
@@ -221,7 +300,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 37575
+          "size": 37575,
+          "said": "MAP HEAT RESEARCH \u2014 2026-09-16",
+          "bullets": [
+            "142 captain cards \u00b7 size_gate=True set by pre-open refresh",
+            "CAPTAIN CARDS"
+          ]
         },
         {
           "key": "actions",
@@ -230,7 +314,14 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 32072
+          "size": 32072,
+          "said": "54 ticker actions \u00b7 4 events \u00b7 156 headlines \u00b7 ADBE BUY, COP BUY, EOG BUY, SM BUY, RRC BUY, REPX BUY, INR BUY, OXY BUY",
+          "bullets": [
+            "BUY ADBE",
+            "BUY COP",
+            "BUY EOG",
+            "BUY SM"
+          ]
         },
         {
           "key": "general",
@@ -239,7 +330,14 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 15755
+          "size": 15755,
+          "said": "UP 5.297",
+          "bullets": [
+            "bad: FOMC/SEP/Warsh 2pm unprinted ~92% hike",
+            "bad: 1w 10Y +19bp near 5%",
+            "bad: leftover Hormuz Brent ~$108",
+            "good: Asia composite +0.64%"
+          ]
         },
         {
           "key": "board",
@@ -248,7 +346,14 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 7277
+          "size": 7277,
+          "said": "2 up / 2 down / 7 flat",
+          "bullets": [
+            "XLB FLAT +9.7",
+            "XLC UP +9.2",
+            "XLY FLAT +2.7",
+            "XLP FLAT -0.4"
+          ]
         },
         {
           "key": "qc",
@@ -257,7 +362,9 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=True",
-          "size": 7183
+          "size": 7183,
+          "said": "all_ok=True \u00b7 sectors 11/11 \u00b7 no fails",
+          "bullets": []
         },
         {
           "key": "status",
@@ -266,7 +373,9 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 6904
+          "size": 6904,
+          "said": "all_ok=False \u00b7 qc=True \u00b7 grok=False \u00b7 book=True",
+          "bullets": []
         },
         {
           "key": "review",
@@ -275,7 +384,11 @@
           "role": "required",
           "status": "OK",
           "reason": "ok=False Grok returned an empty review",
-          "size": 309
+          "size": 309,
+          "said": "ok=False \u00b7 empty_review_reply (review)",
+          "bullets": [
+            "Grok returned an empty review"
+          ]
         },
         {
           "key": "sector_basic_materials",
@@ -284,7 +397,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 19445
+          "size": 19445,
+          "said": "FLAT flat 9.667",
+          "bullets": [
+            "- ETF: **XLB"
+          ]
         },
         {
           "key": "sector_communication_services",
@@ -293,7 +410,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 18536
+          "size": 18536,
+          "said": "UP mild 9.244",
+          "bullets": [
+            "- ETF: **XLC"
+          ]
         },
         {
           "key": "sector_consumer_cyclical",
@@ -302,7 +423,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 20968
+          "size": 20968,
+          "said": "FLAT flat 2.692",
+          "bullets": [
+            "- ETF: **XLY"
+          ]
         },
         {
           "key": "sector_consumer_defensive",
@@ -311,7 +436,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 18549
+          "size": 18549,
+          "said": "FLAT flat -0.417",
+          "bullets": [
+            "- ETF: **XLP"
+          ]
         },
         {
           "key": "sector_energy",
@@ -320,7 +449,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 17584
+          "size": 17584,
+          "said": "DOWN mild -2.88",
+          "bullets": [
+            "- ETF: **XLE"
+          ]
         },
         {
           "key": "sector_financial",
@@ -329,7 +462,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 15411
+          "size": 15411,
+          "said": "FLAT flat 2.998",
+          "bullets": [
+            "- ETF: **XLF"
+          ]
         },
         {
           "key": "sector_healthcare",
@@ -338,7 +475,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 16657
+          "size": 16657,
+          "said": "UP mild 2.995",
+          "bullets": [
+            "- ETF: **XLV"
+          ]
         },
         {
           "key": "sector_industrials",
@@ -347,7 +488,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 20368
+          "size": 20368,
+          "said": "FLAT flat 7.288",
+          "bullets": [
+            "- ETF: **XLI"
+          ]
         },
         {
           "key": "sector_real_estate",
@@ -356,7 +501,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 18440
+          "size": 18440,
+          "said": "FLAT flat 2.52",
+          "bullets": [
+            "- ETF: **XLRE"
+          ]
         },
         {
           "key": "sector_technology",
@@ -365,7 +514,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 17117
+          "size": 17117,
+          "said": "FLAT flat 10.23",
+          "bullets": [
+            "- ETF: **XLK"
+          ]
         },
         {
           "key": "sector_utilities",
@@ -374,10 +527,14 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 17657
+          "size": 17657,
+          "said": "DOWN mild -0.468",
+          "bullets": [
+            "- ETF: **XLU"
+          ]
         }
       ],
-      "said": "general UP  5.297 \u00b7 sectors 2 up / 2 down / 7 flat \u00b7 news 6 items",
+      "said": "general UP  5.297 \u00b7 sectors 2 up / 2 down / 7 flat \u00b7 news 120 raw / 6 usable \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
       "bullets": [
         "bad: FOMC/SEP/Warsh 2pm unprinted ~92% hike",
         "bad: 1w 10Y +19bp near 5%",
@@ -409,7 +566,13 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 86288
+          "size": 86288,
+          "said": "400 tickers \u00b7 400 signals \u00b7 top ADBE, AJG, AME, AMGN, AMX, AON, APH, APP",
+          "bullets": [
+            "Did Salesforce Telegraph Its Own Massive Rally?",
+            "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
+          ]
         },
         {
           "key": "weather",
@@ -418,7 +581,11 @@
           "role": "required",
           "status": "OK",
           "reason": "sectors=11 bytes=10085 vix=falling yields=flat",
-          "size": 10085
+          "size": 10085,
+          "said": "favorable 4 \u00b7 neutral 7",
+          "bullets": [
+            "events bull 2 / bear 12"
+          ]
         }
       ],
       "said": "favorable 4 \u00b7 neutral 7",
@@ -444,7 +611,11 @@
           "role": "optional",
           "status": "OK",
           "reason": "rows=2657",
-          "size": 7638352
+          "size": 7642693,
+          "said": "27 rows",
+          "bullets": [
+            "WWW, ANET, CFFN, BMRN, HSBC, SKM, CXW, WDS"
+          ]
         },
         {
           "key": "ab_enriched",
@@ -453,7 +624,11 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=2657",
-          "size": 8473940
+          "size": 8473940,
+          "said": "25 rows",
+          "bullets": [
+            "ANET, SFL, CFFN, AVT, CXW, DSGX, SLDE, NWBI"
+          ]
         }
       ],
       "said": "25 rows",
@@ -479,7 +654,14 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 32072
+          "size": 32072,
+          "said": "54 ticker actions \u00b7 4 events \u00b7 156 headlines \u00b7 ADBE BUY, COP BUY, EOG BUY, SM BUY, RRC BUY, REPX BUY, INR BUY, OXY BUY",
+          "bullets": [
+            "BUY ADBE",
+            "BUY COP",
+            "BUY EOG",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -488,7 +670,13 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 86288
+          "size": 86288,
+          "said": "400 tickers \u00b7 400 signals \u00b7 top ADBE, AJG, AME, AMGN, AMX, AON, APH, APP",
+          "bullets": [
+            "Did Salesforce Telegraph Its Own Massive Rally?",
+            "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
+          ]
         },
         {
           "key": "dossiers",
@@ -497,11 +685,27 @@
           "role": "optional",
           "status": "FAIL",
           "reason": "zero usable dossiers (n=8)",
-          "size": 2887
+          "size": 2887,
+          "said": "zero usable dossiers (n=8) \u00b7 0/8 usable \u00b7 Grok \u2192 DeepSeek \u00b7 NE, RIG, SLB, BKR, KGS, WHD, CNR, BTU",
+          "bullets": [
+            "NE: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NE",
+            "RIG: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 RIG",
+            "SLB: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 SLB",
+            "BKR: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 BKR"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "54 ticker actions \u00b7 4 events \u00b7 156 headlines \u00b7 ADBE BUY, COP BUY, EOG BUY, SM BUY, RRC BUY, REPX BUY, INR BUY, OXY BUY",
+      "bullets": [
+        "BUY ADBE",
+        "BUY COP",
+        "BUY EOG",
+        "BUY SM",
+        "BUY RRC",
+        "BUY REPX",
+        "BUY INR",
+        "BUY OXY"
+      ]
     },
     {
       "key": "stock_book",
@@ -521,7 +725,14 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 15755
+          "size": 15755,
+          "said": "UP 5.297",
+          "bullets": [
+            "bad: FOMC/SEP/Warsh 2pm unprinted ~92% hike",
+            "bad: 1w 10Y +19bp near 5%",
+            "bad: leftover Hormuz Brent ~$108",
+            "good: Asia composite +0.64%"
+          ]
         },
         {
           "key": "in_board",
@@ -530,7 +741,14 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 7277
+          "size": 7277,
+          "said": "2 up / 2 down / 7 flat",
+          "bullets": [
+            "XLB FLAT +9.7",
+            "XLC UP +9.2",
+            "XLY FLAT +2.7",
+            "XLP FLAT -0.4"
+          ]
         },
         {
           "key": "in_actions",
@@ -539,7 +757,14 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 32072
+          "size": 32072,
+          "said": "54 ticker actions \u00b7 4 events \u00b7 156 headlines \u00b7 ADBE BUY, COP BUY, EOG BUY, SM BUY, RRC BUY, REPX BUY, INR BUY, OXY BUY",
+          "bullets": [
+            "BUY ADBE",
+            "BUY COP",
+            "BUY EOG",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -548,7 +773,13 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 86288
+          "size": 86288,
+          "said": "400 tickers \u00b7 400 signals \u00b7 top ADBE, AJG, AME, AMGN, AMX, AON, APH, APP",
+          "bullets": [
+            "Did Salesforce Telegraph Its Own Massive Rally?",
+            "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
+          ]
         },
         {
           "key": "in_judge",
@@ -557,7 +788,13 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 9689
+          "size": 9689,
+          "said": "1. **US indices closed lower as a September rate hike is priced ahead of the Fed** \u2014 This is the session\u2019s SPX/NDX beta driver; Mag7/AI names (AMZN, META, MU, T",
+          "bullets": [
+            "2. **Warsh Jackson Hole comments lift September hike odds; gold \u22123%+** \u2014 Same hawkish-Fed path with a clean real-rate/gold print; outranks ticker noise because it sets duration and risk appetite. Channel: rates",
+            "3. **Rising bond yields keeping heat on Russell 2000 / small-caps** \u2014 Breadth test of the hike tape; IWM is the crowded rates-sensitive basket, not a generic open-call. Channel: risk",
+            "4. **ASML 2027 EUV capacity nearly sold out on AI demand (JPM)** \u2014 AI-capex/semi cycle confirmation with SOX/SMH force; digest-elevated, not a single-name blip. Channel: sector_fundamental"
+          ]
         },
         {
           "key": "in_weather",
@@ -566,7 +803,11 @@
           "role": "input",
           "status": "OK",
           "reason": "sectors=11 bytes=10085 vix=falling yields=flat",
-          "size": 10085
+          "size": 10085,
+          "said": "favorable 4 \u00b7 neutral 7",
+          "bullets": [
+            "events bull 2 / bear 12"
+          ]
         },
         {
           "key": "in_ab",
@@ -575,7 +816,11 @@
           "role": "input",
           "status": "OK",
           "reason": "rows=2657",
-          "size": 8473940
+          "size": 8473940,
+          "said": "25 rows",
+          "bullets": [
+            "ANET, SFL, CFFN, AVT, CXW, DSGX, SLDE, NWBI"
+          ]
         },
         {
           "key": "join",
@@ -584,7 +829,11 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5900",
-          "size": 2239250
+          "size": 2239250,
+          "said": "204 rows",
+          "bullets": [
+            "GCT, RDVT, SMTC, HPE, AMD, DELL, PGY, MGNI"
+          ]
         },
         {
           "key": "peers",
@@ -593,7 +842,11 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5111",
-          "size": 817685
+          "size": 822601,
+          "said": "489 rows",
+          "bullets": [
+            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
+          ]
         },
         {
           "key": "book_json",
@@ -602,7 +855,9 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=185",
-          "size": 1413565
+          "size": 1413565,
+          "said": "1d BUY DBX, BLFS, RDNT, FOXA, NYT, SPT, AVAH, TENB \u00b7 SELL EU, ACDC, PUMP, TLN, UUUU, BTU \u00b7 0.6052",
+          "bullets": []
         },
         {
           "key": "book_md",
@@ -611,7 +866,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 66173
+          "size": 66173,
+          "said": "Stock book \u2014 2026-09-16",
+          "bullets": [
+            "_Generated 2026-09-16T09:25:24.144452-04:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
@@ -620,7 +880,9 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 10038
+          "size": 10056,
+          "said": "0 green \u00b7",
+          "bullets": []
         },
         {
           "key": "paper",
@@ -629,7 +891,12 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 1845
+          "size": 1789,
+          "said": "Paper trading \u2014 Futubull-fee simulation",
+          "bullets": [
+            "As of **2026-09-08** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`",
+            "Latest book **2026-09-08** ranker: **weighted** (green pile liquid=0, need 8)."
+          ]
         },
         {
           "key": "dashboard",
@@ -637,8 +904,10 @@
           "path": "dashboard/index.html",
           "role": "optional",
           "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-16)",
-          "size": 6089424
+          "reason": "live-book poller + 2026-09-16_suggestions.json (2026-09-16)",
+          "size": 6300795,
+          "said": "live-book poller + 2026-09-16_suggestions.json (2026-09-16)",
+          "bullets": []
         }
       ],
       "said": "204 rows",
@@ -664,7 +933,9 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=185",
-          "size": 1413565
+          "size": 1413565,
+          "said": "1d BUY DBX, BLFS, RDNT, FOXA, NYT, SPT, AVAH, TENB \u00b7 SELL EU, ACDC, PUMP, TLN, UUUU, BTU \u00b7 0.6052",
+          "bullets": []
         },
         {
           "key": "dash_html",
@@ -672,8 +943,10 @@
           "path": "dashboard/index.html",
           "role": "required",
           "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-16)",
-          "size": 6089424
+          "reason": "live-book poller + 2026-09-16_suggestions.json (2026-09-16)",
+          "size": 6300795,
+          "said": "live-book poller + 2026-09-16_suggestions.json (2026-09-16)",
+          "bullets": []
         },
         {
           "key": "paper",
@@ -682,7 +955,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 1845
+          "size": 1789,
+          "said": "Paper trading \u2014 Futubull-fee simulation",
+          "bullets": [
+            "As of **2026-09-08** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`",
+            "Latest book **2026-09-08** ranker: **weighted** (green pile liquid=0, need 8)."
+          ]
         },
         {
           "key": "pages",
@@ -691,7 +969,9 @@
           "role": "optional",
           "status": "SKIP",
           "reason": "day-board reads main disk, not live Pages",
-          "size": 0
+          "size": 0,
+          "said": "day-board reads main disk, not live Pages",
+          "bullets": []
         }
       ],
       "said": "",
@@ -847,7 +1127,7 @@
       ]
     },
     "news": {
-      "said": "6 items",
+      "said": "120 raw / 6 usable \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
       "bullets": [
         "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
         "S&P 500, Nasdaq, Dow End Lower As Investors Price In Rate Hike Ahead Of Fed Meeting  AMZN, META, MU, TSLA, PLTR In Focus",

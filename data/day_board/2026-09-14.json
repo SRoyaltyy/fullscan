@@ -1,6 +1,6 @@
 {
   "date": "2026-09-14",
-  "generated_at": "2026-09-15T02:10:10.603920-04:00",
+  "generated_at": "2026-09-21T05:56:36.884577-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -29,7 +29,9 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 366351
+          "size": 366351,
+          "said": "postclose_baseline \u00b7 142 cards \u00b7 HEAT=126 OVERRIDE=12 SPLIT=4 \u00b7 err Communication Services:Advertising Agencies:bad_direction",
+          "bullets": []
         },
         {
           "key": "baseline_md",
@@ -38,7 +40,12 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 43301
+          "size": 43301,
+          "said": "MAP HEAT RESEARCH \u2014 2026-09-14",
+          "bullets": [
+            "142 captain cards \u00b7 size_gate=False set by pre-open refresh",
+            "CAPTAIN CARDS"
+          ]
         },
         {
           "key": "heat_json",
@@ -47,7 +54,9 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 271399
+          "size": 268634,
+          "said": "postclose \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication",
+          "bullets": []
         },
         {
           "key": "heat_md",
@@ -56,7 +65,12 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 17210
+          "size": 16782,
+          "said": "MAP HEAT \u2014 2026-09-14",
+          "bullets": [
+            "Export `finviz_2026-09-14.csv` \u00b7 11616 names \u00b7 generated 2026-09-15T02:11:33.374868-04:00",
+            "TAPE (live futures)"
+          ]
         }
       ],
       "said": "tables on disk",
@@ -80,7 +94,13 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 87214
+          "size": 87214,
+          "said": "400 tickers \u00b7 400 signals \u00b7 top ADBE, AJG, AMD, AME, AMGN, AMX, AON, APD",
+          "bullets": [
+            "NOW, INTU, ADBE, CRM Stocks Surge As AI Pacing Debate Hammers Chips: Analyst Says Hardware Vs Software Trade Is Turned On Its Head",
+            "As Employers Plan for Growth, Workforce Pressures Continue to Mount",
+            "AI-linked stocks slide after tech bosses call for slowdown in reckless development"
+          ]
         },
         {
           "key": "digest_md",
@@ -89,7 +109,12 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11368
+          "size": 11368,
+          "said": "Finviz Daily Digest \u2014 2026-09-14",
+          "bullets": [
+            "_Generated 2026-09-15T02:10:09.450007-04:00 \u00b7 export=data/exports/finviz_2026-09-14.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_",
+            "Major indices (live quote page)"
+          ]
         },
         {
           "key": "market_digest_json",
@@ -98,7 +123,9 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6027
+          "size": 6027,
+          "said": "US equity futures point to a lower open as tech-heavy Nasdaq lags amid Middle East-driven oil gains and AI growth concerns \u00b7 leaders TNON, ACVA, AENT, FTFT, GAUZ, ZUMZ \u00b7 bad",
+          "bullets": []
         },
         {
           "key": "market_digest_md",
@@ -107,7 +134,12 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 2787
+          "size": 2787,
+          "said": "Finviz homepage market digest \u2014 2026-09-14",
+          "bullets": [
+            "Generated:** 2026-09-14T04:14:06.793963-04:00 (America/New_York)",
+            "Source:** `live`"
+          ]
         },
         {
           "key": "market_digest_close_json",
@@ -116,7 +148,9 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 12140
+          "size": 12140,
+          "said": "US stocks closed lower as AI warnings hit semiconductors and Saudi pipeline shutdown pushed oil above $103 and briefly lifted 10-year yields past 5% ahead of Fed decision \u00b7 leaders OAIW, ANTW, TER, COHR, GLW, MU \u00b7 bad",
+          "bullets": []
         },
         {
           "key": "market_digest_close_md",
@@ -125,11 +159,20 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 5306
+          "size": 5306,
+          "said": "Finviz homepage market digest (close) \u2014 2026-09-14",
+          "bullets": [
+            "Generated:** 2026-09-14T16:23:25.091239-04:00 (America/New_York)",
+            "Source:** `live`"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "400 tickers \u00b7 400 signals \u00b7 top ADBE, AJG, AMD, AME, AMGN, AMX, AON, APD",
+      "bullets": [
+        "NOW, INTU, ADBE, CRM Stocks Surge As AI Pacing Debate Hammers Chips: Analyst Says Hardware Vs Software Trade Is Turned On Its Head",
+        "As Employers Plan for Growth, Workforce Pressures Continue to Mount",
+        "AI-linked stocks slide after tech bosses call for slowdown in reckless development"
+      ]
     },
     {
       "key": "preopen",
@@ -149,7 +192,13 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87214
+          "size": 87214,
+          "said": "400 tickers \u00b7 400 signals \u00b7 top ADBE, AJG, AMD, AME, AMGN, AMX, AON, APD",
+          "bullets": [
+            "NOW, INTU, ADBE, CRM Stocks Surge As AI Pacing Debate Hammers Chips: Analyst Says Hardware Vs Software Trade Is Turned On Its Head",
+            "As Employers Plan for Growth, Workforce Pressures Continue to Mount",
+            "AI-linked stocks slide after tech bosses call for slowdown in reckless development"
+          ]
         },
         {
           "key": "in_market_digest",
@@ -158,7 +207,9 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6027
+          "size": 6027,
+          "said": "US equity futures point to a lower open as tech-heavy Nasdaq lags amid Middle East-driven oil gains and AI growth concerns \u00b7 leaders TNON, ACVA, AENT, FTFT, GAUZ, ZUMZ \u00b7 bad",
+          "bullets": []
         },
         {
           "key": "in_baseline",
@@ -167,7 +218,9 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 366351
+          "size": 366351,
+          "said": "postclose_baseline \u00b7 142 cards \u00b7 HEAT=126 OVERRIDE=12 SPLIT=4 \u00b7 err Communication Services:Advertising Agencies:bad_direction",
+          "bullets": []
         },
         {
           "key": "in_heat",
@@ -176,7 +229,9 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 271399
+          "size": 268634,
+          "said": "postclose \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication",
+          "bullets": []
         },
         {
           "key": "parsed",
@@ -185,7 +240,14 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 80514
+          "size": 80514,
+          "said": "149 raw / 15 usable \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
+          "bullets": [
+            "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
+            "OPEC+ September output hike completed; next meeting watch",
+            "Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comments boost September U.S. rate hike expectations",
+            "Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year"
+          ]
         },
         {
           "key": "events",
@@ -194,7 +256,14 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 28795
+          "size": 28795,
+          "said": "29 events",
+          "bullets": [
+            "FOMC decision, SEP/dot plot, Warsh press conference",
+            "August CPI \u2014 inflation held at 3.4% y/y, locking in hike",
+            "August advance retail sales",
+            "Bank of Japan decision \u2014 hike to 1.25% widely expected"
+          ]
         },
         {
           "key": "judge",
@@ -203,7 +272,13 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 13697
+          "size": 13697,
+          "said": "1. **Fed Chair Warsh Jackson Hole comments lift September rate-hike odds; gold slides >3%** \u2014 the single dominant rates/regime driver in the set; it repriced th",
+          "bullets": [
+            "2. **Rising bond yields flagged as the key risk for the Russell 2000 / small-cap corner** \u2014 direct breadth signal; if yields keep backing up, the risk-on rotation into IWM and cyclicals stalls. Outranks single-name color because it is the transmission channel of item 1 into breadth.",
+            "3. **Oil retreats; S&P 500 and Dow break a four-day losing streak** \u2014 the index-level risk-appetite read for the session, and the energy complex (XLE, COP/EOG/OXY/FANG) is the largest single sector cluster in the usable set. Outranks the rest of the tape because it is the actual index narrative.",
+            "4. **Adobe record Q3 revenue $6.76B, EPS $6.13, FY26 outlook raised, AI freemium pivot** \u2014 the only fresh index-relevant mega-cap software print; it is the swing factor for whether software gets bought on the dovish-rates hope or sold on multiple compression. Sector_fundamental with basket force (IGV), not pure single-name."
+          ]
         },
         {
           "key": "research_json",
@@ -212,7 +287,11 @@
           "role": "required",
           "status": "OK",
           "reason": "cards=142",
-          "size": 384097
+          "size": 384097,
+          "said": "morning_refresh \u00b7 142 cards \u00b7 refreshed 0 \u00b7 passthrough \u00b7 HEAT=126 OVERRIDE=12 SPLIT=4 \u00b7 err coverage:0/25<required:20",
+          "bullets": [
+            "Morning delta refresh failed captain-evidence QC (coverage:0/25<required:20). Using last night's post-close captain cards so the book still has heat. Overnight tape/news was not re-scored."
+          ]
         },
         {
           "key": "research_md",
@@ -221,7 +300,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 43638
+          "size": 43638,
+          "said": "MAP HEAT RESEARCH \u2014 2026-09-14",
+          "bullets": [
+            "142 captain cards \u00b7 size_gate=False set by pre-open refresh",
+            "CAPTAIN CARDS"
+          ]
         },
         {
           "key": "actions",
@@ -230,7 +314,14 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 33045
+          "size": 33045,
+          "said": "58 ticker actions \u00b7 4 events \u00b7 149 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, REPX BUY, INR BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY RRC",
+            "BUY SM"
+          ]
         },
         {
           "key": "general",
@@ -239,7 +330,14 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 12096
+          "size": 12096,
+          "said": "DOWN -11.002",
+          "bullets": [
+            "bad: AI-slowdown shock (Amodei/Altman, SoftBank -12%)",
+            "bad: fresh Saudi/Hormuz strikes, Brent $107",
+            "bad: Sep 16 FOMC hike ~56-77%",
+            "good: FTSE +0.58% on energy bid"
+          ]
         },
         {
           "key": "board",
@@ -248,7 +346,14 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 7131
+          "size": 7131,
+          "said": "2 up / 8 down / 0 flat",
+          "bullets": [
+            "XLB DOWN -15.2",
+            "XLC missing",
+            "XLY DOWN -13.1",
+            "XLP UP +0.8"
+          ]
         },
         {
           "key": "qc",
@@ -257,7 +362,11 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=True",
-          "size": 7191
+          "size": 7191,
+          "said": "all_ok=True \u00b7 sectors 10/11 \u00b7 1 fail",
+          "bullets": [
+            "sector_predict:missing"
+          ]
         },
         {
           "key": "status",
@@ -266,7 +375,9 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 6911
+          "size": 6911,
+          "said": "all_ok=False \u00b7 qc=True \u00b7 grok=False \u00b7 book=True",
+          "bullets": []
         },
         {
           "key": "review",
@@ -275,7 +386,11 @@
           "role": "required",
           "status": "OK",
           "reason": "ok=False Grok returned an empty review",
-          "size": 309
+          "size": 309,
+          "said": "ok=False \u00b7 empty_review_reply (review)",
+          "bullets": [
+            "Grok returned an empty review"
+          ]
         },
         {
           "key": "sector_basic_materials",
@@ -284,7 +399,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 14968
+          "size": 14968,
+          "said": "DOWN notable -15.213",
+          "bullets": [
+            "- ETF: **XLB"
+          ]
         },
         {
           "key": "sector_communication_services",
@@ -293,7 +412,9 @@
           "role": "required",
           "status": "MISSING",
           "reason": "missing",
-          "size": 0
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_consumer_cyclical",
@@ -302,7 +423,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 13706
+          "size": 13706,
+          "said": "DOWN notable -13.101",
+          "bullets": [
+            "- ETF: **XLY"
+          ]
         },
         {
           "key": "sector_consumer_defensive",
@@ -311,7 +436,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 18605
+          "size": 18605,
+          "said": "UP mild 0.826",
+          "bullets": [
+            "- ETF: **XLP"
+          ]
         },
         {
           "key": "sector_energy",
@@ -320,7 +449,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 11377
+          "size": 11377,
+          "said": "UP mild 11.129",
+          "bullets": [
+            "- ETF: **XLE"
+          ]
         },
         {
           "key": "sector_financial",
@@ -329,7 +462,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 12561
+          "size": 12561,
+          "said": "DOWN mild -3.345",
+          "bullets": [
+            "- ETF: **XLF"
+          ]
         },
         {
           "key": "sector_healthcare",
@@ -338,7 +475,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 13197
+          "size": 13197,
+          "said": "DOWN mild -8.839",
+          "bullets": [
+            "- ETF: **XLV"
+          ]
         },
         {
           "key": "sector_industrials",
@@ -347,7 +488,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 14974
+          "size": 14974,
+          "said": "DOWN notable -11.954",
+          "bullets": [
+            "- ETF: **XLI"
+          ]
         },
         {
           "key": "sector_real_estate",
@@ -356,7 +501,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 17602
+          "size": 17602,
+          "said": "DOWN mild -0.491",
+          "bullets": [
+            "- ETF: **XLRE"
+          ]
         },
         {
           "key": "sector_technology",
@@ -365,7 +514,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 11537
+          "size": 11537,
+          "said": "DOWN severe -19.586",
+          "bullets": [
+            "- ETF: **XLK"
+          ]
         },
         {
           "key": "sector_utilities",
@@ -374,10 +527,14 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 12965
+          "size": 12965,
+          "said": "DOWN mild -7.559",
+          "bullets": [
+            "- ETF: **XLU"
+          ]
         }
       ],
-      "said": "general DOWN  -11.002 \u00b7 sectors 2 up / 8 down / 0 flat \u00b7 news 15 items",
+      "said": "general DOWN  -11.002 \u00b7 sectors 2 up / 8 down / 0 flat \u00b7 news 149 raw / 15 usable \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
       "bullets": [
         "bad: AI-slowdown shock (Amodei/Altman, SoftBank -12%)",
         "bad: fresh Saudi/Hormuz strikes, Brent $107",
@@ -409,7 +566,13 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87214
+          "size": 87214,
+          "said": "400 tickers \u00b7 400 signals \u00b7 top ADBE, AJG, AMD, AME, AMGN, AMX, AON, APD",
+          "bullets": [
+            "NOW, INTU, ADBE, CRM Stocks Surge As AI Pacing Debate Hammers Chips: Analyst Says Hardware Vs Software Trade Is Turned On Its Head",
+            "As Employers Plan for Growth, Workforce Pressures Continue to Mount",
+            "AI-linked stocks slide after tech bosses call for slowdown in reckless development"
+          ]
         },
         {
           "key": "weather",
@@ -418,7 +581,12 @@
           "role": "required",
           "status": "OK",
           "reason": "sectors=11 bytes=10660 vix=spiking yields=rising",
-          "size": 10660
+          "size": 10660,
+          "said": "hostile 9 \u00b7 neutral 2",
+          "bullets": [
+            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Energy, Financial, Healthcare, Industrials, Technology, Utilities",
+            "events bull 2 / bear 8"
+          ]
         }
       ],
       "said": "hostile 9 \u00b7 neutral 2",
@@ -445,7 +613,11 @@
           "role": "optional",
           "status": "OK",
           "reason": "rows=2651",
-          "size": 7619545
+          "size": 7619545,
+          "said": "27 rows",
+          "bullets": [
+            "WWW, WDS, ANET, CFFN, CXW, BMRN, HSBC, SM"
+          ]
         },
         {
           "key": "ab_enriched",
@@ -454,7 +626,11 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=2651",
-          "size": 8465733
+          "size": 8465733,
+          "said": "25 rows",
+          "bullets": [
+            "WDS, SM, PBR, UHS, MGY, KNTK, PAA, AVT"
+          ]
         }
       ],
       "said": "25 rows",
@@ -480,7 +656,14 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 33045
+          "size": 33045,
+          "said": "58 ticker actions \u00b7 4 events \u00b7 149 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, REPX BUY, INR BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY RRC",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -489,7 +672,13 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87214
+          "size": 87214,
+          "said": "400 tickers \u00b7 400 signals \u00b7 top ADBE, AJG, AMD, AME, AMGN, AMX, AON, APD",
+          "bullets": [
+            "NOW, INTU, ADBE, CRM Stocks Surge As AI Pacing Debate Hammers Chips: Analyst Says Hardware Vs Software Trade Is Turned On Its Head",
+            "As Employers Plan for Growth, Workforce Pressures Continue to Mount",
+            "AI-linked stocks slide after tech bosses call for slowdown in reckless development"
+          ]
         },
         {
           "key": "dossiers",
@@ -498,11 +687,27 @@
           "role": "optional",
           "status": "OK",
           "reason": "usable=1/8",
-          "size": 6361
+          "size": 6361,
+          "said": "1/8 usable \u00b7 Grok \u2192 DeepSeek \u00b7 CENX, CSTM, SLVM, NMAX, FUBO, KSS, AIN, MPC",
+          "bullets": [
+            "CSTM: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 CSTM",
+            "SLVM: OpenClaw and DeepSeek both returned empty for CATALYST STEP2 SLVM",
+            "NMAX: OpenClaw and DeepSeek both returned empty for CATALYST STEP2 NMAX",
+            "FUBO: OpenClaw and DeepSeek both returned empty for CATALYST STEP2 FUBO"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "58 ticker actions \u00b7 4 events \u00b7 149 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, REPX BUY, INR BUY, OXY BUY, FANG BUY",
+      "bullets": [
+        "BUY COP",
+        "BUY EOG",
+        "BUY RRC",
+        "BUY SM",
+        "BUY REPX",
+        "BUY INR",
+        "BUY OXY",
+        "BUY FANG"
+      ]
     },
     {
       "key": "stock_book",
@@ -522,7 +727,14 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 12096
+          "size": 12096,
+          "said": "DOWN -11.002",
+          "bullets": [
+            "bad: AI-slowdown shock (Amodei/Altman, SoftBank -12%)",
+            "bad: fresh Saudi/Hormuz strikes, Brent $107",
+            "bad: Sep 16 FOMC hike ~56-77%",
+            "good: FTSE +0.58% on energy bid"
+          ]
         },
         {
           "key": "in_board",
@@ -531,7 +743,14 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 7131
+          "size": 7131,
+          "said": "2 up / 8 down / 0 flat",
+          "bullets": [
+            "XLB DOWN -15.2",
+            "XLC missing",
+            "XLY DOWN -13.1",
+            "XLP UP +0.8"
+          ]
         },
         {
           "key": "in_actions",
@@ -540,7 +759,14 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 33045
+          "size": 33045,
+          "said": "58 ticker actions \u00b7 4 events \u00b7 149 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, REPX BUY, INR BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY RRC",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
@@ -549,7 +775,13 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87214
+          "size": 87214,
+          "said": "400 tickers \u00b7 400 signals \u00b7 top ADBE, AJG, AMD, AME, AMGN, AMX, AON, APD",
+          "bullets": [
+            "NOW, INTU, ADBE, CRM Stocks Surge As AI Pacing Debate Hammers Chips: Analyst Says Hardware Vs Software Trade Is Turned On Its Head",
+            "As Employers Plan for Growth, Workforce Pressures Continue to Mount",
+            "AI-linked stocks slide after tech bosses call for slowdown in reckless development"
+          ]
         },
         {
           "key": "in_judge",
@@ -558,7 +790,13 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 13697
+          "size": 13697,
+          "said": "1. **Fed Chair Warsh Jackson Hole comments lift September rate-hike odds; gold slides >3%** \u2014 the single dominant rates/regime driver in the set; it repriced th",
+          "bullets": [
+            "2. **Rising bond yields flagged as the key risk for the Russell 2000 / small-cap corner** \u2014 direct breadth signal; if yields keep backing up, the risk-on rotation into IWM and cyclicals stalls. Outranks single-name color because it is the transmission channel of item 1 into breadth.",
+            "3. **Oil retreats; S&P 500 and Dow break a four-day losing streak** \u2014 the index-level risk-appetite read for the session, and the energy complex (XLE, COP/EOG/OXY/FANG) is the largest single sector cluster in the usable set. Outranks the rest of the tape because it is the actual index narrative.",
+            "4. **Adobe record Q3 revenue $6.76B, EPS $6.13, FY26 outlook raised, AI freemium pivot** \u2014 the only fresh index-relevant mega-cap software print; it is the swing factor for whether software gets bought on the dovish-rates hope or sold on multiple compression. Sector_fundamental with basket force (IGV), not pure single-name."
+          ]
         },
         {
           "key": "in_weather",
@@ -567,7 +805,12 @@
           "role": "input",
           "status": "OK",
           "reason": "sectors=11 bytes=10660 vix=spiking yields=rising",
-          "size": 10660
+          "size": 10660,
+          "said": "hostile 9 \u00b7 neutral 2",
+          "bullets": [
+            "hostile: Basic Materials, Communication Services, Consumer Cyclical, Energy, Financial, Healthcare, Industrials, Technology, Utilities",
+            "events bull 2 / bear 8"
+          ]
         },
         {
           "key": "in_ab",
@@ -576,7 +819,11 @@
           "role": "input",
           "status": "OK",
           "reason": "rows=2651",
-          "size": 8465733
+          "size": 8465733,
+          "said": "25 rows",
+          "bullets": [
+            "WDS, SM, PBR, UHS, MGY, KNTK, PAA, AVT"
+          ]
         },
         {
           "key": "join",
@@ -585,7 +832,11 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5895",
-          "size": 2247172
+          "size": 2247172,
+          "said": "220 rows",
+          "bullets": [
+            "TAL, ABEV, BUD, OHI, BEKE, UL, PG, DLR"
+          ]
         },
         {
           "key": "peers",
@@ -594,7 +845,11 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5111",
-          "size": 818781
+          "size": 818781,
+          "said": "495 rows",
+          "bullets": [
+            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
+          ]
         },
         {
           "key": "book_json",
@@ -603,7 +858,9 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=131",
-          "size": 1091413
+          "size": 1091413,
+          "said": "1d BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR \u00b7 -0.7224999999999999",
+          "bullets": []
         },
         {
           "key": "book_md",
@@ -612,7 +869,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 39356
+          "size": 39356,
+          "said": "Stock book \u2014 2026-09-14",
+          "bullets": [
+            "_Generated 2026-09-14T05:55:22.921265-04:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
@@ -621,7 +883,9 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 585
+          "size": 810,
+          "said": "0 green \u00b7",
+          "bullets": []
         },
         {
           "key": "paper",
@@ -630,7 +894,12 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 1803
+          "size": 1789,
+          "said": "Paper trading \u2014 Futubull-fee simulation",
+          "bullets": [
+            "As of **2026-09-08** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`",
+            "Latest book **2026-09-08** ranker: **weighted** (green pile liquid=0, need 8)."
+          ]
         },
         {
           "key": "dashboard",
@@ -638,8 +907,10 @@
           "path": "dashboard/index.html",
           "role": "optional",
           "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-14)",
-          "size": 5867646
+          "reason": "live-book poller + 2026-09-14_suggestions.json (2026-09-14)",
+          "size": 6300795,
+          "said": "live-book poller + 2026-09-14_suggestions.json (2026-09-14)",
+          "bullets": []
         }
       ],
       "said": "220 rows",
@@ -665,7 +936,9 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=131",
-          "size": 1091413
+          "size": 1091413,
+          "said": "1d BUY CVE \u00b7 SELL TNDM, SERV, GRRR, AHCO, ARQQ, CIFR \u00b7 -0.7224999999999999",
+          "bullets": []
         },
         {
           "key": "dash_html",
@@ -673,8 +946,10 @@
           "path": "dashboard/index.html",
           "role": "required",
           "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-14)",
-          "size": 5867646
+          "reason": "live-book poller + 2026-09-14_suggestions.json (2026-09-14)",
+          "size": 6300795,
+          "said": "live-book poller + 2026-09-14_suggestions.json (2026-09-14)",
+          "bullets": []
         },
         {
           "key": "paper",
@@ -683,7 +958,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 1803
+          "size": 1789,
+          "said": "Paper trading \u2014 Futubull-fee simulation",
+          "bullets": [
+            "As of **2026-09-08** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`",
+            "Latest book **2026-09-08** ranker: **weighted** (green pile liquid=0, need 8)."
+          ]
         },
         {
           "key": "pages",
@@ -692,7 +972,9 @@
           "role": "optional",
           "status": "SKIP",
           "reason": "day-board reads main disk, not live Pages",
-          "size": 0
+          "size": 0,
+          "said": "day-board reads main disk, not live Pages",
+          "bullets": []
         }
       ],
       "said": "",
@@ -784,7 +1066,7 @@
       ]
     },
     "news": {
-      "said": "15 items",
+      "said": "149 raw / 15 usable \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
       "bullets": [
         "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
         "OPEC+ September output hike completed; next meeting watch",

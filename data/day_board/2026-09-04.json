@@ -1,12 +1,12 @@
 {
   "date": "2026-09-04",
-  "generated_at": "2026-09-09T01:20:11.573809-04:00",
+  "generated_at": "2026-09-21T05:56:33.404878-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 7,
-    "partial": 0,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
@@ -15,9 +15,9 @@
       "key": "postclose",
       "name": "Post-close research",
       "yaml": "map_heat_postclose.yml",
-      "status": "OK",
+      "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 1,
       "n_req": 2,
       "n_opt_ok": 2,
       "n_opt": 2,
@@ -29,7 +29,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 22
+          "size": 387728,
+          "said": "postclose_baseline \u00b7 142 cards \u00b7 OVERRIDE=13 HEAT=127 SPLIT=2",
+          "bullets": [
+            "XLB\u2019s close-to-close red is a mislabel: steel (NUE/STLD/WS) is a high-conviction nested long on the sixth CSP hike and $1,205 HRC, while CTVA/CF ag-inputs and HUN/REX chemicals are medium OVERRIDE bids XLB will not show. Skip the other materials flags \u2014 copper remains HEAT down, and aluminum/coking coal are residual-only with silent captains. XLE\u2019s red likewise hides OFS (SLB Kelvion, BKR Pakistan MAS) and RIG\u2019s ONGC LoA; own CVX/DEC for Venezuela and Birch, not XOM, and do not press VLO after the Edouard Port Arthur outage. XLY misses AIN\u2019s CH-53K retain SPLIT and should not mean-revert lodging; XLP misses ADM/BG crush and should not average CALM. This is a post-close nested map, not a broad SPX/XLK chase; size_gate waits for the pre-open futures/calendar refresh."
+          ]
         },
         {
           "key": "baseline_md",
@@ -38,16 +42,23 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 43326
+          "size": 43326,
+          "said": "MAP HEAT RESEARCH \u2014 2026-09-04",
+          "bullets": [
+            "142 captain cards \u00b7 size_gate=False set by pre-open refresh",
+            "CAPTAIN CARDS"
+          ]
         },
         {
           "key": "heat_json",
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-09-04_map_heat.json",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 27
+          "status": "FAIL",
+          "reason": "stale_map_heat_md",
+          "size": 0,
+          "said": "stale_map_heat_md \u00b7 morning_overlay \u00b7 11640 names \u00b7 hot Oil & Gas Drilling, Agricultural Inputs, Oil & Gas Equipment & Services, Oil & Gas Refining & Marketing \u00b7 cold Uranium, Textile Manufacturing, Semiconductor Equipment & Materials \u00b7 macro_gate",
+          "bullets": []
         },
         {
           "key": "heat_md",
@@ -56,9 +67,16 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 16614
+          "size": 16614,
+          "said": "MAP HEAT \u2014 2026-09-03",
+          "bullets": [
+            "Export `finviz_2026-09-03.csv` \u00b7 11640 names \u00b7 generated 2026-09-03T01:47:39.371074-04:00",
+            "TAPE (live futures)"
+          ]
         }
-      ]
+      ],
+      "said": "tables on disk",
+      "bullets": []
     },
     {
       "key": "finviz",
@@ -68,27 +86,91 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 1,
-      "n_opt": 1,
+      "n_opt_ok": 3,
+      "n_opt": 3,
       "files": [
         {
           "key": "digest_json",
-          "name": "Finviz digest JSON",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-04_finviz_digest.json",
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 2
+          "size": 86632,
+          "said": "400 tickers \u00b7 400 signals \u00b7 top ABBV, ADI, AME, AMGN, AMX, APD, APH, APP",
+          "bullets": [
+            "AbbVie's Etentamig Delivers 74% Response Rate in Pivotal Cancer Trial",
+            "Get Paid 12% A Year To Let Someone Else Chase ADI Stock Higher",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
+          ]
         },
         {
           "key": "digest_md",
-          "name": "Finviz digest MD",
+          "name": "Quote-page digest MD (*_finviz_digest)",
           "path": "01_daily/news/2026-09-04_finviz_digest.md",
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11586
+          "size": 11586,
+          "said": "Finviz Daily Digest \u2014 2026-09-04",
+          "bullets": [
+            "_Generated 2026-09-04T01:51:52.509953-04:00 \u00b7 export=data/exports/finviz_2026-09-04.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_",
+            "Major indices (live quote page)"
+          ]
+        },
+        {
+          "key": "market_digest_json",
+          "name": "Homepage warm-up JSON (*_finviz_market_digest)",
+          "path": "01_daily/news/2026-09-04_finviz_market_digest.json",
+          "role": "optional",
+          "status": "OK",
+          "reason": "",
+          "size": 7869,
+          "said": "US stocks closed lower as strong August jobs data boosted Fed hike odds and lifted short\u2011term yields ahead of next week\u2019s CPI and PPI releases \u00b7 leaders ETN, JBHT, LULU, SNDK, MU, NVDA \u00b7 bad",
+          "bullets": []
+        },
+        {
+          "key": "market_digest_md",
+          "name": "Homepage warm-up MD (*_finviz_market_digest)",
+          "path": "01_daily/news/2026-09-04_finviz_market_digest.md",
+          "role": "optional",
+          "status": "OK",
+          "reason": "",
+          "size": 3850,
+          "said": "Finviz homepage market digest \u2014 2026-09-04",
+          "bullets": [
+            "Generated:** 2026-09-04T21:03:26-04:00 (America/New_York)",
+            "Source:** `wayback`"
+          ]
+        },
+        {
+          "key": "market_digest_close_json",
+          "name": "Close answer-key JSON (*_finviz_market_digest_close)",
+          "path": "01_daily/news/2026-09-04_finviz_market_digest_close.json",
+          "role": "era",
+          "status": "SKIP",
+          "reason": "not in pipeline as of 2026-09-04 (first finviz_market_digest_close 2026-09-10)",
+          "size": 0,
+          "said": "not in pipeline as of 2026-09-04 (first finviz_market_digest_close 2026-09-10)",
+          "bullets": []
+        },
+        {
+          "key": "market_digest_close_md",
+          "name": "Close answer-key MD (*_finviz_market_digest_close)",
+          "path": "01_daily/news/2026-09-04_finviz_market_digest_close.md",
+          "role": "era",
+          "status": "SKIP",
+          "reason": "not in pipeline as of 2026-09-04 (first finviz_market_digest_close 2026-09-10)",
+          "size": 0,
+          "said": "not in pipeline as of 2026-09-04 (first finviz_market_digest_close 2026-09-10)",
+          "bullets": []
         }
+      ],
+      "said": "400 tickers \u00b7 400 signals \u00b7 top ABBV, ADI, AME, AMGN, AMX, APD, APH, APP",
+      "bullets": [
+        "AbbVie's Etentamig Delivers 74% Response Rate in Pivotal Cancer Trial",
+        "Get Paid 12% A Year To Let Someone Else Chase ADI Stock Higher",
+        "AMETEK Completes Acquisition of Indicor Instrumentation"
       ]
     },
     {
@@ -96,20 +178,37 @@
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
       "status": "OK",
-      "inputs_ready": true,
+      "inputs_ready": false,
       "n_req_ok": 20,
       "n_req": 20,
-      "n_opt_ok": 2,
-      "n_opt": 2,
+      "n_opt_ok": 3,
+      "n_opt": 3,
       "files": [
         {
           "key": "in_digest",
-          "name": "Finviz digest JSON",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-04_finviz_digest.json",
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 2
+          "size": 86632,
+          "said": "400 tickers \u00b7 400 signals \u00b7 top ABBV, ADI, AME, AMGN, AMX, APD, APH, APP",
+          "bullets": [
+            "AbbVie's Etentamig Delivers 74% Response Rate in Pivotal Cancer Trial",
+            "Get Paid 12% A Year To Let Someone Else Chase ADI Stock Higher",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
+          ]
+        },
+        {
+          "key": "in_market_digest",
+          "name": "Homepage warm-up JSON (*_finviz_market_digest)",
+          "path": "01_daily/news/2026-09-04_finviz_market_digest.json",
+          "role": "optional",
+          "status": "OK",
+          "reason": "",
+          "size": 7869,
+          "said": "US stocks closed lower as strong August jobs data boosted Fed hike odds and lifted short\u2011term yields ahead of next week\u2019s CPI and PPI releases \u00b7 leaders ETN, JBHT, LULU, SNDK, MU, NVDA \u00b7 bad",
+          "bullets": []
         },
         {
           "key": "in_baseline",
@@ -118,16 +217,22 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 22
+          "size": 387728,
+          "said": "postclose_baseline \u00b7 142 cards \u00b7 OVERRIDE=13 HEAT=127 SPLIT=2",
+          "bullets": [
+            "XLB\u2019s close-to-close red is a mislabel: steel (NUE/STLD/WS) is a high-conviction nested long on the sixth CSP hike and $1,205 HRC, while CTVA/CF ag-inputs and HUN/REX chemicals are medium OVERRIDE bids XLB will not show. Skip the other materials flags \u2014 copper remains HEAT down, and aluminum/coking coal are residual-only with silent captains. XLE\u2019s red likewise hides OFS (SLB Kelvion, BKR Pakistan MAS) and RIG\u2019s ONGC LoA; own CVX/DEC for Venezuela and Birch, not XOM, and do not press VLO after the Edouard Port Arthur outage. XLY misses AIN\u2019s CH-53K retain SPLIT and should not mean-revert lodging; XLP misses ADM/BG crush and should not average CALM. This is a post-close nested map, not a broad SPX/XLK chase; size_gate waits for the pre-open futures/calendar refresh."
+          ]
         },
         {
           "key": "in_heat",
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-09-04_map_heat.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 27
+          "status": "FAIL",
+          "reason": "stale_map_heat_md",
+          "size": 0,
+          "said": "stale_map_heat_md \u00b7 morning_overlay \u00b7 11640 names \u00b7 hot Oil & Gas Drilling, Agricultural Inputs, Oil & Gas Equipment & Services, Oil & Gas Refining & Marketing \u00b7 cold Uranium, Textile Manufacturing, Semiconductor Equipment & Materials \u00b7 macro_gate",
+          "bullets": []
         },
         {
           "key": "parsed",
@@ -136,7 +241,14 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 50
+          "size": 318705,
+          "said": "400 raw / 69 usable \u00b7 The big focus now is on the potential for a September rate hike after the Fed st",
+          "bullets": [
+            "The big focus now is on the potential for a September rate hike after the Fed stands pat",
+            "Inside the Fed decision to hold interest rates steady as 3 members vote for rate hike - CBS News",
+            "Fed Holds Rates Steady, but 3 Members Favored a Rate Hike | National News | U.S. News - U.S. News & World Report",
+            "Warsh Stands to Make Market History If Fed Opts for a Rate Hike - Bloomberg.com"
+          ]
         },
         {
           "key": "events",
@@ -145,7 +257,14 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 20478
+          "size": 20490,
+          "said": "21 events \u00b7 elevated uncertainty \u00b7 Global markets face a high-stakes September with the FOMC decision (Sep 15-16) as the centerpiece, now a genuine coin flip between a hold an",
+          "bullets": [
+            "US August employment report (NFP)",
+            "FOMC September decision (first Warsh SEP/dots)",
+            "US-Iran Strait of Hormuz conflict escalation",
+            "US August CPI"
+          ]
         },
         {
           "key": "judge",
@@ -154,7 +273,13 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 12918
+          "size": 12968,
+          "said": "1. **Fed holds rates steady, 3 members dissent for hike; Warsh signals September hike risk** \u2014 This is the dominant macro driver: a divided Fed with a hawkish c",
+          "bullets": [
+            "2. **Gold slides >3% on Warsh's Jackson Hole comments boosting September rate-hike bets** \u2014 A regime-level signal: the monetary-metals bid that has supported XLB and miners inverts on hawkish Fed repricing, directly hitting a crowded long (gold miners) and creating a substitution/risk-off channel into the session.",
+            "3. **S&P 500, Dow end best day in a month on calmer yields as rate-hike bets wane** \u2014 This is the prior session's tape context: a relief rally on easing hike fears that is now being challenged by the Warsh-hawkish repricing. It sets up a potential reversal/fade risk for the broad tape.",
+            "4. **AbbVie positive Phase 3 etentamig data + closes $10.9B Apogee deal** \u2014 A large-cap pharma catalyst with sector-wide read-through: positive late-stage oncology data plus M&A confirms Healthcare fundamental strength, supporting XLV as a defensive/relative-strength bid."
+          ]
         },
         {
           "key": "research_json",
@@ -163,7 +288,11 @@
           "role": "required",
           "status": "OK",
           "reason": "cards=142",
-          "size": 407165
+          "size": 407165,
+          "said": "morning_refresh \u00b7 142 cards \u00b7 refreshed 0 \u00b7 passthrough \u00b7 OVERRIDE=13 HEAT=127 SPLIT=2 \u00b7 err coverage:0/28<required:23",
+          "bullets": [
+            "Morning delta refresh failed captain-evidence QC (coverage:0/28<required:23). Using last night's post-close captain cards so the book still has heat. Overnight tape/news was not re-scored."
+          ]
         },
         {
           "key": "research_md",
@@ -172,7 +301,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 42738
+          "size": 42857,
+          "said": "MAP HEAT RESEARCH \u2014 2026-09-04",
+          "bullets": [
+            "142 captain cards \u00b7 size_gate=True set by pre-open refresh",
+            "CAPTAIN CARDS"
+          ]
         },
         {
           "key": "actions",
@@ -181,7 +315,14 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 2
+          "size": 20079,
+          "said": "22 ticker actions \u00b7 2 events \u00b7 400 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, INR BUY, REPX BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY RRC",
+            "BUY SM"
+          ]
         },
         {
           "key": "general",
@@ -190,7 +331,14 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 11457
+          "size": 11621,
+          "said": "UP 2.25",
+          "bullets": [
+            "bad: NFP binary today (coin-flip hike odds)",
+            "bad: Hormuz stalemate worsening (Saudi tanker attack)",
+            "bad: 1w real-yield backup intact",
+            "good: Asia chip rebound +0.84%"
+          ]
         },
         {
           "key": "board",
@@ -199,7 +347,14 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 7263
+          "size": 7263,
+          "said": "2 up / 4 down / 5 flat",
+          "bullets": [
+            "XLB DOWN -5.0",
+            "XLC FLAT +0.0",
+            "XLY DOWN -4.5",
+            "XLP DOWN -5.0"
+          ]
         },
         {
           "key": "qc",
@@ -208,7 +363,9 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=True",
-          "size": 6602
+          "size": 6602,
+          "said": "all_ok=True \u00b7 sectors 11/11 \u00b7 no fails",
+          "bullets": []
         },
         {
           "key": "status",
@@ -217,7 +374,9 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=True",
-          "size": 6489
+          "size": 6489,
+          "said": "all_ok=True \u00b7 qc=True \u00b7 grok=True \u00b7 book=None",
+          "bullets": []
         },
         {
           "key": "review",
@@ -226,7 +385,11 @@
           "role": "required",
           "status": "OK",
           "reason": "ok=True All required core artifacts for 2026-09-04 are present, same-day, and complete. The general predict provides a clear dir",
-          "size": 1004
+          "size": 1004,
+          "said": "ok=True \u00b7 All required core artifacts for 2026-09-04 are present, same-day, and complete. The general predict provides a clear directional call (UP/FLAT) with full SCORES",
+          "bullets": [
+            "All required core artifacts for 2026-09-04 are present, same-day, and complete. The general predict provides a clear directional call (UP/FLAT) with full SCORES_BEGIN/END markers and a detailed factor analysis. The events JSON is a real scan dated 2026-09-04 with a full event list, top risks, and opportunities. The news judge and parsed JSON are substantive, with the judge providing a clear ranked list and the parse containing a large volume of processed headlines. The finviz digest and map-heat tables are populated with live futures tape data and sector/industry heat. All 11 sector predicts are present, each with a clear directional call, SECTOR_SCORES_BEGIN/END markers, and a HIT_GRID. The research baseline and research files are present; the research file notes a failed morning refresh"
+          ]
         },
         {
           "key": "sector_basic_materials",
@@ -235,7 +398,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 8305
+          "size": 8418,
+          "said": "DOWN mild -4.95",
+          "bullets": [
+            "- ETF: **XLB"
+          ]
         },
         {
           "key": "sector_communication_services",
@@ -244,7 +411,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 11846
+          "size": 11912,
+          "said": "FLAT flat 0.0",
+          "bullets": [
+            "- ETF: **XLC"
+          ]
         },
         {
           "key": "sector_consumer_cyclical",
@@ -253,7 +424,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 20207
+          "size": 20493,
+          "said": "DOWN mild -4.5",
+          "bullets": [
+            "- ETF: **XLY"
+          ]
         },
         {
           "key": "sector_consumer_defensive",
@@ -262,7 +437,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 11006
+          "size": 11126,
+          "said": "DOWN mild -4.95",
+          "bullets": [
+            "- ETF: **XLP"
+          ]
         },
         {
           "key": "sector_energy",
@@ -271,7 +450,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 9410
+          "size": 9524,
+          "said": "FLAT flat -3.15",
+          "bullets": [
+            "- ETF: **XLE"
+          ]
         },
         {
           "key": "sector_financial",
@@ -280,7 +463,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 13222
+          "size": 13330,
+          "said": "UP mild 5.4",
+          "bullets": [
+            "- ETF: **XLF"
+          ]
         },
         {
           "key": "sector_healthcare",
@@ -289,7 +476,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 10487
+          "size": 10557,
+          "said": "UP flat 1.35",
+          "bullets": [
+            "- ETF: **XLV"
+          ]
         },
         {
           "key": "sector_industrials",
@@ -298,7 +489,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 8027
+          "size": 8121,
+          "said": "DOWN flat -1.35",
+          "bullets": [
+            "- ETF: **XLI"
+          ]
         },
         {
           "key": "sector_real_estate",
@@ -307,7 +502,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 11667
+          "size": 11769,
+          "said": "FLAT flat 0.0",
+          "bullets": [
+            "- ETF: **XLRE"
+          ]
         },
         {
           "key": "sector_technology",
@@ -316,7 +515,11 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 11007
+          "size": 11184,
+          "said": "FLAT flat -0.45",
+          "bullets": [
+            "- ETF: **XLK"
+          ]
         },
         {
           "key": "sector_utilities",
@@ -325,8 +528,25 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 17045
+          "size": 17186,
+          "said": "FLAT flat 0.0",
+          "bullets": [
+            "- ETF: **XLU"
+          ]
         }
+      ],
+      "said": "general UP  2.25 \u00b7 sectors 2 up / 4 down / 5 flat \u00b7 news 400 raw / 69 usable \u00b7 The big focus now is on the potential for a September rate hike after the Fed st",
+      "bullets": [
+        "bad: NFP binary today (coin-flip hike odds)",
+        "bad: Hormuz stalemate worsening (Saudi tanker attack)",
+        "bad: 1w real-yield backup intact",
+        "good: Asia chip rebound +0.84%",
+        "good: NQ leading ES +0.44%",
+        "XLB DOWN -5.0",
+        "XLC FLAT +0.0",
+        "XLY DOWN -4.5",
+        "XLP DOWN -5.0",
+        "XLE FLAT -3.1"
       ]
     },
     {
@@ -342,12 +562,18 @@
       "files": [
         {
           "key": "in_digest",
-          "name": "Finviz digest JSON",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-04_finviz_digest.json",
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 2
+          "size": 86632,
+          "said": "400 tickers \u00b7 400 signals \u00b7 top ABBV, ADI, AME, AMGN, AMX, APD, APH, APP",
+          "bullets": [
+            "AbbVie's Etentamig Delivers 74% Response Rate in Pivotal Cancer Trial",
+            "Get Paid 12% A Year To Let Someone Else Chase ADI Stock Higher",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
+          ]
         },
         {
           "key": "weather",
@@ -355,9 +581,19 @@
           "path": "01_daily/weather/2026-09-04_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11",
-          "size": 9621
+          "reason": "sectors=11 bytes=9671 vix=falling yields=flat",
+          "size": 9671,
+          "said": "favorable 2 \u00b7 hostile 5 \u00b7 neutral 4",
+          "bullets": [
+            "hostile: Basic Materials, Consumer Cyclical, Consumer Defensive, Energy, Real Estate",
+            "events bull 2 / bear 4"
+          ]
         }
+      ],
+      "said": "favorable 2 \u00b7 hostile 5 \u00b7 neutral 4",
+      "bullets": [
+        "hostile: Basic Materials, Consumer Cyclical, Consumer Defensive, Energy, Real Estate",
+        "events bull 2 / bear 4"
       ]
     },
     {
@@ -378,7 +614,11 @@
           "role": "optional",
           "status": "OK",
           "reason": "rows=2676",
-          "size": 7674943
+          "size": 7674943,
+          "said": "28 rows",
+          "bullets": [
+            "SBLK, RMD, KBR, AHR, ANET, BLMN, LEU, CSL"
+          ]
         },
         {
           "key": "ab_enriched",
@@ -387,8 +627,16 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=2676",
-          "size": 8509655
+          "size": 8509655,
+          "said": "25 rows",
+          "bullets": [
+            "NWBI, SBLK, XP, HOMB, MCK, RYAN, ELV, BJ"
+          ]
         }
+      ],
+      "said": "25 rows",
+      "bullets": [
+        "NWBI, SBLK, XP, HOMB, MCK"
       ]
     },
     {
@@ -409,16 +657,29 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 2
+          "size": 20079,
+          "said": "22 ticker actions \u00b7 2 events \u00b7 400 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, INR BUY, REPX BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY RRC",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
-          "name": "Finviz digest JSON",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-04_finviz_digest.json",
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 2
+          "size": 86632,
+          "said": "400 tickers \u00b7 400 signals \u00b7 top ABBV, ADI, AME, AMGN, AMX, APD, APH, APP",
+          "bullets": [
+            "AbbVie's Etentamig Delivers 74% Response Rate in Pivotal Cancer Trial",
+            "Get Paid 12% A Year To Let Someone Else Chase ADI Stock Higher",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
+          ]
         },
         {
           "key": "dossiers",
@@ -427,8 +688,26 @@
           "role": "optional",
           "status": "FAIL",
           "reason": "zero usable dossiers (n=8)",
-          "size": 3953
+          "size": 3953,
+          "said": "zero usable dossiers (n=8) \u00b7 0/8 usable \u00b7 Grok \u2192 DeepSeek \u00b7 NUE, STLD, WS, CTVA, CF, HUN, REX, ADM",
+          "bullets": [
+            "NUE: 'list' object has no attribute 'get'",
+            "STLD: 'list' object has no attribute 'get'",
+            "WS: 'list' object has no attribute 'get'",
+            "CTVA: Step 2 parse failure"
+          ]
         }
+      ],
+      "said": "22 ticker actions \u00b7 2 events \u00b7 400 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, INR BUY, REPX BUY, OXY BUY, FANG BUY",
+      "bullets": [
+        "BUY COP",
+        "BUY EOG",
+        "BUY RRC",
+        "BUY SM",
+        "BUY INR",
+        "BUY REPX",
+        "BUY OXY",
+        "BUY FANG"
       ]
     },
     {
@@ -449,7 +728,14 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 11457
+          "size": 11621,
+          "said": "UP 2.25",
+          "bullets": [
+            "bad: NFP binary today (coin-flip hike odds)",
+            "bad: Hormuz stalemate worsening (Saudi tanker attack)",
+            "bad: 1w real-yield backup intact",
+            "good: Asia chip rebound +0.84%"
+          ]
         },
         {
           "key": "in_board",
@@ -458,7 +744,14 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 7263
+          "size": 7263,
+          "said": "2 up / 4 down / 5 flat",
+          "bullets": [
+            "XLB DOWN -5.0",
+            "XLC FLAT +0.0",
+            "XLY DOWN -4.5",
+            "XLP DOWN -5.0"
+          ]
         },
         {
           "key": "in_actions",
@@ -467,16 +760,29 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 2
+          "size": 20079,
+          "said": "22 ticker actions \u00b7 2 events \u00b7 400 headlines \u00b7 COP BUY, EOG BUY, RRC BUY, SM BUY, INR BUY, REPX BUY, OXY BUY, FANG BUY",
+          "bullets": [
+            "BUY COP",
+            "BUY EOG",
+            "BUY RRC",
+            "BUY SM"
+          ]
         },
         {
           "key": "in_digest",
-          "name": "Finviz digest JSON",
+          "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-04_finviz_digest.json",
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 2
+          "size": 86632,
+          "said": "400 tickers \u00b7 400 signals \u00b7 top ABBV, ADI, AME, AMGN, AMX, APD, APH, APP",
+          "bullets": [
+            "AbbVie's Etentamig Delivers 74% Response Rate in Pivotal Cancer Trial",
+            "Get Paid 12% A Year To Let Someone Else Chase ADI Stock Higher",
+            "AMETEK Completes Acquisition of Indicor Instrumentation"
+          ]
         },
         {
           "key": "in_judge",
@@ -485,7 +791,13 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 12918
+          "size": 12968,
+          "said": "1. **Fed holds rates steady, 3 members dissent for hike; Warsh signals September hike risk** \u2014 This is the dominant macro driver: a divided Fed with a hawkish c",
+          "bullets": [
+            "2. **Gold slides >3% on Warsh's Jackson Hole comments boosting September rate-hike bets** \u2014 A regime-level signal: the monetary-metals bid that has supported XLB and miners inverts on hawkish Fed repricing, directly hitting a crowded long (gold miners) and creating a substitution/risk-off channel into the session.",
+            "3. **S&P 500, Dow end best day in a month on calmer yields as rate-hike bets wane** \u2014 This is the prior session's tape context: a relief rally on easing hike fears that is now being challenged by the Warsh-hawkish repricing. It sets up a potential reversal/fade risk for the broad tape.",
+            "4. **AbbVie positive Phase 3 etentamig data + closes $10.9B Apogee deal** \u2014 A large-cap pharma catalyst with sector-wide read-through: positive late-stage oncology data plus M&A confirms Healthcare fundamental strength, supporting XLV as a defensive/relative-strength bid."
+          ]
         },
         {
           "key": "in_weather",
@@ -493,8 +805,13 @@
           "path": "01_daily/weather/2026-09-04_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11",
-          "size": 9621
+          "reason": "sectors=11 bytes=9671 vix=falling yields=flat",
+          "size": 9671,
+          "said": "favorable 2 \u00b7 hostile 5 \u00b7 neutral 4",
+          "bullets": [
+            "hostile: Basic Materials, Consumer Cyclical, Consumer Defensive, Energy, Real Estate",
+            "events bull 2 / bear 4"
+          ]
         },
         {
           "key": "in_ab",
@@ -503,7 +820,11 @@
           "role": "input",
           "status": "OK",
           "reason": "rows=2676",
-          "size": 8509655
+          "size": 8509655,
+          "said": "25 rows",
+          "bullets": [
+            "NWBI, SBLK, XP, HOMB, MCK, RYAN, ELV, BJ"
+          ]
         },
         {
           "key": "join",
@@ -512,7 +833,11 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5918",
-          "size": 2230644
+          "size": 2230644,
+          "said": "209 rows",
+          "bullets": [
+            "HRMY, HALO, CDNA, WAY, PLMR, ONC, KKR, NU"
+          ]
         },
         {
           "key": "peers",
@@ -521,7 +846,11 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5133",
-          "size": 823454
+          "size": 823454,
+          "said": "492 rows",
+          "bullets": [
+            "A, AA, AACB, AACG, AAL, AAME, AAMI, AAOI"
+          ]
         },
         {
           "key": "book_json",
@@ -530,7 +859,9 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=205",
-          "size": 1511389
+          "size": 1511389,
+          "said": "1d BUY HOOD, XP, ASND, NVAX, OSCR, ATRC, DUOL, MRX \u00b7 SELL FUN, PACK, TMC, LODE, FCEL, SPIR \u00b7 0.425",
+          "bullets": []
         },
         {
           "key": "book_md",
@@ -539,7 +870,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 79631
+          "size": 79631,
+          "said": "Stock book \u2014 2026-09-04",
+          "bullets": [
+            "_Generated 2026-09-04T08:54:27.308108-04:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
@@ -548,7 +884,9 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 2176
+          "size": 12859,
+          "said": "0 green \u00b7",
+          "bullets": []
         },
         {
           "key": "paper",
@@ -557,7 +895,12 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 1795
+          "size": 1789,
+          "said": "Paper trading \u2014 Futubull-fee simulation",
+          "bullets": [
+            "As of **2026-09-08** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`",
+            "Latest book **2026-09-08** ranker: **weighted** (green pile liquid=0, need 8)."
+          ]
         },
         {
           "key": "dashboard",
@@ -565,9 +908,15 @@
           "path": "dashboard/index.html",
           "role": "optional",
           "status": "OK",
-          "reason": "generated=2026-09-08T14:45:28.923749-04:00 last=2026-09-08",
-          "size": 3693862
+          "reason": "generated=2026-09-17T20:51:59.413465-04:00 last=2026-09-17",
+          "size": 6300795,
+          "said": "generated=2026-09-17T20:51:59.413465-04:00 last=2026-09-17",
+          "bullets": []
         }
+      ],
+      "said": "209 rows",
+      "bullets": [
+        "HRMY, HALO, CDNA, WAY, PLMR"
       ]
     },
     {
@@ -588,7 +937,9 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=205",
-          "size": 1511389
+          "size": 1511389,
+          "said": "1d BUY HOOD, XP, ASND, NVAX, OSCR, ATRC, DUOL, MRX \u00b7 SELL FUN, PACK, TMC, LODE, FCEL, SPIR \u00b7 0.425",
+          "bullets": []
         },
         {
           "key": "dash_html",
@@ -596,8 +947,10 @@
           "path": "dashboard/index.html",
           "role": "required",
           "status": "OK",
-          "reason": "generated=2026-09-08T14:45:28.923749-04:00 last=2026-09-08",
-          "size": 3693862
+          "reason": "generated=2026-09-17T20:51:59.413465-04:00 last=2026-09-17",
+          "size": 6300795,
+          "said": "generated=2026-09-17T20:51:59.413465-04:00 last=2026-09-17",
+          "bullets": []
         },
         {
           "key": "paper",
@@ -606,7 +959,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 1795
+          "size": 1789,
+          "said": "Paper trading \u2014 Futubull-fee simulation",
+          "bullets": [
+            "As of **2026-09-08** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`",
+            "Latest book **2026-09-08** ranker: **weighted** (green pile liquid=0, need 8)."
+          ]
         },
         {
           "key": "pages",
@@ -615,9 +973,13 @@
           "role": "optional",
           "status": "SKIP",
           "reason": "day-board reads main disk, not live Pages",
-          "size": 0
+          "size": 0,
+          "said": "day-board reads main disk, not live Pages",
+          "bullets": []
         }
-      ]
+      ],
+      "said": "",
+      "bullets": []
     }
   ],
   "selections": {
@@ -745,7 +1107,59 @@
         "score": -0.47816956309285374
       }
     ],
-    "flatten": "# flatten_robust card \u2014 2026-09-04\n_Generated 2026-09-04T20:41:05 \u2014 live `flatten_robust`._\n**S=+2.25; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **+2.25** (UP) \u00b7 route **io**\n- Cash leftover **$111,142.41** (after 09:30 $111,142.41 \u00b7 after 16:00 $111,142.41)\n- Open lots **0** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$111,142.41**\n## Open holdings\n| Ticker | Sleeve | Shares | Entry | Since | Mark | MV |\n|---|---|---:|---:|---|---:|---:|\n| \u2014 | \u2014 | | | | | |\n## Tickets\n| Clock | Side | Ticker | Sleeve | Shares | Px | $ | Why |\n|---|---|---|---|---:|---:|---"
+    "flatten": {
+      "said": "437 priced buys \u00b7 cash $11,641.34",
+      "bullets": [
+        "437 priced buys",
+        "cash $11,641.34"
+      ]
+    },
+    "general": {
+      "said": "UP  2.25",
+      "bullets": [
+        "bad: NFP binary today (coin-flip hike odds)",
+        "bad: Hormuz stalemate worsening (Saudi tanker attack)",
+        "bad: 1w real-yield backup intact",
+        "good: Asia chip rebound +0.84%",
+        "good: NQ leading ES +0.44%"
+      ],
+      "score": "2.25",
+      "direction": "up"
+    },
+    "sectors": {
+      "said": "2 up / 4 down / 5 flat",
+      "bullets": [
+        "XLB DOWN -5.0",
+        "XLC FLAT +0.0",
+        "XLY DOWN -4.5",
+        "XLP DOWN -5.0",
+        "XLE FLAT -3.1",
+        "XLF UP +5.4",
+        "XLV UP +1.4",
+        "XLI DOWN -1.4",
+        "XLRE FLAT +0.0",
+        "XLK FLAT -0.5",
+        "XLU FLAT +0.0"
+      ]
+    },
+    "news": {
+      "said": "400 raw / 69 usable \u00b7 The big focus now is on the potential for a September rate hike after the Fed st",
+      "bullets": [
+        "The big focus now is on the potential for a September rate hike after the Fed stands pat",
+        "Inside the Fed decision to hold interest rates steady as 3 members vote for rate hike - CBS News",
+        "Fed Holds Rates Steady, but 3 Members Favored a Rate Hike | National News | U.S. News - U.S. News & World Report",
+        "Warsh Stands to Make Market History If Fed Opts for a Rate Hike - Bloomberg.com",
+        "Will they or won't they? The case for and against a Fed rate hike - Reuters",
+        "Federal Reserve cuts rates for second time as shutdown stalls key data - The Hill"
+      ]
+    },
+    "weather": {
+      "said": "favorable 2 \u00b7 hostile 5 \u00b7 neutral 4",
+      "bullets": [
+        "hostile: Basic Materials, Consumer Cyclical, Consumer Defensive, Energy, Real Estate",
+        "events bull 2 / bear 4"
+      ]
+    }
   },
   "lands": [],
   "href": {
