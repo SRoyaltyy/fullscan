@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T04:26:50.038385-04:00",
+  "generated_at": "2026-09-21T04:33:04.906076-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-09-21",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-21T04:23:49.199051-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-21_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 88724,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-09-21_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11873,
-          "preview": "# Finviz Daily Digest \u2014 2026-09-21\n_Generated 2026-09-21T04:17:16.971976-04:00 \u00b7 export=data/exports/finviz_2026-09-21.csv \u00b7 ticker digests=5875 \u00b7 high-signal=2328_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-21\n_Generated 2026-09-21T04:17:16.971976-04:00 \u00b7 export=data/exports/finviz_2026-09-21.csv \u00b7 ticker digests=5875 \u00b7 high-signal=2328_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -193,6 +168,31 @@
         }
       ],
       "preview": "raw=119 usable=6 single=14 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Surprise US crude inventory build and Fed rate hike drive 5.63% DVN drop | Amgen gets FDA approval to update IMDELLTRA label to reduce monitoring for first \u00b7 # News Parse v2 \u2014 2026-09-21T04:26:42.512328-04:00\nWindow\u224848h | raw=119 | usable=6 | single_name=14 | noise_dropped=99\nusable polarity={'+': 1, '-': 3, 'mixed': 0, 'neutral': 2}"
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-09-21",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-21T04:33:04.144336-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-09-21_events.json",
+          "ok": true,
+          "reason": "",
+          "size": 36019,
+          "preview": "33 events \u00b7 Trump\u2013Xi Washington summit | Hormuz tanker war still live; Brent ~$101\u2013103 | UNGA 81 high-level debate; Trump speaks Sept 22 | Trump\u2013Zelensky UNGA sideline; energy-truce push | Bessent\u2013He Lifeng pre-summit talks (New York) | Warsh Fed 25bp hike to 3.75\u20134.00% with hawkish SEP"
+        },
+        {
+          "path": "01_daily/events/2026-09-21_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 23430,
+          "preview": "# Event Scan \u2014 2026-09-21\n- events tracked: **33** (via openclaw)\n- uncertainty: **elevated**\n- summary: The two-way overlay for the next two weeks is Thursday's Trump\u2013Xi summit (tariff cuts/AI vs Taiwan arms and the newly signed Graham secondary-tariff law) against a still-unresolved Hormuz tanker war with Brent ~$101\u2013103. G3 tightening is done for this window (Warsh 3.75\u20134.00%, BoJ 1.25% effective Sept 24, ECB 2.50%) so the data that can still reprice the path are Aug PCE (Sept 30) and Oct 2 NFP, while US housing is already cracking even as nominal retail sales rebounded +1.2%."
+        }
+      ],
+      "preview": "33 events \u00b7 Trump\u2013Xi Washington summit | Hormuz tanker war still live; Brent ~$101\u2013103 | UNGA 81 high-level debate; Trump speaks Sept 22 | Trump\u2013Zelensky UNGA sideline; energy-truce push | Bessent\u2013He Lifeng pre-summit talks (New York) | Warsh Fed 25bp hike to 3.75\u20134.00% with hawkish SEP \u00b7 # Event Scan \u2014 2026-09-21\n- events tracked: **33** (via openclaw)\n- uncertainty: **elevated**\n- summary: The two-way overlay for the next two weeks is Thursday's Trump\u2013Xi summit (tariff cuts/AI vs Taiwan arms and the newly signed Graham secondary-tariff law) against a still-unresolved Hormuz tanker war with Brent ~$101\u2013103. G3 tightening is done for this window (Warsh 3.75\u20134.00%, BoJ 1.25% effective Sept 24, ECB 2.50%) so the data that can still reprice the path are Aug PCE (Sept 30) and Oct 2 NFP, while US housing is already cracking even as nominal retail sales rebounded +1.2%."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
