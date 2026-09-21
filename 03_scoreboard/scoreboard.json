@@ -24514,18 +24514,125 @@
         "B7_OIL_DOLLAR": 1.0
       },
       "leading_sum": 5.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7692.83,
+      "actual_close": 7764.7,
+      "actual_pct_change": 1.49,
+      "actual_direction": "up",
+      "actual_magnitude_band": "notable",
+      "direction_hit": true,
+      "magnitude_hit": true,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": 1.0,
+          "status": "hit"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": -0.5,
+          "status": "miss"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.5,
+          "status": "hit"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 1.0,
+          "status": "hit"
+        }
+      ],
       "reflection_lesson_ref": null,
-      "sources_used": [],
+      "sources_used": [
+        {
+          "url": "https://www.reuters.com/business/wall-st-futures-rise-ai-stocks-gain-oil-prices-slide-2026-09-21/",
+          "date_accessed": "2026-09-21",
+          "summary": "Reuters attributes the rally to AI/tech leadership enabled by falling yields and oil.",
+          "verification": "http_401"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/09/21/amd-hits-1-trillion-market-cap.html",
+          "date_accessed": "2026-09-21",
+          "summary": "AMD's $1T milestone was a symbolic AI-bull confirmation during the session.",
+          "verification": "http_404"
+        },
+        {
+          "url": "https://finance.yahoo.com/energy/articles/oil-rises-houthi-attack-saudi-221210416.html",
+          "date_accessed": "2026-09-21",
+          "summary": "Oil's fourth down day was driven by de-escalation hopes, not demand weakness.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cp24.com/news/money/2026/09/21/stocks-advance-after-bessent-says-talks-with-china-were-successful-before-trump-xi-meeting/",
+          "date_accessed": "2026-09-21",
+          "summary": "The Sunday Bessent–He session set the positive overnight tone for global equities.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.reuters.com/world/china/xi-rolls-into-trump-summit-with-chinas-trade-engine-roaring-2026-09-21/",
+          "date_accessed": "2026-09-21",
+          "summary": "The 09-24 summit is the forward catalyst, framed as stabilization not transformation.",
+          "verification": "http_401"
+        },
+        {
+          "url": "https://polymarket.com/event/how-high-will-10-year-treasury-yield-go-in-september",
+          "date_accessed": "2026-09-21",
+          "summary": "Yields retreated from the post-Fed 5% spike, enabling the tech re-rating.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://sigmanomics.com/index-markets/vix",
+          "date_accessed": "2026-09-21",
+          "summary": "VIX rose slightly on a big up day — hedging into the 09-22 UNGA speech and 09-24 summit.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://mariemontcapital.com/fed-rate-decision-september-2026/",
+          "date_accessed": "2026-09-21",
+          "summary": "The hawkish Fed is the background headwind that masked the Dow's participation.",
+          "verification": "verified"
+        },
+        {
+          "url": "https://piptheory.com/research/triple-witching-september-2026-fed-boj-options-expiry",
+          "date_accessed": "2026-09-21",
+          "summary": "The post-expiry Monday saw cleaner directional flow with dealer hedging pressure removed.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-21-2026",
+          "date_accessed": "2026-09-21",
+          "summary": "Idiosyncratic single-stock drags that did not bleed into the indices.",
+          "verification": "http_404"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -24555,7 +24662,14 @@
       "news_judge_present": true,
       "engine": "v2",
       "anchor_score": 7.621,
-      "overlay_score": 5.25
+      "overlay_score": 5.25,
+      "ops_fail": false,
+      "path_shape": "trend up (closed near day high)",
+      "primary_driver": "Oil's fourth consecutive down day on US-Iran UNGA diplomacy hopes → Treasury yield retreat → AI/semiconductor melt-up (AMD $1T, Nvidia strength)",
+      "key_interaction": "Oil-down → yield-down → tech-up amplification chain, with the hawkish Fed offsetting/masking it in the rate-sensitive Dow (155bp NDX-Dow spread)",
+      "knowable_at_9am": "yes — every input (Bessent-He, oil, yields, Fed) was on the tape premarket; only the NDX magnitude was a genuine upside surprise",
+      "attribution_contested": "yes — Reuters leads with AI/yields, TheStreet/Yahoo with oil, AP/CP24 with China talks, InteractiveCrypto with the Fed shadow",
+      "outlier_watch": "Dow lagged NDX by 155bp (narrow, not broad, rally); VIX rose +1.42% on a +1.49% SPX day; gold/silver rallied alongside risk-on; Bitcoin fell 0.53%"
     },
     {
       "date": "2026-09-21",
