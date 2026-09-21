@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T06:52:53.257511-04:00",
+  "generated_at": "2026-09-21T06:52:58.651969-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -829,10 +829,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5894",
-          "size": 2247471,
+          "size": 2285038,
           "said": "206 rows",
           "bullets": [
-            "PGY, NVDA, SMTC, GCT, HPE, DELL, ANET, RDVT"
+            "AVAH, PGY, SMTC, HALO, ECPG, NVDA, AAMI, CDNA"
           ]
         },
         {
@@ -912,7 +912,7 @@
       ],
       "said": "206 rows",
       "bullets": [
-        "PGY, NVDA, SMTC, GCT, HPE"
+        "AVAH, PGY, SMTC, HALO, ECPG"
       ]
     },
     {
@@ -1948,6 +1948,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 1.904, 'dir': 'flat', 'conf': 0.476, 'source': 'llm'}, Communication Services={'score': 12.219, 'dir': 'up', 'conf': 0.65, 'source': 'llm'}, Consumer Cyclical={'score': 12.338, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Consumer Defensive={'score': -1.24, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Energy={'score': -6.269, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Financial={'score': 5.194, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Healthcare={'score': 3.016, 'dir': 'up', 'conf': 0.521, 'source': 'llm'}, Industrials={'score': 10.19, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-21\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-21",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-21T06:52:58.015131-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-21_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2285038,
+          "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 AVAH, PGY, SMTC, HALO, ECPG"
+        }
+      ],
+      "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 AVAH, PGY, SMTC, HALO, ECPG"
     }
   ],
   "href": {
