@@ -18,6 +18,10 @@ Paper never talks to api.webull.com. Do not enable --env real here.
 
 Rules:
   * hot4: long-only leftover cash, MARKET (live print, not ticket px)
+  * size that cash at HOT4_CASH_HAIRCUT so the sum of planned notionals
+    stays under the snapshot when earlier fills print above the plan px
+  * serial place re-reads sandbox cash and clamps the next BUY
+    (skip the leg if the remainder cannot buy 1 share)
   * skip a name already held; skip if leftover cash cannot buy 1 share
   * hard-red S≤−3 sits; stale Friday panel is dry-run unless --allow-stale
   * flatten source: only live card tickets (never the would-buy wish list)
@@ -248,14 +252,81 @@ def _hot4_num(row: dict, *keys: str):
     return None
 
 
+# MARKET buys fill at the live print. A rigid equal split of one cash
+# snapshot can leave the last leg SUBMITTED when earlier names fill above
+# the plan px (2026-09-21 DELL/GME/UMC filled rich; VSTS
+# QVH6EIJB1RF3DUJJAP6LFQDTIA stayed SUBMITTED on ~$247k). Standing orders
+# ack before the open, so sandbox cash has not moved yet between legs.
+# Size the batch against this fraction of that snapshot. 3% covers the
+# <1% per-name open overshoot from that session with room for a hotter print.
+HOT4_CASH_HAIRCUT = 0.97
+
+
+def clamp_buy_shares(planned: int, px: float, spendable: float) -> int:
+    """Whole shares the next BUY can send. Never above the plan. 0 = skip."""
+    try:
+        planned_n = int(planned or 0)
+        px_n = float(px)
+        cash_n = float(spendable)
+    except (TypeError, ValueError):
+        return 0
+    if planned_n < 1 or px_n <= 0 or cash_n <= 0 or not math.isfinite(px_n):
+        return 0
+    if not math.isfinite(cash_n):
+        return 0
+    fitted = int(math.floor((cash_n + 1e-6) / px_n))
+    if fitted < 1:
+        return 0
+    return min(planned_n, fitted)
+
+
+def cash_still_free(start_cash: float | None, fresh_cash: float | None,
+                    reserved_notional: float) -> float | None:
+    """Cash still free for the next BUY.
+
+    None means there is no balance reading; the caller keeps the planned
+    shares. A pre-open ack does not reduce sandbox cash, so notionals
+    already acked in this batch stay reserved until the snapshot drops by
+    at least that much. Once the drop covers the reserve, trust the
+    snapshot and do not subtract the reserve a second time.
+    """
+    if fresh_cash is None and start_cash is None:
+        return None
+    try:
+        fresh = float(fresh_cash if fresh_cash is not None else start_cash)
+        reserve = float(reserved_notional or 0)
+    except (TypeError, ValueError):
+        return None
+    if not math.isfinite(fresh) or not math.isfinite(reserve):
+        return None
+    fresh = max(fresh, 0.0)
+    reserve = max(reserve, 0.0)
+    if start_cash is None:
+        return max(0.0, fresh - reserve)
+    try:
+        start = float(start_cash)
+    except (TypeError, ValueError):
+        return max(0.0, fresh - reserve)
+    if not math.isfinite(start):
+        return max(0.0, fresh - reserve)
+    dropped = max(start - fresh, 0.0)
+    unseen = max(reserve - dropped, 0.0)
+    return max(0.0, fresh - unseen)
+
+
 def size_hot4_tickets(buys: list, *, cash: float, held: set[str] | None,
                       date: str, s=None, sit: bool = False) -> tuple[list[dict], list[dict]]:
-    """Long-only leftover split. No shorts. MARKET sizing uses list px."""
+    """Long-only leftover split. No shorts. MARKET sizing uses list px.
+
+    Budgets are an equal split of cash × HOT4_CASH_HAIRCUT, so the sum of
+    planned notionals stays strictly under the snapshot.
+    """
     from src import factor_mine_book as fmb
     from src.combo_broker import quote_px
 
     held = {str(t).upper() for t in (held or set())}
-    leftover = max(float(cash or 0), 0.0)
+    gross = max(float(cash or 0), 0.0)
+    leftover = gross * HOT4_CASH_HAIRCUT
     hard_red = bool(sit) or (
         s is not None and float(s) <= float(fmb.HARD_RED))
     tickets: list[dict] = []
@@ -415,8 +486,8 @@ def plan_hot4_for_broker(date: str, snap: BrokerSnap,
         })
     hard_red = sit or (
         s is not None and float(s) <= float(fmb.HARD_RED))
-    why = (f"{HOT4} long-only leftover cash · MARKET · "
-           f"rows via {source}")
+    why = (f"{HOT4} long-only leftover cash ×{HOT4_CASH_HAIRCUT:.0%} "
+           f"slip buffer · MARKET · rows via {source}")
     if stale:
         why += (f" · STALE panel {use_date} (wanted {date})"
                 " — do not submit unless --allow-stale")
@@ -440,6 +511,7 @@ def plan_hot4_for_broker(date: str, snap: BrokerSnap,
         "flatten_ok": True,
         "look_error": look_err,
         "order_type": "MARKET",
+        "cash_haircut": HOT4_CASH_HAIRCUT,
     }
 
 
@@ -565,27 +637,86 @@ class PaperAPI:
                           positions=parse_positions(pos), connected=True,
                           acc_id=self.account_id)
 
+    def _sandbox_cash(self) -> float | None:
+        """Available cash from a live snapshot, or None if we cannot tell.
+
+        A failed or disconnected read must not look like a $0 account —
+        the caller keeps the planned shares in that case.
+        """
+        try:
+            snap = self.snapshot()
+        except Exception:
+            return None
+        if snap is None or not getattr(snap, "connected", False):
+            return None
+        try:
+            cash = float(snap.cash)
+        except (TypeError, ValueError):
+            return None
+        if not math.isfinite(cash):
+            return None
+        return max(cash, 0.0)
+
     def place_batch(self, tickets):
         """Place each ticket as a one-element list — same path as place().
 
         Sandbox rejects a multi-order place_order with
         invalid combo_type=["NORMAL", ...] (OPENAPI_PARAM_ERR / HTTP 417).
+
+        Before each BUY, re-read sandbox cash. Shares already acked in
+        this batch stay reserved until that cash drop shows up, then the
+        leg is clamped to floor(cash_still_free / px). Planned shares are
+        never increased. A leg that cannot buy 1 share is skipped.
         """
         if self.host != PAPER_HOST or self.trade is None or not self.account_id:
             raise RuntimeError("sandbox account not connected")
         out = {}
         ack = datetime.now().astimezone().isoformat()
+        start_cash = None
+        reserved = 0.0
         for ticket in tickets:
-            body = order_body(ticket)
+            body_ticket = dict(ticket)
+            side = str(body_ticket.get("side") or "").upper()
+            px = _hot4_num(body_ticket, "px", "live_px") or 0.0
+            planned = int(body_ticket.get("shares") or 0)
+            fresh = self._sandbox_cash()
+            if fresh is not None and start_cash is None:
+                start_cash = fresh
+            free = cash_still_free(start_cash, fresh, reserved)
+            if side == "BUY" and free is not None and px > 0:
+                shares = clamp_buy_shares(planned, px, free)
+                if shares < 1:
+                    coid = str(order_body(body_ticket)["client_order_id"])
+                    out[coid] = {
+                        "ok": True,
+                        "skipped": True,
+                        "shares": 0,
+                        "resized_from": planned,
+                        "error": (
+                            f"remaining cash {free:.2f} < 1 share @ {px:.2f}"
+                        ),
+                        "acknowledged_at": ack,
+                    }
+                    continue
+                if shares != planned:
+                    body_ticket["shares"] = shares
+                    body_ticket["notional"] = round(shares * float(px), 2)
+            body = order_body(body_ticket)
             coid = str(body["client_order_id"])
-            reply = self.place(ticket, self.env)
+            reply = self.place(body_ticket, self.env)
+            sent_shares = int(body_ticket.get("shares") or 0)
             row = {
                 "ok": bool(reply.get("ok")),
                 "order_id": str(reply.get("order_id") or ""),
                 "acknowledged_at": reply.get("acknowledged_at") or ack,
+                "shares": sent_shares,
             }
+            if sent_shares != planned:
+                row["resized_from"] = planned
             if reply.get("error"):
                 row["error"] = reply["error"]
+            if row["ok"] and side == "BUY" and px > 0 and sent_shares > 0:
+                reserved += sent_shares * float(px)
             out[coid] = row
         return out
 

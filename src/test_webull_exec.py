@@ -17,6 +17,9 @@ from src.webull_exec import (
     parse_balance,
     parse_order_id,
     parse_positions,
+    HOT4_CASH_HAIRCUT,
+    cash_still_free,
+    clamp_buy_shares,
     plan_hot4_for_broker,
     refuse_real,
     size_hot4_tickets,
@@ -346,6 +349,202 @@ def test_place_batch_keeps_later_names_after_one_reject() -> None:
     assert got[client_order_id("2026-09-21", "BUY", "UMC")]["order_id"] == "ok-UMC"
 
 
+def test_cash_still_free_holds_unfilled_reserve() -> None:
+    assert cash_still_free(None, None, 0) is None
+    # Pre-open ack: snapshot cash has not moved, so the reserve stays held back.
+    assert cash_still_free(1_000_000, 1_000_000, 750_000) == 250_000
+    # Snapshot already dropped by the fills — do not subtract the reserve again.
+    assert cash_still_free(1_000_000, 247_000, 752_000) == 247_000
+    # Partial drop: only the unseen remainder of the reserve is held back.
+    assert cash_still_free(1_000_000, 900_000, 200_000) == 800_000
+    assert clamp_buy_shares(30, 10, 270) == 27
+    assert clamp_buy_shares(30, 10, 10_000) == 30
+    assert clamp_buy_shares(30, 10, 9) == 0
+
+
+def test_hot4_slip_buffer_covers_richer_open_fills() -> None:
+    """2026-09-21: equal split of $999,662 left VSTS unfunded after richer fills."""
+    cash = 999662.39
+    buys = [
+        {"ticker": "DELL", "side": "long", "px": 583.42},
+        {"ticker": "GME", "side": "long", "px": 22.84},
+        {"ticker": "UMC", "side": "long", "px": 24.96},
+        {"ticker": "VSTS", "side": "long", "px": 13.82},
+    ]
+    # The rigid plan that stuck: each name took cash/4 at the plan px.
+    rigid_px = [583.42, 22.84, 24.96, 13.82]
+    per = cash / 4
+    rigid_shares = [int(per // px) for px in rigid_px]
+    assert rigid_shares == [428, 10942, 10012, 18083]
+    rich = {"DELL": 587.89, "GME": 22.90, "UMC": 24.99}
+    rigid_spent = sum(sh * rich[name] for name, sh in zip(
+        ("DELL", "GME", "UMC"), rigid_shares))
+    assert cash - rigid_spent < rigid_shares[3] * 13.82
+
+    tickets, skips = size_hot4_tickets(
+        buys, cash=cash, held=set(), date="2026-09-21", s=12.871,
+    )
+    assert skips == []
+    assert [t["ticker"] for t in tickets] == ["DELL", "GME", "UMC", "VSTS"]
+    for ticket, rigid in zip(tickets, rigid_shares):
+        assert ticket["shares"] < rigid
+    planned = sum(t["notional"] for t in tickets)
+    assert planned <= cash * HOT4_CASH_HAIRCUT + 0.05
+    assert planned < cash
+    spent = sum(t["shares"] * rich[t["ticker"]] for t in tickets[:3])
+    assert cash - spent >= tickets[3]["notional"] - 0.05
+
+
+def _cash_book_api(state: dict, on_place=None):
+    from types import SimpleNamespace
+    from src import webull_exec as we
+
+    def place_order(account_id, bodies):
+        assert isinstance(bodies, list) and len(bodies) == 1
+        assert bodies[0]["combo_type"] == "NORMAL"
+        assert not isinstance(bodies[0]["combo_type"], list)
+        if on_place is not None:
+            on_place(bodies[0], state)
+        body = bodies[0]
+        return {
+            "code": "SUCCESS",
+            "data": [{
+                "client_order_id": body["client_order_id"],
+                "order_id": "oid-" + body["symbol"],
+            }],
+        }
+
+    api = we.PaperAPI()
+    api.account_id = "paper-test"
+    api.trade = SimpleNamespace(
+        account_v2=SimpleNamespace(
+            get_account_list=lambda: {
+                "data": [{"account_id": "paper-test", "account_type": "PAPER"}],
+            },
+            get_account_balance=lambda account_id: {
+                "available_cash": f"{state['cash']:.4f}",
+                "buying_power": f"{state['cash']:.4f}",
+            },
+            get_account_position=lambda account_id: {"positions": []},
+        ),
+        order_v3=SimpleNamespace(place_order=place_order),
+    )
+    return api
+
+
+def test_place_batch_shrinks_later_leg_when_earlier_fills_eat_cash() -> None:
+    state = {"cash": 900.0}
+    placed = []
+
+    def on_place(body, book):
+        qty = int(body["quantity"])
+        placed.append((body["symbol"], qty))
+        book["cash"] -= qty * 10.5
+
+    api = _cash_book_api(state, on_place)
+    tickets = [
+        {"ticker": "AAA", "side": "BUY", "shares": 30, "px": 10.0, "date": "2026-09-21"},
+        {"ticker": "BBB", "side": "BUY", "shares": 30, "px": 10.0, "date": "2026-09-21"},
+        {"ticker": "CCC", "side": "BUY", "shares": 30, "px": 10.0, "date": "2026-09-21"},
+    ]
+    got = api.place_batch(tickets)
+    assert placed[0] == ("AAA", 30)
+    assert placed[1] == ("BBB", 30)
+    assert placed[2] == ("CCC", 27)
+    coid = client_order_id("2026-09-21", "BUY", "CCC")
+    assert got[coid]["ok"] is True
+    assert got[coid]["shares"] == 27
+    assert got[coid]["resized_from"] == 30
+    assert got[coid]["order_id"] == "oid-CCC"
+
+
+def test_place_batch_skips_leg_that_cannot_buy_one_share() -> None:
+    state = {"cash": 100.0}
+    placed = []
+
+    def on_place(body, book):
+        placed.append(body["symbol"])
+        book["cash"] -= int(body["quantity"]) * 90.0
+
+    api = _cash_book_api(state, on_place)
+    tickets = [
+        {"ticker": "AAA", "side": "BUY", "shares": 1, "px": 80.0, "date": "2026-09-21"},
+        {"ticker": "BBB", "side": "BUY", "shares": 1, "px": 80.0, "date": "2026-09-21"},
+    ]
+    got = api.place_batch(tickets)
+    assert placed == ["AAA"]
+    b = client_order_id("2026-09-21", "BUY", "BBB")
+    assert got[b]["skipped"] is True
+    assert got[b]["shares"] == 0
+    assert got[b]["ok"] is True
+    assert "order_id" not in got[b] or got[b].get("order_id", "") == ""
+
+
+def test_place_batch_keeps_haircut_plan_when_preopen_cash_is_unchanged() -> None:
+    tickets, skips = size_hot4_tickets(
+        [
+            {"ticker": "AAA", "side": "long", "px": 10},
+            {"ticker": "BBB", "side": "long", "px": 10},
+            {"ticker": "CCC", "side": "long", "px": 10},
+        ],
+        cash=1200, held=set(), date="2026-09-21", s=5,
+    )
+    assert skips == []
+    assert sum(t["notional"] for t in tickets) <= 1200 * HOT4_CASH_HAIRCUT + 0.05
+    state = {"cash": 1200.0}
+    placed = []
+
+    def on_place(body, book):
+        placed.append((body["symbol"], int(body["quantity"])))
+
+    api = _cash_book_api(state, on_place)
+    got = api.place_batch(tickets)
+    assert [(t["ticker"], t["shares"]) for t in tickets] == placed
+    for ticket in tickets:
+        coid = client_order_id("2026-09-21", "BUY", ticket["ticker"])
+        assert got[coid]["ok"] is True
+        assert got[coid]["shares"] == ticket["shares"]
+        assert "resized_from" not in got[coid]
+
+
+def test_rejected_leg_does_not_reserve_cash() -> None:
+    from types import SimpleNamespace
+    from src import webull_exec as we
+
+    state = {"cash": 100.0}
+    placed = []
+
+    def place_order(account_id, bodies):
+        assert len(bodies) == 1
+        body = bodies[0]
+        if body["symbol"] == "AAA":
+            return {"code": "ERROR", "msg": "reject"}
+        placed.append((body["symbol"], int(body["quantity"])))
+        return {"code": "0", "data": [{"order_id": "ok-" + body["symbol"]}]}
+
+    api = we.PaperAPI()
+    api.account_id = "paper-test"
+    api.trade = SimpleNamespace(
+        account_v2=SimpleNamespace(
+            get_account_list=lambda: {"data": [{"account_id": "paper-test"}]},
+            get_account_balance=lambda account_id: {
+                "available_cash": f"{state['cash']:.2f}",
+                "buying_power": f"{state['cash']:.2f}",
+            },
+            get_account_position=lambda account_id: {"positions": []},
+        ),
+        order_v3=SimpleNamespace(place_order=place_order),
+    )
+    got = api.place_batch([
+        {"ticker": "AAA", "side": "BUY", "shares": 1, "px": 80.0, "date": "2026-09-21"},
+        {"ticker": "BBB", "side": "BUY", "shares": 1, "px": 80.0, "date": "2026-09-21"},
+    ])
+    assert placed == [("BBB", 1)]
+    assert got[client_order_id("2026-09-21", "BUY", "AAA")]["ok"] is False
+    assert got[client_order_id("2026-09-21", "BUY", "BBB")]["ok"] is True
+    assert got[client_order_id("2026-09-21", "BUY", "BBB")]["shares"] == 1
+
+
 def test_yml_warms_before_bell_and_has_one_automatic_sender() -> None:
     root = Path(__file__).resolve().parent.parent
     yml = (root / ".github/workflows/webull_paper.yml").read_text()
@@ -381,7 +580,13 @@ def main() -> None:
     test_paper_order_is_market_not_limit()
     test_place_batch_sends_one_order_at_a_time()
     test_place_batch_keeps_later_names_after_one_reject()
-    print("test_webull_exec: 15 ok")
+    test_cash_still_free_holds_unfilled_reserve()
+    test_hot4_slip_buffer_covers_richer_open_fills()
+    test_place_batch_shrinks_later_leg_when_earlier_fills_eat_cash()
+    test_place_batch_skips_leg_that_cannot_buy_one_share()
+    test_place_batch_keeps_haircut_plan_when_preopen_cash_is_unchanged()
+    test_rejected_leg_does_not_reserve_cash()
+    print("test_webull_exec: 21 ok")
 
 
 if __name__ == "__main__":

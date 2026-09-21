@@ -6,6 +6,11 @@ the open — proven by STANDTEST-20260918-1789726292. The 09:30 wait path is
 a warm fallback only. Journal + stable client_order_id prevent a re-fire
 from double-placing. Acknowledgment is not a fill promise.
 
+Serial BUY legs are clamped to sandbox cash still free after earlier
+acks in the same batch. Hot4 plans are sized with a slip haircut so a
+pre-open snapshot that has not moved yet still leaves the last leg
+fundable when the open prints above the plan px.
+
 No feature building, dependency installation or Pages deployment on the
 send path. Paper host only.
 """
@@ -138,13 +143,20 @@ def make_plan(payload, snap, clock, *, allow_after_bell=False):
 def _place_batch(result, api, tickets):
     try:
         # Serial single places (sandbox rejects multi-order combo_type).
+        # place_batch may shrink a later BUY to cash still free, or skip it.
         replies = api.place_batch(tickets)
         for row in result['sent']:
             got = replies.get(row['client_order_id'], {})
             row.update(got)
-            row['status'] = 'acknowledged' if got.get('ok') else 'rejected_or_unknown'
+            if got.get('skipped'):
+                row['status'] = 'skipped_cash'
+                row['ok'] = True
+            else:
+                row['status'] = 'acknowledged' if got.get('ok') else 'rejected_or_unknown'
         if any(not row.get('ok') for row in result['sent']):
             result['status'] = 'failed'
+        elif result['sent'] and all(row.get('skipped') for row in result['sent']):
+            result['status'] = 'no_trade'
     except Exception:
         result['status'] = 'failed'
         for row in result['sent']:

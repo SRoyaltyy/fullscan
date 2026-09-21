@@ -245,6 +245,52 @@ def test_committed_owner_is_actions():
     assert '"owner": "ecs"' not in yml
 
 
+def test_release_records_clamped_shares_and_cash_skip(tmp_path):
+    class Shrink(API):
+        def place_batch(self, tickets):
+            self.calls.append(tickets)
+            out = {}
+            for t in tickets:
+                coid = we.client_order_id(t['date'], t['side'], t['ticker'])
+                if t['ticker'] == 'CCC':
+                    out[coid] = {
+                        'ok': True, 'skipped': True, 'shares': 0,
+                        'resized_from': t['shares'],
+                        'error': 'remaining cash 1.00 < 1 share @ 10.00',
+                    }
+                elif t['ticker'] == 'BBB':
+                    out[coid] = {
+                        'ok': True, 'order_id': 'broker-BBB',
+                        'shares': t['shares'] - 3, 'resized_from': t['shares'],
+                    }
+                else:
+                    out[coid] = {
+                        'ok': True, 'order_id': 'broker-' + t['ticker'],
+                        'shares': t['shares'],
+                    }
+            return out
+
+    base = plan()
+    base['card']['tickets'] = [
+        {'ticker': 'AAA', 'side': 'BUY', 'shares': 30, 'px': 10, 'date': DATE},
+        {'ticker': 'BBB', 'side': 'BUY', 'shares': 30, 'px': 10, 'date': DATE},
+        {'ticker': 'CCC', 'side': 'BUY', 'shares': 30, 'px': 10, 'date': DATE},
+    ]
+    api = Shrink()
+    result = po.release(base, api, lambda: BELL, tmp_path / 'x', submit=True)
+    assert result['status'] == 'acknowledged'
+    by = {row['ticker']: row for row in result['sent']}
+    assert by['AAA']['status'] == 'acknowledged' and by['AAA']['shares'] == 30
+    assert by['BBB']['shares'] == 27 and by['BBB']['resized_from'] == 30
+    assert by['BBB']['status'] == 'acknowledged'
+    assert by['CCC']['status'] == 'skipped_cash'
+    assert by['CCC']['shares'] == 0
+    assert len(api.calls) == 1
+    saved = json.loads((tmp_path / 'x').read_text())
+    assert [row['status'] for row in saved['sent']] == [
+        'acknowledged', 'acknowledged', 'skipped_cash']
+
+
 def test_load_local_reads_dated_tickets(tmp_path):
     board = tmp_path / 'data' / 'day_board'
     board.mkdir(parents=True)
