@@ -1,18 +1,19 @@
 name: Lane news sector scan
 
-# Harvest every unique on-disk article for DATE, then one Lane hop each.
-# Watermarks lane + model on every row. $0 hoppers only.
+# Harvest unique on-disk articles, then one Lane hop each.
+# date=all walks every parsed/export session. Watermarks lane + model.
 # Does not touch flatten / Webull / factor-mine live.
 
 on:
   workflow_dispatch:
     inputs:
       date:
-        description: Session date YYYY-MM-DD (Finviz export + 01_daily/news)
+        description: YYYY-MM-DD or all (every parsed session on disk)
         required: true
+        default: "all"
         type: string
       limit:
-        description: Max articles (0 = all unique headlines that day)
+        description: Max articles (0 = every unique headline)
         required: false
         default: "0"
         type: string

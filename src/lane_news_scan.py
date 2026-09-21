@@ -1,8 +1,6 @@
-"""Harvest every on-disk news article and ask Lane: sector bull / bear.
+"""Harvest on-disk news articles and ask Lane: sector bull / bear.
 
-Smoke test for free intensive inference. One article → one hop.
-Each row is watermarked with lane (API family) + model id.
-
+Backtest: one article → one $0 hop. Watermark lane + model on every row.
 Does not touch flatten / Webull / factor-mine live books.
 """
 from __future__ import annotations
@@ -66,6 +64,8 @@ _NOISE_TITLE = re.compile(
     r"should you buy|is it too late to buy|top stocks to)"
 )
 
+_DATE_RE = re.compile(r"(20\d{2}-\d{2}-\d{2})")
+
 
 def _norm(title: str) -> str:
     t = re.sub(r"[^a-z0-9\s]", " ", (title or "").lower())
@@ -95,6 +95,23 @@ def _load_json(path: Path):
         return json.loads(path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError, TypeError):
         return None
+
+
+def list_session_dates() -> list[str]:
+    dates: set[str] = set()
+    for folder, glob in (
+        (NEWS_DIR, "*_parsed.json"),
+        (NEWS_DIR, "*_finviz_digest.json"),
+        (EVENTS_DIR, "*_events.json"),
+        (EXPORTS_DIR, "finviz_*.csv"),
+    ):
+        if not folder.is_dir():
+            continue
+        for path in folder.glob(glob):
+            m = _DATE_RE.search(path.name)
+            if m:
+                dates.add(m.group(1))
+    return sorted(dates)
 
 
 def harvest(date: str) -> list[dict]:
@@ -153,6 +170,20 @@ def harvest(date: str) -> list[dict]:
                 _add(bag, str(it.get("title") or ""),
                      str(it.get("prompt") or it.get("body") or "")[:800],
                      str(path), str(it.get("createTime") or ""))
+    return list(bag.values())
+
+
+def harvest_all() -> list[dict]:
+    bag: dict[str, dict] = {}
+    for date in list_session_dates():
+        for art in harvest(date):
+            _add(
+                bag,
+                art.get("title") or "",
+                art.get("body") or "",
+                art.get("source_file") or "",
+                art.get("known_at") or date,
+            )
     return list(bag.values())
 
 
@@ -237,7 +268,7 @@ def _markdown(date: str, rows: list[dict], roll: dict) -> str:
     for k, n in (roll.get("bearish_mentions") or {}).items():
         lines.append(f"- {k}: {n}")
     lines += ["", "## Sample rows", ""]
-    for r in rows[:12]:
+    for r in rows[:20]:
         mark = f"{r.get('lane')}/{r.get('model')}" if r.get("ok") else r.get("error")
         lines.append(
             f"- [{mark}] {r.get('title','')[:120]} "
@@ -247,19 +278,21 @@ def _markdown(date: str, rows: list[dict], roll: dict) -> str:
 
 
 def run(date: str, limit: int = 0, dry_harvest: bool = False) -> dict:
-    arts = harvest(date)
+    label = "all" if str(date).lower() in {"all", "*", "history"} else date
+    arts = harvest_all() if label == "all" else harvest(date)
     if limit and limit > 0:
         arts = arts[:limit]
     report = {
         "generated_at": dt.datetime.utcnow().isoformat() + "Z",
-        "date": date,
+        "date": label,
+        "dates": list_session_dates() if label == "all" else [date],
         "harvested": len(arts),
         "limit": limit,
         "results": [],
         "rollup": {},
     }
     NEWS_DIR.mkdir(parents=True, exist_ok=True)
-    harvest_path = NEWS_DIR / f"{date}_lane_sectors_harvest.json"
+    harvest_path = NEWS_DIR / f"{label}_lane_sectors_harvest.json"
     harvest_path.write_text(json.dumps(arts, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"[lane_news_scan] harvested {len(arts)} unique articles → {harvest_path}")
     if dry_harvest:
@@ -280,19 +313,19 @@ def run(date: str, limit: int = 0, dry_harvest: bool = False) -> dict:
     report["results"] = rows
     report["rollup"] = roll
     report["ok"] = sum(1 for r in rows if r.get("ok"))
-    out_json = NEWS_DIR / f"{date}_lane_sectors.json"
-    out_md = NEWS_DIR / f"{date}_lane_sectors.md"
+    out_json = NEWS_DIR / f"{label}_lane_sectors.json"
+    out_md = NEWS_DIR / f"{label}_lane_sectors.md"
     out_json.write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
-    out_md.write_text(_markdown(date, rows, roll), encoding="utf-8")
+    out_md.write_text(_markdown(label, rows, roll), encoding="utf-8")
     OUTBOX_DIR.mkdir(parents=True, exist_ok=True)
-    (OUTBOX_DIR / f"{date}.json").write_text(out_json.read_text(encoding="utf-8"), encoding="utf-8")
+    (OUTBOX_DIR / f"{label}.json").write_text(out_json.read_text(encoding="utf-8"), encoding="utf-8")
     print("wrote", out_json, "ok=", report["ok"], "/", len(rows))
     return report
 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--date", required=True)
+    ap.add_argument("--date", required=True, help="YYYY-MM-DD or all")
     ap.add_argument("--limit", type=int, default=0, help="0 = every harvested article")
     ap.add_argument("--harvest-only", action="store_true")
     args = ap.parse_args()
