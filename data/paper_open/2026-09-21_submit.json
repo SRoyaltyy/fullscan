@@ -124,12 +124,17 @@
       "shares": 428,
       "client_order_id": "fs20260921BDELL",
       "intent_at": "2026-09-21T07:04:26.425988-04:00",
-      "status": "acknowledged",
+      "status": "filled",
       "submission_started_at": "2026-09-21T07:04:26.427274-04:00",
       "lateness_ms": -8733572.726,
       "ok": true,
       "order_id": "VUJS2PUOU5SU3D5DOV4BF0LS79",
-      "acknowledged_at": "2026-09-21T11:04:26.571748+00:00"
+      "acknowledged_at": "2026-09-21T11:04:26.571748+00:00",
+      "fill_observed_at": "2026-09-21T09:55:12.924425-04:00",
+      "broker_status": "FILLED_VIA_POSITION",
+      "filled_qty": 428,
+      "avg_fill_px": 587.89,
+      "fill_cost": 251616.92
     },
     {
       "ticker": "GME",
@@ -137,12 +142,17 @@
       "shares": 10942,
       "client_order_id": "fs20260921BGME",
       "intent_at": "2026-09-21T07:04:26.425988-04:00",
-      "status": "acknowledged",
+      "status": "filled",
       "submission_started_at": "2026-09-21T07:04:26.427274-04:00",
       "lateness_ms": -8733572.726,
       "ok": true,
       "order_id": "B9HCEQN5F5AGC0NRP8R1TU228A",
-      "acknowledged_at": "2026-09-21T11:04:26.723072+00:00"
+      "acknowledged_at": "2026-09-21T11:04:26.723072+00:00",
+      "fill_observed_at": "2026-09-21T09:55:12.924425-04:00",
+      "broker_status": "FILLED_VIA_POSITION",
+      "filled_qty": 10942,
+      "avg_fill_px": 22.9,
+      "fill_cost": 250571.8
     },
     {
       "ticker": "UMC",
@@ -150,12 +160,17 @@
       "shares": 10012,
       "client_order_id": "fs20260921BUMC",
       "intent_at": "2026-09-21T07:04:26.425988-04:00",
-      "status": "acknowledged",
+      "status": "filled",
       "submission_started_at": "2026-09-21T07:04:26.427274-04:00",
       "lateness_ms": -8733572.726,
       "ok": true,
       "order_id": "D8HGN8QS2KANBQAT1SD7OR8AN9",
-      "acknowledged_at": "2026-09-21T11:04:26.865570+00:00"
+      "acknowledged_at": "2026-09-21T11:04:26.865570+00:00",
+      "fill_observed_at": "2026-09-21T09:55:12.924425-04:00",
+      "broker_status": "FILLED_VIA_POSITION",
+      "filled_qty": 10012,
+      "avg_fill_px": 24.99,
+      "fill_cost": 250199.88
     },
     {
       "ticker": "VSTS",
@@ -163,14 +178,56 @@
       "shares": 18083,
       "client_order_id": "fs20260921BVSTS",
       "intent_at": "2026-09-21T07:04:26.425988-04:00",
-      "status": "acknowledged",
+      "status": "working",
       "submission_started_at": "2026-09-21T07:04:26.427274-04:00",
       "lateness_ms": -8733572.726,
       "ok": true,
       "order_id": "QVH6EIJB1RF3DUJJAP6LFQDTIA",
-      "acknowledged_at": "2026-09-21T11:04:27.030021+00:00"
+      "acknowledged_at": "2026-09-21T11:04:27.030021+00:00",
+      "fill_observed_at": "2026-09-21T09:55:12.924425-04:00",
+      "broker_status": "SUBMITTED",
+      "filled_qty": 0,
+      "avg_fill_px": null
     }
   ],
-  "fill_status": "not_observed",
-  "host": "api.sandbox.webull.com"
+  "fill_status": "partial",
+  "host": "api.sandbox.webull.com",
+  "fill_observed_at": "2026-09-21T09:55:12.924425-04:00",
+  "fill_observe": {
+    "source": "webull_standtest cash+status",
+    "et": "2026-09-21T09:54:09-04:00",
+    "cash": 247273.73,
+    "n_positions": 4,
+    "n_filled": 3,
+    "n_working": 1,
+    "runs": {
+      "cash": "https://github.com/SRoyaltyy/fullscan/actions/runs/35608284969",
+      "DELL": "https://github.com/SRoyaltyy/fullscan/actions/runs/35608292593",
+      "GME": "https://github.com/SRoyaltyy/fullscan/actions/runs/35608298420",
+      "UMC": "https://github.com/SRoyaltyy/fullscan/actions/runs/35608303949",
+      "VSTS": "https://github.com/SRoyaltyy/fullscan/actions/runs/35608309414"
+    },
+    "positions_snip": [
+      {
+        "symbol": "DELL",
+        "qty": 428,
+        "avg_cost": 587.89
+      },
+      {
+        "symbol": "GME",
+        "qty": 10942,
+        "avg_cost": 22.9
+      },
+      {
+        "symbol": "UMC",
+        "qty": 10012,
+        "avg_cost": 24.99
+      },
+      {
+        "symbol": "VSTS",
+        "qty": 0,
+        "broker_status": "SUBMITTED"
+      }
+    ]
+  }
 }
