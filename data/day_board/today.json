@@ -1,11 +1,11 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T06:47:52.341273-04:00",
+  "generated_at": "2026-09-21T06:52:33.508255-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 6,
-    "partial": 1,
+    "ok": 7,
+    "partial": 0,
     "fail": 1,
     "n": 8
   },
@@ -131,7 +131,7 @@
     "direction": "up"
   },
   "sectors": {
-    "said": "2 up / 1 down / 7 flat",
+    "said": "2 up / 2 down / 7 flat",
     "bullets": [
       "XLB FLAT +1.9",
       "XLC UP +12.2",
@@ -143,28 +143,10 @@
       "XLI FLAT +10.2",
       "XLRE FLAT +3.2",
       "XLK FLAT +17.1",
-      "XLU missing"
+      "XLU DOWN -1.4"
     ]
   },
   "lands": [
-    {
-      "key": "general_predict",
-      "title": "General market predict",
-      "date": "2026-09-21",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-21T04:40:27.000193-04:00",
-      "files": [
-        {
-          "path": "01_daily/general/2026-09-21_predict.md",
-          "ok": true,
-          "reason": "",
-          "size": 15731,
-          "preview": "# Premarket Prediction \u2014 2026-09-21\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 NOTABLE** | total score 12.871 (uncertainty multiplier \u00d71.0) | confidence 0.85\n>\n> **Good news vs bad news:** good +7.0 pts vs bad -1.0 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - Asia composite +1.04%\n> - Europe +0.88% partial\n> - Bessent-He talks ahead of Trump-Xi\n> - ES/NQ green vs cash\n> - oil offered\n>\n> **Bad news driving this:**\n> - paid hawkish SEP / ~55% October hike\n> - leftover Hormuz Brent ~$101-108\n> - Trump UNGA + Xi summit two-sided\n> - 1m real-yield backup still on tape\n> - EPU +163 1d\n>\n> **market uncertainty: **elevated** | VIX 14.95 | policy-uncertainty index 342.15 (1d +162.87)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udfe2 Asia overnight session: +0.5 \u00d7 2.0 = +1.0\n> - \ud83d\udfe2 Europe session: +0.5 \u00d7 2.0 = +1.0\n> - \ud83d\udfe2 Overnight news & catalys"
-        }
-      ],
-      "preview": "# Premarket Prediction \u2014 2026-09-21\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 NOTABLE** | total score 12.871 (uncertainty multiplier \u00d71.0) | confidence 0.85\n>\n> **Good news vs bad news:** good +7.0 pts vs bad -1.0 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - Asia composite +1.04%\n> - Europe +0.88% partial\n> - Bessent-He talks ahead of Trump-Xi\n> - ES/NQ green vs cash\n> - oil offered\n>\n> **Bad news driving this:**\n> - paid hawkish SEP / ~55% October hike\n> - leftover Hormuz Brent ~$101-108\n> - Trump UNGA + Xi summit two-sided\n> - 1m real-yield backup still on tape\n> - EPU +163 1d\n>\n> **market uncertainty: **elevated** | VIX 14.95 | policy-uncertainty index 342.15 (1d +162.87)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udfe2 Asia overnight session: +0.5 \u00d7 2.0 = +1.0\n> - \ud83d\udfe2 Europe session: +0.5 \u00d7 2.0 = +1.0\n> - \ud83d\udfe2 Overnight news & catalys"
-    },
     {
       "key": "sector_board",
       "title": "Sector board",
@@ -423,6 +405,31 @@
         }
       ],
       "preview": "# Sector Prediction \u2014 Real Estate \u2014 2026-09-21\n- ETF: **XLRE**\n- rubric: `00_grounding/sectors/real_estate.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **3.17** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.965** (ES +1.35%, ZN -0.03%, PM:XLRE -0.05%) \u00b7 index_carry **3.218** (general 12.871) \u00b7 llm_overlay **-1.012** (raw -1.012) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Real Estate 2026-09-21\n**Step 0 \u2014 Setup.** Loaded 155,732 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (17,852 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-21\nGenerated: **2026-09-21T06:34:01.701306-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_a"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-09-21",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-21T06:52:32.798156-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-09-21.csv",
+          "ok": true,
+          "reason": "",
+          "size": 10981709,
+          "preview": "11643 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11434850,
+          "preview": "11655 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11643 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11655 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

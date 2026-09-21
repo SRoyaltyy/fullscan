@@ -1,12 +1,12 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T06:47:52.341273-04:00",
+  "generated_at": "2026-09-21T06:52:33.508255-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 6,
-    "partial": 1,
+    "ok": 7,
+    "partial": 0,
     "fail": 1,
     "n": 8
   },
@@ -175,9 +175,9 @@
       "key": "preopen",
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 19,
+      "n_req_ok": 20,
       "n_req": 20,
       "n_opt_ok": 3,
       "n_opt": 3,
@@ -343,8 +343,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6935,
-          "said": "2 up / 1 down / 7 flat",
+          "size": 7107,
+          "said": "2 up / 2 down / 7 flat",
           "bullets": [
             "XLB FLAT +1.9",
             "XLC UP +12.2",
@@ -359,11 +359,10 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=True",
-          "size": 7194,
-          "said": "all_ok=True \u00b7 sectors 10/11 \u00b7 2 fail",
+          "size": 7187,
+          "said": "all_ok=True \u00b7 sectors 11/11 \u00b7 1 fail",
           "bullets": [
-            "finviz_market_digest:missing",
-            "sector_predict:missing"
+            "finviz_market_digest:missing"
           ]
         },
         {
@@ -525,14 +524,16 @@
           "name": "Sector predict \u2014 utilities",
           "path": "01_daily/sectors/2026-09-21/utilities_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 20206,
+          "said": "DOWN mild -1.439",
+          "bullets": [
+            "- ETF: **XLU"
+          ]
         }
       ],
-      "said": "general UP  12.871 \u00b7 sectors 2 up / 1 down / 7 flat \u00b7 news 119 raw / 6 usable \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
+      "said": "general UP  12.871 \u00b7 sectors 2 up / 2 down / 7 flat \u00b7 news 119 raw / 6 usable \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
       "bullets": [
         "bad: paid hawkish SEP / ~55% October hike",
         "bad: leftover Hormuz Brent ~$101-108",
@@ -739,8 +740,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 6935,
-          "said": "2 up / 1 down / 7 flat",
+          "size": 7107,
+          "said": "2 up / 2 down / 7 flat",
           "bullets": [
             "XLB FLAT +1.9",
             "XLC UP +12.2",
@@ -1100,7 +1101,7 @@
       "direction": "up"
     },
     "sectors": {
-      "said": "2 up / 1 down / 7 flat",
+      "said": "2 up / 2 down / 7 flat",
       "bullets": [
         "XLB FLAT +1.9",
         "XLC UP +12.2",
@@ -1112,7 +1113,7 @@
         "XLI FLAT +10.2",
         "XLRE FLAT +3.2",
         "XLK FLAT +17.1",
-        "XLU missing"
+        "XLU DOWN -1.4"
       ]
     },
     "news": {
@@ -1879,6 +1880,31 @@
         }
       ],
       "preview": "# Sector Prediction \u2014 Real Estate \u2014 2026-09-21\n- ETF: **XLRE**\n- rubric: `00_grounding/sectors/real_estate.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **3.17** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.965** (ES +1.35%, ZN -0.03%, PM:XLRE -0.05%) \u00b7 index_carry **3.218** (general 12.871) \u00b7 llm_overlay **-1.012** (raw -1.012) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Real Estate 2026-09-21\n**Step 0 \u2014 Setup.** Loaded 155,732 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (17,852 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-21\nGenerated: **2026-09-21T06:34:01.701306-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_a"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-09-21",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-21T06:52:32.798156-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-09-21.csv",
+          "ok": true,
+          "reason": "",
+          "size": 10981709,
+          "preview": "11643 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11434850,
+          "preview": "11655 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11643 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11655 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
