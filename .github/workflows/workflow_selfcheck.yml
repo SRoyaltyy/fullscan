@@ -9,14 +9,18 @@ on:
     paths:
       - ".github/workflows/**"
       - "src/test_workflow_fromjson.py"
+      - "src/test_lane_news_scan.py"
       - "src/lane_route.py"
+      - "src/lane_news_scan.py"
       - "02_lessons/lane/**"
   push:
     branches: [main]
     paths:
       - ".github/workflows/**"
       - "src/test_workflow_fromjson.py"
+      - "src/test_lane_news_scan.py"
       - "src/lane_route.py"
+      - "src/lane_news_scan.py"
       - "02_lessons/lane/**"
 
 permissions:
@@ -35,4 +39,6 @@ jobs:
         with:
           python-version: "3.12"
       - name: fromJSON + preopen contract
-        run: PYTHONPATH=. python3 -m src.test_workflow_fromjson
+        run: |
+          PYTHONPATH=. python3 -m src.test_workflow_fromjson
+          PYTHONPATH=. python3 -m src.test_lane_news_scan

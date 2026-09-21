@@ -11,7 +11,7 @@ name: Lane JSON wire
 # Templates (see src/lane_route.py for prompt builders):
 #   key_people / key_products / revenue_mix / custom  — ticker required
 #   news_to_tickers  — articles[{title,body,known_at?}]. No ticker required.
-#                      Hoppers: Zhipu Flash → SF mid-free Qwen2.5-7B → OR :free
+#                      Hoppers: glm-4.7-flash → SF Qwen3-8B → OR :free → qwen-flash
 #   company_dig      — ticker + brief/questions. Longer context, still $0.
 #                      Hoppers: SF Qwen/DeepSeek non-Pro → DeepSeek → OR :free
 #                      → Zhipu Flash

@@ -11,8 +11,10 @@ non-`Pro/`, Zhipu Flash IDs). Does not touch `flatten_robust` or the cash book.
 ## $0 allowlist
 
 OpenRouter IDs must be `openrouter/free` or end in `:free`. SiliconFlow strips
-`Pro/`. Zhipu is Flash only: `glm-4.7-flash`, `glm-4-flash-250414`,
-`glm-4.5-flash`. DashScope prefers `qwen-flash` then turbo/small free IDs;
+`Pro/`. Zhipu primary Flash is `glm-4.7-flash` only (Cyrus 2026-09-21:
+never `glm-4-flash-250414` / old glm-4-flash / `qwen2.5-7b-instruct` on
+primary or news). On 429, abandon that provider — do not fall down older
+sibling IDs. DashScope primary is `qwen-flash`.
 `DASHSCOPE_BASE_URL` (if set) is tried before public `dashscope*.aliyuncs.com`.
 TokenHub is overflow **behind** those $0 hoppers: flash IDs first
 (`glm-5.3-flash`, `glm-5.3-flashx`, `deepseek-v4-flash`) then `hy3`.
@@ -30,8 +32,8 @@ mean to replace that batch.
 
 ### `news_to_tickers` (high volume)
 
-Zhipu Flash first, else SiliconFlow mid-free (`Qwen/Qwen2.5-7B-Instruct` /
-allowlisted non-Pro), OpenRouter `:free` overflow. Exact listed tickers only.
+Zhipu `glm-4.7-flash` first, else SiliconFlow current (`Qwen/Qwen3-8B`),
+OpenRouter `:free`, DashScope `qwen-flash`. Exact listed tickers only.
 
 ```json
 {

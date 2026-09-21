@@ -597,9 +597,9 @@ def test_lane_json_zero_dollar_hoppers() -> None:
         assert DEFAULT_LANES.index(ahead) < DEFAULT_LANES.index("tokenhub"), ahead
     assert lanes_for("key_people") == DEFAULT_LANES
     assert lanes_for("custom") == DEFAULT_LANES
-    assert NEWS_HEAD == ["zhipu", "siliconflow", "openrouter"]
+    assert NEWS_HEAD == ["zhipu", "siliconflow", "openrouter", "qwen"]
     assert DIG_HEAD == ["siliconflow", "deepseek", "openrouter", "zhipu"]
-    assert lanes_for("news_to_tickers")[:3] == NEWS_HEAD
+    assert lanes_for("news_to_tickers")[:4] == NEWS_HEAD
     assert lanes_for("company_dig")[:4] == DIG_HEAD
     # Overflow still the same $0 stack — no extra providers.
     assert set(lanes_for("news_to_tickers")) == set(DEFAULT_LANES)
@@ -672,15 +672,19 @@ def test_lane_json_zero_dollar_hoppers() -> None:
     assert first_named and any(n in first_named.lower() for n in cn_needles), first_named
     sf_ids = re.findall(r'"(Qwen/[^"]+|THUDM/[^"]+|deepseek-ai/[^"]+)"', py.split("SF_MODELS")[1].split("SF_URLS")[0])
     assert sf_ids and not any(m.startswith("Pro/") for m in sf_ids), sf_ids
-    zhipu_ids = re.findall(r'"(glm-[^"]+)"', py.split("ZHIPU_MODELS")[1].split("ZHIPU_URLS")[0])
-    assert zhipu_ids and all("flash" in m for m in zhipu_ids), zhipu_ids
-    assert "glm-5." not in py.split("ZHIPU_MODELS")[1].split("ZHIPU_URLS")[0]
+    zhipu_block = py.split("ZHIPU_MODELS")[1].split("ZHIPU_URLS")[0]
+    zhipu_ids = re.findall(r'"(glm-[^"]+)"', zhipu_block)
+    assert zhipu_ids == ["glm-4.7-flash"], zhipu_ids
+    assert all("flash" in m for m in zhipu_ids), zhipu_ids
+    assert "glm-5." not in zhipu_block
+    assert "glm-4-flash-250414" not in zhipu_block
+    assert "glm-4.5-flash" not in zhipu_block
 
     qwen_ids = re.findall(
         r'"(qwen[^"]+)"', py.split("QWEN_MODELS")[1].split("QWEN_URLS")[0]
     )
     assert qwen_ids and qwen_ids[0] == "qwen-flash", qwen_ids
-    assert "qwen-turbo" in qwen_ids
+    assert "qwen2.5-7b-instruct" not in qwen_ids
     assert all("plus" not in m and "max" not in m and "paid" not in m for m in qwen_ids), qwen_ids
     assert "DASHSCOPE_BASE_URL" in py
     assert "def qwen_urls" in py
@@ -740,11 +744,12 @@ def test_lane_news_and_dig_templates() -> None:
     assert "polarity" in prompt
     assert "theme" in prompt.lower() or "basket" in prompt.lower()
     assert arts[0]["title"] in prompt
-    assert lanes_for(tmpl)[:3] == NEWS_HEAD
+    assert lanes_for(tmpl)[:4] == NEWS_HEAD
     assert token_budget(tmpl) == 900
     assert "listed" in system_for(tmpl).lower()
     sf_news = sf_models_for(tmpl)
-    assert sf_news[0] == "Qwen/Qwen2.5-7B-Instruct"
+    assert sf_news[0] == "Qwen/Qwen3-8B"
+    assert not any("qwen2.5" in str(m).lower() for m in sf_news)
     assert not any(str(m).startswith("Pro/") for m in sf_news)
 
     dig = next(q for q in qs if q["template"] == "company_dig")
@@ -790,9 +795,8 @@ def test_lane_dashscope_base_url_and_qwen_flash() -> None:
 
     assert QWEN_MODELS[0] == "qwen-flash"
     models = qwen_models()
-    assert models[0] == "qwen-flash"
-    assert "qwen-turbo" in models
-    assert "qwen2.5-7b-instruct" in models
+    assert models == ["qwen-flash"], models
+    assert "qwen2.5-7b-instruct" not in models
     for mid in models:
         low = mid.lower()
         assert "plus" not in low and "max" not in low and "paid" not in low
@@ -982,6 +986,121 @@ def test_lane_tokenhub_base_url_bearer_and_flash_then_hy3() -> None:
             assert needle not in blob or path.name == "test_workflow_fromjson.py"
 
 
+def test_lane_cyrus_primary_allowlists_ban_old_flash() -> None:
+    """Primary allowlists keep 2025+ flash; banned IDs never appear."""
+    from src.lane_route import (
+        LAST_RESORT_MODELS,
+        QWEN_MODELS,
+        ZHIPU_MODELS,
+        hopper_plan,
+        is_banned_primary,
+        lanes_for,
+        primary_models_for,
+        qwen_models,
+        sf_models_for,
+        tokenhub_models,
+    )
+
+    assert ZHIPU_MODELS == ["glm-4.7-flash"]
+    assert qwen_models() == ["qwen-flash"]
+    assert QWEN_MODELS[0] == "qwen-flash"
+    assert tokenhub_models()[0] == "glm-5.3-flash"
+    assert "deepseek-v4-flash" in tokenhub_models()
+    assert tokenhub_models()[-1] == "hy3"
+
+    banned = (
+        "glm-4-flash-250414",
+        "glm-4.5-flash",
+        "glm-4-flash",
+        "qwen2.5-7b-instruct",
+        "Qwen/Qwen2.5-7B-Instruct",
+    )
+    for bad in banned:
+        assert is_banned_primary(bad), bad
+    assert not is_banned_primary("glm-4.7-flash")
+    assert not is_banned_primary("glm-5.3-flash")
+    assert not is_banned_primary("glm-5.3-flashx")
+    assert not is_banned_primary("deepseek-v4-flash")
+    assert not is_banned_primary("qwen-flash")
+    assert not is_banned_primary("deepseek-flash")
+    assert set(LAST_RESORT_MODELS) >= {
+        "glm-4-flash-250414",
+        "glm-4.5-flash",
+        "qwen2.5-7b-instruct",
+        "Qwen/Qwen2.5-7B-Instruct",
+    }
+
+    for tmpl in ("custom", "news_to_tickers", "company_dig"):
+        assert sf_models_for(tmpl)[0] == "Qwen/Qwen3-8B"
+        for hop in lanes_for(tmpl):
+            models = primary_models_for(hop, tmpl)
+            for mid in models:
+                assert not is_banned_primary(mid), (tmpl, hop, mid)
+            blob = " ".join(models).lower()
+            assert "glm-4-flash-250414" not in blob
+            assert "glm-4.5-flash" not in blob
+            assert "qwen2.5-7b" not in blob
+
+    news_plan = hopper_plan("news_to_tickers")
+    assert [hop for hop, _ in news_plan[:4]] == [
+        "zhipu", "siliconflow", "openrouter", "qwen",
+    ]
+    by_hop = dict(news_plan)
+    assert by_hop["zhipu"] == ["glm-4.7-flash"]
+    assert by_hop["siliconflow"][0] == "Qwen/Qwen3-8B"
+    assert by_hop["qwen"] == ["qwen-flash"]
+    assert by_hop["tokenhub"][0] == "glm-5.3-flash"
+    assert by_hop["deepseek"][0] == "deepseek-flash"
+
+
+def test_lane_hop_429_abandons_provider() -> None:
+    """429 / rate-limit skips the provider; never older sibling IDs."""
+    from src import lane_route
+
+    lane_route._SKIP.clear()
+    seen: list[str] = []
+
+    def call_429(model):
+        seen.append(model)
+        return None, 429, "rate limited"
+
+    parsed, info = lane_route.hop_models(
+        "zhipu",
+        ["glm-4.7-flash", "glm-4-flash-250414", "glm-4.5-flash"],
+        call_429,
+    )
+    assert parsed is None and info is None
+    assert seen == ["glm-4.7-flash"], seen
+    assert "zhipu" in lane_route._SKIP
+
+    seen.clear()
+    parsed, info = lane_route.hop_models(
+        "zhipu",
+        ["glm-4.7-flash", "glm-4-flash-250414"],
+        call_429,
+    )
+    assert parsed is None
+    assert seen == [], seen
+
+    lane_route._SKIP.clear()
+    seen.clear()
+
+    def call_404(model):
+        seen.append(model)
+        return None, 404, "missing"
+
+    parsed, info = lane_route.hop_models(
+        "zhipu",
+        ["glm-4.7-flash", "glm-4-flash-250414", "glm-4.5-flash"],
+        call_404,
+    )
+    assert parsed is None
+    assert seen == ["glm-4.7-flash"], seen
+    assert "glm-4-flash-250414" not in seen
+    assert "glm-4.5-flash" not in seen
+    lane_route._SKIP.clear()
+
+
 def test_ci_workflow_is_wired() -> None:
     yml = (WF / "workflow_selfcheck.yml").read_text(encoding="utf-8")
     assert "pull_request:" in yml
@@ -1011,6 +1130,8 @@ def main() -> None:
         test_lane_news_and_dig_templates,
         test_lane_dashscope_base_url_and_qwen_flash,
         test_lane_tokenhub_base_url_bearer_and_flash_then_hy3,
+        test_lane_cyrus_primary_allowlists_ban_old_flash,
+        test_lane_hop_429_abandons_provider,
         test_ci_workflow_is_wired,
     ]
     failed = 0
