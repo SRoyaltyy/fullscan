@@ -1,0 +1,16 @@
+{
+  "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+  "slug": "13-questions",
+  "kind": "13-questions",
+  "retrieved": "2026-09-21T16:00:00Z",
+  "items": [
+    {
+      "headline": "What does a hotter-than-expected CPI print do to duration and the dollar?",
+      "source": "grok_automations",
+      "published": null,
+      "retrieved": "2026-09-21T16:00:00Z",
+      "task_id": "7f250154-6401-4836-b5ff-5862211c5468",
+      "raw_excerpt": "Macro Q only. CPI surprise reprices TLT/QQQ down and UUP up. No single-name."
+    }
+  ]
+}

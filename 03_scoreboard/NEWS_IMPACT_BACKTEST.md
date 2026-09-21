@@ -3,6 +3,9 @@
 Hygiene restamp (research, not a new taxonomy) lives in
 `03_scoreboard/NEWS_IMPACT_HARVEST_HYGIENE.md` (A / #306). All-sources
 funnel + mix + class-horizon grid: `03_scoreboard/NEWS_IMPACT_CORPUS_MIX.md`.
+Unique-title book (all ~29k titles, grok_automations harvest):
+`03_scoreboard/NEWS_IMPACT_UNIQUE_TITLE.md`. Grok Automations daily refresh:
+`docs/GROK_AUTOMATIONS_HARVEST.md`.
 After reaction-title / guidance-sign / entry-clock / macro-collapse /
 horizon-aware 0-1d filters: 0-1d **60/105 = 57.1%**, 1-4w **26/51 = 51.0%**,
 guidance slice 0-1d **3/5 = 60.0%**, macro headline basket 0-1d

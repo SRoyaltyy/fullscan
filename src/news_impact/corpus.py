@@ -12,14 +12,19 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
-from .backtest import load_grok_dumps, load_parsed
+from .backtest import load_parsed
+from .grok_automations import (
+    counts as grok_counts,
+    dump_span,
+    load_grok_dumps,
+    prefer_source,
+)
 from .hygiene import is_reaction_title
 from .schema import is_tradable, is_usable
 
 NEWS_DIR = Path("01_daily/news")
 EVENTS_DIR = Path("01_daily/events")
 EXPORT_DIR = Path("data/exports")
-GROK_DIR = Path("data/grok_automations")
 _DATE_IN_NAME = re.compile(r"(\d{4}-\d{2}-\d{2})")
 
 THEME_RADAR = {
@@ -222,7 +227,8 @@ def inventory() -> dict[str, Any]:
     digests = sorted(NEWS_DIR.glob("*finviz*digest*.json"))
     events = sorted(EVENTS_DIR.glob("*_events.json"))
     actions = sorted(NEWS_DIR.glob("*_actions.json"))
-    grok = sorted(GROK_DIR.glob("*.json")) if GROK_DIR.is_dir() else []
+    grok_meta = grok_counts()
+    grok_early, grok_late = dump_span()
     rss_dumps = list(Path("data").glob("*rss*")) + list(Path("01_daily/news").glob("*rss*"))
     supabase = list(Path("data").glob("*supabase*")) + list(Path("01_daily").glob("*supabase*"))
 
@@ -273,11 +279,18 @@ def inventory() -> dict[str, Any]:
         },
         {
             "name": "grok_automations",
-            "path": "data/grok_automations/*.json",
-            "n_files": len(grok),
-            "earliest": "",
-            "latest": "",
-            "status": "empty" if not grok else "used",
+            "path": "data/grok_automations/{date}_{slug}.json",
+            "n_files": grok_meta["n_files"],
+            "n_items": grok_meta["n_items"],
+            "earliest": grok_early,
+            "latest": grok_late,
+            "status": grok_meta["status"],
+            "note": (
+                "GH Actions tokens cannot call the Automations API. "
+                "Ingest via bot/Cursor (Gmail noreply@x.ai or "
+                "automation_get_results) then commit dumps. "
+                "See docs/GROK_AUTOMATIONS_HARVEST.md."
+            ),
         },
         {
             "name": "rss_dumps",
@@ -326,22 +339,14 @@ def load_all_sources(date: str | None = None) -> tuple[list[dict], dict[str, Any
     raw.extend(load_finviz_digests(date))
     raw.extend(load_events(date))
     raw.extend(load_actions_keep(date))
-    if date is None or str(date).lower() in {"all", "*", "history"}:
-        raw.extend(load_grok_dumps())
+    raw.extend(load_grok_dumps(date=date))
     by_src = Counter(a.get("harvest_source") or a.get("source") or "?" for a in raw)
     return raw, {"n_raw": len(raw), "by_harvest_source": dict(by_src)}
 
 
 def dedupe_titles(arts: list[dict]) -> list[dict]:
-    bag: set[str] = set()
-    out: list[dict] = []
-    for a in arts:
-        k = (a.get("title") or "").lower()[:160]
-        if not k or k in bag:
-            continue
-        bag.add(k)
-        out.append(a)
-    return out
+    """Unique titles. Same fact: grok_automations outranks a Finviz wrap."""
+    return prefer_source(arts)
 
 
 def funnel_from_results(

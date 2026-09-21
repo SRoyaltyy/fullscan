@@ -1,0 +1,12 @@
+{
+  "date": "all",
+  "book": "unique_title_all",
+  "lane": "deterministic",
+  "status": "pending_restamp",
+  "grok_automations": {
+    "n_files": 2,
+    "n_items": 2,
+    "status": "used"
+  },
+  "note": "Harvest wire + fixtures committed. Unique-title restamp writes funnel, graded n, no-tape list."
+}

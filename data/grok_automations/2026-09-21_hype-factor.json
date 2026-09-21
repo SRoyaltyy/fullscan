@@ -1,0 +1,16 @@
+{
+  "task_id": "23a24524-4eaa-4b9e-bd39-5b30e2ec74ae",
+  "slug": "hype-factor",
+  "kind": "hype-factor",
+  "retrieved": "2026-09-21T16:00:00Z",
+  "items": [
+    {
+      "headline": "SEC issues order granting temporary exemptive relief to Tokenized Securities Venues",
+      "source": "sec.gov",
+      "published": "2026-09-17T08:00:00-04:00",
+      "retrieved": "2026-09-21T16:00:00Z",
+      "task_id": "23a24524-4eaa-4b9e-bd39-5b30e2ec74ae",
+      "raw_excerpt": "Fixture: Commission granted temporary exemptive relief to tokenized securities venues."
+    }
+  ]
+}

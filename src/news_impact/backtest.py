@@ -8,17 +8,18 @@ from pathlib import Path
 
 from .classify import rank_articles
 from .grade import format_performance, format_slice_table, performance_rollup, stamp_grade_flags
+from .grok_automations import load_grok_dumps, prefer_source
 from .hygiene import entry_clock_of
 from .pipeline import analyze_article, rollup
 
 NEWS_DIR = Path("01_daily/news")
-GROK_DIR = Path("data/grok_automations")
 _DATE_IN_NAME = re.compile(r"(\d{4}-\d{2}-\d{2})")
 
 COMPACT_KEYS = (
-    "article_id", "title", "source", "url", "source_file",
+    "article_id", "title", "source", "harvest_source", "url", "source_file",
     "published_at", "retrieved_at", "known_at", "entry_clock",
-    "sectors", "macro_themes",
+    "sectors", "macro_themes", "ticker_hint",
+    "task_id", "automation_slug", "automation_kind", "macro_only",
     "classification", "q5", "axioms_used", "entities", "conclusion",
     "hop_chain", "models", "reasoning", "performance",
     "usable", "tradable", "macro_factor", "old_usable", "old_class",
@@ -69,41 +70,6 @@ def load_parsed(path: Path) -> list[dict]:
     return out
 
 
-def load_grok_dumps() -> list[dict]:
-    if not GROK_DIR.is_dir():
-        return []
-    out = []
-    for path in sorted(GROK_DIR.glob("*.json")):
-        try:
-            blob = json.loads(path.read_text(encoding="utf-8"))
-        except (OSError, json.JSONDecodeError):
-            continue
-        rows = blob if isinstance(blob, list) else (blob or {}).get("results") or [blob]
-        for it in rows:
-            if not isinstance(it, dict):
-                continue
-            title = str(it.get("title") or "").strip()
-            if not title:
-                continue
-            published = str(it.get("published_at") or "").strip()
-            retrieved = str(it.get("createTime") or it.get("retrieved_at") or "").strip()
-            out.append({
-                "title": title,
-                "body": str(it.get("prompt") or it.get("body") or "")[:800],
-                "url": str(it.get("url") or ""),
-                "source": "grok_automation",
-                "source_file": str(path),
-                "published_at": published,
-                "retrieved_at": retrieved,
-                "known_at": published or retrieved,
-                "sectors": [],
-                "macro_themes": [],
-                "old_usable": None,
-                "old_class": "grok_automation",
-            })
-    return out
-
-
 def load_corpus(date: str | None = None) -> list[dict]:
     arts: list[dict] = []
     if date and date.lower() not in {"all", "*", "history"}:
@@ -112,15 +78,8 @@ def load_corpus(date: str | None = None) -> list[dict]:
     else:
         for p in sorted(NEWS_DIR.glob("*_parsed.json")):
             arts.extend(load_parsed(p))
-    arts.extend(load_grok_dumps())
-    bag, out = set(), []
-    for a in arts:
-        k = (a.get("title") or "").lower()[:160]
-        if k in bag:
-            continue
-        bag.add(k)
-        out.append(a)
-    return out
+    arts.extend(load_grok_dumps(date=date))
+    return prefer_source(arts)
 
 
 def overlay_existing_tape(results: list[dict], artifact: Path | None = None) -> list[dict]:

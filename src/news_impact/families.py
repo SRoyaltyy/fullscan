@@ -5,6 +5,7 @@ import re
 
 from .axioms import retrieve
 from .classify import extract_named
+from .grok_automations import is_macro_only
 from .horizons import apply_class_horizons
 from .macro import macro_entities
 from .schema import Classification, Entity, empty_entity_ok
@@ -34,6 +35,13 @@ def analyze(art: dict, cls: Classification, pack: dict | None = None) -> list[En
     pack = pack or {}
     if cls.q5 == "regime" or cls.event_class in {"discard", "regime_state", "rumor"}:
         return []
+    # 13-questions: factor basket only. Never fish a ticker from the Q.
+    if is_macro_only(art=art):
+        rows = macro_entities(_title(art), cls)
+        apply_class_horizons(
+            rows, cls.event_class, str(art.get("title") or ""), cls.sign,
+        )
+        return rows
     fn = {
         "blast": _blast,
         "structure": _structure,
