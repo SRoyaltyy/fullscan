@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T04:18:55.828133-04:00",
+  "generated_at": "2026-09-21T04:20:46.202380-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -13,8 +13,8 @@
   ],
   "counts": {
     "ok": 2,
-    "partial": 2,
-    "fail": 4,
+    "partial": 1,
+    "fail": 5,
     "n": 8
   },
   "processes": [
@@ -142,9 +142,9 @@
       "key": "preopen",
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
-      "status": "PARTIAL",
+      "status": "FAIL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 0,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -262,9 +262,9 @@
           "name": "Pre-open QC JSON",
           "path": "01_daily/2026-09-21_preopen_qc.json",
           "role": "required",
-          "status": "OK",
-          "reason": "all_ok=False",
-          "size": 7282
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "status",
@@ -280,9 +280,9 @@
           "name": "Grok review JSON",
           "path": "01_daily/2026-09-21_grok_review.json",
           "role": "required",
-          "status": "OK",
-          "reason": "ok=False Grok returned an empty review",
-          "size": 308
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0
         },
         {
           "key": "sector_basic_materials",
@@ -893,6 +893,24 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-21\nExport `finviz_2026-09-21.csv` \u00b7 11616 names \u00b7 generated 2026-09-21T04:18:55.645178-04:00"
+    },
+    {
+      "key": "universe",
+      "title": "Universe labels",
+      "date": "2026-09-21",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-21T04:20:46.007365-04:00",
+      "files": [
+        {
+          "path": "data/universe/2026-09-21_membership.csv",
+          "ok": true,
+          "reason": "",
+          "size": 1117085,
+          "preview": "5894 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+        }
+      ],
+      "preview": "5894 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
     }
   ],
   "href": {
