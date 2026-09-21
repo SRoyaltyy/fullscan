@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "generated_at": "2026-09-21T05:56:34.518589-04:00",
+  "generated_at": "2026-09-21T07:57:27.347507-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -82,10 +82,10 @@
       "yaml": "finviz_preopen_scrape.yml",
       "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 1,
-      "n_req": 1,
-      "n_opt_ok": 3,
-      "n_opt": 3,
+      "n_req_ok": 4,
+      "n_req": 4,
+      "n_opt_ok": 0,
+      "n_opt": 0,
       "files": [
         {
           "key": "digest_json",
@@ -106,7 +106,7 @@
           "key": "digest_md",
           "name": "Quote-page digest MD (*_finviz_digest)",
           "path": "01_daily/news/2026-09-09_finviz_digest.md",
-          "role": "optional",
+          "role": "required",
           "status": "OK",
           "reason": "",
           "size": 12026,
@@ -120,7 +120,7 @@
           "key": "market_digest_json",
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-09_finviz_market_digest.json",
-          "role": "optional",
+          "role": "required",
           "status": "OK",
           "reason": "",
           "size": 6565,
@@ -131,7 +131,7 @@
           "key": "market_digest_md",
           "name": "Homepage warm-up MD (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-09_finviz_market_digest.md",
-          "role": "optional",
+          "role": "required",
           "status": "OK",
           "reason": "",
           "size": 3303,
@@ -146,10 +146,10 @@
           "name": "Close answer-key JSON (*_finviz_market_digest_close)",
           "path": "01_daily/news/2026-09-09_finviz_market_digest_close.json",
           "role": "era",
-          "status": "SKIP",
-          "reason": "not in pipeline as of 2026-09-09 (first finviz_market_digest_close 2026-09-10)",
-          "size": 0,
-          "said": "not in pipeline as of 2026-09-09 (first finviz_market_digest_close 2026-09-10)",
+          "status": "OK",
+          "reason": "",
+          "size": 6643,
+          "said": "US stocks trade lower as Brent crude tops $100 on US\u2011Iran tensions, lifting September Fed hike odds and pushing 10\u2011year yields toward 4.81% \u00b7 leaders XOM, ROIV, INTC, NVS, DE, HWM \u00b7 bad",
           "bullets": []
         },
         {
@@ -157,11 +157,14 @@
           "name": "Close answer-key MD (*_finviz_market_digest_close)",
           "path": "01_daily/news/2026-09-09_finviz_market_digest_close.md",
           "role": "era",
-          "status": "SKIP",
-          "reason": "not in pipeline as of 2026-09-09 (first finviz_market_digest_close 2026-09-10)",
-          "size": 0,
-          "said": "not in pipeline as of 2026-09-09 (first finviz_market_digest_close 2026-09-10)",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 3372,
+          "said": "Finviz homepage market digest (close) \u2014 2026-09-09",
+          "bullets": [
+            "Generated:** 2026-09-09T10:09:43-04:00 (America/New_York)",
+            "Source:** `wayback`"
+          ]
         }
       ],
       "said": "400 tickers \u00b7 400 signals \u00b7 top AAPL, ABBV, ABT, ALAB, AMAT, AME, AMX, AMZN",
@@ -179,8 +182,8 @@
       "inputs_ready": true,
       "n_req_ok": 20,
       "n_req": 20,
-      "n_opt_ok": 3,
-      "n_opt": 3,
+      "n_opt_ok": 2,
+      "n_opt": 2,
       "files": [
         {
           "key": "in_digest",
@@ -201,7 +204,7 @@
           "key": "in_market_digest",
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-09_finviz_market_digest.json",
-          "role": "optional",
+          "role": "input",
           "status": "OK",
           "reason": "",
           "size": 6565,
@@ -1105,31 +1108,6 @@
     }
   },
   "lands": [
-    {
-      "key": "map_heat_research",
-      "title": "Map heat morning delta refresh",
-      "date": "2026-09-09",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-09T07:40:36.900437-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-09_research.json",
-          "ok": true,
-          "reason": "",
-          "size": 36697,
-          "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-09_research.md",
-          "ok": true,
-          "reason": "",
-          "size": 36697,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-09-09\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-09\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -3152,6 +3130,31 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-09\n_Generated 2026-09-10T01:57:37.591520-04:00 \u00b7 export=data/exports/finviz_2026-09-09.csv \u00b7 ticker digests=400 \u00b7 high-signal=400_ \u00b7 11614 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 11614 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-09-09",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-21T07:57:26.765954-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-09_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 6643,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-09-09_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 3372,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-09-09\n**Generated:** 2026-09-09T10:09:43-04:00 (America/New_York)\n**Source:** `wayback`\n**Banner:** US stocks trade lower as Brent crude tops $100 on US\u2011Iran tensions, lifting September Fed hike odds and pushing 10\u2011year yields toward 4.81%\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** Brent crude $100.0\n**CPI/Fed:** 60.0% hike (hike expectations rise to roughly a 60%)\n**Leaders:** XOM, ROIV, INTC, NVS, DE, HWM, AMGN, DYN, SYK, CHWY, ODD, SIG, CASY\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Archive snapshot:** `20260909140943` (2026-09-09T10:09:43-04:00)\n**Archive URL:** https://web.archive.org/web/20260909140943id_/https://finviz.com/\n**Clock legal for:** 2026-09-10\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-09\n**Generated:** 2026-09-09T10:09:43-04:00 (America/New_York)\n**Source:** `wayback`\n**Banner:** US stocks trade lower as Brent crude tops $100 on US\u2011Iran tensions, lifting September Fed hike odds and pushing 10\u2011year yields toward 4.81%\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** Brent crude $100.0\n**CPI/Fed:** 60.0% hike (hike expectations rise to roughly a 60%)\n**Leaders:** XOM, ROIV, INTC, NVS, DE, HWM, AMGN, DYN, SYK, CHWY, ODD, SIG, CASY\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Archive snapshot:** `20260909140943` (2026-09-09T10:09:43-04:00)\n**Archive URL:** https://web.archive.org/web/20260909140943id_/https://finviz.com/\n**Clock legal for:** 2026-09-10\n**Clock use:** `next_open`"
     }
   ],
   "href": {

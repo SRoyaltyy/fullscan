@@ -1,0 +1,114 @@
+{
+  "date": "2026-09-10",
+  "generated_at": "2026-09-10T20:03:11-04:00",
+  "timezone": "America/New_York",
+  "source": "wayback",
+  "source_url": "https://web.archive.org/web/20260911000311id_/https://finviz.com/",
+  "archive_snapshot_ts": "20260911000311",
+  "archive_snapshot_at": "2026-09-10T20:03:11-04:00",
+  "archive_url": "https://web.archive.org/web/20260911000311id_/https://finviz.com/",
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-09-11",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-09-11) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks extended losses as oil topped $100 and hot PPI data lifted Treasury yields and Fed hike odds ahead of CPI",
+  "raw_text": "- The S&P 500 (SPX) closed at 7,591.70 (-0.58%), the Dow Jones Industrial Average (DJI) at 52,064.10 (-0.60%), and the Nasdaq Composite (COMP) at 26,081.72 (-0.65%), marking a fourth straight down session as market-implied odds of a Fed rate hike next week rose to around 70%.\n- August PPI increased 0.4% month-over-month and 5.4% year-over-year, exceeding expectations, with energy prices a major contributor amid Iran-related Middle East conflict and Strait of Hormuz disruptions.\n- Brent crude (@QA) traded around $105–$109 per barrel while WTI (@CL) moved above $100, and the 10-year Treasury yield hit multiyear highs near 4.95%.\n- Energy (XLE +1.54%) led the market, while consumer staples (XLP +0.54%) also gained as Philip Morris International (PM), Constellation Brands (STZ), and Altria (MO) advanced.\n- Technology (XLK -1.48%), materials, and industrial-linked names lagged, with Freeport-McMoRan (FCX) dropping 6.59% on copper (@HG) tariff uncertainty.\n- Skyworks Solutions (SWKS) rose 9.79% and Qorvo (QRVO) gained 6.77% on merger momentum, while Apple (AAPL) added 3.58%.\n- AeroVironment (AVAV) climbed 4.45% after reporting record revenue and backlog.\n- The Cooper Companies (COO) fell 14.67% after cutting full-year guidance, while Macy’s (M) declined despite an earnings beat and Nvidia (NVDA) slipped 2.4%.\n- After the bell, Oracle (ORCL) reported adjusted EPS of $1.92 versus $1.74 expected and revenue of $19.35 billion versus $19.14 billion expected, with cloud infrastructure revenue up 121% to $7.4 billion and more than $30 billion in new AI contracts, prompting a full-year guidance raise and a roughly 7% gain in the stock after hours.\n- Adobe (ADBE) reported after hours with revenue of $6.76 billion and non-GAAP EPS of $6.13, both beating estimates on strong demand for AI-enabled products, while Copart (CPRT) agreed to acquire ACV Auctions in a $1.9 billion all-cash deal.",
+  "raw_summary_md": "- The **S&P 500** ([SPX](https://finviz.com/index/SPX?p=d)) closed at **7,591.70 (-0.58%)**, the **Dow Jones Industrial Average** ([DJI](https://finviz.com/index/DJI?p=d)) at **52,064.10 (-0.60%)**, and the **Nasdaq Composite** ([COMP](https://finviz.com/index/COMP?p=d)) at **26,081.72 (-0.65%)**, marking a **fourth straight down session** as market-implied odds of a Fed rate hike next week rose to around **70%**.\n- **August PPI increased 0.4% month-over-month and 5.4% year-over-year**, **exceeding expectations**, with energy prices a major contributor amid **Iran-related Middle East conflict** and **Strait of Hormuz** disruptions.\n- **Brent crude** ([@QA](https://finviz.com/futures_charts?t=QA)) traded around **$105–$109 per barrel** while **WTI** ([@CL](https://finviz.com/futures_charts?t=CL)) moved above **$100**, and the **10-year Treasury yield** hit multiyear highs near **4.95%**.\n- **Energy** ([XLE](https://finviz.com/quote?t=XLE) **+1.54%**) led the market, while **consumer staples** ([XLP](https://finviz.com/quote?t=XLP) **+0.54%**) also gained as **Philip Morris International** ([PM](https://finviz.com/quote?t=PM)), **Constellation Brands** ([STZ](https://finviz.com/quote?t=STZ)), and **Altria** ([MO](https://finviz.com/quote?t=MO)) advanced.\n- **Technology** ([XLK](https://finviz.com/quote?t=XLK) **-1.48%**), materials, and industrial-linked names lagged, with **Freeport-McMoRan** ([FCX](https://finviz.com/quote?t=FCX)) dropping **6.59%** on copper ([@HG](https://finviz.com/futures_charts?t=HG)) tariff uncertainty.\n- **Skyworks Solutions** ([SWKS](https://finviz.com/quote?t=SWKS)) rose **9.79%** and **Qorvo** ([QRVO](https://finviz.com/quote?t=QRVO)) gained **6.77%** on **merger momentum**, while **Apple** ([AAPL](https://finviz.com/quote?t=AAPL)) added **3.58%**.\n- **AeroVironment** ([AVAV](https://finviz.com/quote?t=AVAV)) climbed **4.45%** after reporting **record revenue and backlog**.\n- **The Cooper Companies** ([COO](https://finviz.com/quote?t=COO)) fell **14.67%** after **cutting full-year guidance**, while **Macy’s** ([M](https://finviz.com/quote?t=M)) declined despite an **earnings beat** and **Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) slipped **2.4%**.\n- After the bell, **Oracle** ([ORCL](https://finviz.com/quote?t=ORCL)) reported **adjusted EPS of $1.92 versus $1.74 expected** and **revenue of $19.35 billion versus $19.14 billion expected**, with **cloud infrastructure revenue up 121% to $7.4 billion** and **more than $30 billion in new AI contracts**, prompting a **full-year guidance raise** and a roughly **7% gain in the stock after hours**.\n- **Adobe** ([ADBE](https://finviz.com/quote?t=ADBE)) reported after hours with **revenue of $6.76 billion** and **non-GAAP EPS of $6.13**, both beating estimates on strong demand for **AI-enabled products**, while **Copart** ([CPRT](https://finviz.com/quote?t=CPRT)) agreed to acquire **ACV Auctions** in a **$1.9 billion all-cash deal**.",
+  "index_moves": [],
+  "oil": {
+    "name": "Brent crude",
+    "price": 105.0,
+    "verb": null,
+    "direction": null
+  },
+  "cpi": null,
+  "fed_odds": {
+    "pct": 0.65,
+    "action": "hike",
+    "text": "0.65%), marking a fourth straight down session as market-implied odds of a Fed rate hike"
+  },
+  "named_tickers": [
+    "XLE",
+    "XLP",
+    "STZ",
+    "MO",
+    "XLK",
+    "FCX",
+    "SWKS",
+    "QRVO",
+    "AAPL",
+    "AVAV",
+    "COO",
+    "M",
+    "NVDA",
+    "ORCL",
+    "ADBE",
+    "CPRT"
+  ],
+  "named_leaders": [
+    "XLE",
+    "XLP",
+    "STZ",
+    "MO",
+    "XLK",
+    "FCX",
+    "SWKS",
+    "QRVO",
+    "AAPL",
+    "AVAV",
+    "COO",
+    "M",
+    "NVDA",
+    "ORCL",
+    "ADBE",
+    "CPRT"
+  ],
+  "calendar": [
+    "The S&P 500 (SPX) closed at 7,591.70 (-0.58%), the Dow Jones Industrial Average (DJI) at 52,064.10 (-0.60%), and the Nasdaq Composite (COMP) at 26,081.72 (-0.65%), marking a fourth straight down session as market-implied odds of a Fed rate hike next week rose to around 70%.",
+    "August PPI increased 0.4% month-over-month and 5.4% year-over-year, exceeding expectations, with energy prices a major contributor amid Iran-related Middle East conflict and Strait of Hormuz disruptions."
+  ],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": {
+      "pct": 0.65,
+      "action": "hike",
+      "text": "0.65%), marking a fourth straight down session as market-implied odds of a Fed rate hike"
+    }
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "The S&P 500 (SPX) closed at 7,591.70 (-0.58%), the Dow Jones Industrial Average (DJI) at 52,064.10 (-0.60%), and the Nasdaq Composite (COMP) at 26,081.72 (-0.65%), marking a fourth straight down session as market-implied odds of a Fed rate hike next week rose to around 70%."
+    ],
+    "text": "The S&P 500 (SPX) closed at 7,591.70 (-0.58%), the Dow Jones Industrial Average (DJI) at 52,064.10 (-0.60%), and the Nasdaq Composite (COMP) at 26,081.72 (-0.65%), marking a fourth straight down session as market-implied odds of a Fed rate hike next week rose to around 70%."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "August PPI increased 0.4% month-over-month and 5.4% year-over-year, exceeding expectations, with energy prices a major contributor amid Iran-related Middle East conflict and Strait of Hormuz disruptions."
+  },
+  "finviz_id": 283347,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-09-10T19:36:13.97",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "neutral"
+}
