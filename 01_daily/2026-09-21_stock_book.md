@@ -1,6 +1,6 @@
 # Stock book — 2026-09-21
 
-_Generated 2026-09-21T16:12:11.941206-04:00_
+_Generated 2026-09-21T16:17:02.227883-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -55,8 +55,8 @@ Decision domains: **MKT · parent · child · company · setup · flow**. Measur
 | 1 | **GEV** | 🟢🔴🔴🟢🟡🟢 | catalyst | direct high digest (same-day): GE Vernova settles over $300 million Vineyard Wind payment dispute, withdraws contract-termination notice and legal claims on Massachusetts offshore project; Specialty Industrial Machinery -4.2% d1 / -4.2% 1w / -1.5% vs parent | BUY CATALYST — market=GREEN; parent=RED; child=RED/rel=YELLOW; company=GREEN(0.72); setup=YELLOW; flow=GREEN; lookback=Cond green |
 | 2 | **CON** | 🟢🟢🟢🟡🟢🟢 | group_leader | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY GROUP_LEADER — market=GREEN; parent=GREEN; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,⚪,Cond green |
 | 3 | **OPCH** | 🟢🟢🟢🟡🟢🟢 | group_leader | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY GROUP_LEADER — market=GREEN; parent=GREEN; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,⚪,Cond green |
-| 4 | **AMN** | 🟢🟢🟢🟡🟢🟡 | group_leader | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY GROUP_LEADER — market=GREEN; parent=GREEN; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=🔵,⚪,Cond green |
-| 5 | **HITI** | 🟢🟢🟢🟡🟢🟢 | group_leader | no direct company event; Pharmaceutical Retailers +3.6% d1 / +1.0% 1w / +3.5% vs parent | BUY GROUP_LEADER — market=GREEN; parent=GREEN; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,⚪,Cond green |
+| 4 | **HITI** | 🟢🟢🟢🟡🟢🟢 | group_leader | no direct company event; Pharmaceutical Retailers +3.6% d1 / +1.0% 1w / +3.5% vs parent | BUY GROUP_LEADER — market=GREEN; parent=GREEN; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,⚪,Cond green |
+| 5 | **AMN** | 🟢🟢🟢🟡🟢🟡 | group_leader | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY GROUP_LEADER — market=GREEN; parent=GREEN; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=🔵,⚪,Cond green |
 | 6 | **ORCL** | 🟢🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=GREEN; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
 | 7 | **BB** | 🟢🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=GREEN; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
 | 8 | **AVAH** | 🟢🟢🟢🟡🟢🟡 | group_leader | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY GROUP_LEADER — market=GREEN; parent=GREEN; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=🔵,Cond green |
@@ -230,14 +230,14 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Topic | hit rate | n | weight |
 |-------|----------|---|--------|
 | general | 54% | 35 | ×0.85 |
-| sector:Basic Materials | 48% | 23 | ×0.85 |
-| sector:Communication Services | 23% | 22 | ×0.50 |
-| sector:Consumer Cyclical | 52% | 23 | ×0.85 |
-| sector:Consumer Defensive | 44% | 23 | ×0.50 |
-| sector:Energy | 52% | 23 | ×0.85 |
-| sector:Financial | 48% | 23 | ×0.85 |
-| sector:Healthcare | 50% | 20 | ×0.85 |
-| sector:Industrials | 35% | 23 | ×0.50 |
+| sector:Basic Materials | 46% | 24 | ×0.85 |
+| sector:Communication Services | 26% | 23 | ×0.50 |
+| sector:Consumer Cyclical | 50% | 24 | ×0.85 |
+| sector:Consumer Defensive | 42% | 24 | ×0.50 |
+| sector:Energy | 54% | 24 | ×0.85 |
+| sector:Financial | 50% | 24 | ×0.85 |
+| sector:Healthcare | 52% | 21 | ×0.85 |
+| sector:Industrials | 33% | 24 | ×0.50 |
 | sector:Real Estate | 48% | 23 | ×0.85 |
 | sector:Technology | 38% | 21 | ×0.50 |
 | sector:Utilities | 38% | 21 | ×0.50 |
