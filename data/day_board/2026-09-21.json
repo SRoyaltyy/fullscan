@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T06:52:58.651969-04:00",
+  "generated_at": "2026-09-21T06:53:35.094971-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -602,7 +602,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -610,11 +610,13 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-09-21_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2663",
+          "size": 7652058,
+          "said": "28 rows",
+          "bullets": [
+            "CFFN, ANET, WWW, HSBC, WDS, SM, SKM, BMRN"
+          ]
         },
         {
           "key": "ab_enriched",
@@ -622,17 +624,17 @@
           "path": "data/ab_checklist/2026-09-21_ab_checklist_enriched.csv",
           "role": "required",
           "status": "OK",
-          "reason": "rows=11640",
-          "size": 3297757,
-          "said": "216 rows",
+          "reason": "rows=2663",
+          "size": 8489311,
+          "said": "25 rows",
           "bullets": [
-            "SBLK, PDEX, GLBS, RGEN, A, WST, ESEA, LLY"
+            "ANET, SFL, ETN, TECK, TER, AMD, JCI, CLS"
           ]
         }
       ],
-      "said": "216 rows",
+      "said": "25 rows",
       "bullets": [
-        "SBLK, PDEX, GLBS, RGEN, A"
+        "ANET, SFL, ETN, TECK, TER"
       ]
     },
     {
@@ -815,11 +817,11 @@
           "path": "data/ab_checklist/2026-09-21_ab_checklist_enriched.csv",
           "role": "input",
           "status": "OK",
-          "reason": "rows=11640",
-          "size": 3297757,
-          "said": "216 rows",
+          "reason": "rows=2663",
+          "size": 8489311,
+          "said": "25 rows",
           "bullets": [
-            "SBLK, PDEX, GLBS, RGEN, A, WST, ESEA, LLY"
+            "ANET, SFL, ETN, TECK, TER, AMD, JCI, CLS"
           ]
         },
         {
@@ -842,8 +844,8 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5102",
-          "size": 821799,
-          "said": "492 rows",
+          "size": 816990,
+          "said": "494 rows",
           "bullets": [
             "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
           ]
@@ -1966,6 +1968,31 @@
         }
       ],
       "preview": "5894 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 AVAH, PGY, SMTC, HALO, ECPG"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-21",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-21T06:53:34.094668-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-21_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7652058,
+          "preview": "2663 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, HSBC, WDS"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-21_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8489311,
+          "preview": "2663 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, SFL, ETN, TECK, TER"
+        }
+      ],
+      "preview": "2663 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, HSBC, WDS \u00b7 2663 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, SFL, ETN, TECK, TER"
     }
   ],
   "href": {
