@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T06:52:43.509444-04:00",
+  "generated_at": "2026-09-21T06:52:53.257511-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -147,31 +147,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "map_heat_research",
-      "title": "Map heat morning delta refresh",
-      "date": "2026-09-21",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-21T04:58:12.870546-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-21_research.json",
-          "ok": true,
-          "reason": "",
-          "size": 42996,
-          "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-21_research.md",
-          "ok": true,
-          "reason": "",
-          "size": 42996,
-          "preview": "# MAP HEAT RESEARCH \u2014 2026-09-21\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
-        }
-      ],
-      "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-21\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
-    },
     {
       "key": "finviz",
       "title": "Finviz universe export",
@@ -430,6 +405,31 @@
         }
       ],
       "preview": "5894 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-21",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-21T06:52:52.625916-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-21_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10212,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 1.904, 'dir': 'flat', 'conf': 0.476, 'source': 'llm'}, Communication Services={'score': 12.219, 'dir': 'up', 'conf': 0.65, 'source': 'llm'}, Consumer Cyclical={'score': 12.338, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Consumer Defensive={'score': -1.24, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Energy={'score': -6.269, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Financial={'score': 5.194, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Healthcare={'score': 3.016, 'dir': 'up', 'conf': 0.521, 'source': 'llm'}, Industrials={'score': 10.19, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-21_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 5828,
+          "preview": "# Weather report \u2014 2026-09-21\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 1.904, 'dir': 'flat', 'conf': 0.476, 'source': 'llm'}, Communication Services={'score': 12.219, 'dir': 'up', 'conf': 0.65, 'source': 'llm'}, Consumer Cyclical={'score': 12.338, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Consumer Defensive={'score': -1.24, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Energy={'score': -6.269, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Financial={'score': 5.194, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'}, Healthcare={'score': 3.016, 'dir': 'up', 'conf': 0.521, 'source': 'llm'}, Industrials={'score': 10.19, 'dir': 'flat', 'conf': 0.55, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-21\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

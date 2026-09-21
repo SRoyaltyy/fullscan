@@ -5,7 +5,7 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 ## Snapshot
 
 - **Risk state:** ON (general predict up score +12.9, conf 0.85)
-- **Yields:** falling (fred_dgs10) | **Dollar:** flat (dxy) | **Oil:** falling | **VIX:** falling (ratio 0.82 via vix/vix3m) spot 14.94
+- **Yields:** falling (fred_dgs10) | **Dollar:** flat (dxy) | **Oil:** falling | **VIX:** falling (ratio 0.82 via vix/vix3m) spot 14.88
 - **Fear & Greed:** n/a | **Yield/SPX 5d corr:** -0.59
 - **High-impact events:** 2 bullish vs 8 bearish
 
@@ -13,17 +13,17 @@ Is today good for each *kind* of stock? Labels come from `data/universe/`; this 
 
 | Label | Weather | Conf | Why |
 |---|---|---|---|
-| sector:Basic Materials | 🌧️ hostile | medium | finviz sector median week -1.74% [tape] |
-| sector:Communication Services | 🌧️ hostile | medium | finviz sector median week -2.68% [tape] |
-| sector:Consumer Cyclical | 🌧️ hostile | medium | finviz sector median week -2.75% [tape] |
-| sector:Consumer Defensive | ⛅ neutral | medium | finviz sector median week -1.48% [tape] |
+| sector:Basic Materials | ⛅ neutral | high | sector predict score +1.9 dir flat conf 0.476 [sector board] |
+| sector:Communication Services | 🌤️ favorable | high | sector predict score +12.2 dir up conf 0.65 [sector board] |
+| sector:Consumer Cyclical | 🌤️ favorable | high | sector predict score +12.3 dir flat conf 0.55 [sector board] |
+| sector:Consumer Defensive | ⛅ neutral | high | sector predict score -1.2 dir flat conf 0.55 [sector board] |
 | sector:Energy | 🌧️ hostile | medium | news_judge SECTOR Energy [bearish] |
-| sector:Financial | ⛅ neutral | medium | finviz sector median week -0.34% [tape] |
-| sector:Healthcare | ⛅ neutral | medium | finviz sector median week -0.55% [tape] |
-| sector:Industrials | ⛅ neutral | medium | finviz sector median week -1.32% [tape] |
-| sector:Real Estate | 🌧️ hostile | medium | finviz sector median week -2.61% [tape] |
+| sector:Financial | 🌤️ favorable | high | sector predict score +5.2 dir flat conf 0.55 [sector board] |
+| sector:Healthcare | 🌤️ favorable | high | sector predict score +3.0 dir up conf 0.521 [sector board] |
+| sector:Industrials | 🌤️ favorable | high | sector predict score +10.2 dir flat conf 0.55 [sector board] |
+| sector:Real Estate | 🌤️ favorable | high | sector predict score +3.2 dir flat conf 0.527 [sector board] |
 | sector:Technology | 🌤️ favorable | medium | news_judge SECTOR Technology [bullish] |
-| sector:Utilities | 🌧️ hostile | medium | finviz sector median week -1.88% [tape] |
+| sector:Utilities | ⛅ neutral | high | sector predict score -1.4 dir down conf 0.558 [sector board] |
 
 ## Size
 
