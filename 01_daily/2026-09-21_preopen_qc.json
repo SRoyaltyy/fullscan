@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T05:05:18.607591-04:00",
+  "generated_at": "2026-09-21T05:28:31.900419-04:00",
   "items": [
     {
       "ok": true,
@@ -124,14 +124,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-21/basic_materials_predict.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 19318,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
@@ -248,9 +248,9 @@
   "sectors": [
     {
       "sector": "Basic Materials",
-      "ok": false,
-      "reason": "missing",
-      "size": 0
+      "ok": true,
+      "reason": "",
+      "size": 19318
     },
     {
       "sector": "Communication Services",
@@ -313,7 +313,7 @@
       "size": 0
     }
   ],
-  "sector_n_ok": 0,
+  "sector_n_ok": 1,
   "sector_n_total": 11,
   "all_ok": false
 }

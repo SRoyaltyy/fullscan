@@ -1,13 +1,13 @@
 {
   "date": "2026-09-21",
-  "n_ok": 0,
+  "n_ok": 1,
   "n_total": 11,
   "sectors": [
     {
       "sector": "Basic Materials",
-      "ok": false,
-      "reason": "missing",
-      "size": 0
+      "ok": true,
+      "reason": "",
+      "size": 19318
     },
     {
       "sector": "Communication Services",
