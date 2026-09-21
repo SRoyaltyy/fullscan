@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T14:49:33.998895-04:00",
+  "generated_at": "2026-09-21T14:50:30.613284-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -871,7 +871,7 @@
           "size": 68088,
           "said": "Stock book \u2014 2026-09-21",
           "bullets": [
-            "_Generated 2026-09-21T13:56:00.357048-04:00_",
+            "_Generated 2026-09-21T14:50:28.532168-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -2008,7 +2008,7 @@
       "date": "2026-09-21",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-21T14:49:32.936579-04:00",
+      "at": "2026-09-21T12:32:38.208178-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
