@@ -57,7 +57,8 @@ def run(
     slim = dict(report)
     _write(out_json, json.dumps(slim, indent=2, ensure_ascii=False))
     _write(out_md, md)
-    _write(SCOREBOARD, md)
+    if label == "all":
+        _write(SCOREBOARD, md)
     tape = report.get("tape") or {}
     print(
         "news_impact_backtest", label,
@@ -67,8 +68,18 @@ def run(
         "killed", report.get("killed_n"),
         "hit_1d", tape.get("hit_rate_1d"),
         "hit_20d", tape.get("hit_rate_20d"),
+        "graded", tape.get("directional_calls"),
+        "ungraded", tape.get("ungraded_context"),
         "→", out_md,
     )
+    for name, bag in (tape.get("slices") or {}).items():
+        print(
+            f"  slice {name}: 1d={bag.get('hit_1d')}/{bag.get('n_1d')} "
+            f"rate={bag.get('hit_rate_1d')}  "
+            f"20d={bag.get('hit_20d')}/{bag.get('n_20d')} "
+            f"rate={bag.get('hit_rate_20d')}  "
+            f"{'graded' if bag.get('graded') else 'ungraded'}"
+        )
     return report
 
 

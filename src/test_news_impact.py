@@ -429,6 +429,138 @@ def test_search_pack_offline() -> None:
     assert pack["facts"] == []
 
 
+def _perf(ev: str, q5: str, direction: str, expr: str = "direct",
+          kind: str = "ticker", ticker: str = "AAL",
+          ret_1d: float | None = -1.0, agree_1d: bool | None = True,
+          ret_20d: float | None = -2.0, agree_20d: bool | None = True) -> dict:
+    return {
+        "usable": True,
+        "classification": {"event_class": ev, "q5": q5, "family": ev},
+        "performance": [{
+            "ticker": ticker,
+            "kind": kind,
+            "direction": direction,
+            "tradeable_expression": expr,
+            "event_class": ev,
+            "q5": q5,
+            "ret_1d": ret_1d,
+            "ret_20d": ret_20d,
+            "agree_1d": agree_1d,
+            "agree_20d": agree_20d,
+        }],
+    }
+
+
+def test_grade_filter_cuts_factor_impulse_and_non_direct() -> None:
+    """Headline hit rate: impulse + up/down + direct. factor_impulse ungraded."""
+    from src.news_impact.backtest import markdown
+    from src.news_impact.grade import (
+        is_gradeable,
+        performance_rollup,
+        ungraded_reason,
+    )
+
+    factor = _perf("factor_impulse", "impulse", "down", ticker="QQQ")
+    assert is_gradeable(factor["performance"][0], factor) is False
+    assert "factor_impulse" in (ungraded_reason(factor["performance"][0], factor) or "")
+
+    mixed = _perf("market_structure", "impulse", "mixed", ticker="HOOD",
+                  agree_1d=None, agree_20d=None)
+    assert is_gradeable(mixed["performance"][0], mixed) is False
+    assert "mixed" in (ungraded_reason(mixed["performance"][0], mixed) or "")
+
+    nd = _perf("guidance", "impulse", "not_determined", ticker="SPY",
+               agree_1d=None, agree_20d=None)
+    assert is_gradeable(nd["performance"][0], nd) is False
+
+    regime = _perf("regime_break", "regime_break", "down", ticker="XLE")
+    assert is_gradeable(regime["performance"][0], regime) is False
+    assert "q5=" in (ungraded_reason(regime["performance"][0], regime) or "")
+
+    proxy = _perf("input_cost", "impulse", "up", expr="proxy", ticker="XLE")
+    assert is_gradeable(proxy["performance"][0], proxy) is False
+    assert "tradeable_expression=proxy" in (
+        ungraded_reason(proxy["performance"][0], proxy) or ""
+    )
+
+    theme = _perf("guidance", "impulse", "up", kind="theme_etf", ticker="SPY")
+    assert is_gradeable(theme["performance"][0], theme) is False
+    assert "index-factor" in (ungraded_reason(theme["performance"][0], theme) or "")
+
+    good = _perf("input_cost", "impulse", "down", ticker="AAL")
+    assert is_gradeable(good["performance"][0], good) is True
+    assert ungraded_reason(good["performance"][0], good) is None
+
+    blast = _perf("blast_cyber", "impulse", "down", ticker="BSX")
+    struct = _perf("market_structure", "impulse", "up", ticker="COIN")
+    guide = _perf("guidance", "impulse", "up", ticker="CRM",
+                  ret_1d=2.0, agree_1d=True, ret_20d=None, agree_20d=None)
+
+    roll = performance_rollup([factor, mixed, nd, regime, proxy, theme, good, blast, struct, guide])
+    # gradeable 0-1d: AAL input_cost, BSX blast, COIN market_structure, CRM guidance
+    assert roll["n_1d"] == 4, roll
+    assert roll["hit_1d"] == 4
+    assert roll["hit_rate_1d"] == 1.0
+    assert roll["directional_calls"] == 4
+    assert roll["ungraded_context"] >= 4
+    # factor_impulse still appears in the slice table as ungraded context
+    fi = roll["slices"]["factor_impulse"]
+    assert fi["graded"] is False
+    assert fi["n_1d"] == 1
+    assert fi["hit_1d"] == 1
+    assert roll["slices"]["input_cost"]["graded"] is True
+    assert roll["slices"]["input_cost"]["n_1d"] == 1
+    assert roll["slices"]["blast"]["n_1d"] == 1
+    assert roll["slices"]["market_structure"]["n_1d"] == 1
+    assert roll["slices"]["guidance"]["n_1d"] == 1
+    # mixed market_structure must not inflate the graded slice
+    assert roll["slices"]["market_structure"]["n_1d"] == 1
+
+    md = markdown({
+        "date": "cut",
+        "harvested": 10,
+        "old": {},
+        "new": {},
+        "rescued_n": 0,
+        "killed_n": 0,
+        "tape": roll,
+        "results": [factor, good],
+    })
+    assert "## Slice hit rates" in md
+    assert "| factor_impulse |" in md
+    assert "**ungraded**" in md
+    assert "ungraded · factor_impulse" in md
+    assert "graded directional calls: 4" in md
+
+
+def test_evaluation_targets_pass_tradeable_expression() -> None:
+    from src.news_impact.grade import evaluation_targets, is_gradeable
+
+    row = {
+        "classification": {"event_class": "input_cost", "q5": "impulse"},
+        "entities": [{
+            "ticker": "AAL", "name": "AAL", "direction": "down",
+            "horizon": "0-1d", "role": "named", "tradeable_expression": "direct",
+        }],
+    }
+    targets = evaluation_targets(row)
+    assert targets and targets[0]["tradeable_expression"] == "direct"
+    assert targets[0]["q5"] == "impulse"
+    assert is_gradeable(targets[0], row) is True
+
+    fed = {
+        "classification": {"event_class": "factor_impulse", "q5": "impulse"},
+        "entities": [{
+            "ticker": "QQQ", "name": "rate-sensitive growth",
+            "direction": "down", "horizon": "0-1d",
+            "role": "named", "tradeable_expression": "direct", "inferred": True,
+        }],
+    }
+    ft = evaluation_targets(fed)
+    assert ft and ft[0]["ticker"] == "QQQ"
+    assert is_gradeable(ft[0], fed) is False
+
+
 def main() -> None:
     tests = [
         test_lane_templates_on_news_hopper,
@@ -460,6 +592,8 @@ def main() -> None:
         test_grade_entity_agrees_on_up,
         test_markdown_table_columns,
         test_load_parsed_keeps_times,
+        test_grade_filter_cuts_factor_impulse_and_non_direct,
+        test_evaluation_targets_pass_tradeable_expression,
         test_backtest_improves_sept_parses,
     ]
     failed = 0
