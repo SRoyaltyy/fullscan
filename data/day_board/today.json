@@ -1,8 +1,8 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T04:40:27.571036-04:00",
+  "generated_at": "2026-09-21T04:50:05.973238-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
+  "ranker_ready": true,
   "counts": {
     "ok": 4,
     "partial": 4,
@@ -24,33 +24,23 @@
     "score": "12.871",
     "direction": "up"
   },
-  "sectors": {},
+  "sectors": {
+    "said": "0 up / 0 down / 0 flat",
+    "bullets": [
+      "XLB missing",
+      "XLC missing",
+      "XLY missing",
+      "XLP missing",
+      "XLE missing",
+      "XLF missing",
+      "XLV missing",
+      "XLI missing",
+      "XLRE missing",
+      "XLK missing",
+      "XLU missing"
+    ]
+  },
   "lands": [
-    {
-      "key": "weather",
-      "title": "Weather / regime (offline retry)",
-      "date": "2026-09-21",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-21T04:24:33.030653-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-09-21_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9338,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.74, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.68, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.475, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.88, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.34, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.55, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.32, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}"
-        },
-        {
-          "path": "01_daily/weather/2026-09-21_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5070,
-          "preview": "# Weather report \u2014 2026-09-21\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.74, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -2.68, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -2.75, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.475, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.88, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': -0.34, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.55, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': -1.32, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-21\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
     {
       "key": "join",
       "title": "Join / match rank",
@@ -204,6 +194,24 @@
         }
       ],
       "preview": "# Premarket Prediction \u2014 2026-09-21\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 NOTABLE** | total score 12.871 (uncertainty multiplier \u00d71.0) | confidence 0.85\n>\n> **Good news vs bad news:** good +7.0 pts vs bad -1.0 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - Asia composite +1.04%\n> - Europe +0.88% partial\n> - Bessent-He talks ahead of Trump-Xi\n> - ES/NQ green vs cash\n> - oil offered\n>\n> **Bad news driving this:**\n> - paid hawkish SEP / ~55% October hike\n> - leftover Hormuz Brent ~$101-108\n> - Trump UNGA + Xi summit two-sided\n> - 1m real-yield backup still on tape\n> - EPU +163 1d\n>\n> **market uncertainty: **elevated** | VIX 14.95 | policy-uncertainty index 342.15 (1d +162.87)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udfe2 Asia overnight session: +0.5 \u00d7 2.0 = +1.0\n> - \ud83d\udfe2 Europe session: +0.5 \u00d7 2.0 = +1.0\n> - \ud83d\udfe2 Overnight news & catalys"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-09-21",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-21T04:50:05.404808-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-21/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 5243,
+          "preview": "keys: date, generated_at, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, sectors"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

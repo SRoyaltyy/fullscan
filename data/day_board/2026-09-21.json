@@ -1,11 +1,9 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T04:40:27.571036-04:00",
+  "generated_at": "2026-09-21T04:50:05.973238-04:00",
   "overall": "PARTIAL",
-  "ranker_ready": false,
-  "blockers": [
-    "MISSING Sector board JSON `01_daily/sectors/2026-09-21/_board.json` \u2014 missing"
-  ],
+  "ranker_ready": true,
+  "blockers": [],
   "counts": {
     "ok": 4,
     "partial": 4,
@@ -141,7 +139,7 @@
       "inputs_ready": true,
       "n_req_ok": 5,
       "n_req": 20,
-      "n_opt_ok": 2,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -248,9 +246,9 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-09-21/_board.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 5243
         },
         {
           "key": "qc",
@@ -379,17 +377,18 @@
           "size": 0
         }
       ],
-      "said": "general UP  12.871 \u00b7 news 6 items",
+      "said": "general UP  12.871 \u00b7 sectors 0 up / 0 down / 0 flat \u00b7 news 6 items",
       "bullets": [
         "bad: paid hawkish SEP / ~55% October hike",
         "bad: leftover Hormuz Brent ~$101-108",
         "bad: Trump UNGA + Xi summit two-sided",
         "good: Asia composite +1.04%",
         "good: Europe +0.88% partial",
-        "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
-        "Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comments boost September U.S. rate hike expectations",
-        "Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year",
-        "Surprise US crude inventory build and Fed rate hike drive 5.63% DVN drop"
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing"
       ]
     },
     {
@@ -510,7 +509,7 @@
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
       "status": "PARTIAL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 4,
       "n_opt_ok": 1,
@@ -530,9 +529,9 @@
           "name": "Sector board JSON",
           "path": "01_daily/sectors/2026-09-21/_board.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0
+          "status": "OK",
+          "reason": "",
+          "size": 5243
         },
         {
           "key": "in_actions",
@@ -716,7 +715,22 @@
       "score": "12.871",
       "direction": "up"
     },
-    "sectors": {},
+    "sectors": {
+      "said": "0 up / 0 down / 0 flat",
+      "bullets": [
+        "XLB missing",
+        "XLC missing",
+        "XLY missing",
+        "XLP missing",
+        "XLE missing",
+        "XLF missing",
+        "XLV missing",
+        "XLI missing",
+        "XLRE missing",
+        "XLK missing",
+        "XLU missing"
+      ]
+    },
     "news": {
       "said": "6 items",
       "bullets": [
@@ -1222,6 +1236,24 @@
         }
       ],
       "preview": "# Premarket Prediction \u2014 2026-09-21\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 NOTABLE** | total score 12.871 (uncertainty multiplier \u00d71.0) | confidence 0.85\n>\n> **Good news vs bad news:** good +7.0 pts vs bad -1.0 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - Asia composite +1.04%\n> - Europe +0.88% partial\n> - Bessent-He talks ahead of Trump-Xi\n> - ES/NQ green vs cash\n> - oil offered\n>\n> **Bad news driving this:**\n> - paid hawkish SEP / ~55% October hike\n> - leftover Hormuz Brent ~$101-108\n> - Trump UNGA + Xi summit two-sided\n> - 1m real-yield backup still on tape\n> - EPU +163 1d\n>\n> **market uncertainty: **elevated** | VIX 14.95 | policy-uncertainty index 342.15 (1d +162.87)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \ud83d\udfe2 Asia overnight session: +0.5 \u00d7 2.0 = +1.0\n> - \ud83d\udfe2 Europe session: +0.5 \u00d7 2.0 = +1.0\n> - \ud83d\udfe2 Overnight news & catalys"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-09-21",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-21T04:50:05.404808-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-21/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 5243,
+          "preview": "keys: date, generated_at, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, sectors"
     }
   ],
   "href": {
