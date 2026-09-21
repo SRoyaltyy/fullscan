@@ -1,14 +1,13 @@
 """Specialised news-impact backtest.
 
-Classifies the Grok/pipeline parse book, optionally hops the $0 Lane
-stack, grades named tickers / theme ETFs against the tape, and writes a
-human markdown table:
+Classifies the Grok/pipeline parse book PLUS theme-radar Elite News Title
+rows, optionally hops the $0 Lane stack, grades named tickers / theme ETFs
+against the tape, and writes a human markdown table.
 
-  article · published · retrieved · LLM(s) · reasoning · up/down · actual
-
-Does not touch flatten / Webull / factor-mine.
+Does not touch flatten / Webull / factor-mine. Does not merge theme-radar.
 
 CLI: python -m src.news_impact_backtest --date all
+     python -m src.news_impact_backtest --date 2026-09-18
 """
 from __future__ import annotations
 
@@ -18,6 +17,7 @@ from pathlib import Path
 
 from src.news_impact.backtest import markdown, run_backtest
 from src.news_impact.grade import grade_results, performance_rollup
+from src.news_impact.theme_radar import load_theme_radar, patch_load_corpus
 
 NEWS_DIR = Path("01_daily/news")
 SCOREBOARD = Path("03_scoreboard/NEWS_IMPACT_BACKTEST.md")
@@ -36,6 +36,7 @@ def run(
     prices: bool = True,
     persist: bool = False,
 ) -> dict:
+    patch_load_corpus()
     report = run_backtest(
         date,
         limit=limit,
@@ -60,8 +61,10 @@ def run(
     if label == "all":
         _write(SCOREBOARD, md)
     tape = report.get("tape") or {}
+    tr = load_theme_radar(date if label != "all" else None, allow_remote=label != "all")
     print(
         "news_impact_backtest", label,
+        "theme_radar_titles", len(tr),
         "old", (report.get("old") or {}).get("usable_ratio"),
         "new", (report.get("new") or {}).get("usable_ratio"),
         "rescued", report.get("rescued_n"),
