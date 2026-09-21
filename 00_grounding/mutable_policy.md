@@ -9,7 +9,7 @@ see_also: 03_scoreboard/LEARNINGS.md
 
 # Mutable policy (all workflows)
 
-Last learn_cycle: **2026-09-21**. Promoted: 2. Retired: 10. Active lessons: 202. Human digest: `03_scoreboard/LEARNINGS.md`.
+Last learn_cycle: **2026-09-21**. Promoted: 0. Retired: 10. Active lessons: 202. Human digest: `03_scoreboard/LEARNINGS.md`.
 
 ## Accuracy by topic (graded window)
 
@@ -44,7 +44,7 @@ Sectors (pooled S0–S4; per-sector overrides in engine_policy.json):
 - S2_BREADTH: n=134 sign-hit=0.62 → ×1.0
 - S3_FLOWS_POSITIONING: n=95 sign-hit=0.49 → ×0.5
 - S4_ETF_TAPE: n=141 sign-hit=0.62 → ×1.0
-Last change: Basic Materials.S2_BREADTH: 0.5 -> 1.0 (n=12, hit=0.583); Consumer Defensive.S0_SHARED_MACRO: 1.0 -> 1.25 (n=12, hit=0.667); Healthcare.S0_SHARED_MACRO: 0.5 -> 0.0 (n=14, hit=0.429); Real Estate.S4_ETF_TAPE: 1.0 -> 0.5 (n=15, hit=0.533)
+Last change: hold
 
 ## Active adjustments (newest promoted lessons, truncated)
 
