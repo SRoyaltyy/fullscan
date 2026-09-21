@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-21",
+  "prepared_at": "2026-09-21T06:44:44.565732-04:00",
+  "fingerprint": "8017a978300e7639e730d3f9a495cdd2ceb9d26783b7c0466bce03c48c1f5410",
+  "status": "failed",
+  "submit": true,
+  "standing": true,
+  "fill_status": "not_observed",
+  "host": "api.sandbox.webull.com",
+  "archive_reason": "HTTP 417 OPENAPI_PARAM_ERR combo_type on multi-body place_batch; no order_id acked; archived to unlock serial-place retry after #296",
+  "archived_at": "2026-09-21T07:00:00-04:00",
+  "sent": [
+    {"ticker": "DELL", "client_order_id": "fs20260921BDELL", "ok": false, "status": "unknown"},
+    {"ticker": "GME", "client_order_id": "fs20260921BGME", "ok": false, "status": "unknown"},
+    {"ticker": "UMC", "client_order_id": "fs20260921BUMC", "ok": false, "status": "unknown"},
+    {"ticker": "VSTS", "client_order_id": "fs20260921BVSTS", "ok": false, "status": "unknown"}
+  ]
+}
