@@ -463,6 +463,60 @@ def order_body(ticket: dict) -> dict:
     }
 
 
+def parse_orders(payload) -> list[dict]:
+    """Normalize open / history / detail payloads into blotter rows."""
+    out = []
+    seen = set()
+    for row in _as_list(payload):
+        if not isinstance(row, dict):
+            continue
+        inner = row.get("order") if isinstance(row.get("order"), dict) else row
+        rec = parse_order(inner)
+        key = rec.get("order_id") or rec.get("client_order_id") or ""
+        if not rec.get("ticker") and not key:
+            continue
+        if key and key in seen:
+            continue
+        if key:
+            seen.add(key)
+        out.append(rec)
+    return out
+
+
+def parse_order(row: dict) -> dict:
+    ticker = str(row.get("symbol") or row.get("ticker") or row.get("ticker_id")
+                 or row.get("instrument_id") or "").upper().strip()
+    if "." in ticker and ticker.split(".", 1)[0] in ("US", "NYSE", "NASDAQ"):
+        ticker = ticker.split(".", 1)[-1]
+    status = str(row.get("status") or row.get("order_status")
+                 or row.get("orderStatus") or "").upper().replace(" ", "_")
+    side = str(row.get("side") or row.get("action") or "").upper()
+    qty = int(_num(row, "quantity", "qty", "entrust_quantity", "order_qty"))
+    filled = int(_num(row, "filled_quantity", "filled_qty", "cum_qty",
+                     "filledQuantity"))
+    return {
+        "ticker": ticker,
+        "side": side,
+        "status": status or "UNKNOWN",
+        "shares": qty,
+        "filled_qty": filled,
+        "order_id": str(row.get("order_id") or row.get("orderId") or ""),
+        "client_order_id": str(row.get("client_order_id")
+                               or row.get("clientOrderId") or ""),
+        "order_type": str(row.get("order_type") or row.get("orderType") or ""),
+        "tif": str(row.get("time_in_force") or row.get("timeInForce") or ""),
+        "session": str(row.get("support_trading_session")
+                       or row.get("trading_session") or ""),
+        "avg_px": _num(row, "avg_filled_price", "average_price",
+                       "avg_price", "filled_price"),
+        "limit_px": _num(row, "limit_price", "price"),
+        "placed_at": str(row.get("place_time") or row.get("create_time")
+                         or row.get("placed_at") or ""),
+        "updated_at": str(row.get("update_time") or row.get("updated_at")
+                          or ""),
+    }
+
+
 def parse_order_id(payload) -> str:
     if isinstance(payload, dict):
         for key in ("order_id", "orderId", "client_order_id"):
@@ -564,6 +618,59 @@ class PaperAPI:
         return BrokerSnap(env=self.env, cash=cash, buying_power=power,
                           positions=parse_positions(pos), connected=True,
                           acc_id=self.account_id)
+
+    def list_open_orders(self) -> list[dict]:
+        """Pending / working sandbox orders. Never places."""
+        return self._page_orders("open")
+
+    def list_history_orders(self, start_date: str, end_date: str) -> list[dict]:
+        """Filled / cancelled / rejected history. Never places."""
+        return self._page_orders("history", start_date=start_date, end_date=end_date)
+
+    def order_detail(self, client_order_id: str) -> dict | None:
+        """One journal client_order_id → broker row. Never places."""
+        if self.trade is None or not self.account_id:
+            return None
+        coid = str(client_order_id or "").strip()
+        if not coid:
+            return None
+        try:
+            res = self.trade.order_v3.get_order_detail(self.account_id, coid)
+            rows = parse_orders(self._json(res, "order_detail"))
+        except Exception:
+            return None
+        return rows[0] if rows else None
+
+    def _page_orders(self, kind: str, *, start_date: str = "",
+                     end_date: str = "") -> list[dict]:
+        if self.trade is None or not self.account_id:
+            return []
+        rows: list[dict] = []
+        last = None
+        for _ in range(20):
+            try:
+                if kind == "open":
+                    res = self.trade.order_v3.get_order_open(
+                        self.account_id, page_size=100,
+                        last_client_order_id=last)
+                    label = "open_orders"
+                else:
+                    res = self.trade.order_v3.get_order_history(
+                        self.account_id, page_size=100,
+                        start_date=start_date, end_date=end_date,
+                        last_client_order_id=last)
+                    label = "order_history"
+                chunk = parse_orders(self._json(res, label))
+            except Exception:
+                break
+            if not chunk:
+                break
+            rows.extend(chunk)
+            nxt = chunk[-1].get("client_order_id")
+            if not nxt or nxt == last or len(chunk) < 100:
+                break
+            last = nxt
+        return rows
 
     def place_batch(self, tickets):
         """Place each ticket as a one-element list — same path as place().

@@ -913,9 +913,11 @@ def test_incremental_land_and_day_board() -> None:
     assert "leftover sweep" in (WF / "stock_book_all.yml").read_text(encoding="utf-8")
     pub = (ROOT / "scripts" / "publish_dashboard.sh").read_text(encoding="utf-8")
     assert "day-board" in pub
+    assert "webull-paper" in pub
     dep = (WF / "deploy-dashboard.yml").read_text(encoding="utf-8")
     assert "id-token: write" in dep
     assert "day-board" in dep
+    assert "webull-paper" in dep
     orch = (WF / "daily_orchestrator.yml").read_text(encoding="utf-8")
     assert "news_parse.yml" in orch
     assert "news_judge.yml" in orch

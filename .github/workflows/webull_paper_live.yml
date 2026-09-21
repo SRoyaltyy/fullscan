@@ -1,0 +1,78 @@
+name: Webull paper live board
+
+# Read-only sandbox snapshot for the .io blotter. Does not place, cancel,
+# remine, or talk to api.webull.com. Does not change flatten_robust.
+
+on:
+  schedule:
+    # Every 5 min 08:00–16:59 ET (UTC 12–20 while EDT). GitHub cron can
+    # run late; the page also polls main so a land still shows up.
+    - cron: "*/5 12-20 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      run_date:
+        description: "YYYY-MM-DD (empty = today ET)"
+        required: false
+        default: ""
+  workflow_run:
+    workflows:
+      - "Publish strategy tickets"
+      - "Webull paper (OpenAPI sandbox)"
+    types: [completed]
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: webull-paper-live
+  cancel-in-progress: true
+
+jobs:
+  observe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install webull-openapi-python-sdk
+      - name: Unit tests
+        run: python3 -m src.test_webull_paper_live
+      - name: Snapshot sandbox book
+        env:
+          WEBULL_APP_KEY: ${{ secrets.WEBULL_APP_KEY }}
+          WEBULL_APP_SECRET: ${{ secrets.WEBULL_APP_SECRET }}
+          WEBULL_ACCOUNT_ID: ${{ secrets.WEBULL_ACCOUNT_ID }}
+          RUN_DATE: ${{ github.event.inputs.run_date }}
+        run: |
+          set -euo pipefail
+          DATE="${RUN_DATE:-$(TZ=America/New_York date +%F)}"
+          python3 -m src.webull_paper_live --date "$DATE"
+          test -s data/webull_paper/live.json
+          test -s dashboard/webull-paper/live.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          d = json.loads(Path("data/webull_paper/live.json").read_text())
+          assert d.get("host") == "api.sandbox.webull.com"
+          assert d.get("place") is False
+          print("connected", d.get("connected"), "open", d.get("open_n"),
+                "filled", d.get("filled_n"), "missing", d.get("missing_n"))
+          PY
+      - name: Land snapshot
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          bash scripts/safe_git_push.sh \
+            "auto: webull paper live board" \
+            data/webull_paper/live.json \
+            dashboard/webull-paper/live.json
+          # Board HTML polls raw.githubusercontent.com/main. Do not
+          # republish all of Pages here — a force-push would wipe other
+          # .io paint (calendar) and is not needed for a JSON refresh.

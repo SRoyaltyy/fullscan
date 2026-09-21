@@ -194,12 +194,17 @@ jobs:
             cp -a dashboard/day-movers/. pages_out/dashboard/day-movers/
             echo "Overlayed dashboard/day-movers from main"
           fi
+          if [ -f dashboard/webull-paper/index.html ]; then
+            mkdir -p pages_out/dashboard/webull-paper
+            cp -a dashboard/webull-paper/. pages_out/dashboard/webull-paper/
+            echo "Overlayed dashboard/webull-paper from main"
+          fi
 
           # The paper book is also copied to the site root. Mirror every
           # sub-dash there so homepage links like sleeve-merge/ resolve.
           for sub in boring-winners ticker-lookback gainer-lookback flatten-lookback \
                      mover-lookback sleeve-combine sleeve-merge mover-paper book-paper \
-                     strategy-board factor-mine day-board down-day-mine hard-red-exceptions day-movers; do
+                     strategy-board factor-mine day-board down-day-mine hard-red-exceptions day-movers webull-paper; do
             if [ -d "pages_out/dashboard/${sub}" ]; then
               mkdir -p "pages_out/${sub}"
               cp -a "pages_out/dashboard/${sub}/." "pages_out/${sub}/"
@@ -241,5 +246,6 @@ jobs:
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/hard-red-exceptions/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/day-movers/"
           echo "https://SRoyaltyy.github.io/fullscan/dashboard/down-day-mine/"
+          echo "https://SRoyaltyy.github.io/fullscan/dashboard/webull-paper/"
           echo "https://SRoyaltyy.github.io/fullscan/"
           echo "If 404: Settings → Pages → Deploy from branch → gh-pages / root"
