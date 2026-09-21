@@ -1,8 +1,8 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T04:18:47.569536-04:00",
+  "generated_at": "2026-09-21T04:18:55.645178-04:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-09-20.csv",
+  "export": "finviz_2026-09-21.csv",
   "n_tickers": 11616,
   "sectors": [
     {
@@ -9008,7 +9008,7 @@
       ]
     },
     {
-      "time": "53 min",
+      "time": "54 min",
       "title": "Apple Pay to launch in India next month with Axis Bank- report",
       "url": "https://finance.yahoo.com/technology/articles/apple-pay-launch-india-next-072444839.html",
       "source": "Electronic Payments",
@@ -10510,5 +10510,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 196,
   "earnings_window_count": 54,
-  "overlay_at": "2026-09-21T04:18:47.569536-04:00"
+  "overlay_at": "2026-09-21T04:18:55.645178-04:00"
 }

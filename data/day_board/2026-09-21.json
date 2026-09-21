@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T04:18:47.752618-04:00",
+  "generated_at": "2026-09-21T04:18:55.828133-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -87,7 +87,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 88439
+          "size": 88724
         },
         {
           "key": "digest_md",
@@ -96,7 +96,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11892
+          "size": 11847
         },
         {
           "key": "market_digest_json",
@@ -156,7 +156,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 88439
+          "size": 88724
         },
         {
           "key": "in_market_digest",
@@ -405,7 +405,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 88439
+          "size": 88724
         },
         {
           "key": "weather",
@@ -480,7 +480,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 88439
+          "size": 88724
         },
         {
           "key": "dossiers",
@@ -540,7 +540,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 88439
+          "size": 88724
         },
         {
           "key": "in_judge",
@@ -868,6 +868,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-21\nExport `finviz_2026-09-20.csv` \u00b7 11616 names \u00b7 generated 2026-09-21T04:18:47.569536-04:00"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-09-21",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-21T04:18:55.688146-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-21_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 269113,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-21_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 17324,
+          "preview": "# MAP HEAT \u2014 2026-09-21\nExport `finviz_2026-09-21.csv` \u00b7 11616 names \u00b7 generated 2026-09-21T04:18:55.645178-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-21\nExport `finviz_2026-09-21.csv` \u00b7 11616 names \u00b7 generated 2026-09-21T04:18:55.645178-04:00"
     }
   ],
   "href": {
