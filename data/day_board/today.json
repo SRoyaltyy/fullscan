@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T12:08:00.257956-04:00",
+  "generated_at": "2026-09-21T12:08:46.008497-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -157,24 +157,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "sector_board",
-      "title": "Sector board",
-      "date": "2026-09-21",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-21T04:50:05.404808-04:00",
-      "files": [
-        {
-          "path": "01_daily/sectors/2026-09-21/_board.json",
-          "ok": true,
-          "reason": "",
-          "size": 5243,
-          "preview": "keys: date, generated_at, sectors"
-        }
-      ],
-      "preview": "keys: date, generated_at, sectors"
-    },
     {
       "key": "map_heat_research",
       "title": "Map heat morning delta refresh",
@@ -423,6 +405,115 @@
       "ok": true,
       "pushed": true,
       "at": "2026-09-21T12:07:59.188418-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 20325,
+          "preview": "2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 647,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-21.json",
+          "ok": true,
+          "reason": "",
+          "size": 85561,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-21_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 48556,
+          "preview": "2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 768237,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-21_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 768237,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1109291,
+          "preview": "2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 768237,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 48556,
+          "preview": "2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 768237,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 768237,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1109291,
+          "preview": "2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 2842,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 2842,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, sess"
+    },
+    {
+      "key": "live_boards",
+      "title": "live_boards",
+      "date": "2026-09-21",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-21T12:08:45.178840-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
