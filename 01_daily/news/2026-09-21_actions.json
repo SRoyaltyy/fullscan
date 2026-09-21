@@ -1216,5 +1216,7 @@
   "judge_tickers": {
     "XLE": -8.0,
     "BAC": -5.5
-  }
+  },
+  "catalyst_tickers": 0,
+  "catalyst_date": "2026-09-21"
 }

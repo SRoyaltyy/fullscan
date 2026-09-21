@@ -1,149 +1,82 @@
-# News Judge — 2026-09-18
+# News Judge — 2026-09-21
 
 ### IMPORTANT NEWS (my ranking)
+Mechanical usable is thin (6) and internally contradictory on gold; Finviz index/ticker digest is the spine.
 
-1. **Warsh Jackson Hole comments lift September US rate-hike odds** (gold −3% is the symptom, not the object)
-   - Why: Chair-level path repricing is the only item that can move SPX duration/beta for this session and the next 1–5; everything else is downstream.
-   - Channel: rates
+1. **Dow’s worst week in six months on elevated yields and oil** — Already the index-level risk-appetite print (DIA/SPX beta), not a ticker anecdote. Channel: risk
+2. **Warsh Jackson Hole comments lift September hike odds; gold −3%** — Live Fed-path repricing that dominates duration, gold, and equity multiples. Channel: rates
+3. **Rising bond yields keeping pressure on small-caps / IWM** — Crowded duration/beta sleeve; yields are the transmission, not a color story. Channel: rates
+4. **Surprise US crude inventory build + hike path drive E&P lower (DVN −5.6%)** — Session energy-factor hit; inventory + policy, not a single-name miss. Channel: sector_fundamental
+5. **ASML nearly sold out of 2027 EUV on AI demand (JPM)** — AI-capex/semi supply tightness with SMH/SOXX force. Channel: sector_fundamental
+6. **AI data-center/optics bid (FIX +11% backlog; LITE +8.5% ECOC)** — Infra basket confirmation under the same AI-spend theme. Channel: sector_fundamental
+7. **APH −6.5% on Fabrinet weakness and rising yields** — Hardware/connector complex showing yields can overpower AI-adjacent demand. Channel: substitution
 
-2. **Rising yields keep IWM in the crosshairs; BNY lifts prime rate +25 bp to 7.00%**
-   - Why: Same hawkish spine, expressed in financial conditions and the crowded small-cap sleeve — not a second independent macro shock.
-   - Channel: rates
-
-3. **Oil drop allays inflation concerns; surprise crude inventory build slams E&Ps (DVN −5.6%)**
-   - Why: Digest already tied cheaper oil to a higher index close, while the inventory print is a live XLE hit — splits SPX vs energy.
-   - Channel: risk
-
-4. **ASML nearly sold out of 2027 EUV on very strong AI-driven demand (JPMorgan)**
-   - Why: Highest-signal AI-capex fundamental in the set; moves SMH/SOXX/NQ more than any single-name optics or connector print.
-   - Channel: sector_fundamental
-
-5. **BAC CEO soft Q3 outlook drives a ~5% plunge**
-   - Why: Largest-US-bank guidance is XLF/KBE force, not BAC-only color.
-   - Channel: sector_fundamental
-
-6. **Copper retreats from record highs on US refined-copper tariff uncertainty**
-   - Why: Policy + price reversal in a cyclical input with XLB/miner-basket reach (BHP digest + noise copper complex).
-   - Channel: sector_policy
-
-7. **AI-infra tape splits: FIX data-center backlog and Lumentum optics bid vs APH −6.5% on Fabrinet weakness + yields**
-   - Why: Stops “AI demand” from being counted as one-way bullish across the hardware stack.
-   - Channel: sector_fundamental
-
----
-
-RULES_APPLIED: none
-No WHEN matched: no pending CPI/NFP/FOMC binary, no fresh Hormuz/Iran kinetic oil shock (oil is down), no same-morning unresolved Chair appearance to zero, no mega-cap AHR-vs-macro-drag pattern.
+RULES_APPLIED: none (no pending CPI/NFP/FOMC binary, no same-open unresolved Chair/Governor appearance, no fresh kinetic oil increment, no overnight mega-cap AHR vs macro-drag pattern).
 
 ### STEP 1 — FRAMEWORK SCORE
-
-1. Warsh JH hike-odds (gold −3% symptom)
-   - keep | us_relevance: high — Chair comments moving September hike odds are core US rates
-   - channel: rates | geography: us_domestic | severity: regime | horizon: 1d-1w
-   - action_object: spx | action_object_detail: SPX beta / duration
-   - polarity: hawkish | polarity_why: higher near-term hike odds tighten conditions and compress multiples
-   - confidence: 0.76
-
-2. Rising yields / IWM watch + BNY prime +25 bp to 7.00%
-   - keep | us_relevance: high — domestic financial-conditions confirmation into small-caps
-   - channel: rates | geography: us_domestic | severity: session | horizon: 1d-1w
-   - action_object: sector_etf | action_object_detail: IWM
-   - polarity: bearish | polarity_why: yield backup hits small-cap and high-duration sleeves
-   - confidence: 0.70
-
-3. Oil down / surprise crude build / DVN −5.6%
-   - keep | us_relevance: high — inflation optics for SPX plus a direct energy-ETF hit
-   - channel: risk | geography: us_domestic | severity: session | horizon: 1d
-   - action_object: sector_etf | action_object_detail: XLE (SPX via disinflation)
-   - polarity: mixed | polarity_why: cheaper oil eases inflation optics while crushing E&P beta
-   - confidence: 0.72
-
-4. ASML 2027 EUV sold out on AI demand
-   - keep | us_relevance: high — AI capex/semis are NQ/SPX core even though ASML is foreign-listed
-   - channel: sector_fundamental | geography: us_supply_chain | severity: session | horizon: 1w-1m
-   - action_object: sector_etf | action_object_detail: SMH/SOXX
-   - polarity: bullish | polarity_why: sold-out 2027 EUV is a multi-year tightness signal for the AI-semi complex
-   - confidence: 0.78
-
-5. BAC CEO soft Q3 outlook
-   - keep | us_relevance: high — money-center guidance transmits to the bank complex
-   - channel: sector_fundamental | geography: us_domestic | severity: session | horizon: 1d-1w
-   - action_object: sector_etf | action_object_detail: XLF/KBE
-   - polarity: bearish | polarity_why: soft Q3 from BAC is an NII/earnings signal for US banks, not a ticker blip
-   - confidence: 0.70
-
-6. Copper off records on US refined-copper tariff uncertainty
-   - keep | us_relevance: medium — US tariff path plus cyclical metals, not SPX-beta primary
-   - channel: sector_policy | geography: us_supply_chain | severity: session | horizon: 1d-1w
-   - action_object: sector_etf | action_object_detail: XLB / copper-miner basket
-   - polarity: bearish | polarity_why: tariff uncertainty and a break from record copper prices hit miners and industrial-input sentiment
-   - confidence: 0.65
-
-7. FIX/LITE AI-infra bid vs APH/Fabrinet + yields
-   - conditional | us_relevance: high — AI hardware is NQ-relevant but internally two-sided
-   - channel: sector_fundamental | geography: us_domestic | severity: session | horizon: 1d-1w
-   - action_object: basket | action_object_detail: AI-infra / optical / connectors
-   - polarity: mixed | polarity_why: data-center/optics demand is still bid while yield-sensitive connectors and Fabrinet weakness cut the tape
-   - confidence: 0.62
+1. Dow worst week / yields + oil — **keep** | us_relevance: **high** (index week-loss is SPX/DIA beta) | channel: **risk** | geography: **us_domestic** | severity: **session** | horizon: **1d-1w** | action_object: **spx** | action_object_detail: SPX beta / DIA | polarity: **bearish** | polarity_why: Elevated yields plus oil already delivered the worst Dow week in six months. | confidence: **0.76**
+2. Warsh JH → September hike odds / gold −3% — **keep** | us_relevance: **high** (Chair path into a September hike) | channel: **rates** | geography: **us_domestic** | severity: **session** | horizon: **1d-1w** | action_object: **spx** | action_object_detail: SPX duration / real-rate beta | polarity: **hawkish** | polarity_why: Hike-odds up and gold down is a tightening impulse, not a cut-bet. | confidence: **0.82**
+3. Yields vs IWM/small-caps — **keep** | us_relevance: **high** (IWM is the crowded rates-sensitive sleeve) | channel: **rates** | geography: **us_domestic** | severity: **session** | horizon: **1d-1w** | action_object: **sector_etf** | action_object_detail: IWM | polarity: **bearish** | polarity_why: Rising yields historically hit small-cap duration/beta first. | confidence: **0.74**
+4. Crude inventory build + hike → DVN/XLE — **keep** | us_relevance: **medium** (energy factor; not enough alone to swing SPX) | channel: **sector_fundamental** | geography: **us_domestic** | severity: **session** | horizon: **1d** | action_object: **sector_etf** | action_object_detail: XLE | polarity: **bearish** | polarity_why: Surprise build plus a hike path is a near-term E&P demand/price hit. | confidence: **0.70**
+5. ASML 2027 EUV sold out on AI — **keep** | us_relevance: **high** (AI capex bottleneck into US semi complex) | channel: **sector_fundamental** | geography: **us_supply_chain** | severity: **session** | horizon: **1w-1m** | action_object: **sector_etf** | action_object_detail: SMH | polarity: **bullish** | polarity_why: Sold-out EUV is a multi-quarter AI-wafer demand confirmation. | confidence: **0.68**
+6. FIX/LITE AI data-center/optics — **conditional** | us_relevance: **medium** (basket, not Mag7) | channel: **sector_fundamental** | geography: **us_domestic** | severity: **session** | horizon: **1d-1w** | action_object: **basket** | action_object_detail: AI infra / electrical equipment / optical | polarity: **bullish** | polarity_why: Backlog and optics showcase confirm spend, but names are not index-wide. | confidence: **0.62**
+7. APH drop on Fabrinet + yields — **conditional** | us_relevance: **medium** (hardware factor, yields overlay) | channel: **substitution** | geography: **us_supply_chain** | severity: **session** | horizon: **1d** | action_object: **basket** | action_object_detail: connectors / EMS / AI-hardware | polarity: **bearish** | polarity_why: Weak EMS print plus higher yields is a hardware de-rate, not an ASML cancel. | confidence: **0.60**
 
 ### STEP 2 — INTERACTIONS
-
-- Warsh hike-odds + rising yields + IWM/BNY prime = **one hawkish rates cluster** — do not stack B1/B3 twice.
-- Oil-down disinflation + hawkish Warsh path → **do not buy duration/software on oil-allays-inflation hope** (analog of SaaS-on-dovish-rates).
-- ASML/FIX/LITE AI demand + APH/Fabrinet weakness + rising yields → **semis/AI-infra mixed; do not double-count AI as uniform bid**.
+- **Fed path + elevated yields + IWM** → treat as ONE rates cluster; do not buy small-caps/cyclicals on leftover gold-cut-bet tape.
+- **ASML AI/EUV demand + APH/Fabrinet/yields hit** → semis/AI mixed; do not double-count AI as a broad tech bid.
+- **Dow “elevated oil” risk-off + crude inventory build** → do not long XLE as an oil-spike hedge; inventory is the energy-factor print.
+- SaaS compression + weak labor: none. AI power + wind cancel: none. Yields-down + cyclicals risk-on: none (yields are up).
 
 ### STEP 3 — RECLASSIFY AUDIT
+**DROP from usable**
+- Gold surge on Fed cut bets lifts Barrick +8.21% — stale/contradictory vs Warsh hike-odds gold slide; do not run a second dovish cluster.
+- Duke Energy Florida files to lower 2027 rates — single-utility filing, not XLU/sector_policy.
+- Amgen IMDELLTRA monitoring-label update — commercial convenience, no healthcare-basket force.
 
-DROPPED_FROM_USABLE:
-- Duke Energy Florida customer-rate filing — local utility admin, no SPX/sector-ETF force
-- ECB “another rate hike, just for insurance” — Europe color, foreign_weak_link
-- Amgen IMDELLTRA monitoring-label tweak — single-name commercial, no healthcare-basket force
-- Gold surge on Fed **rate-cut** bets / Barrick +8.21% — contradicts the live Warsh hike-odds gold-slide tape; would score gold both ways
-- IBM/Anderon $1B CHIPS Act quantum foundry — policy color, too small vs ASML AI demand for session beta
+**RESCUE from noise / Finviz digest**
+- Dow worst week in six months amid elevated yields, oil — index risk narrative the parser tagged noise.
+- Investors worried about rising bond yields / IWM corner — duration transmission into small-caps.
+- Zacks/AI data-center backlog drives FIX +11% — AI-infra factor, not ticker gossip.
+- ECOC AI optics showcase drives Lumentum +8.5% — same infra/optics basket.
+- APH −6.5% Fabrinet + yields (digest) — hardware substitution vs ASML demand.
 
-RESCUED_FROM_NOISE:
-- U.S.-listed copper miners fall as copper retreats from records — materials sector_policy, matches BHP digest
-- FIX +11% on AI data-center backlog — AI-infra sector_fundamental
-- Lumentum +8.5% on ECOC AI optics — optical/AI-infra sector_fundamental
-- Gold miners rally on softer dollar/easing oil — **conditional only** as the other side of a two-sided gold tape; not a separate SPX driver
-
-Not rescued (stay single_name/noise): Aon 20% drawdown, BCS UK buyback, GFL PE bidding war, CAH CEO sale, PYPL takeover-bid collapse, GSK ARROS-1 (niche ROS1, not sector-sympathy Phase 3).
+Left as noise/single_name: SPX open-up-or-down clickbait; CAH CEO sale; PYPL takeover-break; AJG bolt-on; GSK ARROS-1 (large-cap but single-name trial); biotech-week-ahead calendar (watch, not a session driver). IBM $1B CHIPS quantum award stays off the ranking (policy color, not SPX/session).
 
 ### STEP 4 — B1 / SECTOR INJECT
-
-NEWS_JUDGE: n=7 rescued=3
-MACRO rates: [hawkish] Warsh JH lifts September hike odds; yields up, BNY prime +25bp (regime/1d-1w)
-MACRO risk: [mixed] Oil drop/inventory eases inflation optics but is not a dovish-Fed substitute (session/1d)
-SECTOR energy: [bearish] Surprise crude build + lower oil hit E&P beta (XLE)
-SECTOR semis: [bullish] ASML 2027 EUV sold out on AI demand (SMH/SOXX)
-SECTOR banks: [bearish] BAC CEO soft Q3 outlook (XLF/KBE)
-SECTOR materials: [bearish] Copper off records on US refined-copper tariff uncertainty (XLB/miners)
-SECTOR ai_infra: [mixed] FIX/LITE data-center/optics bid vs APH/Fabrinet + yields (AI-infra basket)
-INTERACTION: One hawkish rates cluster; do not buy duration on oil-disinflation; AI demand ≠ uniform semi bid
-WATCH: Mechanical gold is two-sided (cut-bets rally vs Warsh slide); treat gold as rates symptom not a driver
+NEWS_JUDGE: n=7 rescued=5
+MACRO rates: [hawkish] Warsh JH boosts September hike odds; gold −3% (session/1d-1w)
+MACRO risk: [bearish] Dow worst week in six months on yields + oil (session)
+SECTOR small_caps: [bearish] rising yields pressure IWM duration/beta (IWM)
+SECTOR energy: [bearish] surprise crude build + hike path; DVN −5.6% (XLE)
+SECTOR semis: [bullish] ASML 2027 EUV nearly sold out on AI demand (SMH)
+SECTOR ai_infra: [bullish] FIX backlog + LITE optics bid (AI-infra basket)
+SECTOR hardware: [bearish] APH/Fabrinet weakness with yields overlay (connectors/EMS)
+INTERACTION: hike-odds+yields+IWM=one rates cluster; ASML vs APH=mixed tech not broad bid; do not long XLE on Dow-oil while inventories build
+WATCH: usable set thin and gold-contradictory; ignore Barrick cut-bet tape
 
 NEWS_PARSE_BEGIN
 IMPORTANT_COUNT: 7
 TOP_ITEMS:
-- Warsh Jackson Hole comments lift September US rate-hike odds | keep=keep | channel=rates | severity=regime | horizon=1d-1w | object=spx:SPX beta / duration | pol=hawkish | conf=0.76
-- Rising yields pressure IWM; BNY prime rate +25bp to 7.00% | keep=keep | channel=rates | severity=session | horizon=1d-1w | object=sector_etf:IWM | pol=bearish | conf=0.70
-- Oil drop allays inflation; surprise crude build slams E&Ps (DVN) | keep=keep | channel=risk | severity=session | horizon=1d | object=sector_etf:XLE | pol=mixed | conf=0.72
-- ASML nearly sold out of 2027 EUV on AI-driven demand | keep=keep | channel=sector_fundamental | severity=session | horizon=1w-1m | object=sector_etf:SMH/SOXX | pol=bullish | conf=0.78
-- BAC CEO soft Q3 outlook drives 5% plunge | keep=keep | channel=sector_fundamental | severity=session | horizon=1d-1w | object=sector_etf:XLF/KBE | pol=bearish | conf=0.70
-- Copper retreats from records on US refined-copper tariff uncertainty | keep=keep | channel=sector_policy | severity=session | horizon=1d-1w | object=sector_etf:XLB / copper-miner basket | pol=bearish | conf=0.65
-- AI-infra split: FIX/Lumentum bid vs APH drop on Fabrinet/yields | keep=conditional | channel=sector_fundamental | severity=session | horizon=1d-1w | object=basket:AI-infra / optical / connectors | pol=mixed | conf=0.62
-INTERACTIONS: Warsh hike-odds + rising yields + IWM/BNY prime = one hawkish rates cluster; oil-down disinflation + hawkish Warsh = do not buy duration/software on inflation-allayed hope; ASML/FIX/LITE AI demand + APH/Fabrinet/yields = semis/AI-infra mixed do not double-count
-RESCUED_FROM_NOISE: U.S.-Listed Copper Mining Stocks Fall as Copper Retreats From Record High; Zacks Strong Buy upgrade and AI data center backlog drive 11% FIX surge; ECOC 2026 AI optics showcase drives Lumentum's 8.5% surge; Gold miners rally as bullion rebounds on softer dollar, easing oil prices
-DROPPED_FROM_USABLE: Duke Energy's Florida subsidiary files to lower customer rates from January 2027; Another rate hike, just for insurance: Five questions for the ECB; Amgen gets FDA approval to update IMDELLTRA label to reduce monitoring for first two ES-SCLC doses; Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%; IBM unit Anderon finalizes $1B U.S. CHIPS Act award to fund scaling of U.S. quantum wafer foundry
+- Dow worst week in six months on elevated yields and oil | keep=keep | channel=risk | severity=session | horizon=1d-1w | object=spx:SPX beta/DIA | pol=bearish | conf=0.76
+- Warsh Jackson Hole comments lift September hike odds; gold -3% | keep=keep | channel=rates | severity=session | horizon=1d-1w | object=spx:duration/real-rate beta | pol=hawkish | conf=0.82
+- Rising bond yields pressure small-caps/IWM | keep=keep | channel=rates | severity=session | horizon=1d-1w | object=sector_etf:IWM | pol=bearish | conf=0.74
+- Surprise US crude inventory build and hike path hit E&P (DVN -5.6%) | keep=keep | channel=sector_fundamental | severity=session | horizon=1d | object=sector_etf:XLE | pol=bearish | conf=0.70
+- ASML nearly sold out of 2027 EUV on AI demand | keep=keep | channel=sector_fundamental | severity=session | horizon=1w-1m | object=sector_etf:SMH | pol=bullish | conf=0.68
+- AI data-center/optics bid (FIX +11%, LITE +8.5%) | keep=conditional | channel=sector_fundamental | severity=session | horizon=1d-1w | object=basket:AI infra/electrical/optical | pol=bullish | conf=0.62
+- APH -6.5% on Fabrinet weakness and rising yields | keep=conditional | channel=substitution | severity=session | horizon=1d | object=basket:connectors/EMS/AI-hardware | pol=bearish | conf=0.60
+INTERACTIONS: Fed path + elevated yields + IWM = one hawkish rates cluster (ignore Barrick gold-cut-bet tape); ASML EUV AI demand + APH/Fabrinet/yields = mixed semis/hardware do not double-count AI as broad tech bid; Dow elevated-oil risk-off + crude inventory build = do not long XLE as oil hedge
+RESCUED_FROM_NOISE: Dow Drops To Record Worst Week In Six Months Amid Elevated Yields, Oil; Investors worried about rising bond yields are keeping a close eye on this corner of the market; Zacks Strong Buy upgrade and AI data center backlog drive 11% FIX surge; ECOC 2026 AI optics showcase drives Lumentum's 8.5% surge; APH drop on Fabrinet earnings weakness and rising yields
+DROPPED_FROM_USABLE: Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%; Duke Energy's Florida subsidiary files to lower customer rates from January 2027; Amgen gets FDA approval to update IMDELLTRA label to reduce monitoring for first two ES-SCLC doses
 B1_INJECT:
-NEWS_JUDGE: n=7 rescued=3
-MACRO rates: [hawkish] Warsh JH lifts September hike odds; yields up, BNY prime +25bp (regime/1d-1w)
-MACRO risk: [mixed] Oil drop/inventory eases inflation optics but is not a dovish-Fed substitute (session/1d)
-SECTOR energy: [bearish] Surprise crude build + lower oil hit E&P beta (XLE)
-SECTOR semis: [bullish] ASML 2027 EUV sold out on AI demand (SMH/SOXX)
-SECTOR banks: [bearish] BAC CEO soft Q3 outlook (XLF/KBE)
-SECTOR materials: [bearish] Copper off records on US refined-copper tariff uncertainty (XLB/miners)
-SECTOR ai_infra: [mixed] FIX/LITE data-center/optics bid vs APH/Fabrinet + yields (AI-infra basket)
-INTERACTION: One hawkish rates cluster; do not buy duration on oil-disinflation; AI demand ≠ uniform semi bid
-WATCH: Mechanical gold is two-sided (cut-bets rally vs Warsh slide); treat gold as rates symptom not a driver
+NEWS_JUDGE: n=7 rescued=5
+MACRO rates: [hawkish] Warsh JH boosts September hike odds; gold −3% (session/1d-1w)
+MACRO risk: [bearish] Dow worst week in six months on yields + oil (session)
+SECTOR small_caps: [bearish] rising yields pressure IWM duration/beta (IWM)
+SECTOR energy: [bearish] surprise crude build + hike path; DVN −5.6% (XLE)
+SECTOR semis: [bullish] ASML 2027 EUV nearly sold out on AI demand (SMH)
+SECTOR ai_infra: [bullish] FIX backlog + LITE optics bid (AI-infra basket)
+SECTOR hardware: [bearish] APH/Fabrinet weakness with yields overlay (connectors/EMS)
+INTERACTION: hike-odds+yields+IWM=one rates cluster; ASML vs APH=mixed tech not broad bid; do not long XLE on Dow-oil while inventories build
+WATCH: usable set thin and gold-contradictory; ignore Barrick cut-bet tape
 NEWS_PARSE_END
