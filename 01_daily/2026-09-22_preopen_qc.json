@@ -1,6 +1,6 @@
 {
   "date": "2026-09-22",
-  "generated_at": "2026-09-22T05:57:24.108724-04:00",
+  "generated_at": "2026-09-22T06:05:18.600067-04:00",
   "items": [
     {
       "ok": true,
@@ -168,14 +168,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-22/energy_predict.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 19350,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
@@ -272,9 +272,9 @@
     },
     {
       "sector": "Energy",
-      "ok": false,
-      "reason": "missing",
-      "size": 0
+      "ok": true,
+      "reason": "",
+      "size": 19350
     },
     {
       "sector": "Financial",
@@ -313,7 +313,7 @@
       "size": 0
     }
   ],
-  "sector_n_ok": 4,
+  "sector_n_ok": 5,
   "sector_n_total": 11,
   "all_ok": false
 }
