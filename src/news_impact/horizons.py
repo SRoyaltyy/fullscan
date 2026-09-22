@@ -1,24 +1,28 @@
-"""Horizon-by-class defaults. Tested windows, not a new taxonomy.
+"""Horizon-by-class defaults. Product windows are 1-4w and 1-6m.
 
-0-1d: inventory print, hard CPI/NFP surprise, tariff imposed, same-day blast_ops.
-1-4w: guidance cut/raise (not reaffirm), print_vs_priced leftover, blast_cyber.
-1-6m: gate / capacity / CHIPS / trial_readout.
+Eligibility clock = published before that session 09:30 ET (+30m leeway).
+Capture/retrieved time is metadata, not the entry.
 
-A 6m event is never a 0-1d miss. Window grid is printed per class when tape exists.
+0-1d is a footnote: inventory print, hard CPI/NFP/tariff, same-day blast_ops.
+1-4w: guidance cut/raise (not reaffirm), print_vs_priced, blast_cyber, blast_legal.
+1-6m: gate / capacity / CHIPS / trial_readout / market_structure.
+
+A 6m event is never a 0-1d miss.
 """
 from __future__ import annotations
 
 import re
 from typing import Any
 
-# Explicit class → natural window. Unlisted classes keep the family assignment.
 CLASS_HORIZON = {
     "inventory_print": "0-1d",
     "blast_ops": "0-1d",
-    "factor_impulse": "0-1d",  # hard print / tariff; weather already q5=regime
+    "factor_impulse": "0-1d",
     "guidance": "1-4w",
     "print_vs_priced": "1-4w",
     "blast_cyber": "1-4w",
+    "blast_legal": "1-4w",
+    "market_structure": "1-6m",
     "gate": "1-6m",
     "capacity": "1-6m",
     "trial_readout": "1-6m",
@@ -38,9 +42,7 @@ def default_horizon(
     title: str = "",
     sign: str | None = None,
 ) -> str | None:
-    """Natural window for this class, or None to keep the family assignment."""
     ev = str(event_class or "")
-    # Reaffirm stays ungraded via sign/direction; the class window is still 1-4w.
     if ev == "gate" or _CHIPS.search(str(title or "")):
         return "1-6m"
     if ev == "factor_impulse" and not _HARD_MACRO.search(str(title or "")):
@@ -63,11 +65,6 @@ def apply_class_horizons(entities: list, event_class: str,
 
 def skips_short_window(event_class: str, title: str = "",
                        sign: str | None = None, horizon: str = "") -> bool:
-    """Do not grade 0-1d as a miss when the *class* natural window is longer.
-
-    Family-assigned horizons (e.g. input_cost 1-4w) do not skip 0-1d unless
-    the class is in CLASS_HORIZON / the A list (gate, capacity, blast_cyber).
-    """
     hz = default_horizon(event_class, title, sign)
     if hz:
         return hz in {"1-4w", "1-6m", "6m+"}
@@ -75,10 +72,6 @@ def skips_short_window(event_class: str, title: str = "",
 
 
 def window_grid(results: list[dict]) -> dict[str, dict[str, Any]]:
-    """Per-class hit grid at 0-1d / 1-4w / 1-6m when tape exists.
-
-    Long-horizon classes are omitted from the 0-1d column (not counted as misses).
-    """
     from .grade import is_gradeable, ungraded_reason
 
     bag: dict[str, dict[str, Any]] = {}
