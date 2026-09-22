@@ -1,11 +1,16 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T06:53:47.407372-04:00",
-  "all_ok": true,
+  "generated_at": "2026-09-22T02:08:02.154464-04:00",
+  "all_ok": false,
   "qc_all_ok": true,
   "book_ok": true,
-  "grok_ok": true,
-  "grok_fails": [],
+  "grok_ok": false,
+  "grok_fails": [
+    {
+      "path": "(review)",
+      "reason": "empty_review_reply"
+    }
+  ],
   "missing_required": [],
   "attempts": [
     {
@@ -172,7 +177,7 @@
         "ok": true,
         "reason": "",
         "path": "01_daily/news/2026-09-21_finviz_digest.json",
-        "size": 88999
+        "size": 87419
       },
       {
         "kind": "finviz_market_digest",
@@ -183,10 +188,10 @@
       },
       {
         "kind": "finviz_market_digest",
-        "ok": false,
-        "reason": "missing",
+        "ok": true,
+        "reason": "",
         "path": "01_daily/news/2026-09-21_finviz_market_digest_close.json",
-        "size": 0
+        "size": 9167
       },
       {
         "kind": "map_heat",

@@ -1,6 +1,6 @@
 {
   "date": "2026-09-21",
-  "generated_at": "2026-09-21T16:37:57.449584-04:00",
+  "generated_at": "2026-09-22T02:08:03.165141-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -94,12 +94,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 88999,
-          "said": "5875 tickers \u00b7 2318 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
+          "size": 87419,
+          "said": "5876 tickers \u00b7 2276 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
             "AMETEK Completes Acquisition of Indicor Instrumentation",
-            "What Would It Take For Eli Lilly Stock To Keep Climbing?"
+            "Novo Nordisk shares plunge over 7% as new targets fail to reassure investors"
           ]
         },
         {
@@ -109,10 +109,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11966,
+          "size": 11445,
           "said": "Finviz Daily Digest \u2014 2026-09-21",
           "bullets": [
-            "_Generated 2026-09-21T06:53:43.347646-04:00 \u00b7 export=data/exports/finviz_2026-09-21.csv \u00b7 ticker digests=5875 \u00b7 high-signal=2318_",
+            "_Generated 2026-09-22T02:08:01.784301-04:00 \u00b7 export=data/exports/finviz_2026-09-21.csv \u00b7 ticker digests=5876 \u00b7 high-signal=2276_",
             "Major indices (live quote page)"
           ]
         },
@@ -167,11 +167,11 @@
           ]
         }
       ],
-      "said": "5875 tickers \u00b7 2318 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
+      "said": "5876 tickers \u00b7 2276 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
       "bullets": [
         "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
         "AMETEK Completes Acquisition of Indicor Instrumentation",
-        "What Would It Take For Eli Lilly Stock To Keep Climbing?"
+        "Novo Nordisk shares plunge over 7% as new targets fail to reassure investors"
       ]
     },
     {
@@ -192,12 +192,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 88999,
-          "said": "5875 tickers \u00b7 2318 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
+          "size": 87419,
+          "said": "5876 tickers \u00b7 2276 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
             "AMETEK Completes Acquisition of Indicor Instrumentation",
-            "What Would It Take For Eli Lilly Stock To Keep Climbing?"
+            "Novo Nordisk shares plunge over 7% as new targets fail to reassure investors"
           ]
         },
         {
@@ -362,11 +362,9 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=True",
-          "size": 7187,
-          "said": "all_ok=True \u00b7 sectors 11/11 \u00b7 1 fail",
-          "bullets": [
-            "finviz_market_digest:missing"
-          ]
+          "size": 7183,
+          "said": "all_ok=True \u00b7 sectors 11/11 \u00b7 no fails",
+          "bullets": []
         },
         {
           "key": "status",
@@ -374,9 +372,9 @@
           "path": "01_daily/2026-09-21_preopen_status.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=True",
-          "size": 6829,
-          "said": "all_ok=True \u00b7 qc=True \u00b7 grok=True \u00b7 book=True",
+          "reason": "all_ok=False",
+          "size": 6904,
+          "said": "all_ok=False \u00b7 qc=True \u00b7 grok=False \u00b7 book=True",
           "bullets": []
         },
         {
@@ -385,11 +383,11 @@
           "path": "01_daily/2026-09-21_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=True All required core artifacts are present, same-day (2026-09-21), complete, and human-usable: general predict takes a clea",
-          "size": 1009,
-          "said": "ok=True \u00b7 All required core artifacts are present, same-day (2026-09-21), complete, and human-usable: general predict takes a clear UP/notable direction with MEMORY_CONFI",
+          "reason": "ok=False Grok returned an empty review",
+          "size": 309,
+          "said": "ok=False \u00b7 empty_review_reply (review)",
           "bullets": [
-            "All required core artifacts are present, same-day (2026-09-21), complete, and human-usable: general predict takes a clear UP/notable direction with MEMORY_CONFIRM and full factor scan; events JSON is a real 2026-09-21 scan (scan_date matches, no carry-forward); news judge and news parse carry the required NEWS_PARSE_BEGIN/END markers with real ranked items; finviz digest and map-heat tables are populated with a live futures tape (ES/NQ/CL/GC etc., not empty); 11/11 sector essays are distinct, non-copy-paste, and each takes a direction. The map_heat_research file is phase=morning_refresh (size_gate=True) and its SYNTHESIS explicitly states the morning delta refresh failed captain-evidence QC (coverage 0/27<22) and fell back to last night's post-close cards \u2014 this is a noted degradation, not"
+            "Grok returned an empty review"
           ]
         },
         {
@@ -568,12 +566,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 88999,
-          "said": "5875 tickers \u00b7 2318 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
+          "size": 87419,
+          "said": "5876 tickers \u00b7 2276 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
             "AMETEK Completes Acquisition of Indicor Instrumentation",
-            "What Would It Take For Eli Lilly Stock To Keep Climbing?"
+            "Novo Nordisk shares plunge over 7% as new targets fail to reassure investors"
           ]
         },
         {
@@ -674,12 +672,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 88999,
-          "said": "5875 tickers \u00b7 2318 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
+          "size": 87419,
+          "said": "5876 tickers \u00b7 2276 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
             "AMETEK Completes Acquisition of Indicor Instrumentation",
-            "What Would It Take For Eli Lilly Stock To Keep Climbing?"
+            "Novo Nordisk shares plunge over 7% as new targets fail to reassure investors"
           ]
         },
         {
@@ -777,12 +775,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 88999,
-          "said": "5875 tickers \u00b7 2318 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
+          "size": 87419,
+          "said": "5876 tickers \u00b7 2276 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
             "AMETEK Completes Acquisition of Indicor Instrumentation",
-            "What Would It Take For Eli Lilly Stock To Keep Climbing?"
+            "Novo Nordisk shares plunge over 7% as new targets fail to reassure investors"
           ]
         },
         {
@@ -874,7 +872,7 @@
           "size": 68070,
           "said": "Stock book \u2014 2026-09-21",
           "bullets": [
-            "_Generated 2026-09-21T16:22:09.260139-04:00_",
+            "_Generated 2026-09-21T17:54:34.803219-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -2138,6 +2136,45 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-21\n**Generated:** 2026-09-21T16:37:56.316721-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks rallied as easing oil prices and lower Treasury yields lifted risk assets and AI optimism boosted tech ahead of the Trump\u2013Xi summit\n**Prior close:** SPX +1.49%  Nasdaq +2.26%  Dow +0.72%\n**SPX:** +1.49%  **Nasdaq:** +2.26%  **Dow:** +0.72%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** META, AMD, INTC, ARM, ACN, CRML, WBD, PSKY, NVO, EBF, ABVX, ANAB\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** EBF, ABVX, ANAB\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-22\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-21",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-22T02:08:02.187646-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-21_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 87419,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-21_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11464,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-21\n_Generated 2026-09-22T02:08:01.784301-04:00 \u00b7 export=data/exports/finviz_2026-09-21.csv \u00b7 ticker digests=5876 \u00b7 high-signal=2276_"
+        },
+        {
+          "path": "data/exports/finviz_2026-09-21.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11414929,
+          "preview": "11643 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11414929,
+          "preview": "11643 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-21\n_Generated 2026-09-22T02:08:01.784301-04:00 \u00b7 export=data/exports/finviz_2026-09-21.csv \u00b7 ticker digests=5876 \u00b7 high-signal=2276_ \u00b7 11643 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 11643 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
