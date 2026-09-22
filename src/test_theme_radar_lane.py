@@ -127,7 +127,7 @@ class LaneTierTests(unittest.TestCase):
         lane = _row(
             "a", "ACME", "Acme beats", "2026-08-06 08:00:00",
             direction="down", ret=4.0,
-            lane="siliconflow", model="Qwen/Qwen3-8B", source="siliconflow",
+            lane="siliconflow", model="THUDM/GLM-Z1-9B-0414", source="siliconflow",
         )
         lane = attach_tape(det, lane, fetch=False)
         report = build_report(
@@ -146,12 +146,27 @@ class LaneTierTests(unittest.TestCase):
         self.assertEqual(strict["det"]["hits"], 1)
         self.assertEqual(strict["lane"]["hits"], 0)
         self.assertEqual(report["n_lane_ok"], 1)
-        self.assertEqual(report["hop_histogram"], {"siliconflow::Qwen/Qwen3-8B": 1})
-        self.assertIn("siliconflow::Qwen/Qwen3-8B::siliconflow", report["watermark"])
+        self.assertEqual(report["hop_histogram"], {"siliconflow::THUDM/GLM-Z1-9B-0414": 1})
+        self.assertIn("siliconflow::THUDM/GLM-Z1-9B-0414::siliconflow", report["watermark"])
         text = markdown_report(report)
         self.assertIn("Lane-ok 1", text)
         self.assertIn("ZHIPU_API_KEY", text)
-        self.assertIn("siliconflow::Qwen/Qwen3-8B", text)
+        self.assertIn("siliconflow::THUDM/GLM-Z1-9B-0414", text)
+        paid = _row(
+            "p", "ACME", "t", "2026-08-06 08:00:00",
+            lane="deepseek", model="deepseek-chat", source="deepseek",
+        )
+        priced_sf = _row(
+            "s", "ACME", "t", "2026-08-06 08:00:00",
+            lane="siliconflow", model="Qwen/Qwen3-8B", source="siliconflow",
+        )
+        prior_qwen = _row(
+            "q", "ACME", "t", "2026-08-06 08:00:00",
+            lane="qwen", model="qwen-flash", source="qwen",
+        )
+        self.assertFalse(is_lane_ok(paid))
+        self.assertFalse(is_lane_ok(priced_sf))
+        self.assertTrue(is_lane_ok(prior_qwen))
         self.assertNotIn("super-secret", text)
 
         det_only = build_report(
@@ -180,16 +195,17 @@ class LaneTierTests(unittest.TestCase):
     def test_hop_order_never_old_flash(self) -> None:
         plan = hopper_plan("news_impact")
         names = [hop for hop, _models in plan]
-        self.assertEqual(names[:4], ["zhipu", "siliconflow", "openrouter", "qwen"])
+        self.assertEqual(names[:3], ["zhipu", "siliconflow", "openrouter"])
         by = dict(plan)
         self.assertEqual(by["zhipu"], ["glm-4.7-flash"])
-        self.assertEqual(names, ["zhipu", "siliconflow", "openrouter", "qwen"])
+        self.assertEqual(names, ["zhipu", "siliconflow", "openrouter"])
+        self.assertNotIn("qwen", names)
         self.assertEqual(by["siliconflow"][0], "THUDM/GLM-Z1-9B-0414")
         self.assertIn("deepseek-ai/DeepSeek-R1-Distill-Qwen-7B", by["siliconflow"])
         self.assertNotIn("Qwen/Qwen3-8B", by["siliconflow"])
         self.assertTrue(all(m == "openrouter/free" or str(m).endswith(":free") for m in by["openrouter"]))
-        self.assertEqual(by["qwen"], ["qwen-flash"])
         blob = " ".join(m for _h, models in plan for m in models)
+        self.assertNotIn("qwen-flash", blob)
         self.assertNotIn("glm-4-flash-250414", blob)
         self.assertNotIn("glm-4.5-flash", blob)
         self.assertNotIn("deepseek-chat", blob)

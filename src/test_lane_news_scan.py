@@ -61,7 +61,7 @@ def test_news_scan_current_flash_order():
     assert NEWS_SCAN_TEMPLATE == "news_to_tickers"
     assert news_scan_lanes() == lanes_for("news_to_tickers")
     assert news_scan_lanes()[:4] == NEWS_HEAD
-    assert NEWS_HEAD == ["zhipu", "siliconflow", "openrouter", "qwen"]
+    assert NEWS_HEAD == ["zhipu", "siliconflow", "openrouter"]
 
     plan = news_scan_hopper_plan()
     assert [hop for hop, _ in plan[:4]] == NEWS_HEAD
@@ -71,9 +71,12 @@ def test_news_scan_current_flash_order():
     assert news_scan_models("siliconflow")[0] == "THUDM/GLM-Z1-9B-0414"
     assert "Qwen/Qwen3-8B" not in news_scan_models("siliconflow")
     assert "deepseek" not in news_scan_lanes()
-    assert news_scan_models("qwen") == ["qwen-flash"]
-    assert news_scan_models("deepseek")[0] == "deepseek-flash"
-    th = news_scan_models("tokenhub")
+    assert news_scan_models("qwen") == []
+    assert "qwen" not in news_scan_lanes()
+    assert news_scan_models("deepseek") == []
+    assert news_scan_models("tokenhub") == []
+    from src.lane_route import primary_models_for
+    th = primary_models_for("tokenhub", "custom")
     assert th[0] == "glm-5.3-flash"
     assert "glm-5.3-flashx" in th
     assert "deepseek-v4-flash" in th

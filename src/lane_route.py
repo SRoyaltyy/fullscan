@@ -30,13 +30,13 @@ default (key_people / key_products / revenue_mix / custom):
   → SambaNova → Ollama → HF free → Groq last-resort → Gemini
 
 news_to_tickers + news_classify + news_impact + news sector scan
-(high volume, $0 only — never the default overflow):
+(high volume, strict free tier only):
   Zhipu glm-4.7-flash → SiliconFlow permanent-free
   (THUDM/GLM-Z1-9B-0414, deepseek-ai/DeepSeek-R1-Distill-Qwen-7B)
-  → OpenRouter :free → DashScope qwen-flash.
-  Does not continue into DeepSeek, TokenHub, Gemini, or any paid id.
-  Qwen/Qwen3-8B is priced on SiliconFlow and is not a news model.
-  deepseek-chat is paid and is banned from every primary hopper.
+  → OpenRouter :free.
+  DashScope qwen-flash is not called: the free grant is exhausted.
+  No DeepSeek, TokenHub, Gemini, Moonshot, or priced SiliconFlow id.
+  deepseek-chat is banned from every primary hopper.
 
 company_dig (longer context):
   SiliconFlow current Qwen / DeepSeek free non-Pro → native DeepSeek flash
@@ -206,9 +206,10 @@ DEFAULT_LANES = [
     "github_models", "cloudflare", "sambanova",
     "ollama", "hf", "groq", "gemini",
 ]
-# news_to_tickers + classify/impact + news sector scan: current flash first.
-# Zhipu glm-4.7-flash → SF Qwen3-8B → OR :free → DashScope qwen-flash.
-NEWS_HEAD = ["zhipu", "siliconflow", "openrouter", "qwen"]
+# news_to_tickers + classify/impact + news sector scan.
+# Strict free tier: Zhipu glm-4.7-flash → SF permanent-free → OR :free.
+# qwen-flash is omitted; its Aliyun free grant is exhausted (403).
+NEWS_HEAD = ["zhipu", "siliconflow", "openrouter"]
 # company_dig: SF Qwen/DeepSeek free → native DeepSeek → OR :free → Zhipu.
 DIG_HEAD = ["siliconflow", "deepseek", "openrouter", "zhipu"]
 
@@ -359,6 +360,26 @@ def tokenhub_models() -> list[str]:
     return flash + overflow
 
 
+def is_news_free_model(lane: str, model: str) -> bool:
+    """True only for a news call that cannot bill."""
+    lane = str(lane or "")
+    model = str(model or "")
+    if lane == "openrouter":
+        return model == "openrouter/free" or model.endswith(":free")
+    if lane == "zhipu":
+        return model == "glm-4.7-flash"
+    if lane == "siliconflow":
+        return model in SF_NEWS_FREE
+    return False
+
+
+def is_resumable_free_watermark(lane: str, model: str) -> bool:
+    """Keep a finished row. qwen-flash stays only as a prior free-grant call."""
+    if is_news_free_model(lane, model):
+        return True
+    return str(lane or "") == "qwen" and str(model or "") == "qwen-flash"
+
+
 def lanes_for(tmpl: str) -> list[str]:
     """Hopper order for a template. Never includes Pro/ paid IDs."""
     tmpl = str(tmpl or "custom").strip()
@@ -415,7 +436,8 @@ def primary_models_for(lane: str, tmpl: str = "custom") -> list[str]:
     elif lane == "deepseek":
         raw = list(DS_MODELS)
     elif lane == "qwen":
-        raw = qwen_models()
+        # News must not call DashScope. The free grant returned 403.
+        raw = [] if tmpl in NEWS_TEMPLATES else qwen_models()
     elif lane == "zhipu":
         raw = list(ZHIPU_MODELS)
     elif lane == "moonshot":
@@ -440,7 +462,10 @@ def primary_models_for(lane: str, tmpl: str = "custom") -> list[str]:
         raw = list(GEMINI_MODELS)
     else:
         raw = []
-    return [m for m in raw if not is_banned_primary(m)]
+    out = [m for m in raw if not is_banned_primary(m)]
+    if tmpl in NEWS_TEMPLATES:
+        out = [m for m in out if is_news_free_model(lane, m)]
+    return out
 
 
 def hopper_plan(tmpl: str = "custom") -> list[tuple[str, list[str]]]:
@@ -943,6 +968,9 @@ def load_keys():
 
 def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
     """Try one $0 hopper. Returns (parsed, info) or (None, None)."""
+    if str(tmpl or "") in NEWS_TEMPLATES and lane not in NEWS_HEAD:
+        print(f"  {lane} skip (news free-tier allowlist)")
+        return None, None
     keys = ctx["keys"]
     ollama_url = ctx["ollama_url"]
     gh_direct = ctx["gh_direct"]

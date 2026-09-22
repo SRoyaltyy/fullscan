@@ -100,12 +100,12 @@ def is_lane_ok(row: dict | None) -> bool:
     if lane in {"", "deterministic"} or not model:
         return False
     try:
-        from src.lane_route import is_banned_primary
+        from src.lane_route import is_banned_primary, is_resumable_free_watermark
     except Exception:  # noqa: BLE001
         return False
     if is_banned_primary(model):
         return False
-    return True
+    return is_resumable_free_watermark(lane, model)
 
 
 def is_01d_graded(row: dict) -> bool:
@@ -589,13 +589,14 @@ def markdown_report(report: dict[str, Any]) -> str:
         "",
         "## Hop histogram (provider::model)",
         "",
-        "Lane-ok rows only. $0 hoppers only: Zhipu glm-4.7-flash, "
-        "SiliconFlow THUDM/GLM-Z1-9B-0414 and "
-        "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B, OpenRouter :free, "
-        "DashScope qwen-flash. A 402 tries the next id on that provider. "
-        "A 403 or 429 abandons the provider and does not continue into "
-        "DeepSeek chat, TokenHub, or Gemini. "
-        "glm-4-flash-250414, Qwen/Qwen3-8B, and deepseek-chat are not used.",
+        "Lane-ok rows only. New calls are strict free tier: "
+        "Zhipu glm-4.7-flash, SiliconFlow THUDM/GLM-Z1-9B-0414 and "
+        "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B, OpenRouter :free. "
+        "DashScope qwen-flash is not called (free grant exhausted). "
+        "A 402 tries the next free id on that provider. "
+        "A 403 or 429 abandons the provider. "
+        "DeepSeek, TokenHub, Gemini, Qwen/Qwen3-8B, and deepseek-chat "
+        "are not called.",
         "",
     ]
     hist = report.get("hop_histogram") or {}

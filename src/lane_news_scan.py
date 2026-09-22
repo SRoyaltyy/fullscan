@@ -8,8 +8,8 @@ Cyrus 2026-09-21 hop policy (same as lane_route news_to_tickers):
   or qwen2.5-7b-instruct. On 429, abandon that provider — do not fall down
   older sibling IDs.
   Order: Zhipu glm-4.7-flash → SiliconFlow permanent-free
-  (GLM-Z1-9B-0414, DeepSeek-R1-Distill-Qwen-7B) → OpenRouter :free
-  → DashScope qwen-flash. No DeepSeek chat, no TokenHub, no Gemini.
+  (GLM-Z1-9B-0414, DeepSeek-R1-Distill-Qwen-7B) → OpenRouter :free.
+  No DashScope, no DeepSeek, no TokenHub, no Gemini.
 """
 from __future__ import annotations
 
