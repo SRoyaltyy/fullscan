@@ -2,24 +2,8 @@
 
 
 
-**Step 0 — Setup.** Loaded the rubric, standing lessons, and Channel 1 data (10,763 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.
+**Step 0 — Setup.** Loaded 11,200 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.
 
 
 
-**Step 1 — Research.** The model wanted to know: *"PII Polaris Industries news September 2026"* → got 6 results (via ddg)
-
-  - Polaris Inds (PII) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/PII/)
-
-  - Polaris Inc. (PII) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/PII/)
-
-  - Polaris (NYSE:PII) - Stock Analysis - Simply Wall St (https://simplywall.st/stocks/us/consumer-durables/nyse-pii/polaris)
-
-**Step 2 — Research.** The model wanted to know: *"HOG Harley-Davidson news September 2026"* → got 6 results (via ddg)
-
-  - Harley-Davidson, Inc. (HOG) Stock Price & Latest News - September 2026 (https://www.insidearbitrage.com/symbol-metrics/HOG)
-
-  - Harley-Davidson - Harley-Davidson Delivers Second Quarter Financial ... (https://investor.harley-davidson.com/news/news-details/2026/Harley-Davidson-Delivers-Second-Quarter-Financial-Results-and-Raises-Full-Year-Guidance/default.aspx)
-
-  - Harley-Davidson (HOG) Stock Price & Overview (https://stockanalysis.com/stocks/hog/)
-
-**Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.
+**Step 1 — Done.** The agent returned its full analysis (26,330 characters).
