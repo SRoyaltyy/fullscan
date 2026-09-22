@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `macd_hist` · size `leftover` · sell `list` · S-boost `none` · rank by macd_hist
 
-Cash book **-6.67%** ($9,333) · signal-only (no cash/fees) was -38.03%. Starts YES **1/27**. Fills 140 · skips 218 · realized $-605.84.
+Cash book **-6.63%** ($9,337) · signal-only (no cash/fees) was -37.98%. Starts YES **1/27**. Fills 140 · skips 218 · realized $-606.01.
 
 ## How this sleeve decides (like you are 10)
 
@@ -53,7 +53,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $1,276.21.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $1,280.17.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -340,7 +340,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | `HPQ` | 24 | $34.66 | $34.74 | +1.92 | $34.40 | -8.16 | -6.24 | +41.52 | +33.36 |
 | 2026-09-21 | `CLS` | 3 | $332.63 | $341.45 | +26.46 | — | +0.00 | +26.46 | +37.20 | — |
 | 2026-09-21 | `QCOM` | 6 | $177.72 | $180.61 | +17.34 | — | +0.00 | +17.34 | -51.36 | — |
-| 2026-09-21 | `CECO` | 17 | $69.48 | $71.01 | +26.01 | — | +0.00 | +26.01 | +42.67 | — |
+| 2026-09-21 | `CECO` | 17 | $69.48 | $71.00 | +25.84 | — | +0.00 | +25.84 | +42.50 | — |
 | 2026-09-21 | `CVI` | 23 | $53.69 | $53.19 | -11.50 | — | +0.00 | -11.50 | +49.22 | — |
 | 2026-09-21 | `SMTC` | 4 | $185.00 | $190.30 | +21.20 | $177.37 | -51.72 | -30.52 | +77.80 | +26.08 |
 | 2026-09-21 | `RVTY` | 5 | $143.45 | $144.53 | +5.40 | $143.59 | -4.70 | +0.70 | -15.40 | -20.10 |
@@ -351,9 +351,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | `VICR` | 2 | — | $230.25 | +0.00 | $223.90 | -12.70 | -12.70 | +0.00 | -12.70 |
 | 2026-09-21 | `COHR` | 2 | — | $326.48 | +0.00 | $321.52 | -9.92 | -9.92 | +0.00 | -9.92 |
 | 2026-09-21 | `HUM` | 1 | — | $386.20 | +0.00 | $378.58 | -7.62 | -7.62 | +0.00 | -7.62 |
-| 2026-09-21 | `MXL` | 8 | — | $84.19 | +0.00 | $85.98 | +14.34 | +14.34 | +0.00 | +14.34 |
+| 2026-09-21 | `MXL` | 8 | — | $83.53 | +0.00 | $85.98 | +19.60 | +19.60 | +0.00 | +19.60 |
 | 2026-09-21 | `FORM` | 5 | — | $123.00 | +0.00 | $119.31 | -18.45 | -18.45 | +0.00 | -18.45 |
-| 2026-09-21 | `SION` | 113 | — | $5.99 | +0.00 | $6.00 | +1.13 | +1.13 | +0.00 | +1.13 |
+| 2026-09-21 | `SION` | 113 | — | $6.00 | +0.00 | $6.00 | +0.00 | +0.00 | +0.00 | +0.00 |
 
 ## Each session (cash + holdings state)
 
@@ -385,7 +385,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | +5.30 | $567.87 | CLS×3, SANM×5, SION×155, SPCX×8, SWKS×14, QRVO×10, ASO×22, ORCL×7 | $9,267.47 | +44.07 | +13.34 | QCOM, CECO, CVI | SANM, ASO, ORCL | $151.55 | $9,268.57 | CLS×3, SION×155, SPCX×8, SWKS×14, QRVO×10, QCOM×6, CECO×17, CVI×23 |
 | 2026-09-17 | +7.38 | $151.55 | CLS×3, SION×155, SPCX×8, SWKS×14, QRVO×10, QCOM×6, CECO×17, CVI×23 | $9,461.18 | +192.61 | +253.58 | SMTC, RVTY, FPS, GME, INDP, HPQ | SION, SPCX, SWKS, QRVO | $223.21 | $9,692.76 | CLS×3, QCOM×6, CECO×17, CVI×23, SMTC×4, RVTY×5, FPS×22, GME×36, INDP×245, HPQ×24 |
 | 2026-09-18 | +4.86 | $223.21 | CLS×3, QCOM×6, CECO×17, CVI×23, SMTC×4, RVTY×5, FPS×22, GME×36, INDP×245, HPQ×24 | $9,750.96 | +58.20 | -212.19 | — | — | $223.21 | $9,538.77 | CLS×3, QCOM×6, CECO×17, CVI×23, SMTC×4, RVTY×5, FPS×22, GME×36, INDP×245, HPQ×24 |
-| 2026-09-21 | +12.87 | $223.21 | CLS×3, QCOM×6, CECO×17, CVI×23, SMTC×4, RVTY×5, FPS×22, GME×36, INDP×245, HPQ×24 | $9,617.70 | +78.93 | -264.02 | VICR, COHR, HUM, MXL, FORM, SION | CLS, QCOM, CECO, CVI | $1,276.21 | $9,333.16 | SMTC×4, RVTY×5, FPS×22, GME×36, INDP×245, HPQ×24, VICR×2, COHR×2, HUM×1, MXL×8, FORM×5, SION×113 |
+| 2026-09-21 | +12.87 | $223.21 | CLS×3, QCOM×6, CECO×17, CVI×23, SMTC×4, RVTY×5, FPS×22, GME×36, INDP×245, HPQ×24 | $9,617.53 | +78.76 | -259.89 | VICR, COHR, HUM, MXL, FORM, SION | CLS, QCOM, CECO, CVI | $1,280.17 | $9,337.12 | SMTC×4, RVTY×5, FPS×22, GME×36, INDP×245, HPQ×24, VICR×2, COHR×2, HUM×1, MXL×8, FORM×5, SION×113 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -573,18 +573,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $223.21 | ▲ close $9,692.76 vs 09:30 $9,461.18 (session +253.58) | 16:00 close · cash $223.21 · equity $9,692.76 vs 09:30 $9,461.18 (+231.58; session marks +253.58) · 10 name(s) marked open→close (per-name table). CLS×3 09:30 $337.75 → close $329.94 -23.43; QCOM×6 09:30 $190.35 → close $188.71 -9.84; CECO×17 09:30 $72.95 → close $70.83 -36.04; CVI×23 09:30 $51.88 → close $54.14 +51.98; SMTC×4 09:30 $170.85 → close $178.19 +29.36; RVTY×5 09:30 $147.61 → close $146.73 -4.40; FPS×22 09:30 $36.76 → close $38.06 +28.60; GME×36 09:30 $22.12 → close $22.77 +23.40; INDP×245 09:30 $3.30 → close $3.93 +154.35; HPQ×24 09:30 $33.01 → close $34.66 +39.60 | — |
 | 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $223.21 | ▲ 09:30 equity $9,750.96 vs yday $9,692.76 (+58.20) | 09:30 open · cash $223.21 (unchanged overnight, no fees) · equity $9,750.96 vs prior close $9,692.76 (+58.20) · 10 name(s) re-marked at the open (per-name table). CLS×3 yday $329.94 → 09:30 $332.06 +6.36; QCOM×6 yday $188.71 → 09:30 $191.34 +15.78; CECO×17 yday $70.83 → 09:30 $71.00 +2.89; CVI×23 yday $54.14 → 09:30 $54.10 -0.92; SMTC×4 yday $178.19 → 09:30 $182.33 +16.56; RVTY×5 yday $146.73 → 09:30 $146.50 -1.15; FPS×22 yday $38.06 → 09:30 $39.50 +31.68; GME×36 yday $22.77 → 09:30 $22.90 +4.68; INDP×245 yday $3.93 → 09:30 $3.85 -19.60; HPQ×24 yday $34.66 → 09:30 $34.74 +1.92 | — |
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $223.21 | ▼ close $9,538.77 vs 09:30 $9,750.96 (session -212.19) | 16:00 close · cash $223.21 · equity $9,538.77 vs 09:30 $9,750.96 (-212.19; session marks -212.19) · 10 name(s) marked open→close (per-name table). CLS×3 09:30 $332.06 → close $332.63 +1.71; QCOM×6 09:30 $191.34 → close $177.72 -81.72; CECO×17 09:30 $71.00 → close $69.48 -25.84; CVI×23 09:30 $54.10 → close $53.69 -9.43; SMTC×4 09:30 $182.33 → close $185.00 +10.68; RVTY×5 09:30 $146.50 → close $143.45 -15.25; FPS×22 09:30 $39.50 → close $39.44 -1.32; GME×36 09:30 $22.90 → close $22.64 -9.36; INDP×245 09:30 $3.85 → close $3.55 -73.50; HPQ×24 09:30 $34.74 → close $34.40 -8.16 | — |
-| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $223.21 | ▲ 09:30 equity $9,617.70 vs yday $9,538.77 (+78.93) | 09:30 open · cash $223.21 (unchanged overnight, no fees) · equity $9,617.70 vs prior close $9,538.77 (+78.93) · 10 name(s) re-marked at the open (per-name table). CLS×3 yday $332.63 → 09:30 $341.45 +26.46; QCOM×6 yday $177.72 → 09:30 $180.61 +17.34; CECO×17 yday $69.48 → 09:30 $71.01 +26.01; CVI×23 yday $53.69 → 09:30 $53.19 -11.50; SMTC×4 yday $185.00 → 09:30 $190.30 +21.20; RVTY×5 yday $143.45 → 09:30 $144.53 +5.40; FPS×22 yday $39.44 → 09:30 $40.03 +12.98; GME×36 yday $22.64 → 09:30 $22.78 +5.04; INDP×245 yday $3.55 → 09:30 $3.55 +0.00; HPQ×24 yday $34.40 → 09:30 $33.40 -24.00 | — |
-| 2026-09-21 09:30 ET | **SELL** | `CLS` | 3 | $341.45 | $2.02 | $+33.18 | $1,245.54 | ▲ +33.18 after sell → book $9,615.68; vs 09:30 mark -2.02 | dropped from list after 6 sess (min 3) | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
-| 2026-09-21 09:30 ET | **SELL** | `QCOM` | 6 | $180.61 | $2.03 | $-55.40 | $2,327.17 | ▼ -55.40 after sell → book $9,613.65; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-21 09:30 ET | **SELL** | `CECO` | 17 | $71.01 | $2.06 | $+38.57 | $3,532.28 | ▲ +38.57 after sell → book $9,611.59; vs 09:30 mark -2.06 | dropped from list after 3 sess (min 3) | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟡 vol🟡 buy🟡 |
-| 2026-09-21 09:30 ET | **SELL** | `CVI` | 23 | $53.19 | $2.08 | $+45.08 | $4,753.57 | ▲ +45.08 after sell → book $9,609.51; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-21 09:30 ET | **BUY** | `VICR` | 2 | $230.25 | $2.00 | — | $4,291.08 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+12.5; leftover $679.08 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟢 |
-| 2026-09-21 09:30 ET | **BUY** | `COHR` | 2 | $326.48 | $2.00 | — | $3,636.12 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+3.9; leftover $679.08 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `HUM` | 1 | $386.20 | $1.99 | — | $3,247.93 | — | rank by macd_hist; rank macd_hist; list flatten; 🔵; ret5=+5.2; leftover $679.08 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `MXL` | 8 | $84.19 | $2.01 | — | $2,572.41 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+8.8; leftover $679.08 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `FORM` | 5 | $123.00 | $2.00 | — | $1,955.41 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+3.0; leftover $679.08 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `SION` | 113 | $5.99 | $2.33 | — | $1,276.21 | — | rank by macd_hist; rank macd_hist; list yday_mover; 🔵; ret5=-24.1; leftover $679.08 | join🟢 sector🟢 gen🟢 news🟢 digest🟡 ab🔴 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,276.21 | ▼ close $9,333.16 vs 09:30 $9,617.70 (session -264.02) | 16:00 close · cash $1,276.21 · equity $9,333.16 vs 09:30 $9,617.70 (-284.54; session marks -264.02) · 12 name(s) marked open→close (per-name table). SMTC×4 09:30 $190.30 → close $177.37 -51.72; RVTY×5 09:30 $144.53 → close $143.59 -4.70; FPS×22 09:30 $40.03 → close $37.75 -50.16; GME×36 09:30 $22.78 → close $22.76 -0.72; INDP×245 09:30 $3.55 → close $3.09 -112.70; HPQ×24 09:30 $33.40 → close $32.95 -10.80; VICR×2 09:30 $230.25 → close $223.90 -12.70; COHR×2 09:30 $326.48 → close $321.52 -9.92; HUM×1 09:30 $386.20 → close $378.58 -7.62; MXL×8 09:30 $84.19 → close $85.98 +14.34; FORM×5 09:30 $123.00 → close $119.31 -18.45; SION×113 09:30 $5.99 → close $6.00 +1.13 | — |
+| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $223.21 | ▲ 09:30 equity $9,617.53 vs yday $9,538.77 (+78.76) | 09:30 open · cash $223.21 (unchanged overnight, no fees) · equity $9,617.53 vs prior close $9,538.77 (+78.76) · 10 name(s) re-marked at the open (per-name table). CLS×3 yday $332.63 → 09:30 $341.45 +26.46; QCOM×6 yday $177.72 → 09:30 $180.61 +17.34; CECO×17 yday $69.48 → 09:30 $71.00 +25.84; CVI×23 yday $53.69 → 09:30 $53.19 -11.50; SMTC×4 yday $185.00 → 09:30 $190.30 +21.20; RVTY×5 yday $143.45 → 09:30 $144.53 +5.40; FPS×22 yday $39.44 → 09:30 $40.03 +12.98; GME×36 yday $22.64 → 09:30 $22.78 +5.04; INDP×245 yday $3.55 → 09:30 $3.55 +0.00; HPQ×24 yday $34.40 → 09:30 $33.40 -24.00 | — |
+| 2026-09-21 09:30 ET | **SELL** | `CLS` | 3 | $341.45 | $2.02 | $+33.18 | $1,245.54 | ▲ +33.18 after sell → book $9,615.51; vs 09:30 mark -2.02 | dropped from list after 6 sess (min 3) | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-21 09:30 ET | **SELL** | `QCOM` | 6 | $180.61 | $2.03 | $-55.40 | $2,327.17 | ▼ -55.40 after sell → book $9,613.48; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-21 09:30 ET | **SELL** | `CECO` | 17 | $71.00 | $2.06 | $+38.40 | $3,532.11 | ▲ +38.40 after sell → book $9,611.42; vs 09:30 mark -2.06 | dropped from list after 3 sess (min 3) | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟡 vol🟡 buy🟡 |
+| 2026-09-21 09:30 ET | **SELL** | `CVI` | 23 | $53.19 | $2.08 | $+45.08 | $4,753.40 | ▲ +45.08 after sell → book $9,609.34; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-21 09:30 ET | **BUY** | `VICR` | 2 | $230.25 | $2.00 | — | $4,290.91 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+12.5; leftover $679.06 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟢 |
+| 2026-09-21 09:30 ET | **BUY** | `COHR` | 2 | $326.48 | $2.00 | — | $3,635.95 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+3.9; leftover $679.06 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `HUM` | 1 | $386.20 | $1.99 | — | $3,247.76 | — | rank by macd_hist; rank macd_hist; list flatten; 🔵; ret5=+5.2; leftover $679.06 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `MXL` | 8 | $83.53 | $2.01 | — | $2,577.50 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+8.8; leftover $679.06 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `FORM` | 5 | $123.00 | $2.00 | — | $1,960.50 | — | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+3.0; leftover $679.06 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `SION` | 113 | $6.00 | $2.33 | — | $1,280.17 | — | rank by macd_hist; rank macd_hist; list yday_mover; 🔵; ret5=-24.1; leftover $679.06 | join🟢 sector🟢 gen🟢 news🟢 digest🟡 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1,280.17 | ▼ close $9,337.12 vs 09:30 $9,617.53 (session -259.89) | 16:00 close · cash $1,280.17 · equity $9,337.12 vs 09:30 $9,617.53 (-280.41; session marks -259.89) · 12 name(s) marked open→close (per-name table). SMTC×4 09:30 $190.30 → close $177.37 -51.72; RVTY×5 09:30 $144.53 → close $143.59 -4.70; FPS×22 09:30 $40.03 → close $37.75 -50.16; GME×36 09:30 $22.78 → close $22.76 -0.72; INDP×245 09:30 $3.55 → close $3.09 -112.70; HPQ×24 09:30 $33.40 → close $32.95 -10.80; VICR×2 09:30 $230.25 → close $223.90 -12.70; COHR×2 09:30 $326.48 → close $321.52 -9.92; HUM×1 09:30 $386.20 → close $378.58 -7.62; MXL×8 09:30 $83.53 → close $85.98 +19.60; FORM×5 09:30 $123.00 → close $119.31 -18.45; SION×113 09:30 $6.00 → close $6.00 +0.00 | — |
 
 ## Not taken
 
@@ -807,7 +807,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | `GME` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-21 | `INDP` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-21 | `HPQ` | min_hold | dropped but min-hold 2/3 sess — no sell |
-| 2026-09-21 | `SNDK` | cash | leftover split 679.08 < 1 share @ 1826.66 |
+| 2026-09-21 | `SNDK` | cash | leftover split 679.06 < 1 share @ 1826.00 |
 
 ## Still open (marked at last close)
 
@@ -819,9 +819,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | `GME` | 36 | 2026-09-17 @ $22.12 | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+10.5; leftover $810.64 |
 | `INDP` | 245 | 2026-09-17 @ $3.30 | rank by macd_hist; rank macd_hist; list yday_mover; 🔵; ret5=+54.3; leftover $810.64 |
 | `HPQ` | 24 | 2026-09-17 @ $33.01 | rank by macd_hist; rank macd_hist; list ohlc_hot; 🔵; ret5=+11.1; leftover $810.64 |
-| `VICR` | 2 | 2026-09-21 @ $230.25 | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+12.5; leftover $679.08 |
-| `COHR` | 2 | 2026-09-21 @ $326.48 | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+3.9; leftover $679.08 |
-| `HUM` | 1 | 2026-09-21 @ $386.20 | rank by macd_hist; rank macd_hist; list flatten; 🔵; ret5=+5.2; leftover $679.08 |
-| `MXL` | 8 | 2026-09-21 @ $84.19 | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+8.8; leftover $679.08 |
-| `FORM` | 5 | 2026-09-21 @ $123.00 | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+3.0; leftover $679.08 |
-| `SION` | 113 | 2026-09-21 @ $5.99 | rank by macd_hist; rank macd_hist; list yday_mover; 🔵; ret5=-24.1; leftover $679.08 |
+| `VICR` | 2 | 2026-09-21 @ $230.25 | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+12.5; leftover $679.06 |
+| `COHR` | 2 | 2026-09-21 @ $326.48 | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+3.9; leftover $679.06 |
+| `HUM` | 1 | 2026-09-21 @ $386.20 | rank by macd_hist; rank macd_hist; list flatten; 🔵; ret5=+5.2; leftover $679.06 |
+| `MXL` | 8 | 2026-09-21 @ $83.53 | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+8.8; leftover $679.06 |
+| `FORM` | 5 | 2026-09-21 @ $123.00 | rank by macd_hist; rank macd_hist; list ohlc_hot; ret5=+3.0; leftover $679.06 |
+| `SION` | 113 | 2026-09-21 @ $6.00 | rank by macd_hist; rank macd_hist; list yday_mover; 🔵; ret5=-24.1; leftover $679.06 |

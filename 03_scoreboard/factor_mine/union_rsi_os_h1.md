@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-26.51%** ($7,349) · signal-only (no cash/fees) was +2.11%. Starts YES **0/27**. Fills 78 · skips 14 · realized $-2553.21.
+Cash book **-26.62%** ($7,338) · signal-only (no cash/fees) was +2.03%. Starts YES **0/27**. Fills 78 · skips 14 · realized $-2558.35.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $2.76.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $3.44.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -153,10 +153,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | `MRLN` | 3262 | $2.06 | $2.07 | +32.62 | — | +0.00 | +32.62 | -652.40 | — |
 | 2026-09-18 | `RARE` | 257 | — | $14.79 | +0.00 | $14.51 | -71.96 | -71.96 | +0.00 | -71.96 |
 | 2026-09-18 | `FLNC` | 503 | — | $7.54 | +0.00 | $7.32 | -108.14 | -108.14 | +0.00 | -108.14 |
-| 2026-09-21 | `RARE` | 257 | $14.51 | $14.60 | +23.13 | — | +0.00 | +23.13 | -48.83 | — |
+| 2026-09-21 | `RARE` | 257 | $14.51 | $14.58 | +17.99 | — | +0.00 | +17.99 | -53.97 | — |
 | 2026-09-21 | `FLNC` | 503 | $7.32 | $7.36 | +20.12 | — | +0.00 | +20.12 | -88.02 | — |
 | 2026-09-21 | `XENE` | 93 | — | $40.00 | +0.00 | $38.99 | -93.93 | -93.93 | +0.00 | -93.93 |
-| 2026-09-21 | `SION` | 620 | — | $5.99 | +0.00 | $6.00 | +6.20 | +6.20 | +0.00 | +6.20 |
+| 2026-09-21 | `SION` | 618 | — | $6.00 | +0.00 | $6.00 | +0.00 | +0.00 | +0.00 | +0.00 |
 
 ## Each session (cash + holdings state)
 
@@ -188,7 +188,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | +5.30 | $8,557.20 | — | $8,557.20 | +0.00 | -122.00 | ALHC, PLAY, DVLT, NMRA, ZSQR, CTMX, CRBP, EYPT | — | $0.58 | $8,368.18 | ALHC×103, PLAY×155, DVLT×6685, NMRA×1267, ZSQR×457, CTMX×393, CRBP×155, EYPT×280 |
 | 2026-09-17 | +7.38 | $0.58 | ALHC×103, PLAY×155, DVLT×6685, NMRA×1267, ZSQR×457, CTMX×393, CRBP×155, EYPT×280 | $8,398.87 | +30.69 | -672.66 | MRLN | PLAY, DVLT, NMRA, ZSQR, CTMX, CRBP, EYPT | $2.09 | $7,617.91 | ALHC×103, MRLN×3262 |
 | 2026-09-18 | +4.86 | $2.09 | ALHC×103, MRLN×3262 | $7,648.47 | +30.56 | -180.10 | RARE, FLNC | ALHC, MRLN | $2.53 | $7,413.56 | RARE×257, FLNC×503 |
-| 2026-09-21 | +12.87 | $2.53 | RARE×257, FLNC×503 | $7,456.81 | +43.25 | -87.73 | XENE, SION | RARE, FLNC | $2.76 | $7,348.83 | XENE×93, SION×620 |
+| 2026-09-21 | +12.87 | $2.53 | RARE×257, FLNC×503 | $7,451.67 | +38.11 | -93.93 | XENE, SION | RARE, FLNC | $3.44 | $7,337.51 | XENE×93, SION×618 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -320,12 +320,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 09:30 ET | **BUY** | `RARE` | 257 | $14.79 | $3.32 | — | $3,799.13 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list probable,yday_gainer; 🔵; ⚪; ret5=+0.7; leftover $3801.74 | join🟢 sector🟢 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-18 09:30 ET | **BUY** | `FLNC` | 503 | $7.54 | $6.49 | — | $2.53 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-20.9; leftover $3801.74 | join🟡 sector🔴 gen🟢 news🟢 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.53 | ▼ close $7,413.56 vs 09:30 $7,648.47 (session -180.10) | 16:00 close · cash $2.53 · equity $7,413.56 vs 09:30 $7,648.47 (-234.91; session marks -180.10) · 2 name(s) marked open→close (per-name table). RARE×257 09:30 $14.79 → close $14.51 -71.96; FLNC×503 09:30 $7.54 → close $7.32 -108.14 | — |
-| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.53 | ▲ 09:30 equity $7,456.81 vs yday $7,413.56 (+43.25) | 09:30 open · cash $2.53 (unchanged overnight, no fees) · equity $7,456.81 vs prior close $7,413.56 (+43.25) · 2 name(s) re-marked at the open (per-name table). RARE×257 yday $14.51 → 09:30 $14.60 +23.13; FLNC×503 yday $7.32 → 09:30 $7.36 +20.12 | — |
-| 2026-09-21 09:30 ET | **SELL** | `RARE` | 257 | $14.60 | $3.39 | $-55.53 | $3,751.34 | ▼ -55.53 after sell → book $7,453.42; vs 09:30 mark -3.39 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SELL** | `FLNC` | 503 | $7.36 | $6.60 | $-101.12 | $7,446.82 | ▼ -101.12 after sell → book $7,446.82; vs 09:30 mark -6.60 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **BUY** | `XENE` | 93 | $40.00 | $2.27 | — | $3,724.55 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-1.1; leftover $3723.41 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `SION` | 620 | $5.99 | $8.00 | — | $2.76 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-24.1; leftover $3723.41 | join🟢 sector🟢 gen🟢 news🟢 digest🟡 ab🔴 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.76 | ▼ close $7,348.83 vs 09:30 $7,456.81 (session -87.73) | 16:00 close · cash $2.76 · equity $7,348.83 vs 09:30 $7,456.81 (-107.98; session marks -87.73) · 2 name(s) marked open→close (per-name table). XENE×93 09:30 $40.00 → close $38.99 -93.93; SION×620 09:30 $5.99 → close $6.00 +6.20 | — |
+| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.53 | ▲ 09:30 equity $7,451.67 vs yday $7,413.56 (+38.11) | 09:30 open · cash $2.53 (unchanged overnight, no fees) · equity $7,451.67 vs prior close $7,413.56 (+38.11) · 2 name(s) re-marked at the open (per-name table). RARE×257 yday $14.51 → 09:30 $14.58 +17.99; FLNC×503 yday $7.32 → 09:30 $7.36 +20.12 | — |
+| 2026-09-21 09:30 ET | **SELL** | `RARE` | 257 | $14.58 | $3.39 | $-60.67 | $3,746.20 | ▼ -60.67 after sell → book $7,448.28; vs 09:30 mark -3.39 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `FLNC` | 503 | $7.36 | $6.60 | $-101.12 | $7,441.68 | ▼ -101.12 after sell → book $7,441.68; vs 09:30 mark -6.60 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **BUY** | `XENE` | 93 | $40.00 | $2.27 | — | $3,719.41 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-1.1; leftover $3720.84 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `SION` | 618 | $6.00 | $7.97 | — | $3.44 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-24.1; leftover $3720.84 | join🟢 sector🟢 gen🟢 news🟢 digest🟡 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3.44 | ▼ close $7,337.51 vs 09:30 $7,451.67 (session -93.93) | 16:00 close · cash $3.44 · equity $7,337.51 vs 09:30 $7,451.67 (-114.16; session marks -93.93) · 2 name(s) marked open→close (per-name table). XENE×93 09:30 $40.00 → close $38.99 -93.93; SION×618 09:30 $6.00 → close $6.00 +0.00 | — |
 
 ## Not taken
 
@@ -350,5 +350,5 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `XENE` | 93 | 2026-09-21 @ $40.00 | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-1.1; leftover $3723.41 |
-| `SION` | 620 | 2026-09-21 @ $5.99 | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-24.1; leftover $3723.41 |
+| `XENE` | 93 | 2026-09-21 @ $40.00 | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-1.1; leftover $3720.84 |
+| `SION` | 618 | 2026-09-21 @ $6.00 | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-24.1; leftover $3720.84 |

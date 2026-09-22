@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-2.03%** ($9,797) · signal-only (no cash/fees) was -0.13%. Starts YES **13/27**. Fills 139 · skips 0 · realized $-192.83.
+Cash book **-1.78%** ($9,822) · signal-only (no cash/fees) was -0.11%. Starts YES **13/27**. Fills 139 · skips 0 · realized $-169.43.
 
 ## How this sleeve decides (like you are 10)
 
@@ -57,7 +57,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $182.64.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $194.79.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -215,10 +215,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | `ECO` | 57 | — | $85.00 | +0.00 | $84.95 | -2.85 | -2.85 | +0.00 | -2.85 |
 | 2026-09-18 | `TH` | 234 | — | $20.91 | +0.00 | $21.19 | +65.52 | +65.52 | +0.00 | +65.52 |
 | 2026-09-21 | `ECO` | 57 | $84.95 | $82.83 | -120.84 | — | +0.00 | -120.84 | -123.69 | — |
-| 2026-09-21 | `TH` | 234 | $21.19 | $21.55 | +84.24 | — | +0.00 | +84.24 | +149.76 | — |
+| 2026-09-21 | `TH` | 234 | $21.19 | $21.65 | +107.64 | — | +0.00 | +107.64 | +173.16 | — |
 | 2026-09-21 | `A` | 20 | — | $157.87 | +0.00 | $161.94 | +81.40 | +81.40 | +0.00 | +81.40 |
-| 2026-09-21 | `DXCM` | 36 | — | $88.89 | +0.00 | $89.17 | +10.01 | +10.01 | +0.00 | +10.01 |
-| 2026-09-21 | `MGTX` | 242 | — | $13.47 | +0.00 | $13.08 | -94.38 | -94.38 | +0.00 | -94.38 |
+| 2026-09-21 | `DXCM` | 36 | — | $88.83 | +0.00 | $89.17 | +12.24 | +12.24 | +0.00 | +12.24 |
+| 2026-09-21 | `MGTX` | 243 | — | $13.47 | +0.00 | $13.08 | -94.77 | -94.77 | +0.00 | -94.77 |
 
 ## Each session (cash + holdings state)
 
@@ -250,7 +250,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | +5.30 | $9,791.58 | — | $9,791.58 | -0.00 | +0.00 | — | — | $9,791.58 | $9,791.58 | — |
 | 2026-09-17 | +7.38 | $9,791.58 | — | $9,791.58 | -0.00 | +0.00 | — | — | $9,791.58 | $9,791.58 | — |
 | 2026-09-18 | +4.86 | $9,791.58 | — | $9,791.58 | -0.00 | +62.67 | ECO, TH | — | $48.46 | $9,849.07 | ECO×57, TH×234 |
-| 2026-09-21 | +12.87 | $48.46 | ECO×57, TH×234 | $9,812.47 | -36.60 | -2.97 | A, DXCM, MGTX | ECO, TH | $182.64 | $9,796.92 | A×20, DXCM×36, MGTX×242 |
+| 2026-09-21 | +12.87 | $48.46 | ECO×57, TH×234 | $9,835.87 | -13.20 | -1.13 | A, DXCM, MGTX | ECO, TH | $194.79 | $9,822.15 | A×20, DXCM×36, MGTX×243 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -442,18 +442,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 09:30 ET | **BUY** | `ECO` | 57 | $85.00 | $2.16 | — | $4,944.42 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; 🔵; ⚪; ret5=+4.8; leftover $4895.79 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-18 09:30 ET | **BUY** | `TH` | 234 | $20.91 | $3.02 | — | $48.46 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; 🔵; ⚪; ret5=+8.6; leftover $4895.79 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $48.46 | ▲ close $9,849.07 vs 09:30 $9,791.58 (session +62.67) | 16:00 close · cash $48.46 · equity $9,849.07 vs 09:30 $9,791.58 (+57.49; session marks +62.67) · 2 name(s) marked open→close (per-name table). ECO×57 09:30 $85.00 → close $84.95 -2.85; TH×234 09:30 $20.91 → close $21.19 +65.52 | — |
-| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $48.46 | ▼ 09:30 equity $9,812.47 vs yday $9,849.07 (-36.60) | 09:30 open · cash $48.46 (unchanged overnight, no fees) · equity $9,812.47 vs prior close $9,849.07 (-36.60) · 2 name(s) re-marked at the open (per-name table). ECO×57 yday $84.95 → 09:30 $82.83 -120.84; TH×234 yday $21.19 → 09:30 $21.55 +84.24 | — |
-| 2026-09-21 09:30 ET | **SELL** | `ECO` | 57 | $82.83 | $2.21 | $-128.06 | $4,767.56 | ▼ -128.06 after sell → book $9,810.26; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SELL** | `TH` | 234 | $21.55 | $3.10 | $+143.64 | $9,807.16 | ▲ +143.64 after sell → book $9,807.16; vs 09:30 mark -3.10 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `A` | 20 | $157.87 | $2.05 | — | $6,647.71 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; 🔵; ⚪; ret5=-4.4; leftover $3269.05 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `DXCM` | 36 | $88.89 | $2.10 | — | $3,445.50 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; 🔵; ⚪; ret5=-7.2; leftover $3269.05 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `MGTX` | 242 | $13.47 | $3.12 | — | $182.64 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; ⚪; ret5=-8.4; leftover $3269.05 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $182.64 | ▼ close $9,796.92 vs 09:30 $9,812.47 (session -2.97) | 16:00 close · cash $182.64 · equity $9,796.92 vs 09:30 $9,812.47 (-15.55; session marks -2.97) · 3 name(s) marked open→close (per-name table). A×20 09:30 $157.87 → close $161.94 +81.40; DXCM×36 09:30 $88.89 → close $89.17 +10.01; MGTX×242 09:30 $13.47 → close $13.08 -94.38 | — |
+| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $48.46 | ▼ 09:30 equity $9,835.87 vs yday $9,849.07 (-13.20) | 09:30 open · cash $48.46 (unchanged overnight, no fees) · equity $9,835.87 vs prior close $9,849.07 (-13.20) · 2 name(s) re-marked at the open (per-name table). ECO×57 yday $84.95 → 09:30 $82.83 -120.84; TH×234 yday $21.19 → 09:30 $21.65 +107.64 | — |
+| 2026-09-21 09:30 ET | **SELL** | `ECO` | 57 | $82.83 | $2.21 | $-128.06 | $4,767.56 | ▼ -128.06 after sell → book $9,833.66; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `TH` | 234 | $21.65 | $3.10 | $+167.04 | $9,830.56 | ▲ +167.04 after sell → book $9,830.56; vs 09:30 mark -3.10 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `A` | 20 | $157.87 | $2.05 | — | $6,671.11 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; 🔵; ⚪; ret5=-4.4; leftover $3276.85 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `DXCM` | 36 | $88.83 | $2.10 | — | $3,471.13 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; 🔵; ⚪; ret5=-7.2; leftover $3276.85 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `MGTX` | 243 | $13.47 | $3.13 | — | $194.79 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; ⚪; ret5=-8.4; leftover $3276.85 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $194.79 | ▼ close $9,822.15 vs 09:30 $9,835.87 (session -1.13) | 16:00 close · cash $194.79 · equity $9,822.15 vs 09:30 $9,835.87 (-13.72; session marks -1.13) · 3 name(s) marked open→close (per-name table). A×20 09:30 $157.87 → close $161.94 +81.40; DXCM×36 09:30 $88.83 → close $89.17 +12.24; MGTX×243 09:30 $13.47 → close $13.08 -94.77 | — |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `A` | 20 | 2026-09-21 @ $157.87 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; 🔵; ⚪; ret5=-4.4; leftover $3269.05 |
-| `DXCM` | 36 | 2026-09-21 @ $88.89 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; 🔵; ⚪; ret5=-7.2; leftover $3269.05 |
-| `MGTX` | 242 | 2026-09-21 @ $13.47 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; ⚪; ret5=-8.4; leftover $3269.05 |
+| `A` | 20 | 2026-09-21 @ $157.87 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; 🔵; ⚪; ret5=-4.4; leftover $3276.85 |
+| `DXCM` | 36 | 2026-09-21 @ $88.83 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; 🔵; ⚪; ret5=-7.2; leftover $3276.85 |
+| `MGTX` | 243 | 2026-09-21 @ $13.47 | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; ⚪; ret5=-8.4; leftover $3276.85 |

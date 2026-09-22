@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ flow_in, no 🚨
 
-Cash book **-0.82%** ($9,918) · signal-only (no cash/fees) was -1.37%. Starts YES **6/27**. Fills 73 · skips 96 · realized $-43.59.
+Cash book **-0.82%** ($9,918) · signal-only (no cash/fees) was -1.38%. Starts YES **6/27**. Fills 73 · skips 96 · realized $-43.49.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8.35.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $7.79.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -205,8 +205,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | `LEN` | 20 | $79.70 | $78.25 | -29.00 | $76.43 | -36.40 | -65.40 | -47.60 | -84.00 |
 | 2026-09-21 | `ATRC` | 29 | $58.10 | $58.23 | +3.77 | — | +0.00 | +3.77 | +74.53 | — |
 | 2026-09-21 | `TCOM` | 40 | $40.68 | $41.00 | +12.80 | — | +0.00 | +12.80 | +2.80 | — |
-| 2026-09-21 | `LEN` | 20 | $76.43 | $76.97 | +10.90 | — | +0.00 | +10.90 | -73.10 | — |
-| 2026-09-21 | `UMC` | 133 | — | $24.93 | +0.00 | $25.43 | +67.16 | +67.16 | +0.00 | +67.16 |
+| 2026-09-21 | `LEN` | 20 | $76.43 | $76.98 | +11.00 | — | +0.00 | +11.00 | -73.00 | — |
+| 2026-09-21 | `UMC` | 133 | — | $24.93 | +0.00 | $25.43 | +66.50 | +66.50 | +0.00 | +66.50 |
 | 2026-09-21 | `NEO` | 166 | — | $19.92 | +0.00 | $19.41 | -84.66 | -84.66 | +0.00 | -84.66 |
 | 2026-09-21 | `ARLO` | 248 | — | $13.38 | +0.00 | $13.33 | -12.40 | -12.40 | +0.00 | -12.40 |
 
@@ -240,7 +240,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | +5.30 | $8.67 | SSL×342, ARLO×370 | $10,048.11 | -130.58 | -103.88 | ATRC, TCOM, LEN | SSL | $134.02 | $9,933.48 | ARLO×370, ATRC×29, TCOM×40, LEN×20 |
 | 2026-09-17 | +7.38 | $134.02 | ARLO×370, ATRC×29, TCOM×40, LEN×20 | $10,105.86 | +172.38 | -109.46 | — | — | $134.02 | $9,996.40 | ARLO×370, ATRC×29, TCOM×40, LEN×20 |
 | 2026-09-18 | +4.86 | $134.02 | ARLO×370, ATRC×29, TCOM×40, LEN×20 | $9,985.61 | -10.79 | -45.49 | — | ARLO | $5,094.55 | $9,935.25 | ATRC×29, TCOM×40, LEN×20 |
-| 2026-09-21 | +12.87 | $5,094.55 | ATRC×29, TCOM×40, LEN×20 | $9,962.72 | +27.47 | -29.90 | UMC, NEO, ARLO | ATRC, TCOM, LEN | $8.35 | $9,918.44 | UMC×133, NEO×166, ARLO×248 |
+| 2026-09-21 | +12.87 | $5,094.55 | ATRC×29, TCOM×40, LEN×20 | $9,962.82 | +27.57 | -30.56 | UMC, NEO, ARLO | ATRC, TCOM, LEN | $7.79 | $9,917.88 | UMC×133, NEO×166, ARLO×248 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -365,14 +365,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $134.02 | ▼ 09:30 equity $9,985.61 vs yday $9,996.40 (-10.79) | 09:30 open · cash $134.02 (unchanged overnight, no fees) · equity $9,985.61 vs prior close $9,996.40 (-10.79) · 4 name(s) re-marked at the open (per-name table). ARLO×370 yday $13.35 → 09:30 $13.42 +25.90; ATRC×29 yday $59.12 → 09:30 $58.51 -17.69; TCOM×40 yday $40.36 → 09:30 $40.61 +10.00; LEN×20 yday $79.70 → 09:30 $78.25 -29.00 | — |
 | 2026-09-18 09:30 ET | **SELL** | `ARLO` | 370 | $13.42 | $4.87 | $+64.35 | $5,094.55 | ▲ +64.35 after sell → book $9,980.74; vs 09:30 mark -4.87 | dropped from list after 5 sess (min 3) | — |
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5,094.55 | ▼ close $9,935.25 vs 09:30 $9,985.61 (session -45.49) | 16:00 close · cash $5,094.55 · equity $9,935.25 vs 09:30 $9,985.61 (-50.36; session marks -45.49) · 3 name(s) marked open→close (per-name table). ATRC×29 09:30 $58.51 → close $58.10 -11.89; TCOM×40 09:30 $40.61 → close $40.68 +2.80; LEN×20 09:30 $78.25 → close $76.43 -36.40 | — |
-| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,094.55 | ▲ 09:30 equity $9,962.72 vs yday $9,935.25 (+27.47) | 09:30 open · cash $5,094.55 (unchanged overnight, no fees) · equity $9,962.72 vs prior close $9,935.25 (+27.47) · 3 name(s) re-marked at the open (per-name table). ATRC×29 yday $58.10 → 09:30 $58.23 +3.77; TCOM×40 yday $40.68 → 09:30 $41.00 +12.80; LEN×20 yday $76.43 → 09:30 $76.97 +10.90 | — |
-| 2026-09-21 09:30 ET | **SELL** | `ATRC` | 29 | $58.23 | $2.10 | $+70.35 | $6,781.12 | ▲ +70.35 after sell → book $9,960.62; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-21 09:30 ET | **SELL** | `TCOM` | 40 | $41.00 | $2.13 | $-1.44 | $8,418.98 | ▼ -1.44 after sell → book $9,958.48; vs 09:30 mark -2.14 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-21 09:30 ET | **SELL** | `LEN` | 20 | $76.97 | $2.07 | $-77.22 | $9,956.41 | ▼ -77.22 after sell → book $9,956.41; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-21 09:30 ET | **BUY** | `UMC` | 133 | $24.93 | $2.39 | — | $6,639.00 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list ohlc_hot; ret5=+8.7; leftover $3318.80 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `NEO` | 166 | $19.92 | $2.49 | — | $3,329.79 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list ohlc_hot; 🔵; ⚪; ret5=+15.0; leftover $3318.80 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `ARLO` | 248 | $13.38 | $3.20 | — | $8.35 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list ohlc_hot; ret5=+7.3; leftover $3318.80 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8.35 | ▼ close $9,918.44 vs 09:30 $9,962.72 (session -29.90) | 16:00 close · cash $8.35 · equity $9,918.44 vs 09:30 $9,962.72 (-44.28; session marks -29.90) · 3 name(s) marked open→close (per-name table). UMC×133 09:30 $24.93 → close $25.43 +67.16; NEO×166 09:30 $19.92 → close $19.41 -84.66; ARLO×248 09:30 $13.38 → close $13.33 -12.40 | — |
+| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $5,094.55 | ▲ 09:30 equity $9,962.82 vs yday $9,935.25 (+27.57) | 09:30 open · cash $5,094.55 (unchanged overnight, no fees) · equity $9,962.82 vs prior close $9,935.25 (+27.57) · 3 name(s) re-marked at the open (per-name table). ATRC×29 yday $58.10 → 09:30 $58.23 +3.77; TCOM×40 yday $40.68 → 09:30 $41.00 +12.80; LEN×20 yday $76.43 → 09:30 $76.98 +11.00 | — |
+| 2026-09-21 09:30 ET | **SELL** | `ATRC` | 29 | $58.23 | $2.10 | $+70.35 | $6,781.12 | ▲ +70.35 after sell → book $9,960.72; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-21 09:30 ET | **SELL** | `TCOM` | 40 | $41.00 | $2.13 | $-1.44 | $8,418.98 | ▼ -1.44 after sell → book $9,958.58; vs 09:30 mark -2.14 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-21 09:30 ET | **SELL** | `LEN` | 20 | $76.98 | $2.07 | $-77.12 | $9,956.51 | ▼ -77.12 after sell → book $9,956.51; vs 09:30 mark -2.07 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-21 09:30 ET | **BUY** | `UMC` | 133 | $24.93 | $2.39 | — | $6,638.43 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list ohlc_hot; ret5=+8.7; leftover $3318.84 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `NEO` | 166 | $19.92 | $2.49 | — | $3,329.23 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list ohlc_hot; 🔵; ⚪; ret5=+15.0; leftover $3318.84 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `ARLO` | 248 | $13.38 | $3.20 | — | $7.79 | — | union ∩ flow_in, no 🚨; gate flow_in=True; list ohlc_hot; ret5=+7.3; leftover $3318.84 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7.79 | ▼ close $9,917.88 vs 09:30 $9,962.82 (session -30.56) | 16:00 close · cash $7.79 · equity $9,917.88 vs 09:30 $9,962.82 (-44.94; session marks -30.56) · 3 name(s) marked open→close (per-name table). UMC×133 09:30 $24.93 → close $25.43 +66.50; NEO×166 09:30 $19.92 → close $19.41 -84.66; ARLO×248 09:30 $13.38 → close $13.33 -12.40 | — |
 
 ## Not taken
 
@@ -479,6 +479,6 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `UMC` | 133 | 2026-09-21 @ $24.93 | union ∩ flow_in, no 🚨; gate flow_in=True; list ohlc_hot; ret5=+8.7; leftover $3318.80 |
-| `NEO` | 166 | 2026-09-21 @ $19.92 | union ∩ flow_in, no 🚨; gate flow_in=True; list ohlc_hot; 🔵; ⚪; ret5=+15.0; leftover $3318.80 |
-| `ARLO` | 248 | 2026-09-21 @ $13.38 | union ∩ flow_in, no 🚨; gate flow_in=True; list ohlc_hot; ret5=+7.3; leftover $3318.80 |
+| `UMC` | 133 | 2026-09-21 @ $24.93 | union ∩ flow_in, no 🚨; gate flow_in=True; list ohlc_hot; ret5=+8.7; leftover $3318.84 |
+| `NEO` | 166 | 2026-09-21 @ $19.92 | union ∩ flow_in, no 🚨; gate flow_in=True; list ohlc_hot; 🔵; ⚪; ret5=+15.0; leftover $3318.84 |
+| `ARLO` | 248 | 2026-09-21 @ $13.38 | union ∩ flow_in, no 🚨; gate flow_in=True; list ohlc_hot; ret5=+7.3; leftover $3318.84 |

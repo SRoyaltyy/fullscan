@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · flatten looker: 0 red + yesterday up
 
-Cash book **+3.28%** ($10,328) · signal-only (no cash/fees) was -8.60%. Starts YES **17/27**. Fills 50 · skips 103 · realized $-62.52.
+Cash book **+3.27%** ($10,328) · signal-only (no cash/fees) was -9.28%. Starts YES **17/27**. Fills 50 · skips 103 · realized $-62.52.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $0.98.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $0.55.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -217,7 +217,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-18 | `RBRK` | 91 | — | $108.55 | +0.00 | $106.71 | -167.44 | -167.44 | +0.00 | -167.44 |
 | 2026-09-21 | `RBRK` | 91 | $106.71 | $107.57 | +78.26 | $112.96 | +490.49 | +568.75 | -89.18 | +401.31 |
-| 2026-09-21 | `CYPH` | 14 | — | $3.97 | +0.00 | $3.40 | -7.98 | -7.98 | +0.00 | -7.98 |
+| 2026-09-21 | `CYPH` | 14 | — | $4.00 | +0.00 | $3.40 | -8.40 | -8.40 | +0.00 | -8.40 |
 
 ## Each session (cash + holdings state)
 
@@ -249,7 +249,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | +5.30 | $9,937.47 | — | $9,937.47 | -0.00 | +0.00 | — | — | $9,937.47 | $9,937.47 | — |
 | 2026-09-17 | +7.38 | $9,937.47 | — | $9,937.47 | -0.00 | +0.00 | — | — | $9,937.47 | $9,937.47 | — |
 | 2026-09-18 | +4.86 | $9,937.47 | — | $9,937.47 | -0.00 | -167.44 | RBRK | — | $57.15 | $9,767.76 | RBRK×91 |
-| 2026-09-21 | +12.87 | $57.15 | RBRK×91 | $9,846.02 | +78.26 | +482.51 | CYPH | — | $0.98 | $10,327.94 | RBRK×91, CYPH×14 |
+| 2026-09-21 | +12.87 | $57.15 | RBRK×91 | $9,846.02 | +78.26 | +482.09 | CYPH | — | $0.55 | $10,327.51 | RBRK×91, CYPH×14 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -357,8 +357,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 09:30 ET | **BUY** | `RBRK` | 91 | $108.55 | $2.26 | — | $57.15 | — | flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+21.3; leftover $9937.47 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $57.15 | ▼ close $9,767.76 vs 09:30 $9,937.47 (session -167.44) | 16:00 close · cash $57.15 · equity $9,767.76 vs 09:30 $9,937.47 (-169.71; session marks -167.44) · 1 name(s) marked open→close (per-name table). RBRK×91 09:30 $108.55 → close $106.71 -167.44 | — |
 | 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $57.15 | ▲ 09:30 equity $9,846.02 vs yday $9,767.76 (+78.26) | 09:30 open · cash $57.15 (unchanged overnight, no fees) · equity $9,846.02 vs prior close $9,767.76 (+78.26) · 1 name(s) re-marked at the open (per-name table). RBRK×91 yday $106.71 → 09:30 $107.57 +78.26 | — |
-| 2026-09-21 09:30 ET | **BUY** | `CYPH` | 14 | $3.97 | $0.60 | — | $0.98 | — | flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten,yday_gainer,yday_mover; wish-list (live io HOLD — not a ticket); ⚪; ret5=+58.9; leftover $57.15 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.98 | ▲ close $10,327.94 vs 09:30 $9,846.02 (session +482.51) | 16:00 close · cash $0.98 · equity $10,327.94 vs 09:30 $9,846.02 (+481.92; session marks +482.51) · 2 name(s) marked open→close (per-name table). RBRK×91 09:30 $107.57 → close $112.96 +490.49; CYPH×14 09:30 $3.97 → close $3.40 -7.98 | — |
+| 2026-09-21 09:30 ET | **BUY** | `CYPH` | 14 | $4.00 | $0.60 | — | $0.55 | — | flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten,yday_gainer,yday_mover; wish-list (live io HOLD — not a ticket); ⚪; ret5=+58.9; leftover $57.15 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.55 | ▲ close $10,327.51 vs 09:30 $9,846.02 (session +482.09) | 16:00 close · cash $0.55 · equity $10,327.51 vs 09:30 $9,846.02 (+481.49; session marks +482.09) · 2 name(s) marked open→close (per-name table). RBRK×91 09:30 $107.57 → close $112.96 +490.49; CYPH×14 09:30 $4.00 → close $3.40 -8.40 | — |
 
 ## Not taken
 
@@ -473,4 +473,4 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
 | `RBRK` | 91 | 2026-09-18 @ $108.55 | flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+21.3; leftover $9937.47 |
-| `CYPH` | 14 | 2026-09-21 @ $3.97 | flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten,yday_gainer,yday_mover; wish-list (live io HOLD — not a ticket); ⚪; ret5=+58.9; leftover $57.15 |
+| `CYPH` | 14 | 2026-09-21 @ $4.00 | flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten,yday_gainer,yday_mover; wish-list (live io HOLD — not a ticket); ⚪; ret5=+58.9; leftover $57.15 |

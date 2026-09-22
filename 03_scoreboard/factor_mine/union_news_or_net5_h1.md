@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 5
 
-Cash book **-11.86%** ($8,814) · signal-only (no cash/fees) was -4.55%. Starts YES **0/27**. Fills 97 · skips 13 · realized $-865.47.
+Cash book **-11.82%** ($8,818) · signal-only (no cash/fees) was -4.55%. Starts YES **0/27**. Fills 97 · skips 13 · realized $-861.69.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $42.90.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $46.68.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -173,8 +173,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | `BHVN` | 80 | — | $14.07 | +0.00 | $13.62 | -36.00 | -36.00 | +0.00 | -36.00 |
 | 2026-09-21 | `CLS` | 8 | $332.63 | $341.45 | +70.56 | — | +0.00 | +70.56 | +29.60 | — |
 | 2026-09-21 | `GME` | 133 | $22.64 | $22.78 | +18.62 | — | +0.00 | +18.62 | +87.78 | — |
-| 2026-09-21 | `TH` | 53 | $21.19 | $21.55 | +19.08 | — | +0.00 | +19.08 | +33.92 | — |
-| 2026-09-21 | `RARE` | 76 | $14.51 | $14.60 | +6.84 | — | +0.00 | +6.84 | -14.44 | — |
+| 2026-09-21 | `TH` | 53 | $21.19 | $21.65 | +24.38 | — | +0.00 | +24.38 | +39.22 | — |
+| 2026-09-21 | `RARE` | 76 | $14.51 | $14.58 | +5.32 | — | +0.00 | +5.32 | -15.96 | — |
 | 2026-09-21 | `BHVN` | 80 | $13.62 | $13.90 | +22.40 | — | +0.00 | +22.40 | -13.60 | — |
 | 2026-09-21 | `VICR` | 13 | — | $230.25 | +0.00 | $223.90 | -82.55 | -82.55 | +0.00 | -82.55 |
 | 2026-09-21 | `SMTC` | 16 | — | $190.30 | +0.00 | $177.37 | -206.88 | -206.88 | +0.00 | -206.88 |
@@ -210,7 +210,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | +5.30 | $8,989.66 | — | $8,989.66 | -0.00 | -163.89 | WAY, QCOM, SM | — | $191.49 | $8,819.19 | WAY×114, QCOM×15, SM×74 |
 | 2026-09-17 | +7.38 | $191.49 | WAY×114, QCOM×15, SM×74 | $8,849.06 | +29.87 | +148.75 | SMTC, CLS, GME | WAY, QCOM, SM | $287.52 | $8,984.68 | SMTC×17, CLS×8, GME×133 |
 | 2026-09-18 | +4.86 | $287.52 | SMTC×17, CLS×8, GME×133 | $9,089.31 | +104.63 | -72.46 | TH, RARE, BHVN | SMTC | $20.58 | $9,008.17 | CLS×8, GME×133, TH×53, RARE×76, BHVN×80 |
-| 2026-09-21 | +12.87 | $20.58 | CLS×8, GME×133, TH×53, RARE×76, BHVN×80 | $9,145.67 | +137.50 | -309.99 | VICR, SMTC, ALVO | CLS, GME, TH, RARE, BHVN | $42.90 | $8,813.84 | VICR×13, SMTC×16, ALVO×514 |
+| 2026-09-21 | +12.87 | $20.58 | CLS×8, GME×133, TH×53, RARE×76, BHVN×80 | $9,149.45 | +141.28 | -309.99 | VICR, SMTC, ALVO | CLS, GME, TH, RARE, BHVN | $46.68 | $8,817.62 | VICR×13, SMTC×16, ALVO×514 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -357,16 +357,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 09:30 ET | **BUY** | `RARE` | 76 | $14.79 | $2.22 | — | $1,148.41 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate news_or_headline=True,cam_net_min=5; rank cond; list probable,yday_gainer; 🔵; ⚪; ret5=+0.7; leftover $1128.35 | join🟢 sector🟢 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-18 09:30 ET | **BUY** | `BHVN` | 80 | $14.07 | $2.23 | — | $20.58 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate news_or_headline=True,cam_net_min=5; rank cond; list probable,yday_gainer,yday_mover; 🔵; ret5=+8.6; leftover $1128.35 | join🟢 sector🟢 gen🟢 news🟢 digest🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $20.58 | ▼ close $9,008.17 vs 09:30 $9,089.31 (session -72.46) | 16:00 close · cash $20.58 · equity $9,008.17 vs 09:30 $9,089.31 (-81.14; session marks -72.46) · 5 name(s) marked open→close (per-name table). CLS×8 09:30 $332.06 → close $332.63 +4.56; GME×133 09:30 $22.90 → close $22.64 -34.58; TH×53 09:30 $20.91 → close $21.19 +14.84; RARE×76 09:30 $14.79 → close $14.51 -21.28; BHVN×80 09:30 $14.07 → close $13.62 -36.00 | — |
-| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $20.58 | ▲ 09:30 equity $9,145.67 vs yday $9,008.17 (+137.50) | 09:30 open · cash $20.58 (unchanged overnight, no fees) · equity $9,145.67 vs prior close $9,008.17 (+137.50) · 5 name(s) re-marked at the open (per-name table). CLS×8 yday $332.63 → 09:30 $341.45 +70.56; GME×133 yday $22.64 → 09:30 $22.78 +18.62; TH×53 yday $21.19 → 09:30 $21.55 +19.08; RARE×76 yday $14.51 → 09:30 $14.60 +6.84; BHVN×80 yday $13.62 → 09:30 $13.90 +22.40 | — |
-| 2026-09-21 09:30 ET | **SELL** | `CLS` | 8 | $341.45 | $2.05 | $+25.54 | $2,750.14 | ▲ +25.54 after sell → book $9,143.63; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 1) | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
-| 2026-09-21 09:30 ET | **SELL** | `GME` | 133 | $22.78 | $2.44 | $+82.96 | $5,777.44 | ▲ +82.96 after sell → book $9,141.19; vs 09:30 mark -2.44 | dropped from list after 2 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SELL** | `TH` | 53 | $21.55 | $2.17 | $+29.60 | $6,917.42 | ▲ +29.60 after sell → book $9,139.02; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **SELL** | `RARE` | 76 | $14.60 | $2.24 | $-18.90 | $8,024.78 | ▼ -18.90 after sell → book $9,136.78; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SELL** | `BHVN` | 80 | $13.90 | $2.25 | $-18.08 | $9,134.53 | ▼ -18.08 after sell → book $9,134.53; vs 09:30 mark -2.25 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **BUY** | `VICR` | 13 | $230.25 | $2.03 | — | $6,139.25 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate news_or_headline=True,cam_net_min=5; rank cond; list ohlc_hot; ret5=+12.5; leftover $3044.84 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟢 |
-| 2026-09-21 09:30 ET | **BUY** | `SMTC` | 16 | $190.30 | $2.04 | — | $3,092.41 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate news_or_headline=True,cam_net_min=5; rank cond; list ohlc_hot; ret5=+10.6; leftover $3044.84 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `ALVO` | 514 | $5.92 | $6.63 | — | $42.90 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate news_or_headline=True,cam_net_min=5; rank cond; list ohlc_hot; ret5=+11.0; leftover $3044.84 | join🔴 sector🟢 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $42.90 | ▼ close $8,813.84 vs 09:30 $9,145.67 (session -309.99) | 16:00 close · cash $42.90 · equity $8,813.84 vs 09:30 $9,145.67 (-331.83; session marks -309.99) · 3 name(s) marked open→close (per-name table). VICR×13 09:30 $230.25 → close $223.90 -82.55; SMTC×16 09:30 $190.30 → close $177.37 -206.88; ALVO×514 09:30 $5.92 → close $5.88 -20.56 | — |
+| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $20.58 | ▲ 09:30 equity $9,149.45 vs yday $9,008.17 (+141.28) | 09:30 open · cash $20.58 (unchanged overnight, no fees) · equity $9,149.45 vs prior close $9,008.17 (+141.28) · 5 name(s) re-marked at the open (per-name table). CLS×8 yday $332.63 → 09:30 $341.45 +70.56; GME×133 yday $22.64 → 09:30 $22.78 +18.62; TH×53 yday $21.19 → 09:30 $21.65 +24.38; RARE×76 yday $14.51 → 09:30 $14.58 +5.32; BHVN×80 yday $13.62 → 09:30 $13.90 +22.40 | — |
+| 2026-09-21 09:30 ET | **SELL** | `CLS` | 8 | $341.45 | $2.05 | $+25.54 | $2,750.14 | ▲ +25.54 after sell → book $9,147.41; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 1) | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-21 09:30 ET | **SELL** | `GME` | 133 | $22.78 | $2.44 | $+82.96 | $5,777.44 | ▲ +82.96 after sell → book $9,144.97; vs 09:30 mark -2.44 | dropped from list after 2 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `TH` | 53 | $21.65 | $2.17 | $+34.90 | $6,922.72 | ▲ +34.90 after sell → book $9,142.80; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **SELL** | `RARE` | 76 | $14.58 | $2.24 | $-20.42 | $8,028.56 | ▼ -20.42 after sell → book $9,140.56; vs 09:30 mark -2.24 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `BHVN` | 80 | $13.90 | $2.25 | $-18.08 | $9,138.31 | ▼ -18.08 after sell → book $9,138.31; vs 09:30 mark -2.25 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **BUY** | `VICR` | 13 | $230.25 | $2.03 | — | $6,143.03 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate news_or_headline=True,cam_net_min=5; rank cond; list ohlc_hot; ret5=+12.5; leftover $3046.10 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟢 |
+| 2026-09-21 09:30 ET | **BUY** | `SMTC` | 16 | $190.30 | $2.04 | — | $3,096.19 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate news_or_headline=True,cam_net_min=5; rank cond; list ohlc_hot; ret5=+10.6; leftover $3046.10 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `ALVO` | 514 | $5.92 | $6.63 | — | $46.68 | — | packet🟢 OR headline🟢 and camera net ≥ 5; gate news_or_headline=True,cam_net_min=5; rank cond; list ohlc_hot; ret5=+11.0; leftover $3046.10 | join🔴 sector🟢 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $46.68 | ▼ close $8,817.62 vs 09:30 $9,149.45 (session -309.99) | 16:00 close · cash $46.68 · equity $8,817.62 vs 09:30 $9,149.45 (-331.83; session marks -309.99) · 3 name(s) marked open→close (per-name table). VICR×13 09:30 $230.25 → close $223.90 -82.55; SMTC×16 09:30 $190.30 → close $177.37 -206.88; ALVO×514 09:30 $5.92 → close $5.88 -20.56 | — |
 
 ## Not taken
 
@@ -390,6 +390,6 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `VICR` | 13 | 2026-09-21 @ $230.25 | packet🟢 OR headline🟢 and camera net ≥ 5; gate news_or_headline=True,cam_net_min=5; rank cond; list ohlc_hot; ret5=+12.5; leftover $3044.84 |
-| `SMTC` | 16 | 2026-09-21 @ $190.30 | packet🟢 OR headline🟢 and camera net ≥ 5; gate news_or_headline=True,cam_net_min=5; rank cond; list ohlc_hot; ret5=+10.6; leftover $3044.84 |
-| `ALVO` | 514 | 2026-09-21 @ $5.92 | packet🟢 OR headline🟢 and camera net ≥ 5; gate news_or_headline=True,cam_net_min=5; rank cond; list ohlc_hot; ret5=+11.0; leftover $3044.84 |
+| `VICR` | 13 | 2026-09-21 @ $230.25 | packet🟢 OR headline🟢 and camera net ≥ 5; gate news_or_headline=True,cam_net_min=5; rank cond; list ohlc_hot; ret5=+12.5; leftover $3046.10 |
+| `SMTC` | 16 | 2026-09-21 @ $190.30 | packet🟢 OR headline🟢 and camera net ≥ 5; gate news_or_headline=True,cam_net_min=5; rank cond; list ohlc_hot; ret5=+10.6; leftover $3046.10 |
+| `ALVO` | 514 | 2026-09-21 @ $5.92 | packet🟢 OR headline🟢 and camera net ≥ 5; gate news_or_headline=True,cam_net_min=5; rank cond; list ohlc_hot; ret5=+11.0; leftover $3046.10 |

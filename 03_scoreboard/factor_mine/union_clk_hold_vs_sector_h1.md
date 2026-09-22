@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #6 stock holds while sector camera is red
 
-Cash book **+2.03%** ($10,203) · signal-only (no cash/fees) was -3.90%. Starts YES **25/27**. Fills 180 · skips 80 · realized $+162.00.
+Cash book **+1.98%** ($10,198) · signal-only (no cash/fees) was -3.94%. Starts YES **25/27**. Fills 180 · skips 80 · realized $+162.00.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $572.76.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $567.95.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -252,10 +252,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | `FLNC` | 311 | $7.32 | $7.36 | +12.44 | — | +0.00 | +12.44 | -54.42 | — |
 | 2026-09-21 | `MSTR` | 7 | — | $164.58 | +0.00 | $168.50 | +27.44 | +27.44 | +0.00 | +27.44 |
 | 2026-09-21 | `VICR` | 5 | — | $230.25 | +0.00 | $223.90 | -31.75 | -31.75 | +0.00 | -31.75 |
-| 2026-09-21 | `KEEL` | 304 | — | $4.17 | +0.00 | $4.07 | -30.40 | -30.40 | +0.00 | -30.40 |
+| 2026-09-21 | `KEEL` | 304 | — | $4.17 | +0.00 | $4.07 | -31.92 | -31.92 | +0.00 | -31.92 |
 | 2026-09-21 | `SECZ` | 108 | — | $11.67 | +0.00 | $13.50 | +197.64 | +197.64 | +0.00 | +197.64 |
 | 2026-09-21 | `BKKT` | 136 | — | $9.31 | +0.00 | $9.14 | -23.12 | -23.12 | +0.00 | -23.12 |
-| 2026-09-21 | `BTDR` | 94 | — | $13.44 | +0.00 | $13.14 | -28.20 | -28.20 | +0.00 | -28.20 |
+| 2026-09-21 | `BTDR` | 94 | — | $13.47 | +0.00 | $13.14 | -31.49 | -31.49 | +0.00 | -31.49 |
 | 2026-09-21 | `COHR` | 3 | — | $326.48 | +0.00 | $321.52 | -14.88 | -14.88 | +0.00 | -14.88 |
 | 2026-09-21 | `FORM` | 10 | — | $123.00 | +0.00 | $119.31 | -36.90 | -36.90 | +0.00 | -36.90 |
 
@@ -289,7 +289,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | +5.30 | $9,672.65 | — | $9,672.65 | +0.00 | -246.77 | SM, TALO, APA, CVI, RIG, VAL, FRO, GFR | — | $120.00 | $9,408.23 | SM×30, TALO×67, APA×26, CVI×23, RIG×205, VAL×13, FRO×23, GFR×177 |
 | 2026-09-17 | +7.38 | $120.00 | SM×30, TALO×67, APA×26, CVI×23, RIG×205, VAL×13, FRO×23, GFR×177 | $9,374.04 | -34.19 | -7.19 | SFL, FTAI, FPS, VSTS, ARLO, CECO, EROC, AESI | SM, TALO, APA, CVI, RIG, VAL, FRO, GFR | $235.82 | $9,331.62 | SFL×86, FTAI×5, FPS×31, VSTS×84, ARLO×85, CECO×16, EROC×92, AESI×85 |
 | 2026-09-18 | +4.86 | $235.82 | SFL×86, FTAI×5, FPS×31, VSTS×84, ARLO×85, CECO×16, EROC×92, AESI×85 | $9,393.25 | +61.63 | -1.38 | PURR, ARE, USDE, FLNC | SFL, FTAI, FPS, VSTS, ARLO, CECO, EROC, AESI | $22.95 | $9,362.53 | PURR×169, ARE×41, USDE×245, FLNC×311 |
-| 2026-09-21 | +12.87 | $22.95 | PURR×169, ARE×41, USDE×245, FLNC×311 | $10,174.00 | +811.47 | +59.83 | MSTR, VICR, KEEL, SECZ, BKKT, BTDR, COHR, FORM | PURR, ARE, USDE, FLNC | $572.76 | $10,202.90 | MSTR×7, VICR×5, KEEL×304, SECZ×108, BKKT×136, BTDR×94, COHR×3, FORM×10 |
+| 2026-09-21 | +12.87 | $22.95 | PURR×169, ARE×41, USDE×245, FLNC×311 | $10,174.00 | +811.47 | +55.02 | MSTR, VICR, KEEL, SECZ, BKKT, BTDR, COHR, FORM | PURR, ARE, USDE, FLNC | $567.95 | $10,198.09 | MSTR×7, VICR×5, KEEL×304, SECZ×108, BKKT×136, BTDR×94, COHR×3, FORM×10 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -522,13 +522,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 09:30 ET | **SELL** | `FLNC` | 311 | $7.36 | $4.08 | $-62.52 | $10,162.01 | ▼ -62.52 after sell → book $10,162.01; vs 09:30 mark -4.08 | dropped from list after 1 sess (min 1) | — |
 | 2026-09-21 09:30 ET | **BUY** | `MSTR` | 7 | $164.58 | $2.01 | — | $9,007.94 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer,yday_mover,ohlc_hot; ret5=+17.5; leftover $1270.25 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-21 09:30 ET | **BUY** | `VICR` | 5 | $230.25 | $2.00 | — | $7,854.68 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+12.5; leftover $1270.25 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟢 |
-| 2026-09-21 09:30 ET | **BUY** | `KEEL` | 304 | $4.17 | $3.92 | — | $6,583.08 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer; ret5=+18.4; leftover $1270.25 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `SECZ` | 108 | $11.67 | $2.31 | — | $5,320.41 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer,yday_mover; ret5=+31.3; leftover $1270.25 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `BKKT` | 136 | $9.31 | $2.40 | — | $4,051.85 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list probable,yday_gainer,yday_mover; ret5=-2.4; leftover $1270.25 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `BTDR` | 94 | $13.44 | $2.27 | — | $2,786.22 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+8.4; leftover $1270.25 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `COHR` | 3 | $326.48 | $2.00 | — | $1,804.78 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+3.9; leftover $1270.25 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `FORM` | 10 | $123.00 | $2.02 | — | $572.76 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+3.0; leftover $1270.25 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $572.76 | ▲ close $10,202.90 vs 09:30 $10,174.00 (session +59.83) | 16:00 close · cash $572.76 · equity $10,202.90 vs 09:30 $10,174.00 (+28.90; session marks +59.83) · 8 name(s) marked open→close (per-name table). MSTR×7 09:30 $164.58 → close $168.50 +27.44; VICR×5 09:30 $230.25 → close $223.90 -31.75; KEEL×304 09:30 $4.17 → close $4.07 -30.40; SECZ×108 09:30 $11.67 → close $13.50 +197.64; BKKT×136 09:30 $9.31 → close $9.14 -23.12; BTDR×94 09:30 $13.44 → close $13.14 -28.20; COHR×3 09:30 $326.48 → close $321.52 -14.88; FORM×10 09:30 $123.00 → close $119.31 -36.90 | — |
+| 2026-09-21 09:30 ET | **BUY** | `KEEL` | 304 | $4.17 | $3.92 | — | $6,581.56 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer; ret5=+18.4; leftover $1270.25 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `SECZ` | 108 | $11.67 | $2.31 | — | $5,318.89 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer,yday_mover; ret5=+31.3; leftover $1270.25 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `BKKT` | 136 | $9.31 | $2.40 | — | $4,050.33 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list probable,yday_gainer,yday_mover; ret5=-2.4; leftover $1270.25 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `BTDR` | 94 | $13.47 | $2.27 | — | $2,781.41 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+8.4; leftover $1270.25 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `COHR` | 3 | $326.48 | $2.00 | — | $1,799.97 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+3.9; leftover $1270.25 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `FORM` | 10 | $123.00 | $2.02 | — | $567.95 | — | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+3.0; leftover $1270.25 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $567.95 | ▲ close $10,198.09 vs 09:30 $10,174.00 (session +55.02) | 16:00 close · cash $567.95 · equity $10,198.09 vs 09:30 $10,174.00 (+24.09; session marks +55.02) · 8 name(s) marked open→close (per-name table). MSTR×7 09:30 $164.58 → close $168.50 +27.44; VICR×5 09:30 $230.25 → close $223.90 -31.75; KEEL×304 09:30 $4.17 → close $4.07 -31.92; SECZ×108 09:30 $11.67 → close $13.50 +197.64; BKKT×136 09:30 $9.31 → close $9.14 -23.12; BTDR×94 09:30 $13.47 → close $13.14 -31.49; COHR×3 09:30 $326.48 → close $321.52 -14.88; FORM×10 09:30 $123.00 → close $119.31 -36.90 | — |
 
 ## Not taken
 
@@ -624,6 +624,6 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | `KEEL` | 304 | 2026-09-21 @ $4.17 | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer; ret5=+18.4; leftover $1270.25 |
 | `SECZ` | 108 | 2026-09-21 @ $11.67 | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list yday_gainer,yday_mover; ret5=+31.3; leftover $1270.25 |
 | `BKKT` | 136 | 2026-09-21 @ $9.31 | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list probable,yday_gainer,yday_mover; ret5=-2.4; leftover $1270.25 |
-| `BTDR` | 94 | 2026-09-21 @ $13.44 | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+8.4; leftover $1270.25 |
+| `BTDR` | 94 | 2026-09-21 @ $13.47 | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+8.4; leftover $1270.25 |
 | `COHR` | 3 | 2026-09-21 @ $326.48 | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+3.9; leftover $1270.25 |
 | `FORM` | 10 | 2026-09-21 @ $123.00 | Clock-B #6 stock holds while sector camera is red; gate clk_hold_vs_sector=True; rank cond; list ohlc_hot; ret5=+3.0; leftover $1270.25 |

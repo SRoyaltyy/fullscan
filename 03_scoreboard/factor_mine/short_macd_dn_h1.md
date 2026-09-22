@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · MACD histogram < 0
 
-Cash book **-8.82%** ($9,118) · signal-only (no cash/fees) was -3.45%. Starts YES **2/27**. Fills 224 · skips 89 · realized $-886.84.
+Cash book **-8.78%** ($9,122) · signal-only (no cash/fees) was -3.36%. Starts YES **2/27**. Fills 224 · skips 89 · realized $-887.73.
 
 ## How this sleeve decides (like you are 10)
 
@@ -52,7 +52,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $13,347.34.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $13,347.07.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -283,22 +283,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | `RARE` | 38 | — | $14.79 | +0.00 | $14.51 | +10.64 | +10.64 | -0.00 | +10.64 |
 | 2026-09-18 | `DCX` | 1593 | — | $0.35 | +0.00 | $0.13 | +352.05 | +352.05 | -0.00 | +352.05 |
 | 2026-09-18 | `USDE` | 59 | — | $9.54 | +0.00 | $10.19 | -38.35 | -38.35 | -0.00 | -38.35 |
-| 2026-09-21 | `FIVN` | 16 | $32.47 | $32.98 | -8.16 | — | +0.00 | -8.16 | +23.36 | — |
+| 2026-09-21 | `FIVN` | 16 | $32.47 | $33.00 | -8.48 | — | +0.00 | -8.48 | +23.04 | — |
 | 2026-09-21 | `TLSA` | 581 | $0.91 | $0.94 | -17.43 | — | +0.00 | -17.43 | +17.43 | — |
 | 2026-09-21 | `BHVN` | 40 | $13.62 | $13.90 | -11.20 | — | +0.00 | -11.20 | +6.80 | — |
 | 2026-09-21 | `DDD` | 157 | $3.63 | $3.71 | -12.56 | — | +0.00 | -12.56 | -20.41 | — |
-| 2026-09-21 | `RANI` | 663 | $0.86 | $0.86 | -1.59 | — | +0.00 | -1.59 | -9.55 | — |
-| 2026-09-21 | `RARE` | 38 | $14.51 | $14.60 | -3.42 | — | +0.00 | -3.42 | +7.22 | — |
-| 2026-09-21 | `DCX` | 1593 | $0.13 | $0.14 | -11.15 | — | +0.00 | -11.15 | +340.90 | — |
+| 2026-09-21 | `RANI` | 663 | $0.86 | $0.86 | -1.33 | — | +0.00 | -1.33 | -9.28 | — |
+| 2026-09-21 | `RARE` | 38 | $14.51 | $14.58 | -2.66 | — | +0.00 | -2.66 | +7.98 | — |
+| 2026-09-21 | `DCX` | 1593 | $0.13 | $0.14 | -12.74 | — | +0.00 | -12.74 | +339.31 | — |
 | 2026-09-21 | `USDE` | 59 | $10.19 | $13.05 | -168.74 | — | +0.00 | -168.74 | -207.09 | — |
 | 2026-09-21 | `A` | 3 | — | $157.87 | +0.00 | $161.94 | -12.21 | -12.21 | -0.00 | -12.21 |
-| 2026-09-21 | `DXCM` | 6 | — | $88.89 | +0.00 | $89.17 | -1.67 | -1.67 | -0.00 | -1.67 |
+| 2026-09-21 | `DXCM` | 6 | — | $88.83 | +0.00 | $89.17 | -2.04 | -2.04 | -0.00 | -2.04 |
 | 2026-09-21 | `MGTX` | 42 | — | $13.47 | +0.00 | $13.08 | +16.38 | +16.38 | -0.00 | +16.38 |
 | 2026-09-21 | `FEAM` | 230 | — | $2.47 | +0.00 | $2.48 | -2.30 | -2.30 | -0.00 | -2.30 |
-| 2026-09-21 | `ORBS` | 517 | — | $1.10 | +0.00 | $1.05 | +25.85 | +25.85 | -0.00 | +25.85 |
+| 2026-09-21 | `ORBS` | 513 | — | $1.11 | +0.00 | $1.05 | +30.78 | +30.78 | -0.00 | +30.78 |
 | 2026-09-21 | `SBET` | 57 | — | $9.99 | +0.00 | $9.98 | +0.57 | +0.57 | -0.00 | +0.57 |
-| 2026-09-21 | `SGML` | 56 | — | $10.12 | +0.00 | $10.27 | -8.40 | -8.40 | -0.00 | -8.40 |
-| 2026-09-21 | `COIN` | 2 | — | $205.50 | +0.00 | $201.05 | +8.90 | +8.90 | -0.00 | +8.90 |
+| 2026-09-21 | `SGML` | 56 | — | $10.13 | +0.00 | $10.27 | -7.56 | -7.56 | -0.00 | -7.56 |
+| 2026-09-21 | `COIN` | 2 | — | $205.19 | +0.00 | $201.05 | +8.28 | +8.28 | -0.00 | +8.28 |
 
 ## Each session (cash + holdings state)
 
@@ -330,7 +330,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | +5.30 | $9,444.02 | — | $9,444.02 | +0.00 | -91.54 | IQV, RDNT, AVAH, BLFS, BBNX, ARQQ, TEM, RIG | — | $13,975.74 | $9,335.56 | IQV×2, RDNT×7, AVAH×41, BLFS×16, BBNX×31, ARQQ×32, TEM×8, RIG×100 |
 | 2026-09-17 | +7.38 | $13,975.74 | IQV×2, RDNT×7, AVAH×41, BLFS×16, BBNX×31, ARQQ×32, TEM×8, RIG×100 | $9,257.37 | -78.19 | -37.79 | ILMN, TWST, PGEN, DVLT, BRUN, AXTI, EROC | IQV, RDNT, AVAH, BLFS, ARQQ, TEM, RIG | $14,212.82 | $9,173.36 | BBNX×31, ILMN×2, TWST×4, PGEN×86, DVLT×3883, BRUN×41, AXTI×9, EROC×52 |
 | 2026-09-18 | +4.86 | $14,212.82 | BBNX×31, ILMN×2, TWST×4, PGEN×86, DVLT×3883, BRUN×41, AXTI×9, EROC×52 | $9,057.19 | -116.17 | +392.91 | FIVN, TLSA, BHVN, DDD, RANI, RARE, DCX, USDE | BBNX, ILMN, TWST, PGEN, DVLT, BRUN, AXTI, EROC | $13,479.12 | $9,380.21 | FIVN×16, TLSA×581, BHVN×40, DDD×157, RANI×663, RARE×38, DCX×1593, USDE×59 |
-| 2026-09-21 | +12.87 | $13,479.12 | FIVN×16, TLSA×581, BHVN×40, DDD×157, RANI×663, RARE×38, DCX×1593, USDE×59 | $9,145.96 | -234.25 | +27.12 | A, DXCM, MGTX, FEAM, ORBS, SBET, SGML, COIN | FIVN, TLSA, BHVN, DDD, RANI, RARE, DCX, USDE | $13,347.34 | $9,117.81 | A×3, DXCM×6, MGTX×42, FEAM×230, ORBS×517, SBET×57, SGML×56, COIN×2 |
+| 2026-09-21 | +12.87 | $13,479.12 | FIVN×16, TLSA×581, BHVN×40, DDD×157, RANI×663, RARE×38, DCX×1593, USDE×59 | $9,145.07 | -235.14 | +31.90 | A, DXCM, MGTX, FEAM, ORBS, SBET, SGML, COIN | FIVN, TLSA, BHVN, DDD, RANI, RARE, DCX, USDE | $13,347.07 | $9,121.74 | A×3, DXCM×6, MGTX×42, FEAM×230, ORBS×513, SBET×57, SGML×56, COIN×2 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -596,24 +596,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 09:30 ET | **SHORT** | `DCX` | 1593 | $0.35 | $10.71 | — | $12,918.46 | — | MACD histogram < 0; gate macd_down=True; list yday_gainer,yday_mover; 🔵; ret5=-19.7; leftover $564.02 | join🟡 sector🟢 gen🟢 news🟡 digest🟡 ab🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-09-18 09:30 ET | **SHORT** | `USDE` | 59 | $9.54 | $2.20 | — | $13,479.12 | — | MACD histogram < 0; gate macd_down=True; list yday_gainer,yday_mover; ret5=+15.8; leftover $564.02 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,479.12 | ▲ close $9,380.21 vs 09:30 $9,057.19 (session +392.91) | 16:00 close · cash $13,479.12 · equity $9,380.21 vs 09:30 $9,057.19 (+323.02; session marks +392.91) · 8 name(s) marked open→close (per-name table). FIVN×16 09:30 $34.44 → close $32.47 +31.52; TLSA×581 09:30 $0.97 → close $0.91 +34.86; BHVN×40 09:30 $14.07 → close $13.62 +18.00; DDD×157 09:30 $3.58 → close $3.63 -7.85; RANI×663 09:30 $0.85 → close $0.86 -7.96; RARE×38 09:30 $14.79 → close $14.51 +10.64; DCX×1593 09:30 $0.35 → close $0.13 +352.05; USDE×59 09:30 $9.54 → close $10.19 -38.35 | — |
-| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,479.12 | ▼ 09:30 equity $9,145.96 vs yday $9,380.21 (-234.25) | 09:30 open · cash $13,479.12 (unchanged overnight, no fees) · equity $9,145.96 vs prior close $9,380.21 (-234.25) · 8 name(s) re-marked at the open (per-name table). FIVN×16 yday $32.47 → 09:30 $32.98 -8.16; TLSA×581 yday $0.91 → 09:30 $0.94 -17.43; BHVN×40 yday $13.62 → 09:30 $13.90 -11.20; DDD×157 yday $3.63 → 09:30 $3.71 -12.56; RANI×663 yday $0.86 → 09:30 $0.86 -1.59; RARE×38 yday $14.51 → 09:30 $14.60 -3.42; DCX×1593 yday $0.13 → 09:30 $0.14 -11.15; USDE×59 yday $10.19 → 09:30 $13.05 -168.74 | — |
-| 2026-09-21 09:30 ET | **COVER** | `FIVN` | 16 | $32.98 | $2.04 | $+19.25 | $12,949.40 | ▲ +19.25 after sell → book $9,143.92; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **COVER** | `TLSA` | 581 | $0.94 | $7.20 | $+2.73 | $12,396.06 | ▲ +2.73 after sell → book $9,136.72; vs 09:30 mark -7.20 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **COVER** | `BHVN` | 40 | $13.90 | $2.11 | $+2.54 | $11,837.95 | ▲ +2.54 after sell → book $9,134.61; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **COVER** | `DDD` | 157 | $3.71 | $2.46 | $-25.38 | $11,253.01 | ▼ -25.38 after sell → book $9,132.15; vs 09:30 mark -2.46 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **COVER** | `RANI` | 663 | $0.86 | $7.72 | $-25.03 | $10,672.20 | ▼ -25.03 after sell → book $9,124.43; vs 09:30 mark -7.72 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **COVER** | `RARE` | 38 | $14.60 | $2.10 | $+2.98 | $10,115.29 | ▲ +2.98 after sell → book $9,122.32; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **COVER** | `DCX` | 1593 | $0.14 | $7.01 | $+323.18 | $9,885.26 | ▲ +323.18 after sell → book $9,115.31; vs 09:30 mark -7.01 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **COVER** | `USDE` | 59 | $13.05 | $2.17 | $-211.46 | $9,113.15 | ▼ -211.46 after sell → book $9,113.15; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **SHORT** | `A` | 3 | $157.87 | $2.03 | — | $9,584.73 | — | MACD histogram < 0; gate macd_down=True; list flatten; 🔵; ⚪; ret5=-4.4; leftover $569.57 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **SHORT** | `DXCM` | 6 | $88.89 | $2.04 | — | $10,116.03 | — | MACD histogram < 0; gate macd_down=True; list flatten; 🔵; ⚪; ret5=-7.2; leftover $569.57 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **SHORT** | `MGTX` | 42 | $13.47 | $2.15 | — | $10,679.62 | — | MACD histogram < 0; gate macd_down=True; list flatten; ⚪; ret5=-8.4; leftover $569.57 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-21 09:30 ET | **SHORT** | `FEAM` | 230 | $2.47 | $3.03 | — | $11,244.69 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; ret5=-3.8; leftover $569.57 | join🔴 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **SHORT** | `ORBS` | 517 | $1.10 | $6.78 | — | $11,806.61 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; ret5=+6.9; leftover $569.57 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
-| 2026-09-21 09:30 ET | **SHORT** | `SBET` | 57 | $9.99 | $2.20 | — | $12,373.84 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; 🔵; ret5=+5.3; leftover $569.57 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **SHORT** | `SGML` | 56 | $10.12 | $2.19 | — | $12,938.37 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; ret5=-25.6; leftover $569.57 | join🔴 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **SHORT** | `COIN` | 2 | $205.50 | $2.03 | — | $13,347.34 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; 🔵; ret5=-9.1; leftover $569.57 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,347.34 | ▲ close $9,117.81 vs 09:30 $9,145.96 (session +27.12) | 16:00 close · cash $13,347.34 · equity $9,117.81 vs 09:30 $9,145.96 (-28.15; session marks +27.12) · 8 name(s) marked open→close (per-name table). A×3 09:30 $157.87 → close $161.94 -12.21; DXCM×6 09:30 $88.89 → close $89.17 -1.67; MGTX×42 09:30 $13.47 → close $13.08 +16.38; FEAM×230 09:30 $2.47 → close $2.48 -2.30; ORBS×517 09:30 $1.10 → close $1.05 +25.85; SBET×57 09:30 $9.99 → close $9.98 +0.57; SGML×56 09:30 $10.12 → close $10.27 -8.40; COIN×2 09:30 $205.50 → close $201.05 +8.90 | — |
+| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13,479.12 | ▼ 09:30 equity $9,145.07 vs yday $9,380.21 (-235.14) | 09:30 open · cash $13,479.12 (unchanged overnight, no fees) · equity $9,145.07 vs prior close $9,380.21 (-235.14) · 8 name(s) re-marked at the open (per-name table). FIVN×16 yday $32.47 → 09:30 $33.00 -8.48; TLSA×581 yday $0.91 → 09:30 $0.94 -17.43; BHVN×40 yday $13.62 → 09:30 $13.90 -11.20; DDD×157 yday $3.63 → 09:30 $3.71 -12.56; RANI×663 yday $0.86 → 09:30 $0.86 -1.33; RARE×38 yday $14.51 → 09:30 $14.58 -2.66; DCX×1593 yday $0.13 → 09:30 $0.14 -12.74; USDE×59 yday $10.19 → 09:30 $13.05 -168.74 | — |
+| 2026-09-21 09:30 ET | **COVER** | `FIVN` | 16 | $33.00 | $2.04 | $+18.93 | $12,949.08 | ▲ +18.93 after sell → book $9,143.03; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **COVER** | `TLSA` | 581 | $0.94 | $7.20 | $+2.73 | $12,395.74 | ▲ +2.73 after sell → book $9,135.83; vs 09:30 mark -7.20 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **COVER** | `BHVN` | 40 | $13.90 | $2.11 | $+2.54 | $11,837.63 | ▲ +2.54 after sell → book $9,133.72; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **COVER** | `DDD` | 157 | $3.71 | $2.46 | $-25.38 | $11,252.69 | ▼ -25.38 after sell → book $9,131.26; vs 09:30 mark -2.46 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **COVER** | `RANI` | 663 | $0.86 | $7.72 | $-24.76 | $10,672.15 | ▼ -24.76 after sell → book $9,123.54; vs 09:30 mark -7.72 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **COVER** | `RARE` | 38 | $14.58 | $2.10 | $+3.74 | $10,116.00 | ▲ +3.74 after sell → book $9,121.44; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **COVER** | `DCX` | 1593 | $0.14 | $7.03 | $+321.58 | $9,884.36 | ▲ +321.58 after sell → book $9,114.41; vs 09:30 mark -7.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **COVER** | `USDE` | 59 | $13.05 | $2.17 | $-211.46 | $9,112.25 | ▼ -211.46 after sell → book $9,112.25; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **SHORT** | `A` | 3 | $157.87 | $2.03 | — | $9,583.82 | — | MACD histogram < 0; gate macd_down=True; list flatten; 🔵; ⚪; ret5=-4.4; leftover $569.52 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **SHORT** | `DXCM` | 6 | $88.83 | $2.04 | — | $10,114.76 | — | MACD histogram < 0; gate macd_down=True; list flatten; 🔵; ⚪; ret5=-7.2; leftover $569.52 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **SHORT** | `MGTX` | 42 | $13.47 | $2.15 | — | $10,678.35 | — | MACD histogram < 0; gate macd_down=True; list flatten; ⚪; ret5=-8.4; leftover $569.52 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-21 09:30 ET | **SHORT** | `FEAM` | 230 | $2.47 | $3.03 | — | $11,243.42 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; ret5=-3.8; leftover $569.52 | join🔴 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **SHORT** | `ORBS` | 513 | $1.11 | $6.73 | — | $11,806.12 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; ret5=+6.9; leftover $569.52 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-21 09:30 ET | **SHORT** | `SBET` | 57 | $9.99 | $2.20 | — | $12,373.35 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; 🔵; ret5=+5.3; leftover $569.52 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **SHORT** | `SGML` | 56 | $10.13 | $2.19 | — | $12,938.72 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; ret5=-25.6; leftover $569.52 | join🔴 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **SHORT** | `COIN` | 2 | $205.19 | $2.03 | — | $13,347.07 | — | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; 🔵; ret5=-9.1; leftover $569.52 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,347.07 | ▲ close $9,121.74 vs 09:30 $9,145.07 (session +31.90) | 16:00 close · cash $13,347.07 · equity $9,121.74 vs 09:30 $9,145.07 (-23.33; session marks +31.90) · 8 name(s) marked open→close (per-name table). A×3 09:30 $157.87 → close $161.94 -12.21; DXCM×6 09:30 $88.83 → close $89.17 -2.04; MGTX×42 09:30 $13.47 → close $13.08 +16.38; FEAM×230 09:30 $2.47 → close $2.48 -2.30; ORBS×513 09:30 $1.11 → close $1.05 +30.78; SBET×57 09:30 $9.99 → close $9.98 +0.57; SGML×56 09:30 $10.13 → close $10.27 -7.56; COIN×2 09:30 $205.19 → close $201.05 +8.28 | — |
 
 ## Not taken
 
@@ -713,11 +713,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `A` | 3 | 2026-09-21 @ $157.87 | MACD histogram < 0; gate macd_down=True; list flatten; 🔵; ⚪; ret5=-4.4; leftover $569.57 |
-| `DXCM` | 6 | 2026-09-21 @ $88.89 | MACD histogram < 0; gate macd_down=True; list flatten; 🔵; ⚪; ret5=-7.2; leftover $569.57 |
-| `MGTX` | 42 | 2026-09-21 @ $13.47 | MACD histogram < 0; gate macd_down=True; list flatten; ⚪; ret5=-8.4; leftover $569.57 |
-| `FEAM` | 230 | 2026-09-21 @ $2.47 | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; ret5=-3.8; leftover $569.57 |
-| `ORBS` | 517 | 2026-09-21 @ $1.10 | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; ret5=+6.9; leftover $569.57 |
-| `SBET` | 57 | 2026-09-21 @ $9.99 | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; 🔵; ret5=+5.3; leftover $569.57 |
-| `SGML` | 56 | 2026-09-21 @ $10.12 | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; ret5=-25.6; leftover $569.57 |
-| `COIN` | 2 | 2026-09-21 @ $205.50 | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; 🔵; ret5=-9.1; leftover $569.57 |
+| `A` | 3 | 2026-09-21 @ $157.87 | MACD histogram < 0; gate macd_down=True; list flatten; 🔵; ⚪; ret5=-4.4; leftover $569.52 |
+| `DXCM` | 6 | 2026-09-21 @ $88.83 | MACD histogram < 0; gate macd_down=True; list flatten; 🔵; ⚪; ret5=-7.2; leftover $569.52 |
+| `MGTX` | 42 | 2026-09-21 @ $13.47 | MACD histogram < 0; gate macd_down=True; list flatten; ⚪; ret5=-8.4; leftover $569.52 |
+| `FEAM` | 230 | 2026-09-21 @ $2.47 | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; ret5=-3.8; leftover $569.52 |
+| `ORBS` | 513 | 2026-09-21 @ $1.11 | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer,yday_mover; ret5=+6.9; leftover $569.52 |
+| `SBET` | 57 | 2026-09-21 @ $9.99 | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; 🔵; ret5=+5.3; leftover $569.52 |
+| `SGML` | 56 | 2026-09-21 @ $10.13 | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; ret5=-25.6; leftover $569.52 |
+| `COIN` | 2 | 2026-09-21 @ $205.19 | MACD histogram < 0; gate macd_down=True; list probable,yday_gainer; 🔵; ret5=-9.1; leftover $569.52 |

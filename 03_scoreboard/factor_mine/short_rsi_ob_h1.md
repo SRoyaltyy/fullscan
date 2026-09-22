@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · RSI overbought
 
-Cash book **-13.10%** ($8,690) · signal-only (no cash/fees) was -14.24%. Starts YES **1/27**. Fills 202 · skips 81 · realized $-1119.90.
+Cash book **-13.33%** ($8,667) · signal-only (no cash/fees) was -14.18%. Starts YES **1/27**. Fills 202 · skips 81 · realized $-1142.40.
 
 ## How this sleeve decides (like you are 10)
 
@@ -52,7 +52,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $13,987.77.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $13,962.81.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -276,15 +276,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | `TEM` | 10 | — | $81.40 | +0.00 | $77.84 | +35.60 | +35.60 | -0.00 | +35.60 |
 | 2026-09-18 | `CHPT` | 88 | — | $10.00 | +0.00 | $10.32 | -28.16 | -28.16 | -0.00 | -28.16 |
 | 2026-09-21 | `INDP` | 215 | $3.55 | $3.55 | +0.00 | — | +0.00 | +0.00 | -182.75 | — |
-| 2026-09-21 | `BRR` | 270 | $3.76 | $3.85 | -24.30 | — | +0.00 | -24.30 | -137.70 | — |
+| 2026-09-21 | `BRR` | 270 | $3.76 | $3.93 | -45.90 | — | +0.00 | -45.90 | -159.30 | — |
 | 2026-09-21 | `CVI` | 17 | $53.69 | $53.19 | +8.50 | — | +0.00 | +8.50 | -22.27 | — |
 | 2026-09-21 | `ECO` | 10 | $84.95 | $82.83 | +21.20 | — | +0.00 | +21.20 | +21.70 | — |
 | 2026-09-21 | `SDGR` | 30 | $29.02 | $29.43 | -12.30 | — | +0.00 | -12.30 | -3.30 | — |
-| 2026-09-21 | `CYPH` | 292 | $3.60 | $3.97 | -108.04 | $3.40 | +166.44 | +58.40 | -273.02 | -106.58 |
-| 2026-09-21 | `TEM` | 10 | $77.84 | $78.99 | -11.50 | — | +0.00 | -11.50 | +24.10 | — |
+| 2026-09-21 | `CYPH` | 292 | $3.60 | $4.00 | -116.80 | $3.40 | +175.20 | +58.40 | -281.78 | -106.58 |
+| 2026-09-21 | `TEM` | 10 | $77.84 | $79.08 | -12.40 | — | +0.00 | -12.40 | +23.20 | — |
 | 2026-09-21 | `CHPT` | 88 | $10.32 | $10.32 | +0.00 | — | +0.00 | +0.00 | -28.16 | — |
 | 2026-09-21 | `IOVA` | 58 | — | $10.43 | +0.00 | $10.19 | +13.92 | +13.92 | -0.00 | +13.92 |
-| 2026-09-21 | `FEAM` | 248 | — | $2.47 | +0.00 | $2.48 | -2.48 | -2.48 | -0.00 | -2.48 |
+| 2026-09-21 | `FEAM` | 247 | — | $2.47 | +0.00 | $2.48 | -2.47 | -2.47 | -0.00 | -2.47 |
 | 2026-09-21 | `TJGC` | 36 | — | $16.91 | +0.00 | $17.58 | -24.12 | -24.12 | -0.00 | -24.12 |
 | 2026-09-21 | `SECZ` | 52 | — | $11.67 | +0.00 | $13.50 | -95.16 | -95.16 | -0.00 | -95.16 |
 | 2026-09-21 | `NEO` | 30 | — | $19.92 | +0.00 | $19.41 | +15.30 | +15.30 | -0.00 | +15.30 |
@@ -321,7 +321,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | +5.30 | $9,893.48 | INDP×215 | $9,106.58 | -4.30 | +11.28 | AVAH, HLP, SWKS, SDGR, CAI, QRVO, RVTY | — | $14,226.58 | $9,100.62 | INDP×215, AVAH×45, HLP×361, SWKS×7, SDGR×27, CAI×23, QRVO×5, RVTY×4 |
 | 2026-09-17 | +7.38 | $14,226.58 | INDP×215, AVAH×45, HLP×361, SWKS×7, SDGR×27, CAI×23, QRVO×5, RVTY×4 | $9,033.75 | -66.87 | -153.67 | IOVA, BRR, ADPT, FRO, CVI | AVAH, SWKS, SDGR, CAI, QRVO | $15,499.21 | $8,857.65 | INDP×215, HLP×361, RVTY×4, IOVA×88, BRR×270, ADPT×31, FRO×16, CVI×17 |
 | 2026-09-18 | +4.86 | $15,499.21 | INDP×215, HLP×361, RVTY×4, IOVA×88, BRR×270, ADPT×31, FRO×16, CVI×17 | $8,899.65 | +42.00 | -127.87 | ECO, SDGR, CYPH, TEM, CHPT | HLP, RVTY, IOVA, ADPT, FRO | $15,895.39 | $8,746.35 | INDP×215, BRR×270, CVI×17, ECO×10, SDGR×30, CYPH×292, TEM×10, CHPT×88 |
-| 2026-09-21 | +12.87 | $15,895.39 | INDP×215, BRR×270, CVI×17, ECO×10, SDGR×30, CYPH×292, TEM×10, CHPT×88 | $8,619.91 | -126.44 | +102.91 | IOVA, FEAM, TJGC, SECZ, NEO, ALVO, ASST | INDP, BRR, CVI, ECO, SDGR, TEM, CHPT | $13,987.77 | $8,689.82 | CYPH×292, IOVA×58, FEAM×248, TJGC×36, SECZ×52, NEO×30, ALVO×103, ASST×19 |
+| 2026-09-21 | +12.87 | $15,895.39 | INDP×215, BRR×270, CVI×17, ECO×10, SDGR×30, CYPH×292, TEM×10, CHPT×88 | $8,588.65 | -157.70 | +111.68 | IOVA, FEAM, TJGC, SECZ, NEO, ALVO, ASST | INDP, BRR, CVI, ECO, SDGR, TEM, CHPT | $13,962.81 | $8,667.34 | CYPH×292, IOVA×58, FEAM×247, TJGC×36, SECZ×52, NEO×30, ALVO×103, ASST×19 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -567,22 +567,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 09:30 ET | **SHORT** | `TEM` | 10 | $81.40 | $2.06 | — | $15,017.69 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+36.8; leftover $888.66 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-18 09:30 ET | **SHORT** | `CHPT` | 88 | $10.00 | $2.30 | — | $15,895.39 | — | RSI overbought; gate rsi_ob=True; list ohlc_hot; 🔵; ⚪; ret5=+11.1; leftover $888.66 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,895.39 | ▼ close $8,746.35 vs 09:30 $8,899.65 (session -127.87) | 16:00 close · cash $15,895.39 · equity $8,746.35 vs 09:30 $8,899.65 (-153.30; session marks -127.87) · 8 name(s) marked open→close (per-name table). INDP×215 09:30 $3.85 → close $3.55 +64.50; BRR×270 09:30 $3.57 → close $3.76 -51.30; CVI×17 09:30 $54.10 → close $53.69 +6.97; ECO×10 09:30 $85.00 → close $84.95 +0.50; SDGR×30 09:30 $29.32 → close $29.02 +9.00; CYPH×292 09:30 $3.04 → close $3.60 -164.98; TEM×10 09:30 $81.40 → close $77.84 +35.60; CHPT×88 09:30 $10.00 → close $10.32 -28.16 | — |
-| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,895.39 | ▼ 09:30 equity $8,619.91 vs yday $8,746.35 (-126.44) | 09:30 open · cash $15,895.39 (unchanged overnight, no fees) · equity $8,619.91 vs prior close $8,746.35 (-126.44) · 8 name(s) re-marked at the open (per-name table). INDP×215 yday $3.55 → 09:30 $3.55 -0.00; BRR×270 yday $3.76 → 09:30 $3.85 -24.30; CVI×17 yday $53.69 → 09:30 $53.19 +8.50; ECO×10 yday $84.95 → 09:30 $82.83 +21.20; SDGR×30 yday $29.02 → 09:30 $29.43 -12.30; CYPH×292 yday $3.60 → 09:30 $3.97 -108.04; TEM×10 yday $77.84 → 09:30 $78.99 -11.50; CHPT×88 yday $10.32 → 09:30 $10.32 -0.00 | — |
-| 2026-09-21 09:30 ET | **COVER** | `INDP` | 215 | $3.55 | $2.77 | $-188.36 | $15,129.36 | ▼ -188.36 after sell → book $8,617.13; vs 09:30 mark -2.78 | dropped from list after 6 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **COVER** | `BRR` | 270 | $3.85 | $3.48 | $-144.75 | $14,086.38 | ▼ -144.75 after sell → book $8,613.65; vs 09:30 mark -3.48 | dropped from list after 2 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **COVER** | `CVI` | 17 | $53.19 | $2.04 | $-26.40 | $13,180.11 | ▼ -26.40 after sell → book $8,611.61; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **COVER** | `ECO` | 10 | $82.83 | $2.02 | $+17.62 | $12,349.79 | ▲ +17.62 after sell → book $8,609.59; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **COVER** | `SDGR` | 30 | $29.43 | $2.08 | $-7.50 | $11,464.81 | ▼ -7.50 after sell → book $8,607.51; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **COVER** | `TEM` | 10 | $78.99 | $2.02 | $+20.02 | $10,672.89 | ▲ +20.02 after sell → book $8,605.49; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **COVER** | `CHPT` | 88 | $10.32 | $2.25 | $-32.72 | $9,762.47 | ▼ -32.72 after sell → book $8,603.23; vs 09:30 mark -2.26 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SHORT** | `IOVA` | 58 | $10.43 | $2.20 | — | $10,365.21 | — | RSI overbought; gate rsi_ob=True; list flatten; ⚪; ret5=+19.2; leftover $614.52 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-21 09:30 ET | **SHORT** | `FEAM` | 248 | $2.47 | $3.27 | — | $10,974.51 | — | RSI overbought; gate rsi_ob=True; list probable,yday_gainer,yday_mover; ret5=-3.8; leftover $614.52 | join🔴 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **SHORT** | `TJGC` | 36 | $16.91 | $2.13 | — | $11,581.13 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; 🔵; ret5=+50.5; leftover $614.52 | join🟢 sector🟢 gen🟢 news🟡 digest🔴 ab🟡 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **SHORT** | `SECZ` | 52 | $11.67 | $2.18 | — | $12,185.79 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; ret5=+31.3; leftover $614.52 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **SHORT** | `NEO` | 30 | $19.92 | $2.12 | — | $12,781.27 | — | RSI overbought; gate rsi_ob=True; list ohlc_hot; 🔵; ⚪; ret5=+15.0; leftover $614.52 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **SHORT** | `ALVO` | 103 | $5.92 | $2.34 | — | $13,388.69 | — | RSI overbought; gate rsi_ob=True; list ohlc_hot; ret5=+11.0; leftover $614.52 | join🔴 sector🟢 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **SHORT** | `ASST` | 19 | $31.64 | $2.08 | — | $13,987.77 | — | RSI overbought; gate rsi_ob=True; list ohlc_hot; 🔵; ret5=+8.9; leftover $614.52 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,987.77 | ▲ close $8,689.82 vs 09:30 $8,619.91 (session +102.91) | 16:00 close · cash $13,987.77 · equity $8,689.82 vs 09:30 $8,619.91 (+69.91; session marks +102.91) · 8 name(s) marked open→close (per-name table). CYPH×292 09:30 $3.97 → close $3.40 +166.44; IOVA×58 09:30 $10.43 → close $10.19 +13.92; FEAM×248 09:30 $2.47 → close $2.48 -2.48; TJGC×36 09:30 $16.91 → close $17.58 -24.12; SECZ×52 09:30 $11.67 → close $13.50 -95.16; NEO×30 09:30 $19.92 → close $19.41 +15.30; ALVO×103 09:30 $5.92 → close $5.88 +4.12; ASST×19 09:30 $31.64 → close $30.33 +24.89 | — |
+| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,895.39 | ▼ 09:30 equity $8,588.65 vs yday $8,746.35 (-157.70) | 09:30 open · cash $15,895.39 (unchanged overnight, no fees) · equity $8,588.65 vs prior close $8,746.35 (-157.70) · 8 name(s) re-marked at the open (per-name table). INDP×215 yday $3.55 → 09:30 $3.55 -0.00; BRR×270 yday $3.76 → 09:30 $3.93 -45.90; CVI×17 yday $53.69 → 09:30 $53.19 +8.50; ECO×10 yday $84.95 → 09:30 $82.83 +21.20; SDGR×30 yday $29.02 → 09:30 $29.43 -12.30; CYPH×292 yday $3.60 → 09:30 $4.00 -116.80; TEM×10 yday $77.84 → 09:30 $79.08 -12.40; CHPT×88 yday $10.32 → 09:30 $10.32 -0.00 | — |
+| 2026-09-21 09:30 ET | **COVER** | `INDP` | 215 | $3.55 | $2.77 | $-188.36 | $15,129.36 | ▼ -188.36 after sell → book $8,585.87; vs 09:30 mark -2.78 | dropped from list after 6 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **COVER** | `BRR` | 270 | $3.93 | $3.48 | $-166.35 | $14,064.78 | ▼ -166.35 after sell → book $8,582.39; vs 09:30 mark -3.48 | dropped from list after 2 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **COVER** | `CVI` | 17 | $53.19 | $2.04 | $-26.40 | $13,158.51 | ▼ -26.40 after sell → book $8,580.35; vs 09:30 mark -2.04 | dropped from list after 2 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **COVER** | `ECO` | 10 | $82.83 | $2.02 | $+17.62 | $12,328.19 | ▲ +17.62 after sell → book $8,578.33; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **COVER** | `SDGR` | 30 | $29.43 | $2.08 | $-7.50 | $11,443.21 | ▼ -7.50 after sell → book $8,576.25; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **COVER** | `TEM` | 10 | $79.08 | $2.02 | $+19.12 | $10,650.39 | ▲ +19.12 after sell → book $8,574.23; vs 09:30 mark -2.02 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **COVER** | `CHPT` | 88 | $10.32 | $2.25 | $-32.72 | $9,739.97 | ▼ -32.72 after sell → book $8,571.97; vs 09:30 mark -2.26 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SHORT** | `IOVA` | 58 | $10.43 | $2.20 | — | $10,342.71 | — | RSI overbought; gate rsi_ob=True; list flatten; ⚪; ret5=+19.2; leftover $612.28 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-21 09:30 ET | **SHORT** | `FEAM` | 247 | $2.47 | $3.25 | — | $10,949.55 | — | RSI overbought; gate rsi_ob=True; list probable,yday_gainer,yday_mover; ret5=-3.8; leftover $612.28 | join🔴 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **SHORT** | `TJGC` | 36 | $16.91 | $2.13 | — | $11,556.17 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; 🔵; ret5=+50.5; leftover $612.28 | join🟢 sector🟢 gen🟢 news🟡 digest🔴 ab🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **SHORT** | `SECZ` | 52 | $11.67 | $2.18 | — | $12,160.83 | — | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; ret5=+31.3; leftover $612.28 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **SHORT** | `NEO` | 30 | $19.92 | $2.12 | — | $12,756.32 | — | RSI overbought; gate rsi_ob=True; list ohlc_hot; 🔵; ⚪; ret5=+15.0; leftover $612.28 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **SHORT** | `ALVO` | 103 | $5.92 | $2.34 | — | $13,363.73 | — | RSI overbought; gate rsi_ob=True; list ohlc_hot; ret5=+11.0; leftover $612.28 | join🔴 sector🟢 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **SHORT** | `ASST` | 19 | $31.64 | $2.08 | — | $13,962.81 | — | RSI overbought; gate rsi_ob=True; list ohlc_hot; 🔵; ret5=+8.9; leftover $612.28 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13,962.81 | ▲ close $8,667.34 vs 09:30 $8,588.65 (session +111.68) | 16:00 close · cash $13,962.81 · equity $8,667.34 vs 09:30 $8,588.65 (+78.69; session marks +111.68) · 8 name(s) marked open→close (per-name table). CYPH×292 09:30 $4.00 → close $3.40 +175.20; IOVA×58 09:30 $10.43 → close $10.19 +13.92; FEAM×247 09:30 $2.47 → close $2.48 -2.47; TJGC×36 09:30 $16.91 → close $17.58 -24.12; SECZ×52 09:30 $11.67 → close $13.50 -95.16; NEO×30 09:30 $19.92 → close $19.41 +15.30; ALVO×103 09:30 $5.92 → close $5.88 +4.12; ASST×19 09:30 $31.64 → close $30.33 +24.89 | — |
 
 ## Not taken
 
@@ -675,10 +675,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
 | `CYPH` | 292 | 2026-09-18 @ $3.04 | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+39.5; leftover $888.66 |
-| `IOVA` | 58 | 2026-09-21 @ $10.43 | RSI overbought; gate rsi_ob=True; list flatten; ⚪; ret5=+19.2; leftover $614.52 |
-| `FEAM` | 248 | 2026-09-21 @ $2.47 | RSI overbought; gate rsi_ob=True; list probable,yday_gainer,yday_mover; ret5=-3.8; leftover $614.52 |
-| `TJGC` | 36 | 2026-09-21 @ $16.91 | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; 🔵; ret5=+50.5; leftover $614.52 |
-| `SECZ` | 52 | 2026-09-21 @ $11.67 | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; ret5=+31.3; leftover $614.52 |
-| `NEO` | 30 | 2026-09-21 @ $19.92 | RSI overbought; gate rsi_ob=True; list ohlc_hot; 🔵; ⚪; ret5=+15.0; leftover $614.52 |
-| `ALVO` | 103 | 2026-09-21 @ $5.92 | RSI overbought; gate rsi_ob=True; list ohlc_hot; ret5=+11.0; leftover $614.52 |
-| `ASST` | 19 | 2026-09-21 @ $31.64 | RSI overbought; gate rsi_ob=True; list ohlc_hot; 🔵; ret5=+8.9; leftover $614.52 |
+| `IOVA` | 58 | 2026-09-21 @ $10.43 | RSI overbought; gate rsi_ob=True; list flatten; ⚪; ret5=+19.2; leftover $612.28 |
+| `FEAM` | 247 | 2026-09-21 @ $2.47 | RSI overbought; gate rsi_ob=True; list probable,yday_gainer,yday_mover; ret5=-3.8; leftover $612.28 |
+| `TJGC` | 36 | 2026-09-21 @ $16.91 | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; 🔵; ret5=+50.5; leftover $612.28 |
+| `SECZ` | 52 | 2026-09-21 @ $11.67 | RSI overbought; gate rsi_ob=True; list yday_gainer,yday_mover; ret5=+31.3; leftover $612.28 |
+| `NEO` | 30 | 2026-09-21 @ $19.92 | RSI overbought; gate rsi_ob=True; list ohlc_hot; 🔵; ⚪; ret5=+15.0; leftover $612.28 |
+| `ALVO` | 103 | 2026-09-21 @ $5.92 | RSI overbought; gate rsi_ob=True; list ohlc_hot; ret5=+11.0; leftover $612.28 |
+| `ASST` | 19 | 2026-09-21 @ $31.64 | RSI overbought; gate rsi_ob=True; list ohlc_hot; 🔵; ret5=+8.9; leftover $612.28 |

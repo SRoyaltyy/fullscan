@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `oppset` · top 8 · rank `opp_rvol` · size `leftover` · sell `list` · S-boost `none` · Theme Radar Clock-B oppset universe (flagged T−1 names; research; not KEEP)
 
-Cash book **+6.55%** ($10,655) · signal-only (no cash/fees) was +15.93%. Starts YES **26/27**. Fills 186 · skips 86 · realized $+654.89.
+Cash book **+6.53%** ($10,653) · signal-only (no cash/fees) was +15.93%. Starts YES **26/27**. Fills 186 · skips 86 · realized $+653.25.
 
 ## How this sleeve decides (like you are 10)
 
@@ -53,7 +53,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $10,654.87.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $10,653.23.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -265,7 +265,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | `GNRC` | 5 | $207.44 | $210.00 | +12.80 | — | +0.00 | +12.80 | +2.40 | — |
 | 2026-09-21 | `SDGR` | 41 | $29.02 | $29.43 | +16.81 | — | +0.00 | +16.81 | +4.51 | — |
 | 2026-09-21 | `FLNC` | 162 | $7.32 | $7.36 | +6.48 | — | +0.00 | +6.48 | -28.35 | — |
-| 2026-09-21 | `RARE` | 82 | $14.51 | $14.60 | +7.38 | — | +0.00 | +7.38 | -15.58 | — |
+| 2026-09-21 | `RARE` | 82 | $14.51 | $14.58 | +5.74 | — | +0.00 | +5.74 | -17.22 | — |
 | 2026-09-21 | `SECZ` | 131 | $10.86 | $11.67 | +106.11 | — | +0.00 | +106.11 | +307.85 | — |
 | 2026-09-21 | `USDE` | 128 | $10.19 | $13.05 | +366.08 | — | +0.00 | +366.08 | +449.28 | — |
 
@@ -299,7 +299,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | +5.30 | $9,706.66 | — | $9,706.66 | +0.00 | -66.75 | PLAY, ALHC, FPS, GFR, HQ, SDGR, DMRA, RVTY | — | $130.19 | $9,621.87 | PLAY×176, ALHC×117, FPS×36, GFR×177, HQ×94, SDGR×52, DMRA×48, RVTY×8 |
 | 2026-09-17 | +7.38 | $130.19 | PLAY×176, ALHC×117, FPS×36, GFR×177, HQ×94, SDGR×52, DMRA×48, RVTY×8 | $9,735.61 | +113.74 | +75.62 | BBNX, JBHT, ALMU, ARQT, AMRX, BTGO | PLAY, GFR, HQ, SDGR, DMRA, RVTY | $82.21 | $9,784.12 | ALHC×117, FPS×36, BBNX×54, JBHT×5, ALMU×109, ARQT×47, AMRX×66, BTGO×187 |
 | 2026-09-18 | +4.86 | $82.21 | ALHC×117, FPS×36, BBNX×54, JBHT×5, ALMU×109, ARQT×47, AMRX×66, BTGO×187 | $9,845.01 | +60.89 | +286.99 | GNRC, SDGR, FLNC, RARE, SECZ, USDE | ALHC, FPS, BBNX, JBHT, AMRX, BTGO | $195.39 | $10,104.93 | ALMU×109, ARQT×47, GNRC×5, SDGR×41, FLNC×162, RARE×82, SECZ×131, USDE×128 |
-| 2026-09-21 | +12.87 | $195.39 | ALMU×109, ARQT×47, GNRC×5, SDGR×41, FLNC×162, RARE×82, SECZ×131, USDE×128 | $10,673.12 | +568.19 | +0.00 | — | ALMU, ARQT, GNRC, SDGR, FLNC, RARE, SECZ, USDE | $10,654.87 | $10,654.87 | — |
+| 2026-09-21 | +12.87 | $195.39 | ALMU×109, ARQT×47, GNRC×5, SDGR×41, FLNC×162, RARE×82, SECZ×131, USDE×128 | $10,671.48 | +566.55 | +0.00 | — | ALMU, ARQT, GNRC, SDGR, FLNC, RARE, SECZ, USDE | $10,653.23 | $10,653.23 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -535,16 +535,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 09:30 ET | **BUY** | `SECZ` | 131 | $9.32 | $2.38 | — | $1,418.88 | — | Theme Radar Clock-B oppset universe (flagged T−1 names; research; not KEEP); gate oppset=True; rank opp_rvol; list yday_gainer,yday_mover; 🔵; ret5=+11.1; leftover $1222.36 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-09-18 09:30 ET | **BUY** | `USDE` | 128 | $9.54 | $2.37 | — | $195.39 | — | Theme Radar Clock-B oppset universe (flagged T−1 names; research; not KEEP); gate oppset=True; rank opp_rvol; list yday_gainer,yday_mover; ret5=+15.8; leftover $1222.36 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $195.39 | ▲ close $10,104.93 vs 09:30 $9,845.01 (session +286.99) | 16:00 close · cash $195.39 · equity $10,104.93 vs 09:30 $9,845.01 (+259.92; session marks +286.99) · 8 name(s) marked open→close (per-name table). ALMU×109 09:30 $11.64 → close $12.72 +118.26; ARQT×47 09:30 $26.14 → close $25.38 -35.72; GNRC×5 09:30 $209.52 → close $207.44 -10.40; SDGR×41 09:30 $29.32 → close $29.02 -12.30; FLNC×162 09:30 $7.54 → close $7.32 -34.83; RARE×82 09:30 $14.79 → close $14.51 -22.96; SECZ×131 09:30 $9.32 → close $10.86 +201.74; USDE×128 09:30 $9.54 → close $10.19 +83.20 | — |
-| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $195.39 | ▲ 09:30 equity $10,673.12 vs yday $10,104.93 (+568.19) | 09:30 open · cash $195.39 (unchanged overnight, no fees) · equity $10,673.12 vs prior close $10,104.93 (+568.19) · 8 name(s) re-marked at the open (per-name table). ALMU×109 yday $12.72 → 09:30 $13.12 +43.60; ARQT×47 yday $25.38 → 09:30 $25.57 +8.93; GNRC×5 yday $207.44 → 09:30 $210.00 +12.80; SDGR×41 yday $29.02 → 09:30 $29.43 +16.81; FLNC×162 yday $7.32 → 09:30 $7.36 +6.48; RARE×82 yday $14.51 → 09:30 $14.60 +7.38; SECZ×131 yday $10.86 → 09:30 $11.67 +106.11; USDE×128 yday $10.19 → 09:30 $13.05 +366.08 | — |
-| 2026-09-21 09:30 ET | **SELL** | `ALMU` | 109 | $13.12 | $2.35 | $+204.07 | $1,623.67 | ▲ +204.07 after sell → book $10,670.78; vs 09:30 mark -2.34 | dropped from list after 2 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SELL** | `ARQT` | 47 | $25.57 | $2.15 | $-22.14 | $2,823.31 | ▼ -22.14 after sell → book $10,668.63; vs 09:30 mark -2.15 | dropped from list after 2 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SELL** | `GNRC` | 5 | $210.00 | $2.02 | $-1.63 | $3,871.28 | ▼ -1.63 after sell → book $10,666.60; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SELL** | `SDGR` | 41 | $29.43 | $2.13 | $+0.26 | $5,075.78 | ▲ +0.26 after sell → book $10,664.47; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SELL** | `FLNC` | 162 | $7.36 | $2.51 | $-33.34 | $6,265.59 | ▼ -33.34 after sell → book $10,661.96; vs 09:30 mark -2.51 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SELL** | `RARE` | 82 | $14.60 | $2.26 | $-20.08 | $7,460.53 | ▼ -20.08 after sell → book $10,659.70; vs 09:30 mark -2.26 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SELL** | `SECZ` | 131 | $11.67 | $2.42 | $+303.05 | $8,986.88 | ▲ +303.05 after sell → book $10,657.28; vs 09:30 mark -2.42 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **SELL** | `USDE` | 128 | $13.05 | $2.41 | $+444.50 | $10,654.87 | ▲ +444.50 after sell → book $10,654.87; vs 09:30 mark -2.41 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,654.87 | ▲ close $10,654.87 vs 09:30 $10,673.12 (session +0.00) | 16:00 close · cash $10,654.87 · no lots left · equity $10,654.87. | — |
+| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $195.39 | ▲ 09:30 equity $10,671.48 vs yday $10,104.93 (+566.55) | 09:30 open · cash $195.39 (unchanged overnight, no fees) · equity $10,671.48 vs prior close $10,104.93 (+566.55) · 8 name(s) re-marked at the open (per-name table). ALMU×109 yday $12.72 → 09:30 $13.12 +43.60; ARQT×47 yday $25.38 → 09:30 $25.57 +8.93; GNRC×5 yday $207.44 → 09:30 $210.00 +12.80; SDGR×41 yday $29.02 → 09:30 $29.43 +16.81; FLNC×162 yday $7.32 → 09:30 $7.36 +6.48; RARE×82 yday $14.51 → 09:30 $14.58 +5.74; SECZ×131 yday $10.86 → 09:30 $11.67 +106.11; USDE×128 yday $10.19 → 09:30 $13.05 +366.08 | — |
+| 2026-09-21 09:30 ET | **SELL** | `ALMU` | 109 | $13.12 | $2.35 | $+204.07 | $1,623.67 | ▲ +204.07 after sell → book $10,669.14; vs 09:30 mark -2.34 | dropped from list after 2 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `ARQT` | 47 | $25.57 | $2.15 | $-22.14 | $2,823.31 | ▼ -22.14 after sell → book $10,666.99; vs 09:30 mark -2.15 | dropped from list after 2 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `GNRC` | 5 | $210.00 | $2.02 | $-1.63 | $3,871.28 | ▼ -1.63 after sell → book $10,664.96; vs 09:30 mark -2.03 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `SDGR` | 41 | $29.43 | $2.13 | $+0.26 | $5,075.78 | ▲ +0.26 after sell → book $10,662.83; vs 09:30 mark -2.13 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `FLNC` | 162 | $7.36 | $2.51 | $-33.34 | $6,265.59 | ▼ -33.34 after sell → book $10,660.32; vs 09:30 mark -2.51 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `RARE` | 82 | $14.58 | $2.26 | $-21.72 | $7,458.89 | ▼ -21.72 after sell → book $10,658.06; vs 09:30 mark -2.26 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `SECZ` | 131 | $11.67 | $2.42 | $+303.05 | $8,985.24 | ▲ +303.05 after sell → book $10,655.64; vs 09:30 mark -2.42 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **SELL** | `USDE` | 128 | $13.05 | $2.41 | $+444.50 | $10,653.23 | ▲ +444.50 after sell → book $10,653.23; vs 09:30 mark -2.41 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,653.23 | ▲ close $10,653.23 vs 09:30 $10,671.48 (session +0.00) | 16:00 close · cash $10,653.23 · no lots left · equity $10,653.23. | — |
 
 ## Not taken
 

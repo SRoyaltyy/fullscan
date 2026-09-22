@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #2 fresh catalyst + limited extension (research; not KEEP)
 
-Cash book **-2.98%** ($9,702) · signal-only (no cash/fees) was -4.67%. Starts YES **13/27**. Fills 214 · skips 86 · realized $-202.96.
+Cash book **-2.82%** ($9,718) · signal-only (no cash/fees) was -4.57%. Starts YES **13/27**. Fills 214 · skips 86 · realized $-196.46.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $622.56.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $639.08.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -277,20 +277,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | `SHLS` | 159 | — | $7.64 | +0.00 | $7.60 | -6.36 | -6.36 | +0.00 | -6.36 |
 | 2026-09-18 | `BHVN` | 86 | — | $14.07 | +0.00 | $13.62 | -38.70 | -38.70 | +0.00 | -38.70 |
 | 2026-09-18 | `VSTS` | 88 | — | $13.71 | +0.00 | $13.82 | +9.68 | +9.68 | +0.00 | +9.68 |
-| 2026-09-21 | `FIVN` | 35 | $32.47 | $32.98 | +17.85 | — | +0.00 | +17.85 | -51.10 | — |
+| 2026-09-21 | `FIVN` | 35 | $32.47 | $33.00 | +18.55 | — | +0.00 | +18.55 | -50.40 | — |
 | 2026-09-21 | `ECO` | 14 | $84.95 | $82.83 | -29.68 | — | +0.00 | -29.68 | -30.38 | — |
-| 2026-09-21 | `TH` | 58 | $21.19 | $21.55 | +20.88 | — | +0.00 | +20.88 | +37.12 | — |
+| 2026-09-21 | `TH` | 58 | $21.19 | $21.65 | +26.68 | — | +0.00 | +26.68 | +42.92 | — |
 | 2026-09-21 | `AMD` | 2 | $559.82 | $583.88 | +48.12 | — | +0.00 | +48.12 | +73.02 | — |
 | 2026-09-21 | `DDD` | 340 | $3.63 | $3.71 | +27.20 | — | +0.00 | +27.20 | +44.20 | — |
 | 2026-09-21 | `SHLS` | 159 | $7.60 | $7.71 | +17.49 | — | +0.00 | +17.49 | +11.13 | — |
 | 2026-09-21 | `BHVN` | 86 | $13.62 | $13.90 | +24.08 | — | +0.00 | +24.08 | -14.62 | — |
 | 2026-09-21 | `VSTS` | 88 | $13.82 | $13.93 | +9.68 | — | +0.00 | +9.68 | +19.36 | — |
 | 2026-09-21 | `A` | 7 | — | $157.87 | +0.00 | $161.94 | +28.49 | +28.49 | +0.00 | +28.49 |
-| 2026-09-21 | `DXCM` | 13 | — | $88.89 | +0.00 | $89.17 | +3.62 | +3.62 | +0.00 | +3.62 |
+| 2026-09-21 | `DXCM` | 13 | — | $88.83 | +0.00 | $89.17 | +4.42 | +4.42 | +0.00 | +4.42 |
 | 2026-09-21 | `BKKT` | 131 | — | $9.31 | +0.00 | $9.14 | -22.27 | -22.27 | +0.00 | -22.27 |
 | 2026-09-21 | `COHR` | 3 | — | $326.48 | +0.00 | $321.52 | -14.88 | -14.88 | +0.00 | -14.88 |
 | 2026-09-21 | `FORM` | 9 | — | $123.00 | +0.00 | $119.31 | -33.21 | -33.21 | +0.00 | -33.21 |
-| 2026-09-21 | `MXL` | 14 | — | $84.19 | +0.00 | $85.98 | +25.09 | +25.09 | +0.00 | +25.09 |
+| 2026-09-21 | `MXL` | 14 | — | $83.53 | +0.00 | $85.98 | +34.30 | +34.30 | +0.00 | +34.30 |
 | 2026-09-21 | `MGTX` | 90 | — | $13.47 | +0.00 | $13.08 | -35.10 | -35.10 | +0.00 | -35.10 |
 | 2026-09-21 | `XENE` | 30 | — | $40.00 | +0.00 | $38.99 | -30.30 | -30.30 | +0.00 | -30.30 |
 
@@ -324,7 +324,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | +5.30 | $9,497.21 | — | $9,497.21 | +0.00 | -127.03 | AVAH, ILMN, QCOM, SM, BLFS, IQV, RIG, TEM | — | $284.10 | $9,353.12 | AVAH×82, ILMN×5, QCOM×6, SM×29, BLFS×32, IQV×4, RIG×202, TEM×17 |
 | 2026-09-17 | +7.38 | $284.10 | AVAH×82, ILMN×5, QCOM×6, SM×29, BLFS×32, IQV×4, RIG×202, TEM×17 | $9,489.14 | +136.02 | +226.63 | BULL, SMTC, AXTI, CYPH, PGEN, SFL, CRDO, ZVRA | AVAH, ILMN, QCOM, SM, BLFS, IQV, RIG, TEM | $204.26 | $9,677.34 | BULL×148, SMTC×6, AXTI×17, CYPH×442, PGEN×155, SFL×87, CRDO×7, ZVRA×98 |
 | 2026-09-18 | +4.86 | $204.26 | BULL×148, SMTC×6, AXTI×17, CYPH×442, PGEN×155, SFL×87, CRDO×7, ZVRA×98 | $9,769.28 | +91.94 | -46.89 | FIVN, ECO, TH, AMD, DDD, SHLS, BHVN, VSTS | BULL, SMTC, AXTI, CYPH, PGEN, SFL, CRDO, ZVRA | $176.80 | $9,681.29 | FIVN×35, ECO×14, TH×58, AMD×2, DDD×340, SHLS×159, BHVN×86, VSTS×88 |
-| 2026-09-21 | +12.87 | $176.80 | FIVN×35, ECO×14, TH×58, AMD×2, DDD×340, SHLS×159, BHVN×86, VSTS×88 | $9,816.91 | +135.62 | -78.56 | A, DXCM, BKKT, COHR, FORM, MXL, MGTX, XENE | FIVN, ECO, TH, AMD, DDD, SHLS, BHVN, VSTS | $622.56 | $9,701.66 | A×7, DXCM×13, BKKT×131, COHR×3, FORM×9, MXL×14, MGTX×90, XENE×30 |
+| 2026-09-21 | +12.87 | $176.80 | FIVN×35, ECO×14, TH×58, AMD×2, DDD×340, SHLS×159, BHVN×86, VSTS×88 | $9,823.41 | +142.12 | -68.55 | A, DXCM, BKKT, COHR, FORM, MXL, MGTX, XENE | FIVN, ECO, TH, AMD, DDD, SHLS, BHVN, VSTS | $639.08 | $9,718.18 | A×7, DXCM×13, BKKT×131, COHR×3, FORM×9, MXL×14, MGTX×90, XENE×30 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -580,24 +580,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 09:30 ET | **BUY** | `BHVN` | 86 | $14.07 | $2.25 | — | $1,385.54 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list probable,yday_gainer,yday_mover; 🔵; ret5=+8.6; leftover $1218.48 | join🟢 sector🟢 gen🟢 news🟢 digest🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-18 09:30 ET | **BUY** | `VSTS` | 88 | $13.71 | $2.25 | — | $176.80 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list ohlc_hot; 🔵; ret5=+9.1; leftover $1218.48 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $176.80 | ▼ close $9,681.29 vs 09:30 $9,769.28 (session -46.89) | 16:00 close · cash $176.80 · equity $9,681.29 vs 09:30 $9,769.28 (-87.99; session marks -46.89) · 8 name(s) marked open→close (per-name table). FIVN×35 09:30 $34.44 → close $32.47 -68.95; ECO×14 09:30 $85.00 → close $84.95 -0.70; TH×58 09:30 $20.91 → close $21.19 +16.24; AMD×2 09:30 $547.37 → close $559.82 +24.90; DDD×340 09:30 $3.58 → close $3.63 +17.00; SHLS×159 09:30 $7.64 → close $7.60 -6.36; BHVN×86 09:30 $14.07 → close $13.62 -38.70; VSTS×88 09:30 $13.71 → close $13.82 +9.68 | — |
-| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $176.80 | ▲ 09:30 equity $9,816.91 vs yday $9,681.29 (+135.62) | 09:30 open · cash $176.80 (unchanged overnight, no fees) · equity $9,816.91 vs prior close $9,681.29 (+135.62) · 8 name(s) re-marked at the open (per-name table). FIVN×35 yday $32.47 → 09:30 $32.98 +17.85; ECO×14 yday $84.95 → 09:30 $82.83 -29.68; TH×58 yday $21.19 → 09:30 $21.55 +20.88; AMD×2 yday $559.82 → 09:30 $583.88 +48.12; DDD×340 yday $3.63 → 09:30 $3.71 +27.20; SHLS×159 yday $7.60 → 09:30 $7.71 +17.49; BHVN×86 yday $13.62 → 09:30 $13.90 +24.08; VSTS×88 yday $13.82 → 09:30 $13.93 +9.68 | — |
-| 2026-09-21 09:30 ET | **SELL** | `FIVN` | 35 | $32.98 | $2.12 | $-55.31 | $1,328.99 | ▼ -55.31 after sell → book $9,814.80; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SELL** | `ECO` | 14 | $82.83 | $2.05 | $-34.46 | $2,486.56 | ▼ -34.46 after sell → book $9,812.75; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SELL** | `TH` | 58 | $21.55 | $2.18 | $+32.77 | $3,734.27 | ▲ +32.77 after sell → book $9,810.56; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **SELL** | `AMD` | 2 | $583.88 | $2.02 | $+69.01 | $4,900.02 | ▲ +69.01 after sell → book $9,808.55; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🔴 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
-| 2026-09-21 09:30 ET | **SELL** | `DDD` | 340 | $3.71 | $4.45 | $+35.36 | $6,156.97 | ▲ +35.36 after sell → book $9,804.10; vs 09:30 mark -4.45 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SELL** | `SHLS` | 159 | $7.71 | $2.50 | $+6.16 | $7,380.35 | ▲ +6.16 after sell → book $9,801.59; vs 09:30 mark -2.51 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SELL** | `BHVN` | 86 | $13.90 | $2.27 | $-19.14 | $8,573.48 | ▼ -19.14 after sell → book $9,799.32; vs 09:30 mark -2.27 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SELL** | `VSTS` | 88 | $13.93 | $2.28 | $+14.83 | $9,797.04 | ▲ +14.83 after sell → book $9,797.04; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `A` | 7 | $157.87 | $2.01 | — | $8,689.94 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; 🔵; ⚪; ret5=-4.4; leftover $1224.63 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `DXCM` | 13 | $88.89 | $2.03 | — | $7,532.32 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; 🔵; ⚪; ret5=-7.2; leftover $1224.63 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `BKKT` | 131 | $9.31 | $2.38 | — | $6,310.32 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list probable,yday_gainer,yday_mover; ret5=-2.4; leftover $1224.63 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `COHR` | 3 | $326.48 | $2.00 | — | $5,328.88 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list ohlc_hot; ret5=+3.9; leftover $1224.63 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `FORM` | 9 | $123.00 | $2.02 | — | $4,219.87 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list ohlc_hot; ret5=+3.0; leftover $1224.63 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `MXL` | 14 | $84.19 | $2.03 | — | $3,039.20 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list ohlc_hot; ret5=+8.8; leftover $1224.63 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `MGTX` | 90 | $13.47 | $2.26 | — | $1,824.64 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; ⚪; ret5=-8.4; leftover $1224.63 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `XENE` | 30 | $40.00 | $2.08 | — | $622.56 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list yday_mover; 🔵; ret5=-1.1; leftover $1224.63 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $622.56 | ▼ close $9,701.66 vs 09:30 $9,816.91 (session -78.56) | 16:00 close · cash $622.56 · equity $9,701.66 vs 09:30 $9,816.91 (-115.25; session marks -78.56) · 8 name(s) marked open→close (per-name table). A×7 09:30 $157.87 → close $161.94 +28.49; DXCM×13 09:30 $88.89 → close $89.17 +3.62; BKKT×131 09:30 $9.31 → close $9.14 -22.27; COHR×3 09:30 $326.48 → close $321.52 -14.88; FORM×9 09:30 $123.00 → close $119.31 -33.21; MXL×14 09:30 $84.19 → close $85.98 +25.09; MGTX×90 09:30 $13.47 → close $13.08 -35.10; XENE×30 09:30 $40.00 → close $38.99 -30.30 | — |
+| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $176.80 | ▲ 09:30 equity $9,823.41 vs yday $9,681.29 (+142.12) | 09:30 open · cash $176.80 (unchanged overnight, no fees) · equity $9,823.41 vs prior close $9,681.29 (+142.12) · 8 name(s) re-marked at the open (per-name table). FIVN×35 yday $32.47 → 09:30 $33.00 +18.55; ECO×14 yday $84.95 → 09:30 $82.83 -29.68; TH×58 yday $21.19 → 09:30 $21.65 +26.68; AMD×2 yday $559.82 → 09:30 $583.88 +48.12; DDD×340 yday $3.63 → 09:30 $3.71 +27.20; SHLS×159 yday $7.60 → 09:30 $7.71 +17.49; BHVN×86 yday $13.62 → 09:30 $13.90 +24.08; VSTS×88 yday $13.82 → 09:30 $13.93 +9.68 | — |
+| 2026-09-21 09:30 ET | **SELL** | `FIVN` | 35 | $33.00 | $2.12 | $-54.61 | $1,329.69 | ▼ -54.61 after sell → book $9,821.30; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `ECO` | 14 | $82.83 | $2.05 | $-34.46 | $2,487.26 | ▼ -34.46 after sell → book $9,819.25; vs 09:30 mark -2.05 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `TH` | 58 | $21.65 | $2.18 | $+38.57 | $3,740.77 | ▲ +38.57 after sell → book $9,817.06; vs 09:30 mark -2.19 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **SELL** | `AMD` | 2 | $583.88 | $2.02 | $+69.01 | $4,906.52 | ▲ +69.01 after sell → book $9,815.05; vs 09:30 mark -2.01 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🔴 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-21 09:30 ET | **SELL** | `DDD` | 340 | $3.71 | $4.45 | $+35.36 | $6,163.47 | ▲ +35.36 after sell → book $9,810.60; vs 09:30 mark -4.45 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `SHLS` | 159 | $7.71 | $2.50 | $+6.16 | $7,386.85 | ▲ +6.16 after sell → book $9,808.09; vs 09:30 mark -2.51 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `BHVN` | 86 | $13.90 | $2.27 | $-19.14 | $8,579.98 | ▼ -19.14 after sell → book $9,805.82; vs 09:30 mark -2.27 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `VSTS` | 88 | $13.93 | $2.28 | $+14.83 | $9,803.54 | ▲ +14.83 after sell → book $9,803.54; vs 09:30 mark -2.28 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `A` | 7 | $157.87 | $2.01 | — | $8,696.44 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; 🔵; ⚪; ret5=-4.4; leftover $1225.44 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `DXCM` | 13 | $88.83 | $2.03 | — | $7,539.62 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; 🔵; ⚪; ret5=-7.2; leftover $1225.44 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `BKKT` | 131 | $9.31 | $2.38 | — | $6,317.63 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list probable,yday_gainer,yday_mover; ret5=-2.4; leftover $1225.44 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `COHR` | 3 | $326.48 | $2.00 | — | $5,336.19 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list ohlc_hot; ret5=+3.9; leftover $1225.44 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `FORM` | 9 | $123.00 | $2.02 | — | $4,227.17 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list ohlc_hot; ret5=+3.0; leftover $1225.44 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `MXL` | 14 | $83.53 | $2.03 | — | $3,055.72 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list ohlc_hot; ret5=+8.8; leftover $1225.44 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `MGTX` | 90 | $13.47 | $2.26 | — | $1,841.16 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; ⚪; ret5=-8.4; leftover $1225.44 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `XENE` | 30 | $40.00 | $2.08 | — | $639.08 | — | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list yday_mover; 🔵; ret5=-1.1; leftover $1225.44 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $639.08 | ▼ close $9,718.18 vs 09:30 $9,823.41 (session -68.55) | 16:00 close · cash $639.08 · equity $9,718.18 vs 09:30 $9,823.41 (-105.23; session marks -68.55) · 8 name(s) marked open→close (per-name table). A×7 09:30 $157.87 → close $161.94 +28.49; DXCM×13 09:30 $88.83 → close $89.17 +4.42; BKKT×131 09:30 $9.31 → close $9.14 -22.27; COHR×3 09:30 $326.48 → close $321.52 -14.88; FORM×9 09:30 $123.00 → close $119.31 -33.21; MXL×14 09:30 $83.53 → close $85.98 +34.30; MGTX×90 09:30 $13.47 → close $13.08 -35.10; XENE×30 09:30 $40.00 → close $38.99 -30.30 | — |
 
 ## Not taken
 
@@ -694,11 +694,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `A` | 7 | 2026-09-21 @ $157.87 | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; 🔵; ⚪; ret5=-4.4; leftover $1224.63 |
-| `DXCM` | 13 | 2026-09-21 @ $88.89 | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; 🔵; ⚪; ret5=-7.2; leftover $1224.63 |
-| `BKKT` | 131 | 2026-09-21 @ $9.31 | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list probable,yday_gainer,yday_mover; ret5=-2.4; leftover $1224.63 |
-| `COHR` | 3 | 2026-09-21 @ $326.48 | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list ohlc_hot; ret5=+3.9; leftover $1224.63 |
-| `FORM` | 9 | 2026-09-21 @ $123.00 | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list ohlc_hot; ret5=+3.0; leftover $1224.63 |
-| `MXL` | 14 | 2026-09-21 @ $84.19 | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list ohlc_hot; ret5=+8.8; leftover $1224.63 |
-| `MGTX` | 90 | 2026-09-21 @ $13.47 | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; ⚪; ret5=-8.4; leftover $1224.63 |
-| `XENE` | 30 | 2026-09-21 @ $40.00 | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list yday_mover; 🔵; ret5=-1.1; leftover $1224.63 |
+| `A` | 7 | 2026-09-21 @ $157.87 | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; 🔵; ⚪; ret5=-4.4; leftover $1225.44 |
+| `DXCM` | 13 | 2026-09-21 @ $88.83 | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; 🔵; ⚪; ret5=-7.2; leftover $1225.44 |
+| `BKKT` | 131 | 2026-09-21 @ $9.31 | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list probable,yday_gainer,yday_mover; ret5=-2.4; leftover $1225.44 |
+| `COHR` | 3 | 2026-09-21 @ $326.48 | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list ohlc_hot; ret5=+3.9; leftover $1225.44 |
+| `FORM` | 9 | 2026-09-21 @ $123.00 | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list ohlc_hot; ret5=+3.0; leftover $1225.44 |
+| `MXL` | 14 | 2026-09-21 @ $83.53 | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list ohlc_hot; ret5=+8.8; leftover $1225.44 |
+| `MGTX` | 90 | 2026-09-21 @ $13.47 | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list flatten; ⚪; ret5=-8.4; leftover $1225.44 |
+| `XENE` | 30 | 2026-09-21 @ $40.00 | Clock-B #2 fresh catalyst + limited extension (research; not KEEP); gate clk_fresh_cat_coil=True; rank cond; list yday_mover; 🔵; ret5=-1.1; leftover $1225.44 |

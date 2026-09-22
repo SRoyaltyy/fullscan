@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `probable` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **+1.46%** ($10,146) · signal-only (no cash/fees) was +11.06%. Starts YES **22/27**. Fills 218 · skips 88 · realized $+305.85.
+Cash book **+1.29%** ($10,129) · signal-only (no cash/fees) was +10.91%. Starts YES **22/27**. Fills 218 · skips 88 · realized $+303.59.
 
 ## How this sleeve decides (like you are 10)
 
@@ -50,7 +50,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $43.34.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $38.36.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -282,16 +282,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | `BHVN` | 91 | $13.62 | $13.90 | +25.48 | — | +0.00 | +25.48 | -15.47 | — |
 | 2026-09-21 | `BNC` | 220 | $5.98 | $6.42 | +95.70 | — | +0.00 | +95.70 | +128.70 | — |
 | 2026-09-21 | `DDD` | 358 | $3.63 | $3.71 | +28.64 | — | +0.00 | +28.64 | +46.54 | — |
-| 2026-09-21 | `RANI` | 1511 | $0.86 | $0.86 | +3.63 | — | +0.00 | +3.63 | +21.76 | — |
-| 2026-09-21 | `RARE` | 83 | $14.51 | $14.60 | +7.47 | — | +0.00 | +7.47 | -15.77 | — |
+| 2026-09-21 | `RANI` | 1511 | $0.86 | $0.86 | +3.02 | — | +0.00 | +3.02 | +21.15 | — |
+| 2026-09-21 | `RARE` | 83 | $14.51 | $14.58 | +5.81 | — | +0.00 | +5.81 | -17.43 | — |
 | 2026-09-21 | `FEAM` | 521 | — | $2.47 | +0.00 | $2.48 | +5.21 | +5.21 | +0.00 | +5.21 |
 | 2026-09-21 | `BKKT` | 138 | — | $9.31 | +0.00 | $9.14 | -23.46 | -23.46 | +0.00 | -23.46 |
-| 2026-09-21 | `BTDR` | 95 | — | $13.44 | +0.00 | $13.14 | -28.50 | -28.50 | +0.00 | -28.50 |
-| 2026-09-21 | `ORBS` | 1171 | — | $1.10 | +0.00 | $1.05 | -58.55 | -58.55 | +0.00 | -58.55 |
+| 2026-09-21 | `BTDR` | 95 | — | $13.47 | +0.00 | $13.14 | -31.82 | -31.82 | +0.00 | -31.82 |
+| 2026-09-21 | `ORBS` | 1160 | — | $1.11 | +0.00 | $1.05 | -69.60 | -69.60 | +0.00 | -69.60 |
 | 2026-09-21 | `SBET` | 128 | — | $9.99 | +0.00 | $9.98 | -1.28 | -1.28 | +0.00 | -1.28 |
 | 2026-09-21 | `BTBT` | 705 | — | $1.82 | +0.00 | $1.82 | -3.52 | -3.52 | +0.00 | -3.52 |
-| 2026-09-21 | `SGML` | 127 | — | $10.12 | +0.00 | $10.27 | +19.05 | +19.05 | +0.00 | +19.05 |
-| 2026-09-21 | `COIN` | 6 | — | $205.50 | +0.00 | $201.05 | -26.70 | -26.70 | +0.00 | -26.70 |
+| 2026-09-21 | `SGML` | 127 | — | $10.13 | +0.00 | $10.27 | +17.14 | +17.14 | +0.00 | +17.14 |
+| 2026-09-21 | `COIN` | 6 | — | $205.19 | +0.00 | $201.05 | -24.84 | -24.84 | +0.00 | -24.84 |
 
 ## Each session (cash + holdings state)
 
@@ -323,7 +323,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | +5.30 | $9,784.13 | — | $9,784.13 | -0.00 | +250.80 | BBNX, ARQQ, TEM, RIG, QTRX, VAL, KRMN, ADPT | — | $150.04 | $10,013.80 | BBNX×65, ARQQ×67, TEM×17, RIG×208, QTRX×449, VAL×13, KRMN×32, ADPT×45 |
 | 2026-09-17 | +7.38 | $150.04 | BBNX×65, ARQQ×67, TEM×17, RIG×208, QTRX×449, VAL×13, KRMN×32, ADPT×45 | $10,203.50 | +189.70 | -29.62 | DVLT, BRUN, AXTI, ARQT, SMTC, SABR, CIFR, EROC | BBNX, ARQQ, TEM, RIG, QTRX, VAL, KRMN, ADPT | $96.63 | $10,097.56 | DVLT×7486, BRUN×80, AXTI×18, ARQT×49, SMTC×7, SABR×530, CIFR×70, EROC×100 |
 | 2026-09-18 | +4.86 | $96.63 | DVLT×7486, BRUN×80, AXTI×18, ARQT×49, SMTC×7, SABR×530, CIFR×70, EROC×100 | $10,336.28 | +238.72 | -63.91 | TLSA, SWRD, EYPT, BHVN, BNC, DDD, RANI, RARE | DVLT, BRUN, AXTI, ARQT, SMTC, SABR, CIFR, EROC | $13.64 | $10,157.65 | TLSA×1324, SWRD×617, EYPT×325, BHVN×91, BNC×220, DDD×358, RANI×1511, RARE×83 |
-| 2026-09-21 | +12.87 | $13.64 | TLSA×1324, SWRD×617, EYPT×325, BHVN×91, BNC×220, DDD×358, RANI×1511, RARE×83 | $10,364.79 | +207.14 | -117.75 | FEAM, BKKT, BTDR, ORBS, SBET, BTBT, SGML, COIN | TLSA, SWRD, EYPT, BHVN, BNC, DDD, RANI, RARE | $43.34 | $10,145.72 | FEAM×521, BKKT×138, BTDR×95, ORBS×1171, SBET×128, BTBT×705, SGML×127, COIN×6 |
+| 2026-09-21 | +12.87 | $13.64 | TLSA×1324, SWRD×617, EYPT×325, BHVN×91, BNC×220, DDD×358, RANI×1511, RARE×83 | $10,362.52 | +204.87 | -132.17 | FEAM, BKKT, BTDR, ORBS, SBET, BTBT, SGML, COIN | TLSA, SWRD, EYPT, BHVN, BNC, DDD, RANI, RARE | $38.36 | $10,129.19 | FEAM×521, BKKT×138, BTDR×95, ORBS×1160, SBET×128, BTBT×705, SGML×127, COIN×6 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -583,24 +583,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 09:30 ET | **BUY** | `RANI` | 1511 | $0.85 | $17.38 | — | $1,243.45 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=+3.6; leftover $1284.98 | join🔴 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-18 09:30 ET | **BUY** | `RARE` | 83 | $14.79 | $2.24 | — | $13.64 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ⚪; ret5=+0.7; leftover $1284.98 | join🟢 sector🟢 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13.64 | ▼ close $10,157.65 vs 09:30 $10,336.28 (session -63.91) | 16:00 close · cash $13.64 · equity $10,157.65 vs 09:30 $10,336.28 (-178.63; session marks -63.91) · 8 name(s) marked open→close (per-name table). TLSA×1324 09:30 $0.97 → close $0.91 -79.44; SWRD×617 09:30 $2.08 → close $2.15 +43.19; EYPT×325 09:30 $3.95 → close $3.85 -32.50; BHVN×91 09:30 $14.07 → close $13.62 -40.95; BNC×220 09:30 $5.83 → close $5.98 +33.00; DDD×358 09:30 $3.58 → close $3.63 +17.90; RANI×1511 09:30 $0.85 → close $0.86 +18.13; RARE×83 09:30 $14.79 → close $14.51 -23.24 | — |
-| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13.64 | ▲ 09:30 equity $10,364.79 vs yday $10,157.65 (+207.14) | 09:30 open · cash $13.64 (unchanged overnight, no fees) · equity $10,364.79 vs prior close $10,157.65 (+207.14) · 8 name(s) re-marked at the open (per-name table). TLSA×1324 yday $0.91 → 09:30 $0.94 +39.72; SWRD×617 yday $2.15 → 09:30 $2.15 +0.00; EYPT×325 yday $3.85 → 09:30 $3.87 +6.50; BHVN×91 yday $13.62 → 09:30 $13.90 +25.48; BNC×220 yday $5.98 → 09:30 $6.42 +95.70; DDD×358 yday $3.63 → 09:30 $3.71 +28.64; RANI×1511 yday $0.86 → 09:30 $0.86 +3.63; RARE×83 yday $14.51 → 09:30 $14.60 +7.47 | — |
-| 2026-09-21 09:30 ET | **SELL** | `TLSA` | 1324 | $0.94 | $16.65 | $-73.18 | $1,241.55 | ▼ -73.18 after sell → book $10,348.14; vs 09:30 mark -16.65 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SELL** | `SWRD` | 617 | $2.15 | $8.07 | $+27.16 | $2,560.03 | ▲ +27.16 after sell → book $10,340.07; vs 09:30 mark -8.07 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SELL** | `EYPT` | 325 | $3.87 | $4.26 | $-34.45 | $3,813.52 | ▼ -34.45 after sell → book $10,335.81; vs 09:30 mark -4.26 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SELL** | `BHVN` | 91 | $13.90 | $2.29 | $-20.02 | $5,076.13 | ▼ -20.02 after sell → book $10,333.52; vs 09:30 mark -2.29 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SELL** | `BNC` | 220 | $6.42 | $2.89 | $+122.98 | $6,484.55 | ▲ +122.98 after sell → book $10,330.64; vs 09:30 mark -2.88 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SELL** | `DDD` | 358 | $3.71 | $4.69 | $+37.23 | $7,808.04 | ▲ +37.23 after sell → book $10,325.95; vs 09:30 mark -4.69 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SELL** | `RANI` | 1511 | $0.86 | $17.86 | $-13.47 | $9,096.29 | ▼ -13.47 after sell → book $10,308.09; vs 09:30 mark -17.86 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SELL** | `RARE` | 83 | $14.60 | $2.26 | $-20.27 | $10,305.83 | ▼ -20.27 after sell → book $10,305.83; vs 09:30 mark -2.26 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **BUY** | `FEAM` | 521 | $2.47 | $6.72 | — | $9,012.24 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-3.8; leftover $1288.23 | join🔴 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `BKKT` | 138 | $9.31 | $2.40 | — | $7,725.06 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-2.4; leftover $1288.23 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `BTDR` | 95 | $13.44 | $2.27 | — | $6,445.98 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+8.4; leftover $1288.23 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `ORBS` | 1171 | $1.10 | $15.11 | — | $5,142.77 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=+6.9; leftover $1288.23 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `SBET` | 128 | $9.99 | $2.37 | — | $3,861.68 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+5.3; leftover $1288.23 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `BTBT` | 705 | $1.82 | $9.09 | — | $2,565.96 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+8.8; leftover $1288.23 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🔴 vol🟡 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `SGML` | 127 | $10.12 | $2.37 | — | $1,278.35 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-25.6; leftover $1288.23 | join🔴 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `COIN` | 6 | $205.50 | $2.01 | — | $43.34 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=-9.1; leftover $1288.23 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $43.34 | ▼ close $10,145.72 vs 09:30 $10,364.79 (session -117.75) | 16:00 close · cash $43.34 · equity $10,145.72 vs 09:30 $10,364.79 (-219.07; session marks -117.75) · 8 name(s) marked open→close (per-name table). FEAM×521 09:30 $2.47 → close $2.48 +5.21; BKKT×138 09:30 $9.31 → close $9.14 -23.46; BTDR×95 09:30 $13.44 → close $13.14 -28.50; ORBS×1171 09:30 $1.10 → close $1.05 -58.55; SBET×128 09:30 $9.99 → close $9.98 -1.28; BTBT×705 09:30 $1.82 → close $1.82 -3.52; SGML×127 09:30 $10.12 → close $10.27 +19.05; COIN×6 09:30 $205.50 → close $201.05 -26.70 | — |
+| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $13.64 | ▲ 09:30 equity $10,362.52 vs yday $10,157.65 (+204.87) | 09:30 open · cash $13.64 (unchanged overnight, no fees) · equity $10,362.52 vs prior close $10,157.65 (+204.87) · 8 name(s) re-marked at the open (per-name table). TLSA×1324 yday $0.91 → 09:30 $0.94 +39.72; SWRD×617 yday $2.15 → 09:30 $2.15 +0.00; EYPT×325 yday $3.85 → 09:30 $3.87 +6.50; BHVN×91 yday $13.62 → 09:30 $13.90 +25.48; BNC×220 yday $5.98 → 09:30 $6.42 +95.70; DDD×358 yday $3.63 → 09:30 $3.71 +28.64; RANI×1511 yday $0.86 → 09:30 $0.86 +3.02; RARE×83 yday $14.51 → 09:30 $14.58 +5.81 | — |
+| 2026-09-21 09:30 ET | **SELL** | `TLSA` | 1324 | $0.94 | $16.65 | $-73.18 | $1,241.55 | ▼ -73.18 after sell → book $10,345.87; vs 09:30 mark -16.65 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `SWRD` | 617 | $2.15 | $8.07 | $+27.16 | $2,560.03 | ▲ +27.16 after sell → book $10,337.80; vs 09:30 mark -8.07 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `EYPT` | 325 | $3.87 | $4.26 | $-34.45 | $3,813.52 | ▼ -34.45 after sell → book $10,333.55; vs 09:30 mark -4.25 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `BHVN` | 91 | $13.90 | $2.29 | $-20.02 | $5,076.13 | ▼ -20.02 after sell → book $10,331.26; vs 09:30 mark -2.29 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `BNC` | 220 | $6.42 | $2.89 | $+122.98 | $6,484.55 | ▲ +122.98 after sell → book $10,328.37; vs 09:30 mark -2.89 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `DDD` | 358 | $3.71 | $4.69 | $+37.23 | $7,808.04 | ▲ +37.23 after sell → book $10,323.68; vs 09:30 mark -4.69 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `RANI` | 1511 | $0.86 | $17.85 | $-14.07 | $9,095.69 | ▼ -14.07 after sell → book $10,305.83; vs 09:30 mark -17.85 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `RARE` | 83 | $14.58 | $2.26 | $-21.93 | $10,303.57 | ▼ -21.93 after sell → book $10,303.57; vs 09:30 mark -2.26 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **BUY** | `FEAM` | 521 | $2.47 | $6.72 | — | $9,009.98 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-3.8; leftover $1287.95 | join🔴 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `BKKT` | 138 | $9.31 | $2.40 | — | $7,722.80 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-2.4; leftover $1287.95 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `BTDR` | 95 | $13.47 | $2.27 | — | $6,440.40 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+8.4; leftover $1287.95 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `ORBS` | 1160 | $1.11 | $14.96 | — | $5,137.83 | — | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=+6.9; leftover $1287.95 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `SBET` | 128 | $9.99 | $2.37 | — | $3,856.74 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+5.3; leftover $1287.95 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `BTBT` | 705 | $1.82 | $9.09 | — | $2,561.02 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+8.8; leftover $1287.95 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `SGML` | 127 | $10.13 | $2.37 | — | $1,271.50 | — | baseline list, no extra gate; list probable,yday_gainer; ret5=-25.6; leftover $1287.95 | join🔴 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `COIN` | 6 | $205.19 | $2.01 | — | $38.36 | — | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=-9.1; leftover $1287.95 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $38.36 | ▼ close $10,129.19 vs 09:30 $10,362.52 (session -132.17) | 16:00 close · cash $38.36 · equity $10,129.19 vs 09:30 $10,362.52 (-233.33; session marks -132.17) · 8 name(s) marked open→close (per-name table). FEAM×521 09:30 $2.47 → close $2.48 +5.21; BKKT×138 09:30 $9.31 → close $9.14 -23.46; BTDR×95 09:30 $13.47 → close $13.14 -31.82; ORBS×1160 09:30 $1.11 → close $1.05 -69.60; SBET×128 09:30 $9.99 → close $9.98 -1.28; BTBT×705 09:30 $1.82 → close $1.82 -3.52; SGML×127 09:30 $10.13 → close $10.27 +17.14; COIN×6 09:30 $205.19 → close $201.05 -24.84 | — |
 
 ## Not taken
 
@@ -699,11 +699,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `FEAM` | 521 | 2026-09-21 @ $2.47 | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-3.8; leftover $1288.23 |
-| `BKKT` | 138 | 2026-09-21 @ $9.31 | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-2.4; leftover $1288.23 |
-| `BTDR` | 95 | 2026-09-21 @ $13.44 | baseline list, no extra gate; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+8.4; leftover $1288.23 |
-| `ORBS` | 1171 | 2026-09-21 @ $1.10 | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=+6.9; leftover $1288.23 |
-| `SBET` | 128 | 2026-09-21 @ $9.99 | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+5.3; leftover $1288.23 |
-| `BTBT` | 705 | 2026-09-21 @ $1.82 | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+8.8; leftover $1288.23 |
-| `SGML` | 127 | 2026-09-21 @ $10.12 | baseline list, no extra gate; list probable,yday_gainer; ret5=-25.6; leftover $1288.23 |
-| `COIN` | 6 | 2026-09-21 @ $205.50 | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=-9.1; leftover $1288.23 |
+| `FEAM` | 521 | 2026-09-21 @ $2.47 | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-3.8; leftover $1287.95 |
+| `BKKT` | 138 | 2026-09-21 @ $9.31 | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=-2.4; leftover $1287.95 |
+| `BTDR` | 95 | 2026-09-21 @ $13.47 | baseline list, no extra gate; list probable,yday_gainer,yday_mover,ohlc_hot; ret5=+8.4; leftover $1287.95 |
+| `ORBS` | 1160 | 2026-09-21 @ $1.11 | baseline list, no extra gate; list probable,yday_gainer,yday_mover; ret5=+6.9; leftover $1287.95 |
+| `SBET` | 128 | 2026-09-21 @ $9.99 | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+5.3; leftover $1287.95 |
+| `BTBT` | 705 | 2026-09-21 @ $1.82 | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=+8.8; leftover $1287.95 |
+| `SGML` | 127 | 2026-09-21 @ $10.13 | baseline list, no extra gate; list probable,yday_gainer; ret5=-25.6; leftover $1287.95 |
+| `COIN` | 6 | 2026-09-21 @ $205.19 | baseline list, no extra gate; list probable,yday_gainer; 🔵; ret5=-9.1; leftover $1287.95 |

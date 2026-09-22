@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `topheavy` · sell `list` · S-boost `none` · 40% to #1, rest split
 
-Cash book **-7.17%** ($9,283) · signal-only (no cash/fees) was +2.16%. Starts YES **2/27**. Fills 121 · skips 188 · realized $-535.16.
+Cash book **-7.25%** ($9,275) · signal-only (no cash/fees) was +2.07%. Starts YES **2/27**. Fills 121 · skips 188 · realized $-535.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -50,7 +50,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $478.62.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $480.91.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -298,9 +298,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | `PGEN` | 2 | $7.78 | $7.84 | +0.12 | $7.70 | -0.28 | -0.16 | +0.50 | +0.22 |
 | 2026-09-21 | `A` | 23 | — | $157.87 | +0.00 | $161.94 | +93.61 | +93.61 | +0.00 | +93.61 |
 | 2026-09-21 | `HUM` | 3 | — | $386.20 | +0.00 | $378.58 | -22.86 | -22.86 | +0.00 | -22.86 |
-| 2026-09-21 | `DXCM` | 15 | — | $88.89 | +0.00 | $89.17 | +4.17 | +4.17 | +0.00 | +4.17 |
+| 2026-09-21 | `DXCM` | 15 | — | $88.83 | +0.00 | $89.17 | +5.10 | +5.10 | +0.00 | +5.10 |
 | 2026-09-21 | `MGTX` | 104 | — | $13.47 | +0.00 | $13.08 | -40.56 | -40.56 | +0.00 | -40.56 |
-| 2026-09-21 | `CYPH` | 356 | — | $3.97 | +0.00 | $3.40 | -202.92 | -202.92 | +0.00 | -202.92 |
+| 2026-09-21 | `CYPH` | 353 | — | $4.00 | +0.00 | $3.40 | -211.80 | -211.80 | +0.00 | -211.80 |
 
 ## Each session (cash + holdings state)
 
@@ -332,7 +332,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | +5.30 | $372.27 | AUPH×248, OVID×444, SANM×5, ORCL×7, NVT×7, COHU×21 | $9,653.66 | +60.44 | -86.04 | IQV, RDNT, AVAH, BLFS | AUPH, OVID, SANM, ORCL, NVT, COHU | $170.98 | $9,541.74 | IQV×14, RDNT×24, AVAH×134, BLFS×52 |
 | 2026-09-17 | +7.38 | $170.98 | IQV×14, RDNT×24, AVAH×134, BLFS×52 | $9,656.70 | +114.96 | -58.56 | IOVA, PGEN | — | $134.93 | $9,597.77 | IQV×14, RDNT×24, AVAH×134, BLFS×52, IOVA×2, PGEN×2 |
 | 2026-09-18 | +4.86 | $134.93 | IQV×14, RDNT×24, AVAH×134, BLFS×52, IOVA×2, PGEN×2 | $9,579.83 | -17.94 | -115.30 | — | — | $134.93 | $9,464.53 | IQV×14, RDNT×24, AVAH×134, BLFS×52, IOVA×2, PGEN×2 |
-| 2026-09-21 | +12.87 | $134.93 | IQV×14, RDNT×24, AVAH×134, BLFS×52, IOVA×2, PGEN×2 | $9,474.09 | +9.56 | -169.32 | A, HUM, DXCM, MGTX, CYPH | IQV, RDNT, AVAH, BLFS | $478.62 | $9,283.03 | IOVA×2, PGEN×2, A×23, HUM×3, DXCM×15, MGTX×104, CYPH×356 |
+| 2026-09-21 | +12.87 | $134.93 | IQV×14, RDNT×24, AVAH×134, BLFS×52, IOVA×2, PGEN×2 | $9,474.09 | +9.56 | -177.27 | A, HUM, DXCM, MGTX, CYPH | IQV, RDNT, AVAH, BLFS | $480.91 | $9,275.12 | IOVA×2, PGEN×2, A×23, HUM×3, DXCM×15, MGTX×104, CYPH×353 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -509,10 +509,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 09:30 ET | **SELL** | `BLFS` | 52 | $36.70 | $2.17 | $+8.16 | $9,428.80 | ▲ +8.16 after sell → book $9,465.34; vs 09:30 mark -2.17 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-21 09:30 ET | **BUY** | `A` | 23 | $157.87 | $2.06 | — | $5,795.73 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=-4.4; leftover $3771.52 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-21 09:30 ET | **BUY** | `HUM` | 3 | $386.20 | $2.00 | — | $4,635.13 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+5.2; leftover $1414.32 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `DXCM` | 15 | $88.89 | $2.04 | — | $3,299.71 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=-7.2; leftover $1414.32 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `MGTX` | 104 | $13.47 | $2.30 | — | $1,896.53 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=-8.4; leftover $1414.32 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `CYPH` | 356 | $3.97 | $4.59 | — | $478.62 | — | 40% to #1, rest split; list flatten,yday_gainer,yday_mover; wish-list (live io HOLD — not a ticket); ⚪; ret5=+58.9; leftover $1414.32 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $478.62 | ▼ close $9,283.03 vs 09:30 $9,474.09 (session -169.32) | 16:00 close · cash $478.62 · equity $9,283.03 vs 09:30 $9,474.09 (-191.06; session marks -169.32) · 7 name(s) marked open→close (per-name table). IOVA×2 09:30 $10.43 → close $10.19 -0.48; PGEN×2 09:30 $7.84 → close $7.70 -0.28; A×23 09:30 $157.87 → close $161.94 +93.61; HUM×3 09:30 $386.20 → close $378.58 -22.86; DXCM×15 09:30 $88.89 → close $89.17 +4.17; MGTX×104 09:30 $13.47 → close $13.08 -40.56; CYPH×356 09:30 $3.97 → close $3.40 -202.92 | — |
+| 2026-09-21 09:30 ET | **BUY** | `DXCM` | 15 | $88.83 | $2.04 | — | $3,300.64 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=-7.2; leftover $1414.32 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `MGTX` | 104 | $13.47 | $2.30 | — | $1,897.46 | — | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=-8.4; leftover $1414.32 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `CYPH` | 353 | $4.00 | $4.55 | — | $480.91 | — | 40% to #1, rest split; list flatten,yday_gainer,yday_mover; wish-list (live io HOLD — not a ticket); ⚪; ret5=+58.9; leftover $1414.32 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $480.91 | ▼ close $9,275.12 vs 09:30 $9,474.09 (session -177.27) | 16:00 close · cash $480.91 · equity $9,275.12 vs 09:30 $9,474.09 (-198.97; session marks -177.27) · 7 name(s) marked open→close (per-name table). IOVA×2 09:30 $10.43 → close $10.19 -0.48; PGEN×2 09:30 $7.84 → close $7.70 -0.28; A×23 09:30 $157.87 → close $161.94 +93.61; HUM×3 09:30 $386.20 → close $378.58 -22.86; DXCM×15 09:30 $88.83 → close $89.17 +5.10; MGTX×104 09:30 $13.47 → close $13.08 -40.56; CYPH×353 09:30 $4.00 → close $3.40 -211.80 | — |
 
 ## Not taken
 
@@ -715,6 +715,6 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | `PGEN` | 2 | 2026-09-17 @ $7.59 | 40% to #1, rest split; list flatten,ohlc_hot; wish-list (live io HOLD — not a ticket); 🔵; ret5=+9.4; leftover $20.52 |
 | `A` | 23 | 2026-09-21 @ $157.87 | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=-4.4; leftover $3771.52 |
 | `HUM` | 3 | 2026-09-21 @ $386.20 | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ret5=+5.2; leftover $1414.32 |
-| `DXCM` | 15 | 2026-09-21 @ $88.89 | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=-7.2; leftover $1414.32 |
+| `DXCM` | 15 | 2026-09-21 @ $88.83 | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=-7.2; leftover $1414.32 |
 | `MGTX` | 104 | 2026-09-21 @ $13.47 | 40% to #1, rest split; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=-8.4; leftover $1414.32 |
-| `CYPH` | 356 | 2026-09-21 @ $3.97 | 40% to #1, rest split; list flatten,yday_gainer,yday_mover; wish-list (live io HOLD — not a ticket); ⚪; ret5=+58.9; leftover $1414.32 |
+| `CYPH` | 353 | 2026-09-21 @ $4.00 | 40% to #1, rest split; list flatten,yday_gainer,yday_mover; wish-list (live io HOLD — not a ticket); ⚪; ret5=+58.9; leftover $1414.32 |

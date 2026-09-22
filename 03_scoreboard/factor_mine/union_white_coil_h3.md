@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-8.03%** ($9,197) · signal-only (no cash/fees) was -13.26%. Starts YES **0/27**. Fills 110 · skips 121 · realized $-751.65.
+Cash book **-8.03%** ($9,197) · signal-only (no cash/fees) was -13.24%. Starts YES **0/27**. Fills 110 · skips 121 · realized $-751.65.
 
 ## How this sleeve decides (like you are 10)
 
@@ -287,7 +287,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | `ECO` | 54 | — | $85.00 | +0.00 | $84.95 | -2.70 | -2.70 | +0.00 | -2.70 |
 | 2026-09-18 | `TH` | 221 | — | $20.91 | +0.00 | $21.19 | +61.88 | +61.88 | +0.00 | +61.88 |
 | 2026-09-21 | `ECO` | 54 | $84.95 | $82.83 | -114.48 | $82.63 | -10.80 | -125.28 | -117.18 | -127.98 |
-| 2026-09-21 | `TH` | 221 | $21.19 | $21.55 | +79.56 | $21.28 | -59.67 | +19.89 | +141.44 | +81.77 |
+| 2026-09-21 | `TH` | 221 | $21.19 | $21.65 | +101.66 | $21.28 | -81.77 | +19.89 | +163.54 | +81.77 |
 
 ## Each session (cash + holdings state)
 
@@ -319,7 +319,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | +5.30 | $1.53 | BAND×95, PAGS×494 | $9,257.19 | -254.22 | +0.00 | — | BAND, PAGS | $9,248.38 | $9,248.38 | — |
 | 2026-09-17 | +7.38 | $9,248.38 | — | $9,248.38 | -0.00 | +0.00 | — | — | $9,248.38 | $9,248.38 | — |
 | 2026-09-18 | +4.86 | $9,248.38 | — | $9,248.38 | -0.00 | +59.18 | ECO, TH | — | $32.26 | $9,302.55 | ECO×54, TH×221 |
-| 2026-09-21 | +12.87 | $32.26 | ECO×54, TH×221 | $9,267.63 | -34.92 | -70.47 | — | — | $32.26 | $9,197.16 | ECO×54, TH×221 |
+| 2026-09-21 | +12.87 | $32.26 | ECO×54, TH×221 | $9,289.73 | -12.82 | -92.57 | — | — | $32.26 | $9,197.16 | ECO×54, TH×221 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -487,8 +487,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 09:30 ET | **BUY** | `ECO` | 54 | $85.00 | $2.15 | — | $4,656.22 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list flatten; 🔵; ⚪; ret5=+4.8; leftover $4624.19 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-18 09:30 ET | **BUY** | `TH` | 221 | $20.91 | $2.85 | — | $32.26 | — | combo gate; gate zero_red=True,ret_5_max=10.0,rvol_max=2.2; list ohlc_hot; 🔵; ⚪; ret5=+8.6; leftover $4624.19 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $32.26 | ▲ close $9,302.55 vs 09:30 $9,248.38 (session +59.18) | 16:00 close · cash $32.26 · equity $9,302.55 vs 09:30 $9,248.38 (+54.17; session marks +59.18) · 2 name(s) marked open→close (per-name table). ECO×54 09:30 $85.00 → close $84.95 -2.70; TH×221 09:30 $20.91 → close $21.19 +61.88 | — |
-| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $32.26 | ▼ 09:30 equity $9,267.63 vs yday $9,302.55 (-34.92) | 09:30 open · cash $32.26 (unchanged overnight, no fees) · equity $9,267.63 vs prior close $9,302.55 (-34.92) · 2 name(s) re-marked at the open (per-name table). ECO×54 yday $84.95 → 09:30 $82.83 -114.48; TH×221 yday $21.19 → 09:30 $21.55 +79.56 | — |
-| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $32.26 | ▼ close $9,197.16 vs 09:30 $9,267.63 (session -70.47) | 16:00 close · cash $32.26 · equity $9,197.16 vs 09:30 $9,267.63 (-70.47; session marks -70.47) · 2 name(s) marked open→close (per-name table). ECO×54 09:30 $82.83 → close $82.63 -10.80; TH×221 09:30 $21.55 → close $21.28 -59.67 | — |
+| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $32.26 | ▼ 09:30 equity $9,289.73 vs yday $9,302.55 (-12.82) | 09:30 open · cash $32.26 (unchanged overnight, no fees) · equity $9,289.73 vs prior close $9,302.55 (-12.82) · 2 name(s) re-marked at the open (per-name table). ECO×54 yday $84.95 → 09:30 $82.83 -114.48; TH×221 yday $21.19 → 09:30 $21.65 +101.66 | — |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $32.26 | ▼ close $9,197.16 vs 09:30 $9,289.73 (session -92.57) | 16:00 close · cash $32.26 · equity $9,197.16 vs 09:30 $9,289.73 (-92.57; session marks -92.57) · 2 name(s) marked open→close (per-name table). ECO×54 09:30 $82.83 → close $82.63 -10.80; TH×221 09:30 $21.65 → close $21.28 -81.77 | — |
 
 ## Not taken
 
@@ -613,7 +613,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | `ECO` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-21 | `TH` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-21 | `A` | cash | leftover split 10.75 < 1 share @ 157.87 |
-| 2026-09-21 | `DXCM` | cash | leftover split 10.75 < 1 share @ 88.89 |
+| 2026-09-21 | `DXCM` | cash | leftover split 10.75 < 1 share @ 88.83 |
 | 2026-09-21 | `MGTX` | cash | leftover split 10.75 < 1 share @ 13.47 |
 
 ## Still open (marked at last close)

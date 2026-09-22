@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · union looker: 0 red cameras + yesterday up, rank +G−R
 
-Cash book **+1.76%** ($10,176) · signal-only (no cash/fees) was +1.70%. Starts YES **6/27**. Fills 161 · skips 1 · realized $+255.70.
+Cash book **+1.82%** ($10,182) · signal-only (no cash/fees) was +1.46%. Starts YES **6/27**. Fills 161 · skips 1 · realized $+261.80.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $12.89.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $18.99.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -229,9 +229,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | `PGEN` | 161 | $7.78 | $7.84 | +9.66 | — | +0.00 | +9.66 | -22.54 | — |
 | 2026-09-21 | `RBRK` | 11 | $106.71 | $107.57 | +9.46 | — | +0.00 | +9.46 | -10.78 | — |
 | 2026-09-21 | `RXT` | 327 | $3.80 | $3.90 | +32.70 | — | +0.00 | +32.70 | -13.08 | — |
-| 2026-09-21 | `TH` | 61 | $21.19 | $21.55 | +21.96 | — | +0.00 | +21.96 | +39.04 | — |
+| 2026-09-21 | `TH` | 61 | $21.19 | $21.65 | +28.06 | — | +0.00 | +28.06 | +45.14 | — |
 | 2026-09-21 | `ARQT` | 49 | $25.38 | $25.57 | +9.31 | — | +0.00 | +9.31 | -27.93 | — |
-| 2026-09-21 | `CYPH` | 425 | $3.60 | $3.97 | +157.25 | $3.40 | -242.25 | -85.00 | +397.38 | +155.12 |
+| 2026-09-21 | `CYPH` | 425 | $3.60 | $4.00 | +170.00 | $3.40 | -255.00 | -85.00 | +410.12 | +155.12 |
 | 2026-09-21 | `GME` | 56 | $22.64 | $22.78 | +7.84 | — | +0.00 | +7.84 | -6.72 | — |
 | 2026-09-21 | `ABSI` | 445 | — | $10.06 | +0.00 | $9.82 | -106.80 | -106.80 | +0.00 | -106.80 |
 | 2026-09-21 | `NEO` | 224 | — | $19.92 | +0.00 | $19.41 | -114.24 | -114.24 | +0.00 | -114.24 |
@@ -266,7 +266,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | +5.30 | $10,649.37 | — | $10,649.37 | -0.00 | -413.06 | QRVO, SWKS | — | $53.56 | $10,232.02 | QRVO×45, SWKS×59 |
 | 2026-09-17 | +7.38 | $53.56 | QRVO×45, SWKS×59 | $10,342.90 | +110.88 | +0.00 | — | QRVO, SWKS | $10,338.50 | $10,338.50 | — |
 | 2026-09-18 | +4.86 | $10,338.50 | — | $10,338.50 | +0.00 | +98.16 | ATRC, PGEN, RBRK, RXT, TH, ARQT, CYPH, GME | — | $132.71 | $10,413.95 | ATRC×22, PGEN×161, RBRK×11, RXT×327, TH×61, ARQT×49, CYPH×425, GME×56 |
-| 2026-09-21 | +12.87 | $132.71 | ATRC×22, PGEN×161, RBRK×11, RXT×327, TH×61, ARQT×49, CYPH×425, GME×56 | $10,664.99 | +251.04 | -463.29 | ABSI, NEO | ATRC, PGEN, RBRK, RXT, TH, ARQT, GME | $12.89 | $10,175.63 | CYPH×425, ABSI×445, NEO×224 |
+| 2026-09-21 | +12.87 | $132.71 | ATRC×22, PGEN×161, RBRK×11, RXT×327, TH×61, ARQT×49, CYPH×425, GME×56 | $10,683.84 | +269.89 | -476.04 | ABSI, NEO | ATRC, PGEN, RBRK, RXT, TH, ARQT, GME | $18.99 | $10,181.73 | CYPH×425, ABSI×445, NEO×224 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -476,17 +476,17 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 09:30 ET | **BUY** | `CYPH` | 425 | $3.04 | $5.48 | — | $1,417.27 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate zero_red=True,yday_up=True; rank cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+39.5; leftover $1292.31 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-18 09:30 ET | **BUY** | `GME` | 56 | $22.90 | $2.16 | — | $132.71 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate zero_red=True,yday_up=True; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+11.7; leftover $1292.31 | join🟢 sector🟢 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $132.71 | ▲ close $10,413.95 vs 09:30 $10,338.50 (session +98.16) | 16:00 close · cash $132.71 · equity $10,413.95 vs 09:30 $10,338.50 (+75.45; session marks +98.16) · 8 name(s) marked open→close (per-name table). ATRC×22 09:30 $58.51 → close $58.10 -9.02; PGEN×161 09:30 $7.98 → close $7.78 -32.20; RBRK×11 09:30 $108.55 → close $106.71 -20.24; RXT×327 09:30 $3.94 → close $3.80 -45.78; TH×61 09:30 $20.91 → close $21.19 +17.08; ARQT×49 09:30 $26.14 → close $25.38 -37.24; CYPH×425 09:30 $3.04 → close $3.60 +240.12; GME×56 09:30 $22.90 → close $22.64 -14.56 | — |
-| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $132.71 | ▲ 09:30 equity $10,664.99 vs yday $10,413.95 (+251.04) | 09:30 open · cash $132.71 (unchanged overnight, no fees) · equity $10,664.99 vs prior close $10,413.95 (+251.04) · 8 name(s) re-marked at the open (per-name table). ATRC×22 yday $58.10 → 09:30 $58.23 +2.86; PGEN×161 yday $7.78 → 09:30 $7.84 +9.66; RBRK×11 yday $106.71 → 09:30 $107.57 +9.46; RXT×327 yday $3.80 → 09:30 $3.90 +32.70; TH×61 yday $21.19 → 09:30 $21.55 +21.96; ARQT×49 yday $25.38 → 09:30 $25.57 +9.31; CYPH×425 yday $3.60 → 09:30 $3.97 +157.25; GME×56 yday $22.64 → 09:30 $22.78 +7.84 | — |
-| 2026-09-21 09:30 ET | **SELL** | `ATRC` | 22 | $58.23 | $2.08 | $-10.29 | $1,411.69 | ▼ -10.29 after sell → book $10,662.91; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SELL** | `PGEN` | 161 | $7.84 | $2.51 | $-27.52 | $2,671.42 | ▼ -27.52 after sell → book $10,660.40; vs 09:30 mark -2.51 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **SELL** | `RBRK` | 11 | $107.57 | $2.04 | $-14.85 | $3,852.65 | ▼ -14.85 after sell → book $10,658.36; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SELL** | `RXT` | 327 | $3.90 | $4.28 | $-21.58 | $5,123.67 | ▼ -21.58 after sell → book $10,654.08; vs 09:30 mark -4.28 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SELL** | `TH` | 61 | $21.55 | $2.19 | $+34.67 | $6,436.02 | ▲ +34.67 after sell → book $10,651.88; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **SELL** | `ARQT` | 49 | $25.57 | $2.16 | $-32.22 | $7,686.79 | ▼ -32.22 after sell → book $10,649.72; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SELL** | `GME` | 56 | $22.78 | $2.18 | $-11.06 | $8,960.30 | ▼ -11.06 after sell → book $10,647.55; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **BUY** | `ABSI` | 445 | $10.06 | $5.74 | — | $4,477.86 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate zero_red=True,yday_up=True; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+17.5; leftover $4480.15 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `NEO` | 224 | $19.92 | $2.89 | — | $12.89 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate zero_red=True,yday_up=True; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+15.0; leftover $4480.15 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12.89 | ▼ close $10,175.63 vs 09:30 $10,664.99 (session -463.29) | 16:00 close · cash $12.89 · equity $10,175.63 vs 09:30 $10,664.99 (-489.36; session marks -463.29) · 3 name(s) marked open→close (per-name table). CYPH×425 09:30 $3.97 → close $3.40 -242.25; ABSI×445 09:30 $10.06 → close $9.82 -106.80; NEO×224 09:30 $19.92 → close $19.41 -114.24 | — |
+| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $132.71 | ▲ 09:30 equity $10,683.84 vs yday $10,413.95 (+269.89) | 09:30 open · cash $132.71 (unchanged overnight, no fees) · equity $10,683.84 vs prior close $10,413.95 (+269.89) · 8 name(s) re-marked at the open (per-name table). ATRC×22 yday $58.10 → 09:30 $58.23 +2.86; PGEN×161 yday $7.78 → 09:30 $7.84 +9.66; RBRK×11 yday $106.71 → 09:30 $107.57 +9.46; RXT×327 yday $3.80 → 09:30 $3.90 +32.70; TH×61 yday $21.19 → 09:30 $21.65 +28.06; ARQT×49 yday $25.38 → 09:30 $25.57 +9.31; CYPH×425 yday $3.60 → 09:30 $4.00 +170.00; GME×56 yday $22.64 → 09:30 $22.78 +7.84 | — |
+| 2026-09-21 09:30 ET | **SELL** | `ATRC` | 22 | $58.23 | $2.08 | $-10.29 | $1,411.69 | ▼ -10.29 after sell → book $10,681.76; vs 09:30 mark -2.08 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `PGEN` | 161 | $7.84 | $2.51 | $-27.52 | $2,671.42 | ▼ -27.52 after sell → book $10,679.25; vs 09:30 mark -2.51 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **SELL** | `RBRK` | 11 | $107.57 | $2.04 | $-14.85 | $3,852.65 | ▼ -14.85 after sell → book $10,677.21; vs 09:30 mark -2.04 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `RXT` | 327 | $3.90 | $4.28 | $-21.58 | $5,123.67 | ▼ -21.58 after sell → book $10,672.93; vs 09:30 mark -4.28 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `TH` | 61 | $21.65 | $2.19 | $+40.77 | $6,442.12 | ▲ +40.77 after sell → book $10,670.73; vs 09:30 mark -2.20 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **SELL** | `ARQT` | 49 | $25.57 | $2.16 | $-32.22 | $7,692.89 | ▼ -32.22 after sell → book $10,668.57; vs 09:30 mark -2.16 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `GME` | 56 | $22.78 | $2.18 | $-11.06 | $8,966.40 | ▼ -11.06 after sell → book $10,666.40; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **BUY** | `ABSI` | 445 | $10.06 | $5.74 | — | $4,483.96 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate zero_red=True,yday_up=True; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+17.5; leftover $4483.20 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `NEO` | 224 | $19.92 | $2.89 | — | $18.99 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate zero_red=True,yday_up=True; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+15.0; leftover $4483.20 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $18.99 | ▼ close $10,181.73 vs 09:30 $10,683.84 (session -476.04) | 16:00 close · cash $18.99 · equity $10,181.73 vs 09:30 $10,683.84 (-502.11; session marks -476.04) · 3 name(s) marked open→close (per-name table). CYPH×425 09:30 $4.00 → close $3.40 -255.00; ABSI×445 09:30 $10.06 → close $9.82 -106.80; NEO×224 09:30 $19.92 → close $19.41 -114.24 | — |
 
 ## Not taken
 
@@ -499,5 +499,5 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
 | `CYPH` | 425 | 2026-09-18 @ $3.04 | union looker: 0 red cameras + yesterday up, rank +G−R; gate zero_red=True,yday_up=True; rank cond; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+39.5; leftover $1292.31 |
-| `ABSI` | 445 | 2026-09-21 @ $10.06 | union looker: 0 red cameras + yesterday up, rank +G−R; gate zero_red=True,yday_up=True; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+17.5; leftover $4480.15 |
-| `NEO` | 224 | 2026-09-21 @ $19.92 | union looker: 0 red cameras + yesterday up, rank +G−R; gate zero_red=True,yday_up=True; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+15.0; leftover $4480.15 |
+| `ABSI` | 445 | 2026-09-21 @ $10.06 | union looker: 0 red cameras + yesterday up, rank +G−R; gate zero_red=True,yday_up=True; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+17.5; leftover $4483.20 |
+| `NEO` | 224 | 2026-09-21 @ $19.92 | union looker: 0 red cameras + yesterday up, rank +G−R; gate zero_red=True,yday_up=True; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+15.0; leftover $4483.20 |

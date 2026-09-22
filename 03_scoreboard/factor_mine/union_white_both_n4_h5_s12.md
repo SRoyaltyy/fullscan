@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `list` · size `leftover` · sell `list` · S-boost `none` · both+top4 hold5, stop −12% at 09:30 even inside hold
 
-Cash book **+22.12%** ($12,212) · signal-only (no cash/fees) was +17.47%. Starts YES **16/27**. Fills 61 · skips 118 · realized $+2152.09.
+Cash book **+22.12%** ($12,212) · signal-only (no cash/fees) was +17.06%. Starts YES **16/27**. Fills 61 · skips 118 · realized $+2152.09.
 
 ## How this sleeve decides (like you are 10)
 
@@ -236,11 +236,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | `SDGR` | 27 | — | $29.32 | +0.00 | $29.02 | -8.10 | -8.10 | +0.00 | -8.10 |
 | 2026-09-18 | `CYPH` | 262 | — | $3.04 | +0.00 | $3.60 | +148.03 | +148.03 | +0.00 | +148.03 |
 | 2026-09-21 | `SWKS` | 50 | $88.76 | $89.66 | +45.00 | $88.74 | -46.00 | -1.00 | +14.00 | -32.00 |
-| 2026-09-21 | `QRVO` | 38 | $117.18 | $118.15 | +36.86 | $117.21 | -35.72 | +1.14 | -1.14 | -36.86 |
+| 2026-09-21 | `QRVO` | 38 | $117.18 | $118.44 | +47.88 | $117.21 | -46.74 | +1.14 | +9.88 | -36.86 |
 | 2026-09-21 | `RBRK` | 7 | $106.71 | $107.57 | +6.02 | $112.96 | +37.73 | +43.75 | -6.86 | +30.87 |
-| 2026-09-21 | `RARE` | 53 | $14.51 | $14.60 | +4.77 | $14.65 | +2.65 | +7.42 | -10.07 | -7.42 |
+| 2026-09-21 | `RARE` | 53 | $14.51 | $14.58 | +3.71 | $14.65 | +3.71 | +7.42 | -11.13 | -7.42 |
 | 2026-09-21 | `SDGR` | 27 | $29.02 | $29.43 | +11.07 | $30.24 | +21.87 | +32.94 | +2.97 | +24.84 |
-| 2026-09-21 | `CYPH` | 262 | $3.60 | $3.97 | +96.94 | $3.40 | -149.34 | -52.40 | +244.97 | +95.63 |
+| 2026-09-21 | `CYPH` | 262 | $3.60 | $4.00 | +104.80 | $3.40 | -157.20 | -52.40 | +252.83 | +95.63 |
 | 2026-09-21 | `NEO` | 2 | — | $19.92 | +0.00 | $19.41 | -1.02 | -1.02 | +0.00 | -1.02 |
 
 ## Each session (cash + holdings state)
@@ -273,7 +273,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | +5.30 | $9,080.64 | BAND×30, PAYP×86 | $12,063.42 | -52.14 | -346.46 | SWKS, QRVO | — | $116.55 | $11,712.71 | BAND×30, PAYP×86, SWKS×50, QRVO×38 |
 | 2026-09-17 | +7.38 | $116.55 | BAND×30, PAYP×86, SWKS×50, QRVO×38 | $11,851.35 | +138.64 | +428.14 | — | — | $116.55 | $12,279.49 | BAND×30, PAYP×86, SWKS×50, QRVO×38 |
 | 2026-09-18 | +4.86 | $116.55 | BAND×30, PAYP×86, SWKS×50, QRVO×38 | $12,383.74 | +104.25 | -188.33 | RBRK, RARE, SDGR, CYPH | BAND, PAYP | $47.84 | $12,181.42 | SWKS×50, QRVO×38, RBRK×7, RARE×53, SDGR×27, CYPH×262 |
-| 2026-09-21 | +12.87 | $47.84 | SWKS×50, QRVO×38, RBRK×7, RARE×53, SDGR×27, CYPH×262 | $12,382.08 | +200.66 | -169.83 | NEO | — | $7.60 | $12,211.85 | SWKS×50, QRVO×38, RBRK×7, RARE×53, SDGR×27, CYPH×262, NEO×2 |
+| 2026-09-21 | +12.87 | $47.84 | SWKS×50, QRVO×38, RBRK×7, RARE×53, SDGR×27, CYPH×262 | $12,399.90 | +218.48 | -187.65 | NEO | — | $7.60 | $12,211.85 | SWKS×50, QRVO×38, RBRK×7, RARE×53, SDGR×27, CYPH×262, NEO×2 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -391,9 +391,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 09:30 ET | **BUY** | `SDGR` | 27 | $29.32 | $2.07 | — | $846.39 | — | both+top4 hold5, stop −12% at 09:30 even inside hold; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+60.9; leftover $797.00 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-18 09:30 ET | **BUY** | `CYPH` | 262 | $3.04 | $3.38 | — | $47.84 | — | both+top4 hold5, stop −12% at 09:30 even inside hold; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+39.5; leftover $797.00 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $47.84 | ▼ close $12,181.42 vs 09:30 $12,383.74 (session -188.33) | 16:00 close · cash $47.84 · equity $12,181.42 vs 09:30 $12,383.74 (-202.32; session marks -188.33) · 6 name(s) marked open→close (per-name table). SWKS×50 09:30 $92.05 → close $88.76 -164.50; QRVO×38 09:30 $120.76 → close $117.18 -136.04; RBRK×7 09:30 $108.55 → close $106.71 -12.88; RARE×53 09:30 $14.79 → close $14.51 -14.84; SDGR×27 09:30 $29.32 → close $29.02 -8.10; CYPH×262 09:30 $3.04 → close $3.60 +148.03 | — |
-| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $47.84 | ▲ 09:30 equity $12,382.08 vs yday $12,181.42 (+200.66) | 09:30 open · cash $47.84 (unchanged overnight, no fees) · equity $12,382.08 vs prior close $12,181.42 (+200.66) · 6 name(s) re-marked at the open (per-name table). SWKS×50 yday $88.76 → 09:30 $89.66 +45.00; QRVO×38 yday $117.18 → 09:30 $118.15 +36.86; RBRK×7 yday $106.71 → 09:30 $107.57 +6.02; RARE×53 yday $14.51 → 09:30 $14.60 +4.77; SDGR×27 yday $29.02 → 09:30 $29.43 +11.07; CYPH×262 yday $3.60 → 09:30 $3.97 +96.94 | — |
+| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $47.84 | ▲ 09:30 equity $12,399.90 vs yday $12,181.42 (+218.48) | 09:30 open · cash $47.84 (unchanged overnight, no fees) · equity $12,399.90 vs prior close $12,181.42 (+218.48) · 6 name(s) re-marked at the open (per-name table). SWKS×50 yday $88.76 → 09:30 $89.66 +45.00; QRVO×38 yday $117.18 → 09:30 $118.44 +47.88; RBRK×7 yday $106.71 → 09:30 $107.57 +6.02; RARE×53 yday $14.51 → 09:30 $14.58 +3.71; SDGR×27 yday $29.02 → 09:30 $29.43 +11.07; CYPH×262 yday $3.60 → 09:30 $4.00 +104.80 | — |
 | 2026-09-21 09:30 ET | **BUY** | `NEO` | 2 | $19.92 | $0.40 | — | $7.60 | — | both+top4 hold5, stop −12% at 09:30 even inside hold; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list ohlc_hot; 🔵; ⚪; ret5=+15.0; leftover $47.84 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7.60 | ▼ close $12,211.85 vs 09:30 $12,382.08 (session -169.83) | 16:00 close · cash $7.60 · equity $12,211.85 vs 09:30 $12,382.08 (-170.23; session marks -169.83) · 7 name(s) marked open→close (per-name table). SWKS×50 09:30 $89.66 → close $88.74 -46.00; QRVO×38 09:30 $118.15 → close $117.21 -35.72; RBRK×7 09:30 $107.57 → close $112.96 +37.73; RARE×53 09:30 $14.60 → close $14.65 +2.65; SDGR×27 09:30 $29.43 → close $30.24 +21.87; CYPH×262 09:30 $3.97 → close $3.40 -149.34; NEO×2 09:30 $19.92 → close $19.41 -1.02 | — |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7.60 | ▼ close $12,211.85 vs 09:30 $12,399.90 (session -187.65) | 16:00 close · cash $7.60 · equity $12,211.85 vs 09:30 $12,399.90 (-188.05; session marks -187.65) · 7 name(s) marked open→close (per-name table). SWKS×50 09:30 $89.66 → close $88.74 -46.00; QRVO×38 09:30 $118.44 → close $117.21 -46.74; RBRK×7 09:30 $107.57 → close $112.96 +37.73; RARE×53 09:30 $14.58 → close $14.65 +3.71; SDGR×27 09:30 $29.43 → close $30.24 +21.87; CYPH×262 09:30 $4.00 → close $3.40 -157.20; NEO×2 09:30 $19.92 → close $19.41 -1.02 | — |
 
 ## Not taken
 

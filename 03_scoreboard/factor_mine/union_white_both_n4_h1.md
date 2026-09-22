@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `list` · size `leftover` · sell `list` · S-boost `none` · −0 red + yday up AND catalyst, top 4 by Score
 
-Cash book **+20.67%** ($12,067) · signal-only (no cash/fees) was +6.25%. Starts YES **14/27**. Fills 82 · skips 0 · realized $+1952.40.
+Cash book **+20.63%** ($12,063) · signal-only (no cash/fees) was +5.88%. Starts YES **14/27**. Fills 82 · skips 0 · realized $+1948.34.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $5.01.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $0.95.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -153,9 +153,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | `SDGR` | 102 | — | $29.32 | +0.00 | $29.02 | -30.60 | -30.60 | +0.00 | -30.60 |
 | 2026-09-18 | `CYPH` | 990 | — | $3.04 | +0.00 | $3.60 | +559.35 | +559.35 | +0.00 | +559.35 |
 | 2026-09-21 | `RBRK` | 27 | $106.71 | $107.57 | +23.22 | — | +0.00 | +23.22 | -26.46 | — |
-| 2026-09-21 | `RARE` | 203 | $14.51 | $14.60 | +18.27 | — | +0.00 | +18.27 | -38.57 | — |
+| 2026-09-21 | `RARE` | 203 | $14.51 | $14.58 | +14.21 | — | +0.00 | +14.21 | -42.63 | — |
 | 2026-09-21 | `SDGR` | 102 | $29.02 | $29.43 | +41.82 | — | +0.00 | +41.82 | +11.22 | — |
-| 2026-09-21 | `CYPH` | 990 | $3.60 | $3.97 | +366.30 | $3.40 | -564.30 | -198.00 | +925.65 | +361.35 |
+| 2026-09-21 | `CYPH` | 990 | $3.60 | $4.00 | +396.00 | $3.40 | -594.00 | -198.00 | +955.35 | +361.35 |
 | 2026-09-21 | `NEO` | 448 | — | $19.92 | +0.00 | $19.41 | -228.48 | -228.48 | +0.00 | -228.48 |
 
 ## Each session (cash + holdings state)
@@ -188,7 +188,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | +5.30 | $12,380.43 | — | $12,380.43 | +0.00 | -480.43 | SWKS, QRVO | — | $63.51 | $11,895.66 | SWKS×69, QRVO×52 |
 | 2026-09-17 | +7.38 | $63.51 | SWKS×69, QRVO×52 | $12,024.75 | +129.09 | +0.00 | — | SWKS, QRVO | $12,020.29 | $12,020.29 | — |
 | 2026-09-18 | +4.86 | $12,020.29 | — | $12,020.29 | -0.00 | +422.23 | RBRK, RARE, SDGR, CYPH | — | $72.02 | $12,422.76 | RBRK×27, RARE×203, SDGR×102, CYPH×990 |
-| 2026-09-21 | +12.87 | $72.02 | RBRK×27, RARE×203, SDGR×102, CYPH×990 | $12,872.37 | +449.61 | -792.78 | NEO | RBRK, RARE, SDGR | $5.01 | $12,066.69 | CYPH×990, NEO×448 |
+| 2026-09-21 | +12.87 | $72.02 | RBRK×27, RARE×203, SDGR×102, CYPH×990 | $12,898.01 | +475.25 | -822.48 | NEO | RBRK, RARE, SDGR | $0.95 | $12,062.63 | CYPH×990, NEO×448 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -324,16 +324,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 09:30 ET | **BUY** | `SDGR` | 102 | $29.32 | $2.30 | — | $3,089.44 | — | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+60.9; leftover $3005.07 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-18 09:30 ET | **BUY** | `CYPH` | 990 | $3.04 | $12.77 | — | $72.02 | — | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+39.5; leftover $3005.07 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $72.02 | ▲ close $12,422.76 vs 09:30 $12,020.29 (session +422.23) | 16:00 close · cash $72.02 · equity $12,422.76 vs 09:30 $12,020.29 (+402.47; session marks +422.23) · 4 name(s) marked open→close (per-name table). RBRK×27 09:30 $108.55 → close $106.71 -49.68; RARE×203 09:30 $14.79 → close $14.51 -56.84; SDGR×102 09:30 $29.32 → close $29.02 -30.60; CYPH×990 09:30 $3.04 → close $3.60 +559.35 | — |
-| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $72.02 | ▲ 09:30 equity $12,872.37 vs yday $12,422.76 (+449.61) | 09:30 open · cash $72.02 (unchanged overnight, no fees) · equity $12,872.37 vs prior close $12,422.76 (+449.61) · 4 name(s) re-marked at the open (per-name table). RBRK×27 yday $106.71 → 09:30 $107.57 +23.22; RARE×203 yday $14.51 → 09:30 $14.60 +18.27; SDGR×102 yday $29.02 → 09:30 $29.43 +41.82; CYPH×990 yday $3.60 → 09:30 $3.97 +366.30 | — |
-| 2026-09-21 09:30 ET | **SELL** | `RBRK` | 27 | $107.57 | $2.10 | $-30.64 | $2,974.31 | ▼ -30.64 after sell → book $12,870.27; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SELL** | `RARE` | 203 | $14.60 | $2.68 | $-43.86 | $5,935.43 | ▼ -43.86 after sell → book $12,867.59; vs 09:30 mark -2.68 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SELL** | `SDGR` | 102 | $29.43 | $2.34 | $+6.59 | $8,934.95 | ▲ +6.59 after sell → book $12,865.25; vs 09:30 mark -2.34 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **BUY** | `NEO` | 448 | $19.92 | $5.78 | — | $5.01 | — | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list ohlc_hot; 🔵; ⚪; ret5=+15.0; leftover $8934.95 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $5.01 | ▼ close $12,066.69 vs 09:30 $12,872.37 (session -792.78) | 16:00 close · cash $5.01 · equity $12,066.69 vs 09:30 $12,872.37 (-805.68; session marks -792.78) · 2 name(s) marked open→close (per-name table). CYPH×990 09:30 $3.97 → close $3.40 -564.30; NEO×448 09:30 $19.92 → close $19.41 -228.48 | — |
+| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $72.02 | ▲ 09:30 equity $12,898.01 vs yday $12,422.76 (+475.25) | 09:30 open · cash $72.02 (unchanged overnight, no fees) · equity $12,898.01 vs prior close $12,422.76 (+475.25) · 4 name(s) re-marked at the open (per-name table). RBRK×27 yday $106.71 → 09:30 $107.57 +23.22; RARE×203 yday $14.51 → 09:30 $14.58 +14.21; SDGR×102 yday $29.02 → 09:30 $29.43 +41.82; CYPH×990 yday $3.60 → 09:30 $4.00 +396.00 | — |
+| 2026-09-21 09:30 ET | **SELL** | `RBRK` | 27 | $107.57 | $2.10 | $-30.64 | $2,974.31 | ▼ -30.64 after sell → book $12,895.91; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `RARE` | 203 | $14.58 | $2.68 | $-47.92 | $5,931.37 | ▼ -47.92 after sell → book $12,893.23; vs 09:30 mark -2.68 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **SELL** | `SDGR` | 102 | $29.43 | $2.34 | $+6.59 | $8,930.89 | ▲ +6.59 after sell → book $12,890.89; vs 09:30 mark -2.34 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-21 09:30 ET | **BUY** | `NEO` | 448 | $19.92 | $5.78 | — | $0.95 | — | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list ohlc_hot; 🔵; ⚪; ret5=+15.0; leftover $8930.89 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.95 | ▼ close $12,062.63 vs 09:30 $12,898.01 (session -822.48) | 16:00 close · cash $0.95 · equity $12,062.63 vs 09:30 $12,898.01 (-835.38; session marks -822.48) · 2 name(s) marked open→close (per-name table). CYPH×990 09:30 $4.00 → close $3.40 -594.00; NEO×448 09:30 $19.92 → close $19.41 -228.48 | — |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
 | `CYPH` | 990 | 2026-09-18 @ $3.04 | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+39.5; leftover $3005.07 |
-| `NEO` | 448 | 2026-09-21 @ $19.92 | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list ohlc_hot; 🔵; ⚪; ret5=+15.0; leftover $8934.95 |
+| `NEO` | 448 | 2026-09-21 @ $19.92 | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list ohlc_hot; 🔵; ⚪; ret5=+15.0; leftover $8930.89 |

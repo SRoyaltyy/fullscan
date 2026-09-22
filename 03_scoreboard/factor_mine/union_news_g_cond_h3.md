@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · merged news🟢, rank +G−R
 
-Cash book **-19.53%** ($8,047) · signal-only (no cash/fees) was +163.38%. Starts YES **2/27**. Fills 136 · skips 206 · realized $-1517.69.
+Cash book **-19.51%** ($8,049) · signal-only (no cash/fees) was +163.37%. Starts YES **2/27**. Fills 136 · skips 206 · realized $-1517.47.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $313.83.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $315.60.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -322,21 +322,21 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | `FLNC` | 4 | — | $7.54 | +0.00 | $7.32 | -0.86 | -0.86 | +0.00 | -0.86 |
 | 2026-09-21 | `WAY` | 65 | $25.66 | $25.94 | +18.20 | — | +0.00 | +18.20 | -21.45 | — |
 | 2026-09-21 | `QCOM` | 9 | $177.72 | $180.61 | +26.01 | — | +0.00 | +26.01 | -77.04 | — |
-| 2026-09-21 | `SM` | 43 | $36.97 | $35.91 | -45.79 | — | +0.00 | -45.79 | -175.66 | — |
+| 2026-09-21 | `SM` | 43 | $36.97 | $35.91 | -45.58 | — | +0.00 | -45.58 | -175.44 | — |
 | 2026-09-21 | `CLS` | 5 | $332.63 | $341.45 | +44.10 | — | +0.00 | +44.10 | +106.25 | — |
-| 2026-09-21 | `SION` | 249 | $5.96 | $5.99 | +7.47 | $6.00 | +2.49 | +9.96 | -239.04 | -236.55 |
+| 2026-09-21 | `SION` | 249 | $5.96 | $6.00 | +9.96 | $6.00 | +0.00 | +9.96 | -236.55 | -236.55 |
 | 2026-09-21 | `GME` | 1 | $22.64 | $22.78 | +0.14 | $22.76 | -0.02 | +0.12 | +0.66 | +0.64 |
 | 2026-09-21 | `TNDM` | 1 | $16.87 | $17.01 | +0.14 | $17.62 | +0.61 | +0.75 | -0.71 | -0.10 |
 | 2026-09-21 | `BAK` | 18 | $1.70 | $1.76 | +1.08 | $1.73 | -0.54 | +0.54 | -0.18 | -0.72 |
-| 2026-09-21 | `TH` | 1 | $21.19 | $21.55 | +0.36 | $21.28 | -0.27 | +0.09 | +0.64 | +0.37 |
-| 2026-09-21 | `RARE` | 2 | $14.51 | $14.60 | +0.18 | $14.65 | +0.10 | +0.28 | -0.38 | -0.28 |
+| 2026-09-21 | `TH` | 1 | $21.19 | $21.65 | +0.46 | $21.28 | -0.37 | +0.09 | +0.74 | +0.37 |
+| 2026-09-21 | `RARE` | 2 | $14.51 | $14.58 | +0.14 | $14.65 | +0.14 | +0.28 | -0.42 | -0.28 |
 | 2026-09-21 | `BHVN` | 2 | $13.62 | $13.90 | +0.56 | $14.22 | +0.64 | +1.20 | -0.34 | +0.30 |
 | 2026-09-21 | `FLNC` | 4 | $7.32 | $7.36 | +0.16 | $7.39 | +0.12 | +0.28 | -0.70 | -0.58 |
 | 2026-09-21 | `VICR` | 4 | — | $230.25 | +0.00 | $223.90 | -25.40 | -25.40 | +0.00 | -25.40 |
 | 2026-09-21 | `SMTC` | 5 | — | $190.30 | +0.00 | $177.37 | -64.65 | -64.65 | +0.00 | -64.65 |
 | 2026-09-21 | `ALVO` | 184 | — | $5.92 | +0.00 | $5.88 | -7.36 | -7.36 | +0.00 | -7.36 |
 | 2026-09-21 | `GLXY` | 42 | — | $25.95 | +0.00 | $26.07 | +5.04 | +5.04 | +0.00 | +5.04 |
-| 2026-09-21 | `MARA` | 78 | — | $13.96 | +0.00 | $13.28 | -53.04 | -53.04 | +0.00 | -53.04 |
+| 2026-09-21 | `MARA` | 78 | — | $13.94 | +0.00 | $13.28 | -51.48 | -51.48 | +0.00 | -51.48 |
 | 2026-09-21 | `AMTX` | 509 | — | $2.15 | +0.00 | $2.09 | -30.54 | -30.54 | +0.00 | -30.54 |
 
 ## Each session (cash + holdings state)
@@ -369,7 +369,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | +5.30 | $365.12 | ORCL×11, ADBE×7, BAK×890, AMTX×925, RH×13 | $8,696.83 | -275.00 | -56.30 | WAY, QCOM, SM, CLS, SION | ORCL, ADBE, BAK, AMTX, RH | $194.22 | $8,599.12 | WAY×65, QCOM×9, SM×43, CLS×5, SION×249 |
 | 2026-09-17 | +7.38 | $194.22 | WAY×65, QCOM×9, SM×43, CLS×5, SION×249 | $8,745.01 | +145.89 | -101.50 | GME, TNDM, BAK | — | $121.74 | $8,642.73 | WAY×65, QCOM×9, SM×43, CLS×5, SION×249, GME×1, TNDM×1, BAK×18 |
 | 2026-09-18 | +4.86 | $121.74 | WAY×65, QCOM×9, SM×43, CLS×5, SION×249, GME×1, TNDM×1, BAK×18 | $8,686.03 | +43.30 | -491.94 | TH, RARE, BHVN, FLNC | — | $11.86 | $8,192.98 | WAY×65, QCOM×9, SM×43, CLS×5, SION×249, GME×1, TNDM×1, BAK×18, TH×1, RARE×2, BHVN×2, FLNC×4 |
-| 2026-09-21 | +12.87 | $11.86 | WAY×65, QCOM×9, SM×43, CLS×5, SION×249, GME×1, TNDM×1, BAK×18, TH×1, RARE×2, BHVN×2, FLNC×4 | $8,245.58 | +52.60 | -172.82 | VICR, SMTC, ALVO, GLXY, MARA, AMTX | WAY, QCOM, SM, CLS | $313.83 | $8,046.89 | SION×249, GME×1, TNDM×1, BAK×18, TH×1, RARE×2, BHVN×2, FLNC×4, VICR×4, SMTC×5, ALVO×184, GLXY×42, MARA×78, AMTX×509 |
+| 2026-09-21 | +12.87 | $11.86 | WAY×65, QCOM×9, SM×43, CLS×5, SION×249, GME×1, TNDM×1, BAK×18, TH×1, RARE×2, BHVN×2, FLNC×4 | $8,248.35 | +55.37 | -173.81 | VICR, SMTC, ALVO, GLXY, MARA, AMTX | WAY, QCOM, SM, CLS | $315.60 | $8,048.66 | SION×249, GME×1, TNDM×1, BAK×18, TH×1, RARE×2, BHVN×2, FLNC×4, VICR×4, SMTC×5, ALVO×184, GLXY×42, MARA×78, AMTX×509 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -553,18 +553,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 09:30 ET | **BUY** | `BHVN` | 2 | $14.07 | $0.29 | — | $42.31 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list probable,yday_gainer,yday_mover; 🔵; ret5=+8.6; leftover $30.44 | join🟢 sector🟢 gen🟢 news🟢 digest🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-18 09:30 ET | **BUY** | `FLNC` | 4 | $7.54 | $0.31 | — | $11.86 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list yday_mover; 🔵; ret5=-20.9; leftover $30.44 | join🟡 sector🔴 gen🟢 news🟢 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11.86 | ▼ close $8,192.98 vs 09:30 $8,686.03 (session -491.94) | 16:00 close · cash $11.86 · equity $8,192.98 vs 09:30 $8,686.03 (-493.05; session marks -491.94) · 12 name(s) marked open→close (per-name table). WAY×65 09:30 $26.95 → close $25.66 -83.85; QCOM×9 09:30 $191.34 → close $177.72 -122.58; SM×43 09:30 $36.87 → close $36.97 +4.30; CLS×5 09:30 $332.06 → close $332.63 +2.85; SION×249 09:30 $7.12 → close $5.96 -288.84; GME×1 09:30 $22.90 → close $22.64 -0.26; TNDM×1 09:30 $17.13 → close $16.87 -0.26; BAK×18 09:30 $1.77 → close $1.70 -1.26; TH×1 09:30 $20.91 → close $21.19 +0.28; RARE×2 09:30 $14.79 → close $14.51 -0.56; BHVN×2 09:30 $14.07 → close $13.62 -0.90; FLNC×4 09:30 $7.54 → close $7.32 -0.86 | — |
-| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11.86 | ▲ 09:30 equity $8,245.58 vs yday $8,192.98 (+52.60) | 09:30 open · cash $11.86 (unchanged overnight, no fees) · equity $8,245.58 vs prior close $8,192.98 (+52.60) · 12 name(s) re-marked at the open (per-name table). WAY×65 yday $25.66 → 09:30 $25.94 +18.20; QCOM×9 yday $177.72 → 09:30 $180.61 +26.01; SM×43 yday $36.97 → 09:30 $35.91 -45.79; CLS×5 yday $332.63 → 09:30 $341.45 +44.10; SION×249 yday $5.96 → 09:30 $5.99 +7.47; GME×1 yday $22.64 → 09:30 $22.78 +0.14; TNDM×1 yday $16.87 → 09:30 $17.01 +0.14; BAK×18 yday $1.70 → 09:30 $1.76 +1.08; TH×1 yday $21.19 → 09:30 $21.55 +0.36; RARE×2 yday $14.51 → 09:30 $14.60 +0.18; BHVN×2 yday $13.62 → 09:30 $13.90 +0.56; FLNC×4 yday $7.32 → 09:30 $7.36 +0.16 | — |
-| 2026-09-21 09:30 ET | **SELL** | `WAY` | 65 | $25.94 | $2.21 | $-25.84 | $1,695.75 | ▼ -25.84 after sell → book $8,243.37; vs 09:30 mark -2.21 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-21 09:30 ET | **SELL** | `QCOM` | 9 | $180.61 | $2.04 | $-81.10 | $3,319.20 | ▼ -81.10 after sell → book $8,241.33; vs 09:30 mark -2.04 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-21 09:30 ET | **SELL** | `SM` | 43 | $35.91 | $2.14 | $-179.92 | $4,860.97 | ▼ -179.92 after sell → book $8,239.19; vs 09:30 mark -2.14 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-21 09:30 ET | **SELL** | `CLS` | 5 | $341.45 | $2.03 | $+102.22 | $6,566.19 | ▲ +102.22 after sell → book $8,237.16; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `VICR` | 4 | $230.25 | $2.00 | — | $5,643.19 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list ohlc_hot; ret5=+12.5; leftover $1094.37 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟢 |
-| 2026-09-21 09:30 ET | **BUY** | `SMTC` | 5 | $190.30 | $2.00 | — | $4,689.69 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list ohlc_hot; ret5=+10.6; leftover $1094.37 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `ALVO` | 184 | $5.92 | $2.54 | — | $3,597.86 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list ohlc_hot; ret5=+11.0; leftover $1094.37 | join🔴 sector🟢 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `GLXY` | 42 | $25.95 | $2.12 | — | $2,505.85 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list yday_gainer; 🔵; ret5=-7.9; leftover $1094.37 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `MARA` | 78 | $13.96 | $2.22 | — | $1,414.74 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list yday_gainer,ohlc_hot; 🔵; ret5=+10.5; leftover $1094.37 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `AMTX` | 509 | $2.15 | $6.57 | — | $313.83 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+7.5; leftover $1094.37 | join🔴 sector🔴 gen🟢 news🟢 digest🟡 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $313.83 | ▼ close $8,046.89 vs 09:30 $8,245.58 (session -172.82) | 16:00 close · cash $313.83 · equity $8,046.89 vs 09:30 $8,245.58 (-198.69; session marks -172.82) · 14 name(s) marked open→close (per-name table). SION×249 09:30 $5.99 → close $6.00 +2.49; GME×1 09:30 $22.78 → close $22.76 -0.02; TNDM×1 09:30 $17.01 → close $17.62 +0.61; BAK×18 09:30 $1.76 → close $1.73 -0.54; TH×1 09:30 $21.55 → close $21.28 -0.27; RARE×2 09:30 $14.60 → close $14.65 +0.10; BHVN×2 09:30 $13.90 → close $14.22 +0.64; FLNC×4 09:30 $7.36 → close $7.39 +0.12; VICR×4 09:30 $230.25 → close $223.90 -25.40; SMTC×5 09:30 $190.30 → close $177.37 -64.65; ALVO×184 09:30 $5.92 → close $5.88 -7.36; GLXY×42 09:30 $25.95 → close $26.07 +5.04; MARA×78 09:30 $13.96 → close $13.28 -53.04; AMTX×509 09:30 $2.15 → close $2.09 -30.54 | — |
+| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11.86 | ▲ 09:30 equity $8,248.35 vs yday $8,192.98 (+55.37) | 09:30 open · cash $11.86 (unchanged overnight, no fees) · equity $8,248.35 vs prior close $8,192.98 (+55.37) · 12 name(s) re-marked at the open (per-name table). WAY×65 yday $25.66 → 09:30 $25.94 +18.20; QCOM×9 yday $177.72 → 09:30 $180.61 +26.01; SM×43 yday $36.97 → 09:30 $35.91 -45.58; CLS×5 yday $332.63 → 09:30 $341.45 +44.10; SION×249 yday $5.96 → 09:30 $6.00 +9.96; GME×1 yday $22.64 → 09:30 $22.78 +0.14; TNDM×1 yday $16.87 → 09:30 $17.01 +0.14; BAK×18 yday $1.70 → 09:30 $1.76 +1.08; TH×1 yday $21.19 → 09:30 $21.65 +0.46; RARE×2 yday $14.51 → 09:30 $14.58 +0.14; BHVN×2 yday $13.62 → 09:30 $13.90 +0.56; FLNC×4 yday $7.32 → 09:30 $7.36 +0.16 | — |
+| 2026-09-21 09:30 ET | **SELL** | `WAY` | 65 | $25.94 | $2.21 | $-25.84 | $1,695.75 | ▼ -25.84 after sell → book $8,246.14; vs 09:30 mark -2.21 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-21 09:30 ET | **SELL** | `QCOM` | 9 | $180.61 | $2.04 | $-81.10 | $3,319.20 | ▼ -81.10 after sell → book $8,244.10; vs 09:30 mark -2.04 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-21 09:30 ET | **SELL** | `SM` | 43 | $35.91 | $2.14 | $-179.70 | $4,861.19 | ▼ -179.70 after sell → book $8,241.96; vs 09:30 mark -2.14 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-21 09:30 ET | **SELL** | `CLS` | 5 | $341.45 | $2.03 | $+102.22 | $6,566.41 | ▲ +102.22 after sell → book $8,239.93; vs 09:30 mark -2.03 | dropped from list after 3 sess (min 3) | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `VICR` | 4 | $230.25 | $2.00 | — | $5,643.41 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list ohlc_hot; ret5=+12.5; leftover $1094.40 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟢 |
+| 2026-09-21 09:30 ET | **BUY** | `SMTC` | 5 | $190.30 | $2.00 | — | $4,689.90 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list ohlc_hot; ret5=+10.6; leftover $1094.40 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `ALVO` | 184 | $5.92 | $2.54 | — | $3,598.08 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list ohlc_hot; ret5=+11.0; leftover $1094.40 | join🔴 sector🟢 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `GLXY` | 42 | $25.95 | $2.12 | — | $2,506.06 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list yday_gainer; 🔵; ret5=-7.9; leftover $1094.40 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `MARA` | 78 | $13.94 | $2.22 | — | $1,416.52 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list yday_gainer,ohlc_hot; 🔵; ret5=+10.5; leftover $1094.40 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `AMTX` | 509 | $2.15 | $6.57 | — | $315.60 | — | merged news🟢, rank +G−R; gate news=good; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+7.5; leftover $1094.40 | join🔴 sector🔴 gen🟢 news🟢 digest🟡 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $315.60 | ▼ close $8,048.66 vs 09:30 $8,248.35 (session -173.81) | 16:00 close · cash $315.60 · equity $8,048.66 vs 09:30 $8,248.35 (-199.69; session marks -173.81) · 14 name(s) marked open→close (per-name table). SION×249 09:30 $6.00 → close $6.00 +0.00; GME×1 09:30 $22.78 → close $22.76 -0.02; TNDM×1 09:30 $17.01 → close $17.62 +0.61; BAK×18 09:30 $1.76 → close $1.73 -0.54; TH×1 09:30 $21.65 → close $21.28 -0.37; RARE×2 09:30 $14.58 → close $14.65 +0.14; BHVN×2 09:30 $13.90 → close $14.22 +0.64; FLNC×4 09:30 $7.36 → close $7.39 +0.12; VICR×4 09:30 $230.25 → close $223.90 -25.40; SMTC×5 09:30 $190.30 → close $177.37 -64.65; ALVO×184 09:30 $5.92 → close $5.88 -7.36; GLXY×42 09:30 $25.95 → close $26.07 +5.04; MARA×78 09:30 $13.94 → close $13.28 -51.48; AMTX×509 09:30 $2.15 → close $2.09 -30.54 | — |
 
 ## Not taken
 
@@ -789,9 +789,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | `RARE` | 2 | 2026-09-18 @ $14.79 | merged news🟢, rank +G−R; gate news=good; rank cond; list probable,yday_gainer; 🔵; ⚪; ret5=+0.7; leftover $30.44 |
 | `BHVN` | 2 | 2026-09-18 @ $14.07 | merged news🟢, rank +G−R; gate news=good; rank cond; list probable,yday_gainer,yday_mover; 🔵; ret5=+8.6; leftover $30.44 |
 | `FLNC` | 4 | 2026-09-18 @ $7.54 | merged news🟢, rank +G−R; gate news=good; rank cond; list yday_mover; 🔵; ret5=-20.9; leftover $30.44 |
-| `VICR` | 4 | 2026-09-21 @ $230.25 | merged news🟢, rank +G−R; gate news=good; rank cond; list ohlc_hot; ret5=+12.5; leftover $1094.37 |
-| `SMTC` | 5 | 2026-09-21 @ $190.30 | merged news🟢, rank +G−R; gate news=good; rank cond; list ohlc_hot; ret5=+10.6; leftover $1094.37 |
-| `ALVO` | 184 | 2026-09-21 @ $5.92 | merged news🟢, rank +G−R; gate news=good; rank cond; list ohlc_hot; ret5=+11.0; leftover $1094.37 |
-| `GLXY` | 42 | 2026-09-21 @ $25.95 | merged news🟢, rank +G−R; gate news=good; rank cond; list yday_gainer; 🔵; ret5=-7.9; leftover $1094.37 |
-| `MARA` | 78 | 2026-09-21 @ $13.96 | merged news🟢, rank +G−R; gate news=good; rank cond; list yday_gainer,ohlc_hot; 🔵; ret5=+10.5; leftover $1094.37 |
-| `AMTX` | 509 | 2026-09-21 @ $2.15 | merged news🟢, rank +G−R; gate news=good; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+7.5; leftover $1094.37 |
+| `VICR` | 4 | 2026-09-21 @ $230.25 | merged news🟢, rank +G−R; gate news=good; rank cond; list ohlc_hot; ret5=+12.5; leftover $1094.40 |
+| `SMTC` | 5 | 2026-09-21 @ $190.30 | merged news🟢, rank +G−R; gate news=good; rank cond; list ohlc_hot; ret5=+10.6; leftover $1094.40 |
+| `ALVO` | 184 | 2026-09-21 @ $5.92 | merged news🟢, rank +G−R; gate news=good; rank cond; list ohlc_hot; ret5=+11.0; leftover $1094.40 |
+| `GLXY` | 42 | 2026-09-21 @ $25.95 | merged news🟢, rank +G−R; gate news=good; rank cond; list yday_gainer; 🔵; ret5=-7.9; leftover $1094.40 |
+| `MARA` | 78 | 2026-09-21 @ $13.94 | merged news🟢, rank +G−R; gate news=good; rank cond; list yday_gainer,ohlc_hot; 🔵; ret5=+10.5; leftover $1094.40 |
+| `AMTX` | 509 | 2026-09-21 @ $2.15 | merged news🟢, rank +G−R; gate news=good; rank cond; list yday_gainer,yday_mover; 🔵; ret5=+7.5; leftover $1094.40 |

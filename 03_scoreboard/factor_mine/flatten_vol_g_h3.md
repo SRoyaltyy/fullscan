@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · flatten wish-list ∩ vol🟢
 
-Cash book **-28.24%** ($7,176) · signal-only (no cash/fees) was -23.51%. Starts YES **1/27**. Fills 55 · skips 66 · realized $-2523.45.
+Cash book **-28.39%** ($7,161) · signal-only (no cash/fees) was -23.66%. Starts YES **1/27**. Fills 55 · skips 66 · realized $-2523.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $118.10.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $117.07.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -175,8 +175,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | `RDNT` | 98 | $77.78 | $77.66 | -11.76 | $76.00 | -162.68 | -174.44 | +52.92 | -109.76 |
 | 2026-09-21 | `RDNT` | 98 | $76.00 | $76.27 | +26.46 | — | +0.00 | +26.46 | -83.30 | — |
 | 2026-09-21 | `A` | 15 | — | $157.87 | +0.00 | $161.94 | +61.05 | +61.05 | +0.00 | +61.05 |
-| 2026-09-21 | `DXCM` | 28 | — | $88.89 | +0.00 | $89.17 | +7.79 | +7.79 | +0.00 | +7.79 |
-| 2026-09-21 | `CYPH` | 627 | — | $3.97 | +0.00 | $3.40 | -357.39 | -357.39 | +0.00 | -357.39 |
+| 2026-09-21 | `DXCM` | 28 | — | $88.83 | +0.00 | $89.17 | +9.52 | +9.52 | +0.00 | +9.52 |
+| 2026-09-21 | `CYPH` | 623 | — | $4.00 | +0.00 | $3.40 | -373.80 | -373.80 | +0.00 | -373.80 |
 
 ## Each session (cash + holdings state)
 
@@ -208,7 +208,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | +5.30 | $5.06 | ORCL×54 | $7,566.68 | -17.28 | -131.32 | RDNT | ORCL | $4.41 | $7,430.85 | RDNT×98 |
 | 2026-09-17 | +7.38 | $4.41 | RDNT×98 | $7,495.53 | +64.68 | +131.32 | — | — | $4.41 | $7,626.85 | RDNT×98 |
 | 2026-09-18 | +4.86 | $4.41 | RDNT×98 | $7,615.09 | -11.76 | -162.68 | — | — | $4.41 | $7,452.41 | RDNT×98 |
-| 2026-09-21 | +12.87 | $4.41 | RDNT×98 | $7,478.87 | +26.46 | -288.55 | A, DXCM, CYPH | RDNT | $118.10 | $7,175.76 | A×15, DXCM×28, CYPH×627 |
+| 2026-09-21 | +12.87 | $4.41 | RDNT×98 | $7,478.87 | +26.46 | -303.23 | A, DXCM, CYPH | RDNT | $117.07 | $7,161.13 | A×15, DXCM×28, CYPH×623 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -320,9 +320,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4.41 | ▲ 09:30 equity $7,478.87 vs yday $7,452.41 (+26.46) | 09:30 open · cash $4.41 (unchanged overnight, no fees) · equity $7,478.87 vs prior close $7,452.41 (+26.46) · 1 name(s) re-marked at the open (per-name table). RDNT×98 yday $76.00 → 09:30 $76.27 +26.46 | — |
 | 2026-09-21 09:30 ET | **SELL** | `RDNT` | 98 | $76.27 | $2.36 | $-87.94 | $7,476.51 | ▼ -87.94 after sell → book $7,476.51; vs 09:30 mark -2.36 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-21 09:30 ET | **BUY** | `A` | 15 | $157.87 | $2.04 | — | $5,106.42 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=-4.4; leftover $2492.17 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `DXCM` | 28 | $88.89 | $2.07 | — | $2,615.38 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=-7.2; leftover $2492.17 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `CYPH` | 627 | $3.97 | $8.09 | — | $118.10 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten,yday_gainer,yday_mover; wish-list (live io HOLD — not a ticket); ⚪; ret5=+58.9; leftover $2492.17 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $118.10 | ▼ close $7,175.76 vs 09:30 $7,478.87 (session -288.55) | 16:00 close · cash $118.10 · equity $7,175.76 vs 09:30 $7,478.87 (-303.11; session marks -288.55) · 3 name(s) marked open→close (per-name table). A×15 09:30 $157.87 → close $161.94 +61.05; DXCM×28 09:30 $88.89 → close $89.17 +7.79; CYPH×627 09:30 $3.97 → close $3.40 -357.39 | — |
+| 2026-09-21 09:30 ET | **BUY** | `DXCM` | 28 | $88.83 | $2.07 | — | $2,617.11 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=-7.2; leftover $2492.17 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `CYPH` | 623 | $4.00 | $8.04 | — | $117.07 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten,yday_gainer,yday_mover; wish-list (live io HOLD — not a ticket); ⚪; ret5=+58.9; leftover $2492.17 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $117.07 | ▼ close $7,161.13 vs 09:30 $7,478.87 (session -303.23) | 16:00 close · cash $117.07 · equity $7,161.13 vs 09:30 $7,478.87 (-317.74; session marks -303.23) · 3 name(s) marked open→close (per-name table). A×15 09:30 $157.87 → close $161.94 +61.05; DXCM×28 09:30 $88.83 → close $89.17 +9.52; CYPH×623 09:30 $4.00 → close $3.40 -373.80 | — |
 
 ## Not taken
 
@@ -400,5 +400,5 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
 | `A` | 15 | 2026-09-21 @ $157.87 | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=-4.4; leftover $2492.17 |
-| `DXCM` | 28 | 2026-09-21 @ $88.89 | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=-7.2; leftover $2492.17 |
-| `CYPH` | 627 | 2026-09-21 @ $3.97 | flatten wish-list ∩ vol🟢; gate vol=good; list flatten,yday_gainer,yday_mover; wish-list (live io HOLD — not a ticket); ⚪; ret5=+58.9; leftover $2492.17 |
+| `DXCM` | 28 | 2026-09-21 @ $88.83 | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=-7.2; leftover $2492.17 |
+| `CYPH` | 623 | 2026-09-21 @ $4.00 | flatten wish-list ∩ vol🟢; gate vol=good; list flatten,yday_gainer,yday_mover; wish-list (live io HOLD — not a ticket); ⚪; ret5=+58.9; leftover $2492.17 |

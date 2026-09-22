@@ -253,9 +253,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | `FIVN` | 156 | — | $34.44 | +0.00 | $32.47 | +307.32 | +307.32 | -0.00 | +307.32 |
 | 2026-09-21 | `BBNX` | 147 | $21.89 | $22.11 | -32.34 | — | +0.00 | -32.34 | -514.50 | — |
 | 2026-09-21 | `GFR` | 402 | $6.66 | $6.55 | +44.22 | — | +0.00 | +44.22 | +112.56 | — |
-| 2026-09-21 | `BULL` | 332 | $8.25 | $8.58 | -109.56 | $8.25 | +109.56 | +0.00 | -209.16 | -99.60 |
-| 2026-09-21 | `LEN` | 32 | $76.43 | $76.97 | -17.44 | $78.08 | -35.36 | -52.80 | +128.80 | +93.44 |
-| 2026-09-21 | `FIVN` | 156 | $32.47 | $32.98 | -79.56 | $37.01 | -628.68 | -708.24 | +227.76 | -400.92 |
+| 2026-09-21 | `BULL` | 332 | $8.25 | $8.57 | -106.24 | $8.25 | +106.24 | +0.00 | -205.84 | -99.60 |
+| 2026-09-21 | `LEN` | 32 | $76.43 | $76.98 | -17.60 | $78.08 | -35.20 | -52.80 | +128.64 | +93.44 |
+| 2026-09-21 | `FIVN` | 156 | $32.47 | $33.00 | -82.68 | $37.01 | -625.56 | -708.24 | +224.64 | -400.92 |
 | 2026-09-21 | `AEHL` | 324 | — | $8.26 | +0.00 | $6.92 | +434.16 | +434.16 | -0.00 | +434.16 |
 | 2026-09-21 | `AMD` | 4 | — | $583.88 | +0.00 | $615.52 | -126.56 | -126.56 | -0.00 | -126.56 |
 
@@ -289,7 +289,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | +5.30 | $16,895.02 | QRVO×12, MYGN×419, RWT×402, CRDL×697 | $11,016.20 | +24.89 | -388.11 | BBNX, GFR | QRVO, MYGN, RWT, CRDL | $16,468.02 | $10,598.58 | BBNX×147, GFR×402 |
 | 2026-09-17 | +7.38 | $16,468.02 | BBNX×147, GFR×402 | $10,561.44 | -37.14 | +200.33 | BULL, LEN | — | $21,692.80 | $10,755.15 | BBNX×147, GFR×402, BULL×332, LEN×32 |
 | 2026-09-18 | +4.86 | $21,692.80 | BBNX×147, GFR×402, BULL×332, LEN×32 | $10,782.22 | +27.07 | +137.99 | FIVN | — | $27,062.77 | $10,917.54 | BBNX×147, GFR×402, BULL×332, LEN×32, FIVN×156 |
-| 2026-09-21 | +12.87 | $27,062.77 | BBNX×147, GFR×402, BULL×332, LEN×32, FIVN×156 | $10,722.86 | -194.68 | -246.88 | AEHL, AMD | BBNX, GFR | $26,177.22 | $10,461.94 | BULL×332, LEN×32, FIVN×156, AEHL×324, AMD×4 |
+| 2026-09-21 | +12.87 | $27,062.77 | BBNX×147, GFR×402, BULL×332, LEN×32, FIVN×156 | $10,722.90 | -194.64 | -246.92 | AEHL, AMD | BBNX, GFR | $26,177.22 | $10,461.94 | BULL×332, LEN×32, FIVN×156, AEHL×324, AMD×4 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -440,12 +440,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $21,692.80 | ▲ 09:30 equity $10,782.22 vs yday $10,755.15 (+27.07) | 09:30 open · cash $21,692.80 (unchanged overnight, no fees) · equity $10,782.22 vs prior close $10,755.15 (+27.07) · 4 name(s) re-marked at the open (per-name table). BBNX×147 yday $21.43 → 09:30 $21.30 +19.11; GFR×402 yday $6.66 → 09:30 $6.64 +8.04; BULL×332 yday $7.71 → 09:30 $7.85 -46.48; LEN×32 yday $79.70 → 09:30 $78.25 +46.40 | — |
 | 2026-09-18 09:30 ET | **SHORT** | `FIVN` | 156 | $34.44 | $2.67 | — | $27,062.77 | — | short packet🔴 OR headline🔴; gate news_or_red=True; list flatten; 🔵; ⚪; ret5=-9.6; leftover $5391.11 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $27,062.77 | ▲ close $10,917.54 vs 09:30 $10,782.22 (session +137.99) | 16:00 close · cash $27,062.77 · equity $10,917.54 vs 09:30 $10,782.22 (+135.32; session marks +137.99) · 5 name(s) marked open→close (per-name table). BBNX×147 09:30 $21.30 → close $21.89 -86.73; GFR×402 09:30 $6.64 → close $6.66 -8.04; BULL×332 09:30 $7.85 → close $8.25 -132.80; LEN×32 09:30 $78.25 → close $76.43 +58.24; FIVN×156 09:30 $34.44 → close $32.47 +307.32 | — |
-| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $27,062.77 | ▼ 09:30 equity $10,722.86 vs yday $10,917.54 (-194.68) | 09:30 open · cash $27,062.77 (unchanged overnight, no fees) · equity $10,722.86 vs prior close $10,917.54 (-194.68) · 5 name(s) re-marked at the open (per-name table). BBNX×147 yday $21.89 → 09:30 $22.11 -32.34; GFR×402 yday $6.66 → 09:30 $6.55 +44.22; BULL×332 yday $8.25 → 09:30 $8.58 -109.56; LEN×32 yday $76.43 → 09:30 $76.97 -17.44; FIVN×156 yday $32.47 → 09:30 $32.98 -79.56 | — |
-| 2026-09-21 09:30 ET | **COVER** | `BBNX` | 147 | $22.11 | $2.43 | $-519.48 | $23,810.17 | ▼ -519.48 after sell → book $10,720.43; vs 09:30 mark -2.43 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-21 09:30 ET | **COVER** | `GFR` | 402 | $6.55 | $5.19 | $+102.02 | $21,171.88 | ▲ +102.02 after sell → book $10,715.24; vs 09:30 mark -5.19 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-21 09:30 ET | **SHORT** | `AEHL` | 324 | $8.26 | $4.33 | — | $23,843.79 | — | short packet🔴 OR headline🔴; gate news_or_red=True; list yday_mover; ret5=+23.9; leftover $2678.81 | join🟡 sector🔴 gen🟢 news🔴 digest🟢 ab🟡 peer🟢 heat🔴 vol🔴 buy🟡 |
-| 2026-09-21 09:30 ET | **SHORT** | `AMD` | 4 | $583.88 | $2.09 | — | $26,177.22 | — | short packet🔴 OR headline🔴; gate news_or_red=True; list ohlc_hot; ret5=+8.5; leftover $2678.81 | join🟢 sector🔴 gen🟢 news🔴 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
-| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $26,177.22 | ▼ close $10,461.94 vs 09:30 $10,722.86 (session -246.88) | 16:00 close · cash $26,177.22 · equity $10,461.94 vs 09:30 $10,722.86 (-260.92; session marks -246.88) · 5 name(s) marked open→close (per-name table). BULL×332 09:30 $8.58 → close $8.25 +109.56; LEN×32 09:30 $76.97 → close $78.08 -35.36; FIVN×156 09:30 $32.98 → close $37.01 -628.68; AEHL×324 09:30 $8.26 → close $6.92 +434.16; AMD×4 09:30 $583.88 → close $615.52 -126.56 | — |
+| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $27,062.77 | ▼ 09:30 equity $10,722.90 vs yday $10,917.54 (-194.64) | 09:30 open · cash $27,062.77 (unchanged overnight, no fees) · equity $10,722.90 vs prior close $10,917.54 (-194.64) · 5 name(s) re-marked at the open (per-name table). BBNX×147 yday $21.89 → 09:30 $22.11 -32.34; GFR×402 yday $6.66 → 09:30 $6.55 +44.22; BULL×332 yday $8.25 → 09:30 $8.57 -106.24; LEN×32 yday $76.43 → 09:30 $76.98 -17.60; FIVN×156 yday $32.47 → 09:30 $33.00 -82.68 | — |
+| 2026-09-21 09:30 ET | **COVER** | `BBNX` | 147 | $22.11 | $2.43 | $-519.48 | $23,810.17 | ▼ -519.48 after sell → book $10,720.47; vs 09:30 mark -2.43 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-21 09:30 ET | **COVER** | `GFR` | 402 | $6.55 | $5.19 | $+102.02 | $21,171.88 | ▲ +102.02 after sell → book $10,715.28; vs 09:30 mark -5.19 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-21 09:30 ET | **SHORT** | `AEHL` | 324 | $8.26 | $4.33 | — | $23,843.79 | — | short packet🔴 OR headline🔴; gate news_or_red=True; list yday_mover; ret5=+23.9; leftover $2678.82 | join🟡 sector🔴 gen🟢 news🔴 digest🟢 ab🟡 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-09-21 09:30 ET | **SHORT** | `AMD` | 4 | $583.88 | $2.09 | — | $26,177.22 | — | short packet🔴 OR headline🔴; gate news_or_red=True; list ohlc_hot; ret5=+8.5; leftover $2678.82 | join🟢 sector🔴 gen🟢 news🔴 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $26,177.22 | ▼ close $10,461.94 vs 09:30 $10,722.90 (session -246.92) | 16:00 close · cash $26,177.22 · equity $10,461.94 vs 09:30 $10,722.90 (-260.96; session marks -246.92) · 5 name(s) marked open→close (per-name table). BULL×332 09:30 $8.57 → close $8.25 +106.24; LEN×32 09:30 $76.98 → close $78.08 -35.20; FIVN×156 09:30 $33.00 → close $37.01 -625.56; AEHL×324 09:30 $8.26 → close $6.92 +434.16; AMD×4 09:30 $583.88 → close $615.52 -126.56 | — |
 
 ## Not taken
 
@@ -569,5 +569,5 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | `BULL` | 332 | 2026-09-17 @ $7.95 | short packet🔴 OR headline🔴; gate news_or_red=True; list yday_mover; 🔵; ⚪; ret5=-18.4; leftover $2640.36 |
 | `LEN` | 32 | 2026-09-17 @ $81.00 | short packet🔴 OR headline🔴; gate news_or_red=True; list earn_react; 🔵; ret5=-3.0; leftover $2640.36 |
 | `FIVN` | 156 | 2026-09-18 @ $34.44 | short packet🔴 OR headline🔴; gate news_or_red=True; list flatten; 🔵; ⚪; ret5=-9.6; leftover $5391.11 |
-| `AEHL` | 324 | 2026-09-21 @ $8.26 | short packet🔴 OR headline🔴; gate news_or_red=True; list yday_mover; ret5=+23.9; leftover $2678.81 |
-| `AMD` | 4 | 2026-09-21 @ $583.88 | short packet🔴 OR headline🔴; gate news_or_red=True; list ohlc_hot; ret5=+8.5; leftover $2678.81 |
+| `AEHL` | 324 | 2026-09-21 @ $8.26 | short packet🔴 OR headline🔴; gate news_or_red=True; list yday_mover; ret5=+23.9; leftover $2678.82 |
+| `AMD` | 4 | 2026-09-21 @ $583.88 | short packet🔴 OR headline🔴; gate news_or_red=True; list ohlc_hot; ret5=+8.5; leftover $2678.82 |
