@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"MCK McKesson news September 2026 cyberattack data theft"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"MCK McKesson news September 2026 cyberattack data theft"* → got 6 results (via gnews_rss)
 
-  - Hackers claim millions of patient records stolen during data breach at healthcare giant McKesson | TechCrunch (https://techcrunch.com/2026/08/31/hackers-claim-millions-of-patient-records-stolen-during-data-breach-at-healthcare-giant-mckesson/)
+  - McKesson confirms data theft in cyberattack involving third-party apps - Healthcare Dive (https://news.google.com/rss/articles/CBMisAFBVV95cUxNMWUwMjdpS0ZvZk1iWVFoLTgxUzNhOXFsTXlySmdhS0l2eHB6RC1jZWF2elF0X0Z1RXE2cE41ZDJRVVFtNjM3NWxTcnB3aHlqbHJrN3J5WXEtRFFxSkp5N1hkV09QVHF6eWZfWVp0cl9RYkRycFRLZFcxeW9kdDl4azQxVHNxNERCaHNINm1LMlRxOWdjVU92N3NtWjRHUDBLNExIXzFkMm5zQ1h1cDJZOQ?oc=5)
 
-  - McKesson confirms cyber incident after ShinyHunters claims patient-data theft | Malwarebytes (https://www.malwarebytes.com/blog/news/2026/08/mckesson-confirms-cyber-incident-after-shinyhunters-claims-patient-data-theft)
+  - Pharmaceutical giant McKesson warns of 'service degradation' following cyberattack - The Record from Recorded Future News (https://news.google.com/rss/articles/CBMib0FVX3lxTE5CMmlVdjRXaXdYZjRlelRPQXFadjJXb1Q5bk5ZVnJrX0tIcFBpUFI3LXBDTl9OSkJvU3FUak9WSVNhX0QxWi1WclVzXzRBdHhuNFVudVlzWWVSMFVFVnF5T2p2cDRZaDA3V1o0Wm5fNA?oc=5)
 
-  - McKesson confirms data theft in cyberattack involving third-party apps (https://finance.yahoo.com/healthcare/articles/mckesson-confirms-data-theft-cyberattack-105116261.html)
+  - McKesson data breach exposes prescribing physicians and their patients to fallout from a third-party attack - medicaleconomics.com (https://news.google.com/rss/articles/CBMi3gFBVV95cUxOdk8zc3BkdVRGX1R0SkNUOWJDQ0ltSUNoemtVRlBteDd3NmVzUXZkeEc3RWt6cFJrUU1GWlRPb01PbjRqVnNsSUR2aHo2LW05RjBkUjlIcy16dDJuTTg1MWt4eXB0T3BtVVphaW9NOUpHYi02VEpZelR1NUR4Znkyd2ZUWkozcDQ3RlE3X3NrUDZPVDZzcGh3VlA3TUFGby1pVENJY1RRX1RiSWdwZmNQZF9TLUlkSVdIcEw4dGotYnpkcnpnNjU1eS1PWFhld3cweG0weTRlcTBCRVJCdlE?oc=5)
 
-**Step 2 — Research.** The model wanted to know: *"Cencora COR news September 2026"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"COR Cencora news September 2026"* → got 6 results (via gnews_rss)
 
-  - Newsroom: Press Releases, Company News and Insights | Cencora (https://www.cencora.com/newsroom)
+  - Cencora (NYSE: COR) director sells $411K in shares - Stock Titan (https://news.google.com/rss/articles/CBMipwFBVV95cUxPZjdLT1NVYm5UUElfXzktZk5XbU9hY21fa19GMFF3OVdFY1VPT3lHUzF6RlNYdnhaYzBBcnROUDVUZWhWY0hnWWUxSzQ5R3JaUEJ6eElmX0lFOFB6M3FOVUpXSXNVSlF4clFoY05pX3QzelVEQ0V5QW5EMWpScy15T1RJLTBCUnRmZGFlckRWVGNfTGNfUHd0cGg0aGxEQTBVcEg4clVVYw?oc=5)
 
-  - Cencora Announces Updated Fiscal Year 2026 Financial Outlook (https://investor.cencora.com/news/news-details/2026/Cencora-Announces-Updated-Fiscal-Year-2026-Financial-Outlook/default.aspx)
+  - How Social Security COLA Could Move Cencora Stock And Senior Healthcare Demand - simplywall.st (https://news.google.com/rss/articles/CBMi0AFBVV95cUxNX0kyLS1BZDJCQnRWT0VqS1dDYmRvQ0pZTExSVkkxNkhJY041SzdYclFxY1J0Sng2T1E5R1NPX1BNVnZHZ1V3S29SdXJpV0lfUnZmeGtHUkNESjFaUGt4UGRKSGE0VFhLb1VYTk10cThOMGtpdVpYd3Y0R2FkOEtNNVgtc2R1Y0pVZ2VFdTZmX3p2d3M3T181NG5DUjJQZlhXRFBpNnQ0bTI4WDZrdDVmMVQ4bDhOb2xIYkk2NFJTTDdfVXRvMWNTVGlfTDhXeFRz0gHQAUFVX3lxTE1fSTItLUFkMkJCdFZPRWpLV0NiZG9DSllMTFJWSTE2SEljTjVLN1hyUXFjUnRKeDZPUTlHU09fUE1WdkdnVXdLb1J1cmlXSV9SdmZ4a0dSQ0RKMVpQa3hQZEpIYTRUWEtvVVhOTXRxOE4wa2l1Wlh3djRHYWQ4S001WC1zZHVjSlVnZUV1NmZfenZ3czdPXzU0bkNSMlBmWFdEUGk2dDRtMjhYNmt0NWYxVDhsOE5vbEhiSTY0UlNMN19VdG8xY1NUaV9MOFd4VHM?oc=5)
 
-  - Cencora, Inc. (COR) Stock Price & Latest News - September 2026 (https://www.insidearbitrage.com/symbol-metrics/COR)
+  - Cencora, Inc. (COR) Stock Analysis: Unveiling a 19.6% Potential Upside in the Healthcare Distribution Sector - DirectorsTalk Interviews (https://news.google.com/rss/articles/CBMi6AFBVV95cUxQejVzdjR1a2FvVXM5TWRjYWhDN3dtdUcySm1fSWcydVE4aTVRZ2J2dVpmUjBwQjFfY2VRaEYydHQ0U1BJV2JKZF82Rl9Wd2tTTFFiVklpOG51SXZoQmRrU3lJbmRBdENXa3lLVjR0cHQ1LXY3eTdYQkRadGNfbm03OEhMUldoME0xQVB5MkRidEIyZ2wyRHhlaW9rMnBpaV9URVZ4NTl6Z1NQZWQ4U1BvNENlYW83QnpmeGNvWlQ5aGlBaGQ0REhxRnBUQW9pSHlySlp6d05QNTdSOWVJSTU1d1BfTDNrMjV1?oc=5)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"Vertex Pharmaceuticals VRTX news September 2026"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"VRTX Vertex Pharmaceuticals news September 2026"* → got 6 results (via gnews_rss)
 
-  - Newsroom | Vertex Pharmaceuticals Newsroom (https://news.vrtx.com/)
+  - VRTX Looks 0.9% Undervalued on GF Value™ - GuruFocus (https://news.google.com/rss/articles/CBMiggFBVV95cUxQWkt0ZmxKYnJrNlV3Y3dlUWRuSC1GSTA2NlEyZGNVM29ucjV3T2N0TVNIV3lIQTVSVFVLZFhKdGJ0NnNUV3JxNFQ2R3ppb19xN1duaWpTSmZhYkg1ZERDUlRPRnd6UEp6aDFUaUxvclFwNUdwY0lEdDExMHA2amVTQm9n?oc=5)
 
-  - Press Releases - Vertex Pharmaceuticals Newsroom (https://news.vrtx.com/press-releases)
+  - Urine protein fell 42.7% in a kidney trial. Vertex finished enrolling its next study. - Stock Titan (https://news.google.com/rss/articles/CBMivgFBVV95cUxPb3RGVndfOUg3cE8zRGpwRnRJMTlHc3JmMWpnZjRwMlBiY0NRNjd6NTNWbE1GUV9QMWlBbGpZQWNPMWR1Q25XV2ZySjFqQ2NYS2k2TmZreTdSY01kUXRZZEhMTEZMN2hRMVJYYjlmYWdXMWVNSE5VUE53aEhyNFgtbnJGczc1a3ZBX2dXSHBUWHpkbVdUS0FycWVKR0JWUGNERXNOQzZKRXlTQmt0WXNxQ2FoLXk3SzNlQ3REVmVB?oc=5)
 
-  - Vertex Pharmaceuticals | Press releases - investors.vrtx.com (https://investors.vrtx.com/news-events/press-releases)
+  - Vertex (VRTX) Stock Still Looks Like A Bargain On Its 181% Run - simplywall.st (https://news.google.com/rss/articles/CBMi6wFBVV95cUxNX193TmJyNVdtZmNPZmxmNVZDQW4tTE4wTFo0Z1dwd0NoNmxUMkZXcVp1UHF2NDk0X1lsZ1YyV09EWFZxa0t4aThEU2xCZVpWQnR6WDlQLWZHZ093RlIyV3E3dC1hMDhySW5TbUc2WVJ4UUwxLW5XVTY5NE9CMWxjb0FmRnp1OTZMaWE1aFR0MHRKZzloS3YzY2FPdlQzSlF6WmtSTnR0RExCRF92YzJLeU5HOV9pejJtMDdJeGxhOFRvTVc3blB4eFBuUjdLUjNYZU40TmlqamZuUVMtM2ExcGptbWlBLWplMlZj0gHwAUFVX3lxTE1KNkFYeHpDRTRXTklGeHg3WVpSZ1ljNGMwQUFhanNRa0ZWWUlaWXZzUHBzZThJMTZSdUs5RldjekNVblVrWlIzR3MybkRCR2ZtbHJ6MUcyZWVjQzE1UklVcmNmNGtuR3ZnR0Y3cDdhTHpJNWpFSG9EcnNtYU5RMlYtV1NLVUsyZERqXzNQWjE0eW9aSWEwUW1jVTc2XzhBeG1waUgxYmMtcVZWTVdpOGFGejJGN2l2dXVLaFJuS3NSWDZOdVk1MHZwLVR6b2JuNERyUkVRbmpJZjdaWExzLU9BQ2x6aTd2Vkgzakw5YzBYcg?oc=5)
 
-**Step 2 — Research.** The model wanted to know: *"Regeneron REGN news September 2026"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"REGN Regeneron news September 2026"* → got 6 results (via gnews_rss)
 
-  - SEPTEMBER 14, 2026 REGN INVESTOR DEADLINE: Regeneron Pharmaceuticals ... (https://www.tmcnet.com/usubmit/2026/09/04/10440736.htm)
+  - SueWallSt Reminds Shareholders of a Lead Plaintiff Deadline of September 14, 2026 in Regeneron Pharmaceuticals, Inc. Lawsuit - REGN - PR Newswire (https://news.google.com/rss/articles/CBMikgJBVV95cUxQcFEwLWZzckhlMDZKb1A1RTF5MS05UW43NlBlZDJpQXBQRnBuS2hSZHpBVmx0VXZ0MGFpN0RIbmV2S1VLYkZiSlJYMEZrZmhydUpndTltdDVjbEhQeEdTWkNqV2FYRFZsZXV2UVdPbVdRd1dSaGdOUUlubU9GOHhocjNMd1FnWHFDYy1JaFA3OE50YnFZRzJQdVF5NDJ4Ql9YNUpBenhvN0FBZ1dYRFJ5ektEZWtVU3NSLUlRVk8xamwxMWFidEFrMkE2cmd0anhQQkRTWS0xaVB5eXhZUi1telk3ZjRSclZqb0RRRnBaeXFRUjNNMjNVMTBta0FLbFRfYS1mOWhsVmdDWlFZUnhOd2Z3?oc=5)
 
-  - REGN Press Releases Regeneron Pharmaceuticals - MarketChameleon.com (https://marketchameleon.com/Overview/REGN/PressReleases/)
+  - MONDAY REGN INVESTOR DEADLINE: Regeneron Pharmaceuticals, - GlobeNewswire (https://news.google.com/rss/articles/CBMi7AJBVV95cUxOMDFGSDdLaEhnb0Zpbi1YeXRPNmtod1NwOEJHanV3akRqSGlralg5TkhJU3N2VVBXNV83dVdhaV8zeTR6V3gxMkRkWi05ZHB6T1Y3RlRUdGg1T3IyV2R1TVlPRFNZZkVCa0dYLU9naHE0aUswZTFHRXRQZmJsTGpHbDBSWTU4TG1nQlRrN2E4RmVqLUhLc19uMzFnSHVyTUs5MTZJdmJCMzBFX0J3QTJlTkhtenEzMFlHYUZvVW8wS1BmUG1DMUwxWXpndWdOWkxORzYwUmM4RVRZTmU5QU5mcWJZUWF4b254LUNFelBoV1ZHdzVseTNoUjVkQWJ1N3hmTlBpWVJTNUlNeVg4QW1QZS1lOTF3Zy1vakR4YVlsRUN1X2F3emlSb2w1a1hiN1VzZE5ZRlRKalMwZFRiWnFzU3k5YkVhRXozcmNPTjlrblVZR3BNNGhJb2F1UFpIR0FiYm9NZVpLbkUtck1o?oc=5)
 
-  - All News for REGN : Regeneron Pharmaceuticals - Zacks.com (https://www.zacks.com/stock/research/REGN/all-news)
+  - CLASS ACTION DEADLINE TONIGHT: Faruqi & Faruqi, LLP Reminds Regeneron (REGN) Investors of Securities Class Action Lawsuit Deadline on September 14, 2026 - Business Wire (https://news.google.com/rss/articles/CBMiqgJBVV95cUxNMzU2dWJtUlJfczY4YnFkYk56RFIzS0JhX0VYTEdGMVVkdG05RXpkcDJJTW1WZEhOZ0J5UzlMdHh1RlpkVnpzMU9xYTZKQWJXVFJObEU4eGZHdml5aHRnVDNMdHozUDhSal9CQXl2RzhjQ1BiMjlhM0dVRnhQeUF4cV8yNHNibWQ0RFh3dUUwRExaalVWQWRHMldKN3JfdWRlcTVDRFZuM0VxUnRvVV9VVndQMVcyNDMtQTZkVndYeU1La0dpLUx3dDJOMHhUOXZJOENYYkY1dGppc3pBbXlQZ0FJSTFJeE53eHRnUjNiZ2ZJNDhZZ19pTE5TQWI4OEZ3X19wc1pCaHRPaEw2dEFFWkE0RF9EbkZJSzFWU0V2RlF6bkVrNG9saWxn?oc=5)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

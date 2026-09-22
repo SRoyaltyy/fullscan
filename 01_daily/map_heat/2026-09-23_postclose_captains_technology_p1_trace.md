@@ -6,13 +6,13 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"NVDA news September 23 2026"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"NVDA news September 23 2026"* → got 6 results (via gnews_rss)
 
-  - News Archive | NVIDIA Newsroom (https://nvidianews.nvidia.com/news)
+  - Aolani partners Nvidia to expand AI Factories in Southeast Asia - W.Media (https://news.google.com/rss/articles/CBMihwFBVV95cUxORE0yVGpkNTRzOU81V3lGQ084dHBhbEdsTFdsWkhGVFNUNTB6VDQwSXVJTkFobGtDa0RZMTI0Vzdtc2lmVG0tTXEyQzIyQkxOVmpuQnBiREI1NHB1MW1pWWhUYWtCWVVXZTBuTlpMckcwNF9sRGxsaG5DQURaSGMwNTRhYW9ZQzg?oc=5)
 
-  - NVDA Press Releases Nvidia - marketchameleon.com (https://marketchameleon.com/Overview/NVDA/PressReleases/)
+  - Nvidia, QIA-backed Iambic Therapeutics files for US IPO - The Manila Times (https://news.google.com/rss/articles/CBMixgFBVV95cUxPNUw3c3RtVzFfcExRYnRtOE9VaktkOUhBSS16MWw2SWVPRU02bFh3clA2eVVaYjZJMjF6cEVFOEFwY2NaTFJHQkdLVm5OY3MzZFFBU3ZCdlF0MEhuOTVyODc4a213czZmNTJ5d0MwV3djVm90bFAzQk4yZERIMkRRNDFXeFRkekJudERuSzJOTkY0NFZsczY4aDA4V0UxZjhyVWZQTTNhM1RQOFR4X1QxRHpBTGk1d3R3eFdNVjVFal84a2xFemfSAcsBQVVfeXFMTUZUcmpGdVd2S1JLeHNQNGxaQW93aGxoUDdrRXk3WEthcUdGemdVUWFZTlpUbXJmVElhSzZuNHNTaGptdGNHX0VLZFlxRnJKTWpfWXNjWEhnZDM1V3FUR3NBaWZYYTJwUmpqRmtWRGJOVmVSY2tjNC1YcHBUTnJ0OW93U0VaYklZd0tBX0M0bWExSU5zMWh4VkhfZmpYUFVhN1hEWkdEeGlQSV8ycXI1UkRyempyNEl0cC1rRHJoeXVpdTFhSEQ3azVoZUk?oc=5)
 
-  - Latest News | NVIDIA Newsroom (https://nvidianews.nvidia.com/news/latest)
+  - VGT ETF excludes Google, Meta, Amazon due to se... - Pluang (https://news.google.com/rss/articles/CBMirAFBVV95cUxQMFlDR0pWTkc5YzFvY01vZHVsNzZRR3RPbXR1YVRfVkhnRGxadlJEQTBDU053Q0sxUnNVSE9vcDVVSkFmY00yblVVRDYteEp1Ul9haklFTGN3ZG5Rc3ozWkZ1RGNoMEotSkxPVWFsdVhjeUk4TzlqMzhHMVdlODZYb0haV09qckRQbFFPU2xxOHMtVW1tSl8yME8yRVJNaVg2b2NtRnhTYWg0cWNy?oc=5)
 
 **Step 2 — Research.** The model wanted to know: *"AVGO Broadcom news September 23 2026"* → got 6 results (via gnews_rss)
 

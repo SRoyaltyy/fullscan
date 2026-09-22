@@ -20,6 +20,6 @@
 
   - Harley-Davidson - Harley-Davidson Delivers Second Quarter Financial ... (https://investor.harley-davidson.com/news/news-details/2026/Harley-Davidson-Delivers-Second-Quarter-Financial-Results-and-Raises-Full-Year-Guidance/default.aspx)
 
-  - Harley-Davidson (HOG) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/HOG/)
+  - Harley-Davidson (HOG) Stock Price & Overview (https://stockanalysis.com/stocks/hog/)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

@@ -14,7 +14,7 @@
 
   - Nykredit A S Purchases New Holdings in United Rentals, Inc. $URI - MarketBeat (https://news.google.com/rss/articles/CBMivwFBVV95cUxNUVk2QVJDMmtPOU9tNEZHWTFuOXY3VmlKV3A0MnAxTnJObl9JY0VnaEZ5TUNOX2xkNlloa0E2Zzh6NzFIRS1VQkpWYjFPV1FaNVB1dUs2Q19VTm9GYTgzMV9mdGlVQW96WFhCYjZTSFpFOHhCZWxmUlpVQXlpQ1ZDbkgtSjFpbEQ2Qk41QUxYalZhUFBiMFJJb282VEdtUkZBakE5TUc4Y0hHLTRKLWhTVEV1VUFRVDFKMlNmUVZ2OA?oc=5)
 
-**Step 2 — Research.** The model wanted to know: *"GATX news September 2026"* → got 6 results (via gnews_rss)
+**Step 2 — Research.** The model wanted to know: *"GATX Corporation news September 2026"* → got 6 results (via gnews_rss)
 
   - Sidoti Events, LLC's September Small-Cap Virtual Conference - FinancialContent (https://news.google.com/rss/articles/CBMiugFBVV95cUxPajVXZHlDZENaNXhqSzNnbFM1SGgxdkhWT0twc3VLcGlRNE1KNTlZRXFrbjhFMVl2dkV2ZW03MnBLdHJ3bndab3hoNnlrdmNKZjFlTnJrTHlVblg2Zlg5X1dHVGNUVHZGd0dDRXg0dFpMbzdFNUlXbkJFbTVOcHVtQ05nYk00XzVvaDBXRUV6R0VfNF9NOWtVdkU1M3hzNVdndVhmRHF5aXNUWEV2Ul81Nk1aR3FZR3R3dEE?oc=5)
 

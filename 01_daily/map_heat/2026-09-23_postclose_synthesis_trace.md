@@ -6,13 +6,13 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"AppLovin APP stock news September 2026"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"AppLovin APP stock news September 22 2026"* → got 6 results (via gnews_rss)
 
-  - AppLovin Corporation (APP) Stock Price & Latest News ... (https://www.insidearbitrage.com/symbol-metrics/APP)
+  - Is AppLovin (APP) Undervalued On A Macro Led Rebound Despite Fresh Legal Risk? - simplywall.st (https://news.google.com/rss/articles/CBMiwAFBVV95cUxNd0ZQUXZsMEExMzBwQVJEZ0NfSUJTeWhnMXhLRE8zaHJZN0pVRUFyUFRpLUVxTTUtYmpUM1JEeVdPZTM1ZXZ4WUFKNmNVOGR2RTZZTWtpeW9VZU5rMDFVelJNQ3AzdnkybXkzQ0lYOE9nTDhsWGQwSERxVHZnRzRjeGU2bzF0WlR2X2hOMGpxaUZSUWRRQ1M0NXpLRGZxdjJoYU9VSnJCU0x2U1FBNTVRZG40MFltZTJjYkY1cGlpYmvSAcYBQVVfeXFMT2dHV2VIaTVGRFU2TlJsMng3eU1Gd0FrOXNnUDZrQTk1clZqcGNRRmF4NmxqY1d1cjhieGQ5SFVrOXBXZ0gtU083Njd4TldGc0hPZFhJNmotTExWTzVGU2M5WlJHcWxXTm5tVWhaSXFIQ2k1MHREd0VXbDdwcW1STVg1eVFPRTNKeGo4ZGdUSTljSHBMSl9JTnUyRjc0bk4xNktwUnQ2cmMwVFJDNXdaYzNnLVRzNUlSUlZlVEwwNHBVTWhwVmlB?oc=5)
 
-  - APP - AppLovin Corporation (NASDAQGS) - Share Price and NewsAppLovin Corp - Investor RelationsAppLovin Corp - NewsAppLovin Corporation (APP) Latest Stock News | Seeking AlphaAppLovin (APP) Stock Forecast & Analyst Price TargetsAPP Stock Falls 36% in 3 Months: Is it a Buy After the ... (https://fintel.io/s/us/app)
+  - APPLOVIN CORPORATION (APP) SHAREHOLDER ALERT Bernstein - GlobeNewswire (https://news.google.com/rss/articles/CBMiowJBVV95cUxQanBKeFFIbmVKdjNOcUFjaEJyZjFpSHpEWk83OHNXV2xvN0xvb3A0MENBVk5MR2pfUjFsNWdnbnluX0dHaVdrQkxpMnVuNzVKMGJlYkVxUFA0c3UtdEJCTGF2bjNiZk9yb2VNLUF6eVBhZGcwdHNkby1iZmd3TVR4a2NVaTQzYVozeHhKamNLRWNxUExUdG1mNG5mZGh0dWxWb21KcXNpcTNwWFMxRWdaM1d5UU5OMVd0YkhKTDh6dEZRQ192dFVBTTdaR1kyM3hzUHduQzhaWjA5cmQ2UFNGWW5oYTJrRFVkaXI3dThNRUI4dDh5U05OSGhXVWp4Q05ROVVTUkFNSEpyM0QyTVBGZldpOWxiWURWWW5SZDU4cENueWc?oc=5)
 
-  - AppLovin Corp - Investor Relations (https://investors.applovin.com/)
+  - Trade Desk Falls 4% as Index-Removal Flows Keep Pressure On; Magnite Drops 3%, AppLovin Pulls Back - 24/7 Wall St. (https://news.google.com/rss/articles/CBMi1AFBVV95cUxNY1ZFNVlvRnVUejFuVXVOejVWcTJXUklUamU4VzJDOVQ0Ui1oclhtZUhMd2JUc0NEbW5Ra0lPMDFMbktpeGh5eFlsZC1aSXNmSTJHZUoyeFZPbHUxR2J2V0tTRnl4X0pOM1p5alMyYndlZGFjRkZTWGJhdnVVRnZwWkIwQXRIQ3VwandvZHRCQ1FDUFpuX0JnM3lVaWNBb2Vxc0RGS1NMSWZyTjFOSUlGNnFFVTdHSFBPb2tVQUJ4Tm9qMF9EXzNubjZKQXd4RUZmcjZvMg?oc=5)
 
 **Step 2 — Research.** The model wanted to know: *"Magnite MGNI Google adtech ruling September 2026"* → got 6 results (via gnews_rss)
 

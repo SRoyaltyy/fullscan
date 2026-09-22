@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"MetLife MET news September 2026"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"MetLife MET news September 2026"* → got 6 results (via gnews_rss)
 
-  - MetLife at KBW Insurance Conference 2026: growth plan stays ahead By Investing.com (https://www.investing.com/news/transcripts/metlife-at-kbw-insurance-conference-2026-growth-plan-stays-ahead-93CH-4894075)
+  - Can MetLife's Group Benefits Segment Maintain Its Momentum? - Zacks Investment Research (https://news.google.com/rss/articles/CBMinwFBVV95cUxQU0F0emMwX0c2RzBhcUVzRzJja1c4YUszRFJhM1dQVTA1N25jaFhWcmdCLVRYR21LMzQwVmdWYnVxYVg2UXZUa0hNNmZsQmphU0FpSVROMzBYU1ZOZEtPdXFlUElmRnZmbVBpZlZXWTBvWFNVb0JEUG5KWkJIWVhyUVAtaVBIaGVRMzR3eC1sbi03VDZYZFlmRzlBOXVaclU?oc=5)
 
-  - MetLife, Inc. - MetLife Declares Third Quarter 2026 Common Stock Dividend (https://investor.metlife.com/news/news-details/2026/MetLife-Declares-Third-Quarter-2026-Common-Stock-Dividend/default.aspx)
+  - MetLife (NYSE: MET) affiliate lines up September stock sale - Stock Titan (https://news.google.com/rss/articles/CBMikAFBVV95cUxQdzlkeDR5S0l6WkYtRVF0MVVUM1ZqckFsVW1JRnlpZlBmWEpZNjFaOS1UcEg4ZmxXVDhyYVVGTXBuNkU1UHljeEh1VTZrWUFjNmlhWGtDeF9PSy12YWR3U1laYzZkXzBXMUtqQS14UDdEQ3VyRXlIRGI4M0dZT1NZYjN5SzRaa0Y5Rklxem10aE4?oc=5)
 
-  - MetLife Inc. stock holds near 52-week high as analysts lift targets (https://www.ad-hoc-news.de/boerse/news/corporate-news/metlife-inc-stock-holds-near-52-week-high-as-analysts-lift-targets/70143108)
+  - MetLife Investment Management Closes Galaxy 38 CLO - Business Wire (https://news.google.com/rss/articles/CBMiqwFBVV95cUxNRG1FMzVWZGZKRG9kcTNjWnJGZlZlSjFLMW05N080bjdmRUhYOUo3b3R5dE9JTWhwaUo2bFVVbnJGaC1oQktxUVJ6Vzhnc1M1UlkwV2xPb0xwd1RjTll3VlRFT0hoQXBuNmVnSUo0RUM0T1hCWEVXSENIa0NsejNYQVJ5NGg3WExQXzNQUWh6TVctUjNCTGxRY0Rkd3ZSZlRwcnlwbUllZmZscGc?oc=5)
 
-**Step 2 — Research.** The model wanted to know: *"Aflac AFL news September 2026"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"Aflac AFL news September 2026"* → got 6 results (via gnews_rss)
 
-  - Aflac Incorporated - Aflac Incorporated to Present at the 2026 KBW ... (https://investors.aflac.com/press-releases/press-release-details/2026/Aflac-Incorporated-to-Present-at-the-2026-KBW-Insurance-Conference/default.aspx)
+  - Aflac has given nearly 50,000 robotic ducks to children - Stock Titan (https://news.google.com/rss/articles/CBMivAFBVV95cUxNRzNXNUlGV2lSd2lsNFFydUhMVWFmVEtmZlNwODhSdzRCMGVPRmVibGJUVE1rRS1GcFBFMXBpbWEwc200Sjdnb2QwdWZKWFRGNjFudndWRGdvS3hFaUx0OC1yd002MGZkbzFkby16MzdHLTR3Vlh0bXZBRTctbnFOWllQSmpDN2drcTNTTlNReVdUM1ZCNjN2TmpTUjF6U1JzM0hOM3B1bjQtMmlMRVFyamZqbjRwY1JpTVRfeQ?oc=5)
 
-  - AFL Press Releases Aflac - MarketChameleon.com (https://marketchameleon.com/Overview/AFL/PressReleases/)
+  - 3 U.S. Life Insurers Retail Investors Are Watching For Higher Rates - simplywall.st (https://news.google.com/rss/articles/CBMiwwFBVV95cUxNSmtMZm1iRXNqOFlNVUVsOVRiOGJBdnV5RlNwdklMQXM3Z0hDeURja0JHc0l4OEVhY0pTTjVxRzZhRTBKRkQ0bVF1cUFNLUFYVEg0TVNUTGdXRzdzaDVNMWVzM2ozV2JVZDV1aVp0NU1xNGFvazlsRjg0Y3hoY2VyemlBaWoyX2VVSVhWRHpoeWxVejJiRGlJTnlZVlBfUHlsSHdHV183dFU5bDdTLTQ4dG5rdlFXcHpmcW54M2J1Q2k1eWPSAcMBQVVfeXFMTUprTGZtYkVzajhZTVVFbDlUYjhiQXZ1eUZTcHZJTEFzN2dIQ3lEY2tCR3NJeDhFYWNKU041cUc2YUUwSkZENG1RdXFBTS1BWFRINE1TVExnV0c3c2g1TTFlczNqM1diVWQ1dWladDVNcTRhb2s5bEY4NGN4aGNlcnppQWlqMl9lVUlYVkR6aHlsVXoyYkRpSU55WVZQX1B5bEh3R1dfN3RVOWw3Uy00OHRua3ZRV3B6ZnFueDNidUNpNXlj?oc=5)
 
-  - Aflac (AFL) Stock Price & Overview (https://stockanalysis.com/stocks/afl/)
+  - Japan Post Holdings Co., Ltd. Trims Aflac Inc (AFL) Stake -- Sha - GuruFocus (https://news.google.com/rss/articles/CBMiygFBVV95cUxNNzBqNjY3amZVMkNXY2hGR2pMUEJMcjZOQ3FCNjBpYjNPd09pWW1uY2ppMU5VMzRUNzNIdGx6UnN2dEg4ZVhaOGtJc1JXbjI4Mjd3OXhpbElBb0NwTUp0ci1Kc0lfQWxMX0hHcWlnVTFBc1ZmeTZ0SzRLTmhXZ3lFTjZxNllFQl83R0oyWG5LZjdsY2J6Y0FqaG93UmYxaXgzazRqNTFmVDZVeWtHNFhyQmF1TjU2dVNld2tFaGFWSUFjcnZlVGpNc2J3?oc=5)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

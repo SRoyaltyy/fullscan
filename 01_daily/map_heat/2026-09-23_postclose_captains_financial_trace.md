@@ -6,20 +6,20 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"Blackstone BX news September 2026"* → got 6 results (via ddg)
+**Step 1 — Research.** The model wanted to know: *"BLK Blackstone BX news September 23 2026"* → got 6 results (via gnews_rss)
 
-  - News - Blackstone (https://www.blackstone.com/news/)
+  - Weekly market commentary - BlackRock (https://news.google.com/rss/articles/CBMingFBVV95cUxQLWJDTjBBalYwVHVpc0VxV1BwRE1xeUt1RWlLQ1VJdnJQRXNnb3p6MnFNbjRBV0s0TnlldW4wSVIycFRQeVNISWJ3VV9wMWdjX1ZndE1Tc24tNzc0anNYWjl0SVBsRDhSa0dVTWlyVVYxX0w5b2JhTFB0Tm9Vb2FwYVZubTU1SVJlcy0zMEpXOEM4ZlhiSU1QazdVQVlldw?oc=5)
 
-  - Blackstone - BX Share Information (https://ir.blackstone.com/bx-share-information/default.aspx)
+  - Blackstone stock rises 1.16 percent at the close - AD HOC NEWS (https://news.google.com/rss/articles/CBMiqwFBVV95cUxQNWNoTDJ6aXBSM2hISnc1SE5jRnRQN1B1TUl6dWdNaEpaMU1ZZ0FscUN6Wk8zSU5XWmZVc1BVcmI1V1ZFZkNBQlJsX0h0Z21qcV9vNUstUFJfUk9MbGhOZHF1Nmg3ajQ2TjVrX2dsM1lwUEtqS3RfRXdhVF9QeGEyUGgtMkRSVkFqY3RlM0FWTjNmbDJGMXF6dXFqZzNDTExSeEw2eEVkaTl1Qzg?oc=5)
 
-  - BX News Today | Why did Blackstone stock go down today? - MarketBeat (https://www.marketbeat.com/stocks/NYSE/BX/news/)
+  - Carney, locked in US trade war, pitches Canada to global investment titans - Reuters (https://news.google.com/rss/articles/CBMisAFBVV95cUxQZ3JPQXNDM2tRbmo0bHhxcE5yaHVkZ2txeVd5T2IzUFpYWkFYZTNsWmloNEUybWhxa3ZPVDdlZ0F0VnBnTmRzM09TekhtRHV3WGRQc0QwSmZuTy10R3BGbUdUc2dkOW5PRGpfRWdpblRtRHZYcnFHMy1HOGljNVFzcW8yOEY5VXg1d3BQY3d5ZWZJRU1JZEQtNTl2bW85NEhCckZpeWRPYlNrY09FckpjbA?oc=5)
 
-**Step 2 — Research.** The model wanted to know: *"BlackRock BLK stock news September 22 2026"* → got 6 results (via ddg)
+**Step 2 — Research.** The model wanted to know: *"Victory Capital VCTR StepStone STEP news September 2026"* → got 3 results (via gnews_rss)
 
-  - BlackRock (BLK) Stock Price & OverviewTop StoriesBlackRock to pay dividends on September 22; Here ... - FinboldBlackrock (BLK) Stock News & Updates | StockTitanBlackRock, Inc. Declares Quarterly Cash Dividend, Payable on ...BlackRock, Inc. (BLK) Latest Press Releases | Seeking AlphaBlackRock Declares Quarterly Dividend of $5.73 on Common StockBlackRock, Inc. (BLK) Latest Stock News & Headlines - Yahoo ... (https://stockanalysis.com/stocks/blk/)
+  - Victory Capital Holdings (VCTR) Stock Price, News & Analysis - Stock Titan (https://news.google.com/rss/articles/CBMiU0FVX3lxTE1fTFpsRGZidENIV3MwZEpCZmM3cng4ZjVXN2J3am40a3JWODREbnlVQUE2N3VwemMwYTRVQW50Tm9BZ2RiS0NrbkdoQXd3NUJfRUEw?oc=5)
 
-  - BlackRock to pay dividends on September 22; Here ... - Finbold (https://finbold.com/blackrock-to-pay-dividends-on-september-22-heres-how-much-100-blk-shares-will-earn/)
+  - symbol__ Stock Quote Price and Forecast - CNN (https://news.google.com/rss/articles/CBMiUEFVX3lxTE1mamFWNklUbTYtQllJby00Z2xwaTZGWmxvQUF3VXlpLThwWnl5YU5PYTZVSGtELUNhY1A5NERuVTh6eGF2dDF2dXdiS0YyN095?oc=5)
 
-  - Blackrock (BLK) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/BLK/)
+  - Affiliated Managers Group (AMG) Stock Price, News & Analysis - Stock Titan (https://news.google.com/rss/articles/CBMiUkFVX3lxTE5CMHJ3clg2bm12dUVJc0dPOFhZUWs2dlJ4T1R5a1pCTVNQWloxTmhJamw4SUZ4RnJaWlZDZF9qaHBzSjFNX0IzOExmS3otZWRKSEE?oc=5)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

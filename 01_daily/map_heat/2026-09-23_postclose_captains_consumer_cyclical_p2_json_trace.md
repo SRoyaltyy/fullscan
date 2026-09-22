@@ -6,4 +6,4 @@
 
 
 
-**Step 1 — Done researching.** The model stopped searching and wrote its full analysis (3,220 characters).
+**Step 1 — Done researching.** The model stopped searching and wrote its full analysis (2,950 characters).
