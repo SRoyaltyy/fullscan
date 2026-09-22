@@ -25459,18 +25459,113 @@
         "B7_OIL_DOLLAR": 0.5
       },
       "leading_sum": 0.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7770.81,
+      "actual_close": 7764.64,
+      "actual_pct_change": -0.0,
+      "actual_direction": "flat",
+      "actual_magnitude_band": "flat",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "divergence_flagged": true,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": -0.5,
+          "status": "neutral"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.5,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 0.5,
+          "status": "neutral"
+        }
+      ],
       "reflection_lesson_ref": null,
-      "sources_used": [],
+      "sources_used": [
+        {
+          "url": "https://www.bnnbloomberg.ca/markets/dow-jones/2026/09/22/wall-street-inches-higher-as-oil-prices-bond-yields-retreat-for-fifth-consecutive-day/",
+          "date_accessed": "2026-09-22",
+          "summary": "Independent AP/BNN close matches Channel 1: SPX flat, Dow −0.4%, Nasdaq +0.5%.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.bnnbloomberg.ca/markets/dow-jones/2026/09/22/wall-street-inches-higher-as-oil-prices-bond-yields-retreat-for-fifth-consecutive-day/",
+          "date_accessed": "2026-09-22",
+          "summary": "Oil relief was real but not linear; SPX’s tiny range is consistent with a faded morning bid.",
+          "verification": "verified"
+        },
+        {
+          "url": "https://www.bnnbloomberg.ca/markets/dow-jones/2026/09/22/wall-street-inches-higher-as-oil-prices-bond-yields-retreat-for-fifth-consecutive-day/",
+          "date_accessed": "2026-09-22",
+          "summary": "Bank factor, not a new FOMC, explains the Dow’s reversal-down versus Nasdaq.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.nbcnews.com/business/business-news/oil-prices-fall-saudi-pipeline-iran-hormuz-trump-talks-rcna599166",
+          "date_accessed": "2026-09-22",
+          "summary": "UNGA was the two-sided binary the morning refused to pre-score; it printed in oil’s path, not in SPX’s close.",
+          "verification": "verified"
+        },
+        {
+          "url": "https://www.nbcnews.com/business/business-news/oil-prices-fall-saudi-pipeline-iran-hormuz-trump-talks-rcna599166",
+          "date_accessed": "2026-09-22",
+          "summary": "Treat oil as a contributor and as the UNGA transmission channel, not as the SPX primary driver.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.federalreserve.gov/newsevents/speech/jefferson20260922a.htm",
+          "date_accessed": "2026-09-22",
+          "summary": "Confirms the morning rule: do not pre-score Jefferson as a hawkish/dovish equity catalyst.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.bnnbloomberg.ca/markets/dow-jones/2026/09/22/wall-street-inches-higher-as-oil-prices-bond-yields-retreat-for-fifth-consecutive-day/",
+          "date_accessed": "2026-09-22",
+          "summary": "Validates morning MAG7/earnings gate: AZO BMO was not SPX-beta.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.reuters.com/world/us/trump-un-threats-diplomacy-super-intelligence-2026-09-22/",
+          "date_accessed": "2026-09-22",
+          "summary": "Corroborates the two-sided UNGA factor; exact market mapping is in the NBC oil-path reporting above.",
+          "verification": "http_401"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -25500,7 +25595,14 @@
       "news_judge_present": true,
       "engine": "v2",
       "anchor_score": -1.372,
-      "overlay_score": 0.875
+      "overlay_score": 0.875,
+      "ops_fail": false,
+      "path_shape": "choppy / range-bound",
+      "primary_driver": "leftover AI/Nasdaq bid offset by bank and energy drag, pinning SPX in a 0.33% range",
+      "key_interaction": "AI bid vs bank+energy drag cancelled in SPX while UNGA threat vs Iran-meeting/pipeline relief cancelled in oil — a calm index print masking two live two-sided fights",
+      "knowable_at_9am": "partially",
+      "attribution_contested": "yes",
+      "outlier_watch": "Dow reversal-down vs NDX never-red; energy sold the oil dip; SPX ignored the UNGA oil see-saw that NBC treated as the day’s news"
     },
     {
       "date": "2026-09-22",
