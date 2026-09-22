@@ -6,8 +6,8 @@
   "user_code": null,
   "verification_uri": "https://accounts.x.ai/oauth2/device",
   "expires_at": null,
-  "updated_at": "2026-09-21T16:45:08.599285-04:00",
+  "updated_at": "2026-09-22T08:38:18.681089-04:00",
   "source": "pipeline_health",
-  "job": "postclose",
-  "date": "2026-09-21"
+  "job": "preopen",
+  "date": "2026-09-22"
 }
