@@ -1,6 +1,6 @@
 # Stock book — 2026-09-22
 
-_Generated 2026-09-22T17:33:36.702091-04:00_
+_Generated 2026-09-22T17:38:21.874064-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -240,7 +240,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | sector:Industrials | 32% | 25 | ×0.50 |
 | sector:Real Estate | 48% | 25 | ×0.85 |
 | sector:Technology | 35% | 23 | ×0.50 |
-| sector:Utilities | 41% | 22 | ×0.50 |
+| sector:Utilities | 44% | 23 | ×0.50 |
 
 ## Horizon weights — book_policy.json v15
 
