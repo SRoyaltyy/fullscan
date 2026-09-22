@@ -1239,9 +1239,13 @@ def test_lane_free_strain_keys_and_skip() -> None:
         assert gemini_key() == "studio-fallback-test"
         keys, _ollama, _gh = load_keys()
         assert keys.get("gemini") == "studio-fallback-test"
-        # Existing GEMINI_API_KEY wins; Studio is fallback only.
+        # Existing GEMINI_API_KEY wins; Studio never overwrites it.
         os.environ["GEMINI_API_KEY"] = "gemini-primary-test"
         assert gemini_key() == "gemini-primary-test"
+        keys, _ollama, _gh = load_keys()
+        assert keys.get("gemini") == "gemini-primary-test"
+        # Additive lock: GEMINI present → Studio ignored for keys["gemini"].
+        os.environ["GOOGLE_AI_STUDIO_API_KEY"] = "studio-must-not-win"
         keys, _ollama, _gh = load_keys()
         assert keys.get("gemini") == "gemini-primary-test"
 

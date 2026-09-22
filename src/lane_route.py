@@ -370,12 +370,13 @@ def tokenhub_key() -> str:
 def gemini_key() -> str:
     """GEMINI_API_KEY first; else GOOGLE_AI_STUDIO_API_KEY (same Studio API).
 
-    Does not rotate or delete GEMINI_API_KEY. Never log the value.
+    Additive only: does not rotate, overwrite, or delete GEMINI_API_KEY.
+    Never log the value.
     """
-    return (
-        (os.environ.get("GEMINI_API_KEY") or "").strip()
-        or (os.environ.get("GOOGLE_AI_STUDIO_API_KEY") or "").strip()
-    )
+    primary = (os.environ.get("GEMINI_API_KEY") or "").strip()
+    if primary:
+        return primary
+    return (os.environ.get("GOOGLE_AI_STUDIO_API_KEY") or "").strip()
 
 
 def nvidia_nim_key() -> str:
@@ -967,6 +968,8 @@ def first_live_url(urls, key, model, prompt, max_tokens=320, system=None,
 
 def load_keys():
     keys = {}
+    # Existing GEMINI_API_KEY wiring kept exactly as-is (same loop entry).
+    # GOOGLE_AI_STUDIO_API_KEY is additive only — see gemini_key() below.
     for k, env in (
         ("openrouter", "OPENROUTER_API_KEY"),
         ("deepseek", "DEEPSEEK_API_KEY"),
@@ -975,12 +978,17 @@ def load_keys():
         ("sambanova", "SAMBANOVA_API_KEY"),
         ("hf", "HF_TOKEN"),
         ("groq", "GROQ_API_KEY"),
+        ("gemini", "GEMINI_API_KEY"),
     ):
         if os.environ.get(env):
             keys[k] = os.environ[env]
-    gem_key = gemini_key()
-    if gem_key:
-        keys["gemini"] = gem_key
+    # Additive: Studio key also feeds the gemini hopper when GEMINI is unset.
+    # Never overwrite a present GEMINI_API_KEY value.
+    if not keys.get("gemini"):
+        studio = (os.environ.get("GOOGLE_AI_STUDIO_API_KEY") or "").strip()
+        if studio:
+            keys["gemini"] = studio
+    # Additive free-strain hoppers (new lanes; do not replace existing ones).
     mistral = mistral_key()
     if mistral:
         keys["mistral"] = mistral

@@ -61,9 +61,13 @@ name: Lane JSON wire
 #                                 Never print this value.
 #   TENCENT_BASE_URL            — alias base, after TOKENHUB_BASE_URL.
 #   GROQ_API_KEY                — last-resort only (dead for HK). Do not prefer.
-#   GEMINI_API_KEY              — Gemini hopper primary. Left alone when present.
-#   GOOGLE_AI_STUDIO_API_KEY    — fallback alias for gemini hopper only (same
-#                                 Studio / generateContent API). Not a replace.
+#   GEMINI_API_KEY              — Gemini hopper primary. Wiring unchanged;
+#                                 never overwritten or deleted by Studio key.
+#   GOOGLE_AI_STUDIO_API_KEY    — ADDITIVE only: also feeds gemini hopper when
+#                                 GEMINI_API_KEY is unset (same Studio API).
+#   MISTRAL_API_KEY / NVIDIA_NIM_API_KEY / NVIDIA_API_KEY / POLLINATIONS_API_KEY
+#                                 — ADDITIVE free-strain hoppers. Do not replace
+#                                 or rotate out any existing provider.
 #   LANE_ALLOW_PAID_DEEPSEEK    — set to 1 to enable native api.deepseek.com
 #                                 (paid). Default off — free headroom stays real.
 #

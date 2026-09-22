@@ -26,8 +26,9 @@ Additional free-strain overflow (still ahead of TokenHub):
 - Pollinations (`POLLINATIONS_API_KEY`) — OpenAI-compatible
   `gen.pollinations.ai` flash aliases (`gemini-fast`, `qwen3.7-flash`,
   `deepseek`). Empty Quest pollen → 402 skip.
-- Gemini (`GEMINI_API_KEY`, else `GOOGLE_AI_STUDIO_API_KEY`) —
-  same Studio / Gemini API; existing `GEMINI_API_KEY` wiring is left alone.
+- Gemini (`GEMINI_API_KEY` unchanged primary; `GOOGLE_AI_STUDIO_API_KEY`
+  additive fallback for the same Studio / Gemini hopper). Never replaces
+  or deletes `GEMINI_API_KEY`.
 
 TokenHub is overflow **behind** those $0 hoppers: flash IDs first
 (`glm-5.3-flash`, `glm-5.3-flashx`, `deepseek-v4-flash`) then `hy3`.
