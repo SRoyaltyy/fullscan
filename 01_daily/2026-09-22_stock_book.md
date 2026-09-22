@@ -1,6 +1,6 @@
 # Stock book — 2026-09-22
 
-_Generated 2026-09-22T16:47:18.084325-04:00_
+_Generated 2026-09-22T16:53:01.222008-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -99,7 +99,7 @@ This is the live Finviz groups tape — child industry vs parent sector, plus th
 
 | Sector | Finviz 1d | Finviz 1w | LLM 1d | Tape vs essay |
 |--------|----------:|----------:|-------:|---------------|
-| Basic Materials | -2.1% | -4.8% | -0.39 |  |
+| Basic Materials | -2.1% | -4.8% | -0.23 |  |
 | Communication Services | +2.7% | +3.5% | +0.31 |  |
 | Consumer Cyclical | -0.4% | -2.0% | -0.44 |  |
 | Consumer Defensive | +1.4% | +0.5% | +0.27 |  |
@@ -218,19 +218,19 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Financial | -0.47 |
 | Healthcare | -0.47 |
 | Consumer Cyclical | -0.44 |
-| Basic Materials | -0.39 |
 | Industrials | -0.33 |
 | Communication Services | +0.31 |
 | Consumer Defensive | +0.27 |
 | Technology | -0.27 |
 | Utilities | -0.26 |
+| Basic Materials | -0.23 |
 
 ### How much each predictor is trusted (graded hit rate)
 
 | Topic | hit rate | n | weight |
 |-------|----------|---|--------|
 | general | 53% | 36 | ×0.85 |
-| sector:Basic Materials | 46% | 24 | ×0.85 |
+| sector:Basic Materials | 44% | 25 | ×0.50 |
 | sector:Communication Services | 26% | 23 | ×0.50 |
 | sector:Consumer Cyclical | 50% | 24 | ×0.85 |
 | sector:Consumer Defensive | 42% | 24 | ×0.50 |
@@ -644,7 +644,6 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 - **LU** (small, Financial, $973M) score -0.717. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
 - **DYN** (mid, Healthcare, $3.2B) score -0.715. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
 - **TSHA** (small, Healthcare, $1.6B) score -0.707. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
-- **BAK** (micro, Basic Materials, $298M) score -0.704. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **ALMS** (small, Healthcare, $1.1B) score -0.703. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
 - **TNGX** (mid, Healthcare, $3.8B) score -0.700. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
 - **PAL** (micro, Industrials, $112M) score -0.700. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
@@ -656,6 +655,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 - **IPSC** (small, Healthcare, $335M) score -0.690. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
 - **GLUE** (small, Healthcare, $1.0B) score -0.689. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
 - **LFMD** (micro, Healthcare, $150M) score -0.671. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide)
+- **NMRA** (micro, Healthcare, $130M) score -0.670. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 
 ## Files for this run
 
