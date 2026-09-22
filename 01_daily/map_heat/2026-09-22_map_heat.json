@@ -1,8 +1,8 @@
 {
   "date": "2026-09-22",
-  "generated_at": "2026-09-22T04:13:19.109554-04:00",
+  "generated_at": "2026-09-22T04:13:32.637758-04:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-09-21.csv",
+  "export": "finviz_2026-09-22.csv",
   "n_tickers": 11616,
   "sectors": [
     {
@@ -9076,8 +9076,8 @@
       "source": "TIKR",
       "tickers": [
         "ALAB",
-        "INTC",
         "AMD",
+        "INTC",
         "NVDA"
       ]
     },
@@ -9274,8 +9274,8 @@
       "url": "https://qz.com/power-play-3",
       "source": "Quartz",
       "tickers": [
-        "GOOG",
-        "GOOGL"
+        "GOOGL",
+        "GOOG"
       ]
     },
     {
@@ -10543,5 +10543,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 207,
   "earnings_window_count": 55,
-  "overlay_at": "2026-09-22T04:13:19.109554-04:00"
+  "overlay_at": "2026-09-22T04:13:32.637758-04:00"
 }
