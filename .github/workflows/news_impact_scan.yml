@@ -65,6 +65,10 @@ jobs:
           MODELSCOPE_API_KEY: ${{ secrets.MODELSCOPE_API_KEY }}
           MODELSCOPE_API_TOKEN: ${{ secrets.MODELSCOPE_API_TOKEN }}
           MODELSCOPE_SDK_TOKEN: ${{ secrets.MODELSCOPE_SDK_TOKEN }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          NVIDIA_NIM_API_KEY: ${{ secrets.NVIDIA_NIM_API_KEY }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          POLLINATIONS_API_KEY: ${{ secrets.POLLINATIONS_API_KEY }}
           TOKENHUB_API_KEY: ${{ secrets.TOKENHUB_API_KEY }}
           TENCENT_API_KEY: ${{ secrets.TENCENT_API_KEY }}
           HUNYUAN_API_KEY: ${{ secrets.HUNYUAN_API_KEY }}
@@ -72,6 +76,7 @@ jobs:
           TENCENT_BASE_URL: ${{ secrets.TENCENT_BASE_URL }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GOOGLE_AI_STUDIO_API_KEY: ${{ secrets.GOOGLE_AI_STUDIO_API_KEY }}
         run: |
           DATE="${{ github.event.inputs.date }}"
           LIMIT="${{ github.event.inputs.limit }}"

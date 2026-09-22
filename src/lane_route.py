@@ -25,9 +25,11 @@ qwen2.5-7b-instruct and similar pre-2025 small IDs.
 default (key_people / key_products / revenue_mix / custom):
   OpenRouter :free → Qwen/DashScope qwen-flash
   → Zhipu glm-4.7-flash → Moonshot → SiliconFlow current non-Pro
-  → ModelScope → TokenHub overflow (glm-5.3-flash / flashx /
+  → ModelScope → Mistral / NVIDIA NIM / Pollinations free-strain
+  → TokenHub overflow (glm-5.3-flash / flashx /
   deepseek-v4-flash, then hy3) → GitHub Models → Cloudflare
   → SambaNova → Ollama → HF free → Groq last-resort → Gemini
+  (gemini key: GEMINI_API_KEY, else GOOGLE_AI_STUDIO_API_KEY)
   Native api.deepseek.com is PAID — not on the $0 path. Opt-in only via
   LANE_ALLOW_PAID_DEEPSEEK=1 (after OpenRouter when enabled).
 
@@ -80,6 +82,24 @@ GROQ_MODELS = [
     "qwen/qwen3.6-27b",
 ]
 GEMINI_MODELS = ["gemini-2.5-flash-lite", "gemini-2.5-flash"]
+# Mistral Experiment plan (rate-limited $0). Flash / edge only — no large/medium.
+MISTRAL_MODELS = ["ministral-8b-2512", "ministral-3b-2512", "mistral-small-latest"]
+MISTRAL_URL = "https://api.mistral.ai/v1/chat/completions"
+# NVIDIA NIM hosted free-trial tier (OpenAI-compatible). Small / nano only.
+NVIDIA_NIM_MODELS = [
+    "nvidia/nemotron-mini-4b-instruct",
+    "meta/llama-3.2-3b-instruct",
+    "meta/llama-3.1-8b-instruct",
+]
+NVIDIA_NIM_URL = "https://integrate.api.nvidia.com/v1/chat/completions"
+# Pollinations OpenAI-compatible text (gen.pollinations.ai). Flash aliases only;
+# spends Quest/free pollen — 402 skips clean when empty. Never Pro / paid-only.
+POLLINATIONS_MODELS = [
+    "gemini-fast",
+    "qwen3.7-flash",
+    "deepseek",
+]
+POLLINATIONS_URL = "https://gen.pollinations.ai/v1/chat/completions"
 # $0 only: documented free router and/or :free suffix. Never paid IDs.
 # CN-origin :free first (GLM / InclusionAI Ling). Live OpenRouter catalog
 # has no Qwen/DeepSeek :free right now — those go through native hoppers.
@@ -193,12 +213,14 @@ LAST_RESORT_MODELS = (
 
 # Default / existing-template hopper order (same as the green smoke path).
 # TokenHub is overflow behind true $0 hoppers (OR :free, DashScope, Zhipu
-# Flash, SF non-Pro, …). Do not move it ahead of those lanes.
+# Flash, SF non-Pro, Mistral / NIM / Pollinations, …). Do not move it ahead
+# of those lanes.
 # Native "deepseek" (api.deepseek.com) is PAID — not in this $0 list.
 # Opt-in via LANE_ALLOW_PAID_DEEPSEEK=1 (see lanes_for / ask_lane).
 DEFAULT_LANES = [
     "openrouter", "qwen", "zhipu", "moonshot",
     "siliconflow", "modelscope",
+    "mistral", "nvidia_nim", "pollinations",
     "tokenhub",
     "github_models", "cloudflare", "sambanova",
     "ollama", "hf", "groq", "gemini",
@@ -345,6 +367,35 @@ def tokenhub_key() -> str:
     )
 
 
+def gemini_key() -> str:
+    """GEMINI_API_KEY first; else GOOGLE_AI_STUDIO_API_KEY (same Studio API).
+
+    Does not rotate or delete GEMINI_API_KEY. Never log the value.
+    """
+    return (
+        (os.environ.get("GEMINI_API_KEY") or "").strip()
+        or (os.environ.get("GOOGLE_AI_STUDIO_API_KEY") or "").strip()
+    )
+
+
+def nvidia_nim_key() -> str:
+    """NVIDIA_NIM_API_KEY, else NVIDIA_API_KEY alias. Never log the value."""
+    return (
+        (os.environ.get("NVIDIA_NIM_API_KEY") or "").strip()
+        or (os.environ.get("NVIDIA_API_KEY") or "").strip()
+    )
+
+
+def mistral_key() -> str:
+    """MISTRAL_API_KEY. Never log the value."""
+    return (os.environ.get("MISTRAL_API_KEY") or "").strip()
+
+
+def pollinations_key() -> str:
+    """POLLINATIONS_API_KEY for gen.pollinations.ai. Never log the value."""
+    return (os.environ.get("POLLINATIONS_API_KEY") or "").strip()
+
+
 def tokenhub_urls() -> list[str]:
     """TOKENHUB_BASE_URL then TENCENT_BASE_URL, then CN TokenHub default.
 
@@ -437,6 +488,12 @@ def primary_models_for(lane: str, tmpl: str = "custom") -> list[str]:
         raw = sf_models_for(tmpl)
     elif lane == "modelscope":
         raw = list(MS_MODELS)
+    elif lane == "mistral":
+        raw = list(MISTRAL_MODELS)
+    elif lane == "nvidia_nim":
+        raw = list(NVIDIA_NIM_MODELS)
+    elif lane == "pollinations":
+        raw = list(POLLINATIONS_MODELS)
     elif lane == "tokenhub":
         raw = tokenhub_models()
     elif lane == "github_models":
@@ -918,10 +975,21 @@ def load_keys():
         ("sambanova", "SAMBANOVA_API_KEY"),
         ("hf", "HF_TOKEN"),
         ("groq", "GROQ_API_KEY"),
-        ("gemini", "GEMINI_API_KEY"),
     ):
         if os.environ.get(env):
             keys[k] = os.environ[env]
+    gem_key = gemini_key()
+    if gem_key:
+        keys["gemini"] = gem_key
+    mistral = mistral_key()
+    if mistral:
+        keys["mistral"] = mistral
+    nim = nvidia_nim_key()
+    if nim:
+        keys["nvidia_nim"] = nim
+    polli = pollinations_key()
+    if polli:
+        keys["pollinations"] = polli
     qwen_key = os.environ.get("DASHSCOPE_API_KEY") or os.environ.get("QWEN_API_KEY") or ""
     if qwen_key:
         keys["qwen"] = qwen_key
@@ -1035,6 +1103,32 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
                 "https://api-inference.modelscope.cn/v1/chat/completions",
                 keys["modelscope"], model,
             ),
+        )
+    if lane == "mistral":
+        if not keys.get("mistral"):
+            return None, None
+        return hop_models(
+            "mistral",
+            primary_models_for("mistral", tmpl),
+            lambda model: oc(MISTRAL_URL, keys["mistral"], model),
+        )
+    if lane == "nvidia_nim":
+        if not keys.get("nvidia_nim"):
+            return None, None
+        return hop_models(
+            "nvidia_nim",
+            primary_models_for("nvidia_nim", tmpl),
+            lambda model: oc(NVIDIA_NIM_URL, keys["nvidia_nim"], model),
+        )
+    if lane == "pollinations":
+        # OpenAI-compatible chat at gen.pollinations.ai. Missing key / 402
+        # (empty Quest pollen) skip clean — same DEAD_PROVIDER contract.
+        if not keys.get("pollinations"):
+            return None, None
+        return hop_models(
+            "pollinations",
+            primary_models_for("pollinations", tmpl),
+            lambda model: oc(POLLINATIONS_URL, keys["pollinations"], model),
         )
     if lane == "tokenhub":
         if not keys.get("tokenhub"):

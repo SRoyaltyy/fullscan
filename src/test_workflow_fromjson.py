@@ -588,13 +588,17 @@ def test_lane_json_zero_dollar_hoppers() -> None:
     assert DEFAULT_LANES == [
         "openrouter", "qwen", "zhipu", "moonshot",
         "siliconflow", "modelscope",
+        "mistral", "nvidia_nim", "pollinations",
         "tokenhub",
         "github_models", "cloudflare", "sambanova",
         "ollama", "hf", "groq", "gemini",
     ], DEFAULT_LANES
     assert "deepseek" not in DEFAULT_LANES
     # TokenHub overflow must stay behind true $0 hoppers.
-    for ahead in ("openrouter", "qwen", "zhipu", "siliconflow"):
+    for ahead in (
+        "openrouter", "qwen", "zhipu", "siliconflow",
+        "mistral", "nvidia_nim", "pollinations",
+    ):
         assert DEFAULT_LANES.index(ahead) < DEFAULT_LANES.index("tokenhub"), ahead
     assert lanes_for("key_people") == DEFAULT_LANES
     assert lanes_for("custom") == DEFAULT_LANES
@@ -628,6 +632,10 @@ def test_lane_json_zero_dollar_hoppers() -> None:
         "GLM_API_KEY",
         "MOONSHOT_API_KEY",
         "MODELSCOPE_API_KEY",
+        "MISTRAL_API_KEY",
+        "NVIDIA_NIM_API_KEY",
+        "NVIDIA_API_KEY",
+        "POLLINATIONS_API_KEY",
         "OLLAMA_URL",
         "TOKENHUB_API_KEY",
         "TENCENT_API_KEY",
@@ -635,6 +643,8 @@ def test_lane_json_zero_dollar_hoppers() -> None:
         "TOKENHUB_BASE_URL",
         "TENCENT_BASE_URL",
         "GROQ_API_KEY",
+        "GEMINI_API_KEY",
+        "GOOGLE_AI_STUDIO_API_KEY",
     ):
         assert secret in header, secret
         assert secret in text.split("env:", 1)[1].split("run:", 1)[0], secret
@@ -660,6 +670,9 @@ def test_lane_json_zero_dollar_hoppers() -> None:
     assert "open.bigmodel.cn" in py
     assert "api.moonshot.cn" in py
     assert "api-inference.modelscope.cn" in py
+    assert "api.mistral.ai" in py
+    assert "integrate.api.nvidia.com" in py
+    assert "gen.pollinations.ai" in py
     assert "tokenhub.tencentmaas.com" in py
     assert "models.github.ai" in py
     assert "api.cloudflare.com" in py
@@ -703,8 +716,16 @@ def test_lane_json_zero_dollar_hoppers() -> None:
     assert "secrets.TOKENHUB_BASE_URL" in env_block
     assert "secrets.TENCENT_BASE_URL" in env_block
     assert "secrets.HUNYUAN_API_KEY" in env_block
+    assert "secrets.MISTRAL_API_KEY" in env_block
+    assert "secrets.NVIDIA_NIM_API_KEY" in env_block
+    assert "secrets.NVIDIA_API_KEY" in env_block
+    assert "secrets.POLLINATIONS_API_KEY" in env_block
+    assert "secrets.GOOGLE_AI_STUDIO_API_KEY" in env_block
+    assert "secrets.GEMINI_API_KEY" in env_block
 
     assert "not required" in header.lower() or "Skip if unset" in header
+    assert "GOOGLE_AI_STUDIO_API_KEY" in header
+    assert "fallback" in header.lower()
 
 
 def test_lane_news_and_dig_templates() -> None:
@@ -868,7 +889,7 @@ def test_lane_tokenhub_base_url_bearer_and_flash_then_hy3() -> None:
     )
 
     zero = ("openrouter", "qwen", "zhipu", "moonshot",
-            "siliconflow", "modelscope")
+            "siliconflow", "modelscope", "mistral", "nvidia_nim", "pollinations")
     assert "deepseek" not in DEFAULT_LANES
     assert DEFAULT_LANES.index("tokenhub") > max(DEFAULT_LANES.index(n) for n in zero)
     for tmpl in ("custom", "news_to_tickers", "company_dig"):
@@ -877,6 +898,9 @@ def test_lane_tokenhub_base_url_bearer_and_flash_then_hy3() -> None:
         assert order.index("tokenhub") > order.index("qwen")
         assert order.index("tokenhub") > order.index("zhipu")
         assert order.index("tokenhub") > order.index("siliconflow")
+        assert order.index("tokenhub") > order.index("mistral")
+        assert order.index("tokenhub") > order.index("nvidia_nim")
+        assert order.index("tokenhub") > order.index("pollinations")
 
     models = tokenhub_models()
     assert models, "tokenhub allowlist empty"
@@ -1162,6 +1186,100 @@ def test_lane_hop_429_abandons_provider() -> None:
     lane_route._SKIP.clear()
 
 
+def test_lane_free_strain_keys_and_skip() -> None:
+    """Mistral / NIM / Pollinations / Gemini Studio fallback — offline skip."""
+    import os
+
+    from src import lane_route
+    from src.lane_route import (
+        MISTRAL_MODELS,
+        NVIDIA_NIM_MODELS,
+        POLLINATIONS_MODELS,
+        gemini_key,
+        load_keys,
+        mistral_key,
+        nvidia_nim_key,
+        pollinations_key,
+        primary_models_for,
+    )
+
+    assert MISTRAL_MODELS[0] == "ministral-8b-2512"
+    assert "mistral-large" not in " ".join(MISTRAL_MODELS).lower()
+    assert NVIDIA_NIM_MODELS[0] == "nvidia/nemotron-mini-4b-instruct"
+    assert all("pro" not in m.lower() for m in NVIDIA_NIM_MODELS)
+    assert POLLINATIONS_MODELS == ["gemini-fast", "qwen3.7-flash", "deepseek"]
+    assert primary_models_for("mistral") == list(MISTRAL_MODELS)
+    assert primary_models_for("nvidia_nim") == list(NVIDIA_NIM_MODELS)
+    assert primary_models_for("pollinations") == list(POLLINATIONS_MODELS)
+
+    env_names = (
+        "GEMINI_API_KEY", "GOOGLE_AI_STUDIO_API_KEY",
+        "MISTRAL_API_KEY", "NVIDIA_NIM_API_KEY", "NVIDIA_API_KEY",
+        "POLLINATIONS_API_KEY",
+    )
+    prev = {name: os.environ.pop(name, None) for name in env_names}
+    try:
+        assert gemini_key() == ""
+        assert mistral_key() == ""
+        assert nvidia_nim_key() == ""
+        assert pollinations_key() == ""
+        keys, _ollama, _gh = load_keys()
+        assert "gemini" not in keys
+        assert "mistral" not in keys
+        assert "nvidia_nim" not in keys
+        assert "pollinations" not in keys
+
+        # Missing keys: ask_lane returns None without raising.
+        ctx = {"keys": {}, "ollama_url": "", "gh_direct": ""}
+        for hop in ("mistral", "nvidia_nim", "pollinations", "gemini"):
+            parsed, info = lane_route.ask_lane(hop, "ping", ctx)
+            assert parsed is None and info is None
+
+        os.environ["GOOGLE_AI_STUDIO_API_KEY"] = "studio-fallback-test"
+        assert gemini_key() == "studio-fallback-test"
+        keys, _ollama, _gh = load_keys()
+        assert keys.get("gemini") == "studio-fallback-test"
+        # Existing GEMINI_API_KEY wins; Studio is fallback only.
+        os.environ["GEMINI_API_KEY"] = "gemini-primary-test"
+        assert gemini_key() == "gemini-primary-test"
+        keys, _ollama, _gh = load_keys()
+        assert keys.get("gemini") == "gemini-primary-test"
+
+        os.environ["NVIDIA_API_KEY"] = "nvidia-alias-test"
+        assert nvidia_nim_key() == "nvidia-alias-test"
+        os.environ["NVIDIA_NIM_API_KEY"] = "nvidia-primary-test"
+        assert nvidia_nim_key() == "nvidia-primary-test"
+        os.environ["MISTRAL_API_KEY"] = "mistral-test"
+        os.environ["POLLINATIONS_API_KEY"] = "pollinations-test"
+        keys, _ollama, _gh = load_keys()
+        assert keys.get("mistral") == "mistral-test"
+        assert keys.get("nvidia_nim") == "nvidia-primary-test"
+        assert keys.get("pollinations") == "pollinations-test"
+    finally:
+        for name, value in prev.items():
+            if value is None:
+                os.environ.pop(name, None)
+            else:
+                os.environ[name] = value
+
+    # Sibling Lane workflows must inject the new secrets too.
+    for wf_name in (
+        "lane_news_scan.yml",
+        "news_impact_scan.yml",
+        "news_impact_backtest.yml",
+    ):
+        blob = (WF / wf_name).read_text(encoding="utf-8")
+        for secret in (
+            "MISTRAL_API_KEY",
+            "NVIDIA_NIM_API_KEY",
+            "NVIDIA_API_KEY",
+            "POLLINATIONS_API_KEY",
+            "GOOGLE_AI_STUDIO_API_KEY",
+            "GEMINI_API_KEY",
+        ):
+            assert f"secrets.{secret}" in blob, (wf_name, secret)
+
+
 def test_ci_workflow_is_wired() -> None:
     yml = (WF / "workflow_selfcheck.yml").read_text(encoding="utf-8")
     assert "pull_request:" in yml
@@ -1194,6 +1312,7 @@ def main() -> None:
         test_lane_cyrus_primary_allowlists_ban_old_flash,
         test_lane_paid_deepseek_opt_in,
         test_lane_hop_429_abandons_provider,
+        test_lane_free_strain_keys_and_skip,
         test_ci_workflow_is_wired,
     ]
     failed = 0

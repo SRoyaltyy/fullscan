@@ -16,6 +16,19 @@ never `glm-4-flash-250414` / old glm-4-flash / `qwen2.5-7b-instruct` on
 primary or news). On 429, abandon that provider — do not fall down older
 sibling IDs. DashScope primary is `qwen-flash`.
 `DASHSCOPE_BASE_URL` (if set) is tried before public `dashscope*.aliyuncs.com`.
+
+Additional free-strain overflow (still ahead of TokenHub):
+- Mistral (`MISTRAL_API_KEY`) — `ministral-8b-2512` / `ministral-3b-2512` /
+  `mistral-small-latest` via `api.mistral.ai` (Experiment plan rate limits).
+- NVIDIA NIM (`NVIDIA_NIM_API_KEY`, alias `NVIDIA_API_KEY`) —
+  `nvidia/nemotron-mini-4b-instruct` / small Llama IDs via
+  `integrate.api.nvidia.com`.
+- Pollinations (`POLLINATIONS_API_KEY`) — OpenAI-compatible
+  `gen.pollinations.ai` flash aliases (`gemini-fast`, `qwen3.7-flash`,
+  `deepseek`). Empty Quest pollen → 402 skip.
+- Gemini (`GEMINI_API_KEY`, else `GOOGLE_AI_STUDIO_API_KEY`) —
+  same Studio / Gemini API; existing `GEMINI_API_KEY` wiring is left alone.
+
 TokenHub is overflow **behind** those $0 hoppers: flash IDs first
 (`glm-5.3-flash`, `glm-5.3-flashx`, `deepseek-v4-flash`) then `hy3`.
 `TOKENHUB_BASE_URL` or `TENCENT_BASE_URL` (if set) is tried before

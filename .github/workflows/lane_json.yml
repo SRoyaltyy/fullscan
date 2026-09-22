@@ -45,6 +45,11 @@ name: Lane JSON wire
 #   MOONSHOT_API_KEY            — Moonshot Kimi official. Skip if missing / 402.
 #   MODELSCOPE_API_KEY          — ModelScope API-Inference (or MODELSCOPE_API_TOKEN /
 #                                 MODELSCOPE_SDK_TOKEN). Skip if missing.
+#   MISTRAL_API_KEY             — Mistral Experiment plan. Flash / Ministral only.
+#   NVIDIA_NIM_API_KEY          — NVIDIA NIM hosted free-trial (or NVIDIA_API_KEY).
+#   NVIDIA_API_KEY              — alias for NVIDIA_NIM_API_KEY.
+#   POLLINATIONS_API_KEY        — Pollinations gen.pollinations.ai chat. Skip on
+#                                 missing key / empty Quest pollen (402).
 #   OLLAMA_URL                  — optional US-box offline/batch (secret or var).
 #                                 Skip if unset. Not required on this ubuntu job.
 #   TOKENHUB_API_KEY            — Tencent TokenHub CN (or TENCENT_API_KEY).
@@ -56,13 +61,16 @@ name: Lane JSON wire
 #                                 Never print this value.
 #   TENCENT_BASE_URL            — alias base, after TOKENHUB_BASE_URL.
 #   GROQ_API_KEY                — last-resort only (dead for HK). Do not prefer.
-#   GEMINI_API_KEY
+#   GEMINI_API_KEY              — Gemini hopper primary. Left alone when present.
+#   GOOGLE_AI_STUDIO_API_KEY    — fallback alias for gemini hopper only (same
+#                                 Studio / generateContent API). Not a replace.
 #   LANE_ALLOW_PAID_DEEPSEEK    — set to 1 to enable native api.deepseek.com
 #                                 (paid). Default off — free headroom stays real.
 #
 # Direct hopper order (rotate to next model/provider on 429/5xx):
 #   OpenRouter free (CN-origin :free first) → Qwen/DashScope
 #   → Zhipu GLM → Moonshot Kimi → SiliconFlow → ModelScope
+#   → Mistral / NVIDIA NIM / Pollinations free-strain
 #   → TokenHub overflow (flash / flashx then hy3; behind true $0)
 #   → GitHub Models → Cloudflare → SambaNova
 #   → Ollama (if OLLAMA_URL) → HF free router → Groq (last-resort) → Gemini
@@ -106,6 +114,10 @@ jobs:
           MODELSCOPE_API_KEY: ${{ secrets.MODELSCOPE_API_KEY }}
           MODELSCOPE_API_TOKEN: ${{ secrets.MODELSCOPE_API_TOKEN }}
           MODELSCOPE_SDK_TOKEN: ${{ secrets.MODELSCOPE_SDK_TOKEN }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          NVIDIA_NIM_API_KEY: ${{ secrets.NVIDIA_NIM_API_KEY }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          POLLINATIONS_API_KEY: ${{ secrets.POLLINATIONS_API_KEY }}
           TOKENHUB_API_KEY: ${{ secrets.TOKENHUB_API_KEY }}
           TENCENT_API_KEY: ${{ secrets.TENCENT_API_KEY }}
           HUNYUAN_API_KEY: ${{ secrets.HUNYUAN_API_KEY }}
@@ -113,6 +125,7 @@ jobs:
           TENCENT_BASE_URL: ${{ secrets.TENCENT_BASE_URL }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GOOGLE_AI_STUDIO_API_KEY: ${{ secrets.GOOGLE_AI_STUDIO_API_KEY }}
         run: PYTHONPATH=. python3 -m src.lane_route
       - name: Commit outbox
         run: |
