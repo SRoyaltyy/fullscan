@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-09-22
 
-Export `finviz_2026-09-22.csv` · 11616 names · generated 2026-09-22T04:13:32.637758-04:00
+Export `finviz_2026-09-21.csv` · 11616 names · generated 2026-09-22T04:13:19.109554-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -273,7 +273,7 @@ COLD (1w):
 - 1 hour **TTEC** TTEC Launches New Automotive Customer Experience Programme in Cairo (GlobeNewswire)
 - 1 hour **J** Jacobs selected to support BGE's Konrad Repository project in Germany (Business Wire)
 - 1 hour **FISV** FISV Stock Plunges To 52-Week Low: Why Is Retail Still Bullish? (Stocktwits)
-- 1 hour **ALAB,AMD,INTC,NVDA** Astera Labs Stock Jumped 12% Yesterday. The Street Sees 14% More Upside, Heres Why. (TIKR)
+- 1 hour **ALAB,INTC,AMD,NVDA** Astera Labs Stock Jumped 12% Yesterday. The Street Sees 14% More Upside, Heres Why. (TIKR)
 - 2 hours **GRAL** GRAIL Stock Jumped 34% Yesterday. The FDA Just Told Its Investors Why. (TIKR)
 - 2 hours **META,AAPL,SPCX,TSLA** TSLA, SPCX, AAPL Could Be Next To Rip After Metas Muse Rally, Analyst Says  Here Are The Catalysts (Stocktwits)
 - 2 hours **ABBV** AbbVie Announces European Commission Approval of RINVOQ (upadacitinib) for the Treatment of Children with Active Polyarticular Juvenile Idiopathic Arthritis (PR Newswire)
