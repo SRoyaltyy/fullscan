@@ -1,22 +1,22 @@
-# Finviz homepage market digest — 2026-09-21
+# Finviz homepage market digest — 2026-09-22
 
-**Generated:** 2026-09-21T04:17:22.327553-04:00 (America/New_York)
+**Generated:** 2026-09-22T04:11:14.181037-04:00 (America/New_York)
 **Source:** `live`
-**Banner:** US futures point to a higher open on upbeat US-China trade signals as tech leads and oil drifts lower on a quiet data day
+**Banner:** US futures point to a modestly lower open ahead of Richmond Fed data in a catalyst-light session
 **Prior close:** SPX —  Nasdaq —  Dow —
 **SPX:** —  **Nasdaq:** —  **Dow:** —
 **Oil:** —
 **CPI/Fed:** —
-**Leaders:** MARA, RIOT, AMD, GOOGL, NFLX, VFS, ABVX
-**Next session:** housing no · retail no · Fed no
-**Earnings slate:** —
-**Geo/grain:** geo
-**Clock legal for:** 2026-09-21
+**Leaders:** CMCSA, TRI, AZO, THO, MLKN
+**Next session:** housing no · retail no · Fed yes
+**Earnings slate:** AZO, THO, MLKN
+**Geo/grain:** —
+**Clock legal for:** 2026-09-22
 **Clock use:** `same_morning`
 
 ## Clock
 
-Capture is **before 09:30 ET on this date**, so it is legal for that morning's Pre-Open (`clock_legal_for` = 2026-09-21).
+Capture is **before 09:30 ET on this date**, so it is legal for that morning's Pre-Open (`clock_legal_for` = 2026-09-22).
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
@@ -25,23 +25,22 @@ Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page h
 - **Prior close:** SPX — · Nasdaq — · Dow —
 - **Oil:** —
 - **CPI / Fed-odds:** —
-- **Named leaders:** MARA, RIOT, AMD, GOOGL, NFLX, VFS, ABVX
-- **Next-session calendar:** housing no · retail no · Fed no
-  - The US economic calendar is quiet today with no major data releases scheduled, leaving trade headlines and company-specific moves as key drivers.
-- **Earnings slate:** —
-- **Geo / grain:** geo
+- **Named leaders:** CMCSA, TRI, AZO, THO, MLKN
+- **Next-session calendar:** housing no · retail no · Fed yes
+  - The Richmond Fed Manufacturing Index is the main economic release on today’s calendar, due at 10:00 AM ET.
+- **Earnings slate:** AZO, THO, MLKN
+- **Geo / grain:** —
 
 ## Narrative
 
-**US futures point to a higher open on upbeat US-China trade signals as tech leads and oil drifts lower on a quiet data day**
+**US futures point to a modestly lower open ahead of Richmond Fed data in a catalyst-light session**
 
-- S&P 500 Futures (@ES) +0.59%, Dow Jones Futures (@YM) +0.60%, Nasdaq 100 Futures (@NQ) +0.87%, and Russell 2000 Futures (@ER2) +0.51% indicate a firmer open for US equities.
-- Reports of “very successful” US-China talks in New York covering trade, AI, tariffs, and Iran underpin risk sentiment ahead of this week’s Trump-Xi summit.
-- Marathon Digital (MARA) and Riot Platforms (RIOT) climb around 2% pre-market as crypto-related stocks advance.
-- Advanced Micro Devices (AMD) trades higher in early action alongside gains in select semiconductor names.
-- Alphabet (GOOGL) is firmer pre-market as large-cap tech participates in the early bid for growth stocks.
-- Netflix (NFLX) trades higher pre-market alongside large-cap tech.
-- VinFast (VFS) and ABVX (ABVX) trade near flat pre-market.
-- Asian equities rose overnight, led by technology shares, in response to the positive tone from US-China discussions.
-- Brent crude (@QA) extends losses for a fourth straight session, adding to pressure on the energy complex.
-- The US economic calendar is quiet today with no major data releases scheduled, leaving trade headlines and company-specific moves as key drivers.
+- S&P 500 Futures (@ES) are down 0.07%, Dow Jones Futures (@YM) decline 0.22%, Nasdaq 100 Futures (@NQ) edge lower by 0.01%, and Russell 2000 Futures (@ER2) fall 0.21%.
+- Pre-market trading is described as quiet, with no significant movers in major outlets after 4 AM ET and small-cap volatility lacking confirmed catalysts from sources like CNBC (CMCSA), Reuters (TRI), or Bloomberg.
+- AutoZone (AZO) reports earnings before the bell today, with traders watching results versus estimates for potential post-open setups.
+- THOR Industries (THO) is scheduled to report earnings before the bell as part of today’s early lineup.
+- MillerKnoll (MLKN) also posts results before the open, adding to the morning earnings slate under watch for trading opportunities.
+- The Richmond Fed Manufacturing Index is the main economic release on today’s calendar, due at 10:00 AM ET.
+- Asian benchmarks mostly rose overnight on tech strength and AI optimism, according to early reports.
+- European futures traded modestly higher overnight, with no major commodity moves cited as drivers.
+- Yesterday’s session left major US indexes near recent highs, with no major technical breaks noted in early commentary.
