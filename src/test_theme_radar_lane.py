@@ -164,9 +164,14 @@ class LaneTierTests(unittest.TestCase):
             "q", "ACME", "t", "2026-08-06 08:00:00",
             lane="qwen", model="qwen-flash", source="qwen",
         )
-        self.assertFalse(is_lane_ok(paid))
+        self.assertTrue(is_lane_ok(paid))
         self.assertFalse(is_lane_ok(priced_sf))
         self.assertTrue(is_lane_ok(prior_qwen))
+        flash = _row(
+            "f", "ACME", "t", "2026-08-06 08:00:00",
+            lane="deepseek", model="deepseek-flash", source="deepseek",
+        )
+        self.assertTrue(is_lane_ok(flash))
         self.assertNotIn("super-secret", text)
 
         det_only = build_report(

@@ -373,11 +373,21 @@ def is_news_free_model(lane: str, model: str) -> bool:
     return False
 
 
+# Finished calls to keep. Not a license to call these again.
+HISTORICAL_WATERMARKS = {
+    ("qwen", "qwen-flash"),
+    ("deepseek", "deepseek-chat"),
+    ("deepseek", "deepseek-flash"),
+}
+
+
 def is_resumable_free_watermark(lane: str, model: str) -> bool:
-    """Keep a finished row. qwen-flash stays only as a prior free-grant call."""
+    """Keep a finished row. Paid ids here are history, not a call path."""
+    lane = str(lane or "")
+    model = str(model or "")
     if is_news_free_model(lane, model):
         return True
-    return str(lane or "") == "qwen" and str(model or "") == "qwen-flash"
+    return (lane, model) in HISTORICAL_WATERMARKS
 
 
 def lanes_for(tmpl: str) -> list[str]:
