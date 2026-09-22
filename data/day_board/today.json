@@ -1,6 +1,6 @@
 {
   "date": "2026-09-22",
-  "generated_at": "2026-09-22T10:18:28.897844-04:00",
+  "generated_at": "2026-09-22T10:20:44.671740-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -97,31 +97,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-09-22",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-22T07:45:12.260044-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-09-22_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9757,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.587, 'dir': 'down', 'conf': 0.463, 'source': 'llm'}, Communication Services={'score': 3.182, 'dir': 'up', 'conf': 0.627, 'source': 'llm'}, Consumer Cyclical={'score': -0.448, 'dir': 'down', 'conf': 0.518, 'source': 'llm'}, Consumer Defensive={'score': 1.142, 'dir': 'up', 'conf': 0.546, 'source': 'llm'}, Energy={'score': -5.917, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Financial={'score': -1.41, 'dir': 'down', 'conf': 0.556, 'source': 'llm'}, Healthcare={'score': -1.334, 'dir': 'down', 'conf': 0.553, 'source': 'llm'}, Industrials={'score': -4.127, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}"
-        },
-        {
-          "path": "01_daily/weather/2026-09-22_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5398,
-          "preview": "# Weather report \u2014 2026-09-22\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.587, 'dir': 'down', 'conf': 0.463, 'source': 'llm'}, Communication Services={'score': 3.182, 'dir': 'up', 'conf': 0.627, 'source': 'llm'}, Consumer Cyclical={'score': -0.448, 'dir': 'down', 'conf': 0.518, 'source': 'llm'}, Consumer Defensive={'score': 1.142, 'dir': 'up', 'conf': 0.546, 'source': 'llm'}, Energy={'score': -5.917, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Financial={'score': -1.41, 'dir': 'down', 'conf': 0.556, 'source': 'llm'}, Healthcare={'score': -1.334, 'dir': 'down', 'conf': 0.553, 'source': 'llm'}, Industrials={'score': -4.127, 'dir': 'down', 'conf': 0.65, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-22\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
     {
       "key": "join",
       "title": "Join / match rank",
@@ -391,6 +366,115 @@
       "ok": true,
       "pushed": true,
       "at": "2026-09-22T10:18:27.917042-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 22625,
+          "preview": "2026-09-22 BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU, UEC, HAL"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 665,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-22.json",
+          "ok": true,
+          "reason": "",
+          "size": 110903,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-22_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 73791,
+          "preview": "2026-09-22 BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU, UEC, HAL"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 818220,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-22_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 818220,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1179498,
+          "preview": "2026-09-22 BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU, UEC, HAL"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 818220,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 73791,
+          "preview": "2026-09-22 BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU, UEC, HAL"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 818220,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 818220,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1179498,
+          "preview": "2026-09-22 BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU, UEC, HAL"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 3190,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 3190,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-09-22 BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU, UEC, HAL \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-22 BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU, UEC, HAL \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-22 BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU, UEC, HAL \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-22 BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU, UEC, HAL \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-22 BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, "
+    },
+    {
+      "key": "live_boards",
+      "title": "live_boards",
+      "date": "2026-09-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-22T10:20:43.620058-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
