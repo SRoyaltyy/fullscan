@@ -3,10 +3,10 @@
 Backtest: one article → one $0 hop. Watermark lane + model on every row.
 Does not touch flatten / Webull / factor-mine live books.
 
-Cyrus 2026-09-21 hop policy (same as lane_route news_to_tickers):
+Cyrus 2026-09-22 hop policy (same as lane_route news_to_tickers):
   current 2025+ flash only. Never land on glm-4-flash-250414, old glm-4-flash,
-  or qwen2.5-7b-instruct. On 429, abandon that provider — do not fall down
-  older sibling IDs.
+  or qwen2.5-7b-instruct. On 429, hop to the next current allowlisted model
+  on the same lane — do not abandon the whole provider on the first 429.
   Order: Zhipu glm-4.7-flash → SiliconFlow Qwen3-8B → OpenRouter :free
   → DashScope qwen-flash → remaining $0 hoppers (Mistral / NVIDIA NIM /
   Pollinations free-strain, then TokenHub glm-5.3-flash / flashx /
@@ -333,6 +333,7 @@ def run(date: str, limit: int = 0, dry_harvest: bool = False) -> dict:
         return report
     ctx = {"keys": keys, "ollama_url": ollama_url, "gh_direct": gh_direct}
     lane._SKIP.clear()
+    lane._RATE_LIMITED.clear()
     rows = []
     for i, art in enumerate(arts):
         print(f"[lane_news_scan] {i + 1}/{len(arts)} {art.get('title','')[:80]}")

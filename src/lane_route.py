@@ -16,11 +16,14 @@ New:
 
 Hopper preference (never call Pro/ paid IDs)
 --------------------------------------------
-Cyrus 2026-09-21: primary allowlists are current 2025+ flash only.
-On 429 / rate-limit, abandon that provider (add to skip) — do not fall
-down older sibling IDs on the same lane. Banned from primary / news:
-glm-4-flash-250414, any glm-4-flash that is not 4.7 / 5.x,
-qwen2.5-7b-instruct and similar pre-2025 small IDs.
+Cyrus 2026-09-21 / 2026-09-22: primary allowlists are current 2025+
+flash only. On 429 / rate-limit, that model's quota is exhausted — hop
+to the next current allowlisted model on the same lane. Do not abandon
+the whole provider on the first 429, and never fall down banned
+last-resort IDs. True dead-provider statuses (401/403/410/402) may still
+abandon the lane. Banned from primary / news: glm-4-flash-250414, any
+glm-4-flash that is not 4.7 / 5.x, qwen2.5-7b-instruct and similar
+pre-2025 small IDs.
 
 default (key_people / key_products / revenue_mix / custom):
   OpenRouter :free → Qwen/DashScope qwen-flash
@@ -238,6 +241,9 @@ KNOWN_TEMPLATES = LEGACY_TEMPLATES + NEWS_TEMPLATES + ("company_dig",)
 
 _HF_CACHE: list[str] = []
 _SKIP: set[str] = set()
+# Per-request models that already 429'd (lane::model). Cleared with _SKIP.
+# Provider-level _SKIP is never set solely for 429.
+_RATE_LIMITED: set[str] = set()
 
 
 def _dedupe(names: list[str]) -> list[str]:
@@ -809,7 +815,11 @@ def _or_is_free(model):
 
 
 def _rotate(status):
-    """Next current model after connect-fail / 5xx. 429 abandons the provider."""
+    """Next current model after connect-fail / 5xx.
+
+    429 is handled in hop_models: hop to the next allowlisted model on
+    the same lane (do not abandon the provider).
+    """
     return status == 0 or status >= 500
 
 
@@ -911,9 +921,12 @@ def ollama_chat(base, model, prompt, max_tokens=320, system=None):
 def hop_models(lane, models, call, abandon_404=False):
     """call(model) -> (parsed, status, info). None = skip to next provider.
 
-    Cyrus 2026-09-21: never try banned last-resort IDs. On 429 / rate-limit,
-    abandon this provider for the request (add to skip) — do not fall down
-    older sibling IDs on the same lane.
+    Cyrus 2026-09-22: never try banned last-resort IDs. On 429 / rate-limit,
+    that model's quota is exhausted — skip to the next current allowlisted
+    model on the same lane. Do not set provider-level _SKIP for 429 alone.
+    Only after all current models on this lane are exhausted (or a true
+    DEAD_PROVIDER hard fail) move to the next provider. DEAD_PROVIDER
+    (401/403/410/402) may still abandon the lane.
     """
     if lane in _SKIP:
         print(f"  {lane} skip (cached)")
@@ -921,6 +934,10 @@ def hop_models(lane, models, call, abandon_404=False):
     models = [m for m in models if not is_banned_primary(m)]
     n404 = 0
     for model in models:
+        rl_key = f"{lane}::{model}"
+        if rl_key in _RATE_LIMITED:
+            print(f"  {lane}/{model} skip (429 cached)")
+            continue
         parsed, status, info = call(model)
         print(f"  {lane}/{model} status={status}")
         if parsed is not None:
@@ -930,10 +947,10 @@ def hop_models(lane, models, call, abandon_404=False):
             _SKIP.add(lane)
             return None, None
         if status in RATE_LIMIT:
-            print(f"  {lane} skip (429)")
-            _SKIP.add(lane)
+            print(f"  {lane}/{model} 429 — next allowlisted model")
+            _RATE_LIMITED.add(rl_key)
             time.sleep(2)
-            return None, None
+            continue
         if status == 404 and abandon_404:
             n404 += 1
             if n404 >= 2:
@@ -1307,6 +1324,7 @@ def route_inbox(
 
     ctx = {"keys": keys, "ollama_url": ollama_url, "gh_direct": gh_direct}
     _SKIP.clear()
+    _RATE_LIMITED.clear()
 
     out = []
     for i, q in enumerate(questions):

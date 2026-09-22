@@ -19,7 +19,7 @@ def main() -> None:
     ap.add_argument(
         "--lane",
         action="store_true",
-        help="current-flash Lane on the tradable Elite subset; 429 leaves the provider",
+        help="current-flash Lane on the tradable Elite subset; 429 hops to the next allowlisted model on the same lane",
     )
     ap.add_argument("--no-prices", dest="prices", action="store_false", default=True)
     ap.add_argument(
