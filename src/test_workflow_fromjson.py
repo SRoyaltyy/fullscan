@@ -586,22 +586,27 @@ def test_lane_json_zero_dollar_hoppers() -> None:
     ast.parse(py)
 
     assert DEFAULT_LANES == [
-        "openrouter", "deepseek", "qwen", "zhipu", "moonshot",
+        "openrouter", "qwen", "zhipu", "moonshot",
         "siliconflow", "modelscope",
         "tokenhub",
         "github_models", "cloudflare", "sambanova",
         "ollama", "hf", "groq", "gemini",
     ], DEFAULT_LANES
+    assert "deepseek" not in DEFAULT_LANES
     # TokenHub overflow must stay behind true $0 hoppers.
     for ahead in ("openrouter", "qwen", "zhipu", "siliconflow"):
         assert DEFAULT_LANES.index(ahead) < DEFAULT_LANES.index("tokenhub"), ahead
     assert lanes_for("key_people") == DEFAULT_LANES
     assert lanes_for("custom") == DEFAULT_LANES
     assert NEWS_HEAD == ["zhipu", "siliconflow", "openrouter", "qwen"]
-    assert DIG_HEAD == ["siliconflow", "deepseek", "openrouter", "zhipu"]
+    assert DIG_HEAD == ["siliconflow", "openrouter", "zhipu"]
+    assert "deepseek" not in DIG_HEAD
     assert lanes_for("news_to_tickers")[:4] == NEWS_HEAD
-    assert lanes_for("company_dig")[:4] == DIG_HEAD
-    # Overflow still the same $0 stack — no extra providers.
+    assert lanes_for("company_dig")[:len(DIG_HEAD)] == DIG_HEAD
+    assert "deepseek" not in lanes_for("news_to_tickers")
+    assert "deepseek" not in lanes_for("company_dig")
+    assert "deepseek" not in lanes_for("custom")
+    # Overflow still the same $0 stack — no native deepseek / no extra providers.
     assert set(lanes_for("news_to_tickers")) == set(DEFAULT_LANES)
     assert set(lanes_for("company_dig")) == set(DEFAULT_LANES)
 
@@ -647,6 +652,9 @@ def test_lane_json_zero_dollar_hoppers() -> None:
     assert ":free" in py
     assert "openrouter/free" in py
     assert "api.deepseek.com" in py
+    assert "LANE_ALLOW_PAID_DEEPSEEK" in py
+    assert "LANE_ALLOW_PAID_DEEPSEEK" in text
+    assert "LANE_ALLOW_PAID_DEEPSEEK" in text.split("env:", 1)[1].split("run:", 1)[0]
     assert "dashscope.aliyuncs.com" in py
     assert "api.siliconflow.cn" in py
     assert "open.bigmodel.cn" in py
@@ -763,7 +771,8 @@ def test_lane_news_and_dig_templates() -> None:
         "key_metrics", "sources_claimed",
     ):
         assert key in prompt, key
-    assert lanes_for(tmpl)[:4] == DIG_HEAD
+    assert lanes_for(tmpl)[:len(DIG_HEAD)] == DIG_HEAD
+    assert "deepseek" not in lanes_for(tmpl)
     assert token_budget(tmpl) == 1600
     sf_dig = sf_models_for(tmpl)
     assert not any(str(m).startswith("Pro/") for m in sf_dig)
@@ -858,8 +867,9 @@ def test_lane_tokenhub_base_url_bearer_and_flash_then_hy3() -> None:
         tokenhub_urls,
     )
 
-    zero = ("openrouter", "deepseek", "qwen", "zhipu", "moonshot",
+    zero = ("openrouter", "qwen", "zhipu", "moonshot",
             "siliconflow", "modelscope")
+    assert "deepseek" not in DEFAULT_LANES
     assert DEFAULT_LANES.index("tokenhub") > max(DEFAULT_LANES.index(n) for n in zero)
     for tmpl in ("custom", "news_to_tickers", "company_dig"):
         order = lanes_for(tmpl)
@@ -1046,11 +1056,62 @@ def test_lane_cyrus_primary_allowlists_ban_old_flash() -> None:
         "zhipu", "siliconflow", "openrouter", "qwen",
     ]
     by_hop = dict(news_plan)
+    assert "deepseek" not in by_hop
     assert by_hop["zhipu"] == ["glm-4.7-flash"]
     assert by_hop["siliconflow"][0] == "Qwen/Qwen3-8B"
     assert by_hop["qwen"] == ["qwen-flash"]
     assert by_hop["tokenhub"][0] == "glm-5.3-flash"
-    assert by_hop["deepseek"][0] == "deepseek-flash"
+    # Free TokenHub DeepSeek ID still present; native DS models stay wired
+    # for paid opt-in (not on free hopper_plan).
+    assert "deepseek-v4-flash" in by_hop["tokenhub"]
+    assert primary_models_for("deepseek", "news_to_tickers")[0] == "deepseek-flash"
+
+
+def test_lane_paid_deepseek_opt_in() -> None:
+    """LANE_ALLOW_PAID_DEEPSEEK=1 re-enables native deepseek; default off."""
+    import os
+
+    from src import lane_route
+    from src.lane_route import (
+        allow_paid_deepseek,
+        hopper_plan,
+        lanes_for,
+        primary_models_for,
+    )
+
+    prev = os.environ.pop("LANE_ALLOW_PAID_DEEPSEEK", None)
+    try:
+        assert allow_paid_deepseek() is False
+        for tmpl in ("custom", "news_to_tickers", "company_dig"):
+            assert "deepseek" not in lanes_for(tmpl)
+            assert "deepseek" not in dict(hopper_plan(tmpl))
+
+        # Key present is not enough — ask_lane still skips without flag.
+        ctx = {
+            "keys": {"deepseek": "test-key-not-a-secret"},
+            "ollama_url": "",
+            "gh_direct": "",
+        }
+        parsed, info = lane_route.ask_lane(
+            "deepseek", "ping", ctx, max_tokens=16, tmpl="custom",
+        )
+        assert parsed is None and info is None
+
+        os.environ["LANE_ALLOW_PAID_DEEPSEEK"] = "1"
+        assert allow_paid_deepseek() is True
+        custom = lanes_for("custom")
+        assert "deepseek" in custom
+        assert custom.index("deepseek") == custom.index("openrouter") + 1
+        dig = lanes_for("company_dig")
+        assert dig.index("deepseek") == dig.index("siliconflow") + 1
+        news = dict(hopper_plan("news_to_tickers"))
+        assert news["deepseek"][0] == "deepseek-flash"
+        assert primary_models_for("deepseek") == ["deepseek-flash", "deepseek-chat"]
+    finally:
+        if prev is None:
+            os.environ.pop("LANE_ALLOW_PAID_DEEPSEEK", None)
+        else:
+            os.environ["LANE_ALLOW_PAID_DEEPSEEK"] = prev
 
 
 def test_lane_hop_429_abandons_provider() -> None:
@@ -1131,6 +1192,7 @@ def main() -> None:
         test_lane_dashscope_base_url_and_qwen_flash,
         test_lane_tokenhub_base_url_bearer_and_flash_then_hy3,
         test_lane_cyrus_primary_allowlists_ban_old_flash,
+        test_lane_paid_deepseek_opt_in,
         test_lane_hop_429_abandons_provider,
         test_ci_workflow_is_wired,
     ]

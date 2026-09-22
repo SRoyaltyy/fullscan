@@ -23,11 +23,13 @@ glm-4-flash-250414, any glm-4-flash that is not 4.7 / 5.x,
 qwen2.5-7b-instruct and similar pre-2025 small IDs.
 
 default (key_people / key_products / revenue_mix / custom):
-  OpenRouter :free → DeepSeek flash → Qwen/DashScope qwen-flash
+  OpenRouter :free → Qwen/DashScope qwen-flash
   → Zhipu glm-4.7-flash → Moonshot → SiliconFlow current non-Pro
   → ModelScope → TokenHub overflow (glm-5.3-flash / flashx /
   deepseek-v4-flash, then hy3) → GitHub Models → Cloudflare
   → SambaNova → Ollama → HF free → Groq last-resort → Gemini
+  Native api.deepseek.com is PAID — not on the $0 path. Opt-in only via
+  LANE_ALLOW_PAID_DEEPSEEK=1 (after OpenRouter when enabled).
 
 news_to_tickers + news_classify + news_impact + news sector scan
 (high volume, same policy):
@@ -36,9 +38,10 @@ news_to_tickers + news_classify + news_impact + news sector scan
   → remaining default hoppers (TokenHub still behind true $0)
 
 company_dig (longer context):
-  SiliconFlow current Qwen / DeepSeek free non-Pro → native DeepSeek flash
+  SiliconFlow current Qwen / DeepSeek free non-Pro (SF/ModelScope IDs)
   → OpenRouter :free overflow → Zhipu glm-4.7-flash
   → remaining default hoppers (TokenHub still behind true $0)
+  Native DeepSeek only when LANE_ALLOW_PAID_DEEPSEEK=1.
 
 #290 Grok-news overlay can enqueue news_to_tickers later. This module
 does not rewrite that book and does not touch flatten_robust / cash book.
@@ -191,8 +194,10 @@ LAST_RESORT_MODELS = (
 # Default / existing-template hopper order (same as the green smoke path).
 # TokenHub is overflow behind true $0 hoppers (OR :free, DashScope, Zhipu
 # Flash, SF non-Pro, …). Do not move it ahead of those lanes.
+# Native "deepseek" (api.deepseek.com) is PAID — not in this $0 list.
+# Opt-in via LANE_ALLOW_PAID_DEEPSEEK=1 (see lanes_for / ask_lane).
 DEFAULT_LANES = [
-    "openrouter", "deepseek", "qwen", "zhipu", "moonshot",
+    "openrouter", "qwen", "zhipu", "moonshot",
     "siliconflow", "modelscope",
     "tokenhub",
     "github_models", "cloudflare", "sambanova",
@@ -201,8 +206,9 @@ DEFAULT_LANES = [
 # news_to_tickers + classify/impact + news sector scan: current flash first.
 # Zhipu glm-4.7-flash → SF Qwen3-8B → OR :free → DashScope qwen-flash.
 NEWS_HEAD = ["zhipu", "siliconflow", "openrouter", "qwen"]
-# company_dig: SF Qwen/DeepSeek free → native DeepSeek → OR :free → Zhipu.
-DIG_HEAD = ["siliconflow", "deepseek", "openrouter", "zhipu"]
+# company_dig: SF Qwen / DeepSeek free non-Pro → OR :free → Zhipu.
+# Native DeepSeek stays off the free head (paid opt-in only).
+DIG_HEAD = ["siliconflow", "openrouter", "zhipu"]
 
 LEGACY_TEMPLATES = ("key_people", "key_products", "revenue_mix", "custom")
 NEWS_TEMPLATES = ("news_to_tickers", "news_classify", "news_impact")
@@ -219,6 +225,28 @@ def _dedupe(names: list[str]) -> list[str]:
             seen.add(name)
             out.append(name)
     return out
+
+
+def allow_paid_deepseek() -> bool:
+    """Native api.deepseek.com is paid. Default OFF even when key is present.
+
+    Set LANE_ALLOW_PAID_DEEPSEEK=1 to put the deepseek hopper back in the
+    plan and allow ask_lane to call it. TokenHub deepseek-v4-flash and
+    SiliconFlow/ModelScope deepseek-ai/* IDs are separate free-tier hosts.
+    """
+    raw = (os.environ.get("LANE_ALLOW_PAID_DEEPSEEK") or "").strip().lower()
+    return raw in ("1", "true", "yes", "on")
+
+
+def _with_paid_deepseek(order: list[str], *, after: str) -> list[str]:
+    """Insert native deepseek after `after` only when paid opt-in is set."""
+    order = [n for n in order if n != "deepseek"]
+    if not allow_paid_deepseek():
+        return order
+    if after in order:
+        i = order.index(after) + 1
+        return order[:i] + ["deepseek"] + order[i:]
+    return ["deepseek"] + order
 
 
 def openai_compat_chat_url(base: str) -> str:
@@ -348,13 +376,22 @@ def tokenhub_models() -> list[str]:
 
 
 def lanes_for(tmpl: str) -> list[str]:
-    """Hopper order for a template. Never includes Pro/ paid IDs."""
+    """Hopper order for a template. Never includes Pro/ paid IDs by default.
+
+    Native DeepSeek (api.deepseek.com) is paid and excluded unless
+    LANE_ALLOW_PAID_DEEPSEEK=1. Free DeepSeek-named IDs on TokenHub /
+    SiliconFlow / ModelScope remain on the $0 path via those lanes.
+    """
     tmpl = str(tmpl or "custom").strip()
     if tmpl in NEWS_TEMPLATES:
-        return _dedupe(NEWS_HEAD + DEFAULT_LANES)
+        return _with_paid_deepseek(
+            _dedupe(NEWS_HEAD + DEFAULT_LANES), after="openrouter",
+        )
     if tmpl == "company_dig":
-        return _dedupe(DIG_HEAD + DEFAULT_LANES)
-    return list(DEFAULT_LANES)
+        return _with_paid_deepseek(
+            _dedupe(DIG_HEAD + DEFAULT_LANES), after="siliconflow",
+        )
+    return _with_paid_deepseek(list(DEFAULT_LANES), after="openrouter")
 
 
 def sf_models_for(tmpl: str) -> list[str]:
@@ -943,6 +980,9 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
             ),
         )
     if lane == "deepseek":
+        # Paid host — skip unless explicitly opted in (even if key present).
+        if not allow_paid_deepseek():
+            return None, None
         if not keys.get("deepseek"):
             return None, None
         return hop_models(

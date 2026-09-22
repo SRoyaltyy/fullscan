@@ -24,6 +24,12 @@ missing. Bearer: `TOKENHUB_API_KEY` or `TENCENT_API_KEY` (`HUNYUAN_API_KEY`
 is an optional key alias only). Missing hopper secrets skip; they do not
 fail the job.
 
+**Native DeepSeek (`api.deepseek.com`, models `deepseek-flash` /
+`deepseek-chat`) is PAID.** It is **not** on the default $0 hopper path —
+even when `DEEPSEEK_API_KEY` is set. Opt in with `LANE_ALLOW_PAID_DEEPSEEK=1`.
+TokenHub `deepseek-v4-flash` and SiliconFlow/ModelScope
+`deepseek-ai/DeepSeek-*` non-Pro IDs stay on the free path (different hosts).
+
 ## Enqueue
 
 Copy a question into `inbox.json` and run **Lane JSON wire**
@@ -56,8 +62,9 @@ No `ticker` field. `#290` Grok-news overlay can enqueue this later.
 
 ### `company_dig` (longer context)
 
-SiliconFlow Qwen / DeepSeek free non-Pro, then native DeepSeek, OpenRouter
-`:free` overflow; Zhipu Flash is OK for quality. Still free-only.
+SiliconFlow Qwen / DeepSeek free non-Pro (SF / ModelScope IDs), then
+OpenRouter `:free` overflow; Zhipu Flash is OK for quality. Still free-only.
+Native `api.deepseek.com` is paid / opt-in (`LANE_ALLOW_PAID_DEEPSEEK=1`).
 
 ```json
 {

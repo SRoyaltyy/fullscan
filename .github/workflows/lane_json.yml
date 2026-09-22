@@ -13,8 +13,10 @@ name: Lane JSON wire
 #   news_to_tickers  — articles[{title,body,known_at?}]. No ticker required.
 #                      Hoppers: glm-4.7-flash → SF Qwen3-8B → OR :free → qwen-flash
 #   company_dig      — ticker + brief/questions. Longer context, still $0.
-#                      Hoppers: SF Qwen/DeepSeek non-Pro → DeepSeek → OR :free
+#                      Hoppers: SF Qwen/DeepSeek non-Pro → OR :free
 #                      → Zhipu Flash
+#                      Native api.deepseek.com is PAID — not on $0 path;
+#                      opt-in LANE_ALLOW_PAID_DEEPSEEK=1 only.
 # #290 Grok-news overlay can enqueue news_to_tickers later (do not rewrite here).
 #
 # Variable: LANE_URL = Lane app after publish (https://….grok.me)
@@ -28,7 +30,9 @@ name: Lane JSON wire
 #   CLOUDFLARE_ACCOUNT_ID       — Cloudflare account id (skip hopper if either missing).
 #   SAMBANOVA_API_KEY           — SambaNova Cloud free tier. Skip if missing.
 #   HF_TOKEN                    — Hugging Face Inference router, free providers only.
-#   DEEPSEEK_API_KEY            — official api.deepseek.com (after OpenRouter; skip 402).
+#   DEEPSEEK_API_KEY            — official api.deepseek.com (PAID). Key may be
+#                                 present; hopper still skipped unless
+#                                 LANE_ALLOW_PAID_DEEPSEEK=1. Skip 402.
 #   DASHSCOPE_API_KEY           — Qwen / DashScope free quota (or QWEN_API_KEY).
 #   DASHSCOPE_BASE_URL          — optional compatible-mode/v1 base (secret).
 #                                 Tried first; /chat/completions appended if
@@ -53,13 +57,16 @@ name: Lane JSON wire
 #   TENCENT_BASE_URL            — alias base, after TOKENHUB_BASE_URL.
 #   GROQ_API_KEY                — last-resort only (dead for HK). Do not prefer.
 #   GEMINI_API_KEY
+#   LANE_ALLOW_PAID_DEEPSEEK    — set to 1 to enable native api.deepseek.com
+#                                 (paid). Default off — free headroom stays real.
 #
 # Direct hopper order (rotate to next model/provider on 429/5xx):
-#   OpenRouter free (CN-origin :free first) → DeepSeek → Qwen/DashScope
+#   OpenRouter free (CN-origin :free first) → Qwen/DashScope
 #   → Zhipu GLM → Moonshot Kimi → SiliconFlow → ModelScope
 #   → TokenHub overflow (flash / flashx then hy3; behind true $0)
 #   → GitHub Models → Cloudflare → SambaNova
 #   → Ollama (if OLLAMA_URL) → HF free router → Groq (last-resort) → Gemini
+# Native DeepSeek is not on the $0 order (paid opt-in only).
 # news_to_tickers / company_dig reorder the same $0 allowlist (never Pro/paid).
 
 on:
@@ -88,6 +95,7 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           OLLAMA_URL: ${{ secrets.OLLAMA_URL || vars.OLLAMA_URL }}
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          LANE_ALLOW_PAID_DEEPSEEK: ${{ vars.LANE_ALLOW_PAID_DEEPSEEK }}
           DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
           DASHSCOPE_BASE_URL: ${{ secrets.DASHSCOPE_BASE_URL }}
           QWEN_API_KEY: ${{ secrets.QWEN_API_KEY }}
