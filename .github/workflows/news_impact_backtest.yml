@@ -41,6 +41,11 @@ on:
         required: false
         default: "1"
         type: string
+      mode:
+        description: "elite = theme-radar scoreboard; corpus = combined backtest"
+        required: false
+        default: "elite"
+        type: string
 
 permissions:
   contents: write
@@ -55,6 +60,19 @@ jobs:
     timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
+      - name: Sparse-checkout theme-radar snapshots
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          rm -rf vendor/theme-radar
+          git clone --depth 1 --filter=blob:none --sparse \
+            https://github.com/SRoyaltyy/theme-radar.git vendor/theme-radar
+          git -C vendor/theme-radar sparse-checkout set data/snapshots
+          find vendor/theme-radar/data/snapshots -name '*.raw.csv' -delete
+          find vendor/theme-radar/data/snapshots -name 'current.csv' -delete || true
+          find vendor/theme-radar/data/snapshots -name 'previous.csv' -delete || true
+          echo "dated snapshots $(find vendor/theme-radar/data/snapshots -name '20??-??-??.csv' | wc -l)"
+          echo "thin pack remains at data/theme_radar_snapshots if clone fails"
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -97,14 +115,27 @@ jobs:
           if [ "${{ github.event.inputs.lane }}" = "1" ]; then EXTRA+=(--lane); fi
           if [ "${{ github.event.inputs.search }}" = "1" ]; then EXTRA+=(--search); fi
           if [ "${{ github.event.inputs.prices }}" = "0" ]; then EXTRA+=(--no-prices); fi
-          PYTHONPATH=. python3 -m src.news_impact_backtest \
-            --date "${DATE:-all}" --limit "${LIMIT:-0}" "${EXTRA[@]}"
+          # Elite scoreboard is the default (schedule + push). mode=corpus
+          # still runs the combined parsed+grok backtest, which includes
+          # theme_radar_elite when snapshots are on disk.
+          MODE="${{ github.event.inputs.mode }}"
+          if [ -z "$MODE" ] || [ "$MODE" = "elite" ]; then
+            PYTHONPATH=. python3 -m src.news_impact_theme_radar \
+              --date "${DATE:-all}" --limit "${LIMIT:-0}" "${EXTRA[@]}"
+          else
+            PYTHONPATH=. python3 -m src.news_impact_backtest \
+              --date "${DATE:-all}" --limit "${LIMIT:-0}" "${EXTRA[@]}"
+          fi
       - name: Preview table
         if: always()
         run: |
-          head -80 03_scoreboard/NEWS_IMPACT_BACKTEST.md || true
+          head -80 03_scoreboard/NEWS_IMPACT_THEME_RADAR.md || true
           echo "---"
-          ls -lh 01_daily/news/*_news_impact_backtest.md \
+          head -40 03_scoreboard/NEWS_IMPACT_BACKTEST.md || true
+          echo "---"
+          ls -lh 01_daily/news/*news_impact_theme_radar.json \
+                 01_daily/news/*_news_impact_backtest.md \
+                 03_scoreboard/NEWS_IMPACT_THEME_RADAR.md \
                  03_scoreboard/NEWS_IMPACT_BACKTEST.md || true
       - name: Commit table
         if: always()
@@ -115,7 +146,8 @@ jobs:
           bash scripts/safe_git_push.sh \
             "auto: news impact backtest table ${{ github.event.inputs.date || 'all' }}" \
             01_daily/news \
-            03_scoreboard/NEWS_IMPACT_BACKTEST.md
+            03_scoreboard/NEWS_IMPACT_BACKTEST.md \
+            03_scoreboard/NEWS_IMPACT_THEME_RADAR.md
       - name: Upload artifact
         if: always()
         uses: actions/upload-artifact@v4
@@ -125,4 +157,6 @@ jobs:
           path: |
             01_daily/news/*_news_impact_backtest.md
             01_daily/news/*_news_impact_backtest.json
+            01_daily/news/*news_impact_theme_radar.json
             03_scoreboard/NEWS_IMPACT_BACKTEST.md
+            03_scoreboard/NEWS_IMPACT_THEME_RADAR.md

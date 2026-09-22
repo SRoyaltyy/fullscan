@@ -103,6 +103,10 @@ def harvest_source_rank(art: dict | None) -> int:
         return 90
     if hs in {"parsed", "events", "actions_keep"}:
         return 40
+    # Elite News Time outranks a Finviz wrap of the same headline.
+    # Parsed / grok_automations still win when they carry the same title.
+    if hs in {"theme_radar_elite", "theme_radar"}:
+        return 35
     if _FINVIZ.search(hs):
         return 5
     return 20

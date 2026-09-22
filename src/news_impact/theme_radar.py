@@ -11,6 +11,7 @@ Lookup order:
 from __future__ import annotations
 
 import csv
+import gzip
 import io
 import os
 import re
@@ -39,18 +40,53 @@ def _roots() -> list[Path]:
     return out
 
 
+def _is_raw_snapshot(path: Path) -> bool:
+    return ".raw.csv" in path.name
+
+
+def _date_of_path(path: Path) -> str:
+    m = _DATE.search(path.name)
+    return m.group(1) if m else ""
+
+
+def _candidates(root: Path, date: str | None) -> list[Path]:
+    if not root.is_dir():
+        return []
+    named = bool(date and str(date).lower() not in {"all", "*", "history", ""})
+    if named:
+        found = []
+        for name in (f"{date}.csv", f"{date}.csv.gz"):
+            p = root / name
+            if p.is_file() and not _is_raw_snapshot(p):
+                found.append(p)
+        return found
+    found = list(root.glob("20??-??-??.csv"))
+    found.extend(root.glob("20??-??-??.csv.gz"))
+    return sorted(p for p in found if p.is_file() and not _is_raw_snapshot(p))
+
+
 def snapshot_paths(date: str | None = None) -> list[Path]:
+    """One file per snapshot date. Earlier roots win (env, vendor, slim pack)."""
+    seen: set[str] = set()
     files: list[Path] = []
     for root in _roots():
-        if not root.is_dir():
-            continue
-        if date and date.lower() not in {"all", "*", "history", ""}:
-            p = root / f"{date}.csv"
-            if p.is_file():
-                files.append(p)
-            continue
-        files.extend(sorted(root.glob("20??-??-??.csv")))
-    return [p for p in files if not p.name.endswith(".raw.csv")]
+        for path in _candidates(root, date):
+            key = _date_of_path(path) or path.name
+            if key in seen:
+                continue
+            seen.add(key)
+            files.append(path)
+    return files
+
+
+def _read_text(path: Path) -> str:
+    try:
+        if path.name.endswith(".gz"):
+            with gzip.open(path, "rt", encoding="utf-8", errors="replace") as fh:
+                return fh.read()
+        return path.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return ""
 
 
 def _header_map(fields: list[str] | None) -> dict[str, str]:
@@ -104,9 +140,14 @@ def _rows_from_text(text: str, source_file: str, retrieved: str) -> list[dict]:
             continue
         seen.add(key)
         digest = (raw.get(digest_c) or "").strip() if digest_c else ""
+        body = digest
+        # Elite Ticker is the listed expression. Surface it so the family
+        # router can name the issuer when the headline has no $TICKER.
+        if tick and f"${tick}" not in body and f"({tick})" not in body:
+            body = f"{body} Listed ticker: ${tick}.".strip()
         out.append({
             "title": title[:300],
-            "body": digest[:800],
+            "body": body[:800],
             "url": "",
             "source": "theme_radar_elite",
             "harvest_source": "theme_radar_elite",
@@ -132,10 +173,7 @@ def load_theme_radar(
         m = _DATE.search(path.name)
         retrieved = m.group(1) if m else path.stem
         seen_dates.add(retrieved)
-        try:
-            text = path.read_text(encoding="utf-8", errors="replace")
-        except OSError:
-            continue
+        text = _read_text(path)
         arts.extend(_rows_from_text(text, str(path), retrieved))
     need = []
     if date and date.lower() not in {"all", "*", "history", "", None}:
@@ -146,6 +184,27 @@ def load_theme_radar(
             text = _fetch_remote(d)
             arts.extend(_rows_from_text(text, REMOTE.format(date=d), d))
     return arts
+
+
+def dedupe_elite(arts: list[dict]) -> list[dict]:
+    """Unique by ticker + title. Keep the earliest News Time (leak-free)."""
+    best: dict[str, dict] = {}
+    order: list[str] = []
+    for art in arts:
+        title = str(art.get("title") or "").strip()
+        if not title:
+            continue
+        tick = str(art.get("ticker_hint") or "").upper()
+        key = f"{tick}|{title.lower()[:160]}"
+        if key not in best:
+            best[key] = art
+            order.append(key)
+            continue
+        old = str(best[key].get("published_at") or "9999")
+        new = str(art.get("published_at") or "9999")
+        if new < old:
+            best[key] = art
+    return [best[k] for k in order]
 
 
 def patch_load_corpus() -> None:

@@ -231,6 +231,9 @@ def inventory() -> dict[str, Any]:
     grok_early, grok_late = dump_span()
     rss_dumps = list(Path("data").glob("*rss*")) + list(Path("01_daily/news").glob("*rss*"))
     supabase = list(Path("data").glob("*supabase*")) + list(Path("01_daily").glob("*supabase*"))
+    from .theme_radar import snapshot_paths
+    snaps = snapshot_paths(None)
+    snap_dates = [_date_of(p) for p in snaps if _date_of(p)]
 
     def _span(paths: list[Path]) -> tuple[str, str]:
         dates = [_date_of(p) for p in paths if _date_of(p)]
@@ -306,12 +309,22 @@ def inventory() -> dict[str, Any]:
         },
         {
             "name": "theme_radar_snapshots",
-            "path": "https://github.com/SRoyaltyy/theme-radar data/snapshots/*.csv",
-            "n_files": 30,
-            "earliest": "2026-08-06",
-            "latest": "2026-09-18",
-            "status": "unused_readonly",
-            "note": THEME_RADAR["export_ask"],
+            "path": (
+                "data/theme_radar_snapshots/*.csv.gz or "
+                "vendor/theme-radar/data/snapshots/*.csv "
+                "(read-only; repos are not merged)"
+            ),
+            "n_files": len(snaps),
+            "earliest": min(snap_dates) if snap_dates else "",
+            "latest": max(snap_dates) if snap_dates else "",
+            "status": "used" if snaps else "unused_readonly",
+            "note": (
+                "Slim Elite headlines (Ticker, News Title, Daily Digest, News Time) "
+                "are in the book when these files are present. "
+                "Do not merge the repos. "
+                "Scoreboard: 03_scoreboard/NEWS_IMPACT_THEME_RADAR.md."
+                if snaps else THEME_RADAR["export_ask"]
+            ),
         },
     ]
     return {
@@ -340,6 +353,10 @@ def load_all_sources(date: str | None = None) -> tuple[list[dict], dict[str, Any
     raw.extend(load_events(date))
     raw.extend(load_actions_keep(date))
     raw.extend(load_grok_dumps(date=date))
+    from .theme_radar import load_theme_radar
+    named = bool(date and str(date).lower() not in {"all", "*", "history", ""})
+    # --date all reads on-disk snapshots only (no remote fan-out).
+    raw.extend(load_theme_radar(date, allow_remote=named))
     by_src = Counter(a.get("harvest_source") or a.get("source") or "?" for a in raw)
     return raw, {"n_raw": len(raw), "by_harvest_source": dict(by_src)}
 

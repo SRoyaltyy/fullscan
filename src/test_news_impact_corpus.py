@@ -22,7 +22,14 @@ def test_inventory_lists_empty_and_unused() -> None:
     assert names["grok_automations"]["n_files"] >= 1
     assert names["rss_dumps"]["status"] == "empty"
     assert names["supabase_dumps"]["status"] == "empty"
-    assert names["theme_radar_snapshots"]["status"] == "unused_readonly"
+    from src.news_impact.theme_radar import snapshot_paths
+    snaps = snapshot_paths()
+    if snaps:
+        assert names["theme_radar_snapshots"]["status"] == "used"
+        assert names["theme_radar_snapshots"]["n_files"] == len(snaps)
+        assert names["theme_radar_snapshots"]["n_files"] > 0
+    else:
+        assert names["theme_radar_snapshots"]["status"] == "unused_readonly"
     assert inv["window"]["june_2026_parse"] is False
     assert inv["theme_radar"]["readonly"] is True
     assert "Do not merge the repos" in inv["theme_radar"]["export_ask"]
