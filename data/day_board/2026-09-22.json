@@ -1,6 +1,6 @@
 {
   "date": "2026-09-22",
-  "generated_at": "2026-09-22T04:21:44.649221-04:00",
+  "generated_at": "2026-09-22T04:23:17.473245-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -182,7 +182,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -240,11 +240,16 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-09-22_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 62803,
+          "said": "122 raw / 6 usable \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
+          "bullets": [
+            "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
+            "Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year",
+            "Surprise US crude inventory build and Fed rate hike drive 5.63% DVN drop",
+            "Howard Marks Sends Stark Signal to Federal Reserve"
+          ]
         },
         {
           "key": "events",
@@ -330,13 +335,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7282,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "size": 7279,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "news_parse:missing"
+            "news_actions:missing"
           ]
         },
         {
@@ -483,8 +488,13 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "news 122 raw / 6 usable \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
+      "bullets": [
+        "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
+        "Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year",
+        "Surprise US crude inventory build and Fed rate hike drive 5.63% DVN drop",
+        "Howard Marks Sends Stark Signal to Federal Reserve"
+      ]
     },
     {
       "key": "weather",
@@ -880,7 +890,17 @@
     "flatten": {},
     "general": {},
     "sectors": {},
-    "news": {},
+    "news": {
+      "said": "122 raw / 6 usable \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
+      "bullets": [
+        "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
+        "Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year",
+        "Surprise US crude inventory build and Fed rate hike drive 5.63% DVN drop",
+        "Howard Marks Sends Stark Signal to Federal Reserve",
+        "Amgen gets FDA approval to update IMDELLTRA label to reduce monitoring for first two ES-SCLC doses",
+        "IBM unit Anderon finalizes $1B U.S. CHIPS Act award to fund scaling of U.S. quantum wafer foundry"
+      ]
+    },
     "weather": {
       "said": "favorable 1 \u00b7 hostile 6 \u00b7 neutral 4",
       "bullets": [
@@ -1257,6 +1277,31 @@
         }
       ],
       "preview": "11643 rows \u00b7 Ticker,score,score_source,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month, \u00b7 SHIP, FCX, SBLK, FORM, GLBS"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-09-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-22T04:23:16.729787-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-22_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 62803,
+          "preview": "raw=122 usable=6 single=20 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Surprise US crude inventory build and Fed rate hike drive 5.63% DVN drop | Howard Marks Sends Stark Signal to Federal Reserve | Amgen gets FDA approval to update IMDELLTRA label to reduce monitoring for first"
+        },
+        {
+          "path": "01_daily/news/2026-09-22_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 3685,
+          "preview": "# News Parse v2 \u2014 2026-09-22T04:23:16.658040-04:00\nWindow\u224848h | raw=122 | usable=6 | single_name=20 | noise_dropped=96\nusable polarity={'+': 1, '-': 2, 'mixed': 0, 'neutral': 3}"
+        }
+      ],
+      "preview": "raw=122 usable=6 single=20 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Surprise US crude inventory build and Fed rate hike drive 5.63% DVN drop | Howard Marks Sends Stark Signal to Federal Reserve | Amgen gets FDA approval to update IMDELLTRA label to reduce monitoring for first \u00b7 # News Parse v2 \u2014 2026-09-22T04:23:16.658040-04:00\nWindow\u224848h | raw=122 | usable=6 | single_name=20 | noise_dropped=96\nusable polarity={'+': 1, '-': 2, 'mixed': 0, 'neutral': 3}"
     }
   ],
   "href": {
