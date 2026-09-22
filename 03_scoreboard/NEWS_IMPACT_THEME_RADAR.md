@@ -4,7 +4,7 @@ Leak-free Lane/router backtest on **every** theme-radar snapshot date. Headlines
 
 ## Path
 
-deterministic router on every unique Elite title. Lane quota dead in this run (no provider keys). Tradable subset was not re-hopped. Watermark is deterministic::news_impact_v2::theme_radar_elite. Re-run with --lane when current-flash keys exist; 429 leaves that provider and does not fall through to pre-2025 flash.
+deterministic router on every unique Elite title. Indirect roles are the family template (substitute / stays_out / arms_dealer / peer / sector basket), not a Lane tag. Lane quota is dead in this run (no provider keys), so clash/converge groups were not re-hopped. Watermark is deterministic::news_impact_v2::theme_radar_elite. Re-run with --lane when current-flash keys exist; 429 leaves that provider and does not fall through to pre-2025 flash.
 
 ## Clock
 
@@ -40,6 +40,58 @@ Rubric column skips long-horizon classes on 0-1d and 2-5d. Broad column keeps th
 | 4d | 746 | 1545 | 746/1545 = 48.3% | 4578 | 9382 | 4578/9382 = 48.8% |
 | 5d | 738 | 1506 | 738/1506 = 49.0% | 4463 | 9218 | 4463/9218 = 48.4% |
 | 1-4w | 2774 | 5899 | 2774/5899 = 47.0% | — | — | — |
+
+## Convergence / clash ledger
+
+One entity per session. n_bull / n_bear count impulse up/down stories after title-normalize. Regime and weather do not vote. clash = both sides on that entity that session. converge = two or more stories, one side. Hit rates grade the entity once: converge uses that side, clash uses the net side (net 0 is ungraded). Long-horizon classes stay out of the 0-1d..5d denominator.
+
+Direct = the article names the ticker. Indirect = substitute / stays_out / arms_dealer / peer / sector basket from the family template. Theme groups are router factor/macro keys only. They are not a second trade. The Elite Sector column is not a key.
+
+Router theme keys (not traded): **11**. Name groups: **6692**.
+
+| bucket | groups |
+| --- | ---: |
+| singleton | 6128 |
+| converge | 497 (up 344, down 153) |
+| clash | 67 |
+
+Hit rates grade the entity once per session. Converge uses that side. Clash uses the net side (net 0 is ungraded). Long-horizon classes are out of these denominators.
+
+| bucket | 0-1d | 2d | 3d | 4d | 5d |
+| --- | --- | --- | --- | --- | --- |
+| singleton | 432/952 = 45.4% | 454/916 = 49.6% | 429/877 = 48.9% | 420/852 = 49.3% | 418/826 = 50.6% |
+| converge | 50/101 = 49.5% | 40/83 = 48.2% | 40/80 = 50.0% | 37/77 = 48.1% | 38/76 = 50.0% |
+| clash | 4/10 = 40.0% | 4/10 = 40.0% | 4/9 = 44.4% | 2/9 = 22.2% | 2/8 = 25.0% |
+
+### Top converge names
+
+| ticker | date | n_bull | n_bear | net | 0-1d | 5d |
+| --- | --- | ---: | ---: | ---: | ---: | ---: |
+| SECZ | 2026-09-18 | 6 | 0 | 6 | +16.52% | n/a |
+| COIN | 2026-09-18 | 6 | 0 | 6 | +9.03% | n/a |
+| CRCL | 2026-09-18 | 6 | 0 | 6 | +5.01% | n/a |
+| SCHW | 2026-09-18 | 0 | 6 | -6 | +0.54% | n/a |
+| SECZ | 2026-09-21 | 5 | 0 | 5 | +15.68% | n/a |
+| CRCL | 2026-09-21 | 5 | 0 | 5 | -3.67% | n/a |
+| COIN | 2026-09-21 | 5 | 0 | 5 | -2.02% | n/a |
+| SCHW | 2026-09-21 | 0 | 5 | -5 | +0.93% | n/a |
+| ICE | 2026-08-20 | 4 | 0 | 4 | +1.39% | +3.07% |
+| SPY | 2026-08-17 | 0 | 4 | -4 | n/a | n/a |
+| TLT | 2026-08-17 | 4 | 0 | 4 | n/a | n/a |
+| GLD | 2026-08-17 | 4 | 0 | 4 | n/a | n/a |
+| AEYE | 2026-08-14 | 3 | 0 | 3 | +29.08% | +16.32% |
+| SKIL | 2026-09-10 | 0 | 3 | -3 | -22.98% | +16.36% |
+| TLYS | 2026-09-03 | 3 | 0 | 3 | -20.72% | -17.12% |
+| KMTS | 2026-09-15 | 3 | 0 | 3 | +14.98% | n/a |
+| ALTG | 2026-08-07 | 0 | 3 | -3 | +12.11% | +8.37% |
+| LIDR | 2026-08-07 | 3 | 0 | 3 | +10.92% | +10.08% |
+| NEPH | 2026-08-07 | 3 | 0 | 3 | +10.79% | +21.84% |
+| CELC | 2026-08-14 | 3 | 0 | 3 | +10.79% | +12.63% |
+| NMAX | 2026-08-14 | 3 | 0 | 3 | +9.85% | +8.64% |
+| LAKE | 2026-09-10 | 0 | 3 | -3 | -8.45% | -0.38% |
+| REZI | 2026-08-13 | 3 | 0 | 3 | -8.04% | -9.98% |
+| SPT | 2026-08-07 | 3 | 0 | 3 | +7.60% | +2.91% |
+| QNST | 2026-08-07 | 3 | 0 | 3 | +7.06% | +4.11% |
 
 ## Rippers
 
@@ -236,6 +288,17 @@ Same direction as the call and |forward return| at the threshold. 5% rows are �
 | note | window open (1-6m not elapsed; through 2026-09-21) |
 
 Friday 2026-09-18 16:01 is after the cash close. Entry is Monday 2026-09-21 open→close for 0-1d, never Friday cash. Published at/after 09:30 ET (09:30+30m included) waits for the next RTH.
+
+### AMRX week
+
+No second story voted AMRX on the lanreotide session 2026-09-21. The print is a singleton on that entity that day.
+
+Window 2026-09-14..2026-09-21. Lanreotide session `2026-09-21`. Same-session label `singleton` n_bull=1 n_bear=0 direct=1 indirect=0 0-1d +6.33%.
+
+| session | label | n_bull | n_bear | stories | 0-1d | titles |
+| --- | --- | ---: | ---: | ---: | ---: | --- |
+| 2026-09-21 | singleton | 1 | 0 | 1 | +6.33% | Amneal Announces FDA Approval and Launch of Lanreotide Injection |
+
 
 ## Harvest source mix
 

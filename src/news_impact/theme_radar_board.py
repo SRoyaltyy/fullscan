@@ -20,6 +20,7 @@ from typing import Any
 
 from .grade import grade_results, skips_01d_horizon, ungraded_reason
 from .hygiene import collapse_macro_stories, is_reaction_title
+from .ledger import build_ledger, clash_converge_ids
 from .pipeline import analyze_article
 from .theme_radar import dedupe_elite, load_theme_radar
 from .unique_title import is_signed_listed
@@ -82,10 +83,11 @@ def lane_available() -> dict[str, Any]:
 
 
 def _hop_elite_subset(unique: list[dict], results: list[dict]) -> tuple[list[dict], dict]:
-    """Deterministic book first. Lane current-flash only on the tradable subset.
+    """Deterministic roles first. Lane current-flash only on clash/converge groups.
 
-    One dead hop chain (429 / empty / no live model) leaves the provider
-    and stops. The rest of the book stays on the deterministic router.
+    Lane does not retag the full Elite set. One dead hop chain (429 / empty /
+    no live model) leaves the provider and stops. Indirect roles stay the
+    family template (substitute / stays_out / arms_dealer / peer / basket).
     """
     probed = lane_available()
     meta = {
@@ -93,12 +95,14 @@ def _hop_elite_subset(unique: list[dict], results: list[dict]) -> tuple[list[dic
         "live": 0,
         "stopped": False,
         "probe": probed,
+        "scope": "clash_converge",
     }
     if not probed.get("ok"):
         return results, meta
+    wanted = clash_converge_ids(results)
     out = list(results)
     for i, (art, row) in enumerate(zip(unique, results)):
-        if not is_signed_listed(row):
+        if str(row.get("article_id") or "") not in wanted:
             continue
         meta["attempted"] += 1
         hopped = analyze_article(art, use_lane=True, use_search=False, persist=False)
@@ -116,30 +120,32 @@ def _path_text(use_lane: bool, hop: dict) -> str:
     if not use_lane or probe.get("reason") == "no_keys":
         return (
             "deterministic router on every unique Elite title. "
-            "Lane quota dead in this run (no provider keys). "
-            "Tradable subset was not re-hopped. "
+            "Indirect roles are the family template "
+            "(substitute / stays_out / arms_dealer / peer / sector basket), "
+            "not a Lane tag. Lane quota is dead in this run (no provider keys), "
+            "so clash/converge groups were not re-hopped. "
             "Watermark is deterministic::news_impact_v2::theme_radar_elite. "
             "Re-run with --lane when current-flash keys exist; "
             "429 leaves that provider and does not fall through to pre-2025 flash."
         )
     if hop.get("live"):
         return (
-            "deterministic screen, then Lane current-flash on the tradable "
-            f"Elite subset ({hop.get('live')} live hops, "
+            "deterministic roles on the full Elite book, then Lane current-flash "
+            f"on clash/converge groups only ({hop.get('live')} live hops, "
             f"{hop.get('attempted')} attempted). "
             "429 leaves the provider. Watermark is lane::model::theme_radar_elite."
         )
     if hop.get("stopped") or probe.get("quota_dead"):
         return (
-            "deterministic router first. Lane on the tradable Elite subset "
-            "was attempted and did not return a live current-flash model "
+            "deterministic roles first. Lane on clash/converge groups was "
+            "attempted and did not return a live current-flash model "
             f"(reason={probe.get('reason') or 'empty/429'}). "
-            "Provider left on 429. Scoreboard grades stay on the deterministic router. "
+            "Provider left on 429. Grades stay on the deterministic router. "
             "Watermark is deterministic::news_impact_v2::theme_radar_elite."
         )
     return (
         "deterministic router on every unique Elite title. "
-        "Lane was not applied."
+        "Lane was not applied. Indirect roles are the family template."
     )
 
 
@@ -307,6 +313,7 @@ def build_payload(
     mix = Counter(str(a.get("harvest_source") or "?") for a in raw)
     unique_mix = Counter(str(r.get("harvest_source") or "?") for r in results)
     macro = collapse_macro_stories(results)
+    ledger = build_ledger(results)
     funnel = {
         "elite_raw_titles": len(raw),
         "unique": len(unique),
@@ -332,6 +339,7 @@ def build_payload(
             "raw": dict(mix),
             "unique": dict(unique_mix),
         },
+        "ledger": ledger,
         "macro_headline": {
             "n_stories": macro.get("n_stories"),
             "reprints_collapsed": macro.get("reprints_collapsed"),
@@ -411,6 +419,100 @@ def _ripper_lines(rippers: dict, limit: int = 25) -> list[str]:
     return lines
 
 
+def _ledger_lines(ledger: dict) -> list[str]:
+    counts = ledger.get("counts") or {}
+    rates = ledger.get("hit_rates") or {}
+    lines = [
+        ledger.get("rule") or "",
+        "",
+        "Direct = the article names the ticker. "
+        "Indirect = substitute / stays_out / arms_dealer / peer / sector basket "
+        "from the family template. "
+        + (ledger.get("theme_note") or ""),
+        "",
+        f"Router theme keys (not traded): **{ledger.get('n_theme_groups') or 0}**. "
+        f"Name groups: **{ledger.get('n_name_groups') or 0}**.",
+        "",
+        "| bucket | groups |",
+        "| --- | ---: |",
+        f"| singleton | {counts.get('singleton', 0)} |",
+        f"| converge | {counts.get('converge', 0)} "
+        f"(up {counts.get('converge_up', 0)}, down {counts.get('converge_down', 0)}) |",
+        f"| clash | {counts.get('clash', 0)} |",
+        "",
+        "Hit rates grade the entity once per session. "
+        "Converge uses that side. Clash uses the net side (net 0 is ungraded). "
+        "Long-horizon classes are out of these denominators.",
+        "",
+        "| bucket | 0-1d | 2d | 3d | 4d | 5d |",
+        "| --- | --- | --- | --- | --- | --- |",
+    ]
+    for bucket in ("singleton", "converge", "clash"):
+        cells = []
+        bag = rates.get(bucket) or {}
+        for hz in ("0-1d", "2d", "3d", "4d", "5d"):
+            slot = bag.get(hz) or {}
+            cells.append(_pct(slot.get("hits") or 0, slot.get("n") or 0))
+        lines.append(f"| {bucket} | " + " | ".join(cells) + " |")
+    lines += [
+        "",
+        "### Top converge names",
+        "",
+        "| ticker | date | n_bull | n_bear | net | 0-1d | 5d |",
+        "| --- | --- | ---: | ---: | ---: | ---: | ---: |",
+    ]
+    top = ledger.get("top_converge") or []
+    if not top:
+        lines.append("| — | — | — | — | — | — | — |")
+    for row in top:
+        lines.append(
+            f"| {row.get('ticker')} | {row.get('date')} | {row.get('n_bull')} | "
+            f"{row.get('n_bear')} | {row.get('net')} | {_fmt_ret(row.get('ret_1d'))} | "
+            f"{_fmt_ret(row.get('ret_5d'))} |"
+        )
+    return lines
+
+
+def _amrx_week_lines(week: dict) -> list[str]:
+    if not week:
+        return []
+    same = week.get("same_session") or {}
+    lines = [
+        "### AMRX week",
+        "",
+        week.get("note") or "",
+        "",
+        f"Window {week.get('week_window')}. "
+        f"Lanreotide session `{week.get('session')}`. "
+        f"Same-session label `{same.get('label')}` "
+        f"n_bull={same.get('n_bull')} n_bear={same.get('n_bear')} "
+        f"direct={same.get('n_direct')} indirect={same.get('n_indirect')} "
+        f"0-1d {_fmt_ret(same.get('ret_1d'))}.",
+        "",
+    ]
+    others = week.get("other_titles") or []
+    if others:
+        lines.append("Other stories on that session:")
+        lines.append("")
+        for title in others:
+            lines.append(f"- {title}")
+        lines.append("")
+    lines.append("| session | label | n_bull | n_bear | stories | 0-1d | titles |")
+    lines.append("| --- | --- | ---: | ---: | ---: | ---: | --- |")
+    rows = week.get("week") or []
+    if not rows:
+        lines.append("| — | — | — | — | — | — | none |")
+    for row in rows:
+        titles = "; ".join(str(t) for t in (row.get("titles") or [])[:3]).replace("|", "/")
+        lines.append(
+            f"| {row.get('date')} | {row.get('label')} | {row.get('n_bull')} | "
+            f"{row.get('n_bear')} | {row.get('n_stories')} | {_fmt_ret(row.get('ret_1d'))} | "
+            f"{titles} |"
+        )
+    lines.append("")
+    return lines
+
+
 def markdown(payload: dict[str, Any]) -> str:
     funnel = payload["funnel"]
     rates = payload["hit_rates"]
@@ -476,6 +578,8 @@ def markdown(payload: dict[str, Any]) -> str:
                 f"{br.get('hits', 0)} | {br.get('n_calls', 0)} | "
                 f"{_pct(br.get('hits') or 0, br.get('n_calls') or 0)} |"
             )
+    lines += ["", "## Convergence / clash ledger", ""]
+    lines += _ledger_lines(payload.get("ledger") or {})
     lines += [
         "",
         "## Rippers",
@@ -505,6 +609,10 @@ def markdown(payload: dict[str, Any]) -> str:
         f"| note | {amrx.get('note') or ''} |",
         "",
         amrx.get("clock_rule") or "",
+        "",
+    ]
+    lines += _amrx_week_lines((payload.get("ledger") or {}).get("amrx_week") or {})
+    lines += [
         "",
         "## Harvest source mix",
         "",
@@ -610,6 +718,8 @@ def run(
         "impulse", payload["funnel"]["impulse_updown_listed"],
         "amrx_entry", (payload.get("amrx") or {}).get("entry_date"),
         "amrx_1d", (payload.get("amrx") or {}).get("ret_1d"),
+        "ledger", (payload.get("ledger") or {}).get("counts"),
+        "amrx_stack", ((payload.get("ledger") or {}).get("amrx_week") or {}).get("stacked_same_session"),
         "→", SCOREBOARD,
     )
     return payload

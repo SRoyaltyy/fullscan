@@ -1,6 +1,6 @@
 {
   "book": "theme_radar_elite",
-  "path": "deterministic router on every unique Elite title. Lane quota dead in this run (no provider keys). Tradable subset was not re-hopped. Watermark is deterministic::news_impact_v2::theme_radar_elite. Re-run with --lane when current-flash keys exist; 429 leaves that provider and does not fall through to pre-2025 flash.",
+  "path": "deterministic router on every unique Elite title. Indirect roles are the family template (substitute / stays_out / arms_dealer / peer / sector basket), not a Lane tag. Lane quota is dead in this run (no provider keys), so clash/converge groups were not re-hopped. Watermark is deterministic::news_impact_v2::theme_radar_elite. Re-run with --lane when current-flash keys exist; 429 leaves that provider and does not fall through to pre-2025 flash.",
   "lane": {
     "attempted": 0,
     "live": 0,
@@ -63882,6 +63882,634 @@
     "unique": {
       "theme_radar_elite": 35255
     }
+  },
+  "ledger": {
+    "counts": {
+      "singleton": 6128,
+      "converge": 497,
+      "clash": 67,
+      "converge_up": 344,
+      "converge_down": 153
+    },
+    "hit_rates": {
+      "singleton": {
+        "0-1d": {
+          "hits": 432,
+          "n": 952,
+          "hit_rate": 0.4538
+        },
+        "2d": {
+          "hits": 454,
+          "n": 916,
+          "hit_rate": 0.4956
+        },
+        "3d": {
+          "hits": 429,
+          "n": 877,
+          "hit_rate": 0.4892
+        },
+        "4d": {
+          "hits": 420,
+          "n": 852,
+          "hit_rate": 0.493
+        },
+        "5d": {
+          "hits": 418,
+          "n": 826,
+          "hit_rate": 0.5061
+        }
+      },
+      "converge": {
+        "0-1d": {
+          "hits": 50,
+          "n": 101,
+          "hit_rate": 0.495
+        },
+        "2d": {
+          "hits": 40,
+          "n": 83,
+          "hit_rate": 0.4819
+        },
+        "3d": {
+          "hits": 40,
+          "n": 80,
+          "hit_rate": 0.5
+        },
+        "4d": {
+          "hits": 37,
+          "n": 77,
+          "hit_rate": 0.4805
+        },
+        "5d": {
+          "hits": 38,
+          "n": 76,
+          "hit_rate": 0.5
+        }
+      },
+      "clash": {
+        "0-1d": {
+          "hits": 4,
+          "n": 10,
+          "hit_rate": 0.4
+        },
+        "2d": {
+          "hits": 4,
+          "n": 10,
+          "hit_rate": 0.4
+        },
+        "3d": {
+          "hits": 4,
+          "n": 9,
+          "hit_rate": 0.4444
+        },
+        "4d": {
+          "hits": 2,
+          "n": 9,
+          "hit_rate": 0.2222
+        },
+        "5d": {
+          "hits": 2,
+          "n": 8,
+          "hit_rate": 0.25
+        }
+      }
+    },
+    "top_converge": [
+      {
+        "ticker": "SECZ",
+        "date": "2026-09-18",
+        "label": "converge_up",
+        "n_bull": 6,
+        "n_bear": 0,
+        "n_direct": 0,
+        "n_indirect": 6,
+        "net": 6,
+        "direction": "up",
+        "ret_1d": 16.52,
+        "ret_2d": null,
+        "ret_5d": null,
+        "titles": [
+          "Robinhood Rises as the SEC Clears Tokenized Stocks",
+          "Securitize Surges After SEC Clears Path for Tokenized Stock Trading",
+          "Polymarket Hires Coinbase's Failed Social-Coin Architect",
+          "SEC Sends Strong Signal to Robinhood, Coinbase Investors",
+          "SEC Allows Tokenized Stocks After Clarity Act Falters",
+          "SEC Greenlights Tokenized Stocks After Clarity Act Fails in Senate"
+        ]
+      },
+      {
+        "ticker": "COIN",
+        "date": "2026-09-18",
+        "label": "converge_up",
+        "n_bull": 6,
+        "n_bear": 0,
+        "n_direct": 0,
+        "n_indirect": 6,
+        "net": 6,
+        "direction": "up",
+        "ret_1d": 9.03,
+        "ret_2d": null,
+        "ret_5d": null,
+        "titles": [
+          "Robinhood Rises as the SEC Clears Tokenized Stocks",
+          "Securitize Surges After SEC Clears Path for Tokenized Stock Trading",
+          "Polymarket Hires Coinbase's Failed Social-Coin Architect",
+          "SEC Sends Strong Signal to Robinhood, Coinbase Investors",
+          "SEC Allows Tokenized Stocks After Clarity Act Falters",
+          "SEC Greenlights Tokenized Stocks After Clarity Act Fails in Senate"
+        ]
+      },
+      {
+        "ticker": "CRCL",
+        "date": "2026-09-18",
+        "label": "converge_up",
+        "n_bull": 6,
+        "n_bear": 0,
+        "n_direct": 0,
+        "n_indirect": 6,
+        "net": 6,
+        "direction": "up",
+        "ret_1d": 5.01,
+        "ret_2d": null,
+        "ret_5d": null,
+        "titles": [
+          "Robinhood Rises as the SEC Clears Tokenized Stocks",
+          "Securitize Surges After SEC Clears Path for Tokenized Stock Trading",
+          "Polymarket Hires Coinbase's Failed Social-Coin Architect",
+          "SEC Sends Strong Signal to Robinhood, Coinbase Investors",
+          "SEC Allows Tokenized Stocks After Clarity Act Falters",
+          "SEC Greenlights Tokenized Stocks After Clarity Act Fails in Senate"
+        ]
+      },
+      {
+        "ticker": "SCHW",
+        "date": "2026-09-18",
+        "label": "converge_down",
+        "n_bull": 0,
+        "n_bear": 6,
+        "n_direct": 0,
+        "n_indirect": 6,
+        "net": -6,
+        "direction": "down",
+        "ret_1d": 0.54,
+        "ret_2d": null,
+        "ret_5d": null,
+        "titles": [
+          "Robinhood Rises as the SEC Clears Tokenized Stocks",
+          "Securitize Surges After SEC Clears Path for Tokenized Stock Trading",
+          "Polymarket Hires Coinbase's Failed Social-Coin Architect",
+          "SEC Sends Strong Signal to Robinhood, Coinbase Investors",
+          "SEC Allows Tokenized Stocks After Clarity Act Falters",
+          "SEC Greenlights Tokenized Stocks After Clarity Act Fails in Senate"
+        ]
+      },
+      {
+        "ticker": "SECZ",
+        "date": "2026-09-21",
+        "label": "converge_up",
+        "n_bull": 5,
+        "n_bear": 0,
+        "n_direct": 0,
+        "n_indirect": 5,
+        "net": 5,
+        "direction": "up",
+        "ret_1d": 15.68,
+        "ret_2d": null,
+        "ret_5d": null,
+        "titles": [
+          "Strategy, Circle, and Coinbase Lead Crypto Stock Rally on Tokenized Stock Approval",
+          "Investing.coms stocks of the week",
+          "The SEC Greenlights Tokenized Stocks... With Caveats",
+          "Could IBRX Be A Tokenized Stock? Founders Tease Sends ImmunityBio Traders Into Speculation Mode",
+          "T. Rowe Price's Head Of Digital Assets Says Tokenized Stocks Must Be 'Instantly Fungible,' Agency Rules Can Move Without CLARITY Act"
+        ]
+      },
+      {
+        "ticker": "CRCL",
+        "date": "2026-09-21",
+        "label": "converge_up",
+        "n_bull": 5,
+        "n_bear": 0,
+        "n_direct": 0,
+        "n_indirect": 5,
+        "net": 5,
+        "direction": "up",
+        "ret_1d": -3.67,
+        "ret_2d": null,
+        "ret_5d": null,
+        "titles": [
+          "Strategy, Circle, and Coinbase Lead Crypto Stock Rally on Tokenized Stock Approval",
+          "Investing.coms stocks of the week",
+          "The SEC Greenlights Tokenized Stocks... With Caveats",
+          "Could IBRX Be A Tokenized Stock? Founders Tease Sends ImmunityBio Traders Into Speculation Mode",
+          "T. Rowe Price's Head Of Digital Assets Says Tokenized Stocks Must Be 'Instantly Fungible,' Agency Rules Can Move Without CLARITY Act"
+        ]
+      },
+      {
+        "ticker": "COIN",
+        "date": "2026-09-21",
+        "label": "converge_up",
+        "n_bull": 5,
+        "n_bear": 0,
+        "n_direct": 0,
+        "n_indirect": 5,
+        "net": 5,
+        "direction": "up",
+        "ret_1d": -2.02,
+        "ret_2d": null,
+        "ret_5d": null,
+        "titles": [
+          "Strategy, Circle, and Coinbase Lead Crypto Stock Rally on Tokenized Stock Approval",
+          "Investing.coms stocks of the week",
+          "The SEC Greenlights Tokenized Stocks... With Caveats",
+          "Could IBRX Be A Tokenized Stock? Founders Tease Sends ImmunityBio Traders Into Speculation Mode",
+          "T. Rowe Price's Head Of Digital Assets Says Tokenized Stocks Must Be 'Instantly Fungible,' Agency Rules Can Move Without CLARITY Act"
+        ]
+      },
+      {
+        "ticker": "SCHW",
+        "date": "2026-09-21",
+        "label": "converge_down",
+        "n_bull": 0,
+        "n_bear": 5,
+        "n_direct": 0,
+        "n_indirect": 5,
+        "net": -5,
+        "direction": "down",
+        "ret_1d": 0.93,
+        "ret_2d": null,
+        "ret_5d": null,
+        "titles": [
+          "Strategy, Circle, and Coinbase Lead Crypto Stock Rally on Tokenized Stock Approval",
+          "Investing.coms stocks of the week",
+          "The SEC Greenlights Tokenized Stocks... With Caveats",
+          "Could IBRX Be A Tokenized Stock? Founders Tease Sends ImmunityBio Traders Into Speculation Mode",
+          "T. Rowe Price's Head Of Digital Assets Says Tokenized Stocks Must Be 'Instantly Fungible,' Agency Rules Can Move Without CLARITY Act"
+        ]
+      },
+      {
+        "ticker": "ICE",
+        "date": "2026-08-20",
+        "label": "converge_up",
+        "n_bull": 4,
+        "n_bear": 0,
+        "n_direct": 4,
+        "n_indirect": 0,
+        "net": 4,
+        "direction": "up",
+        "ret_1d": 1.39,
+        "ret_2d": 4.19,
+        "ret_5d": 3.07,
+        "titles": [
+          "ICE CEO Jeffrey Sprecher Praises Trump Policies, Big Beautiful Bill",
+          "A New Defense Stock Is Born: Lyntris IPO Set For Wednesday",
+          "Trump Praises Prediction Markets as Report Finds Traders Made $8 Million on Suspicious Military Bets",
+          "Defense Tech Firm Lyntris Celebrates Recent IPO: NYSE Content Update"
+        ]
+      },
+      {
+        "ticker": "SPY",
+        "date": "2026-08-17",
+        "label": "converge_down",
+        "n_bull": 0,
+        "n_bear": 4,
+        "n_direct": 0,
+        "n_indirect": 4,
+        "net": -4,
+        "direction": "down",
+        "ret_1d": null,
+        "ret_2d": null,
+        "ret_5d": null,
+        "titles": [
+          "More Trump Tariffs Are Coming-and They Could Look Different",
+          "MP Materials, USA Rare Earth Stock Rise Amid Trump Drone News; Energy Fuels Touted",
+          "Earnings, Fed Hopes Leave Markets in a Zen State. What Could Break It.",
+          "ZenaTech Anticipates Competitive Advantage for ZenaDrone as U.S. Imposes Tariffs of Up to 100% on Imported Drones and Components"
+        ]
+      },
+      {
+        "ticker": "TLT",
+        "date": "2026-08-17",
+        "label": "converge_up",
+        "n_bull": 4,
+        "n_bear": 0,
+        "n_direct": 0,
+        "n_indirect": 4,
+        "net": 4,
+        "direction": "up",
+        "ret_1d": null,
+        "ret_2d": null,
+        "ret_5d": null,
+        "titles": [
+          "More Trump Tariffs Are Coming-and They Could Look Different",
+          "MP Materials, USA Rare Earth Stock Rise Amid Trump Drone News; Energy Fuels Touted",
+          "Earnings, Fed Hopes Leave Markets in a Zen State. What Could Break It.",
+          "ZenaTech Anticipates Competitive Advantage for ZenaDrone as U.S. Imposes Tariffs of Up to 100% on Imported Drones and Components"
+        ]
+      },
+      {
+        "ticker": "GLD",
+        "date": "2026-08-17",
+        "label": "converge_up",
+        "n_bull": 4,
+        "n_bear": 0,
+        "n_direct": 0,
+        "n_indirect": 4,
+        "net": 4,
+        "direction": "up",
+        "ret_1d": null,
+        "ret_2d": null,
+        "ret_5d": null,
+        "titles": [
+          "More Trump Tariffs Are Coming-and They Could Look Different",
+          "MP Materials, USA Rare Earth Stock Rise Amid Trump Drone News; Energy Fuels Touted",
+          "Earnings, Fed Hopes Leave Markets in a Zen State. What Could Break It.",
+          "ZenaTech Anticipates Competitive Advantage for ZenaDrone as U.S. Imposes Tariffs of Up to 100% on Imported Drones and Components"
+        ]
+      },
+      {
+        "ticker": "AEYE",
+        "date": "2026-08-14",
+        "label": "converge_up",
+        "n_bull": 3,
+        "n_bear": 0,
+        "n_direct": 3,
+        "n_indirect": 0,
+        "net": 3,
+        "direction": "up",
+        "ret_1d": 29.08,
+        "ret_2d": 18.9,
+        "ret_5d": 16.32,
+        "titles": [
+          "AudioEye: Q2 Earnings Snapshot",
+          "AudioEye Inc (AEYE) (Q2 2026) Earnings Call Highlights: Record Adjusted EBITDA and Raised ...",
+          "AudioEye, Inc. Q2 2026 Earnings Call Summary"
+        ]
+      },
+      {
+        "ticker": "SKIL",
+        "date": "2026-09-10",
+        "label": "converge_down",
+        "n_bull": 0,
+        "n_bear": 3,
+        "n_direct": 3,
+        "n_indirect": 0,
+        "net": -3,
+        "direction": "down",
+        "ret_1d": -22.98,
+        "ret_2d": -9.74,
+        "ret_5d": 16.36,
+        "titles": [
+          "Skillsoft Reports Financial Results for the Second Quarter of Fiscal 2027",
+          "Skillsoft LX Design Studio Reduces Custom Learning Content Development from Weeks to Days",
+          "Skillsoft Corp. Q2 2027 Earnings Call Summary"
+        ]
+      },
+      {
+        "ticker": "TLYS",
+        "date": "2026-09-03",
+        "label": "converge_up",
+        "n_bull": 3,
+        "n_bear": 0,
+        "n_direct": 3,
+        "n_indirect": 0,
+        "net": 3,
+        "direction": "up",
+        "ret_1d": -20.72,
+        "ret_2d": -24.86,
+        "ret_5d": -17.12,
+        "titles": [
+          "Tilly's: Fiscal Q2 Earnings Snapshot",
+          "Tilly's Shares Rise After Q2 Earnings and Revenue Exceed Estimates",
+          "Tilly's, Inc. Q2 2026 Earnings Call Summary"
+        ]
+      },
+      {
+        "ticker": "KMTS",
+        "date": "2026-09-15",
+        "label": "converge_up",
+        "n_bull": 3,
+        "n_bear": 0,
+        "n_direct": 3,
+        "n_indirect": 0,
+        "net": 3,
+        "direction": "up",
+        "ret_1d": 14.98,
+        "ret_2d": 11.19,
+        "ret_5d": null,
+        "titles": [
+          "Kestra Medical Technologies Reports First Quarter Fiscal 2027 Financial Results",
+          "Kestra Medical Technologies Ltd (KMTS) (Q1 2027) Earnings Call Highlights: Revenue Jumps 60% as ...",
+          "KESTRA MEDICAL TECHNOLOGIES, LTD. Q1 2027 Earnings Call Summary"
+        ]
+      },
+      {
+        "ticker": "ALTG",
+        "date": "2026-08-07",
+        "label": "converge_down",
+        "n_bull": 0,
+        "n_bear": 3,
+        "n_direct": 3,
+        "n_indirect": 0,
+        "net": -3,
+        "direction": "down",
+        "ret_1d": 12.11,
+        "ret_2d": 13.9,
+        "ret_5d": 8.37,
+        "titles": [
+          "Alta Equipment Group Announces Second Quarter 2026 Financial Results",
+          "Alta Equipment: Q2 Earnings Snapshot",
+          "Alta Equipment Group Inc. Q2 2026 Earnings Call Summary"
+        ]
+      },
+      {
+        "ticker": "LIDR",
+        "date": "2026-08-07",
+        "label": "converge_up",
+        "n_bull": 3,
+        "n_bear": 0,
+        "n_direct": 3,
+        "n_indirect": 0,
+        "net": 3,
+        "direction": "up",
+        "ret_1d": 10.92,
+        "ret_2d": 11.76,
+        "ret_5d": 10.08,
+        "titles": [
+          "AEye Reports Second Quarter 2026 Results; Commercial Pipeline Again Reaches Record Level",
+          "AEye to Participate in J.P. Morgan Auto Conference",
+          "AEye, Inc. Q2 2026 Earnings Call Summary"
+        ]
+      },
+      {
+        "ticker": "NEPH",
+        "date": "2026-08-07",
+        "label": "converge_up",
+        "n_bull": 3,
+        "n_bear": 0,
+        "n_direct": 3,
+        "n_indirect": 0,
+        "net": 3,
+        "direction": "up",
+        "ret_1d": 10.79,
+        "ret_2d": 12.37,
+        "ret_5d": 21.84,
+        "titles": [
+          "Nephros Announces Strong Financial Results for Quarter Ended June 30, 2026",
+          "Nephros Inc (NEPH) (Q2 2026) Earnings Call Highlights: Record Revenue and Profitability Surge ...",
+          "Nephros, Inc. Q2 2026 Earnings Call Summary"
+        ]
+      },
+      {
+        "ticker": "CELC",
+        "date": "2026-08-14",
+        "label": "converge_up",
+        "n_bull": 3,
+        "n_bear": 0,
+        "n_direct": 3,
+        "n_indirect": 0,
+        "net": 3,
+        "direction": "up",
+        "ret_1d": 10.79,
+        "ret_2d": 12.28,
+        "ret_5d": 12.63,
+        "titles": [
+          "Celcuity Inc. Reports Release of Second Quarter 2026 Financial Results and Provides Corporate Update",
+          "Celcuity Inc (CELC) (Q2 2026) Earnings Call Highlights: FDA Approval and Commercial Launch ...",
+          "Celcuity Inc. Q2 2026 Earnings Call Summary"
+        ]
+      },
+      {
+        "ticker": "NMAX",
+        "date": "2026-08-14",
+        "label": "converge_up",
+        "n_bull": 3,
+        "n_bear": 0,
+        "n_direct": 3,
+        "n_indirect": 0,
+        "net": 3,
+        "direction": "up",
+        "ret_1d": 9.85,
+        "ret_2d": 15.51,
+        "ret_5d": 8.64,
+        "titles": [
+          "Newsmax: Q2 Earnings Snapshot",
+          "Newsmax Inc (NMAX) (Q2 2026) Earnings Call Highlights: First Profitable Quarter, Record ...",
+          "Newsmax, Inc. Q2 2026 Earnings Call Summary"
+        ]
+      },
+      {
+        "ticker": "LAKE",
+        "date": "2026-09-10",
+        "label": "converge_down",
+        "n_bull": 0,
+        "n_bear": 3,
+        "n_direct": 3,
+        "n_indirect": 0,
+        "net": -3,
+        "direction": "down",
+        "ret_1d": -8.45,
+        "ret_2d": -1.42,
+        "ret_5d": -0.38,
+        "titles": [
+          "Lakeland Industries: Fiscal Q2 Earnings Snapshot",
+          "Lakeland Industries Inc (LAKE) Q2 2027 Earnings Call Highlights: Fire Segment Momentum and ...",
+          "Lakeland Industries, Inc. Q2 2027 Earnings Call Summary"
+        ]
+      },
+      {
+        "ticker": "REZI",
+        "date": "2026-08-13",
+        "label": "converge_up",
+        "n_bull": 3,
+        "n_bear": 0,
+        "n_direct": 3,
+        "n_indirect": 0,
+        "net": 3,
+        "direction": "up",
+        "ret_1d": -8.04,
+        "ret_2d": -7.24,
+        "ret_5d": -9.98,
+        "titles": [
+          "Resideo Appoints Shane Harrison as Chief Financial Officer",
+          "Resideo Technologies: Q2 Earnings Snapshot",
+          "Resideo Technologies, Inc. Q2 2026 Earnings Call Summary"
+        ]
+      },
+      {
+        "ticker": "SPT",
+        "date": "2026-08-07",
+        "label": "converge_up",
+        "n_bull": 3,
+        "n_bear": 0,
+        "n_direct": 3,
+        "n_indirect": 0,
+        "net": 3,
+        "direction": "up",
+        "ret_1d": 7.6,
+        "ret_2d": 3.07,
+        "ret_5d": 2.91,
+        "titles": [
+          "Sprout Social: Q2 Earnings Snapshot",
+          "Sprout Social Inc (SPT) (Q2 2026) Earnings Call Highlights: Strong Revenue Growth and AI-Driven ...",
+          "Sprout Social, Inc. Q2 2026 Earnings Call Summary"
+        ]
+      },
+      {
+        "ticker": "QNST",
+        "date": "2026-08-07",
+        "label": "converge_up",
+        "n_bull": 3,
+        "n_bear": 0,
+        "n_direct": 3,
+        "n_indirect": 0,
+        "net": 3,
+        "direction": "up",
+        "ret_1d": 7.06,
+        "ret_2d": 6.15,
+        "ret_5d": 4.11,
+        "titles": [
+          "QuinStreet: Fiscal Q4 Earnings Snapshot",
+          "QuinStreet Inc (QNST) (Q4 2026) Earnings Call Highlights: Record Revenue and EBITDA Fueled by ...",
+          "QuinStreet, Inc. Q4 2026 Earnings Call Summary"
+        ]
+      }
+    ],
+    "n_name_groups": 6692,
+    "n_theme_groups": 11,
+    "theme_note": "Theme groups are router factor/macro keys only. They are not a second trade. The Elite Sector column is not a key.",
+    "amrx_week": {
+      "ok": true,
+      "session": "2026-09-21",
+      "story_id": "amneal announces fda approval and launch of lanreotide injection",
+      "stacked_same_session": false,
+      "n_other_same_session": 0,
+      "other_titles": [],
+      "same_session": {
+        "label": "singleton",
+        "n_bull": 1,
+        "n_bear": 0,
+        "n_direct": 1,
+        "n_indirect": 0,
+        "ret_1d": 6.33
+      },
+      "week": [
+        {
+          "date": "2026-09-21",
+          "label": "singleton",
+          "n_bull": 1,
+          "n_bear": 0,
+          "n_stories": 1,
+          "ret_1d": 6.33,
+          "titles": [
+            "Amneal Announces FDA Approval and Launch of Lanreotide Injection"
+          ]
+        }
+      ],
+      "week_window": "2026-09-14..2026-09-21",
+      "note": "No second story voted AMRX on the lanreotide session 2026-09-21. The print is a singleton on that entity that day."
+    },
+    "rule": "One entity per session. n_bull / n_bear count impulse up/down stories after title-normalize. Regime and weather do not vote. clash = both sides on that entity that session. converge = two or more stories, one side. Hit rates grade the entity once: converge uses that side, clash uses the net side (net 0 is ungraded). Long-horizon classes stay out of the 0-1d..5d denominator."
   },
   "macro_headline": {
     "n_stories": 12,
