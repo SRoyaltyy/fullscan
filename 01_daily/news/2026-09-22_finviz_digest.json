@@ -1,6 +1,6 @@
 {
   "date": "2026-09-22",
-  "generated_at": "2026-09-22T04:11:57.116073-04:00",
+  "generated_at": "2026-09-22T07:09:51.032050-04:00",
   "export_used": "data/exports/finviz_2026-09-22.csv",
   "ticker_digest_count": 5874,
   "signal_count": 2279,
@@ -9,28 +9,28 @@
       "ticker": "SPY",
       "index": "S&P 500",
       "digest": "Stock Market: Will S&P 500 Open Up or Down Today?",
-      "source": "finviz_elite_news",
+      "source": "finviz_export",
       "error": null
     },
     {
       "ticker": "QQQ",
       "index": "Nasdaq-100",
       "digest": "Howard Marks Sends Stark Signal to Federal Reserve",
-      "source": "finviz_elite_news",
+      "source": "finviz_export",
       "error": null
     },
     {
       "ticker": "DIA",
       "index": "Dow Jones",
       "digest": "Nasdaq Ends Nearly 3% Higher As AI Stocks Pop, AMD Enters $1 Trillion Club   AMD, ARM, META, AMZN, PSKY In Focus",
-      "source": "finviz_elite_news",
+      "source": "finviz_export",
       "error": null
     },
     {
       "ticker": "IWM",
       "index": "Russell 2000",
       "digest": "Evolution Metals Just Joined the Indexes Behind $12.2 Trillion in Invested Assets (NASDAQ: EMAT)",
-      "source": "finviz_elite_news",
+      "source": "finviz_export",
       "error": null
     }
   ],

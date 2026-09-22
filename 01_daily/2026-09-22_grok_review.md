@@ -1,18 +1,5 @@
 # Grok text review — 2026-09-22
 
-ok=False
+ok=True
 
-Core general/events/news-judge/parse/finviz-digest/map-heat are same-day and usable (DOWN mild; scan_date 2026-09-22; live futures tape populated), but sector coverage is 0/11 so the 8-of-11 rule fails the day. Research reused last-night captain cards after a failed morning delta (not a day-fail); close market digest is missing and non-core.
-
-## Fails
-- `01_daily/sectors/2026-09-22/basic_materials_predict.md`: missing
-- `01_daily/sectors/2026-09-22/communication_services_predict.md`: missing
-- `01_daily/sectors/2026-09-22/consumer_cyclical_predict.md`: missing
-- `01_daily/sectors/2026-09-22/consumer_defensive_predict.md`: missing
-- `01_daily/sectors/2026-09-22/energy_predict.md`: missing
-- `01_daily/sectors/2026-09-22/financial_predict.md`: missing
-- `01_daily/sectors/2026-09-22/healthcare_predict.md`: missing
-- `01_daily/sectors/2026-09-22/industrials_predict.md`: missing
-- `01_daily/sectors/2026-09-22/real_estate_predict.md`: missing
-- `01_daily/sectors/2026-09-22/technology_predict.md`: missing
-- `01_daily/sectors/2026-09-22/utilities_predict.md`: missing
+All core artifacts are real, same-day (2026-09-22), and complete: general predict takes a clear DOWN/mild direction with MEMORY_CONFIRM and full factor scan; events JSON is a genuine scan_date=2026-09-22 scan (not carried); news judge and news parse carry the required NEWS_PARSE_BEGIN/END markers with real ranked items; finviz digest and map-heat tables are populated with a live futures tape (non-empty); 11/11 sector essays are distinct, signed, and quality-ok. The map_heat_research.md is phase=morning_refresh (size_gate=True) and its SYNTHESIS explicitly states the morning delta refresh failed captain-evidence QC and fell back to last night's post-close cards — but it still contains 142 captain cards with supported sentiment and no timeout text, so it does not meet the fail bar. The missi

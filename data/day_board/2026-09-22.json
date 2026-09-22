@@ -1,6 +1,6 @@
 {
   "date": "2026-09-22",
-  "generated_at": "2026-09-22T07:06:31.656012-04:00",
+  "generated_at": "2026-09-22T07:09:56.730836-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -94,7 +94,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 87512,
+          "size": 87496,
           "said": "5874 tickers \u00b7 2279 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
@@ -112,7 +112,7 @@
           "size": 11467,
           "said": "Finviz Daily Digest \u2014 2026-09-22",
           "bullets": [
-            "_Generated 2026-09-22T04:11:57.116073-04:00 \u00b7 export=data/exports/finviz_2026-09-22.csv \u00b7 ticker digests=5874 \u00b7 high-signal=2279_",
+            "_Generated 2026-09-22T07:09:51.032050-04:00 \u00b7 export=data/exports/finviz_2026-09-22.csv \u00b7 ticker digests=5874 \u00b7 high-signal=2279_",
             "Major indices (live quote page)"
           ]
         },
@@ -189,7 +189,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87512,
+          "size": 87496,
           "said": "5874 tickers \u00b7 2279 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
@@ -371,9 +371,9 @@
           "path": "01_daily/2026-09-22_preopen_status.json",
           "role": "required",
           "status": "OK",
-          "reason": "all_ok=False missing=['sector_predict']",
-          "size": 8096,
-          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing sector_predict",
+          "reason": "all_ok=False",
+          "size": 6831,
+          "said": "all_ok=False \u00b7 qc=True \u00b7 grok=True \u00b7 book=False",
           "bullets": []
         },
         {
@@ -382,11 +382,11 @@
           "path": "01_daily/2026-09-22_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=False Core general/events/news-judge/parse/finviz-digest/map-heat are same-day and usable (DOWN mild; scan_date 2026-09-22; li",
-          "size": 1744,
-          "said": "ok=False \u00b7 missing 01_daily/sectors/2026-09-22/basic_materials_predict.md",
+          "reason": "ok=True All core artifacts are real, same-day (2026-09-22), and complete: general predict takes a clear DOWN/mild direction with",
+          "size": 1008,
+          "said": "ok=True \u00b7 All core artifacts are real, same-day (2026-09-22), and complete: general predict takes a clear DOWN/mild direction with MEMORY_CONFIRM and full factor scan; ev",
           "bullets": [
-            "Core general/events/news-judge/parse/finviz-digest/map-heat are same-day and usable (DOWN mild; scan_date 2026-09-22; live futures tape populated), but sector coverage is 0/11 so the 8-of-11 rule fails the day. Research reused last-night captain cards after a failed morning delta (not a day-fail); close market digest is missing and non-core."
+            "All core artifacts are real, same-day (2026-09-22), and complete: general predict takes a clear DOWN/mild direction with MEMORY_CONFIRM and full factor scan; events JSON is a genuine scan_date=2026-09-22 scan (not carried); news judge and news parse carry the required NEWS_PARSE_BEGIN/END markers with real ranked items; finviz digest and map-heat tables are populated with a live futures tape (non-empty); 11/11 sector essays are distinct, signed, and quality-ok. The map_heat_research.md is phase=morning_refresh (size_gate=True) and its SYNTHESIS explicitly states the morning delta refresh failed captain-evidence QC and fell back to last night's post-close cards \u2014 but it still contains 142 captain cards with supported sentiment and no timeout text, so it does not meet the fail bar. The missi"
           ]
         },
         {
@@ -565,7 +565,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87512,
+          "size": 87496,
           "said": "5874 tickers \u00b7 2279 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
@@ -671,7 +671,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87512,
+          "size": 87496,
           "said": "5874 tickers \u00b7 2279 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
@@ -774,7 +774,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87512,
+          "size": 87496,
           "said": "5874 tickers \u00b7 2279 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
@@ -1817,6 +1817,45 @@
         }
       ],
       "preview": "2670 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, CFFN, ANET, SKM, DSGX \u00b7 2670 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, ETN, SFL, WWW, AVT"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-22T07:09:55.181028-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-22_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 87496,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-22_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11487,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-22\n_Generated 2026-09-22T07:09:51.032050-04:00 \u00b7 export=data/exports/finviz_2026-09-22.csv \u00b7 ticker digests=5874 \u00b7 high-signal=2279_"
+        },
+        {
+          "path": "data/exports/finviz_2026-09-22.csv",
+          "ok": true,
+          "reason": "",
+          "size": 10981867,
+          "preview": "11648 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11414929,
+          "preview": "11643 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-22\n_Generated 2026-09-22T07:09:51.032050-04:00 \u00b7 export=data/exports/finviz_2026-09-22.csv \u00b7 ticker digests=5874 \u00b7 high-signal=2279_ \u00b7 11648 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11643 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
