@@ -1,12 +1,12 @@
 {
   "date": "2026-09-22",
-  "generated_at": "2026-09-22T04:15:27.341063-04:00",
+  "generated_at": "2026-09-22T04:19:14.365301-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
     "ok": 2,
-    "partial": 1,
-    "fail": 5,
+    "partial": 2,
+    "fail": 4,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
-      "date": "2026-09-22",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-22T04:11:14.193257-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-22_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 6032,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-09-22_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 2583,
-          "preview": "# Finviz homepage market digest \u2014 2026-09-22\n**Generated:** 2026-09-22T04:11:14.181037-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a modestly lower open ahead of Richmond Fed data in a catalyst-light session\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** CMCSA, TRI, AZO, THO, MLKN\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** AZO, THO, MLKN\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-22\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-22\n**Generated:** 2026-09-22T04:11:14.181037-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a modestly lower open ahead of Richmond Fed data in a catalyst-light session\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** CMCSA, TRI, AZO, THO, MLKN\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** AZO, THO, MLKN\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-22\n**Clock use:** `same_morning`"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -228,6 +203,31 @@
         }
       ],
       "preview": "5895 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-22T04:19:13.960707-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-22_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 87512,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-22_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11487,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-22\n_Generated 2026-09-22T04:11:57.116073-04:00 \u00b7 export=data/exports/finviz_2026-09-22.csv \u00b7 ticker digests=5874 \u00b7 high-signal=2279_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-22\n_Generated 2026-09-22T04:11:57.116073-04:00 \u00b7 export=data/exports/finviz_2026-09-22.csv \u00b7 ticker digests=5874 \u00b7 high-signal=2279_"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
