@@ -1,0 +1,127 @@
+{
+  "date": "2026-09-22",
+  "generated_at": "2026-09-22T16:38:54.865584-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-09-23",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-09-23) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks ended mixed as Nasdaq hit a record high on AI optimism while financials dropped and oil extended its slide amid Iran and US diesel export headlines",
+  "raw_text": "- The Nasdaq Composite ($COMP) rose 0.45% to a record 27,244.28, the S&P 500 ($SPX) closed essentially flat at 7,764.64, and the Dow Jones Industrial Average ($DJI) fell 0.36% to 51,863.69.\n- Eight of 11 S&P 500 ($SPX) sectors gained, led by materials, which climbed about 1.9% on strength in Albemarle (ALB), Mosaic (MOS), and Freeport-McMoRan (FCX).\n- Financials fell nearly 2% as JPMorgan Chase (JPM) dropped 3.5% and Goldman Sachs (GS) also weighed on the Dow.\n- Meta Platforms (META) shares were little changed as its Muse AI agent topped Apple (AAPL)’s free App Store rankings, integrated with Shopify (SHOP) checkout, and prompted PayPal (PYPL) to enable Muse-powered shopping, drawing price-target hikes from Wells Fargo (WFC) and supporting semiconductor names including Intel (INTC) (+1.7%), Micron Technology (MU) (+5.0%), and SanDisk (SNDK) (+6.8%).\n- Viking Therapeutics (VKTX) jumped 35.67% to $40.85 after obesity drug VK2735 delivered 22% weight loss in a maintenance study, with potential for less frequent dosing.\n- AutoZone (AZO) advanced after reporting Q4 EPS of $56.05, beating the $53.89 consensus estimate.\n- Oil (@CL) hovered near $100 per barrel but extended a five-session slide as traders reacted to Iranian signals it could reopen the Strait of Hormuz within seven days if U.S. military pressure eases and to President Trump’s UN remarks favoring a quick decision to restrict U.S. diesel exports, pressuring refiners Marathon Petroleum (MPC) and Valero Energy (VLO).\n- Richmond Fed President Thomas Barkin cautioned that inflation pressures may take time to fully pass through, weighing on rate-sensitive financials.\n- After the close, KB Home (KBH) and Worthington Enterprises (WOR) were scheduled to report earnings, with initial extended-hours reactions described as modest and no major individual stock moves exceeding 2%.\n- Investors looked ahead to additional Fed speeches, homebuilder results including from Lennar (LEN), General Mills (GIS) earnings, August new home sales data, and updates from Trump–Xi talks on AI competition and broader U.S.–China relations.",
+  "raw_summary_md": "- The **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) **rose 0.45% to a record 27,244.28**, the **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) **closed essentially flat at 7,764.64**, and the **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) **fell 0.36% to 51,863.69**.\n- **Eight of 11 S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) **sectors gained**, led by **materials**, which **climbed about 1.9%** on strength in Albemarle ([ALB](https://finviz.com/quote?t=ALB)), Mosaic ([MOS](https://finviz.com/quote?t=MOS)), and Freeport-McMoRan ([FCX](https://finviz.com/quote?t=FCX)).\n- **Financials fell nearly 2%** as **JPMorgan Chase** ([JPM](https://finviz.com/quote?t=JPM)) **dropped 3.5%** and **Goldman Sachs** ([GS](https://finviz.com/quote?t=GS)) also weighed on the Dow.\n- **Meta Platforms** ([META](https://finviz.com/quote?t=META)) **shares were little changed** as its **Muse AI agent topped** Apple ([AAPL](https://finviz.com/quote?t=AAPL))’s **free App Store rankings**, integrated with **Shopify** ([SHOP](https://finviz.com/quote?t=SHOP)) checkout, and prompted **PayPal** ([PYPL](https://finviz.com/quote?t=PYPL)) to enable Muse-powered shopping, drawing price-target hikes from **Wells Fargo** ([WFC](https://finviz.com/quote?t=WFC)) and supporting semiconductor names including **Intel** ([INTC](https://finviz.com/quote?t=INTC)) **(+1.7%)**, **Micron Technology** ([MU](https://finviz.com/quote?t=MU)) **(+5.0%)**, and **SanDisk** ([SNDK](https://finviz.com/quote?t=SNDK)) **(+6.8%)**.\n- **Viking Therapeutics** ([VKTX](https://finviz.com/quote?t=VKTX)) **jumped 35.67% to $40.85** after obesity drug **VK2735 delivered 22% weight loss** in a maintenance study, with potential for less frequent dosing.\n- **AutoZone** ([AZO](https://finviz.com/quote?t=AZO)) advanced after reporting **Q4 EPS of $56.05**, beating the **$53.89 consensus estimate**.\n- **Oil** ([@CL](https://finviz.com/futures_charts?t=CL)) **hovered near $100 per barrel but extended a five-session slide** as traders reacted to **Iranian signals it could reopen the Strait of Hormuz within seven days** if U.S. military pressure eases and to President Trump’s UN remarks favoring a quick decision to **restrict U.S. diesel exports**, pressuring refiners **Marathon Petroleum** ([MPC](https://finviz.com/quote?t=MPC)) and **Valero Energy** ([VLO](https://finviz.com/quote?t=VLO)).\n- **Richmond Fed President Thomas Barkin** cautioned that **inflation pressures may take time to fully pass through**, weighing on **rate-sensitive financials**.\n- **After the close**, KB Home ([KBH](https://finviz.com/quote?t=KBH)) and Worthington Enterprises ([WOR](https://finviz.com/quote?t=WOR)) were **scheduled to report earnings**, with initial extended-hours reactions described as modest and **no major individual stock moves exceeding 2%**.\n- **Investors looked ahead** to **additional Fed speeches**, homebuilder results including from Lennar ([LEN](https://finviz.com/quote?t=LEN)), **General Mills** ([GIS](https://finviz.com/quote?t=GIS)) **earnings**, **August new home sales data**, and updates from **Trump–Xi talks on AI competition and broader U.S.–China relations**.",
+  "index_moves": [
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": 0.45,
+      "verb": "rose"
+    },
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": -0.36,
+      "verb": "fell"
+    },
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": 1.9,
+      "verb": "gained"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "ALB",
+    "MOS",
+    "FCX",
+    "JPM",
+    "GS",
+    "META",
+    "AAPL",
+    "SHOP",
+    "PYPL",
+    "WFC",
+    "INTC",
+    "MU",
+    "SNDK",
+    "VKTX",
+    "AZO",
+    "MPC",
+    "VLO",
+    "KBH",
+    "WOR",
+    "LEN",
+    "GIS"
+  ],
+  "named_leaders": [
+    "ALB",
+    "MOS",
+    "FCX",
+    "JPM",
+    "GS",
+    "META",
+    "AAPL",
+    "SHOP",
+    "PYPL",
+    "WFC",
+    "INTC",
+    "MU",
+    "SNDK",
+    "VKTX",
+    "AZO",
+    "MPC",
+    "VLO",
+    "KBH",
+    "WOR",
+    "LEN",
+    "GIS"
+  ],
+  "calendar": [],
+  "prior_close": {
+    "spx": 1.9,
+    "nasdaq": 0.45,
+    "dow": -0.36
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": true,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "Investors looked ahead to additional Fed speeches, homebuilder results including from Lennar (LEN), General Mills (GIS) earnings, August new home sales data, and updates from Trump–Xi talks on AI competition and broader U.S.–China relations."
+    ],
+    "text": "Investors looked ahead to additional Fed speeches, homebuilder results including from Lennar (LEN), General Mills (GIS) earnings, August new home sales data, and updates from Trump–Xi talks on AI competition and broader U.S.–China relations."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Oil (@CL) hovered near $100 per barrel but extended a five-session slide as traders reacted to Iranian signals it could reopen the Strait of Hormuz within seven days if U.S. military pressure eases and to President Trump’s UN remarks favoring a quick decision to restrict U.S. diesel exports, pressuring refiners Marathon Petroleum (MPC) and Valero Energy (VLO)."
+  },
+  "finviz_id": 291679,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-09-22T16:37:43.557",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}
