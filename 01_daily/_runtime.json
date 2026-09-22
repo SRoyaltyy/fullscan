@@ -1,8 +1,8 @@
 {
   "ok": false,
   "n_fail": 2,
-  "grok_busy": true,
-  "updated_at": "2026-09-21T04:16:43.190583-04:00",
+  "grok_busy": false,
+  "updated_at": "2026-09-22T05:14:08.482980-04:00",
   "source": "runtime_status",
   "doors": [
     {
@@ -20,7 +20,7 @@
       "group": "box",
       "status": "OK",
       "required": true,
-      "detail": "pid=417604 pong ok",
+      "detail": "pid=1608979 pong ok",
       "action": "none"
     },
     {
@@ -29,7 +29,7 @@
       "group": "box",
       "status": "OK",
       "required": true,
-      "detail": "active pid=417604 alive",
+      "detail": "active pid=1608979 alive",
       "action": "none"
     },
     {
@@ -45,18 +45,18 @@
       "id": "pong",
       "name": "PONG",
       "group": "classroom",
-      "status": "SKIP",
-      "required": false,
-      "detail": "Grok job running \u2014 not poking the classroom",
+      "status": "OK",
+      "required": true,
+      "detail": "classroom live (Hey. I just came online. Who am I? Who are you?) model=openclaw/default",
       "action": "none"
     },
     {
       "id": "model",
       "name": "Classroom model",
       "group": "classroom",
-      "status": "SKIP",
-      "required": false,
-      "detail": "probe skipped",
+      "status": "OK",
+      "required": true,
+      "detail": "model=openclaw/default",
       "action": "none"
     },
     {
@@ -81,9 +81,9 @@
       "id": "http401",
       "name": "HTTP 401",
       "group": "classroom",
-      "status": "WARN",
-      "required": false,
-      "detail": "401 in last packet 2026-09-18_pipeline_health.json, 2026-09-21_map_heat.json \u2014 not live",
+      "status": "OK",
+      "required": true,
+      "detail": "live PONG 200 \u2014 last packet 401 is history",
       "action": "none"
     },
     {
@@ -128,7 +128,7 @@
       "group": "preopen",
       "status": "WARN",
       "required": false,
-      "detail": "latest=in_progress systemd=exit-code",
+      "detail": "latest=success systemd=exit-code",
       "action": "none"
     },
     {
@@ -155,7 +155,7 @@
       "group": "postclose",
       "status": "FAIL",
       "required": true,
-      "detail": "403 in 2026-08-28_pipeline_health_postclose.json, 2026-08-28_pipeline_health_postclose.json",
+      "detail": "2026-09-21_map_heat.json: EMPTY TAPE; 403 in 2026-09-15_pipeline_health.json, 2026-09-16_pipeline_health.json",
       "action": "none"
     },
     {
@@ -164,9 +164,11 @@
       "group": "postclose",
       "status": "WARN",
       "required": false,
-      "detail": "history \u2014 401 in 2026-09-18_pipeline_health.json, 2026-09-21_map_heat.json; DeepSeek fallback in 2026-08-28_pipeline_health_postclose.json, 2026-09-14_pipeline_health.json (classro",
+      "detail": "history \u2014 401 in 2026-09-18_pipeline_health.json, 2026-09-22_map_heat.json; DeepSeek fallback in 2026-09-14_pipeline_health.json, 2026-09-22_map_postclose_captains_utilities.json (",
       "action": "none"
     }
   ],
-  "healed": []
+  "healed": [
+    "ensure_openclaw_timeouts.sh exit=0                   PASSED  UNIT                   ACTIVATES | Tue 2026-09-22 17:55:00 CST 41min left Mon 2026-09-21 17:55:04 CST 23h ago full"
+  ]
 }
