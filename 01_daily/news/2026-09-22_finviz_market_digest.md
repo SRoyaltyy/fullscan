@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-09-22
 
-**Generated:** 2026-09-22T04:11:56.120857-04:00 (America/New_York)
+**Generated:** 2026-09-22T04:12:10.240324-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US futures point to a modestly lower open ahead of Richmond Fed data in a catalyst-light session
 **Prior close:** SPX —  Nasdaq —  Dow —
