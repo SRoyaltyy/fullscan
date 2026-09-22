@@ -1,12 +1,12 @@
 {
   "date": "2026-09-22",
-  "generated_at": "2026-09-22T07:45:55.884020-04:00",
+  "generated_at": "2026-09-22T07:58:34.394583-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 5,
-    "partial": 2,
+    "ok": 7,
+    "partial": 0,
     "fail": 1,
     "n": 8
   },
@@ -712,11 +712,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -855,10 +855,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-22_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=164",
+          "size": 1289336,
+          "said": "1d BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU \u00b7 -0.357",
           "bullets": []
         },
         {
@@ -866,21 +866,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-09-22_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 56455,
+          "said": "Stock book \u2014 2026-09-22",
+          "bullets": [
+            "_Generated 2026-09-22T07:49:17.807220-04:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-09-22_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 585,
+          "said": "0 green \u00b7",
           "bullets": []
         },
         {
@@ -902,10 +905,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-09-22 not in dashboard dates (last=2026-09-17)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-22)",
           "size": 6300886,
-          "said": "session 2026-09-22 not in dashboard dates (last=2026-09-17)",
+          "said": "live-book poller + today.json (2026-09-22)",
           "bullets": []
         }
       ],
@@ -918,9 +921,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -930,10 +933,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-22_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=164",
+          "size": 1289336,
+          "said": "1d BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU \u00b7 -0.357",
           "bullets": []
         },
         {
@@ -941,10 +944,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-09-22 not in dashboard dates (last=2026-09-17)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-22)",
           "size": 6300886,
-          "said": "session 2026-09-22 not in dashboard dates (last=2026-09-17)",
+          "said": "live-book poller + today.json (2026-09-22)",
           "bullets": []
         },
         {
@@ -978,8 +981,58 @@
     }
   ],
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "PACS",
+        "score": 0.28812563161550103
+      },
+      {
+        "ticker": "PAYS",
+        "score": 0.3818751006424396
+      },
+      {
+        "ticker": "AMN",
+        "score": 0.21749284617892392
+      },
+      {
+        "ticker": "ATEN",
+        "score": 0.30493897995062075
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "FLNC",
+        "score": -0.5919048779503624
+      },
+      {
+        "ticker": "SOC",
+        "score": -0.5181310021834322
+      },
+      {
+        "ticker": "TE",
+        "score": -0.25194598082473185
+      },
+      {
+        "ticker": "BYRN",
+        "score": -0.47718534540923
+      },
+      {
+        "ticker": "CSIQ",
+        "score": -0.38469774064173723
+      },
+      {
+        "ticker": "BTU",
+        "score": -0.5727175929068051
+      },
+      {
+        "ticker": "UEC",
+        "score": -0.5542737344372701
+      },
+      {
+        "ticker": "HAL",
+        "score": -0.21944193951632093
+      }
+    ],
     "flatten": {},
     "general": {
       "said": "DOWN  -0.497",
@@ -1967,6 +2020,59 @@
         }
       ],
       "preview": "2670 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, CFFN, ANET, SKM, DSGX \u00b7 2670 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, ETN, SFL, WWW, AVT"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-22T07:58:26.572740-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-22_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1289336,
+          "preview": "1d BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU, UEC, HAL"
+        },
+        {
+          "path": "data/stock_book/2026-09-22_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-22_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2446,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-22_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11351,
+          "preview": "2026-09-22 BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU, UEC, HAL"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 11351,
+          "preview": "2026-09-22 BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU, UEC, HAL"
+        },
+        {
+          "path": "01_daily/2026-09-22_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 57385,
+          "preview": "# Stock book \u2014 2026-09-22\n_Generated 2026-09-22T07:49:17.807220-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU, UEC, HAL \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-22 BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU, UEC, HAL \u00b7 2026-09-22 BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU, UEC, HAL \u00b7 # Stock book \u2014 2026-09-22\n_Generated 2026-09-22T07:49:17.807220-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
