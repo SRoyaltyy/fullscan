@@ -1,15 +1,15 @@
 # Sector Board — 2026-09-22
 
-Generated: **2026-09-22T06:05:18.615457-04:00** (America/New_York)
+Generated: **2026-09-22T06:16:43.404148-04:00** (America/New_York)
 
 Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.).
 
 ## Summary
 
-- Predicts present: **5/11**
+- Predicts present: **6/11**
 - Outcomes graded: **0/11**
 - Direction hits (when graded): **0/0**
-- Predicted up / down / flat-or-missing: **2** / **3** / **6**
+- Predicted up / down / flat-or-missing: **2** / **4** / **5**
 
 ## Full table
 
@@ -20,7 +20,7 @@ Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file 
 | Consumer Cyclical | XLY | down | mild | -0.45 | 0.52 | — | — | — | P |
 | Consumer Defensive | XLP | up | mild | 1.14 | 0.55 | — | — | — | P |
 | Energy | XLE | down | mild | -5.92 | 0.65 | — | — | — | P |
-| Financial | XLF | — | — | — | — | — | — | — | — |
+| Financial | XLF | down | mild | -1.41 | 0.56 | — | — | — | P |
 | Healthcare | XLV | — | — | — | — | — | — | — | — |
 | Industrials | XLI | — | — | — | — | — | — | — | — |
 | Real Estate | XLRE | — | — | — | — | — | — | — | — |
@@ -36,6 +36,7 @@ Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file 
 
 - **Energy** (XLE): score=-5.92, mag=mild, conf=0.65
 - **Basic Materials** (XLB): score=-1.59, mag=mild, conf=0.46
+- **Financial** (XLF): score=-1.41, mag=mild, conf=0.56
 - **Consumer Cyclical** (XLY): score=-0.45, mag=mild, conf=0.52
 
 ## Files
