@@ -1,22 +1,22 @@
 # Sector Board — 2026-09-22
 
-Generated: **2026-09-22T05:32:41.718384-04:00** (America/New_York)
+Generated: **2026-09-22T05:40:11.058278-04:00** (America/New_York)
 
 Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.).
 
 ## Summary
 
-- Predicts present: **1/11**
+- Predicts present: **2/11**
 - Outcomes graded: **0/11**
 - Direction hits (when graded): **0/0**
-- Predicted up / down / flat-or-missing: **0** / **1** / **10**
+- Predicted up / down / flat-or-missing: **1** / **1** / **9**
 
 ## Full table
 
 | Sector | ETF | Dir | Mag | Score | Conf | Actual% | Dir hit | Mag hit | MD |
 |--------|-----|-----|-----|-------|------|---------|---------|---------|----|
 | Basic Materials | XLB | down | mild | -1.59 | 0.46 | — | — | — | P |
-| Communication Services | XLC | — | — | — | — | — | — | — | — |
+| Communication Services | XLC | up | mild | 3.18 | 0.63 | — | — | — | P |
 | Consumer Cyclical | XLY | — | — | — | — | — | — | — | — |
 | Consumer Defensive | XLP | — | — | — | — | — | — | — | — |
 | Energy | XLE | — | — | — | — | — | — | — | — |
@@ -29,7 +29,7 @@ Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file 
 
 ## Predicted leaders (up)
 
-_None_
+- **Communication Services** (XLC): score=3.18, mag=mild, conf=0.63
 
 ## Predicted laggards (down)
 

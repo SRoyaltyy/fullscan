@@ -1,6 +1,6 @@
 {
   "date": "2026-09-22",
-  "generated_at": "2026-09-22T05:32:42.849320-04:00",
+  "generated_at": "2026-09-22T05:40:12.078110-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -25,10 +25,10 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "0 up / 1 down / 0 flat",
+    "said": "1 up / 1 down / 0 flat",
     "bullets": [
       "XLB DOWN -1.6",
-      "XLC missing",
+      "XLC UP +3.2",
       "XLY missing",
       "XLP missing",
       "XLE missing",
@@ -211,70 +211,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Basic Materials (1/11)",
+      "title": "Sector predict Communication Services (2/11)",
       "date": "2026-09-22",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-22T05:32:41.803531-04:00",
+      "at": "2026-09-22T05:40:11.099307-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-09-22/basic_materials_predict.md",
+          "path": "01_daily/sectors/2026-09-22/communication_services_predict.md",
           "ok": true,
           "reason": "",
-          "size": 19367,
-          "preview": "# Sector Prediction \u2014 Basic Materials \u2014 2026-09-22\n- ETF: **XLB**\n- rubric: `00_grounding/sectors/basic_materials.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-1.587** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **1.512** (ES -0.07%, HG +0.66%, GC +0.90%, DX -0.02%) \u00b7 index_carry **-0.124** (general -0.497) \u00b7 llm_overlay **-2.975** (raw -2.975)"
+          "size": 18642,
+          "preview": "# Sector Prediction \u2014 Communication Services \u2014 2026-09-22\n- ETF: **XLC**\n- rubric: `00_grounding/sectors/communication_services.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **3.182** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **0.756** (NQ -0.07%, ES -0.07%, PM:XLC +0.21%) \u00b7 index_carry **-0.124** (general -0.497) \u00b7 llm_overlay **2.55** (raw 2.55)"
         },
         {
-          "path": "01_daily/sectors/2026-09-22/basic_materials_predict_trace.md",
+          "path": "01_daily/sectors/2026-09-22/communication_services_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 396,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Basic Materials 2026-09-22\n**Step 0 \u2014 Setup.** Loaded 152,003 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (17,376 characters)."
+          "size": 403,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Communication Services 2026-09-22\n**Step 0 \u2014 Setup.** Loaded 149,777 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (16,755 characters)."
         },
         {
-          "path": "01_daily/_transcripts/2026-09-22_sector_basic_materials_predict.json",
+          "path": "01_daily/_transcripts/2026-09-22_sector_communication_services_predict.json",
           "ok": true,
           "reason": "",
-          "size": 173721,
+          "size": 170453,
           "preview": "keys: provider, agent, backend_model, messages"
         },
         {
           "path": "01_daily/2026-09-22_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 7257,
+          "size": 7250,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-09-22/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 1254,
+          "size": 1250,
           "preview": "keys: date, n_ok, n_total, sectors"
         },
         {
           "path": "01_daily/sectors/2026-09-22/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1624,
-          "preview": "# Sector Board \u2014 2026-09-22\nGenerated: **2026-09-22T05:32:41.718384-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1684,
+          "preview": "# Sector Board \u2014 2026-09-22\nGenerated: **2026-09-22T05:40:11.058278-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-09-22/_board.json",
           "ok": true,
           "reason": "",
-          "size": 5415,
+          "size": 5583,
           "preview": "keys: date, generated_at, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 820864,
+          "size": 821975,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Basic Materials \u2014 2026-09-22\n- ETF: **XLB**\n- rubric: `00_grounding/sectors/basic_materials.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-1.587** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **1.512** (ES -0.07%, HG +0.66%, GC +0.90%, DX -0.02%) \u00b7 index_carry **-0.124** (general -0.497) \u00b7 llm_overlay **-2.975** (raw -2.975) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Basic Materials 2026-09-22\n**Step 0 \u2014 Setup.** Loaded 152,003 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (17,376 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-22\nGenerated: **2026-09-22T05:32:41.718384-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 ke"
+      "preview": "# Sector Prediction \u2014 Communication Services \u2014 2026-09-22\n- ETF: **XLC**\n- rubric: `00_grounding/sectors/communication_services.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **3.182** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **0.756** (NQ -0.07%, ES -0.07%, PM:XLC +0.21%) \u00b7 index_carry **-0.124** (general -0.497) \u00b7 llm_overlay **2.55** (raw 2.55) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Communication Services 2026-09-22\n**Step 0 \u2014 Setup.** Loaded 149,777 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (16,755 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-22\nGenerated: **2026-09-22T05:40:11.058278-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
