@@ -1,6 +1,6 @@
 {
   "date": "2026-09-22",
-  "generated_at": "2026-09-22T07:05:00.020043-04:00",
+  "generated_at": "2026-09-22T07:05:08.718537-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -829,10 +829,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5895",
-          "size": 2244865,
-          "said": "212 rows",
+          "size": 2230319,
+          "said": "204 rows",
           "bullets": [
-            "SBLK, FORM, NVDA, HRTG, MU, SKHY, DOCU, BFH"
+            "GOOG, GOOGL, MGNI, MTCH, CNK, IMAX, T, ATEX"
           ]
         },
         {
@@ -905,9 +905,9 @@
           "bullets": []
         }
       ],
-      "said": "212 rows",
+      "said": "204 rows",
       "bullets": [
-        "SBLK, FORM, NVDA, HRTG, MU"
+        "GOOG, GOOGL, MGNI, MTCH, CNK"
       ]
     },
     {
@@ -1770,6 +1770,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.587, 'dir': 'down', 'conf': 0.463, 'source': 'llm'}, Communication Services={'score': 3.182, 'dir': 'up', 'conf': 0.627, 'source': 'llm'}, Consumer Cyclical={'score': -0.448, 'dir': 'down', 'conf': 0.518, 'source': 'llm'}, Consumer Defensive={'score': 1.142, 'dir': 'up', 'conf': 0.546, 'source': 'llm'}, Energy={'score': -5.917, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Financial={'score': -1.41, 'dir': 'down', 'conf': 0.556, 'source': 'llm'}, Healthcare={'score': -1.334, 'dir': 'down', 'conf': 0.553, 'source': 'llm'}, Industrials={'score': -4.127, 'dir': 'down', 'conf': 0.65, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-22\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-22T07:05:07.844246-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-22_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2230319,
+          "preview": "5895 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GOOG, GOOGL, MGNI, MTCH, CNK"
+        }
+      ],
+      "preview": "5895 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GOOG, GOOGL, MGNI, MTCH, CNK"
     }
   ],
   "href": {
