@@ -18849,6 +18849,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-22",
+          "actual_pct": 1.19,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.45
         }
       },
       "lesson_schema_ok": true
@@ -22494,6 +22506,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.62
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-22",
+          "actual_pct": 2.36,
+          "actual_direction": "up",
+          "actual_magnitude_band": "notable",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.55
         }
       },
       "lesson_schema_ok": true
@@ -23735,7 +23759,20 @@
       "knowable_at_9am": "partially",
       "attribution_contested": "yes",
       "outlier_watch": "energy lagged and financials/staples finished red on a +1.14% SPX day; Boeing/CoreWeave/Fluence sold off inside “tech led”; NYSE/Nasdaq new lows still exceeded new highs",
-      "horizon_grades": {},
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-09-22",
+          "actual_pct": 1.66,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
+        }
+      },
       "lesson_schema_ok": true
     },
     {
@@ -25515,7 +25552,7 @@
           "status": "neutral"
         }
       ],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-09-22_lesson.md",
       "sources_used": [
         {
           "url": "https://www.bnnbloomberg.ca/markets/dow-jones/2026/09/22/wall-street-inches-higher-as-oil-prices-bond-yields-retreat-for-fifth-consecutive-day/",
@@ -25602,7 +25639,9 @@
       "key_interaction": "AI bid vs bank+energy drag cancelled in SPX while UNGA threat vs Iran-meeting/pipeline relief cancelled in oil — a calm index print masking two live two-sided fights",
       "knowable_at_9am": "partially",
       "attribution_contested": "yes",
-      "outlier_watch": "Dow reversal-down vs NDX never-red; energy sold the oil dip; SPX ignored the UNGA oil see-saw that NBC treated as the day’s news"
+      "outlier_watch": "Dow reversal-down vs NDX never-red; energy sold the oil dip; SPX ignored the UNGA oil see-saw that NBC treated as the day’s news",
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-09-22",
