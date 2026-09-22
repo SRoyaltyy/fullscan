@@ -68,7 +68,9 @@ def test_news_scan_current_flash_order():
     by_hop = dict(plan)
     assert by_hop["zhipu"] == ["glm-4.7-flash"]
     assert news_scan_models("zhipu") == ["glm-4.7-flash"]
-    assert news_scan_models("siliconflow")[0] == "Qwen/Qwen3-8B"
+    assert news_scan_models("siliconflow")[0] == "THUDM/GLM-Z1-9B-0414"
+    assert "Qwen/Qwen3-8B" not in news_scan_models("siliconflow")
+    assert "deepseek" not in news_scan_lanes()
     assert news_scan_models("qwen") == ["qwen-flash"]
     assert news_scan_models("deepseek")[0] == "deepseek-flash"
     th = news_scan_models("tokenhub")

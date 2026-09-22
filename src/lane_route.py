@@ -30,10 +30,13 @@ default (key_people / key_products / revenue_mix / custom):
   → SambaNova → Ollama → HF free → Groq last-resort → Gemini
 
 news_to_tickers + news_classify + news_impact + news sector scan
-(high volume, same policy):
-  Zhipu glm-4.7-flash → SiliconFlow current (Qwen3-8B)
-  → OpenRouter :free current → DashScope qwen-flash
-  → remaining default hoppers (TokenHub still behind true $0)
+(high volume, $0 only — never the default overflow):
+  Zhipu glm-4.7-flash → SiliconFlow permanent-free
+  (THUDM/GLM-Z1-9B-0414, deepseek-ai/DeepSeek-R1-Distill-Qwen-7B)
+  → OpenRouter :free → DashScope qwen-flash.
+  Does not continue into DeepSeek, TokenHub, Gemini, or any paid id.
+  Qwen/Qwen3-8B is priced on SiliconFlow and is not a news model.
+  deepseek-chat is paid and is banned from every primary hopper.
 
 company_dig (longer context):
   SiliconFlow current Qwen / DeepSeek free non-Pro → native DeepSeek flash
@@ -91,7 +94,9 @@ _OR_CANDIDATES = [
     "nvidia/nemotron-3.5-lightning:free",
 ]
 OR_MODELS = [m for m in _OR_CANDIDATES if m == "openrouter/free" or str(m).endswith(":free")]
-DS_MODELS = ["deepseek-flash", "deepseek-chat"]
+# deepseek-chat is paid. News never reaches this lane; flash only if a
+# non-news template still asks for native DeepSeek.
+DS_MODELS = ["deepseek-flash"]
 # Current DashScope flash only. Never plus / max / Pro / paid / pre-2025 small.
 QWEN_MODELS = [m for m in (
     "qwen-flash",
@@ -176,7 +181,10 @@ HF_FALLBACK = [
     "google/gemma-2-2b-it",
 ]
 PACE = 2.1
-DEAD_PROVIDER = (401, 403, 410, 402)
+# 402 is per-model (priced id on a $0 account). Try the next id on the
+# same lane. 401/403/410 are the account: abandon the provider.
+DEAD_PROVIDER = (401, 403, 410)
+MODEL_PAYMENT = (402,)
 RATE_LIMIT = (429,)
 
 # Cyrus 2026-09-21 — last-resort only. Prefer excluding from every primary
@@ -274,6 +282,10 @@ def is_banned_primary(mid: str) -> bool:
         return True
     if "qwen2.5-7b" in low:
         return True
+    # Paid DeepSeek chat. A free-tier 200 that is not JSON must not fall
+    # through to this id.
+    if low in {"deepseek-chat", "deepseek-reasoner"}:
+        return True
     # glm-4-flash* that is not 4.7 (glm-4.7-flash does not contain this stem).
     if "glm-4-flash" in low and "4.7" not in low:
         return True
@@ -351,22 +363,34 @@ def lanes_for(tmpl: str) -> list[str]:
     """Hopper order for a template. Never includes Pro/ paid IDs."""
     tmpl = str(tmpl or "custom").strip()
     if tmpl in NEWS_TEMPLATES:
-        return _dedupe(NEWS_HEAD + DEFAULT_LANES)
+        # Closed $0 list. Do not append DEFAULT_LANES: that walk reached
+        # deepseek-chat after DashScope free quota returned 403.
+        return list(NEWS_HEAD)
     if tmpl == "company_dig":
         return _dedupe(DIG_HEAD + DEFAULT_LANES)
     return list(DEFAULT_LANES)
 
 
+# Permanent-free SiliconFlow chat ids. Qwen/Qwen3-8B is $0.06/M on
+# SiliconFlow and must not be the news primary.
+SF_NEWS_FREE = (
+    "THUDM/GLM-Z1-9B-0414",
+    "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+)
+
+
 def sf_models_for(tmpl: str) -> list[str]:
-    """SiliconFlow allowlist: strip Pro/; current Qwen3 first for news/digs."""
+    """SiliconFlow allowlist: strip Pro/. News uses the permanent-free ids."""
     ids = [
         m for m in SF_MODELS
         if not str(m).startswith("Pro/") and not is_banned_primary(m)
     ]
     tmpl = str(tmpl or "").strip()
     if tmpl in NEWS_TEMPLATES:
-        prefer = "Qwen/Qwen3-8B"
-        ids = [prefer] + [m for m in ids if m != prefer] if prefer in ids else ids
+        return [
+            m for m in SF_NEWS_FREE
+            if not str(m).startswith("Pro/") and not is_banned_primary(m)
+        ]
     elif tmpl == "company_dig":
         extra = [
             m for m in SF_DIG_MODELS
@@ -834,6 +858,9 @@ def hop_models(lane, models, call, abandon_404=False):
             print(f"  {lane} skip ({status})")
             _SKIP.add(lane)
             return None, None
+        if status in MODEL_PAYMENT:
+            # This id wants a balance. The next id on this lane may be free.
+            continue
         if status in RATE_LIMIT:
             print(f"  {lane} skip (429)")
             _SKIP.add(lane)

@@ -183,12 +183,17 @@ class LaneTierTests(unittest.TestCase):
         self.assertEqual(names[:4], ["zhipu", "siliconflow", "openrouter", "qwen"])
         by = dict(plan)
         self.assertEqual(by["zhipu"], ["glm-4.7-flash"])
-        self.assertEqual(by["siliconflow"][0], "Qwen/Qwen3-8B")
+        self.assertEqual(names, ["zhipu", "siliconflow", "openrouter", "qwen"])
+        self.assertEqual(by["siliconflow"][0], "THUDM/GLM-Z1-9B-0414")
+        self.assertIn("deepseek-ai/DeepSeek-R1-Distill-Qwen-7B", by["siliconflow"])
+        self.assertNotIn("Qwen/Qwen3-8B", by["siliconflow"])
         self.assertTrue(all(m == "openrouter/free" or str(m).endswith(":free") for m in by["openrouter"]))
         self.assertEqual(by["qwen"], ["qwen-flash"])
         blob = " ".join(m for _h, models in plan for m in models)
         self.assertNotIn("glm-4-flash-250414", blob)
         self.assertNotIn("glm-4.5-flash", blob)
+        self.assertNotIn("deepseek-chat", blob)
+        self.assertNotIn("deepseek", names)
         for _hop, models in plan:
             for model in models:
                 self.assertFalse(is_banned_primary(model), model)

@@ -589,10 +589,13 @@ def markdown_report(report: dict[str, Any]) -> str:
         "",
         "## Hop histogram (provider::model)",
         "",
-        "Lane-ok rows only. 429 abandons that provider and tries the next "
-        "current hopper: Zhipu glm-4.7-flash, SiliconFlow Qwen3-8B, "
-        "OpenRouter :free, DashScope qwen-flash, then other $0 current-flash. "
-        "glm-4-flash-250414 and pre-2025 flash are not used.",
+        "Lane-ok rows only. $0 hoppers only: Zhipu glm-4.7-flash, "
+        "SiliconFlow THUDM/GLM-Z1-9B-0414 and "
+        "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B, OpenRouter :free, "
+        "DashScope qwen-flash. A 402 tries the next id on that provider. "
+        "A 403 or 429 abandons the provider and does not continue into "
+        "DeepSeek chat, TokenHub, or Gemini. "
+        "glm-4-flash-250414, Qwen/Qwen3-8B, and deepseek-chat are not used.",
         "",
     ]
     hist = report.get("hop_histogram") or {}
