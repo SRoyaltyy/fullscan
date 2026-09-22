@@ -1,6 +1,6 @@
 {
   "date": "2026-09-22",
-  "generated_at": "2026-09-22T07:45:13.770373-04:00",
+  "generated_at": "2026-09-22T07:45:23.269403-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -41,24 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-09-22",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-22T07:04:44.261275-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-09-22_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1116653,
-          "preview": "5895 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5895 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -233,6 +215,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.587, 'dir': 'down', 'conf': 0.463, 'source': 'llm'}, Communication Services={'score': 3.182, 'dir': 'up', 'conf': 0.627, 'source': 'llm'}, Consumer Cyclical={'score': -0.448, 'dir': 'down', 'conf': 0.518, 'source': 'llm'}, Consumer Defensive={'score': 1.142, 'dir': 'up', 'conf': 0.546, 'source': 'llm'}, Energy={'score': -5.917, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Financial={'score': -1.41, 'dir': 'down', 'conf': 0.556, 'source': 'llm'}, Healthcare={'score': -1.334, 'dir': 'down', 'conf': 0.553, 'source': 'llm'}, Industrials={'score': -4.127, 'dir': 'down', 'conf': 0.65, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-22\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-22T07:45:21.898784-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-22_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2230319,
+          "preview": "5895 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GOOG, GOOGL, MGNI, MTCH, CNK"
+        }
+      ],
+      "preview": "5895 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GOOG, GOOGL, MGNI, MTCH, CNK"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
