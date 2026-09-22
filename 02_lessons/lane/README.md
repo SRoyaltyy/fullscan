@@ -13,8 +13,11 @@ non-`Pro/`, Zhipu Flash IDs). Does not touch `flatten_robust` or the cash book.
 OpenRouter IDs must be `openrouter/free` or end in `:free`. SiliconFlow strips
 `Pro/`. Zhipu primary Flash is `glm-4.7-flash` only (Cyrus 2026-09-21:
 never `glm-4-flash-250414` / old glm-4-flash / `qwen2.5-7b-instruct` on
-primary or news). On 429, abandon that provider — do not fall down older
-sibling IDs. DashScope primary is `qwen-flash`.
+primary or news). On 429, that model's quota is exhausted — hop to the
+next current allowlisted model on the same lane (do not abandon the whole
+provider on the first 429; never fall down banned last-resort IDs).
+True dead-provider statuses may still leave the lane. DashScope primary
+is `qwen-flash`.
 `DASHSCOPE_BASE_URL` (if set) is tried before public `dashscope*.aliyuncs.com`.
 
 Additional free-strain overflow (still ahead of TokenHub):

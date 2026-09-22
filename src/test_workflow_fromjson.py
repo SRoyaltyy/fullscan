@@ -20,6 +20,7 @@ import json
 import re
 from pathlib import Path
 from typing import Any, Iterator
+from unittest import mock
 
 ROOT = Path(__file__).resolve().parent.parent
 WF = ROOT / ".github" / "workflows"
@@ -1138,21 +1139,81 @@ def test_lane_paid_deepseek_opt_in() -> None:
             os.environ["LANE_ALLOW_PAID_DEEPSEEK"] = prev
 
 
-def test_lane_hop_429_abandons_provider() -> None:
-    """429 / rate-limit skips the provider; never older sibling IDs."""
+def test_lane_hop_429_next_model_same_lane() -> None:
+    """429 hops to the next allowlisted model; never banned IDs; DEAD skips lane."""
     from src import lane_route
 
     lane_route._SKIP.clear()
+    lane_route._RATE_LIMITED.clear()
     seen: list[str] = []
 
-    def call_429(model):
+    def call_429_then_ok(model):
+        seen.append(model)
+        if model == "glm-4.7-flash":
+            return None, 429, "rate limited"
+        return {"ok": True, "model": model}, 200, model
+
+    # Sleep is intentional on 429; keep tests fast.
+    with mock.patch.object(lane_route.time, "sleep", lambda *_a, **_k: None):
+        parsed, info = lane_route.hop_models(
+            "siliconflow",
+            ["glm-4.7-flash", "Qwen/Qwen3-8B", "glm-4-flash-250414"],
+            call_429_then_ok,
+        )
+    assert parsed == {"ok": True, "model": "Qwen/Qwen3-8B"}
+    assert info == "Qwen/Qwen3-8B"
+    assert seen == ["glm-4.7-flash", "Qwen/Qwen3-8B"], seen
+    assert "glm-4-flash-250414" not in seen
+    assert "siliconflow" not in lane_route._SKIP
+    assert "siliconflow::glm-4.7-flash" in lane_route._RATE_LIMITED
+
+    # Same lane later: skip the model that already 429'd; do not abandon lane.
+    seen.clear()
+
+    def call_ok(model):
+        seen.append(model)
+        return {"ok": True, "model": model}, 200, model
+
+    parsed, info = lane_route.hop_models(
+        "siliconflow",
+        ["glm-4.7-flash", "Qwen/Qwen3-8B"],
+        call_ok,
+    )
+    assert parsed == {"ok": True, "model": "Qwen/Qwen3-8B"}
+    assert seen == ["Qwen/Qwen3-8B"], seen
+
+    lane_route._SKIP.clear()
+    lane_route._RATE_LIMITED.clear()
+    seen.clear()
+
+    def call_all_429(model):
         seen.append(model)
         return None, 429, "rate limited"
 
+    with mock.patch.object(lane_route.time, "sleep", lambda *_a, **_k: None):
+        parsed, info = lane_route.hop_models(
+            "zhipu",
+            ["glm-4.7-flash", "glm-4-flash-250414", "glm-4.5-flash"],
+            call_all_429,
+        )
+    assert parsed is None and info is None
+    assert seen == ["glm-4.7-flash"], seen
+    assert "zhipu" not in lane_route._SKIP
+    assert "glm-4-flash-250414" not in seen
+    assert "glm-4.5-flash" not in seen
+
+    lane_route._SKIP.clear()
+    lane_route._RATE_LIMITED.clear()
+    seen.clear()
+
+    def call_dead(model):
+        seen.append(model)
+        return None, 401, "unauthorized"
+
     parsed, info = lane_route.hop_models(
         "zhipu",
-        ["glm-4.7-flash", "glm-4-flash-250414", "glm-4.5-flash"],
-        call_429,
+        ["glm-4.7-flash", "Qwen/Qwen3-8B"],
+        call_dead,
     )
     assert parsed is None and info is None
     assert seen == ["glm-4.7-flash"], seen
@@ -1161,13 +1222,14 @@ def test_lane_hop_429_abandons_provider() -> None:
     seen.clear()
     parsed, info = lane_route.hop_models(
         "zhipu",
-        ["glm-4.7-flash", "glm-4-flash-250414"],
-        call_429,
+        ["glm-4.7-flash", "Qwen/Qwen3-8B"],
+        call_dead,
     )
     assert parsed is None
     assert seen == [], seen
-
     lane_route._SKIP.clear()
+    lane_route._RATE_LIMITED.clear()
+
     seen.clear()
 
     def call_404(model):
@@ -1184,6 +1246,7 @@ def test_lane_hop_429_abandons_provider() -> None:
     assert "glm-4-flash-250414" not in seen
     assert "glm-4.5-flash" not in seen
     lane_route._SKIP.clear()
+    lane_route._RATE_LIMITED.clear()
 
 
 def test_lane_free_strain_keys_and_skip() -> None:
@@ -1315,7 +1378,7 @@ def main() -> None:
         test_lane_tokenhub_base_url_bearer_and_flash_then_hy3,
         test_lane_cyrus_primary_allowlists_ban_old_flash,
         test_lane_paid_deepseek_opt_in,
-        test_lane_hop_429_abandons_provider,
+        test_lane_hop_429_next_model_same_lane,
         test_lane_free_strain_keys_and_skip,
         test_ci_workflow_is_wired,
     ]

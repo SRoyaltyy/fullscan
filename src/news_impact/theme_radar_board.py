@@ -85,9 +85,10 @@ def lane_available() -> dict[str, Any]:
 def _hop_elite_subset(unique: list[dict], results: list[dict]) -> tuple[list[dict], dict]:
     """Deterministic roles first. Lane current-flash only on clash/converge groups.
 
-    Lane does not retag the full Elite set. One dead hop chain (429 / empty /
-    no live model) leaves the provider and stops. Indirect roles stay the
-    family template (substitute / stays_out / arms_dealer / peer / basket).
+    Lane does not retag the full Elite set. Inside hop_models, 429 hops to
+    the next allowlisted model on the same lane; a fully dead hop chain
+    (empty / no live model) stops further Elite re-hops. Indirect roles stay
+    the family template (substitute / stays_out / arms_dealer / peer / basket).
     """
     probed = lane_available()
     meta = {
@@ -126,21 +127,24 @@ def _path_text(use_lane: bool, hop: dict) -> str:
             "so clash/converge groups were not re-hopped. "
             "Watermark is deterministic::news_impact_v2::theme_radar_elite. "
             "Re-run with --lane when current-flash keys exist; "
-            "429 leaves that provider and does not fall through to pre-2025 flash."
+            "429 hops to the next allowlisted model on the same lane and "
+            "does not fall through to pre-2025 flash."
         )
     if hop.get("live"):
         return (
             "deterministic roles on the full Elite book, then Lane current-flash "
             f"on clash/converge groups only ({hop.get('live')} live hops, "
             f"{hop.get('attempted')} attempted). "
-            "429 leaves the provider. Watermark is lane::model::theme_radar_elite."
+            "429 hops to the next allowlisted model on the same lane. "
+            "Watermark is lane::model::theme_radar_elite."
         )
     if hop.get("stopped") or probe.get("quota_dead"):
         return (
             "deterministic roles first. Lane on clash/converge groups was "
             "attempted and did not return a live current-flash model "
             f"(reason={probe.get('reason') or 'empty/429'}). "
-            "Provider left on 429. Grades stay on the deterministic router. "
+            "429 exhausted current allowlisted models on the lane. "
+            "Grades stay on the deterministic router. "
             "Watermark is deterministic::news_impact_v2::theme_radar_elite."
         )
     return (
