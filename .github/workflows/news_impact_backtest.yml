@@ -109,6 +109,19 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: |
           set -euo pipefail
+          # Redacted name check. Exit 2 is a mapping bug (PRESENT but Lane
+          # cannot see the key). Exit 1 means no current-flash key: this
+          # deterministic job still runs. It is not the Lane scoreboard.
+          # Push/schedule do not pass --lane. Lane-on-Elite is
+          # news_impact_theme_radar_lane.yml.
+          set +e
+          PYTHONPATH=. python3 -m src.news_impact_theme_radar_lane env
+          ec=$?
+          set -e
+          if [ "$ec" -eq 2 ]; then
+            echo "Lane env mapping bug"
+            exit 2
+          fi
           DATE="${{ github.event.inputs.date }}"
           LIMIT="${{ github.event.inputs.limit }}"
           EXTRA=()

@@ -597,12 +597,14 @@ def test_lane_json_zero_dollar_hoppers() -> None:
         assert DEFAULT_LANES.index(ahead) < DEFAULT_LANES.index("tokenhub"), ahead
     assert lanes_for("key_people") == DEFAULT_LANES
     assert lanes_for("custom") == DEFAULT_LANES
-    assert NEWS_HEAD == ["zhipu", "siliconflow", "openrouter", "qwen"]
+    assert NEWS_HEAD == ["zhipu", "siliconflow", "openrouter"]
     assert DIG_HEAD == ["siliconflow", "deepseek", "openrouter", "zhipu"]
-    assert lanes_for("news_to_tickers")[:4] == NEWS_HEAD
+    assert lanes_for("news_to_tickers") == NEWS_HEAD
     assert lanes_for("company_dig")[:4] == DIG_HEAD
-    # Overflow still the same $0 stack — no extra providers.
-    assert set(lanes_for("news_to_tickers")) == set(DEFAULT_LANES)
+    # News is a closed $0 list. It must not walk into DeepSeek or TokenHub.
+    assert "deepseek" not in lanes_for("news_to_tickers")
+    assert "tokenhub" not in lanes_for("news_to_tickers")
+    assert "gemini" not in lanes_for("news_to_tickers")
     assert set(lanes_for("company_dig")) == set(DEFAULT_LANES)
 
     header = text.split("on:", 1)[0]
@@ -748,7 +750,9 @@ def test_lane_news_and_dig_templates() -> None:
     assert token_budget(tmpl) == 900
     assert "listed" in system_for(tmpl).lower()
     sf_news = sf_models_for(tmpl)
-    assert sf_news[0] == "Qwen/Qwen3-8B"
+    assert sf_news[0] == "THUDM/GLM-Z1-9B-0414"
+    assert "Qwen/Qwen3-8B" not in sf_news
+    assert lanes_for(tmpl) == NEWS_HEAD
     assert not any("qwen2.5" in str(m).lower() for m in sf_news)
     assert not any(str(m).startswith("Pro/") for m in sf_news)
 
@@ -861,7 +865,8 @@ def test_lane_tokenhub_base_url_bearer_and_flash_then_hy3() -> None:
     zero = ("openrouter", "deepseek", "qwen", "zhipu", "moonshot",
             "siliconflow", "modelscope")
     assert DEFAULT_LANES.index("tokenhub") > max(DEFAULT_LANES.index(n) for n in zero)
-    for tmpl in ("custom", "news_to_tickers", "company_dig"):
+    assert "tokenhub" not in lanes_for("news_to_tickers")
+    for tmpl in ("custom", "company_dig"):
         order = lanes_for(tmpl)
         assert order.index("tokenhub") > order.index("openrouter")
         assert order.index("tokenhub") > order.index("qwen")
@@ -1023,6 +1028,7 @@ def test_lane_cyrus_primary_allowlists_ban_old_flash() -> None:
     assert not is_banned_primary("deepseek-v4-flash")
     assert not is_banned_primary("qwen-flash")
     assert not is_banned_primary("deepseek-flash")
+    assert is_banned_primary("deepseek-chat")
     assert set(LAST_RESORT_MODELS) >= {
         "glm-4-flash-250414",
         "glm-4.5-flash",
@@ -1030,7 +1036,9 @@ def test_lane_cyrus_primary_allowlists_ban_old_flash() -> None:
         "Qwen/Qwen2.5-7B-Instruct",
     }
 
-    for tmpl in ("custom", "news_to_tickers", "company_dig"):
+    assert sf_models_for("news_to_tickers")[0] == "THUDM/GLM-Z1-9B-0414"
+    assert "Qwen/Qwen3-8B" not in sf_models_for("news_to_tickers")
+    for tmpl in ("custom", "company_dig"):
         assert sf_models_for(tmpl)[0] == "Qwen/Qwen3-8B"
         for hop in lanes_for(tmpl):
             models = primary_models_for(hop, tmpl)
@@ -1042,15 +1050,18 @@ def test_lane_cyrus_primary_allowlists_ban_old_flash() -> None:
             assert "qwen2.5-7b" not in blob
 
     news_plan = hopper_plan("news_to_tickers")
-    assert [hop for hop, _ in news_plan[:4]] == [
-        "zhipu", "siliconflow", "openrouter", "qwen",
+    assert [hop for hop, _ in news_plan] == [
+        "zhipu", "siliconflow", "openrouter",
     ]
     by_hop = dict(news_plan)
     assert by_hop["zhipu"] == ["glm-4.7-flash"]
-    assert by_hop["siliconflow"][0] == "Qwen/Qwen3-8B"
-    assert by_hop["qwen"] == ["qwen-flash"]
-    assert by_hop["tokenhub"][0] == "glm-5.3-flash"
-    assert by_hop["deepseek"][0] == "deepseek-flash"
+    assert by_hop["siliconflow"][0] == "THUDM/GLM-Z1-9B-0414"
+    assert "Qwen/Qwen3-8B" not in by_hop["siliconflow"]
+    assert "qwen" not in by_hop
+    assert "deepseek" not in by_hop
+    assert "deepseek-chat" not in " ".join(
+        m for _hop, models in news_plan for m in models
+    )
 
 
 def test_lane_hop_429_abandons_provider() -> None:
@@ -1101,6 +1112,60 @@ def test_lane_hop_429_abandons_provider() -> None:
     lane_route._SKIP.clear()
 
 
+def test_lane_hop_402_tries_next_free_id() -> None:
+    """402 is per-model. Do not abandon the lane, and never call a paid id."""
+    from src import lane_route
+
+    lane_route._SKIP.clear()
+    seen: list[str] = []
+
+    def call(model):
+        seen.append(model)
+        if model == "Qwen/Qwen3-8B":
+            return None, 402, "payment required"
+        if model == "THUDM/GLM-Z1-9B-0414":
+            return {"ok": True}, 200, model
+        return None, 500, "no"
+
+    parsed, info = lane_route.hop_models(
+        "siliconflow",
+        ["Qwen/Qwen3-8B", "deepseek-chat", "THUDM/GLM-Z1-9B-0414"],
+        call,
+    )
+    assert parsed == {"ok": True}
+    assert info == "THUDM/GLM-Z1-9B-0414"
+    assert seen == ["Qwen/Qwen3-8B", "THUDM/GLM-Z1-9B-0414"], seen
+    assert "deepseek-chat" not in seen
+    assert "siliconflow" not in lane_route._SKIP
+    lane_route._SKIP.clear()
+
+
+def test_news_ask_lane_refuses_anything_but_free_tier() -> None:
+    """News templates never open an HTTP call on a non-allowlist lane."""
+    from src import lane_route
+
+    ctx = {
+        "keys": {"qwen": "x", "deepseek": "x", "gemini": "x", "tokenhub": "x"},
+        "ollama_url": "",
+        "gh_direct": "",
+    }
+    for lane in ("qwen", "deepseek", "gemini", "tokenhub", "moonshot"):
+        parsed, info = lane_route.ask_lane(
+            lane, "hi", ctx, tmpl="news_impact",
+        )
+        assert parsed is None and info is None, lane
+    models = lane_route.primary_models_for("siliconflow", "news_impact")
+    assert models == [
+        "THUDM/GLM-Z1-9B-0414",
+        "deepseek-ai/DeepSeek-R1-Distill-Qwen-7B",
+    ], models
+    assert lane_route.primary_models_for("qwen", "news_impact") == []
+    assert all(
+        m == "openrouter/free" or str(m).endswith(":free")
+        for m in lane_route.primary_models_for("openrouter", "news_impact")
+    )
+
+
 def test_ci_workflow_is_wired() -> None:
     yml = (WF / "workflow_selfcheck.yml").read_text(encoding="utf-8")
     assert "pull_request:" in yml
@@ -1132,6 +1197,8 @@ def main() -> None:
         test_lane_tokenhub_base_url_bearer_and_flash_then_hy3,
         test_lane_cyrus_primary_allowlists_ban_old_flash,
         test_lane_hop_429_abandons_provider,
+        test_lane_hop_402_tries_next_free_id,
+        test_news_ask_lane_refuses_anything_but_free_tier,
         test_ci_workflow_is_wired,
     ]
     failed = 0

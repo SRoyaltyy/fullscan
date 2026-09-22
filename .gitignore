@@ -8,5 +8,6 @@ build/
 .venv/
 venv/
 vendor/theme-radar/
+01_daily/news/lane_tier/
 grids_deep/
 data/factor_mine/oppset_clock_b/*.csv
