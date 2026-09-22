@@ -76,15 +76,15 @@
     },
     "2d": {
       "hits": 4838,
-      "n_calls": 9803,
+      "n_calls": 9804,
       "hit_rate": 0.4935,
-      "graded_articles": 6530
+      "graded_articles": 6531
     },
     "3d": {
-      "hits": 4699,
-      "n_calls": 9565,
-      "hit_rate": 0.4913,
-      "graded_articles": 6426
+      "hits": 4702,
+      "n_calls": 9568,
+      "hit_rate": 0.4914,
+      "graded_articles": 6427
     },
     "4d": {
       "hits": 4578,
@@ -93,10 +93,10 @@
       "graded_articles": 6319
     },
     "5d": {
-      "hits": 4463,
-      "n_calls": 9218,
-      "hit_rate": 0.4842,
-      "graded_articles": 6216
+      "hits": 4470,
+      "n_calls": 9225,
+      "hit_rate": 0.4846,
+      "graded_articles": 6217
     }
   },
   "rippers": {
