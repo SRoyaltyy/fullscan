@@ -24,6 +24,10 @@ from .hygiene import (
 
 ET = ZoneInfo("America/New_York")
 MARKET_OPEN = dtime(9, 30)
+# Next bar more than this many calendar days after the wanted session is
+# not that session (halted names aside). A 2022 headline must not enter
+# on the first 2024 bar in the store.
+MAX_ENTRY_GAP_DAYS = 10
 STORE = Path("data/prices/ohlc.parquet")
 
 # Theme / sector → listed expression when the router named a theme, not a ticker.
@@ -401,19 +405,23 @@ def load_book(
     book = _bars_from_parquet(names)
     if not fetch:
         return book
-    need = []
+    today = datetime.now(ET).date().isoformat()
+    # Parquet already holds history. Only download the missing tail for
+    # names we have, and the requested window for names we do not.
+    # One ancient headline must not re-pull years of bars for every ticker.
+    groups: dict[str, list[str]] = {}
     for t in names:
         rows = book.get(t) or []
-        if not rows:
-            need.append(t)
+        if rows and rows[-1]["date"] >= today:
             continue
-        last = rows[-1]["date"]
-        # Parquet in this repo currently ends 2026-09-11; fill the gap.
-        if last < datetime.now(ET).date().isoformat():
-            need.append(t)
-    if need:
-        print(f"[news_impact.grade] yfinance fill {len(need)} tickers from {start}")
-        book = _merge_bars(book, _yf_download(need, start))
+        fill_from = rows[-1]["date"] if rows else start
+        groups.setdefault(fill_from, []).append(t)
+    for fill_from, ticks in sorted(groups.items()):
+        print(
+            f"[news_impact.grade] yfinance fill {len(ticks)} tickers from {fill_from}",
+            flush=True,
+        )
+        book = _merge_bars(book, _yf_download(ticks, fill_from))
     return book
 
 
@@ -447,11 +455,18 @@ def grade_one(
         "entry_open": None,
         "through": None,
         "ret_1d": None,
+        "ret_2d": None,
+        "ret_3d": None,
+        "ret_4d": None,
         "ret_5d": None,
         "ret_20d": None,
         "ret_63d": None,
         "ret_horizon": None,
         "agree_1d": None,
+        "agree_2d": None,
+        "agree_3d": None,
+        "agree_4d": None,
+        "agree_5d": None,
         "agree_20d": None,
         "agree_63d": None,
         "agree_horizon": None,
@@ -475,6 +490,17 @@ def grade_one(
     if entry_idx is None:
         base["note"] = f"no session on/after {want} (tape through {bars[-1]['date']})"
         return base
+    try:
+        want_d = datetime.strptime(want, "%Y-%m-%d").date()
+        bar_d = datetime.strptime(bars[entry_idx]["date"], "%Y-%m-%d").date()
+    except ValueError:
+        want_d = bar_d = None
+    if want_d and bar_d and (bar_d - want_d).days > MAX_ENTRY_GAP_DAYS:
+        base["note"] = (
+            f"no session within {MAX_ENTRY_GAP_DAYS}d of {want} "
+            f"(next bar {bars[entry_idx]['date']})"
+        )
+        return base
     entry = bars[entry_idx]
     px = float(entry["open"])
     if px <= 0:
@@ -493,9 +519,15 @@ def grade_one(
             return None
         return round((close / px - 1.0) * 100.0, 2)
 
-    # 0-1d = same-session close vs entry open (intraday reaction).
+    # 0-1d = entry-session close vs entry open (next RTH after News Time).
+    # Nd = that same entry open vs the close N sessions later.
+    # Published at/after 09:30 ET, including the 09:30+30m (10:00) window,
+    # is not eligible for that cash session — the next bar is the entry.
     same = bars[entry_idx]
     base["ret_1d"] = round((float(same["close"]) / px - 1.0) * 100.0, 2)
+    base["ret_2d"] = ret_at(2)
+    base["ret_3d"] = ret_at(3)
+    base["ret_4d"] = ret_at(4)
     base["ret_5d"] = ret_at(5)
     base["ret_20d"] = ret_at(20)
     base["ret_63d"] = ret_at(63)
@@ -505,6 +537,10 @@ def grade_one(
     else:
         base["ret_horizon"] = ret_at(h_off)
     base["agree_1d"] = _agree(direction, base["ret_1d"])
+    base["agree_2d"] = _agree(direction, base["ret_2d"])
+    base["agree_3d"] = _agree(direction, base["ret_3d"])
+    base["agree_4d"] = _agree(direction, base["ret_4d"])
+    base["agree_5d"] = _agree(direction, base["ret_5d"])
     base["agree_20d"] = _agree(direction, base["ret_20d"])
     base["agree_63d"] = _agree(direction, base["ret_63d"])
     base["agree_horizon"] = _agree(direction, base["ret_horizon"])

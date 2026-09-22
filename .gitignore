@@ -7,5 +7,6 @@ dist/
 build/
 .venv/
 venv/
+vendor/theme-radar/
 grids_deep/
 data/factor_mine/oppset_clock_b/*.csv
