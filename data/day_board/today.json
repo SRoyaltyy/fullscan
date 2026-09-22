@@ -1,6 +1,6 @@
 {
   "date": "2026-09-22",
-  "generated_at": "2026-09-22T07:45:23.269403-04:00",
+  "generated_at": "2026-09-22T07:45:55.884020-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -41,31 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "weather",
-      "title": "Weather / regime",
-      "date": "2026-09-22",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-22T07:04:59.144111-04:00",
-      "files": [
-        {
-          "path": "01_daily/weather/2026-09-22_weather.json",
-          "ok": true,
-          "reason": "",
-          "size": 9757,
-          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.587, 'dir': 'down', 'conf': 0.463, 'source': 'llm'}, Communication Services={'score': 3.182, 'dir': 'up', 'conf': 0.627, 'source': 'llm'}, Consumer Cyclical={'score': -0.448, 'dir': 'down', 'conf': 0.518, 'source': 'llm'}, Consumer Defensive={'score': 1.142, 'dir': 'up', 'conf': 0.546, 'source': 'llm'}, Energy={'score': -5.917, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Financial={'score': -1.41, 'dir': 'down', 'conf': 0.556, 'source': 'llm'}, Healthcare={'score': -1.334, 'dir': 'down', 'conf': 0.553, 'source': 'llm'}, Industrials={'score': -4.127, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}"
-        },
-        {
-          "path": "01_daily/weather/2026-09-22_weather.md",
-          "ok": true,
-          "reason": "",
-          "size": 5397,
-          "preview": "# Weather report \u2014 2026-09-22\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-        }
-      ],
-      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -1.587, 'dir': 'down', 'conf': 0.463, 'source': 'llm'}, Communication Services={'score': 3.182, 'dir': 'up', 'conf': 0.627, 'source': 'llm'}, Consumer Cyclical={'score': -0.448, 'dir': 'down', 'conf': 0.518, 'source': 'llm'}, Consumer Defensive={'score': 1.142, 'dir': 'up', 'conf': 0.546, 'source': 'llm'}, Energy={'score': -5.917, 'dir': 'down', 'conf': 0.65, 'source': 'llm'}, Financial={'score': -1.41, 'dir': 'down', 'conf': 0.556, 'source': 'llm'}, Healthcare={'score': -1.334, 'dir': 'down', 'conf': 0.553, 'source': 'llm'}, Industrials={'score': -4.127, 'dir': 'down', 'conf': 0.65, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-22\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
-    },
     {
       "key": "join",
       "title": "Join / match rank",
@@ -233,6 +208,31 @@
         }
       ],
       "preview": "5895 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GOOG, GOOGL, MGNI, MTCH, CNK"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-22T07:45:54.494997-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-22_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7667541,
+          "preview": "2670 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, CFFN, ANET, SKM, DSGX"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-22_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8512246,
+          "preview": "2670 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, ETN, SFL, WWW, AVT"
+        }
+      ],
+      "preview": "2670 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, CFFN, ANET, SKM, DSGX \u00b7 2670 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, ETN, SFL, WWW, AVT"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

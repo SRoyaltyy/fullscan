@@ -1,6 +1,6 @@
 {
   "date": "2026-09-22",
-  "generated_at": "2026-09-22T07:45:23.269403-04:00",
+  "generated_at": "2026-09-22T07:45:55.884020-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -714,7 +714,7 @@
       "yaml": "stock_book_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 4,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -842,11 +842,13 @@
           "name": "Peer RS CSV",
           "path": "data/peers/2026-09-22_peer_rs.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=5100",
+          "size": 816611,
+          "said": "494 rows",
+          "bullets": [
+            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
+          ]
         },
         {
           "key": "book_json",
@@ -1940,6 +1942,31 @@
         }
       ],
       "preview": "5895 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 GOOG, GOOGL, MGNI, MTCH, CNK"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-22T07:45:54.494997-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-22_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7667541,
+          "preview": "2670 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, CFFN, ANET, SKM, DSGX"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-22_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8512246,
+          "preview": "2670 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, ETN, SFL, WWW, AVT"
+        }
+      ],
+      "preview": "2670 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 WWW, CFFN, ANET, SKM, DSGX \u00b7 2670 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ANET, ETN, SFL, WWW, AVT"
     }
   ],
   "href": {
