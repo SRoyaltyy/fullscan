@@ -1,6 +1,6 @@
 {
   "date": "2026-09-22",
-  "generated_at": "2026-09-22T07:58:34.394583-04:00",
+  "generated_at": "2026-09-22T07:58:42.528403-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -2073,6 +2073,108 @@
         }
       ],
       "preview": "1d BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU, UEC, HAL \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-22 BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU, UEC, HAL \u00b7 2026-09-22 BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU, UEC, HAL \u00b7 # Stock book \u2014 2026-09-22\n_Generated 2026-09-22T07:49:17.807220-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-09-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-22T07:58:40.362713-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 14272,
+          "preview": "2026-09-22 BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU, UEC, HAL"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 665,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-22.json",
+          "ok": true,
+          "reason": "",
+          "size": 97553,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-22_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 58064,
+          "preview": "2026-09-22 BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU, UEC, HAL"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 757265,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1061859,
+          "preview": "2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 757265,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 58064,
+          "preview": "2026-09-22 BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU, UEC, HAL"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 757265,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 757265,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1061859,
+          "preview": "2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 3093,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 3093,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-09-22 BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU, UEC, HAL \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-22 BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU, UEC, HAL \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-22 BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU, UEC, HAL \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-21 BUY PGEN, MGNI, IOVA, NEOG, HAE, ZD, IMAX, CNK \u00b7 SELL BTU, UEC, FLNC, HP, EU, SOC, GLND, CRC \u00b7 keys: date, generated_at, featured, quote, banner, clock_rule"
     }
   ],
   "href": {
