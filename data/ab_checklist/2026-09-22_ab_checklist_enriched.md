@@ -1,9 +1,9 @@
 # AB enriched — 2026-09-22
 
-- Base checklist: `stub/export`
+- Base checklist: `2026-09-22_ab_checklist.csv`
 - Peer map: `data/peers/correlations.csv` or `Correlations.xlsx` (5,511 names)
-- Peer RS: `2026-09-21_peer_rs.csv`
-- Export: `finviz_2026-09-21.csv`
+- Peer RS: `2026-09-22_peer_rs.csv`
+- Export: `finviz_2026-09-22.csv`
 
 ## Flag legend
 
@@ -18,28 +18,28 @@
 
 | Ticker | enr | base | ctx | rs_w | beat% | ind_med_w | sector | board | label |
 |--------|----:|-----:|----:|-----:|------:|----------:|--------|-------|-------|
-| SHIP | +12 | +8 | +4 | +0.3 | 50% | +2.0 | Industrials | flat | LEAD,peers↑,ind↑,sec↑ |
-| FCX | +12 | +8 | +4 | +3.3 | 78% | +3.5 | Basic Materials | flat | LEAD,peers↑,ind↑,sec↑ |
-| SBLK | +12 | +8 | +4 | +1.4 | 60% | +2.0 | Industrials | flat | LEAD,peers↑,ind↑,sec↑ |
-| FORM | +12 | +8 | +4 | +5.5 | 60% | +9.4 | Technology | flat | LEAD,peers↑,ind↑,sec↑ |
-| GLBS | +12 | +8 | +4 | +4.1 | 100% | +2.0 | Industrials | flat | LEAD,peers↑,ind↑,sec↑ |
-| NVT | +12 | +8 | +4 | +6.9 | 90% | +2.8 | Industrials | flat | LEAD,peers↑,ind↑,sec↑ |
-| VICR | +12 | +8 | +4 | +15.6 | 80% | +3.4 | Technology | flat | LEAD,peers↑,ind↑,sec↑ |
-| MU | +12 | +8 | +4 | +4.7 | 80% | +8.5 | Technology | flat | LEAD,peers↑,ind↑,sec↑ |
-| KOPN | +12 | +8 | +4 | +9.4 | 90% | +3.4 | Technology | flat | LEAD,peers↑,ind↑,sec↑ |
-| SA | +11 | +7 | +4 | +4.3 | 90% | +0.9 | Basic Materials | flat | LEAD,peers↑,ind↑,sec↑ |
-| SB | +11 | +7 | +4 | +6.2 | 100% | +2.0 | Industrials | flat | LEAD,peers↑,ind↑,sec↑ |
-| LLY | +11 | +7 | +4 | +1.2 | 70% | +1.2 | Healthcare | up | LEAD,peers↑,ind↑,sec↑ |
-| POWW | +11 | +7 | +4 | +3.3 | 62% | +0.8 | Industrials | flat | LEAD,peers↑,ind↑,sec↑ |
-| TER | +11 | +7 | +4 | +6.8 | 80% | +9.4 | Technology | flat | LEAD,peers↑,ind↑,sec↑ |
-| OGI | +11 | +7 | +4 | +3.5 | 83% | +0.4 | Healthcare | up | LEAD,peers↑,ind↑,sec↑ |
-| OESX | +11 | +7 | +4 | +8.8 | 80% | +2.8 | Industrials | flat | LEAD,peers↑,ind↑,sec↑ |
-| SMTC | +11 | +7 | +4 | +15.3 | 100% | +8.5 | Technology | flat | LEAD,peers↑,ind↑,sec↑ |
-| MRK | +11 | +7 | +4 | +1.9 | 100% | +1.2 | Healthcare | up | LEAD,peers↑,ind↑,sec↑ |
-| STX | +11 | +7 | +4 | +0.7 | 60% | +5.0 | Technology | flat | LEAD,peers↑,ind↑,sec↑ |
-| DELL | +11 | +7 | +4 | +2.7 | 67% | +5.0 | Technology | flat | LEAD,peers↑,ind↑,sec↑ |
-| PLPC | +11 | +7 | +4 | +5.0 | 100% | +2.8 | Industrials | flat | LEAD,peers↑,ind↑,sec↑ |
-| NTNX | +11 | +8 | +3 | +1.4 | 70% | +0.0 | Technology | flat | LEAD,peers↑,sec↑ |
-| HBM | +11 | +7 | +4 | +3.6 | 80% | +3.5 | Basic Materials | flat | LEAD,peers↑,ind↑,sec↑ |
-| COHR | +11 | +7 | +4 | +11.9 | 90% | +1.1 | Technology | flat | LEAD,peers↑,ind↑,sec↑ |
-| AXTI | +11 | +7 | +4 | +31.0 | 100% | +9.4 | Technology | flat | LEAD,peers↑,ind↑,sec↑ |
+| ANET | +19 | +17 | +2 | +1.7 | 67% | +5.6 | Technology | down | LEAD,peers↑,ind↑,sec↓ |
+| WWW | +17 | +17 | +0 | -0.8 | 29% | +2.1 | Consumer Cyclical | down | LAG,peers↑,ind↑,sec↓ |
+| ETN | +17 | +15 | +2 | +10.2 | 100% | +2.0 | Industrials | down | LEAD,peers↑,ind↑,sec↓ |
+| AVT | +17 | +15 | +2 | +0.4 | 67% | +1.9 | Technology | down | LEAD,peers↑,ind↑,sec↓ |
+| SFL | +17 | +15 | +2 | +2.7 | 90% | +0.8 | Industrials | down | LEAD,peers↑,ind↑,sec↓ |
+| SKM | +16 | +16 | +0 | +5.6 | 78% | -2.6 | Communication Serv | up | LEAD,peers↓,ind↓,sec↑ |
+| TER | +16 | +14 | +2 | +4.3 | 80% | +9.4 | Technology | down | LEAD,peers↑,ind↑,sec↓ |
+| AMD | +16 | +14 | +2 | +12.9 | 90% | +8.1 | Technology | down | LEAD,peers↑,ind↑,sec↓ |
+| LEU | +15 | +13 | +2 | +7.1 | 100% | +1.4 | Energy | down | LEAD,peers↑,ind↑,sec↓ |
+| PAYS | +15 | +15 | +0 | +3.7 | 70% | +1.0 | Technology | down | LEAD,peers↓,ind↑,sec↓ |
+| ILMN | +15 | +13 | +2 | +3.6 | 78% | +3.2 | Healthcare | down | LEAD,peers↑,ind↑,sec↓ |
+| FCX | +15 | +13 | +2 | +2.7 | 67% | +3.7 | Basic Materials | down | LEAD,peers↑,ind↑,sec↓ |
+| LH | +15 | +13 | +2 | +0.5 | 50% | +3.2 | Healthcare | down | LEAD,peers↑,ind↑,sec↓ |
+| JCI | +15 | +15 | +0 | +3.7 | 90% | -1.7 | Industrials | down | LEAD,peers↑,ind↓,sec↓ |
+| WCC | +15 | +13 | +2 | +5.7 | 90% | +1.6 | Industrials | down | LEAD,peers↑,ind↑,sec↓ |
+| TPC | +15 | +13 | +2 | +1.2 | 70% | +0.9 | Industrials | down | LEAD,peers↑,ind↑,sec↓ |
+| CLS | +15 | +13 | +2 | +3.7 | 78% | +3.5 | Technology | down | LEAD,peers↑,ind↑,sec↓ |
+| CFFN | +15 | +17 | -2 | +1.1 | 78% | -1.8 | Financial | down | LEAD,peers↓,ind↓,sec↓ |
+| CDNA | +15 | +15 | +0 | -2.0 | 22% | +3.2 | Healthcare | down | LAG,peers↑,ind↑,sec↓ |
+| ALB | +15 | +15 | +0 | +0.6 | 57% | +0.2 | Basic Materials | down | LEAD,peers↓,ind↑,sec↓ |
+| HIMX | +14 | +12 | +2 | +5.4 | 70% | +8.1 | Technology | down | LEAD,peers↑,ind↑,sec↓ |
+| HRI | +14 | +14 | +0 | -0.6 | 38% | +0.5 | Industrials | down | LAG,peers↑,ind↑,sec↓ |
+| MH | +14 | +14 | +0 | — | — | -0.4 | Consumer Defensive | up | ind↓,sec↑ |
+| STAG | +14 | +12 | +2 | +1.1 | 70% | +0.1 | Real Estate | down | LEAD,peers↑,ind↑,sec↓ |
+| EMR | +14 | +12 | +2 | +0.5 | 56% | +2.0 | Industrials | down | LEAD,peers↑,ind↑,sec↓ |
