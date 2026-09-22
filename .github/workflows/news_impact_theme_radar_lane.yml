@@ -1,0 +1,274 @@
+name: Theme-radar Lane backtest
+
+# Lane-on-Elite effectiveness. Not the deterministic #314 board.
+# Push of this file on a cursor/* branch runs it (agent tokens cannot
+# workflow_dispatch until the file is on main). Secrets are the same
+# names lane_news_scan already loads. 429 abandons that provider.
+# Does not touch flatten / Webull / factor-mine / theme-radar.
+
+on:
+  push:
+    branches:
+      - "cursor/**"
+    paths:
+      - ".github/workflows/news_impact_theme_radar_lane.yml"
+      - "src/news_impact/lane_env.py"
+      - "src/news_impact/theme_radar_lane.py"
+      - "src/news_impact_theme_radar_lane.py"
+      - "src/test_theme_radar_lane.py"
+      - "src/news_impact/theme_radar_board.py"
+  workflow_dispatch:
+    inputs:
+      date:
+        description: "YYYY-MM-DD session or all"
+        required: false
+        default: "all"
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: theme-radar-lane-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Lane unit tests
+        run: PYTHONPATH=. python3 -m src.test_theme_radar_lane
+
+  prepare:
+    needs: unit
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    outputs:
+      dates: ${{ steps.dates.outputs.dates }}
+      n_dates: ${{ steps.dates.outputs.n_dates }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install pandas pyarrow yfinance
+      - name: Cut Tier A from Elite ingest
+        run: |
+          set -euo pipefail
+          DATE="${{ github.event.inputs.date }}"
+          if [ -z "$DATE" ]; then DATE=all; fi
+          PYTHONPATH=. python3 -m src.news_impact_theme_radar_lane prepare --date "$DATE"
+      - name: Publish session list
+        id: dates
+        run: |
+          set -euo pipefail
+          python3 - << 'PY' >> "$GITHUB_OUTPUT"
+          import json
+          dates = json.load(open("01_daily/news/lane_tier/dates.json"))
+          print("dates=" + json.dumps(dates))
+          print("n_dates=" + str(len(dates)))
+          PY
+          echo "sessions $(cat 01_daily/news/lane_tier/dates.json)"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: lane-tier-manifest
+          path: 01_daily/news/lane_tier/manifest.json
+          if-no-files-found: error
+
+  hop:
+    needs: prepare
+    if: needs.prepare.outputs.n_dates != '0'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        date: ${{ fromJSON(needs.prepare.outputs.dates) }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use branch tip so a rerun resumes committed shards
+        run: |
+          set -euo pipefail
+          BRANCH="${GITHUB_HEAD_REF:-$GITHUB_REF_NAME}"
+          git fetch origin "$BRANCH"
+          git checkout -B "$BRANCH" "origin/$BRANCH"
+      - uses: actions/download-artifact@v4
+        with:
+          name: lane-tier-manifest
+          path: lane_in
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install pandas pyarrow yfinance
+      - name: Redacted env check and current-flash hop
+        id: hop
+        continue-on-error: true
+        env:
+          LANE_URL: ${{ vars.LANE_URL }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GITHUB_MODELS_TOKEN: ${{ secrets.GITHUB_MODELS_TOKEN }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          SAMBANOVA_API_KEY: ${{ secrets.SAMBANOVA_API_KEY }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          OLLAMA_URL: ${{ secrets.OLLAMA_URL || vars.OLLAMA_URL }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+          DASHSCOPE_BASE_URL: ${{ secrets.DASHSCOPE_BASE_URL }}
+          QWEN_API_KEY: ${{ secrets.QWEN_API_KEY }}
+          SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}
+          ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
+          GLM_API_KEY: ${{ secrets.GLM_API_KEY }}
+          MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
+          MODELSCOPE_API_KEY: ${{ secrets.MODELSCOPE_API_KEY }}
+          MODELSCOPE_API_TOKEN: ${{ secrets.MODELSCOPE_API_TOKEN }}
+          MODELSCOPE_SDK_TOKEN: ${{ secrets.MODELSCOPE_SDK_TOKEN }}
+          TOKENHUB_API_KEY: ${{ secrets.TOKENHUB_API_KEY }}
+          TENCENT_API_KEY: ${{ secrets.TENCENT_API_KEY }}
+          HUNYUAN_API_KEY: ${{ secrets.HUNYUAN_API_KEY }}
+          TOKENHUB_BASE_URL: ${{ secrets.TOKENHUB_BASE_URL }}
+          TENCENT_BASE_URL: ${{ secrets.TENCENT_BASE_URL }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          set -euo pipefail
+          DATE="${{ matrix.date }}"
+          PYTHONPATH=. python3 -m src.news_impact_theme_radar_lane env --strict
+          PYTHONPATH=. python3 -m src.news_impact_theme_radar_lane hop \
+            --date "$DATE" \
+            --manifest lane_in/manifest.json \
+            --out "01_daily/news/lane_shards/${DATE}.json"
+      - name: Upload shard
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lane-shard-${{ matrix.date }}
+          path: 01_daily/news/lane_shards/${{ matrix.date }}.json
+          if-no-files-found: warn
+      - name: Commit shard for resume
+        if: always()
+        run: |
+          set -euo pipefail
+          DATE="${{ matrix.date }}"
+          FILE="01_daily/news/lane_shards/${DATE}.json"
+          if [ ! -f "$FILE" ]; then
+            echo "no shard to commit"
+            exit 0
+          fi
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add "$FILE"
+          if git diff --staged --quiet; then
+            echo "shard unchanged"
+            exit 0
+          fi
+          git commit -m "auto: lane shard ${DATE}"
+          BRANCH="${GITHUB_HEAD_REF:-$GITHUB_REF_NAME}"
+          for i in 1 2 3 4 5 6; do
+            if git pull --rebase origin "$BRANCH" && git push origin "HEAD:${BRANCH}"; then
+              exit 0
+            fi
+            echo "push retry $i"
+            sleep $((i * 3))
+            git fetch origin "$BRANCH"
+          done
+          exit 1
+      - name: Fail the shard if Lane did not cover it
+        if: steps.hop.outcome != 'success'
+        run: exit 1
+
+  merge:
+    needs: [prepare, hop]
+    if: always() && needs.prepare.result == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: lane-tier-manifest
+          path: lane_in
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: lane-shard-*
+          path: lane_shards_in
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install pandas pyarrow
+      - name: Merge shards into the Lane board
+        run: |
+          set -euo pipefail
+          PYTHONPATH=. python3 -m src.news_impact_theme_radar_lane merge \
+            --manifest lane_in/manifest.json \
+            --shards lane_shards_in
+          echo "----- headline -----"
+          head -40 03_scoreboard/NEWS_IMPACT_THEME_RADAR_LANE.md
+      - name: Commit Lane board when a live watermark exists
+        if: always()
+        run: |
+          set -euo pipefail
+          python3 - << 'PY'
+          import json
+          from pathlib import Path
+          path = Path("01_daily/news/all_news_impact_theme_radar_lane.json")
+          if not path.exists():
+              raise SystemExit(0)
+          report = json.loads(path.read_text())
+          print(
+              "lane_ok", report.get("n_lane_ok"),
+              "tier", report.get("n_tier"),
+              "ship", report.get("ship_lane"),
+          )
+          if not report.get("n_lane_ok"):
+              print("lane_ok is 0 — not committing a deterministic board as Lane")
+              raise SystemExit(0)
+          Path("/tmp/commit_lane").write_text("1")
+          PY
+          if [ ! -f /tmp/commit_lane ]; then
+            exit 0
+          fi
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add \
+            03_scoreboard/NEWS_IMPACT_THEME_RADAR_LANE.md \
+            01_daily/news/all_news_impact_theme_radar_lane.json
+          if git diff --staged --quiet; then
+            echo "board unchanged"
+            exit 0
+          fi
+          git commit -m "auto: theme-radar Lane scoreboard"
+          BRANCH="${GITHUB_HEAD_REF:-$GITHUB_REF_NAME}"
+          git fetch origin "$BRANCH"
+          git pull --rebase origin "$BRANCH"
+          git push origin "HEAD:${BRANCH}"
+      - name: Require a live Lane watermark on every Tier A row
+        run: |
+          set -euo pipefail
+          python3 - << 'PY'
+          import json
+          from pathlib import Path
+          path = Path("01_daily/news/all_news_impact_theme_radar_lane.json")
+          if not path.exists():
+              raise SystemExit("Lane board missing")
+          report = json.loads(path.read_text())
+          print(
+              "tier", report.get("n_tier"),
+              "lane_ok", report.get("n_lane_ok"),
+              "lane_fail", report.get("n_lane_fail"),
+              "leftover", report.get("n_deterministic_leftover"),
+              "missing", report.get("n_missing"),
+              "ship_lane", report.get("ship_lane"),
+          )
+          if not report.get("ship_lane"):
+              raise SystemExit(1)
+          PY

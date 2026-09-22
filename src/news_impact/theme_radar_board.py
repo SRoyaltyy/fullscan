@@ -67,32 +67,38 @@ def _lane_live(row: dict) -> bool:
 
 
 def lane_available() -> dict[str, Any]:
-    """Current-flash keys present? No network. 429 is detected on the hop."""
+    """Current-flash keys present? No network. 429 is detected on the hop.
+
+    GITHUB_TOKEN alone is not a Lane provider. Actions always injects it.
+    """
     try:
-        from src import lane_route as lane
+        from src.news_impact.lane_env import readiness
     except Exception as exc:  # noqa: BLE001
         return {"ok": False, "quota_dead": True, "reason": f"import:{exc}"}
-    keys, ollama_url, gh_direct = lane.load_keys()
-    if not keys and not ollama_url and not gh_direct:
+    info = readiness()
+    if info.get("bug"):
         return {
             "ok": False,
             "quota_dead": True,
-            "reason": "no_keys",
+            "reason": "env_mapping_bug",
+            "missed_hoppers": info.get("missed_hoppers") or [],
         }
+    if not info.get("ready"):
+        return {"ok": False, "quota_dead": True, "reason": "no_keys"}
     return {"ok": True, "quota_dead": False, "reason": "keys_present"}
 
 
 def _hop_elite_subset(unique: list[dict], results: list[dict]) -> tuple[list[dict], dict]:
     """Deterministic roles first. Lane current-flash only on clash/converge groups.
 
-    Lane does not retag the full Elite set. One dead hop chain (429 / empty /
-    no live model) leaves the provider and stops. Indirect roles stay the
-    family template (substitute / stays_out / arms_dealer / peer / basket).
+    A dead hop leaves that provider (Lane's own 429 rule) and the next article
+    still runs. This clash-only pass is not the Tier A Lane scoreboard.
     """
     probed = lane_available()
     meta = {
         "attempted": 0,
         "live": 0,
+        "fail": 0,
         "stopped": False,
         "probe": probed,
         "scope": "clash_converge",
@@ -109,31 +115,37 @@ def _hop_elite_subset(unique: list[dict], results: list[dict]) -> tuple[list[dic
         if _lane_live(hopped):
             out[i] = hopped
             meta["live"] += 1
-            continue
-        meta["stopped"] = True
-        break
+        else:
+            meta["fail"] = int(meta.get("fail") or 0) + 1
     return out, meta
 
 
 def _path_text(use_lane: bool, hop: dict) -> str:
     probe = hop.get("probe") or {}
-    if not use_lane or probe.get("reason") == "no_keys":
+    if not use_lane:
         return (
             "deterministic router on every unique Elite title. "
             "Indirect roles are the family template "
             "(substitute / stays_out / arms_dealer / peer / sector basket), "
-            "not a Lane tag. Lane quota is dead in this run (no provider keys), "
-            "so clash/converge groups were not re-hopped. "
-            "Watermark is deterministic::news_impact_v2::theme_radar_elite. "
-            "Re-run with --lane when current-flash keys exist; "
-            "429 leaves that provider and does not fall through to pre-2025 flash."
+            "not a Lane tag. Lane was not requested on this run, so this file "
+            "is not a Lane scoreboard even when provider secrets are present. "
+            "The Lane-on-Elite test writes "
+            "03_scoreboard/NEWS_IMPACT_THEME_RADAR_LANE.md."
+        )
+    if probe.get("reason") in {"no_keys", "env_mapping_bug"}:
+        return (
+            "Lane was requested and the current-flash provider check failed "
+            f"(reason={probe.get('reason')}). "
+            "Grades stay on the deterministic router. This is not a Lane result. "
+            "GITHUB_TOKEN alone does not count as a hopper."
         )
     if hop.get("live"):
         return (
             "deterministic roles on the full Elite book, then Lane current-flash "
-            f"on clash/converge groups only ({hop.get('live')} live hops, "
-            f"{hop.get('attempted')} attempted). "
-            "429 leaves the provider. Watermark is lane::model::theme_radar_elite."
+            f"on clash/converge groups only ({hop.get('live')} live, "
+            f"{hop.get('fail', 0)} failed, {hop.get('attempted')} attempted). "
+            "429 leaves that provider and the next current hopper is tried. "
+            "This clash-only pass is not the Tier A Lane scoreboard."
         )
     if hop.get("stopped") or probe.get("quota_dead"):
         return (
@@ -141,7 +153,7 @@ def _path_text(use_lane: bool, hop: dict) -> str:
             "attempted and did not return a live current-flash model "
             f"(reason={probe.get('reason') or 'empty/429'}). "
             "Provider left on 429. Grades stay on the deterministic router. "
-            "Watermark is deterministic::news_impact_v2::theme_radar_elite."
+            "This is not a Lane result."
         )
     return (
         "deterministic router on every unique Elite title. "
