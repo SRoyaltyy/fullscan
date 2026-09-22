@@ -1,18 +1,17 @@
 {
   "date": "2026-09-22",
-  "generated_at": "2026-09-22T04:31:20.229142-04:00",
+  "generated_at": "2026-09-22T04:31:38.883368-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-22_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-22/_board.json` \u2014 missing",
-    "MISSING News actions JSON `01_daily/news/2026-09-22_actions.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-09-22_judge.md` \u2014 missing"
   ],
   "counts": {
     "ok": 4,
-    "partial": 3,
-    "fail": 1,
+    "partial": 4,
+    "fail": 0,
     "n": 8
   },
   "processes": [
@@ -184,7 +183,7 @@
       "inputs_ready": true,
       "n_req_ok": 3,
       "n_req": 20,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 3,
       "files": [
         {
@@ -305,11 +304,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-22_actions.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 32121,
+          "said": "52 ticker actions \u00b7 5 events \u00b7 157 headlines \u00b7 XLE SELL, COP BUY, EOG BUY, RRC BUY, SM BUY, REPX BUY, INR BUY, OXY BUY",
+          "bullets": [
+            "SELL XLE",
+            "BUY COP",
+            "BUY EOG",
+            "BUY RRC"
+          ]
         },
         {
           "key": "general",
@@ -593,8 +597,8 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "FAIL",
-      "inputs_ready": false,
+      "status": "PARTIAL",
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
       "n_opt_ok": 0,
@@ -605,11 +609,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-22_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 32121,
+          "said": "52 ticker actions \u00b7 5 events \u00b7 157 headlines \u00b7 XLE SELL, COP BUY, EOG BUY, RRC BUY, SM BUY, REPX BUY, INR BUY, OXY BUY",
+          "bullets": [
+            "SELL XLE",
+            "BUY COP",
+            "BUY EOG",
+            "BUY RRC"
+          ]
         },
         {
           "key": "in_digest",
@@ -638,8 +647,17 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "52 ticker actions \u00b7 5 events \u00b7 157 headlines \u00b7 XLE SELL, COP BUY, EOG BUY, RRC BUY, SM BUY, REPX BUY, INR BUY, OXY BUY",
+      "bullets": [
+        "SELL XLE",
+        "BUY COP",
+        "BUY EOG",
+        "BUY RRC",
+        "BUY SM",
+        "BUY REPX",
+        "BUY INR",
+        "BUY OXY"
+      ]
     },
     {
       "key": "stock_book",
@@ -679,11 +697,16 @@
           "name": "News actions JSON",
           "path": "01_daily/news/2026-09-22_actions.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 32121,
+          "said": "52 ticker actions \u00b7 5 events \u00b7 157 headlines \u00b7 XLE SELL, COP BUY, EOG BUY, RRC BUY, SM BUY, REPX BUY, INR BUY, OXY BUY",
+          "bullets": [
+            "SELL XLE",
+            "BUY COP",
+            "BUY EOG",
+            "BUY RRC"
+          ]
         },
         {
           "key": "in_digest",
@@ -1332,6 +1355,31 @@
         }
       ],
       "preview": "35 events \u00b7 UNGA 81: Trump address and whirlwind bilaterals | Trump\u2013Zelensky UNGA sideline on energy-infrastructure truce | Hormuz tanker war still live; Brent ~$101\u2013102 | Trump\u2013Xi Washington summit (Xi visit Sept 23\u201325) | Pezeshkian UNGA address; possible Trump\u2013Iran sideline | US Section 338 import bans on selected Canadian goods \u00b7 # Event Scan \u2014 2026-09-22\n- events tracked: **35** (via openclaw)\n- uncertainty: **elevated**\n- summary: The two-way overlay is unchanged and now compressed into 48 hours: Thursday's Trump\u2013Xi summit (tariff cuts/AI vs Taiwan arms and the Graham secondary-tariff clock) against a still-unresolved Hormuz tanker war with Brent ~$101\u2013102. G3 tightening is done for this window (Warsh 3.75\u20134.00%, BoJ 1.25% effective Sept 24, ECB 2.50%), so the data that can still reprice the path are Aug PCE (Sept 30) and Oct 2 NFP, while US housing is already cracking even as nominal retail sales rebounded +1.2%."
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "date": "2026-09-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-22T04:31:38.257739-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-22_actions.json",
+          "ok": true,
+          "reason": "",
+          "size": 32121,
+          "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
+        },
+        {
+          "path": "01_daily/news/2026-09-22_actions.md",
+          "ok": true,
+          "reason": "",
+          "size": 10829,
+          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-09-22T04:31:38.244901-04:00\nraw=157 unique_events=5 tickers=52"
+        }
+      ],
+      "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-22T04:31:38.244901-04:00\nraw=157 unique_events=5 tickers=52"
     }
   ],
   "href": {
