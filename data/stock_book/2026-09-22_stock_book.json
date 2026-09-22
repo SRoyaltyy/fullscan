@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-09-22",
-    "generated_at": "2026-09-22T16:58:00.517143-04:00",
+    "generated_at": "2026-09-22T17:03:13.300490-04:00",
     "general_bias": -0.357,
     "sector_bias": {
       "Basic Materials": -0.2315,
@@ -33,8 +33,8 @@
         "gate": 0.5
       },
       "sector:Consumer Cyclical": {
-        "hit_rate": 0.5,
-        "n": 24,
+        "hit_rate": 0.48,
+        "n": 25,
         "gate": 0.85
       },
       "sector:Consumer Defensive": {
@@ -676,53 +676,6 @@
           "region": "neutral"
         },
         {
-          "ticker": "PRTH",
-          "sector": "Technology",
-          "industry": "Software - Infrastructure",
-          "size": "small",
-          "lane": "group_leader",
-          "eligible": true,
-          "bull_rank": 15.137,
-          "bear_rank": 1.0,
-          "domains": {
-            "market": "neutral",
-            "parent": "bad",
-            "child": "good",
-            "company": "neutral",
-            "setup": "good",
-            "flow": "neutral"
-          },
-          "source_boxes": {
-            "join": "good",
-            "sector": "bad",
-            "gen": "neutral",
-            "news": "missing",
-            "digest": "missing",
-            "judge": "missing",
-            "ab": "good",
-            "peer": "good",
-            "heat": "good",
-            "vol": "neutral",
-            "catal": "missing"
-          },
-          "company": "no direct company event",
-          "company_strength": 0.0,
-          "company_direct": false,
-          "company_fresh": false,
-          "company_price_confirmed": false,
-          "group": "Software - Infrastructure",
-          "child_d1": 2.78,
-          "child_w1": 1.36,
-          "child_residual": 3.43,
-          "bull_decision": "BUY GROUP_LEADER \u2014 market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=Cond green",
-          "bear_decision": "NO BEAR \u2014 market=YELLOW; red domains=parent",
-          "blue": false,
-          "white": true,
-          "alarm": false,
-          "cond": "good",
-          "region": "good"
-        },
-        {
           "ticker": "NET",
           "sector": "Technology",
           "industry": "Software - Infrastructure",
@@ -762,6 +715,53 @@
           "child_w1": 1.36,
           "child_residual": 3.43,
           "bull_decision": "BUY GROUP_LEADER \u2014 market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green",
+          "bear_decision": "NO BEAR \u2014 market=YELLOW; red domains=parent",
+          "blue": false,
+          "white": true,
+          "alarm": false,
+          "cond": "good",
+          "region": "good"
+        },
+        {
+          "ticker": "PRTH",
+          "sector": "Technology",
+          "industry": "Software - Infrastructure",
+          "size": "small",
+          "lane": "group_leader",
+          "eligible": true,
+          "bull_rank": 15.137,
+          "bear_rank": 1.0,
+          "domains": {
+            "market": "neutral",
+            "parent": "bad",
+            "child": "good",
+            "company": "neutral",
+            "setup": "good",
+            "flow": "neutral"
+          },
+          "source_boxes": {
+            "join": "good",
+            "sector": "bad",
+            "gen": "neutral",
+            "news": "missing",
+            "digest": "missing",
+            "judge": "missing",
+            "ab": "good",
+            "peer": "good",
+            "heat": "good",
+            "vol": "neutral",
+            "catal": "missing"
+          },
+          "company": "no direct company event",
+          "company_strength": 0.0,
+          "company_direct": false,
+          "company_fresh": false,
+          "company_price_confirmed": false,
+          "group": "Software - Infrastructure",
+          "child_d1": 2.78,
+          "child_w1": 1.36,
+          "child_residual": 3.43,
+          "bull_decision": "BUY GROUP_LEADER \u2014 market=YELLOW; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=Cond green",
           "bear_decision": "NO BEAR \u2014 market=YELLOW; red domains=parent",
           "blue": false,
           "white": true,
