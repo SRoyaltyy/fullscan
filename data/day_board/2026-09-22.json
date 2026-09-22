@@ -1,6 +1,6 @@
 {
   "date": "2026-09-22",
-  "generated_at": "2026-09-22T04:11:50.971073-04:00",
+  "generated_at": "2026-09-22T04:11:56.295776-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -91,7 +91,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 5,
       "files": [
         {
@@ -128,10 +128,10 @@
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-22_finviz_market_digest.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 6032,
+          "said": "US futures point to a modestly lower open ahead of Richmond Fed data in a catalyst-light session \u00b7 leaders CMCSA, TRI, AZO, THO, MLKN \u00b7 bad",
           "bullets": []
         },
         {
@@ -139,11 +139,14 @@
           "name": "Homepage warm-up MD (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-22_finviz_market_digest.md",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 2583,
+          "said": "Finviz homepage market digest \u2014 2026-09-22",
+          "bullets": [
+            "Generated:** 2026-09-22T04:11:56.120857-04:00 (America/New_York)",
+            "Source:** `live`"
+          ]
         },
         {
           "key": "market_digest_close_json",
@@ -183,7 +186,7 @@
       "inputs_ready": false,
       "n_req_ok": 2,
       "n_req": 20,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 3,
       "files": [
         {
@@ -206,10 +209,10 @@
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-22_finviz_market_digest.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 6032,
+          "said": "US futures point to a modestly lower open ahead of Richmond Fed data in a catalyst-light session \u00b7 leaders CMCSA, TRI, AZO, THO, MLKN \u00b7 bad",
           "bullets": []
         },
         {
@@ -922,6 +925,31 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-22\n_Generated 2026-09-22T04:11:50.674610-04:00 \u00b7 export=data/exports/finviz_2026-09-21.csv \u00b7 ticker digests=5876 \u00b7 high-signal=2276_ \u00b7 11643 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "finviz_market_digest",
+      "title": "Finviz homepage market digest",
+      "date": "2026-09-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-22T04:11:56.134997-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-22_finviz_market_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 6032,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-09-22_finviz_market_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 2583,
+          "preview": "# Finviz homepage market digest \u2014 2026-09-22\n**Generated:** 2026-09-22T04:11:56.120857-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a modestly lower open ahead of Richmond Fed data in a catalyst-light session\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** CMCSA, TRI, AZO, THO, MLKN\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** AZO, THO, MLKN\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-22\n**Clock use:** `same_morning`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-22\n**Generated:** 2026-09-22T04:11:56.120857-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a modestly lower open ahead of Richmond Fed data in a catalyst-light session\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** CMCSA, TRI, AZO, THO, MLKN\n**Next session:** housing no \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** AZO, THO, MLKN\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-22\n**Clock use:** `same_morning`"
     }
   ],
   "href": {
