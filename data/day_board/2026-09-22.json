@@ -1,6 +1,6 @@
 {
   "date": "2026-09-22",
-  "generated_at": "2026-09-22T04:23:24.269661-04:00",
+  "generated_at": "2026-09-22T04:31:20.229142-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -182,7 +182,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 3,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -256,11 +256,16 @@
           "name": "Events JSON",
           "path": "01_daily/events/2026-09-22_events.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 37678,
+          "said": "35 events \u00b7 elevated uncertainty \u00b7 The two-way overlay is unchanged and now compressed into 48 hours: Thursday's Trump\u2013Xi summit (tariff cuts/AI vs Taiwan arms and the Graham",
+          "bullets": [
+            "UNGA 81: Trump address and whirlwind bilaterals",
+            "Trump\u2013Zelensky UNGA sideline on energy-infrastructure truce",
+            "Hormuz tanker war still live; Brent ~$101\u2013102",
+            "Trump\u2013Xi Washington summit (Xi visit Sept 23\u201325)"
+          ]
         },
         {
           "key": "judge",
@@ -335,13 +340,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7279,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
+          "size": 7276,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 16 fail",
           "bullets": [
             "general_predict:missing",
-            "events:missing",
             "news_judge:missing",
-            "news_actions:missing"
+            "news_actions:missing",
+            "finviz_market_digest:missing"
           ]
         },
         {
@@ -1302,6 +1307,31 @@
         }
       ],
       "preview": "raw=122 usable=6 single=20 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Surprise US crude inventory build and Fed rate hike drive 5.63% DVN drop | Howard Marks Sends Stark Signal to Federal Reserve | Amgen gets FDA approval to update IMDELLTRA label to reduce monitoring for first \u00b7 # News Parse v2 \u2014 2026-09-22T04:23:16.658040-04:00\nWindow\u224848h | raw=122 | usable=6 | single_name=20 | noise_dropped=96\nusable polarity={'+': 1, '-': 2, 'mixed': 0, 'neutral': 3}"
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-09-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-22T04:31:19.639379-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-09-22_events.json",
+          "ok": true,
+          "reason": "",
+          "size": 37678,
+          "preview": "35 events \u00b7 UNGA 81: Trump address and whirlwind bilaterals | Trump\u2013Zelensky UNGA sideline on energy-infrastructure truce | Hormuz tanker war still live; Brent ~$101\u2013102 | Trump\u2013Xi Washington summit (Xi visit Sept 23\u201325) | Pezeshkian UNGA address; possible Trump\u2013Iran sideline | US Section 338 import bans on selected Canadian goods"
+        },
+        {
+          "path": "01_daily/events/2026-09-22_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 21739,
+          "preview": "# Event Scan \u2014 2026-09-22\n- events tracked: **35** (via openclaw)\n- uncertainty: **elevated**\n- summary: The two-way overlay is unchanged and now compressed into 48 hours: Thursday's Trump\u2013Xi summit (tariff cuts/AI vs Taiwan arms and the Graham secondary-tariff clock) against a still-unresolved Hormuz tanker war with Brent ~$101\u2013102. G3 tightening is done for this window (Warsh 3.75\u20134.00%, BoJ 1.25% effective Sept 24, ECB 2.50%), so the data that can still reprice the path are Aug PCE (Sept 30) and Oct 2 NFP, while US housing is already cracking even as nominal retail sales rebounded +1.2%."
+        }
+      ],
+      "preview": "35 events \u00b7 UNGA 81: Trump address and whirlwind bilaterals | Trump\u2013Zelensky UNGA sideline on energy-infrastructure truce | Hormuz tanker war still live; Brent ~$101\u2013102 | Trump\u2013Xi Washington summit (Xi visit Sept 23\u201325) | Pezeshkian UNGA address; possible Trump\u2013Iran sideline | US Section 338 import bans on selected Canadian goods \u00b7 # Event Scan \u2014 2026-09-22\n- events tracked: **35** (via openclaw)\n- uncertainty: **elevated**\n- summary: The two-way overlay is unchanged and now compressed into 48 hours: Thursday's Trump\u2013Xi summit (tariff cuts/AI vs Taiwan arms and the Graham secondary-tariff clock) against a still-unresolved Hormuz tanker war with Brent ~$101\u2013102. G3 tightening is done for this window (Warsh 3.75\u20134.00%, BoJ 1.25% effective Sept 24, ECB 2.50%), so the data that can still reprice the path are Aug PCE (Sept 30) and Oct 2 NFP, while US housing is already cracking even as nominal retail sales rebounded +1.2%."
     }
   ],
   "href": {
