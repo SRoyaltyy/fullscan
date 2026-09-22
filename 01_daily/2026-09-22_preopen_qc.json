@@ -1,16 +1,16 @@
 {
   "date": "2026-09-22",
-  "generated_at": "2026-09-22T04:35:32.898846-04:00",
+  "generated_at": "2026-09-22T04:39:38.215915-04:00",
   "items": [
     {
-      "ok": false,
+      "ok": true,
       "kind": "general_predict",
       "path": "01_daily/general/2026-09-22_predict.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 15225,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {

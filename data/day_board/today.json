@@ -1,6 +1,6 @@
 {
   "date": "2026-09-22",
-  "generated_at": "2026-09-22T04:35:33.543943-04:00",
+  "generated_at": "2026-09-22T04:39:38.900079-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -12,27 +12,20 @@
   "buy_1d": [],
   "sell_1d": [],
   "flatten": {},
-  "general": {},
+  "general": {
+    "said": "DOWN  -0.497",
+    "bullets": [
+      "bad: UNGA/Xi two-sided unprinted",
+      "bad: leftover Hormuz Brent >$100",
+      "bad: paid hawkish SEP ~55-58% Oct hike",
+      "good: Asia modest green",
+      "good: WTI offered CL -3.15%"
+    ],
+    "score": "-0.497",
+    "direction": "down"
+  },
   "sectors": {},
   "lands": [
-    {
-      "key": "universe",
-      "title": "Universe labels",
-      "date": "2026-09-22",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-22T04:19:37.458409-04:00",
-      "files": [
-        {
-          "path": "data/universe/2026-09-22_membership.csv",
-          "ok": true,
-          "reason": "",
-          "size": 1118085,
-          "preview": "5895 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-        }
-      ],
-      "preview": "5895 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
-    },
     {
       "key": "weather",
       "title": "Weather / regime (offline retry)",
@@ -193,6 +186,24 @@
         }
       ],
       "preview": "# News Judge \u2014 2026-09-22 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "date": "2026-09-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-22T04:39:38.281868-04:00",
+      "files": [
+        {
+          "path": "01_daily/general/2026-09-22_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 15225,
+          "preview": "# Premarket Prediction \u2014 2026-09-22\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -0.497 (uncertainty multiplier \u00d71.0) | confidence 0.42\n>\n> **Good news vs bad news:** good +1.25 pts vs bad -1.0 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - Asia modest green\n> - WTI offered CL -3.15%\n> - VIX 14.85 contango\n> - HY contained 2.68\n> - leftover AI bid paid\n>\n> **Bad news driving this:**\n> - UNGA/Xi two-sided unprinted\n> - leftover Hormuz Brent >$100\n> - paid hawkish SEP ~55-58% Oct hike\n> - Europe partial red\n> - 1m real-yield backup still on tape\n>\n> **market uncertainty: **elevated** | VIX 14.85 | policy-uncertainty index 202.77 (1d +43.55)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \u26aa Asia overnight session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Overnight news & catalysts: +0.0 \u00d7 3.0 = +0"
+        }
+      ],
+      "preview": "# Premarket Prediction \u2014 2026-09-22\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -0.497 (uncertainty multiplier \u00d71.0) | confidence 0.42\n>\n> **Good news vs bad news:** good +1.25 pts vs bad -1.0 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - Asia modest green\n> - WTI offered CL -3.15%\n> - VIX 14.85 contango\n> - HY contained 2.68\n> - leftover AI bid paid\n>\n> **Bad news driving this:**\n> - UNGA/Xi two-sided unprinted\n> - leftover Hormuz Brent >$100\n> - paid hawkish SEP ~55-58% Oct hike\n> - Europe partial red\n> - 1m real-yield backup still on tape\n>\n> **market uncertainty: **elevated** | VIX 14.85 | policy-uncertainty index 202.77 (1d +43.55)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \u26aa Asia overnight session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Overnight news & catalysts: +0.0 \u00d7 3.0 = +0"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
