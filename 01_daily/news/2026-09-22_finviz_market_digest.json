@@ -1,0 +1,82 @@
+{
+  "date": "2026-09-22",
+  "generated_at": "2026-09-22T04:11:14.181037-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-09-22",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US futures point to a modestly lower open ahead of Richmond Fed data in a catalyst-light session",
+  "raw_text": "- S&P 500 Futures (@ES) are down 0.07%, Dow Jones Futures (@YM) decline 0.22%, Nasdaq 100 Futures (@NQ) edge lower by 0.01%, and Russell 2000 Futures (@ER2) fall 0.21%.\n- Pre-market trading is described as quiet, with no significant movers in major outlets after 4 AM ET and small-cap volatility lacking confirmed catalysts from sources like CNBC (CMCSA), Reuters (TRI), or Bloomberg.\n- AutoZone (AZO) reports earnings before the bell today, with traders watching results versus estimates for potential post-open setups.\n- THOR Industries (THO) is scheduled to report earnings before the bell as part of today’s early lineup.\n- MillerKnoll (MLKN) also posts results before the open, adding to the morning earnings slate under watch for trading opportunities.\n- The Richmond Fed Manufacturing Index is the main economic release on today’s calendar, due at 10:00 AM ET.\n- Asian benchmarks mostly rose overnight on tech strength and AI optimism, according to early reports.\n- European futures traded modestly higher overnight, with no major commodity moves cited as drivers.\n- Yesterday’s session left major US indexes near recent highs, with no major technical breaks noted in early commentary.",
+  "raw_summary_md": "- **S&P 500 Futures** ([@ES](https://finviz.com/futures_charts?t=ES)) are **down 0.07%**, **Dow Jones Futures** ([@YM](https://finviz.com/futures_charts?t=YM)) decline **0.22%**, **Nasdaq 100 Futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) edge lower by **0.01%**, and **Russell 2000 Futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) fall **0.21%**.\n- **Pre-market trading is described as quiet**, with **no significant movers in major outlets after 4 AM ET** and **small-cap volatility lacking confirmed catalysts** from sources like **CNBC** ([CMCSA](https://finviz.com/quote?t=CMCSA)), **Reuters** ([TRI](https://finviz.com/quote?t=TRI)), or **Bloomberg**.\n- **AutoZone** ([AZO](https://finviz.com/quote?t=AZO)) **reports earnings before the bell today**, with traders **watching results versus estimates** for potential post-open setups.\n- **THOR Industries** ([THO](https://finviz.com/quote?t=THO)) is scheduled to **report earnings before the bell** as part of today’s early lineup.\n- **MillerKnoll** ([MLKN](https://finviz.com/quote?t=MLKN)) also **posts results before the open**, adding to the morning earnings slate under watch for trading opportunities.\n- The **Richmond Fed Manufacturing Index** is the **main economic release** on today’s calendar, due at **10:00 AM ET**.\n- **Asian benchmarks mostly rose overnight** on **tech strength and AI optimism**, according to early reports.\n- **European futures traded modestly higher overnight**, with **no major commodity moves** cited as drivers.\n- Yesterday’s session left **major US indexes near recent highs**, with **no major technical breaks** noted in early commentary.",
+  "index_moves": [],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "CMCSA",
+    "TRI",
+    "AZO",
+    "THO",
+    "MLKN"
+  ],
+  "named_leaders": [
+    "CMCSA",
+    "TRI",
+    "AZO",
+    "THO",
+    "MLKN"
+  ],
+  "calendar": [
+    "AutoZone (AZO) reports earnings before the bell today, with traders watching results versus estimates for potential post-open setups.",
+    "THOR Industries (THO) is scheduled to report earnings before the bell as part of today’s early lineup.",
+    "MillerKnoll (MLKN) also posts results before the open, adding to the morning earnings slate under watch for trading opportunities.",
+    "The Richmond Fed Manufacturing Index is the main economic release on today’s calendar, due at 10:00 AM ET."
+  ],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "The Richmond Fed Manufacturing Index is the main economic release on today’s calendar, due at 10:00 AM ET."
+    ],
+    "text": "The Richmond Fed Manufacturing Index is the main economic release on today’s calendar, due at 10:00 AM ET."
+  },
+  "earnings_slate": {
+    "tickers": [
+      "AZO",
+      "THO",
+      "MLKN"
+    ],
+    "text": "AutoZone (AZO) reports earnings before the bell today, with traders watching results versus estimates for potential post-open setups. THOR Industries (THO) is scheduled to report earnings before the bell as part of today’s early lineup. MillerKnoll (MLKN) also posts results before the open, adding to the morning earnings slate under watch for trading opportunities."
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 290837,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-09-22T04:06:01.127",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}
