@@ -7,7 +7,7 @@ error_category: "D"
 falsifier: "Same unsigned T+1 mixed setup with |ES|,|NQ|<0.5% vs prior close where XLY still closes ≤ −0.3% with no fresh consumer shock — then leftover futures were informative and 09-16 must be revised"
 sector: "Consumer Cyclical"
 date: "2026-09-22"
-status: "candidate"
+status: "promoted"
 ---
 
 # Sector Reflection — Consumer Cyclical — 2026-09-22

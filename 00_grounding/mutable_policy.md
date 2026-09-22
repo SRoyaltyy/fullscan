@@ -1,6 +1,6 @@
 ---
 status: living_policy
-updated: 2026-09-21
+updated: 2026-09-22
 source: src/learn_cycle.py
 covers: general, sectors, news
 note: Injected into general + sector PREDICT. Core output formats unchanged.
@@ -9,22 +9,22 @@ see_also: 03_scoreboard/LEARNINGS.md
 
 # Mutable policy (all workflows)
 
-Last learn_cycle: **2026-09-21**. Promoted: 0. Retired: 10. Active lessons: 202. Human digest: `03_scoreboard/LEARNINGS.md`.
+Last learn_cycle: **2026-09-22**. Promoted: 1. Retired: 10. Active lessons: 203. Human digest: `03_scoreboard/LEARNINGS.md`.
 
 ## Accuracy by topic (graded window)
 
 - **general**: 60% (9/15)
-- **sector:Basic Materials**: 33% (5/15)
+- **sector:Basic Materials**: 27% (4/15)
 - **sector:Communication Services**: 20% (3/15)
-- **sector:Consumer Cyclical**: 40% (6/15)
-- **sector:Consumer Defensive**: 40% (6/15)
-- **sector:Energy**: 53% (8/15)
-- **sector:Financial**: 53% (8/15)
-- **sector:Healthcare**: 47% (7/15)
+- **sector:Consumer Cyclical**: 33% (5/15)
+- **sector:Consumer Defensive**: 47% (7/15)
+- **sector:Energy**: 60% (9/15)
+- **sector:Financial**: 60% (9/15)
+- **sector:Healthcare**: 40% (6/15)
 - **sector:Industrials**: 40% (6/15)
-- **sector:Real Estate**: 33% (5/15)
-- **sector:Technology**: 33% (5/15)
-- **sector:Utilities**: 33% (5/15)
+- **sector:Real Estate**: 40% (6/15)
+- **sector:Technology**: 27% (4/15)
+- **sector:Utilities**: 40% (6/15)
 
 ## Numeric factor weights in force (engine_policy.json — applied by code, not by you)
 
@@ -33,20 +33,27 @@ General (B0–B7 LLM components; multiplier applied by compute_scores):
 - B0_EUROPE: n=11 sign-hit=0.91 → ×1.25
 - B1_CATALYSTS: n=24 sign-hit=0.79 → ×1.25
 - B2_BONDS: n=29 sign-hit=0.38 → ×0.0
-- B3_FEDPATH: n=28 sign-hit=0.46 → ×0.5
-- B4_VIX: n=11 sign-hit=0.64 → ×1.0
+- B3_FEDPATH: n=29 sign-hit=0.45 → ×0.0
+- B4_VIX: n=12 sign-hit=0.58 → ×1.0
 - B5_SENTIMENT: n=21 sign-hit=0.33 → ×0.0
 - B6_FUTURES: n=21 sign-hit=0.76 → ×1.25
-- B7_OIL_DOLLAR: n=27 sign-hit=0.70 → ×1.25
+- B7_OIL_DOLLAR: n=28 sign-hit=0.68 → ×1.25
 Sectors (pooled S0–S4; per-sector overrides in engine_policy.json):
-- S0_SHARED_MACRO: n=149 sign-hit=0.60 → ×1.0
-- S1_SECTOR_FACTORS: n=175 sign-hit=0.57 → ×1.0
-- S2_BREADTH: n=134 sign-hit=0.62 → ×1.0
-- S3_FLOWS_POSITIONING: n=95 sign-hit=0.49 → ×0.5
-- S4_ETF_TAPE: n=141 sign-hit=0.62 → ×1.0
-Last change: hold
+- S0_SHARED_MACRO: n=150 sign-hit=0.60 → ×1.0
+- S1_SECTOR_FACTORS: n=179 sign-hit=0.57 → ×1.0
+- S2_BREADTH: n=136 sign-hit=0.61 → ×1.0
+- S3_FLOWS_POSITIONING: n=97 sign-hit=0.49 → ×0.5
+- S4_ETF_TAPE: n=146 sign-hit=0.62 → ×1.0
+Last change: general.B3_FEDPATH: 0.5 -> 0.0 (n=29, hit=0.448); Basic Materials.S2_BREADTH: 1.0 -> 0.5 (n=13, hit=0.538); Healthcare.S4_ETF_TAPE: 1.25 -> 1.0 (n=14, hit=0.643); Industrials.S2_BREADTH: 0.5 -> 0.0 (n=16, hit=0.438); Real Estate.S4_ETF_TAPE: 0.5 -> 1.0 (n=16, hit=0.562); Utilities.S4_ETF_TAPE: 1.0 -> 1.25 (n=15, hit=0.667)
 
 ## Active adjustments (newest promoted lessons, truncated)
+
+### all-zero-leading-s0-s4-on-a-t-1-digestion-session-where-es-a.md
+## RULE
+When leading_sum=0 and both ES and NQ are inside ±0.5% vs prior close with no 09-21-style cross-asset confirmation, suppress tape_anchor and index_carry from flipping the official call off the unsigned factor-card band (flat). Apply symmetrically to leftover-green and leftover-red anchors. Do not write a new XLY prompt rule — enforce 09-16 in the engine.
+
+## WHEN IT FIRES
+All-zero leading S0–S4 on a T+1 digestion session where ES and NQ are both inside ±0.5% vs prior close (no cross-asse …
 
 ### a-low-beta-defensive-sector-etf-xlp-xlu-xlv-like-posts-a-net.md
 ## RULE
@@ -89,13 +96,6 @@ Do not let leftover Finviz 1d/1w or 3d/1w RS veto official direction when (1) li
 ## WHEN IT FIRES
 A bond-proxy defensive (XLP/ …
 
-### a-mega-cap-duration-heavy-consumer-cyclical-etf-xly-like-amz.md
-## RULE
-When live futures are inside ±0.5% and the factor card + 1d rel already agree down, keep overlay direction = down. calendar_size_gate / size_gate may cap magnitude to mild/flat only. Do not treat engine divergence against a discarded prior-close ES/NQ anchor as a real leading-vs-tape fight. Do not import XLK/NQ beta (08-27 still binds).
-
-## WHEN IT FIRES
-A mega-cap duration-heavy consumer cyclical ETF (XLY-like: AMZN+TSLA+HD dominate, no semis) prints a net-negative S0–S4 card with a con …
-
 ### a-two-name-duration-growth-communications-etf-xlc-like-meta.md
 ## RULE
 If XLC S4=0 — not on the PM sector board, live print ~flat, META/GOOGL not participating together — official direction must follow the factor card (flat), not tape_anchor/index_carry. Green NQ/ES/XLK is not an XLC participation certificate. An unprinted FOMC+SEP+presser independently forbids up. Do not convert a correct all-zero card into an up call via futures overlay.
@@ -126,76 +126,75 @@ When a defensive sector carries a multi-day relative lag (3d/1w rel negative) in
 ## RULE
 When S0 is genuinely 0 (mixed macro) and the live, knowable-at-open tape is positive (green futures ≥ +0.5%, oil offered, live curve flat-to-easing), a down call requires a LIVE negative input. A stale multi-horizon relative lag (1w/1m) is a structural descriptor, not a same-day tape signal — it must not be scored into S2 or S4. The absence of a positive cushion (09-08 override not firing) is NOT the presence of a negative signal; "no cushion ≠ headwind." If the only negatives are stale …
 
-_(+187 older active lessons not excerpted; each predict receives only its own topic's lessons via lesson_select)_
+_(+188 older active lessons not excerpted; each predict receives only its own topic's lessons via lesson_select)_
 
 ## Per-scope DO-INSTEAD
 
 ### scope `general` — wins=9 losses=6
-- **win 2026-09-17:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 - **win 2026-09-18:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 - **win 2026-09-21:** [general] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+- **loss 2026-09-22:** [general] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 
 ### scope `news` — wins=0 losses=1
 - **loss news:** [news] Only emit actions with |net| above a higher floor.
 
-### scope `sector_basic_materials` — wins=5 losses=10
-- **loss 2026-09-17:** [sector_basic_materials] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+### scope `sector_basic_materials` — wins=4 losses=11
 - **loss 2026-09-18:** [sector_basic_materials] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **loss 2026-09-21:** [sector_basic_materials] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **loss 2026-09-22:** [sector_basic_materials] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 
 ### scope `sector_communication_services` — wins=3 losses=12
-- **loss 2026-09-17:** [sector_communication_services] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **loss 2026-09-18:** [sector_communication_services] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **win 2026-09-21:** [sector_communication_services] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+- **loss 2026-09-22:** [sector_communication_services] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 
-### scope `sector_consumer_cyclical` — wins=6 losses=9
-- **loss 2026-09-17:** [sector_consumer_cyclical] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+### scope `sector_consumer_cyclical` — wins=5 losses=10
 - **loss 2026-09-18:** [sector_consumer_cyclical] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **loss 2026-09-21:** [sector_consumer_cyclical] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **loss 2026-09-22:** [sector_consumer_cyclical] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 
-### scope `sector_consumer_defensive` — wins=6 losses=9
-- **win 2026-09-17:** [sector_consumer_defensive] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+### scope `sector_consumer_defensive` — wins=7 losses=8
 - **loss 2026-09-18:** [sector_consumer_defensive] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **loss 2026-09-21:** [sector_consumer_defensive] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **win 2026-09-22:** [sector_consumer_defensive] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 
-### scope `sector_energy` — wins=8 losses=7
-- **win 2026-09-17:** [sector_energy] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+### scope `sector_energy` — wins=9 losses=6
 - **win 2026-09-18:** [sector_energy] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 - **win 2026-09-21:** [sector_energy] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+- **win 2026-09-22:** [sector_energy] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 
-### scope `sector_financial` — wins=8 losses=7
-- **win 2026-09-17:** [sector_financial] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+### scope `sector_financial` — wins=9 losses=6
 - **win 2026-09-18:** [sector_financial] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 - **win 2026-09-21:** [sector_financial] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+- **win 2026-09-22:** [sector_financial] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 
-### scope `sector_healthcare` — wins=7 losses=8
-- **win 2026-09-17:** [sector_healthcare] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+### scope `sector_healthcare` — wins=6 losses=9
 - **loss 2026-09-18:** [sector_healthcare] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **win 2026-09-21:** [sector_healthcare] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+- **loss 2026-09-22:** [sector_healthcare] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 
 ### scope `sector_industrials` — wins=6 losses=9
-- **loss 2026-09-17:** [sector_industrials] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **loss 2026-09-18:** [sector_industrials] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **loss 2026-09-21:** [sector_industrials] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **loss 2026-09-22:** [sector_industrials] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 
-### scope `sector_real_estate` — wins=5 losses=10
-- **loss 2026-09-17:** [sector_real_estate] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+### scope `sector_real_estate` — wins=6 losses=9
 - **loss 2026-09-18:** [sector_real_estate] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **loss 2026-09-21:** [sector_real_estate] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **win 2026-09-22:** [sector_real_estate] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 
-### scope `sector_technology` — wins=5 losses=10
-- **loss 2026-09-17:** [sector_technology] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+### scope `sector_technology` — wins=4 losses=11
 - **loss 2026-09-18:** [sector_technology] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **loss 2026-09-21:** [sector_technology] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+- **loss 2026-09-22:** [sector_technology] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 
-### scope `sector_utilities` — wins=5 losses=10
-- **loss 2026-09-17:** [sector_utilities] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
+### scope `sector_utilities` — wins=6 losses=9
 - **loss 2026-09-18:** [sector_utilities] When score sign conflicts with sector ETF tape / breadth, cut conviction; prefer flat/mild.
 - **win 2026-09-21:** [sector_utilities] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
+- **win 2026-09-22:** [sector_utilities] Keep direction; shrink confidence on modest |score| when magnitude historically misses.
 
 ## Open experiments
 
-- **sector_utilities/win 2026-08-28:** [sector_utilities] On similar setups, test milder bands when |score|<4; log whether lagging tape factors overrode leading ones.
 - **sector_utilities/loss 2026-09-03:** [sector_utilities] Require one extra confirming source in the dominant bucket before full weight when score sign matches this fail pattern.
 - **sector_utilities/loss 2026-09-04:** [sector_utilities] Require one extra confirming source in the dominant bucket before full weight when score sign matches this fail pattern.
 - **sector_utilities/loss 2026-09-09:** [sector_utilities] Require one extra confirming source in the dominant bucket before full weight when score sign matches this fail pattern.
@@ -206,6 +205,7 @@ _(+187 older active lessons not excerpted; each predict receives only its own to
 - **sector_utilities/loss 2026-09-17:** [sector_utilities] Require one extra confirming source in the dominant bucket before full weight when score sign matches this fail pattern.
 - **sector_utilities/loss 2026-09-18:** [sector_utilities] Require one extra confirming source in the dominant bucket before full weight when score sign matches this fail pattern.
 - **sector_utilities/win 2026-09-21:** [sector_utilities] On similar setups, test milder bands when |score|<4; log whether lagging tape factors overrode leading ones.
+- **sector_utilities/win 2026-09-22:** [sector_utilities] On similar setups, test milder bands when |score|<4; log whether lagging tape factors overrode leading ones.
 - **news/loss news:** [news] Raise min net weight to map a ticker; drop weak edges.
 
 ## Methodology checklist (MEMORY_CONFIRM)
@@ -218,13 +218,13 @@ _(+187 older active lessons not excerpted; each predict receives only its own to
 
 ## Retired / falsified (efficacy-gated, automatic)
 
-- 2026-09-21: `a-utilities-xlu-call-is-built-after-a-stretch-of-risk-on-gro.md` (sector:Utilities) — topic hit 80% → 14% after activation; retired.
-- 2026-09-21: `a-sector-call-has-a-scheduled-8-30-et-macro-release-pending.md` (sector:Financial) — topic hit 75% → 14% after activation; retired.
-- 2026-09-21: `in-a-utilities-xlu-call-a-second-soft-inflation-print-has-al.md` (sector:Utilities) — topic hit 75% → 14% after activation; retired.
-- 2026-09-21: `a-consumer-cyclical-down-call-is-driven-by-a-genuinely-negat.md` (sector:Consumer Cyclical) — topic hit 86% → 29% after activation; retired.
-- 2026-09-21: `when-the-pre-fetched-commodity-tape-conflicts-with-live-sour.md` (sector:Energy) — topic hit 71% → 14% after activation; retired.
-- 2026-09-21: `a-sector-call-has-a-decisively-negative-fundamental-spine-fr.md` (sector:Consumer Cyclical) — topic hit 83% → 29% after activation; retired.
-- 2026-09-21: `a-utility-defensive-sector-call-is-built-on-a-carried-defens.md` (sector:Utilities) — topic hit 67% → 14% after activation; retired.
-- 2026-09-21: `sector-prediction-made-when-the-sector-s-dominant-commodity.md` (sector:Energy) — topic hit 67% → 14% after activation; retired.
-- 2026-09-21: `a-sector-call-has-a-scheduled-8-30-et-high-impact-macro-rele.md` (sector:Financial) — topic hit 60% → 14% after activation; retired.
-- 2026-09-21: `a-fresh-top-holding-legal-regulatory-catalyst-e-g-a-trial-op.md` (sector:Communication Services) — topic hit 43% → 0% after activation; retired.
+- 2026-09-22: `a-mega-cap-duration-heavy-consumer-cyclical-etf-xly-like-amz.md` (sector:Consumer Cyclical) — topic hit 71% → 0% after activation; retired.
+- 2026-09-22: `a-utilities-xlu-call-is-built-after-a-stretch-of-risk-on-gro.md` (sector:Utilities) — topic hit 80% → 14% after activation; retired.
+- 2026-09-22: `a-sector-call-has-a-scheduled-8-30-et-macro-release-pending.md` (sector:Financial) — topic hit 75% → 14% after activation; retired.
+- 2026-09-22: `in-a-utilities-xlu-call-a-second-soft-inflation-print-has-al.md` (sector:Utilities) — topic hit 75% → 14% after activation; retired.
+- 2026-09-22: `a-consumer-cyclical-down-call-is-driven-by-a-genuinely-negat.md` (sector:Consumer Cyclical) — topic hit 86% → 29% after activation; retired.
+- 2026-09-22: `when-the-pre-fetched-commodity-tape-conflicts-with-live-sour.md` (sector:Energy) — topic hit 71% → 14% after activation; retired.
+- 2026-09-22: `a-sector-call-has-a-decisively-negative-fundamental-spine-fr.md` (sector:Consumer Cyclical) — topic hit 83% → 29% after activation; retired.
+- 2026-09-22: `a-utility-defensive-sector-call-is-built-on-a-carried-defens.md` (sector:Utilities) — topic hit 67% → 14% after activation; retired.
+- 2026-09-22: `sector-prediction-made-when-the-sector-s-dominant-commodity.md` (sector:Energy) — topic hit 67% → 14% after activation; retired.
+- 2026-09-22: `a-sector-call-has-a-scheduled-8-30-et-high-impact-macro-rele.md` (sector:Financial) — topic hit 60% → 14% after activation; retired.
