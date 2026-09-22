@@ -1,6 +1,6 @@
 {
   "date": "2026-09-22",
-  "generated_at": "2026-09-22T05:02:18.560255-04:00",
+  "generated_at": "2026-09-22T05:05:23.897691-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -41,31 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "events",
-      "title": "Event scanner (primary)",
-      "date": "2026-09-22",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-22T04:31:19.639379-04:00",
-      "files": [
-        {
-          "path": "01_daily/events/2026-09-22_events.json",
-          "ok": true,
-          "reason": "",
-          "size": 37678,
-          "preview": "35 events \u00b7 UNGA 81: Trump address and whirlwind bilaterals | Trump\u2013Zelensky UNGA sideline on energy-infrastructure truce | Hormuz tanker war still live; Brent ~$101\u2013102 | Trump\u2013Xi Washington summit (Xi visit Sept 23\u201325) | Pezeshkian UNGA address; possible Trump\u2013Iran sideline | US Section 338 import bans on selected Canadian goods"
-        },
-        {
-          "path": "01_daily/events/2026-09-22_events.md",
-          "ok": true,
-          "reason": "",
-          "size": 21739,
-          "preview": "# Event Scan \u2014 2026-09-22\n- events tracked: **35** (via openclaw)\n- uncertainty: **elevated**\n- summary: The two-way overlay is unchanged and now compressed into 48 hours: Thursday's Trump\u2013Xi summit (tariff cuts/AI vs Taiwan arms and the Graham secondary-tariff clock) against a still-unresolved Hormuz tanker war with Brent ~$101\u2013102. G3 tightening is done for this window (Warsh 3.75\u20134.00%, BoJ 1.25% effective Sept 24, ECB 2.50%), so the data that can still reprice the path are Aug PCE (Sept 30) and Oct 2 NFP, while US housing is already cracking even as nominal retail sales rebounded +1.2%."
-        }
-      ],
-      "preview": "35 events \u00b7 UNGA 81: Trump address and whirlwind bilaterals | Trump\u2013Zelensky UNGA sideline on energy-infrastructure truce | Hormuz tanker war still live; Brent ~$101\u2013102 | Trump\u2013Xi Washington summit (Xi visit Sept 23\u201325) | Pezeshkian UNGA address; possible Trump\u2013Iran sideline | US Section 338 import bans on selected Canadian goods \u00b7 # Event Scan \u2014 2026-09-22\n- events tracked: **35** (via openclaw)\n- uncertainty: **elevated**\n- summary: The two-way overlay is unchanged and now compressed into 48 hours: Thursday's Trump\u2013Xi summit (tariff cuts/AI vs Taiwan arms and the Graham secondary-tariff clock) against a still-unresolved Hormuz tanker war with Brent ~$101\u2013102. G3 tightening is done for this window (Warsh 3.75\u20134.00%, BoJ 1.25% effective Sept 24, ECB 2.50%), so the data that can still reprice the path are Aug PCE (Sept 30) and Oct 2 NFP, while US housing is already cracking even as nominal retail sales rebounded +1.2%."
-    },
     {
       "key": "news_actions",
       "title": "News actions",
@@ -226,6 +201,38 @@
         }
       ],
       "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-09-22\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
+    },
+    {
+      "key": "status",
+      "title": "Pre-open status packet",
+      "date": "2026-09-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-22T05:05:22.954803-04:00",
+      "files": [
+        {
+          "path": "01_daily/2026-09-22_preopen_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 7264,
+          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
+        },
+        {
+          "path": "01_daily/2026-09-22_preopen_status.json",
+          "ok": true,
+          "reason": "",
+          "size": 8096,
+          "preview": "keys: date, generated_at, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs, qc"
+        },
+        {
+          "path": "01_daily/2026-09-22_preopen_status.md",
+          "ok": true,
+          "reason": "",
+          "size": 576,
+          "preview": "# Pre-open ALL status \u2014 2026-09-22\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
+        }
+      ],
+      "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs, qc \u00b7 # Pre-open ALL status \u2014 2026-09-22\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

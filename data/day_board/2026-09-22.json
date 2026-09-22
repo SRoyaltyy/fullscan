@@ -1,6 +1,6 @@
 {
   "date": "2026-09-22",
-  "generated_at": "2026-09-22T05:02:18.560255-04:00",
+  "generated_at": "2026-09-22T05:05:23.897691-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -177,7 +177,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 7,
+      "n_req_ok": 9,
       "n_req": 20,
       "n_opt_ok": 3,
       "n_opt": 3,
@@ -359,11 +359,11 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7267,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 13 fail",
+          "size": 7264,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 12 fail",
           "bullets": [
             "finviz_market_digest:missing",
-            "map_heat_research:missing",
+            "sector_predict:missing",
             "sector_predict:missing",
             "sector_predict:missing"
           ]
@@ -373,10 +373,10 @@
           "name": "Pre-open status JSON",
           "path": "01_daily/2026-09-22_preopen_status.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "all_ok=False missing=['sector_predict']",
+          "size": 8096,
+          "said": "all_ok=False \u00b7 qc=False \u00b7 grok=False \u00b7 book=False \u00b7 missing sector_predict",
           "bullets": []
         },
         {
@@ -384,11 +384,13 @@
           "name": "Grok review JSON",
           "path": "01_daily/2026-09-22_grok_review.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "ok=False Core general/events/news-judge/parse/finviz-digest/map-heat are same-day and usable (DOWN mild; scan_date 2026-09-22; li",
+          "size": 1744,
+          "said": "ok=False \u00b7 missing 01_daily/sectors/2026-09-22/basic_materials_predict.md",
+          "bullets": [
+            "Core general/events/news-judge/parse/finviz-digest/map-heat are same-day and usable (DOWN mild; scan_date 2026-09-22; live futures tape populated), but sector coverage is 0/11 so the 8-of-11 rule fails the day. Research reused last-night captain cards after a failed morning delta (not a day-fail); close market digest is missing and non-core."
+          ]
         },
         {
           "key": "sector_basic_materials",
@@ -1582,6 +1584,38 @@
         }
       ],
       "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-09-22\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
+    },
+    {
+      "key": "status",
+      "title": "Pre-open status packet",
+      "date": "2026-09-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-22T05:05:22.954803-04:00",
+      "files": [
+        {
+          "path": "01_daily/2026-09-22_preopen_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 7264,
+          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
+        },
+        {
+          "path": "01_daily/2026-09-22_preopen_status.json",
+          "ok": true,
+          "reason": "",
+          "size": 8096,
+          "preview": "keys: date, generated_at, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs, qc"
+        },
+        {
+          "path": "01_daily/2026-09-22_preopen_status.md",
+          "ok": true,
+          "reason": "",
+          "size": 576,
+          "preview": "# Pre-open ALL status \u2014 2026-09-22\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
+        }
+      ],
+      "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs, qc \u00b7 # Pre-open ALL status \u2014 2026-09-22\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
     }
   ],
   "href": {
