@@ -1,6 +1,6 @@
 {
   "date": "2026-09-22",
-  "generated_at": "2026-09-22T10:52:59.973348-04:00",
+  "generated_at": "2026-09-22T10:59:02.885439-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -1370,13 +1370,13 @@
       "date": "2026-09-22",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-22T10:20:43.620058-04:00",
+      "at": "2026-09-22T10:54:43.996790-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 22625,
+          "size": 30282,
           "preview": "2026-09-22 BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU, UEC, HAL"
         },
         {
@@ -1390,14 +1390,14 @@
           "path": "data/day_board/2026-09-22.json",
           "ok": true,
           "reason": "",
-          "size": 110903,
+          "size": 121561,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
         },
         {
           "path": "data/day_board/2026-09-22_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 73791,
+          "size": 84449,
           "preview": "2026-09-22 BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU, UEC, HAL"
         },
         {
@@ -1432,7 +1432,7 @@
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 73791,
+          "size": 84449,
           "preview": "2026-09-22 BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU, UEC, HAL"
         },
         {
