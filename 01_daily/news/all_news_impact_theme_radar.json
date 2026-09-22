@@ -6,9 +6,9 @@
     "live": 0,
     "stopped": false,
     "probe": {
-      "ok": false,
-      "quota_dead": true,
-      "reason": "no_keys"
+      "ok": true,
+      "quota_dead": false,
+      "reason": "keys_present"
     }
   },
   "watermark": {
