@@ -1,0 +1,22 @@
+{
+ "risk_tilt": "on",
+ "macros": [
+  "mixed",
+  "bullish",
+  "mixed",
+  "bullish"
+ ],
+ "sector_tilts": {
+  "Semiconductors": "bullish",
+  "Energy": "bearish",
+  "Ai-Infra": "bullish",
+  "Healthcare": "bearish",
+  "Basic Materials": "bearish"
+ },
+ "tickers": {
+  "XLE": -9.5,
+  "XLB": -4.0
+ },
+ "b1_inject": "NEWS_JUDGE: n=7 rescued=6\nMACRO rates: [mixed] Gold cut-bets vs rising yields/recent hike \u2014 one rates cluster, not clean dovish (session/1d-1w)\nMACRO risk: [bullish] Leftover Nasdaq ~+3% AI pop / AMD $1T \u2014 growth beta, not a fresh overnight print (session/1d-1w)\nSECTOR semiconductors: [bullish] ASML 2027 EUV sold out on AI demand (SMH/SOXX)\nSECTOR energy: [bearish] Surprise crude inventory build hits E&Ps (XLE)\nSECTOR ai-infra: [bullish] FIX backlog + LITE ECOC + CIEN upgrade as one optics/electrical cluster\nSECTOR healthcare: [bearish] NVO \u22127% on targets \u2014 GLP-1 basket, not broad XLV\nSECTOR materials: [bearish] Copper pullback on US refined-copper tariff uncertainty (XLB)\nINTERACTION: AI demand + rising yields \u2192 do not double-count bullish semis; gold-dovish vs hike/yields is one mixed rates cluster\nWATCH: Mechanical usable n=6 was thin; AI tape is prior-close leftover, not a same-morning catalyst",
+ "date": "2026-09-22"
+}
