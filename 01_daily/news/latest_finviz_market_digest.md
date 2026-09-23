@@ -1,22 +1,22 @@
-# Finviz homepage market digest — 2026-09-22
+# Finviz homepage market digest — 2026-09-23
 
-**Generated:** 2026-09-22T04:11:56.120857-04:00 (America/New_York)
+**Generated:** 2026-09-23T04:14:32.535161-04:00 (America/New_York)
 **Source:** `live`
-**Banner:** US futures point to a modestly lower open ahead of Richmond Fed data in a catalyst-light session
+**Banner:** US equity futures edge higher as oil trades below $100 after Trump UN remarks with PMIs and earnings set to guide early moves
 **Prior close:** SPX —  Nasdaq —  Dow —
 **SPX:** —  **Nasdaq:** —  **Dow:** —
 **Oil:** —
 **CPI/Fed:** —
-**Leaders:** CMCSA, TRI, AZO, THO, MLKN
-**Next session:** housing no · retail no · Fed yes
-**Earnings slate:** AZO, THO, MLKN
-**Geo/grain:** —
-**Clock legal for:** 2026-09-22
+**Leaders:** CTAS, PAYX, GIS, CBRL
+**Next session:** housing no · retail no · Fed no
+**Earnings slate:** CTAS, PAYX, GIS, CBRL
+**Geo/grain:** geo
+**Clock legal for:** 2026-09-23
 **Clock use:** `same_morning`
 
 ## Clock
 
-Capture is **before 09:30 ET on this date**, so it is legal for that morning's Pre-Open (`clock_legal_for` = 2026-09-22).
+Capture is **before 09:30 ET on this date**, so it is legal for that morning's Pre-Open (`clock_legal_for` = 2026-09-23).
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
@@ -25,22 +25,20 @@ Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page h
 - **Prior close:** SPX — · Nasdaq — · Dow —
 - **Oil:** —
 - **CPI / Fed-odds:** —
-- **Named leaders:** CMCSA, TRI, AZO, THO, MLKN
-- **Next-session calendar:** housing no · retail no · Fed yes
-  - The Richmond Fed Manufacturing Index is the main economic release on today’s calendar, due at 10:00 AM ET.
-- **Earnings slate:** AZO, THO, MLKN
-- **Geo / grain:** —
+- **Named leaders:** CTAS, PAYX, GIS, CBRL
+- **Next-session calendar:** housing no · retail no · Fed no
+- **Earnings slate:** CTAS, PAYX, GIS, CBRL
+- **Geo / grain:** geo
 
 ## Narrative
 
-**US futures point to a modestly lower open ahead of Richmond Fed data in a catalyst-light session**
+**US equity futures edge higher as oil trades below $100 after Trump UN remarks with PMIs and earnings set to guide early moves**
 
-- S&P 500 Futures (@ES) are down 0.07%, Dow Jones Futures (@YM) decline 0.22%, Nasdaq 100 Futures (@NQ) edge lower by 0.01%, and Russell 2000 Futures (@ER2) fall 0.21%.
-- Pre-market trading is described as quiet, with no significant movers in major outlets after 4 AM ET and small-cap volatility lacking confirmed catalysts from sources like CNBC (CMCSA), Reuters (TRI), or Bloomberg.
-- AutoZone (AZO) reports earnings before the bell today, with traders watching results versus estimates for potential post-open setups.
-- THOR Industries (THO) is scheduled to report earnings before the bell as part of today’s early lineup.
-- MillerKnoll (MLKN) also posts results before the open, adding to the morning earnings slate under watch for trading opportunities.
-- The Richmond Fed Manufacturing Index is the main economic release on today’s calendar, due at 10:00 AM ET.
-- Asian benchmarks mostly rose overnight on tech strength and AI optimism, according to early reports.
-- European futures traded modestly higher overnight, with no major commodity moves cited as drivers.
-- Yesterday’s session left major US indexes near recent highs, with no major technical breaks noted in early commentary.
+- S&P 500 Futures (@ES) point to a modestly higher open (+0.09%), with Dow Jones Futures (@YM) +0.11%, Nasdaq 100 Futures (@NQ) +0.01%, and Russell 2000 Futures (@ER2) -0.16%.
+- Nasdaq ($COMP) comes off a record prior session amid continued AI-related momentum in early pre-market trading.
+- Oil (@CL) prices cool below $100 after President Trump's UN address on Iran combined tough rhetoric with signals of possible post-midterm diplomacy.
+- Earnings before the bell include Cintas (CTAS), Paychex (PAYX), General Mills (GIS), and Cracker Barrel (CBRL).
+- Reactions to results from Cintas, Paychex, General Mills, and Cracker Barrel are expected to help set up swings at the open.
+- Flash US manufacturing and services PMIs are scheduled for 9:45 AM ET and are expected to drive intraday volatility.
+- Asian markets see selective gains on tech leadership, echoing AI strength from the prior Nasdaq ($COMP) record session.
+- European markets are digesting President Trump's Iran remarks and the pullback in oil prices.
