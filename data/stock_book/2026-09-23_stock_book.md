@@ -1,6 +1,6 @@
 # Stock book — 2026-09-23
 
-_Generated 2026-09-23T07:29:22.650245-04:00_
+_Generated 2026-09-23T07:35:33.906076-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -21,7 +21,7 @@ The existing red/yellow/green source graph remains visible. Its digest, judge an
 - Weather risk: **mixed**
 - General predict (same-day): +0.50 up (present)
 - Stand-down: **no** — 623 names qualified through standard,group_leader,catalyst (119 probable)
-- Sector predicts this date: 1/11 (ok)
+- Sector predicts this date: 2/11 (ok)
 - News tickers in play: 86
 - AB coverage: 1876 names · peer RS: 1832
 - Universe after liquidity: 2066
@@ -99,7 +99,7 @@ This is the live Finviz groups tape — child industry vs parent sector, plus th
 | Sector | Finviz 1d | Finviz 1w | LLM 1d | Tape vs essay |
 |--------|----------:|----------:|-------:|---------------|
 | Basic Materials | -2.1% | -4.8% | +0.00 | essay flat, tape moving |
-| Communication Services | +2.7% | +3.5% | — |  |
+| Communication Services | +2.7% | +3.5% | +0.26 |  |
 | Consumer Cyclical | -0.4% | -2.0% | — |  |
 | Consumer Defensive | +1.4% | +0.5% | — |  |
 | Energy | -0.8% | +1.0% | — |  |
@@ -212,6 +212,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 
 | Sector | bias |
 |--------|------|
+| Communication Services | +0.26 |
 | Basic Materials | +0.00 |
 
 ### How much each predictor is trusted (graded hit rate)
@@ -519,28 +520,28 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 - **CF** (large, Basic Materials, $18.6B) score -0.352. SELL/AVOID — market=GREEN; red domains=parent,child,setup
 - **OVV** (large, Energy, $16.6B) score -0.328. NO BEAR — market=GREEN
 - **ADM** (large, Consumer Defensive, $40.3B) score -0.297. NO BEAR — market=GREEN
-- **SSTK** (micro, Communication Services, $167M) score -0.292. NO BEAR — market=GREEN; red domains=setup
 - **HAL** (large, Energy, $27.9B) score -0.288. SELL/AVOID — market=GREEN; red domains=child,setup; child lags parent -7.7%
 - **APA** (large, Energy, $15.4B) score -0.267. NO BEAR — market=GREEN
+- **SSTK** (micro, Communication Services, $167M) score -0.266. NO BEAR — market=GREEN; red domains=setup
 - **IMO** (large, Energy, $61.0B) score -0.265. NO BEAR — market=GREEN; red domains=setup
 - **EC** (large, Energy, $34.9B) score -0.263. NO BEAR — market=GREEN
-- **NFLX** (mega, Communication Services, $308.5B) score -0.262. NO BEAR — market=GREEN
 - **FLUT** (large, Consumer Cyclical, $15.2B) score -0.257. NO BEAR — market=GREEN; red domains=setup
 - **HUM** (large, Healthcare, $45.5B) score -0.256. NO BEAR — market=GREEN
 - **DOW** (large, Basic Materials, $20.6B) score -0.255. SELL/AVOID — market=GREEN; red domains=parent,child,setup
 - **RVMD** (large, Healthcare, $41.2B) score -0.255. NO BEAR — market=GREEN; red domains=setup
 - **COKE** (large, Consumer Defensive, $12.7B) score -0.241. NO BEAR — market=GREEN
 - **YPF** (large, Energy, $21.3B) score -0.239. NO BEAR — market=GREEN; red domains=flow
+- **NFLX** (mega, Communication Services, $308.5B) score -0.236. NO BEAR — market=GREEN
 - **DKNG** (large, Consumer Cyclical, $19.6B) score -0.232. NO BEAR — market=GREEN; red domains=setup
 - **JBHT** (large, Industrials, $22.2B) score -0.221. NO BEAR — market=GREEN; red domains=parent
 - **STLA** (large, Consumer Cyclical, $13.9B) score -0.221. NO BEAR — market=GREEN; red domains=setup
 - **EQNR** (large, Energy, $103.0B) score -0.220. NO BEAR — market=GREEN
-- **CHTR** (large, Communication Services, $21.6B) score -0.219. NO BEAR — market=GREEN; red domains=setup
 - **OKE** (large, Energy, $57.9B) score -0.213. SELL/AVOID — market=GREEN; red domains=child
 - **XHG** (micro, Financial, $111M) score -0.202. NO BEAR — market=GREEN
-- **TJGC** (micro, Communication Services, $155M) score -0.198. NO BEAR — market=GREEN
 - **KHC** (large, Consumer Defensive, $28.9B) score -0.198. NO BEAR — market=GREEN; red domains=setup; child lags parent -3.5%
 - **LYB** (large, Basic Materials, $19.4B) score -0.195. SELL/AVOID — market=GREEN; red domains=parent,child
+- **CHTR** (large, Communication Services, $21.6B) score -0.193. NO BEAR — market=GREEN; red domains=setup
+- **HE** (small, Utilities, $1.7B) score -0.190. SELL/AVOID — market=GREEN; red domains=parent,child,setup
 
 ## 3d BUY (compact — same names, different weights)
 
@@ -879,22 +880,18 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 
 - **CF** (large, Basic Materials, $18.6B) score -0.452. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **OVV** (large, Energy, $16.6B) score -0.449. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **SSTK** (micro, Communication Services, $167M) score -0.439. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **HAL** (large, Energy, $27.9B) score -0.433. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **IMO** (large, Energy, $61.0B) score -0.405. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **DKNG** (large, Consumer Cyclical, $19.6B) score -0.399. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **FLUT** (large, Consumer Cyclical, $15.2B) score -0.398. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **STLA** (large, Consumer Cyclical, $13.9B) score -0.395. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **advancing**
+- **SSTK** (micro, Communication Services, $167M) score -0.387. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **DOW** (large, Basic Materials, $20.6B) score -0.386. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **ADM** (large, Consumer Defensive, $40.3B) score -0.386. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **APA** (large, Energy, $15.4B) score -0.382. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **EC** (large, Energy, $34.9B) score -0.358. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **GENI** (small, Communication Services, $1.6B) score -0.351. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **IHRT** (small, Communication Services, $406M) score -0.348. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **advancing**
-- **TJGC** (micro, Communication Services, $155M) score -0.337. the Finviz industry was **down**
 - **COKE** (large, Consumer Defensive, $12.7B) score -0.336. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **SOC** (small, Energy, $825M) score -0.333. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **CHTR** (large, Communication Services, $21.6B) score -0.331. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **YPF** (large, Energy, $21.3B) score -0.329. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **EQNR** (large, Energy, $103.0B) score -0.325. this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **KHC** (large, Consumer Defensive, $28.9B) score -0.323. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
@@ -902,6 +899,10 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 - **FWRD** (small, Industrials, $493M) score -0.316. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **WU** (small, Financial, $1.9B) score -0.307. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **LYB** (large, Basic Materials, $19.4B) score -0.306. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **advancing**
+- **AA** (large, Basic Materials, $11.8B) score -0.303. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
+- **BGS** (micro, Consumer Defensive, $237M) score -0.301. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **GENI** (small, Communication Services, $1.6B) score -0.299. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **BSIN** (micro, Energy, $85M) score -0.299. the Finviz industry was **down**
 
 ## Files for this run
 
