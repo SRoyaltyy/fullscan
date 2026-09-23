@@ -1,6 +1,6 @@
 # Stock book — 2026-09-23
 
-_Generated 2026-09-23T16:58:41.461732-04:00_
+_Generated 2026-09-23T17:03:52.494328-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -59,9 +59,9 @@ Decision domains: **MKT · parent · child · company · setup · flow**. Measur
 | 6 | **OPCH** | 🟢🟢🟢🟡🟢🟢 | group_leader | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY GROUP_LEADER — market=GREEN; parent=GREEN; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,⚪,Cond green |
 | 7 | **THC** | 🟢🟢🟢🟡🟢🟡 | group_leader | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY GROUP_LEADER — market=GREEN; parent=GREEN; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=🔵,⚪,Cond green |
 | 8 | **CRWD** | 🟢🔴🟢🟡🟢🟢 | group_leader | direct normal digest (stale/undated): Morgan Stanley target raise and falling yields lift CrowdStrike 5% during regular hours; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=GREEN; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.30); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
-| 9 | **INOD** | 🟢🔴🟢🟡🟢🟢 | group_leader | no direct company event; Information Technology Services +2.9% d1 / +1.9% 1w / +3.9% vs parent | BUY GROUP_LEADER — market=GREEN; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
-| 10 | **DOCN** | 🟢🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=GREEN; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
-| 11 | **TWLO** | 🟢🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=GREEN; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
+| 9 | **DOCN** | 🟢🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=GREEN; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
+| 10 | **TWLO** | 🟢🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=GREEN; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
+| 11 | **INOD** | 🟢🔴🟢🟡🟢🟢 | group_leader | no direct company event; Information Technology Services +2.9% d1 / +1.9% 1w / +3.9% vs parent | BUY GROUP_LEADER — market=GREEN; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
 | 12 | **PENG** | 🟢🔴🟢🟡🟢🟢 | group_leader | no direct company event; Information Technology Services +2.9% d1 / +1.9% 1w / +3.9% vs parent | BUY GROUP_LEADER — market=GREEN; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
 | 13 | **RBRK** | 🟢🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=GREEN; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
 | 14 | **VUZI** | 🟢🔴🟢🟡🟢🟢 | group_leader | no direct company event; Consumer Electronics +0.3% d1 / +4.0% 1w / +6.0% vs parent | BUY GROUP_LEADER — market=GREEN; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
@@ -80,8 +80,8 @@ Decision domains: **MKT · parent · child · company · setup · flow**. Measur
 | 7 | **HAL** | 🟢🔴🔴🟡🔴🟡 | Oil & Gas Equipment & Services | SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -7.7% |
 | 8 | **METC** | 🟢🔴🔴🟡🔴🟡 | Coking Coal | SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -5.7% |
 | 9 | **PUMP** | 🟢🔴🔴🟡🔴🟡 | Oil & Gas Equipment & Services | SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -7.7% |
-| 10 | **FLOC** | 🟢🔴🔴🟡🔴🟡 | Oil & Gas Equipment & Services | SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -7.7% |
-| 11 | **XPRO** | 🟢🔴🔴🟡🔴🟡 | Oil & Gas Equipment & Services | SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -7.7% |
+| 10 | **XPRO** | 🟢🔴🔴🟡🔴🟡 | Oil & Gas Equipment & Services | SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -7.7% |
+| 11 | **FLOC** | 🟢🔴🔴🟡🔴🟡 | Oil & Gas Equipment & Services | SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -7.7% |
 | 12 | **CCJ** | 🟢🔴🔴🟡🔴🟡 | Uranium | SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -10.3% |
 | 13 | **UUUU** | 🟢🔴🔴🟡🔴🟡 | Uranium | SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -10.3% |
 | 14 | **URG** | 🟢🔴🔴🟡🔴🟡 | Uranium | SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -10.3% |
@@ -206,7 +206,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Catalyst overlays | **missing / not in ranker** | not in ranker — separate chart workflow |
 | Insider / politician flow | **missing / not in ranker** | no daily file in repo |
 | Industry predict | **found** | not scored (ad-hoc only) |
-| Learnings / mutable policy | **missing / not in ranker** | next predict prompt, not a ticker score |
+| Learnings / mutable policy | **found** | next predict prompt, not a ticker score |
 
 ### Sector LLM bias (1d) — 0 / empty means that essay was not run today
 
@@ -238,8 +238,8 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | sector:Healthcare | 48% | 23 | ×0.85 |
 | sector:Industrials | 35% | 26 | ×0.50 |
 | sector:Real Estate | 50% | 26 | ×0.85 |
-| sector:Technology | 35% | 23 | ×0.50 |
-| sector:Utilities | 44% | 23 | ×0.50 |
+| sector:Technology | 33% | 24 | ×0.50 |
+| sector:Utilities | 42% | 24 | ×0.50 |
 
 ## Horizon weights — book_policy.json v15
 
