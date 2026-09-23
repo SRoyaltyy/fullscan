@@ -1,6 +1,6 @@
 {
   "date": "2026-09-23",
-  "generated_at": "2026-09-23T04:57:44.375486-04:00",
+  "generated_at": "2026-09-23T04:58:31.273622-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -558,19 +558,19 @@
           "path": "01_daily/weather/2026-09-23_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9317 vix=falling yields=falling",
-          "size": 9317,
-          "said": "favorable 1 \u00b7 hostile 3 \u00b7 neutral 7",
+          "reason": "sectors=11 bytes=9619 vix=falling yields=falling",
+          "size": 9619,
+          "said": "favorable 2 \u00b7 hostile 2 \u00b7 neutral 7",
           "bullets": [
-            "hostile: Basic Materials, Energy, Healthcare",
-            "events bull 2 / bear 7"
+            "hostile: Basic Materials, Energy",
+            "events bull 1 / bear 3"
           ]
         }
       ],
-      "said": "favorable 1 \u00b7 hostile 3 \u00b7 neutral 7",
+      "said": "favorable 2 \u00b7 hostile 2 \u00b7 neutral 7",
       "bullets": [
-        "hostile: Basic Materials, Energy, Healthcare",
-        "events bull 2 / bear 7"
+        "hostile: Basic Materials, Energy",
+        "events bull 1 / bear 3"
       ]
     },
     {
@@ -775,12 +775,12 @@
           "path": "01_daily/weather/2026-09-23_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9317 vix=falling yields=falling",
-          "size": 9317,
-          "said": "favorable 1 \u00b7 hostile 3 \u00b7 neutral 7",
+          "reason": "sectors=11 bytes=9619 vix=falling yields=falling",
+          "size": 9619,
+          "said": "favorable 2 \u00b7 hostile 2 \u00b7 neutral 7",
           "bullets": [
-            "hostile: Basic Materials, Energy, Healthcare",
-            "events bull 2 / bear 7"
+            "hostile: Basic Materials, Energy",
+            "events bull 1 / bear 3"
           ]
         },
         {
@@ -803,10 +803,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5897",
-          "size": 2177957,
-          "said": "202 rows",
+          "size": 2217622,
+          "said": "200 rows",
           "bullets": [
-            "KEYS, FORM, SMTC, ESTC, SKHY, NVDA, SNDK, TER"
+            "HRMY, HALO, ONC, KEYS, FORM, SMTC, ESTC, SKHY"
           ]
         },
         {
@@ -879,9 +879,9 @@
           "bullets": []
         }
       ],
-      "said": "202 rows",
+      "said": "200 rows",
       "bullets": [
-        "KEYS, FORM, SMTC, ESTC, SKHY"
+        "HRMY, HALO, ONC, KEYS, FORM"
       ]
     },
     {
@@ -991,10 +991,10 @@
       ]
     },
     "weather": {
-      "said": "favorable 1 \u00b7 hostile 3 \u00b7 neutral 7",
+      "said": "favorable 2 \u00b7 hostile 2 \u00b7 neutral 7",
       "bullets": [
-        "hostile: Basic Materials, Energy, Healthcare",
-        "events bull 2 / bear 7"
+        "hostile: Basic Materials, Energy",
+        "events bull 1 / bear 3"
       ]
     }
   },
@@ -1527,6 +1527,31 @@
         }
       ],
       "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-23\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-09-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-23T04:58:30.422931-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-09-23.csv",
+          "ok": true,
+          "reason": "",
+          "size": 10981867,
+          "preview": "11648 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11427461,
+          "preview": "11648 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11648 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11648 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
