@@ -1,6 +1,6 @@
 {
   "date": "2026-09-22",
-  "generated_at": "2026-09-22T16:38:55.994059-04:00",
+  "generated_at": "2026-09-23T01:54:15.418631-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -94,12 +94,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 87496,
-          "said": "5874 tickers \u00b7 2279 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
+          "size": 87922,
+          "said": "5877 tickers \u00b7 2217 signals \u00b7 top AJG, AME, AMX, AON, APH, APP, ARGX, ASML",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
             "AMETEK Completes Acquisition of Indicor Instrumentation",
-            "Novo Nordisk shares plunge over 7% as new targets fail to reassure investors"
+            "Norwegian Cruise downgrade, Duolingo upgraded: Wall Street's top analyst calls"
           ]
         },
         {
@@ -109,10 +109,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11467,
+          "size": 11683,
           "said": "Finviz Daily Digest \u2014 2026-09-22",
           "bullets": [
-            "_Generated 2026-09-22T07:09:51.032050-04:00 \u00b7 export=data/exports/finviz_2026-09-22.csv \u00b7 ticker digests=5874 \u00b7 high-signal=2279_",
+            "_Generated 2026-09-23T01:54:14.151169-04:00 \u00b7 export=data/exports/finviz_2026-09-22.csv \u00b7 ticker digests=5877 \u00b7 high-signal=2217_",
             "Major indices (live quote page)"
           ]
         },
@@ -167,11 +167,11 @@
           ]
         }
       ],
-      "said": "5874 tickers \u00b7 2279 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
+      "said": "5877 tickers \u00b7 2217 signals \u00b7 top AJG, AME, AMX, AON, APH, APP, ARGX, ASML",
       "bullets": [
         "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
         "AMETEK Completes Acquisition of Indicor Instrumentation",
-        "Novo Nordisk shares plunge over 7% as new targets fail to reassure investors"
+        "Norwegian Cruise downgrade, Duolingo upgraded: Wall Street's top analyst calls"
       ]
     },
     {
@@ -192,12 +192,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87496,
-          "said": "5874 tickers \u00b7 2279 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
+          "size": 87922,
+          "said": "5877 tickers \u00b7 2217 signals \u00b7 top AJG, AME, AMX, AON, APH, APP, ARGX, ASML",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
             "AMETEK Completes Acquisition of Indicor Instrumentation",
-            "Novo Nordisk shares plunge over 7% as new targets fail to reassure investors"
+            "Norwegian Cruise downgrade, Duolingo upgraded: Wall Street's top analyst calls"
           ]
         },
         {
@@ -346,7 +346,7 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 7119,
+          "size": 7294,
           "said": "2 up / 9 down / 0 flat",
           "bullets": [
             "XLB DOWN -1.6",
@@ -362,11 +362,9 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=True",
-          "size": 7187,
-          "said": "all_ok=True \u00b7 sectors 11/11 \u00b7 1 fail",
-          "bullets": [
-            "finviz_market_digest:missing"
-          ]
+          "size": 7183,
+          "said": "all_ok=True \u00b7 sectors 11/11 \u00b7 no fails",
+          "bullets": []
         },
         {
           "key": "status",
@@ -375,8 +373,8 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 6831,
-          "said": "all_ok=False \u00b7 qc=True \u00b7 grok=True \u00b7 book=False",
+          "size": 6904,
+          "said": "all_ok=False \u00b7 qc=True \u00b7 grok=False \u00b7 book=True",
           "bullets": []
         },
         {
@@ -385,11 +383,11 @@
           "path": "01_daily/2026-09-22_grok_review.json",
           "role": "required",
           "status": "OK",
-          "reason": "ok=True All core artifacts are real, same-day (2026-09-22), and complete: general predict takes a clear DOWN/mild direction with",
-          "size": 1008,
-          "said": "ok=True \u00b7 All core artifacts are real, same-day (2026-09-22), and complete: general predict takes a clear DOWN/mild direction with MEMORY_CONFIRM and full factor scan; ev",
+          "reason": "ok=False Grok returned an empty review",
+          "size": 309,
+          "said": "ok=False \u00b7 empty_review_reply (review)",
           "bullets": [
-            "All core artifacts are real, same-day (2026-09-22), and complete: general predict takes a clear DOWN/mild direction with MEMORY_CONFIRM and full factor scan; events JSON is a genuine scan_date=2026-09-22 scan (not carried); news judge and news parse carry the required NEWS_PARSE_BEGIN/END markers with real ranked items; finviz digest and map-heat tables are populated with a live futures tape (non-empty); 11/11 sector essays are distinct, signed, and quality-ok. The map_heat_research.md is phase=morning_refresh (size_gate=True) and its SYNTHESIS explicitly states the morning delta refresh failed captain-evidence QC and fell back to last night's post-close cards \u2014 but it still contains 142 captain cards with supported sentiment and no timeout text, so it does not meet the fail bar. The missi"
+            "Grok returned an empty review"
           ]
         },
         {
@@ -568,12 +566,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87496,
-          "said": "5874 tickers \u00b7 2279 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
+          "size": 87922,
+          "said": "5877 tickers \u00b7 2217 signals \u00b7 top AJG, AME, AMX, AON, APH, APP, ARGX, ASML",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
             "AMETEK Completes Acquisition of Indicor Instrumentation",
-            "Novo Nordisk shares plunge over 7% as new targets fail to reassure investors"
+            "Norwegian Cruise downgrade, Duolingo upgraded: Wall Street's top analyst calls"
           ]
         },
         {
@@ -674,12 +672,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87496,
-          "said": "5874 tickers \u00b7 2279 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
+          "size": 87922,
+          "said": "5877 tickers \u00b7 2217 signals \u00b7 top AJG, AME, AMX, AON, APH, APP, ARGX, ASML",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
             "AMETEK Completes Acquisition of Indicor Instrumentation",
-            "Novo Nordisk shares plunge over 7% as new targets fail to reassure investors"
+            "Norwegian Cruise downgrade, Duolingo upgraded: Wall Street's top analyst calls"
           ]
         },
         {
@@ -745,7 +743,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 7119,
+          "size": 7294,
           "said": "2 up / 9 down / 0 flat",
           "bullets": [
             "XLB DOWN -1.6",
@@ -777,12 +775,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87496,
-          "said": "5874 tickers \u00b7 2279 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, APP, ARGX",
+          "size": 87922,
+          "said": "5877 tickers \u00b7 2217 signals \u00b7 top AJG, AME, AMX, AON, APH, APP, ARGX, ASML",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
             "AMETEK Completes Acquisition of Indicor Instrumentation",
-            "Novo Nordisk shares plunge over 7% as new targets fail to reassure investors"
+            "Norwegian Cruise downgrade, Duolingo upgraded: Wall Street's top analyst calls"
           ]
         },
         {
@@ -860,7 +858,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=164",
-          "size": 1289335,
+          "size": 1289539,
           "said": "1d BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU \u00b7 -0.357",
           "bullets": []
         },
@@ -871,10 +869,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 56455,
+          "size": 56433,
           "said": "Stock book \u2014 2026-09-22",
           "bullets": [
-            "_Generated 2026-09-22T15:51:31.763104-04:00_",
+            "_Generated 2026-09-22T20:07:41.771970-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -938,7 +936,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=164",
-          "size": 1289335,
+          "size": 1289539,
           "said": "1d BUY PACS, PAYS, AMN, ATEN \u00b7 SELL FLNC, SOC, TE, BYRN, CSIQ, BTU \u00b7 -0.357",
           "bullets": []
         },
@@ -1009,7 +1007,7 @@
       },
       {
         "ticker": "SOC",
-        "score": -0.5181310021834322
+        "score": -0.5278810021834323
       },
       {
         "ticker": "TE",
@@ -1025,15 +1023,15 @@
       },
       {
         "ticker": "BTU",
-        "score": -0.5727175929068051
+        "score": -0.5824675929068052
       },
       {
         "ticker": "UEC",
-        "score": -0.5542737344372701
+        "score": -0.56402373443727
       },
       {
         "ticker": "HAL",
-        "score": -0.21944193951632093
+        "score": -0.22919193951632097
       }
     ],
     "flatten": {
@@ -2491,6 +2489,45 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-22\n**Generated:** 2026-09-22T16:38:54.865584-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks ended mixed as Nasdaq hit a record high on AI optimism while financials dropped and oil extended its slide amid Iran and US diesel export headlines\n**Prior close:** SPX +1.90%  Nasdaq +0.45%  Dow -0.36%\n**SPX:** +1.90%  **Nasdaq:** +0.45%  **Dow:** -0.36%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** ALB, MOS, FCX, JPM, GS, META, AAPL, SHOP, PYPL, WFC, INTC, MU, SNDK, VKTX, AZO, MPC, VLO, KBH, WOR, LEN, GIS\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-23\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-22",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-23T01:54:14.575347-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-22_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 87922,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-22_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11706,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-22\n_Generated 2026-09-23T01:54:14.151169-04:00 \u00b7 export=data/exports/finviz_2026-09-22.csv \u00b7 ticker digests=5877 \u00b7 high-signal=2217_"
+        },
+        {
+          "path": "data/exports/finviz_2026-09-22.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11427461,
+          "preview": "11648 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11427461,
+          "preview": "11648 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-22\n_Generated 2026-09-23T01:54:14.151169-04:00 \u00b7 export=data/exports/finviz_2026-09-22.csv \u00b7 ticker digests=5877 \u00b7 high-signal=2217_ \u00b7 11648 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 11648 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {

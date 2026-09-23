@@ -1,10 +1,15 @@
 {
   "date": "2026-09-22",
-  "generated_at": "2026-09-22T07:09:55.174139-04:00",
-  "ok": true,
-  "fails": [],
-  "notes": "All core artifacts are real, same-day (2026-09-22), and complete: general predict takes a clear DOWN/mild direction with MEMORY_CONFIRM and full factor scan; events JSON is a genuine scan_date=2026-09-22 scan (not carried); news judge and news parse carry the required NEWS_PARSE_BEGIN/END markers with real ranked items; finviz digest and map-heat tables are populated with a live futures tape (non-empty); 11/11 sector essays are distinct, signed, and quality-ok. The map_heat_research.md is phase=morning_refresh (size_gate=True) and its SYNTHESIS explicitly states the morning delta refresh failed captain-evidence QC and fell back to last night's post-close cards \u2014 but it still contains 142 captain cards with supported sentiment and no timeout text, so it does not meet the fail bar. The missi",
-  "prompt_chars": 264195,
-  "reply_chars": 998,
+  "generated_at": "2026-09-23T01:54:14.550479-04:00",
+  "ok": false,
+  "fails": [
+    {
+      "path": "(review)",
+      "reason": "empty_review_reply"
+    }
+  ],
+  "notes": "Grok returned an empty review",
+  "prompt_chars": 264186,
+  "reply_chars": 0,
   "reviewer": "grok-4.6-text"
 }
