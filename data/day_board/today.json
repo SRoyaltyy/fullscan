@@ -1,6 +1,6 @@
 {
   "date": "2026-09-23",
-  "generated_at": "2026-09-23T04:22:50.554715-04:00",
+  "generated_at": "2026-09-23T04:22:55.373889-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
-      "date": "2026-09-23",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-23T04:15:09.068620-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-23_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 5067,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-09-23_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 2350,
-          "preview": "# Finviz homepage market digest \u2014 2026-09-23\n**Generated:** 2026-09-23T04:15:09.055337-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures edge higher as oil trades below $100 after Trump UN remarks with PMIs and earnings set to guide early moves\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** CTAS, PAYX, GIS, CBRL\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** CTAS, PAYX, GIS, CBRL\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-23\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-23\n**Generated:** 2026-09-23T04:15:09.055337-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures edge higher as oil trades below $100 after Trump UN remarks with PMIs and earnings set to guide early moves\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** CTAS, PAYX, GIS, CBRL\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** CTAS, PAYX, GIS, CBRL\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-23\n**Clock use:** `same_morning`"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -221,6 +196,31 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-23\nExport `finviz_2026-09-23.csv` \u00b7 11616 names \u00b7 generated 2026-09-23T04:16:39.961966-04:00"
+    },
+    {
+      "key": "map_heat_baseline",
+      "title": "Map heat night baseline",
+      "date": "2026-09-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-23T04:22:54.999981-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-23_research_baseline.json",
+          "ok": true,
+          "reason": "",
+          "size": 401297,
+          "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-23_research_baseline.md",
+          "ok": true,
+          "reason": "",
+          "size": 44842,
+          "preview": "# MAP HEAT RESEARCH \u2014 2026-09-23\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
+        }
+      ],
+      "preview": "keys: date, source_heat_date, phase, generated_at, n_targets, n_cards, coverage, validation_errors, source_calendar_results, source_market_reaction_pct, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-23\n142 captain cards \u00b7 size_gate=False set by pre-open refresh"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
