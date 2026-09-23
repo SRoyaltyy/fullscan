@@ -1,6 +1,6 @@
 {
   "date": "2026-09-23",
-  "generated_at": "2026-09-23T05:40:16.061531-04:00",
+  "generated_at": "2026-09-23T05:40:21.543023-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -810,10 +810,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5897",
-          "size": 2217622,
-          "said": "200 rows",
+          "size": 2230971,
+          "said": "202 rows",
           "bullets": [
-            "HRMY, HALO, ONC, KEYS, FORM, SMTC, ESTC, SKHY"
+            "KEYS, FORM, SMTC, ESTC, SKHY, NVDA, SNDK, TER"
           ]
         },
         {
@@ -886,9 +886,9 @@
           "bullets": []
         }
       ],
-      "said": "200 rows",
+      "said": "202 rows",
       "bullets": [
-        "HRMY, HALO, ONC, KEYS, FORM"
+        "KEYS, FORM, SMTC, ESTC, SKHY"
       ]
     },
     {
@@ -1641,6 +1641,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': 0.25, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Communication Services={'score': -1.5, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Cyclical={'score': -1.55, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Consumer Defensive={'score': -1.635, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Energy={'score': -2.59, 'dir': 'down', 'conf': 0.4, 'source': 'finviz_week'}, Financial={'score': 0.27, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Healthcare={'score': -0.55, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'}, Industrials={'score': 0.25, 'dir': 'flat', 'conf': 0.4, 'source': 'finviz_week'} \u00b7 # Weather report \u2014 2026-09-23\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-23T05:40:21.107730-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-23_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2230971,
+          "preview": "5897 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 KEYS, FORM, SMTC, ESTC, SKHY"
+        }
+      ],
+      "preview": "5897 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 KEYS, FORM, SMTC, ESTC, SKHY"
     }
   ],
   "href": {
