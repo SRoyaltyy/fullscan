@@ -101,6 +101,8 @@ jobs:
         env:
           LANE_URL: ${{ vars.LANE_URL }}
           LANE_ALLOW_PAID_DEEPSEEK: ${{ vars.LANE_ALLOW_PAID_DEEPSEEK }}
+          # OR :free already 429'd this hour. Do not burn the rest of the cap on gold.
+          LANE_SKIP_OPENROUTER: "1"
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           GITHUB_MODELS_TOKEN: ${{ secrets.GITHUB_MODELS_TOKEN }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}

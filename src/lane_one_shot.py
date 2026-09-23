@@ -24,7 +24,9 @@ from pathlib import Path
 from src import lane_route as lane
 from src.news_impact.axioms import load_axioms
 from src.news_impact.finviz_linker import get_index
+from src.news_impact.action_grade import grade_action_rows, summarize_tape
 from src.news_impact.one_shot_stack import (
+    GOLD_EXTRA,
     GOLD_KEEP,
     GOLD_REJECT,
     gate0,
@@ -225,14 +227,77 @@ class LiveLane:
         self.ctx = {"keys": keys, "ollama_url": ollama_url, "gh_direct": gh_direct}
         lane._SKIP.clear()
         lane._RATE_LIMITED.clear()
+        lane._OR_DAY_CAPPED = False
         self.last_classify_note = ""
 
     def __call__(self, stage: str, prompt: str, system: str, accept=None):
         if stage == "classify":
             return self._classify(prompt, system, accept)
+        # What to ask, and whether the pack is complete, use the classify floor.
+        # 8B still filters Finviz core-vs-tangent and writes the analyst JSON.
+        if stage in {"meta", "pack_complete"}:
+            return self._floor(stage, prompt, system, accept)
         if stage in {"filter", "planner"}:
             return self._hop(stage, prompt, system, accept, FILTER_LANES, "news_impact")
         return self._hop(stage, prompt, system, accept, ANALYST_LANES, "news_impact")
+
+    def _floor(self, stage: str, prompt: str, system: str, accept):
+        """Zhipu / DashScope / TokenHub / OR gemma floor. Not 8B."""
+        notes: list[str] = []
+        zhipu_on = bool(self.ctx["keys"].get("zhipu"))
+        budget = max(lane.token_budget("news_classify"), 1200)
+        winner = None
+        for hop in classify_lanes():
+            models = classify_models_for(hop)
+            if not models:
+                note = (
+                    f"{hop}: skipped for {stage} — allowlist is 8B-only, "
+                    "and 8B is not a context floor"
+                    if hop == "siliconflow"
+                    else f"{hop}: no context-floor model"
+                )
+                notes.append(note)
+                print(f"[lane_one_shot] {note}")
+                continue
+            if hop not in self.ctx["keys"]:
+                note = f"{hop}: key missing"
+                notes.append(note)
+                print(f"[lane_one_shot] {note}")
+                continue
+            parsed, model = lane.ask_lane(
+                hop, prompt, self.ctx,
+                max_tokens=budget, system=system, tmpl="news_classify",
+            )
+            if parsed is None or lane.is_classify_banned(str(model or "")):
+                notes.append(self._fail_note(hop, model))
+                continue
+            if accept is not None and not accept(parsed):
+                note = f"{hop}/{model}: {stage} JSON rejected"
+                notes.append(note)
+                print(f"[lane_one_shot] {note}")
+                time.sleep(0.2)
+                continue
+            print(f"[lane_one_shot] {stage} lane::{hop}::{model}")
+            winner = (parsed, hop, str(model))
+            break
+        if winner is None:
+            note = "; ".join(notes) or f"{stage} floor exhausted"
+            if zhipu_on:
+                print(
+                    f"[lane_one_shot] {stage} stopped — ZHIPU key present, "
+                    f"no floor watermark. {note}"
+                )
+            else:
+                print(f"[lane_one_shot] {stage} floor exhausted. {note}")
+            return None, "", ""
+        _parsed, hop, model = winner
+        if zhipu_on and hop != "zhipu":
+            print(
+                f"[lane_one_shot] {stage} watermark is not zhipu "
+                f"while ZHIPU key is present: {'; '.join(notes)}"
+            )
+        time.sleep(0.4)
+        return winner
 
     def _classify(self, prompt: str, system: str, accept):
         """Floor models only. If they all 429 or reject the enum, stop."""
@@ -356,6 +421,23 @@ def _valid_watermark(row: dict) -> bool:
     return True
 
 
+def _context_floor_ok(row: dict) -> bool:
+    """Meta and pack-complete watermarks must be floor models, not 8B."""
+    stages = {}
+    for mark in row.get("watermarks") or []:
+        if mark.get("stage") in {"meta", "pack_complete"}:
+            stages[mark.get("stage")] = str(mark.get("watermark") or "")
+    if "meta" not in stages or "pack_complete" not in stages:
+        return False
+    for wm in stages.values():
+        parts = wm.split("::")
+        if len(parts) < 3 or parts[1] not in _FLOOR_PROVIDERS:
+            return False
+        if lane.is_classify_banned(parts[-1]):
+            return False
+    return True
+
+
 def _classify_floor_ok(row: dict) -> bool:
     """Classify watermark must be a floor model. Ministral cannot lock class."""
     for mark in row.get("watermarks") or []:
@@ -388,15 +470,16 @@ def run_shard(
     axioms = load_axioms()
     index = get_index(root)
 
-    def pack_fn(title, body):
-        from src.news_impact.search_pack import pack_for_article
-        return pack_for_article(title, body, enabled=True)
+    def pack_fn(query, body=""):
+        from src.news_impact.search_pack import overview_first
+        return overview_first(query or body)
 
     scratch = root / SCRATCH
     kept: list[dict] = []
     rejected: list[dict] = []
     drawn = 0
     gold_report: dict[str, str] = {}
+    gold_rows: list[dict] = []
 
     def handle(art: dict) -> None:
         nonlocal drawn
@@ -406,13 +489,20 @@ def run_shard(
             pack_fn=pack_fn if use_pack else None,
             root=root, index_names=index.title_names,
         )
+        if row.get("gold_id"):
+            gold_rows.append(row)
         if row.get("gold_id") and gate0(art.get("title") or "", art.get("body") or ""):
             gold_report[row["gold_id"]] = "REJECTED"
         elif row.get("gold_id"):
             gold_report[row["gold_id"]] = row.get("gold_status") or (
                 "PASS" if row.get("keep") else "FAIL"
             )
-        if row.get("keep") and _valid_watermark(row) and _classify_floor_ok(row):
+        if (
+            row.get("keep")
+            and _valid_watermark(row)
+            and _classify_floor_ok(row)
+            and _context_floor_ok(row)
+        ):
             kept.append(row)
             _save_scratch(row, scratch)
             print(f"[lane_one_shot] KEEP {row.get('watermark')} {row.get('action','')[:120]}")
@@ -430,13 +520,15 @@ def run_shard(
             print(f"[lane_one_shot] REJECT {row.get('reject_reason')} {(row.get('title') or '')[:80]}")
 
     if shard == 0 or gold_only:
-        for art in GOLD_KEEP + GOLD_REJECT:
+        for art in GOLD_KEEP + GOLD_REJECT + GOLD_EXTRA:
             handle(art)
 
     pool = [] if gold_only else [
         art for art in harvest(root)
         if _shard_of(art["title"], shards) == shard
-        and _norm(art["title"]) not in {_norm(g["title"]) for g in GOLD_KEEP + GOLD_REJECT}
+        and _norm(art["title"]) not in {
+            _norm(g["title"]) for g in GOLD_KEEP + GOLD_REJECT + GOLD_EXTRA
+        }
     ]
     pool.sort(key=lambda a: a["title"])
     for art in pool:
@@ -444,6 +536,11 @@ def run_shard(
             break
         handle(art)
 
+    try:
+        tape = grade_action_rows(kept, fetch=True)
+    except Exception as exc:  # noqa: BLE001
+        print(f"[lane_one_shot] tape grade failed {str(exc)[:160]}")
+        tape = grade_action_rows(kept, fetch=False)
     invented = 0
     hops: Counter = Counter()
     classify_hops: Counter = Counter()
@@ -468,6 +565,8 @@ def run_shard(
         "classify_histogram": dict(classify_hops),
         "reject_histogram": dict(reasons),
         "gold": gold_report,
+        "gold_rows": gold_rows,
+        "tape": tape,
         "env": env_lines(),
         "finviz_file": index.source,
         "kept": kept,
@@ -518,7 +617,7 @@ def merge_boards(src: Path, board: Path | None = None, expect: int = 100) -> int
             if row.get("keep") and _valid_watermark(row) and row.get("action"):
                 if "no action" in str(row.get("action")).lower():
                     continue
-                if not _classify_floor_ok(row):
+                if not _classify_floor_ok(row) or not _context_floor_ok(row):
                     continue
                 kept.append(row)
     # Stable order: gold keepers first, then the rest.
@@ -552,6 +651,7 @@ def merge_boards(src: Path, board: Path | None = None, expect: int = 100) -> int
         "env": env,
         "finviz_file": finviz_file,
         "status": status,
+        "tape": summarize_tape(kept),
     }
     if invented or not kept:
         print("[lane_one_shot] refusing finished board", status, "kept", len(kept))
@@ -625,6 +725,14 @@ def assess_board(text: str) -> list[str]:
         problems.append("classify histogram has no floor model")
     if "no action warranted" in text.lower():
         problems.append("banned phrase")
+    body = text.split("## Rows", 1)[-1] if "## Rows" in text else ""
+    if "### " in body:
+        if "M1:" not in body:
+            problems.append("meta section missing")
+        if "history_state:" not in body:
+            problems.append("history section missing")
+        if "native clock:" not in body:
+            problems.append("tape columns missing")
     return problems
 
 
@@ -644,6 +752,8 @@ def gold_gate_problems(report: dict) -> list[str]:
     for row in report.get("kept") or []:
         if row.get("gold_id") and not _classify_floor_ok(row):
             problems.append(f"classify below floor {row.get('gold_id')}")
+        if row.get("gold_id") and not _context_floor_ok(row):
+            problems.append(f"context below floor {row.get('gold_id')}")
     return problems
 
 
@@ -664,7 +774,17 @@ def write_gold_report(report: dict) -> int:
     }
     dest = Path("03_scoreboard/LANE_ONE_SHOT_GOLD.md")
     dest.parent.mkdir(parents=True, exist_ok=True)
-    rows = [row for row in report.get("kept") or [] if row.get("gold_id")]
+    rows = report.get("gold_rows") or [
+        row for row in report.get("kept") or [] if row.get("gold_id")
+    ]
+    missing = [row for row in rows if row.get("action") and "tape" not in row]
+    if missing:
+        try:
+            grade_action_rows(missing, fetch=True)
+        except Exception as exc:  # noqa: BLE001 — a tape miss is unscored, not a class
+            print(f"[lane_one_shot] tape grade failed {str(exc)[:160]}")
+            grade_action_rows(missing, fetch=False)
+    header["tape"] = summarize_tape(rows)
     dest.write_text(render_markdown(header, rows), encoding="utf-8")
     print(f"[lane_one_shot] wrote {dest} status={header['status']}")
     for item in problems:

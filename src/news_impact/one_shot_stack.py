@@ -1,9 +1,12 @@
 """Lane one-shot stack. Gate 0 rejects junk. Lane is the brain.
 
 Order, per article:
-  Gate0 → Stage1 Lane classify (no tickers) → context planner
-  → Finviz candidates (≤40) → Lane confirms instruments
-  → pack facts → Stage2 Lane analyst (one family) → validator → ACTION.
+  Gate0 → Stage1 classify (floor, no tickers) → M1–M3 meta (floor)
+  → HISTORY Y → Google AI Overview on the M2 questions
+  → Finviz lookup + 8B core/tangent filter
+  → SearXNG/DDG only if Overview returned nothing
+  → M4 pack_complete (floor) → Stage2 analyst → validator → ACTION.
+Tape grades run only after that ACTION string is frozen.
 
 classify.py / families.analyze are not called. A failed Lane hop is a
 miss, not a deterministic fill.
@@ -13,17 +16,35 @@ from __future__ import annotations
 import re
 from typing import Any, Callable
 
+from src.news_impact.action_grade import parse_action
 from src.news_impact.finviz_linker import _has_phrase, candidate_rows
 from src.news_impact.horizons import default_horizon
 from src.news_impact.hygiene import is_reaction_title
+from src.news_impact.meta_hop import (
+    apply_m5,
+    apply_pack_complete,
+    direction_blocked,
+    finviz_facts,
+    meta_acceptable,
+    normalize_meta,
+    pack_complete_acceptable,
+    pack_nonempty,
+)
 from src.news_impact.prompts import (
     ANALYST_SYSTEM,
     CLASSIFIER_SYSTEM,
     FAMILY_TESTS,
     FLIP_QUESTIONS,
+    HISTORY_SLOT,
     LANREOTIDE_CLOCK_Q,
+    META_SYSTEM,
     NAION_CLOCK_Q,
+    PACK_COMPLETE_SYSTEM,
+    Y_S_QUESTION,
+    Y_T_QUESTION,
     classifier_prompt,
+    meta_prompt,
+    pack_complete_prompt,
 )
 from src.lane_route import is_classify_banned
 from src.news_impact.schema import EVENT_CLASSES, family_of
@@ -163,6 +184,31 @@ GOLD_REJECT = [
     },
 ]
 
+# Proof rows. They do not gate the four.
+GOLD_EXTRA = [
+    {
+        "gold_id": "maduro_capture",
+        "title": "US forces capture sitting head of state Maduro in Caracas",
+        "body": "First arrest of a sitting head of state. The January capture is the break.",
+        "known_at": "2026-01-03T12:00:00-04:00",
+        "harvest_source": "gold_fixture",
+    },
+    {
+        "gold_id": "maduro_wrap",
+        "title": "Maduro trial wrap rehearses the January capture for a September hearing",
+        "body": "Reprint of the January head-of-state capture. Not a new break.",
+        "known_at": "2026-09-20T11:00:00-04:00",
+        "harvest_source": "gold_fixture",
+    },
+    {
+        "gold_id": "wang_fuk",
+        "title": "Wang Fuk fire is the deadliest since 1948 and no listed contractor is named",
+        "body": "A city tragedy. No insurer, no contractor, no listed pipe.",
+        "known_at": "2026-09-22T09:00:00-04:00",
+        "harvest_source": "gold_fixture",
+    },
+]
+
 
 def gate0(title: str, body: str = "") -> str | None:
     """Return a reject reason, or None to spend a Lane hop.
@@ -225,7 +271,163 @@ def plan_questions(family: str, event_class: str, title: str) -> list[dict]:
             "status": "pending",
             "note": "",
         })
+    required = y_required(title, "")
+    rows.append({
+        "id": "y_s",
+        "family": fam,
+        "event_class": event_class,
+        "question": Y_S_QUESTION,
+        "status": "skipped" if not required else "pending",
+        "note": "" if required else "lede is not a history trigger",
+    })
+    rows.append({
+        "id": "y_t",
+        "family": fam,
+        "event_class": event_class,
+        "question": Y_T_QUESTION,
+        "status": "pending",
+        "note": "",
+    })
     return rows
+
+
+_Y_REQUIRED = re.compile(
+    r"(?i)(first[- ]ever|sitting head of state|head of state|\bwar\b|"
+    r"deadliest since|not since 19\d\d|export valve|nuclear regulator)"
+)
+_HISTORY_STATES = frozenset({"first_print", "analog", "reprint", "n/a"})
+_TRANSMISSIONS = frozenset({"node", "book", "forced_flow", "premium", "none"})
+
+
+def y_required(title: str, body: str = "") -> bool:
+    """True when the lede itself is a history break. Otherwise Y-S may be skipped."""
+    return bool(_Y_REQUIRED.search(f"{title or ''}\n{body or ''}"))
+
+
+def plan_history(title: str, body: str, known_at: str, event_class: str) -> dict:
+    """Planner history slot. Does not assign tickers.
+
+    Maduro on 3 Jan 2026 is first_print. A later wrap is reprint.
+    A diesel speech is not first_print of the 2015 export-lift until an EO.
+    A deadliest-since tragedy with no named firm is salience without a pipe.
+    """
+    text = f"{title or ''}\n{body or ''}"
+    low = text.lower()
+    state = "n/a"
+    locked = False
+    if "maduro" in low:
+        wrap = bool(re.search(r"(?i)(wrap|trial|hearing|sentence)", text))
+        if wrap or (known_at or "").startswith("2026-09"):
+            state = "reprint"
+        elif "2026-01-03" in (known_at or "") or re.search(
+            r"(?i)(captur|seized|arrest)", text
+        ):
+            state = "first_print"
+        else:
+            state = "analog"
+        locked = True
+    elif re.search(r"(?i)diesel", text) and re.search(
+        r"(?i)(speech|remarks|said|floats)", text
+    ):
+        state = "first_print" if re.search(r"(?i)executive order|\bEO\b", text) else "analog"
+        locked = True
+    elif y_required(title, body):
+        state = "first_print"
+    salience = "high" if y_required(title, body) or state == "first_print" else "low"
+    if state == "reprint":
+        salience = "medium"
+    family = family_of(event_class) if event_class else ""
+    salience_only = bool(
+        re.search(r"(?i)wang fuk", text)
+        or (
+            y_required(title, body)
+            and not re.search(
+                r"(?i)\b(boeing|exxon|chevron|lockheed|raytheon|united|"
+                r"delta|alphabet|google|amneal|novo|lilly)\b",
+                text,
+            )
+            and "tsa" not in low
+            and "tokenized" not in low
+        )
+    )
+    if salience_only:
+        transmission = "none"
+        trans_locked = True
+        salience = "high"
+    elif not y_required(title, body):
+        transmission = {
+            "blast": "node",
+            "structure": "node",
+            "flow": "forced_flow",
+            "permission": "premium",
+        }.get(family, "book")
+        trans_locked = False
+    else:
+        transmission = "node"
+        trans_locked = False
+    return {
+        "history_state": state,
+        "state_locked": locked,
+        "axiom_broken": "",
+        "last_analog": None,
+        "years_since": None,
+        "salience": salience,
+        "transmission": transmission,
+        "transmission_locked": trans_locked,
+        "salience_only": salience_only,
+        "y_required": y_required(title, body) or state in {"first_print", "reprint"},
+    }
+
+
+def merge_history(planner: dict, parsed: dict | None, known_at: str) -> dict:
+    """Fold the analyst history object onto the planner slot. Locked rules stick."""
+    raw = {}
+    if isinstance(parsed, dict) and isinstance(parsed.get("history"), dict):
+        raw = parsed["history"]
+    state = str(raw.get("history_state") or planner.get("history_state") or "n/a")
+    if state not in _HISTORY_STATES:
+        state = str(planner.get("history_state") or "n/a")
+    if planner.get("state_locked"):
+        state = str(planner.get("history_state") or state)
+    if not planner.get("y_required") and state == "first_print":
+        state = str(planner.get("history_state") or "n/a")
+    trans = str(raw.get("transmission") or planner.get("transmission") or "none")
+    if trans not in _TRANSMISSIONS:
+        trans = str(planner.get("transmission") or "none")
+    if planner.get("transmission_locked"):
+        trans = str(planner.get("transmission") or "none")
+    salience = str(raw.get("salience") or planner.get("salience") or "low")
+    if salience not in {"high", "medium", "low"}:
+        salience = str(planner.get("salience") or "low")
+    axiom = str(raw.get("axiom_broken") or planner.get("axiom_broken") or "")[:240]
+    analog = raw.get("last_analog")
+    if not isinstance(analog, dict) or not analog.get("year"):
+        analog = planner.get("last_analog")
+    else:
+        try:
+            analog = {"name": str(analog.get("name") or "")[:120], "year": int(analog["year"])}
+        except (TypeError, ValueError):
+            analog = None
+    years = raw.get("years_since")
+    try:
+        years = int(years) if years is not None and years != "" else None
+    except (TypeError, ValueError):
+        years = None
+    if years is None and isinstance(analog, dict) and analog.get("year") and known_at:
+        try:
+            years = int(str(known_at)[:4]) - int(analog["year"])
+        except ValueError:
+            years = None
+    return {
+        "history_state": state,
+        "axiom_broken": axiom,
+        "last_analog": analog,
+        "years_since": years,
+        "salience": salience,
+        "transmission": trans,
+        "salience_only": bool(planner.get("salience_only")),
+        "y_required": bool(planner.get("y_required")),
+    }
 
 
 def _clock(title: str, known_at: str, horizon: str, q5: str) -> str:
@@ -372,11 +574,14 @@ def analyst_prompt(
         f"AXIOMS (cite id, do not invent ids):\n{ax}\n\n"
         f"PACK FACTS (quote_or_unknown):\n{facts}\n\n"
         f"Title: {title}\nBody: {body or ''}\n\n"
+        f"{HISTORY_SLOT}\n"
         "STRICT JSON:\n"
         '{"entities":[{"name":"","ticker":null,"role":"named",'
         '"direction":"up|down|mixed|not_determined","horizon":"0-1d",'
         '"axiom_id":null,"pack_cite":null,"stays_out":false}],'
-        '"answers":[{"id":"q1","status":"answered|blocked","note":""}]}'
+        '"answers":[{"id":"q1","status":"answered|blocked","note":""}],'
+        '"history":{"history_state":"n/a","axiom_broken":"",'
+        '"last_analog":null,"salience":"low","transmission":"book"}}'
     )
 
 
@@ -823,6 +1028,30 @@ def render_markdown(header: dict, rows: list[dict]) -> str:
     lines += ["", "## Gold fixtures", ""]
     for key, val in (header.get("gold") or {}).items():
         lines.append(f"- {key}: {val}")
+    lines += ["", "## Tape vs ACTION", ""]
+    tape = header.get("tape") or {}
+    if not tape:
+        lines.append("- (not graded)")
+    else:
+        gold_tape = tape.get("gold_four") or {}
+        rest_tape = tape.get("rest") or {}
+        lines.append(
+            f"- gold four native hits: {gold_tape.get('hits', 0)}/{gold_tape.get('n_scored', 0)}"
+        )
+        lines.append(
+            f"- the 100 native hits: {rest_tape.get('hits', 0)}/{rest_tape.get('n_scored', 0)}"
+        )
+        lines.append(
+            f"- n_scored: {tape.get('n_scored', 0)} · n_unscored: {tape.get('n_unscored', 0)} "
+            f"(no_price={tape.get('no_price', 0)} halt={tape.get('halt', 0)} "
+            f"too_new={tape.get('too_new', 0)})"
+        )
+        if tape.get("n_reprint"):
+            lines.append(
+                f"- reprints flagged (not a first_print test): {tape.get('n_reprint')}"
+            )
+        if tape.get("n_avoid"):
+            lines.append(f"- AVOID_ADD not scored as a hit: {tape.get('n_avoid')}")
     lines += ["", "## Reject reasons", ""]
     for key, n in (header.get("reject_histogram") or {}).items():
         lines.append(f"- {key}: {n}")
@@ -842,6 +1071,59 @@ def render_markdown(header: dict, rows: list[dict]) -> str:
                 f"  - {q.get('question')} — {q.get('status')}"
                 + (f" ({q.get('note')})" if q.get("note") else "")
             )
+        hist = row.get("history") or {}
+        if hist:
+            lines.append(f"- history_state: {hist.get('history_state') or ''}")
+            lines.append(f"- salience: {hist.get('salience') or ''}")
+            lines.append(f"- transmission: {hist.get('transmission') or ''}")
+            analog = hist.get("last_analog")
+            if analog:
+                lines.append(f"- last_analog: {analog}")
+            if hist.get("axiom_broken"):
+                lines.append(f"- axiom_broken: {hist.get('axiom_broken')}")
+            if hist.get("years_since") is not None:
+                lines.append(f"- years_since: {hist.get('years_since')}")
+        for q in row.get("questions") or []:
+            if q.get("id") in {"y_s", "y_t"}:
+                lines.append(
+                    f"- {q.get('id').upper()}: {q.get('question')} — {q.get('status')}"
+                    + (f" ({q.get('note')})" if q.get("note") else "")
+                )
+        meta = row.get("meta") or {}
+        if meta:
+            m1 = meta.get("m1") or {}
+            lines.append(
+                f"- M1: need_context={m1.get('need_context')} "
+                f"pack_required={m1.get('pack_required')}"
+            )
+            lines.append("- M2:")
+            for q in meta.get("m2") or []:
+                lines.append(f"  - {q.get('question')}")
+            lines.append("- M3 dropped:")
+            dropped = meta.get("m3_dropped") or []
+            if not dropped:
+                lines.append("  - (none)")
+            for q in dropped:
+                lines.append(f"  - {q.get('question')} — {q.get('why')}")
+            m4 = meta.get("m4") or {}
+            lines.append(
+                f"- M4: {m4.get('invert') or ''} · pack_complete={m4.get('pack_complete')}"
+            )
+            m5 = meta.get("m5") or {}
+            cited = ", ".join(m5.get("instruments_cited") or []) or "—"
+            emitted = ", ".join(m5.get("tickers_emitted") or []) or "—"
+            lines.append(f"- M5 instruments cited: {cited}")
+            lines.append(f"- M5 tickers emitted: {emitted}")
+        lines.append("- pack:")
+        pack_rows = row.get("pack_facts") or []
+        if not pack_rows:
+            lines.append("  - (none)")
+        for fact in pack_rows[:8]:
+            lines.append(
+                f"  - source={fact.get('source') or ''} url={fact.get('url') or ''} "
+                f"quote_or_unknown={fact.get('status') or 'unknown'} "
+                f"{fact.get('text') or ''}"
+            )
         lines.append("- finviz hits:")
         for inst in (row.get("instruments") or [])[:12]:
             lines.append(
@@ -851,12 +1133,31 @@ def render_markdown(header: dict, rows: list[dict]) -> str:
         lines.append(f"- winners: {', '.join(winners) or '—'}")
         lines.append(f"- losers: {', '.join(losers) or '—'}")
         lines.append(f"- ACTION: {row.get('action')}")
+        lines.append(f"- native clock: {row.get('clock') or ''}")
+        tape_row = row.get("tape") or {}
+        if tape_row.get("flag"):
+            lines.append(f"- tape flag: {tape_row['flag']}")
+        lines.append("- returns:")
+        legs = tape_row.get("legs") or []
+        if not legs:
+            lines.append("  - (none)")
+        for leg in legs:
+            cells = " | ".join(
+                f"{cell.get('horizon')}: {cell.get('text')}" for cell in (leg.get("cells") or [])
+            )
+            entry = leg.get("entry_date") or ""
+            lines.append(
+                f"  - {leg.get('ticker')} {leg.get('verb')} "
+                f"native={leg.get('native_window')} entry={entry} {cells}"
+            )
         by_stage = {
             str(w.get("stage") or ""): str(w.get("watermark") or "")
             for w in (row.get("watermarks") or [])
         }
         lines.append(f"- classify: {by_stage.get('classify') or ''}")
+        lines.append(f"- meta: {by_stage.get('meta') or ''}")
         lines.append(f"- filter: {by_stage.get('filter') or ''}")
+        lines.append(f"- pack_complete: {by_stage.get('pack_complete') or ''}")
         lines.append(f"- analyst: {by_stage.get('analyst') or row.get('watermark') or ''}")
         lines.append(f"- watermark: {row.get('watermark')}")
         lines.append("")
@@ -901,6 +1202,103 @@ def _call_lane(lane: LaneFn, stage: str, prompt: str, system: str, accept=None):
         if "accept" not in str(exc):
             raise
         return lane(stage, prompt, system)
+
+
+def _retrieve_overview(query: str, title: str, body: str, use_pack: bool, pack_fn) -> dict:
+    """Overview first. The query is the M2 questions, not the raw headline."""
+    empty = {
+        "backend": "off", "facts": [], "errors": [], "query": query, "overview_called": False,
+    }
+    if not use_pack:
+        return empty
+    from src.news_impact import search_pack
+    pack = None
+    if pack_fn is not None:
+        try:
+            pack = pack_fn(query)
+        except TypeError:
+            try:
+                pack = pack_fn(title, body)
+            except Exception as exc:  # noqa: BLE001 — pack must not replace Lane
+                pack = {
+                    "backend": "error", "facts": [], "errors": [str(exc)[:200]],
+                    "query": query, "overview_called": False,
+                }
+        except Exception as exc:  # noqa: BLE001
+            pack = {
+                "backend": "error", "facts": [], "errors": [str(exc)[:200]],
+                "query": query, "overview_called": False,
+            }
+    if not isinstance(pack, dict):
+        pack = search_pack.overview_first(query)
+    if search_pack.gemini_api_key() and not pack.get("overview_called"):
+        print(
+            "[lane_one_shot] overview skipped — GEMINI key present, "
+            "google_ai_overview never called"
+        )
+    return pack
+
+
+def _web_facts(query: str) -> list[dict]:
+    from src import websearch
+    try:
+        _backend, items, _errors = websearch.search_results(query, 6)
+    except Exception:  # noqa: BLE001
+        return []
+    facts = []
+    for it in items or []:
+        if not isinstance(it, dict):
+            continue
+        text = f"{it.get('title') or ''}: {it.get('snippet') or ''}".strip()
+        if not text or text == ":":
+            continue
+        facts.append({
+            "text": text[:400],
+            "url": str(it.get("url") or ""),
+            "source": "websearch",
+            "status": "quote",
+        })
+    return facts
+
+
+def _quote_facts(pack: dict) -> list[dict]:
+    out = []
+    for fact in (pack or {}).get("facts") or []:
+        if not isinstance(fact, dict):
+            continue
+        text = str(fact.get("text") or "").strip()
+        if not text:
+            continue
+        source = str(fact.get("source") or "google_ai_overview")
+        if source not in {"google_ai_overview", "finviz_row", "websearch"}:
+            source = "websearch"
+        out.append({
+            "text": text[:400],
+            "url": str(fact.get("url") or ""),
+            "source": source,
+            "status": str(fact.get("status") or "quote"),
+            "ticker": str(fact.get("ticker") or ""),
+        })
+    return out
+
+
+def _stamp_extra(row: dict) -> dict:
+    """History proof rows. They never change the gold-four gate."""
+    gid = row.get("gold_id") or ""
+    hist = row.get("history") or {}
+    action = str(row.get("action") or "")
+    if gid == "wang_fuk":
+        ok = (
+            hist.get("transmission") == "none"
+            and "HSI" not in action
+            and not action.startswith("BUY")
+        )
+        row["gold_status"] = "PASS" if ok else "FAIL"
+    elif gid == "maduro_capture":
+        row["gold_status"] = "PASS" if hist.get("history_state") == "first_print" else "FAIL"
+    elif gid == "maduro_wrap":
+        row["gold_status"] = "PASS" if hist.get("history_state") == "reprint" else "FAIL"
+    return row
 
 
 def process_article(
@@ -983,6 +1381,34 @@ def process_article(
     family = family_of(event_class)
     constraint = str(parsed.get("constraint") or f"{event_class}: {title[:140]}")
     questions = plan_questions(family, event_class, title)
+    history = plan_history(title, body, known, event_class)
+    meta_blob, meta_provider, meta_model = _call_lane(
+        lane, "meta",
+        meta_prompt(title, body, family, event_class, constraint),
+        META_SYSTEM,
+        accept=lambda blob, _t=title, _b=body, _f=family: meta_acceptable(blob, _t, _b, _f),
+    )
+    meta_mark = _watermark(meta_provider, meta_model)
+    meta = normalize_meta(meta_blob, title=title, body=body, family=family) if meta_mark else None
+    if not meta or not meta_mark or is_classify_banned(meta_model):
+        base.update({
+            "q5": q5,
+            "event_class": event_class,
+            "sign": sign,
+            "family": family,
+            "questions": questions,
+            "history": history,
+            "watermarks": [
+                {"stage": "classify", "watermark": mark},
+                {"stage": "meta", "watermark": meta_mark},
+            ],
+            "reject_reason": (
+                "context_below_floor" if is_classify_banned(meta_model) else "lane_meta_missing"
+            ),
+        })
+        return _stamp_extra(base)
+    m2_query = " ".join(q["question"] for q in meta["m2"])[:1500]
+    pack = _retrieve_overview(m2_query, title, body, use_pack, pack_fn)
     linked = candidate_rows(
         title, body,
         family=family,
@@ -1010,24 +1436,59 @@ def process_article(
             "sign": sign,
             "family": family,
             "questions": questions,
+            "history": history,
+            "meta": meta,
             "instrument_candidates": candidates,
             "rejected_hints": linked.get("rejected_hints") or [],
             "watermarks": [
                 {"stage": "classify", "watermark": mark},
+                {"stage": "meta", "watermark": meta_mark},
                 {"stage": "filter", "watermark": c_mark},
             ],
             "reject_reason": "lane_filter_missing",
             "finviz_file": linked.get("finviz_file") or "",
         })
-        return base
+        return _stamp_extra(base)
 
-    pack = {"backend": "off", "facts": [], "errors": [], "query": title}
-    if use_pack and pack_fn is not None:
-        try:
-            pack = pack_fn(title, body) or pack
-        except Exception as exc:  # noqa: BLE001 — pack must not replace Lane
-            pack = {"backend": "error", "facts": [], "errors": [str(exc)[:200]], "query": title}
-    facts = _pack_facts(pack)
+    facts = _quote_facts(pack)
+    facts.extend(finviz_facts(instruments))
+    if use_pack and not any(f.get("source") == "google_ai_overview" for f in facts):
+        facts.extend(_web_facts(m2_query))
+    if not facts:
+        facts.append({
+            "text": "", "url": "", "source": str(pack.get("backend") or "off"),
+            "status": "unknown",
+        })
+    m4_blob, m4_provider, m4_model = _call_lane(
+        lane, "pack_complete",
+        pack_complete_prompt(title, meta["m2"], facts),
+        PACK_COMPLETE_SYSTEM,
+        accept=lambda blob, _qs=meta["m2"]: pack_complete_acceptable(blob, _qs),
+    )
+    m4_mark = _watermark(m4_provider, m4_model)
+    complete = apply_pack_complete(meta, m4_blob if m4_mark else None)
+    if not m4_mark or is_classify_banned(m4_model) or not complete:
+        base.update({
+            "q5": q5,
+            "event_class": event_class,
+            "sign": sign,
+            "family": family,
+            "questions": questions,
+            "history": history,
+            "meta": meta,
+            "instruments": instruments,
+            "pack_facts": facts,
+            "watermarks": [
+                {"stage": "classify", "watermark": mark},
+                {"stage": "meta", "watermark": meta_mark},
+                {"stage": "filter", "watermark": c_mark},
+                {"stage": "pack_complete", "watermark": m4_mark},
+            ],
+            "reject_reason": (
+                "context_below_floor" if is_classify_banned(m4_model) else "lane_pack_incomplete"
+            ),
+        })
+        return _stamp_extra(base)
     axiom_ids = {str(a.get("id")) for a in axioms if a.get("id")}
     horizon = _horizon_for(event_class, title, sign if isinstance(sign, str) else None)
     prompt = analyst_prompt(
@@ -1096,11 +1557,29 @@ def process_article(
             instruments=instruments, hint_ticker=str(art.get("ticker_hint") or ""),
             title=title, index_names=index_names,
         )
+    history = merge_history(history, analysed if a_mark else None, known)
+    if direction_blocked(meta):
+        for ent in entities:
+            if ent.get("direction") in {"up", "down"}:
+                ent["direction"] = "not_determined"
+    entities, cited = apply_m5(entities, instruments, facts)
     winners, losers = winners_losers(entities)
     action = action_line(entities, constraint, clock) if not problems else ""
+    if history.get("transmission") == "none":
+        action = ""
+    if meta["m1"].get("pack_required") and not pack_nonempty(facts):
+        action = ""
+    emitted = [leg["ticker"] for leg in parse_action(action)]
+    meta["m5"] = {
+        "instruments_cited": [tick for tick in emitted if tick in cited],
+        "tickers_emitted": emitted,
+        "cite_pool": cited,
+    }
     watermarks = [
+        {"stage": "meta", "watermark": meta_mark},
         {"stage": "classify", "watermark": mark},
         {"stage": "filter", "watermark": c_mark},
+        {"stage": "pack_complete", "watermark": m4_mark},
         {"stage": "analyst", "watermark": a_mark},
     ]
     invented = [e for e in problems if str(e).startswith("invented:")]
@@ -1113,9 +1592,12 @@ def process_article(
         "family": family,
         "constraint": constraint,
         "questions": questions,
+        "history": history,
+        "meta": meta,
         "instruments": instruments,
         "rejected_hints": linked.get("rejected_hints") or [],
         "pack_facts": facts,
+        "pack_query": m2_query,
         "entities": entities,
         "winners": winners,
         "losers": losers,
@@ -1127,7 +1609,9 @@ def process_article(
         "finviz_file": linked.get("finviz_file") or "",
         "validator_errors": problems,
         "invented_tickers": invented,
-        "keep": bool(action and a_mark and mark and c_mark and not problems),
+        "keep": bool(
+            action and a_mark and mark and c_mark and meta_mark and m4_mark and not problems
+        ),
         "reject_reason": "" if action and not problems else (problems[0] if problems else "no_action"),
     }
     if "no action" in action.lower():
@@ -1140,4 +1624,5 @@ def process_article(
             row["reject_reason"] = row["reject_reason"] or "gold_fixture_fail"
     else:
         row["gold_status"] = ""
+        _stamp_extra(row)
     return row

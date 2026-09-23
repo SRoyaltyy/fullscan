@@ -21,16 +21,29 @@ OVERVIEW_SYSTEM = (
 )
 
 
-def google_ai_overview(query: str, max_facts: int = 8) -> tuple[str, list[dict], list[str]]:
+def gemini_api_key() -> str:
+    """GEMINI_API_KEY or the studio key already on the one-shot runner."""
+    return (
+        os.environ.get("GEMINI_API_KEY")
+        or os.environ.get("GOOGLE_AI_STUDIO_API_KEY")
+        or ""
+    ).strip()
+
+
+def google_ai_overview(
+    query: str,
+    max_facts: int = 8,
+    _model: str | None = None,
+) -> tuple[str, list[dict], list[str]]:
     """Gemini + Google Search grounding = Google's search AI (free-tier key).
 
     Returns (backend, facts[{text,url,source}], errors).
     """
-    key = (os.environ.get("GEMINI_API_KEY") or "").strip()
+    key = gemini_api_key()
     errors: list[str] = []
     if not key:
-        return "", [], ["google_overview: no GEMINI_API_KEY"]
-    model = os.environ.get("GEMINI_OVERVIEW_MODEL") or "gemini-2.5-flash"
+        return "", [], ["google_overview: no GEMINI_API_KEY or GOOGLE_AI_STUDIO_API_KEY"]
+    model = _model or os.environ.get("GEMINI_OVERVIEW_MODEL") or "gemini-2.5-flash"
     url = (
         "https://generativelanguage.googleapis.com/v1beta/models/"
         + urllib.parse.quote(model)
@@ -43,7 +56,8 @@ def google_ai_overview(query: str, max_facts: int = 8) -> tuple[str, list[dict],
             "role": "user",
             "parts": [{
                 "text": (
-                    "Search and extract facts for this headline. "
+                    "Search and extract dated quotes, named entities, and URLs "
+                    "for this query. Do not name winners or tickers to trade. "
                     "JSON object only: {\"facts\":[{\"text\":\"\",\"url\":\"\"}]}\n\n"
                     f"Query: {query}"
                 ),
@@ -63,6 +77,8 @@ def google_ai_overview(query: str, max_facts: int = 8) -> tuple[str, list[dict],
             body = json.loads(r.read().decode() or "{}")
     except urllib.error.HTTPError as e:
         errors.append(f"google_overview HTTP {e.code}")
+        if e.code in (429, 404) and _model is None and model != "gemini-2.5-flash-lite":
+            return google_ai_overview(query, max_facts, _model="gemini-2.5-flash-lite")
         return "", [], errors
     except Exception as e:  # noqa: BLE001
         errors.append(f"google_overview: {e}")
@@ -130,6 +146,26 @@ def _extract_json(text: str):
         except Exception:
             return None
     return None
+
+
+def overview_first(query: str, max_facts: int = 8) -> dict:
+    """Call Google AI Overview and stop. Web search is the caller's fallback.
+
+    overview_called is true once this function runs, including a missing-key
+    return. The one-shot treats a skipped call while a Gemini key is present
+    as a bug.
+    """
+    backend, facts, errors = google_ai_overview(query, max_facts=max_facts)
+    for fact in facts:
+        if fact.get("text") and not fact.get("status"):
+            fact["status"] = "quote"
+    return {
+        "backend": backend or "google_ai_overview",
+        "facts": facts,
+        "errors": errors,
+        "query": query,
+        "overview_called": True,
+    }
 
 
 def search_facts(query: str, max_results: int = 6) -> dict:

@@ -184,3 +184,116 @@ LANREOTIDE_CLOCK_Q = (
     "The lanreotide approval hit at 16:01. Which session can actually "
     "trade it, and why is that not the same-day 0-1d tape?"
 )
+
+# History slot. The planner copies both questions onto every article.
+# Salience is not a trade. transmission=none means no ACTION from Y alone.
+Y_S_QUESTION = (
+    "Y-S salience: What standing axiom about {place|order} just became false? "
+    "When was the last analog in the same consciousness class (year)? "
+    "Audience: street / city / world tape?"
+)
+Y_T_QUESTION = (
+    "Y-T transmission: Which listed pipe, book, or forced flow changed "
+    "BECAUSE that axiom died? If the same deaths or arrest happened with no "
+    "pipe, which ticker still moves? If none, transmission=none and there is "
+    "no ACTION from salience alone."
+)
+HISTORY_SLOT = (
+    "History slot. Answer Y-S and Y-T.\n"
+    "history_state is first_print, analog, reprint, or n/a.\n"
+    "A Ukraine-class break fires both: the axiom died (Y-S) and a listed "
+    "node moved (Y-T, transmission=node).\n"
+    "A tragedy with no listed contractor or insurer is salience only "
+    "(transmission=none). Do not dump an index.\n"
+    "Maduro captured on 3 Jan 2026 is first_print. A September 2026 wrap of "
+    "that capture is reprint.\n"
+    "A diesel speech is not the first_print of the 2015 export-lift axiom "
+    "until an executive order exists.\n"
+    "If transmission is none, emit no trade. Salience is not a trade.\n"
+)
+
+# Meta-question hop. Same quality floor as classify. No tickers.
+# 8B does not decide what to ask or whether the pack is complete.
+META_SYSTEM = (
+    "You decide which facts block a direction on one article. "
+    "Return ONE JSON object. No markdown. No tickers. No winners. No themes."
+)
+PACK_COMPLETE_SYSTEM = (
+    "You test whether the pack answers every direction-blocking question. "
+    "Return ONE JSON object. No markdown. No new tickers. "
+    "A blocked question is not_determined, not a guess."
+)
+_SLOT_GRAMMAR = (
+    "C constraint, T time, H harm, E expression, S substitute, R rival, "
+    "A ammo, D durability, I invert, P priced, Y-S salience, Y-T transmission"
+)
+
+
+def meta_prompt(
+    title: str,
+    body: str,
+    family: str,
+    event_class: str,
+    constraint: str,
+) -> str:
+    """M1–M3. Runs after class is locked and before any lookup."""
+    return (
+        "The event_class is locked. Do not change it. Do not name a ticker.\n"
+        f"family={family}\n"
+        f"event_class={event_class}\n"
+        f"constraint={constraint}\n\n"
+        "M1 need_context: If you believe only this page, can you name the "
+        "constraint, the harm set, and a listed expression? Answer yes or no.\n"
+        "M2 blocking_facts: list the slots that must be answered before a "
+        "direction is legal. Use ONLY these slots: "
+        f"{_SLOT_GRAMMAR}.\n"
+        "Each question binds one noun that already appears in the article. "
+        "No theme fishing. No 'what is the AI angle'. No 'who should I buy'.\n"
+        "M3: a question is kept only when it can change one of "
+        "direction, class, clock, unit_vs_parent, tradeable_expression. "
+        "Put the rejects in m3_dropped with why set to one of "
+        "ai_angle, who_should_i_buy, already_in_article, undated_weather, "
+        "theme_fishing, no_direction_change.\n\n"
+        f"Title: {title}\n"
+        f"Body: {body or ''}\n\n"
+        "STRICT JSON:\n"
+        '{"m1":{"need_context":"yes|no"},'
+        '"m2":[{"slot":"H","noun":"","question":"",'
+        '"changes":"direction|class|clock|unit_vs_parent|tradeable_expression",'
+        '"blocks":["direction"]}],'
+        '"m3_dropped":[{"question":"","why":""}]}'
+    )
+
+
+def pack_complete_prompt(
+    title: str,
+    questions: list[dict],
+    facts: list[dict],
+) -> str:
+    """M4 opposite-headline test. Floor model. Pack quotes only."""
+    q_lines = []
+    for q in questions:
+        blocks = ",".join(q.get("blocks") or [])
+        q_lines.append(
+            f"- slot={q.get('slot')} blocks={blocks} question={q.get('question')}"
+        )
+    block = "\n".join(q_lines) or "(none)"
+    fact_lines = []
+    for fact in (facts or [])[:12]:
+        src = fact.get("source") or ""
+        url = fact.get("url") or ""
+        text = fact.get("text") or ""
+        status = fact.get("status") or ("quote" if text else "unknown")
+        fact_lines.append(f"- source={src} status={status} url={url} quote={text}")
+    facts_block = "\n".join(fact_lines) or "(empty pack)"
+    return (
+        "Opposite headline test. event_class is locked. Do not name a new ticker.\n"
+        "For every question that blocks direction, status is answered or blocked. "
+        "blocked means the direction is not_determined. Do not guess.\n"
+        "invert is one sentence: the headline that would flip the direction.\n\n"
+        f"QUESTIONS:\n{block}\n\n"
+        f"PACK:\n{facts_block}\n\n"
+        f"Title: {title}\n\n"
+        "STRICT JSON:\n"
+        '{"invert":"","slots":[{"question":"","status":"answered|blocked"}]}'
+    )

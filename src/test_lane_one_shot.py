@@ -119,9 +119,53 @@ class ScriptLane:
         if stage == "classify":
             assert "candidates" not in prompt.lower()
             return self._classify(title), "zhipu", "glm-4.7-flash"
+        if stage == "meta":
+            assert "CANDIDATES" not in prompt
+            return self._meta(title), "zhipu", "glm-4.7-flash"
+        if stage == "pack_complete":
+            return self._pack_complete(prompt), "zhipu", "glm-4.7-flash"
         if stage in {"linker", "filter"}:
             return self._link(prompt), "siliconflow", "Qwen/Qwen3-8B"
         return self._analyse(title), "qwen", "qwen-flash"
+
+    def _meta(self, title: str) -> dict:
+        if "tsa" in title:
+            noun, question = "TSA", "Which harm does unpaid TSA impose on airports?"
+        elif "openai" in title or "buist" in title:
+            noun, question = "Google", "Which harm does the complaint name for Google?"
+        elif "tokenized" in title:
+            noun, question = "Venues", "Which expression did the SEC grant Tokenized Securities Venues?"
+        elif "lanreotide" in title or "amneal" in title:
+            noun, question = "Amneal", "Which clock can trade the Amneal lanreotide approval?"
+        elif "naion" in title:
+            noun, question = "NAION", "Which harm does the NAION wrap impose on Novo Nordisk?"
+        else:
+            noun, question = "article", "Which constraint does this article change?"
+        return {
+            "m1": {"need_context": "no"},
+            "m2": [{
+                "slot": "H",
+                "noun": noun,
+                "question": question,
+                "changes": "direction",
+                "blocks": ["direction"],
+            }],
+            "m3_dropped": [{"question": "what's the AI angle", "why": "ai_angle"}],
+        }
+
+    def _pack_complete(self, prompt: str) -> dict:
+        slots = []
+        for line in prompt.splitlines():
+            if "question=" not in line:
+                continue
+            slots.append({
+                "question": line.split("question=", 1)[1].strip(),
+                "status": "answered",
+            })
+        return {
+            "invert": "If that constraint had not changed, the direction would flip.",
+            "slots": slots,
+        }
 
     def _classify(self, title: str) -> dict:
         if "tsa" in title:
@@ -280,6 +324,25 @@ def test_invented_ticker_is_stripped(monkeypatch):
         if stage == "classify":
             return {"event_class": "blast_ops", "q5": "impulse", "sign": None,
                     "constraint": "TSA unpaid"}, "zhipu", "glm-4.7-flash"
+        if stage == "meta":
+            return {
+                "m1": {"need_context": "no"},
+                "m2": [{
+                    "slot": "H", "noun": "TSA",
+                    "question": "Which harm does unpaid TSA impose on airports?",
+                    "changes": "direction", "blocks": ["direction"],
+                }],
+                "m3_dropped": [],
+            }, "zhipu", "glm-4.7-flash"
+        if stage == "pack_complete":
+            slots = [
+                {"question": line.split("question=", 1)[1].strip(), "status": "answered"}
+                for line in prompt.splitlines() if "question=" in line
+            ]
+            return {
+                "invert": "Paid TSA removes the airport block.",
+                "slots": slots,
+            }, "zhipu", "glm-4.7-flash"
         if stage in {"linker", "filter"}:
             return {"instruments": [{"ticker": "CAR", "keep": True},
                                     {"ticker": "VKTX", "keep": True}]}, "siliconflow", "Qwen/Qwen3-8B"
@@ -347,15 +410,20 @@ def test_classify_floor_excludes_ministral_and_8b(monkeypatch):
     from src.lane_one_shot import classify_lanes, classify_models_for
     from src.lane_route import is_classify_banned, lanes_for, primary_models_for
     order = classify_lanes()
-    assert order == ["zhipu", "siliconflow", "openrouter", "qwen", "tokenhub"]
+    assert order == ["zhipu", "siliconflow", "openrouter", "qwen", "gemini", "tokenhub"]
     assert lanes_for("news_classify") == order
     assert "mistral" not in order
-    assert classify_models_for("zhipu") == ["glm-4.7-flash"]
+    assert classify_models_for("zhipu")[0] == "glm-4.7-flash"
+    assert "glm-4.6-flash" in classify_models_for("zhipu")
+    assert "glm-4.5-flash" not in classify_models_for("zhipu")
     assert classify_models_for("siliconflow") == []
     assert classify_models_for("qwen")[0] == "qwen-flash"
     assert "qwen3.8-flash" in classify_models_for("qwen")
     assert "qwen3-32b" in classify_models_for("qwen")
-    assert classify_models_for("tokenhub") == ["glm-5.3-flash"]
+    assert classify_models_for("gemini") == ["gemini-2.5-flash", "gemini-2.5-flash-lite"]
+    assert classify_models_for("tokenhub")[0] == "glm-5.3-flash"
+    assert "deepseek-v4-flash" in classify_models_for("tokenhub")
+    assert "hy3" not in classify_models_for("tokenhub")
     assert "google/gemma-4-31b-it:free" in classify_models_for("openrouter")
     assert "inclusionai/ling-3.0-flash-fin:free" not in classify_models_for("openrouter")
     assert is_classify_banned("ministral-8b-2512")
@@ -364,6 +432,34 @@ def test_classify_floor_excludes_ministral_and_8b(monkeypatch):
     assert not is_classify_banned("qwen-flash")
     assert primary_models_for("qwen", "news_to_tickers") == ["qwen-flash"]
     assert primary_models_for("mistral", "news_classify") == []
+    assert primary_models_for("zhipu", "news_to_tickers") == ["glm-4.7-flash"]
+
+
+def test_dashscope_401_on_one_host_tries_the_next(monkeypatch):
+    from src import lane_route
+
+    calls = []
+
+    def fake_chat(url, key, model, prompt, extra=None, max_tokens=320, system=None):
+        calls.append(url)
+        if calls and "custom.example" in url:
+            return None, 401, "bad host"
+        return {"ok": True}, 200, model
+
+    monkeypatch.setattr(lane_route, "openai_chat", fake_chat)
+    monkeypatch.setenv("DASHSCOPE_BASE_URL", "https://custom.example/compatible-mode/v1")
+    lane_route._SKIP.clear()
+    parsed, status, _info = lane_route.dashscope_chat("k", "qwen-flash", "hi")
+    assert parsed == {"ok": True}
+    assert status == 200
+    assert len(calls) >= 2
+    assert "qwen" not in lane_route._SKIP
+
+
+def test_think_tags_do_not_hide_json():
+    from src.lane_route import _choice_text
+    body = {"choices": [{"message": {"content": "<think>secret</think>{\"event_class\":\"gate\"}"}}]}
+    assert _choice_text(body).startswith("{")
 
 
 def test_regime_break_on_tsa_is_not_an_accepted_class():

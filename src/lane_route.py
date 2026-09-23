@@ -132,11 +132,19 @@ QWEN_CLASSIFY_MODELS = [m for m in (
     "qwen-flash",
     "qwen3.8-flash",
     "qwen3.7-flash",
-    "qwen3-14b",
     "qwen3-32b",
+    "qwen3-14b",
 ) if "plus" not in m.lower() and "max" not in m.lower()
     and "paid" not in m.lower() and not m.lower().startswith("pro")
     and "/pro" not in m.lower() and "-pro" not in m.lower()]
+# Conditional DashScope IDs. A 1-token ping decides. 401/404 drops the ID,
+# not the provider. Never plus / max / pro.
+QWEN_PROBE_MODELS = (
+    "qwen3-next-80b-a3b-instruct",
+    "glm-4.7",
+    "deepseek-v4-flash",
+    "MiniMax-M2.5",
+)
 # OpenRouter classify floor. Ling-3 flash and the free router are not
 # classify — they are 8B-class and may run planner / filter / analyst.
 OR_CLASSIFY_MODELS = [
@@ -251,10 +259,9 @@ DEFAULT_LANES = [
 # news_to_tickers + impact + news sector scan: current flash first.
 # Zhipu glm-4.7-flash → SF Qwen3-8B → OR :free → DashScope qwen-flash.
 NEWS_HEAD = ["zhipu", "siliconflow", "openrouter", "qwen"]
-# news_classify quality floor only. Same head, then TokenHub glm-5.3-flash.
-# Ministral / NIM mini / Qwen3-8B are not on this list. If every floor ID
-# 429s, the article stops — do not fall through to an 8B classifier.
-CLASSIFY_LANES = ["zhipu", "siliconflow", "openrouter", "qwen", "tokenhub"]
+# news_classify quality floor only. NEWS_HEAD, then Gemini API overflow,
+# then TokenHub flash. Ministral / Qwen3-8B are not on this list.
+CLASSIFY_LANES = ["zhipu", "siliconflow", "openrouter", "qwen", "gemini", "tokenhub"]
 # company_dig: SF Qwen / DeepSeek free non-Pro → OR :free → Zhipu.
 # Native DeepSeek stays off the free head (paid opt-in only).
 DIG_HEAD = ["siliconflow", "openrouter", "zhipu"]
@@ -268,6 +275,9 @@ _SKIP: set[str] = set()
 # Per-request models that already 429'd (lane::model). Cleared with _SKIP.
 # Provider-level _SKIP is never set solely for 429.
 _RATE_LIMITED: set[str] = set()
+# OpenRouter :free daily cap. One 429 ends the OR walk for this process.
+_OR_DAY_CAPPED = False
+_QWEN_PROBE: dict[str, bool] = {}
 
 
 def _dedupe(names: list[str]) -> list[str]:
@@ -357,8 +367,10 @@ def is_banned_primary(mid: str) -> bool:
     # glm-4-flash* that is not 4.7 (glm-4.7-flash does not contain this stem).
     if "glm-4-flash" in low and "4.7" not in low:
         return True
-    # glm-4.x-flash except 4.7 (covers glm-4.5-flash).
-    if low.startswith("glm-4.") and "flash" in low and "glm-4.7" not in low:
+    # glm-4.5-flash stays banned. glm-4.6-flash is a current free sibling.
+    if "glm-4.5-flash" in low or "glm-4-flash-250414" in low:
+        return True
+    if low.startswith("glm-4.") and "flash" in low and "glm-4.7" not in low and "glm-4.6" not in low:
         return True
     return False
 
@@ -545,15 +557,24 @@ def primary_models_for(lane: str, tmpl: str = "custom") -> list[str]:
     tmpl = str(tmpl or "custom").strip()
     if tmpl == "news_classify":
         if lane == "zhipu":
-            raw = list(ZHIPU_MODELS)
+            # glm-4.7-flash first. glm-4.6-flash only after a 429 on that ID.
+            # glm-4-flash-250414 and glm-4.5-flash stay banned.
+            raw = list(ZHIPU_MODELS) + ["glm-4.6-flash"]
         elif lane == "siliconflow":
+            # Qwen3-8B is not a classify floor. No other non-Pro SF ID
+            # on this key is large enough to lock event_class.
             raw = []
         elif lane == "openrouter":
             raw = [m for m in OR_CLASSIFY_MODELS if _or_is_free(m)]
         elif lane == "qwen":
-            raw = qwen_classify_models()
+            raw = qwen_classify_models() + [
+                m for m in QWEN_PROBE_MODELS if not is_classify_banned(m)
+            ]
+        elif lane == "gemini":
+            raw = ["gemini-2.5-flash", "gemini-2.5-flash-lite"]
         elif lane == "tokenhub":
-            raw = ["glm-5.3-flash"]
+            # hy3 stays off classify. flash / flashx / deepseek-v4-flash are $0.
+            raw = ["glm-5.3-flash", "glm-5.3-flashx", "deepseek-v4-flash"]
         else:
             raw = []
         return [m for m in raw if m and not is_classify_banned(m)]
@@ -823,6 +844,16 @@ def http_json(url, payload=None, headers=None, timeout=20):
         return 0, {"error": str(e)}, {}
 
 
+_THINK_BLOCK = re.compile(r"(?is)<think>.*?</think>")
+_THINK_OPEN = re.compile(r"(?is)<think>.*\Z")
+
+
+def _strip_think(text: str) -> str:
+    cleaned = _THINK_BLOCK.sub("", text or "")
+    cleaned = _THINK_OPEN.sub("", cleaned)
+    return cleaned.strip()
+
+
 def _choice_text(body: dict) -> str:
     """Read an OpenAI-style message. Thinking models often leave content empty."""
     message = ((body.get("choices") or [{}])[0].get("message") or {})
@@ -835,10 +866,12 @@ def _choice_text(body: dict) -> str:
             elif isinstance(part, dict):
                 bits.append(str(part.get("text") or part.get("content") or ""))
         content = "".join(bits)
-    text = str(content or "").strip()
+    text = _strip_think(str(content or ""))
+    if "{" in text and "}" in text:
+        return text
     if text:
         return text
-    reasoning = str(message.get("reasoning_content") or "").strip()
+    reasoning = _strip_think(str(message.get("reasoning_content") or ""))
     if "{" in reasoning and "}" in reasoning:
         return reasoning
     return ""
@@ -867,14 +900,30 @@ def openai_chat(url, key, model, prompt, extra=None, max_tokens=320, system=None
     text = _choice_text(body) if status == 200 else ""
     # 400: host rejected response_format. 200 with an empty body: a thinking
     # model spent the budget before the JSON, or ignored json_object.
-    if status == 400 or (status == 200 and not text):
+    # A 200 is live — retry without json mode, strip <think>, then raise
+    # max_tokens once. Do not treat that 200 as a dead provider.
+    if status == 400 or (status == 200 and not extract_json(text)):
         status, body, _ = _post(False)
         text = _choice_text(body) if status == 200 else ""
+    parsed = extract_json(text) if status == 200 else None
+    if status == 200 and parsed is None and max_tokens < 1600:
+        bumped = max(int(max_tokens) * 2, 1200)
+        payload = {
+            "model": model,
+            "messages": [
+                {"role": "system", "content": system},
+                {"role": "user", "content": prompt},
+            ],
+            "max_tokens": bumped,
+            "temperature": 0.1,
+        }
+        status, body, _ = http_json(url, payload, headers, timeout=90)
+        text = _choice_text(body) if status == 200 else ""
+        parsed = extract_json(text) if status == 200 else None
     if status != 200:
         err = str(body.get("error") or body.get("message") or body)[:180]
         err = re.sub(r"(?i)bearer\s+\S+", "bearer [redacted]", err)
         return None, status, err
-    parsed = extract_json(text)
     if parsed is None:
         snippet = re.sub(r"\s+", " ", text)[:80]
         return None, status, f"not json {snippet or 'empty'}"
@@ -904,11 +953,32 @@ def gemini_chat(key, model, prompt, max_tokens=320, system=None):
         {},
         timeout=timeout,
     )
+    def _read(status, body):
+        if status != 200:
+            return None
+        parts = (((body.get("candidates") or [{}])[0].get("content") or {}).get("parts") or [])
+        text = _strip_think("".join(p.get("text") or "" for p in parts))
+        return extract_json(text)
+
+    parsed = _read(status, body)
+    if parsed is None and status in (200, 400):
+        bumped = max(int(max_tokens) * 2, 1200) if max_tokens < 1600 else max_tokens
+        status, body, _ = http_json(
+            url,
+            {
+                "systemInstruction": {"parts": [{"text": system}]},
+                "contents": [{"role": "user", "parts": [{"text": prompt}]}],
+                "generationConfig": {
+                    "temperature": 0.1,
+                    "maxOutputTokens": bumped,
+                },
+            },
+            {},
+            timeout=timeout,
+        )
+        parsed = _read(status, body)
     if status != 200:
         return None, status, str(body.get("error") or body)[:240]
-    parts = (((body.get("candidates") or [{}])[0].get("content") or {}).get("parts") or [])
-    text = "".join(p.get("text") or "" for p in parts)
-    parsed = extract_json(text)
     if parsed is None:
         return None, status, "not json"
     return parsed, status, model
@@ -1022,6 +1092,13 @@ def ollama_chat(base, model, prompt, max_tokens=320, system=None):
     return parsed, status, model
 
 
+def _or_capped() -> bool:
+    flag = (os.environ.get("LANE_SKIP_OPENROUTER") or "").strip().lower()
+    if flag in {"1", "true", "yes"}:
+        return True
+    return _OR_DAY_CAPPED
+
+
 def hop_models(lane, models, call, abandon_404=False):
     """call(model) -> (parsed, status, info). None = skip to next provider.
 
@@ -1032,8 +1109,12 @@ def hop_models(lane, models, call, abandon_404=False):
     DEAD_PROVIDER hard fail) move to the next provider. DEAD_PROVIDER
     (401/403/410/402) may still abandon the lane.
     """
+    global _OR_DAY_CAPPED
     if lane in _SKIP:
         print(f"  {lane} skip (cached)")
+        return None, None
+    if lane == "openrouter" and _or_capped():
+        print("  openrouter skip (:free cap this hour)")
         return None, None
     models = [m for m in models if not is_banned_primary(m)]
     n404 = 0
@@ -1056,6 +1137,10 @@ def hop_models(lane, models, call, abandon_404=False):
         if status in RATE_LIMIT:
             print(f"  {lane}/{model} 429 — next allowlisted model")
             _RATE_LIMITED.add(rl_key)
+            if lane == "openrouter":
+                _OR_DAY_CAPPED = True
+                print("  openrouter :free daily cap — not walking the rest this hour")
+                return None, None
             time.sleep(2)
             continue
         if status == 404 and abandon_404:
@@ -1088,6 +1173,57 @@ def first_live_url(urls, key, model, prompt, max_tokens=320, system=None,
         if status != 0:
             return last
     return last
+
+
+def dashscope_chat(key, model, prompt, max_tokens=320, system=None):
+    """Walk every DashScope host before calling the provider dead.
+
+    400/401/403/402/410/404 on one host tries the next host. 429 tries the
+    next host, then the next model ID. The provider is dead only when every
+    host returns 401/403/410/402.
+    """
+    urls = qwen_urls()
+    last = (None, 0, "no url")
+    dead = 0
+    tried = 0
+    saw_429 = None
+    for url in urls:
+        tried += 1
+        parsed, status, info = openai_chat(
+            url, key, model, prompt, max_tokens=max_tokens, system=system,
+        )
+        last = (parsed, status, info)
+        if parsed is not None:
+            return last
+        if status == 429:
+            saw_429 = last
+            continue
+        if status in DEAD_PROVIDER:
+            dead += 1
+            continue
+        # 400 / 404 / connect-fail / 200-not-json: this host, not the key.
+        continue
+    if tried and dead == tried:
+        return (None, 401, "all dashscope hosts rejected the key")
+    if saw_429 is not None:
+        return saw_429
+    return last
+
+
+def _qwen_probe_ok(key: str, model: str) -> bool:
+    """1-token ping. 401/404 skips that ID only."""
+    if model not in QWEN_PROBE_MODELS:
+        return True
+    cached = _QWEN_PROBE.get(model)
+    if cached is not None:
+        return cached
+    _parsed, status, _info = dashscope_chat(
+        key, model, "ping", max_tokens=1, system="Reply with {}",
+    )
+    keep = status not in (401, 404, 0)
+    _QWEN_PROBE[model] = keep
+    print(f"  qwen probe {model} status={status} keep={keep}")
+    return keep
 
 
 def load_keys():
@@ -1196,16 +1332,21 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
     if lane == "qwen":
         if not keys.get("qwen"):
             return None, None
-        # 400/401/403 on a custom DASHSCOPE_BASE_URL is the wrong host, not a
-        # dead provider. Try the next public DashScope base before skipping.
+        # One host error never skips DashScope. Public CN + intl are always
+        # tried after DASHSCOPE_BASE_URL. Probe IDs 401/404 drop that ID only.
+        qwen_key = keys["qwen"]
+
+        def _qwen_call(model, _key=qwen_key):
+            if model in QWEN_PROBE_MODELS and not _qwen_probe_ok(_key, model):
+                return None, 404, "probe skipped"
+            return dashscope_chat(
+                _key, model, prompt, max_tokens=max_tokens, system=system,
+            )
+
         return hop_models(
             "qwen",
             primary_models_for("qwen", tmpl),
-            lambda model: first_live_url(
-                qwen_urls(), keys["qwen"], model, prompt,
-                max_tokens=max_tokens, system=system,
-                skip_statuses=(400, 401, 403),
-            ),
+            _qwen_call,
         )
     if lane == "zhipu":
         if not keys.get("zhipu"):
@@ -1438,6 +1579,8 @@ def route_inbox(
     ctx = {"keys": keys, "ollama_url": ollama_url, "gh_direct": gh_direct}
     _SKIP.clear()
     _RATE_LIMITED.clear()
+    global _OR_DAY_CAPPED
+    _OR_DAY_CAPPED = False
 
     out = []
     for i, q in enumerate(questions):
