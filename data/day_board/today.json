@@ -1,6 +1,6 @@
 {
   "date": "2026-09-23",
-  "generated_at": "2026-09-23T08:07:00.525184-04:00",
+  "generated_at": "2026-09-23T08:09:23.096624-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -12,125 +12,125 @@
   "buy_1d": [
     {
       "ticker": "ARQT",
-      "score": 0.8340970156905521
+      "score": 0.8495734282988849
     },
     {
       "ticker": "PGEN",
-      "score": 0.7700136439120353
+      "score": 0.7783687895719862
     },
     {
       "ticker": "ADMA",
-      "score": 0.7517424630170111
+      "score": 0.7580653853069101
     },
     {
       "ticker": "DXCM",
-      "score": 0.38580549282001886
+      "score": 0.3925919326017715
     },
     {
       "ticker": "NICE",
-      "score": 0.6463352699781763
+      "score": 0.6903282194407692
     },
     {
       "ticker": "TH",
-      "score": 0.72120936811278
+      "score": 0.7513180156725596
     },
     {
       "ticker": "PUBM",
-      "score": 0.6648956170930282
+      "score": 0.7109581470869826
     },
     {
       "ticker": "APPS",
-      "score": 0.659600157874781
+      "score": 0.7050792129707817
     },
     {
       "ticker": "PAYS",
-      "score": 0.655588583374579
+      "score": 0.7006340229766195
     },
     {
       "ticker": "CTOS",
-      "score": 0.6906073858269013
+      "score": 0.7173218459445099
     },
     {
       "ticker": "VSTS",
-      "score": 0.6191745615179922
+      "score": 0.6379616141347848
     },
     {
       "ticker": "TAL",
-      "score": 0.6007467733009548
+      "score": 0.6113273438001063
     },
     {
       "ticker": "SB",
-      "score": 0.5770729430715258
+      "score": 0.5911792451587567
     },
     {
       "ticker": "ELF",
-      "score": 0.63748635390779
+      "score": 0.6521630644818248
     },
     {
       "ticker": "SHOO",
-      "score": 0.5042884738828913
+      "score": 0.5356595011717732
     }
   ],
   "sell_1d": [
     {
-      "ticker": "SOC",
-      "score": -0.44024022272950497
-    },
-    {
-      "ticker": "HAL",
-      "score": -0.3776316731327164
-    },
-    {
-      "ticker": "NOG",
-      "score": -0.3732038539344959
-    },
-    {
-      "ticker": "MUR",
-      "score": -0.3709892073800236
-    },
-    {
-      "ticker": "PUMP",
-      "score": -0.357287584503017
-    },
-    {
       "ticker": "CF",
-      "score": -0.3522147374976558
+      "score": -0.3858845499891464
+    },
+    {
+      "ticker": "SSTK",
+      "score": -0.34231573636974333
     },
     {
       "ticker": "OVV",
-      "score": -0.33771567201990327
+      "score": -0.3414392292642719
     },
     {
-      "ticker": "XPRO",
-      "score": -0.33409820032229154
+      "ticker": "ADM",
+      "score": -0.31127305220128904
     },
     {
-      "ticker": "WTI",
-      "score": -0.3336741488538328
+      "ticker": "FLUT",
+      "score": -0.30293527819512717
     },
     {
-      "ticker": "BTU",
-      "score": -0.33090823216922044
+      "ticker": "HAL",
+      "score": -0.30245044142611754
     },
     {
-      "ticker": "HP",
-      "score": -0.3083740210592424
+      "ticker": "DOW",
+      "score": -0.2915665678108171
     },
     {
-      "ticker": "RES",
-      "score": -0.29383177354911094
+      "ticker": "NFLX",
+      "score": -0.2869942961143662
     },
     {
-      "ticker": "AR",
-      "score": -0.2799826432450825
+      "ticker": "DKNG",
+      "score": -0.275936104234283
     },
     {
-      "ticker": "PTEN",
-      "score": -0.2786356672159659
+      "ticker": "HUM",
+      "score": -0.27130768607439465
     },
     {
       "ticker": "IMO",
-      "score": -0.27421572132138466
+      "score": -0.2708924143996866
+    },
+    {
+      "ticker": "RVMD",
+      "score": -0.27037606165126005
+    },
+    {
+      "ticker": "APA",
+      "score": -0.2652285870712288
+    },
+    {
+      "ticker": "STLA",
+      "score": -0.2635438352167803
+    },
+    {
+      "ticker": "JBHT",
+      "score": -0.26272910381767645
     }
   ],
   "flatten": {
@@ -153,7 +153,7 @@
     "direction": "up"
   },
   "sectors": {
-    "said": "3 up / 1 down / 3 flat",
+    "said": "3 up / 1 down / 4 flat",
     "bullets": [
       "XLB FLAT +2.5",
       "XLC UP +0.4",
@@ -162,45 +162,13 @@
       "XLE DOWN -2.3",
       "XLF FLAT +1.0",
       "XLV UP +0.6",
-      "XLI missing",
+      "XLI FLAT +0.7",
       "XLRE missing",
       "XLK missing",
       "XLU missing"
     ]
   },
   "lands": [
-    {
-      "key": "status",
-      "title": "Pre-open status packet",
-      "date": "2026-09-23",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-23T05:08:21.967222-04:00",
-      "files": [
-        {
-          "path": "01_daily/2026-09-23_preopen_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 7264,
-          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
-        },
-        {
-          "path": "01_daily/2026-09-23_preopen_status.json",
-          "ok": true,
-          "reason": "",
-          "size": 8096,
-          "preview": "keys: date, generated_at, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs, qc"
-        },
-        {
-          "path": "01_daily/2026-09-23_preopen_status.md",
-          "ok": true,
-          "reason": "",
-          "size": 576,
-          "preview": "# Pre-open ALL status \u2014 2026-09-23\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
-        }
-      ],
-      "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, generated_at, all_ok, qc_all_ok, book_ok, grok_ok, grok_fails, missing_required, attempts, github_runs, qc \u00b7 # Pre-open ALL status \u2014 2026-09-23\nall_ok=False  qc_all_ok=False  book_ok=False  grok_ok=False  missing=['sector_predict']\nPredictive modules + stock book (must land before 09:30 ET).\nOutcome / learn / tonight's captain research = Post-Close ALL.\n- Weather / regime: exit 0\n- News parse: exit 0\n- Event scanner (primary): exit 0\n- Event catcher (gap hunt, no carry): exit 0\n- News actions: exit 0\n- News judge: exit 0\n- General market predict: exit 0\n- Per-sector predict (all 11): exit 1\n- Map heat morning delta refresh: exit 0\n- Catalyst dossiers (after book): exit 0"
-    },
     {
       "key": "weather",
       "title": "Weather / regime",
@@ -543,6 +511,73 @@
         }
       ],
       "preview": "# Sector Prediction \u2014 Financial \u2014 2026-09-23\n- ETF: **XLF**\n- rubric: `00_grounding/sectors/financial.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **1.027** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **0.454** (ES +0.03%, ZN -0.03%, PM:XLF +0.09%) \u00b7 index_carry **0.573** (general 2.293) \u00b7 llm_overlay **0.0** (raw 0.0) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Financial 2026-09-23\n**Step 0 \u2014 Setup.** Loaded 152,245 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (16,371 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-23\nGenerated: **2026-09-23T07:57:20.542932-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_at, sectors \u00b7 "
+    },
+    {
+      "key": "sector_one",
+      "title": "Sector predict Industrials (8/11)",
+      "date": "2026-09-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-23T08:09:21.939569-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-23/industrials_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 21969,
+          "preview": "# Sector Prediction \u2014 Industrials \u2014 2026-09-23\n- ETF: **XLI**\n- rubric: `00_grounding/sectors/industrials.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **0.68** (mult 0.8)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **0.107** (ES +0.03%, ER2 +0.08%, HG +0.66%, PM:XLI -0.02%) \u00b7 index_carry **0.573** (general 2.293) \u00b7 llm_overlay **0.0** (raw 0.0)"
+        },
+        {
+          "path": "01_daily/sectors/2026-09-23/industrials_predict_trace.md",
+          "ok": true,
+          "reason": "",
+          "size": 392,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Industrials 2026-09-23\n**Step 0 \u2014 Setup.** Loaded 160,647 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (19,921 characters)."
+        },
+        {
+          "path": "01_daily/_transcripts/2026-09-23_sector_industrials_predict.json",
+          "ok": true,
+          "reason": "",
+          "size": 184887,
+          "preview": "keys: provider, agent, backend_model, messages"
+        },
+        {
+          "path": "01_daily/2026-09-23_preopen_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 7207,
+          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
+        },
+        {
+          "path": "01_daily/sectors/2026-09-23/_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 1226,
+          "preview": "keys: date, n_ok, n_total, sectors"
+        },
+        {
+          "path": "01_daily/sectors/2026-09-23/_BOARD.md",
+          "ok": true,
+          "reason": "",
+          "size": 1803,
+          "preview": "# Sector Board \u2014 2026-09-23\nGenerated: **2026-09-23T08:09:21.911197-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+        },
+        {
+          "path": "01_daily/sectors/2026-09-23/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 6590,
+          "preview": "keys: date, generated_at, sectors"
+        },
+        {
+          "path": "03_scoreboard/scoreboard.json",
+          "ok": true,
+          "reason": "",
+          "size": 857496,
+          "preview": "keys: runs"
+        }
+      ],
+      "preview": "# Sector Prediction \u2014 Industrials \u2014 2026-09-23\n- ETF: **XLI**\n- rubric: `00_grounding/sectors/industrials.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **0.68** (mult 0.8)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **0.107** (ES +0.03%, ER2 +0.08%, HG +0.66%, PM:XLI -0.02%) \u00b7 index_carry **0.573** (general 2.293) \u00b7 llm_overlay **0.0** (raw 0.0) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Industrials 2026-09-23\n**Step 0 \u2014 Setup.** Loaded 160,647 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (19,921 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-23\nGenerated: **2026-09-23T08:09:21.911197-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generat"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
