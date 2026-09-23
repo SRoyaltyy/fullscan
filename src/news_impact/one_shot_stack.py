@@ -1810,7 +1810,15 @@ def process_article(
     entities, cited = apply_m5(entities, instruments, facts)
     winners, losers = winners_losers(entities)
     action = action_line(entities, constraint, clock) if not problems else ""
-    if history.get("transmission") == "none":
+    # Salience with no listed pipe is not a trade. A signed ticker on the
+    # hit list is the pipe, even if the model also wrote transmission=none.
+    signed_book = [
+        e for e in entities
+        if e.get("ticker") and e.get("direction") in {"up", "down"}
+    ]
+    if history.get("transmission") == "none" and signed_book:
+        history["transmission"] = "book"
+    elif history.get("transmission") == "none":
         action = ""
     if meta["m1"].get("pack_required") and not pack_nonempty(facts):
         action = ""

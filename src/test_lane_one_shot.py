@@ -253,6 +253,11 @@ class ScriptLane:
                 {"id": "q1", "status": "answered", "note": "class sponsors"},
                 {"id": "q_clock", "status": "answered", "note": "not 0-1d"},
             ]
+            return {
+                "entities": entities,
+                "answers": answers,
+                "history": {"history_state": "reprint", "transmission": "none", "salience": "low"},
+            }
         else:
             entities, answers = [], []
         return {"entities": entities, "answers": answers}
@@ -291,6 +296,9 @@ def test_gold_stack_is_lane_not_classify_brain(monkeypatch, tmp_path: Path):
     assert by["amrx"]["gold_status"] == "PASS"
     assert by["amrx"]["clock"] == "monday_open"
     assert by["naion"]["gold_status"] == "PASS"
+    assert by["naion"]["action"]
+    assert by["naion"]["history"]["transmission"] == "book"
+    assert "NVO" in by["naion"]["action"] and "medium" in by["naion"]["action"]
     assert by["naion"]["clock"] == "not_0_1d"
     assert "medium" in by["naion"]["action"]
     assert "not_0_1d" in by["naion"]["action"]
