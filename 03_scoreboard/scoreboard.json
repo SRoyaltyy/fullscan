@@ -9552,6 +9552,18 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.4
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-09-23",
+          "actual_pct": 0.41,
+          "actual_direction": "up",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.4
         }
       },
       "lesson_schema_ok": true
@@ -20606,6 +20618,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.55
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-23",
+          "actual_pct": 0.91,
+          "actual_direction": "up",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       },
       "lesson_schema_ok": true
@@ -23390,6 +23414,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-23",
+          "actual_pct": 2.04,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.55
         }
       },
       "lesson_schema_ok": true
@@ -24664,7 +24700,20 @@
       "knowable_at_9am": "partially",
       "attribution_contested": "yes",
       "outlier_watch": "Dow/small-caps red vs SPX/NDX green; oil down hard while Friday yields rose (broke Thursday’s oil-yields couple); VIX still fell",
-      "horizon_grades": {},
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-09-23",
+          "actual_pct": 0.73,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": true,
+          "magnitude_hit": true,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.55
+        }
+      },
       "lesson_schema_ok": true
     },
     {
@@ -26376,7 +26425,7 @@
           "status": "miss"
         }
       ],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-09-23_lesson.md",
       "sources_used": [
         {
           "url": "https://tradingeconomics.com/united-states/composite-pmi",
@@ -26469,7 +26518,9 @@
       "key_interaction": "Amplification — hot PMI + yield spike + oil reversal all pushed the same direction and compounded, while the hawkish Fed regime acted as the conditional modifier that turned a \"strong economy\" print into a sell signal",
       "knowable_at_9am": "no — the dominant driver (9:45 ET PMI shock) was not knowable premarket, though the vulnerability (hawkish Fed, 5% yields, stretched oil) was",
       "attribution_contested": "yes — CNBC/Yahoo/Kiplinger lead with yields/rate-hike odds; Investrade/Detroit News lead with the PMI print; Schwab leads with crude/oil; Business Insider leads with mortgage/interest rates",
-      "outlier_watch": "NDX fell less than Dow (-0.69% vs -1.03%) — the chip/Meta bid inverted the normal rate-shock ordering; gold fell -1.3% on a risk-off day, signaling a real-yield/dollar story rather than flight-to-safety"
+      "outlier_watch": "NDX fell less than Dow (-0.69% vs -1.03%) — the chip/Meta bid inverted the normal rate-shock ordering; gold fell -1.3% on a risk-off day, signaling a real-yield/dollar story rather than flight-to-safety",
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-09-23",

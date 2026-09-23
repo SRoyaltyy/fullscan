@@ -1,15 +1,15 @@
 # Horizon board — multi-timeframe prediction grades
 
-Updated: 2026-09-22. Calls are graded at T+h trading days using the scoreboard's own close history. Magnitude bands scale by √h (a 'mild' month ≈ ±1.4%, a 'severe' month ≈ ±9.2%).
+Updated: 2026-09-23. Calls are graded at T+h trading days using the scoreboard's own close history. Magnitude bands scale by √h (a 'mild' month ≈ ±1.4%, a 'severe' month ≈ ±9.2%).
 
 ## Hit rates by topic × horizon
 
 | Topic | Horizon | Graded | Dir hit | Mag hit | Avg actual % |
 |---|---|---|---|---|---|
-| general | 3d | 21 | 5% (1/21) | 43% (9/21) | -0.05% |
-| general | 1w | 19 | 42% (8/19) | 58% (11/19) | -0.10% |
-| general | 2w | 14 | 50% (7/14) | 43% (6/14) | -0.28% |
-| general | 1m | 7 | 0% (0/7) | 43% (3/7) | -1.15% |
+| general | 3d | 22 | 9% (2/22) | 45% (10/22) | -0.01% |
+| general | 1w | 20 | 40% (8/20) | 60% (12/20) | +0.01% |
+| general | 2w | 15 | 47% (7/15) | 40% (6/15) | -0.20% |
+| general | 1m | 8 | 0% (0/8) | 38% (3/8) | -0.96% |
 | sector:Basic Materials | 3d | 11 | 36% (4/11) | 18% (2/11) | -0.61% |
 | sector:Basic Materials | 1w | 11 | 18% (2/11) | 27% (3/11) | -1.18% |
 | sector:Basic Materials | 2w | 11 | 18% (2/11) | 36% (4/11) | -3.43% |
@@ -55,6 +55,10 @@ Updated: 2026-09-22. Calls are graded at T+h trading days using the scoreboard's
 
 | Date | Topic | Horizon | Call | Actual | Dir | Mag |
 |---|---|---|---|---|---|---|
+| 2026-09-18 | general | 3d | up/mild | +0.73% (up/mild) | ✅ | ✅ |
+| 2026-09-16 | general | 1w | down/mild | +2.04% (up/mild) | ❌ | ✅ |
+| 2026-09-09 | general | 2w | flat/mild | +0.91% (up/flat) | ❌ | ❌ |
+| 2026-08-23 | general | 1m | down/mild | +0.41% (up/flat) | ❌ | ❌ |
 | 2026-09-17 | general | 3d | flat/mild | +1.66% (up/mild) | ❌ | ✅ |
 | 2026-09-15 | sector:Financial | 1w | down/mild | -3.61% (down/notable) | ✅ | ❌ |
 | 2026-09-15 | general | 1w | down/mild | +2.36% (up/notable) | ❌ | ❌ |
@@ -76,10 +80,6 @@ Updated: 2026-09-22. Calls are graded at T+h trading days using the scoreboard's
 | 2026-08-13 | sector:Energy | 1m | flat/mild | +1.18% (up/flat) | ❌ | ❌ |
 | 2026-08-13 | sector:Consumer Defensive | 1m | flat/mild | -3.80% (down/mild) | ❌ | ✅ |
 | 2026-08-13 | sector:Consumer Cyclical | 1m | up/mild | -5.17% (down/notable) | ❌ | ❌ |
-| 2026-08-13 | sector:Basic Materials | 1m | up/mild | -3.40% (down/mild) | ❌ | ✅ |
-| 2026-09-16 | general | 3d | flat/mild | +2.82% (up/notable) | ❌ | ❌ |
-| 2026-09-14 | sector:Financial | 1w | flat/mild | -2.02% (down/mild) | ❌ | ✅ |
-| 2026-09-14 | general | 1w | down/mild | +1.90% (up/mild) | ❌ | ✅ |
 
 *332 calls still maturing (T+h close not recorded yet).*
 
