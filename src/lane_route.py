@@ -1089,10 +1089,16 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
     if lane == "qwen":
         if not keys.get("qwen"):
             return None, None
+        # 401/403 on a custom DASHSCOPE_BASE_URL is the wrong host, not a
+        # dead provider. Try the next public DashScope base before skipping.
         return hop_models(
             "qwen",
             primary_models_for("qwen", tmpl),
-            lambda model: flu(qwen_urls(), keys["qwen"], model),
+            lambda model: first_live_url(
+                qwen_urls(), keys["qwen"], model, prompt,
+                max_tokens=max_tokens, system=system,
+                skip_statuses=(401, 403),
+            ),
         )
     if lane == "zhipu":
         if not keys.get("zhipu"):

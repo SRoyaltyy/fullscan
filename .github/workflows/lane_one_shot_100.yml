@@ -19,12 +19,13 @@ on:
       max_draws_per_shard:
         description: Stop redrawing a shard after this many draws
         required: false
-        default: "80"
+        default: "150"
         type: string
   push:
     paths:
       - ".github/workflows/lane_one_shot_100.yml"
       - "src/lane_one_shot.py"
+      - "src/lane_route.py"
       - "src/news_impact/finviz_linker.py"
       - "src/news_impact/one_shot_stack.py"
       - "src/test_lane_one_shot.py"
@@ -39,7 +40,7 @@ permissions:
 jobs:
   shard:
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 240
     strategy:
       fail-fast: false
       matrix:
@@ -128,7 +129,7 @@ jobs:
             --shard "${{ matrix.shard }}" \
             --shards 5 \
             --target "${{ github.event.inputs.target_per_shard || '20' }}" \
-            --max-draws "${{ github.event.inputs.max_draws_per_shard || '80' }}"
+            --max-draws "${{ github.event.inputs.max_draws_per_shard || '150' }}"
 
       - name: Upload shard
         if: always()
@@ -169,3 +170,7 @@ jobs:
           fi
           git commit -m "auto: lane one-shot 100 board"
           git push origin "HEAD:${GITHUB_REF_NAME}"
+
+      - name: Require 100 kept, gold pass, flash watermark
+        if: always()
+        run: PYTHONPATH=. python3 -m src.lane_one_shot --check-board 03_scoreboard/LANE_ONE_SHOT_100.md

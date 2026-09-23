@@ -14,7 +14,12 @@ from src.news_impact.finviz_linker import candidate_rows, company_aliases
 from src.news_impact.one_shot_stack import (
     GOLD_KEEP,
     GOLD_REJECT,
+    _normalize_entities,
+    classify_acceptable,
+    confirm_instruments,
     gate0,
+    gold_status,
+    linker_acceptable,
     process_article,
     render_markdown,
 )
@@ -107,7 +112,7 @@ class ScriptLane:
                 return line.split(":", 1)[1].strip().lower()
         return ""
 
-    def __call__(self, stage, prompt, system):
+    def __call__(self, stage, prompt, system, accept=None):
         self.calls.append(stage)
         self.prompts.append((stage, prompt))
         title = self._article_title(prompt)
@@ -335,3 +340,118 @@ def test_env_check_redacts(monkeypatch, capsys):
     assert "present ZHIPU_API_KEY" in out
     assert "super-secret-value" not in out
     assert "missing OPENROUTER_API_KEY" in out
+
+
+def test_one_shot_hops_current_flash_before_mistral(monkeypatch):
+    monkeypatch.delenv("LANE_ALLOW_PAID_DEEPSEEK", raising=False)
+    from src.lane_one_shot import one_shot_lanes
+    order = one_shot_lanes()
+    assert order[0] == "zhipu"
+    assert order.index("zhipu") < order.index("tokenhub") < order.index("qwen")
+    assert order.index("qwen") < order.index("mistral")
+    assert "deepseek" not in order
+
+
+def test_regime_break_on_tsa_is_not_an_accepted_class():
+    title = GOLD_KEEP[0]["title"]
+    assert classify_acceptable(
+        {"event_class": "regime_break", "q5": "regime_break"}, title, "", "tsa",
+    ) is False
+    assert classify_acceptable(
+        {"event_class": "blast_ops", "q5": "impulse"}, title, "", "tsa",
+    ) is True
+    assert classify_acceptable(
+        {"event_class": "regime_break", "q5": "impulse"},
+        "Ordinary tape reprint", "", "",
+    ) is False
+
+
+def test_empty_linker_json_is_not_accepted():
+    cands = [
+        {"ticker": "CAR", "entity_name": "Avis Budget"},
+        {"ticker": "AAL", "entity_name": "American Airlines"},
+    ]
+    assert confirm_instruments({"instruments": []}, cands) == []
+    assert linker_acceptable({"instruments": []}, cands, "tsa") is False
+    assert linker_acceptable({"keep": ["CAR"]}, cands, "tsa") is False
+    assert linker_acceptable({"tickers": ["CAR", "AAL"]}, cands, "tsa") is True
+    assert linker_acceptable(["CAR"], cands, "") is True
+
+
+def test_harm_set_binds_meta_without_inventing():
+    instruments = [
+        {
+            "ticker": "META",
+            "entity_name": "Meta Platforms Inc",
+            "aliases": ["meta platforms"],
+            "score": 3,
+            "type": "equity",
+        },
+        {
+            "ticker": "GOOGL",
+            "entity_name": "Alphabet Inc",
+            "aliases": ["alphabet"],
+            "score": 9,
+            "type": "parent",
+        },
+        {
+            "ticker": "GOOG",
+            "entity_name": "Alphabet Inc",
+            "aliases": ["alphabet"],
+            "score": 4,
+            "type": "equity",
+        },
+    ]
+    entities, errors = _normalize_entities(
+        {"entities": [
+            {"name": "Meta", "ticker": None, "role": "unscathed", "direction": "up",
+             "stays_out": True, "axiom_id": "A_AT_03"},
+            {"name": "Alphabet", "ticker": None, "role": "harm set", "direction": "down"},
+            {"name": "OpenAI", "ticker": None, "role": "named", "direction": "down"},
+        ]},
+        instruments,
+        {"A_AT_03"},
+        [],
+        "0-1d",
+    )
+    assert errors == []
+    by = {e["name"]: e for e in entities}
+    assert by["Meta"]["ticker"] == "META"
+    assert by["Meta"]["role"] == "unscathed_rival"
+    assert by["Alphabet"]["ticker"] == "GOOGL"
+    assert by["Alphabet"]["role"] == "named"
+    assert by["OpenAI"]["ticker"] is None
+
+
+def test_amrx_gold_requires_gate_not_just_monday_clock():
+    row = {
+        "gold_id": "amrx",
+        "event_class": "regime_break",
+        "clock": "monday_open",
+        "action": "BUY AMRX, 1-6m, because approval; clock=monday_open",
+        "entities": [{"ticker": "AMRX", "direction": "up", "horizon": "1-6m"}],
+        "instruments": [{"ticker": "AMRX", "sector": "Healthcare"}],
+    }
+    assert gold_status(row) == "FAIL"
+    row["event_class"] = "gate"
+    assert gold_status(row) == "PASS"
+
+
+def test_board_check_rejects_shortfall_and_mistral_only():
+    from src.lane_one_shot import assess_board
+    short = render_markdown(
+        {
+            "n_drawn": 400, "n_rejected": 353, "n_kept": 47, "invented_tickers": 0,
+            "hop_histogram": {"lane::mistral::ministral-8b-2512": 140},
+            "gold": {
+                "tsa": "FAIL", "buist": "FAIL", "tsv": "FAIL", "amrx": "FAIL",
+                "naion": "PASS", "hormuz": "REJECTED", "outperforms": "REJECTED",
+            },
+            "status": "SHORTFALL",
+        },
+        [],
+    )
+    problems = assess_board(short)
+    assert any(p.startswith("n_kept=") for p in problems)
+    assert any("tsa" in p for p in problems)
+    assert any("current-flash" in p for p in problems)

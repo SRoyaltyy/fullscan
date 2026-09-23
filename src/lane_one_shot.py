@@ -199,6 +199,37 @@ def _shard_of(title: str, shards: int) -> int:
     return zlib.adler32(title.encode("utf-8")) % shards
 
 
+# One-shot only. Do not change NEWS_HEAD / DEFAULT_LANES: other scans keep
+# their order. Current flash first; mistral is overflow after those hops.
+# TokenHub flash (glm-5.3-flash, glm-5.3-flashx, deepseek-v4-flash) sits
+# ahead of hy3 inside the tokenhub lane itself.
+ONE_SHOT_LANES = [
+    "zhipu",
+    "tokenhub",
+    "qwen",
+    "siliconflow",
+    "openrouter",
+    "nvidia_nim",
+    "pollinations",
+    "mistral",
+    "moonshot",
+    "modelscope",
+    "github_models",
+    "cloudflare",
+    "sambanova",
+    "ollama",
+    "hf",
+    "groq",
+    "gemini",
+]
+
+
+def one_shot_lanes() -> list[str]:
+    """glm-4.7-flash, then TokenHub flash, then qwen-flash, then overflow."""
+    rest = [name for name in lane.DEFAULT_LANES if name not in ONE_SHOT_LANES]
+    return lane._with_paid_deepseek(ONE_SHOT_LANES + rest, after="qwen")
+
+
 class LiveLane:
     def __init__(self) -> None:
         keys, ollama_url, gh_direct = lane.load_keys()
@@ -206,12 +237,13 @@ class LiveLane:
         lane._SKIP.clear()
         lane._RATE_LIMITED.clear()
 
-    def __call__(self, stage: str, prompt: str, system: str):
+    def __call__(self, stage: str, prompt: str, system: str, accept=None):
+        """Hop current flash first. Unusable JSON is not a successful hop."""
         tmpl = "news_classify" if stage == "classify" else "news_impact"
         budget = lane.token_budget(tmpl)
         if stage != "classify":
             budget = max(budget, 900)
-        for hop in lane.lanes_for(tmpl):
+        for hop in one_shot_lanes():
             parsed, model = lane.ask_lane(
                 hop, prompt, self.ctx,
                 max_tokens=budget, system=system, tmpl=tmpl,
@@ -220,6 +252,10 @@ class LiveLane:
                 continue
             if lane.is_banned_primary(str(model or "")):
                 print(f"[lane_one_shot] skip banned {hop}/{model}")
+                continue
+            if accept is not None and not accept(parsed):
+                print(f"[lane_one_shot] {stage} unusable lane::{hop}::{model}")
+                time.sleep(0.2)
                 continue
             print(f"[lane_one_shot] {stage} lane::{hop}::{model}")
             time.sleep(0.4)
@@ -442,6 +478,56 @@ def merge_boards(src: Path, board: Path | None = None, expect: int = 100) -> int
     return 0 if len(kept) >= expect else 0
 
 
+def assess_board(text: str) -> list[str]:
+    """Problems that keep the published board from being merge-ready."""
+    problems = []
+
+    def grab(key: str) -> str:
+        match = re.search(rf"^- {re.escape(key)}: (.*)$", text, re.M)
+        return match.group(1).strip() if match else ""
+
+    try:
+        n_kept = int(grab("n_kept") or "0")
+    except ValueError:
+        n_kept = 0
+    try:
+        invented = int(grab("invented_tickers") or "0")
+    except ValueError:
+        invented = 1
+    if n_kept < 100:
+        problems.append(f"n_kept={n_kept}")
+    if invented:
+        problems.append(f"invented_tickers={invented}")
+    if grab("status") != "OK":
+        problems.append(f"status={grab('status') or 'missing'}")
+    gold_block = ""
+    if "## Gold fixtures" in text:
+        gold_block = text.split("## Gold fixtures", 1)[1].split("## ", 1)[0]
+    expected = {
+        "tsa": "PASS",
+        "buist": "PASS",
+        "tsv": "PASS",
+        "amrx": "PASS",
+        "naion": "PASS",
+        "hormuz": "REJECTED",
+        "outperforms": "REJECTED",
+    }
+    for key, want in expected.items():
+        match = re.search(rf"^- {key}: (\S+)", gold_block, re.M)
+        got = match.group(1) if match else "missing"
+        if got != want:
+            problems.append(f"gold {key}={got}")
+    hop_block = ""
+    if "## Hop histogram" in text:
+        hop_block = text.split("## Hop histogram", 1)[1].split("## ", 1)[0]
+    flash = ("lane::zhipu::", "lane::tokenhub::", "lane::qwen::")
+    if not any(prefix in hop_block for prefix in flash):
+        problems.append("hop histogram has no current-flash watermark")
+    if "no action warranted" in text.lower():
+        problems.append("banned phrase")
+    return problems
+
+
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--env-check", action="store_true")
@@ -451,10 +537,23 @@ def main() -> None:
     ap.add_argument("--max-draws", type=int, default=400)
     ap.add_argument("--merge", type=str, default="")
     ap.add_argument("--expect", type=int, default=100)
+    ap.add_argument("--check-board", type=str, default="")
     ap.add_argument("--no-pack", action="store_true")
     args = ap.parse_args()
     if args.env_check:
         raise SystemExit(0 if print_env() and secrets_ready() else 2)
+    if args.check_board:
+        path = Path(args.check_board)
+        if not path.is_file():
+            print("[lane_one_shot] board missing", path)
+            raise SystemExit(1)
+        problems = assess_board(path.read_text(encoding="utf-8"))
+        if problems:
+            for item in problems:
+                print("[lane_one_shot] not ready:", item)
+            raise SystemExit(1)
+        print("[lane_one_shot] board ready")
+        raise SystemExit(0)
     if args.merge:
         raise SystemExit(merge_boards(Path(args.merge), expect=args.expect))
     run_shard(
