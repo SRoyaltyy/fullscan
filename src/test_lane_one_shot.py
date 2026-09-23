@@ -396,13 +396,18 @@ def test_markdown_shows_questions_hits_and_action():
 
 def test_env_check_redacts(monkeypatch, capsys):
     monkeypatch.setenv("ZHIPU_API_KEY", "super-secret-value")
+    monkeypatch.setenv("OPENCLAW_TOKEN", "secret-token-value")
     monkeypatch.delenv("OPENROUTER_API_KEY", raising=False)
+    monkeypatch.delenv("OPENCLAW_GATEWAY_URL", raising=False)
     from src.lane_one_shot import print_env
     print_env()
     out = capsys.readouterr().out
     assert "present ZHIPU_API_KEY" in out
     assert "super-secret-value" not in out
     assert "missing OPENROUTER_API_KEY" in out
+    assert "present OPENCLAW_TOKEN" in out
+    assert "secret-token-value" not in out
+    assert "missing OPENCLAW_GATEWAY_URL" in out
 
 
 def test_classify_floor_excludes_ministral_and_8b(monkeypatch):
@@ -411,9 +416,11 @@ def test_classify_floor_excludes_ministral_and_8b(monkeypatch):
     from src.lane_route import is_classify_banned, lanes_for, primary_models_for
     order = classify_lanes()
     assert order == [
+        "openclaw",
         "zhipu", "siliconflow", "openrouter", "gemini", "tokenhub",
         "mistral", "pollinations", "qwen",
     ]
+    assert order[0] == "openclaw"
     assert order.index("mistral") < order.index("qwen")
     assert order.index("pollinations") < order.index("qwen")
     assert order.index("gemini") < order.index("qwen")
@@ -475,6 +482,96 @@ def test_classify_floor_excludes_ministral_and_8b(monkeypatch):
     assert "mistral" in _FLOOR_PROVIDERS
     assert "pollinations" in _FLOOR_PROVIDERS
     assert "nvidia_nim" not in _FLOOR_PROVIDERS
+    assert "openclaw" in _FLOOR_PROVIDERS
+    assert classify_models_for("openclaw") == ["xai/grok-4-fast-reasoning"]
+    assert not is_classify_banned("xai/grok-4-fast-reasoning")
+    assert is_classify_banned("ministral-8b-2512")
+    monkeypatch.setenv("OPENCLAW_BACKEND_MODEL", "ministral-8b-2512")
+    from src.lane_route import openclaw_backend_model
+    assert openclaw_backend_model() == "xai/grok-4-fast-reasoning"
+    assert classify_models_for("openclaw") == ["xai/grok-4-fast-reasoning"]
+    monkeypatch.setenv("OPENCLAW_BACKEND_MODEL", "xai/grok-4-fast-reasoning")
+    assert classify_models_for("openclaw") == ["xai/grok-4-fast-reasoning"]
+    from src.lane_one_shot import _WM, _classify_floor_ok, _context_floor_ok
+    wm = "lane::openclaw::xai/grok-4-fast-reasoning"
+    assert _WM.match(wm)
+    floor_row = {
+        "watermarks": [
+            {"stage": "classify", "watermark": wm},
+            {"stage": "meta", "watermark": wm},
+            {"stage": "pack_complete", "watermark": wm},
+        ],
+    }
+    assert _classify_floor_ok(floor_row)
+    assert _context_floor_ok(floor_row)
+
+
+def test_openclaw_ask_skips_without_gateway():
+    from src import lane_route
+    lane_route._SKIP.clear()
+    parsed, info = lane_route.ask_lane(
+        "openclaw", "hi",
+        {"keys": {}, "ollama_url": "", "gh_direct": ""},
+        tmpl="news_classify",
+    )
+    assert parsed is None
+    assert info is None
+
+
+def test_openclaw_chat_watermark_is_backend_model(monkeypatch):
+    from src import lane_route
+    monkeypatch.setenv("OPENCLAW_GATEWAY_URL", "http://127.0.0.1:18789")
+    monkeypatch.setenv("OPENCLAW_TOKEN", "tok")
+    monkeypatch.setattr(
+        "src.config.align_openclaw_token", lambda **_k: "tok",
+    )
+    seen = {}
+
+    def fake_chat(url, key, model, prompt, extra=None, max_tokens=320,
+                  system=None, timeout=None):
+        seen["url"] = url
+        seen["key"] = key
+        seen["model"] = model
+        seen["extra"] = extra
+        seen["timeout"] = timeout
+        return {"event_class": "gate"}, 200, model
+
+    monkeypatch.setattr(lane_route, "openai_chat", fake_chat)
+    parsed, status, info = lane_route.openclaw_chat(
+        "xai/grok-4-fast-reasoning", "hi", max_tokens=900,
+    )
+    assert parsed == {"event_class": "gate"}
+    assert status == 200
+    assert info == "xai/grok-4-fast-reasoning"
+    assert seen["model"] == "openclaw/default"
+    assert seen["extra"]["x-openclaw-model"] == "xai/grok-4-fast-reasoning"
+    assert seen["key"] == "tok"
+    assert "18789" in seen["url"]
+    assert seen["url"].endswith("/v1/chat/completions")
+    assert seen["timeout"] == 120
+
+
+def test_openclaw_classify_hop_is_first(monkeypatch):
+    from src import lane_route
+    monkeypatch.delenv("OPENCLAW_BACKEND_MODEL", raising=False)
+    seen = []
+
+    def fake_chat(model, prompt, max_tokens=320, system=None):
+        seen.append(model)
+        return {"event_class": "gate"}, 200, model
+
+    monkeypatch.setattr(lane_route, "openclaw_chat", fake_chat)
+    lane_route._SKIP.clear()
+    lane_route._RATE_LIMITED.clear()
+    lane_route._MODEL_DENIED.clear()
+    parsed, info = lane_route.ask_lane(
+        "openclaw", "{}",
+        {"keys": {"openclaw": "gateway"}, "ollama_url": "", "gh_direct": ""},
+        tmpl="news_classify",
+    )
+    assert seen == ["xai/grok-4-fast-reasoning"]
+    assert parsed == {"event_class": "gate"}
+    assert info == "xai/grok-4-fast-reasoning"
 
 
 def test_dashscope_401_on_one_host_tries_the_next(monkeypatch):

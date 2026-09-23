@@ -278,16 +278,18 @@ DEFAULT_LANES = [
 # news_to_tickers + impact + news sector scan: current flash first.
 # Zhipu glm-4.7-flash → SF Qwen3-8B → OR :free → DashScope qwen-flash.
 NEWS_HEAD = ["zhipu", "siliconflow", "openrouter", "qwen"]
-# news_classify quality floor. Zhipu, Gemini, and TokenHub stay.
-# Mistral Small and Pollinations flash are tried before DashScope so a
-# standing-400 account does not burn the qwen list first. Qwen stays
-# last and is not required for a pass.
+# news_classify quality floor. OpenClaw Grok-fast is first. The free
+# hopper stays as fallback. Qwen is last and is not required.
 # NVIDIA NIM stays off: nemotron-mini-4b, llama-3.2-3b, and llama-3.1-8b
 # are below the floor. Ministral 8B/3B stay off.
 CLASSIFY_LANES = [
+    "openclaw",
     "zhipu", "siliconflow", "openrouter", "gemini", "tokenhub",
     "mistral", "pollinations", "qwen",
 ]
+# Cheaper than the gateway default xai/grok-4.6. Workflow may override
+# with OPENCLAW_BACKEND_MODEL. Not an 8B id.
+OPENCLAW_FLOOR_MODEL = "xai/grok-4-fast-reasoning"
 # company_dig: SF Qwen / DeepSeek free non-Pro → OR :free → Zhipu.
 # Native DeepSeek stays off the free head (paid opt-in only).
 DIG_HEAD = ["siliconflow", "openrouter", "zhipu"]
@@ -579,6 +581,14 @@ def is_classify_banned(mid: str) -> bool:
     return any(stem in low for stem in stems)
 
 
+def openclaw_backend_model() -> str:
+    """Floor backend id. Env override, else grok-4-fast-reasoning."""
+    raw = (os.environ.get("OPENCLAW_BACKEND_MODEL") or "").strip()
+    if raw and not is_classify_banned(raw):
+        return raw
+    return OPENCLAW_FLOOR_MODEL
+
+
 def qwen_classify_models() -> list[str]:
     """DashScope classify floor. qwen-flash first, then larger current IDs."""
     return [m for m in QWEN_CLASSIFY_MODELS if not is_classify_banned(m)]
@@ -592,7 +602,9 @@ def primary_models_for(lane: str, tmpl: str = "custom") -> list[str]:
     """
     tmpl = str(tmpl or "custom").strip()
     if tmpl == "news_classify":
-        if lane == "zhipu":
+        if lane == "openclaw":
+            raw = [openclaw_backend_model()]
+        elif lane == "zhipu":
             # glm-4.7-flash first. 429 hops to the next $0 flash on this key.
             # glm-4.6-flash 403 and glm-4.6v-flash 429 are per-ID, not a dead key.
             # glm-4.6v-flash is the other $0 text/vision flash. No 4.5, no
@@ -672,6 +684,8 @@ def primary_models_for(lane: str, tmpl: str = "custom") -> list[str]:
         raw = list(GROQ_MODELS)
     elif lane == "gemini":
         raw = list(GEMINI_MODELS)
+    elif lane == "openclaw":
+        raw = [openclaw_backend_model()]
     else:
         raw = []
     return [m for m in raw if not is_banned_primary(m)]
@@ -937,10 +951,14 @@ def _choice_text(body: dict) -> str:
     return ""
 
 
-def openai_chat(url, key, model, prompt, extra=None, max_tokens=320, system=None):
+def openai_chat(url, key, model, prompt, extra=None, max_tokens=320, system=None,
+                timeout=None):
     system = SYSTEM if system is None else system
-    timeout = 90 if max_tokens > 400 else 45
-    headers = {"Authorization": "Bearer " + key, **(extra or {})}
+    if timeout is None:
+        timeout = 90 if max_tokens > 400 else 45
+    headers = dict(extra or {})
+    if key:
+        headers["Authorization"] = "Bearer " + key
 
     def _post(use_format: bool):
         payload = {
@@ -1439,6 +1457,43 @@ def _qwen_probe_ok(key: str, model: str) -> bool:
     return keep
 
 
+def openclaw_chat(backend_model, prompt, max_tokens=320, system=None):
+    """OpenClaw gateway. Agent id is the JSON model; Grok rides the header.
+
+    Does not log the URL or the token. A hard fail returns the status so
+    the free hopper can run next.
+    """
+    try:
+        from src.config import align_openclaw_token
+        align_openclaw_token()
+    except Exception as exc:
+        return None, 0, str(exc)[:160]
+    base = (os.environ.get("OPENCLAW_GATEWAY_URL") or "").rstrip("/")
+    if not base:
+        return None, 0, "no gateway"
+    token = (os.environ.get("OPENCLAW_TOKEN") or "").strip()
+    agent = (os.environ.get("OPENCLAW_AGENT") or "openclaw/default").strip()
+    raw_to = (os.environ.get("OPENCLAW_LANE_TIMEOUT") or "").strip()
+    timeout = int(raw_to) if raw_to.isdigit() else 120
+    parsed, status, info = openai_chat(
+        base + "/v1/chat/completions",
+        token,
+        agent,
+        prompt,
+        extra={
+            "x-openclaw-model": backend_model,
+            "x-openclaw-session-key": f"lane-{int(time.time() * 1000)}",
+        },
+        max_tokens=max_tokens,
+        system=system,
+        timeout=max(30, timeout),
+    )
+    # JSON model is the agent id. The watermark is the Grok backend.
+    if parsed is not None:
+        return parsed, status, backend_model
+    return parsed, status, info
+
+
 def load_keys():
     keys = {}
     # Existing GEMINI_API_KEY wiring kept exactly as-is (same loop entry).
@@ -1495,6 +1550,8 @@ def load_keys():
     th_key = tokenhub_key()
     if th_key:
         keys["tokenhub"] = th_key
+    if (os.environ.get("OPENCLAW_GATEWAY_URL") or "").strip():
+        keys["openclaw"] = "gateway"
     ollama_url = (os.environ.get("OLLAMA_URL") or "").rstrip("/")
     gh_direct = keys.get("github_models") or os.environ.get("GITHUB_TOKEN") or ""
     return keys, ollama_url, gh_direct
@@ -1521,6 +1578,16 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom", acce
             urls, key, model, prompt, max_tokens=max_tokens, system=system,
         )
 
+    if lane == "openclaw":
+        if not keys.get("openclaw"):
+            return None, None
+        return hop(
+            "openclaw",
+            primary_models_for("openclaw", tmpl),
+            lambda model: openclaw_chat(
+                model, prompt, max_tokens=max_tokens, system=system,
+            ),
+        )
     if lane == "openrouter":
         if not keys.get("openrouter"):
             return None, None

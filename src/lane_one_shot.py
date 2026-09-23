@@ -53,6 +53,7 @@ ENV_ROWS = [
     "GITHUB_MODELS_TOKEN", "SAMBANOVA_API_KEY", "CLOUDFLARE_API_TOKEN",
     "CLOUDFLARE_ACCOUNT_ID", "OLLAMA_URL", "DEEPSEEK_API_KEY",
     "LANE_ALLOW_PAID_DEEPSEEK", "LANE_URL",
+    "OPENCLAW_GATEWAY_URL", "OPENCLAW_TOKEN", "OPENCLAW_BACKEND_MODEL",
 ]
 # Automatic Actions GITHUB_TOKEN is not a Lane secret.
 KEY_VARS = [
@@ -88,6 +89,8 @@ def secrets_ready() -> bool:
     ).strip():
         return True
     if (os.environ.get("OLLAMA_URL") or "").strip():
+        return True
+    if (os.environ.get("OPENCLAW_GATEWAY_URL") or "").strip():
         return True
     return False
 
@@ -203,6 +206,7 @@ def _shard_of(title: str, shards: int) -> int:
 
 # Analyst may use 8B only after event_class is locked. Classify never does.
 ANALYST_LANES = [
+    "openclaw",
     "zhipu", "openrouter", "qwen", "tokenhub",
     "siliconflow", "mistral", "nvidia_nim", "pollinations",
 ]
@@ -213,6 +217,7 @@ FILTER_LANES = [
     "nvidia_nim", "pollinations",
 ]
 _FLOOR_PROVIDERS = frozenset({
+    "openclaw",
     "zhipu", "siliconflow", "openrouter", "qwen", "tokenhub", "gemini",
     "mistral", "pollinations",
 })
@@ -229,6 +234,11 @@ def classify_models_for(hop: str) -> list[str]:
 
 class LiveLane:
     def __init__(self) -> None:
+        try:
+            from src.config import align_openclaw_token
+            align_openclaw_token()
+        except Exception as exc:
+            print(f"[lane_one_shot] openclaw align skipped {str(exc)[:120]}")
         keys, ollama_url, gh_direct = lane.load_keys()
         self.ctx = {"keys": keys, "ollama_url": ollama_url, "gh_direct": gh_direct}
         lane._SKIP.clear()
@@ -737,6 +747,7 @@ def assess_board(text: str) -> list[str]:
         "lane::zhipu::", "lane::openrouter::", "lane::qwen::",
         "lane::tokenhub::", "lane::gemini::",
         "lane::mistral::", "lane::pollinations::",
+        "lane::openclaw::",
     )
     if not any(prefix in classify_block for prefix in floor):
         problems.append("classify histogram has no floor model")

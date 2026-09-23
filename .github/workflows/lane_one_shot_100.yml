@@ -29,6 +29,22 @@ on:
         required: false
         default: "150"
         type: string
+      runner:
+        description: ecs (OpenClaw) or ubuntu (GitHub-hosted). ubuntu cannot reach Grok.
+        required: false
+        default: ecs
+        type: choice
+        options:
+          - ecs
+          - ubuntu
+      llm_backend:
+        description: grok classifies on OpenClaw first. auto still tries Grok first.
+        required: false
+        default: grok
+        type: choice
+        options:
+          - grok
+          - auto
   # Push starts the gold gate only. The 100-draw is workflow_dispatch mode=full
   # after that gate is green. inputs.mode is empty on push, so shard stays off.
   push:
@@ -53,8 +69,10 @@ jobs:
   gold:
     # A push whose message contains [skip gold] does not call providers.
     if: ${{ github.event_name != 'push' || !contains(github.event.head_commit.message, '[skip gold]') }}
-    runs-on: ubuntu-latest
-    timeout-minutes: 45
+    # Push stays on GitHub-hosted so an offline ECS runner cannot block CI.
+    # workflow_dispatch runner=ecs is the OpenClaw path (same labels as Pre-Open).
+    runs-on: ${{ (github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
 
@@ -97,6 +115,11 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GOOGLE_AI_STUDIO_API_KEY: ${{ secrets.GOOGLE_AI_STUDIO_API_KEY }}
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+          OPENCLAW_BACKEND_MODEL: xai/grok-4-fast-reasoning
+          OPENCLAW_LANE_TIMEOUT: "120"
+          LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'grok' }}
         run: PYTHONPATH=. python3 -m src.lane_one_shot --env-check
 
       - name: Gold fixtures only
@@ -135,6 +158,11 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GOOGLE_AI_STUDIO_API_KEY: ${{ secrets.GOOGLE_AI_STUDIO_API_KEY }}
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+          OPENCLAW_BACKEND_MODEL: xai/grok-4-fast-reasoning
+          OPENCLAW_LANE_TIMEOUT: "120"
+          LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'grok' }}
         run: PYTHONPATH=. python3 -m src.lane_one_shot --gold-only
 
       - name: Upload gold report
@@ -150,7 +178,7 @@ jobs:
   shard:
     needs: gold
     if: ${{ github.event.inputs.mode == 'full' }}
-    runs-on: ubuntu-latest
+    runs-on: ${{ (github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
     timeout-minutes: 240
     strategy:
       fail-fast: false
@@ -199,6 +227,11 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GOOGLE_AI_STUDIO_API_KEY: ${{ secrets.GOOGLE_AI_STUDIO_API_KEY }}
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+          OPENCLAW_BACKEND_MODEL: xai/grok-4-fast-reasoning
+          OPENCLAW_LANE_TIMEOUT: "120"
+          LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'grok' }}
         run: PYTHONPATH=. python3 -m src.lane_one_shot --env-check
 
       - name: Draw, Lane, validate
@@ -235,6 +268,11 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GOOGLE_AI_STUDIO_API_KEY: ${{ secrets.GOOGLE_AI_STUDIO_API_KEY }}
+          OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+          OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+          OPENCLAW_BACKEND_MODEL: xai/grok-4-fast-reasoning
+          OPENCLAW_LANE_TIMEOUT: "120"
+          LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'grok' }}
         run: |
           PYTHONPATH=. python3 -m src.lane_one_shot \
             --shard "${{ matrix.shard }}" \
