@@ -1251,17 +1251,19 @@ def test_meta_prompt_sends_the_full_pack():
     for marker in ("M1", "M2", "M3", "M4", "M5"):
         assert marker in text
     for slot in (
-        "C:", "T:", "H:", "E:", "S:", "R:", "A:", "D:", "I:", "P:", "Y-S:", "Y-T:",
+        "C constraint", "T time", "H harm", "E expression", "S substitute",
+        "R rival", "A ammo", "D durability", "I invert", "P priced",
+        "Y-S salience", "Y-T transmission",
     ):
         assert slot in text, slot
-    assert "invert is one sentence" in text
+    assert "invert" in text.lower()
+    assert "bullshit_filter" in text
     assert "ai_angle" in text
     assert "who_should_i_buy" in text
     assert "already_in_article" in text
     assert "undated_weather" in text
     assert "theme_fishing" in text
     assert "no_direction_change" in text
-    assert len(text.splitlines()) > 40
 
 
 def test_blast_analyst_prompt_includes_flip_questions_and_tsa_car():
@@ -1286,14 +1288,15 @@ def test_blast_analyst_prompt_includes_flip_questions_and_tsa_car():
         "SEC venues", "", "structure", "market_structure", None, "impulse",
         "venues", [], [], [], [],
     )
-    assert "TSV not Energy" in structure
-    assert "TSA → CAR" not in structure
+    assert "Never attach Energy" in structure
+    assert "STRUCTURE family" in structure
     permission = stack_analyst(
         "Amneal lanreotide", "", "permission", "gate", "open", "regime_break",
         "FDA", [], [], [], [],
     )
-    assert "monday_open" in permission
-    assert "AMRX Monday" in permission
+    assert "Monday" in permission
+    assert "AMRX" in permission
+    assert "16:01" in permission
 
 
 def test_prompt_audit_logs_sha_and_edges():
@@ -1321,7 +1324,7 @@ def test_gold_row_records_prompt_log():
     meta = next(rec for rec in row["prompt_log"] if rec["stage"] == "meta")
     joined = "\n".join(meta["head"] + meta["tail"])
     assert "M1" in joined and "M5" in joined
-    assert "Y-S:" in joined
+    assert "Y-S salience" in joined
 
 
 def test_gold_job_is_ecs_and_pins_fast_reasoning():

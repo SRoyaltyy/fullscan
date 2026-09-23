@@ -270,6 +270,27 @@ LANREOTIDE_CLOCK_Q = (
 )
 
 
+def family_block(family: str) -> str:
+    """Family text the one-shot analyst hop actually sends.
+
+    One family's winner/loser test and flip questions, plus the shared
+    clock, roles, history, and gold-fixture rules.
+    """
+    fam = family if family in FAMILY_TESTS else "time"
+    flips = "\n".join(
+        f"- {q}" for q in FLIP_QUESTIONS.get(fam, FLIP_QUESTIONS["time"])
+    )
+    return (
+        f"PROMPT_VERSION={PROMPT_VERSION}\n"
+        f"{CLOCK_RULES}\n"
+        f"{ROLES}\n"
+        f"{HISTORY_SLOT}\n"
+        f"{GOLD_RULES}\n"
+        f"WINNER/LOSER TEST FOR THIS FAMILY ONLY:\n{FAMILY_TESTS[fam]}\n\n"
+        f"FLIP QUESTIONS (answer or mark blocked; blocked → not_determined):\n{flips}\n"
+    )
+
+
 def analyst_prompt(
     title: str,
     body: str,
