@@ -1,11 +1,12 @@
 {
   "meta": {
     "date": "2026-09-23",
-    "generated_at": "2026-09-23T07:35:33.906076-04:00",
+    "generated_at": "2026-09-23T07:42:24.881887-04:00",
     "general_bias": 0.5032,
     "sector_bias": {
       "Basic Materials": 0.0,
-      "Communication Services": 0.2575
+      "Communication Services": 0.2575,
+      "Consumer Cyclical": 0.0
     },
     "accuracy_gates": {
       "general": {
@@ -73,7 +74,7 @@
     "n_ab": 1876,
     "n_peer": 1832,
     "same_day_general": true,
-    "same_day_sectors": 2,
+    "same_day_sectors": 3,
     "weather_risk": "mixed",
     "n_universe": 2066,
     "weights": {
@@ -828,7 +829,7 @@
           "region": "good"
         },
         {
-          "ticker": "PENG",
+          "ticker": "INOD",
           "sector": "Technology",
           "industry": "Information Technology Services",
           "size": "mid",
@@ -875,7 +876,7 @@
           "region": "good"
         },
         {
-          "ticker": "INOD",
+          "ticker": "PENG",
           "sector": "Technology",
           "industry": "Information Technology Services",
           "size": "mid",
