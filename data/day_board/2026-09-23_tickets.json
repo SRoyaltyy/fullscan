@@ -1,6 +1,6 @@
 {
   "date": "2026-09-23",
-  "generated_at": "2026-09-23T05:41:41.048864-04:00",
+  "generated_at": "2026-09-23T08:01:04.250356-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -12,128 +12,134 @@
   "buy_1d": [
     {
       "ticker": "ARQT",
-      "score": 0.8495734282988849
+      "score": 0.7896420156905521
     },
     {
       "ticker": "PGEN",
-      "score": 0.7783687895719862
+      "score": 0.7255586439120352
     },
     {
       "ticker": "ADMA",
-      "score": 0.7580653853069101
+      "score": 0.707287463017011
     },
     {
       "ticker": "DXCM",
-      "score": 0.3925919326017715
+      "score": 0.3413504928200189
     },
     {
       "ticker": "NICE",
-      "score": 0.6903282194407692
+      "score": 0.6463352699781763
     },
     {
       "ticker": "TH",
-      "score": 0.7513180156725596
+      "score": 0.72120936811278
     },
     {
       "ticker": "PUBM",
-      "score": 0.7109581470869826
+      "score": 0.6648956170930282
     },
     {
       "ticker": "APPS",
-      "score": 0.7050792129707817
+      "score": 0.659600157874781
     },
     {
       "ticker": "PAYS",
-      "score": 0.7006340229766195
+      "score": 0.655588583374579
     },
     {
       "ticker": "CTOS",
-      "score": 0.7173218459445099
+      "score": 0.6906073858269013
     },
     {
       "ticker": "VSTS",
-      "score": 0.6379616141347848
+      "score": 0.6191745615179922
     },
     {
       "ticker": "TAL",
-      "score": 0.6113273438001063
+      "score": 0.6007467733009548
     },
     {
       "ticker": "SB",
-      "score": 0.5911792451587567
+      "score": 0.5770729430715258
     },
     {
       "ticker": "ELF",
-      "score": 0.6521630644818248
+      "score": 0.63748635390779
     },
     {
       "ticker": "SHOO",
-      "score": 0.5356595011717732
+      "score": 0.5042884738828913
     }
   ],
   "sell_1d": [
     {
-      "ticker": "CF",
-      "score": -0.3858845499891464
-    },
-    {
-      "ticker": "SSTK",
-      "score": -0.34231573636974333
-    },
-    {
-      "ticker": "OVV",
-      "score": -0.3414392292642719
-    },
-    {
-      "ticker": "ADM",
-      "score": -0.31127305220128904
-    },
-    {
-      "ticker": "FLUT",
-      "score": -0.30293527819512717
+      "ticker": "SOC",
+      "score": -0.44024022272950497
     },
     {
       "ticker": "HAL",
-      "score": -0.30245044142611754
+      "score": -0.3776316731327164
     },
     {
-      "ticker": "DOW",
-      "score": -0.2915665678108171
+      "ticker": "NOG",
+      "score": -0.3732038539344959
     },
     {
-      "ticker": "NFLX",
-      "score": -0.2869942961143662
+      "ticker": "MUR",
+      "score": -0.3709892073800236
     },
     {
-      "ticker": "DKNG",
-      "score": -0.275936104234283
+      "ticker": "PUMP",
+      "score": -0.357287584503017
     },
     {
-      "ticker": "HUM",
-      "score": -0.27130768607439465
+      "ticker": "CF",
+      "score": -0.3522147374976558
+    },
+    {
+      "ticker": "OVV",
+      "score": -0.33771567201990327
+    },
+    {
+      "ticker": "XPRO",
+      "score": -0.33409820032229154
+    },
+    {
+      "ticker": "WTI",
+      "score": -0.3336741488538328
+    },
+    {
+      "ticker": "BTU",
+      "score": -0.33090823216922044
+    },
+    {
+      "ticker": "HP",
+      "score": -0.3083740210592424
+    },
+    {
+      "ticker": "RES",
+      "score": -0.29383177354911094
+    },
+    {
+      "ticker": "AR",
+      "score": -0.2799826432450825
+    },
+    {
+      "ticker": "PTEN",
+      "score": -0.2786356672159659
     },
     {
       "ticker": "IMO",
-      "score": -0.2708924143996866
-    },
-    {
-      "ticker": "RVMD",
-      "score": -0.27037606165126005
-    },
-    {
-      "ticker": "APA",
-      "score": -0.2652285870712288
-    },
-    {
-      "ticker": "STLA",
-      "score": -0.2635438352167803
-    },
-    {
-      "ticker": "JBHT",
-      "score": -0.26272910381767645
+      "score": -0.27421572132138466
     }
   ],
-  "flatten": {},
+  "flatten": {
+    "said": "0 priced buys \u00b7 cash $99,642.37",
+    "bullets": [
+      "0 priced buys",
+      "cash $99,642.37"
+    ]
+  },
   "general": {
     "said": "UP  2.293",
     "bullets": [
@@ -147,14 +153,14 @@
     "direction": "up"
   },
   "sectors": {
-    "said": "0 up / 0 down / 0 flat",
+    "said": "2 up / 1 down / 3 flat",
     "bullets": [
-      "XLB missing",
-      "XLC missing",
-      "XLY missing",
-      "XLP missing",
-      "XLE missing",
-      "XLF missing",
+      "XLB FLAT +2.5",
+      "XLC UP +0.4",
+      "XLY FLAT +1.0",
+      "XLP UP +0.3",
+      "XLE DOWN -2.3",
+      "XLF FLAT +1.0",
       "XLV missing",
       "XLI missing",
       "XLRE missing",
@@ -816,6 +822,306 @@
         }
       ],
       "preview": "5897 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 KEYS, FORM, SMTC, ESTC, SKHY"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-23T05:43:15.154592-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-23_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1446836,
+          "preview": "1d BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX"
+        },
+        {
+          "path": "data/stock_book/2026-09-23_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 2844,
+          "preview": "green 188 \u00b7 CVLT, RELY, AVT, GDDY, SNX, EXLS, NXT, PDFS, DLO, DT"
+        },
+        {
+          "path": "data/stock_book/2026-09-23_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2415,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-23_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13831,
+          "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13831,
+          "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX"
+        },
+        {
+          "path": "01_daily/2026-09-23_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 76455,
+          "preview": "# Stock book \u2014 2026-09-23\n_Generated 2026-09-23T05:41:38.825961-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX \u00b7 green 188 \u00b7 CVLT, RELY, AVT, GDDY, SNX, EXLS, NXT, PDFS, DLO, DT \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX \u00b7 2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX \u00b7 # Stock book \u2014 2026-09-23\n_Generated 2026-09-23T05:41:38.825961-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-09-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-23T05:43:18.854916-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 15224,
+          "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 683,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-23.json",
+          "ok": true,
+          "reason": "",
+          "size": 82894,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-23_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 43362,
+          "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 811324,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-23_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 811324,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1145339,
+          "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 811324,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 43362,
+          "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 811324,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 811324,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1145339,
+          "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 2010,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 2010,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock"
+    },
+    {
+      "key": "flatten",
+      "title": "Flatten live card",
+      "date": "2026-09-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-23T05:55:12.267727-04:00",
+      "files": [
+        {
+          "path": "01_daily/2026-09-23_flatten_card.md",
+          "ok": true,
+          "reason": "",
+          "size": 4289,
+          "preview": "# flatten_robust card \u2014 2026-09-23\n_Generated 2026-09-23T09:55:11 \u2014 live `flatten_robust`._\n**S=+2.29; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **+2.29** (UP) \u00b7 route **io**\n- Cash leftover **$72,457.53** (after 09:30 $52,284.91 \u00b7 after 16:00 $80,755.39)\n- Prior close **$101,008.57** \u00b7 09:30 **$101,008.57** \u00b7 overnight **$+0.00** \u00b7 session **$-20,253.18** \u00b7 16:00 **$80,755.39**\n- Overnight lots **8** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$20,172.62** \u2264 leftover after sells **$100,927.99**"
+        },
+        {
+          "path": "data/sleeve_merge/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 17014,
+          "preview": "2026-09-23 BUY \u2014 \u00b7 SELL \u2014"
+        },
+        {
+          "path": "data/sleeve_merge/daily_marks.json",
+          "ok": true,
+          "reason": "",
+          "size": 161757,
+          "preview": "[{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\": \"IREN\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 223, \"shares\": 223, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 45.98, \"close_px\": 44.76, \"entry_px\": 44.76, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": -272.06, \"day\": -272.06, \"pct_overnight\""
+        },
+        {
+          "path": "data/sleeve_merge/equity_curve.csv",
+          "ok": true,
+          "reason": "",
+          "size": 4033,
+          "preview": "25 rows \u00b7 date,equity,cash,core_n,tac_io_n,tac_n,core_mv,tac_mv,route,score,predict,open_held,open_cash,open_equity,yday_equity,ov \u00b7 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19"
+        },
+        {
+          "path": "dashboard/sleeve-merge/index.html",
+          "ok": true,
+          "reason": "",
+          "size": 56541,
+          "preview": "<!doctype html>\n<html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Combined sleeve \u2014 .io \u00d7 mover</title>\n<style>\n:root{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9}\n*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui}\nmain{max-width:1240px;margin:auto;padding:16px}h1,h2{margin:.4em 0}\n.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:14px 0}\n.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}\n.card b{display:block;font-size:22px;margin-top:4px}\n.muted{color:var(--muted)}a{color:#93c5fd}\n.sheet{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0}\ntable{border-collapse:separate;border-spacing:0;width:100%;background:var(--card)}\nth,td{padding:7px 8"
+        }
+      ],
+      "preview": "# flatten_robust card \u2014 2026-09-23\n_Generated 2026-09-23T09:55:11 \u2014 live `flatten_robust`._\n**S=+2.29; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **+2.29** (UP) \u00b7 route **io**\n- Cash leftover **$72,457.53** (after 09:30 $52,284.91 \u00b7 after 16:00 $80,755.39)\n- Prior close **$101,008.57** \u00b7 09:30 **$101,008.57** \u00b7 overnight **$+0.00** \u00b7 session **$-20,253.18** \u00b7 16:00 **$80,755.39**\n- Overnight lots **8** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$20,172.62** \u2264 leftover after sells **$100,927.99** \u00b7 2026-09-23 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_ove"
+    },
+    {
+      "key": "paper",
+      "title": "Paper dashboard",
+      "date": "2026-09-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-23T05:55:15.854624-04:00",
+      "files": [
+        {
+          "path": "03_scoreboard/PAPER_TRADING.md",
+          "ok": true,
+          "reason": "",
+          "size": 1865,
+          "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-09-23** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-09-23** ranker: **green pile** (168 liquid names). Paper buys the pile 15, not the old weighted 15.\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $9,597.25 | -4.03% | $4,366.28 | 10 | 402 | $888.71 | $-381.77 | $-20.98 | 31.6% | 0.0% |\n| 1d_size | $10,10"
+        },
+        {
+          "path": "dashboard/index.html",
+          "ok": true,
+          "reason": "",
+          "size": 8379518,
+          "preview": "<!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#66708a; --pos:#4ade80; --neg:#f87171;\n--chip:#2a3450; --day:#121826; --gold:#fbbf24;\n}\n*{box-sizing:border-box}\nhtml,body{overflow-x:hidden}\nbody{margin:0;background:var(--bg);color:var(--fg);font:14px/1.5 -apple-system,Segoe UI,Roboto,sans-serif}\n.wrap{max-width:1180px;margin:0 auto;padding:16px 16px 48px;width:100%}\nh1{font-size:20px;margin:0 0 4px}\n.sub{color:var(--mut);font-size:12px;margin:0 0 12px}\n.merge-hero{display:block;margin:0 0 14px;padding:14px 16px;border-radius:12px;\nbackground:linear-gradient(180deg,#1a2744,#171e2e);border:1px solid #3b4d78;\ncolor:var(--fg);text-decoration:none}\n."
+        }
+      ],
+      "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-09-23** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-09-23** ranker: **green pile** (168 liquid names). Paper buys the pile 15, not the old weighted 15.\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $9,597.25 | -4.03% | $4,366.28 | 10 | 402 | $888.71 | $-381.77 | $-20.98 | 31.6% | 0.0% |\n| 1d_size | $10,10 \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
+    },
+    {
+      "key": "sector_one",
+      "title": "Sector predict Financial (6/11)",
+      "date": "2026-09-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-23T07:57:20.606050-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-23/financial_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 18371,
+          "preview": "# Sector Prediction \u2014 Financial \u2014 2026-09-23\n- ETF: **XLF**\n- rubric: `00_grounding/sectors/financial.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **1.027** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **0.454** (ES +0.03%, ZN -0.03%, PM:XLF +0.09%) \u00b7 index_carry **0.573** (general 2.293) \u00b7 llm_overlay **0.0** (raw 0.0)"
+        },
+        {
+          "path": "01_daily/sectors/2026-09-23/financial_predict_trace.md",
+          "ok": true,
+          "reason": "",
+          "size": 390,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Financial 2026-09-23\n**Step 0 \u2014 Setup.** Loaded 152,245 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (16,371 characters)."
+        },
+        {
+          "path": "01_daily/_transcripts/2026-09-23_sector_financial_predict.json",
+          "ok": true,
+          "reason": "",
+          "size": 173141,
+          "preview": "keys: provider, agent, backend_model, messages"
+        },
+        {
+          "path": "01_daily/2026-09-23_preopen_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 7222,
+          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
+        },
+        {
+          "path": "01_daily/sectors/2026-09-23/_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 1234,
+          "preview": "keys: date, n_ok, n_total, sectors"
+        },
+        {
+          "path": "01_daily/sectors/2026-09-23/_BOARD.md",
+          "ok": true,
+          "reason": "",
+          "size": 1745,
+          "preview": "# Sector Board \u2014 2026-09-23\nGenerated: **2026-09-23T07:57:20.542932-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+        },
+        {
+          "path": "01_daily/sectors/2026-09-23/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 6255,
+          "preview": "keys: date, generated_at, sectors"
+        },
+        {
+          "path": "03_scoreboard/scoreboard.json",
+          "ok": true,
+          "reason": "",
+          "size": 855348,
+          "preview": "keys: runs"
+        }
+      ],
+      "preview": "# Sector Prediction \u2014 Financial \u2014 2026-09-23\n- ETF: **XLF**\n- rubric: `00_grounding/sectors/financial.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **1.027** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **0.454** (ES +0.03%, ZN -0.03%, PM:XLF +0.09%) \u00b7 index_carry **0.573** (general 2.293) \u00b7 llm_overlay **0.0** (raw 0.0) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Financial 2026-09-23\n**Step 0 \u2014 Setup.** Loaded 152,245 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (16,371 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-23\nGenerated: **2026-09-23T07:57:20.542932-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_at, sectors \u00b7 "
     }
   ],
   "source": "publish_live_boards"
