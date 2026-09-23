@@ -1,0 +1,76 @@
+{
+  "date": "2026-09-23",
+  "generated_at": "2026-09-23T04:14:32.535161-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-09-23",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US equity futures edge higher as oil trades below $100 after Trump UN remarks with PMIs and earnings set to guide early moves",
+  "raw_text": "- S&P 500 Futures (@ES) point to a modestly higher open (+0.09%), with Dow Jones Futures (@YM) +0.11%, Nasdaq 100 Futures (@NQ) +0.01%, and Russell 2000 Futures (@ER2) -0.16%.\n- Nasdaq ($COMP) comes off a record prior session amid continued AI-related momentum in early pre-market trading.\n- Oil (@CL) prices cool below $100 after President Trump's UN address on Iran combined tough rhetoric with signals of possible post-midterm diplomacy.\n- Earnings before the bell include Cintas (CTAS), Paychex (PAYX), General Mills (GIS), and Cracker Barrel (CBRL).\n- Reactions to results from Cintas, Paychex, General Mills, and Cracker Barrel are expected to help set up swings at the open.\n- Flash US manufacturing and services PMIs are scheduled for 9:45 AM ET and are expected to drive intraday volatility.\n- Asian markets see selective gains on tech leadership, echoing AI strength from the prior Nasdaq ($COMP) record session.\n- European markets are digesting President Trump's Iran remarks and the pullback in oil prices.",
+  "raw_summary_md": "- **S&P 500 Futures** ([@ES](https://finviz.com/futures_charts?t=ES)) point to a modestly higher open (**+0.09%**), with **Dow Jones Futures** ([@YM](https://finviz.com/futures_charts?t=YM)) **+0.11%**, **Nasdaq 100 Futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) **+0.01%**, and **Russell 2000 Futures** ([@ER2](https://finviz.com/futures_charts?t=ER2)) **-0.16%**.\n- **Nasdaq** ([$COMP](https://finviz.com/index/COMP?p=d)) comes off a **record prior session** amid continued **AI-related momentum** in early pre-market trading.\n- **Oil** ([@CL](https://finviz.com/futures_charts?t=CL)) prices cool **below $100** after **President Trump's UN address on Iran** combined tough rhetoric with signals of possible **post-midterm diplomacy**.\n- **Earnings before the bell** include **Cintas** ([CTAS](https://finviz.com/quote?t=CTAS)), **Paychex** ([PAYX](https://finviz.com/quote?t=PAYX)), **General Mills** ([GIS](https://finviz.com/quote?t=GIS)), and **Cracker Barrel** ([CBRL](https://finviz.com/quote?t=CBRL)).\n- **Reactions to results** from **Cintas**, **Paychex**, **General Mills**, and **Cracker Barrel** are expected to help set up **swings at the open**.\n- **Flash US manufacturing and services PMIs** are scheduled for **9:45 AM ET** and are expected to **drive intraday volatility**.\n- **Asian markets** see **selective gains** on **tech leadership**, echoing **AI strength** from the prior Nasdaq ([$COMP](https://finviz.com/index/COMP?p=d)) **record session**.\n- **European markets** are digesting **President Trump's Iran remarks** and the **pullback in oil prices**.",
+  "index_moves": [],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "CTAS",
+    "PAYX",
+    "GIS",
+    "CBRL"
+  ],
+  "named_leaders": [
+    "CTAS",
+    "PAYX",
+    "GIS",
+    "CBRL"
+  ],
+  "calendar": [],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [
+      "CTAS",
+      "PAYX",
+      "GIS",
+      "CBRL"
+    ],
+    "text": "Earnings before the bell include Cintas (CTAS), Paychex (PAYX), General Mills (GIS), and Cracker Barrel (CBRL)."
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Oil (@CL) prices cool below $100 after President Trump's UN address on Iran combined tough rhetoric with signals of possible post-midterm diplomacy. European markets are digesting President Trump's Iran remarks and the pullback in oil prices."
+  },
+  "finviz_id": 291946,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-09-23T04:06:21.46",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "neutral"
+}
