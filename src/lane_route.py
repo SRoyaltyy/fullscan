@@ -563,14 +563,15 @@ def primary_models_for(lane: str, tmpl: str = "custom") -> list[str]:
     tmpl = str(tmpl or "custom").strip()
     if tmpl == "news_classify":
         if lane == "zhipu":
-            # glm-4.7-flash first. glm-4.6-flash is a soft skip only:
-            # 403 无权访问 drops that ID, not the key. Free text SKU on
-            # this key is thin. Do not add glm-4.5-flash, glm-4-flash-250414,
-            # or paid glm-4.7-flashx.
-            raw = list(ZHIPU_MODELS) + ["glm-4.6-flash"]
+            # glm-4.7-flash first. 429 hops to the next $0 flash on this key.
+            # glm-4.6-flash 403 and glm-4.6v-flash 429 are per-ID, not a dead key.
+            # glm-4.6v-flash is the other $0 text/vision flash. No 4.5, no
+            # 250414, no paid glm-4.7-flashx.
+            raw = list(ZHIPU_MODELS) + ["glm-4.6-flash", "glm-4.6v-flash"]
         elif lane == "siliconflow":
-            # No non-Pro SiliconFlow ID is at the classify floor.
-            # Qwen/Qwen3-8B and THUDM/GLM-Z1-9B are banished from classify.
+            # No $0 non-Pro SiliconFlow ID can lock event_class.
+            # Qwen3-8B and GLM-Z1-9B are below the floor. Qwen3-14B and
+            # Qwen3-32B serverless are priced, so they stay off this list.
             raw = []
         elif lane == "openrouter":
             raw = [m for m in OR_CLASSIFY_MODELS if _or_is_free(m)]
@@ -1119,13 +1120,27 @@ def _reject_detail(parsed) -> str:
     return f" class={event_class} q5={q5}"
 
 
+def _account_dead(info: str) -> bool:
+    """True when the body says the key or the account is dead, not one model."""
+    low = str(info or "").lower()
+    needles = (
+        "incorrect api key",
+        "invalid api key",
+        "account is in good standing",
+        "all dashscope hosts rejected",
+        "all zhipu hosts rejected",
+    )
+    return any(needle in low for needle in needles)
+
+
 def hop_models(lane, models, call, abandon_404=False, accept=None):
     """call(model) -> (parsed, status, info). None = skip to next provider.
 
-    429 hops to the next ID. 402/403/404 on one ID (no entitlement, that
-    model's quota, or unknown ID) also hops to the next ID and does not
-    mark the key dead. 401/410 abandons the lane (the key itself failed).
-    accept(parsed) False means the JSON is live but unusable — next ID.
+    429 hops to the next ID on the same key. 401/402/403/404 drop that ID
+    and keep siblings. An account-level body (bad key, account not in
+    good standing) marks the key dead. If every tried ID is dead and none
+    returned 200 or 429, the key is dead too. accept() False tries the
+    next ID; a 200 still means the key is live.
     """
     global _OR_DAY_CAPPED
     if lane in _SKIP:
@@ -1162,11 +1177,13 @@ def hop_models(lane, models, call, abandon_404=False, accept=None):
                 )
                 continue
             return parsed, info
-        if status in (401, 410):
-            print(f"  {lane} skip ({status})")
+        if status == 410 or (
+            status in (400, 401, 403) and _account_dead(info)
+        ):
+            print(f"  {lane} skip ({status} key dead)")
             _SKIP.add(lane)
             return None, None
-        if status in (402, 403, 404):
+        if status in (401, 402, 403, 404):
             # Per-model entitlement, quota, or unknown ID. Not a dead key
             # unless every tried ID comes back this way and none was live.
             dead_calls += 1

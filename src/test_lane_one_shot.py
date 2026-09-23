@@ -414,8 +414,9 @@ def test_classify_floor_excludes_ministral_and_8b(monkeypatch):
     assert lanes_for("news_classify") == order
     assert "mistral" not in order
     assert classify_models_for("zhipu")[0] == "glm-4.7-flash"
-    assert "glm-4.6-flash" in classify_models_for("zhipu")
-    assert "glm-4.6v-flash" not in classify_models_for("zhipu")
+    zhipu = classify_models_for("zhipu")
+    assert zhipu[0] == "glm-4.7-flash"
+    assert zhipu == ["glm-4.7-flash", "glm-4.6-flash", "glm-4.6v-flash"]
     assert "glm-4.7-flashx" not in classify_models_for("zhipu")
     assert "glm-4.5-flash" not in classify_models_for("zhipu")
     assert "glm-4-flash-250414" not in classify_models_for("zhipu")
@@ -464,6 +465,27 @@ def test_dashscope_401_on_one_host_tries_the_next(monkeypatch):
     assert status == 200
     assert len(calls) >= 2
     assert "qwen" not in lane_route._SKIP
+
+
+def test_account_standing_marks_the_key_dead():
+    from src import lane_route
+
+    lane_route._SKIP.clear()
+    lane_route._MODEL_DENIED.clear()
+    seen = []
+
+    def call(model):
+        seen.append(model)
+        return None, 400, "Access denied, please make sure your account is in good standing"
+
+    parsed, _info = lane_route.hop_models(
+        "qwen", ["qwen-flash", "qwen3.8-flash"], call,
+    )
+    assert parsed is None
+    assert seen == ["qwen-flash"]
+    assert "qwen" in lane_route._SKIP
+    lane_route._SKIP.clear()
+    lane_route._MODEL_DENIED.clear()
 
 
 def test_429_then_403_does_not_skip_provider():
