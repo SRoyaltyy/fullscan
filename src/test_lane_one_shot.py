@@ -1595,3 +1595,160 @@ def test_gold_job_is_ecs_and_pins_grok_4_6():
     assert "clean: true" in gold
     assert 'git -c safe.directory="${GITHUB_WORKSPACE}" rev-parse HEAD' in gold
     assert 'test "${head}" = "${{ github.sha }}"' in gold
+
+
+def test_tsv_mixed_venue_is_a_signed_instrument():
+    """OpenClaw gold run signed only NDAQ:mixed. That venue is the book."""
+    from src.news_impact.one_shot_stack import analyst_acceptable, analyst_repair_note, validate
+
+    art = next(a for a in GOLD_KEEP if a["gold_id"] == "tsv")
+    instruments = [
+        {"ticker": "NDAQ", "entity_name": "Nasdaq Inc", "sector": "Financial"},
+        {"ticker": "COIN", "entity_name": "Coinbase Global Inc", "sector": "Financial"},
+        {"ticker": "XOM", "entity_name": "Exxon Mobil", "sector": "Energy"},
+    ]
+    parsed = {
+        "entities": [
+            {"name": "Nasdaq", "ticker": "NDAQ", "role": "named", "direction": "mixed",
+             "axiom_id": "A_TSV_06"},
+        ],
+        "answers": [{"id": "q1", "status": "answered", "note": "incumbent rail"}],
+        "history": {"transmission": "none", "history_state": "analog", "salience": "low"},
+    }
+    errors = validate(
+        q5="impulse", event_class="market_structure", sign=None,
+        entities=[{"ticker": "NDAQ", "direction": "mixed", "horizon": "0-1d"}],
+        instruments=instruments, hint_ticker="", title=art["title"], index_names=None,
+    )
+    assert "no_signed_instrument" not in errors
+    other = validate(
+        q5="impulse", event_class="blast_ops", sign=None,
+        entities=[{"ticker": "AAL", "direction": "mixed", "horizon": "0-1d"}],
+        instruments=[{"ticker": "AAL", "sector": "Industrials"}],
+        hint_ticker="", title="Airlines face a fuel bill", index_names=None,
+    )
+    assert "no_signed_instrument" in other
+    energy = validate(
+        q5="impulse", event_class="market_structure", sign=None,
+        entities=[{"ticker": "XOM", "direction": "mixed", "horizon": "0-1d"}],
+        instruments=instruments, hint_ticker="", title=art["title"], index_names=None,
+    )
+    assert "no_signed_instrument" in energy
+    assert analyst_acceptable(
+        parsed, gold_id="tsv", title=art["title"], known_at=art["known_at"],
+        instruments=instruments, axiom_ids={"A_TSV_06"}, pack_facts=[],
+        horizon="0-1d", q5="impulse", event_class="market_structure", sign=None,
+        hint_ticker="", index_names=None,
+    )
+    assert analyst_acceptable(
+        {"entities": [{"name": "Exxon", "ticker": "XOM", "role": "named", "direction": "mixed"}]},
+        gold_id="tsv", title=art["title"], known_at=art["known_at"],
+        instruments=instruments, axiom_ids=set(), pack_facts=[],
+        horizon="0-1d", q5="impulse", event_class="market_structure", sign=None,
+        hint_ticker="", index_names=None,
+    ) is False
+    row = {
+        "gold_id": "tsv",
+        "event_class": "market_structure",
+        "entities": [{"ticker": "NDAQ", "direction": "mixed"}],
+        "instruments": instruments,
+    }
+    assert gold_status(row) == "PASS"
+    row["entities"] = [{"ticker": "XOM", "direction": "mixed"}]
+    assert gold_status(row) == "FAIL"
+    note = analyst_repair_note(None, f"Title: {art['title']}\nINSTRUMENTS:\n- NDAQ\n")
+    assert "mixed" in note
+    assert "Energy" in note
+
+
+class _MixedTsvLane(ScriptLane):
+    """The live OpenClaw shape: one incumbent venue, direction mixed."""
+
+    def _analyse(self, title: str) -> dict:
+        return {
+            "entities": [
+                {"name": "Nasdaq", "ticker": "NDAQ", "role": "named",
+                 "direction": "mixed", "axiom_id": "A_TSV_06"},
+            ],
+            "answers": [
+                {"id": f"q{i}", "status": "answered", "note": "incumbent rail"}
+                for i in range(1, 6)
+            ],
+            "history": {
+                "history_state": "analog",
+                "transmission": "none",
+                "salience": "low",
+                "axiom_broken": "exchanges are the only legal venue for NMS stock",
+            },
+        }
+
+
+def test_tsv_mixed_only_analyst_json_is_kept():
+    art = next(a for a in GOLD_KEEP if a["gold_id"] == "tsv")
+    row = process_article(
+        art, _MixedTsvLane(), axioms=load_axioms(), use_pack=False, root=Path("."),
+    )
+    assert row["keep"], (row["reject_reason"], row.get("validator_errors"))
+    assert row["gold_status"] == "PASS"
+    assert row["event_class"] == "market_structure"
+    assert row["watermark"].startswith("lane::")
+    assert "NDAQ" in row["action"]
+    assert row["action"].startswith("MIXED ")
+    assert "BUY" not in row["action"]
+    assert "SELL" not in row["action"]
+    assert row["history"]["transmission"] == "book"
+    errors = row.get("validator_errors") or []
+    assert "lane_analyst_missing" not in errors
+    assert "analyst_not_json" not in errors
+    assert "no_signed_instrument" not in errors
+    used = {e.get("ticker") for e in row["entities"]}
+    assert "NDAQ" in used
+    assert "XOM" not in used
+
+
+def test_openclaw_keeps_tsv_mixed_without_a_hopper(monkeypatch):
+    from src import lane_route
+    from src.lane_one_shot import LiveLane
+    from src.news_impact.one_shot_stack import analyst_acceptable
+
+    monkeypatch.delenv("OPENCLAW_BACKEND_MODEL", raising=False)
+    monkeypatch.setattr("src.config.align_openclaw_token", lambda **_k: "tok")
+    monkeypatch.setattr(
+        lane_route, "load_keys",
+        lambda: ({"openclaw": "gateway", "mistral": "k"}, "", ""),
+    )
+    lane_route._SKIP.clear()
+    lane_route._RATE_LIMITED.clear()
+    lane_route._MODEL_DENIED.clear()
+    prompts = []
+    mixed = {
+        "entities": [
+            {"name": "Nasdaq", "ticker": "NDAQ", "role": "named", "direction": "mixed"},
+        ],
+        "answers": [{"id": "q1", "status": "answered", "note": "incumbent rail"}],
+    }
+
+    def fake_chat(model, prompt, max_tokens=320, system=None):
+        prompts.append(prompt)
+        return mixed, 200, model
+
+    monkeypatch.setattr(lane_route, "openclaw_chat", fake_chat)
+    art = next(a for a in GOLD_KEEP if a["gold_id"] == "tsv")
+    instruments = [
+        {"ticker": "NDAQ", "entity_name": "Nasdaq Inc", "sector": "Financial"},
+        {"ticker": "COIN", "entity_name": "Coinbase Global Inc", "sector": "Financial"},
+    ]
+
+    def _accept(blob):
+        return analyst_acceptable(
+            blob, gold_id="tsv", title=art["title"], known_at=art["known_at"],
+            instruments=instruments, axiom_ids={"A_TSV_06"}, pack_facts=[],
+            horizon="0-1d", q5="impulse", event_class="market_structure", sign=None,
+            hint_ticker="", index_names=None,
+        )
+
+    live = LiveLane()
+    parsed, hop, model = live("analyst", f"Title: {art['title']}\n", "sys", accept=_accept)
+    assert parsed["entities"][0]["direction"] == "mixed"
+    assert (hop, model) == ("openclaw", "xai/grok-4.6")
+    assert len(prompts) == 1

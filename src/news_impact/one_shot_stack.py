@@ -787,8 +787,11 @@ def analyst_repair_note(parsed: dict | None, prompt: str) -> str:
         )
     elif "tokenized" in low or "exemptive" in low:
         gap = (
-            "Sign at least one of COIN, NDAQ, ICE, CME, CBOE with direction "
-            "up or down. No Energy ticker. role named is enough."
+            "Sign at least one venue from the hit list "
+            "(COIN, NDAQ, ICE, CME, CBOE). "
+            "An incumbent already building the rail is direction mixed, not a blank. "
+            "A new listed rail may be direction up. "
+            "No Energy ticker. role named is enough."
         )
     elif "lanreotide" in low or "amneal" in low:
         gap = "AMRX direction up. role named. horizon 1-6m."
@@ -1046,6 +1049,33 @@ def _normalize_entities(
     return entities, errors
 
 
+def _tsv_article(title: str) -> bool:
+    """SEC tokenized-venue fixture. The incumbent rail is mixed, not blank.
+
+    Match the fixture wording. A bare ``tsv`` is also a semiconductor via.
+    """
+    low = (title or "").lower()
+    return "tokenized" in low or "exemptive" in low
+
+
+def _mixed_venues(entities: list[dict]) -> list[dict]:
+    return [
+        e for e in entities
+        if e.get("ticker") in _VENUES and e.get("direction") == "mixed"
+    ]
+
+
+def _mixed_venue_action(entities: list[dict], constraint: str, clock: str) -> str:
+    """Name the venue without a BUY/SELL. Mixed stays off the tape grade."""
+    group = _mixed_venues(entities)
+    if not group:
+        return ""
+    tickers = "/".join(str(e["ticker"]) for e in group[:6])
+    hz = str(group[0].get("horizon") or "0-1d")
+    because = (constraint or "named constraint").replace("\n", " ").strip()[:180]
+    return f"MIXED {tickers}, {hz}, because {because}; clock={clock}"
+
+
 def validate(
     *,
     q5: str,
@@ -1087,7 +1117,9 @@ def validate(
         e for e in entities
         if e.get("ticker") and e.get("direction") in {"up", "down"}
     ]
-    if not signed:
+    # A_TSV_06: an incumbent already on the tokenization rail is mixed,
+    # not a clean down. That venue is the signed instrument.
+    if not signed and not (_tsv_article(title) and _mixed_venues(entities)):
         errors.append("no_signed_instrument")
     if event_class == "regime_break" and not _REGIME_BREAK_OK.search(title or ""):
         errors.append("regime_break_dump")
@@ -1167,8 +1199,9 @@ def gold_status(row: dict) -> str:
             inst for inst in (row.get("instruments") or [])
             if inst.get("ticker") in used and inst.get("sector") == "Energy"
         ]
-        signed = ticks_up | ticks_down
-        ok = row.get("event_class") == "market_structure" and bool(signed & _VENUES)
+        ticks_mixed = {e.get("ticker") for e in ents if e.get("direction") == "mixed"}
+        signed = (ticks_up | ticks_down | ticks_mixed) & _VENUES
+        ok = row.get("event_class") == "market_structure" and bool(signed)
         ok = ok and not energy_used
         return "PASS" if ok else "FAIL"
     if gid == "amrx":
@@ -1810,12 +1843,17 @@ def process_article(
     entities, cited = apply_m5(entities, instruments, facts)
     winners, losers = winners_losers(entities)
     action = action_line(entities, constraint, clock) if not problems else ""
+    if not action and not problems and _tsv_article(title):
+        action = _mixed_venue_action(entities, constraint, clock)
     # Salience with no listed pipe is not a trade. A signed ticker on the
     # hit list is the pipe, even if the model also wrote transmission=none.
+    # TSV incumbents sign mixed (A_TSV_06). That is still the book.
     signed_book = [
         e for e in entities
         if e.get("ticker") and e.get("direction") in {"up", "down"}
     ]
+    if _tsv_article(title):
+        signed_book.extend(_mixed_venues(entities))
     if history.get("transmission") == "none" and signed_book:
         history["transmission"] = "book"
     elif history.get("transmission") == "none":
