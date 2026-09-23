@@ -1,47 +1,49 @@
-# Finviz homepage market digest (close) — 2026-09-22
+# Finviz homepage market digest (close) — 2026-09-23
 
-**Generated:** 2026-09-22T16:38:54.865584-04:00 (America/New_York)
+**Generated:** 2026-09-23T16:40:24.047637-04:00 (America/New_York)
 **Source:** `live`
-**Banner:** US stocks ended mixed as Nasdaq hit a record high on AI optimism while financials dropped and oil extended its slide amid Iran and US diesel export headlines
-**Prior close:** SPX +1.90%  Nasdaq +0.45%  Dow -0.36%
-**SPX:** +1.90%  **Nasdaq:** +0.45%  **Dow:** -0.36%
-**Oil:** —
-**CPI/Fed:** —
-**Leaders:** ALB, MOS, FCX, JPM, GS, META, AAPL, SHOP, PYPL, WFC, INTC, MU, SNDK, VKTX, AZO, MPC, VLO, KBH, WOR, LEN, GIS
+**Banner:** US stocks closed lower as 10-year yield hit 5.08% 19-year high on strong business activity data, while energy outperformed on rebounding oil
+**Prior close:** SPX -0.75%  Nasdaq -1.13%  Dow -0.68%
+**SPX:** -0.75%  **Nasdaq:** -1.13%  **Dow:** -0.68%
+**Oil:** WTI crude $93.0
+**CPI/Fed:** 1.89% cut (1.89% drop, weighed down by PG&E (PCG) after UBS (UBS) cut)
+**Leaders:** SPGI, OXY, COP, PCG, UBS, CRWD, PANW, META, NVDA, AVGO, KBH, GIS, PAYX, CBRL, COST
 **Next session:** housing yes · retail no · Fed yes
 **Earnings slate:** —
-**Geo/grain:** geo
-**Clock legal for:** 2026-09-23
+**Geo/grain:** —
+**Clock legal for:** 2026-09-24
 **Clock use:** `next_open`
 
 ## Clock
 
-Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-09-23) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
+Live post-close answer-key (~16:05 ET). **Legal for the NEXT session open only** (`clock_legal_for` = 2026-09-24) — **NOT** the same morning. `clock_use` is always `next_open`. File is `*_finviz_market_digest_close.*`; the same_morning warm-up file is left untouched.
 
 Homepage `$MARKET` prose — **not** `YYYY-MM-DD_finviz_digest.md` (quote-page headlines + ticker blurbs). Capture only. Not wired into tape_anchor / predict / #210.
 
 ## Theme Radar
 
-- **Prior close:** SPX +1.90% · Nasdaq +0.45% · Dow -0.36%
-- **Oil:** —
-- **CPI / Fed-odds:** —
-- **Named leaders:** ALB, MOS, FCX, JPM, GS, META, AAPL, SHOP, PYPL, WFC, INTC, MU, SNDK, VKTX, AZO, MPC, VLO, KBH, WOR, LEN, GIS
+- **Prior close:** SPX -0.75% · Nasdaq -1.13% · Dow -0.68%
+- **Oil:** WTI crude $93.0
+- **CPI / Fed-odds:** 1.89% cut (1.89% drop, weighed down by PG&E (PCG) after UBS (UBS) cut)
+- **Named leaders:** SPGI, OXY, COP, PCG, UBS, CRWD, PANW, META, NVDA, AVGO, KBH, GIS, PAYX, CBRL, COST
 - **Next-session calendar:** housing yes · retail no · Fed yes
-  - Investors looked ahead to additional Fed speeches, homebuilder results including from Lennar (LEN), General Mills (GIS) earnings, August new home sales data, and updates from Trump–Xi talks on AI competition and broader U.S.–China relations.
+  - Thirty-year mortgage rates rose to about 7.12%, underscoring tighter financial conditions and adding pressure to housing-related names.
+  - KB Home (KBH) slipped despite an earnings beat after warning about a tougher housing market amid rising borrowing costs and mortgage rates above 7%.
+  - General Mills (GIS) beat estimates and rose after its report, Paychex (PAYX) beat Q1 estimates with a negative reaction, and Cracker Barrel (CBRL) climbed on a strong earnings beat, while investors looked ahead to Thursday’s Costco (COST) results, further inflation data, and any updates from the Trump–Xi summit for direction.
 - **Earnings slate:** —
-- **Geo / grain:** geo
+- **Geo / grain:** —
 
 ## Narrative
 
-**US stocks ended mixed as Nasdaq hit a record high on AI optimism while financials dropped and oil extended its slide amid Iran and US diesel export headlines**
+**US stocks closed lower as 10-year yield hit 5.08% 19-year high on strong business activity data, while energy outperformed on rebounding oil**
 
-- The Nasdaq Composite ($COMP) rose 0.45% to a record 27,244.28, the S&P 500 ($SPX) closed essentially flat at 7,764.64, and the Dow Jones Industrial Average ($DJI) fell 0.36% to 51,863.69.
-- Eight of 11 S&P 500 ($SPX) sectors gained, led by materials, which climbed about 1.9% on strength in Albemarle (ALB), Mosaic (MOS), and Freeport-McMoRan (FCX).
-- Financials fell nearly 2% as JPMorgan Chase (JPM) dropped 3.5% and Goldman Sachs (GS) also weighed on the Dow.
-- Meta Platforms (META) shares were little changed as its Muse AI agent topped Apple (AAPL)’s free App Store rankings, integrated with Shopify (SHOP) checkout, and prompted PayPal (PYPL) to enable Muse-powered shopping, drawing price-target hikes from Wells Fargo (WFC) and supporting semiconductor names including Intel (INTC) (+1.7%), Micron Technology (MU) (+5.0%), and SanDisk (SNDK) (+6.8%).
-- Viking Therapeutics (VKTX) jumped 35.67% to $40.85 after obesity drug VK2735 delivered 22% weight loss in a maintenance study, with potential for less frequent dosing.
-- AutoZone (AZO) advanced after reporting Q4 EPS of $56.05, beating the $53.89 consensus estimate.
-- Oil (@CL) hovered near $100 per barrel but extended a five-session slide as traders reacted to Iranian signals it could reopen the Strait of Hormuz within seven days if U.S. military pressure eases and to President Trump’s UN remarks favoring a quick decision to restrict U.S. diesel exports, pressuring refiners Marathon Petroleum (MPC) and Valero Energy (VLO).
-- Richmond Fed President Thomas Barkin cautioned that inflation pressures may take time to fully pass through, weighing on rate-sensitive financials.
-- After the close, KB Home (KBH) and Worthington Enterprises (WOR) were scheduled to report earnings, with initial extended-hours reactions described as modest and no major individual stock moves exceeding 2%.
-- Investors looked ahead to additional Fed speeches, homebuilder results including from Lennar (LEN), General Mills (GIS) earnings, August new home sales data, and updates from Trump–Xi talks on AI competition and broader U.S.–China relations.
+- The S&P 500 ($SPX) fell 0.75% to 7,706.03, the Dow ($DJI) lost 0.68% to 51,511.59, and the Nasdaq Composite ($COMP) dropped 1.13% to 26,936.04, ending its recent record-setting streak.
+- The 10-year Treasury yield climbed to 5.08%, a 19-year high, after an S&P Global (SPGI) report showed U.S. business activity growing at its fastest pace in five years, stoking inflation concerns and expectations of further Fed hikes.
+- Thirty-year mortgage rates rose to about 7.12%, underscoring tighter financial conditions and adding pressure to housing-related names.
+- Energy was the only S&P 500 ($SPX) sector to finish higher, rising about 1.05% as WTI crude (@CL) neared $93 and Brent (@QA) approached $100, supported by gains in Occidental Petroleum (OXY) and ConocoPhillips (COP).
+- Utilities lagged with a 1.89% drop, weighed down by PG&E (PCG) after UBS (UBS) cut its price target, while basic materials and consumer cyclical sectors also underperformed.
+- CrowdStrike (CRWD) rose about 4.5% and Palo Alto Networks (PANW) gained roughly 5% on strong AI-driven cybersecurity demand and expectations their platforms will support AI safety initiatives.
+- Meta Platforms (META) advanced as its Muse AI app continued to show momentum by topping download charts.
+- Chip stocks saw mixed trading, with profit-taking in Nvidia (NVDA) and Broadcom (AVGO) offsetting strength elsewhere in the group.
+- KB Home (KBH) slipped despite an earnings beat after warning about a tougher housing market amid rising borrowing costs and mortgage rates above 7%.
+- General Mills (GIS) beat estimates and rose after its report, Paychex (PAYX) beat Q1 estimates with a negative reaction, and Cracker Barrel (CBRL) climbed on a strong earnings beat, while investors looked ahead to Thursday’s Costco (COST) results, further inflation data, and any updates from the Trump–Xi summit for direction.
