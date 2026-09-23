@@ -426,9 +426,19 @@ def test_classify_floor_excludes_ministral_and_8b(monkeypatch):
         "qwen-flash", "qwen3.8-flash", "qwen3.7-flash",
         "qwen3.6-flash", "qwen3.5-flash",
     ]
-    assert qwen.index("qwen3.5-flash") < qwen.index("qwen3-32b")
+    assert qwen.index("qwen3.5-flash") < qwen.index("qwen3.7-flash-2026-07-15")
+    assert qwen.index("qwen3.7-flash-2026-07-15") < qwen.index("qwen3-32b")
+    assert "qwen3.6-flash-2026-04-16" in qwen
+    assert "qwen3.5-flash-2026-02-23" in qwen
     assert qwen.index("qwen3-32b") < qwen.index("qwen3-14b")
-    assert classify_models_for("gemini") == ["gemini-2.5-flash"]
+    assert classify_models_for("gemini") == [
+        "gemini-2.5-flash",
+        "gemini-3.5-flash-lite",
+        "gemini-3.5-flash",
+        "gemini-3.6-flash",
+        "gemini-3.7-flash",
+        "gemini-3.8-flash",
+    ]
     assert "gemini-2.5-flash-lite" not in classify_models_for("gemini")
     assert classify_models_for("tokenhub")[0] == "glm-5.3-flash"
     assert "deepseek-v4-flash" in classify_models_for("tokenhub")
@@ -467,7 +477,8 @@ def test_dashscope_401_on_one_host_tries_the_next(monkeypatch):
     assert "qwen" not in lane_route._SKIP
 
 
-def test_account_standing_marks_the_key_dead():
+def test_account_standing_keeps_siblings():
+    """Standing 400 drops that model ID and still calls the next one."""
     from src import lane_route
 
     lane_route._SKIP.clear()
@@ -476,7 +487,32 @@ def test_account_standing_marks_the_key_dead():
 
     def call(model):
         seen.append(model)
-        return None, 400, "Access denied, please make sure your account is in good standing"
+        if model == "qwen-flash":
+            return None, 400, "Access denied, please make sure your account is in good standing"
+        return {"event_class": "blast_ops", "q5": "impulse"}, 200, model
+
+    parsed, info = lane_route.hop_models(
+        "qwen", ["qwen-flash", "qwen3.8-flash"], call,
+    )
+    assert parsed["event_class"] == "blast_ops"
+    assert info == "qwen3.8-flash"
+    assert seen == ["qwen-flash", "qwen3.8-flash"]
+    assert "qwen" not in lane_route._SKIP
+    assert "qwen::qwen-flash" in lane_route._MODEL_DENIED
+    lane_route._SKIP.clear()
+    lane_route._MODEL_DENIED.clear()
+
+
+def test_incorrect_api_key_still_marks_the_key_dead():
+    from src import lane_route
+
+    lane_route._SKIP.clear()
+    lane_route._MODEL_DENIED.clear()
+    seen = []
+
+    def call(model):
+        seen.append(model)
+        return None, 401, "Incorrect API key provided"
 
     parsed, _info = lane_route.hop_models(
         "qwen", ["qwen-flash", "qwen3.8-flash"], call,

@@ -88,6 +88,17 @@ GROQ_MODELS = [
 ]
 # gemini-2.5-flash-lite is 404 for new users. Do not call it.
 GEMINI_MODELS = ["gemini-2.5-flash"]
+# Classify overflow after gemini-2.5-flash. Each ID has a Gemini API free
+# tier (input/output "Free of charge"). 3.5-flash-lite is the ID a 404
+# body named. Do not put gemini-2.5-flash-lite back.
+GEMINI_CLASSIFY_MODELS = [
+    "gemini-2.5-flash",
+    "gemini-3.5-flash-lite",
+    "gemini-3.5-flash",
+    "gemini-3.6-flash",
+    "gemini-3.7-flash",
+    "gemini-3.8-flash",
+]
 # Mistral Experiment plan (rate-limited $0). Flash / edge only — no large/medium.
 MISTRAL_MODELS = ["ministral-8b-2512", "ministral-3b-2512", "mistral-small-latest"]
 MISTRAL_URL = "https://api.mistral.ai/v1/chat/completions"
@@ -136,6 +147,10 @@ QWEN_CLASSIFY_MODELS = [m for m in (
     "qwen3.7-flash",
     "qwen3.6-flash",
     "qwen3.5-flash",
+    # Dated flash snapshots. Same $0 flash family as the aliases above.
+    "qwen3.7-flash-2026-07-15",
+    "qwen3.6-flash-2026-04-16",
+    "qwen3.5-flash-2026-02-23",
     "qwen3-32b",
     "qwen3-14b",
 ) if "plus" not in m.lower() and "max" not in m.lower()
@@ -580,9 +595,10 @@ def primary_models_for(lane: str, tmpl: str = "custom") -> list[str]:
                 m for m in QWEN_PROBE_MODELS if not is_classify_banned(m)
             ]
         elif lane == "gemini":
-            # gemini-2.5-flash-lite is 404 for new users. 429 on flash
-            # keeps the provider; it does not add the dead lite ID back.
-            raw = ["gemini-2.5-flash"]
+            # gemini-2.5-flash-lite is 404 for new users. 429 on one
+            # flash ID hops to the next free sibling. It does not add
+            # the dead 2.5 lite ID back.
+            raw = list(GEMINI_CLASSIFY_MODELS)
         elif lane == "tokenhub":
             # hy3 stays off classify. flash / flashx / deepseek-v4-flash are $0.
             raw = ["glm-5.3-flash", "glm-5.3-flashx", "deepseek-v4-flash"]
@@ -1121,26 +1137,34 @@ def _reject_detail(parsed) -> str:
 
 
 def _account_dead(info: str) -> bool:
-    """True when the body says the key or the account is dead, not one model."""
+    """True only for a bad key, not a per-model denial.
+
+    DashScope "account is in good standing" is a per-call denial on the
+    existing key. It must not mark the provider dead or skip siblings.
+    """
     low = str(info or "").lower()
     needles = (
         "incorrect api key",
         "invalid api key",
-        "account is in good standing",
         "all dashscope hosts rejected",
         "all zhipu hosts rejected",
     )
     return any(needle in low for needle in needles)
 
 
+def _standing_denial(info: str) -> bool:
+    return "account is in good standing" in str(info or "").lower()
+
+
 def hop_models(lane, models, call, abandon_404=False, accept=None):
     """call(model) -> (parsed, status, info). None = skip to next provider.
 
     429 hops to the next ID on the same key. 401/402/403/404 drop that ID
-    and keep siblings. An account-level body (bad key, account not in
-    good standing) marks the key dead. If every tried ID is dead and none
-    returned 200 or 429, the key is dead too. accept() False tries the
-    next ID; a 200 still means the key is live.
+    and keep siblings. A DashScope "account is in good standing" body
+    drops that ID only. A bad key ("incorrect/invalid api key", or every
+    host rejected) marks the provider dead. If every tried ID is 401/402/
+    403/404 and none returned 200 or 429, the key is dead too. accept()
+    False tries the next ID; a 200 still means the key is live.
     """
     global _OR_DAY_CAPPED
     if lane in _SKIP:
@@ -1183,6 +1207,11 @@ def hop_models(lane, models, call, abandon_404=False, accept=None):
             print(f"  {lane} skip ({status} key dead)")
             _SKIP.add(lane)
             return None, None
+        if status == 400 and _standing_denial(info):
+            # Same key, this model ID only. Walk the next sibling.
+            print(f"  {lane}/{model} 400 standing — next ID, provider kept")
+            _MODEL_DENIED.add(rl_key)
+            continue
         if status in (401, 402, 403, 404):
             # Per-model entitlement, quota, or unknown ID. Not a dead key
             # unless every tried ID comes back this way and none was live.
