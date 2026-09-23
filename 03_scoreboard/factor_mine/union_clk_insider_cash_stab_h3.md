@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #7 insider/Form-4 + inst Tx + stabilize (if data)
 
-Cash book **-6.65%** ($9,335) · signal-only (no cash/fees) was -6.24%. Starts YES **0/28**. Fills 3 · skips 6 · realized $-307.92.
+Cash book **-5.95%** ($9,405) · signal-only (no cash/fees) was -5.53%. Starts YES **0/29**. Fills 3 · skips 7 · realized $-307.92.
 
 ## How this sleeve decides (like you are 10)
 
@@ -93,7 +93,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-18 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-21 | `HUM` | 25 | — | $386.20 | +0.00 | $378.58 | -190.50 | -190.50 | +0.00 | -190.50 |
-| 2026-09-22 | `HUM` | 25 | $378.58 | $378.42 | -4.00 | $372.00 | -160.50 | -164.50 | -194.50 | -355.00 |
+| 2026-09-22 | `HUM` | 25 | $378.58 | $378.58 | +0.00 | $378.58 | +0.00 | +0.00 | -190.50 | -190.50 |
+| 2026-09-23 | `HUM` | 25 | $378.58 | $370.00 | -214.50 | $374.80 | +120.00 | -94.50 | -405.00 | -285.00 |
 
 ## Each session (cash + holdings state)
 
@@ -126,7 +127,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | +7.38 | $9,692.08 | — | $9,692.08 | +0.00 | +0.00 | — | — | $9,692.08 | $9,692.08 | — |
 | 2026-09-18 | +4.86 | $9,692.08 | — | $9,692.08 | +0.00 | +0.00 | — | — | $9,692.08 | $9,692.08 | — |
 | 2026-09-21 | +12.87 | $9,692.08 | — | $9,692.08 | +0.00 | -190.50 | HUM | — | $35.02 | $9,499.52 | HUM×25 |
-| 2026-09-22 | -0.50 | $35.02 | HUM×25 | $9,495.52 | -4.00 | -160.50 | — | — | $35.02 | $9,335.02 | HUM×25 |
+| 2026-09-22 | -0.50 | $35.02 | HUM×25 | $9,499.52 | -0.00 | +0.00 | — | — | $35.02 | $9,499.52 | HUM×25 |
+| 2026-09-23 | +2.29 | $35.02 | HUM×25 | $9,285.02 | -214.50 | +120.00 | — | — | $35.02 | $9,405.02 | HUM×25 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -189,8 +191,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,692.08 | ▲ 09:30 equity $9,692.08 vs yday $9,692.08 (+0.00) | 09:30 open · cash $9,692.08 · no holdings · equity $9,692.08 vs prior close $9,692.08 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-21 09:30 ET | **BUY** | `HUM` | 25 | $386.20 | $2.06 | — | $35.02 | — | Clock-B #7 insider/Form-4 + inst Tx + stabilize (if data); gate clk_insider_cash_stab=True; rank cond; list flatten; ret5=-5.8; leftover $9692.08 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
 | 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $35.02 | ▼ close $9,499.52 vs 09:30 $9,692.08 (session -190.50) | 16:00 close · cash $35.02 · equity $9,499.52 vs 09:30 $9,692.08 (-192.56; session marks -190.50) · 1 name(s) marked open→close (per-name table). HUM×25 09:30 $386.20 → close $378.58 -190.50 | — |
-| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $35.02 | ▼ 09:30 equity $9,495.52 vs yday $9,499.52 (-4.00) | 09:30 open · cash $35.02 (unchanged overnight, no fees) · equity $9,495.52 vs prior close $9,499.52 (-4.00) · 1 name(s) re-marked at the open (per-name table). HUM×25 yday $378.58 → 09:30 $378.42 -4.00 | — |
-| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $35.02 | ▼ close $9,335.02 vs 09:30 $9,495.52 (session -160.50) | 16:00 close · cash $35.02 · equity $9,335.02 vs 09:30 $9,495.52 (-160.50; session marks -160.50) · 1 name(s) marked open→close (per-name table). HUM×25 09:30 $378.42 → close $372.00 -160.50 | — |
+| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $35.02 | ▲ 09:30 equity $9,499.52 vs yday $9,499.52 (-0.00) | 09:30 open · cash $35.02 (unchanged overnight, no fees) · equity $9,499.52 vs prior close $9,499.52 (-0.00) · 1 name(s) re-marked at the open (per-name table). HUM×25 yday $378.58 → 09:30 $378.58 +0.00 | — |
+| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $35.02 | ▲ close $9,499.52 vs 09:30 $9,499.52 (session +0.00) | 16:00 close · cash $35.02 · equity $9,499.52 vs 09:30 $9,499.52 (-0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). HUM×25 09:30 $378.58 → close $378.58 +0.00 | — |
+| 2026-09-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $35.02 | ▼ 09:30 equity $9,285.02 vs yday $9,499.52 (-214.50) | 09:30 open · cash $35.02 (unchanged overnight, no fees) · equity $9,285.02 vs prior close $9,499.52 (-214.50) · 1 name(s) re-marked at the open (per-name table). HUM×25 yday $378.58 → 09:30 $370.00 -214.50 | — |
+| 2026-09-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $35.02 | ▲ close $9,405.02 vs 09:30 $9,285.02 (session +120.00) | 16:00 close · cash $35.02 · equity $9,405.02 vs 09:30 $9,285.02 (+120.00; session marks +120.00) · 1 name(s) marked open→close (per-name table). HUM×25 09:30 $370.00 → close $374.80 +120.00 | — |
 
 ## Not taken
 
@@ -202,6 +206,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | `AVO` | hard_red | hard-red S=-11.47 sit; no new buys |
 | 2026-09-09 | `AVO` | hard_red | hard-red S=-13.95 sit; no new buys |
 | 2026-09-22 | `HUM` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-23 | `HUM` | min_hold | dropped but min-hold 2/3 sess — no sell |
 
 ## Still open (marked at last close)
 

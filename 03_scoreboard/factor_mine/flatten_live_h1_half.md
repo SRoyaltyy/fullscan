@@ -6,7 +6,7 @@ New buys only when the live flatten gate fires (green S, ≥5 priced BUYs, prior
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `half` · sell `list` · S-boost `none` · deploy half leftover
 
-Cash book **+3.74%** ($10,374) · signal-only (no cash/fees) was +4.45%. Starts YES **7/28**. Fills 48 · skips 0 · realized $+373.73.
+Cash book **+3.74%** ($10,374) · signal-only (no cash/fees) was +4.45%. Starts YES **7/29**. Fills 48 · skips 0 · realized $+373.73.
 
 ## How this sleeve decides (like you are 10)
 
@@ -134,6 +134,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-21 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-22 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-23 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -167,6 +168,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | +4.86 | $10,373.74 | — | $10,373.74 | +0.00 | +0.00 | — | — | $10,373.74 | $10,373.74 | — |
 | 2026-09-21 | +12.87 | $10,373.74 | — | $10,373.74 | +0.00 | +0.00 | — | — | $10,373.74 | $10,373.74 | — |
 | 2026-09-22 | -0.50 | $10,373.74 | — | $10,373.74 | +0.00 | +0.00 | — | — | $10,373.74 | $10,373.74 | — |
+| 2026-09-23 | +2.29 | $10,373.74 | — | $10,373.74 | +0.00 | +0.00 | — | — | $10,373.74 | $10,373.74 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -276,3 +278,5 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,373.74 | ▲ close $10,373.74 vs 09:30 $10,373.74 (session +0.00) | 16:00 close · cash $10,373.74 · no lots left · equity $10,373.74. | — |
 | 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,373.74 | ▲ 09:30 equity $10,373.74 vs yday $10,373.74 (+0.00) | 09:30 open · cash $10,373.74 · no holdings · equity $10,373.74 vs prior close $10,373.74 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,373.74 | ▲ close $10,373.74 vs 09:30 $10,373.74 (session +0.00) | 16:00 close · cash $10,373.74 · no lots left · equity $10,373.74. | — |
+| 2026-09-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,373.74 | ▲ 09:30 equity $10,373.74 vs yday $10,373.74 (+0.00) | 09:30 open · cash $10,373.74 · no holdings · equity $10,373.74 vs prior close $10,373.74 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,373.74 | ▲ close $10,373.74 vs 09:30 $10,373.74 (session +0.00) | 16:00 close · cash $10,373.74 · no lots left · equity $10,373.74. | — |

@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · flatten looker: 0 red + yesterday up
 
-Cash book **+1.51%** ($10,151) · signal-only (no cash/fees) was +4.79%. Starts YES **12/28**. Fills 51 · skips 108 · realized $-62.52.
+Cash book **+1.83%** ($10,183) · signal-only (no cash/fees) was +2.80%. Starts YES **12/29**. Fills 54 · skips 112 · realized $-62.52.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $138.26.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $68.88.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -221,9 +221,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | `FIVN` | 96 | $32.47 | $33.00 | +50.88 | $37.01 | +384.96 | +435.84 | -138.24 | +246.72 |
 | 2026-09-21 | `ECO` | 38 | $84.95 | $82.83 | -80.56 | $82.63 | -7.60 | -88.16 | -82.46 | -90.06 |
 | 2026-09-21 | `RBRK` | 30 | $106.71 | $107.57 | +25.80 | $112.96 | +161.70 | +187.50 | -29.40 | +132.30 |
-| 2026-09-22 | `FIVN` | 96 | $37.01 | $37.12 | +10.56 | $38.65 | +146.88 | +157.44 | +257.28 | +404.16 |
-| 2026-09-22 | `ECO` | 38 | $82.63 | $77.83 | -182.40 | $77.54 | -11.02 | -193.42 | -272.46 | -283.48 |
-| 2026-09-22 | `RBRK` | 30 | $112.96 | $113.75 | +23.70 | $111.87 | -56.40 | -32.70 | +156.00 | +99.60 |
+| 2026-09-22 | `FIVN` | 96 | $37.01 | $37.35 | +32.64 | $37.20 | -14.40 | +18.24 | +279.36 | +264.96 |
+| 2026-09-22 | `ECO` | 38 | $82.63 | $81.84 | -30.02 | $81.95 | +4.18 | -25.84 | -120.08 | -115.90 |
+| 2026-09-22 | `RBRK` | 30 | $112.96 | $113.30 | +10.20 | $113.55 | +7.50 | +17.70 | +142.50 | +150.00 |
+| 2026-09-23 | `FIVN` | 96 | $37.20 | $38.99 | +171.84 | $37.68 | -125.76 | +46.08 | +436.80 | +311.04 |
+| 2026-09-23 | `ECO` | 38 | $81.95 | $77.55 | -167.20 | $77.91 | +13.68 | -153.52 | -283.10 | -269.42 |
+| 2026-09-23 | `RBRK` | 30 | $113.55 | $112.46 | -32.70 | $115.65 | +95.70 | +63.00 | +117.30 | +213.00 |
+| 2026-09-23 | `OMER` | 1 | — | $20.65 | +0.00 | $20.74 | +0.09 | +0.09 | +0.00 | +0.09 |
+| 2026-09-23 | `ARQT` | 1 | — | $27.79 | +0.00 | $26.38 | -1.41 | -1.41 | +0.00 | -1.41 |
+| 2026-09-23 | `FTRE` | 1 | — | $20.25 | +0.00 | $19.52 | -0.73 | -0.73 | +0.00 | -0.73 |
 
 ## Each session (cash + holdings state)
 
@@ -256,7 +262,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | +7.38 | $9,937.47 | — | $9,937.47 | -0.00 | +0.00 | — | — | $9,937.47 | $9,937.47 | — |
 | 2026-09-18 | +4.86 | $9,937.47 | — | $9,937.47 | -0.00 | -246.22 | FIVN, ECO, RBRK | — | $138.26 | $9,684.78 | FIVN×96, ECO×38, RBRK×30 |
 | 2026-09-21 | +12.87 | $138.26 | FIVN×96, ECO×38, RBRK×30 | $9,680.90 | -3.88 | +539.06 | — | — | $138.26 | $10,219.96 | FIVN×96, ECO×38, RBRK×30 |
-| 2026-09-22 | -0.50 | $138.26 | FIVN×96, ECO×38, RBRK×30 | $10,071.82 | -148.14 | +79.46 | — | — | $138.26 | $10,151.28 | FIVN×96, ECO×38, RBRK×30 |
+| 2026-09-22 | -0.50 | $138.26 | FIVN×96, ECO×38, RBRK×30 | $10,232.78 | +12.82 | -2.72 | — | — | $138.26 | $10,230.06 | FIVN×96, ECO×38, RBRK×30 |
+| 2026-09-23 | +2.29 | $138.26 | FIVN×96, ECO×38, RBRK×30 | $10,202.00 | -28.06 | -18.43 | OMER, ARQT, FTRE | — | $68.88 | $10,182.88 | FIVN×96, ECO×38, RBRK×30, OMER×1, ARQT×1, FTRE×1 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -367,8 +374,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $138.26 | ▼ close $9,684.78 vs 09:30 $9,937.47 (session -246.22) | 16:00 close · cash $138.26 · equity $9,684.78 vs 09:30 $9,937.47 (-252.69; session marks -246.22) · 3 name(s) marked open→close (per-name table). FIVN×96 09:30 $34.44 → close $32.47 -189.12; ECO×38 09:30 $85.00 → close $84.95 -1.90; RBRK×30 09:30 $108.55 → close $106.71 -55.20 | — |
 | 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $138.26 | ▼ 09:30 equity $9,680.90 vs yday $9,684.78 (-3.88) | 09:30 open · cash $138.26 (unchanged overnight, no fees) · equity $9,680.90 vs prior close $9,684.78 (-3.88) · 3 name(s) re-marked at the open (per-name table). FIVN×96 yday $32.47 → 09:30 $33.00 +50.88; ECO×38 yday $84.95 → 09:30 $82.83 -80.56; RBRK×30 yday $106.71 → 09:30 $107.57 +25.80 | — |
 | 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $138.26 | ▲ close $10,219.96 vs 09:30 $9,680.90 (session +539.06) | 16:00 close · cash $138.26 · equity $10,219.96 vs 09:30 $9,680.90 (+539.06; session marks +539.06) · 3 name(s) marked open→close (per-name table). FIVN×96 09:30 $33.00 → close $37.01 +384.96; ECO×38 09:30 $82.83 → close $82.63 -7.60; RBRK×30 09:30 $107.57 → close $112.96 +161.70 | — |
-| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $138.26 | ▼ 09:30 equity $10,071.82 vs yday $10,219.96 (-148.14) | 09:30 open · cash $138.26 (unchanged overnight, no fees) · equity $10,071.82 vs prior close $10,219.96 (-148.14) · 3 name(s) re-marked at the open (per-name table). FIVN×96 yday $37.01 → 09:30 $37.12 +10.56; ECO×38 yday $82.63 → 09:30 $77.83 -182.40; RBRK×30 yday $112.96 → 09:30 $113.75 +23.70 | — |
-| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $138.26 | ▲ close $10,151.28 vs 09:30 $10,071.82 (session +79.46) | 16:00 close · cash $138.26 · equity $10,151.28 vs 09:30 $10,071.82 (+79.46; session marks +79.46) · 3 name(s) marked open→close (per-name table). FIVN×96 09:30 $37.12 → close $38.65 +146.88; ECO×38 09:30 $77.83 → close $77.54 -11.02; RBRK×30 09:30 $113.75 → close $111.87 -56.40 | — |
+| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $138.26 | ▲ 09:30 equity $10,232.78 vs yday $10,219.96 (+12.82) | 09:30 open · cash $138.26 (unchanged overnight, no fees) · equity $10,232.78 vs prior close $10,219.96 (+12.82) · 3 name(s) re-marked at the open (per-name table). FIVN×96 yday $37.01 → 09:30 $37.35 +32.64; ECO×38 yday $82.63 → 09:30 $81.84 -30.02; RBRK×30 yday $112.96 → 09:30 $113.30 +10.20 | — |
+| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $138.26 | ▼ close $10,230.06 vs 09:30 $10,232.78 (session -2.72) | 16:00 close · cash $138.26 · equity $10,230.06 vs 09:30 $10,232.78 (-2.72; session marks -2.72) · 3 name(s) marked open→close (per-name table). FIVN×96 09:30 $37.35 → close $37.20 -14.40; ECO×38 09:30 $81.84 → close $81.95 +4.18; RBRK×30 09:30 $113.30 → close $113.55 +7.50 | — |
+| 2026-09-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $138.26 | ▼ 09:30 equity $10,202.00 vs yday $10,230.06 (-28.06) | 09:30 open · cash $138.26 (unchanged overnight, no fees) · equity $10,202.00 vs prior close $10,230.06 (-28.06) · 3 name(s) re-marked at the open (per-name table). FIVN×96 yday $37.20 → 09:30 $38.99 +171.84; ECO×38 yday $81.95 → 09:30 $77.55 -167.20; RBRK×30 yday $113.55 → 09:30 $112.46 -32.70 | — |
+| 2026-09-23 09:30 ET | **BUY** | `OMER` | 1 | $20.65 | $0.21 | — | $117.41 | — | flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten,probable,yday_gainer,yday_mover; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+5.9; leftover $34.57 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `ARQT` | 1 | $27.79 | $0.28 | — | $89.34 | — | flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+7.0; leftover $34.57 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `FTRE` | 1 | $20.25 | $0.21 | — | $68.88 | — | flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+15.0; leftover $34.57 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟡 peer🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-09-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $68.88 | ▼ close $10,182.88 vs 09:30 $10,202.00 (session -18.43) | 16:00 close · cash $68.88 · equity $10,182.88 vs 09:30 $10,202.00 (-19.12; session marks -18.43) · 6 name(s) marked open→close (per-name table). FIVN×96 09:30 $38.99 → close $37.68 -125.76; ECO×38 09:30 $77.55 → close $77.91 +13.68; RBRK×30 09:30 $112.46 → close $115.65 +95.70; OMER×1 09:30 $20.65 → close $20.74 +0.09; ARQT×1 09:30 $27.79 → close $26.38 -1.41; FTRE×1 09:30 $20.25 → close $19.52 -0.73 | — |
 
 ## Not taken
 
@@ -482,6 +494,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-22 | `FIVN` | min_hold | dropped but min-hold 2/5 sess — no sell |
 | 2026-09-22 | `ECO` | min_hold | dropped but min-hold 2/5 sess — no sell |
 | 2026-09-22 | `RBRK` | min_hold | dropped but min-hold 2/5 sess — no sell |
+| 2026-09-23 | `FIVN` | min_hold | dropped but min-hold 3/5 sess — no sell |
+| 2026-09-23 | `ECO` | min_hold | dropped but min-hold 3/5 sess — no sell |
+| 2026-09-23 | `RBRK` | min_hold | dropped but min-hold 3/5 sess — no sell |
+| 2026-09-23 | `A` | cash | leftover split 34.57 < 1 share @ 166.54 |
 
 ## Still open (marked at last close)
 
@@ -490,3 +506,6 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | `FIVN` | 96 | 2026-09-18 @ $34.44 | flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+14.0; leftover $3312.49 |
 | `ECO` | 38 | 2026-09-18 @ $85.00 | flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+18.3; leftover $3312.49 |
 | `RBRK` | 30 | 2026-09-18 @ $108.55 | flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; wish-list (live io HOLD — not a ticket); ⚪; ret5=+21.3; leftover $3312.49 |
+| `OMER` | 1 | 2026-09-23 @ $20.65 | flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten,probable,yday_gainer,yday_mover; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+5.9; leftover $34.57 |
+| `ARQT` | 1 | 2026-09-23 @ $27.79 | flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+7.0; leftover $34.57 |
+| `FTRE` | 1 | 2026-09-23 @ $20.25 | flatten looker: 0 red + yesterday up; gate zero_red=True,yday_up=True; rank cond; list flatten; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+15.0; leftover $34.57 |

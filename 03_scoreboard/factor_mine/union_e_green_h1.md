@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-23.90%** ($7,610) · signal-only (no cash/fees) was -20.55%. Starts YES **5/28**. Fills 107 · skips 15 · realized $-2225.39.
+Cash book **-23.35%** ($7,665) · signal-only (no cash/fees) was -21.55%. Starts YES **5/29**. Fills 109 · skips 15 · realized $-2145.41.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $7.34.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $178.08.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -183,7 +183,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-18 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-21 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-09-22 | `ANAB` | 141 | — | $55.07 | +0.00 | $53.92 | -162.15 | -162.15 | +0.00 | -162.15 |
+| 2026-09-22 | `THO` | 110 | — | $70.64 | +0.00 | $70.00 | -70.40 | -70.40 | +0.00 | -70.40 |
+| 2026-09-23 | `THO` | 110 | $70.00 | $71.41 | +155.10 | — | +0.00 | +155.10 | +84.70 | — |
+| 2026-09-23 | `CTAS` | 39 | — | $196.78 | +0.00 | $191.97 | -187.59 | -187.59 | +0.00 | -187.59 |
 
 ## Each session (cash + holdings state)
 
@@ -216,7 +218,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | +7.38 | $7,774.63 | — | $7,774.63 | -0.00 | +0.00 | — | — | $7,774.63 | $7,774.63 | — |
 | 2026-09-18 | +4.86 | $7,774.63 | — | $7,774.63 | -0.00 | +0.00 | — | — | $7,774.63 | $7,774.63 | — |
 | 2026-09-21 | +12.87 | $7,774.63 | — | $7,774.63 | -0.00 | +0.00 | — | — | $7,774.63 | $7,774.63 | — |
-| 2026-09-22 | -0.50 | $7,774.63 | — | $7,774.63 | -0.00 | -162.15 | ANAB | — | $7.34 | $7,610.06 | ANAB×141 |
+| 2026-09-22 | -0.50 | $7,774.63 | — | $7,774.63 | -0.00 | -70.40 | THO | — | $1.91 | $7,701.91 | THO×110 |
+| 2026-09-23 | +2.29 | $1.91 | THO×110 | $7,857.01 | +155.10 | -187.59 | CTAS | THO | $178.08 | $7,664.91 | CTAS×39 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -383,8 +386,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,774.63 | ▲ 09:30 equity $7,774.63 vs yday $7,774.63 (-0.00) | 09:30 open · cash $7,774.63 · no holdings · equity $7,774.63 vs prior close $7,774.63 (-0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,774.63 | ▲ close $7,774.63 vs 09:30 $7,774.63 (session +0.00) | 16:00 close · cash $7,774.63 · no lots left · equity $7,774.63. | — |
 | 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $7,774.63 | ▲ 09:30 equity $7,774.63 vs yday $7,774.63 (-0.00) | 09:30 open · cash $7,774.63 · no holdings · equity $7,774.63 vs prior close $7,774.63 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-22 09:30 ET | **BUY** | `ANAB` | 141 | $55.07 | $2.41 | — | $7.34 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=-0.8; leftover $7774.63 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 judge🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7.34 | ▼ close $7,610.06 vs 09:30 $7,774.63 (session -162.15) | 16:00 close · cash $7.34 · equity $7,610.06 vs 09:30 $7,774.63 (-164.57; session marks -162.15) · 1 name(s) marked open→close (per-name table). ANAB×141 09:30 $55.07 → close $53.92 -162.15 | — |
+| 2026-09-22 09:30 ET | **BUY** | `THO` | 110 | $70.64 | $2.32 | — | $1.91 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ret5=-4.8; leftover $7774.63 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.91 | ▼ close $7,701.91 vs 09:30 $7,774.63 (session -70.40) | 16:00 close · cash $1.91 · equity $7,701.91 vs 09:30 $7,774.63 (-72.72; session marks -70.40) · 1 name(s) marked open→close (per-name table). THO×110 09:30 $70.64 → close $70.00 -70.40 | — |
+| 2026-09-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.91 | ▲ 09:30 equity $7,857.01 vs yday $7,701.91 (+155.10) | 09:30 open · cash $1.91 (unchanged overnight, no fees) · equity $7,857.01 vs prior close $7,701.91 (+155.10) · 1 name(s) re-marked at the open (per-name table). THO×110 yday $70.00 → 09:30 $71.41 +155.10 | — |
+| 2026-09-23 09:30 ET | **SELL** | `THO` | 110 | $71.41 | $2.40 | $+79.98 | $7,854.61 | ▲ +79.98 after sell → book $7,854.61; vs 09:30 mark -2.40 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-23 09:30 ET | **BUY** | `CTAS` | 39 | $196.78 | $2.11 | — | $178.08 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ⚪; ret5=-0.6; leftover $7854.61 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-09-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $178.08 | ▼ close $7,664.91 vs 09:30 $7,857.01 (session -187.59) | 16:00 close · cash $178.08 · equity $7,664.91 vs 09:30 $7,857.01 (-192.10; session marks -187.59) · 1 name(s) marked open→close (per-name table). CTAS×39 09:30 $196.78 → close $191.97 -187.59 | — |
 
 ## Not taken
 
@@ -410,4 +417,4 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `ANAB` | 141 | 2026-09-22 @ $55.07 | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=-0.8; leftover $7774.63 |
+| `CTAS` | 39 | 2026-09-23 @ $196.78 | combo gate; gate earn_react=True,last_green=True; list earn_react; 🔵; ⚪; ret5=-0.6; leftover $7854.61 |

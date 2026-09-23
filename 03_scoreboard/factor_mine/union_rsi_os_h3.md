@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-19.37%** ($8,063) · signal-only (no cash/fees) was -31.06%. Starts YES **13/28**. Fills 63 · skips 77 · realized $-2081.88.
+Cash book **-23.89%** ($7,611) · signal-only (no cash/fees) was -44.40%. Starts YES **6/29**. Fills 64 · skips 85 · realized $-2081.88.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $75.35.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $1.43.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -189,9 +189,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | `XENE` | 65 | — | $40.00 | +0.00 | $38.99 | -65.65 | -65.65 | +0.00 | -65.65 |
 | 2026-09-21 | `SION` | 439 | — | $6.00 | +0.00 | $6.00 | +0.00 | +0.00 | +0.00 | +0.00 |
 | 2026-09-21 | `THO` | 38 | — | $68.39 | +0.00 | $69.94 | +58.90 | +58.90 | +0.00 | +58.90 |
-| 2026-09-22 | `XENE` | 65 | $38.99 | $39.76 | +50.05 | $39.09 | -43.55 | +6.50 | -15.60 | -59.15 |
+| 2026-09-22 | `XENE` | 65 | $38.99 | $39.10 | +7.15 | $38.61 | -31.85 | -24.70 | -58.50 | -90.35 |
 | 2026-09-22 | `SION` | 439 | $6.00 | $5.99 | -4.39 | $6.02 | +13.17 | +8.78 | -4.39 | +8.78 |
-| 2026-09-22 | `THO` | 38 | $69.94 | $72.53 | +98.42 | $73.80 | +48.26 | +146.68 | +157.32 | +205.58 |
+| 2026-09-22 | `THO` | 38 | $69.94 | $70.64 | +26.60 | $70.00 | -24.32 | +2.28 | +85.50 | +61.18 |
+| 2026-09-22 | `FJET` | 36 | — | $2.03 | +0.00 | $2.02 | -0.36 | -0.36 | +0.00 | -0.36 |
+| 2026-09-23 | `XENE` | 65 | $38.61 | $39.51 | +58.50 | $36.56 | -191.75 | -133.25 | -31.85 | -223.60 |
+| 2026-09-23 | `SION` | 439 | $6.02 | $6.03 | +4.39 | $5.51 | -228.28 | -223.89 | +13.17 | -215.11 |
+| 2026-09-23 | `THO` | 38 | $70.00 | $71.41 | +53.58 | $72.30 | +33.82 | +87.40 | +114.76 | +148.58 |
+| 2026-09-23 | `FJET` | 36 | $2.02 | $1.98 | -1.44 | $1.87 | -4.11 | -5.55 | -1.80 | -5.91 |
 
 ## Each session (cash + holdings state)
 
@@ -224,7 +229,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | +7.38 | $0.25 | ALHC×97, PLAY×146, DVLT×6300, NMRA×1194, ZSQR×430, CTMX×370, CRBP×146, EYPT×265 | $7,914.60 | +29.00 | +40.80 | — | — | $0.25 | $7,955.40 | ALHC×97, PLAY×146, DVLT×6300, NMRA×1194, ZSQR×430, CTMX×370, CRBP×146, EYPT×265 |
 | 2026-09-18 | +4.86 | $0.25 | ALHC×97, PLAY×146, DVLT×6300, NMRA×1194, ZSQR×430, CTMX×370, CRBP×146, EYPT×265 | $7,990.37 | +34.97 | -95.04 | — | — | $0.25 | $7,895.33 | ALHC×97, PLAY×146, DVLT×6300, NMRA×1194, ZSQR×430, CTMX×370, CRBP×146, EYPT×265 |
 | 2026-09-21 | +12.87 | $0.25 | ALHC×97, PLAY×146, DVLT×6300, NMRA×1194, ZSQR×430, CTMX×370, CRBP×146, EYPT×265 | $7,981.92 | +86.59 | -6.75 | XENE, SION, THO | ALHC, PLAY, DVLT, NMRA, ZSQR, CTMX, CRBP, EYPT | $75.35 | $7,901.42 | XENE×65, SION×439, THO×38 |
-| 2026-09-22 | -0.50 | $75.35 | XENE×65, SION×439, THO×38 | $8,045.50 | +144.08 | +17.88 | — | — | $75.35 | $8,063.38 | XENE×65, SION×439, THO×38 |
+| 2026-09-22 | -0.50 | $75.35 | XENE×65, SION×439, THO×38 | $7,930.78 | +29.36 | -43.36 | FJET | — | $1.43 | $7,886.58 | XENE×65, SION×439, THO×38, FJET×36 |
+| 2026-09-23 | +2.29 | $1.43 | XENE×65, SION×439, THO×38, FJET×36 | $8,001.61 | +115.03 | -390.32 | — | — | $1.43 | $7,611.29 | XENE×65, SION×439, THO×38, FJET×36 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -345,10 +351,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 09:30 ET | **SELL** | `EYPT` | 265 | $3.87 | $3.47 | $+48.76 | $7,918.12 | ▲ +48.76 after sell → book $7,918.12; vs 09:30 mark -3.47 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-21 09:30 ET | **BUY** | `XENE` | 65 | $40.00 | $2.19 | — | $5,315.94 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-32.2; leftover $2639.37 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-09-21 09:30 ET | **BUY** | `SION` | 439 | $6.00 | $5.66 | — | $2,676.27 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-24.1; leftover $2639.37 | join🟢 sector🟢 gen🟢 news🟢 digest🟡 ab🔴 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `THO` | 38 | $68.39 | $2.10 | — | $75.35 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list overnight; ret5=-2.5; leftover $2639.37 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `THO` | 38 | $68.39 | $2.10 | — | $75.35 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list overnight; ret5=-7.0; leftover $2639.37 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $75.35 | ▼ close $7,901.42 vs 09:30 $7,981.92 (session -6.75) | 16:00 close · cash $75.35 · equity $7,901.42 vs 09:30 $7,981.92 (-80.50; session marks -6.75) · 3 name(s) marked open→close (per-name table). XENE×65 09:30 $40.00 → close $38.99 -65.65; SION×439 09:30 $6.00 → close $6.00 +0.00; THO×38 09:30 $68.39 → close $69.94 +58.90 | — |
-| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $75.35 | ▲ 09:30 equity $8,045.50 vs yday $7,901.42 (+144.08) | 09:30 open · cash $75.35 (unchanged overnight, no fees) · equity $8,045.50 vs prior close $7,901.42 (+144.08) · 3 name(s) re-marked at the open (per-name table). XENE×65 yday $38.99 → 09:30 $39.76 +50.05; SION×439 yday $6.00 → 09:30 $5.99 -4.39; THO×38 yday $69.94 → 09:30 $72.53 +98.42 | — |
-| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $75.35 | ▲ close $8,063.38 vs 09:30 $8,045.50 (session +17.88) | 16:00 close · cash $75.35 · equity $8,063.38 vs 09:30 $8,045.50 (+17.88; session marks +17.88) · 3 name(s) marked open→close (per-name table). XENE×65 09:30 $39.76 → close $39.09 -43.55; SION×439 09:30 $5.99 → close $6.02 +13.17; THO×38 09:30 $72.53 → close $73.80 +48.26 | — |
+| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $75.35 | ▲ 09:30 equity $7,930.78 vs yday $7,901.42 (+29.36) | 09:30 open · cash $75.35 (unchanged overnight, no fees) · equity $7,930.78 vs prior close $7,901.42 (+29.36) · 3 name(s) re-marked at the open (per-name table). XENE×65 yday $38.99 → 09:30 $39.10 +7.15; SION×439 yday $6.00 → 09:30 $5.99 -4.39; THO×38 yday $69.94 → 09:30 $70.64 +26.60 | — |
+| 2026-09-22 09:30 ET | **BUY** | `FJET` | 36 | $2.03 | $0.84 | — | $1.43 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list probable,yday_gainer,yday_mover; ret5=+0.5; leftover $75.35 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.43 | ▼ close $7,886.58 vs 09:30 $7,930.78 (session -43.36) | 16:00 close · cash $1.43 · equity $7,886.58 vs 09:30 $7,930.78 (-44.20; session marks -43.36) · 4 name(s) marked open→close (per-name table). XENE×65 09:30 $39.10 → close $38.61 -31.85; SION×439 09:30 $5.99 → close $6.02 +13.17; THO×38 09:30 $70.64 → close $70.00 -24.32; FJET×36 09:30 $2.03 → close $2.02 -0.36 | — |
+| 2026-09-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.43 | ▲ 09:30 equity $8,001.61 vs yday $7,886.58 (+115.03) | 09:30 open · cash $1.43 (unchanged overnight, no fees) · equity $8,001.61 vs prior close $7,886.58 (+115.03) · 4 name(s) re-marked at the open (per-name table). XENE×65 yday $38.61 → 09:30 $39.51 +58.50; SION×439 yday $6.02 → 09:30 $6.03 +4.39; THO×38 yday $70.00 → 09:30 $71.41 +53.58; FJET×36 yday $2.02 → 09:30 $1.98 -1.44 | — |
+| 2026-09-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.43 | ▼ close $7,611.29 vs 09:30 $8,001.61 (session -390.32) | 16:00 close · cash $1.43 · equity $7,611.29 vs 09:30 $8,001.61 (-390.32; session marks -390.32) · 4 name(s) marked open→close (per-name table). XENE×65 09:30 $39.51 → close $36.56 -191.75; SION×439 09:30 $6.03 → close $5.51 -228.28; THO×38 09:30 $71.41 → close $72.30 +33.82; FJET×36 09:30 $1.98 → close $1.87 -4.11 | — |
 
 ## Not taken
 
@@ -431,6 +440,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-22 | `XENE` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-22 | `SION` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-22 | `THO` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-23 | `XENE` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-23 | `SION` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-23 | `THO` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-23 | `FJET` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-23 | `NMRA` | cash | leftover split 0.36 < 1 share @ 0.76 |
+| 2026-09-23 | `CMPX` | cash | leftover split 0.36 < 1 share @ 1.22 |
+| 2026-09-23 | `XNDU` | cash | leftover split 0.36 < 1 share @ 5.99 |
+| 2026-09-23 | `EVER` | cash | leftover split 0.36 < 1 share @ 19.46 |
 
 ## Still open (marked at last close)
 
@@ -438,4 +455,5 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 |---|---:|---|---|
 | `XENE` | 65 | 2026-09-21 @ $40.00 | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-32.2; leftover $2639.37 |
 | `SION` | 439 | 2026-09-21 @ $6.00 | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-24.1; leftover $2639.37 |
-| `THO` | 38 | 2026-09-21 @ $68.39 | union ∩ rsi_os, no 🚨; gate rsi_os=True; list overnight; ret5=-2.5; leftover $2639.37 |
+| `THO` | 38 | 2026-09-21 @ $68.39 | union ∩ rsi_os, no 🚨; gate rsi_os=True; list overnight; ret5=-7.0; leftover $2639.37 |
+| `FJET` | 36 | 2026-09-22 @ $2.03 | union ∩ rsi_os, no 🚨; gate rsi_os=True; list probable,yday_gainer,yday_mover; ret5=+0.5; leftover $75.35 |

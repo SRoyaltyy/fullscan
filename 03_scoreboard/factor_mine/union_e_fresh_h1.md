@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ e_fresh, no 🚨
 
-Cash book **+12.16%** ($11,216) · signal-only (no cash/fees) was +5.86%. Starts YES **24/28**. Fills 170 · skips 47 · realized $+1404.72.
+Cash book **+9.59%** ($10,959) · signal-only (no cash/fees) was +5.21%. Starts YES **20/29**. Fills 179 · skips 47 · realized $+1122.68.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $134.38.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $134.03.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -242,10 +242,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | `ALMU` | 508 | $11.54 | $11.64 | +48.26 | — | +0.00 | +48.26 | +218.44 | — |
 | 2026-09-18 | `LEN` | 70 | $79.70 | $78.25 | -101.50 | — | +0.00 | -101.50 | -192.50 | — |
 | 2026-09-21 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-09-22 | `ABVX` | 27 | — | $102.74 | +0.00 | $98.29 | -120.15 | -120.15 | +0.00 | -120.15 |
-| 2026-09-22 | `ANAB` | 51 | — | $55.07 | +0.00 | $53.92 | -58.65 | -58.65 | +0.00 | -58.65 |
-| 2026-09-22 | `MLKN` | 138 | — | $20.66 | +0.00 | $20.29 | -50.37 | -50.37 | +0.00 | -50.37 |
-| 2026-09-22 | `THO` | 39 | — | $72.53 | +0.00 | $73.80 | +49.53 | +49.53 | +0.00 | +49.53 |
+| 2026-09-22 | `ABVX` | 27 | — | $103.45 | +0.00 | $103.45 | +0.00 | +0.00 | +0.00 | +0.00 |
+| 2026-09-22 | `ANAB` | 51 | — | $54.95 | +0.00 | $54.95 | +0.00 | +0.00 | +0.00 | +0.00 |
+| 2026-09-22 | `MLKN` | 139 | — | $20.37 | +0.00 | $19.89 | -66.72 | -66.72 | +0.00 | -66.72 |
+| 2026-09-22 | `THO` | 40 | — | $70.64 | +0.00 | $70.00 | -25.60 | -25.60 | +0.00 | -25.60 |
+| 2026-09-23 | `ABVX` | 27 | $103.45 | $98.30 | -139.05 | — | +0.00 | -139.05 | -139.05 | — |
+| 2026-09-23 | `ANAB` | 51 | $54.95 | $53.55 | -71.40 | — | +0.00 | -71.40 | -71.40 | — |
+| 2026-09-23 | `MLKN` | 139 | $19.89 | $19.76 | -18.07 | — | +0.00 | -18.07 | -84.79 | — |
+| 2026-09-23 | `THO` | 40 | $70.00 | $71.41 | +56.40 | — | +0.00 | +56.40 | +30.80 | — |
+| 2026-09-23 | `CBRL` | 46 | — | $47.57 | +0.00 | $47.52 | -2.30 | -2.30 | +0.00 | -2.30 |
+| 2026-09-23 | `CTAS` | 11 | — | $196.78 | +0.00 | $191.97 | -52.91 | -52.91 | +0.00 | -52.91 |
+| 2026-09-23 | `GIS` | 62 | — | $35.74 | +0.00 | $35.82 | +4.96 | +4.96 | +0.00 | +4.96 |
+| 2026-09-23 | `KBH` | 47 | — | $47.15 | +0.00 | $47.16 | +0.47 | +0.47 | +0.00 | +0.47 |
+| 2026-09-23 | `PAYX` | 20 | — | $109.67 | +0.00 | $104.49 | -103.60 | -103.60 | +0.00 | -103.60 |
 
 ## Each session (cash + holdings state)
 
@@ -278,7 +287,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | +7.38 | $25.31 | FPS×163, TCOM×132 | $11,401.47 | +360.48 | +79.18 | ALMU, LEN | FPS, TCOM | $23.03 | $11,466.89 | ALMU×508, LEN×70 |
 | 2026-09-18 | +4.86 | $23.03 | ALMU×508, LEN×70 | $11,413.65 | -53.24 | +0.00 | — | ALMU, LEN | $11,404.71 | $11,404.71 | — |
 | 2026-09-21 | +12.87 | $11,404.71 | — | $11,404.71 | +0.00 | +0.00 | — | — | $11,404.71 | $11,404.71 | — |
-| 2026-09-22 | -0.50 | $11,404.71 | — | $11,404.71 | +0.00 | -179.64 | ABVX, ANAB, MLKN, THO | — | $134.38 | $11,216.35 | ABVX×27, ANAB×51, MLKN×138, THO×39 |
+| 2026-09-22 | -0.50 | $11,404.71 | — | $11,404.71 | +0.00 | -92.32 | ABVX, ANAB, MLKN, THO | — | $143.35 | $11,303.66 | ABVX×27, ANAB×51, MLKN×139, THO×40 |
+| 2026-09-23 | +2.29 | $143.35 | ABVX×27, ANAB×51, MLKN×139, THO×40 | $11,131.54 | -172.12 | -153.38 | CBRL, CTAS, GIS, KBH, PAYX | ABVX, ANAB, MLKN, THO | $134.03 | $10,958.78 | CBRL×46, CTAS×11, GIS×62, KBH×47, PAYX×20 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -505,11 +515,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,404.71 | ▲ 09:30 equity $11,404.71 vs yday $11,404.71 (+0.00) | 09:30 open · cash $11,404.71 · no holdings · equity $11,404.71 vs prior close $11,404.71 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,404.71 | ▲ close $11,404.71 vs 09:30 $11,404.71 (session +0.00) | 16:00 close · cash $11,404.71 · no lots left · equity $11,404.71. | — |
 | 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,404.71 | ▲ 09:30 equity $11,404.71 vs yday $11,404.71 (+0.00) | 09:30 open · cash $11,404.71 · no holdings · equity $11,404.71 vs prior close $11,404.71 (+0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-22 09:30 ET | **BUY** | `ABVX` | 27 | $102.74 | $2.07 | — | $8,628.66 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-8.9; leftover $2851.18 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 judge🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
-| 2026-09-22 09:30 ET | **BUY** | `ANAB` | 51 | $55.07 | $2.14 | — | $5,817.95 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-0.8; leftover $2851.18 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 judge🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-22 09:30 ET | **BUY** | `MLKN` | 138 | $20.66 | $2.40 | — | $2,965.16 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-1.7; leftover $2851.18 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
-| 2026-09-22 09:30 ET | **BUY** | `THO` | 39 | $72.53 | $2.11 | — | $134.38 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-2.5; leftover $2851.18 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟡 heat🔴 vol🟢 buy🟡 |
-| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $134.38 | ▼ close $11,216.35 vs 09:30 $11,404.71 (session -179.64) | 16:00 close · cash $134.38 · equity $11,216.35 vs 09:30 $11,404.71 (-188.36; session marks -179.64) · 4 name(s) marked open→close (per-name table). ABVX×27 09:30 $102.74 → close $98.29 -120.15; ANAB×51 09:30 $55.07 → close $53.92 -58.65; MLKN×138 09:30 $20.66 → close $20.29 -50.37; THO×39 09:30 $72.53 → close $73.80 +49.53 | — |
+| 2026-09-22 09:30 ET | **BUY** | `ABVX` | 27 | $103.45 | $2.07 | — | $8,609.49 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-8.9; leftover $2851.18 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 judge🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-09-22 09:30 ET | **BUY** | `ANAB` | 51 | $54.95 | $2.14 | — | $5,804.90 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=+1.5; leftover $2851.18 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 judge🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-22 09:30 ET | **BUY** | `MLKN` | 139 | $20.37 | $2.41 | — | $2,971.06 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-4.4; leftover $2851.18 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-22 09:30 ET | **BUY** | `THO` | 40 | $70.64 | $2.11 | — | $143.35 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-4.8; leftover $2851.18 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $143.35 | ▼ close $11,303.66 vs 09:30 $11,404.71 (session -92.32) | 16:00 close · cash $143.35 · equity $11,303.66 vs 09:30 $11,404.71 (-101.05; session marks -92.32) · 4 name(s) marked open→close (per-name table). ABVX×27 09:30 $103.45 → close $103.45 +0.00; ANAB×51 09:30 $54.95 → close $54.95 +0.00; MLKN×139 09:30 $20.37 → close $19.89 -66.72; THO×40 09:30 $70.64 → close $70.00 -25.60 | — |
+| 2026-09-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $143.35 | ▼ 09:30 equity $11,131.54 vs yday $11,303.66 (-172.12) | 09:30 open · cash $143.35 (unchanged overnight, no fees) · equity $11,131.54 vs prior close $11,303.66 (-172.12) · 4 name(s) re-marked at the open (per-name table). ABVX×27 yday $103.45 → 09:30 $98.30 -139.05; ANAB×51 yday $54.95 → 09:30 $53.55 -71.40; MLKN×139 yday $19.89 → 09:30 $19.76 -18.07; THO×40 yday $70.00 → 09:30 $71.41 +56.40 | — |
+| 2026-09-23 09:30 ET | **SELL** | `ABVX` | 27 | $98.30 | $2.10 | $-143.22 | $2,795.35 | ▼ -143.22 after sell → book $11,129.44; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-23 09:30 ET | **SELL** | `ANAB` | 51 | $53.55 | $2.17 | $-75.72 | $5,524.23 | ▼ -75.72 after sell → book $11,127.27; vs 09:30 mark -2.17 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-23 09:30 ET | **SELL** | `MLKN` | 139 | $19.76 | $2.45 | $-89.65 | $8,268.41 | ▼ -89.65 after sell → book $11,124.81; vs 09:30 mark -2.46 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-23 09:30 ET | **SELL** | `THO` | 40 | $71.41 | $2.14 | $+26.55 | $11,122.67 | ▲ +26.55 after sell → book $11,122.67; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-23 09:30 ET | **BUY** | `CBRL` | 46 | $47.57 | $2.13 | — | $8,932.32 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-4.5; leftover $2224.53 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `CTAS` | 11 | $196.78 | $2.02 | — | $6,765.72 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ⚪; ret5=-0.6; leftover $2224.53 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `GIS` | 62 | $35.74 | $2.18 | — | $4,547.66 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-8.5; leftover $2224.53 | join🔴 sector🟢 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `KBH` | 47 | $47.15 | $2.13 | — | $2,329.48 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-1.9; leftover $2224.53 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `PAYX` | 20 | $109.67 | $2.05 | — | $134.03 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ⚪; ret5=-8.2; leftover $2224.53 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $134.03 | ▼ close $10,958.78 vs 09:30 $11,131.54 (session -153.38) | 16:00 close · cash $134.03 · equity $10,958.78 vs 09:30 $11,131.54 (-172.76; session marks -153.38) · 5 name(s) marked open→close (per-name table). CBRL×46 09:30 $47.57 → close $47.52 -2.30; CTAS×11 09:30 $196.78 → close $191.97 -52.91; GIS×62 09:30 $35.74 → close $35.82 +4.96; KBH×47 09:30 $47.15 → close $47.16 +0.47; PAYX×20 09:30 $109.67 → close $104.49 -103.60 | — |
 
 ## Not taken
 
@@ -567,7 +588,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `ABVX` | 27 | 2026-09-22 @ $102.74 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-8.9; leftover $2851.18 |
-| `ANAB` | 51 | 2026-09-22 @ $55.07 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-0.8; leftover $2851.18 |
-| `MLKN` | 138 | 2026-09-22 @ $20.66 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-1.7; leftover $2851.18 |
-| `THO` | 39 | 2026-09-22 @ $72.53 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-2.5; leftover $2851.18 |
+| `CBRL` | 46 | 2026-09-23 @ $47.57 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-4.5; leftover $2224.53 |
+| `CTAS` | 11 | 2026-09-23 @ $196.78 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ⚪; ret5=-0.6; leftover $2224.53 |
+| `GIS` | 62 | 2026-09-23 @ $35.74 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-8.5; leftover $2224.53 |
+| `KBH` | 47 | 2026-09-23 @ $47.15 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ret5=-1.9; leftover $2224.53 |
+| `PAYX` | 20 | 2026-09-23 @ $109.67 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; 🔵; ⚪; ret5=-8.2; leftover $2224.53 |

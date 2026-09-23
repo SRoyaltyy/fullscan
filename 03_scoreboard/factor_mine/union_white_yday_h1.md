@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · union looker: 0 red cameras + yesterday up, rank +G−R
 
-Cash book **-0.94%** ($9,906) · signal-only (no cash/fees) was +3.24%. Starts YES **3/28**. Fills 162 · skips 1 · realized $-93.82.
+Cash book **-3.37%** ($9,663) · signal-only (no cash/fees) was +0.86%. Starts YES **3/29**. Fills 170 · skips 1 · realized $-93.82.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,906.14.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $229.96.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -236,6 +236,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | `RXT` | 320 | $3.80 | $3.90 | +32.00 | — | +0.00 | +32.00 | -12.80 | — |
 | 2026-09-21 | `TH` | 60 | $21.19 | $21.65 | +27.60 | — | +0.00 | +27.60 | +44.40 | — |
 | 2026-09-22 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-23 | `A` | 7 | — | $166.54 | +0.00 | $165.28 | -8.82 | -8.82 | +0.00 | -8.82 |
+| 2026-09-23 | `BFLY` | 125 | — | $9.90 | +0.00 | $9.20 | -87.50 | -87.50 | +0.00 | -87.50 |
+| 2026-09-23 | `OMER` | 59 | — | $20.65 | +0.00 | $20.74 | +5.55 | +5.55 | +0.00 | +5.55 |
+| 2026-09-23 | `AMRX` | 62 | — | $19.70 | +0.00 | $19.33 | -22.94 | -22.94 | +0.00 | -22.94 |
+| 2026-09-23 | `ARQT` | 44 | — | $27.79 | +0.00 | $26.38 | -62.04 | -62.04 | +0.00 | -62.04 |
+| 2026-09-23 | `FIVN` | 31 | — | $38.99 | +0.00 | $37.68 | -40.61 | -40.61 | +0.00 | -40.61 |
+| 2026-09-23 | `INOD` | 17 | — | $70.84 | +0.00 | $71.99 | +19.55 | +19.55 | +0.00 | +19.55 |
+| 2026-09-23 | `CTAS` | 6 | — | $196.78 | +0.00 | $191.97 | -28.86 | -28.86 | +0.00 | -28.86 |
 
 ## Each session (cash + holdings state)
 
@@ -269,6 +277,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | +4.86 | $10,110.51 | — | $10,110.51 | -0.00 | -206.72 | CRWD, FIVN, ATRC, ECO, PGEN, RBRK, RXT, TH | — | $227.79 | $9,884.81 | CRWD×5, FIVN×36, ATRC×21, ECO×14, PGEN×158, RBRK×11, RXT×320, TH×60 |
 | 2026-09-21 | +12.87 | $227.79 | CRWD×5, FIVN×36, ATRC×21, ECO×14, PGEN×158, RBRK×11, RXT×320, TH×60 | $9,925.33 | +40.52 | +0.00 | — | CRWD, FIVN, ATRC, ECO, PGEN, RBRK, RXT, TH | $9,906.14 | $9,906.14 | — |
 | 2026-09-22 | -0.50 | $9,906.14 | — | $9,906.14 | +0.00 | +0.00 | — | — | $9,906.14 | $9,906.14 | — |
+| 2026-09-23 | +2.29 | $9,906.14 | — | $9,906.14 | +0.00 | -225.67 | A, BFLY, OMER, AMRX, ARQT, FIVN, INOD, CTAS | — | $229.96 | $9,663.49 | A×7, BFLY×125, OMER×59, AMRX×62, ARQT×44, FIVN×31, INOD×17, CTAS×6 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -492,9 +501,32 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,906.14 | ▲ close $9,906.14 vs 09:30 $9,925.33 (session +0.00) | 16:00 close · cash $9,906.14 · no lots left · equity $9,906.14. | — |
 | 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,906.14 | ▲ 09:30 equity $9,906.14 vs yday $9,906.14 (+0.00) | 09:30 open · cash $9,906.14 · no holdings · equity $9,906.14 vs prior close $9,906.14 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,906.14 | ▲ close $9,906.14 vs 09:30 $9,906.14 (session +0.00) | 16:00 close · cash $9,906.14 · no lots left · equity $9,906.14. | — |
+| 2026-09-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,906.14 | ▲ 09:30 equity $9,906.14 vs yday $9,906.14 (+0.00) | 09:30 open · cash $9,906.14 · no holdings · equity $9,906.14 vs prior close $9,906.14 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-23 09:30 ET | **BUY** | `A` | 7 | $166.54 | $2.01 | — | $8,738.35 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate zero_red=True,yday_up=True; rank cond; list flatten; 🔵; ⚪; ret5=+10.3; leftover $1238.27 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `BFLY` | 125 | $9.90 | $2.37 | — | $7,498.48 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate zero_red=True,yday_up=True; rank cond; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=-4.7; leftover $1238.27 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `OMER` | 59 | $20.65 | $2.17 | — | $6,278.20 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate zero_red=True,yday_up=True; rank cond; list flatten,probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+5.9; leftover $1238.27 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `AMRX` | 62 | $19.70 | $2.18 | — | $5,054.63 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate zero_red=True,yday_up=True; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+17.1; leftover $1238.27 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `ARQT` | 44 | $27.79 | $2.12 | — | $3,829.75 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate zero_red=True,yday_up=True; rank cond; list flatten; 🔵; ⚪; ret5=+7.0; leftover $1238.27 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `FIVN` | 31 | $38.99 | $2.08 | — | $2,618.97 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate zero_red=True,yday_up=True; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+16.6; leftover $1238.27 | join🟢 sector🟡 gen🟢 news🔴 digest🟡 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `INOD` | 17 | $70.84 | $2.04 | — | $1,412.65 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate zero_red=True,yday_up=True; rank cond; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=-0.5; leftover $1238.27 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `CTAS` | 6 | $196.78 | $2.01 | — | $229.96 | — | union looker: 0 red cameras + yesterday up, rank +G−R; gate zero_red=True,yday_up=True; rank cond; list earn_react; 🔵; ⚪; ret5=-0.6; leftover $1238.27 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-09-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $229.96 | ▼ close $9,663.49 vs 09:30 $9,906.14 (session -225.67) | 16:00 close · cash $229.96 · equity $9,663.49 vs 09:30 $9,906.14 (-242.65; session marks -225.67) · 8 name(s) marked open→close (per-name table). A×7 09:30 $166.54 → close $165.28 -8.82; BFLY×125 09:30 $9.90 → close $9.20 -87.50; OMER×59 09:30 $20.65 → close $20.74 +5.55; AMRX×62 09:30 $19.70 → close $19.33 -22.94; ARQT×44 09:30 $27.79 → close $26.38 -62.04; FIVN×31 09:30 $38.99 → close $37.68 -40.61; INOD×17 09:30 $70.84 → close $71.99 +19.55; CTAS×6 09:30 $196.78 → close $191.97 -28.86 | — |
 
 ## Not taken
 
 | Date | Ticker | Kind | Why |
 |---|---|---|---|
 | 2026-08-14 | `SNDK` | cash | leftover split 1281.39 < 1 share @ 1646.93 |
+
+## Still open (marked at last close)
+
+| Ticker | Shares | Entry | Why |
+|---|---:|---|---|
+| `A` | 7 | 2026-09-23 @ $166.54 | union looker: 0 red cameras + yesterday up, rank +G−R; gate zero_red=True,yday_up=True; rank cond; list flatten; 🔵; ⚪; ret5=+10.3; leftover $1238.27 |
+| `BFLY` | 125 | 2026-09-23 @ $9.90 | union looker: 0 red cameras + yesterday up, rank +G−R; gate zero_red=True,yday_up=True; rank cond; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=-4.7; leftover $1238.27 |
+| `OMER` | 59 | 2026-09-23 @ $20.65 | union looker: 0 red cameras + yesterday up, rank +G−R; gate zero_red=True,yday_up=True; rank cond; list flatten,probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+5.9; leftover $1238.27 |
+| `AMRX` | 62 | 2026-09-23 @ $19.70 | union looker: 0 red cameras + yesterday up, rank +G−R; gate zero_red=True,yday_up=True; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+17.1; leftover $1238.27 |
+| `ARQT` | 44 | 2026-09-23 @ $27.79 | union looker: 0 red cameras + yesterday up, rank +G−R; gate zero_red=True,yday_up=True; rank cond; list flatten; 🔵; ⚪; ret5=+7.0; leftover $1238.27 |
+| `FIVN` | 31 | 2026-09-23 @ $38.99 | union looker: 0 red cameras + yesterday up, rank +G−R; gate zero_red=True,yday_up=True; rank cond; list ohlc_hot; 🔵; ⚪; ret5=+16.6; leftover $1238.27 |
+| `INOD` | 17 | 2026-09-23 @ $70.84 | union looker: 0 red cameras + yesterday up, rank +G−R; gate zero_red=True,yday_up=True; rank cond; list probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=-0.5; leftover $1238.27 |
+| `CTAS` | 6 | 2026-09-23 @ $196.78 | union looker: 0 red cameras + yesterday up, rank +G−R; gate zero_red=True,yday_up=True; rank cond; list earn_react; 🔵; ⚪; ret5=-0.6; leftover $1238.27 |

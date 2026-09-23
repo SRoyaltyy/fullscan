@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ overnight, no 🚨
 
-Cash book **-18.04%** ($8,196) · signal-only (no cash/fees) was -23.79%. Starts YES **0/28**. Fills 115 · skips 65 · realized $-1667.16.
+Cash book **-22.44%** ($7,756) · signal-only (no cash/fees) was -26.49%. Starts YES **0/29**. Fills 125 · skips 65 · realized $-1866.45.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $32.79.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $13.63.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -185,10 +185,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | `ABVX` | 26 | — | $105.72 | +0.00 | $103.45 | -59.02 | -59.02 | +0.00 | -59.02 |
 | 2026-09-21 | `MLKN` | 132 | — | $20.85 | +0.00 | $20.32 | -69.96 | -69.96 | +0.00 | -69.96 |
 | 2026-09-21 | `THO` | 40 | — | $68.39 | +0.00 | $69.94 | +62.00 | +62.00 | +0.00 | +62.00 |
-| 2026-09-22 | `ABVX` | 26 | $103.45 | $102.74 | -18.46 | — | +0.00 | -18.46 | -77.48 | — |
-| 2026-09-22 | `MLKN` | 132 | $20.32 | $20.66 | +44.22 | — | +0.00 | +44.22 | -25.74 | — |
-| 2026-09-22 | `THO` | 40 | $69.94 | $72.53 | +103.60 | — | +0.00 | +103.60 | +165.60 | — |
-| 2026-09-22 | `KBH` | 168 | — | $49.39 | +0.00 | $48.59 | -134.40 | -134.40 | +0.00 | -134.40 |
+| 2026-09-22 | `ABVX` | 26 | $103.45 | $103.45 | +0.00 | — | +0.00 | +0.00 | -59.02 | — |
+| 2026-09-22 | `MLKN` | 132 | $20.32 | $20.37 | +6.60 | — | +0.00 | +6.60 | -63.36 | — |
+| 2026-09-22 | `THO` | 40 | $69.94 | $70.64 | +28.00 | — | +0.00 | +28.00 | +90.00 | — |
+| 2026-09-22 | `CBRL` | 45 | — | $45.05 | +0.00 | $45.05 | +0.00 | +0.00 | +0.00 | +0.00 |
+| 2026-09-22 | `GIS` | 57 | — | $35.96 | +0.00 | $35.45 | -29.07 | -29.07 | +0.00 | -29.07 |
+| 2026-09-22 | `KBH` | 41 | — | $49.39 | +0.00 | $48.59 | -32.80 | -32.80 | +0.00 | -32.80 |
+| 2026-09-22 | `PAYX` | 17 | — | $115.35 | +0.00 | $115.21 | -2.38 | -2.38 | +0.00 | -2.38 |
+| 2026-09-23 | `CBRL` | 45 | $45.05 | $47.57 | +113.40 | — | +0.00 | +113.40 | +113.40 | — |
+| 2026-09-23 | `GIS` | 57 | $35.45 | $35.74 | +16.53 | — | +0.00 | +16.53 | -12.54 | — |
+| 2026-09-23 | `KBH` | 41 | $48.59 | $47.15 | -59.04 | — | +0.00 | -59.04 | -91.84 | — |
+| 2026-09-23 | `PAYX` | 17 | $115.21 | $109.67 | -94.18 | — | +0.00 | -94.18 | -96.56 | — |
+| 2026-09-23 | `FUL` | 53 | — | $50.51 | +0.00 | $50.21 | -15.90 | -15.90 | +0.00 | -15.90 |
+| 2026-09-23 | `NEOV` | 797 | — | $3.40 | +0.00 | $3.17 | -183.31 | -183.31 | +0.00 | -183.31 |
+| 2026-09-23 | `SFIX` | 906 | — | $2.99 | +0.00 | $2.82 | -154.02 | -154.02 | +0.00 | -154.02 |
 
 ## Each session (cash + holdings state)
 
@@ -221,7 +231,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | +7.38 | $43.71 | ALMU×331, LEN×56 | $8,290.22 | -586.98 | +0.00 | — | ALMU, LEN | $8,283.66 | $8,283.66 | — |
 | 2026-09-18 | +4.86 | $8,283.66 | — | $8,283.66 | +0.00 | +0.00 | — | — | $8,283.66 | $8,283.66 | — |
 | 2026-09-21 | +12.87 | $8,283.66 | — | $8,283.66 | +0.00 | -66.98 | ABVX, MLKN, THO | — | $40.58 | $8,210.12 | ABVX×26, MLKN×132, THO×40 |
-| 2026-09-22 | -0.50 | $40.58 | ABVX×26, MLKN×132, THO×40 | $8,339.48 | +129.36 | -134.40 | KBH | ABVX, MLKN, THO | $32.79 | $8,195.91 | KBH×168 |
+| 2026-09-22 | -0.50 | $40.58 | ABVX×26, MLKN×132, THO×40 | $8,244.72 | +34.60 | -64.25 | CBRL, GIS, KBH, PAYX | ABVX, MLKN, THO | $166.69 | $8,165.35 | CBRL×45, GIS×57, KBH×41, PAYX×17 |
+| 2026-09-23 | +2.29 | $166.69 | CBRL×45, GIS×57, KBH×41, PAYX×17 | $8,142.06 | -23.29 | -353.23 | FUL, NEOV, SFIX | CBRL, GIS, KBH, PAYX | $13.63 | $7,756.17 | FUL×53, NEOV×797, SFIX×906 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -389,15 +400,27 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,283.66 | ▲ close $8,283.66 vs 09:30 $8,283.66 (session +0.00) | 16:00 close · cash $8,283.66 · no lots left · equity $8,283.66. | — |
 | 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,283.66 | ▲ 09:30 equity $8,283.66 vs yday $8,283.66 (+0.00) | 09:30 open · cash $8,283.66 · no holdings · equity $8,283.66 vs prior close $8,283.66 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-21 09:30 ET | **BUY** | `ABVX` | 26 | $105.72 | $2.07 | — | $5,532.87 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-11.5; leftover $2761.22 | join🟡 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `MLKN` | 132 | $20.85 | $2.39 | — | $2,778.29 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-1.7; leftover $2761.22 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `THO` | 40 | $68.39 | $2.11 | — | $40.58 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-2.5; leftover $2761.22 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `MLKN` | 132 | $20.85 | $2.39 | — | $2,778.29 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-2.5; leftover $2761.22 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `THO` | 40 | $68.39 | $2.11 | — | $40.58 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-7.0; leftover $2761.22 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $40.58 | ▼ close $8,210.12 vs 09:30 $8,283.66 (session -66.98) | 16:00 close · cash $40.58 · equity $8,210.12 vs 09:30 $8,283.66 (-73.54; session marks -66.98) · 3 name(s) marked open→close (per-name table). ABVX×26 09:30 $105.72 → close $103.45 -59.02; MLKN×132 09:30 $20.85 → close $20.32 -69.96; THO×40 09:30 $68.39 → close $69.94 +62.00 | — |
-| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $40.58 | ▲ 09:30 equity $8,339.48 vs yday $8,210.12 (+129.36) | 09:30 open · cash $40.58 (unchanged overnight, no fees) · equity $8,339.48 vs prior close $8,210.12 (+129.36) · 3 name(s) re-marked at the open (per-name table). ABVX×26 yday $103.45 → 09:30 $102.74 -18.46; MLKN×132 yday $20.32 → 09:30 $20.66 +44.22; THO×40 yday $69.94 → 09:30 $72.53 +103.60 | — |
-| 2026-09-22 09:30 ET | **SELL** | `ABVX` | 26 | $102.74 | $2.10 | $-81.65 | $2,709.72 | ▼ -81.65 after sell → book $8,337.38; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟡 judge🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
-| 2026-09-22 09:30 ET | **SELL** | `MLKN` | 132 | $20.66 | $2.43 | $-30.56 | $5,433.75 | ▼ -30.56 after sell → book $8,334.95; vs 09:30 mark -2.43 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
-| 2026-09-22 09:30 ET | **SELL** | `THO` | 40 | $72.53 | $2.14 | $+161.35 | $8,332.80 | ▲ +161.35 after sell → book $8,332.80; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟡 heat🔴 vol🟢 buy🟡 |
-| 2026-09-22 09:30 ET | **BUY** | `KBH` | 168 | $49.39 | $2.49 | — | $32.79 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-5.8; leftover $8332.80 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
-| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $32.79 | ▼ close $8,195.91 vs 09:30 $8,339.48 (session -134.40) | 16:00 close · cash $32.79 · equity $8,195.91 vs 09:30 $8,339.48 (-143.57; session marks -134.40) · 1 name(s) marked open→close (per-name table). KBH×168 09:30 $49.39 → close $48.59 -134.40 | — |
+| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $40.58 | ▲ 09:30 equity $8,244.72 vs yday $8,210.12 (+34.60) | 09:30 open · cash $40.58 (unchanged overnight, no fees) · equity $8,244.72 vs prior close $8,210.12 (+34.60) · 3 name(s) re-marked at the open (per-name table). ABVX×26 yday $103.45 → 09:30 $103.45 +0.00; MLKN×132 yday $20.32 → 09:30 $20.37 +6.60; THO×40 yday $69.94 → 09:30 $70.64 +28.00 | — |
+| 2026-09-22 09:30 ET | **SELL** | `ABVX` | 26 | $103.45 | $2.10 | $-63.19 | $2,728.18 | ▼ -63.19 after sell → book $8,242.62; vs 09:30 mark -2.10 | dropped from list after 1 sess (min 1) | join🔴 sector🔴 gen🔴 news🟡 digest🟡 judge🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-09-22 09:30 ET | **SELL** | `MLKN` | 132 | $20.37 | $2.43 | $-68.18 | $5,414.59 | ▼ -68.18 after sell → book $8,240.19; vs 09:30 mark -2.43 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-22 09:30 ET | **SELL** | `THO` | 40 | $70.64 | $2.14 | $+85.75 | $8,238.04 | ▲ +85.75 after sell → book $8,238.04; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟡 heat🟢 vol🟢 buy🟡 |
+| 2026-09-22 09:30 ET | **BUY** | `CBRL` | 45 | $45.05 | $2.12 | — | $6,208.67 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-4.5; leftover $2059.51 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-22 09:30 ET | **BUY** | `GIS` | 57 | $35.96 | $2.16 | — | $4,156.79 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-8.5; leftover $2059.51 | join🔴 sector🟢 gen🔴 news🟡 digest🟡 ab🔴 peer🟡 heat🔴 vol🟡 buy🟡 |
+| 2026-09-22 09:30 ET | **BUY** | `KBH` | 41 | $49.39 | $2.11 | — | $2,129.69 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-3.4; leftover $2059.51 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-22 09:30 ET | **BUY** | `PAYX` | 17 | $115.35 | $2.04 | — | $166.69 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-8.2; leftover $2059.51 | join🟢 sector🔴 gen🔴 news🔴 digest🟡 ab🟢 peer🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $166.69 | ▼ close $8,165.35 vs 09:30 $8,244.72 (session -64.25) | 16:00 close · cash $166.69 · equity $8,165.35 vs 09:30 $8,244.72 (-79.37; session marks -64.25) · 4 name(s) marked open→close (per-name table). CBRL×45 09:30 $45.05 → close $45.05 +0.00; GIS×57 09:30 $35.96 → close $35.45 -29.07; KBH×41 09:30 $49.39 → close $48.59 -32.80; PAYX×17 09:30 $115.35 → close $115.21 -2.38 | — |
+| 2026-09-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $166.69 | ▼ 09:30 equity $8,142.06 vs yday $8,165.35 (-23.29) | 09:30 open · cash $166.69 (unchanged overnight, no fees) · equity $8,142.06 vs prior close $8,165.35 (-23.29) · 4 name(s) re-marked at the open (per-name table). CBRL×45 yday $45.05 → 09:30 $47.57 +113.40; GIS×57 yday $35.45 → 09:30 $35.74 +16.53; KBH×41 yday $48.59 → 09:30 $47.15 -59.04; PAYX×17 yday $115.21 → 09:30 $109.67 -94.18 | — |
+| 2026-09-23 09:30 ET | **SELL** | `CBRL` | 45 | $47.57 | $2.15 | $+109.12 | $2,305.19 | ▲ +109.12 after sell → book $8,139.91; vs 09:30 mark -2.15 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-23 09:30 ET | **SELL** | `GIS` | 57 | $35.74 | $2.19 | $-16.89 | $4,340.19 | ▼ -16.89 after sell → book $8,137.73; vs 09:30 mark -2.18 | dropped from list after 1 sess (min 1) | join🔴 sector🟢 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-09-23 09:30 ET | **SELL** | `KBH` | 41 | $47.15 | $2.14 | $-96.09 | $6,271.20 | ▼ -96.09 after sell → book $8,135.59; vs 09:30 mark -2.14 | dropped from list after 1 sess (min 1) | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-23 09:30 ET | **SELL** | `PAYX` | 17 | $109.67 | $2.07 | $-100.67 | $8,133.52 | ▼ -100.67 after sell → book $8,133.52; vs 09:30 mark -2.07 | dropped from list after 1 sess (min 1) | join🟢 sector🟡 gen🟢 news🟡 digest🟡 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `FUL` | 53 | $50.51 | $2.15 | — | $5,454.34 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; 🔵; ret5=-3.5; leftover $2711.17 | join🔴 sector🟡 gen🟢 news🟡 digest🟡 judge🔴 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `NEOV` | 797 | $3.40 | $10.28 | — | $2,734.26 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; 🔵; ret5=-4.8; leftover $2711.17 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `SFIX` | 906 | $2.99 | $11.69 | — | $13.63 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-6.3; leftover $2711.17 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $13.63 | ▼ close $7,756.17 vs 09:30 $8,142.06 (session -353.23) | 16:00 close · cash $13.63 · equity $7,756.17 vs 09:30 $8,142.06 (-385.89; session marks -353.23) · 3 name(s) marked open→close (per-name table). FUL×53 09:30 $50.51 → close $50.21 -15.90; NEOV×797 09:30 $3.40 → close $3.17 -183.31; SFIX×906 09:30 $2.99 → close $2.82 -154.02 | — |
 
 ## Not taken
 
@@ -473,4 +496,6 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `KBH` | 168 | 2026-09-22 @ $49.39 | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-5.8; leftover $8332.80 |
+| `FUL` | 53 | 2026-09-23 @ $50.51 | union ∩ overnight, no 🚨; gate overnight=True; list overnight; 🔵; ret5=-3.5; leftover $2711.17 |
+| `NEOV` | 797 | 2026-09-23 @ $3.40 | union ∩ overnight, no 🚨; gate overnight=True; list overnight; 🔵; ret5=-4.8; leftover $2711.17 |
+| `SFIX` | 906 | 2026-09-23 @ $2.99 | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-6.3; leftover $2711.17 |

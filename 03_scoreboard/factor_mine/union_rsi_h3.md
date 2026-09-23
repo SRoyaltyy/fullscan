@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `rsi` · size `leftover` · sell `list` · S-boost `none` · rank by rsi
 
-Cash book **-13.51%** ($8,649) · signal-only (no cash/fees) was -21.95%. Starts YES **0/28**. Fills 157 · skips 242 · realized $-1194.57.
+Cash book **-16.75%** ($8,325) · signal-only (no cash/fees) was -27.26%. Starts YES **0/29**. Fills 165 · skips 251 · realized $-1194.57.
 
 ## How this sleeve decides (like you are 10)
 
@@ -53,7 +53,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $79.31.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $45.26.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -369,17 +369,38 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | `KDK` | 321 | — | $3.42 | +0.00 | $3.27 | -48.15 | -48.15 | +0.00 | -48.15 |
 | 2026-09-21 | `MLKN` | 52 | — | $20.85 | +0.00 | $20.32 | -27.56 | -27.56 | +0.00 | -27.56 |
 | 2026-09-21 | `ABVX` | 10 | — | $105.72 | +0.00 | $103.45 | -22.70 | -22.70 | +0.00 | -22.70 |
-| 2026-09-21 | `BKV` | 48 | — | $22.68 | +0.00 | $22.95 | +12.96 | +12.96 | +0.00 | +12.96 |
-| 2026-09-21 | `PUMP` | 105 | — | $10.40 | +0.00 | $10.16 | -25.20 | -25.20 | +0.00 | -25.20 |
-| 2026-09-22 | `XENE` | 27 | $38.99 | $39.76 | +20.79 | $39.09 | -18.09 | +2.70 | -6.48 | -24.57 |
+| 2026-09-21 | `SGML` | 108 | — | $10.13 | +0.00 | $10.27 | +14.58 | +14.58 | +0.00 | +14.58 |
+| 2026-09-21 | `HUM` | 2 | — | $386.20 | +0.00 | $378.58 | -15.24 | -15.24 | +0.00 | -15.24 |
+| 2026-09-22 | `XENE` | 27 | $38.99 | $39.10 | +2.97 | $38.61 | -13.23 | -10.26 | -24.30 | -37.53 |
 | 2026-09-22 | `SION` | 183 | $6.00 | $5.99 | -1.83 | $6.02 | +5.49 | +3.66 | -1.83 | +3.66 |
-| 2026-09-22 | `THO` | 16 | $69.94 | $72.53 | +41.44 | $73.80 | +20.32 | +61.76 | +66.24 | +86.56 |
-| 2026-09-22 | `KDK` | 321 | $3.27 | $3.30 | +8.92 | $3.20 | -31.39 | -22.47 | -39.23 | -70.62 |
-| 2026-09-22 | `MLKN` | 52 | $20.32 | $20.66 | +17.42 | $20.29 | -18.98 | -1.56 | -10.14 | -29.12 |
-| 2026-09-22 | `ABVX` | 10 | $103.45 | $102.74 | -7.10 | $98.29 | -44.50 | -51.60 | -29.80 | -74.30 |
-| 2026-09-22 | `BKV` | 48 | $22.95 | $22.73 | -10.56 | $22.90 | +8.16 | -2.40 | +2.40 | +10.56 |
-| 2026-09-22 | `PUMP` | 105 | $10.16 | $10.05 | -11.55 | $10.03 | -2.10 | -13.65 | -36.75 | -38.85 |
-| 2026-09-22 | `DLO` | 1 | — | $14.50 | +0.00 | $14.26 | -0.24 | -0.24 | +0.00 | -0.24 |
+| 2026-09-22 | `THO` | 16 | $69.94 | $70.64 | +11.20 | $70.00 | -10.24 | +0.96 | +36.00 | +25.76 |
+| 2026-09-22 | `KDK` | 321 | $3.27 | $3.40 | +41.73 | $3.45 | +16.05 | +57.78 | -6.42 | +9.63 |
+| 2026-09-22 | `MLKN` | 52 | $20.32 | $20.37 | +2.60 | $19.89 | -24.96 | -22.36 | -24.96 | -49.92 |
+| 2026-09-22 | `ABVX` | 10 | $103.45 | $103.45 | +0.00 | $103.45 | +0.00 | +0.00 | -22.70 | -22.70 |
+| 2026-09-22 | `SGML` | 108 | $10.27 | $10.40 | +14.04 | $10.41 | +1.08 | +15.12 | +28.62 | +29.70 |
+| 2026-09-22 | `HUM` | 2 | $378.58 | $378.58 | +0.00 | $378.58 | +0.00 | +0.00 | -15.24 | -15.24 |
+| 2026-09-22 | `FJET` | 33 | — | $2.03 | +0.00 | $2.02 | -0.33 | -0.33 | +0.00 | -0.33 |
+| 2026-09-22 | `MKC` | 1 | — | $48.89 | +0.00 | $48.89 | +0.00 | +0.00 | +0.00 | +0.00 |
+| 2026-09-22 | `CBRL` | 1 | — | $45.05 | +0.00 | $45.05 | +0.00 | +0.00 | +0.00 | +0.00 |
+| 2026-09-22 | `KBH` | 1 | — | $49.39 | +0.00 | $48.59 | -0.80 | -0.80 | +0.00 | -0.80 |
+| 2026-09-22 | `GIS` | 1 | — | $35.96 | +0.00 | $35.45 | -0.51 | -0.51 | +0.00 | -0.51 |
+| 2026-09-23 | `XENE` | 27 | $38.61 | $39.51 | +24.30 | $36.56 | -79.65 | -55.35 | -13.23 | -92.88 |
+| 2026-09-23 | `SION` | 183 | $6.02 | $6.03 | +1.83 | $5.51 | -95.16 | -93.33 | +5.49 | -89.67 |
+| 2026-09-23 | `THO` | 16 | $70.00 | $71.41 | +22.56 | $72.30 | +14.24 | +36.80 | +48.32 | +62.56 |
+| 2026-09-23 | `KDK` | 321 | $3.45 | $3.17 | -89.88 | $2.97 | -64.20 | -154.08 | -80.25 | -144.45 |
+| 2026-09-23 | `MLKN` | 52 | $19.89 | $19.76 | -6.76 | $20.04 | +14.56 | +7.80 | -56.68 | -42.12 |
+| 2026-09-23 | `ABVX` | 10 | $103.45 | $98.30 | -51.50 | $94.13 | -41.70 | -93.20 | -74.20 | -115.90 |
+| 2026-09-23 | `SGML` | 108 | $10.41 | $10.26 | -16.20 | $10.14 | -12.96 | -29.16 | +13.50 | +0.54 |
+| 2026-09-23 | `HUM` | 2 | $378.58 | $370.00 | -17.16 | $374.80 | +9.60 | -7.56 | -32.40 | -22.80 |
+| 2026-09-23 | `FJET` | 33 | $2.02 | $1.98 | -1.32 | $1.87 | -3.77 | -5.09 | -1.65 | -5.42 |
+| 2026-09-23 | `MKC` | 1 | $48.89 | $49.48 | +0.59 | $49.12 | -0.36 | +0.23 | +0.59 | +0.23 |
+| 2026-09-23 | `CBRL` | 1 | $45.05 | $47.57 | +2.52 | $47.52 | -0.05 | +2.47 | +2.52 | +2.47 |
+| 2026-09-23 | `KBH` | 1 | $48.59 | $47.15 | -1.44 | $47.16 | +0.01 | -1.43 | -2.24 | -2.23 |
+| 2026-09-23 | `GIS` | 1 | $35.45 | $35.74 | +0.29 | $35.82 | +0.08 | +0.37 | -0.22 | -0.14 |
+| 2026-09-23 | `XNDU` | 5 | — | $5.99 | +0.00 | $5.33 | -3.30 | -3.30 | +0.00 | -3.30 |
+| 2026-09-23 | `CMPX` | 26 | — | $1.22 | +0.00 | $1.17 | -1.30 | -1.30 | +0.00 | -1.30 |
+| 2026-09-23 | `NMRA` | 41 | — | $0.76 | +0.00 | $0.73 | -1.18 | -1.18 | +0.00 | -1.18 |
+| 2026-09-23 | `EVER` | 1 | — | $19.46 | +0.00 | $17.63 | -1.83 | -1.83 | +0.00 | -1.83 |
 
 ## Each session (cash + holdings state)
 
@@ -411,8 +432,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | +5.30 | $79.73 | COO×20, RWT×318, NAVN×54, SION×143, RH×8, AEO×76, AXGN×26, SLBT×536 | $8,962.72 | +62.51 | -143.24 | NMRA, ALHC, CRBP, DVLT, EYPT, TCOM, CTMX, ZSQR | COO, RWT, NAVN, SION, RH, AEO, AXGN, SLBT | $0.94 | $8,725.98 | NMRA×1323, ALHC×108, CRBP×162, DVLT×6983, EYPT×305, TCOM×27, CTMX×410, ZSQR×459 |
 | 2026-09-17 | +7.38 | $0.94 | NMRA×1323, ALHC×108, CRBP×162, DVLT×6983, EYPT×305, TCOM×27, CTMX×410, ZSQR×459 | $8,751.88 | +25.90 | +103.04 | — | — | $0.94 | $8,854.92 | NMRA×1323, ALHC×108, CRBP×162, DVLT×6983, EYPT×305, TCOM×27, CTMX×410, ZSQR×459 |
 | 2026-09-18 | +4.86 | $0.94 | NMRA×1323, ALHC×108, CRBP×162, DVLT×6983, EYPT×305, TCOM×27, CTMX×410, ZSQR×459 | $8,884.50 | +29.58 | -122.42 | — | — | $0.94 | $8,762.07 | NMRA×1323, ALHC×108, CRBP×162, DVLT×6983, EYPT×305, TCOM×27, CTMX×410, ZSQR×459 |
-| 2026-09-21 | +12.87 | $0.94 | NMRA×1323, ALHC×108, CRBP×162, DVLT×6983, EYPT×305, TCOM×27, CTMX×410, ZSQR×459 | $8,875.00 | +112.93 | -113.12 | XENE, SION, THO, KDK, MLKN, ABVX, BKV, PUMP | NMRA, ALHC, CRBP, DVLT, EYPT, TCOM, CTMX, ZSQR | $93.95 | $8,672.93 | XENE×27, SION×183, THO×16, KDK×321, MLKN×52, ABVX×10, BKV×48, PUMP×105 |
-| 2026-09-22 | -0.50 | $93.95 | XENE×27, SION×183, THO×16, KDK×321, MLKN×52, ABVX×10, BKV×48, PUMP×105 | $8,730.47 | +57.54 | -81.33 | DLO | — | $79.31 | $8,648.99 | XENE×27, SION×183, THO×16, KDK×321, MLKN×52, ABVX×10, BKV×48, PUMP×105, DLO×1 |
+| 2026-09-21 | +12.87 | $0.94 | NMRA×1323, ALHC×108, CRBP×162, DVLT×6983, EYPT×305, TCOM×27, CTMX×410, ZSQR×459 | $8,875.00 | +112.93 | -101.54 | XENE, SION, THO, KDK, MLKN, ABVX, SGML, HUM | NMRA, ALHC, CRBP, DVLT, EYPT, TCOM, CTMX, ZSQR | $407.74 | $8,684.64 | XENE×27, SION×183, THO×16, KDK×321, MLKN×52, ABVX×10, SGML×108, HUM×2 |
+| 2026-09-22 | -0.50 | $407.74 | XENE×27, SION×183, THO×16, KDK×321, MLKN×52, ABVX×10, SGML×108, HUM×2 | $8,755.35 | +70.71 | -27.45 | FJET, MKC, CBRL, KBH, GIS | — | $158.89 | $8,725.33 | XENE×27, SION×183, THO×16, KDK×321, MLKN×52, ABVX×10, SGML×108, HUM×2, FJET×33, MKC×1, CBRL×1, KBH×1, GIS×1 |
+| 2026-09-23 | +2.29 | $158.89 | XENE×27, SION×183, THO×16, KDK×321, MLKN×52, ABVX×10, SGML×108, HUM×2, FJET×33, MKC×1, CBRL×1, KBH×1, GIS×1 | $8,593.16 | -132.17 | -266.97 | XNDU, CMPX, NMRA, EVER | — | $45.26 | $8,324.85 | XENE×27, SION×183, THO×16, KDK×321, MLKN×52, ABVX×10, SGML×108, HUM×2, FJET×33, MKC×1, CBRL×1, KBH×1, GIS×1, XNDU×5, CMPX×26, NMRA×41, EVER×1 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -621,16 +643,26 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 09:30 ET | **SELL** | `ZSQR` | 459 | $2.68 | $6.01 | $+144.13 | $8,805.45 | ▲ +144.13 after sell → book $8,805.45; vs 09:30 mark -6.01 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-21 09:30 ET | **BUY** | `XENE` | 27 | $40.00 | $2.07 | — | $7,723.38 | — | rank by rsi; rank rsi; list yday_mover; ret5=-32.2; leftover $1100.68 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-09-21 09:30 ET | **BUY** | `SION` | 183 | $6.00 | $2.54 | — | $6,622.84 | — | rank by rsi; rank rsi; list yday_mover; ret5=-24.1; leftover $1100.68 | join🟢 sector🟢 gen🟢 news🟢 digest🟡 ab🔴 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `THO` | 16 | $68.39 | $2.04 | — | $5,526.56 | — | rank by rsi; rank rsi; list overnight; ret5=-2.5; leftover $1100.68 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `THO` | 16 | $68.39 | $2.04 | — | $5,526.56 | — | rank by rsi; rank rsi; list overnight; ret5=-7.0; leftover $1100.68 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-09-21 09:30 ET | **BUY** | `KDK` | 321 | $3.42 | $4.14 | — | $4,424.60 | — | rank by rsi; rank rsi; list yday_mover; ret5=-12.3; leftover $1100.68 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `MLKN` | 52 | $20.85 | $2.15 | — | $3,338.25 | — | rank by rsi; rank rsi; list overnight; ret5=-1.7; leftover $1100.68 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `MLKN` | 52 | $20.85 | $2.15 | — | $3,338.25 | — | rank by rsi; rank rsi; list overnight; ret5=-2.5; leftover $1100.68 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-09-21 09:30 ET | **BUY** | `ABVX` | 10 | $105.72 | $2.02 | — | $2,279.03 | — | rank by rsi; rank rsi; list overnight; ret5=-11.5; leftover $1100.68 | join🟡 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🔴 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `BKV` | 48 | $22.68 | $2.13 | — | $1,188.26 | — | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+10.8; leftover $1100.68 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `PUMP` | 105 | $10.40 | $2.31 | — | $93.95 | — | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+5.9; leftover $1100.68 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $93.95 | ▼ close $8,672.93 vs 09:30 $8,875.00 (session -113.12) | 16:00 close · cash $93.95 · equity $8,672.93 vs 09:30 $8,875.00 (-202.07; session marks -113.12) · 8 name(s) marked open→close (per-name table). XENE×27 09:30 $40.00 → close $38.99 -27.27; SION×183 09:30 $6.00 → close $6.00 +0.00; THO×16 09:30 $68.39 → close $69.94 +24.80; KDK×321 09:30 $3.42 → close $3.27 -48.15; MLKN×52 09:30 $20.85 → close $20.32 -27.56; ABVX×10 09:30 $105.72 → close $103.45 -22.70; BKV×48 09:30 $22.68 → close $22.95 +12.96; PUMP×105 09:30 $10.40 → close $10.16 -25.20 | — |
-| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $93.95 | ▲ 09:30 equity $8,730.47 vs yday $8,672.93 (+57.54) | 09:30 open · cash $93.95 (unchanged overnight, no fees) · equity $8,730.47 vs prior close $8,672.93 (+57.54) · 8 name(s) re-marked at the open (per-name table). XENE×27 yday $38.99 → 09:30 $39.76 +20.79; SION×183 yday $6.00 → 09:30 $5.99 -1.83; THO×16 yday $69.94 → 09:30 $72.53 +41.44; KDK×321 yday $3.27 → 09:30 $3.30 +8.92; MLKN×52 yday $20.32 → 09:30 $20.66 +17.42; ABVX×10 yday $103.45 → 09:30 $102.74 -7.10; BKV×48 yday $22.95 → 09:30 $22.73 -10.56; PUMP×105 yday $10.16 → 09:30 $10.05 -11.55 | — |
-| 2026-09-22 09:30 ET | **BUY** | `DLO` | 1 | $14.50 | $0.15 | — | $79.31 | — | rank by rsi; rank rsi; list flatten; ret5=-3.6; leftover $18.79 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
-| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $79.31 | ▼ close $8,648.99 vs 09:30 $8,730.47 (session -81.33) | 16:00 close · cash $79.31 · equity $8,648.99 vs 09:30 $8,730.47 (-81.48; session marks -81.33) · 9 name(s) marked open→close (per-name table). XENE×27 09:30 $39.76 → close $39.09 -18.09; SION×183 09:30 $5.99 → close $6.02 +5.49; THO×16 09:30 $72.53 → close $73.80 +20.32; KDK×321 09:30 $3.30 → close $3.20 -31.39; MLKN×52 09:30 $20.66 → close $20.29 -18.98; ABVX×10 09:30 $102.74 → close $98.29 -44.50; BKV×48 09:30 $22.73 → close $22.90 +8.16; PUMP×105 09:30 $10.05 → close $10.03 -2.10; DLO×1 09:30 $14.50 → close $14.26 -0.24 | — |
+| 2026-09-21 09:30 ET | **BUY** | `SGML` | 108 | $10.13 | $2.31 | — | $1,182.14 | — | rank by rsi; rank rsi; list probable,yday_gainer; ret5=+4.9; leftover $1100.68 | join🔴 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `HUM` | 2 | $386.20 | $2.00 | — | $407.74 | — | rank by rsi; rank rsi; list flatten; ret5=-5.8; leftover $1100.68 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $407.74 | ▼ close $8,684.64 vs 09:30 $8,875.00 (session -101.54) | 16:00 close · cash $407.74 · equity $8,684.64 vs 09:30 $8,875.00 (-190.36; session marks -101.54) · 8 name(s) marked open→close (per-name table). XENE×27 09:30 $40.00 → close $38.99 -27.27; SION×183 09:30 $6.00 → close $6.00 +0.00; THO×16 09:30 $68.39 → close $69.94 +24.80; KDK×321 09:30 $3.42 → close $3.27 -48.15; MLKN×52 09:30 $20.85 → close $20.32 -27.56; ABVX×10 09:30 $105.72 → close $103.45 -22.70; SGML×108 09:30 $10.13 → close $10.27 +14.58; HUM×2 09:30 $386.20 → close $378.58 -15.24 | — |
+| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $407.74 | ▲ 09:30 equity $8,755.35 vs yday $8,684.64 (+70.71) | 09:30 open · cash $407.74 (unchanged overnight, no fees) · equity $8,755.35 vs prior close $8,684.64 (+70.71) · 8 name(s) re-marked at the open (per-name table). XENE×27 yday $38.99 → 09:30 $39.10 +2.97; SION×183 yday $6.00 → 09:30 $5.99 -1.83; THO×16 yday $69.94 → 09:30 $70.64 +11.20; KDK×321 yday $3.27 → 09:30 $3.40 +41.73; MLKN×52 yday $20.32 → 09:30 $20.37 +2.60; ABVX×10 yday $103.45 → 09:30 $103.45 +0.00; SGML×108 yday $10.27 → 09:30 $10.40 +14.04; HUM×2 yday $378.58 → 09:30 $378.58 +0.00 | — |
+| 2026-09-22 09:30 ET | **BUY** | `FJET` | 33 | $2.03 | $0.77 | — | $339.98 | — | rank by rsi; rank rsi; list probable,yday_gainer,yday_mover; ret5=+0.5; leftover $67.96 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-22 09:30 ET | **BUY** | `MKC` | 1 | $48.89 | $0.49 | — | $290.60 | — | rank by rsi; rank rsi; list flatten; ret5=-3.0; leftover $67.96 | join🟢 sector🟢 gen🔴 news🟡 digest🟡 ab🟢 peer🟡 heat🔴 vol🟡 buy🟡 |
+| 2026-09-22 09:30 ET | **BUY** | `CBRL` | 1 | $45.05 | $0.45 | — | $245.10 | — | rank by rsi; rank rsi; list overnight; ret5=-4.5; leftover $67.96 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-22 09:30 ET | **BUY** | `KBH` | 1 | $49.39 | $0.50 | — | $195.21 | — | rank by rsi; rank rsi; list overnight; ret5=-3.4; leftover $67.96 | join🔴 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-22 09:30 ET | **BUY** | `GIS` | 1 | $35.96 | $0.36 | — | $158.89 | — | rank by rsi; rank rsi; list overnight; ret5=-8.5; leftover $67.96 | join🔴 sector🟢 gen🔴 news🟡 digest🟡 ab🔴 peer🟡 heat🔴 vol🟡 buy🟡 |
+| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $158.89 | ▼ close $8,725.33 vs 09:30 $8,755.35 (session -27.45) | 16:00 close · cash $158.89 · equity $8,725.33 vs 09:30 $8,755.35 (-30.02; session marks -27.45) · 13 name(s) marked open→close (per-name table). XENE×27 09:30 $39.10 → close $38.61 -13.23; SION×183 09:30 $5.99 → close $6.02 +5.49; THO×16 09:30 $70.64 → close $70.00 -10.24; KDK×321 09:30 $3.40 → close $3.45 +16.05; MLKN×52 09:30 $20.37 → close $19.89 -24.96; ABVX×10 09:30 $103.45 → close $103.45 +0.00; SGML×108 09:30 $10.40 → close $10.41 +1.08; HUM×2 09:30 $378.58 → close $378.58 +0.00; FJET×33 09:30 $2.03 → close $2.02 -0.33; MKC×1 09:30 $48.89 → close $48.89 +0.00; CBRL×1 09:30 $45.05 → close $45.05 +0.00; KBH×1 09:30 $49.39 → close $48.59 -0.80; GIS×1 09:30 $35.96 → close $35.45 -0.51 | — |
+| 2026-09-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $158.89 | ▼ 09:30 equity $8,593.16 vs yday $8,725.33 (-132.17) | 09:30 open · cash $158.89 (unchanged overnight, no fees) · equity $8,593.16 vs prior close $8,725.33 (-132.17) · 13 name(s) re-marked at the open (per-name table). XENE×27 yday $38.61 → 09:30 $39.51 +24.30; SION×183 yday $6.02 → 09:30 $6.03 +1.83; THO×16 yday $70.00 → 09:30 $71.41 +22.56; KDK×321 yday $3.45 → 09:30 $3.17 -89.88; MLKN×52 yday $19.89 → 09:30 $19.76 -6.76; ABVX×10 yday $103.45 → 09:30 $98.30 -51.50; SGML×108 yday $10.41 → 09:30 $10.26 -16.20; HUM×2 yday $378.58 → 09:30 $370.00 -17.16; FJET×33 yday $2.02 → 09:30 $1.98 -1.32; MKC×1 yday $48.89 → 09:30 $49.48 +0.59; CBRL×1 yday $45.05 → 09:30 $47.57 +2.52; KBH×1 yday $48.59 → 09:30 $47.15 -1.44; GIS×1 yday $35.45 → 09:30 $35.74 +0.29 | — |
+| 2026-09-23 09:30 ET | **BUY** | `XNDU` | 5 | $5.99 | $0.31 | — | $128.62 | — | rank by rsi; rank rsi; list yday_mover; 🔵; ret5=-10.9; leftover $31.78 | join🟢 sector🟡 gen🟢 news🟡 digest🟡 judge🟡 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `CMPX` | 26 | $1.22 | $0.40 | — | $96.51 | — | rank by rsi; rank rsi; list yday_mover; 🔵; ret5=-15.6; leftover $31.78 | join🔴 sector🟢 gen🟢 news🟢 digest🟡 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `NMRA` | 41 | $0.76 | $0.43 | — | $64.92 | — | rank by rsi; rank rsi; list yday_gainer,yday_mover; 🔵; ret5=-6.3; leftover $31.78 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `EVER` | 1 | $19.46 | $0.20 | — | $45.26 | — | rank by rsi; rank rsi; list yday_mover; ret5=-2.0; leftover $31.78 | join🔴 sector🟢 gen🟢 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $45.26 | ▼ close $8,324.85 vs 09:30 $8,593.16 (session -266.97) | 16:00 close · cash $45.26 · equity $8,324.85 vs 09:30 $8,593.16 (-268.31; session marks -266.97) · 17 name(s) marked open→close (per-name table). XENE×27 09:30 $39.51 → close $36.56 -79.65; SION×183 09:30 $6.03 → close $5.51 -95.16; THO×16 09:30 $71.41 → close $72.30 +14.24; KDK×321 09:30 $3.17 → close $2.97 -64.20; MLKN×52 09:30 $19.76 → close $20.04 +14.56; ABVX×10 09:30 $98.30 → close $94.13 -41.70; SGML×108 09:30 $10.26 → close $10.14 -12.96; HUM×2 09:30 $370.00 → close $374.80 +9.60; FJET×33 09:30 $1.98 → close $1.87 -3.77; MKC×1 09:30 $49.48 → close $49.12 -0.36; CBRL×1 09:30 $47.57 → close $47.52 -0.05; KBH×1 09:30 $47.15 → close $47.16 +0.01; GIS×1 09:30 $35.74 → close $35.82 +0.08; XNDU×5 09:30 $5.99 → close $5.33 -3.30; CMPX×26 09:30 $1.22 → close $1.17 -1.30; NMRA×41 09:30 $0.76 → close $0.73 -1.18; EVER×1 09:30 $19.46 → close $17.63 -1.83 | — |
 
 ## Not taken
 
@@ -854,7 +886,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | `RCAT` | cash | leftover split 0.16 < 1 share @ 7.39 |
 | 2026-09-17 | `PALI` | cash | leftover split 0.16 < 1 share @ 1.75 |
 | 2026-09-17 | `CRDO` | cash | leftover split 0.16 < 1 share @ 168.65 |
-| 2026-09-17 | `PUMP` | cash | leftover split 0.16 < 1 share @ 10.31 |
+| 2026-09-17 | `TNDM` | cash | leftover split 0.16 < 1 share @ 17.72 |
 | 2026-09-18 | `NMRA` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-18 | `ALHC` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-18 | `CRBP` | min_hold | dropped but min-hold 2/3 sess — no sell |
@@ -867,17 +899,26 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | `DCX` | cash | leftover split 0.13 < 1 share @ 0.35 |
 | 2026-09-18 | `ALMU` | cash | leftover split 0.13 < 1 share @ 11.64 |
 | 2026-09-18 | `XE` | cash | leftover split 0.13 < 1 share @ 16.28 |
+| 2026-09-18 | `SES` | cash | leftover split 0.13 < 1 share @ 0.53 |
 | 2026-09-18 | `BHVN` | cash | leftover split 0.13 < 1 share @ 14.07 |
-| 2026-09-18 | `TLSA` | cash | leftover split 0.13 < 1 share @ 0.97 |
 | 2026-09-22 | `XENE` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-22 | `SION` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-22 | `THO` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-22 | `KDK` | min_hold | dropped but min-hold 1/3 sess — no sell |
-| 2026-09-22 | `BKV` | min_hold | dropped but min-hold 1/3 sess — no sell |
-| 2026-09-22 | `PUMP` | min_hold | dropped but min-hold 1/3 sess — no sell |
-| 2026-09-22 | `MKC` | cash | leftover split 18.79 < 1 share @ 49.57 |
-| 2026-09-22 | `USFD` | cash | leftover split 18.79 < 1 share @ 94.08 |
-| 2026-09-22 | `KBH` | cash | leftover split 18.79 < 1 share @ 49.39 |
-| 2026-09-22 | `BRVE` | cash | leftover split 18.79 < 1 share @ 25.41 |
+| 2026-09-22 | `SGML` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-22 | `HUM` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-22 | `USFD` | cash | leftover split 67.96 < 1 share @ 94.22 |
+| 2026-09-23 | `XENE` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-23 | `SION` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-23 | `THO` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-23 | `KDK` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-23 | `MLKN` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-23 | `ABVX` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-23 | `SGML` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-23 | `HUM` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-23 | `FJET` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-23 | `MKC` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-23 | `FUL` | cash | leftover split 31.78 < 1 share @ 50.51 |
 
 ## Still open (marked at last close)
 
@@ -885,10 +926,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 |---|---:|---|---|
 | `XENE` | 27 | 2026-09-21 @ $40.00 | rank by rsi; rank rsi; list yday_mover; ret5=-32.2; leftover $1100.68 |
 | `SION` | 183 | 2026-09-21 @ $6.00 | rank by rsi; rank rsi; list yday_mover; ret5=-24.1; leftover $1100.68 |
-| `THO` | 16 | 2026-09-21 @ $68.39 | rank by rsi; rank rsi; list overnight; ret5=-2.5; leftover $1100.68 |
+| `THO` | 16 | 2026-09-21 @ $68.39 | rank by rsi; rank rsi; list overnight; ret5=-7.0; leftover $1100.68 |
 | `KDK` | 321 | 2026-09-21 @ $3.42 | rank by rsi; rank rsi; list yday_mover; ret5=-12.3; leftover $1100.68 |
-| `MLKN` | 52 | 2026-09-21 @ $20.85 | rank by rsi; rank rsi; list overnight; ret5=-1.7; leftover $1100.68 |
+| `MLKN` | 52 | 2026-09-21 @ $20.85 | rank by rsi; rank rsi; list overnight; ret5=-2.5; leftover $1100.68 |
 | `ABVX` | 10 | 2026-09-21 @ $105.72 | rank by rsi; rank rsi; list overnight; ret5=-11.5; leftover $1100.68 |
-| `BKV` | 48 | 2026-09-21 @ $22.68 | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+10.8; leftover $1100.68 |
-| `PUMP` | 105 | 2026-09-21 @ $10.40 | rank by rsi; rank rsi; list ohlc_hot; 🔵; ret5=+5.9; leftover $1100.68 |
-| `DLO` | 1 | 2026-09-22 @ $14.50 | rank by rsi; rank rsi; list flatten; ret5=-3.6; leftover $18.79 |
+| `SGML` | 108 | 2026-09-21 @ $10.13 | rank by rsi; rank rsi; list probable,yday_gainer; ret5=+4.9; leftover $1100.68 |
+| `HUM` | 2 | 2026-09-21 @ $386.20 | rank by rsi; rank rsi; list flatten; ret5=-5.8; leftover $1100.68 |
+| `FJET` | 33 | 2026-09-22 @ $2.03 | rank by rsi; rank rsi; list probable,yday_gainer,yday_mover; ret5=+0.5; leftover $67.96 |
+| `MKC` | 1 | 2026-09-22 @ $48.89 | rank by rsi; rank rsi; list flatten; ret5=-3.0; leftover $67.96 |
+| `CBRL` | 1 | 2026-09-22 @ $45.05 | rank by rsi; rank rsi; list overnight; ret5=-4.5; leftover $67.96 |
+| `KBH` | 1 | 2026-09-22 @ $49.39 | rank by rsi; rank rsi; list overnight; ret5=-3.4; leftover $67.96 |
+| `GIS` | 1 | 2026-09-22 @ $35.96 | rank by rsi; rank rsi; list overnight; ret5=-8.5; leftover $67.96 |
+| `XNDU` | 5 | 2026-09-23 @ $5.99 | rank by rsi; rank rsi; list yday_mover; 🔵; ret5=-10.9; leftover $31.78 |
+| `CMPX` | 26 | 2026-09-23 @ $1.22 | rank by rsi; rank rsi; list yday_mover; 🔵; ret5=-15.6; leftover $31.78 |
+| `NMRA` | 41 | 2026-09-23 @ $0.76 | rank by rsi; rank rsi; list yday_gainer,yday_mover; 🔵; ret5=-6.3; leftover $31.78 |
+| `EVER` | 1 | 2026-09-23 @ $19.46 | rank by rsi; rank rsi; list yday_mover; ret5=-2.0; leftover $31.78 |

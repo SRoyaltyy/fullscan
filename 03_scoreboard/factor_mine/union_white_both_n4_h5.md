@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 4 · rank `list` · size `leftover` · sell `list` · S-boost `none` · −0 red + yday up AND catalyst, top 4 by Score
 
-Cash book **+21.08%** ($12,108) · signal-only (no cash/fees) was +27.95%. Starts YES **19/28**. Fills 60 · skips 129 · realized $+2045.25.
+Cash book **+18.79%** ($11,879) · signal-only (no cash/fees) was +21.47%. Starts YES **9/29**. Fills 66 · skips 133 · realized $+2138.04.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $156.44.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $61.46.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -237,19 +237,29 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | `RBRK` | 1 | — | $108.55 | +0.00 | $106.71 | -1.84 | -1.84 | +0.00 | -1.84 |
 | 2026-09-18 | `ECO` | 2 | — | $85.00 | +0.00 | $84.95 | -0.10 | -0.10 | +0.00 | -0.10 |
 | 2026-09-18 | `FIVN` | 6 | — | $34.44 | +0.00 | $32.47 | -11.82 | -11.82 | +0.00 | -11.82 |
-| 2026-09-18 | `RARE` | 14 | — | $14.79 | +0.00 | $14.51 | -3.92 | -3.92 | +0.00 | -3.92 |
+| 2026-09-18 | `SDGR` | 7 | — | $29.32 | +0.00 | $29.02 | -2.10 | -2.10 | +0.00 | -2.10 |
 | 2026-09-21 | `SWKS` | 63 | $88.76 | $89.66 | +56.70 | $88.74 | -57.96 | -1.26 | +17.64 | -40.32 |
 | 2026-09-21 | `QRVO` | 47 | $117.18 | $118.44 | +59.22 | $117.21 | -57.81 | +1.41 | +12.22 | -45.59 |
 | 2026-09-21 | `RBRK` | 1 | $106.71 | $107.57 | +0.86 | $112.96 | +5.39 | +6.25 | -0.98 | +4.41 |
 | 2026-09-21 | `ECO` | 2 | $84.95 | $82.83 | -4.24 | $82.63 | -0.40 | -4.64 | -4.34 | -4.74 |
 | 2026-09-21 | `FIVN` | 6 | $32.47 | $33.00 | +3.18 | $37.01 | +24.06 | +27.24 | -8.64 | +15.42 |
-| 2026-09-21 | `RARE` | 14 | $14.51 | $14.58 | +0.98 | $14.65 | +0.98 | +1.96 | -2.94 | -1.96 |
-| 2026-09-22 | `SWKS` | 63 | $88.74 | $89.00 | +16.07 | $89.96 | +60.79 | +76.86 | -24.25 | +36.54 |
-| 2026-09-22 | `QRVO` | 47 | $117.21 | $117.16 | -2.35 | $118.44 | +60.16 | +57.81 | -47.94 | +12.22 |
-| 2026-09-22 | `RBRK` | 1 | $112.96 | $113.75 | +0.79 | $111.87 | -1.88 | -1.09 | +5.20 | +3.32 |
-| 2026-09-22 | `ECO` | 2 | $82.63 | $77.83 | -9.60 | $77.54 | -0.58 | -10.18 | -14.34 | -14.92 |
-| 2026-09-22 | `FIVN` | 6 | $37.01 | $37.12 | +0.66 | $38.65 | +9.18 | +9.84 | +16.08 | +25.26 |
-| 2026-09-22 | `RARE` | 14 | $14.65 | $14.78 | +1.82 | $15.62 | +11.69 | +13.51 | -0.14 | +11.55 |
+| 2026-09-21 | `SDGR` | 7 | $29.02 | $29.43 | +2.87 | $30.24 | +5.67 | +8.54 | +0.77 | +6.44 |
+| 2026-09-22 | `SWKS` | 63 | $88.74 | $88.74 | +0.00 | $88.31 | -27.09 | -27.09 | -40.32 | -67.41 |
+| 2026-09-22 | `QRVO` | 47 | $117.21 | $116.47 | -34.78 | $116.47 | +0.00 | -34.78 | -80.37 | -80.37 |
+| 2026-09-22 | `RBRK` | 1 | $112.96 | $113.30 | +0.34 | $113.55 | +0.25 | +0.59 | +4.75 | +5.00 |
+| 2026-09-22 | `ECO` | 2 | $82.63 | $81.84 | -1.58 | $81.95 | +0.22 | -1.36 | -6.32 | -6.10 |
+| 2026-09-22 | `FIVN` | 6 | $37.01 | $37.35 | +2.04 | $37.20 | -0.90 | +1.14 | +17.46 | +16.56 |
+| 2026-09-22 | `SDGR` | 7 | $30.24 | $30.50 | +1.82 | $30.09 | -2.87 | -1.05 | +8.26 | +5.39 |
+| 2026-09-23 | `SWKS` | 63 | $88.31 | $90.54 | +140.49 | — | +0.00 | +140.49 | +73.08 | — |
+| 2026-09-23 | `QRVO` | 47 | $116.47 | $118.78 | +108.80 | — | +0.00 | +108.80 | +28.43 | — |
+| 2026-09-23 | `RBRK` | 1 | $113.55 | $112.46 | -1.09 | $115.65 | +3.19 | +2.10 | +3.91 | +7.10 |
+| 2026-09-23 | `ECO` | 2 | $81.95 | $77.55 | -8.80 | $77.91 | +0.72 | -8.08 | -14.90 | -14.18 |
+| 2026-09-23 | `FIVN` | 6 | $37.20 | $38.99 | +10.74 | $37.68 | -7.86 | +2.88 | +27.30 | +19.44 |
+| 2026-09-23 | `SDGR` | 7 | $30.09 | $30.05 | -0.28 | $29.23 | -5.74 | -6.02 | +5.11 | -0.63 |
+| 2026-09-23 | `A` | 17 | — | $166.54 | +0.00 | $165.28 | -21.42 | -21.42 | +0.00 | -21.42 |
+| 2026-09-23 | `ARQT` | 102 | — | $27.79 | +0.00 | $26.38 | -143.82 | -143.82 | +0.00 | -143.82 |
+| 2026-09-23 | `FTRE` | 141 | — | $20.25 | +0.00 | $19.52 | -102.93 | -102.93 | +0.00 | -102.93 |
+| 2026-09-23 | `OMER` | 138 | — | $20.65 | +0.00 | $20.74 | +12.97 | +12.97 | +0.00 | +12.97 |
 
 ## Each session (cash + holdings state)
 
@@ -280,9 +290,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | -3.84 | $11,332.84 | BAND×7, PAYP×20 | $12,045.41 | -3.82 | -5.61 | — | — | $11,332.84 | $12,039.80 | BAND×7, PAYP×20 |
 | 2026-09-16 | +5.30 | $11,332.84 | BAND×7, PAYP×20 | $12,027.64 | -12.16 | -435.93 | SWKS, QRVO | — | $143.13 | $11,587.40 | BAND×7, PAYP×20, SWKS×63, QRVO×47 |
 | 2026-09-17 | +7.38 | $143.13 | BAND×7, PAYP×20, SWKS×63, QRVO×47 | $11,715.26 | +127.86 | +509.77 | — | — | $143.13 | $12,225.03 | BAND×7, PAYP×20, SWKS×63, QRVO×47 |
-| 2026-09-18 | +4.86 | $143.13 | BAND×7, PAYP×20, SWKS×63, QRVO×47 | $12,334.50 | +109.47 | -393.21 | RBRK, ECO, FIVN, RARE | BAND, PAYP | $156.44 | $11,930.35 | SWKS×63, QRVO×47, RBRK×1, ECO×2, FIVN×6, RARE×14 |
-| 2026-09-21 | +12.87 | $156.44 | SWKS×63, QRVO×47, RBRK×1, ECO×2, FIVN×6, RARE×14 | $12,047.05 | +116.70 | -85.74 | — | — | $156.44 | $11,961.31 | SWKS×63, QRVO×47, RBRK×1, ECO×2, FIVN×6, RARE×14 |
-| 2026-09-22 | -0.50 | $156.44 | SWKS×63, QRVO×47, RBRK×1, ECO×2, FIVN×6, RARE×14 | $11,968.69 | +7.38 | +139.36 | — | — | $156.44 | $12,108.06 | SWKS×63, QRVO×47, RBRK×1, ECO×2, FIVN×6, RARE×14 |
+| 2026-09-18 | +4.86 | $143.13 | BAND×7, PAYP×20, SWKS×63, QRVO×47 | $12,334.50 | +109.47 | -391.39 | RBRK, ECO, FIVN, SDGR | BAND, PAYP | $158.28 | $11,932.19 | SWKS×63, QRVO×47, RBRK×1, ECO×2, FIVN×6, SDGR×7 |
+| 2026-09-21 | +12.87 | $158.28 | SWKS×63, QRVO×47, RBRK×1, ECO×2, FIVN×6, SDGR×7 | $12,050.78 | +118.59 | -81.05 | — | — | $158.28 | $11,969.73 | SWKS×63, QRVO×47, RBRK×1, ECO×2, FIVN×6, SDGR×7 |
+| 2026-09-22 | -0.50 | $158.28 | SWKS×63, QRVO×47, RBRK×1, ECO×2, FIVN×6, SDGR×7 | $11,937.57 | -32.16 | -30.39 | — | — | $158.28 | $11,907.18 | SWKS×63, QRVO×47, RBRK×1, ECO×2, FIVN×6, SDGR×7 |
+| 2026-09-23 | +2.29 | $158.28 | SWKS×63, QRVO×47, RBRK×1, ECO×2, FIVN×6, SDGR×7 | $12,157.05 | +249.87 | -264.89 | A, ARQT, FTRE, OMER | SWKS, QRVO | $61.46 | $11,878.58 | RBRK×1, ECO×2, FIVN×6, SDGR×7, A×17, ARQT×102, FTRE×141, OMER×138 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -398,12 +409,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 09:30 ET | **BUY** | `RBRK` | 1 | $108.55 | $1.09 | — | $745.89 | — | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; ⚪; ret5=+21.3; leftover $213.88 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
 | 2026-09-18 09:30 ET | **BUY** | `ECO` | 2 | $85.00 | $1.71 | — | $574.18 | — | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; 🔵; ⚪; ret5=+18.3; leftover $213.88 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-18 09:30 ET | **BUY** | `FIVN` | 6 | $34.44 | $2.01 | — | $365.53 | — | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; 🔵; ⚪; ret5=+14.0; leftover $213.88 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
-| 2026-09-18 09:30 ET | **BUY** | `RARE` | 14 | $14.79 | $2.03 | — | $156.44 | — | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list probable,yday_gainer; 🔵; ⚪; ret5=+0.7; leftover $213.88 | join🟢 sector🟢 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $156.44 | ▼ close $11,930.35 vs 09:30 $12,334.50 (session -393.21) | 16:00 close · cash $156.44 · equity $11,930.35 vs 09:30 $12,334.50 (-404.15; session marks -393.21) · 6 name(s) marked open→close (per-name table). SWKS×63 09:30 $92.05 → close $88.76 -207.27; QRVO×47 09:30 $120.76 → close $117.18 -168.26; RBRK×1 09:30 $108.55 → close $106.71 -1.84; ECO×2 09:30 $85.00 → close $84.95 -0.10; FIVN×6 09:30 $34.44 → close $32.47 -11.82; RARE×14 09:30 $14.79 → close $14.51 -3.92 | — |
-| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $156.44 | ▲ 09:30 equity $12,047.05 vs yday $11,930.35 (+116.70) | 09:30 open · cash $156.44 (unchanged overnight, no fees) · equity $12,047.05 vs prior close $11,930.35 (+116.70) · 6 name(s) re-marked at the open (per-name table). SWKS×63 yday $88.76 → 09:30 $89.66 +56.70; QRVO×47 yday $117.18 → 09:30 $118.44 +59.22; RBRK×1 yday $106.71 → 09:30 $107.57 +0.86; ECO×2 yday $84.95 → 09:30 $82.83 -4.24; FIVN×6 yday $32.47 → 09:30 $33.00 +3.18; RARE×14 yday $14.51 → 09:30 $14.58 +0.98 | — |
-| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $156.44 | ▼ close $11,961.31 vs 09:30 $12,047.05 (session -85.74) | 16:00 close · cash $156.44 · equity $11,961.31 vs 09:30 $12,047.05 (-85.74; session marks -85.74) · 6 name(s) marked open→close (per-name table). SWKS×63 09:30 $89.66 → close $88.74 -57.96; QRVO×47 09:30 $118.44 → close $117.21 -57.81; RBRK×1 09:30 $107.57 → close $112.96 +5.39; ECO×2 09:30 $82.83 → close $82.63 -0.40; FIVN×6 09:30 $33.00 → close $37.01 +24.06; RARE×14 09:30 $14.58 → close $14.65 +0.98 | — |
-| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $156.44 | ▲ 09:30 equity $11,968.69 vs yday $11,961.31 (+7.38) | 09:30 open · cash $156.44 (unchanged overnight, no fees) · equity $11,968.69 vs prior close $11,961.31 (+7.38) · 6 name(s) re-marked at the open (per-name table). SWKS×63 yday $88.74 → 09:30 $89.00 +16.07; QRVO×47 yday $117.21 → 09:30 $117.16 -2.35; RBRK×1 yday $112.96 → 09:30 $113.75 +0.79; ECO×2 yday $82.63 → 09:30 $77.83 -9.60; FIVN×6 yday $37.01 → 09:30 $37.12 +0.66; RARE×14 yday $14.65 → 09:30 $14.78 +1.82 | — |
-| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $156.44 | ▲ close $12,108.06 vs 09:30 $11,968.69 (session +139.36) | 16:00 close · cash $156.44 · equity $12,108.06 vs 09:30 $11,968.69 (+139.37; session marks +139.36) · 6 name(s) marked open→close (per-name table). SWKS×63 09:30 $89.00 → close $89.96 +60.79; QRVO×47 09:30 $117.16 → close $118.44 +60.16; RBRK×1 09:30 $113.75 → close $111.87 -1.88; ECO×2 09:30 $77.83 → close $77.54 -0.58; FIVN×6 09:30 $37.12 → close $38.65 +9.18; RARE×14 09:30 $14.78 → close $15.62 +11.69 | — |
+| 2026-09-18 09:30 ET | **BUY** | `SDGR` | 7 | $29.32 | $2.01 | — | $158.28 | — | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+60.9; leftover $213.88 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $158.28 | ▼ close $11,932.19 vs 09:30 $12,334.50 (session -391.39) | 16:00 close · cash $158.28 · equity $11,932.19 vs 09:30 $12,334.50 (-402.31; session marks -391.39) · 6 name(s) marked open→close (per-name table). SWKS×63 09:30 $92.05 → close $88.76 -207.27; QRVO×47 09:30 $120.76 → close $117.18 -168.26; RBRK×1 09:30 $108.55 → close $106.71 -1.84; ECO×2 09:30 $85.00 → close $84.95 -0.10; FIVN×6 09:30 $34.44 → close $32.47 -11.82; SDGR×7 09:30 $29.32 → close $29.02 -2.10 | — |
+| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $158.28 | ▲ 09:30 equity $12,050.78 vs yday $11,932.19 (+118.59) | 09:30 open · cash $158.28 (unchanged overnight, no fees) · equity $12,050.78 vs prior close $11,932.19 (+118.59) · 6 name(s) re-marked at the open (per-name table). SWKS×63 yday $88.76 → 09:30 $89.66 +56.70; QRVO×47 yday $117.18 → 09:30 $118.44 +59.22; RBRK×1 yday $106.71 → 09:30 $107.57 +0.86; ECO×2 yday $84.95 → 09:30 $82.83 -4.24; FIVN×6 yday $32.47 → 09:30 $33.00 +3.18; SDGR×7 yday $29.02 → 09:30 $29.43 +2.87 | — |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $158.28 | ▼ close $11,969.73 vs 09:30 $12,050.78 (session -81.05) | 16:00 close · cash $158.28 · equity $11,969.73 vs 09:30 $12,050.78 (-81.05; session marks -81.05) · 6 name(s) marked open→close (per-name table). SWKS×63 09:30 $89.66 → close $88.74 -57.96; QRVO×47 09:30 $118.44 → close $117.21 -57.81; RBRK×1 09:30 $107.57 → close $112.96 +5.39; ECO×2 09:30 $82.83 → close $82.63 -0.40; FIVN×6 09:30 $33.00 → close $37.01 +24.06; SDGR×7 09:30 $29.43 → close $30.24 +5.67 | — |
+| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $158.28 | ▼ 09:30 equity $11,937.57 vs yday $11,969.73 (-32.16) | 09:30 open · cash $158.28 (unchanged overnight, no fees) · equity $11,937.57 vs prior close $11,969.73 (-32.16) · 6 name(s) re-marked at the open (per-name table). SWKS×63 yday $88.74 → 09:30 $88.74 +0.00; QRVO×47 yday $117.21 → 09:30 $116.47 -34.78; RBRK×1 yday $112.96 → 09:30 $113.30 +0.34; ECO×2 yday $82.63 → 09:30 $81.84 -1.58; FIVN×6 yday $37.01 → 09:30 $37.35 +2.04; SDGR×7 yday $30.24 → 09:30 $30.50 +1.82 | — |
+| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $158.28 | ▼ close $11,907.18 vs 09:30 $11,937.57 (session -30.39) | 16:00 close · cash $158.28 · equity $11,907.18 vs 09:30 $11,937.57 (-30.39; session marks -30.39) · 6 name(s) marked open→close (per-name table). SWKS×63 09:30 $88.74 → close $88.31 -27.09; QRVO×47 09:30 $116.47 → close $116.47 +0.00; RBRK×1 09:30 $113.30 → close $113.55 +0.25; ECO×2 09:30 $81.84 → close $81.95 +0.22; FIVN×6 09:30 $37.35 → close $37.20 -0.90; SDGR×7 09:30 $30.50 → close $30.09 -2.87 | — |
+| 2026-09-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $158.28 | ▲ 09:30 equity $12,157.05 vs yday $11,907.18 (+249.87) | 09:30 open · cash $158.28 (unchanged overnight, no fees) · equity $12,157.05 vs prior close $11,907.18 (+249.87) · 6 name(s) re-marked at the open (per-name table). SWKS×63 yday $88.31 → 09:30 $90.54 +140.49; QRVO×47 yday $116.47 → 09:30 $118.78 +108.80; RBRK×1 yday $113.55 → 09:30 $112.46 -1.09; ECO×2 yday $81.95 → 09:30 $77.55 -8.80; FIVN×6 yday $37.20 → 09:30 $38.99 +10.74; SDGR×7 yday $30.09 → 09:30 $30.05 -0.28 | — |
+| 2026-09-23 09:30 ET | **SELL** | `SWKS` | 63 | $90.54 | $2.24 | $+68.67 | $5,860.07 | ▲ +68.67 after sell → book $12,154.81; vs 09:30 mark -2.24 | dropped from list after 5 sess (min 5) | — |
+| 2026-09-23 09:30 ET | **SELL** | `QRVO` | 47 | $118.78 | $2.19 | $+24.12 | $11,440.77 | ▲ +24.12 after sell → book $12,152.62; vs 09:30 mark -2.19 | dropped from list after 5 sess (min 5) | — |
+| 2026-09-23 09:30 ET | **BUY** | `A` | 17 | $166.54 | $2.04 | — | $8,607.55 | — | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; 🔵; ⚪; ret5=+10.3; leftover $2860.19 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `ARQT` | 102 | $27.79 | $2.30 | — | $5,770.68 | — | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; 🔵; ⚪; ret5=+7.0; leftover $2860.19 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `FTRE` | 141 | $20.25 | $2.41 | — | $2,913.01 | — | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; 🔵; ⚪; ret5=+15.0; leftover $2860.19 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟡 peer🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `OMER` | 138 | $20.65 | $2.40 | — | $61.46 | — | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten,probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+5.9; leftover $2860.19 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $61.46 | ▼ close $11,878.58 vs 09:30 $12,157.05 (session -264.89) | 16:00 close · cash $61.46 · equity $11,878.58 vs 09:30 $12,157.05 (-278.47; session marks -264.89) · 8 name(s) marked open→close (per-name table). RBRK×1 09:30 $112.46 → close $115.65 +3.19; ECO×2 09:30 $77.55 → close $77.91 +0.72; FIVN×6 09:30 $38.99 → close $37.68 -7.86; SDGR×7 09:30 $30.05 → close $29.23 -5.74; A×17 09:30 $166.54 → close $165.28 -21.42; ARQT×102 09:30 $27.79 → close $26.38 -143.82; FTRE×141 09:30 $20.25 → close $19.52 -102.93; OMER×138 09:30 $20.65 → close $20.74 +12.97 | — |
 
 ## Not taken
 
@@ -531,21 +550,27 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | `RBRK` | min_hold | dropped but min-hold 1/5 sess — no sell |
 | 2026-09-21 | `ECO` | min_hold | dropped but min-hold 1/5 sess — no sell |
 | 2026-09-21 | `FIVN` | min_hold | dropped but min-hold 1/5 sess — no sell |
-| 2026-09-21 | `RARE` | min_hold | dropped but min-hold 1/5 sess — no sell |
+| 2026-09-21 | `SDGR` | min_hold | dropped but min-hold 1/5 sess — no sell |
 | 2026-09-22 | `SWKS` | min_hold | dropped but min-hold 4/5 sess — no sell |
 | 2026-09-22 | `QRVO` | min_hold | dropped but min-hold 4/5 sess — no sell |
 | 2026-09-22 | `RBRK` | min_hold | dropped but min-hold 2/5 sess — no sell |
 | 2026-09-22 | `ECO` | min_hold | dropped but min-hold 2/5 sess — no sell |
 | 2026-09-22 | `FIVN` | min_hold | dropped but min-hold 2/5 sess — no sell |
-| 2026-09-22 | `RARE` | min_hold | dropped but min-hold 2/5 sess — no sell |
+| 2026-09-22 | `SDGR` | min_hold | dropped but min-hold 2/5 sess — no sell |
+| 2026-09-23 | `RBRK` | min_hold | dropped but min-hold 3/5 sess — no sell |
+| 2026-09-23 | `ECO` | min_hold | dropped but min-hold 3/5 sess — no sell |
+| 2026-09-23 | `FIVN` | min_hold | dropped but min-hold 3/5 sess — no sell |
+| 2026-09-23 | `SDGR` | min_hold | dropped but min-hold 3/5 sess — no sell |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `SWKS` | 63 | 2026-09-16 @ $89.38 | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+19.4; leftover $5666.42 |
-| `QRVO` | 47 | 2026-09-16 @ $118.18 | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list yday_gainer,ohlc_hot; 🔵; ⚪; ret5=+13.4; leftover $5666.42 |
 | `RBRK` | 1 | 2026-09-18 @ $108.55 | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; ⚪; ret5=+21.3; leftover $213.88 |
 | `ECO` | 2 | 2026-09-18 @ $85.00 | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; 🔵; ⚪; ret5=+18.3; leftover $213.88 |
 | `FIVN` | 6 | 2026-09-18 @ $34.44 | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; 🔵; ⚪; ret5=+14.0; leftover $213.88 |
-| `RARE` | 14 | 2026-09-18 @ $14.79 | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list probable,yday_gainer; 🔵; ⚪; ret5=+0.7; leftover $213.88 |
+| `SDGR` | 7 | 2026-09-18 @ $29.32 | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list yday_gainer,yday_mover; 🔵; ⚪; ret5=+60.9; leftover $213.88 |
+| `A` | 17 | 2026-09-23 @ $166.54 | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; 🔵; ⚪; ret5=+10.3; leftover $2860.19 |
+| `ARQT` | 102 | 2026-09-23 @ $27.79 | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; 🔵; ⚪; ret5=+7.0; leftover $2860.19 |
+| `FTRE` | 141 | 2026-09-23 @ $20.25 | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten; 🔵; ⚪; ret5=+15.0; leftover $2860.19 |
+| `OMER` | 138 | 2026-09-23 @ $20.65 | −0 red + yday up AND catalyst, top 4 by Score; gate cam_bad_max=0,yday_and_catalyst=True; rank list; list flatten,probable,yday_gainer,yday_mover; 🔵; ⚪; ret5=+5.9; leftover $2860.19 |
