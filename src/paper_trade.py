@@ -50,6 +50,9 @@ SCOREBOARD = ROOT / "03_scoreboard"
 DASH_DIR = ROOT / "dashboard"
 FEES_PATH = ROOT / "00_grounding" / "futubull_fees.json"
 PRICE_CACHE = PAPER_DIR / "prices_cache.csv"
+# Book-sized hole-fill. The old <=120 cutoff skipped the whole refresh once
+# the sleeve universe outgrew it, which left a sparse tail row in the cache.
+YAHOO_CHUNK = 80
 
 HOLD_DAYS = {"1d": 1, "3d": 3, "1w": 5, "2w": 10, "1m": 21}  # trading sessions, not calendar days
 HORIZONS = list(HOLD_DAYS.keys())
@@ -439,19 +442,14 @@ def collect_skips(books: list[tuple[str, Path]], prices: pd.DataFrame,
     for r in trade_rows:
         fills_by.setdefault((r["date"], r["sleeve"]), []).append(r)
 
+    asof_rows: dict[str, pd.Series] = {}
+
     def price_of(date: str, t: str) -> float | None:
-        day_px = prices.loc[:date] if len(prices) else prices
-        if day_px is None or getattr(day_px, "empty", True):
-            return None
-        if t not in day_px.columns:
-            return None
-        v = day_px[t].iloc[-1]
-        if v is None or (isinstance(v, float) and (v != v or v <= 0)):
-            return None
-        try:
-            return float(v)
-        except (TypeError, ValueError):
-            return None
+        row = asof_rows.get(date)
+        if row is None:
+            row = asof_closes(prices, date)
+            asof_rows[date] = row
+        return _finite_positive(row.get(t))
 
     for date, path in books:
         book = json.loads(path.read_text(encoding="utf-8"))
@@ -588,6 +586,214 @@ def order_fees(shares: int, price: float, side: str, f: dict) -> float:
 
 # -------------------------------------------------------------- prices ----
 
+def _finite_positive(v) -> float | None:
+    try:
+        if v is None or v == "":
+            return None
+        x = float(v)
+    except (TypeError, ValueError):
+        return None
+    if not math.isfinite(x) or x <= 0:
+        return None
+    return x
+
+
+def asof_closes(prices: pd.DataFrame,
+                date: str | pd.Timestamp | None = None) -> pd.Series:
+    """Last positive close on or before ``date`` for each ticker.
+
+    ``DataFrame.iloc[-1]`` is one calendar row for the whole panel. A sparse
+    newer session (a few dozen names, NaN for everyone else) hides earlier
+    prints and the book stops filling. Each name keeps its own last close.
+    """
+    if prices is None or len(prices) == 0:
+        return pd.Series(dtype=float)
+    window = prices
+    if date is not None:
+        try:
+            window = prices.loc[:pd.Timestamp(date)]
+        except Exception:
+            return pd.Series(dtype=float)
+        if len(window) == 0:
+            return pd.Series(dtype=float)
+    row = window.ffill().iloc[-1]
+    out: dict[str, float] = {}
+    for t, v in row.items():
+        x = _finite_positive(v)
+        if x is not None:
+            out[str(t)] = x
+    return pd.Series(out, dtype=float)
+
+
+def accept_session_print(bar_date: str, market_dt: datetime, price) -> float | None:
+    """16:00 ET print for ``bar_date``. An intraday last-trade is not a close."""
+    px = _finite_positive(price)
+    if px is None or market_dt is None:
+        return None
+    if market_dt.date().isoformat() != str(bar_date)[:10]:
+        return None
+    if (market_dt.hour, market_dt.minute) < (15, 59):
+        return None
+    return px
+
+
+def _chart_session_close(ticker: str, bar_date: str) -> float | None:
+    """Session close when Yahoo's daily bar left Close null.
+
+    The latest completed session sometimes ships open/high/low/volume with
+    close=null. Chart meta ``regularMarketPrice`` at 16:00 ET is that print.
+    """
+    import json
+    import urllib.request
+    sym = str(ticker or "").upper().strip()
+    if not sym:
+        return None
+    start_ts = int((pd.Timestamp(bar_date) - pd.Timedelta(days=6)).timestamp())
+    end_ts = int((pd.Timestamp(bar_date) + pd.Timedelta(days=2)).timestamp())
+    url = (
+        "https://query1.finance.yahoo.com/v8/finance/chart/"
+        f"{sym}?interval=1d&period1={start_ts}&period2={end_ts}"
+    )
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=20) as resp:
+        payload = json.load(resp)
+    result = (payload.get("chart") or {}).get("result") or []
+    if not result:
+        return None
+    meta = result[0].get("meta") or {}
+    rt = meta.get("regularMarketTime")
+    if not rt:
+        return None
+    et = datetime.fromtimestamp(int(rt), ZoneInfo(config.TZ))
+    return accept_session_print(bar_date, et, meta.get("regularMarketPrice"))
+
+
+def _patch_end_session(panel: pd.DataFrame, tickers: list[str], end: str) -> pd.DataFrame:
+    """Fill a null Close on ``end`` from the 16:00 print. No empty tail row."""
+    end_ts = pd.Timestamp(end).normalize()
+    bar = end_ts.date().isoformat()
+    if panel is None:
+        panel = pd.DataFrame()
+    else:
+        panel = panel.copy()
+    if len(panel):
+        idx = pd.to_datetime(panel.index)
+        if getattr(idx, "tz", None) is not None:
+            idx = idx.tz_localize(None)
+        panel.index = idx.normalize()
+        panel = panel.sort_index()
+        panel = panel[~panel.index.duplicated(keep="last")]
+    if end_ts in panel.index:
+        missing = [str(t) for t in panel.columns
+                   if _finite_positive(panel.at[end_ts, t]) is None]
+        if not missing:
+            return panel
+    else:
+        missing = []
+    try:
+        spy_px = _chart_session_close("SPY", bar)
+    except Exception as e:
+        print(f"[paper] SPY 16:00 probe failed: {e}")
+        return panel
+    if spy_px is None:
+        return panel
+    if end_ts not in panel.index:
+        panel.loc[end_ts] = float("nan")
+        panel = panel.sort_index()
+    for t in tickers:
+        if t not in panel.columns:
+            panel[t] = float("nan")
+    missing = [str(t) for t in panel.columns
+               if _finite_positive(panel.at[end_ts, t]) is None]
+    if "SPY" in missing:
+        panel.at[end_ts, "SPY"] = spy_px
+        missing = [t for t in missing if t != "SPY"]
+    if not missing:
+        print(f"[paper] {bar} SPY close {spy_px} from the 16:00 print")
+        return panel
+    from concurrent.futures import ThreadPoolExecutor
+
+    def _one(sym: str):
+        try:
+            return sym, _chart_session_close(sym, bar)
+        except Exception:
+            return sym, None
+
+    found = 0
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        for sym, px in pool.map(_one, missing):
+            if px is None:
+                continue
+            panel.at[end_ts, sym] = px
+            found += 1
+    print(f"[paper] {bar} 16:00 prints filled {found + 1}/{len(missing) + 1} "
+          f"null daily closes")
+    return panel
+
+
+def _closes_from_yf(raw: pd.DataFrame, tickers: list[str]) -> pd.DataFrame:
+    if raw is None or getattr(raw, "empty", True):
+        return pd.DataFrame()
+    frames: dict[str, pd.Series] = {}
+    multi = isinstance(raw.columns, pd.MultiIndex)
+    for t in tickers:
+        try:
+            if multi:
+                if (t, "Close") not in raw.columns:
+                    continue
+                s = raw[(t, "Close")]
+            elif len(tickers) == 1 and "Close" in raw.columns:
+                s = raw["Close"]
+            else:
+                continue
+        except (KeyError, TypeError):
+            continue
+        frames[t] = s
+    if not frames:
+        return pd.DataFrame()
+    out = pd.DataFrame(frames)
+    idx = pd.to_datetime(out.index)
+    if getattr(idx, "tz", None) is not None:
+        idx = idx.tz_localize(None)
+    out.index = idx.normalize()
+    return out.sort_index()
+
+
+def _yahoo_close_panel(tickers: list[str], start: str, end: str) -> pd.DataFrame:
+    """Hole-fill closes for the names this sim asked for. Not the full universe."""
+    import time
+    import yfinance as yf
+    names = [str(t).upper() for t in tickers if t]
+    if not names:
+        return pd.DataFrame()
+    start_pad = (pd.Timestamp(start) - pd.Timedelta(days=10)).date().isoformat()
+    end_excl = (pd.Timestamp(end) + pd.Timedelta(days=6)).date().isoformat()
+    frames: list[pd.DataFrame] = []
+    batches = [names[i:i + YAHOO_CHUNK] for i in range(0, len(names), YAHOO_CHUNK)]
+    print(f"[paper] yahoo hole-fill {len(names)} names in {len(batches)} chunks")
+    for i, batch in enumerate(batches):
+        if i:
+            time.sleep(0.8)
+        raw = yf.download(
+            batch, start=start_pad, end=end_excl, auto_adjust=False,
+            group_by="ticker", progress=False, threads=True,
+        )
+        part = _closes_from_yf(raw, batch)
+        if part.empty and len(batch) > 1:
+            time.sleep(1.5)
+            raw = yf.download(
+                batch, start=start_pad, end=end_excl, auto_adjust=False,
+                group_by="ticker", progress=False, threads=False,
+            )
+            part = _closes_from_yf(raw, batch)
+        if not part.empty:
+            frames.append(part)
+    out = pd.concat(frames, axis=1) if frames else pd.DataFrame()
+    if not out.empty:
+        out = out.loc[:, ~out.columns.duplicated()]
+    return _patch_end_session(out, names, end)
+
+
 def _official_close_panel(tickers: list[str], start: str, end: str) -> pd.DataFrame:
     """Regular-session Close from data/prices/ohlc.parquet (printed tape)."""
     from .price_store import STORE_PATH, _load_store
@@ -613,9 +819,11 @@ def _official_close_panel(tickers: list[str], start: str, end: str) -> pd.DataFr
 def get_prices(tickers: list[str], start: str, end: str) -> pd.DataFrame:
     """Date-indexed close prices; incremental cache in data/paper/.
 
-    Official regular-session closes from the OHLC store win. Yahoo is
-    only a hole-fill — never a same-day Finviz last-trade, and never a
-    full-universe refresh just because one new session appeared.
+    Official regular-session closes from the OHLC store win. Yahoo fills
+    holes for the names this run actually marks — in chunks, including when
+    that list is longer than 120. It does not walk the full universe just
+    because one new session is missing from the store, and it does not
+    replace a close the cache or the store already has.
     """
     cache = pd.DataFrame()
     if PRICE_CACHE.exists():
@@ -623,45 +831,34 @@ def get_prices(tickers: list[str], start: str, end: str) -> pd.DataFrame:
     official = _official_close_panel(list(tickers) + list(cache.columns), start, end)
     if not official.empty:
         cache = official.combine_first(cache) if not cache.empty else official
-    cutoff = pd.Timestamp(end)
+    cutoff = pd.Timestamp(end).normalize()
     fetch = []
     for t in tickers:
-        if t not in cache.columns:
+        if cache.empty or t not in cache.columns:
             fetch.append(t)
             continue
         series = cache[t].dropna()
-        if series.empty or series.index.max() < cutoff:
+        if series.empty or pd.Timestamp(series.index.max()).normalize() < cutoff:
             fetch.append(t)
-    if fetch and len(fetch) <= 120:
-        try:
-            import yfinance as yf
-        except ImportError:
-            if cache.empty:
-                raise SystemExit("[paper] yfinance missing and no prices_cache.csv")
-            print("[paper] yfinance not installed — using prices_cache.csv")
-            return cache
-        start_pad = (pd.Timestamp(start) - pd.Timedelta(days=10)).date().isoformat()
-        end_excl = (pd.Timestamp(end) + pd.Timedelta(days=6)).date().isoformat()
-        raw = yf.download(fetch, start=start_pad, end=end_excl, auto_adjust=False,
-                          group_by="ticker", progress=False, threads=True)
-        frames = {}
-        for t in fetch:
-            try:
-                s = raw[(t, "Close")] if len(fetch) > 1 else raw["Close"]
-            except KeyError:
-                continue
-            frames[t] = s.dropna()
-        if frames:
-            new = pd.DataFrame(frames)
-            new.index = pd.to_datetime(new.index)
-            filled = new.combine_first(cache) if not cache.empty else new
-            if not official.empty:
-                filled = official.combine_first(filled)
-            cache = filled.dropna(how="all").sort_index()
-            PAPER_DIR.mkdir(parents=True, exist_ok=True)
-            cache.to_csv(PRICE_CACHE)
-    elif fetch:
-        print(f"[paper] skip yahoo hole-fill n={len(fetch)} — use ohlc.parquet")
+    if not fetch:
+        return cache
+    try:
+        new = _yahoo_close_panel(fetch, start, end)
+    except ImportError:
+        if cache.empty:
+            raise SystemExit("[paper] yfinance missing and no prices_cache.csv")
+        print("[paper] yfinance not installed — using prices_cache.csv")
+        return cache
+    if new is None or new.empty:
+        print(f"[paper] yahoo hole-fill returned nothing for {len(fetch)} names "
+              "— prior closes still price the book")
+        return cache
+    filled = cache.combine_first(new) if not cache.empty else new
+    if not official.empty:
+        filled = official.combine_first(filled)
+    cache = filled.dropna(how="all").sort_index()
+    PAPER_DIR.mkdir(parents=True, exist_ok=True)
+    cache.to_csv(PRICE_CACHE)
     return cache
 
 
@@ -731,13 +928,12 @@ def run_sim(books: list[tuple[str, Path]], prices: pd.DataFrame,
         day_px = prices.loc[:date]
         if day_px.empty:
             continue
-        px = day_px.iloc[-1]  # close on (or last close before) signal date
+        # Per-name last close on or before this session. A sparse newer row
+        # (NaN for names the cache did not refresh) is not "no price".
+        px = asof_closes(prices, date)
 
         def price_of(t: str) -> float | None:
-            v = px.get(t)
-            if v is None or (isinstance(v, float) and (math.isnan(v) or v <= 0)):
-                return None
-            return float(v)
+            return _finite_positive(px.get(t))
 
         book = json.loads(path.read_text(encoding="utf-8"))
         picks = picks_from_book(book, top_n)
@@ -959,14 +1155,13 @@ def match_roundtrips(trade_rows: list[dict], prices: pd.DataFrame,
             if lot["shares"] <= 0:
                 lots[key].popleft()
 
-    last_px = prices.iloc[-1] if len(prices) else pd.Series(dtype=float)
+    last_px = asof_closes(prices)
     open_rows: list[dict] = []
     for (sleeve, ticker), q in lots.items():
         for lot in q:
             if lot["shares"] <= 0:
                 continue
-            cur = last_px.get(ticker)
-            last = float(cur) if cur == cur and cur else lot["buy_px"]
+            last = _finite_positive(last_px.get(ticker)) or lot["buy_px"]
             mtm = lot["shares"] * last - lot["buy_amount"]
             open_rows.append({
                 "status": "open",
@@ -998,13 +1193,12 @@ def match_roundtrips(trade_rows: list[dict], prices: pd.DataFrame,
 # ------------------------------------------------------------ outputs -----
 
 def sleeve_stats(sleeve: str, S: dict, prices: pd.DataFrame, capital: float) -> dict:
-    px = prices.iloc[-1] if len(prices) else pd.Series(dtype=float)
+    px = asof_closes(prices)
     invested = 0.0
     unrealized = 0.0
     open_wins = 0
     for t, pos in S["pos"].items():
-        v = px.get(t)
-        last = float(v) if v == v and v else pos["entry_px"]
+        last = _finite_positive(px.get(t)) or pos["entry_px"]
         invested += pos["shares"] * last
         mtm = pos["shares"] * last - pos["cost"]
         unrealized += mtm
@@ -1064,7 +1258,7 @@ def write_dashboard(curve: pd.DataFrame, stats: list[dict], st: dict,
         },
     }
     positions = []
-    px = prices.iloc[-1] if len(prices) else pd.Series(dtype=float)
+    px = asof_closes(prices)
     date_ix = session_ix or {d: i for i, d in enumerate(book_dates or [])}
     last_picks = last_picks or {}
     for sleeve, S in st.items():
@@ -1072,8 +1266,7 @@ def write_dashboard(curve: pd.DataFrame, stats: list[dict], st: dict,
         min_hold = HOLD_DAYS.get(horizon, 1)
         on_list = set(last_picks.get(sleeve) or [])
         for t, pos in S["pos"].items():
-            cur = px.get(t)
-            cur = float(cur) if cur == cur and cur else pos["entry_px"]
+            cur = _finite_positive(px.get(t)) or pos["entry_px"]
             held = sessions_held(pos["entry_date"], date, date_ix)
             positions.append({
                 "sleeve": sleeve, "ticker": t, "shares": pos["shares"],
