@@ -485,7 +485,7 @@ def test_classify_floor_excludes_ministral_and_8b(monkeypatch):
     assert "nvidia_nim" not in _FLOOR_PROVIDERS
     assert "openclaw" in _FLOOR_PROVIDERS
     monkeypatch.delenv("OPENCLAW_BACKEND_MODEL", raising=False)
-    assert classify_models_for("openclaw") == ["xai/grok-4-fast-reasoning"]
+    assert classify_models_for("openclaw") == ["xai/grok-4.6"]
     assert not is_classify_banned("xai/grok-4.6")
     assert not is_classify_banned("xai/grok-4-fast-reasoning")
     assert is_classify_banned("ministral-8b-2512")
@@ -494,14 +494,16 @@ def test_classify_floor_excludes_ministral_and_8b(monkeypatch):
         OPENCLAW_FILTER_MODEL, OPENCLAW_FLOOR_MODEL, openclaw_allowlisted_model,
         openclaw_backend_model, openclaw_models,
     )
-    assert openclaw_backend_model() == "xai/grok-4-fast-reasoning"
-    assert openclaw_models() == ["xai/grok-4-fast-reasoning"]
+    assert openclaw_backend_model() == "xai/grok-4.6"
+    assert openclaw_models() == ["xai/grok-4.6"]
     monkeypatch.setenv("OPENCLAW_BACKEND_MODEL", "xai/grok-4-fast-reasoning")
-    assert openclaw_allowlisted_model("xai/grok-4-fast-reasoning") == "xai/grok-4-fast-reasoning"
-    assert openclaw_allowlisted_model("xai/grok-4-fast") == "xai/grok-4-fast-reasoning"
+    assert openclaw_allowlisted_model("xai/grok-4-fast-reasoning") == "xai/grok-4.6"
+    assert openclaw_allowlisted_model("xai/grok-4-fast") == "xai/grok-4.6"
+    assert openclaw_allowlisted_model("grok-4-fast-reasoning") == "xai/grok-4.6"
     assert openclaw_allowlisted_model("xai/grok-4.6") == "xai/grok-4.6"
-    assert classify_models_for("openclaw") == ["xai/grok-4-fast-reasoning"]
-    assert primary_models_for("openclaw", "news_impact") == ["xai/grok-4-fast-reasoning"]
+    assert classify_models_for("openclaw") == ["xai/grok-4.6"]
+    assert primary_models_for("openclaw", "news_impact") == ["xai/grok-4.6"]
+    assert primary_models_for("openclaw", "news_classify") == ["xai/grok-4.6"]
     assert primary_models_for("openclaw", "news_filter") == [OPENCLAW_FILTER_MODEL]
     assert OPENCLAW_FILTER_MODEL == "xai/grok-4.6"
     cfg = Path("src/config.py").read_text(encoding="utf-8")
@@ -511,9 +513,9 @@ def test_classify_floor_excludes_ministral_and_8b(monkeypatch):
     )
     assert match is not None
     assert match.group(1) == "xai/grok-4.6"
-    assert OPENCLAW_FLOOR_MODEL == "xai/grok-4-fast-reasoning"
+    assert OPENCLAW_FLOOR_MODEL == "xai/grok-4.6"
     from src.lane_one_shot import _WM, _classify_floor_ok, _context_floor_ok
-    wm = "lane::openclaw::xai/grok-4-fast-reasoning"
+    wm = "lane::openclaw::xai/grok-4.6"
     assert _WM.match(wm)
     floor_row = {
         "watermarks": [
@@ -562,9 +564,14 @@ def test_openclaw_chat_watermark_is_backend_model(monkeypatch):
     )
     assert parsed == {"event_class": "gate"}
     assert status == 200
-    assert info == "xai/grok-4-fast-reasoning"
+    assert info == "xai/grok-4.6"
     assert seen["model"] == "openclaw/default"
-    assert seen["extra"]["x-openclaw-model"] == "xai/grok-4-fast-reasoning"
+    assert seen["extra"]["x-openclaw-model"] == "xai/grok-4.6"
+    parsed, status, info = lane_route.openclaw_chat(
+        "xai/grok-4-fast", "hi", max_tokens=900,
+    )
+    assert info == "xai/grok-4.6"
+    assert seen["extra"]["x-openclaw-model"] == "xai/grok-4.6"
     assert seen["key"] == "tok"
     assert "18789" in seen["url"]
     assert seen["url"].endswith("/v1/chat/completions")
@@ -589,12 +596,12 @@ def test_openclaw_classify_hop_is_first(monkeypatch):
         {"keys": {"openclaw": "gateway"}, "ollama_url": "", "gh_direct": ""},
         tmpl="news_classify",
     )
-    assert seen == ["xai/grok-4-fast-reasoning"]
+    assert seen == ["xai/grok-4.6"]
     assert parsed == {"event_class": "gate"}
-    assert info == "xai/grok-4-fast-reasoning"
+    assert info == "xai/grok-4.6"
 
 
-def test_openclaw_fast_reasoning_is_sent(monkeypatch):
+def test_openclaw_fast_reasoning_is_rewritten_before_send(monkeypatch):
     from src import lane_route
     monkeypatch.setenv("OPENCLAW_BACKEND_MODEL", "xai/grok-4-fast-reasoning")
     seen = []
@@ -612,11 +619,51 @@ def test_openclaw_fast_reasoning_is_sent(monkeypatch):
         {"keys": {"openclaw": "gateway"}, "ollama_url": "", "gh_direct": ""},
         tmpl="news_classify",
     )
-    assert seen == ["xai/grok-4-fast-reasoning"]
+    assert seen == ["xai/grok-4.6"]
+    assert "grok-4-fast" not in seen[0]
     assert parsed == {"event_class": "gate"}
-    assert info == "xai/grok-4-fast-reasoning"
+    assert info == "xai/grok-4.6"
     filter_models = lane_route.primary_models_for("openclaw", "news_filter")
     assert filter_models == ["xai/grok-4.6"]
+
+
+def test_openclaw_fast_alias_400_keeps_provider_and_does_not_send_it(monkeypatch):
+    """Gateway 400 names grok-4-fast. We never put that id on the wire."""
+    from src import lane_route
+    monkeypatch.setenv("OPENCLAW_GATEWAY_URL", "http://127.0.0.1:18789")
+    monkeypatch.setenv("OPENCLAW_TOKEN", "tok")
+    monkeypatch.setenv("OPENCLAW_BACKEND_MODEL", "xai/grok-4-fast-reasoning")
+    monkeypatch.setattr("src.config.align_openclaw_token", lambda **_k: "tok")
+    seen = []
+
+    def fake_chat(url, key, model, prompt, extra=None, max_tokens=320,
+                  system=None, timeout=None):
+        header = (extra or {}).get("x-openclaw-model")
+        seen.append(header)
+        body = (
+            "{'message': \"Model 'xai/grok-4-fast' is not allowed for "
+            "agent 'main'.\", 'type': 'invalid_request_error'}"
+        )
+        return None, 400, body
+
+    monkeypatch.setattr(lane_route, "openai_chat", fake_chat)
+    lane_route._SKIP.clear()
+    lane_route._RATE_LIMITED.clear()
+    lane_route._MODEL_DENIED.clear()
+    parsed, info = lane_route.ask_lane(
+        "openclaw", "{}",
+        {"keys": {"openclaw": "gateway"}, "ollama_url": "", "gh_direct": ""},
+        tmpl="news_classify",
+    )
+    assert parsed is None
+    assert seen == ["xai/grok-4.6"]
+    assert "grok-4-fast" not in seen[0]
+    assert "openclaw" not in lane_route._SKIP
+    assert "openclaw::xai/grok-4-fast" not in lane_route._MODEL_DENIED
+    assert "openclaw::xai/grok-4-fast-reasoning" not in lane_route._MODEL_DENIED
+    assert "openclaw::xai/grok-4.6" in lane_route._MODEL_DENIED
+    assert info is None or "grok-4-fast-reasoning" not in str(info)
+    lane_route._MODEL_DENIED.clear()
 
 
 def test_openclaw_lane_timeout_env(monkeypatch):
@@ -1058,6 +1105,7 @@ def test_openclaw_repairs_labor_stop_before_the_hopper(monkeypatch):
     from src.lane_one_shot import LiveLane
     from src.news_impact.prompts import classifier_prompt
 
+    monkeypatch.delenv("OPENCLAW_BACKEND_MODEL", raising=False)
     monkeypatch.setattr("src.config.align_openclaw_token", lambda **_k: "tok")
     monkeypatch.setattr(
         lane_route, "load_keys",
@@ -1092,7 +1140,7 @@ def test_openclaw_repairs_labor_stop_before_the_hopper(monkeypatch):
     )
     assert parsed["event_class"] == "blast_ops"
     assert parsed["q5"] == "impulse"
-    assert (hop, model) == ("openclaw", "xai/grok-4-fast-reasoning")
+    assert (hop, model) == ("openclaw", "xai/grok-4.6")
     assert len(prompts) == 2
     assert "PREVIOUS JSON WAS NOT ACCEPTED" not in prompts[0]
     assert "PREVIOUS JSON WAS NOT ACCEPTED" in prompts[1]
@@ -1327,10 +1375,17 @@ def test_gold_row_records_prompt_log():
     assert "Y-S salience" in joined
 
 
-def test_gold_job_is_ecs_and_pins_fast_reasoning():
+def test_gold_job_is_ecs_and_pins_grok_4_6():
     text = Path(".github/workflows/lane_one_shot_100.yml").read_text(encoding="utf-8")
     gold = text.split("jobs:", 1)[1].split("\n  shard:", 1)[0]
     assert "runs-on: [self-hosted, ecs]" in gold
     assert "ubuntu-latest" not in gold
-    assert "OPENCLAW_BACKEND_MODEL: xai/grok-4-fast-reasoning" in gold
-    assert "OPENCLAW_BACKEND_MODEL: xai/grok-4.6" not in gold
+    assert "OPENCLAW_BACKEND_MODEL: xai/grok-4.6" in gold
+    assert "xai/grok-4-fast-reasoning" not in gold
+    assert "xai/grok-4-fast-reasoning" not in text
+    assert text.count("OPENCLAW_BACKEND_MODEL: xai/grok-4.6") == 4
+    assert "ref: ${{ github.sha }}" in gold
+    assert "fetch-depth: 1" in gold
+    assert "clean: true" in gold
+    assert "git rev-parse HEAD" in gold
+    assert 'test "${head}" = "${{ github.sha }}"' in gold

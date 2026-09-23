@@ -75,7 +75,21 @@ jobs:
     # 300s still returns on a hang so the free hopper runs.
     timeout-minutes: 120
     steps:
+      # Persistent ECS workspace. A bare checkout detaches whatever commit
+      # the last job left behind before it fetches. Pin the dispatched SHA
+      # and fail the job if HEAD is still that stale tree.
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 1
+          clean: true
+
+      - name: Confirm checkout tip
+        run: |
+          head=$(git rev-parse HEAD)
+          echo "HEAD=${head}"
+          echo "expected=${{ github.sha }}"
+          test "${head}" = "${{ github.sha }}"
 
       - name: Install
         run: |
@@ -118,7 +132,7 @@ jobs:
           GOOGLE_AI_STUDIO_API_KEY: ${{ secrets.GOOGLE_AI_STUDIO_API_KEY }}
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
-          OPENCLAW_BACKEND_MODEL: xai/grok-4-fast-reasoning
+          OPENCLAW_BACKEND_MODEL: xai/grok-4.6
           OPENCLAW_LANE_TIMEOUT: "300"
           LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'grok' }}
         run: PYTHONPATH=. python3 -m src.lane_one_shot --env-check
@@ -161,7 +175,7 @@ jobs:
           GOOGLE_AI_STUDIO_API_KEY: ${{ secrets.GOOGLE_AI_STUDIO_API_KEY }}
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
-          OPENCLAW_BACKEND_MODEL: xai/grok-4-fast-reasoning
+          OPENCLAW_BACKEND_MODEL: xai/grok-4.6
           OPENCLAW_LANE_TIMEOUT: "300"
           LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'grok' }}
         run: PYTHONPATH=. python3 -m src.lane_one_shot --gold-only
@@ -230,7 +244,7 @@ jobs:
           GOOGLE_AI_STUDIO_API_KEY: ${{ secrets.GOOGLE_AI_STUDIO_API_KEY }}
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
-          OPENCLAW_BACKEND_MODEL: xai/grok-4-fast-reasoning
+          OPENCLAW_BACKEND_MODEL: xai/grok-4.6
           OPENCLAW_LANE_TIMEOUT: "300"
           LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'grok' }}
         run: PYTHONPATH=. python3 -m src.lane_one_shot --env-check
@@ -271,7 +285,7 @@ jobs:
           GOOGLE_AI_STUDIO_API_KEY: ${{ secrets.GOOGLE_AI_STUDIO_API_KEY }}
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
-          OPENCLAW_BACKEND_MODEL: xai/grok-4-fast-reasoning
+          OPENCLAW_BACKEND_MODEL: xai/grok-4.6
           OPENCLAW_LANE_TIMEOUT: "300"
           LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'grok' }}
         run: |

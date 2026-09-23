@@ -278,7 +278,7 @@ DEFAULT_LANES = [
 # news_to_tickers + impact + news sector scan: current flash first.
 # Zhipu glm-4.7-flash → SF Qwen3-8B → OR :free → DashScope qwen-flash.
 NEWS_HEAD = ["zhipu", "siliconflow", "openrouter", "qwen"]
-# news_classify quality floor. OpenClaw Grok-fast is first. The free
+# news_classify quality floor. OpenClaw grok-4.6 is first. The free
 # hopper stays as fallback. Qwen is last and is not required.
 # NVIDIA NIM stays off: nemotron-mini-4b, llama-3.2-3b, and llama-3.1-8b
 # are below the floor. Ministral 8B/3B stay off.
@@ -287,14 +287,21 @@ CLASSIFY_LANES = [
     "zhipu", "siliconflow", "openrouter", "gemini", "tokenhub",
     "mistral", "pollinations", "qwen",
 ]
-# Classify / meta / analyst floor. Cyrus 2026-09-23: send this id.
-# The bare grok-4-fast alias (no -reasoning) is the one the gateway
-# rewrites and rejects. Filter may use the non-reasoning grok-4.6 id.
-# src/config.py stays on grok-4.6 for the rest of the product.
-OPENCLAW_FLOOR_MODEL = "xai/grok-4-fast-reasoning"
+# Classify / meta / pack_complete / analyst / filter floor.
+# Gold 35882203499: the gateway rewrites xai/grok-4-fast-reasoning to
+# xai/grok-4-fast, then agent main returns HTTP 400
+# "Model 'xai/grok-4-fast' is not allowed". The same run's filter hop
+# returned HTTP 200 for xai/grok-4.6. Both fast aliases are rewritten
+# to that id before x-openclaw-model is set, so the denied id is never
+# sent and never cached as _MODEL_DENIED. src/config.py already
+# defaults to grok-4.6.
+OPENCLAW_FLOOR_MODEL = "xai/grok-4.6"
 OPENCLAW_FILTER_MODEL = "xai/grok-4.6"
 _OPENCLAW_FAST_ALIAS = frozenset({
     "xai/grok-4-fast",
+    "xai/grok-4-fast-reasoning",
+    "grok-4-fast",
+    "grok-4-fast-reasoning",
 })
 # company_dig: SF Qwen / DeepSeek free non-Pro → OR :free → Zhipu.
 # Native DeepSeek stays off the free head (paid opt-in only).
@@ -590,9 +597,9 @@ def is_classify_banned(mid: str) -> bool:
 def openclaw_allowlisted_model(model: str) -> str:
     """Backend id to put on x-openclaw-model.
 
-    The approved classify floor is xai/grok-4-fast-reasoning. The bare
-    grok-4-fast alias is rewritten to that id. grok-4.6 is kept for the
-    lighter filter hop and is not rewritten.
+    Agent main does not allow grok-4-fast. The gateway strips
+    ``-reasoning`` and then 400s that alias. Both fast ids are rewritten
+    to xai/grok-4.6, the id that returned HTTP 200, before the request.
     """
     raw = str(model or "").strip()
     if not raw or is_classify_banned(raw) or raw.lower() in _OPENCLAW_FAST_ALIAS:
@@ -601,9 +608,11 @@ def openclaw_allowlisted_model(model: str) -> str:
 
 
 def openclaw_models() -> list[str]:
-    """Classify/meta/analyst backend. Default is fast-reasoning.
+    """Classify/meta/analyst backend. Default is the allowlisted floor.
 
     An explicit non-banned override is tried first, then the floor id.
+    grok-4-fast and grok-4-fast-reasoning collapse to the floor so they
+    are never placed on the wire.
     """
     raw = (os.environ.get("OPENCLAW_BACKEND_MODEL") or "").strip()
     if not raw:
@@ -630,13 +639,13 @@ def primary_models_for(lane: str, tmpl: str = "custom") -> list[str]:
 
     news_classify is the quality floor: no 8B, no Ministral. SiliconFlow's
     allowlist is Qwen3-8B only, so that lane contributes no classify ID.
-    news_filter is the lighter OpenClaw hop (grok-4.6). Other providers
-    keep their news_impact list.
+    news_filter uses the same allowlisted OpenClaw id (grok-4.6). Other
+    providers keep their news_impact list.
     """
     tmpl = str(tmpl or "custom").strip()
     if tmpl == "news_filter":
         if lane == "openclaw":
-            return [OPENCLAW_FILTER_MODEL]
+            return [openclaw_allowlisted_model(OPENCLAW_FILTER_MODEL)]
         tmpl = "news_impact"
     if tmpl == "news_classify":
         if lane == "openclaw":
