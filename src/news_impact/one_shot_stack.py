@@ -20,8 +20,12 @@ from src.news_impact.prompts import (
     ANALYST_SYSTEM,
     CLASSIFIER_SYSTEM,
     FAMILY_TESTS,
+    FLIP_QUESTIONS,
+    LANREOTIDE_CLOCK_Q,
+    NAION_CLOCK_Q,
     classifier_prompt,
 )
+from src.lane_route import is_classify_banned
 from src.news_impact.schema import EVENT_CLASSES, family_of
 from src.news_impact.scratch import article_id
 
@@ -69,10 +73,10 @@ _AIRLINES = frozenset({
 })
 _VENUES = frozenset({"COIN", "NDAQ", "ICE", "CME", "CBOE"})
 _ROLE_MAP = {
-    "harm_set": "named",
-    "harmset": "named",
-    "defendant": "named",
-    "harm": "named",
+    "harm_set": "harm_set",
+    "harmset": "harm_set",
+    "defendant": "harm_set",
+    "harm": "harm_set",
     "unscathed": "unscathed_rival",
     "stays_out": "unscathed_rival",
     "rival": "unscathed_rival",
@@ -82,49 +86,10 @@ _ROLE_MAP = {
     "named": "named",
 }
 
-QUESTIONS = {
-    "blast": [
-        "Who is in the harm set (cannot operate, sued, or breached)?",
-        "If the buyer still wants the end-use and the primary channel is blocked, which listed substitute is on the Finviz hit list?",
-        "Which listed rival competes and is outside the harm set (unscathed_rival)?",
-        "Who sells the input both sides still buy (arms_dealer)? If unanswered, direction is not_determined.",
-    ],
-    "structure": [
-        "Who collects the old venue rent (exchange or broker)?",
-        "Which new venue just received permission, and is that name on the Finviz hit list?",
-        "Is the incumbent already building the same rail (then mixed, not a clean down)?",
-        "Does any hit sit in Energy even though the title never names that firm? Drop it.",
-    ],
-    "quantity": [
-        "Who pays the input, and who sells it?",
-        "Is this capacity added or capacity destroyed?",
-        "Which listed substitute wins if the primary supply is missing?",
-    ],
-    "permission": [
-        "Who just became legal to sell or launch the product?",
-        "Is this a gate (approval) or only a trial readout (not approval)?",
-        "What clock does the print land on: same session, next open, or Monday?",
-    ],
-    "print": [
-        "What number changed versus what was already priced?",
-        "Is this one named issuer, or a factor that should not be pinned to a camera ticker?",
-        "If guidance was only reaffirmed, why is an up call illegal?",
-    ],
-    "firm": [
-        "Is this the issuer's own cash, paper, or control — not a sector story?",
-        "If it is a routine dividend, why is there no 0-1d sector trade?",
-        "Who is the named issuer on the Finviz hit list?",
-    ],
-    "flow": [
-        "Who is forced to buy or sell the named line, and on which session?",
-        "Is the flow the issuer itself or an index vehicle?",
-    ],
-    "time": [
-        "Did the physical or legal constraint change, or is this a reprint?",
-        "If it is a regime break, which prior book flips sign?",
-        "If it is weather, why is a 0-1d entity illegal?",
-    ],
-}
+_FORM4 = re.compile(r"(?i)\b(form\s*4|form\s*144|insider (sale|selling))\b")
+_LISTICLE = re.compile(
+    r"(?i)\b(\d+\s+stocks? to (buy|watch)|top\s+\d+\s+stocks?|listicle)\b"
+)
 
 
 GOLD_KEEP = [
@@ -222,13 +187,17 @@ def gate0(title: str, body: str = "") -> str | None:
         return "gold_on_fed"
     if re.search(r"(?i)\b(jim cramer|stock of the day|should you buy|price target (raised|cut))\b", title):
         return "newsletter"
+    if _FORM4.search(title):
+        return "form4"
+    if _LISTICLE.search(title):
+        return "listicle"
     return None
 
 
 def plan_questions(family: str, event_class: str, title: str) -> list[dict]:
-    fam = family if family in QUESTIONS else "time"
+    fam = family if family in FLIP_QUESTIONS else "time"
     rows = []
-    for i, text in enumerate(QUESTIONS[fam], 1):
+    for i, text in enumerate(FLIP_QUESTIONS[fam], 1):
         rows.append({
             "id": f"q{i}",
             "family": fam,
@@ -243,10 +212,7 @@ def plan_questions(family: str, event_class: str, title: str) -> list[dict]:
             "id": "q_clock",
             "family": fam,
             "event_class": event_class,
-            "question": (
-                "NAION/GLP-1 is a class wrap: which listed sponsors are on the "
-                "Finviz hit list, and why is the clock not 0-1d?"
-            ),
+            "question": NAION_CLOCK_Q,
             "status": "pending",
             "note": "",
         })
@@ -255,10 +221,7 @@ def plan_questions(family: str, event_class: str, title: str) -> list[dict]:
             "id": "q_monday",
             "family": fam,
             "event_class": event_class,
-            "question": (
-                "The lanreotide approval hit at 16:01. Which session can actually "
-                "trade it, and why is that not the same-day 0-1d tape?"
-            ),
+            "question": LANREOTIDE_CLOCK_Q,
             "status": "pending",
             "note": "",
         })
@@ -284,9 +247,11 @@ def _horizon_for(event_class: str, title: str, sign: str | None) -> str:
     low = (title or "").lower()
     if "naion" in low or ("glp-1" in low and "novo" in low and "lilly" in low):
         return "medium"
-    if event_class == "gate" or (
-        ("lanreotide" in low or "amneal" in low) and event_class == "gate"
-    ):
+    if event_class == "blast_legal":
+        # A complaint is not a same-day tape print. SELL GOOGL 0-1d is the
+        # wrong story; the book is the harm set plus who stays out.
+        return "1-4w"
+    if event_class == "gate":
         return "1-6m"
     hz = default_horizon(event_class, title, sign)
     return hz or "0-1d"
@@ -299,6 +264,29 @@ def _private_names(title: str, body: str) -> list[str]:
         if re.search(rf"\b{name}\b", text, re.I):
             found.append(name)
     return found
+
+
+def filter_prompt(title: str, body: str, event_class: str, instruments: list[dict]) -> str:
+    """8B core-vs-tangent filter. Class is already locked. No new tickers."""
+    lines = []
+    for row in instruments[:40]:
+        lines.append(
+            f"- {row.get('ticker')} | {row.get('entity_name')} | "
+            f"{row.get('sector')} | {row.get('industry')}"
+        )
+    block = "\n".join(lines) or "(none)"
+    return (
+        "The event_class is locked. Do not change it.\n"
+        f"event_class={event_class}\n"
+        "Split the hit list into core theme vs tangent. "
+        "You may ONLY return tickers from the list. Do not invent a ticker.\n"
+        "Core = the firm the constraint actually hits, plus the substitute "
+        "or unscathed rival the family test needs.\n"
+        "Tangent = a camera ticker, an ETF basket, or a sector the title never names.\n\n"
+        f"HITS:\n{block}\n\n"
+        f"Title: {title}\nBody: {body or ''}\n\n"
+        'STRICT JSON:\n{"core":[""],"tangent":[""]}'
+    )
 
 
 def linker_prompt(title: str, body: str, instruments: list[dict], hint: str,
@@ -363,10 +351,11 @@ def analyst_prompt(
         )
     return (
         f"You are analysing ONE family only: {family}. "
-        f"event_class={event_class} sign={sign} q5={q5}.\n"
+        f"event_class={event_class} is locked. Do not change it. "
+        f"sign={sign} q5={q5}.\n"
         f"Constraint: {constraint}\n"
         f"{clock_note}\n"
-        "Roles you may use: harm set as role=named direction=down; "
+        "Roles you may use: harm_set direction=down; "
         "substitute; unscathed_rival; arms_dealer. No scores.\n"
         "A second-order role (substitute, unscathed_rival, arms_dealer) "
         "MUST cite axiom_id from the list below or a pack fact url. "
@@ -473,22 +462,6 @@ def classify_acceptable(parsed: dict | None, title: str, body: str, gold_id: str
     return True
 
 
-_CLASSIFY_HINT = (
-    "\n\nClass hints (still pick exactly one enum value; do not emit tickers):\n"
-    "- unpaid TSA / airport chaos → blast_ops, q5=impulse\n"
-    "- lawsuit / class-action / antitrust → blast_legal, q5=impulse\n"
-    "- FDA approval and launch → gate, q5=impulse\n"
-    "- SEC tokenized venue or exemptive relief → market_structure, q5=impulse\n"
-    "- GLP-1 / NAION class wrap → product_harm (q5 impulse or regime)\n"
-    "- regime_break ONLY when the text says ceasefire, reopen, withdraw, "
-    "lifted, or traffic resumes\n"
-)
-
-
-def classify_prompt(title: str, body: str, known_at: str) -> str:
-    return classifier_prompt(title, body, known_at) + _CLASSIFY_HINT
-
-
 def analyst_acceptable(
     parsed: dict | None,
     *,
@@ -533,11 +506,18 @@ def analyst_acceptable(
     return gold_status(shaped) == "PASS"
 
 
+def _filter_payload(parsed: dict | None) -> dict | None:
+    """8B core/tangent JSON becomes the same shape confirm_instruments reads."""
+    if isinstance(parsed, dict) and parsed.get("core") and not parsed.get("instruments"):
+        return {"tickers": parsed.get("core")}
+    return parsed
+
+
 def linker_acceptable(parsed: dict | None, candidates: list[dict], gold_id: str = "") -> bool:
     """Empty confirm JSON is a miss. Gold rows must keep the linked names."""
     ticks = {
         str(row.get("ticker") or "")
-        for row in confirm_instruments(parsed, candidates)
+        for row in confirm_instruments(_filter_payload(parsed), candidates)
     }
     if not ticks:
         return False
@@ -631,8 +611,8 @@ def _normalize_entities(
         role = _ROLE_MAP.get(role_key, role_key)
         if row.get("stays_out") and role in {"named", "unscathed", "rival"}:
             role = "unscathed_rival"
-        if role not in {"named", "substitute", "unscathed_rival", "arms_dealer"}:
-            role = "named"
+        if role not in {"named", "harm_set", "substitute", "unscathed_rival", "arms_dealer"}:
+            role = "harm_set" if direction == "down" else "named"
         raw_tick = row.get("ticker")
         if raw_tick in ("", "null", "none", None):
             tick = _bind_ticker(str(row.get("name") or ""), instruments)
@@ -709,6 +689,8 @@ def validate(
     ]
     if not signed:
         errors.append("no_signed_instrument")
+    if event_class == "regime_break" and not _REGIME_BREAK_OK.search(title or ""):
+        errors.append("regime_break_dump")
     if q5 == "regime" and "naion" not in (title or "").lower():
         errors.append("q5_regime")
     if q5 not in {"impulse", "regime_break"} and "naion" not in (title or "").lower():
@@ -772,9 +754,12 @@ def gold_status(row: dict) -> str:
         meta = roles.get("META") or {}
         open_named = any("openai" in str(e.get("name") or "").lower() for e in ents)
         ok = row.get("event_class") == "blast_legal"
-        ok = ok and googl.get("direction") == "down" and (
+        ok = ok and (
             meta.get("role") == "unscathed_rival" or meta.get("stays_out")
         ) and open_named
+        # The story is who stays out, not a same-day tape sell of Alphabet.
+        ok = ok and googl.get("horizon") != "0-1d"
+        ok = ok and "SELL GOOGL" not in action and "SELL GOOG" not in action
         return "PASS" if ok else "FAIL"
     if gid == "tsv":
         used = {e.get("ticker") for e in ents if e.get("ticker")}
@@ -826,6 +811,12 @@ def render_markdown(header: dict, rows: list[dict]) -> str:
         lines.append("- (none)")
     for key, n in hist.items():
         lines.append(f"- {key}: {n}")
+    lines += ["", "## Classify hop histogram", ""]
+    classify_hist = header.get("classify_histogram") or {}
+    if not classify_hist:
+        lines.append("- (none)")
+    for key, n in classify_hist.items():
+        lines.append(f"- {key}: {n}")
     lines += ["", "## Env (redacted)", ""]
     for bit in header.get("env") or []:
         lines.append(f"- {bit}")
@@ -860,6 +851,13 @@ def render_markdown(header: dict, rows: list[dict]) -> str:
         lines.append(f"- winners: {', '.join(winners) or '—'}")
         lines.append(f"- losers: {', '.join(losers) or '—'}")
         lines.append(f"- ACTION: {row.get('action')}")
+        by_stage = {
+            str(w.get("stage") or ""): str(w.get("watermark") or "")
+            for w in (row.get("watermarks") or [])
+        }
+        lines.append(f"- classify: {by_stage.get('classify') or ''}")
+        lines.append(f"- filter: {by_stage.get('filter') or ''}")
+        lines.append(f"- analyst: {by_stage.get('analyst') or row.get('watermark') or ''}")
         lines.append(f"- watermark: {row.get('watermark')}")
         lines.append("")
     return "\n".join(lines).rstrip() + "\n"
@@ -950,13 +948,18 @@ def process_article(
     gold_id = str(art.get("gold_id") or "")
     parsed, provider, model = _call_lane(
         lane, "classify",
-        classify_prompt(title, body, known),
+        classifier_prompt(title, body, known),
         CLASSIFIER_SYSTEM,
         accept=lambda blob, _gid=gold_id, _title=title, _body=body: classify_acceptable(
             blob, _title, _body, _gid,
         ),
     )
     mark = _watermark(provider, model)
+    if is_classify_banned(model):
+        base["reject_reason"] = "classify_below_floor"
+        base["watermarks"] = [{"stage": "classify", "watermark": mark}]
+        base["classify_skip"] = getattr(lane, "last_classify_note", "")
+        return base
     if not parsed or not mark:
         base["reject_reason"] = "lane_classify_missing"
         return base
@@ -990,16 +993,16 @@ def process_article(
     )
     candidates = linked["instruments"]
     conf, c_provider, c_model = _call_lane(
-        lane, "linker",
-        linker_prompt(title, body, candidates, str(art.get("ticker_hint") or ""),
-                      linked.get("rejected_hints") or []),
-        "You confirm Finviz instruments. JSON only. Never invent a ticker.",
+        lane, "filter",
+        filter_prompt(title, body, event_class, candidates),
+        "You split a Finviz hit list into core and tangent. JSON only. "
+        "Never invent a ticker. The event_class is locked.",
         accept=lambda blob, _cands=candidates, _gid=gold_id: linker_acceptable(
             blob, _cands, _gid,
         ),
     )
     c_mark = _watermark(c_provider, c_model)
-    instruments = confirm_instruments(conf, candidates) if c_mark else []
+    instruments = confirm_instruments(_filter_payload(conf), candidates) if c_mark else []
     if not instruments or not c_mark:
         base.update({
             "q5": q5,
@@ -1011,9 +1014,9 @@ def process_article(
             "rejected_hints": linked.get("rejected_hints") or [],
             "watermarks": [
                 {"stage": "classify", "watermark": mark},
-                {"stage": "linker", "watermark": c_mark},
+                {"stage": "filter", "watermark": c_mark},
             ],
-            "reject_reason": "lane_linker_missing",
+            "reject_reason": "lane_filter_missing",
             "finviz_file": linked.get("finviz_file") or "",
         })
         return base
@@ -1097,7 +1100,7 @@ def process_article(
     action = action_line(entities, constraint, clock) if not problems else ""
     watermarks = [
         {"stage": "classify", "watermark": mark},
-        {"stage": "linker", "watermark": c_mark},
+        {"stage": "filter", "watermark": c_mark},
         {"stage": "analyst", "watermark": a_mark},
     ]
     invented = [e for e in problems if str(e).startswith("invented:")]
@@ -1105,6 +1108,7 @@ def process_article(
         **base,
         "q5": q5,
         "event_class": event_class,
+        "class_locked": True,
         "sign": sign,
         "family": family,
         "constraint": constraint,

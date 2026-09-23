@@ -11,6 +11,14 @@ name: Lane one-shot 100
 on:
   workflow_dispatch:
     inputs:
+      mode:
+        description: gold runs the fixtures only. full draws 100 after gold passes.
+        required: true
+        default: gold
+        type: choice
+        options:
+          - gold
+          - full
       target_per_shard:
         description: Usable rows to keep in each shard
         required: false
@@ -21,24 +29,113 @@ on:
         required: false
         default: "150"
         type: string
-  push:
-    paths:
-      - ".github/workflows/lane_one_shot_100.yml"
-      - "src/lane_one_shot.py"
-      - "src/lane_route.py"
-      - "src/news_impact/finviz_linker.py"
-      - "src/news_impact/one_shot_stack.py"
-      - "src/test_lane_one_shot.py"
 
+# Separate group from the older lane-one-shot-100 runs so a gold gate is
+# not queued behind a Ministral classify draw.
 concurrency:
-  group: lane-one-shot-100-${{ github.ref }}
+  group: lane-one-shot-floor-${{ github.ref }}-${{ github.event.inputs.mode || 'gold' }}
   cancel-in-progress: false
 
 permissions:
   contents: write
 
 jobs:
+  gold:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install
+        run: |
+          python3 --version
+          PYTHONPATH=. python3 -c "import src.lane_one_shot, src.lane_route, src.news_impact.one_shot_stack"
+
+      - name: Env check
+        env:
+          LANE_URL: ${{ vars.LANE_URL }}
+          LANE_ALLOW_PAID_DEEPSEEK: ${{ vars.LANE_ALLOW_PAID_DEEPSEEK }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GITHUB_MODELS_TOKEN: ${{ secrets.GITHUB_MODELS_TOKEN }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          SAMBANOVA_API_KEY: ${{ secrets.SAMBANOVA_API_KEY }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          OLLAMA_URL: ${{ secrets.OLLAMA_URL || vars.OLLAMA_URL }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+          DASHSCOPE_BASE_URL: ${{ secrets.DASHSCOPE_BASE_URL }}
+          QWEN_API_KEY: ${{ secrets.QWEN_API_KEY }}
+          SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}
+          ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
+          GLM_API_KEY: ${{ secrets.GLM_API_KEY }}
+          MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
+          MODELSCOPE_API_KEY: ${{ secrets.MODELSCOPE_API_KEY }}
+          MODELSCOPE_API_TOKEN: ${{ secrets.MODELSCOPE_API_TOKEN }}
+          MODELSCOPE_SDK_TOKEN: ${{ secrets.MODELSCOPE_SDK_TOKEN }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          NVIDIA_NIM_API_KEY: ${{ secrets.NVIDIA_NIM_API_KEY }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          POLLINATIONS_API_KEY: ${{ secrets.POLLINATIONS_API_KEY }}
+          TOKENHUB_API_KEY: ${{ secrets.TOKENHUB_API_KEY }}
+          TENCENT_API_KEY: ${{ secrets.TENCENT_API_KEY }}
+          HUNYUAN_API_KEY: ${{ secrets.HUNYUAN_API_KEY }}
+          TOKENHUB_BASE_URL: ${{ secrets.TOKENHUB_BASE_URL }}
+          TENCENT_BASE_URL: ${{ secrets.TENCENT_BASE_URL }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GOOGLE_AI_STUDIO_API_KEY: ${{ secrets.GOOGLE_AI_STUDIO_API_KEY }}
+        run: PYTHONPATH=. python3 -m src.lane_one_shot --env-check
+
+      - name: Gold fixtures only
+        env:
+          LANE_URL: ${{ vars.LANE_URL }}
+          LANE_ALLOW_PAID_DEEPSEEK: ${{ vars.LANE_ALLOW_PAID_DEEPSEEK }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GITHUB_MODELS_TOKEN: ${{ secrets.GITHUB_MODELS_TOKEN }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          SAMBANOVA_API_KEY: ${{ secrets.SAMBANOVA_API_KEY }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          OLLAMA_URL: ${{ secrets.OLLAMA_URL || vars.OLLAMA_URL }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+          DASHSCOPE_BASE_URL: ${{ secrets.DASHSCOPE_BASE_URL }}
+          QWEN_API_KEY: ${{ secrets.QWEN_API_KEY }}
+          SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}
+          ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
+          GLM_API_KEY: ${{ secrets.GLM_API_KEY }}
+          MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
+          MODELSCOPE_API_KEY: ${{ secrets.MODELSCOPE_API_KEY }}
+          MODELSCOPE_API_TOKEN: ${{ secrets.MODELSCOPE_API_TOKEN }}
+          MODELSCOPE_SDK_TOKEN: ${{ secrets.MODELSCOPE_SDK_TOKEN }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          NVIDIA_NIM_API_KEY: ${{ secrets.NVIDIA_NIM_API_KEY }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          POLLINATIONS_API_KEY: ${{ secrets.POLLINATIONS_API_KEY }}
+          TOKENHUB_API_KEY: ${{ secrets.TOKENHUB_API_KEY }}
+          TENCENT_API_KEY: ${{ secrets.TENCENT_API_KEY }}
+          HUNYUAN_API_KEY: ${{ secrets.HUNYUAN_API_KEY }}
+          TOKENHUB_BASE_URL: ${{ secrets.TOKENHUB_BASE_URL }}
+          TENCENT_BASE_URL: ${{ secrets.TENCENT_BASE_URL }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GOOGLE_AI_STUDIO_API_KEY: ${{ secrets.GOOGLE_AI_STUDIO_API_KEY }}
+        run: PYTHONPATH=. python3 -m src.lane_one_shot --gold-only
+
+      - name: Upload gold report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lane-one-shot-gold
+          path: |
+            03_scoreboard/LANE_ONE_SHOT_GOLD.md
+            02_lessons/lane/one_shot_100
+          if-no-files-found: warn
+
   shard:
+    needs: gold
+    if: ${{ github.event.inputs.mode == 'full' }}
     runs-on: ubuntu-latest
     timeout-minutes: 240
     strategy:
@@ -140,8 +237,8 @@ jobs:
           if-no-files-found: warn
 
   merge:
-    needs: shard
-    if: always()
+    needs: [gold, shard]
+    if: ${{ github.event.inputs.mode == 'full' && needs.gold.result == 'success' && (needs.shard.result == 'success' || needs.shard.result == 'failure') }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -158,8 +255,12 @@ jobs:
         id: merge
         run: PYTHONPATH=. python3 -m src.lane_one_shot --merge one_shot_artifacts --expect 100
 
+      - name: Require 100, gold pass, floor classify
+        id: ready
+        run: PYTHONPATH=. python3 -m src.lane_one_shot --check-board 03_scoreboard/LANE_ONE_SHOT_100.md
+
       - name: Commit board to this branch
-        if: steps.merge.outcome == 'success'
+        if: steps.ready.outcome == 'success'
         run: |
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
@@ -170,7 +271,3 @@ jobs:
           fi
           git commit -m "auto: lane one-shot 100 board"
           git push origin "HEAD:${GITHUB_REF_NAME}"
-
-      - name: Require 100 kept, gold pass, flash watermark
-        if: always()
-        run: PYTHONPATH=. python3 -m src.lane_one_shot --check-board 03_scoreboard/LANE_ONE_SHOT_100.md

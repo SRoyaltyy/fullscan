@@ -119,7 +119,7 @@ class ScriptLane:
         if stage == "classify":
             assert "candidates" not in prompt.lower()
             return self._classify(title), "zhipu", "glm-4.7-flash"
-        if stage == "linker":
+        if stage in {"linker", "filter"}:
             return self._link(prompt), "siliconflow", "Qwen/Qwen3-8B"
         return self._analyse(title), "qwen", "qwen-flash"
 
@@ -280,9 +280,9 @@ def test_invented_ticker_is_stripped(monkeypatch):
         if stage == "classify":
             return {"event_class": "blast_ops", "q5": "impulse", "sign": None,
                     "constraint": "TSA unpaid"}, "zhipu", "glm-4.7-flash"
-        if stage == "linker":
+        if stage in {"linker", "filter"}:
             return {"instruments": [{"ticker": "CAR", "keep": True},
-                                    {"ticker": "VKTX", "keep": True}]}, "zhipu", "glm-4.7-flash"
+                                    {"ticker": "VKTX", "keep": True}]}, "siliconflow", "Qwen/Qwen3-8B"
         return {"entities": [
             {"name": "Viking", "ticker": "VKTX", "role": "named", "direction": "up"},
             {"name": "Avis", "ticker": "CAR", "role": "substitute", "direction": "up",
@@ -342,14 +342,28 @@ def test_env_check_redacts(monkeypatch, capsys):
     assert "missing OPENROUTER_API_KEY" in out
 
 
-def test_one_shot_hops_current_flash_before_mistral(monkeypatch):
+def test_classify_floor_excludes_ministral_and_8b(monkeypatch):
     monkeypatch.delenv("LANE_ALLOW_PAID_DEEPSEEK", raising=False)
-    from src.lane_one_shot import one_shot_lanes
-    order = one_shot_lanes()
-    assert order[0] == "zhipu"
-    assert order.index("zhipu") < order.index("tokenhub") < order.index("qwen")
-    assert order.index("qwen") < order.index("mistral")
-    assert "deepseek" not in order
+    from src.lane_one_shot import classify_lanes, classify_models_for
+    from src.lane_route import is_classify_banned, lanes_for, primary_models_for
+    order = classify_lanes()
+    assert order == ["zhipu", "siliconflow", "openrouter", "qwen", "tokenhub"]
+    assert lanes_for("news_classify") == order
+    assert "mistral" not in order
+    assert classify_models_for("zhipu") == ["glm-4.7-flash"]
+    assert classify_models_for("siliconflow") == []
+    assert classify_models_for("qwen")[0] == "qwen-flash"
+    assert "qwen3.8-flash" in classify_models_for("qwen")
+    assert "qwen3-32b" in classify_models_for("qwen")
+    assert classify_models_for("tokenhub") == ["glm-5.3-flash"]
+    assert "google/gemma-4-31b-it:free" in classify_models_for("openrouter")
+    assert "inclusionai/ling-3.0-flash-fin:free" not in classify_models_for("openrouter")
+    assert is_classify_banned("ministral-8b-2512")
+    assert is_classify_banned("Qwen/Qwen3-8B")
+    assert not is_classify_banned("glm-4.7-flash")
+    assert not is_classify_banned("qwen-flash")
+    assert primary_models_for("qwen", "news_to_tickers") == ["qwen-flash"]
+    assert primary_models_for("mistral", "news_classify") == []
 
 
 def test_regime_break_on_tsa_is_not_an_accepted_class():
@@ -419,7 +433,7 @@ def test_harm_set_binds_meta_without_inventing():
     assert by["Meta"]["ticker"] == "META"
     assert by["Meta"]["role"] == "unscathed_rival"
     assert by["Alphabet"]["ticker"] == "GOOGL"
-    assert by["Alphabet"]["role"] == "named"
+    assert by["Alphabet"]["role"] == "harm_set"
     assert by["OpenAI"]["ticker"] is None
 
 
@@ -454,4 +468,4 @@ def test_board_check_rejects_shortfall_and_mistral_only():
     problems = assess_board(short)
     assert any(p.startswith("n_kept=") for p in problems)
     assert any("tsa" in p for p in problems)
-    assert any("current-flash" in p for p in problems)
+    assert any("floor model" in p or "classify histogram" in p for p in problems)

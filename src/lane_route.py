@@ -124,6 +124,25 @@ QWEN_MODELS = [m for m in (
 ) if "plus" not in m.lower() and "max" not in m.lower()
     and "paid" not in m.lower() and not m.lower().startswith("pro")
     and "/pro" not in m.lower() and "-pro" not in m.lower()]
+# Classify floor on the same DashScope key. qwen-flash stays the global
+# primary (qwen_models). Larger current IDs are only for news_classify,
+# and only after flash 429s. Never plus / max / Pro / pre-2025 small.
+QWEN_CLASSIFY_MODELS = [m for m in (
+    "qwen-flash",
+    "qwen3.8-flash",
+    "qwen3.7-flash",
+    "qwen3-14b",
+    "qwen3-32b",
+) if "plus" not in m.lower() and "max" not in m.lower()
+    and "paid" not in m.lower() and not m.lower().startswith("pro")
+    and "/pro" not in m.lower() and "-pro" not in m.lower()]
+# OpenRouter classify floor. Ling-3 flash and the free router are not
+# classify — they are 8B-class and may run planner / filter / analyst.
+OR_CLASSIFY_MODELS = [
+    "google/gemma-4-31b-it:free",
+    "z-ai/glm-5.2:free",
+    "minimax/minimax-m3:free",
+]
 # Public DashScope OpenAI-compatible fallbacks. DASHSCOPE_BASE_URL (env/secret)
 # is prepended by qwen_urls() — never log or commit that value.
 QWEN_URLS = [
@@ -228,9 +247,13 @@ DEFAULT_LANES = [
     "github_models", "cloudflare", "sambanova",
     "ollama", "hf", "groq", "gemini",
 ]
-# news_to_tickers + classify/impact + news sector scan: current flash first.
+# news_to_tickers + impact + news sector scan: current flash first.
 # Zhipu glm-4.7-flash → SF Qwen3-8B → OR :free → DashScope qwen-flash.
 NEWS_HEAD = ["zhipu", "siliconflow", "openrouter", "qwen"]
+# news_classify quality floor only. Same head, then TokenHub glm-5.3-flash.
+# Ministral / NIM mini / Qwen3-8B are not on this list. If every floor ID
+# 429s, the article stops — do not fall through to an 8B classifier.
+CLASSIFY_LANES = ["zhipu", "siliconflow", "openrouter", "qwen", "tokenhub"]
 # company_dig: SF Qwen / DeepSeek free non-Pro → OR :free → Zhipu.
 # Native DeepSeek stays off the free head (paid opt-in only).
 DIG_HEAD = ["siliconflow", "openrouter", "zhipu"]
@@ -441,6 +464,8 @@ def lanes_for(tmpl: str) -> list[str]:
     SiliconFlow / ModelScope remain on the $0 path via those lanes.
     """
     tmpl = str(tmpl or "custom").strip()
+    if tmpl == "news_classify":
+        return list(CLASSIFY_LANES)
     if tmpl in NEWS_TEMPLATES:
         return _with_paid_deepseek(
             _dedupe(NEWS_HEAD + DEFAULT_LANES), after="openrouter",
@@ -478,9 +503,59 @@ def sf_models_for(tmpl: str) -> list[str]:
     ]
 
 
+def is_classify_banned(mid: str) -> bool:
+    """True when this ID must not lock event_class.
+
+    Ministral, Llama 3.2 3B, Nemotron-mini, Qwen2.5-7B, old glm-4-flash,
+    Qwen3-8B, and Ling-3 flash are 8B-class or pre-2025 small. They may
+    still run the lookup filter and the analyst after the class is locked.
+    """
+    low = str(mid or "").strip().lower()
+    if not low or is_banned_primary(mid):
+        return True
+    stems = (
+        "ministral",
+        "llama-3.2-3b",
+        "llama-3.2-1b",
+        "nemotron-mini",
+        "qwen2.5-7b",
+        "qwen3-8b",
+        "ling-3",
+        "hy3",
+        "phi-4-mini",
+        "smollm",
+        "glm-4-flash-250414",
+        "glm-4.5-flash",
+    )
+    return any(stem in low for stem in stems)
+
+
+def qwen_classify_models() -> list[str]:
+    """DashScope classify floor. qwen-flash first, then larger current IDs."""
+    return [m for m in QWEN_CLASSIFY_MODELS if not is_classify_banned(m)]
+
+
 def primary_models_for(lane: str, tmpl: str = "custom") -> list[str]:
-    """Current 2025+ primary IDs for a hopper. Never last-resort / banned IDs."""
+    """Current 2025+ primary IDs for a hopper. Never last-resort / banned IDs.
+
+    news_classify is the quality floor: no 8B, no Ministral. SiliconFlow's
+    allowlist is Qwen3-8B only, so that lane contributes no classify ID.
+    """
     tmpl = str(tmpl or "custom").strip()
+    if tmpl == "news_classify":
+        if lane == "zhipu":
+            raw = list(ZHIPU_MODELS)
+        elif lane == "siliconflow":
+            raw = []
+        elif lane == "openrouter":
+            raw = [m for m in OR_CLASSIFY_MODELS if _or_is_free(m)]
+        elif lane == "qwen":
+            raw = qwen_classify_models()
+        elif lane == "tokenhub":
+            raw = ["glm-5.3-flash"]
+        else:
+            raw = []
+        return [m for m in raw if m and not is_classify_banned(m)]
     if lane == "openrouter":
         raw = [m for m in OR_MODELS if _or_is_free(m)]
     elif lane == "deepseek":

@@ -199,35 +199,24 @@ def _shard_of(title: str, shards: int) -> int:
     return zlib.adler32(title.encode("utf-8")) % shards
 
 
-# One-shot only. Do not change NEWS_HEAD / DEFAULT_LANES: other scans keep
-# their order. Current flash first; mistral is overflow after those hops.
-# TokenHub flash (glm-5.3-flash, glm-5.3-flashx, deepseek-v4-flash) sits
-# ahead of hy3 inside the tokenhub lane itself.
-ONE_SHOT_LANES = [
-    "zhipu",
-    "tokenhub",
-    "qwen",
-    "siliconflow",
-    "openrouter",
-    "nvidia_nim",
-    "pollinations",
-    "mistral",
-    "moonshot",
-    "modelscope",
-    "github_models",
-    "cloudflare",
-    "sambanova",
-    "ollama",
-    "hf",
-    "groq",
-    "gemini",
+# Analyst may use 8B only after event_class is locked. Classify never does.
+ANALYST_LANES = [
+    "zhipu", "openrouter", "qwen", "tokenhub",
+    "siliconflow", "mistral", "nvidia_nim", "pollinations",
 ]
+# Lookup core-vs-tangent filter. 8B is allowed here. Zhipu stays reserved
+# for the classify floor so a filter miss does not burn glm-4.7-flash.
+FILTER_LANES = ["siliconflow", "mistral", "openrouter", "qwen"]
+_FLOOR_PROVIDERS = frozenset({"zhipu", "siliconflow", "openrouter", "qwen", "tokenhub"})
 
 
-def one_shot_lanes() -> list[str]:
-    """glm-4.7-flash, then TokenHub flash, then qwen-flash, then overflow."""
-    rest = [name for name in lane.DEFAULT_LANES if name not in ONE_SHOT_LANES]
-    return lane._with_paid_deepseek(ONE_SHOT_LANES + rest, after="qwen")
+def classify_lanes() -> list[str]:
+    """NEWS_HEAD then TokenHub glm-5.3-flash. No Ministral."""
+    return list(lane.CLASSIFY_LANES)
+
+
+def classify_models_for(hop: str) -> list[str]:
+    return lane.primary_models_for(hop, "news_classify")
 
 
 class LiveLane:
@@ -236,14 +225,92 @@ class LiveLane:
         self.ctx = {"keys": keys, "ollama_url": ollama_url, "gh_direct": gh_direct}
         lane._SKIP.clear()
         lane._RATE_LIMITED.clear()
+        self.last_classify_note = ""
 
     def __call__(self, stage: str, prompt: str, system: str, accept=None):
-        """Hop current flash first. Unusable JSON is not a successful hop."""
-        tmpl = "news_classify" if stage == "classify" else "news_impact"
-        budget = lane.token_budget(tmpl)
-        if stage != "classify":
-            budget = max(budget, 900)
-        for hop in one_shot_lanes():
+        if stage == "classify":
+            return self._classify(prompt, system, accept)
+        if stage in {"filter", "planner"}:
+            return self._hop(stage, prompt, system, accept, FILTER_LANES, "news_impact")
+        return self._hop(stage, prompt, system, accept, ANALYST_LANES, "news_impact")
+
+    def _classify(self, prompt: str, system: str, accept):
+        """Floor models only. If they all 429 or reject the enum, stop."""
+        notes: list[str] = []
+        zhipu_on = bool(self.ctx["keys"].get("zhipu"))
+        budget = lane.token_budget("news_classify")
+        winner = None
+        for hop in classify_lanes():
+            models = classify_models_for(hop)
+            if not models:
+                note = (
+                    f"{hop}: skipped for classify — allowlist is 8B-only, "
+                    "and 8B is not a classify floor"
+                    if hop == "siliconflow"
+                    else f"{hop}: no classify-floor model"
+                )
+                notes.append(note)
+                print(f"[lane_one_shot] {note}")
+                continue
+            if hop not in self.ctx["keys"]:
+                note = f"{hop}: key missing"
+                notes.append(note)
+                print(f"[lane_one_shot] {note}")
+                continue
+            parsed, model = lane.ask_lane(
+                hop, prompt, self.ctx,
+                max_tokens=budget, system=system, tmpl="news_classify",
+            )
+            if parsed is None or lane.is_classify_banned(str(model or "")):
+                notes.append(self._fail_note(hop, model))
+                continue
+            if accept is not None and not accept(parsed):
+                note = (
+                    f"{hop}/{model}: JSON rejected "
+                    "(bad enum or regime_break dump-bucket)"
+                )
+                notes.append(note)
+                print(f"[lane_one_shot] {note}")
+                time.sleep(0.2)
+                continue
+            print(f"[lane_one_shot] classify lane::{hop}::{model}")
+            winner = (parsed, hop, str(model))
+            break
+        if winner is None:
+            self.last_classify_note = "; ".join(notes) or "classify floor exhausted"
+            if zhipu_on:
+                print(
+                    "[lane_one_shot] classify stopped — ZHIPU key present, "
+                    f"no floor watermark. {self.last_classify_note}"
+                )
+            else:
+                print(f"[lane_one_shot] classify floor exhausted. {self.last_classify_note}")
+            return None, "", ""
+        _parsed, hop, model = winner
+        if zhipu_on and hop != "zhipu":
+            self.last_classify_note = "; ".join(notes) or "zhipu did not lock the class"
+            print(
+                "[lane_one_shot] classify watermark is not zhipu "
+                f"while ZHIPU key is present: {self.last_classify_note}"
+            )
+        else:
+            self.last_classify_note = ""
+        time.sleep(0.4)
+        return winner
+
+    def _fail_note(self, hop: str, model) -> str:
+        if hop in lane._SKIP:
+            note = f"{hop}: provider skipped (401/403/402/410) after a hard fail"
+        elif any(str(k).startswith(f"{hop}::") for k in lane._RATE_LIMITED):
+            note = f"{hop}: 429 on {model or 'floor model'} — next ID, provider kept"
+        else:
+            note = f"{hop}: no usable classify JSON ({model or 'no model'})"
+        print(f"[lane_one_shot] {note}")
+        return note
+
+    def _hop(self, stage, prompt, system, accept, hops, tmpl):
+        budget = max(lane.token_budget(tmpl), 900)
+        for hop in hops:
             parsed, model = lane.ask_lane(
                 hop, prompt, self.ctx,
                 max_tokens=budget, system=system, tmpl=tmpl,
@@ -253,6 +320,9 @@ class LiveLane:
             if lane.is_banned_primary(str(model or "")):
                 print(f"[lane_one_shot] skip banned {hop}/{model}")
                 continue
+            if stage == "classify" and lane.is_classify_banned(str(model or "")):
+                print(f"[lane_one_shot] skip below-floor {hop}/{model}")
+                continue
             if accept is not None and not accept(parsed):
                 print(f"[lane_one_shot] {stage} unusable lane::{hop}::{model}")
                 time.sleep(0.2)
@@ -260,7 +330,7 @@ class LiveLane:
             print(f"[lane_one_shot] {stage} lane::{hop}::{model}")
             time.sleep(0.4)
             return parsed, hop, str(model)
-        print(f"[lane_one_shot] {stage} all current-flash hops failed")
+        print(f"[lane_one_shot] {stage} hops failed")
         return None, "", ""
 
 
@@ -284,6 +354,18 @@ def _valid_watermark(row: dict) -> bool:
     return True
 
 
+def _classify_floor_ok(row: dict) -> bool:
+    """Classify watermark must be a floor model. Ministral cannot lock class."""
+    for mark in row.get("watermarks") or []:
+        if mark.get("stage") != "classify":
+            continue
+        parts = str(mark.get("watermark") or "").split("::")
+        if len(parts) < 3 or parts[1] not in _FLOOR_PROVIDERS:
+            return False
+        return not lane.is_classify_banned(parts[-1])
+    return False
+
+
 def run_shard(
     shard: int,
     shards: int,
@@ -293,6 +375,7 @@ def run_shard(
     root: Path | None = None,
     lane_client=None,
     use_pack: bool = True,
+    gold_only: bool = False,
 ) -> dict:
     root = root or Path(".")
     ready = print_env()
@@ -327,7 +410,7 @@ def run_shard(
             gold_report[row["gold_id"]] = row.get("gold_status") or (
                 "PASS" if row.get("keep") else "FAIL"
             )
-        if row.get("keep") and _valid_watermark(row):
+        if row.get("keep") and _valid_watermark(row) and _classify_floor_ok(row):
             kept.append(row)
             _save_scratch(row, scratch)
             print(f"[lane_one_shot] KEEP {row.get('watermark')} {row.get('action','')[:120]}")
@@ -340,13 +423,15 @@ def run_shard(
             })
             if row.get("watermarks"):
                 _save_scratch(row, scratch)
+            if row.get("keep") and not _classify_floor_ok(row):
+                print(f"[lane_one_shot] classify below floor {row.get('watermark')}")
             print(f"[lane_one_shot] REJECT {row.get('reject_reason')} {(row.get('title') or '')[:80]}")
 
-    if shard == 0:
+    if shard == 0 or gold_only:
         for art in GOLD_KEEP + GOLD_REJECT:
             handle(art)
 
-    pool = [
+    pool = [] if gold_only else [
         art for art in harvest(root)
         if _shard_of(art["title"], shards) == shard
         and _norm(art["title"]) not in {_norm(g["title"]) for g in GOLD_KEEP + GOLD_REJECT}
@@ -359,12 +444,15 @@ def run_shard(
 
     invented = 0
     hops: Counter = Counter()
+    classify_hops: Counter = Counter()
     reasons: Counter = Counter()
     for row in kept:
         invented += len(row.get("invented_tickers") or [])
         for w in row.get("watermarks") or []:
             if w.get("watermark"):
                 hops[w["watermark"]] += 1
+                if w.get("stage") == "classify":
+                    classify_hops[w["watermark"]] += 1
     for row in rejected:
         reasons[row.get("reason") or "?"] += 1
     report = {
@@ -375,6 +463,7 @@ def run_shard(
         "n_kept": len(kept),
         "invented_tickers": invented,
         "hop_histogram": dict(hops),
+        "classify_histogram": dict(classify_hops),
         "reject_histogram": dict(reasons),
         "gold": gold_report,
         "env": env_lines(),
@@ -407,6 +496,7 @@ def merge_boards(src: Path, board: Path | None = None, expect: int = 100) -> int
     kept: list[dict] = []
     drawn = rejected = invented = 0
     hops: Counter = Counter()
+    classify_hops: Counter = Counter()
     reasons: Counter = Counter()
     gold: dict[str, str] = {}
     env: list[str] = []
@@ -417,6 +507,7 @@ def merge_boards(src: Path, board: Path | None = None, expect: int = 100) -> int
         rejected += int(blob.get("n_rejected") or 0)
         invented += int(blob.get("invented_tickers") or 0)
         hops.update(blob.get("hop_histogram") or {})
+        classify_hops.update(blob.get("classify_histogram") or {})
         reasons.update(blob.get("reject_histogram") or {})
         gold.update(blob.get("gold") or {})
         env = blob.get("env") or env
@@ -424,6 +515,8 @@ def merge_boards(src: Path, board: Path | None = None, expect: int = 100) -> int
         for row in blob.get("kept") or []:
             if row.get("keep") and _valid_watermark(row) and row.get("action"):
                 if "no action" in str(row.get("action")).lower():
+                    continue
+                if not _classify_floor_ok(row):
                     continue
                 kept.append(row)
     # Stable order: gold keepers first, then the rest.
@@ -451,6 +544,7 @@ def merge_boards(src: Path, board: Path | None = None, expect: int = 100) -> int
         "n_kept": len(kept),
         "invented_tickers": invented,
         "hop_histogram": dict(hops.most_common()),
+        "classify_histogram": dict(classify_hops.most_common()),
         "reject_histogram": dict(reasons.most_common()),
         "gold": gold,
         "env": env,
@@ -517,15 +611,63 @@ def assess_board(text: str) -> list[str]:
         got = match.group(1) if match else "missing"
         if got != want:
             problems.append(f"gold {key}={got}")
-    hop_block = ""
-    if "## Hop histogram" in text:
-        hop_block = text.split("## Hop histogram", 1)[1].split("## ", 1)[0]
-    flash = ("lane::zhipu::", "lane::tokenhub::", "lane::qwen::")
-    if not any(prefix in hop_block for prefix in flash):
-        problems.append("hop histogram has no current-flash watermark")
+    classify_block = ""
+    if "## Classify hop histogram" in text:
+        classify_block = text.split("## Classify hop histogram", 1)[1].split("## ", 1)[0]
+    else:
+        problems.append("classify histogram missing")
+    if "ministral" in classify_block.lower():
+        problems.append("ministral on classify")
+    floor = ("lane::zhipu::", "lane::openrouter::", "lane::qwen::", "lane::tokenhub::")
+    if not any(prefix in classify_block for prefix in floor):
+        problems.append("classify histogram has no floor model")
     if "no action warranted" in text.lower():
         problems.append("banned phrase")
     return problems
+
+
+def gold_gate_problems(report: dict) -> list[str]:
+    """Gold-only gate. The four keepers must pass before any 100-draw."""
+    problems = []
+    gold = report.get("gold") or {}
+    for key in ("tsa", "buist", "tsv", "amrx", "naion"):
+        if gold.get(key) != "PASS":
+            problems.append(f"gold {key}={gold.get(key) or 'missing'}")
+    for key in ("hormuz", "outperforms"):
+        if gold.get(key) != "REJECTED":
+            problems.append(f"gold {key}={gold.get(key) or 'missing'}")
+    hist = report.get("classify_histogram") or {}
+    if any("ministral" in str(key).lower() for key in hist):
+        problems.append("ministral on classify")
+    for row in report.get("kept") or []:
+        if row.get("gold_id") and not _classify_floor_ok(row):
+            problems.append(f"classify below floor {row.get('gold_id')}")
+    return problems
+
+
+def write_gold_report(report: dict) -> int:
+    problems = gold_gate_problems(report)
+    header = {
+        "n_drawn": report.get("n_drawn"),
+        "n_rejected": report.get("n_rejected"),
+        "n_kept": report.get("n_kept"),
+        "invented_tickers": report.get("invented_tickers") or 0,
+        "hop_histogram": report.get("hop_histogram") or {},
+        "classify_histogram": report.get("classify_histogram") or {},
+        "reject_histogram": report.get("reject_histogram") or {},
+        "gold": report.get("gold") or {},
+        "env": report.get("env") or [],
+        "finviz_file": report.get("finviz_file") or "",
+        "status": "GOLD_PASS" if not problems else "GOLD_FAIL",
+    }
+    dest = Path("03_scoreboard/LANE_ONE_SHOT_GOLD.md")
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    rows = [row for row in report.get("kept") or [] if row.get("gold_id")]
+    dest.write_text(render_markdown(header, rows), encoding="utf-8")
+    print(f"[lane_one_shot] wrote {dest} status={header['status']}")
+    for item in problems:
+        print("[lane_one_shot] gold gate:", item)
+    return 0 if not problems else 1
 
 
 def main() -> None:
@@ -538,6 +680,7 @@ def main() -> None:
     ap.add_argument("--merge", type=str, default="")
     ap.add_argument("--expect", type=int, default=100)
     ap.add_argument("--check-board", type=str, default="")
+    ap.add_argument("--gold-only", action="store_true")
     ap.add_argument("--no-pack", action="store_true")
     args = ap.parse_args()
     if args.env_check:
@@ -556,6 +699,11 @@ def main() -> None:
         raise SystemExit(0)
     if args.merge:
         raise SystemExit(merge_boards(Path(args.merge), expect=args.expect))
+    if args.gold_only:
+        report = run_shard(
+            0, 1, 7, 7, use_pack=not args.no_pack, gold_only=True,
+        )
+        raise SystemExit(write_gold_report(report))
     run_shard(
         args.shard, args.shards, args.target, args.max_draws,
         use_pack=not args.no_pack,

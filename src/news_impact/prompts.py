@@ -129,3 +129,58 @@ FAMILY_TESTS = {
         "statement_public / discard: no ticket unless a run-rate changes."
     ),
 }
+
+# Family flip questions. The planner copies ONE family's list into
+# scratch.questions[]. It does not invent a second family.
+FLIP_QUESTIONS = {
+    "blast": [
+        "Who is in the harm set (cannot operate, sued, or breached)?",
+        "If the buyer still wants the end-use and the primary channel is blocked, which listed substitute is on the Finviz hit list?",
+        "Which listed rival competes and is outside the harm set (unscathed_rival)?",
+        "Who sells the input both sides still buy (arms_dealer)? If unanswered, direction is not_determined.",
+    ],
+    "structure": [
+        "Who collects the old venue rent (exchange or broker)?",
+        "Which new venue just received permission, and is that name on the Finviz hit list?",
+        "Is the incumbent already building the same rail (then mixed, not a clean down)?",
+        "Does any hit sit in Energy even though the title never names that firm? Drop it.",
+    ],
+    "quantity": [
+        "Who pays the input, and who sells it?",
+        "Is this capacity added or capacity destroyed?",
+        "Which listed substitute wins if the primary supply is missing?",
+    ],
+    "permission": [
+        "Who just became legal to sell or launch the product?",
+        "Is this a gate (approval) or only a trial readout (not approval)?",
+        "What clock does the print land on: same session, next open, or Monday?",
+    ],
+    "print": [
+        "What number changed versus what was already priced?",
+        "Is this one named issuer, or a factor that should not be pinned to a camera ticker?",
+        "If guidance was only reaffirmed, why is an up call illegal?",
+    ],
+    "firm": [
+        "Is this the issuer's own cash, paper, or control — not a sector story?",
+        "If it is a routine dividend, why is there no 0-1d sector trade?",
+        "Who is the named issuer on the Finviz hit list?",
+    ],
+    "flow": [
+        "Who is forced to buy or sell the named line, and on which session?",
+        "Is the flow the issuer itself or an index vehicle?",
+    ],
+    "time": [
+        "Did the physical or legal constraint change, or is this a reprint?",
+        "If it is a regime break, which prior book flips sign?",
+        "If it is weather, why is a 0-1d entity illegal?",
+    ],
+}
+
+NAION_CLOCK_Q = (
+    "NAION/GLP-1 is a class wrap: which listed sponsors are on the "
+    "Finviz hit list, and why is the clock not 0-1d?"
+)
+LANREOTIDE_CLOCK_Q = (
+    "The lanreotide approval hit at 16:01. Which session can actually "
+    "trade it, and why is that not the same-day 0-1d tape?"
+)
