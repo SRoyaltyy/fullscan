@@ -1,6 +1,6 @@
 {
   "date": "2026-09-23",
-  "generated_at": "2026-09-23T08:28:56.618019-04:00",
+  "generated_at": "2026-09-23T10:34:25.502880-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -855,8 +855,8 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=200",
-          "size": 1446835,
-          "said": "1d BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL \u00b7 0.5032",
+          "size": 1483342,
+          "said": "1d BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL SOC, REAX, HAL, NOG, MUR, PUMP \u00b7 0.5032",
           "bullets": []
         },
         {
@@ -866,10 +866,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 75317,
+          "size": 75774,
           "said": "Stock book \u2014 2026-09-23",
           "bullets": [
-            "_Generated 2026-09-23T06:24:46.839103-04:00_",
+            "_Generated 2026-09-23T09:34:48.102662-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -933,8 +933,8 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=200",
-          "size": 1446835,
-          "said": "1d BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL \u00b7 0.5032",
+          "size": 1483342,
+          "said": "1d BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL SOC, REAX, HAL, NOG, MUR, PUMP \u00b7 0.5032",
           "bullets": []
         },
         {
@@ -982,125 +982,125 @@
     "buy_1d": [
       {
         "ticker": "ARQT",
-        "score": 0.8495734282988849
+        "score": 0.8340970156905521
       },
       {
         "ticker": "PGEN",
-        "score": 0.7783687895719862
+        "score": 0.7700136439120353
       },
       {
         "ticker": "ADMA",
-        "score": 0.7580653853069101
+        "score": 0.7517424630170111
       },
       {
         "ticker": "DXCM",
-        "score": 0.3925919326017715
+        "score": 0.38580549282001886
       },
       {
         "ticker": "NICE",
-        "score": 0.6903282194407692
+        "score": 0.6463352699781763
       },
       {
         "ticker": "TH",
-        "score": 0.7513180156725596
+        "score": 0.72120936811278
       },
       {
         "ticker": "PUBM",
-        "score": 0.7109581470869826
+        "score": 0.6648956170930282
       },
       {
         "ticker": "APPS",
-        "score": 0.7050792129707817
+        "score": 0.659600157874781
       },
       {
         "ticker": "PAYS",
-        "score": 0.7006340229766195
+        "score": 0.655588583374579
       },
       {
         "ticker": "CTOS",
-        "score": 0.7173218459445099
+        "score": 0.6906073858269013
       },
       {
         "ticker": "VSTS",
-        "score": 0.6379616141347848
+        "score": 0.6191745615179922
       },
       {
         "ticker": "TAL",
-        "score": 0.6113273438001063
+        "score": 0.6007467733009548
       },
       {
         "ticker": "SB",
-        "score": 0.5911792451587567
+        "score": 0.5770729430715258
       },
       {
         "ticker": "ELF",
-        "score": 0.6521630644818248
+        "score": 0.63748635390779
       },
       {
         "ticker": "SHOO",
-        "score": 0.5356595011717732
+        "score": 0.5042884738828913
       }
     ],
     "sell_1d": [
       {
-        "ticker": "CF",
-        "score": -0.3858845499891464
+        "ticker": "SOC",
+        "score": -0.44024022272950497
       },
       {
-        "ticker": "SSTK",
-        "score": -0.34231573636974333
-      },
-      {
-        "ticker": "OVV",
-        "score": -0.3414392292642719
-      },
-      {
-        "ticker": "ADM",
-        "score": -0.31127305220128904
-      },
-      {
-        "ticker": "FLUT",
-        "score": -0.30293527819512717
+        "ticker": "REAX",
+        "score": -0.4283076275224197
       },
       {
         "ticker": "HAL",
-        "score": -0.30245044142611754
+        "score": -0.3776316731327164
       },
       {
-        "ticker": "DOW",
-        "score": -0.2915665678108171
+        "ticker": "NOG",
+        "score": -0.3732038539344959
       },
       {
-        "ticker": "NFLX",
-        "score": -0.2869942961143662
+        "ticker": "MUR",
+        "score": -0.3709892073800236
       },
       {
-        "ticker": "DKNG",
-        "score": -0.275936104234283
+        "ticker": "PUMP",
+        "score": -0.357287584503017
       },
       {
-        "ticker": "HUM",
-        "score": -0.27130768607439465
+        "ticker": "CF",
+        "score": -0.3522147374976558
       },
       {
-        "ticker": "IMO",
-        "score": -0.2708924143996866
+        "ticker": "OVV",
+        "score": -0.33771567201990327
       },
       {
-        "ticker": "RVMD",
-        "score": -0.27037606165126005
+        "ticker": "XPRO",
+        "score": -0.33409820032229154
       },
       {
-        "ticker": "APA",
-        "score": -0.2652285870712288
+        "ticker": "WTI",
+        "score": -0.3336741488538328
       },
       {
-        "ticker": "STLA",
-        "score": -0.2635438352167803
+        "ticker": "BTU",
+        "score": -0.33090823216922044
       },
       {
-        "ticker": "JBHT",
-        "score": -0.26272910381767645
+        "ticker": "HP",
+        "score": -0.3083740210592424
+      },
+      {
+        "ticker": "BRSP",
+        "score": -0.3009861998134855
+      },
+      {
+        "ticker": "RES",
+        "score": -0.29383177354911094
+      },
+      {
+        "ticker": "ESRT",
+        "score": -0.28755207939082544
       }
     ],
     "flatten": {
@@ -2178,6 +2178,115 @@
         }
       ],
       "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-09-23\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **0.717** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **0.144** (ES +0.03%, ZN -0.03%, PM:XLU +0.04%) \u00b7 index_carry **0.573** (general 2.293) \u00b7 llm_overlay **0.0** (raw 0.0) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-09-23\n**Step 0 \u2014 Setup.** Loaded 150,865 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (17,194 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-23\nGenerated: **2026-09-23T08:28:55.468661-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_at, sectors \u00b7 "
+    },
+    {
+      "key": "live_boards",
+      "title": "live_boards",
+      "date": "2026-09-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-23T10:34:24.770741-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 31895,
+          "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL SOC, REAX, HAL, NOG, MUR, PUMP, CF, OVV"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 683,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-23.json",
+          "ok": true,
+          "reason": "",
+          "size": 106304,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-23_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 69007,
+          "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL SOC, REAX, HAL, NOG, MUR, PUMP, CF, OVV"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 916576,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-23_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 916576,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1353392,
+          "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL SOC, REAX, HAL, NOG, MUR, PUMP, CF, OVV"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 916576,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 69007,
+          "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL SOC, REAX, HAL, NOG, MUR, PUMP, CF, OVV"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 916576,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 916576,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1353392,
+          "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL SOC, REAX, HAL, NOG, MUR, PUMP, CF, OVV"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 2092,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 2092,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL SOC, REAX, HAL, NOG, MUR, PUMP, CF, OVV \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL SOC, REAX, HAL, NOG, MUR, PUMP, CF, OVV \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL SOC, REAX, HAL, NOG, MUR, PUMP, CF, OVV \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL SOC, REAX, HAL, NOG, MUR, PUMP, CF, OVV \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_leg"
     }
   ],
   "href": {
