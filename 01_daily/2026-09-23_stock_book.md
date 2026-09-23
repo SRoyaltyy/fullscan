@@ -1,6 +1,6 @@
 # Stock book — 2026-09-23
 
-_Generated 2026-09-23T07:48:06.871830-04:00_
+_Generated 2026-09-23T07:54:53.927410-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -20,8 +20,8 @@ The existing red/yellow/green source graph remains visible. Its digest, judge an
 
 - Weather risk: **mixed**
 - General predict (same-day): +0.50 up (present)
-- Stand-down: **no** — 623 names qualified through standard,group_leader,catalyst (119 probable)
-- Sector predicts this date: 4/11 (ok)
+- Stand-down: **no** — 616 names qualified through standard,group_leader,catalyst (155 probable)
+- Sector predicts this date: 5/11 (ok)
 - News tickers in play: 86
 - AB coverage: 1876 names · peer RS: 1832
 - Universe after liquidity: 2066
@@ -59,9 +59,9 @@ Decision domains: **MKT · parent · child · company · setup · flow**. Measur
 | 6 | **OPCH** | 🟢🟡🟢🟡🟢🟢 | group_leader | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY GROUP_LEADER — market=GREEN; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,⚪,Cond green |
 | 7 | **CRWD** | 🟢🔴🟢🟡🟢🟢 | group_leader | direct normal digest (stale/undated): Morgan Stanley target raise and falling yields lift CrowdStrike 5% during regular hours; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=GREEN; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.30); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
 | 8 | **THC** | 🟢🟡🟢🟡🟢🟡 | group_leader | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY GROUP_LEADER — market=GREEN; parent=YELLOW; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=YELLOW; lookback=🔵,⚪,Cond green |
-| 9 | **TWLO** | 🟢🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=GREEN; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
-| 10 | **PENG** | 🟢🔴🟢🟡🟢🟢 | group_leader | no direct company event; Information Technology Services +2.9% d1 / +1.9% 1w / +3.9% vs parent | BUY GROUP_LEADER — market=GREEN; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
-| 11 | **INOD** | 🟢🔴🟢🟡🟢🟢 | group_leader | no direct company event; Information Technology Services +2.9% d1 / +1.9% 1w / +3.9% vs parent | BUY GROUP_LEADER — market=GREEN; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
+| 9 | **INOD** | 🟢🔴🟢🟡🟢🟢 | group_leader | no direct company event; Information Technology Services +2.9% d1 / +1.9% 1w / +3.9% vs parent | BUY GROUP_LEADER — market=GREEN; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
+| 10 | **TWLO** | 🟢🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=GREEN; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
+| 11 | **PENG** | 🟢🔴🟢🟡🟢🟢 | group_leader | no direct company event; Information Technology Services +2.9% d1 / +1.9% 1w / +3.9% vs parent | BUY GROUP_LEADER — market=GREEN; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
 | 12 | **DOCN** | 🟢🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=GREEN; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
 | 13 | **RBRK** | 🟢🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=GREEN; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
 | 14 | **VUZI** | 🟢🔴🟢🟡🟢🟢 | group_leader | no direct company event; Consumer Electronics +0.3% d1 / +4.0% 1w / +6.0% vs parent | BUY GROUP_LEADER — market=GREEN; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
@@ -71,21 +71,21 @@ Decision domains: **MKT · parent · child · company · setup · flow**. Measur
 
 | # | Ticker | Domains | Industry | Decision |
 |---:|--------|---------|----------|----------|
-| 1 | **FLNC** | 🟢🔴🔴🟡🔴🔴 | Utilities - Renewable | SELL/AVOID — market=GREEN; red domains=parent,child,setup,flow; child lags parent -4.1% |
-| 2 | **TE** | 🟢🔴🔴🟡🔴🔴 | Electrical Equipment & Parts | SELL/AVOID — market=GREEN; red domains=parent,child,setup,flow; child lags parent -4.7% |
-| 3 | **SOC** | 🟢🟡🔴🟡🔴🔴 | Oil & Gas Drilling | SELL/AVOID — market=GREEN; red domains=child,setup,flow; child lags parent -5.4% |
-| 4 | **BYRN** | 🟢🔴🔴🟡🔴🔴 | Aerospace & Defense | SELL/AVOID — market=GREEN; red domains=parent,child,setup,flow |
-| 5 | **METC** | 🟢🔴🔴🟡🔴🟡 | Coking Coal | SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -5.7% |
-| 6 | **LAES** | 🟢🔴🔴🟡🔴🔴 | Semiconductors | SELL/AVOID — market=GREEN; red domains=parent,child,setup,flow |
-| 7 | **PLUG** | 🟢🔴🔴🟡🔴🟡 | Electrical Equipment & Parts | SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -4.7% |
-| 8 | **BAK** | 🟢🔴🔴🟡🔴🟡 | Chemicals | SELL/AVOID — market=GREEN; red domains=parent,child,setup |
-| 9 | **KLIC** | 🟢🔴🔴🟡🟢🔴 | Semiconductor Equipment & Materials | SELL/AVOID — market=GREEN; red domains=parent,child,flow; child lags parent -6.3% |
-| 10 | **ENPH** | 🟢🔴🔴🟡🔴🔴 | Solar | SELL/AVOID — market=GREEN; red domains=parent,child,setup,flow |
-| 11 | **XIFR** | 🟢🔴🔴🟡🔴🟡 | Utilities - Renewable | SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -4.1% |
-| 12 | **SES** | 🟢🟡🔴🟡🔴🔴 | Auto Parts | SELL/AVOID — market=GREEN; red domains=child,setup,flow |
-| 13 | **BGS** | 🟢🟢🟡🟡🔴🔴 | Packaged Foods | SELL/AVOID — market=GREEN; red domains=setup,flow; child lags parent -3.5% |
-| 14 | **RCAT** | 🟢🔴🔴🟡🔴🟡 | Aerospace & Defense | SELL/AVOID — market=GREEN; red domains=parent,child,setup |
-| 15 | **CSIQ** | 🟢🔴🔴🟡🔴🔴 | Solar | SELL/AVOID — market=GREEN; red domains=parent,child,setup,flow |
+| 1 | **SOC** | 🟢🔴🔴🟡🔴🔴 | Oil & Gas Drilling | SELL/AVOID — market=GREEN; red domains=parent,child,setup,flow; child lags parent -5.4% |
+| 2 | **FLNC** | 🟢🔴🔴🟡🔴🔴 | Utilities - Renewable | SELL/AVOID — market=GREEN; red domains=parent,child,setup,flow; child lags parent -4.1% |
+| 3 | **TE** | 🟢🔴🔴🟡🔴🔴 | Electrical Equipment & Parts | SELL/AVOID — market=GREEN; red domains=parent,child,setup,flow; child lags parent -4.7% |
+| 4 | **BTU** | 🟢🔴🔴🟡🔴🟡 | Thermal Coal | SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -4.4% |
+| 5 | **UEC** | 🟢🔴🔴🟡🔴🟡 | Uranium | SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -10.3% |
+| 6 | **BYRN** | 🟢🔴🔴🟡🔴🔴 | Aerospace & Defense | SELL/AVOID — market=GREEN; red domains=parent,child,setup,flow |
+| 7 | **HAL** | 🟢🔴🔴🟡🔴🟡 | Oil & Gas Equipment & Services | SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -7.7% |
+| 8 | **METC** | 🟢🔴🔴🟡🔴🟡 | Coking Coal | SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -5.7% |
+| 9 | **PUMP** | 🟢🔴🔴🟡🔴🟡 | Oil & Gas Equipment & Services | SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -7.7% |
+| 10 | **FLOC** | 🟢🔴🔴🟡🔴🟡 | Oil & Gas Equipment & Services | SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -7.7% |
+| 11 | **XPRO** | 🟢🔴🔴🟡🔴🟡 | Oil & Gas Equipment & Services | SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -7.7% |
+| 12 | **CCJ** | 🟢🔴🔴🟡🔴🟡 | Uranium | SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -10.3% |
+| 13 | **UUUU** | 🟢🔴🔴🟡🔴🟡 | Uranium | SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -10.3% |
+| 14 | **URG** | 🟢🔴🔴🟡🔴🟡 | Uranium | SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -10.3% |
+| 15 | **HP** | 🟢🔴🔴🟡🔴🟢 | Oil & Gas Drilling | SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -5.4% |
 
 ## Finviz outperform board (industry + theme)
 
@@ -102,7 +102,7 @@ This is the live Finviz groups tape — child industry vs parent sector, plus th
 | Communication Services | +2.7% | +3.5% | +0.26 |  |
 | Consumer Cyclical | -0.4% | -2.0% | +0.00 | essay flat, tape moving |
 | Consumer Defensive | +1.4% | +0.5% | +0.26 |  |
-| Energy | -0.8% | +1.0% | — |  |
+| Energy | -0.8% | +1.0% | -0.59 |  |
 | Financial | -0.4% | -1.8% | — |  |
 | Healthcare | +1.4% | -2.5% | — |  |
 | Industrials | -1.6% | -2.7% | — |  |
@@ -212,6 +212,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 
 | Sector | bias |
 |--------|------|
+| Energy | -0.59 |
 | Communication Services | +0.26 |
 | Consumer Defensive | +0.26 |
 | Basic Materials | +0.00 |
@@ -519,31 +520,31 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 
 ## 1d AVOID — bottom of the same rank
 
+- **SOC** (small, Energy, $825M) score -0.440. SELL/AVOID — market=GREEN; red domains=parent,child,setup,flow; child lags parent -5.4%
+- **HAL** (large, Energy, $27.9B) score -0.378. SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -7.7%
+- **NOG** (mid, Energy, $2.6B) score -0.373. SELL/AVOID — market=GREEN; red domains=parent,setup
+- **MUR** (mid, Energy, $5.2B) score -0.371. SELL/AVOID — market=GREEN; red domains=parent,setup
+- **PUMP** (small, Energy, $1.2B) score -0.357. SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -7.7%
 - **CF** (large, Basic Materials, $18.6B) score -0.352. SELL/AVOID — market=GREEN; red domains=parent,child,setup
-- **OVV** (large, Energy, $16.6B) score -0.328. NO BEAR — market=GREEN
-- **HAL** (large, Energy, $27.9B) score -0.288. SELL/AVOID — market=GREEN; red domains=child,setup; child lags parent -7.7%
+- **OVV** (large, Energy, $16.6B) score -0.338. NO BEAR — market=GREEN; red domains=parent
+- **XPRO** (small, Energy, $1.8B) score -0.334. SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -7.7%
+- **WTI** (small, Energy, $563M) score -0.334. SELL/AVOID — market=GREEN; red domains=parent,setup
+- **BTU** (mid, Energy, $3.1B) score -0.331. SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -4.4%
+- **HP** (mid, Energy, $4.0B) score -0.308. SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -5.4%
+- **RES** (small, Energy, $1.3B) score -0.294. SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -7.7%
+- **AR** (large, Energy, $10.4B) score -0.280. NO BEAR — market=GREEN; red domains=parent
+- **PTEN** (mid, Energy, $4.4B) score -0.279. SELL/AVOID — market=GREEN; red domains=parent,child; child lags parent -5.4%
+- **IMO** (large, Energy, $61.0B) score -0.274. SELL/AVOID — market=GREEN; red domains=parent,setup
+- **MGY** (mid, Energy, $5.7B) score -0.274. NO BEAR — market=GREEN; red domains=parent
+- **UEC** (mid, Energy, $5.0B) score -0.273. SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -10.3%
+- **CLB** (small, Energy, $502M) score -0.272. SELL/AVOID — market=GREEN; red domains=parent,child; child lags parent -7.7%
 - **ADM** (large, Consumer Defensive, $40.3B) score -0.272. NO BEAR — market=GREEN
-- **APA** (large, Energy, $15.4B) score -0.267. NO BEAR — market=GREEN
 - **SSTK** (micro, Communication Services, $167M) score -0.266. NO BEAR — market=GREEN; red domains=setup
-- **IMO** (large, Energy, $61.0B) score -0.265. NO BEAR — market=GREEN; red domains=setup
-- **EC** (large, Energy, $34.9B) score -0.263. NO BEAR — market=GREEN
+- **FLOC** (small, Energy, $1.8B) score -0.262. SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -7.7%
+- **URG** (small, Energy, $493M) score -0.259. SELL/AVOID — market=GREEN; red domains=parent,child,setup; child lags parent -10.3%
 - **FLUT** (large, Consumer Cyclical, $15.2B) score -0.257. NO BEAR — market=GREEN; red domains=setup
 - **HUM** (large, Healthcare, $45.5B) score -0.256. NO BEAR — market=GREEN
 - **DOW** (large, Basic Materials, $20.6B) score -0.255. SELL/AVOID — market=GREEN; red domains=parent,child,setup
-- **RVMD** (large, Healthcare, $41.2B) score -0.255. NO BEAR — market=GREEN; red domains=setup
-- **YPF** (large, Energy, $21.3B) score -0.239. NO BEAR — market=GREEN; red domains=flow
-- **NFLX** (mega, Communication Services, $308.5B) score -0.236. NO BEAR — market=GREEN
-- **DKNG** (large, Consumer Cyclical, $19.6B) score -0.232. NO BEAR — market=GREEN; red domains=setup
-- **JBHT** (large, Industrials, $22.2B) score -0.221. NO BEAR — market=GREEN; red domains=parent
-- **STLA** (large, Consumer Cyclical, $13.9B) score -0.221. NO BEAR — market=GREEN; red domains=setup
-- **EQNR** (large, Energy, $103.0B) score -0.220. NO BEAR — market=GREEN
-- **COKE** (large, Consumer Defensive, $12.7B) score -0.216. NO BEAR — market=GREEN
-- **OKE** (large, Energy, $57.9B) score -0.213. SELL/AVOID — market=GREEN; red domains=child
-- **XHG** (micro, Financial, $111M) score -0.202. NO BEAR — market=GREEN
-- **LYB** (large, Basic Materials, $19.4B) score -0.195. SELL/AVOID — market=GREEN; red domains=parent,child
-- **CHTR** (large, Communication Services, $21.6B) score -0.193. NO BEAR — market=GREEN; red domains=setup
-- **HE** (small, Utilities, $1.7B) score -0.190. SELL/AVOID — market=GREEN; red domains=parent,child,setup
-- **AVTR** (large, Healthcare, $10.2B) score -0.187. NO BEAR — market=GREEN
 
 ## 3d BUY (compact — same names, different weights)
 
@@ -880,31 +881,31 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 
 ## 1m AVOID — bottom of the same rank
 
+- **SOC** (small, Energy, $825M) score -0.652. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **NOG** (mid, Energy, $2.6B) score -0.595. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **HAL** (large, Energy, $27.9B) score -0.581. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **PUMP** (small, Energy, $1.2B) score -0.579. this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **MUR** (mid, Energy, $5.2B) score -0.572. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **XPRO** (small, Energy, $1.8B) score -0.554. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **WTI** (small, Energy, $563M) score -0.540. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **OVV** (large, Energy, $16.6B) score -0.518. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **BTU** (mid, Energy, $3.1B) score -0.517. this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **HP** (mid, Energy, $4.0B) score -0.512. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **UEC** (mid, Energy, $5.0B) score -0.491. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing**
+- **IMO** (large, Energy, $61.0B) score -0.474. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **FLOC** (small, Energy, $1.8B) score -0.466. the Finviz industry was **down**
 - **CF** (large, Basic Materials, $18.6B) score -0.452. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **OVV** (large, Energy, $16.6B) score -0.449. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **HAL** (large, Energy, $27.9B) score -0.433. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **IMO** (large, Energy, $61.0B) score -0.405. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **URG** (small, Energy, $493M) score -0.451. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing**
+- **MGY** (mid, Energy, $5.7B) score -0.438. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **TTI** (small, Energy, $902M) score -0.436. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **RES** (small, Energy, $1.3B) score -0.432. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **AR** (large, Energy, $10.4B) score -0.414. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **INVX** (small, Energy, $1.9B) score -0.414. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **VTS** (small, Energy, $724M) score -0.412. this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **CLB** (small, Energy, $502M) score -0.401. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **DKNG** (large, Consumer Cyclical, $19.6B) score -0.399. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **FLUT** (large, Consumer Cyclical, $15.2B) score -0.398. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **STLA** (large, Consumer Cyclical, $13.9B) score -0.395. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **advancing**
-- **SSTK** (micro, Communication Services, $167M) score -0.387. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **DOW** (large, Basic Materials, $20.6B) score -0.386. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **APA** (large, Energy, $15.4B) score -0.382. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **EC** (large, Energy, $34.9B) score -0.358. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **ADM** (large, Consumer Defensive, $40.3B) score -0.334. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **SOC** (small, Energy, $825M) score -0.333. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **YPF** (large, Energy, $21.3B) score -0.329. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **EQNR** (large, Energy, $103.0B) score -0.325. this name **beat most of its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **BAK** (micro, Basic Materials, $298M) score -0.322. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **FWRD** (small, Industrials, $493M) score -0.316. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **WU** (small, Financial, $1.9B) score -0.307. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **LYB** (large, Basic Materials, $19.4B) score -0.306. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **advancing**
-- **AA** (large, Basic Materials, $11.8B) score -0.303. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **down**
-- **GENI** (small, Communication Services, $1.6B) score -0.299. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **BSIN** (micro, Energy, $85M) score -0.299. the Finviz industry was **down**
-- **JACK** (micro, Consumer Cyclical, $256M) score -0.299. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **IHRT** (small, Communication Services, $406M) score -0.297. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **advancing**
-- **OKE** (large, Energy, $57.9B) score -0.294. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 
 ## Files for this run
 
