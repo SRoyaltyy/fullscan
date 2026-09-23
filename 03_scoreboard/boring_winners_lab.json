@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-22T13:58:02.644711-04:00",
+  "generated": "2026-09-23T10:54:37.358966-04:00",
   "capital": 10000.0,
   "dates": [
     "2026-08-13",
@@ -31,7 +31,8 @@
     "2026-09-18",
     "2026-09-20",
     "2026-09-21",
-    "2026-09-22"
+    "2026-09-22",
+    "2026-09-23"
   ],
   "scenarios": [
     {
@@ -255,6 +256,7 @@
       -0.12,
       -0.12,
       1.55,
+      -0.02,
       -0.13
     ],
     "equity": [
@@ -287,7 +289,8 @@
       9987.7,
       9975.71,
       10130.33,
-      10117.16
+      10128.3,
+      10115.13
     ]
   },
   "sleeves": {
@@ -303,12 +306,12 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 30,
+        "n_days": 31,
         "n_win_days": 5,
         "n_loss_days": 15,
-        "p_loss_day": 0.5,
-        "p_win_day": 0.1667,
-        "mean_day": -6.122,
+        "p_loss_day": 0.4839,
+        "p_win_day": 0.1613,
+        "mean_day": -5.925,
         "avg_win_day": 0.591,
         "avg_loss_day": -12.442,
         "cum_sum": -183.667
@@ -334,6 +337,7 @@
         1883.2,
         1856.35,
         1866.99,
+        640.55,
         640.55,
         640.55,
         640.55,
@@ -6175,6 +6179,25 @@
           "cash": 640.55,
           "invested": 0.0,
           "fees_cum": 625.92
+        },
+        {
+          "date": "2026-09-23",
+          "day_pnl": 0.0,
+          "equity": 640.55,
+          "n_held": 15,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_skip": 15,
+          "n_cand": 15,
+          "hard_red": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "buys": [],
+          "sells": [],
+          "cash": 640.55,
+          "invested": 0.0,
+          "fees_cum": 625.92
         }
       ]
     },
@@ -6190,12 +6213,12 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 30,
+        "n_days": 31,
         "n_win_days": 5,
         "n_loss_days": 15,
-        "p_loss_day": 0.5,
-        "p_win_day": 0.1667,
-        "mean_day": -6.892,
+        "p_loss_day": 0.4839,
+        "p_win_day": 0.1613,
+        "mean_day": -6.67,
         "avg_win_day": 0.257,
         "avg_loss_day": -13.869,
         "cum_sum": -206.755
@@ -6221,6 +6244,7 @@
         1385.1,
         1359.03,
         1362.34,
+        541.38,
         541.38,
         541.38,
         541.38,
@@ -12954,6 +12978,25 @@
           "cash": 541.38,
           "invested": 0.0,
           "fees_cum": 711.61
+        },
+        {
+          "date": "2026-09-23",
+          "day_pnl": 0.0,
+          "equity": 541.38,
+          "n_held": 15,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_skip": 15,
+          "n_cand": 15,
+          "hard_red": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "buys": [],
+          "sells": [],
+          "cash": 541.38,
+          "invested": 0.0,
+          "fees_cum": 711.61
         }
       ]
     },
@@ -12969,12 +13012,12 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 30,
+        "n_days": 31,
         "n_win_days": 3,
         "n_loss_days": 18,
-        "p_loss_day": 0.6,
-        "p_win_day": 0.1,
-        "mean_day": 14.111,
+        "p_loss_day": 0.5806,
+        "p_win_day": 0.0968,
+        "mean_day": 13.656,
         "avg_win_day": 220.772,
         "avg_loss_day": -13.277,
         "cum_sum": 423.326
@@ -13001,6 +13044,7 @@
         5713.28,
         5673.59,
         3159.9,
+        2468.89,
         2468.89,
         2468.89,
         2468.89,
@@ -24631,6 +24675,25 @@
           "cash": 2468.89,
           "invested": 0.0,
           "fees_cum": 2255.55
+        },
+        {
+          "date": "2026-09-23",
+          "day_pnl": 0.0,
+          "equity": 2468.89,
+          "n_held": 16,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_skip": 16,
+          "n_cand": 16,
+          "hard_red": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "buys": [],
+          "sells": [],
+          "cash": 2468.89,
+          "invested": 0.0,
+          "fees_cum": 2255.55
         }
       ]
     },
@@ -24646,12 +24709,12 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 30,
+        "n_days": 31,
         "n_win_days": 4,
         "n_loss_days": 16,
-        "p_loss_day": 0.5333,
-        "p_win_day": 0.1333,
-        "mean_day": -6.729,
+        "p_loss_day": 0.5161,
+        "p_win_day": 0.129,
+        "mean_day": -6.512,
         "avg_win_day": 0.699,
         "avg_loss_day": -12.791,
         "cum_sum": -201.864
@@ -24677,6 +24740,7 @@
         1496.78,
         1469.8,
         1474.11,
+        558.46,
         558.46,
         558.46,
         558.46,
@@ -29170,6 +29234,25 @@
           "cash": 558.46,
           "invested": 0.0,
           "fees_cum": 612.19
+        },
+        {
+          "date": "2026-09-23",
+          "day_pnl": 0.0,
+          "equity": 558.46,
+          "n_held": 10,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_skip": 10,
+          "n_cand": 10,
+          "hard_red": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "buys": [],
+          "sells": [],
+          "cash": 558.46,
+          "invested": 0.0,
+          "fees_cum": 612.19
         }
       ]
     },
@@ -29185,12 +29268,12 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 30,
+        "n_days": 31,
         "n_win_days": 5,
         "n_loss_days": 15,
-        "p_loss_day": 0.5,
-        "p_win_day": 0.1667,
-        "mean_day": -6.656,
+        "p_loss_day": 0.4839,
+        "p_win_day": 0.1613,
+        "mean_day": -6.441,
         "avg_win_day": 0.184,
         "avg_loss_day": -13.373,
         "cum_sum": -199.681
@@ -29216,6 +29299,7 @@
         1297.45,
         1270.98,
         1274.88,
+        643.3,
         643.3,
         643.3,
         643.3,
@@ -36477,6 +36561,25 @@
           "cash": 643.3,
           "invested": 0.0,
           "fees_cum": 751.61
+        },
+        {
+          "date": "2026-09-23",
+          "day_pnl": 0.0,
+          "equity": 643.3,
+          "n_held": 15,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_skip": 15,
+          "n_cand": 15,
+          "hard_red": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "buys": [],
+          "sells": [],
+          "cash": 643.3,
+          "invested": 0.0,
+          "fees_cum": 751.61
         }
       ]
     },
@@ -36492,12 +36595,12 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 30,
+        "n_days": 31,
         "n_win_days": 2,
         "n_loss_days": 20,
-        "p_loss_day": 0.6667,
-        "p_win_day": 0.0667,
-        "mean_day": -8.325,
+        "p_loss_day": 0.6452,
+        "p_win_day": 0.0645,
+        "mean_day": -8.057,
         "avg_win_day": 1.062,
         "avg_loss_day": -12.594,
         "cum_sum": -249.756
@@ -36524,6 +36627,7 @@
         1296.43,
         1291.82,
         833.18,
+        390.98,
         390.98,
         390.98,
         390.98,
@@ -42498,6 +42602,25 @@
           "cash": 390.98,
           "invested": 0.0,
           "fees_cum": 571.6
+        },
+        {
+          "date": "2026-09-23",
+          "day_pnl": 0.0,
+          "equity": 390.98,
+          "n_held": 15,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_skip": 15,
+          "n_cand": 15,
+          "hard_red": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "buys": [],
+          "sells": [],
+          "cash": 390.98,
+          "invested": 0.0,
+          "fees_cum": 571.6
         }
       ]
     },
@@ -42513,12 +42636,12 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 30,
+        "n_days": 31,
         "n_win_days": 5,
         "n_loss_days": 18,
-        "p_loss_day": 0.6,
-        "p_win_day": 0.1667,
-        "mean_day": -6.693,
+        "p_loss_day": 0.5806,
+        "p_win_day": 0.1613,
+        "mean_day": -6.477,
         "avg_win_day": 0.589,
         "avg_loss_day": -11.318,
         "cum_sum": -200.776
@@ -42546,6 +42669,7 @@
         3739.25,
         2535.81,
         2039.49,
+        773.0,
         773.0,
         773.0,
         773.0,
@@ -47646,6 +47770,25 @@
           "cash": 773.0,
           "invested": 0.0,
           "fees_cum": 495.39
+        },
+        {
+          "date": "2026-09-23",
+          "day_pnl": 0.0,
+          "equity": 773.0,
+          "n_held": 15,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_skip": 15,
+          "n_cand": 15,
+          "hard_red": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "buys": [],
+          "sells": [],
+          "cash": 773.0,
+          "invested": 0.0,
+          "fees_cum": 495.39
         }
       ]
     },
@@ -47661,12 +47804,12 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 30,
+        "n_days": 31,
         "n_win_days": 9,
         "n_loss_days": 15,
-        "p_loss_day": 0.5,
-        "p_win_day": 0.3,
-        "mean_day": -8.4,
+        "p_loss_day": 0.4839,
+        "p_win_day": 0.2903,
+        "mean_day": -8.129,
         "avg_win_day": 0.804,
         "avg_loss_day": -17.282,
         "cum_sum": -252.001
@@ -47695,6 +47838,7 @@
         5172.51,
         2040.85,
         779.3,
+        201.52,
         201.52,
         201.52,
         201.52,
@@ -51470,6 +51614,25 @@
           "cash": 201.52,
           "invested": 0.0,
           "fees_cum": 326.19
+        },
+        {
+          "date": "2026-09-23",
+          "day_pnl": 0.0,
+          "equity": 201.52,
+          "n_held": 15,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_skip": 15,
+          "n_cand": 15,
+          "hard_red": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "buys": [],
+          "sells": [],
+          "cash": 201.52,
+          "invested": 0.0,
+          "fees_cum": 326.19
         }
       ]
     },
@@ -51485,12 +51648,12 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 30,
+        "n_days": 31,
         "n_win_days": 9,
         "n_loss_days": 13,
-        "p_loss_day": 0.4333,
-        "p_win_day": 0.3,
-        "mean_day": -4.123,
+        "p_loss_day": 0.4194,
+        "p_win_day": 0.2903,
+        "mean_day": -3.99,
         "avg_win_day": 0.547,
         "avg_loss_day": -9.893,
         "cum_sum": -123.685
@@ -51518,6 +51681,7 @@
         5608.73,
         5604.33,
         5604.33,
+        1600.25,
         1600.25,
         1600.25,
         1600.25,
@@ -56134,6 +56298,25 @@
           "cash": 1600.25,
           "invested": 0.0,
           "fees_cum": 456.89
+        },
+        {
+          "date": "2026-09-23",
+          "day_pnl": 0.0,
+          "equity": 1600.25,
+          "n_held": 15,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_skip": 15,
+          "n_cand": 15,
+          "hard_red": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "buys": [],
+          "sells": [],
+          "cash": 1600.25,
+          "invested": 0.0,
+          "fees_cum": 456.89
         }
       ]
     },
@@ -56149,12 +56332,12 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 30,
+        "n_days": 31,
         "n_win_days": 8,
         "n_loss_days": 14,
-        "p_loss_day": 0.4667,
-        "p_win_day": 0.2667,
-        "mean_day": -6.174,
+        "p_loss_day": 0.4516,
+        "p_win_day": 0.2581,
+        "mean_day": -5.975,
         "avg_win_day": 0.938,
         "avg_loss_day": -13.767,
         "cum_sum": -185.225
@@ -56182,6 +56365,7 @@
         3274.72,
         2165.08,
         2165.08,
+        871.59,
         871.59,
         871.59,
         871.59,
@@ -58875,6 +59059,25 @@
           "cash": 871.59,
           "invested": 0.0,
           "fees_cum": 386.26
+        },
+        {
+          "date": "2026-09-23",
+          "day_pnl": 0.0,
+          "equity": 871.59,
+          "n_held": 10,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_skip": 10,
+          "n_cand": 10,
+          "hard_red": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "buys": [],
+          "sells": [],
+          "cash": 871.59,
+          "invested": 0.0,
+          "fees_cum": 386.26
         }
       ]
     },
@@ -58890,12 +59093,12 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 30,
+        "n_days": 31,
         "n_win_days": 2,
         "n_loss_days": 17,
-        "p_loss_day": 0.5667,
-        "p_win_day": 0.0667,
-        "mean_day": -7.842,
+        "p_loss_day": 0.5484,
+        "p_win_day": 0.0645,
+        "mean_day": -7.589,
         "avg_win_day": 0.422,
         "avg_loss_day": -13.888,
         "cum_sum": -235.248
@@ -58921,6 +59124,7 @@
         762.08,
         748.07,
         753.29,
+        309.76,
         309.76,
         309.76,
         309.76,
@@ -63346,6 +63550,25 @@
           "cash": 309.76,
           "invested": 0.0,
           "fees_cum": 411.24
+        },
+        {
+          "date": "2026-09-23",
+          "day_pnl": 0.0,
+          "equity": 309.76,
+          "n_held": 15,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_skip": 15,
+          "n_cand": 15,
+          "hard_red": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "buys": [],
+          "sells": [],
+          "cash": 309.76,
+          "invested": 0.0,
+          "fees_cum": 411.24
         }
       ]
     },
@@ -63361,12 +63584,12 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 30,
+        "n_days": 31,
         "n_win_days": 5,
         "n_loss_days": 15,
-        "p_loss_day": 0.5,
-        "p_win_day": 0.1667,
-        "mean_day": -8.245,
+        "p_loss_day": 0.4839,
+        "p_win_day": 0.1613,
+        "mean_day": -7.979,
         "avg_win_day": 0.487,
         "avg_loss_day": -16.652,
         "cum_sum": -247.345
@@ -63392,6 +63615,7 @@
         1196.05,
         1177.38,
         1187.94,
+        51.66,
         51.66,
         51.66,
         51.66,
@@ -69242,6 +69466,25 @@
           "cash": 51.66,
           "invested": 0.0,
           "fees_cum": 625.96
+        },
+        {
+          "date": "2026-09-23",
+          "day_pnl": 0.0,
+          "equity": 51.66,
+          "n_held": 15,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_skip": 15,
+          "n_cand": 15,
+          "hard_red": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "buys": [],
+          "sells": [],
+          "cash": 51.66,
+          "invested": 0.0,
+          "fees_cum": 625.96
         }
       ]
     },
@@ -69257,12 +69500,12 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 30,
+        "n_days": 31,
         "n_win_days": 5,
         "n_loss_days": 15,
-        "p_loss_day": 0.5,
-        "p_win_day": 0.1667,
-        "mean_day": -8.258,
+        "p_loss_day": 0.4839,
+        "p_win_day": 0.1613,
+        "mean_day": -7.992,
         "avg_win_day": 0.893,
         "avg_loss_day": -16.814,
         "cum_sum": -247.754
@@ -69288,6 +69531,7 @@
         1177.02,
         1158.46,
         1169.02,
+        32.74,
         32.74,
         32.74,
         32.74,
@@ -73115,6 +73359,25 @@
           "cash": 32.74,
           "invested": 0.0,
           "fees_cum": 537.45
+        },
+        {
+          "date": "2026-09-23",
+          "day_pnl": 0.0,
+          "equity": 32.74,
+          "n_held": 10,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_skip": 10,
+          "n_cand": 10,
+          "hard_red": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "buys": [],
+          "sells": [],
+          "cash": 32.74,
+          "invested": 0.0,
+          "fees_cum": 537.45
         }
       ]
     },
@@ -73130,12 +73393,12 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 30,
+        "n_days": 31,
         "n_win_days": 4,
         "n_loss_days": 18,
-        "p_loss_day": 0.6,
-        "p_win_day": 0.1333,
-        "mean_day": -6.954,
+        "p_loss_day": 0.5806,
+        "p_win_day": 0.129,
+        "mean_day": -6.729,
         "avg_win_day": 1.204,
         "avg_loss_day": -11.857,
         "cum_sum": -208.61
@@ -73163,6 +73426,7 @@
         3114.8,
         1928.11,
         1444.14,
+        774.79,
         774.79,
         774.79,
         774.79,
@@ -76938,6 +77202,25 @@
           "cash": 774.79,
           "invested": 0.0,
           "fees_cum": 270.23
+        },
+        {
+          "date": "2026-09-23",
+          "day_pnl": 0.0,
+          "equity": 774.79,
+          "n_held": 15,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_skip": 15,
+          "n_cand": 15,
+          "hard_red": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "buys": [],
+          "sells": [],
+          "cash": 774.79,
+          "invested": 0.0,
+          "fees_cum": 270.23
         }
       ]
     },
@@ -76953,12 +77236,12 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 30,
+        "n_days": 31,
         "n_win_days": 4,
         "n_loss_days": 11,
-        "p_loss_day": 0.3667,
-        "p_win_day": 0.1333,
-        "mean_day": -5.571,
+        "p_loss_day": 0.3548,
+        "p_win_day": 0.129,
+        "mean_day": -5.391,
         "avg_win_day": 0.261,
         "avg_loss_day": -15.287,
         "cum_sum": -167.115
@@ -76984,6 +77267,7 @@
         2001.1,
         2001.1,
         1993.21,
+        919.43,
         919.43,
         919.43,
         919.43,
@@ -82322,6 +82606,25 @@
           "cash": 919.43,
           "invested": 0.0,
           "fees_cum": 558.27
+        },
+        {
+          "date": "2026-09-23",
+          "day_pnl": 0.0,
+          "equity": 919.43,
+          "n_held": 15,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_skip": 15,
+          "n_cand": 15,
+          "hard_red": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "buys": [],
+          "sells": [],
+          "cash": 919.43,
+          "invested": 0.0,
+          "fees_cum": 558.27
         }
       ]
     },
@@ -82337,12 +82640,12 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 30,
+        "n_days": 31,
         "n_win_days": 5,
         "n_loss_days": 15,
-        "p_loss_day": 0.5,
-        "p_win_day": 0.1667,
-        "mean_day": -6.904,
+        "p_loss_day": 0.4839,
+        "p_win_day": 0.1613,
+        "mean_day": -6.682,
         "avg_win_day": 0.257,
         "avg_loss_day": -13.895,
         "cum_sum": -207.135
@@ -82368,6 +82671,7 @@
         1381.1,
         1355.03,
         1358.29,
+        537.33,
         537.33,
         537.33,
         537.33,
@@ -89069,6 +89373,25 @@
           "cash": 537.33,
           "invested": 0.0,
           "fees_cum": 707.6
+        },
+        {
+          "date": "2026-09-23",
+          "day_pnl": 0.0,
+          "equity": 537.33,
+          "n_held": 15,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_skip": 15,
+          "n_cand": 15,
+          "hard_red": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "buys": [],
+          "sells": [],
+          "cash": 537.33,
+          "invested": 0.0,
+          "fees_cum": 707.6
         }
       ]
     },
@@ -89084,12 +89407,12 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 30,
+        "n_days": 31,
         "n_win_days": 5,
         "n_loss_days": 12,
-        "p_loss_day": 0.4,
-        "p_win_day": 0.1667,
-        "mean_day": -5.633,
+        "p_loss_day": 0.3871,
+        "p_win_day": 0.1613,
+        "mean_day": -5.451,
         "avg_win_day": 0.537,
         "avg_loss_day": -14.306,
         "cum_sum": -168.983
@@ -89115,6 +89438,7 @@
         1979.73,
         1979.73,
         1971.84,
+        898.06,
         898.06,
         898.06,
         898.06,
@@ -94527,6 +94851,25 @@
           "cash": 898.06,
           "invested": 0.0,
           "fees_cum": 566.69
+        },
+        {
+          "date": "2026-09-23",
+          "day_pnl": 0.0,
+          "equity": 898.06,
+          "n_held": 15,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_skip": 15,
+          "n_cand": 15,
+          "hard_red": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "buys": [],
+          "sells": [],
+          "cash": 898.06,
+          "invested": 0.0,
+          "fees_cum": 566.69
         }
       ]
     },
@@ -94542,12 +94885,12 @@
         "fade_veto": true
       },
       "totals": {
-        "n_days": 30,
+        "n_days": 31,
         "n_win_days": 5,
         "n_loss_days": 15,
-        "p_loss_day": 0.5,
-        "p_win_day": 0.1667,
-        "mean_day": -6.802,
+        "p_loss_day": 0.4839,
+        "p_win_day": 0.1613,
+        "mean_day": -6.583,
         "avg_win_day": 0.174,
         "avg_loss_day": -13.662,
         "cum_sum": -204.058
@@ -94573,6 +94916,7 @@
         1306.38,
         1279.39,
         1282.64,
+        586.29,
         586.29,
         586.29,
         586.29,
@@ -101825,6 +102169,25 @@
           "n_sell": 0,
           "n_skip": 13,
           "n_cand": 13,
+          "hard_red": false,
+          "bought": [],
+          "sold": [],
+          "held": [],
+          "buys": [],
+          "sells": [],
+          "cash": 586.29,
+          "invested": 0.0,
+          "fees_cum": 752.65
+        },
+        {
+          "date": "2026-09-23",
+          "day_pnl": 0.0,
+          "equity": 586.29,
+          "n_held": 15,
+          "n_buy": 0,
+          "n_sell": 0,
+          "n_skip": 15,
+          "n_cand": 15,
           "hard_red": false,
           "bought": [],
           "sold": [],
