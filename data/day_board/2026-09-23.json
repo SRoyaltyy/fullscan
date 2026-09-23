@@ -1,6 +1,6 @@
 {
   "date": "2026-09-23",
-  "generated_at": "2026-09-23T04:15:10.382272-04:00",
+  "generated_at": "2026-09-23T04:15:18.027081-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -91,7 +91,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 5,
       "files": [
         {
@@ -128,10 +128,10 @@
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-23_finviz_market_digest.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 5067,
+          "said": "US equity futures edge higher as oil trades below $100 after Trump UN remarks with PMIs and earnings set to guide early moves \u00b7 leaders CTAS, PAYX, GIS, CBRL \u00b7 neutral",
           "bullets": []
         },
         {
@@ -139,11 +139,14 @@
           "name": "Homepage warm-up MD (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-23_finviz_market_digest.md",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 2350,
+          "said": "Finviz homepage market digest \u2014 2026-09-23",
+          "bullets": [
+            "Generated:** 2026-09-23T04:15:17.829872-04:00 (America/New_York)",
+            "Source:** `live`"
+          ]
         },
         {
           "key": "market_digest_close_json",
@@ -183,7 +186,7 @@
       "inputs_ready": false,
       "n_req_ok": 2,
       "n_req": 20,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 3,
       "files": [
         {
@@ -206,10 +209,10 @@
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-23_finviz_market_digest.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 5067,
+          "said": "US equity futures edge higher as oil trades below $100 after Trump UN remarks with PMIs and earnings set to guide early moves \u00b7 leaders CTAS, PAYX, GIS, CBRL \u00b7 neutral",
           "bullets": []
         },
         {
@@ -986,6 +989,31 @@
         }
       ],
       "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-23\n_Generated 2026-09-23T04:15:09.974086-04:00 \u00b7 export=data/exports/finviz_2026-09-23.csv \u00b7 ticker digests=5877 \u00b7 high-signal=2220_ \u00b7 11648 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11648 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "finviz_market_digest",
+      "title": "Finviz homepage market digest",
+      "date": "2026-09-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-23T04:15:17.843477-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-23_finviz_market_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 5067,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-09-23_finviz_market_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 2350,
+          "preview": "# Finviz homepage market digest \u2014 2026-09-23\n**Generated:** 2026-09-23T04:15:17.829872-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures edge higher as oil trades below $100 after Trump UN remarks with PMIs and earnings set to guide early moves\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** CTAS, PAYX, GIS, CBRL\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** CTAS, PAYX, GIS, CBRL\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-23\n**Clock use:** `same_morning`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-23\n**Generated:** 2026-09-23T04:15:17.829872-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures edge higher as oil trades below $100 after Trump UN remarks with PMIs and earnings set to guide early moves\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** CTAS, PAYX, GIS, CBRL\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** CTAS, PAYX, GIS, CBRL\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-23\n**Clock use:** `same_morning`"
     }
   ],
   "href": {
