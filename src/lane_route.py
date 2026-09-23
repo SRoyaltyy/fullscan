@@ -278,14 +278,15 @@ DEFAULT_LANES = [
 # news_to_tickers + impact + news sector scan: current flash first.
 # Zhipu glm-4.7-flash → SF Qwen3-8B → OR :free → DashScope qwen-flash.
 NEWS_HEAD = ["zhipu", "siliconflow", "openrouter", "qwen"]
-# news_classify quality floor. NEWS_HEAD, then Gemini, then TokenHub,
-# then providers that already have a floor-class free ID.
+# news_classify quality floor. Zhipu, Gemini, and TokenHub stay.
+# Mistral Small and Pollinations flash are tried before DashScope so a
+# standing-400 account does not burn the qwen list first. Qwen stays
+# last and is not required for a pass.
 # NVIDIA NIM stays off: nemotron-mini-4b, llama-3.2-3b, and llama-3.1-8b
-# are below the floor. Ministral 8B/3B stay off. Qwen stays in the walk
-# and is not required for a pass.
+# are below the floor. Ministral 8B/3B stay off.
 CLASSIFY_LANES = [
-    "zhipu", "siliconflow", "openrouter", "qwen", "gemini", "tokenhub",
-    "mistral", "pollinations",
+    "zhipu", "siliconflow", "openrouter", "gemini", "tokenhub",
+    "mistral", "pollinations", "qwen",
 ]
 # company_dig: SF Qwen / DeepSeek free non-Pro → OR :free → Zhipu.
 # Native DeepSeek stays off the free head (paid opt-in only).
@@ -302,6 +303,10 @@ _SKIP: set[str] = set()
 _RATE_LIMITED: set[str] = set()
 # One model ID returned 402/403/404. The key is still live. Cleared with _SKIP.
 _MODEL_DENIED: set[str] = set()
+# DashScope standing-400 count for this process. Two confirmed arrearage
+# bodies stop the rest of the qwen list. Not an incorrect-API-key skip.
+_QWEN_STANDING_HITS = 0
+_QWEN_STANDING_STOP = 2
 # OpenRouter :free daily cap. One 429 ends the OR walk for this process.
 _OR_DAY_CAPPED = False
 _QWEN_PROBE: dict[str, bool] = {}
@@ -1199,12 +1204,17 @@ def hop_models(lane, models, call, abandon_404=False, accept=None):
 
     429 hops to the next ID on the same key. 401/402/403/404 drop that ID
     and keep siblings. A DashScope "account is in good standing" body
-    drops that ID only. A bad key ("incorrect/invalid api key", or every
-    host rejected) marks the provider dead. If every tried ID is 401/402/
+    drops that ID only. Two confirmed DashScope standing-400s stop the
+    rest of the qwen list for this process; that is not an incorrect
+    API key. A bad key ("incorrect/invalid api key", or every host
+    rejected) marks the provider dead. If every tried ID is 401/402/
     403/404 and none returned 200 or 429, the key is dead too. accept()
     False tries the next ID; a 200 still means the key is live.
     """
-    global _OR_DAY_CAPPED
+    global _OR_DAY_CAPPED, _QWEN_STANDING_HITS
+    if lane == "qwen" and _QWEN_STANDING_HITS >= _QWEN_STANDING_STOP:
+        print("  qwen skip (standing arrearage, list short-circuited)")
+        return None, None
     if lane in _SKIP:
         print(f"  {lane} skip (cached)")
         return None, None
@@ -1246,9 +1256,17 @@ def hop_models(lane, models, call, abandon_404=False, accept=None):
             _SKIP.add(lane)
             return None, None
         if status == 400 and _standing_denial(info):
-            # Same key, this model ID only. Walk the next sibling.
+            # Same key, this model ID only. Not an incorrect API key.
             print(f"  {lane}/{model} 400 standing — next ID, provider kept")
             _MODEL_DENIED.add(rl_key)
+            if lane == "qwen":
+                _QWEN_STANDING_HITS += 1
+                if _QWEN_STANDING_HITS >= _QWEN_STANDING_STOP:
+                    print(
+                        "  qwen standing arrearage on "
+                        f"{_QWEN_STANDING_HITS} IDs — not walking the rest"
+                    )
+                    return None, None
             continue
         if status in (401, 402, 403, 404):
             # Per-model entitlement, quota, or unknown ID. Not a dead key
@@ -1795,8 +1813,9 @@ def route_inbox(
     _SKIP.clear()
     _RATE_LIMITED.clear()
     _MODEL_DENIED.clear()
-    global _OR_DAY_CAPPED
+    global _OR_DAY_CAPPED, _QWEN_STANDING_HITS
     _OR_DAY_CAPPED = False
+    _QWEN_STANDING_HITS = 0
 
     out = []
     for i, q in enumerate(questions):

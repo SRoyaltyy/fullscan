@@ -411,9 +411,13 @@ def test_classify_floor_excludes_ministral_and_8b(monkeypatch):
     from src.lane_route import is_classify_banned, lanes_for, primary_models_for
     order = classify_lanes()
     assert order == [
-        "zhipu", "siliconflow", "openrouter", "qwen", "gemini", "tokenhub",
-        "mistral", "pollinations",
+        "zhipu", "siliconflow", "openrouter", "gemini", "tokenhub",
+        "mistral", "pollinations", "qwen",
     ]
+    assert order.index("mistral") < order.index("qwen")
+    assert order.index("pollinations") < order.index("qwen")
+    assert order.index("gemini") < order.index("qwen")
+    assert order.index("tokenhub") < order.index("qwen")
     assert lanes_for("news_classify") == order
     assert "nvidia_nim" not in order
     assert classify_models_for("zhipu")[0] == "glm-4.7-flash"
@@ -500,6 +504,7 @@ def test_account_standing_keeps_siblings():
 
     lane_route._SKIP.clear()
     lane_route._MODEL_DENIED.clear()
+    lane_route._QWEN_STANDING_HITS = 0
     seen = []
 
     def call(model):
@@ -518,6 +523,38 @@ def test_account_standing_keeps_siblings():
     assert "qwen::qwen-flash" in lane_route._MODEL_DENIED
     lane_route._SKIP.clear()
     lane_route._MODEL_DENIED.clear()
+    lane_route._QWEN_STANDING_HITS = 0
+
+
+def test_two_standing_400s_stop_the_qwen_list():
+    """Two arrearage bodies stop the rest of the list. The key stays live."""
+    from src import lane_route
+
+    lane_route._SKIP.clear()
+    lane_route._MODEL_DENIED.clear()
+    lane_route._QWEN_STANDING_HITS = 0
+    seen = []
+
+    def call(model):
+        seen.append(model)
+        return None, 400, "Access denied, please make sure your account is in good standing"
+
+    parsed, _info = lane_route.hop_models(
+        "qwen",
+        ["qwen-flash", "qwen3.8-flash", "qwen3.7-flash", "qwen3.6-flash"],
+        call,
+    )
+    assert parsed is None
+    assert seen == ["qwen-flash", "qwen3.8-flash"]
+    assert "qwen" not in lane_route._SKIP
+    seen.clear()
+    parsed, _info = lane_route.hop_models("qwen", ["qwen3.5-flash", "qwen3-32b"], call)
+    assert parsed is None
+    assert seen == []
+    assert "qwen" not in lane_route._SKIP
+    lane_route._SKIP.clear()
+    lane_route._MODEL_DENIED.clear()
+    lane_route._QWEN_STANDING_HITS = 0
 
 
 def test_incorrect_api_key_still_marks_the_key_dead():
@@ -525,6 +562,7 @@ def test_incorrect_api_key_still_marks_the_key_dead():
 
     lane_route._SKIP.clear()
     lane_route._MODEL_DENIED.clear()
+    lane_route._QWEN_STANDING_HITS = 0
     seen = []
 
     def call(model):

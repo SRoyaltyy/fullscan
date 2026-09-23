@@ -335,6 +335,7 @@ def run(date: str, limit: int = 0, dry_harvest: bool = False) -> dict:
     lane._SKIP.clear()
     lane._RATE_LIMITED.clear()
     lane._MODEL_DENIED.clear()
+    lane._QWEN_STANDING_HITS = 0
     rows = []
     for i, art in enumerate(arts):
         print(f"[lane_news_scan] {i + 1}/{len(arts)} {art.get('title','')[:80]}")

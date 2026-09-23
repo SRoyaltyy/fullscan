@@ -234,6 +234,7 @@ class LiveLane:
         lane._SKIP.clear()
         lane._RATE_LIMITED.clear()
         lane._MODEL_DENIED.clear()
+        lane._QWEN_STANDING_HITS = 0
         lane._OR_DAY_CAPPED = False
         self.last_classify_note = ""
 
@@ -375,7 +376,9 @@ class LiveLane:
         return winner
 
     def _fail_note(self, hop: str, model) -> str:
-        if hop in lane._SKIP:
+        if hop == "qwen" and lane._QWEN_STANDING_HITS >= lane._QWEN_STANDING_STOP:
+            note = f"{hop}: standing arrearage — list short-circuited, provider kept"
+        elif hop in lane._SKIP:
             note = f"{hop}: provider skipped (401/403/402/410) after a hard fail"
         elif any(str(k).startswith(f"{hop}::") for k in lane._RATE_LIMITED):
             note = f"{hop}: 429 on {model or 'floor model'} — next ID, provider kept"
