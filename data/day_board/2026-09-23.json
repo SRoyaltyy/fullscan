@@ -1,12 +1,11 @@
 {
   "date": "2026-09-23",
-  "generated_at": "2026-09-23T04:32:25.955402-04:00",
+  "generated_at": "2026-09-23T04:35:10.739272-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-23_predict.md` \u2014 missing",
-    "MISSING Sector board JSON `01_daily/sectors/2026-09-23/_board.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-09-23_judge.md` \u2014 missing"
+    "MISSING Sector board JSON `01_daily/sectors/2026-09-23/_board.json` \u2014 missing"
   ],
   "counts": {
     "ok": 4,
@@ -181,7 +180,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 3,
+      "n_req_ok": 4,
       "n_req": 20,
       "n_opt_ok": 2,
       "n_opt": 3,
@@ -271,11 +270,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-09-23_judge.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 10823,
+          "said": "1. **Nasdaq record close as chipmakers climb, oil cools** \u2014 Standing risk-on tape for SPX/QQQ beta into this session; outranks single-name M&A and labels. Chann",
+          "bullets": [
+            "2. **ASML 2027 EUV nearly sold out on AI demand (JPM)** \u2014 Duration confirmation for AI wafer-fab spend; moves SMH/SOXX more than any other digest print. Channel: sector_fundamental",
+            "3. **Warsh JH hike-odds / gold \u22123% / rising yields** \u2014 Live rates polarity vs stale cut-bet gold; sets duration headwind for beta. Channel: rates",
+            "4. **Surprise US crude build + Fed hike drive energy lower (DVN \u22125.6%), oil cools** \u2014 Decouples XLE from the chips rally; sector ETF force. Channel: sector_fundamental"
+          ]
         },
         {
           "key": "research_json",
@@ -344,13 +347,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7276,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 16 fail",
+          "size": 7270,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 14 fail",
           "bullets": [
             "general_predict:missing",
-            "news_judge:missing",
-            "news_actions:missing",
-            "finviz_market_digest:missing"
+            "finviz_market_digest:missing",
+            "map_heat_research:missing",
+            "sector_predict:missing"
           ]
         },
         {
@@ -728,11 +731,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-09-23_judge.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 10823,
+          "said": "1. **Nasdaq record close as chipmakers climb, oil cools** \u2014 Standing risk-on tape for SPX/QQQ beta into this session; outranks single-name M&A and labels. Chann",
+          "bullets": [
+            "2. **ASML 2027 EUV nearly sold out on AI demand (JPM)** \u2014 Duration confirmation for AI wafer-fab spend; moves SMH/SOXX more than any other digest print. Channel: sector_fundamental",
+            "3. **Warsh JH hike-odds / gold \u22123% / rising yields** \u2014 Live rates polarity vs stale cut-bet gold; sets duration headwind for beta. Channel: rates",
+            "4. **Surprise US crude build + Fed hike drive energy lower (DVN \u22125.6%), oil cools** \u2014 Decouples XLE from the chips rally; sector ETF force. Channel: sector_fundamental"
+          ]
         },
         {
           "key": "in_weather",
@@ -1380,6 +1387,31 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-23T04:32:17.715196-04:00\nraw=157 unique_events=4 tickers=52"
+    },
+    {
+      "key": "news_judge",
+      "title": "News judge",
+      "date": "2026-09-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-23T04:35:10.039231-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-23_judge.md",
+          "ok": true,
+          "reason": "",
+          "size": 10823,
+          "preview": "# News Judge \u2014 2026-09-23"
+        },
+        {
+          "path": "01_daily/news/2026-09-23_judge.json",
+          "ok": true,
+          "reason": "",
+          "size": 1174,
+          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+        }
+      ],
+      "preview": "# News Judge \u2014 2026-09-23 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
     }
   ],
   "href": {
