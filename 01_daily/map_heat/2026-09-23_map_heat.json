@@ -1,8 +1,8 @@
 {
   "date": "2026-09-23",
-  "generated_at": "2026-09-23T04:16:32.377575-04:00",
+  "generated_at": "2026-09-23T04:16:39.961966-04:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-09-22.csv",
+  "export": "finviz_2026-09-23.csv",
   "n_tickers": 11616,
   "sectors": [
     {
@@ -9212,16 +9212,8 @@
       "url": "https://finance.yahoo.com/m/5537dfcc-f1ab-319b-ac90-a1924ffbbd24/why-is-nvidia-getting-cheaper.html",
       "source": "BeInCrypto",
       "tickers": [
+        "AAPL",
         "NVDA"
-      ]
-    },
-    {
-      "time": "2 hours",
-      "title": "Why Is NVIDIA Getting Cheaper While Apple Hits New All-Time Highs",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/why-nvidia-getting-cheaper-while-053524156.html",
-      "source": "BeInCrypto",
-      "tickers": [
-        "AAPL"
       ]
     },
     {
@@ -9426,15 +9418,7 @@
       "source": "Stocktwits",
       "tickers": [
         "OKTA",
-        "AMD"
-      ]
-    },
-    {
-      "time": "Sep-22",
-      "title": "Why Did AAPL, OKTA, AMD Stocks Jump To 52-Week Highs Today?",
-      "url": "https://finance.yahoo.com/markets/stocks/articles/why-did-aapl-okta-amd-030537768.html",
-      "source": "Stocktwits",
-      "tickers": [
+        "AMD",
         "AAPL"
       ]
     },
@@ -9786,6 +9770,24 @@
       "source": "Yahoo Finance",
       "tickers": [
         "SPCX"
+      ]
+    },
+    {
+      "time": "Sep-22",
+      "title": "Doximity Named Leading Clinical AI Benchmark in Fireworks Cross-Industry Index",
+      "url": "https://www.businesswire.com/news/home/20260922780582/en/",
+      "source": "Business Wire",
+      "tickers": [
+        "DOCS"
+      ]
+    },
+    {
+      "time": "Sep-22",
+      "title": "JPMorgan Drops 3.8% as $2.6 Billion AI Deal Meets Geopolitics",
+      "url": "https://finance.yahoo.com/technology/ai/articles/jpmorgan-drops-3-8-2-223204369.html",
+      "source": "GuruFocus.com",
+      "tickers": [
+        "JPM"
       ]
     }
   ],
@@ -10558,5 +10560,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 202,
   "earnings_window_count": 51,
-  "overlay_at": "2026-09-23T04:16:32.377575-04:00"
+  "overlay_at": "2026-09-23T04:16:39.961966-04:00"
 }
