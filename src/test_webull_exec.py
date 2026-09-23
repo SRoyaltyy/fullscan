@@ -22,6 +22,7 @@ from src.webull_exec import (
     clamp_buy_shares,
     plan_hot4_for_broker,
     refuse_real,
+    size_hot4_sells,
     size_hot4_tickets,
 )
 
@@ -301,6 +302,58 @@ def test_hot4_tickets_long_only_skip_held_cash_and_sit() -> None:
     assert "GPRO" in names and "INSP" in names and "TJGC" in names
     assert all(t["side"] == "BUY" for t in card["tickets"])
     assert len(card["would_buy"]["rows"]) == 4
+
+
+def test_hot4_sells_size_from_paper_lots() -> None:
+    """List-drop exits use the paper lot. Unheld and Clock-B leftovers do not sell."""
+    payload = {
+        "date": "2026-09-22",
+        "strategies": {
+            HOT4: {
+                "name": HOT4, "date": "2026-09-22", "side": "long",
+                "status": "ok", "s": -0.5, "sit": False,
+                "buy": [
+                    {"ticker": t, "side": "long", "px": 10}
+                    for t in ("SECZ", "GRAL", "NUAI", "INDP")
+                ],
+                "sell": [
+                    {"ticker": t, "side": "long", "src": "list-drop"}
+                    for t in ("FEAM", "TJGC", "LVWR")
+                ],
+            }
+        },
+    }
+    snap = BrokerSnap(
+        env="paper", cash=5_000, connected=True,
+        positions={
+            "FEAM": {"shares": 40, "cost_px": 3.5, "last_px": 3.2},
+            "DELL": {"shares": 100, "cost_px": 20, "last_px": 21},
+        },
+    )
+    card = plan_hot4_for_broker("2026-09-22", snap, payload=payload)
+    assert [r["ticker"] for r in card["would_sell"]["rows"]] == [
+        "FEAM", "TJGC", "LVWR",
+    ]
+    assert card["tickets"][0]["side"] == "SELL"
+    sells = [t for t in card["tickets"] if t["side"] == "SELL"]
+    assert [t["ticker"] for t in sells] == ["FEAM"]
+    assert sells[0]["shares"] == 40
+    assert sells[0]["order_type"] == "MARKET"
+    assert "DELL" not in {t["ticker"] for t in card["tickets"]}
+    assert any(s["ticker"] == "TJGC" and s["kind"] == "unheld" for s in card["skipped"])
+    assert any(s["ticker"] == "LVWR" and s["kind"] == "unheld" for s in card["skipped"])
+    buys = [t for t in card["tickets"] if t["side"] == "BUY"]
+    assert buys and all(t["side"] == "BUY" for t in buys)
+    bare, bare_skips = size_hot4_sells(
+        ["FEAM", "NOPE"], positions={"FEAM": {"shares": 2}}, date="2026-09-22",
+    )
+    assert [(t["ticker"], t["shares"]) for t in bare] == [("FEAM", 2)]
+    assert any(s["kind"] == "unheld" and s["ticker"] == "NOPE" for s in bare_skips)
+    payload["strategies"][HOT4]["sit"] = True
+    payload["strategies"][HOT4]["s"] = -4
+    red = plan_hot4_for_broker("2026-09-22", snap, payload=payload)
+    assert [t["ticker"] for t in red["tickets"] if t["side"] == "SELL"] == ["FEAM"]
+    assert [t for t in red["tickets"] if t["side"] == "BUY"] == []
 
 
 def test_hot4_zero_cash_is_honest() -> None:
@@ -630,6 +683,7 @@ def main() -> None:
     test_stale_combo_does_not_submit()
     test_yml_warms_before_bell_and_has_one_automatic_sender()
     test_hot4_tickets_long_only_skip_held_cash_and_sit()
+    test_hot4_sells_size_from_paper_lots()
     test_hot4_zero_cash_is_honest()
     test_paper_order_is_market_not_limit()
     test_place_batch_sends_one_order_at_a_time()
@@ -640,7 +694,7 @@ def main() -> None:
     test_place_batch_skips_leg_that_cannot_buy_one_share()
     test_place_batch_keeps_haircut_plan_when_preopen_cash_is_unchanged()
     test_rejected_leg_does_not_reserve_cash()
-    print("test_webull_exec: 22 ok")
+    print("test_webull_exec: 23 ok")
 
 
 if __name__ == "__main__":

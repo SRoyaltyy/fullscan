@@ -12,9 +12,11 @@ and there is no session-open look.
 
 Webull HOT4 (``union_hot_n4_h1``) uses the Factor Mine cash-start
 recipe: ``pick_day`` on the session panel (universe / rank / top_n /
-hard-red sit as the sleeve defines). Clock-B and Theme Radar oppset
-do not widen that wire. Other factor-mine sleeves may still scan the
-KEEP aisle (``src.morning_scan``). Does not replace ``flatten_robust``.
+hard-red sit as the sleeve defines). Sells are the continuous $10k
+book's list-drop exits (min-hold, sell only lots that book holds).
+Clock-B and Theme Radar oppset do not widen buys or sells. Other
+factor-mine sleeves may still scan the KEEP aisle
+(``src.morning_scan``). Does not replace ``flatten_robust``.
 
 Live Elite Overview Price is stamped on every buy/sell row after
 09:30 (`elite_live_px`). Soft-fail every source so
@@ -605,9 +607,15 @@ def recipe_strats(date: str, look_out: dict | None = None) -> list[dict]:
             continue
         buys = [{"ticker": r["ticker"], "src": ",".join(r.get("sources") or [])}
                 for r in picked if r.get("ticker")]
+        sell_rows: list[dict] = []
         if wire:
+            sell_rows = [
+                {"ticker": t, "side": "long", "kid_side": "long", "src": "list-drop"}
+                for t in hot4_recipe_sells(date, panel)
+            ]
             note = (
                 "factor-mine cash-start recipe (pick_day on the session panel); "
+                "sells are the continuous $10k book list-drop after min-hold; "
                 "Clock-B/oppset do not widen the Webull HOT4 wire"
                 + look_note
             )
@@ -615,10 +623,10 @@ def recipe_strats(date: str, look_out: dict | None = None) -> list[dict]:
             note = ("would-buy at 09:30; sells need cash-book lots" + look_note)
         if hard:
             entry = _entry(
-                name, "factor_mine", date, buys, [],
+                name, "factor_mine", date, buys, sell_rows,
                 sit=True, hard_red=True, s=s,
                 status="sit",
-                note=("hard-red S≤−3 — no new lots; names are the cash-start would-buy"
+                note=("hard-red S≤−3 — no new lots; list-drop exits still sell"
                       if wire else
                       "hard-red S≤−3 — no new lots; names are would-buy"),
                 why=f"S={s}",
@@ -626,7 +634,7 @@ def recipe_strats(date: str, look_out: dict | None = None) -> list[dict]:
             )
         else:
             entry = _entry(
-                name, "factor_mine", date, buys, [],
+                name, "factor_mine", date, buys, sell_rows,
                 s=s,
                 status="ok",
                 note=note,
@@ -737,8 +745,137 @@ def hot4_recipe_tickers(date: str, panel: dict | None = None) -> list[str]:
     return hot4_buy_tickers(picked)
 
 
-def assert_hot4_wire(date: str, buys, *, panel: dict | None = None) -> list[str]:
-    """Refuse a HOT4 submit whose buys are not the cash-start recipe list."""
+def hot4_sell_tickers(rows) -> list[str]:
+    """Exit tickers in list order. A side tag does not drop a name."""
+    out: list[str] = []
+    for raw in rows or []:
+        if isinstance(raw, str):
+            t = raw.strip().upper()
+        elif isinstance(raw, dict):
+            t = str(raw.get("ticker") or raw.get("symbol") or "").strip().upper()
+        else:
+            continue
+        if t:
+            out.append(t)
+    return out
+
+
+def _hot4_panel(panel: dict | None) -> dict:
+    from . import factor_mine as fm
+    if panel is None:
+        raw = _load_json(PANEL)
+        if not raw:
+            raise ValueError("factor-mine panel missing; cannot verify HOT4 wire")
+        return fm.rehydrate_panel(raw)
+    if "by_date" not in panel:
+        return fm.rehydrate_panel(panel)
+    return panel
+
+
+def hot4_recipe_sells(date: str, panel: dict | None = None, *,
+                      rec: dict | None = None,
+                      scores: dict | None = None) -> list[str]:
+    """Continuous cash-book exits for the Webull HOT4 wire.
+
+    List-drop via ``lot_should_sell`` after the recipe min-hold.
+    ``pick_day`` on session rows decides who is still listed. A new
+    name counts as held when the morning is not hard-red — this
+    sleeve's $10k book fills those names. Hard-red still exits.
+    Never a ticker the book does not hold. Clock-B / oppset do not
+    choose the list. ``scores`` overrides morning S for tests.
+    """
+    from . import factor_mine as fm
+    from . import factor_mine_book as fmb
+
+    panel = _hot4_panel(panel)
+    looked = _session_look(date, panel)
+    if looked.get("stale") or not looked.get("rows"):
+        raise ValueError(
+            looked.get("error") or f"no Factor Mine session rows for {date}"
+        )
+    if rec is None:
+        rec = next((r for r in fm.build_recipes() if r.get("name") == HOT4_WIRE), None)
+    if not rec:
+        raise ValueError(f"{HOT4_WIRE} recipe missing")
+    by_date = dict(panel.get("by_date") or {})
+    if date not in by_date:
+        by_date[date] = list(looked.get("rows") or [])
+    cal = [d for d in (panel.get("session_dates") or []) if d <= date]
+    if not cal:
+        cal = sorted(d for d in by_date if d <= date)
+    if date not in cal:
+        cal.append(date)
+    regime = None
+    if scores is None:
+        try:
+            regime = fmb.load_regime()
+        except Exception:
+            regime = {}
+    min_hold = int(rec["hold"])
+    side = rec.get("side") or "long"
+    sell_mode = rec.get("sell") or "list"
+    s_boost = rec.get("s_boost") or "none"
+    pos: dict[str, dict] = {}
+    sold_today: list[str] = []
+    for i, day in enumerate(cal):
+        if scores is not None and day in scores:
+            s = scores[day]
+        else:
+            s = fmb.morning_s(regime, day)
+        hard = s is not None and float(s) <= float(fmb.HARD_RED)
+        good_s = s is not None and float(s) >= fmb.GOOD_S and not hard
+        rec_day = rec
+        if good_s and s_boost in ("more_names", "both"):
+            rec_day = dict(rec, top_n=int(rec["top_n"]) + fmb.MORE_NAMES)
+        day_rows = by_date.get(day) or []
+        chosen = fm.pick_day(day_rows, rec_day)
+        tset = {r["ticker"] for r in chosen if r.get("ticker")}
+        row_by = {r["ticker"]: r for r in day_rows if r.get("ticker")}
+        sold: list[str] = []
+        for t in list(pos):
+            lot = pos[t]
+            held = i - int(lot["entry_ix"])
+            early = fm.should_exit(row_by.get(t) or {}, rec.get("exit_when"))
+            do_sell, _kind = fmb.lot_should_sell(
+                lot, held=held, min_hold=int(lot.get("min_hold") or min_hold),
+                early=early, dropped=t not in tset, sell_mode=sell_mode,
+                px=None, side=side, take_pct=rec.get("take_pct"),
+                stop_pct=rec.get("stop_pct"),
+            )
+            if not do_sell:
+                continue
+            sold.append(t)
+            pos.pop(t, None)
+        if day == date:
+            sold_today = sold
+        if hard:
+            continue
+        holdup = (
+            s_boost == "holdup"
+            and side == "long"
+            and s is not None
+            and float(s) > fmb.HOLDUP_S
+            and not hard
+        )
+        lot_min = max(min_hold, fmb.HOLDUP_SESS) if holdup else min_hold
+        for row in chosen:
+            t = row.get("ticker")
+            if not t or t in pos:
+                continue
+            pos[t] = {
+                "ticker": t, "entry_ix": i, "entry_px": 1.0,
+                "peak_px": 1.0, "min_hold": lot_min,
+            }
+    return sold_today
+
+
+def assert_hot4_wire(date: str, buys, *, sells=None,
+                     panel: dict | None = None) -> list[str]:
+    """Refuse a HOT4 submit whose buys or sells are not the recipe lists.
+
+    ``sells=None`` checks buys only (older callers). A submit passes
+    the published sell list so a Clock-B exit list is refused.
+    """
     recipe = hot4_recipe_tickers(date, panel=panel)
     published = hot4_buy_tickers(buys)
     if published != recipe:
@@ -746,6 +883,14 @@ def assert_hot4_wire(date: str, buys, *, panel: dict | None = None) -> list[str]
             f"HOT4 buys {published} diverge from Factor Mine recipe "
             f"{recipe} for {date}"
         )
+    if sells is not None:
+        recipe_sells = hot4_recipe_sells(date, panel=panel)
+        published_sells = hot4_sell_tickers(sells)
+        if published_sells != recipe_sells:
+            raise ValueError(
+                f"HOT4 sells {published_sells} diverge from Factor Mine recipe "
+                f"{recipe_sells} for {date}"
+            )
     return recipe
 
 
@@ -921,7 +1066,8 @@ def build(date: str) -> dict:
                 "Research factor-mine sleeves may use the KEEP aisle + "
                 "Clock-B gates. Webull HOT4 (union_hot_n4_h1) uses the "
                 "Factor Mine cash-start recipe (pick_day on the session "
-                "panel). flatten_robust stays LIVE money."
+                "panel) for buys and continuous-book list-drop sells. "
+                "flatten_robust stays LIVE money."
             ),
         },
     }

@@ -13,7 +13,7 @@ fundable when the open prints above the plan px.
 
 No feature building, dependency installation or Pages deployment on the
 send path. Paper host only. Submit refuses when published HOT4 buys
-diverge from the Factor Mine cash-start recipe for that date.
+or sells diverge from the Factor Mine cash-start recipe for that date.
 """
 from __future__ import annotations
 import argparse
@@ -76,7 +76,8 @@ def validate_payload(payload, date, clock, *, allow_after_bell=False):
     if payload.get('look', {}).get('stale'):
         raise ValueError('stale factor look')
     from . import strategy_tickets as st
-    st.assert_hot4_wire(date, rec.get('buy') or [])
+    st.assert_hot4_wire(
+        date, rec.get('buy') or [], sells=rec.get('sell') or [])
     return rec
 
 

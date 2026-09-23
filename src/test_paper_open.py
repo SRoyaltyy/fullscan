@@ -12,10 +12,13 @@ def synthetic_hot4_matches_payload(monkeypatch, request):
 
     The divergence test runs the real submit check.
     """
-    if request.node.name == "test_submit_refuses_hot4_buys_that_diverge_from_recipe":
+    if request.node.name in (
+        "test_submit_refuses_hot4_buys_that_diverge_from_recipe",
+        "test_submit_refuses_hot4_sells_that_diverge_from_recipe",
+    ):
         return
 
-    def _accept(date, buys, panel=None):
+    def _accept(date, buys, sells=None, panel=None):
         return [
             str(b.get("ticker") or "").upper()
             for b in (buys or [])
@@ -63,6 +66,49 @@ def test_submit_refuses_hot4_buys_that_diverge_from_recipe(monkeypatch):
     ]
     with pytest.raises(ValueError, match="diverge"):
         po.make_plan(p, API().snapshot(), BELL - timedelta(seconds=15))
+
+
+def test_submit_refuses_hot4_sells_that_diverge_from_recipe(monkeypatch):
+    monkeypatch.setattr(
+        "src.strategy_tickets.hot4_recipe_tickers",
+        lambda date, panel=None: ["ABC"],
+    )
+    monkeypatch.setattr(
+        "src.strategy_tickets.hot4_recipe_sells",
+        lambda date, panel=None, **_kw: ["FEAM", "TJGC", "LVWR"],
+    )
+    p = payload()
+    p["strategies"][we.HOT4]["sell"] = [
+        {"ticker": t, "side": "long"} for t in ("DELL", "GME")
+    ]
+    with pytest.raises(ValueError, match="diverge"):
+        po.make_plan(p, API().snapshot(), BELL - timedelta(seconds=15))
+
+
+def test_plan_sells_held_lot_before_buys():
+    p = payload()
+    p["strategies"][we.HOT4]["buy"] = [{"ticker": "ABC", "px": 10, "side": "long"}]
+    p["strategies"][we.HOT4]["sell"] = [{"ticker": "FEAM", "side": "long", "px": 4}]
+    snap = BrokerSnap(
+        env="paper", cash=1000, connected=True,
+        positions={"FEAM": {"shares": 12, "last_px": 4}},
+    )
+    card = po.make_plan(p, snap, BELL - timedelta(seconds=15))["card"]
+    assert card["tickets"][0]["side"] == "SELL"
+    assert card["tickets"][0]["ticker"] == "FEAM"
+    assert card["tickets"][0]["shares"] == 12
+    assert card["tickets"][1]["side"] == "BUY"
+    assert card["tickets"][1]["ticker"] == "ABC"
+
+
+def test_plan_does_not_sell_unheld_name():
+    p = payload()
+    p["strategies"][we.HOT4]["sell"] = [{"ticker": "FEAM", "side": "long"}]
+    snap = BrokerSnap(env="paper", cash=1000, positions={}, connected=True)
+    card = po.make_plan(p, snap, BELL - timedelta(seconds=15))["card"]
+    assert all(t["side"] != "SELL" for t in card["tickets"])
+    assert any(s.get("kind") == "unheld" and s.get("ticker") == "FEAM"
+               for s in card["skipped"])
 
 
 def test_empty_valid_selection_does_not_reconstruct_winners():
