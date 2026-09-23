@@ -35,7 +35,7 @@ def _overview_flash_id(raw: str, current: str) -> str:
     """Flash ID named by a Gemini 404. Not pro / plus."""
     for mid in re.findall(r"models/([A-Za-z0-9._\-]+)", raw or ""):
         low = mid.lower()
-        if mid == current or "flash" not in low:
+        if mid == current or low == "gemini-2.5-flash-lite" or "flash" not in low:
             continue
         if any(bad in low for bad in ("pro", "ultra", "plus", "paid")):
             continue
@@ -93,13 +93,11 @@ def google_ai_overview(
         raw = e.read().decode("utf-8", "replace")[:500]
         errors.append(f"google_overview HTTP {e.code}")
         named = _overview_flash_id(raw, model) if e.code == 404 else ""
+        if named == "gemini-2.5-flash-lite":
+            named = ""
         if named and not _followed:
             return google_ai_overview(
                 query, max_facts, _model=named, _followed=True,
-            )
-        if e.code in (429, 404) and not _followed and model != "gemini-2.5-flash-lite":
-            return google_ai_overview(
-                query, max_facts, _model="gemini-2.5-flash-lite",
             )
         return "", [], errors
     except Exception as e:  # noqa: BLE001

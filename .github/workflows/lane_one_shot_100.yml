@@ -51,6 +51,9 @@ permissions:
 
 jobs:
   gold:
+    # A push whose message contains [skip gold] does not call providers.
+    # Used when the DashScope key must be rotated before the next gold run.
+    if: ${{ github.event_name != 'push' || !contains(github.event.head_commit.message, '[skip gold]') }}
     runs-on: ubuntu-latest
     timeout-minutes: 45
     steps:

@@ -86,7 +86,8 @@ GROQ_MODELS = [
     "qwen/qwen3.8-27b",
     "qwen/qwen3.6-27b",
 ]
-GEMINI_MODELS = ["gemini-2.5-flash-lite", "gemini-2.5-flash"]
+# gemini-2.5-flash-lite is 404 for new users. Do not call it.
+GEMINI_MODELS = ["gemini-2.5-flash"]
 # Mistral Experiment plan (rate-limited $0). Flash / edge only — no large/medium.
 MISTRAL_MODELS = ["ministral-8b-2512", "ministral-3b-2512", "mistral-small-latest"]
 MISTRAL_URL = "https://api.mistral.ai/v1/chat/completions"
@@ -133,6 +134,8 @@ QWEN_CLASSIFY_MODELS = [m for m in (
     "qwen-flash",
     "qwen3.8-flash",
     "qwen3.7-flash",
+    "qwen3.6-flash",
+    "qwen3.5-flash",
     "qwen3-32b",
     "qwen3-14b",
 ) if "plus" not in m.lower() and "max" not in m.lower()
@@ -560,14 +563,14 @@ def primary_models_for(lane: str, tmpl: str = "custom") -> list[str]:
     tmpl = str(tmpl or "custom").strip()
     if tmpl == "news_classify":
         if lane == "zhipu":
-            # glm-4.7-flash first. Other current $0 *flash* IDs after a 429.
-            # glm-4.6-flash 403 (no entitlement) is that ID, not a dead key.
-            # glm-4.6v-flash is $0. glm-4.7-flashx is paid — not listed.
-            # glm-4-flash-250414 and glm-4.5-flash stay banned.
-            raw = list(ZHIPU_MODELS) + ["glm-4.6-flash", "glm-4.6v-flash"]
+            # glm-4.7-flash first. glm-4.6-flash is a soft skip only:
+            # 403 无权访问 drops that ID, not the key. Free text SKU on
+            # this key is thin. Do not add glm-4.5-flash, glm-4-flash-250414,
+            # or paid glm-4.7-flashx.
+            raw = list(ZHIPU_MODELS) + ["glm-4.6-flash"]
         elif lane == "siliconflow":
-            # Qwen3-8B is not a classify floor. No other non-Pro SF ID
-            # on this key is large enough to lock event_class.
+            # No non-Pro SiliconFlow ID is at the classify floor.
+            # Qwen/Qwen3-8B and THUDM/GLM-Z1-9B are banished from classify.
             raw = []
         elif lane == "openrouter":
             raw = [m for m in OR_CLASSIFY_MODELS if _or_is_free(m)]
@@ -576,7 +579,9 @@ def primary_models_for(lane: str, tmpl: str = "custom") -> list[str]:
                 m for m in QWEN_PROBE_MODELS if not is_classify_banned(m)
             ]
         elif lane == "gemini":
-            raw = ["gemini-2.5-flash", "gemini-2.5-flash-lite"]
+            # gemini-2.5-flash-lite is 404 for new users. 429 on flash
+            # keeps the provider; it does not add the dead lite ID back.
+            raw = ["gemini-2.5-flash"]
         elif lane == "tokenhub":
             # hy3 stays off classify. flash / flashx / deepseek-v4-flash are $0.
             raw = ["glm-5.3-flash", "glm-5.3-flashx", "deepseek-v4-flash"]
@@ -1131,6 +1136,9 @@ def hop_models(lane, models, call, abandon_404=False, accept=None):
         return None, None
     models = [m for m in models if not is_banned_primary(m)]
     n404 = 0
+    saw_live = False
+    dead_calls = 0
+    other_calls = 0
     for model in models:
         rl_key = f"{lane}::{model}"
         if rl_key in _RATE_LIMITED:
@@ -1145,6 +1153,8 @@ def hop_models(lane, models, call, abandon_404=False, accept=None):
             detail = " " + re.sub(r"\s+", " ", str(info))[:140]
         print(f"  {lane}/{model} status={status}{detail}")
         if parsed is not None:
+            # HTTP 200 is a live key even when the enum is rejected.
+            saw_live = True
             if accept is not None and not accept(parsed):
                 print(
                     f"  {lane}/{model} JSON not accepted"
@@ -1157,6 +1167,9 @@ def hop_models(lane, models, call, abandon_404=False, accept=None):
             _SKIP.add(lane)
             return None, None
         if status in (402, 403, 404):
+            # Per-model entitlement, quota, or unknown ID. Not a dead key
+            # unless every tried ID comes back this way and none was live.
+            dead_calls += 1
             print(f"  {lane}/{model} {status} — next ID, provider kept")
             _MODEL_DENIED.add(rl_key)
             if status == 404 and abandon_404:
@@ -1167,6 +1180,7 @@ def hop_models(lane, models, call, abandon_404=False, accept=None):
                     return None, None
             continue
         if status in RATE_LIMIT:
+            saw_live = True
             print(f"  {lane}/{model} 429 — next allowlisted model")
             _RATE_LIMITED.add(rl_key)
             if lane == "openrouter":
@@ -1175,7 +1189,11 @@ def hop_models(lane, models, call, abandon_404=False, accept=None):
                 return None, None
             time.sleep(2)
             continue
+        other_calls += 1
         _rotate(status)
+    if dead_calls and not saw_live and other_calls == 0:
+        print(f"  {lane} skip (every tried ID dead)")
+        _SKIP.add(lane)
     return None, None
 
 
@@ -1292,6 +1310,8 @@ def gemini_flash_suggestions(info: str) -> list[str]:
     out = []
     for mid in _GEMINI_ID.findall(str(info or "")):
         low = mid.lower()
+        if low == "gemini-2.5-flash-lite":
+            continue
         if any(bad in low for bad in ("pro", "ultra", "plus", "paid")):
             continue
         if "flash" not in low:

@@ -415,14 +415,20 @@ def test_classify_floor_excludes_ministral_and_8b(monkeypatch):
     assert "mistral" not in order
     assert classify_models_for("zhipu")[0] == "glm-4.7-flash"
     assert "glm-4.6-flash" in classify_models_for("zhipu")
-    assert "glm-4.6v-flash" in classify_models_for("zhipu")
+    assert "glm-4.6v-flash" not in classify_models_for("zhipu")
     assert "glm-4.7-flashx" not in classify_models_for("zhipu")
     assert "glm-4.5-flash" not in classify_models_for("zhipu")
+    assert "glm-4-flash-250414" not in classify_models_for("zhipu")
     assert classify_models_for("siliconflow") == []
-    assert classify_models_for("qwen")[0] == "qwen-flash"
-    assert "qwen3.8-flash" in classify_models_for("qwen")
-    assert "qwen3-32b" in classify_models_for("qwen")
-    assert classify_models_for("gemini") == ["gemini-2.5-flash", "gemini-2.5-flash-lite"]
+    qwen = classify_models_for("qwen")
+    assert qwen[:5] == [
+        "qwen-flash", "qwen3.8-flash", "qwen3.7-flash",
+        "qwen3.6-flash", "qwen3.5-flash",
+    ]
+    assert qwen.index("qwen3.5-flash") < qwen.index("qwen3-32b")
+    assert qwen.index("qwen3-32b") < qwen.index("qwen3-14b")
+    assert classify_models_for("gemini") == ["gemini-2.5-flash"]
+    assert "gemini-2.5-flash-lite" not in classify_models_for("gemini")
     assert classify_models_for("tokenhub")[0] == "glm-5.3-flash"
     assert "deepseek-v4-flash" in classify_models_for("tokenhub")
     assert "hy3" not in classify_models_for("tokenhub")
@@ -460,7 +466,8 @@ def test_dashscope_401_on_one_host_tries_the_next(monkeypatch):
     assert "qwen" not in lane_route._SKIP
 
 
-def test_model_403_does_not_kill_the_provider():
+def test_429_then_403_does_not_skip_provider():
+    """429 keeps the provider. A later per-model 403 does not cache _SKIP."""
     from src import lane_route
 
     lane_route._SKIP.clear()
@@ -470,28 +477,52 @@ def test_model_403_does_not_kill_the_provider():
 
     def call(model):
         seen.append(model)
-        if model == "glm-4.6-flash":
-            return None, 403, "no permission for this model"
-        if model == "glm-5.3-flashx":
-            return None, 402, "quota for this model"
-        return {"event_class": "blast_ops", "q5": "impulse"}, 200, model
+        if model == "glm-4.7-flash":
+            return None, 429, "busy"
+        return None, 403, "无权访问"
 
-    parsed, info = lane_route.hop_models(
-        "zhipu", ["glm-4.6-flash", "glm-4.6v-flash"], call,
-    )
-    assert parsed["event_class"] == "blast_ops"
-    assert info == "glm-4.6v-flash"
-    assert seen == ["glm-4.6-flash", "glm-4.6v-flash"]
+    from unittest import mock
+
+    with mock.patch.object(lane_route.time, "sleep", lambda *_a, **_k: None):
+        parsed, info = lane_route.hop_models(
+            "zhipu", ["glm-4.7-flash", "glm-4.6-flash"], call,
+        )
+    assert parsed is None and info is None
+    assert seen == ["glm-4.7-flash", "glm-4.6-flash"]
     assert "zhipu" not in lane_route._SKIP
+    lane_route._SKIP.clear()
+    lane_route._MODEL_DENIED.clear()
+    lane_route._RATE_LIMITED.clear()
+
+
+def test_200_then_402_does_not_skip_provider():
+    """A 200 on the lane means a later sibling 402 must not cache _SKIP."""
+    from src import lane_route
 
     lane_route._SKIP.clear()
     lane_route._MODEL_DENIED.clear()
-    seen.clear()
+    lane_route._RATE_LIMITED.clear()
+    seen = []
+
+    def call(model):
+        seen.append(model)
+        if model == "glm-5.3-flash":
+            return {"event_class": "regime_break", "q5": "regime_break"}, 200, model
+        if model == "glm-5.3-flashx":
+            return None, 402, "free quota exhausted"
+        return {"event_class": "blast_ops", "q5": "impulse"}, 200, model
+
     parsed, info = lane_route.hop_models(
-        "tokenhub", ["glm-5.3-flashx", "deepseek-v4-flash"], call,
+        "tokenhub",
+        ["glm-5.3-flash", "glm-5.3-flashx", "deepseek-v4-flash"],
+        call,
+        accept=lambda row: row.get("event_class") == "blast_ops",
     )
+    assert parsed["event_class"] == "blast_ops"
     assert info == "deepseek-v4-flash"
+    assert seen == ["glm-5.3-flash", "glm-5.3-flashx", "deepseek-v4-flash"]
     assert "tokenhub" not in lane_route._SKIP
+    assert "hy3" not in seen
     lane_route._SKIP.clear()
     lane_route._MODEL_DENIED.clear()
 
@@ -562,9 +593,8 @@ def test_gemini_404_names_a_flash_id_not_pro():
         "Please update your code to use models/gemini-3.1-flash-lite "
         "or models/gemini-2.5-pro"
     )
-    assert gemini_flash_suggestions(text) == [
-        "gemini-2.5-flash-lite", "gemini-3.1-flash-lite",
-    ]
+    assert "gemini-2.5-flash-lite" not in gemini_flash_suggestions(text)
+    assert gemini_flash_suggestions(text) == ["gemini-3.1-flash-lite"]
 
 
 def test_think_tags_do_not_hide_json():
