@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `overnight` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-11.63%** ($8,837) · signal-only (no cash/fees) was -27.10%. Starts YES **1/27**. Fills 22 · skips 163 · realized $-968.16.
+Cash book **-7.89%** ($9,211) · signal-only (no cash/fees) was -24.07%. Starts YES **8/28**. Fills 22 · skips 168 · realized $-968.16.
 
 ## How this sleeve decides (like you are 10)
 
@@ -130,6 +130,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | `LEN` | 56 | $79.70 | $78.25 | -81.20 | $76.43 | -101.92 | -183.12 | -133.28 | -235.20 |
 | 2026-09-21 | `ALMU` | 328 | $12.72 | $13.12 | +131.20 | $13.61 | +159.08 | +290.28 | -205.00 | -45.92 |
 | 2026-09-21 | `LEN` | 56 | $76.43 | $76.98 | +30.80 | $78.08 | +61.60 | +92.40 | -204.40 | -142.80 |
+| 2026-09-22 | `ALMU` | 328 | $13.61 | $13.43 | -59.04 | $13.90 | +154.16 | +95.12 | -104.96 | +49.20 |
+| 2026-09-22 | `LEN` | 56 | $78.08 | $81.00 | +163.52 | $83.06 | +115.36 | +278.88 | +20.72 | +136.08 |
 
 ## Each session (cash + holdings state)
 
@@ -162,6 +164,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | +7.38 | $0.15 | ALMU×328, LEN×56 | $8,213.03 | -580.32 | +37.08 | — | — | $0.15 | $8,250.11 | ALMU×328, LEN×56 |
 | 2026-09-18 | +4.86 | $0.15 | ALMU×328, LEN×56 | $8,200.07 | -50.04 | +253.96 | — | — | $0.15 | $8,454.03 | ALMU×328, LEN×56 |
 | 2026-09-21 | +12.87 | $0.15 | ALMU×328, LEN×56 | $8,616.03 | +162.00 | +220.68 | — | — | $0.15 | $8,836.71 | ALMU×328, LEN×56 |
+| 2026-09-22 | -0.50 | $0.15 | ALMU×328, LEN×56 | $8,941.19 | +104.48 | +269.52 | — | — | $0.15 | $9,210.71 | ALMU×328, LEN×56 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -243,6 +246,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.15 | ▲ close $8,454.03 vs 09:30 $8,200.07 (session +253.96) | 16:00 close · cash $0.15 · equity $8,454.03 vs 09:30 $8,200.07 (+253.96; session marks +253.96) · 2 name(s) marked open→close (per-name table). ALMU×328 09:30 $11.64 → close $12.72 +355.88; LEN×56 09:30 $78.25 → close $76.43 -101.92 | — |
 | 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.15 | ▲ 09:30 equity $8,616.03 vs yday $8,454.03 (+162.00) | 09:30 open · cash $0.15 (unchanged overnight, no fees) · equity $8,616.03 vs prior close $8,454.03 (+162.00) · 2 name(s) re-marked at the open (per-name table). ALMU×328 yday $12.72 → 09:30 $13.12 +131.20; LEN×56 yday $76.43 → 09:30 $76.98 +30.80 | — |
 | 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.15 | ▲ close $8,836.71 vs 09:30 $8,616.03 (session +220.68) | 16:00 close · cash $0.15 · equity $8,836.71 vs 09:30 $8,616.03 (+220.68; session marks +220.68) · 2 name(s) marked open→close (per-name table). ALMU×328 09:30 $13.12 → close $13.61 +159.08; LEN×56 09:30 $76.98 → close $78.08 +61.60 | — |
+| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.15 | ▲ 09:30 equity $8,941.19 vs yday $8,836.71 (+104.48) | 09:30 open · cash $0.15 (unchanged overnight, no fees) · equity $8,941.19 vs prior close $8,836.71 (+104.48) · 2 name(s) re-marked at the open (per-name table). ALMU×328 yday $13.61 → 09:30 $13.43 -59.04; LEN×56 yday $78.08 → 09:30 $81.00 +163.52 | — |
+| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.15 | ▲ close $9,210.71 vs 09:30 $8,941.19 (session +269.52) | 16:00 close · cash $0.15 · equity $9,210.71 vs 09:30 $8,941.19 (+269.52; session marks +269.52) · 2 name(s) marked open→close (per-name table). ALMU×328 09:30 $13.43 → close $13.90 +154.16; LEN×56 09:30 $81.00 → close $83.06 +115.36 | — |
 
 ## Not taken
 
@@ -410,7 +415,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | `LEN` | min_hold | dropped but min-hold 2/5 sess — no sell |
 | 2026-09-21 | `ALMU` | min_hold | dropped but min-hold 3/5 sess — no sell |
 | 2026-09-21 | `LEN` | min_hold | dropped but min-hold 3/5 sess — no sell |
-| 2026-09-21 | `ABVX` | cash | leftover split 0.15 < 1 share @ 105.72 |
+| 2026-09-21 | `ABVX` | cash | leftover split 0.05 < 1 share @ 105.72 |
+| 2026-09-21 | `MLKN` | cash | leftover split 0.05 < 1 share @ 20.85 |
+| 2026-09-21 | `THO` | cash | leftover split 0.05 < 1 share @ 68.39 |
+| 2026-09-22 | `ALMU` | min_hold | dropped but min-hold 4/5 sess — no sell |
+| 2026-09-22 | `LEN` | min_hold | dropped but min-hold 4/5 sess — no sell |
+| 2026-09-22 | `KBH` | cash | leftover split 0.15 < 1 share @ 49.39 |
 
 ## Still open (marked at last close)
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os hold 5, no 🚨
 
-Cash book **-28.26%** ($7,174) · signal-only (no cash/fees) was -52.22%. Starts YES **5/27**. Fills 54 · skips 123 · realized $-2739.15.
+Cash book **-25.27%** ($7,473) · signal-only (no cash/fees) was -47.68%. Starts YES **10/28**. Fills 54 · skips 134 · realized $-2739.15.
 
 ## How this sleeve decides (like you are 10)
 
@@ -233,6 +233,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | `EYPT` | 230 | $3.85 | $3.87 | +4.60 | $4.02 | +34.50 | +39.10 | +48.30 | +82.80 |
 | 2026-09-21 | `RARE` | 7 | $14.51 | $14.58 | +0.49 | $14.65 | +0.49 | +0.98 | -1.47 | -0.98 |
 | 2026-09-21 | `FLNC` | 13 | $7.32 | $7.36 | +0.52 | $7.39 | +0.39 | +0.91 | -2.27 | -1.89 |
+| 2026-09-22 | `ALHC` | 85 | $8.33 | $8.45 | +9.78 | $7.99 | -38.68 | -28.90 | -157.68 | -196.35 |
+| 2026-09-22 | `PLAY` | 128 | $6.79 | $6.90 | +14.08 | $7.12 | +28.16 | +42.24 | +5.12 | +33.28 |
+| 2026-09-22 | `DVLT` | 5511 | $0.16 | $0.16 | +12.68 | $0.17 | +22.04 | +34.72 | +12.68 | +34.72 |
+| 2026-09-22 | `NMRA` | 1044 | $0.69 | $0.70 | +4.28 | $0.78 | +86.03 | +90.31 | -154.41 | -68.38 |
+| 2026-09-22 | `ZSQR` | 376 | $2.64 | $2.70 | +22.56 | $2.79 | +33.84 | +56.40 | +135.36 | +169.20 |
+| 2026-09-22 | `CTMX` | 324 | $2.76 | $2.86 | +32.40 | $2.94 | +25.92 | +58.32 | +45.36 | +71.28 |
+| 2026-09-22 | `CRBP` | 128 | $7.65 | $7.73 | +10.24 | $7.88 | +18.56 | +28.80 | +111.36 | +129.92 |
+| 2026-09-22 | `EYPT` | 230 | $4.02 | $4.05 | +8.05 | $4.07 | +3.45 | +11.50 | +90.85 | +94.30 |
+| 2026-09-22 | `RARE` | 7 | $14.65 | $14.78 | +0.91 | $15.62 | +5.85 | +6.76 | -0.07 | +5.78 |
+| 2026-09-22 | `FLNC` | 13 | $7.39 | $7.49 | +1.30 | $7.27 | -2.86 | -1.56 | -0.58 | -3.45 |
 
 ## Each session (cash + holdings state)
 
@@ -265,6 +275,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | +7.38 | $0.95 | NAVN×3, RWT×22, COO×1, ALHC×85, PLAY×128, DVLT×5511, NMRA×1044, ZSQR×376, CTMX×324, CRBP×128, EYPT×230 | $7,132.95 | +27.12 | +31.93 | — | — | $0.95 | $7,164.88 | NAVN×3, RWT×22, COO×1, ALHC×85, PLAY×128, DVLT×5511, NMRA×1044, ZSQR×376, CTMX×324, CRBP×128, EYPT×230 |
 | 2026-09-18 | +4.86 | $0.95 | NAVN×3, RWT×22, COO×1, ALHC×85, PLAY×128, DVLT×5511, NMRA×1044, ZSQR×376, CTMX×324, CRBP×128, EYPT×230 | $7,197.08 | +32.20 | -87.70 | RARE, FLNC | NAVN, RWT, COO | $3.52 | $7,105.07 | ALHC×85, PLAY×128, DVLT×5511, NMRA×1044, ZSQR×376, CTMX×324, CRBP×128, EYPT×230, RARE×7, FLNC×13 |
 | 2026-09-21 | +12.87 | $3.52 | ALHC×85, PLAY×128, DVLT×5511, NMRA×1044, ZSQR×376, CTMX×324, CRBP×128, EYPT×230, RARE×7, FLNC×13 | $7,181.80 | +76.73 | -7.60 | — | — | $3.52 | $7,174.20 | ALHC×85, PLAY×128, DVLT×5511, NMRA×1044, ZSQR×376, CTMX×324, CRBP×128, EYPT×230, RARE×7, FLNC×13 |
+| 2026-09-22 | -0.50 | $3.52 | ALHC×85, PLAY×128, DVLT×5511, NMRA×1044, ZSQR×376, CTMX×324, CRBP×128, EYPT×230, RARE×7, FLNC×13 | $7,290.47 | +116.27 | +182.31 | — | — | $3.52 | $7,472.78 | ALHC×85, PLAY×128, DVLT×5511, NMRA×1044, ZSQR×376, CTMX×324, CRBP×128, EYPT×230, RARE×7, FLNC×13 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -378,6 +389,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3.52 | ▼ close $7,105.07 vs 09:30 $7,197.08 (session -87.70) | 16:00 close · cash $3.52 · equity $7,105.07 vs 09:30 $7,197.08 (-92.01; session marks -87.70) · 10 name(s) marked open→close (per-name table). ALHC×85 09:30 $8.68 → close $8.35 -28.05; PLAY×128 09:30 $6.64 → close $6.73 +11.52; DVLT×5511 09:30 $0.17 → close $0.15 -110.22; NMRA×1044 09:30 $0.74 → close $0.73 -11.48; ZSQR×376 09:30 $2.50 → close $2.68 +67.68; CTMX×324 09:30 $2.83 → close $2.76 -22.68; CRBP×128 09:30 $7.22 → close $7.48 +33.28; EYPT×230 09:30 $3.95 → close $3.85 -23.00; RARE×7 09:30 $14.79 → close $14.51 -1.96; FLNC×13 09:30 $7.54 → close $7.32 -2.79 | — |
 | 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3.52 | ▲ 09:30 equity $7,181.80 vs yday $7,105.07 (+76.73) | 09:30 open · cash $3.52 (unchanged overnight, no fees) · equity $7,181.80 vs prior close $7,105.07 (+76.73) · 10 name(s) re-marked at the open (per-name table). ALHC×85 yday $8.35 → 09:30 $8.33 -1.70; PLAY×128 yday $6.73 → 09:30 $6.68 -6.40; DVLT×5511 yday $0.15 → 09:30 $0.16 +55.11; NMRA×1044 yday $0.73 → 09:30 $0.74 +7.31; ZSQR×376 yday $2.68 → 09:30 $2.68 +0.00; CTMX×324 yday $2.76 → 09:30 $2.80 +12.96; CRBP×128 yday $7.48 → 09:30 $7.51 +3.84; EYPT×230 yday $3.85 → 09:30 $3.87 +4.60; RARE×7 yday $14.51 → 09:30 $14.58 +0.49; FLNC×13 yday $7.32 → 09:30 $7.36 +0.52 | — |
 | 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3.52 | ▼ close $7,174.20 vs 09:30 $7,181.80 (session -7.60) | 16:00 close · cash $3.52 · equity $7,174.20 vs 09:30 $7,181.80 (-7.60; session marks -7.60) · 10 name(s) marked open→close (per-name table). ALHC×85 09:30 $8.33 → close $8.33 +0.00; PLAY×128 09:30 $6.68 → close $6.79 +14.08; DVLT×5511 09:30 $0.16 → close $0.16 +0.00; NMRA×1044 09:30 $0.74 → close $0.69 -46.98; ZSQR×376 09:30 $2.68 → close $2.64 -15.04; CTMX×324 09:30 $2.80 → close $2.76 -12.96; CRBP×128 09:30 $7.51 → close $7.65 +17.92; EYPT×230 09:30 $3.87 → close $4.02 +34.50; RARE×7 09:30 $14.58 → close $14.65 +0.49; FLNC×13 09:30 $7.36 → close $7.39 +0.39 | — |
+| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $3.52 | ▲ 09:30 equity $7,290.47 vs yday $7,174.20 (+116.27) | 09:30 open · cash $3.52 (unchanged overnight, no fees) · equity $7,290.47 vs prior close $7,174.20 (+116.27) · 10 name(s) re-marked at the open (per-name table). ALHC×85 yday $8.33 → 09:30 $8.45 +9.78; PLAY×128 yday $6.79 → 09:30 $6.90 +14.08; DVLT×5511 yday $0.16 → 09:30 $0.16 +12.68; NMRA×1044 yday $0.69 → 09:30 $0.70 +4.28; ZSQR×376 yday $2.64 → 09:30 $2.70 +22.56; CTMX×324 yday $2.76 → 09:30 $2.86 +32.40; CRBP×128 yday $7.65 → 09:30 $7.73 +10.24; EYPT×230 yday $4.02 → 09:30 $4.05 +8.05; RARE×7 yday $14.65 → 09:30 $14.78 +0.91; FLNC×13 yday $7.39 → 09:30 $7.49 +1.30 | — |
+| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $3.52 | ▲ close $7,472.78 vs 09:30 $7,290.47 (session +182.31) | 16:00 close · cash $3.52 · equity $7,472.78 vs 09:30 $7,290.47 (+182.31; session marks +182.31) · 10 name(s) marked open→close (per-name table). ALHC×85 09:30 $8.45 → close $7.99 -38.68; PLAY×128 09:30 $6.90 → close $7.12 +28.16; DVLT×5511 09:30 $0.16 → close $0.17 +22.04; NMRA×1044 09:30 $0.70 → close $0.78 +86.03; ZSQR×376 09:30 $2.70 → close $2.79 +33.84; CTMX×324 09:30 $2.86 → close $2.94 +25.92; CRBP×128 09:30 $7.73 → close $7.88 +18.56; EYPT×230 09:30 $4.05 → close $4.07 +3.45; RARE×7 09:30 $14.78 → close $15.62 +5.85; FLNC×13 09:30 $7.49 → close $7.27 -2.86 | — |
 
 ## Not taken
 
@@ -504,8 +517,19 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | `EYPT` | min_hold | dropped but min-hold 3/5 sess — no sell |
 | 2026-09-21 | `RARE` | min_hold | dropped but min-hold 1/5 sess — no sell |
 | 2026-09-21 | `FLNC` | min_hold | dropped but min-hold 1/5 sess — no sell |
-| 2026-09-21 | `XENE` | cash | leftover split 1.76 < 1 share @ 40.00 |
-| 2026-09-21 | `SION` | cash | leftover split 1.76 < 1 share @ 6.00 |
+| 2026-09-21 | `XENE` | cash | leftover split 1.17 < 1 share @ 40.00 |
+| 2026-09-21 | `SION` | cash | leftover split 1.17 < 1 share @ 6.00 |
+| 2026-09-21 | `THO` | cash | leftover split 1.17 < 1 share @ 68.39 |
+| 2026-09-22 | `ALHC` | min_hold | dropped but min-hold 4/5 sess — no sell |
+| 2026-09-22 | `PLAY` | min_hold | dropped but min-hold 4/5 sess — no sell |
+| 2026-09-22 | `DVLT` | min_hold | dropped but min-hold 4/5 sess — no sell |
+| 2026-09-22 | `NMRA` | min_hold | dropped but min-hold 4/5 sess — no sell |
+| 2026-09-22 | `ZSQR` | min_hold | dropped but min-hold 4/5 sess — no sell |
+| 2026-09-22 | `CTMX` | min_hold | dropped but min-hold 4/5 sess — no sell |
+| 2026-09-22 | `CRBP` | min_hold | dropped but min-hold 4/5 sess — no sell |
+| 2026-09-22 | `EYPT` | min_hold | dropped but min-hold 4/5 sess — no sell |
+| 2026-09-22 | `RARE` | min_hold | dropped but min-hold 2/5 sess — no sell |
+| 2026-09-22 | `FLNC` | min_hold | dropped but min-hold 2/5 sess — no sell |
 
 ## Still open (marked at last close)
 

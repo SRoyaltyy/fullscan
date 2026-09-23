@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ rsi_os, no 🚨
 
-Cash book **-21.92%** ($7,808) · signal-only (no cash/fees) was -34.89%. Starts YES **6/27**. Fills 62 · skips 74 · realized $-2081.88.
+Cash book **-19.37%** ($8,063) · signal-only (no cash/fees) was -31.06%. Starts YES **13/28**. Fills 63 · skips 77 · realized $-2081.88.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $33.34.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $75.35.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -186,8 +186,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | `CTMX` | 370 | $2.76 | $2.80 | +14.80 | — | +0.00 | +14.80 | +29.60 | — |
 | 2026-09-21 | `CRBP` | 146 | $7.48 | $7.51 | +4.38 | — | +0.00 | +4.38 | +94.90 | — |
 | 2026-09-21 | `EYPT` | 265 | $3.85 | $3.87 | +5.30 | — | +0.00 | +5.30 | +55.65 | — |
-| 2026-09-21 | `XENE` | 98 | — | $40.00 | +0.00 | $38.99 | -98.98 | -98.98 | +0.00 | -98.98 |
-| 2026-09-21 | `SION` | 659 | — | $6.00 | +0.00 | $6.00 | +0.00 | +0.00 | +0.00 | +0.00 |
+| 2026-09-21 | `XENE` | 65 | — | $40.00 | +0.00 | $38.99 | -65.65 | -65.65 | +0.00 | -65.65 |
+| 2026-09-21 | `SION` | 439 | — | $6.00 | +0.00 | $6.00 | +0.00 | +0.00 | +0.00 | +0.00 |
+| 2026-09-21 | `THO` | 38 | — | $68.39 | +0.00 | $69.94 | +58.90 | +58.90 | +0.00 | +58.90 |
+| 2026-09-22 | `XENE` | 65 | $38.99 | $39.76 | +50.05 | $39.09 | -43.55 | +6.50 | -15.60 | -59.15 |
+| 2026-09-22 | `SION` | 439 | $6.00 | $5.99 | -4.39 | $6.02 | +13.17 | +8.78 | -4.39 | +8.78 |
+| 2026-09-22 | `THO` | 38 | $69.94 | $72.53 | +98.42 | $73.80 | +48.26 | +146.68 | +157.32 | +205.58 |
 
 ## Each session (cash + holdings state)
 
@@ -219,7 +223,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | +5.30 | $44.75 | NAVN×122, RWT×714, COO×45 | $8,078.12 | +109.24 | -115.10 | ALHC, PLAY, DVLT, NMRA, ZSQR, CTMX, CRBP, EYPT | NAVN, RWT, COO | $0.25 | $7,885.60 | ALHC×97, PLAY×146, DVLT×6300, NMRA×1194, ZSQR×430, CTMX×370, CRBP×146, EYPT×265 |
 | 2026-09-17 | +7.38 | $0.25 | ALHC×97, PLAY×146, DVLT×6300, NMRA×1194, ZSQR×430, CTMX×370, CRBP×146, EYPT×265 | $7,914.60 | +29.00 | +40.80 | — | — | $0.25 | $7,955.40 | ALHC×97, PLAY×146, DVLT×6300, NMRA×1194, ZSQR×430, CTMX×370, CRBP×146, EYPT×265 |
 | 2026-09-18 | +4.86 | $0.25 | ALHC×97, PLAY×146, DVLT×6300, NMRA×1194, ZSQR×430, CTMX×370, CRBP×146, EYPT×265 | $7,990.37 | +34.97 | -95.04 | — | — | $0.25 | $7,895.33 | ALHC×97, PLAY×146, DVLT×6300, NMRA×1194, ZSQR×430, CTMX×370, CRBP×146, EYPT×265 |
-| 2026-09-21 | +12.87 | $0.25 | ALHC×97, PLAY×146, DVLT×6300, NMRA×1194, ZSQR×430, CTMX×370, CRBP×146, EYPT×265 | $7,981.92 | +86.59 | -98.98 | XENE, SION | ALHC, PLAY, DVLT, NMRA, ZSQR, CTMX, CRBP, EYPT | $33.34 | $7,808.36 | XENE×98, SION×659 |
+| 2026-09-21 | +12.87 | $0.25 | ALHC×97, PLAY×146, DVLT×6300, NMRA×1194, ZSQR×430, CTMX×370, CRBP×146, EYPT×265 | $7,981.92 | +86.59 | -6.75 | XENE, SION, THO | ALHC, PLAY, DVLT, NMRA, ZSQR, CTMX, CRBP, EYPT | $75.35 | $7,901.42 | XENE×65, SION×439, THO×38 |
+| 2026-09-22 | -0.50 | $75.35 | XENE×65, SION×439, THO×38 | $8,045.50 | +144.08 | +17.88 | — | — | $75.35 | $8,063.38 | XENE×65, SION×439, THO×38 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -338,9 +343,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 09:30 ET | **SELL** | `CTMX` | 370 | $2.80 | $4.84 | $+19.98 | $5,802.05 | ▲ +19.98 after sell → book $7,924.06; vs 09:30 mark -4.84 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-21 09:30 ET | **SELL** | `CRBP` | 146 | $7.51 | $2.46 | $+90.01 | $6,896.04 | ▲ +90.01 after sell → book $7,921.59; vs 09:30 mark -2.47 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-21 09:30 ET | **SELL** | `EYPT` | 265 | $3.87 | $3.47 | $+48.76 | $7,918.12 | ▲ +48.76 after sell → book $7,918.12; vs 09:30 mark -3.47 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-21 09:30 ET | **BUY** | `XENE` | 98 | $40.00 | $2.28 | — | $3,995.84 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-1.1; leftover $3959.06 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `SION` | 659 | $6.00 | $8.50 | — | $33.34 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-24.1; leftover $3959.06 | join🟢 sector🟢 gen🟢 news🟢 digest🟡 ab🔴 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $33.34 | ▼ close $7,808.36 vs 09:30 $7,981.92 (session -98.98) | 16:00 close · cash $33.34 · equity $7,808.36 vs 09:30 $7,981.92 (-173.56; session marks -98.98) · 2 name(s) marked open→close (per-name table). XENE×98 09:30 $40.00 → close $38.99 -98.98; SION×659 09:30 $6.00 → close $6.00 +0.00 | — |
+| 2026-09-21 09:30 ET | **BUY** | `XENE` | 65 | $40.00 | $2.19 | — | $5,315.94 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-32.2; leftover $2639.37 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `SION` | 439 | $6.00 | $5.66 | — | $2,676.27 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-24.1; leftover $2639.37 | join🟢 sector🟢 gen🟢 news🟢 digest🟡 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `THO` | 38 | $68.39 | $2.10 | — | $75.35 | — | union ∩ rsi_os, no 🚨; gate rsi_os=True; list overnight; ret5=-2.5; leftover $2639.37 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $75.35 | ▼ close $7,901.42 vs 09:30 $7,981.92 (session -6.75) | 16:00 close · cash $75.35 · equity $7,901.42 vs 09:30 $7,981.92 (-80.50; session marks -6.75) · 3 name(s) marked open→close (per-name table). XENE×65 09:30 $40.00 → close $38.99 -65.65; SION×439 09:30 $6.00 → close $6.00 +0.00; THO×38 09:30 $68.39 → close $69.94 +58.90 | — |
+| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $75.35 | ▲ 09:30 equity $8,045.50 vs yday $7,901.42 (+144.08) | 09:30 open · cash $75.35 (unchanged overnight, no fees) · equity $8,045.50 vs prior close $7,901.42 (+144.08) · 3 name(s) re-marked at the open (per-name table). XENE×65 yday $38.99 → 09:30 $39.76 +50.05; SION×439 yday $6.00 → 09:30 $5.99 -4.39; THO×38 yday $69.94 → 09:30 $72.53 +98.42 | — |
+| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $75.35 | ▲ close $8,063.38 vs 09:30 $8,045.50 (session +17.88) | 16:00 close · cash $75.35 · equity $8,063.38 vs 09:30 $8,045.50 (+17.88; session marks +17.88) · 3 name(s) marked open→close (per-name table). XENE×65 09:30 $39.76 → close $39.09 -43.55; SION×439 09:30 $5.99 → close $6.02 +13.17; THO×38 09:30 $72.53 → close $73.80 +48.26 | — |
 
 ## Not taken
 
@@ -420,10 +428,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | `EYPT` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-18 | `RARE` | cash | leftover split 0.12 < 1 share @ 14.79 |
 | 2026-09-18 | `FLNC` | cash | leftover split 0.12 < 1 share @ 7.54 |
+| 2026-09-22 | `XENE` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-22 | `SION` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-22 | `THO` | min_hold | dropped but min-hold 1/3 sess — no sell |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `XENE` | 98 | 2026-09-21 @ $40.00 | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-1.1; leftover $3959.06 |
-| `SION` | 659 | 2026-09-21 @ $6.00 | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; 🔵; ret5=-24.1; leftover $3959.06 |
+| `XENE` | 65 | 2026-09-21 @ $40.00 | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-32.2; leftover $2639.37 |
+| `SION` | 439 | 2026-09-21 @ $6.00 | union ∩ rsi_os, no 🚨; gate rsi_os=True; list yday_mover; ret5=-24.1; leftover $2639.37 |
+| `THO` | 38 | 2026-09-21 @ $68.39 | union ∩ rsi_os, no 🚨; gate rsi_os=True; list overnight; ret5=-2.5; leftover $2639.37 |

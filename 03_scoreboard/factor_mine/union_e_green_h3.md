@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-0.88%** ($9,912) · signal-only (no cash/fees) was -21.98%. Starts YES **12/27**. Fills 66 · skips 101 · realized $-87.73.
+Cash book **-2.96%** ($9,704) · signal-only (no cash/fees) was -23.61%. Starts YES **12/28**. Fills 67 · skips 101 · realized $-87.73.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,912.24.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $52.18.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -202,6 +202,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-18 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-21 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-22 | `ANAB` | 179 | — | $55.07 | +0.00 | $53.92 | -205.85 | -205.85 | +0.00 | -205.85 |
 
 ## Each session (cash + holdings state)
 
@@ -234,6 +235,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | +7.38 | $9,912.24 | — | $9,912.24 | -0.00 | +0.00 | — | — | $9,912.24 | $9,912.24 | — |
 | 2026-09-18 | +4.86 | $9,912.24 | — | $9,912.24 | -0.00 | +0.00 | — | — | $9,912.24 | $9,912.24 | — |
 | 2026-09-21 | +12.87 | $9,912.24 | — | $9,912.24 | -0.00 | +0.00 | — | — | $9,912.24 | $9,912.24 | — |
+| 2026-09-22 | -0.50 | $9,912.24 | — | $9,912.24 | -0.00 | -205.85 | ANAB | — | $52.18 | $9,703.86 | ANAB×179 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -359,6 +361,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,912.24 | ▲ close $9,912.24 vs 09:30 $9,912.24 (session +0.00) | 16:00 close · cash $9,912.24 · no lots left · equity $9,912.24. | — |
 | 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,912.24 | ▲ 09:30 equity $9,912.24 vs yday $9,912.24 (-0.00) | 09:30 open · cash $9,912.24 · no holdings · equity $9,912.24 vs prior close $9,912.24 (-0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,912.24 | ▲ close $9,912.24 vs 09:30 $9,912.24 (session +0.00) | 16:00 close · cash $9,912.24 · no lots left · equity $9,912.24. | — |
+| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,912.24 | ▲ 09:30 equity $9,912.24 vs yday $9,912.24 (-0.00) | 09:30 open · cash $9,912.24 · no holdings · equity $9,912.24 vs prior close $9,912.24 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-22 09:30 ET | **BUY** | `ANAB` | 179 | $55.07 | $2.53 | — | $52.18 | — | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=-0.8; leftover $9912.24 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 judge🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $52.18 | ▼ close $9,703.86 vs 09:30 $9,912.24 (session -205.85) | 16:00 close · cash $52.18 · equity $9,703.86 vs 09:30 $9,912.24 (-208.38; session marks -205.85) · 1 name(s) marked open→close (per-name table). ANAB×179 09:30 $55.07 → close $53.92 -205.85 | — |
 
 ## Not taken
 
@@ -465,3 +470,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `KR` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-15 | `HITI` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `PLAY` | hard_red | hard-red S=-3.84 sit; no new buys |
+
+## Still open (marked at last close)
+
+| Ticker | Shares | Entry | Why |
+|---|---:|---|---|
+| `ANAB` | 179 | 2026-09-22 @ $55.07 | combo gate; gate earn_react=True,last_green=True; list earn_react; ret5=-0.8; leftover $9912.24 |

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-0.57%** ($9,943) · signal-only (no cash/fees) was +2.11%. Starts YES **1/27**. Fills 13 · skips 18 · realized $+210.43.
+Cash book **+2.10%** ($10,210) · signal-only (no cash/fees) was +4.80%. Starts YES **2/28**. Fills 12 · skips 18 · realized $+210.43.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $4.78.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $10,210.43.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -102,7 +102,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-17 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-18 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-09-21 | `NEO` | 512 | — | $19.92 | +0.00 | $19.41 | -261.12 | -261.12 | +0.00 | -261.12 |
+| 2026-09-21 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-22 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -134,7 +135,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | +5.30 | $10,210.43 | — | $10,210.43 | -0.00 | +0.00 | — | — | $10,210.43 | $10,210.43 | — |
 | 2026-09-17 | +7.38 | $10,210.43 | — | $10,210.43 | -0.00 | +0.00 | — | — | $10,210.43 | $10,210.43 | — |
 | 2026-09-18 | +4.86 | $10,210.43 | — | $10,210.43 | -0.00 | +0.00 | — | — | $10,210.43 | $10,210.43 | — |
-| 2026-09-21 | +12.87 | $10,210.43 | — | $10,210.43 | -0.00 | -261.12 | NEO | — | $4.78 | $9,942.70 | NEO×512 |
+| 2026-09-21 | +12.87 | $10,210.43 | — | $10,210.43 | -0.00 | +0.00 | — | — | $10,210.43 | $10,210.43 | — |
+| 2026-09-22 | -0.50 | $10,210.43 | — | $10,210.43 | -0.00 | +0.00 | — | — | $10,210.43 | $10,210.43 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -205,8 +207,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,210.43 | ▲ 09:30 equity $10,210.43 vs yday $10,210.43 (-0.00) | 09:30 open · cash $10,210.43 · no holdings · equity $10,210.43 vs prior close $10,210.43 (-0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,210.43 | ▲ close $10,210.43 vs 09:30 $10,210.43 (session +0.00) | 16:00 close · cash $10,210.43 · no lots left · equity $10,210.43. | — |
 | 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,210.43 | ▲ 09:30 equity $10,210.43 vs yday $10,210.43 (-0.00) | 09:30 open · cash $10,210.43 · no holdings · equity $10,210.43 vs prior close $10,210.43 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-21 09:30 ET | **BUY** | `NEO` | 512 | $19.92 | $6.60 | — | $4.78 | — | combo gate; gate flow_in=True,zero_red=True; list ohlc_hot; 🔵; ⚪; ret5=+15.0; leftover $10210.43 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.78 | ▼ close $9,942.70 vs 09:30 $10,210.43 (session -261.12) | 16:00 close · cash $4.78 · equity $9,942.70 vs 09:30 $10,210.43 (-267.73; session marks -261.12) · 1 name(s) marked open→close (per-name table). NEO×512 09:30 $19.92 → close $19.41 -261.12 | — |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,210.43 | ▲ close $10,210.43 vs 09:30 $10,210.43 (session +0.00) | 16:00 close · cash $10,210.43 · no lots left · equity $10,210.43. | — |
+| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,210.43 | ▲ 09:30 equity $10,210.43 vs yday $10,210.43 (-0.00) | 09:30 open · cash $10,210.43 · no holdings · equity $10,210.43 vs prior close $10,210.43 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,210.43 | ▲ close $10,210.43 vs 09:30 $10,210.43 (session +0.00) | 16:00 close · cash $10,210.43 · no lots left · equity $10,210.43. | — |
 
 ## Not taken
 
@@ -230,9 +233,3 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | `VIR` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-08 | `ADCT` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-09 | `ADCT` | min_hold | dropped but min-hold 2/3 sess — no sell |
-
-## Still open (marked at last close)
-
-| Ticker | Shares | Entry | Why |
-|---|---:|---|---|
-| `NEO` | 512 | 2026-09-21 @ $19.92 | combo gate; gate flow_in=True,zero_red=True; list ohlc_hot; 🔵; ⚪; ret5=+15.0; leftover $10210.43 |

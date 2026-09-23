@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 OR headline🟢 and camera net ≥ 4
 
-Cash book **-21.15%** ($7,885) · signal-only (no cash/fees) was -19.04%. Starts YES **2/27**. Fills 86 · skips 127 · realized $-1908.60.
+Cash book **-15.94%** ($8,406) · signal-only (no cash/fees) was -11.90%. Starts YES **3/28**. Fills 85 · skips 129 · realized $-1908.60.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $292.91.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $215.26.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -231,10 +231,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | `WAY` | 108 | $25.66 | $25.94 | +30.24 | — | +0.00 | +30.24 | -35.64 | — |
 | 2026-09-21 | `QCOM` | 15 | $177.72 | $180.61 | +43.35 | — | +0.00 | +43.35 | -128.40 | — |
 | 2026-09-21 | `SM` | 71 | $36.97 | $35.91 | -75.26 | — | +0.00 | -75.26 | -289.68 | — |
-| 2026-09-21 | `VICR` | 8 | — | $230.25 | +0.00 | $223.90 | -50.80 | -50.80 | +0.00 | -50.80 |
-| 2026-09-21 | `SMTC` | 10 | — | $190.30 | +0.00 | $177.37 | -129.30 | -129.30 | +0.00 | -129.30 |
-| 2026-09-21 | `ALVO` | 341 | — | $5.92 | +0.00 | $5.88 | -13.64 | -13.64 | +0.00 | -13.64 |
-| 2026-09-21 | `SION` | 337 | — | $6.00 | +0.00 | $6.00 | +0.00 | +0.00 | +0.00 | +0.00 |
+| 2026-09-21 | `VICR` | 11 | — | $230.25 | +0.00 | $223.90 | -69.85 | -69.85 | +0.00 | -69.85 |
+| 2026-09-21 | `SMTC` | 14 | — | $190.30 | +0.00 | $177.37 | -181.02 | -181.02 | +0.00 | -181.02 |
+| 2026-09-21 | `GLXY` | 103 | — | $25.95 | +0.00 | $26.07 | +12.36 | +12.36 | +0.00 | +12.36 |
+| 2026-09-22 | `VICR` | 11 | $223.90 | $241.04 | +188.54 | $268.34 | +300.30 | +488.84 | +118.69 | +418.99 |
+| 2026-09-22 | `SMTC` | 14 | $177.37 | $175.00 | -33.18 | $174.33 | -9.38 | -42.56 | -214.20 | -223.58 |
+| 2026-09-22 | `GLXY` | 103 | $26.07 | $25.95 | -12.36 | $27.17 | +125.66 | +113.30 | +0.00 | +125.66 |
 
 ## Each session (cash + holdings state)
 
@@ -266,7 +268,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | +5.30 | $158.79 | ORCL×60 | $8,560.59 | -19.20 | -160.32 | WAY, QCOM, SM | ORCL | $37.79 | $8,391.47 | WAY×108, QCOM×15, SM×71 |
 | 2026-09-17 | +7.38 | $37.79 | WAY×108, QCOM×15, SM×71 | $8,423.59 | +32.12 | -67.20 | — | — | $37.79 | $8,356.39 | WAY×108, QCOM×15, SM×71 |
 | 2026-09-18 | +4.86 | $37.79 | WAY×108, QCOM×15, SM×71 | $8,436.26 | +79.87 | -336.52 | — | — | $37.79 | $8,099.74 | WAY×108, QCOM×15, SM×71 |
-| 2026-09-21 | +12.87 | $37.79 | WAY×108, QCOM×15, SM×71 | $8,098.07 | -1.67 | -193.74 | VICR, SMTC, ALVO, SION | WAY, QCOM, SM | $292.91 | $7,884.89 | VICR×8, SMTC×10, ALVO×341, SION×337 |
+| 2026-09-21 | +12.87 | $37.79 | WAY×108, QCOM×15, SM×71 | $8,098.07 | -1.67 | -238.51 | VICR, SMTC, GLXY | WAY, QCOM, SM | $215.26 | $7,846.55 | VICR×11, SMTC×14, GLXY×103 |
+| 2026-09-22 | -0.50 | $215.26 | VICR×11, SMTC×14, GLXY×103 | $7,989.55 | +143.00 | +416.58 | — | — | $215.26 | $8,406.13 | VICR×11, SMTC×14, GLXY×103 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -407,11 +410,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 09:30 ET | **SELL** | `WAY` | 108 | $25.94 | $2.35 | $-40.31 | $2,836.95 | ▼ -40.31 after sell → book $8,095.71; vs 09:30 mark -2.36 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-21 09:30 ET | **SELL** | `QCOM` | 15 | $180.61 | $2.07 | $-132.50 | $5,544.04 | ▼ -132.50 after sell → book $8,093.65; vs 09:30 mark -2.06 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-21 09:30 ET | **SELL** | `SM` | 71 | $35.91 | $2.24 | $-294.12 | $8,091.41 | ▼ -294.12 after sell → book $8,091.41; vs 09:30 mark -2.24 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-21 09:30 ET | **BUY** | `VICR` | 8 | $230.25 | $2.01 | — | $6,247.40 | — | packet🟢 OR headline🟢 and camera net ≥ 4; gate news_or_headline=True,cam_net_min=4; rank cond; list ohlc_hot; ret5=+12.5; leftover $2022.85 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟢 |
-| 2026-09-21 09:30 ET | **BUY** | `SMTC` | 10 | $190.30 | $2.02 | — | $4,342.38 | — | packet🟢 OR headline🟢 and camera net ≥ 4; gate news_or_headline=True,cam_net_min=4; rank cond; list ohlc_hot; ret5=+10.6; leftover $2022.85 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `ALVO` | 341 | $5.92 | $4.40 | — | $2,319.26 | — | packet🟢 OR headline🟢 and camera net ≥ 4; gate news_or_headline=True,cam_net_min=4; rank cond; list ohlc_hot; ret5=+11.0; leftover $2022.85 | join🔴 sector🟢 gen🟢 news🟢 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `SION` | 337 | $6.00 | $4.35 | — | $292.91 | — | packet🟢 OR headline🟢 and camera net ≥ 4; gate news_or_headline=True,cam_net_min=4; rank cond; list yday_mover; 🔵; ret5=-24.1; leftover $2022.85 | join🟢 sector🟢 gen🟢 news🟢 digest🟡 ab🔴 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $292.91 | ▼ close $7,884.89 vs 09:30 $8,098.07 (session -193.74) | 16:00 close · cash $292.91 · equity $7,884.89 vs 09:30 $8,098.07 (-213.18; session marks -193.74) · 4 name(s) marked open→close (per-name table). VICR×8 09:30 $230.25 → close $223.90 -50.80; SMTC×10 09:30 $190.30 → close $177.37 -129.30; ALVO×341 09:30 $5.92 → close $5.88 -13.64; SION×337 09:30 $6.00 → close $6.00 +0.00 | — |
+| 2026-09-21 09:30 ET | **BUY** | `VICR` | 11 | $230.25 | $2.02 | — | $5,556.64 | — | packet🟢 OR headline🟢 and camera net ≥ 4; gate news_or_headline=True,cam_net_min=4; rank cond; list ohlc_hot; ret5=+12.5; leftover $2697.14 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
+| 2026-09-21 09:30 ET | **BUY** | `SMTC` | 14 | $190.30 | $2.03 | — | $2,890.41 | — | packet🟢 OR headline🟢 and camera net ≥ 4; gate news_or_headline=True,cam_net_min=4; rank cond; list ohlc_hot; ret5=+10.6; leftover $2697.14 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `GLXY` | 103 | $25.95 | $2.30 | — | $215.26 | — | packet🟢 OR headline🟢 and camera net ≥ 4; gate news_or_headline=True,cam_net_min=4; rank cond; list probable,yday_gainer; 🔵; ret5=+1.2; leftover $2697.14 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 ab🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $215.26 | ▼ close $7,846.55 vs 09:30 $8,098.07 (session -238.51) | 16:00 close · cash $215.26 · equity $7,846.55 vs 09:30 $8,098.07 (-251.52; session marks -238.51) · 3 name(s) marked open→close (per-name table). VICR×11 09:30 $230.25 → close $223.90 -69.85; SMTC×14 09:30 $190.30 → close $177.37 -181.02; GLXY×103 09:30 $25.95 → close $26.07 +12.36 | — |
+| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $215.26 | ▲ 09:30 equity $7,989.55 vs yday $7,846.55 (+143.00) | 09:30 open · cash $215.26 (unchanged overnight, no fees) · equity $7,989.55 vs prior close $7,846.55 (+143.00) · 3 name(s) re-marked at the open (per-name table). VICR×11 yday $223.90 → 09:30 $241.04 +188.54; SMTC×14 yday $177.37 → 09:30 $175.00 -33.18; GLXY×103 yday $26.07 → 09:30 $25.95 -12.36 | — |
+| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $215.26 | ▲ close $8,406.13 vs 09:30 $7,989.55 (session +416.58) | 16:00 close · cash $215.26 · equity $8,406.13 vs 09:30 $7,989.55 (+416.58; session marks +416.58) · 3 name(s) marked open→close (per-name table). VICR×11 09:30 $241.04 → close $268.34 +300.30; SMTC×14 09:30 $175.00 → close $174.33 -9.38; GLXY×103 09:30 $25.95 → close $27.17 +125.66 | — |
 
 ## Not taken
 
@@ -533,23 +537,24 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | `QCOM` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-17 | `SM` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-17 | `SMTC` | cash | leftover split 9.45 < 1 share @ 170.85 |
-| 2026-09-17 | `CLS` | cash | leftover split 9.45 < 1 share @ 337.75 |
+| 2026-09-17 | `AVTR` | cash | leftover split 9.45 < 1 share @ 15.81 |
 | 2026-09-17 | `GME` | cash | leftover split 9.45 < 1 share @ 22.12 |
 | 2026-09-17 | `JBHT` | cash | leftover split 9.45 < 1 share @ 238.60 |
 | 2026-09-18 | `WAY` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-18 | `QCOM` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-18 | `SM` | min_hold | dropped but min-hold 2/3 sess — no sell |
-| 2026-09-18 | `TH` | cash | leftover split 7.56 < 1 share @ 20.91 |
-| 2026-09-18 | `GME` | cash | leftover split 7.56 < 1 share @ 22.90 |
-| 2026-09-18 | `RARE` | cash | leftover split 7.56 < 1 share @ 14.79 |
-| 2026-09-18 | `CLS` | cash | leftover split 7.56 < 1 share @ 332.06 |
-| 2026-09-18 | `BHVN` | cash | leftover split 7.56 < 1 share @ 14.07 |
+| 2026-09-18 | `TH` | cash | leftover split 9.45 < 1 share @ 20.91 |
+| 2026-09-18 | `GME` | cash | leftover split 9.45 < 1 share @ 22.90 |
+| 2026-09-18 | `RARE` | cash | leftover split 9.45 < 1 share @ 14.79 |
+| 2026-09-18 | `BHVN` | cash | leftover split 9.45 < 1 share @ 14.07 |
+| 2026-09-22 | `VICR` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-22 | `SMTC` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-22 | `GLXY` | min_hold | dropped but min-hold 1/3 sess — no sell |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `VICR` | 8 | 2026-09-21 @ $230.25 | packet🟢 OR headline🟢 and camera net ≥ 4; gate news_or_headline=True,cam_net_min=4; rank cond; list ohlc_hot; ret5=+12.5; leftover $2022.85 |
-| `SMTC` | 10 | 2026-09-21 @ $190.30 | packet🟢 OR headline🟢 and camera net ≥ 4; gate news_or_headline=True,cam_net_min=4; rank cond; list ohlc_hot; ret5=+10.6; leftover $2022.85 |
-| `ALVO` | 341 | 2026-09-21 @ $5.92 | packet🟢 OR headline🟢 and camera net ≥ 4; gate news_or_headline=True,cam_net_min=4; rank cond; list ohlc_hot; ret5=+11.0; leftover $2022.85 |
-| `SION` | 337 | 2026-09-21 @ $6.00 | packet🟢 OR headline🟢 and camera net ≥ 4; gate news_or_headline=True,cam_net_min=4; rank cond; list yday_mover; 🔵; ret5=-24.1; leftover $2022.85 |
+| `VICR` | 11 | 2026-09-21 @ $230.25 | packet🟢 OR headline🟢 and camera net ≥ 4; gate news_or_headline=True,cam_net_min=4; rank cond; list ohlc_hot; ret5=+12.5; leftover $2697.14 |
+| `SMTC` | 14 | 2026-09-21 @ $190.30 | packet🟢 OR headline🟢 and camera net ≥ 4; gate news_or_headline=True,cam_net_min=4; rank cond; list ohlc_hot; ret5=+10.6; leftover $2697.14 |
+| `GLXY` | 103 | 2026-09-21 @ $25.95 | packet🟢 OR headline🟢 and camera net ≥ 4; gate news_or_headline=True,cam_net_min=4; rank cond; list probable,yday_gainer; 🔵; ret5=+1.2; leftover $2697.14 |

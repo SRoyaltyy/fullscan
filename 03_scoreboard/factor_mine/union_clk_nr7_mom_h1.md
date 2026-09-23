@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `hot_score` · size `leftover` · sell `list` · S-boost `none` · Clock-B #10 NR7 + moderate momentum
 
-Cash book **+11.56%** ($11,156) · signal-only (no cash/fees) was +24.10%. Starts YES **25/27**. Fills 43 · skips 11 · realized $+1641.09.
+Cash book **+19.98%** ($11,998) · signal-only (no cash/fees) was +32.06%. Starts YES **28/28**. Fills 52 · skips 12 · realized $+1533.35.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $24.48.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $14.70.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -116,13 +116,21 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | `HAFN` | 1147 | $9.22 | $8.81 | -470.27 | — | +0.00 | -470.27 | -149.11 | — |
 | 2026-09-09 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-10 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-09-11 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-09-14 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-09-15 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-09-16 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-09-17 | `BNC` | 2001 | — | $5.03 | +0.00 | $5.42 | +780.39 | +780.39 | +0.00 | +780.39 |
-| 2026-09-18 | `BNC` | 2001 | $5.42 | $5.83 | +820.41 | — | +0.00 | +820.41 | +1600.80 | — |
-| 2026-09-21 | `ASST` | 367 | — | $31.64 | +0.00 | $30.33 | -480.77 | -480.77 | +0.00 | -480.77 |
+| 2026-09-11 | `VLO` | 26 | — | $388.00 | +0.00 | $390.42 | +62.92 | +62.92 | +0.00 | +62.92 |
+| 2026-09-14 | `VLO` | 26 | $390.42 | $395.26 | +125.84 | $382.95 | -320.06 | -194.22 | +188.76 | -131.30 |
+| 2026-09-15 | `VLO` | 26 | $382.95 | $383.51 | +14.56 | $397.04 | +351.78 | +366.34 | -116.74 | +235.04 |
+| 2026-09-16 | `VLO` | 26 | $397.04 | $391.68 | -139.36 | $403.28 | +301.60 | +162.24 | +95.68 | +397.28 |
+| 2026-09-17 | `VLO` | 26 | $403.28 | $398.45 | -125.58 | — | +0.00 | -125.58 | +271.70 | — |
+| 2026-09-17 | `BNC` | 2054 | — | $5.03 | +0.00 | $5.42 | +801.06 | +801.06 | +0.00 | +801.06 |
+| 2026-09-18 | `BNC` | 2054 | $5.42 | $5.83 | +842.14 | — | +0.00 | +842.14 | +1643.20 | — |
+| 2026-09-21 | `ASST` | 125 | — | $31.64 | +0.00 | $30.33 | -163.75 | -163.75 | +0.00 | -163.75 |
+| 2026-09-21 | `VLO` | 9 | — | $409.59 | +0.00 | $393.27 | -146.88 | -146.88 | +0.00 | -146.88 |
+| 2026-09-21 | `A` | 25 | — | $157.87 | +0.00 | $161.94 | +101.75 | +101.75 | +0.00 | +101.75 |
+| 2026-09-22 | `ASST` | 125 | $30.33 | $29.15 | -147.50 | — | +0.00 | -147.50 | -311.25 | — |
+| 2026-09-22 | `VLO` | 9 | $393.27 | $384.90 | -75.33 | — | +0.00 | -75.33 | -222.21 | — |
+| 2026-09-22 | `A` | 25 | $161.94 | $163.08 | +28.50 | — | +0.00 | +28.50 | +130.25 | — |
+| 2026-09-22 | `BLSH` | 145 | — | $39.63 | +0.00 | $40.70 | +155.15 | +155.15 | +0.00 | +155.15 |
+| 2026-09-22 | `MRAM` | 344 | — | $16.76 | +0.00 | $17.68 | +316.48 | +316.48 | +0.00 | +316.48 |
 
 ## Each session (cash + holdings state)
 
@@ -148,13 +156,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | -11.47 | $2.34 | HAFN×1147 | $10,107.41 | -470.27 | +0.00 | — | HAFN | $10,092.35 | $10,092.35 | — |
 | 2026-09-09 | -13.95 | $10,092.35 | — | $10,092.35 | -0.00 | +0.00 | — | — | $10,092.35 | $10,092.35 | — |
 | 2026-09-10 | -13.28 | $10,092.35 | — | $10,092.35 | -0.00 | +0.00 | — | — | $10,092.35 | $10,092.35 | — |
-| 2026-09-11 | +0.50 | $10,092.35 | — | $10,092.35 | -0.00 | +0.00 | — | — | $10,092.35 | $10,092.35 | — |
-| 2026-09-14 | -11.00 | $10,092.35 | — | $10,092.35 | -0.00 | +0.00 | — | — | $10,092.35 | $10,092.35 | — |
-| 2026-09-15 | -3.84 | $10,092.35 | — | $10,092.35 | -0.00 | +0.00 | — | — | $10,092.35 | $10,092.35 | — |
-| 2026-09-16 | +5.30 | $10,092.35 | — | $10,092.35 | -0.00 | +0.00 | — | — | $10,092.35 | $10,092.35 | — |
-| 2026-09-17 | +7.38 | $10,092.35 | — | $10,092.35 | -0.00 | +780.39 | BNC | — | $1.50 | $10,846.92 | BNC×2001 |
-| 2026-09-18 | +4.86 | $1.50 | BNC×2001 | $11,667.33 | +820.41 | +0.00 | — | BNC | $11,641.10 | $11,641.10 | — |
-| 2026-09-21 | +12.87 | $11,641.10 | — | $11,641.10 | -0.00 | -480.77 | ASST | — | $24.48 | $11,155.59 | ASST×367 |
+| 2026-09-11 | +0.50 | $10,092.35 | — | $10,092.35 | -0.00 | +62.92 | VLO | — | $2.28 | $10,153.20 | VLO×26 |
+| 2026-09-14 | -11.00 | $2.28 | VLO×26 | $10,279.04 | +125.84 | -320.06 | — | — | $2.28 | $9,958.98 | VLO×26 |
+| 2026-09-15 | -3.84 | $2.28 | VLO×26 | $9,973.54 | +14.56 | +351.78 | — | — | $2.28 | $10,325.32 | VLO×26 |
+| 2026-09-16 | +5.30 | $2.28 | VLO×26 | $10,185.96 | -139.36 | +301.60 | — | — | $2.28 | $10,487.56 | VLO×26 |
+| 2026-09-17 | +7.38 | $2.28 | VLO×26 | $10,361.98 | -125.58 | +801.06 | BNC | VLO | $1.70 | $11,134.38 | BNC×2054 |
+| 2026-09-18 | +4.86 | $1.70 | BNC×2054 | $11,976.52 | +842.14 | +0.00 | — | BNC | $11,949.59 | $11,949.59 | — |
+| 2026-09-21 | +12.87 | $11,949.59 | — | $11,949.59 | -0.00 | -208.88 | ASST, VLO, A | — | $355.08 | $11,734.26 | ASST×125, VLO×9, A×25 |
+| 2026-09-22 | -0.50 | $355.08 | ASST×125, VLO×9, A×25 | $11,539.93 | -194.33 | +471.63 | BLSH, MRAM | ASST, VLO, A | $14.70 | $11,998.12 | BLSH×145, MRAM×344 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -241,22 +250,33 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,092.35 | ▲ 09:30 equity $10,092.35 vs yday $10,092.35 (-0.00) | 09:30 open · cash $10,092.35 · no holdings · equity $10,092.35 vs prior close $10,092.35 (-0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,092.35 | ▲ close $10,092.35 vs 09:30 $10,092.35 (session +0.00) | 16:00 close · cash $10,092.35 · no lots left · equity $10,092.35. | — |
 | 2026-09-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,092.35 | ▲ 09:30 equity $10,092.35 vs yday $10,092.35 (-0.00) | 09:30 open · cash $10,092.35 · no holdings · equity $10,092.35 vs prior close $10,092.35 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,092.35 | ▲ close $10,092.35 vs 09:30 $10,092.35 (session +0.00) | 16:00 close · cash $10,092.35 · no lots left · equity $10,092.35. | — |
-| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,092.35 | ▲ 09:30 equity $10,092.35 vs yday $10,092.35 (-0.00) | 09:30 open · cash $10,092.35 · no holdings · equity $10,092.35 vs prior close $10,092.35 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,092.35 | ▲ close $10,092.35 vs 09:30 $10,092.35 (session +0.00) | 16:00 close · cash $10,092.35 · no lots left · equity $10,092.35. | — |
-| 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,092.35 | ▲ 09:30 equity $10,092.35 vs yday $10,092.35 (-0.00) | 09:30 open · cash $10,092.35 · no holdings · equity $10,092.35 vs prior close $10,092.35 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,092.35 | ▲ close $10,092.35 vs 09:30 $10,092.35 (session +0.00) | 16:00 close · cash $10,092.35 · no lots left · equity $10,092.35. | — |
-| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,092.35 | ▲ 09:30 equity $10,092.35 vs yday $10,092.35 (-0.00) | 09:30 open · cash $10,092.35 · no holdings · equity $10,092.35 vs prior close $10,092.35 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,092.35 | ▲ close $10,092.35 vs 09:30 $10,092.35 (session +0.00) | 16:00 close · cash $10,092.35 · no lots left · equity $10,092.35. | — |
-| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,092.35 | ▲ 09:30 equity $10,092.35 vs yday $10,092.35 (-0.00) | 09:30 open · cash $10,092.35 · no holdings · equity $10,092.35 vs prior close $10,092.35 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-17 09:30 ET | **BUY** | `BNC` | 2001 | $5.03 | $25.81 | — | $1.50 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list ohlc_hot; ret5=+7.4; leftover $10092.35 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
-| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.50 | ▲ close $10,846.92 vs 09:30 $10,092.35 (session +780.39) | 16:00 close · cash $1.50 · equity $10,846.92 vs 09:30 $10,092.35 (+754.57; session marks +780.39) · 1 name(s) marked open→close (per-name table). BNC×2001 09:30 $5.03 → close $5.42 +780.39 | — |
-| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.50 | ▲ 09:30 equity $11,667.33 vs yday $10,846.92 (+820.41) | 09:30 open · cash $1.50 (unchanged overnight, no fees) · equity $11,667.33 vs prior close $10,846.92 (+820.41) · 1 name(s) re-marked at the open (per-name table). BNC×2001 yday $5.42 → 09:30 $5.83 +820.41 | — |
-| 2026-09-18 09:30 ET | **SELL** | `BNC` | 2001 | $5.83 | $26.24 | $+1548.75 | $11,641.10 | ▲ +1,548.75 after sell → book $11,641.10; vs 09:30 mark -26.23 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
-| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,641.10 | ▲ close $11,641.10 vs 09:30 $11,667.33 (session +0.00) | 16:00 close · cash $11,641.10 · no lots left · equity $11,641.10. | — |
-| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,641.10 | ▲ 09:30 equity $11,641.10 vs yday $11,641.10 (-0.00) | 09:30 open · cash $11,641.10 · no holdings · equity $11,641.10 vs prior close $11,641.10 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-21 09:30 ET | **BUY** | `ASST` | 367 | $31.64 | $4.73 | — | $24.48 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list ohlc_hot; 🔵; ret5=+8.9; leftover $11641.10 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $24.48 | ▼ close $11,155.59 vs 09:30 $11,641.10 (session -480.77) | 16:00 close · cash $24.48 · equity $11,155.59 vs 09:30 $11,641.10 (-485.51; session marks -480.77) · 1 name(s) marked open→close (per-name table). ASST×367 09:30 $31.64 → close $30.33 -480.77 | — |
+| 2026-09-11 09:30 ET | **BUY** | `VLO` | 26 | $388.00 | $2.07 | — | $2.28 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list ohlc_hot; ret5=+6.7; leftover $10092.35 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.28 | ▲ close $10,153.20 vs 09:30 $10,092.35 (session +62.92) | 16:00 close · cash $2.28 · equity $10,153.20 vs 09:30 $10,092.35 (+60.85; session marks +62.92) · 1 name(s) marked open→close (per-name table). VLO×26 09:30 $388.00 → close $390.42 +62.92 | — |
+| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.28 | ▲ 09:30 equity $10,279.04 vs yday $10,153.20 (+125.84) | 09:30 open · cash $2.28 (unchanged overnight, no fees) · equity $10,279.04 vs prior close $10,153.20 (+125.84) · 1 name(s) re-marked at the open (per-name table). VLO×26 yday $390.42 → 09:30 $395.26 +125.84 | — |
+| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.28 | ▼ close $9,958.98 vs 09:30 $10,279.04 (session -320.06) | 16:00 close · cash $2.28 · equity $9,958.98 vs 09:30 $10,279.04 (-320.06; session marks -320.06) · 1 name(s) marked open→close (per-name table). VLO×26 09:30 $395.26 → close $382.95 -320.06 | — |
+| 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.28 | ▲ 09:30 equity $9,973.54 vs yday $9,958.98 (+14.56) | 09:30 open · cash $2.28 (unchanged overnight, no fees) · equity $9,973.54 vs prior close $9,958.98 (+14.56) · 1 name(s) re-marked at the open (per-name table). VLO×26 yday $382.95 → 09:30 $383.51 +14.56 | — |
+| 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.28 | ▲ close $10,325.32 vs 09:30 $9,973.54 (session +351.78) | 16:00 close · cash $2.28 · equity $10,325.32 vs 09:30 $9,973.54 (+351.78; session marks +351.78) · 1 name(s) marked open→close (per-name table). VLO×26 09:30 $383.51 → close $397.04 +351.78 | — |
+| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.28 | ▼ 09:30 equity $10,185.96 vs yday $10,325.32 (-139.36) | 09:30 open · cash $2.28 (unchanged overnight, no fees) · equity $10,185.96 vs prior close $10,325.32 (-139.36) · 1 name(s) re-marked at the open (per-name table). VLO×26 yday $397.04 → 09:30 $391.68 -139.36 | — |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $2.28 | ▲ close $10,487.56 vs 09:30 $10,185.96 (session +301.60) | 16:00 close · cash $2.28 · equity $10,487.56 vs 09:30 $10,185.96 (+301.60; session marks +301.60) · 1 name(s) marked open→close (per-name table). VLO×26 09:30 $391.68 → close $403.28 +301.60 | — |
+| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $2.28 | ▼ 09:30 equity $10,361.98 vs yday $10,487.56 (-125.58) | 09:30 open · cash $2.28 (unchanged overnight, no fees) · equity $10,361.98 vs prior close $10,487.56 (-125.58) · 1 name(s) re-marked at the open (per-name table). VLO×26 yday $403.28 → 09:30 $398.45 -125.58 | — |
+| 2026-09-17 09:30 ET | **SELL** | `VLO` | 26 | $398.45 | $2.16 | $+267.47 | $10,359.82 | ▲ +267.47 after sell → book $10,359.82; vs 09:30 mark -2.16 | dropped from list after 4 sess (min 1) | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-17 09:30 ET | **BUY** | `BNC` | 2054 | $5.03 | $26.50 | — | $1.70 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list ohlc_hot; ret5=+7.4; leftover $10359.82 | join🟡 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $1.70 | ▲ close $11,134.38 vs 09:30 $10,361.98 (session +801.06) | 16:00 close · cash $1.70 · equity $11,134.38 vs 09:30 $10,361.98 (+772.40; session marks +801.06) · 1 name(s) marked open→close (per-name table). BNC×2054 09:30 $5.03 → close $5.42 +801.06 | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.70 | ▲ 09:30 equity $11,976.52 vs yday $11,134.38 (+842.14) | 09:30 open · cash $1.70 (unchanged overnight, no fees) · equity $11,976.52 vs prior close $11,134.38 (+842.14) · 1 name(s) re-marked at the open (per-name table). BNC×2054 yday $5.42 → 09:30 $5.83 +842.14 | — |
+| 2026-09-18 09:30 ET | **SELL** | `BNC` | 2054 | $5.83 | $26.93 | $+1589.77 | $11,949.59 | ▲ +1,589.77 after sell → book $11,949.59; vs 09:30 mark -26.93 | dropped from list after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,949.59 | ▲ close $11,949.59 vs 09:30 $11,976.52 (session +0.00) | 16:00 close · cash $11,949.59 · no lots left · equity $11,949.59. | — |
+| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,949.59 | ▲ 09:30 equity $11,949.59 vs yday $11,949.59 (-0.00) | 09:30 open · cash $11,949.59 · no holdings · equity $11,949.59 vs prior close $11,949.59 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-21 09:30 ET | **BUY** | `ASST` | 125 | $31.64 | $2.37 | — | $7,992.22 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list ohlc_hot; 🔵; ret5=+8.9; leftover $3983.20 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `VLO` | 9 | $409.59 | $2.02 | — | $4,303.90 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list ohlc_hot; ret5=+6.7; leftover $3983.20 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `A` | 25 | $157.87 | $2.06 | — | $355.08 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list flatten; ret5=+6.5; leftover $3983.20 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $355.08 | ▼ close $11,734.26 vs 09:30 $11,949.59 (session -208.88) | 16:00 close · cash $355.08 · equity $11,734.26 vs 09:30 $11,949.59 (-215.33; session marks -208.88) · 3 name(s) marked open→close (per-name table). ASST×125 09:30 $31.64 → close $30.33 -163.75; VLO×9 09:30 $409.59 → close $393.27 -146.88; A×25 09:30 $157.87 → close $161.94 +101.75 | — |
+| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $355.08 | ▼ 09:30 equity $11,539.93 vs yday $11,734.26 (-194.33) | 09:30 open · cash $355.08 (unchanged overnight, no fees) · equity $11,539.93 vs prior close $11,734.26 (-194.33) · 3 name(s) re-marked at the open (per-name table). ASST×125 yday $30.33 → 09:30 $29.15 -147.50; VLO×9 yday $393.27 → 09:30 $384.90 -75.33; A×25 yday $161.94 → 09:30 $163.08 +28.50 | — |
+| 2026-09-22 09:30 ET | **SELL** | `ASST` | 125 | $29.15 | $2.41 | $-316.03 | $3,996.42 | ▼ -316.03 after sell → book $11,537.52; vs 09:30 mark -2.41 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-22 09:30 ET | **SELL** | `VLO` | 9 | $384.90 | $2.05 | $-226.28 | $7,458.46 | ▼ -226.28 after sell → book $11,535.46; vs 09:30 mark -2.06 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-22 09:30 ET | **SELL** | `A` | 25 | $163.08 | $2.11 | $+126.08 | $11,533.35 | ▲ +126.08 after sell → book $11,533.35; vs 09:30 mark -2.11 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-22 09:30 ET | **BUY** | `BLSH` | 145 | $39.63 | $2.42 | — | $5,784.58 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list ohlc_hot; ret5=+6.7; leftover $5766.68 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-22 09:30 ET | **BUY** | `MRAM` | 344 | $16.76 | $4.44 | — | $14.70 | — | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list yday_gainer; ret5=+2.3; leftover $5766.68 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $14.70 | ▲ close $11,998.12 vs 09:30 $11,539.93 (session +471.63) | 16:00 close · cash $14.70 · equity $11,998.12 vs 09:30 $11,539.93 (+458.19; session marks +471.63) · 2 name(s) marked open→close (per-name table). BLSH×145 09:30 $39.63 → close $40.70 +155.15; MRAM×344 09:30 $16.76 → close $17.68 +316.48 | — |
 
 ## Not taken
 
@@ -272,10 +292,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | `GGB` | hard_red | hard-red S=-11.47 sit; no new buys |
 | 2026-09-08 | `SUZ` | hard_red | hard-red S=-11.47 sit; no new buys |
 | 2026-09-09 | `ASO` | hard_red | hard-red S=-13.95 sit; no new buys |
+| 2026-09-10 | `VLO` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-15 | `ATRC` | hard_red | hard-red S=-3.84 sit; no new buys |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `ASST` | 367 | 2026-09-21 @ $31.64 | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list ohlc_hot; 🔵; ret5=+8.9; leftover $11641.10 |
+| `BLSH` | 145 | 2026-09-22 @ $39.63 | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list ohlc_hot; ret5=+6.7; leftover $5766.68 |
+| `MRAM` | 344 | 2026-09-22 @ $16.76 | Clock-B #10 NR7 + moderate momentum; gate clk_nr7_mom=True; rank hot_score; list yday_gainer; ret5=+2.3; leftover $5766.68 |

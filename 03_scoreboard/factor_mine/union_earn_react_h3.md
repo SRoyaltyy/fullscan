@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ earn_react, no 🚨
 
-Cash book **+21.00%** ($12,100) · signal-only (no cash/fees) was -13.13%. Starts YES **21/27**. Fills 114 · skips 184 · realized $+2100.34.
+Cash book **+18.99%** ($11,899) · signal-only (no cash/fees) was -14.53%. Starts YES **13/28**. Fills 118 · skips 184 · realized $+2100.34.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $12,100.32.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $148.95.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -292,6 +292,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | `TCOM` | 295 | $40.43 | $40.79 | +106.20 | $40.36 | -126.85 | -20.65 | -41.30 | -168.15 |
 | 2026-09-18 | `TCOM` | 295 | $40.36 | $40.61 | +73.75 | $40.68 | +20.65 | +94.40 | -94.40 | -73.75 |
 | 2026-09-21 | `TCOM` | 295 | $40.68 | $41.00 | +94.40 | — | +0.00 | +94.40 | +20.65 | — |
+| 2026-09-22 | `ABVX` | 29 | — | $102.74 | +0.00 | $98.29 | -129.05 | -129.05 | +0.00 | -129.05 |
+| 2026-09-22 | `ANAB` | 54 | — | $55.07 | +0.00 | $53.92 | -62.10 | -62.10 | +0.00 | -62.10 |
+| 2026-09-22 | `MLKN` | 146 | — | $20.66 | +0.00 | $20.29 | -53.29 | -53.29 | +0.00 | -53.29 |
+| 2026-09-22 | `THO` | 41 | — | $72.53 | +0.00 | $73.80 | +52.07 | +52.07 | +0.00 | +52.07 |
 
 ## Each session (cash + holdings state)
 
@@ -324,6 +328,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | +7.38 | $9.27 | TCOM×295 | $12,042.32 | +106.20 | -126.85 | — | — | $9.27 | $11,915.47 | TCOM×295 |
 | 2026-09-18 | +4.86 | $9.27 | TCOM×295 | $11,989.22 | +73.75 | +20.65 | — | — | $9.27 | $12,009.87 | TCOM×295 |
 | 2026-09-21 | +12.87 | $9.27 | TCOM×295 | $12,104.27 | +94.40 | +0.00 | — | TCOM | $12,100.32 | $12,100.32 | — |
+| 2026-09-22 | -0.50 | $12,100.32 | — | $12,100.32 | +0.00 | -192.37 | ABVX, ANAB, MLKN, THO | — | $148.95 | $11,899.18 | ABVX×29, ANAB×54, MLKN×146, THO×41 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -497,6 +502,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9.27 | ▲ 09:30 equity $12,104.27 vs yday $12,009.87 (+94.40) | 09:30 open · cash $9.27 (unchanged overnight, no fees) · equity $12,104.27 vs prior close $12,009.87 (+94.40) · 1 name(s) re-marked at the open (per-name table). TCOM×295 yday $40.68 → 09:30 $41.00 +94.40 | — |
 | 2026-09-21 09:30 ET | **SELL** | `TCOM` | 295 | $41.00 | $3.95 | $+12.89 | $12,100.32 | ▲ +12.89 after sell → book $12,100.32; vs 09:30 mark -3.95 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $12,100.32 | ▲ close $12,100.32 vs 09:30 $12,104.27 (session +0.00) | 16:00 close · cash $12,100.32 · no lots left · equity $12,100.32. | — |
+| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $12,100.32 | ▲ 09:30 equity $12,100.32 vs yday $12,100.32 (+0.00) | 09:30 open · cash $12,100.32 · no holdings · equity $12,100.32 vs prior close $12,100.32 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-22 09:30 ET | **BUY** | `ABVX` | 29 | $102.74 | $2.08 | — | $9,118.79 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-8.9; leftover $3025.08 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 judge🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-09-22 09:30 ET | **BUY** | `ANAB` | 54 | $55.07 | $2.15 | — | $6,142.85 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-0.8; leftover $3025.08 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 judge🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-22 09:30 ET | **BUY** | `MLKN` | 146 | $20.66 | $2.43 | — | $3,124.80 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-1.7; leftover $3025.08 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-22 09:30 ET | **BUY** | `THO` | 41 | $72.53 | $2.11 | — | $148.95 | — | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-2.5; leftover $3025.08 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $148.95 | ▼ close $11,899.18 vs 09:30 $12,100.32 (session -192.37) | 16:00 close · cash $148.95 · equity $11,899.18 vs 09:30 $12,100.32 (-201.14; session marks -192.37) · 4 name(s) marked open→close (per-name table). ABVX×29 09:30 $102.74 → close $98.29 -129.05; ANAB×54 09:30 $55.07 → close $53.92 -62.10; MLKN×146 09:30 $20.66 → close $20.29 -53.29; THO×41 09:30 $72.53 → close $73.80 +52.07 | — |
 
 ## Not taken
 
@@ -686,3 +697,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | `ALMU` | cash | leftover split 4.64 < 1 share @ 11.21 |
 | 2026-09-17 | `LEN` | cash | leftover split 4.64 < 1 share @ 81.00 |
 | 2026-09-18 | `TCOM` | min_hold | dropped but min-hold 2/3 sess — no sell |
+
+## Still open (marked at last close)
+
+| Ticker | Shares | Entry | Why |
+|---|---:|---|---|
+| `ABVX` | 29 | 2026-09-22 @ $102.74 | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-8.9; leftover $3025.08 |
+| `ANAB` | 54 | 2026-09-22 @ $55.07 | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-0.8; leftover $3025.08 |
+| `MLKN` | 146 | 2026-09-22 @ $20.66 | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-1.7; leftover $3025.08 |
+| `THO` | 41 | 2026-09-22 @ $72.53 | union ∩ earn_react, no 🚨; gate earn_react=True; list earn_react; ret5=-2.5; leftover $3025.08 |

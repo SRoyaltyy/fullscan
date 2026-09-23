@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **+3.06%** ($10,306) · signal-only (no cash/fees) was +18.13%. Starts YES **24/27**. Fills 9 · skips 7 · realized $+328.64.
+Cash book **+3.41%** ($10,341) · signal-only (no cash/fees) was +18.52%. Starts YES **27/28**. Fills 9 · skips 8 · realized $+328.64.
 
 ## How this sleeve decides (like you are 10)
 
@@ -102,6 +102,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | `ZSQR` | 2021 | $2.68 | $2.68 | +0.00 | — | +0.00 | +0.00 | +687.14 | — |
 | 2026-09-21 | `EYPT` | 1280 | $3.85 | $3.87 | +25.60 | — | +0.00 | +25.60 | +268.80 | — |
 | 2026-09-21 | `SION` | 1717 | — | $6.00 | +0.00 | $6.00 | +0.00 | +0.00 | +0.00 | +0.00 |
+| 2026-09-22 | `SION` | 1717 | $6.00 | $5.99 | -17.17 | $6.02 | +51.51 | +34.34 | -17.17 | +34.34 |
 
 ## Each session (cash + holdings state)
 
@@ -134,6 +135,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | +7.38 | $1.97 | ZSQR×2021, EYPT×1280 | $9,320.92 | +274.86 | +921.59 | — | — | $1.97 | $10,242.51 | ZSQR×2021, EYPT×1280 |
 | 2026-09-18 | +4.86 | $1.97 | ZSQR×2021, EYPT×1280 | $10,110.47 | -132.04 | +235.78 | — | — | $1.97 | $10,346.25 | ZSQR×2021, EYPT×1280 |
 | 2026-09-21 | +12.87 | $1.97 | ZSQR×2021, EYPT×1280 | $10,371.85 | +25.60 | +0.00 | SION | ZSQR, EYPT | $4.49 | $10,306.49 | SION×1717 |
+| 2026-09-22 | -0.50 | $4.49 | SION×1717 | $10,289.32 | -17.17 | +51.51 | — | — | $4.49 | $10,340.83 | SION×1717 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -200,8 +202,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $1.97 | ▲ 09:30 equity $10,371.85 vs yday $10,346.25 (+25.60) | 09:30 open · cash $1.97 (unchanged overnight, no fees) · equity $10,371.85 vs prior close $10,346.25 (+25.60) · 2 name(s) re-marked at the open (per-name table). ZSQR×2021 yday $2.68 → 09:30 $2.68 +0.00; EYPT×1280 yday $3.85 → 09:30 $3.87 +25.60 | — |
 | 2026-09-21 09:30 ET | **SELL** | `ZSQR` | 2021 | $2.68 | $26.45 | $+634.62 | $5,391.80 | ▲ +634.62 after sell → book $10,345.40; vs 09:30 mark -26.45 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-21 09:30 ET | **SELL** | `EYPT` | 1280 | $3.87 | $16.76 | $+235.52 | $10,328.64 | ▲ +235.52 after sell → book $10,328.64; vs 09:30 mark -16.76 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-21 09:30 ET | **BUY** | `SION` | 1717 | $6.00 | $22.15 | — | $4.49 | — | combo gate; gate rsi_os=True,macd_up=True; list yday_mover; 🔵; ret5=-24.1; leftover $10328.64 | join🟢 sector🟢 gen🟢 news🟢 digest🟡 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `SION` | 1717 | $6.00 | $22.15 | — | $4.49 | — | combo gate; gate rsi_os=True,macd_up=True; list yday_mover; ret5=-24.1; leftover $10328.64 | join🟢 sector🟢 gen🟢 news🟢 digest🟡 ab🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.49 | ▲ close $10,306.49 vs 09:30 $10,371.85 (session +0.00) | 16:00 close · cash $4.49 · equity $10,306.49 vs 09:30 $10,371.85 (-65.36; session marks +0.00) · 1 name(s) marked open→close (per-name table). SION×1717 09:30 $6.00 → close $6.00 +0.00 | — |
+| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4.49 | ▼ 09:30 equity $10,289.32 vs yday $10,306.49 (-17.17) | 09:30 open · cash $4.49 (unchanged overnight, no fees) · equity $10,289.32 vs prior close $10,306.49 (-17.17) · 1 name(s) re-marked at the open (per-name table). SION×1717 yday $6.00 → 09:30 $5.99 -17.17 | — |
+| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.49 | ▲ close $10,340.83 vs 09:30 $10,289.32 (session +51.51) | 16:00 close · cash $4.49 · equity $10,340.83 vs 09:30 $10,289.32 (+51.51; session marks +51.51) · 1 name(s) marked open→close (per-name table). SION×1717 09:30 $5.99 → close $6.02 +51.51 | — |
 
 ## Not taken
 
@@ -214,9 +218,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | `EYPT` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-18 | `ZSQR` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-18 | `EYPT` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-22 | `SION` | min_hold | dropped but min-hold 1/3 sess — no sell |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `SION` | 1717 | 2026-09-21 @ $6.00 | combo gate; gate rsi_os=True,macd_up=True; list yday_mover; 🔵; ret5=-24.1; leftover $10328.64 |
+| `SION` | 1717 | 2026-09-21 @ $6.00 | combo gate; gate rsi_os=True,macd_up=True; list yday_mover; ret5=-24.1; leftover $10328.64 |

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ e_fresh, no 🚨
 
-Cash book **+14.05%** ($11,405) · signal-only (no cash/fees) was +7.59%. Starts YES **25/27**. Fills 166 · skips 47 · realized $+1404.72.
+Cash book **+12.16%** ($11,216) · signal-only (no cash/fees) was +5.86%. Starts YES **24/28**. Fills 170 · skips 47 · realized $+1404.72.
 
 ## How this sleeve decides (like you are 10)
 
@@ -55,7 +55,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $11,404.71.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $134.38.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -242,6 +242,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | `ALMU` | 508 | $11.54 | $11.64 | +48.26 | — | +0.00 | +48.26 | +218.44 | — |
 | 2026-09-18 | `LEN` | 70 | $79.70 | $78.25 | -101.50 | — | +0.00 | -101.50 | -192.50 | — |
 | 2026-09-21 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-22 | `ABVX` | 27 | — | $102.74 | +0.00 | $98.29 | -120.15 | -120.15 | +0.00 | -120.15 |
+| 2026-09-22 | `ANAB` | 51 | — | $55.07 | +0.00 | $53.92 | -58.65 | -58.65 | +0.00 | -58.65 |
+| 2026-09-22 | `MLKN` | 138 | — | $20.66 | +0.00 | $20.29 | -50.37 | -50.37 | +0.00 | -50.37 |
+| 2026-09-22 | `THO` | 39 | — | $72.53 | +0.00 | $73.80 | +49.53 | +49.53 | +0.00 | +49.53 |
 
 ## Each session (cash + holdings state)
 
@@ -274,6 +278,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | +7.38 | $25.31 | FPS×163, TCOM×132 | $11,401.47 | +360.48 | +79.18 | ALMU, LEN | FPS, TCOM | $23.03 | $11,466.89 | ALMU×508, LEN×70 |
 | 2026-09-18 | +4.86 | $23.03 | ALMU×508, LEN×70 | $11,413.65 | -53.24 | +0.00 | — | ALMU, LEN | $11,404.71 | $11,404.71 | — |
 | 2026-09-21 | +12.87 | $11,404.71 | — | $11,404.71 | +0.00 | +0.00 | — | — | $11,404.71 | $11,404.71 | — |
+| 2026-09-22 | -0.50 | $11,404.71 | — | $11,404.71 | +0.00 | -179.64 | ABVX, ANAB, MLKN, THO | — | $134.38 | $11,216.35 | ABVX×27, ANAB×51, MLKN×138, THO×39 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -499,6 +504,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,404.71 | ▲ close $11,404.71 vs 09:30 $11,413.65 (session +0.00) | 16:00 close · cash $11,404.71 · no lots left · equity $11,404.71. | — |
 | 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,404.71 | ▲ 09:30 equity $11,404.71 vs yday $11,404.71 (+0.00) | 09:30 open · cash $11,404.71 · no holdings · equity $11,404.71 vs prior close $11,404.71 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,404.71 | ▲ close $11,404.71 vs 09:30 $11,404.71 (session +0.00) | 16:00 close · cash $11,404.71 · no lots left · equity $11,404.71. | — |
+| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,404.71 | ▲ 09:30 equity $11,404.71 vs yday $11,404.71 (+0.00) | 09:30 open · cash $11,404.71 · no holdings · equity $11,404.71 vs prior close $11,404.71 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-22 09:30 ET | **BUY** | `ABVX` | 27 | $102.74 | $2.07 | — | $8,628.66 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-8.9; leftover $2851.18 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 judge🔴 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-09-22 09:30 ET | **BUY** | `ANAB` | 51 | $55.07 | $2.14 | — | $5,817.95 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-0.8; leftover $2851.18 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 judge🔴 ab🔴 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-22 09:30 ET | **BUY** | `MLKN` | 138 | $20.66 | $2.40 | — | $2,965.16 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-1.7; leftover $2851.18 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-22 09:30 ET | **BUY** | `THO` | 39 | $72.53 | $2.11 | — | $134.38 | — | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-2.5; leftover $2851.18 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🟡 heat🔴 vol🟢 buy🟡 |
+| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $134.38 | ▼ close $11,216.35 vs 09:30 $11,404.71 (session -179.64) | 16:00 close · cash $134.38 · equity $11,216.35 vs 09:30 $11,404.71 (-188.36; session marks -179.64) · 4 name(s) marked open→close (per-name table). ABVX×27 09:30 $102.74 → close $98.29 -120.15; ANAB×51 09:30 $55.07 → close $53.92 -58.65; MLKN×138 09:30 $20.66 → close $20.29 -50.37; THO×39 09:30 $72.53 → close $73.80 +49.53 | — |
 
 ## Not taken
 
@@ -551,3 +562,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `HITI` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `PLAY` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `UROY` | hard_red | hard-red S=-3.84 sit; no new buys |
+
+## Still open (marked at last close)
+
+| Ticker | Shares | Entry | Why |
+|---|---:|---|---|
+| `ABVX` | 27 | 2026-09-22 @ $102.74 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-8.9; leftover $2851.18 |
+| `ANAB` | 51 | 2026-09-22 @ $55.07 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-0.8; leftover $2851.18 |
+| `MLKN` | 138 | 2026-09-22 @ $20.66 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-1.7; leftover $2851.18 |
+| `THO` | 39 | 2026-09-22 @ $72.53 | union ∩ e_fresh, no 🚨; gate days_since_E_max=1,flag_E_min=0; list earn_react; ret5=-2.5; leftover $2851.18 |

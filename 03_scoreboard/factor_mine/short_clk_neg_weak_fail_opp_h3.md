@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `opp_rvol` · size `leftover` · sell `list` · S-boost `none` · Clock-B #4 ∩ Theme Radar T−1 oppset
 
-Cash book **-25.00%** ($7,500) · signal-only (no cash/fees) was -53.88%. Starts YES **1/27**. Fills 97 · skips 132 · realized $-2422.17.
+Cash book **-24.93%** ($7,507) · signal-only (no cash/fees) was -53.16%. Starts YES **1/28**. Fills 103 · skips 133 · realized $-2620.12.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $15,048.40.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $11,185.87.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -265,6 +265,13 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | `BRUN` | 40 | $17.27 | $17.60 | -13.20 | $17.17 | +17.20 | +4.00 | -69.20 | -52.00 |
 | 2026-09-21 | `FTAI` | 3 | $190.74 | $193.60 | -8.58 | $192.74 | +2.58 | -6.00 | +8.70 | +11.28 |
 | 2026-09-21 | `FLNC` | 506 | $7.32 | $7.36 | -20.24 | $7.39 | -15.18 | -35.42 | +88.55 | +73.37 |
+| 2026-09-22 | `BTGO` | 96 | $7.86 | $7.81 | +4.80 | — | +0.00 | +4.80 | -120.00 | — |
+| 2026-09-22 | `BULL` | 79 | $8.25 | $8.28 | -2.37 | — | +0.00 | -2.37 | -26.07 | — |
+| 2026-09-22 | `LEN` | 7 | $78.08 | $81.00 | -20.44 | — | +0.00 | -20.44 | -0.00 | — |
+| 2026-09-22 | `RCAT` | 85 | $6.95 | $7.00 | -4.25 | — | +0.00 | -4.25 | +33.57 | — |
+| 2026-09-22 | `BRUN` | 40 | $17.17 | $17.48 | -12.40 | — | +0.00 | -12.40 | -64.40 | — |
+| 2026-09-22 | `FTAI` | 3 | $192.74 | $194.86 | -6.36 | — | +0.00 | -6.36 | +4.92 | — |
+| 2026-09-22 | `FLNC` | 506 | $7.39 | $7.49 | -50.60 | $7.27 | +111.32 | +60.72 | +22.77 | +134.09 |
 
 ## Each session (cash + holdings state)
 
@@ -297,6 +304,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | +7.38 | $11,834.17 | PLAY×115, HQ×61, FWDI×128, BBNX×42, SION×113 | $7,628.98 | -92.77 | +130.23 | BTGO, BULL, LEN, RCAT, BRUN, FTAI | — | $15,498.76 | $7,746.11 | PLAY×115, HQ×61, FWDI×128, BBNX×42, SION×113, BTGO×96, BULL×79, LEN×7, RCAT×85, BRUN×40, FTAI×3 |
 | 2026-09-18 | +4.86 | $15,498.76 | PLAY×115, HQ×61, FWDI×128, BBNX×42, SION×113, BTGO×96, BULL×79, LEN×7, RCAT×85, BRUN×40, FTAI×3 | $7,628.16 | -117.95 | +51.75 | FLNC | — | $19,304.72 | $7,673.16 | PLAY×115, HQ×61, FWDI×128, BBNX×42, SION×113, BTGO×96, BULL×79, LEN×7, RCAT×85, BRUN×40, FTAI×3, FLNC×506 |
 | 2026-09-21 | +12.87 | $19,304.72 | PLAY×115, HQ×61, FWDI×128, BBNX×42, SION×113, BTGO×96, BULL×79, LEN×7, RCAT×85, BRUN×40, FTAI×3, FLNC×506 | $7,494.78 | -178.38 | +16.97 | — | PLAY, HQ, FWDI, BBNX, SION | $15,048.40 | $7,500.42 | BTGO×96, BULL×79, LEN×7, RCAT×85, BRUN×40, FTAI×3, FLNC×506 |
+| 2026-09-22 | -0.50 | $15,048.40 | BTGO×96, BULL×79, LEN×7, RCAT×85, BRUN×40, FTAI×3, FLNC×506 | $7,408.80 | -91.62 | +111.32 | — | BTGO, BULL, LEN, RCAT, BRUN, FTAI | $11,185.87 | $7,507.25 | FLNC×506 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -449,10 +457,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $19,304.72 | ▼ 09:30 equity $7,494.78 vs yday $7,673.16 (-178.38) | 09:30 open · cash $19,304.72 (unchanged overnight, no fees) · equity $7,494.78 vs prior close $7,673.16 (-178.38) · 12 name(s) re-marked at the open (per-name table). PLAY×115 yday $6.73 → 09:30 $6.68 +5.75; HQ×61 yday $13.54 → 09:30 $13.41 +7.93; FWDI×128 yday $7.70 → 09:30 $8.22 -66.56; BBNX×42 yday $21.89 → 09:30 $22.11 -9.24; SION×113 yday $5.96 → 09:30 $6.00 -4.52; BTGO×96 yday $7.56 → 09:30 $7.85 -27.84; BULL×79 yday $8.25 → 09:30 $8.57 -25.28; LEN×7 yday $76.43 → 09:30 $76.98 -3.85; RCAT×85 yday $6.75 → 09:30 $6.90 -12.75; BRUN×40 yday $17.27 → 09:30 $17.60 -13.20; FTAI×3 yday $190.74 → 09:30 $193.60 -8.58; FLNC×506 yday $7.32 → 09:30 $7.36 -20.24 | — |
 | 2026-09-21 09:30 ET | **COVER** | `PLAY` | 115 | $6.68 | $2.33 | $+15.98 | $18,534.18 | ▲ +15.98 after sell → book $7,492.44; vs 09:30 mark -2.34 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-21 09:30 ET | **COVER** | `HQ` | 61 | $13.41 | $2.17 | $-36.11 | $17,714.00 | ▼ -36.11 after sell → book $7,490.27; vs 09:30 mark -2.17 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-21 09:30 ET | **COVER** | `FWDI` | 128 | $8.22 | $2.37 | $-269.76 | $16,659.47 | ▼ -269.76 after sell → book $7,487.90; vs 09:30 mark -2.37 | dropped from list after 3 sess (min 3) | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **COVER** | `FWDI` | 128 | $8.22 | $2.37 | $-269.76 | $16,659.47 | ▼ -269.76 after sell → book $7,487.90; vs 09:30 mark -2.37 | dropped from list after 3 sess (min 3) | join🟢 sector🔴 gen🟢 news🟡 digest🟢 ab🟡 peer🔴 heat🟢 vol🟢 buy🟡 |
 | 2026-09-21 09:30 ET | **COVER** | `BBNX` | 42 | $22.11 | $2.12 | $-151.27 | $15,728.73 | ▼ -151.27 after sell → book $7,485.78; vs 09:30 mark -2.12 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-21 09:30 ET | **COVER** | `SION` | 113 | $6.00 | $2.33 | $+102.64 | $15,048.40 | ▲ +102.64 after sell → book $7,483.45; vs 09:30 mark -2.33 | dropped from list after 3 sess (min 3) | join🟢 sector🟢 gen🟢 news🟢 digest🟡 ab🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **COVER** | `SION` | 113 | $6.00 | $2.33 | $+102.64 | $15,048.40 | ▲ +102.64 after sell → book $7,483.45; vs 09:30 mark -2.33 | dropped from list after 3 sess (min 3) | join🟢 sector🟢 gen🟢 news🟢 digest🟡 ab🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,048.40 | ▲ close $7,500.42 vs 09:30 $7,494.78 (session +16.97) | 16:00 close · cash $15,048.40 · equity $7,500.42 vs 09:30 $7,494.78 (+5.64; session marks +16.97) · 7 name(s) marked open→close (per-name table). BTGO×96 09:30 $7.85 → close $7.86 -0.96; BULL×79 09:30 $8.57 → close $8.25 +25.28; LEN×7 09:30 $76.98 → close $78.08 -7.70; RCAT×85 09:30 $6.90 → close $6.95 -4.25; BRUN×40 09:30 $17.60 → close $17.17 +17.20; FTAI×3 09:30 $193.60 → close $192.74 +2.58; FLNC×506 09:30 $7.36 → close $7.39 -15.18 | — |
+| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,048.40 | ▼ 09:30 equity $7,408.80 vs yday $7,500.42 (-91.62) | 09:30 open · cash $15,048.40 (unchanged overnight, no fees) · equity $7,408.80 vs prior close $7,500.42 (-91.62) · 7 name(s) re-marked at the open (per-name table). BTGO×96 yday $7.86 → 09:30 $7.81 +4.80; BULL×79 yday $8.25 → 09:30 $8.28 -2.37; LEN×7 yday $78.08 → 09:30 $81.00 -20.44; RCAT×85 yday $6.95 → 09:30 $7.00 -4.25; BRUN×40 yday $17.17 → 09:30 $17.48 -12.40; FTAI×3 yday $192.74 → 09:30 $194.86 -6.36; FLNC×506 yday $7.39 → 09:30 $7.49 -50.60 | — |
+| 2026-09-22 09:30 ET | **COVER** | `BTGO` | 96 | $7.81 | $2.28 | $-124.60 | $14,296.36 | ▼ -124.60 after sell → book $7,406.52; vs 09:30 mark -2.28 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-22 09:30 ET | **COVER** | `BULL` | 79 | $8.28 | $2.23 | $-30.56 | $13,640.02 | ▼ -30.56 after sell → book $7,404.30; vs 09:30 mark -2.22 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-22 09:30 ET | **COVER** | `LEN` | 7 | $81.00 | $2.01 | $-4.06 | $13,071.01 | ▼ -4.06 after sell → book $7,402.29; vs 09:30 mark -2.01 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-22 09:30 ET | **COVER** | `RCAT` | 85 | $7.00 | $2.25 | $+29.04 | $12,473.76 | ▲ +29.04 after sell → book $7,400.04; vs 09:30 mark -2.25 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-22 09:30 ET | **COVER** | `BRUN` | 40 | $17.48 | $2.11 | $-68.66 | $11,772.45 | ▼ -68.66 after sell → book $7,397.93; vs 09:30 mark -2.11 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-22 09:30 ET | **COVER** | `FTAI` | 3 | $194.86 | $2.00 | $+0.89 | $11,185.87 | ▲ +0.89 after sell → book $7,395.93; vs 09:30 mark -2.00 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,185.87 | ▲ close $7,507.25 vs 09:30 $7,408.80 (session +111.32) | 16:00 close · cash $11,185.87 · equity $7,507.25 vs 09:30 $7,408.80 (+98.45; session marks +111.32) · 1 name(s) marked open→close (per-name table). FLNC×506 09:30 $7.49 → close $7.27 +111.32 | — |
 
 ## Not taken
 
@@ -590,15 +606,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | `BRUN` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-21 | `FTAI` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-21 | `FLNC` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-22 | `FLNC` | min_hold | dropped but min-hold 2/3 sess — no sell |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `BTGO` | 96 | 2026-09-17 @ $6.56 | Clock-B #4 ∩ Theme Radar T−1 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list yday_mover; ret5=-14.6; leftover $635.75 |
-| `BULL` | 79 | 2026-09-17 @ $7.95 | Clock-B #4 ∩ Theme Radar T−1 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list yday_mover; 🔵; ⚪; ret5=-18.4; leftover $635.75 |
-| `LEN` | 7 | 2026-09-17 @ $81.00 | Clock-B #4 ∩ Theme Radar T−1 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list earn_react; 🔵; ret5=-3.0; leftover $635.75 |
-| `RCAT` | 85 | 2026-09-17 @ $7.39 | Clock-B #4 ∩ Theme Radar T−1 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list yday_mover; ret5=-12.7; leftover $635.75 |
-| `BRUN` | 40 | 2026-09-17 @ $15.87 | Clock-B #4 ∩ Theme Radar T−1 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list probable,yday_gainer,yday_mover; ret5=-12.7; leftover $635.75 |
-| `FTAI` | 3 | 2026-09-17 @ $196.50 | Clock-B #4 ∩ Theme Radar T−1 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list yday_gainer; 🔵; ret5=+2.5; leftover $635.75 |
 | `FLNC` | 506 | 2026-09-18 @ $7.54 | Clock-B #4 ∩ Theme Radar T−1 oppset; gate clk_neg_weak_fail=True,oppset=True; rank opp_rvol; list yday_mover; 🔵; ret5=-20.9; leftover $3814.08 |

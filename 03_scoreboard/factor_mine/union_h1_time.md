@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `time` · S-boost `none` · sell at min-hold even if still listed
 
-Cash book **+2.01%** ($10,201) · signal-only (no cash/fees) was +8.59%. Starts YES **9/27**. Fills 248 · skips 88 · realized $+493.32.
+Cash book **-0.93%** ($9,907) · signal-only (no cash/fees) was +6.29%. Starts YES **0/28**. Fills 264 · skips 88 · realized $+216.83.
 
 ## How this sleeve decides (like you are 10)
 
@@ -50,7 +50,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $264.71.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $122.29.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -298,7 +298,23 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | `IOVA` | 125 | — | $10.43 | +0.00 | $10.19 | -30.00 | -30.00 | +0.00 | -30.00 |
 | 2026-09-21 | `MGTX` | 97 | — | $13.47 | +0.00 | $13.08 | -37.83 | -37.83 | +0.00 | -37.83 |
 | 2026-09-21 | `CYPH` | 327 | — | $4.00 | +0.00 | $3.40 | -196.20 | -196.20 | +0.00 | -196.20 |
-| 2026-09-21 | `FEAM` | 531 | — | $2.47 | +0.00 | $2.48 | +5.31 | +5.31 | +0.00 | +5.31 |
+| 2026-09-21 | `BKKT` | 140 | — | $9.31 | +0.00 | $9.14 | -23.80 | -23.80 | +0.00 | -23.80 |
+| 2026-09-22 | `A` | 8 | $161.94 | $163.08 | +9.12 | — | +0.00 | +9.12 | +41.68 | — |
+| 2026-09-22 | `HUM` | 3 | $378.58 | $378.42 | -0.48 | — | +0.00 | -0.48 | -23.34 | — |
+| 2026-09-22 | `DXCM` | 14 | $89.17 | $89.12 | -0.70 | — | +0.00 | -0.70 | +4.06 | — |
+| 2026-09-22 | `PGEN` | 167 | $7.70 | $7.72 | +3.34 | — | +0.00 | +3.34 | -20.04 | — |
+| 2026-09-22 | `IOVA` | 125 | $10.19 | $10.18 | -1.87 | — | +0.00 | -1.87 | -31.87 | — |
+| 2026-09-22 | `MGTX` | 97 | $13.08 | $13.16 | +7.76 | — | +0.00 | +7.76 | -30.07 | — |
+| 2026-09-22 | `CYPH` | 327 | $3.40 | $3.51 | +35.97 | — | +0.00 | +35.97 | -160.23 | — |
+| 2026-09-22 | `BKKT` | 140 | $9.14 | $9.19 | +7.00 | — | +0.00 | +7.00 | -16.80 | — |
+| 2026-09-22 | `PACS` | 30 | — | $41.93 | +0.00 | $41.53 | -12.00 | -12.00 | +0.00 | -12.00 |
+| 2026-09-22 | `MKC` | 25 | — | $49.57 | +0.00 | $49.42 | -3.75 | -3.75 | +0.00 | -3.75 |
+| 2026-09-22 | `EL` | 13 | — | $98.02 | +0.00 | $100.29 | +29.51 | +29.51 | +0.00 | +29.51 |
+| 2026-09-22 | `USFD` | 13 | — | $94.08 | +0.00 | $94.20 | +1.56 | +1.56 | +0.00 | +1.56 |
+| 2026-09-22 | `DLO` | 88 | — | $14.50 | +0.00 | $14.26 | -21.12 | -21.12 | +0.00 | -21.12 |
+| 2026-09-22 | `TDC` | 42 | — | $29.78 | +0.00 | $29.41 | -15.54 | -15.54 | +0.00 | -15.54 |
+| 2026-09-22 | `GLND` | 434 | — | $2.94 | +0.00 | $2.51 | -186.62 | -186.62 | +0.00 | -186.62 |
+| 2026-09-22 | `CRML` | 140 | — | $9.12 | +0.00 | $8.54 | -81.20 | -81.20 | +0.00 | -81.20 |
 
 ## Each session (cash + holdings state)
 
@@ -330,7 +346,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-16 | +5.30 | $10,097.46 | — | $10,097.46 | +0.00 | +198.66 | IQV, RDNT, AVAH, BLFS, BBNX, ARQQ, TEM, RIG | — | $259.84 | $10,278.53 | IQV×4, RDNT×16, AVAH×88, BLFS×34, BBNX×67, ARQQ×69, TEM×18, RIG×215 |
 | 2026-09-17 | +7.38 | $259.84 | IQV×4, RDNT×16, AVAH×88, BLFS×34, BBNX×67, ARQQ×69, TEM×18, RIG×215 | $10,448.13 | +169.60 | +76.99 | ILMN, TWST, RVTY, IOVA, PGEN, AMN, DVLT, BRUN | IQV, RDNT, AVAH, BLFS, BBNX, ARQQ, TEM, RIG | $320.36 | $10,456.04 | ILMN×5, TWST×8, RVTY×8, IOVA×127, PGEN×171, AMN×37, DVLT×7669, BRUN×82 |
 | 2026-09-18 | +4.86 | $320.36 | ILMN×5, TWST×8, RVTY×8, IOVA×127, PGEN×171, AMN×37, DVLT×7669, BRUN×82 | $10,663.20 | +207.16 | -179.18 | RBRK, DELL, GNRC, VICR, ECO, FIVN, TLSA, SWRD | ILMN, TWST, RVTY, IOVA, PGEN, AMN, DVLT, BRUN | $274.29 | $10,393.52 | RBRK×12, DELL×2, GNRC×6, VICR×6, ECO×15, FIVN×38, TLSA×1367, SWRD×637 |
-| 2026-09-21 | +12.87 | $274.29 | RBRK×12, DELL×2, GNRC×6, VICR×6, ECO×15, FIVN×38, TLSA×1367, SWRD×637 | $10,531.15 | +137.63 | -267.64 | A, HUM, DXCM, PGEN, IOVA, MGTX, CYPH, FEAM | RBRK, DELL, GNRC, VICR, ECO, FIVN, TLSA, SWRD | $264.71 | $10,201.44 | A×8, HUM×3, DXCM×14, PGEN×167, IOVA×125, MGTX×97, CYPH×327, FEAM×531 |
+| 2026-09-21 | +12.87 | $274.29 | RBRK×12, DELL×2, GNRC×6, VICR×6, ECO×15, FIVN×38, TLSA×1367, SWRD×637 | $10,531.15 | +137.63 | -296.75 | A, HUM, DXCM, PGEN, IOVA, MGTX, CYPH, BKKT | RBRK, DELL, GNRC, VICR, ECO, FIVN, TLSA, SWRD | $277.32 | $10,176.77 | A×8, HUM×3, DXCM×14, PGEN×167, IOVA×125, MGTX×97, CYPH×327, BKKT×140 |
+| 2026-09-22 | -0.50 | $277.32 | A×8, HUM×3, DXCM×14, PGEN×167, IOVA×125, MGTX×97, CYPH×327, BKKT×140 | $10,236.90 | +60.13 | -289.16 | PACS, MKC, EL, USFD, DLO, TDC, GLND, CRML | A, HUM, DXCM, PGEN, IOVA, MGTX, CYPH, BKKT | $122.29 | $9,907.10 | PACS×30, MKC×25, EL×13, USFD×13, DLO×88, TDC×42, GLND×434, CRML×140 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -517,8 +534,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-03 09:30 ET | **BUY** | `VSTM` | 170 | $8.03 | $2.50 | — | $5,542.73 | — | sell at min-hold even if still listed; list flatten,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+8.5; leftover $1367.13 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
 | 2026-09-03 09:30 ET | **BUY** | `RVTY` | 10 | $132.45 | $2.02 | — | $4,216.21 | — | sell at min-hold even if still listed; list flatten,mover_buy; 🔵; ⚪; ret5=+3.6; leftover $1367.13 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-03 09:30 ET | **BUY** | `CRK` | 88 | $15.45 | $2.25 | — | $2,854.36 | — | sell at min-hold even if still listed; list probable,yday_gainer,yday_mover,mover_buy; 🔵; ret5=+7.2; leftover $1367.13 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
-| 2026-09-03 09:30 ET | **BUY** | `MRNA` | 9 | $145.94 | $2.02 | — | $1,538.83 | — | sell at min-hold even if still listed; list probable,yday_gainer,yday_mover; 🔵; ret5=+0.8; leftover $1367.13 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
-| 2026-09-03 09:30 ET | **BUY** | `ARCT` | 81 | $16.77 | $2.23 | — | $178.23 | — | sell at min-hold even if still listed; list probable,yday_gainer,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+5.7; leftover $1367.13 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `MRNA` | 9 | $145.94 | $2.02 | — | $1,538.83 | — | sell at min-hold even if still listed; list probable,yday_gainer; 🔵; ret5=+0.8; leftover $1367.13 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-03 09:30 ET | **BUY** | `ARCT` | 81 | $16.77 | $2.23 | — | $178.23 | — | sell at min-hold even if still listed; list probable,yday_gainer,yday_mover,ohlc_hot,mover_buy; 🔵; ⚪; ret5=+5.7; leftover $1367.13 | join🟢 sector🟡 gen🟡 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-03 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $178.23 | ▼ close $10,674.56 vs 09:30 $10,937.04 (session -242.45) | 16:00 close · cash $178.23 · equity $10,674.56 vs 09:30 $10,937.04 (-262.48; session marks -242.45) · 8 name(s) marked open→close (per-name table). ATRC×25 09:30 $52.88 → close $52.46 -10.50; HRMY×31 09:30 $42.93 → close $41.86 -33.17; CABA×376 09:30 $3.63 → close $3.48 -56.40; VSTM×170 09:30 $8.03 → close $7.98 -8.50; RVTY×10 09:30 $132.45 → close $130.63 -18.20; CRK×88 09:30 $15.45 → close $14.95 -44.00; MRNA×9 09:30 $145.94 → close $148.87 +26.33; ARCT×81 09:30 $16.77 → close $15.56 -98.01 | — |
 | 2026-09-04 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $178.23 | ▲ 09:30 equity $10,678.43 vs yday $10,674.56 (+3.87) | 09:30 open · cash $178.23 (unchanged overnight, no fees) · equity $10,678.43 vs prior close $10,674.56 (+3.87) · 8 name(s) re-marked at the open (per-name table). ATRC×25 yday $52.46 → 09:30 $52.03 -10.75; HRMY×31 yday $41.86 → 09:30 $41.50 -11.16; CABA×376 yday $3.48 → 09:30 $3.46 -7.52; VSTM×170 yday $7.98 → 09:30 $7.91 -11.90; RVTY×10 yday $130.63 → 09:30 $130.03 -6.00; CRK×88 yday $14.95 → 09:30 $15.00 +4.40; MRNA×9 yday $148.87 → 09:30 $153.62 +42.75; ARCT×81 yday $15.56 → 09:30 $15.61 +4.05 | — |
 | 2026-09-04 09:30 ET | **SELL** | `ATRC` | 25 | $52.03 | $2.09 | $-25.40 | $1,476.90 | ▼ -25.40 after sell → book $10,676.35; vs 09:30 mark -2.08 | time-stop after 1 sess (min 1) | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
@@ -615,8 +632,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 09:30 ET | **BUY** | `DELL` | 2 | $593.15 | $2.00 | — | $8,117.53 | — | sell at min-hold even if still listed; list flatten,ohlc_hot; ret5=+16.1; leftover $1326.31 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
 | 2026-09-18 09:30 ET | **BUY** | `GNRC` | 6 | $209.52 | $2.01 | — | $6,858.41 | — | sell at min-hold even if still listed; list flatten,yday_gainer,yday_mover; 🔵; ret5=+14.1; leftover $1326.31 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-09-18 09:30 ET | **BUY** | `VICR` | 6 | $219.62 | $2.01 | — | $5,538.68 | — | sell at min-hold even if still listed; list flatten,yday_gainer,yday_mover; 🔵; ret5=+21.5; leftover $1326.31 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-18 09:30 ET | **BUY** | `ECO` | 15 | $85.00 | $2.04 | — | $4,261.64 | — | sell at min-hold even if still listed; list flatten; 🔵; ⚪; ret5=+4.8; leftover $1326.31 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-18 09:30 ET | **BUY** | `FIVN` | 38 | $34.44 | $2.10 | — | $2,950.82 | — | sell at min-hold even if still listed; list flatten; 🔵; ⚪; ret5=-9.6; leftover $1326.31 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
+| 2026-09-18 09:30 ET | **BUY** | `ECO` | 15 | $85.00 | $2.04 | — | $4,261.64 | — | sell at min-hold even if still listed; list flatten; 🔵; ⚪; ret5=+18.3; leftover $1326.31 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-18 09:30 ET | **BUY** | `FIVN` | 38 | $34.44 | $2.10 | — | $2,950.82 | — | sell at min-hold even if still listed; list flatten; 🔵; ⚪; ret5=+14.0; leftover $1326.31 | join🟢 sector🟢 gen🟢 news🔴 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟢 |
 | 2026-09-18 09:30 ET | **BUY** | `TLSA` | 1367 | $0.97 | $17.36 | — | $1,607.47 | — | sell at min-hold even if still listed; list probable,yday_gainer,yday_mover; 🔵; ret5=+1.0; leftover $1326.31 | join🔴 sector🟢 gen🟢 news🟡 digest🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
 | 2026-09-18 09:30 ET | **BUY** | `SWRD` | 637 | $2.08 | $8.22 | — | $274.29 | — | sell at min-hold even if still listed; list probable,yday_gainer,yday_mover; ret5=-4.5; leftover $1326.31 | join🔴 sector🔴 gen🟢 news🟡 digest🟢 judge🔴 ab🔴 heat🟢 vol🟡 buy🟡 |
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $274.29 | ▼ close $10,393.52 vs 09:30 $10,663.20 (session -179.18) | 16:00 close · cash $274.29 · equity $10,393.52 vs 09:30 $10,663.20 (-269.68; session marks -179.18) · 8 name(s) marked open→close (per-name table). RBRK×12 09:30 $108.55 → close $106.71 -22.08; DELL×2 09:30 $593.15 → close $568.06 -50.18; GNRC×6 09:30 $209.52 → close $207.44 -12.48; VICR×6 09:30 $219.62 → close $222.72 +18.60; ECO×15 09:30 $85.00 → close $84.95 -0.75; FIVN×38 09:30 $34.44 → close $32.47 -74.86; TLSA×1367 09:30 $0.97 → close $0.91 -82.02; SWRD×637 09:30 $2.08 → close $2.15 +44.59 | — |
@@ -624,20 +641,38 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 09:30 ET | **SELL** | `RBRK` | 12 | $107.57 | $2.05 | $-15.83 | $1,563.08 | ▼ -15.83 after sell → book $10,529.10; vs 09:30 mark -2.05 | time-stop after 1 sess (min 1) | — |
 | 2026-09-21 09:30 ET | **SELL** | `DELL` | 2 | $586.77 | $2.02 | $-16.77 | $2,734.61 | ▼ -16.77 after sell → book $10,527.09; vs 09:30 mark -2.01 | time-stop after 1 sess (min 1) | — |
 | 2026-09-21 09:30 ET | **SELL** | `GNRC` | 6 | $210.00 | $2.03 | $-1.16 | $3,992.58 | ▼ -1.16 after sell → book $10,525.06; vs 09:30 mark -2.03 | time-stop after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **SELL** | `VICR` | 6 | $230.25 | $2.03 | $+59.74 | $5,372.05 | ▲ +59.74 after sell → book $10,523.03; vs 09:30 mark -2.03 | time-stop after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🔴 vol🟢 buy🟢 |
+| 2026-09-21 09:30 ET | **SELL** | `VICR` | 6 | $230.25 | $2.03 | $+59.74 | $5,372.05 | ▲ +59.74 after sell → book $10,523.03; vs 09:30 mark -2.03 | time-stop after 1 sess (min 1) | join🟢 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
 | 2026-09-21 09:30 ET | **SELL** | `ECO` | 15 | $82.83 | $2.06 | $-36.64 | $6,612.45 | ▼ -36.64 after sell → book $10,520.98; vs 09:30 mark -2.05 | time-stop after 1 sess (min 1) | — |
 | 2026-09-21 09:30 ET | **SELL** | `FIVN` | 38 | $33.00 | $2.12 | $-58.95 | $7,864.32 | ▼ -58.95 after sell → book $10,518.85; vs 09:30 mark -2.13 | time-stop after 1 sess (min 1) | — |
 | 2026-09-21 09:30 ET | **SELL** | `TLSA` | 1367 | $0.94 | $17.19 | $-75.56 | $9,132.11 | ▼ -75.56 after sell → book $10,501.66; vs 09:30 mark -17.19 | time-stop after 1 sess (min 1) | — |
 | 2026-09-21 09:30 ET | **SELL** | `SWRD` | 637 | $2.15 | $8.33 | $+28.04 | $10,493.33 | ▲ +28.04 after sell → book $10,493.33; vs 09:30 mark -8.33 | time-stop after 1 sess (min 1) | — |
-| 2026-09-21 09:30 ET | **BUY** | `A` | 8 | $157.87 | $2.01 | — | $9,228.36 | — | sell at min-hold even if still listed; list flatten; 🔵; ⚪; ret5=-4.4; leftover $1311.67 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `HUM` | 3 | $386.20 | $2.00 | — | $8,067.76 | — | sell at min-hold even if still listed; list flatten; 🔵; ret5=+5.2; leftover $1311.67 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `DXCM` | 14 | $88.83 | $2.03 | — | $6,822.10 | — | sell at min-hold even if still listed; list flatten; 🔵; ⚪; ret5=-7.2; leftover $1311.67 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `PGEN` | 167 | $7.84 | $2.49 | — | $5,510.33 | — | sell at min-hold even if still listed; list flatten; ⚪; ret5=+13.6; leftover $1311.67 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `IOVA` | 125 | $10.43 | $2.37 | — | $4,204.22 | — | sell at min-hold even if still listed; list flatten; ⚪; ret5=+19.2; leftover $1311.67 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `MGTX` | 97 | $13.47 | $2.28 | — | $2,895.35 | — | sell at min-hold even if still listed; list flatten; ⚪; ret5=-8.4; leftover $1311.67 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `CYPH` | 327 | $4.00 | $4.22 | — | $1,583.13 | — | sell at min-hold even if still listed; list flatten,yday_gainer,yday_mover; ⚪; ret5=+58.9; leftover $1311.67 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-21 09:30 ET | **BUY** | `FEAM` | 531 | $2.47 | $6.85 | — | $264.71 | — | sell at min-hold even if still listed; list probable,yday_gainer,yday_mover; ret5=-3.8; leftover $1311.67 | join🔴 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
-| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $264.71 | ▼ close $10,201.44 vs 09:30 $10,531.15 (session -267.64) | 16:00 close · cash $264.71 · equity $10,201.44 vs 09:30 $10,531.15 (-329.71; session marks -267.64) · 8 name(s) marked open→close (per-name table). A×8 09:30 $157.87 → close $161.94 +32.56; HUM×3 09:30 $386.20 → close $378.58 -22.86; DXCM×14 09:30 $88.83 → close $89.17 +4.76; PGEN×167 09:30 $7.84 → close $7.70 -23.38; IOVA×125 09:30 $10.43 → close $10.19 -30.00; MGTX×97 09:30 $13.47 → close $13.08 -37.83; CYPH×327 09:30 $4.00 → close $3.40 -196.20; FEAM×531 09:30 $2.47 → close $2.48 +5.31 | — |
+| 2026-09-21 09:30 ET | **BUY** | `A` | 8 | $157.87 | $2.01 | — | $9,228.36 | — | sell at min-hold even if still listed; list flatten; ret5=+6.5; leftover $1311.67 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `HUM` | 3 | $386.20 | $2.00 | — | $8,067.76 | — | sell at min-hold even if still listed; list flatten; ret5=-5.8; leftover $1311.67 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `DXCM` | 14 | $88.83 | $2.03 | — | $6,822.10 | — | sell at min-hold even if still listed; list flatten; ret5=+7.6; leftover $1311.67 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `PGEN` | 167 | $7.84 | $2.49 | — | $5,510.33 | — | sell at min-hold even if still listed; list flatten; ret5=+13.6; leftover $1311.67 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `IOVA` | 125 | $10.43 | $2.37 | — | $4,204.22 | — | sell at min-hold even if still listed; list flatten; ret5=+19.2; leftover $1311.67 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `MGTX` | 97 | $13.47 | $2.28 | — | $2,895.35 | — | sell at min-hold even if still listed; list flatten; ret5=+3.6; leftover $1311.67 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟡 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `CYPH` | 327 | $4.00 | $4.22 | — | $1,583.13 | — | sell at min-hold even if still listed; list flatten,yday_gainer,yday_mover; ret5=+58.9; leftover $1311.67 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 09:30 ET | **BUY** | `BKKT` | 140 | $9.31 | $2.41 | — | $277.32 | — | sell at min-hold even if still listed; list probable,yday_gainer,yday_mover; ret5=+5.3; leftover $1311.67 | join🟢 sector🔴 gen🟢 news🟡 digest🟢 judge🟢 ab🟢 peer🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $277.32 | ▼ close $10,176.77 vs 09:30 $10,531.15 (session -296.75) | 16:00 close · cash $277.32 · equity $10,176.77 vs 09:30 $10,531.15 (-354.38; session marks -296.75) · 8 name(s) marked open→close (per-name table). A×8 09:30 $157.87 → close $161.94 +32.56; HUM×3 09:30 $386.20 → close $378.58 -22.86; DXCM×14 09:30 $88.83 → close $89.17 +4.76; PGEN×167 09:30 $7.84 → close $7.70 -23.38; IOVA×125 09:30 $10.43 → close $10.19 -30.00; MGTX×97 09:30 $13.47 → close $13.08 -37.83; CYPH×327 09:30 $4.00 → close $3.40 -196.20; BKKT×140 09:30 $9.31 → close $9.14 -23.80 | — |
+| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $277.32 | ▲ 09:30 equity $10,236.90 vs yday $10,176.77 (+60.13) | 09:30 open · cash $277.32 (unchanged overnight, no fees) · equity $10,236.90 vs prior close $10,176.77 (+60.13) · 8 name(s) re-marked at the open (per-name table). A×8 yday $161.94 → 09:30 $163.08 +9.12; HUM×3 yday $378.58 → 09:30 $378.42 -0.48; DXCM×14 yday $89.17 → 09:30 $89.12 -0.70; PGEN×167 yday $7.70 → 09:30 $7.72 +3.34; IOVA×125 yday $10.19 → 09:30 $10.18 -1.87; MGTX×97 yday $13.08 → 09:30 $13.16 +7.76; CYPH×327 yday $3.40 → 09:30 $3.51 +35.97; BKKT×140 yday $9.14 → 09:30 $9.19 +7.00 | — |
+| 2026-09-22 09:30 ET | **SELL** | `A` | 8 | $163.08 | $2.03 | $+37.63 | $1,579.92 | ▲ +37.63 after sell → book $10,234.87; vs 09:30 mark -2.03 | time-stop after 1 sess (min 1) | — |
+| 2026-09-22 09:30 ET | **SELL** | `HUM` | 3 | $378.42 | $2.02 | $-27.36 | $2,713.17 | ▼ -27.36 after sell → book $10,232.85; vs 09:30 mark -2.02 | time-stop after 1 sess (min 1) | — |
+| 2026-09-22 09:30 ET | **SELL** | `DXCM` | 14 | $89.12 | $2.05 | $-0.02 | $3,958.79 | ▼ -0.02 after sell → book $10,230.80; vs 09:30 mark -2.05 | time-stop after 1 sess (min 1) | — |
+| 2026-09-22 09:30 ET | **SELL** | `PGEN` | 167 | $7.72 | $2.53 | $-25.06 | $5,245.50 | ▼ -25.06 after sell → book $10,228.27; vs 09:30 mark -2.53 | time-stop after 1 sess (min 1) | — |
+| 2026-09-22 09:30 ET | **SELL** | `IOVA` | 125 | $10.18 | $2.40 | $-36.64 | $6,514.98 | ▼ -36.64 after sell → book $10,225.87; vs 09:30 mark -2.40 | time-stop after 1 sess (min 1) | — |
+| 2026-09-22 09:30 ET | **SELL** | `MGTX` | 97 | $13.16 | $2.31 | $-34.66 | $7,789.20 | ▼ -34.66 after sell → book $10,223.57; vs 09:30 mark -2.30 | time-stop after 1 sess (min 1) | — |
+| 2026-09-22 09:30 ET | **SELL** | `CYPH` | 327 | $3.51 | $4.28 | $-168.73 | $8,932.68 | ▼ -168.73 after sell → book $10,219.28; vs 09:30 mark -4.29 | time-stop after 1 sess (min 1) | — |
+| 2026-09-22 09:30 ET | **SELL** | `BKKT` | 140 | $9.19 | $2.44 | $-21.65 | $10,216.84 | ▼ -21.65 after sell → book $10,216.84; vs 09:30 mark -2.44 | time-stop after 1 sess (min 1) | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-22 09:30 ET | **BUY** | `PACS` | 30 | $41.93 | $2.08 | — | $8,956.86 | — | sell at min-hold even if still listed; list flatten; ret5=+3.2; leftover $1277.11 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 judge🔴 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-22 09:30 ET | **BUY** | `MKC` | 25 | $49.57 | $2.06 | — | $7,715.55 | — | sell at min-hold even if still listed; list flatten; ret5=-4.3; leftover $1277.11 | join🟢 sector🟢 gen🔴 news🟡 digest🟡 ab🟢 peer🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-09-22 09:30 ET | **BUY** | `EL` | 13 | $98.02 | $2.03 | — | $6,439.26 | — | sell at min-hold even if still listed; list flatten; ret5=-1.9; leftover $1277.11 | join🟢 sector🟢 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-22 09:30 ET | **BUY** | `USFD` | 13 | $94.08 | $2.03 | — | $5,214.19 | — | sell at min-hold even if still listed; list flatten; ret5=-1.7; leftover $1277.11 | join🟢 sector🟢 gen🔴 news🔴 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-22 09:30 ET | **BUY** | `DLO` | 88 | $14.50 | $2.25 | — | $3,935.93 | — | sell at min-hold even if still listed; list flatten; ret5=-3.6; leftover $1277.11 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
+| 2026-09-22 09:30 ET | **BUY** | `TDC` | 42 | $29.78 | $2.12 | — | $2,683.06 | — | sell at min-hold even if still listed; list flatten; ret5=-4.3; leftover $1277.11 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟡 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-09-22 09:30 ET | **BUY** | `GLND` | 434 | $2.94 | $5.60 | — | $1,401.50 | — | sell at min-hold even if still listed; list probable,yday_gainer,yday_mover; ret5=-5.8; leftover $1277.11 | join🔴 sector🔴 gen🔴 news🟢 digest🟢 judge🔴 ab🔴 heat🔴 vol🟢 buy🟡 |
+| 2026-09-22 09:30 ET | **BUY** | `CRML` | 140 | $9.12 | $2.41 | — | $122.29 | — | sell at min-hold even if still listed; list probable,yday_gainer,yday_mover; ret5=-12.6; leftover $1277.11 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 judge🔴 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $122.29 | ▼ close $9,907.10 vs 09:30 $10,236.90 (session -289.16) | 16:00 close · cash $122.29 · equity $9,907.10 vs 09:30 $10,236.90 (-329.80; session marks -289.16) · 8 name(s) marked open→close (per-name table). PACS×30 09:30 $41.93 → close $41.53 -12.00; MKC×25 09:30 $49.57 → close $49.42 -3.75; EL×13 09:30 $98.02 → close $100.29 +29.51; USFD×13 09:30 $94.08 → close $94.20 +1.56; DLO×88 09:30 $14.50 → close $14.26 -21.12; TDC×42 09:30 $29.78 → close $29.41 -15.54; GLND×434 09:30 $2.94 → close $2.51 -186.62; CRML×140 09:30 $9.12 → close $8.54 -81.20 | — |
 
 ## Not taken
 
@@ -719,28 +754,28 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-14 | `DK` | hard_red | hard-red S=-11.00 sit; no new buys |
 | 2026-09-14 | `BG` | hard_red | hard-red S=-11.00 sit; no new buys |
 | 2026-09-14 | `NVT` | hard_red | hard-red S=-11.00 sit; no new buys |
+| 2026-09-14 | `ACVA` | hard_red | hard-red S=-11.00 sit; no new buys |
 | 2026-09-14 | `ATEC` | hard_red | hard-red S=-11.00 sit; no new buys |
 | 2026-09-14 | `DELL` | hard_red | hard-red S=-11.00 sit; no new buys |
 | 2026-09-14 | `RLMD` | hard_red | hard-red S=-11.00 sit; no new buys |
-| 2026-09-14 | `HTFL` | hard_red | hard-red S=-11.00 sit; no new buys |
 | 2026-09-15 | `ICLR` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `SMMT` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `WAY` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `ATRC` | hard_red | hard-red S=-3.84 sit; no new buys |
-| 2026-09-15 | `RPD` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `TENB` | hard_red | hard-red S=-3.84 sit; no new buys |
-| 2026-09-15 | `SES` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `RBRK` | hard_red | hard-red S=-3.84 sit; no new buys |
+| 2026-09-15 | `SAIL` | hard_red | hard-red S=-3.84 sit; no new buys |
+| 2026-09-15 | `QLYS` | hard_red | hard-red S=-3.84 sit; no new buys |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `A` | 8 | 2026-09-21 @ $157.87 | sell at min-hold even if still listed; list flatten; 🔵; ⚪; ret5=-4.4; leftover $1311.67 |
-| `HUM` | 3 | 2026-09-21 @ $386.20 | sell at min-hold even if still listed; list flatten; 🔵; ret5=+5.2; leftover $1311.67 |
-| `DXCM` | 14 | 2026-09-21 @ $88.83 | sell at min-hold even if still listed; list flatten; 🔵; ⚪; ret5=-7.2; leftover $1311.67 |
-| `PGEN` | 167 | 2026-09-21 @ $7.84 | sell at min-hold even if still listed; list flatten; ⚪; ret5=+13.6; leftover $1311.67 |
-| `IOVA` | 125 | 2026-09-21 @ $10.43 | sell at min-hold even if still listed; list flatten; ⚪; ret5=+19.2; leftover $1311.67 |
-| `MGTX` | 97 | 2026-09-21 @ $13.47 | sell at min-hold even if still listed; list flatten; ⚪; ret5=-8.4; leftover $1311.67 |
-| `CYPH` | 327 | 2026-09-21 @ $4.00 | sell at min-hold even if still listed; list flatten,yday_gainer,yday_mover; ⚪; ret5=+58.9; leftover $1311.67 |
-| `FEAM` | 531 | 2026-09-21 @ $2.47 | sell at min-hold even if still listed; list probable,yday_gainer,yday_mover; ret5=-3.8; leftover $1311.67 |
+| `PACS` | 30 | 2026-09-22 @ $41.93 | sell at min-hold even if still listed; list flatten; ret5=+3.2; leftover $1277.11 |
+| `MKC` | 25 | 2026-09-22 @ $49.57 | sell at min-hold even if still listed; list flatten; ret5=-4.3; leftover $1277.11 |
+| `EL` | 13 | 2026-09-22 @ $98.02 | sell at min-hold even if still listed; list flatten; ret5=-1.9; leftover $1277.11 |
+| `USFD` | 13 | 2026-09-22 @ $94.08 | sell at min-hold even if still listed; list flatten; ret5=-1.7; leftover $1277.11 |
+| `DLO` | 88 | 2026-09-22 @ $14.50 | sell at min-hold even if still listed; list flatten; ret5=-3.6; leftover $1277.11 |
+| `TDC` | 42 | 2026-09-22 @ $29.78 | sell at min-hold even if still listed; list flatten; ret5=-4.3; leftover $1277.11 |
+| `GLND` | 434 | 2026-09-22 @ $2.94 | sell at min-hold even if still listed; list probable,yday_gainer,yday_mover; ret5=-5.8; leftover $1277.11 |
+| `CRML` | 140 | 2026-09-22 @ $9.12 | sell at min-hold even if still listed; list probable,yday_gainer,yday_mover; ret5=-12.6; leftover $1277.11 |
