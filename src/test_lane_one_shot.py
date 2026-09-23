@@ -1387,5 +1387,5 @@ def test_gold_job_is_ecs_and_pins_grok_4_6():
     assert "ref: ${{ github.sha }}" in gold
     assert "fetch-depth: 1" in gold
     assert "clean: true" in gold
-    assert "git rev-parse HEAD" in gold
+    assert 'git -c safe.directory="${GITHUB_WORKSPACE}" rev-parse HEAD' in gold
     assert 'test "${head}" = "${{ github.sha }}"' in gold

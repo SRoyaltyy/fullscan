@@ -86,7 +86,10 @@ jobs:
 
       - name: Confirm checkout tip
         run: |
-          head=$(git rev-parse HEAD)
+          # checkout@v4 marks safe.directory only inside a temp HOME.
+          # The next step inherits the runner HOME, and this ECS workspace
+          # is a different owner, so a bare rev-parse exits 128.
+          head=$(git -c safe.directory="${GITHUB_WORKSPACE}" rev-parse HEAD)
           echo "HEAD=${head}"
           echo "expected=${{ github.sha }}"
           test "${head}" = "${{ github.sha }}"
