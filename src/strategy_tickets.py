@@ -10,10 +10,11 @@ Tickets stamp ``clock_legal_for`` / ``session_open`` so a Friday panel
 bake cannot read as Monday's open. Publish fails if bake ≠ session
 and there is no session-open look.
 
-Factor-mine morning picks use the KEEP aisle + Clock-B gates
-(``src.morning_scan``): panel ∪ Theme Radar oppset, then #279 filter/
-rank. That is the scan path — not a pinned e_fresh list. Does not
-replace ``flatten_robust`` / Webull / paper_open.
+Webull HOT4 (``union_hot_n4_h1``) uses the Factor Mine cash-start
+recipe: ``pick_day`` on the session panel (universe / rank / top_n /
+hard-red sit as the sleeve defines). Clock-B and Theme Radar oppset
+do not widen that wire. Other factor-mine sleeves may still scan the
+KEEP aisle (``src.morning_scan``). Does not replace ``flatten_robust``.
 
 Live Elite Overview Price is stamped on every buy/sell row after
 09:30 (`elite_live_px`). Soft-fail every source so
@@ -36,6 +37,11 @@ DASH_FM = ROOT / "dashboard" / "factor-mine"
 SLEEVE = ROOT / "data" / "sleeve_merge" / "today.json"
 PANEL = FM_DIR / "panel.json"
 SCORE_FM = ROOT / "03_scoreboard" / "factor_mine"
+
+# Webull paper wire. Same Factor Mine recipe as cash-start.
+# Not the morning_scan oppset ∪ Clock-B aisle.
+HOT4_WIRE = "union_hot_n4_h1"
+HOT4_WIRE_METHODOLOGY = "factor_mine_recipe"
 
 # War-room lock: 09:30 tickets are session-open. File date is not a license
 # to reuse last panel bake. 2026-09-14 Webull combo sit would-haves from
@@ -479,6 +485,9 @@ def recipe_strats(date: str, look_out: dict | None = None) -> list[dict]:
         look_out["methodology"] = mscan.METHODOLOGY
         look_out["n_aisle"] = len(rows)
         look_out["n_oppset"] = sum(1 for r in rows if fm.on_oppset(r))
+        look_out["hot4_wire"] = HOT4_WIRE
+        look_out["hot4_methodology"] = HOT4_WIRE_METHODOLOGY
+        look_out["hot4_picker"] = "pick_day"
     s = None
     try:
         s = fmb.morning_s(fmb.load_regime(), date)
@@ -573,7 +582,11 @@ def recipe_strats(date: str, look_out: dict | None = None) -> list[dict]:
                     side=rec_side,
                 ))
             continue
-        if not rows:
+        # HOT4 is the Webull wire: session panel + pick_day, same as
+        # cash-start. Other sleeves may still scan the Clock-B aisle.
+        wire = name == HOT4_WIRE
+        pick_rows = base_rows if wire else rows
+        if not pick_rows:
             out.append(_entry(
                 name, "factor_mine", date, [], [],
                 status=empty_status,
@@ -582,7 +595,7 @@ def recipe_strats(date: str, look_out: dict | None = None) -> list[dict]:
             ))
             continue
         try:
-            picked = mscan.pick_morning(rows, rec)
+            picked = (fm.pick_day if wire else mscan.pick_morning)(pick_rows, rec)
         except Exception as e:  # noqa: BLE001
             out.append(_entry(
                 name, "factor_mine", date, [], [],
@@ -592,24 +605,38 @@ def recipe_strats(date: str, look_out: dict | None = None) -> list[dict]:
             continue
         buys = [{"ticker": r["ticker"], "src": ",".join(r.get("sources") or [])}
                 for r in picked if r.get("ticker")]
-        note = ("would-buy at 09:30; sells need cash-book lots" + look_note)
+        if wire:
+            note = (
+                "factor-mine cash-start recipe (pick_day on the session panel); "
+                "Clock-B/oppset do not widen the Webull HOT4 wire"
+                + look_note
+            )
+        else:
+            note = ("would-buy at 09:30; sells need cash-book lots" + look_note)
         if hard:
-            out.append(_entry(
+            entry = _entry(
                 name, "factor_mine", date, buys, [],
                 sit=True, hard_red=True, s=s,
                 status="sit",
-                note="hard-red S≤−3 — no new lots; names are would-buy",
+                note=("hard-red S≤−3 — no new lots; names are the cash-start would-buy"
+                      if wire else
+                      "hard-red S≤−3 — no new lots; names are would-buy"),
                 why=f"S={s}",
                 side=rec_side,
-            ))
+            )
         else:
-            out.append(_entry(
+            entry = _entry(
                 name, "factor_mine", date, buys, [],
                 s=s,
                 status="ok",
                 note=note,
                 side=rec_side,
-            ))
+            )
+        if wire:
+            entry["methodology"] = HOT4_WIRE_METHODOLOGY
+            entry["wire"] = HOT4_WIRE_METHODOLOGY
+            entry["picker"] = "pick_day"
+        out.append(entry)
     bake = looked.get("panel_bake_date")
     for rec in out:
         rec.setdefault("clock_legal_for", date)
@@ -624,10 +651,12 @@ def _combo_would_buy(rows, rec_by: dict, members: list[str],
                      spec: dict, fm, picker=None) -> list[dict]:
     """09:30 shopping list: union of each kid's morning pick.
 
-    Default picker is the KEEP aisle + Clock-B scan (``pick_morning``).
-    Tests may pass a fake ``fm.pick_day``. Shared/split only changes how
-    leftover cash is stacked at the open. net=skip drops a name both a
-    long kid and a short kid want. Fills still need the cash-book roll.
+    Combo members still pass the KEEP aisle picker (``pick_morning``).
+    The Webull HOT4 sleeve itself is ``pick_day`` on the session panel,
+    not this combo union. Tests may pass a fake ``fm.pick_day``.
+    Shared/split only changes how leftover cash is stacked at the open.
+    net=skip drops a name both a long kid and a short kid want.
+    Fills still need the cash-book roll.
     """
     pick = picker or getattr(fm, "pick_day", None)
     if pick is None:
@@ -662,6 +691,62 @@ def _combo_would_buy(rows, rec_by: dict, members: list[str],
             continue
         out.append(first[t])
     return out
+
+
+def hot4_buy_tickers(rows) -> list[str]:
+    """Long buy tickers in list order. Shorts are not the HOT4 wire."""
+    out: list[str] = []
+    for raw in rows or []:
+        if isinstance(raw, str):
+            t = raw.strip().upper()
+            side = "long"
+        elif isinstance(raw, dict):
+            t = str(raw.get("ticker") or raw.get("symbol") or "").strip().upper()
+            side = str(raw.get("side") or raw.get("kid_side") or "long").lower()
+        else:
+            continue
+        if t and side != "short":
+            out.append(t)
+    return out
+
+
+def hot4_recipe_tickers(date: str, panel: dict | None = None) -> list[str]:
+    """Ordered Factor Mine ``pick_day`` list for the Webull HOT4 wire.
+
+    Same session rows cash-start uses: the baked panel when that
+    morning is on it, otherwise the leak-free session look. Not the
+    oppset ∪ Clock-B aisle.
+    """
+    from . import factor_mine as fm
+    if panel is None:
+        raw = _load_json(PANEL)
+        if not raw:
+            raise ValueError("factor-mine panel missing; cannot verify HOT4 wire")
+        panel = fm.rehydrate_panel(raw)
+    elif "by_date" not in panel:
+        panel = fm.rehydrate_panel(panel)
+    looked = _session_look(date, panel)
+    if looked.get("stale") or not looked.get("rows"):
+        raise ValueError(
+            looked.get("error") or f"no Factor Mine session rows for {date}"
+        )
+    rec = next((r for r in fm.build_recipes() if r.get("name") == HOT4_WIRE), None)
+    if not rec:
+        raise ValueError(f"{HOT4_WIRE} recipe missing")
+    picked = fm.pick_day(looked.get("rows") or [], rec)
+    return hot4_buy_tickers(picked)
+
+
+def assert_hot4_wire(date: str, buys, *, panel: dict | None = None) -> list[str]:
+    """Refuse a HOT4 submit whose buys are not the cash-start recipe list."""
+    recipe = hot4_recipe_tickers(date, panel=panel)
+    published = hot4_buy_tickers(buys)
+    if published != recipe:
+        raise ValueError(
+            f"HOT4 buys {published} diverge from Factor Mine recipe "
+            f"{recipe} for {date}"
+        )
+    return recipe
 
 
 def stamp_live_quotes(payload: dict, date: str) -> dict:
@@ -829,9 +914,14 @@ def build(date: str) -> dict:
             "look_source": look.get("source"),
             "n_aisle": look.get("n_aisle"),
             "n_oppset": look.get("n_oppset"),
+            "hot4_wire": HOT4_WIRE,
+            "hot4_methodology": HOT4_WIRE_METHODOLOGY,
+            "hot4_picker": "pick_day",
             "note": (
-                "Factor-mine morning picks use the KEEP aisle + Clock-B "
-                "gates. flatten_robust stays LIVE money."
+                "Research factor-mine sleeves may use the KEEP aisle + "
+                "Clock-B gates. Webull HOT4 (union_hot_n4_h1) uses the "
+                "Factor Mine cash-start recipe (pick_day on the session "
+                "panel). flatten_robust stays LIVE money."
             ),
         },
     }

@@ -1,4 +1,6 @@
-"""Morning ticket scan: oppset_union aisle + Clock-B gates.
+"""Research sleeve scan: oppset_union aisle + Clock-B gates.
+
+The Webull HOT4 wire is Factor Mine pick_day (src.test_hot4_wire).
 
 Run: PYTHONPATH=. python3 -m src.test_morning_scan
 """

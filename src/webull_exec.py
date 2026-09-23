@@ -2,8 +2,10 @@
 
 Default source is ``hot4``: long-only today's ``union_hot_n4_h1`` buy
 list from ``dashboard/factor-mine/today_strategies.json`` (same panel
-the factor-mine cash book uses). Flatten live-card tickets stay
-available via ``--source flatten``. Combo is a manual escape only.
+the factor-mine cash book uses). Submit refuses when that list
+diverges from Factor Mine ``pick_day`` for the session. Flatten
+live-card tickets stay available via ``--source flatten``. Combo is
+a manual escape only.
 
 Official OpenAPI sandbox is the in-app Paper Trading book
 (webull.com → Open API → “Using OpenAPI service in Paper Trading”).
@@ -835,6 +837,25 @@ def run(date: str | None, *, env: str = "paper", submit: bool = False,
     card = _plan(date, snap, source=source, combo=combo)
     for t in card.get("tickets") or []:
         t.setdefault("date", date)
+    if source == "hot4" and requested_submit:
+        from src.strategy_tickets import assert_hot4_wire
+        try:
+            assert_hot4_wire(
+                date, (card.get("would_buy") or {}).get("rows") or [])
+        except ValueError as exc:
+            print(f"[webull] {exc}")
+            last = {
+                "date": date, "env": env, "submit": False,
+                "connected": True, "error": str(exc), "host": api.host,
+                "n_tickets": 0, "source": source, "combo": "",
+                "stale": bool(card.get("stale")), "policy": HOT4,
+                "skipped": card.get("skipped") or [], "why": str(exc),
+                "sent": [],
+                "generated": datetime.now().isoformat(timespec="seconds"),
+            }
+            if write:
+                write_last(last)
+            return 2
     if submit and card.get("stale") and not allow_stale:
         print("[webull] stale look — dry-run only (pass --allow-stale "
               "to send Friday's list as today's tickets)")

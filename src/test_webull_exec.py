@@ -152,6 +152,59 @@ def test_not_connected_writes_last_without_replay(tmp_path=None) -> None:
     assert "401" in (last.get("error") or "")
 
 
+def test_hot4_submit_refuses_divergent_wire() -> None:
+    from unittest import mock
+    from src import webull_exec as we
+
+    class Alive:
+        env = "paper"
+        host = "api.sandbox.webull.com"
+        err = None
+
+        def connect(self) -> bool:
+            return True
+
+        def snapshot(self):
+            return BrokerSnap(env="paper", cash=10_000, positions={},
+                              connected=True, acc_id="paper-1")
+
+        def place(self, *a, **k):
+            raise AssertionError("divergent HOT4 must not place")
+
+        def place_batch(self, *a, **k):
+            raise AssertionError("divergent HOT4 must not place")
+
+    card = {
+        "date": "2026-09-21", "stale": False, "policy": HOT4,
+        "tickets": [{
+            "side": "BUY", "ticker": "DELL", "shares": 1, "px": 10.0,
+            "status": "plan", "date": "2026-09-21",
+        }],
+        "would_buy": {"rows": [
+            {"ticker": t, "side": "long"}
+            for t in ("DELL", "GME", "UMC", "VSTS")
+        ]},
+        "hard_red": False,
+    }
+    with mock.patch.object(we, "PaperAPI", return_value=Alive()), \
+            mock.patch.object(we, "_plan", return_value=card), \
+            mock.patch(
+                "src.strategy_tickets.assert_hot4_wire",
+                side_effect=ValueError(
+                    "HOT4 buys ['DELL', 'GME', 'UMC', 'VSTS'] diverge from "
+                    "Factor Mine recipe ['FEAM', 'TJGC', 'LVWR', 'SECZ'] "
+                    "for 2026-09-21"),
+            ), \
+            mock.patch.object(we, "write_last") as wl, \
+            mock.patch.object(we, "inject_today_from_disk"):
+        rc = we.run("2026-09-21", submit=True, write=True, source="hot4")
+    assert rc == 2
+    last = wl.call_args[0][0]
+    assert last["submit"] is False
+    assert last["sent"] == []
+    assert "diverge" in (last.get("error") or "")
+
+
 def test_stale_combo_does_not_submit() -> None:
     from unittest import mock
     from src import webull_exec as we
@@ -573,6 +626,7 @@ def main() -> None:
     test_submit_uses_paper_place()
     test_env_strips_quoted_secrets()
     test_not_connected_writes_last_without_replay()
+    test_hot4_submit_refuses_divergent_wire()
     test_stale_combo_does_not_submit()
     test_yml_warms_before_bell_and_has_one_automatic_sender()
     test_hot4_tickets_long_only_skip_held_cash_and_sit()
@@ -586,7 +640,7 @@ def main() -> None:
     test_place_batch_skips_leg_that_cannot_buy_one_share()
     test_place_batch_keeps_haircut_plan_when_preopen_cash_is_unchanged()
     test_rejected_leg_does_not_reserve_cash()
-    print("test_webull_exec: 21 ok")
+    print("test_webull_exec: 22 ok")
 
 
 if __name__ == "__main__":

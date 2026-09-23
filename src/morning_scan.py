@@ -6,19 +6,19 @@ KEEP prove is evidence this *methodology* works — not a recipe to pin:
     panel ∪ Theme Radar Clock-B oppset aisle
   * #278 ``c4_downside`` short KEEP is Clock-B #4 (``clk_neg_weak_fail``)
 
-This module is the **ticket / open-pack** scan path. It does not remine
-the cash book, does not change ``flatten_robust`` / Webull / paper_open,
-and does not publish a parallel e_fresh list next to flatten.
+This module is the research sleeve scan. It does not remine the cash
+book, does not change ``flatten_robust``, and does not feed the Webull
+HOT4 wire (``union_hot_n4_h1`` uses Factor Mine ``pick_day``).
 
-Morning factor-mine picks:
+Research factor-mine sleeves:
 
   1. Aisle = session panel rows ∪ T−1 oppset-flagged names
   2. Stamp Clock-B #279 combo flags on every aisle row
   3. Filter / rank with those gates (longs drop ``clk_ext_veto``; KEEP
      long signals and Clock-B #4 shorts float first) *before* top_n
 
-``FULLSCAN_OPPSET_UNION`` stays the remine opt-in. Tickets always use
-the KEEP aisle so open-pack factor-mine buys can diverge after restamp.
+``FULLSCAN_OPPSET_UNION`` stays the remine opt-in. Research sleeves may
+scan this aisle. The live Webull HOT4 wire does not.
 """
 from __future__ import annotations
 

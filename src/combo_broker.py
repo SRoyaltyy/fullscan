@@ -61,9 +61,10 @@ def build_look_rows(date: str) -> list[dict]:
 
     Same candidate buckets as ``build_panel``. Same-day Change% / Gap
     still never attach. Used so Monday paper tickets are not Friday's list.
-    ``strategy_tickets`` then expands the look through ``morning_scan``
-    (vendored oppset ∪ Clock-B). This builder does not change
-    flatten_robust.
+    ``strategy_tickets`` may expand research sleeves through
+    ``morning_scan`` (vendored oppset ∪ Clock-B). The Webull HOT4
+    wire does not — it is Factor Mine ``pick_day`` on these rows.
+    This builder does not change flatten_robust.
     """
     fm._SCAN_CACHE.clear()
     payload = sm.load_payload()

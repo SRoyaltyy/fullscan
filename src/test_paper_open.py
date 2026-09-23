@@ -5,6 +5,25 @@ import pytest
 from . import paper_open as po, webull_exec as we
 from .futubull_exec import BrokerSnap
 
+
+@pytest.fixture(autouse=True)
+def synthetic_hot4_matches_payload(monkeypatch, request):
+    """Synthetic tickets are not the live Factor Mine panel.
+
+    The divergence test runs the real submit check.
+    """
+    if request.node.name == "test_submit_refuses_hot4_buys_that_diverge_from_recipe":
+        return
+
+    def _accept(date, buys, panel=None):
+        return [
+            str(b.get("ticker") or "").upper()
+            for b in (buys or [])
+            if isinstance(b, dict) and b.get("ticker")
+        ]
+
+    monkeypatch.setattr("src.strategy_tickets.assert_hot4_wire", _accept)
+
 DATE = '2026-09-17'
 BELL = datetime.fromisoformat(DATE+'T09:30:00-04:00')
 
@@ -30,6 +49,20 @@ class API:
 
 def plan():
     return po.make_plan(payload(), API().snapshot(), BELL-timedelta(seconds=15))
+
+
+def test_submit_refuses_hot4_buys_that_diverge_from_recipe(monkeypatch):
+    monkeypatch.setattr(
+        "src.strategy_tickets.hot4_recipe_tickers",
+        lambda date, panel=None: ["FEAM", "TJGC", "LVWR", "SECZ"],
+    )
+    p = payload()
+    p["strategies"][we.HOT4]["buy"] = [
+        {"ticker": t, "side": "long", "px": 10}
+        for t in ("DELL", "GME", "UMC", "VSTS")
+    ]
+    with pytest.raises(ValueError, match="diverge"):
+        po.make_plan(p, API().snapshot(), BELL - timedelta(seconds=15))
 
 
 def test_empty_valid_selection_does_not_reconstruct_winners():
