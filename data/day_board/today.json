@@ -1,6 +1,6 @@
 {
   "date": "2026-09-23",
-  "generated_at": "2026-09-23T05:43:15.637977-04:00",
+  "generated_at": "2026-09-23T05:43:19.337424-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -163,24 +163,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "sector_board",
-      "title": "Sector board",
-      "date": "2026-09-23",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-23T04:49:34.932458-04:00",
-      "files": [
-        {
-          "path": "01_daily/sectors/2026-09-23/_board.json",
-          "ok": true,
-          "reason": "",
-          "size": 5243,
-          "preview": "keys: date, generated_at, sectors"
-        }
-      ],
-      "preview": "keys: date, generated_at, sectors"
-    },
     {
       "key": "map_heat_research",
       "title": "Map heat morning delta refresh",
@@ -383,6 +365,115 @@
         }
       ],
       "preview": "1d BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX \u00b7 green 188 \u00b7 CVLT, RELY, AVT, GDDY, SNX, EXLS, NXT, PDFS, DLO, DT \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX \u00b7 2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX \u00b7 # Stock book \u2014 2026-09-23\n_Generated 2026-09-23T05:41:38.825961-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-09-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-23T05:43:18.854916-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 15224,
+          "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 683,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-23.json",
+          "ok": true,
+          "reason": "",
+          "size": 82894,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-23_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 43362,
+          "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 811324,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-23_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 811324,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1145339,
+          "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 811324,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 43362,
+          "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 811324,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 811324,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1145339,
+          "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 2010,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 2010,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
