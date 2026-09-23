@@ -1,12 +1,12 @@
 # Sector Board — 2026-09-23
 
-Generated: **2026-09-23T04:49:34.896222-04:00** (America/New_York)
+Generated: **2026-09-23T07:26:10.565009-04:00** (America/New_York)
 
 Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.).
 
 ## Summary
 
-- Predicts present: **0/11**
+- Predicts present: **1/11**
 - Outcomes graded: **0/11**
 - Direction hits (when graded): **0/0**
 - Predicted up / down / flat-or-missing: **0** / **0** / **11**
@@ -15,7 +15,7 @@ Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file 
 
 | Sector | ETF | Dir | Mag | Score | Conf | Actual% | Dir hit | Mag hit | MD |
 |--------|-----|-----|-----|-------|------|---------|---------|---------|----|
-| Basic Materials | XLB | — | — | — | — | — | — | — | — |
+| Basic Materials | XLB | flat | flat | 2.49 | 0.55 | — | — | — | P |
 | Communication Services | XLC | — | — | — | — | — | — | — | — |
 | Consumer Cyclical | XLY | — | — | — | — | — | — | — | — |
 | Consumer Defensive | XLP | — | — | — | — | — | — | — | — |

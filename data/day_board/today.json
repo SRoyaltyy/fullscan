@@ -1,6 +1,6 @@
 {
   "date": "2026-09-23",
-  "generated_at": "2026-09-23T06:24:49.936634-04:00",
+  "generated_at": "2026-09-23T07:26:12.041188-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -153,9 +153,9 @@
     "direction": "up"
   },
   "sectors": {
-    "said": "0 up / 0 down / 0 flat",
+    "said": "0 up / 0 down / 1 flat",
     "bullets": [
-      "XLB missing",
+      "XLB FLAT +2.5",
       "XLC missing",
       "XLY missing",
       "XLP missing",
@@ -169,31 +169,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "catalyst",
-      "title": "Catalyst dossiers (after book)",
-      "date": "2026-09-23",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-23T05:02:25.009607-04:00",
-      "files": [
-        {
-          "path": "01_daily/catalyst/2026-09-23_dossiers.json",
-          "ok": true,
-          "reason": "",
-          "size": 2853,
-          "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, targets, dossiers"
-        },
-        {
-          "path": "01_daily/catalyst/2026-09-23_dossiers.md",
-          "ok": true,
-          "reason": "",
-          "size": 1291,
-          "preview": "# CATALYST DAILY \u2014 2026-09-23\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
-        }
-      ],
-      "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-09-23\n0/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
-    },
     {
       "key": "status",
       "title": "Pre-open status packet",
@@ -501,6 +476,73 @@
         }
       ],
       "preview": "# Paper trading \u2014 Futubull-fee simulation\nAs of **2026-09-23** \u00b7 $10,000 starting capital per sleeve \u00b7 fees per `00_grounding/futubull_fees.json`\nLatest book **2026-09-23** ranker: **green pile** (168 liquid names). Paper buys the pile 15, not the old weighted 15.\nSleeves: `{horizon}_top` = top-N overall buys, `{horizon}_size` = top 3 per size bucket. Fill at signal-day close. Sell only after min-hold (1d=1, 3d=3, 1w=5, 2w=10, 1m=21 **trading sessions** \u2014 weekends and NYSE holidays do not count) AND the name has left the book.\n| Sleeve | Equity | Return | Cash | Open pos | Trades | Fees paid | Realized P/L | Unrealized P/L | Closed win | Open win |\n|--------|--------|--------|------|----------|--------|-----------|--------------|----------------|------------|----------|\n| 1d_top | $9,597.25 | -4.03% | $4,366.28 | 10 | 402 | $888.71 | $-381.77 | $-20.98 | 31.6% | 0.0% |\n| 1d_size | $10,10 \u00b7 <!DOCTYPE html>\n<html lang=\"en\"><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Paper Trading \u2014 Stock Book Simulation</title>\n<style>\n:root{\n--bg:#0f1420; --card:#171e2e; --line:#262f45; --line2:#232c42;\n--fg:#dfe6f2; --mut:#8b96ab; --dim:#6"
+    },
+    {
+      "key": "sector_one",
+      "title": "Sector predict Basic Materials (1/11)",
+      "date": "2026-09-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-23T07:26:10.613943-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-23/basic_materials_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 19952,
+          "preview": "# Sector Prediction \u2014 Basic Materials \u2014 2026-09-23\n- ETF: **XLB**\n- rubric: `00_grounding/sectors/basic_materials.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **2.494** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **0.646** (ES +0.03%, HG +0.66%, GC +0.90%, DX -0.02%, PM:XLB +0.02%) \u00b7 index_carry **0.573** (general 2.293) \u00b7 llm_overlay **1.275** (raw 1.275)"
+        },
+        {
+          "path": "01_daily/sectors/2026-09-23/basic_materials_predict_trace.md",
+          "ok": true,
+          "reason": "",
+          "size": 396,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Basic Materials 2026-09-23\n**Step 0 \u2014 Setup.** Loaded 152,076 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (17,857 characters)."
+        },
+        {
+          "path": "01_daily/_transcripts/2026-09-23_sector_basic_materials_predict.json",
+          "ok": true,
+          "reason": "",
+          "size": 174375,
+          "preview": "keys: provider, agent, backend_model, messages"
+        },
+        {
+          "path": "01_daily/2026-09-23_preopen_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 7257,
+          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
+        },
+        {
+          "path": "01_daily/sectors/2026-09-23/_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 1254,
+          "preview": "keys: date, n_ok, n_total, sectors"
+        },
+        {
+          "path": "01_daily/sectors/2026-09-23/_BOARD.md",
+          "ok": true,
+          "reason": "",
+          "size": 1568,
+          "preview": "# Sector Board \u2014 2026-09-23\nGenerated: **2026-09-23T07:26:10.565009-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+        },
+        {
+          "path": "01_daily/sectors/2026-09-23/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 5412,
+          "preview": "keys: date, generated_at, sectors"
+        },
+        {
+          "path": "03_scoreboard/scoreboard.json",
+          "ok": true,
+          "reason": "",
+          "size": 849909,
+          "preview": "keys: runs"
+        }
+      ],
+      "preview": "# Sector Prediction \u2014 Basic Materials \u2014 2026-09-23\n- ETF: **XLB**\n- rubric: `00_grounding/sectors/basic_materials.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **2.494** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **0.646** (ES +0.03%, HG +0.66%, GC +0.90%, DX -0.02%, PM:XLB +0.02%) \u00b7 index_carry **0.573** (general 2.293) \u00b7 llm_overlay **1.275** (raw 1.275) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Basic Materials 2026-09-23\n**Step 0 \u2014 Setup.** Loaded 152,076 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (17,857 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-23\nGenerated: **2026-09-23T07:26:10.565009-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, "
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
