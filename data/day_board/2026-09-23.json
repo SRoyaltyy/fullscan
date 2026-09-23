@@ -1,10 +1,9 @@
 {
   "date": "2026-09-23",
-  "generated_at": "2026-09-23T04:35:17.580414-04:00",
+  "generated_at": "2026-09-23T04:39:53.244049-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-09-23_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-23/_board.json` \u2014 missing"
   ],
   "counts": {
@@ -180,7 +179,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 4,
+      "n_req_ok": 5,
       "n_req": 20,
       "n_opt_ok": 2,
       "n_opt": 3,
@@ -323,11 +322,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-09-23_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 15383,
+          "said": "UP 2.293",
+          "bullets": [
+            "bad: Trump-Xi arrival/summit two-sided unprinted",
+            "bad: leftover Hormuz physical still tight",
+            "bad: paid hawkish SEP ~54% Oct hike",
+            "good: oil offered CL -4.7% BZ -3.5%"
+          ]
         },
         {
           "key": "board",
@@ -347,12 +351,12 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7270,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 14 fail",
+          "size": 7267,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 13 fail",
           "bullets": [
-            "general_predict:missing",
             "finviz_market_digest:missing",
             "map_heat_research:missing",
+            "sector_predict:missing",
             "sector_predict:missing"
           ]
         },
@@ -500,8 +504,13 @@
           "bullets": []
         }
       ],
-      "said": "news 120 raw / 6 usable \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
+      "said": "general UP  2.293 \u00b7 news 120 raw / 6 usable \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
       "bullets": [
+        "bad: Trump-Xi arrival/summit two-sided unprinted",
+        "bad: leftover Hormuz physical still tight",
+        "bad: paid hawkish SEP ~54% Oct hike",
+        "good: oil offered CL -4.7% BZ -3.5%",
+        "good: VIX 14.15 contango collapsing",
         "Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
         "Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comments boost September U.S. rate hike expectations",
         "Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year",
@@ -678,11 +687,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-09-23_predict.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 15383,
+          "said": "UP 2.293",
+          "bullets": [
+            "bad: Trump-Xi arrival/summit two-sided unprinted",
+            "bad: leftover Hormuz physical still tight",
+            "bad: paid hawkish SEP ~54% Oct hike",
+            "good: oil offered CL -4.7% BZ -3.5%"
+          ]
         },
         {
           "key": "in_board",
@@ -923,7 +937,18 @@
     "buy_1d": [],
     "sell_1d": [],
     "flatten": {},
-    "general": {},
+    "general": {
+      "said": "UP  2.293",
+      "bullets": [
+        "bad: Trump-Xi arrival/summit two-sided unprinted",
+        "bad: leftover Hormuz physical still tight",
+        "bad: paid hawkish SEP ~54% Oct hike",
+        "good: oil offered CL -4.7% BZ -3.5%",
+        "good: VIX 14.15 contango collapsing"
+      ],
+      "score": "2.293",
+      "direction": "up"
+    },
     "sectors": {},
     "news": {
       "said": "120 raw / 6 usable \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
@@ -1412,6 +1437,24 @@
         }
       ],
       "preview": "# News Judge \u2014 2026-09-23 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "date": "2026-09-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-23T04:39:52.569258-04:00",
+      "files": [
+        {
+          "path": "01_daily/general/2026-09-23_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 15383,
+          "preview": "# Premarket Prediction \u2014 2026-09-23\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 2.293 (uncertainty multiplier \u00d71.0) | confidence 0.592\n>\n> **Good news vs bad news:** good +1.25 pts vs bad 0 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - oil offered CL -4.7% BZ -3.5%\n> - VIX 14.15 contango collapsing\n> - HY contained 2.66\n> - Asia composite +0.33%\n> - leftover Nasdaq/chips bid paid\n>\n> **Bad news driving this:**\n> - Trump-Xi arrival/summit two-sided unprinted\n> - leftover Hormuz physical still tight\n> - paid hawkish SEP ~54% Oct hike\n> - 1m real-yield backup +27bp still on tape\n> - Barr 10:05 ET unprinted\n>\n> **market uncertainty: **elevated** | VIX 14.15 | policy-uncertainty index 220.02 (1d +39.93)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \u26aa Asia overnight session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Europe session: +0.0 \u00d7"
+        }
+      ],
+      "preview": "# Premarket Prediction \u2014 2026-09-23\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 2.293 (uncertainty multiplier \u00d71.0) | confidence 0.592\n>\n> **Good news vs bad news:** good +1.25 pts vs bad 0 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - oil offered CL -4.7% BZ -3.5%\n> - VIX 14.15 contango collapsing\n> - HY contained 2.66\n> - Asia composite +0.33%\n> - leftover Nasdaq/chips bid paid\n>\n> **Bad news driving this:**\n> - Trump-Xi arrival/summit two-sided unprinted\n> - leftover Hormuz physical still tight\n> - paid hawkish SEP ~54% Oct hike\n> - 1m real-yield backup +27bp still on tape\n> - Barr 10:05 ET unprinted\n>\n> **market uncertainty: **elevated** | VIX 14.15 | policy-uncertainty index 220.02 (1d +39.93)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \u26aa Asia overnight session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Europe session: +0.0 \u00d7"
     }
   ],
   "href": {
