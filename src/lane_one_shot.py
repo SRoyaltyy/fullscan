@@ -210,9 +210,10 @@ ANALYST_LANES = [
     "zhipu", "openrouter", "qwen", "tokenhub",
     "siliconflow", "mistral", "nvidia_nim", "pollinations",
 ]
-# Lookup core-vs-tangent filter. 8B is allowed here. Zhipu stays reserved
-# for the classify floor so a filter miss does not burn glm-4.7-flash.
+# Lookup core-vs-tangent filter. OpenClaw is first after class is locked.
+# 8B remains the fallback when the gateway times out or rejects the JSON.
 FILTER_LANES = [
+    "openclaw",
     "siliconflow", "mistral", "openrouter", "qwen",
     "nvidia_nim", "pollinations",
 ]

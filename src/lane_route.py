@@ -899,18 +899,72 @@ def prompt_for(q: dict):
 
 
 def extract_json(text):
-    text = (text or "").strip()
-    try:
-        return json.loads(text)
-    except Exception:
-        pass
-    a, b = text.find("{"), text.rfind("}")
-    if a >= 0 and b > a:
+    """Parse a model reply. Prefer the last object that carries a class or book.
+
+    Grok often drafts one JSON object, then writes the final one, sometimes
+    inside a ```json fence. The first brace-span is the draft. A usable
+    event_class or entities list still has to clear the floor checks.
+    """
+    raw = _strip_fence(text or "")
+    objs = _json_objects(raw)
+    if not objs:
         try:
-            return json.loads(text[a:b + 1])
+            obj = json.loads(raw)
         except Exception:
             return None
-    return None
+        if isinstance(obj, dict):
+            return _unwrap_json(obj)
+        if isinstance(obj, list):
+            dicts = [_unwrap_json(item) for item in obj if isinstance(item, dict)]
+            useful = [item for item in dicts if _json_useful(item)]
+            return (useful or dicts or [None])[-1]
+        return None
+    useful = [obj for obj in objs if _json_useful(obj)]
+    return (useful or objs)[-1]
+
+
+def _strip_fence(text: str) -> str:
+    cleaned = (text or "").strip()
+    cleaned = re.sub(r"(?is)^```(?:json)?\s*", "", cleaned)
+    cleaned = re.sub(r"(?is)\s*```$", "", cleaned)
+    return cleaned.strip()
+
+
+def _unwrap_json(obj: dict) -> dict:
+    if _json_useful(obj):
+        return obj
+    for key in ("result", "json", "output", "data", "answer", "classification"):
+        inner = obj.get(key)
+        if isinstance(inner, str):
+            inner = extract_json(inner)
+        if isinstance(inner, dict):
+            return inner
+    return obj
+
+
+def _json_useful(obj: dict) -> bool:
+    if not isinstance(obj, dict):
+        return False
+    return any(obj.get(key) for key in ("event_class", "entities", "winners", "losers", "m2"))
+
+
+def _json_objects(text: str) -> list:
+    found = []
+    decoder = json.JSONDecoder()
+    i = 0
+    while i < len(text):
+        if text[i] != "{":
+            i += 1
+            continue
+        try:
+            obj, end = decoder.raw_decode(text, i)
+        except Exception:
+            i += 1
+            continue
+        if isinstance(obj, dict):
+            found.append(_unwrap_json(obj))
+        i = max(end, i + 1)
+    return found
 
 
 def http_json(url, payload=None, headers=None, timeout=20):
@@ -1018,7 +1072,7 @@ def openai_chat(url, key, model, prompt, extra=None, max_tokens=320, system=None
             "max_tokens": bumped,
             "temperature": 0.1,
         }
-        status, body, _ = http_json(url, payload, headers, timeout=90)
+        status, body, _ = http_json(url, payload, headers, timeout=timeout)
         text = _choice_text(body) if status == 200 else ""
         parsed = extract_json(text) if status == 200 else None
     if status != 200:
@@ -1507,7 +1561,11 @@ def openclaw_chat(backend_model, prompt, max_tokens=320, system=None):
     token = (os.environ.get("OPENCLAW_TOKEN") or "").strip()
     agent = (os.environ.get("OPENCLAW_AGENT") or "openclaw/default").strip()
     raw_to = (os.environ.get("OPENCLAW_LANE_TIMEOUT") or "").strip()
-    timeout = int(raw_to) if raw_to.isdigit() else 120
+    # Pre-Open uses OPENCLAW_TIMEOUT=10800 because one Grok turn may run
+    # tools for hours. Lane asks for one JSON object and does not run that
+    # tool loop. 120s timed out grok-4.6 on meta. 300s is enough for a
+    # reasoning JSON and still returns so the free hopper can run.
+    timeout = int(raw_to) if raw_to.isdigit() else 300
     backend = openclaw_allowlisted_model(backend_model)
     parsed, status, info = openai_chat(
         base + "/v1/chat/completions",

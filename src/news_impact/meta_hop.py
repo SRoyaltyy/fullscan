@@ -168,11 +168,18 @@ def pack_complete_acceptable(parsed: dict | None, questions: list[dict]) -> bool
 
 
 def direction_blocked(meta: dict) -> bool:
-    """A blocked direction question is not_determined, not a guess."""
+    """Incomplete pack means the analyst must not guess a direction.
+
+    A finished pack (every direction question answered or explicitly
+    blocked) keeps the analyst's signed up/down. One blocked extra
+    question used to wipe the whole book and leave no ACTION.
+    """
+    if (meta.get("m4") or {}).get("pack_complete"):
+        return False
     for q in meta.get("m2") or []:
         if "direction" in (q.get("blocks") or []) and q.get("status") == "blocked":
             return True
-    return not bool((meta.get("m4") or {}).get("pack_complete"))
+    return True
 
 
 def pack_nonempty(facts: list[dict]) -> bool:

@@ -793,6 +793,40 @@ def _bind_ticker(name: str, instruments: list[dict]) -> str | None:
     return str(pool[0].get("ticker") or "").upper() or None
 
 
+def _signed_rows(rows: list) -> bool:
+    for row in rows:
+        if isinstance(row, dict) and str(row.get("direction") or "") in {"up", "down"}:
+            return True
+    return False
+
+
+def _side_rows(raw, direction: str) -> list[dict]:
+    """Prompt asks for winners[] and losers[] as well as entities[]."""
+    out = []
+    for item in _as_list(raw):
+        if isinstance(item, str):
+            text = item.strip()
+            if not text:
+                continue
+            tick = text.upper() if re.fullmatch(r"[A-Za-z.]{1,6}", text) else None
+            out.append({
+                "name": text,
+                "ticker": tick,
+                "direction": direction,
+                "role": "harm_set" if direction == "down" else "named",
+            })
+            continue
+        if not isinstance(item, dict):
+            continue
+        row = dict(item)
+        if str(row.get("direction") or "") not in {"up", "down"}:
+            row["direction"] = direction
+        if not row.get("role"):
+            row["role"] = "harm_set" if direction == "down" else "named"
+        out.append(row)
+    return out
+
+
 def _normalize_entities(
     parsed: dict | None,
     instruments: list[dict],
@@ -806,7 +840,23 @@ def _normalize_entities(
     entities = []
     if not isinstance(parsed, dict):
         return [], ["analyst_not_json"]
-    for row in _as_list(parsed.get("entities")):
+    rows = _as_list(parsed.get("entities"))
+    if not _signed_rows(rows):
+        sides = _side_rows(parsed.get("winners"), "up") + _side_rows(parsed.get("losers"), "down")
+        side_ticks = {
+            str(row.get("ticker") or "").upper()
+            for row in sides if row.get("ticker")
+        }
+        rows = [
+            row for row in rows
+            if not (
+                isinstance(row, dict)
+                and str(row.get("ticker") or "").upper() in side_ticks
+                and str(row.get("direction") or "") not in {"up", "down"}
+            )
+        ]
+        rows = list(rows) + sides
+    for row in rows:
         if not isinstance(row, dict):
             continue
         direction = str(row.get("direction") or "not_determined")

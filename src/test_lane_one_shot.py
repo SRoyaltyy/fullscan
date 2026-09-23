@@ -562,7 +562,7 @@ def test_openclaw_chat_watermark_is_backend_model(monkeypatch):
     assert seen["key"] == "tok"
     assert "18789" in seen["url"]
     assert seen["url"].endswith("/v1/chat/completions")
-    assert seen["timeout"] == 120
+    assert seen["timeout"] == 300
 
 
 def test_openclaw_classify_hop_is_first(monkeypatch):
@@ -610,6 +610,115 @@ def test_openclaw_fast_alias_is_not_sent(monkeypatch):
     assert "grok-4-fast" not in seen[0]
     assert parsed == {"event_class": "gate"}
     assert info == "xai/grok-4.6"
+
+
+def test_openclaw_lane_timeout_env(monkeypatch):
+    from src import lane_route
+    monkeypatch.setenv("OPENCLAW_GATEWAY_URL", "http://127.0.0.1:18789")
+    monkeypatch.setenv("OPENCLAW_LANE_TIMEOUT", "450")
+    monkeypatch.setattr("src.config.align_openclaw_token", lambda **_k: "tok")
+    seen = {}
+
+    def fake_chat(url, key, model, prompt, extra=None, max_tokens=320,
+                  system=None, timeout=None):
+        seen["timeout"] = timeout
+        return {"event_class": "blast_ops"}, 200, model
+
+    monkeypatch.setattr(lane_route, "openai_chat", fake_chat)
+    lane_route.openclaw_chat("xai/grok-4.6", "hi")
+    assert seen["timeout"] == 450
+
+
+def test_extract_json_keeps_final_class_not_the_draft():
+    from src.lane_route import extract_json
+    from src.news_impact.one_shot_stack import classify_acceptable
+    text = (
+        'draft {"event_class":"labor_stop","q5":"impulse"}\n'
+        '```json\n'
+        '{"event_class":"blast_ops","q5":"impulse","constraint":"TSA unpaid"}\n'
+        '```'
+    )
+    parsed = extract_json(text)
+    assert parsed["event_class"] == "blast_ops"
+    assert classify_acceptable(parsed, "TSA unpaid", "", gold_id="tsa")
+    draft = {"event_class": "labor_stop", "q5": "impulse"}
+    assert not classify_acceptable(draft, "TSA unpaid", "", gold_id="tsa")
+
+
+def test_winners_and_losers_sign_entities():
+    from src.news_impact.one_shot_stack import _normalize_entities
+    instruments = [
+        {"ticker": "NVO", "entity_name": "Novo Nordisk"},
+        {"ticker": "LLY", "entity_name": "Eli Lilly"},
+    ]
+    entities, errors = _normalize_entities(
+        {
+            "entities": [
+                {"name": "Novo", "ticker": "NVO", "direction": "not_determined"},
+            ],
+            "losers": [{"name": "Novo Nordisk", "ticker": "NVO"}, "LLY"],
+        },
+        instruments, set(), [], "medium",
+    )
+    assert errors == []
+    signed = {e["ticker"]: e["direction"] for e in entities}
+    assert signed["NVO"] == "down"
+    assert signed["LLY"] == "down"
+
+
+def test_finished_pack_keeps_signed_direction():
+    from src.news_impact.meta_hop import direction_blocked
+    assert direction_blocked({
+        "m2": [
+            {"blocks": ["direction"], "status": "answered"},
+            {"blocks": ["direction"], "status": "blocked"},
+        ],
+        "m4": {"pack_complete": True},
+    }) is False
+    assert direction_blocked({
+        "m2": [{"blocks": ["direction"], "status": "blocked"}],
+        "m4": {"pack_complete": False},
+    }) is True
+
+
+def test_filter_and_analyst_ask_openclaw_first(monkeypatch):
+    from src import lane_route
+    from src.lane_one_shot import ANALYST_LANES, FILTER_LANES, LiveLane
+    assert FILTER_LANES[0] == "openclaw"
+    assert ANALYST_LANES[0] == "openclaw"
+    monkeypatch.setattr("src.config.align_openclaw_token", lambda **_k: "tok")
+    monkeypatch.setattr(
+        lane_route, "load_keys",
+        lambda: ({"openclaw": "gateway"}, "", ""),
+    )
+    calls = []
+
+    def fake_ask(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom", accept=None):
+        calls.append((lane, tmpl))
+        if lane == "openclaw":
+            return {"core": ["CAR"]}, "xai/grok-4.6"
+        return None, None
+
+    monkeypatch.setattr(lane_route, "ask_lane", fake_ask)
+    live = LiveLane()
+    parsed, hop, model = live("filter", "prompt", "system", accept=lambda blob: True)
+    assert calls[0] == ("openclaw", "news_impact")
+    assert hop == "openclaw"
+    assert model == "xai/grok-4.6"
+    assert parsed["core"] == ["CAR"]
+    calls.clear()
+
+    def fake_analyst(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom", accept=None):
+        calls.append(lane)
+        if lane == "openclaw":
+            return {"entities": [{"ticker": "CAR", "direction": "up"}]}, "xai/grok-4.6"
+        return None, None
+
+    monkeypatch.setattr(lane_route, "ask_lane", fake_analyst)
+    parsed, hop, model = live("analyst", "prompt", "system", accept=lambda blob: True)
+    assert calls[0] == "openclaw"
+    assert hop == "openclaw"
+    assert model == "xai/grok-4.6"
 
 
 def test_dashscope_401_on_one_host_tries_the_next(monkeypatch):

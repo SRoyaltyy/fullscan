@@ -72,7 +72,9 @@ jobs:
     # Push stays on GitHub-hosted so an offline ECS runner cannot block CI.
     # workflow_dispatch runner=ecs is the OpenClaw path (same labels as Pre-Open).
     runs-on: ${{ (github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
-    timeout-minutes: 90
+    # Lane JSON only. Pre-Open's OPENCLAW_TIMEOUT is 10800s for a tool turn.
+    # 120s timed out grok-4.6. 300s still returns on a hang so the free hopper runs.
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
 
@@ -118,7 +120,7 @@ jobs:
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
           OPENCLAW_BACKEND_MODEL: xai/grok-4.6
-          OPENCLAW_LANE_TIMEOUT: "120"
+          OPENCLAW_LANE_TIMEOUT: "300"
           LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'grok' }}
         run: PYTHONPATH=. python3 -m src.lane_one_shot --env-check
 
@@ -161,7 +163,7 @@ jobs:
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
           OPENCLAW_BACKEND_MODEL: xai/grok-4.6
-          OPENCLAW_LANE_TIMEOUT: "120"
+          OPENCLAW_LANE_TIMEOUT: "300"
           LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'grok' }}
         run: PYTHONPATH=. python3 -m src.lane_one_shot --gold-only
 
@@ -230,7 +232,7 @@ jobs:
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
           OPENCLAW_BACKEND_MODEL: xai/grok-4.6
-          OPENCLAW_LANE_TIMEOUT: "120"
+          OPENCLAW_LANE_TIMEOUT: "300"
           LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'grok' }}
         run: PYTHONPATH=. python3 -m src.lane_one_shot --env-check
 
@@ -271,7 +273,7 @@ jobs:
           OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
           OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
           OPENCLAW_BACKEND_MODEL: xai/grok-4.6
-          OPENCLAW_LANE_TIMEOUT: "120"
+          OPENCLAW_LANE_TIMEOUT: "300"
           LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'grok' }}
         run: |
           PYTHONPATH=. python3 -m src.lane_one_shot \
