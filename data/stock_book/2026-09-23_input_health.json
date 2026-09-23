@@ -1,6 +1,6 @@
 {
   "date": "2026-09-23",
-  "generated_at": "2026-09-23T06:24:42.842314-04:00",
+  "generated_at": "2026-09-23T07:29:19.334689-04:00",
   "inputs": [
     {
       "name": "finviz_export",
@@ -89,9 +89,9 @@
     {
       "name": "sector_predicts",
       "family": "sector",
-      "status": "missing",
-      "n": 0,
-      "detail": "0/11 quality"
+      "status": "degraded",
+      "n": 1,
+      "detail": "1/11 quality"
     },
     {
       "name": "price_store",
@@ -108,7 +108,7 @@
     "peer": "ok",
     "heat": "ok",
     "general": "ok",
-    "sector": "missing"
+    "sector": "degraded"
   },
   "families_present": {
     "join": true,
@@ -117,8 +117,8 @@
     "peer": true,
     "heat": true,
     "general": true,
-    "sector": false
+    "sector": true
   },
   "learn_grade": true,
-  "worst": "missing"
+  "worst": "stale"
 }
