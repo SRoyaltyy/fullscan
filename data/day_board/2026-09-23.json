@@ -1,6 +1,6 @@
 {
   "date": "2026-09-23",
-  "generated_at": "2026-09-23T11:04:51.338992-04:00",
+  "generated_at": "2026-09-23T13:57:47.197249-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -869,7 +869,7 @@
           "size": 75774,
           "said": "Stock book \u2014 2026-09-23",
           "bullets": [
-            "_Generated 2026-09-23T10:46:43.828705-04:00_",
+            "_Generated 2026-09-23T12:11:27.191464-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -2294,7 +2294,7 @@
       "date": "2026-09-23",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-23T11:04:50.613461-04:00",
+      "at": "2026-09-23T13:57:46.470367-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
@@ -2328,28 +2328,28 @@
           "path": "data/day_board/strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 916576,
+          "size": 967137,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "data/day_board/2026-09-23_strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 916576,
+          "size": 967137,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "data/day_board/today_strategies.json",
           "ok": true,
           "reason": "",
-          "size": 1353392,
+          "size": 1431555,
           "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL SOC, REAX, HAL, NOG, MUR, PUMP, CF, OVV"
         },
         {
           "path": "data/factor_mine/strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 916576,
+          "size": 967137,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
@@ -2363,21 +2363,21 @@
           "path": "dashboard/factor-mine/strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 916576,
+          "size": 967137,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "dashboard/factor-mine/today_strategies.json",
           "ok": true,
           "reason": "",
-          "size": 916576,
+          "size": 967137,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "dashboard/today_strategies.json",
           "ok": true,
           "reason": "",
-          "size": 1353392,
+          "size": 1431555,
           "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL SOC, REAX, HAL, NOG, MUR, PUMP, CF, OVV"
         },
         {
