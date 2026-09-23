@@ -208,8 +208,13 @@ ANALYST_LANES = [
 ]
 # Lookup core-vs-tangent filter. 8B is allowed here. Zhipu stays reserved
 # for the classify floor so a filter miss does not burn glm-4.7-flash.
-FILTER_LANES = ["siliconflow", "mistral", "openrouter", "qwen"]
-_FLOOR_PROVIDERS = frozenset({"zhipu", "siliconflow", "openrouter", "qwen", "tokenhub"})
+FILTER_LANES = [
+    "siliconflow", "mistral", "openrouter", "qwen",
+    "nvidia_nim", "pollinations",
+]
+_FLOOR_PROVIDERS = frozenset({
+    "zhipu", "siliconflow", "openrouter", "qwen", "tokenhub", "gemini",
+})
 
 
 def classify_lanes() -> list[str]:
@@ -227,6 +232,7 @@ class LiveLane:
         self.ctx = {"keys": keys, "ollama_url": ollama_url, "gh_direct": gh_direct}
         lane._SKIP.clear()
         lane._RATE_LIMITED.clear()
+        lane._MODEL_DENIED.clear()
         lane._OR_DAY_CAPPED = False
         self.last_classify_note = ""
 
@@ -267,6 +273,7 @@ class LiveLane:
             parsed, model = lane.ask_lane(
                 hop, prompt, self.ctx,
                 max_tokens=budget, system=system, tmpl="news_classify",
+                accept=accept,
             )
             if parsed is None or lane.is_classify_banned(str(model or "")):
                 notes.append(self._fail_note(hop, model))
@@ -327,6 +334,7 @@ class LiveLane:
             parsed, model = lane.ask_lane(
                 hop, prompt, self.ctx,
                 max_tokens=budget, system=system, tmpl="news_classify",
+                accept=accept,
             )
             if parsed is None or lane.is_classify_banned(str(model or "")):
                 notes.append(self._fail_note(hop, model))
@@ -720,7 +728,10 @@ def assess_board(text: str) -> list[str]:
         problems.append("classify histogram missing")
     if "ministral" in classify_block.lower():
         problems.append("ministral on classify")
-    floor = ("lane::zhipu::", "lane::openrouter::", "lane::qwen::", "lane::tokenhub::")
+    floor = (
+        "lane::zhipu::", "lane::openrouter::", "lane::qwen::",
+        "lane::tokenhub::", "lane::gemini::",
+    )
     if not any(prefix in classify_block for prefix in floor):
         problems.append("classify histogram has no floor model")
     if "no action warranted" in text.lower():

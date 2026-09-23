@@ -334,6 +334,7 @@ def run(date: str, limit: int = 0, dry_harvest: bool = False) -> dict:
     ctx = {"keys": keys, "ollama_url": ollama_url, "gh_direct": gh_direct}
     lane._SKIP.clear()
     lane._RATE_LIMITED.clear()
+    lane._MODEL_DENIED.clear()
     rows = []
     for i, art in enumerate(arts):
         print(f"[lane_news_scan] {i + 1}/{len(arts)} {art.get('title','')[:80]}")

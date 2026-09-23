@@ -6,6 +6,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -30,10 +31,23 @@ def gemini_api_key() -> str:
     ).strip()
 
 
+def _overview_flash_id(raw: str, current: str) -> str:
+    """Flash ID named by a Gemini 404. Not pro / plus."""
+    for mid in re.findall(r"models/([A-Za-z0-9._\-]+)", raw or ""):
+        low = mid.lower()
+        if mid == current or "flash" not in low:
+            continue
+        if any(bad in low for bad in ("pro", "ultra", "plus", "paid")):
+            continue
+        return mid
+    return ""
+
+
 def google_ai_overview(
     query: str,
     max_facts: int = 8,
     _model: str | None = None,
+    _followed: bool = False,
 ) -> tuple[str, list[dict], list[str]]:
     """Gemini + Google Search grounding = Google's search AI (free-tier key).
 
@@ -76,9 +90,17 @@ def google_ai_overview(
         with urllib.request.urlopen(req, timeout=25) as r:
             body = json.loads(r.read().decode() or "{}")
     except urllib.error.HTTPError as e:
+        raw = e.read().decode("utf-8", "replace")[:500]
         errors.append(f"google_overview HTTP {e.code}")
-        if e.code in (429, 404) and _model is None and model != "gemini-2.5-flash-lite":
-            return google_ai_overview(query, max_facts, _model="gemini-2.5-flash-lite")
+        named = _overview_flash_id(raw, model) if e.code == 404 else ""
+        if named and not _followed:
+            return google_ai_overview(
+                query, max_facts, _model=named, _followed=True,
+            )
+        if e.code in (429, 404) and not _followed and model != "gemini-2.5-flash-lite":
+            return google_ai_overview(
+                query, max_facts, _model="gemini-2.5-flash-lite",
+            )
         return "", [], errors
     except Exception as e:  # noqa: BLE001
         errors.append(f"google_overview: {e}")

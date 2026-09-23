@@ -415,6 +415,8 @@ def test_classify_floor_excludes_ministral_and_8b(monkeypatch):
     assert "mistral" not in order
     assert classify_models_for("zhipu")[0] == "glm-4.7-flash"
     assert "glm-4.6-flash" in classify_models_for("zhipu")
+    assert "glm-4.6v-flash" in classify_models_for("zhipu")
+    assert "glm-4.7-flashx" not in classify_models_for("zhipu")
     assert "glm-4.5-flash" not in classify_models_for("zhipu")
     assert classify_models_for("siliconflow") == []
     assert classify_models_for("qwen")[0] == "qwen-flash"
@@ -433,6 +435,8 @@ def test_classify_floor_excludes_ministral_and_8b(monkeypatch):
     assert primary_models_for("qwen", "news_to_tickers") == ["qwen-flash"]
     assert primary_models_for("mistral", "news_classify") == []
     assert primary_models_for("zhipu", "news_to_tickers") == ["glm-4.7-flash"]
+    from src.lane_one_shot import _FLOOR_PROVIDERS
+    assert "gemini" in _FLOOR_PROVIDERS
 
 
 def test_dashscope_401_on_one_host_tries_the_next(monkeypatch):
@@ -454,6 +458,113 @@ def test_dashscope_401_on_one_host_tries_the_next(monkeypatch):
     assert status == 200
     assert len(calls) >= 2
     assert "qwen" not in lane_route._SKIP
+
+
+def test_model_403_does_not_kill_the_provider():
+    from src import lane_route
+
+    lane_route._SKIP.clear()
+    lane_route._MODEL_DENIED.clear()
+    lane_route._RATE_LIMITED.clear()
+    seen = []
+
+    def call(model):
+        seen.append(model)
+        if model == "glm-4.6-flash":
+            return None, 403, "no permission for this model"
+        if model == "glm-5.3-flashx":
+            return None, 402, "quota for this model"
+        return {"event_class": "blast_ops", "q5": "impulse"}, 200, model
+
+    parsed, info = lane_route.hop_models(
+        "zhipu", ["glm-4.6-flash", "glm-4.6v-flash"], call,
+    )
+    assert parsed["event_class"] == "blast_ops"
+    assert info == "glm-4.6v-flash"
+    assert seen == ["glm-4.6-flash", "glm-4.6v-flash"]
+    assert "zhipu" not in lane_route._SKIP
+
+    lane_route._SKIP.clear()
+    lane_route._MODEL_DENIED.clear()
+    seen.clear()
+    parsed, info = lane_route.hop_models(
+        "tokenhub", ["glm-5.3-flashx", "deepseek-v4-flash"], call,
+    )
+    assert info == "deepseek-v4-flash"
+    assert "tokenhub" not in lane_route._SKIP
+    lane_route._SKIP.clear()
+    lane_route._MODEL_DENIED.clear()
+
+
+def test_rejected_enum_tries_the_next_model():
+    from src import lane_route
+
+    lane_route._SKIP.clear()
+    lane_route._MODEL_DENIED.clear()
+    seen = []
+
+    def call(model):
+        seen.append(model)
+        if model == "glm-5.3-flash":
+            return {"event_class": "regime_break", "q5": "regime_break"}, 200, model
+        return {"event_class": "blast_ops", "q5": "impulse"}, 200, model
+
+    parsed, info = lane_route.hop_models(
+        "tokenhub",
+        ["glm-5.3-flash", "deepseek-v4-flash"],
+        call,
+        accept=lambda row: row.get("event_class") == "blast_ops",
+    )
+    assert parsed["event_class"] == "blast_ops"
+    assert info == "deepseek-v4-flash"
+    assert seen == ["glm-5.3-flash", "deepseek-v4-flash"]
+    lane_route._SKIP.clear()
+    lane_route._MODEL_DENIED.clear()
+
+
+def test_dashscope_trailing_401_does_not_hide_a_soft_status(monkeypatch):
+    from src import lane_route
+
+    def fake_chat(url, key, model, prompt, extra=None, max_tokens=320, system=None):
+        if "custom.example" in url:
+            return None, 400, "bad request"
+        return None, 401, "Incorrect API key provided"
+
+    monkeypatch.setattr(lane_route, "openai_chat", fake_chat)
+    monkeypatch.setenv("DASHSCOPE_BASE_URL", "https://custom.example/compatible-mode/v1")
+    _parsed, status, info = lane_route.dashscope_chat("k", "qwen-flash", "hi")
+    assert status == 400
+    assert "all dashscope hosts" not in str(info)
+
+
+def test_zhipu_429_on_one_host_tries_the_other(monkeypatch):
+    from src import lane_route
+
+    calls = []
+
+    def fake_chat(url, key, model, prompt, extra=None, max_tokens=320, system=None):
+        calls.append(url)
+        if "bigmodel" in url:
+            return None, 429, "busy"
+        return {"ok": True}, 200, model
+
+    monkeypatch.setattr(lane_route, "openai_chat", fake_chat)
+    parsed, status, _info = lane_route.zhipu_chat("k", "glm-4.7-flash", "hi")
+    assert parsed == {"ok": True}
+    assert status == 200
+    assert len(calls) == 2
+
+
+def test_gemini_404_names_a_flash_id_not_pro():
+    from src.lane_route import gemini_flash_suggestions
+    text = (
+        "This model models/gemini-2.5-flash-lite is no longer available. "
+        "Please update your code to use models/gemini-3.1-flash-lite "
+        "or models/gemini-2.5-pro"
+    )
+    assert gemini_flash_suggestions(text) == [
+        "gemini-2.5-flash-lite", "gemini-3.1-flash-lite",
+    ]
 
 
 def test_think_tags_do_not_hide_json():
