@@ -2,8 +2,9 @@
 
 Publish writes morning tickets via ``strategy_tickets`` / ``publish_live_boards``.
 Webull HOT4 uses the Factor Mine cash-start recipe (``pick_day`` on the
-session panel), not the oppset_union + Clock-B morning scan. This module
-does not size Webull or flatten_robust lots.
+session panel) for buys and continuous-book list-drop sells, not the
+oppset_union + Clock-B morning scan. This module does not size Webull
+or flatten_robust lots.
 """
 from __future__ import annotations
 import argparse
