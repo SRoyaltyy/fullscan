@@ -1,39 +1,30 @@
 {
   "date": "2026-09-22",
-  "generated_at": "2026-09-22T19:07:22.610557-04:00",
+  "generated_at": "2026-09-22T20:08:05.759956-04:00",
   "featured": [
     "combo_sh_5050_shared",
     "union_e_fresh_h3",
-    "union_news_pack_net2_h1",
     "union_hot_n4_holdup",
     "overnight_mega_h1",
     "combo_sh_3070_shared",
-    "combo_se_5050_skip",
     "combo_sh_macd_5050_shared",
     "union_hot_n4_h1",
+    "combo_se_5050_skip",
+    "combo_oh_5050_shared",
     "combo_sh_7030_shared",
-    "combo_sj_3070_shared",
-    "union_join_vol_green_h1",
-    "combo_sj_5050_shared",
-    "combo_e1s_7030_shared",
     "overnight_mega_h2",
     "overnight_h1",
-    "combo_oh_5050_shared",
-    "union_news_pack_h1",
-    "combo_ps_5050_shared",
-    "combo_ps_7030_shared",
-    "combo_p2s_5050_shared",
     "flatten_h5"
   ],
   "quote": {
     "src": "elite_live",
-    "at": "2026-09-22T19:07:17.815385-04:00",
+    "at": "2026-09-22T20:08:01.127190-04:00",
     "after_open": true,
     "n": 11638,
     "error": null,
     "live": true
   },
-  "banner": "Elite Overview as of 19:07 ET",
+  "banner": "Elite Overview as of 20:08 ET",
   "clock_rule": "px is Finviz Elite Price from a fresh post-09:30 Overview export when live is allowed. Theme Radar close dump and yesterday Price are never live.",
   "sleeves": {
     "combo_sh_5050_shared": {
@@ -42,10 +33,6 @@
     },
     "union_e_fresh_h3": {
       "name": "union_e_fresh_h3",
-      "lots": []
-    },
-    "union_news_pack_net2_h1": {
-      "name": "union_news_pack_net2_h1",
       "lots": []
     },
     "union_hot_n4_holdup": {
@@ -60,10 +47,6 @@
       "name": "combo_sh_3070_shared",
       "lots": []
     },
-    "combo_se_5050_skip": {
-      "name": "combo_se_5050_skip",
-      "lots": []
-    },
     "combo_sh_macd_5050_shared": {
       "name": "combo_sh_macd_5050_shared",
       "lots": []
@@ -72,24 +55,16 @@
       "name": "union_hot_n4_h1",
       "lots": []
     },
+    "combo_se_5050_skip": {
+      "name": "combo_se_5050_skip",
+      "lots": []
+    },
+    "combo_oh_5050_shared": {
+      "name": "combo_oh_5050_shared",
+      "lots": []
+    },
     "combo_sh_7030_shared": {
       "name": "combo_sh_7030_shared",
-      "lots": []
-    },
-    "combo_sj_3070_shared": {
-      "name": "combo_sj_3070_shared",
-      "lots": []
-    },
-    "union_join_vol_green_h1": {
-      "name": "union_join_vol_green_h1",
-      "lots": []
-    },
-    "combo_sj_5050_shared": {
-      "name": "combo_sj_5050_shared",
-      "lots": []
-    },
-    "combo_e1s_7030_shared": {
-      "name": "combo_e1s_7030_shared",
       "lots": []
     },
     "overnight_mega_h2": {
@@ -98,26 +73,6 @@
     },
     "overnight_h1": {
       "name": "overnight_h1",
-      "lots": []
-    },
-    "combo_oh_5050_shared": {
-      "name": "combo_oh_5050_shared",
-      "lots": []
-    },
-    "union_news_pack_h1": {
-      "name": "union_news_pack_h1",
-      "lots": []
-    },
-    "combo_ps_5050_shared": {
-      "name": "combo_ps_5050_shared",
-      "lots": []
-    },
-    "combo_ps_7030_shared": {
-      "name": "combo_ps_7030_shared",
-      "lots": []
-    },
-    "combo_p2s_5050_shared": {
-      "name": "combo_p2s_5050_shared",
       "lots": []
     },
     "flatten_h5": {
