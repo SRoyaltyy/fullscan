@@ -1000,6 +1000,138 @@ def test_regime_break_on_tsa_is_not_an_accepted_class():
     ) is False
 
 
+def test_amrx_gate_regime_break_is_accepted_and_keeps_the_clock():
+    from src.news_impact.one_shot_stack import _clock, _horizon_for
+    art = next(row for row in GOLD_KEEP if row["gold_id"] == "amrx")
+    shape = {"event_class": "gate", "q5": "regime_break"}
+    assert classify_acceptable(shape, art["title"], art["body"], "amrx") is True
+    assert classify_acceptable(
+        {"event_class": "gate", "q5": "impulse"}, art["title"], art["body"], "amrx",
+    ) is True
+    assert classify_acceptable(
+        {"event_class": "regime_break", "q5": "regime_break"},
+        art["title"], art["body"], "amrx",
+    ) is False
+    assert classify_acceptable(
+        {"event_class": "labor_stop", "q5": "regime_break"},
+        art["title"], art["body"], "amrx",
+    ) is False
+    assert classify_acceptable(shape, art["title"], art["body"], "") is False
+    assert _horizon_for("gate", art["title"], "open") == "1-6m"
+    assert _clock(art["title"], art["known_at"], "1-6m", "regime_break") == "monday_open"
+
+
+def test_tsa_labor_stop_stays_rejected_and_repair_names_blast_ops():
+    from src.news_impact.one_shot_stack import classify_repair_note
+    art = GOLD_KEEP[0]
+    rejected = {"event_class": "labor_stop", "q5": "regime_break"}
+    assert classify_acceptable(rejected, art["title"], art["body"], "tsa") is False
+    note = classify_repair_note(rejected, art["title"], art["body"])
+    assert "PREVIOUS JSON WAS NOT ACCEPTED" in note
+    assert "blast_ops" in note
+    assert "impulse" in note
+    assert "strike" in note.lower()
+    assert classify_repair_note(
+        {"event_class": "blast_ops", "q5": "regime_break"}, art["title"], art["body"],
+    )
+    assert classify_repair_note(
+        {"event_class": "blast_ops", "q5": "impulse"}, art["title"], art["body"],
+    ) == ""
+    assert classify_repair_note(
+        {"event_class": "labor_stop", "q5": "impulse"},
+        "Dock workers walkout at the port", "",
+    ) == ""
+    assert classify_repair_note(
+        {"event_class": "gate", "q5": "regime_break"}, art["title"], art["body"],
+    ) == ""
+
+
+def test_openclaw_repairs_labor_stop_before_the_hopper(monkeypatch):
+    from src import lane_route
+    from src.lane_one_shot import LiveLane
+    from src.news_impact.prompts import classifier_prompt
+
+    monkeypatch.setattr("src.config.align_openclaw_token", lambda **_k: "tok")
+    monkeypatch.setattr(
+        lane_route, "load_keys",
+        lambda: ({"openclaw": "gateway", "zhipu": "k"}, "", ""),
+    )
+    lane_route._SKIP.clear()
+    lane_route._RATE_LIMITED.clear()
+    lane_route._MODEL_DENIED.clear()
+    prompts = []
+
+    def fake_chat(model, prompt, max_tokens=320, system=None):
+        prompts.append(prompt)
+        if "PREVIOUS JSON WAS NOT ACCEPTED" in prompt:
+            return {
+                "event_class": "blast_ops", "q5": "impulse", "constraint": "ops",
+            }, 200, model
+        return {
+            "event_class": "labor_stop", "q5": "regime_break", "constraint": "unpaid",
+        }, 200, model
+
+    def hopper_should_not_run(*_a, **_k):
+        raise AssertionError("classify hopper ran before the OpenClaw repair")
+
+    monkeypatch.setattr(lane_route, "openclaw_chat", fake_chat)
+    monkeypatch.setattr(lane_route, "zhipu_chat", hopper_should_not_run)
+    live = LiveLane()
+    art = GOLD_KEEP[0]
+    prompt = classifier_prompt(art["title"], art["body"], art["known_at"])
+    parsed, hop, model = live(
+        "classify", prompt, "sys",
+        accept=lambda blob: classify_acceptable(blob, art["title"], art["body"], "tsa"),
+    )
+    assert parsed["event_class"] == "blast_ops"
+    assert parsed["q5"] == "impulse"
+    assert (hop, model) == ("openclaw", "xai/grok-4.6")
+    assert len(prompts) == 2
+    assert "PREVIOUS JSON WAS NOT ACCEPTED" not in prompts[0]
+    assert "PREVIOUS JSON WAS NOT ACCEPTED" in prompts[1]
+    assert "blast_ops" in prompts[1]
+
+
+def test_openclaw_repair_does_not_lock_labor_stop(monkeypatch):
+    from src import lane_route
+    from src.lane_one_shot import LiveLane
+    from src.news_impact.prompts import classifier_prompt
+
+    monkeypatch.setattr("src.config.align_openclaw_token", lambda **_k: "tok")
+    monkeypatch.setattr(
+        lane_route, "load_keys",
+        lambda: ({"openclaw": "gateway", "zhipu": "k"}, "", ""),
+    )
+    lane_route._SKIP.clear()
+    lane_route._RATE_LIMITED.clear()
+    lane_route._MODEL_DENIED.clear()
+    prompts = []
+    hopper = []
+
+    def fake_chat(model, prompt, max_tokens=320, system=None):
+        prompts.append(prompt)
+        return {"event_class": "labor_stop", "q5": "regime_break"}, 200, model
+
+    def fake_zhipu(_key, model, prompt, max_tokens=320, system=None):
+        hopper.append(model)
+        return {"event_class": "blast_ops", "q5": "impulse"}, 200, model
+
+    monkeypatch.setattr(lane_route, "openclaw_chat", fake_chat)
+    monkeypatch.setattr(lane_route, "zhipu_chat", fake_zhipu)
+    live = LiveLane()
+    art = GOLD_KEEP[0]
+    prompt = classifier_prompt(art["title"], art["body"], art["known_at"])
+    parsed, hop, model = live(
+        "classify", prompt, "sys",
+        accept=lambda blob: classify_acceptable(blob, art["title"], art["body"], "tsa"),
+    )
+    assert len(prompts) == 2
+    assert hopper
+    assert parsed["event_class"] == "blast_ops"
+    assert hop == "zhipu"
+    assert model == "glm-4.7-flash"
+
+
 def test_empty_linker_json_is_not_accepted():
     cands = [
         {"ticker": "CAR", "entity_name": "Avis Budget"},

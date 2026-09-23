@@ -29,6 +29,7 @@ from src.news_impact.one_shot_stack import (
     GOLD_EXTRA,
     GOLD_KEEP,
     GOLD_REJECT,
+    classify_repair_note,
     gate0,
     process_article,
     render_markdown,
@@ -248,6 +249,7 @@ class LiveLane:
         lane._QWEN_STANDING_HITS = 0
         lane._OR_DAY_CAPPED = False
         self.last_classify_note = ""
+        self._rejected_classify = None
 
     def __call__(self, stage: str, prompt: str, system: str, accept=None):
         if stage == "classify":
@@ -344,11 +346,26 @@ class LiveLane:
                 notes.append(note)
                 print(f"[lane_one_shot] {note}")
                 continue
-            parsed, model = lane.ask_lane(
-                hop, prompt, self.ctx,
-                max_tokens=budget, system=system, tmpl="news_classify",
-                accept=accept,
+            parsed, model = self._ask_classify(
+                hop, prompt, system, accept, budget,
             )
+            if (
+                hop == "openclaw"
+                and (parsed is None or lane.is_classify_banned(str(model or "")))
+                and accept is not None
+            ):
+                rejected = self._rejected_classify
+                self._rejected_classify = None
+                repair = classify_repair_note(rejected, prompt, "")
+                if repair:
+                    print(
+                        "[lane_one_shot] openclaw classify near-miss "
+                        "— one repair before the hopper"
+                    )
+                    parsed, model = self._ask_classify(
+                        hop, prompt + "\n\n" + repair, system, accept, budget,
+                        capture=False,
+                    )
             if parsed is None or lane.is_classify_banned(str(model or "")):
                 notes.append(self._fail_note(hop, model))
                 continue
@@ -385,6 +402,25 @@ class LiveLane:
             self.last_classify_note = ""
         time.sleep(0.4)
         return winner
+
+    def _ask_classify(self, hop, prompt, system, accept, budget, capture=True):
+        """One classify hop. A rejected JSON is kept for the OpenClaw repair."""
+        rejected = {}
+
+        def _watch(blob, _accept=accept):
+            ok = _accept(blob) if _accept is not None else True
+            if capture and not ok and isinstance(blob, dict):
+                rejected["blob"] = blob
+            return ok
+
+        parsed, model = lane.ask_lane(
+            hop, prompt, self.ctx,
+            max_tokens=budget, system=system, tmpl="news_classify",
+            accept=_watch if accept is not None else None,
+        )
+        if capture:
+            self._rejected_classify = rejected.get("blob")
+        return parsed, model
 
     def _fail_note(self, hop: str, model) -> str:
         if hop == "qwen" and lane._QWEN_STANDING_HITS >= lane._QWEN_STANDING_STOP:

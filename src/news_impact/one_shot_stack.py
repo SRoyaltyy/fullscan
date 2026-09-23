@@ -89,6 +89,13 @@ _NOT_DIVIDEND_ONLY = re.compile(
 _REGIME_BREAK_OK = re.compile(
     r"(?i)(ceasefire|reopen|withdraw|lifted|traffic resumes)"
 )
+# Ops shutdown vs a strike. Used only to decide whether to re-ask Lane.
+# It does not lock event_class.
+_OPS_NOT_STRIKE = re.compile(
+    r"(?i)((tsa|airport).{0,80}(unpaid|chaos|shutdown|short-staff)|"
+    r"government shutdown.{0,80}(airport|tsa|travel))"
+)
+_STRIKE = re.compile(r"(?i)(\bstrike\b|walkout)")
 _AIRLINES = frozenset({
     "AAL", "DAL", "UAL", "LUV", "ALK", "JBLU", "ALGT", "SKYW", "HA", "ULCC",
 })
@@ -639,6 +646,10 @@ def classify_acceptable(parsed: dict | None, title: str, body: str, gold_id: str
     fixtures also require the family that makes the Finviz link mean
     the right thing (blast vs gate vs structure). Discard stops the hop
     for ordinary articles so junk does not walk every provider.
+
+    An FDA gate may be q5 regime_break: the prompt defines that as a
+    verified legal-constraint change, and the fixture still requires
+    event_class gate. labor_stop is not blast_ops.
     """
     if not isinstance(parsed, dict):
         return False
@@ -655,7 +666,7 @@ def classify_acceptable(parsed: dict | None, title: str, body: str, gold_id: str
     if gold_id == "tsv":
         return event_class == "market_structure" and q5 in {"impulse", "regime_break"}
     if gold_id == "amrx":
-        return event_class == "gate" and q5 == "impulse"
+        return event_class == "gate" and q5 in {"impulse", "regime_break"}
     if gold_id == "naion":
         return event_class == "product_harm" and q5 in {"impulse", "regime", "regime_break"}
     if event_class == "discard":
@@ -665,6 +676,38 @@ def classify_acceptable(parsed: dict | None, title: str, body: str, gold_id: str
     if q5 == "regime_break" and not break_ok:
         return False
     return True
+
+
+def classify_repair_note(parsed: dict | None, title: str, body: str = "") -> str:
+    """Correction text when an ops shutdown was labeled a strike.
+
+    Empty means do not re-ask. The next Lane JSON still has to pass
+    classify_acceptable; this note does not publish a class by itself.
+    """
+    if not isinstance(parsed, dict):
+        return ""
+    event_class = str(parsed.get("event_class") or "").strip()
+    q5 = str(parsed.get("q5") or "").strip()
+    text = f"{title or ''}\n{body or ''}"
+    if _STRIKE.search(text) or not _OPS_NOT_STRIKE.search(text):
+        return ""
+    if event_class == "blast_ops" and q5 == "impulse":
+        return ""
+    wrong_class = event_class == "labor_stop"
+    wrong_q5 = event_class == "blast_ops" and q5 != "impulse"
+    if not wrong_class and not wrong_q5:
+        return ""
+    return (
+        "PREVIOUS JSON WAS NOT ACCEPTED.\n"
+        f"event_class was {event_class or '(empty)'} and q5 was {q5 or '(empty)'}.\n"
+        "labor_stop means a strike or a walkout. This article does not name one.\n"
+        "Unpaid officers, a government shutdown, and short-staffed airport "
+        "checkpoints are an operations disruption: event_class blast_ops.\n"
+        "regime_break means a verified change in a standing constraint "
+        "(a ceasefire or a reopening). A disruption underway this weekend "
+        "is q5 impulse.\n"
+        "Return ONE JSON object. event_class blast_ops. q5 impulse. No tickers."
+    )
 
 
 def analyst_acceptable(
