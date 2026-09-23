@@ -244,6 +244,8 @@ def main() -> None:
     test_assert_open_lock_requires_webull_sit_names()
     from src.test_morning_scan import main as morning_scan_main
     morning_scan_main()
+    from src.test_hot4_wire import main as hot4_wire_main
+    hot4_wire_main()
     print("ok")
 
 

@@ -1,7 +1,8 @@
 """Required-input contract and explicit publication trigger; no broker calls.
 
 Publish writes morning tickets via ``strategy_tickets`` / ``publish_live_boards``.
-Factor-mine picks use the oppset_union + Clock-B morning scan. This module
+Webull HOT4 uses the Factor Mine cash-start recipe (``pick_day`` on the
+session panel), not the oppset_union + Clock-B morning scan. This module
 does not size Webull or flatten_robust lots.
 """
 from __future__ import annotations
