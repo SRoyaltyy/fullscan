@@ -1,0 +1,130 @@
+{
+  "date": "2026-09-23",
+  "generated_at": "2026-09-23T16:40:24.047637-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-09-24",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-09-24) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed lower as 10-year yield hit 5.08% 19-year high on strong business activity data, while energy outperformed on rebounding oil",
+  "raw_text": "- The S&P 500 ($SPX) fell 0.75% to 7,706.03, the Dow ($DJI) lost 0.68% to 51,511.59, and the Nasdaq Composite ($COMP) dropped 1.13% to 26,936.04, ending its recent record-setting streak.\n- The 10-year Treasury yield climbed to 5.08%, a 19-year high, after an S&P Global (SPGI) report showed U.S. business activity growing at its fastest pace in five years, stoking inflation concerns and expectations of further Fed hikes.\n- Thirty-year mortgage rates rose to about 7.12%, underscoring tighter financial conditions and adding pressure to housing-related names.\n- Energy was the only S&P 500 ($SPX) sector to finish higher, rising about 1.05% as WTI crude (@CL) neared $93 and Brent (@QA) approached $100, supported by gains in Occidental Petroleum (OXY) and ConocoPhillips (COP).\n- Utilities lagged with a 1.89% drop, weighed down by PG&E (PCG) after UBS (UBS) cut its price target, while basic materials and consumer cyclical sectors also underperformed.\n- CrowdStrike (CRWD) rose about 4.5% and Palo Alto Networks (PANW) gained roughly 5% on strong AI-driven cybersecurity demand and expectations their platforms will support AI safety initiatives.\n- Meta Platforms (META) advanced as its Muse AI app continued to show momentum by topping download charts.\n- Chip stocks saw mixed trading, with profit-taking in Nvidia (NVDA) and Broadcom (AVGO) offsetting strength elsewhere in the group.\n- KB Home (KBH) slipped despite an earnings beat after warning about a tougher housing market amid rising borrowing costs and mortgage rates above 7%.\n- General Mills (GIS) beat estimates and rose after its report, Paychex (PAYX) beat Q1 estimates with a negative reaction, and Cracker Barrel (CBRL) climbed on a strong earnings beat, while investors looked ahead to Thursday’s Costco (COST) results, further inflation data, and any updates from the Trump–Xi summit for direction.",
+  "raw_summary_md": "- The **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) **fell 0.75% to 7,706.03**, the **Dow** ([$DJI](https://finviz.com/index/DJI?p=d)) **lost 0.68% to 51,511.59**, and the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) **dropped 1.13% to 26,936.04**, ending its recent record-setting streak.\n- The **10-year Treasury yield climbed to 5.08%, a 19-year high**, after an S&P Global ([SPGI](https://finviz.com/quote?t=SPGI)) report showed U.S. business activity growing at its **fastest pace in five years**, stoking inflation concerns and expectations of **further Fed hikes**.\n- **Thirty-year mortgage rates rose to about 7.12%**, underscoring tighter financial conditions and **adding pressure to housing-related names**.\n- **Energy was the only S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) **sector to finish higher, rising about 1.05%** as **WTI crude** ([@CL](https://finviz.com/futures_charts?t=CL)) **neared $93** and **Brent** ([@QA](https://finviz.com/futures_charts?t=QA)) **approached $100**, supported by gains in Occidental Petroleum ([OXY](https://finviz.com/quote?t=OXY)) and ConocoPhillips ([COP](https://finviz.com/quote?t=COP)).\n- **Utilities lagged with a 1.89% drop**, weighed down by **PG&E** ([PCG](https://finviz.com/quote?t=PCG)) after **UBS** ([UBS](https://finviz.com/quote?t=UBS)) **cut its price target**, while basic materials and consumer cyclical sectors also underperformed.\n- **CrowdStrike** ([CRWD](https://finviz.com/quote?t=CRWD)) **rose about 4.5% and Palo Alto Networks** ([PANW](https://finviz.com/quote?t=PANW)) **gained roughly 5%** on strong AI-driven cybersecurity demand and expectations their platforms will support AI safety initiatives.\n- **Meta Platforms** ([META](https://finviz.com/quote?t=META)) advanced as its **Muse AI app continued to show momentum by topping download charts**.\n- **Chip stocks saw mixed trading**, with **profit-taking in Nvidia** ([NVDA](https://finviz.com/quote?t=NVDA)) **and Broadcom** ([AVGO](https://finviz.com/quote?t=AVGO)) **offsetting strength elsewhere in the group**.\n- **KB Home** ([KBH](https://finviz.com/quote?t=KBH)) **slipped despite an earnings beat** after warning about a tougher housing market amid rising borrowing costs and **mortgage rates above 7%**.\n- **General Mills** ([GIS](https://finviz.com/quote?t=GIS)) **beat estimates and rose after its report**, **Paychex** ([PAYX](https://finviz.com/quote?t=PAYX)) **beat Q1 estimates with a negative reaction**, and **Cracker Barrel** ([CBRL](https://finviz.com/quote?t=CBRL)) **climbed on a strong earnings beat**, while investors looked ahead to Thursday’s **Costco** ([COST](https://finviz.com/quote?t=COST)) **results, further inflation data, and any updates from the Trump–Xi summit for direction**.",
+  "index_moves": [
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": -0.75,
+      "verb": "fell"
+    },
+    {
+      "name": "Dow",
+      "code": "DJI",
+      "change_pct": -0.68,
+      "verb": "lost"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": -1.13,
+      "verb": "dropped"
+    }
+  ],
+  "oil": {
+    "name": "WTI crude",
+    "price": 93.0,
+    "verb": null,
+    "direction": null
+  },
+  "cpi": null,
+  "fed_odds": {
+    "pct": 1.89,
+    "action": "cut",
+    "text": "1.89% drop, weighed down by PG&E (PCG) after UBS (UBS) cut"
+  },
+  "named_tickers": [
+    "SPGI",
+    "OXY",
+    "COP",
+    "PCG",
+    "UBS",
+    "CRWD",
+    "PANW",
+    "META",
+    "NVDA",
+    "AVGO",
+    "KBH",
+    "GIS",
+    "PAYX",
+    "CBRL",
+    "COST"
+  ],
+  "named_leaders": [
+    "SPGI",
+    "OXY",
+    "COP",
+    "PCG",
+    "UBS",
+    "CRWD",
+    "PANW",
+    "META",
+    "NVDA",
+    "AVGO",
+    "KBH",
+    "GIS",
+    "PAYX",
+    "CBRL",
+    "COST"
+  ],
+  "calendar": [
+    "General Mills (GIS) beat estimates and rose after its report, Paychex (PAYX) beat Q1 estimates with a negative reaction, and Cracker Barrel (CBRL) climbed on a strong earnings beat, while investors looked ahead to Thursday’s Costco (COST) results, further inflation data, and any updates from the Trump–Xi summit for direction."
+  ],
+  "prior_close": {
+    "spx": -0.75,
+    "nasdaq": -1.13,
+    "dow": -0.68
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": {
+      "pct": 1.89,
+      "action": "cut",
+      "text": "1.89% drop, weighed down by PG&E (PCG) after UBS (UBS) cut"
+    }
+  },
+  "next_session_calendar": {
+    "housing": true,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "Thirty-year mortgage rates rose to about 7.12%, underscoring tighter financial conditions and adding pressure to housing-related names.",
+      "KB Home (KBH) slipped despite an earnings beat after warning about a tougher housing market amid rising borrowing costs and mortgage rates above 7%.",
+      "General Mills (GIS) beat estimates and rose after its report, Paychex (PAYX) beat Q1 estimates with a negative reaction, and Cracker Barrel (CBRL) climbed on a strong earnings beat, while investors looked ahead to Thursday’s Costco (COST) results, further inflation data, and any updates from the Trump–Xi summit for direction."
+    ],
+    "text": "Thirty-year mortgage rates rose to about 7.12%, underscoring tighter financial conditions and adding pressure to housing-related names. KB Home (KBH) slipped despite an earnings beat after warning about a tougher housing market amid rising borrowing costs and mortgage rates above 7%. General Mills (GIS) beat estimates and rose after its report, Paychex (PAYX) beat Q1 estimates with a negative reaction, and Cracker Barrel (CBRL) climbed on a strong earnings beat, while investors looked ahead to Thursday’s Costco (COST) results, further inflation data, and any updates from the Trump–Xi summit for direction."
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 292817,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-09-23T16:36:42.657",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}

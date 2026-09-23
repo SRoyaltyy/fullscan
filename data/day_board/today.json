@@ -1,6 +1,6 @@
 {
   "date": "2026-09-23",
-  "generated_at": "2026-09-23T15:43:51.031305-04:00",
+  "generated_at": "2026-09-23T16:40:24.659966-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -169,59 +169,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-09-23",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-23T05:43:15.154592-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-09-23_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1446836,
-          "preview": "1d BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX"
-        },
-        {
-          "path": "data/stock_book/2026-09-23_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 2844,
-          "preview": "green 188 \u00b7 CVLT, RELY, AVT, GDDY, SNX, EXLS, NXT, PDFS, DLO, DT"
-        },
-        {
-          "path": "data/stock_book/2026-09-23_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2415,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-09-23_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 13831,
-          "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 13831,
-          "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX"
-        },
-        {
-          "path": "01_daily/2026-09-23_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 76455,
-          "preview": "# Stock book \u2014 2026-09-23\n_Generated 2026-09-23T05:41:38.825961-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX \u00b7 green 188 \u00b7 CVLT, RELY, AVT, GDDY, SNX, EXLS, NXT, PDFS, DLO, DT \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX \u00b7 2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX \u00b7 # Stock book \u2014 2026-09-23\n_Generated 2026-09-23T05:41:38.825961-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -753,6 +700,31 @@
         }
       ],
       "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL SOC, REAX, HAL, NOG, MUR, PUMP, CF, OVV \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL SOC, REAX, HAL, NOG, MUR, PUMP, CF, OVV \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL SOC, REAX, HAL, NOG, MUR, PUMP, CF, OVV \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL SOC, REAX, HAL, NOG, MUR, PUMP, CF, OVV \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_leg"
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-09-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-23T16:40:24.068899-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-23_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 9163,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-09-23_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 4294,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-09-23\n**Generated:** 2026-09-23T16:40:24.047637-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed lower as 10-year yield hit 5.08% 19-year high on strong business activity data, while energy outperformed on rebounding oil\n**Prior close:** SPX -0.75%  Nasdaq -1.13%  Dow -0.68%\n**SPX:** -0.75%  **Nasdaq:** -1.13%  **Dow:** -0.68%\n**Oil:** WTI crude $93.0\n**CPI/Fed:** 1.89% cut (1.89% drop, weighed down by PG&E (PCG) after UBS (UBS) cut)\n**Leaders:** SPGI, OXY, COP, PCG, UBS, CRWD, PANW, META, NVDA, AVGO, KBH, GIS, PAYX, CBRL, COST\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-24\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-23\n**Generated:** 2026-09-23T16:40:24.047637-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed lower as 10-year yield hit 5.08% 19-year high on strong business activity data, while energy outperformed on rebounding oil\n**Prior close:** SPX -0.75%  Nasdaq -1.13%  Dow -0.68%\n**SPX:** -0.75%  **Nasdaq:** -1.13%  **Dow:** -0.68%\n**Oil:** WTI crude $93.0\n**CPI/Fed:** 1.89% cut (1.89% drop, weighed down by PG&E (PCG) after UBS (UBS) cut)\n**Leaders:** SPGI, OXY, COP, PCG, UBS, CRWD, PANW, META, NVDA, AVGO, KBH, GIS, PAYX, CBRL, COST\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-24\n**Clock use:** `next_open`"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
