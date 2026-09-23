@@ -644,6 +644,11 @@ def primary_models_for(lane: str, tmpl: str = "custom") -> list[str]:
         raw = list(MS_MODELS)
     elif lane == "mistral":
         raw = list(MISTRAL_MODELS)
+        if tmpl == "news_impact":
+            # After the class is locked, try the floor-class ID before 8B/3B.
+            raw = ["mistral-small-latest"] + [
+                m for m in raw if m != "mistral-small-latest"
+            ]
     elif lane == "nvidia_nim":
         raw = list(NVIDIA_NIM_MODELS)
     elif lane == "pollinations":
@@ -1140,6 +1145,16 @@ def ollama_chat(base, model, prompt, max_tokens=320, system=None):
     if parsed is None:
         return None, status, "not json"
     return parsed, status, model
+
+
+def release_transient_limits() -> None:
+    """Drop per-model 429s between articles.
+
+    A 429 is overload or a per-minute cap, not a dead key. OpenRouter's
+    day cap stays in _OR_DAY_CAPPED. Denied model IDs and a true provider
+    skip stay cached.
+    """
+    _RATE_LIMITED.clear()
 
 
 def _or_capped() -> bool:

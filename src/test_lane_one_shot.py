@@ -541,6 +541,32 @@ def test_incorrect_api_key_still_marks_the_key_dead():
     lane_route._MODEL_DENIED.clear()
 
 
+def test_transient_429_clears_between_articles():
+    from src import lane_route
+
+    lane_route._RATE_LIMITED.add("mistral::mistral-small-latest")
+    lane_route._MODEL_DENIED.add("qwen::qwen-flash")
+    lane_route._SKIP.add("pollinations")
+    lane_route._OR_DAY_CAPPED = True
+    lane_route.release_transient_limits()
+    assert "mistral::mistral-small-latest" not in lane_route._RATE_LIMITED
+    assert "qwen::qwen-flash" in lane_route._MODEL_DENIED
+    assert "pollinations" in lane_route._SKIP
+    assert lane_route._OR_DAY_CAPPED is True
+    lane_route._MODEL_DENIED.clear()
+    lane_route._SKIP.clear()
+    lane_route._OR_DAY_CAPPED = False
+
+
+def test_news_impact_tries_mistral_small_before_8b():
+    from src.lane_route import primary_models_for
+    order = primary_models_for("mistral", "news_impact")
+    assert order[0] == "mistral-small-latest"
+    assert "ministral-8b-2512" in order
+    assert order.index("mistral-small-latest") < order.index("ministral-8b-2512")
+    assert primary_models_for("mistral", "news_classify") == ["mistral-small-latest"]
+
+
 def test_429_then_403_does_not_skip_provider():
     """429 keeps the provider. A later per-model 403 does not cache _SKIP."""
     from src import lane_route

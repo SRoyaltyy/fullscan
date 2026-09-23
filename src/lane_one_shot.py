@@ -493,6 +493,7 @@ def run_shard(
     def handle(art: dict) -> None:
         nonlocal drawn
         drawn += 1
+        lane.release_transient_limits()
         row = process_article(
             art, client, axioms=axioms, use_pack=use_pack,
             pack_fn=pack_fn if use_pack else None,
