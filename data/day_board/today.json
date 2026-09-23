@@ -1,16 +1,138 @@
 {
   "date": "2026-09-23",
-  "generated_at": "2026-09-23T05:40:21.543023-04:00",
+  "generated_at": "2026-09-23T05:43:15.637977-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 4,
-    "partial": 3,
+    "ok": 6,
+    "partial": 1,
     "fail": 1,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "ARQT",
+      "score": 0.8495734282988849
+    },
+    {
+      "ticker": "PGEN",
+      "score": 0.7783687895719862
+    },
+    {
+      "ticker": "ADMA",
+      "score": 0.7580653853069101
+    },
+    {
+      "ticker": "DXCM",
+      "score": 0.3925919326017715
+    },
+    {
+      "ticker": "NICE",
+      "score": 0.6903282194407692
+    },
+    {
+      "ticker": "TH",
+      "score": 0.7513180156725596
+    },
+    {
+      "ticker": "PUBM",
+      "score": 0.7109581470869826
+    },
+    {
+      "ticker": "APPS",
+      "score": 0.7050792129707817
+    },
+    {
+      "ticker": "PAYS",
+      "score": 0.7006340229766195
+    },
+    {
+      "ticker": "CTOS",
+      "score": 0.7173218459445099
+    },
+    {
+      "ticker": "VSTS",
+      "score": 0.6379616141347848
+    },
+    {
+      "ticker": "TAL",
+      "score": 0.6113273438001063
+    },
+    {
+      "ticker": "SB",
+      "score": 0.5911792451587567
+    },
+    {
+      "ticker": "ELF",
+      "score": 0.6521630644818248
+    },
+    {
+      "ticker": "SHOO",
+      "score": 0.5356595011717732
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "CF",
+      "score": -0.3858845499891464
+    },
+    {
+      "ticker": "SSTK",
+      "score": -0.34231573636974333
+    },
+    {
+      "ticker": "OVV",
+      "score": -0.3414392292642719
+    },
+    {
+      "ticker": "ADM",
+      "score": -0.31127305220128904
+    },
+    {
+      "ticker": "FLUT",
+      "score": -0.30293527819512717
+    },
+    {
+      "ticker": "HAL",
+      "score": -0.30245044142611754
+    },
+    {
+      "ticker": "DOW",
+      "score": -0.2915665678108171
+    },
+    {
+      "ticker": "NFLX",
+      "score": -0.2869942961143662
+    },
+    {
+      "ticker": "DKNG",
+      "score": -0.275936104234283
+    },
+    {
+      "ticker": "HUM",
+      "score": -0.27130768607439465
+    },
+    {
+      "ticker": "IMO",
+      "score": -0.2708924143996866
+    },
+    {
+      "ticker": "RVMD",
+      "score": -0.27037606165126005
+    },
+    {
+      "ticker": "APA",
+      "score": -0.2652285870712288
+    },
+    {
+      "ticker": "STLA",
+      "score": -0.2635438352167803
+    },
+    {
+      "ticker": "JBHT",
+      "score": -0.26272910381767645
+    }
+  ],
   "flatten": {},
   "general": {
     "said": "UP  2.293",
@@ -41,24 +163,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "general_predict",
-      "title": "General market predict",
-      "date": "2026-09-23",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-23T04:39:52.569258-04:00",
-      "files": [
-        {
-          "path": "01_daily/general/2026-09-23_predict.md",
-          "ok": true,
-          "reason": "",
-          "size": 15383,
-          "preview": "# Premarket Prediction \u2014 2026-09-23\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 2.293 (uncertainty multiplier \u00d71.0) | confidence 0.592\n>\n> **Good news vs bad news:** good +1.25 pts vs bad 0 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - oil offered CL -4.7% BZ -3.5%\n> - VIX 14.15 contango collapsing\n> - HY contained 2.66\n> - Asia composite +0.33%\n> - leftover Nasdaq/chips bid paid\n>\n> **Bad news driving this:**\n> - Trump-Xi arrival/summit two-sided unprinted\n> - leftover Hormuz physical still tight\n> - paid hawkish SEP ~54% Oct hike\n> - 1m real-yield backup +27bp still on tape\n> - Barr 10:05 ET unprinted\n>\n> **market uncertainty: **elevated** | VIX 14.15 | policy-uncertainty index 220.02 (1d +39.93)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \u26aa Asia overnight session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Europe session: +0.0 \u00d7"
-        }
-      ],
-      "preview": "# Premarket Prediction \u2014 2026-09-23\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: UP \ud83d\udcc8 \u2014 MILD** | total score 2.293 (uncertainty multiplier \u00d71.0) | confidence 0.592\n>\n> **Good news vs bad news:** good +1.25 pts vs bad 0 pts \u2192 good news outweighs bad\n>\n> **Good news driving this:**\n> - oil offered CL -4.7% BZ -3.5%\n> - VIX 14.15 contango collapsing\n> - HY contained 2.66\n> - Asia composite +0.33%\n> - leftover Nasdaq/chips bid paid\n>\n> **Bad news driving this:**\n> - Trump-Xi arrival/summit two-sided unprinted\n> - leftover Hormuz physical still tight\n> - paid hawkish SEP ~54% Oct hike\n> - 1m real-yield backup +27bp still on tape\n> - Barr 10:05 ET unprinted\n>\n> **market uncertainty: **elevated** | VIX 14.15 | policy-uncertainty index 220.02 (1d +39.93)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \u26aa Asia overnight session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Europe session: +0.0 \u00d7"
-    },
     {
       "key": "sector_board",
       "title": "Sector board",
@@ -226,6 +330,59 @@
         }
       ],
       "preview": "5897 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 KEYS, FORM, SMTC, ESTC, SKHY"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-23T05:43:15.154592-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-23_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1446836,
+          "preview": "1d BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX"
+        },
+        {
+          "path": "data/stock_book/2026-09-23_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 2844,
+          "preview": "green 188 \u00b7 CVLT, RELY, AVT, GDDY, SNX, EXLS, NXT, PDFS, DLO, DT"
+        },
+        {
+          "path": "data/stock_book/2026-09-23_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2415,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-23_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13831,
+          "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 13831,
+          "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX"
+        },
+        {
+          "path": "01_daily/2026-09-23_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 76455,
+          "preview": "# Stock book \u2014 2026-09-23\n_Generated 2026-09-23T05:41:38.825961-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX \u00b7 green 188 \u00b7 CVLT, RELY, AVT, GDDY, SNX, EXLS, NXT, PDFS, DLO, DT \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX \u00b7 2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX \u00b7 # Stock book \u2014 2026-09-23\n_Generated 2026-09-23T05:41:38.825961-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
