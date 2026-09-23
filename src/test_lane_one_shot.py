@@ -483,27 +483,40 @@ def test_classify_floor_excludes_ministral_and_8b(monkeypatch):
     assert "pollinations" in _FLOOR_PROVIDERS
     assert "nvidia_nim" not in _FLOOR_PROVIDERS
     assert "openclaw" in _FLOOR_PROVIDERS
-    assert classify_models_for("openclaw") == ["xai/grok-4-fast-reasoning"]
+    monkeypatch.delenv("OPENCLAW_BACKEND_MODEL", raising=False)
+    assert classify_models_for("openclaw") == [
+        "xai/grok-4-fast-reasoning", "xai/grok-4.6",
+    ]
     assert not is_classify_banned("xai/grok-4-fast-reasoning")
+    assert not is_classify_banned("xai/grok-4.6")
     assert is_classify_banned("ministral-8b-2512")
     monkeypatch.setenv("OPENCLAW_BACKEND_MODEL", "ministral-8b-2512")
-    from src.lane_route import openclaw_backend_model
+    from src.lane_route import openclaw_backend_model, openclaw_models
     assert openclaw_backend_model() == "xai/grok-4-fast-reasoning"
-    assert classify_models_for("openclaw") == ["xai/grok-4-fast-reasoning"]
+    assert openclaw_models() == [
+        "xai/grok-4-fast-reasoning", "xai/grok-4.6",
+    ]
+    monkeypatch.setenv("OPENCLAW_BACKEND_MODEL", "xai/grok-4.6")
+    assert openclaw_models() == ["xai/grok-4.6"]
     monkeypatch.setenv("OPENCLAW_BACKEND_MODEL", "xai/grok-4-fast-reasoning")
-    assert classify_models_for("openclaw") == ["xai/grok-4-fast-reasoning"]
+    assert classify_models_for("openclaw") == [
+        "xai/grok-4-fast-reasoning", "xai/grok-4.6",
+    ]
     from src.lane_one_shot import _WM, _classify_floor_ok, _context_floor_ok
-    wm = "lane::openclaw::xai/grok-4-fast-reasoning"
-    assert _WM.match(wm)
-    floor_row = {
-        "watermarks": [
-            {"stage": "classify", "watermark": wm},
-            {"stage": "meta", "watermark": wm},
-            {"stage": "pack_complete", "watermark": wm},
-        ],
-    }
-    assert _classify_floor_ok(floor_row)
-    assert _context_floor_ok(floor_row)
+    for wm in (
+        "lane::openclaw::xai/grok-4-fast-reasoning",
+        "lane::openclaw::xai/grok-4.6",
+    ):
+        assert _WM.match(wm)
+        floor_row = {
+            "watermarks": [
+                {"stage": "classify", "watermark": wm},
+                {"stage": "meta", "watermark": wm},
+                {"stage": "pack_complete", "watermark": wm},
+            ],
+        }
+        assert _classify_floor_ok(floor_row)
+        assert _context_floor_ok(floor_row)
 
 
 def test_openclaw_ask_skips_without_gateway():
@@ -572,6 +585,42 @@ def test_openclaw_classify_hop_is_first(monkeypatch):
     assert seen == ["xai/grok-4-fast-reasoning"]
     assert parsed == {"event_class": "gate"}
     assert info == "xai/grok-4-fast-reasoning"
+
+
+def test_openclaw_not_allowed_falls_through_to_grok_46(monkeypatch):
+    from src import lane_route
+    monkeypatch.setenv("OPENCLAW_BACKEND_MODEL", "xai/grok-4-fast-reasoning")
+    seen = []
+
+    def fake_chat(model, prompt, max_tokens=320, system=None):
+        seen.append(model)
+        if model == "xai/grok-4-fast-reasoning":
+            return None, 400, "Model 'xai/grok-4-fast' is not allowed for agent 'main'."
+        return {"event_class": "gate"}, 200, model
+
+    monkeypatch.setattr(lane_route, "openclaw_chat", fake_chat)
+    lane_route._SKIP.clear()
+    lane_route._RATE_LIMITED.clear()
+    lane_route._MODEL_DENIED.clear()
+    parsed, info = lane_route.ask_lane(
+        "openclaw", "{}",
+        {"keys": {"openclaw": "gateway"}, "ollama_url": "", "gh_direct": ""},
+        tmpl="news_classify",
+    )
+    assert seen == ["xai/grok-4-fast-reasoning", "xai/grok-4.6"]
+    assert parsed == {"event_class": "gate"}
+    assert info == "xai/grok-4.6"
+    assert "openclaw::xai/grok-4-fast-reasoning" in lane_route._MODEL_DENIED
+    parsed2, info2 = lane_route.ask_lane(
+        "openclaw", "{}",
+        {"keys": {"openclaw": "gateway"}, "ollama_url": "", "gh_direct": ""},
+        tmpl="news_classify",
+    )
+    assert parsed2 == {"event_class": "gate"}
+    assert info2 == "xai/grok-4.6"
+    assert seen == [
+        "xai/grok-4-fast-reasoning", "xai/grok-4.6", "xai/grok-4.6",
+    ]
 
 
 def test_dashscope_401_on_one_host_tries_the_next(monkeypatch):

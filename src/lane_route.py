@@ -287,9 +287,12 @@ CLASSIFY_LANES = [
     "zhipu", "siliconflow", "openrouter", "gemini", "tokenhub",
     "mistral", "pollinations", "qwen",
 ]
-# Cheaper than the gateway default xai/grok-4.6. Workflow may override
-# with OPENCLAW_BACKEND_MODEL. Not an 8B id.
+# Preferred cheaper id. The ECS agent `main` currently rewrites this to
+# xai/grok-4-fast and returns 400 not allowed. grok-4.6 is the sibling
+# Pre-Open already runs on that agent, so it is the fallback, not a
+# demotion of the floor. Workflow may override with OPENCLAW_BACKEND_MODEL.
 OPENCLAW_FLOOR_MODEL = "xai/grok-4-fast-reasoning"
+OPENCLAW_FALLBACK_MODEL = "xai/grok-4.6"
 # company_dig: SF Qwen / DeepSeek free non-Pro → OR :free → Zhipu.
 # Native DeepSeek stays off the free head (paid opt-in only).
 DIG_HEAD = ["siliconflow", "openrouter", "zhipu"]
@@ -581,12 +584,30 @@ def is_classify_banned(mid: str) -> bool:
     return any(stem in low for stem in stems)
 
 
-def openclaw_backend_model() -> str:
-    """Floor backend id. Env override, else grok-4-fast-reasoning."""
+def openclaw_models() -> list[str]:
+    """Preferred backend, then xai/grok-4.6 if the agent rejects the first.
+
+    A banned OPENCLAW_BACKEND_MODEL is ignored. grok-4.6 stays on the
+    list unless it is already the preferred id.
+    """
     raw = (os.environ.get("OPENCLAW_BACKEND_MODEL") or "").strip()
+    ordered: list[str] = []
     if raw and not is_classify_banned(raw):
-        return raw
-    return OPENCLAW_FLOOR_MODEL
+        ordered.append(raw)
+    elif not is_classify_banned(OPENCLAW_FLOOR_MODEL):
+        ordered.append(OPENCLAW_FLOOR_MODEL)
+    if (
+        OPENCLAW_FALLBACK_MODEL not in ordered
+        and not is_classify_banned(OPENCLAW_FALLBACK_MODEL)
+    ):
+        ordered.append(OPENCLAW_FALLBACK_MODEL)
+    return ordered
+
+
+def openclaw_backend_model() -> str:
+    """First floor backend id. Env override, else grok-4-fast-reasoning."""
+    models = openclaw_models()
+    return models[0] if models else OPENCLAW_FALLBACK_MODEL
 
 
 def qwen_classify_models() -> list[str]:
@@ -603,7 +624,7 @@ def primary_models_for(lane: str, tmpl: str = "custom") -> list[str]:
     tmpl = str(tmpl or "custom").strip()
     if tmpl == "news_classify":
         if lane == "openclaw":
-            raw = [openclaw_backend_model()]
+            raw = openclaw_models()
         elif lane == "zhipu":
             # glm-4.7-flash first. 429 hops to the next $0 flash on this key.
             # glm-4.6-flash 403 and glm-4.6v-flash 429 are per-ID, not a dead key.
@@ -685,7 +706,7 @@ def primary_models_for(lane: str, tmpl: str = "custom") -> list[str]:
     elif lane == "gemini":
         raw = list(GEMINI_MODELS)
     elif lane == "openclaw":
-        raw = [openclaw_backend_model()]
+        raw = openclaw_models()
     else:
         raw = []
     return [m for m in raw if not is_banned_primary(m)]
@@ -1213,6 +1234,11 @@ def _account_dead(info: str) -> bool:
     return any(needle in low for needle in needles)
 
 
+def _model_not_allowed(info: str) -> bool:
+    """Gateway rejected this model id for the agent. Sibling may still run."""
+    return "not allowed" in str(info or "").lower()
+
+
 def _standing_denial(info: str) -> bool:
     return "account is in good standing" in str(info or "").lower()
 
@@ -1285,6 +1311,11 @@ def hop_models(lane, models, call, abandon_404=False, accept=None):
                         f"{_QWEN_STANDING_HITS} IDs — not walking the rest"
                     )
                     return None, None
+            continue
+        if status == 400 and _model_not_allowed(info):
+            # Agent allowlist miss. Cache the ID and try the next sibling.
+            print(f"  {lane}/{model} 400 not allowed — next ID, provider kept")
+            _MODEL_DENIED.add(rl_key)
             continue
         if status in (401, 402, 403, 404):
             # Per-model entitlement, quota, or unknown ID. Not a dead key
