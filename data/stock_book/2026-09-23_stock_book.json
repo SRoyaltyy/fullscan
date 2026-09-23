@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-09-23",
-    "generated_at": "2026-09-23T08:25:37.137329-04:00",
+    "generated_at": "2026-09-23T08:32:33.808600-04:00",
     "general_bias": 0.5032,
     "sector_bias": {
       "Basic Materials": 0.0,
@@ -13,7 +13,8 @@
       "Healthcare": 0.44455,
       "Industrials": 0.0,
       "Real Estate": -0.43945,
-      "Technology": 0.0
+      "Technology": 0.0,
+      "Utilities": 0.0
     },
     "accuracy_gates": {
       "general": {
@@ -81,7 +82,7 @@
     "n_ab": 1876,
     "n_peer": 1832,
     "same_day_general": true,
-    "same_day_sectors": 10,
+    "same_day_sectors": 11,
     "weather_risk": "mixed",
     "n_universe": 2066,
     "weights": {
@@ -143,7 +144,7 @@
         "peer": "ok",
         "heat": "ok",
         "general": "ok",
-        "sector": "degraded"
+        "sector": "ok"
       },
       "learn_grade": true
     },
