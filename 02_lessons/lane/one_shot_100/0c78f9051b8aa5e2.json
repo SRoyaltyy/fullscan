@@ -1,0 +1,131 @@
+{
+  "article_id": "0c78f9051b8aa5e2",
+  "title": "7RCC Spot Bitcoin and Carbon Credit Futures ETF (NYSE Arca: BTCK) Begins Trading",
+  "body": "7RCC Spot Bitcoin and Carbon Credit Futures ETF (BTCK) begins trading on NYSE Arca, providing combined exposure to spot bitcoin and regulated carbon credit futures.",
+  "known_at": "2026-06-04 09:30:00",
+  "harvest_source": "finviz_export",
+  "source_file": "data/exports/finviz_2026-09-22.csv",
+  "gold_id": "",
+  "ticker_hint": "BTCK",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "flow",
+      "event_class": "listing_flow",
+      "question": "Who is forced to buy or sell the named line, and on which session?",
+      "status": "answered",
+      "note": "Forced buyers are investors seeking exposure to BTCK on day 0, as the ETF listing creates a forced buying flow to acquire the newly listed shares."
+    },
+    {
+      "id": "q2",
+      "family": "flow",
+      "event_class": "listing_flow",
+      "question": "Is the flow the issuer itself or an index vehicle?",
+      "status": "answered",
+      "note": "The flow is an index vehicle (ETF) issued by 7RCC Global, not the issuer itself."
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "7RCC Spot Bitcoin and Carbon Credit Futures ETF",
+      "ticker": "BTCK",
+      "type": "etf",
+      "sector": "Financial",
+      "industry": "Exchange Traded Fund",
+      "source": "finviz_row",
+      "score": 8,
+      "why": "hint_named_in_title",
+      "aliases": [
+        "7rcc spot bitcoin carbon credit futures etf",
+        "7rcc spot",
+        "spot 7rcc"
+      ],
+      "lane_why": "Mentioned explicitly in the title and body as the primary subject of the article."
+    }
+  ],
+  "entities": [
+    {
+      "name": "7RCC Spot Bitcoin and Carbon Credit Futures ETF",
+      "ticker": "BTCK",
+      "role": "forced buyers",
+      "direction": "up",
+      "horizon": "0-1d",
+      "axiom_id": null,
+      "pack_cite": null,
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "7RCC Global | Invest in Bitcoin and Carbon Credits: BTCK differs from a single-asset spot bitcoin ETF by adding a regulated carbon futures allocation. BTCK trades on NYSE Arca and can be accessed through brokerage accounts that support listed ETFs, allowing investors to gain exposure without maintaining a separate digital asset wallet or exchange account.",
+      "url": "https://www.7rccglobal.com/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "7RCC Spot Bitcoin and Carbon Credit Futures ETF (NYSE Arca: BTCK ...: BTCK combines exposure to bitcoin and regulated carbon credit futures through a single exchange-traded product MIAMI -- (BUSINESS WIRE)-- 7RCC Global, a financial technology and research firm ...",
+      "url": "https://www.nasdaq.com/press-release/7rcc-spot-bitcoin-and-carbon-credit-futures-etf-nyse-arca-btck-begins-trading-2026-06",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "7RCC Spot Bitcoin and Carbon Credit Futures ETF (NYSE Arca: BTCK ...: BTCK differs from a single-asset spot bitcoin ETF by adding a regulated carbon futures allocation. BTCK trades on NYSE Arca and can be accessed through brokerage accounts that support listed ETFs, allowing investors to gain exposure without maintaining a separate digital asset wallet or exchange account.",
+      "url": "https://markets.ft.com/data/announce/full?dockey=600-202606040930BIZWIRE_USPRX____20260604_BW519452-1",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "7RCC Spot Bitcoin and Carbon Credit Futures ETF (NYSE Arca: BTCK ...: 7RCC paired together bitcoin and regulated carbon credit futures in BTCK's underlying strategy deliberately. The markets for both underlying assets are driven by largely independent forces, adoption and monetary dynamics on one side, emissions policy and compliance demand on the other, bringing two distinct return drivers into a",
+      "url": "https://www.financialcontent.com/article/bizwire-2026-6-4-7rcc-spot-bitcoin-and-carbon-credit-futures-etf-nyse-arca-btck-begins-trading",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "7RCC Spot Bitcoin and Carbon Credit Futures ETF (NYSE Arca: BTCK ...: The 7RCC Spot Bitcoin and Carbon Credit Futures ETF (NYSE Arca: BTCK) has officially commenced trading on the New York Stock Exchange. This financial product is designed to provide investors with exposure to both Bitcoin and carbon credit futures, marking a significant development in the intersection of cryptocurrency and enviro",
+      "url": "https://www.coin-informer.com/news/7rcc-spot-bitcoin-and-carbon-credit-futures-etf-nyse-arca-bt-2026-06-04/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "7RCC launches Bitcoin and carbon credit ETF on NYSE Arca: 7RCC Global has launched trading of BTCK, an exchange-traded fund that allocates 80% to Bitcoin and 20% to regulated carbon credit futures, bringing one of the crypto industry's earliest ESG-focused ETF concepts to the public market.",
+      "url": "https://crypto.news/7rcc-launches-bitcoin-and-carbon-credit-etf-on-nyse-arca/",
+      "source": "ddg_html",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "BUY BTCK, 0-1d, because listing_flow: 7RCC Spot Bitcoin and Carbon Credit Futures ETF (NYSE Arca: BTCK) Begins Trading; clock=0-1d",
+  "q5": "impulse",
+  "event_class": "listing_flow",
+  "sign": null,
+  "family": "flow",
+  "constraint": "listing_flow: 7RCC Spot Bitcoin and Carbon Credit Futures ETF (NYSE Arca: BTCK) Begins Trading",
+  "rejected_hints": [],
+  "winners": [
+    "BTCK"
+  ],
+  "losers": [],
+  "clock": "0-1d",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

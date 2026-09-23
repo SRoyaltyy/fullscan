@@ -1,0 +1,140 @@
+{
+  "article_id": "5f7590261b4e0107",
+  "title": "ACHR Stock Alert: What to Know as Archer Aviation Makes L.A. Plans Ahead of 2028 Olympics",
+  "body": "rss_yahoo_finance",
+  "known_at": "2026-08-24T18:52:30Z",
+  "harvest_source": "parsed",
+  "source_file": "01_daily/news/2026-08-26_parsed.json",
+  "gold_id": "",
+  "ticker_hint": "",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "firm",
+      "event_class": "corporate_action_mna",
+      "question": "Is this the issuer's own cash, paper, or control — not a sector story?",
+      "status": "answered",
+      "note": "ACHR’s operational commitment to the L.A. Olympics 2028 vertiport partnership (AEG) is a **substitute** for traditional ground transport (e.g., rental cars) under A_AIR_02, as it directly addresses a constraint (mobility) for event attendees. The deal is not a sector story (Aerospace & Defense) but "
+    },
+    {
+      "id": "q2",
+      "family": "firm",
+      "event_class": "corporate_action_mna",
+      "question": "If it is a routine dividend, why is there no 0-1d sector trade?",
+      "status": "blocked",
+      "note": "Lane returned no answer for this question"
+    },
+    {
+      "id": "q3",
+      "family": "firm",
+      "event_class": "corporate_action_mna",
+      "question": "Who is the named issuer on the Finviz hit list?",
+      "status": "blocked",
+      "note": "Lane returned no answer for this question"
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "Archer Aviation Inc",
+      "ticker": "ACHR",
+      "type": "equity",
+      "sector": "Industrials",
+      "industry": "Aerospace & Defense",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:archer aviation",
+      "aliases": [
+        "archer aviation",
+        "aviation archer",
+        "archer",
+        "aviation"
+      ],
+      "lane_why": "Mentioned explicitly in the title and body as the primary subject of the article."
+    }
+  ],
+  "entities": [
+    {
+      "name": "Archer Aviation",
+      "ticker": "ACHR",
+      "role": "substitute",
+      "direction": "up",
+      "horizon": "0-1d",
+      "axiom_id": "A_AIR_02",
+      "pack_cite": "quote_or_unknown",
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "ACHR Stock Alert: What to Know as Archer Aviation Makes L.A. Plans ...: Archer Aviation (ACHR) has announced another major step in its plans to build an air-taxi network across Los Angeles ahead of the 2028 Olympic and Paralympic Games. ACHR signed a multi-year agreement with AEG this morning that will enable the company to develop a vertiport at L.A. Live in downtown Los Angeles, making Archer th",
+      "url": "https://www.barchart.com/story/news/4007558/achr-stock-alert-what-to-know-as-archer-aviation-makes-l-a-plans-ahead-of-2028-olympics",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "Archer Aviation (ACHR) Nears Air Taxi Approval Ahead Of 2028 Los ...: Archer Aviation (NYSE:ACHR) is approaching regulatory approval for its electric vertical takeoff and landing air taxi. The company has been selected as the official air taxi provider for the 2028 ...",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/archer-aviation-achr-nears-air-141509035.html",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "Archer Aviation Makes Bigger Bet on Los Angeles - Yahoo Finance: Archer Aviation (NYSE:ACHR) is adding a high-profile piece to its Los Angeles air taxi strategy, partnering with AEG to develop downtown L.A.'s first announced vertiport at L.A. LIVE ahead of the ...",
+      "url": "https://finance.yahoo.com/technology/articles/archer-aviation-makes-bigger-bet-183937570.html",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "Archer Aviation (ACHR) Stock Expands LA Air Taxi Network Ahead of 2028 ...: Archer will become the exclusive air taxi provider for the sports and entertainment district under a multi-year partnership. The project expands Archer's planned Los Angeles network ahead of the 2028 Olympic and Paralympic Games.",
+      "url": "https://www.tipranks.com/news/archer-aviation-achr-stock-expands-la-air-taxi-network-ahead-of-2028-olympics",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "ACHR Stock Alert: What You Need to Know as Archer Aviation A ... - moomoo: Wajeeh Khan - Barchart - 2026/08/25 4:28 JST Archer Aviation (ACHR) has announced a significant new step in its plan to build an air taxi network across Los Angeles ahead of the 2028 Olympic and Paralympic Games. ACHR signed a multi-year agreement with AEG this morning. This will allow ACHR to construct a vertiport at LA Li",
+      "url": "https://www.moomoo.com/community/feed/achr-stock-alert-what-you-need-to-know-as-archer-117152411025414",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "Archer ramps up L.A. air-taxi plans with 2028 Olympics in sight: Archer Aviation (ACHR) plans an L.A. Live vertiport with AEG for its LA28 electric air-taxi network—key routes, timing and rollout.",
+      "url": "https://seekingalpha.com/news/4636255-archer-ramps-up-la-air-taxi-plans-with-2028-olympics-in-sight",
+      "source": "ddg_html",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "BUY ACHR, 0-1d, because L.A. Olympics 2028 operational commitment; clock=0-1d",
+  "q5": "impulse",
+  "event_class": "corporate_action_mna",
+  "sign": null,
+  "family": "firm",
+  "constraint": "L.A. Olympics 2028 operational commitment",
+  "rejected_hints": [],
+  "winners": [
+    "ACHR"
+  ],
+  "losers": [],
+  "clock": "0-1d",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

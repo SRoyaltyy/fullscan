@@ -1,0 +1,153 @@
+{
+  "article_id": "f59c45de662c1fcf",
+  "title": "A Qorvo Executive's Shares Vested Amid the Skyworks Deal. Here's What to Know",
+  "body": "rss_yahoo_finance",
+  "known_at": "2026-08-08T21:24:10Z",
+  "harvest_source": "parsed",
+  "source_file": "01_daily/news/2026-08-08_parsed.json",
+  "gold_id": "",
+  "ticker_hint": "",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "firm",
+      "event_class": "insider_flow",
+      "question": "Is this the issuer's own cash, paper, or control — not a sector story?",
+      "status": "answered",
+      "note": "The insider flow is unrelated to the firm's own cash, paper, or control—it is a routine tax-driven vesting sale, not a sector story or M&A driver. The event is a substitute for the primary deal-related narrative."
+    },
+    {
+      "id": "q2",
+      "family": "firm",
+      "event_class": "insider_flow",
+      "question": "If it is a routine dividend, why is there no 0-1d sector trade?",
+      "status": "blocked",
+      "note": "Not applicable; this is not a routine dividend."
+    },
+    {
+      "id": "q3",
+      "family": "firm",
+      "event_class": "insider_flow",
+      "question": "Who is the named issuer on the Finviz hit list?",
+      "status": "blocked",
+      "note": "No explicit 'Finviz hit list' context provided."
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "Qorvo Inc",
+      "ticker": "QRVO",
+      "type": "equity",
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:qorvo",
+      "aliases": [
+        "qorvo"
+      ],
+      "lane_why": "Mentioned in the title and body as the company where a Qorvo executive's shares vested."
+    },
+    {
+      "entity_name": "Skyworks Solutions Inc",
+      "ticker": "SWKS",
+      "type": "equity",
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:skyworks",
+      "aliases": [
+        "skyworks solutions",
+        "solutions skyworks",
+        "skyworks"
+      ],
+      "lane_why": "Mentioned in the title as part of the 'Skyworks Deal' context."
+    }
+  ],
+  "entities": [
+    {
+      "name": "Qorvo Inc",
+      "ticker": "QRVO",
+      "role": "substitute",
+      "direction": "down",
+      "horizon": "0-1d",
+      "axiom_id": "A_Q5_01",
+      "pack_cite": "A Qorvo Executive's Shares Vested Amid the Skyworks Deal. Here's What to Know (https://finance.yahoo.com/markets/stocks/articles/qorvo-executives-shares-vested-amid-212410795.html)",
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "A Qorvo Executive's Shares Vested Amid the Skyworks Deal. Here's What ...: Right now, Qorvo shares mostly track the odds of the Skyworks deal closing, so a CFO's tax-driven vesting sale sits about as far from the action as an insider filing can get.",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/qorvo-executives-shares-vested-amid-212410795.html",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "A Qorvo Executive's Shares Vested Amid the Skyworks Deal. Here's What ...: He was one of seven Qorvo insiders whose awards vested on the same date and seemingly triggered the same routine withholding. He stored 54,447 shares. Meanwhile, Qorvo is being purchased by Skyworks Solutions, and while that deal works through regulatory review, the company has stopped holding earnings calls and issuing ahe",
+      "url": "https://nevada-sentinel.com/a-qorvo-executives-shares-vested-amid-the-skyworks-deal-heres-what-to-know/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "A Qorvo Executive's Shares Vested Amid The Skyworks Deal. Here's What ...: In-depth analysis of A Qorvo Executive's Shares Vested Amid the Skyworks Deal. Here's What to Know covering market impact, expert views, investment implications, and what to watch next.",
+      "url": "https://nexareport.com/a-qorvo-executives-shares-vested-amid-the-skyworks-deal-heres-what-to-know/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "Qorvo, Inc. (QRVO) Stock Price, News, Quote & History - Yahoo Finance: A Qorvo Executive's Shares Vested Amid the Skyworks Deal. Here's What to Know Motley Fool • 1mo ago QRVO -1.95% SWKS",
+      "url": "https://finance.yahoo.com/quote/QRVO/latest-news/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "Qorvo's Fate Is Tied to a Skyworks Buyout. Here's What Its Latest ...: Qorvo's fiscal fourth-quarter results showed revenue down 7% to $808 million with non-GAAP earnings of $1.69 a share, past the $1.21 expected.",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/qorvos-fate-tied-skyworks-buyout-220020826.html",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "A Qorvo Executive's Shares Vested Amid the Skyworks Deal. Here's What ...: Grant Brown, the chief financial officer of Qorvo, Inc. (NASDAQ:QRVO), reported a non-discretionary disposition of 4,628 shares on August 5, according to an SEC Form 4 filing. Transaction value based on SEC Form 4 weighted average sale price ($95.04); post-Transaction value based on the August 5 market close ($95.25).",
+      "url": "https://www.sharewise.com/us/news_articles/A_Qorvo_Executives_Shares_Vested_Amid_the_Skyworks_Deal_Heres_What_to_Know_TheMotleyFool_20260808_2324",
+      "source": "ddg_html",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "SELL QRVO, 0-1d, because insider_flow: A Qorvo Executive's Shares Vested Amid the Skyworks Deal. Here's What to Know; clock=0-1d",
+  "q5": "impulse",
+  "event_class": "insider_flow",
+  "sign": null,
+  "family": "firm",
+  "constraint": "insider_flow: A Qorvo Executive's Shares Vested Amid the Skyworks Deal. Here's What to Know",
+  "rejected_hints": [],
+  "winners": [],
+  "losers": [
+    "QRVO"
+  ],
+  "clock": "0-1d",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

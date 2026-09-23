@@ -1,0 +1,139 @@
+{
+  "article_id": "67fd1d3a6fef4abe",
+  "title": "A Live Nation Insider's Latest Transaction With Shares Up 22%: Here's What to Know",
+  "body": "rss_yahoo_finance",
+  "known_at": "2026-08-08T16:16:19Z",
+  "harvest_source": "parsed",
+  "source_file": "01_daily/news/2026-08-08_parsed.json",
+  "gold_id": "",
+  "ticker_hint": "",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "firm",
+      "event_class": "insider_flow",
+      "question": "Is this the issuer's own cash, paper, or control — not a sector story?",
+      "status": "answered",
+      "note": "This is not the issuer's own cash, paper, or control—it is a non-discretionary sale of shares by an insider (Hopmans) to cover tax withholding from restricted stock vesting. The transaction is a routine insider tax liability, not a sector story or strategic move."
+    },
+    {
+      "id": "q2",
+      "family": "firm",
+      "event_class": "insider_flow",
+      "question": "If it is a routine dividend, why is there no 0-1d sector trade?",
+      "status": "blocked",
+      "note": "Lane returned no answer for this question"
+    },
+    {
+      "id": "q3",
+      "family": "firm",
+      "event_class": "insider_flow",
+      "question": "Who is the named issuer on the Finviz hit list?",
+      "status": "blocked",
+      "note": "Lane returned no answer for this question"
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "Live Nation Entertainment Inc",
+      "ticker": "LYV",
+      "type": "equity",
+      "sector": "Communication Services",
+      "industry": "Entertainment",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:live nation",
+      "aliases": [
+        "live nation entertainment",
+        "live nation",
+        "nation live"
+      ],
+      "lane_why": "Mentioned in the title and body as the primary subject of the article."
+    }
+  ],
+  "entities": [
+    {
+      "name": "John Hopmans (Executive VP of M&A and Strategic Finance, Live Nation Entertainment Inc)",
+      "ticker": "LYV",
+      "role": "harm",
+      "direction": "down",
+      "horizon": "0-1d",
+      "axiom_id": null,
+      "pack_cite": null,
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "A Live Nation Insider's Latest Transaction With Shares Up 22%: Here's ...: What is the insider's remaining direct financial interest in the company? Following this transaction, Hopmans retains direct ownership of 174,432 shares, which represents a market value of $31.7 ...",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/live-nation-insiders-latest-transaction-161619519.html",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "Live Nation's CFO Latest Insider Transaction: Here's What Long-Term ...: The CFO of Live Nation disposed of 10,834 shares to cover tax withholding from restricted stock vesting, retaining 901,617 shares valued at $164 million.",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/live-nations-cfo-latest-insider-162144448.html",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "A Live Nation Insider's Latest Transaction With Shares Up 22%: Here's ...: What is the insider's remaining direct financial interest in the company? Following this transaction, Hopmans retains direct ownership of 174,432 shares, which represents a market value of $31.7 million as of the August 6 market close.",
+      "url": "https://www.webull.ca/news-detail/15368118860604416",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "A Live Nation Insider's Latest Transaction With Shares Up 22%: Here's ...: A Live Nation Insider's Latest Transaction With Shares Up 22%: Here's What to Know John Hopmans, executive vice president of M&A and strategic finance at Live Nation Entertainment, Inc. (NYSE:LYV), reported a non-discretionary sale of 3,970 shares of common stock on August 6",
+      "url": "https://www.sharewise.com/us/news_articles/A_Live_Nation_Insiders_Latest_Transaction_With_Shares_Up_22_Heres_What_to_Know_TheMotleyFool_20260808_1816",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "A Live Nation Insider's Latest Transaction With Shares Up 22%: Here's ...: What is the insider's remaining direct financial interest in the company? Following this transaction, Hopmans retains direct ownership of 174,432 shares, which represents a market value of $31.7 million as of the August 6 market close.",
+      "url": "https://msnbctv.news/a-live-nation-insiders-latest-transaction-with-shares-up-22-heres-what-to-know/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "Live Nation Entertainment-A Live Nation Insider's Latest Transaction ...: A Live Nation Insider's Latest Transaction With Shares Up 22%: Here's What to Know",
+      "url": "https://reportify.cn/news/1283626007823388672",
+      "source": "ddg_html",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "SELL LYV, 0-1d, because insider transaction volume and timing; clock=0-1d",
+  "q5": "impulse",
+  "event_class": "insider_flow",
+  "sign": null,
+  "family": "firm",
+  "constraint": "insider transaction volume and timing",
+  "rejected_hints": [],
+  "winners": [],
+  "losers": [
+    "LYV"
+  ],
+  "clock": "0-1d",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

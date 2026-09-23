@@ -1,0 +1,147 @@
+{
+  "article_id": "39c98c0721c03928",
+  "title": "1st Source: Q2 Earnings Snapshot",
+  "body": "Piper Sandler raises SRCE price target to $100, sparking 4% gain",
+  "known_at": "2026-07-23 16:37:06",
+  "harvest_source": "finviz_export",
+  "source_file": "data/exports/finviz_2026-09-22.csv",
+  "gold_id": "",
+  "ticker_hint": "SRCE",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "structure",
+      "event_class": "price_cap",
+      "question": "Who collects the old venue rent (exchange or broker)?",
+      "status": "blocked",
+      "note": "No explicit mention of old venue rent (exchange/broker) collection in the provided context; event_class=price_cap does not apply to exchanges/brokers."
+    },
+    {
+      "id": "q2",
+      "family": "structure",
+      "event_class": "price_cap",
+      "question": "Which new venue just received permission, and is that name on the Finviz hit list?",
+      "status": "blocked",
+      "note": "No new venue permission or Finviz hit list reference in the title or body."
+    },
+    {
+      "id": "q3",
+      "family": "structure",
+      "event_class": "price_cap",
+      "question": "Is the incumbent already building the same rail (then mixed, not a clean down)?",
+      "status": "blocked",
+      "note": "No evidence of incumbent building the same rail; context lacks rail-specific details."
+    },
+    {
+      "id": "q4",
+      "family": "structure",
+      "event_class": "price_cap",
+      "question": "Does any hit sit in Energy even though the title never names that firm? Drop it.",
+      "status": "blocked",
+      "note": "No mention of Energy sector or firms in the title or body."
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "1st Source Corp",
+      "ticker": "SRCE",
+      "type": "equity",
+      "sector": "Financial",
+      "industry": "Banks - Regional",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:1st source; hint_named_in_title",
+      "aliases": [
+        "1st source",
+        "source 1st",
+        "source"
+      ],
+      "lane_why": "Ticker explicitly mentioned in the body of the article ('Piper Sandler raises SRCE price target') and matches a candidate from the provided list."
+    }
+  ],
+  "entities": [
+    {
+      "name": "1st Source Corp",
+      "ticker": "SRCE",
+      "role": "arms_dealer",
+      "direction": "up",
+      "horizon": "0-1d",
+      "axiom_id": "A_CAP_01",
+      "pack_cite": "quote_or_unknown",
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "Piper Sandler raises 1st Source stock price target on profitability: Investing.com - Piper Sandler raised its price target on 1st Source Corp. (NASDAQ:SRCE) to $100 from $88 while maintaining an Overweight rating on the stock. The firm increased its 2026 and 2027 ...",
+      "url": "https://www.investing.com/news/analyst-ratings/piper-sandler-raises-1st-source-stock-price-target-on-profitability-93CH-4816917",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "1st Source price target raised to $100 from $88 at Piper Sandler: Piper Sandler raised the firm's price target on 1st Source (SRCE) to $100 from $88 and keeps an Overweight rating on the shares following strong all-around Q2 results and with additional outperformance expected. The firm is also raising its 2026/2027 EPS estimates by 5% to $7.16/$7.40 to reflect Q2 upside as well as higher net inter",
+      "url": "https://www.tipranks.com/news/the-fly/1st-source-price-target-raised-to-100-from-88-at-piper-sandler-thefly-news",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "Piper Sandler raises 1st Source stock price target on profitability: Investing.com - Piper Sandler raised its price target on 1st Source Corp. (NASDAQ:SRCE) to $100 from $88 while maintaining an Overweight rating on the stock. The firm increased its 2026 and 2027 earnings per share estimates by 5% to $7.16 and $7.40, respectively, to reflect second-quarter results and higher net interest income an",
+      "url": "https://uk.investing.com/news/stock-market-news/piper-sandler-raises-1st-source-stock-price-target-on-profitability-93CH-4792405",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "SRCE Maintains Overweight Rating by Piper Sandler -- Price Target ...: On %B %d, %Y, Piper Sandler raised the price target for 1st Source Corp (SRCE) to $100.00 from $88.00, maintaining an 'Overweight' rating. This reflects a 13.64% increase in the price target, indicating a positive outlook from analysts.",
+      "url": "https://www.gurufocus.com/news/8983588/srce-maintains-overweight-rating-by-piper-sandler-price-target-raised-to-100",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "1st Source: Q2 Earnings Snapshot - Yahoo Finance: The holding company for 1st Source Bank posted revenue of $156.1 million in the period. Its revenue net of interest expense was $118.2 million, also topping Street forecasts.",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/1st-source-q2-earnings-snapshot-203706879.html",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "1st Source (SRCE) Stock Price & Overview: Piper Sandler raised the firm's price target on 1st Source (SRCE) to $88 from $83 and keeps an Overweight rating on the shares. Following 1.5 weeks of Q1 earnings season,…",
+      "url": "https://stockanalysis.com/stocks/srce/",
+      "source": "ddg_html",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "BUY SRCE, 0-1d, because price target adjustment by Piper Sandler; clock=0-1d",
+  "q5": "impulse",
+  "event_class": "price_cap",
+  "sign": null,
+  "family": "structure",
+  "constraint": "price target adjustment by Piper Sandler",
+  "rejected_hints": [],
+  "winners": [
+    "SRCE"
+  ],
+  "losers": [],
+  "clock": "0-1d",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

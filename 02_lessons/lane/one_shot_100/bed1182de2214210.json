@@ -1,0 +1,129 @@
+{
+  "article_id": "bed1182de2214210",
+  "title": "A New Defense Stock Is Born: Lyntris IPO Set For Wednesday",
+  "body": "rss_yahoo_finance",
+  "known_at": "2026-08-19T12:30:37Z",
+  "harvest_source": "parsed",
+  "source_file": "01_daily/news/2026-08-19_parsed.json",
+  "gold_id": "",
+  "ticker_hint": "",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "flow",
+      "event_class": "listing_flow",
+      "question": "Who is forced to buy or sell the named line, and on which session?",
+      "status": "answered",
+      "note": "Forced buyers (investors) are compelled to buy LYNX shares on the listing session (Wednesday), as evidenced by the IPO pricing and subsequent 14% drop from the list price, indicating a forced entry at a higher price than the market valued it."
+    },
+    {
+      "id": "q2",
+      "family": "flow",
+      "event_class": "listing_flow",
+      "question": "Is the flow the issuer itself or an index vehicle?",
+      "status": "answered",
+      "note": "The flow is the issuer itself (Lyntris Inc.), not an index vehicle."
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "Lyntris Inc",
+      "ticker": "LYNX",
+      "type": "equity",
+      "sector": "Industrials",
+      "industry": "Aerospace & Defense",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:lyntris",
+      "aliases": [
+        "lyntris"
+      ],
+      "lane_why": "Mentioned explicitly in the title as the defense stock set for IPO."
+    }
+  ],
+  "entities": [
+    {
+      "name": "Lyntris (LYNX)",
+      "ticker": "LYNX",
+      "role": "forced buyers",
+      "direction": "down",
+      "horizon": "0-1d",
+      "axiom_id": null,
+      "pack_cite": null,
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "A New Defense Stock Is Born: Lyntris IPO Set For Wednesday: A new defense contractor hit the IPO market. It was a rough start. On Wednesday, Lyntris (LYNX) tumbled 14% from its list price of $17.50 a share. Shares opened on the New York Stock Exchange on ...",
+      "url": "https://www.investors.com/news/lyntris-ipo-defense-stocks-pentagon-lockheed-martin-rtx/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "Lyntris Inc. (LYNX) Stock Price, News, Quote & History - Yahoo Finance: A New Defense Stock Is Born: Lyntris IPO Set For Wednesday Investor's Business Daily • 1mo ago",
+      "url": "https://finance.yahoo.com/quote/LYNX/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "Lyntris Inc. (LYNX) Latest Stock News & Headlines - Yahoo Finance: A New Defense Stock Is Born: Lyntris IPO Set For Wednesday Investor's Business Daily • 1mo ago LYNX -0.23% LMT GE",
+      "url": "https://finance.yahoo.com/quote/LYNX/news/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "A new defense stock is born: Lyntris IPO set for Wednesday - MSN: The defense contractor Lyntris sold 17 million shares in its IPO. The stock closed 14% below its list price of $17.50 a share, according to MarketSurge.",
+      "url": "https://www.msn.com/en-us/money/topstocks/a-new-defense-stock-is-born-lyntris-ipo-set-for-wednesday/ar-AA2at0Uw",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "Defense-Tech Roll-Up Lyntris Falls 11% in Its NYSE Debut as LYNX: Lyntris priced its IPO below range, raised a little over half of what it first targeted, and then watched its stock drop on day one. That is a rough debut for a defense-tech story Wall Street was supposed to like. Lyntris Inc. started trading on the New York Stock Exchange on Wednesday under the ticker LYNX. The market's first verdi",
+      "url": "https://startupfortune.com/defense-tech-roll-up-lyntris-falls-11-in-its-nyse-debut-as-lynx/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "Lyntris Stumbles Out of the Gate After Downsized IPO: Lyntris (LYNX) debuts on the NYSE with a $1.78 billion valuation, falling 13%. The defense company makes military sensors and software.",
+      "url": "https://www.benzinga.com/markets/ipos/26/08/61313716/lyntris-stumbles-out-of-the-gate-after-downsized-ipo",
+      "source": "ddg_html",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "SELL LYNX, 0-1d, because new defense stock IPO; clock=0-1d",
+  "q5": "impulse",
+  "event_class": "listing_flow",
+  "sign": null,
+  "family": "flow",
+  "constraint": "new defense stock IPO",
+  "rejected_hints": [],
+  "winners": [],
+  "losers": [
+    "LYNX"
+  ],
+  "clock": "0-1d",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

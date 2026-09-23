@@ -1,0 +1,152 @@
+{
+  "article_id": "0ea0d2b7e7bc0196",
+  "title": "190,044 Shares in CVS Health Corporation $CVS Bought by Wealthfront Advisers LLC",
+  "body": "newsapi_MarketBeat",
+  "known_at": "2026-08-19T13:15:59Z",
+  "harvest_source": "parsed",
+  "source_file": "01_daily/news/2026-08-20_parsed.json",
+  "gold_id": "",
+  "ticker_hint": "",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "firm",
+      "event_class": "insider_flow",
+      "question": "Is this the issuer's own cash, paper, or control — not a sector story?",
+      "status": "answered",
+      "note": "This is not the issuer's own cash, paper, or control—it is an institutional accumulation (Wealthfront Advisers LLC) in a Healthcare firm, not a sector story."
+    },
+    {
+      "id": "q2",
+      "family": "firm",
+      "event_class": "insider_flow",
+      "question": "If it is a routine dividend, why is there no 0-1d sector trade?",
+      "status": "blocked",
+      "note": "No routine dividend context provided; irrelevant to insider flow."
+    },
+    {
+      "id": "q3",
+      "family": "firm",
+      "event_class": "insider_flow",
+      "question": "Who is the named issuer on the Finviz hit list?",
+      "status": "answered",
+      "note": "The named issuer on the Finviz hit list is **CVS Health Corporation** (CVS)."
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "CVS Health Corp",
+      "ticker": "CVS",
+      "type": "equity",
+      "sector": "Healthcare",
+      "industry": "Healthcare Plans",
+      "source": "finviz_row",
+      "score": 12,
+      "why": "ticker_in_text; company:cvs health",
+      "aliases": [
+        "cvs health",
+        "health cvs"
+      ],
+      "lane_why": "Mentioned in the title and body of the article as the primary subject."
+    },
+    {
+      "entity_name": "Wealthfront Corp",
+      "ticker": "WLTH",
+      "type": "equity",
+      "sector": "Technology",
+      "industry": "Software - Application",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:wealthfront",
+      "aliases": [
+        "wealthfront"
+      ],
+      "lane_why": "Mentioned in the title and body of the article as the buyer of CVS shares."
+    }
+  ],
+  "entities": [
+    {
+      "name": "CVS Health Corporation",
+      "ticker": "CVS",
+      "role": "substitute",
+      "direction": "down",
+      "horizon": "0-1d",
+      "axiom_id": "A_MED_01",
+      "pack_cite": "quote_or_unknown",
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "190,044 Shares in CVS Health Corporation $CVS Bought by Wealthfront ...: Wealthfront Advisers LLC purchased a new position in shares of CVS Health Corporation (NYSE:CVS - Free Report) during the 2nd quarter, according to the company in its most recent 13F filing with the Securities and Exchange Commission. The institutional investor purchased 190,044 shares of the ...",
+      "url": "https://www.marketbeat.com/instant-alerts/filing-190044-shares-in-cvs-health-corporation-cvs-bought-by-wealthfront-advisers-llc-2026-08-19/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "Wealthfront Advisers Llc reports 4.70% increase in ownership of CVS ...: On August 7, 2026 - Wealthfront Advisers Llc filed a 13F-HR form disclosing ownership of 190,044 shares of CVS Health Corporation (CH:CVS) valued at $19,660,052 USD as of June 30, 2026.",
+      "url": "https://fintel.io/so/ch/cvs/wealthfront-advisers",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "Great Lakes Advisors LLC Makes New Investment in CVS Health Corporation ...: Gables Capital Management Inc. bought a new position in shares of CVS Health during the second quarter valued at about $52,000. Finally, Wealthfront Advisers LLC purchased a new position in shares of CVS Health in the second quarter worth about $19,660,000. Institutional investors own 80.66% of the company's stock.",
+      "url": "https://www.marketbeat.com/instant-alerts/filing-great-lakes-advisors-llc-makes-new-investment-in-cvs-health-corporation-cvs-2026-08-19/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "CVS Caremark Corporation shares owned by Wealthfront Advisers: Tip: Access up to 7 years of quarterly data All positions including CVS Caremark Corporation held by Wealthfront Advisers consolidated in one spreadsheet with up to 7 years of data",
+      "url": "https://stockzoa.com/ticker/cvs/ownership/wealthfront-advisers-llc/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "CVS Health Institutional Ownership and Top Holders: See the latest institutional holders of CVS Health, including reported share counts, position values, filing dates, and links to each holder's 13F portfolio.",
+      "url": "https://www.holdingschannel.com/institutional/holders-of-cvs-health/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "CVS Health | Investor Relations: CVS Health is the leading health solutions company, delivering care like no one else can. We help people navigate the health care system — and their personal health care — by improving access, lowering costs and being a trusted partner for every meaningful moment of health.",
+      "url": "https://investors.cvshealth.com/overview/default.aspx",
+      "source": "ddg_html",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "SELL CVS, 0-1d, because institutional accumulation; clock=0-1d",
+  "q5": "impulse",
+  "event_class": "insider_flow",
+  "sign": null,
+  "family": "firm",
+  "constraint": "institutional accumulation",
+  "rejected_hints": [],
+  "winners": [],
+  "losers": [
+    "CVS"
+  ],
+  "clock": "0-1d",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

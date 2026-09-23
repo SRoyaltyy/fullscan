@@ -1,0 +1,200 @@
+{
+  "article_id": "99e0cb94b50bad20",
+  "title": "Four paying subscribers filed a class-action antitrust lawsuit, Buist et al. v. Anthropic PBC et al., accusing Anthropic, OpenAI, xAI (SpaceXAI), and Google of an illegal agreement to slow AI",
+  "body": "Complaint names the labs. Meta is not a defendant.",
+  "known_at": "2026-09-17T09:00:00-04:00",
+  "harvest_source": "gold_fixture",
+  "source_file": "",
+  "gold_id": "buist",
+  "ticker_hint": "",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "time",
+      "event_class": "regime_break",
+      "question": "Did the physical or legal constraint change, or is this a reprint?",
+      "status": "answered",
+      "note": "Legal constraint on competitive behavior (antitrust) changed; this is a regime break."
+    },
+    {
+      "id": "q2",
+      "family": "time",
+      "event_class": "regime_break",
+      "question": "If it is a regime break, which prior book flips sign?",
+      "status": "answered",
+      "note": "The prior book flips sign for the harm set (Anthropic, OpenAI, xAI, Google) under A_AT_01 and A_AT_02."
+    },
+    {
+      "id": "q3",
+      "family": "time",
+      "event_class": "regime_break",
+      "question": "If it is weather, why is a 0-1d entity illegal?",
+      "status": "blocked",
+      "note": "Not applicable; this is a legal constraint, not a physical constraint like weather."
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "Alphabet Inc",
+      "ticker": "GOOG",
+      "type": "equity",
+      "sector": "Communication Services",
+      "industry": "Internet Content & Information",
+      "source": "finviz_row",
+      "score": 9,
+      "why": "brand:google",
+      "aliases": [
+        "alphabet"
+      ],
+      "lane_why": "Article names Google as a defendant in the antitrust lawsuit; GOOG is a listed ticker for Alphabet Inc."
+    },
+    {
+      "entity_name": "Alphabet Inc",
+      "ticker": "GOOGL",
+      "type": "parent",
+      "sector": "Communication Services",
+      "industry": "Internet Content & Information",
+      "source": "finviz_row",
+      "score": 9,
+      "why": "brand:google",
+      "aliases": [
+        "alphabet"
+      ],
+      "lane_why": "Article names Google as a defendant in the antitrust lawsuit; GOOGL is a listed ticker for Alphabet Inc."
+    }
+  ],
+  "entities": [
+    {
+      "name": "Anthropic",
+      "ticker": null,
+      "role": "harm set",
+      "direction": "down",
+      "horizon": "0-1d",
+      "axiom_id": "A_AT_01",
+      "pack_cite": null,
+      "stays_out": false,
+      "type": "none"
+    },
+    {
+      "name": "OpenAI",
+      "ticker": null,
+      "role": "harm set",
+      "direction": "down",
+      "horizon": "0-1d",
+      "axiom_id": "A_AT_01",
+      "pack_cite": null,
+      "stays_out": false,
+      "type": "none"
+    },
+    {
+      "name": "xAI (SpaceXAI)",
+      "ticker": null,
+      "role": "harm set",
+      "direction": "down",
+      "horizon": "0-1d",
+      "axiom_id": "A_AT_01",
+      "pack_cite": null,
+      "stays_out": false,
+      "type": "none"
+    },
+    {
+      "name": "Google",
+      "ticker": "GOOGL",
+      "role": "harm set",
+      "direction": "down",
+      "horizon": "0-1d",
+      "axiom_id": "A_AT_02",
+      "pack_cite": null,
+      "stays_out": false,
+      "type": "equity"
+    },
+    {
+      "name": "Meta",
+      "ticker": null,
+      "role": "unscathed_rival",
+      "direction": "up",
+      "horizon": "0-1d",
+      "axiom_id": "A_AT_03",
+      "pack_cite": null,
+      "stays_out": false,
+      "type": "none"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "thenextweb.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1JGmjwUysgRcUoj_-ewXFqGDdeVjTWiZCpphqsZ8l-HLoTFNN35xIELOHsFvcKoo5ZschbS2ud5W9dKXob4-NwBq5E1YvEhemOCaX7uNuxJf6mlB834B3lQCzBaIZZuu-tNpZnIVLaf3bGkUQAgK-VYt_eqpYOwrRffDWJFRps-nP5fTUz8Ye_VALULp8aSDVzKk=",
+      "source": "google_ai_overview",
+      "status": "quote"
+    },
+    {
+      "text": "forkast.news",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFi9f8E2Qob8v2j_XyH03Spr2n6lUrVod7vvzMrgnPq_kVceM66CZuSKcqnLrKCECbwf3IjQyj52iLWR30W2IQDvXY73iSwGE0fwBBcUSwR0CupMDvuFumC6H3dWhOFUQlGdEXYoEssAkJfldfhQBjy7t0WGRYwUzcX9u1SAUjvwJYwC0jpnRjUt1f-FsnqK0zxru-3FC4XANz0ZCZbBFrN",
+      "source": "google_ai_overview",
+      "status": "quote"
+    },
+    {
+      "text": "cellcog.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBTTXt2l7AW_oET7EjTtGBAo5s85OdJgZKh25fiIuq0z6bgJ-kD6iU1-oQTEoRXVLE0SCCOHs-tIbSgVe9Rb5PDJm--O9pITcPY-kZkZfLMPGvhZikVrO7szYbnKISHU234bQ2LwEh35KHbEqJ4cU58qWd",
+      "source": "google_ai_overview",
+      "status": "quote"
+    },
+    {
+      "text": "unite.ai",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSsveeYtb87rCMzQQspWYVwI5Y_d7HSUBkM0u6-0xMEnGfG6KMnAdAi2HyMJFcVUMV4SowM6qZOJDHFir-CRdpxEpUsMgsSQyEtLHUl_AgdI8F7P6gqZcnilPBYA8JsY0n744Uyh-Ilqm08ARjBjdk6qXL4ElAdWfkMNNIsKZUL7JiduKG9lJZyxSmtQBtTHO4WgWs25S8rg==",
+      "source": "google_ai_overview",
+      "status": "quote"
+    },
+    {
+      "text": "wowtale.net",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGpyf4WJHZekh0RI9nwPJi7D7c2Nl0zw2QyIsNHsZWrrs9pb651NRGKwymZzuigG4QxiqQTb2cZR2Rz0-7gPM2R0FmS1R3lZbt26dJqvULOyq_MlqG6I2GX5Ge-CvkQSH0CQeXB",
+      "source": "google_ai_overview",
+      "status": "quote"
+    },
+    {
+      "text": "plainenglish.io",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF12ezFiD_Mrf3tCT6Rcfunw6wmdkCEmdT-_LygodueUu5I9cpfPTirmho-PoVRZUc4eRjIaEeY9B7KIqJI3hoArnQj5GeJqVz04WS0KKcKys9qHRD7uHAlAC20awQOrH56YbTDwOyUv4evnyAlzYIZVSFF7SmafXeCUL8DKqZgIwXM8G3X68XVJzBsf7wZD98S92Q2l1oykYlufqRqCmuAnQ==",
+      "source": "google_ai_overview",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::openrouter::inclusionai/ling-3.0-flash-fin:free"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "SELL GOOGL, 0-1d, because legal constraint on competitive behavior (antitrust); clock=0-1d",
+  "q5": "regime_break",
+  "event_class": "regime_break",
+  "sign": null,
+  "family": "time",
+  "constraint": "legal constraint on competitive behavior (antitrust)",
+  "rejected_hints": [],
+  "winners": [
+    "Meta"
+  ],
+  "losers": [
+    "Anthropic",
+    "OpenAI",
+    "xAI (SpaceXAI)",
+    "GOOGL"
+  ],
+  "clock": "0-1d",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": "FAIL"
+}

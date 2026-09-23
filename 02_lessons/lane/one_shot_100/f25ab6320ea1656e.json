@@ -1,0 +1,173 @@
+{
+  "article_id": "f25ab6320ea1656e",
+  "title": "$72B Streaming Deal: ETFs to Gain From Netflix's Warner Bros. Takeover",
+  "body": "",
+  "known_at": "2025-12-08 08:22:00",
+  "harvest_source": "finviz_export",
+  "source_file": "data/exports/finviz_2026-09-22.csv",
+  "gold_id": "",
+  "ticker_hint": "FDND",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "firm",
+      "event_class": "corporate_action_mna",
+      "question": "Is this the issuer's own cash, paper, or control — not a sector story?",
+      "status": "answered",
+      "note": "This is a corporate action (MNA) involving control of Warner Bros. Discovery by Netflix, not a sector-specific cash or paper event."
+    },
+    {
+      "id": "q2",
+      "family": "firm",
+      "event_class": "corporate_action_mna",
+      "question": "If it is a routine dividend, why is there no 0-1d sector trade?",
+      "status": "blocked",
+      "note": "No routine dividend or sector trade mentioned in the article."
+    },
+    {
+      "id": "q3",
+      "family": "firm",
+      "event_class": "corporate_action_mna",
+      "question": "Who is the named issuer on the Finviz hit list?",
+      "status": "blocked",
+      "note": "No explicit Finviz hit list or named issuer mentioned beyond Warner Bros. Discovery."
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "Warner Bros. Discovery Inc",
+      "ticker": "WBD",
+      "type": "equity",
+      "sector": "Communication Services",
+      "industry": "Entertainment",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:warner bros",
+      "aliases": [
+        "warner bros discovery",
+        "warner bros",
+        "bros warner"
+      ],
+      "lane_why": "Title explicitly references 'Warner Bros.' and the deal involves Warner Bros. Discovery Inc."
+    },
+    {
+      "entity_name": "Warner Music Group Corp",
+      "ticker": "WMG",
+      "type": "equity",
+      "sector": "Communication Services",
+      "industry": "Entertainment",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:warner",
+      "aliases": [
+        "warner music",
+        "music warner",
+        "warner",
+        "music"
+      ],
+      "lane_why": "Warner Music Group is part of Warner Bros. Discovery and the deal involves Warner Bros. entities."
+    }
+  ],
+  "entities": [
+    {
+      "name": "Warner Bros. Discovery Inc",
+      "ticker": "WBD",
+      "role": "target",
+      "direction": "down",
+      "horizon": "0-1d",
+      "axiom_id": null,
+      "pack_cite": null,
+      "stays_out": false,
+      "type": "equity"
+    },
+    {
+      "name": "Netflix",
+      "ticker": null,
+      "role": "acquirer",
+      "direction": "mixed",
+      "horizon": "0-1d",
+      "axiom_id": null,
+      "pack_cite": null,
+      "stays_out": false,
+      "type": "none"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "netflix.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHieqOOW9DhmvL0R1Ipb0AGGnZWLpKLQDMBlnyqMGmj6dFL2pvlU3aeZziKqfJq8xNOiki9xRJ03HgSvs1xnxCR29gvpqhvtqlppAFQUj9NZ4vC6EowZ2EwUQtVKCIdN7vnOwmudeYHkT01NbOFCqzzn7fv1lFAFQ==",
+      "source": "google_ai_overview",
+      "status": "quote"
+    },
+    {
+      "text": "bnnbloomberg.ca",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHfQDs-cIWWBd0tWL3W8XCqlQTSjPUlr1iDanccYcd--yJ7VJ_OmSQyHxcAXsrBHOcF5ToGQRFZ98eymDWWJ3r_GG-Er23ViykgDIR1L4SDw-suruS6ExWP2lTCZ7mWD6X3j_fh1-Tt9mekmF4zcPmfLcFx1CoqK5toVn6cAFwpVQX7fxdBPVHjpoGNpNngO2a8SuuIhijd5eu8n9nFkrI2uKuSzXkclrdJp8ddl2JKc-T40jzoJDqjeJFHNfJG_MH2jevxuUso0qmfZQ==",
+      "source": "google_ai_overview",
+      "status": "quote"
+    },
+    {
+      "text": "theintelligencer.net",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmC0oTPjxjgbWwHyPUiz5HVa94MGkRpoeQlm5CClfB427v-9WYf2iw_IB5MhFXqMY6gZC8cjjqyqykugbg1ml7AzLW_bexNCEfOn-4uoWrjFSG6fvNwwHr8fLcUfE_ZlK-8s0Ba3JYD6zEo4HMV3mU5QmhOGjy-paU6Mm6UzyLKrEGajLiU-kMImwoQDATbt8bpo7OYtaRfrInLFsnrWLdCM0wuJuP4I_RASAyfnfrfTskxdp_faIr47nNkg==",
+      "source": "google_ai_overview",
+      "status": "quote"
+    },
+    {
+      "text": "marketingdive.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJvSyP-vwkPujWwfOOcS3_l7_hYGfCa088OB-KwHsRbLwLfznGsaJm-4oKiqUjfTxeYgBWj67-cTclMRe5nJBB6OvvVGR1chUqzaztGzkV7FZaSM8KyF52maOO7qfODRqVSQfmgkY1kiyaoAqG7VsBzZ2LFeyZD6eXUp45X7AH9u9EIXxzLb2dxpdy-vnjncfbgemJZzg2JZv3aL-xWOCs0tqSKw==",
+      "source": "google_ai_overview",
+      "status": "quote"
+    },
+    {
+      "text": "reddit.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEcTG68sqbitd5AzvxlbBbWdgfT4_dBMrypx3X-Hn_5XAVXSD_b27s3bKVpw91DI7m6yR1w0Q0Vua-FBXVW_ByJuYgF36Uy3hi6HuQdH4rgOQi3N3k9XZGm1uIDSoQODMJxTIYjGA_DUIaA_B-Ic9UC7r4GIR8FryMalSuEjNIJUK2QVGaS2mJi1voq6xakZpGU5pyHLouG2hwW3bnzVoNGr6lfBQ==",
+      "source": "google_ai_overview",
+      "status": "quote"
+    },
+    {
+      "text": "cbc.ca",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENfgcR3MBDAA5vEaGDFCOfwqBymgQkAtvJTuY0NBVDbgucyXyG_DDXi2IVnuOa_2KJuwIKmeyUwWhHIXDXqmnOTiJrjMrfA-9vJ1l1xG741apaD2wecwvTTTiYQuFOvWCSMtMLJMDCITUyNBbAdFq0IrYPdObjkJ4_oMNOnM1PVQlMEqhcYUNMM_WmdA==",
+      "source": "google_ai_overview",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "SELL WBD, 0-1d, because merger agreement (Warner Bros. Discovery acquisition by Netflix); clock=0-1d",
+  "q5": "impulse",
+  "event_class": "corporate_action_mna",
+  "sign": null,
+  "family": "firm",
+  "constraint": "merger agreement (Warner Bros. Discovery acquisition by Netflix)",
+  "rejected_hints": [
+    {
+      "ticker": "FDND",
+      "company": "FT Vest Dow Jones Internet & Target Income ETF",
+      "reason": "title_does_not_name_company"
+    }
+  ],
+  "winners": [],
+  "losers": [
+    "WBD"
+  ],
+  "clock": "0-1d",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

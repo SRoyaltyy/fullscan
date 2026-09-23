@@ -1,0 +1,139 @@
+{
+  "article_id": "4de0ea95ae91ed50",
+  "title": "ABVC BioPharma, Inc. Announces Planned Spin-Off of BioKey (Cayman), Inc. Through Dividend Distribution of BioKey Shares to ABVC Shareholders",
+  "body": "ABVC drops over 21% on July 9 after 9-day rally amid persistent going-concern warnings",
+  "known_at": "2026-06-23 08:30:00",
+  "harvest_source": "finviz_export",
+  "source_file": "data/exports/finviz_2026-09-22.csv",
+  "gold_id": "",
+  "ticker_hint": "ABVC",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "firm",
+      "event_class": "corporate_action_spinoff",
+      "question": "Is this the issuer's own cash, paper, or control — not a sector story?",
+      "status": "answered",
+      "note": "This is not the issuer's own cash, paper, or control—it is a **corporate restructuring** (spin-off) and a **capital return** via dividend distribution of BioKey shares, not a routine dividend. The event involves a **sector-specific strategic realignment** (unlocking value of subsidiaries and technol"
+    },
+    {
+      "id": "q2",
+      "family": "firm",
+      "event_class": "corporate_action_spinoff",
+      "question": "If it is a routine dividend, why is there no 0-1d sector trade?",
+      "status": "blocked",
+      "note": "Lane returned no answer for this question"
+    },
+    {
+      "id": "q3",
+      "family": "firm",
+      "event_class": "corporate_action_spinoff",
+      "question": "Who is the named issuer on the Finviz hit list?",
+      "status": "blocked",
+      "note": "Lane returned no answer for this question"
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "ABVC BioPharma Inc",
+      "ticker": "ABVC",
+      "type": "equity",
+      "sector": "Healthcare",
+      "industry": "Biotechnology",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:abvc biopharma; hint_named_in_title",
+      "aliases": [
+        "abvc biopharma",
+        "biopharma abvc",
+        "biopharma"
+      ],
+      "lane_why": "Directly referenced in the title and body of the article"
+    }
+  ],
+  "entities": [
+    {
+      "name": "ABVC BioPharma, Inc.",
+      "ticker": "ABVC",
+      "role": "harm",
+      "direction": "down",
+      "horizon": "0-1d",
+      "axiom_id": null,
+      "pack_cite": null,
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "ABVC BioPharma, Inc. Announces Planned Spin-Off of BioKey ... - Nasdaq: ABVC BioPharma, Inc. Announces Planned Spin-Off of BioKey (Cayman), Inc. Through Dividend Distribution of BioKey Shares to ABVC Shareholders",
+      "url": "https://www.nasdaq.com/press-release/abvc-biopharma-inc-announces-planned-spin-biokey-cayman-inc-through-dividend",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "ABVC BioPharma, Inc. Announces Planned Spin-Off of BioKey (Cayman), Inc ...: The planned BioKey spin-off represents an important milestone in ABVC's long-term strategy to unlock the value of its subsidiaries, technology platforms, and strategic investments, while providing ABVC shareholders with direct participation in BioKey's future.",
+      "url": "https://news.newmediawire.com/news/abvc-biopharma-inc-announces-planned-spin-off-of-biokey-cayman-inc-through-dividend-distribution-of-biokey-shares-to-abvc-shareholders",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "ABVC BioPharma, Inc. Announces Planned Spin-Off of BioKey (Cayman), Inc ...: The planned BioKey spin-off represents an important milestone in ABVC's long-term strategy to unlock the value of its subsidiaries, technology platforms, and strategic investments, while providing ...",
+      "url": "https://finance.yahoo.com/healthcare/articles/abvc-biopharma-inc-announces-planned-123000805.html",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "ABVC BioPharma, Inc. Announces Planned Spin-Off of BioKey (Cayman), Inc ...: ABVC BioPharma, Inc. / Key word (s): Manufacturing ABVC BioPharma, Inc. Announces Planned Spin-Off of BioKey (Cayman), Inc. Through Dividend Distribution of BioKey Shares to ABVC Shareholders 23.06.2026 / 14:35 CET/CEST The issuer is solely responsible for the content of this announcement.",
+      "url": "https://www.eqs-news.com/news/corporate/abvc-biopharma-inc-announces-planned-spin-off-of-biokey-cayman-inc-through-dividend-distribution-of-biokey-shares-to-abvc-shareholders/4e4b82b8-eeb3-4eff-a3fa-75cbb66adc15_en",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "ABVC BioPharma, Inc. Announces Planned Spin-Off of BioKey (Cayman), Inc ...: The planned BioKey spin-off represents an important milestone in ABVC's long-term strategy to unlock the value of its subsidiaries, technology platforms, and strategic investments, while providing ABVC shareholders with direct participation in BioKey's future.",
+      "url": "https://www.financialcontent.com/article/newmediawire-2026-6-23-abvc-biopharma-inc-announces-planned-spin-off-of-biokey-cayman-inc-through-dividend-distribution-of-biokey-shares-to-abvc-shareholders",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "ABVC BioPharma, Inc. Announces Planned Spin-Off of BioKey , Inc ...: ABVC BioPharma, Inc. a clinical-stage biopharmaceutical company focused on botanical-derived therapeutics and commercial ingredient platforms, today announced the planned spin-off of BioKey Inc ...",
+      "url": "https://investingnews.com/abvc-biopharma-inc-announces-planned-spin-off-of-biokey-inc-through-dividend-distribution-of-biokey-shares-to-abvc-shareholders/",
+      "source": "ddg_html",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "SELL ABVC, 0-1d, because corporate_action_spinoff: ABVC BioPharma, Inc. Announces Planned Spin-Off of BioKey (Cayman), Inc. Through Dividend Distribution of BioKey Shares to ABVC Shareholders; clock=0-1d",
+  "q5": "impulse",
+  "event_class": "corporate_action_spinoff",
+  "sign": null,
+  "family": "firm",
+  "constraint": "corporate_action_spinoff: ABVC BioPharma, Inc. Announces Planned Spin-Off of BioKey (Cayman), Inc. Through Dividend Distribution of BioKey Shares to ABVC Shareholders",
+  "rejected_hints": [],
+  "winners": [],
+  "losers": [
+    "ABVC"
+  ],
+  "clock": "0-1d",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

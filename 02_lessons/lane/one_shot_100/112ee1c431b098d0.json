@@ -1,0 +1,148 @@
+{
+  "article_id": "112ee1c431b098d0",
+  "title": "4th Circuit dismisses some charges against Wells Fargo after jury’s $22.1M fee",
+  "body": "rss_yahoo_finance",
+  "known_at": "2026-08-25T15:28:00Z",
+  "harvest_source": "parsed",
+  "source_file": "01_daily/news/2026-08-27_parsed.json",
+  "gold_id": "",
+  "ticker_hint": "",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "blast",
+      "event_class": "blast_legal",
+      "question": "Who is in the harm set (cannot operate, sued, or breached)?",
+      "status": "answered",
+      "note": "Wells Fargo is in the harm set due to the legal judgment (4th Circuit dismissal of charges) reducing the $22.1M award but still affirming retaliation claim, indicating ongoing legal overhang and operational constraints."
+    },
+    {
+      "id": "q2",
+      "family": "blast",
+      "event_class": "blast_legal",
+      "question": "If the buyer still wants the end-use and the primary channel is blocked, which listed substitute is on the Finviz hit list?",
+      "status": "blocked",
+      "note": "No relevant substitute applies to this legal judgment."
+    },
+    {
+      "id": "q3",
+      "family": "blast",
+      "event_class": "blast_legal",
+      "question": "Which listed rival competes and is outside the harm set (unscathed_rival)?",
+      "status": "blocked",
+      "note": "No unscathed rival identified in this context."
+    },
+    {
+      "id": "q4",
+      "family": "blast",
+      "event_class": "blast_legal",
+      "question": "Who sells the input both sides still buy (arms_dealer)? If unanswered, direction is not_determined.",
+      "status": "blocked",
+      "note": "No arms dealer identified in this context."
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "Wells Fargo & Co",
+      "ticker": "WFC",
+      "type": "equity",
+      "sector": "Financial",
+      "industry": "Banks - Diversified",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:wells fargo",
+      "aliases": [
+        "wells fargo",
+        "fargo wells",
+        "wells",
+        "fargo"
+      ],
+      "lane_why": "Mentioned explicitly in the title and body of the article."
+    }
+  ],
+  "entities": [
+    {
+      "name": "Wells Fargo & Co",
+      "ticker": "WFC",
+      "role": "harm set",
+      "direction": "down",
+      "horizon": "0-1d",
+      "axiom_id": "A_AT_01",
+      "pack_cite": "https://finance.yahoo.com/healthcare/articles/4th-circuit-dismisses-charges-against-152800849.html",
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "4th Circuit dismisses some charges against Wells Fargo after jury's $22 ...: The 4th U.S. Circuit Court of Appeals dismissed most of a worker's Americans with Disabilities Act and North Carolina Equal Employment Practices Act claims against Wells Fargo on Friday — more ...",
+      "url": "https://finance.yahoo.com/healthcare/articles/4th-circuit-dismisses-charges-against-152800849.html",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "4th Circuit dismisses some charges against Wells Fargo after jury's $22 ...: The 4th U.S. Circuit Court of Appeals dismissed most of a worker's Americans with Disabilities Act and North Carolina Equal Employment Practices Act claims against Wells Fargo on Friday — more than two years after a jury found for him on all claims and awarded him $22.1 million (Billesdon v. Wells Fargo Securities, LLC).",
+      "url": "https://www.newsbreak.com/news/4848995334905-4th-circuit-dismisses-some-charges-against-wells-fargo-after-jury-s-22-1m-fee",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "4th Circuit cuts fired Wells Fargo exec's award from $22M to $18M: The 4th US Circuit Court of Appeals has reduced a jury award for a former Wells Fargo Securities executive from $22 million to roughly $18 million. Appellate judges upheld the portion of a 2024 jury verdict that the company discriminated against Christopher John Billesdon after he requested a workplace accommodation for a disabilit",
+      "url": "https://www.carolinajournal.com/4th-circuit-cuts-fired-wells-fargo-execs-award-from-22m-to-18m/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "4th Circuit Cuts $22M Wells Fargo Disability Verdict: The Fourth Circuit affirmed in part, reversed in part, and remanded a jury verdict of more than $22 million won by former Wells Fargo Securities managing director Christopher Billesdon. Judge Richardson's majority opinion left only the ADA retaliation claim standing, reversed the failure-to-accommodate and disability-discharge claims, vacated p",
+      "url": "https://verdict.news/circuit/4th-circuit-trims-22m-wells-fargo-verdict-to-retaliation-claim-alone-01a04233",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "4th Circuit Trims Wells Fargo's $22M ADA Verdict: The Fourth Circuit Court of Appeals has trimmed, but not erased, a $22.1 million jury verdict against Wells Fargo Securities in a disability retaliation case, leaving employers with a sharper picture of how much evidence a jury needs to find retaliatory intent. A three-decade Wells Fargo sales managing director who requested a permanent remote-work",
+      "url": "https://hrtechedition.com/news/4th-circuit-trims-wells-fargos-22m-ada-verdict/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "4th Circuit dismisses some charges against Wells Fargo after jury's $22 ...: Although the appeals court dismissed three or four charges following a worker's disability trial, in affirming the fourth charge, it allowed him to retain most of his aw ard. Original Link See also DOL, other agencies address questions about wellness program surcharges",
+      "url": "https://www.hrnewsfeed.com/4th-circuit-dismisses-some-charges-against-wells-fargo-after-jurys-22-1m-fee/",
+      "source": "ddg_html",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "SELL WFC, 0-1d, because legal judgment (4th Circuit dismissal of charges); clock=0-1d",
+  "q5": "impulse",
+  "event_class": "blast_legal",
+  "sign": null,
+  "family": "blast",
+  "constraint": "legal judgment (4th Circuit dismissal of charges)",
+  "rejected_hints": [],
+  "winners": [],
+  "losers": [
+    "WFC"
+  ],
+  "clock": "0-1d",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

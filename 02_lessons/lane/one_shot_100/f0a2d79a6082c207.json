@@ -1,0 +1,140 @@
+{
+  "article_id": "f0a2d79a6082c207",
+  "title": "A Corsair Gaming Director Dumps Nearly 9,000 Shares Representing a Substantial 28% of Their Direct Stake. Here's a Closer Look at the Transaction.",
+  "body": "rss_yahoo_finance",
+  "known_at": "2026-08-17T12:25:01Z",
+  "harvest_source": "parsed",
+  "source_file": "01_daily/news/2026-08-17_parsed.json",
+  "gold_id": "",
+  "ticker_hint": "",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "firm",
+      "event_class": "insider_flow",
+      "question": "Is this the issuer's own cash, paper, or control — not a sector story?",
+      "status": "answered",
+      "note": "This is the issuer's own paper (insider sale of 28% stake by a director), not a sector story."
+    },
+    {
+      "id": "q2",
+      "family": "firm",
+      "event_class": "insider_flow",
+      "question": "If it is a routine dividend, why is there no 0-1d sector trade?",
+      "status": "blocked",
+      "note": ""
+    },
+    {
+      "id": "q3",
+      "family": "firm",
+      "event_class": "insider_flow",
+      "question": "Who is the named issuer on the Finviz hit list?",
+      "status": "answered",
+      "note": "Corsair Gaming Inc (CRSR) is the named issuer."
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "Corsair Gaming Inc",
+      "ticker": "CRSR",
+      "type": "equity",
+      "sector": "Technology",
+      "industry": "Computer Hardware",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:corsair gaming",
+      "aliases": [
+        "corsair gaming",
+        "gaming corsair",
+        "corsair",
+        "gaming"
+      ],
+      "lane_why": "Ticker explicitly mentioned in the title and body of the article."
+    }
+  ],
+  "entities": [
+    {
+      "name": "Corsair Gaming Inc",
+      "ticker": "CRSR",
+      "role": "harm",
+      "direction": "down",
+      "horizon": "0-1d",
+      "axiom_id": null,
+      "pack_cite": "A_INS_01",
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "A Corsair Gaming Director Dumps Nearly 9,000 Shares Representing a ...: A Corsair Gaming Director Dumps Nearly 9,000 Shares Representing a Substantial 28% of Their Direct Stake. Here's a Closer Look at the Transaction. The gaming peripherals provider reported a ...",
+      "url": "https://www.fool.com/coverage/filings/2026/08/17/a-corsair-gaming-director-dumps-nearly-9-000-shares-representing-a-substantial-28-of-their-direct-stake-here-s-a-closer-look-at-the-transaction/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "A Corsair Gaming Director Dumps Nearly 9,000 Shares Representing a ...: A Corsair Gaming Director Dumps Nearly 9,000 Shares Representing a Substantial 28% of Their Direct Stake. Here's a Closer Look at the Transaction. Motley Fool - 7 minutes ago",
+      "url": "https://www.theglobeandmail.com/investing/markets/markets-news/Motley/3885003/a-corsair-gaming-director-dumps-nearly-9-000-shares-representing-a-substantial-28-of-their-direct-stake-here-s-a-closer-look-at-the-transaction/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "A Corsair Gaming Director Dumps Nearly 9,000 Shares Representing a ...: A Corsair Gaming Director Dumps Nearly 9,000 Shares Representing a Substantial 28% of Their Direct Stake. Here's a Closer Look at the Transaction. The Motley Fool · 08/17/2026 12:25:01 Listen to the news",
+      "url": "https://www.webull.ca/news-detail/15418175246869504",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "A Corsair Gaming Director Dumps Nearly 9,000 Shares Representing a ...: Here's a Closer Look at the Transaction. A Corsair Gaming Director Dumps Nearly 9,000 Shares Representing a Substantial 28% of Their Direct Stake. Here's a Closer Look at the Transaction. Published Aug 17, 2026·Updated Aug 17, 2026 Article summary CoinKit shows a short local summary and links to the original source.",
+      "url": "https://coinkit.org/news/a-corsair-gaming-director-dumps-nearly-9000-shares-733e0690",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "A Corsair Gaming Director Dumps Nearly 9,000 Shares Representing a ...: A Corsair Gaming Director Dumps Nearly 9,000 Shares Representing a Substantial 28% of Their Direct Stake. Here's a Closer Look at the Transaction. Sarah Mears Kim, a member of the Board of Directors at Corsair Gaming, Inc. (NASDAQ:CRSR), sold 8,874 shares of common stock on August 13,… This story appeared on finance.yahoo.com,",
+      "url": "https://biztoc.com/x/0b4f4ce86be957c3",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "A Corsair Gaming Director Dumps Nearly 9,000 Shares Representing a ...: A Corsair Gaming Director Dumps Nearly 9,000 Shares Representing a Substantial 28 of Their Direct Stake. Heres a Closer Look at the Transaction. THE MOTLEY FOOLneutralmarkets2026-08-17 12:32:33 UTC AdYour ad here[email protected]",
+      "url": "https://newsagentdata.com/news/a/84151798-a-corsair-gaming-director-dumps-nearly-9-000-shares",
+      "source": "ddg_html",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "SELL CRSR, 0-1d, because corporate_insider_sale; clock=0-1d",
+  "q5": "impulse",
+  "event_class": "insider_flow",
+  "sign": null,
+  "family": "firm",
+  "constraint": "corporate_insider_sale",
+  "rejected_hints": [],
+  "winners": [],
+  "losers": [
+    "CRSR"
+  ],
+  "clock": "0-1d",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

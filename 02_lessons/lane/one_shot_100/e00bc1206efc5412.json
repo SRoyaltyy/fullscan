@@ -1,0 +1,137 @@
+{
+  "article_id": "e00bc1206efc5412",
+  "title": "1 Number That Makes Nike's Turnaround Worth Watching This Month",
+  "body": "rss_yahoo_finance",
+  "known_at": "2026-08-18T14:20:00Z",
+  "harvest_source": "parsed",
+  "source_file": "01_daily/news/2026-08-18_parsed.json",
+  "gold_id": "",
+  "ticker_hint": "",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "print",
+      "event_class": "guidance",
+      "question": "What number changed versus what was already priced?",
+      "status": "answered",
+      "note": "The article references Nike's stock performance (down >30% year-to-date) and its turnaround strategy ('Win Now'), but no explicit financial metric (e.g., revenue, margins, unit sales) is changed or updated. The focus is on narrative guidance (turnaround progress) rather than a quantifiable print. Th"
+    },
+    {
+      "id": "q2",
+      "family": "print",
+      "event_class": "guidance",
+      "question": "Is this one named issuer, or a factor that should not be pinned to a camera ticker?",
+      "status": "answered",
+      "note": "This is a factor (turnaround progress) that should not be pinned to a ticker, as it lacks a specific operational or financial print. The article is a narrative-driven analysis, not a data-driven update."
+    },
+    {
+      "id": "q3",
+      "family": "print",
+      "event_class": "guidance",
+      "question": "If guidance was only reaffirmed, why is an up call illegal?",
+      "status": "answered",
+      "note": "Guidance was not reaffirmed; instead, the article discusses a *thematic* turnaround narrative ('Win Now') without a concrete update to prior guidance. The 'up call' is illegal because the article lacks a directional print (e.g., revenue beat/miss) to justify an upward revision."
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "Nike Inc",
+      "ticker": "NKE",
+      "type": "equity",
+      "sector": "Consumer Cyclical",
+      "industry": "Footwear & Accessories",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:nike",
+      "aliases": [
+        "nike"
+      ],
+      "lane_why": "Mentioned explicitly in the title and body context as the subject of the article."
+    }
+  ],
+  "entities": [
+    {
+      "name": "Nike Inc",
+      "ticker": "NKE",
+      "role": "substitute",
+      "direction": "down",
+      "horizon": "1-4w",
+      "axiom_id": "A_AT_03",
+      "pack_cite": "quote_or_unknown",
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "1 Number That Makes Nike's Turnaround Worth Watching This Month: The Motley Fool has positions in and recommends Nike. The Motley Fool has a disclosure policy. 1 Number That Makes Nike's Turnaround Worth Watching This Month was originally published by The ...",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/1-number-makes-nikes-turnaround-142000760.html",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "NIKE's Turnaround Story: Are Earnings Finally Finding Footing?: If NIKE can successfully execute its turnaround initiatives while restoring a greater mix of full-price sales, earnings may finally find a firmer footing after a prolonged period of transition.",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/nikes-turnaround-story-earnings-finally-154000929.html",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "1 Number That Makes Nike's Turnaround Worth Watching This Month: Nike's (NYSE: NKE) stock isn't winning any competitions right now. Shares of the beleaguered company are down more than 30% year-to-date and trading near its 52-week low. Nike is in the middle of CEO Elliott Hill's turnaround strategy called, \"Win Now.\" The jury is still out on whether… This story appeared on finance.yahoo.com, 2026-",
+      "url": "https://biztoc.com/x/923da95d20b0705a",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "1 Big Reason Nike's Turnaround Is Taking Longer Than Expected: 1 Big Reason Nike's Turnaround Is Taking Longer Than Expected Nike is making progress -- except in one large and important market.",
+      "url": "https://www.fool.com/investing/2026/07/05/big-reason-nike-turnaround-taking-longer-nke/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "1 Number That Makes Nike's Turnaround Worth Watching This Month: The Globe and Mail has not reviewed this content. Please see disclaimer. 1 Number That Makes Nike's Turnaround Worth Watching This Month Motley Fool - Tue Aug 18, 9:20AM CDT",
+      "url": "https://www.theglobeandmail.com/investing/markets/stocks/NKE/pressreleases/3908450/1-number-that-makes-nikes-turnaround-worth-watching-this-month/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "The Hard Part of Nike's Turnaround Is Just Beginning: Nike may have stopped sliding, but the more challenging part of the recovery is just beginning.",
+      "url": "https://www.fool.com/investing/2026/02/28/the-hard-part-of-nikes-turnaround-is-just-beginnin/",
+      "source": "ddg_html",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "AVOID_ADD NKE, 1-4w, because Nike's financial performance metrics or operational turnaround indicators (e.g., revenue, margins, or unit sales); clock=not_0_1d",
+  "q5": "impulse",
+  "event_class": "guidance",
+  "sign": null,
+  "family": "print",
+  "constraint": "Nike's financial performance metrics or operational turnaround indicators (e.g., revenue, margins, or unit sales)",
+  "rejected_hints": [],
+  "winners": [],
+  "losers": [
+    "NKE"
+  ],
+  "clock": "not_0_1d",
+  "horizon": "1-4w",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

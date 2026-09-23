@@ -1,0 +1,132 @@
+{
+  "article_id": "7a016af2c21d408c",
+  "title": "5 Billionaire Money Managers Dumped Palantir in the Second Quarter. This Is the AI Applications Stock They're Buying Hand Over Fist Instead.",
+  "body": "rss_yahoo_finance",
+  "known_at": "2026-08-25T09:26:00Z",
+  "harvest_source": "parsed",
+  "source_file": "01_daily/news/2026-08-25_parsed.json",
+  "gold_id": "",
+  "ticker_hint": "",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "flow",
+      "event_class": "flow_mechanical",
+      "question": "Who is forced to buy or sell the named line, and on which session?",
+      "status": "answered",
+      "note": "Billionaire money managers are forced to sell PLTR due to institutional asset allocation shift (q5=impulse), likely driven by relative underperformance or strategic reallocation toward competitors like GOOGL (Alphabet). The sell-off occurs on the session following the 13F filing release (August 14, "
+    },
+    {
+      "id": "q2",
+      "family": "flow",
+      "event_class": "flow_mechanical",
+      "question": "Is the flow the issuer itself or an index vehicle?",
+      "status": "blocked",
+      "note": "The flow is not clearly tied to the issuer (PLTR) as an index vehicle, but rather reflects a direct institutional sell-off of the named line (PLTR) as a standalone asset."
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "Palantir Technologies Inc",
+      "ticker": "PLTR",
+      "type": "equity",
+      "sector": "Technology",
+      "industry": "Software - Infrastructure",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:palantir",
+      "aliases": [
+        "palantir technologies",
+        "technologies palantir",
+        "palantir",
+        "technologies"
+      ],
+      "lane_why": "Explicitly mentioned in the title and body as a dumped stock."
+    }
+  ],
+  "entities": [
+    {
+      "name": "Palantir Technologies Inc",
+      "ticker": "PLTR",
+      "role": "unscathed_rival",
+      "direction": "down",
+      "horizon": "0-1d",
+      "axiom_id": "A_AT_03",
+      "pack_cite": "quote_or_unknown",
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "5 Billionaire Money Managers Dumped Palantir in the Second Quarter ...: 5 Billionaire Money Managers Dumped Palantir in the Second Quarter. This Is the AI Applications Stock They're Buying Hand Over Fist Instead. Wall Street's savviest asset managers are selling a ...",
+      "url": "https://www.fool.com/investing/2026/08/25/5-billionaires-dump-pltr-buy-ai-applications-googl/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "5 Billionaire Money Managers Dumped Palantir in the Second Quarter ...: The theme of the second quarter is that artificial intelligence (AI) stocks remain polarizing among billionaire money managers. Whereas five prominent billionaires dumped shares of Palantir Technologies(NASDAQ: PLTR) in the second quarter, other billionaire investors found an AI applications stock they couldn't stop buying: Go",
+      "url": "https://www.webull.com/news/15462765770195968",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "5 Billionaire Money Managers Dumped Palantir in the Second Quarter ...: This Is the AI Applications Stock They're Buying Hand Over Fist Instead. You might not realize it, but one of the most important data releases of the entire quarter dropped on Aug. 14.",
+      "url": "https://www.sharewise.com/us/news_articles/5_Billionaire_Money_Managers_Dumped_Palantir_in_the_Second_Quarter_This_Is_the_AI_Applications_Stock_TheMotleyFool_20260825_1126",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "5 Billionaire Money Managers Dumped Palantir in the Second Quarter ...: 5 Billionaire Money Managers Dumped Palantir in the Second Quarter. This Is the AI Applications Stock They're Buying Hand Over Fist Instead.. Yahoo Finance Crypto coverage on the three.ws crypto news reader.",
+      "url": "https://three.ws/markets/news/2026-08/d8fa5546c1a8b7ce-5-billionaire-money-managers-dumped-palantir-in-the-second-quarter",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "AI Application Stock Rotation: Why Five Billionaires Sold Palantir and ...: On August 14, the quarterly 13F filings were released, offering investors a window into the portfolio moves of Wall Street's top money managers. The latest data reveals a notable divergence within the AI application sector: five prominent billionaires reduced their positions in Palantir Technologies (PLTR) during the secon",
+      "url": "https://nai500.com/blog/2026/08/ai-application-stock-rotation-why-five-billionaires-sold-palantir-and-bought-alphabet/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "Palantir Technologies-5 Billionaire Money Managers Dumped Palantir in ...: 5 Billionaire Money Managers Dumped Palantir in the Second Quarter. This Is the AI Applications Stock They're Buying Hand Over Fist Instead. The Motley Fool ·2026-08-25 17:06",
+      "url": "https://reportify.cn/news/1289685074098524160",
+      "source": "ddg_html",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "SELL PLTR, 0-1d, because institutional asset allocation shift; clock=0-1d",
+  "q5": "impulse",
+  "event_class": "flow_mechanical",
+  "sign": null,
+  "family": "flow",
+  "constraint": "institutional asset allocation shift",
+  "rejected_hints": [],
+  "winners": [],
+  "losers": [
+    "PLTR"
+  ],
+  "clock": "0-1d",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

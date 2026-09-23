@@ -1,0 +1,138 @@
+{
+  "article_id": "b546524098582e3b",
+  "title": "AIOS Tech Inc. Announces 20-for-1 Share Consolidation and Increase of Authorized Share Capital",
+  "body": "No clear catalyst identified for AIOS Tech's 20.88% intraday surge",
+  "known_at": "2026-04-21 17:00:00",
+  "harvest_source": "finviz_export",
+  "source_file": "data/exports/finviz_2026-09-22.csv",
+  "gold_id": "",
+  "ticker_hint": "AIOS",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "firm",
+      "event_class": "corporate_action_mna",
+      "question": "Is this the issuer's own cash, paper, or control — not a sector story?",
+      "status": "answered",
+      "note": "This is a routine corporate action (share consolidation) that reduces the share count and increases authorized capital, which can be seen as a strategic move to simplify share ownership and potentially improve liquidity. The surge in intraday price suggests market anticipation of improved shareholde"
+    },
+    {
+      "id": "q2",
+      "family": "firm",
+      "event_class": "corporate_action_mna",
+      "question": "If it is a routine dividend, why is there no 0-1d sector trade?",
+      "status": "blocked",
+      "note": ""
+    },
+    {
+      "id": "q3",
+      "family": "firm",
+      "event_class": "corporate_action_mna",
+      "question": "Who is the named issuer on the Finviz hit list?",
+      "status": "answered",
+      "note": "The named issuer on the Finviz hit list is AIOS Tech Inc."
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "AIOS Tech Inc",
+      "ticker": "AIOS",
+      "type": "equity",
+      "sector": "Technology",
+      "industry": "Information Technology Services",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:aios tech; hint_named_in_title",
+      "aliases": [
+        "aios tech",
+        "tech aios"
+      ],
+      "lane_why": "Ticker explicitly mentioned in the title and confirmed in CANDIDATES list."
+    }
+  ],
+  "entities": [
+    {
+      "name": "AIOS Tech Inc.",
+      "ticker": "AIOS",
+      "role": "substitute",
+      "direction": "up",
+      "horizon": "0-1d",
+      "axiom_id": "A_CAP_01",
+      "pack_cite": "quote_or_unknown",
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "AIOS Tech Inc. Announces 20-for-1 Share Consolidation and ... - Nasdaq: Immediately upon the effectiveness of the Share Consolidation, the Company will increase its authorized share capital from US $100,000,000 divided into 480,000,000 Class A Common Shares of a ...",
+      "url": "https://www.nasdaq.com/press-release/aios-tech-inc-announces-20-1-share-consolidation-and-increase-authorized-share",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "AIOS Tech Inc. Announces 20-for-1 Share Consolidation and Increase of ...: HONG KONG, April 21, 2026 (GLOBE NEWSWIRE) -- AIOS Tech Inc. (Nasdaq: AIOS) (the \"Company\") today announced that its board of directors approved on March 26, 2026, a 20-for-1 share consolidation (the \"Share Consolidation\") of the Company's authorized, issued, and outstanding common shares, with the marketplace effective dat",
+      "url": "https://www.hongkongindustryreview.com/article/907206359-aios-tech-inc-announces-20-for-1-share-consolidation-and-increase-of-authorized-share-capital",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "AIOS Tech announces 20-for-1 share consolidation - MSN: AIOS Tech (AIOS) announced on Tuesday that its board of directors approved a 20-for-1 share consolidation of its authorized, issued, and outstanding common shares, with the marketplace effective ...",
+      "url": "https://www.msn.com/en-us/money/companies/aios-tech-announces-20-for-1-share-consolidation/ar-AA21q4fK",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "AIOS Tech Inc. Announces 20-for-1 Share Consolidation and Increase of ...: HONG KONG, April 21, 2026 (GLOBE NEWSWIRE) — AIOS Tech Inc. (Nasdaq: AIOS) (the \"Company\") today announced that its board of directors approved on March 26, 2026, a 20-for-1 share consolidation (the \"Share Consolidation\") of the Company's authorized, issued, and outstanding common shares, with the marketplace effective date",
+      "url": "https://indiaeveningpost.com/aios-tech-inc-announces-20-for-1-share-consolidation-and-increase-of-authorized-share-capital/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "AIOS Tech Inc. (via Public) / AIOS Tech Inc. Announces 20-for-1 Share ...: Hong Kong, April 21, 2026 - AIOS Tech Inc. (Nasdaq: AIOS) (the \"Company\") today announced that its board of directors approved on March 26, 2026, a 20-for-1 share consolidation (the \"Share Consolidation\") of the Company's authorized, issued, and outstanding common shares, with the marketplace effective date of April 27, 202",
+      "url": "https://www.publicnow.com/view/C5B1D871B334D921D34A4183FD74D57E55FB5E4F?1776808539",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "AIOS Tech Inc. Announces 20-for-1 Share Consolidation and Increase of ...: HONG KONG, April 21, 2026 (GLOBE NEWSWIRE) -- AIOS Tech Inc. (Nasdaq: AIOS) (the \"Company\") today announced that its board of directors approved on March 26, 2026, a 20-for-1 share consolidation (the \"Share Consolidation\") of the Company's authorized, issued, and outstanding common shares, with the marketplace effective dat",
+      "url": "https://lite.aol.com/tech/story/0022/20260421/9693883.htm",
+      "source": "ddg_html",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "BUY AIOS, 0-1d, because share consolidation and increase of authorized share capital; clock=0-1d",
+  "q5": "impulse",
+  "event_class": "corporate_action_mna",
+  "sign": null,
+  "family": "firm",
+  "constraint": "share consolidation and increase of authorized share capital",
+  "rejected_hints": [],
+  "winners": [
+    "AIOS"
+  ],
+  "losers": [],
+  "clock": "0-1d",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

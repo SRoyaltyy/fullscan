@@ -1,0 +1,164 @@
+{
+  "article_id": "1af1c5d95c6570ca",
+  "title": "A Leading Hedge Fund Just Placed Massive Bets on Broadcom and Intel Stocks. Should You Follow Suit?",
+  "body": "rss_yahoo_finance",
+  "known_at": "2026-08-26T15:40:00Z",
+  "harvest_source": "parsed",
+  "source_file": "01_daily/news/2026-08-27_parsed.json",
+  "gold_id": "",
+  "ticker_hint": "",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "firm",
+      "event_class": "insider_flow",
+      "question": "Is this the issuer's own cash, paper, or control — not a sector story?",
+      "status": "answered",
+      "note": "Hedge fund positioning is a sector trade, not issuer-specific cash/paper/control. Both AVGO and INTC are in the same Semiconductors sector, and the hedge fund's bets reflect a directional view on the sector, not individual firm fundamentals."
+    },
+    {
+      "id": "q2",
+      "family": "firm",
+      "event_class": "insider_flow",
+      "question": "If it is a routine dividend, why is there no 0-1d sector trade?",
+      "status": "blocked",
+      "note": "No routine dividend or sector trade mentioned in the article."
+    },
+    {
+      "id": "q3",
+      "family": "firm",
+      "event_class": "insider_flow",
+      "question": "Who is the named issuer on the Finviz hit list?",
+      "status": "blocked",
+      "note": "No named issuer explicitly listed in the Finviz context; the article focuses on hedge fund positioning."
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "Broadcom Inc",
+      "ticker": "AVGO",
+      "type": "equity",
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:broadcom",
+      "aliases": [
+        "broadcom"
+      ],
+      "lane_why": "Mentioned explicitly in the title and body as a stock bet by a leading hedge fund"
+    },
+    {
+      "entity_name": "Intel Corp",
+      "ticker": "INTC",
+      "type": "equity",
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:intel",
+      "aliases": [
+        "intel"
+      ],
+      "lane_why": "Mentioned explicitly in the title and body as a stock bet by a leading hedge fund"
+    }
+  ],
+  "entities": [
+    {
+      "name": "Broadcom Inc",
+      "ticker": "AVGO",
+      "role": "harm",
+      "direction": "down",
+      "horizon": "0-1d",
+      "axiom_id": null,
+      "pack_cite": null,
+      "stays_out": false,
+      "type": "equity"
+    },
+    {
+      "name": "Intel Corp",
+      "ticker": "INTC",
+      "role": "substitute",
+      "direction": "up",
+      "horizon": "0-1d",
+      "axiom_id": "A_AT_03",
+      "pack_cite": "quote_or_unknown",
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "A Leading Hedge Fund Just Placed Massive Bets on Broadcom and Intel ...: A Leading Hedge Fund Just Placed Massive Bets on Broadcom and Intel Stocks. Should You Follow Suit? These two chipmakers have had very different 2026s.",
+      "url": "https://www.fool.com/investing/2026/08/26/a-leading-hedge-fund-just-placed-massive-bets-on-b/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "A Leading Hedge Fund Just Placed Massive Bets on Broadcom and Intel ...: Should you buy stock in Broadcom right now? Before you buy stock in Broadcom, consider this: The Motley Fool Stock Advisor analyst team just identified what they believe are the 10 best stocks for ...",
+      "url": "https://www.theglobeandmail.com/investing/markets/stocks/INTC/pressreleases/4115287/a-leading-hedge-fund-just-placed-massive-bets-on-broadcom-and-intel-stocks-should-you-follow-suit/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "A Leading Hedge Fund Just Placed Massive Bets on Broadcom and Intel ...: Intel was a brand new position, and Laffont made it a meaningful one: It now accounts for about 3.5% of the portfolio. That's a fairly sizable chunk of the hedge fund's holdings in two stocks, but are they worth buying at their current prices?",
+      "url": "https://www.sharewise.com/us/news_articles/A_Leading_Hedge_Fund_Just_Placed_Massive_Bets_on_Broadcom_and_Intel_Stocks_Should_You_Follow_Suit_TheMotleyFool_20260826_1740",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "A Leading Hedge Fund Just Placed Massive Bets on Broadcom and Intel ...: A Leading Hedge Fund Just Placed Massive Bets on Broadcom and Intel Stocks. Should You Follow Suit? Key PointsBroadcom and Intel both expect major revenue growth in 2027.Broadcom's stock looks like a screaming deal.",
+      "url": "https://ground.news/article/a-leading-hedge-fund-just-placed-massive-bets-on-broadcom-and-intel-stocks-should-you-follow-suit_4d4b83",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "A Leading Hedge Fund Just Placed Massive Bets on Broadcom and Intel ...: A Leading Hedge Fund Just Placed Massive Bets on Broadcom and Intel Stocks. Should You Follow Suit? AVGO •Broadcom Inc. •finance.yahoo.com•Wednesday, August 26, 2026 at 3:40 PM",
+      "url": "https://ticker.actor/news/2026/08/26/a-leading-hedge-fund-just-placed-massive-bets-on-broadcom-an",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "A Leading Hedge Fund Just Placed Massive Bets on Broadcom and Intel ...: The market is looking toward the future with these two If you use a valuation metric like the trailing price-to-earnings (P/E) ratio, both of these stocks look horribly overvalued. Intel doesn't even have a P/E ratio because it has been unprofitable over the past year, while Broadcom trades at 60 times earnings. That makes th",
+      "url": "https://www.webull.hk/en/news/15469883271365632",
+      "source": "ddg_html",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "BUY INTC, 0-1d, because hedge fund positioning in Broadcom and Intel; clock=0-1d; SELL AVGO, 0-1d, because hedge fund positioning in Broadcom and Intel; clock=0-1d",
+  "q5": "impulse",
+  "event_class": "insider_flow",
+  "sign": null,
+  "family": "firm",
+  "constraint": "hedge fund positioning in Broadcom and Intel",
+  "rejected_hints": [],
+  "winners": [
+    "INTC"
+  ],
+  "losers": [
+    "AVGO"
+  ],
+  "clock": "0-1d",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

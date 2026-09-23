@@ -1,0 +1,99 @@
+{
+  "article_id": "d85fbe504b9af23b",
+  "title": "A New Defense Stock Is Born: Lyntris IPO Set For Wednesday - Investor's Business Daily",
+  "body": "rss_google_markets",
+  "known_at": "Wed, 19 Aug 2026 12:30:00 GMT",
+  "harvest_source": "parsed",
+  "source_file": "01_daily/news/2026-08-19_parsed.json",
+  "gold_id": "",
+  "ticker_hint": "",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "flow",
+      "event_class": "listing_flow",
+      "question": "Who is forced to buy or sell the named line, and on which session?",
+      "status": "answered",
+      "note": "Forced buyers are the investors participating in the IPO on the listing session (Wednesday). The flow is the issuer itself, Lyntris Inc., as it is an IPO."
+    },
+    {
+      "id": "q2",
+      "family": "flow",
+      "event_class": "listing_flow",
+      "question": "Is the flow the issuer itself or an index vehicle?",
+      "status": "answered",
+      "note": "The flow is the issuer itself, Lyntris Inc., not an index vehicle."
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "Lyntris Inc",
+      "ticker": "LYNX",
+      "type": "equity",
+      "sector": "Industrials",
+      "industry": "Aerospace & Defense",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:lyntris",
+      "aliases": [
+        "lyntris"
+      ],
+      "lane_why": "Mentioned explicitly in the title as the defense stock set for IPO ('Lyntris IPO')"
+    }
+  ],
+  "entities": [
+    {
+      "name": "Lyntris Inc.",
+      "ticker": "LYNX",
+      "role": "issuer",
+      "direction": "up",
+      "horizon": "0-1d",
+      "axiom_id": null,
+      "pack_cite": null,
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "```json\n{\n  \"facts\": [\n    {\n      \"text\": \"Lyntris Inc. (NYSE: LYNX),```json\n{\n  \"facts\": [\n    {\n      \"text\": \"Lyntris Inc. (NYSE: LYNX),",
+      "url": "",
+      "source": "google_ai_overview",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "BUY LYNX, 0-1d, because listing_flow: A New Defense Stock Is Born: Lyntris IPO Set For Wednesday - Investor's Business Daily; clock=0-1d",
+  "q5": "impulse",
+  "event_class": "listing_flow",
+  "sign": null,
+  "family": "flow",
+  "constraint": "listing_flow: A New Defense Stock Is Born: Lyntris IPO Set For Wednesday - Investor's Business Daily",
+  "rejected_hints": [],
+  "winners": [
+    "LYNX"
+  ],
+  "losers": [],
+  "clock": "0-1d",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}
