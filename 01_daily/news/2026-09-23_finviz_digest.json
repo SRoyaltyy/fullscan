@@ -1,9 +1,9 @@
 {
   "date": "2026-09-23",
-  "generated_at": "2026-09-23T04:15:02.911299-04:00",
-  "export_used": "data/exports/finviz_2026-09-22.csv",
+  "generated_at": "2026-09-23T04:15:09.974086-04:00",
+  "export_used": "data/exports/finviz_2026-09-23.csv",
   "ticker_digest_count": 5877,
-  "signal_count": 2217,
+  "signal_count": 2220,
   "index_digests": [
     {
       "ticker": "SPY",
@@ -125,7 +125,7 @@
     },
     {
       "ticker": "AU",
-      "digest": "Gold prices slide more than 3% after Fed Chair Kevin Warsh’s Jackson Hole comments boost September U.S. rate hike expectations",
+      "digest": "Gold prices slide more than 3% after Fed Chair Kevin Warshâs Jackson Hole comments boost September U.S. rate hike expectations",
       "news_title": "Kincora Provides Drilling Update Supporting New Province-Scale Potential",
       "sector": "Basic Materials",
       "industry": "Gold",
@@ -148,7 +148,7 @@
     {
       "ticker": "BA",
       "digest": "Jefferies cuts Boeing price target to $265 from $295, trims Q3 EPS and 2026 FCF estimates, keeps Buy rating",
-      "news_title": "Boeing, GoGo test satellite-linked military drone in challenge to Starlink",
+      "news_title": "Trump-Xi Summit Could Reset Trade Tensions. 3 Things Investors Are Watching.",
       "sector": "Industrials",
       "industry": "Aerospace & Defense",
       "is_dividend": false,
@@ -213,7 +213,7 @@
     },
     {
       "ticker": "CAH",
-      "digest": "Barron’s reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
+      "digest": "Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
       "news_title": "Cardinal Health CEO Sells $29 Million in Stock After Earnings Send Shares to Record",
       "sector": "Healthcare",
       "industry": "Medical Distribution",
@@ -333,6 +333,17 @@
       "source": "finviz_export"
     },
     {
+      "ticker": "CTAS",
+      "digest": "Cintas to report earnings today before market open",
+      "news_title": "Stock Market Today: Dow, S&P 500 and Nasdaq set for steady start as oil prices approach longest losing streak in over a year",
+      "sector": "Industrials",
+      "industry": "Specialty Business Services",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
       "ticker": "CVE",
       "digest": "Cenovus Energy Q2 2026 non-GAAP EPS $1.08 misses estimates, revenue $14.7B beats, company raises full-year production guidance",
       "news_title": "Cenovus Energy Inc's Dividend Analysis",
@@ -378,7 +389,7 @@
     },
     {
       "ticker": "E",
-      "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to €3.4B on stronger Q2 results",
+      "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results",
       "news_title": "Eni SpA's Dividend Analysis",
       "sector": "Energy",
       "industry": "Oil & Gas Integrated",
@@ -444,7 +455,7 @@
     },
     {
       "ticker": "GM",
-      "digest": "GM’s defense unit wins an additional $697 million U.S. Army Infantry Squad Vehicle contract modification, lifting the total award value to about $915 million.",
+      "digest": "GMâs defense unit wins an additional $697 million U.S. Army Infantry Squad Vehicle contract modification, lifting the total award value to about $915 million.",
       "news_title": "Why GM Defense is getting nearly $700M more for defense contract",
       "sector": "Consumer Cyclical",
       "industry": "Auto Manufacturers",
@@ -511,7 +522,7 @@
     {
       "ticker": "IBM",
       "digest": "IBM unit Anderon finalizes $1B U.S. CHIPS Act award to fund scaling of U.S. quantum wafer foundry",
-      "news_title": "Can This Number Push IBM Stock Higher?",
+      "news_title": "Exclusive: Hashgraph lands IBM marketplace listing for AI-agent identity tool",
       "sector": "Technology",
       "industry": "Information Technology Services",
       "is_dividend": false,
@@ -577,7 +588,7 @@
     {
       "ticker": "LYG",
       "digest": "Lloyds Banking Group misses Q2 estimates, raises interim dividend 30% and sets new 2030 profitability targets",
-      "news_title": "BMW facing £600m hit from car mis-selling scandal",
+      "news_title": "BMW facing Â£600m hit from car mis-selling scandal",
       "sector": "Financial",
       "industry": "Banks - Regional",
       "is_dividend": false,
@@ -654,7 +665,7 @@
     {
       "ticker": "NBIS",
       "digest": "Rothschild & Co. Redburn initiates Nebius Group (NBIS) with Sell, citing credit-market signals of higher leverage, AI capex constraints",
-      "news_title": "Michael Burry Picks Chip Suppliers Over Micron  But Warns Memory Producers Could Sell Off 'Intensely'",
+      "news_title": "NBIS Stock Extends Gains After 5-Day Winning Streak: Has It Bumped Up Inference Prices?",
       "sector": "Technology",
       "industry": "Software - Infrastructure",
       "is_dividend": false,
@@ -675,21 +686,10 @@
     },
     {
       "ticker": "NFLX",
-      "digest": "HSBC downgraded Netflix to Hold from Buy and cut its price target to $76 from $96, citing YouTube’s rising share of U.S. TV viewing as a growing competitive threat.",
+      "digest": "HSBC downgraded Netflix to Hold from Buy and cut its price target to $76 from $96, citing YouTubeâs rising share of U.S. TV viewing as a growing competitive threat.",
       "news_title": "Netflix Stock Drops on HSBC Downgrade, Citing YouTube Threat",
       "sector": "Communication Services",
       "industry": "Entertainment",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "NSC",
-      "digest": "Norfolk Southern, Union Pacific reach SMART-MD 'jobs-for-life' deal giving merger majority union backing as STB review continues",
-      "news_title": "Union Pacific Railroad and Norfolk Southern Combination Gains Additional Momentum",
-      "sector": "Industrials",
-      "industry": "Railroads",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
@@ -778,7 +778,7 @@
       {
         "ticker": "IBM",
         "digest": "IBM unit Anderon finalizes $1B U.S. CHIPS Act award to fund scaling of U.S. quantum wafer foundry",
-        "news_title": "Can This Number Push IBM Stock Higher?",
+        "news_title": "Exclusive: Hashgraph lands IBM marketplace listing for AI-agent identity tool",
         "sector": "Technology",
         "industry": "Information Technology Services",
         "is_dividend": false,
@@ -812,7 +812,7 @@
       },
       {
         "ticker": "CAH",
-        "digest": "Barron’s reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
+        "digest": "Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
         "news_title": "Cardinal Health CEO Sells $29 Million in Stock After Earnings Send Shares to Record",
         "sector": "Healthcare",
         "industry": "Medical Distribution",
@@ -958,7 +958,7 @@
       {
         "ticker": "LYG",
         "digest": "Lloyds Banking Group misses Q2 estimates, raises interim dividend 30% and sets new 2030 profitability targets",
-        "news_title": "BMW facing £600m hit from car mis-selling scandal",
+        "news_title": "BMW facing Â£600m hit from car mis-selling scandal",
         "sector": "Financial",
         "industry": "Banks - Regional",
         "is_dividend": false,
@@ -982,7 +982,7 @@
       {
         "ticker": "BA",
         "digest": "Jefferies cuts Boeing price target to $265 from $295, trims Q3 EPS and 2026 FCF estimates, keeps Buy rating",
-        "news_title": "Boeing, GoGo test satellite-linked military drone in challenge to Starlink",
+        "news_title": "Trump-Xi Summit Could Reset Trade Tensions. 3 Things Investors Are Watching.",
         "sector": "Industrials",
         "industry": "Aerospace & Defense",
         "is_dividend": false,
@@ -996,6 +996,17 @@
         "news_title": "New $100M inland rail terminal will handle 60,000 TEUs a year",
         "sector": "Industrials",
         "industry": "Railroads",
+        "is_dividend": false,
+        "has_signal": true,
+        "rank": 2.8,
+        "source": "finviz_export"
+      },
+      {
+        "ticker": "CTAS",
+        "digest": "Cintas to report earnings today before market open",
+        "news_title": "Stock Market Today: Dow, S&P 500 and Nasdaq set for steady start as oil prices approach longest losing streak in over a year",
+        "sector": "Industrials",
+        "industry": "Specialty Business Services",
         "is_dividend": false,
         "has_signal": true,
         "rank": 2.8,
@@ -1044,23 +1055,12 @@
         "has_signal": true,
         "rank": 2.8,
         "source": "finviz_export"
-      },
-      {
-        "ticker": "NSC",
-        "digest": "Norfolk Southern, Union Pacific reach SMART-MD 'jobs-for-life' deal giving merger majority union backing as STB review continues",
-        "news_title": "Union Pacific Railroad and Norfolk Southern Combination Gains Additional Momentum",
-        "sector": "Industrials",
-        "industry": "Railroads",
-        "is_dividend": false,
-        "has_signal": true,
-        "rank": 2.8,
-        "source": "finviz_export"
       }
     ],
     "Basic Materials": [
       {
         "ticker": "AU",
-        "digest": "Gold prices slide more than 3% after Fed Chair Kevin Warsh’s Jackson Hole comments boost September U.S. rate hike expectations",
+        "digest": "Gold prices slide more than 3% after Fed Chair Kevin Warshâs Jackson Hole comments boost September U.S. rate hike expectations",
         "news_title": "Kincora Provides Drilling Update Supporting New Province-Scale Potential",
         "sector": "Basic Materials",
         "industry": "Gold",
@@ -1150,7 +1150,7 @@
       },
       {
         "ticker": "E",
-        "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to €3.4B on stronger Q2 results",
+        "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results",
         "news_title": "Eni SpA's Dividend Analysis",
         "sector": "Energy",
         "industry": "Oil & Gas Integrated",
@@ -1196,7 +1196,7 @@
       },
       {
         "ticker": "NFLX",
-        "digest": "HSBC downgraded Netflix to Hold from Buy and cut its price target to $76 from $96, citing YouTube’s rising share of U.S. TV viewing as a growing competitive threat.",
+        "digest": "HSBC downgraded Netflix to Hold from Buy and cut its price target to $76 from $96, citing YouTubeâs rising share of U.S. TV viewing as a growing competitive threat.",
         "news_title": "Netflix Stock Drops on HSBC Downgrade, Citing YouTube Threat",
         "sector": "Communication Services",
         "industry": "Entertainment",
@@ -1209,7 +1209,7 @@
     "Consumer Cyclical": [
       {
         "ticker": "GM",
-        "digest": "GM’s defense unit wins an additional $697 million U.S. Army Infantry Squad Vehicle contract modification, lifting the total award value to about $915 million.",
+        "digest": "GMâs defense unit wins an additional $697 million U.S. Army Infantry Squad Vehicle contract modification, lifting the total award value to about $915 million.",
         "news_title": "Why GM Defense is getting nearly $700M more for defense contract",
         "sector": "Consumer Cyclical",
         "industry": "Auto Manufacturers",
@@ -1383,7 +1383,7 @@
     },
     {
       "ticker": "AU",
-      "digest": "Gold prices slide more than 3% after Fed Chair Kevin Warsh’s Jackson Hole comments boost September U.S. rate hike expectations",
+      "digest": "Gold prices slide more than 3% after Fed Chair Kevin Warshâs Jackson Hole comments boost September U.S. rate hike expectations",
       "news_title": "Kincora Provides Drilling Update Supporting New Province-Scale Potential",
       "sector": "Basic Materials",
       "industry": "Gold",
@@ -1406,7 +1406,7 @@
     {
       "ticker": "BA",
       "digest": "Jefferies cuts Boeing price target to $265 from $295, trims Q3 EPS and 2026 FCF estimates, keeps Buy rating",
-      "news_title": "Boeing, GoGo test satellite-linked military drone in challenge to Starlink",
+      "news_title": "Trump-Xi Summit Could Reset Trade Tensions. 3 Things Investors Are Watching.",
       "sector": "Industrials",
       "industry": "Aerospace & Defense",
       "is_dividend": false,
@@ -1471,7 +1471,7 @@
     },
     {
       "ticker": "CAH",
-      "digest": "Barron’s reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
+      "digest": "Barronâs reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.",
       "news_title": "Cardinal Health CEO Sells $29 Million in Stock After Earnings Send Shares to Record",
       "sector": "Healthcare",
       "industry": "Medical Distribution",
@@ -1591,6 +1591,17 @@
       "source": "finviz_export"
     },
     {
+      "ticker": "CTAS",
+      "digest": "Cintas to report earnings today before market open",
+      "news_title": "Stock Market Today: Dow, S&P 500 and Nasdaq set for steady start as oil prices approach longest losing streak in over a year",
+      "sector": "Industrials",
+      "industry": "Specialty Business Services",
+      "is_dividend": false,
+      "has_signal": true,
+      "rank": 2.8,
+      "source": "finviz_export"
+    },
+    {
       "ticker": "CVE",
       "digest": "Cenovus Energy Q2 2026 non-GAAP EPS $1.08 misses estimates, revenue $14.7B beats, company raises full-year production guidance",
       "news_title": "Cenovus Energy Inc's Dividend Analysis",
@@ -1636,7 +1647,7 @@
     },
     {
       "ticker": "E",
-      "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to €3.4B on stronger Q2 results",
+      "digest": "Eni lifts 2026 hydrocarbon output growth target to ~5% and boosts 2026 buyback to â¬3.4B on stronger Q2 results",
       "news_title": "Eni SpA's Dividend Analysis",
       "sector": "Energy",
       "industry": "Oil & Gas Integrated",
@@ -1702,7 +1713,7 @@
     },
     {
       "ticker": "GM",
-      "digest": "GM’s defense unit wins an additional $697 million U.S. Army Infantry Squad Vehicle contract modification, lifting the total award value to about $915 million.",
+      "digest": "GMâs defense unit wins an additional $697 million U.S. Army Infantry Squad Vehicle contract modification, lifting the total award value to about $915 million.",
       "news_title": "Why GM Defense is getting nearly $700M more for defense contract",
       "sector": "Consumer Cyclical",
       "industry": "Auto Manufacturers",
@@ -1769,7 +1780,7 @@
     {
       "ticker": "IBM",
       "digest": "IBM unit Anderon finalizes $1B U.S. CHIPS Act award to fund scaling of U.S. quantum wafer foundry",
-      "news_title": "Can This Number Push IBM Stock Higher?",
+      "news_title": "Exclusive: Hashgraph lands IBM marketplace listing for AI-agent identity tool",
       "sector": "Technology",
       "industry": "Information Technology Services",
       "is_dividend": false,
@@ -1835,7 +1846,7 @@
     {
       "ticker": "LYG",
       "digest": "Lloyds Banking Group misses Q2 estimates, raises interim dividend 30% and sets new 2030 profitability targets",
-      "news_title": "BMW facing £600m hit from car mis-selling scandal",
+      "news_title": "BMW facing Â£600m hit from car mis-selling scandal",
       "sector": "Financial",
       "industry": "Banks - Regional",
       "is_dividend": false,
@@ -1912,7 +1923,7 @@
     {
       "ticker": "NBIS",
       "digest": "Rothschild & Co. Redburn initiates Nebius Group (NBIS) with Sell, citing credit-market signals of higher leverage, AI capex constraints",
-      "news_title": "Michael Burry Picks Chip Suppliers Over Micron  But Warns Memory Producers Could Sell Off 'Intensely'",
+      "news_title": "NBIS Stock Extends Gains After 5-Day Winning Streak: Has It Bumped Up Inference Prices?",
       "sector": "Technology",
       "industry": "Software - Infrastructure",
       "is_dividend": false,
@@ -1933,7 +1944,7 @@
     },
     {
       "ticker": "NFLX",
-      "digest": "HSBC downgraded Netflix to Hold from Buy and cut its price target to $76 from $96, citing YouTube’s rising share of U.S. TV viewing as a growing competitive threat.",
+      "digest": "HSBC downgraded Netflix to Hold from Buy and cut its price target to $76 from $96, citing YouTubeâs rising share of U.S. TV viewing as a growing competitive threat.",
       "news_title": "Netflix Stock Drops on HSBC Downgrade, Citing YouTube Threat",
       "sector": "Communication Services",
       "industry": "Entertainment",
@@ -1966,7 +1977,7 @@
     },
     {
       "ticker": "NU",
-      "digest": "Itau BBA downgrades Nu Holdings (Nubank) to Market Perform from Outperform, cuts target to $18 from $20 on increased uncertainty in the company’s medium-term outlook",
+      "digest": "Itau BBA downgrades Nu Holdings (Nubank) to Market Perform from Outperform, cuts target to $18 from $20 on increased uncertainty in the companyâs medium-term outlook",
       "news_title": "Some Brazilian voters are feeling burned by fintech revolution",
       "sector": "Financial",
       "industry": "Banks - Regional",
@@ -1999,7 +2010,7 @@
     },
     {
       "ticker": "ORLY",
-      "digest": "AutoZone earnings beat lifts O’Reilly 4.3% in early trading despite softer same-store sales",
+      "digest": "AutoZone earnings beat lifts OâReilly 4.3% in early trading despite softer same-store sales",
       "news_title": "AutoZone Beats Earnings Estimates but Same-Store Sales Miss. The Stock Trades Higher.",
       "sector": "Consumer Cyclical",
       "industry": "Auto Parts",
@@ -2032,7 +2043,7 @@
     },
     {
       "ticker": "PH",
-      "digest": "Parker-Hannifin prices $2.4B U.S. dollar and €2.025B euro senior notes to repay acquisition-related debt",
+      "digest": "Parker-Hannifin prices $2.4B U.S. dollar and â¬2.025B euro senior notes to repay acquisition-related debt",
       "news_title": "Could Eaton Stock Lose A Third Or Gain Half In A Year?",
       "sector": "Industrials",
       "industry": "Specialty Industrial Machinery",
@@ -2043,7 +2054,7 @@
     },
     {
       "ticker": "RACE",
-      "digest": "Ferrari repurchases 132,065 shares for about €46.8 million under €250 million third-tranche buyback",
+      "digest": "Ferrari repurchases 132,065 shares for about â¬46.8 million under â¬250 million third-tranche buyback",
       "news_title": "FERRARI N.V.: PERIODIC REPORT ON THE BUYBACK PROGRAM",
       "sector": "Consumer Cyclical",
       "industry": "Auto Manufacturers",
@@ -2157,17 +2168,6 @@
       "news_title": "Private Credit Takes Bigger Role in Financing Energy, AI Infrastructure: Vinson & Elkins",
       "sector": "Financial",
       "industry": "Banks - Diversified",
-      "is_dividend": false,
-      "has_signal": true,
-      "rank": 2.8,
-      "source": "finviz_export"
-    },
-    {
-      "ticker": "SNOW",
-      "digest": "Snowflake's AI-driven Q2 beat and FY27 raise spur target hikes from Wells Fargo ($525), Goldman ($436) and Raymond James ($425)",
-      "news_title": "Snowflake Stock Is Up 45% in a Year. Is It Too Late to Buy?",
-      "sector": "Technology",
-      "industry": "Software - Application",
       "is_dividend": false,
       "has_signal": true,
       "rank": 2.8,
