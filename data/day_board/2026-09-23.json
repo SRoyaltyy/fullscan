@@ -1,21 +1,20 @@
 {
   "date": "2026-09-23",
-  "generated_at": "2026-09-23T04:14:32.716278-04:00",
-  "overall": "FAIL",
+  "generated_at": "2026-09-23T04:15:03.267779-04:00",
+  "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-23_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-23/_board.json` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-09-23_actions.json` \u2014 missing",
-    "MISSING Quote-page digest JSON (*_finviz_digest) `01_daily/news/2026-09-23_finviz_digest.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-09-23_judge.md` \u2014 missing",
     "MISSING Weather JSON `01_daily/weather/2026-09-23_weather.json` \u2014 missing",
     "MISSING AB checklist enriched `data/ab_checklist/2026-09-23_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 0,
-    "partial": 2,
-    "fail": 6,
+    "ok": 1,
+    "partial": 3,
+    "fail": 4,
     "n": 8
   },
   "processes": [
@@ -88,11 +87,11 @@
       "key": "finviz",
       "name": "Finviz scrape",
       "yaml": "finviz_preopen_scrape.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 2,
+      "n_opt_ok": 1,
       "n_opt": 5,
       "files": [
         {
@@ -100,32 +99,39 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-23_finviz_digest.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 87922,
+          "said": "5877 tickers \u00b7 2217 signals \u00b7 top AJG, AME, AMX, AON, APH, APP, ARGX, ASML",
+          "bullets": [
+            "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
+            "AMETEK Completes Acquisition of Indicor Instrumentation",
+            "Norwegian Cruise downgrade, Duolingo upgraded: Wall Street's top analyst calls"
+          ]
         },
         {
           "key": "digest_md",
           "name": "Quote-page digest MD (*_finviz_digest)",
           "path": "01_daily/news/2026-09-23_finviz_digest.md",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 11683,
+          "said": "Finviz Daily Digest \u2014 2026-09-23",
+          "bullets": [
+            "_Generated 2026-09-23T04:15:02.911299-04:00 \u00b7 export=data/exports/finviz_2026-09-22.csv \u00b7 ticker digests=5877 \u00b7 high-signal=2217_",
+            "Major indices (live quote page)"
+          ]
         },
         {
           "key": "market_digest_json",
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-23_finviz_market_digest.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 5067,
-          "said": "US equity futures edge higher as oil trades below $100 after Trump UN remarks with PMIs and earnings set to guide early moves \u00b7 leaders CTAS, PAYX, GIS, CBRL \u00b7 neutral",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -133,14 +139,11 @@
           "name": "Homepage warm-up MD (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-23_finviz_market_digest.md",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 2350,
-          "said": "Finviz homepage market digest \u2014 2026-09-23",
-          "bullets": [
-            "Generated:** 2026-09-23T04:14:32.535161-04:00 (America/New_York)",
-            "Source:** `live`"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "market_digest_close_json",
@@ -165,18 +168,22 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "5877 tickers \u00b7 2217 signals \u00b7 top AJG, AME, AMX, AON, APH, APP, ARGX, ASML",
+      "bullets": [
+        "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
+        "AMETEK Completes Acquisition of Indicor Instrumentation",
+        "Norwegian Cruise downgrade, Duolingo upgraded: Wall Street's top analyst calls"
+      ]
     },
     {
       "key": "preopen",
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 0,
+      "n_req_ok": 2,
       "n_req": 20,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 3,
       "files": [
         {
@@ -184,21 +191,25 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-23_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 87922,
+          "said": "5877 tickers \u00b7 2217 signals \u00b7 top AJG, AME, AMX, AON, APH, APP, ARGX, ASML",
+          "bullets": [
+            "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
+            "AMETEK Completes Acquisition of Indicor Instrumentation",
+            "Norwegian Cruise downgrade, Duolingo upgraded: Wall Street's top analyst calls"
+          ]
         },
         {
           "key": "in_market_digest",
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-23_finviz_market_digest.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 5067,
-          "said": "US equity futures edge higher as oil trades below $100 after Trump UN remarks with PMIs and earnings set to guide early moves \u00b7 leaders CTAS, PAYX, GIS, CBRL \u00b7 neutral",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -316,11 +327,16 @@
           "name": "Pre-open QC JSON",
           "path": "01_daily/2026-09-23_preopen_qc.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "all_ok=False",
+          "size": 7299,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 20 fail",
+          "bullets": [
+            "general_predict:missing",
+            "events:missing",
+            "news_judge:missing",
+            "news_parse:missing"
+          ]
         },
         {
           "key": "status",
@@ -338,11 +354,13 @@
           "name": "Grok review JSON",
           "path": "01_daily/2026-09-23_grok_review.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "ok=False Grok returned an empty review",
+          "size": 308,
+          "said": "ok=False \u00b7 empty_review_reply (review)",
+          "bullets": [
+            "Grok returned an empty review"
+          ]
         },
         {
           "key": "sector_basic_materials",
@@ -474,7 +492,7 @@
       "name": "Label + weather",
       "yaml": "label_weather.yml",
       "status": "FAIL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 1,
       "n_opt_ok": 0,
@@ -485,11 +503,15 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-23_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 87922,
+          "said": "5877 tickers \u00b7 2217 signals \u00b7 top AJG, AME, AMX, AON, APH, APP, ARGX, ASML",
+          "bullets": [
+            "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
+            "AMETEK Completes Acquisition of Indicor Instrumentation",
+            "Norwegian Cruise downgrade, Duolingo upgraded: Wall Street's top analyst calls"
+          ]
         },
         {
           "key": "weather",
@@ -570,11 +592,15 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-23_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 87922,
+          "said": "5877 tickers \u00b7 2217 signals \u00b7 top AJG, AME, AMX, AON, APH, APP, ARGX, ASML",
+          "bullets": [
+            "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
+            "AMETEK Completes Acquisition of Indicor Instrumentation",
+            "Norwegian Cruise downgrade, Duolingo upgraded: Wall Street's top analyst calls"
+          ]
         },
         {
           "key": "dossiers",
@@ -640,11 +666,15 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-23_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 87922,
+          "said": "5877 tickers \u00b7 2217 signals \u00b7 top AJG, AME, AMX, AON, APH, APP, ARGX, ASML",
+          "bullets": [
+            "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
+            "AMETEK Completes Acquisition of Indicor Instrumentation",
+            "Norwegian Cruise downgrade, Duolingo upgraded: Wall Street's top analyst calls"
+          ]
         },
         {
           "key": "in_judge",
@@ -860,6 +890,38 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-23\n**Generated:** 2026-09-23T04:14:32.535161-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures edge higher as oil trades below $100 after Trump UN remarks with PMIs and earnings set to guide early moves\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** CTAS, PAYX, GIS, CBRL\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** CTAS, PAYX, GIS, CBRL\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-23\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-23T04:15:03.056326-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-23_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 87922,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-23_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11706,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-23\n_Generated 2026-09-23T04:15:02.911299-04:00 \u00b7 export=data/exports/finviz_2026-09-22.csv \u00b7 ticker digests=5877 \u00b7 high-signal=2217_"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11427461,
+          "preview": "11648 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-23\n_Generated 2026-09-23T04:15:02.911299-04:00 \u00b7 export=data/exports/finviz_2026-09-22.csv \u00b7 ticker digests=5877 \u00b7 high-signal=2217_ \u00b7 11648 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
