@@ -673,6 +673,13 @@ def run(
         check=False, timeout_s=900,
     )
 
+    print("[all] → Lesson exec (falsifier grading + lesson check page)")
+    _run(
+        [sys.executable, "-m", "src.lesson_exec", "--date", date],
+        check=False, timeout_s=900,
+    )
+    _land(date, "lesson_check", "Lesson check")
+
     print("[all] → Book reflect (gap scan + missing-input hypotheses)")
     reflect_cmd = [sys.executable, "-m", "src.book_reflect", "--date", date]
     if skip_llm:

@@ -1,0 +1,42 @@
+name: Lesson executor self-check
+
+# Contract for the lesson apply + grade half of the learning loop:
+# overrides fire on the right masks, suspensions no-op, and the live
+# ranker/learner gates respect lesson_admit flags.
+
+on:
+  pull_request:
+    paths:
+      - "src/lesson_exec.py"
+      - "src/test_lesson_exec.py"
+      - "src/stock_book.py"
+      - "src/book_learn.py"
+      - "00_grounding/book_lesson_overrides.json"
+  push:
+    branches: [main]
+    paths:
+      - "src/lesson_exec.py"
+      - "src/test_lesson_exec.py"
+      - "src/stock_book.py"
+      - "src/book_learn.py"
+      - "00_grounding/book_lesson_overrides.json"
+
+permissions:
+  contents: read
+
+jobs:
+  lesson-exec:
+    name: lesson executor contract
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: deps
+        run: pip install pandas numpy
+      - name: lesson executor contract
+        run: PYTHONPATH=. python3 -m src.test_lesson_exec

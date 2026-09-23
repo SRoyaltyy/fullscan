@@ -1114,7 +1114,23 @@ def build(date: str | None = None, top_n: int = 25,
         meta["calendar_entry_scale"] = 1.0
         meta["earnings_entry_tickers"] = []
 
-    fresh = (join["s_news"].abs() > 0.15) | (join["s_ab"] > 0.20) | (join["s_peer"] > 0.20)
+    # Lesson executor: promoted book lessons (02_lessons/active scope=book)
+    # adjust score inputs and eligibility before ranking. Adds traded *_lx
+    # copies + lesson_admit flags; raw columns stay for audit. Never fatal.
+    lx_meta: dict = {}
+    try:
+        from . import lesson_exec
+        join, lx_meta = lesson_exec.apply_to_frame(join, date)
+    except Exception as e:  # noqa: BLE001
+        print(f"[stock-book] lesson_exec skipped: {e}")
+    meta["lesson_exec"] = lx_meta
+
+    sj = join["s_join_lx"] if "s_join_lx" in join.columns else join["s_join"]
+    sn = join["s_news_lx"] if "s_news_lx" in join.columns else join["s_news"]
+    sa = join["s_ab_lx"] if "s_ab_lx" in join.columns else join["s_ab"]
+    sp = join["s_peer_lx"] if "s_peer_lx" in join.columns else join["s_peer"]
+
+    fresh = (sn.abs() > 0.15) | (sa > 0.20) | (sp > 0.20)
     for h in HORIZONS:
         wj, ws, wg, wn, wa, wp = weights_h[h]
         # core = the six weighted signals only. The SELL side ranks on this:
@@ -1122,12 +1138,12 @@ def build(date: str | None = None, top_n: int = 25,
         # leg (mega-cap −0.22, 52w-top −0.12) leak into the sell rank filled
         # the sell book with structural shorts of strong mega-caps.
         join[f"core_{h}"] = (
-            wj * join["s_join"]
+            wj * sj
             + ws * join[f"s_sector_{h}"]
             + wg * join[f"s_general_{h}"]
-            + wn * join["s_news"]
-            + wa * join["s_ab"]
-            + wp * join["s_peer"]
+            + wn * sn
+            + wa * sa
+            + wp * sp
             + join["s_heat"]
         )
         join[f"score_{h}"] = join[f"core_{h}"] + join["s_opp"]
@@ -1272,8 +1288,12 @@ def _buy_veto_mask(df: pd.DataFrame) -> pd.Series:
     # In lattice mode permission has already been decided from all domains,
     # including lookback alarm/blue/white.  Do not re-apply the legacy sector
     # veto and accidentally kill a valid direct-company exception.
+    # lesson_admit (promoted book lessons) is an eligibility override here.
     if "bull_eligible" in df.columns:
-        veto |= ~df["bull_eligible"].astype(bool)
+        be = df["bull_eligible"].astype(bool)
+        if "lesson_admit" in df.columns:
+            be |= df["lesson_admit"].astype(bool)
+        veto |= ~be
         return veto
     if "s_sector" in df.columns:
         veto |= pd.to_numeric(df["s_sector"], errors="coerce").fillna(0.0) <= HARD_SECTOR_RED
@@ -1289,7 +1309,13 @@ def _buy_veto_mask(df: pd.DataFrame) -> pd.Series:
         is_lag |= lab.str.contains(r"\bLAG\b", regex=True, na=False)
     if reasons is not None:
         is_lag |= reasons.str.contains(r"\bLAG\b", regex=True, na=False)
-    veto |= is_lag & (peer <= 0)
+    lag_leg = is_lag & (peer <= 0)
+    # Promoted book lessons (crash_rebound_admit / join_floor_pass) waive the
+    # LAG+dead-peer kill for admitted names — that hard exclusion is exactly
+    # what gated CAPR/CYPH out on 2026-08-21.
+    if "lesson_admit" in df.columns:
+        lag_leg &= ~df["lesson_admit"].astype(bool)
+    veto |= lag_leg
     try:
         from . import book_marks
         veto |= book_marks.veto_mask(df)
@@ -1486,7 +1512,8 @@ def _book_side(df: pd.DataFrame, horizon: str, top_n: int, sell_core: bool = Tru
             mcap_f = float(mcap) if mcap == mcap else 0.0
         except (TypeError, ValueError):
             mcap_f = 0.0
-        if size == "micro" or mcap_f < MIN_OPP_MCAP_M:
+        if (size == "micro" or mcap_f < MIN_OPP_MCAP_M) and not bool(
+                r.get("lesson_admit_micro")):
             continue
         if size in ("large", "mega") or mcap_f > MAX_OPP_MCAP_M:
             if large_n >= MAX_LARGE_MEGA:
@@ -1584,6 +1611,9 @@ def _row_dict(r: pd.Series, horizon: str, side: str) -> dict:
         "s_general": _f("s_general"),
         "s_ab": _f("s_ab"),
         "s_peer": _f("s_peer"),
+        "lesson_admit": bool(r.get("lesson_admit", False)),
+        "lesson_admit_micro": bool(r.get("lesson_admit_micro", False)),
+        "lesson_fires": r.get("lesson_fires") or "",
         "s_sector": _f("s_sector"),
         "s_sector_essay": _f("s_sector_essay"),
         "s_news": _f("s_news"),
@@ -2065,6 +2095,8 @@ def write_report(df: pd.DataFrame, meta: dict, top_n: int) -> None:
         "liquid", "rebound", "at_low",
         "s_join", "s_sector", "s_sector_essay", "s_general", "s_news", "s_ab",
         "s_ab_intrinsic", "s_peer", "s_opp",
+        "s_join_lx", "s_news_lx", "s_ab_lx", "s_peer_lx",
+        "lesson_admit", "lesson_admit_micro", "lesson_fires",
         "s_opp_raw", "s_heat_raw", "s_heat", "green", "green_rank", "relvol",
         "lb_cond", "lb_region", "lb_zero_red", "lb_blue", "lb_alarm",
         "lb_fade", "lb_tags", "lb_setups", "lb_points",
