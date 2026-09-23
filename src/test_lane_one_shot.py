@@ -1,0 +1,337 @@
+"""Gold-fixture path for the Lane one-shot. The client is a stand-in for Lane.
+
+Production never uses this client. The test fails if the stack calls
+classify_article or families.analyze.
+"""
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+import pytest
+
+from src.news_impact.finviz_linker import candidate_rows, company_aliases
+from src.news_impact.one_shot_stack import (
+    GOLD_KEEP,
+    GOLD_REJECT,
+    gate0,
+    process_article,
+    render_markdown,
+)
+from src.news_impact.axioms import load_axioms
+
+
+def test_company_alias_lilly_and_novo():
+    assert "eli lilly" in company_aliases("Lilly(Eli) & Co")
+    assert "novo nordisk" in company_aliases("Novo Nordisk ADR")
+    assert "avis budget" in company_aliases("Avis Budget Group Inc")
+
+
+def test_gate0_rejects_weather_and_tape_and_keeps_fixtures():
+    for art in GOLD_REJECT:
+        assert gate0(art["title"], art["body"]), art["gold_id"]
+    for art in GOLD_KEEP:
+        assert gate0(art["title"], art["body"]) is None, art["gold_id"]
+    assert gate0("Agilent Announces Cash Dividend of 25.5 Cents per Share") == "dividend_only"
+    assert gate0("Alcoa Schedules Third Quarter 2026 Earnings Release and Conference Call") == "empty_ir"
+    assert gate0("AAPL plunges after weak print") == "reaction_title"
+
+
+def test_tsa_candidates_include_car_and_airlines():
+    art = GOLD_KEEP[0]
+    hit = candidate_rows(art["title"], art["body"], family="blast", event_class="blast_ops")
+    ticks = {r["ticker"] for r in hit["instruments"]}
+    assert "CAR" in ticks
+    assert ticks & {"AAL", "DAL", "UAL", "LUV"}
+    assert len(hit["instruments"]) <= 40
+
+
+def test_buist_candidates_include_googl_and_meta():
+    art = next(a for a in GOLD_KEEP if a["gold_id"] == "buist")
+    hit = candidate_rows(art["title"], art["body"], family="blast", event_class="blast_legal")
+    ticks = {r["ticker"] for r in hit["instruments"]}
+    assert "GOOGL" in ticks
+    assert "META" in ticks
+    assert "VKTX" not in ticks
+
+
+def test_tsv_candidates_are_venues_not_energy():
+    art = next(a for a in GOLD_KEEP if a["gold_id"] == "tsv")
+    hit = candidate_rows(
+        art["title"], art["body"], family="structure", event_class="market_structure",
+    )
+    ticks = {r["ticker"] for r in hit["instruments"]}
+    assert ticks & {"COIN", "NDAQ", "ICE"}
+    assert all(r["sector"] != "Energy" for r in hit["instruments"])
+    assert len(hit["instruments"]) <= 40
+
+
+def test_naion_links_nvo_lly_not_vktx():
+    art = next(a for a in GOLD_KEEP if a["gold_id"] == "naion")
+    hit = candidate_rows(art["title"], art["body"], family="blast", event_class="product_harm")
+    ticks = {r["ticker"] for r in hit["instruments"]}
+    assert "NVO" in ticks
+    assert "LLY" in ticks
+    assert "VKTX" not in ticks
+    assert "AMGN" not in ticks
+
+
+def test_amrx_lanreotide_hits_amneal():
+    art = next(a for a in GOLD_KEEP if a["gold_id"] == "amrx")
+    hit = candidate_rows(art["title"], art["body"], family="permission", event_class="gate")
+    ticks = {r["ticker"] for r in hit["instruments"]}
+    assert "AMRX" in ticks
+
+
+def test_snapshot_hint_dropped_when_title_omits_the_firm():
+    hit = candidate_rows(
+        "VFLO rebalance adds a new holding",
+        "",
+        hint_ticker="MRNA",
+    )
+    ticks = {r["ticker"] for r in hit["instruments"]}
+    assert "MRNA" not in ticks
+    assert any(r["ticker"] == "MRNA" for r in hit["rejected_hints"])
+
+
+class ScriptLane:
+    """Records stages and returns a Lane-shaped JSON. Not a regex classifier."""
+
+    def __init__(self):
+        self.calls: list[str] = []
+        self.prompts: list[tuple[str, str]] = []
+
+    def _article_title(self, prompt: str) -> str:
+        for line in prompt.splitlines():
+            if line.lower().startswith("title:"):
+                return line.split(":", 1)[1].strip().lower()
+        return ""
+
+    def __call__(self, stage, prompt, system):
+        self.calls.append(stage)
+        self.prompts.append((stage, prompt))
+        title = self._article_title(prompt)
+        if stage == "classify":
+            assert "candidates" not in prompt.lower()
+            return self._classify(title), "zhipu", "glm-4.7-flash"
+        if stage == "linker":
+            return self._link(prompt), "siliconflow", "Qwen/Qwen3-8B"
+        return self._analyse(title), "qwen", "qwen-flash"
+
+    def _classify(self, title: str) -> dict:
+        if "tsa" in title:
+            return {"event_class": "blast_ops", "q5": "impulse", "sign": None,
+                    "constraint": "TSA unpaid blocks flights on a travel weekend"}
+        if "buist" in title or "openai" in title:
+            return {"event_class": "blast_legal", "q5": "impulse", "sign": None,
+                    "constraint": "class complaint names Google and the private labs"}
+        if "tokenized" in title:
+            return {"event_class": "market_structure", "q5": "impulse", "sign": "open",
+                    "constraint": "SEC temporary venue permission for tokenized NMS stock"}
+        if "lanreotide" in title or "amneal" in title:
+            return {"event_class": "gate", "q5": "impulse", "sign": "open",
+                    "constraint": "FDA approval lets Amneal launch lanreotide"}
+        if "naion" in title:
+            return {"event_class": "product_harm", "q5": "regime", "sign": None,
+                    "constraint": "GLP-1 class wrap on NAION, not a new 0-1d print"}
+        return {"event_class": "discard", "q5": "regime", "sign": None, "constraint": ""}
+
+    def _link(self, prompt: str) -> dict:
+        instruments = []
+        for line in prompt.splitlines():
+            if not line.startswith("- "):
+                continue
+            tick = line.split("|", 1)[0].replace("-", "").strip()
+            if tick.isupper() and 1 <= len(tick) <= 5:
+                instruments.append({"ticker": tick, "keep": True, "why": "named or industry hit"})
+        return {"instruments": instruments}
+
+    def _analyse(self, title: str) -> dict:
+        if "tsa" in title:
+            entities = [
+                {"name": "American Airlines", "ticker": "AAL", "role": "named",
+                 "direction": "down", "axiom_id": "A_AIR_01"},
+                {"name": "Delta", "ticker": "DAL", "role": "named",
+                 "direction": "down", "axiom_id": "A_AIR_01"},
+                {"name": "Avis Budget", "ticker": "CAR", "role": "substitute",
+                 "direction": "up", "axiom_id": "A_AIR_02"},
+            ]
+            answers = [
+                {"id": "q1", "status": "answered", "note": "airlines cannot operate the full schedule"},
+                {"id": "q2", "status": "answered", "note": "CAR is the listed rental substitute"},
+                {"id": "q3", "status": "blocked", "note": "no unscathed airline named"},
+                {"id": "q4", "status": "blocked", "note": "fuel demand unanswered"},
+            ]
+        elif "openai" in title or "buist" in title:
+            entities = [
+                {"name": "Alphabet", "ticker": "GOOGL", "role": "named", "direction": "down",
+                 "axiom_id": "A_AT_02"},
+                {"name": "OpenAI", "ticker": None, "role": "named", "direction": "down",
+                 "axiom_id": "A_AT_01"},
+                {"name": "Meta", "ticker": "META", "role": "unscathed_rival", "direction": "up",
+                 "stays_out": True, "axiom_id": "A_AT_03"},
+            ]
+            answers = [
+                {"id": "q1", "status": "answered", "note": "Google and the named labs"},
+                {"id": "q2", "status": "blocked", "note": "no blocked channel substitute"},
+                {"id": "q3", "status": "answered", "note": "META is outside the harm set"},
+                {"id": "q4", "status": "blocked", "note": "compute cap unanswered"},
+            ]
+        elif "tokenized" in title:
+            entities = [
+                {"name": "Coinbase", "ticker": "COIN", "role": "named", "direction": "up",
+                 "axiom_id": "A_TSV_01"},
+                {"name": "Nasdaq", "ticker": "NDAQ", "role": "named", "direction": "mixed"},
+            ]
+            answers = [{"id": f"q{i}", "status": "answered", "note": "venues"} for i in range(1, 5)]
+        elif "lanreotide" in title or "amneal" in title:
+            entities = [
+                {"name": "Amneal", "ticker": "AMRX", "role": "named", "direction": "up"},
+            ]
+            answers = [
+                {"id": "q1", "status": "answered", "note": "Amneal"},
+                {"id": "q2", "status": "answered", "note": "this is an approval gate"},
+                {"id": "q3", "status": "answered", "note": "16:01 lands Monday"},
+                {"id": "q_monday", "status": "answered", "note": "monday_open"},
+            ]
+        elif "naion" in title:
+            entities = [
+                {"name": "Novo Nordisk", "ticker": "NVO", "role": "named", "direction": "down"},
+                {"name": "Eli Lilly", "ticker": "LLY", "role": "named", "direction": "down"},
+            ]
+            answers = [
+                {"id": "q1", "status": "answered", "note": "class sponsors"},
+                {"id": "q_clock", "status": "answered", "note": "not 0-1d"},
+            ]
+        else:
+            entities, answers = [], []
+        return {"entities": entities, "answers": answers}
+
+
+def test_gold_stack_is_lane_not_classify_brain(monkeypatch, tmp_path: Path):
+    def boom(*_a, **_k):
+        raise AssertionError("deterministic brain called")
+
+    monkeypatch.setattr("src.news_impact.families.analyze", boom)
+    monkeypatch.setattr("src.news_impact.classify.classify_article", boom)
+    client = ScriptLane()
+    axioms = load_axioms()
+    rows = []
+    for art in GOLD_KEEP:
+        row = process_article(
+            art, client, axioms=axioms, use_pack=False, root=Path("."),
+            index_names=__import__(
+                "src.news_impact.finviz_linker", fromlist=["get_index"]
+            ).get_index().title_names,
+        )
+        rows.append(row)
+        assert row["keep"], (art["gold_id"], row["reject_reason"], row.get("validator_errors"))
+        assert row["watermark"].startswith("lane::")
+        assert all(w["watermark"].startswith("lane::") for w in row["watermarks"])
+        assert row["questions"]
+        assert any(q["status"] in {"answered", "blocked"} for q in row["questions"])
+        assert row["instruments"]
+        assert row["action"]
+        assert "no action" not in row["action"].lower()
+        assert row["invented_tickers"] == []
+    by = {r["gold_id"]: r for r in rows}
+    assert by["tsa"]["gold_status"] == "PASS"
+    assert by["buist"]["gold_status"] == "PASS"
+    assert by["tsv"]["gold_status"] == "PASS"
+    assert by["amrx"]["gold_status"] == "PASS"
+    assert by["amrx"]["clock"] == "monday_open"
+    assert by["naion"]["gold_status"] == "PASS"
+    assert by["naion"]["clock"] == "not_0_1d"
+    assert "medium" in by["naion"]["action"]
+    assert "not_0_1d" in by["naion"]["action"]
+    # Classify hop never saw a candidate ticker dump.
+    classify_prompts = [p for s, p in client.prompts if s == "classify"]
+    assert classify_prompts
+    assert all("CANDIDATES" not in p for p in classify_prompts)
+    # Analyst saw one family test, not the whole catalogue.
+    analyst = [p for s, p in client.prompts if s == "analyst"]
+    tsa_prompt = next(p for p in analyst if "TSA" in p)
+    assert "WINNER/LOSER TEST" in tsa_prompt
+    assert "capacity add:" not in tsa_prompt
+    for art in GOLD_REJECT:
+        row = process_article(art, client, axioms=axioms, use_pack=False)
+        assert row["keep"] is False
+        assert row["reject_reason"] in {"hormuz_weather", "outperforms_competitors"}
+
+
+def test_lane_miss_does_not_publish(monkeypatch):
+    def dead(_stage, _prompt, _system):
+        return None, "", ""
+
+    art = GOLD_KEEP[0]
+    row = process_article(art, dead, axioms=load_axioms(), use_pack=False)
+    assert row["keep"] is False
+    assert row["action"] == ""
+    assert row["watermark"] == ""
+
+
+def test_invented_ticker_is_stripped(monkeypatch):
+    def liar(stage, prompt, system):
+        if stage == "classify":
+            return {"event_class": "blast_ops", "q5": "impulse", "sign": None,
+                    "constraint": "TSA unpaid"}, "zhipu", "glm-4.7-flash"
+        if stage == "linker":
+            return {"instruments": [{"ticker": "CAR", "keep": True},
+                                    {"ticker": "VKTX", "keep": True}]}, "zhipu", "glm-4.7-flash"
+        return {"entities": [
+            {"name": "Viking", "ticker": "VKTX", "role": "named", "direction": "up"},
+            {"name": "Avis", "ticker": "CAR", "role": "substitute", "direction": "up",
+             "axiom_id": "A_AIR_02"},
+            {"name": "American", "ticker": "AAL", "role": "named", "direction": "down",
+             "axiom_id": "A_AIR_01"},
+        ], "answers": [{"id": "q1", "status": "answered", "note": "airlines"}]}, "zhipu", "glm-4.7-flash"
+
+    art = GOLD_KEEP[0]
+    row = process_article(art, liar, axioms=load_axioms(), use_pack=False)
+    ticks = {e.get("ticker") for e in row["entities"]}
+    assert "VKTX" not in ticks
+    assert "CAR" in ticks
+
+
+def test_markdown_shows_questions_hits_and_action():
+    text = render_markdown(
+        {
+            "n_drawn": 7, "n_rejected": 2, "n_kept": 1, "invented_tickers": 0,
+            "hop_histogram": {"lane::zhipu::glm-4.7-flash": 1},
+            "gold": {"hormuz": "REJECTED"},
+            "env": ["present ZHIPU_API_KEY len=4", "missing OPENROUTER_API_KEY"],
+            "status": "SHORTFALL",
+        },
+        [{
+            "title": "TSA unpaid",
+            "known_at": "2026-09-18",
+            "harvest_source": "gold_fixture",
+            "q5": "impulse",
+            "event_class": "blast_ops",
+            "sign": None,
+            "questions": [{"question": "Who is harmed?", "status": "answered", "note": "airlines"}],
+            "instruments": [{"ticker": "CAR", "entity_name": "Avis Budget Group Inc",
+                             "industry": "Rental & Leasing Services"}],
+            "winners": ["CAR"],
+            "losers": ["AAL"],
+            "action": "BUY CAR, 0-1d, because TSA unpaid; clock=0-1d",
+            "watermark": "lane::zhipu::glm-4.7-flash",
+        }],
+    )
+    assert "n_drawn: 7" in text
+    assert "Who is harmed?" in text
+    assert "Avis Budget" in text
+    assert "ACTION: BUY CAR" in text
+    assert "lane::zhipu::glm-4.7-flash" in text
+    assert "no action warranted" not in text.lower()
+
+
+def test_env_check_redacts(monkeypatch, capsys):
+    monkeypatch.setenv("ZHIPU_API_KEY", "super-secret-value")
+    monkeypatch.delenv("OPENROUTER_API_KEY", raising=False)
+    from src.lane_one_shot import print_env
+    print_env()
+    out = capsys.readouterr().out
+    assert "present ZHIPU_API_KEY" in out
+    assert "super-secret-value" not in out
+    assert "missing OPENROUTER_API_KEY" in out

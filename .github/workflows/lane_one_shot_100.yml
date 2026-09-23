@@ -1,0 +1,171 @@
+name: Lane one-shot 100
+
+# Research only. Gate0 rejects junk, then Lane classifies, confirms the
+# Finviz hit list, and writes the family action. Never publishes a
+# deterministic classify.py board. Does not touch flatten / Webull /
+# live factor-mine / Supabase.
+#
+# Snapshots already live in data/theme_radar_snapshots. Do not
+# sparse-checkout the theme-radar repo.
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_per_shard:
+        description: Usable rows to keep in each shard
+        required: false
+        default: "20"
+        type: string
+      max_draws_per_shard:
+        description: Stop redrawing a shard after this many draws
+        required: false
+        default: "80"
+        type: string
+  push:
+    paths:
+      - ".github/workflows/lane_one_shot_100.yml"
+      - "src/lane_one_shot.py"
+      - "src/news_impact/finviz_linker.py"
+      - "src/news_impact/one_shot_stack.py"
+      - "src/test_lane_one_shot.py"
+
+concurrency:
+  group: lane-one-shot-100-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  shard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install
+        run: |
+          python3 --version
+          # Hopper client is stdlib urllib. Do not install playwright or cloakbrowser.
+          PYTHONPATH=. python3 -c "import src.lane_one_shot, src.lane_route, src.news_impact.finviz_linker, src.news_impact.one_shot_stack"
+
+      - name: Env check
+        env:
+          LANE_URL: ${{ vars.LANE_URL }}
+          LANE_ALLOW_PAID_DEEPSEEK: ${{ vars.LANE_ALLOW_PAID_DEEPSEEK }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GITHUB_MODELS_TOKEN: ${{ secrets.GITHUB_MODELS_TOKEN }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          SAMBANOVA_API_KEY: ${{ secrets.SAMBANOVA_API_KEY }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          OLLAMA_URL: ${{ secrets.OLLAMA_URL || vars.OLLAMA_URL }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+          DASHSCOPE_BASE_URL: ${{ secrets.DASHSCOPE_BASE_URL }}
+          QWEN_API_KEY: ${{ secrets.QWEN_API_KEY }}
+          SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}
+          ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
+          GLM_API_KEY: ${{ secrets.GLM_API_KEY }}
+          MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
+          MODELSCOPE_API_KEY: ${{ secrets.MODELSCOPE_API_KEY }}
+          MODELSCOPE_API_TOKEN: ${{ secrets.MODELSCOPE_API_TOKEN }}
+          MODELSCOPE_SDK_TOKEN: ${{ secrets.MODELSCOPE_SDK_TOKEN }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          NVIDIA_NIM_API_KEY: ${{ secrets.NVIDIA_NIM_API_KEY }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          POLLINATIONS_API_KEY: ${{ secrets.POLLINATIONS_API_KEY }}
+          TOKENHUB_API_KEY: ${{ secrets.TOKENHUB_API_KEY }}
+          TENCENT_API_KEY: ${{ secrets.TENCENT_API_KEY }}
+          HUNYUAN_API_KEY: ${{ secrets.HUNYUAN_API_KEY }}
+          TOKENHUB_BASE_URL: ${{ secrets.TOKENHUB_BASE_URL }}
+          TENCENT_BASE_URL: ${{ secrets.TENCENT_BASE_URL }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GOOGLE_AI_STUDIO_API_KEY: ${{ secrets.GOOGLE_AI_STUDIO_API_KEY }}
+        run: PYTHONPATH=. python3 -m src.lane_one_shot --env-check
+
+      - name: Draw, Lane, validate
+        env:
+          LANE_URL: ${{ vars.LANE_URL }}
+          LANE_ALLOW_PAID_DEEPSEEK: ${{ vars.LANE_ALLOW_PAID_DEEPSEEK }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          GITHUB_MODELS_TOKEN: ${{ secrets.GITHUB_MODELS_TOKEN }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          SAMBANOVA_API_KEY: ${{ secrets.SAMBANOVA_API_KEY }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          OLLAMA_URL: ${{ secrets.OLLAMA_URL || vars.OLLAMA_URL }}
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+          DASHSCOPE_BASE_URL: ${{ secrets.DASHSCOPE_BASE_URL }}
+          QWEN_API_KEY: ${{ secrets.QWEN_API_KEY }}
+          SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}
+          ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
+          GLM_API_KEY: ${{ secrets.GLM_API_KEY }}
+          MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
+          MODELSCOPE_API_KEY: ${{ secrets.MODELSCOPE_API_KEY }}
+          MODELSCOPE_API_TOKEN: ${{ secrets.MODELSCOPE_API_TOKEN }}
+          MODELSCOPE_SDK_TOKEN: ${{ secrets.MODELSCOPE_SDK_TOKEN }}
+          MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+          NVIDIA_NIM_API_KEY: ${{ secrets.NVIDIA_NIM_API_KEY }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          POLLINATIONS_API_KEY: ${{ secrets.POLLINATIONS_API_KEY }}
+          TOKENHUB_API_KEY: ${{ secrets.TOKENHUB_API_KEY }}
+          TENCENT_API_KEY: ${{ secrets.TENCENT_API_KEY }}
+          HUNYUAN_API_KEY: ${{ secrets.HUNYUAN_API_KEY }}
+          TOKENHUB_BASE_URL: ${{ secrets.TOKENHUB_BASE_URL }}
+          TENCENT_BASE_URL: ${{ secrets.TENCENT_BASE_URL }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GOOGLE_AI_STUDIO_API_KEY: ${{ secrets.GOOGLE_AI_STUDIO_API_KEY }}
+        run: |
+          PYTHONPATH=. python3 -m src.lane_one_shot \
+            --shard "${{ matrix.shard }}" \
+            --shards 5 \
+            --target "${{ github.event.inputs.target_per_shard || '20' }}" \
+            --max-draws "${{ github.event.inputs.max_draws_per_shard || '80' }}"
+
+      - name: Upload shard
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lane-one-shot-shard-${{ matrix.shard }}
+          path: 02_lessons/lane/one_shot_100
+          if-no-files-found: warn
+
+  merge:
+    needs: shard
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download shards
+        uses: actions/download-artifact@v4
+        with:
+          pattern: lane-one-shot-shard-*
+          merge-multiple: true
+          path: one_shot_artifacts
+
+      - name: Merge board
+        id: merge
+        run: PYTHONPATH=. python3 -m src.lane_one_shot --merge one_shot_artifacts --expect 100
+
+      - name: Commit board to this branch
+        if: steps.merge.outcome == 'success'
+        run: |
+          git config user.name "Market-Bot-Automaton"
+          git config user.email "bot@users.noreply.github.com"
+          git add 03_scoreboard/LANE_ONE_SHOT_100.md 02_lessons/lane/one_shot_100 || true
+          if git diff --staged --quiet; then
+            echo "No Lane board to commit"
+            exit 0
+          fi
+          git commit -m "auto: lane one-shot 100 board"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
