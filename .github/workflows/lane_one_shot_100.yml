@@ -29,6 +29,16 @@ on:
         required: false
         default: "150"
         type: string
+  # Push starts the gold gate only. The 100-draw is workflow_dispatch mode=full
+  # after that gate is green. inputs.mode is empty on push, so shard stays off.
+  push:
+    paths:
+      - ".github/workflows/lane_one_shot_100.yml"
+      - "src/lane_one_shot.py"
+      - "src/lane_route.py"
+      - "src/news_impact/one_shot_stack.py"
+      - "src/news_impact/prompts.py"
+      - "src/test_lane_one_shot.py"
 
 # Separate group from the older lane-one-shot-100 runs so a gold gate is
 # not queued behind a Ministral classify draw.
