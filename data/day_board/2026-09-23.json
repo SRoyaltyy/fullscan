@@ -1,6 +1,6 @@
 {
   "date": "2026-09-23",
-  "generated_at": "2026-09-23T04:25:46.735924-04:00",
+  "generated_at": "2026-09-23T04:32:10.554725-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -182,7 +182,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 3,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -256,11 +256,16 @@
           "name": "Events JSON",
           "path": "01_daily/events/2026-09-23_events.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 37907,
+          "said": "37 events \u00b7 elevated uncertainty \u00b7 The two-way overlay is now inside 24\u201348 hours: Xi arrives tonight for a 9/24 White House summit (tariff cuts/AI vs Taiwan arms and the Graha",
+          "bullets": [
+            "Trump\u2013Xi Washington state visit and White House summit",
+            "US\u2013Iran UNGA talks on reopening Hormuz",
+            "Pezeshkian UNGA address; possible Trump\u2013Iran sideline",
+            "Hormuz tanker war still live; Brent ~$98\u2013100"
+          ]
         },
         {
           "key": "judge",
@@ -335,13 +340,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7279,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
+          "size": 7276,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 16 fail",
           "bullets": [
             "general_predict:missing",
-            "events:missing",
             "news_judge:missing",
-            "news_actions:missing"
+            "news_actions:missing",
+            "finviz_market_digest:missing"
           ]
         },
         {
@@ -1302,6 +1307,31 @@
         }
       ],
       "preview": "raw=120 usable=6 single=12 \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21% | Gold prices slide more than 3% after Fed Chair Kevin Warsh\u00e2\u0080\u0099s Jackson Hole comm | Duke Energy's Florida subsidiary files to lower customer rates from January 2027 | Surprise US crude inventory build and Fed rate hike drive 5.63% DVN drop | IBM unit Anderon finalizes $1B U.S. CHIPS Act award to fund scaling of U.S. quan \u00b7 # News Parse v2 \u2014 2026-09-23T04:25:37.873062-04:00\nWindow\u224848h | raw=120 | usable=6 | single_name=12 | noise_dropped=102\nusable polarity={'+': 1, '-': 3, 'mixed': 0, 'neutral': 2}"
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-09-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-23T04:32:09.895861-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-09-23_events.json",
+          "ok": true,
+          "reason": "",
+          "size": 37907,
+          "preview": "37 events \u00b7 Trump\u2013Xi Washington state visit and White House summit | US\u2013Iran UNGA talks on reopening Hormuz | Pezeshkian UNGA address; possible Trump\u2013Iran sideline | Hormuz tanker war still live; Brent ~$98\u2013100 | FDA advisory vote on GRAIL Galleri multi-cancer blood test | Amaero IPO prices; Bamboo Insurance postponed"
+        },
+        {
+          "path": "01_daily/events/2026-09-23_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 24471,
+          "preview": "# Event Scan \u2014 2026-09-23\n- events tracked: **37** (via openclaw)\n- uncertainty: **elevated**\n- summary: The two-way overlay is now inside 24\u201348 hours: Xi arrives tonight for a 9/24 White House summit (tariff cuts/AI vs Taiwan arms and the Graham secondary-tariff clock) against still-unresolved Hormuz diplomacy that has already eased Brent from ~$101\u2013102 to ~$98\u2013100. G3 tightening is done for this window (Warsh 3.75\u20134.00%, BoJ 1.25% effective 9/24, ECB 2.50%), so the data that can still reprice the path are Aug PCE (9/30) and Oct 2 NFP, while US housing is already cracking even as nominal retail sales rebounded +1.2%."
+        }
+      ],
+      "preview": "37 events \u00b7 Trump\u2013Xi Washington state visit and White House summit | US\u2013Iran UNGA talks on reopening Hormuz | Pezeshkian UNGA address; possible Trump\u2013Iran sideline | Hormuz tanker war still live; Brent ~$98\u2013100 | FDA advisory vote on GRAIL Galleri multi-cancer blood test | Amaero IPO prices; Bamboo Insurance postponed \u00b7 # Event Scan \u2014 2026-09-23\n- events tracked: **37** (via openclaw)\n- uncertainty: **elevated**\n- summary: The two-way overlay is now inside 24\u201348 hours: Xi arrives tonight for a 9/24 White House summit (tariff cuts/AI vs Taiwan arms and the Graham secondary-tariff clock) against still-unresolved Hormuz diplomacy that has already eased Brent from ~$101\u2013102 to ~$98\u2013100. G3 tightening is done for this window (Warsh 3.75\u20134.00%, BoJ 1.25% effective 9/24, ECB 2.50%), so the data that can still reprice the path are Aug PCE (9/30) and Oct 2 NFP, while US housing is already cracking even as nominal retail sales rebounded +1.2%."
     }
   ],
   "href": {
