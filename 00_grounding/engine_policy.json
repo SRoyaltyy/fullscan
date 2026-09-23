@@ -26,9 +26,9 @@
       "mult": 0.0
     },
     "B4_VIX": {
-      "n": 12,
-      "hit": 0.583,
-      "mult": 1.0
+      "n": 13,
+      "hit": 0.538,
+      "mult": 0.5
     },
     "B5_SENTIMENT": {
       "n": 21,
@@ -41,8 +41,8 @@
       "mult": 1.25
     },
     "B7_OIL_DOLLAR": {
-      "n": 28,
-      "hit": 0.679,
+      "n": 29,
+      "hit": 0.655,
       "mult": 1.25
     }
   },
@@ -53,8 +53,8 @@
       "mult": 1.0
     },
     "S1_SECTOR_FACTORS": {
-      "n": 179,
-      "hit": 0.57,
+      "n": 182,
+      "hit": 0.571,
       "mult": 1.0
     },
     "S2_BREADTH": {
@@ -63,13 +63,13 @@
       "mult": 1.0
     },
     "S3_FLOWS_POSITIONING": {
-      "n": 97,
-      "hit": 0.495,
+      "n": 98,
+      "hit": 0.5,
       "mult": 0.5
     },
     "S4_ETF_TAPE": {
-      "n": 146,
-      "hit": 0.623,
+      "n": 148,
+      "hit": 0.628,
       "mult": 1.0
     }
   },
@@ -81,8 +81,8 @@
         "mult": 1.0
       },
       "S1_SECTOR_FACTORS": {
-        "n": 19,
-        "hit": 0.474,
+        "n": 20,
+        "hit": 0.5,
         "mult": 0.5
       },
       "S2_BREADTH": {
@@ -118,8 +118,8 @@
         "mult": 0.5
       },
       "S3_FLOWS_POSITIONING": {
-        "n": 97,
-        "hit": 0.495,
+        "n": 98,
+        "hit": 0.5,
         "mult": 0.5,
         "pooled": true
       },
@@ -190,8 +190,8 @@
         "mult": 1.0
       },
       "S1_SECTOR_FACTORS": {
-        "n": 24,
-        "hit": 0.625,
+        "n": 25,
+        "hit": 0.6,
         "mult": 1.0
       },
       "S2_BREADTH": {
@@ -281,8 +281,8 @@
         "mult": 0.0
       },
       "S3_FLOWS_POSITIONING": {
-        "n": 97,
-        "hit": 0.495,
+        "n": 98,
+        "hit": 0.5,
         "mult": 0.5,
         "pooled": true
       },
@@ -299,8 +299,8 @@
         "mult": 1.0
       },
       "S1_SECTOR_FACTORS": {
-        "n": 16,
-        "hit": 0.5,
+        "n": 17,
+        "hit": 0.529,
         "mult": 0.5
       },
       "S2_BREADTH": {
@@ -309,14 +309,14 @@
         "mult": 1.0
       },
       "S3_FLOWS_POSITIONING": {
-        "n": 97,
-        "hit": 0.495,
+        "n": 98,
+        "hit": 0.5,
         "mult": 0.5,
         "pooled": true
       },
       "S4_ETF_TAPE": {
-        "n": 16,
-        "hit": 0.562,
+        "n": 17,
+        "hit": 0.588,
         "mult": 1.0
       }
     },
@@ -342,8 +342,8 @@
         "mult": 0.0
       },
       "S4_ETF_TAPE": {
-        "n": 12,
-        "hit": 0.75,
+        "n": 13,
+        "hit": 0.769,
         "mult": 1.25
       }
     },
@@ -364,8 +364,8 @@
         "mult": 1.0
       },
       "S3_FLOWS_POSITIONING": {
-        "n": 97,
-        "hit": 0.495,
+        "n": 98,
+        "hit": 0.5,
         "mult": 0.5,
         "pooled": true
       },
@@ -376,8 +376,8 @@
       }
     }
   },
-  "version": 20,
-  "updated": "2026-09-22T18:59:51-04:00",
+  "version": 21,
+  "updated": "2026-09-23T16:59:28-04:00",
   "rules": {
     "min_n": 8,
     "mute_below": 0.45,
@@ -583,6 +583,12 @@
       "at": "2026-09-22T18:59:51-04:00",
       "changes": [
         "hold"
+      ]
+    },
+    {
+      "at": "2026-09-23T16:59:28-04:00",
+      "changes": [
+        "general.B4_VIX: 1.0 -> 0.5 (n=13, hit=0.538)"
       ]
     }
   ]

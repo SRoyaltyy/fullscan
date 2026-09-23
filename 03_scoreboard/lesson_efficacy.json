@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-09-22T18:59:51.106588-04:00",
+  "generated_at": "2026-09-23T16:59:28.091600-04:00",
   "window": 7,
   "summary": {
     "n_active": 213,
-    "n_judged": 169,
+    "n_judged": 172,
     "improved": 64,
-    "flat": 27,
-    "worse": 78,
-    "mean_delta": -0.022
+    "flat": 28,
+    "worse": 80,
+    "mean_delta": -0.028
   },
   "lessons": [
     {
@@ -42,10 +42,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.167,
-        "n": 6
+        "hit": 0.143,
+        "n": 7
       },
-      "delta": -0.119,
+      "delta": -0.143,
       "verdict": "WORSE"
     },
     {
@@ -74,11 +74,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.5,
-        "n": 4
+        "hit": 0.6,
+        "n": 5
       },
-      "delta": -0.071,
-      "verdict": "WORSE"
+      "delta": 0.029,
+      "verdict": "flat"
     },
     {
       "lesson": "a-bond-proxy-rate-sensitive-defensive-sector-staples-has-bee.md",
@@ -230,10 +230,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.0,
-        "n": 3
+        "hit": 0.25,
+        "n": 4
       },
-      "verdict": "insufficient"
+      "delta": -0.464,
+      "verdict": "WORSE"
     },
     {
       "lesson": "a-cyclical-sector-etf-that-remains-a-1w-1m-relative-laggard.md",
@@ -768,8 +769,8 @@
         "n": 7
       },
       "after": {
-        "hit": 0.5,
-        "n": 2
+        "hit": 0.667,
+        "n": 3
       },
       "verdict": "insufficient"
     },
@@ -783,8 +784,8 @@
         "n": 7
       },
       "after": {
-        "hit": 0.5,
-        "n": 2
+        "hit": 0.333,
+        "n": 3
       },
       "verdict": "insufficient"
     },
@@ -799,7 +800,7 @@
       },
       "after": {
         "hit": 1.0,
-        "n": 1
+        "n": 2
       },
       "verdict": "insufficient"
     },
@@ -862,7 +863,7 @@
       },
       "after": {
         "hit": 0.0,
-        "n": 4
+        "n": 5
       },
       "delta": -0.714,
       "verdict": "WORSE"
@@ -1107,10 +1108,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.5,
-        "n": 6
+        "hit": 0.429,
+        "n": 7
       },
-      "delta": 0.214,
+      "delta": 0.143,
       "verdict": "improved"
     },
     {
@@ -1284,7 +1285,7 @@
       },
       "after": {
         "hit": 0.0,
-        "n": 1
+        "n": 2
       },
       "verdict": "insufficient"
     },
@@ -1411,9 +1412,10 @@
       },
       "after": {
         "hit": 0.0,
-        "n": 3
+        "n": 4
       },
-      "verdict": "insufficient"
+      "delta": -0.429,
+      "verdict": "WORSE"
     },
     {
       "lesson": "a-sector-etf-s-trailing-1d-relative-print-from-the-prior-clo.md",
@@ -1425,10 +1427,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.167,
-        "n": 6
+        "hit": 0.143,
+        "n": 7
       },
-      "delta": 0.024,
+      "delta": 0.0,
       "verdict": "flat"
     },
     {
@@ -1665,11 +1667,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.25,
-        "n": 4
+        "hit": 0.2,
+        "n": 5
       },
-      "delta": -0.036,
-      "verdict": "flat"
+      "delta": -0.086,
+      "verdict": "WORSE"
     },
     {
       "lesson": "a-two-name-duration-growth-sector-etf-xlc-like-has-a-live-sa.md",
@@ -1681,10 +1683,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.2,
-        "n": 5
+        "hit": 0.167,
+        "n": 6
       },
-      "delta": -0.086,
+      "delta": -0.119,
       "verdict": "WORSE"
     },
     {
@@ -1840,8 +1842,8 @@
         "n": 7
       },
       "after": {
-        "hit": null,
-        "n": 0
+        "hit": 0.0,
+        "n": 1
       },
       "verdict": "insufficient"
     },
@@ -2681,10 +2683,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.333,
-        "n": 3
+        "hit": 0.25,
+        "n": 4
       },
-      "verdict": "insufficient"
+      "delta": -0.036,
+      "verdict": "flat"
     },
     {
       "lesson": "this-shows-up-on-1w-books-when-the-news-family-is-absent-and.md",
@@ -3283,29 +3286,29 @@
     {
       "topic": "general",
       "last10": {
-        "hit": 0.7,
+        "hit": 0.6,
         "n": 10
       },
       "prev10": {
-        "hit": 0.3,
+        "hit": 0.4,
         "n": 10
       }
     },
     {
       "topic": "sector:Basic Materials",
       "last10": {
-        "hit": 0.3,
+        "hit": 0.2,
         "n": 10
       },
       "prev10": {
-        "hit": 0.5,
+        "hit": 0.6,
         "n": 10
       }
     },
     {
       "topic": "sector:Communication Services",
       "last10": {
-        "hit": 0.3,
+        "hit": 0.2,
         "n": 10
       },
       "prev10": {
@@ -3316,7 +3319,7 @@
     {
       "topic": "sector:Consumer Cyclical",
       "last10": {
-        "hit": 0.3,
+        "hit": 0.2,
         "n": 10
       },
       "prev10": {
@@ -3331,14 +3334,14 @@
         "n": 10
       },
       "prev10": {
-        "hit": 0.3,
+        "hit": 0.4,
         "n": 10
       }
     },
     {
       "topic": "sector:Energy",
       "last10": {
-        "hit": 0.7,
+        "hit": 0.6,
         "n": 10
       },
       "prev10": {
@@ -3349,18 +3352,18 @@
     {
       "topic": "sector:Financial",
       "last10": {
-        "hit": 0.8,
+        "hit": 0.7,
         "n": 10
       },
       "prev10": {
-        "hit": 0.2,
+        "hit": 0.3,
         "n": 10
       }
     },
     {
       "topic": "sector:Healthcare",
       "last10": {
-        "hit": 0.4,
+        "hit": 0.3,
         "n": 10
       },
       "prev10": {
@@ -3371,7 +3374,7 @@
     {
       "topic": "sector:Industrials",
       "last10": {
-        "hit": 0.5,
+        "hit": 0.6,
         "n": 10
       },
       "prev10": {
@@ -3386,7 +3389,7 @@
         "n": 10
       },
       "prev10": {
-        "hit": 0.3,
+        "hit": 0.4,
         "n": 10
       }
     },
@@ -3397,7 +3400,7 @@
         "n": 10
       },
       "prev10": {
-        "hit": 0.4,
+        "hit": 0.3,
         "n": 10
       }
     },
@@ -3408,7 +3411,7 @@
         "n": 10
       },
       "prev10": {
-        "hit": 0.3,
+        "hit": 0.2,
         "n": 10
       }
     }
