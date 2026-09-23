@@ -29,7 +29,9 @@ from src.news_impact.one_shot_stack import (
     GOLD_EXTRA,
     GOLD_KEEP,
     GOLD_REJECT,
+    analyst_repair_note,
     classify_repair_note,
+    filter_repair_note,
     gate0,
     process_article,
     render_markdown,
@@ -234,6 +236,34 @@ def classify_models_for(hop: str) -> list[str]:
     return lane.primary_models_for(hop, "news_classify")
 
 
+def _json_shape(parsed) -> str:
+    """Short reject detail for the gold log. No prompt body."""
+    if not isinstance(parsed, dict):
+        return " shape=empty" if parsed is None else " shape=not-object"
+    bits = []
+    if parsed.get("event_class") or parsed.get("q5"):
+        bits.append(f"class={parsed.get('event_class')} q5={parsed.get('q5')}")
+    if "core" in parsed or "tickers" in parsed:
+        bits.append(f"core={parsed.get('core') or parsed.get('tickers')}")
+    ents = parsed.get("entities")
+    if isinstance(ents, list) and ents:
+        ticks = []
+        for ent in ents[:6]:
+            if isinstance(ent, dict):
+                ticks.append(f"{ent.get('ticker')}:{ent.get('direction')}")
+        if ticks:
+            bits.append("entities=" + ",".join(ticks))
+    return (" " + " ".join(bits))[:180] if bits else " shape=object"
+
+
+def _stage_repair(stage: str, prompt: str, parsed) -> str:
+    if stage == "filter":
+        return filter_repair_note(parsed, prompt)
+    if stage == "analyst":
+        return analyst_repair_note(parsed, prompt)
+    return ""
+
+
 class LiveLane:
     def __init__(self) -> None:
         try:
@@ -355,7 +385,6 @@ class LiveLane:
                 and accept is not None
             ):
                 rejected = self._rejected_classify
-                self._rejected_classify = None
                 repair = classify_repair_note(rejected, prompt, "")
                 if repair:
                     print(
@@ -366,6 +395,20 @@ class LiveLane:
                         hop, prompt + "\n\n" + repair, system, accept, budget,
                         capture=False,
                     )
+                # OpenClaw returned an enum and the floor rejected it.
+                # Do not let a later hopper ID lock the class.
+                if self._rejected_classify is not None and (
+                    parsed is None
+                    or lane.is_classify_banned(str(model or ""))
+                    or not accept(parsed)
+                ):
+                    note = (
+                        "openclaw: pinned floor rejected the enum "
+                        "— hopper not used"
+                    )
+                    notes.append(note)
+                    print(f"[lane_one_shot] {note}")
+                    break
             if parsed is None or lane.is_classify_banned(str(model or "")):
                 notes.append(self._fail_note(hop, model))
                 continue
@@ -450,7 +493,33 @@ class LiveLane:
                 print(f"[lane_one_shot] skip below-floor {hop}/{model}")
                 continue
             if accept is not None and not accept(parsed):
-                print(f"[lane_one_shot] {stage} unusable lane::{hop}::{model}")
+                print(
+                    f"[lane_one_shot] {stage} unusable lane::{hop}::{model}"
+                    f"{_json_shape(parsed)}"
+                )
+                if hop == "openclaw":
+                    note = _stage_repair(stage, prompt, parsed)
+                    if note:
+                        print(
+                            f"[lane_one_shot] openclaw {stage} near-miss "
+                            "— one repair before the hopper"
+                        )
+                        parsed2, model2 = lane.ask_lane(
+                            hop, prompt + "\n\n" + note, self.ctx,
+                            max_tokens=budget, system=system, tmpl=tmpl,
+                        )
+                        if (
+                            parsed2 is not None
+                            and not lane.is_banned_primary(str(model2 or ""))
+                            and accept(parsed2)
+                        ):
+                            print(f"[lane_one_shot] {stage} lane::{hop}::{model2}")
+                            time.sleep(0.4)
+                            return parsed2, hop, str(model2)
+                        print(
+                            f"[lane_one_shot] {stage} repair unusable "
+                            f"lane::{hop}::{model2}{_json_shape(parsed2)}"
+                        )
                 time.sleep(0.2)
                 continue
             print(f"[lane_one_shot] {stage} lane::{hop}::{model}")

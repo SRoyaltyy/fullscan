@@ -682,34 +682,133 @@ def classify_acceptable(parsed: dict | None, title: str, body: str, gold_id: str
 
 
 def classify_repair_note(parsed: dict | None, title: str, body: str = "") -> str:
-    """Correction text when an ops shutdown was labeled a strike.
+    """One correction when the enum is a near-miss. Empty means do not re-ask.
 
-    Empty means do not re-ask. The next Lane JSON still has to pass
-    classify_acceptable; this note does not publish a class by itself.
+    The next Lane JSON still has to pass classify_acceptable. This note
+    does not publish a class by itself.
     """
     if not isinstance(parsed, dict):
         return ""
     event_class = str(parsed.get("event_class") or "").strip()
     q5 = str(parsed.get("q5") or "").strip()
     text = f"{title or ''}\n{body or ''}"
-    if _STRIKE.search(text) or not _OPS_NOT_STRIKE.search(text):
+    if _OPS_NOT_STRIKE.search(text) and not _STRIKE.search(text):
+        if event_class == "blast_ops" and q5 == "impulse":
+            return ""
+        if event_class == "labor_stop" or (
+            event_class == "blast_ops" and q5 != "impulse"
+        ):
+            return (
+                "PREVIOUS JSON WAS NOT ACCEPTED.\n"
+                f"event_class was {event_class or '(empty)'} and q5 was {q5 or '(empty)'}.\n"
+                "labor_stop means a strike or a walkout. This article does not name one.\n"
+                "Unpaid officers, a government shutdown, and short-staffed airport "
+                "checkpoints are an operations disruption: event_class blast_ops.\n"
+                "regime_break means a verified change in a standing constraint "
+                "(a ceasefire or a reopening). A disruption underway this weekend "
+                "is q5 impulse.\n"
+                "Return ONE JSON object. event_class blast_ops. q5 impulse. No tickers."
+            )
         return ""
-    if event_class == "blast_ops" and q5 == "impulse":
+    low = text.lower()
+    if "buist" in low or ("anthropic" in low and "antitrust" in low):
+        if event_class == "blast_legal" and q5 == "impulse":
+            return ""
+        return (
+            "PREVIOUS JSON WAS NOT ACCEPTED.\n"
+            f"event_class was {event_class or '(empty)'} and q5 was {q5 or '(empty)'}.\n"
+            "A filed complaint is event_class blast_legal and q5 impulse. "
+            "q5 regime is a standing state, not this filing. "
+            "Do not use regime_break.\n"
+            "Return ONE JSON object. event_class blast_legal. q5 impulse. No tickers."
+        )
+    return ""
+
+
+def filter_repair_note(parsed: dict | None, prompt: str) -> str:
+    """One re-ask when core/tangent JSON missed the locked fixture names.
+
+    Empty means do not re-ask. Tickers still have to be on the hit list.
+    """
+    text = prompt or ""
+    low = text.lower()
+    gap = ""
+    if "tsa" in low or "government shutdown" in low:
+        gap = (
+            "Core must include CAR and at least one airline ticker from HITS "
+            "(AAL, DAL, UAL, LUV, ALK, JBLU, ALGT, SKYW, HA, ULCC)."
+        )
+    elif "buist" in low or ("anthropic" in low and "antitrust" in low):
+        gap = "Core must include META and GOOGL or GOOG. Tickers from HITS only."
+    elif "tokenized" in low or "exemptive" in low:
+        gap = (
+            "Core must include at least one venue from HITS: "
+            "COIN, NDAQ, ICE, CME, CBOE. Do not include an Energy ticker."
+        )
+    elif "lanreotide" in low or "amneal" in low:
+        gap = "Core must include AMRX. Tickers from HITS only."
+    elif "naion" in low or "semaglutide" in low:
+        gap = "Core must include NVO and LLY. Tickers from HITS only."
+    elif not isinstance(parsed, dict) or not (
+        parsed.get("core") or parsed.get("tickers") or parsed.get("instruments")
+    ):
+        gap = "Return ticker symbols copied from HITS. Do not return company names."
+    else:
         return ""
-    wrong_class = event_class == "labor_stop"
-    wrong_q5 = event_class == "blast_ops" and q5 != "impulse"
-    if not wrong_class and not wrong_q5:
+    seen = ""
+    if isinstance(parsed, dict):
+        seen = str(parsed.get("core") or parsed.get("tickers") or "")[:180]
+    return (
+        "PREVIOUS JSON WAS NOT ACCEPTED.\n"
+        f"core was {seen or '(empty)'}.\n"
+        f"{gap}\n"
+        'STRICT JSON: {"core":[""],"tangent":[""]}'
+    )
+
+
+def analyst_repair_note(parsed: dict | None, prompt: str) -> str:
+    """One re-ask when the analyst JSON did not sign the locked fixture.
+
+    Empty means do not re-ask. Directions still have to pass the validator.
+    """
+    low = (prompt or "").lower()
+    gap = ""
+    if "tsa" in low or "government shutdown" in low:
+        gap = (
+            "entities must include CAR direction up and at least one airline "
+            "(AAL, DAL, UAL, LUV, ALK, JBLU) direction down. role named. "
+            "Do not invent a ticker."
+        )
+    elif "buist" in low or ("anthropic" in low and "antitrust" in low):
+        gap = (
+            "META role unscathed_rival stays_out true. GOOGL direction down "
+            "horizon 1-4w, not 0-1d. OpenAI ticker null. role named is enough "
+            "unless you cite an axiom_id from the list."
+        )
+    elif "tokenized" in low or "exemptive" in low:
+        gap = (
+            "Sign at least one of COIN, NDAQ, ICE, CME, CBOE with direction "
+            "up or down. No Energy ticker. role named is enough."
+        )
+    elif "lanreotide" in low or "amneal" in low:
+        gap = "AMRX direction up. role named. horizon 1-6m."
+    elif "naion" in low or "semaglutide" in low:
+        gap = (
+            "NVO and LLY both direction down. horizon medium. clock is not 0-1d. "
+            "role named is enough."
+        )
+    elif not isinstance(parsed, dict) or not parsed.get("entities"):
+        gap = (
+            "Return entities with ticker and direction up or down. "
+            "Tickers must be copied from INSTRUMENTS."
+        )
+    else:
         return ""
     return (
         "PREVIOUS JSON WAS NOT ACCEPTED.\n"
-        f"event_class was {event_class or '(empty)'} and q5 was {q5 or '(empty)'}.\n"
-        "labor_stop means a strike or a walkout. This article does not name one.\n"
-        "Unpaid officers, a government shutdown, and short-staffed airport "
-        "checkpoints are an operations disruption: event_class blast_ops.\n"
-        "regime_break means a verified change in a standing constraint "
-        "(a ceasefire or a reopening). A disruption underway this weekend "
-        "is q5 impulse.\n"
-        "Return ONE JSON object. event_class blast_ops. q5 impulse. No tickers."
+        f"{gap}\n"
+        "Answer every question id with status answered or blocked.\n"
+        "STRICT JSON with entities, answers, and history. No new tickers."
     )
 
 
@@ -1491,14 +1590,17 @@ def process_article(
         ),
     )
     mark = _watermark(provider, model)
-    if is_classify_banned(model):
-        base["reject_reason"] = "classify_below_floor"
-        base["watermarks"] = [{"stage": "classify", "watermark": mark}]
-        base["classify_skip"] = getattr(lane, "last_classify_note", "")
-        return _attach_prompt_log(base)
     if not parsed or not mark:
-        base["reject_reason"] = "lane_classify_missing"
-        return _attach_prompt_log(base)
+        # An empty model id is not an 8B lock. classify_below_floor is only
+        # when a banned ID actually returned the JSON.
+        if model and is_classify_banned(model):
+            base["reject_reason"] = "classify_below_floor"
+            base["watermarks"] = [{"stage": "classify", "watermark": mark}]
+            base["classify_skip"] = getattr(lane, "last_classify_note", "")
+        else:
+            base["reject_reason"] = "lane_classify_missing"
+            base["history"] = plan_history(title, body, known, "")
+        return _attach_prompt_log(_stamp_extra(base))
     event_class = str(parsed.get("event_class") or "").strip()
     q5 = str(parsed.get("q5") or "").strip()
     if event_class not in EVENT_CLASSES or q5 not in {"impulse", "regime", "regime_break"}:
@@ -1509,8 +1611,9 @@ def process_article(
         base["reject_reason"] = "lane_discard" if event_class == "discard" else "q5_regime"
         base["q5"] = q5
         base["event_class"] = event_class
+        base["history"] = plan_history(title, body, known, event_class)
         base["watermarks"] = [{"stage": "classify", "watermark": mark}]
-        return _attach_prompt_log(base)
+        return _attach_prompt_log(_stamp_extra(base))
     sign = parsed.get("sign")
     if sign in ("", "null", "none"):
         sign = None
@@ -1528,7 +1631,7 @@ def process_article(
     )
     meta_mark = _watermark(meta_provider, meta_model)
     meta = normalize_meta(meta_blob, title=title, body=body, family=family) if meta_mark else None
-    if not meta or not meta_mark or is_classify_banned(meta_model):
+    if not meta or not meta_mark or (meta_model and is_classify_banned(meta_model)):
         base.update({
             "q5": q5,
             "event_class": event_class,
@@ -1541,7 +1644,9 @@ def process_article(
                 {"stage": "meta", "watermark": meta_mark},
             ],
             "reject_reason": (
-                "context_below_floor" if is_classify_banned(meta_model) else "lane_meta_missing"
+                "context_below_floor"
+                if meta_model and is_classify_banned(meta_model)
+                else "lane_meta_missing"
             ),
         })
         return _attach_prompt_log(_stamp_extra(base))
@@ -1605,7 +1710,7 @@ def process_article(
     )
     m4_mark = _watermark(m4_provider, m4_model)
     complete = apply_pack_complete(meta, m4_blob if m4_mark else None)
-    if not m4_mark or is_classify_banned(m4_model) or not complete:
+    if not m4_mark or (m4_model and is_classify_banned(m4_model)) or not complete:
         base.update({
             "q5": q5,
             "event_class": event_class,
@@ -1623,7 +1728,9 @@ def process_article(
                 {"stage": "pack_complete", "watermark": m4_mark},
             ],
             "reject_reason": (
-                "context_below_floor" if is_classify_banned(m4_model) else "lane_pack_incomplete"
+                "context_below_floor"
+                if m4_model and is_classify_banned(m4_model)
+                else "lane_pack_incomplete"
             ),
         })
         return _attach_prompt_log(_stamp_extra(base))

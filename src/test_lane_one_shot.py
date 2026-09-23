@@ -1181,10 +1181,208 @@ def test_openclaw_repair_does_not_lock_labor_stop(monkeypatch):
         accept=lambda blob: classify_acceptable(blob, art["title"], art["body"], "tsa"),
     )
     assert len(prompts) == 2
-    assert hopper
-    assert parsed["event_class"] == "blast_ops"
-    assert hop == "zhipu"
-    assert model == "glm-4.7-flash"
+    assert hopper == []
+    assert parsed is None
+    assert hop == ""
+    assert model == ""
+
+
+def test_buist_regime_repairs_on_openclaw_and_skips_hopper(monkeypatch):
+    from src import lane_route
+    from src.lane_one_shot import LiveLane
+    from src.news_impact.one_shot_stack import classify_repair_note
+    from src.news_impact.prompts import classifier_prompt
+
+    art = next(row for row in GOLD_KEEP if row["gold_id"] == "buist")
+    rejected = {"event_class": "blast_legal", "q5": "regime"}
+    note = classify_repair_note(rejected, art["title"], art["body"])
+    assert "blast_legal" in note and "impulse" in note
+    assert classify_acceptable(rejected, art["title"], art["body"], "buist") is False
+
+    monkeypatch.setattr("src.config.align_openclaw_token", lambda **_k: "tok")
+    monkeypatch.setattr(
+        lane_route, "load_keys",
+        lambda: ({"openclaw": "gateway", "zhipu": "k"}, "", ""),
+    )
+    lane_route._SKIP.clear()
+    lane_route._RATE_LIMITED.clear()
+    lane_route._MODEL_DENIED.clear()
+    prompts = []
+
+    def fake_chat(model, prompt, max_tokens=320, system=None):
+        prompts.append(prompt)
+        if "PREVIOUS JSON WAS NOT ACCEPTED" in prompt:
+            return {"event_class": "blast_legal", "q5": "impulse"}, 200, model
+        return {"event_class": "blast_legal", "q5": "regime"}, 200, model
+
+    def hopper_should_not_run(*_a, **_k):
+        raise AssertionError("classify hopper ran after OpenClaw answered")
+
+    monkeypatch.setattr(lane_route, "openclaw_chat", fake_chat)
+    monkeypatch.setattr(lane_route, "zhipu_chat", hopper_should_not_run)
+    live = LiveLane()
+    prompt = classifier_prompt(art["title"], art["body"], art["known_at"])
+    parsed, hop, model = live(
+        "classify", prompt, "sys",
+        accept=lambda blob: classify_acceptable(blob, art["title"], art["body"], "buist"),
+    )
+    assert parsed["q5"] == "impulse"
+    assert (hop, model) == ("openclaw", "xai/grok-4.6")
+    assert len(prompts) == 2
+
+
+def test_openclaw_filter_retries_once_before_the_hopper(monkeypatch):
+    from src import lane_route
+    from src.lane_one_shot import LiveLane
+
+    monkeypatch.delenv("OPENCLAW_BACKEND_MODEL", raising=False)
+    monkeypatch.setattr("src.config.align_openclaw_token", lambda **_k: "tok")
+    monkeypatch.setattr(
+        lane_route, "load_keys",
+        lambda: ({"openclaw": "gateway", "mistral": "k"}, "", ""),
+    )
+    lane_route._SKIP.clear()
+    lane_route._RATE_LIMITED.clear()
+    lane_route._MODEL_DENIED.clear()
+    prompts = []
+
+    def fake_chat(model, prompt, max_tokens=320, system=None):
+        prompts.append(prompt)
+        if "PREVIOUS JSON WAS NOT ACCEPTED" in prompt:
+            return {"core": ["CAR", "AAL"], "tangent": []}, 200, model
+        return {"core": ["MSFT"], "tangent": []}, 200, model
+
+    monkeypatch.setattr(lane_route, "openclaw_chat", fake_chat)
+    cands = [
+        {"ticker": "CAR", "entity_name": "Avis Budget"},
+        {"ticker": "AAL", "entity_name": "American Airlines"},
+        {"ticker": "MSFT", "entity_name": "Microsoft"},
+    ]
+    live = LiveLane()
+    prompt = (
+        "Title: Government shutdown leads to chaos at US airports as TSA officers go unpaid\n"
+        "HITS:\n- CAR\n- AAL\n"
+    )
+    parsed, hop, model = live(
+        "filter", prompt, "sys",
+        accept=lambda blob: linker_acceptable(blob, cands, "tsa"),
+    )
+    assert parsed["core"] == ["CAR", "AAL"]
+    assert (hop, model) == ("openclaw", "xai/grok-4.6")
+    assert len(prompts) == 2
+    assert "CAR" in prompts[1]
+
+
+def test_openclaw_analyst_retries_once_before_the_hopper(monkeypatch):
+    from src import lane_route
+    from src.lane_one_shot import LiveLane
+    from src.news_impact.one_shot_stack import analyst_acceptable
+
+    monkeypatch.delenv("OPENCLAW_BACKEND_MODEL", raising=False)
+    monkeypatch.setattr("src.config.align_openclaw_token", lambda **_k: "tok")
+    monkeypatch.setattr(
+        lane_route, "load_keys",
+        lambda: ({"openclaw": "gateway", "mistral": "k"}, "", ""),
+    )
+    lane_route._SKIP.clear()
+    lane_route._RATE_LIMITED.clear()
+    lane_route._MODEL_DENIED.clear()
+    prompts = []
+    good = {
+        "entities": [
+            {"name": "Avis", "ticker": "CAR", "role": "named", "direction": "up"},
+            {"name": "American", "ticker": "AAL", "role": "named", "direction": "down"},
+        ],
+        "answers": [{"id": "q1", "status": "answered", "note": "flights blocked"}],
+    }
+
+    def fake_chat(model, prompt, max_tokens=320, system=None):
+        prompts.append(prompt)
+        if "PREVIOUS JSON WAS NOT ACCEPTED" in prompt:
+            return good, 200, model
+        return {"entities": []}, 200, model
+
+    monkeypatch.setattr(lane_route, "openclaw_chat", fake_chat)
+    instruments = [
+        {"ticker": "CAR", "entity_name": "Avis Budget"},
+        {"ticker": "AAL", "entity_name": "American Airlines"},
+    ]
+    art = GOLD_KEEP[0]
+    live = LiveLane()
+    prompt = (
+        "Title: Government shutdown leads to chaos at US airports as TSA officers go unpaid\n"
+        "INSTRUMENTS:\n- CAR\n- AAL\n"
+    )
+
+    def _accept(blob):
+        return analyst_acceptable(
+            blob,
+            gold_id="tsa",
+            title=art["title"],
+            known_at=art["known_at"],
+            instruments=instruments,
+            axiom_ids=set(),
+            pack_facts=[],
+            horizon="0-1d",
+            q5="impulse",
+            event_class="blast_ops",
+            sign=None,
+            hint_ticker="",
+            index_names=None,
+        )
+
+    parsed, hop, model = live("analyst", prompt, "sys", accept=_accept)
+    assert parsed["entities"][0]["ticker"] == "CAR"
+    assert (hop, model) == ("openclaw", "xai/grok-4.6")
+    assert len(prompts) == 2
+
+
+def test_rejected_openclaw_enum_is_not_a_floor_miss():
+    from src.news_impact.one_shot_stack import GOLD_EXTRA, plan_history
+
+    art = next(row for row in GOLD_EXTRA if row["gold_id"] == "maduro_capture")
+
+    def empty_lane(stage, prompt, system, accept=None):
+        return None, "", ""
+
+    row = process_article(
+        art, empty_lane, axioms=load_axioms(), use_pack=False, root=Path("."),
+    )
+    assert row["reject_reason"] == "lane_classify_missing"
+    assert row["keep"] is False
+    assert row["history"]["history_state"] == "first_print"
+    assert row["gold_status"] == "PASS"
+    assert plan_history(art["title"], art["body"], art["known_at"], "")["history_state"] == "first_print"
+
+    wrap = next(row for row in GOLD_EXTRA if row["gold_id"] == "maduro_wrap")
+
+    def regime_lane(stage, prompt, system, accept=None):
+        if stage == "classify":
+            return {"event_class": "regime_state", "q5": "regime"}, "openclaw", "xai/grok-4.6"
+        return None, "", ""
+
+    wrapped = process_article(
+        wrap, regime_lane, axioms=load_axioms(), use_pack=False, root=Path("."),
+    )
+    assert wrapped["reject_reason"] == "q5_regime"
+    assert wrapped["history"]["history_state"] == "reprint"
+    assert wrapped["gold_status"] == "PASS"
+    assert wrapped["keep"] is False
+
+    wang = next(row for row in GOLD_EXTRA if row["gold_id"] == "wang_fuk")
+
+    def discard_lane(stage, prompt, system, accept=None):
+        if stage == "classify":
+            return {"event_class": "discard", "q5": "regime"}, "openclaw", "xai/grok-4.6"
+        return None, "", ""
+
+    fired = process_article(
+        wang, discard_lane, axioms=load_axioms(), use_pack=False, root=Path("."),
+    )
+    assert fired["reject_reason"] == "lane_discard"
+    assert fired["history"]["transmission"] == "none"
+    assert fired["gold_status"] == "PASS"
+    assert not str(fired.get("action") or "").startswith("BUY")
 
 
 def test_empty_linker_json_is_not_accepted():
