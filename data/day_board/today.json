@@ -1,6 +1,6 @@
 {
   "date": "2026-09-23",
-  "generated_at": "2026-09-23T08:19:41.239548-04:00",
+  "generated_at": "2026-09-23T08:21:54.535510-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -12,125 +12,125 @@
   "buy_1d": [
     {
       "ticker": "ARQT",
-      "score": 0.8340970156905521
+      "score": 0.8495734282988849
     },
     {
       "ticker": "PGEN",
-      "score": 0.7700136439120353
+      "score": 0.7783687895719862
     },
     {
       "ticker": "ADMA",
-      "score": 0.7517424630170111
+      "score": 0.7580653853069101
     },
     {
       "ticker": "DXCM",
-      "score": 0.38580549282001886
+      "score": 0.3925919326017715
     },
     {
       "ticker": "NICE",
-      "score": 0.6463352699781763
+      "score": 0.6903282194407692
     },
     {
       "ticker": "TH",
-      "score": 0.72120936811278
+      "score": 0.7513180156725596
     },
     {
       "ticker": "PUBM",
-      "score": 0.6648956170930282
+      "score": 0.7109581470869826
     },
     {
       "ticker": "APPS",
-      "score": 0.659600157874781
+      "score": 0.7050792129707817
     },
     {
       "ticker": "PAYS",
-      "score": 0.655588583374579
+      "score": 0.7006340229766195
     },
     {
       "ticker": "CTOS",
-      "score": 0.6906073858269013
+      "score": 0.7173218459445099
     },
     {
       "ticker": "VSTS",
-      "score": 0.6191745615179922
+      "score": 0.6379616141347848
     },
     {
       "ticker": "TAL",
-      "score": 0.6007467733009548
+      "score": 0.6113273438001063
     },
     {
       "ticker": "SB",
-      "score": 0.5770729430715258
+      "score": 0.5911792451587567
     },
     {
       "ticker": "ELF",
-      "score": 0.63748635390779
+      "score": 0.6521630644818248
     },
     {
       "ticker": "SHOO",
-      "score": 0.5042884738828913
+      "score": 0.5356595011717732
     }
   ],
   "sell_1d": [
     {
-      "ticker": "SOC",
-      "score": -0.44024022272950497
-    },
-    {
-      "ticker": "REAX",
-      "score": -0.4283076275224197
-    },
-    {
-      "ticker": "HAL",
-      "score": -0.3776316731327164
-    },
-    {
-      "ticker": "NOG",
-      "score": -0.3732038539344959
-    },
-    {
-      "ticker": "MUR",
-      "score": -0.3709892073800236
-    },
-    {
-      "ticker": "PUMP",
-      "score": -0.357287584503017
-    },
-    {
       "ticker": "CF",
-      "score": -0.3522147374976558
+      "score": -0.3858845499891464
+    },
+    {
+      "ticker": "SSTK",
+      "score": -0.34231573636974333
     },
     {
       "ticker": "OVV",
-      "score": -0.33771567201990327
+      "score": -0.3414392292642719
     },
     {
-      "ticker": "XPRO",
-      "score": -0.33409820032229154
+      "ticker": "ADM",
+      "score": -0.31127305220128904
     },
     {
-      "ticker": "WTI",
-      "score": -0.3336741488538328
+      "ticker": "FLUT",
+      "score": -0.30293527819512717
     },
     {
-      "ticker": "BTU",
-      "score": -0.33090823216922044
+      "ticker": "HAL",
+      "score": -0.30245044142611754
     },
     {
-      "ticker": "HP",
-      "score": -0.3083740210592424
+      "ticker": "DOW",
+      "score": -0.2915665678108171
     },
     {
-      "ticker": "BRSP",
-      "score": -0.3009861998134855
+      "ticker": "NFLX",
+      "score": -0.2869942961143662
     },
     {
-      "ticker": "RES",
-      "score": -0.29383177354911094
+      "ticker": "DKNG",
+      "score": -0.275936104234283
     },
     {
-      "ticker": "ESRT",
-      "score": -0.28755207939082544
+      "ticker": "HUM",
+      "score": -0.27130768607439465
+    },
+    {
+      "ticker": "IMO",
+      "score": -0.2708924143996866
+    },
+    {
+      "ticker": "RVMD",
+      "score": -0.27037606165126005
+    },
+    {
+      "ticker": "APA",
+      "score": -0.2652285870712288
+    },
+    {
+      "ticker": "STLA",
+      "score": -0.2635438352167803
+    },
+    {
+      "ticker": "JBHT",
+      "score": -0.26272910381767645
     }
   ],
   "flatten": {
@@ -153,7 +153,7 @@
     "direction": "up"
   },
   "sectors": {
-    "said": "3 up / 2 down / 4 flat",
+    "said": "3 up / 2 down / 5 flat",
     "bullets": [
       "XLB FLAT +2.5",
       "XLC UP +0.4",
@@ -164,7 +164,7 @@
       "XLV UP +0.6",
       "XLI FLAT +0.7",
       "XLRE DOWN -0.4",
-      "XLK missing",
+      "XLK FLAT +0.2",
       "XLU missing"
     ]
   },
@@ -514,70 +514,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Real Estate (9/11)",
+      "title": "Sector predict Technology (10/11)",
       "date": "2026-09-23",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-23T08:16:36.333246-04:00",
+      "at": "2026-09-23T08:21:53.143917-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-09-23/real_estate_predict.md",
+          "path": "01_daily/sectors/2026-09-23/technology_predict.md",
           "ok": true,
           "reason": "",
-          "size": 21866,
-          "preview": "# Sector Prediction \u2014 Real Estate \u2014 2026-09-23\n- ETF: **XLRE**\n- rubric: `00_grounding/sectors/real_estate.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-0.428** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-0.045** (ES +0.03%, ZN -0.03%) \u00b7 index_carry **0.573** (general 2.293) \u00b7 llm_overlay **-0.956** (raw -0.956)"
+          "size": 18813,
+          "preview": "# Sector Prediction \u2014 Technology \u2014 2026-09-23\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **0.235** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-0.338** (NQ -0.10%, ES +0.03%, PM:XLK -0.05%) \u00b7 index_carry **0.573** (general 2.293) \u00b7 llm_overlay **0.0** (raw 0.0)"
         },
         {
-          "path": "01_daily/sectors/2026-09-23/real_estate_predict_trace.md",
+          "path": "01_daily/sectors/2026-09-23/technology_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 392,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Real Estate 2026-09-23\n**Step 0 \u2014 Setup.** Loaded 155,532 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (19,954 characters)."
+          "size": 391,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Technology 2026-09-23\n**Step 0 \u2014 Setup.** Loaded 152,298 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (16,865 characters)."
         },
         {
-          "path": "01_daily/_transcripts/2026-09-23_sector_real_estate_predict.json",
+          "path": "01_daily/_transcripts/2026-09-23_sector_technology_predict.json",
           "ok": true,
           "reason": "",
-          "size": 180002,
+          "size": 173318,
           "preview": "keys: provider, agent, backend_model, messages"
         },
         {
           "path": "01_daily/2026-09-23_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 7200,
+          "size": 7194,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-09-23/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 1222,
+          "size": 1219,
           "preview": "keys: date, n_ok, n_total, sectors"
         },
         {
           "path": "01_daily/sectors/2026-09-23/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1865,
-          "preview": "# Sector Board \u2014 2026-09-23\nGenerated: **2026-09-23T08:16:36.278087-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1868,
+          "preview": "# Sector Board \u2014 2026-09-23\nGenerated: **2026-09-23T08:21:53.097633-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-09-23/_board.json",
           "ok": true,
           "reason": "",
-          "size": 6764,
+          "size": 6934,
           "preview": "keys: date, generated_at, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 858584,
+          "size": 859660,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Real Estate \u2014 2026-09-23\n- ETF: **XLRE**\n- rubric: `00_grounding/sectors/real_estate.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-0.428** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-0.045** (ES +0.03%, ZN -0.03%) \u00b7 index_carry **0.573** (general 2.293) \u00b7 llm_overlay **-0.956** (raw -0.956) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Real Estate 2026-09-23\n**Step 0 \u2014 Setup.** Loaded 155,532 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (19,954 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-23\nGenerated: **2026-09-23T08:16:36.278087-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_at, sectors \u00b7"
+      "preview": "# Sector Prediction \u2014 Technology \u2014 2026-09-23\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **0.235** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-0.338** (NQ -0.10%, ES +0.03%, PM:XLK -0.05%) \u00b7 index_carry **0.573** (general 2.293) \u00b7 llm_overlay **0.0** (raw 0.0) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Technology 2026-09-23\n**Step 0 \u2014 Setup.** Loaded 152,298 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (16,865 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-23\nGenerated: **2026-09-23T08:21:53.097633-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_at, secto"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
