@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-09-23
 
-**Generated:** 2026-09-23T04:14:32.535161-04:00 (America/New_York)
+**Generated:** 2026-09-23T04:15:17.829872-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US equity futures edge higher as oil trades below $100 after Trump UN remarks with PMIs and earnings set to guide early moves
 **Prior close:** SPX —  Nasdaq —  Dow —
