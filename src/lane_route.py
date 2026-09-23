@@ -278,9 +278,15 @@ DEFAULT_LANES = [
 # news_to_tickers + impact + news sector scan: current flash first.
 # Zhipu glm-4.7-flash → SF Qwen3-8B → OR :free → DashScope qwen-flash.
 NEWS_HEAD = ["zhipu", "siliconflow", "openrouter", "qwen"]
-# news_classify quality floor only. NEWS_HEAD, then Gemini API overflow,
-# then TokenHub flash. Ministral / Qwen3-8B are not on this list.
-CLASSIFY_LANES = ["zhipu", "siliconflow", "openrouter", "qwen", "gemini", "tokenhub"]
+# news_classify quality floor. NEWS_HEAD, then Gemini, then TokenHub,
+# then providers that already have a floor-class free ID.
+# NVIDIA NIM stays off: nemotron-mini-4b, llama-3.2-3b, and llama-3.1-8b
+# are below the floor. Ministral 8B/3B stay off. Qwen stays in the walk
+# and is not required for a pass.
+CLASSIFY_LANES = [
+    "zhipu", "siliconflow", "openrouter", "qwen", "gemini", "tokenhub",
+    "mistral", "pollinations",
+]
 # company_dig: SF Qwen / DeepSeek free non-Pro → OR :free → Zhipu.
 # Native DeepSeek stays off the free head (paid opt-in only).
 DIG_HEAD = ["siliconflow", "openrouter", "zhipu"]
@@ -551,6 +557,7 @@ def is_classify_banned(mid: str) -> bool:
         "ministral",
         "llama-3.2-3b",
         "llama-3.2-1b",
+        "llama-3.1-8b",
         "nemotron-mini",
         "qwen2.5-7b",
         "qwen3-8b",
@@ -560,6 +567,9 @@ def is_classify_banned(mid: str) -> bool:
         "smollm",
         "glm-4-flash-250414",
         "glm-4.5-flash",
+        # Pollinations gemini-fast is gemini-2.5-flash-lite. Not a floor.
+        "gemini-fast",
+        "gemini-2.5-flash-lite",
     )
     return any(stem in low for stem in stems)
 
@@ -602,6 +612,19 @@ def primary_models_for(lane: str, tmpl: str = "custom") -> list[str]:
         elif lane == "tokenhub":
             # hy3 stays off classify. flash / flashx / deepseek-v4-flash are $0.
             raw = ["glm-5.3-flash", "glm-5.3-flashx", "deepseek-v4-flash"]
+        elif lane == "mistral":
+            # ministral-8b and ministral-3b are below the floor. Experiment
+            # plan mistral-small-latest is already on this hopper and is
+            # not 8B-class. No Mistral Large.
+            raw = ["mistral-small-latest"]
+        elif lane == "nvidia_nim":
+            # Every ID on this hopper is 3B, 4B-mini, or Llama 3.1 8B.
+            raw = []
+        elif lane == "pollinations":
+            # qwen3.7-flash is a DashScope floor ID. deepseek is the
+            # Pollinations alias for DeepSeek-V4-Flash, already a TokenHub
+            # floor ID. gemini-fast stays off (2.5 flash-lite).
+            raw = ["qwen3.7-flash", "deepseek"]
         else:
             raw = []
         return [m for m in raw if m and not is_classify_banned(m)]

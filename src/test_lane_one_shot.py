@@ -410,9 +410,12 @@ def test_classify_floor_excludes_ministral_and_8b(monkeypatch):
     from src.lane_one_shot import classify_lanes, classify_models_for
     from src.lane_route import is_classify_banned, lanes_for, primary_models_for
     order = classify_lanes()
-    assert order == ["zhipu", "siliconflow", "openrouter", "qwen", "gemini", "tokenhub"]
+    assert order == [
+        "zhipu", "siliconflow", "openrouter", "qwen", "gemini", "tokenhub",
+        "mistral", "pollinations",
+    ]
     assert lanes_for("news_classify") == order
-    assert "mistral" not in order
+    assert "nvidia_nim" not in order
     assert classify_models_for("zhipu")[0] == "glm-4.7-flash"
     zhipu = classify_models_for("zhipu")
     assert zhipu[0] == "glm-4.7-flash"
@@ -446,14 +449,28 @@ def test_classify_floor_excludes_ministral_and_8b(monkeypatch):
     assert "google/gemma-4-31b-it:free" in classify_models_for("openrouter")
     assert "inclusionai/ling-3.0-flash-fin:free" not in classify_models_for("openrouter")
     assert is_classify_banned("ministral-8b-2512")
+    assert is_classify_banned("ministral-3b-2512")
     assert is_classify_banned("Qwen/Qwen3-8B")
+    assert is_classify_banned("meta/llama-3.1-8b-instruct")
+    assert is_classify_banned("nvidia/nemotron-mini-4b-instruct")
+    assert is_classify_banned("gemini-fast")
     assert not is_classify_banned("glm-4.7-flash")
     assert not is_classify_banned("qwen-flash")
+    assert not is_classify_banned("mistral-small-latest")
+    assert not is_classify_banned("qwen3.7-flash")
+    assert classify_models_for("mistral") == ["mistral-small-latest"]
+    assert "ministral-8b-2512" not in classify_models_for("mistral")
+    assert classify_models_for("nvidia_nim") == []
+    assert classify_models_for("pollinations") == ["qwen3.7-flash", "deepseek"]
+    assert "gemini-fast" not in classify_models_for("pollinations")
     assert primary_models_for("qwen", "news_to_tickers") == ["qwen-flash"]
-    assert primary_models_for("mistral", "news_classify") == []
+    assert primary_models_for("mistral", "news_to_tickers")[0] == "ministral-8b-2512"
     assert primary_models_for("zhipu", "news_to_tickers") == ["glm-4.7-flash"]
     from src.lane_one_shot import _FLOOR_PROVIDERS
     assert "gemini" in _FLOOR_PROVIDERS
+    assert "mistral" in _FLOOR_PROVIDERS
+    assert "pollinations" in _FLOOR_PROVIDERS
+    assert "nvidia_nim" not in _FLOOR_PROVIDERS
 
 
 def test_dashscope_401_on_one_host_tries_the_next(monkeypatch):

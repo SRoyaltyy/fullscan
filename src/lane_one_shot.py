@@ -214,11 +214,12 @@ FILTER_LANES = [
 ]
 _FLOOR_PROVIDERS = frozenset({
     "zhipu", "siliconflow", "openrouter", "qwen", "tokenhub", "gemini",
+    "mistral", "pollinations",
 })
 
 
 def classify_lanes() -> list[str]:
-    """NEWS_HEAD then TokenHub glm-5.3-flash. No Ministral."""
+    """Floor lanes. Ministral 8B/3B and NVIDIA NIM are not on this list."""
     return list(lane.CLASSIFY_LANES)
 
 
@@ -731,6 +732,7 @@ def assess_board(text: str) -> list[str]:
     floor = (
         "lane::zhipu::", "lane::openrouter::", "lane::qwen::",
         "lane::tokenhub::", "lane::gemini::",
+        "lane::mistral::", "lane::pollinations::",
     )
     if not any(prefix in classify_block for prefix in floor):
         problems.append("classify histogram has no floor model")
