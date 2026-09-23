@@ -287,12 +287,14 @@ CLASSIFY_LANES = [
     "zhipu", "siliconflow", "openrouter", "gemini", "tokenhub",
     "mistral", "pollinations", "qwen",
 ]
-# Preferred cheaper id. The ECS agent `main` currently rewrites this to
-# xai/grok-4-fast and returns 400 not allowed. grok-4.6 is the sibling
-# Pre-Open already runs on that agent, so it is the fallback, not a
-# demotion of the floor. Workflow may override with OPENCLAW_BACKEND_MODEL.
-OPENCLAW_FLOOR_MODEL = "xai/grok-4-fast-reasoning"
-OPENCLAW_FALLBACK_MODEL = "xai/grok-4.6"
+# Same default as src/config.py OPENCLAW_BACKEND_MODEL. Agent `main`
+# allowlists this id. grok-4-fast-reasoning is rewritten by the gateway
+# to grok-4-fast and 400s, so that id is never sent.
+OPENCLAW_FLOOR_MODEL = "xai/grok-4.6"
+_OPENCLAW_REJECTED = frozenset({
+    "xai/grok-4-fast",
+    "xai/grok-4-fast-reasoning",
+})
 # company_dig: SF Qwen / DeepSeek free non-Pro → OR :free → Zhipu.
 # Native DeepSeek stays off the free head (paid opt-in only).
 DIG_HEAD = ["siliconflow", "openrouter", "zhipu"]
@@ -584,30 +586,30 @@ def is_classify_banned(mid: str) -> bool:
     return any(stem in low for stem in stems)
 
 
-def openclaw_models() -> list[str]:
-    """Preferred backend, then xai/grok-4.6 if the agent rejects the first.
+def openclaw_allowlisted_model(model: str) -> str:
+    """Id that agent `main` will accept. Never send the rejected fast alias."""
+    raw = str(model or "").strip()
+    if not raw or is_classify_banned(raw) or raw.lower() in _OPENCLAW_REJECTED:
+        return OPENCLAW_FLOOR_MODEL
+    return raw
 
-    A banned OPENCLAW_BACKEND_MODEL is ignored. grok-4.6 stays on the
-    list unless it is already the preferred id.
+
+def openclaw_models() -> list[str]:
+    """Allowlisted backend, then grok-4.6 if an override is a different id.
+
+    Empty, banned, or grok-4-fast* env values resolve to xai/grok-4.6.
     """
     raw = (os.environ.get("OPENCLAW_BACKEND_MODEL") or "").strip()
-    ordered: list[str] = []
-    if raw and not is_classify_banned(raw):
-        ordered.append(raw)
-    elif not is_classify_banned(OPENCLAW_FLOOR_MODEL):
-        ordered.append(OPENCLAW_FLOOR_MODEL)
-    if (
-        OPENCLAW_FALLBACK_MODEL not in ordered
-        and not is_classify_banned(OPENCLAW_FALLBACK_MODEL)
-    ):
-        ordered.append(OPENCLAW_FALLBACK_MODEL)
-    return ordered
+    preferred = openclaw_allowlisted_model(raw)
+    if preferred == OPENCLAW_FLOOR_MODEL:
+        return [OPENCLAW_FLOOR_MODEL]
+    return [preferred, OPENCLAW_FLOOR_MODEL]
 
 
 def openclaw_backend_model() -> str:
-    """First floor backend id. Env override, else grok-4-fast-reasoning."""
+    """First floor backend id. Default matches src/config.py: xai/grok-4.6."""
     models = openclaw_models()
-    return models[0] if models else OPENCLAW_FALLBACK_MODEL
+    return models[0] if models else OPENCLAW_FLOOR_MODEL
 
 
 def qwen_classify_models() -> list[str]:
@@ -1506,22 +1508,23 @@ def openclaw_chat(backend_model, prompt, max_tokens=320, system=None):
     agent = (os.environ.get("OPENCLAW_AGENT") or "openclaw/default").strip()
     raw_to = (os.environ.get("OPENCLAW_LANE_TIMEOUT") or "").strip()
     timeout = int(raw_to) if raw_to.isdigit() else 120
+    backend = openclaw_allowlisted_model(backend_model)
     parsed, status, info = openai_chat(
         base + "/v1/chat/completions",
         token,
         agent,
         prompt,
         extra={
-            "x-openclaw-model": backend_model,
+            "x-openclaw-model": backend,
             "x-openclaw-session-key": f"lane-{int(time.time() * 1000)}",
         },
         max_tokens=max_tokens,
         system=system,
         timeout=max(30, timeout),
     )
-    # JSON model is the agent id. The watermark is the Grok backend.
+    # JSON model is the agent id. The watermark is the allowlisted Grok id.
     if parsed is not None:
-        return parsed, status, backend_model
+        return parsed, status, backend
     return parsed, status, info
 
 
