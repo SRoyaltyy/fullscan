@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-09-23",
-    "generated_at": "2026-09-23T05:41:38.825961-04:00",
+    "generated_at": "2026-09-23T06:24:46.839103-04:00",
     "general_bias": 0.5032,
     "sector_bias": {},
     "accuracy_gates": {
@@ -287,7 +287,7 @@
     "pile_used": true,
     "green_min": 8,
     "ranker": "decision_lattice",
-    "as_of": false,
+    "as_of": true,
     "general_direction": "up",
     "market_decision": {
       "date": "2026-09-23",
@@ -827,7 +827,7 @@
           "region": "good"
         },
         {
-          "ticker": "INOD",
+          "ticker": "PENG",
           "sector": "Technology",
           "industry": "Information Technology Services",
           "size": "mid",
@@ -874,7 +874,7 @@
           "region": "good"
         },
         {
-          "ticker": "PENG",
+          "ticker": "INOD",
           "sector": "Technology",
           "industry": "Information Technology Services",
           "size": "mid",
