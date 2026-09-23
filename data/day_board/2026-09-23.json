@@ -1,12 +1,12 @@
 {
   "date": "2026-09-23",
-  "generated_at": "2026-09-23T08:21:54.535510-04:00",
+  "generated_at": "2026-09-23T08:28:56.618019-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 6,
-    "partial": 1,
+    "ok": 7,
+    "partial": 0,
     "fail": 1,
     "n": 8
   },
@@ -175,9 +175,9 @@
       "key": "preopen",
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 19,
+      "n_req_ok": 20,
       "n_req": 20,
       "n_opt_ok": 3,
       "n_opt": 3,
@@ -343,8 +343,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 6934,
-          "said": "3 up / 2 down / 5 flat",
+          "size": 7103,
+          "said": "3 up / 2 down / 6 flat",
           "bullets": [
             "XLB FLAT +2.5",
             "XLC UP +0.4",
@@ -359,11 +359,10 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=True",
-          "size": 7194,
-          "said": "all_ok=True \u00b7 sectors 10/11 \u00b7 2 fail",
+          "size": 7187,
+          "said": "all_ok=True \u00b7 sectors 11/11 \u00b7 1 fail",
           "bullets": [
-            "finviz_market_digest:missing",
-            "sector_predict:missing"
+            "finviz_market_digest:missing"
           ]
         },
         {
@@ -525,14 +524,16 @@
           "name": "Sector predict \u2014 utilities",
           "path": "01_daily/sectors/2026-09-23/utilities_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 19141,
+          "said": "FLAT flat 0.717",
+          "bullets": [
+            "- ETF: **XLU"
+          ]
         }
       ],
-      "said": "general UP  2.293 \u00b7 sectors 3 up / 2 down / 5 flat \u00b7 news 120 raw / 6 usable \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
+      "said": "general UP  2.293 \u00b7 sectors 3 up / 2 down / 6 flat \u00b7 news 120 raw / 6 usable \u00b7 Gold price surge on Fed rate cut bets lifts Barrick Mining (B) 8.21%",
       "bullets": [
         "bad: Trump-Xi arrival/summit two-sided unprinted",
         "bad: leftover Hormuz physical still tight",
@@ -739,8 +740,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 6934,
-          "said": "3 up / 2 down / 5 flat",
+          "size": 7103,
+          "said": "3 up / 2 down / 6 flat",
           "bullets": [
             "XLB FLAT +2.5",
             "XLC UP +0.4",
@@ -1122,7 +1123,7 @@
       "direction": "up"
     },
     "sectors": {
-      "said": "3 up / 2 down / 5 flat",
+      "said": "3 up / 2 down / 6 flat",
       "bullets": [
         "XLB FLAT +2.5",
         "XLC UP +0.4",
@@ -1134,7 +1135,7 @@
         "XLI FLAT +0.7",
         "XLRE DOWN -0.4",
         "XLK FLAT +0.2",
-        "XLU missing"
+        "XLU FLAT +0.7"
       ]
     },
     "news": {
@@ -2113,70 +2114,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Technology (10/11)",
+      "title": "Sector predict Utilities (11/11)",
       "date": "2026-09-23",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-23T08:21:53.143917-04:00",
+      "at": "2026-09-23T08:28:55.496434-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-09-23/technology_predict.md",
+          "path": "01_daily/sectors/2026-09-23/utilities_predict.md",
           "ok": true,
           "reason": "",
-          "size": 18813,
-          "preview": "# Sector Prediction \u2014 Technology \u2014 2026-09-23\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **0.235** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-0.338** (NQ -0.10%, ES +0.03%, PM:XLK -0.05%) \u00b7 index_carry **0.573** (general 2.293) \u00b7 llm_overlay **0.0** (raw 0.0)"
+          "size": 19141,
+          "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-09-23\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **0.717** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **0.144** (ES +0.03%, ZN -0.03%, PM:XLU +0.04%) \u00b7 index_carry **0.573** (general 2.293) \u00b7 llm_overlay **0.0** (raw 0.0)"
         },
         {
-          "path": "01_daily/sectors/2026-09-23/technology_predict_trace.md",
+          "path": "01_daily/sectors/2026-09-23/utilities_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 391,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Technology 2026-09-23\n**Step 0 \u2014 Setup.** Loaded 152,298 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (16,865 characters)."
+          "size": 390,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-09-23\n**Step 0 \u2014 Setup.** Loaded 150,865 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (17,194 characters)."
         },
         {
-          "path": "01_daily/_transcripts/2026-09-23_sector_technology_predict.json",
+          "path": "01_daily/_transcripts/2026-09-23_sector_utilities_predict.json",
           "ok": true,
           "reason": "",
-          "size": 173318,
+          "size": 172489,
           "preview": "keys: provider, agent, backend_model, messages"
         },
         {
           "path": "01_daily/2026-09-23_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 7194,
+          "size": 7187,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-09-23/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 1219,
+          "size": 1215,
           "preview": "keys: date, n_ok, n_total, sectors"
         },
         {
           "path": "01_daily/sectors/2026-09-23/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1868,
-          "preview": "# Sector Board \u2014 2026-09-23\nGenerated: **2026-09-23T08:21:53.097633-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1870,
+          "preview": "# Sector Board \u2014 2026-09-23\nGenerated: **2026-09-23T08:28:55.468661-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-09-23/_board.json",
           "ok": true,
           "reason": "",
-          "size": 6934,
+          "size": 7103,
           "preview": "keys: date, generated_at, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 859660,
+          "size": 860731,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Technology \u2014 2026-09-23\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **0.235** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-0.338** (NQ -0.10%, ES +0.03%, PM:XLK -0.05%) \u00b7 index_carry **0.573** (general 2.293) \u00b7 llm_overlay **0.0** (raw 0.0) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Technology 2026-09-23\n**Step 0 \u2014 Setup.** Loaded 152,298 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (16,865 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-23\nGenerated: **2026-09-23T08:21:53.097633-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_at, secto"
+      "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-09-23\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **0.717** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **0.144** (ES +0.03%, ZN -0.03%, PM:XLU +0.04%) \u00b7 index_carry **0.573** (general 2.293) \u00b7 llm_overlay **0.0** (raw 0.0) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-09-23\n**Step 0 \u2014 Setup.** Loaded 150,865 characters of input. Provider: OpenClaw gateway, backend model `xai/grok-4.6`. Native web/X search was ENABLED inside the agent turn; see the RESEARCH APPENDIX at the end of the output for queries and sources.\n**Step 1 \u2014 Done.** The agent returned its full analysis (17,194 characters). \u00b7 keys: provider, agent, backend_model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-23\nGenerated: **2026-09-23T08:28:55.468661-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_at, sectors \u00b7 "
     }
   ],
   "href": {
