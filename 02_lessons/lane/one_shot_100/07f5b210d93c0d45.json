@@ -1,0 +1,140 @@
+{
+  "article_id": "07f5b210d93c0d45",
+  "title": "4 Diversified Chemical Stocks to Gain Amid Stable End-market Demand - Zacks Investment Research",
+  "body": "rss_google_markets",
+  "known_at": "Tue, 18 Aug 2026 12:28:35 GMT",
+  "harvest_source": "parsed",
+  "source_file": "01_daily/news/2026-08-18_parsed.json",
+  "gold_id": "",
+  "ticker_hint": "",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "quantity",
+      "event_class": "demand",
+      "question": "Who pays the input, and who sells it?",
+      "status": "answered",
+      "note": "End-market demand stability implies buyers (e.g., automotive/construction sectors) pay for input chemicals, while sellers (e.g., EMN) supply them."
+    },
+    {
+      "id": "q2",
+      "family": "quantity",
+      "event_class": "demand",
+      "question": "Is this capacity added or capacity destroyed?",
+      "status": "answered",
+      "note": "Capacity is neither added nor destroyed; demand rebound and destocking end stabilize supply-demand balance (no net change)."
+    },
+    {
+      "id": "q3",
+      "family": "quantity",
+      "event_class": "demand",
+      "question": "Which listed substitute wins if the primary supply is missing?",
+      "status": "blocked",
+      "note": "No clear substitute cited in the article for primary chemical supply."
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "Eastman Chemical Co",
+      "ticker": "EMN",
+      "type": "equity",
+      "sector": "Basic Materials",
+      "industry": "Specialty Chemicals",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:chemical",
+      "aliases": [
+        "eastman chemical",
+        "chemical eastman",
+        "eastman",
+        "chemical"
+      ],
+      "lane_why": "Basic Materials - Specialty Chemicals, relevant to chemical sector"
+    }
+  ],
+  "entities": [
+    {
+      "name": "Eastman Chemical Co",
+      "ticker": "EMN",
+      "role": "substitute",
+      "direction": "up",
+      "horizon": "0-1d",
+      "axiom_id": "A_CAP_01",
+      "pack_cite": "quote_or_unknown",
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "4 Diversified Chemical Stocks to Gain Amid Stable End-market Demand: The Zacks Chemicals Diversified is expected to benefit from healthy demand across major end-use markets and the end of destocking activities. APD, DD, AVNT and IOSP are set to gain from strategic ...",
+      "url": "https://www.zacks.com/commentary/2976071/4-diversified-chemical-stocks-to-gain-amid-stable-end-market-demand",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "4 Diversified Chemical Stocks to Gain From Demand Rebound: The Zacks Chemicals Diversified industry is expected to benefit from an uptick in demand across major end-use markets and the end of destocking activities. APD, DOW, ALB and MEOH are set to gain ...",
+      "url": "https://www.zacks.com/commentary/2926474/4-diversified-chemical-stocks-to-gain-from-demand-rebound",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "4 Diversified Chemical Stocks to Gain Amid Stable End-market Demand: The Zacks Chemicals Diversified industry is expected to benefit from resilient demand across key end markets and the end of customer inventory de-stocking. Improving automotive demand and a recovery in construction should provide further support.",
+      "url": "https://www.newsbreak.com/zacks-investment-research-321723880/4835588934333-4-diversified-chemical-stocks-to-gain-amid-stable-end-market-demand",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "4 Diversified Chemical Stocks to Gain Amid Stable End-market Demand: The Zacks Chemicals Diversified is expected to benefit from healthy demand across major end-use markets and the end of destocking activities. APD, DD, AVNT and IOSP are set to gain from strategic actions and demand recovery.",
+      "url": "https://uk.finance.yahoo.com/news/4-diversified-chemical-stocks-gain-122500877.html",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "4 Diversified Chemical Stocks to Gain Amid Stable End-market Demand: Resilient End-market Demand: Companies in the chemical-diversified space are expected to benefit from an uptick in demand in certain major markets from the lows witnessed last year. The automotive sector represents a crucial end market for chemical manufacturers. A decline in global vehicle production last year weighed on demand",
+      "url": "https://www.ainvest.com/news/4-diversified-chemical-stocks-gain-stable-market-demand-2608/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "4 Diversified Chemical Stocks to Gain Amid Stable End-market Demand: The Zacks Chemicals Diversified industry is expected to benefit from resilient demand across key end markets and the end of customer inventory de-stocking. Improving automotive demand and a recovery i",
+      "url": "https://www.metatrader.com/en/news/zacks/3820351-4-diversified-chemical-stocks-to-gain-amid-stable-end",
+      "source": "ddg_html",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "BUY EMN, 0-1d, because end-market demand stability; clock=0-1d",
+  "q5": "impulse",
+  "event_class": "demand",
+  "sign": null,
+  "family": "quantity",
+  "constraint": "end-market demand stability",
+  "rejected_hints": [],
+  "winners": [
+    "EMN"
+  ],
+  "losers": [],
+  "clock": "0-1d",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

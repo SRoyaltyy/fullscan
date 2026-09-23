@@ -1,0 +1,109 @@
+{
+  "article_id": "20e9359f8b2f00f4",
+  "title": "'Big Short' Michael Burry Tunes Out AI Woo-Hoos  Finds Opportunity In Copper, QXO And 3 More Stocks",
+  "body": "Ero Copper shares fall after copper prices retreat from record highs amid reports the White House has yet to decide on potential U.S. tariffs on refined copper.",
+  "known_at": "2026-09-21 22:40:40",
+  "harvest_source": "finviz_export",
+  "source_file": "data/exports/finviz_2026-09-22.csv",
+  "gold_id": "",
+  "ticker_hint": "ERO",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "time",
+      "event_class": "regime_break",
+      "question": "Did the physical or legal constraint change, or is this a reprint?",
+      "status": "answered",
+      "note": "The legal constraint (potential U.S. tariffs on refined copper) is a new risk shock, not a reprint. The physical constraint (copper supply/demand) remains unchanged."
+    },
+    {
+      "id": "q2",
+      "family": "time",
+      "event_class": "regime_break",
+      "question": "If it is a regime break, which prior book flips sign?",
+      "status": "blocked",
+      "note": "No prior book exists for this specific tariff risk in the supplied context."
+    },
+    {
+      "id": "q3",
+      "family": "time",
+      "event_class": "regime_break",
+      "question": "If it is weather, why is a 0-1d entity illegal?",
+      "status": "blocked",
+      "note": "Not applicable; this is not a weather-related event."
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "Ero Copper Corp",
+      "ticker": "ERO",
+      "type": "equity",
+      "sector": "Basic Materials",
+      "industry": "Copper",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:copper; hint_named_in_title",
+      "aliases": [
+        "ero copper",
+        "copper ero",
+        "copper"
+      ],
+      "lane_why": "Mentioned explicitly in the article body as 'Ero Copper shares fall'"
+    }
+  ],
+  "entities": [
+    {
+      "name": "ERO",
+      "ticker": "ERO",
+      "role": "harm",
+      "direction": "down",
+      "horizon": "0-1d",
+      "axiom_id": "A_MAC_04",
+      "pack_cite": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmbTX2CkW7YnwN4x_u0SnIsg85tVG6LEuJLd6C28Z9-TjxX09atQUb",
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "```json\n{\n  \"facts\": [\n    {\n      \"text\": \"On September 22, 2026, \\\"The Big Short\\\" investor Michael Burry stated he is avoiding the AI trade and instead building positions in copper miner Ero, Brad Jacobs-led QXO, and three consumer and animal-health stocks.\",\n      \"url\": \"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmbTX2CkW7YnwN4x_u0SnIsg85tVG6LEuJLd6C28Z9-TjxX09atQUb",
+      "url": "",
+      "source": "google_ai_overview",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "SELL ERO, 0-1d, because potential U.S. tariffs on refined copper (legal/physical constraint); clock=0-1d",
+  "q5": "regime_break",
+  "event_class": "regime_break",
+  "sign": null,
+  "family": "time",
+  "constraint": "potential U.S. tariffs on refined copper (legal/physical constraint)",
+  "rejected_hints": [],
+  "winners": [],
+  "losers": [
+    "ERO"
+  ],
+  "clock": "0-1d",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

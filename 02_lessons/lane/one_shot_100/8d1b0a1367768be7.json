@@ -1,0 +1,139 @@
+{
+  "article_id": "8d1b0a1367768be7",
+  "title": "A decade of profitability provides foundation for CLINUVEL's U.S. expansion",
+  "body": "Clinuvel posts tenth consecutive annual profit in FY2026, holds $252.1M cash, declares $0.05 per share dividend",
+  "known_at": "2026-08-27 01:42:00",
+  "harvest_source": "finviz_export",
+  "source_file": "data/exports/finviz_2026-09-22.csv",
+  "gold_id": "",
+  "ticker_hint": "CUVL",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "firm",
+      "event_class": "capital_return",
+      "question": "Is this the issuer's own cash, paper, or control — not a sector story?",
+      "status": "answered",
+      "note": "The dividend declaration is the issuer’s own cash (constraint: dividend_declaration). The dividend is not a sector trade, as it is a routine capital return (firm family) and not tied to a broader market or industry movement. The cash reserves ($252.1M) and decade-long profitability signal financial "
+    },
+    {
+      "id": "q2",
+      "family": "firm",
+      "event_class": "capital_return",
+      "question": "If it is a routine dividend, why is there no 0-1d sector trade?",
+      "status": "blocked",
+      "note": "Lane returned no answer for this question"
+    },
+    {
+      "id": "q3",
+      "family": "firm",
+      "event_class": "capital_return",
+      "question": "Who is the named issuer on the Finviz hit list?",
+      "status": "blocked",
+      "note": "Lane returned no answer for this question"
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "Clinuvel Pharmaceuticals Ltd ADR",
+      "ticker": "CUVL",
+      "type": "adr",
+      "sector": "Healthcare",
+      "industry": "Biotechnology",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:clinuvel; hint_named_in_title",
+      "aliases": [
+        "clinuvel pharmaceuticals",
+        "pharmaceuticals clinuvel",
+        "clinuvel"
+      ],
+      "lane_why": "Ticker explicitly mentioned in the title ('CLINUVEL') and confirmed in CANDIDATES list."
+    }
+  ],
+  "entities": [
+    {
+      "name": "Clinuvel Pharmaceuticals Ltd",
+      "ticker": "CUVL",
+      "role": "unscathed_rival",
+      "direction": "up",
+      "horizon": "0-1d",
+      "axiom_id": "A_AT_03",
+      "pack_cite": "quote_or_unknown",
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "A decade of profitability provides foundation for CLINUVEL's U.S. expansion: The CLINUVEL Board has declared an annual franked dividend of $0.05 per ordinary share following the FY2026 financial results - this is the ninth consecutive annual dividend and fifth fully franked.",
+      "url": "https://finance.yahoo.com/healthcare/articles/decade-profitability-provides-foundation-clinuvel-054200041.html",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "A decade of profitability provides foundation for CLINUVEL's U.S ...: The CLINUVEL Board has declared an annual franked dividend of $0.05 per ordinary share following the FY2026 financial results - this is the ninth consecutive annual dividend and fifth fully franked.",
+      "url": "https://www.nasdaq.com/press-release/decade-profitability-provides-foundation-clinuvels-us-expansion-2026-08-27",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "PDF A decade of profitability provides foundation for CLINUVEL's U.S. expansion: A decade of profitability provides foundation for CLINUVEL's U.S. expansion Melbourne / New York - 27 August 2026 - CLINUVEL PHARMACEUTICALS LTD (ASX: CUV | Nasdaq: CUVL) today announced its tenth consecutive annual profit and further rise in free cash in the financial year ended 30 June 2026 (FY2026). The Company has",
+      "url": "https://www.clinuvel.com/wp-content/uploads/2026/08/20260827-decade-of-profitability.pdf",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "A decade of profitability provides foundation for CLINUVEL's U.S ...: CLINUVEL's lead therapy, SCENESSE® (afamelanotide 16mg), is approved for commercial distribution in Europe, the USA, Canada, Israel, and Australia as the world's first systemic photoprotection drug for the prevention of phototoxicity (anaphylactoid reactions and burns) in adults patients with erythropoietic protoporphyria (EPP).",
+      "url": "https://www.clinuvel.com/2026/08/a-decade-of-profitability-provides-foundation-for-clinuvels-u-s-expansion-2026-08-27/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "A decade of profitability provides foundation for CLINUVEL's U.S ...: The Company has declared a dividend of $0.05 per ordinary share. \"CLINUVEL's cash reserves following a decade of profitable operations give us financial independence in a period that has been challenging for many life science companies,\" said Mr Peter Vaughan, CLINUVEL's Group Chief Financial Officer.",
+      "url": "https://pressreach.com/health/a-decade-of-profitability-provides-foundation-for-clinuvels-u-s-expansion/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "A decade of profitability provides foundation for CLINUVEL's U.S ...: MELBOURNE, Australia and NEW YORK, Aug. 27, 2026 (GLOBE NEWSWIRE) -- CLINUVEL PHARMACEUTICALS LTD (ASX: CUV | Nasdaq: CUVL) today announced its tenth consecutive annual profit and further rise in free cash in the financial year ended 30 June 2026 (FY2026). The Company has declared a dividend of $0.05 per ordinary share. \"CLINUVE",
+      "url": "https://pr.lakeoswegoreview.com/article/A-decade-of-profitability-provides-foundation-for-CLINUVELs-US-expansion/6a8fce895b3d9368bc0231fa",
+      "source": "ddg_html",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "BUY CUVL, 0-1d, because dividend_declaration; clock=0-1d",
+  "q5": "impulse",
+  "event_class": "capital_return",
+  "sign": null,
+  "family": "firm",
+  "constraint": "dividend_declaration",
+  "rejected_hints": [],
+  "winners": [
+    "CUVL"
+  ],
+  "losers": [],
+  "clock": "0-1d",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

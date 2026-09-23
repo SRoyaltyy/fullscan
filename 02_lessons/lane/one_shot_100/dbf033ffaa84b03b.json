@@ -1,0 +1,160 @@
+{
+  "article_id": "dbf033ffaa84b03b",
+  "title": "Amneal Announces FDA Approval and Launch of Lanreotide Injection",
+  "body": "Amneal wins FDA approval and begins U.S. launch of generic lanreotide.",
+  "known_at": "2026-09-18T16:01:00-04:00",
+  "harvest_source": "gold_fixture",
+  "source_file": "",
+  "gold_id": "amrx",
+  "ticker_hint": "",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "time",
+      "event_class": "regime_break",
+      "question": "Did the physical or legal constraint change, or is this a reprint?",
+      "status": "answered",
+      "note": "The FDA approval for generic lanreotide is a **regime break** (new legal constraint: generic drug launch). This is not a reprint or weather event, as it introduces a new competitive dynamic in the market."
+    },
+    {
+      "id": "q2",
+      "family": "time",
+      "event_class": "regime_break",
+      "question": "If it is a regime break, which prior book flips sign?",
+      "status": "answered",
+      "note": "The prior book flips sign for **generic drug manufacturers** (e.g., Amneal) in the **specialty/generic drug sector**, as the FDA approval creates a new competitive supply constraint, benefiting buyers (patients) and harming incumbent branded drug sellers."
+    },
+    {
+      "id": "q3",
+      "family": "time",
+      "event_class": "regime_break",
+      "question": "If it is weather, why is a 0-1d entity illegal?",
+      "status": "blocked",
+      "note": "N/A (not a weather event)."
+    },
+    {
+      "id": "q_monday",
+      "family": "time",
+      "event_class": "regime_break",
+      "question": "The lanreotide approval hit at 16:01. Which session can actually trade it, and why is that not the same-day 0-1d tape?",
+      "status": "answered",
+      "note": "{'session': 'next trading day (Tuesday open)', 'reason': 'The approval timestamp (16:01, after cash close) means the news is **not** reflected in the same-day 0-1d tape. The **clock=monday_open** rule applies, as the event is a **regime break** with a horizon of 1-6m, not a same-day print. Trading i"
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "Amneal Pharmaceuticals Inc",
+      "ticker": "AMRX",
+      "type": "equity",
+      "sector": "Healthcare",
+      "industry": "Drug Manufacturers - Specialty & Generic",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:amneal; digest:lanreotide",
+      "aliases": [
+        "amneal pharmaceuticals",
+        "pharmaceuticals amneal",
+        "amneal"
+      ],
+      "lane_why": "Ticker matches the entity name in the article title and body, and is listed in CANDIDATES."
+    }
+  ],
+  "entities": [
+    {
+      "name": "time",
+      "ticker": null,
+      "role": "harm set",
+      "direction": "down",
+      "horizon": "0-1d",
+      "axiom_id": null,
+      "pack_cite": null,
+      "stays_out": false,
+      "type": "none"
+    },
+    {
+      "name": "AMRX",
+      "ticker": "AMRX",
+      "role": "substitute",
+      "direction": "up",
+      "horizon": "0-1d",
+      "axiom_id": "A_CAP_01",
+      "pack_cite": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH81EiOeUNcaDQ66ZMUZBp1vXEq0EVdQ2Xxor6F4uu0lVWuOlSQR4NCUGQE0GnFmhKsBLeZRme1UC4teH7KQEbEtGfW-MVY25mIQCb-cJgNdHaI8MDjeGo-LwXqCMDtCyPWbyw5Szp3kHOXasYSf-4fLb_DpEsVugJBAvrn4uRBu5uGgvdWq0QceU4X8OY7UWRGG7ZjoGsZeSovVqp2ueYHhtW8wPHJ0uZAxp_ghbG4wfkBtMMnXL_EuEE0gzezLZQ5GPBem0NGcLtZJS6ruAmuh7VV2cI=",
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "amneal.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH81EiOeUNcaDQ66ZMUZBp1vXEq0EVdQ2Xxor6F4uu0lVWuOlSQR4NCUGQE0GnFmhKsBLeZRme1UC4teH7KQEbEtGfW-MVY25mIQCb-cJgNdHaI8MDjeGo-LwXqCMDtCyPWbyw5Szp3kHOXasYSf-4fLb_DpEsVugJBAvrn4uRBu5uGgvdWq0QceU4X8OY7UWRGG7ZjoGsZeSovVqp2ueYHhtW8wPHJ0uZAxp_ghbG4wfkBtMMnXL_EuEE0gzezLZQ5GPBem0NGcLtZJS6ruAmuh7VV2cI=",
+      "source": "google_ai_overview",
+      "status": "quote"
+    },
+    {
+      "text": "biospace.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF9wN2B5uVyqX-h0WV2ZulLvTGBEwuaz2ojAaTpUKJ5c0m6IDjkh-QMc8DQgVoTsvSq_4CPXoqxrL1oEEeZ6oBvLuvTaGd1fadi5qL-FMb8FEt8-pO-VoQ70Ysfagba76ERQSmf2rZl48MuoHOeYP6vTBKIShscu--enezEGZAMYSNRbXF44ouXTvIN9nJ0CB4HGsO-qcfGHkz_4eOE4y1yl8Ja",
+      "source": "google_ai_overview",
+      "status": "quote"
+    },
+    {
+      "text": "stocktitan.net",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHOkrOin8rY6etkXNTmeBQ1OsYjUXAMCSeMQcRd6nNqZZghX-9oHSzZ1DISq0klGeuTH06YYpyvZcE9zW-9gsN3vQRCz4Bu6KQz_IA_W8TzEDrmaErhwA7Hb0o-j0mkqOE2PH408PpnDOj1WVYxwMDk69_hrwQ5y3YdjtyWMNaL5rksUVwBrSxQ2Gn4D247FHRPrvngrTkOMMmQ9PHXRKQuN80jQYO6Jc=",
+      "source": "google_ai_overview",
+      "status": "quote"
+    },
+    {
+      "text": "marketscreener.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2wllAdfmjTflaht99enb0O6PL1SzNzyMuqgzN2MjWs_2o9HoWtrS1HELUIyjtjOLCFPcvWKgqvsP7lBi3S9Vd2ztAYc5qGevvcxVe24f5K6laRzepDktrS2CeDtAQj3TTZotvFzOLnQ7qVsBqd6_-mf9Usex6QT1VtqOqJ_SjCm5ElD1Ch3VYnkrb5gX_kk-7p5llEYDXbBEDR-X3BV0GMsb4dulG_8KS5b7qRK9EoheoraXUIY7qXP_1QurgYuU6ehnPXA==",
+      "source": "google_ai_overview",
+      "status": "quote"
+    },
+    {
+      "text": "globenewswire.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGO-Y-GPOmeeKmYUVsFAUukQoJ3_wzDsTE_BQ6lnGd3wW9N0F8lU0wvowroT4DHeqGmbjZF-WtN7Mg53-_ayMFxOVRwtXziH3pXYq2w8vONN-obEsVLvy1Ot-C1pidiZ_b3_NKKspWRzXh1nJfDCDApxqq6ny9OcHjq1_62fjZLi9uKwbk9zgrLEOJXrY9wrQZEjh3oGNOuSFBT15bPFHdUolrFdpwDmOwu19Rr7LBZ-3BxPmCzYNFZw_qHawMsoVlbMkbN",
+      "source": "google_ai_overview",
+      "status": "quote"
+    },
+    {
+      "text": "marketscreener.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1QGynICX95lBw6eWYSZ00e6pmHt08Ww8F7CVoLxGdnSAsjihgqn-gk664NHj-1eEv4NF9RcwEldajvx9AqJN7D5l87ssSwC_0AZzS17dze1_w6Ht935nqTuYU6Oi7N39KU_ySSUsgwpELKzDVOvIgKEkdBtqriZgSze98y-sCgBwH-5w-i_iON0OqM5GHTczkIGlB-QmQU1MhFJiNaBOzFPcL8wQAJIjAJ9ctl4d4XkUQ1yQ=",
+      "source": "google_ai_overview",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "BUY AMRX, 0-1d, because physical/legal constraint (FDA approval for generic drug launch); clock=monday_open",
+  "q5": "regime_break",
+  "event_class": "regime_break",
+  "sign": null,
+  "family": "time",
+  "constraint": "physical/legal constraint (FDA approval for generic drug launch)",
+  "rejected_hints": [],
+  "winners": [
+    "AMRX"
+  ],
+  "losers": [
+    "time"
+  ],
+  "clock": "monday_open",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": "FAIL"
+}

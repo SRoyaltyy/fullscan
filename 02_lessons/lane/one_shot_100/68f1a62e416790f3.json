@@ -1,0 +1,139 @@
+{
+  "article_id": "68f1a62e416790f3",
+  "title": "5 Revealing Analyst Questions From BrightSpring Health Services’s Q2 Earnings Call",
+  "body": "newsapi_Financialcontent.com",
+  "known_at": "2026-08-07T09:23:16Z",
+  "harvest_source": "parsed",
+  "source_file": "01_daily/news/2026-08-08_parsed.json",
+  "gold_id": "",
+  "ticker_hint": "",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "print",
+      "event_class": "preannounce",
+      "question": "What number changed versus what was already priced?",
+      "status": "answered",
+      "note": "Revenue ($3.15B vs. $2.99B estimate) and adjusted EPS ($0.22 vs. $0.19 estimate) beat expectations, but the market reacted negatively due to concerns about underlying headwinds (e.g., increased corporate expenses, generic drug impact like Revlimid). The named issuer’s print (revenue/EPS beat) was al"
+    },
+    {
+      "id": "q2",
+      "family": "print",
+      "event_class": "preannounce",
+      "question": "Is this one named issuer, or a factor that should not be pinned to a camera ticker?",
+      "status": "answered",
+      "note": "This is a **factor** (generic drug pressure, corporate expenses) that should not be pinned to a single ticker. The named issuer (BTSG) is the vehicle, but the **direction** is driven by macro headwinds (e.g., Revlimid’s contribution, cost inflation), not just the company’s print."
+    },
+    {
+      "id": "q3",
+      "family": "print",
+      "event_class": "preannounce",
+      "question": "If guidance was only reaffirmed, why is an up call illegal?",
+      "status": "answered",
+      "note": "Guidance was not reaffirmed—it was **implicitly challenged** by management’s comments on generic expectations (no changes) and CFO’s attribution of higher corporate expenses. The market’s down call is legal because the **factor_impulse** (costs/headwinds) was not priced in, despite the print beat."
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "BrightSpring Health Services Inc",
+      "ticker": "BTSG",
+      "type": "equity",
+      "sector": "Healthcare",
+      "industry": "Health Information Services",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:brightspring health services",
+      "aliases": [
+        "brightspring health services",
+        "brightspring health",
+        "health brightspring"
+      ],
+      "lane_why": "Ticker explicitly mentioned in the title and confirmed in CANDIDATES list"
+    }
+  ],
+  "entities": [
+    {
+      "name": "BrightSpring Health Services",
+      "ticker": "BTSG",
+      "role": "harm",
+      "direction": "down",
+      "horizon": "0-1d",
+      "axiom_id": null,
+      "pack_cite": null,
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "5 Revealing Analyst Questions From BrightSpring Health Services's Q2 ...: Our Top 5 Analyst Questions From BrightSpring Health Services's Q2 Earnings Call Charles Rhyee (TD Cowen) asked about the contribution of generics, especially Revlimid, and the impact of increased ...",
+      "url": "https://finance.yahoo.com/healthcare/articles/5-revealing-analyst-questions-brightspring-230922854.html",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "5 Revealing Analyst Questions From BrightSpring Health Services's Q2 ...: Our Top 5 Analyst Questions From BrightSpring Health Services's Q2 Earnings Call Charles Rhyee (TD Cowen) asked about the contribution of generics, especially Revlimid, and the impact of increased corporate expenses.",
+      "url": "https://markets.financialcontent.com/stocks/article/stockstory-2026-8-7-5-revealing-analyst-questions-from-brightspring-health-servicess-q2-earnings-call",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "FinancialContent - 5 Revealing Analyst Questions From BrightSpring ...: Our Top 5 Analyst Questions From BrightSpring Health Services's Q2 Earnings Call Charles Rhyee (TD Cowen) asked about the contribution of generics, especially Revlimid, and the impact of increased corporate expenses. CEO Jon Rousseau stated there were no changes in generic expectations, and CFO Jennifer Phipps attributed highe",
+      "url": "https://markets.financialcontent.com/stocks/article/stockstory-2026-8-7-5-revealing-analyst-questions-from-brightspring-health-servicess-q2-earnings-call?Language=english%2F1000",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "5 revealing analyst questions from BrightSpring Health Services's Q2 ...: BrightSpring Health Services delivered revenue and adjusted profit above Wall Street expectations in Q2, but the market's negative reaction reflected concerns about underlying headwinds ...",
+      "url": "https://www.msn.com/en-us/money/general/5-revealing-analyst-questions-from-brightspring-health-services-s-q2-earnings-call/ar-AA29zTKB",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "BrightSpring Health Services's Q2 Earnings Call: Our Top 5 Analyst ...: BrightSpring Health Services (BTSG) Q2 CY2025 Highlights: Revenue: $3.15 billion vs analyst estimates of $2.99 billion (29.1% year-on-year growth, 5.2% beat) Adjusted EPS: $0.22 vs analyst estimates of $0.19 (18.6% beat) Adjusted EBITDA: $142.5 million vs analyst estimates of $139.4 million (4.5% margin, 2.2% beat) The company",
+      "url": "https://finviz.com/news/138208/brightspring-health-servicess-q2-earnings-call-our-top-5-analyst-questions",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "BrightSpring Health Services's Q2 Earnings Call: Our Top 5 Analyst ...: BrightSpring Health Services delivered second quarter results that surpassed Wall Street's expectations for both revenue and non-GAAP profit, yet the market reacted negatively. Management ...",
+      "url": "https://finance.yahoo.com/news/brightspring-health-services-q2-earnings-040224794.html",
+      "source": "ddg_html",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "SELL BTSG, 0-1d, because preannounce: 5 Revealing Analyst Questions From BrightSpring Health Services’s Q2 Earnings Call; clock=0-1d",
+  "q5": "impulse",
+  "event_class": "preannounce",
+  "sign": null,
+  "family": "print",
+  "constraint": "preannounce: 5 Revealing Analyst Questions From BrightSpring Health Services’s Q2 Earnings Call",
+  "rejected_hints": [],
+  "winners": [],
+  "losers": [
+    "BTSG"
+  ],
+  "clock": "0-1d",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

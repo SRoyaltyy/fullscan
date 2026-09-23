@@ -1,0 +1,137 @@
+{
+  "article_id": "998248071efd1a4a",
+  "title": "AGNT: Q2 Earnings Snapshot",
+  "body": "AGNT posts record Q2 revenue $1.4B, beats guidance and estimates, tightens EBITDA outlook amid macro caution",
+  "known_at": "2026-08-04 17:01:27",
+  "harvest_source": "finviz_export",
+  "source_file": "data/exports/finviz_2026-09-22.csv",
+  "gold_id": "",
+  "ticker_hint": "AGNT",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "print",
+      "event_class": "guidance",
+      "question": "What number changed versus what was already priced?",
+      "status": "answered",
+      "note": "Q2 revenue printed at **$1.4B** (up 11% YoY), beating guidance of **$1.35B–$1.45B**, but **adjusted EBITDA guidance was tightened to $17–$22M** (vs. implied $30.7M in Q2 actual). The **factor impulse** (revenue beat) was offset by **guidance downgrade on EBITDA**, signaling macro caution (e.g., lega"
+    },
+    {
+      "id": "q2",
+      "family": "print",
+      "event_class": "guidance",
+      "question": "Is this one named issuer, or a factor that should not be pinned to a camera ticker?",
+      "status": "answered",
+      "note": "This is a **named issuer (AGNT)**—not a factor—since the print tied **specific guidance (EBITDA) to a ticker (AGNT) in the lede**. The **$1.4B revenue** is a book print, while the **EBITDA guidance cut** is a factor impulse (macro-driven, not inventory)."
+    },
+    {
+      "id": "q3",
+      "family": "print",
+      "event_class": "guidance",
+      "question": "If guidance was only reaffirmed, why is an up call illegal?",
+      "status": "answered",
+      "note": "An **up call is illegal** because the **EBITDA guidance downgrade** (a **downward factor impulse**) contradicts the **revenue beat** (upward book print). The **mixed direction** (revenue up, EBITDA guidance down) violates the **print_vs_priced** rule for this family."
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "AGNT Inc",
+      "ticker": "AGNT",
+      "type": "equity",
+      "sector": "Real Estate",
+      "industry": "Real Estate Services",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:agnt; hint_named_in_title",
+      "aliases": [
+        "agnt"
+      ],
+      "lane_why": "Ticker explicitly mentioned in the title and confirmed in CANDIDATES list"
+    }
+  ],
+  "entities": [
+    {
+      "name": "AGNT",
+      "ticker": "AGNT",
+      "role": "harm",
+      "direction": "down",
+      "horizon": "1-4w",
+      "axiom_id": null,
+      "pack_cite": null,
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "Full Transcript: AGNT Q2 2026 Earnings Call - Benzinga: AGNT's financial outlook for the third quarter of 2026 anticipates revenue between $1.35 and $1.45 billion, with adjusted EBITDA expected to range from $17 to $22 million.",
+      "url": "https://www.benzinga.com/news/26/09/61839424/full-transcript-agnt-q2-2026-earnings-call",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "AGNT (formerly eXp) Q2 2026 Earnings Review - Finsee: Record Volume Proves Platform Utility, But Agent Satisfaction and Guidance Warrants Caution AGNT delivered an impressive 11% YoY revenue jump to a record $1.45 billion in Q2, driven by a 15% surge in sales volume. The platform is successfully driving agent productivity: a 6% increase in agent headcount yielded a 12% increase in transactions. Ad",
+      "url": "https://finsee.ai/earnings/agnt/2026/q2/en/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "AGNT, Inc (AGNT) Q2 2026 Earnings Call Transcript & Audio: Summary Record Q2 revenue of $1.4B (up 11% YoY) driven by higher agent productivity and market share gains. AI-native tools and NextHome integration enhanced efficiency, while international revenue surged 44% YoY. Full-year guidance maintained amid macro uncertainty and elevated legal costs. Denise Garcia Investor Relations Contact, AGNT",
+      "url": "https://stockanalysis.com/stocks/agnt/transcripts/665932-q2-2026/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "AGNT, Inc. Reports Q2 2026 Results: The Company's 2026 guidance and other forward-looking statements are based on assumptions and expectations as of the date of this release, including assumptions regarding housing market conditions, transaction volumes, agent count and productivity, competitive dynamics, the successful integration and operation of the NextHome franchise model ...",
+      "url": "https://www.agnt.inc/press-releases/agnt-inc-reports-q2-2026-results",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "Earnings call transcript: AGNT posts record Q2 2026 revenue, stock ...: The North American Realty segment continues to be our largest revenue and profit generator, with revenue of $1.4 billion for the quarter, up 10% year-over-year, and Adjusted EBITDA of $30.7 ...",
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-agnt-posts-record-q2-2026-revenue-stock-stays-flat-93CH-4836069",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "eXp World Holdings (AGNT) Q2 2026 Earnings Report: eXp World Holdings (AGNT) Q2 2026 earnings report: EPS and revenue results vs. estimates, earnings call summary, audio and slide deck.",
+      "url": "https://www.tipranks.com/stocks/agnt/earnings/q2-2026-report",
+      "source": "ddg_html",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "AVOID_ADD AGNT, 1-4w, because guidance: AGNT: Q2 Earnings Snapshot; clock=not_0_1d",
+  "q5": "impulse",
+  "event_class": "guidance",
+  "sign": null,
+  "family": "print",
+  "constraint": "guidance: AGNT: Q2 Earnings Snapshot",
+  "rejected_hints": [],
+  "winners": [],
+  "losers": [
+    "AGNT"
+  ],
+  "clock": "not_0_1d",
+  "horizon": "1-4w",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

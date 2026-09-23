@@ -1,0 +1,137 @@
+{
+  "article_id": "0d739e3f3c5b6cc8",
+  "title": "A Qorvo Insider Disposed of Shares as a Merger Looms. Here's What Long-Term Investors Should Know",
+  "body": "rss_yahoo_finance",
+  "known_at": "2026-08-08T21:18:18Z",
+  "harvest_source": "parsed",
+  "source_file": "01_daily/news/2026-08-08_parsed.json",
+  "gold_id": "",
+  "ticker_hint": "",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "firm",
+      "event_class": "insider_flow",
+      "question": "Is this the issuer's own cash, paper, or control — not a sector story?",
+      "status": "answered",
+      "note": "The insider disposition is tied to a **merger looming**, indicating the firm's cash/paper/control is at risk of transfer (not a sector story). The insider's sale (4% of holdings) suggests a **downward signal** for the firm's valuation or control."
+    },
+    {
+      "id": "q2",
+      "family": "firm",
+      "event_class": "insider_flow",
+      "question": "If it is a routine dividend, why is there no 0-1d sector trade?",
+      "status": "blocked",
+      "note": "No routine dividend mentioned; context is insider flow tied to M&A, not a sector trade."
+    },
+    {
+      "id": "q3",
+      "family": "firm",
+      "event_class": "insider_flow",
+      "question": "Who is the named issuer on the Finviz hit list?",
+      "status": "answered",
+      "note": "The named issuer is **Qorvo Inc (QRVO)**."
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "Qorvo Inc",
+      "ticker": "QRVO",
+      "type": "equity",
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:qorvo",
+      "aliases": [
+        "qorvo"
+      ],
+      "lane_why": "Mentioned explicitly in the title and body of the article."
+    }
+  ],
+  "entities": [
+    {
+      "name": "Qorvo Inc",
+      "ticker": "QRVO",
+      "role": "harm",
+      "direction": "down",
+      "horizon": "0-1d",
+      "axiom_id": null,
+      "pack_cite": null,
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "Financial Advisory Services - Financial Restructuring: Our proactive, persistent approach is proven to achieve successful outcomes. A collaborative partner to deliver effective and durable resolutions to complex situations",
+      "url": "https://duckduckgo.com/y.js?ad_domain=thecmagroup.com&ad_provider=bingv7aa&ad_type=txad&click_metadata=z10b43lQ4gXbRlMH91L3nQHV68C2B1T2XVVtm7T13J%2Dyx7n_hC6VumGM0ivkuuJ181GGXLOUrX1bdfg0TnSIm990JY%2Dn_xSTcTXZSayqCxJfU%2D8eP%2DhgmthRBK05_8dhPqvdVgebFo0Mj5%2D4CEmgcl8B1xLpDMEgIQQ0oPmjsew.I041z9wKOoDiw3roEffbHA&rut=ff9165f91a319144ac561be8e28c989c21061142ddae9add56fa4b685a65e181&u3=https%3A%2F%2Fwww.bing.com%2Faclick%3Fld%3De8hKnPre8AdqSWlgCzgRtPNTVUCUyD_iZsJAFQp%2DTUlNHSZ_iIEveZoeIz1JaeFWVujpisQI9uuCbXoZyOrD2qFjxP1r_ojXMZN616T870hb5VYcxUkmp5wYvTAsIw46uMEUaz0ZPtqFaIzJqacwhfDGSPPZa83c8Mi9PmqPzO0OI99A3JCqD7SapSpfBLuFZ%2DteZGiw5egRJQGC2IsmHun2MPyI4%26u%3DaHR0cHMlM2ElMmYlMmZ3d3cudGhlY21hZ3JvdXAuY29tJTJmcmVzdHJ1Y3R1cmluZyUyZiUzZm1zY2xraWQlM2RiMWExNmU1MjEwNDMxNGFhMzQzNTA0ZTE3ODNlYzdiYg%26rlid%3Db1a16e52104314aa343504e1783ec7bb&vqd=4-312479846989062268831457436277651429043&iurl=%7B1%7DIG%3DB9AE01780F7D4AA092B68618E88A9BCF%26CID%3D1D1AEED94EE469C92C10F9044F6868D6%26ID%3DDevEx%2C5037.1",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "A Qorvo Insider Disposed of Shares as a Merger Looms. Here's What Long ...: A Qorvo Insider Disposed of Shares as a Merger Looms. Here's What Long-Term Investors Should Know Jonathan Ponciano, The Motley Fool August 8, 20264 min read QRVO Trade Qorvo on Coinbase Trading ...",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/qorvo-insider-disposed-shares-merger-211818399.html",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "A Qorvo Insider Disposed of Shares as a Merger Looms. Here's What Long ...: The executive disposed of 16,379 shares valued at about $1.6 million on August 5. The disposition represented 4% of the insider's direct equity holdings. All reported activity involved direct ...",
+      "url": "https://www.theglobeandmail.com/investing/markets/markets-news/Motley%20Fool/3740139/a-qorvo-insider-disposed-of-shares-as-a-merger-looms-here-s-what-long-term-investors-should-know/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "A Qorvo Insider Disposed of Shares as a Merger Looms. Here's What Long ...: Robert A. Bruggeworth, the president and CEO of Qorvo, Inc. (NASDAQ:QRVO), disposed of 16,379 shares of common stock on August 5, according to a recent SEC Form 4 filing. Transaction value based on SEC Form 4 weighted average sale price ($95.04); post-Transaction value based on the August 5 market close ($95.25). Qorvo ope",
+      "url": "https://www.sharewise.com/us/news_articles/A_Qorvo_Insider_Disposed_of_Shares_as_a_Merger_Looms_Heres_What_LongTerm_Investors_Should_Know_TheMotleyFool_20260808_2318",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "A Qorvo Insider Disposed of Shares as a Merger Looms. Here's What Long ...: Key Points The executive disposed of 16,379 shares valued at about $1.6 million on August 5. The disposition represented 4% of the insider's direct equity holdings. All reported activity involved direct ownership, with no indirect holdings or entities listed in this transaction. 10 stocks we like better than Qorvo ›",
+      "url": "https://www.webull.com.my/news-detail/15369298625504256",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "How Qorvo's $22 Billion Merger Changes What Its Insider Filings Mean: This insider retains 124,261 shares worth $11.84 million after non-discretionary equity vesting.",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/qorvos-22-billion-merger-changes-214207196.html",
+      "source": "ddg_html",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "SELL QRVO, 0-1d, because insider share disposition; clock=0-1d",
+  "q5": "impulse",
+  "event_class": "insider_flow",
+  "sign": null,
+  "family": "firm",
+  "constraint": "insider share disposition",
+  "rejected_hints": [],
+  "winners": [],
+  "losers": [
+    "QRVO"
+  ],
+  "clock": "0-1d",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

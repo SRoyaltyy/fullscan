@@ -1,0 +1,151 @@
+{
+  "article_id": "3fe312912424f186",
+  "title": "AI Infrastructure Stocks: What CoreWeave's Debt Reveals - MarketWise",
+  "body": "rss_google_markets",
+  "known_at": "Thu, 27 Aug 2026 14:04:30 GMT",
+  "harvest_source": "parsed",
+  "source_file": "01_daily/news/2026-08-28_parsed.json",
+  "gold_id": "",
+  "ticker_hint": "",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "firm",
+      "event_class": "credit_funding",
+      "question": "Is this the issuer's own cash, paper, or control — not a sector story?",
+      "status": "answered",
+      "note": "This is not the issuer's own cash or control—it is a **credit/funding risk signal** (GPU-backed debt) tied to AI infrastructure, not a sector story. The $2.6B loan reveals lender skepticism about AI buildout viability, signaling **liquidity constraints** rather than operational cash flow."
+    },
+    {
+      "id": "q2",
+      "family": "firm",
+      "event_class": "credit_funding",
+      "question": "If it is a routine dividend, why is there no 0-1d sector trade?",
+      "status": "blocked",
+      "note": "Lane returned no answer for this question"
+    },
+    {
+      "id": "q3",
+      "family": "firm",
+      "event_class": "credit_funding",
+      "question": "Who is the named issuer on the Finviz hit list?",
+      "status": "blocked",
+      "note": "Lane returned no answer for this question"
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "CoreWeave Inc",
+      "ticker": "CRWV",
+      "type": "equity",
+      "sector": "Technology",
+      "industry": "Software - Infrastructure",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:coreweave",
+      "aliases": [
+        "coreweave"
+      ],
+      "lane_why": "Mentioned in the title as 'CoreWeave' and referenced in the article body."
+    },
+    {
+      "entity_name": "Marketwise Inc",
+      "ticker": "MKTW",
+      "type": "equity",
+      "sector": "Financial",
+      "industry": "Financial Data & Stock Exchanges",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:marketwise",
+      "aliases": [
+        "marketwise"
+      ],
+      "lane_why": "Mentioned in the title as 'MarketWise'."
+    }
+  ],
+  "entities": [
+    {
+      "name": "CoreWeave Inc",
+      "ticker": "CRWV",
+      "role": "harm",
+      "direction": "down",
+      "horizon": "0-1d",
+      "axiom_id": null,
+      "pack_cite": null,
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "AI Infrastructure Stocks: What CoreWeave's Debt Reveals - MarketWise: CoreWeave's $2.6 billion loan reveals hidden risks facing AI infrastructure stocks. Learn what the credit market is signaling about the AI buildout.",
+      "url": "https://marketwise.com/investing/coreweave-stock-the-2-6-billion-debt-signal-the-ai-bubble-is-ignoring/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "CoreWeave's $30B Capex Gamble: AI Cloud Debt Crisis (2026): What is CoreWeave's $66.8 billion revenue backlog? Could CoreWeave go bankrupt? With a revenue backlog of $66.8 billion, total liabilities approaching $29 billion, and a stock that has tripled since its March 2025 IPO at $40 per share, CoreWeave has become the most polarizing company in the AI infrastructure market.",
+      "url": "https://tech-insider.org/coreweave-30-billion-capex-ai-cloud-2026/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "CoreWeave AI Debt Financing Signals Market Changes - TraderInsight: The CoreWeave AI debt financing comes during a period of growing skepticism about the amount of capital being committed to artificial intelligence. Technology companies, cloud providers, data-center operators, and infrastructure firms have announced enormous spending plans tied to AI demand.",
+      "url": "https://traderinsight.com/coreweave-ai-debt-financing/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "AI Infrastructure Stocks: What CoreWeave's Debt Reveals - MarketWise ...: A $2.6 billion loan may tell investors more about CoreWeave than its stock price does. The company's latest financing reveals how lenders are really pricing the risks behind the AI ...",
+      "url": "https://www.linkedin.com/posts/market-wise-llc_ai-infrastructure-stocks-what-coreweaves-activity-7499145800367915008-EG2T",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "CoreWeave's AI Data Center Capacity Is Exploding - Its $35 Billion Debt ...: CoreWeave's AI Data Center Capacity Is Exploding — Its $35 Billion Debt Load Still Makes the Stock Untouchable CoreWeave is racing to build the AI infrastructure backbone that hyperscalers ...",
+      "url": "https://247wallst.com/investing/2026/08/25/coreweaves-ai-data-center-capacity-is-exploding-its-35-billion-debt-load-still-makes-the-stock-untouchable/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "CoreWeave GPU Backed Debt Explained: Risks and Upside: In CoreWeave's case, GPU-backed debt means loans tied to the company's AI hardware base and related infrastructure. The company told investors in its S-1 that it had pioneered GPU infrastructure-backed lending.",
+      "url": "https://stockmaven.com/coreweave-gpu-backed-debt-explained/",
+      "source": "ddg_html",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "SELL CRWV, 0-1d, because CoreWeave's debt disclosure introduces a credit/funding risk signal; clock=0-1d",
+  "q5": "impulse",
+  "event_class": "credit_funding",
+  "sign": null,
+  "family": "firm",
+  "constraint": "CoreWeave's debt disclosure introduces a credit/funding risk signal",
+  "rejected_hints": [],
+  "winners": [],
+  "losers": [
+    "CRWV"
+  ],
+  "clock": "0-1d",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

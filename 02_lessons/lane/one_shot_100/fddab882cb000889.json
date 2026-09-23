@@ -1,0 +1,139 @@
+{
+  "article_id": "fddab882cb000889",
+  "title": "10 DAYS LEFT: Rackspace Technology (RXT) Investors Should Contact Block & Leviton LLP Before September 28",
+  "body": "Rackspace Technology joins NVIDIA Cloud Partner Program, launches Blackwell-powered Institutional Sovereign Pod AI infrastructure for regulated, sovereign enterprises",
+  "known_at": "2026-09-18 14:57:00",
+  "harvest_source": "finviz_export",
+  "source_file": "data/exports/finviz_2026-09-22.csv",
+  "gold_id": "",
+  "ticker_hint": "RXT",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "firm",
+      "event_class": "corporate_action_mna",
+      "question": "Is this the issuer's own cash, paper, or control — not a sector story?",
+      "status": "answered",
+      "note": "This is not the issuer's own cash, paper, or control—it is a **sector story** tied to NVIDIA's AI infrastructure partnership, which competes with RXT's AI infrastructure ambitions. The event is a **corporate action** (MNA) that directly impacts RXT's market position in AI infrastructure, making it a"
+    },
+    {
+      "id": "q2",
+      "family": "firm",
+      "event_class": "corporate_action_mna",
+      "question": "If it is a routine dividend, why is there no 0-1d sector trade?",
+      "status": "blocked",
+      "note": "Lane returned no answer for this question"
+    },
+    {
+      "id": "q3",
+      "family": "firm",
+      "event_class": "corporate_action_mna",
+      "question": "Who is the named issuer on the Finviz hit list?",
+      "status": "blocked",
+      "note": "Lane returned no answer for this question"
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "Rackspace Technology Inc",
+      "ticker": "RXT",
+      "type": "equity",
+      "sector": "Technology",
+      "industry": "Software - Infrastructure",
+      "source": "finviz_row",
+      "score": 12,
+      "why": "ticker_in_text; company:rackspace technology; hint_named_in_title",
+      "aliases": [
+        "rackspace technology",
+        "technology rackspace",
+        "rackspace"
+      ],
+      "lane_why": "Mentioned explicitly in the title and body as the primary subject of the article."
+    }
+  ],
+  "entities": [
+    {
+      "name": "Rackspace Technology",
+      "ticker": "RXT",
+      "role": "harm set",
+      "direction": "down",
+      "horizon": "0-1d",
+      "axiom_id": null,
+      "pack_cite": null,
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "10 DAYS LEFT: Rackspace Technology (RXT) Investors Should Contact Block ...: Boston, Massachusetts--(Newsfile Corp. - September 18, 2026) - Block &amp; Leviton announces that a securities fraud lawsuit has been filed against Rackspace Technology (NASDAQ: RXT) and certain ...",
+      "url": "https://www.streetinsider.com/Newsfile/10+DAYS+LEFT%3A+Rackspace+Technology+%28RXT%29+Investors+Should+Contact+Block+%26+Leviton+LLP+Before+September+28/27080229.html",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "10 DAYS LEFT: Rackspace Technology (RXT) Investors Should Contact Block ...: Anyone who purchased Rackspace Technology securities between May 7, 2026, and July 8, 2026, may be eligible, whether or not they have sold their investment. Investors should contact Block & Leviton to learn more.",
+      "url": "https://www.centralcharts.com/en/news/5775234-10-days-left-rackspace-technology-rxt-investors-should-contact-block-leviton-llp-before-september-28",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "RXT CLASS ACTION: Investors with Losses in Rackspace Technology Should ...: Who is eligible? Anyone who purchased or otherwise acquired Rackspace Technology securities between May 7, 2026, and July 8, 2026, may be eligible, whether or not they have sold their investment. Investors should contact Block & Leviton to learn more.",
+      "url": "https://www.newsfilecorp.com/release/307749/RXT-CLASS-ACTION-Investors-with-Losses-in-Rackspace-Technology-Should-Contact-Block-Leviton-Before-Sept.-28",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "Rackspace Technology | Block & Leviton LLP: According to the complaint, Rackspace Technology and its executives misled investors about the company's full-year 2026 outlook during its shift toward AI infrastructure. The complaint alleges that between May 7 and July 8, 2026, the company reaffirmed its full-year revenue guidance and touted the strength of its Private Cloud and Public Cloud businesses",
+      "url": "https://www.blockleviton.com/cases/rxt",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "RXT Lawsuit Alert: Rackspace Technology Investors Face September 28 ...: A securities fraud class action lawsuit has been filed on behalf of Rackspace investors after its stock plummeted 33.6% because Rackspace allegedly misled investors about its AI efforts and their ...",
+      "url": "https://www.prnewswire.com/news-releases/rxt-lawsuit-alert-rackspace-technology-investors-face-september-28-deadline-after-33-stock-drop-tied-to-ai-effort-issues-302870595.html",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "RXT LAWSUIT: Rackspace Technology Investors with Losses Should Contact ...: According to the complaint, Rackspace Technology and its executives misled investors about the company's full-year 2026 outlook during its shift toward AI infrastructure.",
+      "url": "https://natlawreview.com/press-releases/rxt-lawsuit-rackspace-technology-investors-losses-should-contact-block",
+      "source": "ddg_html",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "SELL RXT, 0-1d, because NVIDIA Cloud Partner Program partnership and Blackwell-powered AI infrastructure launch for sovereign enterprises; clock=0-1d",
+  "q5": "impulse",
+  "event_class": "corporate_action_mna",
+  "sign": null,
+  "family": "firm",
+  "constraint": "NVIDIA Cloud Partner Program partnership and Blackwell-powered AI infrastructure launch for sovereign enterprises",
+  "rejected_hints": [],
+  "winners": [],
+  "losers": [
+    "RXT"
+  ],
+  "clock": "0-1d",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

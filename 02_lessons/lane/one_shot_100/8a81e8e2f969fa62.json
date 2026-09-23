@@ -1,0 +1,139 @@
+{
+  "article_id": "8a81e8e2f969fa62",
+  "title": "1-800-Flowers.com Inc (FLWS) (Q4 2026) Earnings Call Highlights: Revenue Slump and Cost Cuts as ...",
+  "body": "1-800-Flowers posts wider-than-expected Q4 loss, guides FY27 adjusted EBITDA $10â15M, far below $27.7M consensus",
+  "known_at": "2026-09-10 21:00:31",
+  "harvest_source": "finviz_export",
+  "source_file": "data/exports/finviz_2026-09-22.csv",
+  "gold_id": "",
+  "ticker_hint": "FLWS",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "print",
+      "event_class": "guidance",
+      "question": "What number changed versus what was already priced?",
+      "status": "answered",
+      "note": "{'number_changed': '$10–15M', 'previously_priced': '$27.7M (consensus)'}"
+    },
+    {
+      "id": "q2",
+      "family": "print",
+      "event_class": "guidance",
+      "question": "Is this one named issuer, or a factor that should not be pinned to a camera ticker?",
+      "status": "answered",
+      "note": "{'issuer': True, 'ticker': 'FLWS'}"
+    },
+    {
+      "id": "q3",
+      "family": "print",
+      "event_class": "guidance",
+      "question": "If guidance was only reaffirmed, why is an up call illegal?",
+      "status": "answered",
+      "note": "{'reason': 'Guidance was not reaffirmed; it was downgraded from $27.7M consensus to $10–15M, which is a material negative revision.'}"
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "1-800 Flowers.com Inc",
+      "ticker": "FLWS",
+      "type": "equity",
+      "sector": "Consumer Cyclical",
+      "industry": "Specialty Retail",
+      "source": "finviz_row",
+      "score": 12,
+      "why": "ticker_in_text; hint_named_in_title",
+      "aliases": [
+        "800 flowers com",
+        "800 flowers",
+        "flowers 800"
+      ],
+      "lane_why": "Ticker explicitly mentioned in the title and confirmed in CANDIDATES list"
+    }
+  ],
+  "entities": [
+    {
+      "name": "1-800-Flowers.com Inc",
+      "ticker": "FLWS",
+      "role": "harm",
+      "direction": "down",
+      "horizon": "1-4w",
+      "axiom_id": null,
+      "pack_cite": null,
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "1-800-Flowers.com Inc (FLWS) (Q4 2026) Earnings Call Highlights ...: 1-800-Flowers.com Inc (FLWS) posted a 12.9% Q4 revenue decline and a wider adjusted EBITDA loss, but beat its $50 million cost-savings target and sees improving trends ahead.",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/1-800-flowers-com-inc-010031753.html",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "1-800-Flowers.com Inc (FLWS) (Q4 2026) Earnings Call Highlights ...: Consolidated Q4 revenue declined 12.9% to $293.1 million, with full-year revenue down 10.8% to $1.5 billion. Adjusted EBITDA for fiscal 2026 fell to $2.9 million from $29.2 million in the prior year, and Q4 adjusted EBITDA loss widened to $31 million.",
+      "url": "https://ca.investing.com/news/company-news/1800flowerscom-inc-flws-q4-2026-earnings-call-highlights-revenue-slump-and-cost-cuts-as--4835854",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "1-800-FLOWERS (FLWS) Q4 2026 Earnings Call Transcript: 1-800-FLOWERS (FLWS) Q4 2026 Earnings Call Transcript Revenue fell 10.8% amid weak consumer spending, but cost cuts improved cash flow.",
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/09/10/1-800-flowers-flws-q4-2026-earnings-call-transcript/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "1-800 FLOWERS.COM Q4 Earnings Call Highlights - MarketBeat: 1-800 FLOWERS.COM (NASDAQ:FLWS) reported lower fourth-quarter and full-year fiscal 2026 revenue and adjusted EBITDA, while outlining plans to raise capital, potentially divest non-strategic assets and reinvest savings into marketing, technology and customer-experience initiatives.",
+      "url": "https://www.marketbeat.com/instant-alerts/transcript-1-800-flowerscom-q4-earnings-call-highlights-2026-09-10/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "1-800-FLOWERS.COM (FLWS) Q4 FY2026 Earnings Call: Revenue Falls, FY2027 ...: 1-800-FLOWERS.COM Q4 FY2026 revenue fell 12.9% to $293.1 million. Management guided to a mid-single-digit FY2027 revenue decline and $10 million-$15 million in adjusted EBITDA.",
+      "url": "https://www.tradingkey.com/news/transcripts/262161211-tradingkey",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "1-800-Flowers.com Q4 2026 Earnings Call: Complete Transcript: 1-800-Flowers.com (NASDAQ: FLWS) released fourth-quarter financial results and hosted an earnings call on Thursday. Read the complete transcript below.",
+      "url": "https://www.benzinga.com/news/26/09/61711778/1-800-flowers-com-q4-2026-earnings-call-complete-transcript",
+      "source": "ddg_html",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "AVOID_ADD FLWS, 1-4w, because FY27 adjusted EBITDA guidance ($10–15M vs. $27.7M consensus); clock=not_0_1d",
+  "q5": "impulse",
+  "event_class": "guidance",
+  "sign": null,
+  "family": "print",
+  "constraint": "FY27 adjusted EBITDA guidance ($10–15M vs. $27.7M consensus)",
+  "rejected_hints": [],
+  "winners": [],
+  "losers": [
+    "FLWS"
+  ],
+  "clock": "not_0_1d",
+  "horizon": "1-4w",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

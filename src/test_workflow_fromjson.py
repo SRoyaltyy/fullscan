@@ -1216,7 +1216,8 @@ def test_lane_hop_429_next_model_same_lane() -> None:
         call_dead,
     )
     assert parsed is None and info is None
-    assert seen == ["glm-4.7-flash"], seen
+    # 401 drops that ID. Both IDs dead, and neither was 429/200, so the key is cached dead.
+    assert seen == ["glm-4.7-flash", "Qwen/Qwen3-8B"], seen
     assert "zhipu" in lane_route._SKIP
 
     seen.clear()
@@ -1229,6 +1230,7 @@ def test_lane_hop_429_next_model_same_lane() -> None:
     assert seen == [], seen
     lane_route._SKIP.clear()
     lane_route._RATE_LIMITED.clear()
+    lane_route._MODEL_DENIED.clear()
 
     seen.clear()
 

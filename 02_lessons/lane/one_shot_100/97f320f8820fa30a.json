@@ -1,0 +1,137 @@
+{
+  "article_id": "97f320f8820fa30a",
+  "title": "5 big analyst AI moves: Downgrades for SAP and Intuit; AMD lifted to Strong Buy",
+  "body": "JPMorgan and Bank of America cut Intuit to Neutral, slash price targets on weaker FY27 outlook and rising TurboTax, QuickBooks competition",
+  "known_at": "",
+  "harvest_source": "finviz_digest",
+  "source_file": "01_daily/news/2026-08-30_finviz_digest.json",
+  "gold_id": "",
+  "ticker_hint": "",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "print",
+      "event_class": "guidance",
+      "question": "What number changed versus what was already priced?",
+      "status": "answered",
+      "note": "Price target slashed from $605 to $331, reflecting downgrade to Neutral and weaker FY27 outlook due to AI-driven competitive pressures (TurboTax/QuickBooks)."
+    },
+    {
+      "id": "q2",
+      "family": "print",
+      "event_class": "guidance",
+      "question": "Is this one named issuer, or a factor that should not be pinned to a camera ticker?",
+      "status": "answered",
+      "note": "This is a named issuer (Intuit), not a factor."
+    },
+    {
+      "id": "q3",
+      "family": "print",
+      "event_class": "guidance",
+      "question": "If guidance was only reaffirmed, why is an up call illegal?",
+      "status": "answered",
+      "note": "Guidance was not reaffirmed; it was explicitly weakened (FY27 outlook downgraded) with a price target cut, making an up call illegal."
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "Intuit Inc",
+      "ticker": "INTU",
+      "type": "equity",
+      "sector": "Technology",
+      "industry": "Software - Application",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:intuit",
+      "aliases": [
+        "intuit"
+      ],
+      "lane_why": "Mentioned explicitly in the title and body of the article as 'Intuit' with no ambiguity."
+    }
+  ],
+  "entities": [
+    {
+      "name": "Intuit",
+      "ticker": "INTU",
+      "role": "harm",
+      "direction": "down",
+      "horizon": "1-4w",
+      "axiom_id": null,
+      "pack_cite": "https://www.ainvest.com/news/3-ai-analyst-moves-1-real-signal-sap-intuit-amd-2608/",
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "5 big analyst AI moves: Downgrades for SAP and Intuit; AMD lifted to ...: JPMorgan and Bank of America have both downgraded Intuit to Neutral following results that showed competitive pressures spreading beyond TurboTax into the company's broader business.",
+      "url": "https://finance.yahoo.com/technology/ai/articles/5-big-analyst-ai-moves-144401731.html",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "5 big analyst AI moves: Downgrades for SAP and Intuit; AMD lifted to ...: JPMorgan and Bank of America have both downgraded Intuit to Neutral following results that showed competitive pressures spreading beyond TurboTax into the company's broader business.",
+      "url": "https://www.investing.com/news/stock-market-news/5-big-analyst-ai-moves-downgrades-for-sap-and-intuit-amd-lifted-to-strong-buy-4881980",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "5 big analyst AI moves: Downgrades for SAP and Intuit; AMD lifted to ...: This news cluster highlights significant analyst rating changes for several companies, specifically focusing on their involvement or potential in artificial intelligence. SAP and Intuit received downgrades, while AMD was upgraded to a ' [research note]', indicating a shift in market perception regarding their AI prospects.",
+      "url": "https://alphaos.finance/news/5-big-analyst-ai-moves-downgrades-for-sap-and-intuit-amd-lifted-to-strong-buy",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "5 big analyst AI moves: Downgrades for SAP and Intuit; AMD lifted to ...: August 30, 2026 19 Share 5 big analyst AI moves: Downgrades for SAP and Intuit; AMD lifted to Strong Buy",
+      "url": "https://vcptrading.com/2026/08/30/5-big-analyst-ai-moves-downgrades-for-sap-and-intuit-amd-lifted-to-strong-buy/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "3 AI Analyst Moves, 1 Real Signal: SAP, Intuit, AMD: The next day JPMorgan cut Intuit to Neutral from Overweight and slashed its price target to $331 from $605, citing AI disruption risk spreading beyond TurboTax into QuickBooks; BofA followed with its own downgrade to Neutral.",
+      "url": "https://www.ainvest.com/news/3-ai-analyst-moves-1-real-signal-sap-intuit-amd-2608/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "5 big analyst AI moves: Downgrades for SAP and Intuit; AMD lifted to ...: 📰 TECH & AI INTELLIGENCE — 30 Aug 2026🔥 Headline: 5 big analyst AI moves: Downgrades for SAP and Intuit; AMD lifted to Strong Buy💡 Summary: 📌 KEY TAKEAWA...",
+      "url": "https://www.youtube.com/watch?v=wI-iTdemZ5w",
+      "source": "ddg_html",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "AVOID_ADD INTU, 1-4w, because guidance: 5 big analyst AI moves: Downgrades for SAP and Intuit; AMD lifted to Strong Buy; clock=not_0_1d",
+  "q5": "impulse",
+  "event_class": "guidance",
+  "sign": null,
+  "family": "print",
+  "constraint": "guidance: 5 big analyst AI moves: Downgrades for SAP and Intuit; AMD lifted to Strong Buy",
+  "rejected_hints": [],
+  "winners": [],
+  "losers": [
+    "INTU"
+  ],
+  "clock": "not_0_1d",
+  "horizon": "1-4w",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

@@ -20,8 +20,9 @@ Cyrus 2026-09-21 / 2026-09-22: primary allowlists are current 2025+
 flash only. On 429 / rate-limit, that model's quota is exhausted — hop
 to the next current allowlisted model on the same lane. Do not abandon
 the whole provider on the first 429, and never fall down banned
-last-resort IDs. True dead-provider statuses (401/403/410/402) may still
-abandon the lane. Banned from primary / news: glm-4-flash-250414, any
+last-resort IDs. A 401/410 on the key abandons the lane. A 402/403
+on one model ID (no entitlement, that model's free quota) does not.
+Banned from primary / news: glm-4-flash-250414, any
 glm-4-flash that is not 4.7 / 5.x, qwen2.5-7b-instruct and similar
 pre-2025 small IDs.
 
@@ -55,6 +56,7 @@ from __future__ import annotations
 
 import datetime
 import json
+import re
 import os
 import pathlib
 import time
@@ -84,7 +86,19 @@ GROQ_MODELS = [
     "qwen/qwen3.8-27b",
     "qwen/qwen3.6-27b",
 ]
-GEMINI_MODELS = ["gemini-2.5-flash-lite", "gemini-2.5-flash"]
+# gemini-2.5-flash-lite is 404 for new users. Do not call it.
+GEMINI_MODELS = ["gemini-2.5-flash"]
+# Classify overflow after gemini-2.5-flash. Each ID has a Gemini API free
+# tier (input/output "Free of charge"). 3.5-flash-lite is the ID a 404
+# body named. Do not put gemini-2.5-flash-lite back.
+GEMINI_CLASSIFY_MODELS = [
+    "gemini-2.5-flash",
+    "gemini-3.5-flash-lite",
+    "gemini-3.5-flash",
+    "gemini-3.6-flash",
+    "gemini-3.7-flash",
+    "gemini-3.8-flash",
+]
 # Mistral Experiment plan (rate-limited $0). Flash / edge only — no large/medium.
 MISTRAL_MODELS = ["ministral-8b-2512", "ministral-3b-2512", "mistral-small-latest"]
 MISTRAL_URL = "https://api.mistral.ai/v1/chat/completions"
@@ -124,6 +138,39 @@ QWEN_MODELS = [m for m in (
 ) if "plus" not in m.lower() and "max" not in m.lower()
     and "paid" not in m.lower() and not m.lower().startswith("pro")
     and "/pro" not in m.lower() and "-pro" not in m.lower()]
+# Classify floor on the same DashScope key. qwen-flash stays the global
+# primary (qwen_models). Larger current IDs are only for news_classify,
+# and only after flash 429s. Never plus / max / Pro / pre-2025 small.
+QWEN_CLASSIFY_MODELS = [m for m in (
+    "qwen-flash",
+    "qwen3.8-flash",
+    "qwen3.7-flash",
+    "qwen3.6-flash",
+    "qwen3.5-flash",
+    # Dated flash snapshots. Same $0 flash family as the aliases above.
+    "qwen3.7-flash-2026-07-15",
+    "qwen3.6-flash-2026-04-16",
+    "qwen3.5-flash-2026-02-23",
+    "qwen3-32b",
+    "qwen3-14b",
+) if "plus" not in m.lower() and "max" not in m.lower()
+    and "paid" not in m.lower() and not m.lower().startswith("pro")
+    and "/pro" not in m.lower() and "-pro" not in m.lower()]
+# Conditional DashScope IDs. A 1-token ping decides. 401/404 drops the ID,
+# not the provider. Never plus / max / pro.
+QWEN_PROBE_MODELS = (
+    "qwen3-next-80b-a3b-instruct",
+    "glm-4.7",
+    "deepseek-v4-flash",
+    "MiniMax-M2.5",
+)
+# OpenRouter classify floor. Ling-3 flash and the free router are not
+# classify — they are 8B-class and may run planner / filter / analyst.
+OR_CLASSIFY_MODELS = [
+    "google/gemma-4-31b-it:free",
+    "z-ai/glm-5.2:free",
+    "minimax/minimax-m3:free",
+]
 # Public DashScope OpenAI-compatible fallbacks. DASHSCOPE_BASE_URL (env/secret)
 # is prepended by qwen_urls() — never log or commit that value.
 QWEN_URLS = [
@@ -228,9 +275,34 @@ DEFAULT_LANES = [
     "github_models", "cloudflare", "sambanova",
     "ollama", "hf", "groq", "gemini",
 ]
-# news_to_tickers + classify/impact + news sector scan: current flash first.
+# news_to_tickers + impact + news sector scan: current flash first.
 # Zhipu glm-4.7-flash → SF Qwen3-8B → OR :free → DashScope qwen-flash.
 NEWS_HEAD = ["zhipu", "siliconflow", "openrouter", "qwen"]
+# news_classify quality floor. OpenClaw grok-4.6 is first. The free
+# hopper stays as fallback. Qwen is last and is not required.
+# NVIDIA NIM stays off: nemotron-mini-4b, llama-3.2-3b, and llama-3.1-8b
+# are below the floor. Ministral 8B/3B stay off.
+CLASSIFY_LANES = [
+    "openclaw",
+    "zhipu", "siliconflow", "openrouter", "gemini", "tokenhub",
+    "mistral", "pollinations", "qwen",
+]
+# Classify / meta / pack_complete / analyst / filter floor.
+# Gold 35882203499: the gateway rewrites xai/grok-4-fast-reasoning to
+# xai/grok-4-fast, then agent main returns HTTP 400
+# "Model 'xai/grok-4-fast' is not allowed". The same run's filter hop
+# returned HTTP 200 for xai/grok-4.6. Both fast aliases are rewritten
+# to that id before x-openclaw-model is set, so the denied id is never
+# sent and never cached as _MODEL_DENIED. src/config.py already
+# defaults to grok-4.6.
+OPENCLAW_FLOOR_MODEL = "xai/grok-4.6"
+OPENCLAW_FILTER_MODEL = "xai/grok-4.6"
+_OPENCLAW_FAST_ALIAS = frozenset({
+    "xai/grok-4-fast",
+    "xai/grok-4-fast-reasoning",
+    "grok-4-fast",
+    "grok-4-fast-reasoning",
+})
 # company_dig: SF Qwen / DeepSeek free non-Pro → OR :free → Zhipu.
 # Native DeepSeek stays off the free head (paid opt-in only).
 DIG_HEAD = ["siliconflow", "openrouter", "zhipu"]
@@ -244,6 +316,15 @@ _SKIP: set[str] = set()
 # Per-request models that already 429'd (lane::model). Cleared with _SKIP.
 # Provider-level _SKIP is never set solely for 429.
 _RATE_LIMITED: set[str] = set()
+# One model ID returned 402/403/404. The key is still live. Cleared with _SKIP.
+_MODEL_DENIED: set[str] = set()
+# DashScope standing-400 count for this process. Two confirmed arrearage
+# bodies stop the rest of the qwen list. Not an incorrect-API-key skip.
+_QWEN_STANDING_HITS = 0
+_QWEN_STANDING_STOP = 2
+# OpenRouter :free daily cap. One 429 ends the OR walk for this process.
+_OR_DAY_CAPPED = False
+_QWEN_PROBE: dict[str, bool] = {}
 
 
 def _dedupe(names: list[str]) -> list[str]:
@@ -333,8 +414,10 @@ def is_banned_primary(mid: str) -> bool:
     # glm-4-flash* that is not 4.7 (glm-4.7-flash does not contain this stem).
     if "glm-4-flash" in low and "4.7" not in low:
         return True
-    # glm-4.x-flash except 4.7 (covers glm-4.5-flash).
-    if low.startswith("glm-4.") and "flash" in low and "glm-4.7" not in low:
+    # glm-4.5-flash stays banned. glm-4.6-flash is a current free sibling.
+    if "glm-4.5-flash" in low or "glm-4-flash-250414" in low:
+        return True
+    if low.startswith("glm-4.") and "flash" in low and "glm-4.7" not in low and "glm-4.6" not in low:
         return True
     return False
 
@@ -441,6 +524,8 @@ def lanes_for(tmpl: str) -> list[str]:
     SiliconFlow / ModelScope remain on the $0 path via those lanes.
     """
     tmpl = str(tmpl or "custom").strip()
+    if tmpl == "news_classify":
+        return list(CLASSIFY_LANES)
     if tmpl in NEWS_TEMPLATES:
         return _with_paid_deepseek(
             _dedupe(NEWS_HEAD + DEFAULT_LANES), after="openrouter",
@@ -478,9 +563,134 @@ def sf_models_for(tmpl: str) -> list[str]:
     ]
 
 
+def is_classify_banned(mid: str) -> bool:
+    """True when this ID must not lock event_class.
+
+    Ministral, Llama 3.2 3B, Nemotron-mini, Qwen2.5-7B, old glm-4-flash,
+    Qwen3-8B, and Ling-3 flash are 8B-class or pre-2025 small. They may
+    still run the lookup filter and the analyst after the class is locked.
+    """
+    low = str(mid or "").strip().lower()
+    if not low or is_banned_primary(mid):
+        return True
+    stems = (
+        "ministral",
+        "llama-3.2-3b",
+        "llama-3.2-1b",
+        "llama-3.1-8b",
+        "nemotron-mini",
+        "qwen2.5-7b",
+        "qwen3-8b",
+        "ling-3",
+        "hy3",
+        "phi-4-mini",
+        "smollm",
+        "glm-4-flash-250414",
+        "glm-4.5-flash",
+        # Pollinations gemini-fast is gemini-2.5-flash-lite. Not a floor.
+        "gemini-fast",
+        "gemini-2.5-flash-lite",
+    )
+    return any(stem in low for stem in stems)
+
+
+def openclaw_allowlisted_model(model: str) -> str:
+    """Backend id to put on x-openclaw-model.
+
+    Agent main does not allow grok-4-fast. The gateway strips
+    ``-reasoning`` and then 400s that alias. Both fast ids are rewritten
+    to xai/grok-4.6, the id that returned HTTP 200, before the request.
+    """
+    raw = str(model or "").strip()
+    if not raw or is_classify_banned(raw) or raw.lower() in _OPENCLAW_FAST_ALIAS:
+        return OPENCLAW_FLOOR_MODEL
+    return raw
+
+
+def openclaw_models() -> list[str]:
+    """Classify/meta/analyst backend. Default is the allowlisted floor.
+
+    An explicit non-banned override is tried first, then the floor id.
+    grok-4-fast and grok-4-fast-reasoning collapse to the floor so they
+    are never placed on the wire.
+    """
+    raw = (os.environ.get("OPENCLAW_BACKEND_MODEL") or "").strip()
+    if not raw:
+        return [OPENCLAW_FLOOR_MODEL]
+    preferred = openclaw_allowlisted_model(raw)
+    if preferred == OPENCLAW_FLOOR_MODEL:
+        return [OPENCLAW_FLOOR_MODEL]
+    return [preferred, OPENCLAW_FLOOR_MODEL]
+
+
+def openclaw_backend_model() -> str:
+    """First classify/meta/analyst backend id."""
+    models = openclaw_models()
+    return models[0] if models else OPENCLAW_FLOOR_MODEL
+
+
+def qwen_classify_models() -> list[str]:
+    """DashScope classify floor. qwen-flash first, then larger current IDs."""
+    return [m for m in QWEN_CLASSIFY_MODELS if not is_classify_banned(m)]
+
+
 def primary_models_for(lane: str, tmpl: str = "custom") -> list[str]:
-    """Current 2025+ primary IDs for a hopper. Never last-resort / banned IDs."""
+    """Current 2025+ primary IDs for a hopper. Never last-resort / banned IDs.
+
+    news_classify is the quality floor: no 8B, no Ministral. SiliconFlow's
+    allowlist is Qwen3-8B only, so that lane contributes no classify ID.
+    news_filter uses the same allowlisted OpenClaw id (grok-4.6). Other
+    providers keep their news_impact list.
+    """
     tmpl = str(tmpl or "custom").strip()
+    if tmpl == "news_filter":
+        if lane == "openclaw":
+            return [openclaw_allowlisted_model(OPENCLAW_FILTER_MODEL)]
+        tmpl = "news_impact"
+    if tmpl == "news_classify":
+        if lane == "openclaw":
+            raw = openclaw_models()
+        elif lane == "zhipu":
+            # glm-4.7-flash first. 429 hops to the next $0 flash on this key.
+            # glm-4.6-flash 403 and glm-4.6v-flash 429 are per-ID, not a dead key.
+            # glm-4.6v-flash is the other $0 text/vision flash. No 4.5, no
+            # 250414, no paid glm-4.7-flashx.
+            raw = list(ZHIPU_MODELS) + ["glm-4.6-flash", "glm-4.6v-flash"]
+        elif lane == "siliconflow":
+            # No $0 non-Pro SiliconFlow ID can lock event_class.
+            # Qwen3-8B and GLM-Z1-9B are below the floor. Qwen3-14B and
+            # Qwen3-32B serverless are priced, so they stay off this list.
+            raw = []
+        elif lane == "openrouter":
+            raw = [m for m in OR_CLASSIFY_MODELS if _or_is_free(m)]
+        elif lane == "qwen":
+            raw = qwen_classify_models() + [
+                m for m in QWEN_PROBE_MODELS if not is_classify_banned(m)
+            ]
+        elif lane == "gemini":
+            # gemini-2.5-flash-lite is 404 for new users. 429 on one
+            # flash ID hops to the next free sibling. It does not add
+            # the dead 2.5 lite ID back.
+            raw = list(GEMINI_CLASSIFY_MODELS)
+        elif lane == "tokenhub":
+            # hy3 stays off classify. flash / flashx / deepseek-v4-flash are $0.
+            raw = ["glm-5.3-flash", "glm-5.3-flashx", "deepseek-v4-flash"]
+        elif lane == "mistral":
+            # ministral-8b and ministral-3b are below the floor. Experiment
+            # plan mistral-small-latest is already on this hopper and is
+            # not 8B-class. No Mistral Large.
+            raw = ["mistral-small-latest"]
+        elif lane == "nvidia_nim":
+            # Every ID on this hopper is 3B, 4B-mini, or Llama 3.1 8B.
+            raw = []
+        elif lane == "pollinations":
+            # qwen3.7-flash is a DashScope floor ID. deepseek is the
+            # Pollinations alias for DeepSeek-V4-Flash, already a TokenHub
+            # floor ID. gemini-fast stays off (2.5 flash-lite).
+            raw = ["qwen3.7-flash", "deepseek"]
+        else:
+            raw = []
+        return [m for m in raw if m and not is_classify_banned(m)]
     if lane == "openrouter":
         raw = [m for m in OR_MODELS if _or_is_free(m)]
     elif lane == "deepseek":
@@ -497,6 +707,11 @@ def primary_models_for(lane: str, tmpl: str = "custom") -> list[str]:
         raw = list(MS_MODELS)
     elif lane == "mistral":
         raw = list(MISTRAL_MODELS)
+        if tmpl == "news_impact":
+            # After the class is locked, try the floor-class ID before 8B/3B.
+            raw = ["mistral-small-latest"] + [
+                m for m in raw if m != "mistral-small-latest"
+            ]
     elif lane == "nvidia_nim":
         raw = list(NVIDIA_NIM_MODELS)
     elif lane == "pollinations":
@@ -515,6 +730,8 @@ def primary_models_for(lane: str, tmpl: str = "custom") -> list[str]:
         raw = list(GROQ_MODELS)
     elif lane == "gemini":
         raw = list(GEMINI_MODELS)
+    elif lane == "openclaw":
+        raw = openclaw_models()
     else:
         raw = []
     return [m for m in raw if not is_banned_primary(m)]
@@ -705,18 +922,72 @@ def prompt_for(q: dict):
 
 
 def extract_json(text):
-    text = (text or "").strip()
-    try:
-        return json.loads(text)
-    except Exception:
-        pass
-    a, b = text.find("{"), text.rfind("}")
-    if a >= 0 and b > a:
+    """Parse a model reply. Prefer the last object that carries a class or book.
+
+    Grok often drafts one JSON object, then writes the final one, sometimes
+    inside a ```json fence. The first brace-span is the draft. A usable
+    event_class or entities list still has to clear the floor checks.
+    """
+    raw = _strip_fence(text or "")
+    objs = _json_objects(raw)
+    if not objs:
         try:
-            return json.loads(text[a:b + 1])
+            obj = json.loads(raw)
         except Exception:
             return None
-    return None
+        if isinstance(obj, dict):
+            return _unwrap_json(obj)
+        if isinstance(obj, list):
+            dicts = [_unwrap_json(item) for item in obj if isinstance(item, dict)]
+            useful = [item for item in dicts if _json_useful(item)]
+            return (useful or dicts or [None])[-1]
+        return None
+    useful = [obj for obj in objs if _json_useful(obj)]
+    return (useful or objs)[-1]
+
+
+def _strip_fence(text: str) -> str:
+    cleaned = (text or "").strip()
+    cleaned = re.sub(r"(?is)^```(?:json)?\s*", "", cleaned)
+    cleaned = re.sub(r"(?is)\s*```$", "", cleaned)
+    return cleaned.strip()
+
+
+def _unwrap_json(obj: dict) -> dict:
+    if _json_useful(obj):
+        return obj
+    for key in ("result", "json", "output", "data", "answer", "classification"):
+        inner = obj.get(key)
+        if isinstance(inner, str):
+            inner = extract_json(inner)
+        if isinstance(inner, dict):
+            return inner
+    return obj
+
+
+def _json_useful(obj: dict) -> bool:
+    if not isinstance(obj, dict):
+        return False
+    return any(obj.get(key) for key in ("event_class", "entities", "winners", "losers", "m2"))
+
+
+def _json_objects(text: str) -> list:
+    found = []
+    decoder = json.JSONDecoder()
+    i = 0
+    while i < len(text):
+        if text[i] != "{":
+            i += 1
+            continue
+        try:
+            obj, end = decoder.raw_decode(text, i)
+        except Exception:
+            i += 1
+            continue
+        if isinstance(obj, dict):
+            found.append(_unwrap_json(obj))
+        i = max(end, i + 1)
+    return found
 
 
 def http_json(url, payload=None, headers=None, timeout=20):
@@ -747,33 +1018,93 @@ def http_json(url, payload=None, headers=None, timeout=20):
         return 0, {"error": str(e)}, {}
 
 
-def openai_chat(url, key, model, prompt, extra=None, max_tokens=320, system=None):
+_THINK_BLOCK = re.compile(r"(?is)<think>.*?</think>")
+_THINK_OPEN = re.compile(r"(?is)<think>.*\Z")
+
+
+def _strip_think(text: str) -> str:
+    cleaned = _THINK_BLOCK.sub("", text or "")
+    cleaned = _THINK_OPEN.sub("", cleaned)
+    return cleaned.strip()
+
+
+def _choice_text(body: dict) -> str:
+    """Read an OpenAI-style message. Thinking models often leave content empty."""
+    message = ((body.get("choices") or [{}])[0].get("message") or {})
+    content = message.get("content")
+    if isinstance(content, list):
+        bits = []
+        for part in content:
+            if isinstance(part, str):
+                bits.append(part)
+            elif isinstance(part, dict):
+                bits.append(str(part.get("text") or part.get("content") or ""))
+        content = "".join(bits)
+    text = _strip_think(str(content or ""))
+    if "{" in text and "}" in text:
+        return text
+    if text:
+        return text
+    reasoning = _strip_think(str(message.get("reasoning_content") or ""))
+    if "{" in reasoning and "}" in reasoning:
+        return reasoning
+    return ""
+
+
+def openai_chat(url, key, model, prompt, extra=None, max_tokens=320, system=None,
+                timeout=None):
     system = SYSTEM if system is None else system
-    timeout = 60 if max_tokens > 400 else 30
-    payload = {
-        "model": model,
-        "messages": [
-            {"role": "system", "content": system},
-            {"role": "user", "content": prompt},
-        ],
-        "max_tokens": max_tokens,
-        "temperature": 0.1,
-        "response_format": {"type": "json_object"},
-    }
-    status, body, _ = http_json(
-        url, payload, {"Authorization": "Bearer " + key, **(extra or {})}, timeout=timeout,
-    )
-    if status == 400:
-        payload.pop("response_format", None)
-        status, body, _ = http_json(
-            url, payload, {"Authorization": "Bearer " + key, **(extra or {})}, timeout=timeout,
-        )
+    if timeout is None:
+        timeout = 90 if max_tokens > 400 else 45
+    headers = dict(extra or {})
+    if key:
+        headers["Authorization"] = "Bearer " + key
+
+    def _post(use_format: bool):
+        payload = {
+            "model": model,
+            "messages": [
+                {"role": "system", "content": system},
+                {"role": "user", "content": prompt},
+            ],
+            "max_tokens": max_tokens,
+            "temperature": 0.1,
+        }
+        if use_format:
+            payload["response_format"] = {"type": "json_object"}
+        return http_json(url, payload, headers, timeout=timeout)
+
+    status, body, _ = _post(True)
+    text = _choice_text(body) if status == 200 else ""
+    # 400: host rejected response_format. 200 with an empty body: a thinking
+    # model spent the budget before the JSON, or ignored json_object.
+    # A 200 is live — retry without json mode, strip <think>, then raise
+    # max_tokens once. Do not treat that 200 as a dead provider.
+    if status == 400 or (status == 200 and not extract_json(text)):
+        status, body, _ = _post(False)
+        text = _choice_text(body) if status == 200 else ""
+    parsed = extract_json(text) if status == 200 else None
+    if status == 200 and parsed is None and max_tokens < 1600:
+        bumped = max(int(max_tokens) * 2, 1200)
+        payload = {
+            "model": model,
+            "messages": [
+                {"role": "system", "content": system},
+                {"role": "user", "content": prompt},
+            ],
+            "max_tokens": bumped,
+            "temperature": 0.1,
+        }
+        status, body, _ = http_json(url, payload, headers, timeout=timeout)
+        text = _choice_text(body) if status == 200 else ""
+        parsed = extract_json(text) if status == 200 else None
     if status != 200:
-        return None, status, str(body.get("error") or body)[:240]
-    text = (((body.get("choices") or [{}])[0].get("message") or {}).get("content")) or ""
-    parsed = extract_json(text)
+        err = str(body.get("error") or body.get("message") or body)[:180]
+        err = re.sub(r"(?i)bearer\s+\S+", "bearer [redacted]", err)
+        return None, status, err
     if parsed is None:
-        return None, status, "not json"
+        snippet = re.sub(r"\s+", " ", text)[:80]
+        return None, status, f"not json {snippet or 'empty'}"
     return parsed, status, model
 
 
@@ -800,11 +1131,32 @@ def gemini_chat(key, model, prompt, max_tokens=320, system=None):
         {},
         timeout=timeout,
     )
+    def _read(status, body):
+        if status != 200:
+            return None
+        parts = (((body.get("candidates") or [{}])[0].get("content") or {}).get("parts") or [])
+        text = _strip_think("".join(p.get("text") or "" for p in parts))
+        return extract_json(text)
+
+    parsed = _read(status, body)
+    if parsed is None and status in (200, 400):
+        bumped = max(int(max_tokens) * 2, 1200) if max_tokens < 1600 else max_tokens
+        status, body, _ = http_json(
+            url,
+            {
+                "systemInstruction": {"parts": [{"text": system}]},
+                "contents": [{"role": "user", "parts": [{"text": prompt}]}],
+                "generationConfig": {
+                    "temperature": 0.1,
+                    "maxOutputTokens": bumped,
+                },
+            },
+            {},
+            timeout=timeout,
+        )
+        parsed = _read(status, body)
     if status != 200:
-        return None, status, str(body.get("error") or body)[:240]
-    parts = (((body.get("candidates") or [{}])[0].get("content") or {}).get("parts") or [])
-    text = "".join(p.get("text") or "" for p in parts)
-    parsed = extract_json(text)
+        return None, status, str(body.get("error") or body)[:400]
     if parsed is None:
         return None, status, "not json"
     return parsed, status, model
@@ -918,46 +1270,160 @@ def ollama_chat(base, model, prompt, max_tokens=320, system=None):
     return parsed, status, model
 
 
-def hop_models(lane, models, call, abandon_404=False):
+def release_transient_limits() -> None:
+    """Drop per-model 429s between articles.
+
+    A 429 is overload or a per-minute cap, not a dead key. OpenRouter's
+    day cap stays in _OR_DAY_CAPPED. Denied model IDs and a true provider
+    skip stay cached.
+    """
+    _RATE_LIMITED.clear()
+
+
+def _or_capped() -> bool:
+    flag = (os.environ.get("LANE_SKIP_OPENROUTER") or "").strip().lower()
+    if flag in {"1", "true", "yes"}:
+        return True
+    return _OR_DAY_CAPPED
+
+
+def _reject_detail(parsed) -> str:
+    if not isinstance(parsed, dict):
+        return ""
+    event_class = str(parsed.get("event_class") or "")[:40]
+    q5 = str(parsed.get("q5") or "")[:24]
+    if not event_class and not q5:
+        return ""
+    return f" class={event_class} q5={q5}"
+
+
+def _account_dead(info: str) -> bool:
+    """True only for a bad key, not a per-model denial.
+
+    DashScope "account is in good standing" is a per-call denial on the
+    existing key. It must not mark the provider dead or skip siblings.
+    """
+    low = str(info or "").lower()
+    needles = (
+        "incorrect api key",
+        "invalid api key",
+        "all dashscope hosts rejected",
+        "all zhipu hosts rejected",
+    )
+    return any(needle in low for needle in needles)
+
+
+def _model_not_allowed(info: str) -> bool:
+    """Gateway rejected this model id for the agent. Sibling may still run."""
+    return "not allowed" in str(info or "").lower()
+
+
+def _standing_denial(info: str) -> bool:
+    return "account is in good standing" in str(info or "").lower()
+
+
+def hop_models(lane, models, call, abandon_404=False, accept=None):
     """call(model) -> (parsed, status, info). None = skip to next provider.
 
-    Cyrus 2026-09-22: never try banned last-resort IDs. On 429 / rate-limit,
-    that model's quota is exhausted — skip to the next current allowlisted
-    model on the same lane. Do not set provider-level _SKIP for 429 alone.
-    Only after all current models on this lane are exhausted (or a true
-    DEAD_PROVIDER hard fail) move to the next provider. DEAD_PROVIDER
-    (401/403/410/402) may still abandon the lane.
+    429 hops to the next ID on the same key. 401/402/403/404 drop that ID
+    and keep siblings. A DashScope "account is in good standing" body
+    drops that ID only. Two confirmed DashScope standing-400s stop the
+    rest of the qwen list for this process; that is not an incorrect
+    API key. A bad key ("incorrect/invalid api key", or every host
+    rejected) marks the provider dead. If every tried ID is 401/402/
+    403/404 and none returned 200 or 429, the key is dead too. accept()
+    False tries the next ID; a 200 still means the key is live.
     """
+    global _OR_DAY_CAPPED, _QWEN_STANDING_HITS
+    if lane == "qwen" and _QWEN_STANDING_HITS >= _QWEN_STANDING_STOP:
+        print("  qwen skip (standing arrearage, list short-circuited)")
+        return None, None
     if lane in _SKIP:
         print(f"  {lane} skip (cached)")
         return None, None
+    if lane == "openrouter" and _or_capped():
+        print("  openrouter skip (:free cap this hour)")
+        return None, None
     models = [m for m in models if not is_banned_primary(m)]
     n404 = 0
+    saw_live = False
+    dead_calls = 0
+    other_calls = 0
     for model in models:
         rl_key = f"{lane}::{model}"
         if rl_key in _RATE_LIMITED:
             print(f"  {lane}/{model} skip (429 cached)")
             continue
+        if rl_key in _MODEL_DENIED:
+            print(f"  {lane}/{model} skip (denied cached)")
+            continue
         parsed, status, info = call(model)
-        print(f"  {lane}/{model} status={status}")
+        detail = ""
+        if parsed is None and info:
+            detail = " " + re.sub(r"\s+", " ", str(info))[:140]
+        print(f"  {lane}/{model} status={status}{detail}")
         if parsed is not None:
+            # HTTP 200 is a live key even when the enum is rejected.
+            saw_live = True
+            if accept is not None and not accept(parsed):
+                print(
+                    f"  {lane}/{model} JSON not accepted"
+                    f"{_reject_detail(parsed)} — next model"
+                )
+                continue
             return parsed, info
-        if status in DEAD_PROVIDER:
-            print(f"  {lane} skip ({status})")
+        if status == 410 or (
+            status in (400, 401, 403) and _account_dead(info)
+        ):
+            print(f"  {lane} skip ({status} key dead)")
             _SKIP.add(lane)
             return None, None
+        if status == 400 and _standing_denial(info):
+            # Same key, this model ID only. Not an incorrect API key.
+            print(f"  {lane}/{model} 400 standing — next ID, provider kept")
+            _MODEL_DENIED.add(rl_key)
+            if lane == "qwen":
+                _QWEN_STANDING_HITS += 1
+                if _QWEN_STANDING_HITS >= _QWEN_STANDING_STOP:
+                    print(
+                        "  qwen standing arrearage on "
+                        f"{_QWEN_STANDING_HITS} IDs — not walking the rest"
+                    )
+                    return None, None
+            continue
+        if status == 400 and _model_not_allowed(info):
+            # Agent allowlist miss. Cache the ID and try the next sibling.
+            print(f"  {lane}/{model} 400 not allowed — next ID, provider kept")
+            _MODEL_DENIED.add(rl_key)
+            continue
+        if status in (401, 402, 403, 404):
+            # Per-model entitlement, quota, or unknown ID. Not a dead key
+            # unless every tried ID comes back this way and none was live.
+            dead_calls += 1
+            print(f"  {lane}/{model} {status} — next ID, provider kept")
+            _MODEL_DENIED.add(rl_key)
+            if status == 404 and abandon_404:
+                n404 += 1
+                if n404 >= 2:
+                    print(f"  {lane} skip (repeated 404)")
+                    _SKIP.add(lane)
+                    return None, None
+            continue
         if status in RATE_LIMIT:
+            saw_live = True
             print(f"  {lane}/{model} 429 — next allowlisted model")
             _RATE_LIMITED.add(rl_key)
+            if lane == "openrouter":
+                _OR_DAY_CAPPED = True
+                print("  openrouter :free daily cap — not walking the rest this hour")
+                return None, None
             time.sleep(2)
             continue
-        if status == 404 and abandon_404:
-            n404 += 1
-            if n404 >= 2:
-                print(f"  {lane} skip (repeated 404)")
-                _SKIP.add(lane)
-                return None, None
+        other_calls += 1
         _rotate(status)
+    if dead_calls and not saw_live and other_calls == 0:
+        print(f"  {lane} skip (every tried ID dead)")
+        _SKIP.add(lane)
     return None, None
 
 
@@ -981,6 +1447,166 @@ def first_live_url(urls, key, model, prompt, max_tokens=320, system=None,
         if status != 0:
             return last
     return last
+
+
+def dashscope_chat(key, model, prompt, max_tokens=320, system=None):
+    """Walk every DashScope host before calling the provider dead.
+
+    400/401/403/402/410/404 on one host tries the next host. 429 tries the
+    next host, then the next model ID. The provider is dead only when every
+    host returns 401/403/410/402.
+    """
+    urls = qwen_urls()
+    last = (None, 0, "no url")
+    dead = 0
+    tried = 0
+    saw_429 = None
+    soft = None
+    n = len(urls) or 1
+    for url in urls:
+        tried += 1
+        parsed, status, info = openai_chat(
+            url, key, model, prompt, max_tokens=max_tokens, system=system,
+        )
+        last = (parsed, status, info)
+        # Host index only. Never print the URL or the key.
+        print(f"  dashscope host {tried}/{n} status={status}")
+        if parsed is not None:
+            return last
+        if status == 429:
+            saw_429 = last
+            continue
+        if status in DEAD_PROVIDER:
+            dead += 1
+            continue
+        # 400 / 404 / connect-fail / 200-not-json: this host, not the key.
+        soft = last
+        continue
+    if tried and dead == tried:
+        return (None, 401, "all dashscope hosts rejected the key")
+    # A later host's 401 must not hide an earlier non-dead status, or
+    # hop_models will abandon qwen before the next model ID.
+    if saw_429 is not None:
+        return saw_429
+    if soft is not None:
+        return soft
+    return last
+
+
+def zhipu_chat(key, model, prompt, max_tokens=320, system=None):
+    """Walk both Zhipu hosts before giving up on this model ID.
+
+    429 on one host tries the other. 403/404 on one host tries the other,
+    then the next flash ID. 401 on every host is a dead key.
+    """
+    urls = list(ZHIPU_URLS)
+    last = (None, 0, "no url")
+    dead = 0
+    tried = 0
+    saw_429 = None
+    soft = None
+    n = len(urls) or 1
+    for url in urls:
+        tried += 1
+        parsed, status, info = openai_chat(
+            url, key, model, prompt, max_tokens=max_tokens, system=system,
+        )
+        last = (parsed, status, info)
+        print(f"  zhipu host {tried}/{n} status={status}")
+        if parsed is not None:
+            return last
+        if status == 429:
+            saw_429 = last
+            continue
+        if status in (401, 410):
+            dead += 1
+            continue
+        soft = last
+        continue
+    if tried and dead == tried:
+        return (None, 401, "all zhipu hosts rejected the key")
+    if saw_429 is not None:
+        return saw_429
+    if soft is not None:
+        return soft
+    return last
+
+
+_GEMINI_ID = re.compile(r"models/([A-Za-z0-9._\-]+)")
+
+
+def gemini_flash_suggestions(info: str) -> list[str]:
+    """Flash IDs named in a Gemini 404. Skip pro / plus / ultra."""
+    out = []
+    for mid in _GEMINI_ID.findall(str(info or "")):
+        low = mid.lower()
+        if low == "gemini-2.5-flash-lite":
+            continue
+        if any(bad in low for bad in ("pro", "ultra", "plus", "paid")):
+            continue
+        if "flash" not in low:
+            continue
+        if mid not in out:
+            out.append(mid)
+    return out
+
+
+def _qwen_probe_ok(key: str, model: str) -> bool:
+    """1-token ping. 401/404 skips that ID only."""
+    if model not in QWEN_PROBE_MODELS:
+        return True
+    cached = _QWEN_PROBE.get(model)
+    if cached is not None:
+        return cached
+    _parsed, status, _info = dashscope_chat(
+        key, model, "ping", max_tokens=1, system="Reply with {}",
+    )
+    keep = status not in (401, 404, 0)
+    _QWEN_PROBE[model] = keep
+    print(f"  qwen probe {model} status={status} keep={keep}")
+    return keep
+
+
+def openclaw_chat(backend_model, prompt, max_tokens=320, system=None):
+    """OpenClaw gateway. Agent id is the JSON model; Grok rides the header.
+
+    Does not log the URL or the token. A hard fail returns the status so
+    the free hopper can run next.
+    """
+    try:
+        from src.config import align_openclaw_token
+        align_openclaw_token()
+    except Exception as exc:
+        return None, 0, str(exc)[:160]
+    base = (os.environ.get("OPENCLAW_GATEWAY_URL") or "").rstrip("/")
+    if not base:
+        return None, 0, "no gateway"
+    token = (os.environ.get("OPENCLAW_TOKEN") or "").strip()
+    agent = (os.environ.get("OPENCLAW_AGENT") or "openclaw/default").strip()
+    raw_to = (os.environ.get("OPENCLAW_LANE_TIMEOUT") or "").strip()
+    # Pre-Open uses OPENCLAW_TIMEOUT=10800 because one Grok turn may run
+    # tools for hours. Lane asks for one JSON object and does not run that
+    # tool loop. 120s timed out grok-4.6 on meta. 300s is enough for a
+    # reasoning JSON and still returns so the free hopper can run.
+    timeout = int(raw_to) if raw_to.isdigit() else 300
+    backend = openclaw_allowlisted_model(backend_model)
+    parsed, status, info = openai_chat(
+        base + "/v1/chat/completions",
+        token,
+        agent,
+        prompt,
+        extra={
+            "x-openclaw-model": backend,
+            "x-openclaw-session-key": f"lane-{int(time.time() * 1000)}",
+        },
+        max_tokens=max_tokens,
+        system=system,
+        timeout=max(30, timeout),
+    )
+    # JSON model is the agent id. The watermark is the allowlisted Grok id.
+    if parsed is not None:
+        return parsed, status, backend
+    return parsed, status, info
 
 
 def load_keys():
@@ -1039,16 +1665,23 @@ def load_keys():
     th_key = tokenhub_key()
     if th_key:
         keys["tokenhub"] = th_key
+    if (os.environ.get("OPENCLAW_GATEWAY_URL") or "").strip():
+        keys["openclaw"] = "gateway"
     ollama_url = (os.environ.get("OLLAMA_URL") or "").rstrip("/")
     gh_direct = keys.get("github_models") or os.environ.get("GITHUB_TOKEN") or ""
     return keys, ollama_url, gh_direct
 
 
-def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
+def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom", accept=None):
     """Try one $0 hopper. Returns (parsed, info) or (None, None)."""
     keys = ctx["keys"]
     ollama_url = ctx["ollama_url"]
     gh_direct = ctx["gh_direct"]
+
+    def hop(name, models, call, abandon_404=False):
+        return hop_models(
+            name, models, call, abandon_404=abandon_404, accept=accept,
+        )
 
     def oc(url, key, model, extra=None):
         return openai_chat(
@@ -1060,11 +1693,21 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
             urls, key, model, prompt, max_tokens=max_tokens, system=system,
         )
 
+    if lane == "openclaw":
+        if not keys.get("openclaw"):
+            return None, None
+        return hop(
+            "openclaw",
+            primary_models_for("openclaw", tmpl),
+            lambda model: openclaw_chat(
+                model, prompt, max_tokens=max_tokens, system=system,
+            ),
+        )
     if lane == "openrouter":
         if not keys.get("openrouter"):
             return None, None
         extra = {"HTTP-Referer": "https://github.com/SRoyaltyy/fullscan", "X-Title": "Lane"}
-        return hop_models(
+        return hop(
             "openrouter",
             primary_models_for("openrouter", tmpl),
             lambda model: oc(
@@ -1078,7 +1721,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
             return None, None
         if not keys.get("deepseek"):
             return None, None
-        return hop_models(
+        return hop(
             "deepseek",
             primary_models_for("deepseek", tmpl),
             lambda model: oc(
@@ -1089,23 +1732,37 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
     if lane == "qwen":
         if not keys.get("qwen"):
             return None, None
-        return hop_models(
+        # One host error never skips DashScope. Public CN + intl are always
+        # tried after DASHSCOPE_BASE_URL. Probe IDs 401/404 drop that ID only.
+        qwen_key = keys["qwen"]
+
+        def _qwen_call(model, _key=qwen_key):
+            if model in QWEN_PROBE_MODELS and not _qwen_probe_ok(_key, model):
+                return None, 404, "probe skipped"
+            return dashscope_chat(
+                _key, model, prompt, max_tokens=max_tokens, system=system,
+            )
+
+        return hop(
             "qwen",
             primary_models_for("qwen", tmpl),
-            lambda model: flu(qwen_urls(), keys["qwen"], model),
+            _qwen_call,
         )
     if lane == "zhipu":
         if not keys.get("zhipu"):
             return None, None
-        return hop_models(
+        return hop(
             "zhipu",
             primary_models_for("zhipu", tmpl),
-            lambda model: flu(ZHIPU_URLS, keys["zhipu"], model),
+            lambda model: zhipu_chat(
+                keys["zhipu"], model, prompt,
+                max_tokens=max_tokens, system=system,
+            ),
         )
     if lane == "moonshot":
         if not keys.get("moonshot"):
             return None, None
-        return hop_models(
+        return hop(
             "moonshot",
             primary_models_for("moonshot", tmpl),
             lambda model: flu(MOONSHOT_URLS, keys["moonshot"], model),
@@ -1113,7 +1770,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
     if lane == "siliconflow":
         if not keys.get("siliconflow"):
             return None, None
-        return hop_models(
+        return hop(
             "siliconflow",
             primary_models_for("siliconflow", tmpl),
             lambda model: flu(SF_URLS, keys["siliconflow"], model),
@@ -1121,7 +1778,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
     if lane == "modelscope":
         if not keys.get("modelscope"):
             return None, None
-        return hop_models(
+        return hop(
             "modelscope",
             primary_models_for("modelscope", tmpl),
             lambda model: oc(
@@ -1132,7 +1789,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
     if lane == "mistral":
         if not keys.get("mistral"):
             return None, None
-        return hop_models(
+        return hop(
             "mistral",
             primary_models_for("mistral", tmpl),
             lambda model: oc(MISTRAL_URL, keys["mistral"], model),
@@ -1140,7 +1797,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
     if lane == "nvidia_nim":
         if not keys.get("nvidia_nim"):
             return None, None
-        return hop_models(
+        return hop(
             "nvidia_nim",
             primary_models_for("nvidia_nim", tmpl),
             lambda model: oc(NVIDIA_NIM_URL, keys["nvidia_nim"], model),
@@ -1150,7 +1807,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
         # (empty Quest pollen) skip clean — same DEAD_PROVIDER contract.
         if not keys.get("pollinations"):
             return None, None
-        return hop_models(
+        return hop(
             "pollinations",
             primary_models_for("pollinations", tmpl),
             lambda model: oc(POLLINATIONS_URL, keys["pollinations"], model),
@@ -1158,7 +1815,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
     if lane == "tokenhub":
         if not keys.get("tokenhub"):
             return None, None
-        return hop_models(
+        return hop(
             "tokenhub",
             primary_models_for("tokenhub", tmpl),
             lambda model: first_live_url(
@@ -1174,7 +1831,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
             "Accept": "application/vnd.github+json",
             "X-GitHub-Api-Version": "2022-11-28",
         }
-        return hop_models(
+        return hop(
             "github_models",
             primary_models_for("github_models", tmpl),
             lambda model: oc(
@@ -1191,7 +1848,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
             + urllib.request.quote(keys["cloudflare_account"], safe="")
             + "/ai/v1/chat/completions"
         )
-        return hop_models(
+        return hop(
             "cloudflare",
             primary_models_for("cloudflare", tmpl),
             lambda model: oc(cf_url, keys["cloudflare"], model),
@@ -1199,7 +1856,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
     if lane == "sambanova":
         if not keys.get("sambanova"):
             return None, None
-        return hop_models(
+        return hop(
             "sambanova",
             primary_models_for("sambanova", tmpl),
             lambda model: oc(
@@ -1215,7 +1872,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
             print("  ollama skip (OLLAMA_URL unreachable)")
             _SKIP.add("ollama")
             return None, None
-        return hop_models(
+        return hop(
             "ollama",
             models,
             lambda model: ollama_chat(
@@ -1225,7 +1882,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
     if lane == "hf":
         if not keys.get("hf"):
             return None, None
-        return hop_models(
+        return hop(
             "hf",
             [m for m in hf_free_models(keys["hf"]) if not is_banned_primary(m)],
             lambda model: oc(
@@ -1236,7 +1893,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
     if lane == "groq":
         if not keys.get("groq"):
             return None, None
-        return hop_models(
+        return hop(
             "groq",
             primary_models_for("groq", tmpl),
             lambda model: oc(
@@ -1247,13 +1904,25 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
     if lane == "gemini":
         if not keys.get("gemini"):
             return None, None
-        return hop_models(
-            "gemini",
-            primary_models_for("gemini", tmpl),
-            lambda model: gemini_chat(
-                keys["gemini"], model, prompt, max_tokens=max_tokens, system=system,
-            ),
-        )
+        gemini_models = primary_models_for("gemini", tmpl)
+
+        def _gemini_call(model, _models=gemini_models):
+            parsed, status, info = gemini_chat(
+                keys["gemini"], model, prompt,
+                max_tokens=max_tokens, system=system,
+            )
+            if status == 404:
+                for mid in gemini_flash_suggestions(info):
+                    if (
+                        mid not in _models
+                        and not is_classify_banned(mid)
+                        and not is_banned_primary(mid)
+                    ):
+                        print(f"  gemini 404 names {mid}")
+                        _models.append(mid)
+            return parsed, status, info
+
+        return hop("gemini", gemini_models, _gemini_call)
     return None, None
 
 
@@ -1325,6 +1994,10 @@ def route_inbox(
     ctx = {"keys": keys, "ollama_url": ollama_url, "gh_direct": gh_direct}
     _SKIP.clear()
     _RATE_LIMITED.clear()
+    _MODEL_DENIED.clear()
+    global _OR_DAY_CAPPED, _QWEN_STANDING_HITS
+    _OR_DAY_CAPPED = False
+    _QWEN_STANDING_HITS = 0
 
     out = []
     for i, q in enumerate(questions):

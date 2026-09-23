@@ -1,0 +1,143 @@
+{
+  "article_id": "c80fc0b8a2548ebc",
+  "title": "3 Bank Stocks With High Dividends and Earnings Growth",
+  "body": "",
+  "known_at": "2026-07-10 08:56:00",
+  "harvest_source": "finviz_export",
+  "source_file": "data/exports/finviz_2026-09-22.csv",
+  "gold_id": "",
+  "ticker_hint": "KRE",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "firm",
+      "event_class": "capital_return",
+      "question": "Is this the issuer's own cash, paper, or control — not a sector story?",
+      "status": "answered",
+      "note": "The article references KeyCorp (MTB) as a bank stock with a high dividend yield (3.6%) and earnings growth potential, indicating it is the named issuer's own cash (dividend) and paper (earnings growth) story, not a sector trade."
+    },
+    {
+      "id": "q2",
+      "family": "firm",
+      "event_class": "capital_return",
+      "question": "If it is a routine dividend, why is there no 0-1d sector trade?",
+      "status": "blocked",
+      "note": "No sector trade is mentioned in the article; it focuses on individual bank stocks."
+    },
+    {
+      "id": "q3",
+      "family": "firm",
+      "event_class": "capital_return",
+      "question": "Who is the named issuer on the Finviz hit list?",
+      "status": "answered",
+      "note": "The named issuer on the Finviz hit list is KeyCorp (MTB)."
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "M & T Bank Corp",
+      "ticker": "MTB",
+      "type": "equity",
+      "sector": "Financial",
+      "industry": "Banks - Regional",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:bank",
+      "aliases": [
+        "bank"
+      ],
+      "lane_why": "Bank stock with high dividends and earnings growth mentioned in the title"
+    }
+  ],
+  "entities": [
+    {
+      "name": "KeyCorp",
+      "ticker": "MTB",
+      "role": "unscathed_rival",
+      "direction": "up",
+      "horizon": "0-1d",
+      "axiom_id": "A_AT_03",
+      "pack_cite": "https://www.msn.com/en-us/money/topstocks/3-bank-stocks-with-high-dividends-and-earnings-growth/ar-AA27ARv5",
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "3 bank stocks with high dividends and earnings growth - MSN: KeyCorp is the highest yielding stock on the list, with a 3.6% payout. Shares have rallied 12% this year, and trade at 12 times forward earnings, in line with the sector.",
+      "url": "https://www.msn.com/en-us/money/topstocks/3-bank-stocks-with-high-dividends-and-earnings-growth/ar-AA27ARv5",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "3 Bank Stocks With High Dividends and Earnings Growth: 3 Bank Stocks With High Dividends and Earnings Growth By Ian Salisbury Follow Updated July 10, 2026, 8:56 am EDT / Original July 09, 2026, 5:23 pm EDT",
+      "url": "https://www.barrons.com/articles/bank-stocks-dividend-growth-628e0d19",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "3 Bank Stocks With Dividend Yields Above 4% to Keep an Eye On: Three banks -- TFC, COLB and NWFL -- offer dividend yields above 4%, supported by income potential, growth initiatives and strong balance sheets.",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/3-bank-stocks-dividend-yields-123300603.html",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "Best Bank Stocks for Dividends in 2026 and How to Invest: Discover the top dividend-paying bank stocks to buy for steady income and growth. Perfect for investors seeking reliable dividends and strong financials.",
+      "url": "https://www.fool.com/investing/stock-market/market-sectors/financials/bank-stocks/do-bank-stocks-pay-dividends/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "U.S. Banks Dividend Stocks - Simply Wall St: U.S. Banks Dividend Stocks UPDATED Sep 21, 2026 Discover U.S. Banks High Yield Dividend Stocks that are on the NYSE and NASDAQ and sorted by Dividend Yield. An upper limit of 20% is in place to filter out stocks with potentially unsustainable dividends. All companies with high dividend yields (above 5%) should be researched for sustainability. For more",
+      "url": "https://simplywall.st/stocks/us/banks/dividend-yield-high",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "3 US Bank Stocks With High Dividend Yields And Profit Margins: The recent 5.4% dividend increase to US$0.195 per share underlines management's willingness to return cash, yet the bank's unstable dividend history, modest revenue growth outlook, and relatively low allowance for bad loans keep risk firmly on the table.",
+      "url": "https://assetnews4u.com/equities/3-us-bank-stocks-with-high-dividend-yields-and-profit-margins/",
+      "source": "ddg_html",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "BUY MTB, 0-1d, because dividend yield and earnings growth potential; clock=0-1d",
+  "q5": "impulse",
+  "event_class": "capital_return",
+  "sign": null,
+  "family": "firm",
+  "constraint": "dividend yield and earnings growth potential",
+  "rejected_hints": [
+    {
+      "ticker": "KRE",
+      "company": "State Street SPDR S&P Regional Banking ETF",
+      "reason": "title_does_not_name_company"
+    }
+  ],
+  "winners": [
+    "MTB"
+  ],
+  "losers": [],
+  "clock": "0-1d",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

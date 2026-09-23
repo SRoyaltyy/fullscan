@@ -1,0 +1,137 @@
+{
+  "article_id": "f32f3df0fa9229a0",
+  "title": "34 Miles Out to Sea, Nowhere to Hide from the Sun: Tint World and XPEL Team Up to Protect Historic Frying Pan Shoals Tower",
+  "body": "XPEL beats Q2 2026 estimates with EPS $0.68, revenue $143.1M and expects new manufacturing ramp costs to cut Q3 EPS by $0.03â$0.04 per share",
+  "known_at": "2026-09-10 08:30:00",
+  "harvest_source": "finviz_export",
+  "source_file": "data/exports/finviz_2026-09-22.csv",
+  "gold_id": "",
+  "ticker_hint": "XPEL",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "firm",
+      "event_class": "corporate_action_mna",
+      "question": "Is this the issuer's own cash, paper, or control — not a sector story?",
+      "status": "answered",
+      "note": "New manufacturing ramp costs (constraint) are a direct input cost for XPEL, acting as a headwind to earnings. This is a firm-level constraint, not a sector story."
+    },
+    {
+      "id": "q2",
+      "family": "firm",
+      "event_class": "corporate_action_mna",
+      "question": "If it is a routine dividend, why is there no 0-1d sector trade?",
+      "status": "blocked",
+      "note": "No dividend or capital return event mentioned."
+    },
+    {
+      "id": "q3",
+      "family": "firm",
+      "event_class": "corporate_action_mna",
+      "question": "Who is the named issuer on the Finviz hit list?",
+      "status": "answered",
+      "note": "The named issuer is **XPEL Inc** (ticker: XPEL)."
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "XPEL Inc",
+      "ticker": "XPEL",
+      "type": "equity",
+      "sector": "Consumer Cyclical",
+      "industry": "Auto Parts",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:xpel; hint_named_in_title",
+      "aliases": [
+        "xpel"
+      ],
+      "lane_why": "Mentioned explicitly in the title and body of the article."
+    }
+  ],
+  "entities": [
+    {
+      "name": "XPEL Inc",
+      "ticker": "XPEL",
+      "role": "harm",
+      "direction": "down",
+      "horizon": "0-1d",
+      "axiom_id": "A_CAP_01",
+      "pack_cite": null,
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "34 Miles Out to Sea, Nowhere to Hide from the Sun: Tint World ... - AOL: Tint World® Automotive Styling Centers™ and XPEL recently applied protective window film to the Frying Pan Shoals Tower, a decommissioned U.S. Coast Guard light station located 34 miles off the ...",
+      "url": "https://www.aol.com/articles/34-miles-sea-nowhere-hide-123000000.html",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "34 Miles Out to Sea, Nowhere to Hide from the Sun: Tint World and XPEL ...: SAN ANTONIO, TX. - Tint World® Automotive Styling Centers™ recently completed one of the more unconventional installations in the brand's history: applying protective window film to Frying Pan Shoals Tower, a decommissioned U.S. Coast Guard light station located 34 miles off the North Carolina coast and accessible only by",
+      "url": "https://www.tintworld.com/news-media/news-and-press/34-miles-out-to-sea-nowhere-to-hide-from-the-sun-tint-world-and-xpel-team-up-to-protect-historic-frying-pan-shoals-tower/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "34 Miles Out to Sea, Nowhere to Hide from the Sun: Tint World® and XPEL ...: The project marks a unique collaboration between Tint World® and XPEL (Nasdaq: XPEL), a global leader in protective films and coatings. Frying Pan Shoals Tower operates as a nonprofit eco-tourism destination, and the off-grid structure is exposed to constant, unfiltered Atlantic sun.",
+      "url": "https://www.franchise.org/2026/09/34-miles-out-to-sea-nowhere-to-hide-from-the-sun-tint-world-and-xpel-team-up-to-protect-historic-frying-pan-shoals-tower/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "34 Miles Out to Sea, Nowhere to Hide from the Sun: Tint World® and XPEL ...: Tint World® Automotive Styling Centers™ and XPEL recently applied protective window film to the Frying Pan Shoals Tower, a decommissioned U.S. Coast Guard light station located 34 miles off the North Carolina coast, now operating as a nonprofit eco-tourism destination. The XPEL window film helps the off-grid structure blo",
+      "url": "https://www.marketscreener.com/news/34-miles-out-to-sea-nowhere-to-hide-from-the-sun-tint-world-and-xpel-team-up-to-protect-historic-ce785bdedf89ff22",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "34 Miles Out to Sea, Nowhere to Hide from the Sun: Tint World and XPEL ...: The project marks a unique collaboration between Tint World® and XPEL (Nasdaq: XPEL), a global leader in protective films and coatings. Frying Pan Shoals Tower operates as a nonprofit eco-tourism destination, and the off-grid structure is exposed to constant, unfiltered Atlantic sun.",
+      "url": "https://finviz.com/news/390797/34-miles-out-to-sea-nowhere-to-hide-from-the-sun-tint-world-and-xpel-team-up-to-protect-historic-frying-pan-shoals-tower",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "34 Miles Out to Sea, Nowhere to Hide from the Sun: Tint World® and XPEL ...: Tint World® Automotive Styling Centers™ recently completed one of the more unconventional installations in the brand's history.",
+      "url": "https://www.franchising.com/news/20260910_34_miles_out_to_sea_nowhere_to_hide_from_the_sun_tint_world_and_xpel_team_u.html",
+      "source": "ddg_html",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "SELL XPEL, 0-1d, because new manufacturing ramp costs; clock=0-1d",
+  "q5": "impulse",
+  "event_class": "corporate_action_mna",
+  "sign": null,
+  "family": "firm",
+  "constraint": "new manufacturing ramp costs",
+  "rejected_hints": [],
+  "winners": [],
+  "losers": [
+    "XPEL"
+  ],
+  "clock": "0-1d",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

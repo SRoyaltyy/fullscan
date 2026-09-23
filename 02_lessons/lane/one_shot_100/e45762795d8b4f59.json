@@ -1,0 +1,113 @@
+{
+  "article_id": "e45762795d8b4f59",
+  "title": "2 Top Cybersecurity Stocks to Buy Amid AI Safety Fears: FTNT, QLYS",
+  "body": "CalSTRS massive stake increase to 16.33% drives QLYS 12.7% surge",
+  "known_at": "2026-09-14 17:50:00",
+  "harvest_source": "finviz_export",
+  "source_file": "data/exports/finviz_2026-09-22.csv",
+  "gold_id": "",
+  "ticker_hint": "QLYS",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "firm",
+      "event_class": "insider_flow",
+      "question": "Is this the issuer's own cash, paper, or control — not a sector story?",
+      "status": "answered",
+      "note": "Institutional investor (CalSTRS) stake increase in QLYS is not a sector story; it reflects confidence in the firm’s cybersecurity capabilities amid AI safety concerns, positioning QLYS as a substitute for FTNT in the cybersecurity space."
+    },
+    {
+      "id": "q2",
+      "family": "firm",
+      "event_class": "insider_flow",
+      "question": "If it is a routine dividend, why is there no 0-1d sector trade?",
+      "status": "blocked",
+      "note": "Lane returned no answer for this question"
+    },
+    {
+      "id": "q3",
+      "family": "firm",
+      "event_class": "insider_flow",
+      "question": "Who is the named issuer on the Finviz hit list?",
+      "status": "blocked",
+      "note": "Lane returned no answer for this question"
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "Qualys Inc",
+      "ticker": "QLYS",
+      "type": "equity",
+      "sector": "Technology",
+      "industry": "Software - Infrastructure",
+      "source": "finviz_row",
+      "score": 8,
+      "why": "hint_named_in_title",
+      "aliases": [
+        "qualys"
+      ],
+      "lane_why": "Mentioned explicitly in the title and body of the article as 'QLYS' and confirmed in CANDIDATES list"
+    }
+  ],
+  "entities": [
+    {
+      "name": "Qualys Inc",
+      "ticker": "QLYS",
+      "role": "substitute",
+      "direction": "up",
+      "horizon": "0-1d",
+      "axiom_id": "A_AT_03",
+      "pack_cite": "zacks.com",
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "zacks.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFDMzIr4-kEs9mzawanAqOozEQgSWdcz7AI-23k9ymD-pcJz7eSIViiAOSvq8YkT_4UYhIweB4pUdw8-qRcF9vagoHyJQgU-UmKgWCxXPMO3svSEkYm8LYTztwF0dmkxWi3BFDEcc4QNcHs6KfFgaFsETHBp_w=",
+      "source": "google_ai_overview",
+      "status": "quote"
+    },
+    {
+      "text": "nasdaq.com",
+      "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOGyChDBO8GBsPyeYDaTXRGk8PVzHSUeERkLK0H6lHXL8-tqZFx40NwBcOyheOyYcr8YNTiyFetheWVOp0gbk25pLsWDQsxTbz8nb4kh65Su4hxa2ZpQQAFwVLKPWAodS5XzzqaFS36XVh-2678Ec6l5RwJ6pbSA==",
+      "source": "google_ai_overview",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "BUY QLYS, 0-1d, because institutional investor stake increase; clock=0-1d",
+  "q5": "impulse",
+  "event_class": "insider_flow",
+  "sign": null,
+  "family": "firm",
+  "constraint": "institutional investor stake increase",
+  "rejected_hints": [],
+  "winners": [
+    "QLYS"
+  ],
+  "losers": [],
+  "clock": "0-1d",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

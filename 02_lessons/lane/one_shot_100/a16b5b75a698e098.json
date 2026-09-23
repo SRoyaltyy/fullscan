@@ -1,0 +1,138 @@
+{
+  "article_id": "a16b5b75a698e098",
+  "title": "ADC Therapeutics (ADCT) Navigates FDA Setback While Cutting Its Losses",
+  "body": "rss_yahoo_finance",
+  "known_at": "2026-08-27T20:42:02Z",
+  "harvest_source": "parsed",
+  "source_file": "01_daily/news/2026-08-31_parsed.json",
+  "gold_id": "",
+  "ticker_hint": "",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "time",
+      "event_class": "regime_break",
+      "question": "Did the physical or legal constraint change, or is this a reprint?",
+      "status": "answered",
+      "note": "The FDA regulatory approval process for ADC Therapeutics' drug candidate (LOTUS-5 trial) represents a change in the physical/legal constraint due to FDA safety concerns, not a reprint."
+    },
+    {
+      "id": "q2",
+      "family": "time",
+      "event_class": "regime_break",
+      "question": "If it is a regime break, which prior book flips sign?",
+      "status": "answered",
+      "note": "The prior book flips sign for ADC Therapeutics' approval timeline and safety profile, directly impacting its drug candidate's regulatory path."
+    },
+    {
+      "id": "q3",
+      "family": "time",
+      "event_class": "regime_break",
+      "question": "If it is weather, why is a 0-1d entity illegal?",
+      "status": "blocked",
+      "note": "N/A (not applicable to this regime break)"
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "Adc Therapeutics SA",
+      "ticker": "ADCT",
+      "type": "equity",
+      "sector": "Healthcare",
+      "industry": "Drug Manufacturers - Specialty & Generic",
+      "source": "finviz_row",
+      "score": 12,
+      "why": "ticker_in_text; company:adc therapeutics",
+      "aliases": [
+        "adc therapeutics",
+        "therapeutics adc"
+      ],
+      "lane_why": "Mentioned explicitly in the title and body of the article"
+    }
+  ],
+  "entities": [
+    {
+      "name": "ADC Therapeutics (ADCT)",
+      "ticker": "ADCT",
+      "role": "harm",
+      "direction": "down",
+      "horizon": "0-1d",
+      "axiom_id": null,
+      "pack_cite": "https://finance.yahoo.com/healthcare/articles/adc-therapeutics-adct-navigates-fda-204202873.html",
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "ADC Therapeutics (ADCT) Navigates FDA Setback While Cutting Its Losses: On August 13, ADC Therapeutics (NYSE:ADCT) held its second-quarter earnings call and delivered a mixed message that investors are still sorting through. The company's confirmatory trial for ...",
+      "url": "https://finance.yahoo.com/healthcare/articles/adc-therapeutics-adct-navigates-fda-204202873.html",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "ADC Therapeutics (ADCT) Navigates FDA Setback While Cutting Its Losses: On August 13, ADC Therapeutics (NYSE:ADCT) held its second-quarter earnings call and delivered a mixed message that investors are still sorting through.",
+      "url": "https://www.insidermonkey.com/blog/adc-therapeutics-adct-navigates-fda-setback-while-cutting-its-losses-1822254/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "ADC Therapeutics SA (ADCT) (Q2 2026) Earnings Call Highlights ...: ADC Therapeutics reports stable Zynlonta sales and cost savings, but faces FDA concerns over LOTUS-5 that cloud the path to full approval.",
+      "url": "https://finance.yahoo.com/healthcare/articles/adc-therapeutics-sa-adct-q2-230703533.html",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "ADC Therapeutics (ADCT) Navigates FDA Setback While Cutting Its Losses: On August 13, ADC Therapeutics (NYSE: ADCT) held its second-quarter earnings call and delivered a mixed message that investors are still sorting through. The company's confirmatory trial for ZYNLONTA in second-line lymphoma cleared its main efficacy bar, but the FDA has flagged serious safety concerns about the combination tha",
+      "url": "https://news.investingchannel.com/article/927057/adc-therapeutics-adct-navigates-fda-setback-while-cutting-its-losses",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "ADC Therapeutics Earnings Q2 2026 - Report | ADCT News & Analysis: ADC Therapeutics narrows losses via aggressive cost-cutting while navigating FDA concerns regarding its LOTIS-5 trial. The company now prioritizes cash runway and commercial execution for ZYNLONTA alongside impending LOTIS-7 data submissions.",
+      "url": "https://www.panabee.com/news/adc-therapeutics-earnings-q2-2026-report",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "ADC Therapeutics (ADCT) Navigates FDA Setback While Cutting Its Losses: ADC Therapeutics faces an FDA setback and is implementing cost reduction measures. The company is navigating regulatory challenges while managing financial cons",
+      "url": "https://catalystalert.io/news/5636cc39-f76c-434f-9381-46bf7f2de3b5",
+      "source": "ddg_html",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "SELL ADCT, 0-1d, because FDA regulatory approval process for ADC Therapeutics' drug candidate; clock=0-1d",
+  "q5": "regime_break",
+  "event_class": "regime_break",
+  "sign": null,
+  "family": "time",
+  "constraint": "FDA regulatory approval process for ADC Therapeutics' drug candidate",
+  "rejected_hints": [],
+  "winners": [],
+  "losers": [
+    "ADCT"
+  ],
+  "clock": "0-1d",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

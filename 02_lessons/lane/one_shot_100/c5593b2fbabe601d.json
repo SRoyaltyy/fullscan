@@ -1,0 +1,137 @@
+{
+  "article_id": "c5593b2fbabe601d",
+  "title": "20/20 BioLabs Reschedules Investor Webinar to 2:00 p.m. Eastern Time on September 2, 2026 to Discuss OneTest Revenue and Expanding Commercial Opportunity",
+  "body": "20/20 Biolabs Q2 2026 revenue up about 37% to ~$0.7M as it eliminates all outstanding convertible note debt",
+  "known_at": "2026-08-28 18:26:00",
+  "harvest_source": "finviz_export",
+  "source_file": "data/exports/finviz_2026-09-22.csv",
+  "gold_id": "",
+  "ticker_hint": "AIDX",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "print",
+      "event_class": "preannounce",
+      "question": "What number changed versus what was already priced?",
+      "status": "answered",
+      "note": "Q2 2026 revenue increased by ~37% to ~$0.7M, eliminating convertible note debt, which expands commercial opportunity and signals positive momentum for the named issuer (AIDX). This is a named issuer print with a clear directional number change."
+    },
+    {
+      "id": "q2",
+      "family": "print",
+      "event_class": "preannounce",
+      "question": "Is this one named issuer, or a factor that should not be pinned to a camera ticker?",
+      "status": "answered",
+      "note": "This is a named issuer (20/20 BioLabs/AIDX), not a factor. The revenue print is pinned to the company’s ticker."
+    },
+    {
+      "id": "q3",
+      "family": "print",
+      "event_class": "preannounce",
+      "question": "If guidance was only reaffirmed, why is an up call illegal?",
+      "status": "blocked",
+      "note": "Guidance was not reaffirmed; the event is a revenue print with a clear directional change (up). No reaffirmation to invalidate."
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "20/20 Biolabs Inc",
+      "ticker": "AIDX",
+      "type": "equity",
+      "sector": "Healthcare",
+      "industry": "Medical Devices",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:biolabs; hint_named_in_title",
+      "aliases": [
+        "biolabs"
+      ],
+      "lane_why": "Mentioned in the title and body as '20/20 Biolabs' and '20/20 Biolabs Inc'."
+    }
+  ],
+  "entities": [
+    {
+      "name": "20/20 BioLabs",
+      "ticker": "AIDX",
+      "role": "substitute",
+      "direction": "up",
+      "horizon": "0-1d",
+      "axiom_id": "A_CAP_01",
+      "pack_cite": "quote_or_unknown",
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "20/20 BioLabs Reschedules Investor Webinar to 2:00 p.m. Eastern Time on ...: The September 2 webinar is part of the Company's monthly investor webinar series, held on the first Wednesday of each month, generally at 12:00 p.m. Eastern time.",
+      "url": "https://markets.businessinsider.com/news/stocks/20-20-biolabs-reschedules-investor-webinar-to-2-00-p-m-eastern-time-on-september-2-2026-to-discuss-onetest-revenue-and-expanding-commercial-opportunity-1036504348?op=1",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "20/20 BioLabs Reschedules Investor Webinar to 2:00 p.m ... - Nasdaq: The September 2 webinar is part of the Company's monthly investor webinar series, held on the first Wednesday of each month, generally at 12:00 p.m. Eastern time.",
+      "url": "https://www.nasdaq.com/press-release/20-20-biolabs-reschedules-investor-webinar-2-00-pm-eastern-time-september-2-2026",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "20/20 BioLabs Reschedules Investor Webinar to 2:00 p.m. Eastern Time on ...: The webinar was previously scheduled to begin at 12:00 p.m. Eastern time on the same date. Jonathan Cohen, President and Chief Executive Officer of 20/20 BioLabs, will discuss the Company's second ...",
+      "url": "https://finance.yahoo.com/healthcare/articles/20-20-biolabs-reschedules-investor-222600450.html",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "20/20 BioLabs Reschedules Investor Webinar to 2: 00 p.m. Eastern Time ...: GAITHERSBURG - 20/20 BioLabs, Inc. (Nasdaq: AIDX) (' 20/20 BioLabs' or the 'Company'), an early market entrant in AI-powered, laboratory-based blood tests for the early detection and prevention of cancers and chronic diseases, announced that its previously announced investor webinar on Wednesday, September 2, 2026 has been",
+      "url": "https://www.marketscreener.com/news/20-20-biolabs-reschedules-investor-webinar-to-2-00-p-m-eastern-time-on-september-2-2026-to-discuss-ce7858dcd180f523",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "20/20 BioLabs Reschedules Investor Webinar to 2:00 p.m. Eastern Time on ...: The September 2 webinar is part of the Company's monthly investor webinar series, held on the first Wednesday of each month, generally at 12:00 p.m. Eastern time.",
+      "url": "https://www.taiwannews.com.tw/en/news/6430080",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "20/20 BioLabs Reschedules Investor Webinar to 2:00 p.m. Eastern Time on ...: The September 2 webinar is part of the Company's monthly investor webinar series, held on the first Wednesday of each month, generally at 12:00 p.m. Eastern time.",
+      "url": "https://markets.financialcontent.com/worldnow.wgem/article/gnwcq-2026-8-28-2020-biolabs-reschedules-investor-webinar-to-200-pm-eastern-time-on-september-2-2026-to-discuss-onetest-revenue-and-expanding-commercial-opportunity",
+      "source": "ddg_html",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "BUY AIDX, 0-1d, because commercial opportunity expansion discussion; clock=0-1d",
+  "q5": "impulse",
+  "event_class": "preannounce",
+  "sign": null,
+  "family": "print",
+  "constraint": "commercial opportunity expansion discussion",
+  "rejected_hints": [],
+  "winners": [
+    "AIDX"
+  ],
+  "losers": [],
+  "clock": "0-1d",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

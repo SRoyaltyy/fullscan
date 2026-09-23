@@ -1,0 +1,137 @@
+{
+  "article_id": "de968a4a3f771ef3",
+  "title": "A Griffon Insider Sold Into an Earnings Jump but Kept $80 Million in Stock. Here's What to Know - The Motley Fool",
+  "body": "rss_google_markets",
+  "known_at": "Sat, 08 Aug 2026 22:42:14 GMT",
+  "harvest_source": "parsed",
+  "source_file": "01_daily/news/2026-08-08_parsed.json",
+  "gold_id": "",
+  "ticker_hint": "",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "firm",
+      "event_class": "insider_flow",
+      "question": "Is this the issuer's own cash, paper, or control — not a sector story?",
+      "status": "answered",
+      "note": "The insider flow is a sale of shares by a named executive (COO) during an earnings jump, indicating a belief that the stock is overvalued or that the earnings growth is not sustainable. This is not a sector story but a firm-specific event tied to insider sentiment."
+    },
+    {
+      "id": "q2",
+      "family": "firm",
+      "event_class": "insider_flow",
+      "question": "If it is a routine dividend, why is there no 0-1d sector trade?",
+      "status": "blocked",
+      "note": "No routine dividend context is provided in the article or pack facts."
+    },
+    {
+      "id": "q3",
+      "family": "firm",
+      "event_class": "insider_flow",
+      "question": "Who is the named issuer on the Finviz hit list?",
+      "status": "answered",
+      "note": "The named issuer on the Finviz hit list is Griffon Corp (GFF)."
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "Griffon Corp",
+      "ticker": "GFF",
+      "type": "equity",
+      "sector": "Industrials",
+      "industry": "Building Products & Equipment",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:griffon",
+      "aliases": [
+        "griffon"
+      ],
+      "lane_why": "Mentioned in the title and body as 'Griffon' (likely referring to Griffon Corp)"
+    }
+  ],
+  "entities": [
+    {
+      "name": "Griffon Corp",
+      "ticker": "GFF",
+      "role": "harm",
+      "direction": "down",
+      "horizon": "0-1d",
+      "axiom_id": null,
+      "pack_cite": "A Griffon Insider Sold Into an Earnings Jump but Kept $80 Million in Stock. Here's What to Know (https://finance.yahoo.com/markets/stocks/articles/griffon-insider-sold-earnings-jump-225932932.html)",
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "A Griffon Insider Sold Into an Earnings Jump but Kept $80 Million in ...: A Griffon Insider Sold Into an Earnings Jump but Kept $80 Million in Stock. Here's What to Know Jonathan Ponciano, The Motley Fool August 8, 20264 min read GFF Trade Griffon on Coinbase Trading ...",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/griffon-insider-sold-earnings-jump-225932932.html",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "A Griffon Insider Sold Into an Earnings Jump but Kept $80 Million in ...: Robert F. Mehmel, the president and COO of Griffon Corporation (NYSE:GFF), sold 37,061 shares of common stock on August 5 and August 6, according to an SEC Form 4 filing. Transaction value based on SEC Form 4 weighted average sale price ($103.32); post-Transaction value based on August 6, 2026 market close ($106.30). Griffon",
+      "url": "https://www.sharewise.com/us/news_articles/A_Griffon_Insider_Sold_Into_an_Earnings_Jump_but_Kept_80_Million_in_Stock_Heres_What_to_Know_TheMotleyFool_20260809_0059",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "Griffon - GFF - Stock Price & News | The Motley Fool: A Griffon Insider Sold Into an Earnings Jump but Kept $80 Million in Stock. Here's What to Know Jonathan Ponciano Aug 8, 2026",
+      "url": "https://www.fool.com/quote/nyse/gff/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "A Griffon Insider Sold Into an Earnings Jump but Kept $80 Million in ...: Should you buy stock in Griffon right now? Before you buy stock in Griffon, consider this: The Motley Fool Stock Advisor analyst team just identified what they believe are the 10 best stocks for ...",
+      "url": "https://www.theglobeandmail.com/investing/markets/markets-news/Motley%20Fool/3740589/a-griffon-insider-sold-into-an-earnings-jump-but-kept-80-million-in-stock-here-s-what-to-know/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "A Griffon Insider Sold Into an Earnings Jump but Kept $80 Million in ...: A Griffon Insider Sold Into an Earnings Jump but Kept $80 Million in Stock. Here's What to Know 格里丰 (US:GFF) Yahoo Finance ·2026-08-09 06:59",
+      "url": "https://reportify.cn/news/1283731724110663680",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "A Griffon Insider Sold Into an Earnings Jump but Kept $80 Million in ...: Robert F. Mehmel, the president and COO of Griffon Corporation (NYSE:GFF), sold 37,061 shares of common stock on August 5 and August 6, according...",
+      "url": "https://www.finanzen.ch/nachrichten/aktien/a-griffon-insider-sold-into-an-earnings-jump-but-kept-$80-million-in-stock-heres-what-to-know-15860310",
+      "source": "ddg_html",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "SELL GFF, 0-1d, because stock_holding_disclosure; clock=0-1d",
+  "q5": "impulse",
+  "event_class": "insider_flow",
+  "sign": null,
+  "family": "firm",
+  "constraint": "stock_holding_disclosure",
+  "rejected_hints": [],
+  "winners": [],
+  "losers": [
+    "GFF"
+  ],
+  "clock": "0-1d",
+  "horizon": "0-1d",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}

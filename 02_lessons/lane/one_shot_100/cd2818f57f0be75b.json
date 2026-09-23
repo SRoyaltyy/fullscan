@@ -1,0 +1,137 @@
+{
+  "article_id": "cd2818f57f0be75b",
+  "title": "A Sinda drill hole returns 4,137 g/t silver-equivalent at Don Diego - Stock Titan",
+  "body": "rss_google_markets",
+  "known_at": "Fri, 14 Aug 2026 13:18:00 GMT",
+  "harvest_source": "parsed",
+  "source_file": "01_daily/news/2026-08-14_parsed.json",
+  "gold_id": "",
+  "ticker_hint": "",
+  "keep": true,
+  "reject_reason": "",
+  "questions": [
+    {
+      "id": "q1",
+      "family": "permission",
+      "event_class": "trial_readout",
+      "question": "Who just became legal to sell or launch the product?",
+      "status": "answered",
+      "note": "No new entity became legally authorized to sell or launch the product; the article confirms existing exploration results at Don Diego mine, which are already part of Sinda's permitted operations post-IPO. The constraint (mineral resource grade) is not changing—only verified new data is news (A_Q5_01"
+    },
+    {
+      "id": "q2",
+      "family": "permission",
+      "event_class": "trial_readout",
+      "question": "Is this a gate (approval) or only a trial readout (not approval)?",
+      "status": "answered",
+      "note": "This is a trial readout (event_class=trial_readout), not a gate (approval). The WINNER/LOSER TEST gate is not open here."
+    },
+    {
+      "id": "q3",
+      "family": "permission",
+      "event_class": "trial_readout",
+      "question": "What clock does the print land on: same session, next open, or Monday?",
+      "status": "answered",
+      "note": "The print lands on the same session (no delay to next open or Monday)."
+    }
+  ],
+  "instruments": [
+    {
+      "entity_name": "Sinda Ltd",
+      "ticker": "SIND",
+      "type": "equity",
+      "sector": "Basic Materials",
+      "industry": "Other Precious Metals & Mining",
+      "source": "finviz_row",
+      "score": 10,
+      "why": "company:sinda",
+      "aliases": [
+        "sinda"
+      ],
+      "lane_why": "Mentioned in the title and body as 'Sinda drill hole'."
+    }
+  ],
+  "entities": [
+    {
+      "name": "Sinda Ltd",
+      "ticker": "SIND",
+      "role": "harm",
+      "direction": "down",
+      "horizon": "1-6m",
+      "axiom_id": null,
+      "pack_cite": "quote_or_unknown",
+      "stays_out": false,
+      "type": "equity"
+    }
+  ],
+  "pack_facts": [
+    {
+      "text": "Sinda - Sinda Ltd. Reports Second Quarter 2026 Financial Results and ...: Following the Company's IPO, we have received the results from drill holes CEAG-26-064, which returned 0.8 meters grading 4,137 g/t AgEq, and CEAG-26-065, which returned 1.05m grading 2,826 g/t, demonstrating the continued success of the Don Diego exploration program.",
+      "url": "https://investors.sinda.mx/English/news/news-details/2026/Sinda-Ltd--Reports-Second-Quarter-2026-Financial-Results-and-Provides-Operational-Update/default.aspx",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "Sinda - Financials - Quarterly Results: Following the Company's IPO, we have received the results from drill holes CEAG-26-064, which returned 0.8 meters grading 4,137 g/t AgEq, and CEAG-26-065, which returned 1.05m grading 2,826 g/t, demonstrating the continued success of the Don Diego exploration program.",
+      "url": "https://investors.sinda.mx/English/financials/quarterly-results/default.aspx",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "Sinda Q2 2026 slides: high-grade silver results, shares fall 2.4%: High-grade intercepts at Don Diego include 3,204 g/t AgEq over 0.5 meters and 4,137 g/t AgEq over 0.8 meters, with typical epithermal quartz textures and sulfide mineralization observed in core ...",
+      "url": "https://www.investing.com/news/company-news/sinda-q2-2026-slides-highgrade-silver-results-shares-fall-24-93CH-4861359",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "Sinda Closes 1Q26 as Public Company with US$331 Million in Hand: The Don Diego area produced some of the quarter's most notable assays, including one interval grading over 3,200gpt silver-equivalent across half a meter, and a separate hole returning 4,137 g/t AgEq over 0.8m after quarter-end.",
+      "url": "https://mexicobusiness.news/mining/news/sinda-closes-1q26-public-company-us331-million-hand",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "Sinda Ltd. Reports Second Quarter 2026 Financial Results and Provides ...: Sinda reported Q2 2026 results following its NYSE IPO, raising $331.3 million including Fresnillo's strategic investment. The company completed 60,810 metres of Phase 1 drilling and plans another 122,000 metres. Strong Don Diego results highlight expansion potential, while construction of a 9-kilometre exploration decline i",
+      "url": "https://www.mexicominingcenter.com/sinda-ltd-reports-second-quarter-2026-financial-results-and-provides-operational-update/",
+      "source": "ddg_html",
+      "status": "quote"
+    },
+    {
+      "text": "FinancialContent - Sinda Ltd. Reports Second Quarter 2026 Financial ...: Following the Company's IPO, we have received the results from drill holes CEAG-26-064, which returned 0.8 meters grading 4,137 g/t AgEq, and CEAG-26-065, which returned 1.05m grading 2,826 g/t, demonstrating the continued success of the Don Diego exploration program.",
+      "url": "https://markets.financialcontent.com/stocks/article/bizwire-2026-8-14-sinda-ltd-reports-second-quarter-2026-financial-results-and-provides-operational-update",
+      "source": "ddg_html",
+      "status": "quote"
+    }
+  ],
+  "watermarks": [
+    {
+      "stage": "classify",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "linker",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    },
+    {
+      "stage": "analyst",
+      "watermark": "lane::mistral::ministral-8b-2512"
+    }
+  ],
+  "watermark": "lane::mistral::ministral-8b-2512",
+  "action": "AVOID_ADD SIND, 1-6m, because mineral resource grade at Don Diego mine; clock=not_0_1d",
+  "q5": "impulse",
+  "event_class": "trial_readout",
+  "sign": null,
+  "family": "permission",
+  "constraint": "mineral resource grade at Don Diego mine",
+  "rejected_hints": [],
+  "winners": [],
+  "losers": [
+    "SIND"
+  ],
+  "clock": "not_0_1d",
+  "horizon": "1-6m",
+  "finviz_file": "data/exports/finviz_2026-09-22.csv",
+  "validator_errors": [],
+  "invented_tickers": [],
+  "gold_status": ""
+}
