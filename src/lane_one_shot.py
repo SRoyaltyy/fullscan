@@ -238,7 +238,9 @@ class LiveLane:
         """Floor models only. If they all 429 or reject the enum, stop."""
         notes: list[str] = []
         zhipu_on = bool(self.ctx["keys"].get("zhipu"))
-        budget = lane.token_budget("news_classify")
+        # Floor models that think before the JSON need more than the 400
+        # inbox budget. The global news_classify budget stays 400.
+        budget = max(lane.token_budget("news_classify"), 900)
         winner = None
         for hop in classify_lanes():
             models = classify_models_for(hop)

@@ -55,6 +55,7 @@ from __future__ import annotations
 
 import datetime
 import json
+import re
 import os
 import pathlib
 import time
@@ -822,33 +823,61 @@ def http_json(url, payload=None, headers=None, timeout=20):
         return 0, {"error": str(e)}, {}
 
 
+def _choice_text(body: dict) -> str:
+    """Read an OpenAI-style message. Thinking models often leave content empty."""
+    message = ((body.get("choices") or [{}])[0].get("message") or {})
+    content = message.get("content")
+    if isinstance(content, list):
+        bits = []
+        for part in content:
+            if isinstance(part, str):
+                bits.append(part)
+            elif isinstance(part, dict):
+                bits.append(str(part.get("text") or part.get("content") or ""))
+        content = "".join(bits)
+    text = str(content or "").strip()
+    if text:
+        return text
+    reasoning = str(message.get("reasoning_content") or "").strip()
+    if "{" in reasoning and "}" in reasoning:
+        return reasoning
+    return ""
+
+
 def openai_chat(url, key, model, prompt, extra=None, max_tokens=320, system=None):
     system = SYSTEM if system is None else system
-    timeout = 60 if max_tokens > 400 else 30
-    payload = {
-        "model": model,
-        "messages": [
-            {"role": "system", "content": system},
-            {"role": "user", "content": prompt},
-        ],
-        "max_tokens": max_tokens,
-        "temperature": 0.1,
-        "response_format": {"type": "json_object"},
-    }
-    status, body, _ = http_json(
-        url, payload, {"Authorization": "Bearer " + key, **(extra or {})}, timeout=timeout,
-    )
-    if status == 400:
-        payload.pop("response_format", None)
-        status, body, _ = http_json(
-            url, payload, {"Authorization": "Bearer " + key, **(extra or {})}, timeout=timeout,
-        )
+    timeout = 90 if max_tokens > 400 else 45
+    headers = {"Authorization": "Bearer " + key, **(extra or {})}
+
+    def _post(use_format: bool):
+        payload = {
+            "model": model,
+            "messages": [
+                {"role": "system", "content": system},
+                {"role": "user", "content": prompt},
+            ],
+            "max_tokens": max_tokens,
+            "temperature": 0.1,
+        }
+        if use_format:
+            payload["response_format"] = {"type": "json_object"}
+        return http_json(url, payload, headers, timeout=timeout)
+
+    status, body, _ = _post(True)
+    text = _choice_text(body) if status == 200 else ""
+    # 400: host rejected response_format. 200 with an empty body: a thinking
+    # model spent the budget before the JSON, or ignored json_object.
+    if status == 400 or (status == 200 and not text):
+        status, body, _ = _post(False)
+        text = _choice_text(body) if status == 200 else ""
     if status != 200:
-        return None, status, str(body.get("error") or body)[:240]
-    text = (((body.get("choices") or [{}])[0].get("message") or {}).get("content")) or ""
+        err = str(body.get("error") or body.get("message") or body)[:180]
+        err = re.sub(r"(?i)bearer\s+\S+", "bearer [redacted]", err)
+        return None, status, err
     parsed = extract_json(text)
     if parsed is None:
-        return None, status, "not json"
+        snippet = re.sub(r"\s+", " ", text)[:80]
+        return None, status, f"not json {snippet or 'empty'}"
     return parsed, status, model
 
 
@@ -1014,7 +1043,10 @@ def hop_models(lane, models, call, abandon_404=False):
             print(f"  {lane}/{model} skip (429 cached)")
             continue
         parsed, status, info = call(model)
-        print(f"  {lane}/{model} status={status}")
+        detail = ""
+        if parsed is None and info:
+            detail = " " + re.sub(r"\s+", " ", str(info))[:140]
+        print(f"  {lane}/{model} status={status}{detail}")
         if parsed is not None:
             return parsed, info
         if status in DEAD_PROVIDER:
@@ -1164,7 +1196,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
     if lane == "qwen":
         if not keys.get("qwen"):
             return None, None
-        # 401/403 on a custom DASHSCOPE_BASE_URL is the wrong host, not a
+        # 400/401/403 on a custom DASHSCOPE_BASE_URL is the wrong host, not a
         # dead provider. Try the next public DashScope base before skipping.
         return hop_models(
             "qwen",
@@ -1172,7 +1204,7 @@ def ask_lane(lane, prompt, ctx, max_tokens=320, system=None, tmpl="custom"):
             lambda model: first_live_url(
                 qwen_urls(), keys["qwen"], model, prompt,
                 max_tokens=max_tokens, system=system,
-                skip_statuses=(401, 403),
+                skip_statuses=(400, 401, 403),
             ),
         )
     if lane == "zhipu":
