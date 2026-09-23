@@ -1,21 +1,20 @@
 # Finviz Daily Digest — 2026-09-22
 
-_Generated 2026-09-22T04:11:50.674610-04:00 · export=data/exports/finviz_2026-09-21.csv · ticker digests=5876 · high-signal=2276_
+_Generated 2026-09-23T01:54:14.151169-04:00 · export=data/exports/finviz_2026-09-22.csv · ticker digests=5877 · high-signal=2217_
 
 ## Major indices (live quote page)
 
-- **S&P 500 (SPY)**: Stock Market: Will S&P 500 Open Up or Down Today?
-- **Nasdaq-100 (QQQ)**: Howard Marks Sends Stark Signal to Federal Reserve
-- **Dow Jones (DIA)**: Nasdaq Ends Nearly 3% Higher As AI Stocks Pop, AMD Enters $1 Trillion Club   AMD, ARM, META, AMZN, PSKY In Focus
+- **S&P 500 (SPY)**: Lock In 2026 Profits Before Warsh Takes Them Away
+- **Nasdaq-100 (QQQ)**: Nasdaq Jumps To Close At Record As Chipmakers Climb, Oil Prices Cool  AAPL, META, SPCX, MSFT, VKTX In Focus
+- **Dow Jones (DIA)**: Nasdaq Jumps To Close At Record As Chipmakers Climb, Oil Prices Cool  AAPL, META, SPCX, MSFT, VKTX In Focus
 - **Russell 2000 (IWM)**: Evolution Metals Just Joined the Indexes Behind $12.2 Trillion in Invested Assets (NASDAQ: EMAT)
 
 ## High-signal ticker digests (ranked)
 
 - **AJG** [Financial]: Arthur J. Gallagher & Co. announces acquisition of Colorado-based Innovise Business Consultants, expanding its commercial insurance and surety bonding capabilities in the Western U.S.
 - **AME** [Industrials]: AMETEK completes $5.0 billion all-cash acquisition of Indicor Instrumentation
-- **AMGN** [Healthcare]: Amgen gets FDA approval to update IMDELLTRA label to reduce monitoring for first two ES-SCLC doses
 - **AMX** [Communication Serv]: JPMorgan upgrades America Movil to Overweight from Neutral and raises its price target to $32 from $30.
-- **AON** [Financial]: Aon files audited and pro forma financials with SEC for pending USI Advantage merger
+- **AON** [Financial]: Aon disclosed in an SEC filing that it has secured a $4 billion term loan and a $3 billion revolving credit facility to help finance its pending acquisition of USI.
 - **APH** [Technology]: Fabrinet earnings weakness and rising yields spark 6.5% APH drop
 - **APP** [Communication Serv]: Piper Sandler cuts AppLovin price target to $325 from $385, maintains Neutral rating
 - **ARGX** [Healthcare]: argenx announces it has completed the acquisition of Forte Biosciences for $77 per share in cash, adding first-in-class anti-CD122 antibody FB102 to its immunology pipeline.
@@ -37,6 +36,7 @@ _Generated 2026-09-22T04:11:50.674610-04:00 · export=data/exports/finviz_2026-0
 - **CRH** [Basic Materials]: Berenberg price target cut to $140 from $146 triggers CRH 3.87% drop to near 52-week low
 - **CRM** [Technology]: Salesforce issues FY27 revenue guidance of $46.4B, sets FY30 revenue target above $63B at Investor Day
 - **CRWD** [Technology]: Morgan Stanley target raise and falling yields lift CrowdStrike 5% during regular hours
+- **CSCO** [Technology]: Piper Sandler target cut on peaking-growth concerns drives Cisco 5.6% lower during Tuesday trading
 - **CSX** [Industrials]: CSX delivers record revenue, raises 2026 margin and free cash flow outlook
 - **CVE** [Energy]: Cenovus Energy Q2 2026 non-GAAP EPS $1.08 misses estimates, revenue $14.7B beats, company raises full-year production guidance
 - **DDOG** [Technology]: Snowflake's stronger-than-expected quarterly revenue and earnings support cloud and AI-focused enterprise software peers including Datadog
@@ -47,8 +47,8 @@ _Generated 2026-09-22T04:11:50.674610-04:00 · export=data/exports/finviz_2026-0
 - **EQIX** [Real Estate]: Equinix, CPP Investments close US$4B atNorth acquisition with Equinix investing about US$895M for roughly 34% stake
 - **FAST** [Industrials]: Fastenal beats Q2 estimates with EPS $0.33 (+14% YoY), revenue $2.4B (+15% YoY), notes gross margin pressure and lowers 2026 digital sales mix target
 - **FIX** [Industrials]: Zacks Strong Buy upgrade and AI data center backlog drive 11% FIX surge
-- **GD** [Industrials]: General Dynamics' GDIT wins $1.3B multi-year Enterprise Network Operations and Cybersecurity Support contract for Army National Guard, federal partners
 - **GEV** [Industrials]: GE Vernova settles over $300 million Vineyard Wind payment dispute, withdraws contract-termination notice and legal claims on Massachusetts offshore project
+- **GM** [Consumer Cyclical]: GM’s defense unit wins an additional $697 million U.S. Army Infantry Squad Vehicle contract modification, lifting the total award value to about $915 million.
 - **GSK** [Healthcare]: Positive Jideytro ARROS-1 trial data for first-line ROS1+ NSCLC drives GSK premarket surge
 - **HCA** [Healthcare]: HCA Healthcare announces it has completed the previously announced acquisition of The College of Health Care Professions, expanding its healthcare education platform.
 
@@ -62,15 +62,15 @@ _Generated 2026-09-22T04:11:50.674610-04:00 · export=data/exports/finviz_2026-0
 - CRWD: Morgan Stanley target raise and falling yields lift CrowdStrike 5% during regular hours
 
 ### Healthcare (n=8)
-- AMGN: Amgen gets FDA approval to update IMDELLTRA label to reduce monitoring for first two ES-SCLC doses
 - ARGX: argenx announces it has completed the acquisition of Forte Biosciences for $77 per share in cash, adding first-in-class anti-CD122 antibody FB102 to its immunology pipeline.
 - BSX: Citi downgrades Boston Scientific to Neutral, cuts target to $50 on pulsed field ablation and LAAC concerns
 - CAH: Barron’s reports that Cardinal Health CEO Jason Hollar recently sold about $29 million of company stock following the post-earnings share surge to record levels.
 - CI: Jefferies downgrades Cigna to Hold from Buy, cuts price target to $307 from $336 on concern consensus too high post EviCore sale, Centene prescription drug plan shrinkage
+- COR: Cencora reaffirms fiscal 2026 adjusted EPS guidance despite Walgreens prescription volume shift
 
 ### Financial (n=8)
 - AJG: Arthur J. Gallagher & Co. announces acquisition of Colorado-based Innovise Business Consultants, expanding its commercial insurance and surety bonding capabilities in the Western U.S.
-- AON: Aon files audited and pro forma financials with SEC for pending USI Advantage merger
+- AON: Aon disclosed in an SEC filing that it has secured a $4 billion term loan and a $3 billion revolving credit facility to help finance its pending acquisition of USI.
 - BNS: Bank of Nova Scotia posts record Q3 2026 EPS $2.28 as National Bank upgrades to Outperform, lifts target to C$142
 - BNY: BNY announces it will raise its Prime Lending Rate by 25 basis points to 7.00% effective September 17, 2026.
 - BX: Blackstone Infrastructure and PNM file amended New Mexico PRC merger plan with $220M ratepayer credits and $80M community benefits for $11.5B TXNM deal
@@ -99,12 +99,12 @@ _Generated 2026-09-22T04:11:50.674610-04:00 · export=data/exports/finviz_2026-0
 ### Communication Services (n=3)
 - AMX: JPMorgan upgrades America Movil to Overweight from Neutral and raises its price target to $32 from $30.
 - APP: Piper Sandler cuts AppLovin price target to $325 from $385, maintains Neutral rating
-- NFLX: Wells Fargo downgrades Netflix to Underweight from Equal Weight, cuts price target to $57 from $80 on concerns over weakening engagement and a softer 2H26 originals slate
+- NFLX: HSBC downgraded Netflix to Hold from Buy and cut its price target to $76 from $96, citing YouTube’s rising share of U.S. TV viewing as a growing competitive threat.
 
 ### Consumer Cyclical (n=3)
+- GM: GM’s defense unit wins an additional $697 million U.S. Army Infantry Squad Vehicle contract modification, lifting the total award value to about $915 million.
 - HD: Home Depot announces the nationwide rollout of its Magic Apron AI-powered in-store assistant with localized, personalized shopping guidance now live in all U.S. stores.
 - HLT: Deutsche Bank upgrades Hilton Worldwide to Buy from Hold, raises price target to $365
-- LOW: Bernstein cuts Lowe’s price target to $254 from $261, reiterates Outperform on slower-than-expected home-improvement spending recovery
 
 ### Utilities (n=2)
 - DUK: Duke Energy's Florida subsidiary files to lower customer rates from January 2027, avoiding planned 2% base-rate hike and delivering about $50 million in savings next year
