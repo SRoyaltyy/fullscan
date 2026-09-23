@@ -485,29 +485,35 @@ def test_classify_floor_excludes_ministral_and_8b(monkeypatch):
     assert "nvidia_nim" not in _FLOOR_PROVIDERS
     assert "openclaw" in _FLOOR_PROVIDERS
     monkeypatch.delenv("OPENCLAW_BACKEND_MODEL", raising=False)
-    assert classify_models_for("openclaw") == ["xai/grok-4.6"]
+    assert classify_models_for("openclaw") == ["xai/grok-4-fast-reasoning"]
     assert not is_classify_banned("xai/grok-4.6")
+    assert not is_classify_banned("xai/grok-4-fast-reasoning")
     assert is_classify_banned("ministral-8b-2512")
     monkeypatch.setenv("OPENCLAW_BACKEND_MODEL", "ministral-8b-2512")
     from src.lane_route import (
-        OPENCLAW_FLOOR_MODEL, openclaw_allowlisted_model,
+        OPENCLAW_FILTER_MODEL, OPENCLAW_FLOOR_MODEL, openclaw_allowlisted_model,
         openclaw_backend_model, openclaw_models,
     )
-    assert openclaw_backend_model() == "xai/grok-4.6"
-    assert openclaw_models() == ["xai/grok-4.6"]
+    assert openclaw_backend_model() == "xai/grok-4-fast-reasoning"
+    assert openclaw_models() == ["xai/grok-4-fast-reasoning"]
     monkeypatch.setenv("OPENCLAW_BACKEND_MODEL", "xai/grok-4-fast-reasoning")
-    assert openclaw_allowlisted_model("xai/grok-4-fast-reasoning") == "xai/grok-4.6"
-    assert openclaw_allowlisted_model("xai/grok-4-fast") == "xai/grok-4.6"
-    assert classify_models_for("openclaw") == ["xai/grok-4.6"]
+    assert openclaw_allowlisted_model("xai/grok-4-fast-reasoning") == "xai/grok-4-fast-reasoning"
+    assert openclaw_allowlisted_model("xai/grok-4-fast") == "xai/grok-4-fast-reasoning"
+    assert openclaw_allowlisted_model("xai/grok-4.6") == "xai/grok-4.6"
+    assert classify_models_for("openclaw") == ["xai/grok-4-fast-reasoning"]
+    assert primary_models_for("openclaw", "news_impact") == ["xai/grok-4-fast-reasoning"]
+    assert primary_models_for("openclaw", "news_filter") == [OPENCLAW_FILTER_MODEL]
+    assert OPENCLAW_FILTER_MODEL == "xai/grok-4.6"
     cfg = Path("src/config.py").read_text(encoding="utf-8")
     match = re.search(
         r'os\.environ\.get\("OPENCLAW_BACKEND_MODEL",\s*"([^"]+)"\)',
         cfg,
     )
     assert match is not None
-    assert OPENCLAW_FLOOR_MODEL == match.group(1) == "xai/grok-4.6"
+    assert match.group(1) == "xai/grok-4.6"
+    assert OPENCLAW_FLOOR_MODEL == "xai/grok-4-fast-reasoning"
     from src.lane_one_shot import _WM, _classify_floor_ok, _context_floor_ok
-    wm = "lane::openclaw::xai/grok-4.6"
+    wm = "lane::openclaw::xai/grok-4-fast-reasoning"
     assert _WM.match(wm)
     floor_row = {
         "watermarks": [
@@ -556,9 +562,9 @@ def test_openclaw_chat_watermark_is_backend_model(monkeypatch):
     )
     assert parsed == {"event_class": "gate"}
     assert status == 200
-    assert info == "xai/grok-4.6"
+    assert info == "xai/grok-4-fast-reasoning"
     assert seen["model"] == "openclaw/default"
-    assert seen["extra"]["x-openclaw-model"] == "xai/grok-4.6"
+    assert seen["extra"]["x-openclaw-model"] == "xai/grok-4-fast-reasoning"
     assert seen["key"] == "tok"
     assert "18789" in seen["url"]
     assert seen["url"].endswith("/v1/chat/completions")
@@ -583,12 +589,12 @@ def test_openclaw_classify_hop_is_first(monkeypatch):
         {"keys": {"openclaw": "gateway"}, "ollama_url": "", "gh_direct": ""},
         tmpl="news_classify",
     )
-    assert seen == ["xai/grok-4.6"]
+    assert seen == ["xai/grok-4-fast-reasoning"]
     assert parsed == {"event_class": "gate"}
-    assert info == "xai/grok-4.6"
+    assert info == "xai/grok-4-fast-reasoning"
 
 
-def test_openclaw_fast_alias_is_not_sent(monkeypatch):
+def test_openclaw_fast_reasoning_is_sent(monkeypatch):
     from src import lane_route
     monkeypatch.setenv("OPENCLAW_BACKEND_MODEL", "xai/grok-4-fast-reasoning")
     seen = []
@@ -606,10 +612,11 @@ def test_openclaw_fast_alias_is_not_sent(monkeypatch):
         {"keys": {"openclaw": "gateway"}, "ollama_url": "", "gh_direct": ""},
         tmpl="news_classify",
     )
-    assert seen == ["xai/grok-4.6"]
-    assert "grok-4-fast" not in seen[0]
+    assert seen == ["xai/grok-4-fast-reasoning"]
     assert parsed == {"event_class": "gate"}
-    assert info == "xai/grok-4.6"
+    assert info == "xai/grok-4-fast-reasoning"
+    filter_models = lane_route.primary_models_for("openclaw", "news_filter")
+    assert filter_models == ["xai/grok-4.6"]
 
 
 def test_openclaw_lane_timeout_env(monkeypatch):
@@ -702,7 +709,7 @@ def test_filter_and_analyst_ask_openclaw_first(monkeypatch):
     monkeypatch.setattr(lane_route, "ask_lane", fake_ask)
     live = LiveLane()
     parsed, hop, model = live("filter", "prompt", "system", accept=lambda blob: True)
-    assert calls[0] == ("openclaw", "news_impact")
+    assert calls[0] == ("openclaw", "news_filter")
     assert hop == "openclaw"
     assert model == "xai/grok-4.6"
     assert parsed["core"] == ["CAR"]
@@ -1085,7 +1092,7 @@ def test_openclaw_repairs_labor_stop_before_the_hopper(monkeypatch):
     )
     assert parsed["event_class"] == "blast_ops"
     assert parsed["q5"] == "impulse"
-    assert (hop, model) == ("openclaw", "xai/grok-4.6")
+    assert (hop, model) == ("openclaw", "xai/grok-4-fast-reasoning")
     assert len(prompts) == 2
     assert "PREVIOUS JSON WAS NOT ACCEPTED" not in prompts[0]
     assert "PREVIOUS JSON WAS NOT ACCEPTED" in prompts[1]
@@ -1221,3 +1228,106 @@ def test_board_check_rejects_shortfall_and_mistral_only():
     assert any(p.startswith("n_kept=") for p in problems)
     assert any("tsa" in p for p in problems)
     assert any("floor model" in p or "classify histogram" in p for p in problems)
+
+
+def test_classify_prompt_stays_short():
+    from src.news_impact.prompts import classifier_prompt
+    art = GOLD_KEEP[0]
+    text = classifier_prompt(art["title"], art["body"], art["known_at"])
+    assert "event_class enum" in text
+    assert "Q5 first" in text
+    assert "M1" not in text
+    assert "M4" not in text
+    assert "M5" not in text
+    assert "harm_set" not in text
+    assert "bullshit" not in text.lower()
+    assert len(text.encode("utf-8")) < 4000
+
+
+def test_meta_prompt_sends_the_full_pack():
+    from src.news_impact.prompts import meta_prompt
+    art = GOLD_KEEP[0]
+    text = meta_prompt(art["title"], art["body"], "blast", "blast_ops", "TSA unpaid")
+    for marker in ("M1", "M2", "M3", "M4", "M5"):
+        assert marker in text
+    for slot in (
+        "C:", "T:", "H:", "E:", "S:", "R:", "A:", "D:", "I:", "P:", "Y-S:", "Y-T:",
+    ):
+        assert slot in text, slot
+    assert "invert is one sentence" in text
+    assert "ai_angle" in text
+    assert "who_should_i_buy" in text
+    assert "already_in_article" in text
+    assert "undated_weather" in text
+    assert "theme_fishing" in text
+    assert "no_direction_change" in text
+    assert len(text.splitlines()) > 40
+
+
+def test_blast_analyst_prompt_includes_flip_questions_and_tsa_car():
+    from src.news_impact.one_shot_stack import analyst_prompt as stack_analyst
+    art = GOLD_KEEP[0]
+    text = stack_analyst(
+        art["title"], art["body"], "blast", "blast_ops", None, "impulse",
+        "TSA unpaid", [], [], [], [],
+    )
+    assert "Who is in the harm set" in text
+    assert "TSA → CAR" in text or "TSA → CAR" in text.replace("->", "→")
+    assert "CAR" in text
+    assert "harm_set" in text
+    assert "unscathed_rival" in text
+    assert "arms_dealer" in text
+    assert "unit_vs_parent" in text
+    assert "tradeable_expression" in text
+    assert "Y-S" in text and "Y-T" in text
+    assert "META stays_out" in text
+    assert "capacity add:" not in text
+    structure = stack_analyst(
+        "SEC venues", "", "structure", "market_structure", None, "impulse",
+        "venues", [], [], [], [],
+    )
+    assert "TSV not Energy" in structure
+    assert "TSA → CAR" not in structure
+    permission = stack_analyst(
+        "Amneal lanreotide", "", "permission", "gate", "open", "regime_break",
+        "FDA", [], [], [], [],
+    )
+    assert "monday_open" in permission
+    assert "AMRX Monday" in permission
+
+
+def test_prompt_audit_logs_sha_and_edges():
+    import hashlib
+    from src.news_impact.one_shot_stack import prompt_audit
+    body = "\n".join(f"line {i}" for i in range(50))
+    rec = prompt_audit("meta", body)
+    assert rec["sha256"] == hashlib.sha256(body.encode("utf-8")).hexdigest()
+    assert rec["bytes"] == len(body.encode("utf-8"))
+    assert rec["head"] == [f"line {i}" for i in range(40)]
+    assert rec["tail"] == [f"line {i}" for i in range(10, 50)]
+    assert len(rec["head"]) == 40 and len(rec["tail"]) == 40
+
+
+def test_gold_row_records_prompt_log():
+    art = GOLD_KEEP[0]
+    row = process_article(art, ScriptLane(), axioms=load_axioms(), use_pack=False)
+    stages = [rec["stage"] for rec in row["prompt_log"]]
+    assert "classify" in stages
+    assert "meta" in stages
+    assert "analyst" in stages
+    classify = next(rec for rec in row["prompt_log"] if rec["stage"] == "classify")
+    assert len(classify["sha256"]) == 64
+    assert "M1" not in "\n".join(classify["head"])
+    meta = next(rec for rec in row["prompt_log"] if rec["stage"] == "meta")
+    joined = "\n".join(meta["head"] + meta["tail"])
+    assert "M1" in joined and "M5" in joined
+    assert "Y-S:" in joined
+
+
+def test_gold_job_is_ecs_and_pins_fast_reasoning():
+    text = Path(".github/workflows/lane_one_shot_100.yml").read_text(encoding="utf-8")
+    gold = text.split("jobs:", 1)[1].split("\n  shard:", 1)[0]
+    assert "runs-on: [self-hosted, ecs]" in gold
+    assert "ubuntu-latest" not in gold
+    assert "OPENCLAW_BACKEND_MODEL: xai/grok-4-fast-reasoning" in gold
+    assert "OPENCLAW_BACKEND_MODEL: xai/grok-4.6" not in gold

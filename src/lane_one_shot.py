@@ -259,7 +259,7 @@ class LiveLane:
         if stage in {"meta", "pack_complete"}:
             return self._floor(stage, prompt, system, accept)
         if stage in {"filter", "planner"}:
-            return self._hop(stage, prompt, system, accept, FILTER_LANES, "news_impact")
+            return self._hop(stage, prompt, system, accept, FILTER_LANES, "news_filter")
         return self._hop(stage, prompt, system, accept, ANALYST_LANES, "news_impact")
 
     def _floor(self, stage: str, prompt: str, system: str, accept):

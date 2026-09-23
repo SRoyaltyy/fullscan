@@ -13,6 +13,7 @@ miss, not a deterministic fill.
 """
 from __future__ import annotations
 
+import hashlib
 import re
 from typing import Any, Callable
 
@@ -35,6 +36,7 @@ from src.news_impact.prompts import (
     CLASSIFIER_SYSTEM,
     FAMILY_TESTS,
     FLIP_QUESTIONS,
+    family_block,
     HISTORY_SLOT,
     LANREOTIDE_CLOCK_Q,
     META_SYSTEM,
@@ -564,6 +566,7 @@ def analyst_prompt(
         f"sign={sign} q5={q5}.\n"
         f"Constraint: {constraint}\n"
         f"{clock_note}\n"
+        f"{family_block(family)}\n"
         "Roles you may use: harm_set direction=down; "
         "substitute; unscathed_rival; arms_dealer. No scores.\n"
         "A second-order role (substitute, unscathed_rival, arms_dealer) "
@@ -1253,6 +1256,11 @@ def render_markdown(header: dict, rows: list[dict]) -> str:
         lines.append(f"- pack_complete: {by_stage.get('pack_complete') or ''}")
         lines.append(f"- analyst: {by_stage.get('analyst') or row.get('watermark') or ''}")
         lines.append(f"- watermark: {row.get('watermark')}")
+        for rec in row.get("prompt_log") or []:
+            lines.append(
+                f"- prompt {rec.get('stage')}: sha256={rec.get('sha256')} "
+                f"bytes={rec.get('bytes')} lines={rec.get('lines')}"
+            )
         lines.append("")
     return "\n".join(lines).rstrip() + "\n"
 
@@ -1287,8 +1295,44 @@ def _pack_facts(pack: dict) -> list[dict]:
     return facts
 
 
+_PROMPT_LOG: list[dict] = []
+
+
+def prompt_audit(stage: str, prompt: str) -> dict:
+    """sha256 plus the first and last 40 lines of the bytes sent to the model."""
+    text = prompt or ""
+    raw = text.encode("utf-8")
+    lines = text.splitlines()
+    head = lines[:40]
+    tail = lines[-40:] if len(lines) > 40 else list(lines)
+    record = {
+        "stage": stage,
+        "sha256": hashlib.sha256(raw).hexdigest(),
+        "bytes": len(raw),
+        "lines": len(lines),
+        "head": head,
+        "tail": tail,
+    }
+    print(
+        f"[lane_one_shot] prompt {stage} sha256={record['sha256']} "
+        f"bytes={record['bytes']} lines={record['lines']}"
+    )
+    print(f"[lane_one_shot] prompt {stage} head:")
+    print("\n".join(head))
+    if len(lines) > 40:
+        print(f"[lane_one_shot] prompt {stage} tail:")
+        print("\n".join(tail))
+    return record
+
+
+def _attach_prompt_log(row: dict) -> dict:
+    row["prompt_log"] = [dict(item) for item in _PROMPT_LOG]
+    return row
+
+
 def _call_lane(lane: LaneFn, stage: str, prompt: str, system: str, accept=None):
     """Pass accept= when the client hops. Older stubs take three arguments."""
+    _PROMPT_LOG.append(prompt_audit(stage, prompt))
     try:
         return lane(stage, prompt, system, accept=accept)
     except TypeError as exc:
@@ -1405,6 +1449,7 @@ def process_article(
     index_names=None,
 ) -> dict:
     """Run the stack on one article. `keep` is false unless Lane watermarked it."""
+    _PROMPT_LOG.clear()
     title = str(art.get("title") or "")
     body = str(art.get("body") or "")
     known = str(art.get("known_at") or art.get("published_at") or "")
@@ -1434,7 +1479,7 @@ def process_article(
     why = gate0(title, body)
     if why:
         base["reject_reason"] = why
-        return base
+        return _attach_prompt_log(base)
 
     gold_id = str(art.get("gold_id") or "")
     parsed, provider, model = _call_lane(
@@ -1450,22 +1495,22 @@ def process_article(
         base["reject_reason"] = "classify_below_floor"
         base["watermarks"] = [{"stage": "classify", "watermark": mark}]
         base["classify_skip"] = getattr(lane, "last_classify_note", "")
-        return base
+        return _attach_prompt_log(base)
     if not parsed or not mark:
         base["reject_reason"] = "lane_classify_missing"
-        return base
+        return _attach_prompt_log(base)
     event_class = str(parsed.get("event_class") or "").strip()
     q5 = str(parsed.get("q5") or "").strip()
     if event_class not in EVENT_CLASSES or q5 not in {"impulse", "regime", "regime_break"}:
         base["reject_reason"] = "lane_bad_enum"
         base["watermarks"] = [{"stage": "classify", "watermark": mark}]
-        return base
+        return _attach_prompt_log(base)
     if event_class == "discard" or (q5 == "regime" and "naion" not in title.lower()):
         base["reject_reason"] = "lane_discard" if event_class == "discard" else "q5_regime"
         base["q5"] = q5
         base["event_class"] = event_class
         base["watermarks"] = [{"stage": "classify", "watermark": mark}]
-        return base
+        return _attach_prompt_log(base)
     sign = parsed.get("sign")
     if sign in ("", "null", "none"):
         sign = None
@@ -1499,7 +1544,7 @@ def process_article(
                 "context_below_floor" if is_classify_banned(meta_model) else "lane_meta_missing"
             ),
         })
-        return _stamp_extra(base)
+        return _attach_prompt_log(_stamp_extra(base))
     m2_query = " ".join(q["question"] for q in meta["m2"])[:1500]
     pack = _retrieve_overview(m2_query, title, body, use_pack, pack_fn)
     linked = candidate_rows(
@@ -1541,7 +1586,7 @@ def process_article(
             "reject_reason": "lane_filter_missing",
             "finviz_file": linked.get("finviz_file") or "",
         })
-        return _stamp_extra(base)
+        return _attach_prompt_log(_stamp_extra(base))
 
     facts = _quote_facts(pack)
     facts.extend(finviz_facts(instruments))
@@ -1581,7 +1626,7 @@ def process_article(
                 "context_below_floor" if is_classify_banned(m4_model) else "lane_pack_incomplete"
             ),
         })
-        return _stamp_extra(base)
+        return _attach_prompt_log(_stamp_extra(base))
     axiom_ids = {str(a.get("id")) for a in axioms if a.get("id")}
     horizon = _horizon_for(event_class, title, sign if isinstance(sign, str) else None)
     prompt = analyst_prompt(
@@ -1718,4 +1763,4 @@ def process_article(
     else:
         row["gold_status"] = ""
         _stamp_extra(row)
-    return row
+    return _attach_prompt_log(row)

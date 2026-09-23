@@ -287,13 +287,14 @@ CLASSIFY_LANES = [
     "zhipu", "siliconflow", "openrouter", "gemini", "tokenhub",
     "mistral", "pollinations", "qwen",
 ]
-# Same default as src/config.py OPENCLAW_BACKEND_MODEL. Agent `main`
-# allowlists this id. grok-4-fast-reasoning is rewritten by the gateway
-# to grok-4-fast and 400s, so that id is never sent.
-OPENCLAW_FLOOR_MODEL = "xai/grok-4.6"
-_OPENCLAW_REJECTED = frozenset({
+# Classify / meta / analyst floor. Cyrus 2026-09-23: send this id.
+# The bare grok-4-fast alias (no -reasoning) is the one the gateway
+# rewrites and rejects. Filter may use the non-reasoning grok-4.6 id.
+# src/config.py stays on grok-4.6 for the rest of the product.
+OPENCLAW_FLOOR_MODEL = "xai/grok-4-fast-reasoning"
+OPENCLAW_FILTER_MODEL = "xai/grok-4.6"
+_OPENCLAW_FAST_ALIAS = frozenset({
     "xai/grok-4-fast",
-    "xai/grok-4-fast-reasoning",
 })
 # company_dig: SF Qwen / DeepSeek free non-Pro → OR :free → Zhipu.
 # Native DeepSeek stays off the free head (paid opt-in only).
@@ -587,19 +588,26 @@ def is_classify_banned(mid: str) -> bool:
 
 
 def openclaw_allowlisted_model(model: str) -> str:
-    """Id that agent `main` will accept. Never send the rejected fast alias."""
+    """Backend id to put on x-openclaw-model.
+
+    The approved classify floor is xai/grok-4-fast-reasoning. The bare
+    grok-4-fast alias is rewritten to that id. grok-4.6 is kept for the
+    lighter filter hop and is not rewritten.
+    """
     raw = str(model or "").strip()
-    if not raw or is_classify_banned(raw) or raw.lower() in _OPENCLAW_REJECTED:
+    if not raw or is_classify_banned(raw) or raw.lower() in _OPENCLAW_FAST_ALIAS:
         return OPENCLAW_FLOOR_MODEL
     return raw
 
 
 def openclaw_models() -> list[str]:
-    """Allowlisted backend, then grok-4.6 if an override is a different id.
+    """Classify/meta/analyst backend. Default is fast-reasoning.
 
-    Empty, banned, or grok-4-fast* env values resolve to xai/grok-4.6.
+    An explicit non-banned override is tried first, then the floor id.
     """
     raw = (os.environ.get("OPENCLAW_BACKEND_MODEL") or "").strip()
+    if not raw:
+        return [OPENCLAW_FLOOR_MODEL]
     preferred = openclaw_allowlisted_model(raw)
     if preferred == OPENCLAW_FLOOR_MODEL:
         return [OPENCLAW_FLOOR_MODEL]
@@ -607,7 +615,7 @@ def openclaw_models() -> list[str]:
 
 
 def openclaw_backend_model() -> str:
-    """First floor backend id. Default matches src/config.py: xai/grok-4.6."""
+    """First classify/meta/analyst backend id."""
     models = openclaw_models()
     return models[0] if models else OPENCLAW_FLOOR_MODEL
 
@@ -622,8 +630,14 @@ def primary_models_for(lane: str, tmpl: str = "custom") -> list[str]:
 
     news_classify is the quality floor: no 8B, no Ministral. SiliconFlow's
     allowlist is Qwen3-8B only, so that lane contributes no classify ID.
+    news_filter is the lighter OpenClaw hop (grok-4.6). Other providers
+    keep their news_impact list.
     """
     tmpl = str(tmpl or "custom").strip()
+    if tmpl == "news_filter":
+        if lane == "openclaw":
+            return [OPENCLAW_FILTER_MODEL]
+        tmpl = "news_impact"
     if tmpl == "news_classify":
         if lane == "openclaw":
             raw = openclaw_models()

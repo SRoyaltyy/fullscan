@@ -51,7 +51,6 @@ def analyst_prompt(
     constraint: str,
     pack_facts: list[dict] | None = None,
 ) -> str:
-    tests = FAMILY_TESTS.get(family, FAMILY_TESTS["time"])
     facts = pack_facts or []
     fact_lines = "\n".join(
         f"- {f.get('text', '')} ({f.get('url', '')})" for f in facts[:8]
@@ -59,17 +58,17 @@ def analyst_prompt(
     return (
         f"You are analysing a {event_class} / {sign} article (family={family}).\n"
         f"q5={q5}. Constraint: {constraint}\n\n"
+        f"{family_block(family)}\n"
         "1. Name the constraint in one sentence.\n"
         "2. Fill losers[] from the test below. If none, say why.\n"
         "3. Fill winners[] from the test below. If none, say why.\n"
         "4. Attach roles only if the test produces them: "
-        "substitute, unscathed_rival, arms_dealer.\n"
+        "harm_set, substitute, unscathed_rival, arms_dealer.\n"
         "5. Direction is up|down|mixed|not_determined. "
         "If a flip-question is unanswered, not_determined.\n"
         "6. Do not mention any other event_class.\n"
         "7. unit_vs_parent is whole|slice. tradeable_expression is direct|proxy|none.\n"
         "8. A sector cannot be both bullish and bearish; use mixed.\n\n"
-        f"WINNER/LOSER TEST:\n{tests}\n\n"
         f"PACK FACTS (quote or unknown — do not invent):\n{fact_lines}\n\n"
         f"Title: {title or '(untitled)'}\nBody: {body or ''}\n\n"
         "STRICT JSON:\n"
@@ -229,6 +228,59 @@ _SLOT_GRAMMAR = (
 )
 
 
+def family_block(family: str) -> str:
+    """Full family text for the analyst hop. One family only."""
+    fam = family if family in FAMILY_TESTS else "time"
+    flips = "\n".join(f"- {q}" for q in FLIP_QUESTIONS[fam])
+    rules = _GOLD_FAMILY_RULES.get(fam, "")
+    return (
+        f"FAMILY BLOCK ({fam} only). Do not analyse another family.\n"
+        "ROLES you may assign:\n"
+        "- harm_set: the named harm (cannot operate, sued, or breached). direction down.\n"
+        "- substitute: the listed channel the buyer uses when the primary is blocked.\n"
+        "- unscathed_rival: competes and is outside the harm set. stays_out may be true.\n"
+        "- arms_dealer: sells the input both sides still buy. If that question is "
+        "unanswered, direction is not_determined.\n"
+        "unit_vs_parent is whole or slice. A product slice is not the parent company.\n"
+        "tradeable_expression is direct, proxy, or none. none means there is no listed ticket.\n"
+        "CLOCK: 0-1d only when this session can trade the print. "
+        "1-4w, 1-6m, 6m+, and medium are not 0-1d. "
+        "monday_open is the next session after a print past the cash close.\n"
+        f"{HISTORY_SLOT}\n"
+        f"FLIP QUESTIONS for this family only. Answer each one:\n{flips}\n"
+        f"{rules}"
+        f"WINNER/LOSER TEST:\n{FAMILY_TESTS[fam]}\n"
+    )
+
+
+_GOLD_FAMILY_RULES = {
+    "blast": (
+        "GOLD RULES for this family:\n"
+        "- TSA → CAR. Unpaid TSA officers during a government shutdown, with "
+        "short-staffed airport checkpoints, are blast_ops, not a strike. "
+        "Airlines are the harm set (down). The listed substitute is CAR "
+        "(rental cars, axiom A_AIR_02). ACTION starts BUY CAR. Do not treat "
+        "labor_stop as this article.\n"
+        "- Buist: META stays_out. Meta is the unscathed_rival (not a defendant). "
+        "Do not emit SELL GOOGL or SELL GOOG on a 0-1d horizon. The harm set is "
+        "the named labs. Horizon for the complaint is 1-4w, not a same-day tape sell.\n"
+    ),
+    "structure": (
+        "GOLD RULES for this family:\n"
+        "- TSV not Energy. Tokenized-securities venue relief is market_structure. "
+        "Keep venues (COIN, NDAQ, ICE, CME, CBOE). Drop any Energy hit the title "
+        "never names. A 5-year exemption is not a permanent law.\n"
+    ),
+    "permission": (
+        "GOLD RULES for this family:\n"
+        "- AMRX Monday. An FDA approval is a gate, not a trial readout. "
+        "Lanreotide / Amneal printed at 16:01, after the cash close, so the "
+        "clock is monday_open and the horizon is 1-6m. Not 0-1d. "
+        "q5 may be impulse or regime_break; the class stays gate.\n"
+    ),
+}
+
+
 def meta_prompt(
     title: str,
     body: str,
@@ -236,27 +288,70 @@ def meta_prompt(
     event_class: str,
     constraint: str,
 ) -> str:
-    """M1–M3. Runs after class is locked and before any lookup."""
+    """Full M1–M5 pack. The JSON this hop returns is still M1–M3.
+
+    M4 and M5 are in the prompt so the model writes questions that can
+    survive the invert test and the citation check. They are not a one-liner.
+    """
     return (
         "The event_class is locked. Do not change it. Do not name a ticker.\n"
         f"family={family}\n"
         f"event_class={event_class}\n"
         f"constraint={constraint}\n\n"
-        "M1 need_context: If you believe only this page, can you name the "
-        "constraint, the harm set, and a listed expression? Answer yes or no.\n"
-        "M2 blocking_facts: list the slots that must be answered before a "
-        "direction is legal. Use ONLY these slots: "
-        f"{_SLOT_GRAMMAR}.\n"
-        "Each question binds one noun that already appears in the article. "
-        "No theme fishing. No 'what is the AI angle'. No 'who should I buy'.\n"
-        "M3: a question is kept only when it can change one of "
-        "direction, class, clock, unit_vs_parent, tradeable_expression. "
-        "Put the rejects in m3_dropped with why set to one of "
-        "ai_angle, who_should_i_buy, already_in_article, undated_weather, "
-        "theme_fishing, no_direction_change.\n\n"
+        "This hop is the meta-question classifier. Read every section before "
+        "you write a question. A one-line slot list is not enough.\n\n"
+        "M1 need_context:\n"
+        "If you believe only this page, can you name the constraint, the harm "
+        "set, and a listed expression? Answer yes or no.\n"
+        "yes means the page itself is enough and a pack is still required when "
+        "the family is blast, structure, quantity, or permission.\n"
+        "no means a missing fact blocks a direction. Do not guess the direction "
+        "to paper over that gap.\n\n"
+        "M2 blocking_facts:\n"
+        "List the slots that must be answered before a direction is legal.\n"
+        "Use ONLY these slot letters. Each line is the whole meaning of that letter.\n"
+        "- C: constraint. The physical or legal limit the article changes.\n"
+        "- T: time. When the constraint binds, including the trading clock.\n"
+        "- H: harm. Who is in the harm set and cannot operate, is sued, or is breached.\n"
+        "- E: expression. The listed instrument that carries the constraint.\n"
+        "- S: substitute. The listed channel the buyer uses if the primary is blocked.\n"
+        "- R: rival. Who competes and is outside the harm set.\n"
+        "- A: ammo. The input both sides still buy (arms dealer).\n"
+        "- D: durability. Whether the permission or exemption lasts, or rolls off.\n"
+        "- I: invert. The headline that would flip the direction.\n"
+        "- P: priced. What the tape already paid for, versus what just changed.\n"
+        "- Y-S: salience. Which standing axiom just became false, and the last analog year.\n"
+        "- Y-T: transmission. Which listed pipe, book, or forced flow changed because that axiom died.\n"
+        "Each question binds one noun that already appears in the article.\n"
+        "The noun must be in the question text. A theme is not a noun.\n"
+        "changes is one of direction, class, clock, unit_vs_parent, tradeable_expression.\n"
+        "blocks lists which of those the unanswered question freezes.\n\n"
+        "M3 bullshit filters:\n"
+        "Drop a question. Do not ask it. Put it in m3_dropped with why set to exactly one of:\n"
+        "- ai_angle: the question is 'what is the AI angle' or any AI-theme fishing.\n"
+        "- who_should_i_buy: the question asks who to buy instead of naming a constraint.\n"
+        "- already_in_article: the question sentence is already the article text.\n"
+        "- undated_weather: the question says weather, or a reprint, with no date.\n"
+        "- theme_fishing: the noun is not in the article, or the question is a sector essay.\n"
+        "- no_direction_change: answering it cannot change direction, class, clock, "
+        "unit_vs_parent, or tradeable_expression.\n"
+        "A kept question must be able to change one of those five. Otherwise it is "
+        "no_direction_change and it is dropped.\n\n"
+        "M4 invert rule:\n"
+        "invert is one sentence: the headline that would flip the direction.\n"
+        "Opposite-headline test: if that headline were the article, the signs reverse.\n"
+        "Every question that blocks direction later gets status answered or blocked.\n"
+        "blocked means the direction is not_determined. Do not guess.\n"
+        "pack_complete is true only when every direction-blocking question is "
+        "answered or blocked. An open question means the pack is not complete.\n\n"
+        "M5 citation rule:\n"
+        "A ticker may be emitted only when a Finviz row or a pack quote cites it.\n"
+        "Drop any ticker that is not on a cited instrument. Do not invent one.\n"
+        "M5 runs after the analyst. Write questions now that name nouns the pack "
+        "can actually cite. Do not name the ticker in this hop.\n\n"
         f"Title: {title}\n"
         f"Body: {body or ''}\n\n"
-        "STRICT JSON:\n"
+        "STRICT JSON for this hop is M1–M3 only. M4 and M5 are rules, not extra keys.\n"
         '{"m1":{"need_context":"yes|no"},'
         '"m2":[{"slot":"H","noun":"","question":"",'
         '"changes":"direction|class|clock|unit_vs_parent|tradeable_expression",'
