@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T16:08:19.070374-04:00",
+  "generated_at": "2026-09-24T16:27:31.895743-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -1832,6 +1832,31 @@
         }
       ],
       "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2"
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T16:24:11.058825-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-24_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 6238,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-09-24_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 3208,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-09-24\n**Generated:** 2026-09-24T16:24:10.948576-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks ended mixed as global bond selloff pushed Treasury yields toward multi-decade highs and Brent crude held above $100 on Middle East tensions\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** Brent crude $100.0\n**CPI/Fed:** \u2014\n**Leaders:** ORCL, P, META, MCD, MGM, DRI, COST\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-25\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-24\n**Generated:** 2026-09-24T16:24:10.948576-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks ended mixed as global bond selloff pushed Treasury yields toward multi-decade highs and Brent crude held above $100 on Middle East tensions\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** Brent crude $100.0\n**CPI/Fed:** \u2014\n**Leaders:** ORCL, P, META, MCD, MGM, DRI, COST\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-25\n**Clock use:** `next_open`"
     }
   ],
   "source": "publish_live_boards"
