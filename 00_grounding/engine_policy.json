@@ -376,8 +376,8 @@
       }
     }
   },
-  "version": 22,
-  "updated": "2026-09-24T18:27:51-04:00",
+  "version": 23,
+  "updated": "2026-09-24T19:05:37-04:00",
   "rules": {
     "min_n": 8,
     "mute_below": 0.45,
@@ -601,6 +601,12 @@
         "Real Estate.S1_SECTOR_FACTORS: 0.5 -> 1.0 (n=18, hit=0.556)",
         "Real Estate.S2_BREADTH: 1.0 -> 1.25 (n=12, hit=0.667)",
         "Utilities.S2_BREADTH: 1.0 -> 1.25 (n=12, hit=0.667)"
+      ]
+    },
+    {
+      "at": "2026-09-24T19:05:37-04:00",
+      "changes": [
+        "hold"
       ]
     }
   ]

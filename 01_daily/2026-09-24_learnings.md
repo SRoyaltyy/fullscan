@@ -1,6 +1,6 @@
 # Learnings report — 2026-09-24
 
-Generated: **2026-09-24T18:27:51.333991-04:00** by `src/learn_cycle.py`.
+Generated: **2026-09-24T19:05:38.225499-04:00** by `src/learn_cycle.py`.
 
 This is the human-readable digest of what the bot **actually learned** this cycle: graded evidence, hypotheses (wins and losses), promoted standing rules, and **how that changes every daily workflow**.
 
@@ -18,7 +18,7 @@ Machine policy file (injected into predicts): `00_grounding/mutable_policy.md`.
 | Lessons promoted to active | 0 |
 | Lessons retired (efficacy-gated) | 10 |
 | Active lesson files now | 203 |
-| Engine policy version | 22 |
+| Engine policy version | 23 |
 
 ## 2. Accuracy by topic (evidence this cycle learned from)
 
@@ -533,7 +533,7 @@ Sectors (pooled S0–S4; per-sector overrides in engine_policy.json):
 - S2_BREADTH: n=142 sign-hit=0.62 → ×1.0
 - S3_FLOWS_POSITIONING: n=104 sign-hit=0.52 → ×0.5
 - S4_ETF_TAPE: n=154 sign-hit=0.63 → ×1.0
-Last change: general.B7_OIL_DOLLAR: 1.25 -> 1.0 (n=30, hit=0.633); Communication Services.S1_SECTOR_FACTORS: 1.0 -> 0.5 (n=10, hit=0.5); Consumer Cyclical.S3_FLOWS_POSITIONING: 0.5 -> 1.0 (n=9, hit=0.556); Industrials.S0_SHARED_MACRO: 1.0 -> 1.25 (n=15, hit=0.667); Real Estate.S1_SECTOR_FACTORS: 0.5 -> 1.0 (n=18, hit=0.556); Real Estate.S2_BREADTH: 1.0 -> 1.25 (n=12, hit=0.667)
+Last change: hold
 
 Progress vs baselines: `03_scoreboard/IMPROVEMENT_TRACKER.md`.
 
