@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T06:39:17.382925-04:00",
+  "generated_at": "2026-09-24T06:44:55.063062-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -16,19 +16,19 @@
     },
     {
       "ticker": "CHKP",
-      "score": 0.3383059605829564
+      "score": 0.22580596058295638
     },
     {
       "ticker": "GDYN",
-      "score": 0.4014324783164612
+      "score": 0.15893247831646115
     },
     {
       "ticker": "PRGS",
-      "score": 0.4651217377522372
+      "score": 0.22262173775223718
     },
     {
       "ticker": "NTNX",
-      "score": 0.21941954717996132
+      "score": 0.3469195471799613
     }
   ],
   "sell_1d": [
@@ -62,7 +62,7 @@
     },
     {
       "ticker": "ARE",
-      "score": -0.26983500225431734
+      "score": -0.5420850022543173
     }
   ],
   "flatten": {
@@ -86,7 +86,7 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "1 up / 6 down / 0 flat",
+    "said": "1 up / 8 down / 0 flat",
     "bullets": [
       "XLB DOWN -2.9",
       "XLC DOWN -11.3",
@@ -96,8 +96,8 @@
       "XLF DOWN -4.9",
       "XLV DOWN -4.3",
       "XLI DOWN -4.3",
-      "XLRE missing",
-      "XLK missing",
+      "XLRE DOWN -10.0",
+      "XLK DOWN -16.2",
       "XLU missing"
     ]
   },
