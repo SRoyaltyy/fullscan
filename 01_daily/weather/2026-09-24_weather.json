@@ -1,6 +1,6 @@
 {
  "date": "2026-09-24",
- "generated_at": "2026-09-24T05:56:23.978341-04:00",
+ "generated_at": "2026-09-24T05:57:05.893027-04:00",
  "stance_vocabulary": [
   "favorable",
   "neutral",
@@ -14,19 +14,17 @@
   "fed_score": null,
   "dollar_oil_score": null,
   "futures_score": null,
-  "yields": "flat",
-  "yields_source": "fred_dgs10",
-  "dgs10_delta_1d": 0.0,
-  "dgs10_current": 4.96,
+  "yields": "unknown",
+  "yields_source": "llm_factor_fallback",
   "dollar": "flat",
   "dollar_source": "dxy",
-  "dxy_pct_1d": 0.12,
-  "vix_ratio": 0.904,
-  "vix_spot": 16.37,
-  "vix_delta_1d": 1.19,
+  "dxy_pct_1d": 0.11,
+  "vix_ratio": 0.907,
+  "vix_spot": 16.42,
+  "vix_delta_1d": 1.24,
   "vix_ratio_source": "vix/vix3m",
   "vix": "calm",
-  "oil_pct_1d": 1.97,
+  "oil_pct_1d": 1.87,
   "oil": "rising",
   "fear_greed": null,
   "fear_greed_label": null,
@@ -87,7 +85,7 @@
     "source": "finviz_week"
    },
    "Technology": {
-    "score": 0.485,
+    "score": 0.4,
     "dir": "flat",
     "conf": 0.4,
     "source": "finviz_week"
@@ -109,7 +107,7 @@
    "Healthcare": -1.3,
    "Industrials": -0.5,
    "Real Estate": -1.78,
-   "Technology": 0.485,
+   "Technology": 0.4,
    "Utilities": -3.0949999999999998
   },
   "events_bull": 1,
@@ -166,7 +164,7 @@
    "Technology": {
     "stance": "neutral",
     "confidence": "medium",
-    "why": "finviz sector median week +0.48% [tape]"
+    "why": "finviz sector median week +0.40% [tape]"
    },
    "Utilities": {
     "stance": "hostile",
@@ -298,58 +296,58 @@
   },
   "profit": {
    "no": {
-    "stance": "neutral",
+    "stance": "unknown",
     "confidence": "low",
-    "why": "risk-unknown, F&G None"
-   },
-   "yes": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "—"
+    "why": "no yields/risk signals"
    },
    "thin": {
-    "stance": "neutral",
+    "stance": "unknown",
     "confidence": "low",
-    "why": "—"
+    "why": "no yields/risk signals"
+   },
+   "yes": {
+    "stance": "unknown",
+    "confidence": "low",
+    "why": "no yields/risk signals"
    }
   },
   "lev": {
-   "high": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "—"
-   },
    "low": {
-    "stance": "neutral",
+    "stance": "unknown",
     "confidence": "low",
-    "why": "—"
+    "why": "no signals"
    },
    "mid": {
-    "stance": "neutral",
+    "stance": "unknown",
     "confidence": "low",
-    "why": "—"
+    "why": "no signals"
+   },
+   "high": {
+    "stance": "unknown",
+    "confidence": "low",
+    "why": "no signals"
    },
    "neg_equity": {
-    "stance": "hostile",
+    "stance": "unknown",
     "confidence": "low",
-    "why": "negative equity is distressed in any regime"
+    "why": "no signals"
    }
   },
   "style": {
    "growth": {
-    "stance": "neutral",
+    "stance": "unknown",
     "confidence": "low",
-    "why": "yields flat/unknown"
-   },
-   "value": {
-    "stance": "neutral",
-    "confidence": "low",
-    "why": "yields flat/unknown"
+    "why": "no yields/risk signals"
    },
    "blend": {
-    "stance": "neutral",
+    "stance": "unknown",
     "confidence": "low",
-    "why": "—"
+    "why": "no yields/risk signals"
+   },
+   "value": {
+    "stance": "unknown",
+    "confidence": "low",
+    "why": "no yields/risk signals"
    }
   },
   "mom": {
