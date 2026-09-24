@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T05:59:48.524935-04:00",
+  "generated_at": "2026-09-24T06:02:40.722104-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -10,9 +10,9 @@
     "MISSING News judge MD `01_daily/news/2026-09-24_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 6,
-    "partial": 0,
-    "fail": 2,
+    "ok": 4,
+    "partial": 3,
+    "fail": 1,
     "n": 8
   },
   "processes": [
@@ -59,7 +59,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 270913,
+          "size": 270739,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -70,10 +70,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 16777,
+          "size": 16714,
           "said": "MAP HEAT \u2014 2026-09-24",
           "bullets": [
-            "Export `finviz_2026-09-23.csv` \u00b7 11616 names \u00b7 generated 2026-09-24T05:54:09.476607-04:00",
+            "Export `finviz_2026-09-24.csv` \u00b7 11616 names \u00b7 generated 2026-09-24T05:56:23.702936-04:00",
             "TAPE (live futures)"
           ]
         }
@@ -180,9 +180,9 @@
       "key": "preopen",
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 3,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -231,7 +231,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 270913,
+          "size": 270739,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -240,22 +240,32 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-09-24_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 304512,
+          "said": "400 raw / 39 usable \u00b7 Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his w",
+          "bullets": [
+            "Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his word",
+            "Stocks Fall as Hawkish Warsh Boosts Fed Rate Hike Chances - Barchart.com",
+            "Analysis: Kevin Warsh sharpens inflation warning at Jackson Hole, signaling possible rate hike - CNBC",
+            "September Fed decision is now a coin flip as rate hike odds increase post Warsh - CNBC"
+          ]
         },
         {
           "key": "events",
           "name": "Events JSON",
           "path": "01_daily/events/2026-09-24_events.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 31396,
+          "said": "33 events",
+          "bullets": [
+            "Trump\u2013Xi White House summit; US\u2013China trade truce extended to Jan 10",
+            "US\u2013Iran UNGA talks on reopening Hormuz; 'very productive' 3-hour contact",
+            "Hormuz tanker war still live; Brent ~$98\u2013100, strait effectively closed to commercial shipping",
+            "Iranian President Pezeshkian defiant UNGA address"
+          ]
         },
         {
           "key": "judge",
@@ -328,11 +338,16 @@
           "name": "Pre-open QC JSON",
           "path": "01_daily/2026-09-24_preopen_qc.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "all_ok=False",
+          "size": 7277,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 16 fail",
+          "bullets": [
+            "general_predict:missing",
+            "news_judge:missing",
+            "news_actions:missing",
+            "finviz_market_digest:missing"
+          ]
         },
         {
           "key": "status",
@@ -478,8 +493,13 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "news 400 raw / 39 usable \u00b7 Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his w",
+      "bullets": [
+        "Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his word",
+        "Stocks Fall as Hawkish Warsh Boosts Fed Rate Hike Chances - Barchart.com",
+        "Analysis: Kevin Warsh sharpens inflation warning at Jackson Hole, signaling possible rate hike - CNBC",
+        "September Fed decision is now a coin flip as rate hike odds increase post Warsh - CNBC"
+      ]
     },
     {
       "key": "weather",
@@ -513,16 +533,16 @@
           "path": "01_daily/weather/2026-09-24_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9280 vix=calm yields=flat",
-          "size": 9280,
-          "said": "hostile 5 \u00b7 neutral 6",
+          "reason": "sectors=11 bytes=9284 vix=calm yields=flat",
+          "size": 9284,
+          "said": "favorable 1 \u00b7 hostile 5 \u00b7 neutral 5",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Energy, Real Estate, Utilities",
             "events bull 1 / bear 3"
           ]
         }
       ],
-      "said": "hostile 5 \u00b7 neutral 6",
+      "said": "favorable 1 \u00b7 hostile 5 \u00b7 neutral 5",
       "bullets": [
         "hostile: Basic Materials, Communication Services, Energy, Real Estate, Utilities",
         "events bull 1 / bear 3"
@@ -536,7 +556,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 1,
       "files": [
         {
@@ -544,13 +564,11 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-09-24_ab_checklist.csv",
           "role": "optional",
-          "status": "OK",
-          "reason": "rows=2658",
-          "size": 7628740,
-          "said": "27 rows",
-          "bullets": [
-            "CFFN, ANET, WWW, DSGX, SKM, HSBC, CXW, BMRN"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "ab_enriched",
@@ -558,17 +576,17 @@
           "path": "data/ab_checklist/2026-09-24_ab_checklist_enriched.csv",
           "role": "required",
           "status": "OK",
-          "reason": "rows=2658",
-          "size": 8468080,
-          "said": "25 rows",
+          "reason": "rows=11666",
+          "size": 3297063,
+          "said": "207 rows",
           "bullets": [
-            "ETN, CDNA, WWW, MMSI, TER, AMD, JCI, ILMN"
+            "FORM, MU, KOPN, HOOD, LEGH, KMDA, FCX, NVT"
           ]
         }
       ],
-      "said": "25 rows",
+      "said": "207 rows",
       "bullets": [
-        "ETN, CDNA, WWW, MMSI, TER"
+        "FORM, MU, KOPN, HOOD, LEGH"
       ]
     },
     {
@@ -627,11 +645,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "OK",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 4,
+      "n_req_ok": 1,
       "n_req": 4,
-      "n_opt_ok": 3,
+      "n_opt_ok": 1,
       "n_opt": 3,
       "files": [
         {
@@ -699,9 +717,9 @@
           "path": "01_daily/weather/2026-09-24_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9280 vix=calm yields=flat",
-          "size": 9280,
-          "said": "hostile 5 \u00b7 neutral 6",
+          "reason": "sectors=11 bytes=9284 vix=calm yields=flat",
+          "size": 9284,
+          "said": "favorable 1 \u00b7 hostile 5 \u00b7 neutral 5",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Energy, Real Estate, Utilities",
             "events bull 1 / bear 3"
@@ -713,11 +731,11 @@
           "path": "data/ab_checklist/2026-09-24_ab_checklist_enriched.csv",
           "role": "input",
           "status": "OK",
-          "reason": "rows=2658",
-          "size": 8468080,
-          "said": "25 rows",
+          "reason": "rows=11666",
+          "size": 3297063,
+          "said": "207 rows",
           "bullets": [
-            "ETN, CDNA, WWW, MMSI, TER, AMD, JCI, ILMN"
+            "FORM, MU, KOPN, HOOD, LEGH, KMDA, FCX, NVT"
           ]
         },
         {
@@ -727,10 +745,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5898",
-          "size": 2145343,
-          "said": "208 rows",
+          "size": 2162795,
+          "said": "203 rows",
           "bullets": [
-            "HALO, CDNA, KEYS, NVT, FORM, ONC, NVDA, HRMY"
+            "KEYS, FORM, NVDA, SMTC, ACMR, APH, MU, SKHY"
           ]
         },
         {
@@ -738,23 +756,21 @@
           "name": "Peer RS CSV",
           "path": "data/peers/2026-09-24_peer_rs.csv",
           "role": "required",
-          "status": "OK",
-          "reason": "rows=5098",
-          "size": 817936,
-          "said": "495 rows",
-          "bullets": [
-            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "book_json",
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-24_stock_book.json",
           "role": "required",
-          "status": "OK",
-          "reason": "horizons=5 names=215",
-          "size": 1480936,
-          "said": "1d BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -762,24 +778,21 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-09-24_stock_book.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 83416,
-          "said": "Stock book \u2014 2026-09-24",
-          "bullets": [
-            "_Generated 2026-09-24T05:57:30.704824-04:00_",
-            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-09-24_green.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 585,
-          "said": "0 green \u00b7",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -801,25 +814,25 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-24)",
+          "status": "FAIL",
+          "reason": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
           "size": 8379317,
-          "said": "live-book poller + today.json (2026-09-24)",
+          "said": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
           "bullets": []
         }
       ],
-      "said": "208 rows",
+      "said": "203 rows",
       "bullets": [
-        "HALO, CDNA, KEYS, NVT, FORM"
+        "KEYS, FORM, NVDA, SMTC, ACMR"
       ]
     },
     {
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "OK",
-      "inputs_ready": true,
-      "n_req_ok": 2,
+      "status": "PARTIAL",
+      "inputs_ready": false,
+      "n_req_ok": 1,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -829,10 +842,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-24_stock_book.json",
           "role": "input",
-          "status": "OK",
-          "reason": "horizons=5 names=215",
-          "size": 1480936,
-          "said": "1d BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -840,10 +853,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-24)",
+          "status": "FAIL",
+          "reason": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
           "size": 8379317,
-          "said": "live-book poller + today.json (2026-09-24)",
+          "said": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
           "bullets": []
         },
         {
@@ -1551,6 +1564,31 @@
         }
       ],
       "preview": "2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, "
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T06:02:40.373739-04:00",
+      "files": [
+        {
+          "path": "01_daily/events/2026-09-24_events.json",
+          "ok": true,
+          "reason": "",
+          "size": 31396,
+          "preview": "33 events \u00b7 Trump\u2013Xi White House summit; US\u2013China trade truce extended to Jan 10 | US\u2013Iran UNGA talks on reopening Hormuz; 'very productive' 3-hour conta | Hormuz tanker war still live; Brent ~$98\u2013100, strait effectively close | Iranian President Pezeshkian defiant UNGA address | US\u2013China trade truce extension to Jan 10 (Bessent announcement) | Graham Russia/Iran sanctions law \u2014 up to 100% secondary tariffs on ene"
+        },
+        {
+          "path": "01_daily/events/2026-09-24_events.md",
+          "ok": true,
+          "reason": "",
+          "size": 11875,
+          "preview": "# Event Scan \u2014 2026-09-24\n- events tracked: **33** (via openclaw)\n- uncertainty: **?**\n- summary:"
+        }
+      ],
+      "preview": "33 events \u00b7 Trump\u2013Xi White House summit; US\u2013China trade truce extended to Jan 10 | US\u2013Iran UNGA talks on reopening Hormuz; 'very productive' 3-hour conta | Hormuz tanker war still live; Brent ~$98\u2013100, strait effectively close | Iranian President Pezeshkian defiant UNGA address | US\u2013China trade truce extension to Jan 10 (Bessent announcement) | Graham Russia/Iran sanctions law \u2014 up to 100% secondary tariffs on ene \u00b7 # Event Scan \u2014 2026-09-24\n- events tracked: **33** (via openclaw)\n- uncertainty: **?**\n- summary:"
     }
   ],
   "href": {
