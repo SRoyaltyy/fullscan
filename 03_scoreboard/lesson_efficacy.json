@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-09-23T16:59:28.091600-04:00",
+  "generated_at": "2026-09-24T18:27:51.295009-04:00",
   "window": 7,
   "summary": {
     "n_active": 213,
-    "n_judged": 172,
+    "n_judged": 173,
     "improved": 64,
-    "flat": 28,
-    "worse": 80,
-    "mean_delta": -0.028
+    "flat": 27,
+    "worse": 82,
+    "mean_delta": -0.026
   },
   "lessons": [
     {
@@ -230,10 +230,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.25,
-        "n": 4
+        "hit": 0.4,
+        "n": 5
       },
-      "delta": -0.464,
+      "delta": -0.314,
       "verdict": "WORSE"
     },
     {
@@ -784,10 +784,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.333,
-        "n": 3
+        "hit": 0.25,
+        "n": 4
       },
-      "verdict": "insufficient"
+      "delta": -0.179,
+      "verdict": "WORSE"
     },
     {
       "lesson": "a-low-beta-defensive-sector-etf-xlp-xlu-xlv-like-posts-a-net.md",
@@ -862,10 +863,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.0,
-        "n": 5
+        "hit": 0.167,
+        "n": 6
       },
-      "delta": -0.714,
+      "delta": -0.547,
       "verdict": "WORSE"
     },
     {
@@ -1284,8 +1285,8 @@
         "n": 7
       },
       "after": {
-        "hit": 0.0,
-        "n": 2
+        "hit": 0.333,
+        "n": 3
       },
       "verdict": "insufficient"
     },
@@ -1411,10 +1412,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.0,
-        "n": 4
+        "hit": 0.2,
+        "n": 5
       },
-      "delta": -0.429,
+      "delta": -0.229,
       "verdict": "WORSE"
     },
     {
@@ -1667,10 +1668,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.2,
-        "n": 5
+        "hit": 0.167,
+        "n": 6
       },
-      "delta": -0.086,
+      "delta": -0.119,
       "verdict": "WORSE"
     },
     {
@@ -1683,10 +1684,10 @@
         "n": 7
       },
       "after": {
-        "hit": 0.167,
-        "n": 6
+        "hit": 0.143,
+        "n": 7
       },
-      "delta": -0.119,
+      "delta": -0.143,
       "verdict": "WORSE"
     },
     {
@@ -1842,8 +1843,8 @@
         "n": 7
       },
       "after": {
-        "hit": 0.0,
-        "n": 1
+        "hit": 0.5,
+        "n": 2
       },
       "verdict": "insufficient"
     },
@@ -2683,11 +2684,11 @@
         "n": 7
       },
       "after": {
-        "hit": 0.25,
-        "n": 4
+        "hit": 0.2,
+        "n": 5
       },
-      "delta": -0.036,
-      "verdict": "flat"
+      "delta": -0.086,
+      "verdict": "WORSE"
     },
     {
       "lesson": "this-shows-up-on-1w-books-when-the-news-family-is-absent-and.md",
@@ -3286,11 +3287,11 @@
     {
       "topic": "general",
       "last10": {
-        "hit": 0.6,
+        "hit": 0.5,
         "n": 10
       },
       "prev10": {
-        "hit": 0.4,
+        "hit": 0.5,
         "n": 10
       }
     },
@@ -3341,17 +3342,6 @@
     {
       "topic": "sector:Energy",
       "last10": {
-        "hit": 0.6,
-        "n": 10
-      },
-      "prev10": {
-        "hit": 0.4,
-        "n": 10
-      }
-    },
-    {
-      "topic": "sector:Financial",
-      "last10": {
         "hit": 0.7,
         "n": 10
       },
@@ -3361,13 +3351,24 @@
       }
     },
     {
-      "topic": "sector:Healthcare",
+      "topic": "sector:Financial",
       "last10": {
-        "hit": 0.3,
+        "hit": 0.6,
         "n": 10
       },
       "prev10": {
-        "hit": 0.6,
+        "hit": 0.4,
+        "n": 10
+      }
+    },
+    {
+      "topic": "sector:Healthcare",
+      "last10": {
+        "hit": 0.2,
+        "n": 10
+      },
+      "prev10": {
+        "hit": 0.7,
         "n": 10
       }
     },
@@ -3378,7 +3379,7 @@
         "n": 10
       },
       "prev10": {
-        "hit": 0.1,
+        "hit": 0.2,
         "n": 10
       }
     },
@@ -3400,18 +3401,18 @@
         "n": 10
       },
       "prev10": {
-        "hit": 0.3,
+        "hit": 0.4,
         "n": 10
       }
     },
     {
       "topic": "sector:Utilities",
       "last10": {
-        "hit": 0.5,
+        "hit": 0.6,
         "n": 10
       },
       "prev10": {
-        "hit": 0.2,
+        "hit": 0.1,
         "n": 10
       }
     }

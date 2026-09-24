@@ -12,11 +12,11 @@
       ],
       "entry_date": "2026-09-10",
       "entry_open": 185.24,
-      "window_through": "2026-09-23",
-      "trading_days_elapsed": 8,
+      "window_through": "2026-09-24",
+      "trading_days_elapsed": 9,
       "complete": false,
-      "latest_close": 195.34,
-      "current_return_pct": 5.45,
+      "latest_close": 194.71,
+      "current_return_pct": 5.11,
       "horizon_returns_pct": {
         "1d": 1.31,
         "3d": -0.81,
@@ -38,18 +38,18 @@
       ],
       "entry_date": "2026-09-10",
       "entry_open": 42.99,
-      "window_through": "2026-09-23",
-      "trading_days_elapsed": 8,
+      "window_through": "2026-09-24",
+      "trading_days_elapsed": 9,
       "complete": false,
-      "latest_close": 39.75,
-      "current_return_pct": 8.15,
+      "latest_close": 39.36,
+      "current_return_pct": 9.22,
       "horizon_returns_pct": {
         "1d": 1.42,
         "3d": 4.04,
         "5d": 3.12
       },
-      "mfe_pct": 8.26,
-      "mfe_day": "2026-09-23",
+      "mfe_pct": 9.22,
+      "mfe_day": "2026-09-24",
       "ever_profitable": true,
       "first_profitable_day": "2026-09-10"
     },
@@ -64,11 +64,11 @@
       ],
       "entry_date": "2026-09-10",
       "entry_open": 356.95,
-      "window_through": "2026-09-23",
-      "trading_days_elapsed": 8,
+      "window_through": "2026-09-24",
+      "trading_days_elapsed": 9,
       "complete": false,
-      "latest_close": 385.23,
-      "current_return_pct": 7.92,
+      "latest_close": 382.61,
+      "current_return_pct": 7.19,
       "horizon_returns_pct": {
         "1d": 6.12,
         "3d": 1.23,
@@ -90,15 +90,16 @@
       ],
       "entry_date": "2026-09-10",
       "entry_open": 360.03,
-      "window_through": "2026-09-23",
-      "trading_days_elapsed": 9,
+      "window_through": "2026-09-24",
+      "trading_days_elapsed": 10,
       "complete": false,
-      "latest_close": 354.99,
-      "current_return_pct": 1.42,
+      "latest_close": 350.36,
+      "current_return_pct": 2.76,
       "horizon_returns_pct": {
         "1d": -0.54,
         "3d": 6.12,
-        "5d": 3.67
+        "5d": 3.67,
+        "10d": 2.76
       },
       "mfe_pct": 7.21,
       "mfe_day": "2026-09-16",
@@ -131,7 +132,12 @@
       "win_rate": 100.0,
       "avg": 2.48
     },
-    "close_10d": null,
+    "close_10d": {
+      "n": 1,
+      "wins": 1,
+      "win_rate": 100.0,
+      "avg": 2.76
+    },
     "close_14d": null,
     "side_buy": {
       "n": 2,
@@ -154,7 +160,7 @@
         "n": 2,
         "wins": 2,
         "win_rate": 100.0,
-        "avg": 7.73
+        "avg": 8.21
       },
       "close_5d": {
         "n": 2,
