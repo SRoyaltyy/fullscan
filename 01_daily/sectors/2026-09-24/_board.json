@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T06:31:35.244832-04:00",
+  "generated_at": "2026-09-24T06:36:22.945148-04:00",
   "sectors": [
     {
       "sector": "Basic Materials",
@@ -183,19 +183,25 @@
     {
       "sector": "Real Estate",
       "etf": "XLRE",
-      "predicted_direction": null,
-      "predicted_magnitude_band": null,
-      "total_score": null,
-      "confidence_score": null,
-      "multiplier": null,
-      "divergence_flagged": null,
+      "predicted_direction": "down",
+      "predicted_magnitude_band": "mild",
+      "total_score": -9.97,
+      "confidence_score": 0.85,
+      "multiplier": 0.85,
+      "divergence_flagged": false,
       "actual_pct_change": null,
       "actual_direction": null,
       "direction_hit": null,
       "magnitude_hit": null,
-      "has_predict_md": false,
+      "has_predict_md": true,
       "has_outcome_md": false,
-      "components": {}
+      "components": {
+        "S0_SHARED_MACRO": -1.0,
+        "S1_SECTOR_FACTORS": -2.5,
+        "S2_BREADTH": -1.0,
+        "S3_FLOWS_POSITIONING": -0.5,
+        "S4_ETF_TAPE": -1.0
+      }
     },
     {
       "sector": "Technology",
