@@ -5,6 +5,13 @@ name: Lane one-shot 100
 # deterministic classify.py board. Does not touch flatten / Webull /
 # live factor-mine / Supabase.
 #
+# A full run shares the one ecs-openclaw runner with the cash pipeline.
+# It has the overnight window only: after the evening post-close pack
+# (about 18:30 ET) and before Pre-Open (~04:00 ET). Default budget is
+# 540 minutes, hard stop 03:30 ET. Gold and merge are reserved, and the
+# five shards split what is left. Each shard stops and uploads before
+# its slice ends. Merge still builds a board from partial shards.
+#
 # Snapshots already live in data/theme_radar_snapshots. Do not
 # sparse-checkout the theme-radar repo.
 
@@ -45,6 +52,32 @@ on:
         options:
           - grok
           - auto
+      run_budget_minutes:
+        description: >
+          Total wall-clock minutes for gold, five serial shards, and merge.
+          Default 540 is a dispatch at 18:30 ET through the 03:30 ET deadline.
+        required: false
+        default: "540"
+        type: string
+      deadline_et:
+        description: >
+          Hard stop in America/New_York (HH:MM). Default 03:30, before Pre-Open (~04:00 ET).
+          The run ends at the earlier of this clock and now plus run_budget_minutes.
+        required: false
+        default: "03:30"
+        type: string
+      gold_budget_minutes:
+        description: >
+          Minutes reserved for the gold gate. Run 35929449213 took 54; default 75 leaves slack.
+        required: false
+        default: "75"
+        type: string
+      merge_budget_minutes:
+        description: >
+          Minutes reserved so merge still finishes before the deadline. Default 20.
+        required: false
+        default: "20"
+        type: string
   # Push starts the gold gate only. The 100-draw is workflow_dispatch mode=full
   # after that gate is green. inputs.mode is empty on push, so shard stays off.
   push:
@@ -67,13 +100,15 @@ permissions:
 
 jobs:
   gold:
+    needs: budget
     # A push whose message contains [skip gold] does not call providers.
     if: ${{ github.event_name != 'push' || !contains(github.event.head_commit.message, '[skip gold]') }}
     # Gold is ECS only. A GitHub-hosted gold job cannot reach OpenClaw.
     runs-on: [self-hosted, ecs]
     # Lane JSON only. Pre-Open's OPENCLAW_TIMEOUT is 10800s for a tool turn.
     # 300s still returns on a hang so the free hopper runs.
-    timeout-minutes: 120
+    # The cap is the gold slice of the overnight window, not 120 minutes.
+    timeout-minutes: ${{ fromJSON(needs.budget.outputs.gold_timeout_minutes) }}
     steps:
       # Persistent ECS workspace. A bare checkout detaches whatever commit
       # the last job left behind before it fetches. Pin the dispatched SHA
@@ -181,7 +216,12 @@ jobs:
           OPENCLAW_BACKEND_MODEL: xai/grok-4.6
           OPENCLAW_LANE_TIMEOUT: "300"
           LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'grok' }}
-        run: PYTHONPATH=. python3 -m src.lane_one_shot --gold-only
+          PYTHONUNBUFFERED: "1"
+        run: |
+          PYTHONPATH=. python3 -m src.lane_one_shot --gold-only \
+            --budget-seconds "${{ needs.budget.outputs.gold_budget_seconds }}" \
+            --deadline-epoch "${{ needs.budget.outputs.deadline_epoch }}" \
+            --merge-reserve-seconds "${{ needs.budget.outputs.merge_reserve_seconds }}"
 
       - name: Upload gold report
         if: always()
@@ -194,12 +234,15 @@ jobs:
           if-no-files-found: warn
 
   shard:
-    needs: gold
+    needs: [gold, budget]
     if: ${{ github.event.inputs.mode == 'full' }}
     runs-on: ${{ (github.event_name == 'push' || github.event.inputs.runner == 'ubuntu') && 'ubuntu-latest' || fromJSON('["self-hosted","ecs"]') }}
-    timeout-minutes: 240
+    # One slice of (window - gold - merge) / 5.
+    # The draw loop stops earlier so Upload shard still runs.
+    timeout-minutes: ${{ fromJSON(needs.budget.outputs.shard_job_timeout_minutes) }}
     strategy:
       fail-fast: false
+      max-parallel: 1
       matrix:
         shard: [0, 1, 2, 3, 4]
     steps:
@@ -291,12 +334,16 @@ jobs:
           OPENCLAW_BACKEND_MODEL: xai/grok-4.6
           OPENCLAW_LANE_TIMEOUT: "300"
           LLM_BACKEND: ${{ github.event.inputs.llm_backend || 'grok' }}
+          PYTHONUNBUFFERED: "1"
         run: |
           PYTHONPATH=. python3 -m src.lane_one_shot \
             --shard "${{ matrix.shard }}" \
             --shards 5 \
             --target "${{ github.event.inputs.target_per_shard || '20' }}" \
-            --max-draws "${{ github.event.inputs.max_draws_per_shard || '150' }}"
+            --max-draws "${{ github.event.inputs.max_draws_per_shard || '150' }}" \
+            --budget-seconds "${{ needs.budget.outputs.shard_budget_seconds }}" \
+            --deadline-epoch "${{ needs.budget.outputs.deadline_epoch }}" \
+            --merge-reserve-seconds "${{ needs.budget.outputs.merge_reserve_seconds }}"
 
       - name: Upload shard
         if: always()
@@ -307,10 +354,13 @@ jobs:
           if-no-files-found: warn
 
   merge:
-    needs: [gold, shard]
-    if: ${{ github.event.inputs.mode == 'full' && needs.gold.result == 'success' && (needs.shard.result == 'success' || needs.shard.result == 'failure') }}
+    needs: [gold, shard, budget]
+    # A timed-out shard is "cancelled". always() lets merge run from
+    # whatever shard files were uploaded. A user-cancelled workflow
+    # still skips this job. Gold must have passed.
+    if: ${{ always() && github.event.inputs.mode == 'full' && needs.gold.result == 'success' && needs.shard.result != 'skipped' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: ${{ fromJSON(needs.budget.outputs.merge_timeout_minutes) }}
     steps:
       - uses: actions/checkout@v4
 
@@ -323,14 +373,25 @@ jobs:
 
       - name: Merge board
         id: merge
-        run: PYTHONPATH=. python3 -m src.lane_one_shot --merge one_shot_artifacts --expect 100
+        run: |
+          PYTHONPATH=. python3 -m src.lane_one_shot \
+            --merge one_shot_artifacts --expect 100 --shard-count 5
 
-      - name: Require 100, gold pass, floor classify
-        id: ready
+      - name: Report full-board check
+        if: steps.merge.outcome == 'success'
+        continue-on-error: true
         run: PYTHONPATH=. python3 -m src.lane_one_shot --check-board 03_scoreboard/LANE_ONE_SHOT_100.md
 
+      - name: Upload merged board
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lane-one-shot-board
+          path: 03_scoreboard/LANE_ONE_SHOT_100.md
+          if-no-files-found: warn
+
       - name: Commit board to this branch
-        if: steps.ready.outcome == 'success'
+        if: steps.merge.outcome == 'success'
         run: |
           git config user.name "Market-Bot-Automaton"
           git config user.email "bot@users.noreply.github.com"
@@ -341,3 +402,27 @@ jobs:
           fi
           git commit -m "auto: lane one-shot 100 board"
           git push origin "HEAD:${GITHUB_REF_NAME}"
+
+  budget:
+    # Ubuntu, not the ECS runner. Gold and every shard read this plan.
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      deadline_epoch: ${{ steps.plan.outputs.deadline_epoch }}
+      gold_timeout_minutes: ${{ steps.plan.outputs.gold_timeout_minutes }}
+      gold_budget_seconds: ${{ steps.plan.outputs.gold_budget_seconds }}
+      merge_timeout_minutes: ${{ steps.plan.outputs.merge_timeout_minutes }}
+      merge_reserve_seconds: ${{ steps.plan.outputs.merge_reserve_seconds }}
+      shard_job_timeout_minutes: ${{ steps.plan.outputs.shard_job_timeout_minutes }}
+      shard_budget_seconds: ${{ steps.plan.outputs.shard_budget_seconds }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Plan overnight window
+        id: plan
+        run: |
+          PYTHONPATH=. python3 -m src.lane_one_shot --print-budgets \
+            --shards 5 \
+            --run-budget-minutes "${{ github.event.inputs.run_budget_minutes || '540' }}" \
+            --deadline-et "${{ github.event.inputs.deadline_et || '03:30' }}" \
+            --gold-budget-minutes "${{ github.event.inputs.gold_budget_minutes || '75' }}" \
+            --merge-budget-minutes "${{ github.event.inputs.merge_budget_minutes || '20' }}"

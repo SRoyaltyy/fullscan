@@ -1222,6 +1222,22 @@ def gold_status(row: dict) -> str:
     return ""
 
 
+def _coverage_line(item: dict) -> str:
+    """One scoreboard line for a shard. Missing shards stay visible."""
+    if item.get("status") == "missing":
+        return f"- shard {item.get('shard')}: missing"
+    elapsed = item.get("elapsed_seconds")
+    elapsed_bit = f" elapsed={elapsed}s" if elapsed is not None else ""
+    target = item.get("target")
+    target_bit = f"/{target}" if target not in (None, "") else ""
+    return (
+        f"- shard {item.get('shard')}: {item.get('status')} "
+        f"kept={item.get('n_kept')}{target_bit} "
+        f"drawn={item.get('n_drawn')} rejected={item.get('n_rejected')} "
+        f"stop={item.get('stop_reason')}{elapsed_bit}"
+    )
+
+
 def render_markdown(header: dict, rows: list[dict]) -> str:
     lines = [
         "# Lane one-shot 100",
@@ -1236,6 +1252,14 @@ def render_markdown(header: dict, rows: list[dict]) -> str:
         f"- finviz_file: {header.get('finviz_file') or ''}",
         f"- status: {header.get('status') or 'SHORTFALL'}",
         "",
+    ]
+    coverage = header.get("shard_coverage") or []
+    if coverage:
+        lines += ["## Shard coverage", ""]
+        for item in coverage:
+            lines.append(_coverage_line(item))
+        lines.append("")
+    lines += [
         "## Hop histogram",
         "",
     ]
