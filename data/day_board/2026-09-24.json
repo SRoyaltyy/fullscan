@@ -1,12 +1,12 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T06:42:08.232158-04:00",
+  "generated_at": "2026-09-24T06:42:12.697166-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 5,
-    "partial": 3,
+    "ok": 4,
+    "partial": 4,
     "fail": 0,
     "n": 8
   },
@@ -702,7 +702,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 4,
-      "n_opt_ok": 2,
+      "n_opt_ok": 1,
       "n_opt": 3,
       "files": [
         {
@@ -886,10 +886,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-24)",
+          "status": "FAIL",
+          "reason": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
           "size": 8379317,
-          "said": "live-book poller + today.json (2026-09-24)",
+          "said": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
           "bullets": []
         }
       ],
@@ -902,9 +902,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "OK",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 1,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -925,10 +925,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-24)",
+          "status": "FAIL",
+          "reason": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
           "size": 8379317,
-          "said": "live-book poller + today.json (2026-09-24)",
+          "said": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
           "bullets": []
         },
         {
@@ -1901,6 +1901,24 @@
         }
       ],
       "preview": "10/10 sector predicts ok: basic_materials, communication_services, consumer_cyclical, energy, financial, healthcare, industrials, real_estate"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T06:42:12.279781-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-24/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 6974,
+          "preview": "keys: date, generated_at, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, sectors"
     }
   ],
   "href": {
