@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T05:59:23.755623-04:00",
+  "generated_at": "2026-09-24T05:59:36.336461-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -182,7 +182,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -240,11 +240,16 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-09-24_parsed.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 304512,
+          "said": "400 raw / 39 usable \u00b7 Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his w",
+          "bullets": [
+            "Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his word",
+            "Stocks Fall as Hawkish Warsh Boosts Fed Rate Hike Chances - Barchart.com",
+            "Analysis: Kevin Warsh sharpens inflation warning at Jackson Hole, signaling possible rate hike - CNBC",
+            "September Fed decision is now a coin flip as rate hike odds increase post Warsh - CNBC"
+          ]
         },
         {
           "key": "events",
@@ -330,13 +335,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7282,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "size": 7280,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
             "news_judge:missing",
-            "news_parse:missing"
+            "news_actions:missing"
           ]
         },
         {
@@ -483,8 +488,13 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "news 400 raw / 39 usable \u00b7 Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his w",
+      "bullets": [
+        "Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his word",
+        "Stocks Fall as Hawkish Warsh Boosts Fed Rate Hike Chances - Barchart.com",
+        "Analysis: Kevin Warsh sharpens inflation warning at Jackson Hole, signaling possible rate hike - CNBC",
+        "September Fed decision is now a coin flip as rate hike odds increase post Warsh - CNBC"
+      ]
     },
     {
       "key": "weather",
@@ -880,7 +890,17 @@
     "flatten": {},
     "general": {},
     "sectors": {},
-    "news": {},
+    "news": {
+      "said": "400 raw / 39 usable \u00b7 Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his w",
+      "bullets": [
+        "Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his word",
+        "Stocks Fall as Hawkish Warsh Boosts Fed Rate Hike Chances - Barchart.com",
+        "Analysis: Kevin Warsh sharpens inflation warning at Jackson Hole, signaling possible rate hike - CNBC",
+        "September Fed decision is now a coin flip as rate hike odds increase post Warsh - CNBC",
+        "Fed\u2019s Warsh Cites \u201cReadiness to Act\u201d on Inflation. Markets See a September Rate Hike. - Barron's",
+        "Markets see rate hike coming following Warsh's speech - Bond Buyer"
+      ]
+    },
     "weather": {
       "said": "favorable 1 \u00b7 hostile 5 \u00b7 neutral 5",
       "bullets": [
@@ -1300,6 +1320,31 @@
         }
       ],
       "preview": "11666 rows \u00b7 Ticker,score,score_source,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month, \u00b7 FORM, MU, KOPN, HOOD, LEGH"
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T05:59:35.971199-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-24_parsed.json",
+          "ok": true,
+          "reason": "",
+          "size": 304512,
+          "preview": "raw=400 usable=39 single=40 \u00b7 Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his w | Stocks Fall as Hawkish Warsh Boosts Fed Rate Hike Chances - Barchart.com | Analysis: Kevin Warsh sharpens inflation warning at Jackson Hole, signaling poss | September Fed decision is now a coin flip as rate hike odds increase post Warsh  | Fed\u2019s Warsh Cites \u201cReadiness to Act\u201d on Inflation. Markets See a September Rate "
+        },
+        {
+          "path": "01_daily/news/2026-09-24_parsed.md",
+          "ok": true,
+          "reason": "",
+          "size": 3987,
+          "preview": "# News Parse v2 \u2014 2026-09-24T05:59:35.931928-04:00\nWindow\u224848h | raw=400 | usable=39 | single_name=40 | noise_dropped=321\nusable polarity={'+': 1, '-': 8, 'mixed': 0, 'neutral': 30}"
+        }
+      ],
+      "preview": "raw=400 usable=39 single=40 \u00b7 Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his w | Stocks Fall as Hawkish Warsh Boosts Fed Rate Hike Chances - Barchart.com | Analysis: Kevin Warsh sharpens inflation warning at Jackson Hole, signaling poss | September Fed decision is now a coin flip as rate hike odds increase post Warsh  | Fed\u2019s Warsh Cites \u201cReadiness to Act\u201d on Inflation. Markets See a September Rate  \u00b7 # News Parse v2 \u2014 2026-09-24T05:59:35.931928-04:00\nWindow\u224848h | raw=400 | usable=39 | single_name=40 | noise_dropped=321\nusable polarity={'+': 1, '-': 8, 'mixed': 0, 'neutral': 30}"
     }
   ],
   "href": {
