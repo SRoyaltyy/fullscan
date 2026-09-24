@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-09-24
 
-Export `finviz_2026-09-23.csv` · 11616 names · generated 2026-09-24T05:54:09.476607-04:00
+Export `finviz_2026-09-24.csv` · 11616 names · generated 2026-09-24T05:56:23.702936-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -255,20 +255,21 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 4 min **HMC** Honda nears deal for $2.5bn US hybrid plant  report (Just Auto)
-- 18 min **NVDA** Basecamp Research secures $140m for AI-driven therapies (Pharmaceutical Business Review)
-- 21 min **IMVT** Roivant reports top-line data from IMVT-1402 CLE trial (Clinical Trials Arena)
-- 23 min **TSLA,SPCX** See How Elon Musk's Sunbelt Investments Are Reshaping His Business Empire (The Wall Street Journal)
-- 23 min **META,HOOD,SCHW,LPLA** In the Age of AI, Cash Is Still King (The Wall Street Journal)
-- 27 min **QCOM** Qualcomm to acquire robotics software firm PickNik (Verdict)
-- 38 min **DASH** A 23-year-old turned a $50 Facebook Marketplace find into a $150,000 viral product  with no degree and no plan (Moneywise)
-- 41 min **META** Meta gets price-target boost as JPMorgan says Muse agent has potential to become the top AI application since ChatGPT (MarketWatch)
-- 53 min **FSM** Fortuna CEO to present at Mining Forum Americas 2026 (GlobeNewswire)
-- 56 min **META,AAPL** Here's what Wall Street thinks of Meta's new smartglass lineup and first Muse 'holdable' (Yahoo Finance)
-- 58 min **HSBC,BCS** Britain's largest banks make first interbank transactions using tokenised deposits (Euronews)
-- 59 min **MSTR,STRC** Donald Trumps MSTR Trade Raises Eyebrows as Strategy Shares Rally 83% (CCN)
+- 5 min **SHEL** Transaction in Own Shares (GlobeNewswire)
+- 6 min **HMC** Honda nears deal for $2.5bn US hybrid plant  report (Just Auto)
+- 21 min **NVDA** Basecamp Research secures $140m for AI-driven therapies (Pharmaceutical Business Review)
+- 23 min **IMVT** Roivant reports top-line data from IMVT-1402 CLE trial (Clinical Trials Arena)
+- 26 min **TSLA,SPCX** See How Elon Musk's Sunbelt Investments Are Reshaping His Business Empire (The Wall Street Journal)
+- 26 min **META,HOOD,SCHW,LPLA** In the Age of AI, Cash Is Still King (The Wall Street Journal)
+- 29 min **QCOM** Qualcomm to acquire robotics software firm PickNik (Verdict)
+- 41 min **DASH** A 23-year-old turned a $50 Facebook Marketplace find into a $150,000 viral product  with no degree and no plan (Moneywise)
+- 44 min **META** Meta gets price-target boost as JPMorgan says Muse agent has potential to become the top AI application since ChatGPT (MarketWatch)
+- 56 min **FSM** Fortuna CEO to present at Mining Forum Americas 2026 (GlobeNewswire)
+- 59 min **META,AAPL** Here's what Wall Street thinks of Meta's new smartglass lineup and first Muse 'holdable' (Yahoo Finance)
+- 1 hour **HSBC,BCS** Britain's largest banks make first interbank transactions using tokenised deposits (Euronews)
+- 1 hour **MSTR,STRC** Donald Trumps MSTR Trade Raises Eyebrows as Strategy Shares Rally 83% (CCN)
 - 1 hour **CME** Record High UNI Sits on Exchanges: Sell Pressure Ahead, or Are Whales Right? (BeInCrypto)
-- 1 hour **META,W,GAP,WMT,CART** Meta's Zuckerberg says Muse AI agent will take a small fee from transactions (Yahoo Finance)
+- 1 hour **META,W,GAP,PYPL,WMT** Meta's Zuckerberg says Muse AI agent will take a small fee from transactions (Yahoo Finance)
 - 1 hour **META** Meta unveils $1,299 VR Glasses, camera-less smart glasses at Meta Connect (Yahoo Finance)
 - 1 hour **ZH** Zhihu Inc. to Hold Extraordinary General Meeting on October 20, 2026 (GlobeNewswire)
 - 1 hour **LGCY,BB,SNX,DRI,COST** Costco headlines Thursday's earnings slate (MarketWatch)
@@ -279,7 +280,6 @@ COLD (1w):
 - 1 hour **SNDK,MU** MU, SNDK Extend Slide For A Second Day As Memory Rally Fizzles: Micron Results Next Week To Test AI Demand (Stocktwits)
 - 1 hour **HGTY** SERIOUSLY COOL CARS WITH EXCEPTIONAL PROVENANCE AT BROAD ARROW'S 2026 ZOUTE LIVE AND ONLINE AUCTIONS (GlobeNewswire)
 - 1 hour **BMM** Blue Moon Metals to acquire Turner deposit from Gold Coast Mining (Mining Technology)
-- 1 hour **UBER** Delivery Hero Cancels CEO Exit Plans Due to Uber's $14.8 Billion Takeover Bid (The Wall Street Journal)
 
 ## NOTES
 - Captains = top 2 by market cap. RUT needs ≥ $5m 20-day dollar volume.
