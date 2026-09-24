@@ -1,0 +1,118 @@
+name: OpenClaw SuperGrok ping
+
+# Prove the SuperGrok link through the ECS OpenClaw classroom.
+# Inserts a PONG + one news-classify prompt. Cheapest general model >30B.
+# Agent tokens cannot workflow_dispatch — a push of this file on main fires it.
+# Must stay on [self-hosted, ecs]. The gateway binds 127.0.0.1:18789.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/openclaw_grok_ping.yml"
+      - "scripts/openclaw_grok_ping.py"
+      - "scripts/enable_openclaw_chat.sh"
+      - "src/openclaw_models.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: openclaw-grok-ping
+  cancel-in-progress: false
+
+jobs:
+  ping:
+    runs-on: [self-hosted, ecs]
+    timeout-minutes: 20
+    env:
+      FULLSCAN_HOME: "/home/gha"
+      HOME: "/home/gha"
+      OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+      OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+      OPENCLAW_AGENT: "openclaw/default"
+      OPENCLAW_NEWS_MODEL: "xai/grok-4.20-0309-non-reasoning"
+      GROK_ONLY: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          clean: false
+          fetch-depth: 0
+
+      - name: Enable classroom if chat is dark (no bounce while Grok is busy)
+        env:
+          OPENCLAW_BACKEND_MODEL: ${{ env.OPENCLAW_NEWS_MODEL }}
+        run: |
+          set +e
+          export HOME="${FULLSCAN_HOME:-/home/gha}"
+          chmod +x scripts/enable_openclaw_chat.sh scripts/openclaw_grok_ping.py \
+            scripts/xai_device_reauth.py scripts/safe_git_push.sh || true
+          if pgrep -af 'src.map_heat_postclose|src.run_preopen_all|ecs_preopen|ecs_map_postclose|-m src.map_heat' \
+               | grep -v pgrep | grep -v runtime_status >/dev/null; then
+            echo "Grok job running — skip enable/restart, ping only"
+            echo "skip_enable=yes" >> "$GITHUB_ENV"
+            exit 0
+          fi
+          bash scripts/enable_openclaw_chat.sh
+          exit 0
+
+      - name: Insert prompts and require a Grok reply
+        run: |
+          set +e
+          export HOME="${FULLSCAN_HOME:-/home/gha}"
+          export PYTHONPATH="${GITHUB_WORKSPACE:-.}"
+          python3 scripts/openclaw_grok_ping.py
+          echo "ping_exit=$?" >> "$GITHUB_ENV"
+          echo "======== _openclaw_grok_ping.json ========"
+          cat 01_daily/_openclaw_grok_ping.json 2>/dev/null || echo "(missing)"
+
+      - name: Start xAI device reauth if Grok did not answer
+        if: always()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+        run: |
+          set +e
+          export HOME="${FULLSCAN_HOME:-/home/gha}"
+          OK=$(python3 -c "import json; from pathlib import Path; p=Path('01_daily/_openclaw_grok_ping.json');
+print('yes' if p.is_file() and json.loads(p.read_text()).get('ok') else 'no')")
+          if [ "$OK" = "yes" ]; then
+            echo "Grok already answered — no reauth"
+            exit 0
+          fi
+          if [ "${skip_enable:-}" = "yes" ]; then
+            echo "Grok job running — not occupying the runner for device login"
+            exit 0
+          fi
+          python3 scripts/xai_device_reauth.py --daemon --force || true
+          echo "======== _xai_reauth.json ========"
+          cat 01_daily/_xai_reauth.json 2>/dev/null || echo "(missing)"
+          export PYTHONPATH="${GITHUB_WORKSPACE:-.}"
+          python3 scripts/openclaw_grok_ping.py || true
+
+      - name: Push ping report
+        if: always()
+        run: |
+          export HOME="${FULLSCAN_HOME:-/home/gha}"
+          export GIT_TERMINAL_PROMPT=0
+          unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
+          cd "${GITHUB_WORKSPACE:-.}"
+          bash scripts/safe_git_push.sh \
+            "chore: OpenClaw SuperGrok ping [$(date -u +%F_%H%M)]" \
+            01_daily/_openclaw_grok_ping.json \
+            01_daily/_openclaw_grok_ping.md \
+            01_daily/_xai_reauth.json
+
+      - name: Fail the job if Grok did not answer
+        run: |
+          python3 - <<'PY'
+          import json, sys
+          from pathlib import Path
+          p = Path("01_daily/_openclaw_grok_ping.json")
+          data = json.loads(p.read_text(encoding="utf-8"))
+          if not data.get("ok"):
+              sys.exit("OpenClaw SuperGrok ping got no Grok reply")
+          print("ok", data.get("chosen_model"), (data.get("ping") or {}).get("content"))
+          PY

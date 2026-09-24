@@ -229,11 +229,32 @@ def _reasoning(
     ]
 
 
+def _llm_hop(tmpl: str, art: dict, family: str = "", cls: Classification | None = None,
+             pack: dict | None = None, *, use_openclaw: bool = False,
+             use_lane: bool = False) -> tuple[dict | None, str, str, list[dict]]:
+    """OpenClaw / SuperGrok first when asked; Lane only if OpenClaw is off."""
+    hops: list[dict] = []
+    if use_openclaw:
+        from .openclaw_hop import hop as oc_hop
+        parsed, lane, model, log = oc_hop(tmpl, art, family=family, cls=cls, pack=pack)
+        hops.extend(log)
+        if parsed is not None:
+            return parsed, lane, model, hops
+        if not use_lane:
+            return None, lane, model, hops
+    if use_lane:
+        parsed, lane, model, log = _lane_hop(tmpl, art, family=family, cls=cls, pack=pack)
+        hops.extend(log)
+        return parsed, lane, model, hops
+    return None, "", "", hops
+
+
 def analyze_article(
     art: dict,
     use_lane: bool = False,
     use_search: bool = False,
     persist: bool = True,
+    use_openclaw: bool = False,
 ) -> dict[str, Any]:
     title = str(art.get("title") or "")
     body = str(art.get("body") or "")
@@ -252,8 +273,10 @@ def analyze_article(
         "ok": True,
         "excerpt": f"q5={cls.q5} class={cls.event_class} sign={cls.sign} — {cls.why}",
     }]
-    if use_lane:
-        lane_cls_parsed, hop, model, hops = _lane_hop("news_classify", art)
+    if use_openclaw or use_lane:
+        lane_cls_parsed, hop, model, hops = _llm_hop(
+            "news_classify", art, use_openclaw=use_openclaw, use_lane=use_lane,
+        )
         hop_chain.extend(hops)
         if lane_cls_parsed:
             cls = merge_lane_class(cls, lane_cls_parsed)
@@ -261,11 +284,12 @@ def analyze_article(
 
     pack = pack_for_article(title, body, enabled=use_search)
     entities = analyze(art, cls, pack)
-    if use_lane and cls.q5 != "regime" and cls.event_class not in {
+    if (use_openclaw or use_lane) and cls.q5 != "regime" and cls.event_class not in {
         "discard", "regime_state", "rumor",
     }:
-        lane_an, hop, model, hops = _lane_hop(
+        lane_an, hop, model, hops = _llm_hop(
             "news_impact", art, family=cls.family, cls=cls, pack=pack,
+            use_openclaw=use_openclaw, use_lane=use_lane,
         )
         hop_chain.extend(hops)
         lane_ents = _entities_from_lane(lane_an or {})
@@ -347,12 +371,16 @@ def analyze_many(
     use_search: bool = False,
     persist: bool = True,
     ranked: bool = True,
+    use_openclaw: bool = False,
 ) -> list[dict]:
     rows = rank_articles(arts) if ranked else list(arts)
     if limit and limit > 0:
         rows = rows[:limit]
     return [
-        analyze_article(a, use_lane=use_lane, use_search=use_search, persist=persist)
+        analyze_article(
+            a, use_lane=use_lane, use_search=use_search, persist=persist,
+            use_openclaw=use_openclaw,
+        )
         for a in rows
     ]
 

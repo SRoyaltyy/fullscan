@@ -1,0 +1,143 @@
+"""xAI SuperGrok models for the OpenClaw gateway.
+
+Sector essays stay on ``xai/grok-4.6``. News hops and the classroom ping
+use the cheapest *general* text model that is still above 30B parameters.
+
+Prices and IDs come from https://docs.x.ai/docs/models (2026-09-24).
+Every listed general text model is flagship-class (>30B). Mini / voice /
+image / coding-only SKUs are excluded from the news picker.
+
+``grok-4.20-0309-non-reasoning`` is the cheapest general completion
+($1.25 / $2.50 per 1M, no reasoning-token tax). ``grok-build-0.1`` is
+cheaper on paper but is a coding specialist — not used here.
+"""
+from __future__ import annotations
+
+from dataclasses import dataclass
+
+MIN_PARAMS_B = 30
+
+
+@dataclass(frozen=True)
+class XaiModel:
+    openclaw_id: str
+    input_usd: float
+    output_usd: float
+    min_params_b: int
+    kind: str  # general | coding | legacy_fast
+    notes: str = ""
+
+    @property
+    def bare(self) -> str:
+        return self.openclaw_id.split("/", 1)[-1]
+
+    @property
+    def sort_key(self) -> tuple[float, float, str]:
+        return (self.input_usd, self.output_usd, self.openclaw_id)
+
+
+# Current official general text lineup, cheapest first.
+CATALOG: tuple[XaiModel, ...] = (
+    XaiModel("xai/grok-4.20-0309-non-reasoning", 1.25, 2.50, 30, "general",
+             "cheapest general completion; no reasoning tax"),
+    XaiModel("xai/grok-4.3", 1.25, 2.50, 30, "general"),
+    XaiModel("xai/grok-4.20-0309-reasoning", 1.25, 2.50, 30, "general"),
+    XaiModel("xai/grok-4.20-multi-agent-0309", 1.25, 2.50, 30, "general"),
+    XaiModel("xai/grok-4.5", 2.00, 6.00, 30, "general"),
+    XaiModel("xai/grok-4.6", 2.00, 6.00, 30, "general",
+             "sector default — keep for essays"),
+    XaiModel("xai/grok-4.7", 2.00, 6.00, 30, "general"),
+)
+
+# Older SuperGrok SKUs. Only used when the live /v1/models list shows them.
+# Third-party pages still quote $0.20/$0.50; official docs no longer list them.
+LEGACY_FAST: tuple[XaiModel, ...] = (
+    XaiModel("xai/grok-4.1-fast", 0.20, 0.50, 30, "legacy_fast"),
+    XaiModel("xai/grok-4-fast", 0.20, 0.50, 30, "legacy_fast"),
+    XaiModel("xai/grok-3", 1.25, 2.50, 30, "legacy_fast"),
+)
+
+REFUSE_SUBSTRINGS = (
+    "mini", "imagine", "voice", "tts", "stt", "build-0.1", "code-fast",
+)
+
+DEFAULT_NEWS_MODEL = CATALOG[0].openclaw_id
+SECTOR_MODEL = "xai/grok-4.6"
+
+# Blind try-order when /v1/models is unauthorized. Default first, then
+# the model the ECS box already uses for daily sectors.
+BLIND_TRY_ORDER: tuple[str, ...] = (
+    DEFAULT_NEWS_MODEL,
+    "xai/grok-4.3",
+    SECTOR_MODEL,
+    "xai/grok-4.7",
+)
+
+
+def normalize_model_id(raw: str) -> str:
+    name = str(raw or "").strip()
+    if not name:
+        return ""
+    if "/" not in name:
+        return f"xai/{name}"
+    return name
+
+
+def is_refused(model_id: str) -> bool:
+    low = normalize_model_id(model_id).lower()
+    return any(s in low for s in REFUSE_SUBSTRINGS)
+
+
+def by_id(model_id: str) -> XaiModel | None:
+    want = normalize_model_id(model_id)
+    for row in (*CATALOG, *LEGACY_FAST):
+        if row.openclaw_id == want or row.bare == want.split("/", 1)[-1]:
+            return row
+    return None
+
+
+def above_30b(model_id: str) -> bool:
+    if is_refused(model_id):
+        return False
+    row = by_id(model_id)
+    if row is None:
+        # Unknown xAI flagship id: treat as above 30B. Unknown *mini* already refused.
+        return normalize_model_id(model_id).startswith("xai/grok")
+    return row.min_params_b >= MIN_PARAMS_B and row.kind != "coding"
+
+
+def pick_cheapest_above_30b(available: list[str] | None = None) -> str:
+    """Return the cheapest general/legacy-fast model above 30B.
+
+    * ``available`` empty/None → official default (blind try).
+    * Intersection with the live list wins, including legacy-fast SKUs
+      that are cheaper than the current default when they still exist.
+    """
+    if not available:
+        return DEFAULT_NEWS_MODEL
+    known = {normalize_model_id(x) for x in available if x}
+    known |= {normalize_model_id(x).split("/", 1)[-1] for x in available if x}
+    hits: list[XaiModel] = []
+    for row in (*LEGACY_FAST, *CATALOG):
+        if row.min_params_b < MIN_PARAMS_B or is_refused(row.openclaw_id):
+            continue
+        if row.openclaw_id in known or row.bare in known:
+            hits.append(row)
+    if hits:
+        hits.sort(key=lambda r: r.sort_key)
+        return hits[0].openclaw_id
+    for raw in available:
+        nid = normalize_model_id(raw)
+        if nid and above_30b(nid):
+            return nid
+    return DEFAULT_NEWS_MODEL
+
+
+def try_order(available: list[str] | None = None) -> list[str]:
+    """Deduped models to attempt, cheapest-first then sector fallback."""
+    first = pick_cheapest_above_30b(available)
+    out: list[str] = []
+    for mid in (first, *BLIND_TRY_ORDER):
+        if mid and mid not in out and not is_refused(mid):
+            out.append(mid)
+    return out
