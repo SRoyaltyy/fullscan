@@ -1,12 +1,12 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T07:01:55.644386-04:00",
+  "generated_at": "2026-09-24T07:45:42.118951-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 6,
-    "partial": 2,
+    "ok": 7,
+    "partial": 1,
     "fail": 0,
     "n": 8
   },
@@ -311,8 +311,8 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 45910,
-          "said": "70 ticker actions \u00b7 5 events \u00b7 400 headlines \u00b7 XLE SELL, COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY",
+          "size": 47461,
+          "said": "72 ticker actions \u00b7 5 events \u00b7 400 headlines \u00b7 XLE SELL, COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY",
           "bullets": [
             "SELL XLE",
             "BUY COP",
@@ -637,11 +637,11 @@
       "key": "catalyst",
       "name": "Catalyst dossiers",
       "yaml": "catalyst_daily.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 0,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -651,8 +651,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 45910,
-          "said": "70 ticker actions \u00b7 5 events \u00b7 400 headlines \u00b7 XLE SELL, COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY",
+          "size": 47461,
+          "said": "72 ticker actions \u00b7 5 events \u00b7 400 headlines \u00b7 XLE SELL, COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY",
           "bullets": [
             "SELL XLE",
             "BUY COP",
@@ -680,14 +680,19 @@
           "name": "Catalyst dossiers JSON",
           "path": "01_daily/catalyst/2026-09-24_dossiers.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "usable=2/8",
+          "size": 9197,
+          "said": "2/8 usable \u00b7 Grok \u2192 DeepSeek \u00b7 NE, RIG, SLB, BKR, KGS, SKYW, VST, HNRG",
+          "bullets": [
+            "NE: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NE",
+            "RIG: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 RIG",
+            "KGS: OpenClaw and DeepSeek both returned empty for CATALYST STEP1 KGS",
+            "SKYW: OpenClaw and DeepSeek both returned empty for CATALYST STEP2 SKYW"
+          ]
         }
       ],
-      "said": "70 ticker actions \u00b7 5 events \u00b7 400 headlines \u00b7 XLE SELL, COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY",
+      "said": "72 ticker actions \u00b7 5 events \u00b7 400 headlines \u00b7 XLE SELL, COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY",
       "bullets": [
         "SELL XLE",
         "BUY COP",
@@ -749,8 +754,8 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 45910,
-          "said": "70 ticker actions \u00b7 5 events \u00b7 400 headlines \u00b7 XLE SELL, COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY",
+          "size": 47461,
+          "said": "72 ticker actions \u00b7 5 events \u00b7 400 headlines \u00b7 XLE SELL, COP BUY, EOG BUY, RRC BUY, SM BUY, HPK BUY, REPX BUY, OXY BUY",
           "bullets": [
             "SELL XLE",
             "BUY COP",
@@ -2539,6 +2544,31 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-09-24\n_Generated 2026-09-24T11:01:54 \u2014 live `flatten_robust`._\n**S=-7.66; hard-red: no new buys; holds and due 1d exits stay**\n- Score **-7.66** (DOWN) \u00b7 route **hold** \u00b7 HARD-RED\n- Cash leftover **$18,086.73** (after 09:30 $18,086.73 \u00b7 after 16:00 $101,554.07)\n- Prior close **$101,637.74** \u00b7 09:30 **$101,637.74** \u00b7 overnight **$+0.00** \u00b7 session **$-83.67** \u00b7 16:00 **$101,554.07**\n- Overnight lots **7** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$101,554.07** \u00b7 2026-09-24 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {"
+    },
+    {
+      "key": "catalyst",
+      "title": "Catalyst dossiers (after book)",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T07:45:41.505619-04:00",
+      "files": [
+        {
+          "path": "01_daily/catalyst/2026-09-24_dossiers.json",
+          "ok": true,
+          "reason": "",
+          "size": 9197,
+          "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, targets, dossiers"
+        },
+        {
+          "path": "01_daily/catalyst/2026-09-24_dossiers.md",
+          "ok": true,
+          "reason": "",
+          "size": 4169,
+          "preview": "# CATALYST DAILY \u2014 2026-09-24\n2/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
+        }
+      ],
+      "preview": "keys: date, generated_at, max_n, routing, grok, deepseek_fallback, gemini, n_targets, n_ok, targets, dossiers \u00b7 # CATALYST DAILY \u2014 2026-09-24\n2/8 dossiers \u00b7 max=8 \u00b7 routing=Grok \u2192 DeepSeek"
     }
   ],
   "href": {

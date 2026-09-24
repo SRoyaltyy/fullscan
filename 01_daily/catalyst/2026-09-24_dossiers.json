@@ -1,226 +1,127 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T07:28:06.811512-04:00",
+  "generated_at": "2026-09-24T07:45:41.175615-04:00",
   "max_n": 8,
   "routing": "Grok \u2192 DeepSeek",
   "grok": true,
   "deepseek_fallback": true,
   "gemini": false,
-  "n_targets": 5,
-  "n_ok": 5,
+  "n_targets": 8,
+  "n_ok": 2,
   "targets": [
     {
-      "ticker": "UEC",
+      "ticker": "NE",
       "role": "override_captain",
-      "why": "OVERRIDE Uranium"
+      "why": "OVERRIDE card Oil & Gas Drilling"
     },
     {
-      "ticker": "UUUU",
+      "ticker": "RIG",
       "role": "override_captain",
-      "why": "OVERRIDE Uranium"
+      "why": "OVERRIDE card Oil & Gas Drilling"
     },
     {
       "ticker": "SLB",
       "role": "override_captain",
-      "why": "OVERRIDE Oil & Gas Equipment & Services"
+      "why": "OVERRIDE card Oil & Gas Equipment & Services"
     },
     {
       "ticker": "BKR",
       "role": "override_captain",
-      "why": "OVERRIDE Oil & Gas Equipment & Services"
+      "why": "OVERRIDE card Oil & Gas Equipment & Services"
     },
     {
       "ticker": "KGS",
       "role": "override_captain",
-      "why": "OVERRIDE Oil & Gas Equipment & Services"
+      "why": "OVERRIDE card Oil & Gas Equipment & Services"
+    },
+    {
+      "ticker": "SKYW",
+      "role": "conflict",
+      "why": "actions sell net=-5.15 vs heat buy"
+    },
+    {
+      "ticker": "VST",
+      "role": "conflict",
+      "why": "actions buy net=3.51 vs heat sell"
+    },
+    {
+      "ticker": "HNRG",
+      "role": "conflict",
+      "why": "actions buy net=3.51 vs heat sell"
     }
   ],
   "dossiers": [
     {
-      "ticker": "UEC",
+      "ticker": "NE",
       "role": "override_captain",
-      "why": "OVERRIDE Uranium",
-      "net_signal": "Bullish",
-      "conviction": 38,
-      "search_backend": "grok_native",
-      "catalyst_stack": "On March 23, 2026, UEC secured Wyoming DEQ approval and began operating three additional Christensen Ranch header houses, a concrete ISR ramp step. On April 8, 2026, TCEQ clearance let Burke Hollow start production as the first new U.S. ISR uranium mine in more than a decade. On May 1, 2026, UEC closed a $40 million Uranium Royalty Corp subscription-receipt investment that lifted its URC stake to about 18.4%. Later prints \u2014 a June 9 zero-sales Q3 loss, a July 23 board re-election, and Jefferies\u2019 September 3 Hold/$11.50 initiation \u2014 did not reverse the production-permit catalyst stack.",
-      "key_assumption": "Burke Hollow and Christensen header-house ramps are treated as the equity driver and can scale toward sales without a dilutive raise, so the Q3 loss and empty offtake book are ramp timing rather than demand failure.",
-      "n_pos": 4,
-      "n_neg": 3,
-      "top_hits": [
-        {
-          "type": "positive",
-          "taxonomy": "Product launch/FDA approval/regulatory greenlight",
-          "event_date": "2026-04-08",
-          "headline": "received approval from the Texas Commission on Environmental Quality (\"TCEQ\") and commenced production at its Burke Hollow project",
-          "weight": 10,
-          "confidence": 95
-        },
-        {
-          "type": "positive",
-          "taxonomy": "Operational milestone (e.g., first patient dosed, satellite commissioned)",
-          "event_date": "2026-04-08",
-          "headline": "received approval from the Texas Commission on Environmental Quality (\"TCEQ\") and commenced production at its Burke Hollow project",
-          "weight": 9,
-          "confidence": 95
-        },
-        {
-          "type": "positive",
-          "taxonomy": "Operational milestone (e.g., first patient dosed, satellite commissioned)",
-          "event_date": "2026-03-23",
-          "headline": "secured State regulatory approval and commenced operating three additional header houses in wellfield 11 at Christensen Ranch",
-          "weight": 9,
-          "confidence": 80
-        },
-        {
-          "type": "positive",
-          "taxonomy": "Strategic partnership/alliance",
-          "event_date": "2026-05-01",
-          "headline": "private placement of subscription receipts of the Company (the \"Subscription Receipts\") to Uranium Energy Corp. (\"UEC\") at a price of US$3.64",
-          "weight": 7,
-          "confidence": 88
-        },
-        {
-          "type": "negative",
-          "taxonomy": "dilutive offerings",
-          "event_date": "2026-06-09",
-          "headline": "issued 1,390,880 of the Company's common stock under the 2025 ATM Offering Agreement for gross cash proceeds of $22.11 million",
-          "weight": 5,
-          "confidence": 80
-        },
-        {
-          "type": "negative",
-          "taxonomy": "earnings miss",
-          "event_date": "2026-06-09",
-          "headline": "posting a loss of $0.11 per share against analysts' estimates of $0.03 per share",
-          "weight": 5,
-          "confidence": 80
-        }
-      ],
-      "error": null
+      "why": "OVERRIDE card Oil & Gas Drilling",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 NE"
     },
     {
-      "ticker": "UUUU",
+      "ticker": "RIG",
       "role": "override_captain",
-      "why": "OVERRIDE Uranium",
-      "net_signal": "Strong Bullish",
-      "conviction": 97,
-      "search_backend": "grok_native",
-      "catalyst_stack": "On June 18, 2026 Energy Fuels received a conditional $725 million U.S. Office of Strategic Capital loan, then on June 23 signed a ~$1.9 billion cash-and-stock deal to buy magnet maker Vacuumschmelze. White Mesa\u2019s ~$104 million heavy rare earth expansion entered construction on July 29, and on August 19 the mill\u2019s terbium oxide was qualified by a major Japanese permanent-magnet manufacturer. FIRB cleared the Australian Strategic Materials purchase on April 23 and ASM holders voted 98.23% in favor on August 12, while CEO Ross Bhappu (effective April 15) and the chairman bought shares on July 7\u20138. Offsetting the stack, Q1 EPS missed at -$0.04 and Q2 printed a $33.4 million loss on $25.1 million of revenue, and House Democrats opened an August 10 insider-trading inquiry tied to White Mesa and Bears Ears.",
-      "key_assumption": "VAC and ASM close on stated terms, the conditional $725 million OSC facility is actually funded, and White Mesa heavy-REE output scales into sales before further equity dilution or a mill-level political/environmental injunction.",
-      "n_pos": 10,
-      "n_neg": 4,
-      "top_hits": [
-        {
-          "type": "positive",
-          "taxonomy": "Government policy (tariffs, subsidies, mandates)",
-          "event_date": "2026-06-18",
-          "headline": "The Company has received a conditional $725 million financing commitment from the Department of War, U.S. Office of Strategic Capital",
-          "weight": 10,
-          "confidence": 95
-        },
-        {
-          "type": "positive",
-          "taxonomy": "Regulatory approval (FDA, FCC, FTC clearance)",
-          "event_date": "2026-04-23",
-          "headline": "On April 23, 2026, Australian Strategic Materials Ltd (ASX: ASM) announced that Energy Fuels Inc. ... had received FIRB ... approval",
-          "weight": 10,
-          "confidence": 82
-        },
-        {
-          "type": "negative",
-          "taxonomy": "Earnings miss (revenue, EBITDA, EPS)",
-          "event_date": "2026-08-05",
-          "headline": "Total revenues $25,108 ... Net loss attributable to Energy Fuels Inc. (33,378) ... Basic net loss per common share $(0.13)",
-          "weight": 10,
-          "confidence": 94
-        },
-        {
-          "type": "positive",
-          "taxonomy": "Successful acquisition/synergy realization",
-          "event_date": "2026-06-23",
-          "headline": "definitive agreement to acquire 100% of Vacuumschmelze GmbH & Co. KG ... for a total cash-and-stock consideration of approximately $1.9 billion",
-          "weight": 9,
-          "confidence": 96
-        },
-        {
-          "type": "positive",
-          "taxonomy": "Successful acquisition/synergy realization",
-          "event_date": "2026-08-28",
-          "headline": "today announced it has completed its acquisition of Australian Strategic Materials Limited (ASM)",
-          "weight": 9,
-          "confidence": 80
-        },
-        {
-          "type": "positive",
-          "taxonomy": "Capacity expansion announced (new factory, satellite constellation)",
-          "event_date": "2026-07-29",
-          "headline": "today announced that construction has begun on an expansion of its White Mesa Mill in Utah (Mill) to enable the large-scale production of heavy rare earth oxide",
-          "weight": 8,
-          "confidence": 95
-        }
-      ],
-      "error": null
+      "why": "OVERRIDE card Oil & Gas Drilling",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 RIG"
     },
     {
       "ticker": "SLB",
       "role": "override_captain",
-      "why": "OVERRIDE Oil & Gas Equipment & Services",
+      "why": "OVERRIDE card Oil & Gas Equipment & Services",
       "net_signal": "Strong Bullish",
-      "conviction": 48,
-      "search_backend": "grok_native",
-      "catalyst_stack": "On 31 Aug 2026 SLB agreed to acquire Kelvion for about $3.4 billion cash plus $700 million of assumed debt to add data-center thermal management, targeting a H1 2027 close, after completing the S&P Global upstream software purchase on 1 Sep 2026. The 24 Jul 2026 Q2 print beat with $8.97 billion revenue and $0.55 adjusted EPS, while awards from Kuwait Oil Company (30 Jun 2026), Equinor at Johan Sverdrup (16 Sep 2026), and OQEP in Oman (24 Sep 2026) plus the 14 Jul 2026 Liberty Energy data-center alliance extended international and digital backlog. That tape is checked by the 24 Apr 2026 Q1 profit decline as Middle East & Asia revenue fell 10% on Iran-related disruptions and a nearly 5% share drop on 14 Sep 2026 after Saudi Arabia shut the East-West pipeline. CEO Olivier Le Peuch sold 35,000 shares at $60 on 1 Sep 2026 under a 10b5-1 plan, and the 7 May 2026 $2 billion senior-notes issue plus Kelvion cash leave the bull case sensitive to FCF and ME/Asia stability.",
-      "key_assumption": "Kelvion is financed and closed in H1 2027 without cutting the cash-return program, and Iran/Saudi disruptions do not force a 2026 guidance cut.",
-      "n_pos": 8,
-      "n_neg": 4,
+      "conviction": 51,
+      "search_backend": "deepseek_fallback",
+      "catalyst_stack": "SLB's Q2 2026 earnings beat on July 24, 2026, driven by Digital & Production Systems growth, sent shares up 9.6% and confirmed the company's strategic pivot is gaining traction. On August 31, 2026, SLB announced the $3.4B acquisition of Kelvion, expanding into data center cooling with a $5B revenue target, which Morningstar endorsed on September 1, 2026, as a reasonably priced winner. Contract momentum continued with the bp Thunder Horse subsea boosting award on June 8, 2026, the seven-year Kuwait Oil Company AI contract on June 30, 2026, and the Oman Bisat-B facility expansion on September 23, 2026. However, Seeking Alpha downgraded SLB to Hold on September 1, 2026, after a 60% rally, and the stock trades below its 20/50-day SMAs with RSI at 42.85, tempering near-term upside despite a $62.48 consensus target.",
+      "key_assumption": "The Kelvion acquisition closes on schedule and is accretive within 12 months, while Middle East contract momentum and data center diversification offset oil-price cyclicality and the stock's technically extended condition.",
+      "n_pos": 7,
+      "n_neg": 5,
       "top_hits": [
         {
-          "type": "negative",
-          "taxonomy": "Geopolitical event that hurts sector (sanctions, conflict disrupting supply chain)",
-          "event_date": "2026-09-14",
-          "headline": "SLB's shares fell by nearly 5% that trading session.",
+          "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-06-08",
+          "headline": "SLB OneSubsea Secures Subsea Boosting Contract for bp's Thunder Horse Project in Gulf of America",
           "weight": 10,
-          "confidence": 80
+          "confidence": 90
         },
         {
           "type": "positive",
-          "taxonomy": "Successful acquisition/synergy realization",
-          "event_date": "2026-08-31",
-          "headline": "SLB will pay approximately $3.4 billion in cash to acquire Kelvion and assume another $700 million of debt.",
-          "weight": 9,
-          "confidence": 94
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-09-15",
+          "headline": "Arabian Drilling Signs Five-Year Contract with SLB for 8 Additional Gas Rigs",
+          "weight": 10,
+          "confidence": 80
         },
         {
           "type": "positive",
           "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
           "event_date": "2026-07-24",
-          "headline": "Revenue: $8.97 billion (up 3% sequentially from $8.72 billion in Q1 2026; up 5% YoY",
+          "headline": "SLB Q2 Earnings Beat Estimates on Digital & Production Systems Growth",
+          "weight": 9,
+          "confidence": 95
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Successful acquisition/synergy realization",
+          "event_date": "2026-08-31",
+          "headline": "SLB to Buy Data Center Cooling Firm Kelvion for $3.4 Billion",
           "weight": 8,
-          "confidence": 93
+          "confidence": 95
         },
         {
           "type": "positive",
-          "taxonomy": "Contract win/expansion",
-          "event_date": "2026-06-30",
-          "headline": "SLB has been awarded a seven-year contract by Kuwait Oil Company (KOC) under the Ahmadi Innovation Valley (AIV) initiative",
+          "taxonomy": "Strategic partnership/alliance",
+          "event_date": "2026-07-15",
+          "headline": "Denver oil services firm partners with Houston giant to power data centers",
           "weight": 7,
-          "confidence": 91
+          "confidence": 70
         },
         {
           "type": "positive",
-          "taxonomy": "Contract win/expansion",
-          "event_date": "2026-09-23",
-          "headline": "SLB has been awarded a contract by OQ Exploration & Production (OQEP) to deliver the Bisat-B Expansion Production Facility in Oman.",
+          "taxonomy": "Strategic partnership/alliance",
+          "event_date": "2026-03-26",
+          "headline": "SLB, Nvidia Expand AI Partnership To Build Energy Data Infrastructure And Lower Emissions",
           "weight": 7,
           "confidence": 80
-        },
-        {
-          "type": "positive",
-          "taxonomy": "Product launch/FDA approval/regulatory greenlight",
-          "event_date": "2026-08-24",
-          "headline": "SLB has launched its ExaCT electrical downhole coiled tubing control system",
-          "weight": 6,
-          "confidence": 90
         }
       ],
       "error": null
@@ -228,62 +129,62 @@
     {
       "ticker": "BKR",
       "role": "override_captain",
-      "why": "OVERRIDE Oil & Gas Equipment & Services",
+      "why": "OVERRIDE card Oil & Gas Equipment & Services",
       "net_signal": "Strong Bullish",
-      "conviction": 95,
-      "search_backend": "grok_native",
-      "catalyst_stack": "Baker Hughes closed Chart Industries on 2026-07-16 as a third segment targeting about $325 million of annualized cost synergies, after conditional EU antitrust clearance on 2026-07-10. The company beat in Q1 on 2026-04-23 and Q2 on 2026-07-26, then raised FY 2026 guidance on 2026-09-09 to $28.5-$30.3 billion of revenue and $4.875-$5.475 billion of adjusted EBITDA to include Chart. Order momentum included Venture Global LNG packages on 2026-09-13, a bp UK North Sea StimFORCE award on 2026-09-04, Kuwait Oil Company digital work on 2026-08-11, and geothermal pacts with Mantle Reach (2026-06-24) and Helmerich & Payne (2026-05-26), plus the 2026-04-13 agreement to sell Waygate to Hexagon for about $1.45 billion. Offsets are the 2026-07-15 $2 billion term loans for Chart, CEO 10b5-1 selling on 2026-06-22, a 2026-07-09 Houston plant WARN for 174 jobs, and Barclays' 2026-05-07 cut to Equal Weight even as it lifted its target to $74.",
-      "key_assumption": "Chart's $325 million synergy target is delivered without impairment, IET LNG/RPO converts on schedule, and OFSE activity does not roll over with oil prices.",
-      "n_pos": 12,
-      "n_neg": 4,
+      "conviction": 100,
+      "search_backend": "deepseek_fallback",
+      "catalyst_stack": "On 2026-07-10 Baker Hughes secured conditional EU antitrust approval for its $13.6B Chart Industries acquisition, clearing the last major regulatory hurdle and setting up Chart as a third operating segment (2026-07-16). On 2026-07-27/2026-08-02 the company reported Q2 2026 EPS that beat estimates by 26.2% on surging AI/data-center power demand, with IET orders outlook raised to $45B through 2028. Through mid-2026 BKR stacked commercial wins \u2014 Nigeria LNG service extension (2026-06-29), up to 1.8 GW of data-center turbine supply (2026-07-08), a multi-year KGS power agreement (2026-07-09), and an OGDC Pakistan deal (2026-09-04) \u2014 while divesting Waygate to Hexagon for ~$1.45B (2026-04-13). On 2026-09-24 Zacks upgraded BKR on advanced upstream capabilities, LNG leadership, growing power exposure and Chart integration optionality, though the stock trades below its 52-week high (-16.84%) and below key moving averages with RSI 43.42.",
+      "key_assumption": "The bullish thesis rests on successful Chart Industries integration and sustained AI/data-center power demand converting BKR's $45B IET order outlook into revenue and margin expansion; if integration synergies slip or power/exploration capex cools, the net signal would compress toward Neutral.",
+      "n_pos": 11,
+      "n_neg": 2,
       "top_hits": [
         {
           "type": "positive",
+          "taxonomy": "Contract win/expansion",
+          "event_date": "2026-06-29",
+          "headline": "Baker Hughes extended its long-term service agreement with Nigeria LNG to support a critical expansion project.",
+          "weight": 10,
+          "confidence": 85
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+          "event_date": "2026-08-02",
+          "headline": "BKR Q2 2026 Earnings: EPS Beats Estimates by 26.2%; Stock Edges Up 0.98%",
+          "weight": 9,
+          "confidence": 70
+        },
+        {
+          "type": "positive",
           "taxonomy": "Successful acquisition/synergy realization",
-          "event_date": "2026-07-16",
-          "headline": "Baker Hughes has completed its acquisition of Chart Industries, expanding its portfolio of industrial energy technologies",
+          "event_date": "2026-07-10",
+          "headline": "Baker Hughes won conditional EU nod for $13.6 billion Chart deal; Chart to become Baker Hughes' third operating segment.",
+          "weight": 9,
+          "confidence": 85
+        },
+        {
+          "type": "positive",
+          "taxonomy": "Earnings guidance raise",
+          "event_date": "2026-07-27",
+          "headline": "Baker Hughes Q2 EPS beats estimates as AI power demand surges; IET orders outlook raised to $45B through 2028.",
           "weight": 8,
-          "confidence": 95
+          "confidence": 70
         },
         {
           "type": "positive",
           "taxonomy": "Regulatory approval (FDA, FCC, FTC clearance)",
           "event_date": "2026-07-10",
-          "headline": "Baker Hughes wins conditional EU nod for $13.6 billion Chart deal",
+          "headline": "Baker Hughes wins E.U. approval for Chart Industries deal after LNG tech divestitures.",
           "weight": 8,
           "confidence": 85
         },
         {
-          "type": "positive",
-          "taxonomy": "Contract win/expansion",
-          "event_date": "2026-09-04",
-          "headline": "announced Friday a significant award from bp to provide offshore stimulation services across the company's UK North Sea operations.",
-          "weight": 7,
-          "confidence": 95
-        },
-        {
-          "type": "positive",
-          "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
-          "event_date": "2026-07-26",
-          "headline": "Orders of $10.5 billion, including $7.1 billion of IET orders.",
-          "weight": 7,
-          "confidence": 93
-        },
-        {
-          "type": "positive",
-          "taxonomy": "Earnings guidance raise",
-          "event_date": "2026-09-09",
-          "headline": "Baker Hughes (BKR) raised its financial guidance for the full year on Wednesday after factoring in a boost from its recent acquisition of Chart Industries.",
-          "weight": 7,
-          "confidence": 92
-        },
-        {
-          "type": "positive",
-          "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
-          "event_date": "2026-04-23",
-          "headline": "Baker Hughes Non-GAAP EPS of $0.58 beats by $0.09, revenue of $6.59B beats by $260M",
-          "weight": 7,
-          "confidence": 80
+          "type": "negative",
+          "taxonomy": "Earnings miss (revenue, EBITDA, EPS)",
+          "event_date": "2026-07-09",
+          "headline": "Baker Hughes stock edges lower after Q2 2026 earnings miss and margin resilience.",
+          "weight": 8,
+          "confidence": 65
         }
       ],
       "error": null
@@ -291,65 +192,26 @@
     {
       "ticker": "KGS",
       "role": "override_captain",
-      "why": "OVERRIDE Oil & Gas Equipment & Services",
-      "net_signal": "Strong Bullish",
-      "conviction": 96,
-      "search_backend": "grok_native",
-      "catalyst_stack": "On 2026-09-24 Kodiak signed a six-year deal to supply 76 MW of baseload power to a West Texas data center, extending the behind-the-meter power pivot into contracted AI/data-center load. Q2 results on 2026-08-06 printed record $216.8 million adjusted EBITDA and lifted 2026 adjusted EBITDA guidance to $830\u2013$860 million, after the 2026-05-11 Q1 print had already raised the range to include Distributed Power Solutions. That platform was built by closing DPS on 2026-04-01 (about 395 MW) and locking a Baker Hughes turbine framework on 2026-07-08 for roughly 1 GW by 2030 (up to 1.8 GW), funded in part by the 2026-05-14 follow-on of 10.56 million shares at $71.00. Street coverage stays crowded-bullish after Wells Fargo and Piper Sandler Overweight initiations and several PT raises, only partly offset by Jefferies\u2019 2026-08-10 cut to $69 and the dilution from the May equity raise.",
-      "key_assumption": "Power contracts and Baker Hughes turbine deliveries convert into high-utilization EBITDA without another dilutive raise or a cut to 2026 EBITDA/DCF guidance, while Permian compression stays near full utilization.",
-      "n_pos": 12,
-      "n_neg": 4,
-      "top_hits": [
-        {
-          "type": "positive",
-          "taxonomy": "Successful acquisition/synergy realization",
-          "event_date": "2026-04-01",
-          "headline": "completed the previously announced acquisition of Distributed Power Solutions, LLC (\u201cDPS\u201d)",
-          "weight": 9,
-          "confidence": 95
-        },
-        {
-          "type": "positive",
-          "taxonomy": "Contract win/expansion",
-          "event_date": "2026-09-24",
-          "headline": "Kodiak Gas Services Announces Power Supply Agreement with West Texas Data Center",
-          "weight": 9,
-          "confidence": 75
-        },
-        {
-          "type": "negative",
-          "taxonomy": "Dilutive offering/distressed fundraising/down round",
-          "event_date": "2026-05-14",
-          "headline": "priced its previously announced underwritten public offering of 10,563,380 shares of common stock (the \u201cOffering\u201d) at a price to the public of $71.00 per share",
-          "weight": 9,
-          "confidence": 95
-        },
-        {
-          "type": "positive",
-          "taxonomy": "Earnings guidance raise",
-          "event_date": "2026-08-06",
-          "headline": "Increased Adjusted EBITDA guidance to a range of $830 million to $860 million",
-          "weight": 8,
-          "confidence": 95
-        },
-        {
-          "type": "positive",
-          "taxonomy": "Earnings guidance raise",
-          "event_date": "2026-05-11",
-          "headline": "Increased 2026 Adjusted EBITDA guidance to a range of $820 million to $860 million",
-          "weight": 8,
-          "confidence": 80
-        },
-        {
-          "type": "positive",
-          "taxonomy": "Capacity expansion announced",
-          "event_date": "2026-07-08",
-          "headline": "Initial major award includes approximately 1 GW of gas turbines and generators delivered by 2030",
-          "weight": 7,
-          "confidence": 95
-        }
-      ],
-      "error": null
+      "why": "OVERRIDE card Oil & Gas Equipment & Services",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 KGS"
+    },
+    {
+      "ticker": "SKYW",
+      "role": "conflict",
+      "why": "actions sell net=-5.15 vs heat buy",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP2 SKYW"
+    },
+    {
+      "ticker": "VST",
+      "role": "conflict",
+      "why": "actions buy net=3.51 vs heat sell",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 VST"
+    },
+    {
+      "ticker": "HNRG",
+      "role": "conflict",
+      "why": "actions buy net=3.51 vs heat sell",
+      "error": "OpenClaw and DeepSeek both returned empty for CATALYST STEP1 HNRG"
     }
   ]
 }
