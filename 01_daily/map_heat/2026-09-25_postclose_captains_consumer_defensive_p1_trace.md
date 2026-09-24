@@ -16,10 +16,10 @@
 
 **Step 2 — Research.** The model wanted to know: *"Weis Markets WMK Q2 2026 results"* → got 6 results (via ddg)
 
-  - Weis Markets Reports Second Quarter 2026 Results (https://www.weismarkets.com/index.php/weis-markets-reports-second-quarter-2026-results)
+  - Weis Markets Q2 Revenue Rises 4.6%, EPS $0.92 | WMK Stock News (https://www.stocktitan.net/news/WMK/weis-markets-reports-second-quarter-2026-ntxveqlu4qoz.html)
 
-  - WEIS MARKETS REPORTS SECOND QUARTER 2026 RESULTS - PR Newswire (https://www.prnewswire.com/news-releases/weis-markets-reports-second-quarter-2026-results-302842986.html)
+  - Weis Markets posts Q2 2026 revenue of $1.28B | WMK 8-K Filing (https://www.stocktitan.net/sec-filings/WMK/8-k-weis-markets-inc-reports-material-event-a7877f37db3b.html)
 
-  - Weis Markets Reports Second Quarter 2026 Results (https://finance.yahoo.com/markets/stocks/articles/weis-markets-reports-second-quarter-210000210.html)
+  - Weis Markets (WMK) Stock Price & Overview (https://stockanalysis.com/stocks/wmk/)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

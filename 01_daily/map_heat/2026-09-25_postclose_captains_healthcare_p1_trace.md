@@ -14,12 +14,12 @@
 
   - Pharmaceutical giant McKesson warns of 'service degradation' following cyberattack - The Record from Recorded Future News (https://news.google.com/rss/articles/CBMib0FVX3lxTE5CMmlVdjRXaXdYZjRlelRPQXFadjJXb1Q5bk5ZVnJrX0tIcFBpUFI3LXBDTl9OSkJvU3FUak9WSVNhX0QxWi1WclVzXzRBdHhuNFVudVlzWWVSMFVFVnF5T2p2cDRZaDA3V1o0Wm5fNA?oc=5)
 
-**Step 2 — Research.** The model wanted to know: *"COR Cencora news September 2026"* → got 6 results (via gnews_rss)
+**Step 2 — Research.** The model wanted to know: *"COR Cencora news September 2026"* → got 6 results (via ddg)
 
-  - How Social Security COLA Could Move Cencora Stock And Senior Healthcare Demand - simplywall.st (https://news.google.com/rss/articles/CBMiywFBVV95cUxPN0tEVlMzeWhNRkRoaFFtbVdDRGJfVUdHNW1tY0VTUXB4Nm9nWktjWkgzVElhdjVaTmVNRUs1UDUxOHlpbEJ0MDQzQ08wUnNzd0FEcXB3WFh4MTdWQVhyM1BaajdOLS1NNTFCQmhWRFRBN2VNdWZ3MktfaWNXU1RuRkkzVWJSLTItX3hVOE5Ja2ZSRTRlR19Xb0MwWExpVVI4bGs2YU9yV1RQOEJZT2R0MTd3Q0RZNHMyQXdYaHJvRE5Od09teDZaN08wTdIB0AFBVV95cUxNX0kyLS1BZDJCQnRWT0VqS1dDYmRvQ0pZTExSVkkxNkhJY041SzdYclFxY1J0Sng2T1E5R1NPX1BNVnZHZ1V3S29SdXJpV0lfUnZmeGtHUkNESjFaUGt4UGRKSGE0VFhLb1VYTk10cThOMGtpdVpYd3Y0R2FkOEtNNVgtc2R1Y0pVZ2VFdTZmX3p2d3M3T181NG5DUjJQZlhXRFBpNnQ0bTI4WDZrdDVmMVQ4bDhOb2xIYkk2NFJTTDdfVXRvMWNTVGlfTDhXeFRz?oc=5)
+  - Newsroom: Press Releases, Company News and Insights | Cencora (https://www.cencora.com/newsroom)
 
-  - Cencora, Inc. (COR) Stock Analysis: Unveiling a 19.6% Potential Upside in the Healthcare Distribution Sector - DirectorsTalk Interviews (https://news.google.com/rss/articles/CBMi6AFBVV95cUxQejVzdjR1a2FvVXM5TWRjYWhDN3dtdUcySm1fSWcydVE4aTVRZ2J2dVpmUjBwQjFfY2VRaEYydHQ0U1BJV2JKZF82Rl9Wd2tTTFFiVklpOG51SXZoQmRrU3lJbmRBdENXa3lLVjR0cHQ1LXY3eTdYQkRadGNfbm03OEhMUldoME0xQVB5MkRidEIyZ2wyRHhlaW9rMnBpaV9URVZ4NTl6Z1NQZWQ4U1BvNENlYW83QnpmeGNvWlQ5aGlBaGQ0REhxRnBUQW9pSHlySlp6d05QNTdSOWVJSTU1d1BfTDNrMjV1?oc=5)
+  - Cencora (COR) Stock Price & OverviewCencora, Inc. - Investor RelationsCencora, Inc. - Cencora Announces Updated Fiscal Year 2026 ...Cencora Highlights Specialty Growth, MSO Expansion and ...Cencora Raises 2026 EPS Outlook as Specialty Businesses ...Cencora, Inc. (COR) Latest Press Releases | Seeking Alpha (https://stockanalysis.com/stocks/cor/)
 
-  - Cencora (NYSE: COR) director sells $411K in shares - Stock Titan (https://news.google.com/rss/articles/CBMipwFBVV95cUxPZjdLT1NVYm5UUElfXzktZk5XbU9hY21fa19GMFF3OVdFY1VPT3lHUzF6RlNYdnhaYzBBcnROUDVUZWhWY0hnWWUxSzQ5R3JaUEJ6eElmX0lFOFB6M3FOVUpXSXNVSlF4clFoY05pX3QzelVEQ0V5QW5EMWpScy15T1RJLTBCUnRmZGFlckRWVGNfTGNfUHd0cGg0aGxEQTBVcEg4clVVYw?oc=5)
+  - Cencora, Inc. - Investor Relations (https://investor.cencora.com/overview/default.aspx)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

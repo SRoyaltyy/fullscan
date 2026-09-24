@@ -14,12 +14,12 @@
 
   - Korn Ferry (KFY) Stock Eyes AMS Execution As Recurring Revenue Builds - simplywall.st (https://news.google.com/rss/articles/CBMi0wFBVV95cUxPYUlaMkJCM2wtckVJenpQb21WMzRxSjBaUzhKeURIYVVHMmlwMk90ZTc0c1RCX2x3azhhSDFia3dPZXpmVXFtMDZVMUhLdWlieWl1NlZIYVpNX1RkYkM5emRBSUVwdzBGMS1tbi1hVVFvZnVJclM2UXFLLVdqc3lWY0Nia3NZbkh0a0RJWmFkZXUyWl9uYlZOZ1RwWDYxMENqaDd2LU5hSzJlaDFDUmdXOFZFRk05NGdzWUFhaUFzNDhmRGhrTVgzMUpVR3BWamc5TjVZ0gHYAUFVX3lxTE1Pdl9OeW15ZFJiWGhfRldJby1pZVY2ZGdzcUlNWjg3cUplNFdiTS1La3ZONWppZ0poOHE2WGJFYzVfWW5HRTQtTFdHMjdiU3ktcGJGNmpveUJDOXVLMUVuY0RBLVVoTmVfSzM2QlVvQXZCTDY2elZnSUxLRUlFd3g4RU40a0RFVVhWOXJZZGU5WmRwblI1N2lWWjBKSHZ2WWhSRTdIaTZwNExwRGhUdjFYRC1PRGR1UmNTNXViZW5KVlhEanFpTDFPclFKWUdMdWQ4RHBrNHEyRA?oc=5)
 
-**Step 2 — Research.** The model wanted to know: *"TriNet TNET news September 2026"* → got 6 results (via gnews_rss)
+**Step 2 — Research.** The model wanted to know: *"TriNet TNET news September 2026"* → got 6 results (via ddg)
 
-  - TriNet Group (TNET), What Is Behind The Fresh Attention? - simplywall.st (https://news.google.com/rss/articles/CBMizAFBVV95cUxOZlVObWFXSDJ1QUtzWXR4bER3Vi1iZmNlOEotSzhVSlAyU1RibE9vUG1tUENIX25mMGliZ3lLdmIwVjlJeXUyVmRaQ3FpOEx3RnZmZ1hxbVRRLUZnT2V1ZkxxZWFHZ1JDTElyemZoMFlGNXluY2ZSRHpOVGJuSm9OSUY5LXJ6ZzFyUnNjbTZMRWQwS3F1bUNTS2poVXVlY0lvT2RIZlZ3eUhRTmlCd3BoVERNUHU4RjJJZWRtNHIybjE4YVd0b3hySVozbFrSAdIBQVVfeXFMTlVHNkFPMmpReVJ4MEJieXhJdWpTODJ3dFhURnFFMXVqSlcyRDNJVDBFajJIWDJzNllyNGZkekVDWTRPYWNrbE1QaF9YdWFVZmdSemh1ZEVzUmlIeFM1NERFdUNMVVBhcUtBdjFsSFA5ekpTbUNoTXc2RHpPdzhuQUhaOXlGcWZRVVl5QlVoYWJUTmp1SG1NXzVQYS14MDBFZ01HVUZQZnZHRXRQUVZZYkxGNnVXZnJvaGlkQWw4VVhtYXJmeTFPLTI3SEs1V3lIU0ln?oc=5)
+  - TriNet Group, Inc. - TriNet Announces Quarterly Dividend (https://investor.trinet.com/news/news-details/2026/TriNet-Announces-Quarterly-Dividend-dbda7f136/default.aspx)
 
-  - TriNet stock holds at USD 0.00 as fresh figures remain limited - ad-hoc-news.de (https://news.google.com/rss/articles/CBMivgFBVV95cUxObXllZFdCWG5iTzFJVlhsWDNjT0ZZMFlrS3VlWmhvTExyRHJkSXNWTkREVzJmVXZueWpmeHJBdjM3bklCSzlrNURTRFRIaExpZGJNRGM4ZXRiUjcwaE9KVFpVZkpacEdnZUlrLXZ3WXVnSXhmMlVrTlJMcEFidXAyb1JJWGxPUTUzbEVKS2NrZUtCclRpaExjSkZIc3I0ZHBtYVhWTkVVcHBlN2hrT1JpX0x0NnVnb1gxdFpJWm1R?oc=5)
+  - TRINET GROUP (TNET) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/TNET/)
 
-  - TriNet Group, Inc. (NYSE:TNET) Declares $0.29 Quarterly Dividend - TradingView (https://news.google.com/rss/articles/CBMivgFBVV95cUxNY2VXLXktdVQ1blI1UzNfdmVTYXNzZks1SVNTWGljcFVGZ2tYckNSZDRnQjhPLXI4R2M3Z2ZCYl9HUVB5UmdJc3JqR0w1SXliNU1Vb1B6UGZzZGFnaGh6RWJ2NTh4ZElzeE43S0NZMXhkbXpfVDI4MV9JSGVidGx5NkxnVUdVODZzTi1Sd251dHV4Qmh4cUJOcF9aTzZOclR0VWNGa3Nia3NJN0RiRlUwTUdiNmhXMkdLeGx4c0Nn?oc=5)
+  - TNET Looks 21.4% Undervalued on GF Value™ with Dividend Yield at (https://www.gurufocus.com/news/9081260/tnet-looks-214-undervalued-on-gf-value-with-dividend-yield-at-169)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

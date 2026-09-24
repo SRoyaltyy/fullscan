@@ -6,13 +6,13 @@
 
 
 
-**Step 1 — Research.** The model wanted to know: *"Blackstone BX news September 25 2026"* → got 6 results (via gnews_rss)
+**Step 1 — Research.** The model wanted to know: *"Blackstone BX news September 25 2026"* → got 6 results (via ddg)
 
-  - Camden National Bank honors 19 employees and ce... - Pluang (https://news.google.com/rss/articles/CBMihwFBVV95cUxNZEt6cTR1OGg2bUlvbkpfenBJMFUya29ZU2JHRno2TVNRVlJmd3g0WmpaSzdkbjFFVjZwMFAyRmdVRWIzMW8tVVlyaWhpVzBYYmoyOWk0LXpNSWp2MFlVLVNDeEFfajFKa0ZTOHJjRUx0M1VQNDNKSldBNHhXU2k1T3M5eW0zaUU?oc=5)
+  - Blackstone (BX) Stock Price & Overview (https://stockanalysis.com/stocks/bx/)
 
-  - Blackstone’s new private wealth offering for retail investors launching first in Canada and Japan - The Globe and Mail (https://news.google.com/rss/articles/CBMisgFBVV95cUxNdWYwLW5pUWR2dThGdFhOUkhtNWhfbFZBeDM0X2NnZjYxaDVBUFFxcVU2M1VvSWpFQUphbXB4UGNNQVJYRG9mSUZvWDcybHFoMlAyeWlRRWtiQ0VvVmpoam81TERlS1gtMmEzYWgxTmF3ckZLUmVuX3ZuZldqUERCN1Y3SzJxTklBOHdURzNsN3ZDSldqem1ORWZTSUtiUnRTeHZXcDlwdWozMmZnUExlTEJ3?oc=5)
+  - Blackstone - BX Share Information (https://ir.blackstone.com/bx-share-information/default.aspx)
 
-  - Blackstone (BX) Cashes Out Up to $1.3 Billion from its India Real Estate Bet - Yahoo Finance (https://news.google.com/rss/articles/CBMijwFBVV95cUxPOFhZZ2NWU2czSkpvUWtmNGZxNGZ1WVZua0tLX3ltVXluM2R5NVR3TWU0QVlUZWJJekFwb2lPRnFTdGEyZXVsR2wyX1dIU1FQYTZrTHBhSHhNUlRQbnl0dEZaREFkODJPQlhEd3N5WEpSZW1HSEMwYnVWeWdXM3VzQW9tS0JNTVVLWVJ3TFJXdw?oc=5)
+  - News - Blackstone (https://www.blackstone.com/news/)
 
 **Step 2 — Research.** The model wanted to know: *"BlackRock BLK news September 2026"* → got 6 results (via gnews_rss)
 

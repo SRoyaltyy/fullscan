@@ -8,18 +8,18 @@
 
 **Step 1 — Research.** The model wanted to know: *"STZ Constellation Brands news September 2026"* → got 6 results (via ddg)
 
-  - Constellation Brands to Present at Barclays Conference | STZ Stock News (https://www.stocktitan.net/news/STZ/constellation-brands-to-present-at-the-2026-barclays-global-consumer-pmlnzrzar2dp.html)
+  - Press Releases :: Constellation Brands, Inc. (STZ) (https://ir.cbrands.com/news-events/press-releases)
 
-  - Constellation Brands Updates Fiscal 2026 Outlook :: Constellation Brands, Inc. (STZ) (https://ir.cbrands.com/news-events/press-releases/detail/326/constellation-brands-updates-fiscal-2026-outlook)
+  - Constellation Brands (STZ) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/STZ/)
 
-  - CONSTELLATION BRANDS, INC. ($STZ) Former President and CEO 2026 Pay Revealed | STZ Stock News (https://www.quiverquant.com/news/CONSTELLATION+BRANDS,+INC.+($STZ)+Former+President+and+CEO+2026+Pay+Revealed)
+  - News and Events :: Constellation Brands, Inc. (STZ) (https://ir.cbrands.com/news-events)
 
 **Step 2 — Research.** The model wanted to know: *"TAP Molson Coors news September 2026"* → got 6 results (via ddg)
 
-  - Molson Coors Beverage Company Reports 2026 Second Quarter Results (https://ir.molsoncoors.com/news/news-details/2026/Molson-Coors-Beverage-Company-Reports-2026-Second-Quarter-Results/default.aspx)
+  - Molson Coors Beverage Company (TAP) Stock Price, News, Quote & History - Yahoo Finance (https://finance.yahoo.com/quote/TAP/)
 
-  - Molson Coors Beverage Co. Cl B (TAP) Stock Price Today - The Wall ... (https://www.wsj.com/market-data/stock/tap)
+  - Molson Coors Beverage (NYSE:TAP) - Stock Analysis - Simply Wall St (https://simplywall.st/stocks/us/food-beverage-tobacco/nyse-tap/molson-coors-beverage)
 
-  - TAP - Molson Coors Brewing Stock Price - Barchart.com (https://www.barchart.com/stocks/quotes/TAP)
+  - Molson Coors Beverage (TAP) Stock Price, News & Analysis $TAP (https://www.marketbeat.com/stocks/NYSE/TAP/)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.

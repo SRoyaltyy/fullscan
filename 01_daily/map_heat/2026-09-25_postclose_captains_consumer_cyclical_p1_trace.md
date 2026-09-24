@@ -16,10 +16,10 @@
 
 **Step 2 — Research.** The model wanted to know: *"HOG Harley-Davidson news September 2026"* → got 6 results (via ddg)
 
-  - Harley-Davidson (HOG) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/HOG/)
-
   - Harley-Davidson - Harley-Davidson, Inc. Declares Dividend (https://investor.harley-davidson.com/news/news-details/2026/Harley-Davidson-Inc--Declares-Dividend-99fe530fa/default.aspx)
 
-  - Harley-Davidson - Harley-Davidson Delivers Second Quarter Financial ... (https://investor.harley-davidson.com/news/news-details/2026/Harley-Davidson-Delivers-Second-Quarter-Financial-Results-and-Raises-Full-Year-Guidance/default.aspx)
+  - Harley-Davidson - Harley-Davidson Announces "Back to the ... (https://investor.harley-davidson.com/news/news-details/2026/Harley-Davidson-Announces-Back-to-the-Bricks-Strategic-Plan-to-Restore-Performance-and-Deliver-Profitable-Growth/default.aspx)
+
+  - Harley-Davidson (HOG) Stock News & Updates | StockTitan (https://www.stocktitan.net/news/HOG/)
 
 **Step 4 — Search budget exhausted.** Forced to conclude with what it already gathered.
