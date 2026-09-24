@@ -31,6 +31,61 @@
       "detail": "Parsed file median 2026-08-28, 0% inside 36h. Lane one-shot 100 run 35823365502 harvested it. Not a live-buy rule."
     },
     {
+      "date": "2026-09-09",
+      "reason": "stale_news",
+      "detail": "Parsed file has 0 dated items of 155 (need >= 8). Items are on-disk Finviz and events (finviz_export 114, events 37, finviz_elite_news 4); hours stamped 24. Not a live-buy rule."
+    },
+    {
+      "date": "2026-09-10",
+      "reason": "stale_news",
+      "detail": "Parsed file has 0 dated items of 118. Actions news_source is local_files:empty; items are finviz_export. Not a live-buy rule."
+    },
+    {
+      "date": "2026-09-11",
+      "reason": "stale_news",
+      "detail": "Parsed file has 0 dated items of 122. Actions news_source is local_files:empty; items are finviz_export. Not a live-buy rule."
+    },
+    {
+      "date": "2026-09-14",
+      "reason": "stale_news",
+      "detail": "Parsed file has 0 dated items of 149. Actions news_source is local_files:empty; items are finviz_export and events. Not a live-buy rule."
+    },
+    {
+      "date": "2026-09-15",
+      "reason": "stale_news",
+      "detail": "Parsed file has 0 dated items of 252. Actions news_source is local_files:empty; items are events and finviz_export. Not a live-buy rule."
+    },
+    {
+      "date": "2026-09-16",
+      "reason": "stale_news",
+      "detail": "Parsed file has 0 dated items of 120. Actions news_source is local_files:empty; items are finviz_export. Not a live-buy rule."
+    },
+    {
+      "date": "2026-09-17",
+      "reason": "stale_news",
+      "detail": "Parsed file has 0 dated items of 121. Actions news_source is local_files:empty; items are finviz_export. Lane news scan 35554500452 read this Finviz file. Not a live-buy rule."
+    },
+    {
+      "date": "2026-09-18",
+      "reason": "stale_news",
+      "detail": "Parsed file has 0 dated items of 123. Actions news_source is local_files:empty; items are finviz_export. Not a live-buy rule."
+    },
+    {
+      "date": "2026-09-21",
+      "reason": "stale_news",
+      "detail": "Parsed file has 0 dated items of 119. Actions news_source is local_files:empty; items are finviz_export. Not a live-buy rule."
+    },
+    {
+      "date": "2026-09-22",
+      "reason": "stale_news",
+      "detail": "Parsed file has 0 dated items of 122. Actions news_source is local_files:empty; items are finviz_export. Not a live-buy rule."
+    },
+    {
+      "date": "2026-09-23",
+      "reason": "stale_news",
+      "detail": "Parsed file has 0 dated items of 120. Actions news_source is local_files:empty; items are finviz_export. Not a live-buy rule."
+    },
+    {
       "date": "2026-09-24",
       "reason": "stale_news",
       "detail": "Pre-Open news window was the 2026-08-26..08-29 Warsh/Jackson Hole cluster (parsed 05:59 ET, 400 items, median published 2026-08-28). The file was committed at 2026-09-24T09:59:37Z, after the only Lane harvest. Exclude this session from research evidence and learning. Not a live-buy rule."

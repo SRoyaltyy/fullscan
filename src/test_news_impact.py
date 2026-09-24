@@ -353,10 +353,34 @@ def test_macro_tariff_imposed_is_risk_off() -> None:
     assert "GLD" in _ticks(row, "up")
 
 
+def _report_from_parsed(date: str) -> dict:
+    """Score a parsed file directly. load_corpus skips quarantined sessions."""
+    import src.news_impact.backtest as bt
+    saved = bt.load_corpus
+
+    def _load(d=None):
+        if d == date:
+            return bt.load_parsed(Path(f"01_daily/news/{date}_parsed.json"))
+        return saved(d)
+
+    bt.load_corpus = _load
+    try:
+        return run_backtest(date, persist=False)
+    finally:
+        bt.load_corpus = saved
+
+
 def test_backtest_improves_sept_parses() -> None:
-    """09-17 + 09-18 pipeline parses: rescue real movers, kill gold/Hormuz weather."""
-    r17 = run_backtest("2026-09-17", persist=False)
-    r18 = run_backtest("2026-09-18", persist=False)
+    """09-17 + 09-18 pipeline parses: rescue real movers, kill gold/Hormuz weather.
+
+    Those sessions are quarantined, so the research loader returns nothing.
+    The classifier check still reads the files.
+    """
+    from src.news_impact.backtest import load_corpus
+    assert load_corpus("2026-09-17") == []
+    assert load_corpus("2026-09-18") == []
+    r17 = _report_from_parsed("2026-09-17")
+    r18 = _report_from_parsed("2026-09-18")
     for report, label in ((r17, "09-17"), (r18, "09-18")):
         old_r = (report.get("old") or {}).get("usable_ratio") or 0
         new_r = (report.get("new") or {}).get("usable_ratio") or 0
@@ -435,7 +459,7 @@ def test_grade_entity_agrees_on_up() -> None:
 
 
 def test_markdown_table_columns() -> None:
-    report = run_backtest("2026-09-17", persist=False)
+    report = _report_from_parsed("2026-09-17")
     md = markdown(report)
     for col in (
         "| Article |", "| Published |", "| Retrieved |", "| LLM(s) |",

@@ -69,14 +69,14 @@ def test_publish_paths_default_is_live() -> None:
 
 
 def test_slice_panel_drops_later_sessions() -> None:
-    cal = ["2026-09-08", "2026-09-09", "2026-09-10"]
+    cal = ["2026-08-18", "2026-08-19", "2026-08-20"]
     rows = [_row(d, "AAA") for d in cal]
     panel = _panel(cal, rows)
-    cut = fm.slice_panel(panel, "2026-09-08", "2026-09-09")
-    assert cut["session_dates"] == ["2026-09-08", "2026-09-09"]
-    assert cut["to_date"] == "2026-09-09"
-    assert all(r["date"] <= "2026-09-09" for r in cut["rows"])
-    assert "2026-09-10" not in cut["by_date"]
+    cut = fm.slice_panel(panel, "2026-08-18", "2026-08-19")
+    assert cut["session_dates"] == ["2026-08-18", "2026-08-19"]
+    assert cut["to_date"] == "2026-08-19"
+    assert all(r["date"] <= "2026-08-19" for r in cut["rows"])
+    assert "2026-08-20" not in cut["by_date"]
 
 
 def test_out_root_write_skips_live_paths(tmp_path) -> None:
@@ -162,18 +162,18 @@ def test_cli_rejects_out_root_with_land_closed() -> None:
 
 
 def test_holdout_replays_frozen_and_does_not_repick() -> None:
-    cal = ["2026-09-08", "2026-09-09", "2026-09-10", "2026-09-11"]
+    cal = ["2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21"]
     rows = [_row(d, "WIN") for d in cal]
     full = _panel(cal, rows)
     bars = {
-        ("WIN", "2026-09-08"): {"open": 10, "close": 12},
-        ("WIN", "2026-09-09"): {"open": 12, "close": 14},
-        ("WIN", "2026-09-10"): {"open": 14, "close": 7},
-        ("WIN", "2026-09-11"): {"open": 7, "close": 6},
+        ("WIN", "2026-08-18"): {"open": 10, "close": 12},
+        ("WIN", "2026-08-19"): {"open": 12, "close": 14},
+        ("WIN", "2026-08-20"): {"open": 14, "close": 7},
+        ("WIN", "2026-08-21"): {"open": 7, "close": 6},
     }
     rec = fm.make_recipe("union_hot_n4_holdup", hold=1, top_n=1,
                          s_boost="holdup")
-    is_panel = fm.slice_panel(full, end="2026-09-09")
+    is_panel = fm.slice_panel(full, end="2026-08-19")
     fees = ZERO_FEES
     is_book = fmb.simulate_book(
         is_panel, rec, bars=bars, fees=fees, regime={})
@@ -191,8 +191,8 @@ def test_holdout_replays_frozen_and_does_not_repick() -> None:
         "audit_ok": True,
     }
     payload = {
-        "from_date": "2026-09-08",
-        "to_date": "2026-09-09",
+        "from_date": "2026-08-18",
+        "to_date": "2026-08-19",
         "n_sessions": 2,
         "n_rows": 2,
         "n_recipes": 1,
@@ -201,7 +201,7 @@ def test_holdout_replays_frozen_and_does_not_repick() -> None:
     }
     assert fm.is_workable_stat(is_stat) is True
     rows_out = fma.score_holdout(
-        payload, full, cutoff="2026-09-09", oos_start="2026-09-10",
+        payload, full, cutoff="2026-08-19", oos_start="2026-08-20",
         names=["union_hot_n4_holdup"],
         bars=bars, fees=fees, regime={})
     by = {r["name"]: r for r in rows_out}
@@ -213,8 +213,8 @@ def test_holdout_replays_frozen_and_does_not_repick() -> None:
     assert holdup["oos_book_pct_continued"] is not None
     assert (holdup.get("oos_n_days") or 0) >= 1
     md = fma.render_asof_md(
-        payload, rows_out, cutoff="2026-09-09",
-        oos_start="2026-09-10", oos_end="2026-09-11")
+        payload, rows_out, cutoff="2026-08-19",
+        oos_start="2026-08-20", oos_end="2026-08-21")
     assert "union_hot_n4_holdup" in md
     assert "Selected 9/9" in md
     assert "Verdict" in md
