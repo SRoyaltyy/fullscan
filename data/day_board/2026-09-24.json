@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T05:54:09.649559-04:00",
+  "generated_at": "2026-09-24T05:55:04.196444-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -12,8 +12,8 @@
     "MISSING AB checklist enriched `data/ab_checklist/2026-09-24_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 2,
-    "partial": 2,
+    "ok": 1,
+    "partial": 3,
     "fail": 4,
     "n": 8
   },
@@ -22,9 +22,9 @@
       "key": "postclose",
       "name": "Post-close research",
       "yaml": "map_heat_postclose.yml",
-      "status": "OK",
+      "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 1,
       "n_req": 2,
       "n_opt_ok": 2,
       "n_opt": 2,
@@ -59,10 +59,10 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-09-24_map_heat.json",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 270913,
-          "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
+          "status": "FAIL",
+          "reason": "stale_map_heat_md",
+          "size": 0,
+          "said": "stale_map_heat_md \u00b7 morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
         {
@@ -72,10 +72,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 16777,
-          "said": "MAP HEAT \u2014 2026-09-24",
+          "size": 17106,
+          "said": "MAP HEAT \u2014 2026-09-23",
           "bullets": [
-            "Export `finviz_2026-09-23.csv` \u00b7 11616 names \u00b7 generated 2026-09-24T05:54:09.476607-04:00",
+            "Export `finviz_2026-09-23.csv` \u00b7 11616 names \u00b7 generated 2026-09-23T04:16:39.961966-04:00",
             "TAPE (live futures)"
           ]
         }
@@ -91,7 +91,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 3,
+      "n_opt_ok": 1,
       "n_opt": 5,
       "files": [
         {
@@ -101,12 +101,12 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 87750,
-          "said": "5880 tickers \u00b7 2153 signals \u00b7 top AJG, AME, AMGN, AMX, AMZN, AON, APH, APP",
+          "size": 87599,
+          "said": "5879 tickers \u00b7 2148 signals \u00b7 top AJG, AME, AMGN, AMX, AMZN, AON, APH, APP",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
             "AMETEK Completes Acquisition of Indicor Instrumentation",
-            "Amgen price target raised by Jefferies to $410 after positive Sj\u00f6gren's data"
+            "Amgen price target raised by Jefferies to $410 after positive Sj\u00c3\u00b6gren's data"
           ]
         },
         {
@@ -116,10 +116,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 11771,
+          "size": 11780,
           "said": "Finviz Daily Digest \u2014 2026-09-24",
           "bullets": [
-            "_Generated 2026-09-24T05:52:47.535298-04:00 \u00b7 export=data/exports/finviz_2026-09-23.csv \u00b7 ticker digests=5880 \u00b7 high-signal=2153_",
+            "_Generated 2026-09-24T05:55:03.918230-04:00 \u00b7 export=data/exports/finviz_2026-09-24.csv \u00b7 ticker digests=5879 \u00b7 high-signal=2148_",
             "Major indices (live quote page)"
           ]
         },
@@ -128,10 +128,10 @@
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-24_finviz_market_digest.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 5576,
-          "said": "US futures point to a lower open as a global bond selloff lifts yields to multi\u2011year highs ahead of US data and an anticipated Trump\u2011Xi meeting \u00b7 leaders GIS, CTAS, PAYX, CBRL, DRI, SNX \u00b7 bad",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -139,14 +139,11 @@
           "name": "Homepage warm-up MD (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-24_finviz_market_digest.md",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 2702,
-          "said": "Finviz homepage market digest \u2014 2026-09-24",
-          "bullets": [
-            "Generated:** 2026-09-24T05:52:54.055442-04:00 (America/New_York)",
-            "Source:** `live`"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "market_digest_close_json",
@@ -171,11 +168,11 @@
           "bullets": []
         }
       ],
-      "said": "5880 tickers \u00b7 2153 signals \u00b7 top AJG, AME, AMGN, AMX, AMZN, AON, APH, APP",
+      "said": "5879 tickers \u00b7 2148 signals \u00b7 top AJG, AME, AMGN, AMX, AMZN, AON, APH, APP",
       "bullets": [
         "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
         "AMETEK Completes Acquisition of Indicor Instrumentation",
-        "Amgen price target raised by Jefferies to $410 after positive Sj\u00f6gren's data"
+        "Amgen price target raised by Jefferies to $410 after positive Sj\u00c3\u00b6gren's data"
       ]
     },
     {
@@ -183,10 +180,10 @@
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
-      "inputs_ready": true,
+      "inputs_ready": false,
       "n_req_ok": 2,
       "n_req": 20,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 3,
       "files": [
         {
@@ -196,12 +193,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87750,
-          "said": "5880 tickers \u00b7 2153 signals \u00b7 top AJG, AME, AMGN, AMX, AMZN, AON, APH, APP",
+          "size": 87599,
+          "said": "5879 tickers \u00b7 2148 signals \u00b7 top AJG, AME, AMGN, AMX, AMZN, AON, APH, APP",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
             "AMETEK Completes Acquisition of Indicor Instrumentation",
-            "Amgen price target raised by Jefferies to $410 after positive Sj\u00f6gren's data"
+            "Amgen price target raised by Jefferies to $410 after positive Sj\u00c3\u00b6gren's data"
           ]
         },
         {
@@ -209,10 +206,10 @@
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-24_finviz_market_digest.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 5576,
-          "said": "US futures point to a lower open as a global bond selloff lifts yields to multi\u2011year highs ahead of US data and an anticipated Trump\u2011Xi meeting \u00b7 leaders GIS, CTAS, PAYX, CBRL, DRI, SNX \u00b7 bad",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -231,10 +228,10 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-09-24_map_heat.json",
           "role": "input",
-          "status": "OK",
-          "reason": "",
-          "size": 270913,
-          "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
+          "status": "FAIL",
+          "reason": "stale_map_heat_md",
+          "size": 0,
+          "said": "stale_map_heat_md \u00b7 morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
         {
@@ -332,8 +329,8 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7282,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "size": 7299,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 20 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
@@ -508,12 +505,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87750,
-          "said": "5880 tickers \u00b7 2153 signals \u00b7 top AJG, AME, AMGN, AMX, AMZN, AON, APH, APP",
+          "size": 87599,
+          "said": "5879 tickers \u00b7 2148 signals \u00b7 top AJG, AME, AMGN, AMX, AMZN, AON, APH, APP",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
             "AMETEK Completes Acquisition of Indicor Instrumentation",
-            "Amgen price target raised by Jefferies to $410 after positive Sj\u00f6gren's data"
+            "Amgen price target raised by Jefferies to $410 after positive Sj\u00c3\u00b6gren's data"
           ]
         },
         {
@@ -597,12 +594,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87750,
-          "said": "5880 tickers \u00b7 2153 signals \u00b7 top AJG, AME, AMGN, AMX, AMZN, AON, APH, APP",
+          "size": 87599,
+          "said": "5879 tickers \u00b7 2148 signals \u00b7 top AJG, AME, AMGN, AMX, AMZN, AON, APH, APP",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
             "AMETEK Completes Acquisition of Indicor Instrumentation",
-            "Amgen price target raised by Jefferies to $410 after positive Sj\u00f6gren's data"
+            "Amgen price target raised by Jefferies to $410 after positive Sj\u00c3\u00b6gren's data"
           ]
         },
         {
@@ -671,12 +668,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 87750,
-          "said": "5880 tickers \u00b7 2153 signals \u00b7 top AJG, AME, AMGN, AMX, AMZN, AON, APH, APP",
+          "size": 87599,
+          "said": "5879 tickers \u00b7 2148 signals \u00b7 top AJG, AME, AMGN, AMX, AMZN, AON, APH, APP",
           "bullets": [
             "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
             "AMETEK Completes Acquisition of Indicor Instrumentation",
-            "Amgen price target raised by Jefferies to $410 after positive Sj\u00f6gren's data"
+            "Amgen price target raised by Jefferies to $410 after positive Sj\u00c3\u00b6gren's data"
           ]
         },
         {
@@ -950,6 +947,45 @@
         }
       ],
       "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-24\nExport `finviz_2026-09-23.csv` \u00b7 11616 names \u00b7 generated 2026-09-24T05:54:09.476607-04:00"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T05:55:04.053954-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-24_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 87599,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-24_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11816,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-24\n_Generated 2026-09-24T05:55:03.918230-04:00 \u00b7 export=data/exports/finviz_2026-09-24.csv \u00b7 ticker digests=5879 \u00b7 high-signal=2148_"
+        },
+        {
+          "path": "data/exports/finviz_2026-09-24.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11017735,
+          "preview": "11673 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11463447,
+          "preview": "11666 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-24\n_Generated 2026-09-24T05:55:03.918230-04:00 \u00b7 export=data/exports/finviz_2026-09-24.csv \u00b7 ticker digests=5879 \u00b7 high-signal=2148_ \u00b7 11673 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11666 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
