@@ -1,86 +1,17 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T06:03:11.232783-04:00",
+  "generated_at": "2026-09-24T06:03:16.347478-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 4,
-    "partial": 4,
+    "ok": 5,
+    "partial": 3,
     "fail": 0,
     "n": 8
   },
-  "buy_1d": [
-    {
-      "ticker": "ASTH",
-      "score": 0.58865646085623
-    },
-    {
-      "ticker": "GDYN",
-      "score": 0.5809654892066937
-    },
-    {
-      "ticker": "NTNX",
-      "score": 0.27860939718181044
-    },
-    {
-      "ticker": "NTCT",
-      "score": 0.646586056321109
-    },
-    {
-      "ticker": "YEXT",
-      "score": 0.5563295498881327
-    },
-    {
-      "ticker": "RPD",
-      "score": 0.6180338108131896
-    },
-    {
-      "ticker": "PRGS",
-      "score": 0.5557608638012114
-    }
-  ],
-  "sell_1d": [
-    {
-      "ticker": "EXK",
-      "score": -0.1821583104246926
-    },
-    {
-      "ticker": "METC",
-      "score": -0.3487953810506556
-    },
-    {
-      "ticker": "QBTS",
-      "score": -0.34119887656517095
-    },
-    {
-      "ticker": "EOSE",
-      "score": -0.1626009611267969
-    },
-    {
-      "ticker": "VST",
-      "score": -0.25979810141201626
-    },
-    {
-      "ticker": "TE",
-      "score": -0.03839252985488667
-    },
-    {
-      "ticker": "NEOV",
-      "score": -0.2633136078613514
-    },
-    {
-      "ticker": "AESI",
-      "score": -0.3875320601838151
-    }
-  ],
-  "flatten": {
-    "said": "0 priced buys \u00b7 cash $18,086.73 \u00b7 morning S missing",
-    "bullets": [
-      "0 priced buys",
-      "cash $18,086.73",
-      "morning S missing"
-    ]
-  },
+  "buy_1d": [],
+  "sell_1d": [],
+  "flatten": {},
   "general": {},
   "sectors": {},
   "lands": [
@@ -391,7 +322,7 @@
       "date": "2026-09-24",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-24T06:03:10.857682-04:00",
+      "at": "2026-09-24T06:03:15.990926-04:00",
       "files": [
         {
           "path": "01_daily/news/2026-09-24_judge.md",
