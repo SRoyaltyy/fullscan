@@ -1,78 +1,17 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T06:50:50.837834-04:00",
+  "generated_at": "2026-09-24T06:53:09.141844-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 4,
-    "partial": 4,
+    "ok": 5,
+    "partial": 3,
     "fail": 0,
     "n": 8
   },
-  "buy_1d": [
-    {
-      "ticker": "ASTH",
-      "score": 0.09248307125306686
-    },
-    {
-      "ticker": "CHKP",
-      "score": 0.22580596058295638
-    },
-    {
-      "ticker": "GDYN",
-      "score": 0.15893247831646115
-    },
-    {
-      "ticker": "PRGS",
-      "score": 0.22262173775223718
-    },
-    {
-      "ticker": "NTNX",
-      "score": 0.3469195471799613
-    }
-  ],
-  "sell_1d": [
-    {
-      "ticker": "METC",
-      "score": -0.4147221792720016
-    },
-    {
-      "ticker": "EOSE",
-      "score": -0.1364721911916208
-    },
-    {
-      "ticker": "XIFR",
-      "score": -0.14808431112233889
-    },
-    {
-      "ticker": "VST",
-      "score": 0.10200204669075895
-    },
-    {
-      "ticker": "AESI",
-      "score": -0.3078422660521732
-    },
-    {
-      "ticker": "TE",
-      "score": -0.005561124700873332
-    },
-    {
-      "ticker": "EXK",
-      "score": -0.1576247463622153
-    },
-    {
-      "ticker": "ARE",
-      "score": -0.5420850022543173
-    }
-  ],
-  "flatten": {
-    "said": "0 priced buys \u00b7 cash $18,086.73 \u00b7 morning S missing",
-    "bullets": [
-      "0 priced buys",
-      "cash $18,086.73",
-      "morning S missing"
-    ]
-  },
+  "buy_1d": [],
+  "sell_1d": [],
+  "flatten": {},
   "general": {
     "said": "DOWN  -7.659",
     "bullets": [
@@ -86,7 +25,7 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "1 up / 8 down / 0 flat",
+    "said": "1 up / 9 down / 0 flat",
     "bullets": [
       "XLB DOWN -2.9",
       "XLC DOWN -11.3",
@@ -98,35 +37,10 @@
       "XLI DOWN -4.3",
       "XLRE DOWN -10.0",
       "XLK DOWN -16.2",
-      "XLU missing"
+      "XLU DOWN -5.8"
     ]
   },
   "lands": [
-    {
-      "key": "news_actions",
-      "title": "News actions",
-      "date": "2026-09-24",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-24T06:02:53.982997-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-24_actions.json",
-          "ok": true,
-          "reason": "",
-          "size": 45910,
-          "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers"
-        },
-        {
-          "path": "01_daily/news/2026-09-24_actions.md",
-          "ok": true,
-          "reason": "",
-          "size": 11527,
-          "preview": "# News \u2192 Actions v4 (full framework) \u2014 2026-09-24T06:02:49.630412-04:00\nraw=400 unique_events=5 tickers=70"
-        }
-      ],
-      "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-24T06:02:49.630412-04:00\nraw=400 unique_events=5 tickers=70"
-    },
     {
       "key": "news_judge",
       "title": "News judge",
@@ -364,6 +278,31 @@
         }
       ],
       "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-24\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T06:53:08.588842-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-09-24.csv",
+          "ok": true,
+          "reason": "",
+          "size": 10963783,
+          "preview": "11648 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11463447,
+          "preview": "11666 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11648 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11666 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

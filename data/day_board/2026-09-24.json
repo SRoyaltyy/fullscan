@@ -1,12 +1,12 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T06:50:50.837834-04:00",
+  "generated_at": "2026-09-24T06:53:09.141844-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 4,
-    "partial": 4,
+    "ok": 5,
+    "partial": 3,
     "fail": 0,
     "n": 8
   },
@@ -577,19 +577,19 @@
           "path": "01_daily/weather/2026-09-24_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9284 vix=calm yields=flat",
-          "size": 9284,
-          "said": "favorable 1 \u00b7 hostile 5 \u00b7 neutral 5",
+          "reason": "sectors=11 bytes=10542 vix=calm yields=flat",
+          "size": 10542,
+          "said": "favorable 3 \u00b7 hostile 6 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Energy, Real Estate, Utilities",
-            "events bull 1 / bear 3"
+            "hostile: Communication Services, Consumer Cyclical, Financial, Industrials, Real Estate, Utilities",
+            "events bull 4 / bear 2"
           ]
         }
       ],
-      "said": "favorable 1 \u00b7 hostile 5 \u00b7 neutral 5",
+      "said": "favorable 3 \u00b7 hostile 6 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Energy, Real Estate, Utilities",
-        "events bull 1 / bear 3"
+        "hostile: Communication Services, Consumer Cyclical, Financial, Industrials, Real Estate, Utilities",
+        "events bull 4 / bear 2"
       ]
     },
     {
@@ -707,7 +707,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 3,
       "files": [
         {
@@ -794,12 +794,12 @@
           "path": "01_daily/weather/2026-09-24_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9284 vix=calm yields=flat",
-          "size": 9284,
-          "said": "favorable 1 \u00b7 hostile 5 \u00b7 neutral 5",
+          "reason": "sectors=11 bytes=10542 vix=calm yields=flat",
+          "size": 10542,
+          "said": "favorable 3 \u00b7 hostile 6 \u00b7 neutral 2",
           "bullets": [
-            "hostile: Basic Materials, Communication Services, Energy, Real Estate, Utilities",
-            "events bull 1 / bear 3"
+            "hostile: Communication Services, Consumer Cyclical, Financial, Industrials, Real Estate, Utilities",
+            "events bull 4 / bear 2"
           ]
         },
         {
@@ -822,10 +822,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5898",
-          "size": 2162795,
-          "said": "203 rows",
+          "size": 2264238,
+          "said": "213 rows",
           "bullets": [
-            "KEYS, FORM, NVDA, SMTC, ACMR, APH, MU, SKHY"
+            "ARGX, DVN, ONC, PR, PBR-A, PBR, COP, MSFT"
           ]
         },
         {
@@ -891,25 +891,25 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-24)",
           "size": 8379317,
-          "said": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
+          "said": "live-book poller + today.json (2026-09-24)",
           "bullets": []
         }
       ],
-      "said": "203 rows",
+      "said": "213 rows",
       "bullets": [
-        "KEYS, FORM, NVDA, SMTC, ACMR"
+        "ARGX, DVN, ONC, PR, PBR-A"
       ]
     },
     {
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -930,10 +930,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-24)",
           "size": 8379317,
-          "said": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
+          "said": "live-book poller + today.json (2026-09-24)",
           "bullets": []
         },
         {
@@ -967,70 +967,9 @@
     }
   ],
   "selections": {
-    "buy_1d": [
-      {
-        "ticker": "ASTH",
-        "score": 0.09248307125306686
-      },
-      {
-        "ticker": "CHKP",
-        "score": 0.22580596058295638
-      },
-      {
-        "ticker": "GDYN",
-        "score": 0.15893247831646115
-      },
-      {
-        "ticker": "PRGS",
-        "score": 0.22262173775223718
-      },
-      {
-        "ticker": "NTNX",
-        "score": 0.3469195471799613
-      }
-    ],
-    "sell_1d": [
-      {
-        "ticker": "METC",
-        "score": -0.4147221792720016
-      },
-      {
-        "ticker": "EOSE",
-        "score": -0.1364721911916208
-      },
-      {
-        "ticker": "XIFR",
-        "score": -0.14808431112233889
-      },
-      {
-        "ticker": "VST",
-        "score": 0.10200204669075895
-      },
-      {
-        "ticker": "AESI",
-        "score": -0.3078422660521732
-      },
-      {
-        "ticker": "TE",
-        "score": -0.005561124700873332
-      },
-      {
-        "ticker": "EXK",
-        "score": -0.1576247463622153
-      },
-      {
-        "ticker": "ARE",
-        "score": -0.5420850022543173
-      }
-    ],
-    "flatten": {
-      "said": "0 priced buys \u00b7 cash $18,086.73 \u00b7 morning S missing",
-      "bullets": [
-        "0 priced buys",
-        "cash $18,086.73",
-        "morning S missing"
-      ]
-    },
+    "buy_1d": [],
+    "sell_1d": [],
+    "flatten": {},
     "general": {
       "said": "DOWN  -7.659",
       "bullets": [
@@ -1044,7 +983,7 @@
       "direction": "down"
     },
     "sectors": {
-      "said": "1 up / 8 down / 0 flat",
+      "said": "1 up / 9 down / 0 flat",
       "bullets": [
         "XLB DOWN -2.9",
         "XLC DOWN -11.3",
@@ -1056,7 +995,7 @@
         "XLI DOWN -4.3",
         "XLRE DOWN -10.0",
         "XLK DOWN -16.2",
-        "XLU missing"
+        "XLU DOWN -5.8"
       ]
     },
     "news": {
@@ -1071,10 +1010,10 @@
       ]
     },
     "weather": {
-      "said": "favorable 1 \u00b7 hostile 5 \u00b7 neutral 5",
+      "said": "favorable 3 \u00b7 hostile 6 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Energy, Real Estate, Utilities",
-        "events bull 1 / bear 3"
+        "hostile: Communication Services, Consumer Cyclical, Financial, Industrials, Real Estate, Utilities",
+        "events bull 4 / bear 2"
       ]
     }
   },
@@ -2010,6 +1949,31 @@
         }
       ],
       "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-24\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T06:53:08.588842-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-09-24.csv",
+          "ok": true,
+          "reason": "",
+          "size": 10963783,
+          "preview": "11648 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11463447,
+          "preview": "11666 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11648 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11666 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
