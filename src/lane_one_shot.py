@@ -189,16 +189,21 @@ def harvest(root: Path | None = None) -> list[dict]:
     if elite.is_dir():
         snaps = sorted(elite.glob("*.csv.gz"))
         if snaps:
-            from src.news_impact.theme_radar import since_prior_snapshot, snapshot_clock
+            from src.news_impact.theme_radar import (
+                prior_trading_day_clock,
+                since_prior_snapshot,
+                snapshot_clock,
+            )
 
             path = snaps[-1]
             with gzip.open(path, "rt", encoding="utf-8", errors="replace") as fh:
                 text = fh.read()
             anchor = snapshot_clock(text)
-            prior = None
-            if len(snaps) > 1:
-                with gzip.open(snaps[-2], "rt", encoding="utf-8", errors="replace") as fh:
-                    prior = snapshot_clock(fh.read())
+            day = ""
+            matched = re.search(r"(20\d{2}-\d{2}-\d{2})", path.name)
+            if matched:
+                day = matched.group(1)
+            prior = prior_trading_day_clock(day, snaps)
             for row in csv.DictReader(io.StringIO(text)):
                 published = str(row.get("News Time") or "")
                 if not since_prior_snapshot(published, anchor, prior):

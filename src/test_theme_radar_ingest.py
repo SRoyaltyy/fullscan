@@ -189,6 +189,25 @@ EEE,Undated headline with no news time,digest,,2026-09-24T20:47:29+00:00
                 arts = load_theme_radar("2026-09-24", allow_remote=False)
             self.assertEqual([a["ticker_hint"] for a in arts], ["CCC"])
 
+    def test_missing_prior_trading_day_uses_72h_not_older_file(self) -> None:
+        """2026-08-27 has no snapshot. 08-28 must not borrow 08-26's clock."""
+        older = """Ticker,News Title,Daily Digest,News Time
+AAA,Headline from the snapshot before the gap day,digest,2026-08-26 20:00:00
+"""
+        gap = """Ticker,News Title,Daily Digest,News Time
+AAA,Headline from the snapshot before the gap day,digest,2026-08-26 10:00:00
+BBB,Headline inside the seventy two hour fallback,digest,2026-08-28 12:00:00
+CCC,Headline older than seventy two hours,digest,2026-08-24 08:00:00
+"""
+        with tempfile.TemporaryDirectory() as td:
+            snap = Path(td) / "data" / "snapshots"
+            snap.mkdir(parents=True)
+            (snap / "2026-08-26.csv").write_text(older, encoding="utf-8")
+            (snap / "2026-08-28.csv").write_text(gap, encoding="utf-8")
+            with patch("src.news_impact.theme_radar._roots", return_value=[snap]):
+                arts = load_theme_radar("2026-08-28", allow_remote=False)
+            self.assertEqual([a["ticker_hint"] for a in arts], ["AAA", "BBB"])
+
     def test_lane_harvest_drops_old_elite_headlines(self) -> None:
         import gzip
 

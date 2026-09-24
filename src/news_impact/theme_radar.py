@@ -4,11 +4,13 @@ Do NOT vendor the 11MB .raw.csv or merge repos. Visibility = four columns:
 Ticker, News Title, Daily Digest, News Time. ``scrape_ts`` is read only as
 the snapshot clock (UTC), not as headline text.
 
-A row is kept when its News Time is after the prior snapshot's clock and
-at or before this snapshot's clock. The clock is the max ``scrape_ts``
-(UTC → America/New_York) when that column is present, else the newest
-News Time in the file. Files through 2026-09-24 have no ``scrape_ts``
-column. With no prior file, the lower bound is 72 hours before this clock.
+A row is kept when its News Time is after the prior trading day's
+snapshot clock and at or before this snapshot's clock. ``scrape_ts``
+exists only from 2026-09-25; that column (UTC → America/New_York) is
+the clock when present. Older files compare News Time with the prior
+trading day's snapshot, whose clock is the newest News Time in that
+file. If that prior trading day's file is missing, the lower bound is
+72 hours before this clock, matching theme-radar ``fresh_cat_*``.
 Undated News Time is dropped.
 
 Lookup order:
@@ -151,8 +153,8 @@ def _parse_scrape_ts(text: str) -> datetime | None:
 def snapshot_clock(text: str) -> datetime | None:
     """Export clock for one snapshot file (naive ET).
 
-    Prefer max ``scrape_ts``. Older slim files omit that column; then the
-    clock is the newest News Time.
+    ``scrape_ts`` is written only from 2026-09-25. When that column has a
+    value it wins. Older files fall back to the newest News Time.
     """
     if not (text or "").strip():
         return None
@@ -183,7 +185,11 @@ def since_prior_snapshot(
     anchor: datetime | None,
     prior: datetime | None,
 ) -> bool:
-    """True when News Time falls after the prior snapshot and on or before this one."""
+    """True when News Time is after the prior trading-day clock and on or before this one.
+
+    ``prior is None`` means that trading day's snapshot is missing, so the
+    lower bound is 72 hours before ``anchor``.
+    """
     if anchor is None:
         return False
     when = _parse_news_time(published)
@@ -200,20 +206,32 @@ def _clock_cache_get(cache: dict[str, datetime | None], path: Path) -> datetime 
     return cache[key]
 
 
-def _prior_clock(
+def _previous_trading_day(date_str: str) -> str:
+    """Prior NYSE session. Weekends and full-day holidays (Labor Day) roll back."""
+    from ..skip_if_good import _prev_weekday
+    return _prev_weekday(date_str)
+
+
+def prior_trading_day_clock(
     date: str,
     files: list[Path],
-    cache: dict[str, datetime | None],
+    cache: dict[str, datetime | None] | None = None,
 ) -> datetime | None:
-    earlier = [
-        (_date_of_path(path), path)
-        for path in files
-        if _date_of_path(path) and _date_of_path(path) < date
-    ]
-    if not earlier:
+    """Clock of the previous trading day's snapshot, or None if that file is absent.
+
+    A missing file is not replaced by an older snapshot. Callers then use
+    the 72-hour fallback inside ``since_prior_snapshot``.
+    """
+    if not date or len(date) < 10:
         return None
-    _prev_date, prev = max(earlier)
-    return _clock_cache_get(cache, prev)
+    try:
+        prev = _previous_trading_day(date[:10])
+    except ValueError:
+        return None
+    match = [path for path in files if _date_of_path(path) == prev]
+    if not match:
+        return None
+    return _clock_cache_get(cache if cache is not None else {}, match[0])
 
 
 def _fetch_remote(date: str) -> str:
@@ -294,7 +312,7 @@ def load_theme_radar(
         seen_dates.add(retrieved)
         text = _read_text(path)
         clocks[str(path)] = snapshot_clock(text)
-        prior = _prior_clock(retrieved, universe, clocks)
+        prior = prior_trading_day_clock(retrieved, universe, clocks)
         arts.extend(_keep_fresh(_rows_from_text(text, str(path), retrieved), clocks[str(path)], prior))
     need = []
     if named and date not in seen_dates:
@@ -302,7 +320,7 @@ def load_theme_radar(
     if allow_remote:
         for d in need:
             text = _fetch_remote(d)
-            prior = _prior_clock(d, universe, clocks)
+            prior = prior_trading_day_clock(d, universe, clocks)
             arts.extend(_keep_fresh(
                 _rows_from_text(text, REMOTE.format(date=d), d),
                 snapshot_clock(text),
