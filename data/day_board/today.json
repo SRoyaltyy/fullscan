@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T05:59:43.915577-04:00",
+  "generated_at": "2026-09-24T05:59:48.524935-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
@@ -77,31 +77,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat tables",
-      "date": "2026-09-24",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-24T05:58:29.507893-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-24_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 270739,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-24_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 17075,
-          "preview": "# MAP HEAT \u2014 2026-09-24\nExport `finviz_2026-09-24.csv` \u00b7 11616 names \u00b7 generated 2026-09-24T05:56:23.702936-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-24\nExport `finviz_2026-09-24.csv` \u00b7 11616 names \u00b7 generated 2026-09-24T05:56:23.702936-04:00"
-    },
     {
       "key": "map_heat_baseline",
       "title": "Map heat night baseline",
@@ -283,6 +258,115 @@
         }
       ],
       "preview": "1d BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI \u00b7 2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI \u00b7 # Stock book \u2014 2026-09-24\n_Generated 2026-09-24T05:57:30.704824-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T05:59:47.704368-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 12706,
+          "preview": "2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 702,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-24.json",
+          "ok": true,
+          "reason": "",
+          "size": 59825,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-24_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 17763,
+          "preview": "2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 856247,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-24_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 856247,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1215140,
+          "preview": "2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 856247,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 17763,
+          "preview": "2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 856247,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 856247,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1215140,
+          "preview": "2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 2274,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 2274,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, "
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
