@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T06:53:20.806374-04:00",
+  "generated_at": "2026-09-24T06:53:26.253663-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -41,24 +41,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "general_predict",
-      "title": "General market predict",
-      "date": "2026-09-24",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-24T06:08:30.853854-04:00",
-      "files": [
-        {
-          "path": "01_daily/general/2026-09-24_predict.md",
-          "ok": true,
-          "reason": "",
-          "size": 10558,
-          "preview": "# Premarket Prediction \u2014 2026-09-24\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -7.659 (uncertainty multiplier \u00d71.0) | confidence 0.806\n>\n> **Good news vs bad news:** good +1.0 pts vs bad -4.25 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - US-China trade truce extended to Jan 10\n> - oil offered CL -1.6%\n> - ASML EUV sold out\n> - Amgen Phase 3 positive\n> - VIX contango 0.912\n>\n> **Bad news driving this:**\n> - NQ -1.13% on yield backup\n> - 10Y ~5.12% biting tech\n> - Trump-Xi summit two-sided unprinted\n> - paid hawkish SEP ~54% Oct hike\n> - FY27 shutdown deadline 09-30\n>\n> **market uncertainty: **elevated** | VIX 16.52 | policy-uncertainty index 114.08 (1d -78.97)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \u26aa Asia overnight session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight news & c"
-        }
-      ],
-      "preview": "# Premarket Prediction \u2014 2026-09-24\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -7.659 (uncertainty multiplier \u00d71.0) | confidence 0.806\n>\n> **Good news vs bad news:** good +1.0 pts vs bad -4.25 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - US-China trade truce extended to Jan 10\n> - oil offered CL -1.6%\n> - ASML EUV sold out\n> - Amgen Phase 3 positive\n> - VIX contango 0.912\n>\n> **Bad news driving this:**\n> - NQ -1.13% on yield backup\n> - 10Y ~5.12% biting tech\n> - Trump-Xi summit two-sided unprinted\n> - paid hawkish SEP ~54% Oct hike\n> - FY27 shutdown deadline 09-30\n>\n> **market uncertainty: **elevated** | VIX 16.52 | policy-uncertainty index 114.08 (1d -78.97)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \u26aa Asia overnight session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight news & c"
-    },
     {
       "key": "sector_one",
       "title": "Sector predict Basic Materials (1/11)",
@@ -303,6 +285,24 @@
         }
       ],
       "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -2.88, 'dir': 'down', 'conf': 0.615, 'source': 'llm'}, Communication Services={'score': -11.341, 'dir': 'down', 'conf': 0.85, 'source': 'llm'}, Consumer Cyclical={'score': -8.472, 'dir': 'down', 'conf': 0.839, 'source': 'llm'}, Energy={'score': 6.779, 'dir': 'up', 'conf': 0.771, 'source': 'llm'}, Financial={'score': -4.898, 'dir': 'down', 'conf': 0.696, 'source': 'llm'}, Healthcare={'score': -4.286, 'dir': 'down', 'conf': 0.671, 'source': 'llm'}, Industrials={'score': -4.289, 'dir': 'down', 'conf': 0.672, 'source': 'llm'}, Real Estate={'score': -9.97, 'dir': 'down', 'conf': 0.85, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-24\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T06:53:25.708984-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-24_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2264238,
+          "preview": "5898 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, DVN, ONC, PR, PBR-A"
+        }
+      ],
+      "preview": "5898 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, DVN, ONC, PR, PBR-A"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
