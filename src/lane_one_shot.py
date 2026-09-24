@@ -2,8 +2,9 @@
 
 Usage:
   python3 -m src.lane_one_shot --env-check
-  python3 -m src.lane_one_shot --shard 0 --shards 5 --target 20 --max-draws 80
-  python3 -m src.lane_one_shot --merge artifacts/
+  python3 -m src.lane_one_shot --print-budgets --run-budget-minutes 540 --deadline-et 03:30
+  python3 -m src.lane_one_shot --shard 0 --shards 5 --target 20 --max-draws 80 --budget-seconds 4860
+  python3 -m src.lane_one_shot --merge artifacts/ --shard-count 5
 
 Refuses to publish a row whose watermark is not lane::<provider>::<model>.
 Does not call classify.py or families.analyze.
@@ -16,10 +17,13 @@ import gzip
 import json
 import os
 import re
+import signal
 import time
 import zlib
 from collections import Counter
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from src import lane_route as lane
 from src.news_impact.axioms import load_axioms
@@ -578,6 +582,155 @@ def _classify_floor_ok(row: dict) -> bool:
     return False
 
 
+# 18:30 ET -> 03:30 ET. Shards share the one ECS runner, so this is the
+# whole run (gold + five shards + merge), not a per-shard allowance.
+DEFAULT_RUN_BUDGET_MINUTES = 540
+DEFAULT_DEADLINE_ET = "03:30"
+# Gold fixtures on run 35929449213 took 54 minutes. 75 leaves slack
+# for checkout without giving gold the old 120-minute job cap.
+DEFAULT_GOLD_BUDGET_MINUTES = 75
+DEFAULT_MERGE_BUDGET_MINUTES = 20
+# Checkout, install, env check, and artifact upload sit inside the
+# GitHub job timeout. The draw loop stops this early so the upload
+# step still runs.
+JOB_EDGE_SLACK_SECONDS = 8 * 60
+# Upload itself, after the interpreter returns, before merge starts.
+UPLOAD_TAIL_SECONDS = 3 * 60
+_HHMM = re.compile(r"^(\d{1,2}):(\d{2})$")
+_PARTIAL_STOPS = frozenset({
+    "budget", "deadline", "max_draws", "pool_exhausted", "running",
+})
+
+
+class BudgetInterrupted(BaseException):
+    """SIGTERM while a hop is in flight. Not an Exception, so HTTP handlers
+    that swallow Exception still let the draw loop flush the shard file."""
+
+
+def _raise_budget(signum, frame):
+    raise BudgetInterrupted()
+
+
+def parse_deadline_et(text: str) -> tuple[int, int]:
+    match = _HHMM.match((text or "").strip())
+    if not match:
+        raise SystemExit(f"[lane_one_shot] deadline_et must be HH:MM, got {text!r}")
+    hour, minute = int(match.group(1)), int(match.group(2))
+    if hour > 23 or minute > 59:
+        raise SystemExit(f"[lane_one_shot] deadline_et out of range: {text}")
+    return hour, minute
+
+
+def next_deadline_epoch(now: datetime, deadline_et: str) -> int:
+    """Next America/New_York clock time matching deadline_et, strictly after now."""
+    hour, minute = parse_deadline_et(deadline_et)
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=timezone.utc)
+    local = now.astimezone(ZoneInfo("America/New_York"))
+    candidate = local.replace(hour=hour, minute=minute, second=0, microsecond=0)
+    if candidate <= local:
+        candidate = candidate + timedelta(days=1)
+    return int(candidate.timestamp())
+
+
+def plan_run_budgets(
+    now: datetime | None = None,
+    *,
+    run_budget_minutes: float = DEFAULT_RUN_BUDGET_MINUTES,
+    deadline_et: str = DEFAULT_DEADLINE_ET,
+    shards: int = 5,
+    gold_budget_minutes: float = DEFAULT_GOLD_BUDGET_MINUTES,
+    merge_budget_minutes: float = DEFAULT_MERGE_BUDGET_MINUTES,
+) -> dict:
+    """Split one overnight window across gold, serial shards, and merge.
+
+    Each shard gets (window - gold - merge) / shards. The window is the
+    earlier of now+run_budget_minutes and the next deadline_et.
+    """
+    if now is None:
+        now = datetime.now(timezone.utc)
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=timezone.utc)
+    shards = max(1, int(shards))
+    now_epoch = int(now.timestamp())
+    deadline_epoch = next_deadline_epoch(now, deadline_et)
+    budget_end = now_epoch + int(float(run_budget_minutes) * 60)
+    effective = min(deadline_epoch, budget_end)
+    window = max(0, effective - now_epoch)
+    merge_seconds = max(0, int(float(merge_budget_minutes) * 60))
+    gold_cap = max(0, int(float(gold_budget_minutes) * 60))
+    gold_seconds = min(gold_cap, max(0, window - merge_seconds))
+    rest = max(0, window - gold_seconds - merge_seconds)
+    per_shard = rest // shards
+    return {
+        "deadline_epoch": effective,
+        "deadline_et": (deadline_et or DEFAULT_DEADLINE_ET).strip(),
+        "window_seconds": window,
+        "gold_timeout_minutes": max(1, gold_seconds // 60),
+        "gold_budget_seconds": max(0, gold_seconds - JOB_EDGE_SLACK_SECONDS),
+        "merge_timeout_minutes": max(1, merge_seconds // 60),
+        "merge_reserve_seconds": merge_seconds,
+        "shard_job_timeout_minutes": max(1, per_shard // 60),
+        "shard_budget_seconds": max(0, per_shard - JOB_EDGE_SLACK_SECONDS),
+        "shards": shards,
+    }
+
+
+def emit_budget_plan(plan: dict) -> None:
+    """Print the plan and append KEY=VALUE lines to GITHUB_OUTPUT when set."""
+    keys = (
+        "deadline_epoch",
+        "gold_timeout_minutes",
+        "gold_budget_seconds",
+        "merge_timeout_minutes",
+        "merge_reserve_seconds",
+        "shard_job_timeout_minutes",
+        "shard_budget_seconds",
+        "shards",
+        "window_seconds",
+    )
+    lines = [f"{key}={int(plan[key])}" for key in keys]
+    text = "\n".join(lines) + "\n"
+    print("[lane_one_shot] budget plan")
+    for line in lines:
+        print(" ", line)
+    path = os.environ.get("GITHUB_OUTPUT")
+    if path:
+        with open(path, "a", encoding="utf-8") as fh:
+            fh.write(text)
+
+
+def _coverage_from(blob: dict | None, index: int, present: bool) -> dict:
+    if not present or blob is None:
+        return {
+            "shard": index,
+            "status": "missing",
+            "n_kept": 0,
+            "n_drawn": 0,
+            "n_rejected": 0,
+            "target": "",
+            "partial": True,
+            "stop_reason": "missing",
+            "elapsed_seconds": None,
+        }
+    stop = str(blob.get("stop_reason") or "")
+    partial = bool(blob.get("partial")) or stop in _PARTIAL_STOPS or stop == "missing"
+    if not stop:
+        partial = partial or int(blob.get("n_kept") or 0) < int(blob.get("target") or 0)
+        stop = "partial" if partial else "complete"
+    return {
+        "shard": int(blob.get("shard") if blob.get("shard") is not None else index),
+        "status": "partial" if partial else "complete",
+        "n_kept": int(blob.get("n_kept") or 0),
+        "n_drawn": int(blob.get("n_drawn") or 0),
+        "n_rejected": int(blob.get("n_rejected") or 0),
+        "target": blob.get("target") if blob.get("target") is not None else "",
+        "partial": partial,
+        "stop_reason": stop,
+        "elapsed_seconds": blob.get("elapsed_seconds"),
+    }
+
+
 def run_shard(
     shard: int,
     shards: int,
@@ -588,12 +741,32 @@ def run_shard(
     lane_client=None,
     use_pack: bool = True,
     gold_only: bool = False,
+    budget_seconds: float | None = None,
+    deadline_epoch: float | None = None,
+    merge_reserve_seconds: float = 0,
+    clock=None,
 ) -> dict:
     root = root or Path(".")
     ready = print_env()
     if lane_client is None and not ready:
         print("[lane_one_shot] no hopper secrets — refusing to write a board")
         raise SystemExit(2)
+    clock = clock or time.time
+    started = clock()
+    capped_by_deadline = False
+    hard_stop = None
+    if deadline_epoch:
+        hard_stop = (
+            float(deadline_epoch)
+            - float(merge_reserve_seconds or 0)
+            - UPLOAD_TAIL_SECONDS
+        )
+        remain = hard_stop - started
+        if budget_seconds is None or remain < float(budget_seconds):
+            budget_seconds = max(0.0, remain)
+            capped_by_deadline = True
+    elif budget_seconds is not None:
+        budget_seconds = max(0.0, float(budget_seconds))
     client = lane_client or LiveLane()
     axioms = load_axioms()
     index = get_index(root)
@@ -648,66 +821,148 @@ def run_shard(
                 print(f"[lane_one_shot] classify below floor {row.get('watermark')}")
             print(f"[lane_one_shot] REJECT {row.get('reject_reason')} {(row.get('title') or '')[:80]}")
 
-    if shard == 0 or gold_only:
-        for art in GOLD_KEEP + GOLD_REJECT + GOLD_EXTRA:
-            handle(art)
+    stop_reason = ""
 
-    pool = [] if gold_only else [
-        art for art in harvest(root)
-        if _shard_of(art["title"], shards) == shard
-        and _norm(art["title"]) not in {
-            _norm(g["title"]) for g in GOLD_KEEP + GOLD_REJECT + GOLD_EXTRA
+    def _expired() -> str:
+        if budget_seconds is None:
+            return ""
+        if (clock() - started) >= float(budget_seconds):
+            return "deadline" if capped_by_deadline else "budget"
+        return ""
+
+    def _report(tape: dict) -> dict:
+        invented = 0
+        hops: Counter = Counter()
+        classify_hops: Counter = Counter()
+        reasons: Counter = Counter()
+        for row in kept:
+            invented += len(row.get("invented_tickers") or [])
+            for w in row.get("watermarks") or []:
+                if w.get("watermark"):
+                    hops[w["watermark"]] += 1
+                    if w.get("stage") == "classify":
+                        classify_hops[w["watermark"]] += 1
+        for row in rejected:
+            reasons[row.get("reason") or "?"] += 1
+        reason = stop_reason or "running"
+        partial = reason in _PARTIAL_STOPS
+        elapsed = max(0, int(clock() - started))
+        return {
+            "shard": shard,
+            "shards": shards,
+            "target": target,
+            "partial": partial,
+            "stop_reason": reason,
+            "elapsed_seconds": elapsed,
+            "budget_seconds": None if budget_seconds is None else int(budget_seconds),
+            "n_drawn": drawn,
+            "n_rejected": len(rejected),
+            "n_kept": len(kept),
+            "invented_tickers": invented,
+            "hop_histogram": dict(hops),
+            "classify_histogram": dict(classify_hops),
+            "reject_histogram": dict(reasons),
+            "gold": gold_report,
+            "gold_rows": gold_rows,
+            "tape": tape,
+            "env": env_lines(),
+            "finviz_file": index.source,
+            "kept": kept,
+            "rejected": rejected[:80],
         }
-    ]
-    pool.sort(key=lambda a: a["title"])
-    for art in pool:
-        if len(kept) >= target or drawn >= max_draws:
-            break
-        handle(art)
 
+    def _flush(tape: dict | None = None) -> dict:
+        blob = _report({} if tape is None else tape)
+        scratch.mkdir(parents=True, exist_ok=True)
+        (scratch / f"shard_{shard}.json").write_text(
+            json.dumps(blob, indent=2, ensure_ascii=False), encoding="utf-8",
+        )
+        return blob
+
+    previous_term = None
+    if budget_seconds is not None or deadline_epoch:
+        previous_term = signal.signal(signal.SIGTERM, _raise_budget)
+    tape: dict = {}
     try:
-        tape = grade_action_rows(kept, fetch=True)
-    except Exception as exc:  # noqa: BLE001
-        print(f"[lane_one_shot] tape grade failed {str(exc)[:160]}")
-        tape = grade_action_rows(kept, fetch=False)
-    invented = 0
-    hops: Counter = Counter()
-    classify_hops: Counter = Counter()
-    reasons: Counter = Counter()
-    for row in kept:
-        invented += len(row.get("invented_tickers") or [])
-        for w in row.get("watermarks") or []:
-            if w.get("watermark"):
-                hops[w["watermark"]] += 1
-                if w.get("stage") == "classify":
-                    classify_hops[w["watermark"]] += 1
-    for row in rejected:
-        reasons[row.get("reason") or "?"] += 1
-    report = {
-        "shard": shard,
-        "shards": shards,
-        "n_drawn": drawn,
-        "n_rejected": len(rejected),
-        "n_kept": len(kept),
-        "invented_tickers": invented,
-        "hop_histogram": dict(hops),
-        "classify_histogram": dict(classify_hops),
-        "reject_histogram": dict(reasons),
-        "gold": gold_report,
-        "gold_rows": gold_rows,
-        "tape": tape,
-        "env": env_lines(),
-        "finviz_file": index.source,
-        "kept": kept,
-        "rejected": rejected[:80],
-    }
-    scratch.mkdir(parents=True, exist_ok=True)
-    (scratch / f"shard_{shard}.json").write_text(
-        json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8",
-    )
+        if shard == 0 or gold_only:
+            for art in GOLD_KEEP + GOLD_REJECT + GOLD_EXTRA:
+                if len(kept) >= target and not gold_only:
+                    stop_reason = "target"
+                    break
+                reason = _expired()
+                if reason:
+                    stop_reason = reason
+                    break
+                try:
+                    handle(art)
+                except BudgetInterrupted:
+                    stop_reason = "deadline" if capped_by_deadline else "budget"
+                    break
+                _flush()
+        if not stop_reason and not gold_only:
+            pool = [
+                art for art in harvest(root)
+                if _shard_of(art["title"], shards) == shard
+                and _norm(art["title"]) not in {
+                    _norm(g["title"]) for g in GOLD_KEEP + GOLD_REJECT + GOLD_EXTRA
+                }
+            ]
+            pool.sort(key=lambda a: a["title"])
+            reason = _expired()
+            if reason:
+                stop_reason = reason
+                pool = []
+            for art in pool:
+                if len(kept) >= target:
+                    stop_reason = "target"
+                    break
+                reason = _expired()
+                if reason:
+                    stop_reason = reason
+                    break
+                if drawn >= max_draws:
+                    stop_reason = "max_draws"
+                    break
+                try:
+                    handle(art)
+                except BudgetInterrupted:
+                    stop_reason = "deadline" if capped_by_deadline else "budget"
+                    break
+                _flush()
+        if not stop_reason:
+            if gold_only:
+                stop_reason = "gold_done"
+            elif len(kept) >= target:
+                stop_reason = "target"
+            elif drawn >= max_draws:
+                stop_reason = "max_draws"
+            else:
+                stop_reason = "pool_exhausted"
+        fetch_tape = stop_reason not in {"budget", "deadline"}
+        try:
+            tape = grade_action_rows(kept, fetch=fetch_tape)
+        except BudgetInterrupted:
+            stop_reason = "deadline" if capped_by_deadline else "budget"
+            tape = {}
+        except Exception as exc:  # noqa: BLE001
+            print(f"[lane_one_shot] tape grade failed {str(exc)[:160]}")
+            try:
+                tape = grade_action_rows(kept, fetch=False)
+            except Exception:
+                tape = {}
+    except BudgetInterrupted:
+        if not stop_reason:
+            stop_reason = "deadline" if capped_by_deadline else "budget"
+        tape = {}
+    finally:
+        if previous_term is not None:
+            signal.signal(signal.SIGTERM, previous_term)
+    report = _flush(tape)
     print(
         f"[lane_one_shot] shard {shard} kept={len(kept)} "
-        f"drawn={drawn} rejected={len(rejected)}"
+        f"drawn={drawn} rejected={len(rejected)} "
+        f"stop={report.get('stop_reason')} partial={report.get('partial')} "
+        f"elapsed={report.get('elapsed_seconds')}s"
     )
     return report
 
@@ -719,10 +974,18 @@ def _load_json(path: Path) -> dict:
         return {}
 
 
-def merge_boards(src: Path, board: Path | None = None, expect: int = 100) -> int:
+def merge_boards(
+    src: Path,
+    board: Path | None = None,
+    expect: int = 100,
+    shard_count: int | None = None,
+) -> int:
     shards = sorted(src.rglob("shard_*.json"))
     if not shards and (src / "shard_0.json").is_file():
         shards = sorted(src.glob("shard_*.json"))
+    if not shards:
+        print("[lane_one_shot] no shard files — not writing a board")
+        return 2
     kept: list[dict] = []
     drawn = rejected = invented = 0
     hops: Counter = Counter()
@@ -731,8 +994,12 @@ def merge_boards(src: Path, board: Path | None = None, expect: int = 100) -> int
     gold: dict[str, str] = {}
     env: list[str] = []
     finviz_file = ""
+    found: dict[int, dict] = {}
     for path in shards:
         blob = _load_json(path)
+        match = re.search(r"shard_(\d+)\.json$", path.name)
+        if match:
+            found[int(match.group(1))] = blob
         drawn += int(blob.get("n_drawn") or 0)
         rejected += int(blob.get("n_rejected") or 0)
         invented += int(blob.get("invented_tickers") or 0)
@@ -765,9 +1032,20 @@ def merge_boards(src: Path, board: Path | None = None, expect: int = 100) -> int
         seen.add(row["article_id"])
         uniq.append(row)
     kept = uniq[:expect]
-    status = "OK" if len(kept) >= expect and invented == 0 else "SHORTFALL"
+    if shard_count is None:
+        shard_count = (max(found) + 1) if found else 0
+    coverage = [
+        _coverage_from(found.get(i), i, i in found) for i in range(int(shard_count))
+    ]
+    any_partial = any(item.get("status") != "complete" for item in coverage)
     if invented:
         status = "REFUSED_INVENTED"
+    elif len(kept) >= expect and not any_partial:
+        status = "OK"
+    elif any_partial:
+        status = "PARTIAL"
+    else:
+        status = "SHORTFALL"
     header = {
         "n_drawn": drawn,
         "n_rejected": rejected,
@@ -780,27 +1058,34 @@ def merge_boards(src: Path, board: Path | None = None, expect: int = 100) -> int
         "env": env,
         "finviz_file": finviz_file,
         "status": status,
+        "shard_coverage": coverage,
         "tape": summarize_tape(kept),
     }
-    if invented or not kept:
-        print("[lane_one_shot] refusing finished board", status, "kept", len(kept))
-        return 2
     dest = board or BOARD
     dest.parent.mkdir(parents=True, exist_ok=True)
     dest.write_text(render_markdown(header, kept), encoding="utf-8")
-    # Consolidate scratch next to the board's repo layout when merging artifacts.
-    out_scratch = dest.parent.parent / "02_lessons" / "lane" / "one_shot_100"
-    if "03_scoreboard" in str(dest):
+    # Scoreboard merges land scratch in the repo. Any other board (tests)
+    # keeps its scratch beside the board so a tmp path cannot touch the checkout.
+    if "03_scoreboard" in dest.parts:
         out_scratch = dest.parent.parent / "02_lessons" / "lane" / "one_shot_100"
     else:
-        out_scratch = SCRATCH
+        out_scratch = dest.parent / "one_shot_100"
     out_scratch.mkdir(parents=True, exist_ok=True)
     for row in kept:
         (out_scratch / f"{row['article_id']}.json").write_text(
             json.dumps(row, indent=2, ensure_ascii=False), encoding="utf-8",
         )
     print(f"[lane_one_shot] wrote {dest} kept={len(kept)} status={status}")
-    return 0 if len(kept) >= expect else 0
+    for item in coverage:
+        print(
+            f"[lane_one_shot] coverage shard {item.get('shard')} "
+            f"{item.get('status')} kept={item.get('n_kept')} "
+            f"stop={item.get('stop_reason')}"
+        )
+    if invented:
+        print("[lane_one_shot] refusing invented tickers", invented)
+        return 2
+    return 0
 
 
 def assess_board(text: str) -> list[str]:
@@ -938,7 +1223,25 @@ def main() -> None:
     ap.add_argument("--check-board", type=str, default="")
     ap.add_argument("--gold-only", action="store_true")
     ap.add_argument("--no-pack", action="store_true")
+    ap.add_argument("--budget-seconds", type=float, default=None)
+    ap.add_argument("--deadline-epoch", type=float, default=None)
+    ap.add_argument("--merge-reserve-seconds", type=float, default=0)
+    ap.add_argument("--print-budgets", action="store_true")
+    ap.add_argument("--run-budget-minutes", type=float, default=DEFAULT_RUN_BUDGET_MINUTES)
+    ap.add_argument("--deadline-et", default=DEFAULT_DEADLINE_ET)
+    ap.add_argument("--gold-budget-minutes", type=float, default=DEFAULT_GOLD_BUDGET_MINUTES)
+    ap.add_argument("--merge-budget-minutes", type=float, default=DEFAULT_MERGE_BUDGET_MINUTES)
+    ap.add_argument("--shard-count", type=int, default=0)
     args = ap.parse_args()
+    if args.print_budgets:
+        emit_budget_plan(plan_run_budgets(
+            run_budget_minutes=args.run_budget_minutes,
+            deadline_et=args.deadline_et,
+            shards=args.shards if args.shards > 1 else 5,
+            gold_budget_minutes=args.gold_budget_minutes,
+            merge_budget_minutes=args.merge_budget_minutes,
+        ))
+        raise SystemExit(0)
     if args.env_check:
         raise SystemExit(0 if print_env() and secrets_ready() else 2)
     if args.check_board:
@@ -954,15 +1257,27 @@ def main() -> None:
         print("[lane_one_shot] board ready")
         raise SystemExit(0)
     if args.merge:
-        raise SystemExit(merge_boards(Path(args.merge), expect=args.expect))
+        count = args.shard_count or None
+        raise SystemExit(merge_boards(
+            Path(args.merge), expect=args.expect, shard_count=count,
+        ))
+    budget = args.budget_seconds
+    deadline = args.deadline_epoch
+    reserve = args.merge_reserve_seconds
     if args.gold_only:
         report = run_shard(
             0, 1, 7, 7, use_pack=not args.no_pack, gold_only=True,
+            budget_seconds=budget,
+            deadline_epoch=deadline,
+            merge_reserve_seconds=reserve,
         )
         raise SystemExit(write_gold_report(report))
     run_shard(
         args.shard, args.shards, args.target, args.max_draws,
         use_pack=not args.no_pack,
+        budget_seconds=budget,
+        deadline_epoch=deadline,
+        merge_reserve_seconds=reserve,
     )
 
 

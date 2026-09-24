@@ -1752,3 +1752,336 @@ def test_openclaw_keeps_tsv_mixed_without_a_hopper(monkeypatch):
     assert parsed["entities"][0]["direction"] == "mixed"
     assert (hop, model) == ("openclaw", "xai/grok-4.6")
     assert len(prompts) == 1
+
+
+_FLOOR_WM = "lane::openclaw::xai/grok-4.6"
+
+
+def _kept_row(article_id: str, title: str) -> dict:
+    return {
+        "keep": True,
+        "title": title,
+        "article_id": article_id,
+        "action": "BUY CAR, 0-1d, because test",
+        "watermark": _FLOOR_WM,
+        "watermarks": [
+            {"stage": "classify", "watermark": _FLOOR_WM},
+            {"stage": "meta", "watermark": _FLOOR_WM},
+            {"stage": "pack_complete", "watermark": _FLOOR_WM},
+        ],
+        "invented_tickers": [],
+    }
+
+
+def _patch_draw(monkeypatch, clock, rows_out):
+    """Shard 1 sees every harvested title. The clock moves inside each draw."""
+    monkeypatch.setattr("src.lane_one_shot._shard_of", lambda title, shards: 1)
+    monkeypatch.setattr(
+        "src.lane_one_shot.harvest",
+        lambda root=None: [
+            {
+                "title": f"Listed firm item {i:02d} changes a constraint",
+                "body": "body",
+                "known_at": "2026-01-01",
+                "article_id": f"a{i}",
+                "harvest_source": "test",
+            }
+            for i in range(30)
+        ],
+    )
+    monkeypatch.setattr(
+        "src.lane_one_shot.grade_action_rows", lambda rows, fetch=False: {},
+    )
+
+    def _process(art, client, **_kwargs):
+        clock["t"] += 30
+        row = _kept_row(art["article_id"], art["title"])
+        rows_out.append(art["article_id"])
+        return row
+
+    monkeypatch.setattr("src.lane_one_shot.process_article", _process)
+
+
+def test_overnight_budget_for_1830_et_is_89_minutes_per_shard():
+    """18:30 ET to 03:30 ET is 540 minutes. Gold 75 and merge 20 leave 89 each."""
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+
+    from src.lane_one_shot import JOB_EDGE_SLACK_SECONDS, plan_run_budgets
+
+    et = ZoneInfo("America/New_York")
+    now = datetime(2026, 9, 23, 18, 30, tzinfo=et)
+    plan = plan_run_budgets(
+        now,
+        run_budget_minutes=540,
+        deadline_et="03:30",
+        shards=5,
+        gold_budget_minutes=75,
+        merge_budget_minutes=20,
+    )
+    deadline = datetime.fromtimestamp(plan["deadline_epoch"], et)
+    assert (deadline.year, deadline.month, deadline.day, deadline.hour, deadline.minute) == (
+        2026, 9, 24, 3, 30,
+    )
+    assert plan["gold_timeout_minutes"] == 75
+    assert plan["merge_timeout_minutes"] == 20
+    assert plan["shard_job_timeout_minutes"] == 89
+    assert plan["shard_budget_seconds"] == 89 * 60 - JOB_EDGE_SLACK_SECONDS
+    assert plan["gold_budget_seconds"] == 75 * 60 - JOB_EDGE_SLACK_SECONDS
+    # 75 + 89*5 + 20 = 540. The job caps fill the window and do not exceed it.
+    assert (
+        plan["gold_timeout_minutes"]
+        + plan["shard_job_timeout_minutes"] * 5
+        + plan["merge_timeout_minutes"]
+    ) == 540
+
+
+def test_later_dispatch_shrinks_the_shard_slice_to_the_deadline():
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+
+    from src.lane_one_shot import plan_run_budgets
+
+    et = ZoneInfo("America/New_York")
+    now = datetime(2026, 9, 23, 19, 0, tzinfo=et)
+    plan = plan_run_budgets(
+        now,
+        run_budget_minutes=540,
+        deadline_et="03:30",
+        shards=5,
+        gold_budget_minutes=75,
+        merge_budget_minutes=20,
+    )
+    # 19:00 ET to 03:30 ET is 510 minutes, shorter than the 540 budget.
+    assert plan["window_seconds"] == 510 * 60
+    assert plan["shard_job_timeout_minutes"] == 83
+    assert plan["gold_timeout_minutes"] == 75
+    assert plan["merge_timeout_minutes"] == 20
+
+
+def test_draw_stops_at_the_budget_and_writes_a_partial_shard(monkeypatch, tmp_path: Path):
+    from src.lane_one_shot import run_shard
+
+    clock = {"t": 1_000_000.0}
+    seen: list[str] = []
+    _patch_draw(monkeypatch, clock, seen)
+
+    def _process(art, client, **_kwargs):
+        path = tmp_path / "02_lessons" / "lane" / "one_shot_100" / "shard_1.json"
+        if seen:
+            prior = json.loads(path.read_text(encoding="utf-8"))
+            assert prior["n_kept"] == len(seen)
+            assert prior["partial"] is True
+            assert prior["stop_reason"] == "running"
+        clock["t"] += 30
+        seen.append(art["article_id"])
+        return _kept_row(art["article_id"], art["title"])
+
+    monkeypatch.setattr("src.lane_one_shot.process_article", _process)
+    report = run_shard(
+        1, 5, 20, 150,
+        root=tmp_path,
+        lane_client=object(),
+        use_pack=False,
+        budget_seconds=100,
+        clock=lambda: clock["t"],
+    )
+    assert report["stop_reason"] == "budget"
+    assert report["partial"] is True
+    assert report["n_kept"] == 4
+    assert report["n_kept"] < 20
+    assert seen == [f"a{i}" for i in range(4)]
+    saved = json.loads(
+        (tmp_path / "02_lessons" / "lane" / "one_shot_100" / "shard_1.json").read_text(
+            encoding="utf-8",
+        )
+    )
+    assert saved["partial"] is True
+    assert saved["stop_reason"] == "budget"
+    assert saved["n_kept"] == 4
+
+
+def test_deadline_caps_a_shard_that_starts_late(monkeypatch, tmp_path: Path):
+    from src.lane_one_shot import UPLOAD_TAIL_SECONDS, run_shard
+
+    clock = {"t": 5_000.0}
+    seen: list[str] = []
+    _patch_draw(monkeypatch, clock, seen)
+    # hard stop = deadline - merge reserve - upload tail = start + 50s
+    report = run_shard(
+        1, 5, 20, 150,
+        root=tmp_path,
+        lane_client=object(),
+        use_pack=False,
+        budget_seconds=10_000,
+        deadline_epoch=5_000 + 50 + 120 + UPLOAD_TAIL_SECONDS,
+        merge_reserve_seconds=120,
+        clock=lambda: clock["t"],
+    )
+    assert report["stop_reason"] == "deadline"
+    assert report["partial"] is True
+    assert report["n_kept"] == 2
+    assert report["budget_seconds"] == 50
+
+
+def test_zero_budget_writes_an_empty_partial_without_drawing(monkeypatch, tmp_path: Path):
+    from src.lane_one_shot import run_shard
+
+    calls = {"n": 0}
+
+    def _process(*_a, **_k):
+        calls["n"] += 1
+        raise AssertionError("draw ran with no budget")
+
+    monkeypatch.setattr("src.lane_one_shot.process_article", _process)
+    monkeypatch.setattr("src.lane_one_shot._shard_of", lambda title, shards: 1)
+    monkeypatch.setattr("src.lane_one_shot.harvest", lambda root=None: [{
+        "title": "Listed firm item 00 changes a constraint",
+        "body": "",
+        "known_at": "",
+        "article_id": "a0",
+    }])
+    monkeypatch.setattr(
+        "src.lane_one_shot.grade_action_rows", lambda rows, fetch=False: {},
+    )
+    report = run_shard(
+        1, 5, 20, 150,
+        root=tmp_path,
+        lane_client=object(),
+        use_pack=False,
+        budget_seconds=0,
+        clock=lambda: 10.0,
+    )
+    assert calls["n"] == 0
+    assert report["partial"] is True
+    assert report["stop_reason"] == "budget"
+    assert report["n_kept"] == 0
+    assert (tmp_path / "02_lessons" / "lane" / "one_shot_100" / "shard_1.json").is_file()
+
+
+def test_sigterm_flushes_the_partial_shard(monkeypatch, tmp_path: Path):
+    import os
+    import signal
+    import threading
+    import time
+
+    from src.lane_one_shot import run_shard
+
+    monkeypatch.setattr("src.lane_one_shot._shard_of", lambda title, shards: 1)
+    monkeypatch.setattr("src.lane_one_shot.harvest", lambda root=None: [{
+        "title": "Listed firm item 00 changes a constraint",
+        "body": "",
+        "known_at": "",
+        "article_id": "a0",
+    }])
+    monkeypatch.setattr(
+        "src.lane_one_shot.grade_action_rows", lambda rows, fetch=False: {},
+    )
+
+    def _slow(art, client, **_kwargs):
+        time.sleep(30)
+        return _kept_row(art["article_id"], art["title"])
+
+    monkeypatch.setattr("src.lane_one_shot.process_article", _slow)
+
+    def _kill():
+        time.sleep(0.4)
+        os.kill(os.getpid(), signal.SIGTERM)
+
+    threading.Thread(target=_kill, daemon=True).start()
+    report = run_shard(
+        1, 5, 20, 150,
+        root=tmp_path,
+        lane_client=object(),
+        use_pack=False,
+        budget_seconds=500,
+        clock=time.time,
+    )
+    assert report["partial"] is True
+    assert report["stop_reason"] == "budget"
+    assert report["n_kept"] == 0
+    assert (tmp_path / "02_lessons" / "lane" / "one_shot_100" / "shard_1.json").is_file()
+
+
+def test_merge_keeps_partial_shards_and_names_the_missing_ones(tmp_path: Path):
+    from src.lane_one_shot import merge_boards
+
+    def _blob(shard: int, n_kept: int, stop: str, partial: bool) -> dict:
+        rows = [
+            _kept_row(f"s{shard}-{i}", f"Kept row {shard}-{i} from the partial board")
+            for i in range(n_kept)
+        ]
+        return {
+            "shard": shard,
+            "target": 20,
+            "partial": partial,
+            "stop_reason": stop,
+            "elapsed_seconds": 80,
+            "n_drawn": n_kept + 3,
+            "n_rejected": 3,
+            "n_kept": n_kept,
+            "invented_tickers": 0,
+            "hop_histogram": {_FLOOR_WM: n_kept},
+            "classify_histogram": {_FLOOR_WM: n_kept},
+            "reject_histogram": {"lane_discard": 3},
+            "gold": {},
+            "kept": rows,
+        }
+
+    src = tmp_path / "artifacts"
+    src.mkdir()
+    (src / "shard_0.json").write_text(
+        json.dumps(_blob(0, 2, "target", False)), encoding="utf-8",
+    )
+    (src / "shard_4.json").write_text(
+        json.dumps(_blob(4, 1, "budget", True)), encoding="utf-8",
+    )
+    board = tmp_path / "board.md"
+    code = merge_boards(src, board=board, expect=100, shard_count=5)
+    assert code == 0
+    text = board.read_text(encoding="utf-8")
+    assert "status: PARTIAL" in text
+    assert "n_kept: 3" in text
+    assert "- shard 0: complete kept=2/20" in text
+    assert "- shard 1: missing" in text
+    assert "- shard 2: missing" in text
+    assert "- shard 3: missing" in text
+    assert "- shard 4: partial kept=1/20" in text
+    assert "stop=budget" in text
+    assert "lane::openclaw::xai/grok-4.6" in text
+
+
+def test_merge_without_shard_files_does_not_write_a_board(tmp_path: Path):
+    from src.lane_one_shot import merge_boards
+
+    empty = tmp_path / "empty"
+    empty.mkdir()
+    board = tmp_path / "board.md"
+    assert merge_boards(empty, board=board, expect=100, shard_count=5) == 2
+    assert not board.exists()
+
+
+def test_workflow_bounds_the_full_run_and_merges_cancelled_shards():
+    text = Path(".github/workflows/lane_one_shot_100.yml").read_text(encoding="utf-8")
+    assert 'default: "540"' in text
+    assert 'default: "03:30"' in text
+    assert 'default: "75"' in text
+    assert 'default: "20"' in text
+    assert "timeout-minutes: 240" not in text
+    assert "timeout-minutes: 120" not in text
+    assert "fromJSON(needs.budget.outputs.shard_job_timeout_minutes)" in text
+    assert "fromJSON(needs.budget.outputs.gold_timeout_minutes)" in text
+    assert "fromJSON(needs.budget.outputs.merge_timeout_minutes)" in text
+    assert "max-parallel: 1" in text
+    assert "--budget-seconds" in text
+    assert "--deadline-epoch" in text
+    assert "--shard-count 5" in text
+    assert "needs.shard.result != 'skipped'" in text
+    assert "always()" in text
+    assert "lane-one-shot-board" in text
+    shard = text.split("\n  shard:", 1)[1].split("\n  merge:", 1)[0]
+    assert "if: always()" in shard
+    gold = text.split("\n  gold:", 1)[1].split("\n  shard:", 1)[0]
+    assert "runs-on: [self-hosted, ecs]" in gold
+    assert "ubuntu-latest" not in gold
+    assert "OPENCLAW_BACKEND_MODEL: xai/grok-4.6" in gold
