@@ -1,8 +1,8 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T05:54:09.476607-04:00",
+  "generated_at": "2026-09-24T05:56:23.702936-04:00",
   "phase": "morning_overlay",
-  "export": "finviz_2026-09-23.csv",
+  "export": "finviz_2026-09-24.csv",
   "n_tickers": 11616,
   "sectors": [
     {
@@ -8935,7 +8935,16 @@
   ],
   "ticker_news": [
     {
-      "time": "4 min",
+      "time": "5 min",
+      "title": "Transaction in Own Shares",
+      "url": "/news/395026/transaction-in-own-shares",
+      "source": "GlobeNewswire",
+      "tickers": [
+        "SHEL"
+      ]
+    },
+    {
+      "time": "6 min",
       "title": "Honda nears deal for $2.5bn US hybrid plant  report",
       "url": "https://finance.yahoo.com/economy/policy/articles/honda-nears-deal-2-5bn-094934429.html",
       "source": "Just Auto",
@@ -8944,7 +8953,7 @@
       ]
     },
     {
-      "time": "18 min",
+      "time": "21 min",
       "title": "Basecamp Research secures $140m for AI-driven therapies",
       "url": "https://www.pharmaceutical-business-review.com/news/basecamp-research-140m-ai-driven-therapies/",
       "source": "Pharmaceutical Business Review",
@@ -8953,7 +8962,7 @@
       ]
     },
     {
-      "time": "21 min",
+      "time": "23 min",
       "title": "Roivant reports top-line data from IMVT-1402 CLE trial",
       "url": "https://finance.yahoo.com/healthcare/articles/roivant-reports-top-line-data-093251896.html",
       "source": "Clinical Trials Arena",
@@ -8962,7 +8971,7 @@
       ]
     },
     {
-      "time": "23 min",
+      "time": "26 min",
       "title": "See How Elon Musk's Sunbelt Investments Are Reshaping His Business Empire",
       "url": "https://www.wsj.com/business/see-how-elon-musks-sunbelt-investments-are-reshaping-his-business-empire-bf316f38?mod=wsj_FV",
       "source": "The Wall Street Journal",
@@ -8972,7 +8981,7 @@
       ]
     },
     {
-      "time": "23 min",
+      "time": "26 min",
       "title": "In the Age of AI, Cash Is Still King",
       "url": "https://www.wsj.com/finance/investing/in-the-age-of-ai-cash-is-still-king-d527ee2d?mod=wsj_FV",
       "source": "The Wall Street Journal",
@@ -8984,7 +8993,7 @@
       ]
     },
     {
-      "time": "27 min",
+      "time": "29 min",
       "title": "Qualcomm to acquire robotics software firm PickNik",
       "url": "https://finance.yahoo.com/technology/ai/articles/qualcomm-acquire-robotics-software-firm-092658962.html",
       "source": "Verdict",
@@ -8993,7 +9002,7 @@
       ]
     },
     {
-      "time": "38 min",
+      "time": "41 min",
       "title": "A 23-year-old turned a $50 Facebook Marketplace find into a $150,000 viral product  with no degree and no plan",
       "url": "https://finance.yahoo.com/small-business/articles/23-old-turned-50-facebook-091500401.html",
       "source": "Moneywise",
@@ -9002,7 +9011,7 @@
       ]
     },
     {
-      "time": "41 min",
+      "time": "44 min",
       "title": "Meta gets price-target boost as JPMorgan says Muse agent has potential to become the top AI application since ChatGPT",
       "url": "https://www.marketwatch.com/story/meta-gets-price-target-boost-as-jpmorgan-says-muse-agent-has-potential-to-become-the-top-ai-application-since-chatgpt-280ca648?mod=mw_FV",
       "source": "MarketWatch",
@@ -9011,7 +9020,7 @@
       ]
     },
     {
-      "time": "53 min",
+      "time": "56 min",
       "title": "Fortuna CEO to present at Mining Forum Americas 2026",
       "url": "/news/395025/fortuna-ceo-to-present-at-mining-forum-americas-2026",
       "source": "GlobeNewswire",
@@ -9020,7 +9029,7 @@
       ]
     },
     {
-      "time": "56 min",
+      "time": "59 min",
       "title": "Here's what Wall Street thinks of Meta's new smartglass lineup and first Muse 'holdable'",
       "url": "https://finance.yahoo.com/markets/stocks/article/heres-what-wall-street-thinks-of-metas-new-smartglass-lineup-and-first-muse-holdable-085705955.html",
       "source": "Yahoo Finance",
@@ -9030,7 +9039,7 @@
       ]
     },
     {
-      "time": "58 min",
+      "time": "1 hour",
       "title": "Britain's largest banks make first interbank transactions using tokenised deposits",
       "url": "https://finance.yahoo.com/markets/crypto/articles/britains-largest-banks-first-interbank-085548202.html",
       "source": "Euronews",
@@ -9040,7 +9049,7 @@
       ]
     },
     {
-      "time": "59 min",
+      "time": "1 hour",
       "title": "Donald Trumps MSTR Trade Raises Eyebrows as Strategy Shares Rally 83%",
       "url": "https://finance.yahoo.com/markets/stocks/articles/donald-trump-mstr-trade-raises-085415253.html",
       "source": "CCN",
@@ -9067,8 +9076,8 @@
         "META",
         "W",
         "GAP",
-        "WMT",
-        "CART"
+        "PYPL",
+        "WMT"
       ]
     },
     {
@@ -9354,7 +9363,7 @@
       ]
     },
     {
-      "time": "3 hours",
+      "time": "4 hours",
       "title": "Meta stretches its glasses lineup from US$249 to US$1,299.99 as rivals close in",
       "url": "https://www.digitimes.com/news/a20260924VL208/meta-2026-market-vr-idc.html",
       "source": "DigiTimes",
@@ -9439,7 +9448,7 @@
       ]
     },
     {
-      "time": "4 hours",
+      "time": "5 hours",
       "title": "GOOGL Stock Steadies After Worst Drop In A Month As DeepMind Chief Says Gemini 4 Is Coming 'Much Earlier'",
       "url": "https://finance.yahoo.com/markets/stocks/articles/googl-stock-steadies-worst-drop-045510358.html",
       "source": "Stocktwits",
@@ -9789,19 +9798,6 @@
       "source": "PR Newswire",
       "tickers": [
         "CLX"
-      ]
-    },
-    {
-      "time": "Sep-23",
-      "title": "Metas Agent-Commerce Layer Just Went Live. The Settlement Rails Were Built for This.",
-      "url": "https://finance.yahoo.com/technology/ai/articles/meta-agent-commerce-layer-just-002429293.html",
-      "source": "Forkast News",
-      "tickers": [
-        "SOFI",
-        "CRCL",
-        "META",
-        "MA",
-        "V"
       ]
     }
   ],
@@ -10584,5 +10580,5 @@
   "calendar_window_days": 16,
   "econ_window_count": 182,
   "earnings_window_count": 45,
-  "overlay_at": "2026-09-24T05:54:09.476607-04:00"
+  "overlay_at": "2026-09-24T05:56:23.702936-04:00"
 }

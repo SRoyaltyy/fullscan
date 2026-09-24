@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T05:56:13.583295-04:00",
+  "generated_at": "2026-09-24T05:56:23.859957-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -13,8 +13,8 @@
   ],
   "counts": {
     "ok": 2,
-    "partial": 1,
-    "fail": 5,
+    "partial": 2,
+    "fail": 4,
     "n": 8
   },
   "processes": [
@@ -61,7 +61,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 270913,
+          "size": 270739,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -72,10 +72,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 16777,
+          "size": 16714,
           "said": "MAP HEAT \u2014 2026-09-24",
           "bullets": [
-            "Export `finviz_2026-09-23.csv` \u00b7 11616 names \u00b7 generated 2026-09-24T05:54:09.476607-04:00",
+            "Export `finviz_2026-09-24.csv` \u00b7 11616 names \u00b7 generated 2026-09-24T05:56:23.702936-04:00",
             "TAPE (live futures)"
           ]
         }
@@ -182,9 +182,9 @@
       "key": "preopen",
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 2,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -233,7 +233,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 270913,
+          "size": 270739,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -330,11 +330,16 @@
           "name": "Pre-open QC JSON",
           "path": "01_daily/2026-09-24_preopen_qc.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "all_ok=False",
+          "size": 7282,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
+          "bullets": [
+            "general_predict:missing",
+            "events:missing",
+            "news_judge:missing",
+            "news_parse:missing"
+          ]
         },
         {
           "key": "status",
@@ -352,11 +357,13 @@
           "name": "Grok review JSON",
           "path": "01_daily/2026-09-24_grok_review.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "ok=False Grok returned an empty review",
+          "size": 308,
+          "said": "ok=False \u00b7 empty_review_reply (review)",
+          "bullets": [
+            "Grok returned an empty review"
+          ]
         },
         {
           "key": "sector_basic_materials",
@@ -1025,6 +1032,31 @@
         }
       ],
       "preview": "5898 rows \u00b7 Ticker,sector,industry,size,index,geo,beta,short,liq,rvol,vol,profit,lev,style,mom,ext,range,earn,earnsurp,analyst,theme \u00b7 A, AA, AAC, AACG, AACI"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T05:56:23.729159-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-24_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 270739,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-24_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 17075,
+          "preview": "# MAP HEAT \u2014 2026-09-24\nExport `finviz_2026-09-24.csv` \u00b7 11616 names \u00b7 generated 2026-09-24T05:56:23.702936-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-24\nExport `finviz_2026-09-24.csv` \u00b7 11616 names \u00b7 generated 2026-09-24T05:56:23.702936-04:00"
     }
   ],
   "href": {
