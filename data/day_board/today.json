@@ -1,6 +1,6 @@
 {
   "date": "2026-09-23",
-  "generated_at": "2026-09-23T18:30:15.545542-04:00",
+  "generated_at": "2026-09-24T02:07:26.856102-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -169,115 +169,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "live_boards",
-      "title": "Live 1d BUY/SELL strip",
-      "date": "2026-09-23",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-23T05:43:18.854916-04:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 15224,
-          "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 683,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-09-23.json",
-          "ok": true,
-          "reason": "",
-          "size": 82894,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-09-23_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 43362,
-          "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 811324,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-09-23_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 811324,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 1145339,
-          "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 811324,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 43362,
-          "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 811324,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 811324,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 1145339,
-          "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX"
-        },
-        {
-          "path": "data/day_board/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 2010,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        },
-        {
-          "path": "dashboard/factor-mine/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 2010,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        }
-      ],
-      "preview": "2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-23 BUY ARQT, PGEN, ADMA, DXCM, NICE, TH, PUBM, APPS \u00b7 SELL CF, SSTK, OVV, ADM, FLUT, HAL, DOW, NFLX \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock"
-    },
     {
       "key": "flatten",
       "title": "Flatten live card",
@@ -725,6 +616,45 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-23\n**Generated:** 2026-09-23T16:40:24.047637-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed lower as 10-year yield hit 5.08% 19-year high on strong business activity data, while energy outperformed on rebounding oil\n**Prior close:** SPX -0.75%  Nasdaq -1.13%  Dow -0.68%\n**SPX:** -0.75%  **Nasdaq:** -1.13%  **Dow:** -0.68%\n**Oil:** WTI crude $93.0\n**CPI/Fed:** 1.89% cut (1.89% drop, weighed down by PG&E (PCG) after UBS (UBS) cut)\n**Leaders:** SPGI, OXY, COP, PCG, UBS, CRWD, PANW, META, NVDA, AVGO, KBH, GIS, PAYX, CBRL, COST\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** \u2014\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-24\n**Clock use:** `next_open`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-23",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T02:07:26.102592-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-23_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 87627,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-23_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11673,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-23\n_Generated 2026-09-24T02:07:25.636089-04:00 \u00b7 export=data/exports/finviz_2026-09-23.csv \u00b7 ticker digests=5880 \u00b7 high-signal=2153_"
+        },
+        {
+          "path": "data/exports/finviz_2026-09-23.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11463447,
+          "preview": "11666 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11463447,
+          "preview": "11666 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-23\n_Generated 2026-09-24T02:07:25.636089-04:00 \u00b7 export=data/exports/finviz_2026-09-23.csv \u00b7 ticker digests=5880 \u00b7 high-signal=2153_ \u00b7 11666 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\" \u00b7 11666 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
