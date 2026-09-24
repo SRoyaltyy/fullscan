@@ -1,0 +1,88 @@
+{
+  "date": "2026-09-24",
+  "generated_at": "2026-09-24T05:52:54.055442-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": true,
+  "clock_use": "same_morning",
+  "clock_legal_for": "2026-09-24",
+  "clock_rule": "Live: Generated must be before 09:30 ET on this date or leave missing. Wayback: capture before 09:30 ET that day is legal for that morning's Pre-Open. Afternoon Wayback is legal for the NEXT session open only (prior-day close recap), marked by clock_legal_for. Gaps stay gaps. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest",
+  "represents": "Finviz homepage market-day prose. Same-morning Pre-Open when Generated is before 09:30 ET; afternoon Wayback is a prior-day close recap legal for the next session only. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US futures point to a lower open as a global bond selloff lifts yields to multi‑year highs ahead of US data and an anticipated Trump‑Xi meeting",
+  "raw_text": "- S&P 500 futures (@ES) fall 0.58%, Dow Jones futures (@YM) lose 0.34%, Nasdaq 100 futures (@NQ) drop 1.01%, and Russell 2000 futures (@ER2) decline 0.34% amid pressure from rising yields\n- The 10-year Treasury yield reaches its highest level since 2007 and the 30-year hits its highest since 2004, driving a repricing of additional Fed hikes\n- NY Fed president comments that it is reasonable to expect one more 2026 increase, reinforcing expectations for further tightening\n- European shares trade roughly 0.6%–0.8% lower and Asian markets finish mixed amid the worldwide bond weakness\n- Oil futures (@CL) climb nearly 2% on geopolitical tensions, potentially supporting energy sector names\n- General Mills (GIS), Cintas (CTAS), Paychex (PAYX), Cracker Barrel (CBRL), Darden Restaurants (DRI), TD SYNNEX (SNX), and BlackBerry (BB) report earnings before the bell\n- Costco (COST) is scheduled to report earnings after the close\n- Key US data at 8:30 AM ET include initial jobless claims and the current account balance\n- US new home sales data are due at 10:00 AM ET\n- Traders monitor the anticipated meeting between Donald Trump and Xi Jinping for potential direction on US-China relations",
+  "raw_summary_md": "- **S&P 500 futures** ([@ES](https://finviz.com/futures_charts?t=ES)) fall **0.58%**, Dow Jones futures ([@YM](https://finviz.com/futures_charts?t=YM)) lose 0.34%, **Nasdaq 100 futures** ([@NQ](https://finviz.com/futures_charts?t=NQ)) drop **1.01%**, and Russell 2000 futures ([@ER2](https://finviz.com/futures_charts?t=ER2)) decline 0.34% amid pressure from **rising yields**\n- The **10-year Treasury yield** reaches its **highest level since 2007** and the **30-year** hits its **highest since 2004**, driving a repricing of additional **Fed hikes**\n- **NY Fed president** comments that it is reasonable to expect **one more 2026 increase**, reinforcing expectations for further **tightening**\n- **European shares** trade roughly **0.6%–0.8% lower** and **Asian markets** finish **mixed** amid the worldwide bond weakness\n- **Oil futures** ([@CL](https://finviz.com/futures_charts?t=CL)) climb **nearly 2%** on geopolitical tensions, potentially supporting **energy sector** names\n- **General Mills** ([GIS](https://finviz.com/quote?t=GIS)), Cintas ([CTAS](https://finviz.com/quote?t=CTAS)), Paychex ([PAYX](https://finviz.com/quote?t=PAYX)), Cracker Barrel ([CBRL](https://finviz.com/quote?t=CBRL)), Darden Restaurants ([DRI](https://finviz.com/quote?t=DRI)), TD SYNNEX ([SNX](https://finviz.com/quote?t=SNX)), and BlackBerry ([BB](https://finviz.com/quote?t=BB)) **report earnings before the bell**\n- **Costco** ([COST](https://finviz.com/quote?t=COST)) is scheduled to **report earnings after the close**\n- **Key US data at 8:30 AM ET** include **initial jobless claims** and the current account balance\n- **US new home sales data** are due at **10:00 AM ET**\n- Traders monitor the anticipated **meeting between Donald Trump and Xi Jinping** for potential direction on **US-China relations**",
+  "index_moves": [],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "GIS",
+    "CTAS",
+    "PAYX",
+    "CBRL",
+    "DRI",
+    "SNX",
+    "BB",
+    "COST"
+  ],
+  "named_leaders": [
+    "GIS",
+    "CTAS",
+    "PAYX",
+    "CBRL",
+    "DRI",
+    "SNX",
+    "BB",
+    "COST"
+  ],
+  "calendar": [],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": true,
+    "retail": false,
+    "fed": true,
+    "bullets": [
+      "US new home sales data are due at 10:00 AM ET"
+    ],
+    "text": "US new home sales data are due at 10:00 AM ET"
+  },
+  "earnings_slate": {
+    "tickers": [
+      "GIS",
+      "CTAS",
+      "PAYX",
+      "CBRL",
+      "DRI",
+      "SNX",
+      "BB",
+      "COST"
+    ],
+    "text": "General Mills (GIS), Cintas (CTAS), Paychex (PAYX), Cracker Barrel (CBRL), Darden Restaurants (DRI), TD SYNNEX (SNX), and BlackBerry (BB) report earnings before the bell Costco (COST) is scheduled to report earnings after the close"
+  },
+  "geo_grain": {
+    "geo": false,
+    "grain": false,
+    "flags": [],
+    "text": ""
+  },
+  "finviz_id": 293192,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-09-24T05:36:25.803",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "bad"
+}
