@@ -1,15 +1,15 @@
 # Sector Board — 2026-09-24
 
-Generated: **2026-09-24T06:36:47.220116-04:00** (America/New_York)
+Generated: **2026-09-24T06:42:02.050027-04:00** (America/New_York)
 
 Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.).
 
 ## Summary
 
-- Predicts present: **9/11**
+- Predicts present: **10/11**
 - Outcomes graded: **0/11**
 - Direction hits (when graded): **0/0**
-- Predicted up / down / flat-or-missing: **1** / **8** / **2**
+- Predicted up / down / flat-or-missing: **1** / **9** / **1**
 
 ## Full table
 
@@ -25,7 +25,7 @@ Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file 
 | Industrials | XLI | down | mild | -4.29 | 0.67 | — | — | — | P |
 | Real Estate | XLRE | down | mild | -9.97 | 0.85 | — | — | — | P |
 | Technology | XLK | down | notable | -16.17 | 0.85 | — | — | — | P |
-| Utilities | XLU | — | — | — | — | — | — | — | — |
+| Utilities | XLU | down | mild | -5.82 | 0.63 | — | — | — | P |
 
 ## Predicted leaders (up)
 
@@ -37,7 +37,7 @@ Birds-eye of all 11 Finviz sectors. Individual write-ups live next to this file 
 - **Communication Services** (XLC): score=-11.34, mag=notable, conf=0.85
 - **Real Estate** (XLRE): score=-9.97, mag=mild, conf=0.85
 - **Consumer Cyclical** (XLY): score=-8.47, mag=mild, conf=0.84
-- **Financial** (XLF): score=-4.90, mag=mild, conf=0.70
+- **Utilities** (XLU): score=-5.82, mag=mild, conf=0.63
 
 ## Files
 
