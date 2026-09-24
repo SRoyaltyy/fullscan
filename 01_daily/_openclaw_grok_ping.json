@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-24T07:48:46.408050+00:00",
+  "generated_at": "2026-09-24T07:52:12.792441+00:00",
   "gateway": "http://127.0.0.1:18789",
   "token_len": 48,
   "health_http": 200,
@@ -13,12 +13,12 @@
     "openclaw/main"
   ],
   "chosen_model": "xai/grok-4.3",
-  "picker_default": "xai/grok-4.20-0309-non-reasoning",
+  "picker_default": "xai/grok-4.3",
   "grok_busy": false,
   "ping": {
     "http": 200,
     "model": "xai/grok-4.3",
-    "seconds": 7.03,
+    "seconds": 5.33,
     "content": "PONG",
     "error": "",
     "raw_model": "openclaw/default"
@@ -26,11 +26,11 @@
   "classify": {
     "http": 200,
     "model": "xai/grok-4.3",
-    "seconds": 12.04,
-    "content": "{\"event_class\":\"regime_state\",\"sign\":null,\"q5\":\"regime\",\"constraint\":\"Hormuz tanker transit\",\"split\":false,\"split_facts\":[],\"why\":\"Hormuz-today per rules\"}",
+    "seconds": 32.12,
+    "content": "{\"event_class\":\"capacity\",\"sign\":null,\"q5\":\"regime\",\"constraint\":\"Hormuz tanker route security\",\"split\":false,\"split_facts\":[],\"why\":\"Hormuz-today per rules\"}",
     "error": "",
     "raw_model": "openclaw/default",
-    "event_class": "regime_state",
+    "event_class": "capacity",
     "parsed_ok": true
   },
   "ok": true,
