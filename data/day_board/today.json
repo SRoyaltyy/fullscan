@@ -1,12 +1,12 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T05:57:12.275253-04:00",
+  "generated_at": "2026-09-24T05:58:26.620648-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 4,
+    "ok": 2,
     "partial": 2,
-    "fail": 2,
+    "fail": 4,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "map_heat",
-      "title": "Map heat morning overlay",
-      "date": "2026-09-24",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-24T05:54:09.508009-04:00",
-      "files": [
-        {
-          "path": "01_daily/map_heat/2026-09-24_map_heat.json",
-          "ok": true,
-          "reason": "",
-          "size": 270913,
-          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
-        },
-        {
-          "path": "01_daily/map_heat/2026-09-24_map_heat.md",
-          "ok": true,
-          "reason": "",
-          "size": 17138,
-          "preview": "# MAP HEAT \u2014 2026-09-24\nExport `finviz_2026-09-23.csv` \u00b7 11616 names \u00b7 generated 2026-09-24T05:54:09.476607-04:00"
-        }
-      ],
-      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-24\nExport `finviz_2026-09-23.csv` \u00b7 11616 names \u00b7 generated 2026-09-24T05:54:09.476607-04:00"
-    },
     {
       "key": "finviz_digest",
       "title": "Finviz digest",
@@ -214,6 +189,31 @@
         }
       ],
       "preview": "2658 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, DSGX, SKM \u00b7 2658 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ETN, CDNA, WWW, MMSI, TER"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T05:58:26.423945-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-24_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 87599,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-24_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11816,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-24\n_Generated 2026-09-24T05:55:03.918230-04:00 \u00b7 export=data/exports/finviz_2026-09-24.csv \u00b7 ticker digests=5879 \u00b7 high-signal=2148_"
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-24\n_Generated 2026-09-24T05:55:03.918230-04:00 \u00b7 export=data/exports/finviz_2026-09-24.csv \u00b7 ticker digests=5879 \u00b7 high-signal=2148_"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
