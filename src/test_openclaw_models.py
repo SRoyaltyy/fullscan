@@ -20,7 +20,7 @@ import src.deepseek_client as dc
 
 def test_default_is_cheapest_general_above_30b() -> None:
     assert MIN_PARAMS_B == 30
-    assert DEFAULT_NEWS_MODEL == "xai/grok-4.20-0309-non-reasoning"
+    assert DEFAULT_NEWS_MODEL == "xai/grok-4.3"
     assert above_30b(DEFAULT_NEWS_MODEL)
     assert not is_refused(DEFAULT_NEWS_MODEL)
     assert pick_cheapest_above_30b() == DEFAULT_NEWS_MODEL
@@ -86,7 +86,7 @@ def test_news_hop_watermarks_openclaw() -> None:
 
     def fake_complete(messages, max_tokens=64, temperature=0.0,
                       stage_label="", backend_model=None):
-        assert backend_model == DEFAULT_NEWS_MODEL
+        assert backend_model == "xai/grok-4.3"
         return '{"event_class":"factor_impulse","sign":"up","q5":"impulse","constraint":"hormuz","split":false,"split_facts":[],"why":"tanker"}'
 
     with mock.patch.object(dc, "openclaw_complete", side_effect=fake_complete):
