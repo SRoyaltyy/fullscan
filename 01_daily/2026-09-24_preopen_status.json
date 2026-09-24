@@ -1,0 +1,310 @@
+{
+  "date": "2026-09-24",
+  "generated_at": "2026-09-24T07:45:57.119215-04:00",
+  "all_ok": false,
+  "qc_all_ok": true,
+  "book_ok": true,
+  "grok_ok": false,
+  "grok_fails": [
+    {
+      "path": "01_daily/news/2026-09-24_parsed.json",
+      "reason": "News parse is a carry-forward of a stale 2026-08-27/08-28 news window: every usable item's published_at is Aug 27-28 (Warsh Jackson Hole cluster), not the 2026-09-24 session; the file is dated 09-24 but its content is a prior-date scan."
+    },
+    {
+      "path": "01_daily/news/2026-09-24_actions.json",
+      "reason": "Same stale-window defect: reasoned_events evidence (fed_rate_path, hormuz_energy_risk, ai_power_demand) all carry Aug 27-28 published_at timestamps and a 'weak_labor_print' book that does not match today's tape; not a same-day scan."
+    },
+    {
+      "path": "01_daily/map_heat/2026-09-24_map_heat.md",
+      "reason": "TAPE table is internally inconsistent with the rest of the packet and with itself: ES/NQ shown +0.20%/+0.41% while every sector card and the general predict use ES -0.64% / NQ -1.09%; VIX 18.4 vs 16.44/16.52 elsewhere; WTI 104.16 vs the live ~92.7 cited in energy. The futures tape is not a coherent same-session read."
+    }
+  ],
+  "missing_required": [],
+  "attempts": [
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "returncode": 0
+    },
+    {
+      "key": "news_parse",
+      "title": "News parse",
+      "returncode": 0
+    },
+    {
+      "key": "events",
+      "title": "Event scanner (primary)",
+      "returncode": 0
+    },
+    {
+      "key": "events_catcher",
+      "title": "Event catcher (gap hunt, no carry)",
+      "returncode": 0
+    },
+    {
+      "key": "news_actions",
+      "title": "News actions",
+      "returncode": 0
+    },
+    {
+      "key": "news_judge",
+      "title": "News judge",
+      "returncode": 0
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "returncode": 0
+    },
+    {
+      "key": "sector_predict",
+      "title": "Per-sector predict (all 11)",
+      "returncode": 0
+    },
+    {
+      "key": "map_heat_research",
+      "title": "Map heat morning delta refresh",
+      "returncode": 0
+    },
+    {
+      "key": "catalyst",
+      "title": "Catalyst dossiers (after book)",
+      "returncode": 0
+    }
+  ],
+  "github_runs": [
+    {
+      "workflow": "preopen_all.yml",
+      "n_today": 1,
+      "latest": {
+        "id": 35983706220,
+        "status": "in_progress",
+        "conclusion": null,
+        "event": "workflow_dispatch",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/35983706220"
+      }
+    },
+    {
+      "workflow": "finviz_preopen_scrape.yml",
+      "n_today": 1,
+      "latest": {
+        "id": 35983924146,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "workflow_dispatch",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/35983924146"
+      }
+    },
+    {
+      "workflow": "finviz_digest.yml",
+      "n_today": 0,
+      "latest": null
+    },
+    {
+      "workflow": "events_daily.yml",
+      "n_today": 0,
+      "latest": null
+    },
+    {
+      "workflow": "news_parse.yml",
+      "n_today": 0,
+      "latest": null
+    },
+    {
+      "workflow": "news_judge.yml",
+      "n_today": 0,
+      "latest": null
+    },
+    {
+      "workflow": "news_actions.yml",
+      "n_today": 0,
+      "latest": null
+    },
+    {
+      "workflow": "catalyst_daily.yml",
+      "n_today": 1,
+      "latest": {
+        "id": 35983926961,
+        "status": "completed",
+        "conclusion": "success",
+        "event": "workflow_dispatch",
+        "html_url": "https://github.com/SRoyaltyy/fullscan/actions/runs/35983926961"
+      }
+    },
+    {
+      "workflow": "daily_pipeline.yml",
+      "n_today": 0,
+      "latest": null
+    },
+    {
+      "workflow": "sector_daily.yml",
+      "n_today": 0,
+      "latest": null
+    },
+    {
+      "workflow": "map_heat_postclose.yml",
+      "n_today": 0,
+      "latest": null
+    }
+  ],
+  "qc": {
+    "sector_n_ok": 10,
+    "sector_n_total": 11,
+    "items": [
+      {
+        "kind": "general_predict",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/general/2026-09-24_predict.md",
+        "size": 10558
+      },
+      {
+        "kind": "events",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/events/2026-09-24_events.json",
+        "size": 31396
+      },
+      {
+        "kind": "news_judge",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/news/2026-09-24_judge.md",
+        "size": 10768
+      },
+      {
+        "kind": "news_parse",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/news/2026-09-24_parsed.json",
+        "size": 304512
+      },
+      {
+        "kind": "news_actions",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/news/2026-09-24_actions.json",
+        "size": 47461
+      },
+      {
+        "kind": "finviz_digest",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/news/2026-09-24_finviz_digest.json",
+        "size": 87599
+      },
+      {
+        "kind": "finviz_market_digest",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/news/2026-09-24_finviz_market_digest.json",
+        "size": 5576
+      },
+      {
+        "kind": "finviz_market_digest",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/news/2026-09-24_finviz_market_digest_close.json",
+        "size": 0
+      },
+      {
+        "kind": "map_heat",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/map_heat/2026-09-24_map_heat.json",
+        "size": 270739
+      },
+      {
+        "kind": "map_heat_baseline",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/map_heat/2026-09-24_research_baseline.json",
+        "size": 378280
+      },
+      {
+        "kind": "map_heat_research",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/map_heat/2026-09-24_research.md",
+        "size": 44251
+      },
+      {
+        "kind": "sector_predict",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/sectors/2026-09-24/basic_materials_predict.md",
+        "size": 13307
+      },
+      {
+        "kind": "sector_predict",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/sectors/2026-09-24/communication_services_predict.md",
+        "size": 18741
+      },
+      {
+        "kind": "sector_predict",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/sectors/2026-09-24/consumer_cyclical_predict.md",
+        "size": 15105
+      },
+      {
+        "kind": "sector_predict",
+        "ok": false,
+        "reason": "missing",
+        "path": "01_daily/sectors/2026-09-24/consumer_defensive_predict.md",
+        "size": 0
+      },
+      {
+        "kind": "sector_predict",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/sectors/2026-09-24/energy_predict.md",
+        "size": 17814
+      },
+      {
+        "kind": "sector_predict",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/sectors/2026-09-24/financial_predict.md",
+        "size": 18017
+      },
+      {
+        "kind": "sector_predict",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/sectors/2026-09-24/healthcare_predict.md",
+        "size": 13885
+      },
+      {
+        "kind": "sector_predict",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/sectors/2026-09-24/industrials_predict.md",
+        "size": 21497
+      },
+      {
+        "kind": "sector_predict",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/sectors/2026-09-24/real_estate_predict.md",
+        "size": 16448
+      },
+      {
+        "kind": "sector_predict",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/sectors/2026-09-24/technology_predict.md",
+        "size": 14272
+      },
+      {
+        "kind": "sector_predict",
+        "ok": true,
+        "reason": "",
+        "path": "01_daily/sectors/2026-09-24/utilities_predict.md",
+        "size": 17525
+      }
+    ]
+  }
+}
