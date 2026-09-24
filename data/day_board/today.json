@@ -1,12 +1,12 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T05:56:35.346067-04:00",
+  "generated_at": "2026-09-24T05:57:12.275253-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 2,
-    "fail": 3,
+    "fail": 2,
     "n": 8
   },
   "buy_1d": [],
@@ -15,31 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_market_digest",
-      "title": "Finviz homepage market digest",
-      "date": "2026-09-24",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-24T05:52:54.071963-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-24_finviz_market_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 5576,
-          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
-        },
-        {
-          "path": "01_daily/news/2026-09-24_finviz_market_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 2702,
-          "preview": "# Finviz homepage market digest \u2014 2026-09-24\n**Generated:** 2026-09-24T05:52:54.055442-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a lower open as a global bond selloff lifts yields to multi\u2011year highs ahead of US data and an anticipated Trump\u2011Xi meeting\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** GIS, CTAS, PAYX, CBRL, DRI, SNX, BB, COST\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** GIS, CTAS, PAYX, CBRL, DRI, SNX, BB, COST\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-24\n**Clock use:** `same_morning`"
-        }
-      ],
-      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-24\n**Generated:** 2026-09-24T05:52:54.055442-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a lower open as a global bond selloff lifts yields to multi\u2011year highs ahead of US data and an anticipated Trump\u2011Xi meeting\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** GIS, CTAS, PAYX, CBRL, DRI, SNX, BB, COST\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** GIS, CTAS, PAYX, CBRL, DRI, SNX, BB, COST\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-24\n**Clock use:** `same_morning`"
-    },
     {
       "key": "map_heat",
       "title": "Map heat morning overlay",
@@ -214,6 +189,31 @@
         }
       ],
       "preview": "5898 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, CDNA, KEYS, NVT, FORM"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T05:57:11.547909-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-24_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7628740,
+          "preview": "2658 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, DSGX, SKM"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-24_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8468080,
+          "preview": "2658 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ETN, CDNA, WWW, MMSI, TER"
+        }
+      ],
+      "preview": "2658 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, DSGX, SKM \u00b7 2658 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ETN, CDNA, WWW, MMSI, TER"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

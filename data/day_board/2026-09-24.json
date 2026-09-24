@@ -1,19 +1,18 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T05:56:35.346067-04:00",
+  "generated_at": "2026-09-24T05:57:12.275253-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-24_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-24/_board.json` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-09-24_actions.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-09-24_judge.md` \u2014 missing",
-    "MISSING AB checklist enriched `data/ab_checklist/2026-09-24_ab_checklist_enriched.csv` \u2014 missing"
+    "MISSING News judge MD `01_daily/news/2026-09-24_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 2,
-    "fail": 3,
+    "fail": 2,
     "n": 8
   },
   "processes": [
@@ -533,11 +532,11 @@
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -545,26 +544,32 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-09-24_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2658",
+          "size": 7628740,
+          "said": "27 rows",
+          "bullets": [
+            "CFFN, ANET, WWW, DSGX, SKM, HSBC, CXW, BMRN"
+          ]
         },
         {
           "key": "ab_enriched",
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-24_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2658",
+          "size": 8468080,
+          "said": "25 rows",
+          "bullets": [
+            "ETN, CDNA, WWW, MMSI, TER, AMD, JCI, ILMN"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "25 rows",
+      "bullets": [
+        "ETN, CDNA, WWW, MMSI, TER"
+      ]
     },
     {
       "key": "catalyst",
@@ -624,7 +629,7 @@
       "yaml": "stock_book_all.yml",
       "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 4,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -707,11 +712,13 @@
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-24_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2658",
+          "size": 8468080,
+          "said": "25 rows",
+          "bullets": [
+            "ETN, CDNA, WWW, MMSI, TER, AMD, JCI, ILMN"
+          ]
         },
         {
           "key": "join",
@@ -731,11 +738,13 @@
           "name": "Peer RS CSV",
           "path": "data/peers/2026-09-24_peer_rs.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=5098",
+          "size": 817936,
+          "said": "495 rows",
+          "bullets": [
+            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
+          ]
         },
         {
           "key": "book_json",
@@ -1111,6 +1120,31 @@
         }
       ],
       "preview": "5898 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, CDNA, KEYS, NVT, FORM"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T05:57:11.547909-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-24_ab_checklist.csv",
+          "ok": true,
+          "reason": "",
+          "size": 7628740,
+          "preview": "2658 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, DSGX, SKM"
+        },
+        {
+          "path": "data/ab_checklist/2026-09-24_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 8468080,
+          "preview": "2658 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ETN, CDNA, WWW, MMSI, TER"
+        }
+      ],
+      "preview": "2658 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 CFFN, ANET, WWW, DSGX, SKM \u00b7 2658 rows \u00b7 Ticker,asof_date,Sector,Industry,mcap_usd,adv_shares,price,score,n_good,n_bad,pair_day_a,pair_day_b,val_A01_rsi_value,fl \u00b7 ETN, CDNA, WWW, MMSI, TER"
     }
   ],
   "href": {
