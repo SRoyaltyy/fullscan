@@ -1,23 +1,21 @@
 {
- "risk_tilt": null,
+ "risk_tilt": "off",
  "macros": [
   "hawkish",
-  "bullish",
   "hawkish",
-  "bullish"
+  "hawkish",
+  "hawkish"
  ],
  "sector_tilts": {
-  "Energy": "bearish",
-  "Technology": "mixed",
-  "Basic Materials": "bearish"
+  "Technology": "bullish",
+  "Ai-Cloud": "mixed",
+  "Healthcare": "bullish",
+  "Ai-Hardware": "bearish",
+  "Cyclicals": "bearish"
  },
  "tickers": {
-  "XLE": -9.5,
-  "XLB": -4.0,
-  "JPM": 3.0,
-  "DVN": -1.5,
-  "BHP": -1.5
+  "AMGN": 5.5
  },
- "b1_inject": "NEWS_JUDGE: n=8 rescued=4\nMACRO rates: [hawkish] Warsh hike-odds + rising yields + gold dump; fade Barrick cut-bet gold (session/1d-1w)\nMACRO risk: [bullish] Nasdaq record, chip leadership, cooler oil (session/1d)\nSECTOR energy: [bearish] surprise crude build + oil cool; E&P hit (XLE)\nSECTOR semis: [mixed] ASML 2027 EUV sold-out vs APH/FN miss + yields (SMH)\nSECTOR ai_infra: [bullish] FIX DC backlog + LITE AI optics (basket)\nSECTOR materials: [bearish] copper off highs on US refined-copper tariff risk (XLB)\nSECTOR reits_credit: [bearish] multifamily $1.8T wall, $300B due this year (XLRE/regional banks)\nINTERACTION: AI/semi demand + yields/FN miss = mixed SMH; do not buy XLE on chips tape; hike + CRE refi = one rates cluster\nWATCH: gold cut-bet vs hike-odds conflict; September hike/JH may be partly paid (prime +25bp already 09-17)",
+ "b1_inject": "NEWS_JUDGE: n=8 rescued=2\nMACRO rates: [hawkish] Warsh signals Sept hike back on table; yields spike, SPX lower (regime/1w-1m)\nMACRO inflation: [hawkish] corn/wheat at 3-yr highs reinforces inflation narrative (session/1w-1m)\nSECTOR semis: [bullish] ASML sold out of 2027 EUV on AI demand (SMH/SOXX)\nSECTOR AI-cloud: [mixed] AWS Claude Opus 5.5 ~40% AI cost cuts \u2014 demand up, AI-pricing margins down (IGV/AMZN)\nSECTOR healthcare: [bullish] Amgen Phase 3 dazodalibep positive, biotech sympathy (XBI/IBB)\nSECTOR AI-hardware: [bearish] Fabrinet weakness + yields drag APH -6.5% (APH/optical basket)\nSECTOR cyclicals: [bearish] US-Canada trade war overhang (cross-border industrials)\nINTERACTION: Warsh + yield spike = ONE rates cluster; hawkish rates vs AI-capex demand = semis mixed, do not double-count\nWATCH: usable set is one macro cluster \u2014 thin on independent second drivers; sector breadth leans on Finviz digest",
  "date": "2026-09-24"
 }

@@ -1,12 +1,11 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T06:02:54.332405-04:00",
+  "generated_at": "2026-09-24T06:03:11.232783-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-24_predict.md` \u2014 missing",
-    "MISSING Sector board JSON `01_daily/sectors/2026-09-24/_board.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-09-24_judge.md` \u2014 missing"
+    "MISSING Sector board JSON `01_daily/sectors/2026-09-24/_board.json` \u2014 missing"
   ],
   "counts": {
     "ok": 4,
@@ -181,7 +180,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 3,
+      "n_req_ok": 4,
       "n_req": 20,
       "n_opt_ok": 2,
       "n_opt": 3,
@@ -271,11 +270,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-09-24_judge.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 10768,
+          "said": "1. **Fed Chair Warsh signals rate HIKES may be needed; September hike back on the table** \u2014 dominant macro driver; hawkish regime shift repricing the whole curv",
+          "bullets": [
+            "2. **Treasury yields spike / 10Y backup on Warsh; Wall Street ends lower** \u2014 the transmission channel that actually moves equity multiples and small-caps. (channel: rates)",
+            "3. **ASML nearly sold out of 2027 EUV capacity on very strong AI demand (JPMorgan)** \u2014 AI-capex demand signal for semis/semicap complex, offsets hawkish-rate drag on growth. (channel: sector_fundamental)",
+            "4. **Amgen Phase 3 dazodalibep positive in systemic Sj\u00f6gren's; Jefferies PT to $410** \u2014 large-cap biotech late-stage readout, sector sympathy for Healthcare. (channel: sector_fundamental)"
+          ]
         },
         {
           "key": "research_json",
@@ -344,13 +347,13 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7277,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 16 fail",
+          "size": 7271,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 14 fail",
           "bullets": [
             "general_predict:missing",
-            "news_judge:missing",
-            "news_actions:missing",
-            "finviz_market_digest:missing"
+            "finviz_market_digest:missing",
+            "map_heat_research:missing",
+            "sector_predict:missing"
           ]
         },
         {
@@ -728,11 +731,15 @@
           "name": "News judge MD",
           "path": "01_daily/news/2026-09-24_judge.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 10768,
+          "said": "1. **Fed Chair Warsh signals rate HIKES may be needed; September hike back on the table** \u2014 dominant macro driver; hawkish regime shift repricing the whole curv",
+          "bullets": [
+            "2. **Treasury yields spike / 10Y backup on Warsh; Wall Street ends lower** \u2014 the transmission channel that actually moves equity multiples and small-caps. (channel: rates)",
+            "3. **ASML nearly sold out of 2027 EUV capacity on very strong AI demand (JPMorgan)** \u2014 AI-capex demand signal for semis/semicap complex, offsets hawkish-rate drag on growth. (channel: sector_fundamental)",
+            "4. **Amgen Phase 3 dazodalibep positive in systemic Sj\u00f6gren's; Jefferies PT to $410** \u2014 large-cap biotech late-stage readout, sector sympathy for Healthcare. (channel: sector_fundamental)"
+          ]
         },
         {
           "key": "in_weather",
@@ -1690,6 +1697,31 @@
         }
       ],
       "preview": "keys: generated_at, hours, raw_headlines, news_source, unique_events, universe_rows, interactions, reasoned_events, edge_actions, ticker_actions, judge_tickers \u00b7 # News \u2192 Actions v4 (full framework) \u2014 2026-09-24T06:02:49.630412-04:00\nraw=400 unique_events=5 tickers=70"
+    },
+    {
+      "key": "news_judge",
+      "title": "News judge",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T06:03:10.857682-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-24_judge.md",
+          "ok": true,
+          "reason": "",
+          "size": 10768,
+          "preview": "# News Judge \u2014 2026-09-24"
+        },
+        {
+          "path": "01_daily/news/2026-09-24_judge.json",
+          "ok": true,
+          "reason": "",
+          "size": 1252,
+          "preview": "keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+        }
+      ],
+      "preview": "# News Judge \u2014 2026-09-24 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
     }
   ],
   "href": {
