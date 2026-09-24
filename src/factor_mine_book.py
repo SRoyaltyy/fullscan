@@ -848,7 +848,7 @@ def recipes_from_action(*, universe="auto", hold="auto", gate="auto",
 def simulate_book(panel: dict, rec: dict, *, bars=None, fees=None,
                   regime=None, rules=None, start: str | None = None) -> dict:
     """Walk one recipe as a $10k paper sleeve. Sell first, then buy."""
-    panel = fm.panel_for_recipe(panel, rec)
+    panel = fm.scrub_quarantine_inputs(panel)
     panel = fm.ensure_sim_fields(panel, rec)
     rules = {**BOOK_RULES, **(rules or {})}
     fees = fees if fees is not None else pt.load_fees()
@@ -1282,7 +1282,7 @@ def slim_start_path(book: dict, start: str, cal: list[str]) -> dict:
 
 
 def replay_starts(panel: dict, rec: dict, **kw) -> list[dict]:
-    panel = fm.panel_for_recipe(panel, rec)
+    panel = fm.scrub_quarantine_inputs(panel)
     cal = list(panel.get("session_dates") or [])
     out = []
     for start in cal:

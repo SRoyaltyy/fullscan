@@ -1,8 +1,8 @@
-"""Quarantined sessions stay out of news evidence.
+"""Quarantined sessions keep their dates in Factor Mine and walk-forward.
 
-Price-only factor-mine and walk-forward recipes keep every date.
-A news recipe drops all of them. Lane and the news-impact backtest
-still skip the whole date.
+On those days the news packet, catalyst, judge, and map-heat are blank.
+Price and Finviz tape stay, so hot4 and holdup still see the session.
+Lane and the news-impact backtest still skip the whole date.
 
 Run: python -m src.test_quarantine_sessions
 """
@@ -83,84 +83,116 @@ def _ready(panel: dict) -> dict:
 
 def _eighteen_panel() -> dict:
     days = ["2026-08-27", *sorted(dates())]
-    rows = [{"date": d, "ticker": "AAA", "boxes": {}} for d in days]
+    rows = []
+    for d in days:
+        news = "bad" if d == "2026-08-27" else "good"
+        rows.append({
+            "date": d,
+            "ticker": "AAA",
+            "sources": ["union", "ohlc_hot"],
+            "src_rank": 1,
+            "boxes": {
+                "join": "good", "sector": "neutral", "gen": "neutral",
+                "news": news, "digest": news, "judge": "good",
+                "ab": "neutral", "peer": "good", "heat": "good",
+                "vol": "good", "catal": "good", "buy": "neutral",
+            },
+            "blue": True,
+            "alarm": False,
+            "zero_red": False,
+            "cond_good": 6,
+            "cond_bad": 0,
+            "news_prior": news,
+            "news_box": news,
+            "news_export_date": "2026-08-28",
+            "ohlc_hot_score": 9.5,
+            "ohlc_ret_5": 4.0,
+            "last_green": True,
+            "ins_buy": True,
+            "form4_buy": False,
+        })
     return _ready({
         "session_dates": days,
         "rows": rows,
-        "by_date": {d: [r] for d, r in zip(days, rows)},
+        "by_date": {r["date"]: [r] for r in rows},
         "n_sessions": len(days),
         "n_rows": len(rows),
     })
 
 
-def test_price_recipe_keeps_all_18_dates_news_recipe_drops_them() -> None:
-    """union_hot_n4_h1 keeps the 18 sessions; short_news_r_h3 drops them.
+def test_quarantine_nulls_packet_and_keeps_price_tape() -> None:
+    """hot4 and holdup still score every quarantined day.
 
-    Lane harvest and the news-impact loader still skip the whole date.
-    A shared book that includes a news member drops the dates too.
+    News, catalyst, judge, and map-heat on those days are missing.
+    A news-red short finds no pick there. Lane and news-impact still
+    skip the whole date.
     """
-    from src.factor_mine import build_recipes, recipe_uses_news, score_recipe
+    from src.factor_mine import build_recipes, score_recipe, scrub_quarantine_inputs
     from src.factor_mine_book import simulate_book
-    from src.factor_mine_combo import simulate_shared
     from src.lane_news_scan import harvest
     from src.news_impact.backtest import load_corpus
 
     bad = sorted(dates())
     assert len(bad) == 18
     panel = _eighteen_panel()
+    raw = next(r for r in panel["rows"] if r["date"] == "2026-09-24")
+    scrubbed = scrub_quarantine_inputs(panel)
+    assert scrubbed["session_dates"] == panel["session_dates"]
+    assert scrubbed["n_rows"] == panel["n_rows"]
+    # The source row is left intact.
+    assert raw["boxes"]["news"] == "good"
+    assert raw["ohlc_hot_score"] == 9.5
+    clean = next(r for r in scrubbed["rows"] if r["date"] == "2026-08-27")
+    hit = next(r for r in scrubbed["rows"] if r["date"] == "2026-09-24")
+    assert clean["boxes"]["news"] == "bad"
+    assert clean["news_box"] == "bad"
+    for cam in ("news", "digest", "judge", "heat", "catal"):
+        assert hit["boxes"][cam] == "missing", cam
+    assert hit["boxes"]["vol"] == "good"
+    assert hit["news_box"] == "missing"
+    assert hit["news_prior"] == "missing"
+    assert hit["news_export_date"] is None
+    assert hit["ins_buy"] is False
+    assert hit["ohlc_hot_score"] == 9.5
+    assert hit["ohlc_ret_5"] == 4.0
+    assert hit["last_green"] is True
+    # Book tally no longer counts the blanked cameras. vol/join/peer stay green.
+    assert hit["cond_good"] == 3
+    assert hit["cond_bad"] == 0
+
     recs = {r["name"]: r for r in build_recipes()}
-    price = recs["union_hot_n4_h1"]
+    hot4 = recs["union_hot_n4_h1"]
+    holdup = recs["union_hot_n4_holdup"]
     news = recs["short_news_r_h3"]
-    assert not recipe_uses_news(price)
-    assert not recipe_uses_news(recs["union_vol_g_h1"])
-    assert recipe_uses_news(news)
-    assert recipe_uses_news(recs["union_h3_exit_news_r"])
-    # Forbidding news=bad still reads the news camera.
-    assert recipe_uses_news(recs["union_join_vol_green_h1"])
-
-    fm = fm_slice(panel, "2026-08-27", "2026-09-24")
-    wf = wf_slice(panel, "2026-08-27", "2026-09-24")
-    for day in bad:
-        assert day in fm["session_dates"], day
-        assert day in wf["session_dates"], day
-
     tapes = {"gainers": {}, "losers": {}}
     regime = {d: {"predict_score": 0.0} for d in panel["session_dates"]}
-    price_scored = [d["date"] for d in score_recipe(panel, price, tapes, bars={})["daily"]]
-    news_scored = [d["date"] for d in score_recipe(panel, news, tapes, bars={})["daily"]]
+    hot_daily = {d["date"]: d for d in score_recipe(panel, hot4, tapes, bars={})["daily"]}
+    hold_daily = {d["date"]: d for d in score_recipe(panel, holdup, tapes, bars={})["daily"]}
+    news_daily = {d["date"]: d for d in score_recipe(panel, news, tapes, bars={})["daily"]}
     import src.factor_mine as fm_mod
     real_closed = fm_mod.session_has_closed
     fm_mod.session_has_closed = lambda date, now=None: bool(date)
     try:
-        price_book = [
-            d["date"] for d in simulate_book(
-                panel, price, bars={}, fees={}, regime=regime)["daily"]
-        ]
-        news_book = [
-            d["date"] for d in simulate_book(
-                wf, news, bars={}, fees={}, regime=regime)["daily"]
-        ]
+        hot_book = {
+            d["date"]: d for d in simulate_book(
+                panel, hot4, bars={}, fees={}, regime=regime)["daily"]
+        }
+        wf_book = {
+            d["date"]: d for d in simulate_book(
+                wf_slice(panel, "2026-08-27", "2026-09-24"),
+                holdup, bars={}, fees={}, regime=regime)["daily"]
+        }
     finally:
         fm_mod.session_has_closed = real_closed
     for day in bad:
-        assert day in price_scored, day
-        assert day in price_book, day
-        assert day not in news_scored, day
-        assert day not in news_book, day
-    assert "2026-08-27" in news_scored
-    assert "2026-08-27" in news_book
-
-    mixed = simulate_shared(
-        panel, [news, price], [1, 1], bars={}, fees={}, regime=regime)
-    price_mix = simulate_shared(
-        panel, [price, recs["flatten_h5"]], [1, 1],
-        bars={}, fees={}, regime=regime)
-    mixed_days = {d["date"] for d in mixed["daily"]}
-    price_mix_days = {d["date"] for d in price_mix["daily"]}
-    for day in bad:
-        assert day not in mixed_days, day
-        assert day in price_mix_days, day
-    assert "2026-08-27" in mixed_days
+        assert day in hot_daily and hot_daily[day]["n"] == 1, day
+        assert hot_daily[day]["tickers"] == ["AAA"]
+        assert day in hold_daily and hold_daily[day]["n"] == 1, day
+        assert day in hot_book and hot_book[day]["n"] == 1, day
+        assert day in wf_book and wf_book[day]["n"] == 1, day
+        assert day in news_daily and news_daily[day]["n"] == 0, day
+    assert news_daily["2026-08-27"]["n"] == 1
+    assert news_daily["2026-08-27"]["tickers"] == ["AAA"]
 
     assert harvest("2026-09-24") == []
     assert load_corpus("2026-09-24") == []
@@ -223,6 +255,6 @@ if __name__ == "__main__":
     test_lane_run_35823365502_and_the_tails_it_read()
     test_drop_sessions_keeps_neighbors()
     test_factor_mine_and_walkforward_slices_keep_the_day()
-    test_price_recipe_keeps_all_18_dates_news_recipe_drops_them()
+    test_quarantine_nulls_packet_and_keeps_price_tape()
     test_lane_harvest_and_news_readers_skip_the_day()
     print("6 tests passed")

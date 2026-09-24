@@ -1,9 +1,9 @@
-"""Sessions that news-using research must not learn from.
+"""Sessions whose news packet must not train research.
 
-Live buying does not read this list. Price-only factor-mine and
-walk-forward recipes keep these dates. A recipe that reads a news gate
-drops them when it is scored. Lane harvest and the news-impact backtest
-still skip the whole date.
+Live buying does not read this list. Factor Mine and walk-forward keep
+every date and blank news, catalyst, judge, map-heat, and the book
+tallies those cameras feed. Price and Finviz tape stay. Lane harvest
+and the news-impact backtest still skip the whole date.
 
 File: data/quarantine_sessions.json
 """

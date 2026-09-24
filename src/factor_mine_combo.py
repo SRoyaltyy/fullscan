@@ -526,9 +526,10 @@ def simulate_shared(panel: dict, recs: list[dict], weights: list[float],
 
     ``hard_red_mode`` defaults to live sit. Research-only overrides do
     not change flatten_robust or Webull live policy.
-    A member that reads news drops quarantined sessions for the whole pile.
+    Quarantined sessions stay. News, catalyst, judge, and map-heat on
+    those days are blanked for every member.
     """
-    panel = fm.panel_for_recipes(panel, recs)
+    panel = fm.scrub_quarantine_inputs(panel)
     fees = fees if fees is not None else pt.load_fees()
     cal_all = list(panel.get("session_dates") or [])
     cal = [d for d in cal_all if not start or d >= start]
@@ -1188,7 +1189,7 @@ def _audit_combo(book: dict) -> dict:
 
 
 def replay_combo_starts(panel, recs, weights, **kw) -> list[dict]:
-    panel = fm.panel_for_recipes(panel, recs)
+    panel = fm.scrub_quarantine_inputs(panel)
     cal = list(panel.get("session_dates") or [])
     out = []
     pool = kw.pop("pool", "shared")
