@@ -1,14 +1,14 @@
 # flatten_robust card — 2026-09-24
 
-_Generated 2026-09-24T10:02:48 — live `flatten_robust`._
+_Generated 2026-09-24T10:58:31 — live `flatten_robust`._
 
-**morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**
+**S=-7.66; hard-red: no new buys; holds and due 1d exits stay**
 
-- Score **—** (—) · route **io**
-- Cash leftover **$18,086.73** (after 09:30 $2.47 · after 16:00 $83,469.81)
-- Prior close **$101,637.74** · 09:30 **$101,637.74** · overnight **$+0.00** · session **$-18,167.93** · 16:00 **$83,469.81**
+- Score **-7.66** (DOWN) · route **hold** · HARD-RED
+- Cash leftover **$18,086.73** (after 09:30 $18,086.73 · after 16:00 $101,554.07)
+- Prior close **$101,637.74** · 09:30 **$101,637.74** · overnight **$+0.00** · session **$-83.67** · 16:00 **$101,554.07**
 - Overnight lots **7** · priced mover BUYs **0** · prior book yes
-- Planned buy cost **$18,084.26** ≤ leftover after sells **$101,554.07**
+- Planned buy cost **$0.00** ≤ leftover after sells **$101,554.07**
 
 ## Overnight holds (into 09:30)
 
@@ -38,8 +38,6 @@ _Generated 2026-09-24T10:02:48 — live `flatten_robust`._
 
 | Clock | Side | Ticker | Sleeve | Shares | Px | $ | Why |
 |---|---|---|---|---:|---:|---:|---|
-| 09:30 ET | BUY | TLSA | ripper_long | 9679 | $1.05 | $10,287.81 | ripper continuation (yday liquid, not exploded) |
-| 09:30 ET | BUY | INVZ | ripper_long | 18783 | $0.41 | $7,796.45 | ripper continuation (yday liquid, not exploded) |
 | 16:00 ET | SELL | VKTX | ripper_long | 244 | $41.65 | $10,159.33 | mover 1d done |
 | 16:00 ET | SELL | MAZE | ripper_long | 47 | $28.09 | $1,318.08 | mover 1d done |
 | 16:00 ET | SELL | A | io_core | 90 | $165.32 | $14,876.41 | io 3d done |
@@ -52,7 +50,12 @@ _Generated 2026-09-24T10:02:48 — live `flatten_robust`._
 
 | Clock | Ticker | Why |
 |---|---|---|
-| 16:00 ET | * | io 3d cannot settle |
+| 16:00 ET | EOG | hard-red: no new buys |
+| 16:00 ET | CVE | hard-red: no new buys |
+| 16:00 ET | RRC | hard-red: no new buys |
+| 16:00 ET | CHKP | hard-red: no new buys |
+| 16:00 ET | S | hard-red: no new buys |
+| 16:00 ET | BAH | hard-red: no new buys |
 
 ## Would have bought — holdings disregarded
 
@@ -60,11 +63,11 @@ Sized from marked equity **$101,637.74** as if the book were flat. `io 3d_size (
 
 | Clock | Ticker | Sleeve | Shares | Px | $ | Blocked live by |
 |---|---|---|---:|---:|---:|---|
-| 16:00 ET | REGN | io_core | 21 | $801.82 | $16,838.22 | cash tied |
-| 16:00 ET | CDNA | io_core | 311 | $54.31 | $16,890.41 | cash tied |
-| 16:00 ET | BLFS | io_core | 448 | $37.74 | $16,907.52 | cash tied |
-| 16:00 ET | SN | io_core | 100 | $168.49 | $16,849.00 | cash tied |
-| 16:00 ET | COF | io_core | 86 | $196.10 | $16,864.60 | cash tied |
-| 16:00 ET | HNI | io_core | 359 | $47.16 | $16,930.44 | cash tied |
+| 16:00 ET | EOG | io_core | 119 | $141.84 | $16,878.96 | hard-red |
+| 16:00 ET | CVE | io_core | 545 | $31.08 | $16,938.60 | hard-red |
+| 16:00 ET | RRC | io_core | 436 | $38.77 | $16,903.72 | hard-red |
+| 16:00 ET | CHKP | io_core | 120 | $141.16 | $16,939.20 | hard-red |
+| 16:00 ET | S | io_core | 702 | $24.10 | $16,918.20 | hard-red |
+| 16:00 ET | BAH | io_core | 223 | $75.65 | $16,869.95 | hard-red |
 
 Dashboard: https://sroyaltyy.github.io/fullscan/dashboard/sleeve-merge/

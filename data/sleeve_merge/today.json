@@ -1,24 +1,24 @@
 {
   "date": "2026-09-24",
   "policy": "flatten_robust",
-  "generated": "2026-09-24T10:02:48",
-  "score": null,
-  "predict": null,
-  "hard_red": false,
+  "generated": "2026-09-24T10:58:31",
+  "score": -7.659,
+  "predict": "DOWN",
+  "hard_red": true,
   "flatten_ok": false,
   "n_priced_buys": 0,
   "prior_book": true,
-  "route": "io",
+  "route": "hold",
   "cash_open": 18086.73,
-  "cash_after_0930": 2.47,
-  "cash_after_1600": 83469.81,
-  "buy_cost": 18084.26,
+  "cash_after_0930": 18086.73,
+  "cash_after_1600": 101554.07,
+  "buy_cost": 0,
   "sell_proceeds": 83467.34,
   "yday_equity": 101637.74,
   "open_equity": 101637.74,
-  "close_equity": 83469.81,
+  "close_equity": 101554.07,
   "overnight_delta": -0.0,
-  "session_delta": -18167.93,
+  "session_delta": -83.67,
   "n_holds_open": 7,
   "holds_open": [
     {
@@ -351,7 +351,7 @@
   "holds_after": [],
   "would_buy": {
     "equity": 101637.74,
-    "spent": 101301.21,
+    "spent": 101477.92,
     "source": "io 3d_size (holdings disregarded)",
     "clock": "16:00 ET",
     "sleeve": "io_core",
@@ -360,133 +360,101 @@
         "date": "2026-09-24",
         "clock": "16:00 ET",
         "side": "BUY",
-        "ticker": "REGN",
-        "shares": 21,
-        "px": 801.82,
+        "ticker": "EOG",
+        "shares": 119,
+        "px": 141.84,
         "px_kind": "last_close",
         "sleeve": "io_core",
-        "notional": 16838.22,
-        "fee": 2.05,
-        "cost": 16840.27,
+        "notional": 16878.96,
+        "fee": 2.35,
+        "cost": 16881.31,
         "reason": "io 3d_size (holdings disregarded)",
-        "blocked": "cash tied",
+        "blocked": "hard-red",
         "status": "would"
       },
       {
         "date": "2026-09-24",
         "clock": "16:00 ET",
         "side": "BUY",
-        "ticker": "CDNA",
-        "shares": 311,
-        "px": 54.31,
+        "ticker": "CVE",
+        "shares": 545,
+        "px": 31.08,
         "px_kind": "last_close",
         "sleeve": "io_core",
-        "notional": 16890.41,
-        "fee": 4.01,
-        "cost": 16894.42,
+        "notional": 16938.6,
+        "fee": 7.03,
+        "cost": 16945.63,
         "reason": "io 3d_size (holdings disregarded)",
-        "blocked": "cash tied",
+        "blocked": "hard-red",
         "status": "would"
       },
       {
         "date": "2026-09-24",
         "clock": "16:00 ET",
         "side": "BUY",
-        "ticker": "BLFS",
-        "shares": 448,
-        "px": 37.74,
+        "ticker": "RRC",
+        "shares": 436,
+        "px": 38.77,
         "px_kind": "last_close",
         "sleeve": "io_core",
-        "notional": 16907.52,
-        "fee": 5.78,
-        "cost": 16913.3,
+        "notional": 16903.72,
+        "fee": 5.62,
+        "cost": 16909.34,
         "reason": "io 3d_size (holdings disregarded)",
-        "blocked": "cash tied",
+        "blocked": "hard-red",
         "status": "would"
       },
       {
         "date": "2026-09-24",
         "clock": "16:00 ET",
         "side": "BUY",
-        "ticker": "SN",
-        "shares": 100,
-        "px": 168.49,
+        "ticker": "CHKP",
+        "shares": 120,
+        "px": 141.16,
         "px_kind": "last_close",
         "sleeve": "io_core",
-        "notional": 16849.0,
-        "fee": 2.29,
-        "cost": 16851.29,
+        "notional": 16939.2,
+        "fee": 2.35,
+        "cost": 16941.55,
         "reason": "io 3d_size (holdings disregarded)",
-        "blocked": "cash tied",
+        "blocked": "hard-red",
         "status": "would"
       },
       {
         "date": "2026-09-24",
         "clock": "16:00 ET",
         "side": "BUY",
-        "ticker": "COF",
-        "shares": 86,
-        "px": 196.1,
+        "ticker": "S",
+        "shares": 702,
+        "px": 24.1,
         "px_kind": "last_close",
         "sleeve": "io_core",
-        "notional": 16864.6,
-        "fee": 2.25,
-        "cost": 16866.85,
+        "notional": 16918.2,
+        "fee": 9.06,
+        "cost": 16927.26,
         "reason": "io 3d_size (holdings disregarded)",
-        "blocked": "cash tied",
+        "blocked": "hard-red",
         "status": "would"
       },
       {
         "date": "2026-09-24",
         "clock": "16:00 ET",
         "side": "BUY",
-        "ticker": "HNI",
-        "shares": 359,
-        "px": 47.16,
+        "ticker": "BAH",
+        "shares": 223,
+        "px": 75.65,
         "px_kind": "last_close",
         "sleeve": "io_core",
-        "notional": 16930.44,
-        "fee": 4.63,
-        "cost": 16935.07,
+        "notional": 16869.95,
+        "fee": 2.88,
+        "cost": 16872.83,
         "reason": "io 3d_size (holdings disregarded)",
-        "blocked": "cash tied",
+        "blocked": "hard-red",
         "status": "would"
       }
     ]
   },
   "tickets": [
-    {
-      "date": "2026-09-24",
-      "clock": "09:30 ET",
-      "side": "BUY",
-      "ticker": "TLSA",
-      "shares": 9679,
-      "px": 1.05,
-      "px_kind": "last_close",
-      "sleeve": "ripper_long",
-      "notional": 10162.95,
-      "fee": 124.86,
-      "cost": 10287.81,
-      "reason": "ripper continuation (yday liquid, not exploded)",
-      "status": "plan",
-      "cash_after": 7798.92
-    },
-    {
-      "date": "2026-09-24",
-      "clock": "09:30 ET",
-      "side": "BUY",
-      "ticker": "INVZ",
-      "shares": 18783,
-      "px": 0.408,
-      "px_kind": "last_close",
-      "sleeve": "ripper_long",
-      "notional": 7663.46,
-      "fee": 132.98,
-      "cost": 7796.45,
-      "reason": "ripper continuation (yday liquid, not exploded)",
-      "status": "plan",
-      "cash_after": 2.47
-    },
     {
       "date": "2026-09-24",
       "clock": "16:00 ET",
@@ -501,7 +469,7 @@
       "proceeds": 10159.33,
       "reason": "mover 1d done",
       "status": "plan",
-      "cash_after": 10161.8
+      "cash_after": 28246.06
     },
     {
       "date": "2026-09-24",
@@ -517,7 +485,7 @@
       "proceeds": 1318.08,
       "reason": "mover 1d done",
       "status": "plan",
-      "cash_after": 11479.88
+      "cash_after": 29564.14
     },
     {
       "date": "2026-09-24",
@@ -533,7 +501,7 @@
       "proceeds": 14876.41,
       "reason": "io 3d done",
       "status": "plan",
-      "cash_after": 26356.29
+      "cash_after": 44440.54
     },
     {
       "date": "2026-09-24",
@@ -549,7 +517,7 @@
       "proceeds": 14239.41,
       "reason": "io 3d done",
       "status": "plan",
-      "cash_after": 40595.7
+      "cash_after": 58679.96
     },
     {
       "date": "2026-09-24",
@@ -565,7 +533,7 @@
       "proceeds": 14297.37,
       "reason": "io 3d done",
       "status": "plan",
-      "cash_after": 54893.07
+      "cash_after": 72977.33
     },
     {
       "date": "2026-09-24",
@@ -581,7 +549,7 @@
       "proceeds": 13110.05,
       "reason": "io 3d done",
       "status": "plan",
-      "cash_after": 68003.12
+      "cash_after": 86087.38
     },
     {
       "date": "2026-09-24",
@@ -597,21 +565,66 @@
       "proceeds": 15466.69,
       "reason": "io 3d done",
       "status": "plan",
-      "cash_after": 83469.81
+      "cash_after": 101554.07
     }
   ],
   "skipped": [
     {
       "date": "2026-09-24",
       "clock": "16:00 ET",
-      "ticker": "*",
+      "ticker": "EOG",
       "side": "BUY",
-      "reason": "io 3d cannot settle",
+      "reason": "hard-red: no new buys",
+      "sleeve": "io_core",
+      "status": "skip"
+    },
+    {
+      "date": "2026-09-24",
+      "clock": "16:00 ET",
+      "ticker": "CVE",
+      "side": "BUY",
+      "reason": "hard-red: no new buys",
+      "sleeve": "io_core",
+      "status": "skip"
+    },
+    {
+      "date": "2026-09-24",
+      "clock": "16:00 ET",
+      "ticker": "RRC",
+      "side": "BUY",
+      "reason": "hard-red: no new buys",
+      "sleeve": "io_core",
+      "status": "skip"
+    },
+    {
+      "date": "2026-09-24",
+      "clock": "16:00 ET",
+      "ticker": "CHKP",
+      "side": "BUY",
+      "reason": "hard-red: no new buys",
+      "sleeve": "io_core",
+      "status": "skip"
+    },
+    {
+      "date": "2026-09-24",
+      "clock": "16:00 ET",
+      "ticker": "S",
+      "side": "BUY",
+      "reason": "hard-red: no new buys",
+      "sleeve": "io_core",
+      "status": "skip"
+    },
+    {
+      "date": "2026-09-24",
+      "clock": "16:00 ET",
+      "ticker": "BAH",
+      "side": "BUY",
+      "reason": "hard-red: no new buys",
       "sleeve": "io_core",
       "status": "skip"
     }
   ],
-  "why": "morning S missing; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held",
+  "why": "S=-7.66; hard-red: no new buys; holds and due 1d exits stay",
   "replay_sessions": [
     "2026-08-13",
     "2026-08-14",
