@@ -1,0 +1,83 @@
+{
+  "date": "2026-09-24",
+  "generated_at": "2026-09-24T16:24:10.948576-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-09-25",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-09-25) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks ended mixed as global bond selloff pushed Treasury yields toward multi-decade highs and Brent crude held above $100 on Middle East tensions",
+  "raw_text": "- The Dow Jones Industrial Average ($DJI) fell 160 points to close near 51,380, the S&P 500 ($SPX) finished around 7,703, and the Nasdaq Composite ($COMP) ended nearly flat after paring earlier losses\n- The 30-year Treasury yield hit its highest level since 2004 and the 10-year approached 5.2%, extending a third straight day of equity pressure amid a global bond selloff\n- Brent crude (@QA) traded above $100 per barrel on Middle East tensions, while reports of U.S.–Iran talks on the Strait of Hormuz helped ease some oil-related anxiety\n- Energy shares outperformed on higher oil prices, while technology lagged as Oracle (ORCL) slid about 4% after issuing a force majeure notice tied to its Project Jupiter New Mexico data center\n- Everpure Inc. (P) jumped about 11% after issuing a preliminary fiscal 2028 revenue outlook of $7–7.3 billion, implying 39–45% growth and topping consensus, alongside a non-GAAP operating income target of $1.7–1.9 billion\n- Meta Platforms (META) gained 3.7% after its Connect event unveiled the Muse handheld AI device, new VR goggles, and smart glasses\n- McDonald’s (MCD) shares declined after BMO, Evercore ISI and TD Cowen cut price targets following its NEXT strategy investor day\n- MGM Resorts (MGM) fell after People Incorporated withdrew its $18 billion buyout proposal\n- Darden Restaurants (DRI) reported first-quarter EPS of $2.05 on $3.2 billion in revenue, in line with estimates, with same-restaurant sales up 3.1%\n- Costco Wholesale (COST) reported after the bell with an initially muted after-hours reaction as investors looked ahead to progress on Trump–Xi talks and the next wave of earnings",
+  "raw_summary_md": "- The **Dow Jones Industrial Average** ([$DJI](https://finviz.com/index/DJI?p=d)) **fell 160 points** to close near **51,380**, the **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) finished around **7,703**, and the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) ended **nearly flat** after paring earlier losses\n- The **30-year Treasury yield** hit its **highest level since 2004** and the **10-year** approached **5.2%**, extending a **third straight day of equity pressure** amid a global **bond selloff**\n- **Brent crude** ([@QA](https://finviz.com/futures_charts?t=QA)) traded **above $100 per barrel** on **Middle East tensions**, while reports of **U.S.–Iran talks** on the **Strait of Hormuz** helped ease some oil-related anxiety\n- **Energy shares outperformed** on higher oil prices, while **technology lagged** as **Oracle** ([ORCL](https://finviz.com/quote?t=ORCL)) **slid about 4%** after issuing a force majeure notice tied to its **Project Jupiter New Mexico data center**\n- **Everpure Inc.** ([P](https://finviz.com/quote?t=P)) **jumped about 11%** after issuing a preliminary fiscal **2028 revenue outlook of $7–7.3 billion**, implying **39–45% growth** and topping consensus, alongside a **non-GAAP operating income target of $1.7–1.9 billion**\n- **Meta Platforms** ([META](https://finviz.com/quote?t=META)) **gained 3.7%** after its **Connect event** unveiled the **Muse handheld AI device**, new VR goggles, and smart glasses\n- **McDonald’s** ([MCD](https://finviz.com/quote?t=MCD)) **shares declined** after **BMO, Evercore ISI and TD Cowen** **cut price targets** following its **NEXT strategy investor day**\n- **MGM Resorts** ([MGM](https://finviz.com/quote?t=MGM)) **fell** after **People Incorporated** withdrew its **$18 billion buyout proposal**\n- **Darden Restaurants** ([DRI](https://finviz.com/quote?t=DRI)) reported **first-quarter EPS of $2.05** on **$3.2 billion in revenue**, in line with estimates, with **same-restaurant sales up 3.1%**\n- **Costco Wholesale** ([COST](https://finviz.com/quote?t=COST)) reported **after the bell** with an initially **muted after-hours reaction** as investors looked ahead to progress on **Trump–Xi talks** and the **next wave of earnings**",
+  "index_moves": [],
+  "oil": {
+    "name": "Brent crude",
+    "price": 100.0,
+    "verb": null,
+    "direction": null
+  },
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "ORCL",
+    "P",
+    "META",
+    "MCD",
+    "MGM",
+    "DRI",
+    "COST"
+  ],
+  "named_leaders": [
+    "ORCL",
+    "P",
+    "META",
+    "MCD",
+    "MGM",
+    "DRI",
+    "COST"
+  ],
+  "calendar": [],
+  "prior_close": {
+    "spx": null,
+    "nasdaq": null,
+    "dow": null
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [],
+    "text": ""
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Brent crude (@QA) traded above $100 per barrel on Middle East tensions, while reports of U.S.–Iran talks on the Strait of Hormuz helped ease some oil-related anxiety"
+  },
+  "finviz_id": 293922,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-09-24T16:06:35.433",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "neutral"
+}
