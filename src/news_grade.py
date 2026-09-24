@@ -54,7 +54,8 @@ def _signal_dates(max_days: int | None) -> list[str]:
             dates.append(m.group(1))
     if max_days:
         dates = dates[-max_days:]
-    return dates
+    from .quarantine_sessions import filter_dates
+    return filter_dates(dates)
 
 
 def _load_actions(date_str: str) -> dict | None:

@@ -122,10 +122,15 @@ def list_session_dates() -> list[str]:
             m = _DATE_RE.search(path.name)
             if m:
                 dates.add(m.group(1))
-    return sorted(dates)
+    from .quarantine_sessions import filter_dates
+    return filter_dates(sorted(dates))
 
 
 def harvest(date: str) -> list[dict]:
+    from .quarantine_sessions import is_quarantined, reason
+    if is_quarantined(date):
+        print(f"[lane_news_scan] skip quarantined {date} ({reason(date)})")
+        return []
     bag: dict[str, dict] = {}
     export = EXPORTS_DIR / f"finviz_{date}.csv"
     if export.is_file():

@@ -415,6 +415,8 @@ def slice_panel(panel: dict, start: str | None = None,
         "n_sessions": len(cal),
         "n_rows": len(rows),
     })
+    from . import quarantine_sessions as qsess
+    out, _dropped = qsess.drop_sessions(out)
     return out
 
 
@@ -2586,6 +2588,10 @@ def run(from_date: str = START, to_date: str | None = None,
         slim = {k: v for k, v in panel.items() if k != "by_date"}
         slim["by_date"] = None
         PANEL_PATH.write_text(json.dumps(slim, indent=2), encoding="utf-8")
+    from . import quarantine_sessions as qsess
+    panel, dropped = qsess.drop_sessions(panel)
+    if dropped:
+        print(f"[factor-mine] evidence skip quarantined {dropped}", flush=True)
     cal = list(panel.get("session_dates") or [])
     tapes = _tapes(cal)
     regime = fmb.load_regime() if book else {}

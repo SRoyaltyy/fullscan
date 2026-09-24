@@ -84,6 +84,8 @@ def slice_panel(panel: dict, start: str | None = None,
         "n_sessions": len(cal),
         "n_rows": len(rows),
     })
+    from . import quarantine_sessions as qsess
+    out, _dropped = qsess.drop_sessions(out)
     return out
 
 
@@ -859,6 +861,10 @@ def run(*, from_date: str = book_era.DASHBOARD_START,
     recipes = list(recipes or fm.build_recipes())
     panel = panel if panel is not None else fm.load_or_build_panel(
         from_date, to_date)
+    from . import quarantine_sessions as qsess
+    panel, dropped = qsess.drop_sessions(panel)
+    if dropped:
+        print(f"[wf] evidence skip quarantined {dropped}", flush=True)
     cal = list(panel.get("session_dates") or [])
     folds_spec = make_folds(
         cal, first_cutoff=first_cutoff, step=step, forward=forward)

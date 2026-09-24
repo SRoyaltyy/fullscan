@@ -70,16 +70,39 @@ def load_parsed(path: Path) -> list[dict]:
     return out
 
 
+def _skip_quarantine(path: Path) -> bool:
+    from ..quarantine_sessions import is_quarantined
+    m = _DATE_IN_NAME.search(path.name)
+    return bool(m and is_quarantined(m.group(1)))
+
+
+def _drop_quarantined_articles(arts: list[dict]) -> list[dict]:
+    from ..quarantine_sessions import is_quarantined
+    out = []
+    for art in arts:
+        m = _DATE_IN_NAME.search(str(art.get("source_file") or ""))
+        if m and is_quarantined(m.group(1)):
+            continue
+        out.append(art)
+    return out
+
+
 def load_corpus(date: str | None = None) -> list[dict]:
+    from ..quarantine_sessions import is_quarantined
     arts: list[dict] = []
     if date and date.lower() not in {"all", "*", "history"}:
+        if is_quarantined(date):
+            print(f"[news-impact] skip quarantined session {date}")
+            return []
         p = NEWS_DIR / f"{date}_parsed.json"
         arts.extend(load_parsed(p))
     else:
         for p in sorted(NEWS_DIR.glob("*_parsed.json")):
+            if _skip_quarantine(p):
+                continue
             arts.extend(load_parsed(p))
     arts.extend(load_grok_dumps(date=date))
-    return prefer_source(arts)
+    return prefer_source(_drop_quarantined_articles(arts))
 
 
 def overlay_existing_tape(results: list[dict], artifact: Path | None = None) -> list[dict]:
