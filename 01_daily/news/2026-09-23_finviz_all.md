@@ -1,0 +1,10 @@
+# Finviz ALL — 2026-09-23
+
+- map_heat phase= overlay_at=
+- industries=149 sectors=11 tape=0 []
+- econ=40 earnings=17 ticker_news=90
+- digest=yes 01_daily/news/2026-09-23_finviz_digest.md
+- colors=yes data/quote_colors/2026-09-23_quote_colors.csv
+- exports=37 newest=finviz_2026-09-23.csv
+
+FINVIZ_ALL_PARTIAL
