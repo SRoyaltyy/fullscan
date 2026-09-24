@@ -1,12 +1,12 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T06:53:26.253663-04:00",
+  "generated_at": "2026-09-24T06:54:57.159977-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 4,
-    "partial": 4,
+    "ok": 6,
+    "partial": 2,
     "fail": 0,
     "n": 8
   },
@@ -703,11 +703,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -833,21 +833,23 @@
           "name": "Peer RS CSV",
           "path": "data/peers/2026-09-24_peer_rs.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=5100",
+          "size": 814069,
+          "said": "497 rows",
+          "bullets": [
+            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
+          ]
         },
         {
           "key": "book_json",
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-24_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=149",
+          "size": 1243984,
+          "said": "1d BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP \u00b7 -0.6851",
           "bullets": []
         },
         {
@@ -855,21 +857,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-09-24_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 52561,
+          "said": "Stock book \u2014 2026-09-24",
+          "bullets": [
+            "_Generated 2026-09-24T06:53:39.398790-04:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-09-24_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 585,
+          "said": "0 green \u00b7",
           "bullets": []
         },
         {
@@ -891,10 +896,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-24)",
           "size": 8379317,
-          "said": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
+          "said": "live-book poller + today.json (2026-09-24)",
           "bullets": []
         }
       ],
@@ -907,9 +912,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -919,10 +924,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-24_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=149",
+          "size": 1243984,
+          "said": "1d BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP \u00b7 -0.6851",
           "bullets": []
         },
         {
@@ -930,10 +935,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-24)",
           "size": 8379317,
-          "said": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
+          "said": "live-book poller + today.json (2026-09-24)",
           "bullets": []
         },
         {
@@ -969,68 +974,77 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "ASTH",
-        "score": 0.09248307125306686
+        "ticker": "CVE",
+        "score": 0.1312394058340678
       },
       {
-        "ticker": "CHKP",
-        "score": 0.22580596058295638
+        "ticker": "EOG",
+        "score": 0.4785963124550665
       },
       {
-        "ticker": "GDYN",
-        "score": 0.15893247831646115
+        "ticker": "RRC",
+        "score": 0.7652202318912844
       },
       {
-        "ticker": "PRGS",
-        "score": 0.22262173775223718
+        "ticker": "S",
+        "score": 0.5360276607629548
       },
       {
-        "ticker": "NTNX",
-        "score": 0.3469195471799613
+        "ticker": "GCT",
+        "score": 0.4750972400816171
+      },
+      {
+        "ticker": "HITI",
+        "score": 0.2657130170179052
+      },
+      {
+        "ticker": "RPD",
+        "score": 0.5158468263152987
       }
     ],
     "sell_1d": [
       {
-        "ticker": "METC",
-        "score": -0.4147221792720016
+        "ticker": "FLNC",
+        "score": -0.5997843001428046
       },
       {
-        "ticker": "EOSE",
-        "score": -0.1364721911916208
+        "ticker": "AEHL",
+        "score": -0.21443490471204366
       },
       {
         "ticker": "XIFR",
-        "score": -0.37973431112233896
+        "score": -0.2824488393540524
       },
       {
-        "ticker": "VST",
-        "score": -0.03964795330924106
+        "ticker": "ASPI",
+        "score": -0.4034774392486025
       },
       {
-        "ticker": "AESI",
-        "score": -0.3078422660521732
+        "ticker": "HSAI",
+        "score": -0.3404671111010516
       },
       {
-        "ticker": "TE",
-        "score": -0.005561124700873332
+        "ticker": "TRIP",
+        "score": -0.38723710968669034
       },
       {
-        "ticker": "EXK",
-        "score": -0.1576247463622153
+        "ticker": "METC",
+        "score": -0.3588457482224159
       },
       {
-        "ticker": "ARE",
-        "score": -0.5420850022543173
+        "ticker": "NRG",
+        "score": -0.24979872175697304
+      },
+      {
+        "ticker": "EOSE",
+        "score": -0.022888924814754824
+      },
+      {
+        "ticker": "PLUG",
+        "score": -0.015140139515257
       }
     ],
-    "flatten": {
-      "said": "0 priced buys \u00b7 cash $18,086.73 \u00b7 morning S missing",
-      "bullets": [
-        "0 priced buys",
-        "cash $18,086.73",
-        "morning S missing"
-      ]
-    },
+    "flatten": {},
     "general": {
       "said": "DOWN  -7.659",
       "bullets": [
@@ -1071,10 +1085,10 @@
       ]
     },
     "weather": {
-      "said": "favorable 1 \u00b7 hostile 5 \u00b7 neutral 5",
+      "said": "favorable 3 \u00b7 hostile 6 \u00b7 neutral 2",
       "bullets": [
-        "hostile: Basic Materials, Communication Services, Energy, Real Estate, Utilities",
-        "events bull 1 / bear 3"
+        "hostile: Communication Services, Consumer Cyclical, Financial, Industrials, Real Estate, Utilities",
+        "events bull 4 / bear 2"
       ]
     }
   },
@@ -2078,6 +2092,59 @@
         }
       ],
       "preview": "5898 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, DVN, ONC, PR, PBR-A"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T06:54:56.560739-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-24_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1243984,
+          "preview": "1d BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
+        },
+        {
+          "path": "data/stock_book/2026-09-24_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-24_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2486,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-24_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 10102,
+          "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 10102,
+          "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
+        },
+        {
+          "path": "01_daily/2026-09-24_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 53558,
+          "preview": "# Stock book \u2014 2026-09-24\n_Generated 2026-09-24T06:53:39.398790-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 # Stock book \u2014 2026-09-24\n_Generated 2026-09-24T06:53:39.398790-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {
