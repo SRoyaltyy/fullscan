@@ -135,11 +135,15 @@ _PARSED_NAME = re.compile(r"(20\d{2}-\d{2}-\d{2})_parsed\.json$")
 
 
 def _published_span(items: list[dict]) -> dict:
-    """Calendar min/max of published_at in America/New_York."""
-    from .news_freshness import ET, parse_published
+    """Calendar min/max in America/New_York.
+
+    Same clock as the freshness gate: ``published_at`` when it parses,
+    otherwise the Finviz ``scraped_at`` export stamp.
+    """
+    from .news_freshness import ET, item_when
     stamps: list[str] = []
     for it in items:
-        parsed = parse_published(it.get("published_at"))
+        parsed = item_when(it)
         if parsed is not None:
             stamps.append(parsed.astimezone(ET).date().isoformat())
     stamps.sort()

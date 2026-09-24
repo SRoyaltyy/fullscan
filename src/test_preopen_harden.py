@@ -53,8 +53,9 @@ def test_news_parse_falls_back_to_digest() -> None:
                     os.chdir(cwd)
         finally:
             news_parse.NEWS_DIR = orig_dir
-    # Undated Finviz titles cannot prove a window. 2026-09-24's DB tail
-    # was a month old; an empty published_at fallback is not "fresh".
+    # Finviz titles with no published_at and no scraped_at cannot prove a
+    # window. 2026-09-24's DB tail was a month old; an unstamped fallback
+    # is not "fresh".
     assert report.get("news_mode") == "none_stale"
     assert report["raw_count"] == 0
     assert report.get("error") in (None, "")

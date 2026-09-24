@@ -329,13 +329,25 @@ def store(conn, cur, df, snapshot_date):
     return len(rows)
 
 
+def write_export_scraped_at(csv_path: Path, when: datetime) -> Path:
+    """Save the export clock beside the CSV.
+
+    Readers date undated Finviz headlines from this file. Do not use the
+    CSV mtime: a git checkout gives every export the same timestamp.
+    """
+    side = Path(csv_path).with_suffix(".scraped_at")
+    side.write_text(when.isoformat() + "\n", encoding="utf-8")
+    return side
+
+
 def main():
     start_time = time.time()
     EXPORTS_DIR.mkdir(parents=True, exist_ok=True)
 
     print("=== Finviz Financial Data Collector ===", flush=True)
 
-    snapshot_date = datetime.now(ZoneInfo("America/New_York")).strftime("%Y-%m-%d")
+    now = datetime.now(ZoneInfo("America/New_York"))
+    snapshot_date = now.strftime("%Y-%m-%d")
     df = None
 
     print("\n--- Mode 1: Elite CSV Export ---", flush=True)
@@ -356,8 +368,10 @@ def main():
 
     archive_path = EXPORTS_DIR / f"finviz_{snapshot_date}.csv"
     df.to_csv(archive_path, index=False)
+    write_export_scraped_at(archive_path, now)
     latest_path = EXPORTS_DIR / "finviz_latest.csv"
     df.to_csv(latest_path, index=False)
+    write_export_scraped_at(latest_path, now)
     print(f"  Archived to {archive_path}", flush=True)
 
     os.environ["FULLSCAN_DB_OPTIONAL"] = "1"

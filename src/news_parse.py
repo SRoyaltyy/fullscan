@@ -228,6 +228,7 @@ def parse_rows(rows: list[dict]) -> list[dict]:
             "title": title,
             "url": r.get("url"),
             "published_at": r.get("published_at"),
+            "scraped_at": r.get("scraped_at") or "",
             "class": kind,
             "usable": usable,
             "sectors": sectors,
@@ -280,28 +281,73 @@ def _empty_error_report(hours: int, reason: str, detail: str) -> dict:
     }
 
 
+def _read_stamp_file(path: Path) -> str:
+    try:
+        text = path.read_text(encoding="utf-8").strip()
+    except OSError:
+        return ""
+    return text.splitlines()[0].strip() if text else ""
+
+
+def _finviz_scrape_stamp(date_str: str, data: dict) -> str:
+    """When this Finviz export was saved, for headlines with no published_at.
+
+    Order: stamp already on the digest, sidecar written next to the CSV,
+    then ``generated_at`` stored on that digest. File mtime is not a
+    scrape clock — a checkout stamps every export at the same moment.
+    """
+    stored = str(data.get("scraped_at") or "").strip()
+    if stored:
+        return stored
+    root = Path(__file__).resolve().parent.parent
+    names: list[str] = []
+    export_used = str(data.get("export_used") or "").strip()
+    if export_used:
+        names.append(export_used)
+    names.append(f"data/exports/finviz_{date_str}.csv")
+    seen: set[str] = set()
+    for name in names:
+        for base in (Path(name), root / name):
+            key = str(base)
+            if key in seen:
+                continue
+            seen.add(key)
+            stamp = _read_stamp_file(base.with_suffix(".scraped_at"))
+            if stamp:
+                return stamp
+    return str(data.get("generated_at") or "").strip()
+
+
 def rows_from_local_files(date_str: str, limit: int) -> list[dict]:
     """Headlines already on disk when Postgres is down or timed out.
 
     2026-09-08/09: statement_timeout ate the 480s parse slot and
     judge/actions never started. Finviz digest + Channel 1 cache
     are enough for a usable parse so the packet continues.
+
+    Finviz rows carry ``scraped_at`` (the export clock) so the freshness
+    gate can date them. Channel 1 and the events file keep their own
+    clocks and do not inherit that stamp.
     """
     rows: list[dict] = []
     seen: set[str] = set()
 
-    def add(title: str, source: str, url: str = "", published: str = "") -> None:
+    def add(title: str, source: str, url: str = "", published: str = "",
+            scraped: str = "") -> None:
         title = (title or "").strip()
         key = title.lower()
         if not title or key in seen:
             return
         seen.add(key)
-        rows.append({
+        row = {
             "source": source or "local_file",
             "title": title,
             "url": url or "",
             "published_at": published or "",
-        })
+        }
+        if scraped:
+            row["scraped_at"] = scraped
+        rows.append(row)
 
     digest_p = Path(NEWS_DIR) / f"{date_str}_finviz_digest.json"
     try:
@@ -309,17 +355,25 @@ def rows_from_local_files(date_str: str, limit: int) -> list[dict]:
     except (OSError, json.JSONDecodeError, TypeError):
         data = {}
     if isinstance(data, dict):
+        fallback = _finviz_scrape_stamp(date_str, data)
+
+        def scrape_of(row: dict) -> str:
+            return str(row.get("scraped_at") or "").strip() or fallback
+
         for row in data.get("index_digests") or []:
             if isinstance(row, dict):
                 add(str(row.get("digest") or ""),
-                    str(row.get("source") or "finviz_elite_news"))
+                    str(row.get("source") or "finviz_elite_news"),
+                    scraped=scrape_of(row))
         for row in data.get("top_signal") or []:
             if not isinstance(row, dict):
                 continue
             add(str(row.get("news_title") or ""),
-                str(row.get("source") or "finviz_export"))
+                str(row.get("source") or "finviz_export"),
+                scraped=scrape_of(row))
             add(str(row.get("digest") or ""),
-                str(row.get("source") or "finviz_export"))
+                str(row.get("source") or "finviz_export"),
+                scraped=scrape_of(row))
 
     ch1_p = Path("01_daily") / "_channel1" / f"{date_str}_predict.json"
     try:

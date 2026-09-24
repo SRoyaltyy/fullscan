@@ -114,6 +114,52 @@ def test_overnight_digest_does_not_skip_morning() -> None:
         assert existing_digest_is_morning_ok(date) is True
 
 
+def test_build_report_stamps_export_rows_from_the_sidecar() -> None:
+    import tempfile
+    import src.finviz_digest as fd
+
+    stamp = "2026-09-24T05:40:00-04:00"
+    with tempfile.TemporaryDirectory() as tmp:
+        root = Path(tmp)
+        export_dir = root / "data" / "exports"
+        export_dir.mkdir(parents=True)
+        csv = export_dir / "finviz_2026-09-24.csv"
+        csv.write_text(
+            "Ticker,Daily Digest,News Title,Sector,Industry,Market Cap\n"
+            "AAPL,AI capex stays hot through year end,Apple lifts capex,"
+            "Technology,Hardware,3000000\n",
+            encoding="utf-8")
+        csv.with_suffix(".scraped_at").write_text(stamp + "\n", encoding="utf-8")
+        with mock.patch.object(fd, "EXPORT_DIR", export_dir), \
+                mock.patch.object(fd, "ROOT", root):
+            stamped = fd.build_report(asof="2026-09-24", skip_scrape=True)
+        csv.with_suffix(".scraped_at").unlink()
+        with mock.patch.object(fd, "EXPORT_DIR", export_dir), \
+                mock.patch.object(fd, "ROOT", root):
+            bare = fd.build_report(asof="2026-09-24", skip_scrape=True)
+    assert stamped["scraped_at"] == stamp
+    assert stamped["all_ticker_digests"][0]["scraped_at"] == stamp
+    assert stamped["top_signal"][0]["scraped_at"] == stamp
+    assert "scraped_at" not in bare
+    assert "scraped_at" not in bare["all_ticker_digests"][0]
+
+
+def test_collector_writes_scraped_at_sidecar() -> None:
+    import tempfile
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+
+    from collectors.finviz_financials import write_export_scraped_at
+
+    with tempfile.TemporaryDirectory() as tmp:
+        csv = Path(tmp) / "finviz_2026-09-24.csv"
+        csv.write_text("Ticker\nAAPL\n", encoding="utf-8")
+        when = datetime(2026, 9, 24, 5, 40, tzinfo=ZoneInfo("America/New_York"))
+        side = write_export_scraped_at(csv, when)
+        assert side.name == "finviz_2026-09-24.scraped_at"
+        assert side.read_text(encoding="utf-8").strip() == when.isoformat()
+
+
 def main() -> None:
     tests = [
         test_yf_index_digest,
@@ -123,6 +169,8 @@ def main() -> None:
         test_parse_rejects_login_html,
         test_session_is_elite_helper,
         test_overnight_digest_does_not_skip_morning,
+        test_build_report_stamps_export_rows_from_the_sidecar,
+        test_collector_writes_scraped_at_sidecar,
     ]
     failed = 0
     for fn in tests:

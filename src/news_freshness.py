@@ -13,8 +13,9 @@ Thresholds (session date S, as-of 09:30 ET on S):
 * At least half of *dated* items must fall in the 36h before that as-of.
   36h covers the entire prior regular session plus the overnight. A real
   48h pull is dominated by that span. The 09-24 file was 0%.
-* Fewer than 8 dated items cannot prove a window (undated Finviz titles
-  do not count as fresh).
+* Fewer than 8 dated items cannot prove a window. A headline is dated by
+  ``published_at`` when that parses, otherwise by ``scraped_at`` (the
+  Finviz export clock). A title with neither stamp does not count.
 
 Either failing test is stale. ``news_mode`` is ``"on"`` or ``"none_stale"``.
 """
@@ -70,6 +71,21 @@ def parse_published(raw: object) -> datetime | None:
     return dt.astimezone(timezone.utc)
 
 
+def item_when(it: dict) -> datetime | None:
+    """Clock the freshness gate uses for one headline.
+
+    A real ``published_at`` wins. On-disk Finviz titles usually have none;
+    ``scraped_at`` (when the export was saved) dates those. Junk in either
+    field is ignored rather than treated as fresh.
+    """
+    if not isinstance(it, dict):
+        return None
+    published = parse_published(it.get("published_at"))
+    if published is not None:
+        return published
+    return parse_published(it.get("scraped_at"))
+
+
 def trading_days_before(session: date, n: int) -> date:
     """Calendar date n weekdays before ``session`` (session itself not counted)."""
     d = session
@@ -86,6 +102,7 @@ def assess(items: list[dict] | None, session: str,
     """Freshness of a headline batch for session ``YYYY-MM-DD``.
 
     Undated rows are ignored for the median and do not count as recent.
+    A row with no parseable ``published_at`` is dated by ``scraped_at``.
     """
     session_d = date.fromisoformat(str(session)[:10])
     asof_dt = asof or datetime.combine(session_d, dtime(9, 30), tzinfo=ET)
@@ -99,7 +116,7 @@ def assess(items: list[dict] | None, session: str,
         if not isinstance(it, dict):
             continue
         n_items += 1
-        dt = parse_published(it.get("published_at"))
+        dt = item_when(it)
         if dt is not None:
             parsed.append(dt)
     n_dated = len(parsed)
@@ -185,8 +202,9 @@ def decision(session: str, root: Path | None = None) -> dict:
 
     Order: explicit ``news_mode: none_stale`` on the parse, then a live
     assess of dated items (so today's unmarked Aug 26-29 file still
-    stops), then grok_ok false with a stale-news reason. A legacy parse
-    with no dates and no stale stamp is left alone.
+    stops), then grok_ok false with a stale-news reason. Dated means
+    ``published_at`` or, when that is empty, ``scraped_at``. A legacy
+    parse with neither stamp and no stale mark is left alone.
     """
     root = root or ROOT
     data = _read_parsed(session, root)
@@ -203,7 +221,8 @@ def decision(session: str, root: Path | None = None) -> dict:
             "via": "grok" if grok else "parse_stamp",
         }
     items = [it for it in (data.get("all_items") or []) if isinstance(it, dict)]
-    if any(str(it.get("published_at") or "").strip() for it in items):
+    if any(str(it.get("published_at") or "").strip()
+           or str(it.get("scraped_at") or "").strip() for it in items):
         verdict = assess(items, session)
         if not verdict["ok"]:
             return {
