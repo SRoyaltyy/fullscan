@@ -1,12 +1,12 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T06:42:02.514725-04:00",
+  "generated_at": "2026-09-24T06:42:08.232158-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 4,
-    "partial": 4,
+    "ok": 5,
+    "partial": 3,
     "fail": 0,
     "n": 8
   },
@@ -702,7 +702,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 2,
       "n_opt": 3,
       "files": [
         {
@@ -886,10 +886,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-24)",
           "size": 8379317,
-          "said": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
+          "said": "live-book poller + today.json (2026-09-24)",
           "bullets": []
         }
       ],
@@ -902,9 +902,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -925,10 +925,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-24)",
           "size": 8379317,
-          "said": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
+          "said": "live-book poller + today.json (2026-09-24)",
           "bullets": []
         },
         {
@@ -962,70 +962,9 @@
     }
   ],
   "selections": {
-    "buy_1d": [
-      {
-        "ticker": "ASTH",
-        "score": 0.09248307125306686
-      },
-      {
-        "ticker": "CHKP",
-        "score": 0.3383059605829564
-      },
-      {
-        "ticker": "GDYN",
-        "score": 0.4014324783164612
-      },
-      {
-        "ticker": "PRGS",
-        "score": 0.4651217377522372
-      },
-      {
-        "ticker": "NTNX",
-        "score": 0.21941954717996132
-      }
-    ],
-    "sell_1d": [
-      {
-        "ticker": "METC",
-        "score": -0.4147221792720016
-      },
-      {
-        "ticker": "EOSE",
-        "score": -0.1364721911916208
-      },
-      {
-        "ticker": "XIFR",
-        "score": -0.14808431112233889
-      },
-      {
-        "ticker": "VST",
-        "score": 0.10200204669075895
-      },
-      {
-        "ticker": "AESI",
-        "score": -0.3078422660521732
-      },
-      {
-        "ticker": "TE",
-        "score": -0.005561124700873332
-      },
-      {
-        "ticker": "EXK",
-        "score": -0.1576247463622153
-      },
-      {
-        "ticker": "ARE",
-        "score": -0.26983500225431734
-      }
-    ],
-    "flatten": {
-      "said": "0 priced buys \u00b7 cash $18,086.73 \u00b7 morning S missing",
-      "bullets": [
-        "0 priced buys",
-        "cash $18,086.73",
-        "morning S missing"
-      ]
-    },
+    "buy_1d": [],
+    "sell_1d": [],
+    "flatten": {},
     "general": {
       "said": "DOWN  -7.659",
       "bullets": [
@@ -1039,7 +978,7 @@
       "direction": "down"
     },
     "sectors": {
-      "said": "1 up / 6 down / 0 flat",
+      "said": "1 up / 9 down / 0 flat",
       "bullets": [
         "XLB DOWN -2.9",
         "XLC DOWN -11.3",
@@ -1049,9 +988,9 @@
         "XLF DOWN -4.9",
         "XLV DOWN -4.3",
         "XLI DOWN -4.3",
-        "XLRE missing",
-        "XLK missing",
-        "XLU missing"
+        "XLRE DOWN -10.0",
+        "XLK DOWN -16.2",
+        "XLU DOWN -5.8"
       ]
     },
     "news": {
@@ -1944,6 +1883,24 @@
         }
       ],
       "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-09-24\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-5.818** (mult 0.9)\n- regime: risk_off\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.034** (ES -0.64%, ZN -0.03%, PM:XLU +0.10%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **-3.938** (raw -3.938) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-09-24\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (149,094 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10 year Treasury yield September 24 2026 Warsh rate hike\"* \u2192 got 6 results (via gnews_rss)\n- Global bond rout gathers pace as Fed rate hike bets rattle markets - The Straits Times (https://news.google.com/rss/articles/CBMipwFBVV95cUxNNExDRkZGUGl1S2VDMUF2M1pTV2MwUHowempaMFFZVkR0RDhyZFl0ek9mUWk2cU1RaG9WOXdXQ3psT0ljLVh4VnRkUThuVFZvMEZMdTBRSjdiVFBvUzBjOHlPaFJzMmxiRFkwdU83SGVueEowQ3NsSDNnODkxM25jb1pCdFQzTzd1QUM2V2ktODN0RjQ2ZnlYblZCcmJZaTRCcENURG83UQ?oc=5)\n- 2-year T"
+    },
+    {
+      "key": "sector_predict",
+      "title": "Per-sector predict (all 11)",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T06:42:07.809479-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-24",
+          "ok": true,
+          "reason": "",
+          "size": 4096,
+          "preview": "10/10 sector predicts ok: basic_materials, communication_services, consumer_cyclical, energy, financial, healthcare, industrials, real_estate"
+        }
+      ],
+      "preview": "10/10 sector predicts ok: basic_materials, communication_services, consumer_cyclical, energy, financial, healthcare, industrials, real_estate"
     }
   ],
   "href": {
