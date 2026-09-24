@@ -26,13 +26,290 @@ Clock split: (A) short-only is a pre-open policy call — shorts fire at the clo
 
 ## RESEARCH per sleeve (paper, not a wire)
 
-**2026-09-23** — `1` sit sleeves with looked names / `1` sit sleeves total. Live policy sits. KEEP bar unchanged. Label: **RESEARCH**.
+**2026-09-24** — `278` sit sleeves with looked names / `340` sit sleeves total. Live policy sits. KEEP bar unchanged. Label: **RESEARCH**.
 
 Per-sleeve paper counterfactuals on looked names. Live sit stays default. KEEP bar unchanged. (A) short-only fires the short kid at the 09:30 open. (B) dip-scoop longs wait for open−X% (session low / Elite live). Close does not trigger.
 
 | Sleeve | Side | (A) short-only @ open | (B) dip-scoop X% |
 |---|---|---|---|
-| `flatten_robust` | long | — | PACS miss; MKC miss; EL miss; USFD miss; DLO miss; TDC miss; IOVA miss; PGEN miss |
+| `flatten_robust` | long | — | EOG miss; CVE miss; RRC miss; CHKP miss; S miss; BAH miss; VKTX miss; MAZE miss; A miss; HUM miss; DXCM miss; MGTX miss; CYPH miss |
+| `union_h1` | long | — | CVE miss; NNBR miss; AIRS miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss |
+| `union_h3` | long | — | CVE miss; NNBR miss; AIRS miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss |
+| `union_h5` | long | — | CVE miss; NNBR miss; AIRS miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss |
+| `flatten_h1` | long | — | CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss |
+| `flatten_h3` | long | — | CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss |
+| `flatten_h5` | long | — | CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss |
+| `probable_h1` | long | — | NNBR miss; INVZ miss; TLSA miss; GLND miss; QNC miss; EGHT miss; SRFM miss; FSLY miss |
+| `probable_h3` | long | — | NNBR miss; INVZ miss; TLSA miss; GLND miss; QNC miss; EGHT miss; SRFM miss; FSLY miss |
+| `probable_h5` | long | — | NNBR miss; INVZ miss; TLSA miss; GLND miss; QNC miss; EGHT miss; SRFM miss; FSLY miss |
+| `yday_gainer_h1` | long | — | NNBR miss; INVZ miss; DH miss; ADCT miss; ACMR miss; ZSQR miss; AMPL miss; TLSA miss |
+| `yday_gainer_h3` | long | — | NNBR miss; INVZ miss; DH miss; ADCT miss; ACMR miss; ZSQR miss; AMPL miss; TLSA miss |
+| `yday_gainer_h5` | long | — | NNBR miss; INVZ miss; DH miss; ADCT miss; ACMR miss; ZSQR miss; AMPL miss; TLSA miss |
+| `ohlc_hot_h1` | long | — | AMD miss; OPRT miss; INSP miss; SION miss; DELL miss; BRVE miss; CLOV miss; GME miss |
+| `ohlc_hot_h3` | long | — | AMD miss; OPRT miss; INSP miss; SION miss; DELL miss; BRVE miss; CLOV miss; GME miss |
+| `ohlc_hot_h5` | long | — | AMD miss; OPRT miss; INSP miss; SION miss; DELL miss; BRVE miss; CLOV miss; GME miss |
+| `overnight_h1` | long | — | COST miss |
+| `overnight_h3` | long | — | COST miss |
+| `overnight_h5` | long | — | COST miss |
+| `union_vol_g_h1` | long | — | CVE miss; NNBR miss; OPRT miss; FUL miss; NEOV miss; SFIX miss; SNX miss; INVZ miss |
+| `union_vol_g_h3` | long | — | CVE miss; NNBR miss; OPRT miss; FUL miss; NEOV miss; SFIX miss; SNX miss; INVZ miss |
+| `union_ab_g_h1` | long | — | CVE miss; NNBR miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss; NEOV miss |
+| `union_ab_g_h3` | long | — | CVE miss; NNBR miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss; NEOV miss |
+| `union_join_g_h1` | long | — | CVE miss; AMD miss; BB miss; DRI miss; SNX miss; EOG miss; RRC miss; ADCT miss |
+| `union_join_g_h3` | long | — | CVE miss; AMD miss; BB miss; DRI miss; SNX miss; EOG miss; RRC miss; ADCT miss |
+| `union_join_present_h1` | long | — | CVE miss; NNBR miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss; NEOV miss |
+| `union_join_present_h3` | long | — | CVE miss; NNBR miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss; NEOV miss |
+| `union_news_g_h1` | long | — | CVE miss; NNBR miss; AMD miss; EOG miss; RRC miss; ADCT miss; ACMR miss; ZSQR miss |
+| `union_news_g_h3` | long | — | CVE miss; NNBR miss; AMD miss; EOG miss; RRC miss; ADCT miss; ACMR miss; ZSQR miss |
+| `union_news_present_h1` | long | — | CVE miss; NNBR miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss; NEOV miss |
+| `union_news_present_h3` | long | — | CVE miss; NNBR miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss; NEOV miss |
+| `union_blue_h1` | long | — | ACMR miss; ZSQR miss; AMPL miss; TLSA miss; GLND miss; QNC miss; AIB miss; LU miss |
+| `union_blue_h3` | long | — | ACMR miss; ZSQR miss; AMPL miss; TLSA miss; GLND miss; QNC miss; AIB miss; LU miss |
+| `union_last_green_h1` | long | — | CVE miss; NNBR miss; AMD miss; OPRT miss; BB miss; EOG miss; INVZ miss; ZSQR miss |
+| `union_last_green_h3` | long | — | CVE miss; NNBR miss; AMD miss; OPRT miss; BB miss; EOG miss; INVZ miss; ZSQR miss |
+| `union_last_red_h1` | long | — | DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss; RRC miss; DH miss; ADCT miss |
+| `union_last_red_h3` | long | — | DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss; RRC miss; DH miss; ADCT miss |
+| `union_candle_h1` | long | — | CVE miss; NNBR miss; AMD miss; OPRT miss; INVZ miss; DELL miss; BRVE miss; DHT miss |
+| `union_candle_h3` | long | — | CVE miss; NNBR miss; AMD miss; OPRT miss; INVZ miss; DELL miss; BRVE miss; DHT miss |
+| `union_coil_off_h1` | long | — | CVE miss; AMD miss; OPRT miss; SNX miss; EOG miss; DH miss; ACMR miss; ZSQR miss |
+| `union_coil_off_h3` | long | — | CVE miss; AMD miss; OPRT miss; SNX miss; EOG miss; DH miss; ACMR miss; ZSQR miss |
+| `union_earn_react_h1` | long | — | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `union_earn_react_h3` | long | — | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `union_overnight_h1` | long | — | COST miss |
+| `union_overnight_h3` | long | — | COST miss |
+| `union_e_fresh_h1` | long | — | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `union_e_fresh_h3` | long | — | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `union_break10_h1` | long | — | AMD miss; OPRT miss; DELL miss; BRVE miss; DHT miss; AVT miss; UMC miss; VSTS miss |
+| `union_break10_h3` | long | — | AMD miss; OPRT miss; DELL miss; BRVE miss; DHT miss; AVT miss; UMC miss; VSTS miss |
+| `union_rsi_os_h1` | long | — | CGEM miss; ALKT miss; LXEO miss |
+| `union_rsi_os_h3` | long | — | CGEM miss; ALKT miss; LXEO miss |
+| `union_macd_up_h1` | long | — | AMD miss; BB miss; SNX miss; INVZ miss; DH miss; ACMR miss; ZSQR miss; CCOI miss |
+| `union_macd_up_h3` | long | — | AMD miss; BB miss; SNX miss; INVZ miss; DH miss; ACMR miss; ZSQR miss; CCOI miss |
+| `union_macd_xup_h1` | long | — | BB miss; AIB miss; VICR miss |
+| `union_macd_xup_h3` | long | — | BB miss; AIB miss; VICR miss |
+| `union_flow_in_h1` | long | — | ARLO miss; CHKP miss |
+| `union_flow_in_h3` | long | — | ARLO miss; CHKP miss |
+| `union_vol_g_h5` | long | — | CVE miss; NNBR miss; OPRT miss; FUL miss; NEOV miss; SFIX miss; SNX miss; INVZ miss |
+| `union_coil_off_h5` | long | — | CVE miss; AMD miss; OPRT miss; SNX miss; EOG miss; DH miss; ACMR miss; ZSQR miss |
+| `union_last_green_h5` | long | — | CVE miss; NNBR miss; AMD miss; OPRT miss; BB miss; EOG miss; INVZ miss; ZSQR miss |
+| `union_news_g_h5` | long | — | CVE miss; NNBR miss; AMD miss; EOG miss; RRC miss; ADCT miss; ACMR miss; ZSQR miss |
+| `union_rsi_os_h5` | long | — | CGEM miss; ALKT miss; LXEO miss |
+| `union_flow_in_h5` | long | — | ARLO miss; CHKP miss |
+| `union_news_pack_h1` | long | — | AMD miss; CVE miss; ACMR miss; EOG miss; RRC miss |
+| `union_news_head_h1` | long | — | NNBR miss; AMPL miss; ADCT miss; ZSQR miss |
+| `union_news_or_h1` | long | — | AMD miss; CVE miss; NNBR miss; ACMR miss; AMPL miss; EOG miss; ADCT miss; ZSQR miss |
+| `union_news_g_cond_h1` | long | — | AMD miss; CVE miss; NNBR miss; ACMR miss; AMPL miss; EOG miss; ADCT miss; ZSQR miss |
+| `union_news_g_cam61_h1` | long | — | AMPL miss; EOG miss |
+| `union_news_or_net2_h1` | long | — | AMD miss; CVE miss; NNBR miss; ACMR miss; AMPL miss; EOG miss; ADCT miss; ZSQR miss |
+| `union_news_or_net3_h1` | long | — | AMD miss; CVE miss; ACMR miss; AMPL miss; EOG miss; ADCT miss; ZSQR miss |
+| `union_news_or_net4_h1` | long | — | AMD miss; ACMR miss; AMPL miss; EOG miss; ADCT miss; ZSQR miss |
+| `union_news_or_net5_h1` | long | — | ACMR miss; AMPL miss; EOG miss |
+| `union_news_pack_net3_h1` | long | — | AMD miss; CVE miss; ACMR miss; EOG miss |
+| `union_news_pack_net2_h1` | long | — | AMD miss; CVE miss; ACMR miss; EOG miss; RRC miss |
+| `union_news_pack_h3` | long | — | AMD miss; CVE miss; ACMR miss; EOG miss; RRC miss |
+| `union_news_head_h3` | long | — | NNBR miss; AMPL miss; ADCT miss; ZSQR miss |
+| `union_news_or_h3` | long | — | AMD miss; CVE miss; NNBR miss; ACMR miss; AMPL miss; EOG miss; ADCT miss; ZSQR miss |
+| `union_news_g_cond_h3` | long | — | AMD miss; CVE miss; NNBR miss; ACMR miss; AMPL miss; EOG miss; ADCT miss; ZSQR miss |
+| `union_news_g_cam61_h3` | long | — | AMPL miss; EOG miss |
+| `union_news_or_net2_h3` | long | — | AMD miss; CVE miss; NNBR miss; ACMR miss; AMPL miss; EOG miss; ADCT miss; ZSQR miss |
+| `union_news_or_net3_h3` | long | — | AMD miss; CVE miss; ACMR miss; AMPL miss; EOG miss; ADCT miss; ZSQR miss |
+| `union_news_or_net4_h3` | long | — | AMD miss; ACMR miss; AMPL miss; EOG miss; ADCT miss; ZSQR miss |
+| `union_news_or_net5_h3` | long | — | ACMR miss; AMPL miss; EOG miss |
+| `union_news_pack_net3_h3` | long | — | AMD miss; CVE miss; ACMR miss; EOG miss |
+| `union_news_pack_net2_h3` | long | — | AMD miss; CVE miss; ACMR miss; EOG miss; RRC miss |
+| `union_news_or_net4_rw_h1` | long | — | AMD miss; ACMR miss; AMPL miss; EOG miss |
+| `union_news_or_net4_conv_h1` | long | — | AMD miss; ACMR miss; AMPL miss; EOG miss |
+| `union_news_g_conv_h1` | long | — | AMD miss; CVE miss; NNBR miss; ACMR miss |
+| `union_news_g_conv_h3` | long | — | AMD miss; CVE miss; NNBR miss; ACMR miss |
+| `short_news_head_h3` | short | BMEA @—; AEHL @—; PANW @—; VOYG @— | — |
+| `short_news_or_h3` | short | BMEA @—; AEHL @—; PANW @—; VOYG @— | — |
+| `union_vol_ab_h1` | long | — | CVE miss; NNBR miss; OPRT miss; FUL miss; NEOV miss; SFIX miss; SNX miss; INVZ miss |
+| `union_vol_ab_h3` | long | — | CVE miss; NNBR miss; OPRT miss; FUL miss; NEOV miss; SFIX miss; SNX miss; INVZ miss |
+| `union_blue_vol_h1` | long | — | ACMR miss; TLSA miss; GLND miss; QNC miss; LU miss; KVYO miss |
+| `union_blue_vol_h3` | long | — | ACMR miss; TLSA miss; GLND miss; QNC miss; LU miss; KVYO miss |
+| `union_news_vol_h1` | long | — | CVE miss; NNBR miss; ACMR miss |
+| `union_news_vol_h3` | long | — | CVE miss; NNBR miss; ACMR miss |
+| `union_e_green_h1` | long | — | BB miss |
+| `union_e_green_h3` | long | — | BB miss |
+| `probable_probable_ok_h1` | long | — | NNBR miss; INVZ miss; QNC miss; FSLY miss |
+| `probable_probable_ok_h3` | long | — | NNBR miss; INVZ miss; QNC miss; FSLY miss |
+| `union_vol_green_h1` | long | — | CVE miss; NNBR miss; OPRT miss; INVZ miss; FRO miss; QNC miss; FSLY miss; SECZ miss |
+| `union_vol_green_h3` | long | — | CVE miss; NNBR miss; OPRT miss; INVZ miss; FRO miss; QNC miss; FSLY miss; SECZ miss |
+| `union_coil_green_h1` | long | — | CVE miss; AMD miss; OPRT miss; EOG miss; ZSQR miss; DELL miss; DHT miss; AVT miss |
+| `union_coil_green_h3` | long | — | CVE miss; AMD miss; OPRT miss; EOG miss; ZSQR miss; DELL miss; DHT miss; AVT miss |
+| `union_blue_coil_h1` | long | — | ACMR miss; ZSQR miss; AMPL miss; TLSA miss; GLND miss; QNC miss; LU miss; KVYO miss |
+| `union_blue_coil_h3` | long | — | ACMR miss; ZSQR miss; AMPL miss; TLSA miss; GLND miss; QNC miss; LU miss; KVYO miss |
+| `union_join_vol_green_h1` | long | — | CVE miss; FRO miss; QNC miss; FSLY miss; KVYO miss; VICR miss |
+| `union_join_vol_green_h3` | long | — | CVE miss; FRO miss; QNC miss; FSLY miss; KVYO miss; VICR miss |
+| `flatten_vol_g_h3` | long | — | CVE miss |
+| `ohlc_hot_coil_h1` | long | — | AMD miss; OPRT miss; DELL miss; DHT miss; AVT miss; UMC miss; VSTS miss; FRO miss |
+| `union_hot_score_h1` | long | — | AMD miss; OPRT miss; NNBR miss; CVE miss; SNX miss; BB miss; SFIX miss; DRI miss |
+| `union_hot_score_h3` | long | — | AMD miss; OPRT miss; NNBR miss; CVE miss; SNX miss; BB miss; SFIX miss; DRI miss |
+| `union_candle_score_h1` | long | — | OPRT miss; CVE miss; NNBR miss; AMD miss; BB miss; SNX miss; SFIX miss; NEOV miss |
+| `union_candle_score_h3` | long | — | OPRT miss; CVE miss; NNBR miss; AMD miss; BB miss; SNX miss; SFIX miss; NEOV miss |
+| `union_ret_5_h1` | long | — | NNBR miss; OPRT miss; AMD miss; CVE miss; SNX miss; BB miss; DRI miss; FUL miss |
+| `union_ret_5_h3` | long | — | NNBR miss; OPRT miss; AMD miss; CVE miss; SNX miss; BB miss; DRI miss; FUL miss |
+| `union_cond_h1` | long | — | BB miss; SNX miss; AMD miss; CVE miss; NNBR miss; OPRT miss; NEOV miss; DRI miss |
+| `union_cond_h3` | long | — | BB miss; SNX miss; AMD miss; CVE miss; NNBR miss; OPRT miss; NEOV miss; DRI miss |
+| `union_w_hot_cond_h1` | long | — | AMD miss; BB miss; OPRT miss; SNX miss; CVE miss; NNBR miss; SFIX miss; DRI miss |
+| `union_w_hot_cond_h3` | long | — | AMD miss; BB miss; OPRT miss; SNX miss; CVE miss; NNBR miss; SFIX miss; DRI miss |
+| `union_w_hot_candle_h1` | long | — | OPRT miss; AMD miss; NNBR miss; CVE miss; SNX miss; BB miss; SFIX miss; NEOV miss |
+| `union_w_hot_candle_h3` | long | — | OPRT miss; AMD miss; NNBR miss; CVE miss; SNX miss; BB miss; SFIX miss; NEOV miss |
+| `union_rsi_h1` | long | — | FUL miss; SFIX miss; CVE miss; NEOV miss; DRI miss; BB miss; NNBR miss; OPRT miss |
+| `union_rsi_h3` | long | — | FUL miss; SFIX miss; CVE miss; NEOV miss; DRI miss; BB miss; NNBR miss; OPRT miss |
+| `union_macd_hist_h1` | long | — | AMD miss; SNX miss; BB miss; NNBR miss; SFIX miss; CVE miss; OPRT miss; NEOV miss |
+| `union_macd_hist_h3` | long | — | AMD miss; SNX miss; BB miss; NNBR miss; SFIX miss; CVE miss; OPRT miss; NEOV miss |
+| `union_hot_n4_h1` | long | — | GPRO miss; TJGC miss; AIB miss; QRVO miss; GLND miss; FEAM miss; XHLD miss; INDP miss |
+| `union_hot_n4_holdup` | long | — | AMD miss; OPRT miss; NNBR miss; CVE miss |
+| `overnight_mega_h1` | long | — | COST miss |
+| `overnight_mega_h2` | long | — | COST miss |
+| `union_hot_n12_h1` | long | — | AMD miss; OPRT miss; NNBR miss; CVE miss; SNX miss; BB miss; SFIX miss; DRI miss; NEOV miss; FUL miss; DELL miss; BRVE miss |
+| `union_cond_n4_h3` | long | — | BB miss; SNX miss; AMD miss; CVE miss |
+| `union_h3_exit_alarm` | long | — | CVE miss; NNBR miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss; NEOV miss |
+| `union_h5_exit_alarm` | long | — | CVE miss; NNBR miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss; NEOV miss |
+| `union_h3_exit_red` | long | — | CVE miss; NNBR miss; AMD miss; OPRT miss; BB miss; EOG miss; INVZ miss; ZSQR miss |
+| `union_h3_exit_news_r` | long | — | CVE miss; NNBR miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss; NEOV miss |
+| `coil_h3_exit_alarm` | long | — | CVE miss; NNBR miss; AMD miss; OPRT miss; SNX miss; EOG miss; INVZ miss; DH miss |
+| `short_alarm_h1` | short | BMEA @—; AIRS @—; INSP @—; SION @—; CLOV @—; GME @—; SES @—; SYM @— | — |
+| `short_alarm_h3` | short | BMEA @—; AIRS @—; INSP @—; SION @—; CLOV @—; GME @—; SES @—; SYM @— | — |
+| `short_news_r_h1` | short | BMEA @—; AEHL @—; PANW @—; VOYG @— | — |
+| `short_news_r_h3` | short | BMEA @—; AEHL @—; PANW @—; VOYG @— | — |
+| `short_extended_h1` | short | AEHL @—; INSP @—; SION @—; BRVE @—; SECZ @—; AIB @—; QRVO @—; BE @— | — |
+| `short_extended_h3` | short | AEHL @—; INSP @—; SION @—; BRVE @—; SECZ @—; AIB @—; QRVO @—; BE @— | — |
+| `short_last_red_h1` | short | BMEA @—; AEHL @—; PANW @—; AIRS @—; DRI @—; FUL @—; NEOV @—; SFIX @— | — |
+| `short_last_red_h3` | short | BMEA @—; AEHL @—; PANW @—; AIRS @—; DRI @—; FUL @—; NEOV @—; SFIX @— | — |
+| `short_rsi_ob_h1` | short | AMD @—; SNX @—; TJGC @—; GME @—; GLND @—; SECZ @—; VICR @—; SVIA @— | — |
+| `short_rsi_ob_h3` | short | AMD @—; SNX @—; TJGC @—; GME @—; GLND @—; SECZ @—; VICR @—; SVIA @— | — |
+| `short_macd_dn_h1` | short | BMEA @—; PANW @—; CVE @—; NNBR @—; OPRT @—; DRI @—; FUL @—; NEOV @— | — |
+| `short_macd_dn_h3` | short | BMEA @—; PANW @—; CVE @—; NNBR @—; OPRT @—; DRI @—; FUL @—; NEOV @— | — |
+| `short_news_r_macd_h3` | short | AEHL @— | — |
+| `flatten_h5_rankw` | long | — | CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss |
+| `flatten_h5_topheavy` | long | — | CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss |
+| `flatten_h5_half` | long | — | CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss |
+| `flatten_h5_time` | long | — | CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss |
+| `flatten_h5_cut` | long | — | CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss |
+| `flatten_h5_trail` | long | — | CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss |
+| `flatten_h5_sboost` | long | — | CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss |
+| `flatten_h5_sizeup` | long | — | CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss |
+| `flatten_h3_rankw` | long | — | CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss |
+| `flatten_h3_topheavy` | long | — | CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss |
+| `flatten_h3_half` | long | — | CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss |
+| `flatten_h3_time` | long | — | CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss |
+| `flatten_h3_cut` | long | — | CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss |
+| `flatten_h3_trail` | long | — | CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss |
+| `flatten_h3_sboost` | long | — | CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss |
+| `flatten_h3_sizeup` | long | — | CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss |
+| `union_h5_rankw` | long | — | CVE miss; NNBR miss; AIRS miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss |
+| `union_h5_topheavy` | long | — | CVE miss; NNBR miss; AIRS miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss |
+| `union_h5_half` | long | — | CVE miss; NNBR miss; AIRS miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss |
+| `union_h5_time` | long | — | CVE miss; NNBR miss; AIRS miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss |
+| `union_h5_cut` | long | — | CVE miss; NNBR miss; AIRS miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss |
+| `union_h5_trail` | long | — | CVE miss; NNBR miss; AIRS miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss |
+| `union_h5_sboost` | long | — | CVE miss; NNBR miss; AIRS miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss |
+| `union_h5_sizeup` | long | — | CVE miss; NNBR miss; AIRS miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss |
+| `union_h3_rankw` | long | — | CVE miss; NNBR miss; AIRS miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss |
+| `union_h3_topheavy` | long | — | CVE miss; NNBR miss; AIRS miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss |
+| `union_h3_half` | long | — | CVE miss; NNBR miss; AIRS miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss |
+| `union_h3_time` | long | — | CVE miss; NNBR miss; AIRS miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss |
+| `union_h3_cut` | long | — | CVE miss; NNBR miss; AIRS miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss |
+| `union_h3_trail` | long | — | CVE miss; NNBR miss; AIRS miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss |
+| `union_h3_sboost` | long | — | CVE miss; NNBR miss; AIRS miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss |
+| `union_h3_sizeup` | long | — | CVE miss; NNBR miss; AIRS miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss |
+| `union_h1_rankw` | long | — | CVE miss; NNBR miss; AIRS miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss |
+| `union_h1_topheavy` | long | — | CVE miss; NNBR miss; AIRS miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss |
+| `union_h1_half` | long | — | CVE miss; NNBR miss; AIRS miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss |
+| `union_h1_time` | long | — | CVE miss; NNBR miss; AIRS miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss |
+| `union_h1_cut` | long | — | CVE miss; NNBR miss; AIRS miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss |
+| `union_h1_trail` | long | — | CVE miss; NNBR miss; AIRS miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss |
+| `union_h1_sboost` | long | — | CVE miss; NNBR miss; AIRS miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss |
+| `union_h1_sizeup` | long | — | CVE miss; NNBR miss; AIRS miss; AMD miss; OPRT miss; BB miss; DRI miss; FUL miss |
+| `flatten_h5_s8` | long | — | CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss |
+| `union_clk_mom_break_peer_h1` | long | — | AMD miss; OPRT miss; NNBR miss; CVE miss; DELL miss; DHT miss; AVT miss; UMC miss |
+| `union_clk_fresh_cat_coil_h1` | long | — | BB miss; SNX miss; AMD miss; CVE miss; NNBR miss; NEOV miss; DRI miss; FUL miss |
+| `short_clk_neg_weak_fail_h3` | short | BMEA @—; AEHL @—; PANW @— | — |
+| `short_clk_ext_veto_h3` | short | TJGC @— | — |
+| `union_clk_hold_vs_sector_h1` | long | — | OPRT miss; AKBA miss; BRVE miss; CCOI miss |
+| `union_clk_flow_coil_h1` | long | — | ARLO miss; CHKP miss |
+| `union_clk_nr7_mom_h1` | long | — | DH miss |
+| `combo_seh_333_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss; AMD miss; OPRT miss; NNBR miss; CVE miss |
+| `combo_seh_333_split` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss; AMD miss; OPRT miss; NNBR miss; CVE miss |
+| `combo_seh_502525_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss; AMD miss; OPRT miss; NNBR miss; CVE miss |
+| `combo_seh_502525_split` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss; AMD miss; OPRT miss; NNBR miss; CVE miss |
+| `combo_seh_404020_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss; AMD miss; OPRT miss; NNBR miss; CVE miss |
+| `combo_seh_403525_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss; AMD miss; OPRT miss; NNBR miss; CVE miss |
+| `combo_seh_451540_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss; AMD miss; OPRT miss; NNBR miss; CVE miss |
+| `combo_seh_601525_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss; AMD miss; OPRT miss; NNBR miss; CVE miss |
+| `combo_se_5050_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `combo_se_7030_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `combo_eh_5050_shared` | long | — | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss; AMD miss; OPRT miss; NNBR miss; CVE miss |
+| `combo_sh_5050_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | AMD miss; OPRT miss; NNBR miss; CVE miss |
+| `combo_sh_macd_5050_shared` | mixed | AEHL @— | AMD miss; OPRT miss; NNBR miss; CVE miss |
+| `combo_se_5050_skip` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `combo_seh_333_skip` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss; AMD miss; OPRT miss; NNBR miss; CVE miss |
+| `combo_seh_333_weather` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss; AMD miss; OPRT miss; NNBR miss; CVE miss |
+| `combo_se_5050_weather` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `combo_se_5050_split` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `combo_es_8020_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `combo_es_9010_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `combo_ehs_702010_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss; AMD miss; OPRT miss; NNBR miss; CVE miss |
+| `combo_ehs_601525_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss; AMD miss; OPRT miss; NNBR miss; CVE miss |
+| `combo_ps_5050_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | AMD miss; CVE miss; ACMR miss; EOG miss; RRC miss |
+| `combo_ps_7030_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | AMD miss; CVE miss; ACMR miss; EOG miss; RRC miss |
+| `combo_p2s_5050_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | AMD miss; CVE miss; ACMR miss; EOG miss; RRC miss |
+| `combo_oh_5050_shared` | long | — | COST miss; AMD miss; OPRT miss; NNBR miss; CVE miss |
+| `combo_sn_5050_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | CVE miss; NNBR miss; AMD miss; EOG miss; RRC miss; ADCT miss; ACMR miss; ZSQR miss |
+| `combo_sj_5050_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | CVE miss; FRO miss; QNC miss; FSLY miss; KVYO miss; VICR miss |
+| `combo_sf_5050_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss |
+| `combo_snj_333_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | CVE miss; NNBR miss; AMD miss; EOG miss; RRC miss; ADCT miss; ACMR miss; ZSQR miss; FRO miss; QNC miss; FSLY miss; KVYO miss; VICR miss |
+| `combo_nse_333_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | CVE miss; NNBR miss; AMD miss; EOG miss; RRC miss; ADCT miss; ACMR miss; ZSQR miss; BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `combo_jse_333_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | CVE miss; FRO miss; QNC miss; FSLY miss; KVYO miss; VICR miss; BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `combo_fse_333_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss; BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `combo_e1s_7030_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `combo_ers_7030_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `combo_eh_7030_shared` | long | — | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss; AMD miss; OPRT miss; NNBR miss; CVE miss |
+| `combo_fh_7030_shared` | long | — | CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss; AMD miss; OPRT miss; NNBR miss |
+| `combo_fe_5050_shared` | long | — | CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss; BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `combo_fes_403030_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss; BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `combo_se1_5050_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `combo_ser_5050_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `combo_en_5050_shared` | long | — | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss; CVE miss; NNBR miss; AMD miss; EOG miss; RRC miss; ADCT miss; ACMR miss; ZSQR miss |
+| `combo_ej_5050_shared` | long | — | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss; CVE miss; FRO miss; QNC miss; FSLY miss; KVYO miss; VICR miss |
+| `combo_ef_5050_shared` | long | — | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss; CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss |
+| `combo_ee1_5050_shared` | long | — | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `combo_eer_5050_shared` | long | — | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `combo_hn_5050_shared` | long | — | AMD miss; OPRT miss; NNBR miss; CVE miss; EOG miss; RRC miss; ADCT miss; ACMR miss; ZSQR miss |
+| `combo_hj_5050_shared` | long | — | AMD miss; OPRT miss; NNBR miss; CVE miss; FRO miss; QNC miss; FSLY miss; KVYO miss; VICR miss |
+| `combo_hf_5050_shared` | long | — | AMD miss; OPRT miss; NNBR miss; CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss |
+| `combo_he1_5050_shared` | long | — | AMD miss; OPRT miss; NNBR miss; CVE miss; BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `combo_her_5050_shared` | long | — | AMD miss; OPRT miss; NNBR miss; CVE miss; BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `combo_nj_5050_shared` | long | — | CVE miss; NNBR miss; AMD miss; EOG miss; RRC miss; ADCT miss; ACMR miss; ZSQR miss; FRO miss; QNC miss; FSLY miss; KVYO miss; VICR miss |
+| `combo_nf_5050_shared` | long | — | CVE miss; NNBR miss; AMD miss; EOG miss; RRC miss; ADCT miss; ACMR miss; ZSQR miss; CHKP miss; S miss; BAH miss |
+| `combo_ne1_5050_shared` | long | — | CVE miss; NNBR miss; AMD miss; EOG miss; RRC miss; ADCT miss; ACMR miss; ZSQR miss; BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `combo_ner_5050_shared` | long | — | CVE miss; NNBR miss; AMD miss; EOG miss; RRC miss; ADCT miss; ACMR miss; ZSQR miss; BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `combo_jf_5050_shared` | long | — | CVE miss; FRO miss; QNC miss; FSLY miss; KVYO miss; VICR miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss |
+| `combo_je1_5050_shared` | long | — | CVE miss; FRO miss; QNC miss; FSLY miss; KVYO miss; VICR miss; BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `combo_jer_5050_shared` | long | — | CVE miss; FRO miss; QNC miss; FSLY miss; KVYO miss; VICR miss; BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `combo_fe1_5050_shared` | long | — | CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss; BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `combo_fer_5050_shared` | long | — | CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss; BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `combo_e1er_5050_shared` | long | — | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `combo_se_3070_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `combo_sh_7030_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | AMD miss; OPRT miss; NNBR miss; CVE miss |
+| `combo_sh_3070_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | AMD miss; OPRT miss; NNBR miss; CVE miss |
+| `combo_eh_3070_shared` | long | — | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss; AMD miss; OPRT miss; NNBR miss; CVE miss |
+| `combo_sn_7030_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | CVE miss; NNBR miss; AMD miss; EOG miss; RRC miss; ADCT miss; ACMR miss; ZSQR miss |
+| `combo_sn_3070_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | CVE miss; NNBR miss; AMD miss; EOG miss; RRC miss; ADCT miss; ACMR miss; ZSQR miss |
+| `combo_sj_7030_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | CVE miss; FRO miss; QNC miss; FSLY miss; KVYO miss; VICR miss |
+| `combo_sj_3070_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | CVE miss; FRO miss; QNC miss; FSLY miss; KVYO miss; VICR miss |
+| `combo_sf_7030_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss |
+| `combo_sf_3070_shared` | mixed | BMEA @—; AEHL @—; PANW @—; VOYG @— | CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss |
+| `combo_en_7030_shared` | long | — | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss; CVE miss; NNBR miss; AMD miss; EOG miss; RRC miss; ADCT miss; ACMR miss; ZSQR miss |
+| `combo_en_3070_shared` | long | — | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss; CVE miss; NNBR miss; AMD miss; EOG miss; RRC miss; ADCT miss; ACMR miss; ZSQR miss |
+| `combo_ef_7030_shared` | long | — | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss; CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss |
+| `combo_ef_3070_shared` | long | — | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss; CVE miss; EOG miss; RRC miss; CHKP miss; S miss; BAH miss |
+| `combo_hn_7030_shared` | long | — | AMD miss; OPRT miss; NNBR miss; CVE miss; EOG miss; RRC miss; ADCT miss; ACMR miss; ZSQR miss |
+| `combo_hn_3070_shared` | long | — | AMD miss; OPRT miss; NNBR miss; CVE miss; EOG miss; RRC miss; ADCT miss; ACMR miss; ZSQR miss |
+| `combo_ee1_7030_shared` | long | — | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
+| `combo_ee1_3070_shared` | long | — | BB miss; DRI miss; FUL miss; NEOV miss; SFIX miss; SNX miss |
 
 Scoop trigger = official open + session low (Elite live only when the low has not printed). Close / last / Theme Radar never trigger. #236 KILL of global short-only / dip-scoop stands — this table is display/paper only.
 

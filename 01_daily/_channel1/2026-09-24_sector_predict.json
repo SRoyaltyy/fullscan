@@ -1,6 +1,6 @@
 {
   "stage": "predict",
-  "fetched_at": "2026-09-24T06:53:20.039361-04:00",
+  "fetched_at": "2026-09-24T06:08:43.120855-04:00",
   "fred": {
     "DGS30": {
       "available": true,
@@ -70,59 +70,59 @@
   "vix": {
     "vix": {
       "date": "2026-09-24",
-      "current": 16.27,
-      "delta_1d": 1.09,
-      "delta_1w": -1.44
+      "current": 16.44,
+      "delta_1d": 1.26,
+      "delta_1w": -1.27
     },
     "vix3m": {
       "date": "2026-09-23",
       "current": 18.11,
       "source": "^VIX3M"
     },
-    "ratio": 0.898,
+    "ratio": 0.908,
     "ratio_source": "vix/vix3m",
-    "vix_ma20": 15.7,
-    "ratio_ma20": 1.036
+    "vix_ma20": 15.71,
+    "ratio_ma20": 1.047
   },
   "commodities_fx": {
     "CL=F": {
       "available": true,
       "date": "2026-09-24",
-      "last": 93.08,
-      "pct_1d": 1.0
+      "last": 93.87,
+      "pct_1d": 1.86
     },
     "BZ=F": {
       "available": true,
       "date": "2026-09-24",
-      "last": 104.47,
-      "pct_1d": 1.35
+      "last": 105.55,
+      "pct_1d": 2.4
     },
     "GC=F": {
       "available": true,
       "date": "2026-09-24",
-      "last": 4295.3,
-      "pct_1d": -0.53
+      "last": 4288.9,
+      "pct_1d": -0.68
     },
     "DXY": {
       "available": true,
       "date": "2026-09-24",
       "source": "DX-Y.NYB",
-      "pct_1d": 0.14,
-      "pct_1m": 2.26
+      "pct_1d": 0.13,
+      "pct_1m": 2.25
     }
   },
   "futures": {
     "ES=F": {
       "available": true,
       "date": "2026-09-24",
-      "last": 7731.25,
-      "pct_1d": -0.53
+      "last": 7723.0,
+      "pct_1d": -0.64
     },
     "NQ=F": {
       "available": true,
       "date": "2026-09-24",
-      "last": 30480.5,
-      "pct_1d": -0.92
+      "last": 30430.75,
+      "pct_1d": -1.09
     }
   },
   "finviz_futures_tape": {
@@ -526,29 +526,29 @@
         "FTSE": {
           "available": true,
           "date": "2026-09-24",
-          "last": 10716.5,
-          "pct_1d": 0.1
+          "last": 10699.26,
+          "pct_1d": -0.06
         },
         "DAX": {
           "available": true,
           "date": "2026-09-24",
-          "last": 25349.72,
-          "pct_1d": -0.24
+          "last": 25278.26,
+          "pct_1d": -0.52
         },
         "CAC": {
           "available": true,
           "date": "2026-09-24",
-          "last": 8102.01,
-          "pct_1d": -0.26
+          "last": 8077.66,
+          "pct_1d": -0.56
         },
         "EuroStoxx50": {
           "available": true,
           "date": "2026-09-24",
-          "last": 6290.18,
-          "pct_1d": -0.15
+          "last": 6270.93,
+          "pct_1d": -0.46
         }
       },
-      "composite_avg": -0.14
+      "composite_avg": -0.4
     }
   },
   "etf_premarket": {
@@ -566,16 +566,16 @@
     "XLE": {
       "available": true,
       "prev_close": 62.38,
-      "last": 62.76,
-      "as_of": "2026-09-24T06:45:00-04:00",
-      "pct_vs_prev_close": 0.61
+      "last": 63.07,
+      "as_of": "2026-09-24T06:05:28-04:00",
+      "pct_vs_prev_close": 1.11
     },
     "XLF": {
       "available": true,
       "prev_close": 54.54,
-      "last": 54.54,
-      "as_of": "2026-09-24T06:33:11-04:00",
-      "pct_vs_prev_close": -0.0
+      "last": 54.5,
+      "as_of": "2026-09-24T05:46:33-04:00",
+      "pct_vs_prev_close": -0.07
     },
     "XLI": {
       "available": true,
@@ -587,16 +587,16 @@
     "XLK": {
       "available": true,
       "prev_close": 195.31,
-      "last": 192.71,
-      "as_of": "2026-09-24T06:00:00-04:00",
-      "pct_vs_prev_close": -1.33
+      "last": 192.37,
+      "as_of": "2026-09-24T05:40:00-04:00",
+      "pct_vs_prev_close": -1.51
     },
     "XLP": {
       "available": true,
       "prev_close": 82.45,
-      "last": 82.72,
-      "as_of": "2026-09-24T05:55:00-04:00",
-      "pct_vs_prev_close": 0.33
+      "last": 82.79,
+      "as_of": "2026-09-24T05:20:00-04:00",
+      "pct_vs_prev_close": 0.41
     },
     "XLRE": {
       "available": false,
@@ -605,9 +605,9 @@
     "XLU": {
       "available": true,
       "prev_close": 39.76,
-      "last": 39.85,
-      "as_of": "2026-09-24T06:05:00-04:00",
-      "pct_vs_prev_close": 0.23
+      "last": 39.8,
+      "as_of": "2026-09-24T05:46:32-04:00",
+      "pct_vs_prev_close": 0.1
     },
     "XLV": {
       "available": true,
@@ -630,8 +630,10 @@
     "window": "2026-09-15..2026-09-23"
   },
   "fear_greed": {
-    "available": false,
-    "note": "fetch failed: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata; no Supabase fallback data"
+    "available": true,
+    "value": 58.2,
+    "label": "Greed",
+    "note": "from Supabase macro_indicators as of 2026-08-27 (CNN direct blocked: 418 Client Error: Unknown Error for url: https://production.dataviz.cnn.io/index/fearandgreed/graphdata)"
   },
   "fedwatch": {
     "available": false,
