@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T06:11:28.547150-04:00",
+  "generated_at": "2026-09-24T06:13:30.022482-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -25,10 +25,10 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "0 up / 1 down / 0 flat",
+    "said": "0 up / 2 down / 0 flat",
     "bullets": [
       "XLB DOWN -2.9",
-      "XLC missing",
+      "XLC DOWN -11.3",
       "XLY missing",
       "XLP missing",
       "XLE missing",
@@ -344,70 +344,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Basic Materials (1/11)",
+      "title": "Sector predict Communication Services (2/11)",
       "date": "2026-09-24",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-24T06:11:28.158069-04:00",
+      "at": "2026-09-24T06:13:29.634772-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-09-24/basic_materials_predict.md",
+          "path": "01_daily/sectors/2026-09-24/communication_services_predict.md",
           "ok": true,
           "reason": "",
-          "size": 13307,
-          "preview": "# Sector Prediction \u2014 Basic Materials \u2014 2026-09-24\n- ETF: **XLB**\n- rubric: `00_grounding/sectors/basic_materials.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-2.88** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-0.54** (ES -0.64%, HG +0.66%, GC +0.90%, DX -0.02%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **-0.425** (raw -0.425)"
+          "size": 18741,
+          "preview": "# Sector Prediction \u2014 Communication Services \u2014 2026-09-24\n- ETF: **XLC**\n- rubric: `00_grounding/sectors/communication_services.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **notable**\n- total_score: **-11.341** (mult 0.85)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-4.539** (NQ -1.09%, ES -0.64%, PM:XLC -0.71%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **-4.888** (raw -4.888)"
         },
         {
-          "path": "01_daily/sectors/2026-09-24/basic_materials_predict_trace.md",
+          "path": "01_daily/sectors/2026-09-24/communication_services_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 398,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Basic Materials 2026-09-24 retry1\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (148,737 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (11,531 characters)."
+          "size": 4553,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Communication Services 2026-09-24\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (146,593 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"XLC Communication Services ETF flows September 2026 Meta Alphabet\"* \u2192 got 6 results (via ddg)\n- State Street Communication Services Select Sector SPDR ETF (https://etfdb.com/etf/XLC/)\n- XLC ETF Stock Price & Overview (https://stockanalysis.com/etf/xlc/)\n- XLC Holds 46% in Just Three Stocks, Creating An Unusual Risk for Sector ETF Buyers - 24/7 Wall St. (https://247wallst.com/investing/2026/02/17/xlc-holds-46-in-just-three-stocks-creating-an-unusual-risk-for-sector-etf-buyers/)\n**Step 2 \u2014 Research.** The model wanted to know: *\"Meta Platforms stock September 24 2026"
         },
         {
-          "path": "01_daily/_transcripts/2026-09-24_sector_basic_materials_predict.json",
+          "path": "01_daily/_transcripts/2026-09-24_sector_communication_services_predict.json",
           "ok": true,
           "reason": "",
-          "size": 164407,
+          "size": 182438,
           "preview": "keys: model, messages"
         },
         {
           "path": "01_daily/2026-09-24_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 7261,
+          "size": 7254,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-09-24/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 1254,
+          "size": 1250,
           "preview": "keys: date, n_ok, n_total, sectors"
         },
         {
           "path": "01_daily/sectors/2026-09-24/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1624,
-          "preview": "# Sector Board \u2014 2026-09-24\nGenerated: **2026-09-24T06:11:28.145285-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1703,
+          "preview": "# Sector Board \u2014 2026-09-24\nGenerated: **2026-09-24T06:13:29.620979-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-09-24/_board.json",
           "ok": true,
           "reason": "",
-          "size": 5414,
+          "size": 5593,
           "preview": "keys: date, generated_at, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 872345,
+          "size": 873471,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Basic Materials \u2014 2026-09-24\n- ETF: **XLB**\n- rubric: `00_grounding/sectors/basic_materials.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-2.88** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-0.54** (ES -0.64%, HG +0.66%, GC +0.90%, DX -0.02%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **-0.425** (raw -0.425) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Basic Materials 2026-09-24 retry1\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (148,737 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (11,531 characters). \u00b7 keys: model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-24\nGenerated: **2026-09-24T06:11:28.145285-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_at,"
+      "preview": "# Sector Prediction \u2014 Communication Services \u2014 2026-09-24\n- ETF: **XLC**\n- rubric: `00_grounding/sectors/communication_services.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **notable**\n- total_score: **-11.341** (mult 0.85)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-4.539** (NQ -1.09%, ES -0.64%, PM:XLC -0.71%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **-4.888** (raw -4.888) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Communication Services 2026-09-24\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (146,593 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"XLC Communication Services ETF flows September 2026 Meta Alphabet\"* \u2192 got 6 results (via ddg)\n- State Street Communication Services Select Sector SPDR ETF (https://etfdb.com/etf/XLC/)\n- XLC ETF Stock Price & Overview (https://stockanalysis.com/etf/xlc/)\n- XLC Holds 46% in Just Three Stocks, Creating An Unusual Risk for Sector ETF Buyers - 24/7 Wall St. (https://247wallst.com/investing/2026/02/17/xlc-holds-46-in-just"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
