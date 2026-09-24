@@ -1,15 +1,14 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T06:03:16.347478-04:00",
+  "generated_at": "2026-09-24T06:08:31.231126-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
-    "MISSING General predict MD `01_daily/general/2026-09-24_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-24/_board.json` \u2014 missing"
   ],
   "counts": {
-    "ok": 5,
-    "partial": 3,
+    "ok": 4,
+    "partial": 4,
     "fail": 0,
     "n": 8
   },
@@ -180,7 +179,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 4,
+      "n_req_ok": 5,
       "n_req": 20,
       "n_opt_ok": 2,
       "n_opt": 3,
@@ -323,11 +322,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-09-24_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 10558,
+          "said": "DOWN -7.659",
+          "bullets": [
+            "bad: NQ -1.13% on yield backup",
+            "bad: 10Y ~5.12% biting tech",
+            "bad: Trump-Xi summit two-sided unprinted",
+            "good: US-China trade truce extended to Jan 10"
+          ]
         },
         {
           "key": "board",
@@ -347,12 +351,12 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7271,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 14 fail",
+          "size": 7268,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 13 fail",
           "bullets": [
-            "general_predict:missing",
             "finviz_market_digest:missing",
             "map_heat_research:missing",
+            "sector_predict:missing",
             "sector_predict:missing"
           ]
         },
@@ -500,8 +504,13 @@
           "bullets": []
         }
       ],
-      "said": "news 400 raw / 39 usable \u00b7 Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his w",
+      "said": "general DOWN  -7.659 \u00b7 news 400 raw / 39 usable \u00b7 Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his w",
       "bullets": [
+        "bad: NQ -1.13% on yield backup",
+        "bad: 10Y ~5.12% biting tech",
+        "bad: Trump-Xi summit two-sided unprinted",
+        "good: US-China trade truce extended to Jan 10",
+        "good: oil offered CL -1.6%",
         "Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his word",
         "Stocks Fall as Hawkish Warsh Boosts Fed Rate Hike Chances - Barchart.com",
         "Analysis: Kevin Warsh sharpens inflation warning at Jackson Hole, signaling possible rate hike - CNBC",
@@ -670,7 +679,7 @@
       "inputs_ready": false,
       "n_req_ok": 1,
       "n_req": 4,
-      "n_opt_ok": 2,
+      "n_opt_ok": 1,
       "n_opt": 3,
       "files": [
         {
@@ -678,11 +687,16 @@
           "name": "General predict MD",
           "path": "01_daily/general/2026-09-24_predict.md",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 10558,
+          "said": "DOWN -7.659",
+          "bullets": [
+            "bad: NQ -1.13% on yield backup",
+            "bad: 10Y ~5.12% biting tech",
+            "bad: Trump-Xi summit two-sided unprinted",
+            "good: US-China trade truce extended to Jan 10"
+          ]
         },
         {
           "key": "in_board",
@@ -844,10 +858,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-24)",
+          "status": "FAIL",
+          "reason": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
           "size": 8379317,
-          "said": "live-book poller + today.json (2026-09-24)",
+          "said": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
           "bullets": []
         }
       ],
@@ -860,9 +874,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "OK",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 2,
+      "n_req_ok": 1,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -883,10 +897,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "OK",
-          "reason": "live-book poller + today.json (2026-09-24)",
+          "status": "FAIL",
+          "reason": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
           "size": 8379317,
-          "said": "live-book poller + today.json (2026-09-24)",
+          "said": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
           "bullets": []
         },
         {
@@ -923,7 +937,18 @@
     "buy_1d": [],
     "sell_1d": [],
     "flatten": {},
-    "general": {},
+    "general": {
+      "said": "DOWN  -7.659",
+      "bullets": [
+        "bad: NQ -1.13% on yield backup",
+        "bad: 10Y ~5.12% biting tech",
+        "bad: Trump-Xi summit two-sided unprinted",
+        "good: US-China trade truce extended to Jan 10",
+        "good: oil offered CL -1.6%"
+      ],
+      "score": "-7.659",
+      "direction": "down"
+    },
     "sectors": {},
     "news": {
       "said": "400 raw / 39 usable \u00b7 Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his w",
@@ -1663,6 +1688,24 @@
         }
       ],
       "preview": "# News Judge \u2014 2026-09-24 \u00b7 keys: risk_tilt, macros, sector_tilts, tickers, b1_inject, date"
+    },
+    {
+      "key": "general_predict",
+      "title": "General market predict",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T06:08:30.853854-04:00",
+      "files": [
+        {
+          "path": "01_daily/general/2026-09-24_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 10558,
+          "preview": "# Premarket Prediction \u2014 2026-09-24\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -7.659 (uncertainty multiplier \u00d71.0) | confidence 0.806\n>\n> **Good news vs bad news:** good +1.0 pts vs bad -4.25 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - US-China trade truce extended to Jan 10\n> - oil offered CL -1.6%\n> - ASML EUV sold out\n> - Amgen Phase 3 positive\n> - VIX contango 0.912\n>\n> **Bad news driving this:**\n> - NQ -1.13% on yield backup\n> - 10Y ~5.12% biting tech\n> - Trump-Xi summit two-sided unprinted\n> - paid hawkish SEP ~54% Oct hike\n> - FY27 shutdown deadline 09-30\n>\n> **market uncertainty: **elevated** | VIX 16.52 | policy-uncertainty index 114.08 (1d -78.97)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \u26aa Asia overnight session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight news & c"
+        }
+      ],
+      "preview": "# Premarket Prediction \u2014 2026-09-24\n> ## \ud83d\udccb SNAPSHOT (human-readable)\n>\n> **Prediction: DOWN \ud83d\udcc9 \u2014 MILD** | total score -7.659 (uncertainty multiplier \u00d71.0) | confidence 0.806\n>\n> **Good news vs bad news:** good +1.0 pts vs bad -4.25 pts \u2192 bad news outweighs good\n>\n> **Good news driving this:**\n> - US-China trade truce extended to Jan 10\n> - oil offered CL -1.6%\n> - ASML EUV sold out\n> - Amgen Phase 3 positive\n> - VIX contango 0.912\n>\n> **Bad news driving this:**\n> - NQ -1.13% on yield backup\n> - 10Y ~5.12% biting tech\n> - Trump-Xi summit two-sided unprinted\n> - paid hawkish SEP ~54% Oct hike\n> - FY27 shutdown deadline 09-30\n>\n> **market uncertainty: **elevated** | VIX 16.52 | policy-uncertainty index 114.08 (1d -78.97)**\n>\n> **Factor scoreboard** (score \u00d7 weight = contribution):\n> - \u26aa Asia overnight session: +0.0 \u00d7 2.0 = +0.0\n> - \u26aa Europe session: +0.0 \u00d7 2.0 = +0.0\n> - \ud83d\udd34 Overnight news & c"
     }
   ],
   "href": {
