@@ -9,9 +9,70 @@
     "fail": 0,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
-  "flatten": {},
+  "buy_1d": [
+    {
+      "ticker": "ASTH",
+      "score": 0.09248307125306686
+    },
+    {
+      "ticker": "CHKP",
+      "score": 0.22580596058295638
+    },
+    {
+      "ticker": "GDYN",
+      "score": 0.15893247831646115
+    },
+    {
+      "ticker": "PRGS",
+      "score": 0.22262173775223718
+    },
+    {
+      "ticker": "NTNX",
+      "score": 0.3469195471799613
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "METC",
+      "score": -0.4147221792720016
+    },
+    {
+      "ticker": "EOSE",
+      "score": -0.1364721911916208
+    },
+    {
+      "ticker": "XIFR",
+      "score": -0.37973431112233896
+    },
+    {
+      "ticker": "VST",
+      "score": -0.03964795330924106
+    },
+    {
+      "ticker": "AESI",
+      "score": -0.3078422660521732
+    },
+    {
+      "ticker": "TE",
+      "score": -0.005561124700873332
+    },
+    {
+      "ticker": "EXK",
+      "score": -0.1576247463622153
+    },
+    {
+      "ticker": "ARE",
+      "score": -0.5420850022543173
+    }
+  ],
+  "flatten": {
+    "said": "0 priced buys \u00b7 cash $18,086.73 \u00b7 morning S missing",
+    "bullets": [
+      "0 priced buys",
+      "cash $18,086.73",
+      "morning S missing"
+    ]
+  },
   "general": {
     "said": "DOWN  -7.659",
     "bullets": [

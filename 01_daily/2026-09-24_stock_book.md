@@ -1,6 +1,6 @@
 # Stock book — 2026-09-24
 
-_Generated 2026-09-24T06:44:52.418709-04:00_
+_Generated 2026-09-24T06:51:08.192955-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -21,7 +21,7 @@ The existing red/yellow/green source graph remains visible. Its digest, judge an
 - Weather risk: **unknown**
 - General predict (same-day): -0.69 down (present)
 - Stand-down: **no** — 12 names qualified through group_leader,catalyst,probable (7 probable)
-- Sector predicts this date: 9/11 (ok)
+- Sector predicts this date: 10/11 (ok)
 - News tickers in play: 109
 - AB coverage: 1867 names · peer RS: 1836
 - Universe after liquidity: 2072
@@ -109,7 +109,7 @@ This is the live Finviz groups tape — child industry vs parent sector, plus th
 | Industrials | -1.6% | -2.7% | -0.34 |  |
 | Real Estate | -0.6% | -2.1% | -0.72 |  |
 | Technology | -2.0% | -2.1% | -0.42 |  |
-| Utilities | -1.5% | -3.2% | — |  |
+| Utilities | -1.5% | -3.2% | -0.32 |  |
 
 ### Industry heat (1w vs parent)
 
@@ -221,6 +221,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Communication Services | -0.42 |
 | Technology | -0.42 |
 | Industrials | -0.34 |
+| Utilities | -0.32 |
 | Basic Materials | -0.31 |
 
 ### How much each predictor is trusted (graded hit rate)
@@ -347,8 +348,8 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 
 - **METC** (small, Basic Materials, $533M) score -0.415. SELL/AVOID — market=RED; red domains=parent,child,setup,flow; child lags parent -5.7%
 - **EOSE** (small, Industrials, $1.3B) score -0.136. SELL/AVOID — market=RED; red domains=parent,child,setup,flow; child lags parent -4.7%
-- **XIFR** (mid, Utilities, $2.0B) score -0.148. SELL/AVOID — market=RED; red domains=parent,child,setup,flow; child lags parent -4.1%
-- **VST** (large, Utilities, $45.9B) score +0.102. SELL/AVOID — market=RED; red domains=parent,child,setup,flow; child lags parent -6.3%
+- **XIFR** (mid, Utilities, $2.0B) score -0.380. SELL/AVOID — market=RED; red domains=parent,child,setup,flow; child lags parent -4.1%
+- **VST** (large, Utilities, $45.9B) score -0.040. SELL/AVOID — market=RED; red domains=parent,child,setup,flow; child lags parent -6.3%
 - **AESI** (small, Energy, $1.4B) score -0.308. SELL/AVOID — market=RED; red domains=child,setup,flow; child lags parent -7.7%
 - **TE** (small, Industrials, $1.2B) score -0.006. SELL/AVOID — market=RED; red domains=parent,child,setup,flow; child lags parent -4.7%
 - **EXK** (mid, Basic Materials, $2.7B) score -0.158. SELL/AVOID — market=RED; red domains=parent,child,setup,flow; child lags parent -4.5%
@@ -499,11 +500,11 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 - **LBTYA** (mid, Communication Services, $3.2B) score -0.593. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **PLTK** (small, Communication Services, $839M) score -0.588. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **LBTYK** (mid, Communication Services, $3.2B) score -0.583. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
+- **HE** (small, Utilities, $1.6B) score -0.568. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **CHTR** (large, Communication Services, $20.4B) score -0.567. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **SUPV** (small, Financial, $580M) score -0.567. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **PDM** (small, Real Estate, $1.1B) score -0.564. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
 - **WU** (small, Financial, $1.9B) score -0.552. this name **lagged its own correlated peers** this week; the peer basket itself was **down** (name-specific, not a sector tide); the Finviz industry was **down**
-- **BHR** (micro, Real Estate, $121M) score -0.550. this name **lagged its own correlated peers** this week; the peer basket itself was **up**; the Finviz industry was **advancing**
 
 ## Files for this run
 
