@@ -38,7 +38,6 @@ class XaiModel:
         return (self.input_usd, self.output_usd, self.openclaw_id)
 
 
-# Current official general text lineup, cheapest first.
 CATALOG: tuple[XaiModel, ...] = (
     XaiModel("xai/grok-4.20-0309-non-reasoning", 1.25, 2.50, 30, "general",
              "cheapest general completion; no reasoning tax"),
@@ -51,8 +50,6 @@ CATALOG: tuple[XaiModel, ...] = (
     XaiModel("xai/grok-4.7", 2.00, 6.00, 30, "general"),
 )
 
-# Older SuperGrok SKUs. Only used when the live /v1/models list shows them.
-# Third-party pages still quote $0.20/$0.50; official docs no longer list them.
 LEGACY_FAST: tuple[XaiModel, ...] = (
     XaiModel("xai/grok-4.1-fast", 0.20, 0.50, 30, "legacy_fast"),
     XaiModel("xai/grok-4-fast", 0.20, 0.50, 30, "legacy_fast"),
@@ -64,17 +61,32 @@ REFUSE_SUBSTRINGS = (
     "openclaw",
 )
 
-# Live SuperGrok/OpenClaw answer (2026-09-24). Same $1.25/$2.50 tier as 4.20.
 DEFAULT_NEWS_MODEL = "xai/grok-4.3"
 SECTOR_MODEL = "xai/grok-4.6"
+SCREEN_TRY: tuple[str, ...] = (
+    "xai/grok-4.1-fast",
+    "xai/grok-4-fast",
+    DEFAULT_NEWS_MODEL,
+)
 
-# Blind try-order: working SuperGrok SKU first, then same-tier / sector.
 BLIND_TRY_ORDER: tuple[str, ...] = (
     DEFAULT_NEWS_MODEL,
     "xai/grok-4.20-0309-non-reasoning",
     SECTOR_MODEL,
     "xai/grok-4.7",
 )
+
+# Hops that may use Fast. Classify / analyst / meta may not.
+FAST_TMPLS = frozenset({
+    "news_usability_batch",
+    "news_pack_complete",
+})
+FLOOR_TMPLS = frozenset({
+    "news_classify",
+    "news_classify_batch",
+    "news_meta",
+    "news_impact",
+})
 
 
 def normalize_model_id(raw: str) -> str:
@@ -104,18 +116,11 @@ def above_30b(model_id: str) -> bool:
         return False
     row = by_id(model_id)
     if row is None:
-        # Unknown xAI flagship id: treat as above 30B. Unknown *mini* already refused.
         return normalize_model_id(model_id).startswith("xai/grok")
     return row.min_params_b >= MIN_PARAMS_B and row.kind != "coding"
 
 
 def pick_cheapest_above_30b(available: list[str] | None = None) -> str:
-    """Return the cheapest general/legacy-fast model above 30B.
-
-    * ``available`` empty/None → official default (blind try).
-    * Intersection with the live list wins, including legacy-fast SKUs
-      that are cheaper than the current default when they still exist.
-    """
     if not available:
         return DEFAULT_NEWS_MODEL
     known = {normalize_model_id(x) for x in available if x}
@@ -124,6 +129,8 @@ def pick_cheapest_above_30b(available: list[str] | None = None) -> str:
     for row in (*LEGACY_FAST, *CATALOG):
         if row.min_params_b < MIN_PARAMS_B or is_refused(row.openclaw_id):
             continue
+        if row.bare == "grok-3":
+            continue
         if row.openclaw_id in known or row.bare in known:
             hits.append(row)
     if hits:
@@ -131,16 +138,31 @@ def pick_cheapest_above_30b(available: list[str] | None = None) -> str:
         return hits[0].openclaw_id
     for raw in available:
         nid = normalize_model_id(raw)
-        if nid and above_30b(nid):
+        if nid and above_30b(nid) and "grok-3" not in nid:
             return nid
     return DEFAULT_NEWS_MODEL
 
 
 def try_order(available: list[str] | None = None) -> list[str]:
-    """Deduped models to attempt, cheapest-first then sector fallback."""
     first = pick_cheapest_above_30b(available)
     out: list[str] = []
     for mid in (first, *BLIND_TRY_ORDER):
         if mid and mid not in out and not is_refused(mid):
             out.append(mid)
     return out
+
+
+def model_for_hop(tmpl: str, available: list[str] | None = None) -> str:
+    """Fast for batch usability / M4. Floor for classify, meta, analyst."""
+    if tmpl in FAST_TMPLS:
+        if not available:
+            return SCREEN_TRY[0]
+        known = {normalize_model_id(x) for x in available if x}
+        known |= {normalize_model_id(x).split("/", 1)[-1] for x in available if x}
+        for mid in SCREEN_TRY:
+            if mid in known or mid.split("/", 1)[-1] in known:
+                return mid
+        return DEFAULT_NEWS_MODEL
+    if tmpl in FLOOR_TMPLS:
+        return DEFAULT_NEWS_MODEL
+    return DEFAULT_NEWS_MODEL
