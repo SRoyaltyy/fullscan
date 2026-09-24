@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T06:23:05.628444-04:00",
+  "generated_at": "2026-09-24T06:27:57.549460-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -15,12 +15,12 @@
       "score": 0.3495180712530669
     },
     {
-      "ticker": "GDYN",
-      "score": 0.4014324783164612
-    },
-    {
       "ticker": "CHKP",
       "score": 0.3383059605829564
+    },
+    {
+      "ticker": "GDYN",
+      "score": 0.4014324783164612
     },
     {
       "ticker": "PRGS",
@@ -29,14 +29,6 @@
     {
       "ticker": "NTNX",
       "score": 0.21941954717996132
-    },
-    {
-      "ticker": "NTCT",
-      "score": 0.5613639959793102
-    },
-    {
-      "ticker": "TDC",
-      "score": 0.5291249996919065
     }
   ],
   "sell_1d": [
@@ -58,7 +50,7 @@
     },
     {
       "ticker": "AESI",
-      "score": -0.3733772660521733
+      "score": -0.3078422660521732
     },
     {
       "ticker": "TE",
@@ -94,14 +86,14 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "0 up / 3 down / 0 flat",
+    "said": "1 up / 4 down / 0 flat",
     "bullets": [
       "XLB DOWN -2.9",
       "XLC DOWN -11.3",
       "XLY DOWN -8.5",
       "XLP missing",
-      "XLE missing",
-      "XLF missing",
+      "XLE UP +6.8",
+      "XLF DOWN -4.9",
       "XLV missing",
       "XLI missing",
       "XLRE missing",
