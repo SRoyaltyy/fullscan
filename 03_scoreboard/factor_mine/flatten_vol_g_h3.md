@@ -6,7 +6,7 @@ Buys the flatten **wish-list** even on io/HOLD mornings — live `flatten_robust
 
 Side **long** · universe `flatten` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · flatten wish-list ∩ vol🟢
 
-Cash book **-24.04%** ($7,596) · signal-only (no cash/fees) was -17.64%. Starts YES **5/29**. Fills 55 · skips 69 · realized $-2523.45.
+Cash book **-24.42%** ($7,558) · signal-only (no cash/fees) was -19.12%. Starts YES **6/30**. Fills 57 · skips 71 · realized $-2440.55.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $68.75.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $7,517.69.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -176,11 +176,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | `RDNT` | 98 | $76.00 | $76.27 | +26.46 | — | +0.00 | +26.46 | -83.30 | — |
 | 2026-09-21 | `A` | 23 | — | $157.87 | +0.00 | $161.94 | +93.61 | +93.61 | +0.00 | +93.61 |
 | 2026-09-21 | `DXCM` | 42 | — | $88.83 | +0.00 | $89.17 | +14.28 | +14.28 | +0.00 | +14.28 |
-| 2026-09-22 | `A` | 23 | $161.94 | $160.93 | -23.23 | $161.98 | +24.15 | +0.92 | +70.38 | +94.53 |
-| 2026-09-22 | `DXCM` | 42 | $89.17 | $89.25 | +3.36 | $89.48 | +9.66 | +13.02 | +17.64 | +27.30 |
-| 2026-09-23 | `A` | 23 | $161.98 | $166.54 | +104.88 | $165.28 | -28.98 | +75.90 | +199.41 | +170.43 |
-| 2026-09-23 | `DXCM` | 42 | $89.48 | $89.50 | +0.84 | $87.73 | -74.34 | -73.50 | +28.14 | -46.20 |
-| 2026-09-23 | `OMER` | 2 | — | $20.65 | +0.00 | $20.74 | +0.19 | +0.19 | +0.00 | +0.19 |
+| 2026-09-22 | `A` | 23 | $161.94 | $161.94 | +0.00 | $161.94 | +0.00 | +0.00 | +93.61 | +93.61 |
+| 2026-09-22 | `DXCM` | 42 | $89.17 | $89.17 | +0.00 | $89.17 | +0.00 | +0.00 | +14.28 | +14.28 |
+| 2026-09-23 | `A` | 23 | $161.94 | $166.54 | +105.80 | $165.32 | -28.06 | +77.74 | +199.41 | +171.35 |
+| 2026-09-23 | `DXCM` | 42 | $89.17 | $89.50 | +13.86 | $87.73 | -74.34 | -60.48 | +28.14 | -46.20 |
+| 2026-09-23 | `OMER` | 2 | — | $20.65 | +0.00 | $20.74 | +0.18 | +0.18 | +0.00 | +0.18 |
+| 2026-09-24 | `A` | 23 | $165.32 | $163.95 | -31.51 | — | +0.00 | -31.51 | +139.84 | — |
+| 2026-09-24 | `DXCM` | 42 | $87.73 | $87.67 | -2.31 | — | +0.00 | -2.31 | -48.51 | — |
+| 2026-09-24 | `OMER` | 2 | $20.74 | $20.52 | -0.44 | $20.13 | -0.78 | -1.22 | -0.26 | -1.04 |
 
 ## Each session (cash + holdings state)
 
@@ -213,8 +216,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | +7.38 | $4.41 | RDNT×98 | $7,495.53 | +64.68 | +131.32 | — | — | $4.41 | $7,626.85 | RDNT×98 |
 | 2026-09-18 | +4.86 | $4.41 | RDNT×98 | $7,615.09 | -11.76 | -162.68 | — | — | $4.41 | $7,452.41 | RDNT×98 |
 | 2026-09-21 | +12.87 | $4.41 | RDNT×98 | $7,478.87 | +26.46 | +107.89 | A, DXCM | RDNT | $110.46 | $7,580.22 | A×23, DXCM×42 |
-| 2026-09-22 | -0.50 | $110.46 | A×23, DXCM×42 | $7,560.35 | -19.87 | +33.81 | — | — | $110.46 | $7,594.16 | A×23, DXCM×42 |
-| 2026-09-23 | +2.29 | $110.46 | A×23, DXCM×42 | $7,699.88 | +105.72 | -103.13 | OMER | — | $68.75 | $7,596.33 | A×23, DXCM×42, OMER×2 |
+| 2026-09-22 | -0.50 | $110.46 | A×23, DXCM×42 | $7,580.22 | +0.00 | +0.00 | — | — | $110.46 | $7,580.22 | A×23, DXCM×42 |
+| 2026-09-23 | +2.29 | $110.46 | A×23, DXCM×42 | $7,699.88 | +119.66 | -102.22 | OMER | — | $68.75 | $7,597.25 | A×23, DXCM×42, OMER×2 |
+| 2026-09-24 | -7.66 | $68.75 | A×23, DXCM×42, OMER×2 | $7,562.99 | -34.26 | -0.78 | — | A, DXCM | $7,517.69 | $7,557.95 | OMER×2 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -328,11 +332,15 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 09:30 ET | **BUY** | `A` | 23 | $157.87 | $2.06 | — | $3,843.44 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); ret5=+6.5; leftover $3738.25 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-09-21 09:30 ET | **BUY** | `DXCM` | 42 | $88.83 | $2.12 | — | $110.46 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); ret5=+7.6; leftover $3738.25 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $110.46 | ▲ close $7,580.22 vs 09:30 $7,478.87 (session +107.89) | 16:00 close · cash $110.46 · equity $7,580.22 vs 09:30 $7,478.87 (+101.35; session marks +107.89) · 2 name(s) marked open→close (per-name table). A×23 09:30 $157.87 → close $161.94 +93.61; DXCM×42 09:30 $88.83 → close $89.17 +14.28 | — |
-| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $110.46 | ▼ 09:30 equity $7,560.35 vs yday $7,580.22 (-19.87) | 09:30 open · cash $110.46 (unchanged overnight, no fees) · equity $7,560.35 vs prior close $7,580.22 (-19.87) · 2 name(s) re-marked at the open (per-name table). A×23 yday $161.94 → 09:30 $160.93 -23.23; DXCM×42 yday $89.17 → 09:30 $89.25 +3.36 | — |
-| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $110.46 | ▲ close $7,594.16 vs 09:30 $7,560.35 (session +33.81) | 16:00 close · cash $110.46 · equity $7,594.16 vs 09:30 $7,560.35 (+33.81; session marks +33.81) · 2 name(s) marked open→close (per-name table). A×23 09:30 $160.93 → close $161.98 +24.15; DXCM×42 09:30 $89.25 → close $89.48 +9.66 | — |
-| 2026-09-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $110.46 | ▲ 09:30 equity $7,699.88 vs yday $7,594.16 (+105.72) | 09:30 open · cash $110.46 (unchanged overnight, no fees) · equity $7,699.88 vs prior close $7,594.16 (+105.72) · 2 name(s) re-marked at the open (per-name table). A×23 yday $161.98 → 09:30 $166.54 +104.88; DXCM×42 yday $89.48 → 09:30 $89.50 +0.84 | — |
-| 2026-09-23 09:30 ET | **BUY** | `OMER` | 2 | $20.65 | $0.42 | — | $68.75 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten,probable,yday_gainer,yday_mover; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+5.9; leftover $55.23 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $68.75 | ▼ close $7,596.33 vs 09:30 $7,699.88 (session -103.13) | 16:00 close · cash $68.75 · equity $7,596.33 vs 09:30 $7,699.88 (-103.55; session marks -103.13) · 3 name(s) marked open→close (per-name table). A×23 09:30 $166.54 → close $165.28 -28.98; DXCM×42 09:30 $89.50 → close $87.73 -74.34; OMER×2 09:30 $20.65 → close $20.74 +0.19 | — |
+| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $110.46 | ▲ 09:30 equity $7,580.22 vs yday $7,580.22 (+0.00) | 09:30 open · cash $110.46 (unchanged overnight, no fees) · equity $7,580.22 vs prior close $7,580.22 (+0.00) · 2 name(s) re-marked at the open (per-name table). A×23 yday $161.94 → 09:30 $161.94 +0.00; DXCM×42 yday $89.17 → 09:30 $89.17 +0.00 | — |
+| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $110.46 | ▲ close $7,580.22 vs 09:30 $7,580.22 (session +0.00) | 16:00 close · cash $110.46 · equity $7,580.22 vs 09:30 $7,580.22 (+0.00; session marks +0.00) · 2 name(s) marked open→close (per-name table). A×23 09:30 $161.94 → close $161.94 +0.00; DXCM×42 09:30 $89.17 → close $89.17 +0.00 | — |
+| 2026-09-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $110.46 | ▲ 09:30 equity $7,699.88 vs yday $7,580.22 (+119.66) | 09:30 open · cash $110.46 (unchanged overnight, no fees) · equity $7,699.88 vs prior close $7,580.22 (+119.66) · 2 name(s) re-marked at the open (per-name table). A×23 yday $161.94 → 09:30 $166.54 +105.80; DXCM×42 yday $89.17 → 09:30 $89.50 +13.86 | — |
+| 2026-09-23 09:30 ET | **BUY** | `OMER` | 2 | $20.65 | $0.42 | — | $68.75 | — | flatten wish-list ∩ vol🟢; gate vol=good; list flatten,probable,yday_gainer,yday_mover; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+5.9; leftover $55.23 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $68.75 | ▼ close $7,597.25 vs 09:30 $7,699.88 (session -102.22) | 16:00 close · cash $68.75 · equity $7,597.25 vs 09:30 $7,699.88 (-102.63; session marks -102.22) · 3 name(s) marked open→close (per-name table). A×23 09:30 $166.54 → close $165.32 -28.06; DXCM×42 09:30 $89.50 → close $87.73 -74.34; OMER×2 09:30 $20.65 → close $20.74 +0.18 | — |
+| 2026-09-24 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $68.75 | ▼ 09:30 equity $7,562.99 vs yday $7,597.25 (-34.26) | 09:30 open · cash $68.75 (unchanged overnight, no fees) · equity $7,562.99 vs prior close $7,597.25 (-34.26) · 3 name(s) re-marked at the open (per-name table). A×23 yday $165.32 → 09:30 $163.95 -31.51; DXCM×42 yday $87.73 → 09:30 $87.67 -2.31; OMER×2 yday $20.74 → 09:30 $20.52 -0.44 | — |
+| 2026-09-24 09:30 ET | **SELL** | `A` | 23 | $163.95 | $2.10 | $+135.68 | $3,837.50 | ▲ +135.68 after sell → book $7,560.89; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-24 09:30 ET | **SELL** | `DXCM` | 42 | $87.67 | $2.16 | $-52.78 | $7,517.69 | ▼ -52.78 after sell → book $7,558.73; vs 09:30 mark -2.16 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-24 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $7,517.69 | ▼ close $7,557.95 vs 09:30 $7,562.99 (session -0.78) | 16:00 close · cash $7,517.69 · equity $7,557.95 vs 09:30 $7,562.99 (-5.04; session marks -0.78) · 1 name(s) marked open→close (per-name table). OMER×2 09:30 $20.52 → close $20.13 -0.78 | — |
 
 ## Not taken
 
@@ -406,12 +414,12 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | `ECO` | cash | leftover split 1.47 < 1 share @ 85.00 |
 | 2026-09-22 | `A` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-22 | `DXCM` | min_hold | dropped but min-hold 1/3 sess — no sell |
-| 2026-09-23 | `HALO` | cash | leftover split 55.23 < 1 share @ 116.84 |
+| 2026-09-23 | `HALO` | cash | leftover split 55.23 < 1 share @ 116.85 |
+| 2026-09-24 | `OMER` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-24 | `CVE` | hard_red | hard-red S=-7.66 sit; no new buys |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `A` | 23 | 2026-09-21 @ $157.87 | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); ret5=+6.5; leftover $3738.25 |
-| `DXCM` | 42 | 2026-09-21 @ $88.83 | flatten wish-list ∩ vol🟢; gate vol=good; list flatten; wish-list (live io HOLD — not a ticket); ret5=+7.6; leftover $3738.25 |
 | `OMER` | 2 | 2026-09-23 @ $20.65 | flatten wish-list ∩ vol🟢; gate vol=good; list flatten,probable,yday_gainer,yday_mover; wish-list (live io HOLD — not a ticket); 🔵; ⚪; ret5=+5.9; leftover $55.23 |

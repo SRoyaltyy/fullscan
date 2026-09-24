@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ overnight, no 🚨
 
-Cash book **-17.66%** ($8,233) · signal-only (no cash/fees) was -39.83%. Starts YES **0/29**. Fills 85 · skips 170 · realized $-1504.02.
+Cash book **-18.07%** ($8,193) · signal-only (no cash/fees) was -45.53%. Starts YES **0/30**. Fills 89 · skips 176 · realized $-1797.14.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $44.84.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8,150.16.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -232,13 +232,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | `MLKN` | 135 | — | $20.85 | +0.00 | $20.32 | -71.55 | -71.55 | +0.00 | -71.55 |
 | 2026-09-21 | `THO` | 41 | — | $68.39 | +0.00 | $69.94 | +63.55 | +63.55 | +0.00 | +63.55 |
 | 2026-09-22 | `ABVX` | 26 | $103.45 | $103.45 | +0.00 | $103.45 | +0.00 | +0.00 | -59.02 | -59.02 |
-| 2026-09-22 | `MLKN` | 135 | $20.32 | $20.37 | +6.75 | $19.89 | -64.80 | -58.05 | -64.80 | -129.60 |
-| 2026-09-22 | `THO` | 41 | $69.94 | $70.64 | +28.70 | $70.00 | -26.24 | +2.46 | +92.25 | +66.01 |
+| 2026-09-22 | `MLKN` | 135 | $20.32 | $20.32 | +0.00 | $20.32 | +0.00 | +0.00 | -71.55 | -71.55 |
+| 2026-09-22 | `THO` | 41 | $69.94 | $69.94 | +0.00 | $69.94 | +0.00 | +0.00 | +63.55 | +63.55 |
 | 2026-09-23 | `ABVX` | 26 | $103.45 | $98.30 | -133.90 | $94.13 | -108.42 | -242.32 | -192.92 | -301.34 |
-| 2026-09-23 | `MLKN` | 135 | $19.89 | $19.76 | -17.55 | $20.04 | +37.80 | +20.25 | -147.15 | -109.35 |
-| 2026-09-23 | `THO` | 41 | $70.00 | $71.41 | +57.81 | $72.30 | +36.49 | +94.30 | +123.82 | +160.31 |
-| 2026-09-23 | `NEOV` | 11 | — | $3.40 | +0.00 | $3.17 | -2.53 | -2.53 | +0.00 | -2.53 |
-| 2026-09-23 | `SFIX` | 13 | — | $2.99 | +0.00 | $2.82 | -2.21 | -2.21 | +0.00 | -2.21 |
+| 2026-09-23 | `MLKN` | 135 | $20.32 | $19.76 | -75.60 | $20.04 | +37.80 | -37.80 | -147.15 | -109.35 |
+| 2026-09-23 | `THO` | 41 | $69.94 | $71.41 | +60.27 | $72.31 | +36.90 | +97.17 | +123.82 | +160.72 |
+| 2026-09-23 | `BB` | 2 | — | $8.60 | +0.00 | $8.38 | -0.44 | -0.44 | +0.00 | -0.44 |
+| 2026-09-23 | `NEOV` | 5 | — | $3.40 | +0.00 | $3.17 | -1.15 | -1.15 | +0.00 | -1.15 |
+| 2026-09-23 | `SFIX` | 6 | — | $2.99 | +0.00 | $2.82 | -1.02 | -1.02 | +0.00 | -1.02 |
+| 2026-09-24 | `ABVX` | 26 | $94.13 | $92.97 | -30.16 | — | +0.00 | -30.16 | -331.50 | — |
+| 2026-09-24 | `MLKN` | 135 | $20.04 | $19.96 | -10.80 | — | +0.00 | -10.80 | -120.15 | — |
+| 2026-09-24 | `THO` | 41 | $72.31 | $72.58 | +11.07 | — | +0.00 | +11.07 | +171.79 | — |
+| 2026-09-24 | `BB` | 2 | $8.38 | $8.42 | +0.08 | $8.73 | +0.62 | +0.70 | -0.36 | +0.26 |
+| 2026-09-24 | `NEOV` | 5 | $3.17 | $2.65 | -2.60 | $2.40 | -1.27 | -3.87 | -3.75 | -5.02 |
+| 2026-09-24 | `SFIX` | 6 | $2.82 | $2.31 | -3.06 | $2.21 | -0.60 | -3.66 | -4.08 | -4.68 |
 
 ## Each session (cash + holdings state)
 
@@ -271,8 +278,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | +7.38 | $16.05 | ALMU×324, LEN×55 | $8,103.09 | -574.08 | +37.04 | — | — | $16.05 | $8,140.13 | ALMU×324, LEN×55 |
 | 2026-09-18 | +4.86 | $16.05 | ALMU×324, LEN×55 | $8,091.16 | -48.97 | +251.44 | — | — | $16.05 | $8,342.60 | ALMU×324, LEN×55 |
 | 2026-09-21 | +12.87 | $16.05 | ALMU×324, LEN×55 | $8,502.45 | +159.85 | -67.02 | ABVX, MLKN, THO | ALMU, LEN | $121.95 | $8,422.39 | ABVX×26, MLKN×135, THO×41 |
-| 2026-09-22 | -0.50 | $121.95 | ABVX×26, MLKN×135, THO×41 | $8,457.84 | +35.45 | -91.04 | — | — | $121.95 | $8,366.80 | ABVX×26, MLKN×135, THO×41 |
-| 2026-09-23 | +2.29 | $121.95 | ABVX×26, MLKN×135, THO×41 | $8,273.16 | -93.64 | -38.87 | NEOV, SFIX | — | $44.84 | $8,233.45 | ABVX×26, MLKN×135, THO×41, NEOV×11, SFIX×13 |
+| 2026-09-22 | -0.50 | $121.95 | ABVX×26, MLKN×135, THO×41 | $8,422.39 | -0.00 | +0.00 | — | — | $121.95 | $8,422.39 | ABVX×26, MLKN×135, THO×41 |
+| 2026-09-23 | +2.29 | $121.95 | ABVX×26, MLKN×135, THO×41 | $8,273.16 | -149.23 | -36.33 | BB, NEOV, SFIX | — | $69.25 | $8,236.27 | ABVX×26, MLKN×135, THO×41, BB×2, NEOV×5, SFIX×6 |
+| 2026-09-24 | -7.66 | $69.25 | ABVX×26, MLKN×135, THO×41, BB×2, NEOV×5, SFIX×6 | $8,200.80 | -35.47 | -1.25 | — | ABVX, MLKN, THO | $8,150.16 | $8,192.86 | BB×2, NEOV×5, SFIX×6 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -415,12 +423,18 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 09:30 ET | **BUY** | `MLKN` | 135 | $20.85 | $2.40 | — | $2,928.05 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-2.5; leftover $2831.99 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-09-21 09:30 ET | **BUY** | `THO` | 41 | $68.39 | $2.11 | — | $121.95 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-7.0; leftover $2831.99 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $121.95 | ▼ close $8,422.39 vs 09:30 $8,502.45 (session -67.02) | 16:00 close · cash $121.95 · equity $8,422.39 vs 09:30 $8,502.45 (-80.06; session marks -67.02) · 3 name(s) marked open→close (per-name table). ABVX×26 09:30 $105.72 → close $103.45 -59.02; MLKN×135 09:30 $20.85 → close $20.32 -71.55; THO×41 09:30 $68.39 → close $69.94 +63.55 | — |
-| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $121.95 | ▲ 09:30 equity $8,457.84 vs yday $8,422.39 (+35.45) | 09:30 open · cash $121.95 (unchanged overnight, no fees) · equity $8,457.84 vs prior close $8,422.39 (+35.45) · 3 name(s) re-marked at the open (per-name table). ABVX×26 yday $103.45 → 09:30 $103.45 +0.00; MLKN×135 yday $20.32 → 09:30 $20.37 +6.75; THO×41 yday $69.94 → 09:30 $70.64 +28.70 | — |
-| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $121.95 | ▼ close $8,366.80 vs 09:30 $8,457.84 (session -91.04) | 16:00 close · cash $121.95 · equity $8,366.80 vs 09:30 $8,457.84 (-91.04; session marks -91.04) · 3 name(s) marked open→close (per-name table). ABVX×26 09:30 $103.45 → close $103.45 +0.00; MLKN×135 09:30 $20.37 → close $19.89 -64.80; THO×41 09:30 $70.64 → close $70.00 -26.24 | — |
-| 2026-09-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $121.95 | ▼ 09:30 equity $8,273.16 vs yday $8,366.80 (-93.64) | 09:30 open · cash $121.95 (unchanged overnight, no fees) · equity $8,273.16 vs prior close $8,366.80 (-93.64) · 3 name(s) re-marked at the open (per-name table). ABVX×26 yday $103.45 → 09:30 $98.30 -133.90; MLKN×135 yday $19.89 → 09:30 $19.76 -17.55; THO×41 yday $70.00 → 09:30 $71.41 +57.81 | — |
-| 2026-09-23 09:30 ET | **BUY** | `NEOV` | 11 | $3.40 | $0.41 | — | $84.14 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; 🔵; ret5=-4.8; leftover $40.65 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
-| 2026-09-23 09:30 ET | **BUY** | `SFIX` | 13 | $2.99 | $0.43 | — | $44.84 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-6.3; leftover $40.65 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
-| 2026-09-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $44.84 | ▼ close $8,233.45 vs 09:30 $8,273.16 (session -38.87) | 16:00 close · cash $44.84 · equity $8,233.45 vs 09:30 $8,273.16 (-39.71; session marks -38.87) · 5 name(s) marked open→close (per-name table). ABVX×26 09:30 $98.30 → close $94.13 -108.42; MLKN×135 09:30 $19.76 → close $20.04 +37.80; THO×41 09:30 $71.41 → close $72.30 +36.49; NEOV×11 09:30 $3.40 → close $3.17 -2.53; SFIX×13 09:30 $2.99 → close $2.82 -2.21 | — |
+| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $121.95 | ▲ 09:30 equity $8,422.39 vs yday $8,422.39 (-0.00) | 09:30 open · cash $121.95 (unchanged overnight, no fees) · equity $8,422.39 vs prior close $8,422.39 (-0.00) · 3 name(s) re-marked at the open (per-name table). ABVX×26 yday $103.45 → 09:30 $103.45 +0.00; MLKN×135 yday $20.32 → 09:30 $20.32 +0.00; THO×41 yday $69.94 → 09:30 $69.94 +0.00 | — |
+| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $121.95 | ▲ close $8,422.39 vs 09:30 $8,422.39 (session +0.00) | 16:00 close · cash $121.95 · equity $8,422.39 vs 09:30 $8,422.39 (-0.00; session marks +0.00) · 3 name(s) marked open→close (per-name table). ABVX×26 09:30 $103.45 → close $103.45 +0.00; MLKN×135 09:30 $20.32 → close $20.32 +0.00; THO×41 09:30 $69.94 → close $69.94 +0.00 | — |
+| 2026-09-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $121.95 | ▼ 09:30 equity $8,273.16 vs yday $8,422.39 (-149.23) | 09:30 open · cash $121.95 (unchanged overnight, no fees) · equity $8,273.16 vs prior close $8,422.39 (-149.23) · 3 name(s) re-marked at the open (per-name table). ABVX×26 yday $103.45 → 09:30 $98.30 -133.90; MLKN×135 yday $20.32 → 09:30 $19.76 -75.60; THO×41 yday $69.94 → 09:30 $71.41 +60.27 | — |
+| 2026-09-23 09:30 ET | **BUY** | `BB` | 2 | $8.60 | $0.18 | — | $104.57 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; 🔵; ret5=-0.4; leftover $20.32 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `NEOV` | 5 | $3.40 | $0.18 | — | $87.38 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; 🔵; ret5=-4.8; leftover $20.32 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `SFIX` | 6 | $2.99 | $0.20 | — | $69.25 | — | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=+1.7; leftover $20.32 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $69.25 | ▼ close $8,236.27 vs 09:30 $8,273.16 (session -36.33) | 16:00 close · cash $69.25 · equity $8,236.27 vs 09:30 $8,273.16 (-36.89; session marks -36.33) · 6 name(s) marked open→close (per-name table). ABVX×26 09:30 $98.30 → close $94.13 -108.42; MLKN×135 09:30 $19.76 → close $20.04 +37.80; THO×41 09:30 $71.41 → close $72.31 +36.90; BB×2 09:30 $8.60 → close $8.38 -0.44; NEOV×5 09:30 $3.40 → close $3.17 -1.15; SFIX×6 09:30 $2.99 → close $2.82 -1.02 | — |
+| 2026-09-24 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $69.25 | ▼ 09:30 equity $8,200.80 vs yday $8,236.27 (-35.47) | 09:30 open · cash $69.25 (unchanged overnight, no fees) · equity $8,200.80 vs prior close $8,236.27 (-35.47) · 6 name(s) re-marked at the open (per-name table). ABVX×26 yday $94.13 → 09:30 $92.97 -30.16; MLKN×135 yday $20.04 → 09:30 $19.96 -10.80; THO×41 yday $72.31 → 09:30 $72.58 +11.07; BB×2 yday $8.38 → 09:30 $8.42 +0.08; NEOV×5 yday $3.17 → 09:30 $2.65 -2.60; SFIX×6 yday $2.82 → 09:30 $2.31 -3.06 | — |
+| 2026-09-24 09:30 ET | **SELL** | `ABVX` | 26 | $92.97 | $2.10 | $-335.67 | $2,484.37 | ▼ -335.67 after sell → book $8,198.70; vs 09:30 mark -2.10 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-24 09:30 ET | **SELL** | `MLKN` | 135 | $19.96 | $2.44 | $-124.98 | $5,176.53 | ▼ -124.98 after sell → book $8,196.26; vs 09:30 mark -2.44 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-24 09:30 ET | **SELL** | `THO` | 41 | $72.58 | $2.15 | $+167.53 | $8,150.16 | ▲ +167.53 after sell → book $8,194.11; vs 09:30 mark -2.15 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-24 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,150.16 | ▼ close $8,192.86 vs 09:30 $8,200.80 (session -1.25) | 16:00 close · cash $8,150.16 · equity $8,192.86 vs 09:30 $8,200.80 (-7.94; session marks -1.25) · 3 name(s) marked open→close (per-name table). BB×2 09:30 $8.42 → close $8.73 +0.62; NEOV×5 09:30 $2.65 → close $2.40 -1.27; SFIX×6 09:30 $2.31 → close $2.21 -0.60 | — |
 
 ## Not taken
 
@@ -588,21 +602,25 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-22 | `ABVX` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-22 | `MLKN` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-22 | `THO` | min_hold | dropped but min-hold 1/3 sess — no sell |
-| 2026-09-22 | `CBRL` | cash | leftover split 30.49 < 1 share @ 45.05 |
+| 2026-09-22 | `CBRL` | no_price | no 09:30 open |
 | 2026-09-22 | `GIS` | cash | leftover split 30.49 < 1 share @ 35.96 |
 | 2026-09-22 | `KBH` | cash | leftover split 30.49 < 1 share @ 49.39 |
-| 2026-09-22 | `PAYX` | cash | leftover split 30.49 < 1 share @ 115.35 |
+| 2026-09-22 | `PAYX` | no_price | no 09:30 open |
 | 2026-09-23 | `ABVX` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-23 | `MLKN` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-23 | `THO` | min_hold | dropped but min-hold 2/3 sess — no sell |
-| 2026-09-23 | `FUL` | cash | leftover split 40.65 < 1 share @ 50.51 |
+| 2026-09-23 | `DRI` | cash | leftover split 20.32 < 1 share @ 215.10 |
+| 2026-09-23 | `FUL` | cash | leftover split 20.32 < 1 share @ 50.51 |
+| 2026-09-23 | `SNX` | cash | leftover split 20.32 < 1 share @ 283.46 |
+| 2026-09-24 | `BB` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-24 | `NEOV` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-24 | `SFIX` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-24 | `COST` | hard_red | hard-red S=-7.66 sit; no new buys |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `ABVX` | 26 | 2026-09-21 @ $105.72 | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-11.5; leftover $2831.99 |
-| `MLKN` | 135 | 2026-09-21 @ $20.85 | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-2.5; leftover $2831.99 |
-| `THO` | 41 | 2026-09-21 @ $68.39 | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-7.0; leftover $2831.99 |
-| `NEOV` | 11 | 2026-09-23 @ $3.40 | union ∩ overnight, no 🚨; gate overnight=True; list overnight; 🔵; ret5=-4.8; leftover $40.65 |
-| `SFIX` | 13 | 2026-09-23 @ $2.99 | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=-6.3; leftover $40.65 |
+| `BB` | 2 | 2026-09-23 @ $8.60 | union ∩ overnight, no 🚨; gate overnight=True; list overnight; 🔵; ret5=-0.4; leftover $20.32 |
+| `NEOV` | 5 | 2026-09-23 @ $3.40 | union ∩ overnight, no 🚨; gate overnight=True; list overnight; 🔵; ret5=-4.8; leftover $20.32 |
+| `SFIX` | 6 | 2026-09-23 @ $2.99 | union ∩ overnight, no 🚨; gate overnight=True; list overnight; ret5=+1.7; leftover $20.32 |

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · Clock-B #3 knowable E + guidance proxy + react (research; not KEEP)
 
-Cash book **-5.43%** ($9,457) · signal-only (no cash/fees) was +10.90%. Starts YES **0/29**. Fills 20 · skips 1 · realized $-543.00.
+Cash book **-7.64%** ($9,236) · signal-only (no cash/fees) was +8.19%. Starts YES **0/30**. Fills 22 · skips 1 · realized $-764.31.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,457.00.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,235.69.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -105,7 +105,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-21 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-22 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-09-23 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-23 | `CTAS` | 48 | — | $196.78 | +0.00 | $191.97 | -230.88 | -230.88 | +0.00 | -230.88 |
+| 2026-09-24 | `CTAS` | 48 | $191.97 | $192.26 | +13.92 | — | +0.00 | +13.92 | -216.96 | — |
 
 ## Each session (cash + holdings state)
 
@@ -139,7 +140,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | +4.86 | $9,457.00 | — | $9,457.00 | +0.00 | +0.00 | — | — | $9,457.00 | $9,457.00 | — |
 | 2026-09-21 | +12.87 | $9,457.00 | — | $9,457.00 | +0.00 | +0.00 | — | — | $9,457.00 | $9,457.00 | — |
 | 2026-09-22 | -0.50 | $9,457.00 | — | $9,457.00 | +0.00 | +0.00 | — | — | $9,457.00 | $9,457.00 | — |
-| 2026-09-23 | +2.29 | $9,457.00 | — | $9,457.00 | +0.00 | +0.00 | — | — | $9,457.00 | $9,457.00 | — |
+| 2026-09-23 | +2.29 | $9,457.00 | — | $9,457.00 | +0.00 | -230.88 | CTAS | — | $9.43 | $9,223.99 | CTAS×48 |
+| 2026-09-24 | -7.66 | $9.43 | CTAS×48 | $9,237.91 | +13.92 | +0.00 | — | CTAS | $9,235.69 | $9,235.69 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -222,7 +224,11 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,457.00 | ▲ 09:30 equity $9,457.00 vs yday $9,457.00 (+0.00) | 09:30 open · cash $9,457.00 · no holdings · equity $9,457.00 vs prior close $9,457.00 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,457.00 | ▲ close $9,457.00 vs 09:30 $9,457.00 (session +0.00) | 16:00 close · cash $9,457.00 · no lots left · equity $9,457.00. | — |
 | 2026-09-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,457.00 | ▲ 09:30 equity $9,457.00 vs yday $9,457.00 (+0.00) | 09:30 open · cash $9,457.00 · no holdings · equity $9,457.00 vs prior close $9,457.00 (+0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,457.00 | ▲ close $9,457.00 vs 09:30 $9,457.00 (session +0.00) | 16:00 close · cash $9,457.00 · no lots left · equity $9,457.00. | — |
+| 2026-09-23 09:30 ET | **BUY** | `CTAS` | 48 | $196.78 | $2.13 | — | $9.43 | — | Clock-B #3 knowable E + guidance proxy + react (research; not KEEP); gate clk_earn_guide_react=True; rank cond; list earn_react; 🔵; ⚪; ret5=-2.0; leftover $9457.00 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-09-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9.43 | ▼ close $9,223.99 vs 09:30 $9,457.00 (session -230.88) | 16:00 close · cash $9.43 · equity $9,223.99 vs 09:30 $9,457.00 (-233.01; session marks -230.88) · 1 name(s) marked open→close (per-name table). CTAS×48 09:30 $196.78 → close $191.97 -230.88 | — |
+| 2026-09-24 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9.43 | ▲ 09:30 equity $9,237.91 vs yday $9,223.99 (+13.92) | 09:30 open · cash $9.43 (unchanged overnight, no fees) · equity $9,237.91 vs prior close $9,223.99 (+13.92) · 1 name(s) re-marked at the open (per-name table). CTAS×48 yday $191.97 → 09:30 $192.26 +13.92 | — |
+| 2026-09-24 09:30 ET | **SELL** | `CTAS` | 48 | $192.26 | $2.22 | $-221.31 | $9,235.69 | ▼ -221.31 after sell → book $9,235.69; vs 09:30 mark -2.22 | dropped from list after 1 sess (min 1) | — |
+| 2026-09-24 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,235.69 | ▲ close $9,235.69 vs 09:30 $9,237.91 (session +0.00) | 16:00 close · cash $9,235.69 · no lots left · equity $9,235.69. | — |
 
 ## Not taken
 

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 1 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · all leftover on the rare news🟢 +9 −≤1 name (KILL example)
 
-Cash book **+6.39%** ($10,639) · signal-only (no cash/fees) was -2.85%. Starts YES **27/29**. Fills 6 · skips 0 · realized $+639.16.
+Cash book **+12.33%** ($11,233) · signal-only (no cash/fees) was -2.85%. Starts YES **27/30**. Fills 6 · skips 1 · realized $+1232.62.
 
 ## How this sleeve decides (like you are 10)
 
@@ -57,7 +57,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $10,639.17.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $11,232.62.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -94,8 +94,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-18 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-21 | `VICR` | 42 | — | $230.25 | +0.00 | $223.90 | -266.70 | -266.70 | +0.00 | -266.70 |
-| 2026-09-22 | `VICR` | 42 | $223.90 | $252.37 | +1195.74 | — | +0.00 | +1195.74 | +929.04 | — |
-| 2026-09-23 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-22 | `VICR` | 42 | $223.90 | $223.90 | +0.00 | $223.90 | +0.00 | +0.00 | -266.70 | -266.70 |
+| 2026-09-23 | `VICR` | 42 | $223.90 | $266.50 | +1789.20 | — | +0.00 | +1789.20 | +1522.50 | — |
+| 2026-09-24 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -128,8 +129,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | +7.38 | $9,714.45 | — | $9,714.45 | +0.00 | +0.00 | — | — | $9,714.45 | $9,714.45 | — |
 | 2026-09-18 | +4.86 | $9,714.45 | — | $9,714.45 | +0.00 | +0.00 | — | — | $9,714.45 | $9,714.45 | — |
 | 2026-09-21 | +12.87 | $9,714.45 | — | $9,714.45 | +0.00 | -266.70 | VICR | — | $41.84 | $9,445.64 | VICR×42 |
-| 2026-09-22 | -0.50 | $41.84 | VICR×42 | $10,641.38 | +1,195.74 | +0.00 | — | VICR | $10,639.17 | $10,639.17 | — |
-| 2026-09-23 | +2.29 | $10,639.17 | — | $10,639.17 | -0.00 | +0.00 | — | — | $10,639.17 | $10,639.17 | — |
+| 2026-09-22 | -0.50 | $41.84 | VICR×42 | $9,445.64 | -0.00 | +0.00 | — | — | $41.84 | $9,445.64 | VICR×42 |
+| 2026-09-23 | +2.29 | $41.84 | VICR×42 | $11,234.84 | +1,789.20 | +0.00 | — | VICR | $11,232.62 | $11,232.62 | — |
+| 2026-09-24 | -7.66 | $11,232.62 | — | $11,232.62 | +0.00 | +0.00 | — | — | $11,232.62 | $11,232.62 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -194,8 +196,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $9,714.45 | ▲ 09:30 equity $9,714.45 vs yday $9,714.45 (+0.00) | 09:30 open · cash $9,714.45 · no holdings · equity $9,714.45 vs prior close $9,714.45 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-21 09:30 ET | **BUY** | `VICR` | 42 | $230.25 | $2.12 | — | $41.84 | — | all leftover on the rare news🟢 +9 −≤1 name (KILL example); gate news=good,n_pos_min=9,cam_bad_max=1; rank cond; list ohlc_hot; ret5=+12.5; leftover $9714.45 | join🟢 sector🔴 gen🟢 news🟢 digest🟢 judge🟢 ab🟢 peer🟢 heat🟢 vol🟢 buy🟢 |
 | 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $41.84 | ▼ close $9,445.64 vs 09:30 $9,714.45 (session -266.70) | 16:00 close · cash $41.84 · equity $9,445.64 vs 09:30 $9,714.45 (-268.81; session marks -266.70) · 1 name(s) marked open→close (per-name table). VICR×42 09:30 $230.25 → close $223.90 -266.70 | — |
-| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $41.84 | ▲ 09:30 equity $10,641.38 vs yday $9,445.64 (+1,195.74) | 09:30 open · cash $41.84 (unchanged overnight, no fees) · equity $10,641.38 vs prior close $9,445.64 (+1195.74) · 1 name(s) re-marked at the open (per-name table). VICR×42 yday $223.90 → 09:30 $252.37 +1195.74 | — |
-| 2026-09-22 09:30 ET | **SELL** | `VICR` | 42 | $252.37 | $2.21 | $+924.71 | $10,639.17 | ▲ +924.71 after sell → book $10,639.17; vs 09:30 mark -2.21 | dropped from list after 1 sess (min 1) | — |
-| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,639.17 | ▲ close $10,639.17 vs 09:30 $10,641.38 (session +0.00) | 16:00 close · cash $10,639.17 · no lots left · equity $10,639.17. | — |
-| 2026-09-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,639.17 | ▲ 09:30 equity $10,639.17 vs yday $10,639.17 (-0.00) | 09:30 open · cash $10,639.17 · no holdings · equity $10,639.17 vs prior close $10,639.17 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,639.17 | ▲ close $10,639.17 vs 09:30 $10,639.17 (session +0.00) | 16:00 close · cash $10,639.17 · no lots left · equity $10,639.17. | — |
+| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $41.84 | ▲ 09:30 equity $9,445.64 vs yday $9,445.64 (-0.00) | 09:30 open · cash $41.84 (unchanged overnight, no fees) · equity $9,445.64 vs prior close $9,445.64 (-0.00) · 1 name(s) re-marked at the open (per-name table). VICR×42 yday $223.90 → 09:30 $223.90 +0.00 | — |
+| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $41.84 | ▲ close $9,445.64 vs 09:30 $9,445.64 (session +0.00) | 16:00 close · cash $41.84 · equity $9,445.64 vs 09:30 $9,445.64 (-0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). VICR×42 09:30 $223.90 → close $223.90 +0.00 | — |
+| 2026-09-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $41.84 | ▲ 09:30 equity $11,234.84 vs yday $9,445.64 (+1,789.20) | 09:30 open · cash $41.84 (unchanged overnight, no fees) · equity $11,234.84 vs prior close $9,445.64 (+1789.20) · 1 name(s) re-marked at the open (per-name table). VICR×42 yday $223.90 → 09:30 $266.50 +1789.20 | — |
+| 2026-09-23 09:30 ET | **SELL** | `VICR` | 42 | $266.50 | $2.22 | $+1518.17 | $11,232.62 | ▲ +1,518.17 after sell → book $11,232.62; vs 09:30 mark -2.22 | dropped from list after 2 sess (min 1) | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,232.62 | ▲ close $11,232.62 vs 09:30 $11,234.84 (session +0.00) | 16:00 close · cash $11,232.62 · no lots left · equity $11,232.62. | — |
+| 2026-09-24 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $11,232.62 | ▲ 09:30 equity $11,232.62 vs yday $11,232.62 (+0.00) | 09:30 open · cash $11,232.62 · no holdings · equity $11,232.62 vs prior close $11,232.62 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-24 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $11,232.62 | ▲ close $11,232.62 vs 09:30 $11,232.62 (session +0.00) | 16:00 close · cash $11,232.62 · no lots left · equity $11,232.62. | — |
+
+## Not taken
+
+| Date | Ticker | Kind | Why |
+|---|---|---|---|
+| 2026-09-22 | `VICR` | no_price | no 09:30 open — carry |

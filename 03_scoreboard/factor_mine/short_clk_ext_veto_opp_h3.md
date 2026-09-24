@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **short** · universe `union` · top 8 · rank `opp_rvol` · size `leftover` · sell `list` · S-boost `none` · Clock-B #5 ∩ Theme Radar T−1 oppset
 
-Cash book **+3.00%** ($10,299) · signal-only (no cash/fees) was -17.29%. Starts YES **22/29**. Fills 90 · skips 112 · realized $+299.45.
+Cash book **+4.05%** ($10,405) · signal-only (no cash/fees) was -20.56%. Starts YES **26/30**. Fills 92 · skips 114 · realized $+404.70.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $10,299.45.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $10,404.70.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -238,15 +238,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | `ASST` | 65 | $27.16 | $28.00 | -54.60 | — | +0.00 | -54.60 | -154.38 | — |
 | 2026-09-09 | `HOOD` | 42 | $117.34 | $120.77 | -144.06 | $115.28 | +230.58 | +86.52 | -12.39 | +218.19 |
 | 2026-09-10 | `HOOD` | 42 | $115.28 | $112.69 | +108.78 | — | +0.00 | +108.78 | +326.97 | — |
-| 2026-09-11 | `HAFN` | 555 | — | $9.32 | +0.00 | $9.38 | -33.30 | -33.30 | -0.00 | -33.30 |
-| 2026-09-14 | `HAFN` | 555 | $9.38 | $9.35 | +16.65 | $9.33 | +11.10 | +27.75 | -16.65 | -5.55 |
-| 2026-09-15 | `HAFN` | 555 | $9.33 | $9.33 | +0.00 | $9.48 | -83.25 | -83.25 | -5.55 | -88.80 |
-| 2026-09-16 | `HAFN` | 555 | $9.48 | $9.59 | -61.05 | — | +0.00 | -61.05 | -149.85 | — |
+| 2026-09-11 | `HAFN` | 277 | — | $9.32 | +0.00 | $9.38 | -16.62 | -16.62 | -0.00 | -16.62 |
+| 2026-09-11 | `UGP` | 342 | — | $7.55 | +0.00 | $7.45 | +34.20 | +34.20 | -0.00 | +34.20 |
+| 2026-09-14 | `HAFN` | 277 | $9.38 | $9.35 | +8.31 | $9.33 | +5.54 | +13.85 | -8.31 | -2.77 |
+| 2026-09-14 | `UGP` | 342 | $7.45 | $7.32 | +44.46 | $7.44 | -41.04 | +3.42 | +78.66 | +37.62 |
+| 2026-09-15 | `HAFN` | 277 | $9.33 | $9.33 | +0.00 | $9.48 | -41.55 | -41.55 | -2.77 | -44.32 |
+| 2026-09-15 | `UGP` | 342 | $7.44 | $7.43 | +3.42 | $7.44 | -3.42 | +0.00 | +41.04 | +37.62 |
+| 2026-09-16 | `HAFN` | 277 | $9.48 | $9.59 | -30.47 | — | +0.00 | -30.47 | -74.79 | — |
+| 2026-09-16 | `UGP` | 342 | $7.44 | $7.46 | -6.84 | — | +0.00 | -6.84 | +30.78 | — |
 | 2026-09-17 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-09-18 | `CHPT` | 509 | — | $10.00 | +0.00 | $10.32 | -162.88 | -162.88 | -0.00 | -162.88 |
-| 2026-09-21 | `CHPT` | 509 | $10.32 | $10.32 | +0.00 | $9.41 | +463.19 | +463.19 | -162.88 | +300.31 |
-| 2026-09-22 | `CHPT` | 509 | $9.41 | $9.34 | +35.63 | $9.42 | -40.72 | -5.09 | +335.94 | +295.22 |
-| 2026-09-23 | `CHPT` | 509 | $9.42 | $9.76 | -173.06 | — | +0.00 | -173.06 | +122.16 | — |
+| 2026-09-18 | `CHPT` | 514 | — | $10.00 | +0.00 | $10.32 | -164.48 | -164.48 | -0.00 | -164.48 |
+| 2026-09-21 | `CHPT` | 514 | $10.32 | $10.32 | +0.00 | $9.41 | +467.74 | +467.74 | -164.48 | +303.26 |
+| 2026-09-22 | `CHPT` | 514 | $9.41 | $9.41 | +0.00 | $9.41 | +0.00 | +0.00 | +303.26 | +303.26 |
+| 2026-09-23 | `CHPT` | 514 | $9.41 | $9.76 | -179.90 | — | +0.00 | -179.90 | +123.36 | — |
+| 2026-09-24 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -272,15 +277,16 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-08 | -11.47 | $20,122.70 | AGCO×13, ARCT×100, ASST×65, HOOD×42 | $9,873.34 | -40.44 | +337.65 | — | — | $20,122.70 | $10,210.99 | AGCO×13, ARCT×100, ASST×65, HOOD×42 |
 | 2026-09-09 | -13.95 | $20,122.70 | AGCO×13, ARCT×100, ASST×65, HOOD×42 | $10,024.39 | -186.60 | +230.58 | — | AGCO, ARCT, ASST | $15,090.23 | $10,248.47 | HOOD×42 |
 | 2026-09-10 | -13.28 | $15,090.23 | HOOD×42 | $10,357.25 | +108.78 | +0.00 | — | HOOD | $10,355.13 | $10,355.13 | — |
-| 2026-09-11 | +0.50 | $10,355.13 | — | $10,355.13 | +0.00 | -33.30 | HAFN | — | $15,520.30 | $10,314.40 | HAFN×555 |
-| 2026-09-14 | -11.00 | $15,520.30 | HAFN×555 | $10,331.05 | +16.65 | +11.10 | — | — | $15,520.30 | $10,342.15 | HAFN×555 |
-| 2026-09-15 | -3.84 | $15,520.30 | HAFN×555 | $10,342.15 | -0.00 | -83.25 | — | — | $15,520.30 | $10,258.90 | HAFN×555 |
-| 2026-09-16 | +5.30 | $15,520.30 | HAFN×555 | $10,197.85 | -61.05 | +0.00 | — | HAFN | $10,190.69 | $10,190.69 | — |
-| 2026-09-17 | +7.38 | $10,190.69 | — | $10,190.69 | -0.00 | +0.00 | — | — | $10,190.69 | $10,190.69 | — |
-| 2026-09-18 | +4.86 | $10,190.69 | — | $10,190.69 | -0.00 | -162.88 | CHPT | — | $15,273.86 | $10,020.98 | CHPT×509 |
-| 2026-09-21 | +12.87 | $15,273.86 | CHPT×509 | $10,020.98 | -0.00 | +463.19 | — | — | $15,273.86 | $10,484.17 | CHPT×509 |
-| 2026-09-22 | -0.50 | $15,273.86 | CHPT×509 | $10,519.80 | +35.63 | -40.72 | — | — | $15,273.86 | $10,479.08 | CHPT×509 |
-| 2026-09-23 | +2.29 | $15,273.86 | CHPT×509 | $10,306.02 | -173.06 | +0.00 | — | CHPT | $10,299.45 | $10,299.45 | — |
+| 2026-09-11 | +0.50 | $10,355.13 | — | $10,355.13 | +0.00 | +17.58 | HAFN, UGP | — | $15,510.60 | $10,364.44 | HAFN×277, UGP×342 |
+| 2026-09-14 | -11.00 | $15,510.60 | HAFN×277, UGP×342 | $10,417.21 | +52.77 | -35.50 | — | — | $15,510.60 | $10,381.71 | HAFN×277, UGP×342 |
+| 2026-09-15 | -3.84 | $15,510.60 | HAFN×277, UGP×342 | $10,385.13 | +3.42 | -44.97 | — | — | $15,510.60 | $10,340.16 | HAFN×277, UGP×342 |
+| 2026-09-16 | +5.30 | $15,510.60 | HAFN×277, UGP×342 | $10,302.85 | -37.31 | +0.00 | — | HAFN, UGP | $10,294.87 | $10,294.87 | — |
+| 2026-09-17 | +7.38 | $10,294.87 | — | $10,294.87 | -0.00 | +0.00 | — | — | $10,294.87 | $10,294.87 | — |
+| 2026-09-18 | +4.86 | $10,294.87 | — | $10,294.87 | -0.00 | -164.48 | CHPT | — | $15,427.97 | $10,123.49 | CHPT×514 |
+| 2026-09-21 | +12.87 | $15,427.97 | CHPT×514 | $10,123.49 | -0.00 | +467.74 | — | — | $15,427.97 | $10,591.23 | CHPT×514 |
+| 2026-09-22 | -0.50 | $15,427.97 | CHPT×514 | $10,591.23 | -0.00 | +0.00 | — | — | $15,427.97 | $10,591.23 | CHPT×514 |
+| 2026-09-23 | +2.29 | $15,427.97 | CHPT×514 | $10,411.33 | -179.90 | +0.00 | — | CHPT | $10,404.70 | $10,404.70 | — |
+| 2026-09-24 | -7.66 | $10,404.70 | — | $10,404.70 | -0.00 | +0.00 | — | — | $10,404.70 | $10,404.70 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -413,27 +419,31 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-10 09:30 ET | **COVER** | `HOOD` | 42 | $112.69 | $2.12 | $+322.55 | $10,355.13 | ▲ +322.55 after sell → book $10,355.13; vs 09:30 mark -2.12 | dropped from list after 3 sess (min 3) | — |
 | 2026-09-10 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,355.13 | ▲ close $10,355.13 vs 09:30 $10,357.25 (session +0.00) | 16:00 close · cash $10,355.13 · no lots left · equity $10,355.13. | — |
 | 2026-09-11 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,355.13 | ▲ 09:30 equity $10,355.13 vs yday $10,355.13 (+0.00) | 09:30 open · cash $10,355.13 · no holdings · equity $10,355.13 vs prior close $10,355.13 (+0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-11 09:30 ET | **SHORT** | `HAFN` | 555 | $9.32 | $7.43 | — | $15,520.30 | — | Clock-B #5 ∩ Theme Radar T−1 oppset; gate clk_ext_veto=True,oppset=True; rank opp_rvol; list ohlc_hot; 🔵; ret5=+5.4; leftover $5177.57 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,520.30 | ▼ close $10,314.40 vs 09:30 $10,355.13 (session -33.30) | 16:00 close · cash $15,520.30 · equity $10,314.40 vs 09:30 $10,355.13 (-40.73; session marks -33.30) · 1 name(s) marked open→close (per-name table). HAFN×555 09:30 $9.32 → close $9.38 -33.30 | — |
-| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,520.30 | ▲ 09:30 equity $10,331.05 vs yday $10,314.40 (+16.65) | 09:30 open · cash $15,520.30 (unchanged overnight, no fees) · equity $10,331.05 vs prior close $10,314.40 (+16.65) · 1 name(s) re-marked at the open (per-name table). HAFN×555 yday $9.38 → 09:30 $9.35 +16.65 | — |
-| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,520.30 | ▲ close $10,342.15 vs 09:30 $10,331.05 (session +11.10) | 16:00 close · cash $15,520.30 · equity $10,342.15 vs 09:30 $10,331.05 (+11.10; session marks +11.10) · 1 name(s) marked open→close (per-name table). HAFN×555 09:30 $9.35 → close $9.33 +11.10 | — |
-| 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,520.30 | ▲ 09:30 equity $10,342.15 vs yday $10,342.15 (-0.00) | 09:30 open · cash $15,520.30 (unchanged overnight, no fees) · equity $10,342.15 vs prior close $10,342.15 (-0.00) · 1 name(s) re-marked at the open (per-name table). HAFN×555 yday $9.33 → 09:30 $9.33 -0.00 | — |
-| 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,520.30 | ▼ close $10,258.90 vs 09:30 $10,342.15 (session -83.25) | 16:00 close · cash $15,520.30 · equity $10,258.90 vs 09:30 $10,342.15 (-83.25; session marks -83.25) · 1 name(s) marked open→close (per-name table). HAFN×555 09:30 $9.33 → close $9.48 -83.25 | — |
-| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,520.30 | ▼ 09:30 equity $10,197.85 vs yday $10,258.90 (-61.05) | 09:30 open · cash $15,520.30 (unchanged overnight, no fees) · equity $10,197.85 vs prior close $10,258.90 (-61.05) · 1 name(s) re-marked at the open (per-name table). HAFN×555 yday $9.48 → 09:30 $9.59 -61.05 | — |
-| 2026-09-16 09:30 ET | **COVER** | `HAFN` | 555 | $9.59 | $7.16 | $-164.44 | $10,190.69 | ▼ -164.44 after sell → book $10,190.69; vs 09:30 mark -7.16 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,190.69 | ▲ close $10,190.69 vs 09:30 $10,197.85 (session +0.00) | 16:00 close · cash $10,190.69 · no lots left · equity $10,190.69. | — |
-| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,190.69 | ▲ 09:30 equity $10,190.69 vs yday $10,190.69 (-0.00) | 09:30 open · cash $10,190.69 · no holdings · equity $10,190.69 vs prior close $10,190.69 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,190.69 | ▲ close $10,190.69 vs 09:30 $10,190.69 (session +0.00) | 16:00 close · cash $10,190.69 · no lots left · equity $10,190.69. | — |
-| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,190.69 | ▲ 09:30 equity $10,190.69 vs yday $10,190.69 (-0.00) | 09:30 open · cash $10,190.69 · no holdings · equity $10,190.69 vs prior close $10,190.69 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-18 09:30 ET | **SHORT** | `CHPT` | 509 | $10.00 | $6.83 | — | $15,273.86 | — | Clock-B #5 ∩ Theme Radar T−1 oppset; gate clk_ext_veto=True,oppset=True; rank opp_rvol; list ohlc_hot; 🔵; ⚪; ret5=+11.1; leftover $5095.34 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,273.86 | ▼ close $10,020.98 vs 09:30 $10,190.69 (session -162.88) | 16:00 close · cash $15,273.86 · equity $10,020.98 vs 09:30 $10,190.69 (-169.71; session marks -162.88) · 1 name(s) marked open→close (per-name table). CHPT×509 09:30 $10.00 → close $10.32 -162.88 | — |
-| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,273.86 | ▲ 09:30 equity $10,020.98 vs yday $10,020.98 (-0.00) | 09:30 open · cash $15,273.86 (unchanged overnight, no fees) · equity $10,020.98 vs prior close $10,020.98 (-0.00) · 1 name(s) re-marked at the open (per-name table). CHPT×509 yday $10.32 → 09:30 $10.32 -0.00 | — |
-| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,273.86 | ▲ close $10,484.17 vs 09:30 $10,020.98 (session +463.19) | 16:00 close · cash $15,273.86 · equity $10,484.17 vs 09:30 $10,020.98 (+463.19; session marks +463.19) · 1 name(s) marked open→close (per-name table). CHPT×509 09:30 $10.32 → close $9.41 +463.19 | — |
-| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,273.86 | ▲ 09:30 equity $10,519.80 vs yday $10,484.17 (+35.63) | 09:30 open · cash $15,273.86 (unchanged overnight, no fees) · equity $10,519.80 vs prior close $10,484.17 (+35.63) · 1 name(s) re-marked at the open (per-name table). CHPT×509 yday $9.41 → 09:30 $9.34 +35.63 | — |
-| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,273.86 | ▼ close $10,479.08 vs 09:30 $10,519.80 (session -40.72) | 16:00 close · cash $15,273.86 · equity $10,479.08 vs 09:30 $10,519.80 (-40.72; session marks -40.72) · 1 name(s) marked open→close (per-name table). CHPT×509 09:30 $9.34 → close $9.42 -40.72 | — |
-| 2026-09-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,273.86 | ▼ 09:30 equity $10,306.02 vs yday $10,479.08 (-173.06) | 09:30 open · cash $15,273.86 (unchanged overnight, no fees) · equity $10,306.02 vs prior close $10,479.08 (-173.06) · 1 name(s) re-marked at the open (per-name table). CHPT×509 yday $9.42 → 09:30 $9.76 -173.06 | — |
-| 2026-09-23 09:30 ET | **COVER** | `CHPT` | 509 | $9.76 | $6.57 | $+108.76 | $10,299.45 | ▲ +108.76 after sell → book $10,299.45; vs 09:30 mark -6.57 | dropped from list after 3 sess (min 3) | — |
-| 2026-09-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,299.45 | ▲ close $10,299.45 vs 09:30 $10,306.02 (session +0.00) | 16:00 close · cash $10,299.45 · no lots left · equity $10,299.45. | — |
+| 2026-09-11 09:30 ET | **SHORT** | `HAFN` | 277 | $9.32 | $3.71 | — | $12,933.06 | — | Clock-B #5 ∩ Theme Radar T−1 oppset; gate clk_ext_veto=True,oppset=True; rank opp_rvol; list ohlc_hot; 🔵; ret5=+5.4; leftover $2588.78 | join🟢 sector🔴 gen🟡 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-11 09:30 ET | **SHORT** | `UGP` | 342 | $7.55 | $4.56 | — | $15,510.60 | — | Clock-B #5 ∩ Theme Radar T−1 oppset; gate clk_ext_veto=True,oppset=True; rank opp_rvol; list ohlc_hot; ret5=+6.0; leftover $2588.78 | join🔴 sector🔴 gen🟡 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟢 |
+| 2026-09-11 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,510.60 | ▲ close $10,364.44 vs 09:30 $10,355.13 (session +17.58) | 16:00 close · cash $15,510.60 · equity $10,364.44 vs 09:30 $10,355.13 (+9.31; session marks +17.58) · 2 name(s) marked open→close (per-name table). HAFN×277 09:30 $9.32 → close $9.38 -16.62; UGP×342 09:30 $7.55 → close $7.45 +34.20 | — |
+| 2026-09-14 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,510.60 | ▲ 09:30 equity $10,417.21 vs yday $10,364.44 (+52.77) | 09:30 open · cash $15,510.60 (unchanged overnight, no fees) · equity $10,417.21 vs prior close $10,364.44 (+52.77) · 2 name(s) re-marked at the open (per-name table). HAFN×277 yday $9.38 → 09:30 $9.35 +8.31; UGP×342 yday $7.45 → 09:30 $7.32 +44.46 | — |
+| 2026-09-14 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,510.60 | ▼ close $10,381.71 vs 09:30 $10,417.21 (session -35.50) | 16:00 close · cash $15,510.60 · equity $10,381.71 vs 09:30 $10,417.21 (-35.50; session marks -35.50) · 2 name(s) marked open→close (per-name table). HAFN×277 09:30 $9.35 → close $9.33 +5.54; UGP×342 09:30 $7.32 → close $7.44 -41.04 | — |
+| 2026-09-15 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,510.60 | ▲ 09:30 equity $10,385.13 vs yday $10,381.71 (+3.42) | 09:30 open · cash $15,510.60 (unchanged overnight, no fees) · equity $10,385.13 vs prior close $10,381.71 (+3.42) · 2 name(s) re-marked at the open (per-name table). HAFN×277 yday $9.33 → 09:30 $9.33 -0.00; UGP×342 yday $7.44 → 09:30 $7.43 +3.42 | — |
+| 2026-09-15 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,510.60 | ▼ close $10,340.16 vs 09:30 $10,385.13 (session -44.97) | 16:00 close · cash $15,510.60 · equity $10,340.16 vs 09:30 $10,385.13 (-44.97; session marks -44.97) · 2 name(s) marked open→close (per-name table). HAFN×277 09:30 $9.33 → close $9.48 -41.55; UGP×342 09:30 $7.43 → close $7.44 -3.42 | — |
+| 2026-09-16 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,510.60 | ▼ 09:30 equity $10,302.85 vs yday $10,340.16 (-37.31) | 09:30 open · cash $15,510.60 (unchanged overnight, no fees) · equity $10,302.85 vs prior close $10,340.16 (-37.31) · 2 name(s) re-marked at the open (per-name table). HAFN×277 yday $9.48 → 09:30 $9.59 -30.47; UGP×342 yday $7.44 → 09:30 $7.46 -6.84 | — |
+| 2026-09-16 09:30 ET | **COVER** | `HAFN` | 277 | $9.59 | $3.57 | $-82.07 | $12,850.60 | ▼ -82.07 after sell → book $10,299.28; vs 09:30 mark -3.57 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 09:30 ET | **COVER** | `UGP` | 342 | $7.46 | $4.41 | $+21.81 | $10,294.87 | ▲ +21.81 after sell → book $10,294.87; vs 09:30 mark -4.41 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-16 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,294.87 | ▲ close $10,294.87 vs 09:30 $10,302.85 (session +0.00) | 16:00 close · cash $10,294.87 · no lots left · equity $10,294.87. | — |
+| 2026-09-17 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,294.87 | ▲ 09:30 equity $10,294.87 vs yday $10,294.87 (-0.00) | 09:30 open · cash $10,294.87 · no holdings · equity $10,294.87 vs prior close $10,294.87 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-17 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,294.87 | ▲ close $10,294.87 vs 09:30 $10,294.87 (session +0.00) | 16:00 close · cash $10,294.87 · no lots left · equity $10,294.87. | — |
+| 2026-09-18 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,294.87 | ▲ 09:30 equity $10,294.87 vs yday $10,294.87 (-0.00) | 09:30 open · cash $10,294.87 · no holdings · equity $10,294.87 vs prior close $10,294.87 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-18 09:30 ET | **SHORT** | `CHPT` | 514 | $10.00 | $6.90 | — | $15,427.97 | — | Clock-B #5 ∩ Theme Radar T−1 oppset; gate clk_ext_veto=True,oppset=True; rank opp_rvol; list ohlc_hot; 🔵; ⚪; ret5=+11.1; leftover $5147.43 | join🟢 sector🟢 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,427.97 | ▼ close $10,123.49 vs 09:30 $10,294.87 (session -164.48) | 16:00 close · cash $15,427.97 · equity $10,123.49 vs 09:30 $10,294.87 (-171.38; session marks -164.48) · 1 name(s) marked open→close (per-name table). CHPT×514 09:30 $10.00 → close $10.32 -164.48 | — |
+| 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,427.97 | ▲ 09:30 equity $10,123.49 vs yday $10,123.49 (-0.00) | 09:30 open · cash $15,427.97 (unchanged overnight, no fees) · equity $10,123.49 vs prior close $10,123.49 (-0.00) · 1 name(s) re-marked at the open (per-name table). CHPT×514 yday $10.32 → 09:30 $10.32 -0.00 | — |
+| 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,427.97 | ▲ close $10,591.23 vs 09:30 $10,123.49 (session +467.74) | 16:00 close · cash $15,427.97 · equity $10,591.23 vs 09:30 $10,123.49 (+467.74; session marks +467.74) · 1 name(s) marked open→close (per-name table). CHPT×514 09:30 $10.32 → close $9.41 +467.74 | — |
+| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,427.97 | ▲ 09:30 equity $10,591.23 vs yday $10,591.23 (-0.00) | 09:30 open · cash $15,427.97 (unchanged overnight, no fees) · equity $10,591.23 vs prior close $10,591.23 (-0.00) · 1 name(s) re-marked at the open (per-name table). CHPT×514 yday $9.41 → 09:30 $9.41 -0.00 | — |
+| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $15,427.97 | ▲ close $10,591.23 vs 09:30 $10,591.23 (session +0.00) | 16:00 close · cash $15,427.97 · equity $10,591.23 vs 09:30 $10,591.23 (-0.00; session marks +0.00) · 1 name(s) marked open→close (per-name table). CHPT×514 09:30 $9.41 → close $9.41 -0.00 | — |
+| 2026-09-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $15,427.97 | ▼ 09:30 equity $10,411.33 vs yday $10,591.23 (-179.90) | 09:30 open · cash $15,427.97 (unchanged overnight, no fees) · equity $10,411.33 vs prior close $10,591.23 (-179.90) · 1 name(s) re-marked at the open (per-name table). CHPT×514 yday $9.41 → 09:30 $9.76 -179.90 | — |
+| 2026-09-23 09:30 ET | **COVER** | `CHPT` | 514 | $9.76 | $6.63 | $+109.83 | $10,404.70 | ▲ +109.83 after sell → book $10,404.70; vs 09:30 mark -6.63 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,404.70 | ▲ close $10,404.70 vs 09:30 $10,411.33 (session +0.00) | 16:00 close · cash $10,404.70 · no lots left · equity $10,404.70. | — |
+| 2026-09-24 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,404.70 | ▲ 09:30 equity $10,404.70 vs yday $10,404.70 (-0.00) | 09:30 open · cash $10,404.70 · no holdings · equity $10,404.70 vs prior close $10,404.70 (-0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-24 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,404.70 | ▲ close $10,404.70 vs 09:30 $10,404.70 (session +0.00) | 16:00 close · cash $10,404.70 · no lots left · equity $10,404.70. | — |
 
 ## Not taken
 
@@ -545,7 +555,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | `ATRC` | hard_red | hard-red S=-13.95 sit; no new buys |
 | 2026-09-10 | `ODD` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-14 | `HAFN` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-14 | `UGP` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-15 | `HAFN` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-15 | `UGP` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-15 | `RBLX` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `BLSH` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `SION` | hard_red | hard-red S=-3.84 sit; no new buys |

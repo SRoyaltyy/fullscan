@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `cond` · size `leftover` · sell `list` · S-boost `none` · packet🟢 and camera net ≥ 2
 
-Cash book **-11.73%** ($8,827) · signal-only (no cash/fees) was -9.16%. Starts YES **10/29**. Fills 40 · skips 77 · realized $-1172.71.
+Cash book **-11.35%** ($8,865) · signal-only (no cash/fees) was -9.47%. Starts YES **16/30**. Fills 41 · skips 82 · realized $-1172.71.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $8,827.32.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $166.87.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -148,7 +148,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | `QCOM` | 25 | $177.72 | $180.61 | +72.25 | — | +0.00 | +72.25 | -214.00 | — |
 | 2026-09-21 | `SM` | 119 | $36.97 | $35.91 | -126.14 | — | +0.00 | -126.14 | -485.52 | — |
 | 2026-09-22 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
-| 2026-09-23 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-23 | `CTAS` | 44 | — | $196.78 | +0.00 | $191.97 | -211.64 | -211.64 | +0.00 | -211.64 |
+| 2026-09-24 | `CTAS` | 44 | $191.97 | $192.26 | +12.76 | $197.68 | +238.48 | +251.24 | -198.88 | +39.60 |
 
 ## Each session (cash + holdings state)
 
@@ -182,7 +183,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | +4.86 | $43.29 | QCOM×25, SM×119 | $9,214.32 | +53.85 | -328.60 | — | — | $43.29 | $8,885.72 | QCOM×25, SM×119 |
 | 2026-09-21 | +12.87 | $43.29 | QCOM×25, SM×119 | $8,831.83 | -53.89 | +0.00 | — | QCOM, SM | $8,827.32 | $8,827.32 | — |
 | 2026-09-22 | -0.50 | $8,827.32 | — | $8,827.32 | -0.00 | +0.00 | — | — | $8,827.32 | $8,827.32 | — |
-| 2026-09-23 | +2.29 | $8,827.32 | — | $8,827.32 | -0.00 | +0.00 | — | — | $8,827.32 | $8,827.32 | — |
+| 2026-09-23 | +2.29 | $8,827.32 | — | $8,827.32 | -0.00 | -211.64 | CTAS | — | $166.87 | $8,613.55 | CTAS×44 |
+| 2026-09-24 | -7.66 | $166.87 | CTAS×44 | $8,626.31 | +12.76 | +238.48 | — | — | $166.87 | $8,864.79 | CTAS×44 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -285,7 +287,10 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,827.32 | ▲ 09:30 equity $8,827.32 vs yday $8,827.32 (-0.00) | 09:30 open · cash $8,827.32 · no holdings · equity $8,827.32 vs prior close $8,827.32 (-0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,827.32 | ▲ close $8,827.32 vs 09:30 $8,827.32 (session +0.00) | 16:00 close · cash $8,827.32 · no lots left · equity $8,827.32. | — |
 | 2026-09-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $8,827.32 | ▲ 09:30 equity $8,827.32 vs yday $8,827.32 (-0.00) | 09:30 open · cash $8,827.32 · no holdings · equity $8,827.32 vs prior close $8,827.32 (-0.00). Cash unchanged overnight; no fees. | — |
-| 2026-09-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $8,827.32 | ▲ close $8,827.32 vs 09:30 $8,827.32 (session +0.00) | 16:00 close · cash $8,827.32 · no lots left · equity $8,827.32. | — |
+| 2026-09-23 09:30 ET | **BUY** | `CTAS` | 44 | $196.78 | $2.12 | — | $166.87 | — | packet🟢 and camera net ≥ 2; gate news_box=good,cam_net_min=2; rank cond; list earn_react; 🔵; ⚪; ret5=-2.0; leftover $8827.32 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟡 heat🟢 vol🟡 buy🟡 |
+| 2026-09-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $166.87 | ▼ close $8,613.55 vs 09:30 $8,827.32 (session -211.64) | 16:00 close · cash $166.87 · equity $8,613.55 vs 09:30 $8,827.32 (-213.77; session marks -211.64) · 1 name(s) marked open→close (per-name table). CTAS×44 09:30 $196.78 → close $191.97 -211.64 | — |
+| 2026-09-24 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $166.87 | ▲ 09:30 equity $8,626.31 vs yday $8,613.55 (+12.76) | 09:30 open · cash $166.87 (unchanged overnight, no fees) · equity $8,626.31 vs prior close $8,613.55 (+12.76) · 1 name(s) re-marked at the open (per-name table). CTAS×44 yday $191.97 → 09:30 $192.26 +12.76 | — |
+| 2026-09-24 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $166.87 | ▲ close $8,864.79 vs 09:30 $8,626.31 (session +238.48) | 16:00 close · cash $166.87 · equity $8,864.79 vs 09:30 $8,626.31 (+238.48; session marks +238.48) · 1 name(s) marked open→close (per-name table). CTAS×44 09:30 $192.26 → close $197.68 +238.48 | — |
 
 ## Not taken
 
@@ -368,3 +373,14 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | `LITE` | cash | leftover split 43.29 < 1 share @ 934.88 |
 | 2026-09-18 | `QCOM` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-18 | `SM` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-24 | `CTAS` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-24 | `ACMR` | hard_red | hard-red S=-7.66 sit; no new buys |
+| 2026-09-24 | `EOG` | hard_red | hard-red S=-7.66 sit; no new buys |
+| 2026-09-24 | `RRC` | hard_red | hard-red S=-7.66 sit; no new buys |
+| 2026-09-24 | `CVE` | hard_red | hard-red S=-7.66 sit; no new buys |
+
+## Still open (marked at last close)
+
+| Ticker | Shares | Entry | Why |
+|---|---:|---|---|
+| `CTAS` | 44 | 2026-09-23 @ $196.78 | packet🟢 and camera net ≥ 2; gate news_box=good,cam_net_min=2; rank cond; list earn_react; 🔵; ⚪; ret5=-2.0; leftover $8827.32 |

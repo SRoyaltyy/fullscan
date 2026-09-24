@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `opp_rvol` · size `leftover` · sell `list` · S-boost `none` · Clock-B #2 ∩ Theme Radar T−1 oppset
 
-Cash book **+2.24%** ($10,224) · signal-only (no cash/fees) was +1.82%. Starts YES **25/29**. Fills 160 · skips 62 · realized $+223.91.
+Cash book **+2.24%** ($10,224) · signal-only (no cash/fees) was +2.25%. Starts YES **25/30**. Fills 160 · skips 61 · realized $+223.91.
 
 ## How this sleeve decides (like you are 10)
 
@@ -237,6 +237,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | `SHLS` | 327 | $7.60 | $7.71 | +35.97 | — | +0.00 | +35.97 | +22.89 | — |
 | 2026-09-22 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 | 2026-09-23 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
+| 2026-09-24 | — | — | — | — | +0.00 | — | +0.00 | +0.00 | — | — |
 
 ## Each session (cash + holdings state)
 
@@ -271,6 +272,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | +12.87 | $327.95 | BHVN×178, TH×119, AMD×4, SHLS×327 | $10,235.19 | +236.79 | +0.00 | — | BHVN, TH, AMD, SHLS | $10,223.90 | $10,223.90 | — |
 | 2026-09-22 | -0.50 | $10,223.90 | — | $10,223.90 | +0.00 | +0.00 | — | — | $10,223.90 | $10,223.90 | — |
 | 2026-09-23 | +2.29 | $10,223.90 | — | $10,223.90 | +0.00 | +0.00 | — | — | $10,223.90 | $10,223.90 | — |
+| 2026-09-24 | -7.66 | $10,223.90 | — | $10,223.90 | +0.00 | +0.00 | — | — | $10,223.90 | $10,223.90 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -494,6 +496,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,223.90 | ▲ close $10,223.90 vs 09:30 $10,223.90 (session +0.00) | 16:00 close · cash $10,223.90 · no lots left · equity $10,223.90. | — |
 | 2026-09-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,223.90 | ▲ 09:30 equity $10,223.90 vs yday $10,223.90 (+0.00) | 09:30 open · cash $10,223.90 · no holdings · equity $10,223.90 vs prior close $10,223.90 (+0.00). Cash unchanged overnight; no fees. | — |
 | 2026-09-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,223.90 | ▲ close $10,223.90 vs 09:30 $10,223.90 (session +0.00) | 16:00 close · cash $10,223.90 · no lots left · equity $10,223.90. | — |
+| 2026-09-24 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $10,223.90 | ▲ 09:30 equity $10,223.90 vs yday $10,223.90 (+0.00) | 09:30 open · cash $10,223.90 · no holdings · equity $10,223.90 vs prior close $10,223.90 (+0.00). Cash unchanged overnight; no fees. | — |
+| 2026-09-24 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,223.90 | ▲ close $10,223.90 vs 09:30 $10,223.90 (session +0.00) | 16:00 close · cash $10,223.90 · no lots left · equity $10,223.90. | — |
 
 ## Not taken
 
@@ -541,7 +545,6 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-09 | `AVO` | hard_red | hard-red S=-13.95 sit; no new buys |
 | 2026-09-10 | `SUNB` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-10 | `CHYM` | hard_red | hard-red S=-13.28 sit; no new buys |
-| 2026-09-10 | `ARLO` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-10 | `DBI` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-10 | `DDOG` | hard_red | hard-red S=-13.28 sit; no new buys |
 | 2026-09-10 | `BAND` | hard_red | hard-red S=-13.28 sit; no new buys |

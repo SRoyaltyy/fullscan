@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · combo gate
 
-Cash book **-5.35%** ($9,465) · signal-only (no cash/fees) was +8.48%. Starts YES **8/29**. Fills 9 · skips 9 · realized $+328.64.
+Cash book **-5.75%** ($9,425) · signal-only (no cash/fees) was +8.48%. Starts YES **1/30**. Fills 10 · skips 9 · realized $-574.52.
 
 ## How this sleeve decides (like you are 10)
 
@@ -56,7 +56,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $4.49.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $9,425.48.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -104,6 +104,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | `SION` | 1717 | — | $6.00 | +0.00 | $6.00 | +0.00 | +0.00 | +0.00 | +0.00 |
 | 2026-09-22 | `SION` | 1717 | $6.00 | $5.99 | -17.17 | $6.02 | +51.51 | +34.34 | -17.17 | +34.34 |
 | 2026-09-23 | `SION` | 1717 | $6.02 | $6.03 | +17.17 | $5.51 | -892.84 | -875.67 | +51.51 | -841.33 |
+| 2026-09-24 | `SION` | 1717 | $5.51 | $5.50 | -17.17 | — | +0.00 | -17.17 | -858.50 | — |
 
 ## Each session (cash + holdings state)
 
@@ -138,6 +139,7 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | +12.87 | $1.97 | ZSQR×2021, EYPT×1280 | $10,371.85 | +25.60 | +0.00 | SION | ZSQR, EYPT | $4.49 | $10,306.49 | SION×1717 |
 | 2026-09-22 | -0.50 | $4.49 | SION×1717 | $10,289.32 | -17.17 | +51.51 | — | — | $4.49 | $10,340.83 | SION×1717 |
 | 2026-09-23 | +2.29 | $4.49 | SION×1717 | $10,358.00 | +17.17 | -892.84 | — | — | $4.49 | $9,465.16 | SION×1717 |
+| 2026-09-24 | -7.66 | $4.49 | SION×1717 | $9,447.99 | -17.17 | +0.00 | — | SION | $9,425.48 | $9,425.48 | — |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -210,6 +212,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.49 | ▲ close $10,340.83 vs 09:30 $10,289.32 (session +51.51) | 16:00 close · cash $4.49 · equity $10,340.83 vs 09:30 $10,289.32 (+51.51; session marks +51.51) · 1 name(s) marked open→close (per-name table). SION×1717 09:30 $5.99 → close $6.02 +51.51 | — |
 | 2026-09-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4.49 | ▲ 09:30 equity $10,358.00 vs yday $10,340.83 (+17.17) | 09:30 open · cash $4.49 (unchanged overnight, no fees) · equity $10,358.00 vs prior close $10,340.83 (+17.17) · 1 name(s) re-marked at the open (per-name table). SION×1717 yday $6.02 → 09:30 $6.03 +17.17 | — |
 | 2026-09-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $4.49 | ▼ close $9,465.16 vs 09:30 $10,358.00 (session -892.84) | 16:00 close · cash $4.49 · equity $9,465.16 vs 09:30 $10,358.00 (-892.84; session marks -892.84) · 1 name(s) marked open→close (per-name table). SION×1717 09:30 $6.03 → close $5.51 -892.84 | — |
+| 2026-09-24 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $4.49 | ▼ 09:30 equity $9,447.99 vs yday $9,465.16 (-17.17) | 09:30 open · cash $4.49 (unchanged overnight, no fees) · equity $9,447.99 vs prior close $9,465.16 (-17.17) · 1 name(s) re-marked at the open (per-name table). SION×1717 yday $5.51 → 09:30 $5.50 -17.17 | — |
+| 2026-09-24 09:30 ET | **SELL** | `SION` | 1717 | $5.50 | $22.51 | $-903.16 | $9,425.48 | ▼ -903.16 after sell → book $9,425.48; vs 09:30 mark -22.51 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-24 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $9,425.48 | ▲ close $9,425.48 vs 09:30 $9,447.99 (session +0.00) | 16:00 close · cash $9,425.48 · no lots left · equity $9,425.48. | — |
 
 ## Not taken
 
@@ -224,9 +229,3 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | `EYPT` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-22 | `SION` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-23 | `SION` | min_hold | dropped but min-hold 2/3 sess — no sell |
-
-## Still open (marked at last close)
-
-| Ticker | Shares | Entry | Why |
-|---|---:|---|---|
-| `SION` | 1717 | 2026-09-21 @ $6.00 | combo gate; gate rsi_os=True,macd_up=True; list yday_mover; ret5=-24.1; leftover $10328.64 |

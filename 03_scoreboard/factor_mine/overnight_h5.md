@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `overnight` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · baseline list, no extra gate
 
-Cash book **-12.79%** ($8,721) · signal-only (no cash/fees) was -31.95%. Starts YES **1/29**. Fills 27 · skips 172 · realized $-855.15.
+Cash book **-19.14%** ($8,086) · signal-only (no cash/fees) was -37.95%. Starts YES **0/30**. Fills 30 · skips 179 · realized $-881.39.
 
 ## How this sleeve decides (like you are 10)
 
@@ -50,7 +50,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $0.15.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $110.45.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -130,13 +130,22 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 | `LEN` | 56 | $79.70 | $78.25 | -81.20 | $76.43 | -101.92 | -183.12 | -133.28 | -235.20 |
 | 2026-09-21 | `ALMU` | 328 | $12.72 | $13.12 | +131.20 | $13.61 | +159.08 | +290.28 | -205.00 | -45.92 |
 | 2026-09-21 | `LEN` | 56 | $76.43 | $76.98 | +30.80 | $78.08 | +61.60 | +92.40 | -204.40 | -142.80 |
-| 2026-09-22 | `ALMU` | 328 | $13.61 | $13.62 | +3.28 | $13.54 | -26.24 | -22.96 | -42.64 | -68.88 |
-| 2026-09-22 | `LEN` | 56 | $78.08 | $78.96 | +49.28 | $78.68 | -15.68 | +33.60 | -93.52 | -109.20 |
-| 2026-09-23 | `ALMU` | 328 | $13.54 | $13.90 | +118.08 | — | +0.00 | +118.08 | +49.20 | — |
-| 2026-09-23 | `LEN` | 56 | $78.68 | $82.00 | +185.92 | — | +0.00 | +185.92 | +76.72 | — |
-| 2026-09-23 | `FUL` | 60 | — | $50.51 | +0.00 | $50.21 | -18.00 | -18.00 | +0.00 | -18.00 |
-| 2026-09-23 | `NEOV` | 896 | — | $3.40 | +0.00 | $3.17 | -206.08 | -206.08 | +0.00 | -206.08 |
-| 2026-09-23 | `SFIX` | 1017 | — | $2.99 | +0.00 | $2.82 | -172.89 | -172.89 | +0.00 | -172.89 |
+| 2026-09-22 | `ALMU` | 328 | $13.61 | $13.61 | +0.00 | $13.61 | +0.00 | +0.00 | -45.92 | -45.92 |
+| 2026-09-22 | `LEN` | 56 | $78.08 | $78.08 | +0.00 | $78.08 | +0.00 | +0.00 | -142.80 | -142.80 |
+| 2026-09-23 | `ALMU` | 328 | $13.61 | $13.82 | +68.88 | — | +0.00 | +68.88 | +22.96 | — |
+| 2026-09-23 | `LEN` | 56 | $78.08 | $82.00 | +219.52 | — | +0.00 | +219.52 | +76.72 | — |
+| 2026-09-23 | `BB` | 176 | — | $8.60 | +0.00 | $8.38 | -38.72 | -38.72 | +0.00 | -38.72 |
+| 2026-09-23 | `DRI` | 7 | — | $215.10 | +0.00 | $213.69 | -9.87 | -9.87 | +0.00 | -9.87 |
+| 2026-09-23 | `FUL` | 30 | — | $50.51 | +0.00 | $50.21 | -9.00 | -9.00 | +0.00 | -9.00 |
+| 2026-09-23 | `NEOV` | 446 | — | $3.40 | +0.00 | $3.17 | -102.58 | -102.58 | +0.00 | -102.58 |
+| 2026-09-23 | `SFIX` | 508 | — | $2.99 | +0.00 | $2.82 | -86.36 | -86.36 | +0.00 | -86.36 |
+| 2026-09-23 | `SNX` | 5 | — | $283.46 | +0.00 | $287.89 | +22.15 | +22.15 | +0.00 | +22.15 |
+| 2026-09-24 | `BB` | 176 | $8.38 | $8.42 | +7.04 | $8.73 | +54.56 | +61.60 | -31.68 | +22.88 |
+| 2026-09-24 | `DRI` | 7 | $213.69 | $208.88 | -33.67 | $207.24 | -11.48 | -45.15 | -43.54 | -55.02 |
+| 2026-09-24 | `FUL` | 30 | $50.21 | $49.29 | -27.60 | $50.00 | +21.30 | -6.30 | -36.60 | -15.30 |
+| 2026-09-24 | `NEOV` | 446 | $3.17 | $2.65 | -231.92 | $2.40 | -113.73 | -345.65 | -334.50 | -448.23 |
+| 2026-09-24 | `SFIX` | 508 | $2.82 | $2.31 | -259.08 | $2.21 | -50.80 | -309.88 | -345.44 | -396.24 |
+| 2026-09-24 | `SNX` | 5 | $287.89 | $262.12 | -128.85 | $259.47 | -13.25 | -142.10 | -106.70 | -119.95 |
 
 ## Each session (cash + holdings state)
 
@@ -169,8 +178,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | +7.38 | $0.15 | ALMU×328, LEN×56 | $8,213.03 | -580.32 | +37.08 | — | — | $0.15 | $8,250.11 | ALMU×328, LEN×56 |
 | 2026-09-18 | +4.86 | $0.15 | ALMU×328, LEN×56 | $8,200.07 | -50.04 | +253.96 | — | — | $0.15 | $8,454.03 | ALMU×328, LEN×56 |
 | 2026-09-21 | +12.87 | $0.15 | ALMU×328, LEN×56 | $8,616.03 | +162.00 | +220.68 | — | — | $0.15 | $8,836.71 | ALMU×328, LEN×56 |
-| 2026-09-22 | -0.50 | $0.15 | ALMU×328, LEN×56 | $8,889.27 | +52.56 | -41.92 | — | — | $0.15 | $8,847.35 | ALMU×328, LEN×56 |
-| 2026-09-23 | +2.29 | $0.15 | ALMU×328, LEN×56 | $9,151.35 | +304.00 | -396.97 | FUL, NEOV, SFIX | ALMU, LEN | $0.15 | $8,721.01 | FUL×60, NEOV×896, SFIX×1017 |
+| 2026-09-22 | -0.50 | $0.15 | ALMU×328, LEN×56 | $8,836.71 | +0.00 | +0.00 | — | — | $0.15 | $8,836.71 | ALMU×328, LEN×56 |
+| 2026-09-23 | +2.29 | $0.15 | ALMU×328, LEN×56 | $9,125.11 | +288.40 | -224.38 | BB, DRI, FUL, NEOV, SFIX, SNX | ALMU, LEN | $110.45 | $8,873.29 | BB×176, DRI×7, FUL×30, NEOV×446, SFIX×508, SNX×5 |
+| 2026-09-24 | -7.66 | $110.45 | BB×176, DRI×7, FUL×30, NEOV×446, SFIX×508, SNX×5 | $8,199.21 | -674.08 | -113.40 | — | — | $110.45 | $8,085.81 | BB×176, DRI×7, FUL×30, NEOV×446, SFIX×508, SNX×5 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -252,15 +262,20 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-18 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.15 | ▲ close $8,454.03 vs 09:30 $8,200.07 (session +253.96) | 16:00 close · cash $0.15 · equity $8,454.03 vs 09:30 $8,200.07 (+253.96; session marks +253.96) · 2 name(s) marked open→close (per-name table). ALMU×328 09:30 $11.64 → close $12.72 +355.88; LEN×56 09:30 $78.25 → close $76.43 -101.92 | — |
 | 2026-09-21 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.15 | ▲ 09:30 equity $8,616.03 vs yday $8,454.03 (+162.00) | 09:30 open · cash $0.15 (unchanged overnight, no fees) · equity $8,616.03 vs prior close $8,454.03 (+162.00) · 2 name(s) re-marked at the open (per-name table). ALMU×328 yday $12.72 → 09:30 $13.12 +131.20; LEN×56 yday $76.43 → 09:30 $76.98 +30.80 | — |
 | 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.15 | ▲ close $8,836.71 vs 09:30 $8,616.03 (session +220.68) | 16:00 close · cash $0.15 · equity $8,836.71 vs 09:30 $8,616.03 (+220.68; session marks +220.68) · 2 name(s) marked open→close (per-name table). ALMU×328 09:30 $13.12 → close $13.61 +159.08; LEN×56 09:30 $76.98 → close $78.08 +61.60 | — |
-| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.15 | ▲ 09:30 equity $8,889.27 vs yday $8,836.71 (+52.56) | 09:30 open · cash $0.15 (unchanged overnight, no fees) · equity $8,889.27 vs prior close $8,836.71 (+52.56) · 2 name(s) re-marked at the open (per-name table). ALMU×328 yday $13.61 → 09:30 $13.62 +3.28; LEN×56 yday $78.08 → 09:30 $78.96 +49.28 | — |
-| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.15 | ▼ close $8,847.35 vs 09:30 $8,889.27 (session -41.92) | 16:00 close · cash $0.15 · equity $8,847.35 vs 09:30 $8,889.27 (-41.92; session marks -41.92) · 2 name(s) marked open→close (per-name table). ALMU×328 09:30 $13.62 → close $13.54 -26.24; LEN×56 09:30 $78.96 → close $78.68 -15.68 | — |
-| 2026-09-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.15 | ▲ 09:30 equity $9,151.35 vs yday $8,847.35 (+304.00) | 09:30 open · cash $0.15 (unchanged overnight, no fees) · equity $9,151.35 vs prior close $8,847.35 (+304.00) · 2 name(s) re-marked at the open (per-name table). ALMU×328 yday $13.54 → 09:30 $13.90 +118.08; LEN×56 yday $78.68 → 09:30 $82.00 +185.92 | — |
-| 2026-09-23 09:30 ET | **SELL** | `ALMU` | 328 | $13.90 | $4.32 | $+40.65 | $4,555.03 | ▲ +40.65 after sell → book $9,147.03; vs 09:30 mark -4.32 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-23 09:30 ET | **SELL** | `LEN` | 56 | $82.00 | $2.20 | $+72.36 | $9,144.83 | ▲ +72.36 after sell → book $9,144.83; vs 09:30 mark -2.20 | dropped from list after 5 sess (min 5) | — |
-| 2026-09-23 09:30 ET | **BUY** | `FUL` | 60 | $50.51 | $2.17 | — | $6,112.06 | — | baseline list, no extra gate; list overnight; 🔵; ret5=-3.5; leftover $3048.28 | join🔴 sector🟡 gen🟢 news🟡 digest🟡 judge🔴 ab🟢 peer🔴 heat🔴 vol🟡 buy🟡 |
-| 2026-09-23 09:30 ET | **BUY** | `NEOV` | 896 | $3.40 | $11.56 | — | $3,054.10 | — | baseline list, no extra gate; list overnight; 🔵; ret5=-4.8; leftover $3048.28 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🔴 vol🔴 buy🟡 |
-| 2026-09-23 09:30 ET | **BUY** | `SFIX` | 1017 | $2.99 | $13.12 | — | $0.15 | — | baseline list, no extra gate; list overnight; ret5=-6.3; leftover $3048.28 | join🔴 sector🟡 gen🟢 news🟡 digest🟢 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
-| 2026-09-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.15 | ▼ close $8,721.01 vs 09:30 $9,151.35 (session -396.97) | 16:00 close · cash $0.15 · equity $8,721.01 vs 09:30 $9,151.35 (-430.34; session marks -396.97) · 3 name(s) marked open→close (per-name table). FUL×60 09:30 $50.51 → close $50.21 -18.00; NEOV×896 09:30 $3.40 → close $3.17 -206.08; SFIX×1017 09:30 $2.99 → close $2.82 -172.89 | — |
+| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.15 | ▲ 09:30 equity $8,836.71 vs yday $8,836.71 (+0.00) | 09:30 open · cash $0.15 (unchanged overnight, no fees) · equity $8,836.71 vs prior close $8,836.71 (+0.00) · 2 name(s) re-marked at the open (per-name table). ALMU×328 yday $13.61 → 09:30 $13.61 +0.00; LEN×56 yday $78.08 → 09:30 $78.08 +0.00 | — |
+| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $0.15 | ▲ close $8,836.71 vs 09:30 $8,836.71 (session +0.00) | 16:00 close · cash $0.15 · equity $8,836.71 vs 09:30 $8,836.71 (+0.00; session marks +0.00) · 2 name(s) marked open→close (per-name table). ALMU×328 09:30 $13.61 → close $13.61 +0.00; LEN×56 09:30 $78.08 → close $78.08 +0.00 | — |
+| 2026-09-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $0.15 | ▲ 09:30 equity $9,125.11 vs yday $8,836.71 (+288.40) | 09:30 open · cash $0.15 (unchanged overnight, no fees) · equity $9,125.11 vs prior close $8,836.71 (+288.40) · 2 name(s) re-marked at the open (per-name table). ALMU×328 yday $13.61 → 09:30 $13.82 +68.88; LEN×56 yday $78.08 → 09:30 $82.00 +219.52 | — |
+| 2026-09-23 09:30 ET | **SELL** | `ALMU` | 328 | $13.82 | $4.32 | $+14.41 | $4,528.79 | ▲ +14.41 after sell → book $9,120.79; vs 09:30 mark -4.32 | dropped from list after 5 sess (min 5) | — |
+| 2026-09-23 09:30 ET | **SELL** | `LEN` | 56 | $82.00 | $2.20 | $+72.36 | $9,118.59 | ▲ +72.36 after sell → book $9,118.59; vs 09:30 mark -2.20 | dropped from list after 5 sess (min 5) | — |
+| 2026-09-23 09:30 ET | **BUY** | `BB` | 176 | $8.60 | $2.52 | — | $7,602.47 | — | baseline list, no extra gate; list overnight; 🔵; ret5=-0.4; leftover $1519.76 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `DRI` | 7 | $215.10 | $2.01 | — | $6,094.76 | — | baseline list, no extra gate; list overnight; ret5=-0.6; leftover $1519.76 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `FUL` | 30 | $50.51 | $2.08 | — | $4,577.38 | — | baseline list, no extra gate; list overnight; 🔵; ret5=-2.6; leftover $1519.76 | join🔴 sector🟡 gen🟢 news🟡 digest🟡 judge🔴 ab🟢 peer🔴 heat🟢 vol🟡 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `NEOV` | 446 | $3.40 | $5.75 | — | $3,055.22 | — | baseline list, no extra gate; list overnight; 🔵; ret5=-4.8; leftover $1519.76 | join🟢 sector🟢 gen🟢 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🔴 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `SFIX` | 508 | $2.99 | $6.55 | — | $1,529.75 | — | baseline list, no extra gate; list overnight; ret5=+1.7; leftover $1519.76 | join🔴 sector🟡 gen🟢 news🟡 digest🔴 ab🔴 peer🔴 heat🟢 vol🟢 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `SNX` | 5 | $283.46 | $2.00 | — | $110.45 | — | baseline list, no extra gate; list overnight; 🔵; ⚪; ret5=+2.3; leftover $1519.76 | join🟢 sector🟡 gen🟢 news🟡 digest🟢 judge🟡 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $110.45 | ▼ close $8,873.29 vs 09:30 $9,125.11 (session -224.38) | 16:00 close · cash $110.45 · equity $8,873.29 vs 09:30 $9,125.11 (-251.82; session marks -224.38) · 6 name(s) marked open→close (per-name table). BB×176 09:30 $8.60 → close $8.38 -38.72; DRI×7 09:30 $215.10 → close $213.69 -9.87; FUL×30 09:30 $50.51 → close $50.21 -9.00; NEOV×446 09:30 $3.40 → close $3.17 -102.58; SFIX×508 09:30 $2.99 → close $2.82 -86.36; SNX×5 09:30 $283.46 → close $287.89 +22.15 | — |
+| 2026-09-24 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $110.45 | ▼ 09:30 equity $8,199.21 vs yday $8,873.29 (-674.08) | 09:30 open · cash $110.45 (unchanged overnight, no fees) · equity $8,199.21 vs prior close $8,873.29 (-674.08) · 6 name(s) re-marked at the open (per-name table). BB×176 yday $8.38 → 09:30 $8.42 +7.04; DRI×7 yday $213.69 → 09:30 $208.88 -33.67; FUL×30 yday $50.21 → 09:30 $49.29 -27.60; NEOV×446 yday $3.17 → 09:30 $2.65 -231.92; SFIX×508 yday $2.82 → 09:30 $2.31 -259.08; SNX×5 yday $287.89 → 09:30 $262.12 -128.85 | — |
+| 2026-09-24 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $110.45 | ▼ close $8,085.81 vs 09:30 $8,199.21 (session -113.40) | 16:00 close · cash $110.45 · equity $8,085.81 vs 09:30 $8,199.21 (-113.40; session marks -113.40) · 6 name(s) marked open→close (per-name table). BB×176 09:30 $8.42 → close $8.73 +54.56; DRI×7 09:30 $208.88 → close $207.24 -11.48; FUL×30 09:30 $49.29 → close $50.00 +21.30; NEOV×446 09:30 $2.65 → close $2.40 -113.73; SFIX×508 09:30 $2.31 → close $2.21 -50.80; SNX×5 09:30 $262.12 → close $259.47 -13.25 | — |
 
 ## Not taken
 
@@ -433,16 +448,26 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | `THO` | cash | leftover split 0.05 < 1 share @ 68.39 |
 | 2026-09-22 | `ALMU` | min_hold | dropped but min-hold 4/5 sess — no sell |
 | 2026-09-22 | `LEN` | min_hold | dropped but min-hold 4/5 sess — no sell |
-| 2026-09-22 | `CBRL` | cash | leftover split 0.03 < 1 share @ 45.05 |
-| 2026-09-22 | `CTAS` | cash | leftover split 0.03 < 1 share @ 190.55 |
+| 2026-09-22 | `CBRL` | no_price | no 09:30 open |
+| 2026-09-22 | `CTAS` | no_price | no 09:30 open |
 | 2026-09-22 | `GIS` | cash | leftover split 0.03 < 1 share @ 35.96 |
 | 2026-09-22 | `KBH` | cash | leftover split 0.03 < 1 share @ 49.39 |
-| 2026-09-22 | `PAYX` | cash | leftover split 0.03 < 1 share @ 115.35 |
+| 2026-09-22 | `PAYX` | no_price | no 09:30 open |
+| 2026-09-24 | `BB` | min_hold | dropped but min-hold 1/5 sess — no sell |
+| 2026-09-24 | `DRI` | min_hold | dropped but min-hold 1/5 sess — no sell |
+| 2026-09-24 | `FUL` | min_hold | dropped but min-hold 1/5 sess — no sell |
+| 2026-09-24 | `NEOV` | min_hold | dropped but min-hold 1/5 sess — no sell |
+| 2026-09-24 | `SFIX` | min_hold | dropped but min-hold 1/5 sess — no sell |
+| 2026-09-24 | `SNX` | min_hold | dropped but min-hold 1/5 sess — no sell |
+| 2026-09-24 | `COST` | hard_red | hard-red S=-7.66 sit; no new buys |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `FUL` | 60 | 2026-09-23 @ $50.51 | baseline list, no extra gate; list overnight; 🔵; ret5=-3.5; leftover $3048.28 |
-| `NEOV` | 896 | 2026-09-23 @ $3.40 | baseline list, no extra gate; list overnight; 🔵; ret5=-4.8; leftover $3048.28 |
-| `SFIX` | 1017 | 2026-09-23 @ $2.99 | baseline list, no extra gate; list overnight; ret5=-6.3; leftover $3048.28 |
+| `BB` | 176 | 2026-09-23 @ $8.60 | baseline list, no extra gate; list overnight; 🔵; ret5=-0.4; leftover $1519.76 |
+| `DRI` | 7 | 2026-09-23 @ $215.10 | baseline list, no extra gate; list overnight; ret5=-0.6; leftover $1519.76 |
+| `FUL` | 30 | 2026-09-23 @ $50.51 | baseline list, no extra gate; list overnight; 🔵; ret5=-2.6; leftover $1519.76 |
+| `NEOV` | 446 | 2026-09-23 @ $3.40 | baseline list, no extra gate; list overnight; 🔵; ret5=-4.8; leftover $1519.76 |
+| `SFIX` | 508 | 2026-09-23 @ $2.99 | baseline list, no extra gate; list overnight; ret5=+1.7; leftover $1519.76 |
+| `SNX` | 5 | 2026-09-23 @ $283.46 | baseline list, no extra gate; list overnight; 🔵; ⚪; ret5=+2.3; leftover $1519.76 |

@@ -6,7 +6,7 @@ Research universe (not the live flatten gate). Cash/share/fee rules still apply.
 
 Side **long** · universe `union` · top 8 · rank `list` · size `leftover` · sell `list` · S-boost `none` · union ∩ last_red, no 🚨
 
-Cash book **+1.40%** ($10,140) · signal-only (no cash/fees) was +0.17%. Starts YES **11/29**. Fills 165 · skips 286 · realized $+762.00.
+Cash book **+0.93%** ($10,093) · signal-only (no cash/fees) was +0.15%. Starts YES **10/30**. Fills 170 · skips 295 · realized $+93.52.
 
 ## How this sleeve decides (like you are 10)
 
@@ -54,7 +54,7 @@ Same shape as [FLATTEN_LOOKBACK_ACTION.md](../FLATTEN_LOOKBACK_ACTION.md): the 0
 
 ## State audit
 
-**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $38.85.
+**PASS** · 0 violations. Independent replay of fills never sold an unheld lot and never spent past leftover cash. Close cash $10,048.08.
 
 Per-name 09:30 / close marks **PASS** — overnight $ sums to 09:30 equity vs prior close, and on no-fill days intraday $ sums to close equity vs 09:30. No session is skipped.
 
@@ -376,31 +376,37 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 | `ABVX` | 14 | — | $105.72 | +0.00 | $103.45 | -31.78 | -31.78 | +0.00 | -31.78 |
 | 2026-09-21 | `MLKN` | 73 | — | $20.85 | +0.00 | $20.32 | -38.69 | -38.69 | +0.00 | -38.69 |
 | 2026-09-21 | `THO` | 22 | — | $68.39 | +0.00 | $69.94 | +34.10 | +34.10 | +0.00 | +34.10 |
-| 2026-09-22 | `AEHL` | 186 | $6.92 | $7.13 | +39.06 | $7.61 | +89.28 | +128.34 | -210.18 | -120.90 |
-| 2026-09-22 | `XENE` | 38 | $38.99 | $39.10 | +4.18 | $38.61 | -18.62 | -14.44 | -34.20 | -52.82 |
+| 2026-09-22 | `AEHL` | 186 | $6.92 | $6.92 | +0.00 | $6.92 | +0.00 | +0.00 | -249.24 | -249.24 |
+| 2026-09-22 | `XENE` | 38 | $38.99 | $38.99 | +0.00 | $38.99 | +0.00 | +0.00 | -38.38 | -38.38 |
 | 2026-09-22 | `SION` | 256 | $6.00 | $5.99 | -2.56 | $6.02 | +7.68 | +5.12 | -2.56 | +5.12 |
-| 2026-09-22 | `KDK` | 449 | $3.27 | $3.40 | +58.37 | $3.45 | +22.45 | +80.82 | -8.98 | +13.47 |
+| 2026-09-22 | `KDK` | 449 | $3.27 | $3.27 | +0.00 | $3.27 | +0.00 | +0.00 | -67.35 | -67.35 |
 | 2026-09-22 | `ABVX` | 14 | $103.45 | $103.45 | +0.00 | $103.45 | +0.00 | +0.00 | -31.78 | -31.78 |
-| 2026-09-22 | `MLKN` | 73 | $20.32 | $20.37 | +3.65 | $19.89 | -35.04 | -31.39 | -35.04 | -70.08 |
-| 2026-09-22 | `THO` | 22 | $69.94 | $70.64 | +15.40 | $70.00 | -14.08 | +1.32 | +49.50 | +35.42 |
-| 2026-09-22 | `DLO` | 1 | — | $14.31 | +0.00 | $14.31 | +0.00 | +0.00 | +0.00 | +0.00 |
-| 2026-09-22 | `DEFT` | 27 | — | $0.56 | +0.00 | $0.56 | +0.00 | +0.00 | +0.00 | +0.00 |
-| 2026-09-22 | `ARHS` | 1 | — | $8.73 | +0.00 | $8.73 | +0.00 | +0.00 | +0.00 | +0.00 |
+| 2026-09-22 | `MLKN` | 73 | $20.32 | $20.32 | +0.00 | $20.32 | +0.00 | +0.00 | -38.69 | -38.69 |
+| 2026-09-22 | `THO` | 22 | $69.94 | $69.94 | +0.00 | $69.94 | +0.00 | +0.00 | +34.10 | +34.10 |
+| 2026-09-22 | `DEFT` | 26 | — | $0.58 | +0.00 | $0.53 | -1.30 | -1.30 | +0.00 | -1.30 |
 | 2026-09-22 | `MX` | 4 | — | $3.18 | +0.00 | $3.20 | +0.08 | +0.08 | +0.00 | +0.08 |
-| 2026-09-22 | `EMAT` | 4 | — | $3.48 | +0.00 | $3.39 | -0.36 | -0.36 | +0.00 | -0.36 |
-| 2026-09-23 | `AEHL` | 186 | $7.61 | $7.62 | +1.86 | $8.22 | +112.53 | +114.39 | -119.04 | -6.51 |
-| 2026-09-23 | `XENE` | 38 | $38.61 | $39.51 | +34.20 | $36.56 | -112.10 | -77.90 | -18.62 | -130.72 |
+| 2026-09-23 | `AEHL` | 186 | $6.92 | $7.62 | +130.20 | $8.23 | +113.46 | +243.66 | -119.04 | -5.58 |
+| 2026-09-23 | `XENE` | 38 | $38.99 | $39.51 | +19.76 | $36.56 | -112.10 | -92.34 | -18.62 | -130.72 |
 | 2026-09-23 | `SION` | 256 | $6.02 | $6.03 | +2.56 | $5.51 | -133.12 | -130.56 | +7.68 | -125.44 |
-| 2026-09-23 | `KDK` | 449 | $3.45 | $3.17 | -125.72 | $2.97 | -89.80 | -215.52 | -112.25 | -202.05 |
+| 2026-09-23 | `KDK` | 449 | $3.27 | $3.19 | -35.92 | $2.97 | -98.78 | -134.70 | -103.27 | -202.05 |
 | 2026-09-23 | `ABVX` | 14 | $103.45 | $98.30 | -72.10 | $94.13 | -58.38 | -130.48 | -103.88 | -162.26 |
-| 2026-09-23 | `MLKN` | 73 | $19.89 | $19.76 | -9.49 | $20.04 | +20.44 | +10.95 | -79.57 | -59.13 |
-| 2026-09-23 | `THO` | 22 | $70.00 | $71.41 | +31.02 | $72.30 | +19.58 | +50.60 | +66.44 | +86.02 |
-| 2026-09-23 | `DLO` | 1 | $14.31 | $14.26 | -0.05 | $14.06 | -0.20 | -0.25 | -0.05 | -0.25 |
-| 2026-09-23 | `DEFT` | 27 | $0.56 | $0.58 | +0.41 | $0.53 | -1.11 | -0.70 | +0.41 | -0.70 |
-| 2026-09-23 | `ARHS` | 1 | $8.73 | $9.32 | +0.59 | $9.02 | -0.30 | +0.29 | +0.59 | +0.29 |
+| 2026-09-23 | `MLKN` | 73 | $20.32 | $19.76 | -40.88 | $20.04 | +20.44 | -20.44 | -79.57 | -59.13 |
+| 2026-09-23 | `THO` | 22 | $69.94 | $71.41 | +32.34 | $72.31 | +19.80 | +52.14 | +66.44 | +86.24 |
+| 2026-09-23 | `DEFT` | 26 | $0.53 | $0.57 | +1.17 | $0.53 | -1.07 | +0.10 | -0.13 | -1.20 |
 | 2026-09-23 | `MX` | 4 | $3.20 | $3.19 | -0.04 | $3.22 | +0.12 | +0.08 | +0.04 | +0.16 |
-| 2026-09-23 | `EMAT` | 4 | $3.39 | $3.64 | +1.00 | $3.33 | -1.22 | -0.22 | +0.64 | -0.58 |
-| 2026-09-23 | `THM` | 1 | — | $2.86 | +0.00 | $2.81 | -0.05 | -0.05 | +0.00 | -0.05 |
+| 2026-09-23 | `PGEN` | 1 | — | $7.95 | +0.00 | $7.44 | -0.51 | -0.51 | +0.00 | -0.51 |
+| 2026-09-23 | `DNA` | 1 | — | $9.13 | +0.00 | $8.58 | -0.55 | -0.55 | +0.00 | -0.55 |
+| 2026-09-24 | `AEHL` | 186 | $8.23 | $8.21 | -3.72 | — | +0.00 | -3.72 | -9.30 | — |
+| 2026-09-24 | `XENE` | 38 | $36.56 | $36.50 | -2.28 | — | +0.00 | -2.28 | -133.00 | — |
+| 2026-09-24 | `SION` | 256 | $5.51 | $5.50 | -2.56 | — | +0.00 | -2.56 | -128.00 | — |
+| 2026-09-24 | `KDK` | 449 | $2.97 | $2.96 | -4.49 | — | +0.00 | -4.49 | -206.54 | — |
+| 2026-09-24 | `ABVX` | 14 | $94.13 | $92.97 | -16.24 | — | +0.00 | -16.24 | -178.50 | — |
+| 2026-09-24 | `MLKN` | 73 | $20.04 | $19.96 | -5.84 | — | +0.00 | -5.84 | -64.97 | — |
+| 2026-09-24 | `THO` | 22 | $72.31 | $72.58 | +5.94 | — | +0.00 | +5.94 | +92.18 | — |
+| 2026-09-24 | `DEFT` | 26 | $0.53 | $0.52 | -0.35 | $0.53 | +0.30 | -0.05 | -1.55 | -1.25 |
+| 2026-09-24 | `MX` | 4 | $3.22 | $3.17 | -0.20 | $3.18 | +0.04 | -0.16 | -0.04 | +0.00 |
+| 2026-09-24 | `PGEN` | 1 | $7.44 | $7.38 | -0.06 | $7.70 | +0.32 | +0.26 | -0.57 | -0.25 |
+| 2026-09-24 | `DNA` | 1 | $8.58 | $8.50 | -0.08 | $10.25 | +1.75 | +1.67 | -0.63 | +1.12 |
 
 ## Each session (cash + holdings state)
 
@@ -433,8 +439,9 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-17 | +7.38 | $1.16 | AVAH×86, WAY×47, SWRD×617, ALHC×119, PLAY×180, DVLT×7721, USDE×203, NMRA×1404 | $9,564.09 | -34.90 | +264.66 | — | — | $1.16 | $9,828.75 | AVAH×86, WAY×47, SWRD×617, ALHC×119, PLAY×180, DVLT×7721, USDE×203, NMRA×1404 |
 | 2026-09-18 | +4.86 | $1.16 | AVAH×86, WAY×47, SWRD×617, ALHC×119, PLAY×180, DVLT×7721, USDE×203, NMRA×1404 | $10,264.25 | +435.50 | -98.20 | — | — | $1.16 | $10,166.04 | AVAH×86, WAY×47, SWRD×617, ALHC×119, PLAY×180, DVLT×7721, USDE×203, NMRA×1404 |
 | 2026-09-21 | +12.87 | $1.16 | AVAH×86, WAY×47, SWRD×617, ALHC×119, PLAY×180, DVLT×7721, USDE×203, NMRA×1404 | $10,833.72 | +667.68 | -391.34 | AEHL, XENE, SION, KDK, ABVX, MLKN, THO | AVAH, WAY, SWRD, ALHC, PLAY, DVLT, USDE, NMRA | $107.30 | $10,350.61 | AEHL×186, XENE×38, SION×256, KDK×449, ABVX×14, MLKN×73, THO×22 |
-| 2026-09-22 | -0.50 | $107.30 | AEHL×186, XENE×38, SION×256, KDK×449, ABVX×14, MLKN×73, THO×22 | $10,468.71 | +118.10 | +51.39 | DLO, DEFT, ARHS, MX, EMAT | — | $41.74 | $10,519.34 | AEHL×186, XENE×38, SION×256, KDK×449, ABVX×14, MLKN×73, THO×22, DLO×1, DEFT×27, ARHS×1, MX×4, EMAT×4 |
-| 2026-09-23 | +2.29 | $41.74 | AEHL×186, XENE×38, SION×256, KDK×449, ABVX×14, MLKN×73, THO×22, DLO×1, DEFT×27, ARHS×1, MX×4, EMAT×4 | $10,383.58 | -135.76 | -243.61 | THM | — | $38.85 | $10,139.94 | AEHL×186, XENE×38, SION×256, KDK×449, ABVX×14, MLKN×73, THO×22, DLO×1, DEFT×27, ARHS×1, MX×4, EMAT×4, THM×1 |
+| 2026-09-22 | -0.50 | $107.30 | AEHL×186, XENE×38, SION×256, KDK×449, ABVX×14, MLKN×73, THO×22 | $10,348.05 | -2.56 | +6.46 | DEFT, MX | — | $79.13 | $10,354.14 | AEHL×186, XENE×38, SION×256, KDK×449, ABVX×14, MLKN×73, THO×22, DEFT×26, MX×4 |
+| 2026-09-23 | +2.29 | $79.13 | AEHL×186, XENE×38, SION×256, KDK×449, ABVX×14, MLKN×73, THO×22, DEFT×26, MX×4 | $10,391.23 | +37.09 | -250.69 | PGEN, DNA | — | $61.88 | $10,140.37 | AEHL×186, XENE×38, SION×256, KDK×449, ABVX×14, MLKN×73, THO×22, DEFT×26, MX×4, PGEN×1, DNA×1 |
+| 2026-09-24 | -7.66 | $61.88 | AEHL×186, XENE×38, SION×256, KDK×449, ABVX×14, MLKN×73, THO×22, DEFT×26, MX×4, PGEN×1, DNA×1 | $10,110.49 | -29.88 | +2.41 | — | AEHL, XENE, SION, KDK, ABVX, MLKN, THO | $10,048.08 | $10,092.58 | DEFT×26, MX×4, PGEN×1, DNA×1 |
 
 ## Fills (09:30 open snapshot, then buys / sells, then 16:00 close)
 
@@ -653,16 +660,23 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-21 09:30 ET | **BUY** | `MLKN` | 73 | $20.85 | $2.21 | — | $1,613.94 | — | union ∩ last_red, no 🚨; gate last_red=True; list overnight; ret5=-2.5; leftover $1537.43 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🟢 peer🟢 heat🔴 vol🟢 buy🟡 |
 | 2026-09-21 09:30 ET | **BUY** | `THO` | 22 | $68.39 | $2.06 | — | $107.30 | — | union ∩ last_red, no 🚨; gate last_red=True; list overnight; ret5=-7.0; leftover $1537.43 | join🟢 sector🔴 gen🟢 news🟡 digest🟡 ab🔴 peer🔴 heat🔴 vol🟢 buy🟡 |
 | 2026-09-21 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $107.30 | ▼ close $10,350.61 vs 09:30 $10,833.72 (session -391.34) | 16:00 close · cash $107.30 · equity $10,350.61 vs 09:30 $10,833.72 (-483.11; session marks -391.34) · 7 name(s) marked open→close (per-name table). AEHL×186 09:30 $8.26 → close $6.92 -249.24; XENE×38 09:30 $40.00 → close $38.99 -38.38; SION×256 09:30 $6.00 → close $6.00 +0.00; KDK×449 09:30 $3.42 → close $3.27 -67.35; ABVX×14 09:30 $105.72 → close $103.45 -31.78; MLKN×73 09:30 $20.85 → close $20.32 -38.69; THO×22 09:30 $68.39 → close $69.94 +34.10 | — |
-| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $107.30 | ▲ 09:30 equity $10,468.71 vs yday $10,350.61 (+118.10) | 09:30 open · cash $107.30 (unchanged overnight, no fees) · equity $10,468.71 vs prior close $10,350.61 (+118.10) · 7 name(s) re-marked at the open (per-name table). AEHL×186 yday $6.92 → 09:30 $7.13 +39.06; XENE×38 yday $38.99 → 09:30 $39.10 +4.18; SION×256 yday $6.00 → 09:30 $5.99 -2.56; KDK×449 yday $3.27 → 09:30 $3.40 +58.37; ABVX×14 yday $103.45 → 09:30 $103.45 +0.00; MLKN×73 yday $20.32 → 09:30 $20.37 +3.65; THO×22 yday $69.94 → 09:30 $70.64 +15.40 | — |
-| 2026-09-22 09:30 ET | **BUY** | `DLO` | 1 | $14.31 | $0.15 | — | $92.85 | — | union ∩ last_red, no 🚨; gate last_red=True; list flatten; ret5=-3.6; leftover $15.33 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🟢 peer🔴 heat🟢 vol🔴 buy🟡 |
-| 2026-09-22 09:30 ET | **BUY** | `DEFT` | 27 | $0.56 | $0.23 | — | $77.49 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer,yday_mover; ret5=-1.7; leftover $15.33 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-22 09:30 ET | **BUY** | `ARHS` | 1 | $8.73 | $0.09 | — | $68.67 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable; 🔵; ret5=-2.8; leftover $15.33 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
-| 2026-09-22 09:30 ET | **BUY** | `MX` | 4 | $3.18 | $0.14 | — | $55.81 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_gainer,yday_mover; ret5=+11.1; leftover $15.33 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
-| 2026-09-22 09:30 ET | **BUY** | `EMAT` | 4 | $3.48 | $0.15 | — | $41.74 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_mover; ret5=+3.0; leftover $15.33 | join🔴 sector🔴 gen🔴 news🟡 digest🟡 judge🔴 ab🔴 heat🟡 vol🟢 buy🟡 |
-| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $41.74 | ▲ close $10,519.34 vs 09:30 $10,468.71 (session +51.39) | 16:00 close · cash $41.74 · equity $10,519.34 vs 09:30 $10,468.71 (+50.63; session marks +51.39) · 12 name(s) marked open→close (per-name table). AEHL×186 09:30 $7.13 → close $7.61 +89.28; XENE×38 09:30 $39.10 → close $38.61 -18.62; SION×256 09:30 $5.99 → close $6.02 +7.68; KDK×449 09:30 $3.40 → close $3.45 +22.45; ABVX×14 09:30 $103.45 → close $103.45 +0.00; MLKN×73 09:30 $20.37 → close $19.89 -35.04; THO×22 09:30 $70.64 → close $70.00 -14.08; DLO×1 09:30 $14.31 → close $14.31 +0.00; DEFT×27 09:30 $0.56 → close $0.56 +0.00; ARHS×1 09:30 $8.73 → close $8.73 +0.00; MX×4 09:30 $3.18 → close $3.20 +0.08; EMAT×4 09:30 $3.48 → close $3.39 -0.36 | — |
-| 2026-09-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $41.74 | ▼ 09:30 equity $10,383.58 vs yday $10,519.34 (-135.76) | 09:30 open · cash $41.74 (unchanged overnight, no fees) · equity $10,383.58 vs prior close $10,519.34 (-135.76) · 12 name(s) re-marked at the open (per-name table). AEHL×186 yday $7.61 → 09:30 $7.62 +1.86; XENE×38 yday $38.61 → 09:30 $39.51 +34.20; SION×256 yday $6.02 → 09:30 $6.03 +2.56; KDK×449 yday $3.45 → 09:30 $3.17 -125.72; ABVX×14 yday $103.45 → 09:30 $98.30 -72.10; MLKN×73 yday $19.89 → 09:30 $19.76 -9.49; THO×22 yday $70.00 → 09:30 $71.41 +31.02; DLO×1 yday $14.31 → 09:30 $14.26 -0.05; DEFT×27 yday $0.56 → 09:30 $0.58 +0.41; ARHS×1 yday $8.73 → 09:30 $9.32 +0.59; MX×4 yday $3.20 → 09:30 $3.19 -0.04; EMAT×4 yday $3.39 → 09:30 $3.64 +1.00 | — |
-| 2026-09-23 09:30 ET | **BUY** | `THM` | 1 | $2.86 | $0.03 | — | $38.85 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_gainer; ret5=+0.0; leftover $5.22 | join🔴 sector🟡 gen🟢 news🟡 digest🟡 judge🔴 ab🔴 peer🟢 heat🔴 vol🟡 buy🟡 |
-| 2026-09-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $38.85 | ▼ close $10,139.94 vs 09:30 $10,383.58 (session -243.61) | 16:00 close · cash $38.85 · equity $10,139.94 vs 09:30 $10,383.58 (-243.64; session marks -243.61) · 13 name(s) marked open→close (per-name table). AEHL×186 09:30 $7.62 → close $8.22 +112.53; XENE×38 09:30 $39.51 → close $36.56 -112.10; SION×256 09:30 $6.03 → close $5.51 -133.12; KDK×449 09:30 $3.17 → close $2.97 -89.80; ABVX×14 09:30 $98.30 → close $94.13 -58.38; MLKN×73 09:30 $19.76 → close $20.04 +20.44; THO×22 09:30 $71.41 → close $72.30 +19.58; DLO×1 09:30 $14.26 → close $14.06 -0.20; DEFT×27 09:30 $0.58 → close $0.53 -1.11; ARHS×1 09:30 $9.32 → close $9.02 -0.30; MX×4 09:30 $3.19 → close $3.22 +0.12; EMAT×4 09:30 $3.64 → close $3.33 -1.22; THM×1 09:30 $2.86 → close $2.81 -0.05 | — |
+| 2026-09-22 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $107.30 | ▼ 09:30 equity $10,348.05 vs yday $10,350.61 (-2.56) | 09:30 open · cash $107.30 (unchanged overnight, no fees) · equity $10,348.05 vs prior close $10,350.61 (-2.56) · 7 name(s) re-marked at the open (per-name table). AEHL×186 yday $6.92 → 09:30 $6.92 +0.00; XENE×38 yday $38.99 → 09:30 $38.99 +0.00; SION×256 yday $6.00 → 09:30 $5.99 -2.56; KDK×449 yday $3.27 → 09:30 $3.27 +0.00; ABVX×14 yday $103.45 → 09:30 $103.45 +0.00; MLKN×73 yday $20.32 → 09:30 $20.32 +0.00; THO×22 yday $69.94 → 09:30 $69.94 +0.00 | — |
+| 2026-09-22 09:30 ET | **BUY** | `DEFT` | 26 | $0.58 | $0.23 | — | $91.99 | — | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer,yday_mover; ret5=-1.7; leftover $15.33 | join🟢 sector🔴 gen🔴 news🟡 digest🟢 ab🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-22 09:30 ET | **BUY** | `MX` | 4 | $3.18 | $0.14 | — | $79.13 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_gainer,yday_mover; ret5=+11.1; leftover $15.33 | join🟢 sector🔴 gen🔴 news🟡 digest🟡 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-22 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $79.13 | ▲ close $10,354.14 vs 09:30 $10,348.05 (session +6.46) | 16:00 close · cash $79.13 · equity $10,354.14 vs 09:30 $10,348.05 (+6.09; session marks +6.46) · 9 name(s) marked open→close (per-name table). AEHL×186 09:30 $6.92 → close $6.92 +0.00; XENE×38 09:30 $38.99 → close $38.99 +0.00; SION×256 09:30 $5.99 → close $6.02 +7.68; KDK×449 09:30 $3.27 → close $3.27 +0.00; ABVX×14 09:30 $103.45 → close $103.45 +0.00; MLKN×73 09:30 $20.32 → close $20.32 +0.00; THO×22 09:30 $69.94 → close $69.94 +0.00; DEFT×26 09:30 $0.58 → close $0.53 -1.30; MX×4 09:30 $3.18 → close $3.20 +0.08 | — |
+| 2026-09-23 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $79.13 | ▲ 09:30 equity $10,391.23 vs yday $10,354.14 (+37.09) | 09:30 open · cash $79.13 (unchanged overnight, no fees) · equity $10,391.23 vs prior close $10,354.14 (+37.09) · 9 name(s) re-marked at the open (per-name table). AEHL×186 yday $6.92 → 09:30 $7.62 +130.20; XENE×38 yday $38.99 → 09:30 $39.51 +19.76; SION×256 yday $6.02 → 09:30 $6.03 +2.56; KDK×449 yday $3.27 → 09:30 $3.19 -35.92; ABVX×14 yday $103.45 → 09:30 $98.30 -72.10; MLKN×73 yday $20.32 → 09:30 $19.76 -40.88; THO×22 yday $69.94 → 09:30 $71.41 +32.34; DEFT×26 yday $0.53 → 09:30 $0.57 +1.17; MX×4 yday $3.20 → 09:30 $3.19 -0.04 | — |
+| 2026-09-23 09:30 ET | **BUY** | `PGEN` | 1 | $7.95 | $0.08 | — | $71.10 | — | union ∩ last_red, no 🚨; gate last_red=True; list flatten; 🔵; ⚪; ret5=+12.4; leftover $11.30 | join🟢 sector🟢 gen🟢 news🟢 digest🟢 ab🟢 peer🟢 heat🟢 vol🟡 buy🟡 |
+| 2026-09-23 09:30 ET | **BUY** | `DNA` | 1 | $9.13 | $0.09 | — | $61.88 | — | union ∩ last_red, no 🚨; gate last_red=True; list yday_gainer,yday_mover; 🔵; ret5=+13.8; leftover $11.30 | join🔴 sector🟢 gen🟢 news🟡 digest🟢 ab🔴 peer🟢 heat🟢 vol🟢 buy🟡 |
+| 2026-09-23 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $61.88 | ▼ close $10,140.37 vs 09:30 $10,391.23 (session -250.69) | 16:00 close · cash $61.88 · equity $10,140.37 vs 09:30 $10,391.23 (-250.86; session marks -250.69) · 11 name(s) marked open→close (per-name table). AEHL×186 09:30 $7.62 → close $8.23 +113.46; XENE×38 09:30 $39.51 → close $36.56 -112.10; SION×256 09:30 $6.03 → close $5.51 -133.12; KDK×449 09:30 $3.19 → close $2.97 -98.78; ABVX×14 09:30 $98.30 → close $94.13 -58.38; MLKN×73 09:30 $19.76 → close $20.04 +20.44; THO×22 09:30 $71.41 → close $72.31 +19.80; DEFT×26 09:30 $0.57 → close $0.53 -1.07; MX×4 09:30 $3.19 → close $3.22 +0.12; PGEN×1 09:30 $7.95 → close $7.44 -0.51; DNA×1 09:30 $9.13 → close $8.58 -0.55 | — |
+| 2026-09-24 09:30 ET | **OPEN** | 09:30 open | — | — | — | — | $61.88 | ▼ 09:30 equity $10,110.49 vs yday $10,140.37 (-29.88) | 09:30 open · cash $61.88 (unchanged overnight, no fees) · equity $10,110.49 vs prior close $10,140.37 (-29.88) · 11 name(s) re-marked at the open (per-name table). AEHL×186 yday $8.23 → 09:30 $8.21 -3.72; XENE×38 yday $36.56 → 09:30 $36.50 -2.28; SION×256 yday $5.51 → 09:30 $5.50 -2.56; KDK×449 yday $2.97 → 09:30 $2.96 -4.49; ABVX×14 yday $94.13 → 09:30 $92.97 -16.24; MLKN×73 yday $20.04 → 09:30 $19.96 -5.84; THO×22 yday $72.31 → 09:30 $72.58 +5.94; DEFT×26 yday $0.53 → 09:30 $0.52 -0.35; MX×4 yday $3.22 → 09:30 $3.17 -0.20; PGEN×1 yday $7.44 → 09:30 $7.38 -0.06; DNA×1 yday $8.58 → 09:30 $8.50 -0.08 | — |
+| 2026-09-24 09:30 ET | **SELL** | `AEHL` | 186 | $8.21 | $2.59 | $-14.44 | $1,586.35 | ▼ -14.44 after sell → book $10,107.90; vs 09:30 mark -2.59 | dropped from list after 3 sess (min 3) | join🔴 sector🟢 gen🔴 news🔴 digest🟢 ab🔴 peer🔴 heat🔴 vol🔴 buy🟡 |
+| 2026-09-24 09:30 ET | **SELL** | `XENE` | 38 | $36.50 | $2.13 | $-137.23 | $2,971.22 | ▼ -137.23 after sell → book $10,105.77; vs 09:30 mark -2.13 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-24 09:30 ET | **SELL** | `SION` | 256 | $5.50 | $3.36 | $-134.66 | $4,375.86 | ▼ -134.66 after sell → book $10,102.41; vs 09:30 mark -3.36 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-24 09:30 ET | **SELL** | `KDK` | 449 | $2.96 | $5.88 | $-218.21 | $5,699.03 | ▼ -218.21 after sell → book $10,096.54; vs 09:30 mark -5.87 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-24 09:30 ET | **SELL** | `ABVX` | 14 | $92.97 | $2.05 | $-182.58 | $6,998.55 | ▼ -182.58 after sell → book $10,094.48; vs 09:30 mark -2.06 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-24 09:30 ET | **SELL** | `MLKN` | 73 | $19.96 | $2.23 | $-69.41 | $8,453.40 | ▼ -69.41 after sell → book $10,092.25; vs 09:30 mark -2.23 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-24 09:30 ET | **SELL** | `THO` | 22 | $72.58 | $2.08 | $+88.05 | $10,048.08 | ▲ +88.05 after sell → book $10,090.17; vs 09:30 mark -2.08 | dropped from list after 3 sess (min 3) | — |
+| 2026-09-24 16:00 ET | **CLOSE** | 16:00 close | — | — | — | — | $10,048.08 | ▲ close $10,092.58 vs 09:30 $10,110.49 (session +2.41) | 16:00 close · cash $10,048.08 · equity $10,092.58 vs 09:30 $10,110.49 (-17.91; session marks +2.41) · 4 name(s) marked open→close (per-name table). DEFT×26 09:30 $0.52 → close $0.53 +0.30; MX×4 09:30 $3.17 → close $3.18 +0.04; PGEN×1 09:30 $7.38 → close $7.70 +0.32; DNA×1 09:30 $8.50 → close $10.25 +1.75 | — |
 
 ## Not taken
 
@@ -901,8 +915,8 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-15 | `PANW` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `LFMD` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `HQ` | hard_red | hard-red S=-3.84 sit; no new buys |
+| 2026-09-15 | `XHLD` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-15 | `ARQQ` | hard_red | hard-red S=-3.84 sit; no new buys |
-| 2026-09-15 | `SIMO` | hard_red | hard-red S=-3.84 sit; no new buys |
 | 2026-09-17 | `AVAH` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-17 | `WAY` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-17 | `SWRD` | min_hold | dropped but min-hold 1/3 sess — no sell |
@@ -933,42 +947,42 @@ Cash does not change overnight and no fees print until a fill. While a lot stays
 | 2026-09-22 | `ABVX` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-22 | `MLKN` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-22 | `THO` | min_hold | dropped but min-hold 1/3 sess — no sell |
-| 2026-09-22 | `META` | cash | leftover split 15.33 < 1 share @ 731.40 |
-| 2026-09-22 | `BRVE` | cash | leftover split 15.33 < 1 share @ 24.57 |
-| 2026-09-23 | `AEHL` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-22 | `DLO` | no_price | no 09:30 open |
+| 2026-09-22 | `WBD` | no_price | no 09:30 open |
+| 2026-09-22 | `RMBS` | no_price | no 09:30 open |
+| 2026-09-22 | `EMAT` | no_price | no 09:30 open |
+| 2026-09-22 | `BRVE` | no_price | no 09:30 open |
 | 2026-09-23 | `XENE` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-23 | `SION` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-23 | `KDK` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-23 | `ABVX` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-23 | `MLKN` | min_hold | dropped but min-hold 2/3 sess — no sell |
 | 2026-09-23 | `THO` | min_hold | dropped but min-hold 2/3 sess — no sell |
-| 2026-09-23 | `DLO` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-23 | `DEFT` | min_hold | dropped but min-hold 1/3 sess — no sell |
-| 2026-09-23 | `ARHS` | min_hold | dropped but min-hold 1/3 sess — no sell |
 | 2026-09-23 | `MX` | min_hold | dropped but min-hold 1/3 sess — no sell |
-| 2026-09-23 | `EMAT` | min_hold | dropped but min-hold 1/3 sess — no sell |
-| 2026-09-23 | `HALO` | cash | leftover split 5.22 < 1 share @ 116.84 |
-| 2026-09-23 | `PGEN` | cash | leftover split 5.22 < 1 share @ 7.95 |
-| 2026-09-23 | `FTRE` | cash | leftover split 5.22 < 1 share @ 20.25 |
-| 2026-09-23 | `VKTX` | cash | leftover split 5.22 < 1 share @ 41.76 |
-| 2026-09-23 | `SGRY` | cash | leftover split 5.22 < 1 share @ 15.70 |
-| 2026-09-23 | `VICR` | cash | leftover split 5.22 < 1 share @ 266.50 |
-| 2026-09-23 | `DNA` | cash | leftover split 5.22 < 1 share @ 9.13 |
+| 2026-09-23 | `HALO` | cash | leftover split 11.30 < 1 share @ 116.85 |
+| 2026-09-23 | `FTRE` | cash | leftover split 11.30 < 1 share @ 20.25 |
+| 2026-09-23 | `MAZE` | cash | leftover split 11.30 < 1 share @ 28.30 |
+| 2026-09-23 | `BLLN` | cash | leftover split 11.30 < 1 share @ 116.00 |
+| 2026-09-23 | `VICR` | cash | leftover split 11.30 < 1 share @ 266.50 |
+| 2026-09-24 | `DEFT` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-24 | `MX` | min_hold | dropped but min-hold 2/3 sess — no sell |
+| 2026-09-24 | `PGEN` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-24 | `DNA` | min_hold | dropped but min-hold 1/3 sess — no sell |
+| 2026-09-24 | `BAH` | hard_red | hard-red S=-7.66 sit; no new buys |
+| 2026-09-24 | `EGHT` | hard_red | hard-red S=-7.66 sit; no new buys |
+| 2026-09-24 | `SRFM` | hard_red | hard-red S=-7.66 sit; no new buys |
+| 2026-09-24 | `DH` | hard_red | hard-red S=-7.66 sit; no new buys |
+| 2026-09-24 | `LU` | hard_red | hard-red S=-7.66 sit; no new buys |
+| 2026-09-24 | `PANW` | hard_red | hard-red S=-7.66 sit; no new buys |
+| 2026-09-24 | `AMPL` | hard_red | hard-red S=-7.66 sit; no new buys |
+| 2026-09-24 | `CGEM` | hard_red | hard-red S=-7.66 sit; no new buys |
 
 ## Still open (marked at last close)
 
 | Ticker | Shares | Entry | Why |
 |---|---:|---|---|
-| `AEHL` | 186 | 2026-09-21 @ $8.26 | union ∩ last_red, no 🚨; gate last_red=True; list yday_mover; ret5=+7.7; leftover $1537.43 |
-| `XENE` | 38 | 2026-09-21 @ $40.00 | union ∩ last_red, no 🚨; gate last_red=True; list yday_mover; ret5=-32.2; leftover $1537.43 |
-| `SION` | 256 | 2026-09-21 @ $6.00 | union ∩ last_red, no 🚨; gate last_red=True; list yday_mover; ret5=-24.1; leftover $1537.43 |
-| `KDK` | 449 | 2026-09-21 @ $3.42 | union ∩ last_red, no 🚨; gate last_red=True; list yday_mover; ret5=-12.3; leftover $1537.43 |
-| `ABVX` | 14 | 2026-09-21 @ $105.72 | union ∩ last_red, no 🚨; gate last_red=True; list overnight; ret5=-11.5; leftover $1537.43 |
-| `MLKN` | 73 | 2026-09-21 @ $20.85 | union ∩ last_red, no 🚨; gate last_red=True; list overnight; ret5=-2.5; leftover $1537.43 |
-| `THO` | 22 | 2026-09-21 @ $68.39 | union ∩ last_red, no 🚨; gate last_red=True; list overnight; ret5=-7.0; leftover $1537.43 |
-| `DLO` | 1 | 2026-09-22 @ $14.31 | union ∩ last_red, no 🚨; gate last_red=True; list flatten; ret5=-3.6; leftover $15.33 |
-| `DEFT` | 27 | 2026-09-22 @ $0.56 | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer,yday_mover; ret5=-1.7; leftover $15.33 |
-| `ARHS` | 1 | 2026-09-22 @ $8.73 | union ∩ last_red, no 🚨; gate last_red=True; list probable; 🔵; ret5=-2.8; leftover $15.33 |
+| `DEFT` | 26 | 2026-09-22 @ $0.58 | union ∩ last_red, no 🚨; gate last_red=True; list probable,yday_gainer,yday_mover; ret5=-1.7; leftover $15.33 |
 | `MX` | 4 | 2026-09-22 @ $3.18 | union ∩ last_red, no 🚨; gate last_red=True; list yday_gainer,yday_mover; ret5=+11.1; leftover $15.33 |
-| `EMAT` | 4 | 2026-09-22 @ $3.48 | union ∩ last_red, no 🚨; gate last_red=True; list yday_mover; ret5=+3.0; leftover $15.33 |
-| `THM` | 1 | 2026-09-23 @ $2.86 | union ∩ last_red, no 🚨; gate last_red=True; list yday_gainer; ret5=+0.0; leftover $5.22 |
+| `PGEN` | 1 | 2026-09-23 @ $7.95 | union ∩ last_red, no 🚨; gate last_red=True; list flatten; 🔵; ⚪; ret5=+12.4; leftover $11.30 |
+| `DNA` | 1 | 2026-09-23 @ $9.13 | union ∩ last_red, no 🚨; gate last_red=True; list yday_gainer,yday_mover; 🔵; ret5=+13.8; leftover $11.30 |
