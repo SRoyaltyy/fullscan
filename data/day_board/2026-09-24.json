@@ -1,19 +1,18 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T05:58:55.733181-04:00",
+  "generated_at": "2026-09-24T05:59:23.755623-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-24_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-24/_board.json` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-09-24_actions.json` \u2014 missing",
-    "MISSING News judge MD `01_daily/news/2026-09-24_judge.md` \u2014 missing",
-    "MISSING AB checklist enriched `data/ab_checklist/2026-09-24_ab_checklist_enriched.csv` \u2014 missing"
+    "MISSING News judge MD `01_daily/news/2026-09-24_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 3,
-    "fail": 2,
+    "fail": 1,
     "n": 8
   },
   "processes": [
@@ -538,9 +537,9 @@
       "key": "ab",
       "name": "AB checklist",
       "yaml": "ab_checklist.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -561,15 +560,19 @@
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-24_ab_checklist_enriched.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=11666",
+          "size": 3297063,
+          "said": "207 rows",
+          "bullets": [
+            "FORM, MU, KOPN, HOOD, LEGH, KMDA, FCX, NVT"
+          ]
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "207 rows",
+      "bullets": [
+        "FORM, MU, KOPN, HOOD, LEGH"
+      ]
     },
     {
       "key": "catalyst",
@@ -712,11 +715,13 @@
           "name": "AB checklist enriched",
           "path": "data/ab_checklist/2026-09-24_ab_checklist_enriched.csv",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=11666",
+          "size": 3297063,
+          "said": "207 rows",
+          "bullets": [
+            "FORM, MU, KOPN, HOOD, LEGH, KMDA, FCX, NVT"
+          ]
         },
         {
           "key": "join",
@@ -1277,6 +1282,24 @@
         }
       ],
       "preview": "5898 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 KEYS, FORM, NVDA, SMTC, ACMR"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T05:59:23.426507-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-24_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 3297063,
+          "preview": "11666 rows \u00b7 Ticker,score,score_source,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month, \u00b7 FORM, MU, KOPN, HOOD, LEGH"
+        }
+      ],
+      "preview": "11666 rows \u00b7 Ticker,score,score_source,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month, \u00b7 FORM, MU, KOPN, HOOD, LEGH"
     }
   ],
   "href": {

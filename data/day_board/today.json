@@ -1,12 +1,12 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T05:58:55.733181-04:00",
+  "generated_at": "2026-09-24T05:59:23.755623-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 3,
+    "ok": 4,
     "partial": 3,
-    "fail": 2,
+    "fail": 1,
     "n": 8
   },
   "buy_1d": [],
@@ -15,24 +15,6 @@
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "join",
-      "title": "Join / match rank",
-      "date": "2026-09-24",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-24T05:56:35.141293-04:00",
-      "files": [
-        {
-          "path": "data/join/2026-09-24_ranked.csv",
-          "ok": true,
-          "reason": "",
-          "size": 2145343,
-          "preview": "5898 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, CDNA, KEYS, NVT, FORM"
-        }
-      ],
-      "preview": "5898 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 HALO, CDNA, KEYS, NVT, FORM"
-    },
     {
       "key": "ab",
       "title": "AB checklist",
@@ -193,6 +175,24 @@
         }
       ],
       "preview": "5898 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 KEYS, FORM, NVDA, SMTC, ACMR"
+    },
+    {
+      "key": "ab",
+      "title": "AB checklist",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T05:59:23.426507-04:00",
+      "files": [
+        {
+          "path": "data/ab_checklist/2026-09-24_ab_checklist_enriched.csv",
+          "ok": true,
+          "reason": "",
+          "size": 3297063,
+          "preview": "11666 rows \u00b7 Ticker,score,score_source,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month, \u00b7 FORM, MU, KOPN, HOOD, LEGH"
+        }
+      ],
+      "preview": "11666 rows \u00b7 Ticker,score,score_source,n_peers,n_peers_present,perf_week,perf_month,perf_quarter,change,peer_med_week,peer_med_month, \u00b7 FORM, MU, KOPN, HOOD, LEGH"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
