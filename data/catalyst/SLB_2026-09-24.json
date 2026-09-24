@@ -1,0 +1,246 @@
+{
+  "ticker": "SLB",
+  "analysis_date": "2026-09-24",
+  "current_price": "52.00",
+  "net_signal": "Strong Bullish",
+  "conviction": 48,
+  "catalyst_stack": "On 31 Aug 2026 SLB agreed to acquire Kelvion for about $3.4 billion cash plus $700 million of assumed debt to add data-center thermal management, targeting a H1 2027 close, after completing the S&P Global upstream software purchase on 1 Sep 2026. The 24 Jul 2026 Q2 print beat with $8.97 billion revenue and $0.55 adjusted EPS, while awards from Kuwait Oil Company (30 Jun 2026), Equinor at Johan Sverdrup (16 Sep 2026), and OQEP in Oman (24 Sep 2026) plus the 14 Jul 2026 Liberty Energy data-center alliance extended international and digital backlog. That tape is checked by the 24 Apr 2026 Q1 profit decline as Middle East & Asia revenue fell 10% on Iran-related disruptions and a nearly 5% share drop on 14 Sep 2026 after Saudi Arabia shut the East-West pipeline. CEO Olivier Le Peuch sold 35,000 shares at $60 on 1 Sep 2026 under a 10b5-1 plan, and the 7 May 2026 $2 billion senior-notes issue plus Kelvion cash leave the bull case sensitive to FCF and ME/Asia stability.",
+  "key_assumption": "Kelvion is financed and closed in H1 2027 without cutting the cash-return program, and Iran/Saudi disruptions do not force a 2026 guidance cut.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Successful acquisition/synergy realization",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 9,
+      "event_ids": [
+        12,
+        2,
+        13
+      ],
+      "event_date": "2026-08-31",
+      "evidence_excerpt": "SLB will pay approximately $3.4 billion in cash to acquire Kelvion and assume another $700 million of debt.",
+      "source_urls": [
+        "https://www.reuters.com/business/energy/slb-acquire-kelvion-34-billion-2026-08-31/",
+        "https://www.slb.com/newsroom/press-release/2026/pr-2026-0831"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 8,
+      "event_ids": [
+        9
+      ],
+      "event_date": "2026-07-24",
+      "evidence_excerpt": "Revenue: $8.97 billion (up 3% sequentially from $8.72 billion in Q1 2026; up 5% YoY",
+      "source_urls": [
+        "https://www.reuters.com/business/energy/top-us-oilfield-services-firm-slb-beats-quarterly-profit-estimates-2026-07-24/",
+        "https://www.businesswire.com/news/home/20260722694386/en/SLB-Announces-Second-Quarter-2026-Results"
+      ],
+      "confidence": 93
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 7,
+      "event_ids": [
+        7,
+        19,
+        0
+      ],
+      "event_date": "2026-06-30",
+      "evidence_excerpt": "SLB has been awarded a seven-year contract by Kuwait Oil Company (KOC) under the Ahmadi Innovation Valley (AIV) initiative",
+      "source_urls": [
+        "https://worldoil.com/news/2026/6/30/slb-wins-seven-year-koc-innovation-contract-focused-on-ai-production-optimization/",
+        "https://investorcenter.slb.com/news-releases/news-release-details/slb-awarded-seven-year-contract-under-kuwait-oil-companys-ahmadi/"
+      ],
+      "confidence": 91
+    },
+    {
+      "taxonomy": "Product launch/FDA approval/regulatory greenlight",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 6,
+      "event_ids": [
+        10
+      ],
+      "event_date": "2026-08-24",
+      "evidence_excerpt": "SLB has launched its ExaCT electrical downhole coiled tubing control system",
+      "source_urls": [
+        "https://www.worldoil.com/news/2026/8/24/slb-launches-exact-platform-for-electrically-controlled-well-interventions/"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Favorable court ruling/patent grant",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 6,
+      "event_ids": [
+        6
+      ],
+      "event_date": "2026-06-12",
+      "evidence_excerpt": "the Fifth Circuit ruled on June 12, 2026, in SLB\u2019s favor on the core issue",
+      "source_urls": [
+        "https://www.ca5.uscourts.gov/opinions/pub/25/25-50594-CV0.pdf",
+        "https://news.bloomberglaw.com/daily-labor-report/schlumberger-beats-drillers-bid-to-undo-overtime-loss-on-appeal"
+      ],
+      "confidence": 84
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 5,
+      "event_ids": [
+        8,
+        1,
+        5
+      ],
+      "event_date": "2026-07-14",
+      "evidence_excerpt": "SLB (NYSE: SLB) and Liberty Energy Inc. (NYSE: LBRT) announced a strategic alliance to deliver modular infrastructure",
+      "source_urls": [
+        "https://libertyenergy.com/slb-liberty-energy-to-form-strategic-alliance-for-data-center-infrastructure-and-power/",
+        "https://www.reuters.com/business/energy/slb-partners-with-liberty-energy-supply-modular-parts-power-data-centers-2026-07-14/"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        17,
+        11
+      ],
+      "event_date": "2026-09-14",
+      "evidence_excerpt": "UBS analyst Josh Silverstein raised his price target on SLB (Schlumberger Ltd.) to $75 from $72 while maintaining a Buy rating.",
+      "source_urls": [
+        "https://www.tipranks.com/news/the-fly/slb-price-target-raised-to-75-from-72-at-ubs-thefly-news",
+        "https://www.benzinga.com/quote/SLB/price-targets"
+      ],
+      "confidence": 82
+    },
+    {
+      "taxonomy": "Geopolitical event that hurts sector (sanctions, conflict disrupting supply chain)",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [
+        18
+      ],
+      "event_date": "2026-09-14",
+      "evidence_excerpt": "SLB's shares fell by nearly 5% that trading session.",
+      "source_urls": [
+        "https://www.fool.com/investing/2026/09/14/why-slb-stock-slumped-today/"
+      ],
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Earnings miss (revenue, EBITDA, EPS)",
+      "type": "negative",
+      "category": "internal",
+      "status": "MISS",
+      "base_weight": 8,
+      "adjusted_weight": 0,
+      "event_ids": [
+        3
+      ],
+      "event_date": "2026-04-24",
+      "evidence_excerpt": "SLB reported Q1 2026 revenue of $8.72 billion (+3% YoY) but lower profit, with adjusted EPS of $0.52",
+      "source_urls": [
+        "https://www.reuters.com/business/energy/oilfield-services-provider-slb-posts-lower-quarterly-profit-iran-war-hit-2026-04-24/",
+        "https://www.nasdaq.com/press-release/slb-announces-first-quarter-2026-results-2026-04-24"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Insider selling (especially by CEO/CFO, or clustered sales)",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 6,
+      "event_ids": [
+        14
+      ],
+      "event_date": "2026-09-01",
+      "evidence_excerpt": "Sep 1, 2026: Sold 35,000 shares at $60.00 (value ~$2.1M); holds 1,296,328 shares.",
+      "source_urls": [
+        "https://www.stocktitan.net/sec-filings/SLB/form-4.html",
+        "https://www.secform4.com/insider-trading/87347.htm"
+      ],
+      "confidence": 85
+    },
+    {
+      "taxonomy": "Accumulation of debt/retention or deepening of toxic assets/failed divestiture",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 5,
+      "event_ids": [
+        4
+      ],
+      "event_date": "2026-05-07",
+      "evidence_excerpt": "SLB issued $2 billion in guaranteed senior notes on May 7, 2026",
+      "source_urls": [
+        "https://www.sec.gov/Archives/edgar/data/87347/000119312526201211/d85569d424b3.htm",
+        "https://www.tradingview.com/news/tradingview:88071fcfd94b9:0-slb-prices-2-0bn-of-guaranteed-senior-notes-across-2031-2033-and-2036-maturities/"
+      ],
+      "confidence": 90
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "event_date": "2026-09-23",
+      "evidence_excerpt": "SLB has been awarded a contract by OQ Exploration & Production (OQEP) to deliver the Bisat-B Expansion Production Facility in Oman.",
+      "source_urls": [
+        "https://www.muscatdaily.com/2026/09/23/slb-awarded-major-contract-by-oqep-for-bisat-b-expansion/",
+        "https://www.energy-pedia.com/news/oman/slb-awarded-major-contract-by-oqep-for-integrated-facility-expansion-in-oman-205422"
+      ],
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 7,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Lawsuit / legal action",
+      "type": "negative",
+      "event_date": "2026-04-20",
+      "evidence_excerpt": "Schlumberger Technology Corp. mismanages its 401(k) plan by using forfeited contributions to make its own payments to the plan",
+      "source_urls": [
+        "https://news.bloomberglaw.com/employee-benefits/schlumbergers-handling-of-401k-forfeitures-drives-new-lawsuit"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bullish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-09-24",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

@@ -1,0 +1,292 @@
+{
+  "ticker": "BKR",
+  "analysis_date": "2026-09-24",
+  "current_price": "58.55",
+  "net_signal": "Strong Bullish",
+  "conviction": 95,
+  "catalyst_stack": "Baker Hughes closed Chart Industries on 2026-07-16 as a third segment targeting about $325 million of annualized cost synergies, after conditional EU antitrust clearance on 2026-07-10. The company beat in Q1 on 2026-04-23 and Q2 on 2026-07-26, then raised FY 2026 guidance on 2026-09-09 to $28.5-$30.3 billion of revenue and $4.875-$5.475 billion of adjusted EBITDA to include Chart. Order momentum included Venture Global LNG packages on 2026-09-13, a bp UK North Sea StimFORCE award on 2026-09-04, Kuwait Oil Company digital work on 2026-08-11, and geothermal pacts with Mantle Reach (2026-06-24) and Helmerich & Payne (2026-05-26), plus the 2026-04-13 agreement to sell Waygate to Hexagon for about $1.45 billion. Offsets are the 2026-07-15 $2 billion term loans for Chart, CEO 10b5-1 selling on 2026-06-22, a 2026-07-09 Houston plant WARN for 174 jobs, and Barclays' 2026-05-07 cut to Equal Weight even as it lifted its target to $74.",
+  "key_assumption": "Chart's $325 million synergy target is delivered without impairment, IET LNG/RPO converts on schedule, and OFSE activity does not roll over with oil prices.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Successful acquisition/synergy realization",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 8,
+      "event_ids": [
+        8
+      ],
+      "event_date": "2026-07-16",
+      "evidence_excerpt": "Baker Hughes has completed its acquisition of Chart Industries, expanding its portfolio of industrial energy technologies",
+      "source_urls": [
+        "https://www.worldoil.com/news/2026/7/16/baker-hughes-closes-chart-acquisition-adds-third-operating-segment/",
+        "https://www.tipranks.com/news/company-announcements/baker-hughes-completes-strategic-acquisition-of-chart-industries"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Regulatory approval (FDA, FCC, FTC clearance)",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 8,
+      "event_ids": [
+        10
+      ],
+      "event_date": "2026-07-10",
+      "evidence_excerpt": "Baker Hughes wins conditional EU nod for $13.6 billion Chart deal",
+      "source_urls": [
+        "https://www.reuters.com/legal/litigation/baker-hughes-wins-conditional-eu-nod-136-billion-chart-deal-2026-07-10/"
+      ],
+      "confidence": 85
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 7,
+      "event_ids": [
+        1,
+        3,
+        5,
+        13
+      ],
+      "event_date": "2026-09-04",
+      "evidence_excerpt": "announced Friday a significant award from bp to provide offshore stimulation services across the company's UK North Sea operations.",
+      "source_urls": [
+        "https://www.globenewswire.com/news-release/2026/09/04/3356487/0/en/baker-hughes-awarded-offshore-production-enhancement-and-stimulation-services-contract-by-bp.html",
+        "https://www.worldoil.com/news/2026/9/4/baker-hughes-wins-bp-well-stimulation-contract-for-uk-north-sea/"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 7,
+      "event_ids": [
+        7,
+        18
+      ],
+      "event_date": "2026-07-26",
+      "evidence_excerpt": "Orders of $10.5 billion, including $7.1 billion of IET orders.",
+      "source_urls": [
+        "https://www.energy-pedia.com/news/general/baker-hughes-announces-q2-results-204727",
+        "https://s21.q4cdn.com/548121662/files/doc_earnings/2026/q2/earnings-result/Q2-2026-Earnings-Release.pdf"
+      ],
+      "confidence": 93
+    },
+    {
+      "taxonomy": "Earnings guidance raise",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 7,
+      "event_ids": [
+        2
+      ],
+      "event_date": "2026-09-09",
+      "evidence_excerpt": "Baker Hughes (BKR) raised its financial guidance for the full year on Wednesday after factoring in a boost from its recent acquisition of Chart Industries.",
+      "source_urls": [
+        "https://seekingalpha.com/news/4641160-baker-hughes-hikes-guidance-for-2026-revenue-ebitda-to-reflect-chart-industries-deal",
+        "https://www.reuters.com/business/energy/baker-hughes-raises-annual-forecasts-after-chart-acquisition-2026-09-09/"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 6,
+      "event_ids": [
+        12,
+        16
+      ],
+      "event_date": "2026-06-24",
+      "evidence_excerpt": "deliver up to 500 MW of installed capacity, providing geothermal energy at an industrial scale",
+      "source_urls": [
+        "https://www.energyglobal.com/other-renewables/26062026/baker-hughes-and-mantle-reach-power-announce-strategic-agreement/",
+        "https://www.reuters.com/legal/litigation/baker-hughes-mantle-reach-sign-deal-500-mw-geothermal-power-north-america-2026-06-24/"
+      ],
+      "confidence": 92
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        0,
+        4,
+        6
+      ],
+      "event_date": "2026-08-25",
+      "evidence_excerpt": "Aug 25, 2026: RBC Capital (Keith Mackey) boosted target to $76 from $71 (maintained Outperform).",
+      "source_urls": [
+        "https://www.pricetargets.com/NASDAQ/BKR/"
+      ],
+      "confidence": 78
+    },
+    {
+      "taxonomy": "Deleveraging/sale of toxic assets/spin-off of loss-making unit",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        19
+      ],
+      "event_date": "2026-04-13",
+      "evidence_excerpt": "Baker Hughes has struck a deal to sell its Waygate Technologies business to Sweden-based Hexagon for about $1.45 billion in cash",
+      "source_urls": [
+        "https://investors.bakerhughes.com/news/press-releases/news-details/2026/Baker-Hughes-Announces-Sale-of-Waygate-Technologies-to-Hexagon/default.aspx",
+        "https://www.reuters.com/business/energy/baker-hughes-sells-waygate-unit-hexagon-about-145-billion-2026-04-13/"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Accumulation of debt/retention or deepening of toxic assets/failed divestiture",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 7,
+      "event_ids": [
+        9
+      ],
+      "event_date": "2026-07-15",
+      "evidence_excerpt": "entered into two separate $1 billion senior unsecured term loan facilities (totaling $2 billion) on July 15, 2026",
+      "source_urls": [
+        "https://seekingalpha.com/filing/309864466",
+        "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001701605/71b1198d-cff2-48a2-96da-5f390b2ecd5e.pdf"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Operational setback (trial halted, satellite failure, production halt)",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 7,
+      "event_ids": [
+        11
+      ],
+      "event_date": "2026-07-09",
+      "evidence_excerpt": "Baker Hughes filed a WARN notice for the layoff of 174 workers tied to the closure of its Emmott Road facility",
+      "source_urls": [
+        "https://www.houstonpublicmedia.org/articles/news/energy-environment/2026/07/09/556695/baker-hughes-to-layoff-174-workers-at-northwest-houston-plant/",
+        "https://www.click2houston.com/news/local/2026/07/09/baker-hughes-to-close-houston-facility-lay-off-174-employees/"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Insider selling (especially by CEO/CFO, or clustered sales)",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 6,
+      "event_ids": [
+        15
+      ],
+      "event_date": "2026-06-22",
+      "evidence_excerpt": "Exercised 99,911 stock options (at $35.55 exercise price) and sold 181,411 shares in open-market transactions",
+      "source_urls": [
+        "https://www.stocktitan.net/sec-filings/BKR/form-4-baker-hughes-co-insider-trading-activity-3e68605b5d4b.html",
+        "https://www.secform4.com/insider-trading/1701605.htm"
+      ],
+      "confidence": 86
+    },
+    {
+      "taxonomy": "Analyst downgrade/price target cut",
+      "type": "negative",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 4,
+      "event_ids": [
+        17
+      ],
+      "event_date": "2026-05-07",
+      "evidence_excerpt": "On May 7, 2026, Barclays downgraded Baker Hughes (BKR) from Overweight to Equal Weight, while raising its price target from $62 to $74.",
+      "source_urls": [
+        "https://www.tipranks.com/news/the-fly/baker-hughes-downgraded-to-equal-weight-from-overweight-at-barclays-thefly-news",
+        "https://www.marketbeat.com/all-access/ratings-screener/details/2396494/"
+      ],
+      "confidence": 84
+    },
+    {
+      "taxonomy": "Earnings beat (revenue, EBITDA, EPS)",
+      "type": "positive",
+      "event_date": "2026-04-23",
+      "evidence_excerpt": "Baker Hughes Non-GAAP EPS of $0.58 beats by $0.09, revenue of $6.59B beats by $260M",
+      "source_urls": [
+        "https://seekingalpha.com/news/4579072-baker-hughes-non-gaap-eps-of-0_58-beats-by-0_09-revenue-of-6_59b-beats-by-260m",
+        "https://s21.q4cdn.com/548121662/files/doc_earnings/2026/q1/earnings-result/Q1-2026-Earnings-Release_Final-Draft_4-23-2026.pdf"
+      ],
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 7,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "event_date": "2026-06-25",
+      "evidence_excerpt": "Baker Hughes has been awarded a contract by Azule Energy to provide subsea production systems for the Greater PAJ development offshore Angola",
+      "source_urls": [
+        "https://worldoil.com/news/2026/6/25/baker-hughes-wins-subsea-systems-contract-for-angola-s-greater-paj-field/"
+      ],
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 7,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "event_date": "2026-08-11",
+      "evidence_excerpt": "Baker Hughes has secured a multi-year contract with Kuwait Oil Company (KOC) to develop and deploy technologies aimed at improving upstream production",
+      "source_urls": [
+        "https://worldoil.com/news/2026/8/11/baker-hughes-wins-koc-contract-for-upstream-ai-production-technology/",
+        "https://egyptoil-gas.com/news/baker-hughes-wins-multi-year-koc-contract-for-ahmadi-valley/"
+      ],
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 7,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Contract win/expansion",
+      "type": "positive",
+      "event_date": "2026-09-02",
+      "evidence_excerpt": "Baker Hughes has secured a multi-year contract with Pakistan\u2019s Oil & Gas Development Company (OGDC) to improve production from its mature oil and gas assets",
+      "source_urls": [
+        "https://www.energyconnects.com/news/oil/2026/september/baker-hughes-secures-multi-year-ogdc-deal-to-boost-pakistan-oil-and-gas-output/",
+        "https://www.nation.com.pk/02-Sep-2026/ogdc-us-company-sign-contract-boost-oil-gas-production-mature-assets"
+      ],
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 7,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bearish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-09-24",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

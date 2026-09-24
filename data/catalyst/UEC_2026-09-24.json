@@ -1,0 +1,125 @@
+{
+  "ticker": "UEC",
+  "analysis_date": "2026-09-24",
+  "current_price": "9.82",
+  "net_signal": "Bullish",
+  "conviction": 38,
+  "catalyst_stack": "On March 23, 2026, UEC secured Wyoming DEQ approval and began operating three additional Christensen Ranch header houses, a concrete ISR ramp step. On April 8, 2026, TCEQ clearance let Burke Hollow start production as the first new U.S. ISR uranium mine in more than a decade. On May 1, 2026, UEC closed a $40 million Uranium Royalty Corp subscription-receipt investment that lifted its URC stake to about 18.4%. Later prints \u2014 a June 9 zero-sales Q3 loss, a July 23 board re-election, and Jefferies\u2019 September 3 Hold/$11.50 initiation \u2014 did not reverse the production-permit catalyst stack.",
+  "key_assumption": "Burke Hollow and Christensen header-house ramps are treated as the equity driver and can scale toward sales without a dilutive raise, so the Q3 loss and empty offtake book are ramp timing rather than demand failure.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Product launch/FDA approval/regulatory greenlight",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "event_ids": [
+        2,
+        1
+      ],
+      "event_date": "2026-04-08",
+      "evidence_excerpt": "received approval from the Texas Commission on Environmental Quality (\"TCEQ\") and commenced production at its Burke Hollow project",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/uranium-energy-corp-commences-production-at-burke-hollow-the-worlds-newest-operating-isr-uranium-mine-302736496.html",
+        "https://www.ans.org/news/2026-04-17/article-7945/uranium-energy-corp-begins-production-at-burke-hollow/"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Operational milestone (e.g., first patient dosed, satellite commissioned)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 9,
+      "event_ids": [
+        2,
+        1
+      ],
+      "event_date": "2026-04-08",
+      "evidence_excerpt": "received approval from the Texas Commission on Environmental Quality (\"TCEQ\") and commenced production at its Burke Hollow project",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/uranium-energy-corp-commences-production-at-burke-hollow-the-worlds-newest-operating-isr-uranium-mine-302736496.html",
+        "https://www.ans.org/news/2026-04-17/article-7945/uranium-energy-corp-begins-production-at-burke-hollow/"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Strategic partnership/alliance",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 7,
+      "event_ids": [
+        3
+      ],
+      "event_date": "2026-05-01",
+      "evidence_excerpt": "private placement of subscription receipts of the Company (the \"Subscription Receipts\") to Uranium Energy Corp. (\"UEC\") at a price of US$3.64",
+      "source_urls": [
+        "https://www.newswire.ca/news-releases/uranium-royalty-announces-closing-of-subscription-receipt-private-placement-894945023.html",
+        "https://finance.yahoo.com/markets/stocks/articles/uranium-royalty-announces-closing-subscription-205500963.html"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Operational milestone (e.g., first patient dosed, satellite commissioned)",
+      "type": "positive",
+      "event_date": "2026-03-23",
+      "evidence_excerpt": "secured State regulatory approval and commenced operating three additional header houses in wellfield 11 at Christensen Ranch",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/uranium-energy-corp-receives-approval-for-expanded-production-at-christensen-ranch-and-secures-nrc-docketing-for-us-conversion-facility-302721755.html"
+      ],
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 9,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "dilutive offerings",
+      "type": "negative",
+      "event_date": "2026-06-09",
+      "evidence_excerpt": "issued 1,390,880 of the Company's common stock under the 2025 ATM Offering Agreement for gross cash proceeds of $22.11 million",
+      "source_urls": [
+        "https://www.uraniumenergy.com/_resources/filings/2026/2026-Q3-Form-10-Q.pdf?v=060902",
+        "https://www.sec.gov/Archives/edgar/data/1334933/000143774926019889/uec20260430_10q.htm"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "earnings miss",
+      "type": "negative",
+      "event_date": "2026-06-09",
+      "evidence_excerpt": "posting a loss of $0.11 per share against analysts' estimates of $0.03 per share",
+      "source_urls": [
+        "https://www.fool.com/investing/2026/06/10/why-uranium-energy-stock-is-plummeting-again-today/"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "regulatory actions",
+      "type": "negative",
+      "event_date": "2026-07-20",
+      "evidence_excerpt": "arbitrary and capricious and/or in violation of a statutory provision by failing to protect groundwater",
+      "source_urls": [
+        "https://www.southtexasnews.com/goliad_advance_guard/judge-reverses-tceq-decision-on-uec-groundwater-permits/article_2143e710-2228-4efb-ae4c-dd7ddd4677ed.html"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bearish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-09-24",
+  "cutoff_date": null,
+  "role": "override_captain"
+}

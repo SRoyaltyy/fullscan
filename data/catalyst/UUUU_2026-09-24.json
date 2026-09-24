@@ -1,0 +1,270 @@
+{
+  "ticker": "UUUU",
+  "analysis_date": "2026-09-24",
+  "current_price": "11.47",
+  "net_signal": "Strong Bullish",
+  "conviction": 97,
+  "catalyst_stack": "On June 18, 2026 Energy Fuels received a conditional $725 million U.S. Office of Strategic Capital loan, then on June 23 signed a ~$1.9 billion cash-and-stock deal to buy magnet maker Vacuumschmelze. White Mesa\u2019s ~$104 million heavy rare earth expansion entered construction on July 29, and on August 19 the mill\u2019s terbium oxide was qualified by a major Japanese permanent-magnet manufacturer. FIRB cleared the Australian Strategic Materials purchase on April 23 and ASM holders voted 98.23% in favor on August 12, while CEO Ross Bhappu (effective April 15) and the chairman bought shares on July 7\u20138. Offsetting the stack, Q1 EPS missed at -$0.04 and Q2 printed a $33.4 million loss on $25.1 million of revenue, and House Democrats opened an August 10 insider-trading inquiry tied to White Mesa and Bears Ears.",
+  "key_assumption": "VAC and ASM close on stated terms, the conditional $725 million OSC facility is actually funded, and White Mesa heavy-REE output scales into sales before further equity dilution or a mill-level political/environmental injunction.",
+  "catalyst_grid": [
+    {
+      "taxonomy": "Government policy (tariffs, subsidies, mandates)",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 10,
+      "event_ids": [
+        5
+      ],
+      "event_date": "2026-06-18",
+      "evidence_excerpt": "The Company has received a conditional $725 million financing commitment from the Department of War, U.S. Office of Strategic Capital",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/energy-fuels-receives-conditional-us-government-support-to-accelerate-growth-in-rare-earths-and-critical-materials-302803949.html",
+        "https://www.reuters.com/legal/litigation/us-signs-725-million-loan-pact-with-energy-fuels-boost-domestic-rare-earth-2026-06-18/"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Regulatory approval (FDA, FCC, FTC clearance)",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 9,
+      "adjusted_weight": 10,
+      "event_ids": [
+        2
+      ],
+      "event_date": "2026-04-23",
+      "evidence_excerpt": "On April 23, 2026, Australian Strategic Materials Ltd (ASX: ASM) announced that Energy Fuels Inc. ... had received FIRB ... approval",
+      "source_urls": [
+        "https://cdn-api.markitdigital.com/apiman-gateway/ASX/asx-research/1.0/file/2924-03081833-6A1321729&v=undefined",
+        "https://grafa.com/en/news/australia/firb-clears-energy-fuels-acquisition-of-australian-strategic-materials"
+      ],
+      "confidence": 82
+    },
+    {
+      "taxonomy": "Earnings miss (revenue, EBITDA, EPS)",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 8,
+      "adjusted_weight": 10,
+      "event_ids": [
+        3,
+        9
+      ],
+      "event_date": "2026-08-05",
+      "evidence_excerpt": "Total revenues $25,108 ... Net loss attributable to Energy Fuels Inc. (33,378) ... Basic net loss per common share $(0.13)",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/energy-fuels-announces-q2-2026-results-302844191.html",
+        "https://www.newswire.ca/news-releases/energy-fuels-announces-q2-2026-results-832221932.html"
+      ],
+      "confidence": 94
+    },
+    {
+      "taxonomy": "Successful acquisition/synergy realization",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 9,
+      "event_ids": [
+        6,
+        11
+      ],
+      "event_date": "2026-06-23",
+      "evidence_excerpt": "definitive agreement to acquire 100% of Vacuumschmelze GmbH & Co. KG ... for a total cash-and-stock consideration of approximately $1.9 billion",
+      "source_urls": [
+        "https://investors.energyfuels.com/2026-06-23-Energy-Fuels-Announces-Definitive-Agreement-to-Acquire-VAC-for-1-9-Billion-Equity-Value",
+        "https://www.reuters.com/business/energy/energy-fuels-buy-magnet-manufacturer-vacuumschmelze-gmbh-19-billion-2026-06-23/"
+      ],
+      "confidence": 96
+    },
+    {
+      "taxonomy": "Capacity expansion announced (new factory, satellite constellation)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 8,
+      "event_ids": [
+        8
+      ],
+      "event_date": "2026-07-29",
+      "evidence_excerpt": "today announced that construction has begun on an expansion of its White Mesa Mill in Utah (Mill) to enable the large-scale production of heavy rare earth oxides",
+      "source_urls": [
+        "https://investors.energyfuels.com/2026-07-29-Commercial-Scale-Heavy-Rare-Earth-Plant-Now-Under-Construction-in-Utah",
+        "https://www.prnewswire.com/news-releases/commercial-scale-heavy-rare-earth-plant-now-under-construction-in-utah-302837314.html"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Operational milestone (e.g., first patient dosed, satellite commissioned)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 8,
+      "event_ids": [
+        12
+      ],
+      "event_date": "2026-08-19",
+      "evidence_excerpt": "its terbium (Tb) oxide has successfully passed all qualifications for use by one of the world's largest manufacturers of rare earth permanent magnets outside China.",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/heavy-rare-earths-produced-by-energy-fuels-qualified-for-use-by-largest-permanent-magnet-manufacturer-in-japan-302854746.html",
+        "https://www.miningweekly.com/print-version/us-rare-earths-producer-energy-fuels-terbium-meets-japanese-magnet-market-qualification-2026-08-19"
+      ],
+      "confidence": 93
+    },
+    {
+      "taxonomy": "Insider buying (cluster purchases by executives/directors)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 8,
+      "event_ids": [
+        7
+      ],
+      "event_date": "2026-07-07",
+      "evidence_excerpt": "July 7, 2026: Ross R. Bhappu (President & CEO) purchased 74,000 shares at an average price of $13.08",
+      "source_urls": [
+        "https://www.secform4.com/insider-trading/1385849.htm",
+        "https://www.marketbeat.com/stocks/NYSEAMERICAN/UUUU/insider-trades/"
+      ],
+      "confidence": 88
+    },
+    {
+      "taxonomy": "Analyst upgrade/PT increase",
+      "type": "positive",
+      "category": "external",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 7,
+      "event_ids": [
+        13
+      ],
+      "event_date": "2026-09-05",
+      "evidence_excerpt": "Energy Fuels (UUUU) Gets a Buy from Cantor Fitzgerald",
+      "source_urls": [
+        "https://www.theglobeandmail.com/investing/markets/stocks/UUUU/pressreleases/4418924/energy-fuels-uuuu-gets-a-buy-from-cantor-fitzgerald/",
+        "https://www.tipranks.com/news/blurbs/energy-fuels-uuuu-gets-a-buy-from-cantor-fitzgerald-blurbs-news"
+      ],
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Negative personnel change (departures, resignations, scandals)",
+      "type": "negative",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 6,
+      "event_ids": [
+        10
+      ],
+      "event_date": "2026-08-10",
+      "evidence_excerpt": "Congressional Democrats accused the owner of White Mesa Mill in southeastern Utah of insider trading.",
+      "source_urls": [
+        "https://www.deseret.com/business/2026/08/26/house-democrats-investigate-energy-fuels-white-mesa-mill-insider-trading/"
+      ],
+      "confidence": 86
+    },
+    {
+      "taxonomy": "Positive personnel change (new CEO, CFO, board members)",
+      "type": "positive",
+      "category": "internal",
+      "status": "HIT",
+      "base_weight": 4,
+      "adjusted_weight": 4,
+      "event_ids": [
+        1
+      ],
+      "event_date": "2026-04-15",
+      "evidence_excerpt": "Ross R. Bhappu has been appointed the Company's Chief Executive Officer, effective April 15, 2026.",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/ross-bhappu-to-take-over-as-ceo-of-energy-fuels-as-company-enters-next-phase-of-growth-302743843.html",
+        "https://investors.energyfuels.com/2026-04-15-Ross-Bhappu-to-Take-Over-as-CEO-of-Energy-Fuels-as-Company-Enters-Next-Phase-of-Growth"
+      ],
+      "confidence": 95
+    },
+    {
+      "taxonomy": "Short squeeze potential",
+      "type": "positive",
+      "category": "external",
+      "status": "MISS",
+      "base_weight": 3,
+      "adjusted_weight": 0,
+      "event_ids": [
+        5,
+        6,
+        8,
+        12
+      ],
+      "event_date": "2026-09-24",
+      "evidence_excerpt": "Short float 20.77% and days-to-cover 7.48, with a dense positive stack (OSC loan, VAC deal, White Mesa heavy-REE build).",
+      "source_urls": [
+        "https://www.reuters.com/legal/litigation/us-signs-725-million-loan-pact-with-energy-fuels-boost-domestic-rare-earth-2026-06-18/",
+        "https://www.reuters.com/business/energy/energy-fuels-buy-magnet-manufacturer-vacuumschmelze-gmbh-19-billion-2026-06-23/"
+      ],
+      "confidence": 0
+    },
+    {
+      "taxonomy": "Successful acquisition/synergy realization",
+      "type": "positive",
+      "event_date": "2026-08-28",
+      "evidence_excerpt": "today announced it has completed its acquisition of Australian Strategic Materials Limited (ASM)",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/energy-fuels-completes-acquisition-of-australian-strategic-materials-302863022.html"
+      ],
+      "status": "HIT",
+      "base_weight": 7,
+      "adjusted_weight": 9,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Operational milestone (e.g., first patient dosed, satellite commissioned)",
+      "type": "positive",
+      "event_date": "2026-03-25",
+      "evidence_excerpt": "successfully produced its first kilogram (kg) of terbium (Tb) oxide at its White Mesa Mill in Utah",
+      "source_urls": [
+        "https://www.prnewswire.com/news-releases/energy-fuels-announces-first-us-primary-production-of-critical-heavy-rare-earth-material-in-decades-302724441.html"
+      ],
+      "status": "HIT",
+      "base_weight": 6,
+      "adjusted_weight": 8,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Dilutive offerings",
+      "type": "negative",
+      "event_date": "2026-06-30",
+      "evidence_excerpt": "Shares issued for cash by at-the-market offering5,333 103,410",
+      "source_urls": [
+        "https://app.quotemedia.com/data/downloadFiling?webmasterId=101533&ref=320245203&type=HTML&symbol=UUUU&cdn=b38cbddbd862cf81c12eb4a123f13b56&companyName=Energy+Fuels+Inc&formType=10-Q&dateFiled=2026-08-05"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    },
+    {
+      "taxonomy": "Dilutive offerings",
+      "type": "negative",
+      "event_date": "2026-06-23",
+      "evidence_excerpt": "for total consideration of $718 million in cash and 65.853 million newly issued Energy Fuels common shares",
+      "source_urls": [
+        "https://investors.energyfuels.com/2026-06-23-Energy-Fuels-Announces-Definitive-Agreement-to-Acquire-VAC-for-1-9-Billion-Equity-Value"
+      ],
+      "status": "HIT",
+      "base_weight": 5,
+      "adjusted_weight": 5,
+      "confidence": 80
+    }
+  ],
+  "grok_verdict": "Bearish",
+  "search_backend": "grok_native",
+  "generated_at": "2026-09-24",
+  "cutoff_date": null,
+  "role": "override_captain"
+}
