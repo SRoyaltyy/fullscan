@@ -104,6 +104,78 @@ def test_backend_model_override_header() -> None:
     )
 
 
+def test_openclaw_complete_never_deepseek() -> None:
+    from src.openclaw_models import DEFAULT_NEWS_MODEL
+    _reset(openclaw_url="http://gw:18789")
+    config.OPENCLAW_TOKEN = "tok"
+    calls = []
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        calls.append({"url": url, "headers": headers, "body": json})
+        return _fake_response(200, "PONG")
+
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post):
+        text = dc.openclaw_complete(
+            [{"role": "user", "content": "Reply with exactly the word PONG"}],
+            max_tokens=16,
+            backend_model=DEFAULT_NEWS_MODEL,
+            stage_label="ping",
+        )
+    assert text == "PONG"
+    assert calls[0]["url"] == "http://gw:18789/v1/chat/completions"
+    assert calls[0]["headers"]["x-openclaw-model"] == DEFAULT_NEWS_MODEL
+    assert calls[0]["body"]["model"] == config.OPENCLAW_AGENT
+
+
+def test_news_hop_watermarks_openclaw() -> None:
+    from src.news_impact.openclaw_hop import hop as oc_hop
+    from src.news_impact.pipeline import analyze_article
+    from src.openclaw_models import DEFAULT_NEWS_MODEL
+    _reset(openclaw_url="http://gw:18789")
+    config.OPENCLAW_TOKEN = "tok"
+    config.OPENCLAW_NEWS_MODEL = DEFAULT_NEWS_MODEL
+
+    def fake_complete(messages, max_tokens=64, temperature=0.0,
+                      stage_label="", backend_model=None):
+        assert backend_model == "xai/grok-4.3"
+        return (
+            '{"event_class":"factor_impulse","sign":"up","q5":"impulse",'
+            '"constraint":"hormuz","split":false,"split_facts":[],'
+            '"why":"tanker"}'
+        )
+
+    with mock.patch.object(dc, "openclaw_complete", side_effect=fake_complete):
+        parsed, lane, model, log = oc_hop(
+            "news_classify",
+            {"title": "Brent jumps after Hormuz tanker attack"},
+        )
+    assert lane == "openclaw"
+    assert model == DEFAULT_NEWS_MODEL
+    assert parsed and parsed["event_class"] == "factor_impulse"
+    assert log[0]["ok"] is True
+
+    with mock.patch.object(dc, "openclaw_complete", side_effect=fake_complete):
+        row = analyze_article(
+            {"title": "Brent jumps after Hormuz tanker attack"},
+            persist=False, use_openclaw=True,
+        )
+    assert row["lane"] == "openclaw"
+    assert row["model"] == DEFAULT_NEWS_MODEL
+    assert any(h.get("lane") == "openclaw" for h in row["hop_chain"])
+
+
+def test_openclaw_hop_fail_soft_without_gateway() -> None:
+    from src.news_impact.openclaw_hop import hop as oc_hop
+    from src.news_impact.pipeline import analyze_article
+    _reset(openclaw_url="")
+    config.OPENCLAW_TOKEN = ""
+    parsed, lane, model, log = oc_hop("news_classify", {"title": "x"})
+    assert parsed is None
+    assert log[0]["skip"] == "no_gateway"
+    row = analyze_article({"title": "Amgen gets FDA approval"}, persist=False)
+    assert row["lane"] == "deterministic"
+
+
 def test_native_search_note_only_when_tools() -> None:
     _reset(openclaw_url="http://gw:18789")
     seen = {}
@@ -761,6 +833,9 @@ def main() -> None:
         test_gates,
         test_openclaw_primary_wins,
         test_backend_model_override_header,
+        test_openclaw_complete_never_deepseek,
+        test_news_hop_watermarks_openclaw,
+        test_openclaw_hop_fail_soft_without_gateway,
         test_native_search_note_only_when_tools,
         test_fallback_on_gateway_failure,
         test_fallback_on_empty_answer,
