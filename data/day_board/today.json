@@ -1,11 +1,11 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T06:15:19.523928-04:00",
+  "generated_at": "2026-09-24T06:21:53.695610-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 6,
-    "partial": 2,
+    "ok": 4,
+    "partial": 4,
     "fail": 0,
     "n": 8
   },
@@ -110,59 +110,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-09-24",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-24T05:59:43.094390-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-09-24_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1480936,
-          "preview": "1d BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI"
-        },
-        {
-          "path": "data/stock_book/2026-09-24_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-09-24_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2597,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-09-24_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12343,
-          "preview": "2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 12343,
-          "preview": "2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI"
-        },
-        {
-          "path": "01_daily/2026-09-24_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 84487,
-          "preview": "# Stock book \u2014 2026-09-24\n_Generated 2026-09-24T05:57:30.704824-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI \u00b7 2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI \u00b7 # Stock book \u2014 2026-09-24\n_Generated 2026-09-24T05:57:30.704824-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -477,6 +424,73 @@
         }
       ],
       "preview": "# Sector Prediction \u2014 Basic Materials \u2014 2026-09-24\n- ETF: **XLB**\n- rubric: `00_grounding/sectors/basic_materials.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-2.88** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-0.54** (ES -0.64%, HG +0.66%, GC +0.90%, DX -0.02%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **-0.425** (raw -0.425) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Basic Materials 2026-09-24 retry1\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (148,737 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (11,531 characters). \u00b7 keys: model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-24\nGenerated: **2026-09-24T06:11:28.145285-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_at,"
+    },
+    {
+      "key": "sector_one",
+      "title": "Sector predict Energy (4/11)",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T06:21:53.277712-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-24/energy_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 17814,
+          "preview": "# Sector Prediction \u2014 Energy \u2014 2026-09-24\n- ETF: **XLE**\n- rubric: `00_grounding/sectors/energy.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **6.779** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **2.694** (CL -1.59%, QA -1.02%, ES -0.64%, PM:XLE +1.11%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **6.0** (raw 7.538)"
+        },
+        {
+          "path": "01_daily/sectors/2026-09-24/energy_predict_trace.md",
+          "ok": true,
+          "reason": "",
+          "size": 4347,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Energy 2026-09-24\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (151,794 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"WTI crude oil price today September 24 2026\"* \u2192 got 6 results (via ddg)\n- WTI Crude Oil Price Today: $92.71 +3.18% (September 23, 2026) (https://convextrade.com/today/oil-price)\n- Crude Oil - Price - Chart - Historical Data - News (https://tradingeconomics.com/commodity/crude-oil)\n- Crude Oil Futures Price Today (WTI) - Investing.com (https://www.investing.com/commodities/crude-oil)\n**Step 2 \u2014 Research.** The model wanted to know: *\"oil prices rise September 24 2026 Brent WTI supply\"* \u2192 got 6 results (via gnews_rss)\n- Oil (USCrude) Price Forecast for Today, Tomorrow, Next Week, an"
+        },
+        {
+          "path": "01_daily/_transcripts/2026-09-24_sector_energy_predict.json",
+          "ok": true,
+          "reason": "",
+          "size": 185614,
+          "preview": "keys: model, messages"
+        },
+        {
+          "path": "01_daily/2026-09-24_preopen_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 7240,
+          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
+        },
+        {
+          "path": "01_daily/sectors/2026-09-24/_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 1242,
+          "preview": "keys: date, n_ok, n_total, sectors"
+        },
+        {
+          "path": "01_daily/sectors/2026-09-24/_BOARD.md",
+          "ok": true,
+          "reason": "",
+          "size": 1815,
+          "preview": "# Sector Board \u2014 2026-09-24\nGenerated: **2026-09-24T06:21:53.263857-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+        },
+        {
+          "path": "01_daily/sectors/2026-09-24/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 5935,
+          "preview": "keys: date, generated_at, sectors"
+        },
+        {
+          "path": "03_scoreboard/scoreboard.json",
+          "ok": true,
+          "reason": "",
+          "size": 875639,
+          "preview": "keys: runs"
+        }
+      ],
+      "preview": "# Sector Prediction \u2014 Energy \u2014 2026-09-24\n- ETF: **XLE**\n- rubric: `00_grounding/sectors/energy.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **6.779** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **2.694** (CL -1.59%, QA -1.02%, ES -0.64%, PM:XLE +1.11%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **6.0** (raw 7.538) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Energy 2026-09-24\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (151,794 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"WTI crude oil price today September 24 2026\"* \u2192 got 6 results (via ddg)\n- WTI Crude Oil Price Today: $92.71 +3.18% (September 23, 2026) (https://convextrade.com/today/oil-price)\n- Crude Oil - Price - Chart - Historical Data - News (https://tradingeconomics.com/commodity/crude-oil)\n- Crude Oil Futures Price Today (WTI) - Investing.com (https://www.investing.com/commodities/crude-oil)\n**Step 2 \u2014 Research.** The model wanted to know: *\"oil prices rise September 24 2026 B"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
