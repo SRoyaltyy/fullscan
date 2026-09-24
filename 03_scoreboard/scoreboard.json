@@ -26971,18 +26971,113 @@
         "B7_OIL_DOLLAR": 0.5
       },
       "leading_sum": -4.0,
-      "actual_open": null,
-      "actual_close": null,
-      "actual_pct_change": null,
-      "actual_direction": null,
-      "actual_magnitude_band": null,
-      "direction_hit": null,
-      "magnitude_hit": null,
+      "actual_open": 7666.99,
+      "actual_close": 7704.13,
+      "actual_pct_change": -0.02,
+      "actual_direction": "flat",
+      "actual_magnitude_band": "flat",
+      "direction_hit": false,
+      "magnitude_hit": false,
       "divergence_flagged": false,
       "divergence_verdict": null,
-      "per_factor_breakdown": [],
+      "per_factor_breakdown": [
+        {
+          "factor": "B0_ASIA",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B0_EUROPE",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B1_CATALYSTS",
+          "score": -1.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B2_BONDS",
+          "score": -0.5,
+          "status": "neutral"
+        },
+        {
+          "factor": "B3_FEDPATH",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B4_VIX",
+          "score": 0.0,
+          "status": "neutral"
+        },
+        {
+          "factor": "B5_SENTIMENT",
+          "score": 0.5,
+          "status": "neutral"
+        },
+        {
+          "factor": "B6_FUTURES",
+          "score": -0.5,
+          "status": "neutral"
+        },
+        {
+          "factor": "B7_OIL_DOLLAR",
+          "score": 0.5,
+          "status": "neutral"
+        }
+      ],
       "reflection_lesson_ref": null,
-      "sources_used": [],
+      "sources_used": [
+        {
+          "url": "https://www.morningstar.com/news/dow-jones/202609241547/us-treasury-yields-hover-close-to-multiyear-highs-update",
+          "date_accessed": "2026-09-24",
+          "summary": "09-24 was a hangover at 5.12%, not a second yield shock — which is why equities could V without yields collapsing.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.kitco.com/news/article/2026-09-23/spot-gold-drops-4280oz-flash-sp-composite-pmi-improves-584-september",
+          "date_accessed": "2026-09-24",
+          "summary": "58.4 vs 55.2 is the shared root of the 09-23 yield spike and the 09-24 “can’t rally much” cap.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.capitalbrief.com/briefing/us-business-growth-surges-to-fastest-in-five-years-b13faee9-e444-406e-8c29-082e0950fc04/",
+          "date_accessed": "2026-09-24",
+          "summary": "Fastest expansion in five years, with backlogs and prices — the conditional that made “strong data” equity-negative at 5% 10s.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/09/24/us-china-trade-truce-bessent-trump-xi.html",
+          "date_accessed": "2026-09-24",
+          "summary": "Removes the Nov cliff but is a squeeze vs 6–12 month hopes — a modifier, not a risk-on catalyst.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.thestar.com.my/business/business-news/2026/09/24/china-stocks-post-biggest-one-day-drop-in-a-month-on-trump-xi-summit-caution",
+          "date_accessed": "2026-09-24",
+          "summary": "Asia took the short truce as a negative; US SPX/NDX did not — a divergence, not a global risk-off day.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.firstpost.com/business/oil-prices-slip-as-iran-signals-openness-to-diplomacy-to-end-us-iran-war-14048089.html",
+          "date_accessed": "2026-09-24",
+          "summary": "Same Hormuz root, opposite daily sign — oil relief into a 5% 10-year tape is the offset that lets a −0.56% hole close flat.",
+          "verification": "http_403"
+        },
+        {
+          "url": "https://www.cnbc.com/2026/09/24/oracle-data-center-force-majeure.html",
+          "date_accessed": "2026-09-24",
+          "summary": "Explains why AI was not a monolith (ORCL/Bloom/OWL vs META/NDX) and must stay in the single-name bucket.",
+          "verification": "quote_not_found"
+        },
+        {
+          "url": "https://www.nahb.org/news-and-economics/press-releases/2026/09/new-home-sales-rise-as-affordability-challenges-continue",
+          "date_accessed": "2026-09-24",
+          "summary": "10am beat, housing-only breadth; consistent with parking it in NOISE relative to the V-shape.",
+          "verification": "quote_not_found"
+        }
+      ],
       "horizon_calls": {
         "HORIZON_3D": {
           "trading_days": 3,
@@ -27012,7 +27107,14 @@
       "news_judge_present": true,
       "engine": "v2",
       "anchor_score": -4.534,
-      "overlay_score": -3.125
+      "overlay_score": -3.125,
+      "ops_fail": false,
+      "path_shape": "V-shape (deep intraday drop, closed near high)",
+      "primary_driver": "Residual 5% yield/hiking-Fed drag offset by Hormuz-diplomacy oil dip and mega-cap dip-buying, producing a V to unchanged",
+      "key_interaction": "OFFSET/MASK — leftover PMI-Barr-yield complex vs same-day oil/diplomacy bid; net SPX -0.02% hides a -0.56% hole",
+      "knowable_at_9am": "partially",
+      "attribution_contested": "yes",
+      "outlier_watch": "Dow refused the V (-0.31% choppy); China sold the summit, US did not; NDX green at 5.12% 10Y; Oracle/AI-infra sold while Meta recovered"
     },
     {
       "date": "2026-09-24",
