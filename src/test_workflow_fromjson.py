@@ -543,6 +543,8 @@ def test_openclaw_probe_stays_on_ecs() -> None:
 
 def test_openclaw_grok_ping_stays_on_ecs() -> None:
     text = (WF / "openclaw_grok_ping.yml").read_text(encoding="utf-8")
+    # A `|` script that drops to column 0 is invalid YAML (run 35971415244).
+    assert "\nprint(" not in text
     jobs = parse_workflow_jobs(text)
     raw = jobs["ping"]["runs-on"]
     assert eval_runs_on(raw, event_name="workflow_dispatch") == ECS_LABELS
