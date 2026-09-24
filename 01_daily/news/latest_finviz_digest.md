@@ -1,11 +1,11 @@
-# Finviz Daily Digest — 2026-09-23
+# Finviz Daily Digest — 2026-09-24
 
-_Generated 2026-09-24T02:07:25.636089-04:00 · export=data/exports/finviz_2026-09-23.csv · ticker digests=5880 · high-signal=2153_
+_Generated 2026-09-24T05:52:47.535298-04:00 · export=data/exports/finviz_2026-09-23.csv · ticker digests=5880 · high-signal=2153_
 
 ## Major indices (live quote page)
 
-- **S&P 500 (SPY)**: Stock Market: Will S&P 500 Open Up or Down Today?
-- **Nasdaq-100 (QQQ)**: S&P 500, Dow, Nasdaq Drop As Yields Spike Amid Calls For More Rate Hikes  AMZN, GOOGL, NFLX, SPCX, RKLB In Focus
+- **S&P 500 (SPY)**: Nasdaq, S&P 500 Futures Slide As Treasury Yields, Trump-Xi Summit Keep Traders On Edge: META, GOOGL, SPCX, VKTX, SNAP, MCD, BB Stocks In Focus
+- **Nasdaq-100 (QQQ)**: Nasdaq, S&P 500 Futures Slide As Treasury Yields, Trump-Xi Summit Keep Traders On Edge: META, GOOGL, SPCX, VKTX, SNAP, MCD, BB Stocks In Focus
 - **Dow Jones (DIA)**: S&P 500, Dow, Nasdaq Drop As Yields Spike Amid Calls For More Rate Hikes  AMZN, GOOGL, NFLX, SPCX, RKLB In Focus
 - **Russell 2000 (IWM)**: Evolution Metals Just Joined the Indexes Behind $12.2 Trillion in Invested Assets (NASDAQ: EMAT)
 
