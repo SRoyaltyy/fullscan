@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T06:54:57.159977-04:00",
+  "generated_at": "2026-09-24T06:55:02.027832-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -111,73 +111,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "sector_one",
-      "title": "Sector predict Utilities (10/11)",
-      "date": "2026-09-24",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-24T06:42:02.087854-04:00",
-      "files": [
-        {
-          "path": "01_daily/sectors/2026-09-24/utilities_predict.md",
-          "ok": true,
-          "reason": "",
-          "size": 17525,
-          "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-09-24\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-5.818** (mult 0.9)\n- regime: risk_off\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.034** (ES -0.64%, ZN -0.03%, PM:XLU +0.10%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **-3.938** (raw -3.938)"
-        },
-        {
-          "path": "01_daily/sectors/2026-09-24/utilities_predict_trace.md",
-          "ok": true,
-          "reason": "",
-          "size": 11516,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-09-24\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (149,094 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10 year Treasury yield September 24 2026 Warsh rate hike\"* \u2192 got 6 results (via gnews_rss)\n- Global bond rout gathers pace as Fed rate hike bets rattle markets - The Straits Times (https://news.google.com/rss/articles/CBMipwFBVV95cUxNNExDRkZGUGl1S2VDMUF2M1pTV2MwUHowempaMFFZVkR0RDhyZFl0ek9mUWk2cU1RaG9WOXdXQ3psT0ljLVh4VnRkUThuVFZvMEZMdTBRSjdiVFBvUzBjOHlPaFJzMmxiRFkwdU83SGVueEowQ3NsSDNnODkxM25jb1pCdFQzTzd1QUM2V2ktODN0RjQ2ZnlYblZCcmJZaTRCcENURG83UQ?oc=5)\n- 2-year Treasury yield jumps as Warsh says Fed may 'have work to do' - CNBC (https://news.google.com/rss/articles/CBMic0FVX3lxTE"
-        },
-        {
-          "path": "01_daily/_transcripts/2026-09-24_sector_utilities_predict.json",
-          "ok": true,
-          "reason": "",
-          "size": 200395,
-          "preview": "keys: model, messages"
-        },
-        {
-          "path": "01_daily/2026-09-24_preopen_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 7198,
-          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
-        },
-        {
-          "path": "01_daily/sectors/2026-09-24/_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 1219,
-          "preview": "keys: date, n_ok, n_total, sectors"
-        },
-        {
-          "path": "01_daily/sectors/2026-09-24/_BOARD.md",
-          "ok": true,
-          "reason": "",
-          "size": 1952,
-          "preview": "# Sector Board \u2014 2026-09-24\nGenerated: **2026-09-24T06:42:02.050027-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
-        },
-        {
-          "path": "01_daily/sectors/2026-09-24/_board.json",
-          "ok": true,
-          "reason": "",
-          "size": 6974,
-          "preview": "keys: date, generated_at, sectors"
-        },
-        {
-          "path": "03_scoreboard/scoreboard.json",
-          "ok": true,
-          "reason": "",
-          "size": 882134,
-          "preview": "keys: runs"
-        }
-      ],
-      "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-09-24\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-5.818** (mult 0.9)\n- regime: risk_off\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.034** (ES -0.64%, ZN -0.03%, PM:XLU +0.10%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **-3.938** (raw -3.938) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-09-24\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (149,094 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10 year Treasury yield September 24 2026 Warsh rate hike\"* \u2192 got 6 results (via gnews_rss)\n- Global bond rout gathers pace as Fed rate hike bets rattle markets - The Straits Times (https://news.google.com/rss/articles/CBMipwFBVV95cUxNNExDRkZGUGl1S2VDMUF2M1pTV2MwUHowempaMFFZVkR0RDhyZFl0ek9mUWk2cU1RaG9WOXdXQ3psT0ljLVh4VnRkUThuVFZvMEZMdTBRSjdiVFBvUzBjOHlPaFJzMmxiRFkwdU83SGVueEowQ3NsSDNnODkxM25jb1pCdFQzTzd1QUM2V2ktODN0RjQ2ZnlYblZCcmJZaTRCcENURG83UQ?oc=5)\n- 2-year T"
-    },
     {
       "key": "sector_predict",
       "title": "Per-sector predict (all 11)",
@@ -359,6 +292,115 @@
         }
       ],
       "preview": "1d BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 # Stock book \u2014 2026-09-24\n_Generated 2026-09-24T06:53:39.398790-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
+    {
+      "key": "live_boards",
+      "title": "Live 1d BUY/SELL strip",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T06:55:01.427330-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 16099,
+          "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 701,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-24.json",
+          "ok": true,
+          "reason": "",
+          "size": 101807,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-24_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 63486,
+          "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2932133,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-24_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2932133,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 3245833,
+          "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2932133,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 63486,
+          "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 2932133,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 2932133,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 3245833,
+          "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 2274,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 2274,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
