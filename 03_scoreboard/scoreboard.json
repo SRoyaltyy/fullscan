@@ -3013,6 +3013,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-09-23",
+          "actual_pct": 0.01,
+          "actual_direction": "flat",
+          "actual_magnitude_band": "flat",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.4
         }
       }
     },
@@ -4228,6 +4240,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-09-23",
+          "actual_pct": -4.3,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.4
         }
       }
     },
@@ -4424,6 +4448,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-09-23",
+          "actual_pct": -6.39,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       }
     },
@@ -4522,6 +4558,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-09-23",
+          "actual_pct": -4.25,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.4
         }
       }
     },
@@ -4620,6 +4668,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-09-23",
+          "actual_pct": 0.74,
+          "actual_direction": "up",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.4
         }
       }
     },
@@ -4718,6 +4778,18 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "notable",
           "confidence": 0.5
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-09-23",
+          "actual_pct": -6.22,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "notable",
+          "confidence": 0.55
         }
       }
     },
@@ -4914,6 +4986,18 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.55
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-09-23",
+          "actual_pct": -8.8,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "notable",
+          "confidence": 0.55
         }
       }
     },
@@ -5009,6 +5093,18 @@
           "actual_magnitude_band": "mild",
           "direction_hit": false,
           "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
+        },
+        "HORIZON_1M": {
+          "label": "1m",
+          "target_date": "2026-09-23",
+          "actual_pct": -7.58,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": false,
+          "magnitude_hit": false,
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
@@ -18695,6 +18791,18 @@
           "predicted_direction": "up",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-23",
+          "actual_pct": 4.29,
+          "actual_direction": "up",
+          "actual_magnitude_band": "notable",
+          "direction_hit": true,
+          "magnitude_hit": false,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.5
         }
       }
     },
@@ -18781,6 +18889,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-23",
+          "actual_pct": -7.73,
+          "actual_direction": "down",
+          "actual_magnitude_band": "severe",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.4
         }
       }
     },
@@ -19178,6 +19298,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.45
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-23",
+          "actual_pct": 0.93,
+          "actual_direction": "up",
+          "actual_magnitude_band": "flat",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.4
         }
       }
     },
@@ -20125,6 +20257,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-23",
+          "actual_pct": -4.42,
+          "actual_direction": "down",
+          "actual_magnitude_band": "notable",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.42
         }
       }
     },
@@ -20211,6 +20355,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-23",
+          "actual_pct": 1.33,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "flat",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.48
         }
       }
     },
@@ -20854,6 +21010,18 @@
           "predicted_direction": "down",
           "predicted_magnitude_band": "mild",
           "confidence": 0.58
+        },
+        "HORIZON_2W": {
+          "label": "2w",
+          "target_date": "2026-09-24",
+          "actual_pct": 1.48,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": false,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "notable",
+          "confidence": 0.52
         }
       },
       "lesson_schema_ok": true
@@ -24035,6 +24203,18 @@
           "predicted_direction": "flat",
           "predicted_magnitude_band": "mild",
           "confidence": 0.5
+        },
+        "HORIZON_1W": {
+          "label": "1w",
+          "target_date": "2026-09-24",
+          "actual_pct": 0.87,
+          "actual_direction": "up",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "down",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.52
         }
       },
       "lesson_schema_ok": true
@@ -25321,7 +25501,20 @@
       "knowable_at_9am": "yes — every input (Bessent-He, oil, yields, Fed) was on the tape premarket; only the NDX magnitude was a genuine upside surprise",
       "attribution_contested": "yes — Reuters leads with AI/yields, TheStreet/Yahoo with oil, AP/CP24 with China talks, InteractiveCrypto with the Fed shadow",
       "outlier_watch": "Dow lagged NDX by 155bp (narrow, not broad, rally); VIX rose +1.42% on a +1.49% SPX day; gold/silver rallied alongside risk-on; Bitcoin fell 0.53%",
-      "horizon_grades": {},
+      "horizon_grades": {
+        "HORIZON_3D": {
+          "label": "3d",
+          "target_date": "2026-09-24",
+          "actual_pct": -0.78,
+          "actual_direction": "down",
+          "actual_magnitude_band": "mild",
+          "direction_hit": false,
+          "magnitude_hit": true,
+          "predicted_direction": "up",
+          "predicted_magnitude_band": "mild",
+          "confidence": 0.55
+        }
+      },
       "lesson_schema_ok": true
     },
     {
@@ -27027,7 +27220,7 @@
           "status": "neutral"
         }
       ],
-      "reflection_lesson_ref": null,
+      "reflection_lesson_ref": "02_lessons/candidate/2026-09-24_lesson.md",
       "sources_used": [
         {
           "url": "https://www.morningstar.com/news/dow-jones/202609241547/us-treasury-yields-hover-close-to-multiyear-highs-update",
@@ -27114,7 +27307,9 @@
       "key_interaction": "OFFSET/MASK — leftover PMI-Barr-yield complex vs same-day oil/diplomacy bid; net SPX -0.02% hides a -0.56% hole",
       "knowable_at_9am": "partially",
       "attribution_contested": "yes",
-      "outlier_watch": "Dow refused the V (-0.31% choppy); China sold the summit, US did not; NDX green at 5.12% 10Y; Oracle/AI-infra sold while Meta recovered"
+      "outlier_watch": "Dow refused the V (-0.31% choppy); China sold the summit, US did not; NDX green at 5.12% 10Y; Oracle/AI-infra sold while Meta recovered",
+      "horizon_grades": {},
+      "lesson_schema_ok": true
     },
     {
       "date": "2026-09-24",
