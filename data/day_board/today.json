@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T06:36:23.373993-04:00",
+  "generated_at": "2026-09-24T06:36:47.648595-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -9,70 +9,9 @@
     "fail": 0,
     "n": 8
   },
-  "buy_1d": [
-    {
-      "ticker": "ASTH",
-      "score": 0.09248307125306686
-    },
-    {
-      "ticker": "CHKP",
-      "score": 0.3383059605829564
-    },
-    {
-      "ticker": "GDYN",
-      "score": 0.4014324783164612
-    },
-    {
-      "ticker": "PRGS",
-      "score": 0.4651217377522372
-    },
-    {
-      "ticker": "NTNX",
-      "score": 0.21941954717996132
-    }
-  ],
-  "sell_1d": [
-    {
-      "ticker": "METC",
-      "score": -0.4147221792720016
-    },
-    {
-      "ticker": "EOSE",
-      "score": -0.10287219119162083
-    },
-    {
-      "ticker": "XIFR",
-      "score": -0.14808431112233889
-    },
-    {
-      "ticker": "VST",
-      "score": 0.10200204669075895
-    },
-    {
-      "ticker": "AESI",
-      "score": -0.3078422660521732
-    },
-    {
-      "ticker": "TE",
-      "score": 0.028038875299126742
-    },
-    {
-      "ticker": "EXK",
-      "score": -0.1576247463622153
-    },
-    {
-      "ticker": "ARE",
-      "score": -0.26983500225431734
-    }
-  ],
-  "flatten": {
-    "said": "0 priced buys \u00b7 cash $18,086.73 \u00b7 morning S missing",
-    "bullets": [
-      "0 priced buys",
-      "cash $18,086.73",
-      "morning S missing"
-    ]
-  },
+  "buy_1d": [],
+  "sell_1d": [],
+  "flatten": {},
   "general": {
     "said": "DOWN  -7.659",
     "bullets": [
@@ -86,7 +25,7 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "1 up / 5 down / 0 flat",
+    "said": "1 up / 8 down / 0 flat",
     "bullets": [
       "XLB DOWN -2.9",
       "XLC DOWN -11.3",
@@ -95,9 +34,9 @@
       "XLE UP +6.8",
       "XLF DOWN -4.9",
       "XLV DOWN -4.3",
-      "XLI missing",
-      "XLRE missing",
-      "XLK missing",
+      "XLI DOWN -4.3",
+      "XLRE DOWN -10.0",
+      "XLK DOWN -16.2",
       "XLU missing"
     ]
   },
@@ -419,70 +358,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Real Estate (8/11)",
+      "title": "Sector predict Technology (9/11)",
       "date": "2026-09-24",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-24T06:36:22.958396-04:00",
+      "at": "2026-09-24T06:36:47.232433-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-09-24/real_estate_predict.md",
+          "path": "01_daily/sectors/2026-09-24/technology_predict.md",
           "ok": true,
           "reason": "",
-          "size": 16448,
-          "preview": "# Sector Prediction \u2014 Real Estate \u2014 2026-09-24\n- ETF: **XLRE**\n- rubric: `00_grounding/sectors/real_estate.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-9.97** (mult 0.85)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-2.055** (ES -0.64%, ZN -0.03%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **-6.0** (raw -6.906)"
+          "size": 14272,
+          "preview": "# Sector Prediction \u2014 Technology \u2014 2026-09-24\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **notable**\n- total_score: **-16.172** (mult 0.85)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-8.257** (NQ -1.09%, ES -0.64%, PM:XLK -1.51%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **-6.0** (raw -6.8)"
         },
         {
-          "path": "01_daily/sectors/2026-09-24/real_estate_predict_trace.md",
+          "path": "01_daily/sectors/2026-09-24/technology_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 394,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Real Estate 2026-09-24 retry1\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (153,332 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (14,633 characters)."
+          "size": 386,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Technology 2026-09-24\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (149,762 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (12,424 characters)."
         },
         {
-          "path": "01_daily/_transcripts/2026-09-24_sector_real_estate_predict.json",
+          "path": "01_daily/_transcripts/2026-09-24_sector_technology_predict.json",
           "ok": true,
           "reason": "",
-          "size": 172376,
+          "size": 166293,
           "preview": "keys: model, messages"
         },
         {
           "path": "01_daily/2026-09-24_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 7211,
+          "size": 7204,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-09-24/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 1226,
+          "size": 1222,
           "preview": "keys: date, n_ok, n_total, sectors"
         },
         {
           "path": "01_daily/sectors/2026-09-24/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1938,
-          "preview": "# Sector Board \u2014 2026-09-24\nGenerated: **2026-09-24T06:36:22.945148-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1948,
+          "preview": "# Sector Board \u2014 2026-09-24\nGenerated: **2026-09-24T06:36:47.220116-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-09-24/_board.json",
           "ok": true,
           "reason": "",
-          "size": 6622,
+          "size": 6800,
           "preview": "keys: date, generated_at, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 879966,
+          "size": 881053,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Real Estate \u2014 2026-09-24\n- ETF: **XLRE**\n- rubric: `00_grounding/sectors/real_estate.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-9.97** (mult 0.85)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-2.055** (ES -0.64%, ZN -0.03%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **-6.0** (raw -6.906) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Real Estate 2026-09-24 retry1\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (153,332 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (14,633 characters). \u00b7 keys: model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-24\nGenerated: **2026-09-24T06:36:22.945148-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_at, sectors \u00b7 keys: runs"
+      "preview": "# Sector Prediction \u2014 Technology \u2014 2026-09-24\n- ETF: **XLK**\n- rubric: `00_grounding/sectors/technology.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **notable**\n- total_score: **-16.172** (mult 0.85)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-8.257** (NQ -1.09%, ES -0.64%, PM:XLK -1.51%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **-6.0** (raw -6.8) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Technology 2026-09-24\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (149,762 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (12,424 characters). \u00b7 keys: model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-24\nGenerated: **2026-09-24T06:36:47.220116-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_at, sectors \u00b7 keys: runs"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
