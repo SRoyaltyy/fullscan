@@ -76,8 +76,7 @@ jobs:
         run: |
           set +e
           export HOME="${FULLSCAN_HOME:-/home/gha}"
-          OK=$(python3 -c "import json; from pathlib import Path; p=Path('01_daily/_openclaw_grok_ping.json');
-print('yes' if p.is_file() and json.loads(p.read_text()).get('ok') else 'no')")
+          OK=$(python3 -c 'import json; from pathlib import Path; p=Path("01_daily/_openclaw_grok_ping.json"); print("yes" if p.is_file() and json.loads(p.read_text()).get("ok") else "no")')
           if [ "$OK" = "yes" ]; then
             echo "Grok already answered — no reauth"
             exit 0
