@@ -1,12 +1,12 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T06:16:23.551550-04:00",
+  "generated_at": "2026-09-24T06:15:19.523928-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
   "counts": {
-    "ok": 4,
-    "partial": 4,
+    "ok": 6,
+    "partial": 2,
     "fail": 0,
     "n": 8
   },
@@ -177,7 +177,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 8,
+      "n_req_ok": 7,
       "n_req": 20,
       "n_opt_ok": 3,
       "n_opt": 3,
@@ -338,12 +338,12 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 5768,
-          "said": "0 up / 3 down / 0 flat",
+          "size": 5414,
+          "said": "0 up / 1 down / 0 flat",
           "bullets": [
             "XLB DOWN -2.9",
-            "XLC DOWN -11.3",
-            "XLY DOWN -8.5",
+            "XLC missing",
+            "XLY missing",
             "XLP missing"
           ]
         },
@@ -354,8 +354,8 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7247,
-          "said": "all_ok=False \u00b7 sectors 3/11 \u00b7 10 fail",
+          "size": 7261,
+          "said": "all_ok=False \u00b7 sectors 1/11 \u00b7 12 fail",
           "bullets": [
             "finviz_market_digest:missing",
             "map_heat_research:missing",
@@ -379,11 +379,13 @@
           "name": "Grok review JSON",
           "path": "01_daily/2026-09-24_grok_review.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "ok=False Grok returned an empty review",
+          "size": 308,
+          "said": "ok=False \u00b7 empty_review_reply (review)",
+          "bullets": [
+            "Grok returned an empty review"
+          ]
         },
         {
           "key": "sector_basic_materials",
@@ -403,26 +405,22 @@
           "name": "Sector predict \u2014 communication_services",
           "path": "01_daily/sectors/2026-09-24/communication_services_predict.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 18741,
-          "said": "DOWN notable -11.341",
-          "bullets": [
-            "- ETF: **XLC"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_consumer_cyclical",
           "name": "Sector predict \u2014 consumer_cyclical",
           "path": "01_daily/sectors/2026-09-24/consumer_cyclical_predict.md",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 15105,
-          "said": "DOWN mild -8.472",
-          "bullets": [
-            "- ETF: **XLY"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "sector_consumer_defensive",
@@ -513,7 +511,7 @@
           "bullets": []
         }
       ],
-      "said": "general DOWN  -7.659 \u00b7 sectors 0 up / 3 down / 0 flat \u00b7 news 400 raw / 39 usable \u00b7 Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his w",
+      "said": "general DOWN  -7.659 \u00b7 sectors 0 up / 1 down / 0 flat \u00b7 news 400 raw / 39 usable \u00b7 Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his w",
       "bullets": [
         "bad: NQ -1.13% on yield backup",
         "bad: 10Y ~5.12% biting tech",
@@ -521,8 +519,8 @@
         "good: US-China trade truce extended to Jan 10",
         "good: oil offered CL -1.6%",
         "XLB DOWN -2.9",
-        "XLC DOWN -11.3",
-        "XLY DOWN -8.5",
+        "XLC missing",
+        "XLY missing",
         "XLP missing",
         "XLE missing"
       ]
@@ -582,7 +580,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -590,11 +588,13 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-09-24_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2658",
+          "size": 7628740,
+          "said": "27 rows",
+          "bullets": [
+            "CFFN, ANET, WWW, DSGX, SKM, HSBC, CXW, BMRN"
+          ]
         },
         {
           "key": "ab_enriched",
@@ -685,11 +685,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -715,12 +715,12 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 5768,
-          "said": "0 up / 3 down / 0 flat",
+          "size": 5414,
+          "said": "0 up / 1 down / 0 flat",
           "bullets": [
             "XLB DOWN -2.9",
-            "XLC DOWN -11.3",
-            "XLY DOWN -8.5",
+            "XLC missing",
+            "XLY missing",
             "XLP missing"
           ]
         },
@@ -815,21 +815,23 @@
           "name": "Peer RS CSV",
           "path": "data/peers/2026-09-24_peer_rs.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=5098",
+          "size": 817936,
+          "said": "495 rows",
+          "bullets": [
+            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
+          ]
         },
         {
           "key": "book_json",
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-24_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=135",
+          "size": 1165317,
+          "said": "1d BUY ASTH, GDYN, CHKP, PRGS, NTNX, NTCT, TDC \u00b7 SELL METC, EOSE, XIFR, VST, AESI, TE \u00b7 -0.6851",
           "bullets": []
         },
         {
@@ -837,21 +839,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-09-24_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 45295,
+          "said": "Stock book \u2014 2026-09-24",
+          "bullets": [
+            "_Generated 2026-09-24T06:15:17.298307-04:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-09-24_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 585,
+          "said": "0 green \u00b7",
           "bullets": []
         },
         {
@@ -873,10 +878,10 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
+          "status": "OK",
+          "reason": "live-book poller + 2026-09-24_suggestions.json (2026-09-24)",
           "size": 8379317,
-          "said": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
+          "said": "live-book poller + 2026-09-24_suggestions.json (2026-09-24)",
           "bullets": []
         }
       ],
@@ -889,9 +894,9 @@
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -901,10 +906,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-24_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=135",
+          "size": 1165317,
+          "said": "1d BUY ASTH, GDYN, CHKP, PRGS, NTNX, NTCT, TDC \u00b7 SELL METC, EOSE, XIFR, VST, AESI, TE \u00b7 -0.6851",
           "bullets": []
         },
         {
@@ -912,10 +917,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
+          "status": "OK",
+          "reason": "live-book poller + 2026-09-24_suggestions.json (2026-09-24)",
           "size": 8379317,
-          "said": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
+          "said": "live-book poller + 2026-09-24_suggestions.json (2026-09-24)",
           "bullets": []
         },
         {
@@ -949,9 +954,78 @@
     }
   ],
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
-    "flatten": {},
+    "buy_1d": [
+      {
+        "ticker": "ASTH",
+        "score": 0.3495180712530669
+      },
+      {
+        "ticker": "GDYN",
+        "score": 0.4014324783164612
+      },
+      {
+        "ticker": "CHKP",
+        "score": 0.3383059605829564
+      },
+      {
+        "ticker": "PRGS",
+        "score": 0.4651217377522372
+      },
+      {
+        "ticker": "NTNX",
+        "score": 0.21941954717996132
+      },
+      {
+        "ticker": "NTCT",
+        "score": 0.5613639959793102
+      },
+      {
+        "ticker": "TDC",
+        "score": 0.5291249996919065
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "METC",
+        "score": -0.4147221792720016
+      },
+      {
+        "ticker": "EOSE",
+        "score": -0.10287219119162083
+      },
+      {
+        "ticker": "XIFR",
+        "score": -0.14808431112233889
+      },
+      {
+        "ticker": "VST",
+        "score": 0.10200204669075895
+      },
+      {
+        "ticker": "AESI",
+        "score": -0.3733772660521733
+      },
+      {
+        "ticker": "TE",
+        "score": 0.028038875299126742
+      },
+      {
+        "ticker": "EXK",
+        "score": -0.1576247463622153
+      },
+      {
+        "ticker": "ARE",
+        "score": -0.26983500225431734
+      }
+    ],
+    "flatten": {
+      "said": "0 priced buys \u00b7 cash $18,086.73 \u00b7 morning S missing",
+      "bullets": [
+        "0 priced buys",
+        "cash $18,086.73",
+        "morning S missing"
+      ]
+    },
     "general": {
       "said": "DOWN  -7.659",
       "bullets": [
@@ -965,11 +1039,11 @@
       "direction": "down"
     },
     "sectors": {
-      "said": "0 up / 3 down / 0 flat",
+      "said": "0 up / 1 down / 0 flat",
       "bullets": [
         "XLB DOWN -2.9",
-        "XLC DOWN -11.3",
-        "XLY DOWN -8.5",
+        "XLC missing",
+        "XLY missing",
         "XLP missing",
         "XLE missing",
         "XLF missing",
@@ -1739,70 +1813,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Consumer Cyclical (3/11)",
+      "title": "Sector predict Basic Materials (1/11)",
       "date": "2026-09-24",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-24T06:16:23.158457-04:00",
+      "at": "2026-09-24T06:11:28.158069-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-09-24/consumer_cyclical_predict.md",
+          "path": "01_daily/sectors/2026-09-24/basic_materials_predict.md",
           "ok": true,
           "reason": "",
-          "size": 15105,
-          "preview": "# Sector Prediction \u2014 Consumer Cyclical \u2014 2026-09-24\n- ETF: **XLY**\n- rubric: `00_grounding/sectors/consumer_cyclical.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-8.472** (mult 0.9)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-1.495** (ES -0.64%, ER2 +0.08%, NQ -1.09%, PM:XLY -0.05%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **-5.062** (raw -5.062)"
+          "size": 13307,
+          "preview": "# Sector Prediction \u2014 Basic Materials \u2014 2026-09-24\n- ETF: **XLB**\n- rubric: `00_grounding/sectors/basic_materials.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-2.88** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-0.54** (ES -0.64%, HG +0.66%, GC +0.90%, DX -0.02%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **-0.425** (raw -0.425)"
         },
         {
-          "path": "01_daily/sectors/2026-09-24/consumer_cyclical_predict_trace.md",
+          "path": "01_daily/sectors/2026-09-24/basic_materials_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 400,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Consumer Cyclical 2026-09-24 retry1\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (148,804 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (13,163 characters)."
+          "size": 398,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Basic Materials 2026-09-24 retry1\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (148,737 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (11,531 characters)."
         },
         {
-          "path": "01_daily/_transcripts/2026-09-24_sector_consumer_cyclical_predict.json",
+          "path": "01_daily/_transcripts/2026-09-24_sector_basic_materials_predict.json",
           "ok": true,
           "reason": "",
-          "size": 166403,
+          "size": 164407,
           "preview": "keys: model, messages"
         },
         {
           "path": "01_daily/2026-09-24_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 7247,
+          "size": 7261,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-09-24/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 1246,
+          "size": 1254,
           "preview": "keys: date, n_ok, n_total, sectors"
         },
         {
           "path": "01_daily/sectors/2026-09-24/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1770,
-          "preview": "# Sector Board \u2014 2026-09-24\nGenerated: **2026-09-24T06:16:23.145037-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1624,
+          "preview": "# Sector Board \u2014 2026-09-24\nGenerated: **2026-09-24T06:11:28.145285-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-09-24/_board.json",
           "ok": true,
           "reason": "",
-          "size": 5768,
+          "size": 5414,
           "preview": "keys: date, generated_at, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 874578,
+          "size": 872345,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Consumer Cyclical \u2014 2026-09-24\n- ETF: **XLY**\n- rubric: `00_grounding/sectors/consumer_cyclical.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-8.472** (mult 0.9)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-1.495** (ES -0.64%, ER2 +0.08%, NQ -1.09%, PM:XLY -0.05%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **-5.062** (raw -5.062) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Consumer Cyclical 2026-09-24 retry1\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (148,804 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (13,163 characters). \u00b7 keys: model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-24\nGenerated: **2026-09-24T06:16:23.145037-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date"
+      "preview": "# Sector Prediction \u2014 Basic Materials \u2014 2026-09-24\n- ETF: **XLB**\n- rubric: `00_grounding/sectors/basic_materials.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-2.88** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-0.54** (ES -0.64%, HG +0.66%, GC +0.90%, DX -0.02%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **-0.425** (raw -0.425) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Basic Materials 2026-09-24 retry1\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (148,737 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (11,531 characters). \u00b7 keys: model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-24\nGenerated: **2026-09-24T06:11:28.145285-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_at,"
     }
   ],
   "href": {
