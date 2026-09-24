@@ -241,16 +241,22 @@ def test_news_actions_survives_db_timeout_with_local_headlines() -> None:
 
     db.recent_news = _boom  # type: ignore[assignment]
     news_parse.rows_from_local_files = lambda d, n: [  # type: ignore[assignment]
-        {"source": "finviz_digest", "title": "Fed holds rates, signals cuts",
-         "url": "", "published_at": ""}]
+        {"source": "finviz_digest", "title": f"Fed holds rates {i}",
+         "url": "", "published_at": "2026-09-09T08:00:00-04:00"}
+        for i in range(8)]
+    orig_live = None
+    import src.news_live as news_live
+    orig_live = news_live.fetch
+    news_live.fetch = lambda *a, **k: []  # type: ignore[assignment]
     try:
         rows, src = news_actions._load_rows(48, 300, "2026-09-09")
         assert rows and src == "local_files:db_timeout"
         rows, src = news_actions._load_rows(48, 300, None)
-        assert rows == [] and src == "db_error:db_timeout"
+        assert src == "none_stale"
     finally:
         db.recent_news = orig_recent  # type: ignore[assignment]
         news_parse.rows_from_local_files = orig_files  # type: ignore[assignment]
+        news_live.fetch = orig_live  # type: ignore[assignment]
 
 
 def test_db_budget_shrinks_to_the_step_deadline() -> None:
@@ -282,6 +288,86 @@ def test_db_budget_shrinks_to_the_step_deadline() -> None:
             os.environ["FULLSCAN_DB_STATEMENT_TIMEOUT_MS"] = orig_ms
 
 
+def test_empty_window_does_not_return_unbounded_last_n() -> None:
+    """2026-09-24: empty 48h window must not ship the table tail."""
+    queries: list[str] = []
+
+    class _Cur:
+        def execute(self, q, params=None):
+            if str(q).startswith("SET LOCAL"):
+                return
+            queries.append(q)
+
+        def fetchall(self):
+            q = queries[-1]
+            if "INTERVAL" in q:
+                return []
+            return [("rss_google_macro", "Warsh Jackson Hole",
+                     "https://example.com/old",
+                     "Fri, 28 Aug 2026 20:10:00 GMT")]
+
+        def close(self) -> None:
+            return None
+
+    class _Conn:
+        def cursor(self) -> _Cur:
+            return _Cur()
+
+        def rollback(self) -> None:
+            return None
+
+        def close(self) -> None:
+            return None
+
+    orig = db._conn
+    db._conn = lambda: _Conn()  # type: ignore[method-assign]
+    try:
+        rows = db.recent_news(hours=48, limit=10)
+    finally:
+        db._conn = orig
+    assert rows == []
+    assert not any("NULLS LAST" in q for q in queries)
+
+
+def test_timeout_last_n_drops_stale_published_at() -> None:
+    class _Cur:
+        def execute(self, q, params=None):
+            if str(q).startswith("SET LOCAL"):
+                return
+            if "NULLS LAST" in q:
+                return
+            raise RuntimeError("canceling statement due to statement timeout")
+
+        def fetchall(self):
+            return [("rss_google_macro", "Warsh Jackson Hole",
+                     "https://example.com/old",
+                     "Fri, 28 Aug 2026 20:10:00 GMT")]
+
+        def close(self) -> None:
+            return None
+
+    class _Conn:
+        def cursor(self) -> _Cur:
+            return _Cur()
+
+        def rollback(self) -> None:
+            return None
+
+        def close(self) -> None:
+            return None
+
+    orig = db._conn
+    orig_sleep = db.time.sleep
+    db._conn = lambda: _Conn()  # type: ignore[method-assign]
+    db.time.sleep = lambda *_a, **_k: None  # type: ignore[method-assign]
+    try:
+        rows = db.recent_news(hours=48, limit=10)
+    finally:
+        db._conn = orig
+        db.time.sleep = orig_sleep
+    assert rows == []
+
+
 if __name__ == "__main__":
     test_recent_news_empty_first_variant_still_reads_second()
     test_recent_news_timeout_jumps_to_last_limit()
@@ -289,4 +375,6 @@ if __name__ == "__main__":
     test_query_budget_is_enforced_client_side()
     test_news_actions_survives_db_timeout_with_local_headlines()
     test_db_budget_shrinks_to_the_step_deadline()
-    print("6 tests passed")
+    test_empty_window_does_not_return_unbounded_last_n()
+    test_timeout_last_n_drops_stale_published_at()
+    print("8 tests passed")

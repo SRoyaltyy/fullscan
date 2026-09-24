@@ -788,10 +788,16 @@ def build(date: str | None = None, top_n: int = 25,
             join = join.merge(memb[["Ticker"] + extra], on="Ticker", how="left")
 
     weather = _load_weather(date)
-    news = _merge_news(
-        _load_news_actions(date),
-        _load_finviz_digest(date),
-    )
+    from .news_freshness import decision as news_decision
+    news_dec = news_decision(date)
+    if news_dec["ok"]:
+        news = _merge_news(
+            _load_news_actions(date),
+            _load_finviz_digest(date),
+        )
+    else:
+        print(f"[stock-book] news_mode=none_stale — {news_dec['reason']}")
+        news = {}
     # news_actions already persists News Judge events.  Apply the judge here
     # only for older packets that predate that integration; otherwise the
     # same adjudicated headline was counted twice.
@@ -802,7 +808,7 @@ def build(date: str | None = None, top_n: int = 25,
             for rec in news.values()
             for event in (rec.get("events") or [])
         )
-        jt = (load_or_parse(date).get("tickers") or {})
+        jt = {} if not news_dec["ok"] else (load_or_parse(date).get("tickers") or {})
         if not judge_already_applied:
             for t, net in jt.items():
                 rec = news.setdefault(t.upper(), {"net": 0.0, "events": []})
@@ -1057,6 +1063,8 @@ def build(date: str | None = None, top_n: int = 25,
         "general_bias": gen_bias,
         "sector_bias": sector_bias,
         "accuracy_gates": gate_stats,
+        "news_mode": news_dec["news_mode"],
+        "news_mode_reason": news_dec.get("reason") or "",
         "n_news_tickers": len(news),
         "n_ab": int(join["s_ab"].ne(0).sum()) if "s_ab" in join.columns else 0,
         "n_peer": int(join["s_peer"].ne(0).sum()) if "s_peer" in join.columns else 0,

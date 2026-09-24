@@ -348,8 +348,24 @@ def rows_from_local_files(date_str: str, limit: int) -> list[dict]:
     return rows[:limit]
 
 
-def build_report(hours: int = 48, limit: int = 300,
-                 date_str: str | None = None) -> dict:
+def _batch_is_fresh(rows: list[dict], date_str: str | None) -> bool:
+    if not rows or not date_str:
+        return bool(rows)
+    from .news_freshness import assess
+    return bool(assess(rows, date_str)["ok"])
+
+
+def load_headlines(hours: int = 48, limit: int = 300,
+                   date_str: str | None = None) -> tuple[list[dict], str, dict]:
+    """DB window, then live RSS, then on-disk files. Stale batches are dropped.
+
+    Returns (rows, source, freshness). ``source`` is ``none_stale`` when
+    nothing dated and current could be proved. Live RSS does not write
+    to Postgres — collectors have been off since 2026-08-29.
+    """
+    from .news_freshness import NEWS_MODE_STALE, assess
+    from . import news_live
+
     rows: list[dict] = []
     db_err: db.NewsDbError | None = None
     try:
@@ -357,22 +373,87 @@ def build_report(hours: int = 48, limit: int = 300,
     except db.NewsDbError as e:
         db_err = e
         print(f"[news_parse] DB FAIL {e.reason}: {e}")
+    if rows and date_str and not _batch_is_fresh(rows, date_str):
+        verdict = assess(rows, date_str)
+        print(f"[news_parse] discarding {len(rows)} DB rows — {verdict['reason']}")
+        rows = []
     if not rows and db_err is None:
         # Connected but empty window — one wider shot, no extra retry storm.
         try:
-            rows = db._recent_news_once(hours=24 * 7, limit=limit)
+            wider = db._recent_news_once(hours=24 * 7, limit=limit)
         except db.NewsDbError as e:
             db_err = e
+            wider = []
             print(f"[news_parse] DB FAIL week window {e.reason}: {e}")
+        if wider and date_str and not _batch_is_fresh(wider, date_str):
+            verdict = assess(wider, date_str)
+            print(f"[news_parse] discarding {len(wider)} week-window rows — "
+                  f"{verdict['reason']}")
+            wider = []
+        rows = wider
+    source = "db" if rows else ""
+    if not rows and date_str:
+        live = news_live.fetch(limit=limit, hours=hours)
+        if live and _batch_is_fresh(live, date_str):
+            print(f"[news_parse] using {len(live)} live RSS headlines")
+            rows = live
+            source = "live_rss"
+        elif live:
+            verdict = assess(live, date_str)
+            print(f"[news_parse] live RSS not fresh — {verdict['reason']}")
     if not rows and date_str:
         file_rows = rows_from_local_files(date_str, limit)
-        if file_rows:
+        if file_rows and _batch_is_fresh(file_rows, date_str):
             why = db_err.reason if db_err is not None else "empty"
             print(f"[news_parse] using {len(file_rows)} on-disk headlines "
                   f"(db {why})")
             rows = file_rows
-    if not rows and db_err is not None:
-        return _empty_error_report(hours, db_err.reason, str(db_err))
+            source = f"local_files:{why}"
+        elif file_rows:
+            print(f"[news_parse] {len(file_rows)} on-disk headlines are "
+                  "undated or stale — not the news window")
+    if date_str:
+        freshness = assess(rows, date_str) if rows else assess([], date_str)
+    else:
+        freshness = {"ok": bool(rows), "news_mode": "on" if rows else NEWS_MODE_STALE,
+                     "reason": "" if rows else "no session date"}
+    if not freshness.get("ok"):
+        source = NEWS_MODE_STALE
+    elif not source:
+        source = "db"
+    return rows, source, freshness
+
+
+def build_report(hours: int = 48, limit: int = 300,
+                 date_str: str | None = None) -> dict:
+    from .news_freshness import NEWS_MODE_STALE
+
+    rows, news_source, freshness = load_headlines(hours, limit, date_str)
+    if not rows and news_source != NEWS_MODE_STALE:
+        # DB error with nothing on disk and no live rows: keep the loud stub.
+        # A stale window is not an error stub — callers abstain on news_mode.
+        return _empty_error_report(hours, "empty", "no headlines")
+    if news_source == NEWS_MODE_STALE:
+        return {
+            "generated_at": datetime.now(ZoneInfo(config.TZ)).isoformat(),
+            "hours": hours,
+            "news_source": news_source,
+            "news_mode": NEWS_MODE_STALE,
+            "freshness": freshness,
+            "abstain_reason": freshness.get("reason") or "stale news window",
+            "raw_count": 0,
+            "parsed_count": 0,
+            "usable_count": 0,
+            "single_name_count": 0,
+            "noise_count": 0,
+            "polarity_usable": {"+": 0, "-": 0, "mixed": 0, "neutral": 0},
+            "by_macro_usable": {},
+            "by_sector_usable": {},
+            "usable_top": [],
+            "single_name_top": [],
+            "noise_sample": [],
+            "all_items": [],
+        }
     parsed = parse_rows(rows)
     usable = [p for p in parsed if p["usable"]]
     single = [p for p in parsed if p["class"] == "single_name"]
@@ -389,6 +470,9 @@ def build_report(hours: int = 48, limit: int = 300,
     return {
         "generated_at": datetime.now(ZoneInfo(config.TZ)).isoformat(),
         "hours": hours,
+        "news_source": news_source,
+        "news_mode": freshness.get("news_mode") or "on",
+        "freshness": freshness,
         "raw_count": len(rows),
         "parsed_count": len(parsed),
         "usable_count": len(usable),
@@ -408,7 +492,8 @@ def to_markdown(report: dict) -> str:
     lines = [
         f"# News Parse v2 — {report.get('generated_at', '')}",
         "",
-        f"Window≈{report.get('hours')}h | raw={report.get('raw_count')} | "
+        f"Window≈{report.get('hours')}h | news_mode={report.get('news_mode') or 'on'} | "
+        f"raw={report.get('raw_count')} | "
         f"usable={report.get('usable_count')} | "
         f"single_name={report.get('single_name_count')} | "
         f"noise_dropped={report.get('noise_count')}",
@@ -512,6 +597,10 @@ def main() -> None:
         raise SystemExit(f"news parse {report['error']}")
     qc = output_qc.qc_news_parse(jp)
     if not qc.ok:
+        if qc.reason == "stale_news" or report.get("news_mode") == "none_stale":
+            print(f"[news_parse] ABSTAIN stale window — kept {jp} "
+                  f"({(report.get('freshness') or {}).get('reason')})")
+            raise SystemExit(2)
         print(f"[news_parse] QC FAIL ({qc.reason}) — throwing out")
         output_qc.reject(jp, mp)
         raise SystemExit("news parse produced no quality-ok file")

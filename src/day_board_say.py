@@ -167,6 +167,16 @@ def news_parse(date: str) -> dict | None:
         said = f"{raw if raw is not None else len(items)} raw / {usable if usable is not None else len(titles)} usable"
     else:
         said = f"{len(items)} items"
+    if isinstance(data, dict) and data.get("news_mode"):
+        said = f"news_mode: {data.get('news_mode')} · " + said
+    else:
+        try:
+            from .news_freshness import NEWS_MODE_STALE, decision
+            dec = decision(date)
+        except Exception:
+            dec = {}
+        if dec.get("news_mode") == NEWS_MODE_STALE:
+            said = f"news_mode: {NEWS_MODE_STALE} · " + said
     if titles:
         said += " · " + titles[0][:80]
     if not titles and raw is None:

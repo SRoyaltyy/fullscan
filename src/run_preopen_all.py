@@ -910,6 +910,10 @@ def run(date: str | None = None, force: bool = False,
             ],
         },
     }
+    from .news_freshness import decision as news_decision
+    news_dec = news_decision(date)
+    status["news_mode"] = news_dec["news_mode"]
+    status["news_mode_reason"] = news_dec.get("reason") or ""
     status_path = _p("01_daily", f"{date}_preopen_status.json")
     status_path.write_text(json.dumps(status, indent=2), encoding="utf-8")
     md_path = _p("01_daily", f"{date}_preopen_status.md")
@@ -918,6 +922,7 @@ def run(date: str | None = None, force: bool = False,
         "",
         f"all_ok={status['all_ok']}  qc_all_ok={status['qc_all_ok']}  "
         f"book_ok={status['book_ok']}  grok_ok={status['grok_ok']}  "
+        f"news_mode={status['news_mode']}  "
         f"missing={missing_required or 'none'}",
         "",
         "Predictive modules + stock book (must land before 09:30 ET).",

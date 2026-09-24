@@ -12,7 +12,7 @@ import re
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-from . import config, db, output_qc, preopen
+from . import config, output_qc, preopen
 from .event_edges import EVENT_FAMILIES, EventFamily
 from .finviz_universe import load_universe, tickers_for_bucket
 from .news_framework import apply_interactions, score_event
@@ -78,35 +78,42 @@ def _load_rows(hours: int, limit: int, date_str: str | None) -> tuple[list[dict]
     Channel 1 headlines already on disk are enough for an edge scan, so
     fall back to them (the way news_parse does) instead of crashing.
     """
-    rows: list[dict] = []
-    db_err: db.NewsDbError | None = None
-    try:
-        rows = db.recent_news(hours=hours, limit=limit)
-    except db.NewsDbError as e:
-        db_err = e
-        print(f"[news_actions] DB FAIL {e.reason}: {e}")
-    if not rows and db_err is None:
-        try:
-            rows = db._recent_news_once(hours=24 * 7, limit=limit)
-        except db.NewsDbError as e:
-            db_err = e
-            print(f"[news_actions] DB FAIL week window {e.reason}: {e}")
-    if rows:
-        return rows, "db"
-    if date_str:
-        from .news_parse import rows_from_local_files
-        file_rows = rows_from_local_files(date_str, limit)
-        if file_rows:
-            why = db_err.reason if db_err is not None else "empty"
-            print(f"[news_actions] using {len(file_rows)} on-disk headlines "
-                  f"(db {why})")
-            return file_rows, f"local_files:{why}"
-    return [], (f"db_error:{db_err.reason}" if db_err is not None else "empty")
+    from .news_parse import load_headlines
+    rows, source, _fresh = load_headlines(hours, limit, date_str)
+    return rows, source
+
+
+def _abstain_report(hours: int, reason: str) -> dict:
+    return {
+        "generated_at": datetime.now(ZoneInfo(config.TZ)).isoformat(),
+        "hours": hours,
+        "raw_headlines": 0,
+        "news_source": "none_stale",
+        "news_mode": "none_stale",
+        "abstain_reason": reason,
+        "unique_events": 0,
+        "universe_rows": 0,
+        "interactions": [],
+        "reasoned_events": [],
+        "edge_actions": [],
+        "ticker_actions": [],
+    }
 
 
 def build_from_db(hours: int = 48, limit: int = 500,
                   date_str: str | None = None) -> dict:
+    from .news_freshness import decision
+    if date_str:
+        prior = decision(date_str)
+        if not prior["ok"] and prior.get("via") == "grok":
+            print(f"[news_actions] ABSTAIN grok stale-news stop — {prior['reason']}")
+            return _abstain_report(hours, prior["reason"])
     rows, news_source = _load_rows(hours, limit, date_str)
+    if news_source == "none_stale":
+        from .news_freshness import assess
+        why = assess(rows, date_str)["reason"] if date_str else "stale news window"
+        print(f"[news_actions] ABSTAIN — {why}")
+        return _abstain_report(hours, why)
     universe = load_universe()
 
     seen_titles: set[str] = set()
@@ -277,6 +284,7 @@ def build_from_db(hours: int = 48, limit: int = 500,
         "hours": hours,
         "raw_headlines": len(rows),
         "news_source": news_source,
+        "news_mode": "on",
         "unique_events": len(event_hits),
         "universe_rows": int(len(universe)),
         "interactions": interactions,
@@ -376,6 +384,17 @@ def main() -> None:
 
     report = build_from_db(hours=args.hours, limit=args.limit,
                            date_str=date_str)
+    if report.get("news_mode") == "none_stale":
+        os.makedirs(OUT_DIR, exist_ok=True)
+        jp = os.path.join(OUT_DIR, f"{date_str}_actions.json")
+        mp = os.path.join(OUT_DIR, f"{date_str}_actions.md")
+        with open(jp, "w", encoding="utf-8") as fh:
+            json.dump(report, fh, indent=2, ensure_ascii=False, default=str)
+        with open(mp, "w", encoding="utf-8") as fh:
+            fh.write(to_markdown(report))
+        print(f"[news_actions] ABSTAIN none_stale — kept {jp} "
+              f"({report.get('abstain_reason')})")
+        raise SystemExit(2)
     try:
         from .judge_apply import load_or_parse
         j = load_or_parse(date_str)
@@ -416,6 +435,9 @@ def main() -> None:
     print(to_markdown(report)[:4000])
     qc = output_qc.qc_news_actions(jp)
     if not qc.ok:
+        if qc.reason == "stale_news" or report.get("news_mode") == "none_stale":
+            print(f"[news_actions] ABSTAIN stale window — kept {jp}")
+            raise SystemExit(2)
         print(f"[news_actions] QC FAIL ({qc.reason}) — throwing out")
         output_qc.reject(jp, mp)
         raise SystemExit("news actions produced no quality-ok file")

@@ -168,6 +168,9 @@ def inject_block(date_str: str | None = None, max_chars: int = 3500) -> str:
     """Return the B1_INJECT / judge summary for predictors."""
     if not date_str:
         date_str = _latest_parsed_date() or datetime.now(ZoneInfo(config.TZ)).date().isoformat()
+    from .news_freshness import decision
+    if not decision(date_str)["ok"]:
+        return ""
     path = Path(NEWS_DIR) / f"{date_str}_judge.md"
     if not path.exists():
         path = Path(NEWS_DIR) / "latest_judge.md"
@@ -216,6 +219,12 @@ def main() -> None:
         return
 
     preopen.refuse_if_late("news_judge", force=args.force)
+
+    from .news_freshness import decision
+    news_dec = decision(date_str)
+    if not news_dec["ok"]:
+        print(f"[news_judge] ABSTAIN news_mode=none_stale — {news_dec['reason']}")
+        raise SystemExit(2)
 
     report = _load_parsed(date_str)
     if not report:

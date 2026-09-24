@@ -28,6 +28,11 @@ PAGES_URL = "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
 MAX_LANDS = 80
 
 
+def _news_mode(date: str) -> dict:
+    from .news_freshness import decision
+    return decision(date)
+
+
 def _today() -> str:
     return datetime.now(ET).date().isoformat()
 
@@ -156,6 +161,7 @@ def build(date: str, lands: list[dict] | None = None) -> dict:
             n_fail += 1
         elif w.status == "PARTIAL":
             n_partial += 1
+    news_dec = _news_mode(date)
     return {
         "date": date,
         "generated_at": datetime.now(ET).isoformat(),
@@ -167,6 +173,8 @@ def build(date: str, lands: list[dict] | None = None) -> dict:
             "n": len(processes),
         },
         "processes": processes,
+        "news_mode": news_dec["news_mode"],
+        "news_mode_reason": news_dec.get("reason") or "",
         "selections": _selections(date),
         "lands": lands[-MAX_LANDS:],
         "href": {

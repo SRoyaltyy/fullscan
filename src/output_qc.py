@@ -248,6 +248,12 @@ def qc_news_parse(path: str | Path) -> QCResult:
     tiny = packet_gates.json_too_small(p)
     if tiny:
         return _fail("news_parse", p, tiny, empty=True)
+    if data.get("news_mode") == "none_stale" or (
+            isinstance(data.get("freshness"), dict)
+            and data["freshness"].get("ok") is False):
+        # Kept on disk so the book and predicts can label none_stale.
+        # Not a quality-ok parse — news-dependent steps must abstain.
+        return _fail("news_parse", p, "stale_news")
     raw = int(data.get("raw_count") or 0)
     if raw <= 0 and not (data.get("usable_top") or data.get("all_items")):
         return _fail("news_parse", p, "empty_parse", empty=True)
@@ -402,6 +408,8 @@ def qc_news_actions(path: str | Path) -> QCResult:
         return _fail("news_actions", p, "unparseable_json", empty=True)
     if "ticker_actions" not in data and "edge_actions" not in data:
         return _fail("news_actions", p, "missing ticker_actions/edge_actions")
+    if data.get("news_mode") == "none_stale":
+        return _fail("news_actions", p, "stale_news")
     return _ok("news_actions", p, "ok")
 
 
