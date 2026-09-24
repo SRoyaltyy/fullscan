@@ -1,86 +1,17 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T06:21:53.695610-04:00",
+  "generated_at": "2026-09-24T06:24:18.665457-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 4,
-    "partial": 4,
+    "ok": 5,
+    "partial": 3,
     "fail": 0,
     "n": 8
   },
-  "buy_1d": [
-    {
-      "ticker": "ASTH",
-      "score": 0.3495180712530669
-    },
-    {
-      "ticker": "GDYN",
-      "score": 0.4014324783164612
-    },
-    {
-      "ticker": "CHKP",
-      "score": 0.3383059605829564
-    },
-    {
-      "ticker": "PRGS",
-      "score": 0.4651217377522372
-    },
-    {
-      "ticker": "NTNX",
-      "score": 0.21941954717996132
-    },
-    {
-      "ticker": "NTCT",
-      "score": 0.5613639959793102
-    },
-    {
-      "ticker": "TDC",
-      "score": 0.5291249996919065
-    }
-  ],
-  "sell_1d": [
-    {
-      "ticker": "METC",
-      "score": -0.4147221792720016
-    },
-    {
-      "ticker": "EOSE",
-      "score": -0.10287219119162083
-    },
-    {
-      "ticker": "XIFR",
-      "score": -0.14808431112233889
-    },
-    {
-      "ticker": "VST",
-      "score": 0.10200204669075895
-    },
-    {
-      "ticker": "AESI",
-      "score": -0.3733772660521733
-    },
-    {
-      "ticker": "TE",
-      "score": 0.028038875299126742
-    },
-    {
-      "ticker": "EXK",
-      "score": -0.1576247463622153
-    },
-    {
-      "ticker": "ARE",
-      "score": -0.26983500225431734
-    }
-  ],
-  "flatten": {
-    "said": "0 priced buys \u00b7 cash $18,086.73 \u00b7 morning S missing",
-    "bullets": [
-      "0 priced buys",
-      "cash $18,086.73",
-      "morning S missing"
-    ]
-  },
+  "buy_1d": [],
+  "sell_1d": [],
+  "flatten": {},
   "general": {
     "said": "DOWN  -7.659",
     "bullets": [
@@ -94,14 +25,14 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "0 up / 1 down / 0 flat",
+    "said": "1 up / 4 down / 0 flat",
     "bullets": [
       "XLB DOWN -2.9",
-      "XLC missing",
-      "XLY missing",
+      "XLC DOWN -11.3",
+      "XLY DOWN -8.5",
       "XLP missing",
-      "XLE missing",
-      "XLF missing",
+      "XLE UP +6.8",
+      "XLF DOWN -4.9",
       "XLV missing",
       "XLI missing",
       "XLRE missing",
@@ -427,70 +358,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Energy (4/11)",
+      "title": "Sector predict Financial (5/11)",
       "date": "2026-09-24",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-24T06:21:53.277712-04:00",
+      "at": "2026-09-24T06:24:18.262067-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-09-24/energy_predict.md",
+          "path": "01_daily/sectors/2026-09-24/financial_predict.md",
           "ok": true,
           "reason": "",
-          "size": 17814,
-          "preview": "# Sector Prediction \u2014 Energy \u2014 2026-09-24\n- ETF: **XLE**\n- rubric: `00_grounding/sectors/energy.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **6.779** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **2.694** (CL -1.59%, QA -1.02%, ES -0.64%, PM:XLE +1.11%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **6.0** (raw 7.538)"
+          "size": 18017,
+          "preview": "# Sector Prediction \u2014 Financial \u2014 2026-09-24\n- ETF: **XLF**\n- rubric: `00_grounding/sectors/financial.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-4.898** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-1.183** (ES -0.64%, ZN -0.03%, PM:XLF -0.07%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **-1.8** (raw -1.8)"
         },
         {
-          "path": "01_daily/sectors/2026-09-24/energy_predict_trace.md",
+          "path": "01_daily/sectors/2026-09-24/financial_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 4347,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Energy 2026-09-24\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (151,794 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"WTI crude oil price today September 24 2026\"* \u2192 got 6 results (via ddg)\n- WTI Crude Oil Price Today: $92.71 +3.18% (September 23, 2026) (https://convextrade.com/today/oil-price)\n- Crude Oil - Price - Chart - Historical Data - News (https://tradingeconomics.com/commodity/crude-oil)\n- Crude Oil Futures Price Today (WTI) - Investing.com (https://www.investing.com/commodities/crude-oil)\n**Step 2 \u2014 Research.** The model wanted to know: *\"oil prices rise September 24 2026 Brent WTI supply\"* \u2192 got 6 results (via gnews_rss)\n- Oil (USCrude) Price Forecast for Today, Tomorrow, Next Week, an"
+          "size": 4353,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Financial 2026-09-24\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (149,577 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"Warsh rate hikes September hike back on table Treasury yields spike 2026\"* \u2192 got 6 results (via gnews_rss)\n- Fed's table is set for a rate hike, a first under Warsh - Reuters (https://news.google.com/rss/articles/CBMilAFBVV95cUxOTmR4eUlzVVZXLUFSSEpiLUs3UkxJMDYwVVpsU2o1REJIOUFSTlN3U2VBV2NRZ3hUTUNzSy1KRTNlODFaTmh6bGgtTFpCM3BCWE13c250dlBDTW5XaS1rWHpUMjV0cFJiSkxqN3g4OTVVZmJKN1dKSXZhRHZ2bW1Lbndrc3UxRGhjNG9LY01lZklaajE4?oc=5)\n- Fed approves interest rate hike, signals one more to come this year - CNBC (https://news.google.com/rss/articles/CBMieEFVX3lxTFB2d21SUXhkazRGZk1QSTgxb2lQME5TU"
         },
         {
-          "path": "01_daily/_transcripts/2026-09-24_sector_energy_predict.json",
+          "path": "01_daily/_transcripts/2026-09-24_sector_financial_predict.json",
           "ok": true,
           "reason": "",
-          "size": 185614,
+          "size": 181200,
           "preview": "keys: model, messages"
         },
         {
           "path": "01_daily/2026-09-24_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 7240,
+          "size": 7233,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-09-24/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 1242,
+          "size": 1238,
           "preview": "keys: date, n_ok, n_total, sectors"
         },
         {
           "path": "01_daily/sectors/2026-09-24/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1815,
-          "preview": "# Sector Board \u2014 2026-09-24\nGenerated: **2026-09-24T06:21:53.263857-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1874,
+          "preview": "# Sector Board \u2014 2026-09-24\nGenerated: **2026-09-24T06:24:18.247731-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-09-24/_board.json",
           "ok": true,
           "reason": "",
-          "size": 5935,
+          "size": 6106,
           "preview": "keys: date, generated_at, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 875639,
+          "size": 876716,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Energy \u2014 2026-09-24\n- ETF: **XLE**\n- rubric: `00_grounding/sectors/energy.md`\n- predicted_direction: **up**\n- predicted_magnitude_band: **mild**\n- total_score: **6.779** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **2.694** (CL -1.59%, QA -1.02%, ES -0.64%, PM:XLE +1.11%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **6.0** (raw 7.538) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Energy 2026-09-24\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (151,794 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"WTI crude oil price today September 24 2026\"* \u2192 got 6 results (via ddg)\n- WTI Crude Oil Price Today: $92.71 +3.18% (September 23, 2026) (https://convextrade.com/today/oil-price)\n- Crude Oil - Price - Chart - Historical Data - News (https://tradingeconomics.com/commodity/crude-oil)\n- Crude Oil Futures Price Today (WTI) - Investing.com (https://www.investing.com/commodities/crude-oil)\n**Step 2 \u2014 Research.** The model wanted to know: *\"oil prices rise September 24 2026 B"
+      "preview": "# Sector Prediction \u2014 Financial \u2014 2026-09-24\n- ETF: **XLF**\n- rubric: `00_grounding/sectors/financial.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-4.898** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-1.183** (ES -0.64%, ZN -0.03%, PM:XLF -0.07%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **-1.8** (raw -1.8) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Financial 2026-09-24\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (149,577 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"Warsh rate hikes September hike back on table Treasury yields spike 2026\"* \u2192 got 6 results (via gnews_rss)\n- Fed's table is set for a rate hike, a first under Warsh - Reuters (https://news.google.com/rss/articles/CBMilAFBVV95cUxOTmR4eUlzVVZXLUFSSEpiLUs3UkxJMDYwVVpsU2o1REJIOUFSTlN3U2VBV2NRZ3hUTUNzSy1KRTNlODFaTmh6bGgtTFpCM3BCWE13c250dlBDTW5XaS1rWHpUMjV0cFJiSkxqN3g4OTVVZmJKN1dKSXZhRHZ2bW1Lbndrc3UxRGhjNG9LY01lZklaajE4?oc=5)\n- Fed approves interest rate hike, signals one"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
