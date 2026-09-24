@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T06:15:19.523928-04:00",
+  "generated_at": "2026-09-24T06:23:05.628444-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -94,11 +94,11 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "0 up / 1 down / 0 flat",
+    "said": "0 up / 3 down / 0 flat",
     "bullets": [
       "XLB DOWN -2.9",
-      "XLC missing",
-      "XLY missing",
+      "XLC DOWN -11.3",
+      "XLY DOWN -8.5",
       "XLP missing",
       "XLE missing",
       "XLF missing",

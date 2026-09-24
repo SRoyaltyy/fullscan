@@ -1,17 +1,86 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T06:24:18.665457-04:00",
+  "generated_at": "2026-09-24T06:23:05.628444-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 5,
-    "partial": 3,
+    "ok": 6,
+    "partial": 2,
     "fail": 0,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
-  "flatten": {},
+  "buy_1d": [
+    {
+      "ticker": "ASTH",
+      "score": 0.3495180712530669
+    },
+    {
+      "ticker": "GDYN",
+      "score": 0.4014324783164612
+    },
+    {
+      "ticker": "CHKP",
+      "score": 0.3383059605829564
+    },
+    {
+      "ticker": "PRGS",
+      "score": 0.4651217377522372
+    },
+    {
+      "ticker": "NTNX",
+      "score": 0.21941954717996132
+    },
+    {
+      "ticker": "NTCT",
+      "score": 0.5613639959793102
+    },
+    {
+      "ticker": "TDC",
+      "score": 0.5291249996919065
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "METC",
+      "score": -0.4147221792720016
+    },
+    {
+      "ticker": "EOSE",
+      "score": -0.10287219119162083
+    },
+    {
+      "ticker": "XIFR",
+      "score": -0.14808431112233889
+    },
+    {
+      "ticker": "VST",
+      "score": 0.10200204669075895
+    },
+    {
+      "ticker": "AESI",
+      "score": -0.3733772660521733
+    },
+    {
+      "ticker": "TE",
+      "score": 0.028038875299126742
+    },
+    {
+      "ticker": "EXK",
+      "score": -0.1576247463622153
+    },
+    {
+      "ticker": "ARE",
+      "score": -0.26983500225431734
+    }
+  ],
+  "flatten": {
+    "said": "0 priced buys \u00b7 cash $18,086.73 \u00b7 morning S missing",
+    "bullets": [
+      "0 priced buys",
+      "cash $18,086.73",
+      "morning S missing"
+    ]
+  },
   "general": {
     "said": "DOWN  -7.659",
     "bullets": [
@@ -25,14 +94,14 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "1 up / 4 down / 0 flat",
+    "said": "0 up / 3 down / 0 flat",
     "bullets": [
       "XLB DOWN -2.9",
       "XLC DOWN -11.3",
       "XLY DOWN -8.5",
       "XLP missing",
-      "XLE UP +6.8",
-      "XLF DOWN -4.9",
+      "XLE missing",
+      "XLF missing",
       "XLV missing",
       "XLI missing",
       "XLRE missing",
@@ -41,6 +110,59 @@
     ]
   },
   "lands": [
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T05:59:43.094390-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-24_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1480936,
+          "preview": "1d BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI"
+        },
+        {
+          "path": "data/stock_book/2026-09-24_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-24_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2597,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-24_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12343,
+          "preview": "2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12343,
+          "preview": "2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI"
+        },
+        {
+          "path": "01_daily/2026-09-24_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 84487,
+          "preview": "# Stock book \u2014 2026-09-24\n_Generated 2026-09-24T05:57:30.704824-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI \u00b7 2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI \u00b7 # Stock book \u2014 2026-09-24\n_Generated 2026-09-24T05:57:30.704824-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -355,73 +477,6 @@
         }
       ],
       "preview": "# Sector Prediction \u2014 Basic Materials \u2014 2026-09-24\n- ETF: **XLB**\n- rubric: `00_grounding/sectors/basic_materials.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-2.88** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-0.54** (ES -0.64%, HG +0.66%, GC +0.90%, DX -0.02%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **-0.425** (raw -0.425) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Basic Materials 2026-09-24 retry1\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (148,737 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (11,531 characters). \u00b7 keys: model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-24\nGenerated: **2026-09-24T06:11:28.145285-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_at,"
-    },
-    {
-      "key": "sector_one",
-      "title": "Sector predict Financial (5/11)",
-      "date": "2026-09-24",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-24T06:24:18.262067-04:00",
-      "files": [
-        {
-          "path": "01_daily/sectors/2026-09-24/financial_predict.md",
-          "ok": true,
-          "reason": "",
-          "size": 18017,
-          "preview": "# Sector Prediction \u2014 Financial \u2014 2026-09-24\n- ETF: **XLF**\n- rubric: `00_grounding/sectors/financial.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-4.898** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-1.183** (ES -0.64%, ZN -0.03%, PM:XLF -0.07%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **-1.8** (raw -1.8)"
-        },
-        {
-          "path": "01_daily/sectors/2026-09-24/financial_predict_trace.md",
-          "ok": true,
-          "reason": "",
-          "size": 4353,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Financial 2026-09-24\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (149,577 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"Warsh rate hikes September hike back on table Treasury yields spike 2026\"* \u2192 got 6 results (via gnews_rss)\n- Fed's table is set for a rate hike, a first under Warsh - Reuters (https://news.google.com/rss/articles/CBMilAFBVV95cUxOTmR4eUlzVVZXLUFSSEpiLUs3UkxJMDYwVVpsU2o1REJIOUFSTlN3U2VBV2NRZ3hUTUNzSy1KRTNlODFaTmh6bGgtTFpCM3BCWE13c250dlBDTW5XaS1rWHpUMjV0cFJiSkxqN3g4OTVVZmJKN1dKSXZhRHZ2bW1Lbndrc3UxRGhjNG9LY01lZklaajE4?oc=5)\n- Fed approves interest rate hike, signals one more to come this year - CNBC (https://news.google.com/rss/articles/CBMieEFVX3lxTFB2d21SUXhkazRGZk1QSTgxb2lQME5TU"
-        },
-        {
-          "path": "01_daily/_transcripts/2026-09-24_sector_financial_predict.json",
-          "ok": true,
-          "reason": "",
-          "size": 181200,
-          "preview": "keys: model, messages"
-        },
-        {
-          "path": "01_daily/2026-09-24_preopen_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 7233,
-          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
-        },
-        {
-          "path": "01_daily/sectors/2026-09-24/_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 1238,
-          "preview": "keys: date, n_ok, n_total, sectors"
-        },
-        {
-          "path": "01_daily/sectors/2026-09-24/_BOARD.md",
-          "ok": true,
-          "reason": "",
-          "size": 1874,
-          "preview": "# Sector Board \u2014 2026-09-24\nGenerated: **2026-09-24T06:24:18.247731-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
-        },
-        {
-          "path": "01_daily/sectors/2026-09-24/_board.json",
-          "ok": true,
-          "reason": "",
-          "size": 6106,
-          "preview": "keys: date, generated_at, sectors"
-        },
-        {
-          "path": "03_scoreboard/scoreboard.json",
-          "ok": true,
-          "reason": "",
-          "size": 876716,
-          "preview": "keys: runs"
-        }
-      ],
-      "preview": "# Sector Prediction \u2014 Financial \u2014 2026-09-24\n- ETF: **XLF**\n- rubric: `00_grounding/sectors/financial.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-4.898** (mult 0.9)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-1.183** (ES -0.64%, ZN -0.03%, PM:XLF -0.07%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **-1.8** (raw -1.8) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Financial 2026-09-24\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (149,577 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"Warsh rate hikes September hike back on table Treasury yields spike 2026\"* \u2192 got 6 results (via gnews_rss)\n- Fed's table is set for a rate hike, a first under Warsh - Reuters (https://news.google.com/rss/articles/CBMilAFBVV95cUxOTmR4eUlzVVZXLUFSSEpiLUs3UkxJMDYwVVpsU2o1REJIOUFSTlN3U2VBV2NRZ3hUTUNzSy1KRTNlODFaTmh6bGgtTFpCM3BCWE13c250dlBDTW5XaS1rWHpUMjV0cFJiSkxqN3g4OTVVZmJKN1dKSXZhRHZ2bW1Lbndrc3UxRGhjNG9LY01lZklaajE4?oc=5)\n- Fed approves interest rate hike, signals one"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
