@@ -1,6 +1,6 @@
 # Finviz homepage market digest — 2026-09-24
 
-**Generated:** 2026-09-24T05:52:54.055442-04:00 (America/New_York)
+**Generated:** 2026-09-24T05:55:10.781162-04:00 (America/New_York)
 **Source:** `live`
 **Banner:** US futures point to a lower open as a global bond selloff lifts yields to multi‑year highs ahead of US data and an anticipated Trump‑Xi meeting
 **Prior close:** SPX —  Nasdaq —  Dow —
