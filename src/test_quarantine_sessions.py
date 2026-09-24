@@ -40,7 +40,7 @@ def test_list_marks_2026_09_24_stale_news() -> None:
     assert "2026-09-24" in dates()
     assert is_quarantined("2026-09-24")
     assert not is_quarantined("2026-08-27")
-    assert reason("2026-09-24") == "stale_news"
+    assert reason("2026-09-24") == "stale_dated"
     assert filter_dates(["2026-08-27", "2026-09-24", "2026-09-25"]) == [
         "2026-08-27", "2026-09-25",
     ]
@@ -74,15 +74,22 @@ def test_lane_run_35823365502_and_the_tails_it_read() -> None:
     assert lane_artifact_blocked("03_scoreboard/LANE_ONE_SHOT_100.md")
     assert lane_artifact_blocked("02_lessons/lane/one_shot_100/a16b5b75a698e098.json")
     assert not lane_artifact_blocked("03_scoreboard/LANE_ONE_SHOT_GOLD.md")
-    for day in (
+    stale_dated = {
         "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03",
-        "2026-09-04", "2026-09-08", "2026-09-09", "2026-09-10",
-        "2026-09-11", "2026-09-14", "2026-09-15", "2026-09-16",
-        "2026-09-17", "2026-09-18", "2026-09-21", "2026-09-22",
-        "2026-09-23", "2026-09-24",
-    ):
+        "2026-09-04", "2026-09-08", "2026-09-24",
+    }
+    undated_finviz = {
+        "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-14",
+        "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18",
+        "2026-09-21", "2026-09-22", "2026-09-23",
+    }
+    assert dates() == stale_dated | undated_finviz
+    for day in stale_dated:
         assert is_quarantined(day), day
-        assert reason(day) == "stale_news"
+        assert reason(day) == "stale_dated"
+    for day in undated_finviz:
+        assert is_quarantined(day), day
+        assert reason(day) == "undated_finviz"
     # August cluster's own files stay. No parsed file in the scan was CLEAN.
     assert not is_quarantined("2026-08-27")
     assert not is_quarantined("2026-08-28")
