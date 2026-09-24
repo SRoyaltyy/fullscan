@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T10:40:18.428919-04:00",
+  "generated_at": "2026-09-24T11:06:49.764021-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -870,7 +870,7 @@
           "size": 52622,
           "said": "Stock book \u2014 2026-09-24",
           "bullets": [
-            "_Generated 2026-09-24T10:40:16.186296-04:00_",
+            "_Generated 2026-09-24T10:46:15.098746-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -1053,10 +1053,10 @@
       }
     ],
     "flatten": {
-      "said": "0 priced buys \u00b7 cash $18,086.73",
+      "said": "0 priced buys \u00b7 cash $19,175.92",
       "bullets": [
         "0 priced buys",
-        "cash $18,086.73"
+        "cash $19,175.92"
       ]
     },
     "general": {
@@ -2720,13 +2720,13 @@
       "date": "2026-09-24",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-24T10:35:24.741271-04:00",
+      "at": "2026-09-24T11:06:49.162191-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 33215,
+          "size": 33347,
           "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
         },
         {
@@ -2740,70 +2740,70 @@
           "path": "data/day_board/2026-09-24.json",
           "ok": true,
           "reason": "",
-          "size": 134442,
+          "size": 145260,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
         },
         {
           "path": "data/day_board/2026-09-24_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 96954,
+          "size": 107772,
           "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
         },
         {
           "path": "data/day_board/strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 3042118,
+          "size": 3039674,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "data/day_board/2026-09-24_strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 3042118,
+          "size": 3039674,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "data/day_board/today_strategies.json",
           "ok": true,
           "reason": "",
-          "size": 3445912,
+          "size": 3442950,
           "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
         },
         {
           "path": "data/factor_mine/strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 3042118,
+          "size": 3039674,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 96954,
+          "size": 107772,
           "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
         },
         {
           "path": "dashboard/factor-mine/strategy_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 3042118,
+          "size": 3039674,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "dashboard/factor-mine/today_strategies.json",
           "ok": true,
           "reason": "",
-          "size": 3042118,
+          "size": 3039674,
           "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
         },
         {
           "path": "dashboard/today_strategies.json",
           "ok": true,
           "reason": "",
-          "size": 3445912,
+          "size": 3442950,
           "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
         },
         {
