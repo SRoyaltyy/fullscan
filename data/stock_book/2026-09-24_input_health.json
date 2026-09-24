@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T06:27:50.755452-04:00",
+  "generated_at": "2026-09-24T06:33:29.013916-04:00",
   "inputs": [
     {
       "name": "finviz_export",
@@ -90,8 +90,8 @@
       "name": "sector_predicts",
       "family": "sector",
       "status": "degraded",
-      "n": 5,
-      "detail": "5/11 quality"
+      "n": 6,
+      "detail": "6/11 quality"
     },
     {
       "name": "price_store",

@@ -1,18 +1,18 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T06:31:35.669072-04:00",
+  "generated_at": "2026-09-24T06:33:32.813908-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
-    "ok": 5,
-    "partial": 3,
+    "ok": 6,
+    "partial": 2,
     "fail": 0,
     "n": 8
   },
   "buy_1d": [
     {
       "ticker": "ASTH",
-      "score": 0.3495180712530669
+      "score": 0.09248307125306686
     },
     {
       "ticker": "CHKP",
@@ -86,7 +86,7 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "1 up / 4 down / 0 flat",
+    "said": "1 up / 5 down / 0 flat",
     "bullets": [
       "XLB DOWN -2.9",
       "XLC DOWN -11.3",
@@ -94,7 +94,7 @@
       "XLP missing",
       "XLE UP +6.8",
       "XLF DOWN -4.9",
-      "XLV missing",
+      "XLV DOWN -4.3",
       "XLI missing",
       "XLRE missing",
       "XLK missing",
@@ -102,6 +102,59 @@
     ]
   },
   "lands": [
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T05:59:43.094390-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-24_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1480936,
+          "preview": "1d BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI"
+        },
+        {
+          "path": "data/stock_book/2026-09-24_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-24_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2597,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-24_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12343,
+          "preview": "2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12343,
+          "preview": "2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI"
+        },
+        {
+          "path": "01_daily/2026-09-24_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 84487,
+          "preview": "# Stock book \u2014 2026-09-24\n_Generated 2026-09-24T05:57:30.704824-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI \u00b7 2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI \u00b7 # Stock book \u2014 2026-09-24\n_Generated 2026-09-24T05:57:30.704824-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -416,73 +469,6 @@
         }
       ],
       "preview": "# Sector Prediction \u2014 Basic Materials \u2014 2026-09-24\n- ETF: **XLB**\n- rubric: `00_grounding/sectors/basic_materials.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-2.88** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-0.54** (ES -0.64%, HG +0.66%, GC +0.90%, DX -0.02%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **-0.425** (raw -0.425) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Basic Materials 2026-09-24 retry1\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (148,737 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (11,531 characters). \u00b7 keys: model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-24\nGenerated: **2026-09-24T06:11:28.145285-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_at,"
-    },
-    {
-      "key": "sector_one",
-      "title": "Sector predict Industrials (7/11)",
-      "date": "2026-09-24",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-24T06:31:35.259689-04:00",
-      "files": [
-        {
-          "path": "01_daily/sectors/2026-09-24/industrials_predict.md",
-          "ok": true,
-          "reason": "",
-          "size": 21497,
-          "preview": "# Sector Prediction \u2014 Industrials \u2014 2026-09-24\n- ETF: **XLI**\n- rubric: `00_grounding/sectors/industrials.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-4.289** (mult 0.8)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-0.774** (ES -0.64%, ER2 +0.08%, HG +0.66%, PM:XLI -0.00%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **-1.6** (raw -1.6)"
-        },
-        {
-          "path": "01_daily/sectors/2026-09-24/industrials_predict_trace.md",
-          "ok": true,
-          "reason": "",
-          "size": 8224,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Industrials 2026-09-24\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (157,201 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"Warsh rate hikes September 2026 Treasury yields spike stocks\"* \u2192 got 6 results (via gnews_rss)\n- 10-year Treasury yield rockets to 19-year high. Here's what's driving the spike - CNBC (https://news.google.com/rss/articles/CBMiekFVX3lxTFBOdWdlRzQ1amd1REkyVENiM3pjTkhCQ1VIZTBRVnhlYlpiTEF5SFcwY1hpLTBxVW1tVGVvSjg2STNSenVIY1hJUWh2QmNQRFdYQUJ4UGFLeFNrV0ZHY1lzeU9GcVZyVFBQUzNSWE1Vb19NZE9HenR4YkF30gF_QVVfeXFMT2IwQWRCUkw5MGRqc0lueEV0UXlLQS11aWhhYWdyaFRUZjdraEFTZWE4NlJlYkJVdTFqVy1QYUs2b2d3TXNOeEY5UTBVNDYzaGZXYzBMdmpJQVdXQUlnenJPZENOTjhGZ2tKenJtYkFZUzZGcnJ3TERGckxNOGk0NA?oc=5)\n- U.S. stoc"
-        },
-        {
-          "path": "01_daily/_transcripts/2026-09-24_sector_industrials_predict.json",
-          "ok": true,
-          "reason": "",
-          "size": 204612,
-          "preview": "keys: model, messages"
-        },
-        {
-          "path": "01_daily/2026-09-24_preopen_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 7219,
-          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
-        },
-        {
-          "path": "01_daily/sectors/2026-09-24/_qc.json",
-          "ok": true,
-          "reason": "",
-          "size": 1230,
-          "preview": "keys: date, n_ok, n_total, sectors"
-        },
-        {
-          "path": "01_daily/sectors/2026-09-24/_BOARD.md",
-          "ok": true,
-          "reason": "",
-          "size": 1933,
-          "preview": "# Sector Board \u2014 2026-09-24\nGenerated: **2026-09-24T06:31:35.244832-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
-        },
-        {
-          "path": "01_daily/sectors/2026-09-24/_board.json",
-          "ok": true,
-          "reason": "",
-          "size": 6448,
-          "preview": "keys: date, generated_at, sectors"
-        },
-        {
-          "path": "03_scoreboard/scoreboard.json",
-          "ok": true,
-          "reason": "",
-          "size": 878878,
-          "preview": "keys: runs"
-        }
-      ],
-      "preview": "# Sector Prediction \u2014 Industrials \u2014 2026-09-24\n- ETF: **XLI**\n- rubric: `00_grounding/sectors/industrials.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-4.289** (mult 0.8)\n- regime: risk_off\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-0.774** (ES -0.64%, ER2 +0.08%, HG +0.66%, PM:XLI -0.00%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **-1.6** (raw -1.6) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Industrials 2026-09-24\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (157,201 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"Warsh rate hikes September 2026 Treasury yields spike stocks\"* \u2192 got 6 results (via gnews_rss)\n- 10-year Treasury yield rockets to 19-year high. Here's what's driving the spike - CNBC (https://news.google.com/rss/articles/CBMiekFVX3lxTFBOdWdlRzQ1amd1REkyVENiM3pjTkhCQ1VIZTBRVnhlYlpiTEF5SFcwY1hpLTBxVW1tVGVvSjg2STNSenVIY1hJUWh2QmNQRFdYQUJ4UGFLeFNrV0ZHY1lzeU9GcVZyVFBQUzNSWE1Vb19NZE9HenR4YkF30gF_QVVfeXFMT2IwQWRCUkw5MGRqc0lueEV0UXlLQS11aWhhYWdyaFRUZjd"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"

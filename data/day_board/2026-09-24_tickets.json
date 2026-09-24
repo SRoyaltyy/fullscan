@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T06:27:57.549460-04:00",
+  "generated_at": "2026-09-24T06:33:32.813908-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -12,7 +12,7 @@
   "buy_1d": [
     {
       "ticker": "ASTH",
-      "score": 0.3495180712530669
+      "score": 0.09248307125306686
     },
     {
       "ticker": "CHKP",
@@ -86,7 +86,7 @@
     "direction": "down"
   },
   "sectors": {
-    "said": "1 up / 4 down / 0 flat",
+    "said": "1 up / 5 down / 0 flat",
     "bullets": [
       "XLB DOWN -2.9",
       "XLC DOWN -11.3",
@@ -94,7 +94,7 @@
       "XLP missing",
       "XLE UP +6.8",
       "XLF DOWN -4.9",
-      "XLV missing",
+      "XLV DOWN -4.3",
       "XLI missing",
       "XLRE missing",
       "XLK missing",
