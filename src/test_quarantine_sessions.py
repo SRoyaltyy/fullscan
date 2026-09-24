@@ -79,17 +79,22 @@ def test_lane_run_35823365502_and_the_tails_it_read() -> None:
         "2026-09-04", "2026-09-08", "2026-09-24",
     }
     undated_finviz = {
-        "2026-09-09", "2026-09-10", "2026-09-11", "2026-09-14",
-        "2026-09-15", "2026-09-16", "2026-09-17", "2026-09-18",
-        "2026-09-21", "2026-09-22", "2026-09-23",
+        "2026-09-09", "2026-09-11", "2026-09-15",
     }
-    assert dates() == stale_dated | undated_finviz
+    finviz_scrape_dated = {
+        "2026-09-10", "2026-09-14", "2026-09-16", "2026-09-17",
+        "2026-09-18", "2026-09-21", "2026-09-22", "2026-09-23",
+    }
+    assert dates() == stale_dated | undated_finviz | finviz_scrape_dated
     for day in stale_dated:
         assert is_quarantined(day), day
         assert reason(day) == "stale_dated"
     for day in undated_finviz:
         assert is_quarantined(day), day
         assert reason(day) == "undated_finviz"
+    for day in finviz_scrape_dated:
+        assert is_quarantined(day), day
+        assert reason(day) == "finviz_scrape_dated"
     # August cluster's own files stay. No parsed file in the scan was CLEAN.
     assert not is_quarantined("2026-08-27")
     assert not is_quarantined("2026-08-28")
