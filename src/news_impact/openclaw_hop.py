@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from src import config
 from src.lane_route import extract_json
-from src.openclaw_models import pick_cheapest_above_30b
+from src.openclaw_models import model_for_hop, pick_cheapest_above_30b
 
 from .prompts import (
     ANALYST_SYSTEM,
@@ -20,10 +20,11 @@ from .prompts import (
 from .schema import Classification
 
 
-def news_model() -> str:
-    return (config.OPENCLAW_NEWS_MODEL
-            or pick_cheapest_above_30b()
-            or "xai/grok-4.3")
+def news_model(tmpl: str = "news_impact") -> str:
+    pinned = config.OPENCLAW_NEWS_MODEL
+    if pinned and tmpl not in {"news_usability_batch", "news_pack_complete"}:
+        return pinned
+    return model_for_hop(tmpl) or pick_cheapest_above_30b() or "xai/grok-4.3"
 
 
 def gateway_ready() -> bool:
@@ -43,7 +44,7 @@ def _fp(hop_name: str) -> dict:
 
 def _complete(system: str, user: str, max_tokens: int, stage: str) -> tuple[str, str]:
     from src import deepseek_client
-    model = news_model()
+    model = news_model(stage)
     text = deepseek_client.openclaw_complete(
         [{"role": "system", "content": system},
          {"role": "user", "content": user}],
@@ -107,5 +108,41 @@ def hop(tmpl: str, art: dict, family: str = "", cls: Classification | None = Non
     return parsed, "openclaw", model, [{
         "role": tmpl, "lane": "openclaw", "model": model,
         "ok": True, "excerpt": (text or "")[:160],
+        **stamp,
+    }]
+
+
+def hop_batch(tmpl: str, arts: list[dict]) -> tuple[dict | None, str, str, list[dict]]:
+    """One SuperGrok turn over many headlines. Fail soft."""
+    from .batch_prompts import (
+        CLASSIFY_BATCH_SYSTEM,
+        USABILITY_SYSTEM,
+        classify_batch_prompt,
+        usability_batch_prompt,
+    )
+    if not gateway_ready():
+        return None, "", "", [{
+            "role": tmpl, "lane": "openclaw", "model": "",
+            "ok": False, "skip": "no_gateway", "n": len(arts),
+        }]
+    if tmpl == "news_usability_batch":
+        prompt = usability_batch_prompt(arts)
+        system = USABILITY_SYSTEM
+        budget = min(80 * max(len(arts), 1) + 80, 4000)
+        fp_name = "usability_batch"
+    else:
+        prompt = classify_batch_prompt(arts)
+        system = CLASSIFY_BATCH_SYSTEM
+        budget = min(120 * max(len(arts), 1) + 80, 4000)
+        fp_name = "classify_batch"
+    text, model = _complete(system, prompt, budget, tmpl)
+    parsed = extract_json(text) if text else None
+    stamp = _fp(fp_name)
+    ok = isinstance(parsed, dict) and isinstance(parsed.get("rows"), list)
+    return parsed if ok else None, "openclaw", model, [{
+        "role": tmpl, "lane": "openclaw", "model": model,
+        "ok": ok, "n": len(arts),
+        "skip": "" if ok else ("empty" if not text else "unparseable"),
+        "excerpt": (text or "")[:160],
         **stamp,
     }]
