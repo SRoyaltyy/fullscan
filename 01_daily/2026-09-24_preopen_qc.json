@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T06:28:08.030355-04:00",
+  "generated_at": "2026-09-24T06:31:35.237438-04:00",
   "items": [
     {
       "ok": true,
@@ -201,14 +201,14 @@
       "missing_markers": []
     },
     {
-      "ok": false,
+      "ok": true,
       "kind": "sector_predict",
       "path": "01_daily/sectors/2026-09-24/industrials_predict.md",
-      "reason": "missing",
-      "size": 0,
+      "reason": "",
+      "size": 21497,
       "carried": false,
       "timeout": false,
-      "empty": true,
+      "empty": false,
       "missing_markers": []
     },
     {
@@ -290,9 +290,9 @@
     },
     {
       "sector": "Industrials",
-      "ok": false,
-      "reason": "missing",
-      "size": 0
+      "ok": true,
+      "reason": "",
+      "size": 21497
     },
     {
       "sector": "Real Estate",
@@ -313,7 +313,7 @@
       "size": 0
     }
   ],
-  "sector_n_ok": 6,
+  "sector_n_ok": 7,
   "sector_n_total": 11,
   "all_ok": false
 }
