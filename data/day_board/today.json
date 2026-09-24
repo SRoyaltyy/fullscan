@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T10:35:25.345089-04:00",
+  "generated_at": "2026-09-24T10:40:34.908090-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -522,13 +522,13 @@
       "date": "2026-09-24",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-24T10:35:24.741271-04:00",
+      "at": "2026-09-24T10:40:34.386163-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 33215,
+          "size": 33347,
           "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
         },
         {
@@ -542,14 +542,14 @@
           "path": "data/day_board/2026-09-24.json",
           "ok": true,
           "reason": "",
-          "size": 134442,
+          "size": 145260,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
         },
         {
           "path": "data/day_board/2026-09-24_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 96954,
+          "size": 107772,
           "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
         },
         {
@@ -584,7 +584,7 @@
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 96954,
+          "size": 107772,
           "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
         },
         {
