@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T05:59:40.905891-04:00",
+  "generated_at": "2026-09-24T05:59:43.915577-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -10,9 +10,9 @@
     "MISSING News judge MD `01_daily/news/2026-09-24_judge.md` \u2014 missing"
   ],
   "counts": {
-    "ok": 4,
-    "partial": 3,
-    "fail": 1,
+    "ok": 6,
+    "partial": 0,
+    "fail": 2,
     "n": 8
   },
   "processes": [
@@ -59,7 +59,7 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 270739,
+          "size": 270913,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -70,10 +70,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 16714,
+          "size": 16777,
           "said": "MAP HEAT \u2014 2026-09-24",
           "bullets": [
-            "Export `finviz_2026-09-24.csv` \u00b7 11616 names \u00b7 generated 2026-09-24T05:56:23.702936-04:00",
+            "Export `finviz_2026-09-23.csv` \u00b7 11616 names \u00b7 generated 2026-09-24T05:54:09.476607-04:00",
             "TAPE (live futures)"
           ]
         }
@@ -180,9 +180,9 @@
       "key": "preopen",
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
-      "status": "PARTIAL",
+      "status": "FAIL",
       "inputs_ready": true,
-      "n_req_ok": 2,
+      "n_req_ok": 0,
       "n_req": 20,
       "n_opt_ok": 1,
       "n_opt": 3,
@@ -231,7 +231,7 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 270739,
+          "size": 270913,
           "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
@@ -240,16 +240,11 @@
           "name": "News parse JSON",
           "path": "01_daily/news/2026-09-24_parsed.json",
           "role": "required",
-          "status": "OK",
-          "reason": "",
-          "size": 304512,
-          "said": "400 raw / 39 usable \u00b7 Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his w",
-          "bullets": [
-            "Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his word",
-            "Stocks Fall as Hawkish Warsh Boosts Fed Rate Hike Chances - Barchart.com",
-            "Analysis: Kevin Warsh sharpens inflation warning at Jackson Hole, signaling possible rate hike - CNBC",
-            "September Fed decision is now a coin flip as rate hike odds increase post Warsh - CNBC"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "events",
@@ -333,16 +328,11 @@
           "name": "Pre-open QC JSON",
           "path": "01_daily/2026-09-24_preopen_qc.json",
           "role": "required",
-          "status": "OK",
-          "reason": "all_ok=False",
-          "size": 7280,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 17 fail",
-          "bullets": [
-            "general_predict:missing",
-            "events:missing",
-            "news_judge:missing",
-            "news_actions:missing"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "status",
@@ -488,13 +478,8 @@
           "bullets": []
         }
       ],
-      "said": "news 400 raw / 39 usable \u00b7 Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his w",
-      "bullets": [
-        "Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his word",
-        "Stocks Fall as Hawkish Warsh Boosts Fed Rate Hike Chances - Barchart.com",
-        "Analysis: Kevin Warsh sharpens inflation warning at Jackson Hole, signaling possible rate hike - CNBC",
-        "September Fed decision is now a coin flip as rate hike odds increase post Warsh - CNBC"
-      ]
+      "said": "",
+      "bullets": []
     },
     {
       "key": "weather",
@@ -528,16 +513,16 @@
           "path": "01_daily/weather/2026-09-24_weather.json",
           "role": "required",
           "status": "OK",
-          "reason": "sectors=11 bytes=9284 vix=calm yields=flat",
-          "size": 9284,
-          "said": "favorable 1 \u00b7 hostile 5 \u00b7 neutral 5",
+          "reason": "sectors=11 bytes=9280 vix=calm yields=flat",
+          "size": 9280,
+          "said": "hostile 5 \u00b7 neutral 6",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Energy, Real Estate, Utilities",
             "events bull 1 / bear 3"
           ]
         }
       ],
-      "said": "favorable 1 \u00b7 hostile 5 \u00b7 neutral 5",
+      "said": "hostile 5 \u00b7 neutral 6",
       "bullets": [
         "hostile: Basic Materials, Communication Services, Energy, Real Estate, Utilities",
         "events bull 1 / bear 3"
@@ -551,7 +536,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -559,11 +544,13 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-09-24_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2658",
+          "size": 7628740,
+          "said": "27 rows",
+          "bullets": [
+            "CFFN, ANET, WWW, DSGX, SKM, HSBC, CXW, BMRN"
+          ]
         },
         {
           "key": "ab_enriched",
@@ -571,17 +558,17 @@
           "path": "data/ab_checklist/2026-09-24_ab_checklist_enriched.csv",
           "role": "required",
           "status": "OK",
-          "reason": "rows=11666",
-          "size": 3297063,
-          "said": "207 rows",
+          "reason": "rows=2658",
+          "size": 8468080,
+          "said": "25 rows",
           "bullets": [
-            "FORM, MU, KOPN, HOOD, LEGH, KMDA, FCX, NVT"
+            "ETN, CDNA, WWW, MMSI, TER, AMD, JCI, ILMN"
           ]
         }
       ],
-      "said": "207 rows",
+      "said": "25 rows",
       "bullets": [
-        "FORM, MU, KOPN, HOOD, LEGH"
+        "ETN, CDNA, WWW, MMSI, TER"
       ]
     },
     {
@@ -640,11 +627,11 @@
       "key": "stock_book",
       "name": "Stock Book ALL",
       "yaml": "stock_book_all.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": false,
-      "n_req_ok": 1,
+      "n_req_ok": 4,
       "n_req": 4,
-      "n_opt_ok": 1,
+      "n_opt_ok": 3,
       "n_opt": 3,
       "files": [
         {
@@ -712,9 +699,9 @@
           "path": "01_daily/weather/2026-09-24_weather.json",
           "role": "input",
           "status": "OK",
-          "reason": "sectors=11 bytes=9284 vix=calm yields=flat",
-          "size": 9284,
-          "said": "favorable 1 \u00b7 hostile 5 \u00b7 neutral 5",
+          "reason": "sectors=11 bytes=9280 vix=calm yields=flat",
+          "size": 9280,
+          "said": "hostile 5 \u00b7 neutral 6",
           "bullets": [
             "hostile: Basic Materials, Communication Services, Energy, Real Estate, Utilities",
             "events bull 1 / bear 3"
@@ -726,11 +713,11 @@
           "path": "data/ab_checklist/2026-09-24_ab_checklist_enriched.csv",
           "role": "input",
           "status": "OK",
-          "reason": "rows=11666",
-          "size": 3297063,
-          "said": "207 rows",
+          "reason": "rows=2658",
+          "size": 8468080,
+          "said": "25 rows",
           "bullets": [
-            "FORM, MU, KOPN, HOOD, LEGH, KMDA, FCX, NVT"
+            "ETN, CDNA, WWW, MMSI, TER, AMD, JCI, ILMN"
           ]
         },
         {
@@ -740,10 +727,10 @@
           "role": "required",
           "status": "OK",
           "reason": "rows=5898",
-          "size": 2162795,
-          "said": "203 rows",
+          "size": 2145343,
+          "said": "208 rows",
           "bullets": [
-            "KEYS, FORM, NVDA, SMTC, ACMR, APH, MU, SKHY"
+            "HALO, CDNA, KEYS, NVT, FORM, ONC, NVDA, HRMY"
           ]
         },
         {
@@ -751,21 +738,23 @@
           "name": "Peer RS CSV",
           "path": "data/peers/2026-09-24_peer_rs.csv",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=5098",
+          "size": 817936,
+          "said": "495 rows",
+          "bullets": [
+            "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
+          ]
         },
         {
           "key": "book_json",
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-24_stock_book.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=215",
+          "size": 1480936,
+          "said": "1d BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE",
           "bullets": []
         },
         {
@@ -773,21 +762,24 @@
           "name": "Stock book MD",
           "path": "01_daily/2026-09-24_stock_book.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 83416,
+          "said": "Stock book \u2014 2026-09-24",
+          "bullets": [
+            "_Generated 2026-09-24T05:57:30.704824-04:00_",
+            "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
+          ]
         },
         {
           "key": "green",
           "name": "Green-pile JSON",
           "path": "data/stock_book/2026-09-24_green.json",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "",
+          "size": 585,
+          "said": "0 green \u00b7",
           "bullets": []
         },
         {
@@ -809,25 +801,25 @@
           "name": "Dashboard HTML",
           "path": "dashboard/index.html",
           "role": "optional",
-          "status": "FAIL",
-          "reason": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-24)",
           "size": 8379317,
-          "said": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
+          "said": "live-book poller + today.json (2026-09-24)",
           "bullets": []
         }
       ],
-      "said": "203 rows",
+      "said": "208 rows",
       "bullets": [
-        "KEYS, FORM, NVDA, SMTC, ACMR"
+        "HALO, CDNA, KEYS, NVT, FORM"
       ]
     },
     {
       "key": "publish",
       "name": "Dashboard / .io",
       "yaml": "deploy-dashboard.yml",
-      "status": "PARTIAL",
-      "inputs_ready": false,
-      "n_req_ok": 1,
+      "status": "OK",
+      "inputs_ready": true,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 0,
       "n_opt": 1,
@@ -837,10 +829,10 @@
           "name": "Stock book JSON",
           "path": "data/stock_book/2026-09-24_stock_book.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
+          "status": "OK",
+          "reason": "horizons=5 names=215",
+          "size": 1480936,
+          "said": "1d BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE",
           "bullets": []
         },
         {
@@ -848,10 +840,10 @@
           "name": "Dashboard HTML (repo)",
           "path": "dashboard/index.html",
           "role": "required",
-          "status": "FAIL",
-          "reason": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
+          "status": "OK",
+          "reason": "live-book poller + today.json (2026-09-24)",
           "size": 8379317,
-          "said": "session 2026-09-24 not in dashboard dates (last=2026-09-23)",
+          "said": "live-book poller + today.json (2026-09-24)",
           "bullets": []
         },
         {
@@ -885,24 +877,76 @@
     }
   ],
   "selections": {
-    "buy_1d": [],
-    "sell_1d": [],
+    "buy_1d": [
+      {
+        "ticker": "ASTH",
+        "score": 0.58865646085623
+      },
+      {
+        "ticker": "GDYN",
+        "score": 0.5809654892066937
+      },
+      {
+        "ticker": "NTNX",
+        "score": 0.27860939718181044
+      },
+      {
+        "ticker": "NTCT",
+        "score": 0.646586056321109
+      },
+      {
+        "ticker": "YEXT",
+        "score": 0.5563295498881327
+      },
+      {
+        "ticker": "RPD",
+        "score": 0.6180338108131896
+      },
+      {
+        "ticker": "PRGS",
+        "score": 0.5557608638012114
+      }
+    ],
+    "sell_1d": [
+      {
+        "ticker": "EXK",
+        "score": -0.1821583104246926
+      },
+      {
+        "ticker": "METC",
+        "score": -0.3487953810506556
+      },
+      {
+        "ticker": "QBTS",
+        "score": -0.34119887656517095
+      },
+      {
+        "ticker": "EOSE",
+        "score": -0.1626009611267969
+      },
+      {
+        "ticker": "VST",
+        "score": -0.25979810141201626
+      },
+      {
+        "ticker": "TE",
+        "score": -0.03839252985488667
+      },
+      {
+        "ticker": "NEOV",
+        "score": -0.2633136078613514
+      },
+      {
+        "ticker": "AESI",
+        "score": -0.3875320601838151
+      }
+    ],
     "flatten": {},
     "general": {},
     "sectors": {},
-    "news": {
-      "said": "400 raw / 39 usable \u00b7 Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his w",
-      "bullets": [
-        "Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his word",
-        "Stocks Fall as Hawkish Warsh Boosts Fed Rate Hike Chances - Barchart.com",
-        "Analysis: Kevin Warsh sharpens inflation warning at Jackson Hole, signaling possible rate hike - CNBC",
-        "September Fed decision is now a coin flip as rate hike odds increase post Warsh - CNBC",
-        "Fed\u2019s Warsh Cites \u201cReadiness to Act\u201d on Inflation. Markets See a September Rate Hike. - Barron's",
-        "Markets see rate hike coming following Warsh's speech - Bond Buyer"
-      ]
-    },
+    "news": {},
     "weather": {
-      "said": "favorable 1 \u00b7 hostile 5 \u00b7 neutral 5",
+      "said": "hostile 5 \u00b7 neutral 6",
       "bullets": [
         "hostile: Basic Materials, Communication Services, Energy, Real Estate, Utilities",
         "events bull 1 / bear 3"
@@ -1345,6 +1389,59 @@
         }
       ],
       "preview": "raw=400 usable=39 single=40 \u00b7 Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his w | Stocks Fall as Hawkish Warsh Boosts Fed Rate Hike Chances - Barchart.com | Analysis: Kevin Warsh sharpens inflation warning at Jackson Hole, signaling poss | September Fed decision is now a coin flip as rate hike odds increase post Warsh  | Fed\u2019s Warsh Cites \u201cReadiness to Act\u201d on Inflation. Markets See a September Rate  \u00b7 # News Parse v2 \u2014 2026-09-24T05:59:35.931928-04:00\nWindow\u224848h | raw=400 | usable=39 | single_name=40 | noise_dropped=321\nusable polarity={'+': 1, '-': 8, 'mixed': 0, 'neutral': 30}"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T05:59:43.094390-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-24_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1480936,
+          "preview": "1d BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI"
+        },
+        {
+          "path": "data/stock_book/2026-09-24_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-24_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2597,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-24_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12343,
+          "preview": "2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12343,
+          "preview": "2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI"
+        },
+        {
+          "path": "01_daily/2026-09-24_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 84487,
+          "preview": "# Stock book \u2014 2026-09-24\n_Generated 2026-09-24T05:57:30.704824-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI \u00b7 2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI \u00b7 # Stock book \u2014 2026-09-24\n_Generated 2026-09-24T05:57:30.704824-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {

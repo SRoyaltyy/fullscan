@@ -1,45 +1,82 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T05:59:40.905891-04:00",
+  "generated_at": "2026-09-24T05:59:43.915577-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "counts": {
-    "ok": 4,
-    "partial": 3,
-    "fail": 1,
+    "ok": 6,
+    "partial": 0,
+    "fail": 2,
     "n": 8
   },
-  "buy_1d": [],
-  "sell_1d": [],
+  "buy_1d": [
+    {
+      "ticker": "ASTH",
+      "score": 0.58865646085623
+    },
+    {
+      "ticker": "GDYN",
+      "score": 0.5809654892066937
+    },
+    {
+      "ticker": "NTNX",
+      "score": 0.27860939718181044
+    },
+    {
+      "ticker": "NTCT",
+      "score": 0.646586056321109
+    },
+    {
+      "ticker": "YEXT",
+      "score": 0.5563295498881327
+    },
+    {
+      "ticker": "RPD",
+      "score": 0.6180338108131896
+    },
+    {
+      "ticker": "PRGS",
+      "score": 0.5557608638012114
+    }
+  ],
+  "sell_1d": [
+    {
+      "ticker": "EXK",
+      "score": -0.1821583104246926
+    },
+    {
+      "ticker": "METC",
+      "score": -0.3487953810506556
+    },
+    {
+      "ticker": "QBTS",
+      "score": -0.34119887656517095
+    },
+    {
+      "ticker": "EOSE",
+      "score": -0.1626009611267969
+    },
+    {
+      "ticker": "VST",
+      "score": -0.25979810141201626
+    },
+    {
+      "ticker": "TE",
+      "score": -0.03839252985488667
+    },
+    {
+      "ticker": "NEOV",
+      "score": -0.2633136078613514
+    },
+    {
+      "ticker": "AESI",
+      "score": -0.3875320601838151
+    }
+  ],
   "flatten": {},
   "general": {},
   "sectors": {},
   "lands": [
-    {
-      "key": "finviz_digest",
-      "title": "Finviz digest",
-      "date": "2026-09-24",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-24T05:58:26.423945-04:00",
-      "files": [
-        {
-          "path": "01_daily/news/2026-09-24_finviz_digest.json",
-          "ok": true,
-          "reason": "",
-          "size": 87599,
-          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
-        },
-        {
-          "path": "01_daily/news/2026-09-24_finviz_digest.md",
-          "ok": true,
-          "reason": "",
-          "size": 11816,
-          "preview": "# Finviz Daily Digest \u2014 2026-09-24\n_Generated 2026-09-24T05:55:03.918230-04:00 \u00b7 export=data/exports/finviz_2026-09-24.csv \u00b7 ticker digests=5879 \u00b7 high-signal=2148_"
-        }
-      ],
-      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-24\n_Generated 2026-09-24T05:55:03.918230-04:00 \u00b7 export=data/exports/finviz_2026-09-24.csv \u00b7 ticker digests=5879 \u00b7 high-signal=2148_"
-    },
     {
       "key": "map_heat",
       "title": "Map heat tables",
@@ -193,6 +230,59 @@
         }
       ],
       "preview": "raw=400 usable=39 single=40 \u00b7 Kevin Warsh gets what every Fed chair hopes for: a bond market that trusts his w | Stocks Fall as Hawkish Warsh Boosts Fed Rate Hike Chances - Barchart.com | Analysis: Kevin Warsh sharpens inflation warning at Jackson Hole, signaling poss | September Fed decision is now a coin flip as rate hike odds increase post Warsh  | Fed\u2019s Warsh Cites \u201cReadiness to Act\u201d on Inflation. Markets See a September Rate  \u00b7 # News Parse v2 \u2014 2026-09-24T05:59:35.931928-04:00\nWindow\u224848h | raw=400 | usable=39 | single_name=40 | noise_dropped=321\nusable polarity={'+': 1, '-': 8, 'mixed': 0, 'neutral': 30}"
+    },
+    {
+      "key": "stock_book",
+      "title": "Stock book + green",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T05:59:43.094390-04:00",
+      "files": [
+        {
+          "path": "data/stock_book/2026-09-24_stock_book.json",
+          "ok": true,
+          "reason": "",
+          "size": 1480936,
+          "preview": "1d BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI"
+        },
+        {
+          "path": "data/stock_book/2026-09-24_green.json",
+          "ok": true,
+          "reason": "",
+          "size": 585,
+          "preview": "green 0 \u00b7 "
+        },
+        {
+          "path": "data/stock_book/2026-09-24_input_health.json",
+          "ok": true,
+          "reason": "",
+          "size": 2597,
+          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
+        },
+        {
+          "path": "data/stock_book/2026-09-24_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12343,
+          "preview": "2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI"
+        },
+        {
+          "path": "data/stock_book/latest_suggestions.json",
+          "ok": true,
+          "reason": "",
+          "size": 12343,
+          "preview": "2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI"
+        },
+        {
+          "path": "01_daily/2026-09-24_stock_book.md",
+          "ok": true,
+          "reason": "",
+          "size": 84487,
+          "preview": "# Stock book \u2014 2026-09-24\n_Generated 2026-09-24T05:57:30.704824-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
+        }
+      ],
+      "preview": "1d BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI \u00b7 2026-09-24 BUY ASTH, GDYN, NTNX, NTCT, YEXT, RPD, PRGS \u00b7 SELL EXK, METC, QBTS, EOSE, VST, TE, NEOV, AESI \u00b7 # Stock book \u2014 2026-09-24\n_Generated 2026-09-24T05:57:30.704824-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
