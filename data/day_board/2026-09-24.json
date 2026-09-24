@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T10:40:34.908090-04:00",
+  "generated_at": "2026-09-24T10:40:18.428919-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -856,7 +856,7 @@
           "role": "required",
           "status": "OK",
           "reason": "horizons=5 names=149",
-          "size": 1244198,
+          "size": 1244213,
           "said": "1d BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP \u00b7 -0.6851",
           "bullets": []
         },
@@ -870,7 +870,7 @@
           "size": 52622,
           "said": "Stock book \u2014 2026-09-24",
           "bullets": [
-            "_Generated 2026-09-24T07:55:49.464568-04:00_",
+            "_Generated 2026-09-24T10:40:16.186296-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -934,7 +934,7 @@
           "role": "input",
           "status": "OK",
           "reason": "horizons=5 names=149",
-          "size": 1244198,
+          "size": 1244213,
           "said": "1d BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP \u00b7 -0.6851",
           "bullets": []
         },
@@ -2720,13 +2720,13 @@
       "date": "2026-09-24",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-24T10:40:34.386163-04:00",
+      "at": "2026-09-24T10:35:24.741271-04:00",
       "files": [
         {
           "path": "data/day_board/today.json",
           "ok": true,
           "reason": "",
-          "size": 33347,
+          "size": 33215,
           "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
         },
         {
@@ -2740,14 +2740,14 @@
           "path": "data/day_board/2026-09-24.json",
           "ok": true,
           "reason": "",
-          "size": 145260,
+          "size": 134442,
           "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
         },
         {
           "path": "data/day_board/2026-09-24_tickets.json",
           "ok": true,
           "reason": "",
-          "size": 107772,
+          "size": 96954,
           "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
         },
         {
@@ -2782,7 +2782,7 @@
           "path": "dashboard/factor-mine/today.json",
           "ok": true,
           "reason": "",
-          "size": 107772,
+          "size": 96954,
           "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
         },
         {
