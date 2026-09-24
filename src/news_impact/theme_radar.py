@@ -1,7 +1,17 @@
 """Slim headline ingest from SRoyaltyy/theme-radar snapshots.
 
 Do NOT vendor the 11MB .raw.csv or merge repos. Visibility = four columns:
-Ticker, News Title, Daily Digest, News Time.
+Ticker, News Title, Daily Digest, News Time. ``scrape_ts`` is read only as
+the snapshot clock (UTC), not as headline text.
+
+A row is kept when its News Time is after the prior trading day's
+snapshot clock and at or before this snapshot's clock. ``scrape_ts``
+exists only from 2026-09-25; that column (UTC → America/New_York) is
+the clock when present. Older files compare News Time with the prior
+trading day's snapshot, whose clock is the newest News Time in that
+file. If that prior trading day's file is missing, the lower bound is
+72 hours before this clock, matching theme-radar ``fresh_cat_*``.
+Undated News Time is dropped.
 
 Lookup order:
 1. THEME_RADAR_ROOT or vendor/theme-radar (Actions checkout)
@@ -17,8 +27,10 @@ import os
 import re
 import urllib.error
 import urllib.request
+from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Any
+from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[2]
 VENDOR = ROOT / "vendor" / "theme-radar" / "data" / "snapshots"
@@ -28,6 +40,10 @@ REMOTE = (
     "main/data/snapshots/{date}.csv"
 )
 _DATE = re.compile(r"(\d{4}-\d{2}-\d{2})")
+_ET = ZoneInfo("America/New_York")
+_UTC = ZoneInfo("UTC")
+# Same fallback theme-radar uses when the previous snapshot file is missing.
+FRESH_FALLBACK_H = 72.0
 
 
 def _roots() -> list[Path]:
@@ -107,6 +123,117 @@ def _col(hmap: dict[str, str], *names: str) -> str | None:
     return None
 
 
+def _parse_news_time(text: str) -> datetime | None:
+    """Finviz News Time is naive America/New_York."""
+    raw = (text or "").strip()
+    if not raw:
+        return None
+    for fmt, n in (("%Y-%m-%d %H:%M:%S", 19), ("%Y-%m-%d %H:%M", 16), ("%Y-%m-%d", 10)):
+        try:
+            return datetime.strptime(raw[:n], fmt)
+        except ValueError:
+            continue
+    return None
+
+
+def _parse_scrape_ts(text: str) -> datetime | None:
+    """scrape_ts is UTC ISO. Return naive America/New_York."""
+    raw = (text or "").strip()
+    if not raw:
+        return None
+    try:
+        when = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if when.tzinfo is None:
+        when = when.replace(tzinfo=_UTC)
+    return when.astimezone(_ET).replace(tzinfo=None)
+
+
+def snapshot_clock(text: str) -> datetime | None:
+    """Export clock for one snapshot file (naive ET).
+
+    ``scrape_ts`` is written only from 2026-09-25. When that column has a
+    value it wins. Older files fall back to the newest News Time.
+    """
+    if not (text or "").strip():
+        return None
+    reader = csv.DictReader(io.StringIO(text))
+    hmap = _header_map(reader.fieldnames)
+    time_c = _col(hmap, "news time")
+    scrape_c = hmap.get("scrape_ts")
+    scrapes: list[datetime] = []
+    news: list[datetime] = []
+    for raw in reader:
+        if scrape_c:
+            stamped = _parse_scrape_ts(raw.get(scrape_c) or "")
+            if stamped is not None:
+                scrapes.append(stamped)
+        if time_c:
+            published = _parse_news_time(raw.get(time_c) or "")
+            if published is not None:
+                news.append(published)
+    if scrapes:
+        return max(scrapes)
+    if news:
+        return max(news)
+    return None
+
+
+def since_prior_snapshot(
+    published: str,
+    anchor: datetime | None,
+    prior: datetime | None,
+) -> bool:
+    """True when News Time is after the prior trading-day clock and on or before this one.
+
+    ``prior is None`` means that trading day's snapshot is missing, so the
+    lower bound is 72 hours before ``anchor``.
+    """
+    if anchor is None:
+        return False
+    when = _parse_news_time(published)
+    if when is None:
+        return False
+    lower = prior if prior is not None else anchor - timedelta(hours=FRESH_FALLBACK_H)
+    return lower < when <= anchor
+
+
+def _clock_cache_get(cache: dict[str, datetime | None], path: Path) -> datetime | None:
+    key = str(path)
+    if key not in cache:
+        cache[key] = snapshot_clock(_read_text(path))
+    return cache[key]
+
+
+def _previous_trading_day(date_str: str) -> str:
+    """Prior NYSE session. Weekends and full-day holidays (Labor Day) roll back."""
+    from ..skip_if_good import _prev_weekday
+    return _prev_weekday(date_str)
+
+
+def prior_trading_day_clock(
+    date: str,
+    files: list[Path],
+    cache: dict[str, datetime | None] | None = None,
+) -> datetime | None:
+    """Clock of the previous trading day's snapshot, or None if that file is absent.
+
+    A missing file is not replaced by an older snapshot. Callers then use
+    the 72-hour fallback inside ``since_prior_snapshot``.
+    """
+    if not date or len(date) < 10:
+        return None
+    try:
+        prev = _previous_trading_day(date[:10])
+    except ValueError:
+        return None
+    match = [path for path in files if _date_of_path(path) == prev]
+    if not match:
+        return None
+    return _clock_cache_get(cache if cache is not None else {}, match[0])
+
+
 def _fetch_remote(date: str) -> str:
     url = REMOTE.format(date=date)
     try:
@@ -162,27 +289,43 @@ def _rows_from_text(text: str, source_file: str, retrieved: str) -> list[dict]:
     return out
 
 
+def _keep_fresh(rows: list[dict], anchor: datetime | None, prior: datetime | None) -> list[dict]:
+    return [
+        row for row in rows
+        if since_prior_snapshot(str(row.get("published_at") or ""), anchor, prior)
+    ]
+
+
 def load_theme_radar(
     date: str | None = None,
     allow_remote: bool = True,
 ) -> list[dict]:
     arts: list[dict] = []
     local = snapshot_paths(date)
+    named = bool(date and str(date).lower() not in {"all", "*", "history", ""})
+    universe = snapshot_paths(None) if named else local
+    clocks: dict[str, datetime | None] = {}
     seen_dates: set[str] = set()
     for path in local:
         m = _DATE.search(path.name)
         retrieved = m.group(1) if m else path.stem
         seen_dates.add(retrieved)
         text = _read_text(path)
-        arts.extend(_rows_from_text(text, str(path), retrieved))
+        clocks[str(path)] = snapshot_clock(text)
+        prior = prior_trading_day_clock(retrieved, universe, clocks)
+        arts.extend(_keep_fresh(_rows_from_text(text, str(path), retrieved), clocks[str(path)], prior))
     need = []
-    if date and date.lower() not in {"all", "*", "history", "", None}:
-        if date not in seen_dates:
-            need = [date]
+    if named and date not in seen_dates:
+        need = [date]
     if allow_remote:
         for d in need:
             text = _fetch_remote(d)
-            arts.extend(_rows_from_text(text, REMOTE.format(date=d), d))
+            prior = prior_trading_day_clock(d, universe, clocks)
+            arts.extend(_keep_fresh(
+                _rows_from_text(text, REMOTE.format(date=d), d),
+                snapshot_clock(text),
+                prior,
+            ))
     return arts
 
 

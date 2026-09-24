@@ -13,6 +13,7 @@ from __future__ import annotations
 import argparse
 import csv
 import gzip
+import io
 import json
 import os
 import re
@@ -188,16 +189,32 @@ def harvest(root: Path | None = None) -> list[dict]:
     if elite.is_dir():
         snaps = sorted(elite.glob("*.csv.gz"))
         if snaps:
+            from src.news_impact.theme_radar import (
+                prior_trading_day_clock,
+                since_prior_snapshot,
+                snapshot_clock,
+            )
+
             path = snaps[-1]
             with gzip.open(path, "rt", encoding="utf-8", errors="replace") as fh:
-                for row in csv.DictReader(fh):
-                    _add(
-                        bag, str(row.get("News Title") or ""),
-                        str(row.get("Daily Digest") or ""),
-                        str(path), str(row.get("News Time") or ""),
-                        str(row.get("Ticker") or ""),
-                        "elite_snapshot",
-                    )
+                text = fh.read()
+            anchor = snapshot_clock(text)
+            day = ""
+            matched = re.search(r"(20\d{2}-\d{2}-\d{2})", path.name)
+            if matched:
+                day = matched.group(1)
+            prior = prior_trading_day_clock(day, snaps)
+            for row in csv.DictReader(io.StringIO(text)):
+                published = str(row.get("News Time") or "")
+                if not since_prior_snapshot(published, anchor, prior):
+                    continue
+                _add(
+                    bag, str(row.get("News Title") or ""),
+                    str(row.get("Daily Digest") or ""),
+                    str(path), published,
+                    str(row.get("Ticker") or ""),
+                    "elite_snapshot",
+                )
     return list(bag.values())
 
 

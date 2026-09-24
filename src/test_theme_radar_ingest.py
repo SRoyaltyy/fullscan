@@ -16,6 +16,8 @@ from src.news_impact.theme_radar import (
     amrx_acceptance,
     dedupe_elite,
     load_theme_radar,
+    since_prior_snapshot,
+    snapshot_clock,
 )
 
 SAMPLE = """Ticker,Company,Industry,Sector,News Title,Daily Digest,News Time
@@ -46,7 +48,8 @@ class ThemeRadarIngestTests(unittest.TestCase):
             snap.mkdir(parents=True)
             (snap / "2026-09-18.csv").write_text(SAMPLE, encoding="utf-8")
             with patch.dict("os.environ", {"THEME_RADAR_ROOT": td}):
-                arts = load_theme_radar("2026-09-18", allow_remote=False)
+                with patch("src.news_impact.theme_radar._roots", return_value=[snap]):
+                    arts = load_theme_radar("2026-09-18", allow_remote=False)
             self.assertEqual(len(arts), 2)
             proof = amrx_acceptance(arts)
             self.assertTrue(proof["ok"], proof)
@@ -120,7 +123,9 @@ class ThemeRadarIngestTests(unittest.TestCase):
                     raw, meta = load_all_sources("all")
                 n = meta["by_harvest_source"].get("theme_radar_elite", 0)
                 self.assertGreater(n, 0)
-                self.assertEqual(n, 4)  # AMRX+META on two dates; blank title skipped
+                # 09-21 repeats the same News Times. Both are on or before the
+                # 09-18 clock, so only the first snapshot's two titles stay.
+                self.assertEqual(n, 2)
                 with patch("src.news_impact.theme_radar._roots", return_value=[empty]):
                     raw0, meta0 = load_all_sources("all")
                 self.assertEqual(meta0["by_harvest_source"].get("theme_radar_elite", 0), 0)
@@ -150,6 +155,81 @@ class ThemeRadarIngestTests(unittest.TestCase):
         self.assertIsNone(g["entry_date"])
         self.assertIsNone(g["ret_1d"])
         self.assertIn("no session", g["note"])
+
+    def test_scrape_ts_keeps_headlines_since_prior_snapshot(self) -> None:
+        prior = """Ticker,News Title,Daily Digest,News Time,scrape_ts
+AAA,Older headline already in the prior export,digest,2026-08-01 09:00:00,2026-09-23T23:05:42+00:00
+BBB,Headline published before the prior scrape,digest,2026-09-23 18:00:00,2026-09-23T23:05:42+00:00
+"""
+        latest = """Ticker,News Title,Daily Digest,News Time,scrape_ts
+AAA,Older headline already in the prior export,digest,2026-08-01 09:00:00,2026-09-24T20:47:29+00:00
+BBB,Headline published before the prior scrape,digest,2026-09-23 18:00:00,2026-09-24T20:47:29+00:00
+CCC,Fresh headline published after the prior scrape,digest,2026-09-24 15:00:00,2026-09-24T20:47:29+00:00
+DDD,Headline stamped after this scrape,digest,2026-09-24 18:00:00,2026-09-24T20:47:29+00:00
+EEE,Undated headline with no news time,digest,,2026-09-24T20:47:29+00:00
+"""
+        self.assertEqual(
+            snapshot_clock(prior).strftime("%Y-%m-%d %H:%M"),
+            "2026-09-23 19:05",
+        )
+        anchor = snapshot_clock(latest)
+        self.assertEqual(anchor.strftime("%Y-%m-%d %H:%M"), "2026-09-24 16:47")
+        kept = [
+            row["ticker_hint"]
+            for row in _rows_from_text(latest, "mem", "2026-09-24")
+            if since_prior_snapshot(row["published_at"], anchor, snapshot_clock(prior))
+        ]
+        self.assertEqual(kept, ["CCC"])
+        with tempfile.TemporaryDirectory() as td:
+            snap = Path(td) / "data" / "snapshots"
+            snap.mkdir(parents=True)
+            (snap / "2026-09-23.csv").write_text(prior, encoding="utf-8")
+            (snap / "2026-09-24.csv").write_text(latest, encoding="utf-8")
+            with patch.dict("os.environ", {"THEME_RADAR_ROOT": td}):
+                arts = load_theme_radar("2026-09-24", allow_remote=False)
+            self.assertEqual([a["ticker_hint"] for a in arts], ["CCC"])
+
+    def test_missing_prior_trading_day_uses_72h_not_older_file(self) -> None:
+        """2026-08-27 has no snapshot. 08-28 must not borrow 08-26's clock."""
+        older = """Ticker,News Title,Daily Digest,News Time
+AAA,Headline from the snapshot before the gap day,digest,2026-08-26 20:00:00
+"""
+        gap = """Ticker,News Title,Daily Digest,News Time
+AAA,Headline from the snapshot before the gap day,digest,2026-08-26 10:00:00
+BBB,Headline inside the seventy two hour fallback,digest,2026-08-28 12:00:00
+CCC,Headline older than seventy two hours,digest,2026-08-24 08:00:00
+"""
+        with tempfile.TemporaryDirectory() as td:
+            snap = Path(td) / "data" / "snapshots"
+            snap.mkdir(parents=True)
+            (snap / "2026-08-26.csv").write_text(older, encoding="utf-8")
+            (snap / "2026-08-28.csv").write_text(gap, encoding="utf-8")
+            with patch("src.news_impact.theme_radar._roots", return_value=[snap]):
+                arts = load_theme_radar("2026-08-28", allow_remote=False)
+            self.assertEqual([a["ticker_hint"] for a in arts], ["AAA", "BBB"])
+
+    def test_lane_harvest_drops_old_elite_headlines(self) -> None:
+        import gzip
+
+        from src.lane_one_shot import harvest
+
+        prior = """Ticker,News Title,Daily Digest,News Time,scrape_ts
+AAA,Older headline already in the prior export day,digest,2026-08-01 09:00:00,2026-09-23T23:05:42+00:00
+"""
+        latest = """Ticker,News Title,Daily Digest,News Time,scrape_ts
+AAA,Older headline already in the prior export day,digest,2026-08-01 09:00:00,2026-09-24T20:47:29+00:00
+CCC,Fresh headline published after the prior scrape time,digest,2026-09-24 15:00:00,2026-09-24T20:47:29+00:00
+"""
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            elite = root / "data" / "theme_radar_snapshots"
+            elite.mkdir(parents=True)
+            for name, body in (("2026-09-23.csv.gz", prior), ("2026-09-24.csv.gz", latest)):
+                with gzip.open(elite / name, "wt", encoding="utf-8") as fh:
+                    fh.write(body)
+            rows = harvest(root)
+        elite_rows = [r for r in rows if r.get("harvest_source") == "elite_snapshot"]
+        self.assertEqual([r["ticker_hint"] for r in elite_rows], ["CCC"])
 
     def test_dedupe_keeps_earliest_news_time(self) -> None:
         rows = _rows_from_text(SAMPLE, "mem", "2026-09-18")
