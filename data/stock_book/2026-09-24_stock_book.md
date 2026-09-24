@@ -1,6 +1,6 @@
 # Stock book — 2026-09-24
 
-_Generated 2026-09-24T06:33:31.082923-04:00_
+_Generated 2026-09-24T06:39:14.603617-04:00_
 
 This file is the **human read** of one run. CSV/JSON next to it are the machine files.
 
@@ -21,7 +21,7 @@ The existing red/yellow/green source graph remains visible. Its digest, judge an
 - Weather risk: **unknown**
 - General predict (same-day): -0.69 down (present)
 - Stand-down: **no** — 12 names qualified through group_leader,catalyst,probable (7 probable)
-- Sector predicts this date: 6/11 (ok)
+- Sector predicts this date: 7/11 (ok)
 - News tickers in play: 109
 - AB coverage: 1867 names · peer RS: 1836
 - Universe after liquidity: 2072
@@ -55,8 +55,8 @@ Decision domains: **MKT · parent · child · company · setup · flow**. Measur
 | 1 | **GEV** | 🔴🔴🔴🟢🟡🟡 | blocked | direct high digest (same-day): GE Vernova settles over $300 million Vineyard Wind payment dispute, withdraws contract-termination notice and legal claims on Massachusetts offshore project; Specialty Industrial Machinery -4.2% d1 / -4.2% 1w / -1.5% vs parent | BLOCK BUY — RED market: no confirmed catalyst, group leader, or probable clock; parent sector RED; child industry/theme RED; setup YELLOW; direct catalyst lacks price confirmation; 🚨 alarm; featured fade; v2 domain region red / market=RED; parent=RED; child=RED/rel=YELLOW; company=GREEN(0.72); setup=YELLOW; flow=YELLOW |
 | 2 | **NTAP** | 🔴🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
 | 3 | **ASTH** | 🔴🔴🟢🟡🟢🟢 | group_leader | no direct company event; Medical Care Facilities +0.6% d1 / +3.1% 1w / +5.6% vs parent | BUY GROUP_LEADER — market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
-| 4 | **GDYN** | 🔴🔴🟢🟡🟢🟢 | group_leader | no direct company event; Information Technology Services +2.9% d1 / +1.9% 1w / +3.9% vs parent | BUY GROUP_LEADER — market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
-| 5 | **CHKP** | 🔴🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
+| 4 | **CHKP** | 🔴🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
+| 5 | **GDYN** | 🔴🔴🟢🟡🟢🟢 | group_leader | no direct company event; Information Technology Services +2.9% d1 / +1.9% 1w / +3.9% vs parent | BUY GROUP_LEADER — market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
 | 6 | **PRGS** | 🔴🔴🟢🟡🟢🟢 | group_leader | no direct company event; Software - Infrastructure +2.8% d1 / +1.4% 1w / +3.4% vs parent | BUY GROUP_LEADER — market=RED; parent=RED; child=GREEN/rel=GREEN; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=Cond green |
 | 7 | **EOG** | 🔴🟢🟡🟡🟢🟢 | probable | basket/action net=+7.36; context only, not a company catalyst; Oil & Gas E&P -0.1% d1 / +1.5% 1w / +0.5% vs parent | BUY PROBABLE — most-probable long on RED (size ×0.35); clocks: lookback 🔵 blue — market=RED; parent=GREEN; child=YELLOW/rel=YELLOW; company=YELLOW(0.40); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
 | 8 | **YPF** | 🔴🟢🟡🟡🟢🟢 | probable | no direct company event; Oil & Gas Integrated -0.5% d1 / +3.3% 1w / +2.3% vs parent | BUY PROBABLE — most-probable long on RED (size ×0.35); clocks: lookback 🔵 blue — market=RED; parent=GREEN; child=YELLOW/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN; lookback=🔵,Cond green |
@@ -106,7 +106,7 @@ This is the live Finviz groups tape — child industry vs parent sector, plus th
 | Energy | -0.8% | +1.0% | +0.66 |  |
 | Financial | -0.4% | -1.8% | -0.59 |  |
 | Healthcare | +1.4% | -2.5% | -0.57 |  |
-| Industrials | -1.6% | -2.7% | — |  |
+| Industrials | -1.6% | -2.7% | -0.34 |  |
 | Real Estate | -0.6% | -2.1% | — |  |
 | Technology | -2.0% | -2.1% | — |  |
 | Utilities | -1.5% | -3.2% | — |  |
@@ -218,6 +218,7 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 | Financial | -0.59 |
 | Healthcare | -0.57 |
 | Communication Services | -0.42 |
+| Industrials | -0.34 |
 | Basic Materials | -0.31 |
 
 ### How much each predictor is trusted (graded hit rate)
@@ -343,11 +344,11 @@ If a row says **missing**, that layer scored 0 today. If it says **found**, it m
 ## 1d AVOID — bottom of the same rank
 
 - **METC** (small, Basic Materials, $533M) score -0.415. SELL/AVOID — market=RED; red domains=parent,child,setup,flow; child lags parent -5.7%
-- **EOSE** (small, Industrials, $1.3B) score -0.103. SELL/AVOID — market=RED; red domains=parent,child,setup,flow; child lags parent -4.7%
+- **EOSE** (small, Industrials, $1.3B) score -0.136. SELL/AVOID — market=RED; red domains=parent,child,setup,flow; child lags parent -4.7%
 - **XIFR** (mid, Utilities, $2.0B) score -0.148. SELL/AVOID — market=RED; red domains=parent,child,setup,flow; child lags parent -4.1%
 - **VST** (large, Utilities, $45.9B) score +0.102. SELL/AVOID — market=RED; red domains=parent,child,setup,flow; child lags parent -6.3%
 - **AESI** (small, Energy, $1.4B) score -0.308. SELL/AVOID — market=RED; red domains=child,setup,flow; child lags parent -7.7%
-- **TE** (small, Industrials, $1.2B) score +0.028. SELL/AVOID — market=RED; red domains=parent,child,setup,flow; child lags parent -4.7%
+- **TE** (small, Industrials, $1.2B) score -0.006. SELL/AVOID — market=RED; red domains=parent,child,setup,flow; child lags parent -4.7%
 - **EXK** (mid, Basic Materials, $2.7B) score -0.158. SELL/AVOID — market=RED; red domains=parent,child,setup,flow; child lags parent -4.5%
 - **ARE** (mid, Real Estate, $8.9B) score -0.270. SELL/AVOID — market=RED; red domains=parent,child,setup,flow
 
