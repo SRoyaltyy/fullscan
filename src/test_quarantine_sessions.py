@@ -1,4 +1,8 @@
-"""2026-09-24 stale-news session stays out of research evidence.
+"""Quarantined sessions stay out of news evidence.
+
+Price-only factor-mine and walk-forward recipes keep every date.
+A news recipe drops all of them. Lane and the news-impact backtest
+still skip the whole date.
 
 Run: python -m src.test_quarantine_sessions
 """
@@ -59,12 +63,107 @@ def test_drop_sessions_keeps_neighbors() -> None:
     assert same is other and none == []
 
 
-def test_factor_mine_and_walkforward_slices_skip_the_day() -> None:
+def test_factor_mine_and_walkforward_slices_keep_the_day() -> None:
+    """A shared slice does not strip the date before a price-only score."""
     fm = fm_slice(_panel(), "2026-08-27", "2026-09-25")
     wf = wf_slice(_panel(), "2026-08-27", "2026-09-25")
-    assert "2026-09-24" not in fm["session_dates"]
-    assert "2026-09-24" not in wf["session_dates"]
-    assert fm["n_rows"] == 2 and wf["n_rows"] == 2
+    assert "2026-09-24" in fm["session_dates"]
+    assert "2026-09-24" in wf["session_dates"]
+    assert fm["n_rows"] == 3 and wf["n_rows"] == 3
+
+
+def _ready(panel: dict) -> dict:
+    panel = dict(panel)
+    panel["_ohlc_filled"] = True
+    panel["_tape_filled"] = True
+    panel["_clock_b"] = True
+    panel["_oppset"] = True
+    return panel
+
+
+def _eighteen_panel() -> dict:
+    days = ["2026-08-27", *sorted(dates())]
+    rows = [{"date": d, "ticker": "AAA", "boxes": {}} for d in days]
+    return _ready({
+        "session_dates": days,
+        "rows": rows,
+        "by_date": {d: [r] for d, r in zip(days, rows)},
+        "n_sessions": len(days),
+        "n_rows": len(rows),
+    })
+
+
+def test_price_recipe_keeps_all_18_dates_news_recipe_drops_them() -> None:
+    """union_hot_n4_h1 keeps the 18 sessions; short_news_r_h3 drops them.
+
+    Lane harvest and the news-impact loader still skip the whole date.
+    A shared book that includes a news member drops the dates too.
+    """
+    from src.factor_mine import build_recipes, recipe_uses_news, score_recipe
+    from src.factor_mine_book import simulate_book
+    from src.factor_mine_combo import simulate_shared
+    from src.lane_news_scan import harvest
+    from src.news_impact.backtest import load_corpus
+
+    bad = sorted(dates())
+    assert len(bad) == 18
+    panel = _eighteen_panel()
+    recs = {r["name"]: r for r in build_recipes()}
+    price = recs["union_hot_n4_h1"]
+    news = recs["short_news_r_h3"]
+    assert not recipe_uses_news(price)
+    assert not recipe_uses_news(recs["union_vol_g_h1"])
+    assert recipe_uses_news(news)
+    assert recipe_uses_news(recs["union_h3_exit_news_r"])
+    # Forbidding news=bad still reads the news camera.
+    assert recipe_uses_news(recs["union_join_vol_green_h1"])
+
+    fm = fm_slice(panel, "2026-08-27", "2026-09-24")
+    wf = wf_slice(panel, "2026-08-27", "2026-09-24")
+    for day in bad:
+        assert day in fm["session_dates"], day
+        assert day in wf["session_dates"], day
+
+    tapes = {"gainers": {}, "losers": {}}
+    regime = {d: {"predict_score": 0.0} for d in panel["session_dates"]}
+    price_scored = [d["date"] for d in score_recipe(panel, price, tapes, bars={})["daily"]]
+    news_scored = [d["date"] for d in score_recipe(panel, news, tapes, bars={})["daily"]]
+    import src.factor_mine as fm_mod
+    real_closed = fm_mod.session_has_closed
+    fm_mod.session_has_closed = lambda date, now=None: bool(date)
+    try:
+        price_book = [
+            d["date"] for d in simulate_book(
+                panel, price, bars={}, fees={}, regime=regime)["daily"]
+        ]
+        news_book = [
+            d["date"] for d in simulate_book(
+                wf, news, bars={}, fees={}, regime=regime)["daily"]
+        ]
+    finally:
+        fm_mod.session_has_closed = real_closed
+    for day in bad:
+        assert day in price_scored, day
+        assert day in price_book, day
+        assert day not in news_scored, day
+        assert day not in news_book, day
+    assert "2026-08-27" in news_scored
+    assert "2026-08-27" in news_book
+
+    mixed = simulate_shared(
+        panel, [news, price], [1, 1], bars={}, fees={}, regime=regime)
+    price_mix = simulate_shared(
+        panel, [price, recs["flatten_h5"]], [1, 1],
+        bars={}, fees={}, regime=regime)
+    mixed_days = {d["date"] for d in mixed["daily"]}
+    price_mix_days = {d["date"] for d in price_mix["daily"]}
+    for day in bad:
+        assert day not in mixed_days, day
+        assert day in price_mix_days, day
+    assert "2026-08-27" in mixed_days
+
+    assert harvest("2026-09-24") == []
+    assert load_corpus("2026-09-24") == []
 
 
 def test_lane_run_35823365502_and_the_tails_it_read() -> None:
@@ -123,6 +222,7 @@ if __name__ == "__main__":
     test_list_marks_2026_09_24_stale_news()
     test_lane_run_35823365502_and_the_tails_it_read()
     test_drop_sessions_keeps_neighbors()
-    test_factor_mine_and_walkforward_slices_skip_the_day()
+    test_factor_mine_and_walkforward_slices_keep_the_day()
+    test_price_recipe_keeps_all_18_dates_news_recipe_drops_them()
     test_lane_harvest_and_news_readers_skip_the_day()
-    print("5 tests passed")
+    print("6 tests passed")

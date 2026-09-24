@@ -394,9 +394,64 @@ def make_recipe(name: str, *, universe: str = "union", hold: int = 1,
     }
 
 
+# Gates that read the morning news camera, packet, or headline.
+# Rank "cond" is green-vs-red cameras and is not one of these.
+_NEWS_GATE_KEYS = frozenset({
+    "news",
+    "news_present",
+    "news_box",
+    "headline",
+    "news_and_headline",
+    "news_or_headline",
+    "news_or_red",
+})
+
+
+def recipe_uses_news(rec: dict | None) -> bool:
+    """True when require, forbid, or exit_when reads a news gate.
+
+    A forbid of alarm only is price-only. Forbidding ``news=bad`` still
+    reads the news camera, so that recipe drops quarantined sessions.
+    """
+    if not isinstance(rec, dict):
+        return False
+    for bag_name in ("require", "forbid", "exit_when"):
+        bag = rec.get(bag_name) or {}
+        if isinstance(bag, dict) and _NEWS_GATE_KEYS.intersection(bag):
+            return True
+    members = rec.get("members") or []
+    if members and all(isinstance(m, dict) for m in members):
+        return any(recipe_uses_news(m) for m in members)
+    return False
+
+
+def panel_for_recipe(panel: dict, rec: dict | None) -> dict:
+    """News recipes lose quarantined sessions. Price-only recipes keep them."""
+    if not isinstance(panel, dict) or not recipe_uses_news(rec):
+        return panel
+    from . import quarantine_sessions as qsess
+    out, _dropped = qsess.drop_sessions(panel)
+    return out
+
+
+def panel_for_recipes(panel: dict, recs: list | None) -> dict:
+    """A shared book drops the dates when any member reads news."""
+    if not isinstance(panel, dict):
+        return panel
+    if any(recipe_uses_news(r) for r in (recs or [])):
+        from . import quarantine_sessions as qsess
+        out, _dropped = qsess.drop_sessions(panel)
+        return out
+    return panel
+
+
 def slice_panel(panel: dict, start: str | None = None,
                 end: str | None = None) -> dict:
-    """Rows and calendar inside ``[start, end]``. Later sessions stay out."""
+    """Rows and calendar inside ``[start, end]``. Later sessions stay out.
+
+    Quarantine is not applied here. A news recipe drops those sessions
+    when it is scored; a price-only recipe keeps them.
+    """
     cal = [d for d in (panel.get("session_dates") or [])
            if (not start or d >= start) and (not end or d <= end)]
     keep = set(cal)
@@ -415,8 +470,6 @@ def slice_panel(panel: dict, start: str | None = None,
         "n_sessions": len(cal),
         "n_rows": len(rows),
     })
-    from . import quarantine_sessions as qsess
-    out, _dropped = qsess.drop_sessions(out)
     return out
 
 
@@ -2385,6 +2438,7 @@ def window_hits(ticker: str, date: str, hold: int, cal: list[str],
 
 def score_recipe(panel: dict, rec: dict, tapes: dict,
                  bars: dict | None = None) -> dict:
+    panel = panel_for_recipe(panel, rec)
     panel = ensure_sim_fields(panel, rec)
     cal = list(panel.get("session_dates") or [])
     by_date = panel.get("by_date") or {}
@@ -2589,9 +2643,11 @@ def run(from_date: str = START, to_date: str | None = None,
         slim["by_date"] = None
         PANEL_PATH.write_text(json.dumps(slim, indent=2), encoding="utf-8")
     from . import quarantine_sessions as qsess
-    panel, dropped = qsess.drop_sessions(panel)
-    if dropped:
-        print(f"[factor-mine] evidence skip quarantined {dropped}", flush=True)
+    skipped = [d for d in (panel.get("session_dates") or [])
+               if qsess.is_quarantined(d)]
+    if skipped:
+        print(f"[factor-mine] news recipes skip quarantined {skipped}; "
+              f"price-only keeps them", flush=True)
     cal = list(panel.get("session_dates") or [])
     tapes = _tapes(cal)
     regime = fmb.load_regime() if book else {}

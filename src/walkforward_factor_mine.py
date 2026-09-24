@@ -65,7 +65,11 @@ CAPITAL = fm.CAPITAL
 
 def slice_panel(panel: dict, start: str | None = None,
                 end: str | None = None) -> dict:
-    """Rows and calendar inside ``[start, end]``. No later session leaks in."""
+    """Rows and calendar inside ``[start, end]``. No later session leaks in.
+
+    Quarantine is not applied here. News recipes drop those sessions
+    inside ``simulate_book``; price-only recipes keep them.
+    """
     cal = [d for d in (panel.get("session_dates") or [])
            if (not start or d >= start) and (not end or d <= end)]
     keep = set(cal)
@@ -84,8 +88,6 @@ def slice_panel(panel: dict, start: str | None = None,
         "n_sessions": len(cal),
         "n_rows": len(rows),
     })
-    from . import quarantine_sessions as qsess
-    out, _dropped = qsess.drop_sessions(out)
     return out
 
 
@@ -862,9 +864,11 @@ def run(*, from_date: str = book_era.DASHBOARD_START,
     panel = panel if panel is not None else fm.load_or_build_panel(
         from_date, to_date)
     from . import quarantine_sessions as qsess
-    panel, dropped = qsess.drop_sessions(panel)
-    if dropped:
-        print(f"[wf] evidence skip quarantined {dropped}", flush=True)
+    skipped = [d for d in (panel.get("session_dates") or [])
+               if qsess.is_quarantined(d)]
+    if skipped:
+        print(f"[wf] news recipes skip quarantined {skipped}; "
+              f"price-only keeps them", flush=True)
     cal = list(panel.get("session_dates") or [])
     folds_spec = make_folds(
         cal, first_cutoff=first_cutoff, step=step, forward=forward)

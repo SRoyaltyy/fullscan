@@ -1,7 +1,9 @@
-"""Sessions that research grading and mining must not learn from.
+"""Sessions that news-using research must not learn from.
 
-Live buying does not read this list. Factor-mine recipe math is unchanged;
-callers drop these dates from the evidence calendar before they score.
+Live buying does not read this list. Price-only factor-mine and
+walk-forward recipes keep these dates. A recipe that reads a news gate
+drops them when it is scored. Lane harvest and the news-impact backtest
+still skip the whole date.
 
 File: data/quarantine_sessions.json
 """
