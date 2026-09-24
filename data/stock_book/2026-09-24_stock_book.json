@@ -1,7 +1,7 @@
 {
   "meta": {
     "date": "2026-09-24",
-    "generated_at": "2026-09-24T19:15:42.727248-04:00",
+    "generated_at": "2026-09-24T19:19:29.324241-04:00",
     "general_bias": -0.6851,
     "sector_bias": {
       "Basic Materials": -0.3075,
@@ -1557,32 +1557,32 @@
           "region": "good"
         },
         {
-          "ticker": "EQT",
-          "sector": "Energy",
-          "industry": "Oil & Gas E&P",
-          "size": "large",
+          "ticker": "STGW",
+          "sector": "Communication Services",
+          "industry": "Advertising Agencies",
+          "size": "mid",
           "lane": "blocked",
           "eligible": false,
           "bull_rank": 2.587,
-          "bear_rank": 2.0,
+          "bear_rank": 2.15,
           "domains": {
             "market": "bad",
-            "parent": "good",
-            "child": "neutral",
+            "parent": "neutral",
+            "child": "good",
             "company": "neutral",
-            "setup": "neutral",
+            "setup": "good",
             "flow": "good"
           },
           "source_boxes": {
-            "join": "good",
-            "sector": "good",
+            "join": "bad",
+            "sector": "neutral",
             "gen": "bad",
             "news": "missing",
             "digest": "missing",
             "judge": "missing",
             "ab": "good",
             "peer": "good",
-            "heat": "neutral",
+            "heat": "good",
             "vol": "missing",
             "catal": "missing"
           },
@@ -1591,17 +1591,17 @@
           "company_direct": false,
           "company_fresh": false,
           "company_price_confirmed": false,
-          "group": "Oil & Gas E&P",
-          "child_d1": -0.11,
-          "child_w1": 1.51,
-          "child_residual": 0.53,
-          "bull_decision": "BLOCK BUY \u2014 HARD_RED: no company / child-outperform / lookback clock; setup YELLOW | market=HARD_RED; parent=GREEN; child=YELLOW/rel=YELLOW; company=YELLOW(0.00); setup=YELLOW; flow=GREEN",
+          "group": "Advertising Agencies",
+          "child_d1": 2.89,
+          "child_w1": 2.66,
+          "child_residual": -0.81,
+          "bull_decision": "BLOCK BUY \u2014 HARD_RED: no company / child-outperform / lookback clock | market=HARD_RED; parent=YELLOW; child=GREEN/rel=YELLOW; company=YELLOW(0.00); setup=GREEN; flow=GREEN",
           "bear_decision": "NO BEAR \u2014 market=HARD_RED",
-          "blue": true,
+          "blue": false,
           "white": true,
           "alarm": false,
           "cond": "good",
-          "region": "good"
+          "region": "neutral"
         }
       ],
       "bear_watch": [

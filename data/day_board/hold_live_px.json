@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T19:16:07.153235-04:00",
+  "generated_at": "2026-09-24T19:19:52.225107-04:00",
   "featured": [
     "combo_sh_5050_shared",
     "union_hot_n4_holdup",
@@ -16,13 +16,13 @@
   ],
   "quote": {
     "src": "elite_live",
-    "at": "2026-09-24T19:16:03.250856-04:00",
+    "at": "2026-09-24T19:19:48.225278-04:00",
     "after_open": true,
     "n": 11661,
     "error": null,
     "live": true
   },
-  "banner": "Elite Overview as of 19:16 ET",
+  "banner": "Elite Overview as of 19:19 ET",
   "clock_rule": "px is Finviz Elite Price from a fresh post-09:30 Overview export when live is allowed. Theme Radar close dump and yesterday Price are never live.",
   "sleeves": {
     "combo_sh_5050_shared": {
