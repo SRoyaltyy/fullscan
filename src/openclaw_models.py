@@ -7,9 +7,11 @@ Prices and IDs come from https://docs.x.ai/docs/models (2026-09-24).
 Every listed general text model is flagship-class (>30B). Mini / voice /
 image / coding-only SKUs are excluded from the news picker.
 
-``grok-4.20-0309-non-reasoning`` is the cheapest general completion
-($1.25 / $2.50 per 1M, no reasoning-token tax). ``grok-build-0.1`` is
-cheaper on paper but is a coding specialist — not used here.
+Official API cheapest general completion is ``grok-4.20-0309-non-reasoning``
+($1.25 / $2.50, no reasoning tax). SuperGrok via this OpenClaw box
+answered on ``xai/grok-4.3`` (same price tier) and did not serve 4.20
+(live ping 2026-09-24, run 35971523287). News hops pin 4.3.
+``grok-build-0.1`` is cheaper on paper but coding-only — not used here.
 """
 from __future__ import annotations
 
@@ -59,16 +61,17 @@ LEGACY_FAST: tuple[XaiModel, ...] = (
 
 REFUSE_SUBSTRINGS = (
     "mini", "imagine", "voice", "tts", "stt", "build-0.1", "code-fast",
+    "openclaw",
 )
 
-DEFAULT_NEWS_MODEL = CATALOG[0].openclaw_id
+# Live SuperGrok/OpenClaw answer (2026-09-24). Same $1.25/$2.50 tier as 4.20.
+DEFAULT_NEWS_MODEL = "xai/grok-4.3"
 SECTOR_MODEL = "xai/grok-4.6"
 
-# Blind try-order when /v1/models is unauthorized. Default first, then
-# the model the ECS box already uses for daily sectors.
+# Blind try-order: working SuperGrok SKU first, then same-tier / sector.
 BLIND_TRY_ORDER: tuple[str, ...] = (
     DEFAULT_NEWS_MODEL,
-    "xai/grok-4.3",
+    "xai/grok-4.20-0309-non-reasoning",
     SECTOR_MODEL,
     "xai/grok-4.7",
 )

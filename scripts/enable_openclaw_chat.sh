@@ -21,7 +21,7 @@ fi
 ENV_TOKEN="${OPENCLAW_TOKEN:-}"
 GW_ENV_TOKEN="${OPENCLAW_GATEWAY_TOKEN:-}"
 AGENT="${OPENCLAW_AGENT:-openclaw/default}"
-BACKEND="${OPENCLAW_BACKEND_MODEL:-${OPENCLAW_NEWS_MODEL:-xai/grok-4.20-0309-non-reasoning}}"
+BACKEND="${OPENCLAW_BACKEND_MODEL:-${OPENCLAW_NEWS_MODEL:-xai/grok-4.3}}"
 
 echo "uid=$(id -u) user=$(id -un) cfg=$CFG"
 

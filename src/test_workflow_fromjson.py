@@ -551,7 +551,7 @@ def test_openclaw_grok_ping_stays_on_ecs() -> None:
     assert eval_runs_on(raw, event_name="push") == ECS_LABELS
     assert "ubuntu-latest" not in raw
     assert "openclaw_grok_ping.py" in text
-    assert "xai/grok-4.20-0309-non-reasoning" in text
+    assert "xai/grok-4.3" in text
     assert "GROK_ONLY" in text
 
 
@@ -562,7 +562,7 @@ def test_news_impact_live_stays_on_ecs() -> None:
     assert eval_runs_on(raw, event_name="workflow_dispatch") == ECS_LABELS
     assert jobs["scan"]["runs-on"] == "ubuntu-latest"
     assert "--openclaw" in text
-    assert "xai/grok-4.20-0309-non-reasoning" in text
+    assert "xai/grok-4.3" in text
 
 
 def test_self_hosted_fromjson_jobs_resolve_both_sides() -> None:

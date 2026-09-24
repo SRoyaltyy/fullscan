@@ -12,7 +12,7 @@ from .schema import Classification
 def news_model() -> str:
     return (config.OPENCLAW_NEWS_MODEL
             or pick_cheapest_above_30b()
-            or "xai/grok-4.20-0309-non-reasoning")
+            or "xai/grok-4.3")
 
 
 def gateway_ready() -> bool:

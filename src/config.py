@@ -26,7 +26,7 @@ OPENCLAW_BACKEND_MODEL = os.environ.get("OPENCLAW_BACKEND_MODEL",
 # Sector essays keep OPENCLAW_BACKEND_MODEL (grok-4.6). See openclaw_models.
 OPENCLAW_NEWS_MODEL = os.environ.get(
     "OPENCLAW_NEWS_MODEL",
-    "xai/grok-4.20-0309-non-reasoning",
+    "xai/grok-4.3",
 )
 # 3h per call so a long Grok research turn is not killed as trash.
 # Job-level GitHub timeout must be >= this (see preopen_all.yml).
