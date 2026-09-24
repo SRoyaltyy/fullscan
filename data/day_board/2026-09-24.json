@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T06:58:36.190728-04:00",
+  "generated_at": "2026-09-24T06:57:25.765941-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -177,7 +177,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 17,
+      "n_req_ok": 18,
       "n_req": 20,
       "n_opt_ok": 3,
       "n_opt": 3,
@@ -383,11 +383,13 @@
           "name": "Grok review JSON",
           "path": "01_daily/2026-09-24_grok_review.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "ok=False Grok returned an empty review",
+          "size": 308,
+          "said": "ok=False \u00b7 empty_review_reply (review)",
+          "bullets": [
+            "Grok returned an empty review"
+          ]
         },
         {
           "key": "sector_basic_materials",
@@ -600,7 +602,7 @@
       "inputs_ready": true,
       "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 0,
+      "n_opt_ok": 1,
       "n_opt": 1,
       "files": [
         {
@@ -608,11 +610,13 @@
           "name": "AB checklist raw",
           "path": "data/ab_checklist/2026-09-24_ab_checklist.csv",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "rows=2658",
+          "size": 7628740,
+          "said": "27 rows",
+          "bullets": [
+            "CFFN, ANET, WWW, DSGX, SKM, HSBC, CXW, BMRN"
+          ]
         },
         {
           "key": "ab_enriched",
@@ -834,9 +838,9 @@
           "path": "data/peers/2026-09-24_peer_rs.csv",
           "role": "required",
           "status": "OK",
-          "reason": "rows=5100",
-          "size": 814069,
-          "said": "497 rows",
+          "reason": "rows=5098",
+          "size": 817936,
+          "said": "495 rows",
           "bullets": [
             "A, AA, AACG, AAL, AAME, AAMI, AAOI, AAON"
           ]
@@ -847,9 +851,9 @@
           "path": "data/stock_book/2026-09-24_stock_book.json",
           "role": "required",
           "status": "OK",
-          "reason": "horizons=5 names=149",
-          "size": 1243984,
-          "said": "1d BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP \u00b7 -0.6851",
+          "reason": "horizons=5 names=143",
+          "size": 1214577,
+          "said": "1d BUY EOG, RRC, NTCT, TDC, NTAP \u00b7 SELL VST, XIFR, AEHL, EXK, EOSE, TRIP \u00b7 -0.6851",
           "bullets": []
         },
         {
@@ -859,10 +863,10 @@
           "role": "required",
           "status": "OK",
           "reason": "",
-          "size": 52561,
+          "size": 47863,
           "said": "Stock book \u2014 2026-09-24",
           "bullets": [
-            "_Generated 2026-09-24T06:53:39.398790-04:00_",
+            "_Generated 2026-09-24T06:57:23.126509-04:00_",
             "This file is the **human read** of one run. CSV/JSON next to it are the machine files."
           ]
         },
@@ -925,9 +929,9 @@
           "path": "data/stock_book/2026-09-24_stock_book.json",
           "role": "input",
           "status": "OK",
-          "reason": "horizons=5 names=149",
-          "size": 1243984,
-          "said": "1d BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP \u00b7 -0.6851",
+          "reason": "horizons=5 names=143",
+          "size": 1214577,
+          "said": "1d BUY EOG, RRC, NTCT, TDC, NTAP \u00b7 SELL VST, XIFR, AEHL, EXK, EOSE, TRIP \u00b7 -0.6851",
           "bullets": []
         },
         {
@@ -974,81 +978,74 @@
   "selections": {
     "buy_1d": [
       {
-        "ticker": "CVE",
-        "score": 0.1312394058340678
-      },
-      {
         "ticker": "EOG",
-        "score": 0.4785963124550665
+        "score": 0.4472228577191736
       },
       {
         "ticker": "RRC",
-        "score": 0.7652202318912844
+        "score": 0.6658429669343693
       },
       {
-        "ticker": "S",
-        "score": 0.5360276607629548
+        "ticker": "NTCT",
+        "score": 0.31886399597931026
       },
       {
-        "ticker": "GCT",
-        "score": 0.4750972400816171
+        "ticker": "TDC",
+        "score": 0.28628634229358707
       },
       {
-        "ticker": "HITI",
-        "score": 0.2657130170179052
-      },
-      {
-        "ticker": "RPD",
-        "score": 0.5158468263152987
+        "ticker": "NTAP",
+        "score": 0.2557690661842431
       }
     ],
     "sell_1d": [
       {
-        "ticker": "FLNC",
-        "score": -0.5997843001428046
-      },
-      {
-        "ticker": "AEHL",
-        "score": -0.21443490471204366
+        "ticker": "VST",
+        "score": -0.049291785110234146
       },
       {
         "ticker": "XIFR",
-        "score": -0.2824488393540524
+        "score": -0.3239698485855071
       },
       {
-        "ticker": "ASPI",
-        "score": -0.4034774392486025
+        "ticker": "AEHL",
+        "score": -0.21734143071983827
       },
       {
-        "ticker": "HSAI",
-        "score": -0.3404671111010516
-      },
-      {
-        "ticker": "TRIP",
-        "score": -0.38723710968669034
-      },
-      {
-        "ticker": "METC",
-        "score": -0.3588457482224159
-      },
-      {
-        "ticker": "NRG",
-        "score": -0.24979872175697304
+        "ticker": "EXK",
+        "score": -0.1398659885055537
       },
       {
         "ticker": "EOSE",
-        "score": -0.022888924814754824
+        "score": -0.1587971052867317
       },
       {
-        "ticker": "PLUG",
-        "score": -0.015140139515257
+        "ticker": "TRIP",
+        "score": -0.45070182447739526
+      },
+      {
+        "ticker": "METC",
+        "score": -0.39711407340604943
+      },
+      {
+        "ticker": "ASPI",
+        "score": -0.38936195397930257
+      },
+      {
+        "ticker": "HSAI",
+        "score": -0.32365057368531863
+      },
+      {
+        "ticker": "LVWR",
+        "score": -0.24502329998203332
       }
     ],
     "flatten": {
-      "said": "0 priced buys \u00b7 cash $18,086.73",
+      "said": "0 priced buys \u00b7 cash $18,086.73 \u00b7 morning S missing",
       "bullets": [
         "0 priced buys",
-        "cash $18,086.73"
+        "cash $18,086.73",
+        "morning S missing"
       ]
     },
     "general": {
@@ -2098,267 +2095,6 @@
         }
       ],
       "preview": "5898 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, DVN, ONC, PR, PBR-A"
-    },
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-09-24",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-24T06:54:56.560739-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-09-24_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1243984,
-          "preview": "1d BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
-        },
-        {
-          "path": "data/stock_book/2026-09-24_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-09-24_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2486,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-09-24_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 10102,
-          "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 10102,
-          "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
-        },
-        {
-          "path": "01_daily/2026-09-24_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 53558,
-          "preview": "# Stock book \u2014 2026-09-24\n_Generated 2026-09-24T06:53:39.398790-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 # Stock book \u2014 2026-09-24\n_Generated 2026-09-24T06:53:39.398790-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
-    {
-      "key": "live_boards",
-      "title": "Live 1d BUY/SELL strip",
-      "date": "2026-09-24",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-24T06:55:01.427330-04:00",
-      "files": [
-        {
-          "path": "data/day_board/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 16099,
-          "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
-        },
-        {
-          "path": "data/day_board/latest.json",
-          "ok": true,
-          "reason": "",
-          "size": 701,
-          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
-        },
-        {
-          "path": "data/day_board/2026-09-24.json",
-          "ok": true,
-          "reason": "",
-          "size": 101807,
-          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href"
-        },
-        {
-          "path": "data/day_board/2026-09-24_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 63486,
-          "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
-        },
-        {
-          "path": "data/day_board/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 2932133,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/2026-09-24_strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 2932133,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "data/day_board/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 3245833,
-          "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
-        },
-        {
-          "path": "data/factor_mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 2932133,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 63486,
-          "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
-        },
-        {
-          "path": "dashboard/factor-mine/strategy_tickets.json",
-          "ok": true,
-          "reason": "",
-          "size": 2932133,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/factor-mine/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 2932133,
-          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
-        },
-        {
-          "path": "dashboard/today_strategies.json",
-          "ok": true,
-          "reason": "",
-          "size": 3245833,
-          "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
-        },
-        {
-          "path": "data/day_board/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 2274,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        },
-        {
-          "path": "dashboard/factor-mine/hold_live_px.json",
-          "ok": true,
-          "reason": "",
-          "size": 2274,
-          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
-        }
-      ],
-      "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, selections, lands, href \u00b7 2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2"
-    },
-    {
-      "key": "flatten",
-      "title": "Flatten live card",
-      "date": "2026-09-24",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-24T06:58:32.066692-04:00",
-      "files": [
-        {
-          "path": "01_daily/2026-09-24_flatten_card.md",
-          "ok": true,
-          "reason": "",
-          "size": 3826,
-          "preview": "# flatten_robust card \u2014 2026-09-24\n_Generated 2026-09-24T10:58:31 \u2014 live `flatten_robust`._\n**S=-7.66; hard-red: no new buys; holds and due 1d exits stay**\n- Score **-7.66** (DOWN) \u00b7 route **hold** \u00b7 HARD-RED\n- Cash leftover **$18,086.73** (after 09:30 $18,086.73 \u00b7 after 16:00 $101,554.07)\n- Prior close **$101,637.74** \u00b7 09:30 **$101,637.74** \u00b7 overnight **$+0.00** \u00b7 session **$-83.67** \u00b7 16:00 **$101,554.07**\n- Overnight lots **7** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$101,554.07**"
-        },
-        {
-          "path": "data/sleeve_merge/today.json",
-          "ok": true,
-          "reason": "",
-          "size": 14942,
-          "preview": "2026-09-24 BUY \u2014 \u00b7 SELL \u2014"
-        },
-        {
-          "path": "data/sleeve_merge/daily_marks.json",
-          "ok": true,
-          "reason": "",
-          "size": 161757,
-          "preview": "[{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {\"ticker\": \"IREN\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 223, \"shares\": 223, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 45.98, \"close_px\": 44.76, \"entry_px\": 44.76, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": -272.06, \"day\": -272.06, \"pct_overnight\""
-        },
-        {
-          "path": "data/sleeve_merge/equity_curve.csv",
-          "ok": true,
-          "reason": "",
-          "size": 4033,
-          "preview": "25 rows \u00b7 date,equity,cash,core_n,tac_io_n,tac_n,core_mv,tac_mv,route,score,predict,open_held,open_cash,open_equity,yday_equity,ov \u00b7 2026-08-13, 2026-08-14, 2026-08-17, 2026-08-18, 2026-08-19"
-        },
-        {
-          "path": "dashboard/sleeve-merge/index.html",
-          "ok": true,
-          "reason": "",
-          "size": 56013,
-          "preview": "<!doctype html>\n<html><head><meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">\n<title>Combined sleeve \u2014 .io \u00d7 mover</title>\n<style>\n:root{--bg:#0b1020;--card:#131b31;--line:#2b3552;--text:#edf2ff;--muted:#9cabc9}\n*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui}\nmain{max-width:1240px;margin:auto;padding:16px}h1,h2{margin:.4em 0}\n.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:14px 0}\n.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}\n.card b{display:block;font-size:22px;margin-top:4px}\n.muted{color:var(--muted)}a{color:#93c5fd}\n.sheet{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin:14px 0}\ntable{border-collapse:separate;border-spacing:0;width:100%;background:var(--card)}\nth,td{padding:7px 8"
-        }
-      ],
-      "preview": "# flatten_robust card \u2014 2026-09-24\n_Generated 2026-09-24T10:58:31 \u2014 live `flatten_robust`._\n**S=-7.66; hard-red: no new buys; holds and due 1d exits stay**\n- Score **-7.66** (DOWN) \u00b7 route **hold** \u00b7 HARD-RED\n- Cash leftover **$18,086.73** (after 09:30 $18,086.73 \u00b7 after 16:00 $101,554.07)\n- Prior close **$101,637.74** \u00b7 09:30 **$101,637.74** \u00b7 overnight **$+0.00** \u00b7 session **$-83.67** \u00b7 16:00 **$101,554.07**\n- Overnight lots **7** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$0.00** \u2264 leftover after sells **$101,554.07** \u00b7 2026-09-24 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_overnight\": null, \"pct_session\": 0.719, \"held\": \"bought\"}, {"
-    },
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-09-24",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-24T06:58:35.572169-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-09-24_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1243984,
-          "preview": "1d BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
-        },
-        {
-          "path": "data/stock_book/2026-09-24_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 585,
-          "preview": "green 0 \u00b7 "
-        },
-        {
-          "path": "data/stock_book/2026-09-24_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2486,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-09-24_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 10102,
-          "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 10102,
-          "preview": "2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG"
-        },
-        {
-          "path": "01_daily/2026-09-24_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 53558,
-          "preview": "# Stock book \u2014 2026-09-24\n_Generated 2026-09-24T06:53:39.398790-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 green 0 \u00b7  \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 2026-09-24 BUY CVE, EOG, RRC, S, GCT, HITI, RPD \u00b7 SELL FLNC, AEHL, XIFR, ASPI, HSAI, TRIP, METC, NRG \u00b7 # Stock book \u2014 2026-09-24\n_Generated 2026-09-24T06:53:39.398790-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
     }
   ],
   "href": {

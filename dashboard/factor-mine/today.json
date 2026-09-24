@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T06:51:10.986679-04:00",
+  "generated_at": "2026-09-24T06:57:25.765941-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "counts": {
@@ -11,58 +11,66 @@
   },
   "buy_1d": [
     {
-      "ticker": "ASTH",
-      "score": 0.09248307125306686
+      "ticker": "EOG",
+      "score": 0.4472228577191736
     },
     {
-      "ticker": "CHKP",
-      "score": 0.22580596058295638
+      "ticker": "RRC",
+      "score": 0.6658429669343693
     },
     {
-      "ticker": "GDYN",
-      "score": 0.15893247831646115
+      "ticker": "NTCT",
+      "score": 0.31886399597931026
     },
     {
-      "ticker": "PRGS",
-      "score": 0.22262173775223718
+      "ticker": "TDC",
+      "score": 0.28628634229358707
     },
     {
-      "ticker": "NTNX",
-      "score": 0.3469195471799613
+      "ticker": "NTAP",
+      "score": 0.2557690661842431
     }
   ],
   "sell_1d": [
     {
-      "ticker": "METC",
-      "score": -0.4147221792720016
-    },
-    {
-      "ticker": "EOSE",
-      "score": -0.1364721911916208
+      "ticker": "VST",
+      "score": -0.049291785110234146
     },
     {
       "ticker": "XIFR",
-      "score": -0.37973431112233896
+      "score": -0.3239698485855071
     },
     {
-      "ticker": "VST",
-      "score": -0.03964795330924106
-    },
-    {
-      "ticker": "AESI",
-      "score": -0.3078422660521732
-    },
-    {
-      "ticker": "TE",
-      "score": -0.005561124700873332
+      "ticker": "AEHL",
+      "score": -0.21734143071983827
     },
     {
       "ticker": "EXK",
-      "score": -0.1576247463622153
+      "score": -0.1398659885055537
     },
     {
-      "ticker": "ARE",
-      "score": -0.5420850022543173
+      "ticker": "EOSE",
+      "score": -0.1587971052867317
+    },
+    {
+      "ticker": "TRIP",
+      "score": -0.45070182447739526
+    },
+    {
+      "ticker": "METC",
+      "score": -0.39711407340604943
+    },
+    {
+      "ticker": "ASPI",
+      "score": -0.38936195397930257
+    },
+    {
+      "ticker": "HSAI",
+      "score": -0.32365057368531863
+    },
+    {
+      "ticker": "LVWR",
+      "score": -0.24502329998203332
     }
   ],
   "flatten": {
@@ -905,6 +913,202 @@
         }
       ],
       "preview": "# Sector Prediction \u2014 Basic Materials \u2014 2026-09-24\n- ETF: **XLB**\n- rubric: `00_grounding/sectors/basic_materials.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-2.88** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **False**\n- engine: v2 \u00b7 tape_anchor **-0.54** (ES -0.64%, HG +0.66%, GC +0.90%, DX -0.02%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **-0.425** (raw -0.425) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Basic Materials 2026-09-24 retry1\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (148,737 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Done researching.** The model stopped searching and wrote its full analysis (11,531 characters). \u00b7 keys: model, messages \u00b7 keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok \u00b7 keys: date, n_ok, n_total, sectors \u00b7 # Sector Board \u2014 2026-09-24\nGenerated: **2026-09-24T06:11:28.145285-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.). \u00b7 keys: date, generated_at,"
+    },
+    {
+      "key": "sector_one",
+      "title": "Sector predict Utilities (10/11)",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T06:42:02.087854-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-24/utilities_predict.md",
+          "ok": true,
+          "reason": "",
+          "size": 17525,
+          "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-09-24\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-5.818** (mult 0.9)\n- regime: risk_off\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.034** (ES -0.64%, ZN -0.03%, PM:XLU +0.10%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **-3.938** (raw -3.938)"
+        },
+        {
+          "path": "01_daily/sectors/2026-09-24/utilities_predict_trace.md",
+          "ok": true,
+          "reason": "",
+          "size": 11516,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-09-24\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (149,094 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10 year Treasury yield September 24 2026 Warsh rate hike\"* \u2192 got 6 results (via gnews_rss)\n- Global bond rout gathers pace as Fed rate hike bets rattle markets - The Straits Times (https://news.google.com/rss/articles/CBMipwFBVV95cUxNNExDRkZGUGl1S2VDMUF2M1pTV2MwUHowempaMFFZVkR0RDhyZFl0ek9mUWk2cU1RaG9WOXdXQ3psT0ljLVh4VnRkUThuVFZvMEZMdTBRSjdiVFBvUzBjOHlPaFJzMmxiRFkwdU83SGVueEowQ3NsSDNnODkxM25jb1pCdFQzTzd1QUM2V2ktODN0RjQ2ZnlYblZCcmJZaTRCcENURG83UQ?oc=5)\n- 2-year Treasury yield jumps as Warsh says Fed may 'have work to do' - CNBC (https://news.google.com/rss/articles/CBMic0FVX3lxTE"
+        },
+        {
+          "path": "01_daily/_transcripts/2026-09-24_sector_utilities_predict.json",
+          "ok": true,
+          "reason": "",
+          "size": 200395,
+          "preview": "keys: model, messages"
+        },
+        {
+          "path": "01_daily/2026-09-24_preopen_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 7198,
+          "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
+        },
+        {
+          "path": "01_daily/sectors/2026-09-24/_qc.json",
+          "ok": true,
+          "reason": "",
+          "size": 1219,
+          "preview": "keys: date, n_ok, n_total, sectors"
+        },
+        {
+          "path": "01_daily/sectors/2026-09-24/_BOARD.md",
+          "ok": true,
+          "reason": "",
+          "size": 1952,
+          "preview": "# Sector Board \u2014 2026-09-24\nGenerated: **2026-09-24T06:42:02.050027-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+        },
+        {
+          "path": "01_daily/sectors/2026-09-24/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 6974,
+          "preview": "keys: date, generated_at, sectors"
+        },
+        {
+          "path": "03_scoreboard/scoreboard.json",
+          "ok": true,
+          "reason": "",
+          "size": 882134,
+          "preview": "keys: runs"
+        }
+      ],
+      "preview": "# Sector Prediction \u2014 Utilities \u2014 2026-09-24\n- ETF: **XLU**\n- rubric: `00_grounding/sectors/utilities.md`\n- predicted_direction: **down**\n- predicted_magnitude_band: **mild**\n- total_score: **-5.818** (mult 0.9)\n- regime: risk_off\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **0.034** (ES -0.64%, ZN -0.03%, PM:XLU +0.10%) \u00b7 index_carry **-1.915** (general -7.659) \u00b7 llm_overlay **-3.938** (raw -3.938) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Utilities 2026-09-24\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (149,094 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"10 year Treasury yield September 24 2026 Warsh rate hike\"* \u2192 got 6 results (via gnews_rss)\n- Global bond rout gathers pace as Fed rate hike bets rattle markets - The Straits Times (https://news.google.com/rss/articles/CBMipwFBVV95cUxNNExDRkZGUGl1S2VDMUF2M1pTV2MwUHowempaMFFZVkR0RDhyZFl0ek9mUWk2cU1RaG9WOXdXQ3psT0ljLVh4VnRkUThuVFZvMEZMdTBRSjdiVFBvUzBjOHlPaFJzMmxiRFkwdU83SGVueEowQ3NsSDNnODkxM25jb1pCdFQzTzd1QUM2V2ktODN0RjQ2ZnlYblZCcmJZaTRCcENURG83UQ?oc=5)\n- 2-year T"
+    },
+    {
+      "key": "sector_predict",
+      "title": "Per-sector predict (all 11)",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T06:42:07.809479-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-24",
+          "ok": true,
+          "reason": "",
+          "size": 4096,
+          "preview": "10/10 sector predicts ok: basic_materials, communication_services, consumer_cyclical, energy, financial, healthcare, industrials, real_estate"
+        }
+      ],
+      "preview": "10/10 sector predicts ok: basic_materials, communication_services, consumer_cyclical, energy, financial, healthcare, industrials, real_estate"
+    },
+    {
+      "key": "sector_board",
+      "title": "Sector board",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T06:42:12.279781-04:00",
+      "files": [
+        {
+          "path": "01_daily/sectors/2026-09-24/_board.json",
+          "ok": true,
+          "reason": "",
+          "size": 6974,
+          "preview": "keys: date, generated_at, sectors"
+        }
+      ],
+      "preview": "keys: date, generated_at, sectors"
+    },
+    {
+      "key": "map_heat_research",
+      "title": "Map heat morning delta refresh",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T06:50:50.299413-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-24_research.json",
+          "ok": true,
+          "reason": "",
+          "size": 44251,
+          "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-24_research.md",
+          "ok": true,
+          "reason": "",
+          "size": 44251,
+          "preview": "# MAP HEAT RESEARCH \u2014 2026-09-24\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+        }
+      ],
+      "preview": "keys: date, phase, passthrough, source_baseline_generated_at, generated_at, n_targets, n_cards, n_refreshed, evidence_errors, morning_refresh_errors, cards, size_gate \u00b7 # MAP HEAT RESEARCH \u2014 2026-09-24\n142 captain cards \u00b7 size_gate=True set by pre-open refresh"
+    },
+    {
+      "key": "finviz",
+      "title": "Finviz universe export",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T06:53:08.588842-04:00",
+      "files": [
+        {
+          "path": "data/exports/finviz_2026-09-24.csv",
+          "ok": true,
+          "reason": "",
+          "size": 10963783,
+          "preview": "11648 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11463447,
+          "preview": "11666 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "11648 rows \u00b7 Ticker,Company,Sector,Industry,Country,Market Cap,P/E,Price,Change,Volume,Forward P/E,PEG,P/S,P/B,P/Cash,P/Free Cash Flo \u00b7 A, AA, AAA, AAAA, AAAC \u00b7 11666 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+    },
+    {
+      "key": "weather",
+      "title": "Weather / regime",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T06:53:20.259280-04:00",
+      "files": [
+        {
+          "path": "01_daily/weather/2026-09-24_weather.json",
+          "ok": true,
+          "reason": "",
+          "size": 10537,
+          "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -2.88, 'dir': 'down', 'conf': 0.615, 'source': 'llm'}, Communication Services={'score': -11.341, 'dir': 'down', 'conf': 0.85, 'source': 'llm'}, Consumer Cyclical={'score': -8.472, 'dir': 'down', 'conf': 0.839, 'source': 'llm'}, Energy={'score': 6.779, 'dir': 'up', 'conf': 0.771, 'source': 'llm'}, Financial={'score': -4.898, 'dir': 'down', 'conf': 0.696, 'source': 'llm'}, Healthcare={'score': -4.286, 'dir': 'down', 'conf': 0.671, 'source': 'llm'}, Industrials={'score': -4.289, 'dir': 'down', 'conf': 0.672, 'source': 'llm'}, Real Estate={'score': -9.97, 'dir': 'down', 'conf': 0.85, 'source': 'llm'}"
+        },
+        {
+          "path": "01_daily/weather/2026-09-24_weather.md",
+          "ok": true,
+          "reason": "",
+          "size": 6023,
+          "preview": "# Weather report \u2014 2026-09-24\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+        }
+      ],
+      "preview": "weather sectors 11 \u00b7 Basic Materials={'score': -2.88, 'dir': 'down', 'conf': 0.615, 'source': 'llm'}, Communication Services={'score': -11.341, 'dir': 'down', 'conf': 0.85, 'source': 'llm'}, Consumer Cyclical={'score': -8.472, 'dir': 'down', 'conf': 0.839, 'source': 'llm'}, Energy={'score': 6.779, 'dir': 'up', 'conf': 0.771, 'source': 'llm'}, Financial={'score': -4.898, 'dir': 'down', 'conf': 0.696, 'source': 'llm'}, Healthcare={'score': -4.286, 'dir': 'down', 'conf': 0.671, 'source': 'llm'}, Industrials={'score': -4.289, 'dir': 'down', 'conf': 0.672, 'source': 'llm'}, Real Estate={'score': -9.97, 'dir': 'down', 'conf': 0.85, 'source': 'llm'} \u00b7 # Weather report \u2014 2026-09-24\nIs today good for each *kind* of stock? Labels come from `data/universe/`; this file is the daily regime record the backtest will grade."
+    },
+    {
+      "key": "join",
+      "title": "Join / match rank",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T06:53:25.708984-04:00",
+      "files": [
+        {
+          "path": "data/join/2026-09-24_ranked.csv",
+          "ok": true,
+          "reason": "",
+          "size": 2264238,
+          "preview": "5898 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, DVN, ONC, PR, PBR-A"
+        }
+      ],
+      "preview": "5898 rows \u00b7 Ticker,sector,industry,size,vol,beta,total_score,families_known,score_norm,bulls,bears,flags,veto,detail,mom,ext,range,p \u00b7 ARGX, DVN, ONC, PR, PBR-A"
     }
   ],
   "source": "publish_live_boards"
