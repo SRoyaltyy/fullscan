@@ -1,6 +1,6 @@
 {
   "date": "2026-09-24",
-  "generated_at": "2026-09-24T05:52:54.214562-04:00",
+  "generated_at": "2026-09-24T05:54:09.649559-04:00",
   "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
@@ -12,8 +12,8 @@
     "MISSING AB checklist enriched `data/ab_checklist/2026-09-24_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 1,
-    "partial": 3,
+    "ok": 2,
+    "partial": 2,
     "fail": 4,
     "n": 8
   },
@@ -22,9 +22,9 @@
       "key": "postclose",
       "name": "Post-close research",
       "yaml": "map_heat_postclose.yml",
-      "status": "PARTIAL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 1,
+      "n_req_ok": 2,
       "n_req": 2,
       "n_opt_ok": 2,
       "n_opt": 2,
@@ -59,10 +59,10 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-09-24_map_heat.json",
           "role": "required",
-          "status": "FAIL",
-          "reason": "stale_map_heat_md",
-          "size": 0,
-          "said": "stale_map_heat_md \u00b7 morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
+          "status": "OK",
+          "reason": "",
+          "size": 270913,
+          "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
         {
@@ -72,10 +72,10 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 17106,
-          "said": "MAP HEAT \u2014 2026-09-23",
+          "size": 16777,
+          "said": "MAP HEAT \u2014 2026-09-24",
           "bullets": [
-            "Export `finviz_2026-09-23.csv` \u00b7 11616 names \u00b7 generated 2026-09-23T04:16:39.961966-04:00",
+            "Export `finviz_2026-09-23.csv` \u00b7 11616 names \u00b7 generated 2026-09-24T05:54:09.476607-04:00",
             "TAPE (live futures)"
           ]
         }
@@ -183,7 +183,7 @@
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 2,
       "n_req": 20,
       "n_opt_ok": 1,
@@ -231,10 +231,10 @@
           "name": "Map heat tables JSON",
           "path": "01_daily/map_heat/2026-09-24_map_heat.json",
           "role": "input",
-          "status": "FAIL",
-          "reason": "stale_map_heat_md",
-          "size": 0,
-          "said": "stale_map_heat_md \u00b7 morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
+          "status": "OK",
+          "reason": "",
+          "size": 270913,
+          "said": "morning_overlay \u00b7 11616 names \u00b7 hot Tobacco, Internet Content & Information, Electronic Gaming & Multimedia, Consumer Electronics \u00b7 cold Coking Coal, Utilities - Independent Power Producers, Metal Fabrication \u00b7 macro_gate",
           "bullets": []
         },
         {
@@ -332,8 +332,8 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7299,
-          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 20 fail",
+          "size": 7282,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 18 fail",
           "bullets": [
             "general_predict:missing",
             "events:missing",
@@ -925,6 +925,31 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-24\n**Generated:** 2026-09-24T05:52:54.055442-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US futures point to a lower open as a global bond selloff lifts yields to multi\u2011year highs ahead of US data and an anticipated Trump\u2011Xi meeting\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** GIS, CTAS, PAYX, CBRL, DRI, SNX, BB, COST\n**Next session:** housing yes \u00b7 retail no \u00b7 Fed yes\n**Earnings slate:** GIS, CTAS, PAYX, CBRL, DRI, SNX, BB, COST\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-24\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "map_heat",
+      "title": "Map heat morning overlay",
+      "date": "2026-09-24",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-24T05:54:09.508009-04:00",
+      "files": [
+        {
+          "path": "01_daily/map_heat/2026-09-24_map_heat.json",
+          "ok": true,
+          "reason": "",
+          "size": 270913,
+          "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape"
+        },
+        {
+          "path": "01_daily/map_heat/2026-09-24_map_heat.md",
+          "ok": true,
+          "reason": "",
+          "size": 17138,
+          "preview": "# MAP HEAT \u2014 2026-09-24\nExport `finviz_2026-09-23.csv` \u00b7 11616 names \u00b7 generated 2026-09-24T05:54:09.476607-04:00"
+        }
+      ],
+      "preview": "keys: date, generated_at, phase, export, n_tickers, sectors, industries, hot, cold, overrides, themes, theme_tape \u00b7 # MAP HEAT \u2014 2026-09-24\nExport `finviz_2026-09-23.csv` \u00b7 11616 names \u00b7 generated 2026-09-24T05:54:09.476607-04:00"
     }
   ],
   "href": {
