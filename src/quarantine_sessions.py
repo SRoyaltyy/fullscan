@@ -40,6 +40,47 @@ def dates(path: Path | None = None) -> set[str]:
     return {row["date"] for row in load(path) if row.get("date")}
 
 
+def lane_runs(path: Path | None = None) -> list[dict]:
+    """Lane Actions runs whose harvest read a stale news window.
+
+    Research loaders that walk the published board or one-shot rows should
+    skip these artifacts. Session dates those runs read are also in ``dates``.
+    """
+    p = path or PATH
+    try:
+        data = json.loads(p.read_text(encoding="utf-8"))
+    except (OSError, ValueError, json.JSONDecodeError):
+        return []
+    rows = data.get("lane_runs") if isinstance(data, dict) else None
+    if not isinstance(rows, list):
+        return []
+    out = []
+    for row in rows:
+        if not isinstance(row, dict) or not row.get("run_id"):
+            continue
+        out.append({
+            "run_id": str(row["run_id"]),
+            "url": str(row.get("url") or ""),
+            "reason": str(row.get("reason") or ""),
+            "detail": str(row.get("detail") or ""),
+            "artifacts": [str(a) for a in (row.get("artifacts") or [])],
+            "stale_sessions_read": [
+                str(d)[:10] for d in (row.get("stale_sessions_read") or [])
+            ],
+        })
+    return out
+
+
+def lane_artifact_blocked(path: str, file: Path | None = None) -> bool:
+    """True when ``path`` is an artifact of a quarantined Lane run."""
+    text = str(path).replace("\\", "/")
+    for run in lane_runs(file):
+        for art in run["artifacts"]:
+            if text == art or text.startswith(art.rstrip("/") + "/"):
+                return True
+    return False
+
+
 def is_quarantined(session: str, path: Path | None = None) -> bool:
     return str(session)[:10] in dates(path)
 

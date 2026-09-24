@@ -9,6 +9,8 @@ from src.quarantine_sessions import (
     drop_sessions,
     filter_dates,
     is_quarantined,
+    lane_artifact_blocked,
+    lane_runs,
     reason,
 )
 from src.factor_mine import slice_panel as fm_slice
@@ -65,6 +67,26 @@ def test_factor_mine_and_walkforward_slices_skip_the_day() -> None:
     assert fm["n_rows"] == 2 and wf["n_rows"] == 2
 
 
+def test_lane_run_35823365502_and_the_tails_it_read() -> None:
+    """The only Lane harvest that read the carry-forward parses."""
+    runs = lane_runs()
+    assert [r["run_id"] for r in runs] == ["35823365502"]
+    assert lane_artifact_blocked("03_scoreboard/LANE_ONE_SHOT_100.md")
+    assert lane_artifact_blocked("02_lessons/lane/one_shot_100/a16b5b75a698e098.json")
+    assert not lane_artifact_blocked("03_scoreboard/LANE_ONE_SHOT_GOLD.md")
+    for day in (
+        "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03",
+        "2026-09-04", "2026-09-08", "2026-09-24",
+    ):
+        assert is_quarantined(day), day
+        assert reason(day) == "stale_news"
+    # August cluster's own files stay. 09-17 is the Finviz lane scan.
+    assert not is_quarantined("2026-08-27")
+    assert not is_quarantined("2026-08-28")
+    assert not is_quarantined("2026-09-17")
+    assert not is_quarantined("2026-09-23")
+
+
 def test_lane_harvest_and_news_readers_skip_the_day() -> None:
     from src.lane_news_scan import harvest, list_session_dates
     from src.news_grade import _signal_dates
@@ -73,6 +95,8 @@ def test_lane_harvest_and_news_readers_skip_the_day() -> None:
     assert "2026-09-24" not in list_session_dates()
     assert "2026-09-23" in list_session_dates()
     assert harvest("2026-09-24") == []
+    assert harvest("2026-09-08") == []
+    assert harvest("2026-08-31") == []
     assert "2026-09-24" not in _signal_dates(None)
     assert load_corpus("2026-09-24") == []
     # Neighbor still loads.
@@ -84,7 +108,8 @@ def test_lane_harvest_and_news_readers_skip_the_day() -> None:
 
 if __name__ == "__main__":
     test_list_marks_2026_09_24_stale_news()
+    test_lane_run_35823365502_and_the_tails_it_read()
     test_drop_sessions_keeps_neighbors()
     test_factor_mine_and_walkforward_slices_skip_the_day()
     test_lane_harvest_and_news_readers_skip_the_day()
-    print("4 tests passed")
+    print("5 tests passed")

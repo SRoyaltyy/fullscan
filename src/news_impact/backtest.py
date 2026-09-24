@@ -77,10 +77,13 @@ def _skip_quarantine(path: Path) -> bool:
 
 
 def _drop_quarantined_articles(arts: list[dict]) -> list[dict]:
-    from ..quarantine_sessions import is_quarantined
+    from ..quarantine_sessions import is_quarantined, lane_artifact_blocked
     out = []
     for art in arts:
-        m = _DATE_IN_NAME.search(str(art.get("source_file") or ""))
+        src = str(art.get("source_file") or "")
+        if lane_artifact_blocked(src):
+            continue
+        m = _DATE_IN_NAME.search(src)
         if m and is_quarantined(m.group(1)):
             continue
         out.append(art)
