@@ -2,7 +2,8 @@ name: News impact router
 
 # Classify every harvested article by event mechanism, then family
 # winner/loser analysis. Backtest is offline (no keys). Live hops use
-# the same $0 Lane stack as news_to_tickers. Does not touch flatten /
+# SuperGrok through OpenClaw on the ECS box (cheapest general model
+# >30B). Lane is a leftover fallback only. Does not touch flatten /
 # Webull / factor-mine.
 
 on:
@@ -19,12 +20,17 @@ on:
         default: "0"
         type: string
       mode:
-        description: backtest (parsed news, no hops) or live (Lane + search)
+        description: backtest (parsed news, no hops) or live (OpenClaw SuperGrok)
         required: false
         default: "backtest"
         type: string
+      openclaw:
+        description: "1 to hop SuperGrok through OpenClaw (live mode, ECS)"
+        required: false
+        default: "1"
+        type: string
       lane:
-        description: "1 to use $0 Lane hops (live mode)"
+        description: "1 to also try the leftover $0 Lane stack"
         required: false
         default: "0"
         type: string
@@ -39,6 +45,7 @@ permissions:
 
 jobs:
   scan:
+    if: ${{ github.event.inputs.mode != 'live' }}
     runs-on: ubuntu-latest
     timeout-minutes: 360
     steps:
@@ -83,6 +90,7 @@ jobs:
           MODE="${{ github.event.inputs.mode }}"
           EXTRA=""
           if [ "${{ github.event.inputs.lane }}" = "1" ]; then EXTRA="$EXTRA --lane"; fi
+          if [ "${{ github.event.inputs.openclaw }}" = "1" ]; then EXTRA="$EXTRA --openclaw"; fi
           if [ "${{ github.event.inputs.search }}" = "1" ]; then EXTRA="$EXTRA --search"; fi
           PYTHONPATH=. python3 -m src.news_impact_scan --date "$DATE" --limit "$LIMIT" --mode "$MODE" $EXTRA
       - name: Commit impact artifacts
@@ -97,3 +105,42 @@ jobs:
           git commit -m "auto: news impact ${{ github.event.inputs.mode }} ${{ github.event.inputs.date }}"
           git pull --rebase origin main || true
           git push origin main
+
+  live:
+    if: ${{ github.event.inputs.mode == 'live' }}
+    runs-on: [self-hosted, ecs]
+    timeout-minutes: 180
+    env:
+      FULLSCAN_HOME: "/home/gha"
+      HOME: "/home/gha"
+      OPENCLAW_GATEWAY_URL: ${{ secrets.OPENCLAW_GATEWAY_URL }}
+      OPENCLAW_TOKEN: ${{ secrets.OPENCLAW_TOKEN }}
+      OPENCLAW_AGENT: "openclaw/default"
+      OPENCLAW_NEWS_MODEL: "xai/grok-4.20-0309-non-reasoning"
+      GROK_ONLY: "1"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          clean: false
+      - name: Enable classroom then hop SuperGrok
+        run: |
+          set -euo pipefail
+          export HOME="${FULLSCAN_HOME:-/home/gha}"
+          chmod +x scripts/enable_openclaw_chat.sh scripts/safe_git_push.sh || true
+          bash scripts/enable_openclaw_chat.sh || true
+          DATE="${{ github.event.inputs.date }}"
+          LIMIT="${{ github.event.inputs.limit }}"
+          EXTRA="--openclaw"
+          if [ "${{ github.event.inputs.lane }}" = "1" ]; then EXTRA="$EXTRA --lane"; fi
+          if [ "${{ github.event.inputs.search }}" = "1" ]; then EXTRA="$EXTRA --search"; fi
+          PYTHONPATH=. python3 -m src.news_impact_scan --date "$DATE" --limit "$LIMIT" --mode live $EXTRA
+      - name: Push impact artifacts
+        if: always()
+        run: |
+          export HOME="${FULLSCAN_HOME:-/home/gha}"
+          unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
+          bash scripts/safe_git_push.sh \
+            "auto: news impact live ${{ github.event.inputs.date }}" \
+            01_daily/news \
+            02_lessons/lane/outbox_impact \
+            02_lessons/lane/scratch_impact

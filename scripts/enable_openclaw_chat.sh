@@ -21,6 +21,7 @@ fi
 ENV_TOKEN="${OPENCLAW_TOKEN:-}"
 GW_ENV_TOKEN="${OPENCLAW_GATEWAY_TOKEN:-}"
 AGENT="${OPENCLAW_AGENT:-openclaw/default}"
+BACKEND="${OPENCLAW_BACKEND_MODEL:-${OPENCLAW_NEWS_MODEL:-xai/grok-4.20-0309-non-reasoning}}"
 
 echo "uid=$(id -u) user=$(id -un) cfg=$CFG"
 
@@ -149,11 +150,13 @@ chat_ping() {
           -H "x-api-key: ${t}" \
           -H "Content-Type: application/json" \
           -H "Accept: application/json" \
+          -H "x-openclaw-model: ${BACKEND}" \
           -d "{\"model\":\"${AGENT}\",\"messages\":[{\"role\":\"user\",\"content\":\"Reply with exactly the word PONG\"}],\"max_tokens\":16,\"temperature\":0}" \
           "$GW/v1/chat/completions" 2>/tmp/oc_chat.err || echo 000)
       else
         code=$(curl -sS -m 60 -o /tmp/oc_chat.json -w "%{http_code}" \
           -H "x-api-key: ${t}" \
+          -H "x-openclaw-model: ${BACKEND}" \
           -H "Content-Type: application/json" \
           -d "{\"model\":\"${AGENT}\",\"messages\":[{\"role\":\"user\",\"content\":\"Reply with exactly the word PONG\"}],\"max_tokens\":16,\"temperature\":0}" \
           "$GW/v1/chat/completions" 2>/tmp/oc_chat.err || echo 000)

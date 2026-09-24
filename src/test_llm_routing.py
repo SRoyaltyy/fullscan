@@ -84,6 +84,26 @@ def test_openclaw_primary_wins() -> None:
     assert c["headers"]["x-openclaw-session-key"].startswith("fullscan-")
 
 
+def test_backend_model_override_header() -> None:
+    _reset(openclaw_url="http://gw:18789")
+    seen = {}
+
+    def fake_post(url, headers=None, json=None, timeout=None):
+        seen["headers"] = headers
+        return _fake_response(200, "PONG")
+
+    with mock.patch.object(dc.requests, "post", side_effect=fake_post):
+        text = dc.chat(
+            [{"role": "user", "content": "ping"}],
+            model="deepseek-chat", tools=False, max_tokens=8,
+            backend_model="xai/grok-4.20-0309-non-reasoning",
+        )
+    assert text == "PONG"
+    assert seen["headers"]["x-openclaw-model"] == (
+        "xai/grok-4.20-0309-non-reasoning"
+    )
+
+
 def test_native_search_note_only_when_tools() -> None:
     _reset(openclaw_url="http://gw:18789")
     seen = {}
@@ -740,6 +760,7 @@ def main() -> None:
         test_step_deadline_shrinks_grok_read_and_skips_when_tight,
         test_gates,
         test_openclaw_primary_wins,
+        test_backend_model_override_header,
         test_native_search_note_only_when_tools,
         test_fallback_on_gateway_failure,
         test_fallback_on_empty_answer,

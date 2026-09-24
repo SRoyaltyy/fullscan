@@ -19,6 +19,30 @@ if [ -f /home/gha/.fullscan.env ]; then
   export OPENCLAW_GATEWAY_URL="$GW"
 fi
 TOKEN="${OPENCLAW_TOKEN:-}"
+# Prefer the 48-char live json. The 64-char GitHub secret 401s classroom.
+if [ -f "${HOME}/.openclaw/openclaw.json" ]; then
+  LIVE_TOKEN="$(python3 - "${HOME}/.openclaw/openclaw.json" <<'PY'
+import json, sys
+p = sys.argv[1]
+try:
+    d = json.load(open(p, encoding="utf-8"))
+except Exception:
+    raise SystemExit
+gw = d.get("gateway") or {}
+auth = gw.get("auth") if isinstance(gw.get("auth"), dict) else {}
+print(str(auth.get("token") or gw.get("token") or auth.get("password") or ""))
+PY
+)"
+  if [ "${#LIVE_TOKEN}" -eq 48 ]; then
+    TOKEN="$LIVE_TOKEN"
+    export OPENCLAW_TOKEN="$TOKEN"
+    echo "- token_source=live_json_48"
+  elif [ -n "$LIVE_TOKEN" ] && [ "${#TOKEN}" -eq 64 ]; then
+    TOKEN="$LIVE_TOKEN"
+    export OPENCLAW_TOKEN="$TOKEN"
+    echo "- token_source=live_json_len_${#LIVE_TOKEN}"
+  fi
+fi
 
 as_gha() {
   if [ "$(id -u)" -eq 0 ] && id "$GHA_USER" >/dev/null 2>&1; then

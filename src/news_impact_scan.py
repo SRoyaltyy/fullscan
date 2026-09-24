@@ -18,7 +18,8 @@ def _write(path: Path, text: str) -> None:
     path.write_text(text, encoding="utf-8")
 
 
-def run_live(date: str, limit: int, use_lane: bool, use_search: bool) -> dict:
+def run_live(date: str, limit: int, use_lane: bool, use_search: bool,
+             use_openclaw: bool = False) -> dict:
     label = "all" if str(date).lower() in {"all", "*", "history"} else date
     if label == "all":
         arts = harvest_all()
@@ -33,7 +34,7 @@ def run_live(date: str, limit: int, use_lane: bool, use_search: bool) -> dict:
             seen.add(k)
     results = analyze_many(
         arts, limit=limit, use_lane=use_lane, use_search=use_search,
-        persist=True, ranked=True,
+        persist=True, ranked=True, use_openclaw=use_openclaw,
     )
     roll = rollup(results)
     report = {
@@ -41,6 +42,7 @@ def run_live(date: str, limit: int, use_lane: bool, use_search: bool) -> dict:
         "harvested": len(arts if not limit else arts[:limit] if limit else arts),
         "limit": limit,
         "use_lane": use_lane,
+        "use_openclaw": use_openclaw,
         "use_search": use_search,
         "rollup": roll,
         "results": results,
@@ -93,9 +95,13 @@ def main() -> None:
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument(
         "--mode", choices=("backtest", "live"), default="backtest",
-        help="backtest = parsed-news corpus, no Lane/search. live = harvest + optional hops.",
+        help="backtest = parsed-news corpus, no hops. live = harvest + optional hops.",
     )
     ap.add_argument("--lane", action="store_true", help="use $0 Lane hops when keys exist")
+    ap.add_argument(
+        "--openclaw", action="store_true",
+        help="hop SuperGrok through OpenClaw (cheapest model >30B)",
+    )
     ap.add_argument("--search", action="store_true", help="Google AI Overview + web parse")
     args = ap.parse_args()
     if args.mode == "backtest":
@@ -119,7 +125,10 @@ def main() -> None:
             "→", out_json,
         )
         return
-    run_live(args.date, args.limit, use_lane=args.lane, use_search=args.search)
+    run_live(
+        args.date, args.limit, use_lane=args.lane, use_search=args.search,
+        use_openclaw=args.openclaw,
+    )
 
 
 if __name__ == "__main__":

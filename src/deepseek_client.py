@@ -267,13 +267,15 @@ def looks_like_timeout_content(text: str) -> bool:
 
 def _post_openclaw(messages: list[dict], max_tokens: int,
                    temperature: float, stage_label: str = "",
-                   retries: int = 2) -> dict:
+                   retries: int = 2,
+                   backend_model: str | None = None) -> dict:
     url = f"{config.OPENCLAW_GATEWAY_URL}/v1/chat/completions"
     headers = {"Content-Type": "application/json"}
     if config.OPENCLAW_TOKEN:
         headers["Authorization"] = f"Bearer {config.OPENCLAW_TOKEN}"
-    if config.OPENCLAW_BACKEND_MODEL:
-        headers["x-openclaw-model"] = config.OPENCLAW_BACKEND_MODEL
+    model_hdr = backend_model or config.OPENCLAW_BACKEND_MODEL
+    if model_hdr:
+        headers["x-openclaw-model"] = model_hdr
     # Unique session per call: each pipeline stage must be stateless, and
     # the full conversation is resent every time anyway.
     headers["x-openclaw-session-key"] = (
@@ -333,7 +335,8 @@ def _post_openclaw(messages: list[dict], max_tokens: int,
 
 def _openclaw_chat(messages: list[dict], tools: bool, max_tokens: int,
                    temperature: float, transcript_path: str | None,
-                   trace_path: str | None, stage_label: str) -> str:
+                   trace_path: str | None, stage_label: str,
+                   backend_model: str | None = None) -> str:
     """One agent turn against the gateway. Grok does its own research
     (native web/X search) inside the turn. Returns '' on failure so the
     caller can fall back to DeepSeek — unless GROK_ONLY, in which case
@@ -351,7 +354,8 @@ def _openclaw_chat(messages: list[dict], tools: bool, max_tokens: int,
     try:
         resp = _post_openclaw(msgs, max_tokens=max_tokens,
                               temperature=temperature,
-                              stage_label=stage_label)
+                              stage_label=stage_label,
+                              backend_model=backend_model)
         final = (resp["choices"][0]["message"].get("content") or "").strip()
     except (RuntimeError, KeyError, IndexError, TypeError) as e:
         reason = str(e)
@@ -393,7 +397,9 @@ def _openclaw_chat(messages: list[dict], tools: bool, max_tokens: int,
             with open(transcript_path, "w", encoding="utf-8") as fh:
                 json.dump({"provider": "openclaw",
                            "agent": config.OPENCLAW_AGENT,
-                           "backend_model": config.OPENCLAW_BACKEND_MODEL,
+                           "backend_model": (
+                               backend_model or config.OPENCLAW_BACKEND_MODEL
+                           ),
                            "messages": copy.deepcopy(msgs)
                            + [{"role": "assistant", "content": final}]},
                           fh, indent=2, ensure_ascii=False, default=str)
@@ -408,7 +414,7 @@ def _openclaw_chat(messages: list[dict], tools: bool, max_tokens: int,
                     f"# Reasoning trace — {stage_label or 'llm run'}", "",
                     f"**Step 0 — Setup.** Loaded {sys_chars:,} characters "
                     f"of input. Provider: OpenClaw gateway, backend model "
-                    f"`{config.OPENCLAW_BACKEND_MODEL}`. "
+                    f"`{backend_model or config.OPENCLAW_BACKEND_MODEL}`. "
                     + ("Native web/X search was ENABLED inside the agent "
                        "turn; see the RESEARCH APPENDIX at the end of the "
                        "output for queries and sources." if tools else
@@ -581,12 +587,34 @@ def _essay_from_thread(messages: list[dict], stage_label: str = "") -> str:
     return text
 
 
+def openclaw_complete(messages: list[dict], max_tokens: int = 64,
+                      temperature: float = 0.0, stage_label: str = "",
+                      backend_model: str | None = None) -> str:
+    """One OpenClaw turn. Empty on failure. Never falls back to DeepSeek."""
+    config.align_openclaw_token()
+    if not config.OPENCLAW_GATEWAY_URL:
+        return ""
+    try:
+        resp = _post_openclaw(
+            [dict(m) for m in messages],
+            max_tokens=max_tokens,
+            temperature=temperature,
+            stage_label=stage_label or "openclaw-complete",
+            backend_model=backend_model,
+        )
+        return (resp["choices"][0]["message"].get("content") or "").strip()
+    except (RuntimeError, KeyError, IndexError, TypeError) as e:
+        print(f"[openclaw] complete failed ({stage_label or 'openclaw'}): {e}")
+        return ""
+
+
 def chat(messages: list[dict], model: str, tools: bool = False,
          max_tokens: int = 8000, temperature: float = 0.2,
          transcript_path: str | None = None,
          trace_path: str | None = None, stage_label: str = "",
          max_rounds: int | None = None,
-         force_deepseek: bool = False) -> str:
+         force_deepseek: bool = False,
+         backend_model: str | None = None) -> str:
     """Chat completion. PRIMARY: OpenClaw gateway (Grok 4.6 with native
     web/X search — `model` is ignored on that path). FALLBACK: DeepSeek
     with the client-side web_search tool loop, exactly as before.
@@ -625,7 +653,8 @@ def chat(messages: list[dict], model: str, tools: bool = False,
                               temperature=temperature,
                               transcript_path=transcript_path,
                               trace_path=trace_path,
-                              stage_label=stage_label)
+                              stage_label=stage_label,
+                              backend_model=backend_model)
         if text:
             _set_last_provider("openclaw")
             return text
