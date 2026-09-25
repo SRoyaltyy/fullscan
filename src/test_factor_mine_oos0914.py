@@ -910,6 +910,65 @@ def test_theme_train_does_not_open_future_snapshot(tmp_path: Path) -> None:
     assert top == {"T4"}
 
 
+def test_oos_append_failure_does_not_fail_the_lock(tmp_path: Path) -> None:
+    """A research-track error must not change the nightly lock's exit code."""
+    import logging
+
+    tmp_path.mkdir(parents=True, exist_ok=True)
+    hot4 = tmp_path / "HOT4.md"
+    holdup = tmp_path / "holdup.md"
+    frozen_list = oos.FROZEN_LIST.read_bytes()
+    ledger = (oos.LEDGER_DIR / "2026-09-24.json").read_bytes()
+    manifest = fmf.MANIFEST_PATH.read_bytes()
+
+    def land(*_a, **_k):
+        hot4.write_text("union_hot_n4_h1 locked\n", encoding="utf-8")
+        holdup.write_text("union_hot_n4_holdup locked\n", encoding="utf-8")
+        return {
+            "to_date": "2026-09-25",
+            "n_recipes": 2,
+            "n_rows": 1,
+            "n_sessions": 1,
+            "stats": [],
+        }
+
+    def boom(*_a, **_k):
+        raise RuntimeError("research track down")
+
+    messages = []
+
+    class Grab(logging.Handler):
+        def emit(self, record):
+            messages.append(record.getMessage())
+
+    logger = logging.getLogger("src.factor_mine")
+    handler = Grab()
+    old_level = logger.level
+    logger.setLevel(logging.WARNING)
+    logger.addHandler(handler)
+    old_land = fm.land_closed
+    old_append = oos.append_nightly
+    fm.land_closed = land
+    oos.append_nightly = boom
+    try:
+        code = fm.main(["--land-closed", "--write", "--to-date", "2026-09-25"])
+    finally:
+        fm.land_closed = old_land
+        oos.append_nightly = old_append
+        logger.removeHandler(handler)
+        logger.setLevel(old_level)
+    assert code == 0
+    assert hot4.read_text(encoding="utf-8") == "union_hot_n4_h1 locked\n"
+    assert holdup.read_text(encoding="utf-8") == "union_hot_n4_holdup locked\n"
+    logged = "\n".join(messages)
+    assert "OOS0914_APPEND_FAILED" in logged
+    assert "Traceback" in logged
+    assert "research track down" in logged
+    assert oos.FROZEN_LIST.read_bytes() == frozen_list
+    assert (oos.LEDGER_DIR / "2026-09-24.json").read_bytes() == ledger
+    assert fmf.MANIFEST_PATH.read_bytes() == manifest
+
+
 def main() -> None:
     import tempfile
     manifest = fmf.MANIFEST_PATH.read_bytes()
@@ -945,6 +1004,7 @@ def main() -> None:
         test_rule_16_list_committed_before_mining(root / "r16")
         test_rule_17_freeze_before_test_score(root / "r17")
         test_theme_train_does_not_open_future_snapshot(root / "theme")
+        test_oos_append_failure_does_not_fail_the_lock(root / "append_fail")
     assert fmf.MANIFEST_PATH.read_bytes() == manifest
     print("oos0914 tests passed")
 
