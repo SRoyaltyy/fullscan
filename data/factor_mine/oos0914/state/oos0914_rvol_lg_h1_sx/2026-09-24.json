@@ -1,0 +1,85 @@
+{
+  "buys": [],
+  "cash": 9243.36,
+  "date": "2026-09-24",
+  "equity": 9243.36,
+  "fees": 15.0856,
+  "fills": [
+    {
+      "fees": 3.3636,
+      "fill_rule": "open",
+      "pnl": -206.35,
+      "price": 9.12,
+      "shares": 256,
+      "side": "SELL",
+      "ticker": "BFLY"
+    },
+    {
+      "fees": 2.1247,
+      "fill_rule": "open",
+      "pnl": -16.47,
+      "price": 70.49,
+      "shares": 35,
+      "side": "SELL",
+      "ticker": "INOD"
+    },
+    {
+      "fees": 7.4,
+      "fill_rule": "open",
+      "pnl": -333.91,
+      "price": 3.925,
+      "shares": 565,
+      "side": "SELL",
+      "ticker": "SVIA"
+    },
+    {
+      "fees": 2.1973,
+      "fill_rule": "open",
+      "pnl": -348.47,
+      "price": 36.025,
+      "shares": 60,
+      "side": "SELL",
+      "ticker": "VKTX"
+    }
+  ],
+  "holdings": [],
+  "mean": -4.9843,
+  "n_trades_today": 4,
+  "recipe": "oos0914_rvol_lg_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 9.12,
+      "shares": 256,
+      "side": "SELL",
+      "ticker": "BFLY"
+    },
+    {
+      "fill_rule": "open",
+      "price": 70.49,
+      "shares": 35,
+      "side": "SELL",
+      "ticker": "INOD"
+    },
+    {
+      "fill_rule": "open",
+      "price": 3.925,
+      "shares": 565,
+      "side": "SELL",
+      "ticker": "SVIA"
+    },
+    {
+      "fill_rule": "open",
+      "price": 36.025,
+      "shares": 60,
+      "side": "SELL",
+      "ticker": "VKTX"
+    }
+  ],
+  "state": {
+    "after": "2026-09-24",
+    "cash": 9243.36,
+    "pos": {},
+    "yday_equity": 9243.36
+  }
+}

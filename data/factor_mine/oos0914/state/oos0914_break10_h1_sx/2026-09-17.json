@@ -1,0 +1,212 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 2.1,
+      "shares": 1218,
+      "side": "BUY",
+      "ticker": "HLP"
+    },
+    {
+      "fill_rule": "open",
+      "price": 22.46,
+      "shares": 113,
+      "side": "BUY",
+      "ticker": "BBNX"
+    },
+    {
+      "fill_rule": "open",
+      "price": 1.07,
+      "shares": 2390,
+      "side": "BUY",
+      "ticker": "IQ"
+    },
+    {
+      "fill_rule": "open",
+      "price": 10.25,
+      "shares": 246,
+      "side": "BUY",
+      "ticker": "IOVA"
+    }
+  ],
+  "cash": 4.76,
+  "date": "2026-09-17",
+  "equity": 9980.63,
+  "fees": 83.7847,
+  "fills": [
+    {
+      "fees": 2.2887,
+      "fill_rule": "open",
+      "pnl": 33.74,
+      "price": 28.595,
+      "shares": 88,
+      "side": "SELL",
+      "ticker": "CAI"
+    },
+    {
+      "fees": 18.1589,
+      "fill_rule": "open",
+      "pnl": 380.34,
+      "price": 2.1,
+      "shares": 1388,
+      "side": "SELL",
+      "ticker": "HLP"
+    },
+    {
+      "fees": 8.9421,
+      "fill_rule": "open",
+      "pnl": -263.63,
+      "price": 3.3,
+      "shares": 683,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fees": 2.3494,
+      "fill_rule": "open",
+      "pnl": 80.94,
+      "price": 24.09,
+      "shares": 107,
+      "side": "SELL",
+      "ticker": "SDGR"
+    },
+    {
+      "fees": 15.7122,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 2.1,
+      "shares": 1218,
+      "side": "BUY",
+      "ticker": "HLP"
+    },
+    {
+      "fees": 2.329,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 22.46,
+      "shares": 113,
+      "side": "BUY",
+      "ticker": "BBNX"
+    },
+    {
+      "fees": 30.831,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 1.07,
+      "shares": 2390,
+      "side": "BUY",
+      "ticker": "IQ"
+    },
+    {
+      "fees": 3.1734,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 10.25,
+      "shares": 246,
+      "side": "BUY",
+      "ticker": "IOVA"
+    }
+  ],
+  "holdings": [
+    "BBNX",
+    "HLP",
+    "IOVA",
+    "IQ"
+  ],
+  "mean": -1.27,
+  "n_trades_today": 8,
+  "recipe": "oos0914_break10_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 28.595,
+      "shares": 88,
+      "side": "SELL",
+      "ticker": "CAI"
+    },
+    {
+      "fill_rule": "open",
+      "price": 2.1,
+      "shares": 1388,
+      "side": "SELL",
+      "ticker": "HLP"
+    },
+    {
+      "fill_rule": "open",
+      "price": 3.3,
+      "shares": 683,
+      "side": "SELL",
+      "ticker": "INDP"
+    },
+    {
+      "fill_rule": "open",
+      "price": 24.09,
+      "shares": 107,
+      "side": "SELL",
+      "ticker": "SDGR"
+    }
+  ],
+  "state": {
+    "after": "2026-09-17",
+    "cash": 4.76,
+    "pos": {
+      "BBNX": {
+        "close_px": 21.43000030517578,
+        "cost": 2540.3088965454103,
+        "entry_date": "2026-09-17",
+        "entry_px": 22.459999084472656,
+        "fee_in": 2.329,
+        "last_px": 22.459999084472656,
+        "min_hold": 1,
+        "notional": 2537.97989654541,
+        "peak_px": 22.459999084472656,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+27.3; leftover $2557.85",
+        "shares": 113,
+        "ticker": "BBNX"
+      },
+      "HLP": {
+        "close_px": 2.0199999809265137,
+        "cost": 2573.512083842468,
+        "entry_date": "2026-09-17",
+        "entry_px": 2.0999999046325684,
+        "fee_in": 15.7122,
+        "last_px": 2.0999999046325684,
+        "min_hold": 1,
+        "notional": 2557.7998838424683,
+        "peak_px": 2.0999999046325684,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; ret5=+60.5; leftover $2557.85",
+        "shares": 1218,
+        "ticker": "HLP"
+      },
+      "IOVA": {
+        "close_px": 10.020000457763672,
+        "cost": 2524.6734,
+        "entry_date": "2026-09-17",
+        "entry_px": 10.25,
+        "fee_in": 3.1734,
+        "last_px": 10.25,
+        "min_hold": 1,
+        "notional": 2521.5,
+        "peak_px": 10.25,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list flatten,ohlc_hot; ret5=+17.1; leftover $2557.85",
+        "shares": 246,
+        "ticker": "IOVA"
+      },
+      "IQ": {
+        "close_px": 1.100000023841858,
+        "cost": 2588.131125360489,
+        "entry_date": "2026-09-17",
+        "entry_px": 1.0700000524520874,
+        "fee_in": 30.831,
+        "last_px": 1.0700000524520874,
+        "min_hold": 1,
+        "notional": 2557.300125360489,
+        "peak_px": 1.0700000524520874,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,ohlc_hot; \ud83d\udd35; ret5=+15.8; leftover $2557.85",
+        "shares": 2390,
+        "ticker": "IQ"
+      }
+    },
+    "yday_equity": 9980.63
+  }
+}

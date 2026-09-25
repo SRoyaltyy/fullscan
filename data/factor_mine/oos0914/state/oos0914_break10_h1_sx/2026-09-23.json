@@ -1,0 +1,212 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 2.92,
+      "shares": 796,
+      "side": "BUY",
+      "ticker": "FEAM"
+    },
+    {
+      "fill_rule": "open",
+      "price": 266.5,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "VICR"
+    },
+    {
+      "fill_rule": "open",
+      "price": 41.76,
+      "shares": 55,
+      "side": "BUY",
+      "ticker": "VKTX"
+    },
+    {
+      "fill_rule": "open",
+      "price": 4.49,
+      "shares": 517,
+      "side": "BUY",
+      "ticker": "SVIA"
+    }
+  ],
+  "cash": 202.44,
+  "date": "2026-09-23",
+  "equity": 8943.42,
+  "fees": 31.7874,
+  "fills": [
+    {
+      "fees": 2.0396,
+      "fill_rule": "open",
+      "pnl": 82.54,
+      "price": 331.78,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "ARM"
+    },
+    {
+      "fees": 2.3219,
+      "fill_rule": "open",
+      "pnl": -25.4,
+      "price": 23.3,
+      "shares": 99,
+      "side": "SELL",
+      "ticker": "ARQQ"
+    },
+    {
+      "fees": 2.0812,
+      "fill_rule": "open",
+      "pnl": 33.04,
+      "price": 108.52,
+      "shares": 21,
+      "side": "SELL",
+      "ticker": "GRAL"
+    },
+    {
+      "fees": 4.238,
+      "fill_rule": "open",
+      "pnl": -137.6,
+      "price": 6.83,
+      "shares": 323,
+      "side": "SELL",
+      "ticker": "NUAI"
+    },
+    {
+      "fees": 10.2684,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 2.92,
+      "shares": 796,
+      "side": "BUY",
+      "ticker": "FEAM"
+    },
+    {
+      "fees": 2.014,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 266.5,
+      "shares": 8,
+      "side": "BUY",
+      "ticker": "VICR"
+    },
+    {
+      "fees": 2.155,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 41.76,
+      "shares": 55,
+      "side": "BUY",
+      "ticker": "VKTX"
+    },
+    {
+      "fees": 6.6693,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 4.49,
+      "shares": 517,
+      "side": "BUY",
+      "ticker": "SVIA"
+    }
+  ],
+  "holdings": [
+    "FEAM",
+    "SVIA",
+    "VICR",
+    "VKTX"
+  ],
+  "mean": -4.2431,
+  "n_trades_today": 8,
+  "recipe": "oos0914_break10_h1_sx",
+  "sells": [
+    {
+      "fill_rule": "open",
+      "price": 331.78,
+      "shares": 7,
+      "side": "SELL",
+      "ticker": "ARM"
+    },
+    {
+      "fill_rule": "open",
+      "price": 23.3,
+      "shares": 99,
+      "side": "SELL",
+      "ticker": "ARQQ"
+    },
+    {
+      "fill_rule": "open",
+      "price": 108.52,
+      "shares": 21,
+      "side": "SELL",
+      "ticker": "GRAL"
+    },
+    {
+      "fill_rule": "open",
+      "price": 6.83,
+      "shares": 323,
+      "side": "SELL",
+      "ticker": "NUAI"
+    }
+  ],
+  "state": {
+    "after": "2026-09-23",
+    "cash": 202.44,
+    "pos": {
+      "FEAM": {
+        "close_px": 2.640000104904175,
+        "cost": 2334.5884607299804,
+        "entry_date": "2026-09-23",
+        "entry_px": 2.9200000762939453,
+        "fee_in": 10.2684,
+        "last_px": 2.9200000762939453,
+        "min_hold": 1,
+        "notional": 2324.3200607299805,
+        "peak_px": 2.9200000762939453,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+133.3; leftover $2324.50",
+        "shares": 796,
+        "ticker": "FEAM"
+      },
+      "SVIA": {
+        "close_px": 4.03000020980835,
+        "cost": 2327.999181668091,
+        "entry_date": "2026-09-23",
+        "entry_px": 4.489999771118164,
+        "fee_in": 6.6693,
+        "last_px": 4.489999771118164,
+        "min_hold": 1,
+        "notional": 2321.329881668091,
+        "peak_px": 4.489999771118164,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; ret5=+26.4; leftover $2324.50",
+        "shares": 517,
+        "ticker": "SVIA"
+      },
+      "VICR": {
+        "close_px": 283.1600036621094,
+        "cost": 2134.014,
+        "entry_date": "2026-09-23",
+        "entry_px": 266.5,
+        "fee_in": 2.014,
+        "last_px": 266.5,
+        "min_hold": 1,
+        "notional": 2132.0,
+        "peak_px": 266.5,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+45.9; leftover $2324.50",
+        "shares": 8,
+        "ticker": "VICR"
+      },
+      "VKTX": {
+        "close_px": 41.650001525878906,
+        "cost": 2298.9549076843264,
+        "entry_date": "2026-09-23",
+        "entry_px": 41.7599983215332,
+        "fee_in": 2.155,
+        "last_px": 41.7599983215332,
+        "min_hold": 1,
+        "notional": 2296.799907684326,
+        "peak_px": 41.7599983215332,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate break_10=True; rank hot_score; list yday_gainer,yday_mover; \ud83d\udd35; ret5=+36.4; leftover $2324.50",
+        "shares": 55,
+        "ticker": "VKTX"
+      }
+    },
+    "yday_equity": 8943.42
+  }
+}

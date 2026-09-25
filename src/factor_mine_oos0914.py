@@ -1204,14 +1204,14 @@ def render_scoreboard(train: dict, test: dict | None) -> str:
                 f"{day.get('fees')} | {day.get('cash')} | {day.get('equity')} | "
                 f"{_pct(day.get('mean'))} |"
             )
+        lines.append("")
+        if rule.get("clean_from"):
+            lines.append(
+                f"Clean record starts {rule.get('clean_from')}. "
+                f"Sessions through {rule.get('designed_after_through')} "
+                "are designed_after and are not the result."
+            )
             lines.append("")
-            if rule.get("clean_from"):
-                lines.append(
-                    f"Clean record starts {rule.get('clean_from')}. "
-                    f"Sessions through {rule.get('designed_after_through')} "
-                    "are designed_after and are not the result."
-                )
-                lines.append("")
     base = (test or {}).get("baselines") or {}
     lines += [
         "## Baselines",

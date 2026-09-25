@@ -1,0 +1,147 @@
+{
+  "buys": [
+    {
+      "fill_rule": "open",
+      "price": 28.16,
+      "shares": 88,
+      "side": "BUY",
+      "ticker": "CAI"
+    },
+    {
+      "fill_rule": "open",
+      "price": 36.46,
+      "shares": 68,
+      "side": "BUY",
+      "ticker": "BLFS"
+    },
+    {
+      "fill_rule": "open",
+      "price": 27.09,
+      "shares": 92,
+      "side": "BUY",
+      "ticker": "ADPT"
+    },
+    {
+      "fill_rule": "open",
+      "price": 94.23,
+      "shares": 26,
+      "side": "BUY",
+      "ticker": "WGS"
+    }
+  ],
+  "cash": 91.6,
+  "date": "2026-09-16",
+  "equity": 10108.12,
+  "fees": 8.782,
+  "fills": [
+    {
+      "fees": 2.254,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 28.16,
+      "shares": 88,
+      "side": "BUY",
+      "ticker": "CAI"
+    },
+    {
+      "fees": 2.194,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 36.46,
+      "shares": 68,
+      "side": "BUY",
+      "ticker": "BLFS"
+    },
+    {
+      "fees": 2.266,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 27.09,
+      "shares": 92,
+      "side": "BUY",
+      "ticker": "ADPT"
+    },
+    {
+      "fees": 2.068,
+      "fill_rule": "open",
+      "pnl": null,
+      "price": 94.23,
+      "shares": 26,
+      "side": "BUY",
+      "ticker": "WGS"
+    }
+  ],
+  "holdings": [
+    "ADPT",
+    "BLFS",
+    "CAI",
+    "WGS"
+  ],
+  "mean": 1.0812,
+  "n_trades_today": 4,
+  "recipe": "oos0914_zero_candle_h2_sx",
+  "sells": [],
+  "state": {
+    "after": "2026-09-16",
+    "cash": 91.6,
+    "pos": {
+      "ADPT": {
+        "close_px": 27.670000076293945,
+        "cost": 2494.546014038086,
+        "entry_date": "2026-09-16",
+        "entry_px": 27.09000015258789,
+        "fee_in": 2.266,
+        "last_px": 27.09000015258789,
+        "min_hold": 2,
+        "notional": 2492.280014038086,
+        "peak_px": 27.09000015258789,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list probable,yday_gainer,ohlc_hot; \ud83d\udd35; \u26aa; ret5=+9.6; leftover $2500.00",
+        "shares": 92,
+        "ticker": "ADPT"
+      },
+      "BLFS": {
+        "close_px": 36.11000061035156,
+        "cost": 2481.4739377441406,
+        "entry_date": "2026-09-16",
+        "entry_px": 36.459999084472656,
+        "fee_in": 2.194,
+        "last_px": 36.459999084472656,
+        "min_hold": 2,
+        "notional": 2479.2799377441406,
+        "peak_px": 36.459999084472656,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list flatten; \ud83d\udd35; \u26aa; ret5=+2.9; leftover $2500.00",
+        "shares": 68,
+        "ticker": "BLFS"
+      },
+      "CAI": {
+        "close_px": 28.209999084472656,
+        "cost": 2480.3339865722655,
+        "entry_date": "2026-09-16",
+        "entry_px": 28.15999984741211,
+        "fee_in": 2.254,
+        "last_px": 28.15999984741211,
+        "min_hold": 2,
+        "notional": 2478.0799865722656,
+        "peak_px": 28.15999984741211,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list yday_gainer,ohlc_hot; \u26aa; ret5=+14.8; leftover $2500.00",
+        "shares": 88,
+        "ticker": "CAI"
+      },
+      "WGS": {
+        "close_px": 97.41999816894531,
+        "cost": 2452.0480872802736,
+        "entry_date": "2026-09-16",
+        "entry_px": 94.2300033569336,
+        "fee_in": 2.068,
+        "last_px": 94.2300033569336,
+        "min_hold": 2,
+        "notional": 2449.9800872802734,
+        "peak_px": 94.2300033569336,
+        "reason": "OOS-0914 frozen rule. designed_after 2026-09-14.; gate zero_red=True,last_green=True; rank candle_score; list ohlc_hot; \ud83d\udd35; \u26aa; ret5=+10.2; leftover $2500.00",
+        "shares": 26,
+        "ticker": "WGS"
+      }
+    },
+    "yday_equity": 10108.12
+  }
+}
