@@ -3,6 +3,8 @@ from __future__ import annotations
 
 import gzip
 import json
+import os
+import sys
 import tempfile
 from pathlib import Path
 from unittest import mock
@@ -781,7 +783,14 @@ def _emit_once(root: Path) -> dict[str, bytes]:
 
 
 def test_replay_twice_is_byte_identical() -> None:
-    """Same commit and the same frozen inputs land the same bytes."""
+    """Same commit and the same frozen inputs land the same bytes.
+
+    ``python -m src.test_factor_mine_freeze`` restarts under
+    PYTHONHASHSEED=0. Recipe ranks break ties on ticker and use a
+    stable sort.
+    """
+    if __name__ == "__main__":
+        assert os.environ.get("PYTHONHASHSEED") == "0"
     with tempfile.TemporaryDirectory() as a, tempfile.TemporaryDirectory() as b:
         first = _emit_once(Path(a))
         second = _emit_once(Path(b))
@@ -883,6 +892,9 @@ def test_recipe_creation_date_cannot_move() -> None:
 
 
 if __name__ == "__main__":
+    if os.environ.get("PYTHONHASHSEED") != "0":
+        os.environ["PYTHONHASHSEED"] = "0"
+        os.execv(sys.executable, [sys.executable, "-m", "src.test_factor_mine_freeze"])
     test_snapshot_is_write_once_and_restate_logs_previous_hash()
     test_guard_fails_when_an_earlier_hash_changes()
     test_missing_bars_hold_the_day_and_do_not_write_hot_zero()

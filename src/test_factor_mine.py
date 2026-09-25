@@ -1603,9 +1603,14 @@ def test_factor_mine_workflow_lands_after_close() -> None:
     assert "data/factor_mine/panel.json" in yml
     assert "data/factor_mine/snapshots/" in yml
     assert "data/factor_mine/ledgers/" in yml
+    assert "data/factor_mine/lineups/" in yml
+    assert "data/factor_mine/recipe_created_on.json" in yml
+    assert "data/factor_mine/prices/" in yml
     assert "data/prices/ohlc.parquet" in yml
+    assert "data/prices/actions.parquet" in yml
     assert "data/prices/meta.json" in yml
     assert "assert_history_unchanged" in yml
+    assert 'PYTHONHASHSEED: "0"' in yml
     assert "--restate" in yml
     assert "Stock Book ALL (one-shot)" in yml
     assert "assert_publish_budget" in yml

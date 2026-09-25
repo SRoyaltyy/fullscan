@@ -1754,6 +1754,7 @@ def decision_why(rec: dict, *, hard: bool = False, s=None,
 
 
 def rank_key(row: dict, rec: dict) -> tuple:
+    """Rank a candidate. Equal scores break on ticker. ``list.sort`` is stable."""
     how = rec.get("rank")
     hot = _finite(row.get("ohlc_hot_score")) or 0.0
     candle = _finite(row.get("candle_score")) or 0.0
