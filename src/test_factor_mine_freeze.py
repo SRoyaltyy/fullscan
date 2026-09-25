@@ -956,7 +956,9 @@ def _emit_once(root: Path, date: str = "2026-08-17") -> dict[str, bytes]:
             payload["from_date"] = date
             payload["dates"] = [date]
             payload = fmf.label_payload(payload)
-            dest = root / "factor_mine.json"
+            # Each session is an independent replay. A shared scoreboard
+            # file would look like a locked day being dropped.
+            dest = root / date / "factor_mine.json"
             fm.write_scoreboard(payload, dest)
         files = {
             f"{date}/snapshot": fmf.snapshot_path(date).read_bytes(),
