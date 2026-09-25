@@ -800,15 +800,247 @@ def _bar_fields(date: str, ticker: str, opened, high, low, closed, volume=None):
     }
 
 
+_RAW_QUOTE_CACHE: dict[str, dict] = {}
+# date → tickers whose bar was inserted from raw.csv (Yahoo had no print).
+SINGLE_SOURCE: dict[str, set[str]] = {}
+RAW_FILL_START = "2026-08-06"
+RAW_FILL_END = "2026-09-24"
+RAW_FILL_SKIP = frozenset({"2026-08-27"})
+
+
 def _radar_raw_quotes(date: str) -> dict:
-    """Open and Price from ``{D}.raw.csv`` when the commit guard accepts it."""
-    tape = fmf.day_open_tape(date)
+    """OHLC from ``{D}.raw.csv`` when the commit guard accepts it.
+
+    ``Price`` is the close. ``Prev Close`` is the prior session's close.
+    A late commit, a hash miss, or a missing file returns nothing.
+    """
+    day = str(date or "")[:10]
+    if day in _RAW_QUOTE_CACHE:
+        return _RAW_QUOTE_CACHE[day]
+    tape = fmf.day_open_tape(day)
     if tape.get("source") != "finviz_raw":
+        _RAW_QUOTE_CACHE[day] = {}
         return {}
-    raw = fmf._theme_radar_raw_bytes(date)
+    raw = fmf._theme_radar_raw_bytes(day)
     if not raw:
+        _RAW_QUOTE_CACHE[day] = {}
         return {}
-    return fmf.parse_theme_radar_prices(raw.decode("utf-8", errors="replace"))
+    parsed = fmf.parse_theme_radar_prices(raw.decode("utf-8", errors="replace"))
+    _RAW_QUOTE_CACHE[day] = parsed
+    return parsed
+
+
+def raw_fill_dates() -> list[str]:
+    """Weekdays from 2026-08-06 through 2026-09-24, except 2026-08-27."""
+    import datetime as dt
+
+    start = dt.date.fromisoformat(RAW_FILL_START)
+    end = dt.date.fromisoformat(RAW_FILL_END)
+    out = []
+    day = start
+    while day <= end:
+        iso = day.isoformat()
+        if day.weekday() < 5 and iso not in RAW_FILL_SKIP:
+            out.append(iso)
+        day += dt.timedelta(days=1)
+    return out
+
+
+def _prev_weekday(day: str) -> str:
+    import datetime as dt
+
+    cursor = dt.date.fromisoformat(str(day)[:10]) - dt.timedelta(days=1)
+    while cursor.weekday() >= 5:
+        cursor -= dt.timedelta(days=1)
+    return cursor.isoformat()
+
+
+def _known_prints() -> set[tuple[str, str]]:
+    """(date, ticker) pairs that already have an open and a close."""
+    import pandas as pd
+
+    if not RETRO_STORE.is_file():
+        return set()
+    df = pd.read_parquet(RETRO_STORE, columns=["date", "ticker", "open", "close"])
+    df["date"] = pd.to_datetime(df["date"]).dt.strftime("%Y-%m-%d")
+    df["ticker"] = df["ticker"].astype(str).str.upper()
+    ok = df["open"].notna() & df["close"].notna()
+    return {
+        (str(rec.date), str(rec.ticker))
+        for rec in df.loc[ok, ["date", "ticker"]].itertuples(index=False)
+    }
+
+
+def fill_raw_history(tickers: list[str] | None = None) -> int:
+    """Insert missing bars from each guarded raw.csv. Stored bars stay.
+
+    Returns how many bars were inserted. Names Yahoo did not have are
+    recorded in ``SINGLE_SOURCE``. ``Prev Close`` fills the prior session
+    only when that session still has no print.
+    """
+    import pandas as pd
+
+    allowed = None
+    if tickers is not None:
+        allowed = {str(t).strip().upper() for t in tickers if t}
+    known = _known_prints()
+    rows = []
+    for date in raw_fill_dates():
+        quotes = _radar_raw_quotes(date)
+        if not quotes:
+            continue
+        for ticker, quote in quotes.items():
+            if allowed is not None and ticker not in allowed:
+                continue
+            key = (date, ticker)
+            if key not in known:
+                bar = _bar_fields(
+                    date, ticker,
+                    quote.get("open"), quote.get("high"), quote.get("low"),
+                    quote.get("close"), quote.get("volume"),
+                )
+                if bar:
+                    rows.append(bar)
+                    SINGLE_SOURCE.setdefault(date, set()).add(ticker)
+                    known.add(key)
+            prev = _prev_weekday(date)
+            prev_key = (prev, ticker)
+            prev_close = quote.get("prev_close")
+            if prev_key in known or prev_close is None:
+                continue
+            bar = _bar_fields(
+                prev, ticker, prev_close, prev_close, prev_close, prev_close,
+            )
+            if not bar:
+                continue
+            rows.append(bar)
+            SINGLE_SOURCE.setdefault(prev, set()).add(ticker)
+            known.add(prev_key)
+    if not rows:
+        return 0
+    print(f"[retro] raw.csv history rows {len(rows)}", flush=True)
+    merge_raw_bars(pd.DataFrame(rows))
+    return len(rows)
+
+
+def _median(values: list[float]) -> float | None:
+    if not values:
+        return None
+    ordered = sorted(values)
+    mid = len(ordered) // 2
+    if len(ordered) % 2:
+        return float(ordered[mid])
+    return float(ordered[mid - 1] + ordered[mid]) / 2.0
+
+
+def summarize_price_diffs(pairs: list[tuple[float, float]]) -> dict:
+    """Median and max |yahoo − raw| and |yahoo − raw| / |yahoo|."""
+    abs_diff = []
+    pct_diff = []
+    for yahoo, raw in pairs:
+        try:
+            a = float(yahoo)
+            b = float(raw)
+        except (TypeError, ValueError):
+            continue
+        if a != a or b != b:
+            continue
+        gap = abs(a - b)
+        abs_diff.append(gap)
+        base = abs(a) if a else abs(b)
+        pct_diff.append(gap / base if base else 0.0)
+    return {
+        "n": len(abs_diff),
+        "median_abs": _median(abs_diff),
+        "max_abs": max(abs_diff) if abs_diff else None,
+        "median_pct": _median(pct_diff),
+        "max_pct": max(pct_diff) if pct_diff else None,
+    }
+
+
+def compare_yahoo_frame(yahoo, quotes_by_date: dict) -> dict:
+    """Diff stats for names present in both a Yahoo frame and raw.csv."""
+    import pandas as pd
+
+    empty = {
+        "open": summarize_price_diffs([]),
+        "close": summarize_price_diffs([]),
+    }
+    if yahoo is None or not len(yahoo):
+        return empty
+    frame = yahoo.copy()
+    frame["date"] = pd.to_datetime(frame["date"]).dt.strftime("%Y-%m-%d")
+    frame["ticker"] = frame["ticker"].astype(str).str.upper()
+    opens: list[tuple[float, float]] = []
+    closes: list[tuple[float, float]] = []
+    for rec in frame.itertuples(index=False):
+        quote = (quotes_by_date.get(str(rec.date)[:10]) or {}).get(str(rec.ticker))
+        if not quote:
+            continue
+        if quote.get("open") is not None and rec.open == rec.open:
+            opens.append((float(rec.open), float(quote["open"])))
+        if quote.get("close") is not None and rec.close == rec.close:
+            closes.append((float(rec.close), float(quote["close"])))
+    return {
+        "open": summarize_price_diffs(opens),
+        "close": summarize_price_diffs(closes),
+    }
+
+
+def validate_raw_vs_yahoo(tickers: list[str] | None = None) -> dict:
+    """Download Yahoo raw in memory and compare it to guarded raw.csv prints.
+
+    The download is not merged into either price store.
+    """
+    dates = raw_fill_dates()
+    quotes = {day: _radar_raw_quotes(day) for day in dates}
+    names: set[str] = set()
+    for doc in quotes.values():
+        names.update(doc)
+    if tickers is not None:
+        allow = {str(t).strip().upper() for t in tickers if t}
+        names &= allow
+    names.discard("")
+    if not names:
+        stats = compare_yahoo_frame(None, quotes)
+        stats["tickers"] = 0
+        return stats
+    end = "2026-09-25"
+    yahoo, _actions = _download_raw(sorted(names), RAW_FILL_START, end)
+    stats = compare_yahoo_frame(yahoo, quotes)
+    stats["tickers"] = len(names)
+    print(
+        f"[retro] raw vs yahoo close n={stats['close']['n']} "
+        f"median={stats['close']['median_abs']} max={stats['close']['max_abs']}",
+        flush=True,
+    )
+    return stats
+
+
+def is_unrankable(ticker: str, date: str) -> bool:
+    """True when the hot score would be computed on a short history.
+
+    The lookback is the window ``ohlc.features`` requests
+    (``INDICATOR_LOOKBACK`` prior closes). A missing session print is
+    the same hole: the name is excluded, not scored as zero.
+    """
+    from . import ohlc_ripper as ohlc
+
+    if fmf.completeness_gaps(ticker, date):
+        return True
+    need = int(ohlc.INDICATOR_LOOKBACK)
+    priors = [
+        b for b in fmf._raw_bars(ticker)
+        if str(b.get("date") or "") < str(date)[:10] and b.get("close") is not None
+    ]
+    return len(priors) < need
+
+
+def unrankable_holds(n_unrankable: int, n_candidates: int) -> bool:
+    """True when unrankable candidates are strictly above the 10% line."""
+    if n_candidates <= 0:
+        return True
+    return (float(n_unrankable) / float(n_candidates)) > float(fmf.UNRANKABLE_MAX_SHARE)
 
 
 def parse_stooq_history(text: str) -> list[dict]:
@@ -858,21 +1090,11 @@ def recover_session_bars(date: str, tickers: list[str]) -> list[str]:
     ohlc, actions = _download_raw(missing, PRICE_START, "2026-09-25")
     if len(ohlc):
         merge_raw_bars(ohlc, actions if len(actions) else None)
+    # Earlier raw.csv sessions too, under each file's own commit guard.
+    # Yahoo bars already stored are left alone. A name filled only from
+    # raw.csv is marked single_source.
+    fill_raw_history(names)
     missing = _missing_session(date, names)
-    if missing:
-        quotes = _radar_raw_quotes(date)
-        rows = []
-        for ticker in missing:
-            quote = quotes.get(ticker) or {}
-            bar = _bar_fields(
-                date, ticker, quote.get("open"), None, None, quote.get("close"),
-            )
-            if bar:
-                rows.append(bar)
-        if rows:
-            print(f"[retro] {date} raw.csv filled {len(rows)}", flush=True)
-            merge_raw_bars(pd.DataFrame(rows))
-        missing = _missing_session(date, names)
     if missing:
         rows = []
         for ticker in missing:
@@ -1754,7 +1976,8 @@ def publish_baselines(*, draws: int = RANDOM4_DRAWS) -> dict:
     return payload
 
 
-def write_report(classed: list[dict], scores: list[dict]) -> None:
+def write_report(classed: list[dict], scores: list[dict],
+                 raw_diff: dict | None = None) -> None:
     rebuilt = [c["date"] for c in classed if c["label"] == "pit_rebuilt"]
     incomplete = [c for c in classed if c["label"] == "incomplete_pit"]
     held = [c for c in classed if c["label"] == "held"]
@@ -1771,14 +1994,39 @@ def write_report(classed: list[dict], scores: list[dict]) -> None:
         "",
         "## Held days",
         "",
-        "A missing session print or a failed open/close cross-check holds the day. "
-        "The book is empty and the ledger recipes are empty. The return is not 0.",
+        "A day is held when more than 10% of its candidates are unrankable, "
+        "or when a Yahoo print disagrees with the external open or close "
+        "beyond PRICE_CHECK. An unrankable name under that line is left off "
+        "the ranking and is not scored. A raw.csv bar Yahoo did not have is "
+        "single_source. The book is empty and the ledger recipes are empty. "
+        "The return is not 0.",
         "",
     ]
     for info in held:
         missing = ", ".join(info.get("missing_prices") or []) or "(none)"
         n_gaps = info.get("cross_check_n") or 0
-        lines.append(f"- `{info['date']}` missing: {missing}; cross-check gaps: {n_gaps}")
+        share = info.get("unrankable_share")
+        share_txt = "" if share is None else f"; unrankable {share:.1%}"
+        reason = info.get("hold_reason") or ""
+        lines.append(
+            f"- `{info['date']}` {reason} missing: {missing}; "
+            f"cross-check gaps: {n_gaps}{share_txt}"
+        )
+    if raw_diff:
+        lines += ["", "## raw.csv versus Yahoo raw", ""]
+        lines.append(
+            "Compared on names that have both a Yahoo raw print and a "
+            "commit-guarded raw.csv print. The Yahoo download is not stored."
+        )
+        for field in ("open", "close"):
+            stats = (raw_diff.get(field) or {})
+            lines.append(
+                f"- {field}: n={stats.get('n')} "
+                f"median abs={stats.get('median_abs')} "
+                f"max abs={stats.get('max_abs')} "
+                f"median pct={stats.get('median_pct')} "
+                f"max pct={stats.get('max_pct')}"
+            )
     lines += [
         "",
         "## Incomplete days",
@@ -1827,6 +2075,7 @@ def write_report(classed: list[dict], scores: list[dict]) -> None:
             for info in classed
         ],
         "scores": scores,
+        "raw_vs_yahoo": raw_diff or {},
     }, indent=2), encoding="utf-8")
     print(f"[retro] wrote {REPORT_MD}", flush=True)
 
@@ -1842,57 +2091,106 @@ def _held_ledger(date: str, reason: str) -> dict:
     }
 
 
+def _mark_candidates(date: str, provenance: dict, names: list[str]) -> tuple[list[str], list[str]]:
+    """Tag unrankable and single_source names. Return (unrankable, rankable)."""
+    single = SINGLE_SOURCE.get(str(date)[:10], set())
+    bad = []
+    good = []
+    for ticker in names:
+        if is_unrankable(ticker, date):
+            bad.append(ticker)
+        else:
+            good.append(ticker)
+    bad_set = set(bad)
+    for row in provenance.get("names") or []:
+        ticker = row.get("ticker")
+        if ticker in bad_set:
+            row["unrankable"] = True
+        if ticker in single:
+            row["single_source"] = True
+    provenance["unrankable_n"] = len(bad)
+    provenance["unrankable_share"] = (
+        round(len(bad) / len(names), 6) if names else None
+    )
+    provenance["single_source_n"] = sum(
+        1 for row in (provenance.get("names") or []) if row.get("single_source")
+    )
+    return bad, good
+
+
 def review_day(date: str, info: dict, dest: Path,
                history: dict | None = None) -> tuple[list[dict], dict]:
-    """Provenance, fill missing prints, then cross-check.
+    """Fill raw.csv holes, drop unrankable names, then cross-check Yahoo.
 
-    A hole or a cross-check gap marks the day ``held`` and returns no rows.
+    A name without the hot-score lookback is unrankable and is not scored.
+    The day is held when that share is above 10%, or when a Yahoo print
+    disagrees with the external open or close. A single_source fill has
+    no Yahoo print, so it is not a disagreement.
     """
     materialize(date, dest, history)
     with overlay_inputs(dest):
         provenance = fmf.candidate_provenance(date, list(SESSIONS))
-        fmf.write_candidates(date, provenance, restate=True)
         names = [row["ticker"] for row in provenance.get("names") or []]
     missing = recover_session_bars(date, names)
     with overlay_inputs(dest):
         fmf.reset_price_memory()
+        bad, good = _mark_candidates(date, provenance, names)
+        fmf.write_candidates(date, provenance, restate=True)
+        info["unrankable_n"] = len(bad)
+        info["unrankable_share"] = provenance.get("unrankable_share")
+        info["missing_prices"] = list(missing)
+        share_holds = (
+            info["label"] == "pit_rebuilt"
+            and unrankable_holds(len(bad), len(names))
+        )
         rows: list[dict] = []
-        holes: list[str] = []
-        if info["label"] == "pit_rebuilt":
-            rows = _panel_rows(date)
-            holes = _row_holes(date, rows)
-        traded = list(fmf.paper_fills(date))
-        check = sorted({
-            str(t).strip().upper()
-            for t in list(names) + traded + [r.get("ticker") for r in rows]
-            if t
-        })
-        # A missing session print already holds the day. The Stooq open
-        # tape (2026-08-27) would otherwise fetch every candidate.
-        if missing:
+        if share_holds:
             gaps = []
             tape = fmf.day_open_tape(date)
             fmf.LAST_OPEN_SOURCE[str(date)[:10]] = tape
         else:
-            gaps = fmf.session_cross_check(date, check)
+            if info["label"] == "pit_rebuilt":
+                dropped = set(bad)
+                rows = [
+                    row for row in _panel_rows(date)
+                    if row.get("ticker") not in dropped
+                ]
+            traded = list(fmf.paper_fills(date))
+            single = SINGLE_SOURCE.get(str(date)[:10], set())
+            check = sorted({
+                str(t).strip().upper()
+                for t in list(good) + traded + [r.get("ticker") for r in rows]
+                if t and str(t).strip().upper() not in single
+            })
+            # No Stooq sweep. 2026-08-27 has no raw export; a missing
+            # reference is recorded and does not hold the day.
+            gaps = fmf.session_cross_check(date, check, fetch_stooq=False)
         decision = fmf.LAST_OPEN_SOURCE.get(str(date)[:10])
         if decision:
             fmf.write_open_source_row(date, decision)
-    if price_gate_fails(missing, holes, gaps):
+    disagreements = [gap for gap in gaps if not gap.get("missing")]
+    if share_holds or disagreements:
         info["label"] = "held"
-        info["missing_prices"] = sorted(set(missing) | set(holes))
-        info["cross_check_n"] = len(gaps)
-        info["cross_check"] = list(gaps[:12])
+        info["cross_check_n"] = len(disagreements)
+        info["cross_check"] = list(disagreements[:12])
+        if share_holds:
+            info["hold_reason"] = "unrankable share"
+        else:
+            info["hold_reason"] = "price cross-check"
         print(
-            f"[retro] hold {date} missing={len(info['missing_prices'])} "
-            f"gaps={len(gaps)}",
+            f"[retro] hold {date} {info['hold_reason']} "
+            f"unrankable={len(bad)}/{len(names)} gaps={len(disagreements)}",
             flush=True,
         )
         return [], provenance
     if info["label"] != "pit_rebuilt":
         print(f"[retro] carry {date}", flush=True)
         return [], provenance
-    print(f"[retro] built {date} rows={len(rows)}", flush=True)
+    print(
+        f"[retro] built {date} rows={len(rows)} "
+        f"unrankable={len(bad)}/{len(names)}",
+        flush=True,
+    )
     return rows, provenance
 
 
@@ -1909,6 +2207,13 @@ def rebuild(*, fetch: bool = True) -> dict:
         prices_sha = fetch_raw_bars()
     tl.PRICE_STORE = RETRO_STORE
     fmf.reset_price_memory()
+    raw_diff: dict = {}
+    if os.environ.get("FM_RETRO_SKIP_VALIDATE") != "1":
+        try:
+            raw_diff = validate_raw_vs_yahoo()
+        except Exception as exc:  # noqa: BLE001
+            print(f"[retro] raw vs yahoo skipped: {exc}", flush=True)
+            raw_diff = {"error": str(exc)}
     import tempfile
     work = Path(tempfile.mkdtemp(prefix="fm-retro-"))
     panel = _empty_panel(list(SESSIONS))
@@ -1929,10 +2234,7 @@ def rebuild(*, fetch: bool = True) -> dict:
         day_panel = assemble_panel(landed)
         bars = _bars_for(day_panel, date)
         if info["label"] == "held":
-            reason = "missing session print" if info.get("missing_prices") else "price cross-check"
-            if info.get("cross_check_n"):
-                reason = "price cross-check"
-            ledger = _held_ledger(date, reason)
+            ledger = _held_ledger(date, info.get("hold_reason") or "held")
         else:
             try:
                 ledger = fmf.build_ledger(
@@ -1960,7 +2262,7 @@ def rebuild(*, fetch: bool = True) -> dict:
                     scores.append(score_recipe(
                         full, name, flat_15bp=flat, exclude=exclude,
                         start=created))
-    write_report(classed, scores)
+    write_report(classed, scores, raw_diff=raw_diff)
     return {"classed": classed, "scores": scores, "prices_sha": prices_sha}
 
 

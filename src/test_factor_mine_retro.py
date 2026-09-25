@@ -481,6 +481,245 @@ def test_late_raw_csv_is_not_a_session_fill() -> None:
             _restore_retro_store(old)
 
 
+def test_raw_csv_parser_keeps_high_low_prev_close_volume() -> None:
+    from src import factor_mine_freeze as fmf
+
+    text = (
+        "Ticker,Open,High,Low,Price,Prev Close,Volume\n"
+        "AAA,1.0,3.0,0.5,2.0,0.9,40\n"
+    )
+    got = fmf.parse_theme_radar_prices(text)["AAA"]
+    assert got == {
+        "close": 2.0,
+        "open": 1.0,
+        "high": 3.0,
+        "low": 0.5,
+        "prev_close": 0.9,
+        "volume": 40.0,
+    }
+    text_src = Path(fmf.__file__).read_text(encoding="utf-8")
+    price_at = text_src.index("PRICE_CHECK = {")
+    share_at = text_src.index("UNRANKABLE_MAX_SHARE = 0.10")
+    assert 0 < share_at - price_at < 900
+    assert fmf.UNRANKABLE_MAX_SHARE == 0.10
+
+
+def test_price_diff_median_and_max() -> None:
+    import pandas as pd
+
+    yahoo = pd.DataFrame([
+        {"date": "2026-09-22", "ticker": "AAA", "open": 10.0, "close": 10.0},
+        {"date": "2026-09-22", "ticker": "BBB", "open": 20.0, "close": 20.0},
+        {"date": "2026-09-22", "ticker": "CCC", "open": 5.0, "close": 5.0},
+    ])
+    quotes = {
+        "2026-09-22": {
+            "AAA": {"open": 10.0, "close": 10.0},
+            "BBB": {"open": 22.0, "close": 21.0},
+        }
+    }
+    stats = retro.compare_yahoo_frame(yahoo, quotes)
+    assert stats["close"]["n"] == 2
+    assert stats["close"]["median_abs"] == 0.5
+    assert stats["close"]["max_abs"] == 1.0
+    assert stats["open"]["max_abs"] == 2.0
+    assert retro.unrankable_holds(10, 100) is False
+    assert retro.unrankable_holds(11, 100) is True
+
+
+def test_raw_history_fills_ohlc_and_marks_single_source() -> None:
+    import pandas as pd
+    from src import factor_mine_freeze as fmf
+
+    csv_921 = "Ticker,Open,High,Low,Price,Volume\nNEW,7,8,6,8,10\n"
+    csv_922 = (
+        "Ticker,Open,High,Low,Price,Prev Close,Volume\n"
+        "NEW,10,12,9,11,8,1000\n"
+        "OLD,3,4,2,3.5,3,50\n"
+    )
+    with tempfile.TemporaryDirectory() as d:
+        old = _use_retro_store(Path(d))
+        tape = fmf.day_open_tape
+        raw_bytes = fmf._theme_radar_raw_bytes
+        retro._RAW_QUOTE_CACHE.clear()
+        retro.SINGLE_SOURCE.clear()
+        try:
+            retro.lock_price_meta(pd.DataFrame([{
+                "date": "2026-09-22", "ticker": "OLD",
+                "open": 1.0, "high": 1.0, "low": 1.0, "close": 1.5, "volume": 1,
+            }]), pd.DataFrame())
+
+            def open_tape(date):
+                if str(date)[:10] in ("2026-09-21", "2026-09-22"):
+                    return {"source": "finviz_raw"}
+                return {"source": "stooq"}
+
+            def raw(date):
+                day = str(date)[:10]
+                if day == "2026-09-21":
+                    return csv_921.encode()
+                if day == "2026-09-22":
+                    return csv_922.encode()
+                return None
+
+            fmf.day_open_tape = open_tape
+            fmf._theme_radar_raw_bytes = raw
+            assert retro.fill_raw_history(["NEW", "OLD"]) > 0
+            df = pd.read_parquet(retro.RETRO_STORE)
+            df["date"] = pd.to_datetime(df["date"]).dt.strftime("%Y-%m-%d")
+            df["ticker"] = df["ticker"].astype(str)
+            old_row = df[(df.ticker == "OLD") & (df.date == "2026-09-22")].iloc[0]
+            assert float(old_row.close) == 1.5
+            new_row = df[(df.ticker == "NEW") & (df.date == "2026-09-22")].iloc[0]
+            assert float(new_row.open) == 10.0
+            assert float(new_row.high) == 12.0
+            assert float(new_row.low) == 9.0
+            assert float(new_row.close) == 11.0
+            assert float(new_row.volume) == 1000.0
+            prior = df[(df.ticker == "NEW") & (df.date == "2026-09-21")].iloc[0]
+            assert float(prior.open) == 7.0
+            assert float(prior.close) == 8.0
+            assert "NEW" in retro.SINGLE_SOURCE["2026-09-22"]
+            assert "OLD" not in retro.SINGLE_SOURCE.get("2026-09-22", set())
+        finally:
+            fmf.day_open_tape = tape
+            fmf._theme_radar_raw_bytes = raw_bytes
+            retro._RAW_QUOTE_CACHE.clear()
+            retro.SINGLE_SOURCE.clear()
+            _restore_retro_store(old)
+
+
+def test_short_lookback_is_unrankable() -> None:
+    import pandas as pd
+    from src import factor_mine_freeze as fmf
+    from src import ohlc_ripper as ohlc
+    from src import ticker_lookback as tl
+
+    session = "2026-09-22"
+    need = int(ohlc.INDICATOR_LOOKBACK)
+    days = pd.bdate_range(end="2026-09-21", periods=need + 5)
+    rows = []
+    for i, day in enumerate(days):
+        rows.append({
+            "date": day.strftime("%Y-%m-%d"), "ticker": "LONG",
+            "open": 10.0, "high": 11.0, "low": 9.0, "close": 10.0, "volume": 1,
+        })
+        if i >= len(days) - 10:
+            rows.append({
+                "date": day.strftime("%Y-%m-%d"), "ticker": "SHORT",
+                "open": 10.0, "high": 11.0, "low": 9.0, "close": 10.0, "volume": 1,
+            })
+    rows.append({
+        "date": session, "ticker": "LONG",
+        "open": 10.0, "high": 11.0, "low": 9.0, "close": 10.5, "volume": 1,
+    })
+    rows.append({
+        "date": session, "ticker": "SHORT",
+        "open": 10.0, "high": 11.0, "low": 9.0, "close": 10.5, "volume": 1,
+    })
+    with tempfile.TemporaryDirectory() as d:
+        old_store = _use_retro_store(Path(d))
+        saved_px = tl.PRICE_STORE
+        try:
+            retro.lock_price_meta(pd.DataFrame(rows), pd.DataFrame())
+            tl.PRICE_STORE = retro.RETRO_STORE
+            fmf.reset_price_memory()
+            assert retro.is_unrankable("LONG", session) is False
+            assert retro.is_unrankable("SHORT", session) is True
+            assert retro.is_unrankable("GONE", session) is True
+        finally:
+            tl.PRICE_STORE = saved_px
+            fmf.reset_price_memory()
+            _restore_retro_store(old_store)
+
+
+def test_review_excludes_unrankable_names_until_the_share_exceeds_ten_percent() -> None:
+    from unittest import mock
+    from src import factor_mine_freeze as fmf
+
+    date = "2026-09-22"
+
+    def provenance(n_bad: int):
+        names = [
+            {"ticker": f"N{i}", "sources": []}
+            for i in range(10)
+        ]
+        return {
+            "date": date, "n": 10, "names": names,
+            "excluded": [], "prior_export": "2026-09-21",
+        }, {f"N{i}" for i in range(n_bad)}
+
+    def run(n_bad: int, gaps: list[dict]):
+        doc, bad = provenance(n_bad)
+        info = {
+            "label": "pit_rebuilt",
+            "cutoff": "2026-09-22T09:30:00-04:00",
+            "sources": {},
+            "missing_late": [],
+            "absent": [],
+        }
+        rows = [
+            {"date": date, "ticker": f"N{i}", "ohlc_hot_score": 1.0}
+            for i in range(10)
+        ]
+        seen = {}
+
+        def unrank(ticker, day):
+            return ticker in bad
+
+        def recover(day, names):
+            retro.SINGLE_SOURCE[day] = {"N1"}
+            return []
+
+        def check(day, tickers, fetch_stooq=True):
+            seen["fetch_stooq"] = fetch_stooq
+            seen["tickers"] = list(tickers)
+            return gaps
+
+        with tempfile.TemporaryDirectory() as d, \
+                mock.patch.object(retro, "materialize", return_value=info), \
+                mock.patch.object(fmf, "candidate_provenance", return_value=doc), \
+                mock.patch.object(fmf, "write_candidates", return_value="sha"), \
+                mock.patch.object(retro, "recover_session_bars", side_effect=recover), \
+                mock.patch.object(retro, "is_unrankable", side_effect=unrank), \
+                mock.patch.object(retro, "_panel_rows", return_value=rows), \
+                mock.patch.object(fmf, "session_cross_check", side_effect=check), \
+                mock.patch.object(fmf, "write_open_source_row"), \
+                mock.patch.object(fmf, "paper_fills", return_value={}), \
+                mock.patch.object(fmf, "day_open_tape", return_value={"source": "finviz_raw"}):
+            got, prov = retro.review_day(date, info, Path(d))
+        return got, prov, info, seen
+
+    retro.SINGLE_SOURCE.clear()
+    got, prov, info, seen = run(1, [])
+    assert info["label"] == "pit_rebuilt"
+    assert [row["ticker"] for row in got] == [f"N{i}" for i in range(1, 10)]
+    assert prov["names"][0]["unrankable"] is True
+    assert prov["names"][1]["single_source"] is True
+    assert "N0" not in seen["tickers"]
+    assert "N1" not in seen["tickers"]
+    assert seen["fetch_stooq"] is False
+
+    got, prov, info, seen = run(2, [])
+    assert info["label"] == "held"
+    assert info["hold_reason"] == "unrankable share"
+    assert got == []
+
+    got, prov, info, seen = run(0, [{
+        "ticker": "N3", "field": "close", "ours": 1.0, "ref": 3.0,
+    }])
+    assert info["label"] == "held"
+    assert info["hold_reason"] == "price cross-check"
+    assert got == []
+
+    got, prov, info, seen = run(0, [{
+        "ticker": "N3", "missing": ["missing session close"],
+    }])
+    assert info["label"] == "pit_rebuilt"
+    assert len(got) == 10
+    retro.SINGLE_SOURCE.clear()
+
+
 def test_incomplete_snapshot_carries_no_rows() -> None:
     info = {
         "label": "incomplete_pit",
@@ -513,4 +752,9 @@ if __name__ == "__main__":
     test_raw_lock_replaces_adjusted_and_leaves_the_live_store()
     test_recover_fills_raw_csv_then_stooq_without_touching_live_prices()
     test_late_raw_csv_is_not_a_session_fill()
+    test_raw_csv_parser_keeps_high_low_prev_close_volume()
+    test_price_diff_median_and_max()
+    test_raw_history_fills_ohlc_and_marks_single_source()
+    test_short_lookback_is_unrankable()
+    test_review_excludes_unrankable_names_until_the_share_exceeds_ten_percent()
     print("factor-mine retro tests passed")

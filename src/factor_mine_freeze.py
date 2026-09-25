@@ -65,6 +65,10 @@ PRICE_CHECK = {
     "close": {"pct": 0.005, "abs": 0.02},
     "open": {"pct": 0.01, "abs": 0.02},
 }
+# A candidate missing the hot-score lookback (ohlc.INDICATOR_LOOKBACK
+# prior closes, or the session print) is unrankable and is not scored.
+# The day is held only when that share is strictly above this line.
+UNRANKABLE_MAX_SHARE = 0.10
 SNAPSHOT_OPEN_FROM = "2026-09-25"
 # scrape_ts exists on the slim snapshot and in manifest.json from this day.
 SCRAPE_TS_FROM = "2026-09-24"
@@ -595,7 +599,8 @@ def parse_theme_radar_prices(text: str) -> dict[str, dict]:
     reader = csv.DictReader(io.StringIO(text or ""))
     if not reader.fieldnames or "Ticker" not in reader.fieldnames or "Price" not in reader.fieldnames:
         return out
-    has_open = "Open" in reader.fieldnames
+    fields = set(reader.fieldnames)
+    has_open = "Open" in fields
     for row in reader:
         tick = str(row.get("Ticker") or "").strip().upper()
         if not tick:
@@ -604,7 +609,19 @@ def parse_theme_radar_prices(text: str) -> dict[str, dict]:
         if px is None:
             continue
         opened = _as_float(row.get("Open")) if has_open else None
-        out[tick] = {"close": px, "open": opened}
+        item = {"close": px, "open": opened}
+        for col, key in (
+            ("High", "high"),
+            ("Low", "low"),
+            ("Prev Close", "prev_close"),
+            ("Volume", "volume"),
+        ):
+            if col not in fields:
+                continue
+            val = _as_float(row.get(col))
+            if val is not None:
+                item[key] = val
+        out[tick] = item
     return out
 
 
@@ -1141,7 +1158,8 @@ def _price_gap(ticker: str, field: str, ours, ref, source: str) -> dict:
     }
 
 
-def session_cross_check(date: str, tickers: list[str]) -> list[dict]:
+def session_cross_check(date: str, tickers: list[str], *,
+                         fetch_stooq: bool = True) -> list[dict]:
     """Open and close versus the external sources, then paper fills.
 
     Close order: post-close ``finviz_{D}.csv`` Price, else the dated
@@ -1196,7 +1214,7 @@ def session_cross_check(date: str, tickers: list[str]) -> list[dict]:
         if opened is not None:
             open_ref = opened
             open_src = tape.get("source")
-        if open_ref is None:
+        if open_ref is None and fetch_stooq:
             used_stooq = True
             if t not in stooq:
                 stooq[t] = stooq_bar(t, day)
