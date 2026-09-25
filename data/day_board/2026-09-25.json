@@ -1,21 +1,20 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T04:18:39.563457-04:00",
-  "overall": "FAIL",
+  "generated_at": "2026-09-25T04:18:55.075668-04:00",
+  "overall": "PARTIAL",
   "ranker_ready": false,
   "blockers": [
     "MISSING General predict MD `01_daily/general/2026-09-25_predict.md` \u2014 missing",
     "MISSING Sector board JSON `01_daily/sectors/2026-09-25/_board.json` \u2014 missing",
     "MISSING News actions JSON `01_daily/news/2026-09-25_actions.json` \u2014 missing",
-    "MISSING Quote-page digest JSON (*_finviz_digest) `01_daily/news/2026-09-25_finviz_digest.json` \u2014 missing",
     "MISSING News judge MD `01_daily/news/2026-09-25_judge.md` \u2014 missing",
     "MISSING Weather JSON `01_daily/weather/2026-09-25_weather.json` \u2014 missing",
     "MISSING AB checklist enriched `data/ab_checklist/2026-09-25_ab_checklist_enriched.csv` \u2014 missing"
   ],
   "counts": {
-    "ok": 0,
-    "partial": 2,
-    "fail": 6,
+    "ok": 1,
+    "partial": 3,
+    "fail": 4,
     "n": 8
   },
   "processes": [
@@ -88,11 +87,11 @@
       "key": "finviz",
       "name": "Finviz scrape",
       "yaml": "finviz_preopen_scrape.yml",
-      "status": "FAIL",
+      "status": "OK",
       "inputs_ready": true,
-      "n_req_ok": 0,
+      "n_req_ok": 1,
       "n_req": 1,
-      "n_opt_ok": 2,
+      "n_opt_ok": 1,
       "n_opt": 5,
       "files": [
         {
@@ -100,32 +99,39 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-25_finviz_digest.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 86969,
+          "said": "5881 tickers \u00b7 2100 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, ARGX, ASML",
+          "bullets": [
+            "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
+            "AMETEK Completes Acquisition of Indicor Instrumentation",
+            "Can Eli Lilly Stock Catch Up To Rivals It Outgrows?"
+          ]
         },
         {
           "key": "digest_md",
           "name": "Quote-page digest MD (*_finviz_digest)",
           "path": "01_daily/news/2026-09-25_finviz_digest.md",
           "role": "optional",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 11795,
+          "said": "Finviz Daily Digest \u2014 2026-09-25",
+          "bullets": [
+            "_Generated 2026-09-25T04:18:54.712152-04:00 \u00b7 export=data/exports/finviz_2026-09-24.csv \u00b7 ticker digests=5881 \u00b7 high-signal=2100_",
+            "Major indices (live quote page)"
+          ]
         },
         {
           "key": "market_digest_json",
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-25_finviz_market_digest.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 3904,
-          "said": "US equity futures point to a slightly higher open as traders await durable goods and Michigan sentiment data with oil softer and global markets mixed \u00b7 leaders TBN \u00b7 good",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -133,14 +139,11 @@
           "name": "Homepage warm-up MD (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-25_finviz_market_digest.md",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 1939,
-          "said": "Finviz homepage market digest \u2014 2026-09-25",
-          "bullets": [
-            "Generated:** 2026-09-25T04:18:39.337880-04:00 (America/New_York)",
-            "Source:** `live`"
-          ]
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
+          "bullets": []
         },
         {
           "key": "market_digest_close_json",
@@ -165,18 +168,22 @@
           "bullets": []
         }
       ],
-      "said": "",
-      "bullets": []
+      "said": "5881 tickers \u00b7 2100 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, ARGX, ASML",
+      "bullets": [
+        "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
+        "AMETEK Completes Acquisition of Indicor Instrumentation",
+        "Can Eli Lilly Stock Catch Up To Rivals It Outgrows?"
+      ]
     },
     {
       "key": "preopen",
       "name": "Pre-Open ALL",
       "yaml": "preopen_all.yml",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "inputs_ready": false,
-      "n_req_ok": 0,
+      "n_req_ok": 2,
       "n_req": 20,
-      "n_opt_ok": 1,
+      "n_opt_ok": 0,
       "n_opt": 3,
       "files": [
         {
@@ -184,21 +191,25 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-25_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 86969,
+          "said": "5881 tickers \u00b7 2100 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, ARGX, ASML",
+          "bullets": [
+            "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
+            "AMETEK Completes Acquisition of Indicor Instrumentation",
+            "Can Eli Lilly Stock Catch Up To Rivals It Outgrows?"
+          ]
         },
         {
           "key": "in_market_digest",
           "name": "Homepage warm-up JSON (*_finviz_market_digest)",
           "path": "01_daily/news/2026-09-25_finviz_market_digest.json",
           "role": "optional",
-          "status": "OK",
-          "reason": "",
-          "size": 3904,
-          "said": "US equity futures point to a slightly higher open as traders await durable goods and Michigan sentiment data with oil softer and global markets mixed \u00b7 leaders TBN \u00b7 good",
+          "status": "MISSING",
+          "reason": "missing",
+          "size": 0,
+          "said": "missing",
           "bullets": []
         },
         {
@@ -316,11 +327,16 @@
           "name": "Pre-open QC JSON",
           "path": "01_daily/2026-09-25_preopen_qc.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "all_ok=False",
+          "size": 7299,
+          "said": "all_ok=False \u00b7 sectors 0/11 \u00b7 20 fail",
+          "bullets": [
+            "general_predict:missing",
+            "events:missing",
+            "news_judge:missing",
+            "news_parse:missing"
+          ]
         },
         {
           "key": "status",
@@ -338,11 +354,13 @@
           "name": "Grok review JSON",
           "path": "01_daily/2026-09-25_grok_review.json",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "ok=False Grok returned an empty review",
+          "size": 308,
+          "said": "ok=False \u00b7 empty_review_reply (review)",
+          "bullets": [
+            "Grok returned an empty review"
+          ]
         },
         {
           "key": "sector_basic_materials",
@@ -474,7 +492,7 @@
       "name": "Label + weather",
       "yaml": "label_weather.yml",
       "status": "FAIL",
-      "inputs_ready": false,
+      "inputs_ready": true,
       "n_req_ok": 0,
       "n_req": 1,
       "n_opt_ok": 0,
@@ -485,11 +503,15 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-25_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 86969,
+          "said": "5881 tickers \u00b7 2100 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, ARGX, ASML",
+          "bullets": [
+            "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
+            "AMETEK Completes Acquisition of Indicor Instrumentation",
+            "Can Eli Lilly Stock Catch Up To Rivals It Outgrows?"
+          ]
         },
         {
           "key": "weather",
@@ -570,11 +592,15 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-25_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 86969,
+          "said": "5881 tickers \u00b7 2100 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, ARGX, ASML",
+          "bullets": [
+            "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
+            "AMETEK Completes Acquisition of Indicor Instrumentation",
+            "Can Eli Lilly Stock Catch Up To Rivals It Outgrows?"
+          ]
         },
         {
           "key": "dossiers",
@@ -640,11 +666,15 @@
           "name": "Quote-page digest JSON (*_finviz_digest)",
           "path": "01_daily/news/2026-09-25_finviz_digest.json",
           "role": "input",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 86969,
+          "said": "5881 tickers \u00b7 2100 signals \u00b7 top AJG, AME, AMGN, AMX, AON, APH, ARGX, ASML",
+          "bullets": [
+            "Arthur J. Gallagher & Co. Acquires Innovise Business Consultants",
+            "AMETEK Completes Acquisition of Indicor Instrumentation",
+            "Can Eli Lilly Stock Catch Up To Rivals It Outgrows?"
+          ]
         },
         {
           "key": "in_judge",
@@ -862,6 +892,38 @@
         }
       ],
       "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest \u2014 2026-09-25\n**Generated:** 2026-09-25T04:18:39.337880-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US equity futures point to a slightly higher open as traders await durable goods and Michigan sentiment data with oil softer and global markets mixed\n**Prior close:** SPX \u2014  Nasdaq \u2014  Dow \u2014\n**SPX:** \u2014  **Nasdaq:** \u2014  **Dow:** \u2014\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** TBN\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** TBN\n**Geo/grain:** \u2014\n**Clock legal for:** 2026-09-25\n**Clock use:** `same_morning`"
+    },
+    {
+      "key": "finviz_digest",
+      "title": "Finviz digest",
+      "date": "2026-09-25",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-25T04:18:54.827919-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-25_finviz_digest.json",
+          "ok": true,
+          "reason": "",
+          "size": 86969,
+          "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample"
+        },
+        {
+          "path": "01_daily/news/2026-09-25_finviz_digest.md",
+          "ok": true,
+          "reason": "",
+          "size": 11820,
+          "preview": "# Finviz Daily Digest \u2014 2026-09-25\n_Generated 2026-09-25T04:18:54.712152-04:00 \u00b7 export=data/exports/finviz_2026-09-24.csv \u00b7 ticker digests=5881 \u00b7 high-signal=2100_"
+        },
+        {
+          "path": "data/finviz/latest.csv",
+          "ok": true,
+          "reason": "",
+          "size": 11465996,
+          "preview": "11673 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
+        }
+      ],
+      "preview": "keys: date, generated_at, export_used, ticker_digest_count, signal_count, index_digests, top_signal, by_sector, all_ticker_digests_sample \u00b7 # Finviz Daily Digest \u2014 2026-09-25\n_Generated 2026-09-25T04:18:54.712152-04:00 \u00b7 export=data/exports/finviz_2026-09-24.csv \u00b7 ticker digests=5881 \u00b7 high-signal=2100_ \u00b7 11673 rows \u00b7 \"Ticker\",\"Company\",\"Industry\",\"Market Cap\",\"Forward P/E\",\"P/S\",\"P/B\",\"P/Cash\",\"P/Free Cash Flow\",\"EPS (ttm)\",\"Sales Year \u00b7 \"A\", \"AA\", \"AAA\", \"AAAA\", \"AAAC\""
     }
   ],
   "href": {
