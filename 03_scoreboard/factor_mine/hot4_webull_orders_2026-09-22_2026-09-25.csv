@@ -1,0 +1,12 @@
+date,side,ticker,qty,status
+2026-09-22,BUY,AMD,131,acknowledged
+2026-09-22,BUY,ABVX,772,acknowledged
+2026-09-22,BUY,MRAM,4759,acknowledged
+2026-09-23,BUY,INDP,557,acknowledged
+2026-09-23,BUY,XHLD,168,acknowledged
+2026-09-23,BUY,GPRO,1365,acknowledged
+2026-09-23,BUY,INSP,23,acknowledged
+2026-09-24,SELL,XHLD,168,acknowledged
+2026-09-24,SELL,INDP,557,acknowledged
+2026-09-25,BUY,TJGC,82,acknowledged
+2026-09-25,BUY,QRVO,15,acknowledged
