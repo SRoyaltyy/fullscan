@@ -157,6 +157,7 @@ jobs:
           python -m src.test_oppset_clock_b
           python -m src.test_factor_mine
           python -m src.test_factor_mine_freeze
+          python -m src.test_price_actions
       - name: Mine recipes (cash book)
         env:
           FROM_DATE: ${{ inputs.from_date }}
@@ -252,9 +253,9 @@ jobs:
             data/factor_mine/panel.json \
             data/factor_mine/freeze_manifest.json \
             data/factor_mine/snapshots/ \
-            data/factor_mine/ledgers/ \
             data/factor_mine/prices/ \
             data/prices/ohlc.parquet \
+            data/prices/actions.parquet \
             data/prices/meta.json \
             dashboard/factor-mine/
         env:

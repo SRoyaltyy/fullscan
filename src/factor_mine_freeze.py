@@ -1,14 +1,12 @@
-"""Append-only point-in-time inputs and decisions for Factor Mine.
+"""Append-only point-in-time inputs for Factor Mine.
 
 A landed session is frozen once:
 
 * ``data/factor_mine/snapshots/{D}.json`` — every row input used to
-  decide D, including the heat vintage and the 09:30 open
+  decide D, including the heat vintage, the 09:30 open, and the git
+  SHA of the code that wrote the file
 * ``data/factor_mine/prices/{D}.json`` — prior bars and the session
   open that those inputs were scored from
-* ``data/factor_mine/ledgers/{D}.json`` — buy/sell decisions for every
-  recipe and every start-date book, plus the end-of-day state the next
-  session resumes from
 * ``data/factor_mine/freeze_manifest.json`` — sha256 of each file
 
 Later runs read those files and append the new day. They do not rebuild
@@ -28,14 +26,8 @@ from . import ticker_lookback as tl
 
 ROOT = Path(__file__).resolve().parent.parent
 SNAP_DIR = ROOT / "data" / "factor_mine" / "snapshots"
-LEDGER_DIR = ROOT / "data" / "factor_mine" / "ledgers"
 PRICE_DIR = ROOT / "data" / "factor_mine" / "prices"
 MANIFEST_PATH = ROOT / "data" / "factor_mine" / "freeze_manifest.json"
-
-_FILL_KEYS = (
-    "date", "ticker", "side", "shares", "price", "fees", "pnl",
-    "reason", "cash_after", "equity_after",
-)
 
 
 class HoldDay(Exception):
@@ -52,7 +44,7 @@ class HoldDay(Exception):
 
 
 class FrozenHistory(Exception):
-    """A frozen snapshot or ledger already exists and was not restated."""
+    """A frozen snapshot or price pin already exists and was not restated."""
 
 
 def canonical_bytes(obj) -> bytes:
@@ -92,7 +84,6 @@ def load_manifest() -> dict:
             "version": 1,
             "first_frozen": None,
             "snapshots": {},
-            "ledgers": {},
             "prices": {},
             "restatements": [],
         }
@@ -103,7 +94,6 @@ def load_manifest() -> dict:
     doc.setdefault("version", 1)
     doc.setdefault("first_frozen", None)
     doc.setdefault("snapshots", {})
-    doc.setdefault("ledgers", {})
     doc.setdefault("prices", {})
     doc.setdefault("restatements", [])
     return doc
@@ -121,10 +111,6 @@ def snapshot_path(date: str) -> Path:
     return SNAP_DIR / f"{date}.json"
 
 
-def ledger_path(date: str) -> Path:
-    return LEDGER_DIR / f"{date}.json"
-
-
 def price_path(date: str) -> Path:
     return PRICE_DIR / f"{date}.json"
 
@@ -135,6 +121,8 @@ def reset_price_memory() -> None:
     from . import factor_mine as fm
 
     tl.reset_price_caches()
+    from . import price_store as ps
+    ps.reset_action_cache()
     cf._TICKER_BARS = None
     try:
         cf._bars_before.cache_clear()
@@ -296,34 +284,6 @@ def pin_prices(date: str, tickers: list[str]) -> dict:
     return {"date": date, "names": names}
 
 
-def bars_from_panel(panel: dict) -> dict:
-    bars = {}
-    for row in panel.get("rows") or []:
-        t, d = row.get("ticker"), row.get("date")
-        if not t or not d:
-            continue
-        bar = {}
-        if row.get("open") is not None:
-            bar["open"] = row.get("open")
-        if row.get("close") is not None:
-            bar["close"] = row.get("close")
-        if bar:
-            bars[(t, d)] = bar
-    return bars
-
-
-def bars_for_decisions(panel: dict, date: str, pinned: dict | None) -> dict:
-    bars = bars_from_panel(panel)
-    for t, info in ((pinned or {}).get("names") or {}).items():
-        bars[(t, date)] = {
-            "open": info.get("open"),
-            "high": info.get("high"),
-            "low": info.get("low"),
-            "close": info.get("close"),
-        }
-    return bars
-
-
 def _write_frozen(path: Path, obj: dict, slot: str, date: str, *,
                   restate: bool) -> str:
     raw = canonical_bytes(obj)
@@ -367,10 +327,6 @@ def _write_frozen(path: Path, obj: dict, slot: str, date: str, *,
 
 def write_snapshot(date: str, snap: dict, *, restate: bool = False) -> str:
     return _write_frozen(snapshot_path(date), snap, "snapshots", date, restate=restate)
-
-
-def write_ledger(date: str, ledger: dict, *, restate: bool = False) -> str:
-    return _write_frozen(ledger_path(date), ledger, "ledgers", date, restate=restate)
 
 
 def write_price_pin(date: str, doc: dict, *, restate: bool = False) -> str:
@@ -425,6 +381,20 @@ def apply_frozen_snapshots(panel: dict) -> dict:
     return out
 
 
+def code_sha() -> str:
+    """Git SHA of the code that is writing this frozen day."""
+    try:
+        out = subprocess.run(
+            ["git", "rev-parse", "HEAD"],
+            cwd=ROOT, capture_output=True, text=True, check=False,
+        )
+    except OSError:
+        return ""
+    if out.returncode != 0:
+        return ""
+    return (out.stdout or "").strip()
+
+
 def make_snapshot(date: str, rows: list[dict], prior: str | None,
                   prices_sha: str | None) -> dict:
     heat = heat_record(date, prior)
@@ -441,6 +411,7 @@ def make_snapshot(date: str, rows: list[dict], prior: str | None,
         "date": date,
         "asof": "09:30_et",
         "open_clock": "09:30 ET",
+        "code_sha": code_sha(),
         "heat": heat,
         "prices_sha256": prices_sha,
         "n_rows": len(frozen_rows),
@@ -450,25 +421,18 @@ def make_snapshot(date: str, rows: list[dict], prior: str | None,
 
 def freeze_meta() -> dict:
     man = load_manifest()
-    first = man.get("first_frozen")
     return {
-        "first_frozen": first,
-        "reconstructed_before": first,
+        "first_frozen": man.get("first_frozen"),
         "n_snapshots": len(man.get("snapshots") or {}),
-        "n_ledgers": len(man.get("ledgers") or {}),
     }
 
 
-def label_payload(payload: dict) -> dict:
-    """Mark sessions before the first frozen day as reconstructed."""
-    meta = freeze_meta()
+def stamp_freeze(payload: dict) -> dict:
+    """Attach the snapshot manifest summary when a day has been frozen."""
     payload = dict(payload)
-    payload["freeze"] = meta
-    first = meta.get("first_frozen")
-    dates = list(payload.get("dates") or [])
-    payload["reconstructed_dates"] = [
-        d for d in dates if first and str(d) < str(first)
-    ]
+    meta = freeze_meta()
+    if meta.get("first_frozen"):
+        payload["freeze"] = meta
     return payload
 
 
@@ -491,33 +455,32 @@ def committed_manifest() -> dict:
 
 def guard_manifest(old: dict | None, new: dict | None,
                    restate: list[str] | None = None) -> None:
-    """Fail if any earlier snapshot or ledger hash changed."""
+    """Fail if any earlier snapshot hash changed."""
     old = old or {}
     new = new or {}
     allow = {str(d)[:10] for d in (restate or []) if d}
-    for slot in ("snapshots", "ledgers"):
-        for date, meta in (old.get(slot) or {}).items():
-            if date in allow:
-                print(f"[factor-mine] restate allowed {slot} {date}", flush=True)
-                continue
-            now = (new.get(slot) or {}).get(date) or {}
-            prev = (meta or {}).get("sha256")
-            got = now.get("sha256")
-            if prev and got != prev:
-                raise SystemExit(
-                    f"frozen {slot} {date} hash changed {prev} -> {got}. "
-                    f"Pass --restate {date} to log a correction."
-                )
-    for slot, folder in (("snapshots", SNAP_DIR), ("ledgers", LEDGER_DIR)):
-        for date, meta in (new.get(slot) or {}).items():
-            path = folder / f"{date}.json"
-            if not path.is_file():
-                raise SystemExit(f"freeze manifest lists {slot} {date} but {path} is missing")
-            have = sha256_bytes(path.read_bytes())
-            if have != (meta or {}).get("sha256"):
-                raise SystemExit(
-                    f"freeze manifest {slot} {date} sha does not match {path.name}"
-                )
+    for date, meta in (old.get("snapshots") or {}).items():
+        if date in allow:
+            print(f"[factor-mine] restate allowed snapshots {date}", flush=True)
+            continue
+        now = (new.get("snapshots") or {}).get(date) or {}
+        prev = (meta or {}).get("sha256")
+        got = now.get("sha256")
+        if prev and got != prev:
+            raise SystemExit(
+                f"frozen snapshots {date} hash changed {prev} -> {got}. "
+                f"Pass --restate {date} to log a correction."
+            )
+    for date, meta in (new.get("snapshots") or {}).items():
+        path = SNAP_DIR / f"{date}.json"
+        if not path.is_file():
+            raise SystemExit(
+                f"freeze manifest lists snapshots {date} but {path} is missing")
+        have = sha256_bytes(path.read_bytes())
+        if have != (meta or {}).get("sha256"):
+            raise SystemExit(
+                f"freeze manifest snapshots {date} sha does not match {path.name}"
+            )
 
 
 def assert_history_unchanged(restate: list[str] | str | None = None) -> None:
@@ -536,392 +499,6 @@ def _prior(cal: list[str], date: str) -> str | None:
         if d < date:
             prev = d
     return prev
-
-
-def _ledger_dates() -> list[str]:
-    if not LEDGER_DIR.is_dir():
-        return []
-    return sorted(p.stem for p in LEDGER_DIR.glob("*.json"))
-
-
-def latest_ledger_before(date: str) -> dict | None:
-    prev = [d for d in _ledger_dates() if d < date]
-    if not prev:
-        return None
-    return read_json(ledger_path(prev[-1]))
-
-
-def _saved(ledger: dict | None, recipe: str, key: str) -> dict | None:
-    if not ledger:
-        return None
-    rec = (ledger.get("recipes") or {}).get(recipe) or {}
-    if key == "primary":
-        return rec.get("primary")
-    return (rec.get("starts") or {}).get(key)
-
-
-def bridge_published(payload: dict, name: str, prior: str | None,
-                     hold: int) -> dict | None:
-    """Resume cursor from the published primary book. Does not resimulate it."""
-    if not prior:
-        return None
-    daily = list((payload.get("daily") or {}).get(name) or [])
-    row = next((d for d in daily if d.get("date") == prior), None)
-    if row is None:
-        earlier = [d for d in daily if str(d.get("date") or "") <= prior]
-        row = earlier[-1] if earlier else None
-    if not row:
-        return None
-    pos = {}
-    for lot in row.get("lots") or []:
-        t = str(lot.get("ticker") or "")
-        if not t:
-            continue
-        try:
-            px = float(lot.get("entry_px") or 0)
-            shares = int(lot.get("shares") or 0)
-        except (TypeError, ValueError):
-            continue
-        pos[t] = {
-            "ticker": t,
-            "shares": shares,
-            "entry_px": px,
-            "entry_date": lot.get("entry_date") or prior,
-            "cost": shares * px,
-            "fee_in": 0.0,
-            "notional": shares * px,
-            "last_px": px,
-            "peak_px": px,
-            "close_px": px,
-            "min_hold": int(hold or 1),
-        }
-    return {
-        "cash": row.get("cash"),
-        "yday_equity": row.get("equity"),
-        "pos": pos,
-        "after": row.get("date"),
-    }
-
-
-def decision_from_book(book: dict, date: str) -> dict:
-    trades = [t for t in (book.get("trades") or []) if t.get("date") == date]
-    daily = next((d for d in (book.get("daily") or []) if d.get("date") == date), None)
-    skips = [s for s in (book.get("skips") or []) if s.get("date") == date]
-
-    def fill(t: dict) -> dict:
-        return {k: t.get(k) for k in _FILL_KEYS if t.get(k) is not None}
-
-    state = {
-        "cash": book.get("cash"),
-        "yday_equity": None if not daily else daily.get("equity"),
-        "pos": book.get("pos") or {},
-        "after": date,
-    }
-    if book.get("member_states") is not None:
-        state["members"] = book.get("member_states")
-    return {
-        "buys": [fill(t) for t in trades if t.get("side") in ("BUY", "SHORT")],
-        "sells": [fill(t) for t in trades if t.get("side") in ("SELL", "COVER")],
-        "skips": [
-            {k: s.get(k) for k in ("ticker", "kind", "reason") if s.get(k) is not None}
-            for s in skips
-        ],
-        "daily": daily,
-        "trades": trades,
-        "state": state,
-    }
-
-
-def _simulate_single(panel, rec, *, start, bars, fees, regime, saved):
-    from . import factor_mine_book as fmb
-
-    resume = None
-    if saved and saved.get("state"):
-        resume = dict(saved["state"])
-    if start:
-        return fmb.simulate_book(
-            panel, rec, start=start, bars=bars, fees=fees,
-            regime=regime, resume=resume,
-        )
-    return fmb.simulate_book(
-        panel, rec, bars=bars, fees=fees, regime=regime, resume=resume,
-    )
-
-
-def _simulate_combo(panel, spec, members, *, start, bars, fees, regime, saved):
-    from . import factor_mine_combo as fmc
-
-    resume = dict(saved["state"]) if saved and saved.get("state") else None
-    pool = spec.get("pool") or "shared"
-    weights = list(spec.get("weights") or [1] * len(members))
-    if pool == "split":
-        return fmc.simulate_split(
-            panel, members, weights, start=start, bars=bars, fees=fees,
-            regime=regime, name=spec.get("name") or "combo", resume=resume,
-        )
-    return fmc.simulate_shared(
-        panel, members, weights, start=start, bars=bars, fees=fees,
-        regime=regime, net=spec.get("net") or "priority",
-        name=spec.get("name") or "combo", resume=resume,
-    )
-
-
-def build_ledger(panel: dict, payload: dict, recipes: list[dict],
-                 date: str, bars: dict, *, fees=None, regime=None) -> dict:
-    """Decisions for D only. Earlier days stay in the published payload."""
-    from . import factor_mine as fm
-    from . import factor_mine_book as fmb
-
-    cal = [d for d in (panel.get("session_dates") or []) if d <= date]
-    prior = _prior(cal, date)
-    prev_ledger = latest_ledger_before(date)
-    fees = fees if fees is not None else fm.pt_fees()
-    regime = regime if regime is not None else fmb.load_regime()
-    by_name = {r.get("name"): r for r in recipes if r.get("name")}
-    out_recipes: dict[str, dict] = {}
-    failed: list[str] = []
-
-    singles = [
-        r for r in recipes
-        if r.get("name") and r.get("universe") != "combo" and not r.get("members")
-    ]
-    for rec in singles:
-        name = rec["name"]
-        try:
-            saved = _saved(prev_ledger, name, "primary")
-            if not saved:
-                bridged = bridge_published(
-                    payload, name, prior, int(rec.get("hold") or 1))
-                if bridged:
-                    saved = {"state": bridged}
-                    print(f"[factor-mine] bridge {name} from published book @ {prior}",
-                          flush=True)
-            book = _simulate_single(
-                panel, rec, start=None, bars=bars, fees=fees,
-                regime=regime, saved=saved,
-            )
-            primary = decision_from_book(book, date)
-            starts = {}
-            origin = cal[0] if cal else date
-            if origin:
-                starts[origin] = primary
-            for start in cal:
-                if start == origin:
-                    continue
-                if start > date:
-                    continue
-                saved_s = _saved(prev_ledger, name, start)
-                if start == date:
-                    saved_s = None
-                book_s = _simulate_single(
-                    panel, rec, start=start, bars=bars, fees=fees,
-                    regime=regime, saved=saved_s,
-                )
-                starts[start] = decision_from_book(book_s, date)
-            out_recipes[name] = {"primary": primary, "starts": starts}
-            print(f"[factor-mine] ledger {name} {date} "
-                  f"buys={len(primary.get('buys') or [])} "
-                  f"starts={len(starts)}", flush=True)
-        except Exception as e:  # noqa: BLE001
-            failed.append(name)
-            print(f"[factor-mine] ledger failed {name}: {e}", flush=True)
-
-    for rec in recipes:
-        if rec.get("universe") != "combo" and not rec.get("members"):
-            continue
-        name = rec.get("name")
-        if not name:
-            continue
-        members = []
-        missing = False
-        for member in rec.get("members") or []:
-            hit = by_name.get(member)
-            if not hit:
-                missing = True
-                break
-            members.append(hit)
-        if missing or not members:
-            failed.append(name)
-            print(f"[factor-mine] ledger failed combo {name}: missing members",
-                  flush=True)
-            continue
-        spec = {
-            "name": name,
-            "members": list(rec.get("members") or []),
-            "weights": list(rec.get("weights") or []),
-            "net": rec.get("net") or "priority",
-            "pool": rec.get("pool") or "shared",
-        }
-        try:
-            saved = _saved(prev_ledger, name, "primary")
-            book = _simulate_combo(
-                panel, spec, members, start=None, bars=bars, fees=fees,
-                regime=regime, saved=saved,
-            )
-            primary = decision_from_book(book, date)
-            starts = {}
-            origin = cal[0] if cal else None
-            if origin:
-                starts[origin] = primary
-            for start in cal:
-                if start == origin or start > date:
-                    continue
-                saved_s = _saved(prev_ledger, name, start)
-                if start == date:
-                    saved_s = None
-                book_s = _simulate_combo(
-                    panel, spec, members, start=start, bars=bars, fees=fees,
-                    regime=regime, saved=saved_s,
-                )
-                starts[start] = decision_from_book(book_s, date)
-            out_recipes[name] = {"primary": primary, "starts": starts}
-        except Exception as e:  # noqa: BLE001
-            failed.append(name)
-            print(f"[factor-mine] ledger failed combo {name}: {e}", flush=True)
-
-    if failed:
-        raise HoldDay(
-            date, failed,
-            "ledger incomplete — refusing to freeze a partial decision set",
-        )
-    return {"date": date, "origin": "frozen", "recipes": out_recipes}
-
-
-def _growth(decision: dict, prior_equity: float | None) -> float | None:
-    row = decision.get("daily") or {}
-    equity = row.get("equity")
-    prev = row.get("yday_equity")
-    if equity is None:
-        return None
-    base = prev if prev not in (None, 0) else prior_equity
-    if not base:
-        return None
-    try:
-        return float(equity) / float(base)
-    except (TypeError, ValueError, ZeroDivisionError):
-        return None
-
-
-def splice_payload(payload: dict, date: str, ledger: dict, *,
-                   replace: bool = False) -> dict:
-    """Append D's frozen decisions. Earlier daily rows stay as they are."""
-    from . import factor_mine as fm
-
-    payload = dict(payload)
-    dates = list(payload.get("dates") or [])
-    if date not in dates:
-        dates.append(date)
-        dates.sort()
-    payload["dates"] = dates
-    payload["to_date"] = dates[-1] if dates else date
-    payload["n_sessions"] = len(dates)
-    daily_all = dict(payload.get("daily") or {})
-    books = dict(payload.get("books") or {})
-    series = dict(payload.get("series") or {})
-    starts = dict(payload.get("starts") or {})
-    capital = float(payload.get("capital") or fm.CAPITAL)
-
-    for name, block in (ledger.get("recipes") or {}).items():
-        primary = block.get("primary") or {}
-        row = primary.get("daily")
-        days = list(daily_all.get(name) or [])
-        if replace:
-            days = [d for d in days if d.get("date") != date]
-        if row and not any(d.get("date") == date for d in days):
-            days.append(fm._slim_dash_daily([row])[0])
-        daily_all[name] = days
-        book = dict(books.get(name) or {})
-        trades = list(book.get("trades") or [])
-        if replace:
-            trades = [t for t in trades if t.get("date") != date]
-        have = {(t.get("date"), t.get("side"), t.get("ticker")) for t in trades}
-        for t in primary.get("trades") or []:
-            key = (t.get("date"), t.get("side"), t.get("ticker"))
-            if key not in have:
-                trades.append(t)
-                have.add(key)
-        book["trades"] = trades
-        state = primary.get("state") or {}
-        if state.get("cash") is not None:
-            book["cash"] = state.get("cash")
-        book["n_trades"] = len([
-            t for t in trades if t.get("side") not in ("OPEN", "CLOSE")
-        ])
-        books[name] = book
-        eq = None if not row else row.get("equity")
-        curve = list(series.get(name) or [])
-        if eq is not None and (not curve or len(curve) < len(dates)):
-            curve.append(eq)
-        series[name] = curve
-        if eq is not None:
-            for stat in payload.get("stats") or []:
-                if stat.get("name") == name:
-                    stat["final_equity"] = eq
-                    stat["total_ret_pct"] = round(100.0 * (float(eq) / capital - 1.0), 3)
-
-        paths = list(starts.get(name) or [])
-        by_start = {p.get("start"): p for p in paths}
-        for start, decision in (block.get("starts") or {}).items():
-            path = dict(by_start.get(start) or {"start": start, "days": []})
-            sdays = list(path.get("days") or [])
-            if replace:
-                sdays = [d for d in sdays if d.get("date") != date]
-            srow = decision.get("daily") or {}
-            if srow and not any(d.get("date") == date for d in sdays):
-                prev_eq = path.get("final_equity")
-                if sdays and sdays[-1].get("equity") is not None:
-                    prev_eq = sdays[-1].get("equity")
-                growth = _growth(decision, prev_eq)
-                new_eq = srow.get("equity")
-                if prev_eq is not None and growth is not None and start != date:
-                    new_eq = round(float(prev_eq) * growth, 2)
-                sdays.append({
-                    "date": date,
-                    "s": srow.get("s"),
-                    "hard_red": srow.get("hard_red"),
-                    "bought": list(srow.get("bought") or []),
-                    "sold": list(srow.get("sold") or []),
-                    "cash": srow.get("cash"),
-                    "equity": new_eq,
-                    "open_cash": srow.get("open_cash"),
-                    "made_money": bool(
-                        growth is not None and growth > 1.0
-                    ) if start != date else bool(srow.get("made_money")),
-                })
-            path["days"] = sdays
-            path["n_sessions"] = len(sdays)
-            if sdays and sdays[-1].get("equity") is not None:
-                path["final_equity"] = sdays[-1]["equity"]
-                try:
-                    path["return_pct"] = round(
-                        100.0 * (float(path["final_equity"]) / capital - 1.0), 3)
-                except (TypeError, ValueError, ZeroDivisionError):
-                    pass
-                path["made_money"] = bool((path.get("return_pct") or 0) > 0)
-            if start == date:
-                path["bought"] = [b.get("ticker") for b in (decision.get("buys") or [])]
-                path["buys"] = list(decision.get("buys") or [])
-                path["pending"] = False
-            path["start"] = start
-            by_start[start] = path
-        starts[name] = list(by_start.values())
-
-    payload["daily"] = daily_all
-    payload["books"] = books
-    payload["series"] = series
-    payload["starts"] = starts
-    mornings = dict(payload.get("mornings") or {})
-    if date not in mornings:
-        try:
-            from . import factor_mine_probe as fmp
-            built = fmp.build_mornings()
-            if isinstance(built, dict) and built:
-                mornings = built
-        except Exception as e:  # noqa: BLE001
-            print(f"[factor-mine] mornings label skipped: {e}", flush=True)
-    mornings.setdefault(date, {"s": None, "freeze": "appended"})
-    payload["mornings"] = mornings
-    return label_payload(payload)
 
 
 def write_panel_file(panel: dict, path: Path | None = None) -> None:
@@ -996,7 +573,7 @@ def append_land(from_date: str, target: str, *, write: bool = False,
         and (d not in published_dates or d in restate_set)
     ]
     # A date on the panel but not yet frozen still gets a snapshot when it
-    # is the new session. Dates already published stay reconstructed.
+    # is the new session. Dates already published are left in place.
     if target not in published_dates and target not in new_dates and target >= from_date:
         if target <= (want[-1] if want else target):
             new_dates.append(target)
@@ -1004,7 +581,7 @@ def append_land(from_date: str, target: str, *, write: bool = False,
     if not new_dates and target in published_dates and target not in restate_set:
         print(f"[factor-mine] freeze: {target} already published — no rewrite",
               flush=True)
-        return label_payload(payload)
+        return stamp_freeze(payload)
 
     frozen_dates = []
     for date in new_dates:
@@ -1034,30 +611,15 @@ def append_land(from_date: str, target: str, *, write: bool = False,
         except FrozenHistory as e:
             print(f"[factor-mine] {e}", flush=True)
         panel = apply_frozen_snapshots(panel)
-        bars = bars_for_decisions(panel, date, pinned)
-        recs = list(recipes or payload.get("recipes") or [])
-        existing = read_json(ledger_path(date))
-        if existing and date not in restate_set:
-            ledger = existing
-            print(f"[factor-mine] ledger {date} already frozen — splicing",
-                  flush=True)
-        else:
-            ledger = build_ledger(panel, payload, recs, date, bars)
-            try:
-                write_ledger(date, ledger, restate=date in restate_set)
-            except FrozenHistory as e:
-                print(f"[factor-mine] {e}", flush=True)
-                ledger = read_json(ledger_path(date)) or ledger
-        payload = splice_payload(
-            payload, date, ledger, replace=date in restate_set)
         payload["n_rows"] = panel.get("n_rows")
+        payload["to_date"] = panel.get("to_date") or payload.get("to_date")
         frozen_dates.append(date)
         print(f"[factor-mine] appended frozen session {date}", flush=True)
 
-    payload = label_payload(payload)
+    payload = stamp_freeze(payload)
+    payload["_frozen_dates"] = frozen_dates
     if write and frozen_dates:
         write_panel_file(panel)
-        fm.write_outputs(payload, stats=payload.get("stats") or [], books=payload.get("books"))
     elif write:
         print("[factor-mine] freeze: nothing new written", flush=True)
     return payload

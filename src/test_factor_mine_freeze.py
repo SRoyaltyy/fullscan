@@ -1,4 +1,4 @@
-"""Append-only factor-mine snapshots, ledgers, and the price hold."""
+"""Append-only factor-mine snapshots and the price hold."""
 from __future__ import annotations
 
 import json
@@ -7,7 +7,6 @@ from pathlib import Path
 from unittest import mock
 
 from src import factor_mine as fm
-from src import factor_mine_book as fmb
 from src import factor_mine_freeze as fmf
 from src import map_heat as mh
 from src import ticker_lookback as tl
@@ -15,23 +14,23 @@ from src import ticker_lookback as tl
 
 def _redirect(tmp: Path):
     return (
-        fmf.SNAP_DIR, fmf.LEDGER_DIR, fmf.PRICE_DIR, fmf.MANIFEST_PATH,
+        fmf.SNAP_DIR, fmf.PRICE_DIR, fmf.MANIFEST_PATH,
     ), (
-        tmp / "snapshots", tmp / "ledgers", tmp / "prices",
+        tmp / "snapshots", tmp / "prices",
         tmp / "freeze_manifest.json",
     )
 
 
 def _use(tmp: Path):
     old, new = _redirect(tmp)
-    fmf.SNAP_DIR, fmf.LEDGER_DIR, fmf.PRICE_DIR, fmf.MANIFEST_PATH = new
-    for p in new[:3]:
+    fmf.SNAP_DIR, fmf.PRICE_DIR, fmf.MANIFEST_PATH = new
+    for p in new[:2]:
         p.mkdir(parents=True, exist_ok=True)
     return old
 
 
 def _restore(old) -> None:
-    fmf.SNAP_DIR, fmf.LEDGER_DIR, fmf.PRICE_DIR, fmf.MANIFEST_PATH = old
+    fmf.SNAP_DIR, fmf.PRICE_DIR, fmf.MANIFEST_PATH = old
 
 
 def test_snapshot_is_write_once_and_restate_logs_previous_hash() -> None:
@@ -67,39 +66,27 @@ def test_snapshot_is_write_once_and_restate_logs_previous_hash() -> None:
 def test_guard_fails_when_an_earlier_hash_changes() -> None:
     old = {
         "snapshots": {"2026-09-25": {"sha256": "aaa"}},
-        "ledgers": {"2026-09-25": {"sha256": "bbb"}},
     }
     new = {
         "snapshots": {
             "2026-09-25": {"sha256": "aaa"},
             "2026-09-26": {"sha256": "ccc"},
         },
-        "ledgers": {
-            "2026-09-25": {"sha256": "bbb"},
-            "2026-09-26": {"sha256": "ddd"},
-        },
     }
-    # File bytes are checked only for dates present on disk. Point the
-    # folders at an empty temp dir and skip that half by using dates
-    # whose files we write to match.
     with tempfile.TemporaryDirectory() as d:
         saved = _use(Path(d))
         try:
-            for date, body, slot in (
-                ("2026-09-25", {"k": 1}, "snapshots"),
-                ("2026-09-26", {"k": 2}, "snapshots"),
-                ("2026-09-25", {"k": 3}, "ledgers"),
-                ("2026-09-26", {"k": 4}, "ledgers"),
+            for date, body in (
+                ("2026-09-25", {"k": 1}),
+                ("2026-09-26", {"k": 2}),
             ):
                 raw = fmf.canonical_bytes(body)
-                folder = fmf.SNAP_DIR if slot == "snapshots" else fmf.LEDGER_DIR
-                (folder / f"{date}.json").write_bytes(raw)
-                new.setdefault(slot, {})[date] = {"sha256": fmf.sha256_bytes(raw)}
+                (fmf.SNAP_DIR / f"{date}.json").write_bytes(raw)
+                new["snapshots"][date] = {"sha256": fmf.sha256_bytes(raw)}
             old["snapshots"]["2026-09-25"]["sha256"] = new["snapshots"]["2026-09-25"]["sha256"]
-            old["ledgers"]["2026-09-25"]["sha256"] = new["ledgers"]["2026-09-25"]["sha256"]
             fmf.guard_manifest(old, new, restate=[])
             broken = json.loads(json.dumps(new))
-            broken["ledgers"]["2026-09-25"] = {"sha256": "changed"}
+            broken["snapshots"]["2026-09-25"] = {"sha256": "changed"}
             try:
                 fmf.guard_manifest(old, broken, restate=[])
                 failed = False
@@ -114,8 +101,8 @@ def test_guard_fails_when_an_earlier_hash_changes() -> None:
             assert mismatched
             restated = {"k": 99}
             raw = fmf.canonical_bytes(restated)
-            (fmf.LEDGER_DIR / "2026-09-25.json").write_bytes(raw)
-            broken["ledgers"]["2026-09-25"] = {"sha256": fmf.sha256_bytes(raw)}
+            (fmf.SNAP_DIR / "2026-09-25.json").write_bytes(raw)
+            broken["snapshots"]["2026-09-25"] = {"sha256": fmf.sha256_bytes(raw)}
             fmf.guard_manifest(old, broken, restate=["2026-09-25"])
         finally:
             _restore(saved)
@@ -271,58 +258,7 @@ def test_morning_map_heat_is_not_replaced_by_postclose() -> None:
             tl.MAP_HEAT_DIR = tl_root / "01_daily" / "map_heat"
 
 
-def test_resume_appends_one_day_and_keeps_prior_trades() -> None:
-    cal = ["2026-09-24", "2026-09-25"]
-    rows = []
-    for d, px in (("2026-09-24", 10.0), ("2026-09-25", 12.0)):
-        rows.append({
-            "date": d, "ticker": "AAA", "sources": ["union"],
-            "src_rank": 0, "boxes": {}, "alarm": False, "open": px, "close": px + 1,
-        })
-    by = {}
-    for r in rows:
-        by.setdefault(r["date"], []).append(r)
-    panel = {
-        "session_dates": cal, "rows": rows, "by_date": by,
-        "from_date": cal[0], "to_date": cal[-1],
-    }
-    bars = {
-        ("AAA", "2026-09-24"): {"open": 10.0, "close": 11.0},
-        ("AAA", "2026-09-25"): {"open": 12.0, "close": 13.0},
-    }
-    rec = fm.make_recipe("union_h1", hold=1, top_n=1)
-    regime = {
-        "2026-09-24": {"predict_score": 0.0},
-        "2026-09-25": {"predict_score": 0.0},
-    }
-    with mock.patch.object(fm, "session_has_closed", return_value=True), \
-            mock.patch.object(fm, "ensure_sim_fields", side_effect=lambda p, rec=None: p):
-        full = fmb.simulate_book(panel, rec, bars=bars, fees=fm.pt_fees(), regime=regime)
-        first_trades = [t for t in full["trades"] if t["date"] == "2026-09-24"]
-        # pos at end of day 1 is the lot still open (hold=1 sells the next day).
-        day1 = fmb.simulate_book(
-            {**panel, "session_dates": ["2026-09-24"], "to_date": "2026-09-24",
-             "rows": [r for r in rows if r["date"] == "2026-09-24"],
-             "by_date": {"2026-09-24": by["2026-09-24"]}},
-            rec, bars=bars, fees=fm.pt_fees(), regime=regime,
-        )
-        resume = {
-            "cash": day1["cash"],
-            "yday_equity": day1["daily"][-1]["equity"],
-            "pos": day1["pos"],
-            "after": "2026-09-24",
-        }
-        nxt = fmb.simulate_book(
-            panel, rec, bars=bars, fees=fm.pt_fees(), regime=regime, resume=resume,
-        )
-    assert [t["date"] for t in nxt["trades"]] == ["2026-09-25"] * len(nxt["trades"])
-    assert all(t["date"] != "2026-09-24" for t in nxt["trades"])
-    assert first_trades
-    # Prior day's buy ticker is unchanged by the append.
-    assert {t["ticker"] for t in first_trades if t["side"] == "BUY"} == {"AAA"}
-
-
-def test_reconstructed_label_and_append_does_not_rebuild_old_rows() -> None:
+def test_append_freezes_the_new_day_and_keeps_old_rows() -> None:
     with tempfile.TemporaryDirectory() as d:
         tmp = Path(d)
         old = _use(tmp)
@@ -401,47 +337,7 @@ def test_reconstructed_label_and_append_does_not_rebuild_old_rows() -> None:
                         "vintage": "2026-09-25", "phase": "morning_overlay",
                         "board_date": "2026-09-25", "source": None, "sha256": "abc",
                     }), \
-                    mock.patch.object(fmb, "load_regime", return_value={}), \
-                    mock.patch.object(fmf, "build_ledger", return_value={
-                        "date": "2026-09-25",
-                        "origin": "frozen",
-                        "recipes": {"union_h1": {
-                            "primary": {
-                                "buys": [{"ticker": "NEW", "side": "BUY",
-                                          "shares": 1, "price": 8.0}],
-                                "sells": [],
-                                "skips": [],
-                                "daily": {
-                                    "date": "2026-09-25", "cash": 8000.0,
-                                    "equity": 10100.0, "yday_equity": 10050.0,
-                                    "bought": ["NEW"], "sold": ["OLD"],
-                                    "open_cash": 9000.0, "made_money": True,
-                                    "s": 1.0, "hard_red": False,
-                                },
-                                "trades": [{
-                                    "date": "2026-09-25", "ticker": "NEW",
-                                    "side": "BUY", "shares": 1, "price": 8.0,
-                                }],
-                                "state": {"cash": 8000.0, "yday_equity": 10100.0,
-                                          "pos": {}, "after": "2026-09-25"},
-                            },
-                            "starts": {
-                                "2026-09-24": {
-                                    "buys": [],
-                                    "sells": [],
-                                    "skips": [],
-                                    "daily": {
-                                        "date": "2026-09-25", "cash": 8000.0,
-                                        "equity": 10100.0, "yday_equity": 10050.0,
-                                        "bought": ["NEW"], "sold": [],
-                                        "open_cash": 9000.0, "made_money": True,
-                                    },
-                                    "trades": [],
-                                    "state": {"after": "2026-09-25"},
-                                },
-                            },
-                        }},
-                    }):
+                    mock.patch.object(fmf, "code_sha", return_value="abc123freeze"):
                 out = fmf.append_land(
                     "2026-09-24", "2026-09-25", write=True,
                     recipes=payload["recipes"], payload=payload,
@@ -453,15 +349,12 @@ def test_reconstructed_label_and_append_does_not_rebuild_old_rows() -> None:
             assert old_rows[0]["open"] == 5.0
             assert any(r["date"] == "2026-09-25" and r["ticker"] == "NEW"
                        for r in saved["rows"])
-            assert fmf.snapshot_path("2026-09-25").is_file()
-            assert fmf.ledger_path("2026-09-25").is_file()
+            snap = json.loads(fmf.snapshot_path("2026-09-25").read_text())
+            assert snap["code_sha"] == "abc123freeze"
+            assert snap["rows"][0]["ticker"] == "NEW"
             assert out["freeze"]["first_frozen"] == "2026-09-25"
-            assert "2026-09-24" in out["reconstructed_dates"]
-            assert "2026-09-25" not in out["reconstructed_dates"]
-            prior = out["daily"]["union_h1"][0]
-            assert prior["date"] == "2026-09-24"
-            assert prior["bought"] == ["OLD"]
-            assert out["daily"]["union_h1"][-1]["date"] == "2026-09-25"
+            assert set(out["freeze"]) == {"first_frozen", "n_snapshots"}
+            assert out["_frozen_dates"] == ["2026-09-25"]
         finally:
             fm.PANEL_PATH = orig_panel
             fm.OUT_JSON = orig_out
@@ -630,71 +523,19 @@ def test_price_store_keeps_the_first_bar() -> None:
             ps.PRICE_DIR, ps.STORE_PATH, ps.META_PATH = orig
 
 
-def test_holdup_created_on_is_the_first_session_after_the_commit() -> None:
-    rec = fm.make_recipe(
-        "union_hot_n4_holdup", s_boost="holdup", rank="hot_score", top_n=4)
-    assert rec["created_on"] == "2026-09-21"
-    white = fm.make_recipe("union_white_both_n4_h1")
-    assert white["created_on"] == "2026-09-14"
-    base = fm.make_recipe("union_h1")
-    assert base["created_on"] == fm.START
-    combo = fm.recipe_created_on("combo_oh_5050_shared", {
-        "created_on": fm.START,
-        "members": ["overnight_mega_h1", "union_hot_n4_holdup"],
-    })
-    assert combo == "2026-09-21"
-
-
-def test_prune_does_not_use_full_window_stats() -> None:
-    payload = {
-        "from_date": "2026-08-13",
-        "to_date": "2026-09-24",
-        "dates": ["2026-09-20", "2026-09-21", "2026-09-24"],
-        "freeze": {"first_frozen": None},
-        "capital": 10000,
-        "recipes": [
-            fm.make_recipe("lucky_h1"),
-            fm.make_recipe("union_h1"),
-        ],
-        "stats": [
-            {"name": "lucky_h1", "win_rate": 0.9, "total_ret_pct": 80.0,
-             "start_rate": 0.9, "profitable_day_rate": 0.9,
-             "book_n_trades": 40, "audit_ok": True, "universe": "union"},
-            {"name": "union_h1", "win_rate": 0.2, "total_ret_pct": -5.0,
-             "start_rate": 0.2, "profitable_day_rate": 0.2,
-             "book_n_trades": 40, "audit_ok": True, "universe": "union"},
-        ],
-    }
-    with mock.patch.object(fm, "_baked_recipe_names", return_value={"union_h1"}):
-        out = fm.prune_payload_workable(payload)
-    names = {r["name"] for r in out["recipes"]}
-    assert "union_h1" in names
-    assert "lucky_h1" not in names
-    assert "full-window" in (out.get("workable") or {}).get("note", "").lower() or \
-        "Full-window" in (out.get("workable") or {}).get("note", "")
-
-
-def test_partial_ledger_is_not_frozen() -> None:
-    panel = {
-        "session_dates": ["2026-09-25"],
-        "rows": [],
-        "by_date": {"2026-09-25": []},
-    }
-    recipes = [fm.make_recipe("union_h1", hold=1, top_n=1)]
-    with tempfile.TemporaryDirectory() as d:
-        old = _use(Path(d))
-        try:
-            with mock.patch.object(fmf, "_simulate_single", side_effect=RuntimeError("boom")):
-                try:
-                    fmf.build_ledger(panel, {}, recipes, "2026-09-25", {})
-                    held = False
-                except fmf.HoldDay as e:
-                    held = True
-                    assert "union_h1" in e.missing
-            assert held
-            assert not fmf.ledger_path("2026-09-25").exists()
-        finally:
-            _restore(old)
+def test_snapshot_stamps_the_building_code_sha() -> None:
+    with mock.patch.object(fmf, "heat_record", return_value={
+        "vintage": "2026-09-25", "phase": "morning_overlay",
+        "board_date": "2026-09-25", "source": None, "sha256": "abc",
+    }), mock.patch.object(fmf, "code_sha", return_value="deadbeef"):
+        snap = fmf.make_snapshot(
+            "2026-09-25",
+            [{"date": "2026-09-25", "ticker": "AAA", "src_rank": 0, "open": 10.0}],
+            "2026-09-24",
+            "pricesha",
+        )
+    assert snap["code_sha"] == "deadbeef"
+    assert snap["rows"][0]["open_0930"] == 10.0
 
 
 if __name__ == "__main__":
@@ -704,14 +545,11 @@ if __name__ == "__main__":
     test_build_panel_fetches_bars_before_candidates()
     test_build_panel_refuses_unresolved_hot_score()
     test_morning_map_heat_is_not_replaced_by_postclose()
-    test_resume_appends_one_day_and_keeps_prior_trades()
-    test_reconstructed_label_and_append_does_not_rebuild_old_rows()
+    test_append_freezes_the_new_day_and_keeps_old_rows()
     test_load_or_build_does_not_rebuild_landed_dates()
     test_published_0922_pin_beats_the_postclose_file()
     test_late_digest_does_not_replace_preopen_tones()
     test_save_report_does_not_overwrite_preopen_pin()
     test_price_store_keeps_the_first_bar()
-    test_holdup_created_on_is_the_first_session_after_the_commit()
-    test_prune_does_not_use_full_window_stats()
-    test_partial_ledger_is_not_frozen()
+    test_snapshot_stamps_the_building_code_sha()
     print("factor-mine freeze tests passed")

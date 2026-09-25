@@ -1602,8 +1602,9 @@ def test_factor_mine_workflow_lands_after_close() -> None:
     assert 'cron: "0 12 * * 6"' in yml
     assert "data/factor_mine/panel.json" in yml
     assert "data/factor_mine/snapshots/" in yml
-    assert "data/factor_mine/ledgers/" in yml
+    assert "data/factor_mine/prices/" in yml
     assert "data/prices/ohlc.parquet" in yml
+    assert "data/prices/actions.parquet" in yml
     assert "data/prices/meta.json" in yml
     assert "assert_history_unchanged" in yml
     assert "--restate" in yml

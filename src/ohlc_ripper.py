@@ -42,7 +42,9 @@ def prior_bars(ticker: str, asof: str, n: int = LOOKBACK) -> list[dict]:
     d = str(asof or "")[:10]
     if not t or not d:
         return []
-    return [b for b in (cf._ticker_bars().get(t) or []) if b["date"] < d][-n:]
+    raw = [b for b in (cf._ticker_bars().get(t) or []) if b["date"] < d][-n:]
+    from . import price_store as ps
+    return ps.adjust_bars_asof(raw, d, ticker=t)
 
 
 def features(ticker: str, asof: str, n: int = LOOKBACK) -> dict:

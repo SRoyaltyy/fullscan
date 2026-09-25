@@ -366,40 +366,6 @@ def attach_tape_flow(panel: dict) -> dict:
     return panel
 
 
-def recipe_created_on(name: str, rec: dict | None = None) -> str:
-    """First session this definition existed.
-
-    Holdup, overnight-mega, and Clock-B landed 2026-09-19 (Saturday), so
-    the book can use them from 2026-09-21. White-horizon and the stop
-    brackets landed 2026-09-13 (Sunday), so they start 2026-09-14.
-    Earlier grid recipes start with the dashboard book.
-    """
-    rec = rec or {}
-    explicit = str(rec.get("created_on") or "")[:10]
-    if len(explicit) != 10:
-        explicit = ""
-    name = str(name or rec.get("name") or "")
-    members = [str(m) for m in (rec.get("members") or []) if m]
-    if members:
-        # Ignore this row's own created_on while dating members, or a
-        # combo stamped at the book origin would hide a later member.
-        member_on = max(
-            recipe_created_on(m, {}) for m in members
-        )
-        return max(explicit, member_on) if explicit else member_on
-    if explicit:
-        return explicit
-    if rec.get("s_boost") == "holdup" or "holdup" in name:
-        return "2026-09-21"
-    if rec.get("universe") == "overnight_mega" or name.startswith("overnight_mega"):
-        return "2026-09-21"
-    if "clk_" in name:
-        return "2026-09-21"
-    if "white_" in name or name.endswith("_s8") or name.endswith("_s12"):
-        return "2026-09-14"
-    return START
-
-
 def make_recipe(name: str, *, universe: str = "union", hold: int = 1,
                 side: str = "long", top_n: int = TOP_N_DEFAULT,
                 require: dict | None = None, forbid: dict | None = None,
@@ -407,8 +373,8 @@ def make_recipe(name: str, *, universe: str = "union", hold: int = 1,
                 size: str = "leftover", sell: str = "list",
                 s_boost: str = "none", day_cap: float = 1.0,
                 take_pct: float | None = None, stop_pct: float | None = None,
-                note: str = "", created_on: str | None = None) -> dict:
-    body = {
+                note: str = "") -> dict:
+    return {
         "name": name,
         "universe": universe,
         "hold": int(hold),
@@ -425,10 +391,7 @@ def make_recipe(name: str, *, universe: str = "union", hold: int = 1,
         "take_pct": take_pct,
         "stop_pct": stop_pct,
         "note": note,
-        "created_on": created_on,
     }
-    body["created_on"] = recipe_created_on(name, body)
-    return body
 
 
 def slice_panel(panel: dict, start: str | None = None,
@@ -3059,159 +3022,23 @@ def _bought_from_kept(payload: dict, names: set[str]) -> set[str]:
     return {t for t in out if t}
 
 
-def _clean_sessions(payload: dict, created_on: str) -> list[str]:
-    """Frozen sessions on or after the recipe existed.
-
-    Days before ``first_frozen`` are reconstructed. Days before
-    ``created_on`` are in-sample. Neither counts toward the workable bar.
-    """
-    first = str(((payload.get("freeze") or {}).get("first_frozen")) or "")
-    if not first:
-        return []
-    created = str(created_on or "")
-    out = []
-    for d in payload.get("dates") or []:
-        day = str(d)
-        if day < first:
-            continue
-        if created and day < created:
-            continue
-        out.append(day)
-    return out
-
-
-def _oos_judge_stat(stat: dict, payload: dict, created_on: str) -> dict:
-    """Bar inputs from the clean window only. Short windows fail the bar."""
-    name = stat.get("name")
-    clean = _clean_sessions(payload, created_on)
-    clean_set = set(clean)
-    view = dict(stat)
-    view["created_on"] = created_on
-    if not clean_set:
-        view["book_n_trades"] = 0
-        view["win_rate"] = 0.0
-        view["total_ret_pct"] = -1.0
-        view["start_rate"] = 0.0
-        view["profitable_day_rate"] = 0.0
-        return view
-    days = [d for d in ((payload.get("daily") or {}).get(name) or [])
-            if d.get("date") in clean_set]
-    trades = [
-        t for t in (((payload.get("books") or {}).get(name) or {}).get("trades") or [])
-        if t.get("date") in clean_set and t.get("side") not in ("OPEN", "CLOSE")
-    ]
-    closes = [t for t in trades if t.get("side") in ("SELL", "COVER")
-              and t.get("pnl") is not None]
-    wins = [t for t in closes if float(t.get("pnl") or 0) > 0]
-    starts = [
-        s for s in ((payload.get("starts") or {}).get(name) or [])
-        if str(s.get("start") or "") in clean_set
-        and s.get("return_pct") is not None and not s.get("pending")
-    ]
-    green = [s for s in starts if s.get("made_money")]
-    dollar = [d for d in days if d.get("made_money")]
-    equity = days[-1].get("equity") if days else None
-    prior = [
-        d for d in ((payload.get("daily") or {}).get(name) or [])
-        if str(d.get("date") or "") < clean[0]
-    ]
-    base = prior[-1].get("equity") if prior else (payload.get("capital") or CAPITAL)
-    ret = -1.0
-    if equity is not None and base:
-        try:
-            ret = 100.0 * (float(equity) / float(base) - 1.0)
-        except (TypeError, ValueError, ZeroDivisionError):
-            ret = -1.0
-    view["book_n_trades"] = len(closes) if closes else len(trades)
-    view["win_rate"] = (len(wins) / len(closes)) if closes else 0.0
-    view["total_ret_pct"] = ret
-    view["start_rate"] = (len(green) / len(starts)) if starts else 0.0
-    view["profitable_day_rate"] = (len(dollar) / len(days)) if days else 0.0
-    return view
-
-
-def _baked_recipe_names() -> set[str] | None:
-    """Names already on the Pages bake. None when there is no bake."""
-    try:
-        baked = load_dash_payload()
-    except Exception:
-        return None
-    names = {r.get("name") for r in (baked.get("recipes") or []) if r.get("name")}
-    if not names:
-        names = {s.get("name") for s in (baked.get("stats") or []) if s.get("name")}
-    return names or None
-
-
 def prune_payload_workable(payload: dict, bar: dict | None = None,
                            always=None, keep_names: set[str] | None = None
                            ) -> dict:
-    """Drop recipes that fail the workable bar on frozen, post-creation days.
+    """Drop recipes that fail Win% / $ days / Starts YES / Book%. Slim the rest.
 
     The baked .io page used to inflate ~107MB in the browser (16MB gzip HTML).
-    In-sample days (before ``created_on``) and reconstructed days (before
-    the first frozen session) do not count toward Win% / $ days / Starts YES
-    / Book%. Until that clean window has ``min_trades`` sessions, the page
-    keeps the sleeves already baked instead of re-scoring the full history.
+    Keeping only workable combo / long / short books plus flatten_h5 lands
+    well under 1MB gzip.
     """
     bar = bar or WORKABLE_BAR
-    recipes = []
-    for rec in payload.get("recipes") or []:
-        item = dict(rec)
-        item["created_on"] = recipe_created_on(item.get("name") or "", item)
-        recipes.append(item)
-    rec_by = {r.get("name"): r for r in recipes}
-    stats = []
-    for s in payload.get("stats") or []:
-        item = dict(s)
-        rec = rec_by.get(item.get("name")) or item
-        item["created_on"] = recipe_created_on(item.get("name") or "", rec)
-        stats.append(item)
+    stats = list(payload.get("stats") or [])
+    recipes = list(payload.get("recipes") or [])
     n_mined = int(payload.get("n_recipes") or len(stats) or len(recipes))
-    first = str(((payload.get("freeze") or {}).get("first_frozen")) or "")
-    clean_n = len([
-        d for d in (payload.get("dates") or [])
-        if first and str(d) >= first
-    ])
-    names_now = {r.get("name") for r in recipes if r.get("name")}
-    names_now |= {s.get("name") for s in stats if s.get("name")}
-    pins = set(WORKABLE_ALWAYS if always is None else always)
-    if keep_names is not None:
-        keep = set(keep_names)
-        note = "caller keep_names"
-    elif first and clean_n >= int(bar["min_trades"]):
-        judged = [
-            _oos_judge_stat(s, payload, s.get("created_on") or START)
-            for s in stats
-        ]
-        keep = workable_names(judged, recipes, bar, always=always)
-        note = (
-            f"Bar uses frozen sessions on/after each recipe created_on "
-            f"({first} →, {clean_n} sessions). In-sample and reconstructed "
-            f"days are excluded."
-        )
-    else:
-        prior = _baked_recipe_names()
-        if prior:
-            keep = (prior & names_now) | (pins & names_now)
-            note = (
-                "Clean window is shorter than the trade minimum. "
-                "Full-window stats were not used. Page keeps the sleeves "
-                "already baked, plus pinned names."
-            )
-        elif len(names_now) <= int(bar["min_trades"]):
-            keep = set(names_now)
-            note = (
-                "No baked page and the payload is already a small set. "
-                "Full-window stats were not used to drop names."
-            )
-        else:
-            keep = pins & names_now
-            note = (
-                "No baked page and not enough frozen sessions to judge. "
-                "Full-window stats were not used. Pinned sleeves stay."
-            )
-    if not keep and len(names_now) <= int(bar["min_trades"]):
-        keep = set(names_now)
+    keep = (set(keep_names) if keep_names is not None
+            else workable_names(stats, recipes, bar, always=always))
+    if not keep:
+        return payload
     combo_names = {
         s.get("name") for s in stats
         if s.get("name") in keep and (
@@ -3268,11 +3095,10 @@ def prune_payload_workable(payload: dict, bar: dict | None = None,
         "bar": dict(bar),
         "n_kept": len(keep),
         "n_mined": n_mined,
-        "clean_sessions": clean_n,
-        "first_frozen": first or None,
-        "note": note + (
-            " Win% >55, $ days ≥40%, Starts YES ≥50%, Book% >0, ≥30 trades "
-            "when the clean window is long enough."
+        "note": (
+            "Win% >55, $ days ≥40%, Starts YES ≥50%, Book% >0, ≥30 trades. "
+            "Combo / long / short. Members of kept combos + flatten_h5 kept. "
+            "Rest discarded."
         ),
     }
     return out
@@ -3429,17 +3255,11 @@ def write_outputs(payload: dict, stats: list[dict] | None = None,
                   paths: dict | None = None,
                   always=None, keep_names: set[str] | None = None,
                   pin_long_led: bool = True) -> None:
-    recipes_stamped = []
-    for rec in payload.get("recipes") or []:
-        item = dict(rec)
-        item["created_on"] = recipe_created_on(item.get("name") or "", item)
-        recipes_stamped.append(item)
-    if recipes_stamped:
+    from . import factor_mine_freeze as fmf
+    meta = fmf.freeze_meta()
+    if meta.get("first_frozen"):
         payload = dict(payload)
-        payload["recipes"] = recipes_stamped
-        for stat in payload.get("stats") or []:
-            if isinstance(stat, dict) and stat.get("name"):
-                stat["created_on"] = recipe_created_on(stat["name"], stat)
+        payload["freeze"] = meta
     dest = paths or publish_paths()
     dest_json = Path(dest["json"])
     dest_md = Path(dest["md"])
@@ -3483,28 +3303,6 @@ def write_outputs(payload: dict, stats: list[dict] | None = None,
         "Research only — does not change live `flatten_robust`.",
         "",
     ]
-    freeze = payload.get("freeze") or {}
-    if freeze.get("first_frozen"):
-        lines += [
-            f"Sessions before `{freeze['first_frozen']}` are **reconstructed** "
-            "(rebuilt inputs, not a frozen 09:30 snapshot). From "
-            f"`{freeze['first_frozen']}` each day's inputs and buy/sell "
-            "decisions are append-only.",
-            "",
-        ]
-    late = sorted({
-        (r.get("name"), r.get("created_on"))
-        for r in (payload.get("recipes") or [])
-        if r.get("created_on") and str(r.get("created_on")) > str(payload.get("from_date") or "")
-    })
-    if late:
-        lines += [
-            "Sessions before a recipe's creation date are **in-sample** "
-            "(the rule was not in the book yet). "
-            "Holdup, overnight-mega, and Clock-B start `2026-09-21`. "
-            "White-horizon and the stop brackets start `2026-09-14`.",
-            "",
-        ]
     lines += [
         "Scoreboard files: slim `factor_mine.json` (stats / recipes / "
         "series) plus gzip shards in `factor_mine/shards/` "
@@ -4200,8 +3998,7 @@ def land_closed(from_date: str = START, write: bool = False,
             )
         print(f"[factor-mine] land-closed: {target} already on the board — skip",
               flush=True)
-        from . import factor_mine_freeze as fmf
-        return fmf.label_payload(payload)
+        return payload
     if rebuild_panel and not restate_set:
         print("[factor-mine] land-closed: --rebuild-panel does not rewrite "
               "landed days; appending the new session only.", flush=True)
@@ -4219,10 +4016,20 @@ def land_closed(from_date: str = START, write: bool = False,
     print(f"[factor-mine] land-closed → {target} recipes={len(recs)} "
           f"(append frozen day)", flush=True)
     from . import factor_mine_freeze as fmf
-    return fmf.append_land(
+    frozen = fmf.append_land(
         from_date, target, write=write, restate=sorted(restate_set),
         recipes=recs, payload=payload,
     )
+    landed = list(frozen.pop("_frozen_dates", []) or [])
+    if write and landed:
+        # Inputs for the new session are frozen. The published books still
+        # come from the existing mine.
+        return run(
+            from_date, target, write=True, recipes=recs,
+            rebuild_panel=False, persist_panel=False,
+            book=True, combos=True,
+        )
+    return frozen
 
 
 def sweep_white_horizon(panel: dict, *, bars=None, fees=None,
