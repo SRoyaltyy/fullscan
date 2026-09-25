@@ -28,6 +28,9 @@ ROOT = Path(__file__).resolve().parent.parent
 SNAP_DIR = ROOT / "data" / "factor_mine" / "snapshots"
 PRICE_DIR = ROOT / "data" / "factor_mine" / "prices"
 MANIFEST_PATH = ROOT / "data" / "factor_mine" / "freeze_manifest.json"
+# MACD(12, 26, 9): slow + signal. Kept here so the lock does not depend
+# on the indicator module's constants.
+MIN_INDICATOR_BARS = 35
 
 
 class HoldDay(Exception):
@@ -217,7 +220,6 @@ def completeness_gaps(ticker: str, date: str) -> list[str]:
     not fill it. Indicator history is the MACD window: every one of those
     prior bars needs a close.
     """
-    from . import ohlc_ripper as ohlc
     from . import price_store as ps
 
     if ps.AUTO_ADJUST:
@@ -228,7 +230,7 @@ def completeness_gaps(ticker: str, date: str) -> list[str]:
     if tl._official_ohlc(t, d).get("open") is None:
         gaps.append("missing 09:30 open")
     priors = [b for b in _raw_bars(t) if str(b.get("date") or "") < d]
-    need = int(ohlc.MIN_INDICATOR_BARS)
+    need = int(MIN_INDICATOR_BARS)
     if not priors or priors[-1].get("close") is None:
         gaps.append("missing prior close")
     if len(priors) < need:

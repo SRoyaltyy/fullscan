@@ -397,53 +397,6 @@ def inject_block(date_str: str | None = None, max_chars: int = 3200) -> str:
     )
 
 
-def digest_is_preopen(payload: dict | None, date: str) -> bool:
-    """True when this digest was written before 09:30 ET on ``date``.
-
-    A file dated D whose ``generated_at`` is 01:54 ET on D+1 is the
-    post-close scrape. It is not an input to the 09:30 decision.
-    """
-    gen = str((payload or {}).get("generated_at") or "")
-    if not gen or not date:
-        return False
-    try:
-        ts = datetime.fromisoformat(gen)
-    except ValueError:
-        return False
-    if ts.tzinfo is None:
-        ts = ts.replace(tzinfo=ET)
-    ts = ts.astimezone(ET)
-    try:
-        cutoff = datetime.strptime(date, "%Y-%m-%d").replace(
-            hour=9, minute=30, tzinfo=ET)
-    except ValueError:
-        return False
-    return ts < cutoff and ts.strftime("%Y-%m-%d") == date
-
-
-def preopen_digest_path(date: str) -> Path:
-    return NEWS_DIR / f"{date}_finviz_digest_preopen.json"
-
-
-def freeze_preopen_digest(date_str: str, payload: dict) -> Path | None:
-    """Write ``{date}_finviz_digest_preopen.json`` once.
-
-    Later ``--force`` lands may replace ``{date}_finviz_digest.json``.
-    The pre-open file stays so a post-close copy cannot change D's input.
-    """
-    if not digest_is_preopen(payload, date_str):
-        return None
-    dest = preopen_digest_path(date_str)
-    if dest.is_file():
-        print(f"[finviz_digest] pre-open already frozen {dest.name}")
-        return dest
-    dest.write_text(
-        json.dumps(payload, indent=2, ensure_ascii=False, default=str),
-        encoding="utf-8")
-    print(f"[finviz_digest] froze pre-open digest {dest}")
-    return dest
-
-
 def save_report(report: dict) -> tuple[Path, Path]:
     NEWS_DIR.mkdir(parents=True, exist_ok=True)
     date_str = report["date"]
@@ -456,7 +409,6 @@ def save_report(report: dict) -> tuple[Path, Path]:
     mp.write_text(to_markdown(report), encoding="utf-8")
     latest = NEWS_DIR / "latest_finviz_digest.md"
     latest.write_text(mp.read_text(encoding="utf-8"), encoding="utf-8")
-    freeze_preopen_digest(date_str, payload)
     return jp, mp
 
 
@@ -531,14 +483,10 @@ def main() -> None:
         # Land the Elite export in the same push. A later overlay land
         # used to `stash -u` + drop and erase the untracked CSV.
         d = report["date"]
-        extra = [
+        land_file.land(d, "finviz_digest", title="Finviz digest", extra_paths=[
             ROOT / "data" / "exports" / f"finviz_{d}.csv",
             ROOT / "data" / "finviz" / "latest.csv",
-        ]
-        pinned = preopen_digest_path(d)
-        if pinned.is_file():
-            extra.append(pinned)
-        land_file.land(d, "finviz_digest", title="Finviz digest", extra_paths=extra)
+        ])
     except Exception as e:  # noqa: BLE001
         print(f"[finviz_digest] WARN: land failed: {e}")
 

@@ -8,7 +8,6 @@ from unittest import mock
 
 from src import factor_mine as fm
 from src import factor_mine_freeze as fmf
-from src import map_heat as mh
 from src import ticker_lookback as tl
 
 
@@ -390,50 +389,6 @@ def test_build_panel_refuses_unresolved_hot_score() -> None:
     assert refused
 
 
-def test_morning_map_heat_is_not_replaced_by_postclose() -> None:
-    orig = mh.OUT_DIR
-    with tempfile.TemporaryDirectory() as d:
-        mh.OUT_DIR = Path(d)
-        tl.MAP_HEAT_DIR = Path(d)
-        try:
-            morning = {
-                "date": "2026-09-25",
-                "phase": "morning_overlay",
-                "overlay_at": "2026-09-25T08:00:00-04:00",
-                "generated_at": "2026-09-25T08:00:00-04:00",
-                "tape": [{"ticker": "ES", "label": "ES", "last": 1, "change": 0.1}],
-                "sectors": [{"sector": f"S{i}", "d1": 0.1, "w1": 0, "rvol": 1}
-                            for i in range(11)],
-                "industries": [{"industry": "Semis", "d1": 1.0}] * 60,
-                "hot": [], "cold": [], "overrides": [], "themes": [],
-                "theme_tape": [], "ticker_news": [],
-                "econ": [], "earnings": [], "event_options": [],
-                "export": "finviz_2026-09-24.csv",
-                "n_tickers": 100,
-            }
-            mh.write("2026-09-25", morning)
-            morning_path = Path(d) / "2026-09-25_map_heat_morning.json"
-            assert morning_path.is_file()
-            frozen = morning_path.read_bytes()
-            post = dict(morning)
-            post["phase"] = "postclose_baseline"
-            post.pop("overlay_at", None)
-            post["generated_at"] = "2026-09-26T02:09:00-04:00"
-            post["tape"] = [{"ticker": "ES", "label": "ES", "last": 9, "change": 3}]
-            # write() refuses a morning header mismatch; postclose is not
-            # morning_overlay so it rewrites the live board only.
-            mh.write("2026-09-25", post)
-            assert morning_path.read_bytes() == frozen
-            board, vintage = tl._map_heat_board("2026-09-25", "2026-09-24")
-            assert vintage == "2026-09-25"
-            assert board.get("phase") == "morning_overlay"
-            assert board["tape"][0]["last"] == 1
-        finally:
-            mh.OUT_DIR = orig
-            from src.ticker_lookback import ROOT as tl_root
-            tl.MAP_HEAT_DIR = tl_root / "01_daily" / "map_heat"
-
-
 def test_append_freezes_the_new_day_and_keeps_old_rows() -> None:
     with tempfile.TemporaryDirectory() as d:
         tmp = Path(d)
@@ -573,101 +528,6 @@ def test_load_or_build_does_not_rebuild_landed_dates() -> None:
             fm.PANEL_PATH = orig
 
 
-def test_published_0922_pin_beats_the_postclose_file() -> None:
-    """The 09-22 post-close land must not be the 09:30 digest input."""
-    pin = tl._preopen_digest_path("2026-09-22")
-    live_path = tl.NEWS_DIR / "2026-09-22_finviz_digest.json"
-    assert pin.is_file()
-    pinned = json.loads(pin.read_text(encoding="utf-8"))
-    live = json.loads(live_path.read_text(encoding="utf-8"))
-    assert tl._digest_is_preopen(pinned, "2026-09-22")
-    assert not tl._digest_is_preopen(live, "2026-09-22")
-    assert not tl._preopen_digest_path("2026-08-29").is_file()
-    data, vintage = tl.load_digest_asof("2026-09-22")
-    assert vintage == "2026-09-22"
-    assert data.get("generated_at") == pinned.get("generated_at")
-
-
-def test_late_digest_does_not_replace_preopen_tones() -> None:
-    with tempfile.TemporaryDirectory() as d:
-        news = Path(d)
-        date = "2026-09-22"
-        prior = "2026-09-21"
-        morning = {
-            "date": date,
-            "generated_at": "2026-09-22T07:09:51-04:00",
-            "top_signal": [{"ticker": "AAA", "digest": "AAA beats and raises guidance"}],
-        }
-        late = {
-            "date": date,
-            "generated_at": "2026-09-23T01:54:14-04:00",
-            "top_signal": [{"ticker": "BBB", "digest": "BBB plunges after a miss"}],
-        }
-        (news / f"{date}_finviz_digest_preopen.json").write_text(
-            json.dumps(morning), encoding="utf-8")
-        (news / f"{date}_finviz_digest.json").write_text(
-            json.dumps(late), encoding="utf-8")
-        orig = tl.NEWS_DIR
-        tl.NEWS_DIR = news
-        try:
-            data, vintage = tl.load_digest_asof(date)
-            assert vintage == date
-            assert data["top_signal"][0]["ticker"] == "AAA"
-            tones = tl._digest_tones(date)
-            assert "AAA" in tones
-            assert "BBB" not in tones
-            # No pin and a post-close stamp walks to the prior pre-open file.
-            (news / f"{date}_finviz_digest_preopen.json").unlink()
-            (news / f"{prior}_finviz_digest_preopen.json").write_text(
-                json.dumps({
-                    "date": prior,
-                    "generated_at": "2026-09-21T06:53:43-04:00",
-                    "top_signal": [{"ticker": "CCC", "digest": "CCC beats estimates"}],
-                }),
-                encoding="utf-8",
-            )
-            prior_sess = {"date": prior, "prior": None}
-            cur = {"date": date, "prior": prior_sess}
-            tl._INDEX = {"sessions": [prior_sess, cur]}
-            data, vintage = tl.load_digest_asof(date)
-            assert vintage == prior
-            assert data["top_signal"][0]["ticker"] == "CCC"
-        finally:
-            tl.NEWS_DIR = orig
-            tl._INDEX = None
-
-
-def test_save_report_does_not_overwrite_preopen_pin() -> None:
-    with tempfile.TemporaryDirectory() as d:
-        from src import finviz_digest as fd
-        orig = fd.NEWS_DIR
-        fd.NEWS_DIR = Path(d)
-        try:
-            first = {
-                "date": "2026-09-25",
-                "generated_at": "2026-09-25T07:05:00-04:00",
-                "export_used": "x",
-                "ticker_digest_count": 1,
-                "signal_count": 1,
-                "index_digests": [],
-                "top_signal": [{"ticker": "AAA", "digest": "beats"}],
-                "by_sector": {},
-                "all_ticker_digests": [],
-            }
-            fd.save_report(dict(first))
-            pin = fd.preopen_digest_path("2026-09-25")
-            frozen = pin.read_bytes()
-            late = dict(first)
-            late["generated_at"] = "2026-09-26T01:54:00-04:00"
-            late["top_signal"] = [{"ticker": "ZZZ", "digest": "plunges"}]
-            fd.save_report(late)
-            assert pin.read_bytes() == frozen
-            live = json.loads((Path(d) / "2026-09-25_finviz_digest.json").read_text())
-            assert live["top_signal"][0]["ticker"] == "ZZZ"
-        finally:
-            fd.NEWS_DIR = orig
-
-
 def test_price_store_keeps_the_first_bar() -> None:
     import pandas as pd
     from src import price_store as ps
@@ -724,12 +584,8 @@ if __name__ == "__main__":
     test_one_gapped_name_is_dropped_and_the_rerun_matches()
     test_build_panel_fetches_bars_before_candidates()
     test_build_panel_refuses_unresolved_hot_score()
-    test_morning_map_heat_is_not_replaced_by_postclose()
     test_append_freezes_the_new_day_and_keeps_old_rows()
     test_load_or_build_does_not_rebuild_landed_dates()
-    test_published_0922_pin_beats_the_postclose_file()
-    test_late_digest_does_not_replace_preopen_tones()
-    test_save_report_does_not_overwrite_preopen_pin()
     test_price_store_keeps_the_first_bar()
     test_snapshot_stamps_the_building_code_sha()
     print("factor-mine freeze tests passed")

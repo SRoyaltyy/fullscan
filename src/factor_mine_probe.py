@@ -309,11 +309,13 @@ def _finviz_news(date: str | None) -> dict[str, dict]:
 
 
 def _digest_map(date: str) -> dict[str, dict]:
-    from .ticker_lookback import load_digest_asof
-    raw, vintage = load_digest_asof(date)
-    if not raw:
+    path = NEWS_DIR / f"{date}_finviz_digest.json"
+    if not path.is_file():
         return {}
-    vintage = vintage or date
+    try:
+        raw = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
     out = {}
     for row in (raw.get("top_signal") or []) + (raw.get("all_ticker_digests_sample") or []):
         t = fm._tick(row.get("ticker"))
@@ -322,11 +324,7 @@ def _digest_map(date: str) -> dict[str, dict]:
         out[t] = {
             "title": str(row.get("news_title") or "").strip()[:160],
             "digest": str(row.get("digest") or "").strip()[:160],
-            "file": (
-                f"01_daily/news/{vintage}_finviz_digest_preopen.json"
-                if (NEWS_DIR / f"{vintage}_finviz_digest_preopen.json").is_file()
-                else f"01_daily/news/{vintage}_finviz_digest.json"
-            ),
+            "file": f"01_daily/news/{date}_finviz_digest.json",
         }
     return out
 

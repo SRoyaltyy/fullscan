@@ -416,10 +416,13 @@ def _digest_polarity(text: str) -> float:
 
 
 def _load_finviz_digest(date: str) -> dict[str, dict]:
-    """Per-ticker Daily Digest knowable at 09:30 — not a post-close rewrite."""
-    from .ticker_lookback import load_digest_asof
-    data, _vintage = load_digest_asof(date)
-    if not data:
+    """Per-ticker Daily Digest from Elite export — company news the judge may have skipped."""
+    path = NEWS_DIR / f"{date}_finviz_digest.json"
+    if not path.exists():
+        return {}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
         return {}
     out: dict[str, dict] = {}
     rows = []

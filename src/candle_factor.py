@@ -100,8 +100,7 @@ def prior_bars(ticker: str, asof: str, n: int = LOOKBACK) -> list[dict]:
     d = str(asof or "")[:10]
     if not t or not d:
         return []
-    from . import price_store as ps
-    return ps.adjust_bars_asof(_as_dicts(_bars_before(t, d, int(n))), d, ticker=t)
+    return _as_dicts(_bars_before(t, d, int(n)))
 
 
 @lru_cache(maxsize=16384)
