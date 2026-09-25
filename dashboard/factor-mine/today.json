@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T16:11:35.405325-04:00",
+  "generated_at": "2026-09-25T16:32:34.684525-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -1600,6 +1600,31 @@
         }
       ],
       "preview": "2026-09-25 BUY SONO, OMER, PDFS, FIVN, VCYT, REGN, OLLI, CCC \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, HP, PUMP \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-09-25 BUY SONO, OMER, PDFS, FIVN, VCYT, REGN, OLLI, CCC \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, HP, PUMP \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-25 BUY SONO, OMER, PDFS, FIVN, VCYT, REGN, OLLI, CCC \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, HP, PUMP \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-25 BUY SONO, OMER, PDFS, FIVN, VCYT, REGN, OLLI, CCC \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, HP, PUMP \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategi"
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-09-25",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-25T16:28:43.188570-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-25_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 6655,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-09-25_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 3150,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-09-25\n**Generated:** 2026-09-25T16:28:43.162013-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed higher as oil eased on US\u2011Iran talks and tech outperformed despite Treasury yields holding near multi\u2011decade highs\n**Prior close:** SPX +0.51%  Nasdaq +0.48%  Dow +0.93%\n**SPX:** +0.51%  **Nasdaq:** +0.48%  **Dow:** +0.93%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** AKAM, MSFT, COST\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-28\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-25\n**Generated:** 2026-09-25T16:28:43.162013-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed higher as oil eased on US\u2011Iran talks and tech outperformed despite Treasury yields holding near multi\u2011decade highs\n**Prior close:** SPX +0.51%  Nasdaq +0.48%  Dow +0.93%\n**SPX:** +0.51%  **Nasdaq:** +0.48%  **Dow:** +0.93%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** AKAM, MSFT, COST\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-28\n**Clock use:** `next_open`"
     }
   ],
   "source": "publish_live_boards"
