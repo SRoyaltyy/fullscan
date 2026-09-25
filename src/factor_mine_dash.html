@@ -1809,8 +1809,10 @@ function renderStarts(){
       const on=sp&&sp.start===d?'on':'';
       const tag=r.prelim?' prelim':'';
       const recon=(D.freeze&&D.freeze.first_frozen&&String(d)<String(D.freeze.first_frozen))?' reconstructed':'';
+      const created=(s.created_on)||((D.recipes||[]).find(x=>x.name===s.name)||{}).created_on||'';
+      const insample=(created && String(d)<String(created))?' in-sample':'';
       const label=r.made_money?'YES':'no';
-      return `<span class="pill ${on} ${r.made_money?'pos':'neg'}" data-start="${esc(d)}" style="cursor:pointer">${esc(String(d).slice(5))} ${label} ${num(r.return_pct,1)}${tag}${recon}</span>`;
+      return `<span class="pill ${on} ${r.made_money?'pos':'neg'}" data-start="${esc(d)}" style="cursor:pointer">${esc(String(d).slice(5))} ${label} ${num(r.return_pct,1)}${tag}${recon}${insample}</span>`;
     }).join('');
     const scored=dates.map(d=>liveStartRow(s.name,d)).filter(r=>!r.pending && r.return_pct!=null);
     const yes=scored.filter(r=>r.made_money).length;
@@ -2230,6 +2232,7 @@ function renderAll(){
     (D.fill||"09:30 open, whole shares, Futubull fees")+
     " · "+(D.leak||"leak-free 09:30")+
     ((D.freeze&&D.freeze.first_frozen)?(" · days before "+D.freeze.first_frozen+" reconstructed"):"")+
+    " · days before a recipe's created_on are in-sample"+
     (((D.combos||{}).n)
       ? (" · "+D.combos.n+" combo books"+(((D.combos.outperform||[]).length)?" · "+D.combos.outperform.length+" WIN":""))
       : "")+

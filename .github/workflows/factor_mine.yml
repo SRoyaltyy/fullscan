@@ -227,7 +227,7 @@ jobs:
               "books", len(pack.get("books") or {}),
               "files", len(checked),
           )
-          roots = [Path("03_scoreboard"), Path("dashboard/factor-mine"), Path("data/factor_mine")]
+          roots = [Path("03_scoreboard"), Path("dashboard/factor-mine"), Path("data/factor_mine"), Path("data/prices")]
           bad = []
           for root in roots:
               if not root.exists():
@@ -254,6 +254,8 @@ jobs:
             data/factor_mine/snapshots/ \
             data/factor_mine/ledgers/ \
             data/factor_mine/prices/ \
+            data/prices/ohlc.parquet \
+            data/prices/meta.json \
             dashboard/factor-mine/
         env:
           FROM_DATE: ${{ inputs.from_date }}

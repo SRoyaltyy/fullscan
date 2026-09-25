@@ -75,7 +75,9 @@ def _save_store(df: pd.DataFrame) -> None:
     df = df.copy()
     df["date"] = pd.to_datetime(df["date"]).dt.normalize()
     df["ticker"] = df["ticker"].astype(str).str.upper()
-    df = df.drop_duplicates(subset=["date", "ticker"], keep="last")
+    # A stored bar is the print we already decided from. A later Yahoo
+    # download must not replace it. New (date, ticker) rows still append.
+    df = df.drop_duplicates(subset=["date", "ticker"], keep="first")
     df = df.sort_values(["ticker", "date"]).reset_index(drop=True)
     df.to_parquet(STORE_PATH, index=False)
     meta = {
@@ -113,7 +115,8 @@ def _yf_bound(raw) -> str:
 yahoo_day = _yf_bound
 
 
-def _yf_download(tickers: list[str], start: str, end: str) -> pd.DataFrame:
+def _yf_download(tickers: list[str], start: str, end: str, *,
+                strict: bool = False) -> pd.DataFrame:
     try:
         import yfinance as yf
     except ImportError as e:
@@ -131,8 +134,15 @@ def _yf_download(tickers: list[str], start: str, end: str) -> pd.DataFrame:
         )
     except Exception as e:
         print(f"[price_store] download failed ({len(tickers)}): {e}")
+        if strict:
+            raise RuntimeError(
+                f"price download failed for {len(tickers)} names: {e}") from e
         return pd.DataFrame()
     if raw is None or raw.empty:
+        if strict:
+            raise RuntimeError(
+                f"price download returned no bars for {len(tickers)} names "
+                f"({start} → {end})")
         return pd.DataFrame()
     return _flatten_yf(raw, tickers)
 
@@ -264,7 +274,8 @@ def update(lookback_days: int = 7) -> None:
     _save_store(pd.concat(frames, ignore_index=True))
 
 
-def fill_range(start: str, end: str, tickers: list[str] | None = None) -> None:
+def fill_range(start: str, end: str, tickers: list[str] | None = None,
+               *, strict: bool = False) -> None:
     """Download official regular-session bars for every universe name in [start, end].
 
     ``update()`` keys off the store's max date, so a handful of seeded
@@ -283,13 +294,20 @@ def fill_range(start: str, end: str, tickers: list[str] | None = None) -> None:
         batch = names[i : i + CHUNK]
         print(f"[price_store] fill chunk {i//CHUNK+1}/{n_chunks} ({batch[0]}…{batch[-1]})")
         try:
-            part = _yf_download(batch, start, end)
+            part = _yf_download(batch, start, end, strict=False)
             if not len(part):
                 time.sleep(6)
-                part = _yf_download(batch, start, end)
+                part = _yf_download(batch, start, end, strict=strict)
         except Exception as e:
             print(f"[price_store] fill chunk failed: {e}")
-            part = pd.DataFrame()
+            if not strict:
+                part = pd.DataFrame()
+            else:
+                time.sleep(6)
+                part = _yf_download(batch, start, end, strict=True)
+        if strict and not len(part):
+            raise RuntimeError(
+                f"price fill returned no bars for {batch[0]}…{batch[-1]}")
         if len(part):
             frames.append(part)
             if (i // CHUNK) % 8 == 7:
@@ -301,7 +319,8 @@ def fill_range(start: str, end: str, tickers: list[str] | None = None) -> None:
 
 
 def ensure_through(end: str | None = None,
-                   tickers: list[str] | None = None) -> None:
+                   tickers: list[str] | None = None,
+                   *, strict: bool = False) -> None:
     """Fill official regular-session bars through the last closed session.
 
     Prefer the names we actually mark. A full-universe yahoo walk dies on
@@ -316,6 +335,7 @@ def ensure_through(end: str | None = None,
     if target_s > closed:
         target_s = closed
     want = sorted({str(t).upper() for t in (tickers or []) if t})
+    requested = list(want)
     n_on = 0
     have = set()
     if len(existing):
@@ -338,7 +358,19 @@ def ensure_through(end: str | None = None,
           f"(have {n_on} bars; fetch {len(want) if want else 'universe'})")
     start = (datetime.strptime(target_s, "%Y-%m-%d").date() - timedelta(days=21)).isoformat()
     stop = (datetime.strptime(target_s, "%Y-%m-%d").date() + timedelta(days=1)).isoformat()
-    fill_range(start, stop, want or None)
+    fill_range(start, stop, want or None, strict=strict)
+    if strict and requested:
+        stored = _load_store()
+        have_now: set[str] = set()
+        if len(stored):
+            on_now = stored[stored["date"] == pd.Timestamp(target_s)]
+            if len(on_now):
+                have_now = {str(t).upper() for t in on_now["ticker"].tolist()}
+        missing = [t for t in requested if t not in have_now]
+        if missing:
+            raise RuntimeError(
+                f"price store missing {target_s} bars for {len(missing)} "
+                f"names sample={missing[:12]}")
 
 
 def candle_bias(ohlc: pd.DataFrame, lookback: int = 10) -> dict:

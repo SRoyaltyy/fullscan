@@ -208,7 +208,7 @@ def ensure_candidate_bars(date: str, tickers: list[str]) -> None:
     if not names:
         raise HoldDay(date, [], "no candidates — refusing to freeze an empty day")
     try:
-        ps.ensure_through(date, tickers=names)
+        ps.ensure_through(date, tickers=names, strict=True)
     except (Exception, SystemExit) as e:
         raise HoldDay(date, names, f"price fetch failed: {e}") from e
     reset_price_memory()

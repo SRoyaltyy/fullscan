@@ -258,7 +258,9 @@ def _news_actions(date: str, ticker: str) -> dict | None:
 
 
 def _digest_hits(date: str, ticker: str) -> list[str]:
-    data = _jload("01_daily", "news", f"{date}_finviz_digest.json") or {}
+    from .ticker_lookback import load_digest_asof
+    data, _vintage = load_digest_asof(date)
+    data = data or {}
     out = []
     rows = list(data.get("top_signal") or []) + list(data.get("all_ticker_digests_sample") or [])
     for sec_rows in (data.get("by_sector") or {}).values():

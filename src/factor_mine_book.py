@@ -1741,6 +1741,14 @@ def write_action_mds(payload: dict, stats: list[dict], books: dict,
             "decisions are append-only.",
             "",
         ]
+    if any((r.get("created_on") and str(r.get("created_on")) > str(payload.get("from_date") or ""))
+           for r in (payload.get("recipes") or [])):
+        index += [
+            "Sessions before a recipe's `created_on` are **in-sample**. "
+            "Holdup, overnight-mega, and Clock-B start `2026-09-21`. "
+            "White-horizon and stop brackets start `2026-09-14`.",
+            "",
+        ]
     index += [
         "Cash-accounted blotters for the leak-free 09:30 recipes. "
         "Each recipe is a **daily cash + holdings state machine**: "

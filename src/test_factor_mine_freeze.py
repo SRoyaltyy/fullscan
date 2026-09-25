@@ -504,6 +504,176 @@ def test_load_or_build_does_not_rebuild_landed_dates() -> None:
             fm.PANEL_PATH = orig
 
 
+def test_published_0922_pin_beats_the_postclose_file() -> None:
+    """The 09-22 post-close land must not be the 09:30 digest input."""
+    pin = tl._preopen_digest_path("2026-09-22")
+    live_path = tl.NEWS_DIR / "2026-09-22_finviz_digest.json"
+    assert pin.is_file()
+    pinned = json.loads(pin.read_text(encoding="utf-8"))
+    live = json.loads(live_path.read_text(encoding="utf-8"))
+    assert tl._digest_is_preopen(pinned, "2026-09-22")
+    assert not tl._digest_is_preopen(live, "2026-09-22")
+    assert not tl._preopen_digest_path("2026-08-29").is_file()
+    data, vintage = tl.load_digest_asof("2026-09-22")
+    assert vintage == "2026-09-22"
+    assert data.get("generated_at") == pinned.get("generated_at")
+
+
+def test_late_digest_does_not_replace_preopen_tones() -> None:
+    with tempfile.TemporaryDirectory() as d:
+        news = Path(d)
+        date = "2026-09-22"
+        prior = "2026-09-21"
+        morning = {
+            "date": date,
+            "generated_at": "2026-09-22T07:09:51-04:00",
+            "top_signal": [{"ticker": "AAA", "digest": "AAA beats and raises guidance"}],
+        }
+        late = {
+            "date": date,
+            "generated_at": "2026-09-23T01:54:14-04:00",
+            "top_signal": [{"ticker": "BBB", "digest": "BBB plunges after a miss"}],
+        }
+        (news / f"{date}_finviz_digest_preopen.json").write_text(
+            json.dumps(morning), encoding="utf-8")
+        (news / f"{date}_finviz_digest.json").write_text(
+            json.dumps(late), encoding="utf-8")
+        orig = tl.NEWS_DIR
+        tl.NEWS_DIR = news
+        try:
+            data, vintage = tl.load_digest_asof(date)
+            assert vintage == date
+            assert data["top_signal"][0]["ticker"] == "AAA"
+            tones = tl._digest_tones(date)
+            assert "AAA" in tones
+            assert "BBB" not in tones
+            # No pin and a post-close stamp walks to the prior pre-open file.
+            (news / f"{date}_finviz_digest_preopen.json").unlink()
+            (news / f"{prior}_finviz_digest_preopen.json").write_text(
+                json.dumps({
+                    "date": prior,
+                    "generated_at": "2026-09-21T06:53:43-04:00",
+                    "top_signal": [{"ticker": "CCC", "digest": "CCC beats estimates"}],
+                }),
+                encoding="utf-8",
+            )
+            prior_sess = {"date": prior, "prior": None}
+            cur = {"date": date, "prior": prior_sess}
+            tl._INDEX = {"sessions": [prior_sess, cur]}
+            data, vintage = tl.load_digest_asof(date)
+            assert vintage == prior
+            assert data["top_signal"][0]["ticker"] == "CCC"
+        finally:
+            tl.NEWS_DIR = orig
+            tl._INDEX = None
+
+
+def test_save_report_does_not_overwrite_preopen_pin() -> None:
+    with tempfile.TemporaryDirectory() as d:
+        from src import finviz_digest as fd
+        orig = fd.NEWS_DIR
+        fd.NEWS_DIR = Path(d)
+        try:
+            first = {
+                "date": "2026-09-25",
+                "generated_at": "2026-09-25T07:05:00-04:00",
+                "export_used": "x",
+                "ticker_digest_count": 1,
+                "signal_count": 1,
+                "index_digests": [],
+                "top_signal": [{"ticker": "AAA", "digest": "beats"}],
+                "by_sector": {},
+                "all_ticker_digests": [],
+            }
+            fd.save_report(dict(first))
+            pin = fd.preopen_digest_path("2026-09-25")
+            frozen = pin.read_bytes()
+            late = dict(first)
+            late["generated_at"] = "2026-09-26T01:54:00-04:00"
+            late["top_signal"] = [{"ticker": "ZZZ", "digest": "plunges"}]
+            fd.save_report(late)
+            assert pin.read_bytes() == frozen
+            live = json.loads((Path(d) / "2026-09-25_finviz_digest.json").read_text())
+            assert live["top_signal"][0]["ticker"] == "ZZZ"
+        finally:
+            fd.NEWS_DIR = orig
+
+
+def test_price_store_keeps_the_first_bar() -> None:
+    import pandas as pd
+    from src import price_store as ps
+    with tempfile.TemporaryDirectory() as d:
+        orig = (ps.PRICE_DIR, ps.STORE_PATH, ps.META_PATH)
+        root = Path(d)
+        ps.PRICE_DIR = root
+        ps.STORE_PATH = root / "ohlc.parquet"
+        ps.META_PATH = root / "meta.json"
+        try:
+            first = pd.DataFrame([{
+                "date": "2026-09-24", "ticker": "AAA",
+                "open": 10.0, "high": 11.0, "low": 9.0, "close": 10.5, "volume": 100,
+            }])
+            ps._save_store(first)
+            second = pd.DataFrame([{
+                "date": "2026-09-24", "ticker": "AAA",
+                "open": 99.0, "high": 99.0, "low": 99.0, "close": 99.0, "volume": 1,
+            }, {
+                "date": "2026-09-25", "ticker": "AAA",
+                "open": 12.0, "high": 12.0, "low": 12.0, "close": 12.5, "volume": 50,
+            }])
+            ps._save_store(pd.concat([ps._load_store(), second], ignore_index=True))
+            stored = ps._load_store()
+            old = stored[stored["date"] == pd.Timestamp("2026-09-24")].iloc[0]
+            assert float(old["open"]) == 10.0
+            assert (stored["date"] == pd.Timestamp("2026-09-25")).any()
+        finally:
+            ps.PRICE_DIR, ps.STORE_PATH, ps.META_PATH = orig
+
+
+def test_holdup_created_on_is_the_first_session_after_the_commit() -> None:
+    rec = fm.make_recipe(
+        "union_hot_n4_holdup", s_boost="holdup", rank="hot_score", top_n=4)
+    assert rec["created_on"] == "2026-09-21"
+    white = fm.make_recipe("union_white_both_n4_h1")
+    assert white["created_on"] == "2026-09-14"
+    base = fm.make_recipe("union_h1")
+    assert base["created_on"] == fm.START
+    combo = fm.recipe_created_on("combo_oh_5050_shared", {
+        "created_on": fm.START,
+        "members": ["overnight_mega_h1", "union_hot_n4_holdup"],
+    })
+    assert combo == "2026-09-21"
+
+
+def test_prune_does_not_use_full_window_stats() -> None:
+    payload = {
+        "from_date": "2026-08-13",
+        "to_date": "2026-09-24",
+        "dates": ["2026-09-20", "2026-09-21", "2026-09-24"],
+        "freeze": {"first_frozen": None},
+        "capital": 10000,
+        "recipes": [
+            fm.make_recipe("lucky_h1"),
+            fm.make_recipe("union_h1"),
+        ],
+        "stats": [
+            {"name": "lucky_h1", "win_rate": 0.9, "total_ret_pct": 80.0,
+             "start_rate": 0.9, "profitable_day_rate": 0.9,
+             "book_n_trades": 40, "audit_ok": True, "universe": "union"},
+            {"name": "union_h1", "win_rate": 0.2, "total_ret_pct": -5.0,
+             "start_rate": 0.2, "profitable_day_rate": 0.2,
+             "book_n_trades": 40, "audit_ok": True, "universe": "union"},
+        ],
+    }
+    with mock.patch.object(fm, "_baked_recipe_names", return_value={"union_h1"}):
+        out = fm.prune_payload_workable(payload)
+    names = {r["name"] for r in out["recipes"]}
+    assert "union_h1" in names
+    assert "lucky_h1" not in names
+    assert "full-window" in (out.get("workable") or {}).get("note", "").lower() or \
+        "Full-window" in (out.get("workable") or {}).get("note", "")
+
+
 def test_partial_ledger_is_not_frozen() -> None:
     panel = {
         "session_dates": ["2026-09-25"],
@@ -537,5 +707,11 @@ if __name__ == "__main__":
     test_resume_appends_one_day_and_keeps_prior_trades()
     test_reconstructed_label_and_append_does_not_rebuild_old_rows()
     test_load_or_build_does_not_rebuild_landed_dates()
+    test_published_0922_pin_beats_the_postclose_file()
+    test_late_digest_does_not_replace_preopen_tones()
+    test_save_report_does_not_overwrite_preopen_pin()
+    test_price_store_keeps_the_first_bar()
+    test_holdup_created_on_is_the_first_session_after_the_commit()
+    test_prune_does_not_use_full_window_stats()
     test_partial_ledger_is_not_frozen()
     print("factor-mine freeze tests passed")

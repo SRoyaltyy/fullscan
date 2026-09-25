@@ -598,9 +598,64 @@ def judge_sector_tone(tilts, sector):
     return None
 
 
+def _digest_is_preopen(data: dict | None, date: str) -> bool:
+    """True when ``generated_at`` is on ``date`` and before 09:30 ET."""
+    gen = str((data or {}).get("generated_at") or "")
+    if not gen or not date:
+        return False
+    try:
+        ts = datetime.fromisoformat(gen)
+    except ValueError:
+        return False
+    if ts.tzinfo is None:
+        ts = ts.replace(tzinfo=ET)
+    ts = ts.astimezone(ET)
+    try:
+        cutoff = datetime.strptime(str(date), "%Y-%m-%d").replace(
+            hour=9, minute=30, tzinfo=ET)
+    except ValueError:
+        return False
+    return ts < cutoff and ts.strftime("%Y-%m-%d") == str(date)
+
+
+def _preopen_digest_path(date: str) -> Path:
+    return NEWS_DIR / f"{date}_finviz_digest_preopen.json"
+
+
+def load_digest_asof(date: str):
+    """Digest knowable at 09:30 on ``date``.
+
+    Prefer the immutable pre-open pin. The live ``{date}_finviz_digest.json``
+    counts only when its stamp is still before 09:30 ET. A post-close
+    overwrite (01:54 ET on D+1) falls through to the prior knowable board.
+    """
+    date = str(date or "")
+    pinned = _jload(_preopen_digest_path(date)) or {}
+    if pinned:
+        return pinned, date
+    live = _jload(NEWS_DIR / f"{date}_finviz_digest.json") or {}
+    if live and _digest_is_preopen(live, date):
+        return live, date
+    idx = _INDEX or build_index()
+    sess = next((s for s in idx["sessions"] if s["date"] == date), None)
+
+    def knowable(s) -> bool:
+        d = s["date"]
+        if _preopen_digest_path(d).is_file():
+            return True
+        raw = _jload(NEWS_DIR / f"{d}_finviz_digest.json") or {}
+        return bool(raw) and _digest_is_preopen(raw, d)
+
+    hit = walk_prior(sess, knowable) if sess else None
+    if hit:
+        return load_digest_asof(hit["date"])
+    return {}, None
+
+
 def _digest_tones(date):
     """Ticker → tone from D's pre-open Finviz digest file only."""
-    data = _jload(NEWS_DIR / f"{date}_finviz_digest.json") or {}
+    data, _vintage = load_digest_asof(date)
+    data = data or {}
     out = {}
     rows = list(data.get("top_signal") or []) + list(
         data.get("all_ticker_digests_sample") or [])
@@ -624,8 +679,9 @@ def _digest_tones(date):
 
 
 def _digest_sector_tones(date):
-    """Sector → tone from D's digest by_sector bucket (mean polarity)."""
-    data = _jload(NEWS_DIR / f"{date}_finviz_digest.json") or {}
+    """Sector → tone from D's pre-open digest by_sector bucket."""
+    data, _vintage = load_digest_asof(date)
+    data = data or {}
     try:
         from .stock_book import _digest_polarity
     except Exception:
@@ -753,7 +809,8 @@ def _digest_book(date):
         from .stock_book import _digest_polarity
     except Exception:
         return {}
-    data = _jload(NEWS_DIR / f"{date}_finviz_digest.json") or {}
+    data, _vintage = load_digest_asof(date)
+    data = data or {}
     out = {}
     rows = list(data.get("top_signal") or []) + list(
         data.get("all_ticker_digests_sample") or [])

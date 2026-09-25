@@ -1250,6 +1250,7 @@ def combo_recipe(spec: dict) -> dict:
         "pool": spec["pool"],
         "hold_mix": True,
     })
+    rec["created_on"] = fm.recipe_created_on(spec["name"], rec)
     return rec
 
 
