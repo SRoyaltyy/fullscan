@@ -21,6 +21,13 @@ factor-mine sleeves may still scan the KEEP aisle
 Live Elite Overview Price is stamped on every buy/sell row after
 09:30 (`elite_live_px`). Soft-fail every source so
 publish_live_boards still writes a strip — except the clock assert.
+
+``data/day_board/<date>_strategy_tickets.json`` is the send-time
+record. Once that date's paper send is journaled
+(``data/paper_open/<date>_submit.json``) or that session's 09:30 ET
+has arrived, a later write that would change the dated file fails.
+The evening body goes to the undated copies and
+``<date>_strategy_tickets_draft.json`` instead.
 """
 from __future__ import annotations
 
@@ -1098,17 +1105,93 @@ def build(date: str) -> dict:
     return payload
 
 
-def write(date: str, payload: dict | None = None) -> list[Path]:
+class DatedTicketsLocked(RuntimeError):
+    """A send-time ticket file would change after the paper send or the open."""
+
+
+def tickets_open_cutoff(date: str) -> datetime:
+    """This session's 09:30 ET. A later write is an evening rewrite."""
+    year, month, day = (int(part) for part in str(date).split("-"))
+    return datetime(year, month, day, 9, 30, tzinfo=ET)
+
+
+def paper_submit_journal(date: str) -> Path:
+    return ROOT / "data" / "paper_open" / f"{date}_submit.json"
+
+
+def dated_tickets_draft(date: str) -> Path:
+    return DAY / f"{date}_strategy_tickets_draft.json"
+
+
+def dated_tickets_lock_reason(date: str, now: datetime | None = None) -> str | None:
+    """Why the dated file is frozen, or None while the send is still open.
+
+    Locked once ``data/paper_open/<date>_submit.json`` exists, or once
+    this session's 09:30 ET has arrived. A missing dated file may still
+    be written the first time.
+    """
+    reasons: list[str] = []
+    if paper_submit_journal(date).is_file():
+        reasons.append(f"paper send journaled ({date}_submit.json)")
+    clock = now or datetime.now(ET)
+    if clock.tzinfo is None:
+        clock = clock.replace(tzinfo=ET)
+    else:
+        clock = clock.astimezone(ET)
+    if clock >= tickets_open_cutoff(date):
+        reasons.append(f"after {date} 09:30 ET")
+    if not reasons:
+        return None
+    return "; ".join(reasons)
+
+
+def dated_tickets_locked(date: str, now: datetime | None = None) -> bool:
+    """True once the paper send is journaled or 09:30 ET has arrived."""
+    return dated_tickets_lock_reason(date, now) is not None
+
+
+def log_ticket_restate(date: str, *, commit: str, prev_sha: str, send_sha: str,
+                       path: Path | None = None) -> Path:
+    """Append one restore of a dated ticket file to RESTATEMENTS.log."""
+    dest = Path(path or (DAY / "RESTATEMENTS.log"))
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    line = (
+        f"{datetime.now(ET).isoformat()}\t"
+        f"data/day_board/{date}_strategy_tickets.json\trestored\t{commit}\t"
+        f"prev_sha256={prev_sha}\tsend_sha256={send_sha}\t"
+        "reason=evening overwrite restored to the send-time commit\n"
+    )
+    with dest.open("a", encoding="utf-8") as handle:
+        handle.write(line)
+    return dest
+
+
+def write(date: str, payload: dict | None = None, now: datetime | None = None) -> list[Path]:
     payload = payload or build(date)
     assert_session_look(payload, date)
     text = json.dumps(payload, indent=2)
+    dated = DAY / f"{date}_strategy_tickets.json"
+    reason = dated_tickets_lock_reason(date, now) if dated.is_file() else None
+    refuse = False
+    if reason:
+        have = dated.read_text(encoding="utf-8")
+        if have != text:
+            refuse = True
+            print(
+                f"[strategy-tickets] REFUSE rewrite {dated.name} ({reason})",
+                flush=True,
+            )
+    draft = dated_tickets_draft(date)
     paths = [
         DAY / "strategy_tickets.json",
-        DAY / f"{date}_strategy_tickets.json",
+        dated,
         FM_DIR / "strategy_tickets.json",
         DASH_FM / "strategy_tickets.json",
         DASH_FM / "today_strategies.json",
     ]
+    if refuse:
+        paths = [p for p in paths if p != dated]
+        paths.append(draft)
     wrote = []
     for p in paths:
         p.parent.mkdir(parents=True, exist_ok=True)
@@ -1186,6 +1269,11 @@ def write(date: str, payload: dict | None = None) -> list[Path]:
         f"errors={payload.get('errors') or []}",
         flush=True,
     )
+    if refuse:
+        raise DatedTicketsLocked(
+            f"refuse rewrite {dated.name} ({reason}). "
+            f"Evening body is in {draft.name}. Job failed."
+        )
     return wrote
 
 

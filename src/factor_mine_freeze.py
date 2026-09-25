@@ -739,6 +739,11 @@ def append_land(from_date: str, target: str, *, write: bool = False,
 
     payload = stamp_freeze(payload)
     payload["_frozen_dates"] = frozen_dates
+    if write:
+        from . import factor_mine_rules as fmr
+        recs = list(recipes or []) or list((payload or {}).get("recipes") or [])
+        if recs:
+            fmr.lock_recipe_rules(recs, write=True)
     if write and frozen_dates:
         write_panel_file(panel)
     elif write:

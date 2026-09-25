@@ -4,6 +4,7 @@ Run: PYTHONPATH=. python3 -m src.test_strategy_tickets
 """
 from __future__ import annotations
 
+from pathlib import Path
 from unittest import mock
 
 from src import strategy_tickets as st
@@ -230,6 +231,153 @@ def test_assert_open_lock_requires_webull_sit_names() -> None:
     st.assert_session_look(payload, "2026-09-14")
 
 
+def test_evening_run_does_not_rewrite_dated_tickets(tmp_path=None) -> None:
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+    import tempfile
+
+    if tmp_path is None:
+        tmp_path = Path(tempfile.mkdtemp())
+    et = ZoneInfo("America/New_York")
+    date = "2026-09-23"
+    morning = {
+        "date": date,
+        "generated_at": "2026-09-23T08:30:00-04:00",
+        "decision_readiness": {"ready": True, "fingerprint": "abc"},
+        "strategies": {
+            "union_hot_n4_h1": {
+                "date": date, "buy": [{"ticker": "INDP"}], "sell": [],
+                "s": 2.2, "status": "ok",
+            },
+        },
+    }
+    revised = {
+        "date": date,
+        "generated_at": "2026-09-23T09:20:00-04:00",
+        "decision_readiness": {"ready": True, "fingerprint": "abc"},
+        "strategies": {
+            "union_hot_n4_h1": {
+                "date": date, "buy": [{"ticker": "GLND"}], "sell": [],
+                "s": 2.2, "status": "ok",
+            },
+        },
+    }
+    evening = {
+        "date": date,
+        "generated_at": "2026-09-23T17:05:00-04:00",
+        "decision_readiness": {"ready": True, "fingerprint": "abc"},
+        "strategies": {
+            "union_hot_n4_h1": {
+                "date": date, "buy": [{"ticker": "FEAM"}], "sell": [],
+                "s": 2.2, "status": "ok",
+            },
+        },
+    }
+    with mock.patch.object(st, "DAY", tmp_path / "day"), \
+         mock.patch.object(st, "FM_DIR", tmp_path / "fm"), \
+         mock.patch.object(st, "DASH_FM", tmp_path / "dash"), \
+         mock.patch.object(st, "ROOT", tmp_path), \
+         mock.patch.object(st, "assert_session_look"), \
+         mock.patch("src.hard_red_sit_research.write_per_sleeve"):
+        st.write(date, morning, now=datetime(2026, 9, 23, 8, 30, tzinfo=et))
+        dated = tmp_path / "day" / f"{date}_strategy_tickets.json"
+        assert "INDP" in dated.read_text(encoding="utf-8")
+        st.write(date, revised, now=datetime(2026, 9, 23, 9, 20, tzinfo=et))
+        assert "GLND" in dated.read_text(encoding="utf-8")
+        frozen = dated.read_bytes()
+        for clock in (
+            datetime(2026, 9, 23, 9, 30, tzinfo=et),
+            datetime(2026, 9, 23, 17, 5, tzinfo=et),
+        ):
+            try:
+                st.write(date, evening, now=clock)
+                raised = False
+            except st.DatedTicketsLocked as exc:
+                raised = True
+                assert "Job failed" in str(exc)
+            assert raised
+            assert dated.read_bytes() == frozen
+        draft = tmp_path / "day" / f"{date}_strategy_tickets_draft.json"
+        assert "FEAM" in draft.read_text(encoding="utf-8")
+        live = (tmp_path / "day" / "strategy_tickets.json").read_text(encoding="utf-8")
+        assert "FEAM" in live
+        assert "INDP" not in dated.read_text(encoding="utf-8")
+        assert "GLND" in dated.read_text(encoding="utf-8")
+        late = "2026-09-24"
+        st.write(late, dict(evening, date=late), now=datetime(2026, 9, 24, 16, 0, tzinfo=et))
+        assert (tmp_path / "day" / f"{late}_strategy_tickets.json").is_file()
+
+
+def test_journal_locks_the_dated_file_before_the_open(tmp_path=None) -> None:
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+    import tempfile
+
+    if tmp_path is None:
+        tmp_path = Path(tempfile.mkdtemp())
+    et = ZoneInfo("America/New_York")
+    date = "2026-09-22"
+    sent = {
+        "date": date,
+        "decision_readiness": {"ready": True, "fingerprint": "abc"},
+        "strategies": {"union_hot_n4_h1": {
+            "date": date, "buy": [{"ticker": "AMD"}], "sell": [], "status": "ok",
+        }},
+    }
+    rewrite = {
+        "date": date,
+        "decision_readiness": {"ready": True, "fingerprint": "abc"},
+        "strategies": {"union_hot_n4_h1": {
+            "date": date, "buy": [{"ticker": "ZS"}], "sell": [], "status": "ok",
+        }},
+    }
+    with mock.patch.object(st, "DAY", tmp_path / "day"), \
+         mock.patch.object(st, "FM_DIR", tmp_path / "fm"), \
+         mock.patch.object(st, "DASH_FM", tmp_path / "dash"), \
+         mock.patch.object(st, "ROOT", tmp_path), \
+         mock.patch.object(st, "assert_session_look"), \
+         mock.patch("src.hard_red_sit_research.write_per_sleeve"):
+        morning = datetime(2026, 9, 22, 8, 30, tzinfo=et)
+        st.write(date, sent, now=morning)
+        dated = tmp_path / "day" / f"{date}_strategy_tickets.json"
+        frozen = dated.read_bytes()
+        journal = tmp_path / "data" / "paper_open" / f"{date}_submit.json"
+        journal.parent.mkdir(parents=True, exist_ok=True)
+        journal.write_text("{}", encoding="utf-8")
+        try:
+            st.write(date, rewrite, now=morning)
+            raised = False
+        except st.DatedTicketsLocked as exc:
+            raised = True
+            assert "journal" in str(exc)
+        assert raised
+        assert dated.read_bytes() == frozen
+        assert "AMD" in dated.read_text(encoding="utf-8")
+        draft = tmp_path / "day" / f"{date}_strategy_tickets_draft.json"
+        assert "ZS" in draft.read_text(encoding="utf-8")
+
+
+def test_ticket_restate_log_appends_one_line_per_restore(tmp_path=None) -> None:
+    import tempfile
+    if tmp_path is None:
+        tmp_path = Path(tempfile.mkdtemp())
+    dest = tmp_path / "RESTATEMENTS.log"
+    st.log_ticket_restate(
+        "2026-09-22", commit="18039b02cfe8d52c037df7ce765b0c9edb3e8f02",
+        prev_sha="aaa", send_sha="bbb", path=dest,
+    )
+    st.log_ticket_restate(
+        "2026-09-23", commit="409c73e31a8a011c2e204045e16c89df75bd85fb",
+        prev_sha="ccc", send_sha="ddd", path=dest,
+    )
+    lines = dest.read_text(encoding="utf-8").splitlines()
+    assert len(lines) == 2
+    assert "2026-09-22_strategy_tickets.json" in lines[0]
+    assert "18039b02cfe8d52c037df7ce765b0c9edb3e8f02" in lines[0]
+    assert "send_sha256=bbb" in lines[0]
+    assert "2026-09-23_strategy_tickets.json" in lines[1]
+
+
 def main() -> None:
     test_combo_would_buy_unions_member_lists()
     test_combo_skip_drops_long_and_short_clash()
@@ -242,6 +390,9 @@ def main() -> None:
     test_assert_fails_when_bake_is_not_session_open()
     test_open_lock_pins_indp_and_drops_friday()
     test_assert_open_lock_requires_webull_sit_names()
+    test_evening_run_does_not_rewrite_dated_tickets()
+    test_journal_locks_the_dated_file_before_the_open()
+    test_ticket_restate_log_appends_one_line_per_restore()
     from src.test_morning_scan import main as morning_scan_main
     morning_scan_main()
     from src.test_hot4_wire import main as hot4_wire_main
