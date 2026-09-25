@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T05:38:36.878037-04:00",
+  "generated_at": "2026-09-25T05:40:16.227905-04:00",
   "overall": "PARTIAL",
   "ranker_ready": true,
   "blockers": [],
@@ -177,7 +177,7 @@
       "yaml": "preopen_all.yml",
       "status": "PARTIAL",
       "inputs_ready": true,
-      "n_req_ok": 10,
+      "n_req_ok": 11,
       "n_req": 20,
       "n_opt_ok": 3,
       "n_opt": 3,
@@ -343,11 +343,11 @@
           "role": "optional",
           "status": "OK",
           "reason": "",
-          "size": 5415,
-          "said": "0 up / 0 down / 1 flat",
+          "size": 5589,
+          "said": "0 up / 0 down / 2 flat",
           "bullets": [
             "XLB FLAT +1.4",
-            "XLC missing",
+            "XLC FLAT -0.4",
             "XLY missing",
             "XLP missing"
           ]
@@ -359,8 +359,8 @@
           "role": "required",
           "status": "OK",
           "reason": "all_ok=False",
-          "size": 7258,
-          "said": "all_ok=False \u00b7 sectors 1/11 \u00b7 11 fail",
+          "size": 7251,
+          "said": "all_ok=False \u00b7 sectors 2/11 \u00b7 10 fail",
           "bullets": [
             "finviz_market_digest:missing",
             "sector_predict:missing",
@@ -410,11 +410,13 @@
           "name": "Sector predict \u2014 communication_services",
           "path": "01_daily/sectors/2026-09-25/communication_services_predict.md",
           "role": "required",
-          "status": "MISSING",
-          "reason": "missing",
-          "size": 0,
-          "said": "missing",
-          "bullets": []
+          "status": "OK",
+          "reason": "",
+          "size": 21174,
+          "said": "FLAT flat -0.386",
+          "bullets": [
+            "- news_mode: **on"
+          ]
         },
         {
           "key": "sector_consumer_cyclical",
@@ -516,7 +518,7 @@
           "bullets": []
         }
       ],
-      "said": "general UP  2.706 \u00b7 sectors 0 up / 0 down / 1 flat \u00b7 news news_mode: on \u00b7 400 raw / 81 usable \u00b7 US 10-Year Treasury Yield Tops 5.2%, Fueling Bets on Another Fed Rate Hike - blo",
+      "said": "general UP  2.706 \u00b7 sectors 0 up / 0 down / 2 flat \u00b7 news news_mode: on \u00b7 400 raw / 81 usable \u00b7 US 10-Year Treasury Yield Tops 5.2%, Fueling Bets on Another Fed Rate Hike - blo",
       "bullets": [
         "bad: 1w 10Y +10bp at 5.11 handle",
         "bad: Williams year-end hike 'reasonable'",
@@ -524,7 +526,7 @@
         "good: NQ +0.51% vs cash",
         "good: oil offered (BZ -6.92% / CL -1.34%)",
         "XLB FLAT +1.4",
-        "XLC missing",
+        "XLC FLAT -0.4",
         "XLY missing",
         "XLP missing",
         "XLE missing"
@@ -723,11 +725,11 @@
           "role": "input",
           "status": "OK",
           "reason": "",
-          "size": 5415,
-          "said": "0 up / 0 down / 1 flat",
+          "size": 5589,
+          "said": "0 up / 0 down / 2 flat",
           "bullets": [
             "XLB FLAT +1.4",
-            "XLC missing",
+            "XLC FLAT -0.4",
             "XLY missing",
             "XLP missing"
           ]
@@ -975,10 +977,10 @@
       "direction": "up"
     },
     "sectors": {
-      "said": "0 up / 0 down / 1 flat",
+      "said": "0 up / 0 down / 2 flat",
       "bullets": [
         "XLB FLAT +1.4",
-        "XLC missing",
+        "XLC FLAT -0.4",
         "XLY missing",
         "XLP missing",
         "XLE missing",
@@ -1723,70 +1725,70 @@
     },
     {
       "key": "sector_one",
-      "title": "Sector predict Basic Materials (1/11)",
+      "title": "Sector predict Communication Services (2/11)",
       "date": "2026-09-25",
       "ok": true,
       "pushed": true,
-      "at": "2026-09-25T05:38:36.287118-04:00",
+      "at": "2026-09-25T05:40:15.651896-04:00",
       "files": [
         {
-          "path": "01_daily/sectors/2026-09-25/basic_materials_predict.md",
+          "path": "01_daily/sectors/2026-09-25/communication_services_predict.md",
           "ok": true,
           "reason": "",
-          "size": 17356,
-          "preview": "# Sector Prediction \u2014 Basic Materials \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLB**\n- rubric: `00_grounding/sectors/basic_materials.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **1.377** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **2.772** (ES +0.28%, HG +0.66%, GC +0.90%, DX -0.02%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **-2.072** (raw -2.072)"
+          "size": 21174,
+          "preview": "# Sector Prediction \u2014 Communication Services \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLC**\n- rubric: `00_grounding/sectors/communication_services.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **-0.386** (mult 0.85)\n- regime: risk_off\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **2.55** (NQ +0.57%, ES +0.28%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **-3.612** (raw -3.612)"
         },
         {
-          "path": "01_daily/sectors/2026-09-25/basic_materials_predict_trace.md",
+          "path": "01_daily/sectors/2026-09-25/communication_services_predict_trace.md",
           "ok": true,
           "reason": "",
-          "size": 15142,
-          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Basic Materials 2026-09-25\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (150,427 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"copper price LME September 25 2026 backwardation inventories\"* \u2192 got 6 results (via ddg)\n- westmetall . market data . prices/lme stocks . copper, tin, lead, zinc, aluminium, nickel, gold, fine silver (https://www.westmetall.com/en/markdaten.php?action=table&field=LME_Cu_cash)\n- Copper Price Signals Tightening as LME Stocks Fall (https://discoveryalert.com/news/copper-price-lme-stocks-september-2026/)\n- Copper Market Tightens: LME Stocks Drop, Backwardation Widens - News and Statistics - IndexBox (https://www.indexbox.io/blog/copper-prices-firm-as-lme-inventories-tighten/)"
+          "size": 25788,
+          "preview": "# Reasoning trace \u2014 SECTOR PREDICT Communication Services 2026-09-25\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (146,644 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"Meta Alphabet stock premarket September 25 2026\"* \u2192 got 6 results (via gnews_rss)\n- Meta's stock surges as it moves from AI laggard to leader - Yahoo Finance (https://news.google.com/rss/articles/CBMif0FVX3lxTE9nSDQ4T2hzVFUxZk1kZWhjV0NVd09jYlI4b3BfNG5jVl84QjBPVko5ZURKZGdDa0U0LVJGaURjLXU5bkRWS0JLMHlDQ09uZW84bnUteFpneFhmVUpFby1DVDd0ZE44UW1rc1hYLXNRQ1ctSlBEbnVWemdCN2U5RGs?oc=5)\n- Burry warns of write-offs by hyperscalers as AI spending surges (MSFT:NASDAQ) - Seeking Alpha (https://news.google.com/rss/articles/CBMiowFBVV95cUxQbWIwZjNnX1hqTXc3blRxbFlTa3lhVnNKeU11U0FfRzg"
         },
         {
-          "path": "01_daily/_transcripts/2026-09-25_sector_basic_materials_predict.json",
+          "path": "01_daily/_transcripts/2026-09-25_sector_communication_services_predict.json",
           "ok": true,
           "reason": "",
-          "size": 223075,
+          "size": 243059,
           "preview": "keys: model, messages"
         },
         {
           "path": "01_daily/2026-09-25_preopen_qc.json",
           "ok": true,
           "reason": "",
-          "size": 7258,
+          "size": 7251,
           "preview": "keys: date, generated_at, items, sectors, sector_n_ok, sector_n_total, all_ok"
         },
         {
           "path": "01_daily/sectors/2026-09-25/_qc.json",
           "ok": true,
           "reason": "",
-          "size": 1254,
+          "size": 1250,
           "preview": "keys: date, n_ok, n_total, sectors"
         },
         {
           "path": "01_daily/sectors/2026-09-25/_BOARD.md",
           "ok": true,
           "reason": "",
-          "size": 1568,
-          "preview": "# Sector Board \u2014 2026-09-25\nGenerated: **2026-09-25T05:38:36.271877-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
+          "size": 1571,
+          "preview": "# Sector Board \u2014 2026-09-25\nGenerated: **2026-09-25T05:40:15.635265-04:00** (America/New_York)\nBirds-eye of all 11 Finviz sectors. Individual write-ups live next to this file (`technology_predict.md`, etc.)."
         },
         {
           "path": "01_daily/sectors/2026-09-25/_board.json",
           "ok": true,
           "reason": "",
-          "size": 5415,
+          "size": 5589,
           "preview": "keys: date, generated_at, sectors"
         },
         {
           "path": "03_scoreboard/scoreboard.json",
           "ok": true,
           "reason": "",
-          "size": 902579,
+          "size": 903697,
           "preview": "keys: runs"
         }
       ],
-      "preview": "# Sector Prediction \u2014 Basic Materials \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLB**\n- rubric: `00_grounding/sectors/basic_materials.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **1.377** (mult 0.85)\n- regime: mixed\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **2.772** (ES +0.28%, HG +0.66%, GC +0.90%, DX -0.02%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **-2.072** (raw -2.072) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Basic Materials 2026-09-25\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (150,427 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"copper price LME September 25 2026 backwardation inventories\"* \u2192 got 6 results (via ddg)\n- westmetall . market data . prices/lme stocks . copper, tin, lead, zinc, aluminium, nickel, gold, fine silver (https://www.westmetall.com/en/markdaten.php?action=table&field=LME_Cu_cash)\n- Copper Price Signals Tightening as LME Stocks Fall (https://discoveryalert.com/news/copper-price-lme-stocks-september-2026/)\n- Copper Market Tight"
+      "preview": "# Sector Prediction \u2014 Communication Services \u2014 2026-09-25\n- news_mode: **on**\n- ETF: **XLC**\n- rubric: `00_grounding/sectors/communication_services.md`\n- predicted_direction: **flat**\n- predicted_magnitude_band: **flat**\n- total_score: **-0.386** (mult 0.85)\n- regime: risk_off\n- divergence_flagged: **True**\n- engine: v2 \u00b7 tape_anchor **2.55** (NQ +0.57%, ES +0.28%) \u00b7 index_carry **0.676** (general 2.706) \u00b7 llm_overlay **-3.612** (raw -3.612) \u00b7 # Reasoning trace \u2014 SECTOR PREDICT Communication Services 2026-09-25\n**Step 0 \u2014 Setup.** Loaded the rubric, standing lessons, and Channel 1 data (146,644 characters of input). Model: `deepseek-chat`. Web search is ENABLED; the model must research current events before judging.\n**Step 1 \u2014 Research.** The model wanted to know: *\"Meta Alphabet stock premarket September 25 2026\"* \u2192 got 6 results (via gnews_rss)\n- Meta's stock surges as it moves from AI laggard to leader - Yahoo Finance (https://news.google.com/rss/articles/CBMif0FVX3lxTE9nSDQ4T2hzVFUxZk1kZWhjV0NVd09jYlI4b3BfNG5jVl84QjBPVko5ZURKZGdDa0U0LVJGaURjLXU5bkRWS0JLMHlDQ09uZW84bnUteFpneFhmVUpFby1DVDd0ZE44UW1rc1hYLXNRQ1ctSlBEbnVWemdCN2U5RGs?oc=5)\n- Burry warns of write-offs by hyperscalers a"
     }
   ],
   "href": {
