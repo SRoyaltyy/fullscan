@@ -1,6 +1,6 @@
 # MAP HEAT — 2026-09-25
 
-Export `finviz_2026-09-24.csv` · 11616 names · generated 2026-09-25T04:20:15.712152-04:00
+Export `finviz_2026-09-25.csv` · 11616 names · generated 2026-09-25T04:20:36.576875-04:00
 
 ## TAPE (live futures)
 | Contract | Last | Change |
@@ -251,7 +251,7 @@ COLD (1w):
 - **Real Estate** -0.5% 1d -1.9% 1w · VNQ, SCHH, XLRE
 
 ## TICKER-TAGGED NEWS (Finviz v=3)
-- 15 min **SPCX,NVDA,GOOGL,GOOG** SPCX Stock Climbs Premarket As Musk Teases 3 Nvidia Chip Waves  Google Books SpaceX Ride For Orbital AI Test (Stocktwits)
+- 16 min **SPCX,NVDA,GOOGL,GOOG** SPCX Stock Climbs Premarket As Musk Teases 3 Nvidia Chip Waves  Google Books SpaceX Ride For Orbital AI Test (Stocktwits)
 - 21 min **PL,FLY,RKLB,RDW,SPCX** Stocktwits Space Race Weekly: Why RKLB, FLY, RDW And PL Are Outpacing SPCX (Stocktwits)
 - 25 min **KITT** Nauticus Robotics, Inc. Signs Non-Binding Letter of Intent for Strategic Investment of Up to $50 Million (PR Newswire)
 - 31 min **NVO** Nanexa shares rocket 114% on $1.3 billion Novo Nordisk licensing deal (Investing.com)
