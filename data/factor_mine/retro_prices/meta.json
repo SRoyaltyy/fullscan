@@ -2,11 +2,11 @@
   "locked": true,
   "adjusted": false,
   "auto_adjust": false,
-  "sha256": "f4df5d73aa9fb36299ec2c523f6eaed4179fc14e8cb63db2f18df081f7d5b6b4",
+  "sha256": "1278954df72a3d12bfe0b9795dbf3db4124e6556a827d10962636c2dd3954d19",
   "actions": "data/factor_mine/retro_prices/actions.parquet",
   "start": "2026-05-01",
   "end": "2026-09-24",
-  "n_rows": 276762,
+  "n_rows": 279768,
   "n_tickers": 2797,
-  "bytes": 4290164
+  "bytes": 4360011
 }
