@@ -1,0 +1,99 @@
+{
+  "date": "2026-09-25",
+  "generated_at": "2026-09-25T16:28:43.162013-04:00",
+  "timezone": "America/New_York",
+  "source": "live",
+  "source_url": "https://elite.finviz.com/",
+  "archive_snapshot_ts": null,
+  "archive_snapshot_at": null,
+  "archive_url": null,
+  "clock_legal": true,
+  "clock_same_morning": false,
+  "clock_use": "next_open",
+  "clock_legal_for": "2026-09-28",
+  "capture_slot": "close",
+  "clock_rule": "Live post-close answer-key (~16:05 ET). Always next_open for the NEXT session (2026-09-28) — never same_morning. Writes *_finviz_market_digest_close.* only. Capture only — not tape_anchor / predict / #210.",
+  "kind": "finviz_homepage_market_digest_close",
+  "represents": "Finviz homepage post-close answer-key. clock_use is always next_open; clock_legal_for is the next NYSE session. Lives at *_finviz_market_digest_close.*. Does not replace the same_morning warm-up file. Not quote-page ticker blurbs.",
+  "error": null,
+  "headline": "US stocks closed higher as oil eased on US‑Iran talks and tech outperformed despite Treasury yields holding near multi‑decade highs",
+  "raw_text": "- The Dow Jones Industrial Average climbed 425 points (0.93%) to 51,829, the S&P 500 ($SPX) rose 0.51% to 7,743, the Nasdaq Composite ($COMP) gained 0.48% to 27,069, the Nasdaq 100 ($NDX) added 0.42%, and the Russell 2000 (IWM) advanced 0.11%\n- Crude oil (@CL) pulled back after reports of US‑Iran technical talks that could reopen the Strait of Hormuz and potentially lead to sanctions relief, helping indexes secure weekly gains even as Treasury yields hovered around 5.2%\n- Technology shares led the advance, with Akamai Technologies (AKAM) rising about 3% after unveiling an $11.6 billion seven‑year cloud computing and services deal with Anthropic that includes warrants for up to a 5% equity stake, about $5.5 billion in capex, and potential expansion to $20 billion\n- Microsoft (MSFT) rose 3.7% after introducing new Copilot AI capabilities, including code‑generation tools and an always‑on agentic AI assistant\n- Costco (COST) shares gained after the company disclosed it received $184 million in tariff refunds and said most of the windfall will be used to fund lower prices\n- The University of Michigan consumer sentiment index slipped to a four‑month low of 48.1 in September, slightly above the 47.6 consensus, while one‑year inflation expectations ticked up to 4.6%\n- With few major earnings releases and limited after‑hours moves, focus shifted to next week’s US data slate, including the jobs report, inflation readings, and durable goods orders",
+  "raw_summary_md": "- The **Dow Jones Industrial Average** climbed **425 points (0.93%)** to **51,829**, the **S&P 500** ([$SPX](https://finviz.com/index/SPX?p=d)) rose **0.51%** to **7,743**, the **Nasdaq Composite** ([$COMP](https://finviz.com/index/COMP?p=d)) gained **0.48%** to **27,069**, the **Nasdaq 100** ([$NDX](https://finviz.com/index/NDX?p=d)) added **0.42%**, and the **Russell 2000** ([IWM](https://finviz.com/quote?t=IWM)) advanced **0.11%**\n- **Crude oil** ([@CL](https://finviz.com/futures_charts?t=CL)) **pulled back** after reports of **US‑Iran technical talks** that could reopen the **Strait of Hormuz** and potentially lead to sanctions relief, helping indexes secure weekly gains even as **Treasury yields hovered around 5.2%**\n- **Technology shares led the advance**, with **Akamai Technologies** ([AKAM](https://finviz.com/quote?t=AKAM)) rising about **3%** after unveiling an **$11.6 billion seven‑year cloud computing and services deal with Anthropic** that includes warrants for up to a **5% equity stake**, about **$5.5 billion in capex**, and **potential expansion to $20 billion**\n- **Microsoft** ([MSFT](https://finviz.com/quote?t=MSFT)) rose **3.7%** after introducing **new Copilot AI capabilities**, including code‑generation tools and an always‑on agentic AI assistant\n- **Costco** ([COST](https://finviz.com/quote?t=COST)) shares gained after the company disclosed it received **$184 million in tariff refunds** and said **most of the windfall will be used to fund lower prices**\n- The **University of Michigan consumer sentiment index** slipped to a four‑month low of **48.1** in September, slightly above the **47.6 consensus**, while **one‑year inflation expectations** ticked up to **4.6%**\n- With **few major earnings releases** and limited after‑hours moves, focus shifted to **next week’s US data slate**, including the **jobs report**, **inflation readings**, and **durable goods orders**",
+  "index_moves": [
+    {
+      "name": "Dow Jones Industrial Average",
+      "code": "DJI",
+      "change_pct": 0.93,
+      "verb": "climbed"
+    },
+    {
+      "name": "S&P 500",
+      "code": "SPX",
+      "change_pct": 0.51,
+      "verb": "rose"
+    },
+    {
+      "name": "Nasdaq Composite",
+      "code": "COMP",
+      "change_pct": 0.48,
+      "verb": "gained"
+    },
+    {
+      "name": "Russell 2000",
+      "code": "RUT",
+      "change_pct": 0.11,
+      "verb": "advanced"
+    }
+  ],
+  "oil": null,
+  "cpi": null,
+  "fed_odds": null,
+  "named_tickers": [
+    "AKAM",
+    "MSFT",
+    "COST"
+  ],
+  "named_leaders": [
+    "AKAM",
+    "MSFT",
+    "COST"
+  ],
+  "calendar": [
+    "With few major earnings releases and limited after‑hours moves, focus shifted to next week’s US data slate, including the jobs report, inflation readings, and durable goods orders"
+  ],
+  "prior_close": {
+    "spx": 0.51,
+    "nasdaq": 0.48,
+    "dow": 0.93
+  },
+  "cpi_fed": {
+    "cpi": null,
+    "fed_odds": null
+  },
+  "next_session_calendar": {
+    "housing": false,
+    "retail": false,
+    "fed": false,
+    "bullets": [
+      "With few major earnings releases and limited after‑hours moves, focus shifted to next week’s US data slate, including the jobs report, inflation readings, and durable goods orders"
+    ],
+    "text": "With few major earnings releases and limited after‑hours moves, focus shifted to next week’s US data slate, including the jobs report, inflation readings, and durable goods orders"
+  },
+  "earnings_slate": {
+    "tickers": [],
+    "text": ""
+  },
+  "geo_grain": {
+    "geo": true,
+    "grain": false,
+    "flags": [
+      "geo"
+    ],
+    "text": "Crude oil (@CL) pulled back after reports of US‑Iran technical talks that could reopen the Strait of Hormuz and potentially lead to sanctions relief, helping indexes secure weekly gains even as Treasury yields hovered around 5.2%"
+  },
+  "finviz_id": 294839,
+  "finviz_ticker": "$MARKET",
+  "finviz_published_at": "2026-09-25T16:06:51.7",
+  "finviz_source": "market_summary",
+  "finviz_sentiment": "good"
+}

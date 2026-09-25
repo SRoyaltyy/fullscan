@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T16:11:35.405325-04:00",
+  "generated_at": "2026-09-25T16:28:44.004690-04:00",
   "overall": "OK",
   "ranker_ready": true,
   "counts": {
@@ -169,59 +169,6 @@
     ]
   },
   "lands": [
-    {
-      "key": "stock_book",
-      "title": "Stock book + green",
-      "date": "2026-09-25",
-      "ok": true,
-      "pushed": true,
-      "at": "2026-09-25T06:12:05.451731-04:00",
-      "files": [
-        {
-          "path": "data/stock_book/2026-09-25_stock_book.json",
-          "ok": true,
-          "reason": "",
-          "size": 1566667,
-          "preview": "1d BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP"
-        },
-        {
-          "path": "data/stock_book/2026-09-25_green.json",
-          "ok": true,
-          "reason": "",
-          "size": 2250,
-          "preview": "green 138 \u00b7 NTCT, SONO, GDYN, YMM, EXLS, TDC, NTNX, LSCC, TRMB, SPSC"
-        },
-        {
-          "path": "data/stock_book/2026-09-25_input_health.json",
-          "ok": true,
-          "reason": "",
-          "size": 2474,
-          "preview": "keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst"
-        },
-        {
-          "path": "data/stock_book/2026-09-25_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 13809,
-          "preview": "2026-09-25 BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP"
-        },
-        {
-          "path": "data/stock_book/latest_suggestions.json",
-          "ok": true,
-          "reason": "",
-          "size": 13809,
-          "preview": "2026-09-25 BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP"
-        },
-        {
-          "path": "01_daily/2026-09-25_stock_book.md",
-          "ok": true,
-          "reason": "",
-          "size": 91800,
-          "preview": "# Stock book \u2014 2026-09-25\n_Generated 2026-09-25T06:10:44.715993-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-        }
-      ],
-      "preview": "1d BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP \u00b7 green 138 \u00b7 NTCT, SONO, GDYN, YMM, EXLS, TDC, NTNX, LSCC, TRMB, SPSC \u00b7 keys: date, generated_at, inputs, family_status, families_present, learn_grade, worst \u00b7 2026-09-25 BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP \u00b7 2026-09-25 BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP \u00b7 # Stock book \u2014 2026-09-25\n_Generated 2026-09-25T06:10:44.715993-04:00_\nThis file is the **human read** of one run. CSV/JSON next to it are the machine files."
-    },
     {
       "key": "live_boards",
       "title": "Live 1d BUY/SELL strip",
@@ -718,6 +665,31 @@
         }
       ],
       "preview": "2026-09-25 BUY SONO, OMER, PDFS, FIVN, VCYT, REGN, OLLI, CCC \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, HP, PUMP \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-09-25 BUY SONO, OMER, PDFS, FIVN, VCYT, REGN, OLLI, CCC \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, HP, PUMP \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-25 BUY SONO, OMER, PDFS, FIVN, VCYT, REGN, OLLI, CCC \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, HP, PUMP \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-25 BUY SONO, OMER, PDFS, FIVN, VCYT, REGN, OLLI, CCC \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, HP, PUMP \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategi"
+    },
+    {
+      "key": "finviz_market_digest_close",
+      "title": "Finviz homepage market digest (close)",
+      "date": "2026-09-25",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-25T16:28:43.188570-04:00",
+      "files": [
+        {
+          "path": "01_daily/news/2026-09-25_finviz_market_digest_close.json",
+          "ok": true,
+          "reason": "",
+          "size": 6655,
+          "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for"
+        },
+        {
+          "path": "01_daily/news/2026-09-25_finviz_market_digest_close.md",
+          "ok": true,
+          "reason": "",
+          "size": 3150,
+          "preview": "# Finviz homepage market digest (close) \u2014 2026-09-25\n**Generated:** 2026-09-25T16:28:43.162013-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed higher as oil eased on US\u2011Iran talks and tech outperformed despite Treasury yields holding near multi\u2011decade highs\n**Prior close:** SPX +0.51%  Nasdaq +0.48%  Dow +0.93%\n**SPX:** +0.51%  **Nasdaq:** +0.48%  **Dow:** +0.93%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** AKAM, MSFT, COST\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-28\n**Clock use:** `next_open`"
+        }
+      ],
+      "preview": "keys: date, generated_at, timezone, source, source_url, archive_snapshot_ts, archive_snapshot_at, archive_url, clock_legal, clock_same_morning, clock_use, clock_legal_for \u00b7 # Finviz homepage market digest (close) \u2014 2026-09-25\n**Generated:** 2026-09-25T16:28:43.162013-04:00 (America/New_York)\n**Source:** `live`\n**Banner:** US stocks closed higher as oil eased on US\u2011Iran talks and tech outperformed despite Treasury yields holding near multi\u2011decade highs\n**Prior close:** SPX +0.51%  Nasdaq +0.48%  Dow +0.93%\n**SPX:** +0.51%  **Nasdaq:** +0.48%  **Dow:** +0.93%\n**Oil:** \u2014\n**CPI/Fed:** \u2014\n**Leaders:** AKAM, MSFT, COST\n**Next session:** housing no \u00b7 retail no \u00b7 Fed no\n**Earnings slate:** \u2014\n**Geo/grain:** geo\n**Clock legal for:** 2026-09-28\n**Clock use:** `next_open`"
     }
   ],
   "day_board": "https://sroyaltyy.github.io/fullscan/dashboard/day-board/"
