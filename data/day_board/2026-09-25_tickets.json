@@ -1,62 +1,58 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T06:57:59.298474-04:00",
-  "overall": "PARTIAL",
+  "generated_at": "2026-09-25T10:02:19.031489-04:00",
+  "overall": "OK",
   "ranker_ready": true,
   "counts": {
-    "ok": 6,
-    "partial": 1,
-    "fail": 1,
+    "ok": 8,
+    "partial": 0,
+    "fail": 0,
     "n": 8
   },
   "buy_1d": [
     {
-      "ticker": "OMER",
-      "score": 0.7847211159260632
-    },
-    {
-      "ticker": "VCYT",
-      "score": 0.7777581375779099
-    },
-    {
       "ticker": "SONO",
-      "score": 0.7640985284444071
+      "score": 0.8508945066798499
     },
     {
-      "ticker": "OLLI",
-      "score": 0.7241525448590912
-    },
-    {
-      "ticker": "ELF",
-      "score": 0.763646058597208
-    },
-    {
-      "ticker": "CCC",
-      "score": 0.6541536393354281
-    },
-    {
-      "ticker": "CNK",
-      "score": 0.6831512700464306
-    },
-    {
-      "ticker": "REGN",
-      "score": 0.25750996085965333
+      "ticker": "OMER",
+      "score": 0.8019102788133965
     },
     {
       "ticker": "PDFS",
-      "score": 0.6738574602843217
+      "score": 0.7602445116807803
     },
     {
       "ticker": "FIVN",
-      "score": 0.6605482803251586
+      "score": 0.7613574697264032
     },
     {
-      "ticker": "MRVI",
-      "score": 0.6793243705498433
+      "ticker": "VCYT",
+      "score": 0.7856439025015278
+    },
+    {
+      "ticker": "REGN",
+      "score": 0.309258569261249
+    },
+    {
+      "ticker": "OLLI",
+      "score": 0.7458249158595283
+    },
+    {
+      "ticker": "CCC",
+      "score": 0.6800935790627343
+    },
+    {
+      "ticker": "ELF",
+      "score": 0.781277465959759
+    },
+    {
+      "ticker": "ADMA",
+      "score": 0.6929160046044809
     },
     {
       "ticker": "TAL",
-      "score": 0.6572899960927052
+      "score": 0.6670356385316383
     },
     {
       "ticker": "PRCH",
@@ -64,7 +60,11 @@
     },
     {
       "ticker": "COCO",
-      "score": 0.6509060201736245
+      "score": 0.6710433276831007
+    },
+    {
+      "ticker": "CNK",
+      "score": 0.6082820203724919
     },
     {
       "ticker": "STGW",
@@ -78,15 +78,15 @@
     },
     {
       "ticker": "AESI",
-      "score": -0.5522023994858832
+      "score": -0.5785512660521732
     },
     {
       "ticker": "KGS",
-      "score": -0.4852138692418286
+      "score": -0.5284718180236481
     },
     {
       "ticker": "ACDC",
-      "score": -0.4834840189635238
+      "score": -0.5098328855298138
     },
     {
       "ticker": "BXMT",
@@ -94,23 +94,31 @@
     },
     {
       "ticker": "UUUU",
-      "score": -0.44235067799527505
+      "score": -0.46248798550475134
+    },
+    {
+      "ticker": "HP",
+      "score": -0.4590250512474291
+    },
+    {
+      "ticker": "PUMP",
+      "score": -0.4397046307058269
     },
     {
       "ticker": "REAX",
       "score": -0.43568214767380015
     },
     {
-      "ticker": "HP",
-      "score": -0.4072764428458334
+      "ticker": "NOG",
+      "score": -0.4323941544095913
     },
     {
-      "ticker": "BBY",
-      "score": -0.40301580050904895
+      "ticker": "BTU",
+      "score": -0.4158200752771101
     },
     {
-      "ticker": "PUMP",
-      "score": -0.4023781603090172
+      "ticker": "URG",
+      "score": -0.40240277390292833
     },
     {
       "ticker": "KREF",
@@ -121,16 +129,8 @@
       "score": -0.3803146909356479
     },
     {
-      "ticker": "BTU",
-      "score": -0.3667594942774611
-    },
-    {
-      "ticker": "URG",
-      "score": -0.36507630350611864
-    },
-    {
-      "ticker": "NOG",
-      "score": -0.36319626590046594
+      "ticker": "RC",
+      "score": -0.37975361315202416
     }
   ],
   "flatten": {
@@ -1491,6 +1491,115 @@
         }
       ],
       "preview": "# flatten_robust card \u2014 2026-09-25\n_Generated 2026-09-25T10:18:14 \u2014 live `flatten_robust`._\n**S=+2.71; no flatten (0 priced BUYs, prior book=yes); 16:00 refill robust:3d_size from leftover cash; skip names already held**\n- Score **+2.71** (UP) \u00b7 route **io**\n- Cash leftover **$93,281.84** (after 09:30 $72,566.89 \u00b7 after 16:00 $82,564.00)\n- Prior close **$103,291.91** \u00b7 09:30 **$103,291.91** \u00b7 overnight **$+0.00** \u00b7 session **$-20,727.90** \u00b7 16:00 **$82,564.00**\n- Overnight lots **6** \u00b7 priced mover BUYs **0** \u00b7 prior book yes\n- Planned buy cost **$20,714.95** \u2264 leftover after sells **$103,278.95** \u00b7 2026-09-25 BUY \u2014 \u00b7 SELL \u2014 \u00b7 [{\"date\": \"2026-08-13\", \"route\": \"io\", \"score\": 8.525, \"predict\": \"UP\", \"yday_equity\": 100000.0, \"open_cash\": 100000.0, \"open_held\": 0, \"open_equity\": 100000.0, \"overnight_delta\": 0.0, \"session_delta\": -169.94, \"equity\": 99830.06, \"cash\": 9917.52, \"overnight_names\": \"\", \"overnight\": [], \"marks\": [{\"ticker\": \"BTSG\", \"sleeve\": \"io_core\", \"shares_open\": 0, \"shares_close\": 166, \"shares\": 166, \"side\": \"BUY\", \"yday_px\": null, \"open_px\": 59.8, \"close_px\": 60.23, \"entry_px\": 60.23, \"entry_date\": \"2026-08-13\", \"overnight\": 0.0, \"session\": 71.38, \"day\": 71.38, \"pct_ove"
+    },
+    {
+      "key": "live_boards",
+      "title": "live_boards",
+      "date": "2026-09-25",
+      "ok": true,
+      "pushed": true,
+      "at": "2026-09-25T06:59:37.611826-04:00",
+      "files": [
+        {
+          "path": "data/day_board/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 34559,
+          "preview": "2026-09-25 BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP"
+        },
+        {
+          "path": "data/day_board/latest.json",
+          "ok": true,
+          "reason": "",
+          "size": 719,
+          "preview": "keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages"
+        },
+        {
+          "path": "data/day_board/2026-09-25.json",
+          "ok": true,
+          "reason": "",
+          "size": 124162,
+          "preview": "keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href"
+        },
+        {
+          "path": "data/day_board/2026-09-25_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 87209,
+          "preview": "2026-09-25 BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP"
+        },
+        {
+          "path": "data/day_board/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 784192,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/2026-09-25_strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 784192,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "data/day_board/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1099614,
+          "preview": "2026-09-25 BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP"
+        },
+        {
+          "path": "data/factor_mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 784192,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today.json",
+          "ok": true,
+          "reason": "",
+          "size": 87209,
+          "preview": "2026-09-25 BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP"
+        },
+        {
+          "path": "dashboard/factor-mine/strategy_tickets.json",
+          "ok": true,
+          "reason": "",
+          "size": 784192,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/factor-mine/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 784192,
+          "preview": "keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open"
+        },
+        {
+          "path": "dashboard/today_strategies.json",
+          "ok": true,
+          "reason": "",
+          "size": 1099614,
+          "preview": "2026-09-25 BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP"
+        },
+        {
+          "path": "data/day_board/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1788,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        },
+        {
+          "path": "dashboard/factor-mine/hold_live_px.json",
+          "ok": true,
+          "reason": "",
+          "size": 1788,
+          "preview": "keys: date, generated_at, featured, quote, banner, clock_rule, sleeves, n_lots, looker"
+        }
+      ],
+      "preview": "2026-09-25 BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP \u00b7 keys: date, generated_at, overall, ranker_ready, counts, dates, href, pages \u00b7 keys: date, generated_at, overall, ranker_ready, blockers, counts, processes, news_mode, news_mode_reason, selections, lands, href \u00b7 2026-09-25 BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-25 BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 2026-09-25 BUY OMER, VCYT, SONO, OLLI, ELF, CCC, CNK, REGN \u00b7 SELL ARE, AESI, KGS, ACDC, BXMT, UUUU, REAX, HP \u00b7 keys: date, generated_at, n, n_ok, families, strategies, order, errors, look, clock_use, clock_legal_for, session_open \u00b7 keys: date, generated_at, n, n_ok, families, strategies, orde"
     }
   ],
   "source": "publish_live_boards"
