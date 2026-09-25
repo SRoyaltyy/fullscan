@@ -1,6 +1,6 @@
 {
   "date": "2026-09-25",
-  "generated_at": "2026-09-25T06:10:41.100030-04:00",
+  "generated_at": "2026-09-25T07:15:36.336450-04:00",
   "inputs": [
     {
       "name": "finviz_export",
@@ -49,7 +49,7 @@
       "family": "ab",
       "status": "ok",
       "n": 11673,
-      "detail": "2026-09-25_ab_checklist_enriched.csv \u00b7 1 duplicate tickers"
+      "detail": "2026-09-25_ab_checklist_enriched.csv"
     },
     {
       "name": "peer_rs",
