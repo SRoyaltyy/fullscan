@@ -424,5 +424,145 @@
     "borrow": 0.003,
     "flat_bp_round_trip": 15,
     "note": "Same 12 gates, scored only as research. Not part of the 37."
+  },
+  "own_provenance": {
+    "cutoff": "2026-09-14T09:30:00-04:00",
+    "method": "git log --follow and pickaxe (-S) on src/factor_mine.py and src/ohlc_ripper.py. Label designed_after only when the Factor Mine recipe or gate this candidate derives from was first created or last changed after that cutoff. Hold 2 is the white-horizon hold set. Nothing in the gates, holds, or stops was retuned.",
+    "relabelled": [],
+    "holdup_not_in_list": {
+      "recipe": "union_hot_n4_holdup",
+      "first_commit": "3032fdcdd",
+      "first_at": "2026-09-19T11:20:36Z",
+      "note": "Holdup was built after the cutoff, so it would be designed_after for 2026-09-14 through 2026-09-25. It is not one of these 20."
+    },
+    "bases": [
+      {
+        "id": "lg_hot",
+        "derives_from": "union_last_green_h1 and union_last_green_h3, ranked like union_hot_score",
+        "first_commit": "8e8c36a71",
+        "first_at": "2026-09-05T07:50:04Z",
+        "last_rule_change_commit": "a714ba9c0",
+        "last_rule_change_at": "2026-09-10T13:10:03Z",
+        "designed_after": false,
+        "note": "last_green plus no alarm, rank hot_score. Both the recipe line and the matcher predate the cutoff."
+      },
+      {
+        "id": "rsi_os",
+        "derives_from": "union_rsi_os_h1 and union_rsi_os_h3",
+        "first_commit": "24ebb9b7c",
+        "first_at": "2026-09-14T04:03:35Z",
+        "last_rule_change_commit": "24ebb9b7c",
+        "last_rule_change_at": "2026-09-14T04:03:35Z",
+        "designed_after": false,
+        "note": "Added at 00:03 ET on 2026-09-14, before the 09:30 ET cutoff."
+      },
+      {
+        "id": "rvol_lg",
+        "derives_from": "union_last_green plus the rvol_min matcher (coil_off). The 1.5 floor is FLOW_RVOL.",
+        "first_commit": "8e8c36a71",
+        "first_at": "2026-09-05T07:50:04Z",
+        "last_rule_change_commit": "24ebb9b7c",
+        "last_rule_change_at": "2026-09-14T04:03:35Z",
+        "designed_after": false,
+        "note": "No shipped recipe has require rvol_min 1.5. The matcher dates to 2026-09-05 (last line touch a714ba9c0 on 2026-09-10). FLOW_RVOL=1.5 landed at 00:03 ET on 2026-09-14. The exact pair was written into this list on 2026-09-25 and was not relabelled, because both ingredients predate 09:30 ET."
+      },
+      {
+        "id": "ret5_up",
+        "derives_from": "ret_5 rank (union_ret_5) with ret_5_min 0, the same floor as coil_off",
+        "first_commit": "8e8c36a71",
+        "first_at": "2026-09-05T07:50:04Z",
+        "last_rule_change_commit": "a714ba9c0",
+        "last_rule_change_at": "2026-09-10T13:10:03Z",
+        "designed_after": false,
+        "note": "Rank and ret_5_min matcher both predate the cutoff."
+      },
+      {
+        "id": "pullback",
+        "derives_from": "union_last_green plus the ret_5_max matcher",
+        "first_commit": "8e8c36a71",
+        "first_at": "2026-09-05T07:50:04Z",
+        "last_rule_change_commit": "a714ba9c0",
+        "last_rule_change_at": "2026-09-10T13:10:03Z",
+        "designed_after": false,
+        "note": "Shipped books use ret_5_max 10, not -3. The matcher predates the cutoff. The -3 bound was written into this list on 2026-09-25 and was not relabelled, because the gate it derives from was not created or changed after 09:30 ET."
+      },
+      {
+        "id": "break10",
+        "derives_from": "union_break10_h1 and union_break10_h3",
+        "first_commit": "8e8c36a71",
+        "first_at": "2026-09-05T07:50:04Z",
+        "last_rule_change_commit": "a714ba9c0",
+        "last_rule_change_at": "2026-09-10T13:10:03Z",
+        "designed_after": false,
+        "note": "break_10 plus no alarm, rank hot_score."
+      },
+      {
+        "id": "macd_x",
+        "derives_from": "union_macd_xup_h1 and union_macd_xup_h3",
+        "first_commit": "24ebb9b7c",
+        "first_at": "2026-09-14T04:03:35Z",
+        "last_rule_change_commit": "24ebb9b7c",
+        "last_rule_change_at": "2026-09-14T04:03:35Z",
+        "designed_after": false,
+        "note": "MACD 12/26/9 was already the rule at 00:03 ET on 2026-09-14. Commit 5f13a4415 on 2026-09-25 only named those same numbers; it is not a rule change."
+      },
+      {
+        "id": "flow_lg",
+        "derives_from": "union_flow_in_h1 plus last_green",
+        "first_commit": "24ebb9b7c",
+        "first_at": "2026-09-14T04:03:35Z",
+        "last_rule_change_commit": "24ebb9b7c",
+        "last_rule_change_at": "2026-09-14T04:03:35Z",
+        "designed_after": false,
+        "note": "flow_in is prior rel vol at least 1.5 and a small prior day. Added at 00:03 ET on 2026-09-14. The shipped cousin union_flow_in_white pairs flow with zero_red, not last_green."
+      },
+      {
+        "id": "yday_white",
+        "derives_from": "sweep_white_horizon pool yday: cam_bad_max 0 and yday_up, rank cond",
+        "first_commit": "eb60d4094",
+        "first_at": "2026-09-13T12:08:20Z",
+        "last_rule_change_commit": "eb60d4094",
+        "last_rule_change_at": "2026-09-13T12:08:20Z",
+        "designed_after": false,
+        "note": "yday_up itself landed in 75ae2ee4f at 2026-09-13T11:08:54Z. union_white_yday_h1 is the nearby book (zero_red plus yday_up), not this require."
+      },
+      {
+        "id": "zero_candle",
+        "derives_from": "union white (zero_red) plus last_green, ranked like union_candle_score",
+        "first_commit": "8e8c36a71",
+        "first_at": "2026-09-05T07:50:04Z",
+        "last_rule_change_commit": "a714ba9c0",
+        "last_rule_change_at": "2026-09-10T13:10:03Z",
+        "designed_after": false,
+        "note": "24ebb9b7c mentions zero_red only by adding flow_in_white. The zero_red test itself was not changed."
+      }
+    ]
+  },
+  "theme_radar_search": {
+    "note": "Theme Radar's 12 were the survivors of a larger search on 2026-08-13 through 2026-09-11. Excel will report their luck test using that larger count. This list's luck-test N stays 37.",
+    "tries_floor": 8264,
+    "finviz_one_factor": 4832,
+    "fullscan_gate_join_rules_1_to_6": 2808,
+    "excel_letter_join_rules_7_to_12": 624,
+    "count_is_a_floor": true,
+    "wider_brackets": [
+      9192,
+      14195
+    ],
+    "selection_note": "Grid winners were hand-picked into the joins after seeing results, using a 1-week hold, while the final rules use 2- or 3-day holds.",
+    "files_not_in_git": [
+      {
+        "name": "results_pass1_pass2.json",
+        "sha256": "1e23a661db7e484b48d8918f3f86097c626f3bf42e045d7ffaaccd2e2727635e"
+      },
+      {
+        "name": "gates2 results_full.json",
+        "sha256": "2586d290158ad1060be3af4be9cb539b956c5e9a0852d139deecb5c7e905096d"
+      },
+      {
+        "name": "excel-join results_full.json",
+        "sha256": "6d44b4e359f6f460bbf5db1af39429eef01588f4926bdf7db1804dbd8f63f329"
+      }
+    ]
   }
 }

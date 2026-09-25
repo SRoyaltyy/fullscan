@@ -76,17 +76,25 @@ def expand_candidates(doc: dict | None = None) -> list[dict]:
     holds = [int(h) for h in (grid.get("holds") or [])]
     stops = list(grid.get("stop_pcts") or [None])
     cap = int(doc.get("max_candidates") or 50)
+    provenance = {
+        row["id"]: row
+        for row in ((doc.get("own_provenance") or {}).get("bases") or [])
+        if row.get("id")
+    }
     out = []
     for base in doc.get("bases") or []:
         bid = str(base.get("id") or "")
+        meta = provenance.get(bid) or {}
+        late = bool(meta.get("designed_after"))
         for hold in holds:
             for stop in stops:
                 tag = "sx" if stop is None else f"s{int(round(100 * float(stop)))}"
-                out.append({
+                item = {
                     "id": f"{bid}_h{hold}_{tag}",
                     "author": "oos",
                     "family": "own",
-                    "created_on": DESIGNED_AFTER,
+                    "created_on": "2026-09-28" if late else DESIGNED_AFTER,
+                    "provenance": meta,
                     "universe": book.get("universe") or "union",
                     "hold": hold,
                     "side": book.get("side") or "long",
@@ -101,7 +109,11 @@ def expand_candidates(doc: dict | None = None) -> list[dict]:
                     "day_cap": 1.0,
                     "take_pct": None,
                     "stop_pct": None if stop is None else float(stop),
-                })
+                }
+                if late:
+                    item["clean_from"] = "2026-09-28"
+                    item["designed_after_through"] = "2026-09-25"
+                out.append(item)
     excel = doc.get("excel") or {}
     for model in excel.get("models") or []:
         out.append({
@@ -815,7 +827,7 @@ def write_frozen_list(report: dict, selected: list[dict]) -> dict:
     for study in expand_candidates():
         rec = _frozen_recipe(study)
         train = by_id.get(study["id"]) or {}
-        candidates.append({
+        row = {
             "id": study["id"],
             "name": rec["name"],
             "author": study.get("author"),
@@ -825,13 +837,21 @@ def write_frozen_list(report: dict, selected: list[dict]) -> dict:
             "selected": rec["name"] in chosen,
             "after_fees_return": train.get("after_fees_return"),
             "daily": train.get("daily") or [],
-        })
+        }
+        if study.get("provenance"):
+            row["provenance"] = study["provenance"]
+        if study.get("clean_from"):
+            row["clean_from"] = study["clean_from"]
+        candidates.append(row)
+    prereg = load_preregister()
     payload = {
         "track": "OOS-0914",
         "path": "data/factor_mine/oos0914/frozen_list.json",
         "luck_test_n": len(candidates),
         "train": (report.get("train") or {}),
         "selected": [rec.get("name") for rec in selected],
+        "own_provenance": prereg.get("own_provenance") or {},
+        "theme_radar_search": prereg.get("theme_radar_search") or {},
         "candidates": candidates,
     }
     OUT_DIR.mkdir(parents=True, exist_ok=True)

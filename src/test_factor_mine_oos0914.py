@@ -38,6 +38,14 @@ def test_preregister_stays_small() -> None:
     assert cands[1]["stop_pct"] is None
     assert all(c["stop_pct"] is None for c in own)
     assert all(c["created_on"] == "2026-09-14" for c in own)
+    prov = doc["own_provenance"]["bases"]
+    assert len(prov) == 10
+    assert doc["own_provenance"]["relabelled"] == []
+    assert all(row["designed_after"] is False for row in prov)
+    search = doc["theme_radar_search"]
+    assert search["tries_floor"] == 8264
+    assert search["wider_brackets"] == [9192, 14195]
+    assert len(search["files_not_in_git"]) == 3
     assert all(c["created_on"] == "2026-09-28" for c in war)
     assert cands[-1]["id"] == "tr12_dfpe_first_top_hammer_h3"
     assert not any("short" in str(c["family"]) for c in cands)
